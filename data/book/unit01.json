@@ -1,0 +1,740 @@
+{
+ "unit": 1,
+ "title": "Real Numbers",
+ "title_ur": "حقیقی اعداد",
+ "items": [
+  {
+   "id": "u1-example1",
+   "kind": "example",
+   "number": "1",
+   "page": 4,
+   "question": "Identify the following decimal numbers as rational or irrational: (i) 0.35 (ii) 0.444... (iii) 3.$\\bar{5}$ (iv) 3.36788542... (v) 1.709975947...",
+   "parts": [
+    {
+     "label": "i",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "",
+       "en": "0.35 is a terminating decimal, so it is rational.",
+       "ur": "0.35 ایک محدود اعشاری عدد ہے، اس لیے یہ ناطق (rational) ہے۔"
+      }
+     ],
+     "answer": "Rational"
+    },
+    {
+     "label": "ii",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "",
+       "en": "0.444... repeats the digit 4 forever, so it is non-terminating recurring, hence rational.",
+       "ur": "0.444... میں ہندسہ 4 بار بار آتا ہے، یعنی غیر محدود دوری اعشاری، اس لیے ناطق ہے۔"
+      }
+     ],
+     "answer": "Rational"
+    },
+    {
+     "label": "iii",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "3.\\bar{5} = 3.5555\\ldots",
+       "en": "3.$\\bar{5}$ کا مطلب ہے 3.5555... (5 بار بار آتا ہے)۔",
+       "ur": "3.\\bar{5} = 3.5555\\ldots"
+      }
+     ],
+     "answer": "Rational"
+    },
+    {
+     "label": "iv",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "",
+       "en": "3.36788542... does not repeat and does not end, so it is irrational.",
+       "ur": "یہ نہ ختم ہوتا ہے نہ دہرایا جاتا ہے، اس لیے غیر ناطق (irrational) ہے۔"
+      }
+     ],
+     "answer": "Irrational"
+    },
+    {
+     "label": "v",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "",
+       "en": "1.709975947... does not repeat and does not end, so it is irrational.",
+       "ur": "یہ بھی نہ ختم ہوتا ہے نہ دہرایا جاتا ہے، اس لیے غیر ناطق ہے۔"
+      }
+     ],
+     "answer": "Irrational"
+    }
+   ]
+  },
+  {
+   "id": "u1-example2",
+   "kind": "example",
+   "number": "2",
+   "page": 5,
+   "question": "Represent $\\sqrt{5}$ on a number line.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "\\sqrt{5} = \\sqrt{2^2+1^2}",
+       "en": "Build a right triangle with legs 2 and 1. Its hypotenuse is $\\sqrt{5}$.",
+       "ur": "قائمۃ الزاویہ مثلث بنائیں جس کے دو ضلع 2 اور 1 ہوں۔ وتر $\\sqrt{5}$ ہوگا۔",
+       "check": [
+        "sqrt(5) == sqrt(2**2 + 1**2)"
+       ],
+       "draw": [
+        {
+         "t": "numberline",
+         "from": -4,
+         "to": 4,
+         "y": 40
+        }
+       ]
+      },
+      {
+       "math": "(OB)^2 = (OA)^2 + (AB)^2 = 2^2 + 1^2 = 5",
+       "en": "By Pythagoras, OB = $\\sqrt{5}$.",
+       "ur": "فیثاغورث کے قضیے سے OB = $\\sqrt{5}$ ہے۔",
+       "check": [
+        "2**2 + 1**2 == 5"
+       ],
+       "draw": [
+        {
+         "t": "poly",
+         "p": [
+          20,
+          40,
+          40,
+          40,
+          40,
+          30
+         ],
+         "close": true
+        }
+       ]
+      },
+      {
+       "math": "\\text{Draw arc of radius } OB \\text{ centred at } O",
+       "en": "With O as centre and radius OB, draw an arc. It cuts the number line at P.",
+       "ur": "O کو مرکز اور OB کو رداس لے کر قوس کھینچیں۔ یہ نمبر لائن کو نقطہ P پر کاٹے گی۔",
+       "draw": [
+        {
+         "t": "arc",
+         "c": [
+          20,
+          40
+         ],
+         "r": 22,
+         "a": [
+          -10,
+          10
+         ]
+        }
+       ]
+      }
+     ],
+     "answer": "P represents $\\sqrt{5}$ on the number line, since OP = $\\sqrt{5}$."
+    }
+   ]
+  },
+  {
+   "id": "u1-example3",
+   "kind": "example",
+   "number": "3",
+   "page": 5,
+   "question": "Express the recurring decimals as $\\frac{p}{q}$: (i) $0.\\bar{5}$  (ii) $0.\\overline{93}$",
+   "parts": [
+    {
+     "label": "i",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "x = 0.555\\ldots",
+       "en": "Let x be the number.",
+       "ur": "فرض کریں x وہ عدد ہے۔"
+      },
+      {
+       "math": "10x = 5.555\\ldots",
+       "en": "Multiply by 10, because one digit repeats.",
+       "ur": "ایک ہندسہ دہرانے کی وجہ سے 10 سے ضرب دیں۔",
+       "check": [
+        "10*Rational(5,9) == Rational(50,9)"
+       ]
+      },
+      {
+       "math": "9x = 5",
+       "en": "Subtract (i) from (ii).",
+       "ur": "(ii) میں سے (i) منہا کریں۔",
+       "check": [
+        "10*Rational(5,9) - Rational(5,9) == 5"
+       ]
+      },
+      {
+       "math": "x = \\frac{5}{9}",
+       "en": "Divide by 9.",
+       "ur": "9 سے تقسیم کریں۔",
+       "check": [
+        "Rational(5,9)*9 == 5"
+       ]
+      }
+     ],
+     "answer": "$\\frac{5}{9}$"
+    },
+    {
+     "label": "ii",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "x = 0.939393\\ldots",
+       "en": "Let x = 0.$\\overline{93}$.",
+       "ur": "فرض کریں x = 0.$\\overline{93}$۔"
+      },
+      {
+       "math": "100x = 93.939393\\ldots",
+       "en": "Two digits repeat, so multiply by 100.",
+       "ur": "دو ہندسے دہرتے ہیں، اس لیے 100 سے ضرب دیں۔",
+       "check": [
+        "100*Rational(93,99) == Rational(9300,99)"
+       ]
+      },
+      {
+       "math": "99x = 93",
+       "en": "Subtract (i) from (ii).",
+       "ur": "(ii) میں سے (i) منہا کریں۔",
+       "check": [
+        "100*Rational(93,99) - Rational(93,99) == 93"
+       ]
+      },
+      {
+       "math": "x = \\frac{93}{99} = \\frac{31}{33}",
+       "en": "Divide by 99 and cancel the common factor 3.",
+       "ur": "99 سے تقسیم کریں اور 3 سے کم کریں۔",
+       "check": [
+        "Rational(93,99) == Rational(31,33)"
+       ]
+      }
+     ],
+     "answer": "$\\frac{93}{99} = \\frac{31}{33}$"
+    }
+   ]
+  },
+  {
+   "id": "u1-example4",
+   "kind": "example",
+   "number": "4",
+   "page": 6,
+   "question": "Find two rational numbers between 2 and 3.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "\\frac{2+3}{2} = \\frac{5}{2}",
+       "en": "Average of 2 and 3 is a rational number between them.",
+       "ur": "2 اور 3 کا اوسط ان کے درمیان ایک ناطق عدد ہے۔",
+       "check": [
+        "(2+3)/2 == Rational(5,2)"
+       ]
+      },
+      {
+       "math": "\\frac{\\frac{5}{2}+3}{2} = \\frac{11}{4}",
+       "en": "Average of $\\frac{5}{2}$ and 3 is another one.",
+       "ur": "$\\frac{5}{2}$ اور 3 کا اوسط ایک اور عدد ہے۔",
+       "check": [
+        "(Rational(5,2)+3)/2 == Rational(11,4)"
+       ]
+      }
+     ],
+     "answer": "$\\frac{5}{2}$ and $\\frac{11}{4}$"
+    }
+   ]
+  },
+  {
+   "id": "u1-example5",
+   "kind": "example",
+   "number": "5",
+   "page": 9,
+   "question": "If $a=\\frac{2}{3}$, $b=\\frac{3}{2}$, $c=\\frac{5}{3}$, verify the distributive property over addition.",
+   "parts": [
+    {
+     "label": "i",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "LHS = a(b+c) = \\frac{2}{3}\\left(\\frac{3}{2}+\\frac{5}{3}\\right) = \\frac{2}{3}\\cdot\\frac{19}{6} = \\frac{19}{9}",
+       "en": "Compute the left side first.",
+       "ur": "پہلے بائیں طرف کی قیمت نکالیں۔",
+       "check": [
+        "Rational(2,3)*(Rational(3,2)+Rational(5,3)) == Rational(19,9)"
+       ]
+      },
+      {
+       "math": "RHS = ab+ac = 1 + \\frac{10}{9} = \\frac{19}{9}",
+       "en": "Now compute ab + ac.",
+       "ur": "اب ab + ac نکالیں۔",
+       "check": [
+        "Rational(2,3)*Rational(3,2) + Rational(2,3)*Rational(5,3) == Rational(19,9)"
+       ]
+      },
+      {
+       "math": "",
+       "en": "LHS = RHS, so a(b+c) = ab+ac is verified.",
+       "ur": "LHS = RHS ہے، لہذا a(b+c) = ab+ac کی تصدیق ہوگئی۔"
+      }
+     ],
+     "answer": "Verified: $\\frac{19}{9} = \\frac{19}{9}$"
+    },
+    {
+     "label": "ii",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "LHS = (a+b)c = \\left(\\frac{4+9}{6}\\right)\\frac{5}{3} = \\frac{65}{18}",
+       "en": "Compute the left side.",
+       "ur": "بائیں طرف کی قیمت نکالیں۔",
+       "check": [
+        "(Rational(2,3)+Rational(3,2))*Rational(5,3) == Rational(65,18)"
+       ]
+      },
+      {
+       "math": "RHS = ac+bc = \\frac{10}{9}+\\frac{15}{6} = \\frac{65}{18}",
+       "en": "Compute the right side.",
+       "ur": "دائیں طرف کی قیمت نکالیں۔",
+       "check": [
+        "Rational(2,3)*Rational(5,3) + Rational(3,2)*Rational(5,3) == Rational(65,18)"
+       ]
+      }
+     ],
+     "answer": "Verified: $\\frac{65}{18} = \\frac{65}{18}$"
+    }
+   ]
+  },
+  {
+   "id": "u1-example6",
+   "kind": "example",
+   "number": "6",
+   "page": 9,
+   "question": "Identify the property that justifies each statement: (i) a > 13 then a+2 > 15  (ii) 3<9 and 6<12 then 9<21  (iii) 7>4 and 5>3 then 35>12  (iv) -5 < -4 then 20 > 16",
+   "parts": [
+    {
+     "label": "i",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "a > 13 \\Rightarrow a+2 > 13+2 = 15",
+       "en": "Add 2 to both sides. This is the order property with respect to addition.",
+       "ur": "دونوں طرف 2 جمع کریں۔ یہ ترتیب کی خاصیت (جمع کے لحاظ سے) ہے۔",
+       "check": [
+        "13+2 == 15"
+       ]
+      }
+     ],
+     "answer": "Order property w.r.t. addition"
+    },
+    {
+     "label": "ii",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "3+6 < 9+12 \\Rightarrow 9 < 21",
+       "en": "Add the two inequalities. Order property w.r.t. addition.",
+       "ur": "دونوں عدم مساوات کو جمع کریں۔ جمع کے لحاظ سے ترتیب کی خاصیت۔",
+       "check": [
+        "3+6 == 9",
+        "9+12 == 21"
+       ]
+      }
+     ],
+     "answer": "Order property w.r.t. addition"
+    },
+    {
+     "label": "iii",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "7\\times 5 > 4\\times 3 \\Rightarrow 35 > 12",
+       "en": "Multiply the two inequalities. Order property w.r.t. multiplication.",
+       "ur": "دونوں عدم مساوات کو ضرب دیں۔ ضرب کے لحاظ سے ترتیب کی خاصیت۔",
+       "check": [
+        "7*5 == 35",
+        "4*3 == 12"
+       ]
+      }
+     ],
+     "answer": "Order property w.r.t. multiplication"
+    },
+    {
+     "label": "iv",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "(-5)(-4) > (-4)(-4) \\Rightarrow 20 > 16",
+       "en": "Multiply both sides by -4. Multiplying by a negative number reverses the inequality sign, so -5 < -4 becomes 20 > 16.",
+       "ur": "دونوں طرف -4 سے ضرب دیں۔ منفی عدد سے ضرب کرنے پر عدم مساوات کی علامت الٹ جاتی ہے، یعنی 20 > 16۔",
+       "check": [
+        "(-5)*(-4) == 20",
+        "(-4)*(-4) == 16"
+       ]
+      }
+     ],
+     "answer": "Order property w.r.t. multiplication"
+    }
+   ]
+  },
+  {
+   "id": "u1-example7",
+   "kind": "example",
+   "number": "7",
+   "page": 11,
+   "question": "Simplify: (i) $\\sqrt[4]{16x^4y^8}$  (ii) $\\sqrt[3]{27x^6y^9z^3}$  (iii) $(64)^{-4/3}$",
+   "parts": [
+    {
+     "label": "i",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "\\sqrt[4]{16x^4y^8} = (16)^{1/4}(x^4)^{1/4}(y^8)^{1/4}",
+       "en": "Write the radical as a power 1/4 and use $(ab)^m = a^m b^m$.",
+       "ur": "جذر کو 1/4 کی طاقت میں لکھیں اور $(ab)^m = a^m b^m$ استعمال کریں۔",
+       "check": [
+        "(16)**Rational(1,4) == 2"
+       ]
+      },
+      {
+       "math": "= 2\\cdot x \\cdot y^2",
+       "en": "Use $(a^m)^n = a^{mn}$: $4\\cdot\\frac14 = 1$, $8\\cdot\\frac14 = 2$.",
+       "ur": "$(a^m)^n = a^{mn}$ استعمال کریں: $4\\cdot\\frac14 = 1$ اور $8\\cdot\\frac14 = 2$۔",
+       "check": [
+        "Rational(4,4)==1",
+        "Rational(8,4)==2"
+       ]
+      }
+     ],
+     "answer": "$2xy^2$"
+    },
+    {
+     "label": "ii",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "\\sqrt[3]{27x^6y^9z^3} = 3\\,x^{6/3}\\,y^{9/3}\\,z^{3/3}",
+       "en": "27 = 3^3, so its cube root is 3. Divide each exponent by 3.",
+       "ur": "27 = 3^3 ہے، اس کا مکعب جذر 3 ہے۔ ہر قوت کو 3 سے تقسیم کریں۔",
+       "check": [
+        "3**3 == 27"
+       ]
+      },
+      {
+       "math": "= 3x^2y^3z",
+       "en": "Simplify the exponents.",
+       "ur": "قوتیں سادہ کریں۔",
+       "check": [
+        "Rational(6,3)==2",
+        "Rational(9,3)==3"
+       ]
+      }
+     ],
+     "answer": "$3x^2y^3z$"
+    },
+    {
+     "label": "iii",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "(64)^{-4/3} = \\frac{1}{(64)^{4/3}}",
+       "en": "A negative exponent gives the reciprocal.",
+       "ur": "منفی قوت کا مطلب معکوس ہے۔",
+       "check": [
+        "64**Rational(-4,3) == 1/64**Rational(4,3)"
+       ]
+      },
+      {
+       "math": "64 = 4^3 \\Rightarrow (64)^{4/3} = 4^4 = 256",
+       "en": "Write 64 = 4^3, then (4^3)^{4/3} = 4^4.",
+       "ur": "64 = 4^3 لکھیں، پھر $(4^3)^{4/3} = 4^4$۔",
+       "check": [
+        "4**4 == 256",
+        "64**Rational(4,3) == 256"
+       ]
+      }
+     ],
+     "answer": "$\\frac{1}{256}$"
+    }
+   ]
+  },
+  {
+   "id": "u1-example8",
+   "kind": "example",
+   "number": "8",
+   "page": 13,
+   "question": "Rationalize the denominator: (i) $\\frac{3}{\\sqrt5+\\sqrt2}$  (ii) $\\frac{3}{\\sqrt5-\\sqrt3}$",
+   "parts": [
+    {
+     "label": "i",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "\\frac{3}{\\sqrt5+\\sqrt2}\\times\\frac{\\sqrt5-\\sqrt2}{\\sqrt5-\\sqrt2}",
+       "en": "Multiply by the conjugate $\\sqrt5-\\sqrt2$.",
+       "ur": "مزدوج $\\sqrt5-\\sqrt2$ سے ضرب دیں۔",
+       "check": [
+        "3/(sqrt(5)+sqrt(2)) == sqrt(5)-sqrt(2)"
+       ]
+      },
+      {
+       "math": "= \\frac{3(\\sqrt5-\\sqrt2)}{5-2} = \\sqrt5-\\sqrt2",
+       "en": "Denominator is $(\\sqrt5)^2-(\\sqrt2)^2 = 3$.",
+       "ur": "مخرج $(\\sqrt5)^2-(\\sqrt2)^2 = 3$ ہے۔",
+       "check": [
+        "(sqrt(5))**2 - (sqrt(2))**2 == 3"
+       ]
+      }
+     ],
+     "answer": "$\\sqrt5-\\sqrt2$"
+    },
+    {
+     "label": "ii",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "\\frac{3}{\\sqrt5-\\sqrt3}\\times\\frac{\\sqrt5+\\sqrt3}{\\sqrt5+\\sqrt3}",
+       "en": "Multiply by the conjugate $\\sqrt5+\\sqrt3$.",
+       "ur": "مزدوج $\\sqrt5+\\sqrt3$ سے ضرب دیں۔",
+       "check": [
+        "3/(sqrt(5)-sqrt(3)) == 3*(sqrt(5)+sqrt(3))/2"
+       ]
+      },
+      {
+       "math": "= \\frac{3(\\sqrt5+\\sqrt3)}{5-3} = \\frac{3(\\sqrt5+\\sqrt3)}{2}",
+       "en": "Denominator is $5-3 = 2$.",
+       "ur": "مخرج $5-3 = 2$ ہے۔",
+       "check": [
+        "(sqrt(5))**2 - (sqrt(3))**2 == 2"
+       ]
+      }
+     ],
+     "answer": "$\\frac{3(\\sqrt5+\\sqrt3)}{2}$"
+    }
+   ]
+  },
+  {
+   "id": "u1-example9",
+   "kind": "example",
+   "number": "9",
+   "page": 14,
+   "question": "The sum of two real numbers is 8 and their difference is 2. Find the numbers.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "a+b = 8 \\quad (i),\\qquad a-b = 2 \\quad (ii)",
+       "en": "Write both equations.",
+       "ur": "دونوں مساواتیں لکھیں۔"
+      },
+      {
+       "math": "2a = 10 \\Rightarrow a = 5",
+       "en": "Add (i) and (ii).",
+       "ur": "(i) اور (ii) کو جمع کریں۔",
+       "check": [
+        "Rational(8+2,2)==5"
+       ]
+      },
+      {
+       "math": "5 + b = 8 \\Rightarrow b = 3",
+       "en": "Put a = 5 in (i).",
+       "ur": "a = 5 کو (i) میں رکھیں۔",
+       "check": [
+        "8-5 == 3"
+       ]
+      }
+     ],
+     "answer": "5 and 3"
+    }
+   ]
+  },
+  {
+   "id": "u1-example10",
+   "kind": "example",
+   "number": "10",
+   "page": 16,
+   "question": "Normal human body temperature is 98.6 °F. Convert it to Celsius and Kelvin.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "^\\circ C = \\frac{5}{9}(F-32)",
+       "en": "Use the Fahrenheit-to-Celsius formula.",
+       "ur": "فارن ہائیٹ سے سیلسیس کا فارمولا استعمال کریں۔",
+       "check": [
+        "Rational(5,9)*(Rational(986,10)-32) == 37"
+       ]
+      },
+      {
+       "math": "K = C + 273 = 37 + 273 = 310",
+       "en": "Convert Celsius to Kelvin.",
+       "ur": "سیلسیس کو کیلون میں بدلیں۔",
+       "check": [
+        "37+273 == 310"
+       ]
+      }
+     ],
+     "answer": "37 °C and 310 K"
+    }
+   ]
+  },
+  {
+   "id": "u1-example11",
+   "kind": "example",
+   "number": "11",
+   "page": 16,
+   "question": "Hamail bought a bicycle for Rs. 6590 and sold it for Rs. 6850. Find the profit percentage.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "P = SP - CP = 6850 - 6590 = 260",
+       "en": "Profit is selling price minus cost price.",
+       "ur": "منافع = فروخت قیمت − خرید قیمت۔",
+       "check": [
+        "6850-6590 == 260"
+       ]
+      },
+      {
+       "math": "\\text{Profit\\%} = \\frac{260}{6590}\\times 100 \\approx 3.94\\%",
+       "en": "Profit % = profit / CP x 100.",
+       "ur": "منافع فیصد = منافع / خرید قیمت × 100۔",
+       "check": [
+        "abs(260*100/6590 - 3.94) < 0.01"
+       ]
+      }
+     ],
+     "answer": "About 3.94% (≈ 4%)"
+    }
+   ]
+  },
+  {
+   "id": "u1-example12",
+   "kind": "example",
+   "number": "12",
+   "page": 17,
+   "question": "Umair bought a book for Rs. 850 and sold it for Rs. 720. What was his loss percentage?",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "\\text{Loss} = CP - SP = 850 - 720 = 130",
+       "en": "Loss is cost price minus selling price.",
+       "ur": "نقصان = خرید قیمت − فروخت قیمت۔",
+       "check": [
+        "850-720 == 130"
+       ]
+      },
+      {
+       "math": "\\text{Loss\\%} = \\frac{130}{850}\\times 100 = 15.29\\%",
+       "en": "Loss % = loss / CP x 100.",
+       "ur": "نقصان فیصد = نقصان / خرید قیمت × 100۔",
+       "check": [
+        "abs(130*100/850 - 15.29) < 0.01"
+       ]
+      }
+     ],
+     "answer": "15.29%"
+    }
+   ]
+  },
+  {
+   "id": "u1-example13",
+   "kind": "example",
+   "number": "13",
+   "page": 17,
+   "question": "Saleem, Nadeem and Tanveer earned a profit of Rs. 4,50,000. Their investments are in the ratio 4 : 7 : 14. Find each person's profit.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "\\text{Sum of ratios} = 4+7+14 = 25",
+       "en": "Add the parts of the ratio.",
+       "ur": "تناسب کے حصے جمع کریں۔",
+       "check": [
+        "4+7+14 == 25"
+       ]
+      },
+      {
+       "math": "\\text{Saleem} = \\frac{4}{25}\\times 450000 = 72000",
+       "en": "Each person gets (own ratio / 25) of the profit.",
+       "ur": "ہر شخص کو اپنے حصے / 25 کا منافع ملے گا۔",
+       "check": [
+        "Rational(4,25)*450000 == 72000"
+       ]
+      },
+      {
+       "math": "\\text{Nadeem} = \\frac{7}{25}\\times 450000 = 126000",
+       "en": "Same method for Nadeem.",
+       "ur": "ندیم کے لیے بھی یہی طریقہ۔",
+       "check": [
+        "Rational(7,25)*450000 == 126000"
+       ]
+      },
+      {
+       "math": "\\text{Tanveer} = \\frac{14}{25}\\times 450000 = 252000",
+       "en": "Same method for Tanveer.",
+       "ur": "تنویر کے لیے بھی یہی طریقہ۔",
+       "check": [
+        "Rational(14,25)*450000 == 252000"
+       ]
+      }
+     ],
+     "answer": "Saleem Rs. 72,000; Nadeem Rs. 1,26,000; Tanveer Rs. 2,52,000"
+    }
+   ]
+  },
+  {
+   "id": "u1-example14",
+   "kind": "example",
+   "number": "14",
+   "page": 18,
+   "question": "If the simple profit on Rs. 6400 for 12 years is Rs. 3840, find the rate of profit.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "\\text{Rate} = \\frac{\\text{profit}\\times 100}{\\text{time}\\times\\text{principal}}",
+       "en": "Use the simple-profit rate formula.",
+       "ur": "سادہ منافع کی شرح کا فارمولا۔"
+      },
+      {
+       "math": "= \\frac{3840\\times 100}{12\\times 6400} = 5\\%",
+       "en": "Substitute the values.",
+       "ur": "قیمتیں رکھیں۔",
+       "check": [
+        "Rational(3840*100, 12*6400) == 5"
+       ]
+      }
+     ],
+     "answer": "5%"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,625 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Math Tutor – Class 9</title>
+<link rel="stylesheet" href="/static/vendor/katex/katex.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f4f5f7; --panel: #ffffff; --ink: #1d2433; --muted: #6b7280; --line: #e3e6ec;
+    --accent: #2563eb; --accent-soft: #e8efff; --board: #fbfcfe; --ok: #15803d; --warn: #b45309;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #12151c; --panel: #1b2029; --ink: #e7eaf0; --muted: #9aa3b2; --line: #2a303c;
+      --accent: #7aa7ff; --accent-soft: #223050; --board: #161b24; --ok: #4ade80; --warn: #fbbf24;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #12151c; --panel: #1b2029; --ink: #e7eaf0; --muted: #9aa3b2; --line: #2a303c;
+    --accent: #7aa7ff; --accent-soft: #223050; --board: #161b24; --ok: #4ade80; --warn: #fbbf24;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: system-ui, Segoe UI, Roboto, sans-serif; }
+  header { padding: 12px 18px; background: var(--panel); border-bottom: 1px solid var(--line); display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+  header h1 { font-size: 18px; margin: 0; }
+  header .sub { color: var(--muted); font-size: 13px; }
+  main { display: grid; grid-template-columns: 300px minmax(0, 1fr) 340px; gap: 14px; padding: 14px; height: calc(100vh - 58px); }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 12px; min-height: 0; }
+  .col { display: flex; flex-direction: column; gap: 12px; min-height: 0; }
+  .scroll { overflow: auto; min-height: 0; }
+  h2 { font-size: 14px; margin: 0 0 8px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+  textarea { width: 100%; min-height: 70px; resize: vertical; border: 1px solid var(--line); border-radius: 8px; padding: 8px; font: inherit; background: var(--board); color: var(--ink); }
+  button { font: inherit; border: 1px solid var(--line); background: var(--panel); color: var(--ink); border-radius: 8px; padding: 6px 10px; cursor: pointer; }
+  button:hover { border-color: var(--accent); }
+  button.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+  button:disabled { opacity: .45; cursor: default; }
+  button.on { background: var(--accent-soft); border-color: var(--accent); }
+  .row { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+  .hit { width: 100%; text-align: left; margin-bottom: 6px; padding: 8px; }
+  .hit small { display: block; color: var(--muted); }
+  .note { font-size: 13px; color: var(--muted); line-height: 1.5; }
+  .badge { font-size: 11px; padding: 2px 7px; border-radius: 99px; background: var(--accent-soft); color: var(--accent); }
+  .badge.gen { background: #fef3c7; color: #92400e; }
+  #board-wrap { display: flex; flex-direction: column; gap: 10px; min-height: 0; height: 100%; }
+  #title { font-weight: 600; }
+  canvas { width: 100%; background: var(--board); border: 1px dashed var(--line); border-radius: 10px; display: block; }
+  #math { background: var(--board); border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; min-height: 90px; max-height: 240px; overflow: auto; }
+  .mline { padding: 4px 0; opacity: 0; transform: translateY(4px); transition: opacity .4s, transform .4s; }
+  .mline.show { opacity: 1; transform: none; }
+  .mline.current { background: var(--accent-soft); border-radius: 6px; }
+  .answer { color: var(--ok); font-weight: 600; margin-top: 6px; }
+  .controls { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+  .counter { color: var(--muted); font-size: 13px; margin-left: auto; }
+  #explain { font-size: 16px; line-height: 1.7; min-height: 120px; }
+  #explain .en { margin: 0 0 10px; }
+  #explain .ur { direction: rtl; text-align: right; font-family: "Noto Nastaliq Urdu", serif; font-size: 19px; line-height: 2.1; margin: 0 0 10px; }
+  #explain .label { font-size: 12px; color: var(--muted); display: block; margin-bottom: 2px; }
+  #progress { height: 4px; background: var(--line); border-radius: 4px; overflow: hidden; }
+  #progress > div { height: 100%; width: 0; background: var(--accent); transition: width .3s; }
+  .tabs { display: flex; gap: 6px; flex-wrap: wrap; }
+  select { font: inherit; padding: 6px; border-radius: 8px; border: 1px solid var(--line); background: var(--board); color: var(--ink); max-width: 100%; }
+  .empty { color: var(--muted); text-align: center; padding: 40px 10px; }
+  .katex-display { margin: 0.2em 0; }
+  @media (max-width: 1100px) { main { grid-template-columns: 1fr; height: auto; } .scroll-col { max-height: 420px; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>Math Tutor · Class 9</h1>
+  <span class="sub">Punjab textbook 2026 · Mathematics</span>
+  <span class="badge" id="count" style="margin-left:auto"></span>
+</header>
+
+<main>
+  <!-- LEFT: ask -->
+  <section class="col">
+    <div class="card col">
+      <h2>Ask a question</h2>
+      <textarea id="q" placeholder="e.g. Rationalize 3/(sqrt5 - sqrt3)   or   0.\overline{93} as p/q   or   convert 6.6 x 10^-5"></textarea>
+      <div class="row">
+        <button class="primary" id="ask">Find solution</button>
+        <button id="clear">Clear</button>
+      </div>
+      <div class="note">Matches the textbook's solved examples. Questions not in the book can be solved live if the server has an API key.</div>
+    </div>
+    <div class="card col scroll">
+      <h2>Results</h2>
+      <div id="results"><div class="empty">Ask something to see matches.</div></div>
+    </div>
+    <div class="card col">
+      <h2>Browse the book</h2>
+      <select id="browse"></select>
+    </div>
+    <div class="card col">
+      <h2>Photo of a question</h2>
+      <input type="file" id="photo" accept="image/jpeg,image/png,image/webp" style="font:inherit">
+      <img id="preview" alt="" style="display:none;max-width:100%;border-radius:8px;border:1px solid var(--line)">
+      <div class="row"><button class="primary" id="photo-go" disabled>Read &amp; solve</button></div>
+      <div id="detected" class="note"></div>
+    </div>
+  </section>
+
+  <!-- CENTER: animated board -->
+  <section class="card" id="board-wrap">
+    <div class="row">
+      <div id="title">Pick a question</div>
+      <span id="src" class="badge" style="display:none"></span>
+    </div>
+    <div class="tabs" id="parts"></div>
+    <canvas id="cv" height="360"></canvas>
+    <div id="math"><div class="note">The steps are written here one by one.</div></div>
+    <div id="progress"><div></div></div>
+    <div class="controls">
+      <button id="first" title="Restart">⏮</button>
+      <button id="prev" title="Previous step">◀ Prev</button>
+      <button id="play" class="primary">▶ Play</button>
+      <button id="next" title="Next step">Next ▶</button>
+      <span>Speed</span>
+      <select id="speed">
+        <option value="2600">Slow</option>
+        <option value="1600" selected>Normal</option>
+        <option value="900">Fast</option>
+      </select>
+      <span class="counter" id="counter"></span>
+    </div>
+  </section>
+
+  <!-- RIGHT: explanation -->
+  <section class="card col scroll-col">
+    <div class="row">
+      <h2 style="margin:0">Explanation</h2>
+      <span style="margin-left:auto" class="tabs">
+        <button data-lang="en" class="on">English</button>
+        <button data-lang="ur">اردو</button>
+        <button data-lang="both">Both</button>
+      </span>
+    </div>
+    <div id="explain" class="scroll"><div class="note">Explanations appear here for each step.</div></div>
+  </section>
+</main>
+
+<script src="/static/vendor/katex/katex.min.js"></script>
+<script>
+(() => {
+  // ---------- state ----------
+  let item = null;          // full question
+  let partIdx = 0;          // which part is on the board
+  let steps = [];           // flattened steps for current part: {math, en, ur, draw, check}
+  let cur = -1;             // current step index (-1 = blank board)
+  let playing = false;
+  let timer = null;
+  let lang = "en";
+  let anim = { t: 1, raf: 0 };   // progress (0..1) for the newest drawing commands
+  const cv = document.getElementById("cv");
+  const ctx = cv.getContext("2d");
+  const $ = (id) => document.getElementById(id);
+
+  // ---------- API ----------
+  async function api(path, body) {
+    const opt = body === undefined ? {} : { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) };
+    const r = await fetch(path, opt);
+    const data = await r.json().catch(() => ({}));
+    if (!r.ok) throw new Error(data.error || ("HTTP " + r.status));
+    return data;
+  }
+
+  // ---------- load a question ----------
+  async function openItem(id, src) {
+    stopPlay();
+    item = await api("/api/item/" + encodeURIComponent(id));
+    $("src").style.display = "";
+    $("src").textContent = src || (item.kind === "generated" ? "Live solution" : "From the book");
+    $("src").className = "badge" + (item.kind === "generated" ? " gen" : "");
+    $("title").innerHTML = titleOf(item);
+    renderParts();
+    setPart(0);
+  }
+
+  function titleOf(it) {
+    const where = it.exercise ? `Exercise ${it.exercise}, Q${it.number}` : (it.kind === "example" ? `Example ${it.number}` : `Q${it.number}`);
+    const unit = it.unit ? `Unit ${it.unit} · ` : "";
+    return `${unit}${where}${it.page ? " · p." + it.page : ""}`;
+  }
+
+  function renderParts() {
+    const box = $("parts");
+    box.innerHTML = "";
+    if (item.parts.length <= 1) return;
+    item.parts.forEach((p, i) => {
+      const b = document.createElement("button");
+      b.textContent = "(" + (p.label || (i + 1)) + ")";
+      b.onclick = () => setPart(i);
+      b.dataset.i = i;
+      box.appendChild(b);
+    });
+  }
+
+  function setPart(i) {
+    partIdx = i;
+    const part = item.parts[i];
+    steps = part.steps.map((s) => ({ ...s, _answer: null }));
+    if (steps.length) steps[steps.length - 1]._answer = part.answer;
+    document.querySelectorAll("#parts button").forEach((b) => b.classList.toggle("on", +b.dataset.i === i));
+    $("math").innerHTML = "";
+    cur = -1;
+    renderBoard(true);
+    goto(0, false);
+  }
+
+  // ---------- board: math lines ----------
+  function mathHTML(tex) {
+    const div = document.createElement("div");
+    try { katex.render(tex, div, { displayMode: true, throwOnError: false }); }
+    catch (e) { div.textContent = tex; }
+    return div;
+  }
+
+  function renderMathLines(upto) {
+    const box = $("math");
+    box.innerHTML = "";
+    for (let i = 0; i <= upto; i++) {
+      const s = steps[i];
+      const line = document.createElement("div");
+      line.className = "mline show" + (i === upto ? " current" : "");
+      if (s.math) line.appendChild(mathHTML(s.math));
+      if (s._answer) {
+        const a = document.createElement("div");
+        a.className = "answer";
+        a.appendChild(mathHTML("\\text{Answer: }" + stripDollars(s._answer)));
+        line.appendChild(a);
+      }
+      box.appendChild(line);
+    }
+    box.scrollTop = box.scrollHeight;
+  }
+
+  function stripDollars(t) { return String(t).replace(/\$/g, ""); }
+
+  // ---------- board: canvas drawing ----------
+  function resizeCanvas() {
+    const w = cv.clientWidth;
+    const h = Math.round(w * 0.62);
+    if (cv.width !== w * devicePixelRatio || cv.height !== h * devicePixelRatio) {
+      cv.width = w * devicePixelRatio;
+      cv.height = h * devicePixelRatio;
+    }
+    return { w, h };
+  }
+
+  // logical space: 100 wide, figure height in units (default 60), mapped to canvas
+  function makeMap(h) {
+    const { w, h: H } = { w: cv.width / devicePixelRatio, h: cv.height / devicePixelRatio };
+    const sx = w / 100, sy = H / h;
+    const s = Math.min(sx, sy);
+    const ox = (w - 100 * s) / 2, oy = (H - h * s) / 2;
+    return {
+      X: (x) => ox + x * s,
+      Y: (y) => oy + y * s,
+      S: (v) => v * s,
+    };
+  }
+
+  function drawAll() {
+    const { w, h } = resizeCanvas();
+    ctx.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);
+    ctx.clearRect(0, 0, w, h);
+    ctx.fillStyle = getComputedStyle(document.body).getPropertyValue("--ink");
+    ctx.strokeStyle = getComputedStyle(document.body).getPropertyValue("--ink");
+    ctx.lineWidth = 1.6;
+    ctx.font = "15px system-ui, sans-serif";
+    ctx.textBaseline = "middle";
+    const figH = (item && item.figure_h) || 60;
+    const M = makeMap(figH);
+    // Earlier commands are fully drawn; the newest step's commands grow with anim.t
+    for (let i = 0; i <= cur; i++) {
+      const cmds = steps[i].draw || [];
+      const t = i === cur ? anim.t : 1;
+      cmds.forEach((c) => drawCmd(c, t, M));
+    }
+  }
+
+  function drawCmd(c, t, M) {
+    const e = (k) => (k === undefined ? 0 : k);
+    ctx.save();
+    ctx.globalAlpha = Math.min(1, t * 1.5);
+    switch (c.t) {
+      case "line": {
+        const [x1, y1, x2, y2] = c.p;
+        if (c.dash) ctx.setLineDash([5, 4]);
+        ctx.beginPath(); ctx.moveTo(M.X(x1), M.Y(y1));
+        ctx.lineTo(M.X(x1 + (x2 - x1) * t), M.Y(y1 + (y2 - y1) * t));
+        ctx.stroke(); ctx.setLineDash([]);
+        break;
+      }
+      case "poly": {
+        const p = c.p, n = p.length / 2, segs = c.close ? n : n - 1;
+        const total = segs * t;
+        ctx.beginPath(); ctx.moveTo(M.X(p[0]), M.Y(p[1]));
+        for (let k = 1; k <= segs; k++) {
+          if (k - 1 >= total) break;
+          const a = k % n, pa = [p[2 * (k - 1)], p[2 * (k - 1) + 1]];
+          const pb = [p[2 * a], p[2 * a + 1]];
+          const f = Math.min(1, total - (k - 1));
+          ctx.lineTo(M.X(pa[0] + (pb[0] - pa[0]) * f), M.Y(pa[1] + (pb[1] - pa[1]) * f));
+        }
+        ctx.stroke();
+        break;
+      }
+      case "circle": case "arc": {
+        const [cx, cy] = c.c;
+        const a0 = c.t === "arc" ? c.a[0] : 0, a1 = c.t === "arc" ? c.a[1] : 360;
+        const end = (a0 + (a1 - a0) * t) * Math.PI / 180;
+        ctx.beginPath();
+        ctx.arc(M.X(cx), M.Y(cy), M.S(c.r), a0 * Math.PI / 180, end);
+        ctx.stroke();
+        break;
+      }
+      case "dot": {
+        ctx.beginPath(); ctx.arc(M.X(c.p[0]), M.Y(c.p[1]), 3, 0, 2 * Math.PI); ctx.fill();
+        break;
+      }
+      case "text": {
+        ctx.fillText(c.s, M.X(c.p[0]), M.Y(c.p[1]));
+        break;
+      }
+      case "right": {
+        const [x, y] = c.p, [d1x, d1y, d2x, d2y] = c.d;
+        const k = 3;
+        ctx.beginPath();
+        ctx.moveTo(M.X(x + d1x * k), M.Y(y + d1y * k));
+        ctx.lineTo(M.X(x + d1x * k + d2x * k), M.Y(y + d1y * k + d2y * k));
+        ctx.lineTo(M.X(x + d2x * k), M.Y(y + d2y * k));
+        ctx.stroke();
+        break;
+      }
+      case "numberline": {
+        const { from, to } = c, y = c.y;
+        const nx = (v) => 6 + ((v - from) / (to - from)) * 88;
+        const x1 = nx(from), x2 = nx(from + (to - from) * t);
+        ctx.beginPath(); ctx.moveTo(M.X(x1), M.Y(y)); ctx.lineTo(M.X(x2), M.Y(y)); ctx.stroke();
+        if (t > 0.6) {
+          const k = Math.ceil(from), lim = Math.floor(to);
+          ctx.textAlign = "center";
+          for (let v = k; v <= lim; v++) {
+            const x = nx(v);
+            ctx.beginPath(); ctx.moveTo(M.X(x), M.Y(y - 2)); ctx.lineTo(M.X(x), M.Y(y + 2)); ctx.stroke();
+            ctx.fillText(String(v), M.X(x), M.Y(y + 7));
+          }
+          (c.marks || []).forEach((m) => {
+            const x = nx(m.v);
+            ctx.beginPath(); ctx.arc(M.X(x), M.Y(y), 3.5, 0, 2 * Math.PI); ctx.fill();
+            ctx.fillText(m.s, M.X(x), M.Y(y - 8));
+          });
+          ctx.textAlign = "start";
+        }
+        break;
+      }
+    }
+    ctx.restore();
+  }
+
+  function animateNewStep() {
+    cancelAnimationFrame(anim.raf);
+    const dur = { 2600: 1400, 1600: 900, 900: 500 }[$("speed").value] || 900;
+    const t0 = performance.now();
+    anim.t = 0;
+    const tick = (now) => {
+      const p = Math.min(1, (now - t0) / dur);
+      anim.t = p < 1 ? 1 - Math.pow(1 - p, 3) : 1;   // ease-out
+      drawAll();
+      $("progress").firstElementChild.style.width = ((cur + anim.t) / Math.max(1, steps.length)) * 100 + "%";
+      if (p < 1) anim.raf = requestAnimationFrame(tick);
+    };
+    anim.raf = requestAnimationFrame(tick);
+  }
+
+  function renderBoard(blank) {
+    if (blank) { drawAll(); }
+    $("counter").textContent = steps.length ? `Step ${Math.max(0, cur + 1)} of ${steps.length}` : "";
+  }
+
+  // ---------- explanation ----------
+  function renderExplain() {
+    const box = $("explain");
+    if (cur < 0 || !steps[cur]) {
+      box.innerHTML = '<div class="note">Press ▶ or Next to start.</div>';
+      return;
+    }
+    const s = steps[cur];
+    const wrap = document.createElement("div");
+    const part = item.parts[partIdx];
+    if (part.prompt || part.label) {
+      const q = document.createElement("span");
+      q.className = "label";
+      q.textContent = (part.label ? "(" + part.label + ") " : "") + (part.prompt || "");
+      if (q.textContent.trim()) wrap.appendChild(q);
+    }
+    if (lang === "en" || lang === "both") {
+      const p = document.createElement("p"); p.className = "en"; p.textContent = s.en;
+      wrap.appendChild(p);
+    }
+    if (lang === "ur" || lang === "both") {
+      const p = document.createElement("p"); p.className = "ur"; p.lang = "ur"; p.textContent = s.ur;
+      wrap.appendChild(p);
+    }
+    box.innerHTML = "";
+    box.appendChild(wrap);
+  }
+
+  // ---------- navigation ----------
+  function goto(i, animate = true) {
+    if (!steps.length) return;
+    cur = Math.max(-1, Math.min(steps.length - 1, i));
+    if (cur < 0) {
+      $("math").innerHTML = "";
+      drawAll();
+    } else {
+      renderMathLines(cur);
+      if (animate) animateNewStep(); else { anim.t = 1; drawAll(); }
+      $("progress").firstElementChild.style.width = ((cur + 1) / steps.length) * 100 + "%";
+    }
+    renderBoard();
+    renderExplain();
+    $("prev").disabled = cur < 0;
+    const atEnd = cur >= steps.length - 1;
+    $("next").disabled = atEnd && partIdx >= item.parts.length - 1;
+    if (atEnd && playing) {
+      if (partIdx < item.parts.length - 1) {
+        timer = setTimeout(() => { setPart(partIdx + 1); if (playing) play(true); }, 2200);
+      } else {
+        stopPlay();
+      }
+    }
+  }
+
+  function play(resume) {
+    if (!item) return;
+    if (!resume && cur >= steps.length - 1 && partIdx >= item.parts.length - 1) goto(-1, false);
+    playing = true;
+    $("play").textContent = "⏸ Pause";
+    const delay = +$("speed").value;
+    const loop = () => {
+      if (!playing) return;
+      if (cur >= steps.length - 1) {
+        if (partIdx < item.parts.length - 1) {
+          setPart(partIdx + 1);
+          timer = setTimeout(loop, 600);
+        } else {
+          stopPlay();
+        }
+        return;
+      }
+      goto(cur + 1);
+      timer = setTimeout(loop, delay);
+    };
+    if (cur < 0) { timer = setTimeout(loop, 200); } else { timer = setTimeout(loop, delay); }
+  }
+
+  function stopPlay() {
+    playing = false;
+    clearTimeout(timer);
+    $("play").textContent = "▶ Play";
+  }
+
+  $("play").onclick = () => (playing ? stopPlay() : play(false));
+  $("next").onclick = () => { stopPlay(); if (cur >= steps.length - 1 && partIdx < item.parts.length - 1) setPart(partIdx + 1); else goto(cur + 1); };
+  $("prev").onclick = () => { stopPlay(); goto(cur - 1, false); };
+  $("first").onclick = () => { stopPlay(); goto(-1, false); };
+  document.querySelectorAll("[data-lang]").forEach((b) => b.onclick = () => {
+    lang = b.dataset.lang;
+    document.querySelectorAll("[data-lang]").forEach((x) => x.classList.toggle("on", x === b));
+    renderExplain();
+  });
+  window.addEventListener("resize", () => drawAll());
+  document.addEventListener("keydown", (e) => {
+    if (e.target.tagName === "TEXTAREA" || e.target.tagName === "SELECT") return;
+    if (e.key === "ArrowRight") $("next").click();
+    if (e.key === "ArrowLeft") $("prev").click();
+    if (e.key === " ") { e.preventDefault(); $("play").click(); }
+  });
+
+  // ---------- search ----------
+  function showResults(data) {
+    const box = $("results");
+    box.innerHTML = "";
+    if (data.mode === "book") {
+      data.results.forEach((r) => {
+        const b = document.createElement("button");
+        b.className = "hit";
+        b.innerHTML = `<strong>${escapeHTML(titleOf(r))}</strong><small>${escapeHTML(r.question.slice(0, 110))}</small>`;
+        b.onclick = () => openItem(r.id, "From the book");
+        box.appendChild(b);
+      });
+      if (data.results[0]) openItem(data.results[0].id, "From the book");
+      return;
+    }
+    const msg = document.createElement("div");
+    msg.className = "note";
+    msg.textContent = "This question is not in the solved examples yet.";
+    box.appendChild(msg);
+    if (data.live_available) {
+      const b = document.createElement("button");
+      b.className = "primary";
+      b.style.marginTop = "8px";
+      b.textContent = "Solve it live";
+      b.onclick = () => solveLive(b);
+      box.appendChild(b);
+    } else {
+      const n = document.createElement("div");
+      n.className = "note";
+      n.style.marginTop = "6px";
+      n.textContent = "Live solving is off. Start the server with ANTHROPIC_API_KEY set to enable it.";
+      box.appendChild(n);
+    }
+  }
+
+  async function solveLive(btn) {
+    btn.disabled = true; btn.textContent = "Solving…";
+    try {
+      const sol = await api("/api/solve", { question: $("q").value });
+      sol.unit_title = "Live";
+      item = sol;
+      sol.parts.forEach((p) => p.steps.forEach((s) => s.draw = s.draw || []));
+      $("src").style.display = "";
+      $("src").textContent = sol.verified ? "Live · all checks passed" : "Live · some checks failed, review";
+      $("src").className = "badge gen";
+      $("title").textContent = "Live solution";
+      renderParts();
+      setPart(0);
+    } catch (e) {
+      alert(e.message);
+    } finally {
+      btn.disabled = false; btn.textContent = "Solve it live";
+    }
+  }
+
+  // ---------- photo of a question ----------
+  $("photo").onchange = (e) => {
+    const f = e.target.files[0];
+    $("photo-go").disabled = !f;
+    if (f) {
+      $("preview").src = URL.createObjectURL(f);
+      $("preview").style.display = "";
+    }
+  };
+
+  $("photo-go").onclick = async () => {
+    const f = $("photo").files[0];
+    if (!f) return;
+    const btn = $("photo-go");
+    btn.disabled = true;
+    btn.textContent = "Reading photo…";
+    $("detected").textContent = "Claude is reading the question…";
+    try {
+      const form = new FormData();
+      form.append("image", f);
+      const r = await fetch("/api/photo", { method: "POST", body: form });
+      const data = await r.json().catch(() => ({}));
+      if (!r.ok) {
+        $("detected").textContent = data.error || ("HTTP " + r.status);
+        return;
+      }
+      const d = data.detected || {};
+      const where = [
+        d.exercise ? "Exercise " + d.exercise : null,
+        d.number ? "Question " + d.number : null,
+        data.part_label ? "part (" + data.part_label + ")" : null,
+      ].filter(Boolean).join(", ");
+      const how = {
+        book_by_number: "matched to the book by exercise and question number",
+        book_by_text: "matched to a book example by its text",
+        live: "not in the book, solved live",
+      }[data.resolution];
+      $("detected").textContent = (where || "Question read") + " · " + how +
+        (d.confidence != null ? " · confidence " + Math.round(d.confidence * 100) + "%" : "") +
+        (d.notes ? " · " + d.notes : "");
+      item = data.item;
+      $("src").style.display = "";
+      $("src").textContent = data.resolution === "live" ? "Live solution" : "From the book";
+      $("src").className = "badge" + (data.resolution === "live" ? " gen" : "");
+      $("title").innerHTML = titleOf(item);
+      renderParts();
+      setPart(data.part_index || 0);
+    } catch (e) {
+      $("detected").textContent = e.message;
+    } finally {
+      btn.disabled = false;
+      btn.textContent = "Read & solve";
+    }
+  };
+
+  $("ask").onclick = async () => {
+    const q = $("q").value.trim();
+    if (!q) return;
+    $("results").innerHTML = '<div class="note">Searching…</div>';
+    try { showResults(await api("/api/ask", { question: q })); }
+    catch (e) { $("results").innerHTML = `<div class="note">${escapeHTML(e.message)}</div>`; }
+  };
+  $("q").addEventListener("keydown", (e) => { if (e.key === "Enter" && (e.ctrlKey || e.metaKey)) $("ask").click(); });
+  $("clear").onclick = () => { $("q").value = ""; };
+
+  $("browse").onchange = (e) => openItem(e.target.value, "From the book");
+
+  function escapeHTML(s) { return String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c])); }
+
+  // ---------- boot ----------
+  (async () => {
+    const list = await api("/api/items");
+    $("count").textContent = list.length + " solved questions";
+    const sel = $("browse");
+    sel.innerHTML = '<option value="">— choose —</option>';
+    list.forEach((it) => {
+      const o = document.createElement("option");
+      o.value = it.id;
+      o.textContent = titleOf(it) + " · " + it.question.slice(0, 40);
+      sel.appendChild(o);
+    });
+    if (list.length) { sel.value = list[0].id; openItem(list[0].id, "From the book"); }
+  })().catch((e) => { $("results").innerHTML = `<div class="note">Could not load: ${escapeHTML(e.message)}</div>`; });
+})();
+</script>
+</body>
+</html>
