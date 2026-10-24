@@ -67,6 +67,11 @@ def main():
         r=args.rank, lora_alpha=2 * args.rank, lora_dropout=0.05, task_type="CAUSAL_LM",
         target_modules=["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"],
     ))
+    if dtype == torch.float16:
+        # fp16 mixed precision cannot unscale fp16 gradients: keep the small LoRA weights in fp32
+        for prm in model.parameters():
+            if prm.requires_grad:
+                prm.data = prm.data.float()
     model.print_trainable_parameters()
 
     rows = [json.loads(l) for l in open(pathlib.Path(args.data) / "gen_sft.jsonl", encoding="utf-8")]
@@ -75,15 +80,17 @@ def main():
     ds = ChatSFT(rows, tok, args.max_len)
     print(f"sft examples: {len(ds)}")
 
+    accum = 8
+    total_steps = max(1, -(-len(ds) // accum)) * args.epochs
     targs = TrainingArguments(
         output_dir=str(pathlib.Path(args.out) / "checkpoints"),
         num_train_epochs=args.epochs,
         max_steps=args.max_steps,
         per_device_train_batch_size=1,
-        gradient_accumulation_steps=8,
+        gradient_accumulation_steps=accum,
         learning_rate=args.lr,
         lr_scheduler_type="cosine",
-        warmup_ratio=0.05,
+        warmup_steps=max(1, int(0.05 * total_steps)),
         logging_steps=5,
         save_strategy="no",
         bf16=bf16,
