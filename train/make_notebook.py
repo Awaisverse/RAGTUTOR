@@ -21,12 +21,15 @@ At the end, download `train/out/` and copy the folders into your project:
 
 Then run the server with `EMB_MODEL=models/embed-ft` (the generator adapter is loaded from `models/gen-lora` automatically)."""),
     ("code", """!nvidia-smi --query-gpu=name,memory.total --format=csv"""),
-    ("code", """# 1) Get the project. Clones the project from GitHub.
+    ("code", """# 1) Get the project (clones the first time, pulls updates on later runs)
 import os
 REPO_URL = "https://github.com/Awaisverse/RAGTUTOR.git"
-if not os.path.exists("RAGsystemfromnotes"):
-    !git clone {REPO_URL} RAGsystemfromnotes
-%cd RAGsystemfromnotes
+REPO_DIR = "/content/RAGsystemfromnotes"
+if os.path.exists(REPO_DIR):
+    !git -C {REPO_DIR} pull
+else:
+    !git clone {REPO_URL} {REPO_DIR}
+%cd {REPO_DIR}
 !ls data/book"""),
     ("code", """# 2) Install (Colab already has torch and CUDA)
 !pip -q install "transformers>=4.45" peft accelerate sentence-transformers sympy scikit-learn flask pillow"""),
@@ -45,6 +48,7 @@ print("baseline:", base)
 print("fine-tuned:", ft)"""),
     ("code", """# 7) LoRA fine-tune the generator (T4 fits the 1.5B model with gradient checkpointing; ~20-60 min for the sample data)
 !python train/train_generator.py --epochs 3 --lr 1e-4"""),
+    ("md", """If a step fails after you fixed the code on GitHub, rerun cell 1 (it pulls the update) and then only the failed step. Trained files stay in `train/out/` for the whole session, so you do not need to retrain."""),
     ("code", """# 8) Generation quality on the held-out items: valid JSON, verified steps, fully verified solutions
 !python train/evaluate.py --embed-model train/out/embed-ft --gen-adapter train/out/gen-lora --report train/out/eval_gen.json
 print(open("train/out/eval_gen.json").read())"""),

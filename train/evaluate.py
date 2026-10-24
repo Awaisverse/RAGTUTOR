@@ -55,6 +55,7 @@ def retrieval_eval(all_items, ev):
 
 def generation_eval(train, ev, args):
     import local_models  # imported here: needs torch and the generator
+    local_models.GEN_MODEL = args.gen_model
     if args.gen_adapter:
         os.environ["GEN_ADAPTER"] = args.gen_adapter
         local_models.GEN_ADAPTER = args.gen_adapter
@@ -101,6 +102,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--data", default=str(ROOT / "train" / "out" / "data"))
     ap.add_argument("--embed-model", default="BAAI/bge-small-en-v1.5")
+    ap.add_argument("--gen-model", default="Qwen/Qwen2.5-Math-1.5B-Instruct",
+                    help="base generator: a Hugging Face id (downloaded on first use) or a local folder")
     ap.add_argument("--gen-adapter", default="")
     ap.add_argument("--neighbours", type=int, default=3)
     ap.add_argument("--no-generation", action="store_true")
