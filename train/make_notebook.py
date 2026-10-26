@@ -218,7 +218,7 @@ Only the answer part of each example is learned; the prompt and retrieved contex
 
 code(r'''
 # 4.1 LoRA fine-tune
-run(f"python train/train_generator.py --epochs {EPOCHS_GEN} --lr 1e-4")
+run(f"python train/train_generator.py --epochs {EPOCHS_GEN} --lr 2e-4")
 assert os.path.exists("train/out/gen-lora/adapter_config.json"), "Generator training did not produce an adapter"
 backup("phase4")
 ''')

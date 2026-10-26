@@ -18,7 +18,7 @@ import time
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 KERNEL = "awaisverse/math-tutor-train"
-ENV = {**os.environ, "PYTHONIOENCODING": "utf-8"}
+ENV = {**os.environ, "PYTHONIOENCODING": "utf-8", "PYTHONUTF8": "1"}
 
 
 def kaggle(*args, check=True):

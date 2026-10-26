@@ -56,6 +56,7 @@ def main():
     ap.add_argument("--lr", type=float, default=1e-4)
     ap.add_argument("--max-len", type=int, default=2560)
     ap.add_argument("--rank", type=int, default=16)
+    ap.add_argument("--accum", type=int, default=4, help="gradient accumulation: examples per weight update")
     ap.add_argument("--max-steps", type=int, default=-1, help="for a quick smoke test")
     args = ap.parse_args()
 
@@ -86,7 +87,7 @@ def main():
     if len(ds) == 0:
         raise SystemExit("no training examples fit max-len; raise --max-len or lower --neighbours")
 
-    accum = 8
+    accum = args.accum
     total_steps = max(1, -(-len(ds) // accum)) * args.epochs
     targs = TrainingArguments(
         output_dir=str(pathlib.Path(args.out) / "checkpoints"),
