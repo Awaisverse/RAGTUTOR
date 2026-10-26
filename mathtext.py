@@ -114,13 +114,13 @@ def latex_to_py(s):
                 close = s.index("]", j)
                 n = s[j + 1:close]
                 a, i = _group(s, close + 1)
-                out += f"root({latex_to_py(a)},{latex_to_py(n)})"
+                out += f" root({latex_to_py(a)},{latex_to_py(n)})"
             elif s[j:j + 1] == "{":
                 a, i = _group(s, j)
-                out += f"sqrt({latex_to_py(a)})"
+                out += f" sqrt({latex_to_py(a)})"
             else:
                 m = re.match(r"\s*(\d+(?:\.\d+)?|[a-zA-Z])", s[j:])
-                out += f"sqrt({m.group(1)})" if m else "sqrt"
+                out += f" sqrt({m.group(1)})" if m else " sqrt"
                 i = j + (m.end() if m else 0)
         elif s.startswith("\\text", i):
             a, i = _group(s, s.index("{", i))
@@ -235,8 +235,11 @@ for _c in "abcdfghjklmnpqrstuvwxyz":
 _LOCALS["e"] = sp.Symbol("e", positive=True)   # a letter, never Euler's number, unless the caller decides otherwise
 
 
-def parse_math(text):
-    """Typed text or LaTeX -> sympy expression. Raises ValueError when the text is not a plain maths expression."""
+def parse_math(text, evaluate=True):
+    """Typed text or LaTeX -> sympy expression. Raises ValueError when the text is not a plain maths expression.
+
+    evaluate=False keeps the expression as the student wrote it (sympy would otherwise rewrite 1/sqrt(13) as sqrt(13)/13,
+    or 5*5**(n+3) as 5**(n+4)), which is what the working has to start from."""
     raw = text.strip()
     s = latex_to_py(raw) if ("\\" in raw or "{" in raw) else ascii_to_py(raw)
     s = re.sub(r"\s+", " ", s).strip()
@@ -251,6 +254,14 @@ def parse_math(text):
             raise ValueError(f"unknown word {name!r}")
     s = re.sub(r"(?<![\w.])(\d+\.\d+)(?![\w.])", r"Rational('\1')", s)   # 0.027 is the exact fraction 27/1000, not a float
     try:
-        return parse_expr(s, local_dict=_LOCALS, transformations=_TRANSFORMS, evaluate=True)
+        return parse_expr(s, local_dict=_LOCALS, transformations=_TRANSFORMS, evaluate=evaluate)
     except Exception as exc:
         raise ValueError(f"cannot read {s!r}: {exc}") from exc
+
+
+def tex_as_written(text):
+    """LaTeX of the question as the student wrote it (not simplified). Falls back to the plain text."""
+    try:
+        return sp.latex(parse_math(text, evaluate=False), order="none")
+    except ValueError:
+        return str(text)

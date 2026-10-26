@@ -6,7 +6,7 @@ a failing check is discarded, never shown.
 
 Add a new question type by writing a function try_xxx(text) -> item | None and listing it in SOLVERS.
 """
-from . import algebra, numbers, problems
+from . import algebra, indices, numbers, problems, xvalue
 from .common import part_markers
 
 SOLVERS = [
@@ -20,6 +20,12 @@ SOLVERS = [
     numbers.try_scientific,
     numbers.try_between,
     algebra.try_power,
+    indices.try_numeric_expression,
+    indices.try_exponent_algebra,
+    indices.try_variable_root,
+    indices.try_cube_identity,
+    xvalue.try_find_pq,
+    xvalue.try_value_of_x,
 ]
 
 
