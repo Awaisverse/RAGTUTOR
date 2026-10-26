@@ -1,6 +1,7 @@
 """Generates train/colab_train.ipynb. Run:  python train/make_notebook.py"""
 import json
 import pathlib
+import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 
@@ -20,7 +21,7 @@ md(r'''
 # Math Tutor: training notebook (Punjab Class 9)
 
 **Goal:** produce models that give *accurate* answers when plugged into the tutor, and **prove** they are accurate
-before you integrate them. Nothing here calls a paid API: every model is a Hugging Face model trained on Colab.
+before you integrate them. Nothing here calls a paid API: every model is a Hugging Face model trained on a free GPU (Colab or Kaggle).
 
 ## How accuracy is achieved (and measured)
 | Layer | What makes it accurate |
@@ -56,8 +57,10 @@ md(r'''
 
 code(r'''
 # 0.1 GPU check (training and generation are far too slow on CPU)
+import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"   # one GPU only (Kaggle offers two; the trainer would otherwise split every batch)
 import torch
-assert torch.cuda.is_available(), "No GPU found. Runtime > Change runtime type > T4 GPU, then run this cell again."
+assert torch.cuda.is_available(), "No GPU found. Colab: Runtime > Change runtime type > GPU. Kaggle: Session options > Accelerator."
 print("GPU:", torch.cuda.get_device_name(0), "| memory:", round(torch.cuda.get_device_properties(0).total_memory / 1e9, 1), "GB")
 ''')
 
@@ -79,7 +82,8 @@ code(r'''
 import json, os, subprocess
 
 REPO_URL = "https://github.com/Awaisverse/RAGTUTOR.git"
-REPO_DIR = "/content/RAGsystemfromnotes"
+IN_KAGGLE = os.path.exists("/kaggle/working")
+REPO_DIR = "/tmp/RAGsystemfromnotes" if IN_KAGGLE else "/content/RAGsystemfromnotes"
 
 
 def run(cmd):
@@ -101,6 +105,7 @@ os.chdir(REPO_DIR)
 run("pip -q uninstall -y torchao")   # Colab's old torchao breaks peft
 run('pip -q install "transformers>=4.45" peft accelerate sentence-transformers sympy scikit-learn flask pillow')
 
+USE_DRIVE = USE_DRIVE and not IN_KAGGLE   # Drive exists only on Colab
 if USE_DRIVE:
     from google.colab import drive
     drive.mount("/content/drive")
@@ -297,7 +302,7 @@ md(r'''
 The zip contains the generator adapter (a few MB), the embedding model only if it beat the base model, the evaluation reports and `INTEGRATION.txt`.
 
 **After downloading:**
-1. Unzip into your project folder so that `models/gen-lora/` exists (and `models/embed-ft/` if included).
+1. Download the zip (Colab downloads it automatically; on Kaggle use the Output tab or `python tools/kaggle_run.py --fetch`). Unzip into your project folder so that `models/gen-lora/` exists (and `models/embed-ft/` if included).
 2. Download the base models once: `python tools/download_model.py Qwen/Qwen2.5-Math-1.5B-Instruct models/Qwen2.5-Math-1.5B-Instruct`
 3. Run `python server.py` (with `EMB_MODEL=models/embed-ft` if the embedding model is included).
 4. Ask a book question (it must come straight from the book), then a new question of the same type (it must be solved and show all checks passing).
@@ -328,16 +333,22 @@ for name in ("gen-lora",) + (("embed-ft",) if use_embed else ()):
     shutil.copytree(f"train/out/{name}", f"export/{name}", dirs_exist_ok=True)
 for f in ("eval_retr_base.json", "eval_retr_tuned.json", "eval_gen_base.json", "eval_gen_tuned.json", "eval_gen_tuned_items.jsonl", "INTEGRATION.txt"):
     shutil.copy(f"train/out/{f}", f"export/{f}")
-shutil.make_archive("math-tutor-trained", "zip", "export")
-print("zip size (MB):", round(os.path.getsize("math-tutor-trained.zip") / 1e6, 1))
+ZIP_BASE = "/kaggle/working/math-tutor-trained" if IN_KAGGLE else "math-tutor-trained"   # Kaggle keeps files in /kaggle/working
+shutil.make_archive(ZIP_BASE, "zip", "export")
+print("zip:", ZIP_BASE + ".zip", "| size (MB):", round(os.path.getsize(ZIP_BASE + ".zip") / 1e6, 1))
 ''')
 
 code(r'''
-# 6.2 Optional: upload to a private Hugging Face repo (add a Colab secret named HF_TOKEN first)
+# 6.2 Optional: upload to a private Hugging Face repo (add a secret named HF_TOKEN first)
 if HF_REPO:
-    from google.colab import userdata
+    try:
+        from google.colab import userdata
+        hf_token = userdata.get("HF_TOKEN")
+    except ImportError:
+        from kaggle_secrets import UserSecretsClient
+        hf_token = UserSecretsClient().get_secret("HF_TOKEN")
     from huggingface_hub import HfApi
-    api = HfApi(token=userdata.get("HF_TOKEN"))
+    api = HfApi(token=hf_token)
     api.create_repo(HF_REPO, private=True, exist_ok=True)
     api.upload_folder(folder_path="export", repo_id=HF_REPO)
     print("uploaded to https://huggingface.co/" + HF_REPO)
@@ -347,8 +358,11 @@ else:
 
 code(r'''
 # 6.3 Download
-from google.colab import files
-files.download("math-tutor-trained.zip")
+if IN_KAGGLE:
+    print("Kaggle: the zip is saved in the notebook output. Download it from the Output tab, or run tools/kaggle_run.py --fetch")
+else:
+    from google.colab import files
+    files.download("math-tutor-trained.zip")
 ''')
 
 md(r'''
@@ -379,3 +393,23 @@ nb = {
 out = ROOT / "train" / "colab_train.ipynb"
 out.write_text(json.dumps(nb, ensure_ascii=False, indent=1), encoding="utf-8")
 print("wrote", out, "-", len(CELLS), "cells")
+
+# Kaggle copy: same cells; QUICK_TEST is set by the command line (--full for the real run)
+full = "--full" in sys.argv
+kb = json.loads(json.dumps(nb))
+for c in kb["cells"]:
+    if c["cell_type"] == "code":
+        text = "".join(c["source"])
+        if "QUICK_TEST = True " in text:
+            text = text.replace("QUICK_TEST = True ", f"QUICK_TEST = {not full} ", 1)
+            c["source"] = text.splitlines(keepends=True)
+kb["metadata"]["accelerator"] = "GPU"
+kdir = ROOT / "kaggle"
+kdir.mkdir(exist_ok=True)
+(kdir / "math-tutor-train.ipynb").write_text(json.dumps(kb, ensure_ascii=False, indent=1), encoding="utf-8")
+(kdir / "kernel-metadata.json").write_text(json.dumps({
+    "id": "awaisverse/math-tutor-train", "title": "math-tutor-train", "code_file": "math-tutor-train.ipynb",
+    "language": "python", "kernel_type": "notebook", "is_private": True, "enable_gpu": True,
+    "enable_tpu": False, "enable_internet": True, "dataset_sources": [], "competition_sources": [],
+    "kernel_sources": [], "model_sources": []}, indent=2), encoding="utf-8")
+print("wrote kaggle/ (QUICK_TEST =", not full, ")")
