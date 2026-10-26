@@ -4,67 +4,361 @@ import pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 
-CELLS = [
-    ("md", """# Math Tutor: training on Colab (free GPU)
+CELLS = []
 
-Trains three things on the verified solved book, with the RAG principles from `docs/PLAN.md`:
 
-1. **Embedding model** (`bge-small-en-v1.5`): contrastive fine-tune on question paraphrases.
-2. **Generator** (`Qwen2.5-Math-1.5B-Instruct`): LoRA fine-tune on verified solutions, with retrieved examples in the prompt.
-3. **Evaluation** on a held-out split (base vs fine-tuned).
+def md(text):
+    CELLS.append(("md", text.strip("\n")))
 
-Runtime: **GPU** (Runtime > Change runtime type > T4 GPU). Everything runs locally on Colab, no API keys.
 
-At the end, download `train/out/` and copy the folders into your project:
-- `train/out/embed-ft`  ->  `models/embed-ft`
-- `train/out/gen-lora`  ->  `models/gen-lora`
+def code(text):
+    CELLS.append(("code", text.strip("\n")))
 
-Then run the server with `EMB_MODEL=models/embed-ft` (the generator adapter is loaded from `models/gen-lora` automatically)."""),
-    ("code", """!nvidia-smi --query-gpu=name,memory.total --format=csv"""),
-    ("code", """# 1) Get the project (clones the first time, pulls updates on later runs)
-import os
+
+# =====================================================================================
+md(r'''
+# Math Tutor: training notebook (Punjab Class 9)
+
+**Goal:** produce models that give *accurate* answers when plugged into the tutor, and **prove** they are accurate
+before you integrate them. Nothing here calls a paid API: every model is a Hugging Face model trained on Colab.
+
+## How accuracy is achieved (and measured)
+| Layer | What makes it accurate |
+|---|---|
+| Retrieval | Questions in the book are answered with the stored, hand-checked solution. No generation at all. |
+| Generator (new questions) | Fine-tuned on thousands of *computed* solutions, then every step is re-checked with sympy. |
+| Training data | Synthetic questions come from Python solvers, so each answer is correct by construction. |
+| Honest test | Real book questions are held out and never trained on. The score on them is the one that matters. |
+
+## Phases
+| Phase | What happens | Pass condition |
+|---|---|---|
+| 0 Setup | GPU, code, libraries, settings | GPU found |
+| 1 Data | Verify the book, generate synthetic solved questions, build training files | 0 failed math checks |
+| 2 Retrieval | Fine-tune the embedding model, keep it only if it is better | automatic decision |
+| 3 Baseline | Score the *untuned* generator with retrieved examples in the prompt | numbers recorded |
+| 4 Training | LoRA fine-tune the generator | adapter saved |
+| 5 Evaluation | Score the tuned generator, compare with baseline, apply gates | gates A, B, C pass |
+| 6 Export | Zip the models, write integration steps | zip downloaded |
+
+## How to run
+1. **First run with `QUICK_TEST = True`** (about 15 minutes). It checks that every phase works. The model it produces is not usable.
+2. Set `QUICK_TEST = False` in the settings cell, then **Runtime > Restart and run all** (about 2 hours on a free T4).
+3. If a cell fails, it stops with a clear message. Fix or retry from that cell; earlier results stay in `train/out/`.
+''')
+
+# =====================================================================================
+md(r'''
+## Phase 0: Setup
+**Purpose:** make sure the GPU, code and libraries are ready, and set the run size.
+**Time:** 2 to 4 minutes.
+''')
+
+code(r'''
+# 0.1 GPU check (training and generation are far too slow on CPU)
+import torch
+assert torch.cuda.is_available(), "No GPU found. Runtime > Change runtime type > T4 GPU, then run this cell again."
+print("GPU:", torch.cuda.get_device_name(0), "| memory:", round(torch.cuda.get_device_properties(0).total_memory / 1e9, 1), "GB")
+''')
+
+code(r'''
+# 0.2 SETTINGS. Change only this cell.
+QUICK_TEST = True     # True: tiny run to test the pipeline (~15 min). False: the real run (~2 h).
+USE_DRIVE = False     # True: copy results to Google Drive after each phase (survives a Colab restart)
+HF_REPO = ""          # optional, e.g. "yourname/math-tutor": uploads the models to your private Hugging Face repo
+
+if QUICK_TEST:
+    SYNTH_PER_TYPE, EPOCHS_EMBED, EPOCHS_GEN, LIMIT_REAL, LIMIT_SYNTH = 4, 1, 1, 2, 3
+else:
+    SYNTH_PER_TYPE, EPOCHS_EMBED, EPOCHS_GEN, LIMIT_REAL, LIMIT_SYNTH = 25, 3, 3, 0, 0   # 0 = evaluate every test item
+print("QUICK_TEST =", QUICK_TEST, "| synthetic per type:", SYNTH_PER_TYPE, "| generator epochs:", EPOCHS_GEN)
+''')
+
+code(r'''
+# 0.3 Get the code, install libraries, define helpers
+import json, os, subprocess
+
 REPO_URL = "https://github.com/Awaisverse/RAGTUTOR.git"
 REPO_DIR = "/content/RAGsystemfromnotes"
+
+
+def run(cmd):
+    """Run a shell command, stream its output, and STOP the notebook if it fails."""
+    print("$", cmd, flush=True)
+    p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, bufsize=1)
+    for line in p.stdout:
+        print(line, end="")
+    if p.wait() != 0:
+        raise RuntimeError(f"FAILED (exit code {p.returncode}): {cmd}\nRead the output above for the cause.")
+
+
 if os.path.exists(REPO_DIR):
-    !git -C {REPO_DIR} pull
+    run(f"git -C {REPO_DIR} pull")
 else:
-    !git clone {REPO_URL} {REPO_DIR}
-%cd {REPO_DIR}
-!ls data/book"""),
-    ("code", """# 2) Install (Colab already has torch and CUDA)
-!pip -q uninstall -y torchao
-!pip -q install "transformers>=4.45" peft accelerate sentence-transformers sympy scikit-learn flask pillow"""),
-    ("code", """# 3) Build training data from the verified book (split by unit; here: every 5th item is held out)
-!python train/make_dataset.py --eval-units 0
-assert os.path.exists("train/out/data/gen_sft.jsonl"), "Step 3 failed: see the error above"
-"""),
-    ("code", """# 4) Baseline retrieval with the untouched embedding model
-!python train/evaluate.py --embed-model BAAI/bge-small-en-v1.5 --no-generation --report train/out/eval_base.json"""),
-    ("code", """# 5) Fine-tune the embedding model
-!python train/train_embeddings.py --epochs 3 --batch 32
-assert os.path.exists("train/out/embed-ft/config.json"), "Step 5 failed: see the error above"
-"""),
-    ("code", """# 6) Retrieval after fine-tuning. Keep the new model only if recall@3 is higher than the baseline.
-!python train/evaluate.py --embed-model train/out/embed-ft --no-generation --report train/out/eval_ft.json
-import json
-base = json.load(open("train/out/eval_base.json"))["retrieval"]
-ft = json.load(open("train/out/eval_ft.json"))["retrieval"]
-print("baseline:", base)
-print("fine-tuned:", ft)"""),
-    ("code", """# 7) LoRA fine-tune the generator (T4 fits the 1.5B model with gradient checkpointing; ~20-60 min for the sample data)
-!python train/train_generator.py --epochs 3 --lr 1e-4
-assert os.path.exists("train/out/gen-lora/adapter_config.json"), "Step 7 failed: see the error above"
-"""),
-    ("md", """If a step fails after the code was fixed on GitHub, rerun cell 1 (it pulls the update) and the install cell, then rerun from the failed step. Files from steps that passed stay in `train/out/` for the whole session. If Colab restarts, they are lost and you must start again from step 3."""),
-    ("code", """# 8) Generation quality on the held-out items: valid JSON, verified steps, fully verified solutions
-!python train/evaluate.py --embed-model train/out/embed-ft --gen-adapter train/out/gen-lora --report train/out/eval_gen.json
-assert os.path.exists("train/out/eval_gen.json"), "Step 8 failed: see the error above"
-print(open("train/out/eval_gen.json").read())"""),
-    ("code", """# 9) Package the results for download
-!cd train/out && zip -qr ../../math-tutor-trained.zip embed-ft gen-lora eval_base.json eval_ft.json eval_gen.json
-from google.colab import files
-files.download("math-tutor-trained.zip")"""),
+    run(f"git clone {REPO_URL} {REPO_DIR}")
+os.chdir(REPO_DIR)
+
+run("pip -q uninstall -y torchao")   # Colab's old torchao breaks peft
+run('pip -q install "transformers>=4.45" peft accelerate sentence-transformers sympy scikit-learn flask pillow')
+
+if USE_DRIVE:
+    from google.colab import drive
+    drive.mount("/content/drive")
+
+
+def backup(tag):
+    if USE_DRIVE:
+        run(f"mkdir -p /content/drive/MyDrive/math-tutor && cp -r train/out /content/drive/MyDrive/math-tutor/out_{tag}")
+
+
+print("ready in", os.getcwd())
+''')
+
+# =====================================================================================
+md(r'''
+## Phase 1: Data
+**Purpose:** build everything the models learn from, and make sure none of it is wrong.
+1. Re-check every hand-solved book item with sympy.
+2. Generate synthetic solved questions (13 question types) and re-check all of them.
+3. Split: real book items are partly **held out** as the honest test; synthetic questions get a separate test set with new numbers.
+4. Write the training files. Each generator example puts retrieved neighbours in the prompt, exactly like the real tutor.
+
+**Time:** 1 to 2 minutes. **Pass:** every math check true.
+**If it fails:** the message names the wrong step. Fix it in `data/src/` or `train/synth.py`, push to GitHub, rerun cell 0.3.
+''')
+
+code(r'''
+# 1.1 The hand-solved book: every math step must verify
+run("python tools/build_dataset.py --report")
+''')
+
+code(r'''
+# 1.2 The synthetic generators: every math step must verify
+run("python train/check_synth.py --per-type 60")
+''')
+
+code(r'''
+# 1.3 Build training and test files
+run(f"python train/make_dataset.py --synth-per-type {SYNTH_PER_TYPE} --synth-eval-per-type 2")
+
+rows = [json.loads(l) for l in open("train/out/data/gen_sft.jsonl", encoding="utf-8")]
+pairs = sum(1 for _ in open("train/out/data/embed_pairs.jsonl", encoding="utf-8"))
+assert len(rows) > 0 and pairs > 0, "No training data was produced"
+print(f"\ngenerator examples: {len(rows)} | embedding pairs: {pairs}\n")
+ex = rows[0]["messages"]
+print("USER QUESTION :", ex[1]["content"][:200])
+print("RETRIEVED CONTEXT in prompt (start):", ex[0]["content"].split("EXAMPLE 1")[1][:250].replace("\n", " "), "...")
+print("TARGET ANSWER (start):", ex[2]["content"][:350], "...")
+backup("phase1")
+''')
+
+# =====================================================================================
+md(r'''
+## Phase 2: Retrieval (embedding model)
+**Purpose:** a student's question must find the right book item even when worded differently. The embedding model
+(`BAAI/bge-small-en-v1.5`) is fine-tuned on question paraphrases.
+**Time:** 3 to 10 minutes. **Pass:** automatic. The tuned model is used only if it is **strictly better** than the base model on the held-out
+queries (Recall@3, then MRR). Otherwise the base model is kept, which is the safe choice.
+**Note:** with a small book, both models usually score 1.0, so the base model is kept. That is expected until more items exist.
+''')
+
+code(r'''
+# 2.1 Baseline: the untouched embedding model
+run("python train/evaluate.py --tag retr_base --no-generation --embed-model BAAI/bge-small-en-v1.5")
+''')
+
+code(r'''
+# 2.2 Fine-tune the embedding model on paraphrase pairs
+run(f"python train/train_embeddings.py --epochs {EPOCHS_EMBED} --batch 32")
+assert os.path.exists("train/out/embed-ft/config.json"), "Embedding training did not produce a model"
+''')
+
+code(r'''
+# 2.3 Compare, then choose
+run("python train/evaluate.py --tag retr_tuned --no-generation --embed-model train/out/embed-ft")
+b = json.load(open("train/out/eval_retr_base.json"))["retrieval"]
+t = json.load(open("train/out/eval_retr_tuned.json"))["retrieval"]
+print("base :", b)
+print("tuned:", t)
+BASE_EMBED = "BAAI/bge-small-en-v1.5"
+BEST_EMBED = "train/out/embed-ft" if (t["recall@3"], t["mrr"]) > (b["recall@3"], b["mrr"]) else BASE_EMBED
+print("\nDECISION: use", "the FINE-TUNED embedding model" if BEST_EMBED != BASE_EMBED else "the BASE embedding model (tuning did not help)")
+backup("phase2")
+''')
+
+# =====================================================================================
+md(r'''
+## Phase 3: Baseline generator (before training)
+**Purpose:** measure the *untuned* `Qwen2.5-Math-1.5B-Instruct` on the test questions, with retrieved book examples in the prompt.
+Without this number you cannot tell whether fine-tuning helped.
+**Time:** 10 to 25 minutes (the model downloads once, about 3 GB, then writes a solution per test question).
+**Metrics** (see `train/evaluate.py`): valid JSON, share of the model's own math checks that are true, fully verified solutions, final answer matches.
+''')
+
+code(r'''
+# 3.1 Score the base model
+run(f"python train/evaluate.py --tag gen_base --no-retrieval --limit-real {LIMIT_REAL} --limit-synth {LIMIT_SYNTH}")
+print(json.dumps(json.load(open("train/out/eval_gen_base.json"))["generation"], indent=1))
+backup("phase3")
+''')
+
+# =====================================================================================
+md(r'''
+## Phase 4: Train the generator (LoRA)
+**Purpose:** teach the model to write the exact solution format, with correct, sympy-checkable steps, using retrieved examples as guidance.
+Only the answer part of each example is learned; the prompt and retrieved context are masked out of the loss.
+**Time:** 15 to 40 minutes on a T4 (about 1 minute in quick mode).
+**If you see "out of memory":** lower `--max-len` to 2048 or `--neighbours` to 1 in `make_dataset.py`, and retrain.
+''')
+
+code(r'''
+# 4.1 LoRA fine-tune
+run(f"python train/train_generator.py --epochs {EPOCHS_GEN} --lr 1e-4")
+assert os.path.exists("train/out/gen-lora/adapter_config.json"), "Generator training did not produce an adapter"
+backup("phase4")
+''')
+
+# =====================================================================================
+md(r'''
+## Phase 5: Evaluate and decide
+**Purpose:** score the tuned generator on the same test questions and decide whether it is safe to integrate.
+
+| Gate | Meaning | Needed to integrate |
+|---|---|---|
+| A | tuned replies are valid JSON (at least 95%) on both test sets | yes |
+| B | verified-step rate is not worse than the baseline on both sets | yes |
+| C | fully-verified rate on the **real** book questions is not worse than the baseline | yes |
+| D | release target: at least 90% fully verified **and** at least 90% correct final answer on the real questions | for a trustworthy tutor |
+
+**Time:** 10 to 25 minutes.
+''')
+
+code(r'''
+# 5.1 Score the tuned generator
+run(f"python train/evaluate.py --tag gen_tuned --no-retrieval --gen-adapter train/out/gen-lora --limit-real {LIMIT_REAL} --limit-synth {LIMIT_SYNTH}")
+''')
+
+code(r'''
+# 5.2 Compare with the baseline and apply the gates
+base = json.load(open("train/out/eval_gen_base.json"))["generation"]
+tuned = json.load(open("train/out/eval_gen_tuned.json"))["generation"]
+metrics = ["json_valid", "verified_step_rate", "fully_verified", "answer_match"]
+
+print(f"{'set':6} {'metric':20} {'base':>7} {'tuned':>7}")
+for s in ("real", "synth"):
+    for m in metrics:
+        print(f"{s:6} {m:20} {base[s][m]:7.3f} {tuned[s][m]:7.3f}")
+    print(f"{'':6} {'test items':20} {base[s]['items']:7d} {tuned[s]['items']:7d}")
+
+gates = {
+    "A  valid JSON >= 0.95 on both sets": all(tuned[s]["json_valid"] >= 0.95 for s in tuned),
+    "B  verified-step rate >= baseline on both sets": all(tuned[s]["verified_step_rate"] >= base[s]["verified_step_rate"] for s in tuned),
+    "C  fully-verified on REAL >= baseline": tuned["real"]["fully_verified"] >= base["real"]["fully_verified"],
+    "D  REAL: fully-verified >= 0.90 and answer match >= 0.90": tuned["real"]["fully_verified"] >= 0.90 and tuned["real"]["answer_match"] >= 0.90,
+}
+print()
+for name, ok in gates.items():
+    print("PASS" if ok else "FAIL", "|", name)
+
+gate_a, gate_b, gate_c, gate_d = gates.values()
+can_integrate = gate_a and gate_b and gate_c
+trustworthy = can_integrate and gate_d
+print()
+if QUICK_TEST:
+    print("QUICK_TEST is on: these numbers only prove the pipeline runs. Set QUICK_TEST = False and run everything again.")
+elif trustworthy:
+    print("RESULT: the tuned model passes every gate. Safe to integrate.")
+elif can_integrate:
+    print("RESULT: better than the baseline, but below the 90% accuracy target. Integrate only with the sympy verification on and the 'unverified' label visible. Add more data (see below) to reach the target.")
+else:
+    print("RESULT: do NOT integrate this model. See the failures below.")
+''')
+
+code(r'''
+# 5.3 Look at the failures (this tells you what data to add next)
+items = [json.loads(l) for l in open("train/out/eval_gen_tuned_items.jsonl", encoding="utf-8")]
+bad = [r for r in items if not (r["json_valid"] and r["checks"] > 0 and r["checks_ok"] == r["checks"] and r["answer_match"])]
+print(f"{len(bad)} of {len(items)} test questions were not fully correct\n")
+for r in bad[:5]:
+    print("SET     :", r["set"], "|", r["id"])
+    print("QUESTION:", r["question"][:160])
+    print("GOLD    :", r["gold_answers"])
+    print("MODEL   :", r["model_answers"], "| checks passed", f"{r['checks_ok']}/{r['checks']}", "| valid JSON:", r["json_valid"])
+    if not r["json_valid"]:
+        print("REPLY   :", r["raw_head"][:200].replace("\n", " "))
+    print()
+backup("phase5")
+''')
+
+# =====================================================================================
+md(r'''
+## Phase 6: Export and integrate
+**Purpose:** package the models and write the exact steps to plug them into the tutor.
+The zip contains the generator adapter (a few MB), the embedding model only if it beat the base model, the evaluation reports and `INTEGRATION.txt`.
+
+**After downloading:**
+1. Unzip into your project folder so that `models/gen-lora/` exists (and `models/embed-ft/` if included).
+2. Download the base models once: `python tools/download_model.py Qwen/Qwen2.5-Math-1.5B-Instruct models/Qwen2.5-Math-1.5B-Instruct`
+3. Run `python server.py` (with `EMB_MODEL=models/embed-ft` if the embedding model is included).
+4. Ask a book question (it must come straight from the book), then a new question of the same type (it must be solved and show all checks passing).
+
+**Time:** 1 to 2 minutes.
+''')
+
+code(r'''
+# 6.1 Package
+import shutil, zipfile
+
+use_embed = "BEST_EMBED" in globals() and BEST_EMBED != "BAAI/bge-small-en-v1.5"
+notes = [
+    "MATH TUTOR: trained models",
+    f"QUICK_TEST run: {QUICK_TEST}" + ("  <-- NOT a real model, do not integrate" if QUICK_TEST else ""),
+    "",
+    "1. Unzip into the project folder: models/gen-lora/" + (" and models/embed-ft/" if use_embed else ""),
+    "2. python tools/download_model.py Qwen/Qwen2.5-Math-1.5B-Instruct models/Qwen2.5-Math-1.5B-Instruct",
+    ("3. EMB_MODEL=models/embed-ft python server.py" if use_embed else "3. python server.py"),
+    "",
+    "Evaluation (tuned generator):",
+    json.dumps(tuned, indent=1),
 ]
+open("train/out/INTEGRATION.txt", "w").write("\n".join(notes))
+
+os.makedirs("export", exist_ok=True)
+for name in ("gen-lora",) + (("embed-ft",) if use_embed else ()):
+    shutil.copytree(f"train/out/{name}", f"export/{name}", dirs_exist_ok=True)
+for f in ("eval_retr_base.json", "eval_retr_tuned.json", "eval_gen_base.json", "eval_gen_tuned.json", "eval_gen_tuned_items.jsonl", "INTEGRATION.txt"):
+    shutil.copy(f"train/out/{f}", f"export/{f}")
+shutil.make_archive("math-tutor-trained", "zip", "export")
+print("zip size (MB):", round(os.path.getsize("math-tutor-trained.zip") / 1e6, 1))
+''')
+
+code(r'''
+# 6.2 Optional: upload to a private Hugging Face repo (add a Colab secret named HF_TOKEN first)
+if HF_REPO:
+    from google.colab import userdata
+    from huggingface_hub import HfApi
+    api = HfApi(token=userdata.get("HF_TOKEN"))
+    api.create_repo(HF_REPO, private=True, exist_ok=True)
+    api.upload_folder(folder_path="export", repo_id=HF_REPO)
+    print("uploaded to https://huggingface.co/" + HF_REPO)
+else:
+    print("HF_REPO is empty: skipping the upload")
+''')
+
+code(r'''
+# 6.3 Download
+from google.colab import files
+files.download("math-tutor-trained.zip")
+''')
+
+md(r'''
+## What to do next to raise accuracy
+Accuracy comes from data, not from more epochs. In order of value:
+1. **Read the failures (cell 5.3).** If one question type fails, add a generator for it in `train/synth.py` (a solver that picks numbers, computes the solution, writes the steps, and adds sympy checks).
+2. **Add the book's exercises** to `data/src/`. Each one becomes retrieval content (answered with the stored solution) and real test data.
+3. **Collect real student questions** and use them as paraphrases for the embedding model.
+4. **Try the 7B model** (`Qwen/Qwen2.5-Math-7B-Instruct`) if the 1.5B model cannot reach the target. It needs a larger GPU.
+''')
 
 
 def cell(kind, src):
@@ -84,4 +378,4 @@ nb = {
 }
 out = ROOT / "train" / "colab_train.ipynb"
 out.write_text(json.dumps(nb, ensure_ascii=False, indent=1), encoding="utf-8")
-print("wrote", out)
+print("wrote", out, "-", len(CELLS), "cells")

@@ -27,13 +27,17 @@ class ChatSFT(Dataset):
 
     def __init__(self, rows, tok, max_len):
         self.items = []
+        self.skipped = 0
         for r in rows:
             msgs = r["messages"]
             prompt = tok.apply_chat_template(msgs[:-1], tokenize=False, add_generation_prompt=True)
             full = prompt + msgs[-1]["content"] + tok.eos_token
             p_ids = tok(prompt, add_special_tokens=False)["input_ids"]
-            f_ids = tok(full, add_special_tokens=False)["input_ids"][:max_len]
-            labels = [-100] * min(len(p_ids), len(f_ids)) + f_ids[len(p_ids):]
+            f_ids = tok(full, add_special_tokens=False)["input_ids"]
+            if len(f_ids) > max_len:  # never truncate: that would cut off the answer being learned
+                self.skipped += 1
+                continue
+            labels = [-100] * len(p_ids) + f_ids[len(p_ids):]
             self.items.append({"input_ids": f_ids, "attention_mask": [1] * len(f_ids), "labels": labels})
 
     def __len__(self):
@@ -50,13 +54,13 @@ def main():
     ap.add_argument("--out", default=str(ROOT / "train" / "out" / "gen-lora"))
     ap.add_argument("--epochs", type=int, default=3)
     ap.add_argument("--lr", type=float, default=1e-4)
-    ap.add_argument("--max-len", type=int, default=2048)
+    ap.add_argument("--max-len", type=int, default=2560)
     ap.add_argument("--rank", type=int, default=16)
     ap.add_argument("--max-steps", type=int, default=-1, help="for a quick smoke test")
     args = ap.parse_args()
 
     use_cuda = torch.cuda.is_available()
-    bf16 = use_cuda and torch.cuda.is_bf16_supported()
+    bf16 = use_cuda and torch.cuda.get_device_capability()[0] >= 8  # T4 (7.5) has no native bf16
     dtype = torch.bfloat16 if bf16 else (torch.float16 if use_cuda else torch.float32)
 
     tok = AutoTokenizer.from_pretrained(args.base)
@@ -78,7 +82,9 @@ def main():
     random.seed(0)
     random.shuffle(rows)
     ds = ChatSFT(rows, tok, args.max_len)
-    print(f"sft examples: {len(ds)}")
+    print(f"sft examples: {len(ds)} (skipped {ds.skipped} longer than {args.max_len} tokens)")
+    if len(ds) == 0:
+        raise SystemExit("no training examples fit max-len; raise --max-len or lower --neighbours")
 
     accum = 8
     total_steps = max(1, -(-len(ds) // accum)) * args.epochs

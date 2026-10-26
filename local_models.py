@@ -22,7 +22,8 @@ _vis = None
 def _device_and_dtype():
     import torch
     if torch.cuda.is_available():
-        return "cuda", torch.bfloat16
+        native_bf16 = torch.cuda.get_device_capability()[0] >= 8  # T4 (7.5) has no native bf16: use fp16
+        return "cuda", (torch.bfloat16 if native_bf16 else torch.float16)
     return "cpu", torch.bfloat16
 
 

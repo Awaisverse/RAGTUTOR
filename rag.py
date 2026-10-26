@@ -10,6 +10,7 @@ Pipeline
                clears a threshold. Otherwise the caller falls back to live solving, with the
                nearest book chunks passed in as worked examples.
 """
+import hashlib
 import json
 import os
 import pathlib
@@ -73,7 +74,9 @@ class Index:
     def _load_embeddings(self, docs):
         from sentence_transformers import SentenceTransformer
         self.model = SentenceTransformer(EMB_MODEL)
-        ids = [c["id"] + "|" + c["part"] for c in self.chunks]
+        # cache key = model + chunk text, so switching models or editing an item never reuses stale vectors
+        ids = [hashlib.md5((EMB_MODEL + "|" + c["id"] + "|" + c["part"] + "|" + d).encode("utf-8")).hexdigest()
+               for c, d in zip(self.chunks, docs)]
         if EMB_CACHE.exists():
             cached = np.load(EMB_CACHE, allow_pickle=True)
             if list(cached["ids"]) == ids:

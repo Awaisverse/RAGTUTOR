@@ -1,16 +1,26 @@
-"""Evaluate retrieval and generation on the held-out split. Run before and after each fine-tune.
+"""Evaluate retrieval and generation. Run it before training (baseline) and after (tuned).
 
-Retrieval (no generator needed):
-  Recall@1, Recall@3, MRR for held-out questions and their paraphrases, searching only TRAIN chunks.
-  Compares the base embedding model with the fine-tuned one (--embed-model).
+Retrieval (--no-retrieval to skip)
+  The knowledge base is the whole real book, as in production. Queries are paraphrases of the
+  held-out real items, which the embedding model never saw in training.
+  Metrics: Recall@1, Recall@3, MRR.
 
-Generation (needs the generator; skip with --no-generation):
-  For each held-out question: retrieve TRAIN neighbours, generate, parse JSON, run every sympy check.
-  Reports JSON validity, verified-step rate and the fraction of fully verified solutions.
+Generation (--no-generation to skip)
+  Two test sets, both unseen during training:
+    real   held-out real book items (the honest test: genuine questions from the textbook)
+    synth  synthetic questions with new numbers
+  For each question the retrieved neighbours go into the prompt, exactly as in training and in
+  production. Metrics per set:
+    json_valid          the reply parses as the solution JSON
+    verified_step_rate  share of the model's own sympy checks that are true
+    fully_verified      JSON valid, has at least one check, and every check is true
+    answer_match        final answer equals the known answer after normalising the text
+                        (a strict string comparison: it can undercount correct answers written
+                        in a different but equivalent form)
 
 Usage:
-  python train/evaluate.py --embed-model BAAI/bge-small-en-v1.5 --no-generation
-  python train/evaluate.py --embed-model train/out/embed-ft --gen-adapter train/out/gen-lora
+  python train/evaluate.py --tag base                                   # base model, no adapter
+  python train/evaluate.py --tag tuned --gen-adapter train/out/gen-lora --embed-model train/out/embed-ft
 """
 import argparse
 import json
@@ -18,6 +28,7 @@ import os
 import pathlib
 import re
 import sys
+import time
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
@@ -26,22 +37,36 @@ sys.path.insert(0, str(ROOT / "train"))
 
 import rag  # noqa: E402
 from build_dataset import verify  # noqa: E402
-from make_dataset import load_items, variants  # noqa: E402
+from make_dataset import load_items, neighbours_text, variants  # noqa: E402
 from prompts import SOLVE_RULES  # noqa: E402
 
 
-def retrieval_eval(all_items, ev):
-    """The knowledge base is the WHOLE book (as in production). What is held out is the embedding
-    model's training: eval items' paraphrases were never used to fine-tune it. A query for an eval
-    item succeeds if the item itself is retrieved."""
-    chunks = [c for it in all_items for c in rag.chunk_item(it)]
-    index = rag.Index(chunks, use_embeddings=True)
+def norm_ans(a):
+    a = str(a)
+    a = re.sub(r"\\text\{([^}]*)\}", r"\1", a)
+    for old, new in (("\\dfrac", "\\frac"), ("\\tfrac", "\\frac"), ("\\left", ""), ("\\right", ""),
+                     ("\\%", "%"), ("\\,", ""), ("\\!", ""), ("\\;", "")):
+        a = a.replace(old, new)
+    a = re.sub(r"\^\\circ", "^{\\\\circ}", a)
+    return re.sub(r"[\s$]", "", a).lower().rstrip(".")
+
+
+def pick(items, limit):
+    if not limit or limit >= len(items):
+        return items
+    step = len(items) / limit
+    return [items[int(i * step)] for i in range(limit)]
+
+
+def retrieval_eval(real_items, ev):
+    """Knowledge base = whole real book. A query succeeds when its own item is retrieved."""
+    index = rag.Index([c for it in real_items for c in rag.chunk_item(it)], use_embeddings=True)
     hit1 = hit3 = rr = n = 0
     for it in ev:
         for q in variants(it):
             ids = []
             for h in index.search(q, k=20):
-                if h["id"] not in ids:  # several parts per item: keep the first rank per item
+                if h["id"] not in ids:
                     ids.append(h["id"])
             n += 1
             if it["id"] in ids:
@@ -49,82 +74,112 @@ def retrieval_eval(all_items, ev):
                 rr += 1 / r
                 hit1 += r == 1
                 hit3 += r <= 3
-    return {"queries": n, "recall@1": round(hit1 / n, 3), "recall@3": round(hit3 / n, 3),
-            "mrr": round(rr / n, 3)}
+    return {"queries": n, "recall@1": round(hit1 / n, 3), "recall@3": round(hit3 / n, 3), "mrr": round(rr / n, 3)}
 
 
-def generation_eval(train, ev, args):
-    import local_models  # imported here: needs torch and the generator
-    local_models.GEN_MODEL = args.gen_model
-    if args.gen_adapter:
-        os.environ["GEN_ADAPTER"] = args.gen_adapter
-        local_models.GEN_ADAPTER = args.gen_adapter
-    chunks = [c for it in train for c in rag.chunk_item(it)]
-    index = rag.Index(chunks, use_embeddings=False)
-    by_id = {it["id"]: it for it in train}
-    valid = verified_steps = total_steps = fully = 0
-    for it in ev:
-        hits = index.search(it["question"], k=args.neighbours)
-        ex = "\n\n".join(f"EXAMPLE {i+1} ({h['id']}):\n" + json.dumps(
-            {"question": by_id[h["id"]]["question"], "parts": by_id[h["id"]]["parts"]}, ensure_ascii=False)
-            for i, h in enumerate(hits) if h["id"] in by_id)
+def score_solution(raw, gold):
+    """-> dict of per-item results for one model reply."""
+    res = {"json_valid": False, "checks": 0, "checks_ok": 0, "answer_match": False, "model_answers": []}
+    m = re.search(r"\{.*\}", raw, re.S)
+    try:
+        sol = json.loads(m.group(0))
+        parts = sol["parts"]
+        assert isinstance(parts, list) and parts
+    except Exception:
+        return res
+    res["json_valid"] = True
+    for p in parts:
+        for st in p.get("steps", []):
+            for chk in st.get("check", []):
+                res["checks"] += 1
+                try:
+                    res["checks_ok"] += bool(verify(chk))
+                except Exception:
+                    pass
+        res["model_answers"].append(p.get("answer", ""))
+    gold_answers = [norm_ans(p["answer"]) for p in gold["parts"]]
+    res["answer_match"] = [norm_ans(a) for a in res["model_answers"]] == gold_answers
+    return res
+
+
+def generation_eval(name, items, pool, args, items_out):
+    import local_models  # needs torch and the generator model
+    pool_by_id = {it["id"]: it for it in pool}
+    index = rag.Index([c for it in pool for c in rag.chunk_item(it)], use_embeddings=False)
+    tot = {"n": len(items), "json_valid": 0, "checks": 0, "checks_ok": 0, "fully_verified": 0, "answer_match": 0}
+    for i, it in enumerate(items, 1):
+        t0 = time.time()
         raw = local_models.generate([
-            {"role": "system", "content": SOLVE_RULES + "\n\n" + ex},
+            {"role": "system", "content": SOLVE_RULES + "\n\n" + neighbours_text(index, pool_by_id, it, args.neighbours)},
             {"role": "user", "content": it["question"]},
-        ], max_new_tokens=3000)
-        m = re.search(r"\{.*\}", raw, re.S)
-        try:
-            sol = json.loads(m.group(0))
-        except Exception:
-            print("  invalid JSON for", it["id"])
-            continue
-        valid += 1
-        bad = 0
-        for p in sol.get("parts", []):
-            for st in p.get("steps", []):
-                for chk in st.get("check", []):
-                    total_steps += 1
-                    try:
-                        ok = verify(chk)
-                    except Exception:
-                        ok = False
-                    if ok:
-                        verified_steps += 1
-                    else:
-                        bad += 1
-        fully += (bad == 0)
-    n = len(ev)
-    return {"items": n, "json_valid": valid / n, "verified_step_rate": verified_steps / max(1, total_steps),
-            "fully_verified": fully / n}
+        ], max_new_tokens=args.max_new_tokens)
+        r = score_solution(raw, it)
+        tot["json_valid"] += r["json_valid"]
+        tot["checks"] += r["checks"]
+        tot["checks_ok"] += r["checks_ok"]
+        tot["fully_verified"] += bool(r["json_valid"] and r["checks"] > 0 and r["checks_ok"] == r["checks"])
+        tot["answer_match"] += bool(r["answer_match"])
+        items_out.append({"set": name, "id": it["id"], "question": it["question"], **r,
+                          "gold_answers": [p["answer"] for p in it["parts"]], "raw_head": raw[:300]})
+        print(f"  [{name} {i}/{len(items)}] valid={r['json_valid']} checks={r['checks_ok']}/{r['checks']} "
+              f"answer={r['answer_match']} ({time.time() - t0:.0f}s)", flush=True)
+    n = max(1, tot["n"])
+    return {"items": tot["n"], "json_valid": round(tot["json_valid"] / n, 3),
+            "verified_step_rate": round(tot["checks_ok"] / max(1, tot["checks"]), 3),
+            "fully_verified": round(tot["fully_verified"] / n, 3), "answer_match": round(tot["answer_match"] / n, 3)}
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--data", default=str(ROOT / "train" / "out" / "data"))
+    ap.add_argument("--tag", default="eval")
     ap.add_argument("--embed-model", default="BAAI/bge-small-en-v1.5")
     ap.add_argument("--gen-model", default="Qwen/Qwen2.5-Math-1.5B-Instruct",
                     help="base generator: a Hugging Face id (downloaded on first use) or a local folder")
-    ap.add_argument("--gen-adapter", default="")
-    ap.add_argument("--neighbours", type=int, default=3)
+    ap.add_argument("--gen-adapter", default="", help="LoRA folder; empty means the plain base model")
+    ap.add_argument("--no-retrieval", action="store_true")
     ap.add_argument("--no-generation", action="store_true")
-    ap.add_argument("--report", default=str(ROOT / "train" / "out" / "eval_report.json"))
+    ap.add_argument("--limit-real", type=int, default=0)
+    ap.add_argument("--limit-synth", type=int, default=0)
+    ap.add_argument("--neighbours", type=int, default=2)
+    ap.add_argument("--max-new-tokens", type=int, default=1800)
+    ap.add_argument("--report", default="")
     args = ap.parse_args()
 
-    os.environ["EMB_MODEL"] = args.embed_model
+    report_path = pathlib.Path(args.report or ROOT / "train" / "out" / f"eval_{args.tag}.json")
     rag.EMB_MODEL = args.embed_model
-    split = json.loads((pathlib.Path(args.data) / "split.json").read_text(encoding="utf-8"))
-    items = {it["id"]: it for it in load_items()}
-    train = [items[i] for i in split["train"]]
-    ev = [items[i] for i in split["eval"]]
+    data = pathlib.Path(args.data)
+    split = json.loads((data / "split.json").read_text(encoding="utf-8"))
+    real = {it["id"]: it for it in load_items()}
+    real_train = [real[i] for i in split["train"]]
+    real_eval = [real[i] for i in split["eval"]]
+    syn_train = json.loads((data / "synth_train.json").read_text(encoding="utf-8"))
+    syn_eval = json.loads((data / "synth_eval.json").read_text(encoding="utf-8"))
 
-    report = {"embed_model": args.embed_model, "gen_adapter": args.gen_adapter,
-              "train_items": len(train), "eval_items": len(ev)}
-    report["retrieval"] = retrieval_eval(list(items.values()), ev)
+    report = {"tag": args.tag, "embed_model": args.embed_model, "gen_model": args.gen_model,
+              "gen_adapter": args.gen_adapter or None,
+              "real_train": len(real_train), "real_test": len(real_eval), "synth_test": len(syn_eval)}
+    if not args.no_retrieval:
+        report["retrieval"] = retrieval_eval(list(real.values()), real_eval)
+        print("retrieval:", report["retrieval"], flush=True)
+    items_out = []
     if not args.no_generation:
-        report["generation"] = generation_eval(train, ev, args)
-    pathlib.Path(args.report).parent.mkdir(parents=True, exist_ok=True)
-    pathlib.Path(args.report).write_text(json.dumps(report, indent=1), encoding="utf-8")
-    print(json.dumps(report, indent=1))
+        import local_models
+        local_models.GEN_MODEL = args.gen_model
+        local_models.GEN_ADAPTER = args.gen_adapter  # empty string = no adapter
+        pool = real_train + syn_train
+        report["generation"] = {
+            "real": generation_eval("real", pick(real_eval, args.limit_real), pool, args, items_out),
+            "synth": generation_eval("synth", pick(syn_eval, args.limit_synth), pool, args, items_out),
+        }
+        print(json.dumps(report["generation"], indent=1), flush=True)
+    report_path.parent.mkdir(parents=True, exist_ok=True)
+    report_path.write_text(json.dumps(report, indent=1), encoding="utf-8")
+    if items_out:
+        with open(report_path.with_name(report_path.stem + "_items.jsonl"), "w", encoding="utf-8") as f:
+            for r in items_out:
+                f.write(json.dumps(r, ensure_ascii=False) + "\n")
+    print("saved", report_path)
 
 
 if __name__ == "__main__":
