@@ -31,6 +31,7 @@ sys.path.insert(0, str(ROOT))
 import local_models  # noqa: E402
 import rag  # noqa: E402
 from build_dataset import verify  # noqa: E402
+from solution_io import parse_solution  # noqa: E402
 from prompts import READ_PROMPT, SOLVE_RULES  # noqa: E402
 
 GEN = ROOT / "data" / "generated"
@@ -143,7 +144,7 @@ def live_solve(question, focus_part=None):
         {"role": "system", "content": SOLVE_RULES + "\n\n" + example_text},
         {"role": "user", "content": user},
     ], max_new_tokens=3000)
-    sol = _json_from(raw)
+    sol, _repaired = parse_solution(raw)
     bad = _verify(sol)
     sol["verified"] = not bad
     sol["unverified_checks"] = bad

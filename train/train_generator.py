@@ -54,7 +54,7 @@ def main():
     ap.add_argument("--out", default=str(ROOT / "train" / "out" / "gen-lora"))
     ap.add_argument("--epochs", type=int, default=3)
     ap.add_argument("--lr", type=float, default=1e-4)
-    ap.add_argument("--max-len", type=int, default=2560)
+    ap.add_argument("--max-len", type=int, default=3072)
     ap.add_argument("--rank", type=int, default=16)
     ap.add_argument("--accum", type=int, default=4, help="gradient accumulation: examples per weight update")
     ap.add_argument("--max-steps", type=int, default=-1, help="for a quick smoke test")

@@ -1,0 +1,236 @@
+# ---------- Unit 1: question types the first training run was missing ----------
+
+def tex_rat(r):
+    """sympy Rational -> LaTeX (positive values only)."""
+    return frac(int(r.p), int(r.q))
+
+
+def _fr(n, d):
+    from sympy import Rational
+    return Rational(n, d)
+
+
+def gen_classify(rng, seed):
+    from fractions import Fraction
+    from math import isqrt
+    kinds = ["term", "rec1", "rec2", "mixed", "sqrt", "sqrt", "nonrec", "pi_e"]
+    parts, exprs = [], []
+    chosen = rng.sample(kinds, 4)
+    if not any(k in ("sqrt", "nonrec", "pi_e") for k in chosen):
+        chosen[-1] = "sqrt"
+    if not any(k in ("term", "rec1", "rec2", "mixed") for k in chosen):
+        chosen[0] = "term"
+    for lab, kind in zip(["i", "ii", "iii", "iv"], chosen):
+        if kind == "term":
+            ip, fd = rng.randint(0, 9), "".join(str(rng.randint(0, 9)) for _ in range(rng.randint(1, 3)))
+            fd = fd[:-1] + str(rng.randint(1, 9))
+            s = f"{ip}.{fd}"
+            f = Fraction(s)
+            expr = s
+            steps = [T(f"{s} has a finite number of digits after the decimal point, so it is a terminating decimal and therefore rational.",
+                       f"{s} میں اعشاریہ کے بعد ہندسے محدود ہیں، یہ محدود اعشاری عدد ہے، اس لیے ناطق ہے۔",
+                       f"Rational('{s}') == Rational({f.numerator},{f.denominator})")]
+            ans = "Rational"
+        elif kind in ("rec1", "rec2", "mixed"):
+            if kind == "rec2":
+                ab = rng.randint(10, 98)
+                digits = f"{ab:02d}"
+                f, expr = Fraction(ab, 99), f"0.\\overline{{{digits}}}"
+                shown = f"0.{digits}{digits}{digits}\\ldots"
+                chk = f"99*Rational({f.numerator},{f.denominator}) == {ab}"
+            else:
+                d = rng.randint(1, 8)
+                ip = rng.randint(1, 9) if kind == "mixed" else 0
+                f, expr = Fraction(d, 9) + ip, f"{ip}.\\bar{{{d}}}"
+                shown = f"{ip}.{d}{d}{d}{d}\\ldots"
+                chk = f"9*(Rational({f.numerator},{f.denominator}) - {ip}) == {d}"
+            steps = [S(f"{expr} = {shown}", "The digits repeat forever, so this is a non-terminating recurring decimal. It can be written as p/q, so it is rational.",
+                       "ہندسے بار بار دہرائے جاتے ہیں، یہ غیر محدود دوری اعشاری عدد ہے۔ اسے p/q کی شکل میں لکھا جا سکتا ہے، اس لیے ناطق ہے۔",
+                       chk)]
+            ans = "Rational"
+        elif kind == "sqrt":
+            n = rng.choice([x for x in range(2, 40) if isqrt(x) ** 2 != x])
+            expr = f"\\sqrt{{{n}}}"
+            k = isqrt(n)
+            steps = [T(f"{n} lies between the consecutive squares {k * k} and {(k + 1) ** 2}, so it is not a perfect square. Therefore $\\sqrt{{{n}}}$ is a non-terminating, non-recurring decimal and is irrational.",
+                       f"{n} دو متواتر مربعات {k * k} اور {(k + 1) ** 2} کے درمیان ہے، یہ مکمل مربع نہیں۔ اس لیے $\\sqrt{{{n}}}$ غیر محدود غیر دوری اعشاری عدد ہے اور غیر ناطق ہے۔",
+                       f"floor(sqrt({n}))**2 < {n}", f"(floor(sqrt({n}))+1)**2 > {n}")]
+            ans = "Irrational"
+        elif kind == "nonrec":
+            ds = "".join(str(rng.randint(0, 9)) for _ in range(8))
+            expr = f"{rng.randint(1, 4)}.{ds}\\ldots"
+            steps = [T("The decimal does not end and no group of digits repeats, so it is non-terminating and non-recurring, hence irrational.",
+                       "اعشاری عدد ختم نہیں ہوتا اور ہندسوں کا کوئی گروہ دہرایا نہیں جاتا، اس لیے یہ غیر ناطق ہے۔")]
+            ans = "Irrational"
+        else:
+            sym = rng.choice(["\\pi", "e"])
+            expr = sym
+            steps = [T(f"${sym}$ is a well-known non-terminating, non-recurring decimal, so it is irrational.",
+                       f"${sym}$ ایک معروف غیر محدود غیر دوری اعشاری عدد ہے، اس لیے غیر ناطق ہے۔")]
+            ans = "Irrational"
+        parts.append(P(lab, steps, ans, prompt=f"${expr}$"))
+        exprs.append(f"({lab}) ${expr}$")
+    q = "Identify the following as rational or irrational numbers: " + " ".join(exprs)
+    return item("classify", seed, 1, "Real Numbers", q, parts)
+
+
+def gen_numberline(rng, seed):
+    import math
+    pairs = [(1, 1), (2, 1), (2, 2), (3, 1), (3, 2), (4, 1), (4, 2), (5, 1), (5, 2), (5, 3), (6, 1), (6, 2), (6, 3), (6, 4)]
+    a, b = rng.choice(pairs)
+    n = a * a + b * b
+    unit = 88 / (a + 2)
+    ay = 54.0
+
+    def nx(v):
+        return round(6 + v * unit, 2)
+
+    ox, ax = nx(0), nx(a)
+    by = round(ay - b * unit, 2)
+    theta = round(math.degrees(math.atan2(b, a)), 1)
+    px = nx(math.sqrt(n))
+    r = round(math.sqrt(n) * unit, 2)
+    line = {"t": "numberline", "from": 0, "to": a + 2, "y": ay}
+    steps = [
+        S(f"\\sqrt{{{n}}} = \\sqrt{{{a}^2+{b}^2}}",
+          f"Write {n} as a sum of two squares: {n} = {a}^2 + {b}^2. Then $\\sqrt{{{n}}}$ is the hypotenuse of a right triangle with legs {a} and {b}.",
+          f"{n} کو دو مربعات کے مجموعے کی شکل میں لکھیں: {n} = {a}^2 + {b}^2۔ تب $\\sqrt{{{n}}}$ اس قائمۃ الزاویہ مثلث کا وتر ہے جس کے ضلع {a} اور {b} ہیں۔",
+          f"sqrt({n}) == sqrt({a}**2 + {b}**2)", draw=[line]),
+        S(f"m\\overline{{OA}} = {a}, \\quad m\\overline{{AB}} = {b}",
+          f"Mark O at 0 and A at {a} on the number line. At A draw AB = {b} unit(s) perpendicular to the line. This gives the right-angled triangle OAB.",
+          f"نمبر لائن پر O کو 0 پر اور A کو {a} پر لگائیں۔ A پر خط کے عمود {b} اکائی کا AB کھینچیں۔ یوں قائمۃ الزاویہ مثلث OAB بنتا ہے۔",
+          draw=[{"t": "poly", "p": [ox, ay, ax, ay, ax, by], "close": True},
+                {"t": "right", "p": [ax, ay], "d": [-1, 0, 0, -1]},
+                {"t": "text", "p": [ox - 2, ay + 9], "s": "O"}, {"t": "text", "p": [ax, ay + 9], "s": "A"},
+                {"t": "text", "p": [ax + 3, by], "s": "B"}]),
+        S(f"(m\\overline{{OB}})^2 = {a}^2 + {b}^2 = {n} \\;\\Rightarrow\\; m\\overline{{OB}} = \\sqrt{{{n}}}",
+          "By the Pythagoras theorem, the hypotenuse OB is the square root of the sum of the squares of the legs.",
+          "فیثاغورث کے قضیے سے وتر OB اضلاع کے مربعات کے مجموعے کا جذر ہے۔",
+          f"{a}**2 + {b}**2 == {n}"),
+        S(f"|\\overline{{OP}}| = \\sqrt{{{n}}}",
+          "With O as the centre and radius OB, draw an arc. It cuts the number line at P, so P represents the required number.",
+          "O کو مرکز اور OB کو رداس لے کر قوس کھینچیں۔ یہ نمبر لائن کو P پر کاٹتی ہے، اس لیے P مطلوبہ عدد کو ظاہر کرتا ہے۔",
+          draw=[{"t": "arc", "c": [ox, ay], "r": r, "a": [-theta, 0]}, {"t": "dot", "p": [px, ay]},
+                {"t": "text", "p": [px, ay + 9], "s": "P"}]),
+    ]
+    ans = f"P represents $\\sqrt{{{n}}}$ on the number line, since OP = $\\sqrt{{{n}}}$."
+    return item("numberline", seed, 1, "Real Numbers", f"Represent $\\sqrt{{{n}}}$ on a number line.", one(steps, ans))
+
+
+def gen_distributive(rng, seed):
+    from sympy import Rational
+    while True:
+        a, b, c = (_fr(rng.randint(1, 7), rng.randint(2, 5)) for _ in range(3))
+        if (a, b, c) != (Rational(2, 3), Rational(3, 2), Rational(5, 3)):
+            break
+
+    def R(x):
+        return f"Rational({int(x.p)},{int(x.q)})"
+
+    s_bc, s_ab = b + c, a + b
+    left, right = a * s_bc, a * b + a * c
+    left2, right2 = s_ab * c, a * c + b * c
+    p1 = [
+        S(f"\\text{{LHS}} = a(b+c) = {tex_rat(a)}\\left({tex_rat(b)}+{tex_rat(c)}\\right) = {tex_rat(a)}\\left({tex_rat(s_bc)}\\right) = {tex_rat(left)}",
+          "First add inside the bracket, then multiply by a.", "پہلے قوسین کے اندر جمع کریں، پھر a سے ضرب دیں۔",
+          f"{R(b)}+{R(c)} == {R(s_bc)}", f"{R(a)}*({R(s_bc)}) == {R(left)}"),
+        S(f"\\text{{RHS}} = ab+ac = {tex_rat(a * b)}+{tex_rat(a * c)} = {tex_rat(right)}",
+          "Multiply a by b and by c separately, then add.", "a کو b اور c سے الگ الگ ضرب دیں، پھر جمع کریں۔",
+          f"{R(a)}*{R(b)} + {R(a)}*{R(c)} == {R(right)}"),
+        T("LHS = RHS, so a(b+c) = ab+ac is verified.", "LHS = RHS ہے، لہذا a(b+c) = ab+ac کی تصدیق ہوگئی۔"),
+    ]
+    p2 = [
+        S(f"\\text{{LHS}} = (a+b)c = \\left({tex_rat(a)}+{tex_rat(b)}\\right){tex_rat(c)} = {tex_rat(s_ab)}\\cdot{tex_rat(c)} = {tex_rat(left2)}",
+          "First add inside the bracket, then multiply by c.", "پہلے قوسین کے اندر جمع کریں، پھر c سے ضرب دیں۔",
+          f"{R(a)}+{R(b)} == {R(s_ab)}", f"({R(s_ab)})*{R(c)} == {R(left2)}"),
+        S(f"\\text{{RHS}} = ac+bc = {tex_rat(a * c)}+{tex_rat(b * c)} = {tex_rat(right2)}",
+          "Multiply a by c and b by c separately, then add.", "a کو c سے اور b کو c سے الگ الگ ضرب دیں، پھر جمع کریں۔",
+          f"{R(a)}*{R(c)} + {R(b)}*{R(c)} == {R(right2)}"),
+        T("LHS = RHS, so (a+b)c = ac+bc is verified.", "LHS = RHS ہے، لہذا (a+b)c = ac+bc کی تصدیق ہوگئی۔"),
+    ]
+    parts = [P("i", p1, f"Verified: ${tex_rat(left)} = {tex_rat(right)}$", prompt="Left distributive property"),
+             P("ii", p2, f"Verified: ${tex_rat(left2)} = {tex_rat(right2)}$", prompt="Right distributive property")]
+    q = f"If $a={tex_rat(a)}$, $b={tex_rat(b)}$, $c={tex_rat(c)}$ then verify the distributive properties over addition."
+    return item("distributive", seed, 1, "Real Numbers", q, parts)
+
+
+def _prop_templates(rng):
+    """(property name, statement in LaTeX, sympy check, English, Urdu) built from random numbers."""
+    a, b, c = (rng.randint(2, 15) for _ in range(3))
+    p, k = rng.randint(5, 30), rng.randint(1, 9)
+    x, u = rng.randint(1, 9), rng.randint(1, 9)
+    y, v = x + rng.randint(1, 9), u + rng.randint(1, 9)
+    nn = rng.randint(1, 5)
+    lo, hi = -(nn + rng.randint(1, 6)), -nn          # lo < hi < 0
+    cneg = -rng.randint(2, 6)
+    return [
+        ("Associative property of addition", f"{a}+({b}+{c}) = ({a}+{b})+{c}", f"{a}+({b}+{c}) == ({a}+{b})+{c}",
+         "Changing the grouping of the numbers does not change the sum.", "جمع میں اعداد کی گروہ بندی بدلنے سے مجموعہ نہیں بدلتا۔"),
+        ("Commutative property of addition", f"{a}+{b} = {b}+{a}", f"{a}+{b} == {b}+{a}",
+         "Changing the order of the numbers does not change the sum.", "جمع میں اعداد کی ترتیب بدلنے سے مجموعہ نہیں بدلتا۔"),
+        ("Associative property of multiplication", f"{a}\\times({b}\\times{c}) = ({a}\\times{b})\\times{c}", f"{a}*({b}*{c}) == ({a}*{b})*{c}",
+         "Changing the grouping of the numbers does not change the product.", "ضرب میں اعداد کی گروہ بندی بدلنے سے حاصل ضرب نہیں بدلتا۔"),
+        ("Commutative property of multiplication", f"{a}\\times{b} = {b}\\times{a}", f"{a}*{b} == {b}*{a}",
+         "Changing the order of the numbers does not change the product.", "ضرب میں اعداد کی ترتیب بدلنے سے حاصل ضرب نہیں بدلتا۔"),
+        ("Additive identity property", f"{a}+0 = {a}", f"{a}+0 == {a}",
+         "Adding 0 to a number leaves it unchanged, so 0 is the additive identity.", "کسی عدد میں 0 جمع کرنے سے عدد نہیں بدلتا، اس لیے 0 جمعی محائدہ ہے۔"),
+        ("Multiplicative identity property", f"{a}\\times 1 = {a}", f"{a}*1 == {a}",
+         "Multiplying a number by 1 leaves it unchanged, so 1 is the multiplicative identity.", "کسی عدد کو 1 سے ضرب دینے سے عدد نہیں بدلتا، اس لیے 1 ضربی محائدہ ہے۔"),
+        ("Additive inverse property", f"{a}+(-{a}) = 0", f"{a}+(-{a}) == 0",
+         "A number plus its negative is 0, so -a is the additive inverse of a.", "کسی عدد اور اس کے منفی کا مجموعہ 0 ہوتا ہے، اس لیے -a عدد a کا جمعی معکوس ہے۔"),
+        ("Multiplicative inverse property", f"{a}\\times\\frac{{1}}{{{a}}} = 1", f"{a}*Rational(1,{a}) == 1",
+         "A non-zero number times its reciprocal is 1.", "غیر صفر عدد اور اس کے مقلوب کا حاصل ضرب 1 ہوتا ہے۔"),
+        ("Left distributive property of multiplication over addition", f"{a}({b}+{c}) = {a}\\times{b}+{a}\\times{c}", f"{a}*({b}+{c}) == {a}*{b}+{a}*{c}",
+         "Multiplying a sum by a number equals multiplying each term and adding.", "مجموعے کو کسی عدد سے ضرب دینا ہر رکن کو ضرب دے کر جمع کرنے کے برابر ہے۔"),
+        ("Order property w.r.t. addition", f"\\text{{If }} a > {p} \\text{{ then }} a+{k} > {p + k}", f"{p}+{k} == {p + k}",
+         "Adding the same number to both sides of an inequality keeps its direction.", "عدم مساوات کے دونوں طرف ایک ہی عدد جمع کرنے سے علامت نہیں بدلتی۔"),
+        ("Order property w.r.t. addition", f"{x} < {y} \\text{{ and }} {u} < {v} \\Rightarrow {x}+{u} < {y}+{v}", f"{x}+{u} < {y}+{v}",
+         "Adding two inequalities of the same direction gives an inequality in that direction.", "ایک ہی سمت کی دو عدم مساواتوں کو جمع کرنے سے اسی سمت کی عدم مساوات ملتی ہے۔"),
+        ("Order property w.r.t. multiplication", f"{y} > {x} \\text{{ and }} {v} > {u} \\Rightarrow {y}\\times{v} > {x}\\times{u}", f"{y}*{v} > {x}*{u}",
+         "Multiplying two inequalities of positive numbers gives an inequality in the same direction.", "مثبت اعداد کی دو عدم مساواتوں کو ضرب دینے سے اسی سمت کی عدم مساوات ملتی ہے۔"),
+        ("Order property w.r.t. multiplication", f"{lo} < {hi} \\Rightarrow ({lo})({cneg}) > ({hi})({cneg})", f"({lo})*({cneg}) > ({hi})*({cneg})",
+         "Multiplying both sides by a negative number reverses the inequality.", "دونوں طرف منفی عدد سے ضرب دینے پر عدم مساوات کی علامت الٹ جاتی ہے۔"),
+    ]
+
+
+def gen_property_name(rng, seed):
+    # skip any statement that reuses the book's own example numbers, keeping the real test questions unseen
+    for _ in range(50):
+        chosen = rng.sample(_prop_templates(rng), 4)
+        text = " ".join(t[1] for t in chosen)
+        if not any(s in text for s in ("a > 13", "3 < 9", "7 > 4", "(-5)(-4)", "-5 < -4")):
+            break
+    parts, listing = [], []
+    for lab, (name, stmt, chk, en, ur) in zip(["i", "ii", "iii", "iv"], chosen):
+        parts.append(P(lab, [S(stmt, en, ur, chk)], name, prompt=f"${stmt}$"))
+        listing.append(f"({lab}) ${stmt}$")
+    return item("property_name", seed, 1, "Real Numbers", "Identify the property that justifies each statement: " + " ".join(listing), parts)
+
+
+# ---------- multi-part questions (the book often asks (i), (ii), (iii) together) ----------
+
+def _combine(type_name, makers, rng, seed, prefix):
+    import re
+    singles = [mk(rng, seed) for mk in makers]
+    parts, listing = [], []
+    for lab, s in zip(["i", "ii", "iii"], singles):
+        expr = re.search(r"\$([^$]+)\$", s["question"]).group(1)
+        part = s["parts"][0]
+        parts.append(P(lab, part["steps"], part["answer"], prompt=f"${expr}$"))
+        listing.append(f"({lab}) ${expr}$")
+    return item(type_name, seed, 1, "Real Numbers", prefix + " " + " ".join(listing), parts)
+
+
+def gen_recurring_pair(rng, seed):
+    return _combine("recurring_pair", [gen_recurring1, gen_recurring2], rng, seed,
+                    "Express the following recurring decimals as the rational number $\\frac{p}{q}$, where $p$ and $q$ are integers:")
+
+
+def gen_rationalize_pair(rng, seed):
+    return _combine("rationalize_pair", [gen_rationalize2, gen_rationalize2], rng, seed, "Rationalize the denominator:")
+
+
+def gen_indices_pair(rng, seed):
+    return _combine("indices_pair", [gen_indices_root, gen_indices_root, gen_indices_neg], rng, seed, "Simplify the following:")
+
+

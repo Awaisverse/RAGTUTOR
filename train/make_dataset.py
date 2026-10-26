@@ -87,19 +87,42 @@ def split_real(items, eval_units, eval_every):
     return tr, ev
 
 
-def neighbours_text(index, pool_by_id, item, k):
+def neighbours_text(index, pool_by_id, item, k, budget=5000):
+    """The k nearest solved examples as prompt text, stopping before the prompt grows past `budget`
+    characters (the first example is always kept). The same function builds training and test prompts."""
     hits = index.search(item["question"], k=k * 3)
-    seen, out = set(), []
+    seen, texts = set(), []
     for h in hits:
         if h["id"] == item["id"] or h["id"] in seen or h["id"] not in pool_by_id:
             continue
         seen.add(h["id"])
-        out.append(pool_by_id[h["id"]])
-        if len(out) == k:
+        e = pool_by_id[h["id"]]
+        text = f"EXAMPLE {len(texts) + 1} ({e['id']}):\n" + json.dumps(
+            {"question": e["question"], "parts": e["parts"]}, ensure_ascii=False)
+        if texts and sum(len(t) for t in texts) + len(text) > budget:
             break
-    return "\n\n".join(
-        f"EXAMPLE {i+1} ({e['id']}):\n" + json.dumps({"question": e["question"], "parts": e["parts"]}, ensure_ascii=False)
-        for i, e in enumerate(out))
+        texts.append(text)
+        if len(texts) == k:
+            break
+    return "\n\n".join(texts)
+
+
+def leak_free(synthetic, real):
+    """Drop synthetic questions that repeat a real book question or one of its parts.
+    The real items are the honest test, so nothing the model trains on may be a copy of them."""
+    real_norm = [rag.normalize(r["question"]) for r in real]
+    kept, dropped = [], 0
+    for s in synthetic:
+        q = rag.normalize(s["question"])
+        part_prompts = [rag.normalize(p.get("prompt", "")) for p in s["parts"]]
+        copy = q in real_norm or any(len(pp) >= 7 and pp in rn for pp in part_prompts for rn in real_norm)
+        if copy:
+            dropped += 1
+        else:
+            kept.append(s)
+    if dropped:
+        print(f"leak guard: dropped {dropped} synthetic items that duplicate real book questions")
+    return kept
 
 
 def main():
@@ -110,6 +133,7 @@ def main():
     ap.add_argument("--synth-per-type", type=int, default=25)
     ap.add_argument("--synth-eval-per-type", type=int, default=2)
     ap.add_argument("--neighbours", type=int, default=2)
+    ap.add_argument("--context-chars", type=int, default=5000, help="size limit for the retrieved examples in a prompt")
     args = ap.parse_args()
 
     out = pathlib.Path(args.out)
@@ -117,8 +141,9 @@ def main():
 
     real = load_items()
     real_train, real_eval = split_real(real, args.eval_units, args.eval_every)
-    syn_train = generate(args.synth_per_type, seed0=0)
-    syn_eval = generate(args.synth_eval_per_type, seed0=100000, avoid={s["question"] for s in syn_train})
+    syn_train = leak_free(generate(args.synth_per_type, seed0=0), real)
+    syn_eval = leak_free(generate(args.synth_eval_per_type, seed0=100000,
+                                  avoid={s["question"] for s in syn_train}), real)
     if not real_train and not syn_train:
         sys.exit("no training items")
 
@@ -133,7 +158,7 @@ def main():
             for b in vs:
                 if a != b:
                     pairs.append({"anchor": a, "positive": b, "id": it["id"]})
-        ex = neighbours_text(index, pool_by_id, it, args.neighbours)
+        ex = neighbours_text(index, pool_by_id, it, args.neighbours, args.context_chars)
         users = [it["question"]] if it.get("synthetic") else variants(it)
         for v in users:
             sft.append({"messages": [

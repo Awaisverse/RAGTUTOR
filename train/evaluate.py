@@ -39,6 +39,22 @@ import rag  # noqa: E402
 from build_dataset import verify  # noqa: E402
 from make_dataset import load_items, neighbours_text, variants  # noqa: E402
 from prompts import SOLVE_RULES  # noqa: E402
+from solution_io import parse_solution  # noqa: E402
+
+
+def _tokens(a):
+    """Numbers and + / - signs in order, ignoring LaTeX words and spacing: '15.29\\%' and '15.29% loss' agree."""
+    a = re.sub(r"\\(?:text|left|right|frac|dfrac|sqrt|times|cdot|ldots|bar|overline|circ|Rightarrow)\b", " ", str(a))
+    return re.findall(r"\d+(?:\.\d+)?|[+\-]", a)
+
+
+def answer_ok(model_answer, gold_answer):
+    """Exact match after normalising, or (when the answer contains numbers) the same numbers and signs in the same order.
+    Text answers such as property names must match exactly."""
+    if norm_ans(model_answer) == norm_ans(gold_answer):
+        return True
+    gold = _tokens(gold_answer)
+    return any(t[0].isdigit() for t in gold) and gold == _tokens(model_answer)
 
 
 def norm_ans(a):
@@ -79,10 +95,10 @@ def retrieval_eval(real_items, ev):
 
 def score_solution(raw, gold):
     """-> dict of per-item results for one model reply."""
-    res = {"json_valid": False, "checks": 0, "checks_ok": 0, "answer_match": False, "model_answers": []}
-    m = re.search(r"\{.*\}", raw, re.S)
+    res = {"json_valid": False, "repaired": False, "checks": 0, "checks_ok": 0, "fully_verified": False,
+           "answer_match": False, "answer_exact": False, "model_answers": []}
     try:
-        sol = json.loads(m.group(0))
+        sol, res["repaired"] = parse_solution(raw)
         parts = sol["parts"]
         assert isinstance(parts, list) and parts
     except Exception:
@@ -97,8 +113,13 @@ def score_solution(raw, gold):
                 except Exception:
                     pass
         res["model_answers"].append(p.get("answer", ""))
-    gold_answers = [norm_ans(p["answer"]) for p in gold["parts"]]
-    res["answer_match"] = [norm_ans(a) for a in res["model_answers"]] == gold_answers
+    gold_answers = [p["answer"] for p in gold["parts"]]
+    # an item whose own solution has no computed steps (e.g. naming a number rational) has nothing to check
+    gold_has_checks = any(st.get("check") for p in gold["parts"] for st in p["steps"])
+    res["fully_verified"] = res["checks_ok"] == res["checks"] and (res["checks"] > 0 or not gold_has_checks)
+    same_shape = len(res["model_answers"]) == len(gold_answers)
+    res["answer_exact"] = same_shape and all(norm_ans(m) == norm_ans(g) for m, g in zip(res["model_answers"], gold_answers))
+    res["answer_match"] = same_shape and all(answer_ok(m, g) for m, g in zip(res["model_answers"], gold_answers))
     return res
 
 
@@ -106,27 +127,31 @@ def generation_eval(name, items, pool, args, items_out):
     import local_models  # needs torch and the generator model
     pool_by_id = {it["id"]: it for it in pool}
     index = rag.Index([c for it in pool for c in rag.chunk_item(it)], use_embeddings=False)
-    tot = {"n": len(items), "json_valid": 0, "checks": 0, "checks_ok": 0, "fully_verified": 0, "answer_match": 0}
+    tot = {"n": len(items), "json_valid": 0, "repaired": 0, "checks": 0, "checks_ok": 0, "fully_verified": 0,
+           "answer_match": 0, "answer_exact": 0}
     for i, it in enumerate(items, 1):
         t0 = time.time()
         raw = local_models.generate([
-            {"role": "system", "content": SOLVE_RULES + "\n\n" + neighbours_text(index, pool_by_id, it, args.neighbours)},
+            {"role": "system", "content": SOLVE_RULES + "\n\n" + neighbours_text(index, pool_by_id, it, args.neighbours, args.context_chars)},
             {"role": "user", "content": it["question"]},
         ], max_new_tokens=args.max_new_tokens)
         r = score_solution(raw, it)
         tot["json_valid"] += r["json_valid"]
+        tot["repaired"] += r["repaired"]
         tot["checks"] += r["checks"]
         tot["checks_ok"] += r["checks_ok"]
-        tot["fully_verified"] += bool(r["json_valid"] and r["checks"] > 0 and r["checks_ok"] == r["checks"])
+        tot["fully_verified"] += bool(r["fully_verified"])
         tot["answer_match"] += bool(r["answer_match"])
+        tot["answer_exact"] += bool(r["answer_exact"])
         items_out.append({"set": name, "id": it["id"], "question": it["question"], **r,
-                          "gold_answers": [p["answer"] for p in it["parts"]], "raw_head": raw[:300]})
-        print(f"  [{name} {i}/{len(items)}] valid={r['json_valid']} checks={r['checks_ok']}/{r['checks']} "
+                          "gold_answers": [p["answer"] for p in it["parts"]], "raw_head": raw[:300], "raw": raw[:8000]})
+        print(f"  [{name} {i}/{len(items)}] valid={r['json_valid']} repaired={r['repaired']} checks={r['checks_ok']}/{r['checks']} "
               f"answer={r['answer_match']} ({time.time() - t0:.0f}s)", flush=True)
     n = max(1, tot["n"])
-    return {"items": tot["n"], "json_valid": round(tot["json_valid"] / n, 3),
+    return {"items": tot["n"], "json_valid": round(tot["json_valid"] / n, 3), "repaired_replies": tot["repaired"],
             "verified_step_rate": round(tot["checks_ok"] / max(1, tot["checks"]), 3),
-            "fully_verified": round(tot["fully_verified"] / n, 3), "answer_match": round(tot["answer_match"] / n, 3)}
+            "fully_verified": round(tot["fully_verified"] / n, 3), "answer_match": round(tot["answer_match"] / n, 3),
+            "answer_exact": round(tot["answer_exact"] / n, 3)}
 
 
 def main():
@@ -142,7 +167,8 @@ def main():
     ap.add_argument("--limit-real", type=int, default=0)
     ap.add_argument("--limit-synth", type=int, default=0)
     ap.add_argument("--neighbours", type=int, default=2)
-    ap.add_argument("--max-new-tokens", type=int, default=1800)
+    ap.add_argument("--max-new-tokens", type=int, default=2500)
+    ap.add_argument("--context-chars", type=int, default=5000, help="size limit for the retrieved examples in a prompt")
     ap.add_argument("--report", default="")
     args = ap.parse_args()
 

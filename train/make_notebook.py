@@ -72,8 +72,10 @@ HF_REPO = ""          # optional, e.g. "yourname/math-tutor": uploads the models
 
 if QUICK_TEST:
     SYNTH_PER_TYPE, EPOCHS_EMBED, EPOCHS_GEN, LIMIT_REAL, LIMIT_SYNTH = 4, 1, 1, 2, 3
+    BASE_REAL, BASE_SYNTH = 2, 3
 else:
-    SYNTH_PER_TYPE, EPOCHS_EMBED, EPOCHS_GEN, LIMIT_REAL, LIMIT_SYNTH = 25, 3, 3, 0, 0   # 0 = evaluate every test item
+    SYNTH_PER_TYPE, EPOCHS_EMBED, EPOCHS_GEN, LIMIT_REAL, LIMIT_SYNTH = 30, 3, 3, 0, 0   # 0 = evaluate every test item
+    BASE_REAL, BASE_SYNTH = 4, 8     # the untuned model is only a reference point, so a small sample is enough
 print("QUICK_TEST =", QUICK_TEST, "| synthetic per type:", SYNTH_PER_TYPE, "| generator epochs:", EPOCHS_GEN)
 ''')
 
@@ -124,7 +126,7 @@ md(r'''
 ## Phase 1: Data
 **Purpose:** build everything the models learn from, and make sure none of it is wrong.
 1. Re-check every hand-solved book item with sympy.
-2. Generate synthetic solved questions (13 question types) and re-check all of them.
+2. Generate synthetic solved questions (20 question types, including multi-part questions and drawn number lines) and re-check all of them. Any synthetic question that copies a real book question is removed, so the real test stays unseen.
 3. Split: real book items are partly **held out** as the honest test; synthetic questions get a separate test set with new numbers.
 4. Write the training files. Each generator example puts retrieved neighbours in the prompt, exactly like the real tutor.
 
@@ -202,7 +204,7 @@ Without this number you cannot tell whether fine-tuning helped.
 
 code(r'''
 # 3.1 Score the base model
-run(f"python train/evaluate.py --tag gen_base --no-retrieval --limit-real {LIMIT_REAL} --limit-synth {LIMIT_SYNTH}")
+run(f"python train/evaluate.py --tag gen_base --no-retrieval --limit-real {BASE_REAL} --limit-synth {BASE_SYNTH}")
 print(json.dumps(json.load(open("train/out/eval_gen_base.json"))["generation"], indent=1))
 backup("phase3")
 ''')
@@ -212,8 +214,8 @@ md(r'''
 ## Phase 4: Train the generator (LoRA)
 **Purpose:** teach the model to write the exact solution format, with correct, sympy-checkable steps, using retrieved examples as guidance.
 Only the answer part of each example is learned; the prompt and retrieved context are masked out of the loss.
-**Time:** 15 to 40 minutes on a T4 (about 1 minute in quick mode).
-**If you see "out of memory":** lower `--max-len` to 2048 or `--neighbours` to 1 in `make_dataset.py`, and retrain.
+**Time:** 60 to 80 minutes on a T4 in the full run (about 2 minutes in quick mode).
+**If you see "out of memory":** lower `--max-len` to 2560 or `--neighbours` to 1 in `make_dataset.py`, and retrain.
 ''')
 
 code(r'''
@@ -235,7 +237,11 @@ md(r'''
 | C | fully-verified rate on the **real** book questions is not worse than the baseline | yes |
 | D | release target: at least 90% fully verified **and** at least 90% correct final answer on the real questions | for a trustworthy tutor |
 
-**Time:** 10 to 25 minutes.
+**How answers are compared:** `answer_match` accepts the same final numbers and signs in the same order (so "15.29%" and "15.29% loss" agree, but "5/9" and "9/5" do not),
+and requires text answers such as property names to match exactly. `answer_exact` is the strict comparison, shown for reference.
+A reply whose LaTeX backslashes were mis-escaped is repaired before it is scored; the repaired count is reported.
+
+**Time:** 15 to 30 minutes.
 ''')
 
 code(r'''
@@ -247,7 +253,7 @@ code(r'''
 # 5.2 Compare with the baseline and apply the gates
 base = json.load(open("train/out/eval_gen_base.json"))["generation"]
 tuned = json.load(open("train/out/eval_gen_tuned.json"))["generation"]
-metrics = ["json_valid", "verified_step_rate", "fully_verified", "answer_match"]
+metrics = ["json_valid", "verified_step_rate", "fully_verified", "answer_match", "answer_exact"]
 
 print(f"{'set':6} {'metric':20} {'base':>7} {'tuned':>7}")
 for s in ("real", "synth"):
@@ -282,7 +288,7 @@ else:
 code(r'''
 # 5.3 Look at the failures (this tells you what data to add next)
 items = [json.loads(l) for l in open("train/out/eval_gen_tuned_items.jsonl", encoding="utf-8")]
-bad = [r for r in items if not (r["json_valid"] and r["checks"] > 0 and r["checks_ok"] == r["checks"] and r["answer_match"])]
+bad = [r for r in items if not (r["json_valid"] and r["fully_verified"] and r["answer_match"])]
 print(f"{len(bad)} of {len(items)} test questions were not fully correct\n")
 for r in bad[:5]:
     print("SET     :", r["set"], "|", r["id"])
@@ -290,7 +296,8 @@ for r in bad[:5]:
     print("GOLD    :", r["gold_answers"])
     print("MODEL   :", r["model_answers"], "| checks passed", f"{r['checks_ok']}/{r['checks']}", "| valid JSON:", r["json_valid"])
     if not r["json_valid"]:
-        print("REPLY   :", r["raw_head"][:200].replace("\n", " "))
+        print("REPLY START:", r["raw"][:200].replace("\n", " "))
+        print("REPLY END  :", r["raw"][-250:].replace("\n", " "), f"  (length {len(r['raw'])} chars; cut off = ends mid-sentence)")
     print()
 backup("phase5")
 ''')
