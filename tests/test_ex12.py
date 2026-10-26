@@ -131,11 +131,12 @@ def g_var_root(rng):
     m = rng.choice([2, 3, 5, 7])
     a, b, c = rng.randint(1, 3), rng.randint(1, 3), rng.randint(1, 3)
     d, e = rng.randint(1, 6), rng.randint(1, 6)
-    # numerator exponents chosen so that the result is a whole number of each variable after the root
+    k = rng.choice([1, 1, 2, 3])                # a numeric coefficient k^m in front: it must NOT be dropped
     ex, ey, ez = a * m, b * m + d, c * m + e
-    asc = f"({'x'}^{ex}*y^{ey}*z^{ez}/(y^{d}*z^{e}))^(1/{m})"
-    lat = rf"\sqrt[{m}]{{\frac{{x^{{{ex}}}\times y^{{{ey}}}\times z^{{{ez}}}}}{{y^{{{d}}}z^{{{e}}}}}}}"
-    return (f"simplify {asc}", rf"Simplify ${lat}$.", [X ** a * Y ** b * Z ** c])
+    coef_asc, coef_lat = (f"{k ** m}*", rf"{k ** m}\times ") if k > 1 else ("", "")
+    asc = f"({coef_asc}x^{ex}*y^{ey}*z^{ez}/(y^{d}*z^{e}))^(1/{m})"
+    lat = rf"\sqrt[{m}]{{\frac{{{coef_lat}x^{{{ex}}}\times y^{{{ey}}}\times z^{{{ez}}}}}{{y^{{{d}}}z^{{{e}}}}}}}"
+    return (f"simplify {asc}", rf"Simplify ${lat}$.", [k * X ** a * Y ** b * Z ** c])
 
 
 def g_cube(rng):

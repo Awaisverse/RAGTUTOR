@@ -250,12 +250,20 @@ def try_exponent_algebra(text):
 # =========================================================================================================
 
 def _var_exponents(node):
+    """A product of numbers and powers of unknowns -> (exponent of each unknown, numeric coefficient, value).
+    Raises _Unsupported for anything else (a sum inside the root, for example)."""
     v = A.to_sympy(node)
-    return {str(k): sp.Rational(e) for k, e in v.as_powers_dict().items() if k.is_Symbol}, v
+    names = {str(s) for s in v.free_symbols}
+    coef = sp.simplify(v.subs({s: 1 for s in v.free_symbols}))
+    exps = {str(k): sp.Rational(e) for k, e in v.as_powers_dict().items() if k.is_Symbol}
+    rebuilt = coef * sp.Mul(*[sp.Symbol(k, positive=True) ** e for k, e in exps.items()])
+    if not coef.is_Rational or coef <= 0 or sp.simplify(v - rebuilt) != 0 or set(exps) != names:
+        raise _Unsupported
+    return exps, coef, v
 
 
-def _monomial_tex(exps):
-    out = ""
+def _monomial_tex(exps, coef=1):
+    out = "" if coef == 1 else tex(coef)
     for name in sorted(exps):
         e = exps[name]
         if e == 0:
@@ -264,7 +272,12 @@ def _monomial_tex(exps):
     return out or "1"
 
 
+def _monomial_expr(exps, coef=1):
+    return coef * sp.Mul(*[sp.Symbol(k, positive=True) ** e for k, e in exps.items()])
+
+
 def try_variable_root(text):
+    """A root of a product or quotient of numbers and powers of unknowns: 7th root of (x^14 y^21 z^35 / (y^14 z^7)), 4th root of 81x^4y^8."""
     exprs = expression_texts(text)
     if not exprs or len(exprs) != 1:
         return None
@@ -278,13 +291,15 @@ def try_variable_root(text):
             inner, index = A.strip(tree[2]), sp.Integer(A.to_sympy(tree[3]).q)      # (inner)^(1/n) typed instead of a root sign
         else:
             return None
-        if not index.is_Integer or index < 2:
-            return None
+        if not index.is_Integer or index < 2 or not A.symbols(inner):
+            return None                          # no unknown inside: this is not a question for this solver
+        first = None
         if inner[0] == "bin" and inner[1] == "/":
-            ne, nv = _var_exponents(inner[2])
-            de, dv = _var_exponents(inner[3])
+            ne, nc, nv = _var_exponents(inner[2])
+            de, dc, dv = _var_exponents(inner[3])
             names = sorted(set(ne) | set(de))
-            diffs = {k: ne.get(k, 0) - de.get(k, 0) for k in names}
+            mono = {k: ne.get(k, 0) - de.get(k, 0) for k in names}
+            coef = nc / dc
             parts_tex = []
             for k in names:
                 if k in ne and k in de:
@@ -293,27 +308,27 @@ def try_variable_root(text):
                     parts_tex.append(rf"{k}^{{{ne[k]}}}")
                 else:
                     parts_tex.append(rf"{k}^{{-{de[k]}}}")
-            simplified = _monomial_tex(diffs)
-            first = S(rf"{A.tex(inner, 0, True)} = {' '.join(parts_tex)} = {simplified}",
-                      "Inside the root, divide powers of the same base by subtracting the exponents: $\\frac{a^m}{a^n} = a^{m-n}$.",
-                      "جذر کے اندر ایک ہی اساس کی طاقتوں کی تقسیم میں قوتیں منفی کریں: $\\frac{a^m}{a^n} = a^{m-n}$۔",
-                      f"{py(A.to_sympy(inner))} == {py(sp.Mul(*[sp.Symbol(k, positive=True) ** e for k, e in diffs.items()]))}")
-            mono = {k: e for k, e in diffs.items()}
+            lead = "" if coef == 1 else rf"{tex(nc)}\div {tex(dc)}\," if dc != 1 else ""
+            first = S(rf"{A.tex(inner, 0, True)} = {lead}{' '.join(parts_tex)} = {_monomial_tex(mono, coef)}",
+                      "Inside the root, divide numbers and divide powers of the same base by subtracting the exponents: $\frac{a^m}{a^n} = a^{m-n}$.",
+                      "جذر کے اندر اعداد کو تقسیم کریں اور ایک ہی اساس کی طاقتوں کی تقسیم میں قوتیں منفی کریں: $\frac{a^m}{a^n} = a^{m-n}$۔",
+                      f"{py(A.to_sympy(inner))} == {py(_monomial_expr(mono, coef))}")
         else:
-            mono, v0 = _var_exponents(inner)
-            first = None
+            mono, coef, _ = _var_exponents(inner)
         final = {k: e / index for k, e in mono.items()}
-        mono_expr = sp.Mul(*[sp.Symbol(k, positive=True) ** e for k, e in mono.items()])
-        final_expr = sp.Mul(*[sp.Symbol(k, positive=True) ** e for k, e in final.items()])
-        root_tex = rf"\sqrt[{index}]{{{_monomial_tex(mono)}}}" if index != 2 else rf"\sqrt{{{_monomial_tex(mono)}}}"
-        second = S(rf"{root_tex} = \left({_monomial_tex(mono)}\right)^{{\frac{{1}}{{{index}}}}} = {_monomial_tex(final)}",
-                   f"Write the root as the power $\\frac{{1}}{{{index}}}$ and multiply every exponent by $\\frac{{1}}{{{index}}}$.",
-                   f"جذر کو طاقت $\\frac{{1}}{{{index}}}$ کی شکل میں لکھیں اور ہر قوت کو $\\frac{{1}}{{{index}}}$ سے ضرب دیں۔",
-                   f"({py(mono_expr)})**Rational(1,{index}) == {py(final_expr)}")
-    except (ValueError, TypeError, ZeroDivisionError):
+        final_coef = coef ** sp.Rational(1, int(index))
+        if not (final_coef.is_Rational or final_coef.is_Pow):
+            return None
+        inside = _monomial_tex(mono, coef)
+        root_tex = rf"\sqrt[{index}]{{{inside}}}" if index != 2 else rf"\sqrt{{{inside}}}"
+        second = S(rf"{root_tex} = \left({inside}\right)^{{\frac{{1}}{{{index}}}}} = {_monomial_tex(final, final_coef)}",
+                   f"Write the root as the power $\frac{{1}}{{{index}}}$ and apply it to the number and to every exponent.",
+                   f"جذر کو طاقت $\frac{{1}}{{{index}}}$ کی شکل میں لکھیں اور اسے عدد اور ہر قوت پر لاگو کریں۔",
+                   f"({py(_monomial_expr(mono, coef))})**Rational(1,{index}) == {py(_monomial_expr(final, final_coef))}")
+    except (ValueError, TypeError, ZeroDivisionError, _Unsupported):
         return None
     steps = ([first] if first else []) + [second]
-    part = P("", steps, f"${_monomial_tex(final)}$", prompt=f"${A.tex(tree, 0, True)}$")
+    part = P("", steps, f"${_monomial_tex(final, final_coef)}$", prompt=f"${A.tex(tree, 0, True)}$")
     return _finish(f"Simplify {part['prompt']}.", [part])
 
 

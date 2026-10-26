@@ -53,7 +53,15 @@ def same_answer(engine, gold):
     a, b = values(engine), values(gold)
     if a is None or b is None or len(a) != len(b):
         return False
-    return all(sp.simplify(x - y) == 0 or abs(float(sp.N(x - y))) < 0.006 for x, y in zip(a, b))
+    def close(x, y):
+        d = sp.simplify(x - y)
+        if d == 0:
+            return True
+        try:
+            return abs(float(sp.N(d))) < 0.006        # numeric answers: allow rounding in the last place
+        except TypeError:                              # still contains an unknown: genuinely different
+            return False
+    return all(close(x, y) for x, y in zip(a, b))
 
 
 def engine_answers(item):
