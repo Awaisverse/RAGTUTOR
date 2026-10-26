@@ -1,0 +1,904 @@
+{
+ "unit": 1,
+ "title": "Real Numbers",
+ "title_ur": "حقیقی اعداد",
+ "items": [
+  {
+   "id": "ex1.2-q1",
+   "kind": "exercise",
+   "number": "1",
+   "page": 13,
+   "question": "Rationalize the denominator of the following: (i) $\\frac{13}{4+\\sqrt{3}}$ (ii) $\\frac{\\sqrt{2}+\\sqrt{5}}{\\sqrt{3}}$ (iii) $\\frac{\\sqrt{2}-1}{\\sqrt{5}}$ (iv) $\\frac{6-4\\sqrt{2}}{6+4\\sqrt{2}}$ (v) $\\frac{\\sqrt{3}-\\sqrt{2}}{\\sqrt{3}+\\sqrt{2}}$ (vi) $\\frac{4\\sqrt{3}}{\\sqrt{7}+\\sqrt{5}}$",
+   "parts": [
+    {
+     "label": "i",
+     "prompt": "$\\frac{13}{4+\\sqrt{3}}$",
+     "steps": [
+      {
+       "math": "\\frac{13}{4+\\sqrt{3}} \\times \\frac{4-\\sqrt{3}}{4-\\sqrt{3}}",
+       "en": "Multiply the numerator and the denominator by the conjugate of the denominator.",
+       "ur": "شمار کنندہ اور نسب نما کو نسب نما کے مزدوج سے ضرب دیں۔",
+       "check": [
+        "13/(4+sqrt(3)) == 13*(4-sqrt(3))/(4**2 - 3)"
+       ]
+      },
+      {
+       "math": "= \\frac{13(4-\\sqrt{3})}{4^2-(\\sqrt{3})^2} = \\frac{13(4-\\sqrt{3})}{13}",
+       "en": "Use $(a+b)(a-b) = a^2-b^2$ in the denominator.",
+       "ur": "نسب نما میں $(a+b)(a-b) = a^2-b^2$ استعمال کریں۔",
+       "check": [
+        "4**2 - sqrt(3)**2 == 13"
+       ]
+      },
+      {
+       "math": "= 4-\\sqrt{3}",
+       "en": "Cancel 13 from the numerator and the denominator.",
+       "ur": "شمار کنندہ اور نسب نما سے 13 کاٹ دیں۔",
+       "check": [
+        "13*(4-sqrt(3))/13 == 4 - sqrt(3)"
+       ]
+      }
+     ],
+     "answer": "$4-\\sqrt{3}$",
+     "book_key": "4-\\sqrt{3}"
+    },
+    {
+     "label": "ii",
+     "prompt": "$\\frac{\\sqrt{2}+\\sqrt{5}}{\\sqrt{3}}$",
+     "steps": [
+      {
+       "math": "\\frac{\\sqrt{2}+\\sqrt{5}}{\\sqrt{3}} \\times \\frac{\\sqrt{3}}{\\sqrt{3}}",
+       "en": "The denominator is a single root, so multiply the numerator and the denominator by $\\sqrt{3}$.",
+       "ur": "نسب نما ایک ہی جذر ہے، اس لیے شمار کنندہ اور نسب نما کو $\\sqrt{3}$ سے ضرب دیں۔",
+       "check": [
+        "(sqrt(2)+sqrt(5))/sqrt(3) == (sqrt(2)+sqrt(5))*sqrt(3)/3"
+       ]
+      },
+      {
+       "math": "= \\frac{\\sqrt{2}\\sqrt{3}+\\sqrt{5}\\sqrt{3}}{3} = \\frac{\\sqrt{6}+\\sqrt{15}}{3}",
+       "en": "Multiply the roots: $\\sqrt{a}\\sqrt{b} = \\sqrt{ab}$.",
+       "ur": "جذروں کو ضرب دیں: $\\sqrt{a}\\sqrt{b} = \\sqrt{ab}$۔",
+       "check": [
+        "sqrt(2)*sqrt(3) == sqrt(6)",
+        "sqrt(5)*sqrt(3) == sqrt(15)"
+       ]
+      }
+     ],
+     "answer": "$\\frac{\\sqrt{6}+\\sqrt{15}}{3}$",
+     "book_key": "\\frac{\\sqrt{6}+\\sqrt{15}}{3}"
+    },
+    {
+     "label": "iii",
+     "prompt": "$\\frac{\\sqrt{2}-1}{\\sqrt{5}}$",
+     "steps": [
+      {
+       "math": "\\frac{\\sqrt{2}-1}{\\sqrt{5}} \\times \\frac{\\sqrt{5}}{\\sqrt{5}}",
+       "en": "Multiply the numerator and the denominator by $\\sqrt{5}$.",
+       "ur": "شمار کنندہ اور نسب نما کو $\\sqrt{5}$ سے ضرب دیں۔",
+       "check": [
+        "(sqrt(2)-1)/sqrt(5) == (sqrt(2)-1)*sqrt(5)/5"
+       ]
+      },
+      {
+       "math": "= \\frac{\\sqrt{2}\\sqrt{5}-\\sqrt{5}}{5} = \\frac{\\sqrt{10}-\\sqrt{5}}{5}",
+       "en": "Multiply the roots: $\\sqrt{2}\\sqrt{5} = \\sqrt{10}$.",
+       "ur": "جذروں کو ضرب دیں: $\\sqrt{2}\\sqrt{5} = \\sqrt{10}$۔",
+       "check": [
+        "sqrt(2)*sqrt(5) == sqrt(10)"
+       ]
+      }
+     ],
+     "answer": "$\\frac{\\sqrt{10}-\\sqrt{5}}{5}$",
+     "book_key": "\\frac{\\sqrt{10}-\\sqrt{5}}{5}"
+    },
+    {
+     "label": "iv",
+     "prompt": "$\\frac{6-4\\sqrt{2}}{6+4\\sqrt{2}}$",
+     "steps": [
+      {
+       "math": "\\frac{6-4\\sqrt{2}}{6+4\\sqrt{2}} \\times \\frac{6-4\\sqrt{2}}{6-4\\sqrt{2}} = \\frac{(6-4\\sqrt{2})^2}{6^2-(4\\sqrt{2})^2}",
+       "en": "Multiply the numerator and the denominator by the conjugate of the denominator.",
+       "ur": "شمار کنندہ اور نسب نما کو نسب نما کے مزدوج سے ضرب دیں۔",
+       "check": [
+        "(6-4*sqrt(2))/(6+4*sqrt(2)) == (6-4*sqrt(2))**2/(6**2 - (4*sqrt(2))**2)"
+       ]
+      },
+      {
+       "math": "(6-4\\sqrt{2})^2 = 36-48\\sqrt{2}+32 = 68-48\\sqrt{2}, \\qquad 6^2-(4\\sqrt{2})^2 = 36-32 = 4",
+       "en": "Expand the numerator with $(a-b)^2 = a^2-2ab+b^2$ and simplify the denominator.",
+       "ur": "شمار کنندہ کو $(a-b)^2 = a^2-2ab+b^2$ سے پھیلائیں اور نسب نما سادہ کریں۔",
+       "check": [
+        "(6-4*sqrt(2))**2 == 68 - 48*sqrt(2)",
+        "6**2 - (4*sqrt(2))**2 == 4"
+       ]
+      },
+      {
+       "math": "= \\frac{68-48\\sqrt{2}}{4} = 17-12\\sqrt{2}",
+       "en": "Divide each term by 4.",
+       "ur": "ہر رکن کو 4 سے تقسیم کریں۔",
+       "check": [
+        "(68-48*sqrt(2))/4 == 17 - 12*sqrt(2)"
+       ]
+      }
+     ],
+     "answer": "$17-12\\sqrt{2}$",
+     "book_key": "17-12\\sqrt{2}"
+    },
+    {
+     "label": "v",
+     "prompt": "$\\frac{\\sqrt{3}-\\sqrt{2}}{\\sqrt{3}+\\sqrt{2}}$",
+     "steps": [
+      {
+       "math": "\\frac{\\sqrt{3}-\\sqrt{2}}{\\sqrt{3}+\\sqrt{2}} \\times \\frac{\\sqrt{3}-\\sqrt{2}}{\\sqrt{3}-\\sqrt{2}} = \\frac{(\\sqrt{3}-\\sqrt{2})^2}{(\\sqrt{3})^2-(\\sqrt{2})^2}",
+       "en": "Multiply the numerator and the denominator by the conjugate of the denominator.",
+       "ur": "شمار کنندہ اور نسب نما کو نسب نما کے مزدوج سے ضرب دیں۔",
+       "check": [
+        "(sqrt(3)-sqrt(2))/(sqrt(3)+sqrt(2)) == (sqrt(3)-sqrt(2))**2/(3-2)"
+       ]
+      },
+      {
+       "math": "(\\sqrt{3}-\\sqrt{2})^2 = 3-2\\sqrt{6}+2 = 5-2\\sqrt{6}, \\qquad (\\sqrt{3})^2-(\\sqrt{2})^2 = 3-2 = 1",
+       "en": "Expand the numerator; the denominator becomes 1.",
+       "ur": "شمار کنندہ کو پھیلائیں؛ نسب نما 1 ہو جاتا ہے۔",
+       "check": [
+        "(sqrt(3)-sqrt(2))**2 == 5 - 2*sqrt(6)",
+        "sqrt(3)**2 - sqrt(2)**2 == 1"
+       ]
+      },
+      {
+       "math": "= 5-2\\sqrt{6}",
+       "en": "Dividing by 1 changes nothing.",
+       "ur": "1 سے تقسیم کرنے سے کچھ نہیں بدلتا۔",
+       "check": [
+        "(5-2*sqrt(6))/1 == 5 - 2*sqrt(6)"
+       ]
+      }
+     ],
+     "answer": "$5-2\\sqrt{6}$",
+     "book_key": "5-2\\sqrt{6}"
+    },
+    {
+     "label": "vi",
+     "prompt": "$\\frac{4\\sqrt{3}}{\\sqrt{7}+\\sqrt{5}}$",
+     "steps": [
+      {
+       "math": "\\frac{4\\sqrt{3}}{\\sqrt{7}+\\sqrt{5}} \\times \\frac{\\sqrt{7}-\\sqrt{5}}{\\sqrt{7}-\\sqrt{5}} = \\frac{4\\sqrt{3}(\\sqrt{7}-\\sqrt{5})}{(\\sqrt{7})^2-(\\sqrt{5})^2}",
+       "en": "Multiply the numerator and the denominator by the conjugate of the denominator.",
+       "ur": "شمار کنندہ اور نسب نما کو نسب نما کے مزدوج سے ضرب دیں۔",
+       "check": [
+        "4*sqrt(3)/(sqrt(7)+sqrt(5)) == 4*sqrt(3)*(sqrt(7)-sqrt(5))/(7-5)"
+       ]
+      },
+      {
+       "math": "(\\sqrt{7})^2-(\\sqrt{5})^2 = 7-5 = 2",
+       "en": "Use $(a+b)(a-b) = a^2-b^2$ in the denominator.",
+       "ur": "نسب نما میں $(a+b)(a-b) = a^2-b^2$ استعمال کریں۔",
+       "check": [
+        "sqrt(7)**2 - sqrt(5)**2 == 2"
+       ]
+      },
+      {
+       "math": "= \\frac{4\\sqrt{3}(\\sqrt{7}-\\sqrt{5})}{2} = 2\\sqrt{3}(\\sqrt{7}-\\sqrt{5})",
+       "en": "Divide 4 by 2.",
+       "ur": "4 کو 2 سے تقسیم کریں۔",
+       "check": [
+        "4*sqrt(3)*(sqrt(7)-sqrt(5))/2 == 2*sqrt(3)*(sqrt(7)-sqrt(5))"
+       ]
+      }
+     ],
+     "answer": "$2\\sqrt{3}(\\sqrt{7}-\\sqrt{5})$",
+     "book_key": "2\\sqrt{3}(\\sqrt{7}-\\sqrt{5})"
+    }
+   ],
+   "exercise": "1.2"
+  },
+  {
+   "id": "ex1.2-q2",
+   "kind": "exercise",
+   "number": "2",
+   "page": 14,
+   "question": "Simplify the following: (i) $\\left(\\frac{81}{16}\\right)^{-\\frac{3}{4}}$ (ii) $\\left(\\frac{3}{4}\\right)^{-2} \\div \\left(\\frac{4}{9}\\right)^{3} \\times \\frac{16}{27}$ (iii) $(0.027)^{-\\frac{1}{3}}$ (iv) $\\sqrt[7]{\\frac{x^{14} \\times y^{21} \\times z^{35}}{y^{14} z^{7}}}$ (v) $\\frac{5\\cdot(25)^{n+1} - 25\\cdot(5)^{2n}}{5\\cdot(5)^{2n+3} - (25)^{n+1}}$ (vi) $\\frac{(16)^{x+1} + 20(4^{2x})}{2^{x-3} \\times 8^{x+2}}$ (vii) $(64)^{-\\frac{2}{3}} \\div (9)^{-\\frac{3}{2}}$ (viii) $\\frac{3^n \\times 9^{n+1}}{3^{n-1} \\times 9^{n-1}}$ (ix) $\\frac{5^{n+3} - 6 \\cdot 5^{n+1}}{9 \\times 5^n - 4 \\times 5^n}$",
+   "parts": [
+    {
+     "label": "i",
+     "prompt": "$\\left(\\frac{81}{16}\\right)^{-\\frac{3}{4}}$",
+     "steps": [
+      {
+       "math": "\\left(\\frac{81}{16}\\right)^{-\\frac{3}{4}} = \\left(\\frac{16}{81}\\right)^{\\frac{3}{4}}",
+       "en": "A negative exponent means the reciprocal: $a^{-m} = \\frac{1}{a^m}$.",
+       "ur": "منفی طاقت کا مطلب معکوس ہے: $a^{-m} = \\frac{1}{a^m}$۔",
+       "check": [
+        "Rational(81,16)**Rational(-3,4) == Rational(16,81)**Rational(3,4)"
+       ]
+      },
+      {
+       "math": "= \\left(\\frac{2^4}{3^4}\\right)^{\\frac{3}{4}} = \\left(\\frac{2}{3}\\right)^{4 \\times \\frac{3}{4}} = \\left(\\frac{2}{3}\\right)^3",
+       "en": "Write the numbers as powers and use $(a^m)^n = a^{mn}$.",
+       "ur": "اعداد کو طاقت کی شکل میں لکھیں اور $(a^m)^n = a^{mn}$ استعمال کریں۔",
+       "check": [
+        "Rational(16,81) == Rational(2,3)**4",
+        "(Rational(2,3)**4)**Rational(3,4) == Rational(2,3)**3"
+       ]
+      },
+      {
+       "math": "= \\frac{8}{27}",
+       "en": "Cube the fraction: $\\frac{2^3}{3^3}$.",
+       "ur": "کسر کا مکعب لیں: $\\frac{2^3}{3^3}$۔",
+       "check": [
+        "Rational(2,3)**3 == Rational(8,27)"
+       ]
+      }
+     ],
+     "answer": "$\\frac{8}{27}$",
+     "book_key": "\\frac{8}{27}"
+    },
+    {
+     "label": "ii",
+     "prompt": "$\\left(\\frac{3}{4}\\right)^{-2} \\div \\left(\\frac{4}{9}\\right)^{3} \\times \\frac{16}{27}$",
+     "steps": [
+      {
+       "math": "\\left(\\frac{3}{4}\\right)^{-2} = \\left(\\frac{4}{3}\\right)^{2} = \\frac{16}{9}",
+       "en": "A negative exponent means the reciprocal: $a^{-m} = \\frac{1}{a^m}$.",
+       "ur": "منفی طاقت کا مطلب معکوس ہے: $a^{-m} = \\frac{1}{a^m}$۔",
+       "check": [
+        "Rational(3,4)**(-2) == Rational(16,9)"
+       ]
+      },
+      {
+       "math": "\\left(\\frac{4}{9}\\right)^{3} = \\frac{64}{729}",
+       "en": "Cube the numerator and the denominator.",
+       "ur": "شمار کنندہ اور نسب نما کا مکعب لیں۔",
+       "check": [
+        "Rational(4,9)**3 == Rational(64,729)"
+       ]
+      },
+      {
+       "math": "\\frac{16}{9} \\div \\frac{64}{729} \\times \\frac{16}{27} = \\frac{16}{9} \\times \\frac{729}{64} \\times \\frac{16}{27} = 12",
+       "en": "Division by a fraction is multiplication by its reciprocal. Then multiply and cancel.",
+       "ur": "کسر سے تقسیم کا مطلب اس کے معکوس سے ضرب ہے۔ پھر ضرب دیں اور کاٹیں۔",
+       "check": [
+        "Rational(16,9)/Rational(64,729)*Rational(16,27) == 12"
+       ]
+      }
+     ],
+     "answer": "$12$",
+     "book_key": "12"
+    },
+    {
+     "label": "iii",
+     "prompt": "$(0.027)^{-\\frac{1}{3}}$",
+     "steps": [
+      {
+       "math": "(0.027)^{-\\frac{1}{3}} = \\left(\\frac{27}{1000}\\right)^{-\\frac{1}{3}} = \\left(\\frac{3^3}{10^3}\\right)^{-\\frac{1}{3}}",
+       "en": "Write 0.027 as a fraction and then as cubes.",
+       "ur": "0.027 کو کسر اور پھر مکعبوں کی شکل میں لکھیں۔",
+       "check": [
+        "Rational('0.027') == Rational(27,1000)",
+        "Rational(27,1000) == Rational(3,10)**3"
+       ]
+      },
+      {
+       "math": "= \\left(\\frac{3}{10}\\right)^{3 \\times \\left(-\\frac{1}{3}\\right)} = \\left(\\frac{3}{10}\\right)^{-1}",
+       "en": "Multiply the exponents: $(a^m)^n = a^{mn}$.",
+       "ur": "قوتوں کو ضرب دیں: $(a^m)^n = a^{mn}$۔",
+       "check": [
+        "(Rational(3,10)**3)**Rational(-1,3) == Rational(3,10)**(-1)"
+       ]
+      },
+      {
+       "math": "= \\frac{10}{3}",
+       "en": "A power of $-1$ gives the reciprocal.",
+       "ur": "طاقت $-1$ معکوس دیتی ہے۔",
+       "check": [
+        "Rational(3,10)**(-1) == Rational(10,3)"
+       ]
+      }
+     ],
+     "answer": "$\\frac{10}{3}$",
+     "book_key": "\\frac{10}{3}"
+    },
+    {
+     "label": "iv",
+     "prompt": "$\\sqrt[7]{\\frac{x^{14} \\times y^{21} \\times z^{35}}{y^{14} z^{7}}}$",
+     "steps": [
+      {
+       "math": "\\frac{x^{14} y^{21} z^{35}}{y^{14} z^{7}} = x^{14} y^{21-14} z^{35-7} = x^{14} y^{7} z^{28}",
+       "en": "Inside the root, divide powers of the same base by subtracting the exponents: $\\frac{a^m}{a^n} = a^{m-n}$.",
+       "ur": "جذر کے اندر ایک ہی اساس کی طاقتوں کی تقسیم میں قوتیں منفی کریں: $\\frac{a^m}{a^n} = a^{m-n}$۔",
+       "check": [
+        "x**14*y**21*z**35/(y**14*z**7) == x**14*y**7*z**28"
+       ]
+      },
+      {
+       "math": "\\sqrt[7]{x^{14} y^{7} z^{28}} = \\left(x^{14} y^{7} z^{28}\\right)^{\\frac{1}{7}} = x^{2} y\\, z^{4}",
+       "en": "Write the 7th root as the power $\\frac{1}{7}$ and multiply each exponent by $\\frac{1}{7}$.",
+       "ur": "ساتویں جذر کو طاقت $\\frac{1}{7}$ کی شکل میں لکھیں اور ہر قوت کو $\\frac{1}{7}$ سے ضرب دیں۔",
+       "check": [
+        "(x**14*y**7*z**28)**Rational(1,7) == x**2*y*z**4"
+       ]
+      }
+     ],
+     "answer": "$x^2 y z^4$",
+     "book_key": "x^2yz^4"
+    },
+    {
+     "label": "v",
+     "prompt": "$\\frac{5\\cdot(25)^{n+1} - 25\\cdot(5)^{2n}}{5\\cdot(5)^{2n+3} - (25)^{n+1}}$",
+     "steps": [
+      {
+       "math": "5 \\cdot 25^{n+1} = 5 \\cdot 5^{2n+2} = 5^{2n+3}, \\qquad 25 \\cdot 5^{2n} = 5^{2n+2}",
+       "en": "Write every base as a power of the same number so the laws of indices can be used.",
+       "ur": "ہر اساس کو ایک ہی عدد کی طاقت کی شکل میں لکھیں تاکہ قوانین قوت استعمال ہو سکیں۔",
+       "check": [
+        "5*25**(n+1) == 5**(2*n+3)",
+        "25*5**(2*n) == 5**(2*n+2)"
+       ]
+      },
+      {
+       "math": "5 \\cdot 5^{2n+3} = 5^{2n+4}, \\qquad 25^{n+1} = 5^{2n+2}",
+       "en": "Do the same for the denominator.",
+       "ur": "نسب نما کے ساتھ بھی یہی کریں۔",
+       "check": [
+        "5*5**(2*n+3) == 5**(2*n+4)",
+        "25**(n+1) == 5**(2*n+2)"
+       ]
+      },
+      {
+       "math": "\\frac{5^{2n+3}-5^{2n+2}}{5^{2n+4}-5^{2n+2}} = \\frac{5^{2n+2}(5-1)}{5^{2n+2}(5^2-1)} = \\frac{4}{24}",
+       "en": "Take out the common factor $5^{2n+2}$ from the numerator and the denominator.",
+       "ur": "شمار کنندہ اور نسب نما سے مشترک جزو $5^{2n+2}$ نکالیں۔",
+       "check": [
+        "5**(2*n+3) - 5**(2*n+2) == 5**(2*n+2)*(5-1)",
+        "5**(2*n+4) - 5**(2*n+2) == 5**(2*n+2)*(5**2-1)"
+       ]
+      },
+      {
+       "math": "= \\frac{1}{6}",
+       "en": "Cancel the common factor 4.",
+       "ur": "مشترک جزو 4 کاٹ دیں۔",
+       "check": [
+        "Rational(4,24) == Rational(1,6)"
+       ]
+      }
+     ],
+     "answer": "$\\frac{1}{6}$",
+     "book_key": "\\frac{1}{6}"
+    },
+    {
+     "label": "vi",
+     "prompt": "$\\frac{(16)^{x+1} + 20(4^{2x})}{2^{x-3} \\times 8^{x+2}}$",
+     "steps": [
+      {
+       "math": "16^{x+1} = 2^{4x+4}, \\qquad 4^{2x} = 2^{4x}",
+       "en": "Write every base as a power of the same number so the laws of indices can be used.",
+       "ur": "ہر اساس کو ایک ہی عدد کی طاقت کی شکل میں لکھیں تاکہ قوانین قوت استعمال ہو سکیں۔",
+       "check": [
+        "16**(x+1) == 2**(4*x+4)",
+        "4**(2*x) == 2**(4*x)"
+       ]
+      },
+      {
+       "math": "2^{x-3} \\times 8^{x+2} = 2^{x-3} \\times 2^{3x+6} = 2^{4x+3}",
+       "en": "Write 8 as $2^3$ and add the exponents when multiplying: $a^m \\cdot a^n = a^{m+n}$.",
+       "ur": "8 کو $2^3$ لکھیں اور ضرب میں قوتیں جمع کریں: $a^m \\cdot a^n = a^{m+n}$۔",
+       "check": [
+        "8**(x+2) == 2**(3*x+6)",
+        "2**(x-3)*2**(3*x+6) == 2**(4*x+3)"
+       ]
+      },
+      {
+       "math": "\\frac{2^{4x+4}+20 \\cdot 2^{4x}}{2^{4x+3}} = \\frac{2^{4x}(16+20)}{2^{4x} \\cdot 8} = \\frac{36}{8}",
+       "en": "Take out the common factor $2^{4x}$.",
+       "ur": "مشترک جزو $2^{4x}$ نکالیں۔",
+       "check": [
+        "2**(4*x+4) + 20*2**(4*x) == 2**(4*x)*(16+20)",
+        "2**(4*x+3) == 2**(4*x)*8"
+       ]
+      },
+      {
+       "math": "= \\frac{9}{2}",
+       "en": "Cancel the common factor 4.",
+       "ur": "مشترک جزو 4 کاٹ دیں۔",
+       "check": [
+        "Rational(36,8) == Rational(9,2)"
+       ]
+      }
+     ],
+     "answer": "$\\frac{9}{2}$",
+     "book_key": "\\frac{9}{2}"
+    },
+    {
+     "label": "vii",
+     "prompt": "$(64)^{-\\frac{2}{3}} \\div (9)^{-\\frac{3}{2}}$",
+     "steps": [
+      {
+       "math": "64^{-\\frac{2}{3}} = (4^3)^{-\\frac{2}{3}} = 4^{-2} = \\frac{1}{16}",
+       "en": "Write the numbers as powers and use $(a^m)^n = a^{mn}$.",
+       "ur": "اعداد کو طاقت کی شکل میں لکھیں اور $(a^m)^n = a^{mn}$ استعمال کریں۔",
+       "check": [
+        "64**Rational(-2,3) == Rational(1,16)"
+       ]
+      },
+      {
+       "math": "9^{-\\frac{3}{2}} = (3^2)^{-\\frac{3}{2}} = 3^{-3} = \\frac{1}{27}",
+       "en": "Write the numbers as powers and use $(a^m)^n = a^{mn}$.",
+       "ur": "اعداد کو طاقت کی شکل میں لکھیں اور $(a^m)^n = a^{mn}$ استعمال کریں۔",
+       "check": [
+        "9**Rational(-3,2) == Rational(1,27)"
+       ]
+      },
+      {
+       "math": "\\frac{1}{16} \\div \\frac{1}{27} = \\frac{1}{16} \\times 27 = \\frac{27}{16}",
+       "en": "Divide by a fraction by multiplying with its reciprocal.",
+       "ur": "کسر سے تقسیم اس کے معکوس سے ضرب کے برابر ہے۔",
+       "check": [
+        "Rational(1,16)/Rational(1,27) == Rational(27,16)"
+       ]
+      }
+     ],
+     "answer": "$\\frac{27}{16}$",
+     "book_key": "\\frac{27}{16}"
+    },
+    {
+     "label": "viii",
+     "prompt": "$\\frac{3^n \\times 9^{n+1}}{3^{n-1} \\times 9^{n-1}}$",
+     "steps": [
+      {
+       "math": "9^{n+1} = 3^{2n+2}, \\qquad 9^{n-1} = 3^{2n-2}",
+       "en": "Write every base as a power of the same number so the laws of indices can be used.",
+       "ur": "ہر اساس کو ایک ہی عدد کی طاقت کی شکل میں لکھیں تاکہ قوانین قوت استعمال ہو سکیں۔",
+       "check": [
+        "9**(n+1) == 3**(2*n+2)",
+        "9**(n-1) == 3**(2*n-2)"
+       ]
+      },
+      {
+       "math": "\\frac{3^n \\cdot 3^{2n+2}}{3^{n-1} \\cdot 3^{2n-2}} = \\frac{3^{3n+2}}{3^{3n-3}}",
+       "en": "Add the exponents in the numerator and in the denominator.",
+       "ur": "شمار کنندہ اور نسب نما میں قوتیں جمع کریں۔",
+       "check": [
+        "3**n*3**(2*n+2) == 3**(3*n+2)",
+        "3**(n-1)*3**(2*n-2) == 3**(3*n-3)"
+       ]
+      },
+      {
+       "math": "= 3^{(3n+2)-(3n-3)} = 3^5 = 243",
+       "en": "Divide powers of the same base by subtracting the exponents.",
+       "ur": "ایک ہی اساس کی طاقتوں کی تقسیم میں قوتیں منفی کریں۔",
+       "check": [
+        "3**(3*n+2)/3**(3*n-3) == 3**5",
+        "3**5 == 243"
+       ]
+      }
+     ],
+     "answer": "$243$",
+     "book_key": "243"
+    },
+    {
+     "label": "ix",
+     "prompt": "$\\frac{5^{n+3} - 6 \\cdot 5^{n+1}}{9 \\times 5^n - 4 \\times 5^n}$",
+     "steps": [
+      {
+       "math": "5^{n+3} - 6 \\cdot 5^{n+1} = 5^n(5^3 - 6 \\cdot 5) = 5^n(125-30) = 95 \\cdot 5^n",
+       "en": "Take out the common factor $5^n$ from the numerator.",
+       "ur": "شمار کنندہ سے مشترک جزو $5^n$ نکالیں۔",
+       "check": [
+        "5**(n+3) - 6*5**(n+1) == 5**n*(125-30)",
+        "125-30 == 95"
+       ]
+      },
+      {
+       "math": "9 \\cdot 5^n - 4 \\cdot 5^n = 5^n(9-4) = 5 \\cdot 5^n",
+       "en": "Do the same in the denominator.",
+       "ur": "نسب نما میں بھی یہی کریں۔",
+       "check": [
+        "9*5**n - 4*5**n == 5**n*(9-4)"
+       ]
+      },
+      {
+       "math": "\\frac{95 \\cdot 5^n}{5 \\cdot 5^n} = 19",
+       "en": "Cancel $5^n$ and divide 95 by 5.",
+       "ur": "$5^n$ کاٹیں اور 95 کو 5 سے تقسیم کریں۔",
+       "check": [
+        "Rational(95,5) == 19"
+       ]
+      }
+     ],
+     "answer": "$19$",
+     "book_key": "19"
+    }
+   ],
+   "exercise": "1.2"
+  },
+  {
+   "id": "ex1.2-q3",
+   "kind": "exercise",
+   "number": "3",
+   "page": 14,
+   "question": "If $x = 3+\\sqrt{8}$ then find the value of: (i) $x+\\frac{1}{x}$ (ii) $x-\\frac{1}{x}$ (iii) $x^2+\\frac{1}{x^2}$ (iv) $x^2-\\frac{1}{x^2}$ (v) $x^4+\\frac{1}{x^4}$ (vi) $\\left(x-\\frac{1}{x}\\right)^2$",
+   "parts": [
+    {
+     "label": "i",
+     "prompt": "$x+\\frac{1}{x}$",
+     "steps": [
+      {
+       "math": "\\frac{1}{x} = \\frac{1}{3+\\sqrt{8}} \\times \\frac{3-\\sqrt{8}}{3-\\sqrt{8}} = \\frac{3-\\sqrt{8}}{9-8} = 3-\\sqrt{8}",
+       "en": "First find $\\frac{1}{x}$ by rationalizing: multiply by the conjugate $3-\\sqrt{8}$.",
+       "ur": "پہلے $\\frac{1}{x}$ نکالیں: مزدوج $3-\\sqrt{8}$ سے ضرب دے کر نسب نما کو ناطق بنائیں۔",
+       "check": [
+        "1/(3+sqrt(8)) == 3 - sqrt(8)",
+        "3**2 - sqrt(8)**2 == 1"
+       ]
+      },
+      {
+       "math": "x+\\frac{1}{x} = (3+\\sqrt{8}) + (3-\\sqrt{8}) = 6",
+       "en": "Add. The $\\sqrt{8}$ terms cancel.",
+       "ur": "جمع کریں۔ $\\sqrt{8}$ والے رکن ختم ہو جاتے ہیں۔",
+       "check": [
+        "(3+sqrt(8)) + (3-sqrt(8)) == 6"
+       ]
+      }
+     ],
+     "answer": "$6$",
+     "book_key": "6"
+    },
+    {
+     "label": "ii",
+     "prompt": "$x-\\frac{1}{x}$",
+     "steps": [
+      {
+       "math": "\\frac{1}{x} = \\frac{1}{3+\\sqrt{8}} \\times \\frac{3-\\sqrt{8}}{3-\\sqrt{8}} = \\frac{3-\\sqrt{8}}{9-8} = 3-\\sqrt{8}",
+       "en": "First find $\\frac{1}{x}$ by rationalizing: multiply by the conjugate $3-\\sqrt{8}$.",
+       "ur": "پہلے $\\frac{1}{x}$ نکالیں: مزدوج $3-\\sqrt{8}$ سے ضرب دے کر نسب نما کو ناطق بنائیں۔",
+       "check": [
+        "1/(3+sqrt(8)) == 3 - sqrt(8)",
+        "3**2 - sqrt(8)**2 == 1"
+       ]
+      },
+      {
+       "math": "x-\\frac{1}{x} = (3+\\sqrt{8}) - (3-\\sqrt{8}) = 2\\sqrt{8}",
+       "en": "Subtract. The 3s cancel.",
+       "ur": "منفی کریں۔ 3 ختم ہو جاتے ہیں۔",
+       "check": [
+        "(3+sqrt(8)) - (3-sqrt(8)) == 2*sqrt(8)"
+       ]
+      }
+     ],
+     "answer": "$2\\sqrt{8}$",
+     "book_key": "2\\sqrt{8}"
+    },
+    {
+     "label": "iii",
+     "prompt": "$x^2+\\frac{1}{x^2}$",
+     "steps": [
+      {
+       "math": "\\frac{1}{x} = \\frac{1}{3+\\sqrt{8}} \\times \\frac{3-\\sqrt{8}}{3-\\sqrt{8}} = \\frac{3-\\sqrt{8}}{9-8} = 3-\\sqrt{8}",
+       "en": "First find $\\frac{1}{x}$ by rationalizing: multiply by the conjugate $3-\\sqrt{8}$.",
+       "ur": "پہلے $\\frac{1}{x}$ نکالیں: مزدوج $3-\\sqrt{8}$ سے ضرب دے کر نسب نما کو ناطق بنائیں۔",
+       "check": [
+        "1/(3+sqrt(8)) == 3 - sqrt(8)",
+        "3**2 - sqrt(8)**2 == 1"
+       ]
+      },
+      {
+       "math": "x+\\frac{1}{x} = 6",
+       "en": "From part (i).",
+       "ur": "حصہ (i) سے۔",
+       "check": [
+        "(3+sqrt(8)) + (3-sqrt(8)) == 6"
+       ]
+      },
+      {
+       "math": "\\left(x+\\frac{1}{x}\\right)^2 = x^2+2+\\frac{1}{x^2} \\;\\Rightarrow\\; x^2+\\frac{1}{x^2} = 6^2-2 = 34",
+       "en": "Square both sides and use $(a+b)^2 = a^2+2ab+b^2$.",
+       "ur": "دونوں طرف مربع لیں اور $(a+b)^2 = a^2+2ab+b^2$ استعمال کریں۔",
+       "check": [
+        "(3+sqrt(8))**2 + (3-sqrt(8))**2 == 6**2 - 2",
+        "6**2 - 2 == 34"
+       ]
+      }
+     ],
+     "answer": "$34$",
+     "book_key": "34"
+    },
+    {
+     "label": "iv",
+     "prompt": "$x^2-\\frac{1}{x^2}$",
+     "steps": [
+      {
+       "math": "\\frac{1}{x} = \\frac{1}{3+\\sqrt{8}} \\times \\frac{3-\\sqrt{8}}{3-\\sqrt{8}} = \\frac{3-\\sqrt{8}}{9-8} = 3-\\sqrt{8}",
+       "en": "First find $\\frac{1}{x}$ by rationalizing: multiply by the conjugate $3-\\sqrt{8}$.",
+       "ur": "پہلے $\\frac{1}{x}$ نکالیں: مزدوج $3-\\sqrt{8}$ سے ضرب دے کر نسب نما کو ناطق بنائیں۔",
+       "check": [
+        "1/(3+sqrt(8)) == 3 - sqrt(8)",
+        "3**2 - sqrt(8)**2 == 1"
+       ]
+      },
+      {
+       "math": "x+\\frac{1}{x} = 6, \\qquad x-\\frac{1}{x} = 2\\sqrt{8}",
+       "en": "Use the results of parts (i) and (ii).",
+       "ur": "حصہ (i) اور (ii) کے نتائج استعمال کریں۔",
+       "check": [
+        "(3+sqrt(8)) + (3-sqrt(8)) == 6",
+        "(3+sqrt(8)) - (3-sqrt(8)) == 2*sqrt(8)"
+       ]
+      },
+      {
+       "math": "x^2-\\frac{1}{x^2} = \\left(x+\\frac{1}{x}\\right)\\left(x-\\frac{1}{x}\\right) = 6 \\times 2\\sqrt{8} = 12\\sqrt{8}",
+       "en": "Use $a^2-b^2 = (a+b)(a-b)$.",
+       "ur": "$a^2-b^2 = (a+b)(a-b)$ استعمال کریں۔",
+       "check": [
+        "(3+sqrt(8))**2 - (3-sqrt(8))**2 == 6*2*sqrt(8)",
+        "6*2*sqrt(8) == 12*sqrt(8)"
+       ]
+      }
+     ],
+     "answer": "$12\\sqrt{8}$",
+     "book_key": "12\\sqrt{8}"
+    },
+    {
+     "label": "v",
+     "prompt": "$x^4+\\frac{1}{x^4}$",
+     "steps": [
+      {
+       "math": "\\frac{1}{x} = \\frac{1}{3+\\sqrt{8}} \\times \\frac{3-\\sqrt{8}}{3-\\sqrt{8}} = \\frac{3-\\sqrt{8}}{9-8} = 3-\\sqrt{8}",
+       "en": "First find $\\frac{1}{x}$ by rationalizing: multiply by the conjugate $3-\\sqrt{8}$.",
+       "ur": "پہلے $\\frac{1}{x}$ نکالیں: مزدوج $3-\\sqrt{8}$ سے ضرب دے کر نسب نما کو ناطق بنائیں۔",
+       "check": [
+        "1/(3+sqrt(8)) == 3 - sqrt(8)",
+        "3**2 - sqrt(8)**2 == 1"
+       ]
+      },
+      {
+       "math": "x^2+\\frac{1}{x^2} = 34",
+       "en": "From part (iii).",
+       "ur": "حصہ (iii) سے۔",
+       "check": [
+        "(3+sqrt(8))**2 + (3-sqrt(8))**2 == 34"
+       ]
+      },
+      {
+       "math": "\\left(x^2+\\frac{1}{x^2}\\right)^2 = x^4+2+\\frac{1}{x^4} \\;\\Rightarrow\\; x^4+\\frac{1}{x^4} = 34^2-2 = 1154",
+       "en": "Square both sides again.",
+       "ur": "دونوں طرف دوبارہ مربع لیں۔",
+       "check": [
+        "(3+sqrt(8))**4 + (3-sqrt(8))**4 == 34**2 - 2",
+        "34**2 - 2 == 1154"
+       ]
+      }
+     ],
+     "answer": "$1154$",
+     "book_key": "1154"
+    },
+    {
+     "label": "vi",
+     "prompt": "$\\left(x-\\frac{1}{x}\\right)^2$",
+     "steps": [
+      {
+       "math": "\\frac{1}{x} = \\frac{1}{3+\\sqrt{8}} \\times \\frac{3-\\sqrt{8}}{3-\\sqrt{8}} = \\frac{3-\\sqrt{8}}{9-8} = 3-\\sqrt{8}",
+       "en": "First find $\\frac{1}{x}$ by rationalizing: multiply by the conjugate $3-\\sqrt{8}$.",
+       "ur": "پہلے $\\frac{1}{x}$ نکالیں: مزدوج $3-\\sqrt{8}$ سے ضرب دے کر نسب نما کو ناطق بنائیں۔",
+       "check": [
+        "1/(3+sqrt(8)) == 3 - sqrt(8)",
+        "3**2 - sqrt(8)**2 == 1"
+       ]
+      },
+      {
+       "math": "x-\\frac{1}{x} = 2\\sqrt{8}",
+       "en": "From part (ii).",
+       "ur": "حصہ (ii) سے۔",
+       "check": [
+        "(3+sqrt(8)) - (3-sqrt(8)) == 2*sqrt(8)"
+       ]
+      },
+      {
+       "math": "\\left(x-\\frac{1}{x}\\right)^2 = (2\\sqrt{8})^2 = 4 \\times 8 = 32",
+       "en": "Square $2\\sqrt{8}$: $(\\sqrt{8})^2 = 8$.",
+       "ur": "$2\\sqrt{8}$ کا مربع لیں: $(\\sqrt{8})^2 = 8$۔",
+       "check": [
+        "((3+sqrt(8)) - (3-sqrt(8)))**2 == 32",
+        "(2*sqrt(8))**2 == 32"
+       ]
+      }
+     ],
+     "answer": "$32$",
+     "book_key": "32"
+    }
+   ],
+   "exercise": "1.2"
+  },
+  {
+   "id": "ex1.2-q4",
+   "kind": "exercise",
+   "number": "4",
+   "page": 14,
+   "question": "Find the rational numbers $p$ and $q$ such that $\\frac{8-3\\sqrt{2}}{4+3\\sqrt{2}} = p+q\\sqrt{2}$.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "\\frac{8-3\\sqrt{2}}{4+3\\sqrt{2}} \\times \\frac{4-3\\sqrt{2}}{4-3\\sqrt{2}} = \\frac{(8-3\\sqrt{2})(4-3\\sqrt{2})}{4^2-(3\\sqrt{2})^2}",
+       "en": "Multiply the numerator and the denominator by the conjugate of the denominator.",
+       "ur": "شمار کنندہ اور نسب نما کو نسب نما کے مزدوج سے ضرب دیں۔",
+       "check": [
+        "(8-3*sqrt(2))/(4+3*sqrt(2)) == (8-3*sqrt(2))*(4-3*sqrt(2))/(4**2 - (3*sqrt(2))**2)"
+       ]
+      },
+      {
+       "math": "(8-3\\sqrt{2})(4-3\\sqrt{2}) = 32-24\\sqrt{2}-12\\sqrt{2}+18 = 50-36\\sqrt{2}, \\qquad 4^2-(3\\sqrt{2})^2 = 16-18 = -2",
+       "en": "Multiply out the numerator and simplify the denominator.",
+       "ur": "شمار کنندہ کو ضرب دیں اور نسب نما سادہ کریں۔",
+       "check": [
+        "(8-3*sqrt(2))*(4-3*sqrt(2)) == 50 - 36*sqrt(2)",
+        "4**2 - (3*sqrt(2))**2 == -2"
+       ]
+      },
+      {
+       "math": "= \\frac{50-36\\sqrt{2}}{-2} = -25+18\\sqrt{2}",
+       "en": "Divide each term by $-2$.",
+       "ur": "ہر رکن کو $-2$ سے تقسیم کریں۔",
+       "check": [
+        "(50-36*sqrt(2))/(-2) == -25 + 18*sqrt(2)"
+       ]
+      },
+      {
+       "math": "-25+18\\sqrt{2} = p+q\\sqrt{2} \\;\\Rightarrow\\; p = -25, \\; q = 18",
+       "en": "Compare the rational parts and the coefficients of $\\sqrt{2}$.",
+       "ur": "ناطق حصوں اور $\\sqrt{2}$ کے عددی سروں کا موازنہ کریں۔",
+       "check": [
+        "-25 + 18*sqrt(2) == (-25) + 18*sqrt(2)"
+       ]
+      }
+     ],
+     "answer": "$p=-25,\\ q=18$",
+     "book_key": "p=-25, q=18"
+    }
+   ],
+   "exercise": "1.2"
+  },
+  {
+   "id": "ex1.2-q5",
+   "kind": "exercise",
+   "number": "5",
+   "page": 14,
+   "question": "Simplify the following: (i) $\\frac{(25)^{\\frac{3}{2}} \\times (243)^{\\frac{3}{5}}}{(16)^{\\frac{5}{4}} \\times (8)^{\\frac{4}{3}}}$ (ii) $\\frac{54 \\times \\sqrt[3]{(27)^{2x}}}{9^{x+1} + 216(3^{2x-1})}$ (iii) $\\sqrt{\\frac{(216)^{\\frac{2}{3}} \\times (25)^{\\frac{1}{2}}}{(0.04)^{-\\frac{3}{2}}}}$ (iv) $\\left(a^{\\frac{1}{3}}+b^{\\frac{2}{3}}\\right) \\times \\left(a^{\\frac{2}{3}} - a^{\\frac{1}{3}}b^{\\frac{2}{3}} + b^{\\frac{4}{3}}\\right)$",
+   "parts": [
+    {
+     "label": "i",
+     "prompt": "$\\frac{(25)^{\\frac{3}{2}} \\times (243)^{\\frac{3}{5}}}{(16)^{\\frac{5}{4}} \\times (8)^{\\frac{4}{3}}}$",
+     "steps": [
+      {
+       "math": "25^{\\frac{3}{2}} = (5^2)^{\\frac{3}{2}} = 5^3 = 125, \\qquad 243^{\\frac{3}{5}} = (3^5)^{\\frac{3}{5}} = 3^3 = 27",
+       "en": "Write the numbers as powers and use $(a^m)^n = a^{mn}$.",
+       "ur": "اعداد کو طاقت کی شکل میں لکھیں اور $(a^m)^n = a^{mn}$ استعمال کریں۔",
+       "check": [
+        "25**Rational(3,2) == 125",
+        "243**Rational(3,5) == 27"
+       ]
+      },
+      {
+       "math": "16^{\\frac{5}{4}} = (2^4)^{\\frac{5}{4}} = 2^5 = 32, \\qquad 8^{\\frac{4}{3}} = (2^3)^{\\frac{4}{3}} = 2^4 = 16",
+       "en": "Write the numbers as powers and use $(a^m)^n = a^{mn}$.",
+       "ur": "اعداد کو طاقت کی شکل میں لکھیں اور $(a^m)^n = a^{mn}$ استعمال کریں۔",
+       "check": [
+        "16**Rational(5,4) == 32",
+        "8**Rational(4,3) == 16"
+       ]
+      },
+      {
+       "math": "\\frac{125 \\times 27}{32 \\times 16} = \\frac{3375}{512}",
+       "en": "Multiply the numerator and the denominator.",
+       "ur": "شمار کنندہ اور نسب نما کو ضرب دیں۔",
+       "check": [
+        "Rational(125*27, 32*16) == Rational(3375,512)"
+       ]
+      }
+     ],
+     "answer": "$\\frac{3375}{512}$",
+     "book_key": "\\frac{3375}{512}"
+    },
+    {
+     "label": "ii",
+     "prompt": "$\\frac{54 \\times \\sqrt[3]{(27)^{2x}}}{9^{x+1} + 216(3^{2x-1})}$",
+     "steps": [
+      {
+       "math": "\\sqrt[3]{(27)^{2x}} = \\left((3^3)^{2x}\\right)^{\\frac{1}{3}} = 3^{2x}",
+       "en": "Write 27 as $3^3$ and multiply the exponents: $3 \\cdot 2x \\cdot \\frac{1}{3} = 2x$.",
+       "ur": "27 کو $3^3$ لکھیں اور قوتیں ضرب دیں: $3 \\cdot 2x \\cdot \\frac{1}{3} = 2x$۔",
+       "check": [
+        "cbrt(27**(2*x)) == 3**(2*x)"
+       ]
+      },
+      {
+       "math": "9^{x+1} = 3^{2x+2} = 9 \\cdot 3^{2x}, \\qquad 216 \\cdot 3^{2x-1} = 72 \\cdot 3^{2x}",
+       "en": "Write the denominator in terms of $3^{2x}$: $\\frac{216}{3} = 72$.",
+       "ur": "نسب نما کو $3^{2x}$ کی صورت میں لکھیں: $\\frac{216}{3} = 72$۔",
+       "check": [
+        "9**(x+1) == 9*3**(2*x)",
+        "216*3**(2*x-1) == 72*3**(2*x)"
+       ]
+      },
+      {
+       "math": "\\frac{54 \\cdot 3^{2x}}{9 \\cdot 3^{2x} + 72 \\cdot 3^{2x}} = \\frac{54 \\cdot 3^{2x}}{81 \\cdot 3^{2x}} = \\frac{54}{81} = \\frac{2}{3}",
+       "en": "Take out the common factor $3^{2x}$, cancel it and reduce the fraction.",
+       "ur": "مشترک جزو $3^{2x}$ نکال کر کاٹیں اور کسر کو مختصر کریں۔",
+       "check": [
+        "54*cbrt(27**(2*x))/(9**(x+1) + 216*3**(2*x-1)) == Rational(2,3)"
+       ]
+      }
+     ],
+     "answer": "$\\frac{2}{3}$",
+     "book_key": "\\frac{2}{3}"
+    },
+    {
+     "label": "iii",
+     "prompt": "$\\sqrt{\\frac{(216)^{\\frac{2}{3}} \\times (25)^{\\frac{1}{2}}}{(0.04)^{-\\frac{3}{2}}}}$",
+     "steps": [
+      {
+       "math": "(216)^{\\frac{2}{3}} = (6^3)^{\\frac{2}{3}} = 6^2 = 36, \\qquad (25)^{\\frac{1}{2}} = 5",
+       "en": "Write the numbers as powers and use $(a^m)^n = a^{mn}$.",
+       "ur": "اعداد کو طاقت کی شکل میں لکھیں اور $(a^m)^n = a^{mn}$ استعمال کریں۔",
+       "check": [
+        "216**Rational(2,3) == 36",
+        "25**Rational(1,2) == 5"
+       ]
+      },
+      {
+       "math": "(0.04)^{-\\frac{3}{2}} = \\left(\\frac{4}{100}\\right)^{-\\frac{3}{2}} = \\left(\\frac{1}{5}\\right)^{2 \\times \\left(-\\frac{3}{2}\\right)} = 5^3 = 125",
+       "en": "Write 0.04 as $\\left(\\frac{1}{5}\\right)^2$ and multiply the exponents.",
+       "ur": "0.04 کو $\\left(\\frac{1}{5}\\right)^2$ لکھیں اور قوتیں ضرب دیں۔",
+       "check": [
+        "Rational('0.04') == Rational(1,5)**2",
+        "Rational('0.04')**Rational(-3,2) == 125"
+       ]
+      },
+      {
+       "math": "\\sqrt{\\frac{36 \\times 5}{125}} = \\sqrt{\\frac{180}{125}} = \\sqrt{\\frac{36}{25}} = \\frac{6}{5}",
+       "en": "Simplify the fraction under the root, then take the square root.",
+       "ur": "جذر کے نیچے کسر سادہ کریں، پھر جذر لیں۔",
+       "check": [
+        "Rational(36*5,125) == Rational(36,25)",
+        "sqrt(Rational(36,25)) == Rational(6,5)"
+       ]
+      }
+     ],
+     "answer": "$\\frac{6}{5}$",
+     "book_key": "\\frac{6}{5}"
+    },
+    {
+     "label": "iv",
+     "prompt": "$\\left(a^{\\frac{1}{3}}+b^{\\frac{2}{3}}\\right) \\times \\left(a^{\\frac{2}{3}} - a^{\\frac{1}{3}}b^{\\frac{2}{3}} + b^{\\frac{4}{3}}\\right)$",
+     "steps": [
+      {
+       "math": "\\text{Let } u = a^{\\frac{1}{3}}, \\; v = b^{\\frac{2}{3}}",
+       "en": "Give the two terms short names so the pattern is visible.",
+       "ur": "دونوں اجزا کو مختصر نام دیں تاکہ نمونہ نظر آئے۔"
+      },
+      {
+       "math": "a^{\\frac{2}{3}} = u^2, \\quad a^{\\frac{1}{3}}b^{\\frac{2}{3}} = uv, \\quad b^{\\frac{4}{3}} = v^2 \\;\\Rightarrow\\; (u+v)(u^2-uv+v^2)",
+       "en": "The second bracket is $u^2-uv+v^2$.",
+       "ur": "دوسرا قوسین $u^2-uv+v^2$ ہے۔",
+       "check": [
+        "a**Rational(2,3) == (a**Rational(1,3))**2",
+        "b**Rational(4,3) == (b**Rational(2,3))**2"
+       ]
+      },
+      {
+       "math": "(u+v)(u^2-uv+v^2) = u^3+v^3 = a + b^2",
+       "en": "Use $(u+v)(u^2-uv+v^2) = u^3+v^3$ with $u^3 = a$ and $v^3 = b^2$.",
+       "ur": "$(u+v)(u^2-uv+v^2) = u^3+v^3$ استعمال کریں جہاں $u^3 = a$ اور $v^3 = b^2$ ہے۔",
+       "check": [
+        "(a**Rational(1,3)+b**Rational(2,3))*(a**Rational(2,3) - a**Rational(1,3)*b**Rational(2,3) + b**Rational(4,3)) == a + b**2"
+       ]
+      }
+     ],
+     "answer": "$a+b^2$",
+     "book_key": "a+b^2"
+    }
+   ],
+   "exercise": "1.2"
+  }
+ ]
+}

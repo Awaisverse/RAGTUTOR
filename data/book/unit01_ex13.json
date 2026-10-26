@@ -1,0 +1,1110 @@
+{
+ "unit": 1,
+ "title": "Real Numbers",
+ "title_ur": "حقیقی اعداد",
+ "items": [
+  {
+   "id": "ex1.3-q1",
+   "kind": "exercise",
+   "number": "1",
+   "page": 18,
+   "question": "The sum of three consecutive integers is forty-two, find the three integers.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "\\text{Let the integers be } x,\\; x+1,\\; x+2",
+       "en": "Consecutive integers differ by 1, so call them x, x+1 and x+2.",
+       "ur": "متواتر صحیح اعداد میں 1 کا فرق ہوتا ہے، انہیں x، x+1 اور x+2 فرض کریں۔"
+      },
+      {
+       "math": "x + (x+1) + (x+2) = 42 \\;\\Rightarrow\\; 3x+3 = 42",
+       "en": "Their sum is 42. Collect the terms.",
+       "ur": "ان کا مجموعہ 42 ہے۔ ارکان کو جمع کریں۔",
+       "check": [
+        "x + (x+1) + (x+2) == 3*x + 3"
+       ]
+      },
+      {
+       "math": "3x = 39 \\;\\Rightarrow\\; x = 13",
+       "en": "Subtract 3 from both sides, then divide by 3.",
+       "ur": "دونوں طرف سے 3 منفی کریں، پھر 3 سے تقسیم کریں۔",
+       "check": [
+        "42 - 3 == 39",
+        "Rational(39,3) == 13"
+       ]
+      },
+      {
+       "math": "x = 13,\\quad x+1 = 14,\\quad x+2 = 15",
+       "en": "Put x = 13 back to get the three integers.",
+       "ur": "تینوں اعداد معلوم کرنے کے لیے x = 13 رکھیں۔",
+       "check": [
+        "13 + 14 + 15 == 42"
+       ]
+      }
+     ],
+     "answer": "$13,\\ 14,\\ 15$",
+     "book_key": "13, 14, 15"
+    }
+   ],
+   "exercise": "1.3"
+  },
+  {
+   "id": "ex1.3-q2",
+   "kind": "exercise",
+   "number": "2",
+   "page": 18,
+   "question": "The diagram shows right angled $\\Delta ABC$ in which the length of $\\overline{AC}$ is $(\\sqrt{3}+\\sqrt{5})$ cm. The area of $\\Delta ABC$ is $(1+\\sqrt{15})$ cm$^2$. Find the length $\\overline{AB}$ in the form $(a\\sqrt{3}+b\\sqrt{5})$ cm, where $a$ and $b$ are integers.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "\\text{Area} = \\frac{1}{2} \\times m\\overline{AB} \\times m\\overline{AC}",
+       "en": "The right angle is at A, so AB and AC are the base and the height of the triangle.",
+       "ur": "قائمہ زاویہ A پر ہے، اس لیے AB اور AC مثلث کی قاعدہ اور اونچائی ہیں۔",
+       "draw": [
+        {
+         "t": "poly",
+         "p": [
+          30,
+          50,
+          85,
+          50,
+          30,
+          12
+         ],
+         "close": true
+        },
+        {
+         "t": "right",
+         "p": [
+          30,
+          50
+         ],
+         "d": [
+          1,
+          0,
+          0,
+          -1
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          27,
+          9
+         ],
+         "s": "B"
+        },
+        {
+         "t": "text",
+         "p": [
+          27,
+          55
+         ],
+         "s": "A"
+        },
+        {
+         "t": "text",
+         "p": [
+          87,
+          55
+         ],
+         "s": "C"
+        },
+        {
+         "t": "text",
+         "p": [
+          57,
+          56
+         ],
+         "s": "(sqrt3+sqrt5) cm"
+        }
+       ]
+      },
+      {
+       "math": "1+\\sqrt{15} = \\frac{1}{2} \\times m\\overline{AB} \\times (\\sqrt{3}+\\sqrt{5}) \\;\\Rightarrow\\; m\\overline{AB} = \\frac{2(1+\\sqrt{15})}{\\sqrt{3}+\\sqrt{5}}",
+       "en": "Put in the area and AC, then solve for AB.",
+       "ur": "رقبہ اور AC رکھیں، پھر AB کے لیے حل کریں۔",
+       "check": [
+        "Rational(1,2)*(2*(1+sqrt(15))/(sqrt(3)+sqrt(5)))*(sqrt(3)+sqrt(5)) == 1 + sqrt(15)"
+       ]
+      },
+      {
+       "math": "m\\overline{AB} = \\frac{2(1+\\sqrt{15})}{\\sqrt{3}+\\sqrt{5}} \\times \\frac{\\sqrt{5}-\\sqrt{3}}{\\sqrt{5}-\\sqrt{3}} = \\frac{2(1+\\sqrt{15})(\\sqrt{5}-\\sqrt{3})}{5-3} = (1+\\sqrt{15})(\\sqrt{5}-\\sqrt{3})",
+       "en": "Rationalize the denominator with the conjugate $\\sqrt{5}-\\sqrt{3}$; the denominator becomes $5-3 = 2$.",
+       "ur": "مزدوج $\\sqrt{5}-\\sqrt{3}$ سے نسب نما کو ناطق بنائیں؛ نسب نما $5-3 = 2$ ہو جاتا ہے۔",
+       "check": [
+        "2*(1+sqrt(15))/(sqrt(3)+sqrt(5)) == (1+sqrt(15))*(sqrt(5)-sqrt(3))"
+       ]
+      },
+      {
+       "math": "(1+\\sqrt{15})(\\sqrt{5}-\\sqrt{3}) = \\sqrt{5}-\\sqrt{3}+\\sqrt{75}-\\sqrt{45} = \\sqrt{5}-\\sqrt{3}+5\\sqrt{3}-3\\sqrt{5} = 4\\sqrt{3}-2\\sqrt{5}",
+       "en": "Multiply out, then use $\\sqrt{75} = 5\\sqrt{3}$ and $\\sqrt{45} = 3\\sqrt{5}$.",
+       "ur": "ضرب دیں، پھر $\\sqrt{75} = 5\\sqrt{3}$ اور $\\sqrt{45} = 3\\sqrt{5}$ استعمال کریں۔",
+       "check": [
+        "(1+sqrt(15))*(sqrt(5)-sqrt(3)) == 4*sqrt(3) - 2*sqrt(5)",
+        "sqrt(75) == 5*sqrt(3)",
+        "sqrt(45) == 3*sqrt(5)"
+       ]
+      }
+     ],
+     "answer": "$m\\overline{AB} = 4\\sqrt{3}-2\\sqrt{5}$ cm",
+     "book_key": "\\overline{AB}=4\\sqrt{3}-2\\sqrt{5}"
+    }
+   ],
+   "exercise": "1.3"
+  },
+  {
+   "id": "ex1.3-q3",
+   "kind": "exercise",
+   "number": "3",
+   "page": 18,
+   "question": "A rectangle has sides of length $2+\\sqrt{18}$ m and $\\left(5-\\frac{4}{\\sqrt{2}}\\right)$ m. Express the area of the rectangle in the form $a+b\\sqrt{2}$, where $a$ and $b$ are integers.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "\\sqrt{18} = 3\\sqrt{2}, \\qquad \\frac{4}{\\sqrt{2}} = \\frac{4\\sqrt{2}}{2} = 2\\sqrt{2}",
+       "en": "Simplify the sides: $\\sqrt{18} = \\sqrt{9 \\times 2}$ and rationalize $\\frac{4}{\\sqrt{2}}$.",
+       "ur": "اضلاع کو سادہ کریں: $\\sqrt{18} = \\sqrt{9 \\times 2}$ اور $\\frac{4}{\\sqrt{2}}$ کو ناطق بنائیں۔",
+       "check": [
+        "sqrt(18) == 3*sqrt(2)",
+        "4/sqrt(2) == 2*sqrt(2)"
+       ]
+      },
+      {
+       "math": "\\text{Sides: } 2+3\\sqrt{2} \\text{ and } 5-2\\sqrt{2}",
+       "en": "Put the simplified values into the sides.",
+       "ur": "سادہ قیمتیں اضلاع میں رکھیں۔",
+       "check": [
+        "2 + sqrt(18) == 2 + 3*sqrt(2)",
+        "5 - 4/sqrt(2) == 5 - 2*sqrt(2)"
+       ]
+      },
+      {
+       "math": "\\text{Area} = (2+3\\sqrt{2})(5-2\\sqrt{2}) = 10-4\\sqrt{2}+15\\sqrt{2}-6(\\sqrt{2})^2",
+       "en": "Area = length × width. Multiply each term of the first bracket by each term of the second.",
+       "ur": "رقبہ = لمبائی × چوڑائی۔ پہلے قوسین کے ہر رکن کو دوسرے کے ہر رکن سے ضرب دیں۔",
+       "check": [
+        "(2+3*sqrt(2))*(5-2*sqrt(2)) == 10 - 4*sqrt(2) + 15*sqrt(2) - 6*sqrt(2)**2"
+       ]
+      },
+      {
+       "math": "= 10-12+11\\sqrt{2} = -2+11\\sqrt{2}",
+       "en": "Use $(\\sqrt{2})^2 = 2$ and add the like terms.",
+       "ur": "$(\\sqrt{2})^2 = 2$ استعمال کریں اور ملتے جلتے ارکان جمع کریں۔",
+       "check": [
+        "(2+3*sqrt(2))*(5-2*sqrt(2)) == -2 + 11*sqrt(2)"
+       ]
+      }
+     ],
+     "answer": "$(11\\sqrt{2}-2)\\ m^2$",
+     "book_key": "(11\\sqrt{2}-2)\\,m^2"
+    }
+   ],
+   "exercise": "1.3"
+  },
+  {
+   "id": "ex1.3-q4",
+   "kind": "exercise",
+   "number": "4",
+   "page": 18,
+   "question": "Find two numbers whose sum is 68 and difference is 22.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "a+b = 68 \\quad \\text{(i)}, \\qquad a-b = 22 \\quad \\text{(ii)}",
+       "en": "Let the numbers be a and b and write both conditions.",
+       "ur": "اعداد کو a اور b فرض کریں اور دونوں شرطیں لکھیں۔"
+      },
+      {
+       "math": "2a = 90 \\;\\Rightarrow\\; a = 45",
+       "en": "Add (i) and (ii). The b terms cancel.",
+       "ur": "(i) اور (ii) کو جمع کریں، b والے رکن ختم ہو جاتے ہیں۔",
+       "check": [
+        "68 + 22 == 90",
+        "Rational(90,2) == 45"
+       ]
+      },
+      {
+       "math": "45 + b = 68 \\;\\Rightarrow\\; b = 23",
+       "en": "Put a = 45 in (i).",
+       "ur": "a = 45 کو (i) میں رکھیں۔",
+       "check": [
+        "68 - 45 == 23",
+        "45 - 23 == 22"
+       ]
+      }
+     ],
+     "answer": "$45,\\ 23$",
+     "book_key": "45, 23"
+    }
+   ],
+   "exercise": "1.3"
+  },
+  {
+   "id": "ex1.3-q5",
+   "kind": "exercise",
+   "number": "5",
+   "page": 18,
+   "question": "The weather in Lahore was unusually warm during the summer of 2024. The TV news reported temperature as high as $48^\\circ C$. By using the formula $\\left({}^\\circ F = \\frac{9}{5}\\,{}^\\circ C + 32\\right)$ find the temperature as Fahrenheit scale.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "{}^\\circ F = \\frac{9}{5}\\,{}^\\circ C + 32",
+       "en": "Use the Celsius-to-Fahrenheit formula.",
+       "ur": "سیلسیس سے فارن ہائیٹ کا فارمولا استعمال کریں۔"
+      },
+      {
+       "math": "^\\circ F = \\frac{9}{5} \\times 48 + 32 = 86.4 + 32 = 118.4",
+       "en": "Put $^\\circ C = 48$ and calculate.",
+       "ur": "$^\\circ C = 48$ رکھیں اور حساب کریں۔",
+       "check": [
+        "Rational(9,5)*48 == Rational('86.4')",
+        "Rational('86.4') + 32 == Rational('118.4')"
+       ]
+      }
+     ],
+     "answer": "$118.4^{\\circ}F$",
+     "book_key": "118.4"
+    }
+   ],
+   "exercise": "1.3"
+  },
+  {
+   "id": "ex1.3-q6",
+   "kind": "exercise",
+   "number": "6",
+   "page": 19,
+   "question": "The sum of the ages of the father and son is 72 years. Six years ago, the father's age was 2 times the age of the son. What was son's age six years ago?",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "\\text{Son's age six years ago} = x, \\quad \\text{father's age six years ago} = 2x",
+       "en": "Use the age six years ago as the unknown, because the problem gives the relation for that time.",
+       "ur": "نامعلوم مقدار کے لیے چھ سال پہلے کی عمر لیں، کیونکہ مسئلے میں تعلق اسی وقت کا دیا گیا ہے۔"
+      },
+      {
+       "math": "\\text{Present ages: son } x+6, \\quad \\text{father } 2x+6",
+       "en": "Add 6 years to each age to get the present ages.",
+       "ur": "موجودہ عمریں معلوم کرنے کے لیے ہر عمر میں 6 سال جمع کریں۔"
+      },
+      {
+       "math": "(x+6) + (2x+6) = 72 \\;\\Rightarrow\\; 3x+12 = 72",
+       "en": "The sum of the present ages is 72.",
+       "ur": "موجودہ عمروں کا مجموعہ 72 ہے۔",
+       "check": [
+        "(x+6) + (2*x+6) == 3*x + 12"
+       ]
+      },
+      {
+       "math": "3x = 60 \\;\\Rightarrow\\; x = 20",
+       "en": "Subtract 12 and divide by 3.",
+       "ur": "12 منفی کریں اور 3 سے تقسیم کریں۔",
+       "check": [
+        "72 - 12 == 60",
+        "Rational(60,3) == 20",
+        "(20+6) + (2*20+6) == 72"
+       ]
+      }
+     ],
+     "answer": "$20$ years",
+     "book_key": "20 years"
+    }
+   ],
+   "exercise": "1.3"
+  },
+  {
+   "id": "ex1.3-q7",
+   "kind": "exercise",
+   "number": "7",
+   "page": 19,
+   "question": "Mirha bought a toy for Rs. 1500 and sold for Rs. 1520. What was her profit percentage?",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "\\text{Profit} = SP - CP = 1520 - 1500 = 20",
+       "en": "Profit is selling price minus cost price.",
+       "ur": "منافع = فروخت قیمت − خرید قیمت۔",
+       "check": [
+        "1520 - 1500 == 20"
+       ]
+      },
+      {
+       "math": "\\text{Profit\\%} = \\frac{20}{1500} \\times 100 = 1.33\\%",
+       "en": "Profit % = profit / CP × 100.",
+       "ur": "منافع فیصد = منافع / خرید قیمت × 100۔",
+       "check": [
+        "abs(Rational(20*100,1500) - Rational('1.33')) < Rational(1,100)"
+       ]
+      }
+     ],
+     "answer": "$1.33\\%$",
+     "book_key": "1.33%"
+    }
+   ],
+   "exercise": "1.3"
+  },
+  {
+   "id": "ex1.3-q8",
+   "kind": "exercise",
+   "number": "8",
+   "page": 19,
+   "question": "The annual income of Tayyab is Rs. 9,60,000, while the exempted amount is Rs. 1,30,000. How much tax would he have to pay at the rate of 0.75%?",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "\\text{Taxable income} = 960000 - 130000 = 830000",
+       "en": "Tax is paid only on the income above the exempted amount.",
+       "ur": "ٹیکس صرف مستثنیٰ رقم سے زائد آمدنی پر دیا جاتا ہے۔",
+       "check": [
+        "960000 - 130000 == 830000"
+       ]
+      },
+      {
+       "math": "\\text{Tax} = 830000 \\times \\frac{0.75}{100} = 6225",
+       "en": "Find 0.75% of the taxable income.",
+       "ur": "قابل ٹیکس آمدنی کا 0.75 فیصد نکالیں۔",
+       "check": [
+        "830000*Rational(75,10000) == 6225"
+       ]
+      }
+     ],
+     "answer": "Rs. 6225",
+     "book_key": "Rs.6225"
+    }
+   ],
+   "exercise": "1.3"
+  },
+  {
+   "id": "ex1.3-q9",
+   "kind": "exercise",
+   "number": "9",
+   "page": 19,
+   "question": "Find the compound markup on Rs. 3,75,000 for one year at the rate of 14% compounded annually.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "A = P\\left(1+\\frac{r}{100}\\right)^t = 375000 \\times \\left(1+\\frac{14}{100}\\right)^1 = 375000 \\times 1.14 = 427500",
+       "en": "Find the amount after 1 year with the compound formula.",
+       "ur": "مرکب فارمولے سے ایک سال بعد کی کل رقم معلوم کریں۔",
+       "check": [
+        "375000*Rational(114,100) == 427500"
+       ]
+      },
+      {
+       "math": "\\text{Compound markup} = A - P = 427500 - 375000 = 52500",
+       "en": "The markup is the amount minus the principal.",
+       "ur": "منافع = کل رقم − اصل رقم۔",
+       "check": [
+        "427500 - 375000 == 52500"
+       ]
+      }
+     ],
+     "answer": "Rs. 52500",
+     "book_key": "Rs.52500"
+    }
+   ],
+   "exercise": "1.3"
+  },
+  {
+   "id": "rev1-q1",
+   "kind": "review",
+   "number": "1",
+   "page": 19,
+   "question": "Four options are given against each statement. Encircle the correct option.",
+   "parts": [
+    {
+     "label": "i",
+     "prompt": "$\\sqrt{7}$ is:  (a) integer  (b) rational number  (c) irrational number  (d) natural number",
+     "steps": [
+      {
+       "math": "4 < 7 < 9",
+       "en": "7 lies between the consecutive squares 4 and 9, so it is not a perfect square and $\\sqrt{7}$ is irrational.",
+       "ur": "7 دو متواتر مربعات 4 اور 9 کے درمیان ہے، یہ مکمل مربع نہیں، اس لیے $\\sqrt{7}$ غیر ناطق ہے۔",
+       "check": [
+        "floor(sqrt(7))**2 < 7",
+        "(floor(sqrt(7))+1)**2 > 7"
+       ]
+      },
+      {
+       "math": "",
+       "en": "The correct option is (c) irrational number. It is not an integer, not rational and not natural.",
+       "ur": "درست جواب (c) irrational number ہے۔ یہ نہ صحیح عدد ہے، نہ ناطق اور نہ قدرتی۔"
+      }
+     ],
+     "answer": "c",
+     "book_key": "c"
+    },
+    {
+     "label": "ii",
+     "prompt": "$\\pi$ and $e$ are:  (a) natural numbers  (b) integers  (c) rational numbers  (d) irrational numbers",
+     "steps": [
+      {
+       "math": "",
+       "en": "The correct option is (d) irrational numbers. Both $\\pi = 3.14159\\ldots$ and $e = 2.71828\\ldots$ are non-terminating, non-recurring decimals.",
+       "ur": "درست جواب (d) irrational numbers ہے۔ $\\pi = 3.14159\\ldots$ اور $e = 2.71828\\ldots$ دونوں غیر محدود غیر دوری اعشاری اعداد ہیں۔"
+      }
+     ],
+     "answer": "d",
+     "book_key": "d"
+    },
+    {
+     "label": "iii",
+     "prompt": "If $n$ is not a perfect square, then $\\sqrt{n}$ is:  (a) rational number  (b) natural number  (c) integer  (d) irrational number",
+     "steps": [
+      {
+       "math": "",
+       "en": "The correct option is (d) irrational number. A square root that is not a whole number is a non-terminating, non-recurring decimal. For example $\\sqrt{7}$ with 7 between 4 and 9.",
+       "ur": "درست جواب (d) irrational number ہے۔ جو جذر مکمل عدد نہ ہو وہ غیر محدود غیر دوری اعشاری عدد ہوتا ہے۔ مثلاً $\\sqrt{7}$ جبکہ 7، 4 اور 9 کے درمیان ہے۔"
+      }
+     ],
+     "answer": "d",
+     "book_key": "d"
+    },
+    {
+     "label": "iv",
+     "prompt": "$\\sqrt{3}+\\sqrt{5}$ is:  (a) whole number  (b) integer  (c) rational number  (d) irrational number",
+     "steps": [
+      {
+       "math": "(\\sqrt{3}+\\sqrt{5})^2 = 8+2\\sqrt{15}",
+       "en": "Square the number. $\\sqrt{15}$ is irrational because 15 lies between 9 and 16.",
+       "ur": "عدد کا مربع لیں۔ $\\sqrt{15}$ غیر ناطق ہے کیونکہ 15، 9 اور 16 کے درمیان ہے۔",
+       "check": [
+        "(sqrt(3)+sqrt(5))**2 == 8 + 2*sqrt(15)",
+        "floor(sqrt(15))**2 < 15",
+        "(floor(sqrt(15))+1)**2 > 15"
+       ]
+      },
+      {
+       "math": "",
+       "en": "The correct option is (d) irrational number. The square is irrational, so $\\sqrt{3}+\\sqrt{5}$ cannot be rational.",
+       "ur": "درست جواب (d) irrational number ہے۔ مربع غیر ناطق ہے، اس لیے $\\sqrt{3}+\\sqrt{5}$ ناطق نہیں ہو سکتا۔"
+      }
+     ],
+     "answer": "d",
+     "book_key": "d"
+    },
+    {
+     "label": "v",
+     "prompt": "For all $x \\in R$, $x = x$ is called:  (a) reflexive property  (b) transitive number  (c) symmetric property  (d) trichotomy property",
+     "steps": [
+      {
+       "math": "",
+       "en": "The correct option is (a) reflexive property. Every number is equal to itself: the reflexive property.",
+       "ur": "درست جواب (a) reflexive property ہے۔ ہر عدد اپنے برابر ہوتا ہے: خاصیت انعکاس۔"
+      }
+     ],
+     "answer": "a",
+     "book_key": "a"
+    },
+    {
+     "label": "vi",
+     "prompt": "Let $a, b, c \\in R$, then $a > b$ and $b > c \\Rightarrow a > c$ is called ______ property.  (a) trichotomy  (b) transitive  (c) additive  (d) multiplicative",
+     "steps": [
+      {
+       "math": "",
+       "en": "The correct option is (b) transitive. If a is greater than b and b is greater than c, then a is greater than c: the transitive property.",
+       "ur": "درست جواب (b) transitive ہے۔ اگر a بڑا ہے b سے اور b بڑا ہے c سے تو a بڑا ہے c سے: خاصیت تعدی۔"
+      }
+     ],
+     "answer": "b",
+     "book_key": "b"
+    },
+    {
+     "label": "vii",
+     "prompt": "$2^x \\times 8^x = 64$ then $x =$  (a) $\\frac{3}{2}$  (b) $\\frac{3}{4}$  (c) $\\frac{5}{6}$  (d) $\\frac{2}{3}$",
+     "steps": [
+      {
+       "math": "2^x \\times 8^x = 2^x \\times 2^{3x} = 2^{4x}",
+       "en": "Write 8 as $2^3$ and add the exponents.",
+       "ur": "8 کو $2^3$ لکھیں اور قوتیں جمع کریں۔",
+       "check": [
+        "8**x == 2**(3*x)",
+        "2**x*2**(3*x) == 2**(4*x)"
+       ]
+      },
+      {
+       "math": "2^{4x} = 64 = 2^6 \\;\\Rightarrow\\; 4x = 6 \\;\\Rightarrow\\; x = \\frac{3}{2}",
+       "en": "Equal bases have equal exponents.",
+       "ur": "برابر اساس کی صورت میں قوتیں برابر ہوتی ہیں۔",
+       "check": [
+        "64 == 2**6",
+        "Rational(6,4) == Rational(3,2)",
+        "2**Rational(3,2) * 8**Rational(3,2) == 64"
+       ]
+      },
+      {
+       "math": "",
+       "en": "The correct option is (a) $\\frac{3}{2}$. Check: $2^{3/2} \\times 8^{3/2} = 16^{3/2} = 64$.",
+       "ur": "درست جواب (a) $\\frac{3}{2}$ ہے۔ تصدیق: $2^{3/2} \\times 8^{3/2} = 16^{3/2} = 64$۔"
+      }
+     ],
+     "answer": "a",
+     "key_note": "The printed key lists (vii) as b, but x = 3/2 is option (a). The key has (vii) and (viii) swapped.",
+     "note": {
+      "en": "The book's printed answer key says (b) for this part. That is a misprint: x = 3/2, which is option (a). The key appears to have parts (vii) and (viii) swapped.",
+      "ur": "کتاب کے آخر میں دیے گئے جوابات میں اس حصے کے لیے (b) لکھا ہے۔ یہ غلطی ہے: x = 3/2 ہے جو (a) ہے۔ ایسا لگتا ہے کہ جوابات میں حصہ (vii) اور (viii) آپس میں بدل گئے ہیں۔"
+     },
+     "book_key": "b"
+    },
+    {
+     "label": "viii",
+     "prompt": "Let $a, b \\in R$, then $a = b$ and $b = a$ is called ______ property.  (a) reflexive  (b) symmetric  (c) transitive  (d) additive",
+     "steps": [
+      {
+       "math": "",
+       "en": "The correct option is (b) symmetric. If a = b then b = a: the symmetric property.",
+       "ur": "درست جواب (b) symmetric ہے۔ اگر a = b ہو تو b = a: خاصیت تشاکل۔"
+      }
+     ],
+     "answer": "b",
+     "key_note": "The printed key lists (viii) as a, but a=b => b=a is the symmetric property, option (b). The key has (vii) and (viii) swapped.",
+     "note": {
+      "en": "The book's printed answer key says (a) for this part. That is a misprint: a = b and b = a is the symmetric property, which is option (b).",
+      "ur": "کتاب کے آخر میں دیے گئے جوابات میں اس حصے کے لیے (a) لکھا ہے۔ یہ غلطی ہے: a = b اور b = a خاصیت تشاکل ہے جو (b) ہے۔"
+     },
+     "book_key": "a"
+    },
+    {
+     "label": "ix",
+     "prompt": "$\\sqrt{75}+\\sqrt{27} =$  (a) $\\sqrt{102}$  (b) $9\\sqrt{3}$  (c) $5\\sqrt{3}$  (d) $8\\sqrt{3}$",
+     "steps": [
+      {
+       "math": "\\sqrt{75} = \\sqrt{25 \\times 3} = 5\\sqrt{3}, \\qquad \\sqrt{27} = \\sqrt{9 \\times 3} = 3\\sqrt{3}",
+       "en": "Take out the perfect squares from under the roots.",
+       "ur": "جذروں کے نیچے سے مکمل مربع باہر نکالیں۔",
+       "check": [
+        "sqrt(75) == 5*sqrt(3)",
+        "sqrt(27) == 3*sqrt(3)"
+       ]
+      },
+      {
+       "math": "5\\sqrt{3}+3\\sqrt{3} = 8\\sqrt{3}",
+       "en": "Add the like terms.",
+       "ur": "ملتے جلتے ارکان جمع کریں۔",
+       "check": [
+        "5*sqrt(3) + 3*sqrt(3) == 8*sqrt(3)",
+        "sqrt(75) + sqrt(27) == 8*sqrt(3)"
+       ]
+      },
+      {
+       "math": "",
+       "en": "The correct option is (d) $8\\sqrt{3}$. ",
+       "ur": "درست جواب (d) $8\\sqrt{3}$ ہے۔ "
+      }
+     ],
+     "answer": "d",
+     "book_key": "d"
+    },
+    {
+     "label": "x",
+     "prompt": "The product of $(3+\\sqrt{5})(3-\\sqrt{5})$ is:  (a) prime number  (b) odd number  (c) irrational number  (d) rational number",
+     "steps": [
+      {
+       "math": "(3+\\sqrt{5})(3-\\sqrt{5}) = 3^2-(\\sqrt{5})^2 = 9-5 = 4",
+       "en": "Use $(a+b)(a-b) = a^2-b^2$.",
+       "ur": "$(a+b)(a-b) = a^2-b^2$ استعمال کریں۔",
+       "check": [
+        "(3+sqrt(5))*(3-sqrt(5)) == 4"
+       ]
+      },
+      {
+       "math": "",
+       "en": "The correct option is (d) rational number. 4 is a rational number (it is also not prime and not odd).",
+       "ur": "درست جواب (d) rational number ہے۔ 4 ناطق عدد ہے (یہ مفرد اور طاق بھی نہیں)۔"
+      }
+     ],
+     "answer": "d",
+     "book_key": "d"
+    }
+   ],
+   "exercise": "Review 1"
+  },
+  {
+   "id": "rev1-q2",
+   "kind": "review",
+   "number": "2",
+   "page": 20,
+   "question": "If $a = \\frac{3}{2}$, $b = \\frac{5}{3}$ and $c = \\frac{7}{5}$, then verify that (i) $a(b+c) = ab+ac$ (ii) $(a+b)c = ac+bc$",
+   "parts": [
+    {
+     "label": "i",
+     "prompt": "Left distributive property",
+     "steps": [
+      {
+       "math": "\\text{LHS} = a(b+c) = \\frac{3}{2}\\left(\\frac{5}{3}+\\frac{7}{5}\\right) = \\frac{3}{2}\\left(\\frac{46}{15}\\right) = \\frac{23}{5}",
+       "en": "First add inside the bracket, then multiply by a.",
+       "ur": "پہلے قوسین کے اندر جمع کریں، پھر a سے ضرب دیں۔",
+       "check": [
+        "Rational(5,3)+Rational(7,5) == Rational(46,15)",
+        "Rational(3,2)*(Rational(46,15)) == Rational(23,5)"
+       ]
+      },
+      {
+       "math": "\\text{RHS} = ab+ac = \\frac{5}{2}+\\frac{21}{10} = \\frac{23}{5}",
+       "en": "Multiply a by b and by c separately, then add.",
+       "ur": "a کو b اور c سے الگ الگ ضرب دیں، پھر جمع کریں۔",
+       "check": [
+        "Rational(3,2)*Rational(5,3) + Rational(3,2)*Rational(7,5) == Rational(23,5)"
+       ]
+      },
+      {
+       "math": "",
+       "en": "LHS = RHS, so a(b+c) = ab+ac is verified.",
+       "ur": "LHS = RHS ہے، لہذا a(b+c) = ab+ac کی تصدیق ہوگئی۔",
+       "check": [
+        "Rational(23,5) == Rational(23,5)"
+       ]
+      }
+     ],
+     "answer": "Verified: $\\frac{23}{5} = \\frac{23}{5}$"
+    },
+    {
+     "label": "ii",
+     "prompt": "Right distributive property",
+     "steps": [
+      {
+       "math": "\\text{LHS} = (a+b)c = \\left(\\frac{3}{2}+\\frac{5}{3}\\right)\\frac{7}{5} = \\frac{19}{6}\\cdot\\frac{7}{5} = \\frac{133}{30}",
+       "en": "First add inside the bracket, then multiply by c.",
+       "ur": "پہلے قوسین کے اندر جمع کریں، پھر c سے ضرب دیں۔",
+       "check": [
+        "Rational(3,2)+Rational(5,3) == Rational(19,6)",
+        "(Rational(19,6))*Rational(7,5) == Rational(133,30)"
+       ]
+      },
+      {
+       "math": "\\text{RHS} = ac+bc = \\frac{21}{10}+\\frac{7}{3} = \\frac{133}{30}",
+       "en": "Multiply a by c and b by c separately, then add.",
+       "ur": "a کو c سے اور b کو c سے الگ الگ ضرب دیں، پھر جمع کریں۔",
+       "check": [
+        "Rational(3,2)*Rational(7,5) + Rational(5,3)*Rational(7,5) == Rational(133,30)"
+       ]
+      },
+      {
+       "math": "",
+       "en": "LHS = RHS, so (a+b)c = ac+bc is verified.",
+       "ur": "LHS = RHS ہے، لہذا (a+b)c = ac+bc کی تصدیق ہوگئی۔",
+       "check": [
+        "Rational(133,30) == Rational(133,30)"
+       ]
+      }
+     ],
+     "answer": "Verified: $\\frac{133}{30} = \\frac{133}{30}$"
+    }
+   ],
+   "exercise": "Review 1"
+  },
+  {
+   "id": "rev1-q3",
+   "kind": "review",
+   "number": "3",
+   "page": 20,
+   "question": "If $a = \\frac{4}{3}$, $b = \\frac{5}{2}$ and $c = \\frac{7}{4}$, then verify the associative property of real numbers w.r.t. addition and multiplication.",
+   "parts": [
+    {
+     "label": "i",
+     "prompt": "With respect to addition",
+     "steps": [
+      {
+       "math": "\\text{LHS} = a+(b+c) = \\frac{4}{3}+\\left(\\frac{5}{2}+\\frac{7}{4}\\right) = \\frac{4}{3}+\\frac{17}{4} = \\frac{67}{12}",
+       "en": "Add b and c first, then add a.",
+       "ur": "پہلے b اور c کو جمع کریں، پھر a جمع کریں۔",
+       "check": [
+        "Rational(5,2)+Rational(7,4) == Rational(17,4)",
+        "Rational(4,3)+Rational(17,4) == Rational(67,12)"
+       ]
+      },
+      {
+       "math": "\\text{RHS} = (a+b)+c = \\left(\\frac{4}{3}+\\frac{5}{2}\\right)+\\frac{7}{4} = \\frac{23}{6}+\\frac{7}{4} = \\frac{67}{12}",
+       "en": "Add a and b first, then add c.",
+       "ur": "پہلے a اور b کو جمع کریں، پھر c جمع کریں۔",
+       "check": [
+        "Rational(4,3)+Rational(5,2) == Rational(23,6)",
+        "Rational(23,6)+Rational(7,4) == Rational(67,12)"
+       ]
+      },
+      {
+       "math": "",
+       "en": "LHS = RHS, so the associative property of addition is verified.",
+       "ur": "LHS = RHS ہے، لہذا جمع کے لیے خاصیت تلازم کی تصدیق ہوگئی۔",
+       "check": [
+        "Rational(67,12) == Rational(67,12)"
+       ]
+      }
+     ],
+     "answer": "Verified: $\\frac{67}{12} = \\frac{67}{12}$"
+    },
+    {
+     "label": "ii",
+     "prompt": "With respect to multiplication",
+     "steps": [
+      {
+       "math": "\\text{LHS} = a(bc) = \\frac{4}{3}\\left(\\frac{5}{2} \\cdot \\frac{7}{4}\\right) = \\frac{4}{3} \\cdot \\frac{35}{8} = \\frac{35}{6}",
+       "en": "Multiply b and c first, then multiply by a.",
+       "ur": "پہلے b اور c کو ضرب دیں، پھر a سے ضرب دیں۔",
+       "check": [
+        "Rational(5,2)*Rational(7,4) == Rational(35,8)",
+        "Rational(4,3)*Rational(35,8) == Rational(35,6)"
+       ]
+      },
+      {
+       "math": "\\text{RHS} = (ab)c = \\left(\\frac{4}{3} \\cdot \\frac{5}{2}\\right)\\frac{7}{4} = \\frac{10}{3} \\cdot \\frac{7}{4} = \\frac{35}{6}",
+       "en": "Multiply a and b first, then multiply by c.",
+       "ur": "پہلے a اور b کو ضرب دیں، پھر c سے ضرب دیں۔",
+       "check": [
+        "Rational(4,3)*Rational(5,2) == Rational(10,3)",
+        "Rational(10,3)*Rational(7,4) == Rational(35,6)"
+       ]
+      },
+      {
+       "math": "",
+       "en": "LHS = RHS, so the associative property of multiplication is verified.",
+       "ur": "LHS = RHS ہے، لہذا ضرب کے لیے خاصیت تلازم کی تصدیق ہوگئی۔",
+       "check": [
+        "Rational(35,6) == Rational(35,6)"
+       ]
+      }
+     ],
+     "answer": "Verified: $\\frac{35}{6} = \\frac{35}{6}$"
+    }
+   ],
+   "exercise": "Review 1"
+  },
+  {
+   "id": "rev1-q4",
+   "kind": "review",
+   "number": "4",
+   "page": 20,
+   "question": "Is 0 a rational number? Explain.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "0 = \\frac{0}{1}",
+       "en": "A rational number is a number that can be written as $\\frac{p}{q}$ with p and q integers and $q \\neq 0$. Here p = 0 and q = 1.",
+       "ur": "ناطق عدد وہ ہے جسے $\\frac{p}{q}$ کی شکل میں لکھا جا سکے جہاں p اور q صحیح اعداد ہوں اور $q \\neq 0$ ہو۔ یہاں p = 0 اور q = 1 ہے۔",
+       "check": [
+        "Rational(0,1) == 0"
+       ]
+      },
+      {
+       "math": "",
+       "en": "So 0 can be written in the form $\\frac{p}{q}$ and it is a rational number.",
+       "ur": "اس لیے 0 کو $\\frac{p}{q}$ کی شکل میں لکھا جا سکتا ہے اور یہ ناطق عدد ہے۔"
+      }
+     ],
+     "answer": "Yes, 0 is a rational number because $0 = \\frac{0}{1}$."
+    }
+   ],
+   "exercise": "Review 1"
+  },
+  {
+   "id": "rev1-q5",
+   "kind": "review",
+   "number": "5",
+   "page": 20,
+   "question": "State trichotomy property of real numbers.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "",
+       "en": "The trichotomy property says: for any two real numbers a and b, exactly one of the three relations is true: a = b, a > b or a < b.",
+       "ur": "خاصیت سہ شقی کہتی ہے: کسی بھی دو حقیقی اعداد a اور b کے لیے تین رشتوں میں سے ایک اور صرف ایک درست ہوتا ہے: a = b، a > b یا a < b۔"
+      }
+     ],
+     "answer": "For all $a, b \\in R$, either $a = b$ or $a > b$ or $a < b$."
+    }
+   ],
+   "exercise": "Review 1"
+  },
+  {
+   "id": "rev1-q6",
+   "kind": "review",
+   "number": "6",
+   "page": 20,
+   "question": "Find two rational numbers between 4 and 5.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "$4$ and $5$",
+     "steps": [
+      {
+       "math": "\\frac{4+5}{2} = \\frac{9}{2}",
+       "en": "The average of two numbers lies between them. This is the first rational number.",
+       "ur": "دو اعداد کا اوسط ان کے درمیان ہوتا ہے۔ یہ پہلا ناطق عدد ہے۔",
+       "check": [
+        "(Rational(4,1)+Rational(5,1))/2 == Rational(9,2)"
+       ]
+      },
+      {
+       "math": "\\frac{\\frac{9}{2}+5}{2} = \\frac{19}{4}",
+       "en": "Take the average of \\frac{9}{2} and the larger number to get a second rational number.",
+       "ur": "\\frac{9}{2} اور بڑے عدد کا اوسط لیں، یہ دوسرا ناطق عدد ہے۔",
+       "check": [
+        "(Rational(9,2)+Rational(5,1))/2 == Rational(19,4)"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Check: 4 < \\frac{9}{2} < \\frac{19}{4} < 5.",
+       "ur": "تصدیق: 4 < \\frac{9}{2} < \\frac{19}{4} < 5۔",
+       "check": [
+        "Rational(4,1) < Rational(9,2)",
+        "Rational(9,2) < Rational(19,4)",
+        "Rational(19,4) < Rational(5,1)"
+       ]
+      }
+     ],
+     "answer": "$\\frac{9}{2}$ and $\\frac{19}{4}$"
+    }
+   ],
+   "exercise": "Review 1"
+  },
+  {
+   "id": "rev1-q7",
+   "kind": "review",
+   "number": "7",
+   "page": 20,
+   "question": "Simplify the following: (i) $\\sqrt[5]{\\frac{x^{15} y^{35}}{z^{20}}}$ (ii) $\\sqrt[3]{(27)^{2x}}$ (iii) $\\frac{6(3)^{n+2}}{3^{n+1} - 3^n}$",
+   "parts": [
+    {
+     "label": "i",
+     "prompt": "$\\sqrt[5]{\\frac{x^{15} y^{35}}{z^{20}}}$",
+     "steps": [
+      {
+       "math": "\\frac{x^{15} y^{35}}{z^{20}} \\text{ under a fifth root} \\;\\Rightarrow\\; \\left(\\frac{x^{15} y^{35}}{z^{20}}\\right)^{\\frac{1}{5}}",
+       "en": "Write the 5th root as the power $\\frac{1}{5}$.",
+       "ur": "پانچویں جذر کو طاقت $\\frac{1}{5}$ کی شکل میں لکھیں۔"
+      },
+      {
+       "math": "= \\frac{x^{15 \\times \\frac{1}{5}} \\, y^{35 \\times \\frac{1}{5}}}{z^{20 \\times \\frac{1}{5}}} = \\frac{x^3 y^7}{z^4}",
+       "en": "Multiply each exponent by $\\frac{1}{5}$.",
+       "ur": "ہر قوت کو $\\frac{1}{5}$ سے ضرب دیں۔",
+       "check": [
+        "(x**15*y**35/z**20)**Rational(1,5) == x**3*y**7/z**4",
+        "Rational(15,5) == 3",
+        "Rational(35,5) == 7",
+        "Rational(20,5) == 4"
+       ]
+      }
+     ],
+     "answer": "$\\frac{x^3 y^7}{z^4}$",
+     "book_key": "\\frac{x^3y^7}{z^4}"
+    },
+    {
+     "label": "ii",
+     "prompt": "$\\sqrt[3]{(27)^{2x}}$",
+     "steps": [
+      {
+       "math": "\\sqrt[3]{(27)^{2x}} = \\left((3^3)^{2x}\\right)^{\\frac{1}{3}} = 3^{3 \\times 2x \\times \\frac{1}{3}} = 3^{2x}",
+       "en": "Write 27 as $3^3$ and multiply the exponents.",
+       "ur": "27 کو $3^3$ لکھیں اور قوتیں ضرب دیں۔",
+       "check": [
+        "cbrt(27**(2*x)) == 3**(2*x)"
+       ]
+      }
+     ],
+     "answer": "$3^{2x}$",
+     "book_key": "3^{2x}"
+    },
+    {
+     "label": "iii",
+     "prompt": "$\\frac{6(3)^{n+2}}{3^{n+1} - 3^n}$",
+     "steps": [
+      {
+       "math": "6(3)^{n+2} = 6 \\cdot 3^n \\cdot 3^2 = 54 \\cdot 3^n",
+       "en": "Split the power: $3^{n+2} = 3^n \\cdot 3^2$.",
+       "ur": "طاقت کو توڑیں: $3^{n+2} = 3^n \\cdot 3^2$۔",
+       "check": [
+        "6*3**(n+2) == 54*3**n"
+       ]
+      },
+      {
+       "math": "3^{n+1} - 3^n = 3^n(3-1) = 2 \\cdot 3^n",
+       "en": "Take out the common factor $3^n$ in the denominator.",
+       "ur": "نسب نما میں مشترک جزو $3^n$ نکالیں۔",
+       "check": [
+        "3**(n+1) - 3**n == 2*3**n"
+       ]
+      },
+      {
+       "math": "\\frac{54 \\cdot 3^n}{2 \\cdot 3^n} = 27",
+       "en": "Cancel $3^n$ and divide 54 by 2.",
+       "ur": "$3^n$ کاٹیں اور 54 کو 2 سے تقسیم کریں۔",
+       "check": [
+        "Rational(54,2) == 27"
+       ]
+      }
+     ],
+     "answer": "$27$",
+     "book_key": "27"
+    }
+   ],
+   "exercise": "Review 1"
+  },
+  {
+   "id": "rev1-q8",
+   "kind": "review",
+   "number": "8",
+   "page": 20,
+   "question": "The sum of three consecutive odd integers is 51. Find the three integers.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "\\text{Let the odd integers be } x,\\; x+2,\\; x+4",
+       "en": "Consecutive odd integers differ by 2.",
+       "ur": "متواتر طاق اعداد میں 2 کا فرق ہوتا ہے۔"
+      },
+      {
+       "math": "x + (x+2) + (x+4) = 51 \\;\\Rightarrow\\; 3x+6 = 51",
+       "en": "Their sum is 51.",
+       "ur": "ان کا مجموعہ 51 ہے۔",
+       "check": [
+        "x + (x+2) + (x+4) == 3*x + 6"
+       ]
+      },
+      {
+       "math": "3x = 45 \\;\\Rightarrow\\; x = 15",
+       "en": "Subtract 6, then divide by 3.",
+       "ur": "6 منفی کریں، پھر 3 سے تقسیم کریں۔",
+       "check": [
+        "51 - 6 == 45",
+        "Rational(45,3) == 15"
+       ]
+      },
+      {
+       "math": "x = 15,\\quad x+2 = 17,\\quad x+4 = 19",
+       "en": "Put x = 15 back.",
+       "ur": "x = 15 واپس رکھیں۔",
+       "check": [
+        "15 + 17 + 19 == 51"
+       ]
+      }
+     ],
+     "answer": "$15,\\ 17,\\ 19$",
+     "book_key": "15, 17, 19"
+    }
+   ],
+   "exercise": "Review 1"
+  },
+  {
+   "id": "rev1-q9",
+   "kind": "review",
+   "number": "9",
+   "page": 20,
+   "question": "Abdullah picked up 96 balls and placed them into two buckets. One bucket has twenty-eight more balls than the other bucket. How many balls were in each bucket?",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "\\text{Smaller bucket} = x, \\quad \\text{larger bucket} = x+28",
+       "en": "Let the smaller bucket hold x balls; the other holds 28 more.",
+       "ur": "چھوٹی بالٹی میں x گیندیں فرض کریں؛ دوسری میں 28 زیادہ ہیں۔"
+      },
+      {
+       "math": "x + (x+28) = 96 \\;\\Rightarrow\\; 2x = 68 \\;\\Rightarrow\\; x = 34",
+       "en": "The two buckets hold 96 balls together.",
+       "ur": "دونوں بالٹیوں میں کل 96 گیندیں ہیں۔",
+       "check": [
+        "x + (x+28) == 2*x + 28",
+        "96 - 28 == 68",
+        "Rational(68,2) == 34"
+       ]
+      },
+      {
+       "math": "34 \\quad \\text{and} \\quad 34+28 = 62",
+       "en": "The larger bucket has 28 more balls.",
+       "ur": "بڑی بالٹی میں 28 گیندیں زیادہ ہیں۔",
+       "check": [
+        "34 + 62 == 96",
+        "62 - 34 == 28"
+       ]
+      }
+     ],
+     "answer": "$34,\\ 62$",
+     "book_key": "34, 62"
+    }
+   ],
+   "exercise": "Review 1"
+  },
+  {
+   "id": "rev1-q10",
+   "kind": "review",
+   "number": "10",
+   "page": 20,
+   "question": "Salma invested Rs. 3,50,000 in a bank, which paid simple profit at the rate of $7\\frac{1}{4}\\%$ per annum. After 2 years, the rate was increased to 8% per annum. Find the amount she had at the end of 7 years.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "\\text{Profit for the first 2 years} = 350000 \\times \\frac{7.25}{100} \\times 2 = 50750",
+       "en": "Simple profit = principal × rate × time. The rate is $7\\frac{1}{4}\\% = 7.25\\%$.",
+       "ur": "سادہ منافع = اصل × شرح × وقت۔ شرح $7\\frac{1}{4}\\% = 7.25\\%$ ہے۔",
+       "check": [
+        "350000*Rational(725,10000)*2 == 50750"
+       ]
+      },
+      {
+       "math": "\\text{Profit for the next 5 years} = 350000 \\times \\frac{8}{100} \\times 5 = 140000",
+       "en": "After 2 years the rate is 8% for the remaining 7 − 2 = 5 years.",
+       "ur": "2 سال بعد باقی 7 − 2 = 5 سالوں کے لیے شرح 8 فیصد ہے۔",
+       "check": [
+        "350000*Rational(8,100)*5 == 140000",
+        "7 - 2 == 5"
+       ]
+      },
+      {
+       "math": "\\text{Amount} = 350000 + 50750 + 140000 = 540750",
+       "en": "Add the principal and both profits.",
+       "ur": "اصل رقم اور دونوں منافع جمع کریں۔",
+       "check": [
+        "350000 + 50750 + 140000 == 540750"
+       ]
+      }
+     ],
+     "answer": "Rs. 540750",
+     "book_key": "540750"
+    }
+   ],
+   "exercise": "Review 1"
+  }
+ ]
+}

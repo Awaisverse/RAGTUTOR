@@ -43,6 +43,7 @@
   .note { font-size: 13px; color: var(--muted); line-height: 1.5; }
   .badge { font-size: 11px; padding: 2px 7px; border-radius: 99px; background: var(--accent-soft); color: var(--accent); }
   .badge.gen { background: #fef3c7; color: #92400e; }
+  .badge.ok { background: #dcfce7; color: #166534; }
   #board-wrap { display: flex; flex-direction: column; gap: 10px; min-height: 0; height: 100%; }
   #title { font-weight: 600; }
   canvas { width: 100%; background: var(--board); border: 1px dashed var(--line); border-radius: 10px; display: block; }
@@ -63,6 +64,9 @@
   select { font: inherit; padding: 6px; border-radius: 8px; border: 1px solid var(--line); background: var(--board); color: var(--ink); max-width: 100%; }
   .empty { color: var(--muted); text-align: center; padding: 40px 10px; }
   .katex-display { margin: 0.2em 0; }
+  .qtext { font-size: 15px; line-height: 1.6; padding: 6px 2px; }
+  .answer-note { font-size: 13px; color: var(--warn); margin-top: 6px; line-height: 1.5; }
+  .book-key { font-size: 13px; color: var(--muted); margin-top: 4px; }
   @media (max-width: 1100px) { main { grid-template-columns: 1fr; height: auto; } .scroll-col { max-height: 420px; } }
 </style>
 </head>
@@ -108,6 +112,7 @@
       <div id="title">Pick a question</div>
       <span id="src" class="badge" style="display:none"></span>
     </div>
+    <div id="qtext" class="qtext"></div>
     <div class="tabs" id="parts"></div>
     <canvas id="cv" height="360"></canvas>
     <div id="math"><div class="note">The steps are written here one by one.</div></div>
@@ -167,18 +172,19 @@
   }
 
   // ---------- load a question ----------
-  async function openItem(id, src) {
+  async function openItem(id, src, cls) {
     stopPlay();
     item = await api("/api/item/" + encodeURIComponent(id));
     $("src").style.display = "";
-    $("src").textContent = src || (item.kind === "generated" ? "Live solution" : "From the book");
-    $("src").className = "badge" + (item.kind === "generated" ? " gen" : "");
+    $("src").textContent = src || "From the book";
+    $("src").className = "badge" + (cls ? " " + cls : "");
     $("title").innerHTML = titleOf(item);
     renderParts();
     setPart(0);
   }
 
   function titleOf(it) {
+    if (it.kind === "solved") return "Your question";
     const where = it.exercise ? `Exercise ${it.exercise}, Q${it.number}` : (it.kind === "example" ? `Example ${it.number}` : `Q${it.number}`);
     const unit = it.unit ? `Unit ${it.unit} · ` : "";
     return `${unit}${where}${it.page ? " · p." + it.page : ""}`;
@@ -201,7 +207,11 @@
     partIdx = i;
     const part = item.parts[i];
     steps = part.steps.map((s) => ({ ...s, _answer: null }));
-    if (steps.length) steps[steps.length - 1]._answer = part.answer;
+    if (steps.length) {
+      const last = steps[steps.length - 1];
+      last._answer = part.answer; last._note = part.note; last._key = part.book_key;
+    }
+    renderMixed($("qtext"), item.question || "");
     document.querySelectorAll("#parts button").forEach((b) => b.classList.toggle("on", +b.dataset.i === i));
     $("math").innerHTML = "";
     cur = -1;
@@ -228,8 +238,24 @@
       if (s._answer) {
         const a = document.createElement("div");
         a.className = "answer";
-        a.appendChild(mathHTML("\\text{Answer: }" + stripDollars(s._answer)));
+        a.appendChild(document.createTextNode("Answer: "));
+        a.appendChild(renderMixed(document.createElement("span"), s._answer));
         line.appendChild(a);
+        if (s._key) {
+          const k = document.createElement("div");
+          k.className = "book-key";
+          k.appendChild(document.createTextNode("Book's printed answer: "));
+          // keys that contain LaTeX are rendered as maths; plain keys ("20 years", "1.33%", "Irrational") stay text
+          const keyText = stripDollars(s._key);
+          k.appendChild(renderMixed(document.createElement("span"), /[\\^_{}]/.test(keyText) ? "$" + keyText + "$" : keyText));
+          line.appendChild(k);
+        }
+        if (s._note) {
+          const n = document.createElement("div");
+          n.className = "answer-note";
+          n.textContent = lang === "ur" ? s._note.ur : s._note.en;
+          line.appendChild(n);
+        }
       }
       box.appendChild(line);
     }
@@ -237,6 +263,21 @@
   }
 
   function stripDollars(t) { return String(t).replace(/\$/g, ""); }
+
+  // Text with inline maths: plain text outside $...$, KaTeX inside. Used for questions, answers and explanations.
+  function renderMixed(el, text) {
+    el.textContent = "";
+    String(text).split(/(\$[^$]+\$)/g).forEach((seg) => {
+      if (seg.length > 2 && seg[0] === "$" && seg[seg.length - 1] === "$") {
+        const span = document.createElement("span");
+        try { katex.render(seg.slice(1, -1), span, { throwOnError: false }); } catch (e) { span.textContent = seg; }
+        el.appendChild(span);
+      } else if (seg) {
+        el.appendChild(document.createTextNode(seg));
+      }
+    });
+    return el;
+  }
 
   // ---------- board: canvas drawing ----------
   function resizeCanvas() {
@@ -335,6 +376,15 @@
         ctx.stroke();
         break;
       }
+      case "subdiv": {   // divide the interval [lo, hi] of a number line into n equal parts with small ticks
+        const nxs = (v) => 6 + ((v - c.from) / (c.to - c.from)) * 88;
+        const shown = Math.floor((c.n - 1) * t + 0.0001);
+        for (let j = 1; j <= shown; j++) {
+          const x = nxs(c.lo + ((c.hi - c.lo) * j) / c.n);
+          ctx.beginPath(); ctx.moveTo(M.X(x), M.Y(c.y - 1.6)); ctx.lineTo(M.X(x), M.Y(c.y + 1.6)); ctx.stroke();
+        }
+        break;
+      }
       case "numberline": {
         const { from, to } = c, y = c.y;
         const nx = (v) => 6 + ((v - from) / (to - from)) * 88;
@@ -394,15 +444,15 @@
     if (part.prompt || part.label) {
       const q = document.createElement("span");
       q.className = "label";
-      q.textContent = (part.label ? "(" + part.label + ") " : "") + (part.prompt || "");
+      renderMixed(q, (part.label ? "(" + part.label + ") " : "") + (part.prompt || ""));
       if (q.textContent.trim()) wrap.appendChild(q);
     }
     if (lang === "en" || lang === "both") {
-      const p = document.createElement("p"); p.className = "en"; p.textContent = s.en;
+      const p = document.createElement("p"); p.className = "en"; renderMixed(p, s.en);
       wrap.appendChild(p);
     }
     if (lang === "ur" || lang === "both") {
-      const p = document.createElement("p"); p.className = "ur"; p.lang = "ur"; p.textContent = s.ur;
+      const p = document.createElement("p"); p.className = "ur"; p.lang = "ur"; renderMixed(p, s.ur);
       wrap.appendChild(p);
     }
     box.innerHTML = "";
@@ -482,57 +532,54 @@
   });
 
   // ---------- search ----------
-  function showResults(data) {
+  function setBadge(text, cls) {
+    $("src").style.display = "";
+    $("src").textContent = text;
+    $("src").className = "badge" + (cls ? " " + cls : "");
+  }
+
+  function showItem(it, partIndex, label, cls) {
+    stopPlay();
+    item = it;
+    it.parts.forEach((p) => p.steps.forEach((s) => { s.draw = s.draw || []; }));
+    setBadge(label, cls);
+    $("title").innerHTML = titleOf(item);
+    renderParts();
+    setPart(partIndex || 0);
+  }
+
+  function note(box, text, cls) {
+    const d = document.createElement("div");
+    d.className = "note" + (cls ? " " + cls : "");
+    d.textContent = text;
+    d.style.marginBottom = "8px";
+    box.appendChild(d);
+  }
+
+  // The answer is always for THIS question. A stored solution is shown only when it is the same question; a merely
+  // similar example is labelled as such and is never opened as if it were the answer.
+  function showAnswer(data) {
     const box = $("results");
     box.innerHTML = "";
     if (data.mode === "book") {
-      data.results.forEach((r) => {
+      note(box, "This is a question from the book, so the book's checked solution is shown.");
+      showItem(data.item, data.part_index, "From the book · same question");
+    } else if (data.mode === "solved") {
+      note(box, "Solved for your question. Every step was checked by computer algebra. The question as it was read is written above the board; check that it matches yours.");
+      showItem(data.item, 0, "Solved for your question · every step checked", "ok");
+    } else if (data.mode === "model") {
+      const ok = data.item.verified;
+      note(box, ok ? "Written by the trained model. All of its maths checks passed." : "Written by the trained model, but some of its maths checks FAILED. Do not rely on it.");
+      showItem(data.item, 0, ok ? "Model-written · checks passed" : "Model-written · UNVERIFIED", "gen");
+    } else {
+      note(box, data.message || "I could not recognise this question.");
+      (data.similar || []).forEach((r) => {
         const b = document.createElement("button");
         b.className = "hit";
-        b.innerHTML = `<strong>${escapeHTML(titleOf(r))}</strong><small>${escapeHTML(r.question.slice(0, 110))}</small>`;
-        b.onclick = () => openItem(r.id, "From the book");
+        b.innerHTML = `<strong>Similar example, different numbers</strong><small>${escapeHTML(titleOf(r))} · ${escapeHTML(r.question.slice(0, 90))}</small>`;
+        b.onclick = () => openItem(r.id, "Similar example · different numbers, NOT your question", "gen");
         box.appendChild(b);
       });
-      if (data.results[0]) openItem(data.results[0].id, "From the book");
-      return;
-    }
-    const msg = document.createElement("div");
-    msg.className = "note";
-    msg.textContent = "This question is not in the solved examples yet.";
-    box.appendChild(msg);
-    if (data.live_available) {
-      const b = document.createElement("button");
-      b.className = "primary";
-      b.style.marginTop = "8px";
-      b.textContent = "Solve it live";
-      b.onclick = () => solveLive(b);
-      box.appendChild(b);
-    } else {
-      const n = document.createElement("div");
-      n.className = "note";
-      n.style.marginTop = "6px";
-      n.textContent = "Live solving is off. Start the server with ANTHROPIC_API_KEY set to enable it.";
-      box.appendChild(n);
-    }
-  }
-
-  async function solveLive(btn) {
-    btn.disabled = true; btn.textContent = "Solving…";
-    try {
-      const sol = await api("/api/solve", { question: $("q").value });
-      sol.unit_title = "Live";
-      item = sol;
-      sol.parts.forEach((p) => p.steps.forEach((s) => s.draw = s.draw || []));
-      $("src").style.display = "";
-      $("src").textContent = sol.verified ? "Live · all checks passed" : "Live · some checks failed, review";
-      $("src").className = "badge gen";
-      $("title").textContent = "Live solution";
-      renderParts();
-      setPart(0);
-    } catch (e) {
-      alert(e.message);
-    } finally {
-      btn.disabled = false; btn.textContent = "Solve it live";
     }
   }
 
@@ -570,19 +617,22 @@
       ].filter(Boolean).join(", ");
       const how = {
         book_by_number: "matched to the book by exercise and question number",
-        book_by_text: "matched to a book example by its text",
-        live: "not in the book, solved live",
+        book: "the same question as one in the book",
+        solved: "solved for the numbers in your photo",
+        model: "solved by the trained model",
+        example_only: "could not be solved here (similar examples listed in the results)",
+        none: "not recognised",
       }[data.resolution];
       $("detected").textContent = (where || "Question read") + " · " + how +
         (d.confidence != null ? " · confidence " + Math.round(d.confidence * 100) + "%" : "") +
         (d.notes ? " · " + d.notes : "");
-      item = data.item;
-      $("src").style.display = "";
-      $("src").textContent = data.resolution === "live" ? "Live solution" : "From the book";
-      $("src").className = "badge" + (data.resolution === "live" ? " gen" : "");
-      $("title").innerHTML = titleOf(item);
-      renderParts();
-      setPart(data.part_index || 0);
+      if (data.item) {
+        const label = { book_by_number: "From the book · by number", book: "From the book · same question",
+          solved: "Solved for your question · every step checked", model: "Model-written" }[data.resolution];
+        showItem(data.item, data.part_index || 0, label, data.resolution === "solved" ? "ok" : (data.resolution === "model" ? "gen" : ""));
+      } else {
+        showAnswer({ mode: data.resolution, similar: data.similar, message: data.message });
+      }
     } catch (e) {
       $("detected").textContent = e.message;
     } finally {
@@ -594,8 +644,8 @@
   $("ask").onclick = async () => {
     const q = $("q").value.trim();
     if (!q) return;
-    $("results").innerHTML = '<div class="note">Searching…</div>';
-    try { showResults(await api("/api/ask", { question: q })); }
+    $("results").innerHTML = '<div class="note">Working on your question…</div>';
+    try { showAnswer(await api("/api/answer", { question: q })); }
     catch (e) { $("results").innerHTML = `<div class="note">${escapeHTML(e.message)}</div>`; }
   };
   $("q").addEventListener("keydown", (e) => { if (e.key === "Enter" && (e.ctrlKey || e.metaKey)) $("ask").click(); });

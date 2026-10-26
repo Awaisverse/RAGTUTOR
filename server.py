@@ -29,7 +29,9 @@ sys.path.insert(0, str(ROOT / "tools"))
 sys.path.insert(0, str(ROOT))
 
 import local_models  # noqa: E402
+import mathtext  # noqa: E402
 import rag  # noqa: E402
+import solvers  # noqa: E402
 from build_dataset import verify  # noqa: E402
 from solution_io import parse_solution  # noqa: E402
 from prompts import READ_PROMPT, SOLVE_RULES  # noqa: E402
@@ -93,14 +95,51 @@ def item(item_id):
     return jsonify(it)
 
 
+def similar_examples(question, k=3):
+    """Stored questions that are about the same topic. They are NOT answers: their numbers differ from the student's."""
+    hits = INDEX.search(question, k=k)
+    return [{**summary(BY_ID[h["id"]]), "part": h["part"], "cos": h["cos"], "lex": h["lex"]} for h in hits] if INDEX.is_confident(hits) else []
+
+
+def resolve(question, focus_part=None):
+    """Answer THIS question. Order: a stored solution only if it is the same question, then the solver engine, then the
+    trained model, and otherwise a clearly labelled similar example that is never presented as the answer."""
+    q = question.strip()
+    for it in ITEMS:                                   # 1. exactly a stored question (same numbers, same instruction)
+        same, part = mathtext.same_question(q, it)
+        if same:
+            return {"mode": "book", "item": it, "part_index": part or 0}
+    solved = solvers.solve(q)                          # 2. the solver engine: reads the numbers and solves this question
+    if solved:
+        return {"mode": "solved", "item": solved, "part_index": 0}
+    error = None
+    if local_models.generator_available():             # 3. the trained model (its steps are checked with sympy afterwards)
+        try:
+            sol = live_solve(q, focus_part=focus_part)
+            return {"mode": "model", "item": sol, "part_index": 0}
+        except Exception as exc:
+            error = str(exc)
+    similar = similar_examples(q)                      # 4. nothing could solve it: show related examples, labelled as such
+    return {"mode": "example_only" if similar else "none", "similar": similar, "error": error,
+            "message": "I could not solve this exact question here. The examples below are about the same topic but use different numbers, "
+                       "so they are not the answer to your question." if similar else "I could not recognise this question."}
+
+
+@app.post("/api/answer")
+def answer():
+    q = (request.get_json(silent=True) or {}).get("question", "")
+    if not q.strip():
+        return jsonify({"error": "empty question"}), 400
+    return jsonify(resolve(q))
+
+
 @app.post("/api/ask")
 def ask():
+    """Search only: which stored questions are related. 'book' means one of them is exactly this question."""
     q = (request.get_json(silent=True) or {}).get("question", "")
-    hits = INDEX.search(q, k=3)
-    results = [{**summary(BY_ID[h["id"]]), "part": h["part"], "cos": h["cos"], "lex": h["lex"]} for h in hits]
-    mode = "book" if INDEX.is_confident(hits) else "none"
-    return jsonify({"mode": mode, "results": results,
-                    "live_available": local_models.generator_available()})
+    results = similar_examples(q)
+    exact = any(mathtext.same_question(q, it)[0] for it in ITEMS)
+    return jsonify({"mode": "book" if exact else "none", "results": results, "live_available": local_models.generator_available()})
 
 
 # ---------- live solver ----------
@@ -186,12 +225,18 @@ def _find_by_number(exercise, number):
     """Exact lookup of a printed exercise question, e.g. exercise 1.3, question 2."""
     if number is None:
         return None
+    wanted = _norm_exercise(exercise) if exercise else None
     for it in ITEMS:
-        if it["kind"] != "exercise":
+        if it["kind"] not in ("exercise", "review"):
             continue
-        if str(it.get("number")) == str(number) and (exercise is None or str(it.get("exercise")) == str(exercise)):
+        if str(it.get("number")) == str(number) and (wanted is None or _norm_exercise(it.get("exercise")) == wanted):
             return it
     return None
+
+
+def _norm_exercise(label):
+    """'Exercise 1.3' and '1.3' agree; 'Review Exercise 1' and 'Review 1' agree."""
+    return re.sub(r"\s+|exercise", "", str(label or "").lower())
 
 
 def _part_index(item, label):
@@ -230,33 +275,25 @@ def photo():
     detected = {"exercise": exercise, "number": number, "parts": read.get("parts", []),
                 "part_requested": part, "confidence": read.get("confidence"), "notes": read.get("notes", "")}
 
-    # 1) Printed exercise + question number matches a book item -> show the verified book solution.
+    # 1) The printed exercise and question number identify a stored question exactly.
     book = _find_by_number(exercise, number)
-    how = "book_by_number"
-    # 2) Otherwise search the book by the text that was read.
-    if book is None:
-        hits = INDEX.search(read["question"], k=3)
-        if INDEX.is_confident(hits):
-            book = BY_ID[hits[0]["id"]]
-            how = "book_by_text"
-
     if book is not None:
         idx = _part_index(book, part)
         if idx is None:
             idx = 0
             detected["notes"] += f" Part ({part}) not found in the book; showing the first part."
-        return jsonify({"resolution": how, "detected": detected, "item": book,
+        return jsonify({"resolution": "book_by_number", "detected": detected, "item": book,
                         "part_index": idx, "part_label": book["parts"][idx].get("label", "")})
 
-    # 3) Not in the book -> live solve, focused on the requested part when one was marked.
-    try:
-        sol = live_solve(read["question"], focus_part=part or None)
-    except (ValueError, json.JSONDecodeError) as exc:
-        return jsonify({"error": f"model output was not valid JSON: {exc}", "detected": detected}), 502
-    except Exception as exc:  # API / network errors from the SDK
-        return jsonify({"error": f"live solver failed: {exc}", "detected": detected}), 502
-    return jsonify({"resolution": "live", "detected": detected, "item": sol,
-                    "part_index": 0, "part_label": sol["parts"][0].get("label", "")})
+    # 2) Otherwise answer the question that was read: stored solution only if it is the same question, then the solver
+    #    engine, then the model. A merely similar example is returned as such, never as the answer.
+    res = resolve(read["question"], focus_part=part or None)
+    if res["mode"] in ("book", "solved", "model"):
+        item = res["item"]
+        idx = res.get("part_index", 0)
+        return jsonify({"resolution": res["mode"], "detected": detected, "item": item,
+                        "part_index": idx, "part_label": item["parts"][idx].get("label", "")})
+    return jsonify({"resolution": res["mode"], "detected": detected, "similar": res.get("similar", []), "message": res["message"]})
 
 
 if __name__ == "__main__":

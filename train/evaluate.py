@@ -39,32 +39,8 @@ import rag  # noqa: E402
 from build_dataset import verify  # noqa: E402
 from make_dataset import load_items, neighbours_text, variants  # noqa: E402
 from prompts import SOLVE_RULES  # noqa: E402
+from answer_match import answer_ok, norm_ans  # noqa: E402
 from solution_io import parse_solution  # noqa: E402
-
-
-def _tokens(a):
-    """Numbers and + / - signs in order, ignoring LaTeX words and spacing: '15.29\\%' and '15.29% loss' agree."""
-    a = re.sub(r"\\(?:text|left|right|frac|dfrac|sqrt|times|cdot|ldots|bar|overline|circ|Rightarrow)\b", " ", str(a))
-    return re.findall(r"\d+(?:\.\d+)?|[+\-]", a)
-
-
-def answer_ok(model_answer, gold_answer):
-    """Exact match after normalising, or (when the answer contains numbers) the same numbers and signs in the same order.
-    Text answers such as property names must match exactly."""
-    if norm_ans(model_answer) == norm_ans(gold_answer):
-        return True
-    gold = _tokens(gold_answer)
-    return any(t[0].isdigit() for t in gold) and gold == _tokens(model_answer)
-
-
-def norm_ans(a):
-    a = str(a)
-    a = re.sub(r"\\text\{([^}]*)\}", r"\1", a)
-    for old, new in (("\\dfrac", "\\frac"), ("\\tfrac", "\\frac"), ("\\left", ""), ("\\right", ""),
-                     ("\\%", "%"), ("\\,", ""), ("\\!", ""), ("\\;", "")):
-        a = a.replace(old, new)
-    a = re.sub(r"\^\\circ", "^{\\\\circ}", a)
-    return re.sub(r"[\s$]", "", a).lower().rstrip(".")
 
 
 def pick(items, limit):

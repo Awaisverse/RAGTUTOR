@@ -1,0 +1,1268 @@
+{
+ "unit": 1,
+ "title": "Real Numbers",
+ "title_ur": "حقیقی اعداد",
+ "items": [
+  {
+   "id": "ex1.1-q1",
+   "kind": "exercise",
+   "number": "1",
+   "page": 10,
+   "question": "Identify each of the following as a rational or irrational number: (i) $2.353535$ (ii) $0.\\bar{6}$ (iii) $2.236067\\ldots$ (iv) $\\sqrt{7}$ (v) $e$ (vi) $\\pi$ (vii) $5+\\sqrt{11}$ (viii) $\\sqrt{3}+\\sqrt{13}$ (ix) $\\frac{15}{4}$ (x) $(2-\\sqrt{2})(2+\\sqrt{2})$",
+   "parts": [
+    {
+     "label": "i",
+     "prompt": "$2.353535$",
+     "steps": [
+      {
+       "math": "",
+       "en": "2.353535 has a finite number of digits after the decimal point, so it is a terminating decimal and therefore rational.",
+       "ur": "2.353535 میں اعشاریہ کے بعد ہندسے محدود ہیں، یہ محدود اعشاری عدد ہے، اس لیے ناطق ہے۔",
+       "check": [
+        "Rational('2.353535') == Rational(2353535, 1000000)"
+       ]
+      }
+     ],
+     "answer": "Rational",
+     "book_key": "Rational"
+    },
+    {
+     "label": "ii",
+     "prompt": "$0.\\bar{6}$",
+     "steps": [
+      {
+       "math": "0.\\bar{6} = 0.666\\ldots = \\frac{6}{9} = \\frac{2}{3}",
+       "en": "The digit 6 repeats forever, so this is a non-terminating recurring decimal. It can be written as p/q, so it is rational.",
+       "ur": "ہندسہ 6 بار بار آتا ہے، یہ غیر محدود دوری اعشاری عدد ہے۔ اسے p/q کی شکل میں لکھا جا سکتا ہے، اس لیے ناطق ہے۔",
+       "check": [
+        "9*Rational(2,3) == 6"
+       ]
+      }
+     ],
+     "answer": "Rational",
+     "book_key": "Rational"
+    },
+    {
+     "label": "iii",
+     "prompt": "$2.236067\\ldots$",
+     "steps": [
+      {
+       "math": "",
+       "en": "2.236067... goes on without ending and no group of digits repeats, so it is a non-terminating, non-recurring decimal and therefore irrational.",
+       "ur": "2.236067... ختم نہیں ہوتا اور ہندسوں کا کوئی گروہ دہرایا نہیں جاتا، اس لیے یہ غیر ناطق ہے۔"
+      }
+     ],
+     "answer": "Irrational",
+     "book_key": "Irrational"
+    },
+    {
+     "label": "iv",
+     "prompt": "$\\sqrt{7}$",
+     "steps": [
+      {
+       "math": "\\sqrt{7}",
+       "en": "4 < 7 < 9, so 7 is not a perfect square and $\\sqrt{7}$ is irrational.",
+       "ur": "4 < 7 < 9، اس لیے 7 مکمل مربع نہیں اور $\\sqrt{7}$ غیر ناطق ہے۔",
+       "check": [
+        "floor(sqrt(7))**2 < 7",
+        "(floor(sqrt(7))+1)**2 > 7"
+       ]
+      }
+     ],
+     "answer": "Irrational",
+     "book_key": "Irrational"
+    },
+    {
+     "label": "v",
+     "prompt": "$e$",
+     "steps": [
+      {
+       "math": "",
+       "en": "$e = 2.71828\\ldots$ (Euler's number) is a non-terminating, non-recurring decimal, so it is irrational.",
+       "ur": "$e = 2.71828\\ldots$ (یولر کا عدد) غیر محدود غیر دوری اعشاری عدد ہے، اس لیے غیر ناطق ہے۔"
+      }
+     ],
+     "answer": "Irrational",
+     "book_key": "Irrational"
+    },
+    {
+     "label": "vi",
+     "prompt": "$\\pi$",
+     "steps": [
+      {
+       "math": "",
+       "en": "$\\pi = 3.14159\\ldots$ is a non-terminating, non-recurring decimal, so it is irrational.",
+       "ur": "$\\pi = 3.14159\\ldots$ غیر محدود غیر دوری اعشاری عدد ہے، اس لیے غیر ناطق ہے۔"
+      }
+     ],
+     "answer": "Irrational",
+     "book_key": "Irrational"
+    },
+    {
+     "label": "vii",
+     "prompt": "$5+\\sqrt{11}$",
+     "steps": [
+      {
+       "math": "\\sqrt{11}\\ \\text{is irrational}",
+       "en": "9 < 11 < 16, so 11 is not a perfect square and $\\sqrt{11}$ is irrational.",
+       "ur": "9 < 11 < 16، اس لیے 11 مکمل مربع نہیں اور $\\sqrt{11}$ غیر ناطق ہے۔",
+       "check": [
+        "floor(sqrt(11))**2 < 11",
+        "(floor(sqrt(11))+1)**2 > 11"
+       ]
+      },
+      {
+       "math": "",
+       "en": "5 is rational and $\\sqrt{11}$ is irrational. A rational number plus an irrational number is irrational, so $5+\\sqrt{11}$ is irrational.",
+       "ur": "5 ناطق ہے اور $\\sqrt{11}$ غیر ناطق ہے۔ ناطق اور غیر ناطق عدد کا مجموعہ غیر ناطق ہوتا ہے، اس لیے $5+\\sqrt{11}$ غیر ناطق ہے۔"
+      }
+     ],
+     "answer": "Irrational",
+     "book_key": "Irrational"
+    },
+    {
+     "label": "viii",
+     "prompt": "$\\sqrt{3}+\\sqrt{13}$",
+     "steps": [
+      {
+       "math": "(\\sqrt{3}+\\sqrt{13})^2 = 3+13+2\\sqrt{39} = 16+2\\sqrt{39}",
+       "en": "Square the number. If $\\sqrt{3}+\\sqrt{13}$ were rational, its square would be rational too.",
+       "ur": "عدد کا مربع لیں۔ اگر $\\sqrt{3}+\\sqrt{13}$ ناطق ہوتا تو اس کا مربع بھی ناطق ہوتا۔",
+       "check": [
+        "(sqrt(3)+sqrt(13))**2 == 16 + 2*sqrt(39)"
+       ]
+      },
+      {
+       "math": "\\sqrt{39}\\ \\text{is irrational}",
+       "en": "36 < 39 < 49, so 39 is not a perfect square and $\\sqrt{39}$ is irrational.",
+       "ur": "36 < 39 < 49، اس لیے 39 مکمل مربع نہیں اور $\\sqrt{39}$ غیر ناطق ہے۔",
+       "check": [
+        "floor(sqrt(39))**2 < 39",
+        "(floor(sqrt(39))+1)**2 > 39"
+       ]
+      },
+      {
+       "math": "",
+       "en": "So $16+2\\sqrt{39}$ is irrational, which means its square root $\\sqrt{3}+\\sqrt{13}$ cannot be rational. It is irrational.",
+       "ur": "اس لیے $16+2\\sqrt{39}$ غیر ناطق ہے، یعنی اس کا جذر $\\sqrt{3}+\\sqrt{13}$ ناطق نہیں ہو سکتا۔ یہ غیر ناطق ہے۔"
+      }
+     ],
+     "answer": "Irrational",
+     "book_key": "Irrational"
+    },
+    {
+     "label": "ix",
+     "prompt": "$\\frac{15}{4}$",
+     "steps": [
+      {
+       "math": "\\frac{15}{4} = 3.75",
+       "en": "15/4 is a quotient of two integers, so it is rational. Its decimal 3.75 terminates.",
+       "ur": "15/4 دو صحیح اعداد کی نسبت ہے، اس لیے ناطق ہے۔ اس کا اعشاری روپ 3.75 محدود ہے۔",
+       "check": [
+        "Rational(15,4) == Rational('3.75')"
+       ]
+      }
+     ],
+     "answer": "Rational",
+     "book_key": "Rational"
+    },
+    {
+     "label": "x",
+     "prompt": "$(2-\\sqrt{2})(2+\\sqrt{2})$",
+     "steps": [
+      {
+       "math": "(2-\\sqrt{2})(2+\\sqrt{2}) = 2^2-(\\sqrt{2})^2 = 4-2 = 2",
+       "en": "Use $(a-b)(a+b) = a^2-b^2$. The product is 2, which is a rational number.",
+       "ur": "$(a-b)(a+b) = a^2-b^2$ استعمال کریں۔ حاصل ضرب 2 ہے جو ناطق عدد ہے۔",
+       "check": [
+        "(2-sqrt(2))*(2+sqrt(2)) == 2",
+        "2**2 - sqrt(2)**2 == 2"
+       ]
+      }
+     ],
+     "answer": "Rational",
+     "key_note": "The printed answer key lists (x) as Irrational, but (2-sqrt2)(2+sqrt2) = 2, which is rational. The key has an error here; the sympy check above proves the product is 2.",
+     "note": {
+      "en": "The book's printed answer key says \"Irrational\" for this part. That is a misprint: the product equals 2, a rational number.",
+      "ur": "کتاب کے آخر میں دیے گئے جوابات میں اس حصے کے لیے \"غیر ناطق\" لکھا ہے۔ یہ غلطی ہے: حاصل ضرب 2 ہے جو ناطق عدد ہے۔"
+     },
+     "book_key": "Irrational"
+    }
+   ],
+   "exercise": "1.1"
+  },
+  {
+   "id": "ex1.1-q2",
+   "kind": "exercise",
+   "number": "2",
+   "page": 10,
+   "question": "Represent the following numbers on the number line: (i) $\\sqrt{2}$ (ii) $\\sqrt{3}$ (iii) $4\\frac{1}{3}$ (iv) $-2\\frac{1}{7}$ (v) $\\frac{5}{8}$ (vi) $2\\frac{3}{4}$",
+   "parts": [
+    {
+     "label": "i",
+     "prompt": "$\\sqrt{2}$",
+     "steps": [
+      {
+       "math": "\\sqrt{2} = \\sqrt{1^2+1^2}",
+       "en": "Write 2 as a sum of two squares: 2 = 1² + 1². So $\\sqrt{2}$ is the hypotenuse of a right triangle whose legs are 1 and 1.",
+       "ur": "2 کو دو مربعات کے مجموعے کی شکل میں لکھیں: 2 = 1² + 1²۔ اس لیے $\\sqrt{2}$ اس قائمۃ الزاویہ مثلث کا وتر ہے جس کے دونوں ضلع 1 ہیں۔",
+       "check": [
+        "sqrt(2) == sqrt(1**2 + 1**2)"
+       ],
+       "draw": [
+        {
+         "t": "numberline",
+         "from": 0,
+         "to": 3,
+         "y": 46.0
+        }
+       ]
+      },
+      {
+       "math": "m\\overline{OA} = 1, \\quad m\\overline{AB} = 1",
+       "en": "Mark O at 0 and A at 1. At A draw AB = 1 unit perpendicular to the number line. This gives the right-angled triangle OAB.",
+       "ur": "O کو 0 پر اور A کو 1 پر لگائیں۔ A پر نمبر لائن کے عمود 1 اکائی کا AB کھینچیں۔ یوں قائمۃ الزاویہ مثلث OAB بنتا ہے۔",
+       "draw": [
+        {
+         "t": "poly",
+         "p": [
+          6.0,
+          46.0,
+          35.33,
+          46.0,
+          35.33,
+          16.67
+         ],
+         "close": true
+        },
+        {
+         "t": "right",
+         "p": [
+          35.33,
+          46.0
+         ],
+         "d": [
+          -1,
+          0,
+          0,
+          -1
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          4.0,
+          58.0
+         ],
+         "s": "O"
+        },
+        {
+         "t": "text",
+         "p": [
+          35.33,
+          58.0
+         ],
+         "s": "A"
+        },
+        {
+         "t": "text",
+         "p": [
+          38.33,
+          16.67
+         ],
+         "s": "B"
+        }
+       ]
+      },
+      {
+       "math": "(m\\overline{OB})^2 = 1^2+1^2 = 2 \\;\\Rightarrow\\; m\\overline{OB} = \\sqrt{2}",
+       "en": "By the Pythagoras theorem the hypotenuse OB is $\\sqrt{2}$.",
+       "ur": "فیثاغورث کے قضیے سے وتر OB کی لمبائی $\\sqrt{2}$ ہے۔",
+       "check": [
+        "1**2 + 1**2 == 2"
+       ]
+      },
+      {
+       "math": "|\\overline{OP}| = \\sqrt{2}",
+       "en": "With O as the centre and radius OB, draw an arc. It cuts the number line at P, so P represents $\\sqrt{2}$.",
+       "ur": "O کو مرکز اور OB کو رداس لے کر قوس کھینچیں۔ یہ نمبر لائن کو P پر کاٹتی ہے، اس لیے P نقطہ $\\sqrt{2}$ کو ظاہر کرتا ہے۔",
+       "draw": [
+        {
+         "t": "arc",
+         "c": [
+          6.0,
+          46.0
+         ],
+         "r": 41.48,
+         "a": [
+          -45.0,
+          0
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          47.48,
+          46.0
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          47.48,
+          58.0
+         ],
+         "s": "P"
+        }
+       ]
+      }
+     ],
+     "answer": "P represents $\\sqrt{2}$ on the number line."
+    },
+    {
+     "label": "ii",
+     "prompt": "$\\sqrt{3}$",
+     "steps": [
+      {
+       "math": "\\sqrt{3} = \\sqrt{(\\sqrt{2})^2+1^2}",
+       "en": "Since 3 = 2 + 1, $\\sqrt{3}$ is the hypotenuse of a right triangle with legs $\\sqrt{2}$ and 1. So first construct $\\sqrt{2}$, then use it as one leg.",
+       "ur": "چونکہ 3 = 2 + 1 ہے، اس لیے $\\sqrt{3}$ اس قائمۃ الزاویہ مثلث کا وتر ہے جس کے ضلع $\\sqrt{2}$ اور 1 ہیں۔ پہلے $\\sqrt{2}$ بنائیں، پھر اسے ایک ضلع کے طور پر استعمال کریں۔",
+       "check": [
+        "sqrt(3) == sqrt(sqrt(2)**2 + 1**2)"
+       ]
+      },
+      {
+       "math": "\\sqrt{2} = \\sqrt{1^2+1^2}",
+       "en": "Write 2 as a sum of two squares: 2 = 1² + 1². So $\\sqrt{2}$ is the hypotenuse of a right triangle whose legs are 1 and 1.",
+       "ur": "2 کو دو مربعات کے مجموعے کی شکل میں لکھیں: 2 = 1² + 1²۔ اس لیے $\\sqrt{2}$ اس قائمۃ الزاویہ مثلث کا وتر ہے جس کے دونوں ضلع 1 ہیں۔",
+       "check": [
+        "sqrt(2) == sqrt(1**2 + 1**2)"
+       ],
+       "draw": [
+        {
+         "t": "numberline",
+         "from": 0,
+         "to": 3,
+         "y": 46.0
+        }
+       ]
+      },
+      {
+       "math": "m\\overline{OA} = 1, \\quad m\\overline{AB} = 1",
+       "en": "Mark O at 0 and A at 1. At A draw AB = 1 unit perpendicular to the number line. This gives the right-angled triangle OAB.",
+       "ur": "O کو 0 پر اور A کو 1 پر لگائیں۔ A پر نمبر لائن کے عمود 1 اکائی کا AB کھینچیں۔ یوں قائمۃ الزاویہ مثلث OAB بنتا ہے۔",
+       "draw": [
+        {
+         "t": "poly",
+         "p": [
+          6.0,
+          46.0,
+          35.33,
+          46.0,
+          35.33,
+          16.67
+         ],
+         "close": true
+        },
+        {
+         "t": "right",
+         "p": [
+          35.33,
+          46.0
+         ],
+         "d": [
+          -1,
+          0,
+          0,
+          -1
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          4.0,
+          58.0
+         ],
+         "s": "O"
+        },
+        {
+         "t": "text",
+         "p": [
+          35.33,
+          58.0
+         ],
+         "s": "A"
+        },
+        {
+         "t": "text",
+         "p": [
+          38.33,
+          16.67
+         ],
+         "s": "B"
+        }
+       ]
+      },
+      {
+       "math": "(m\\overline{OB})^2 = 1^2+1^2 = 2 \\;\\Rightarrow\\; m\\overline{OB} = \\sqrt{2}",
+       "en": "By the Pythagoras theorem the hypotenuse OB is $\\sqrt{2}$.",
+       "ur": "فیثاغورث کے قضیے سے وتر OB کی لمبائی $\\sqrt{2}$ ہے۔",
+       "check": [
+        "1**2 + 1**2 == 2"
+       ]
+      },
+      {
+       "math": "|\\overline{OD}| = \\sqrt{2}",
+       "en": "With O as the centre and radius OB draw an arc. It cuts the number line at D, so OD = $\\sqrt{2}$.",
+       "ur": "O کو مرکز اور OB کو رداس لے کر قوس کھینچیں۔ یہ نمبر لائن کو D پر کاٹتی ہے، اس لیے OD = $\\sqrt{2}$ ہے۔",
+       "draw": [
+        {
+         "t": "arc",
+         "c": [
+          6.0,
+          46.0
+         ],
+         "r": 41.48,
+         "a": [
+          -45.0,
+          0
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          47.48,
+          46.0
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          47.48,
+          58.0
+         ],
+         "s": "D"
+        }
+       ]
+      },
+      {
+       "math": "m\\overline{OD} = \\sqrt{2}, \\quad m\\overline{DE} = 1",
+       "en": "At D draw DE = 1 unit perpendicular to the number line and join O to E. The legs of the new right triangle ODE are $\\sqrt{2}$ and 1.",
+       "ur": "D پر نمبر لائن کے عمود 1 اکائی کا DE کھینچیں اور O کو E سے ملائیں۔ نئے قائمۃ الزاویہ مثلث ODE کے ضلع $\\sqrt{2}$ اور 1 ہیں۔",
+       "draw": [
+        {
+         "t": "line",
+         "p": [
+          47.48,
+          46.0,
+          47.48,
+          16.67
+         ]
+        },
+        {
+         "t": "right",
+         "p": [
+          47.48,
+          46.0
+         ],
+         "d": [
+          -1,
+          0,
+          0,
+          -1
+         ]
+        },
+        {
+         "t": "line",
+         "p": [
+          6.0,
+          46.0,
+          47.48,
+          16.67
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          50.48,
+          16.67
+         ],
+         "s": "E"
+        }
+       ]
+      },
+      {
+       "math": "(m\\overline{OE})^2 = (\\sqrt{2})^2+1^2 = 3 \\;\\Rightarrow\\; m\\overline{OE} = \\sqrt{3}",
+       "en": "By the Pythagoras theorem OE = $\\sqrt{3}$.",
+       "ur": "فیثاغورث کے قضیے سے OE = $\\sqrt{3}$ ہے۔",
+       "check": [
+        "sqrt(2)**2 + 1**2 == 3"
+       ]
+      },
+      {
+       "math": "|\\overline{OF}| = \\sqrt{3}",
+       "en": "With O as the centre and radius OE, draw an arc. It cuts the number line at F, so F represents $\\sqrt{3}$.",
+       "ur": "O کو مرکز اور OE کو رداس لے کر قوس کھینچیں۔ یہ نمبر لائن کو F پر کاٹتی ہے، اس لیے F نقطہ $\\sqrt{3}$ کو ظاہر کرتا ہے۔",
+       "draw": [
+        {
+         "t": "arc",
+         "c": [
+          6.0,
+          46.0
+         ],
+         "r": 50.81,
+         "a": [
+          -35.3,
+          0
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          56.81,
+          46.0
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          56.81,
+          58.0
+         ],
+         "s": "F"
+        }
+       ]
+      }
+     ],
+     "answer": "F represents $\\sqrt{3}$ on the number line."
+    },
+    {
+     "label": "iii",
+     "prompt": "$4\\frac{1}{3}$",
+     "steps": [
+      {
+       "math": "4\\frac{1}{3} \\text{ lies between } 4 \\text{ and } 5",
+       "en": "Draw a number line. 4 1/3 lies between 4 and 5.",
+       "ur": "نمبر لائن بنائیں۔ 4 1/3 عدد 4 اور 5 کے درمیان ہے۔",
+       "check": [
+        "Rational(13,3) > 4",
+        "Rational(13,3) < 5"
+       ],
+       "draw": [
+        {
+         "t": "numberline",
+         "from": 3,
+         "to": 6,
+         "y": 46.0
+        }
+       ]
+      },
+      {
+       "math": "\\text{Divide } [4,5] \\text{ into } 3 \\text{ equal parts}",
+       "en": "Divide the distance between 4 and 5 into 3 equal parts. Each part is 1/3.",
+       "ur": "4 اور 5 کے درمیان فاصلے کو 3 برابر حصوں میں تقسیم کریں۔ ہر حصہ 1/3 ہے۔",
+       "draw": [
+        {
+         "t": "subdiv",
+         "from": 3,
+         "to": 6,
+         "y": 46.0,
+         "lo": 4,
+         "hi": 5,
+         "n": 3
+        }
+       ]
+      },
+      {
+       "math": "4\\frac{1}{3} = 4 + \\frac{1}{3}",
+       "en": "The point is 1 part to the right of 4.",
+       "ur": "نقطہ 4 سے ایک حصہ دائیں طرف ہے۔",
+       "check": [
+        "4 + Rational(1,3) == Rational(13,3)"
+       ],
+       "draw": [
+        {
+         "t": "numberline",
+         "from": 3,
+         "to": 6,
+         "y": 46.0,
+         "marks": [
+          {
+           "v": 4.333333333333333,
+           "s": "4 1/3"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "answer": "$4\\frac{1}{3}$ is the first division to the right of 4."
+    },
+    {
+     "label": "iv",
+     "prompt": "$-2\\frac{1}{7}$",
+     "steps": [
+      {
+       "math": "-2\\frac{1}{7} \\text{ lies between } -3 \\text{ and } -2",
+       "en": "Draw a number line. -2 1/7 lies between -3 and -2.",
+       "ur": "نمبر لائن بنائیں۔ -2 1/7 عدد -3 اور -2 کے درمیان ہے۔",
+       "check": [
+        "Rational(-15,7) > -3",
+        "Rational(-15,7) < -2"
+       ],
+       "draw": [
+        {
+         "t": "numberline",
+         "from": -4,
+         "to": 0,
+         "y": 46.0
+        }
+       ]
+      },
+      {
+       "math": "\\text{Divide } [-3,-2] \\text{ into } 7 \\text{ equal parts}",
+       "en": "Divide the distance between -3 and -2 into 7 equal parts. Each part is 1/7.",
+       "ur": "-3 اور -2 کے درمیان فاصلے کو 7 برابر حصوں میں تقسیم کریں۔ ہر حصہ 1/7 ہے۔",
+       "draw": [
+        {
+         "t": "subdiv",
+         "from": -4,
+         "to": 0,
+         "y": 46.0,
+         "lo": -3,
+         "hi": -2,
+         "n": 7
+        }
+       ]
+      },
+      {
+       "math": "-2\\frac{1}{7} = -2 - \\frac{1}{7}",
+       "en": "The point is 1 part to the left of -2, because the number is negative.",
+       "ur": "عدد منفی ہے، اس لیے نقطہ -2 سے ایک حصہ بائیں طرف ہے۔",
+       "check": [
+        "-2 - Rational(1,7) == Rational(-15,7)"
+       ],
+       "draw": [
+        {
+         "t": "numberline",
+         "from": -4,
+         "to": 0,
+         "y": 46.0,
+         "marks": [
+          {
+           "v": -2.142857142857143,
+           "s": "-2 1/7"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "answer": "$-2\\frac{1}{7}$ is the first division to the left of $-2$."
+    },
+    {
+     "label": "v",
+     "prompt": "$\\frac{5}{8}$",
+     "steps": [
+      {
+       "math": "\\frac{5}{8} \\text{ lies between } 0 \\text{ and } 1",
+       "en": "Draw a number line. 5/8 lies between 0 and 1.",
+       "ur": "نمبر لائن بنائیں۔ 5/8 عدد 0 اور 1 کے درمیان ہے۔",
+       "check": [
+        "Rational(5,8) > 0",
+        "Rational(5,8) < 1"
+       ],
+       "draw": [
+        {
+         "t": "numberline",
+         "from": -1,
+         "to": 2,
+         "y": 46.0
+        }
+       ]
+      },
+      {
+       "math": "\\text{Divide } [0,1] \\text{ into } 8 \\text{ equal parts}",
+       "en": "Divide the distance between 0 and 1 into 8 equal parts. Each part is 1/8.",
+       "ur": "0 اور 1 کے درمیان فاصلے کو 8 برابر حصوں میں تقسیم کریں۔ ہر حصہ 1/8 ہے۔",
+       "draw": [
+        {
+         "t": "subdiv",
+         "from": -1,
+         "to": 2,
+         "y": 46.0,
+         "lo": 0,
+         "hi": 1,
+         "n": 8
+        }
+       ]
+      },
+      {
+       "math": "\\frac{5}{8} = 5 \\times \\frac{1}{8}",
+       "en": "The point is 5 parts to the right of 0.",
+       "ur": "نقطہ 0 سے پانچ حصے دائیں طرف ہے۔",
+       "check": [
+        "5*Rational(1,8) == Rational(5,8)"
+       ],
+       "draw": [
+        {
+         "t": "numberline",
+         "from": -1,
+         "to": 2,
+         "y": 46.0,
+         "marks": [
+          {
+           "v": 0.625,
+           "s": "5/8"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "answer": "$\\frac{5}{8}$ is the fifth division to the right of 0."
+    },
+    {
+     "label": "vi",
+     "prompt": "$2\\frac{3}{4}$",
+     "steps": [
+      {
+       "math": "2\\frac{3}{4} \\text{ lies between } 2 \\text{ and } 3",
+       "en": "Draw a number line. 2 3/4 lies between 2 and 3.",
+       "ur": "نمبر لائن بنائیں۔ 2 3/4 عدد 2 اور 3 کے درمیان ہے۔",
+       "check": [
+        "Rational(11,4) > 2",
+        "Rational(11,4) < 3"
+       ],
+       "draw": [
+        {
+         "t": "numberline",
+         "from": 1,
+         "to": 4,
+         "y": 46.0
+        }
+       ]
+      },
+      {
+       "math": "\\text{Divide } [2,3] \\text{ into } 4 \\text{ equal parts}",
+       "en": "Divide the distance between 2 and 3 into 4 equal parts. Each part is 1/4.",
+       "ur": "2 اور 3 کے درمیان فاصلے کو 4 برابر حصوں میں تقسیم کریں۔ ہر حصہ 1/4 ہے۔",
+       "draw": [
+        {
+         "t": "subdiv",
+         "from": 1,
+         "to": 4,
+         "y": 46.0,
+         "lo": 2,
+         "hi": 3,
+         "n": 4
+        }
+       ]
+      },
+      {
+       "math": "2\\frac{3}{4} = 2 + 3 \\times \\frac{1}{4}",
+       "en": "The point is 3 parts to the right of 2.",
+       "ur": "نقطہ 2 سے تین حصے دائیں طرف ہے۔",
+       "check": [
+        "2 + 3*Rational(1,4) == Rational(11,4)"
+       ],
+       "draw": [
+        {
+         "t": "numberline",
+         "from": 1,
+         "to": 4,
+         "y": 46.0,
+         "marks": [
+          {
+           "v": 2.75,
+           "s": "2 3/4"
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "answer": "$2\\frac{3}{4}$ is the third division to the right of 2."
+    }
+   ],
+   "exercise": "1.1"
+  },
+  {
+   "id": "ex1.1-q3",
+   "kind": "exercise",
+   "number": "3",
+   "page": 10,
+   "question": "Express the following as a rational number $\\frac{p}{q}$ where $p$ and $q$ are integers and $q \\neq 0$: (i) $0.\\bar{4}$ (ii) $0.\\overline{37}$ (iii) $0.\\overline{21}$",
+   "parts": [
+    {
+     "label": "i",
+     "prompt": "$0.\\bar{4}$",
+     "steps": [
+      {
+       "math": "x = 0.444\\ldots",
+       "en": "Let x be the recurring decimal.",
+       "ur": "فرض کریں x یہ دوری اعشاری عدد ہے۔"
+      },
+      {
+       "math": "10x = 4.444\\ldots",
+       "en": "One digit repeats, so multiply both sides by 10.",
+       "ur": "ایک ہندسہ دہرائے جاتے ہیں، اس لیے دونوں طرف 10 سے ضرب دیں۔",
+       "check": [
+        "10*Rational(4,9) == 4 + Rational(4,9)"
+       ]
+      },
+      {
+       "math": "10x - x = 4.444\\ldots - 0.444\\ldots \\;\\Rightarrow\\; 9x = 4",
+       "en": "Subtract the first line from the second so the repeating part cancels.",
+       "ur": "پہلی لکیر کو دوسری میں سے منہا کریں، دہرایا جانے والا حصہ ختم ہو جاتا ہے۔",
+       "check": [
+        "10*Rational(4,9) - Rational(4,9) == 4"
+       ]
+      },
+      {
+       "math": "x = \\frac{4}{9}",
+       "en": "Divide both sides by 9.",
+       "ur": "دونوں طرف 9 سے تقسیم کریں۔",
+       "check": [
+        "Rational(4,9)*9 == 4"
+       ]
+      }
+     ],
+     "answer": "$\\frac{4}{9}$",
+     "book_key": "\\frac{4}{9}"
+    },
+    {
+     "label": "ii",
+     "prompt": "$0.\\overline{37}$",
+     "steps": [
+      {
+       "math": "x = 0.373737\\ldots",
+       "en": "Let x be the recurring decimal.",
+       "ur": "فرض کریں x یہ دوری اعشاری عدد ہے۔"
+      },
+      {
+       "math": "100x = 37.373737\\ldots",
+       "en": "Two digits repeat, so multiply both sides by 100.",
+       "ur": "دو ہندسے دہرائے جاتے ہیں، اس لیے دونوں طرف 100 سے ضرب دیں۔",
+       "check": [
+        "100*Rational(37,99) == 37 + Rational(37,99)"
+       ]
+      },
+      {
+       "math": "100x - x = 37.373737\\ldots - 0.373737\\ldots \\;\\Rightarrow\\; 99x = 37",
+       "en": "Subtract the first line from the second so the repeating part cancels.",
+       "ur": "پہلی لکیر کو دوسری میں سے منہا کریں، دہرایا جانے والا حصہ ختم ہو جاتا ہے۔",
+       "check": [
+        "100*Rational(37,99) - Rational(37,99) == 37"
+       ]
+      },
+      {
+       "math": "x = \\frac{37}{99}",
+       "en": "Divide both sides by 99.",
+       "ur": "دونوں طرف 99 سے تقسیم کریں۔",
+       "check": [
+        "Rational(37,99)*99 == 37"
+       ]
+      }
+     ],
+     "answer": "$\\frac{37}{99}$",
+     "book_key": "\\frac{37}{99}"
+    },
+    {
+     "label": "iii",
+     "prompt": "$0.\\overline{21}$",
+     "steps": [
+      {
+       "math": "x = 0.212121\\ldots",
+       "en": "Let x be the recurring decimal.",
+       "ur": "فرض کریں x یہ دوری اعشاری عدد ہے۔"
+      },
+      {
+       "math": "100x = 21.212121\\ldots",
+       "en": "Two digits repeat, so multiply both sides by 100.",
+       "ur": "دو ہندسے دہرائے جاتے ہیں، اس لیے دونوں طرف 100 سے ضرب دیں۔",
+       "check": [
+        "100*Rational(21,99) == 21 + Rational(21,99)"
+       ]
+      },
+      {
+       "math": "100x - x = 21.212121\\ldots - 0.212121\\ldots \\;\\Rightarrow\\; 99x = 21",
+       "en": "Subtract the first line from the second so the repeating part cancels.",
+       "ur": "پہلی لکیر کو دوسری میں سے منہا کریں، دہرایا جانے والا حصہ ختم ہو جاتا ہے۔",
+       "check": [
+        "100*Rational(21,99) - Rational(21,99) == 21"
+       ]
+      },
+      {
+       "math": "x = \\frac{21}{99}",
+       "en": "Divide both sides by 99. In lowest terms this is 7/33.",
+       "ur": "دونوں طرف 99 سے تقسیم کریں۔ سب سے چھوٹی صورت میں یہ 7/33 ہے۔",
+       "check": [
+        "Rational(21,99)*99 == 21"
+       ]
+      }
+     ],
+     "answer": "$\\frac{21}{99}$",
+     "book_key": "\\frac{21}{99}"
+    }
+   ],
+   "exercise": "1.1"
+  },
+  {
+   "id": "ex1.1-q4",
+   "kind": "exercise",
+   "number": "4",
+   "page": 11,
+   "question": "Name the property used in the following: (i) $(a+4)+b = a+(4+b)$ (ii) $\\sqrt{2}+\\sqrt{3} = \\sqrt{3}+\\sqrt{2}$ (iii) $x-x = 0$ (iv) $a(b+c) = ab+ac$ (v) $16+0 = 16$ (vi) $100\\times 1 = 100$ (vii) $4\\times(5\\times 8) = (4\\times 5)\\times 8$ (viii) $ab = ba$",
+   "parts": [
+    {
+     "label": "i",
+     "prompt": "$(a+4)+b = a+(4+b)$",
+     "steps": [
+      {
+       "math": "(a+4)+b = a+(4+b)",
+       "en": "The grouping of the numbers changes but the sum stays the same.",
+       "ur": "اعداد کی گروہ بندی بدلی مگر مجموعہ وہی رہا۔",
+       "check": [
+        "(a+4)+b == a+(4+b)"
+       ]
+      }
+     ],
+     "answer": "Associative property over addition",
+     "book_key": "Associative property over addition"
+    },
+    {
+     "label": "ii",
+     "prompt": "$\\sqrt{2}+\\sqrt{3} = \\sqrt{3}+\\sqrt{2}$",
+     "steps": [
+      {
+       "math": "\\sqrt{2}+\\sqrt{3} = \\sqrt{3}+\\sqrt{2}",
+       "en": "The order of the numbers changes but the sum stays the same.",
+       "ur": "اعداد کی ترتیب بدلی مگر مجموعہ وہی رہا۔",
+       "check": [
+        "sqrt(2)+sqrt(3) == sqrt(3)+sqrt(2)"
+       ]
+      }
+     ],
+     "answer": "Commutative property over addition",
+     "book_key": "Commutative property over addition"
+    },
+    {
+     "label": "iii",
+     "prompt": "$x-x = 0$",
+     "steps": [
+      {
+       "math": "x-x = x+(-x) = 0",
+       "en": "A number plus its negative is 0, so -x is the additive inverse of x.",
+       "ur": "عدد اور اس کے منفی کا مجموعہ 0 ہوتا ہے، اس لیے -x عدد x کا جمعی معکوس ہے۔",
+       "check": [
+        "x - x == 0"
+       ]
+      }
+     ],
+     "answer": "Additive inverse",
+     "book_key": "Additive inverse"
+    },
+    {
+     "label": "iv",
+     "prompt": "$a(b+c) = ab+ac$",
+     "steps": [
+      {
+       "math": "a(b+c) = ab+ac",
+       "en": "Multiplication is spread over addition from the left.",
+       "ur": "ضرب بائیں طرف سے جمع پر تقسیم ہو رہی ہے۔",
+       "check": [
+        "a*(b+c) == a*b + a*c"
+       ]
+      }
+     ],
+     "answer": "Left distributive property",
+     "book_key": "Left distributive property"
+    },
+    {
+     "label": "v",
+     "prompt": "$16+0 = 16$",
+     "steps": [
+      {
+       "math": "16+0 = 16",
+       "en": "Adding 0 does not change the number, so 0 is the additive identity.",
+       "ur": "0 جمع کرنے سے عدد نہیں بدلتا، اس لیے 0 جمعی محائدہ ہے۔",
+       "check": [
+        "16 + 0 == 16"
+       ]
+      }
+     ],
+     "answer": "Additive identity",
+     "book_key": "Additive identity"
+    },
+    {
+     "label": "vi",
+     "prompt": "$100\\times 1 = 100$",
+     "steps": [
+      {
+       "math": "100 \\times 1 = 100",
+       "en": "Multiplying by 1 does not change the number, so 1 is the multiplicative identity.",
+       "ur": "1 سے ضرب دینے سے عدد نہیں بدلتا، اس لیے 1 ضربی محائدہ ہے۔",
+       "check": [
+        "100*1 == 100"
+       ]
+      }
+     ],
+     "answer": "Multiplicative identity",
+     "book_key": "Multiplicative identity"
+    },
+    {
+     "label": "vii",
+     "prompt": "$4\\times(5\\times 8) = (4\\times 5)\\times 8$",
+     "steps": [
+      {
+       "math": "4\\times(5\\times 8) = (4\\times 5)\\times 8",
+       "en": "The grouping of the numbers changes but the product stays the same.",
+       "ur": "اعداد کی گروہ بندی بدلی مگر حاصل ضرب وہی رہا۔",
+       "check": [
+        "4*(5*8) == (4*5)*8"
+       ]
+      }
+     ],
+     "answer": "Associative property under multiplication",
+     "book_key": "Associative property under multiplication"
+    },
+    {
+     "label": "viii",
+     "prompt": "$ab = ba$",
+     "steps": [
+      {
+       "math": "ab = ba",
+       "en": "The order of the numbers changes but the product stays the same.",
+       "ur": "اعداد کی ترتیب بدلی مگر حاصل ضرب وہی رہا۔",
+       "check": [
+        "a*b == b*a"
+       ]
+      }
+     ],
+     "answer": "Commutative property under multiplication",
+     "book_key": "Commutative property under multiplication"
+    }
+   ],
+   "exercise": "1.1"
+  },
+  {
+   "id": "ex1.1-q5",
+   "kind": "exercise",
+   "number": "5",
+   "page": 11,
+   "question": "Name the property used in the following: (i) $-3 < -1 \\Rightarrow 0 < 2$ (ii) If $a < b$ then $\\frac{1}{a} > \\frac{1}{b}$ (iii) If $a < b$ then $a+c < b+c$ (iv) If $ac < bc$ and $c > 0$ then $a < b$ (v) If $ac < bc$ and $c < 0$ then $a > b$ (vi) Either $a > b$ or $a = b$ or $a < b$",
+   "parts": [
+    {
+     "label": "i",
+     "prompt": "$-3 < -1 \\Rightarrow 0 < 2$",
+     "steps": [
+      {
+       "math": "-3 < -1 \\;\\Rightarrow\\; -3+3 < -1+3 \\;\\Rightarrow\\; 0 < 2",
+       "en": "The same number (3) is added to both sides and the direction of the inequality stays the same.",
+       "ur": "دونوں طرف ایک ہی عدد (3) جمع کیا گیا اور عدم مساوات کی سمت وہی رہی۔",
+       "check": [
+        "-3+3 == 0",
+        "-1+3 == 2"
+       ]
+      }
+     ],
+     "answer": "Additive property",
+     "book_key": "Additive property"
+    },
+    {
+     "label": "ii",
+     "prompt": "If $a < b$ then $\\frac{1}{a} > \\frac{1}{b}$",
+     "steps": [
+      {
+       "math": "a < b \\;\\Rightarrow\\; \\frac{1}{a} > \\frac{1}{b}",
+       "en": "Taking reciprocals of two numbers with the same sign reverses the inequality. For example 2 < 3 but 1/2 > 1/3.",
+       "ur": "ایک ہی علامت والے دو اعداد کے مقلوب لینے سے عدم مساوات الٹ جاتی ہے۔ مثلاً 2 < 3 مگر 1/2 > 1/3۔",
+       "check": [
+        "Rational(1,2) > Rational(1,3)"
+       ]
+      }
+     ],
+     "answer": "Reciprocal property",
+     "book_key": "Reciprocal property"
+    },
+    {
+     "label": "iii",
+     "prompt": "If $a < b$ then $a+c < b+c$",
+     "steps": [
+      {
+       "math": "a < b \\;\\Rightarrow\\; a+c < b+c",
+       "en": "The same number c is added to both sides, so the inequality keeps its direction. For example 1 < 2 gives 1+5 < 2+5.",
+       "ur": "دونوں طرف ایک ہی عدد c جمع کیا گیا، اس لیے عدم مساوات کی سمت وہی رہتی ہے۔ مثلاً 1 < 2 سے 1+5 < 2+5۔",
+       "check": [
+        "1+5 < 2+5"
+       ]
+      }
+     ],
+     "answer": "Additive property",
+     "book_key": "Additive property"
+    },
+    {
+     "label": "iv",
+     "prompt": "If $ac < bc$ and $c > 0$ then $a < b$",
+     "steps": [
+      {
+       "math": "ac < bc,\\ c > 0 \\;\\Rightarrow\\; a < b",
+       "en": "Both sides are multiplied by 1/c, which is positive, so the direction does not change. For example 2·3 < 5·3 gives 2 < 5.",
+       "ur": "دونوں طرف 1/c سے ضرب دی گئی جو مثبت ہے، اس لیے سمت نہیں بدلتی۔ مثلاً 2·3 < 5·3 سے 2 < 5۔",
+       "check": [
+        "2*3 < 5*3",
+        "2 < 5"
+       ]
+      }
+     ],
+     "answer": "Multiplicative property",
+     "book_key": "Multiplicative property"
+    },
+    {
+     "label": "v",
+     "prompt": "If $ac < bc$ and $c < 0$ then $a > b$",
+     "steps": [
+      {
+       "math": "ac < bc,\\ c < 0 \\;\\Rightarrow\\; a > b",
+       "en": "Both sides are multiplied by 1/c, which is negative, so the inequality is reversed. For example 5(-2) < 2(-2) gives 5 > 2.",
+       "ur": "دونوں طرف 1/c سے ضرب دی گئی جو منفی ہے، اس لیے عدم مساوات الٹ جاتی ہے۔ مثلاً 5(-2) < 2(-2) سے 5 > 2۔",
+       "check": [
+        "5*(-2) < 2*(-2)",
+        "5 > 2"
+       ]
+      }
+     ],
+     "answer": "Multiplicative property",
+     "book_key": "Multiplicative property"
+    },
+    {
+     "label": "vi",
+     "prompt": "Either $a > b$ or $a = b$ or $a < b$",
+     "steps": [
+      {
+       "math": "a > b \\ \\text{or} \\ a = b \\ \\text{or} \\ a < b",
+       "en": "For any two real numbers exactly one of the three relations is true. For example, for 1/3 and 1/2 it is 1/3 < 1/2.",
+       "ur": "کسی بھی دو حقیقی اعداد کے لیے تین رشتوں میں سے ایک اور صرف ایک درست ہوتا ہے۔ مثلاً 1/3 اور 1/2 کے لیے 1/3 < 1/2۔",
+       "check": [
+        "Rational(1,3) < Rational(1,2)"
+       ]
+      }
+     ],
+     "answer": "Trichotomy property",
+     "book_key": "Trichotomy property"
+    }
+   ],
+   "exercise": "1.1"
+  },
+  {
+   "id": "ex1.1-q6",
+   "kind": "exercise",
+   "number": "6",
+   "page": 11,
+   "question": "Find two rational numbers between: (i) $\\frac{1}{3}$ and $\\frac{1}{4}$ (ii) $3$ and $4$ (iii) $\\frac{3}{5}$ and $\\frac{4}{5}$",
+   "parts": [
+    {
+     "label": "i",
+     "prompt": "$\\frac{1}{4}$ and $\\frac{1}{3}$",
+     "steps": [
+      {
+       "math": "\\frac{\\frac{1}{4}+\\frac{1}{3}}{2} = \\frac{7}{24}",
+       "en": "The average of two numbers lies between them. This is the first rational number.",
+       "ur": "دو اعداد کا اوسط ان کے درمیان ہوتا ہے۔ یہ پہلا ناطق عدد ہے۔",
+       "check": [
+        "(Rational(1,4)+Rational(1,3))/2 == Rational(7,24)"
+       ]
+      },
+      {
+       "math": "\\frac{\\frac{7}{24}+\\frac{1}{3}}{2} = \\frac{5}{16}",
+       "en": "Take the average of \\frac{7}{24} and the larger number to get a second rational number.",
+       "ur": "\\frac{7}{24} اور بڑے عدد کا اوسط لیں، یہ دوسرا ناطق عدد ہے۔",
+       "check": [
+        "(Rational(7,24)+Rational(1,3))/2 == Rational(5,16)"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Check: \\frac{1}{4} < \\frac{7}{24} < \\frac{5}{16} < \\frac{1}{3}.",
+       "ur": "تصدیق: \\frac{1}{4} < \\frac{7}{24} < \\frac{5}{16} < \\frac{1}{3}۔",
+       "check": [
+        "Rational(1,4) < Rational(7,24)",
+        "Rational(7,24) < Rational(5,16)",
+        "Rational(5,16) < Rational(1,3)"
+       ]
+      }
+     ],
+     "answer": "$\\frac{7}{24}$ and $\\frac{5}{16}$"
+    },
+    {
+     "label": "ii",
+     "prompt": "$3$ and $4$",
+     "steps": [
+      {
+       "math": "\\frac{3+4}{2} = \\frac{7}{2}",
+       "en": "The average of two numbers lies between them. This is the first rational number.",
+       "ur": "دو اعداد کا اوسط ان کے درمیان ہوتا ہے۔ یہ پہلا ناطق عدد ہے۔",
+       "check": [
+        "(Rational(3,1)+Rational(4,1))/2 == Rational(7,2)"
+       ]
+      },
+      {
+       "math": "\\frac{\\frac{7}{2}+4}{2} = \\frac{15}{4}",
+       "en": "Take the average of \\frac{7}{2} and the larger number to get a second rational number.",
+       "ur": "\\frac{7}{2} اور بڑے عدد کا اوسط لیں، یہ دوسرا ناطق عدد ہے۔",
+       "check": [
+        "(Rational(7,2)+Rational(4,1))/2 == Rational(15,4)"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Check: 3 < \\frac{7}{2} < \\frac{15}{4} < 4.",
+       "ur": "تصدیق: 3 < \\frac{7}{2} < \\frac{15}{4} < 4۔",
+       "check": [
+        "Rational(3,1) < Rational(7,2)",
+        "Rational(7,2) < Rational(15,4)",
+        "Rational(15,4) < Rational(4,1)"
+       ]
+      }
+     ],
+     "answer": "$\\frac{7}{2}$ and $\\frac{15}{4}$"
+    },
+    {
+     "label": "iii",
+     "prompt": "$\\frac{3}{5}$ and $\\frac{4}{5}$",
+     "steps": [
+      {
+       "math": "\\frac{\\frac{3}{5}+\\frac{4}{5}}{2} = \\frac{7}{10}",
+       "en": "The average of two numbers lies between them. This is the first rational number.",
+       "ur": "دو اعداد کا اوسط ان کے درمیان ہوتا ہے۔ یہ پہلا ناطق عدد ہے۔",
+       "check": [
+        "(Rational(3,5)+Rational(4,5))/2 == Rational(7,10)"
+       ]
+      },
+      {
+       "math": "\\frac{\\frac{7}{10}+\\frac{4}{5}}{2} = \\frac{3}{4}",
+       "en": "Take the average of \\frac{7}{10} and the larger number to get a second rational number.",
+       "ur": "\\frac{7}{10} اور بڑے عدد کا اوسط لیں، یہ دوسرا ناطق عدد ہے۔",
+       "check": [
+        "(Rational(7,10)+Rational(4,5))/2 == Rational(3,4)"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Check: \\frac{3}{5} < \\frac{7}{10} < \\frac{3}{4} < \\frac{4}{5}.",
+       "ur": "تصدیق: \\frac{3}{5} < \\frac{7}{10} < \\frac{3}{4} < \\frac{4}{5}۔",
+       "check": [
+        "Rational(3,5) < Rational(7,10)",
+        "Rational(7,10) < Rational(3,4)",
+        "Rational(3,4) < Rational(4,5)"
+       ]
+      }
+     ],
+     "answer": "$\\frac{7}{10}$ and $\\frac{3}{4}$"
+    }
+   ],
+   "exercise": "1.1"
+  }
+ ]
+}

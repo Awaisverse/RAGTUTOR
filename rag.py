@@ -41,9 +41,13 @@ def normalize(text):
 def chunk_item(item):
     """Yield retrieval chunks: one per part, carrying the item's metadata."""
     base = {k: item.get(k) for k in ("id", "unit", "unit_title", "exercise", "number", "kind", "page")}
+    question = item["question"]
+    # For a multi-part question use only the stem ("Represent the following numbers on the number line:") plus
+    # this part's own prompt. Repeating every part in every chunk would dilute the match for one part.
+    stem = re.split(r"\s*\(i\)\s", question, maxsplit=1)[0] if len(item["parts"]) > 1 else question
     for p in item["parts"]:
-        text = " ".join(filter(None, [item["question"], p.get("prompt", ""), p.get("label", ""), p.get("answer", "")]))
-        yield {**base, "part": p.get("label", ""), "text": text, "question": item["question"]}
+        text = " ".join(filter(None, [stem, p.get("prompt", ""), p.get("label", ""), p.get("answer", "")]))
+        yield {**base, "part": p.get("label", ""), "text": text, "question": question}
 
 
 def load_chunks():
@@ -101,13 +105,12 @@ class Index:
         qe = self._embed_query(query)
         cos = self.E @ qe if qe is not None else np.zeros(len(self.chunks))
 
-        rank_lex = np.argsort(-lex)
-        rank_emb = np.argsort(-cos)
         fused = np.zeros(len(self.chunks))
-        for r, i in enumerate(rank_lex):
+        for r, i in enumerate(np.argsort(-lex)):
             fused[i] += 1.0 / (RRF_K + r + 1)
-        for r, i in enumerate(rank_emb):
-            fused[i] += 1.0 / (RRF_K + r + 1)
+        if qe is not None:   # without an embedding model the dense ranking would be pure noise, so leave it out
+            for r, i in enumerate(np.argsort(-cos)):
+                fused[i] += 1.0 / (RRF_K + r + 1)
 
         order = np.argsort(-fused)[:k]
         out = []

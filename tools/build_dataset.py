@@ -20,6 +20,9 @@ import sympy as sp
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SRC = ROOT / "data" / "src"
 OUT = ROOT / "data" / "book"
+ANSWERS = ROOT / "data" / "answers"
+sys.path.insert(0, str(ROOT))
+from answer_match import answer_ok  # noqa: E402
 
 NS = {name: getattr(sp, name) for name in dir(sp) if not name.startswith("_")}
 NS.update({"e": sp.E, "pi": sp.pi, "R": sp.Rational, "I": sp.I})
@@ -72,18 +75,49 @@ def load(path):
     return mod.UNIT
 
 
+def load_keys(unit_no):
+    """The book's printed answers for a unit (data/answers/unitNN.json), or {} when not transcribed yet."""
+    path = ANSWERS / f"unit{unit_no:02d}.json"
+    return json.loads(path.read_text(encoding="utf-8")).get("exercises", {}) if path.exists() else {}
+
+
+def key_for(keys, item, label):
+    """The printed answer for one part of an exercise question, or None when the book prints none (figures, open answers)."""
+    exercise = re.sub(r"\s+", "", str(item.get("exercise", ""))).lower()
+    entry = keys.get(exercise, {}).get(str(item["number"]))
+    if isinstance(entry, dict):
+        return entry.get(label)
+    if isinstance(entry, str) and not entry.startswith(("figures only", "no printed")) and not label:
+        return entry
+    return None
+
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     report = "--report" in sys.argv
     failures, total_checks, total_items = [], 0, 0
+    key_ok = key_known_errors = 0
     for path in sorted(SRC.glob("unit*.py")):
         unit = load(path)
+        keys = load_keys(unit["unit"])
         ids = set()
         for item in unit["items"]:
             if item["id"] in ids:
                 failures.append(f"{path.name}: duplicate id {item['id']}")
             ids.add(item["id"])
             for part in item["parts"]:
+                if item["kind"] in ("exercise", "review"):
+                    printed = key_for(keys, item, part.get("label", ""))
+                    if printed is not None:
+                        part["book_key"] = printed
+                        if answer_ok(part["answer"], printed):
+                            key_ok += 1
+                        elif part.get("key_note"):
+                            key_known_errors += 1
+                            print(f"  KNOWN KEY ERROR {item['id']} ({part['label']}): ours {part['answer']!r} vs key {printed!r}")
+                        else:
+                            failures.append(f"{item['id']} ({part['label'] or '-'}) DIFFERS FROM THE BOOK'S KEY: "
+                                            f"ours {part['answer']!r} vs key {printed!r}")
                 for i, step in enumerate(part["steps"]):
                     for chk in step.get("check", []):
                         total_checks += 1
@@ -102,7 +136,8 @@ def main():
             for it in unit["items"]:
                 kinds[it["kind"]] = kinds.get(it["kind"], 0) + 1
             print(f"{path.stem}: {unit['title']:<35} {kinds}")
-    print(f"items: {total_items}   math checks: {total_checks}   failed: {len(failures)}")
+    print(f"items: {total_items}   math checks: {total_checks}   answers agreeing with the book's key: {key_ok}   "
+          f"known key errors: {key_known_errors}   failed: {len(failures)}")
     for f in failures:
         print("  FAIL", f)
     sys.exit(1 if failures else 0)
