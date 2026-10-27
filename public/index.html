@@ -40,6 +40,7 @@
   .row { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
   .hit { width: 100%; text-align: left; margin-bottom: 6px; padding: 8px; }
   .hit small { display: block; color: var(--muted); }
+  .hit small.clamp { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; margin-top: 2px; }
   .note { font-size: 13px; color: var(--muted); line-height: 1.5; }
   .badge { font-size: 11px; padding: 2px 7px; border-radius: 99px; background: var(--accent-soft); color: var(--accent); }
   .badge.gen { background: #fef3c7; color: #92400e; }
@@ -765,7 +766,8 @@
       (data.similar || []).forEach((r) => {
         const b = document.createElement("button");
         b.className = "hit";
-        b.innerHTML = `<strong>Similar example, different numbers</strong><small>${escapeHTML(titleOf(r))} · ${escapeHTML(r.question.slice(0, 90))}</small>`;
+        b.innerHTML = `<strong>Similar example, different numbers</strong><small>${escapeHTML(titleOf(r))}</small>`;
+        b.appendChild(renderMixed(Object.assign(document.createElement("small"), { className: "clamp" }), r.question));   // maths rendered, not raw LaTeX
         b.onclick = () => openItem(r.id, "Similar example · different numbers, NOT your question", "gen");
         box.appendChild(b);
       });

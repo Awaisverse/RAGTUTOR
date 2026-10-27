@@ -111,8 +111,18 @@ def item(item_id):
 def similar_examples(question, k=3, klass="9"):
     """Stored questions that are about the same topic. They are NOT answers: their numbers differ from the student's."""
     d = data(klass)
-    hits = d["index"].search(question, k=k)
-    return [{**summary(d["by_id"][h["id"]]), "part": h["part"], "cos": h["cos"], "lex": h["lex"]} for h in hits] if d["index"].is_confident(hits) else []
+    hits = d["index"].search(question, k=k * 3)
+    if not d["index"].is_confident(hits):
+        return []
+    out, seen = [], set()
+    for h in hits:                                     # one entry per stored question: two parts of it are not two examples
+        if h["id"] in seen:
+            continue
+        seen.add(h["id"])
+        out.append({**summary(d["by_id"][h["id"]]), "part": h["part"], "cos": h["cos"], "lex": h["lex"]})
+        if len(out) == k:
+            break
+    return out
 
 
 # ---------- "Exercise 1.2, Q3 (iv)": find that question and ask the student to confirm it ----------

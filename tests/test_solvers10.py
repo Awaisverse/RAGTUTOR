@@ -25,7 +25,7 @@ I = sp.I
 
 def value_of(answer):
     t = solvers10._to_py(answer.replace("$", "").replace(" ", ""))
-    return sp.nsimplify(solvers10._value(t))
+    return sp.expand(solvers10._value(t))           # exact; nsimplify would guess closed forms for numbers like 7*sqrt(194)
 
 
 def same(engine_answer, gold):
@@ -124,6 +124,37 @@ def main():
                 else:
                     s[1] += 1
                     wrong.append(f"NEW system: {text!r} -> {ans} (expected z={z0}, w={w0})")
+    # "If z = <expression>, find (a) Re/Im (b) conjugate (c) modulus (d) inverse": z is worked out first, as typed on a phone
+    import re as _re
+
+    def parts_ok(got, z):
+        a, b, c, d = (p["answer"] for p in got["parts"])
+        m = _re.search(r"Re\}\s*=\s*(.*?),\\ \\operatorname\{Im\}\s*=\s*(.*)\$", a)
+        return (m is not None and same("$" + m.group(1) + "$", sp.re(z)) and same("$" + m.group(2) + "$", sp.im(z))
+                and same(b, sp.conjugate(z)) and same(c, sp.Abs(z)) and same(d, sp.expand(1 / z)))
+
+    for k in range(args.n):
+        p, q = rc(), rc()
+        for kind, text, z in (("given z: p^2/q", f"If z = {ztex(p, True)}² / {ztex(q, True)}, find: (a) Re(z) and Im(z) (b) z̄ (c) |z| (d) z⁻¹",
+                               sp.expand(p ** 2 / q)),
+                              ("given z: p*q", f"If z = {ztex(p, True)}{ztex(q, True)} then find (a) real and imaginary parts (b) conjugate of z "
+                                               f"(c) modulus of z (d) multiplicative inverse of z", sp.expand(p * q))):
+            s = stats.setdefault(kind, [0, 0, 0])
+            got = solvers10.solve(text)
+            if got is None:
+                s[2] += 1
+            elif len(got["parts"]) == 4 and parts_ok(got, z):
+                s[0] += 1
+            else:
+                s[1] += 1
+                wrong.append(f"NEW {kind}: {text!r} -> {[x['answer'] for x in got['parts']]} (z = {z})")
+        check("expression (p)^2/(q)", f"Simplify {ztex(p, True)}^2/{ztex(q, True)}", sp.expand(p ** 2 / q))
+        check("expression (p)^3", f"Simplify {ztex(p, True)}^3", sp.expand(p ** 3))
+
+    # the question from the screenshot, exactly as typed
+    got = solvers10.solve("If z = (3 + i)² / (1 − 2i), find:\n(a) Re(z) and Im(z) (b) z̄ (c) |z| (d) z⁻¹")
+    if not (got and parts_ok(got, sp.expand((3 + I) ** 2 / (1 - 2 * I)))):
+        wrong.append(f"SCREENSHOT question: {got and [x['answer'] for x in got['parts']]}")
     notes.append("B. new numbers, per type:   solved / WRONG / not read")
     for k, (ok, bad, none) in stats.items():
         notes.append(f"     {k:24} {ok:4} {bad:6} {none:6}")

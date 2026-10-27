@@ -15,16 +15,23 @@ from _helpers import P, S, T
 I = sp.I
 
 
+def exact(x):
+    """An exact sympy number. nsimplify only for decimals: on exact numbers it guesses closed forms (it once turned -1358
+    into a product of fractional powers that is merely numerically equal)."""
+    x = sp.sympify(x)
+    return sp.expand(sp.nsimplify(x, rational=True) if x.has(sp.Float) else x)
+
+
 def C(a, b=0):
-    return sp.nsimplify(a) + sp.nsimplify(b) * I
+    return exact(a) + exact(b) * I
 
 
 def _num(x):
-    return sp.latex(sp.nsimplify(x))
+    return sp.latex(exact(x))
 
 
 def ctex(z):
-    z = sp.nsimplify(sp.expand(z))
+    z = exact(z)
     a, b = sp.re(z), sp.im(z)
     if b == 0:
         return _num(a)
@@ -47,7 +54,7 @@ def ctex(z):
 
 
 def py(z):
-    return "(" + sp.sstr(sp.nsimplify(sp.expand(z))) + ")"
+    return "(" + sp.sstr(exact(z)) + ")"
 
 
 def paren(z):
@@ -253,8 +260,8 @@ def p_system(label, a1, b1, c1, a2, b2, c2, prompt_tex):
     """a1 z + b1 w = c1, a2 z + b2 w = c2 with complex coefficients: eliminate z, find w, then z."""
     k = sp.expand(a2 * b1 - a1 * b2)
     rhs = sp.expand(a2 * c1 - a1 * c2)
-    w = sp.nsimplify(sp.expand(rhs / k))
-    z = sp.nsimplify(sp.expand((c1 - b1 * w) / a1))
+    w = exact(sp.radsimp(rhs / k))
+    z = exact(sp.radsimp((c1 - b1 * w) / a1))
     steps = [
         S(rf"{paren(a2)}\,[{paren(a1)}z + {paren(b1)}w] - {paren(a1)}\,[{paren(a2)}z + {paren(b2)}w] = {paren(a2)}{paren(c1)} - {paren(a1)}{paren(c2)}",
           "Multiply equation (i) by the $z$-coefficient of (ii) and (ii) by the $z$-coefficient of (i), then subtract: $z$ cancels.",

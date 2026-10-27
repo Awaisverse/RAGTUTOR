@@ -24,12 +24,17 @@ _ALLOWED = re.compile(r"^[0-9a-z+\-*/().,=\s^]*$")
 _NAMES = {"i", "x", "y", "a", "b", "z", "w", "sqrt"}
 
 
+_SUP_MAP = str.maketrans("⁰¹²³⁴⁵⁶⁷⁸⁹⁻", "0123456789-")
+_SUP = re.compile(r"⁻?[⁰¹²³⁴⁵⁶⁷⁸⁹]+")
+
+
 def _to_py(text):
     """Student text or LaTeX -> python-like text with explicit *, ** and I for i. None if it is not plain maths."""
     s = str(text).replace("$", " ").replace("\\left", "").replace("\\right", "").replace("−", "-").replace("–", "-")
+    s = _SUP.sub(lambda m: "^(" + m.group(0).translate(_SUP_MAP) + ")", s)          # (3+i)² and z⁻¹ as typed on a phone
     s = s.replace("÷", "/").replace("×", "*").replace("\\div", "/").replace("\\times", "*").replace("\\cdot", "*")
+    s = re.sub(r"\\sqrt\s*\{([^{}]*)\}", r"sqrt(\1)", s)       # roots first, so \frac{90\sqrt{113}}{113} can be read
     s = re.sub(r"\\frac\s*\{([^{}]*)\}\s*\{([^{}]*)\}", r"((\1)/(\2))", s)
-    s = re.sub(r"\\sqrt\s*\{([^{}]*)\}", r"sqrt(\1)", s)
     s = re.sub(r"√\s*\(?\s*(-?\s*\d+(?:\.\d+)?)\s*\)?", r"sqrt(\1)", s)
     s = re.sub(r"\^\s*\{([^{}]*)\}", r"**(\1)", s).replace("^", "**").replace("{", "(").replace("}", ")")
     s = re.sub(r"\s+", " ", s).strip().lower()
@@ -54,7 +59,7 @@ def _value(py_text, extra=None):
 
 
 def _complex_const(v):
-    v = sp.nsimplify(sp.expand(v))
+    v = cx.exact(sp.radsimp(v)) if v.has(I) or v.is_number else v
     return v if not v.free_symbols else None
 
 
@@ -150,8 +155,9 @@ def _expression_part(label, py_text, tex_prompt):
     if split:
         a, op, b = split
         za, zb = _complex_const(_value(a)), _complex_const(_value(b))
-        if za is None or zb is None or "**" in a + b:
+        if za is None or zb is None:
             return None
+    if split and "**" not in a + b:
         if op in "+-" and (sp.im(za) == 0 or sp.im(zb) == 0) and not (("(" in a) and ("(" in b)):
             return None                            # "2 + 5i" is one number, not a sum of two: nothing to simplify
         part = cx.p_arith(label, za, zb, op)
@@ -159,7 +165,13 @@ def _expression_part(label, py_text, tex_prompt):
             v = sp.expand({"+": za + zb, "-": za - zb, "*": za * zb, "/": za / zb}[op])
             return cx.p_real_imag(label, tex_prompt, part["steps"], v)
         return part
-    return None
+    try:                                           # anything else built from + - * / and integer powers
+        steps, v = eval_steps(body)
+    except (ValueError, TypeError, sp.SympifyError, ZeroDivisionError):
+        return None
+    if not steps:
+        return None
+    return cx.p_real_imag(label, tex_prompt, steps, v) if _WANT_PARTS[0] else cx.P(label, steps, cx.ans(v), prompt=tex_prompt)
 
 
 _FOUR = ("Since $i^4 = 1$, adding or removing multiples of 4 in the power does not change the value.",
@@ -222,6 +234,133 @@ def _system_part(label, eq1, eq2, tex_prompt):
     if a1 == 0 or sp.expand(a2 * b1 - a1 * b2) == 0:
         return None
     return cx.p_system(label, a1, b1, c1, a2, b2, c2, tex_prompt)
+
+
+# ------------------------------------------------------------------------------------------ any expression, step by step
+
+
+def eval_steps(py_text, depth=0):
+    """Work out a complex expression built from numbers, i, + - * / and integer powers, one operation per step group.
+    -> (steps, value). Raises ValueError for anything else (an unknown, a fractional power, too deep)."""
+    if depth > 8:
+        raise ValueError("expression too deep")
+    body = _strip(py_text)
+    if "(" not in body and "**" not in body:       # a number written as a + bi (2*I, 1 - 2*I, 3/5 + 4/5*I) needs no working
+        v = _complex_const(_value(body))
+        if v is not None:
+            return [], v
+    split = _top_binary(body)
+    if split:
+        a, op, b = split
+        sa, va = eval_steps(a, depth + 1)
+        sb, vb = eval_steps(b, depth + 1)
+        if op == "+":
+            s, v = cx.add(va, vb, 1)
+        elif op == "-":
+            s, v = cx.add(va, vb, -1)
+        elif op == "*":
+            s, v = cx.mul(va, vb)
+        else:
+            s, v = cx.div(va, vb)
+        if op in "+-" and (sp.im(va) == 0 or sp.im(vb) == 0) and not sa and not sb:
+            s = []                                 # "3 + 2i" is just the number: no working to show
+        return sa + sb + s, sp.expand(v)
+    pw = re.fullmatch(r"(.+?)\s*\*\*\s*\(?\s*(-?\d+)\s*\)?", body)
+    if pw and _balanced(pw.group(1)):
+        base, n = pw.group(1), int(pw.group(2))
+        if _strip(base) in ("I", "i"):
+            r, _ = ipow_value(n)
+            return [cx.S(rf"i^{{{n}}} = i^{{{r}}} = {cx.ctex(I ** n)}", *_FOUR, f"I**({n}) == {cx.py(I ** n)}")], sp.expand(I ** n)
+        sb, vb = eval_steps(base, depth + 1)
+        if abs(n) > 6:
+            raise ValueError("power too large to show by hand")
+        steps, v = list(sb), vb
+        if abs(n) == 2:
+            s, v = cx.square(vb)
+            steps += s
+        elif abs(n) > 2:
+            for _ in range(abs(n) - 1):
+                s, v = cx.mul(v, vb)
+                steps += s
+        if n < 0:
+            s, v = cx.recip(v)
+            steps += s
+        if n == 0:
+            return steps + [cx.S(r"(\ldots)^0 = 1", "Any non-zero number to the power 0 is 1.", "صفر کے علاوہ ہر عدد کی طاقت 0 کا جواب 1 ہے۔")], sp.Integer(1)
+        return steps, sp.expand(v)
+    v = _complex_const(_value(body))
+    if v is None:
+        raise ValueError("not a number")
+    return [], v
+
+
+def ipow_value(n):
+    return n % 4, I ** n
+
+
+def _balanced(s):
+    depth = 0
+    for ch in s:
+        depth += ch == "("
+        depth -= ch == ")"
+        if depth < 0:
+            return False
+    return depth == 0
+
+
+_ASKS = [("parts", r"\bre\s*\(\s*z\s*\)|\bim\s*\(\s*z\s*\)|real\s+(and\s+imaginary\s+)?parts?|imaginary\s+parts?"),
+         ("conjugate", r"z̄|\\bar\s*\{?\s*z|\\overline\s*\{?\s*z|conjugate|\bz\s*bar\b"),
+         ("modulus", r"\|\s*z\s*\||modulus|absolute\s+value"),
+         ("multiplicative", r"z\s*\^\s*\(?\s*-\s*1|z⁻¹|multiplicative\s+inverse|\b1\s*/\s*z\b|\binverse\b"),
+         ("additive", r"additive\s+inverse|-\s*z\b"),
+         ("square", r"z\s*\^\s*\(?2\)?|z²")]
+
+
+def _given_z(text):
+    """'If z = (3+i)^2/(1-2i), find (a) Re(z) and Im(z) (b) z-bar (c) |z| (d) z^-1': work out z once, then each part."""
+    m = re.search(r"\bz\s*=\s*", text, re.I)
+    if not m:
+        return None
+    rest = text[m.end():]
+    cut = re.search(r",|\bthen\b|\bfind\b|\bevaluate\b|\bcalculate\b|\(\s*(?:a|i)\s*\)", rest, re.I)
+    expr_text, asks_text = (rest[:cut.start()], rest[cut.start():]) if cut else (rest, "")
+    py_text = _to_py(expr_text.strip().rstrip(".;:"))
+    if not py_text or "=" in py_text:
+        return None
+    pieces = re.split(r"\(\s*([a-h]|i{1,3}|iv|vi{0,3}|ix|x)\s*\)", asks_text, flags=re.I)
+    asks = [(pieces[k].lower(), pieces[k + 1]) for k in range(1, len(pieces) - 1, 2)] or [("", asks_text)]
+    zsteps, z = eval_steps(py_text)
+    if z == 0:
+        return None
+    zt = cx.ctex(z)
+    intro = [cx.T(f"First work out $z$.", "پہلے $z$ معلوم کریں۔")] + zsteps + \
+            [cx.S(rf"z = {zt}", "This is $z$ in the form $a + bi$.", "یہ $z$ کی $a + bi$ صورت ہے۔", f"{py_text} == {cx.py(z)}")]
+    parts = []
+    for lab, ask in asks:
+        kinds = [k for k, rx in _ASKS if re.search(rx, ask, re.I)]
+        if not kinds:
+            return None                            # an ask we do not understand: answer nothing rather than part of it
+        kind = kinds[0]
+        if kind == "parts":
+            p = cx.p_real_imag(lab, ask.strip(), list(intro), z)
+        elif kind == "conjugate":
+            zc = sp.conjugate(z)
+            p = cx.P(lab, intro + [cx.S(rf"\overline{{z}} = \overline{{{zt}}} = {cx.ctex(zc)}", "The conjugate changes the sign of the imaginary part.",
+                                        "مزدوج میں خیالی حصے کی علامت بدل جاتی ہے۔", f"conjugate({cx.py(z)}) == {cx.py(zc)}")], cx.ans(zc), prompt=ask.strip())
+        elif kind == "modulus":
+            q = cx.p_modulus(lab, z)
+            p = cx.P(lab, intro + q["steps"], q["answer"], prompt=ask.strip())
+        elif kind == "multiplicative":
+            q = cx.p_multiplicative_inverse(lab, z)
+            p = cx.P(lab, intro + q["steps"], q["answer"], prompt=ask.strip())
+        elif kind == "additive":
+            q = cx.p_additive_inverse(lab, z)
+            p = cx.P(lab, intro + q["steps"], q["answer"], prompt=ask.strip())
+        else:
+            s2, v2 = cx.square(z)
+            p = cx.P(lab, intro + s2, cx.ans(v2), prompt=ask.strip())
+        parts.append(p)
+    return parts
 
 
 # ------------------------------------------------------------------------------------------ entry point
@@ -287,16 +426,23 @@ def _one(label, text, stem):
 
 def solve(text):
     """-> a solved item for this question, or None when it is not a Class 10 complex-number question the engine knows."""
-    pieces = part_markers(text)
-    stem = pieces[0]
-    texts = [p for p in pieces[1:] if p.strip()] if len(pieces) > 1 else [text]
-    names = labels(len(texts)) if len(texts) > 1 else [""]
-    parts = []
-    for lab, t in zip(names, texts):
-        p = _one(lab, t, stem if len(texts) > 1 else "")
-        if p is None:
-            return None                            # all parts or nothing: a partial answer looks complete
-        parts.append(p)
+    parts = None
+    if re.search(r"\bz\s*=", text) and not re.search(r"\bw\b", text):
+        try:
+            parts = _given_z(text)                 # "If z = ..., find (a) ... (b) ..."
+        except (ValueError, TypeError, sp.SympifyError, ZeroDivisionError, SyntaxError, AttributeError):
+            parts = None
+    if parts is None:
+        pieces = part_markers(text)
+        stem = pieces[0]
+        texts = [p for p in pieces[1:] if p.strip()] if len(pieces) > 1 else [text]
+        names = labels(len(texts)) if len(texts) > 1 else [""]
+        parts = []
+        for lab, t in zip(names, texts):
+            p = _one(lab, t, stem if len(texts) > 1 else "")
+            if p is None:
+                return None                        # all parts or nothing: a partial answer looks complete
+            parts.append(p)
     for p in parts:
         for st in p["steps"]:
             for chk in st.get("check", []):
