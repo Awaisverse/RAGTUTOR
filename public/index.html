@@ -741,10 +741,10 @@
     const btn = $("photo-go");
     btn.disabled = true;
     btn.textContent = "Reading photo…";
-    $("detected").textContent = "Claude is reading the question…";
+    $("detected").textContent = "Reading the question from the photo…";
     try {
       const form = new FormData();
-      form.append("image", f);
+      form.append("image", await shrinkImage(f), "question.jpg");
       const r = await fetch("/api/photo", { method: "POST", body: form });
       const data = await r.json().catch(() => ({}));
       if (!r.ok) {
@@ -765,6 +765,7 @@
         example_only: "could not be solved here (similar examples listed in the results)",
         none: "not recognised",
       }[data.resolution];
+      if (d.question) { $("q").value = d.question; }      // what the vision model read, as LaTeX: the student can edit it and press Find solution
       $("detected").textContent = (where || "Question read") + " · " + how +
         (d.confidence != null ? " · confidence " + Math.round(d.confidence * 100) + "%" : "") +
         (d.notes ? " · " + d.notes : "");
@@ -782,6 +783,22 @@
       btn.textContent = "Read & solve";
     }
   };
+
+  // Hosts such as Vercel reject request bodies over about 4.5 MB and a phone photo is bigger, so the photo is scaled down
+  // (longest side 1600 px, JPEG) before it is sent. The text stays readable at that size.
+  async function shrinkImage(file) {
+    try {
+      const bmp = await createImageBitmap(file);
+      const k = Math.min(1, 1600 / Math.max(bmp.width, bmp.height));
+      const c = document.createElement("canvas");
+      c.width = Math.round(bmp.width * k); c.height = Math.round(bmp.height * k);
+      const g = c.getContext("2d");
+      g.fillStyle = "#fff"; g.fillRect(0, 0, c.width, c.height);      // transparent PNGs would turn black as JPEG
+      g.drawImage(bmp, 0, 0, c.width, c.height);
+      const blob = await new Promise((ok) => c.toBlob(ok, "image/jpeg", 0.88));
+      return blob || file;
+    } catch (e) { return file; }
+  }
 
   // "Failed to fetch" means the browser could not reach the server at all, not that the question was wrong.
   function netMessage(e) {
@@ -806,6 +823,13 @@
 
   // ---------- boot ----------
   (async () => {
+    api("/api/status").then((st) => {
+      if (!st.photo) {
+        $("photo").disabled = true;
+        $("detected").textContent = "Photo reading is not set up on this server. Type the question instead.";
+      }
+      if (!st.model) $("count").title = "Questions the rule engine and the book cannot answer are not solved here (no model is connected).";
+    }).catch(() => {});
     const list = await api("/api/items");
     $("count").textContent = list.length + " solved questions";
     const sel = $("browse");

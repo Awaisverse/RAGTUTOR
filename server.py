@@ -1,21 +1,23 @@
-"""Math tutor server: RAG over the solved book, live solving, and photo-of-question support.
+"""Math tutor web app: the book, the solver engine, and (through a model service) the trained model and photo reading.
 
 Routes
-  GET  /              the whiteboard UI
+  GET  /              the whiteboard UI (public/index.html)
   GET  /api/items     every solved question (summary)
   GET  /api/item/<id> full solution for one question
-  POST /api/ask       {"question": "..."} -> retrieval hits + mode ("book" or "none")
-  POST /api/solve     {"question": "..."} -> the local generator solves it, grounded in retrieved examples
-  POST /api/photo     multipart "image" -> the local vision model reads the photo (exercise, number, part),
-                      then resolves that part from the book or solves it live
+  GET  /api/status    which abilities this deployment has: engine, model, photo
+  POST /api/answer    {"question": "..."} -> the answer to THAT question: book, engine, model or labelled examples
+  POST /api/ask       {"question": "..."} -> retrieval hits only
+  POST /api/solve     {"question": "..."} -> the trained model solves it (needs the model)
+  POST /api/photo     multipart "image" -> the vision model reads the question as LaTeX, then it is answered like typed text
 
-Everything runs locally with Hugging Face models. No API key is used.
-  NO_EMBEDDINGS=1     skip the embedding model (TF-IDF only)
-  GEN_MODEL / GEN_ADAPTER / VISION_MODEL   see local_models.py
+Where the models run
+  MODEL_SERVICE_URL   a hosted service (service/app.py): the Vercel setup, where this app has no GPU and no torch
+  otherwise           local models if models/ holds them (local_models.py), else the engine and book still work alone
 
-Run:  python server.py
+This file imports no torch, numpy or scikit-learn, so it fits in a serverless function.
+Run locally:  python server.py
 """
-import io
+import importlib.util
 import json
 import os
 import pathlib
@@ -29,35 +31,32 @@ sys.path.insert(0, str(ROOT / "tools"))
 sys.path.insert(0, str(ROOT))
 
 import local_models  # noqa: E402
-import modelsolve  # noqa: E402
 import mathtext  # noqa: E402
+import modelsolve  # noqa: E402
 import rag  # noqa: E402
+import remote_models  # noqa: E402
 import solvers  # noqa: E402
-from solvers.common import labels, part_markers  # noqa: E402
-from prompts import READ_PROMPT  # noqa: E402
+import tutor_live  # noqa: E402
+import vertex_models  # noqa: E402
 
-GEN = ROOT / "data" / "generated"
-BOOK = ROOT / "data" / "book"
-MAX_IMAGE_BYTES = 8 * 1024 * 1024
+MAX_IMAGE_BYTES = 4 * 1024 * 1024          # Vercel rejects larger request bodies; the page shrinks photos before sending
 IMAGE_TYPES = {"image/jpeg", "image/png", "image/webp"}
 
-app = Flask(__name__, static_folder=str(ROOT / "static"), static_url_path="/static")
+app = Flask(__name__, static_folder=str(ROOT / "public"), static_url_path="")
 
 
-def load_items():
-    items = []
-    for path in sorted(BOOK.glob("unit*.json")):
-        unit = json.loads(path.read_text(encoding="utf-8"))
-        for it in unit["items"]:
-            it["unit"] = unit["unit"]
-            it["unit_title"] = unit["title"]
-            items.append(it)
-    return items
-
-
-ITEMS = load_items()
+ITEMS = tutor_live.load_items()
 BY_ID = {it["id"]: it for it in ITEMS}
-INDEX = rag.Index(rag.load_chunks(), use_embeddings=os.environ.get("NO_EMBEDDINGS") != "1")
+
+
+def _embeddings_wanted():
+    """The embedding model needs torch: off on Vercel and wherever sentence-transformers is not installed."""
+    if os.environ.get("NO_EMBEDDINGS") == "1" or os.environ.get("VERCEL"):
+        return False
+    return importlib.util.find_spec("sentence_transformers") is not None
+
+
+INDEX = rag.Index(rag.load_chunks(), use_embeddings=_embeddings_wanted())
 
 
 def summary(item):
@@ -68,18 +67,11 @@ def summary(item):
     }
 
 
-def _json_from(text):
-    m = re.search(r"\{.*\}", text, re.S)
-    if not m:
-        raise ValueError("no JSON object in model output")
-    return json.loads(m.group(0))
-
-
 # ---------- basic routes ----------
 
 @app.get("/")
 def index():
-    return send_from_directory(ROOT / "static", "index.html")
+    return send_from_directory(ROOT / "public", "index.html")
 
 
 @app.get("/api/items")
@@ -123,7 +115,7 @@ def resolve(question, focus_part=None):
     if solved:
         return {"mode": "solved", "item": solved, "part_index": 0}
     error = None
-    if local_models.generator_available():             # 3. the trained model (its steps are checked with sympy afterwards)
+    if model_mode():                                   # 3. the model (its steps are checked with sympy afterwards)
         try:
             sol = live_solve(q, focus_part=focus_part)
             return {"mode": "model", "item": sol, "part_index": 0}
@@ -149,65 +141,74 @@ def ask():
     q = (request.get_json(silent=True) or {}).get("question", "")
     results = similar_examples(q)
     exact = any(mathtext.same_question(q, it)[0] for it in ITEMS)
-    return jsonify({"mode": "book" if exact else "none", "results": results, "live_available": local_models.generator_available()})
+    return jsonify({"mode": "book" if exact else "none", "results": results, "live_available": model_mode() is not None})
 
 
-# ---------- live solver ----------
+# ---------- the models: Gemini, a hosted service, or local ----------
 
 
-_EX = {}
+def _backend(kind):
+    """Which backend does `kind` ("model" or "vision") use? MODEL_BACKEND=vertex|service|local forces one; otherwise the
+    first one that is set up, in that order. None means only the engine and the book are available."""
+    forced = os.environ.get("MODEL_BACKEND", "").strip().lower()
+    ready = {"vertex": vertex_models.configured(), "service": remote_models.configured(),
+             "local": local_models.generator_available() if kind == "model" else local_models.vision_available()}
+    if forced:
+        return forced if ready.get(forced) else None
+    return next((name for name in ("vertex", "service", "local") if ready[name]), None)
 
 
-def _example_pool():
-    """Solved book examples, one part each (the shape the model was trained on), with their own TF-IDF index."""
-    if not _EX:
-        items = modelsolve.explode_all(ITEMS)
-        _EX["by_id"] = {it["id"]: it for it in items}
-        _EX["index"] = rag.Index([c for it in items for c in rag.chunk_item(it)], use_embeddings=False)
-    return _EX["index"], _EX["by_id"]
+def model_mode():
+    return _backend("model")
+
+
+def vision_mode():
+    return _backend("vision")
 
 
 def live_solve(question, focus_part=None):
-    """Solve with the trained model: one part at a time, each reply checked with sympy and retried when a check fails."""
-    index, by_id = _example_pool()
-    if focus_part:
-        pieces = part_markers(question)
-        if len(pieces) >= 3 and focus_part in labels(len(pieces) - 1):
-            question = f"{pieces[0]} {pieces[labels(len(pieces) - 1).index(focus_part) + 1]}".strip()
-    sol = modelsolve.solve_question(question, lambda q: modelsolve.examples_text(index, by_id, q), attempts=3, max_new_tokens=2500)
-    if sol is None:
-        raise ValueError("the model did not return a usable solution")
-    sol["unit"] = 0
-    sol["unit_title"] = "Live"
-    GEN.mkdir(parents=True, exist_ok=True)
-    slug = re.sub(r"[^a-z0-9]+", "-", sol.get("id", "solution").lower()).strip("-") or "solution"
-    (GEN / f"{slug}.json").write_text(json.dumps(sol, ensure_ascii=False, indent=1), encoding="utf-8")
-    return sol
+    """Solve with the model: one part at a time, each reply checked with sympy and retried when a check fails."""
+    mode = model_mode()
+    if mode == "vertex":
+        return tutor_live.live_solve(question, focus_part, generate=vertex_models.generate)
+    if mode == "service":
+        return remote_models.solve(question, focus_part)
+    if mode == "local":
+        return tutor_live.live_solve(question, focus_part)
+    raise ValueError("no model is configured")
+
+
+def read_photo(raw, mimetype):
+    mode = vision_mode()
+    if mode == "vertex":
+        return vertex_models.read_photo(raw, mimetype)
+    if mode == "service":
+        return remote_models.read_photo(raw, mimetype)
+    return tutor_live.read_photo(raw)
+
+
+@app.get("/api/status")
+def status():
+    """What this deployment can do, so the page can say so instead of failing."""
+    return jsonify({"engine": True, "model": model_mode(), "photo": vision_mode(), "items": len(ITEMS)})
 
 
 @app.post("/api/solve")
 def solve():
-    if not local_models.generator_available():
-        return jsonify({"error": "Generator model not found. Download it to models/ (see docs/PLAN.md)."}), 503
+    if model_mode() is None:
+        return jsonify({"error": "No model is configured. The rule engine and the book still answer many questions."}), 503
     q = (request.get_json(silent=True) or {}).get("question", "").strip()
     if not q:
         return jsonify({"error": "empty question"}), 400
     try:
         return jsonify(live_solve(q))
     except (ValueError, json.JSONDecodeError) as exc:
-        return jsonify({"error": f"model output was not valid JSON: {exc}"}), 502
-    except Exception as exc:  # API / network errors from the SDK
+        return jsonify({"error": f"the model gave no usable solution: {exc}"}), 502
+    except Exception as exc:
         return jsonify({"error": f"live solver failed: {exc}"}), 502
 
 
 # ---------- photo of a question ----------
-
-
-def read_photo(image_bytes):
-    from PIL import Image
-    img = Image.open(io.BytesIO(image_bytes)).convert("RGB")
-    raw = local_models.read_image(img, READ_PROMPT + "\n\nRead this question photo as instructed.")
-    return _json_from(raw)
 
 
 def _find_by_number(exercise, number):
@@ -240,8 +241,8 @@ def _part_index(item, label):
 
 @app.post("/api/photo")
 def photo():
-    if not local_models.vision_available():
-        return jsonify({"error": "Vision model not found. Download it to models/ (see docs/PLAN.md)."}), 503
+    if vision_mode() is None:
+        return jsonify({"error": "Photo reading is not set up on this server (it needs a vision model)."}), 503
     f = request.files.get("image")
     if not f:
         return jsonify({"error": "no image uploaded (field name must be 'image')"}), 400
@@ -249,11 +250,13 @@ def photo():
         return jsonify({"error": "only JPEG, PNG or WEBP images are accepted"}), 400
     raw = f.read(MAX_IMAGE_BYTES + 1)
     if len(raw) > MAX_IMAGE_BYTES:
-        return jsonify({"error": "image is larger than 8 MB"}), 413
+        return jsonify({"error": "image is larger than 4 MB"}), 413
 
     try:
-        read = read_photo(raw)
+        read = read_photo(raw, f.mimetype)
     except (ValueError, json.JSONDecodeError) as exc:
+        return jsonify({"error": f"could not read the photo: {exc}"}), 502
+    except Exception as exc:
         return jsonify({"error": f"could not read the photo: {exc}"}), 502
 
     if not read.get("readable") or not read.get("question"):
@@ -261,7 +264,7 @@ def photo():
 
     exercise, number = read.get("exercise"), read.get("number")
     part = (read.get("part_requested") or "").strip()
-    detected = {"exercise": exercise, "number": number, "parts": read.get("parts", []),
+    detected = {"exercise": exercise, "number": number, "parts": read.get("parts", []), "question": read.get("question", ""),
                 "part_requested": part, "confidence": read.get("confidence"), "notes": read.get("notes", "")}
 
     # 1) The printed exercise and question number identify a stored question exactly.

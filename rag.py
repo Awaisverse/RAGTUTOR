@@ -4,7 +4,8 @@ Pipeline
   1. Chunk     one chunk per question part (question text + part prompt + final answer).
                Long solutions are not embedded; their steps are returned with the chunk.
   2. Embed     BAAI/bge-small-en-v1.5 from Hugging Face (local, ~130 MB, CPU is fine).
-  3. Lexical   TF-IDF over normalized math text (catches exact symbols like "sqrt", "10^-4").
+  3. Lexical   TF-IDF over normalized math text (catches exact symbols like "sqrt", "10^-4"). Plain Python, so the
+               serverless deployment needs no numpy or scikit-learn; it scores the same as sklearn's TfidfVectorizer.
   4. Fuse      Reciprocal Rank Fusion of the embedding and lexical rankings.
   5. Decide    a match is accepted only if its best cosine similarity or its lexical score
                clears a threshold. Otherwise the caller falls back to live solving, with the
@@ -12,12 +13,11 @@ Pipeline
 """
 import hashlib
 import json
+import math
 import os
 import pathlib
 import re
-
-import numpy as np
-from sklearn.feature_extraction.text import TfidfVectorizer
+from collections import Counter
 
 ROOT = pathlib.Path(__file__).resolve().parent
 BOOK = ROOT / "data" / "book"
@@ -61,21 +61,71 @@ def load_chunks():
     return chunks
 
 
+_WORD = re.compile(r"(?u)\b\w+\b")
+
+
+def _word_terms(doc):
+    """Unigrams and bigrams of the words, as sklearn makes them with ngram_range=(1, 2) and word-boundary tokens."""
+    toks = _WORD.findall(doc.lower())
+    return toks + [a + " " + b for a, b in zip(toks, toks[1:])]
+
+
+def _char_terms(doc):
+    """Character 2-4-grams inside word boundaries, as TfidfVectorizer(analyzer="char_wb", ngram_range=(2, 4))."""
+    out = []
+    for w in re.sub(r"\s\s+", " ", doc.lower()).split():
+        w = " " + w + " "
+        for n in (2, 3, 4):
+            offset = 0
+            out.append(w[offset:offset + n])
+            while offset + n < len(w):
+                offset += 1
+                out.append(w[offset:offset + n])
+            if offset == 0:        # a word shorter than n counts once
+                break
+    return out
+
+
+class _Tfidf:
+    """TF-IDF with smoothed idf and l2 norm, the TfidfVectorizer defaults. Vectors are {term: weight} dicts."""
+
+    def __init__(self, terms_fn, docs):
+        self.terms_fn = terms_fn
+        counts = [Counter(terms_fn(d)) for d in docs]
+        df = Counter(t for c in counts for t in c)
+        n = len(docs)
+        self.idf = {t: math.log((1 + n) / (1 + d)) + 1 for t, d in df.items()}
+        self.docs = [self._weigh(c) for c in counts]
+
+    def _weigh(self, counts):
+        v = {t: c * self.idf[t] for t, c in counts.items() if t in self.idf}     # terms unseen in the corpus are dropped
+        norm = math.sqrt(sum(x * x for x in v.values()))
+        return {t: x / norm for t, x in v.items()} if norm else {}
+
+    def scores(self, query):
+        q = self._weigh(Counter(self.terms_fn(query)))
+        return [sum(w * d.get(t, 0.0) for t, w in q.items()) for d in self.docs]
+
+
+def _ranks(scores):
+    """Indices from best to worst; ties keep the book's order."""
+    return sorted(range(len(scores)), key=lambda i: (-scores[i], i))
+
+
 class Index:
     def __init__(self, chunks, use_embeddings=True):
         self.chunks = chunks or []
         docs = [normalize(c["text"]) for c in self.chunks] or ["empty"]
-        self.tfidf_word = TfidfVectorizer(ngram_range=(1, 2), token_pattern=r"(?u)\b\w+\b")
-        self.tfidf_char = TfidfVectorizer(analyzer="char_wb", ngram_range=(2, 4))
-        self.Xw = self.tfidf_word.fit_transform(docs)
-        self.Xc = self.tfidf_char.fit_transform(docs)
+        self.tfidf_word = _Tfidf(_word_terms, docs)
+        self.tfidf_char = _Tfidf(_char_terms, docs)
         self.model = None
         self.E = None
         if use_embeddings and self.chunks:
             self._load_embeddings(docs)
 
-    # ---- embeddings (Hugging Face model, cached to disk) ----
+    # ---- embeddings (Hugging Face model, cached to disk; needs numpy and sentence-transformers) ----
     def _load_embeddings(self, docs):
+        import numpy as np
         from sentence_transformers import SentenceTransformer
         self.model = SentenceTransformer(EMB_MODEL)
         # cache key = model + chunk text, so switching models or editing an item never reuses stale vectors
@@ -100,24 +150,21 @@ class Index:
         if not self.chunks or not query.strip():
             return []
         qn = normalize(query)
-        lex = 0.5 * (self.Xw @ self.tfidf_word.transform([qn]).T).toarray().ravel() \
-            + 0.5 * (self.Xc @ self.tfidf_char.transform([qn]).T).toarray().ravel()
+        lex = [0.5 * a + 0.5 * b for a, b in zip(self.tfidf_word.scores(qn), self.tfidf_char.scores(qn))]
         qe = self._embed_query(query)
-        cos = self.E @ qe if qe is not None else np.zeros(len(self.chunks))
+        cos = [float(x) for x in self.E @ qe] if qe is not None else [0.0] * len(self.chunks)
 
-        fused = np.zeros(len(self.chunks))
-        for r, i in enumerate(np.argsort(-lex)):
+        fused = [0.0] * len(self.chunks)
+        for r, i in enumerate(_ranks(lex)):
             fused[i] += 1.0 / (RRF_K + r + 1)
         if qe is not None:   # without an embedding model the dense ranking would be pure noise, so leave it out
-            for r, i in enumerate(np.argsort(-cos)):
+            for r, i in enumerate(_ranks(cos)):
                 fused[i] += 1.0 / (RRF_K + r + 1)
 
-        order = np.argsort(-fused)[:k]
         out = []
-        for i in order:
+        for i in _ranks(fused)[:k]:
             c = self.chunks[i]
-            out.append({**c, "lex": round(float(lex[i]), 3), "cos": round(float(cos[i]), 3),
-                        "fused": round(float(fused[i]), 4)})
+            out.append({**c, "lex": round(lex[i], 3), "cos": round(cos[i], 3), "fused": round(fused[i], 4)})
         return out
 
     def is_confident(self, hits):

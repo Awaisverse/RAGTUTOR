@@ -1,0 +1,9 @@
+# The hosted model service (service/app.py): the only place torch and the models are needed.
+# Pinned to the versions the adapter was trained and evaluated with on Kaggle, so a rebuild behaves the same.
+flask>=3.0,<4
+sympy==1.14.0
+pillow
+torch
+transformers>=4.45
+peft
+accelerate

@@ -4,11 +4,15 @@
              GEN_ADAPTER (optional LoRA folder produced by train/colab_train.ipynb)
   Vision     VISION_MODEL (default models/Qwen2-VL-2B-Instruct)
 
+Each of the three settings is a local folder or a Hugging Face Hub id ("owner/name"). A Hub id is downloaded on first
+use and cached, which is how the hosted model service gets the trained adapter without retraining or copying files.
+
 Models load lazily on first use and stay in memory. The GPU is used when torch sees one,
 otherwise the CPU is used (slow for the generator, but it works).
 """
 import os
 import pathlib
+import re
 
 ROOT = pathlib.Path(__file__).resolve().parent
 GEN_MODEL = os.environ.get("GEN_MODEL", str(ROOT / "models" / "Qwen2.5-Math-1.5B-Instruct"))
@@ -27,8 +31,16 @@ def _device_and_dtype():
     return "cpu", torch.bfloat16
 
 
+def _is_hub_id(value):
+    """'owner/name' that is not a path on this machine."""
+    v = str(value)
+    return bool(re.fullmatch(r"[\w.-]+/[\w.-]+", v)) and not v.startswith(("models/", "./", "../")) and not pathlib.Path(v).exists()
+
+
 def _has_weights(folder):
-    """A model folder counts only when its weight files are complete (not a partial download)."""
+    """A model folder counts only when its weight files are complete (not a partial download). A Hub id counts as available."""
+    if _is_hub_id(folder):
+        return True
     p = pathlib.Path(folder)
     return p.is_dir() and any(p.glob("*.safetensors")) and (p / "config.json").exists()
 
@@ -50,7 +62,7 @@ def _load_generator():
     device, dtype = _device_and_dtype()
     tok = AutoTokenizer.from_pretrained(GEN_MODEL)
     model = AutoModelForCausalLM.from_pretrained(GEN_MODEL, dtype=dtype)
-    if GEN_ADAPTER and pathlib.Path(GEN_ADAPTER).exists():
+    if GEN_ADAPTER and (pathlib.Path(GEN_ADAPTER).exists() or _is_hub_id(GEN_ADAPTER)):
         from peft import PeftModel
         model = PeftModel.from_pretrained(model, GEN_ADAPTER)
         model = model.merge_and_unload()
