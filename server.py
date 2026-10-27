@@ -36,6 +36,7 @@ import modelsolve  # noqa: E402
 import rag  # noqa: E402
 import remote_models  # noqa: E402
 import solvers  # noqa: E402
+import solvers10  # noqa: E402
 import tutor_live  # noqa: E402
 import vertex_models  # noqa: E402
 
@@ -45,8 +46,9 @@ IMAGE_TYPES = {"image/jpeg", "image/png", "image/webp"}
 app = Flask(__name__, static_folder=str(ROOT / "public"), static_url_path="")
 
 
-ITEMS = tutor_live.load_items()
-BY_ID = {it["id"]: it for it in ITEMS}
+CLASSES = ("9", "10")
+ENGINES = {"9": solvers.solve, "10": solvers10.solve}      # each class has its own engine: Class 9's would read i as an unknown
+_DATA = {}
 
 
 def _embeddings_wanted():
@@ -56,7 +58,26 @@ def _embeddings_wanted():
     return importlib.util.find_spec("sentence_transformers") is not None
 
 
-INDEX = rag.Index(rag.load_chunks(), use_embeddings=_embeddings_wanted())
+def data(klass="9"):
+    """The book of one class: its items, an id lookup and its search index (built on first use)."""
+    k = str(klass) if str(klass) in CLASSES else "9"
+    if k not in _DATA:
+        items = tutor_live.load_items(k)
+        _DATA[k] = {"items": items, "by_id": {it["id"]: it for it in items},
+                    "index": rag.Index([c for it in items for c in rag.chunk_item(it)], use_embeddings=_embeddings_wanted())}
+    return _DATA[k]
+
+
+def _klass():
+    """The class a request is about: ?class=10 or {"class": 10}; Class 9 by default."""
+    body = request.get_json(silent=True) if request.is_json else None
+    k = str((body or {}).get("class") or request.args.get("class") or request.form.get("class") or "9")
+    return k if k in CLASSES else "9"
+
+
+ITEMS = data("9")["items"]
+BY_ID = data("9")["by_id"]
+INDEX = data("9")["index"]
 
 
 def summary(item):
@@ -76,21 +97,74 @@ def index():
 
 @app.get("/api/items")
 def items():
-    return jsonify([summary(it) for it in ITEMS])
+    return jsonify([summary(it) for it in data(_klass())["items"]])
 
 
 @app.get("/api/item/<item_id>")
 def item(item_id):
-    it = BY_ID.get(item_id)
+    it = data(_klass())["by_id"].get(item_id) or next((data(k)["by_id"][item_id] for k in CLASSES if item_id in data(k)["by_id"]), None)
     if not it:
         return jsonify({"error": "not found"}), 404
     return jsonify(it)
 
 
-def similar_examples(question, k=3):
+def similar_examples(question, k=3, klass="9"):
     """Stored questions that are about the same topic. They are NOT answers: their numbers differ from the student's."""
-    hits = INDEX.search(question, k=k)
-    return [{**summary(BY_ID[h["id"]]), "part": h["part"], "cos": h["cos"], "lex": h["lex"]} for h in hits] if INDEX.is_confident(hits) else []
+    d = data(klass)
+    hits = d["index"].search(question, k=k)
+    return [{**summary(d["by_id"][h["id"]]), "part": h["part"], "cos": h["cos"], "lex": h["lex"]} for h in hits] if d["index"].is_confident(hits) else []
+
+
+# ---------- "Exercise 1.2, Q3 (iv)": find that question and ask the student to confirm it ----------
+
+ROMAN = ["i", "ii", "iii", "iv", "v", "vi", "vii", "viii", "ix", "x", "xi", "xii"]
+
+
+def parse_reference(text):
+    """'Exercise 1.2 Q3 (iv)', 'ex 1.2 question 3 part iv', 'Review exercise 1 Q5' -> {"exercise", "number", "part"} or None.
+    Only when the text is essentially a reference: a question with its own numbers is not one."""
+    t = str(text).lower().strip()
+    ex = re.search(r"\b(?:exercise|ex)\s*\.?\s*(?:no\.?\s*)?(\d+\.\d+)", t)
+    rev = re.search(r"\breview\s*(?:exercise|ex)?\s*\.?\s*(\d+)", t)
+    q = re.search(r"\b(?:q|qno|question)\s*\.?\s*(?:no\.?\s*)?(\d+)", t)
+    if not (ex or rev) or not q:
+        return None
+    part = re.search(r"\(\s*([ivx]+|[a-h]|\d+)\s*\)|\bpart\s*\(?\s*([ivx]+|[a-h]|\d+)\s*\)?", t[q.end():])
+    label = (part.group(1) or part.group(2)) if part else ""
+    if label.isdigit():
+        label = ROMAN[int(label) - 1] if 0 < int(label) <= len(ROMAN) else label
+    rest = t
+    for m in (ex or rev, q, part):
+        if m is not None:
+            rest = rest.replace(m.group(0), " ")
+    if re.search(r"[0-9=+*/^]", rest):                 # more maths than a reference: it is a real question
+        return None
+    return {"exercise": ex.group(1) if ex else f"Review {rev.group(1)}", "number": q.group(1), "part": label}
+
+
+def lookup_reference(ref, klass="9"):
+    """-> {"mode": "confirm", item cut to the part} or {"mode": "ref_error", "message"} saying what does exist."""
+    items = [it for it in data(klass)["items"] if it["kind"] in ("exercise", "review")]
+    exercises = sorted({it.get("exercise") for it in items if it.get("exercise")}, key=str)
+    wanted = _norm_exercise(ref["exercise"])
+    in_ex = [it for it in items if _norm_exercise(it.get("exercise")) == wanted]
+    if not in_ex:
+        return {"mode": "ref_error", "message": f"Class {klass} has no Exercise {ref['exercise']} solved here yet. "
+                                                f"Available: {', '.join(exercises) or 'none'}."}
+    it = next((x for x in in_ex if str(x["number"]) == str(ref["number"])), None)
+    if it is None:
+        nums = ", ".join(sorted({str(x["number"]) for x in in_ex}, key=lambda n: int(n) if n.isdigit() else 0))
+        return {"mode": "ref_error", "message": f"Exercise {ref['exercise']} has questions {nums}; there is no question {ref['number']}."}
+    if ref["part"]:
+        idx = _part_index(it, ref["part"])
+        if idx is None:
+            labels_ = ", ".join(f"({p.get('label')})" for p in it["parts"] if p.get("label"))
+            return {"mode": "ref_error", "message": f"Exercise {ref['exercise']}, question {ref['number']} has parts {labels_}; there is no part ({ref['part']})."}
+        shown = only_part(it, idx)
+    else:
+        shown = it
+    return {"mode": "confirm", "item": shown, "part_index": 0, "ref": ref,
+            "message": "Is this the question you are asking?"}
 
 
 def only_part(item, index):
@@ -103,25 +177,29 @@ def only_part(item, index):
     return {**cut, "id": item["id"], "part_label": label}
 
 
-def resolve(question, focus_part=None):
-    """Answer THIS question. Order: a stored solution only if it is the same question, then the solver engine, then the
-    trained model, and otherwise a clearly labelled similar example that is never presented as the answer."""
+def resolve(question, focus_part=None, klass="9"):
+    """Answer THIS question. Order: an exercise reference (shown for confirmation), a stored solution only if it is the same
+    question, then the class's solver engine, then the model, and otherwise a labelled similar example, never as the answer."""
     q = question.strip()
-    for it in ITEMS:                                   # 1. exactly a stored question (same numbers, same instruction)
+    klass = str(klass) if str(klass) in CLASSES else "9"
+    ref = parse_reference(q)
+    if ref:
+        return lookup_reference(ref, klass)
+    for it in data(klass)["items"]:                                   # 1. exactly a stored question (same numbers, same instruction)
         same, part = mathtext.same_question(q, it)
         if same:                                       # a part asked alone is answered alone; the whole question shows every part
             return {"mode": "book", "item": only_part(it, part), "part_index": 0}
-    solved = solvers.solve(q)                          # 2. the solver engine: reads the numbers and solves this question
+    solved = ENGINES[klass](q)                         # 2. the solver engine: reads the numbers and solves this question
     if solved:
         return {"mode": "solved", "item": solved, "part_index": 0}
     error = None
     if model_mode():                                   # 3. the model (its steps are checked with sympy afterwards)
         try:
-            sol = live_solve(q, focus_part=focus_part)
+            sol = live_solve(q, focus_part=focus_part, klass=klass)
             return {"mode": "model", "item": sol, "part_index": 0}
         except Exception as exc:
             error = str(exc)
-    similar = similar_examples(q)                      # 4. nothing could solve it: show related examples, labelled as such
+    similar = similar_examples(q, klass=klass)         # 4. nothing could solve it: show related examples, labelled as such
     return {"mode": "example_only" if similar else "none", "similar": similar, "error": error,
             "message": "I could not solve this exact question here. The examples below are about the same topic but use different numbers, "
                        "so they are not the answer to your question." if similar else "I could not recognise this question."}
@@ -132,15 +210,22 @@ def answer():
     q = (request.get_json(silent=True) or {}).get("question", "")
     if not q.strip():
         return jsonify({"error": "empty question"}), 400
-    return jsonify(resolve(q))
+    if len(q) > 2000:
+        return jsonify({"error": "the question is too long (2000 characters at most)"}), 400
+    try:
+        return jsonify(resolve(q, klass=_klass()))
+    except Exception as exc:                            # never a bare 500: say what failed
+        app.logger.exception("answer failed")
+        return jsonify({"mode": "none", "error": str(exc), "message": "Something went wrong while solving this question. Please rephrase it or try again."})
 
 
 @app.post("/api/ask")
 def ask():
     """Search only: which stored questions are related. 'book' means one of them is exactly this question."""
     q = (request.get_json(silent=True) or {}).get("question", "")
-    results = similar_examples(q)
-    exact = any(mathtext.same_question(q, it)[0] for it in ITEMS)
+    klass = _klass()
+    results = similar_examples(q, klass=klass)
+    exact = any(mathtext.same_question(q, it)[0] for it in data(klass)["items"])
     return jsonify({"mode": "book" if exact else "none", "results": results, "live_available": model_mode() is not None})
 
 
@@ -166,15 +251,15 @@ def vision_mode():
     return _backend("vision")
 
 
-def live_solve(question, focus_part=None):
+def live_solve(question, focus_part=None, klass="9"):
     """Solve with the model: one part at a time, each reply checked with sympy and retried when a check fails."""
     mode = model_mode()
     if mode == "vertex":
-        return tutor_live.live_solve(question, focus_part, generate=vertex_models.generate)
+        return tutor_live.live_solve(question, focus_part, generate=vertex_models.generate, klass=klass)
     if mode == "service":
         return remote_models.solve(question, focus_part)
     if mode == "local":
-        return tutor_live.live_solve(question, focus_part)
+        return tutor_live.live_solve(question, focus_part, klass=klass)
     raise ValueError("no model is configured")
 
 
@@ -190,7 +275,8 @@ def read_photo(raw, mimetype):
 @app.get("/api/status")
 def status():
     """What this deployment can do, so the page can say so instead of failing."""
-    return jsonify({"engine": True, "model": model_mode(), "photo": vision_mode(), "items": len(ITEMS)})
+    return jsonify({"engine": True, "model": model_mode(), "photo": vision_mode(), "items": len(ITEMS),
+                    "classes": {k: len(data(k)["items"]) for k in CLASSES}})
 
 
 @app.post("/api/solve")
@@ -211,12 +297,12 @@ def solve():
 # ---------- photo of a question ----------
 
 
-def _find_by_number(exercise, number):
+def _find_by_number(exercise, number, klass="9"):
     """Exact lookup of a printed exercise question, e.g. exercise 1.3, question 2."""
     if number is None:
         return None
     wanted = _norm_exercise(exercise) if exercise else None
-    for it in ITEMS:
+    for it in data(klass)["items"]:
         if it["kind"] not in ("exercise", "review"):
             continue
         if str(it.get("number")) == str(number) and (wanted is None or _norm_exercise(it.get("exercise")) == wanted):
@@ -268,7 +354,7 @@ def photo():
                 "part_requested": part, "confidence": read.get("confidence"), "notes": read.get("notes", "")}
 
     # 1) The printed exercise and question number identify a stored question exactly.
-    book = _find_by_number(exercise, number)
+    book = _find_by_number(exercise, number, _klass())
     if book is not None:
         idx = _part_index(book, part)
         if idx is None:
@@ -281,7 +367,7 @@ def photo():
 
     # 2) Otherwise answer the question that was read: stored solution only if it is the same question, then the solver
     #    engine, then the model. A merely similar example is returned as such, never as the answer.
-    res = resolve(read["question"], focus_part=part or None)
+    res = resolve(read["question"], focus_part=part or None, klass=_klass())
     if res["mode"] in ("book", "solved", "model"):
         item = res["item"]
         idx = res.get("part_index", 0)

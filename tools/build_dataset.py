@@ -18,9 +18,12 @@ import sys
 import sympy as sp
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-SRC = ROOT / "data" / "src"
-OUT = ROOT / "data" / "book"
-ANSWERS = ROOT / "data" / "answers"
+# --class 10 builds Class 10 (data/src10 -> data/book10, key data/answers10); the default is Class 9
+KLASS = sys.argv[sys.argv.index("--class") + 1] if "--class" in sys.argv else "9"
+SUFFIX = "" if KLASS == "9" else KLASS
+SRC = ROOT / "data" / f"src{SUFFIX}"
+OUT = ROOT / "data" / f"book{SUFFIX}"
+ANSWERS = ROOT / "data" / f"answers{SUFFIX}"
 sys.path.insert(0, str(ROOT))
 from answer_match import answer_ok  # noqa: E402
 
@@ -70,7 +73,9 @@ def verify(expr):
 def load(path):
     spec = importlib.util.spec_from_file_location(path.stem, path)
     mod = importlib.util.module_from_spec(spec)
-    sys.path.insert(0, str(SRC))
+    for folder in (ROOT / "data" / "src", SRC):          # the shared step helpers live in data/src
+        if str(folder) not in sys.path:
+            sys.path.insert(0, str(folder))
     spec.loader.exec_module(mod)
     return mod.UNIT
 

@@ -82,6 +82,9 @@
   @keyframes nudge { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(7px); } }
   @media (max-width: 800px) { .step { grid-template-columns: minmax(0, 1fr); } .bubble::before { display: none; } }
   @media (prefers-reduced-motion: reduce) { .ptr, .step .go, .step.current .katex .hl, .step.current .answer, .step.new .work { animation: none; } }
+  .confirm { border: 1px solid var(--accent); border-radius: 10px; padding: 10px; background: var(--accent-soft); margin-bottom: 8px; }
+  .confirm .qtext { margin: 8px 0 12px; font-size: 18px; }
+  .confirm strong { font-size: 18px; }
   .controls { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
   .counter { color: var(--muted); font-size: 13px; margin-left: auto; }
   #progress { height: 4px; background: var(--line); border-radius: 4px; overflow: hidden; }
@@ -98,7 +101,11 @@
 </head>
 <body>
 <header>
-  <h1>Math Tutor · Class 9</h1>
+  <h1>Math Tutor · Class <span id="klabel">9</span></h1>
+  <span class="tabs" id="klass" role="group" aria-label="Select your class">
+    <button data-klass="9" class="on">Class 9</button>
+    <button data-klass="10">Class 10</button>
+  </span>
   <span class="sub">Punjab textbook 2026 · Mathematics</span>
   <span class="badge" id="count" style="margin-left:auto"></span>
 </header>
@@ -181,9 +188,16 @@
   const $ = (id) => document.getElementById(id);
 
   // ---------- API ----------
+  // the class the student picked; every request carries it (?class= on GET, "class" in POST bodies)
+  let klass = "9";
+  try { const saved = localStorage.getItem("klass"); if (saved === "9" || saved === "10") klass = saved; } catch (e) {}
+  const urlClass = new URLSearchParams(location.search).get("class");
+  if (urlClass === "9" || urlClass === "10") klass = urlClass;
+
   async function api(path, body) {
-    const opt = body === undefined ? {} : { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) };
-    const r = await fetch(path, opt);
+    const opt = body === undefined ? {} : { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ...body, class: klass }) };
+    const url = body === undefined ? path + (path.includes("?") ? "&" : "?") + "class=" + klass : path;
+    const r = await fetch(url, opt);
     const data = await r.json().catch(() => ({}));
     if (!r.ok) throw new Error(data.error || ("HTTP " + r.status));
     return data;
@@ -703,6 +717,39 @@
   function showAnswer(data) {
     const box = $("results");
     box.innerHTML = "";
+    if (data.mode === "confirm") {                 // "Exercise 1.2 Q3 (iv)": show the question and ask before solving it
+      const card = document.createElement("div");
+      card.className = "confirm";
+      const head = document.createElement("strong");
+      head.textContent = data.message || "Is this the question you are asking?";
+      card.appendChild(head);
+      const where = document.createElement("div");
+      where.className = "note";
+      where.textContent = titleOf(data.item);
+      card.appendChild(where);
+      card.appendChild(renderMixed(Object.assign(document.createElement("div"), { className: "qtext" }), data.item.question || ""));
+      const row = document.createElement("div");
+      row.className = "row";
+      const yes = Object.assign(document.createElement("button"), { className: "primary", textContent: "Yes, solve it" });
+      yes.onclick = () => { box.innerHTML = ""; note(box, "The book's checked solution for this question."); showItem(data.item, 0, "From the book · " + titleOf(data.item)); };
+      const no = Object.assign(document.createElement("button"), { textContent: "No, I'll type my question" });
+      no.onclick = () => { box.innerHTML = ""; note(box, "Type the question with its numbers, then press Find solution."); $("q").focus(); };
+      row.appendChild(yes); row.appendChild(no);
+      card.appendChild(row);
+      // the question goes on the board, where the student is looking; the side panel only points to it
+      stopPlay();
+      $("cvwrap").style.display = "none";
+      $("title").innerHTML = titleOf(data.item);
+      setBadge("Confirm the question", "");
+      $("qtext").textContent = "";
+      $("parts").innerHTML = "";
+      $("counter").textContent = "";
+      $("math").innerHTML = "";
+      $("math").appendChild(card);
+      note(box, "Check the question on the board, then choose Yes or No.");
+      return;
+    }
+    if (data.mode === "ref_error") { note(box, data.message); return; }
     if (data.mode === "book") {
       note(box, "This is a question from the book, so the book's checked solution is shown.");
       showItem(data.item, data.part_index, "From the book · same question");
@@ -745,6 +792,7 @@
     try {
       const form = new FormData();
       form.append("image", await shrinkImage(f), "question.jpg");
+      form.append("class", klass);
       const r = await fetch("/api/photo", { method: "POST", body: form });
       const data = await r.json().catch(() => ({}));
       if (!r.ok) {
@@ -821,6 +869,38 @@
 
   function escapeHTML(s) { return String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c])); }
 
+  // ---------- class ----------
+  const PLACEHOLDER = {
+    "9": "e.g. Rationalize 3/(sqrt5 - sqrt3)   or   Exercise 1.2 Q3 (iv)   or   convert 6.6 x 10^-5",
+    "10": "e.g. (3-5i) ÷ (2-4i)   or   Exercise 1.4 Q2 (iii)   or   find x and y: (2+i)x + (1-2i)y = 3+4i",
+  };
+
+  async function loadClass() {
+    $("klabel").textContent = klass;
+    document.querySelectorAll("[data-klass]").forEach((b) => b.classList.toggle("on", b.dataset.klass === klass));
+    $("q").placeholder = PLACEHOLDER[klass];
+    const list = await api("/api/items");
+    $("count").textContent = list.length + " solved questions";
+    const sel = $("browse");
+    sel.innerHTML = '<option value="">— choose —</option>';
+    list.forEach((it) => {
+      const o = document.createElement("option");
+      o.value = it.id;
+      o.textContent = titleOf(it) + " · " + it.question.replace(/\$/g, "").slice(0, 40);
+      sel.appendChild(o);
+    });
+    return list;
+  }
+
+  document.querySelectorAll("[data-klass]").forEach((b) => b.onclick = async () => {
+    if (b.dataset.klass === klass) return;
+    klass = b.dataset.klass;
+    try { localStorage.setItem("klass", klass); } catch (e) {}
+    $("results").innerHTML = '<div class="empty">Ask something to see matches.</div>';
+    const list = await loadClass().catch((e) => { $("results").innerHTML = `<div class="note">${escapeHTML(netMessage(e))}</div>`; return []; });
+    if (list.length) { $("browse").value = list[0].id; openItem(list[0].id, "From the book"); }
+  });
+
   // ---------- boot ----------
   (async () => {
     api("/api/status").then((st) => {
@@ -830,16 +910,7 @@
       }
       if (!st.model) $("count").title = "Questions the rule engine and the book cannot answer are not solved here (no model is connected).";
     }).catch(() => {});
-    const list = await api("/api/items");
-    $("count").textContent = list.length + " solved questions";
-    const sel = $("browse");
-    sel.innerHTML = '<option value="">— choose —</option>';
-    list.forEach((it) => {
-      const o = document.createElement("option");
-      o.value = it.id;
-      o.textContent = titleOf(it) + " · " + it.question.slice(0, 40);
-      sel.appendChild(o);
-    });
+    const list = await loadClass();
     // a link can carry the question: /?ask=Rationalize 3/(2+sqrt5)&step=3&lang=both
     const qs = new URLSearchParams(location.search);
     if (qs.get("lang")) { const lb = document.querySelector(`[data-lang="${qs.get("lang")}"]`); if (lb) lb.click(); }
@@ -848,7 +919,7 @@
       $("results").innerHTML = '<div class="note">Working on your question…</div>';
       showAnswer(await api("/api/answer", { question: qs.get("ask") }));
       if (qs.get("step")) goto(+qs.get("step") - 1, false);
-    } else if (list.length) { sel.value = list[0].id; openItem(list[0].id, "From the book"); }
+    } else if (list.length) { $("browse").value = list[0].id; openItem(list[0].id, "From the book"); }
   })().catch((e) => { $("results").innerHTML = `<div class="note">Could not load: ${escapeHTML(e.message)}</div>`; });
 })();
 </script>

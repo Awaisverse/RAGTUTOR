@@ -1,0 +1,3923 @@
+{
+ "unit": 1,
+ "title": "Complex Numbers",
+ "title_ur": "مختلط اعداد",
+ "class": 10,
+ "items": [
+  {
+   "id": "c10-ex1.1-q1",
+   "kind": "exercise",
+   "number": "1",
+   "page": 0,
+   "question": "Simplify the following: (i) $i^5$ (ii) $i^{16}$ (iii) $(-i)^{-19}$ (iv) $27i^{-26}$ (v) $i^{11}+i^5$ (vi) $(i^4+i^3+i^2+i)^2$ (vii) $\\left(\\frac{i^8}{i^5}\\right)^{-5}$ (viii) $i^{13}\\times i^{29}$",
+   "parts": [
+    {
+     "label": "i",
+     "prompt": "$i^{5}$",
+     "steps": [
+      {
+       "math": "i^{5} = i^{5}\\cdot (i^4)^{-1} = i^{1}",
+       "en": "Since $i^4 = 1$, adding or removing multiples of 4 in the power does not change the value.",
+       "ur": "چونکہ $i^4 = 1$، طاقت میں 4 کے مضرب جمع یا تفریق کرنے سے قیمت نہیں بدلتی۔",
+       "check": [
+        "1*I**(5) == 1*I**1"
+       ]
+      },
+      {
+       "math": "= i",
+       "en": "Use $i^1 = i,\\ i^2 = -1,\\ i^3 = -i,\\ i^4 = 1$.",
+       "ur": "$i^1 = i,\\ i^2 = -1,\\ i^3 = -i,\\ i^4 = 1$ استعمال کریں۔",
+       "check": [
+        "1*I**(5) == (I)"
+       ]
+      }
+     ],
+     "answer": "$i$",
+     "book_key": "i"
+    },
+    {
+     "label": "ii",
+     "prompt": "$i^{16}$",
+     "steps": [
+      {
+       "math": "i^{16} = i^{16}\\cdot (i^4)^{-4} = i^{0}",
+       "en": "Since $i^4 = 1$, adding or removing multiples of 4 in the power does not change the value.",
+       "ur": "چونکہ $i^4 = 1$، طاقت میں 4 کے مضرب جمع یا تفریق کرنے سے قیمت نہیں بدلتی۔",
+       "check": [
+        "1*I**(16) == 1*I**0"
+       ]
+      },
+      {
+       "math": "= 1",
+       "en": "Use $i^1 = i,\\ i^2 = -1,\\ i^3 = -i,\\ i^4 = 1$.",
+       "ur": "$i^1 = i,\\ i^2 = -1,\\ i^3 = -i,\\ i^4 = 1$ استعمال کریں۔",
+       "check": [
+        "1*I**(16) == (1)"
+       ]
+      }
+     ],
+     "answer": "$1$",
+     "book_key": "1"
+    },
+    {
+     "label": "iii",
+     "prompt": "$(-i)^{-19}$",
+     "steps": [
+      {
+       "math": "(-i)^{-19} = (-1)^{-19}\\, i^{-19} = -\\,i^{-19}",
+       "en": "Split the power over the product: $(-1)^{-19} = -1$ because the power is odd.",
+       "ur": "حاصل ضرب پر طاقت تقسیم کریں: $(-1)^{-19} = -1$ کیونکہ طاقت طاق ہے۔",
+       "check": [
+        "(-I)**(-19) == -I**(-19)"
+       ]
+      },
+      {
+       "math": "= -\\,i^{-19+20} = -\\,i^{1} = -i",
+       "en": "Since $i^4 = 1$, adding or removing multiples of 4 in the power does not change the value.",
+       "ur": "چونکہ $i^4 = 1$، طاقت میں 4 کے مضرب جمع یا تفریق کرنے سے قیمت نہیں بدلتی۔",
+       "check": [
+        "-I**(-19) == -I"
+       ]
+      }
+     ],
+     "answer": "$-i$",
+     "book_key": "-i"
+    },
+    {
+     "label": "iv",
+     "prompt": "$27i^{-26}$",
+     "steps": [
+      {
+       "math": "27i^{-26} = 27i^{-26}\\cdot (i^4)^{7} = 27i^{2}",
+       "en": "Since $i^4 = 1$, adding or removing multiples of 4 in the power does not change the value.",
+       "ur": "چونکہ $i^4 = 1$، طاقت میں 4 کے مضرب جمع یا تفریق کرنے سے قیمت نہیں بدلتی۔",
+       "check": [
+        "27*I**(-26) == 27*I**2"
+       ]
+      },
+      {
+       "math": "= -27",
+       "en": "Use $i^1 = i,\\ i^2 = -1,\\ i^3 = -i,\\ i^4 = 1$.",
+       "ur": "$i^1 = i,\\ i^2 = -1,\\ i^3 = -i,\\ i^4 = 1$ استعمال کریں۔",
+       "check": [
+        "27*I**(-26) == (-27)"
+       ]
+      }
+     ],
+     "answer": "$-27$",
+     "book_key": "-27"
+    },
+    {
+     "label": "v",
+     "prompt": "$i^{11} + i^{5}$",
+     "steps": [
+      {
+       "math": "i^{11} + i^{5} = i^{3} + i^{1}",
+       "en": "Since $i^4 = 1$, adding or removing multiples of 4 in the power does not change the value.",
+       "ur": "چونکہ $i^4 = 1$، طاقت میں 4 کے مضرب جمع یا تفریق کرنے سے قیمت نہیں بدلتی۔",
+       "check": [
+        "I**11 + I**5 == I**3 + I"
+       ]
+      },
+      {
+       "math": "= -i + i = 0",
+       "en": "Use $i^1 = i,\\ i^2 = -1,\\ i^3 = -i,\\ i^4 = 1$.",
+       "ur": "$i^1 = i,\\ i^2 = -1,\\ i^3 = -i,\\ i^4 = 1$ استعمال کریں۔",
+       "check": [
+        "I**3 + I == 0"
+       ]
+      }
+     ],
+     "answer": "$0$",
+     "book_key": "0"
+    },
+    {
+     "label": "vi",
+     "prompt": "$(i^4 + i^3 + i^2 + i)^2$",
+     "steps": [
+      {
+       "math": "(i^4 + i^3 + i^2 + i)^2 = (1 - i - 1 + i)^2",
+       "en": "Use $i^1 = i,\\ i^2 = -1,\\ i^3 = -i,\\ i^4 = 1$.",
+       "ur": "$i^1 = i,\\ i^2 = -1,\\ i^3 = -i,\\ i^4 = 1$ استعمال کریں۔",
+       "check": [
+        "I**4 + I**3 + I**2 + I == 0"
+       ]
+      },
+      {
+       "math": "= (0)^2 = 0",
+       "en": "The terms cancel in pairs, so the bracket is 0.",
+       "ur": "ارکان جوڑوں میں ختم ہو جاتے ہیں، اس لیے قوسین 0 ہے۔",
+       "check": [
+        "(I**4 + I**3 + I**2 + I)**2 == 0"
+       ]
+      }
+     ],
+     "answer": "$0$",
+     "book_key": "0"
+    },
+    {
+     "label": "vii",
+     "prompt": "$\\left(\\frac{i^8}{i^5}\\right)^{-5}$",
+     "steps": [
+      {
+       "math": "\\left(\\frac{i^8}{i^5}\\right)^{-5} = (i^{3})^{-5} = i^{-15}",
+       "en": "Divide powers by subtracting them, then multiply the powers.",
+       "ur": "طاقتوں کی تقسیم میں طاقتیں تفریق کریں، پھر طاقتوں کو ضرب دیں۔",
+       "check": [
+        "(I**8/I**5)**(-5) == I**(-15)"
+       ]
+      },
+      {
+       "math": "= i^{-15+16} = i^{1} = i",
+       "en": "Since $i^4 = 1$, adding or removing multiples of 4 in the power does not change the value.",
+       "ur": "چونکہ $i^4 = 1$، طاقت میں 4 کے مضرب جمع یا تفریق کرنے سے قیمت نہیں بدلتی۔",
+       "check": [
+        "I**(-15) == I"
+       ]
+      }
+     ],
+     "answer": "$i$",
+     "book_key": "i"
+    },
+    {
+     "label": "viii",
+     "prompt": "$i^{13} \\times i^{29}$",
+     "steps": [
+      {
+       "math": "i^{13} \\times i^{29} = i^{42} = i^{42-40} = i^{2}",
+       "en": "Add the powers, then remove multiples of 4.",
+       "ur": "طاقتیں جمع کریں، پھر 4 کے مضرب نکال دیں۔",
+       "check": [
+        "I**13 * I**29 == I**2"
+       ]
+      },
+      {
+       "math": "= -1",
+       "en": "Use $i^1 = i,\\ i^2 = -1,\\ i^3 = -i,\\ i^4 = 1$.",
+       "ur": "$i^1 = i,\\ i^2 = -1,\\ i^3 = -i,\\ i^4 = 1$ استعمال کریں۔",
+       "check": [
+        "I**2 == -1"
+       ]
+      }
+     ],
+     "answer": "$-1$",
+     "book_key": "-1"
+    }
+   ],
+   "exercise": "1.1"
+  },
+  {
+   "id": "c10-ex1.1-q2",
+   "kind": "exercise",
+   "number": "2",
+   "page": 0,
+   "question": "Write in terms of $i$: (i) $2+\\sqrt{-4}$ (ii) $3-\\sqrt{-7}$ (iii) $\\frac{2}{5}+\\frac{\\sqrt{-16}}{5}$ (iv) $\\sqrt{2}-\\sqrt{-3}$",
+   "parts": [
+    {
+     "label": "i",
+     "prompt": "$2+\\sqrt{-4}$",
+     "steps": [
+      {
+       "math": "2 + \\sqrt{-4} = 2 + \\sqrt{4}\\sqrt{-1} = 2 + 2i",
+       "en": "For a positive number $a$, $\\sqrt{-a} = \\sqrt{a}\\sqrt{-1} = i\\sqrt{a}$.",
+       "ur": "مثبت عدد $a$ کے لیے $\\sqrt{-a} = \\sqrt{a}\\sqrt{-1} = i\\sqrt{a}$۔",
+       "check": [
+        "2 + sqrt(-4) == 2 + 2*I"
+       ]
+      }
+     ],
+     "answer": "$2 + 2i$",
+     "book_key": "2+2i"
+    },
+    {
+     "label": "ii",
+     "prompt": "$3-\\sqrt{-7}$",
+     "steps": [
+      {
+       "math": "3 - \\sqrt{-7} = 3 - \\sqrt{7}\\sqrt{-1} = 3 - i\\sqrt{7}",
+       "en": "For a positive number $a$, $\\sqrt{-a} = \\sqrt{a}\\sqrt{-1} = i\\sqrt{a}$.",
+       "ur": "مثبت عدد $a$ کے لیے $\\sqrt{-a} = \\sqrt{a}\\sqrt{-1} = i\\sqrt{a}$۔",
+       "check": [
+        "3 - sqrt(-7) == 3 - I*sqrt(7)"
+       ]
+      }
+     ],
+     "answer": "$3 - i\\sqrt{7}$",
+     "book_key": "3-i\\sqrt{7}"
+    },
+    {
+     "label": "iii",
+     "prompt": "$\\frac{2}{5}+\\frac{\\sqrt{-16}}{5}$",
+     "steps": [
+      {
+       "math": "\\frac{2}{5} + \\frac{\\sqrt{-16}}{5} = \\frac{2}{5} + \\frac{\\sqrt{16}\\sqrt{-1}}{5} = \\frac{2}{5} + \\frac{4}{5}i",
+       "en": "For a positive number $a$, $\\sqrt{-a} = \\sqrt{a}\\sqrt{-1} = i\\sqrt{a}$.",
+       "ur": "مثبت عدد $a$ کے لیے $\\sqrt{-a} = \\sqrt{a}\\sqrt{-1} = i\\sqrt{a}$۔",
+       "check": [
+        "R(2,5) + sqrt(-16)/5 == R(2,5) + R(4,5)*I"
+       ]
+      }
+     ],
+     "answer": "$\\frac{2}{5} + \\frac{4}{5}i$",
+     "book_key": "\\frac{2}{5}+\\frac{4}{5}i"
+    },
+    {
+     "label": "iv",
+     "prompt": "$\\sqrt{2}-\\sqrt{-3}$",
+     "steps": [
+      {
+       "math": "\\sqrt{2} - \\sqrt{-3} = \\sqrt{2} - \\sqrt{3}\\sqrt{-1} = \\sqrt{2} - i\\sqrt{3}",
+       "en": "For a positive number $a$, $\\sqrt{-a} = \\sqrt{a}\\sqrt{-1} = i\\sqrt{a}$.",
+       "ur": "مثبت عدد $a$ کے لیے $\\sqrt{-a} = \\sqrt{a}\\sqrt{-1} = i\\sqrt{a}$۔",
+       "check": [
+        "sqrt(2) - sqrt(-3) == sqrt(2) - I*sqrt(3)"
+       ]
+      }
+     ],
+     "answer": "$\\sqrt{2} - i\\sqrt{3}$",
+     "book_key": "\\sqrt{2}-i\\sqrt{3}"
+    }
+   ],
+   "exercise": "1.1"
+  },
+  {
+   "id": "c10-ex1.1-q3",
+   "kind": "exercise",
+   "number": "3",
+   "page": 0,
+   "question": "Find the values of $x$ and $y$: (i) $(2x+5)+(y-3)i=1+2i$ (ii) $(3x+2)-(4-y)i=5+3i$ (iii) $(2+i)x+(1-2i)y=3+4i$ (iv) $(1-i)x+(2+i)y=4-i$ (v) $(3x-1)+(2y-3)i=8+7i$",
+   "parts": [
+    {
+     "label": "i",
+     "prompt": "$(2x+5)+(y-3)i=1+2i$",
+     "steps": [
+      {
+       "math": "(2x+5)+(y-3)i = 1 + 2 i \\;\\Rightarrow\\; (2 x + 5) + (y - 3)i = 1 + 2i",
+       "en": "Expand the left side with $i^2=-1$ and write it as (real part) + (imaginary part)$i$.",
+       "ur": "بائیں جانب کو $i^2=-1$ سے پھیلا کر (حقیقی حصہ) + (خیالی حصہ)$i$ کی صورت میں لکھیں۔",
+       "check": [
+        "expand((2*(x)+5) + ((y)-3)*I) == expand((2*x + 5) + (y - 3)*I)"
+       ]
+      },
+      {
+       "math": "2 x + 5 = 1 \\quad\\text{and}\\quad y - 3 = 2",
+       "en": "Two complex numbers are equal only when their real parts are equal and their imaginary parts are equal.",
+       "ur": "دو مختلط اعداد تب برابر ہوتے ہیں جب ان کے حقیقی حصے برابر ہوں اور خیالی حصے بھی برابر ہوں۔"
+      },
+      {
+       "math": "x = -2,\\quad y = 5",
+       "en": "Solve these two equations together.",
+       "ur": "ان دونوں مساوات کو اکٹھے حل کریں۔",
+       "check": [
+        "2*(-2) + 4 == 0",
+        "(5) - 5 == 0"
+       ]
+      },
+      {
+       "math": "\\text{Check: } (2x+5)+(y-3)i\\Big|_{x=-2, y=5} = 1 + 2i",
+       "en": "Put the values back into the given equation: both sides agree.",
+       "ur": "قیمتیں دی گئی مساوات میں رکھیں: دونوں اطراف برابر ہیں۔",
+       "check": [
+        "(2*(-2)+5) + ((5)-3)*I == 1+2*I"
+       ]
+      }
+     ],
+     "answer": "$x = -2,\\ y = 5$",
+     "book_key": "x=-2, y=5"
+    },
+    {
+     "label": "ii",
+     "prompt": "$(3x+2)-(4-y)i=5+3i$",
+     "steps": [
+      {
+       "math": "(3x+2)-(4-y)i = 5 + 3 i \\;\\Rightarrow\\; (3 x + 2) + (y - 4)i = 5 + 3i",
+       "en": "Expand the left side with $i^2=-1$ and write it as (real part) + (imaginary part)$i$.",
+       "ur": "بائیں جانب کو $i^2=-1$ سے پھیلا کر (حقیقی حصہ) + (خیالی حصہ)$i$ کی صورت میں لکھیں۔",
+       "check": [
+        "expand((3*(x)+2) - (4-(y))*I) == expand((3*x + 2) + (y - 4)*I)"
+       ]
+      },
+      {
+       "math": "3 x + 2 = 5 \\quad\\text{and}\\quad y - 4 = 3",
+       "en": "Two complex numbers are equal only when their real parts are equal and their imaginary parts are equal.",
+       "ur": "دو مختلط اعداد تب برابر ہوتے ہیں جب ان کے حقیقی حصے برابر ہوں اور خیالی حصے بھی برابر ہوں۔"
+      },
+      {
+       "math": "x = 1,\\quad y = 7",
+       "en": "Solve these two equations together.",
+       "ur": "ان دونوں مساوات کو اکٹھے حل کریں۔",
+       "check": [
+        "3*(1) - 3 == 0",
+        "(7) - 7 == 0"
+       ]
+      },
+      {
+       "math": "\\text{Check: } (3x+2)-(4-y)i\\Big|_{x=1, y=7} = 5 + 3i",
+       "en": "Put the values back into the given equation: both sides agree.",
+       "ur": "قیمتیں دی گئی مساوات میں رکھیں: دونوں اطراف برابر ہیں۔",
+       "check": [
+        "(3*(1)+2) - (4-(7))*I == 5+3*I"
+       ]
+      }
+     ],
+     "answer": "$x = 1,\\ y = 7$",
+     "book_key": "x=1, y=7"
+    },
+    {
+     "label": "iii",
+     "prompt": "$(2+i)x+(1-2i)y=3+4i$",
+     "steps": [
+      {
+       "math": "(2+i)x+(1-2i)y = 3 + 4 i \\;\\Rightarrow\\; (2 x + y) + (x - 2 y)i = 3 + 4i",
+       "en": "Expand the left side with $i^2=-1$ and write it as (real part) + (imaginary part)$i$.",
+       "ur": "بائیں جانب کو $i^2=-1$ سے پھیلا کر (حقیقی حصہ) + (خیالی حصہ)$i$ کی صورت میں لکھیں۔",
+       "check": [
+        "expand((2+I)*(x) + (1-2*I)*(y)) == expand((2*x + y) + (x - 2*y)*I)"
+       ]
+      },
+      {
+       "math": "2 x + y = 3 \\quad\\text{and}\\quad x - 2 y = 4",
+       "en": "Two complex numbers are equal only when their real parts are equal and their imaginary parts are equal.",
+       "ur": "دو مختلط اعداد تب برابر ہوتے ہیں جب ان کے حقیقی حصے برابر ہوں اور خیالی حصے بھی برابر ہوں۔"
+      },
+      {
+       "math": "x = 2,\\quad y = -1",
+       "en": "Solve these two equations together.",
+       "ur": "ان دونوں مساوات کو اکٹھے حل کریں۔",
+       "check": [
+        "2*(2) + (-1) - 3 == 0",
+        "(2) - 2*(-1) - 4 == 0"
+       ]
+      },
+      {
+       "math": "\\text{Check: } (2+i)x+(1-2i)y\\Big|_{x=2, y=-1} = 3 + 4i",
+       "en": "Put the values back into the given equation: both sides agree.",
+       "ur": "قیمتیں دی گئی مساوات میں رکھیں: دونوں اطراف برابر ہیں۔",
+       "check": [
+        "(2+I)*(2) + (1-2*I)*(-1) == 3+4*I"
+       ]
+      }
+     ],
+     "answer": "$x = 2,\\ y = -1$",
+     "book_key": "x=2, y=-1"
+    },
+    {
+     "label": "iv",
+     "prompt": "$(1-i)x+(2+i)y=4-i$",
+     "steps": [
+      {
+       "math": "(1-i)x+(2+i)y = 4 - i \\;\\Rightarrow\\; (x + 2 y) + (- x + y)i = 4 - i",
+       "en": "Expand the left side with $i^2=-1$ and write it as (real part) + (imaginary part)$i$.",
+       "ur": "بائیں جانب کو $i^2=-1$ سے پھیلا کر (حقیقی حصہ) + (خیالی حصہ)$i$ کی صورت میں لکھیں۔",
+       "check": [
+        "expand((1-I)*(x) + (2+I)*(y)) == expand((x + 2*y) + (-x + y)*I)"
+       ]
+      },
+      {
+       "math": "x + 2 y = 4 \\quad\\text{and}\\quad - x + y = -1",
+       "en": "Two complex numbers are equal only when their real parts are equal and their imaginary parts are equal.",
+       "ur": "دو مختلط اعداد تب برابر ہوتے ہیں جب ان کے حقیقی حصے برابر ہوں اور خیالی حصے بھی برابر ہوں۔"
+      },
+      {
+       "math": "x = 2,\\quad y = 1",
+       "en": "Solve these two equations together.",
+       "ur": "ان دونوں مساوات کو اکٹھے حل کریں۔",
+       "check": [
+        "(2) + 2*(1) - 4 == 0",
+        "-(2) + (1) + 1 == 0"
+       ]
+      },
+      {
+       "math": "\\text{Check: } (1-i)x+(2+i)y\\Big|_{x=2, y=1} = 4 - i",
+       "en": "Put the values back into the given equation: both sides agree.",
+       "ur": "قیمتیں دی گئی مساوات میں رکھیں: دونوں اطراف برابر ہیں۔",
+       "check": [
+        "(1-I)*(2) + (2+I)*(1) == 4-I"
+       ]
+      }
+     ],
+     "answer": "$x = 2,\\ y = 1$",
+     "book_key": "x=2, y=1"
+    },
+    {
+     "label": "v",
+     "prompt": "$(3x-1)+(2y-3)i=8+7i$",
+     "steps": [
+      {
+       "math": "(3x-1)+(2y-3)i = 8 + 7 i \\;\\Rightarrow\\; (3 x - 1) + (2 y - 3)i = 8 + 7i",
+       "en": "Expand the left side with $i^2=-1$ and write it as (real part) + (imaginary part)$i$.",
+       "ur": "بائیں جانب کو $i^2=-1$ سے پھیلا کر (حقیقی حصہ) + (خیالی حصہ)$i$ کی صورت میں لکھیں۔",
+       "check": [
+        "expand((3*(x)-1) + (2*(y)-3)*I) == expand((3*x - 1) + (2*y - 3)*I)"
+       ]
+      },
+      {
+       "math": "3 x - 1 = 8 \\quad\\text{and}\\quad 2 y - 3 = 7",
+       "en": "Two complex numbers are equal only when their real parts are equal and their imaginary parts are equal.",
+       "ur": "دو مختلط اعداد تب برابر ہوتے ہیں جب ان کے حقیقی حصے برابر ہوں اور خیالی حصے بھی برابر ہوں۔"
+      },
+      {
+       "math": "x = 3,\\quad y = 5",
+       "en": "Solve these two equations together.",
+       "ur": "ان دونوں مساوات کو اکٹھے حل کریں۔",
+       "check": [
+        "3*(3) - 9 == 0",
+        "2*(5) - 10 == 0"
+       ]
+      },
+      {
+       "math": "\\text{Check: } (3x-1)+(2y-3)i\\Big|_{x=3, y=5} = 8 + 7i",
+       "en": "Put the values back into the given equation: both sides agree.",
+       "ur": "قیمتیں دی گئی مساوات میں رکھیں: دونوں اطراف برابر ہیں۔",
+       "check": [
+        "(3*(3)-1) + (2*(5)-3)*I == 8+7*I"
+       ]
+      }
+     ],
+     "answer": "$x = 3,\\ y = 5$",
+     "book_key": "x=3, y=5"
+    }
+   ],
+   "exercise": "1.1"
+  },
+  {
+   "id": "c10-ex1.2-q1",
+   "kind": "exercise",
+   "number": "1",
+   "page": 0,
+   "question": "Simplify and write in the form $a+bi$: (i) $(2+5i)+(3-2i)$ (ii) $(16-3i)+(9+2i)$ (iii) $(9-2i)-(7-3i)$ (iv) $(11+9i)-(9-7i)$ (v) $(3+4i)(2-3i)$ (vi) $(5-2i)(3-4i)$ (vii) $(3-5i)\\div(2-4i)$ (viii) $(5+2i)\\div(6-3i)$",
+   "parts": [
+    {
+     "label": "i",
+     "prompt": "$\\left(2 + 5i\\right) + \\left(3 - 2i\\right)$",
+     "steps": [
+      {
+       "math": "\\left(2 + 5i\\right) + \\left(3 - 2i\\right) = (2 + 3) + (5 + \\left(-2\\right))i",
+       "en": "Add (or subtract) the real parts together and the imaginary parts together.",
+       "ur": "حقیقی حصوں کو آپس میں اور خیالی حصوں کو آپس میں جمع (یا تفریق) کریں۔",
+       "check": [
+        "(2 + 5*I) + (3 - 2*I) == (5 + 3*I)"
+       ]
+      },
+      {
+       "math": "= 5 + 3i",
+       "en": "Simplify each part.",
+       "ur": "ہر حصے کو سادہ کریں۔",
+       "check": [
+        "(2) + (3) == (5)"
+       ]
+      }
+     ],
+     "answer": "$5 + 3i$",
+     "key_note": {
+      "en": "The reference prints the second number as (3 - zi), a misprint of (3 - 2i); its answer 5 + (5 - z)i follows the misprint.",
+      "ur": "حوالہ میں دوسرا عدد (3 - zi) چھپا ہے جو (3 - 2i) کی غلطی ہے؛ اس کا جواب 5 + (5 - z)i اسی غلطی سے آیا ہے۔"
+     },
+     "book_key": "5+(5-z)i"
+    },
+    {
+     "label": "ii",
+     "prompt": "$\\left(16 - 3i\\right) + \\left(9 + 2i\\right)$",
+     "steps": [
+      {
+       "math": "\\left(16 - 3i\\right) + \\left(9 + 2i\\right) = (16 + 9) + (-3 + 2)i",
+       "en": "Add (or subtract) the real parts together and the imaginary parts together.",
+       "ur": "حقیقی حصوں کو آپس میں اور خیالی حصوں کو آپس میں جمع (یا تفریق) کریں۔",
+       "check": [
+        "(16 - 3*I) + (9 + 2*I) == (25 - I)"
+       ]
+      },
+      {
+       "math": "= 25 - i",
+       "en": "Simplify each part.",
+       "ur": "ہر حصے کو سادہ کریں۔",
+       "check": [
+        "(16) + (9) == (25)"
+       ]
+      }
+     ],
+     "answer": "$25 - i$",
+     "book_key": "25-i"
+    },
+    {
+     "label": "iii",
+     "prompt": "$\\left(9 - 2i\\right) - \\left(7 - 3i\\right)$",
+     "steps": [
+      {
+       "math": "\\left(9 - 2i\\right) - \\left(7 - 3i\\right) = (9 - 7) + (-2 - \\left(-3\\right))i",
+       "en": "Add (or subtract) the real parts together and the imaginary parts together.",
+       "ur": "حقیقی حصوں کو آپس میں اور خیالی حصوں کو آپس میں جمع (یا تفریق) کریں۔",
+       "check": [
+        "(9 - 2*I) - (7 - 3*I) == (2 + I)"
+       ]
+      },
+      {
+       "math": "= 2 + i",
+       "en": "Simplify each part.",
+       "ur": "ہر حصے کو سادہ کریں۔",
+       "check": [
+        "(9) - (7) == (2)"
+       ]
+      }
+     ],
+     "answer": "$2 + i$",
+     "book_key": "2+i"
+    },
+    {
+     "label": "iv",
+     "prompt": "$\\left(11 + 9i\\right) - \\left(9 - 7i\\right)$",
+     "steps": [
+      {
+       "math": "\\left(11 + 9i\\right) - \\left(9 - 7i\\right) = (11 - 9) + (9 - \\left(-7\\right))i",
+       "en": "Add (or subtract) the real parts together and the imaginary parts together.",
+       "ur": "حقیقی حصوں کو آپس میں اور خیالی حصوں کو آپس میں جمع (یا تفریق) کریں۔",
+       "check": [
+        "(11 + 9*I) - (9 - 7*I) == (2 + 16*I)"
+       ]
+      },
+      {
+       "math": "= 2 + 16i",
+       "en": "Simplify each part.",
+       "ur": "ہر حصے کو سادہ کریں۔",
+       "check": [
+        "(11) - (9) == (2)"
+       ]
+      }
+     ],
+     "answer": "$2 + 16i$",
+     "book_key": "2+16i"
+    },
+    {
+     "label": "v",
+     "prompt": "$\\left(3 + 4i\\right)\\left(2 - 3i\\right)$",
+     "steps": [
+      {
+       "math": "\\left(3 + 4i\\right)\\left(2 - 3i\\right) = 6 - 9i + 8i - 12i^2",
+       "en": "Multiply each term of the first bracket by each term of the second.",
+       "ur": "پہلی قوسین کے ہر رکن کو دوسری قوسین کے ہر رکن سے ضرب دیں۔",
+       "check": [
+        "(3 + 4*I)*(2 - 3*I) == (6) + (-1)*I + (-12)*I**2"
+       ]
+      },
+      {
+       "math": "= 6 - 1i + 12 = 18 - i",
+       "en": "Put $i^2 = -1$ and collect the real and imaginary parts.",
+       "ur": "$i^2 = -1$ رکھیں اور حقیقی اور خیالی حصے اکٹھے کریں۔",
+       "check": [
+        "I**2 == -1",
+        "(3 + 4*I)*(2 - 3*I) == (18 - I)"
+       ]
+      }
+     ],
+     "answer": "$18 - i$",
+     "book_key": "18-i"
+    },
+    {
+     "label": "vi",
+     "prompt": "$\\left(5 - 2i\\right)\\left(3 - 4i\\right)$",
+     "steps": [
+      {
+       "math": "\\left(5 - 2i\\right)\\left(3 - 4i\\right) = 15 - 20i - 6i + 8i^2",
+       "en": "Multiply each term of the first bracket by each term of the second.",
+       "ur": "پہلی قوسین کے ہر رکن کو دوسری قوسین کے ہر رکن سے ضرب دیں۔",
+       "check": [
+        "(5 - 2*I)*(3 - 4*I) == (15) + (-26)*I + (8)*I**2"
+       ]
+      },
+      {
+       "math": "= 15 - 26i - 8 = 7 - 26i",
+       "en": "Put $i^2 = -1$ and collect the real and imaginary parts.",
+       "ur": "$i^2 = -1$ رکھیں اور حقیقی اور خیالی حصے اکٹھے کریں۔",
+       "check": [
+        "I**2 == -1",
+        "(5 - 2*I)*(3 - 4*I) == (7 - 26*I)"
+       ]
+      }
+     ],
+     "answer": "$7 - 26i$",
+     "book_key": "7-26i"
+    },
+    {
+     "label": "vii",
+     "prompt": "$\\left(3 - 5i\\right) \\div \\left(2 - 4i\\right)$",
+     "steps": [
+      {
+       "math": "\\frac{3 - 5i}{2 - 4i} \\times \\frac{2 + 4i}{2 + 4i}",
+       "en": "Multiply the numerator and the denominator by the conjugate of the denominator, $2 + 4i$.",
+       "ur": "شمار کنندہ اور نسب نما کو نسب نما کے مزدوج $2 + 4i$ سے ضرب دیں۔",
+       "check": [
+        "(3 - 5*I)/(2 - 4*I) == (3 - 5*I)*(2 + 4*I)/((2 - 4*I)*(2 + 4*I))"
+       ]
+      },
+      {
+       "math": "= \\frac{26 + 2i}{2^2 + 4^2} = \\frac{26 + 2i}{20}",
+       "en": "In the denominator $(a+bi)(a-bi) = a^2 + b^2$; multiply out the numerator using $i^2=-1$.",
+       "ur": "نسب نما میں $(a+bi)(a-bi) = a^2 + b^2$؛ شمار کنندہ کو $i^2=-1$ کے ساتھ ضرب دیں۔",
+       "check": [
+        "(2 - 4*I)*(2 + 4*I) == (20)",
+        "(3 - 5*I)*(2 + 4*I) == (26 + 2*I)"
+       ]
+      },
+      {
+       "math": "= \\frac{13}{10} + \\frac{1}{10}i",
+       "en": "Divide each part by the denominator and simplify.",
+       "ur": "ہر حصے کو نسب نما سے تقسیم کر کے سادہ کریں۔",
+       "check": [
+        "(3 - 5*I)/(2 - 4*I) == (13/10 + I/10)"
+       ]
+      }
+     ],
+     "answer": "$\\frac{13}{10} + \\frac{1}{10}i$",
+     "book_key": "\\frac{13}{10}+\\frac{1}{10}i"
+    },
+    {
+     "label": "viii",
+     "prompt": "$\\left(5 + 2i\\right) \\div \\left(6 - 3i\\right)$",
+     "steps": [
+      {
+       "math": "\\frac{5 + 2i}{6 - 3i} \\times \\frac{6 + 3i}{6 + 3i}",
+       "en": "Multiply the numerator and the denominator by the conjugate of the denominator, $6 + 3i$.",
+       "ur": "شمار کنندہ اور نسب نما کو نسب نما کے مزدوج $6 + 3i$ سے ضرب دیں۔",
+       "check": [
+        "(5 + 2*I)/(6 - 3*I) == (5 + 2*I)*(6 + 3*I)/((6 - 3*I)*(6 + 3*I))"
+       ]
+      },
+      {
+       "math": "= \\frac{24 + 27i}{6^2 + 3^2} = \\frac{24 + 27i}{45}",
+       "en": "In the denominator $(a+bi)(a-bi) = a^2 + b^2$; multiply out the numerator using $i^2=-1$.",
+       "ur": "نسب نما میں $(a+bi)(a-bi) = a^2 + b^2$؛ شمار کنندہ کو $i^2=-1$ کے ساتھ ضرب دیں۔",
+       "check": [
+        "(6 - 3*I)*(6 + 3*I) == (45)",
+        "(5 + 2*I)*(6 + 3*I) == (24 + 27*I)"
+       ]
+      },
+      {
+       "math": "= \\frac{8}{15} + \\frac{3}{5}i",
+       "en": "Divide each part by the denominator and simplify.",
+       "ur": "ہر حصے کو نسب نما سے تقسیم کر کے سادہ کریں۔",
+       "check": [
+        "(5 + 2*I)/(6 - 3*I) == (8/15 + 3*I/5)"
+       ]
+      }
+     ],
+     "answer": "$\\frac{8}{15} + \\frac{3}{5}i$",
+     "book_key": "\\frac{8}{15}+\\frac{3}{5}i"
+    }
+   ],
+   "exercise": "1.2"
+  },
+  {
+   "id": "c10-ex1.2-q2",
+   "kind": "exercise",
+   "number": "2",
+   "page": 0,
+   "question": "Write additive inverse for each complex number: (i) $3+2i$ (ii) $4-3i$ (iii) $5-7i$ (iv) $-\\frac{2}{3}+\\frac{5}{4}i$",
+   "parts": [
+    {
+     "label": "i",
+     "prompt": "$3 + 2i$",
+     "steps": [
+      {
+       "math": "z = 3 + 2i \\Rightarrow -z = -\\left(3 + 2i\\right) = -3 - 2i",
+       "en": "The additive inverse of $z$ is $-z$: change the sign of both parts.",
+       "ur": "$z$ کا جمعی معکوس $-z$ ہے: دونوں حصوں کی علامت بدل دیں۔",
+       "check": [
+        "(3 + 2*I) + (-3 - 2*I) == 0"
+       ]
+      }
+     ],
+     "answer": "$-3 - 2i$",
+     "book_key": "-3-2i"
+    },
+    {
+     "label": "ii",
+     "prompt": "$4 - 3i$",
+     "steps": [
+      {
+       "math": "z = 4 - 3i \\Rightarrow -z = -\\left(4 - 3i\\right) = -4 + 3i",
+       "en": "The additive inverse of $z$ is $-z$: change the sign of both parts.",
+       "ur": "$z$ کا جمعی معکوس $-z$ ہے: دونوں حصوں کی علامت بدل دیں۔",
+       "check": [
+        "(4 - 3*I) + (-4 + 3*I) == 0"
+       ]
+      }
+     ],
+     "answer": "$-4 + 3i$",
+     "book_key": "-4+3i"
+    },
+    {
+     "label": "iii",
+     "prompt": "$5 - 7i$",
+     "steps": [
+      {
+       "math": "z = 5 - 7i \\Rightarrow -z = -\\left(5 - 7i\\right) = -5 + 7i",
+       "en": "The additive inverse of $z$ is $-z$: change the sign of both parts.",
+       "ur": "$z$ کا جمعی معکوس $-z$ ہے: دونوں حصوں کی علامت بدل دیں۔",
+       "check": [
+        "(5 - 7*I) + (-5 + 7*I) == 0"
+       ]
+      }
+     ],
+     "answer": "$-5 + 7i$",
+     "book_key": "-5+7i"
+    },
+    {
+     "label": "iv",
+     "prompt": "$- \\frac{2}{3} + \\frac{5}{4}i$",
+     "steps": [
+      {
+       "math": "z = - \\frac{2}{3} + \\frac{5}{4}i \\Rightarrow -z = -\\left(- \\frac{2}{3} + \\frac{5}{4}i\\right) = \\frac{2}{3} - \\frac{5}{4}i",
+       "en": "The additive inverse of $z$ is $-z$: change the sign of both parts.",
+       "ur": "$z$ کا جمعی معکوس $-z$ ہے: دونوں حصوں کی علامت بدل دیں۔",
+       "check": [
+        "(-2/3 + 5*I/4) + (2/3 - 5*I/4) == 0"
+       ]
+      }
+     ],
+     "answer": "$\\frac{2}{3} - \\frac{5}{4}i$",
+     "book_key": "\\frac{2}{3}-\\frac{5}{4}i"
+    }
+   ],
+   "exercise": "1.2"
+  },
+  {
+   "id": "c10-ex1.2-q3",
+   "kind": "exercise",
+   "number": "3",
+   "page": 0,
+   "question": "Find multiplicative inverse for each complex number: (i) $4+5i$ (ii) $6+2i$ (iii) $7-3i$ (iv) $\\sqrt{5}-4i$",
+   "parts": [
+    {
+     "label": "i",
+     "prompt": "$4 + 5i$",
+     "steps": [
+      {
+       "math": "z^{-1} = \\left(\\frac{a}{a^2+b^2}, \\frac{-b}{a^2+b^2}\\right), \\quad a = 4,\\ b = 5",
+       "en": "For $z = a + bi$ the multiplicative inverse is $\\frac{a}{a^2+b^2} - \\frac{b}{a^2+b^2}i$.",
+       "ur": "$z = a + bi$ کا ضربی معکوس $\\frac{a}{a^2+b^2} - \\frac{b}{a^2+b^2}i$ ہے۔"
+      },
+      {
+       "math": "a^2 + b^2 = (4)^2 + (5)^2 = 41",
+       "en": "Find $a^2 + b^2$.",
+       "ur": "$a^2 + b^2$ معلوم کریں۔",
+       "check": [
+        "(4)**2 + (5)**2 == (41)"
+       ]
+      },
+      {
+       "math": "z^{-1} = \\frac{4}{41} + \\frac{-5}{41}i = \\frac{4}{41} - \\frac{5}{41}i",
+       "en": "Substitute and simplify.",
+       "ur": "قیمتیں رکھ کر سادہ کریں۔",
+       "check": [
+        "1/(4 + 5*I) == (4/41 - 5*I/41)",
+        "(4 + 5*I)*(4/41 - 5*I/41) == 1"
+       ]
+      }
+     ],
+     "answer": "$\\frac{4}{41} - \\frac{5}{41}i$",
+     "book_key": "\\frac{4}{41}-\\frac{5}{41}i"
+    },
+    {
+     "label": "ii",
+     "prompt": "$6 + 2i$",
+     "steps": [
+      {
+       "math": "z^{-1} = \\left(\\frac{a}{a^2+b^2}, \\frac{-b}{a^2+b^2}\\right), \\quad a = 6,\\ b = 2",
+       "en": "For $z = a + bi$ the multiplicative inverse is $\\frac{a}{a^2+b^2} - \\frac{b}{a^2+b^2}i$.",
+       "ur": "$z = a + bi$ کا ضربی معکوس $\\frac{a}{a^2+b^2} - \\frac{b}{a^2+b^2}i$ ہے۔"
+      },
+      {
+       "math": "a^2 + b^2 = (6)^2 + (2)^2 = 40",
+       "en": "Find $a^2 + b^2$.",
+       "ur": "$a^2 + b^2$ معلوم کریں۔",
+       "check": [
+        "(6)**2 + (2)**2 == (40)"
+       ]
+      },
+      {
+       "math": "z^{-1} = \\frac{6}{40} + \\frac{-2}{40}i = \\frac{3}{20} - \\frac{1}{20}i",
+       "en": "Substitute and simplify.",
+       "ur": "قیمتیں رکھ کر سادہ کریں۔",
+       "check": [
+        "1/(6 + 2*I) == (3/20 - I/20)",
+        "(6 + 2*I)*(3/20 - I/20) == 1"
+       ]
+      }
+     ],
+     "answer": "$\\frac{3}{20} - \\frac{1}{20}i$",
+     "book_key": "\\frac{3}{20}-\\frac{1}{20}i"
+    },
+    {
+     "label": "iii",
+     "prompt": "$7 - 3i$",
+     "steps": [
+      {
+       "math": "z^{-1} = \\left(\\frac{a}{a^2+b^2}, \\frac{-b}{a^2+b^2}\\right), \\quad a = 7,\\ b = -3",
+       "en": "For $z = a + bi$ the multiplicative inverse is $\\frac{a}{a^2+b^2} - \\frac{b}{a^2+b^2}i$.",
+       "ur": "$z = a + bi$ کا ضربی معکوس $\\frac{a}{a^2+b^2} - \\frac{b}{a^2+b^2}i$ ہے۔"
+      },
+      {
+       "math": "a^2 + b^2 = (7)^2 + (-3)^2 = 58",
+       "en": "Find $a^2 + b^2$.",
+       "ur": "$a^2 + b^2$ معلوم کریں۔",
+       "check": [
+        "(7)**2 + (-3)**2 == (58)"
+       ]
+      },
+      {
+       "math": "z^{-1} = \\frac{7}{58} + \\frac{3}{58}i = \\frac{7}{58} + \\frac{3}{58}i",
+       "en": "Substitute and simplify.",
+       "ur": "قیمتیں رکھ کر سادہ کریں۔",
+       "check": [
+        "1/(7 - 3*I) == (7/58 + 3*I/58)",
+        "(7 - 3*I)*(7/58 + 3*I/58) == 1"
+       ]
+      }
+     ],
+     "answer": "$\\frac{7}{58} + \\frac{3}{58}i$",
+     "book_key": "\\frac{7}{58}+\\frac{3}{58}i"
+    },
+    {
+     "label": "iv",
+     "prompt": "$\\sqrt{5} - 4i$",
+     "steps": [
+      {
+       "math": "z^{-1} = \\left(\\frac{a}{a^2+b^2}, \\frac{-b}{a^2+b^2}\\right), \\quad a = \\sqrt{5},\\ b = -4",
+       "en": "For $z = a + bi$ the multiplicative inverse is $\\frac{a}{a^2+b^2} - \\frac{b}{a^2+b^2}i$.",
+       "ur": "$z = a + bi$ کا ضربی معکوس $\\frac{a}{a^2+b^2} - \\frac{b}{a^2+b^2}i$ ہے۔"
+      },
+      {
+       "math": "a^2 + b^2 = (\\sqrt{5})^2 + (-4)^2 = 21",
+       "en": "Find $a^2 + b^2$.",
+       "ur": "$a^2 + b^2$ معلوم کریں۔",
+       "check": [
+        "(sqrt(5))**2 + (-4)**2 == (21)"
+       ]
+      },
+      {
+       "math": "z^{-1} = \\frac{\\sqrt{5}}{21} + \\frac{4}{21}i = \\frac{\\sqrt{5}}{21} + \\frac{4}{21}i",
+       "en": "Substitute and simplify.",
+       "ur": "قیمتیں رکھ کر سادہ کریں۔",
+       "check": [
+        "1/(sqrt(5) - 4*I) == (sqrt(5)/21 + 4*I/21)",
+        "(sqrt(5) - 4*I)*(sqrt(5)/21 + 4*I/21) == 1"
+       ]
+      }
+     ],
+     "answer": "$\\frac{\\sqrt{5}}{21} + \\frac{4}{21}i$",
+     "book_key": "\\frac{\\sqrt{5}}{21}+\\frac{4}{21}i"
+    }
+   ],
+   "exercise": "1.2"
+  },
+  {
+   "id": "c10-ex1.2-q4",
+   "kind": "exercise",
+   "number": "4",
+   "page": 0,
+   "question": "If $z_1=2+5i$, $z_2=1-3i$ and $z_3=2+i$, then verify that (i) $z_1+z_2=z_2+z_1$ (ii) $z_1z_2=z_2z_1$ (iii) $(z_1+z_2)+z_3=z_1+(z_2+z_3)$ (iv) $(z_1z_2)z_3=z_1(z_2z_3)$ (v) $z_1+(-z_1)=(-z_1)+z_1=0$",
+   "parts": [
+    {
+     "label": "i",
+     "prompt": "$z_1+z_2=z_2+z_1$",
+     "steps": [
+      {
+       "math": "",
+       "en": "Left-hand side: $z_1+z_2$",
+       "ur": "بائیں جانب: $z_1+z_2$"
+      },
+      {
+       "math": "\\left(2 + 5i\\right) + \\left(1 - 3i\\right) = (2 + 1) + (5 + \\left(-3\\right))i",
+       "en": "Add (or subtract) the real parts together and the imaginary parts together.",
+       "ur": "حقیقی حصوں کو آپس میں اور خیالی حصوں کو آپس میں جمع (یا تفریق) کریں۔",
+       "check": [
+        "(2 + 5*I) + (1 - 3*I) == (3 + 2*I)"
+       ]
+      },
+      {
+       "math": "= 3 + 2i",
+       "en": "Simplify each part.",
+       "ur": "ہر حصے کو سادہ کریں۔",
+       "check": [
+        "(2) + (1) == (3)"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Right-hand side: $z_2+z_1$",
+       "ur": "دائیں جانب: $z_2+z_1$"
+      },
+      {
+       "math": "\\left(1 - 3i\\right) + \\left(2 + 5i\\right) = (1 + 2) + (-3 + 5)i",
+       "en": "Add (or subtract) the real parts together and the imaginary parts together.",
+       "ur": "حقیقی حصوں کو آپس میں اور خیالی حصوں کو آپس میں جمع (یا تفریق) کریں۔",
+       "check": [
+        "(1 - 3*I) + (2 + 5*I) == (3 + 2*I)"
+       ]
+      },
+      {
+       "math": "= 3 + 2i",
+       "en": "Simplify each part.",
+       "ur": "ہر حصے کو سادہ کریں۔",
+       "check": [
+        "(1) + (2) == (3)"
+       ]
+      },
+      {
+       "math": "z_1+z_2 = 3 + 2i = z_2+z_1",
+       "en": "So $z_1+z_2=z_2+z_1$: addition is commutative.",
+       "ur": "پس $z_1+z_2=z_2+z_1$: جمع مبادلہ ہے۔",
+       "check": [
+        "(3 + 2*I) == (3 + 2*I)"
+       ]
+      }
+     ],
+     "answer": "verified: both sides $= 3 + 2i$"
+    },
+    {
+     "label": "ii",
+     "prompt": "$z_1z_2=z_2z_1$",
+     "steps": [
+      {
+       "math": "",
+       "en": "Left-hand side: $z_1z_2$",
+       "ur": "بائیں جانب: $z_1z_2$"
+      },
+      {
+       "math": "\\left(2 + 5i\\right)\\left(1 - 3i\\right) = 2 - 6i + 5i - 15i^2",
+       "en": "Multiply each term of the first bracket by each term of the second.",
+       "ur": "پہلی قوسین کے ہر رکن کو دوسری قوسین کے ہر رکن سے ضرب دیں۔",
+       "check": [
+        "(2 + 5*I)*(1 - 3*I) == (2) + (-1)*I + (-15)*I**2"
+       ]
+      },
+      {
+       "math": "= 2 - 1i + 15 = 17 - i",
+       "en": "Put $i^2 = -1$ and collect the real and imaginary parts.",
+       "ur": "$i^2 = -1$ رکھیں اور حقیقی اور خیالی حصے اکٹھے کریں۔",
+       "check": [
+        "I**2 == -1",
+        "(2 + 5*I)*(1 - 3*I) == (17 - I)"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Right-hand side: $z_2z_1$",
+       "ur": "دائیں جانب: $z_2z_1$"
+      },
+      {
+       "math": "\\left(1 - 3i\\right)\\left(2 + 5i\\right) = 2 + 5i - 6i - 15i^2",
+       "en": "Multiply each term of the first bracket by each term of the second.",
+       "ur": "پہلی قوسین کے ہر رکن کو دوسری قوسین کے ہر رکن سے ضرب دیں۔",
+       "check": [
+        "(1 - 3*I)*(2 + 5*I) == (2) + (-1)*I + (-15)*I**2"
+       ]
+      },
+      {
+       "math": "= 2 - 1i + 15 = 17 - i",
+       "en": "Put $i^2 = -1$ and collect the real and imaginary parts.",
+       "ur": "$i^2 = -1$ رکھیں اور حقیقی اور خیالی حصے اکٹھے کریں۔",
+       "check": [
+        "I**2 == -1",
+        "(1 - 3*I)*(2 + 5*I) == (17 - I)"
+       ]
+      },
+      {
+       "math": "z_1z_2 = 17 - i = z_2z_1",
+       "en": "So $z_1z_2=z_2z_1$: multiplication is commutative.",
+       "ur": "پس $z_1z_2=z_2z_1$: ضرب مبادلہ ہے۔",
+       "check": [
+        "(17 - I) == (17 - I)"
+       ]
+      }
+     ],
+     "answer": "verified: both sides $= 17 - i$"
+    },
+    {
+     "label": "iii",
+     "prompt": "$(z_1+z_2)+z_3=z_1+(z_2+z_3)$",
+     "steps": [
+      {
+       "math": "",
+       "en": "Left-hand side: $(z_1+z_2)+z_3$",
+       "ur": "بائیں جانب: $(z_1+z_2)+z_3$"
+      },
+      {
+       "math": "\\left(2 + 5i\\right) + \\left(1 - 3i\\right) = (2 + 1) + (5 + \\left(-3\\right))i",
+       "en": "Add (or subtract) the real parts together and the imaginary parts together.",
+       "ur": "حقیقی حصوں کو آپس میں اور خیالی حصوں کو آپس میں جمع (یا تفریق) کریں۔",
+       "check": [
+        "(2 + 5*I) + (1 - 3*I) == (3 + 2*I)"
+       ]
+      },
+      {
+       "math": "= 3 + 2i",
+       "en": "Simplify each part.",
+       "ur": "ہر حصے کو سادہ کریں۔",
+       "check": [
+        "(2) + (1) == (3)"
+       ]
+      },
+      {
+       "math": "\\left(3 + 2i\\right) + \\left(2 + i\\right) = (3 + 2) + (2 + 1)i",
+       "en": "Add (or subtract) the real parts together and the imaginary parts together.",
+       "ur": "حقیقی حصوں کو آپس میں اور خیالی حصوں کو آپس میں جمع (یا تفریق) کریں۔",
+       "check": [
+        "(3 + 2*I) + (2 + I) == (5 + 3*I)"
+       ]
+      },
+      {
+       "math": "= 5 + 3i",
+       "en": "Simplify each part.",
+       "ur": "ہر حصے کو سادہ کریں۔",
+       "check": [
+        "(3) + (2) == (5)"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Right-hand side: $z_1+(z_2+z_3)$",
+       "ur": "دائیں جانب: $z_1+(z_2+z_3)$"
+      },
+      {
+       "math": "\\left(1 - 3i\\right) + \\left(2 + i\\right) = (1 + 2) + (-3 + 1)i",
+       "en": "Add (or subtract) the real parts together and the imaginary parts together.",
+       "ur": "حقیقی حصوں کو آپس میں اور خیالی حصوں کو آپس میں جمع (یا تفریق) کریں۔",
+       "check": [
+        "(1 - 3*I) + (2 + I) == (3 - 2*I)"
+       ]
+      },
+      {
+       "math": "= 3 - 2i",
+       "en": "Simplify each part.",
+       "ur": "ہر حصے کو سادہ کریں۔",
+       "check": [
+        "(1) + (2) == (3)"
+       ]
+      },
+      {
+       "math": "\\left(2 + 5i\\right) + \\left(3 - 2i\\right) = (2 + 3) + (5 + \\left(-2\\right))i",
+       "en": "Add (or subtract) the real parts together and the imaginary parts together.",
+       "ur": "حقیقی حصوں کو آپس میں اور خیالی حصوں کو آپس میں جمع (یا تفریق) کریں۔",
+       "check": [
+        "(2 + 5*I) + (3 - 2*I) == (5 + 3*I)"
+       ]
+      },
+      {
+       "math": "= 5 + 3i",
+       "en": "Simplify each part.",
+       "ur": "ہر حصے کو سادہ کریں۔",
+       "check": [
+        "(2) + (3) == (5)"
+       ]
+      },
+      {
+       "math": "(z_1+z_2)+z_3 = 5 + 3i = z_1+(z_2+z_3)",
+       "en": "So addition is associative.",
+       "ur": "پس جمع تلازمی ہے۔",
+       "check": [
+        "(5 + 3*I) == (5 + 3*I)"
+       ]
+      }
+     ],
+     "answer": "verified: both sides $= 5 + 3i$"
+    },
+    {
+     "label": "iv",
+     "prompt": "$(z_1z_2)z_3=z_1(z_2z_3)$",
+     "steps": [
+      {
+       "math": "",
+       "en": "Left-hand side: $(z_1z_2)z_3$",
+       "ur": "بائیں جانب: $(z_1z_2)z_3$"
+      },
+      {
+       "math": "\\left(2 + 5i\\right)\\left(1 - 3i\\right) = 2 - 6i + 5i - 15i^2",
+       "en": "Multiply each term of the first bracket by each term of the second.",
+       "ur": "پہلی قوسین کے ہر رکن کو دوسری قوسین کے ہر رکن سے ضرب دیں۔",
+       "check": [
+        "(2 + 5*I)*(1 - 3*I) == (2) + (-1)*I + (-15)*I**2"
+       ]
+      },
+      {
+       "math": "= 2 - 1i + 15 = 17 - i",
+       "en": "Put $i^2 = -1$ and collect the real and imaginary parts.",
+       "ur": "$i^2 = -1$ رکھیں اور حقیقی اور خیالی حصے اکٹھے کریں۔",
+       "check": [
+        "I**2 == -1",
+        "(2 + 5*I)*(1 - 3*I) == (17 - I)"
+       ]
+      },
+      {
+       "math": "\\left(17 - i\\right)\\left(2 + i\\right) = 34 + 17i - 2i - 1i^2",
+       "en": "Multiply each term of the first bracket by each term of the second.",
+       "ur": "پہلی قوسین کے ہر رکن کو دوسری قوسین کے ہر رکن سے ضرب دیں۔",
+       "check": [
+        "(17 - I)*(2 + I) == (34) + (15)*I + (-1)*I**2"
+       ]
+      },
+      {
+       "math": "= 34 + 15i + 1 = 35 + 15i",
+       "en": "Put $i^2 = -1$ and collect the real and imaginary parts.",
+       "ur": "$i^2 = -1$ رکھیں اور حقیقی اور خیالی حصے اکٹھے کریں۔",
+       "check": [
+        "I**2 == -1",
+        "(17 - I)*(2 + I) == (35 + 15*I)"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Right-hand side: $z_1(z_2z_3)$",
+       "ur": "دائیں جانب: $z_1(z_2z_3)$"
+      },
+      {
+       "math": "\\left(1 - 3i\\right)\\left(2 + i\\right) = 2 + 1i - 6i - 3i^2",
+       "en": "Multiply each term of the first bracket by each term of the second.",
+       "ur": "پہلی قوسین کے ہر رکن کو دوسری قوسین کے ہر رکن سے ضرب دیں۔",
+       "check": [
+        "(1 - 3*I)*(2 + I) == (2) + (-5)*I + (-3)*I**2"
+       ]
+      },
+      {
+       "math": "= 2 - 5i + 3 = 5 - 5i",
+       "en": "Put $i^2 = -1$ and collect the real and imaginary parts.",
+       "ur": "$i^2 = -1$ رکھیں اور حقیقی اور خیالی حصے اکٹھے کریں۔",
+       "check": [
+        "I**2 == -1",
+        "(1 - 3*I)*(2 + I) == (5 - 5*I)"
+       ]
+      },
+      {
+       "math": "\\left(2 + 5i\\right)\\left(5 - 5i\\right) = 10 - 10i + 25i - 25i^2",
+       "en": "Multiply each term of the first bracket by each term of the second.",
+       "ur": "پہلی قوسین کے ہر رکن کو دوسری قوسین کے ہر رکن سے ضرب دیں۔",
+       "check": [
+        "(2 + 5*I)*(5 - 5*I) == (10) + (15)*I + (-25)*I**2"
+       ]
+      },
+      {
+       "math": "= 10 + 15i + 25 = 35 + 15i",
+       "en": "Put $i^2 = -1$ and collect the real and imaginary parts.",
+       "ur": "$i^2 = -1$ رکھیں اور حقیقی اور خیالی حصے اکٹھے کریں۔",
+       "check": [
+        "I**2 == -1",
+        "(2 + 5*I)*(5 - 5*I) == (35 + 15*I)"
+       ]
+      },
+      {
+       "math": "(z_1z_2)z_3 = 35 + 15i = z_1(z_2z_3)",
+       "en": "So multiplication is associative.",
+       "ur": "پس ضرب تلازمی ہے۔",
+       "check": [
+        "(35 + 15*I) == (35 + 15*I)"
+       ]
+      }
+     ],
+     "answer": "verified: both sides $= 35 + 15i$"
+    },
+    {
+     "label": "v",
+     "prompt": "$z_1+(-z_1)=(-z_1)+z_1=0$",
+     "steps": [
+      {
+       "math": "",
+       "en": "Left-hand side: $z_1+(-z_1)$",
+       "ur": "بائیں جانب: $z_1+(-z_1)$"
+      },
+      {
+       "math": "\\left(2 + 5i\\right) + \\left(-2 - 5i\\right) = (2 + \\left(-2\\right)) + (5 + \\left(-5\\right))i",
+       "en": "Add (or subtract) the real parts together and the imaginary parts together.",
+       "ur": "حقیقی حصوں کو آپس میں اور خیالی حصوں کو آپس میں جمع (یا تفریق) کریں۔",
+       "check": [
+        "(2 + 5*I) + (-2 - 5*I) == (0)"
+       ]
+      },
+      {
+       "math": "= 0",
+       "en": "Simplify each part.",
+       "ur": "ہر حصے کو سادہ کریں۔",
+       "check": [
+        "(2) + (-2) == (0)"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Right-hand side: $(-z_1)+z_1$",
+       "ur": "دائیں جانب: $(-z_1)+z_1$"
+      },
+      {
+       "math": "\\left(-2 - 5i\\right) + \\left(2 + 5i\\right) = (-2 + 2) + (-5 + 5)i",
+       "en": "Add (or subtract) the real parts together and the imaginary parts together.",
+       "ur": "حقیقی حصوں کو آپس میں اور خیالی حصوں کو آپس میں جمع (یا تفریق) کریں۔",
+       "check": [
+        "(-2 - 5*I) + (2 + 5*I) == (0)"
+       ]
+      },
+      {
+       "math": "= 0",
+       "en": "Simplify each part.",
+       "ur": "ہر حصے کو سادہ کریں۔",
+       "check": [
+        "(-2) + (2) == (0)"
+       ]
+      },
+      {
+       "math": "z_1+(-z_1) = 0 = (-z_1)+z_1",
+       "en": "Both are 0: $-z_1$ is the additive inverse of $z_1$.",
+       "ur": "دونوں 0 ہیں: $-z_1$، $z_1$ کا جمعی معکوس ہے۔",
+       "check": [
+        "(0) == (0)"
+       ]
+      }
+     ],
+     "answer": "verified: both sides $= 0$"
+    }
+   ],
+   "exercise": "1.2"
+  },
+  {
+   "id": "c10-ex1.2-q5",
+   "kind": "exercise",
+   "number": "5",
+   "page": 0,
+   "question": "If $\\frac{(1+i)^2}{2-i}=x+iy$, then find the values of $x$ and $y$.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "\\left(1 + i\\right)^2 = (1)^2 + 2(1)(i) + (i)^2",
+       "en": "Use $(a+b)^2 = a^2 + 2ab + b^2$.",
+       "ur": "$(a+b)^2 = a^2 + 2ab + b^2$ استعمال کریں۔",
+       "check": [
+        "(1 + I)**2 == (1)**2 + 2*(1)*(I) + (I)**2"
+       ]
+      },
+      {
+       "math": "= 1 + 2i - 1 = 2i",
+       "en": "Put $i^2 = -1$ and simplify.",
+       "ur": "$i^2 = -1$ رکھ کر سادہ کریں۔",
+       "check": [
+        "(1 + I)**2 == (2*I)"
+       ]
+      },
+      {
+       "math": "\\frac{2i}{2 - i} \\times \\frac{2 + i}{2 + i}",
+       "en": "Multiply the numerator and the denominator by the conjugate of the denominator, $2 + i$.",
+       "ur": "شمار کنندہ اور نسب نما کو نسب نما کے مزدوج $2 + i$ سے ضرب دیں۔",
+       "check": [
+        "(2*I)/(2 - I) == (2*I)*(2 + I)/((2 - I)*(2 + I))"
+       ]
+      },
+      {
+       "math": "= \\frac{-2 + 4i}{2^2 + 1^2} = \\frac{-2 + 4i}{5}",
+       "en": "In the denominator $(a+bi)(a-bi) = a^2 + b^2$; multiply out the numerator using $i^2=-1$.",
+       "ur": "نسب نما میں $(a+bi)(a-bi) = a^2 + b^2$؛ شمار کنندہ کو $i^2=-1$ کے ساتھ ضرب دیں۔",
+       "check": [
+        "(2 - I)*(2 + I) == (5)",
+        "(2*I)*(2 + I) == (-2 + 4*I)"
+       ]
+      },
+      {
+       "math": "= - \\frac{2}{5} + \\frac{4}{5}i",
+       "en": "Divide each part by the denominator and simplify.",
+       "ur": "ہر حصے کو نسب نما سے تقسیم کر کے سادہ کریں۔",
+       "check": [
+        "(2*I)/(2 - I) == (-2/5 + 4*I/5)"
+       ]
+      },
+      {
+       "math": "x + iy = - \\frac{2}{5} + \\frac{4}{5}i \\;\\Rightarrow\\; x = - \\frac{2}{5},\\ y = \\frac{4}{5}",
+       "en": "Compare the real and imaginary parts.",
+       "ur": "حقیقی اور خیالی حصوں کا موازنہ کریں۔",
+       "check": [
+        "re((-2/5 + 4*I/5)) == (-2/5)",
+        "im((-2/5 + 4*I/5)) == (4/5)"
+       ]
+      }
+     ],
+     "answer": "$x = - \\frac{2}{5},\\ y = \\frac{4}{5}$",
+     "book_key": "x=-\\frac{2}{5}, y=\\frac{4}{5}"
+    }
+   ],
+   "exercise": "1.2"
+  },
+  {
+   "id": "c10-ex1.2-q6",
+   "kind": "exercise",
+   "number": "6",
+   "page": 0,
+   "question": "If $(2x+iy)(1-i)=4+2i$, then find the values of $x$ and $y$.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "(2x+iy)(1-i) = 4 + 2 i \\;\\Rightarrow\\; (2 x + y) + (- 2 x + y)i = 4 + 2i",
+       "en": "Expand the left side with $i^2=-1$ and write it as (real part) + (imaginary part)$i$.",
+       "ur": "بائیں جانب کو $i^2=-1$ سے پھیلا کر (حقیقی حصہ) + (خیالی حصہ)$i$ کی صورت میں لکھیں۔",
+       "check": [
+        "expand((2*(x)+I*(y))*(1-I)) == expand((2*x + y) + (-2*x + y)*I)"
+       ]
+      },
+      {
+       "math": "2 x + y = 4 \\quad\\text{and}\\quad - 2 x + y = 2",
+       "en": "Two complex numbers are equal only when their real parts are equal and their imaginary parts are equal.",
+       "ur": "دو مختلط اعداد تب برابر ہوتے ہیں جب ان کے حقیقی حصے برابر ہوں اور خیالی حصے بھی برابر ہوں۔"
+      },
+      {
+       "math": "x = \\frac{1}{2},\\quad y = 3",
+       "en": "Solve these two equations together.",
+       "ur": "ان دونوں مساوات کو اکٹھے حل کریں۔",
+       "check": [
+        "2*(1/2) + (3) - 4 == 0",
+        "-2*(1/2) + (3) - 2 == 0"
+       ]
+      },
+      {
+       "math": "\\text{Check: } (2x+iy)(1-i)\\Big|_{x=\\frac{1}{2}, y=3} = 4 + 2i",
+       "en": "Put the values back into the given equation: both sides agree.",
+       "ur": "قیمتیں دی گئی مساوات میں رکھیں: دونوں اطراف برابر ہیں۔",
+       "check": [
+        "(2*(1/2)+I*(3))*(1-I) == 4+2*I"
+       ]
+      }
+     ],
+     "answer": "$x = \\frac{1}{2},\\ y = 3$",
+     "book_key": "x=\\frac{1}{2}, y=3"
+    }
+   ],
+   "exercise": "1.2"
+  },
+  {
+   "id": "c10-ex1.2-q7",
+   "kind": "exercise",
+   "number": "7",
+   "page": 0,
+   "question": "Find the values of $a$ and $b$, if $(a+bi)(1+3i)=-8+11i$.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "(a+bi)(1+3i) = -8 + 11 i \\;\\Rightarrow\\; (a - 3 b) + (3 a + b)i = -8 + 11i",
+       "en": "Expand the left side with $i^2=-1$ and write it as (real part) + (imaginary part)$i$.",
+       "ur": "بائیں جانب کو $i^2=-1$ سے پھیلا کر (حقیقی حصہ) + (خیالی حصہ)$i$ کی صورت میں لکھیں۔",
+       "check": [
+        "expand(((a)+(b)*I)*(1+3*I)) == expand((a - 3*b) + (3*a + b)*I)"
+       ]
+      },
+      {
+       "math": "a - 3 b = -8 \\quad\\text{and}\\quad 3 a + b = 11",
+       "en": "Two complex numbers are equal only when their real parts are equal and their imaginary parts are equal.",
+       "ur": "دو مختلط اعداد تب برابر ہوتے ہیں جب ان کے حقیقی حصے برابر ہوں اور خیالی حصے بھی برابر ہوں۔"
+      },
+      {
+       "math": "a = \\frac{5}{2},\\quad b = \\frac{7}{2}",
+       "en": "Solve these two equations together.",
+       "ur": "ان دونوں مساوات کو اکٹھے حل کریں۔",
+       "check": [
+        "(5/2) - 3*(7/2) + 8 == 0",
+        "3*(5/2) + (7/2) - 11 == 0"
+       ]
+      },
+      {
+       "math": "\\text{Check: } (a+bi)(1+3i)\\Big|_{a=\\frac{5}{2}, b=\\frac{7}{2}} = -8 + 11i",
+       "en": "Put the values back into the given equation: both sides agree.",
+       "ur": "قیمتیں دی گئی مساوات میں رکھیں: دونوں اطراف برابر ہیں۔",
+       "check": [
+        "((5/2)+(7/2)*I)*(1+3*I) == -8+11*I"
+       ]
+      }
+     ],
+     "answer": "$a = \\frac{5}{2},\\ b = \\frac{7}{2}$",
+     "book_key": "a=\\frac{5}{2}, b=\\frac{7}{2}"
+    }
+   ],
+   "exercise": "1.2"
+  },
+  {
+   "id": "c10-ex1.3-q1",
+   "kind": "exercise",
+   "number": "1",
+   "page": 0,
+   "question": "Find the modulus of the following complex numbers: (i) $4+3i$ (ii) $-5-4i$ (iii) $\\frac{3}{5}-\\frac{4}{5}i$ (iv) $-\\sqrt{2}-\\sqrt{3}i$",
+   "parts": [
+    {
+     "label": "i",
+     "prompt": "$4 + 3i$",
+     "steps": [
+      {
+       "math": "|z| = \\sqrt{a^2+b^2} = \\sqrt{(4)^2 + (3)^2}",
+       "en": "The modulus of $a+bi$ is $\\sqrt{a^2+b^2}$.",
+       "ur": "$a+bi$ کا مقیاس $\\sqrt{a^2+b^2}$ ہے۔"
+      },
+      {
+       "math": "= \\sqrt{25} = 5",
+       "en": "Add the squares and take the square root.",
+       "ur": "مربعوں کو جمع کر کے جذر لیں۔",
+       "check": [
+        "sqrt((4)**2 + (3)**2) == (5)",
+        "Abs((4 + 3*I)) == (5)"
+       ]
+      }
+     ],
+     "answer": "$5$",
+     "book_key": "5"
+    },
+    {
+     "label": "ii",
+     "prompt": "$-5 - 4i$",
+     "steps": [
+      {
+       "math": "|z| = \\sqrt{a^2+b^2} = \\sqrt{(-5)^2 + (-4)^2}",
+       "en": "The modulus of $a+bi$ is $\\sqrt{a^2+b^2}$.",
+       "ur": "$a+bi$ کا مقیاس $\\sqrt{a^2+b^2}$ ہے۔"
+      },
+      {
+       "math": "= \\sqrt{41} = \\sqrt{41}",
+       "en": "Add the squares and take the square root.",
+       "ur": "مربعوں کو جمع کر کے جذر لیں۔",
+       "check": [
+        "sqrt((-5)**2 + (-4)**2) == (sqrt(41))",
+        "Abs((-5 - 4*I)) == (sqrt(41))"
+       ]
+      }
+     ],
+     "answer": "$\\sqrt{41}$",
+     "book_key": "\\sqrt{41}"
+    },
+    {
+     "label": "iii",
+     "prompt": "$\\frac{3}{5} - \\frac{4}{5}i$",
+     "steps": [
+      {
+       "math": "|z| = \\sqrt{a^2+b^2} = \\sqrt{(\\frac{3}{5})^2 + (- \\frac{4}{5})^2}",
+       "en": "The modulus of $a+bi$ is $\\sqrt{a^2+b^2}$.",
+       "ur": "$a+bi$ کا مقیاس $\\sqrt{a^2+b^2}$ ہے۔"
+      },
+      {
+       "math": "= \\sqrt{1} = 1",
+       "en": "Add the squares and take the square root.",
+       "ur": "مربعوں کو جمع کر کے جذر لیں۔",
+       "check": [
+        "sqrt((3/5)**2 + (-4/5)**2) == (1)",
+        "Abs((3/5 - 4*I/5)) == (1)"
+       ]
+      }
+     ],
+     "answer": "$1$",
+     "book_key": "1"
+    },
+    {
+     "label": "iv",
+     "prompt": "$- \\sqrt{2} - i\\sqrt{3}$",
+     "steps": [
+      {
+       "math": "|z| = \\sqrt{a^2+b^2} = \\sqrt{(- \\sqrt{2})^2 + (- \\sqrt{3})^2}",
+       "en": "The modulus of $a+bi$ is $\\sqrt{a^2+b^2}$.",
+       "ur": "$a+bi$ کا مقیاس $\\sqrt{a^2+b^2}$ ہے۔"
+      },
+      {
+       "math": "= \\sqrt{5} = \\sqrt{5}",
+       "en": "Add the squares and take the square root.",
+       "ur": "مربعوں کو جمع کر کے جذر لیں۔",
+       "check": [
+        "sqrt((-sqrt(2))**2 + (-sqrt(3))**2) == (sqrt(5))",
+        "Abs((-sqrt(2) - sqrt(3)*I)) == (sqrt(5))"
+       ]
+      }
+     ],
+     "answer": "$\\sqrt{5}$",
+     "book_key": "\\sqrt{5}"
+    }
+   ],
+   "exercise": "1.3"
+  },
+  {
+   "id": "c10-ex1.3-q2",
+   "kind": "exercise",
+   "number": "2",
+   "page": 0,
+   "question": "If $z_1=2+7i$ and $z_2=4-3i$, then verify that (i) $\\overline{z_1+z_2}=\\overline{z_1}+\\overline{z_2}$ (ii) $\\overline{z_1z_2}=\\overline{z_1}\\,\\overline{z_2}$ (iii) $\\overline{\\left(\\frac{z_1}{z_2}\\right)}=\\frac{\\overline{z_1}}{\\overline{z_2}}$",
+   "parts": [
+    {
+     "label": "i",
+     "prompt": "$\\overline{z_1+z_2}=\\overline{z_1}+\\overline{z_2}$",
+     "steps": [
+      {
+       "math": "",
+       "en": "Left-hand side: $\\overline{z_1+z_2}$",
+       "ur": "بائیں جانب: $\\overline{z_1+z_2}$"
+      },
+      {
+       "math": "\\left(2 + 7i\\right) + \\left(4 - 3i\\right) = (2 + 4) + (7 + \\left(-3\\right))i",
+       "en": "Add (or subtract) the real parts together and the imaginary parts together.",
+       "ur": "حقیقی حصوں کو آپس میں اور خیالی حصوں کو آپس میں جمع (یا تفریق) کریں۔",
+       "check": [
+        "(2 + 7*I) + (4 - 3*I) == (6 + 4*I)"
+       ]
+      },
+      {
+       "math": "= 6 + 4i",
+       "en": "Simplify each part.",
+       "ur": "ہر حصے کو سادہ کریں۔",
+       "check": [
+        "(2) + (4) == (6)"
+       ]
+      },
+      {
+       "math": "\\overline{6 + 4i} = 6 - 4i",
+       "en": "The conjugate changes the sign of the imaginary part.",
+       "ur": "مزدوج میں خیالی حصے کی علامت بدل جاتی ہے۔",
+       "check": [
+        "conjugate((6 + 4*I)) == (6 - 4*I)"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Right-hand side: $\\overline{z_1}+\\overline{z_2}$",
+       "ur": "دائیں جانب: $\\overline{z_1}+\\overline{z_2}$"
+      },
+      {
+       "math": "\\overline{2 + 7i} = 2 - 7i",
+       "en": "The conjugate changes the sign of the imaginary part.",
+       "ur": "مزدوج میں خیالی حصے کی علامت بدل جاتی ہے۔",
+       "check": [
+        "conjugate((2 + 7*I)) == (2 - 7*I)"
+       ]
+      },
+      {
+       "math": "\\overline{4 - 3i} = 4 + 3i",
+       "en": "The conjugate changes the sign of the imaginary part.",
+       "ur": "مزدوج میں خیالی حصے کی علامت بدل جاتی ہے۔",
+       "check": [
+        "conjugate((4 - 3*I)) == (4 + 3*I)"
+       ]
+      },
+      {
+       "math": "\\left(2 - 7i\\right) + \\left(4 + 3i\\right) = (2 + 4) + (-7 + 3)i",
+       "en": "Add (or subtract) the real parts together and the imaginary parts together.",
+       "ur": "حقیقی حصوں کو آپس میں اور خیالی حصوں کو آپس میں جمع (یا تفریق) کریں۔",
+       "check": [
+        "(2 - 7*I) + (4 + 3*I) == (6 - 4*I)"
+       ]
+      },
+      {
+       "math": "= 6 - 4i",
+       "en": "Simplify each part.",
+       "ur": "ہر حصے کو سادہ کریں۔",
+       "check": [
+        "(2) + (4) == (6)"
+       ]
+      },
+      {
+       "math": "\\overline{z_1+z_2} = 6 - 4i = \\overline{z_1}+\\overline{z_2}",
+       "en": "The conjugate of a sum is the sum of the conjugates.",
+       "ur": "حاصل جمع کا مزدوج، مزدوجوں کا حاصل جمع ہے۔",
+       "check": [
+        "(6 - 4*I) == (6 - 4*I)"
+       ]
+      }
+     ],
+     "answer": "verified: both sides $= 6 - 4i$"
+    },
+    {
+     "label": "ii",
+     "prompt": "$\\overline{z_1z_2}=\\overline{z_1}\\,\\overline{z_2}$",
+     "steps": [
+      {
+       "math": "",
+       "en": "Left-hand side: $\\overline{z_1z_2}$",
+       "ur": "بائیں جانب: $\\overline{z_1z_2}$"
+      },
+      {
+       "math": "\\left(2 + 7i\\right)\\left(4 - 3i\\right) = 8 - 6i + 28i - 21i^2",
+       "en": "Multiply each term of the first bracket by each term of the second.",
+       "ur": "پہلی قوسین کے ہر رکن کو دوسری قوسین کے ہر رکن سے ضرب دیں۔",
+       "check": [
+        "(2 + 7*I)*(4 - 3*I) == (8) + (22)*I + (-21)*I**2"
+       ]
+      },
+      {
+       "math": "= 8 + 22i + 21 = 29 + 22i",
+       "en": "Put $i^2 = -1$ and collect the real and imaginary parts.",
+       "ur": "$i^2 = -1$ رکھیں اور حقیقی اور خیالی حصے اکٹھے کریں۔",
+       "check": [
+        "I**2 == -1",
+        "(2 + 7*I)*(4 - 3*I) == (29 + 22*I)"
+       ]
+      },
+      {
+       "math": "\\overline{29 + 22i} = 29 - 22i",
+       "en": "The conjugate changes the sign of the imaginary part.",
+       "ur": "مزدوج میں خیالی حصے کی علامت بدل جاتی ہے۔",
+       "check": [
+        "conjugate((29 + 22*I)) == (29 - 22*I)"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Right-hand side: $\\overline{z_1}\\,\\overline{z_2}$",
+       "ur": "دائیں جانب: $\\overline{z_1}\\,\\overline{z_2}$"
+      },
+      {
+       "math": "\\overline{2 + 7i} = 2 - 7i",
+       "en": "The conjugate changes the sign of the imaginary part.",
+       "ur": "مزدوج میں خیالی حصے کی علامت بدل جاتی ہے۔",
+       "check": [
+        "conjugate((2 + 7*I)) == (2 - 7*I)"
+       ]
+      },
+      {
+       "math": "\\overline{4 - 3i} = 4 + 3i",
+       "en": "The conjugate changes the sign of the imaginary part.",
+       "ur": "مزدوج میں خیالی حصے کی علامت بدل جاتی ہے۔",
+       "check": [
+        "conjugate((4 - 3*I)) == (4 + 3*I)"
+       ]
+      },
+      {
+       "math": "\\left(2 - 7i\\right)\\left(4 + 3i\\right) = 8 + 6i - 28i - 21i^2",
+       "en": "Multiply each term of the first bracket by each term of the second.",
+       "ur": "پہلی قوسین کے ہر رکن کو دوسری قوسین کے ہر رکن سے ضرب دیں۔",
+       "check": [
+        "(2 - 7*I)*(4 + 3*I) == (8) + (-22)*I + (-21)*I**2"
+       ]
+      },
+      {
+       "math": "= 8 - 22i + 21 = 29 - 22i",
+       "en": "Put $i^2 = -1$ and collect the real and imaginary parts.",
+       "ur": "$i^2 = -1$ رکھیں اور حقیقی اور خیالی حصے اکٹھے کریں۔",
+       "check": [
+        "I**2 == -1",
+        "(2 - 7*I)*(4 + 3*I) == (29 - 22*I)"
+       ]
+      },
+      {
+       "math": "\\overline{z_1z_2} = 29 - 22i = \\overline{z_1}\\,\\overline{z_2}",
+       "en": "The conjugate of a product is the product of the conjugates.",
+       "ur": "حاصل ضرب کا مزدوج، مزدوجوں کا حاصل ضرب ہے۔",
+       "check": [
+        "(29 - 22*I) == (29 - 22*I)"
+       ]
+      }
+     ],
+     "answer": "verified: both sides $= 29 - 22i$"
+    },
+    {
+     "label": "iii",
+     "prompt": "$\\overline{\\left(\\frac{z_1}{z_2}\\right)}=\\frac{\\overline{z_1}}{\\overline{z_2}}$",
+     "steps": [
+      {
+       "math": "",
+       "en": "Left-hand side: $\\overline{\\left(\\frac{z_1}{z_2}\\right)}$",
+       "ur": "بائیں جانب: $\\overline{\\left(\\frac{z_1}{z_2}\\right)}$"
+      },
+      {
+       "math": "\\frac{2 + 7i}{4 - 3i} \\times \\frac{4 + 3i}{4 + 3i}",
+       "en": "Multiply the numerator and the denominator by the conjugate of the denominator, $4 + 3i$.",
+       "ur": "شمار کنندہ اور نسب نما کو نسب نما کے مزدوج $4 + 3i$ سے ضرب دیں۔",
+       "check": [
+        "(2 + 7*I)/(4 - 3*I) == (2 + 7*I)*(4 + 3*I)/((4 - 3*I)*(4 + 3*I))"
+       ]
+      },
+      {
+       "math": "= \\frac{-13 + 34i}{4^2 + 3^2} = \\frac{-13 + 34i}{25}",
+       "en": "In the denominator $(a+bi)(a-bi) = a^2 + b^2$; multiply out the numerator using $i^2=-1$.",
+       "ur": "نسب نما میں $(a+bi)(a-bi) = a^2 + b^2$؛ شمار کنندہ کو $i^2=-1$ کے ساتھ ضرب دیں۔",
+       "check": [
+        "(4 - 3*I)*(4 + 3*I) == (25)",
+        "(2 + 7*I)*(4 + 3*I) == (-13 + 34*I)"
+       ]
+      },
+      {
+       "math": "= - \\frac{13}{25} + \\frac{34}{25}i",
+       "en": "Divide each part by the denominator and simplify.",
+       "ur": "ہر حصے کو نسب نما سے تقسیم کر کے سادہ کریں۔",
+       "check": [
+        "(2 + 7*I)/(4 - 3*I) == (-13/25 + 34*I/25)"
+       ]
+      },
+      {
+       "math": "\\overline{- \\frac{13}{25} + \\frac{34}{25}i} = - \\frac{13}{25} - \\frac{34}{25}i",
+       "en": "The conjugate changes the sign of the imaginary part.",
+       "ur": "مزدوج میں خیالی حصے کی علامت بدل جاتی ہے۔",
+       "check": [
+        "conjugate((-13/25 + 34*I/25)) == (-13/25 - 34*I/25)"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Right-hand side: $\\frac{\\overline{z_1}}{\\overline{z_2}}$",
+       "ur": "دائیں جانب: $\\frac{\\overline{z_1}}{\\overline{z_2}}$"
+      },
+      {
+       "math": "\\overline{2 + 7i} = 2 - 7i",
+       "en": "The conjugate changes the sign of the imaginary part.",
+       "ur": "مزدوج میں خیالی حصے کی علامت بدل جاتی ہے۔",
+       "check": [
+        "conjugate((2 + 7*I)) == (2 - 7*I)"
+       ]
+      },
+      {
+       "math": "\\overline{4 - 3i} = 4 + 3i",
+       "en": "The conjugate changes the sign of the imaginary part.",
+       "ur": "مزدوج میں خیالی حصے کی علامت بدل جاتی ہے۔",
+       "check": [
+        "conjugate((4 - 3*I)) == (4 + 3*I)"
+       ]
+      },
+      {
+       "math": "\\frac{2 - 7i}{4 + 3i} \\times \\frac{4 - 3i}{4 - 3i}",
+       "en": "Multiply the numerator and the denominator by the conjugate of the denominator, $4 - 3i$.",
+       "ur": "شمار کنندہ اور نسب نما کو نسب نما کے مزدوج $4 - 3i$ سے ضرب دیں۔",
+       "check": [
+        "(2 - 7*I)/(4 + 3*I) == (2 - 7*I)*(4 - 3*I)/((4 + 3*I)*(4 - 3*I))"
+       ]
+      },
+      {
+       "math": "= \\frac{-13 - 34i}{4^2 + 3^2} = \\frac{-13 - 34i}{25}",
+       "en": "In the denominator $(a+bi)(a-bi) = a^2 + b^2$; multiply out the numerator using $i^2=-1$.",
+       "ur": "نسب نما میں $(a+bi)(a-bi) = a^2 + b^2$؛ شمار کنندہ کو $i^2=-1$ کے ساتھ ضرب دیں۔",
+       "check": [
+        "(4 + 3*I)*(4 - 3*I) == (25)",
+        "(2 - 7*I)*(4 - 3*I) == (-13 - 34*I)"
+       ]
+      },
+      {
+       "math": "= - \\frac{13}{25} - \\frac{34}{25}i",
+       "en": "Divide each part by the denominator and simplify.",
+       "ur": "ہر حصے کو نسب نما سے تقسیم کر کے سادہ کریں۔",
+       "check": [
+        "(2 - 7*I)/(4 + 3*I) == (-13/25 - 34*I/25)"
+       ]
+      },
+      {
+       "math": "\\overline{\\left(\\frac{z_1}{z_2}\\right)} = - \\frac{13}{25} - \\frac{34}{25}i = \\frac{\\overline{z_1}}{\\overline{z_2}}",
+       "en": "The conjugate of a quotient is the quotient of the conjugates.",
+       "ur": "حاصل تقسیم کا مزدوج، مزدوجوں کا حاصل تقسیم ہے۔",
+       "check": [
+        "(-13/25 - 34*I/25) == (-13/25 - 34*I/25)"
+       ]
+      }
+     ],
+     "answer": "verified: both sides $= - \\frac{13}{25} - \\frac{34}{25}i$"
+    }
+   ],
+   "exercise": "1.3"
+  },
+  {
+   "id": "c10-ex1.3-q3",
+   "kind": "exercise",
+   "number": "3",
+   "page": 0,
+   "question": "If $z=5-2i$, then verify that (i) $\\overline{\\overline{z}}=z$ (ii) $|z|=|\\overline{z}|$ (iii) $|z|=|-z|$ (iv) $z\\overline{z}=|z|^2$ (v) $|z|=|-\\overline{z}|$",
+   "parts": [
+    {
+     "label": "i",
+     "prompt": "$\\overline{\\overline{z}}=z$",
+     "steps": [
+      {
+       "math": "z = 5 - 2i \\Rightarrow \\overline{z} = 5 + 2i \\Rightarrow \\overline{\\overline{z}} = 5 - 2i = z",
+       "en": "Taking the conjugate twice changes the sign of the imaginary part twice.",
+       "ur": "دو بار مزدوج لینے سے خیالی حصے کی علامت دو بار بدلتی ہے۔",
+       "check": [
+        "conjugate(conjugate((5 - 2*I))) == (5 - 2*I)"
+       ]
+      }
+     ],
+     "answer": "verified: $\\overline{\\overline{z}} = z$"
+    },
+    {
+     "label": "ii",
+     "prompt": "$|z|=|\\overline{z}|$",
+     "steps": [
+      {
+       "math": "",
+       "en": "Left-hand side: $|z|$",
+       "ur": "بائیں جانب: $|z|$"
+      },
+      {
+       "math": "|5 - 2i| = \\sqrt{(5)^2 + (-2)^2} = \\sqrt{29}",
+       "en": "Modulus: $|a+bi| = \\sqrt{a^2+b^2}$.",
+       "ur": "مقیاس: $|a+bi| = \\sqrt{a^2+b^2}$۔",
+       "check": [
+        "Abs((5 - 2*I)) == (sqrt(29))"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Right-hand side: $|\\overline{z}|$",
+       "ur": "دائیں جانب: $|\\overline{z}|$"
+      },
+      {
+       "math": "|5 + 2i| = \\sqrt{(5)^2 + (2)^2} = \\sqrt{29}",
+       "en": "Modulus: $|a+bi| = \\sqrt{a^2+b^2}$.",
+       "ur": "مقیاس: $|a+bi| = \\sqrt{a^2+b^2}$۔",
+       "check": [
+        "Abs((5 + 2*I)) == (sqrt(29))"
+       ]
+      },
+      {
+       "math": "|z| = \\sqrt{29} = |\\overline{z}|",
+       "en": "A number and its conjugate have the same modulus.",
+       "ur": "عدد اور اس کے مزدوج کا مقیاس برابر ہوتا ہے۔",
+       "check": [
+        "(sqrt(29)) == (sqrt(29))"
+       ]
+      }
+     ],
+     "answer": "verified: both sides $= \\sqrt{29}$"
+    },
+    {
+     "label": "iii",
+     "prompt": "$|z|=|-z|$",
+     "steps": [
+      {
+       "math": "",
+       "en": "Left-hand side: $|z|$",
+       "ur": "بائیں جانب: $|z|$"
+      },
+      {
+       "math": "|5 - 2i| = \\sqrt{(5)^2 + (-2)^2} = \\sqrt{29}",
+       "en": "Modulus: $|a+bi| = \\sqrt{a^2+b^2}$.",
+       "ur": "مقیاس: $|a+bi| = \\sqrt{a^2+b^2}$۔",
+       "check": [
+        "Abs((5 - 2*I)) == (sqrt(29))"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Right-hand side: $|-z|$",
+       "ur": "دائیں جانب: $|-z|$"
+      },
+      {
+       "math": "|-5 + 2i| = \\sqrt{(-5)^2 + (2)^2} = \\sqrt{29}",
+       "en": "Modulus: $|a+bi| = \\sqrt{a^2+b^2}$.",
+       "ur": "مقیاس: $|a+bi| = \\sqrt{a^2+b^2}$۔",
+       "check": [
+        "Abs((-5 + 2*I)) == (sqrt(29))"
+       ]
+      },
+      {
+       "math": "|z| = \\sqrt{29} = |-z|",
+       "en": "Changing both signs does not change the modulus.",
+       "ur": "دونوں علامتیں بدلنے سے مقیاس نہیں بدلتا۔",
+       "check": [
+        "(sqrt(29)) == (sqrt(29))"
+       ]
+      }
+     ],
+     "answer": "verified: both sides $= \\sqrt{29}$"
+    },
+    {
+     "label": "iv",
+     "prompt": "$z\\overline{z}=|z|^2$",
+     "steps": [
+      {
+       "math": "z\\overline{z} = \\left(5 - 2i\\right)\\left(5 + 2i\\right) = (5)^2 - (-2i)^2 = 29",
+       "en": "Use $(a+b)(a-b) = a^2-b^2$ with $i^2=-1$.",
+       "ur": "$(a+b)(a-b) = a^2-b^2$ اور $i^2=-1$ استعمال کریں۔",
+       "check": [
+        "(5 - 2*I)*(5 + 2*I) == (29)"
+       ]
+      },
+      {
+       "math": "|z|^2 = \\left(\\sqrt{(5)^2 + (-2)^2}\\right)^2 = 29",
+       "en": "The square of the modulus is $a^2+b^2$.",
+       "ur": "مقیاس کا مربع $a^2+b^2$ ہے۔",
+       "check": [
+        "Abs((5 - 2*I))**2 == (29)"
+       ]
+      },
+      {
+       "math": "z\\overline{z} = |z|^2 = 29",
+       "en": "Both sides are equal.",
+       "ur": "دونوں اطراف برابر ہیں۔"
+      }
+     ],
+     "answer": "verified: both sides $= 29$"
+    },
+    {
+     "label": "v",
+     "prompt": "$|z|=|-\\overline{z}|$",
+     "steps": [
+      {
+       "math": "",
+       "en": "Left-hand side: $|z|$",
+       "ur": "بائیں جانب: $|z|$"
+      },
+      {
+       "math": "|5 - 2i| = \\sqrt{(5)^2 + (-2)^2} = \\sqrt{29}",
+       "en": "Modulus: $|a+bi| = \\sqrt{a^2+b^2}$.",
+       "ur": "مقیاس: $|a+bi| = \\sqrt{a^2+b^2}$۔",
+       "check": [
+        "Abs((5 - 2*I)) == (sqrt(29))"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Right-hand side: $|-\\overline{z}|$",
+       "ur": "دائیں جانب: $|-\\overline{z}|$"
+      },
+      {
+       "math": "|-5 - 2i| = \\sqrt{(-5)^2 + (-2)^2} = \\sqrt{29}",
+       "en": "Modulus: $|a+bi| = \\sqrt{a^2+b^2}$.",
+       "ur": "مقیاس: $|a+bi| = \\sqrt{a^2+b^2}$۔",
+       "check": [
+        "Abs((-5 - 2*I)) == (sqrt(29))"
+       ]
+      },
+      {
+       "math": "|z| = \\sqrt{29} = |-\\overline{z}|",
+       "en": "The modulus is unchanged by conjugation and by changing signs.",
+       "ur": "مزدوج لینے یا علامتیں بدلنے سے مقیاس نہیں بدلتا۔",
+       "check": [
+        "(sqrt(29)) == (sqrt(29))"
+       ]
+      }
+     ],
+     "answer": "verified: both sides $= \\sqrt{29}$"
+    }
+   ],
+   "exercise": "1.3"
+  },
+  {
+   "id": "c10-ex1.3-q4",
+   "kind": "exercise",
+   "number": "4",
+   "page": 0,
+   "question": "If $z=4-3i$, then verify that $|z|=|-z|=|\\overline{\\overline{z}}|=|-\\overline{z}|$.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "",
+       "en": "$|z|$:",
+       "ur": "$|z|$:"
+      },
+      {
+       "math": "|4 - 3i| = \\sqrt{(4)^2 + (-3)^2} = 5",
+       "en": "Modulus: $|a+bi| = \\sqrt{a^2+b^2}$.",
+       "ur": "مقیاس: $|a+bi| = \\sqrt{a^2+b^2}$۔",
+       "check": [
+        "Abs((4 - 3*I)) == (5)"
+       ]
+      },
+      {
+       "math": "",
+       "en": "$|-z|$:",
+       "ur": "$|-z|$:"
+      },
+      {
+       "math": "|-4 + 3i| = \\sqrt{(-4)^2 + (3)^2} = 5",
+       "en": "Modulus: $|a+bi| = \\sqrt{a^2+b^2}$.",
+       "ur": "مقیاس: $|a+bi| = \\sqrt{a^2+b^2}$۔",
+       "check": [
+        "Abs((-4 + 3*I)) == (5)"
+       ]
+      },
+      {
+       "math": "",
+       "en": "$|\\overline{\\overline{z}}|$:",
+       "ur": "$|\\overline{\\overline{z}}|$:"
+      },
+      {
+       "math": "|4 - 3i| = \\sqrt{(4)^2 + (-3)^2} = 5",
+       "en": "Modulus: $|a+bi| = \\sqrt{a^2+b^2}$.",
+       "ur": "مقیاس: $|a+bi| = \\sqrt{a^2+b^2}$۔",
+       "check": [
+        "Abs((4 - 3*I)) == (5)"
+       ]
+      },
+      {
+       "math": "",
+       "en": "$|-\\overline{z}|$:",
+       "ur": "$|-\\overline{z}|$:"
+      },
+      {
+       "math": "|-4 - 3i| = \\sqrt{(-4)^2 + (-3)^2} = 5",
+       "en": "Modulus: $|a+bi| = \\sqrt{a^2+b^2}$.",
+       "ur": "مقیاس: $|a+bi| = \\sqrt{a^2+b^2}$۔",
+       "check": [
+        "Abs((-4 - 3*I)) == (5)"
+       ]
+      },
+      {
+       "math": "|z| = |-z| = |\\overline{\\overline{z}}| = |-\\overline{z}| = 5",
+       "en": "All four are equal.",
+       "ur": "چاروں برابر ہیں۔"
+      }
+     ],
+     "answer": "verified: all equal $5$"
+    }
+   ],
+   "exercise": "1.3"
+  },
+  {
+   "id": "c10-ex1.3-q5",
+   "kind": "exercise",
+   "number": "5",
+   "page": 0,
+   "question": "If $z_1=2+3i$, $z_2=-1+i$, then evaluate: (i) $\\operatorname{Re}(z_1z_2)$ (ii) $\\operatorname{Im}(z_1z_2)$",
+   "parts": [
+    {
+     "label": "i",
+     "prompt": "$\\operatorname{Re}(z_1z_2)$",
+     "steps": [
+      {
+       "math": "\\left(2 + 3i\\right)\\left(-1 + i\\right) = -2 + 2i - 3i + 3i^2",
+       "en": "Multiply each term of the first bracket by each term of the second.",
+       "ur": "پہلی قوسین کے ہر رکن کو دوسری قوسین کے ہر رکن سے ضرب دیں۔",
+       "check": [
+        "(2 + 3*I)*(-1 + I) == (-2) + (-1)*I + (3)*I**2"
+       ]
+      },
+      {
+       "math": "= -2 - 1i - 3 = -5 - i",
+       "en": "Put $i^2 = -1$ and collect the real and imaginary parts.",
+       "ur": "$i^2 = -1$ رکھیں اور حقیقی اور خیالی حصے اکٹھے کریں۔",
+       "check": [
+        "I**2 == -1",
+        "(2 + 3*I)*(-1 + I) == (-5 - I)"
+       ]
+      },
+      {
+       "math": "\\operatorname{Re}(z_1z_2) = -5",
+       "en": "The real part is the term without $i$.",
+       "ur": "حقیقی حصہ وہ رکن ہے جس میں $i$ نہیں۔",
+       "check": [
+        "re((-5 - I)) == (-5)"
+       ]
+      }
+     ],
+     "answer": "$-5$",
+     "book_key": "-5"
+    },
+    {
+     "label": "ii",
+     "prompt": "$\\operatorname{Im}(z_1z_2)$",
+     "steps": [
+      {
+       "math": "\\left(2 + 3i\\right)\\left(-1 + i\\right) = -2 + 2i - 3i + 3i^2",
+       "en": "Multiply each term of the first bracket by each term of the second.",
+       "ur": "پہلی قوسین کے ہر رکن کو دوسری قوسین کے ہر رکن سے ضرب دیں۔",
+       "check": [
+        "(2 + 3*I)*(-1 + I) == (-2) + (-1)*I + (3)*I**2"
+       ]
+      },
+      {
+       "math": "= -2 - 1i - 3 = -5 - i",
+       "en": "Put $i^2 = -1$ and collect the real and imaginary parts.",
+       "ur": "$i^2 = -1$ رکھیں اور حقیقی اور خیالی حصے اکٹھے کریں۔",
+       "check": [
+        "I**2 == -1",
+        "(2 + 3*I)*(-1 + I) == (-5 - I)"
+       ]
+      },
+      {
+       "math": "\\operatorname{Im}(z_1z_2) = -1",
+       "en": "The imaginary part is the coefficient of $i$.",
+       "ur": "خیالی حصہ $i$ کا عددی سر ہے۔",
+       "check": [
+        "im((-5 - I)) == (-1)"
+       ]
+      }
+     ],
+     "answer": "$-1$",
+     "book_key": "-1"
+    }
+   ],
+   "exercise": "1.3"
+  },
+  {
+   "id": "c10-ex1.4-q1",
+   "kind": "exercise",
+   "number": "1",
+   "page": 0,
+   "question": "Find the real and imaginary parts of the following complex numbers: (i) $(8-3i)^2$ (ii) $(5+3i)^{-1}$ (iii) $(4-5i)^{-1}$ (iv) $(4-3i)^{-2}$ (v) $\\left(\\frac{3+2i}{4+3i}\\right)^{-1}$ (vi) $\\left(\\frac{2-i}{2+i}\\right)^{-2}$ (vii) $\\left(\\frac{1-2i}{1+i}\\right)^{2}$",
+   "parts": [
+    {
+     "label": "i",
+     "prompt": "$(8-3i)^2$",
+     "steps": [
+      {
+       "math": "\\left(8 - 3i\\right)^2 = (8)^2 + 2(8)(-3i) + (-3i)^2",
+       "en": "Use $(a+b)^2 = a^2 + 2ab + b^2$.",
+       "ur": "$(a+b)^2 = a^2 + 2ab + b^2$ استعمال کریں۔",
+       "check": [
+        "(8 - 3*I)**2 == (8)**2 + 2*(8)*(-3*I) + (-3*I)**2"
+       ]
+      },
+      {
+       "math": "= 64 - 48i - 9 = 55 - 48i",
+       "en": "Put $i^2 = -1$ and simplify.",
+       "ur": "$i^2 = -1$ رکھ کر سادہ کریں۔",
+       "check": [
+        "(8 - 3*I)**2 == (55 - 48*I)"
+       ]
+      },
+      {
+       "math": "\\operatorname{Re}(z) = 55, \\quad \\operatorname{Im}(z) = -48",
+       "en": "Read off the real part and the coefficient of $i$.",
+       "ur": "حقیقی حصہ اور $i$ کا عددی سر پڑھ لیں۔",
+       "check": [
+        "re((55 - 48*I)) == (55)",
+        "im((55 - 48*I)) == (-48)"
+       ]
+      }
+     ],
+     "answer": "$\\operatorname{Re} = 55,\\ \\operatorname{Im} = -48$",
+     "book_key": "Re=55, Im=-48"
+    },
+    {
+     "label": "ii",
+     "prompt": "$(5+3i)^{-1}$",
+     "steps": [
+      {
+       "math": "\\left(5 + 3i\\right)^{-1} = \\frac{1}{5 + 3i}",
+       "en": "A power $-1$ means one over the number.",
+       "ur": "طاقت $-1$ کا مطلب ہے ایک تقسیم وہ عدد۔",
+       "check": [
+        "(5 + 3*I)**(-1) == 1/(5 + 3*I)"
+       ]
+      },
+      {
+       "math": "\\frac{1}{5 + 3i} \\times \\frac{5 - 3i}{5 - 3i}",
+       "en": "Multiply the numerator and the denominator by the conjugate of the denominator, $5 - 3i$.",
+       "ur": "شمار کنندہ اور نسب نما کو نسب نما کے مزدوج $5 - 3i$ سے ضرب دیں۔",
+       "check": [
+        "(1)/(5 + 3*I) == (1)*(5 - 3*I)/((5 + 3*I)*(5 - 3*I))"
+       ]
+      },
+      {
+       "math": "= \\frac{5 - 3i}{5^2 + 3^2} = \\frac{5 - 3i}{34}",
+       "en": "In the denominator $(a+bi)(a-bi) = a^2 + b^2$; multiply out the numerator using $i^2=-1$.",
+       "ur": "نسب نما میں $(a+bi)(a-bi) = a^2 + b^2$؛ شمار کنندہ کو $i^2=-1$ کے ساتھ ضرب دیں۔",
+       "check": [
+        "(5 + 3*I)*(5 - 3*I) == (34)",
+        "(1)*(5 - 3*I) == (5 - 3*I)"
+       ]
+      },
+      {
+       "math": "= \\frac{5}{34} - \\frac{3}{34}i",
+       "en": "Divide each part by the denominator and simplify.",
+       "ur": "ہر حصے کو نسب نما سے تقسیم کر کے سادہ کریں۔",
+       "check": [
+        "(1)/(5 + 3*I) == (5/34 - 3*I/34)"
+       ]
+      },
+      {
+       "math": "\\operatorname{Re}(z) = \\frac{5}{34}, \\quad \\operatorname{Im}(z) = - \\frac{3}{34}",
+       "en": "Read off the real part and the coefficient of $i$.",
+       "ur": "حقیقی حصہ اور $i$ کا عددی سر پڑھ لیں۔",
+       "check": [
+        "re((5/34 - 3*I/34)) == (5/34)",
+        "im((5/34 - 3*I/34)) == (-3/34)"
+       ]
+      }
+     ],
+     "answer": "$\\operatorname{Re} = \\frac{5}{34},\\ \\operatorname{Im} = - \\frac{3}{34}$",
+     "book_key": "Re=\\frac{5}{34}, Im=-\\frac{3}{34}"
+    },
+    {
+     "label": "iii",
+     "prompt": "$(4-5i)^{-1}$",
+     "steps": [
+      {
+       "math": "\\left(4 - 5i\\right)^{-1} = \\frac{1}{4 - 5i}",
+       "en": "A power $-1$ means one over the number.",
+       "ur": "طاقت $-1$ کا مطلب ہے ایک تقسیم وہ عدد۔",
+       "check": [
+        "(4 - 5*I)**(-1) == 1/(4 - 5*I)"
+       ]
+      },
+      {
+       "math": "\\frac{1}{4 - 5i} \\times \\frac{4 + 5i}{4 + 5i}",
+       "en": "Multiply the numerator and the denominator by the conjugate of the denominator, $4 + 5i$.",
+       "ur": "شمار کنندہ اور نسب نما کو نسب نما کے مزدوج $4 + 5i$ سے ضرب دیں۔",
+       "check": [
+        "(1)/(4 - 5*I) == (1)*(4 + 5*I)/((4 - 5*I)*(4 + 5*I))"
+       ]
+      },
+      {
+       "math": "= \\frac{4 + 5i}{4^2 + 5^2} = \\frac{4 + 5i}{41}",
+       "en": "In the denominator $(a+bi)(a-bi) = a^2 + b^2$; multiply out the numerator using $i^2=-1$.",
+       "ur": "نسب نما میں $(a+bi)(a-bi) = a^2 + b^2$؛ شمار کنندہ کو $i^2=-1$ کے ساتھ ضرب دیں۔",
+       "check": [
+        "(4 - 5*I)*(4 + 5*I) == (41)",
+        "(1)*(4 + 5*I) == (4 + 5*I)"
+       ]
+      },
+      {
+       "math": "= \\frac{4}{41} + \\frac{5}{41}i",
+       "en": "Divide each part by the denominator and simplify.",
+       "ur": "ہر حصے کو نسب نما سے تقسیم کر کے سادہ کریں۔",
+       "check": [
+        "(1)/(4 - 5*I) == (4/41 + 5*I/41)"
+       ]
+      },
+      {
+       "math": "\\operatorname{Re}(z) = \\frac{4}{41}, \\quad \\operatorname{Im}(z) = \\frac{5}{41}",
+       "en": "Read off the real part and the coefficient of $i$.",
+       "ur": "حقیقی حصہ اور $i$ کا عددی سر پڑھ لیں۔",
+       "check": [
+        "re((4/41 + 5*I/41)) == (4/41)",
+        "im((4/41 + 5*I/41)) == (5/41)"
+       ]
+      }
+     ],
+     "answer": "$\\operatorname{Re} = \\frac{4}{41},\\ \\operatorname{Im} = \\frac{5}{41}$",
+     "book_key": "Re=\\frac{4}{41}, Im=\\frac{5}{41}"
+    },
+    {
+     "label": "iv",
+     "prompt": "$(4-3i)^{-2}$",
+     "steps": [
+      {
+       "math": "\\left(4 - 3i\\right)^2 = (4)^2 + 2(4)(-3i) + (-3i)^2",
+       "en": "Use $(a+b)^2 = a^2 + 2ab + b^2$.",
+       "ur": "$(a+b)^2 = a^2 + 2ab + b^2$ استعمال کریں۔",
+       "check": [
+        "(4 - 3*I)**2 == (4)**2 + 2*(4)*(-3*I) + (-3*I)**2"
+       ]
+      },
+      {
+       "math": "= 16 - 24i - 9 = 7 - 24i",
+       "en": "Put $i^2 = -1$ and simplify.",
+       "ur": "$i^2 = -1$ رکھ کر سادہ کریں۔",
+       "check": [
+        "(4 - 3*I)**2 == (7 - 24*I)"
+       ]
+      },
+      {
+       "math": "\\left(7 - 24i\\right)^{-1} = \\frac{1}{7 - 24i}",
+       "en": "A power $-1$ means one over the number.",
+       "ur": "طاقت $-1$ کا مطلب ہے ایک تقسیم وہ عدد۔",
+       "check": [
+        "(7 - 24*I)**(-1) == 1/(7 - 24*I)"
+       ]
+      },
+      {
+       "math": "\\frac{1}{7 - 24i} \\times \\frac{7 + 24i}{7 + 24i}",
+       "en": "Multiply the numerator and the denominator by the conjugate of the denominator, $7 + 24i$.",
+       "ur": "شمار کنندہ اور نسب نما کو نسب نما کے مزدوج $7 + 24i$ سے ضرب دیں۔",
+       "check": [
+        "(1)/(7 - 24*I) == (1)*(7 + 24*I)/((7 - 24*I)*(7 + 24*I))"
+       ]
+      },
+      {
+       "math": "= \\frac{7 + 24i}{7^2 + 24^2} = \\frac{7 + 24i}{625}",
+       "en": "In the denominator $(a+bi)(a-bi) = a^2 + b^2$; multiply out the numerator using $i^2=-1$.",
+       "ur": "نسب نما میں $(a+bi)(a-bi) = a^2 + b^2$؛ شمار کنندہ کو $i^2=-1$ کے ساتھ ضرب دیں۔",
+       "check": [
+        "(7 - 24*I)*(7 + 24*I) == (625)",
+        "(1)*(7 + 24*I) == (7 + 24*I)"
+       ]
+      },
+      {
+       "math": "= \\frac{7}{625} + \\frac{24}{625}i",
+       "en": "Divide each part by the denominator and simplify.",
+       "ur": "ہر حصے کو نسب نما سے تقسیم کر کے سادہ کریں۔",
+       "check": [
+        "(1)/(7 - 24*I) == (7/625 + 24*I/625)"
+       ]
+      },
+      {
+       "math": "\\operatorname{Re}(z) = \\frac{7}{625}, \\quad \\operatorname{Im}(z) = \\frac{24}{625}",
+       "en": "Read off the real part and the coefficient of $i$.",
+       "ur": "حقیقی حصہ اور $i$ کا عددی سر پڑھ لیں۔",
+       "check": [
+        "re((7/625 + 24*I/625)) == (7/625)",
+        "im((7/625 + 24*I/625)) == (24/625)"
+       ]
+      }
+     ],
+     "answer": "$\\operatorname{Re} = \\frac{7}{625},\\ \\operatorname{Im} = \\frac{24}{625}$",
+     "book_key": "Re=\\frac{7}{625}, Im=\\frac{24}{625}"
+    },
+    {
+     "label": "v",
+     "prompt": "$\\left(\\frac{3+2i}{4+3i}\\right)^{-1}$",
+     "steps": [
+      {
+       "math": "",
+       "en": "A power $-1$ turns the fraction upside down: $\\left(\\frac{p}{q}\\right)^{-1} = \\frac{q}{p}$.",
+       "ur": "طاقت $-1$ کسر کو الٹ دیتی ہے: $\\left(\\frac{p}{q}\\right)^{-1} = \\frac{q}{p}$۔"
+      },
+      {
+       "math": "\\frac{4 + 3i}{3 + 2i} \\times \\frac{3 - 2i}{3 - 2i}",
+       "en": "Multiply the numerator and the denominator by the conjugate of the denominator, $3 - 2i$.",
+       "ur": "شمار کنندہ اور نسب نما کو نسب نما کے مزدوج $3 - 2i$ سے ضرب دیں۔",
+       "check": [
+        "(4 + 3*I)/(3 + 2*I) == (4 + 3*I)*(3 - 2*I)/((3 + 2*I)*(3 - 2*I))"
+       ]
+      },
+      {
+       "math": "= \\frac{18 + i}{3^2 + 2^2} = \\frac{18 + i}{13}",
+       "en": "In the denominator $(a+bi)(a-bi) = a^2 + b^2$; multiply out the numerator using $i^2=-1$.",
+       "ur": "نسب نما میں $(a+bi)(a-bi) = a^2 + b^2$؛ شمار کنندہ کو $i^2=-1$ کے ساتھ ضرب دیں۔",
+       "check": [
+        "(3 + 2*I)*(3 - 2*I) == (13)",
+        "(4 + 3*I)*(3 - 2*I) == (18 + I)"
+       ]
+      },
+      {
+       "math": "= \\frac{18}{13} + \\frac{1}{13}i",
+       "en": "Divide each part by the denominator and simplify.",
+       "ur": "ہر حصے کو نسب نما سے تقسیم کر کے سادہ کریں۔",
+       "check": [
+        "(4 + 3*I)/(3 + 2*I) == (18/13 + I/13)"
+       ]
+      },
+      {
+       "math": "\\operatorname{Re}(z) = \\frac{18}{13}, \\quad \\operatorname{Im}(z) = \\frac{1}{13}",
+       "en": "Read off the real part and the coefficient of $i$.",
+       "ur": "حقیقی حصہ اور $i$ کا عددی سر پڑھ لیں۔",
+       "check": [
+        "re((18/13 + I/13)) == (18/13)",
+        "im((18/13 + I/13)) == (1/13)"
+       ]
+      }
+     ],
+     "answer": "$\\operatorname{Re} = \\frac{18}{13},\\ \\operatorname{Im} = \\frac{1}{13}$",
+     "book_key": "Re=\\frac{18}{13}, Im=\\frac{1}{13}"
+    },
+    {
+     "label": "vi",
+     "prompt": "$\\left(\\frac{2-i}{2+i}\\right)^{-2}$",
+     "steps": [
+      {
+       "math": "",
+       "en": "A power $-2$ turns the fraction upside down and squares it: $\\left(\\frac{p}{q}\\right)^{-2} = \\left(\\frac{q}{p}\\right)^2$.",
+       "ur": "طاقت $-2$ کسر کو الٹ کر مربع کرتی ہے: $\\left(\\frac{p}{q}\\right)^{-2} = \\left(\\frac{q}{p}\\right)^2$۔"
+      },
+      {
+       "math": "\\frac{2 + i}{2 - i} \\times \\frac{2 + i}{2 + i}",
+       "en": "Multiply the numerator and the denominator by the conjugate of the denominator, $2 + i$.",
+       "ur": "شمار کنندہ اور نسب نما کو نسب نما کے مزدوج $2 + i$ سے ضرب دیں۔",
+       "check": [
+        "(2 + I)/(2 - I) == (2 + I)*(2 + I)/((2 - I)*(2 + I))"
+       ]
+      },
+      {
+       "math": "= \\frac{3 + 4i}{2^2 + 1^2} = \\frac{3 + 4i}{5}",
+       "en": "In the denominator $(a+bi)(a-bi) = a^2 + b^2$; multiply out the numerator using $i^2=-1$.",
+       "ur": "نسب نما میں $(a+bi)(a-bi) = a^2 + b^2$؛ شمار کنندہ کو $i^2=-1$ کے ساتھ ضرب دیں۔",
+       "check": [
+        "(2 - I)*(2 + I) == (5)",
+        "(2 + I)*(2 + I) == (3 + 4*I)"
+       ]
+      },
+      {
+       "math": "= \\frac{3}{5} + \\frac{4}{5}i",
+       "en": "Divide each part by the denominator and simplify.",
+       "ur": "ہر حصے کو نسب نما سے تقسیم کر کے سادہ کریں۔",
+       "check": [
+        "(2 + I)/(2 - I) == (3/5 + 4*I/5)"
+       ]
+      },
+      {
+       "math": "\\left(\\frac{3}{5} + \\frac{4}{5}i\\right)^2 = (\\frac{3}{5})^2 + 2(\\frac{3}{5})(\\frac{4}{5}i) + (\\frac{4}{5}i)^2",
+       "en": "Use $(a+b)^2 = a^2 + 2ab + b^2$.",
+       "ur": "$(a+b)^2 = a^2 + 2ab + b^2$ استعمال کریں۔",
+       "check": [
+        "(3/5 + 4*I/5)**2 == (3/5)**2 + 2*(3/5)*(4*I/5) + (4*I/5)**2"
+       ]
+      },
+      {
+       "math": "= \\frac{9}{25} + \\frac{24}{25}i - \\frac{16}{25} = - \\frac{7}{25} + \\frac{24}{25}i",
+       "en": "Put $i^2 = -1$ and simplify.",
+       "ur": "$i^2 = -1$ رکھ کر سادہ کریں۔",
+       "check": [
+        "(3/5 + 4*I/5)**2 == (-7/25 + 24*I/25)"
+       ]
+      },
+      {
+       "math": "\\operatorname{Re}(z) = - \\frac{7}{25}, \\quad \\operatorname{Im}(z) = \\frac{24}{25}",
+       "en": "Read off the real part and the coefficient of $i$.",
+       "ur": "حقیقی حصہ اور $i$ کا عددی سر پڑھ لیں۔",
+       "check": [
+        "re((-7/25 + 24*I/25)) == (-7/25)",
+        "im((-7/25 + 24*I/25)) == (24/25)"
+       ]
+      }
+     ],
+     "answer": "$\\operatorname{Re} = - \\frac{7}{25},\\ \\operatorname{Im} = \\frac{24}{25}$",
+     "book_key": "Re=-\\frac{7}{25}, Im=\\frac{24}{25}"
+    },
+    {
+     "label": "vii",
+     "prompt": "$\\left(\\frac{1-2i}{1+i}\\right)^{2}$",
+     "steps": [
+      {
+       "math": "\\frac{1 - 2i}{1 + i} \\times \\frac{1 - i}{1 - i}",
+       "en": "Multiply the numerator and the denominator by the conjugate of the denominator, $1 - i$.",
+       "ur": "شمار کنندہ اور نسب نما کو نسب نما کے مزدوج $1 - i$ سے ضرب دیں۔",
+       "check": [
+        "(1 - 2*I)/(1 + I) == (1 - 2*I)*(1 - I)/((1 + I)*(1 - I))"
+       ]
+      },
+      {
+       "math": "= \\frac{-1 - 3i}{1^2 + 1^2} = \\frac{-1 - 3i}{2}",
+       "en": "In the denominator $(a+bi)(a-bi) = a^2 + b^2$; multiply out the numerator using $i^2=-1$.",
+       "ur": "نسب نما میں $(a+bi)(a-bi) = a^2 + b^2$؛ شمار کنندہ کو $i^2=-1$ کے ساتھ ضرب دیں۔",
+       "check": [
+        "(1 + I)*(1 - I) == (2)",
+        "(1 - 2*I)*(1 - I) == (-1 - 3*I)"
+       ]
+      },
+      {
+       "math": "= - \\frac{1}{2} - \\frac{3}{2}i",
+       "en": "Divide each part by the denominator and simplify.",
+       "ur": "ہر حصے کو نسب نما سے تقسیم کر کے سادہ کریں۔",
+       "check": [
+        "(1 - 2*I)/(1 + I) == (-1/2 - 3*I/2)"
+       ]
+      },
+      {
+       "math": "\\left(- \\frac{1}{2} - \\frac{3}{2}i\\right)^2 = (- \\frac{1}{2})^2 + 2(- \\frac{1}{2})(-\\frac{3}{2}i) + (-\\frac{3}{2}i)^2",
+       "en": "Use $(a+b)^2 = a^2 + 2ab + b^2$.",
+       "ur": "$(a+b)^2 = a^2 + 2ab + b^2$ استعمال کریں۔",
+       "check": [
+        "(-1/2 - 3*I/2)**2 == (-1/2)**2 + 2*(-1/2)*(-3*I/2) + (-3*I/2)**2"
+       ]
+      },
+      {
+       "math": "= \\frac{1}{4} + \\frac{3}{2}i - \\frac{9}{4} = -2 + \\frac{3}{2}i",
+       "en": "Put $i^2 = -1$ and simplify.",
+       "ur": "$i^2 = -1$ رکھ کر سادہ کریں۔",
+       "check": [
+        "(-1/2 - 3*I/2)**2 == (-2 + 3*I/2)"
+       ]
+      },
+      {
+       "math": "\\operatorname{Re}(z) = -2, \\quad \\operatorname{Im}(z) = \\frac{3}{2}",
+       "en": "Read off the real part and the coefficient of $i$.",
+       "ur": "حقیقی حصہ اور $i$ کا عددی سر پڑھ لیں۔",
+       "check": [
+        "re((-2 + 3*I/2)) == (-2)",
+        "im((-2 + 3*I/2)) == (3/2)"
+       ]
+      }
+     ],
+     "answer": "$\\operatorname{Re} = -2,\\ \\operatorname{Im} = \\frac{3}{2}$",
+     "book_key": "Re=-2, Im=\\frac{3}{2}"
+    }
+   ],
+   "exercise": "1.4"
+  },
+  {
+   "id": "c10-ex1.4-q2",
+   "kind": "exercise",
+   "number": "2",
+   "page": 0,
+   "question": "Solve the following simultaneous linear equations with complex coefficients for $w$ and $z$: (i) $3z+(2+i)w=11-i,\\ (2-i)z-w=-1+i$ (ii) $2z+(3+i)w=9-i,\\ -iz-iw=-1+i$ (iii) $z-4w=3i,\\ 2z+3w=11-5i$ (iv) $z+w=3i,\\ 2z+3w=2$ (v) $2z+(3+i)w=1,\\ -z-(1-i)w=2$",
+   "parts": [
+    {
+     "label": "i",
+     "prompt": "$3z+(2+i)w=11-i,\\ (2-i)z-w=-1+i$",
+     "steps": [
+      {
+       "math": "\\left(2 - i\\right)\\,[\\left(3\\right)z + \\left(2 + i\\right)w] - \\left(3\\right)\\,[\\left(2 - i\\right)z + \\left(-1\\right)w] = \\left(2 - i\\right)\\left(11 - i\\right) - \\left(3\\right)\\left(-1 + i\\right)",
+       "en": "Multiply equation (i) by the $z$-coefficient of (ii) and (ii) by the $z$-coefficient of (i), then subtract: $z$ cancels.",
+       "ur": "مساوات (i) کو (ii) کے $z$ کے عددی سر سے اور (ii) کو (i) کے $z$ کے عددی سر سے ضرب دے کر تفریق کریں: $z$ ختم ہو جاتا ہے۔"
+      },
+      {
+       "math": "\\left(8\\right) w = 24 - 16i",
+       "en": "Simplify both sides with $i^2 = -1$.",
+       "ur": "دونوں اطراف کو $i^2 = -1$ سے سادہ کریں۔",
+       "check": [
+        "(2 - I)*(2 + I) - (3)*(-1) == (8)",
+        "(2 - I)*(11 - I) - (3)*(-1 + I) == (24 - 16*I)"
+       ]
+      },
+      {
+       "math": "w = \\frac{24 - 16i}{8} = 3 - 2i",
+       "en": "Divide, using the conjugate of the denominator.",
+       "ur": "نسب نما کے مزدوج کی مدد سے تقسیم کریں۔",
+       "check": [
+        "(24 - 16*I)/(8) == (3 - 2*I)"
+       ]
+      },
+      {
+       "math": "z = \\frac{11 - i - \\left(2 + i\\right)\\left(3 - 2i\\right)}{3} = 1",
+       "en": "Put $w$ in equation (i) and solve for $z$.",
+       "ur": "$w$ کی قیمت مساوات (i) میں رکھ کر $z$ معلوم کریں۔",
+       "check": [
+        "((11 - I) - (2 + I)*(3 - 2*I))/(3) == (1)"
+       ]
+      },
+      {
+       "math": "\\text{Check in (ii): } \\left(2 - i\\right)\\left(1\\right) + \\left(-1\\right)\\left(3 - 2i\\right) = -1 + i",
+       "en": "Both equations are satisfied.",
+       "ur": "دونوں مساوات پوری ہوتی ہیں۔",
+       "check": [
+        "(3)*(1) + (2 + I)*(3 - 2*I) == (11 - I)",
+        "(2 - I)*(1) + (-1)*(3 - 2*I) == (-1 + I)"
+       ]
+      }
+     ],
+     "answer": "$z = 1,\\ w = 3 - 2i$",
+     "book_key": "z=1, w=3-2i"
+    },
+    {
+     "label": "ii",
+     "prompt": "$2z+(3+i)w=9-i,\\ -iz-iw=-1+i$",
+     "steps": [
+      {
+       "math": "\\left(-i\\right)\\,[\\left(2\\right)z + \\left(3 + i\\right)w] - \\left(2\\right)\\,[\\left(-i\\right)z + \\left(-i\\right)w] = \\left(-i\\right)\\left(9 - i\\right) - \\left(2\\right)\\left(-1 + i\\right)",
+       "en": "Multiply equation (i) by the $z$-coefficient of (ii) and (ii) by the $z$-coefficient of (i), then subtract: $z$ cancels.",
+       "ur": "مساوات (i) کو (ii) کے $z$ کے عددی سر سے اور (ii) کو (i) کے $z$ کے عددی سر سے ضرب دے کر تفریق کریں: $z$ ختم ہو جاتا ہے۔"
+      },
+      {
+       "math": "\\left(1 - i\\right) w = 1 - 11i",
+       "en": "Simplify both sides with $i^2 = -1$.",
+       "ur": "دونوں اطراف کو $i^2 = -1$ سے سادہ کریں۔",
+       "check": [
+        "(-I)*(3 + I) - (2)*(-I) == (1 - I)",
+        "(-I)*(9 - I) - (2)*(-1 + I) == (1 - 11*I)"
+       ]
+      },
+      {
+       "math": "w = \\frac{1 - 11i}{1 - i} = 6 - 5i",
+       "en": "Divide, using the conjugate of the denominator.",
+       "ur": "نسب نما کے مزدوج کی مدد سے تقسیم کریں۔",
+       "check": [
+        "(1 - 11*I)/(1 - I) == (6 - 5*I)"
+       ]
+      },
+      {
+       "math": "z = \\frac{9 - i - \\left(3 + i\\right)\\left(6 - 5i\\right)}{2} = -7 + 4i",
+       "en": "Put $w$ in equation (i) and solve for $z$.",
+       "ur": "$w$ کی قیمت مساوات (i) میں رکھ کر $z$ معلوم کریں۔",
+       "check": [
+        "((9 - I) - (3 + I)*(6 - 5*I))/(2) == (-7 + 4*I)"
+       ]
+      },
+      {
+       "math": "\\text{Check in (ii): } \\left(-i\\right)\\left(-7 + 4i\\right) + \\left(-i\\right)\\left(6 - 5i\\right) = -1 + i",
+       "en": "Both equations are satisfied.",
+       "ur": "دونوں مساوات پوری ہوتی ہیں۔",
+       "check": [
+        "(2)*(-7 + 4*I) + (3 + I)*(6 - 5*I) == (9 - I)",
+        "(-I)*(-7 + 4*I) + (-I)*(6 - 5*I) == (-1 + I)"
+       ]
+      }
+     ],
+     "answer": "$z = -7 + 4i,\\ w = 6 - 5i$",
+     "book_key": "z=-7+4i, w=6-5i"
+    },
+    {
+     "label": "iii",
+     "prompt": "$z-4w=3i,\\ 2z+3w=11-5i$",
+     "steps": [
+      {
+       "math": "\\left(2\\right)\\,[\\left(1\\right)z + \\left(-4\\right)w] - \\left(1\\right)\\,[\\left(2\\right)z + \\left(3\\right)w] = \\left(2\\right)\\left(3i\\right) - \\left(1\\right)\\left(11 - 5i\\right)",
+       "en": "Multiply equation (i) by the $z$-coefficient of (ii) and (ii) by the $z$-coefficient of (i), then subtract: $z$ cancels.",
+       "ur": "مساوات (i) کو (ii) کے $z$ کے عددی سر سے اور (ii) کو (i) کے $z$ کے عددی سر سے ضرب دے کر تفریق کریں: $z$ ختم ہو جاتا ہے۔"
+      },
+      {
+       "math": "\\left(-11\\right) w = -11 + 11i",
+       "en": "Simplify both sides with $i^2 = -1$.",
+       "ur": "دونوں اطراف کو $i^2 = -1$ سے سادہ کریں۔",
+       "check": [
+        "(2)*(-4) - (1)*(3) == (-11)",
+        "(2)*(3*I) - (1)*(11 - 5*I) == (-11 + 11*I)"
+       ]
+      },
+      {
+       "math": "w = \\frac{-11 + 11i}{-11} = 1 - i",
+       "en": "Divide, using the conjugate of the denominator.",
+       "ur": "نسب نما کے مزدوج کی مدد سے تقسیم کریں۔",
+       "check": [
+        "(-11 + 11*I)/(-11) == (1 - I)"
+       ]
+      },
+      {
+       "math": "z = \\frac{3i - \\left(-4\\right)\\left(1 - i\\right)}{1} = 4 - i",
+       "en": "Put $w$ in equation (i) and solve for $z$.",
+       "ur": "$w$ کی قیمت مساوات (i) میں رکھ کر $z$ معلوم کریں۔",
+       "check": [
+        "((3*I) - (-4)*(1 - I))/(1) == (4 - I)"
+       ]
+      },
+      {
+       "math": "\\text{Check in (ii): } \\left(2\\right)\\left(4 - i\\right) + \\left(3\\right)\\left(1 - i\\right) = 11 - 5i",
+       "en": "Both equations are satisfied.",
+       "ur": "دونوں مساوات پوری ہوتی ہیں۔",
+       "check": [
+        "(1)*(4 - I) + (-4)*(1 - I) == (3*I)",
+        "(2)*(4 - I) + (3)*(1 - I) == (11 - 5*I)"
+       ]
+      }
+     ],
+     "answer": "$z = 4 - i,\\ w = 1 - i$",
+     "book_key": "z=4-i, w=1-i"
+    },
+    {
+     "label": "iv",
+     "prompt": "$z+w=3i,\\ 2z+3w=2$",
+     "steps": [
+      {
+       "math": "\\left(2\\right)\\,[\\left(1\\right)z + \\left(1\\right)w] - \\left(1\\right)\\,[\\left(2\\right)z + \\left(3\\right)w] = \\left(2\\right)\\left(3i\\right) - \\left(1\\right)\\left(2\\right)",
+       "en": "Multiply equation (i) by the $z$-coefficient of (ii) and (ii) by the $z$-coefficient of (i), then subtract: $z$ cancels.",
+       "ur": "مساوات (i) کو (ii) کے $z$ کے عددی سر سے اور (ii) کو (i) کے $z$ کے عددی سر سے ضرب دے کر تفریق کریں: $z$ ختم ہو جاتا ہے۔"
+      },
+      {
+       "math": "\\left(-1\\right) w = -2 + 6i",
+       "en": "Simplify both sides with $i^2 = -1$.",
+       "ur": "دونوں اطراف کو $i^2 = -1$ سے سادہ کریں۔",
+       "check": [
+        "(2)*(1) - (1)*(3) == (-1)",
+        "(2)*(3*I) - (1)*(2) == (-2 + 6*I)"
+       ]
+      },
+      {
+       "math": "w = \\frac{-2 + 6i}{-1} = 2 - 6i",
+       "en": "Divide, using the conjugate of the denominator.",
+       "ur": "نسب نما کے مزدوج کی مدد سے تقسیم کریں۔",
+       "check": [
+        "(-2 + 6*I)/(-1) == (2 - 6*I)"
+       ]
+      },
+      {
+       "math": "z = \\frac{3i - \\left(1\\right)\\left(2 - 6i\\right)}{1} = -2 + 9i",
+       "en": "Put $w$ in equation (i) and solve for $z$.",
+       "ur": "$w$ کی قیمت مساوات (i) میں رکھ کر $z$ معلوم کریں۔",
+       "check": [
+        "((3*I) - (1)*(2 - 6*I))/(1) == (-2 + 9*I)"
+       ]
+      },
+      {
+       "math": "\\text{Check in (ii): } \\left(2\\right)\\left(-2 + 9i\\right) + \\left(3\\right)\\left(2 - 6i\\right) = 2",
+       "en": "Both equations are satisfied.",
+       "ur": "دونوں مساوات پوری ہوتی ہیں۔",
+       "check": [
+        "(1)*(-2 + 9*I) + (1)*(2 - 6*I) == (3*I)",
+        "(2)*(-2 + 9*I) + (3)*(2 - 6*I) == (2)"
+       ]
+      }
+     ],
+     "answer": "$z = -2 + 9i,\\ w = 2 - 6i$",
+     "book_key": "z=-2+9i, w=2-6i"
+    },
+    {
+     "label": "v",
+     "prompt": "$2z+(3+i)w=1,\\ -z-(1-i)w=2$",
+     "steps": [
+      {
+       "math": "\\left(-1\\right)\\,[\\left(2\\right)z + \\left(3 + i\\right)w] - \\left(2\\right)\\,[\\left(-1\\right)z + \\left(-1 + i\\right)w] = \\left(-1\\right)\\left(1\\right) - \\left(2\\right)\\left(2\\right)",
+       "en": "Multiply equation (i) by the $z$-coefficient of (ii) and (ii) by the $z$-coefficient of (i), then subtract: $z$ cancels.",
+       "ur": "مساوات (i) کو (ii) کے $z$ کے عددی سر سے اور (ii) کو (i) کے $z$ کے عددی سر سے ضرب دے کر تفریق کریں: $z$ ختم ہو جاتا ہے۔"
+      },
+      {
+       "math": "\\left(-1 - 3i\\right) w = -5",
+       "en": "Simplify both sides with $i^2 = -1$.",
+       "ur": "دونوں اطراف کو $i^2 = -1$ سے سادہ کریں۔",
+       "check": [
+        "(-1)*(3 + I) - (2)*(-1 + I) == (-1 - 3*I)",
+        "(-1)*(1) - (2)*(2) == (-5)"
+       ]
+      },
+      {
+       "math": "w = \\frac{-5}{-1 - 3i} = \\frac{1}{2} - \\frac{3}{2}i",
+       "en": "Divide, using the conjugate of the denominator.",
+       "ur": "نسب نما کے مزدوج کی مدد سے تقسیم کریں۔",
+       "check": [
+        "(-5)/(-1 - 3*I) == (1/2 - 3*I/2)"
+       ]
+      },
+      {
+       "math": "z = \\frac{1 - \\left(3 + i\\right)\\left(\\frac{1}{2} - \\frac{3}{2}i\\right)}{2} = -1 + 2i",
+       "en": "Put $w$ in equation (i) and solve for $z$.",
+       "ur": "$w$ کی قیمت مساوات (i) میں رکھ کر $z$ معلوم کریں۔",
+       "check": [
+        "((1) - (3 + I)*(1/2 - 3*I/2))/(2) == (-1 + 2*I)"
+       ]
+      },
+      {
+       "math": "\\text{Check in (ii): } \\left(-1\\right)\\left(-1 + 2i\\right) + \\left(-1 + i\\right)\\left(\\frac{1}{2} - \\frac{3}{2}i\\right) = 2",
+       "en": "Both equations are satisfied.",
+       "ur": "دونوں مساوات پوری ہوتی ہیں۔",
+       "check": [
+        "(2)*(-1 + 2*I) + (3 + I)*(1/2 - 3*I/2) == (1)",
+        "(-1)*(-1 + 2*I) + (-1 + I)*(1/2 - 3*I/2) == (2)"
+       ]
+      }
+     ],
+     "answer": "$z = -1 + 2i,\\ w = \\frac{1}{2} - \\frac{3}{2}i$",
+     "book_key": "z=-1+2i, w=\\frac{1}{2}-\\frac{3}{2}i"
+    }
+   ],
+   "exercise": "1.4"
+  },
+  {
+   "id": "c10-rev1-q1",
+   "kind": "review",
+   "number": "1",
+   "page": 0,
+   "question": "Four possible answers are given for the following questions. Choose the correct answer.",
+   "parts": [
+    {
+     "label": "i",
+     "prompt": "$i^2+i^4=$ (a) $-1$ (b) $0$ (c) $1$ (d) $2$",
+     "steps": [
+      {
+       "math": "i^2 + i^4 = -1 + 1 = 0",
+       "en": "Use $i^1 = i,\\ i^2 = -1,\\ i^3 = -i,\\ i^4 = 1$.",
+       "ur": "$i^1 = i,\\ i^2 = -1,\\ i^3 = -i,\\ i^4 = 1$ استعمال کریں۔",
+       "check": [
+        "I**2 + I**4 == 0"
+       ]
+      },
+      {
+       "math": "\\text{Answer: (b) } 0",
+       "en": "Choose the option that matches the working.",
+       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+      }
+     ],
+     "answer": "(b) $0$",
+     "book_key": "(b) 0"
+    },
+    {
+     "label": "ii",
+     "prompt": "Real part of $(2-3i)(2+3i)$ is: (a) $-3$ (b) $1$ (c) $4$ (d) $13$",
+     "steps": [
+      {
+       "math": "(2-3i)(2+3i) = 4 - 9i^2 = 4 + 9 = 13",
+       "en": "Use $(a-b)(a+b)=a^2-b^2$.",
+       "ur": "$(a-b)(a+b)=a^2-b^2$ استعمال کریں۔",
+       "check": [
+        "re((2-3*I)*(2+3*I)) == 13"
+       ]
+      },
+      {
+       "math": "\\text{Answer: (d) } 13",
+       "en": "Choose the option that matches the working.",
+       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+      }
+     ],
+     "answer": "(d) $13$",
+     "book_key": "(d) 13"
+    },
+    {
+     "label": "iii",
+     "prompt": "Imaginary part of $(2-i)(2+i)$ is: (a) $0$ (b) $1$ (c) $7$ (d) $9$",
+     "steps": [
+      {
+       "math": "(2-i)(2+i) = 4 - i^2 = 5 = 5 + 0i",
+       "en": "Use $(a-b)(a+b)=a^2-b^2$.",
+       "ur": "$(a-b)(a+b)=a^2-b^2$ استعمال کریں۔",
+       "check": [
+        "im((2-I)*(2+I)) == 0"
+       ]
+      },
+      {
+       "math": "\\text{Answer: (a) } 0",
+       "en": "Choose the option that matches the working.",
+       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+      }
+     ],
+     "answer": "(a) $0$",
+     "book_key": "(a) 0"
+    },
+    {
+     "label": "iv",
+     "prompt": "$x+iy$ will be pure imaginary number, when: (a) $y=0$ (b) $x=0$ (c) $i=0$ (d) $x=0,\\ y=0$",
+     "steps": [
+      {
+       "math": "",
+       "en": "A pure imaginary number has no real part, so $x = 0$ (and $y \\ne 0$).",
+       "ur": "خالص خیالی عدد کا حقیقی حصہ نہیں ہوتا، اس لیے $x = 0$ (اور $y \\ne 0$)۔"
+      },
+      {
+       "math": "\\text{Answer: (b) } x=0",
+       "en": "Choose the option that matches the working.",
+       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+      }
+     ],
+     "answer": "(b) $x=0$",
+     "book_key": "(b) x=0"
+    },
+    {
+     "label": "v",
+     "prompt": "What is additive inverse of $5-2i$? (a) $5+2i$ (b) $-5-2i$ (c) $5-2i$ (d) $-5+2i$",
+     "steps": [
+      {
+       "math": "-(5-2i) = -5+2i",
+       "en": "Change the sign of both parts.",
+       "ur": "دونوں حصوں کی علامت بدلیں۔",
+       "check": [
+        "-(5-2*I) == -5+2*I"
+       ]
+      },
+      {
+       "math": "\\text{Answer: (d) } -5+2i",
+       "en": "Choose the option that matches the working.",
+       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+      }
+     ],
+     "answer": "(d) $-5+2i$",
+     "book_key": "(d) -5+2i"
+    },
+    {
+     "label": "vi",
+     "prompt": "What is multiplicative inverse of $z=1+i$? (a) $1-i$ (b) $i$ (c) $\\frac{1}{2}-\\frac{1}{2}i$ (d) $-\\frac{1}{\\sqrt{2}}+\\frac{1}{\\sqrt{2}}i$",
+     "steps": [
+      {
+       "math": "\\frac{1}{1+i} = \\frac{1-i}{(1+i)(1-i)} = \\frac{1-i}{2}",
+       "en": "Multiply by the conjugate.",
+       "ur": "مزدوج سے ضرب دیں۔",
+       "check": [
+        "1/(1+I) == R(1,2) - R(1,2)*I"
+       ]
+      },
+      {
+       "math": "\\text{Answer: (c) } \\frac{1}{2}-\\frac{1}{2}i",
+       "en": "Choose the option that matches the working.",
+       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+      }
+     ],
+     "answer": "(c) $\\frac{1}{2}-\\frac{1}{2}i$",
+     "book_key": "(c) \\frac{1}{2}-\\frac{1}{2}i"
+    },
+    {
+     "label": "vii",
+     "prompt": "If $z=4-3i$, then $z\\overline{z}=$ (a) $3$ (b) $9$ (c) $16$ (d) $25$",
+     "steps": [
+      {
+       "math": "z\\overline{z} = 4^2 + 3^2 = 25",
+       "en": "$z\\overline{z} = a^2+b^2$.",
+       "ur": "$z\\overline{z} = a^2+b^2$۔",
+       "check": [
+        "(4-3*I)*(4+3*I) == 25"
+       ]
+      },
+      {
+       "math": "\\text{Answer: (d) } 25",
+       "en": "Choose the option that matches the working.",
+       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+      }
+     ],
+     "answer": "(d) $25$",
+     "book_key": "(d) 25"
+    },
+    {
+     "label": "viii",
+     "prompt": "Conjugate of $9-4i$ is: (a) $-9-4i$ (b) $9+4i$ (c) $9+9i$ (d) $4-9i$",
+     "steps": [
+      {
+       "math": "\\overline{9-4i} = 9+4i",
+       "en": "Change the sign of the imaginary part.",
+       "ur": "خیالی حصے کی علامت بدلیں۔",
+       "check": [
+        "conjugate(9-4*I) == 9+4*I"
+       ]
+      },
+      {
+       "math": "\\text{Answer: (b) } 9+4i",
+       "en": "Choose the option that matches the working.",
+       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+      }
+     ],
+     "answer": "(b) $9+4i$",
+     "book_key": "(b) 9+4i"
+    },
+    {
+     "label": "ix",
+     "prompt": "If $z=4+4i$, then $z+\\overline{z}=$ (a) $8$ (b) $8+8i$ (c) $8i$ (d) $0$",
+     "steps": [
+      {
+       "math": "z + \\overline{z} = (4+4i) + (4-4i) = 8",
+       "en": "The imaginary parts cancel.",
+       "ur": "خیالی حصے ختم ہو جاتے ہیں۔",
+       "check": [
+        "(4+4*I) + (4-4*I) == 8"
+       ]
+      },
+      {
+       "math": "\\text{Answer: (a) } 8",
+       "en": "Choose the option that matches the working.",
+       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+      }
+     ],
+     "answer": "(a) $8$",
+     "book_key": "(a) 8"
+    },
+    {
+     "label": "x",
+     "prompt": "If $z=5+4i$, then $|z|=$ (a) $9$ (b) $25$ (c) $41$ (d) $\\sqrt{41}$",
+     "steps": [
+      {
+       "math": "|z| = \\sqrt{25 + 16} = \\sqrt{41}",
+       "en": "$|a+bi| = \\sqrt{a^2+b^2}$.",
+       "ur": "$|a+bi| = \\sqrt{a^2+b^2}$۔",
+       "check": [
+        "Abs(5+4*I) == sqrt(41)"
+       ]
+      },
+      {
+       "math": "\\text{Answer: (d) } \\sqrt{41}",
+       "en": "Choose the option that matches the working.",
+       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+      }
+     ],
+     "answer": "(d) $\\sqrt{41}$",
+     "book_key": "(d) \\sqrt{41}"
+    }
+   ],
+   "exercise": "Review 1"
+  },
+  {
+   "id": "c10-rev1-q2",
+   "kind": "review",
+   "number": "2",
+   "page": 0,
+   "question": "(i) Is ``0'' a complex number? Explain. (ii) What is the result of multiplying a complex number by its conjugate? (iii) State the condition for two complex numbers to be equal.",
+   "parts": [
+    {
+     "label": "i",
+     "prompt": "Is \"0\" a complex number? Explain.",
+     "steps": [
+      {
+       "math": "",
+       "en": "Every real number $a$ is the complex number $a + 0i$, so $0 = 0 + 0i$ is a complex number: $0 \\in \\mathbb{R} \\subseteq \\mathbb{C}$.",
+       "ur": "ہر حقیقی عدد $a$ مختلط عدد $a + 0i$ ہے، اس لیے $0 = 0 + 0i$ ایک مختلط عدد ہے: $0 \\in \\mathbb{R} \\subseteq \\mathbb{C}$۔"
+      }
+     ],
+     "answer": "Yes: $0 = 0 + 0i$"
+    },
+    {
+     "label": "ii",
+     "prompt": "What is the result of multiplying a complex number by its conjugate?",
+     "steps": [
+      {
+       "math": "(a+bi)(a-bi) = a^2 - b^2i^2 = a^2 + b^2 = |z|^2",
+       "en": "The product of a complex number and its conjugate is a real number, $|z|^2$.",
+       "ur": "مختلط عدد اور اس کے مزدوج کا حاصل ضرب حقیقی عدد $|z|^2$ ہوتا ہے۔",
+       "check": [
+        "expand((a+b*I)*(a-b*I)) == a**2 + b**2"
+       ]
+      }
+     ],
+     "answer": "a real number: $z\\overline{z} = |z|^2$"
+    },
+    {
+     "label": "iii",
+     "prompt": "State the condition for two complex numbers to be equal.",
+     "steps": [
+      {
+       "math": "",
+       "en": "$a + bi = c + di$ exactly when $a = c$ and $b = d$: the real parts are equal and the imaginary parts are equal.",
+       "ur": "$a + bi = c + di$ صرف تب جب $a = c$ اور $b = d$: حقیقی حصے برابر اور خیالی حصے برابر ہوں۔"
+      }
+     ],
+     "answer": "real parts equal and imaginary parts equal"
+    }
+   ],
+   "exercise": "Review 1"
+  },
+  {
+   "id": "c10-rev1-q3",
+   "kind": "review",
+   "number": "3",
+   "page": 0,
+   "question": "Simplify: (i) $i^{37}$ (ii) $i^{13}\\times i^{11}$ (iii) $(-i)^{-9}$ (iv) $(3-4i)(5-6i)$ (v) $(3+4i)\\div(5-7i)$",
+   "parts": [
+    {
+     "label": "i",
+     "prompt": "$i^{37}$",
+     "steps": [
+      {
+       "math": "i^{37} = i^{37}\\cdot (i^4)^{-9} = i^{1}",
+       "en": "Since $i^4 = 1$, adding or removing multiples of 4 in the power does not change the value.",
+       "ur": "چونکہ $i^4 = 1$، طاقت میں 4 کے مضرب جمع یا تفریق کرنے سے قیمت نہیں بدلتی۔",
+       "check": [
+        "1*I**(37) == 1*I**1"
+       ]
+      },
+      {
+       "math": "= i",
+       "en": "Use $i^1 = i,\\ i^2 = -1,\\ i^3 = -i,\\ i^4 = 1$.",
+       "ur": "$i^1 = i,\\ i^2 = -1,\\ i^3 = -i,\\ i^4 = 1$ استعمال کریں۔",
+       "check": [
+        "1*I**(37) == (I)"
+       ]
+      }
+     ],
+     "answer": "$i$",
+     "book_key": "i"
+    },
+    {
+     "label": "ii",
+     "prompt": "$i^{13}\\times i^{11}$",
+     "steps": [
+      {
+       "math": "i^{13} \\times i^{11} = i^{24} = (i^4)^{6} = 1",
+       "en": "Add the powers; 24 is a multiple of 4.",
+       "ur": "طاقتیں جمع کریں؛ 24، 4 کا مضرب ہے۔",
+       "check": [
+        "I**13 * I**11 == 1"
+       ]
+      }
+     ],
+     "answer": "$1$",
+     "book_key": "1"
+    },
+    {
+     "label": "iii",
+     "prompt": "$(-i)^{-9}$",
+     "steps": [
+      {
+       "math": "(-i)^{-9} = (-1)^{-9}\\, i^{-9} = -\\,i^{-9}",
+       "en": "$(-1)^{-9} = -1$ because the power is odd.",
+       "ur": "$(-1)^{-9} = -1$ کیونکہ طاقت طاق ہے۔",
+       "check": [
+        "(-I)**(-9) == -I**(-9)"
+       ]
+      },
+      {
+       "math": "= -\\,i^{-9+12} = -\\,i^{3} = -(-i) = i",
+       "en": "Since $i^4 = 1$, adding or removing multiples of 4 in the power does not change the value.",
+       "ur": "چونکہ $i^4 = 1$، طاقت میں 4 کے مضرب جمع یا تفریق کرنے سے قیمت نہیں بدلتی۔",
+       "check": [
+        "-I**(-9) == I"
+       ]
+      }
+     ],
+     "answer": "$i$",
+     "book_key": "i"
+    },
+    {
+     "label": "iv",
+     "prompt": "$\\left(3 - 4i\\right)\\left(5 - 6i\\right)$",
+     "steps": [
+      {
+       "math": "\\left(3 - 4i\\right)\\left(5 - 6i\\right) = 15 - 18i - 20i + 24i^2",
+       "en": "Multiply each term of the first bracket by each term of the second.",
+       "ur": "پہلی قوسین کے ہر رکن کو دوسری قوسین کے ہر رکن سے ضرب دیں۔",
+       "check": [
+        "(3 - 4*I)*(5 - 6*I) == (15) + (-38)*I + (24)*I**2"
+       ]
+      },
+      {
+       "math": "= 15 - 38i - 24 = -9 - 38i",
+       "en": "Put $i^2 = -1$ and collect the real and imaginary parts.",
+       "ur": "$i^2 = -1$ رکھیں اور حقیقی اور خیالی حصے اکٹھے کریں۔",
+       "check": [
+        "I**2 == -1",
+        "(3 - 4*I)*(5 - 6*I) == (-9 - 38*I)"
+       ]
+      }
+     ],
+     "answer": "$-9 - 38i$",
+     "book_key": "-9-38i"
+    },
+    {
+     "label": "v",
+     "prompt": "$\\left(3 + 4i\\right) \\div \\left(5 - 7i\\right)$",
+     "steps": [
+      {
+       "math": "\\frac{3 + 4i}{5 - 7i} \\times \\frac{5 + 7i}{5 + 7i}",
+       "en": "Multiply the numerator and the denominator by the conjugate of the denominator, $5 + 7i$.",
+       "ur": "شمار کنندہ اور نسب نما کو نسب نما کے مزدوج $5 + 7i$ سے ضرب دیں۔",
+       "check": [
+        "(3 + 4*I)/(5 - 7*I) == (3 + 4*I)*(5 + 7*I)/((5 - 7*I)*(5 + 7*I))"
+       ]
+      },
+      {
+       "math": "= \\frac{-13 + 41i}{5^2 + 7^2} = \\frac{-13 + 41i}{74}",
+       "en": "In the denominator $(a+bi)(a-bi) = a^2 + b^2$; multiply out the numerator using $i^2=-1$.",
+       "ur": "نسب نما میں $(a+bi)(a-bi) = a^2 + b^2$؛ شمار کنندہ کو $i^2=-1$ کے ساتھ ضرب دیں۔",
+       "check": [
+        "(5 - 7*I)*(5 + 7*I) == (74)",
+        "(3 + 4*I)*(5 + 7*I) == (-13 + 41*I)"
+       ]
+      },
+      {
+       "math": "= - \\frac{13}{74} + \\frac{41}{74}i",
+       "en": "Divide each part by the denominator and simplify.",
+       "ur": "ہر حصے کو نسب نما سے تقسیم کر کے سادہ کریں۔",
+       "check": [
+        "(3 + 4*I)/(5 - 7*I) == (-13/74 + 41*I/74)"
+       ]
+      }
+     ],
+     "answer": "$- \\frac{13}{74} + \\frac{41}{74}i$",
+     "book_key": "-\\frac{13}{74}+\\frac{41}{74}i"
+    }
+   ],
+   "exercise": "Review 1"
+  },
+  {
+   "id": "c10-rev1-q4",
+   "kind": "review",
+   "number": "4",
+   "page": 0,
+   "question": "Find additive and multiplicative inverse of $z=8+9i$.",
+   "parts": [
+    {
+     "label": "i",
+     "prompt": "additive inverse of $8+9i$",
+     "steps": [
+      {
+       "math": "z = 8 + 9i \\Rightarrow -z = -\\left(8 + 9i\\right) = -8 - 9i",
+       "en": "The additive inverse of $z$ is $-z$: change the sign of both parts.",
+       "ur": "$z$ کا جمعی معکوس $-z$ ہے: دونوں حصوں کی علامت بدل دیں۔",
+       "check": [
+        "(8 + 9*I) + (-8 - 9*I) == 0"
+       ]
+      }
+     ],
+     "answer": "$-8 - 9i$",
+     "book_key": "-8-9i"
+    },
+    {
+     "label": "ii",
+     "prompt": "multiplicative inverse of $8+9i$",
+     "steps": [
+      {
+       "math": "z^{-1} = \\left(\\frac{a}{a^2+b^2}, \\frac{-b}{a^2+b^2}\\right), \\quad a = 8,\\ b = 9",
+       "en": "For $z = a + bi$ the multiplicative inverse is $\\frac{a}{a^2+b^2} - \\frac{b}{a^2+b^2}i$.",
+       "ur": "$z = a + bi$ کا ضربی معکوس $\\frac{a}{a^2+b^2} - \\frac{b}{a^2+b^2}i$ ہے۔"
+      },
+      {
+       "math": "a^2 + b^2 = (8)^2 + (9)^2 = 145",
+       "en": "Find $a^2 + b^2$.",
+       "ur": "$a^2 + b^2$ معلوم کریں۔",
+       "check": [
+        "(8)**2 + (9)**2 == (145)"
+       ]
+      },
+      {
+       "math": "z^{-1} = \\frac{8}{145} + \\frac{-9}{145}i = \\frac{8}{145} - \\frac{9}{145}i",
+       "en": "Substitute and simplify.",
+       "ur": "قیمتیں رکھ کر سادہ کریں۔",
+       "check": [
+        "1/(8 + 9*I) == (8/145 - 9*I/145)",
+        "(8 + 9*I)*(8/145 - 9*I/145) == 1"
+       ]
+      }
+     ],
+     "answer": "$\\frac{8}{145} - \\frac{9}{145}i$",
+     "book_key": "\\frac{8}{145}-\\frac{9}{145}i"
+    }
+   ],
+   "exercise": "Review 1"
+  },
+  {
+   "id": "c10-rev1-q5",
+   "kind": "review",
+   "number": "5",
+   "page": 0,
+   "question": "If $z_1=3+4i$ and $z_2=2+3i$, then verify that (i) $\\overline{z_1+z_2}=\\overline{z_1}+\\overline{z_2}$ (ii) $\\overline{z_1z_2}=\\overline{z_1}\\,\\overline{z_2}$ (iii) $\\overline{\\left(\\frac{z_1}{z_2}\\right)}=\\frac{\\overline{z_1}}{\\overline{z_2}}$ (iv) $|z_1|=|-\\overline{z_1}|$ (v) $\\overline{\\overline{z_2}}=z_2$ (vi) $z_1\\overline{z_1}=|z_1|^2$",
+   "parts": [
+    {
+     "label": "i",
+     "prompt": "$\\overline{z_1+z_2}=\\overline{z_1}+\\overline{z_2}$",
+     "steps": [
+      {
+       "math": "",
+       "en": "Left-hand side: $\\overline{z_1+z_2}$",
+       "ur": "بائیں جانب: $\\overline{z_1+z_2}$"
+      },
+      {
+       "math": "\\left(3 + 4i\\right) + \\left(2 + 3i\\right) = (3 + 2) + (4 + 3)i",
+       "en": "Add (or subtract) the real parts together and the imaginary parts together.",
+       "ur": "حقیقی حصوں کو آپس میں اور خیالی حصوں کو آپس میں جمع (یا تفریق) کریں۔",
+       "check": [
+        "(3 + 4*I) + (2 + 3*I) == (5 + 7*I)"
+       ]
+      },
+      {
+       "math": "= 5 + 7i",
+       "en": "Simplify each part.",
+       "ur": "ہر حصے کو سادہ کریں۔",
+       "check": [
+        "(3) + (2) == (5)"
+       ]
+      },
+      {
+       "math": "\\overline{5 + 7i} = 5 - 7i",
+       "en": "The conjugate changes the sign of the imaginary part.",
+       "ur": "مزدوج میں خیالی حصے کی علامت بدل جاتی ہے۔",
+       "check": [
+        "conjugate((5 + 7*I)) == (5 - 7*I)"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Right-hand side: $\\overline{z_1}+\\overline{z_2}$",
+       "ur": "دائیں جانب: $\\overline{z_1}+\\overline{z_2}$"
+      },
+      {
+       "math": "\\overline{3 + 4i} = 3 - 4i",
+       "en": "The conjugate changes the sign of the imaginary part.",
+       "ur": "مزدوج میں خیالی حصے کی علامت بدل جاتی ہے۔",
+       "check": [
+        "conjugate((3 + 4*I)) == (3 - 4*I)"
+       ]
+      },
+      {
+       "math": "\\overline{2 + 3i} = 2 - 3i",
+       "en": "The conjugate changes the sign of the imaginary part.",
+       "ur": "مزدوج میں خیالی حصے کی علامت بدل جاتی ہے۔",
+       "check": [
+        "conjugate((2 + 3*I)) == (2 - 3*I)"
+       ]
+      },
+      {
+       "math": "\\left(3 - 4i\\right) + \\left(2 - 3i\\right) = (3 + 2) + (-4 + \\left(-3\\right))i",
+       "en": "Add (or subtract) the real parts together and the imaginary parts together.",
+       "ur": "حقیقی حصوں کو آپس میں اور خیالی حصوں کو آپس میں جمع (یا تفریق) کریں۔",
+       "check": [
+        "(3 - 4*I) + (2 - 3*I) == (5 - 7*I)"
+       ]
+      },
+      {
+       "math": "= 5 - 7i",
+       "en": "Simplify each part.",
+       "ur": "ہر حصے کو سادہ کریں۔",
+       "check": [
+        "(3) + (2) == (5)"
+       ]
+      },
+      {
+       "math": "\\overline{z_1+z_2} = 5 - 7i = \\overline{z_1}+\\overline{z_2}",
+       "en": "The conjugate of a sum is the sum of the conjugates.",
+       "ur": "حاصل جمع کا مزدوج، مزدوجوں کا حاصل جمع ہے۔",
+       "check": [
+        "(5 - 7*I) == (5 - 7*I)"
+       ]
+      }
+     ],
+     "answer": "verified: both sides $= 5 - 7i$"
+    },
+    {
+     "label": "ii",
+     "prompt": "$\\overline{z_1z_2}=\\overline{z_1}\\,\\overline{z_2}$",
+     "steps": [
+      {
+       "math": "",
+       "en": "Left-hand side: $\\overline{z_1z_2}$",
+       "ur": "بائیں جانب: $\\overline{z_1z_2}$"
+      },
+      {
+       "math": "\\left(3 + 4i\\right)\\left(2 + 3i\\right) = 6 + 9i + 8i + 12i^2",
+       "en": "Multiply each term of the first bracket by each term of the second.",
+       "ur": "پہلی قوسین کے ہر رکن کو دوسری قوسین کے ہر رکن سے ضرب دیں۔",
+       "check": [
+        "(3 + 4*I)*(2 + 3*I) == (6) + (17)*I + (12)*I**2"
+       ]
+      },
+      {
+       "math": "= 6 + 17i - 12 = -6 + 17i",
+       "en": "Put $i^2 = -1$ and collect the real and imaginary parts.",
+       "ur": "$i^2 = -1$ رکھیں اور حقیقی اور خیالی حصے اکٹھے کریں۔",
+       "check": [
+        "I**2 == -1",
+        "(3 + 4*I)*(2 + 3*I) == (-6 + 17*I)"
+       ]
+      },
+      {
+       "math": "\\overline{-6 + 17i} = -6 - 17i",
+       "en": "The conjugate changes the sign of the imaginary part.",
+       "ur": "مزدوج میں خیالی حصے کی علامت بدل جاتی ہے۔",
+       "check": [
+        "conjugate((-6 + 17*I)) == (-6 - 17*I)"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Right-hand side: $\\overline{z_1}\\,\\overline{z_2}$",
+       "ur": "دائیں جانب: $\\overline{z_1}\\,\\overline{z_2}$"
+      },
+      {
+       "math": "\\overline{3 + 4i} = 3 - 4i",
+       "en": "The conjugate changes the sign of the imaginary part.",
+       "ur": "مزدوج میں خیالی حصے کی علامت بدل جاتی ہے۔",
+       "check": [
+        "conjugate((3 + 4*I)) == (3 - 4*I)"
+       ]
+      },
+      {
+       "math": "\\overline{2 + 3i} = 2 - 3i",
+       "en": "The conjugate changes the sign of the imaginary part.",
+       "ur": "مزدوج میں خیالی حصے کی علامت بدل جاتی ہے۔",
+       "check": [
+        "conjugate((2 + 3*I)) == (2 - 3*I)"
+       ]
+      },
+      {
+       "math": "\\left(3 - 4i\\right)\\left(2 - 3i\\right) = 6 - 9i - 8i + 12i^2",
+       "en": "Multiply each term of the first bracket by each term of the second.",
+       "ur": "پہلی قوسین کے ہر رکن کو دوسری قوسین کے ہر رکن سے ضرب دیں۔",
+       "check": [
+        "(3 - 4*I)*(2 - 3*I) == (6) + (-17)*I + (12)*I**2"
+       ]
+      },
+      {
+       "math": "= 6 - 17i - 12 = -6 - 17i",
+       "en": "Put $i^2 = -1$ and collect the real and imaginary parts.",
+       "ur": "$i^2 = -1$ رکھیں اور حقیقی اور خیالی حصے اکٹھے کریں۔",
+       "check": [
+        "I**2 == -1",
+        "(3 - 4*I)*(2 - 3*I) == (-6 - 17*I)"
+       ]
+      },
+      {
+       "math": "\\overline{z_1z_2} = -6 - 17i = \\overline{z_1}\\,\\overline{z_2}",
+       "en": "The conjugate of a product is the product of the conjugates.",
+       "ur": "حاصل ضرب کا مزدوج، مزدوجوں کا حاصل ضرب ہے۔",
+       "check": [
+        "(-6 - 17*I) == (-6 - 17*I)"
+       ]
+      }
+     ],
+     "answer": "verified: both sides $= -6 - 17i$"
+    },
+    {
+     "label": "iii",
+     "prompt": "$\\overline{\\left(\\frac{z_1}{z_2}\\right)}=\\frac{\\overline{z_1}}{\\overline{z_2}}$",
+     "steps": [
+      {
+       "math": "",
+       "en": "Left-hand side: $\\overline{\\left(\\frac{z_1}{z_2}\\right)}$",
+       "ur": "بائیں جانب: $\\overline{\\left(\\frac{z_1}{z_2}\\right)}$"
+      },
+      {
+       "math": "\\frac{3 + 4i}{2 + 3i} \\times \\frac{2 - 3i}{2 - 3i}",
+       "en": "Multiply the numerator and the denominator by the conjugate of the denominator, $2 - 3i$.",
+       "ur": "شمار کنندہ اور نسب نما کو نسب نما کے مزدوج $2 - 3i$ سے ضرب دیں۔",
+       "check": [
+        "(3 + 4*I)/(2 + 3*I) == (3 + 4*I)*(2 - 3*I)/((2 + 3*I)*(2 - 3*I))"
+       ]
+      },
+      {
+       "math": "= \\frac{18 - i}{2^2 + 3^2} = \\frac{18 - i}{13}",
+       "en": "In the denominator $(a+bi)(a-bi) = a^2 + b^2$; multiply out the numerator using $i^2=-1$.",
+       "ur": "نسب نما میں $(a+bi)(a-bi) = a^2 + b^2$؛ شمار کنندہ کو $i^2=-1$ کے ساتھ ضرب دیں۔",
+       "check": [
+        "(2 + 3*I)*(2 - 3*I) == (13)",
+        "(3 + 4*I)*(2 - 3*I) == (18 - I)"
+       ]
+      },
+      {
+       "math": "= \\frac{18}{13} - \\frac{1}{13}i",
+       "en": "Divide each part by the denominator and simplify.",
+       "ur": "ہر حصے کو نسب نما سے تقسیم کر کے سادہ کریں۔",
+       "check": [
+        "(3 + 4*I)/(2 + 3*I) == (18/13 - I/13)"
+       ]
+      },
+      {
+       "math": "\\overline{\\frac{18}{13} - \\frac{1}{13}i} = \\frac{18}{13} + \\frac{1}{13}i",
+       "en": "The conjugate changes the sign of the imaginary part.",
+       "ur": "مزدوج میں خیالی حصے کی علامت بدل جاتی ہے۔",
+       "check": [
+        "conjugate((18/13 - I/13)) == (18/13 + I/13)"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Right-hand side: $\\frac{\\overline{z_1}}{\\overline{z_2}}$",
+       "ur": "دائیں جانب: $\\frac{\\overline{z_1}}{\\overline{z_2}}$"
+      },
+      {
+       "math": "\\overline{3 + 4i} = 3 - 4i",
+       "en": "The conjugate changes the sign of the imaginary part.",
+       "ur": "مزدوج میں خیالی حصے کی علامت بدل جاتی ہے۔",
+       "check": [
+        "conjugate((3 + 4*I)) == (3 - 4*I)"
+       ]
+      },
+      {
+       "math": "\\overline{2 + 3i} = 2 - 3i",
+       "en": "The conjugate changes the sign of the imaginary part.",
+       "ur": "مزدوج میں خیالی حصے کی علامت بدل جاتی ہے۔",
+       "check": [
+        "conjugate((2 + 3*I)) == (2 - 3*I)"
+       ]
+      },
+      {
+       "math": "\\frac{3 - 4i}{2 - 3i} \\times \\frac{2 + 3i}{2 + 3i}",
+       "en": "Multiply the numerator and the denominator by the conjugate of the denominator, $2 + 3i$.",
+       "ur": "شمار کنندہ اور نسب نما کو نسب نما کے مزدوج $2 + 3i$ سے ضرب دیں۔",
+       "check": [
+        "(3 - 4*I)/(2 - 3*I) == (3 - 4*I)*(2 + 3*I)/((2 - 3*I)*(2 + 3*I))"
+       ]
+      },
+      {
+       "math": "= \\frac{18 + i}{2^2 + 3^2} = \\frac{18 + i}{13}",
+       "en": "In the denominator $(a+bi)(a-bi) = a^2 + b^2$; multiply out the numerator using $i^2=-1$.",
+       "ur": "نسب نما میں $(a+bi)(a-bi) = a^2 + b^2$؛ شمار کنندہ کو $i^2=-1$ کے ساتھ ضرب دیں۔",
+       "check": [
+        "(2 - 3*I)*(2 + 3*I) == (13)",
+        "(3 - 4*I)*(2 + 3*I) == (18 + I)"
+       ]
+      },
+      {
+       "math": "= \\frac{18}{13} + \\frac{1}{13}i",
+       "en": "Divide each part by the denominator and simplify.",
+       "ur": "ہر حصے کو نسب نما سے تقسیم کر کے سادہ کریں۔",
+       "check": [
+        "(3 - 4*I)/(2 - 3*I) == (18/13 + I/13)"
+       ]
+      },
+      {
+       "math": "\\overline{\\left(\\frac{z_1}{z_2}\\right)} = \\frac{18}{13} + \\frac{1}{13}i = \\frac{\\overline{z_1}}{\\overline{z_2}}",
+       "en": "The conjugate of a quotient is the quotient of the conjugates.",
+       "ur": "حاصل تقسیم کا مزدوج، مزدوجوں کا حاصل تقسیم ہے۔",
+       "check": [
+        "(18/13 + I/13) == (18/13 + I/13)"
+       ]
+      }
+     ],
+     "answer": "verified: both sides $= \\frac{18}{13} + \\frac{1}{13}i$"
+    },
+    {
+     "label": "iv",
+     "prompt": "$|z_1|=|-\\overline{z_1}|$",
+     "steps": [
+      {
+       "math": "",
+       "en": "Left-hand side: $|z_1|$",
+       "ur": "بائیں جانب: $|z_1|$"
+      },
+      {
+       "math": "|3 + 4i| = \\sqrt{(3)^2 + (4)^2} = 5",
+       "en": "Modulus: $|a+bi| = \\sqrt{a^2+b^2}$.",
+       "ur": "مقیاس: $|a+bi| = \\sqrt{a^2+b^2}$۔",
+       "check": [
+        "Abs((3 + 4*I)) == (5)"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Right-hand side: $|-\\overline{z_1}|$",
+       "ur": "دائیں جانب: $|-\\overline{z_1}|$"
+      },
+      {
+       "math": "|-3 + 4i| = \\sqrt{(-3)^2 + (4)^2} = 5",
+       "en": "Modulus: $|a+bi| = \\sqrt{a^2+b^2}$.",
+       "ur": "مقیاس: $|a+bi| = \\sqrt{a^2+b^2}$۔",
+       "check": [
+        "Abs((-3 + 4*I)) == (5)"
+       ]
+      },
+      {
+       "math": "|z_1| = 5 = |-\\overline{z_1}|",
+       "en": "Both have modulus 5.",
+       "ur": "دونوں کا مقیاس 5 ہے۔",
+       "check": [
+        "(5) == (5)"
+       ]
+      }
+     ],
+     "answer": "verified: both sides $= 5$"
+    },
+    {
+     "label": "v",
+     "prompt": "$\\overline{\\overline{z_2}}=z_2$",
+     "steps": [
+      {
+       "math": "z_2 = 2+3i \\Rightarrow \\overline{z_2} = 2-3i \\Rightarrow \\overline{\\overline{z_2}} = 2+3i = z_2",
+       "en": "Taking the conjugate twice gives the number back.",
+       "ur": "دو بار مزدوج لینے سے وہی عدد واپس ملتا ہے۔",
+       "check": [
+        "conjugate(conjugate(2+3*I)) == 2+3*I"
+       ]
+      }
+     ],
+     "answer": "verified: $\\overline{\\overline{z_2}} = z_2$"
+    },
+    {
+     "label": "vi",
+     "prompt": "$z_1\\overline{z_1}=|z_1|^2$",
+     "steps": [
+      {
+       "math": "z_1\\overline{z_1} = (3+4i)(3-4i) = 9 + 16 = 25",
+       "en": "Use $(a+bi)(a-bi) = a^2+b^2$.",
+       "ur": "$(a+bi)(a-bi) = a^2+b^2$ استعمال کریں۔",
+       "check": [
+        "(3+4*I)*(3-4*I) == 25"
+       ]
+      },
+      {
+       "math": "|z_1|^2 = \\left(\\sqrt{3^2+4^2}\\right)^2 = 25",
+       "en": "Square the modulus.",
+       "ur": "مقیاس کا مربع لیں۔",
+       "check": [
+        "Abs(3+4*I)**2 == 25"
+       ]
+      }
+     ],
+     "answer": "verified: both sides $= 25$"
+    }
+   ],
+   "exercise": "Review 1"
+  },
+  {
+   "id": "c10-rev1-q6",
+   "kind": "review",
+   "number": "6",
+   "page": 0,
+   "question": "If $z_1=5+4i$, $z_2=3+2i$, then find (i) $z_1z_2$ (ii) $\\frac{z_1}{z_2}$ (iii) $\\overline{z_1}\\,\\overline{z_2}$ (iv) $|z_1z_2|$",
+   "parts": [
+    {
+     "label": "i",
+     "prompt": "$z_1z_2$",
+     "steps": [
+      {
+       "math": "\\left(5 + 4i\\right)\\left(3 + 2i\\right) = 15 + 10i + 12i + 8i^2",
+       "en": "Multiply each term of the first bracket by each term of the second.",
+       "ur": "پہلی قوسین کے ہر رکن کو دوسری قوسین کے ہر رکن سے ضرب دیں۔",
+       "check": [
+        "(5 + 4*I)*(3 + 2*I) == (15) + (22)*I + (8)*I**2"
+       ]
+      },
+      {
+       "math": "= 15 + 22i - 8 = 7 + 22i",
+       "en": "Put $i^2 = -1$ and collect the real and imaginary parts.",
+       "ur": "$i^2 = -1$ رکھیں اور حقیقی اور خیالی حصے اکٹھے کریں۔",
+       "check": [
+        "I**2 == -1",
+        "(5 + 4*I)*(3 + 2*I) == (7 + 22*I)"
+       ]
+      }
+     ],
+     "answer": "$7 + 22i$",
+     "book_key": "7+22i"
+    },
+    {
+     "label": "ii",
+     "prompt": "$\\frac{z_1}{z_2}$",
+     "steps": [
+      {
+       "math": "\\frac{5 + 4i}{3 + 2i} \\times \\frac{3 - 2i}{3 - 2i}",
+       "en": "Multiply the numerator and the denominator by the conjugate of the denominator, $3 - 2i$.",
+       "ur": "شمار کنندہ اور نسب نما کو نسب نما کے مزدوج $3 - 2i$ سے ضرب دیں۔",
+       "check": [
+        "(5 + 4*I)/(3 + 2*I) == (5 + 4*I)*(3 - 2*I)/((3 + 2*I)*(3 - 2*I))"
+       ]
+      },
+      {
+       "math": "= \\frac{23 + 2i}{3^2 + 2^2} = \\frac{23 + 2i}{13}",
+       "en": "In the denominator $(a+bi)(a-bi) = a^2 + b^2$; multiply out the numerator using $i^2=-1$.",
+       "ur": "نسب نما میں $(a+bi)(a-bi) = a^2 + b^2$؛ شمار کنندہ کو $i^2=-1$ کے ساتھ ضرب دیں۔",
+       "check": [
+        "(3 + 2*I)*(3 - 2*I) == (13)",
+        "(5 + 4*I)*(3 - 2*I) == (23 + 2*I)"
+       ]
+      },
+      {
+       "math": "= \\frac{23}{13} + \\frac{2}{13}i",
+       "en": "Divide each part by the denominator and simplify.",
+       "ur": "ہر حصے کو نسب نما سے تقسیم کر کے سادہ کریں۔",
+       "check": [
+        "(5 + 4*I)/(3 + 2*I) == (23/13 + 2*I/13)"
+       ]
+      }
+     ],
+     "answer": "$\\frac{23}{13} + \\frac{2}{13}i$",
+     "book_key": "\\frac{23}{13}+\\frac{2}{13}i"
+    },
+    {
+     "label": "iii",
+     "prompt": "$\\overline{z_1}\\,\\overline{z_2}$",
+     "steps": [
+      {
+       "math": "\\overline{5 + 4i} = 5 - 4i",
+       "en": "The conjugate changes the sign of the imaginary part.",
+       "ur": "مزدوج میں خیالی حصے کی علامت بدل جاتی ہے۔",
+       "check": [
+        "conjugate((5 + 4*I)) == (5 - 4*I)"
+       ]
+      },
+      {
+       "math": "\\overline{3 + 2i} = 3 - 2i",
+       "en": "The conjugate changes the sign of the imaginary part.",
+       "ur": "مزدوج میں خیالی حصے کی علامت بدل جاتی ہے۔",
+       "check": [
+        "conjugate((3 + 2*I)) == (3 - 2*I)"
+       ]
+      },
+      {
+       "math": "\\left(5 - 4i\\right)\\left(3 - 2i\\right) = 15 - 10i - 12i + 8i^2",
+       "en": "Multiply each term of the first bracket by each term of the second.",
+       "ur": "پہلی قوسین کے ہر رکن کو دوسری قوسین کے ہر رکن سے ضرب دیں۔",
+       "check": [
+        "(5 - 4*I)*(3 - 2*I) == (15) + (-22)*I + (8)*I**2"
+       ]
+      },
+      {
+       "math": "= 15 - 22i - 8 = 7 - 22i",
+       "en": "Put $i^2 = -1$ and collect the real and imaginary parts.",
+       "ur": "$i^2 = -1$ رکھیں اور حقیقی اور خیالی حصے اکٹھے کریں۔",
+       "check": [
+        "I**2 == -1",
+        "(5 - 4*I)*(3 - 2*I) == (7 - 22*I)"
+       ]
+      }
+     ],
+     "answer": "$7 - 22i$",
+     "book_key": "7-22i"
+    },
+    {
+     "label": "iv",
+     "prompt": "$|z_1z_2|$",
+     "steps": [
+      {
+       "math": "\\left(5 + 4i\\right)\\left(3 + 2i\\right) = 15 + 10i + 12i + 8i^2",
+       "en": "Multiply each term of the first bracket by each term of the second.",
+       "ur": "پہلی قوسین کے ہر رکن کو دوسری قوسین کے ہر رکن سے ضرب دیں۔",
+       "check": [
+        "(5 + 4*I)*(3 + 2*I) == (15) + (22)*I + (8)*I**2"
+       ]
+      },
+      {
+       "math": "= 15 + 22i - 8 = 7 + 22i",
+       "en": "Put $i^2 = -1$ and collect the real and imaginary parts.",
+       "ur": "$i^2 = -1$ رکھیں اور حقیقی اور خیالی حصے اکٹھے کریں۔",
+       "check": [
+        "I**2 == -1",
+        "(5 + 4*I)*(3 + 2*I) == (7 + 22*I)"
+       ]
+      },
+      {
+       "math": "|7 + 22i| = \\sqrt{(7)^2 + (22)^2} = \\sqrt{533}",
+       "en": "Modulus: $|a+bi| = \\sqrt{a^2+b^2}$.",
+       "ur": "مقیاس: $|a+bi| = \\sqrt{a^2+b^2}$۔",
+       "check": [
+        "Abs((7 + 22*I)) == (sqrt(533))"
+       ]
+      }
+     ],
+     "answer": "$\\sqrt{533}$",
+     "book_key": "\\sqrt{533}"
+    }
+   ],
+   "exercise": "Review 1"
+  },
+  {
+   "id": "c10-rev1-q7",
+   "kind": "review",
+   "number": "7",
+   "page": 0,
+   "question": "Find real and imaginary parts of $z=(2+7i)^{-1}$.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "\\left(2 + 7i\\right)^{-1} = \\frac{1}{2 + 7i}",
+       "en": "A power $-1$ means one over the number.",
+       "ur": "طاقت $-1$ کا مطلب ہے ایک تقسیم وہ عدد۔",
+       "check": [
+        "(2 + 7*I)**(-1) == 1/(2 + 7*I)"
+       ]
+      },
+      {
+       "math": "\\frac{1}{2 + 7i} \\times \\frac{2 - 7i}{2 - 7i}",
+       "en": "Multiply the numerator and the denominator by the conjugate of the denominator, $2 - 7i$.",
+       "ur": "شمار کنندہ اور نسب نما کو نسب نما کے مزدوج $2 - 7i$ سے ضرب دیں۔",
+       "check": [
+        "(1)/(2 + 7*I) == (1)*(2 - 7*I)/((2 + 7*I)*(2 - 7*I))"
+       ]
+      },
+      {
+       "math": "= \\frac{2 - 7i}{2^2 + 7^2} = \\frac{2 - 7i}{53}",
+       "en": "In the denominator $(a+bi)(a-bi) = a^2 + b^2$; multiply out the numerator using $i^2=-1$.",
+       "ur": "نسب نما میں $(a+bi)(a-bi) = a^2 + b^2$؛ شمار کنندہ کو $i^2=-1$ کے ساتھ ضرب دیں۔",
+       "check": [
+        "(2 + 7*I)*(2 - 7*I) == (53)",
+        "(1)*(2 - 7*I) == (2 - 7*I)"
+       ]
+      },
+      {
+       "math": "= \\frac{2}{53} - \\frac{7}{53}i",
+       "en": "Divide each part by the denominator and simplify.",
+       "ur": "ہر حصے کو نسب نما سے تقسیم کر کے سادہ کریں۔",
+       "check": [
+        "(1)/(2 + 7*I) == (2/53 - 7*I/53)"
+       ]
+      },
+      {
+       "math": "\\operatorname{Re}(z) = \\frac{2}{53}, \\quad \\operatorname{Im}(z) = - \\frac{7}{53}",
+       "en": "Read off the real part and the coefficient of $i$.",
+       "ur": "حقیقی حصہ اور $i$ کا عددی سر پڑھ لیں۔",
+       "check": [
+        "re((2/53 - 7*I/53)) == (2/53)",
+        "im((2/53 - 7*I/53)) == (-7/53)"
+       ]
+      }
+     ],
+     "answer": "$\\operatorname{Re} = \\frac{2}{53},\\ \\operatorname{Im} = - \\frac{7}{53}$",
+     "book_key": "Re=\\frac{2}{53}, Im=-\\frac{7}{53}"
+    }
+   ],
+   "exercise": "Review 1"
+  },
+  {
+   "id": "c10-rev1-q8",
+   "kind": "review",
+   "number": "8",
+   "page": 0,
+   "question": "Solve the given simultaneous linear equations with complex coefficients for $z$ and $w$: $iz+(2-i)w=4+i$, $iz+(3+i)w=3+3i$",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "\\left(i\\right)\\,[\\left(i\\right)z + \\left(2 - i\\right)w] - \\left(i\\right)\\,[\\left(i\\right)z + \\left(3 + i\\right)w] = \\left(i\\right)\\left(4 + i\\right) - \\left(i\\right)\\left(3 + 3i\\right)",
+       "en": "Multiply equation (i) by the $z$-coefficient of (ii) and (ii) by the $z$-coefficient of (i), then subtract: $z$ cancels.",
+       "ur": "مساوات (i) کو (ii) کے $z$ کے عددی سر سے اور (ii) کو (i) کے $z$ کے عددی سر سے ضرب دے کر تفریق کریں: $z$ ختم ہو جاتا ہے۔"
+      },
+      {
+       "math": "\\left(2 - i\\right) w = 2 + i",
+       "en": "Simplify both sides with $i^2 = -1$.",
+       "ur": "دونوں اطراف کو $i^2 = -1$ سے سادہ کریں۔",
+       "check": [
+        "(I)*(2 - I) - (I)*(3 + I) == (2 - I)",
+        "(I)*(4 + I) - (I)*(3 + 3*I) == (2 + I)"
+       ]
+      },
+      {
+       "math": "w = \\frac{2 + i}{2 - i} = \\frac{3}{5} + \\frac{4}{5}i",
+       "en": "Divide, using the conjugate of the denominator.",
+       "ur": "نسب نما کے مزدوج کی مدد سے تقسیم کریں۔",
+       "check": [
+        "(2 + I)/(2 - I) == (3/5 + 4*I/5)"
+       ]
+      },
+      {
+       "math": "z = \\frac{4 + i - \\left(2 - i\\right)\\left(\\frac{3}{5} + \\frac{4}{5}i\\right)}{i} = -2i",
+       "en": "Put $w$ in equation (i) and solve for $z$.",
+       "ur": "$w$ کی قیمت مساوات (i) میں رکھ کر $z$ معلوم کریں۔",
+       "check": [
+        "((4 + I) - (2 - I)*(3/5 + 4*I/5))/(I) == (-2*I)"
+       ]
+      },
+      {
+       "math": "\\text{Check in (ii): } \\left(i\\right)\\left(-2i\\right) + \\left(3 + i\\right)\\left(\\frac{3}{5} + \\frac{4}{5}i\\right) = 3 + 3i",
+       "en": "Both equations are satisfied.",
+       "ur": "دونوں مساوات پوری ہوتی ہیں۔",
+       "check": [
+        "(I)*(-2*I) + (2 - I)*(3/5 + 4*I/5) == (4 + I)",
+        "(I)*(-2*I) + (3 + I)*(3/5 + 4*I/5) == (3 + 3*I)"
+       ]
+      }
+     ],
+     "answer": "$z = -2i,\\ w = \\frac{3}{5} + \\frac{4}{5}i$",
+     "book_key": "z=-2i, w=\\frac{3}{5}+\\frac{4}{5}i"
+    }
+   ],
+   "exercise": "Review 1"
+  },
+  {
+   "id": "c10-rev1-q9",
+   "kind": "review",
+   "number": "9",
+   "page": 0,
+   "question": "Solve $(3-4i)(a+bi)=1+0i$ and find the values of $a$ and $b$.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "(3-4i)(a+bi) = 1 \\;\\Rightarrow\\; (3 a + 4 b) + (- 4 a + 3 b)i = 1",
+       "en": "Expand the left side with $i^2=-1$ and write it as (real part) + (imaginary part)$i$.",
+       "ur": "بائیں جانب کو $i^2=-1$ سے پھیلا کر (حقیقی حصہ) + (خیالی حصہ)$i$ کی صورت میں لکھیں۔",
+       "check": [
+        "expand((3-4*I)*((a)+(b)*I)) == expand((3*a + 4*b) + (-4*a + 3*b)*I)"
+       ]
+      },
+      {
+       "math": "3 a + 4 b = 1 \\quad\\text{and}\\quad - 4 a + 3 b = 0",
+       "en": "Two complex numbers are equal only when their real parts are equal and their imaginary parts are equal.",
+       "ur": "دو مختلط اعداد تب برابر ہوتے ہیں جب ان کے حقیقی حصے برابر ہوں اور خیالی حصے بھی برابر ہوں۔"
+      },
+      {
+       "math": "a = \\frac{3}{25},\\quad b = \\frac{4}{25}",
+       "en": "Solve these two equations together.",
+       "ur": "ان دونوں مساوات کو اکٹھے حل کریں۔",
+       "check": [
+        "3*(3/25) + 4*(4/25) - 1 == 0",
+        "-4*(3/25) + 3*(4/25) == 0"
+       ]
+      },
+      {
+       "math": "\\text{Check: } (3-4i)(a+bi)\\Big|_{a=\\frac{3}{25}, b=\\frac{4}{25}} = 1",
+       "en": "Put the values back into the given equation: both sides agree.",
+       "ur": "قیمتیں دی گئی مساوات میں رکھیں: دونوں اطراف برابر ہیں۔",
+       "check": [
+        "(3-4*I)*((3/25)+(4/25)*I) == 1"
+       ]
+      }
+     ],
+     "answer": "$a = \\frac{3}{25},\\ b = \\frac{4}{25}$",
+     "book_key": "a=\\frac{3}{25}, b=\\frac{4}{25}"
+    }
+   ],
+   "exercise": "Review 1"
+  },
+  {
+   "id": "c10-rev1-q10",
+   "kind": "review",
+   "number": "10",
+   "page": 0,
+   "question": "Solve the equation for $x$ and $y$: $(3-2i)(x+yi)=2(x-2yi)+2i-1$",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "(3-2i)(x+yi) - 2(x-2yi) - 2i + 1 = 0 \\;\\Rightarrow\\; (x + 2 y + 1) + (- 2 x + 7 y - 2)i = 0",
+       "en": "Expand the left side with $i^2=-1$ and write it as (real part) + (imaginary part)$i$.",
+       "ur": "بائیں جانب کو $i^2=-1$ سے پھیلا کر (حقیقی حصہ) + (خیالی حصہ)$i$ کی صورت میں لکھیں۔",
+       "check": [
+        "expand((3-2*I)*((x)+(y)*I) - 2*((x)-2*(y)*I) - 2*I + 1) == expand((x + 2*y + 1) + (-2*x + 7*y - 2)*I)"
+       ]
+      },
+      {
+       "math": "x + 2 y + 1 = 0 \\quad\\text{and}\\quad - 2 x + 7 y - 2 = 0",
+       "en": "Two complex numbers are equal only when their real parts are equal and their imaginary parts are equal.",
+       "ur": "دو مختلط اعداد تب برابر ہوتے ہیں جب ان کے حقیقی حصے برابر ہوں اور خیالی حصے بھی برابر ہوں۔"
+      },
+      {
+       "math": "x = -1,\\quad y = 0",
+       "en": "Solve these two equations together.",
+       "ur": "ان دونوں مساوات کو اکٹھے حل کریں۔",
+       "check": [
+        "(-1) + 2*(0) + 1 == 0",
+        "-2*(-1) + 7*(0) - 2 == 0"
+       ]
+      },
+      {
+       "math": "\\text{Check: } (3-2i)(x+yi) - 2(x-2yi) - 2i + 1\\Big|_{x=-1, y=0} = 0",
+       "en": "Put the values back into the given equation: both sides agree.",
+       "ur": "قیمتیں دی گئی مساوات میں رکھیں: دونوں اطراف برابر ہیں۔",
+       "check": [
+        "(3-2*I)*((-1)+(0)*I) - 2*((-1)-2*(0)*I) - 2*I + 1 == 0"
+       ]
+      }
+     ],
+     "answer": "$x = -1,\\ y = 0$",
+     "book_key": "x=-1, y=0"
+    }
+   ],
+   "exercise": "Review 1"
+  }
+ ]
+}

@@ -17,13 +17,18 @@ ROOT = pathlib.Path(__file__).resolve().parent
 BOOK = ROOT / "data" / "book"
 
 
-def load_items():
+def book_dir(klass="9"):
+    return ROOT / "data" / ("book" if str(klass) == "9" else f"book{klass}")
+
+
+def load_items(klass="9"):
     items = []
-    for path in sorted(BOOK.glob("unit*.json")):
+    for path in sorted(book_dir(klass).glob("unit*.json")):
         unit = json.loads(path.read_text(encoding="utf-8"))
         for it in unit["items"]:
             it["unit"] = unit["unit"]
             it["unit_title"] = unit["title"]
+            it["class"] = int(klass)
             items.append(it)
     return items
 
@@ -31,19 +36,18 @@ def load_items():
 _EX = {}
 
 
-def _example_pool():
-    """Solved book examples, one part each (the shape the model was trained on), with their own TF-IDF index."""
-    if not _EX:
-        items = modelsolve.explode_all(load_items())
-        _EX["by_id"] = {it["id"]: it for it in items}
-        _EX["index"] = rag.Index([c for it in items for c in rag.chunk_item(it)], use_embeddings=False)
-    return _EX["index"], _EX["by_id"]
+def _example_pool(klass="9"):
+    """Solved book examples of one class, one part each (the shape the model was trained on), with their own TF-IDF index."""
+    if klass not in _EX:
+        items = modelsolve.explode_all(load_items(klass))
+        _EX[klass] = (rag.Index([c for it in items for c in rag.chunk_item(it)], use_embeddings=False), {it["id"]: it for it in items})
+    return _EX[klass]
 
 
-def live_solve(question, focus_part=None, attempts=3, generate=None):
+def live_solve(question, focus_part=None, attempts=3, generate=None, klass="9"):
     """Solve with a model: one part at a time, each reply checked with sympy and retried when a check fails.
     `generate` defaults to the local model; the web app passes the Gemini client instead."""
-    index, by_id = _example_pool()
+    index, by_id = _example_pool(str(klass))
     if focus_part:
         pieces = part_markers(question)
         if len(pieces) >= 3 and focus_part in labels(len(pieces) - 1):
