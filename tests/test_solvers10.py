@@ -151,6 +151,14 @@ def main():
         check("expression (p)^2/(q)", f"Simplify {ztex(p, True)}^2/{ztex(q, True)}", sp.expand(p ** 2 / q))
         check("expression (p)^3", f"Simplify {ztex(p, True)}^3", sp.expand(p ** 3))
 
+    # large powers: bases that reduce to i, -i, 1, -1, and (1 +- i)^even through the square
+    for _ in range(args.n):
+        k, n, m = rng.randint(1, 9), rng.randint(7, 60), rng.randint(7, 60)
+        e = rng.choice([4, 6, 8, 10, 12])
+        check("large powers", f"Simplify: (({k}+{k}i)/({k}-{k}i))^{n} + (({k}-{k}i)/({k}+{k}i))^{m}",
+              sp.expand(((k + k * I) / (k - k * I)) ** n + ((k - k * I) / (k + k * I)) ** m))
+        sgn = rng.choice([1, -1])
+        check("(1 +- i)^even", f"Simplify (1{'+' if sgn > 0 else '-'}i)^{e}", sp.expand((1 + sgn * I) ** e))
     # the question from the screenshot, exactly as typed
     got = solvers10.solve("If z = (3 + i)² / (1 − 2i), find:\n(a) Re(z) and Im(z) (b) z̄ (c) |z| (d) z⁻¹")
     if not (got and parts_ok(got, sp.expand((3 + I) ** 2 / (1 - 2 * I)))):

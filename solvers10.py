@@ -272,6 +272,35 @@ def eval_steps(py_text, depth=0):
             r, _ = ipow_value(n)
             return [cx.S(rf"i^{{{n}}} = i^{{{r}}} = {cx.ctex(I ** n)}", *_FOUR, f"I**({n}) == {cx.py(I ** n)}")], sp.expand(I ** n)
         sb, vb = eval_steps(base, depth + 1)
+        unit = {I: "i", -I: "-i", sp.Integer(1): "1", sp.Integer(-1): "-1"}.get(sp.expand(vb))
+        if unit is not None:                       # the base is i, -i, 1 or -1: any power reduces with i^4 = 1
+            v = sp.expand(vb ** n)
+            if unit in ("i", "-i"):
+                sign = "-" if unit == "-i" and n % 2 else ""
+                r = n % 4
+                step = cx.S(rf"\left({unit}\right)^{{{n}}} = {sign}i^{{{n}}} = {sign}i^{{{r}}} = {cx.ctex(v)}",
+                            "Since $i^4 = 1$, only the remainder of the power after dividing by 4 matters"
+                            + (" ($(-i)^n = (-1)^n i^n$)." if unit == "-i" else "."),
+                            "چونکہ $i^4 = 1$، طاقت کو 4 سے تقسیم کرنے پر صرف باقی اہم ہے"
+                            + (" ($(-i)^n = (-1)^n i^n$)۔" if unit == "-i" else "۔"),
+                            f"({cx.py(vb)})**({n}) == {cx.py(v)}")
+            else:
+                step = cx.S(rf"\left({unit}\right)^{{{n}}} = {cx.ctex(v)}", "A power of $1$ is $1$; a power of $-1$ is $1$ for an even power and $-1$ for an odd one.",
+                            "$1$ کی ہر طاقت $1$ ہے؛ $-1$ کی جفت طاقت $1$ اور طاق طاقت $-1$ ہے۔", f"({cx.py(vb)})**({n}) == {cx.py(v)}")
+            return sb + [step], v
+        sq = sp.expand(vb ** 2)
+        if abs(n) > 6 and (sp.re(sq) == 0 or sp.im(sq) == 0) and n % 2 == 0:   # (1+i)^8 = ((1+i)^2)^4 = (2i)^4
+            s1, _ = cx.square(vb)
+            k = abs(n) // 2
+            v = sp.expand(sq ** k)
+            steps = sb + s1 + [cx.S(rf"{cx.paren(vb)}^{{{abs(n)}}} = \left({cx.ctex(sq)}\right)^{{{k}}} = {cx.ctex(v)}",
+                                    "Write the power as a power of the square, which is a real or purely imaginary number.",
+                                    "طاقت کو مربع کی طاقت کے طور پر لکھیں، جو حقیقی یا خالص خیالی عدد ہے۔",
+                                    f"({cx.py(vb)})**({abs(n)}) == {cx.py(v)}")]
+            if n < 0:
+                s, v = cx.recip(v)
+                steps += s
+            return steps, sp.expand(v)
         if abs(n) > 6:
             raise ValueError("power too large to show by hand")
         steps, v = list(sb), vb
