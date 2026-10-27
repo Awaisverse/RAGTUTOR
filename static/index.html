@@ -26,7 +26,7 @@
   header { padding: 12px 18px; background: var(--panel); border-bottom: 1px solid var(--line); display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
   header h1 { font-size: 18px; margin: 0; }
   header .sub { color: var(--muted); font-size: 13px; }
-  main { display: grid; grid-template-columns: 300px minmax(0, 1fr) 340px; gap: 14px; padding: 14px; height: calc(100vh - 58px); }
+  main { display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 14px; padding: 14px; height: calc(100vh - 58px); }
   .card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 12px; min-height: 0; }
   .col { display: flex; flex-direction: column; gap: 12px; min-height: 0; }
   .scroll { overflow: auto; min-height: 0; }
@@ -47,17 +47,43 @@
   #board-wrap { display: flex; flex-direction: column; gap: 10px; min-height: 0; height: 100%; }
   #title { font-weight: 600; }
   canvas { width: 100%; background: var(--board); border: 1px dashed var(--line); border-radius: 10px; display: block; }
-  #math { background: var(--board); border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; min-height: 90px; max-height: 240px; overflow: auto; }
-  .mline { padding: 4px 0; opacity: 0; transform: translateY(4px); transition: opacity .4s, transform .4s; }
-  .mline.show { opacity: 1; transform: none; }
-  .mline.current { background: var(--accent-soft); border-radius: 6px; }
-  .answer { color: var(--ok); font-weight: 600; margin-top: 6px; }
+  #cvwrap { flex: 0 0 auto; }
+  /* the working: the centre of the page. One row per step, the maths on the left and the teacher's instruction beside it */
+  #math { position: relative; flex: 1 1 auto; min-height: 240px; overflow: auto; background: var(--board); border: 1px solid var(--line);
+          border-radius: 12px; padding: 14px 16px 56px 44px; }
+  .partq { font-size: 15px; color: var(--muted); padding: 0 0 10px; margin-bottom: 8px; border-bottom: 1px dashed var(--line); }
+  .step { position: relative; display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 18px; align-items: center;
+          padding: 8px 10px; margin: 4px 0; border-radius: 10px; transition: background .3s; }
+  .step.solo { grid-template-columns: minmax(0, 1fr); }
+  .step.current { background: var(--accent-soft); }
+  .step .work { overflow-x: auto; overflow-y: hidden; }
+  .step.new .work { animation: write .9s ease-out both; }
+  @keyframes write { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+  .bubble { position: relative; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 8px 12px; font-size: 15px; line-height: 1.6; }
+  .step.current .bubble { border-color: var(--accent); }
+  .bubble::before { content: ""; position: absolute; left: -7px; top: 50%; width: 12px; height: 12px; background: var(--panel);
+                    border-left: 1px solid; border-bottom: 1px solid; border-color: inherit; transform: translateY(-50%) rotate(45deg); }
+  .bubble .tag { display: block; font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--accent); margin-bottom: 2px; }
+  .bubble .tick { color: var(--ok); margin-left: 6px; text-transform: none; letter-spacing: 0; }
+  .bubble .ur { direction: rtl; text-align: right; font-family: "Noto Nastaliq Urdu", serif; font-size: 18px; line-height: 2.05; margin: 4px 0 0; }
+  .bubble .ur > span { direction: ltr; unicode-bidi: isolate; display: inline-block; }   /* maths inside Urdu text must not be mirrored */
+  .bubble .en { margin: 0; }
+  .answer { color: var(--ok); font-weight: 700; font-size: 18px; margin-top: 8px; padding: 4px 8px; display: inline-block; }
+  .answer .katex { font-size: 1.2em; }
+  /* attention: the part being discussed pulses and an arrow bobs at it */
+  .katex .hl { background: color-mix(in srgb, var(--accent) 16%, transparent); border-radius: 5px; padding: 0 3px; }
+  .step.current .katex .hl, .step.current .answer { animation: pulse 1.5s ease-in-out infinite; border-radius: 6px; }
+  @keyframes pulse { 0%, 100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 0%, transparent); } 50% { box-shadow: 0 0 0 5px color-mix(in srgb, var(--accent) 32%, transparent); } }
+  .ptr { position: absolute; width: 26px; height: 30px; margin-left: -13px; color: var(--accent); pointer-events: none; z-index: 3;
+         animation: bob .9s ease-in-out infinite; filter: drop-shadow(0 1px 1px rgba(0, 0, 0, .3)); }
+  @keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
+  .step .go { display: none; position: absolute; left: -36px; top: 50%; margin-top: -12px; width: 28px; color: var(--accent); animation: nudge .9s ease-in-out infinite; }
+  .step.current .go { display: block; }
+  @keyframes nudge { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(7px); } }
+  @media (max-width: 800px) { .step { grid-template-columns: minmax(0, 1fr); } .bubble::before { display: none; } }
+  @media (prefers-reduced-motion: reduce) { .ptr, .step .go, .step.current .katex .hl, .step.current .answer, .step.new .work { animation: none; } }
   .controls { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
   .counter { color: var(--muted); font-size: 13px; margin-left: auto; }
-  #explain { font-size: 16px; line-height: 1.7; min-height: 120px; }
-  #explain .en { margin: 0 0 10px; }
-  #explain .ur { direction: rtl; text-align: right; font-family: "Noto Nastaliq Urdu", serif; font-size: 19px; line-height: 2.1; margin: 0 0 10px; }
-  #explain .label { font-size: 12px; color: var(--muted); display: block; margin-bottom: 2px; }
   #progress { height: 4px; background: var(--line); border-radius: 4px; overflow: hidden; }
   #progress > div { height: 100%; width: 0; background: var(--accent); transition: width .3s; }
   .tabs { display: flex; gap: 6px; flex-wrap: wrap; }
@@ -67,7 +93,7 @@
   .qtext { font-size: 15px; line-height: 1.6; padding: 6px 2px; }
   .answer-note { font-size: 13px; color: var(--warn); margin-top: 6px; line-height: 1.5; }
   .book-key { font-size: 13px; color: var(--muted); margin-top: 4px; }
-  @media (max-width: 1100px) { main { grid-template-columns: 1fr; height: auto; } .scroll-col { max-height: 420px; } }
+  @media (max-width: 1100px) { main { grid-template-columns: minmax(0, 1fr); height: auto; } #math { min-height: 320px; } .scroll-col { max-height: 420px; } }
 </style>
 </head>
 <body>
@@ -87,7 +113,7 @@
         <button class="primary" id="ask">Find solution</button>
         <button id="clear">Clear</button>
       </div>
-      <div class="note">Matches the textbook's solved examples. Questions not in the book can be solved live if the server has an API key.</div>
+      <div class="note">Type a question with your own numbers. The tutor solves exactly that question, step by step, and checks every step by computer algebra.</div>
     </div>
     <div class="card col scroll">
       <h2>Results</h2>
@@ -114,8 +140,8 @@
     </div>
     <div id="qtext" class="qtext"></div>
     <div class="tabs" id="parts"></div>
-    <canvas id="cv" height="360"></canvas>
-    <div id="math"><div class="note">The steps are written here one by one.</div></div>
+    <div id="cvwrap" style="display:none"><canvas id="cv" height="360"></canvas></div>
+    <div id="math"><div class="note">The steps are written here one by one, with the teacher's instruction beside each.</div></div>
     <div id="progress"><div></div></div>
     <div class="controls">
       <button id="first" title="Restart">⏮</button>
@@ -128,21 +154,13 @@
         <option value="1600" selected>Normal</option>
         <option value="900">Fast</option>
       </select>
-      <span class="counter" id="counter"></span>
-    </div>
-  </section>
-
-  <!-- RIGHT: explanation -->
-  <section class="card col scroll-col">
-    <div class="row">
-      <h2 style="margin:0">Explanation</h2>
-      <span style="margin-left:auto" class="tabs">
+      <span class="tabs" id="langs">
         <button data-lang="en" class="on">English</button>
         <button data-lang="ur">اردو</button>
         <button data-lang="both">Both</button>
       </span>
+      <span class="counter" id="counter"></span>
     </div>
-    <div id="explain" class="scroll"><div class="note">Explanations appear here for each step.</div></div>
   </section>
 </main>
 
@@ -216,51 +234,151 @@
     document.querySelectorAll("#parts button").forEach((b) => b.classList.toggle("on", +b.dataset.i === i));
     $("math").innerHTML = "";
     cur = -1;
+    stopPointerLoop();
+    // the drawing area is only there when this question has a figure; algebra gets the whole board for its working
+    $("cvwrap").style.display = steps.some((s) => (s.draw || []).length) ? "" : "none";
     renderBoard(true);
     goto(0, false);
   }
 
-  // ---------- board: math lines ----------
-  function mathHTML(tex) {
+  // ---------- board: the working, one row per step ----------
+  const ARROW_UP = '<svg viewBox="0 0 24 28" width="26" height="30" aria-hidden="true"><path d="M12 2 L22 14 H16 V26 H8 V14 H2 Z" fill="currentColor"/></svg>';
+  const ARROW_RIGHT = '<svg viewBox="0 0 28 24" width="28" height="24" aria-hidden="true"><path d="M2 8 H14 V2 L26 12 L14 22 V16 H2 Z" fill="currentColor"/></svg>';
+  const reducedMotion = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // Index of the last "=" that is not inside braces or \left...\right, so a line like "A = B = C" points at C.
+  function lastTopEquals(tex) {
+    let depth = 0, last = -1;
+    for (let i = 0; i < tex.length; i++) {
+      if (tex.startsWith("\\left", i)) { depth++; i += 4; }
+      else if (tex.startsWith("\\right", i)) { depth--; i += 5; }
+      else if (tex[i] === "{") depth++;
+      else if (tex[i] === "}") depth--;
+      else if (tex[i] === "=" && depth === 0) last = i;
+    }
+    return last;
+  }
+
+  // The part of a line to point at: what comes after the last "=", or the whole line when nothing has been computed yet.
+  function withHighlight(tex) {
+    const k = lastTopEquals(tex);
+    const tail = k >= 0 ? tex.slice(k + 1).trim() : "";
+    return tail ? tex.slice(0, k + 1) + " \\htmlClass{hl}{" + tail + "}" : "\\htmlClass{hl}{" + tex + "}";
+  }
+
+  function mathHTML(tex, highlight) {
     const div = document.createElement("div");
-    try { katex.render(tex, div, { displayMode: true, throwOnError: false }); }
-    catch (e) { div.textContent = tex; }
+    div.className = "work";
+    const draw = (t, strict) => katex.render(t, div, { displayMode: true, throwOnError: strict, trust: (c) => c.command === "\\htmlClass" });
+    try { draw(highlight ? withHighlight(tex) : tex, true); }
+    catch (e) {
+      try { draw(tex, true); } catch (e2) { div.textContent = tex; }
+    }
     return div;
   }
 
-  function renderMathLines(upto) {
+  function bubbleFor(s, i) {
+    const text = { en: s.en || "", ur: s.ur || "" };
+    if (!text.en && !text.ur) return null;
+    const b = document.createElement("div");
+    b.className = "bubble";
+    const tag = document.createElement("span");
+    tag.className = "tag";
+    tag.textContent = `Step ${i + 1} of ${steps.length}`;
+    if ((s.check || []).length && item.verified !== false) {
+      const t = document.createElement("span");
+      t.className = "tick";
+      t.textContent = "✓ checked by computer";
+      tag.appendChild(t);
+    }
+    b.appendChild(tag);
+    if ((lang === "en" || lang === "both") && text.en) { const p = document.createElement("p"); p.className = "en"; renderMixed(p, text.en); b.appendChild(p); }
+    if ((lang === "ur" || lang === "both") && text.ur) { const p = document.createElement("p"); p.className = "ur"; p.lang = "ur"; renderMixed(p, text.ur); b.appendChild(p); }
+    return b;
+  }
+
+  function answerBlock(s) {
+    const frag = document.createDocumentFragment();
+    const a = document.createElement("div");
+    a.className = "answer";
+    a.appendChild(document.createTextNode("Answer: "));
+    a.appendChild(renderMixed(document.createElement("span"), s._answer));
+    frag.appendChild(a);
+    if (s._key) {
+      const k = document.createElement("div");
+      k.className = "book-key";
+      k.appendChild(document.createTextNode("Book's printed answer: "));
+      // keys that contain LaTeX are rendered as maths; plain keys ("20 years", "1.33%", "Irrational") stay text
+      const keyText = stripDollars(s._key);
+      k.appendChild(renderMixed(document.createElement("span"), /[\\^_{}]/.test(keyText) ? "$" + keyText + "$" : keyText));
+      frag.appendChild(k);
+    }
+    if (s._note) {
+      const n = document.createElement("div");
+      n.className = "answer-note";
+      n.textContent = lang === "ur" ? s._note.ur : s._note.en;
+      frag.appendChild(n);
+    }
+    return frag;
+  }
+
+  function renderMathLines(upto, fresh = true) {
     const box = $("math");
     box.innerHTML = "";
-    for (let i = 0; i <= upto; i++) {
-      const s = steps[i];
-      const line = document.createElement("div");
-      line.className = "mline show" + (i === upto ? " current" : "");
-      if (s.math) line.appendChild(mathHTML(s.math));
-      if (s._answer) {
-        const a = document.createElement("div");
-        a.className = "answer";
-        a.appendChild(document.createTextNode("Answer: "));
-        a.appendChild(renderMixed(document.createElement("span"), s._answer));
-        line.appendChild(a);
-        if (s._key) {
-          const k = document.createElement("div");
-          k.className = "book-key";
-          k.appendChild(document.createTextNode("Book's printed answer: "));
-          // keys that contain LaTeX are rendered as maths; plain keys ("20 years", "1.33%", "Irrational") stay text
-          const keyText = stripDollars(s._key);
-          k.appendChild(renderMixed(document.createElement("span"), /[\\^_{}]/.test(keyText) ? "$" + keyText + "$" : keyText));
-          line.appendChild(k);
-        }
-        if (s._note) {
-          const n = document.createElement("div");
-          n.className = "answer-note";
-          n.textContent = lang === "ur" ? s._note.ur : s._note.en;
-          line.appendChild(n);
-        }
-      }
-      box.appendChild(line);
+    const part = item.parts[partIdx];
+    const head = (part.label ? "(" + part.label + ") " : "") + (part.prompt || "");
+    if (head.trim()) {
+      const q = document.createElement("div");
+      q.className = "partq";
+      q.appendChild(document.createTextNode("Working on: "));
+      q.appendChild(renderMixed(document.createElement("span"), head));
+      box.appendChild(q);
     }
-    box.scrollTop = box.scrollHeight;
+    for (let i = 0; i <= upto; i++) {
+      const s = steps[i], isCur = i === upto;
+      const row = document.createElement("div");
+      const bubble = bubbleFor(s, i);
+      row.className = "step" + (isCur ? " current" + (fresh ? " new" : "") : "") + (bubble ? "" : " solo");
+      const go = document.createElement("span");
+      go.className = "go";
+      go.innerHTML = ARROW_RIGHT;
+      row.appendChild(go);
+      const left = document.createElement("div");
+      if (s.math) left.appendChild(mathHTML(s.math, isCur));
+      if (s._answer) left.appendChild(answerBlock(s));
+      row.appendChild(left);
+      if (bubble) row.appendChild(bubble);
+      box.appendChild(row);
+    }
+    keepInView();
+    placePointer();
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(placePointer);   // KaTeX fonts change the widths once loaded
+  }
+
+  // Scroll so the newest row and the arrow under it are visible.
+  function keepInView() {
+    const box = $("math"), row = box.querySelector(".step.current");
+    if (!row) return;
+    const bottom = row.offsetTop + row.offsetHeight + 54;
+    if (bottom > box.scrollTop + box.clientHeight) box.scrollTop = bottom - box.clientHeight;
+    if (row.offsetTop < box.scrollTop) box.scrollTop = Math.max(0, row.offsetTop - 12);
+  }
+
+  // A bobbing arrow under what the student should look at: the answer, else the highlighted part, else the line itself.
+  function placePointer() {
+    const box = $("math");
+    box.querySelectorAll(".ptr").forEach((p) => p.remove());
+    const row = box.querySelector(".step.current");
+    if (!row) return;
+    const target = row.querySelector(".answer") || row.querySelector(".katex .hl") || row.querySelector(".work");
+    if (!target) return;
+    const b = box.getBoundingClientRect(), r = target.getBoundingClientRect();
+    const ptr = document.createElement("div");
+    ptr.className = "ptr";
+    ptr.innerHTML = ARROW_UP;
+    ptr.style.left = (r.left - b.left + box.scrollLeft + Math.min(r.width, 520) / 2) + "px";
+    ptr.style.top = (r.bottom - b.top + box.scrollTop + 3) + "px";
+    box.appendChild(ptr);
   }
 
   function stripDollars(t) { return String(t).replace(/\$/g, ""); }
@@ -283,7 +401,9 @@
   // ---------- board: canvas drawing ----------
   function resizeCanvas() {
     const w = cv.clientWidth;
-    const h = Math.round(w * 0.62);
+    if (!w) return { w: 0, h: 0 };                       // the drawing area is hidden for questions with no figure
+    const h = Math.min(Math.round(w * 0.62), Math.round(window.innerHeight * 0.36));
+    cv.style.height = h + "px";
     if (cv.width !== w * devicePixelRatio || cv.height !== h * devicePixelRatio) {
       cv.width = w * devicePixelRatio;
       cv.height = h * devicePixelRatio;
@@ -306,6 +426,7 @@
 
   function drawAll() {
     const { w, h } = resizeCanvas();
+    if (!w) return;
     ctx.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);
     ctx.clearRect(0, 0, w, h);
     ctx.fillStyle = getComputedStyle(document.body).getPropertyValue("--ink");
@@ -321,7 +442,54 @@
       const t = i === cur ? anim.t : 1;
       cmds.forEach((c) => drawCmd(c, t, M));
     }
+    if (cur >= 0 && anim.t >= 0.98) {                    // once the new line is drawn, an arrow bobs at the spot to look at
+      const at = pointOf(steps[cur].draw || []);
+      if (at) drawArrow(M.X(at[0]), M.Y(at[1]));
+    }
   }
+
+  // Where the newest drawing command ends, in the 100-wide figure space; null when the step draws nothing.
+  function pointOf(cmds) {
+    for (let i = cmds.length - 1; i >= 0; i--) {
+      const c = cmds[i];
+      switch (c.t) {
+        case "line": return [c.p[2], c.p[3]];
+        case "poly": return [c.p[c.p.length - 2], c.p[c.p.length - 1]];
+        case "circle": return [c.c[0], c.c[1] - c.r];
+        case "arc": { const a = (c.a[1] * Math.PI) / 180; return [c.c[0] + c.r * Math.cos(a), c.c[1] + c.r * Math.sin(a)]; }
+        case "dot": case "text": case "right": return c.p;
+        case "subdiv": return [6 + (((c.lo + c.hi) / 2 - c.from) / (c.to - c.from)) * 88, c.y];
+        case "numberline": {
+          const marks = c.marks || [];
+          return marks.length ? [6 + ((marks[marks.length - 1].v - c.from) / (c.to - c.from)) * 88, c.y] : [50, c.y];
+        }
+      }
+    }
+    return null;
+  }
+
+  function drawArrow(px, py) {
+    const bob = reducedMotion ? 0 : Math.sin(performance.now() / 150) * 4;
+    const x = px, y = py - 26 + bob;                      // the tip stops just above the point
+    ctx.save();
+    ctx.fillStyle = getComputedStyle(document.body).getPropertyValue("--accent");
+    ctx.shadowColor = "rgba(0,0,0,.3)"; ctx.shadowBlur = 3;
+    ctx.beginPath();
+    ctx.moveTo(x, y + 18); ctx.lineTo(x - 10, y + 5); ctx.lineTo(x - 4, y + 5); ctx.lineTo(x - 4, y - 12);
+    ctx.lineTo(x + 4, y - 12); ctx.lineTo(x + 4, y + 5); ctx.lineTo(x + 10, y + 5);
+    ctx.closePath(); ctx.fill();
+    ctx.restore();
+  }
+
+  // The arrow bobs, so the canvas is redrawn every frame while the current step has a drawing.
+  let pointerRaf = 0;
+  function startPointerLoop() {
+    cancelAnimationFrame(pointerRaf);
+    if (reducedMotion || cur < 0 || !(steps[cur].draw || []).length) return;
+    const tick = () => { drawAll(); pointerRaf = requestAnimationFrame(tick); };
+    pointerRaf = requestAnimationFrame(tick);
+  }
+  function stopPointerLoop() { cancelAnimationFrame(pointerRaf); }
 
   function drawCmd(c, t, M) {
     const e = (k) => (k === undefined ? 0 : k);
@@ -432,48 +600,21 @@
     $("counter").textContent = steps.length ? `Step ${Math.max(0, cur + 1)} of ${steps.length}` : "";
   }
 
-  // ---------- explanation ----------
-  function renderExplain() {
-    const box = $("explain");
-    if (cur < 0 || !steps[cur]) {
-      box.innerHTML = '<div class="note">Press ▶ or Next to start.</div>';
-      return;
-    }
-    const s = steps[cur];
-    const wrap = document.createElement("div");
-    const part = item.parts[partIdx];
-    if (part.prompt || part.label) {
-      const q = document.createElement("span");
-      q.className = "label";
-      renderMixed(q, (part.label ? "(" + part.label + ") " : "") + (part.prompt || ""));
-      if (q.textContent.trim()) wrap.appendChild(q);
-    }
-    if (lang === "en" || lang === "both") {
-      const p = document.createElement("p"); p.className = "en"; renderMixed(p, s.en);
-      wrap.appendChild(p);
-    }
-    if (lang === "ur" || lang === "both") {
-      const p = document.createElement("p"); p.className = "ur"; p.lang = "ur"; renderMixed(p, s.ur);
-      wrap.appendChild(p);
-    }
-    box.innerHTML = "";
-    box.appendChild(wrap);
-  }
-
   // ---------- navigation ----------
   function goto(i, animate = true) {
     if (!steps.length) return;
     cur = Math.max(-1, Math.min(steps.length - 1, i));
+    stopPointerLoop();
     if (cur < 0) {
-      $("math").innerHTML = "";
+      $("math").innerHTML = '<div class="note">Press ▶ or Next to start.</div>';
       drawAll();
     } else {
-      renderMathLines(cur);
+      renderMathLines(cur, animate);
       if (animate) animateNewStep(); else { anim.t = 1; drawAll(); }
+      startPointerLoop();
       $("progress").firstElementChild.style.width = ((cur + 1) / steps.length) * 100 + "%";
     }
     renderBoard();
-    renderExplain();
     $("prev").disabled = cur < 0;
     const atEnd = cur >= steps.length - 1;
     $("next").disabled = atEnd && partIdx >= item.parts.length - 1;
@@ -522,9 +663,9 @@
   document.querySelectorAll("[data-lang]").forEach((b) => b.onclick = () => {
     lang = b.dataset.lang;
     document.querySelectorAll("[data-lang]").forEach((x) => x.classList.toggle("on", x === b));
-    renderExplain();
+    if (cur >= 0) renderMathLines(cur, false);
   });
-  window.addEventListener("resize", () => drawAll());
+  window.addEventListener("resize", () => { drawAll(); placePointer(); });
   document.addEventListener("keydown", (e) => {
     if (e.target.tagName === "TEXTAREA" || e.target.tagName === "SELECT") return;
     if (e.key === "ArrowRight") $("next").click();
@@ -675,7 +816,15 @@
       o.textContent = titleOf(it) + " · " + it.question.slice(0, 40);
       sel.appendChild(o);
     });
-    if (list.length) { sel.value = list[0].id; openItem(list[0].id, "From the book"); }
+    // a link can carry the question: /?ask=Rationalize 3/(2+sqrt5)&step=3&lang=both
+    const qs = new URLSearchParams(location.search);
+    if (qs.get("lang")) { const lb = document.querySelector(`[data-lang="${qs.get("lang")}"]`); if (lb) lb.click(); }
+    if (qs.get("ask")) {
+      $("q").value = qs.get("ask");
+      $("results").innerHTML = '<div class="note">Working on your question…</div>';
+      showAnswer(await api("/api/answer", { question: qs.get("ask") }));
+      if (qs.get("step")) goto(+qs.get("step") - 1, false);
+    } else if (list.length) { sel.value = list[0].id; openItem(list[0].id, "From the book"); }
   })().catch((e) => { $("results").innerHTML = `<div class="note">Could not load: ${escapeHTML(e.message)}</div>`; });
 })();
 </script>
