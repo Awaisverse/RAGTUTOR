@@ -718,6 +718,14 @@
   function showAnswer(data) {
     const box = $("results");
     box.innerHTML = "";
+    if (data.read_as) {                            // Gemini rewrote the question: show what was understood so the student can check it
+      const r = document.createElement("div");
+      r.className = "note";
+      r.style.marginBottom = "8px";
+      r.appendChild(Object.assign(document.createElement("strong"), { textContent: "I read your question as: " }));
+      r.appendChild(renderMixed(document.createElement("span"), data.read_as));
+      box.appendChild(r);
+    }
     if (data.mode === "confirm") {                 // "Exercise 1.2 Q3 (iv)": show the question and ask before solving it
       const card = document.createElement("div");
       card.className = "confirm";

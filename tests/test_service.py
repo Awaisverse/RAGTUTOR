@@ -1,5 +1,7 @@
 """The model service's HTTP contract without any model: auth, validation and clear refusals. Run: python tests/test_service.py"""
 import os
+
+os.environ["TUTOR_NO_ENV_FILE"] = "1"          # never the real credentials in .env.local
 import pathlib
 import sys
 

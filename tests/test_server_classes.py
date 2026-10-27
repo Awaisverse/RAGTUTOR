@@ -1,5 +1,7 @@
 """Two classes in one site, and "Exercise 1.2 Q3 (iv)" lookups with confirmation. Run: python tests/test_server_classes.py"""
 import os
+
+os.environ["TUTOR_NO_ENV_FILE"] = "1"          # never the real credentials in .env.local
 import pathlib
 import sys
 

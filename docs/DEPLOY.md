@@ -26,7 +26,7 @@ false check is retried (first greedy, then sampled), and one that still fails is
 ## Option A: Gemini (Google AI Studio or Vertex AI)
 
 1. Create an API key (AI Studio: `GEMINI_API_KEY`; Vertex AI express mode: `VERTEX_API_KEY`).
-2. On Vercel: Project > Settings > Environment Variables, add the key. Optional: `VERTEX_MODEL` (default `gemini-2.5-flash`;
+2. On Vercel: Project > Settings > Environment Variables, add the key. Optional: `VERTEX_MODEL` (default `gemini-3.8-flash`; `gemini-4-argon` is the newest, high-end model; `VERTEX_VISION_MODEL` for photos;
    use a stronger model id if you want more accuracy), `VERTEX_THINKING_BUDGET`.
 3. Redeploy. `/api/status` should show `"model": "vertex", "photo": "vertex"`.
 

@@ -1,5 +1,7 @@
 """A part asked alone is answered alone; a whole question shows every part. Run: python tests/test_server_parts.py"""
 import os
+
+os.environ["TUTOR_NO_ENV_FILE"] = "1"          # never the real credentials in .env.local
 import pathlib
 import sys
 

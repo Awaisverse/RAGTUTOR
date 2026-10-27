@@ -27,11 +27,30 @@ import sys
 from flask import Flask, jsonify, request, send_from_directory
 
 ROOT = pathlib.Path(__file__).resolve().parent
+
+
+def _load_env_file(path):
+    """Local runs only: KEY=VALUE lines from .env.local, without overriding what is already set and skipping empty values.
+    On Vercel the settings come from the project's environment variables instead."""
+    if os.environ.get("VERCEL") or os.environ.get("TUTOR_NO_ENV_FILE") or not path.exists():   # tests never use real keys
+        return
+    for line in path.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, value = line.split("=", 1)
+        key, value = key.strip(), value.strip().strip('"').strip("'")
+        if key and value and key not in os.environ:
+            os.environ[key] = value
+
+
+_load_env_file(ROOT / ".env.local")
 sys.path.insert(0, str(ROOT / "tools"))
 sys.path.insert(0, str(ROOT))
 
 import local_models  # noqa: E402
 import mathtext  # noqa: E402
+import question_reader  # noqa: E402
 import modelsolve  # noqa: E402
 import rag  # noqa: E402
 import remote_models  # noqa: E402
@@ -165,6 +184,10 @@ def lookup_reference(ref, klass="9"):
     if it is None:
         nums = ", ".join(sorted({str(x["number"]) for x in in_ex}, key=lambda n: int(n) if n.isdigit() else 0))
         return {"mode": "ref_error", "message": f"Exercise {ref['exercise']} has questions {nums}; there is no question {ref['number']}."}
+    if str(ref.get("part", "")).isdigit():            # "part 3" means (iii): the book labels parts in roman numerals
+        n = int(ref["part"])
+        if 0 < n <= len(ROMAN) and any(p.get("label") == ROMAN[n - 1] for p in it["parts"]):
+            ref = {**ref, "part": ROMAN[n - 1]}
     if ref["part"]:
         idx = _part_index(it, ref["part"])
         if idx is None:
@@ -187,9 +210,10 @@ def only_part(item, index):
     return {**cut, "id": item["id"], "part_label": label}
 
 
-def resolve(question, focus_part=None, klass="9"):
+def resolve(question, focus_part=None, klass="9", _rewritten=False):
     """Answer THIS question. Order: an exercise reference (shown for confirmation), a stored solution only if it is the same
-    question, then the class's solver engine, then the model, and otherwise a labelled similar example, never as the answer."""
+    question, then the class's solver engine, then (when the question cannot be read as typed) Gemini rewrites it into the
+    form the tutor reads and the same steps run again, then the model, and otherwise a labelled similar example."""
     q = question.strip()
     klass = str(klass) if str(klass) in CLASSES else "9"
     ref = parse_reference(q)
@@ -203,7 +227,18 @@ def resolve(question, focus_part=None, klass="9"):
     if solved:
         return {"mode": "solved", "item": solved, "part_index": 0}
     error = None
-    if model_mode():                                   # 3. the model (its steps are checked with sympy afterwards)
+    if not _rewritten and reader_on():                 # 3. not readable as typed: Gemini rewrites it (never solves it)
+        try:
+            n = question_reader.normalize(q, klass)
+        except Exception as exc:
+            n, error = None, f"question reader: {exc}"
+        if n and n["reference"]:
+            res = lookup_reference(n["reference"], klass)
+            return {**res, "read_as": "Exercise {exercise}, Q{number}".format(**n["reference"]) + (f" ({n['reference']['part']})" if n["reference"]["part"] else "")}
+        if n and n["question"] != q:
+            res = resolve(n["question"], focus_part, klass, _rewritten=True)
+            return {**res, "read_as": n["question"]}
+    if model_mode():                                   # 4. the model (its steps are checked with sympy afterwards)
         try:
             sol = live_solve(q, focus_part=focus_part, klass=klass)
             return {"mode": "model", "item": sol, "part_index": 0}
@@ -253,6 +288,11 @@ def _backend(kind):
     return next((name for name in ("vertex", "service", "local") if ready[name]), None)
 
 
+def reader_on():
+    """Gemini rewrites unreadable questions when Vertex AI is configured (QUESTION_READER=off turns it off)."""
+    return vertex_models.configured() and os.environ.get("QUESTION_READER", "on") != "off"
+
+
 def model_mode():
     return _backend("model")
 
@@ -265,7 +305,7 @@ def live_solve(question, focus_part=None, klass="9"):
     """Solve with the model: one part at a time, each reply checked with sympy and retried when a check fails."""
     mode = model_mode()
     if mode == "vertex":
-        return tutor_live.live_solve(question, focus_part, generate=vertex_models.generate, klass=klass)
+        return tutor_live.live_solve(question, focus_part, generate=vertex_models.generate, klass=klass, attempts=2)
     if mode == "service":
         return remote_models.solve(question, focus_part)
     if mode == "local":
@@ -285,7 +325,7 @@ def read_photo(raw, mimetype):
 @app.get("/api/status")
 def status():
     """What this deployment can do, so the page can say so instead of failing."""
-    return jsonify({"engine": True, "model": model_mode(), "photo": vision_mode(), "items": len(ITEMS),
+    return jsonify({"engine": True, "model": model_mode(), "photo": vision_mode(), "reader": reader_on(), "items": len(ITEMS),
                     "classes": {k: len(data(k)["items"]) for k in CLASSES}})
 
 

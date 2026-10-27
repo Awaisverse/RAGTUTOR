@@ -7,6 +7,9 @@
 """
 import json
 import os
+
+os.environ["TUTOR_NO_ENV_FILE"] = "1"          # never the real credentials in .env.local
+os.environ["QUESTION_READER"] = "off"          # the reader has its own test (tests/test_question_reader.py)
 import pathlib
 import sys
 import threading

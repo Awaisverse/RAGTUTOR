@@ -365,11 +365,19 @@ def _given_z(text):
     intro = [cx.T(f"First work out $z$.", "پہلے $z$ معلوم کریں۔")] + zsteps + \
             [cx.S(rf"z = {zt}", "This is $z$ in the form $a + bi$.", "یہ $z$ کی $a + bi$ صورت ہے۔", f"{py_text} == {cx.py(z)}")]
     parts = []
+    # one ask may name several things ("find the conjugate and modulus of z"): each becomes its own part, in the order written,
+    # so nothing asked is left unanswered
+    jobs = []
     for lab, ask in asks:
-        kinds = [k for k, rx in _ASKS if re.search(rx, ask, re.I)]
-        if not kinds:
+        found = sorted((m.start(), k) for k, rx in _ASKS for m in [re.search(rx, ask, re.I)] if m)
+        if not found:
             return None                            # an ask we do not understand: answer nothing rather than part of it
-        kind = kinds[0]
+        jobs += [(lab, k, ask) for _, k in found]
+    if len(jobs) != len(asks):                     # an ask was split: label the parts (a), (b), ... afresh
+        jobs = [(l, k, a) for l, (_, k, a) in zip("abcdefghijklmnop", jobs)]
+    elif len(jobs) == 1:
+        jobs = [("", jobs[0][1], jobs[0][2])]
+    for lab, kind, ask in jobs:
         if kind == "parts":
             p = cx.p_real_imag(lab, ask.strip(), list(intro), z)
         elif kind == "conjugate":
