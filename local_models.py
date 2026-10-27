@@ -59,14 +59,15 @@ def _load_generator():
     return _gen
 
 
-def generate(messages, max_new_tokens=2048):
-    """Greedy decoding (deterministic, which matters for maths). Returns the assistant text."""
+def generate(messages, max_new_tokens=2048, temperature=0.0):
+    """Greedy decoding by default (deterministic, which matters for maths). temperature > 0 samples, used for a retry
+    after a reply failed its own checks. Returns the assistant text."""
     tok, model, device, torch = _load_generator()
     text = tok.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
     inputs = tok(text, return_tensors="pt").to(device)
+    opts = {"do_sample": True, "temperature": temperature, "top_p": 0.95} if temperature > 0 else {"do_sample": False}
     with torch.no_grad():
-        out = model.generate(**inputs, max_new_tokens=max_new_tokens, do_sample=False,
-                             pad_token_id=tok.eos_token_id)
+        out = model.generate(**inputs, max_new_tokens=max_new_tokens, pad_token_id=tok.eos_token_id, **opts)
     return tok.decode(out[0][inputs["input_ids"].shape[1]:], skip_special_tokens=True)
 
 

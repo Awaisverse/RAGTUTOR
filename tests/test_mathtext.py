@@ -27,6 +27,11 @@ assert same("find two numbers whose sum is 90 and difference is 14", book["ex1.3
 assert same("Rationalize 13/(4+sqrt3)", book["ex1.2-q1"]) == (True, 0)                       # one part of a multi-part question
 assert same("Rationalize 5/(sqrt7+sqrt3)", book["u1-example8"])[0] is False
 assert same("sqrt2+sqrt5 over sqrt3, rationalize", book["ex1.2-q1"])[0] in (True, False)    # must not crash
+# "two" reads as 2, so these numbers (2, 3, 4) equal part (vi) "2 3/4" of Represent-on-the-number-line; a sentence with its
+# own instruction is not a bare part, and a bare part still is
+assert same("Find two rational numbers between 3 and 4.", book["ex1.1-q2"])[0] is False
+assert same(r"$2\frac{3}{4}$", book["ex1.1-q2"]) == (True, 5)
+assert same("Represent 2 3/4 on the number line", book["ex1.1-q2"]) == (True, 5)
 
 # ---- parsing
 P = m.parse_math

@@ -54,6 +54,14 @@ def task_of(text):
     return _TASKS[m.group(1)] if m else None
 
 
+_MATH_WORDS = {"sqrt", "root", "cbrt", "frac", "times", "left", "right", "cdot", "pi", "div", "text", "circ"}
+
+
+def _prose_words(text):
+    """Words of 3+ letters that are not maths notation: a bare expression has none, an instruction sentence has several."""
+    return [w for w in re.findall(r"[A-Za-z]{3,}", str(text)) if w.lower() not in _MATH_WORDS]
+
+
 def same_question(query, item):
     """Is `query` the same question as the stored item (or one of its parts)? -> (True, part_index or None) or (False, None).
 
@@ -65,6 +73,8 @@ def same_question(query, item):
     question = item["question"]
     asked, stored = task_of(query), task_of(question)
     if asked and stored and asked != stored:       # same numbers but a different instruction ("express" vs "identify")
+        return False, None
+    if stored and not asked and len(_prose_words(query)) >= 3:   # a sentence with its own, different instruction ("find two ... between 3 and 4")
         return False, None
     if q == signature(question):
         return True, None

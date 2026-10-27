@@ -29,12 +29,12 @@ sys.path.insert(0, str(ROOT / "tools"))
 sys.path.insert(0, str(ROOT))
 
 import local_models  # noqa: E402
+import modelsolve  # noqa: E402
 import mathtext  # noqa: E402
 import rag  # noqa: E402
 import solvers  # noqa: E402
-from build_dataset import verify  # noqa: E402
-from solution_io import parse_solution  # noqa: E402
-from prompts import READ_PROMPT, SOLVE_RULES  # noqa: E402
+from solvers.common import labels, part_markers  # noqa: E402
+from prompts import READ_PROMPT  # noqa: E402
 
 GEN = ROOT / "data" / "generated"
 BOOK = ROOT / "data" / "book"
@@ -145,51 +145,30 @@ def ask():
 # ---------- live solver ----------
 
 
-def _retrieve_examples(question, k=3):
-    seen, out = set(), []
-    for h in INDEX.search(question, k=k * 2):
-        if h["id"] in seen or h["id"] not in BY_ID:
-            continue
-        seen.add(h["id"])
-        out.append(BY_ID[h["id"]])
-        if len(out) == k:
-            break
-    return out
+_EX = {}
 
 
-def _verify(solution):
-    bad = []
-    for p in solution.get("parts", []):
-        for i, st in enumerate(p.get("steps", [])):
-            for chk in st.get("check", []):
-                try:
-                    if not verify(chk):
-                        bad.append(f"step {i+1}: {chk}")
-                except Exception as exc:
-                    bad.append(f"step {i+1}: {chk} ({exc})")
-    return bad
+def _example_pool():
+    """Solved book examples, one part each (the shape the model was trained on), with their own TF-IDF index."""
+    if not _EX:
+        items = modelsolve.explode_all(ITEMS)
+        _EX["by_id"] = {it["id"]: it for it in items}
+        _EX["index"] = rag.Index([c for it in items for c in rag.chunk_item(it)], use_embeddings=False)
+    return _EX["index"], _EX["by_id"]
 
 
 def live_solve(question, focus_part=None):
-    """Solve with Claude, grounded in retrieved book examples, then verify every check with sympy."""
-    examples = _retrieve_examples(question)
-    example_text = "\n\n".join(
-        f"EXAMPLE {i+1} ({e['id']}):\n" + json.dumps({k: e[k] for k in ("question", "parts")}, ensure_ascii=False)
-        for i, e in enumerate(examples))
-    user = question
+    """Solve with the trained model: one part at a time, each reply checked with sympy and retried when a check fails."""
+    index, by_id = _example_pool()
     if focus_part:
-        user += f"\n\nSolve only part ({focus_part}). Return a single part in the parts list."
-    raw = local_models.generate([
-        {"role": "system", "content": SOLVE_RULES + "\n\n" + example_text},
-        {"role": "user", "content": user},
-    ], max_new_tokens=3000)
-    sol, _repaired = parse_solution(raw)
-    bad = _verify(sol)
-    sol["verified"] = not bad
-    sol["unverified_checks"] = bad
+        pieces = part_markers(question)
+        if len(pieces) >= 3 and focus_part in labels(len(pieces) - 1):
+            question = f"{pieces[0]} {pieces[labels(len(pieces) - 1).index(focus_part) + 1]}".strip()
+    sol = modelsolve.solve_question(question, lambda q: modelsolve.examples_text(index, by_id, q), attempts=3, max_new_tokens=2500)
+    if sol is None:
+        raise ValueError("the model did not return a usable solution")
     sol["unit"] = 0
     sol["unit_title"] = "Live"
-    sol["used_examples"] = [e["id"] for e in examples]
     GEN.mkdir(parents=True, exist_ok=True)
     slug = re.sub(r"[^a-z0-9]+", "-", sol.get("id", "solution").lower()).strip("-") or "solution"
     (GEN / f"{slug}.json").write_text(json.dumps(sol, ensure_ascii=False, indent=1), encoding="utf-8")

@@ -27,9 +27,10 @@ before you integrate them. Nothing here calls a paid API: every model is a Huggi
 | Layer | What makes it accurate |
 |---|---|
 | Retrieval | Questions in the book are answered with the stored, hand-checked solution. No generation at all. |
-| Generator (new questions) | Fine-tuned on thousands of *computed* solutions, then every step is re-checked with sympy. |
+| Generator (new questions) | Fine-tuned on computed solutions (rule engine + generators), one part at a time, then every step is re-checked with sympy. |
 | Training data | Synthetic questions come from Python solvers, so each answer is correct by construction. |
-| Honest test | Real book questions are held out and never trained on. The score on them is the one that matters. |
+| Honest test | Exercise 1.2 is held out and never trained on. The score on its 26 parts is the one that matters. |
+| Retries | A reply that fails its own sympy checks is discarded and the model tries again (first greedy, then sampled). |
 
 ## Phases
 | Phase | What happens | Pass condition |
@@ -71,11 +72,11 @@ USE_DRIVE = False     # True: copy results to Google Drive after each phase (sur
 HF_REPO = ""          # optional, e.g. "yourname/math-tutor": uploads the models to your private Hugging Face repo
 
 if QUICK_TEST:
-    SYNTH_PER_TYPE, EPOCHS_EMBED, EPOCHS_GEN, LIMIT_REAL, LIMIT_SYNTH = 4, 1, 1, 2, 3
-    BASE_REAL, BASE_SYNTH = 2, 3
+    SYNTH_PER_TYPE, ENGINE_PER_TYPE, EPOCHS_EMBED, EPOCHS_GEN, LIMIT_REAL, LIMIT_SYNTH = 4, 2, 1, 1, 2, 3
+    BASE_REAL, BASE_SYNTH, ATTEMPTS = 2, 3, 2
 else:
-    SYNTH_PER_TYPE, EPOCHS_EMBED, EPOCHS_GEN, LIMIT_REAL, LIMIT_SYNTH = 30, 3, 3, 0, 0   # 0 = evaluate every test item
-    BASE_REAL, BASE_SYNTH = 4, 8     # the untuned model is only a reference point, so a small sample is enough
+    SYNTH_PER_TYPE, ENGINE_PER_TYPE, EPOCHS_EMBED, EPOCHS_GEN, LIMIT_REAL, LIMIT_SYNTH = 25, 20, 3, 2, 0, 40   # 0 = evaluate every test item
+    BASE_REAL, BASE_SYNTH, ATTEMPTS = 4, 8, 3     # the untuned model is only a reference point, so a small sample is enough
 print("QUICK_TEST =", QUICK_TEST, "| synthetic per type:", SYNTH_PER_TYPE, "| generator epochs:", EPOCHS_GEN)
 ''')
 
@@ -126,9 +127,12 @@ md(r'''
 ## Phase 1: Data
 **Purpose:** build everything the models learn from, and make sure none of it is wrong.
 1. Re-check every hand-solved book item with sympy.
-2. Generate synthetic solved questions (20 question types, including multi-part questions and drawn number lines) and re-check all of them. Any synthetic question that copies a real book question is removed, so the real test stays unseen.
-3. Split: real book items are partly **held out** as the honest test; synthetic questions get a separate test set with new numbers.
-4. Write the training files. Each generator example puts retrieved neighbours in the prompt, exactly like the real tutor.
+2. Generate synthetic solved questions (20 question types, including multi-part questions and drawn number lines) and re-check all of them.
+   Add **engine** questions: Exercise 1.2 style questions with new numbers, solved by the rule engine and checked against an independent sympy answer.
+   Any generated question that copies a real book question is removed, so the real test stays unseen.
+3. Split: **all of Exercise 1.2 is held out** as the honest test (26 parts, one per example); generated questions get a separate test set with new numbers.
+4. Split multi-part questions into **one part per example**, so replies are short and a slip in one part cannot spoil another.
+5. Write the training files. Each generator example puts retrieved neighbours in the prompt, exactly like the real tutor.
 
 **Time:** 1 to 2 minutes. **Pass:** every math check true.
 **If it fails:** the message names the wrong step. Fix it in `data/src/` or `train/synth.py`, push to GitHub, rerun cell 0.3.
@@ -146,7 +150,7 @@ run("python train/check_synth.py --per-type 60")
 
 code(r'''
 # 1.3 Build training and test files
-run(f"python train/make_dataset.py --synth-per-type {SYNTH_PER_TYPE} --synth-eval-per-type 2")
+run(f"python train/make_dataset.py --eval-prefix ex1.2- --synth-per-type {SYNTH_PER_TYPE} --engine-per-type {ENGINE_PER_TYPE} --synth-eval-per-type 2")
 
 rows = [json.loads(l) for l in open("train/out/data/gen_sft.jsonl", encoding="utf-8")]
 pairs = sum(1 for _ in open("train/out/data/embed_pairs.jsonl", encoding="utf-8"))
@@ -204,7 +208,7 @@ Without this number you cannot tell whether fine-tuning helped.
 
 code(r'''
 # 3.1 Score the base model
-run(f"python train/evaluate.py --tag gen_base --no-retrieval --limit-real {BASE_REAL} --limit-synth {BASE_SYNTH}")
+run(f"python train/evaluate.py --tag gen_base --no-retrieval --attempts 1 --limit-real {BASE_REAL} --limit-synth {BASE_SYNTH}")
 print(json.dumps(json.load(open("train/out/eval_gen_base.json"))["generation"], indent=1))
 backup("phase3")
 ''')
@@ -246,7 +250,7 @@ A reply whose LaTeX backslashes were mis-escaped is repaired before it is scored
 
 code(r'''
 # 5.1 Score the tuned generator
-run(f"python train/evaluate.py --tag gen_tuned --no-retrieval --gen-adapter train/out/gen-lora --limit-real {LIMIT_REAL} --limit-synth {LIMIT_SYNTH}")
+run(f"python train/evaluate.py --tag gen_tuned --no-retrieval --gen-adapter train/out/gen-lora --attempts {ATTEMPTS} --limit-real {LIMIT_REAL} --limit-synth {LIMIT_SYNTH}")
 ''')
 
 code(r'''
@@ -260,6 +264,8 @@ for s in ("real", "synth"):
     for m in metrics:
         print(f"{s:6} {m:20} {base[s][m]:7.3f} {tuned[s][m]:7.3f}")
     print(f"{'':6} {'test items':20} {base[s]['items']:7d} {tuned[s]['items']:7d}")
+    print(f"{'':6} {'first try fully_ver.':20} {base[s]['first_try']['fully_verified']:7.3f} {tuned[s]['first_try']['fully_verified']:7.3f}   (without retries)")
+    print(f"{'':6} {'first try answer':20} {base[s]['first_try']['answer_match']:7.3f} {tuned[s]['first_try']['answer_match']:7.3f}   avg tries {tuned[s]['avg_tries']}")
 
 gates = {
     "A  valid JSON >= 0.95 on both sets": all(tuned[s]["json_valid"] >= 0.95 for s in tuned),

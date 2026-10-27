@@ -3,8 +3,14 @@
 Data sources
   REAL       the hand-solved, sympy-verified book items (data/book/*.json).
   SYNTHETIC  new questions of the same types with computed, sympy-verified solutions (train/synth.py).
+  ENGINE     new Exercise 1.2 style questions solved by the rule engine, final answer checked against sympy
+             (train/engine_data.py). The model learns solutions that are right by construction.
+
+One part per example: a multi-part question is split so the model answers (i), (ii), ... one at a time. Short replies
+fit the token limit and a slip in one part cannot spoil the others.
 
 Protocol (prevents leakage and measures real generalisation)
+  * With --eval-prefix ex1.2- every Exercise 1.2 item is held out, so that exercise is the real test.
   * Some REAL items are held out (the real test set). The model never trains on them, and they are
     different questions from anything synthetic, so the score on them shows how well the model
     handles genuine book questions it has not seen.
@@ -15,9 +21,11 @@ Protocol (prevents leakage and measures real generalisation)
 Outputs (in --out, default train/out/data)
   embed_pairs.jsonl   (anchor, positive) paraphrase pairs for the embedding model
   gen_sft.jsonl       chat examples: system = rules + neighbours, user = question, assistant = solution JSON
-  synth_train.json    the synthetic training items (so evaluation can rebuild the same retrieval pool)
-  synth_eval.json     the synthetic test items
-  split.json          real train / real eval ids and the settings used
+  pool.json           every training item (one part each), so evaluation rebuilds the same retrieval pool
+  real_eval.json      the held-out real items, one part each
+  synth_train.json    the synthetic + engine training items (one part each)
+  synth_eval.json     synthetic + engine test items with numbers never used in training
+  split.json          real train / real eval ids (whole items) and the settings used
 
 Usage:  python train/make_dataset.py --synth-per-type 25
 """
@@ -34,7 +42,10 @@ sys.path.insert(0, str(ROOT / "tools"))
 sys.path.insert(0, str(ROOT / "train"))
 
 from prompts import SOLVE_RULES  # noqa: E402
+import mathtext  # noqa: E402
 import rag  # noqa: E402
+from engine_data import engine_items  # noqa: E402
+from modelsolve import examples_text, explode_all  # noqa: E402
 from synth import generate  # noqa: E402
 
 random.seed(0)
@@ -77,7 +88,10 @@ def solution_json(item):
     }, ensure_ascii=False)
 
 
-def split_real(items, eval_units, eval_every):
+def split_real(items, eval_units, eval_every, eval_prefix=""):
+    if eval_prefix:
+        return ([it for it in items if not it["id"].startswith(eval_prefix)],
+                [it for it in items if it["id"].startswith(eval_prefix)])
     if eval_units:
         units = sorted({it["unit"] for it in items})
         held = set(units[-eval_units:])
@@ -87,24 +101,8 @@ def split_real(items, eval_units, eval_every):
     return tr, ev
 
 
-def neighbours_text(index, pool_by_id, item, k, budget=5000):
-    """The k nearest solved examples as prompt text, stopping before the prompt grows past `budget`
-    characters (the first example is always kept). The same function builds training and test prompts."""
-    hits = index.search(item["question"], k=k * 3)
-    seen, texts = set(), []
-    for h in hits:
-        if h["id"] == item["id"] or h["id"] in seen or h["id"] not in pool_by_id:
-            continue
-        seen.add(h["id"])
-        e = pool_by_id[h["id"]]
-        text = f"EXAMPLE {len(texts) + 1} ({e['id']}):\n" + json.dumps(
-            {"question": e["question"], "parts": e["parts"]}, ensure_ascii=False)
-        if texts and sum(len(t) for t in texts) + len(text) > budget:
-            break
-        texts.append(text)
-        if len(texts) == k:
-            break
-    return "\n\n".join(texts)
+def neighbours_text(index, pool_by_id, item, k, budget=3500):
+    return examples_text(index, pool_by_id, item["question"], k, budget, exclude_id=item["id"])
 
 
 def leak_free(synthetic, real):
@@ -125,6 +123,14 @@ def leak_free(synthetic, real):
     return kept
 
 
+def not_in_test(items, real_eval):
+    """Drop training items that ask a held-out question: same numbers, signs and instruction (mathtext.same_question)."""
+    kept = [s for s in items if not any(mathtext.same_question(s["question"], ev)[0] for ev in real_eval)]
+    if len(kept) != len(items):
+        print(f"leak guard: dropped {len(items) - len(kept)} training items that ask a held-out question")
+    return kept
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default=str(ROOT / "train" / "out" / "data"))
@@ -132,18 +138,27 @@ def main():
     ap.add_argument("--eval-every", type=int, default=2, help="else hold out every Nth real item")
     ap.add_argument("--synth-per-type", type=int, default=25)
     ap.add_argument("--synth-eval-per-type", type=int, default=2)
+    ap.add_argument("--eval-prefix", default="", help="hold out every real item whose id starts with this, e.g. ex1.2-")
+    ap.add_argument("--engine-per-type", type=int, default=20, help="engine-solved Exercise 1.2 style items per type")
+    ap.add_argument("--engine-eval-per-type", type=int, default=2)
     ap.add_argument("--neighbours", type=int, default=2)
-    ap.add_argument("--context-chars", type=int, default=5000, help="size limit for the retrieved examples in a prompt")
+    ap.add_argument("--context-chars", type=int, default=3500, help="size limit for the retrieved examples in a prompt")
     args = ap.parse_args()
 
     out = pathlib.Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
 
     real = load_items()
-    real_train, real_eval = split_real(real, args.eval_units, args.eval_every)
+    real_train_whole, real_eval_whole = split_real(real, args.eval_units, args.eval_every, args.eval_prefix)
+    real_train, real_eval = explode_all(real_train_whole), explode_all(real_eval_whole)
+
     syn_train = leak_free(generate(args.synth_per_type, seed0=0), real)
     syn_eval = leak_free(generate(args.synth_eval_per_type, seed0=100000,
                                   avoid={s["question"] for s in syn_train}), real)
+    eng_train = engine_items(args.engine_per_type, seed0=0)
+    eng_eval = engine_items(args.engine_eval_per_type, seed0=100000, avoid={e["question"] for e in eng_train})
+    syn_train = explode_all(not_in_test(syn_train + eng_train, real_eval))
+    syn_eval = explode_all(not_in_test(syn_eval + eng_eval, real_eval))
     if not real_train and not syn_train:
         sys.exit("no training items")
 
@@ -153,13 +168,13 @@ def main():
 
     pairs, sft = [], []
     for it in pool:
-        vs = variants(it) if not it.get("synthetic") else [it["question"], rag.normalize(it["question"])]
+        vs = variants(it) if not it.get("synthetic") else [it["question"], rag.normalize(it["question"]), *(it.get("asked") or [])]
         for a in vs:
             for b in vs:
                 if a != b:
                     pairs.append({"anchor": a, "positive": b, "id": it["id"]})
         ex = neighbours_text(index, pool_by_id, it, args.neighbours, args.context_chars)
-        users = [it["question"]] if it.get("synthetic") else variants(it)
+        users = [it["question"]] + list(it.get("asked") or []) if it.get("synthetic") else variants(it)
         for v in users:
             sft.append({"messages": [
                 {"role": "system", "content": SOLVE_RULES + "\n\n" + ex},
@@ -175,15 +190,17 @@ def main():
 
     dump_jsonl("embed_pairs.jsonl", pairs)
     dump_jsonl("gen_sft.jsonl", sft)
+    (out / "pool.json").write_text(json.dumps(pool, ensure_ascii=False), encoding="utf-8")
+    (out / "real_eval.json").write_text(json.dumps(real_eval, ensure_ascii=False), encoding="utf-8")
     (out / "synth_train.json").write_text(json.dumps(syn_train, ensure_ascii=False), encoding="utf-8")
     (out / "synth_eval.json").write_text(json.dumps(syn_eval, ensure_ascii=False), encoding="utf-8")
     (out / "split.json").write_text(json.dumps({
-        "train": [it["id"] for it in real_train], "eval": [it["id"] for it in real_eval],
+        "train": [it["id"] for it in real_train_whole], "eval": [it["id"] for it in real_eval_whole],
         "synth_train": len(syn_train), "synth_eval": len(syn_eval),
         "neighbours": args.neighbours,
     }, indent=1), encoding="utf-8")
 
-    print(f"real:  train {len(real_train)}  test {len(real_eval)}")
+    print(f"real:  train {len(real_train)}  test {len(real_eval)} (one part each)")
     print(f"synth: train {len(syn_train)}  test {len(syn_eval)}")
     print(f"embedding pairs {len(pairs)} | generator examples {len(sft)}")
     print(f"written to {out}")
