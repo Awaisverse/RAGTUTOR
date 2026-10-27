@@ -187,7 +187,8 @@
     if (it.kind === "solved") return "Your question";
     const where = it.exercise ? `Exercise ${it.exercise}, Q${it.number}` : (it.kind === "example" ? `Example ${it.number}` : `Q${it.number}`);
     const unit = it.unit ? `Unit ${it.unit} · ` : "";
-    return `${unit}${where}${it.page ? " · p." + it.page : ""}`;
+    const part = it.part_label ? ` (${it.part_label})` : "";
+    return `${unit}${where}${part}${it.page ? " · p." + it.page : ""}`;
   }
 
   function renderParts() {

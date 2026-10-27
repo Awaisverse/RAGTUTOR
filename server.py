@@ -101,14 +101,24 @@ def similar_examples(question, k=3):
     return [{**summary(BY_ID[h["id"]]), "part": h["part"], "cos": h["cos"], "lex": h["lex"]} for h in hits] if INDEX.is_confident(hits) else []
 
 
+def only_part(item, index):
+    """The student asked for ONE part: return the item cut down to that part, question = the stem plus that part's text,
+    so the board and the explanation show just what was asked. The part's label is kept in `part_label`."""
+    if len(item["parts"]) < 2 or index is None:
+        return item
+    label = item["parts"][index].get("label") or str(index + 1)
+    cut = modelsolve.explode(item)[index]
+    return {**cut, "id": item["id"], "part_label": label}
+
+
 def resolve(question, focus_part=None):
     """Answer THIS question. Order: a stored solution only if it is the same question, then the solver engine, then the
     trained model, and otherwise a clearly labelled similar example that is never presented as the answer."""
     q = question.strip()
     for it in ITEMS:                                   # 1. exactly a stored question (same numbers, same instruction)
         same, part = mathtext.same_question(q, it)
-        if same:
-            return {"mode": "book", "item": it, "part_index": part or 0}
+        if same:                                       # a part asked alone is answered alone; the whole question shows every part
+            return {"mode": "book", "item": only_part(it, part), "part_index": 0}
     solved = solvers.solve(q)                          # 2. the solver engine: reads the numbers and solves this question
     if solved:
         return {"mode": "solved", "item": solved, "part_index": 0}
@@ -261,8 +271,10 @@ def photo():
         if idx is None:
             idx = 0
             detected["notes"] += f" Part ({part}) not found in the book; showing the first part."
-        return jsonify({"resolution": "book_by_number", "detected": detected, "item": book,
-                        "part_index": idx, "part_label": book["parts"][idx].get("label", "")})
+            part = book["parts"][0].get("label", "")
+        shown = only_part(book, idx) if part else book            # a part was named: show only that part
+        return jsonify({"resolution": "book_by_number", "detected": detected, "item": shown,
+                        "part_index": 0 if part else idx, "part_label": book["parts"][idx].get("label", "")})
 
     # 2) Otherwise answer the question that was read: stored solution only if it is the same question, then the solver
     #    engine, then the model. A merely similar example is returned as such, never as the answer.
@@ -271,7 +283,7 @@ def photo():
         item = res["item"]
         idx = res.get("part_index", 0)
         return jsonify({"resolution": res["mode"], "detected": detected, "item": item,
-                        "part_index": idx, "part_label": item["parts"][idx].get("label", "")})
+                        "part_index": idx, "part_label": item.get("part_label") or item["parts"][idx].get("label", "")})
     return jsonify({"resolution": res["mode"], "detected": detected, "similar": res.get("similar", []), "message": res["message"]})
 
 
