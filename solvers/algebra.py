@@ -77,8 +77,14 @@ def rationalize_part(label, num, den):
         rn, rd = sp.fraction(sp.together(result))
         if not rd.is_Rational:
             return None
-    steps.append(S(rf"{_frac_tex(new_num, new_den)} = {tex(result)}", "Cancel the common factor and write the answer in simplest form.",
-                   "مشترک جزو کاٹیں اور جواب کو مختصر ترین شکل میں لکھیں۔", f"{py(expr)} == {py(result)}"))
+    if rn != sp.expand(rn):                       # radsimp can leave (a + b*sqrt(c))**2 / 5 unexpanded: write it out
+        result = sp.radsimp(sp.expand(rn) / rd)
+    before = _frac_tex(new_num, new_den)
+    steps.append(S(f"{before} = {tex(result)}" if before != tex(result) else tex(result),
+                   "Cancel the common factor and write the answer in simplest form." if before != tex(result)
+                   else "No common factor remains, so this is the answer in simplest form.",
+                   "مشترک جزو کاٹیں اور جواب کو مختصر ترین شکل میں لکھیں۔" if before != tex(result)
+                   else "کوئی مشترک جزو باقی نہیں، اس لیے یہی مختصر ترین جواب ہے۔", f"{py(expr)} == {py(result)}"))
     return P(label, steps, f"${tex(result)}$", prompt=f"${_frac_tex(num, den)}$")
 
 
@@ -87,9 +93,21 @@ def tex_conj(conj):
     return tex(conj)
 
 
+def _bare_surd_fraction(text):
+    """A fraction typed with no instruction at all, whose denominator contains a root: (sqrt8+sqrt3)/(sqrt8-sqrt3).
+    Nothing else can be asked of it, so it is read as 'rationalize the denominator'."""
+    t = text.strip().rstrip(".,;?:").strip()
+    if mathtext._prose_words(re.sub(r"\\(?:sqrt|frac|left|right)", " ", t)):
+        return False
+    halves = mathtext.split_fraction(t.replace("$", ""))
+    return bool(halves and re.search(r"sqrt|root|cbrt|√", halves[1]))
+
+
 def try_rationalize(text):
     if not re.search(r"rationali[sz]e|rationali[sz]ation|denominator", text, re.I):
-        return None
+        if not _bare_surd_fraction(text):
+            return None
+        text = "Rationalize the denominator of " + text.strip()
     pieces = part_markers(text)
     if len(pieces) > 1:
         raw = [p for p in pieces[1:] if p]

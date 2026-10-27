@@ -635,19 +635,26 @@
         showAnswer({ mode: data.resolution, similar: data.similar, message: data.message });
       }
     } catch (e) {
-      $("detected").textContent = e.message;
+      $("detected").textContent = netMessage(e);
     } finally {
       btn.disabled = false;
       btn.textContent = "Read & solve";
     }
   };
 
+  // "Failed to fetch" means the browser could not reach the server at all, not that the question was wrong.
+  function netMessage(e) {
+    return e instanceof TypeError
+      ? "Cannot reach the tutor server. It may be restarting (it takes about a minute to load); wait, then try again or reload the page."
+      : e.message;
+  }
+
   $("ask").onclick = async () => {
     const q = $("q").value.trim();
     if (!q) return;
     $("results").innerHTML = '<div class="note">Working on your question…</div>';
     try { showAnswer(await api("/api/answer", { question: q })); }
-    catch (e) { $("results").innerHTML = `<div class="note">${escapeHTML(e.message)}</div>`; }
+    catch (e) { $("results").innerHTML = `<div class="note">${escapeHTML(netMessage(e))}</div>`; }
   };
   $("q").addEventListener("keydown", (e) => { if (e.key === "Enter" && (e.ctrlKey || e.metaKey)) $("ask").click(); });
   $("clear").onclick = () => { $("q").value = ""; };

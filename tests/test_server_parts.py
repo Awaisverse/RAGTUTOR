@@ -33,4 +33,8 @@ assert d["mode"] == "solved" and len(d["item"]["parts"]) == 1
 # a question that really has two parts keeps both
 d = ask("Rationalize the denominator of the following: (i) 3/(2+sqrt5) (ii) 7/(3+sqrt2)")
 assert d["mode"] == "solved" and len(d["item"]["parts"]) == 2, (d["mode"], len(d["item"]["parts"]))
+# a bare fraction with a root in the denominator is read as "rationalize the denominator"
+d = ask("(√8 + √3) / (√8 − √3)")
+assert d["mode"] == "solved" and d["item"]["parts"][0]["answer"] == "$" + chr(92) + "frac{11 + 4 " + chr(92) + "sqrt{6}}{5}$", d
+assert ask("5/7")["mode"] == "none"
 print("server parts: all tests passed")
