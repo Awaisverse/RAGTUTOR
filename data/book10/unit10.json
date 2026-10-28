@@ -1,0 +1,3560 @@
+{
+ "unit": 10,
+ "title": "Practical Geometry of Circles",
+ "title_ur": "دائروں کی عملی جیومیٹری",
+ "class": 10,
+ "items": [
+  {
+   "id": "c10-ex10.1-q1",
+   "kind": "exercise",
+   "number": "1",
+   "page": 0,
+   "question": "Construct a circle with the help of given radius and verify its centre by construction: (i) $r = 1.5$ cm (ii) $r = 1.7$ cm (iii) $r = 2$ cm",
+   "parts": [
+    {
+     "label": "i",
+     "prompt": "$r = 1.5$ cm",
+     "steps": [
+      {
+       "math": "r = 1.5\\ \\text{cm}",
+       "en": "Mark a point $O$, open the compasses to the radius and draw the circle.",
+       "ur": "نقطہ $O$ لگائیں، پرکار کو رداس کے برابر کھول کر دائرہ کھینچیں۔",
+       "draw": [
+        {
+         "t": "circle",
+         "c": [
+          50.0,
+          30.0
+         ],
+         "r": 18.0
+        }
+       ]
+      },
+      {
+       "math": "\\text{Draw chords } AB \\text{ and } CD",
+       "en": "Draw any two chords that are not parallel.",
+       "ur": "کوئی دو غیر متوازی وتر کھینچیں۔",
+       "draw": [
+        {
+         "t": "line",
+         "p": [
+          33.09,
+          36.16,
+          48.43,
+          12.07
+         ],
+         "dash": false
+        },
+        {
+         "t": "line",
+         "p": [
+          54.66,
+          12.61,
+          66.91,
+          36.16
+         ],
+         "dash": false
+        },
+        {
+         "t": "text",
+         "p": [
+          29.09,
+          37.16
+         ],
+         "s": "A"
+        },
+        {
+         "t": "text",
+         "p": [
+          49.93,
+          9.57
+         ],
+         "s": "B"
+        },
+        {
+         "t": "text",
+         "p": [
+          56.16,
+          10.11
+         ],
+         "s": "C"
+        },
+        {
+         "t": "text",
+         "p": [
+          68.41,
+          33.66
+         ],
+         "s": "D"
+        }
+       ]
+      },
+      {
+       "math": "\\text{Perpendicular bisectors of } AB \\text{ and } CD",
+       "en": "With $A$ and $B$ as centres draw equal arcs (radius more than half of $AB$); join their crossings. Do the same for $CD$.",
+       "ur": "$A$ اور $B$ کو مرکز بنا کر برابر قوسیں کھینچیں اور ان کے نقاط تقاطع ملائیں؛ $CD$ کے لیے بھی یہی کریں۔",
+       "draw": [
+        {
+         "t": "line",
+         "p": [
+          28.95,
+          16.59,
+          52.57,
+          31.63
+         ],
+         "dash": true
+        },
+        {
+         "t": "line",
+         "p": [
+          73.2,
+          17.92,
+          48.37,
+          30.85
+         ],
+         "dash": true
+        }
+       ]
+      },
+      {
+       "math": "\\text{The bisectors meet at } O",
+       "en": "The perpendicular bisector of every chord passes through the centre, so they meet at the centre.",
+       "ur": "ہر وتر کا عمودی ناصف مرکز سے گزرتا ہے، اس لیے یہ مرکز پر ملتے ہیں۔",
+       "check": [
+        "Abs(sqrt((33.08553282585365-50)**2 + (36.156362579862034-30)**2) - sqrt((48.43119663054215-50)**2 + (12.06849543434858-30)**2)) < 1e-6",
+        "Abs(sqrt((54.65874281184537-50)**2 + (12.61333512679677-30)**2) - sqrt((66.91446717414635-50)**2 + (36.156362579862034-30)**2)) < 1e-6"
+       ],
+       "draw": [
+        {
+         "t": "dot",
+         "p": [
+          50.0,
+          30.0
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          51.5,
+          27.5
+         ],
+         "s": "O"
+        }
+       ]
+      },
+      {
+       "math": "OA = OB = OC = OD = 1.5\\ \\text{cm}",
+       "en": "Verify: the point found is the centre (it is the radius away from every point of the circle).",
+       "ur": "تصدیق: یہ نقطہ دائرے کے ہر نقطے سے رداس کے فاصلے پر ہے، اس لیے یہی مرکز ہے۔"
+      }
+     ],
+     "answer": "circle of radius 1.5 cm; its centre verified by perpendicular bisectors of two chords"
+    },
+    {
+     "label": "ii",
+     "prompt": "$r = 1.7$ cm",
+     "steps": [
+      {
+       "math": "r = 1.7\\ \\text{cm}",
+       "en": "Mark a point $O$, open the compasses to the radius and draw the circle.",
+       "ur": "نقطہ $O$ لگائیں، پرکار کو رداس کے برابر کھول کر دائرہ کھینچیں۔",
+       "draw": [
+        {
+         "t": "circle",
+         "c": [
+          50.0,
+          30.0
+         ],
+         "r": 20.4
+        }
+       ]
+      },
+      {
+       "math": "\\text{Draw chords } AB \\text{ and } CD",
+       "en": "Draw any two chords that are not parallel.",
+       "ur": "کوئی دو غیر متوازی وتر کھینچیں۔",
+       "draw": [
+        {
+         "t": "line",
+         "p": [
+          30.83,
+          36.98,
+          48.22,
+          9.68
+         ],
+         "dash": false
+        },
+        {
+         "t": "line",
+         "p": [
+          55.28,
+          10.3,
+          69.17,
+          36.98
+         ],
+         "dash": false
+        },
+        {
+         "t": "text",
+         "p": [
+          26.83,
+          37.98
+         ],
+         "s": "A"
+        },
+        {
+         "t": "text",
+         "p": [
+          49.72,
+          7.18
+         ],
+         "s": "B"
+        },
+        {
+         "t": "text",
+         "p": [
+          56.78,
+          7.8
+         ],
+         "s": "C"
+        },
+        {
+         "t": "text",
+         "p": [
+          70.67,
+          34.48
+         ],
+         "s": "D"
+        }
+       ]
+      },
+      {
+       "math": "\\text{Perpendicular bisectors of } AB \\text{ and } CD",
+       "en": "With $A$ and $B$ as centres draw equal arcs (radius more than half of $AB$); join their crossings. Do the same for $CD$.",
+       "ur": "$A$ اور $B$ کو مرکز بنا کر برابر قوسیں کھینچیں اور ان کے نقاط تقاطع ملائیں؛ $CD$ کے لیے بھی یہی کریں۔",
+       "draw": [
+        {
+         "t": "line",
+         "p": [
+          27.72,
+          15.81,
+          51.33,
+          30.85
+         ],
+         "dash": true
+        },
+        {
+         "t": "line",
+         "p": [
+          74.64,
+          17.17,
+          49.81,
+          30.1
+         ],
+         "dash": true
+        }
+       ]
+      },
+      {
+       "math": "\\text{The bisectors meet at } O",
+       "en": "The perpendicular bisector of every chord passes through the centre, so they meet at the centre.",
+       "ur": "ہر وتر کا عمودی ناصف مرکز سے گزرتا ہے، اس لیے یہ مرکز پر ملتے ہیں۔",
+       "check": [
+        "Abs(sqrt((30.83027053596747-50)**2 + (36.97721092384364-30)**2) - sqrt((48.22202284794777-50)**2 + (9.677628158928393-30)**2)) < 1e-6",
+        "Abs(sqrt((55.279908520091425-50)**2 + (10.29511314370301-30)**2) - sqrt((69.16972946403253-50)**2 + (36.97721092384364-30)**2)) < 1e-6"
+       ],
+       "draw": [
+        {
+         "t": "dot",
+         "p": [
+          50.0,
+          30.0
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          51.5,
+          27.5
+         ],
+         "s": "O"
+        }
+       ]
+      },
+      {
+       "math": "OA = OB = OC = OD = 1.7\\ \\text{cm}",
+       "en": "Verify: the point found is the centre (it is the radius away from every point of the circle).",
+       "ur": "تصدیق: یہ نقطہ دائرے کے ہر نقطے سے رداس کے فاصلے پر ہے، اس لیے یہی مرکز ہے۔"
+      }
+     ],
+     "answer": "circle of radius 1.7 cm; its centre verified by perpendicular bisectors of two chords"
+    },
+    {
+     "label": "iii",
+     "prompt": "$r = 2$ cm",
+     "steps": [
+      {
+       "math": "r = 2\\ \\text{cm}",
+       "en": "Mark a point $O$, open the compasses to the radius and draw the circle.",
+       "ur": "نقطہ $O$ لگائیں، پرکار کو رداس کے برابر کھول کر دائرہ کھینچیں۔",
+       "draw": [
+        {
+         "t": "circle",
+         "c": [
+          50.0,
+          30.0
+         ],
+         "r": 24.0
+        }
+       ]
+      },
+      {
+       "math": "\\text{Draw chords } AB \\text{ and } CD",
+       "en": "Draw any two chords that are not parallel.",
+       "ur": "کوئی دو غیر متوازی وتر کھینچیں۔",
+       "draw": [
+        {
+         "t": "line",
+         "p": [
+          27.45,
+          38.21,
+          47.91,
+          6.09
+         ],
+         "dash": false
+        },
+        {
+         "t": "line",
+         "p": [
+          56.21,
+          6.82,
+          72.55,
+          38.21
+         ],
+         "dash": false
+        },
+        {
+         "t": "text",
+         "p": [
+          23.45,
+          39.21
+         ],
+         "s": "A"
+        },
+        {
+         "t": "text",
+         "p": [
+          49.41,
+          3.59
+         ],
+         "s": "B"
+        },
+        {
+         "t": "text",
+         "p": [
+          57.71,
+          4.32
+         ],
+         "s": "C"
+        },
+        {
+         "t": "text",
+         "p": [
+          74.05,
+          35.71
+         ],
+         "s": "D"
+        }
+       ]
+      },
+      {
+       "math": "\\text{Perpendicular bisectors of } AB \\text{ and } CD",
+       "en": "With $A$ and $B$ as centres draw equal arcs (radius more than half of $AB$); join their crossings. Do the same for $CD$.",
+       "ur": "$A$ اور $B$ کو مرکز بنا کر برابر قوسیں کھینچیں اور ان کے نقاط تقاطع ملائیں؛ $CD$ کے لیے بھی یہی کریں۔",
+       "draw": [
+        {
+         "t": "line",
+         "p": [
+          25.87,
+          14.63,
+          49.49,
+          29.67
+         ],
+         "dash": true
+        },
+        {
+         "t": "line",
+         "p": [
+          76.8,
+          16.05,
+          51.96,
+          28.98
+         ],
+         "dash": true
+        }
+       ]
+      },
+      {
+       "math": "\\text{The bisectors meet at } O",
+       "en": "The perpendicular bisector of every chord passes through the centre, so they meet at the centre.",
+       "ur": "ہر وتر کا عمودی ناصف مرکز سے گزرتا ہے، اس لیے یہ مرکز پر ملتے ہیں۔",
+       "check": [
+        "Abs(sqrt((27.447377101138198-50)**2 + (38.20848343981605-30)**2) - sqrt((47.908262174056205-50)**2 + (6.091327245798105-30)**2)) < 1e-6",
+        "Abs(sqrt((56.2116570824605-50)**2 + (6.81778016906236-30)**2) - sqrt((72.5526228988618-50)**2 + (38.20848343981605-30)**2)) < 1e-6"
+       ],
+       "draw": [
+        {
+         "t": "dot",
+         "p": [
+          50.0,
+          30.0
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          51.5,
+          27.5
+         ],
+         "s": "O"
+        }
+       ]
+      },
+      {
+       "math": "OA = OB = OC = OD = 2\\ \\text{cm}",
+       "en": "Verify: the point found is the centre (it is the radius away from every point of the circle).",
+       "ur": "تصدیق: یہ نقطہ دائرے کے ہر نقطے سے رداس کے فاصلے پر ہے، اس لیے یہی مرکز ہے۔"
+      }
+     ],
+     "answer": "circle of radius 2 cm; its centre verified by perpendicular bisectors of two chords"
+    }
+   ],
+   "exercise": "10.1",
+   "figure_h": 60
+  },
+  {
+   "id": "c10-ex10.1-q2",
+   "kind": "exercise",
+   "number": "2",
+   "page": 0,
+   "question": "Take any three non-collinear points $P$, $Q$, $R$ and construct a circle passing through these points.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "\\text{Join } PQ \\text{ and } QR",
+       "en": "Join the points to make two chords.",
+       "ur": "نقاط ملا کر دو وتر بنائیں۔",
+       "draw": [
+        {
+         "t": "dot",
+         "p": [
+          30.0,
+          45.0
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          50.0,
+          15.0
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          72.0,
+          42.0
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          31.5,
+          42.5
+         ],
+         "s": "P"
+        },
+        {
+         "t": "text",
+         "p": [
+          51.5,
+          12.5
+         ],
+         "s": "Q"
+        },
+        {
+         "t": "text",
+         "p": [
+          73.5,
+          39.5
+         ],
+         "s": "R"
+        },
+        {
+         "t": "line",
+         "p": [
+          30.0,
+          45.0,
+          50.0,
+          15.0
+         ],
+         "dash": false
+        },
+        {
+         "t": "line",
+         "p": [
+          50.0,
+          15.0,
+          72.0,
+          42.0
+         ],
+         "dash": false
+        }
+       ]
+      },
+      {
+       "math": "\\text{Perpendicular bisectors of } PQ \\text{ and } QR",
+       "en": "Construct the perpendicular bisector of each chord.",
+       "ur": "ہر وتر کا عمودی ناصف بنائیں۔",
+       "draw": [
+        {
+         "t": "line",
+         "p": [
+          21.69,
+          17.8,
+          58.31,
+          42.2
+         ],
+         "dash": true
+        },
+        {
+         "t": "line",
+         "p": [
+          78.06,
+          14.6,
+          43.94,
+          42.4
+         ],
+         "dash": true
+        }
+       ]
+      },
+      {
+       "math": "\\text{They meet at } O",
+       "en": "$O$ is equally far from all three points.",
+       "ur": "$O$ تینوں نقاط سے برابر فاصلے پر ہے۔",
+       "check": [
+        "Abs(sqrt((30-(50.5375))**2 + (45-(37.025))**2) - sqrt((50-(50.5375))**2 + (15-(37.025))**2)) < 1e-6",
+        "Abs(sqrt((50-(50.5375))**2 + (15-(37.025))**2) - sqrt((72-(50.5375))**2 + (42-(37.025))**2)) < 1e-6"
+       ],
+       "draw": [
+        {
+         "t": "dot",
+         "p": [
+          50.54,
+          37.02
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          52.04,
+          34.52
+         ],
+         "s": "O"
+        }
+       ]
+      },
+      {
+       "math": "\\text{With centre } O \\text{ and radius } OP \\text{ draw the circle}",
+       "en": "The circle passes through all three points.",
+       "ur": "دائرہ تینوں نقاط سے گزرتا ہے۔",
+       "draw": [
+        {
+         "t": "circle",
+         "c": [
+          50.54,
+          37.02
+         ],
+         "r": 22.03
+        }
+       ]
+      }
+     ],
+     "answer": "the circle through the three points (centre where the perpendicular bisectors meet)"
+    }
+   ],
+   "exercise": "10.1",
+   "figure_h": 60
+  },
+  {
+   "id": "c10-ex10.1-q3",
+   "kind": "exercise",
+   "number": "3",
+   "page": 0,
+   "question": "Draw an arc $ABC$ and complete a circle by finding its centre.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "",
+       "en": "Take three points $A$, $B$, $C$ on the arc.",
+       "ur": "قوس پر تین نقاط $A$، $B$، $C$ لیں۔"
+      },
+      {
+       "math": "\\text{Join } AB \\text{ and } BC",
+       "en": "Join the points to make two chords.",
+       "ur": "نقاط ملا کر دو وتر بنائیں۔",
+       "draw": [
+        {
+         "t": "dot",
+         "p": [
+          28.0,
+          38.0
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          50.0,
+          12.0
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          72.0,
+          38.0
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          29.5,
+          35.5
+         ],
+         "s": "A"
+        },
+        {
+         "t": "text",
+         "p": [
+          51.5,
+          9.5
+         ],
+         "s": "B"
+        },
+        {
+         "t": "text",
+         "p": [
+          73.5,
+          35.5
+         ],
+         "s": "C"
+        },
+        {
+         "t": "line",
+         "p": [
+          28.0,
+          38.0,
+          50.0,
+          12.0
+         ],
+         "dash": false
+        },
+        {
+         "t": "line",
+         "p": [
+          50.0,
+          12.0,
+          72.0,
+          38.0
+         ],
+         "dash": false
+        }
+       ]
+      },
+      {
+       "math": "\\text{Perpendicular bisectors of } AB \\text{ and } BC",
+       "en": "Construct the perpendicular bisector of each chord.",
+       "ur": "ہر وتر کا عمودی ناصف بنائیں۔",
+       "draw": [
+        {
+         "t": "line",
+         "p": [
+          22.21,
+          10.79,
+          55.79,
+          39.21
+         ],
+         "dash": true
+        },
+        {
+         "t": "line",
+         "p": [
+          77.79,
+          10.79,
+          44.21,
+          39.21
+         ],
+         "dash": true
+        }
+       ]
+      },
+      {
+       "math": "\\text{They meet at } O",
+       "en": "$O$ is equally far from all three points.",
+       "ur": "$O$ تینوں نقاط سے برابر فاصلے پر ہے۔",
+       "check": [
+        "Abs(sqrt((28-(50.0))**2 + (38-(34.30769230769231))**2) - sqrt((50-(50.0))**2 + (12-(34.30769230769231))**2)) < 1e-6",
+        "Abs(sqrt((50-(50.0))**2 + (12-(34.30769230769231))**2) - sqrt((72-(50.0))**2 + (38-(34.30769230769231))**2)) < 1e-6"
+       ],
+       "draw": [
+        {
+         "t": "dot",
+         "p": [
+          50.0,
+          34.31
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          51.5,
+          31.81
+         ],
+         "s": "O"
+        }
+       ]
+      },
+      {
+       "math": "\\text{With centre } O \\text{ and radius } OA \\text{ draw the circle}",
+       "en": "The circle passes through all three points.",
+       "ur": "دائرہ تینوں نقاط سے گزرتا ہے۔",
+       "draw": [
+        {
+         "t": "circle",
+         "c": [
+          50.0,
+          34.31
+         ],
+         "r": 22.31
+        }
+       ]
+      }
+     ],
+     "answer": "the circle through the three points (centre where the perpendicular bisectors meet)"
+    }
+   ],
+   "exercise": "10.1",
+   "figure_h": 60
+  },
+  {
+   "id": "c10-ex10.1-q4",
+   "kind": "exercise",
+   "number": "4",
+   "page": 0,
+   "question": "Draw an arc $PQR$ and complete a circle without finding its centre.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "arc PQR",
+     "steps": [
+      {
+       "math": "\\text{Given arc } PQR",
+       "en": "Start from the given arc.",
+       "ur": "دی گئی قوس سے شروع کریں۔",
+       "draw": [
+        {
+         "t": "arc",
+         "c": [
+          50,
+          32
+         ],
+         "r": 22,
+         "a": [
+          200,
+          340
+         ]
+        }
+       ]
+      },
+      {
+       "math": "\\text{Mark equal chords along the arc}",
+       "en": "Keep the compasses at a fixed small opening; from one end step along the arc marking equal chords.",
+       "ur": "پرکار کو ایک ہی چھوٹے فاصلے پر رکھیں؛ قوس پر برابر وتر لگاتے جائیں۔",
+       "draw": [
+        {
+         "t": "dot",
+         "p": [
+          29.33,
+          24.48
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          35.86,
+          15.15
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          46.18,
+          10.33
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          57.52,
+          11.33
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          66.85,
+          17.86
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          71.67,
+          28.18
+         ]
+        }
+       ]
+      },
+      {
+       "math": "\\text{Continue the equal steps beyond the arc}",
+       "en": "Equal chords subtend equal angles, so the steps keep to the same circle; carry on until you come back to the start.",
+       "ur": "برابر وتر برابر زاویے بناتے ہیں، اس لیے یہ قدم اسی دائرے پر رہتے ہیں؛ شروع تک واپس آنے تک جاری رکھیں۔",
+       "draw": [
+        {
+         "t": "dot",
+         "p": [
+          70.67,
+          39.52
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          64.14,
+          48.85
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          53.82,
+          53.67
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          42.48,
+          52.67
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          33.15,
+          46.14
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          28.33,
+          35.82
+         ]
+        }
+       ]
+      },
+      {
+       "math": "\\text{Join the points smoothly}",
+       "en": "Join all the marked points with a smooth curve: the circle is complete without finding its centre.",
+       "ur": "تمام نقاط کو ہموار خم سے ملائیں: مرکز معلوم کیے بغیر دائرہ مکمل ہو گیا۔",
+       "draw": [
+        {
+         "t": "circle",
+         "c": [
+          50.0,
+          32.0
+         ],
+         "r": 22.0
+        }
+       ]
+      }
+     ],
+     "answer": "circle completed by stepping equal chords (no centre needed)"
+    }
+   ],
+   "exercise": "10.1",
+   "figure_h": 60
+  },
+  {
+   "id": "c10-ex10.1-q5",
+   "kind": "exercise",
+   "number": "5",
+   "page": 0,
+   "question": "Take any three non-collinear points (locations of the lamp posts in the park), construct a circle passing through all these points.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "\\text{Join } AB \\text{ and } BC",
+       "en": "Join the points to make two chords.",
+       "ur": "نقاط ملا کر دو وتر بنائیں۔",
+       "draw": [
+        {
+         "t": "dot",
+         "p": [
+          32.0,
+          44.0
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          48.0,
+          14.0
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          70.0,
+          40.0
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          33.5,
+          41.5
+         ],
+         "s": "A"
+        },
+        {
+         "t": "text",
+         "p": [
+          49.5,
+          11.5
+         ],
+         "s": "B"
+        },
+        {
+         "t": "text",
+         "p": [
+          71.5,
+          37.5
+         ],
+         "s": "C"
+        },
+        {
+         "t": "line",
+         "p": [
+          32.0,
+          44.0,
+          48.0,
+          14.0
+         ],
+         "dash": false
+        },
+        {
+         "t": "line",
+         "p": [
+          48.0,
+          14.0,
+          70.0,
+          40.0
+         ],
+         "dash": false
+        }
+       ]
+      },
+      {
+       "math": "\\text{Perpendicular bisectors of } AB \\text{ and } BC",
+       "en": "Construct the perpendicular bisector of each chord.",
+       "ur": "ہر وتر کا عمودی ناصف بنائیں۔",
+       "draw": [
+        {
+         "t": "line",
+         "p": [
+          20.59,
+          18.65,
+          59.41,
+          39.35
+         ],
+         "dash": true
+        },
+        {
+         "t": "line",
+         "p": [
+          75.79,
+          12.79,
+          42.21,
+          41.21
+         ],
+         "dash": true
+        }
+       ]
+      },
+      {
+       "math": "\\text{They meet at } O",
+       "en": "$O$ is equally far from all three points.",
+       "ur": "$O$ تینوں نقاط سے برابر فاصلے پر ہے۔",
+       "check": [
+        "Abs(sqrt((32-(50.204460966542754))**2 + (44-(34.44237918215613))**2) - sqrt((48-(50.204460966542754))**2 + (14-(34.44237918215613))**2)) < 1e-6",
+        "Abs(sqrt((48-(50.204460966542754))**2 + (14-(34.44237918215613))**2) - sqrt((70-(50.204460966542754))**2 + (40-(34.44237918215613))**2)) < 1e-6"
+       ],
+       "draw": [
+        {
+         "t": "dot",
+         "p": [
+          50.2,
+          34.44
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          51.7,
+          31.94
+         ],
+         "s": "O"
+        }
+       ]
+      },
+      {
+       "math": "\\text{With centre } O \\text{ and radius } OA \\text{ draw the circle}",
+       "en": "The circle passes through all three points.",
+       "ur": "دائرہ تینوں نقاط سے گزرتا ہے۔",
+       "draw": [
+        {
+         "t": "circle",
+         "c": [
+          50.2,
+          34.44
+         ],
+         "r": 20.56
+        }
+       ]
+      }
+     ],
+     "answer": "the circle through the three points (centre where the perpendicular bisectors meet)"
+    }
+   ],
+   "exercise": "10.1",
+   "figure_h": 60
+  },
+  {
+   "id": "c10-ex10.1-q6",
+   "kind": "exercise",
+   "number": "6",
+   "page": 0,
+   "question": "A part of the Ferris wheel rim is visible as an arc. Using any three points on the arc, construct the circle by finding its centre.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "",
+       "en": "Mark any three points $A$, $B$, $C$ on the arc.",
+       "ur": "قوس پر کوئی تین نقاط لگائیں۔"
+      },
+      {
+       "math": "\\text{Join } AB \\text{ and } BC",
+       "en": "Join the points to make two chords.",
+       "ur": "نقاط ملا کر دو وتر بنائیں۔",
+       "draw": [
+        {
+         "t": "dot",
+         "p": [
+          30.0,
+          40.0
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          50.0,
+          13.0
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          70.0,
+          40.0
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          31.5,
+          37.5
+         ],
+         "s": "A"
+        },
+        {
+         "t": "text",
+         "p": [
+          51.5,
+          10.5
+         ],
+         "s": "B"
+        },
+        {
+         "t": "text",
+         "p": [
+          71.5,
+          37.5
+         ],
+         "s": "C"
+        },
+        {
+         "t": "line",
+         "p": [
+          30.0,
+          40.0,
+          50.0,
+          13.0
+         ],
+         "dash": false
+        },
+        {
+         "t": "line",
+         "p": [
+          50.0,
+          13.0,
+          70.0,
+          40.0
+         ],
+         "dash": false
+        }
+       ]
+      },
+      {
+       "math": "\\text{Perpendicular bisectors of } AB \\text{ and } BC",
+       "en": "Construct the perpendicular bisector of each chord.",
+       "ur": "ہر وتر کا عمودی ناصف بنائیں۔",
+       "draw": [
+        {
+         "t": "line",
+         "p": [
+          22.32,
+          13.4,
+          57.68,
+          39.6
+         ],
+         "dash": true
+        },
+        {
+         "t": "line",
+         "p": [
+          77.68,
+          13.4,
+          42.32,
+          39.6
+         ],
+         "dash": true
+        }
+       ]
+      },
+      {
+       "math": "\\text{They meet at } O",
+       "en": "$O$ is equally far from all three points.",
+       "ur": "$O$ تینوں نقاط سے برابر فاصلے پر ہے۔",
+       "check": [
+        "Abs(sqrt((30-(50.0))**2 + (40-(33.907407407407405))**2) - sqrt((50-(50.0))**2 + (13-(33.907407407407405))**2)) < 1e-6",
+        "Abs(sqrt((50-(50.0))**2 + (13-(33.907407407407405))**2) - sqrt((70-(50.0))**2 + (40-(33.907407407407405))**2)) < 1e-6"
+       ],
+       "draw": [
+        {
+         "t": "dot",
+         "p": [
+          50.0,
+          33.91
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          51.5,
+          31.41
+         ],
+         "s": "O"
+        }
+       ]
+      },
+      {
+       "math": "\\text{With centre } O \\text{ and radius } OA \\text{ draw the circle}",
+       "en": "The circle passes through all three points.",
+       "ur": "دائرہ تینوں نقاط سے گزرتا ہے۔",
+       "draw": [
+        {
+         "t": "circle",
+         "c": [
+          50.0,
+          33.91
+         ],
+         "r": 20.91
+        }
+       ]
+      }
+     ],
+     "answer": "the circle through the three points (centre where the perpendicular bisectors meet)"
+    }
+   ],
+   "exercise": "10.1",
+   "figure_h": 60
+  },
+  {
+   "id": "c10-ex10.1-q7",
+   "kind": "exercise",
+   "number": "7",
+   "page": 0,
+   "question": "$ABC$ an arc of a fountain, complete a circle without finding its centre.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "arc ABC",
+     "steps": [
+      {
+       "math": "\\text{Given arc } ABC",
+       "en": "Start from the given arc.",
+       "ur": "دی گئی قوس سے شروع کریں۔",
+       "draw": [
+        {
+         "t": "arc",
+         "c": [
+          50,
+          32
+         ],
+         "r": 22,
+         "a": [
+          200,
+          340
+         ]
+        }
+       ]
+      },
+      {
+       "math": "\\text{Mark equal chords along the arc}",
+       "en": "Keep the compasses at a fixed small opening; from one end step along the arc marking equal chords.",
+       "ur": "پرکار کو ایک ہی چھوٹے فاصلے پر رکھیں؛ قوس پر برابر وتر لگاتے جائیں۔",
+       "draw": [
+        {
+         "t": "dot",
+         "p": [
+          29.33,
+          24.48
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          35.86,
+          15.15
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          46.18,
+          10.33
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          57.52,
+          11.33
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          66.85,
+          17.86
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          71.67,
+          28.18
+         ]
+        }
+       ]
+      },
+      {
+       "math": "\\text{Continue the equal steps beyond the arc}",
+       "en": "Equal chords subtend equal angles, so the steps keep to the same circle; carry on until you come back to the start.",
+       "ur": "برابر وتر برابر زاویے بناتے ہیں، اس لیے یہ قدم اسی دائرے پر رہتے ہیں؛ شروع تک واپس آنے تک جاری رکھیں۔",
+       "draw": [
+        {
+         "t": "dot",
+         "p": [
+          70.67,
+          39.52
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          64.14,
+          48.85
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          53.82,
+          53.67
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          42.48,
+          52.67
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          33.15,
+          46.14
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          28.33,
+          35.82
+         ]
+        }
+       ]
+      },
+      {
+       "math": "\\text{Join the points smoothly}",
+       "en": "Join all the marked points with a smooth curve: the circle is complete without finding its centre.",
+       "ur": "تمام نقاط کو ہموار خم سے ملائیں: مرکز معلوم کیے بغیر دائرہ مکمل ہو گیا۔",
+       "draw": [
+        {
+         "t": "circle",
+         "c": [
+          50.0,
+          32.0
+         ],
+         "r": 22.0
+        }
+       ]
+      }
+     ],
+     "answer": "circle completed by stepping equal chords (no centre needed)"
+    }
+   ],
+   "exercise": "10.1",
+   "figure_h": 60
+  },
+  {
+   "id": "c10-ex10.2-q1",
+   "kind": "exercise",
+   "number": "1",
+   "page": 0,
+   "question": "Draw tangent to $\\widehat{APB}$ at point $P$, when $P$ is midpoint of the arc.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "\\text{Join } AB",
+       "en": "Join the ends of the arc $APB$.",
+       "ur": "قوس $APB$ کے سرے ملائیں۔",
+       "draw": [
+        {
+         "t": "arc",
+         "c": [
+          50,
+          40
+         ],
+         "r": 26,
+         "a": [
+          210,
+          330
+         ]
+        },
+        {
+         "t": "line",
+         "p": [
+          27.48,
+          27.0,
+          72.52,
+          27.0
+         ],
+         "dash": false
+        },
+        {
+         "t": "text",
+         "p": [
+          23.48,
+          28.0
+         ],
+         "s": "A"
+        },
+        {
+         "t": "text",
+         "p": [
+          74.02,
+          24.5
+         ],
+         "s": "B"
+        },
+        {
+         "t": "dot",
+         "p": [
+          50.0,
+          14.0
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          51.0,
+          11.0
+         ],
+         "s": "P"
+        }
+       ]
+      },
+      {
+       "math": "\\text{Perpendicular bisector of } AB \\text{ passes through } P",
+       "en": "Its foot is the midpoint of $AB$ and it meets the arc at its midpoint $P$.",
+       "ur": "یہ $AB$ کے وسط سے گزرتا ہے اور قوس کو اس کے وسط $P$ پر ملتا ہے۔",
+       "draw": [
+        {
+         "t": "line",
+         "p": [
+          50.0,
+          11.0,
+          50.0,
+          43.0
+         ],
+         "dash": true
+        }
+       ]
+      },
+      {
+       "math": "\\text{At } P \\text{ draw } CD \\perp \\text{the bisector, i.e. } CD \\parallel AB",
+       "en": "This line is perpendicular to the radius through $P$, so it is the tangent.",
+       "ur": "یہ خط $P$ والے رداس پر عمود ہے، اس لیے مماس ہے۔",
+       "check": [
+        "Abs((27.0) - (27.0)) < 1e-6"
+       ],
+       "draw": [
+        {
+         "t": "line",
+         "p": [
+          30.0,
+          14.0,
+          70.0,
+          14.0
+         ],
+         "dash": false
+        },
+        {
+         "t": "text",
+         "p": [
+          28.0,
+          12.0
+         ],
+         "s": "C"
+        },
+        {
+         "t": "text",
+         "p": [
+          71.5,
+          11.5
+         ],
+         "s": "D"
+        }
+       ]
+      }
+     ],
+     "answer": "tangent $CD$ at $P$, parallel to $AB$"
+    }
+   ],
+   "exercise": "10.2",
+   "figure_h": 60
+  },
+  {
+   "id": "c10-ex10.2-q2",
+   "kind": "exercise",
+   "number": "2",
+   "page": 0,
+   "question": "Draw tangent to $\\widehat{PQR}$ at point $P$, when $P$ is endpoint of the arc.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "\\text{Given arc } PQR \\text{ with } P \\text{ an endpoint}",
+       "en": "Find the centre $O$ (perpendicular bisectors of two chords) if it is not given.",
+       "ur": "اگر مرکز نہ دیا ہو تو دو وتروں کے عمودی ناصف سے $O$ معلوم کریں۔",
+       "draw": [
+        {
+         "t": "arc",
+         "c": [
+          50,
+          30
+         ],
+         "r": 22,
+         "a": [
+          -60,
+          240
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          39.0,
+          10.95
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          40.5,
+          8.45
+         ],
+         "s": "P"
+        },
+        {
+         "t": "dot",
+         "p": [
+          50.0,
+          30.0
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          51.5,
+          27.5
+         ],
+         "s": "O"
+        }
+       ]
+      },
+      {
+       "math": "\\text{Join } OP",
+       "en": "Draw the radius to $P$.",
+       "ur": "$P$ تک رداس کھینچیں۔",
+       "draw": [
+        {
+         "t": "line",
+         "p": [
+          50.0,
+          30.0,
+          39.0,
+          10.95
+         ],
+         "dash": false
+        }
+       ]
+      },
+      {
+       "math": "\\text{At } P \\text{ draw a line } \\perp OP",
+       "en": "The perpendicular to the radius at $P$ is the tangent.",
+       "ur": "$P$ پر رداس کا عمود ہی مماس ہے۔",
+       "check": [
+        "Abs((39.00000000000001-50)*(0.866025403784) + (10.947441116742347-30)*(-0.500000000000)) < 1e-6"
+       ],
+       "draw": [
+        {
+         "t": "line",
+         "p": [
+          23.41,
+          19.95,
+          54.59,
+          1.95
+         ],
+         "dash": false
+        }
+       ]
+      }
+     ],
+     "answer": "tangent at $P$ perpendicular to $OP$"
+    }
+   ],
+   "exercise": "10.2",
+   "figure_h": 60
+  },
+  {
+   "id": "c10-ex10.2-q3",
+   "kind": "exercise",
+   "number": "3",
+   "page": 0,
+   "question": "Draw tangent to $\\widehat{ABC}$ from a point $P$, when $P$ is outside the arc.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "r = 1.5\\ \\text{cm},\\quad OP = 4\\ \\text{cm}",
+       "en": "Draw the circle and the point $P$ outside it; join $OP$.",
+       "ur": "دائرہ اور اس کے باہر نقطہ $P$ لگائیں؛ $OP$ ملائیں۔",
+       "draw": [
+        {
+         "t": "circle",
+         "c": [
+          29.67,
+          30.0
+         ],
+         "r": 19.67
+        },
+        {
+         "t": "dot",
+         "p": [
+          29.67,
+          30.0
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          31.17,
+          27.5
+         ],
+         "s": "O"
+        },
+        {
+         "t": "dot",
+         "p": [
+          82.13,
+          30.0
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          83.63,
+          27.5
+         ],
+         "s": "P"
+        },
+        {
+         "t": "line",
+         "p": [
+          29.67,
+          30.0,
+          82.13,
+          30.0
+         ],
+         "dash": false
+        }
+       ]
+      },
+      {
+       "math": "\\text{Bisect } OP \\text{ at } M",
+       "en": "Construct the perpendicular bisector of $OP$; it cuts $OP$ at its midpoint $M$.",
+       "ur": "$OP$ کا عمودی ناصف بنائیں؛ یہ $OP$ کو $M$ پر کاٹتا ہے۔",
+       "draw": [
+        {
+         "t": "line",
+         "p": [
+          55.9,
+          18.0,
+          55.9,
+          42.0
+         ],
+         "dash": true
+        },
+        {
+         "t": "dot",
+         "p": [
+          55.9,
+          30.0
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          56.9,
+          34.0
+         ],
+         "s": "M"
+        }
+       ]
+      },
+      {
+       "math": "\\text{Circle with centre } M \\text{ and radius } MO",
+       "en": "It cuts the given circle at $T$ and $S$.",
+       "ur": "یہ دیے گئے دائرے کو $T$ اور $S$ پر کاٹتا ہے۔",
+       "draw": [
+        {
+         "t": "arc",
+         "c": [
+          55.9,
+          30.0
+         ],
+         "r": 26.23,
+         "a": [
+          180,
+          360
+         ]
+        },
+        {
+         "t": "arc",
+         "c": [
+          55.9,
+          30.0
+         ],
+         "r": 26.23,
+         "a": [
+          0,
+          180
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          37.05,
+          11.76
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          37.05,
+          48.24
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          37.05,
+          8.76
+         ],
+         "s": "T"
+        },
+        {
+         "t": "text",
+         "p": [
+          37.05,
+          53.24
+         ],
+         "s": "S"
+        }
+       ]
+      },
+      {
+       "math": "\\text{Join } PT \\text{ and } PS",
+       "en": "$\\angle OTP$ is an angle in a semicircle (on diameter $OP$), so $OT \\perp PT$: $PT$ and $PS$ are the tangents.",
+       "ur": "$\\angle OTP$ نصف دائرے کا زاویہ ہے، اس لیے $OT \\perp PT$: $PT$ اور $PS$ مماس ہیں۔",
+       "check": [
+        "Abs((37.049180327868854-29.672131147540984)*(82.1311475409836-37.049180327868854) + (11.763446343207384-30)*(30-11.763446343207384)) < 1e-6"
+       ],
+       "draw": [
+        {
+         "t": "line",
+         "p": [
+          85.51,
+          31.37,
+          33.67,
+          10.4
+         ],
+         "dash": false
+        },
+        {
+         "t": "line",
+         "p": [
+          85.51,
+          28.63,
+          33.67,
+          49.6
+         ],
+         "dash": false
+        }
+       ]
+      },
+      {
+       "math": "PT = PS = \\sqrt{OP^2 - r^2} = \\sqrt{4^2 - 1.5^2} \\approx 3.71\\ \\text{cm}",
+       "en": "Both tangents have the same length (Pythagoras in $OTP$).",
+       "ur": "دونوں مماس برابر ہیں (مثلث $OTP$ میں فیثا غورث)۔",
+       "check": [
+        "Abs(sqrt((4)**2 - (1.5)**2) - 3.71) <= 0.005"
+       ]
+      }
+     ],
+     "answer": "tangents $PT$ and $PS$ from $P$"
+    }
+   ],
+   "exercise": "10.2",
+   "figure_h": 60
+  },
+  {
+   "id": "c10-ex10.2-q4",
+   "kind": "exercise",
+   "number": "4",
+   "page": 0,
+   "question": "Draw a circle of radius 1.3 cm and draw a tangent at point $P$, when $P$ lies on its circumference.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "r = 1.3\\ \\text{cm}",
+       "en": "Draw the circle with centre $O$ and mark $P$ on it.",
+       "ur": "مرکز $O$ سے دائرہ کھینچیں اور اس پر $P$ لگائیں۔",
+       "draw": [
+        {
+         "t": "circle",
+         "c": [
+          40.0,
+          30.0
+         ],
+         "r": 18.2
+        },
+        {
+         "t": "dot",
+         "p": [
+          40.0,
+          30.0
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          41.5,
+          27.5
+         ],
+         "s": "O"
+        },
+        {
+         "t": "dot",
+         "p": [
+          58.2,
+          30.0
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          59.7,
+          27.5
+         ],
+         "s": "P"
+        }
+       ]
+      },
+      {
+       "math": "\\text{Join } OP",
+       "en": "Draw the radius $OP$.",
+       "ur": "رداس $OP$ کھینچیں۔",
+       "draw": [
+        {
+         "t": "line",
+         "p": [
+          40.0,
+          30.0,
+          58.2,
+          30.0
+         ],
+         "dash": false
+        }
+       ]
+      },
+      {
+       "math": "\\text{At } P \\text{ draw } AB \\perp OP",
+       "en": "Construct a line through $P$ perpendicular to $OP$ (bisect the straight angle at $P$).",
+       "ur": "$P$ سے $OP$ پر عمود خط کھینچیں۔",
+       "check": [
+        "(58.2-40)*0 + (30-30)*1 == 0"
+       ],
+       "draw": [
+        {
+         "t": "line",
+         "p": [
+          58.2,
+          10.0,
+          58.2,
+          50.0
+         ],
+         "dash": false
+        },
+        {
+         "t": "right",
+         "p": [
+          58.2,
+          30.0
+         ],
+         "d": [
+          -1,
+          0,
+          0,
+          -1
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          59.7,
+          9.5
+         ],
+         "s": "A"
+        },
+        {
+         "t": "text",
+         "p": [
+          59.7,
+          45.5
+         ],
+         "s": "B"
+        }
+       ]
+      },
+      {
+       "math": "AB \\text{ is the tangent at } P",
+       "en": "A line perpendicular to the radius at its end touches the circle at exactly one point.",
+       "ur": "رداس کے سرے پر عمود خط دائرے کو صرف ایک نقطے پر چھوتا ہے۔"
+      }
+     ],
+     "answer": "tangent at $P$ perpendicular to $OP$ (radius 1.3 cm)"
+    }
+   ],
+   "exercise": "10.2",
+   "figure_h": 60
+  },
+  {
+   "id": "c10-ex10.2-q5",
+   "kind": "exercise",
+   "number": "5",
+   "page": 0,
+   "question": "Draw a circle of radius 1.5 cm and draw a tangent at point $P$, when $P$ is at a distance of 8 cm from its centre.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "r = 1.5\\ \\text{cm},\\quad OP = 8\\ \\text{cm}",
+       "en": "Draw the circle and the point $P$ outside it; join $OP$.",
+       "ur": "دائرہ اور اس کے باہر نقطہ $P$ لگائیں؛ $OP$ ملائیں۔",
+       "draw": [
+        {
+         "t": "circle",
+         "c": [
+          21.88,
+          30.0
+         ],
+         "r": 11.88
+        },
+        {
+         "t": "dot",
+         "p": [
+          21.88,
+          30.0
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          23.38,
+          27.5
+         ],
+         "s": "O"
+        },
+        {
+         "t": "dot",
+         "p": [
+          85.25,
+          30.0
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          86.75,
+          27.5
+         ],
+         "s": "P"
+        },
+        {
+         "t": "line",
+         "p": [
+          21.88,
+          30.0,
+          85.25,
+          30.0
+         ],
+         "dash": false
+        }
+       ]
+      },
+      {
+       "math": "\\text{Bisect } OP \\text{ at } M",
+       "en": "Construct the perpendicular bisector of $OP$; it cuts $OP$ at its midpoint $M$.",
+       "ur": "$OP$ کا عمودی ناصف بنائیں؛ یہ $OP$ کو $M$ پر کاٹتا ہے۔",
+       "draw": [
+        {
+         "t": "line",
+         "p": [
+          53.56,
+          18.0,
+          53.56,
+          42.0
+         ],
+         "dash": true
+        },
+        {
+         "t": "dot",
+         "p": [
+          53.56,
+          30.0
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          54.56,
+          34.0
+         ],
+         "s": "M"
+        }
+       ]
+      },
+      {
+       "math": "\\text{Circle with centre } M \\text{ and radius } MO",
+       "en": "It cuts the given circle at $T$ and $S$.",
+       "ur": "یہ دیے گئے دائرے کو $T$ اور $S$ پر کاٹتا ہے۔",
+       "draw": [
+        {
+         "t": "arc",
+         "c": [
+          53.56,
+          30.0
+         ],
+         "r": 31.68,
+         "a": [
+          180,
+          360
+         ]
+        },
+        {
+         "t": "arc",
+         "c": [
+          53.56,
+          30.0
+         ],
+         "r": 31.68,
+         "a": [
+          0,
+          180
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          24.11,
+          18.33
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          24.11,
+          41.67
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          24.11,
+          15.33
+         ],
+         "s": "T"
+        },
+        {
+         "t": "text",
+         "p": [
+          24.11,
+          46.67
+         ],
+         "s": "S"
+        }
+       ]
+      },
+      {
+       "math": "\\text{Join } PT \\text{ and } PS",
+       "en": "$\\angle OTP$ is an angle in a semicircle (on diameter $OP$), so $OT \\perp PT$: $PT$ and $PS$ are the tangents.",
+       "ur": "$\\angle OTP$ نصف دائرے کا زاویہ ہے، اس لیے $OT \\perp PT$: $PT$ اور $PS$ مماس ہیں۔",
+       "check": [
+        "Abs((24.10891089108911-21.88118811881188)*(85.24752475247524-24.10891089108911) + (18.329529471162097-30)*(30-18.329529471162097)) < 1e-6"
+       ],
+       "draw": [
+        {
+         "t": "line",
+         "p": [
+          89.83,
+          30.88,
+          19.52,
+          17.45
+         ],
+         "dash": false
+        },
+        {
+         "t": "line",
+         "p": [
+          89.83,
+          29.12,
+          19.52,
+          42.55
+         ],
+         "dash": false
+        }
+       ]
+      },
+      {
+       "math": "PT = PS = \\sqrt{OP^2 - r^2} = \\sqrt{8^2 - 1.5^2} \\approx 7.86\\ \\text{cm}",
+       "en": "Both tangents have the same length (Pythagoras in $OTP$).",
+       "ur": "دونوں مماس برابر ہیں (مثلث $OTP$ میں فیثا غورث)۔",
+       "check": [
+        "Abs(sqrt((8)**2 - (1.5)**2) - 7.86) <= 0.005"
+       ]
+      }
+     ],
+     "answer": "tangents $PT$ and $PS$ from $P$, each $\\approx 7.86$ cm"
+    }
+   ],
+   "exercise": "10.2",
+   "figure_h": 60
+  },
+  {
+   "id": "c10-ex10.2-q6",
+   "kind": "exercise",
+   "number": "6",
+   "page": 0,
+   "question": "Draw a circle of radius 1.6 cm. Draw two tangents that meet an angle of $30^\\circ$.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "r = 1.6\\ \\text{cm}",
+       "en": "Draw the circle with centre $O$.",
+       "ur": "مرکز $O$ سے دائرہ کھینچیں۔",
+       "draw": [
+        {
+         "t": "circle",
+         "c": [
+          68.0,
+          30.0
+         ],
+         "r": 14.4
+        },
+        {
+         "t": "dot",
+         "p": [
+          68.0,
+          30.0
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          69.5,
+          27.5
+         ],
+         "s": "O"
+        }
+       ]
+      },
+      {
+       "math": "\\angle AOB = 180^\\circ - 30^\\circ = 150^\\circ",
+       "en": "In quadrilateral $OAPB$ the angles at $A$ and $B$ are $90^\\circ$, so $\\angle AOB + \\angle APB = 180^\\circ$.",
+       "ur": "چوکور $OAPB$ میں $A$ اور $B$ پر زاویے $90^\\circ$ ہیں، اس لیے $\\angle AOB + \\angle APB = 180^\\circ$۔",
+       "check": [
+        "360 - 90 - 90 - 30 == 150"
+       ],
+       "draw": [
+        {
+         "t": "line",
+         "p": [
+          68.0,
+          30.0,
+          64.27,
+          16.09
+         ],
+         "dash": false
+        },
+        {
+         "t": "line",
+         "p": [
+          68.0,
+          30.0,
+          64.27,
+          43.91
+         ],
+         "dash": false
+        },
+        {
+         "t": "text",
+         "p": [
+          63.27,
+          13.09
+         ],
+         "s": "A"
+        },
+        {
+         "t": "text",
+         "p": [
+          63.27,
+          48.91
+         ],
+         "s": "B"
+        }
+       ]
+      },
+      {
+       "math": "\\text{At } A \\text{ and } B \\text{ draw perpendiculars to } OA, OB",
+       "en": "These are the tangents at $A$ and $B$; let them meet at $P$.",
+       "ur": "یہ $A$ اور $B$ پر مماس ہیں؛ یہ $P$ پر ملتے ہیں۔",
+       "draw": [
+        {
+         "t": "line",
+         "p": [
+          7.17,
+          31.39,
+          69.46,
+          14.7
+         ],
+         "dash": false
+        },
+        {
+         "t": "line",
+         "p": [
+          7.17,
+          28.61,
+          69.46,
+          45.3
+         ],
+         "dash": false
+        },
+        {
+         "t": "dot",
+         "p": [
+          12.36,
+          30.0
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          9.36,
+          27.0
+         ],
+         "s": "P"
+        }
+       ]
+      },
+      {
+       "math": "\\angle APB = 30^\\circ",
+       "en": "Check: the angle between the two tangents.",
+       "ur": "جانچ: دونوں مماسوں کے درمیان زاویہ۔",
+       "check": [
+        "Abs(acos(((64.2730057505237-(12.362672405749663))*(64.27300575052371-(12.362672405749663)) + (16.090668101437416-(30))*(43.909331898562584-(30)))/(sqrt((64.2730057505237-(12.362672405749663))**2+(16.090668101437416-(30))**2)*sqrt((64.27300575052371-(12.362672405749663))**2+(43.909331898562584-(30))**2)))*180/pi - 30) < 1e-6",
+        "Abs((64.2730057505237-68)*((12.362672405749663)-64.2730057505237) + (16.090668101437416-30)*((30)-16.090668101437416)) < 1e-6"
+       ]
+      }
+     ],
+     "answer": "tangents $PA$ and $PB$ meeting at $30^\\circ$ ($\\angle AOB = 150^\\circ$)"
+    }
+   ],
+   "exercise": "10.2",
+   "figure_h": 60
+  },
+  {
+   "id": "c10-ex10.2-q7",
+   "kind": "exercise",
+   "number": "7",
+   "page": 0,
+   "question": "Draw a tangent to any point on a circular part of the track having radius = 2 cm.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "r = 2\\ \\text{cm}",
+       "en": "Draw the circle with centre $O$ and mark $P$ on it.",
+       "ur": "مرکز $O$ سے دائرہ کھینچیں اور اس پر $P$ لگائیں۔",
+       "draw": [
+        {
+         "t": "circle",
+         "c": [
+          40.0,
+          30.0
+         ],
+         "r": 28.0
+        },
+        {
+         "t": "dot",
+         "p": [
+          40.0,
+          30.0
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          41.5,
+          27.5
+         ],
+         "s": "O"
+        },
+        {
+         "t": "dot",
+         "p": [
+          68.0,
+          30.0
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          69.5,
+          27.5
+         ],
+         "s": "P"
+        }
+       ]
+      },
+      {
+       "math": "\\text{Join } OP",
+       "en": "Draw the radius $OP$.",
+       "ur": "رداس $OP$ کھینچیں۔",
+       "draw": [
+        {
+         "t": "line",
+         "p": [
+          40.0,
+          30.0,
+          68.0,
+          30.0
+         ],
+         "dash": false
+        }
+       ]
+      },
+      {
+       "math": "\\text{At } P \\text{ draw } AB \\perp OP",
+       "en": "Construct a line through $P$ perpendicular to $OP$ (bisect the straight angle at $P$).",
+       "ur": "$P$ سے $OP$ پر عمود خط کھینچیں۔",
+       "check": [
+        "(68-40)*0 + (30-30)*1 == 0"
+       ],
+       "draw": [
+        {
+         "t": "line",
+         "p": [
+          68.0,
+          10.0,
+          68.0,
+          50.0
+         ],
+         "dash": false
+        },
+        {
+         "t": "right",
+         "p": [
+          68.0,
+          30.0
+         ],
+         "d": [
+          -1,
+          0,
+          0,
+          -1
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          69.5,
+          9.5
+         ],
+         "s": "A"
+        },
+        {
+         "t": "text",
+         "p": [
+          69.5,
+          45.5
+         ],
+         "s": "B"
+        }
+       ]
+      },
+      {
+       "math": "AB \\text{ is the tangent at } P",
+       "en": "A line perpendicular to the radius at its end touches the circle at exactly one point.",
+       "ur": "رداس کے سرے پر عمود خط دائرے کو صرف ایک نقطے پر چھوتا ہے۔"
+      }
+     ],
+     "answer": "tangent at $P$ perpendicular to $OP$ (radius 2 cm)"
+    }
+   ],
+   "exercise": "10.2",
+   "figure_h": 60
+  },
+  {
+   "id": "c10-ex10.2-q8",
+   "kind": "exercise",
+   "number": "8",
+   "page": 0,
+   "question": "From a pulley point, construct two tangents to a machine wheel having $r = 2.1$ cm, such that the angle between them is $30^\\circ$.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "r = 2.1\\ \\text{cm}",
+       "en": "Draw the circle with centre $O$.",
+       "ur": "مرکز $O$ سے دائرہ کھینچیں۔",
+       "draw": [
+        {
+         "t": "circle",
+         "c": [
+          68.0,
+          30.0
+         ],
+         "r": 14.7
+        },
+        {
+         "t": "dot",
+         "p": [
+          68.0,
+          30.0
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          69.5,
+          27.5
+         ],
+         "s": "O"
+        }
+       ]
+      },
+      {
+       "math": "\\angle AOB = 180^\\circ - 30^\\circ = 150^\\circ",
+       "en": "In quadrilateral $OAPB$ the angles at $A$ and $B$ are $90^\\circ$, so $\\angle AOB + \\angle APB = 180^\\circ$.",
+       "ur": "چوکور $OAPB$ میں $A$ اور $B$ پر زاویے $90^\\circ$ ہیں، اس لیے $\\angle AOB + \\angle APB = 180^\\circ$۔",
+       "check": [
+        "360 - 90 - 90 - 30 == 150"
+       ],
+       "draw": [
+        {
+         "t": "line",
+         "p": [
+          68.0,
+          30.0,
+          64.2,
+          15.8
+         ],
+         "dash": false
+        },
+        {
+         "t": "line",
+         "p": [
+          68.0,
+          30.0,
+          64.2,
+          44.2
+         ],
+         "dash": false
+        },
+        {
+         "t": "text",
+         "p": [
+          63.2,
+          12.8
+         ],
+         "s": "A"
+        },
+        {
+         "t": "text",
+         "p": [
+          63.2,
+          49.2
+         ],
+         "s": "B"
+        }
+       ]
+      },
+      {
+       "math": "\\text{At } A \\text{ and } B \\text{ draw perpendiculars to } OA, OB",
+       "en": "These are the tangents at $A$ and $B$; let them meet at $P$.",
+       "ur": "یہ $A$ اور $B$ پر مماس ہیں؛ یہ $P$ پر ملتے ہیں۔",
+       "draw": [
+        {
+         "t": "line",
+         "p": [
+          5.9,
+          31.42,
+          69.49,
+          14.38
+         ],
+         "dash": false
+        },
+        {
+         "t": "line",
+         "p": [
+          5.9,
+          28.58,
+          69.49,
+          45.62
+         ],
+         "dash": false
+        },
+        {
+         "t": "dot",
+         "p": [
+          11.2,
+          30.0
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          8.2,
+          27.0
+         ],
+         "s": "P"
+        }
+       ]
+      },
+      {
+       "math": "\\angle APB = 30^\\circ",
+       "en": "Check: the angle between the two tangents.",
+       "ur": "جانچ: دونوں مماسوں کے درمیان زاویہ۔",
+       "check": [
+        "Abs(acos(((64.19536003699294-(11.203561414202774))*(64.19536003699295-(11.203561414202774)) + (15.800890353550695-(30))*(44.1991096464493-(30)))/(sqrt((64.19536003699294-(11.203561414202774))**2+(15.800890353550695-(30))**2)*sqrt((64.19536003699295-(11.203561414202774))**2+(44.1991096464493-(30))**2)))*180/pi - 30) < 1e-6",
+        "Abs((64.19536003699294-68)*((11.203561414202774)-64.19536003699294) + (15.800890353550695-30)*((30)-15.800890353550695)) < 1e-6"
+       ]
+      }
+     ],
+     "answer": "tangents $PA$ and $PB$ meeting at $30^\\circ$ ($\\angle AOB = 150^\\circ$)"
+    }
+   ],
+   "exercise": "10.2",
+   "figure_h": 60
+  },
+  {
+   "id": "c10-rev10-q1",
+   "kind": "review",
+   "number": "1",
+   "page": 0,
+   "question": "Four possible answers are given for the following questions. Choose the correct answer.",
+   "parts": [
+    {
+     "label": "i",
+     "prompt": "In the adjacent figure, $\\overleftrightarrow{ABC}$ (touching the circle at $B$) is: (a) $\\text{a chord}$ (b) $\\text{an arc}$ (c) $\\text{a tangent}$ (d) $\\text{a secant}$",
+     "steps": [
+      {
+       "math": "",
+       "en": "It touches the circle at one point only.",
+       "ur": "یہ دائرے کو صرف ایک نقطے پر چھوتا ہے۔"
+      },
+      {
+       "math": "\\text{Answer: (c) } \\text{a tangent}",
+       "en": "Choose the option that matches the working.",
+       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+      }
+     ],
+     "answer": "(c) $\\text{a tangent}$",
+     "book_key": "(c) a tangent"
+    },
+    {
+     "label": "ii",
+     "prompt": "There are ______ types of arcs. (a) $2$ (b) $3$ (c) $4$ (d) $5$",
+     "steps": [
+      {
+       "math": "",
+       "en": "Minor and major arcs.",
+       "ur": "چھوٹی اور بڑی قوس۔"
+      },
+      {
+       "math": "\\text{Answer: (a) } 2",
+       "en": "Choose the option that matches the working.",
+       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+      }
+     ],
+     "answer": "(a) $2$",
+     "book_key": "(a) 2"
+    },
+    {
+     "label": "iii",
+     "prompt": "Right bisector of the chord of a circle always passes through the: (a) $\\text{diameter}$ (b) $\\text{non-collinear points}$ (c) $\\text{radius}$ (d) $\\text{centre}$",
+     "steps": [
+      {
+       "math": "",
+       "en": "It passes through the centre.",
+       "ur": "یہ مرکز سے گزرتا ہے۔"
+      },
+      {
+       "math": "\\text{Answer: (d) } \\text{centre}",
+       "en": "Choose the option that matches the working.",
+       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+      }
+     ],
+     "answer": "(d) $\\text{centre}$",
+     "book_key": "(d) centre"
+    },
+    {
+     "label": "iv",
+     "prompt": "A circle has only one: (a) $\\text{chord}$ (b) $\\text{centre}$ (c) $\\text{diameter}$ (d) $\\text{secant}$",
+     "steps": [
+      {
+       "math": "",
+       "en": "Exactly one centre.",
+       "ur": "صرف ایک مرکز۔"
+      },
+      {
+       "math": "\\text{Answer: (b) } \\text{centre}",
+       "en": "Choose the option that matches the working.",
+       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+      }
+     ],
+     "answer": "(b) $\\text{centre}$",
+     "book_key": "(b) centre"
+    },
+    {
+     "label": "v",
+     "prompt": "The point where two tangents meet outside a circle forms: (a) $\\text{a semicircle}$ (b) $\\text{a diameter}$ (c) $\\text{a radius}$ (d) $\\text{an angle}$",
+     "steps": [
+      {
+       "math": "",
+       "en": "The two tangents make an angle at that point.",
+       "ur": "دونوں مماس اس نقطے پر زاویہ بناتے ہیں۔"
+      },
+      {
+       "math": "\\text{Answer: (d) } \\text{an angle}",
+       "en": "Choose the option that matches the working.",
+       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+      }
+     ],
+     "answer": "(d) $\\text{an angle}$",
+     "book_key": "(d) an angle"
+    },
+    {
+     "label": "vi",
+     "prompt": "Two equal tangents from a point to a circle can be drawn when the point is ______ the circle. (a) $\\text{on}$ (b) $\\text{inside}$ (c) $\\text{outside}$ (d) $\\text{at centre of}$",
+     "steps": [
+      {
+       "math": "",
+       "en": "Only from an outside point.",
+       "ur": "صرف بیرونی نقطے سے۔"
+      },
+      {
+       "math": "\\text{Answer: (c) } \\text{outside}",
+       "en": "Choose the option that matches the working.",
+       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+      }
+     ],
+     "answer": "(c) $\\text{outside}$",
+     "book_key": "(c) outside"
+    },
+    {
+     "label": "vii",
+     "prompt": "Tangents drawn from a single external point to a circle are: (a) $\\text{unequal in length}$ (b) $\\text{perpendicular to each other}$ (c) $\\text{equal in length}$ (d) $\\text{inside the circle}$",
+     "steps": [
+      {
+       "math": "",
+       "en": "They are equal in length.",
+       "ur": "ان کی لمبائی برابر ہوتی ہے۔"
+      },
+      {
+       "math": "\\text{Answer: (c) } \\text{equal in length}",
+       "en": "Choose the option that matches the working.",
+       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+      }
+     ],
+     "answer": "(c) $\\text{equal in length}$",
+     "book_key": "(c) equal in length"
+    },
+    {
+     "label": "viii",
+     "prompt": "At least how many chords are needed to locate the centre of the circle? (a) $1$ (b) $2$ (c) $3$ (d) $4$",
+     "steps": [
+      {
+       "math": "",
+       "en": "Two perpendicular bisectors meet at the centre.",
+       "ur": "دو عمودی ناصف مرکز پر ملتے ہیں۔"
+      },
+      {
+       "math": "\\text{Answer: (b) } 2",
+       "en": "Choose the option that matches the working.",
+       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+      }
+     ],
+     "answer": "(b) $2$",
+     "book_key": "(b) 2"
+    },
+    {
+     "label": "ix",
+     "prompt": "To draw a tangent at middle point of an arc, first step is to: (a) $\\text{join endpoints of an arc}$ (b) $\\text{draw radius}$ (c) $\\text{draw a line perpendicular to chord}$ (d) $\\text{draw an angle}$",
+     "steps": [
+      {
+       "math": "",
+       "en": "First join the ends of the arc.",
+       "ur": "پہلے قوس کے سرے ملائیں۔"
+      },
+      {
+       "math": "\\text{Answer: (a) } \\text{join endpoints of an arc}",
+       "en": "Choose the option that matches the working.",
+       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+      }
+     ],
+     "answer": "(a) $\\text{join endpoints of an arc}$",
+     "book_key": "(a) join endpoints of an arc"
+    },
+    {
+     "label": "x",
+     "prompt": "The angle between the radius and a tangent at the point of contact is: (a) $30^\\circ$ (b) $60^\\circ$ (c) $90^\\circ$ (d) $120^\\circ$",
+     "steps": [
+      {
+       "math": "",
+       "en": "Radius and tangent are perpendicular.",
+       "ur": "رداس اور مماس عمود ہوتے ہیں۔"
+      },
+      {
+       "math": "\\text{Answer: (c) } 90^\\circ",
+       "en": "Choose the option that matches the working.",
+       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+      }
+     ],
+     "answer": "(c) $90^\\circ$",
+     "book_key": "(c) 90^\\circ"
+    }
+   ],
+   "exercise": "Review 10"
+  },
+  {
+   "id": "c10-rev10-q2",
+   "kind": "review",
+   "number": "2",
+   "page": 0,
+   "question": "Draw a circle of radius 1.4 cm and draw a tangent at point $P$, when $P$ lies on its circumference.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "r = 1.4\\ \\text{cm}",
+       "en": "Draw the circle with centre $O$ and mark $P$ on it.",
+       "ur": "مرکز $O$ سے دائرہ کھینچیں اور اس پر $P$ لگائیں۔",
+       "draw": [
+        {
+         "t": "circle",
+         "c": [
+          40.0,
+          30.0
+         ],
+         "r": 19.6
+        },
+        {
+         "t": "dot",
+         "p": [
+          40.0,
+          30.0
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          41.5,
+          27.5
+         ],
+         "s": "O"
+        },
+        {
+         "t": "dot",
+         "p": [
+          59.6,
+          30.0
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          61.1,
+          27.5
+         ],
+         "s": "P"
+        }
+       ]
+      },
+      {
+       "math": "\\text{Join } OP",
+       "en": "Draw the radius $OP$.",
+       "ur": "رداس $OP$ کھینچیں۔",
+       "draw": [
+        {
+         "t": "line",
+         "p": [
+          40.0,
+          30.0,
+          59.6,
+          30.0
+         ],
+         "dash": false
+        }
+       ]
+      },
+      {
+       "math": "\\text{At } P \\text{ draw } AB \\perp OP",
+       "en": "Construct a line through $P$ perpendicular to $OP$ (bisect the straight angle at $P$).",
+       "ur": "$P$ سے $OP$ پر عمود خط کھینچیں۔",
+       "check": [
+        "(59.599999999999994-40)*0 + (30-30)*1 == 0"
+       ],
+       "draw": [
+        {
+         "t": "line",
+         "p": [
+          59.6,
+          10.0,
+          59.6,
+          50.0
+         ],
+         "dash": false
+        },
+        {
+         "t": "right",
+         "p": [
+          59.6,
+          30.0
+         ],
+         "d": [
+          -1,
+          0,
+          0,
+          -1
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          61.1,
+          9.5
+         ],
+         "s": "A"
+        },
+        {
+         "t": "text",
+         "p": [
+          61.1,
+          45.5
+         ],
+         "s": "B"
+        }
+       ]
+      },
+      {
+       "math": "AB \\text{ is the tangent at } P",
+       "en": "A line perpendicular to the radius at its end touches the circle at exactly one point.",
+       "ur": "رداس کے سرے پر عمود خط دائرے کو صرف ایک نقطے پر چھوتا ہے۔"
+      }
+     ],
+     "answer": "tangent at $P$ perpendicular to $OP$ (radius 1.4 cm)"
+    }
+   ],
+   "exercise": "Review 10",
+   "figure_h": 60
+  },
+  {
+   "id": "c10-rev10-q3",
+   "kind": "review",
+   "number": "3",
+   "page": 0,
+   "question": "Draw a circle of radius 1.2 cm and draw a tangent at point $P$, when $P$ is at a distance of 5 cm from the centre.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "r = 1.2\\ \\text{cm},\\quad OP = 5\\ \\text{cm}",
+       "en": "Draw the circle and the point $P$ outside it; join $OP$.",
+       "ur": "دائرہ اور اس کے باہر نقطہ $P$ لگائیں؛ $OP$ ملائیں۔",
+       "draw": [
+        {
+         "t": "circle",
+         "c": [
+          24.12,
+          30.0
+         ],
+         "r": 14.12
+        },
+        {
+         "t": "dot",
+         "p": [
+          24.12,
+          30.0
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          25.62,
+          27.5
+         ],
+         "s": "O"
+        },
+        {
+         "t": "dot",
+         "p": [
+          82.94,
+          30.0
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          84.44,
+          27.5
+         ],
+         "s": "P"
+        },
+        {
+         "t": "line",
+         "p": [
+          24.12,
+          30.0,
+          82.94,
+          30.0
+         ],
+         "dash": false
+        }
+       ]
+      },
+      {
+       "math": "\\text{Bisect } OP \\text{ at } M",
+       "en": "Construct the perpendicular bisector of $OP$; it cuts $OP$ at its midpoint $M$.",
+       "ur": "$OP$ کا عمودی ناصف بنائیں؛ یہ $OP$ کو $M$ پر کاٹتا ہے۔",
+       "draw": [
+        {
+         "t": "line",
+         "p": [
+          53.53,
+          18.0,
+          53.53,
+          42.0
+         ],
+         "dash": true
+        },
+        {
+         "t": "dot",
+         "p": [
+          53.53,
+          30.0
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          54.53,
+          34.0
+         ],
+         "s": "M"
+        }
+       ]
+      },
+      {
+       "math": "\\text{Circle with centre } M \\text{ and radius } MO",
+       "en": "It cuts the given circle at $T$ and $S$.",
+       "ur": "یہ دیے گئے دائرے کو $T$ اور $S$ پر کاٹتا ہے۔",
+       "draw": [
+        {
+         "t": "arc",
+         "c": [
+          53.53,
+          30.0
+         ],
+         "r": 29.41,
+         "a": [
+          180,
+          360
+         ]
+        },
+        {
+         "t": "arc",
+         "c": [
+          53.53,
+          30.0
+         ],
+         "r": 29.41,
+         "a": [
+          0,
+          180
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          27.51,
+          16.29
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          27.51,
+          43.71
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          27.51,
+          13.29
+         ],
+         "s": "T"
+        },
+        {
+         "t": "text",
+         "p": [
+          27.51,
+          48.71
+         ],
+         "s": "S"
+        }
+       ]
+      },
+      {
+       "math": "\\text{Join } PT \\text{ and } PS",
+       "en": "$\\angle OTP$ is an angle in a semicircle (on diameter $OP$), so $OT \\perp PT$: $PT$ and $PS$ are the tangents.",
+       "ur": "$\\angle OTP$ نصف دائرے کا زاویہ ہے، اس لیے $OT \\perp PT$: $PT$ اور $PS$ مماس ہیں۔",
+       "check": [
+        "Abs((27.50588235294118-24.11764705882353)*(82.94117647058823-27.50588235294118) + (16.294970993492782-30)*(30-16.294970993492782)) < 1e-6"
+       ],
+       "draw": [
+        {
+         "t": "line",
+         "p": [
+          87.1,
+          31.03,
+          23.35,
+          15.27
+         ],
+         "dash": false
+        },
+        {
+         "t": "line",
+         "p": [
+          87.1,
+          28.97,
+          23.35,
+          44.73
+         ],
+         "dash": false
+        }
+       ]
+      },
+      {
+       "math": "PT = PS = \\sqrt{OP^2 - r^2} = \\sqrt{5^2 - 1.2^2} \\approx 4.85\\ \\text{cm}",
+       "en": "Both tangents have the same length (Pythagoras in $OTP$).",
+       "ur": "دونوں مماس برابر ہیں (مثلث $OTP$ میں فیثا غورث)۔",
+       "check": [
+        "Abs(sqrt((5)**2 - (1.2)**2) - 4.85) <= 0.005"
+       ]
+      }
+     ],
+     "answer": "tangents $PT$ and $PS$ from $P$, each $\\approx 4.85$ cm"
+    }
+   ],
+   "exercise": "Review 10",
+   "figure_h": 60
+  },
+  {
+   "id": "c10-rev10-q4",
+   "kind": "review",
+   "number": "4",
+   "page": 0,
+   "question": "Draw a circle of radius 1.7 cm. Draw two tangents that meet an angle of $30^\\circ$.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "r = 1.7\\ \\text{cm}",
+       "en": "Draw the circle with centre $O$.",
+       "ur": "مرکز $O$ سے دائرہ کھینچیں۔",
+       "draw": [
+        {
+         "t": "circle",
+         "c": [
+          68.0,
+          30.0
+         ],
+         "r": 15.3
+        },
+        {
+         "t": "dot",
+         "p": [
+          68.0,
+          30.0
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          69.5,
+          27.5
+         ],
+         "s": "O"
+        }
+       ]
+      },
+      {
+       "math": "\\angle AOB = 180^\\circ - 30^\\circ = 150^\\circ",
+       "en": "In quadrilateral $OAPB$ the angles at $A$ and $B$ are $90^\\circ$, so $\\angle AOB + \\angle APB = 180^\\circ$.",
+       "ur": "چوکور $OAPB$ میں $A$ اور $B$ پر زاویے $90^\\circ$ ہیں، اس لیے $\\angle AOB + \\angle APB = 180^\\circ$۔",
+       "check": [
+        "360 - 90 - 90 - 30 == 150"
+       ],
+       "draw": [
+        {
+         "t": "line",
+         "p": [
+          68.0,
+          30.0,
+          64.04,
+          15.22
+         ],
+         "dash": false
+        },
+        {
+         "t": "line",
+         "p": [
+          68.0,
+          30.0,
+          64.04,
+          44.78
+         ],
+         "dash": false
+        },
+        {
+         "t": "text",
+         "p": [
+          63.04,
+          12.22
+         ],
+         "s": "A"
+        },
+        {
+         "t": "text",
+         "p": [
+          63.04,
+          49.78
+         ],
+         "s": "B"
+        }
+       ]
+      },
+      {
+       "math": "\\text{At } A \\text{ and } B \\text{ draw perpendiculars to } OA, OB",
+       "en": "These are the tangents at $A$ and $B$; let them meet at $P$.",
+       "ur": "یہ $A$ اور $B$ پر مماس ہیں؛ یہ $P$ پر ملتے ہیں۔",
+       "draw": [
+        {
+         "t": "line",
+         "p": [
+          3.37,
+          31.48,
+          69.56,
+          13.74
+         ],
+         "dash": false
+        },
+        {
+         "t": "line",
+         "p": [
+          3.37,
+          28.52,
+          69.56,
+          46.26
+         ],
+         "dash": false
+        },
+        {
+         "t": "dot",
+         "p": [
+          8.89,
+          30.0
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          5.89,
+          27.0
+         ],
+         "s": "P"
+        }
+       ]
+      },
+      {
+       "math": "\\angle APB = 30^\\circ",
+       "en": "Check: the angle between the two tangents.",
+       "ur": "جانچ: دونوں مماسوں کے درمیان زاویہ۔",
+       "check": [
+        "Abs(acos(((64.04006860993144-(8.885339431109017))*(64.04006860993144-(8.885339431109017)) + (15.221334857777256-(30))*(44.77866514222274-(30)))/(sqrt((64.04006860993144-(8.885339431109017))**2+(15.221334857777256-(30))**2)*sqrt((64.04006860993144-(8.885339431109017))**2+(44.77866514222274-(30))**2)))*180/pi - 30) < 1e-6",
+        "Abs((64.04006860993144-68)*((8.885339431109017)-64.04006860993144) + (15.221334857777256-30)*((30)-15.221334857777256)) < 1e-6"
+       ]
+      }
+     ],
+     "answer": "tangents $PA$ and $PB$ meeting at $30^\\circ$ ($\\angle AOB = 150^\\circ$)"
+    }
+   ],
+   "exercise": "Review 10",
+   "figure_h": 60
+  },
+  {
+   "id": "c10-rev10-q5",
+   "kind": "review",
+   "number": "5",
+   "page": 0,
+   "question": "Take a part of the circular track, use chords and perpendicular bisectors to complete a circular track.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "",
+       "en": "Mark three points $A$, $B$, $C$ on the given part of the track.",
+       "ur": "ٹریک کے حصے پر تین نقاط لگائیں۔"
+      },
+      {
+       "math": "\\text{Join } AB \\text{ and } BC",
+       "en": "Join the points to make two chords.",
+       "ur": "نقاط ملا کر دو وتر بنائیں۔",
+       "draw": [
+        {
+         "t": "dot",
+         "p": [
+          28.0,
+          38.0
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          50.0,
+          14.0
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          72.0,
+          38.0
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          29.5,
+          35.5
+         ],
+         "s": "A"
+        },
+        {
+         "t": "text",
+         "p": [
+          51.5,
+          11.5
+         ],
+         "s": "B"
+        },
+        {
+         "t": "text",
+         "p": [
+          73.5,
+          35.5
+         ],
+         "s": "C"
+        },
+        {
+         "t": "line",
+         "p": [
+          28.0,
+          38.0,
+          50.0,
+          14.0
+         ],
+         "dash": false
+        },
+        {
+         "t": "line",
+         "p": [
+          50.0,
+          14.0,
+          72.0,
+          38.0
+         ],
+         "dash": false
+        }
+       ]
+      },
+      {
+       "math": "\\text{Perpendicular bisectors of } AB \\text{ and } BC",
+       "en": "Construct the perpendicular bisector of each chord.",
+       "ur": "ہر وتر کا عمودی ناصف بنائیں۔",
+       "draw": [
+        {
+         "t": "line",
+         "p": [
+          22.78,
+          11.13,
+          55.22,
+          40.87
+         ],
+         "dash": true
+        },
+        {
+         "t": "line",
+         "p": [
+          77.22,
+          11.13,
+          44.78,
+          40.87
+         ],
+         "dash": true
+        }
+       ]
+      },
+      {
+       "math": "\\text{They meet at } O",
+       "en": "$O$ is equally far from all three points.",
+       "ur": "$O$ تینوں نقاط سے برابر فاصلے پر ہے۔",
+       "check": [
+        "Abs(sqrt((28-(50.0))**2 + (38-(36.083333333333336))**2) - sqrt((50-(50.0))**2 + (14-(36.083333333333336))**2)) < 1e-6",
+        "Abs(sqrt((50-(50.0))**2 + (14-(36.083333333333336))**2) - sqrt((72-(50.0))**2 + (38-(36.083333333333336))**2)) < 1e-6"
+       ],
+       "draw": [
+        {
+         "t": "dot",
+         "p": [
+          50.0,
+          36.08
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          51.5,
+          33.58
+         ],
+         "s": "O"
+        }
+       ]
+      },
+      {
+       "math": "\\text{With centre } O \\text{ and radius } OA \\text{ draw the circle}",
+       "en": "The circle passes through all three points.",
+       "ur": "دائرہ تینوں نقاط سے گزرتا ہے۔",
+       "draw": [
+        {
+         "t": "circle",
+         "c": [
+          50.0,
+          36.08
+         ],
+         "r": 22.08
+        }
+       ]
+      }
+     ],
+     "answer": "the circle through the three points (centre where the perpendicular bisectors meet)"
+    }
+   ],
+   "exercise": "Review 10",
+   "figure_h": 60
+  },
+  {
+   "id": "c10-rev10-q6",
+   "kind": "review",
+   "number": "6",
+   "page": 0,
+   "question": "Two decorative fences touch the circular flower bed of radius 2.1 cm and meet outside it at an angle of $30^\\circ$ to form an entrance arch. Draw two tangents to the flower bed from the point where the fences meet at an angle of $30^\\circ$.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "r = 2.1\\ \\text{cm}",
+       "en": "Draw the circle with centre $O$.",
+       "ur": "مرکز $O$ سے دائرہ کھینچیں۔",
+       "draw": [
+        {
+         "t": "circle",
+         "c": [
+          68.0,
+          30.0
+         ],
+         "r": 14.7
+        },
+        {
+         "t": "dot",
+         "p": [
+          68.0,
+          30.0
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          69.5,
+          27.5
+         ],
+         "s": "O"
+        }
+       ]
+      },
+      {
+       "math": "\\angle AOB = 180^\\circ - 30^\\circ = 150^\\circ",
+       "en": "In quadrilateral $OAPB$ the angles at $A$ and $B$ are $90^\\circ$, so $\\angle AOB + \\angle APB = 180^\\circ$.",
+       "ur": "چوکور $OAPB$ میں $A$ اور $B$ پر زاویے $90^\\circ$ ہیں، اس لیے $\\angle AOB + \\angle APB = 180^\\circ$۔",
+       "check": [
+        "360 - 90 - 90 - 30 == 150"
+       ],
+       "draw": [
+        {
+         "t": "line",
+         "p": [
+          68.0,
+          30.0,
+          64.2,
+          15.8
+         ],
+         "dash": false
+        },
+        {
+         "t": "line",
+         "p": [
+          68.0,
+          30.0,
+          64.2,
+          44.2
+         ],
+         "dash": false
+        },
+        {
+         "t": "text",
+         "p": [
+          63.2,
+          12.8
+         ],
+         "s": "A"
+        },
+        {
+         "t": "text",
+         "p": [
+          63.2,
+          49.2
+         ],
+         "s": "B"
+        }
+       ]
+      },
+      {
+       "math": "\\text{At } A \\text{ and } B \\text{ draw perpendiculars to } OA, OB",
+       "en": "These are the tangents at $A$ and $B$; let them meet at $P$.",
+       "ur": "یہ $A$ اور $B$ پر مماس ہیں؛ یہ $P$ پر ملتے ہیں۔",
+       "draw": [
+        {
+         "t": "line",
+         "p": [
+          5.9,
+          31.42,
+          69.49,
+          14.38
+         ],
+         "dash": false
+        },
+        {
+         "t": "line",
+         "p": [
+          5.9,
+          28.58,
+          69.49,
+          45.62
+         ],
+         "dash": false
+        },
+        {
+         "t": "dot",
+         "p": [
+          11.2,
+          30.0
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          8.2,
+          27.0
+         ],
+         "s": "P"
+        }
+       ]
+      },
+      {
+       "math": "\\angle APB = 30^\\circ",
+       "en": "Check: the angle between the two tangents.",
+       "ur": "جانچ: دونوں مماسوں کے درمیان زاویہ۔",
+       "check": [
+        "Abs(acos(((64.19536003699294-(11.203561414202774))*(64.19536003699295-(11.203561414202774)) + (15.800890353550695-(30))*(44.1991096464493-(30)))/(sqrt((64.19536003699294-(11.203561414202774))**2+(15.800890353550695-(30))**2)*sqrt((64.19536003699295-(11.203561414202774))**2+(44.1991096464493-(30))**2)))*180/pi - 30) < 1e-6",
+        "Abs((64.19536003699294-68)*((11.203561414202774)-64.19536003699294) + (15.800890353550695-30)*((30)-15.800890353550695)) < 1e-6"
+       ]
+      }
+     ],
+     "answer": "tangents $PA$ and $PB$ meeting at $30^\\circ$ ($\\angle AOB = 150^\\circ$)"
+    }
+   ],
+   "exercise": "Review 10",
+   "figure_h": 60
+  }
+ ]
+}
