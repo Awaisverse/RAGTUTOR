@@ -56,6 +56,7 @@ import modelsolve  # noqa: E402
 import rag  # noqa: E402
 import remote_models  # noqa: E402
 import solvers  # noqa: E402
+import engine10  # noqa: E402
 import solvers10  # noqa: E402
 import tutor_live  # noqa: E402
 import vertex_models  # noqa: E402
@@ -67,7 +68,7 @@ app = Flask(__name__, static_folder=str(ROOT / "public"), static_url_path="")
 
 
 CLASSES = ("9", "10")
-ENGINES = {"9": solvers.solve, "10": solvers10.solve}      # each class has its own engine: Class 9's would read i as an unknown
+ENGINES = {"9": solvers.solve, "10": engine10.solve}       # each class has its own engine (Class 10: all 12 units); Class 9's would read i as an unknown
 _DATA = {}
 
 
@@ -211,6 +212,41 @@ def only_part(item, index):
     return {**cut, "id": item["id"], "part_label": label}
 
 
+_RELATION = re.compile(r"<=|>=|≤|≥|\\le\b|\\ge\b|\\leq|\\geq|<|>|=")
+_STOP = {"the", "and", "find", "solve", "following", "value", "values", "of", "for", "with", "that", "this", "what", "are", "is", "if", "then",
+         "show", "write", "given", "use", "using", "by", "from", "into", "each", "its", "their", "please", "question", "answer"}
+
+
+_QUALIFIERS = {"most", "least", "exactly", "not", "neither", "nor", "greater", "less", "more", "fewer", "both", "either", "without",
+               "replacement", "odd", "even", "prime", "sum", "product", "difference", "same", "consecutive", "inverse", "transpose",
+               "determinant", "adjoint", "conjugate", "modulus", "reciprocal", "additive", "multiplicative"}
+
+
+def _relations(text):
+    rel = {"≤": "<=", "\\le": "<=", "\\leq": "<=", "≥": ">=", "\\ge": ">=", "\\geq": ">="}
+    return [rel.get(m, m) for m in _RELATION.findall(str(text))]
+
+
+def _content_words(text):
+    t = re.sub(r"\$[^$]*\$|\\[a-zA-Z]+", " ", mathtext.clean(text))
+    return {w for w in re.findall(r"[a-z]{3,}", t) if w not in _STOP}
+
+
+def really_same(question, item, part):
+    """A stored question is offered as THE answer only when, beyond equal numbers (mathtext.same_question), the relation signs agree
+    (x^2+x-6 >= 0 is not x^2+x-6 < 0) and the student's own words appear in the stored question (a dice question is never a matrix MCQ)."""
+    stored = item["question"] if part is None else item["question"] + " " + (item["parts"][part].get("prompt") or "")
+    stored_rel = _relations(item["parts"][part].get("prompt") if part is not None and item["parts"][part].get("prompt") else item["question"])
+    if _relations(question) != stored_rel:
+        return False
+    asked, have = _content_words(question), _content_words(stored)
+    if (asked & _QUALIFIERS) != (have & _QUALIFIERS):       # 'at most 2 heads' is not 'at least one head'
+        return False
+    if not asked:
+        return True
+    return len(asked & have) >= 0.6 * len(asked)
+
+
 def resolve(question, focus_part=None, klass="9", _rewritten=False):
     """Answer THIS question. Order: an exercise reference (shown for confirmation), a stored solution only if it is the same
     question, then the class's solver engine, then (when the question cannot be read as typed) Gemini rewrites it into the
@@ -222,7 +258,7 @@ def resolve(question, focus_part=None, klass="9", _rewritten=False):
         return lookup_reference(ref, klass)
     for it in data(klass)["items"]:                                   # 1. exactly a stored question (same numbers, same instruction)
         same, part = mathtext.same_question(q, it)
-        if same:                                       # a part asked alone is answered alone; the whole question shows every part
+        if same and really_same(q, it, part):          # a part asked alone is answered alone; the whole question shows every part
             return {"mode": "book", "item": only_part(it, part), "part_index": 0}
     solved = ENGINES[klass](q)                         # 2. the solver engine: reads the numbers and solves this question
     if solved:

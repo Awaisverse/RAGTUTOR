@@ -37,6 +37,8 @@ def nice(e):
     n, d = sp.factor(n), sp.factor(d)
     if d.could_extract_minus_sign() and not n.could_extract_minus_sign():
         n, d = -n, -d
+    if n.could_extract_minus_sign() and not n.is_Add and d.is_Mul and sum(isinstance(f_, sp.Add) for f_ in d.args) > 1:
+        return rf"-\frac{{{F(-n)}}}{{{F(d)}}}"                      # -2/((x - 1)(x + 1)), not 2/((-x - 1)(x - 1))
     if n.could_extract_minus_sign() and d.is_Mul and not any(isinstance(a, sp.Add) for a in sp.preorder_traversal(n)):
         # move the minus into a bracket of the denominator: -3b^2c / (20(b - 1))  ->  3b^2c / (20(1 - b))
         fs = list(d.args)
