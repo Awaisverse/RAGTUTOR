@@ -1,0 +1,1831 @@
+{
+ "unit": 8,
+ "title": "Chords and Arcs of a Circle",
+ "title_ur": "دائرے کے وتر اور قوسیں",
+ "class": 10,
+ "items": [
+  {
+   "id": "c10-ex8.1-q1",
+   "kind": "exercise",
+   "number": "1",
+   "page": 0,
+   "question": "Calculate the length of a chord which stands at a distance of 5 cm from the centre of a circle whose radius is 13 cm.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "",
+       "en": "Draw $OM$ perpendicular to the chord: it bisects the chord, and $OM$, half the chord and the radius form a right triangle.",
+       "ur": "$OM$ کو وتر پر عمود کھینچیں: یہ وتر کی تنصیف کرتا ہے؛ $OM$، آدھا وتر اور رداس قائمہ مثلث بناتے ہیں۔",
+       "draw": [
+        {
+         "t": "circle",
+         "c": [
+          50,
+          30
+         ],
+         "r": 25
+        },
+        {
+         "t": "dot",
+         "p": [
+          50,
+          30
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          51.5,
+          28
+         ],
+         "s": "O"
+        },
+        {
+         "t": "line",
+         "p": [
+          26.923076923076923,
+          39.61538461538461,
+          73.07692307692308,
+          39.61538461538461
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          22.923076923076923,
+          40.61538461538461
+         ],
+         "s": "A"
+        },
+        {
+         "t": "text",
+         "p": [
+          74.57692307692308,
+          40.61538461538461
+         ],
+         "s": "B"
+        },
+        {
+         "t": "line",
+         "p": [
+          50,
+          30,
+          50,
+          39.61538461538461
+         ],
+         "dash": true
+        },
+        {
+         "t": "right",
+         "p": [
+          50,
+          39.61538461538461
+         ],
+         "d": [
+          1,
+          0,
+          0,
+          -1
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          51.5,
+          43.61538461538461
+         ],
+         "s": "M"
+        },
+        {
+         "t": "line",
+         "p": [
+          50,
+          30,
+          73.07692307692308,
+          39.61538461538461
+         ]
+        }
+       ]
+      },
+      {
+       "math": "AM = \\sqrt{r^2 - d^2} = \\sqrt{13^2 - 5^2} = \\sqrt{144} = 12",
+       "en": "Pythagoras in the right triangle $OMA$: $r^2 = OM^2 + AM^2$.",
+       "ur": "قائمہ مثلث $OMA$ میں فیثا غورث: $r^2 = OM^2 + AM^2$۔",
+       "check": [
+        "sqrt(13**2 - 5**2) == 12"
+       ]
+      },
+      {
+       "math": "\\text{Chord} = 2 \\times AM = 2 \\times 12 = 24\\ \\text{cm}",
+       "en": "The perpendicular bisects the chord.",
+       "ur": "عمود وتر کی تنصیف کرتا ہے۔",
+       "check": [
+        "2*sqrt(13**2 - 5**2) == 24"
+       ]
+      }
+     ],
+     "answer": "$24$ cm",
+     "book_key": "24 cm"
+    }
+   ],
+   "exercise": "8.1",
+   "figure_h": 60
+  },
+  {
+   "id": "c10-ex8.1-q2",
+   "kind": "exercise",
+   "number": "2",
+   "page": 0,
+   "question": "In construction, three steel rods are fixed at points $A$, $B$, and $C$ (not in a straight line). A circular hoop needs to pass through all three. How many hoops can be used?",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "\\text{Number of hoops} = 1",
+       "en": "Three non-collinear points determine exactly one circle (its centre is where the perpendicular bisectors meet).",
+       "ur": "تین غیر ہم خط نقاط سے صرف ایک دائرہ گزرتا ہے۔"
+      }
+     ],
+     "answer": "1 hoop",
+     "book_key": "1 hoop"
+    }
+   ],
+   "exercise": "8.1"
+  },
+  {
+   "id": "c10-ex8.1-q3",
+   "kind": "exercise",
+   "number": "3",
+   "page": 0,
+   "question": "In a park, lamp posts are 14 m apart on the edge of a circular part of radius 10 m as shown in figure. Find the distance of the chord from the centre of the park.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "",
+       "en": "Draw $OM$ perpendicular to the chord: it bisects the chord, and $OM$, half the chord and the radius form a right triangle.",
+       "ur": "$OM$ کو وتر پر عمود کھینچیں: یہ وتر کی تنصیف کرتا ہے؛ $OM$، آدھا وتر اور رداس قائمہ مثلث بناتے ہیں۔",
+       "draw": [
+        {
+         "t": "circle",
+         "c": [
+          50,
+          30
+         ],
+         "r": 25
+        },
+        {
+         "t": "dot",
+         "p": [
+          50,
+          30
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          51.5,
+          28
+         ],
+         "s": "O"
+        },
+        {
+         "t": "line",
+         "p": [
+          32.5,
+          47.85357107135712,
+          67.5,
+          47.85357107135712
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          28.5,
+          48.85357107135712
+         ],
+         "s": "A"
+        },
+        {
+         "t": "text",
+         "p": [
+          69.0,
+          48.85357107135712
+         ],
+         "s": "B"
+        },
+        {
+         "t": "line",
+         "p": [
+          50,
+          30,
+          50,
+          47.85357107135712
+         ],
+         "dash": true
+        },
+        {
+         "t": "right",
+         "p": [
+          50,
+          47.85357107135712
+         ],
+         "d": [
+          1,
+          0,
+          0,
+          -1
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          51.5,
+          51.85357107135712
+         ],
+         "s": "M"
+        },
+        {
+         "t": "line",
+         "p": [
+          50,
+          30,
+          67.5,
+          47.85357107135712
+         ]
+        }
+       ]
+      },
+      {
+       "math": "d = \\sqrt{r^2 - \\left(\\frac{\\text{chord}}{2}\\right)^2} = \\sqrt{10^2 - 7^2} = \\sqrt{51} \\approx 7.14\\ \\text{m}",
+       "en": "Pythagoras in the right triangle $OMA$: $r^2 = OM^2 + AM^2$.",
+       "ur": "قائمہ مثلث $OMA$ میں فیثا غورث: $r^2 = OM^2 + AM^2$۔",
+       "check": [
+        "10**2 - 7**2 == 51",
+        "Abs((sqrt(51)) - 7.14) <= 0.0050000010000000004"
+       ]
+      }
+     ],
+     "answer": "$\\sqrt{51} \\approx 7.14$ m",
+     "book_key": "\\sqrt{51}\\approx 7.14 m"
+    }
+   ],
+   "exercise": "8.1",
+   "figure_h": 60
+  },
+  {
+   "id": "c10-ex8.1-q4",
+   "kind": "exercise",
+   "number": "4",
+   "page": 0,
+   "question": "In a circle, chords $AB$ and $CD$ both have length 10 cm. If the distance from the centre to $\\overline{AB}$ is 6 cm, what is the distance from centre to $\\overline{CD}$?",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "d_{CD} = d_{AB} = 6\\ \\text{cm}",
+       "en": "Equal chords of a circle are equidistant from the centre.",
+       "ur": "دائرے کے برابر وتر مرکز سے برابر فاصلے پر ہوتے ہیں۔"
+      }
+     ],
+     "answer": "$6$ cm",
+     "book_key": "6 cm"
+    }
+   ],
+   "exercise": "8.1"
+  },
+  {
+   "id": "c10-ex8.1-q5",
+   "kind": "exercise",
+   "number": "5",
+   "page": 0,
+   "question": "Two holes $A$ and $B$ are drilled 12 cm apart on a circular tabletop of radius 10 cm. Find the perpendicular distance from the centre to $AB$.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "",
+       "en": "Draw $OM$ perpendicular to the chord: it bisects the chord, and $OM$, half the chord and the radius form a right triangle.",
+       "ur": "$OM$ کو وتر پر عمود کھینچیں: یہ وتر کی تنصیف کرتا ہے؛ $OM$، آدھا وتر اور رداس قائمہ مثلث بناتے ہیں۔",
+       "draw": [
+        {
+         "t": "circle",
+         "c": [
+          50,
+          30
+         ],
+         "r": 25
+        },
+        {
+         "t": "dot",
+         "p": [
+          50,
+          30
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          51.5,
+          28
+         ],
+         "s": "O"
+        },
+        {
+         "t": "line",
+         "p": [
+          35.0,
+          50.0,
+          65.0,
+          50.0
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          31.0,
+          51.0
+         ],
+         "s": "A"
+        },
+        {
+         "t": "text",
+         "p": [
+          66.5,
+          51.0
+         ],
+         "s": "B"
+        },
+        {
+         "t": "line",
+         "p": [
+          50,
+          30,
+          50,
+          50.0
+         ],
+         "dash": true
+        },
+        {
+         "t": "right",
+         "p": [
+          50,
+          50.0
+         ],
+         "d": [
+          1,
+          0,
+          0,
+          -1
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          51.5,
+          54.0
+         ],
+         "s": "M"
+        },
+        {
+         "t": "line",
+         "p": [
+          50,
+          30,
+          65.0,
+          50.0
+         ]
+        }
+       ]
+      },
+      {
+       "math": "d = \\sqrt{10^2 - 6^2} = \\sqrt{100 - 36} = \\sqrt{64} = 8\\ \\text{cm}",
+       "en": "Pythagoras in the right triangle $OMA$: $r^2 = OM^2 + AM^2$.",
+       "ur": "قائمہ مثلث $OMA$ میں فیثا غورث: $r^2 = OM^2 + AM^2$۔",
+       "check": [
+        "sqrt(10**2 - 6**2) == 8"
+       ]
+      }
+     ],
+     "answer": "$8$ cm",
+     "book_key": "8 cm"
+    }
+   ],
+   "exercise": "8.1",
+   "figure_h": 60
+  },
+  {
+   "id": "c10-ex8.1-q6",
+   "kind": "exercise",
+   "number": "6",
+   "page": 0,
+   "question": "A chord 8 cm long is at a distance of 3 cm from the centre. Calculate the radius of the circle.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "",
+       "en": "Draw $OM$ perpendicular to the chord: it bisects the chord, and $OM$, half the chord and the radius form a right triangle.",
+       "ur": "$OM$ کو وتر پر عمود کھینچیں: یہ وتر کی تنصیف کرتا ہے؛ $OM$، آدھا وتر اور رداس قائمہ مثلث بناتے ہیں۔",
+       "draw": [
+        {
+         "t": "circle",
+         "c": [
+          50,
+          30
+         ],
+         "r": 25
+        },
+        {
+         "t": "dot",
+         "p": [
+          50,
+          30
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          51.5,
+          28
+         ],
+         "s": "O"
+        },
+        {
+         "t": "line",
+         "p": [
+          30.0,
+          45.0,
+          70.0,
+          45.0
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          26.0,
+          46.0
+         ],
+         "s": "A"
+        },
+        {
+         "t": "text",
+         "p": [
+          71.5,
+          46.0
+         ],
+         "s": "B"
+        },
+        {
+         "t": "line",
+         "p": [
+          50,
+          30,
+          50,
+          45.0
+         ],
+         "dash": true
+        },
+        {
+         "t": "right",
+         "p": [
+          50,
+          45.0
+         ],
+         "d": [
+          1,
+          0,
+          0,
+          -1
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          51.5,
+          49.0
+         ],
+         "s": "M"
+        },
+        {
+         "t": "line",
+         "p": [
+          50,
+          30,
+          70.0,
+          45.0
+         ]
+        }
+       ]
+      },
+      {
+       "math": "r = \\sqrt{d^2 + \\left(\\frac{\\text{chord}}{2}\\right)^2} = \\sqrt{3^2 + 4^2} = \\sqrt{25} = 5\\ \\text{cm}",
+       "en": "Pythagoras in the right triangle $OMA$: $r^2 = OM^2 + AM^2$.",
+       "ur": "قائمہ مثلث $OMA$ میں فیثا غورث: $r^2 = OM^2 + AM^2$۔",
+       "check": [
+        "sqrt(3**2 + 4**2) == 5"
+       ]
+      }
+     ],
+     "answer": "$5$ cm",
+     "book_key": "5 cm"
+    }
+   ],
+   "exercise": "8.1",
+   "figure_h": 60
+  },
+  {
+   "id": "c10-ex8.1-q7",
+   "kind": "exercise",
+   "number": "7",
+   "page": 0,
+   "question": "In the given figure, $m\\overline{CD} = 121$ units and $m\\overline{BC} = 3x$ units. Find the value of $x$.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "m\\overline{BC} = \\frac{1}{2}m\\overline{CD} \\Rightarrow 3x = \\frac{1}{2}(121)",
+       "en": "In the figure $AB$ (through the centre) is perpendicular to the chord $CD$ at $B$, so $B$ is the midpoint of $CD$.",
+       "ur": "شکل میں مرکز سے گزرنے والا خط وتر $CD$ پر $B$ پر عمود ہے، اس لیے $B$ وتر کا وسطی نقطہ ہے۔"
+      },
+      {
+       "math": "x = \\frac{121}{6} \\approx 20.17\\ \\text{units}",
+       "en": "Solve.",
+       "ur": "حل کریں۔",
+       "check": [
+        "3*R(121,6) == R(121,2)",
+        "Abs((R(121,6)) - 20.17) <= 0.0050000010000000004"
+       ]
+      }
+     ],
+     "answer": "$x = \\frac{121}{6} \\approx 20.17$",
+     "book_key": "x=\\frac{121}{6}\\approx 20.17"
+    }
+   ],
+   "exercise": "8.1"
+  },
+  {
+   "id": "c10-ex8.1-q8",
+   "kind": "exercise",
+   "number": "8",
+   "page": 0,
+   "question": "In a circle with centre at $O$, the perpendicular distance of the each chord $PQ$ and $RS$ from the centre is 6 cm. If the length of chord $PQ$ is 18 cm, find the length of the other chord.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "",
+       "en": "Draw $OM$ perpendicular to the chord: it bisects the chord, and $OM$, half the chord and the radius form a right triangle.",
+       "ur": "$OM$ کو وتر پر عمود کھینچیں: یہ وتر کی تنصیف کرتا ہے؛ $OM$، آدھا وتر اور رداس قائمہ مثلث بناتے ہیں۔",
+       "draw": [
+        {
+         "t": "circle",
+         "c": [
+          50,
+          30
+         ],
+         "r": 25
+        },
+        {
+         "t": "dot",
+         "p": [
+          50,
+          30
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          51.5,
+          28
+         ],
+         "s": "O"
+        },
+        {
+         "t": "line",
+         "p": [
+          29.25,
+          43.94408476738434,
+          70.75,
+          43.94408476738434
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          25.25,
+          44.94408476738434
+         ],
+         "s": "A"
+        },
+        {
+         "t": "text",
+         "p": [
+          72.25,
+          44.94408476738434
+         ],
+         "s": "B"
+        },
+        {
+         "t": "line",
+         "p": [
+          50,
+          30,
+          50,
+          43.94408476738434
+         ],
+         "dash": true
+        },
+        {
+         "t": "right",
+         "p": [
+          50,
+          43.94408476738434
+         ],
+         "d": [
+          1,
+          0,
+          0,
+          -1
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          51.5,
+          47.94408476738434
+         ],
+         "s": "M"
+        },
+        {
+         "t": "line",
+         "p": [
+          50,
+          30,
+          70.75,
+          43.94408476738434
+         ]
+        }
+       ]
+      },
+      {
+       "math": "r^2 = d^2 + \\left(\\frac{PQ}{2}\\right)^2 = 6^2 + 9^2 = 117",
+       "en": "Pythagoras in the right triangle $OMA$: $r^2 = OM^2 + AM^2$.",
+       "ur": "قائمہ مثلث $OMA$ میں فیثا غورث: $r^2 = OM^2 + AM^2$۔",
+       "check": [
+        "6**2 + 9**2 == 117"
+       ]
+      },
+      {
+       "math": "RS = 2\\sqrt{r^2 - d^2} = 2\\sqrt{117 - 36} = 2\\sqrt{81} = 18\\ \\text{cm}",
+       "en": "Chords at the same distance from the centre are equal.",
+       "ur": "مرکز سے برابر فاصلے پر وتر برابر ہوتے ہیں۔",
+       "check": [
+        "2*sqrt(117 - 36) == 18"
+       ]
+      }
+     ],
+     "answer": "$18$ cm",
+     "book_key": "18 cm"
+    }
+   ],
+   "exercise": "8.1",
+   "figure_h": 60
+  },
+  {
+   "id": "c10-ex8.1-q9",
+   "kind": "exercise",
+   "number": "9",
+   "page": 0,
+   "question": "A line from the centre of a circle cuts a 10 cm chord at right angle where radius of the circle is 6 cm. What is the length from the centre to the chord?",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "",
+       "en": "Draw $OM$ perpendicular to the chord: it bisects the chord, and $OM$, half the chord and the radius form a right triangle.",
+       "ur": "$OM$ کو وتر پر عمود کھینچیں: یہ وتر کی تنصیف کرتا ہے؛ $OM$، آدھا وتر اور رداس قائمہ مثلث بناتے ہیں۔",
+       "draw": [
+        {
+         "t": "circle",
+         "c": [
+          50,
+          30
+         ],
+         "r": 25
+        },
+        {
+         "t": "dot",
+         "p": [
+          50,
+          30
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          51.5,
+          28
+         ],
+         "s": "O"
+        },
+        {
+         "t": "line",
+         "p": [
+          29.166666666666664,
+          43.819269959814164,
+          70.83333333333334,
+          43.819269959814164
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          25.166666666666664,
+          44.819269959814164
+         ],
+         "s": "A"
+        },
+        {
+         "t": "text",
+         "p": [
+          72.33333333333334,
+          44.819269959814164
+         ],
+         "s": "B"
+        },
+        {
+         "t": "line",
+         "p": [
+          50,
+          30,
+          50,
+          43.819269959814164
+         ],
+         "dash": true
+        },
+        {
+         "t": "right",
+         "p": [
+          50,
+          43.819269959814164
+         ],
+         "d": [
+          1,
+          0,
+          0,
+          -1
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          51.5,
+          47.819269959814164
+         ],
+         "s": "M"
+        },
+        {
+         "t": "line",
+         "p": [
+          50,
+          30,
+          70.83333333333334,
+          43.819269959814164
+         ]
+        }
+       ]
+      },
+      {
+       "math": "d = \\sqrt{6^2 - 5^2} = \\sqrt{36 - 25} = \\sqrt{11} \\approx 3.32\\ \\text{cm}",
+       "en": "Pythagoras in the right triangle $OMA$: $r^2 = OM^2 + AM^2$.",
+       "ur": "قائمہ مثلث $OMA$ میں فیثا غورث: $r^2 = OM^2 + AM^2$۔",
+       "check": [
+        "6**2 - 5**2 == 11",
+        "Abs((sqrt(11)) - 3.32) <= 0.0050000010000000004"
+       ]
+      }
+     ],
+     "answer": "$\\sqrt{11} \\approx 3.32$ cm",
+     "book_key": "\\sqrt{11}\\approx 3.32 cm"
+    }
+   ],
+   "exercise": "8.1",
+   "figure_h": 60
+  },
+  {
+   "id": "c10-ex8.1-q10",
+   "kind": "exercise",
+   "number": "10",
+   "page": 0,
+   "question": "In a circle, a perpendicular is drawn from the centre to chord $AB$. If $m\\overline{AB} = 12$ cm, what is the length of each segment after bisecting?",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "\\frac{12}{2} = 6\\ \\text{cm}",
+       "en": "The perpendicular from the centre bisects the chord.",
+       "ur": "مرکز سے عمود وتر کی تنصیف کرتا ہے۔",
+       "check": [
+        "12/2 == 6"
+       ]
+      }
+     ],
+     "answer": "$6$ cm",
+     "book_key": "6 cm"
+    }
+   ],
+   "exercise": "8.1"
+  },
+  {
+   "id": "c10-ex8.2-q1",
+   "kind": "exercise",
+   "number": "1",
+   "page": 0,
+   "question": "In the given figure, if $m\\overline{PQ} = m\\overline{QR} = m\\overline{RS} = m\\overline{ST}$ and $m\\angle POT = 70^\\circ$, then find the value of $x$ ($x = m\\angle TOR$, the angle at the centre over the two chords $TS$ and $SR$).",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "\\angle POQ = \\angle QOR = \\angle ROS = \\angle SOT = \\theta",
+       "en": "Equal chords subtend equal central angles.",
+       "ur": "برابر وتر مرکز پر برابر زاویے بناتے ہیں۔"
+      },
+      {
+       "math": "70^\\circ + 4\\theta = 360^\\circ \\Rightarrow 4\\theta = 290^\\circ \\Rightarrow \\theta = 72.5^\\circ",
+       "en": "The angles round the centre add to $360^\\circ$.",
+       "ur": "مرکز کے گرد زاویوں کا مجموعہ $360^\\circ$ ہے۔",
+       "check": [
+        "(360 - 70)/R(4) == R(145,2)"
+       ]
+      },
+      {
+       "math": "x = \\angle TOS + \\angle SOR = 2\\theta = 145^\\circ",
+       "en": "$x$ covers two of the equal angles.",
+       "ur": "$x$ دو برابر زاویوں پر مشتمل ہے۔",
+       "check": [
+        "2*R(145,2) == 145"
+       ]
+      }
+     ],
+     "answer": "$x = 145^\\circ$",
+     "book_key": "x=145"
+    }
+   ],
+   "exercise": "8.2"
+  },
+  {
+   "id": "c10-ex8.2-q2",
+   "kind": "exercise",
+   "number": "2",
+   "page": 0,
+   "question": "In the given figure, find the values of $x$ and $y$ ($\\angle AOB = 80^\\circ$ with arc $AB = 6$ cm, $\\angle BOC = x$ with arc $BC = 2$ cm, $\\angle COD = 52^\\circ$ with arc $CD = y$ cm).",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "\\frac{\\text{arc}}{\\text{angle}} \\text{ is the same for every arc of the circle}",
+       "en": "In one circle, arcs are proportional to their central angles.",
+       "ur": "ایک ہی دائرے میں قوسیں اپنے مرکزی زاویوں کے متناسب ہوتی ہیں۔"
+      },
+      {
+       "math": "\\frac{6}{80} = \\frac{2}{x} \\Rightarrow x = \\frac{80 \\times 2}{6} \\approx 26.67^\\circ",
+       "en": "Arc $BC$.",
+       "ur": "قوس $BC$۔",
+       "check": [
+        "Abs((R(160,6)) - 26.67) <= 0.0050000010000000004"
+       ]
+      },
+      {
+       "math": "\\frac{6}{80} = \\frac{y}{52} \\Rightarrow y = \\frac{6 \\times 52}{80} = 3.9\\ \\text{cm}",
+       "en": "Arc $CD$.",
+       "ur": "قوس $CD$۔",
+       "check": [
+        "R(6*52,80) == R(39,10)"
+       ]
+      }
+     ],
+     "answer": "$x \\approx 26.67^\\circ,\\ y = 3.9$ cm",
+     "key_note": {
+      "en": "The reference notes find $x = 26.67^\\circ$ and $y = 3.9$ cm in the working but box $x = 77^\\circ$, $y = 6$ cm; the box does not follow from the working.",
+      "ur": "حوالہ نوٹس میں حل سے $x = 26.67^\\circ$ اور $y = 3.9$ آتا ہے مگر جواب $77^\\circ$ اور 6 لکھا ہے۔"
+     },
+     "book_key": "x=77, y=6 cm"
+    }
+   ],
+   "exercise": "8.2"
+  },
+  {
+   "id": "c10-ex8.2-q3",
+   "kind": "exercise",
+   "number": "3",
+   "page": 0,
+   "question": "Find the values of $x$ and $y$ in the given figure, such that $m\\widehat{AB} = m\\widehat{BD}$ (arc $AB = 3$ cm, $\\angle AOB = 140^\\circ$ as in the notes, $x = \\angle AOD$, arc $BD = y$ cm).",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "m\\widehat{AB} = m\\widehat{BD} \\Rightarrow \\angle AOB = \\angle BOD = 140^\\circ",
+       "en": "Equal arcs subtend equal central angles.",
+       "ur": "برابر قوسیں مرکز پر برابر زاویے بناتی ہیں۔"
+      },
+      {
+       "math": "x + 140^\\circ + 140^\\circ = 360^\\circ \\Rightarrow x = 80^\\circ",
+       "en": "Angles round the centre.",
+       "ur": "مرکز کے گرد زاویے۔",
+       "check": [
+        "360 - 280 == 80"
+       ]
+      },
+      {
+       "math": "y = \\text{arc } BD = \\text{arc } AB = 3\\ \\text{cm}",
+       "en": "Equal central angles subtend equal arcs.",
+       "ur": "برابر مرکزی زاویے برابر قوسیں بناتے ہیں۔"
+      }
+     ],
+     "answer": "$x = 80^\\circ,\\ y = 3$ cm",
+     "key_note": {
+      "en": "The reference notes' working gives $x = 80^\\circ$ and $y = 3$ cm but the boxed answer says $x = 28^\\circ$, $y = 4$ cm.",
+      "ur": "حوالہ نوٹس کے حل سے $x = 80^\\circ$ اور $y = 3$ آتا ہے مگر جواب $28^\\circ$ اور 4 لکھا ہے۔"
+     },
+     "book_key": "x=28, y=4 cm"
+    }
+   ],
+   "exercise": "8.2"
+  },
+  {
+   "id": "c10-ex8.2-q4",
+   "kind": "exercise",
+   "number": "4",
+   "page": 0,
+   "question": "Two congruent arcs in a circular track subtend angles of $60^\\circ$ each at the centre. If the length of one chord of the circle is 10 metres, what is the length of other chord?",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "\\text{Other chord} = 10\\ \\text{m}",
+       "en": "Congruent arcs (equal central angles) subtend equal chords.",
+       "ur": "متماثل قوسیں برابر وتر بناتی ہیں۔"
+      }
+     ],
+     "answer": "$10$ m",
+     "book_key": "10 m"
+    }
+   ],
+   "exercise": "8.2"
+  },
+  {
+   "id": "c10-ex8.2-q5",
+   "kind": "exercise",
+   "number": "5",
+   "page": 0,
+   "question": "In a circular fountain, two water jets spray along arcs of equal length. If chord $PQ$ is 12 metres, what is the length of chord $RS$ for the congruent arc $RS$?",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "\\widehat{RS} \\cong \\widehat{PQ} \\Rightarrow RS = PQ = 12\\ \\text{m}",
+       "en": "Equal arcs subtend equal chords.",
+       "ur": "برابر قوسیں برابر وتر بناتی ہیں۔"
+      }
+     ],
+     "answer": "$12$ m",
+     "book_key": "12 m"
+    }
+   ],
+   "exercise": "8.2"
+  },
+  {
+   "id": "c10-ex8.2-q6",
+   "kind": "exercise",
+   "number": "6",
+   "page": 0,
+   "question": "In a circular park, two walkways $\\overline{AB}$ and $\\overline{CD}$ are both straight paths (chords) of length 14 metres. What can be said about the minor arcs subtended by these walkways?",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "AB = CD \\Rightarrow \\widehat{AB} \\cong \\widehat{CD}",
+       "en": "Equal chords subtend equal (minor) arcs.",
+       "ur": "برابر وتر برابر (چھوٹی) قوسیں بناتے ہیں۔"
+      }
+     ],
+     "answer": "the minor arcs are congruent",
+     "book_key": "the minor arcs are congruent"
+    }
+   ],
+   "exercise": "8.2"
+  },
+  {
+   "id": "c10-ex8.2-q7",
+   "kind": "exercise",
+   "number": "7",
+   "page": 0,
+   "question": "In two congruent circular clocks, the minute hand points from the centre to the 3 on both. A decorative string connects 3 to 9 on both clocks. Are the arcs from 3 to 9 on both clocks congruent?",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "\\text{Yes}",
+       "en": "Both clocks are congruent circles and 3, 9 are in corresponding positions (each arc is half the circle).",
+       "ur": "دونوں گھڑیاں متماثل دائرے ہیں اور 3 اور 9 ایک جیسی جگہوں پر ہیں۔"
+      }
+     ],
+     "answer": "yes, the arcs are congruent",
+     "book_key": "yes, the arcs are congruent"
+    }
+   ],
+   "exercise": "8.2"
+  },
+  {
+   "id": "c10-rev8-q1",
+   "kind": "review",
+   "number": "1",
+   "page": 0,
+   "question": "Four possible answers are given for the following questions. Choose the correct answer.",
+   "parts": [
+    {
+     "label": "i",
+     "prompt": "Distance of a point on the circumference to the centre of the circle is called: (a) $\\text{radius}$ (b) $\\text{arc}$ (c) $\\text{chord}$ (d) $\\text{tangent}$",
+     "steps": [
+      {
+       "math": "",
+       "en": "Centre to circumference is a radius.",
+       "ur": "مرکز سے محیط تک کا فاصلہ رداس ہے۔"
+      },
+      {
+       "math": "\\text{Answer: (a) } \\text{radius}",
+       "en": "Choose the option that matches the working.",
+       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+      }
+     ],
+     "answer": "(a) $\\text{radius}$",
+     "book_key": "(a) radius"
+    },
+    {
+     "label": "ii",
+     "prompt": "Radii of same circles are: (a) $\\text{all unequal}$ (b) $\\text{all equal}$ (c) $\\text{half of each chord}$ (d) $\\text{double of the diameter}$",
+     "steps": [
+      {
+       "math": "",
+       "en": "Every radius of a circle has the same length.",
+       "ur": "دائرے کے سب رداس برابر ہوتے ہیں۔"
+      },
+      {
+       "math": "\\text{Answer: (b) } \\text{all equal}",
+       "en": "Choose the option that matches the working.",
+       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+      }
+     ],
+     "answer": "(b) $\\text{all equal}$",
+     "book_key": "(b) all equal"
+    },
+    {
+     "label": "iii",
+     "prompt": "The boundary of the circle is called: (a) $\\text{chord}$ (b) $\\text{segment}$ (c) $\\text{circumference}$ (d) $\\text{diameter}$",
+     "steps": [
+      {
+       "math": "",
+       "en": "The boundary is the circumference.",
+       "ur": "حد محیط کہلاتی ہے۔"
+      },
+      {
+       "math": "\\text{Answer: (c) } \\text{circumference}",
+       "en": "Choose the option that matches the working.",
+       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+      }
+     ],
+     "answer": "(c) $\\text{circumference}$",
+     "book_key": "(c) circumference"
+    },
+    {
+     "label": "iv",
+     "prompt": "Any part of a circumference is called: (a) $\\text{chord}$ (b) $\\text{diameter}$ (c) $\\text{radius}$ (d) $\\text{arc}$",
+     "steps": [
+      {
+       "math": "",
+       "en": "Part of the circumference is an arc.",
+       "ur": "محیط کا حصہ قوس ہے۔"
+      },
+      {
+       "math": "\\text{Answer: (d) } \\text{arc}",
+       "en": "Choose the option that matches the working.",
+       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+      }
+     ],
+     "answer": "(d) $\\text{arc}$",
+     "book_key": "(d) arc"
+    },
+    {
+     "label": "v",
+     "prompt": "A chord passing through the centre of the circle is called: (a) $\\text{radius}$ (b) $\\text{diameter}$ (c) $\\text{secant}$ (d) $\\text{circumference}$",
+     "steps": [
+      {
+       "math": "",
+       "en": "The longest chord, through the centre, is a diameter.",
+       "ur": "مرکز سے گزرنے والا وتر قطر ہے۔"
+      },
+      {
+       "math": "\\text{Answer: (b) } \\text{diameter}",
+       "en": "Choose the option that matches the working.",
+       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+      }
+     ],
+     "answer": "(b) $\\text{diameter}$",
+     "book_key": "(b) diameter"
+    },
+    {
+     "label": "vi",
+     "prompt": "In the given figure, what is $AB$? (a) $\\text{diameter}$ (b) $\\text{tangent}$ (c) $\\text{chord}$ (d) $\\text{arc}$",
+     "steps": [
+      {
+       "math": "",
+       "en": "As marked in the book's figure.",
+       "ur": "کتاب کی شکل کے مطابق۔"
+      },
+      {
+       "math": "\\text{Answer: (d) } \\text{arc}",
+       "en": "Choose the option that matches the working.",
+       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+      }
+     ],
+     "answer": "(d) $\\text{arc}$",
+     "book_key": "(d) arc"
+    },
+    {
+     "label": "vii",
+     "prompt": "In the given figure, major arc is: (a) $m\\widehat{AB}$ (b) $m\\widehat{BC}$ (c) $m\\widehat{BDC}$ (d) $m\\widehat{AD}$",
+     "steps": [
+      {
+       "math": "",
+       "en": "The major arc goes the long way round, through a third point.",
+       "ur": "بڑی قوس لمبے راستے سے تیسرے نقطے سے گزرتی ہے۔"
+      },
+      {
+       "math": "\\text{Answer: (c) } m\\widehat{BDC}",
+       "en": "Choose the option that matches the working.",
+       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+      }
+     ],
+     "answer": "(c) $m\\widehat{BDC}$",
+     "book_key": "(c) m\\widehat{BDC}"
+    },
+    {
+     "label": "viii",
+     "prompt": "______ circle(s) can pass through the three non-collinear points. (a) $\\text{one}$ (b) $\\text{two}$ (c) $\\text{three}$ (d) $\\text{many}$",
+     "steps": [
+      {
+       "math": "",
+       "en": "Exactly one circle.",
+       "ur": "صرف ایک دائرہ۔"
+      },
+      {
+       "math": "\\text{Answer: (a) } \\text{one}",
+       "en": "Choose the option that matches the working.",
+       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+      }
+     ],
+     "answer": "(a) $\\text{one}$",
+     "book_key": "(a) one"
+    },
+    {
+     "label": "ix",
+     "prompt": "Perpendicular bisector of a chord always passes through the ______ of circle. (a) $\\text{arc}$ (b) $\\text{radius}$ (c) $\\text{centre}$ (d) $\\text{circumference}$",
+     "steps": [
+      {
+       "math": "",
+       "en": "It passes through the centre.",
+       "ur": "یہ مرکز سے گزرتا ہے۔"
+      },
+      {
+       "math": "\\text{Answer: (c) } \\text{centre}",
+       "en": "Choose the option that matches the working.",
+       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+      }
+     ],
+     "answer": "(c) $\\text{centre}$",
+     "book_key": "(c) centre"
+    },
+    {
+     "label": "x",
+     "prompt": "The sum of the measures of central angles of a circle is: (a) $90^\\circ$ (b) $180^\\circ$ (c) $270^\\circ$ (d) $360^\\circ$",
+     "steps": [
+      {
+       "math": "",
+       "en": "A full turn.",
+       "ur": "پورا چکر۔"
+      },
+      {
+       "math": "\\text{Answer: (d) } 360^\\circ",
+       "en": "Choose the option that matches the working.",
+       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+      }
+     ],
+     "answer": "(d) $360^\\circ$",
+     "book_key": "(d) 360^\\circ"
+    }
+   ],
+   "exercise": "Review 8"
+  },
+  {
+   "id": "c10-rev8-q2",
+   "kind": "review",
+   "number": "2",
+   "page": 0,
+   "question": "On a circular clock with a radius of 6 cm, the points from 2 to 10 form a chord that is 10 cm long. Find the perpendicular distance from the centre of clock to the chord.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "",
+       "en": "Draw $OM$ perpendicular to the chord: it bisects the chord, and $OM$, half the chord and the radius form a right triangle.",
+       "ur": "$OM$ کو وتر پر عمود کھینچیں: یہ وتر کی تنصیف کرتا ہے؛ $OM$، آدھا وتر اور رداس قائمہ مثلث بناتے ہیں۔",
+       "draw": [
+        {
+         "t": "circle",
+         "c": [
+          50,
+          30
+         ],
+         "r": 25
+        },
+        {
+         "t": "dot",
+         "p": [
+          50,
+          30
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          51.5,
+          28
+         ],
+         "s": "O"
+        },
+        {
+         "t": "line",
+         "p": [
+          29.166666666666664,
+          43.819269959814164,
+          70.83333333333334,
+          43.819269959814164
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          25.166666666666664,
+          44.819269959814164
+         ],
+         "s": "A"
+        },
+        {
+         "t": "text",
+         "p": [
+          72.33333333333334,
+          44.819269959814164
+         ],
+         "s": "B"
+        },
+        {
+         "t": "line",
+         "p": [
+          50,
+          30,
+          50,
+          43.819269959814164
+         ],
+         "dash": true
+        },
+        {
+         "t": "right",
+         "p": [
+          50,
+          43.819269959814164
+         ],
+         "d": [
+          1,
+          0,
+          0,
+          -1
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          51.5,
+          47.819269959814164
+         ],
+         "s": "M"
+        },
+        {
+         "t": "line",
+         "p": [
+          50,
+          30,
+          70.83333333333334,
+          43.819269959814164
+         ]
+        }
+       ]
+      },
+      {
+       "math": "OM^2 = OP^2 - PM^2 = 6^2 - 5^2 = 11 \\Rightarrow OM = \\sqrt{11}\\ \\text{cm}",
+       "en": "Pythagoras in the right triangle $OMA$: $r^2 = OM^2 + AM^2$.",
+       "ur": "قائمہ مثلث $OMA$ میں فیثا غورث: $r^2 = OM^2 + AM^2$۔",
+       "check": [
+        "6**2 - 5**2 == 11"
+       ]
+      }
+     ],
+     "answer": "$\\sqrt{11}$ cm",
+     "book_key": "\\sqrt{11} cm"
+    }
+   ],
+   "exercise": "Review 8",
+   "figure_h": 60
+  },
+  {
+   "id": "c10-rev8-q3",
+   "kind": "review",
+   "number": "3",
+   "page": 0,
+   "question": "A chord 6 cm long is at a distance of 4 cm from the centre. Calculate the radius of the circle.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "",
+       "en": "Draw $OM$ perpendicular to the chord: it bisects the chord, and $OM$, half the chord and the radius form a right triangle.",
+       "ur": "$OM$ کو وتر پر عمود کھینچیں: یہ وتر کی تنصیف کرتا ہے؛ $OM$، آدھا وتر اور رداس قائمہ مثلث بناتے ہیں۔",
+       "draw": [
+        {
+         "t": "circle",
+         "c": [
+          50,
+          30
+         ],
+         "r": 25
+        },
+        {
+         "t": "dot",
+         "p": [
+          50,
+          30
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          51.5,
+          28
+         ],
+         "s": "O"
+        },
+        {
+         "t": "line",
+         "p": [
+          35.0,
+          50.0,
+          65.0,
+          50.0
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          31.0,
+          51.0
+         ],
+         "s": "A"
+        },
+        {
+         "t": "text",
+         "p": [
+          66.5,
+          51.0
+         ],
+         "s": "B"
+        },
+        {
+         "t": "line",
+         "p": [
+          50,
+          30,
+          50,
+          50.0
+         ],
+         "dash": true
+        },
+        {
+         "t": "right",
+         "p": [
+          50,
+          50.0
+         ],
+         "d": [
+          1,
+          0,
+          0,
+          -1
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          51.5,
+          54.0
+         ],
+         "s": "M"
+        },
+        {
+         "t": "line",
+         "p": [
+          50,
+          30,
+          65.0,
+          50.0
+         ]
+        }
+       ]
+      },
+      {
+       "math": "r^2 = 4^2 + 3^2 = 25 \\Rightarrow r = 5\\ \\text{cm}",
+       "en": "Pythagoras in the right triangle $OMA$: $r^2 = OM^2 + AM^2$.",
+       "ur": "قائمہ مثلث $OMA$ میں فیثا غورث: $r^2 = OM^2 + AM^2$۔",
+       "check": [
+        "sqrt(4**2 + 3**2) == 5"
+       ]
+      }
+     ],
+     "answer": "$5$ cm",
+     "book_key": "5 cm"
+    }
+   ],
+   "exercise": "Review 8",
+   "figure_h": 60
+  },
+  {
+   "id": "c10-rev8-q4",
+   "kind": "review",
+   "number": "4",
+   "page": 0,
+   "question": "In a circular park, two benches are placed so that the chords formed by their positions are both 10 m long. What can you say about the angles subtended at the centre by each bench?",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "\\text{equal chords} \\Rightarrow \\text{equal central angles}",
+       "en": "Equal chords subtend equal angles at the centre.",
+       "ur": "برابر وتر مرکز پر برابر زاویے بناتے ہیں۔"
+      }
+     ],
+     "answer": "the angles at the centre are equal",
+     "book_key": "the angles at the centre are equal"
+    }
+   ],
+   "exercise": "Review 8"
+  },
+  {
+   "id": "c10-rev8-q5",
+   "kind": "review",
+   "number": "5",
+   "page": 0,
+   "question": "Jannat is designing a triangular garden with corners at points $A(2,1)$, $B(4,4)$ and $C(1,5)$. Can she install a circular fountain that touches all three corners?",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "\\text{slope } AB = \\frac{3}{2},\\ \\text{slope } AC = -4 \\Rightarrow A, B, C \\text{ are not collinear}",
+       "en": "Different slopes, so the three points are not on one line.",
+       "ur": "ڈھلوانیں مختلف ہیں، اس لیے تینوں نقاط ایک خط پر نہیں۔",
+       "check": [
+        "Ne(R(3,2), -4)"
+       ]
+      },
+      {
+       "math": "\\text{Yes: the perpendicular bisectors meet at the circumcentre}",
+       "en": "Three non-collinear points always lie on exactly one circle.",
+       "ur": "تین غیر ہم خط نقاط ہمیشہ ایک دائرے پر ہوتے ہیں۔"
+      }
+     ],
+     "answer": "yes, she can install the fountain",
+     "book_key": "yes, she can install the fountain"
+    }
+   ],
+   "exercise": "Review 8"
+  },
+  {
+   "id": "c10-rev8-q6",
+   "kind": "review",
+   "number": "6",
+   "page": 0,
+   "question": "Two chords, $PQ$ and $RS$, each measure 18 cm in length. If the distance of $PQ$ from the centre of circle is 7 cm. Find the distance of $RS$ from the centre.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "d = 7\\ \\text{cm}",
+       "en": "Equal chords are equidistant from the centre.",
+       "ur": "برابر وتر مرکز سے برابر فاصلے پر ہوتے ہیں۔"
+      }
+     ],
+     "answer": "$7$ cm",
+     "book_key": "7 cm"
+    }
+   ],
+   "exercise": "Review 8"
+  },
+  {
+   "id": "c10-rev8-q7",
+   "kind": "review",
+   "number": "7",
+   "page": 0,
+   "question": "A tree branch lies across a circular pond, forming a 20 m chord. A measuring rod having length 10 m is perpendicular to chord from the centre. What is the radius of the pond?",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "",
+       "en": "Draw $OM$ perpendicular to the chord: it bisects the chord, and $OM$, half the chord and the radius form a right triangle.",
+       "ur": "$OM$ کو وتر پر عمود کھینچیں: یہ وتر کی تنصیف کرتا ہے؛ $OM$، آدھا وتر اور رداس قائمہ مثلث بناتے ہیں۔",
+       "draw": [
+        {
+         "t": "circle",
+         "c": [
+          50,
+          30
+         ],
+         "r": 25
+        },
+        {
+         "t": "dot",
+         "p": [
+          50,
+          30
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          51.5,
+          28
+         ],
+         "s": "O"
+        },
+        {
+         "t": "line",
+         "p": [
+          32.25,
+          47.60504189145826,
+          67.75,
+          47.60504189145826
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          28.25,
+          48.60504189145826
+         ],
+         "s": "A"
+        },
+        {
+         "t": "text",
+         "p": [
+          69.25,
+          48.60504189145826
+         ],
+         "s": "B"
+        },
+        {
+         "t": "line",
+         "p": [
+          50,
+          30,
+          50,
+          47.60504189145826
+         ],
+         "dash": true
+        },
+        {
+         "t": "right",
+         "p": [
+          50,
+          47.60504189145826
+         ],
+         "d": [
+          1,
+          0,
+          0,
+          -1
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          51.5,
+          51.60504189145826
+         ],
+         "s": "M"
+        },
+        {
+         "t": "line",
+         "p": [
+          50,
+          30,
+          67.75,
+          47.60504189145826
+         ]
+        }
+       ]
+      },
+      {
+       "math": "r^2 = OM^2 + AM^2 = 10^2 + 10^2 = 200 \\Rightarrow r = 10\\sqrt{2}\\ \\text{m}",
+       "en": "Pythagoras in the right triangle $OMA$: $r^2 = OM^2 + AM^2$.",
+       "ur": "قائمہ مثلث $OMA$ میں فیثا غورث: $r^2 = OM^2 + AM^2$۔",
+       "check": [
+        "sqrt(10**2 + 10**2) == 10*sqrt(2)"
+       ]
+      }
+     ],
+     "answer": "$10\\sqrt{2}$ m",
+     "book_key": "10\\sqrt{2} m"
+    }
+   ],
+   "exercise": "Review 8",
+   "figure_h": 60
+  },
+  {
+   "id": "c10-rev8-q8",
+   "kind": "review",
+   "number": "8",
+   "page": 0,
+   "question": "A steel bar 6 m long lies inside a circular structure with ends on the circle. It is bisected by a perpendicular rod from the centre. Find the radius of the circular structure if the perpendicular distance from the centre to the bar is 4 m.",
+   "parts": [
+    {
+     "label": "",
+     "prompt": "",
+     "steps": [
+      {
+       "math": "",
+       "en": "Draw $OM$ perpendicular to the chord: it bisects the chord, and $OM$, half the chord and the radius form a right triangle.",
+       "ur": "$OM$ کو وتر پر عمود کھینچیں: یہ وتر کی تنصیف کرتا ہے؛ $OM$، آدھا وتر اور رداس قائمہ مثلث بناتے ہیں۔",
+       "draw": [
+        {
+         "t": "circle",
+         "c": [
+          50,
+          30
+         ],
+         "r": 25
+        },
+        {
+         "t": "dot",
+         "p": [
+          50,
+          30
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          51.5,
+          28
+         ],
+         "s": "O"
+        },
+        {
+         "t": "line",
+         "p": [
+          35.0,
+          50.0,
+          65.0,
+          50.0
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          31.0,
+          51.0
+         ],
+         "s": "A"
+        },
+        {
+         "t": "text",
+         "p": [
+          66.5,
+          51.0
+         ],
+         "s": "B"
+        },
+        {
+         "t": "line",
+         "p": [
+          50,
+          30,
+          50,
+          50.0
+         ],
+         "dash": true
+        },
+        {
+         "t": "right",
+         "p": [
+          50,
+          50.0
+         ],
+         "d": [
+          1,
+          0,
+          0,
+          -1
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          51.5,
+          54.0
+         ],
+         "s": "M"
+        },
+        {
+         "t": "line",
+         "p": [
+          50,
+          30,
+          65.0,
+          50.0
+         ]
+        }
+       ]
+      },
+      {
+       "math": "r^2 = 4^2 + 3^2 = 25 \\Rightarrow r = 5\\ \\text{m}",
+       "en": "Pythagoras in the right triangle $OMA$: $r^2 = OM^2 + AM^2$.",
+       "ur": "قائمہ مثلث $OMA$ میں فیثا غورث: $r^2 = OM^2 + AM^2$۔",
+       "check": [
+        "sqrt(4**2 + 3**2) == 5"
+       ]
+      }
+     ],
+     "answer": "$5$ m",
+     "book_key": "5 m"
+    }
+   ],
+   "exercise": "Review 8",
+   "figure_h": 60
+  }
+ ]
+}
