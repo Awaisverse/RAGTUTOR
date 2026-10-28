@@ -83,6 +83,10 @@
   @keyframes nudge { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(7px); } }
   @media (max-width: 800px) { .step { grid-template-columns: minmax(0, 1fr); } .bubble::before { display: none; } }
   @media (prefers-reduced-motion: reduce) { .ptr, .step .go, .step.current .katex .hl, .step.current .answer, .step.new .work { animation: none; } }
+  .qline { display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; margin: 2px 0; }
+  .qlabel { font-size: 12px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; min-width: 110px; }
+  .chip { border: 1px solid var(--line); border-radius: 99px; padding: 1px 10px; background: var(--board); font-size: 14px; }
+  .note.warn { color: var(--warn); font-weight: 600; }
   .confirm { border: 1px solid var(--accent); border-radius: 10px; padding: 10px; background: var(--accent-soft); margin-bottom: 8px; }
   .confirm .qtext { margin: 8px 0 12px; font-size: 18px; }
   .confirm strong { font-size: 18px; }
@@ -245,7 +249,7 @@
       const last = steps[steps.length - 1];
       last._answer = part.answer; last._note = part.note; last._key = part.book_key;
     }
-    renderMixed($("qtext"), item.question || "");
+    renderQuestionBlock(item);
     document.querySelectorAll("#parts button").forEach((b) => b.classList.toggle("on", +b.dataset.i === i));
     $("math").innerHTML = "";
     cur = -1;
@@ -254,6 +258,37 @@
     $("cvwrap").style.display = steps.some((s) => (s.draw || []).length) ? "" : "none";
     renderBoard(true);
     goto(0, false);
+  }
+
+  // The question being solved is on the board before any step: what the student asked, what is solved (when the question
+  // was rewritten) and the plan of chunks (when a hard question was broken down). So it is plainly the SAME question.
+  function renderQuestionBlock(it) {
+    const box = $("qtext");
+    box.innerHTML = "";
+    const rewritten = it._read_as && it._asked && it._read_as.trim() !== it._asked.trim();
+    if (!rewritten && !(it._plan && it._plan.length)) { renderMixed(box, it.question || ""); return; }
+    const line = (label, text) => {
+      const d = document.createElement("div");
+      d.className = "qline";
+      d.appendChild(Object.assign(document.createElement("span"), { className: "qlabel", textContent: label }));
+      d.appendChild(renderMixed(document.createElement("span"), text));
+      box.appendChild(d);
+    };
+    line("You asked:", it._asked || it.question || "");
+    if (rewritten) line("Solving exactly:", it._read_as);
+    if (it._plan && it._plan.length) {
+      const d = document.createElement("div");
+      d.className = "qline";
+      d.appendChild(Object.assign(document.createElement("span"), { className: "qlabel", textContent: "Plan:" }));
+      it._plan.forEach((c) => {
+        const chip = document.createElement("span");
+        chip.className = "chip";
+        chip.title = c.what || "";
+        renderMixed(chip, `${c.name} = $${String(c.expr).replace(/\*\*/g, "^")}$`);
+        d.appendChild(chip);
+      });
+      box.appendChild(d);
+    }
   }
 
   // ---------- board: the working, one row per step ----------
@@ -718,6 +753,12 @@
   function showAnswer(data) {
     const box = $("results");
     box.innerHTML = "";
+    if (data.item) {                               // remembered for the board header, so the solved question is shown first
+      data.item._asked = $("q").value.trim() || data.item.question;
+      data.item._read_as = data.read_as || "";
+      data.item._plan = data.plan || data.item.plan || null;
+    }
+    if (data.item && data.item.warning) note(box, data.item.warning, "warn");
     if (data.read_as) {                            // Gemini rewrote the question: show what was understood so the student can check it
       const r = document.createElement("div");
       r.className = "note";

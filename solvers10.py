@@ -372,6 +372,13 @@ def _given_z(text):
         found = sorted((m.start(), k) for k, rx in _ASKS for m in [re.search(rx, ask, re.I)] if m)
         if not found:
             return None                            # an ask we do not understand: answer nothing rather than part of it
+        leftover = ask
+        for _, rx in _ASKS:
+            leftover = re.sub(rx, " ", leftover, flags=re.I)
+        leftover = re.sub(r"\b(?:of|for)\s+z\b", " ", leftover, flags=re.I)
+        if re.search(r"[+\-*/^=\d]|\bz\b", leftover):
+            return None                            # more maths than the recognised ask ("z^2 + 1/z^2"): answering only part
+                                                   # of it would answer a different question, so leave it to the planner
         jobs += [(lab, k, ask) for _, k in found]
     if len(jobs) != len(asks):                     # an ask was split: label the parts (a), (b), ... afresh
         jobs = [(l, k, a) for l, (_, k, a) in zip("abcdefghijklmnop", jobs)]

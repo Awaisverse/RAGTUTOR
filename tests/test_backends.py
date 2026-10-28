@@ -25,8 +25,8 @@ READ = {"readable": True, "exercise": None, "number": None, "parts": [], "part_r
         "question": "Rationalize the denominator of $\\frac{7}{3+\\sqrt{2}}$"}
 
 
-def solution(answer, check):
-    return {"id": "t", "kind": "generated", "number": "", "page": 0, "question": "q", "parts": [
+def solution(answer, check, question="Find the area of a circle of radius 7"):
+    return {"id": "t", "kind": "generated", "number": "", "page": 0, "question": question, "parts": [
         {"label": "", "prompt": "", "figure": None, "steps": [{"math": "x", "en": "e", "ur": "u", "check": [check]}], "answer": answer}]}
 
 
@@ -106,6 +106,18 @@ assert d["mode"] == "model" and d["item"]["parts"][0]["answer"] == "49pi", d
 assert Stub.calls[0][2] == "Bearer s3cret"
 r = client.post("/api/photo", data={"image": (__import__("io").BytesIO(b"\xff\xd8\xff fake jpeg"), "q.jpg", "image/jpeg")}).get_json()
 assert r["resolution"] == "solved", r
+
+# the SAME question: a model whose restated question has other numbers is not presented as the answer
+_orig = Stub.do_POST
+def _other_question(self):
+    body = self.rfile.read(int(self.headers.get("Content-Length", 0)))
+    self._send({**solution("49pi", "pi*7**2 == 49*pi", question="Find the area of a circle of radius 9"), "verified": True,
+                "unverified_checks": [], "tries": [1], "unit": 0, "unit_title": "Live"})
+Stub.do_POST = _other_question
+d = ask("Find the area of a circle of radius 7")
+assert d["mode"] == "model" and d["item"]["verified"] is False and "different question" in d["item"]["warning"], d["item"]
+assert d["item"]["question"] == "Find the area of a circle of radius 7"            # the student's own question is shown
+Stub.do_POST = _orig
 
 # service unreachable: a clean message, not a crash
 os.environ["MODEL_SERVICE_URL"] = "http://127.0.0.1:9"

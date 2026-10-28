@@ -50,6 +50,7 @@ sys.path.insert(0, str(ROOT))
 
 import local_models  # noqa: E402
 import mathtext  # noqa: E402
+import planner  # noqa: E402
 import question_reader  # noqa: E402
 import modelsolve  # noqa: E402
 import rag  # noqa: E402
@@ -238,9 +239,23 @@ def resolve(question, focus_part=None, klass="9", _rewritten=False):
         if n and n["question"] != q:
             res = resolve(n["question"], focus_part, klass, _rewritten=True)
             return {**res, "read_as": n["question"]}
-    if model_mode():                                   # 4. the model (its steps are checked with sympy afterwards)
+    if klass == "10" and reader_on():                  # 4. too complex as one piece: Gemini plans small chunks, the engine solves each
+        try:
+            planned = planner.solve(q, klass)
+        except Exception as exc:
+            planned, error = None, f"planner: {exc}"
+        if planned:
+            return {"mode": "solved", "item": planned, "part_index": 0, "plan": planned["plan"]}
+    if model_mode():                                   # 5. the model (its steps are checked with sympy afterwards)
         try:
             sol = live_solve(q, focus_part=focus_part, klass=klass)
+            # the SAME question: the model restates the question it answered; if its numbers differ from the student's,
+            # it answered something else (perhaps a similar question it has seen), so it is not presented as the answer
+            stated = str(sol.get("question", ""))
+            if stated and not question_reader.same_numbers(q, stated):
+                sol["verified"] = False
+                sol["warning"] = "The model's working may be for a different question (its numbers differ from yours). Do not rely on it."
+            sol["question"] = q
             return {"mode": "model", "item": sol, "part_index": 0}
         except Exception as exc:
             error = str(exc)
