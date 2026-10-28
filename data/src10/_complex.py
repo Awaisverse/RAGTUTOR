@@ -228,7 +228,7 @@ def p_equal_parts(label, lhs_py, rhs_py, unknowns, prompt_tex, lhs_tex=None):
     diff = sp.expand(lhs - rhs)
     re_eq, im_eq = sp.expand(sp.re(diff)), sp.expand(sp.im(diff))
     sol = sp.solve([re_eq, im_eq], list(syms.values()), dict=True)
-    if len(sol) != 1:
+    if len(sol) != 1 or any(s not in sol[0] for s in syms.values()):     # e.g. x + y = 8: one real equation, two unknowns
         raise ValueError(f"{label}: no unique solution for {lhs_py} = {rhs_py}")
     sol = sol[0]
     vals = {u: sol[s] for u, s in syms.items()}

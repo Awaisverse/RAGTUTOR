@@ -24,6 +24,19 @@ Rules:
 - Urdu must be natural sentences; keep English and Urdu consistent.
 """
 
+SOLVE_RULES_10 = SOLVE_RULES.replace("Punjab Class 9 Mathematics", "Punjab Class 10 Mathematics") + """- Class 10 check syntax: the imaginary unit is I (never a bare i), e.g. "(2+3*I)*(1-I) == 5+I";
+  matrices are Matrix([[a, b], [c, d]]) and are compared with Eq(Matrix(...), Matrix(...)); a determinant is Matrix(...).det();
+  angles are in radians inside checks, so 30 degrees is 30*pi/180, e.g. "sin(30*pi/180) == Rational(1,2)";
+  a rounded decimal is checked as "Abs(<exact expression> - 6.32) <= 0.005"; absolute value is Abs().
+- Probability answers are fractions in lowest terms; statistics answers are rounded as the question asks.
+"""
+
+
+def solve_rules(klass="9"):
+    """The solver rules for a class: Class 10 adds the check syntax for i, matrices, degrees and rounded decimals."""
+    return SOLVE_RULES_10 if str(klass) == "10" else SOLVE_RULES
+
+
 READ_PROMPT = """You read photos of Punjab Class 9 Mathematics exercise questions, taken by students.
 Do NOT solve anything. Only read the page.
 

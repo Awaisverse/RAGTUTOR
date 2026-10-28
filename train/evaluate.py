@@ -39,6 +39,7 @@ sys.path.insert(0, str(ROOT / "train"))
 import rag  # noqa: E402
 from build_dataset import verify  # noqa: E402
 from make_dataset import load_items, neighbours_text, variants  # noqa: E402
+from prompts import solve_rules  # noqa: E402
 import modelsolve  # noqa: E402
 from answer_match import answer_ok, norm_ans  # noqa: E402
 from solution_io import parse_solution  # noqa: E402
@@ -111,7 +112,7 @@ def generation_eval(name, items, pool, args, items_out):
         t0 = time.time()
         r_all = modelsolve.attempt(
             it["question"], neighbours_text(index, pool_by_id, it, args.neighbours, args.context_chars),
-            attempts=args.attempts, max_new_tokens=args.max_new_tokens)
+            attempts=args.attempts, max_new_tokens=args.max_new_tokens, rules=solve_rules(args.klass))
         r = score_solution(r_all["raw"], it)                 # the reply the tutor would show
         r1 = score_solution(r_all["raws"][0], it)            # the first (greedy) reply alone
         tries += r_all["tries"]
@@ -150,20 +151,22 @@ def main():
     ap.add_argument("--context-chars", type=int, default=3500, help="size limit for the retrieved examples in a prompt")
     ap.add_argument("--attempts", type=int, default=3, help="tries per question: greedy, then sampled when a check fails")
     ap.add_argument("--report", default="")
+    ap.add_argument("--class", dest="klass", default="", help="9 or 10; by default the class the data was built for (split.json)")
     args = ap.parse_args()
 
     report_path = pathlib.Path(args.report or ROOT / "train" / "out" / f"eval_{args.tag}.json")
     rag.EMB_MODEL = args.embed_model
     data = pathlib.Path(args.data)
     split = json.loads((data / "split.json").read_text(encoding="utf-8"))
-    real = {it["id"]: it for it in load_items()}
+    args.klass = str(args.klass or split.get("class", "9"))
+    real = {it["id"]: it for it in load_items(args.klass)}
     real_eval_whole = [real[i] for i in split["eval"]]               # whole book items, for retrieval
     pool = json.loads((data / "pool.json").read_text(encoding="utf-8"))   # training items, one part each
     real_eval = json.loads((data / "real_eval.json").read_text(encoding="utf-8"))   # held-out items, one part each
     syn_eval = json.loads((data / "synth_eval.json").read_text(encoding="utf-8"))
     real_train = [it for it in pool if not it.get("synthetic")]
 
-    report = {"tag": args.tag, "embed_model": args.embed_model, "gen_model": args.gen_model,
+    report = {"tag": args.tag, "class": args.klass, "embed_model": args.embed_model, "gen_model": args.gen_model,
               "gen_adapter": args.gen_adapter or None,
               "real_train": len(real_train), "real_test": len(real_eval), "synth_test": len(syn_eval)}
     if not args.no_retrieval:

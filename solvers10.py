@@ -487,6 +487,8 @@ def solve(text):
             if p is None:
                 return None                        # all parts or nothing: a partial answer looks complete
             parts.append(p)
+    if not parts:                                  # e.g. "Find variance and standard deviation: (i)": nothing was solved
+        return None
     for p in parts:
         for st in p["steps"]:
             for chk in st.get("check", []):

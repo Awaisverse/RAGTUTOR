@@ -42,10 +42,13 @@ def main():
     ap.add_argument("--wait", action="store_true")
     ap.add_argument("--fetch", action="store_true")
     ap.add_argument("--timeout-min", type=int, default=240)
+    ap.add_argument("--class", dest="klass", default="9", help="with --push: train on Class 9 (default) or 10")
+    ap.add_argument("--branch", default="main", help="with --push: the GitHub branch the notebook trains from")
     args = ap.parse_args()
 
     if args.push:
-        subprocess.run([sys.executable, str(ROOT / "train" / "make_notebook.py")] + (["--full"] if args.full else []), check=True)
+        subprocess.run([sys.executable, str(ROOT / "train" / "make_notebook.py")] + (["--full"] if args.full else [])
+                       + ["--class", args.klass, "--branch", args.branch], check=True)
         print(kaggle("kernels", "push", "-p", str(ROOT / "kaggle")))
         print("started:", "FULL run" if args.full else "QUICK test", "| https://www.kaggle.com/code/" + KERNEL)
     if args.wait:

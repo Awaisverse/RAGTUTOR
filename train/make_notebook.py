@@ -1,4 +1,4 @@
-"""Generates train/colab_train.ipynb. Run:  python train/make_notebook.py"""
+"""Generates train/colab_train.ipynb and kaggle/. Run:  python train/make_notebook.py [--full] [--class 10] [--branch NAME]"""
 import json
 import pathlib
 import sys
@@ -18,7 +18,7 @@ def code(text):
 
 # =====================================================================================
 md(r'''
-# Math Tutor: training notebook (Punjab Class 9)
+# Math Tutor: training notebook (Punjab Class 9 and Class 10)
 
 **Goal:** produce models that give *accurate* answers when plugged into the tutor, and **prove** they are accurate
 before you integrate them. Nothing here calls a paid API: every model is a Hugging Face model trained on a free GPU (Colab or Kaggle).
@@ -68,6 +68,8 @@ print("GPU:", torch.cuda.get_device_name(0), "| memory:", round(torch.cuda.get_d
 code(r'''
 # 0.2 SETTINGS. Change only this cell.
 QUICK_TEST = True     # True: tiny run to test the pipeline (~15 min). False: the real run (~2 h).
+CLASS = "9"           # "9" or "10": which book to train and test on
+BRANCH = "main"       # the GitHub branch to train from
 USE_DRIVE = False     # True: copy results to Google Drive after each phase (survives a Colab restart)
 HF_REPO = ""          # optional, e.g. "yourname/math-tutor": uploads the models to your private Hugging Face repo
 
@@ -77,7 +79,14 @@ if QUICK_TEST:
 else:
     SYNTH_PER_TYPE, ENGINE_PER_TYPE, EPOCHS_EMBED, EPOCHS_GEN, LIMIT_REAL, LIMIT_SYNTH = 25, 20, 3, 2, 0, 40   # 0 = evaluate every test item
     BASE_REAL, BASE_SYNTH, ATTEMPTS = 4, 8, 3     # the untuned model is only a reference point, so a small sample is enough
-print("QUICK_TEST =", QUICK_TEST, "| synthetic per type:", SYNTH_PER_TYPE, "| generator epochs:", EPOCHS_GEN)
+if CLASS == "10":
+    # Class 10: 26 question types in train/synth10.py; long matrix and Urdu solutions need a longer context
+    SYNTH_PER_TYPE = 2 if QUICK_TEST else 12
+    LIMIT_REAL = 3 if QUICK_TEST else 80        # the held-out real book questions (every 4th question of all 12 units)
+CLS = f" --class {CLASS}"
+MAX_LEN = 4096 if CLASS == "10" else 3072
+MAX_NEW = 3000 if CLASS == "10" else 2500
+print("CLASS =", CLASS, "| QUICK_TEST =", QUICK_TEST, "| synthetic per type:", SYNTH_PER_TYPE, "| generator epochs:", EPOCHS_GEN)
 ''')
 
 code(r'''
@@ -100,9 +109,9 @@ def run(cmd):
 
 
 if os.path.exists(REPO_DIR):
-    run(f"git -C {REPO_DIR} pull")
+    run(f"git -C {REPO_DIR} fetch origin {BRANCH} && git -C {REPO_DIR} checkout {BRANCH} && git -C {REPO_DIR} pull origin {BRANCH}")
 else:
-    run(f"git clone {REPO_URL} {REPO_DIR}")
+    run(f"git clone -b {BRANCH} {REPO_URL} {REPO_DIR}")
 os.chdir(REPO_DIR)
 
 run("pip -q uninstall -y torchao")   # Colab's old torchao breaks peft
@@ -140,17 +149,23 @@ md(r'''
 
 code(r'''
 # 1.1 The hand-solved book: every math step must verify
-run("python tools/build_dataset.py --report")
+run(f"python tools/build_dataset.py --report{CLS if CLASS == '10' else ''}")
 ''')
 
 code(r'''
 # 1.2 The synthetic generators: every math step must verify
-run("python train/check_synth.py --per-type 60")
+if CLASS == "10":
+    run("python train/synth10.py 20")        # every generated Class 10 item is kept only when all its checks pass
+else:
+    run("python train/check_synth.py --per-type 60")
 ''')
 
 code(r'''
 # 1.3 Build training and test files
-run(f"python train/make_dataset.py --eval-prefix ex1.2- --synth-per-type {SYNTH_PER_TYPE} --engine-per-type {ENGINE_PER_TYPE} --synth-eval-per-type 2")
+if CLASS == "10":
+    run(f"python train/make_dataset.py --class 10 --eval-every 4 --synth-per-type {SYNTH_PER_TYPE} --synth-eval-per-type 2")
+else:
+    run(f"python train/make_dataset.py --eval-prefix ex1.2- --synth-per-type {SYNTH_PER_TYPE} --engine-per-type {ENGINE_PER_TYPE} --synth-eval-per-type 2")
 
 rows = [json.loads(l) for l in open("train/out/data/gen_sft.jsonl", encoding="utf-8")]
 pairs = sum(1 for _ in open("train/out/data/embed_pairs.jsonl", encoding="utf-8"))
@@ -208,7 +223,7 @@ Without this number you cannot tell whether fine-tuning helped.
 
 code(r'''
 # 3.1 Score the base model
-run(f"python train/evaluate.py --tag gen_base --no-retrieval --attempts 1 --limit-real {BASE_REAL} --limit-synth {BASE_SYNTH}")
+run(f"python train/evaluate.py --tag gen_base --no-retrieval --attempts 1 --limit-real {BASE_REAL} --limit-synth {BASE_SYNTH} --max-new-tokens {MAX_NEW}")
 print(json.dumps(json.load(open("train/out/eval_gen_base.json"))["generation"], indent=1))
 backup("phase3")
 ''')
@@ -224,7 +239,7 @@ Only the answer part of each example is learned; the prompt and retrieved contex
 
 code(r'''
 # 4.1 LoRA fine-tune
-run(f"python train/train_generator.py --epochs {EPOCHS_GEN} --lr 2e-4")
+run(f"python train/train_generator.py --epochs {EPOCHS_GEN} --lr 2e-4 --max-len {MAX_LEN}")
 assert os.path.exists("train/out/gen-lora/adapter_config.json"), "Generator training did not produce an adapter"
 backup("phase4")
 ''')
@@ -250,7 +265,7 @@ A reply whose LaTeX backslashes were mis-escaped is repaired before it is scored
 
 code(r'''
 # 5.1 Score the tuned generator
-run(f"python train/evaluate.py --tag gen_tuned --no-retrieval --gen-adapter train/out/gen-lora --attempts {ATTEMPTS} --limit-real {LIMIT_REAL} --limit-synth {LIMIT_SYNTH}")
+run(f"python train/evaluate.py --tag gen_tuned --no-retrieval --gen-adapter train/out/gen-lora --attempts {ATTEMPTS} --limit-real {LIMIT_REAL} --limit-synth {LIMIT_SYNTH} --max-new-tokens {MAX_NEW}")
 ''')
 
 code(r'''
@@ -329,7 +344,7 @@ import shutil, zipfile
 
 use_embed = "BEST_EMBED" in globals() and BEST_EMBED != "BAAI/bge-small-en-v1.5"
 notes = [
-    "MATH TUTOR: trained models",
+    f"MATH TUTOR: trained models (Class {CLASS})",
     f"QUICK_TEST run: {QUICK_TEST}" + ("  <-- NOT a real model, do not integrate" if QUICK_TEST else ""),
     "",
     "1. Unzip into the project folder: models/gen-lora/" + (" and models/embed-ft/" if use_embed else ""),
@@ -409,12 +424,15 @@ print("wrote", out, "-", len(CELLS), "cells")
 
 # Kaggle copy: same cells; QUICK_TEST is set by the command line (--full for the real run)
 full = "--full" in sys.argv
+klass = sys.argv[sys.argv.index("--class") + 1] if "--class" in sys.argv else "9"
+branch = sys.argv[sys.argv.index("--branch") + 1] if "--branch" in sys.argv else "main"
 kb = json.loads(json.dumps(nb))
 for c in kb["cells"]:
     if c["cell_type"] == "code":
         text = "".join(c["source"])
         if "QUICK_TEST = True " in text:
             text = text.replace("QUICK_TEST = True ", f"QUICK_TEST = {not full} ", 1)
+            text = text.replace('CLASS = "9" ', f'CLASS = "{klass}" ', 1).replace('BRANCH = "main" ', f'BRANCH = "{branch}" ', 1)
             c["source"] = text.splitlines(keepends=True)
 kb["metadata"]["accelerator"] = "GPU"
 kdir = ROOT / "kaggle"
@@ -425,4 +443,4 @@ kdir.mkdir(exist_ok=True)
     "language": "python", "kernel_type": "notebook", "is_private": True, "enable_gpu": True,
     "enable_tpu": False, "enable_internet": True, "dataset_sources": [], "competition_sources": [],
     "kernel_sources": [], "model_sources": []}, indent=2), encoding="utf-8")
-print("wrote kaggle/ (QUICK_TEST =", not full, ")")
+print("wrote kaggle/ (QUICK_TEST =", not full, "| CLASS =", klass, "| BRANCH =", branch, ")")

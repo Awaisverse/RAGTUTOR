@@ -78,13 +78,14 @@ def check_solution(sol):
     return total, bad
 
 
-def attempt(question, examples_text, attempts=3, max_new_tokens=2500, generate=None):
+def attempt(question, examples_text, attempts=3, max_new_tokens=2500, generate=None, rules=None):
     """-> {"solution": dict or None, "raw": the chosen reply, "raws": every reply, "bad": false checks, "checks": int,
-    "verified": bool, "tries": attempts used}. `generate(messages, max_new_tokens, temperature)` defaults to the local model."""
+    "verified": bool, "tries": attempts used}. `generate(messages, max_new_tokens, temperature)` defaults to the local model.
+    `rules` is the system prompt's rule text (prompts.solve_rules(klass)); the Class 9 rules by default."""
     if generate is None:
         import local_models
         generate = local_models.generate
-    messages = [{"role": "system", "content": SOLVE_RULES + "\n\n" + examples_text},
+    messages = [{"role": "system", "content": (rules or SOLVE_RULES) + "\n\n" + examples_text},
                 {"role": "user", "content": question}]
     best, raws = None, []
     for t in TEMPERATURES[:max(1, attempts)]:

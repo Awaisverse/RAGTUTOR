@@ -41,7 +41,7 @@ sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "tools"))
 sys.path.insert(0, str(ROOT / "train"))
 
-from prompts import SOLVE_RULES  # noqa: E402
+from prompts import SOLVE_RULES, solve_rules  # noqa: E402
 import mathtext  # noqa: E402
 import rag  # noqa: E402
 from engine_data import engine_items  # noqa: E402
@@ -51,9 +51,10 @@ from synth import generate  # noqa: E402
 random.seed(0)
 
 
-def load_items():
+def load_items(klass="9"):
+    """The real book of a class: Class 9 is data/book, Class 10 is data/book10."""
     items = []
-    for path in sorted((ROOT / "data" / "book").glob("unit*.json")):
+    for path in sorted((ROOT / "data" / ("book" if str(klass) == "9" else f"book{klass}")).glob("unit*.json")):
         unit = json.loads(path.read_text(encoding="utf-8"))
         for it in unit["items"]:
             it["unit"] = unit["unit"]
@@ -143,20 +144,29 @@ def main():
     ap.add_argument("--engine-eval-per-type", type=int, default=2)
     ap.add_argument("--neighbours", type=int, default=2)
     ap.add_argument("--context-chars", type=int, default=3500, help="size limit for the retrieved examples in a prompt")
+    ap.add_argument("--class", dest="klass", default="9", help="9 (default) or 10: which book to train on")
     args = ap.parse_args()
+    rules = solve_rules(args.klass)
 
     out = pathlib.Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
 
-    real = load_items()
+    real = load_items(args.klass)
     real_train_whole, real_eval_whole = split_real(real, args.eval_units, args.eval_every, args.eval_prefix)
     real_train, real_eval = explode_all(real_train_whole), explode_all(real_eval_whole)
 
-    syn_train = leak_free(generate(args.synth_per_type, seed0=0), real)
-    syn_eval = leak_free(generate(args.synth_eval_per_type, seed0=100000,
-                                  avoid={s["question"] for s in syn_train}), real)
-    eng_train = engine_items(args.engine_per_type, seed0=0)
-    eng_eval = engine_items(args.engine_eval_per_type, seed0=100000, avoid={e["question"] for e in eng_train})
+    if str(args.klass) == "10":
+        # Class 10: new numbers for every book question type, solved by the same checked templates (train/synth10.py)
+        from synth10 import generate as generate10
+        syn_train = leak_free(generate10(args.synth_per_type, seed0=0), real)
+        syn_eval = leak_free(generate10(args.synth_eval_per_type, seed0=100000, avoid={s["question"] for s in syn_train}), real)
+        eng_train, eng_eval = [], []
+    else:
+        syn_train = leak_free(generate(args.synth_per_type, seed0=0), real)
+        syn_eval = leak_free(generate(args.synth_eval_per_type, seed0=100000,
+                                      avoid={s["question"] for s in syn_train}), real)
+        eng_train = engine_items(args.engine_per_type, seed0=0)
+        eng_eval = engine_items(args.engine_eval_per_type, seed0=100000, avoid={e["question"] for e in eng_train})
     syn_train = explode_all(not_in_test(syn_train + eng_train, real_eval))
     syn_eval = explode_all(not_in_test(syn_eval + eng_eval, real_eval))
     if not real_train and not syn_train:
@@ -177,7 +187,7 @@ def main():
         users = [it["question"]] + list(it.get("asked") or []) if it.get("synthetic") else variants(it)
         for v in users:
             sft.append({"messages": [
-                {"role": "system", "content": SOLVE_RULES + "\n\n" + ex},
+                {"role": "system", "content": rules + "\n\n" + ex},
                 {"role": "user", "content": v},
                 {"role": "assistant", "content": solution_json(it)},
             ], "id": it["id"], "synthetic": bool(it.get("synthetic"))})
@@ -197,7 +207,7 @@ def main():
     (out / "split.json").write_text(json.dumps({
         "train": [it["id"] for it in real_train_whole], "eval": [it["id"] for it in real_eval_whole],
         "synth_train": len(syn_train), "synth_eval": len(syn_eval),
-        "neighbours": args.neighbours,
+        "neighbours": args.neighbours, "class": str(args.klass),
     }, indent=1), encoding="utf-8")
 
     print(f"real:  train {len(real_train)}  test {len(real_eval)} (one part each)")
