@@ -859,11 +859,30 @@
   }
 
   // logical space: 100 wide, figure height in units (default 60), mapped to canvas
+  // Every point the part's figure uses (all steps, not only those drawn so far, so the view does not jump while drawing).
+  function figureBounds(h) {
+    let x0 = 0, y0 = 0, x1 = 100, y1 = h;
+    const add = (x, y, pad = 4) => {
+      if (!isFinite(x) || !isFinite(y)) return;
+      if (x >= 0 && x <= 100 && y >= 0 && y <= h) return;   // inside the figure box: the book's figures keep their exact size
+      x0 = Math.min(x0, x - pad); x1 = Math.max(x1, x + pad); y0 = Math.min(y0, y - pad); y1 = Math.max(y1, y + pad);
+    };
+    steps.forEach((s) => (s.draw || []).forEach((c) => {
+      if (c.t === "line" || c.t === "poly") for (let i = 0; i + 1 < (c.p || []).length; i += 2) add(c.p[i], c.p[i + 1]);
+      else if ((c.t === "circle" || c.t === "arc") && c.c) { add(c.c[0] - c.r, c.c[1] - c.r, 2); add(c.c[0] + c.r, c.c[1] + c.r, 2); }
+      else if ((c.t === "dot" || c.t === "right") && c.p) add(c.p[0], c.p[1]);
+      else if (c.t === "text" && c.p) { add(c.p[0], c.p[1], 6); add(c.p[0] + String(c.s || "").length * 1.6, c.p[1], 6); }
+    }));
+    return { x0, y0, x1, y1 };
+  }
+
+  // Figure units -> canvas pixels, keeping proportions. The figure normally lives in 100 x h units; when a drawing reaches
+  // outside that box (a model-written figure, say), the view widens so every point and label stays on the canvas.
   function makeMap(h) {
     const { w, h: H } = { w: cv.width / devicePixelRatio, h: cv.height / devicePixelRatio };
-    const sx = w / 100, sy = H / h;
-    const s = Math.min(sx, sy);
-    const ox = (w - 100 * s) / 2, oy = (H - h * s) / 2;
+    const b = figureBounds(h), bw = b.x1 - b.x0, bh = b.y1 - b.y0;
+    const s = Math.min(w / bw, H / bh);
+    const ox = (w - bw * s) / 2 - b.x0 * s, oy = (H - bh * s) / 2 - b.y0 * s;
     return {
       X: (x) => ox + x * s,
       Y: (y) => oy + y * s,
