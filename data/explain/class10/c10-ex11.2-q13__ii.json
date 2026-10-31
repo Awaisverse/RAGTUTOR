@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex11.2-q13",
+ "label": "ii",
+ "answer_ref": "Variance = 35, SD = 5.92",
+ "math": [
+  "\\sum fx = 210,\\quad \\sum fx^2 = 7560,\\quad \\sum f = 6",
+  "S^2 = \\frac{\\sum fx^2}{\\sum f} - \\left(\\frac{\\sum fx}{\\sum f}\\right)^2",
+  "S^2 = \\frac{7560}{6} - \\left(\\frac{210}{6}\\right)^2",
+  "S^2 = 1260 - (35)^2",
+  "S^2 = 1260 - 1225 = 35",
+  "\\text{S.D.} = \\sqrt{S^2} = \\sqrt{35} \\approx 5.92"
+ ],
+ "why": [
+  {
+   "en": "Listing the given sums first helps us see that this problem involves frequencies ($f$), meaning we are working with grouped data. This clearly guides us on which specific formula to select next.",
+   "ur": "سب سے پہلے دی گئی قیمتوں کو لکھنے سے ہمیں یہ سمجھنے میں مدد ملتی ہے کہ اس سوال میں تعدد ($f$) شامل ہے، یعنی یہ گروہی مواد (grouped data) ہے۔ اس سے ہمیں آگے درست فارمولا چننے میں آسانی ہوگی۔"
+  },
+  {
+   "en": "Because our data includes frequencies ($f$), we must use the direct computational formula for the variance ($S^2$) of grouped data. This formula connects the sums we already have directly to the variance we need to find.",
+   "ur": "چونکہ ہمارے مواد میں تعدد ($f$) شامل ہے، اس لیے ہم گروہی مواد کے تغیر ($S^2$) کا براہِ راست فارمولا استعمال کریں گے۔ یہ فارمولا دیے گئے مجموعوں کو سیدھا ہمارے مطلوبہ جواب سے جوڑتا ہے۔"
+  },
+  {
+   "en": "By replacing the symbols with their exact numerical values ($7560$, $210$, and $6$), we turn the algebraic formula into a simple arithmetic expression that we can easily calculate.",
+   "ur": "علامتوں کی جگہ ان کی دی گئی عددی قیمتیں ($7560$، $210$ اور $6$) درج کرنے سے، ہم فارمولے کو ایک سادہ حسابی شکل میں بدل دیتے ہیں جسے آسانی سے حل کیا جا سکتا ہے۔"
+  },
+  {
+   "en": "According to the order of operations, we simplify the fractions inside the terms first. Notice that $\\frac{210}{6}$ gives us $35$, which is actually the arithmetic mean ($\\bar{x}$) of this data.",
+   "ur": "حسابی اصولوں کے مطابق ہم پہلے کسروں کو مختصر کرتے ہیں۔ غور کریں کہ $\\frac{210}{6}$ سے ہمیں $35$ ملتا ہے، جو درحقیقت اس مواد کا حسابی اوسط ($\\bar{x}$) ہے۔"
+  },
+  {
+   "en": "Following the order of operations, we must square the mean ($35$) before subtracting. This gives us the exact variance ($S^2 = 35$), completing the first requirement of our question.",
+   "ur": "اصول کے مطابق تفریق کرنے سے پہلے ہم اوسط ($35$) کا مربع لیتے ہیں۔ اس طرح ہمیں تغیر کی درست قیمت ($S^2 = 35$) مل جاتی ہے، جس سے ہمارے سوال کا پہلا حصہ مکمل ہو جاتا ہے۔"
+  },
+  {
+   "en": "By definition, the standard deviation is the positive square root of the variance. Taking the square root of $35$ brings our measure of spread back to the original units of the data, giving us $5.92$.",
+   "ur": "تعریف کے مطابق، معیاری انحراف تغیر کا مثبت جزر المربع ہوتا ہے۔ $35$ کا جزر لینے سے پھیلاؤ کی پیمائش واپس مواد کی اصل اکائیوں میں آ جاتی ہے، جس سے ہمیں $5.92$ حاصل ہوتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The variance is $35$ and the standard deviation is approximately $5.92$, which tells us how spread out the data values are around their mean of $35$. Getting a positive number for variance ($35$) is a good quick check, because variance can never be negative, and since $5.92 \\times 5.92$ is very close to $35$, our square root is accurate.",
+  "ur": "اس مواد کا تغیر $35$ اور معیاری انحراف تقریباً $5.92$ ہے، جو ہمیں بتاتا ہے کہ مواد کی قدریں اپنے اوسط $35$ کے گرد کس قدر پھیلی ہوئی ہیں۔ تغیر کا مثبت آنا ($35$) اس بات کی تصدیق ہے کہ ہمارا طریقہ کار درست ہے کیونکہ تغیر کبھی منفی نہیں ہو سکتا، اور چونکہ $5.92$ کو اپنے آپ سے ضرب دینے سے تقریباً $35$ ہی بنتا ہے، اس لیے ہمارا جزر بھی بالکل درست ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

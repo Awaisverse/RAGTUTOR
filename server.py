@@ -247,6 +247,46 @@ def really_same(question, item, part):
     return len(asked & have) >= 0.6 * len(asked)
 
 
+def deepen(item, klass, budget=None):
+    """A new question the engine solved in one or two steps gets the same detailed working as the book: Gemini rewrites
+    those parts (given, rule, substitution, each calculation, conclusion) and a rewrite is used only when the answer is
+    unchanged and every check it carries is true (tools/enrich_steps.validate). Otherwise the engine's own verified steps
+    stay. Bounded in time, so a slow model never delays the answer for long."""
+    if os.environ.get("DEEPEN_STEPS", "on").lower() in ("0", "off", "false", "no") or not reader_on():
+        return item
+    thin = [p for p in item.get("parts", []) if len(p.get("steps", [])) < 3 and not any(s.get("draw") for s in p["steps"])]
+    if not thin:
+        return item
+    import enrich_steps
+    import vertex_models
+    from concurrent.futures import ThreadPoolExecutor, wait
+
+    def one(p):
+        prompt = enrich_steps.PROMPT.format(
+            klass=klass, unit=item.get("unit_title", ""), question=item.get("question", ""),
+            part=f"({p.get('label')}) {p.get('prompt', '')}" if p.get("label") else "(whole question)",
+            steps=json.dumps(p["steps"], ensure_ascii=False), answer=p["answer"])
+        raw = vertex_models.generate([{"role": "user", "content": prompt}], max_new_tokens=5000, temperature=0.0,
+                                     model=os.environ.get("VERTEX_DEEPEN_MODEL") or os.environ.get("VERTEX_FAST_MODEL") or None)
+        m = re.search(r"\{.*\}", raw or "", re.S)
+        steps, _ = enrich_steps.validate(json.loads(m.group(0)) if m else {}, p)
+        return steps
+
+    pool = ThreadPoolExecutor(max_workers=min(4, len(thin)))
+    futures = {pool.submit(one, p): p for p in thin}
+    done, _ = wait(futures, timeout=budget or float(os.environ.get("DEEPEN_TIMEOUT", "25")))
+    pool.shutdown(wait=False, cancel_futures=True)
+    for f in done:
+        try:
+            steps = f.result()
+        except Exception:
+            steps = None
+        if steps:
+            futures[f]["steps"] = steps
+            futures[f]["enriched"] = True
+    return item
+
+
 def resolve(question, focus_part=None, klass="9", _rewritten=False):
     """Answer THIS question. Order: an exercise reference (shown for confirmation), a stored solution only if it is the same
     question, then the class's solver engine, then (when the question cannot be read as typed) Gemini rewrites it into the
@@ -262,7 +302,7 @@ def resolve(question, focus_part=None, klass="9", _rewritten=False):
             return {"mode": "book", "item": only_part(it, part), "part_index": 0}
     solved = ENGINES[klass](q)                         # 2. the solver engine: reads the numbers and solves this question
     if solved:
-        return {"mode": "solved", "item": solved, "part_index": 0}
+        return {"mode": "solved", "item": deepen(solved, klass), "part_index": 0}
     error = None
     if not _rewritten and reader_on():                 # 3. not readable as typed: Gemini rewrites it (never solves it)
         try:
@@ -281,7 +321,7 @@ def resolve(question, focus_part=None, klass="9", _rewritten=False):
         except Exception as exc:
             planned, error = None, f"planner: {exc}"
         if planned:
-            return {"mode": "solved", "item": planned, "part_index": 0, "plan": planned["plan"]}
+            return {"mode": "solved", "item": deepen(planned, klass), "part_index": 0, "plan": planned["plan"]}
     if model_mode():                                   # 5. the model (its steps are checked with sympy afterwards)
         try:
             sol = live_solve(q, focus_part=focus_part, klass=klass)

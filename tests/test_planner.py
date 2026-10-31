@@ -69,3 +69,11 @@ reuse = {"chunks": [{"name": "A", "expr": "1+i"}, {"name": "B", "expr": "A^2"}, 
 it = planner.solve(Q4, "10", fake(reuse))
 assert it and it["parts"][0]["answer"] == r"$\frac{3}{2}i$", it and it["parts"][0]["answer"]
 print("planner same-question coverage: passed")
+
+# The planner only chains arithmetic: a trigonometry or coordinate question never reaches it (a model once filled such a
+# plan with "150 / (30 / (30 / (150 / 30)))", which computes correctly but means nothing).
+SHIP = "A ship sails 30 km on a bearing of 150 degrees. How far south has it moved?"
+nonsense = {"chunks": [{"name": "A", "expr": "30"}, {"name": "B", "expr": "150"}, {"name": "C", "expr": "B / (A / (A / (B / A)))"}], "answer": "C"}
+assert planner.solve(SHIP, "10", fake(nonsense)) is None
+assert planner.solve("Find the midpoint of (4, -2) and (-6, 8)", "10", fake(nonsense)) is None
+print("planner topic gate: passed")

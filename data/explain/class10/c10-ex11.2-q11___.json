@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex11.2-q11",
+ "label": "",
+ "answer_ref": "Variance = 6.8, SD = 2.61",
+ "math": [
+  "x = 15, 18, 14, 20, 13 \\quad (n = 5)",
+  "\\bar{x} = \\frac{\\sum x}{n} = \\frac{15 + 18 + 14 + 20 + 13}{5} = \\frac{80}{5} = 16",
+  "\\sum(x - \\bar{x})^2 = (15 - 16)^2 + (18 - 16)^2 + (14 - 16)^2 + (20 - 16)^2 + (13 - 16)^2",
+  "\\sum(x - \\bar{x})^2 = (-1)^2 + (2)^2 + (-2)^2 + (4)^2 + (-3)^2 = 1 + 4 + 4 + 16 + 9 = 34",
+  "\\sigma^2 = \\frac{\\sum(x - \\bar{x})^2}{n} = \\frac{34}{5} = 6.8",
+  "\\sigma = \\sqrt{\\sigma^2} = \\sqrt{6.8} \\approx 2.61"
+ ],
+ "why": [
+  {
+   "en": "In statistics, 'variability' means how spread out the data is, which we measure using variance and standard deviation. Listing the values and finding $n = 5$ gives us the total count of months we need for our formulas.",
+   "ur": "شماریات میں 'تغیر' (variability) کا مطلب ہے کہ ڈیٹا کتنا پھیلا ہوا ہے، جسے ہم تغیر (variance) اور معیاری انحراف (standard deviation) سے ناپتے ہیں۔ تمام قیمتوں کو لکھنے اور $n = 5$ معلوم کرنے سے ہمیں مہینوں کی کل تعداد مل جاتی ہے جو فارمولوں کے لیے ضروری ہے۔"
+  },
+  {
+   "en": "To see how much the sales vary, we first need a central reference point, which is the arithmetic mean $\\bar{x}$. Finding $\\bar{x} = 16$ tells us that the average predicted sale is $16$ million rupees per month.",
+   "ur": "یہ دیکھنے کے لیے کہ سیلز میں کتنا فرق آ رہا ہے، ہمیں سب سے پہلے ایک مرکزی نقطہ یعنی حسابی اوسط $\\bar{x}$ کی ضرورت ہوتی ہے۔ $\\bar{x} = 16$ معلوم کرنے سے ہمیں پتہ چلتا ہے کہ اوسط متوقع سیلز $16$ ملین روپے ماہانہ ہے۔"
+  },
+  {
+   "en": "By definition, variability depends on how far each month's sale is from the average of $16$. We square each difference $(x - \\bar{x})$ so that negative differences become positive and do not cancel out the positive ones when we add them.",
+   "ur": "تعریف کے مطابق، تغیر کا انحصار اس بات پر ہے کہ ہر مہینے کی سیلز اوسط قیمت $16$ سے کتنی دور ہے۔ ہم ہر فرق $(x - \\bar{x})$ کا مربع (square) لیتے ہیں تاکہ منفی فرق مثبت ہو جائیں اور جمع کرتے وقت ایک دوسرے کو ختم نہ کریں۔"
+  },
+  {
+   "en": "We calculate the squares and add them up to find the total squared deviation $\\sum(x - \\bar{x})^2$. The result $34$ gives us the numerator required for the variance formula.",
+   "ur": "ہم تمام مربعوں کو حل کر کے جمع کرتے ہیں تاکہ کل مربعی انحراف $\\sum(x - \\bar{x})^2$ مل سکے۔ اس کا نتیجہ $34$ ہمیں تغیر (variance) کے فارمولے کے لیے شمار کنندہ (numerator) فراہم کرتا ہے۔"
+  },
+  {
+   "en": "Variance $\\sigma^2$ is defined as the average of the squared deviations from the mean. Dividing our total $34$ by $n = 5$ gives $6.8$, which is our first measure of variability.",
+   "ur": "تغیر (variance) $\\sigma^2$ دراصل اوسط سے لیے گئے مربعی انحرافات کی اوسط کو کہتے ہیں۔ کل مجموعہ $34$ کو $n = 5$ پر تقسیم کرنے سے $6.8$ ملتا ہے، جو تغیر کا پہلا پیمانہ ہے۔"
+  },
+  {
+   "en": "Since variance is in squared units, we take its positive square root to get the standard deviation $\\sigma$ in the original units (millions of rupees). This gives us $\\sigma \\approx 2.61$, completing our calculation of variability.",
+   "ur": "چونکہ تغیر (variance) کی اکائی مربع میں ہوتی ہے، اس لیے ہم اس کا مثبت جذر (square root) لیتے ہیں تاکہ معیاری انحراف $\\sigma$ اصل اکائی (ملین روپے) میں آ جائے۔ اس سے ہمیں $\\sigma \\approx 2.61$ ملتا ہے، جو تغیر معلوم کرنے کے عمل کو مکمل کرتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The variance of $6.8$ and standard deviation of $2.61$ tell us the spread of the company's sales predictions; specifically, the monthly sales typically fluctuate by about $2.61$ million rupees around the average of $16$ million rupees. This makes sense because looking at the data ($13$ to $20$), the values are all within $1$ to $4$ units of the mean $16$, so an average spread of $2.61$ is very reasonable.",
+  "ur": "تغیر (variance) $6.8$ اور معیاری انحراف (standard deviation) $2.61$ ہمیں کمپنی کی متوقع سیلز کا پھیلاؤ بتاتے ہیں؛ خاص طور پر یہ کہ ماہانہ سیلز اوسطاً $16$ ملین روپے کے آس پاس تقریباً $2.61$ ملین روپے کم یا زیادہ ہوتی ہیں۔ آپ اس کی تصدیق ایسے کر سکتے ہیں کہ تمام قیمتیں ($13$ سے $20$) اوسط $16$ سے $1$ سے لے کر $4$ کے فرق پر ہیں، اس لیے $2.61$ کا اوسط پھیلاؤ بالکل درست اور منطقی ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

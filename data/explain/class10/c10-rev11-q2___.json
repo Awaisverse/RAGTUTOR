@@ -1,0 +1,55 @@
+{
+ "item": "c10-rev11-q2",
+ "label": "",
+ "answer_ref": "Median = 202.5, Q1 = 192.2, Q3 = 211.3, D7 = 209.2, P90 = 218.8, IQR = 19.0",
+ "math": [
+  "\\begin{array}{c|cccccc} \\text{Class} & 170-180 & 180-190 & 190-200 & 200-210 & 210-220 & 220-230 \\\\ \\hline f & 2 & 6 & 9 & 12 & 8 & 3 \\\\ c.f. & 2 & 8 & 17 & 29 & 37 & 40 \\end{array}",
+  "\\text{Plot (upper boundary, c.f.) and join: the ogive}",
+  "Q_2:\\ \\frac{N}{2} = 20,\\ \\text{class } 200-210,\\ L = 200,\\ c.f. = 17,\\ f = 12;\\ Q_2 = 200 + \\frac{20 - 17}{12} \\times 10 \\approx 202.50",
+  "Q_1:\\ \\frac{N}{4} = 10,\\ \\text{class } 190-200,\\ L = 190,\\ c.f. = 8,\\ f = 9;\\ Q_1 = 190 + \\frac{10 - 8}{9} \\times 10 \\approx 192.22",
+  "Q_3:\\ \\frac{3N}{4} = 30,\\ \\text{class } 210-220,\\ L = 210,\\ c.f. = 29,\\ f = 8;\\ Q_3 = 210 + \\frac{30 - 29}{8} \\times 10 \\approx 211.25",
+  "D_7:\\ \\frac{7N}{10} = 28,\\ \\text{class } 200-210,\\ L = 200,\\ c.f. = 17,\\ f = 12;\\ D_7 = 200 + \\frac{28 - 17}{12} \\times 10 \\approx 209.17",
+  "P_{90}:\\ \\frac{90N}{100} = 36,\\ \\text{class } 210-220,\\ L = 210,\\ c.f. = 29,\\ f = 8;\\ P_{90} = 210 + \\frac{36 - 29}{8} \\times 10 \\approx 218.75",
+  "IQR = Q_3 - Q_1 = 211.25 - 192.22 \\approx 19.03"
+ ],
+ "why": [
+  {
+   "en": "To draw a cumulative frequency polygon (ogive) and find position values like the median, we first need the running total of jumpers up to each distance. The final number tells us there are $N = 40$ jumpers in total.",
+   "ur": "مجموعی تعدد کا کثیر الاضلاع (اوگیو) بنانے اور وسطانیہ جیسی پوزیشن کی قدریں معلوم کرنے کے لیے ہمیں ہر فاصلے تک چھلانگ لگانے والوں کا مجموعی جوڑ درکار ہوتا ہے۔ آخری عدد ہمیں بتاتا ہے کہ کل $N = 40$ کھلاڑی ہیں۔"
+  },
+  {
+   "en": "An ogive visually connects the upper limit of each distance interval to the total number of jumpers who reached up to that mark. Once drawn, this graph lets us read any quartile, decile, or percentile directly by finding its position on the vertical axis and dropping down to the horizontal distance axis.",
+   "ur": "اوگیو ہر فاصلے کے وقفے کی بالائی حد کو ان کھلاڑیوں کی کل تعداد سے ملاتا ہے جو اس نشان تک پہنچے۔ ایک بار بن جانے کے بعد، یہ گراف ہمیں عمودی محور پر پوزیشن تلاش کر کے اور افقی فاصلے کے محور پر نیچے آ کر کسی بھی چہارمک، عشریہ یا صدویہ کو براہِ راست پڑھنے میں مدد دیتا ہے۔"
+  },
+  {
+   "en": "The median ($Q_2$) is the exact middle of the data, which is at position $\\frac{N}{2} = 20$. Since the $20\\text{th}$ jumper falls in the $200-210$ class (where cumulative frequency reaches $29$), the formula estimates the exact middle jump distance as $202.50\\text{ cm}$.",
+   "ur": "وسطانیہ ($Q_2$) ڈیٹا کا بالکل درمیانی نقطہ ہے، جو $\\frac{N}{2} = 20$ کی پوزیشن پر ہے۔ چونکہ $20$واں کھلاڑی $200-210$ کی جماعت میں آتا ہے (جہاں مجموعی تعدد $29$ تک پہنچتا ہے)، فارمولا درمیانی چھلانگ کے فاصلے کا درست اندازہ $202.50\\text{ cm}$ لگاتا ہے۔"
+  },
+  {
+   "en": "The first quartile ($Q_1$) marks the bottom quarter of the jumpers, located at position $\\frac{N}{4} = 10$. The $10\\text{th}$ jumper lies in the $190-200$ group, telling us that one-fourth of the jumps were $192.22\\text{ cm}$ or less.",
+   "ur": "پہلا چہارمک ($Q_1$) نچلے چوتھائی کھلاڑیوں کی نشاندہی کرتا ہے، جو $\\frac{N}{4} = 10$ کی پوزیشن پر واقع ہے۔ $10$واں کھلاڑی $190-200$ کے گروپ میں ہے، جو ہمیں بتاتا ہے کہ ایک چوتھائی چھلانگیں $192.22\\text{ cm}$ یا اس سے کم تھیں۔"
+  },
+  {
+   "en": "The third quartile ($Q_3$) marks three-quarters of the data at position $\\frac{3N}{4} = 30$. This falls in the $210-220$ class and shows that three-fourths of the jumpers achieved a distance of $211.25\\text{ cm}$ or less.",
+   "ur": "تیسرا چہارمک ($Q_3$) پوزیشن $\\frac{3N}{4} = 30$ پر ڈیٹا کے تین چوتھائی حصے کی نشاندہی کرتا ہے۔ یہ $210-220$ کی جماعت میں آتا ہے اور ظاہر کرتا ہے کہ تین چوتھائی کھلاڑیوں نے $211.25\\text{ cm}$ یا اس سے کم فاصلہ طے کیا۔"
+  },
+  {
+   "en": "The seventh decile ($D_7$) divides the data at seven-tenths of the total, which is position $\\frac{7N}{10} = 28$. Located in the $200-210$ class, this tells us that $28$ out of $40$ jumpers reached up to $209.17\\text{ cm}$.",
+   "ur": "ساتواں عشریہ ($D_7$) ڈیٹا کو کل کے سات دسویں حصے پر تقسیم کرتا ہے، جو کہ پوزیشن $\\frac{7N}{10} = 28$ ہے۔ $200-210$ کی جماعت میں واقع، یہ ہمیں بتاتا ہے کہ $40$ میں سے $28$ کھلاڑی $209.17\\text{ cm}$ تک پہنچے۔"
+  },
+  {
+   "en": "The $90\\text{th}$ percentile ($P_{90}$) represents the point below which $\\frac{90N}{100} = 36$ jumpers fall. This lies in the $210-220$ class, meaning $90\\%$ of the jumps were at or below $218.75\\text{ cm}$.",
+   "ur": "$90$واں صدویہ ($P_{90}$) اس نقطے کی نمائندگی کرتا ہے جس کے نیچے $\\frac{90N}{100} = 36$ کھلاڑی آتے ہیں۔ یہ $210-220$ کی جماعت میں ہے، جس کا مطلب ہے کہ $90\\%$ چھلانگیں $218.75\\text{ cm}$ یا اس سے کم تھیں۔"
+  },
+  {
+   "en": "By definition, the interquartile range ($IQR$) is the difference between the third and first quartiles ($Q_3 - Q_1$). Subtracting $192.22$ from $211.25$ gives $19.03\\text{ cm}$, which measures the spread of the middle half of the jumpers.",
+   "ur": "تعریف کے مطابق، بین چہارمک وسعت ($IQR$) تیسرے اور پہلے چہارمک کے درمیان فرق ($Q_3 - Q_1$) ہے۔ $211.25$ میں سے $192.22$ کو تفریق کرنے سے $19.03\\text{ cm}$ حاصل ہوتا ہے، جو درمیانی نصف کھلاڑیوں کے پھیلاؤ کی پیمائش کرتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "These results give a complete picture of the long jump performances (in $\\text{cm}$): half the jumpers jumped below $202.5$, the middle half of the jumps were spread across a range of $19.0$ (from $Q_1 = 192.2$ to $Q_3 = 211.3$), seven-tenths reached up to $209.2$, and $90\\%$ jumped $218.8$ or less. You can easily check that these answers are sensible because they increase in the exact order of their positions: $Q_1 (192.2) < \\text{Median} (202.5) < D_7 (209.2) < Q_3 (211.3) < P_{90} (218.8)$.",
+  "ur": "یہ نتائج لمبی چھلانگ کی کارکردگی (سینٹی میٹر میں) کی مکمل تصویر پیش کرتے ہیں: آدھے کھلاڑیوں نے $202.5$ سے کم چھلانگ لگائی، درمیانی نصف چھلانگیں $19.0$ کی وسعت میں پھیلی ہوئی تھیں ($Q_1 = 192.2$ سے $Q_3 = 211.3$ تک)، دس میں سے سات حصے $209.2$ تک پہنچے، اور $90\\%$ نے $218.8$ یا اس سے کم چھلانگ لگائی۔ آپ آسانی سے چیک کر سکتے ہیں کہ یہ جوابات درست ہیں کیونکہ یہ اپنی پوزیشن کی ترتیب کے مطابق بڑھ رہے ہیں: $Q_1 (192.2) < \\text{Median} (202.5) < D_7 (209.2) < Q_3 (211.3) < P_{90} (218.8)$۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

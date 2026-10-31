@@ -1,0 +1,130 @@
+{
+ "item": "c10-ex5.4-q1",
+ "label": "x",
+ "answer_ref": "$x = -1,\\ \\frac{9 + \\sqrt{65}}{4},\\ \\frac{9 - \\sqrt{65}}{4}$",
+ "math": [
+  "2x^2 - 5x - 14 - \\frac{5}{x} + \\frac{2}{x^2} = 0",
+  "2\\left(x^2 + \\frac{1}{x^2}\\right) - 5\\left(x + \\frac{1}{x}\\right) - 14 = 0",
+  "\\text{Let } y = x + \\frac{1}{x}",
+  "y^2 = x^2 + \\frac{1}{x^2} + 2 \\Rightarrow x^2 + \\frac{1}{x^2} = y^2 - 2",
+  "2(y^2 - 2) - 5y - 14 = 0 \\Rightarrow 2y^2 - 5y - 18 = 0",
+  "2 y^{2} + 4 y - 9 y - 18 = 0",
+  "2 y \\left(y + 2\\right) - 9 \\left(y + 2\\right) = 0",
+  "\\left(2 y - 9\\right) \\left(y + 2\\right) = 0",
+  "2 y - 9 = 0 \\quad\\text{or}\\quad y + 2 = 0",
+  "y = -2,\\quad y = \\frac{9}{2}",
+  "x + \\frac{1}{x} = -2 \\Rightarrow x^{2} + 2 x + 1 = 0",
+  "x^{2} + 2 x + 1 = 0",
+  "x^{2} + x + x + 1 = 0",
+  "x \\left(x + 1\\right) + x + 1 = 0",
+  "\\left(x + 1\\right) \\left(x + 1\\right) = 0",
+  "x + 1 = 0 \\quad\\text{or}\\quad x + 1 = 0",
+  "x = -1",
+  "x + \\frac{1}{x} = \\frac{9}{2} \\Rightarrow 2 x^{2} - 9 x + 2 = 0",
+  "a = 2,\\quad b = -9,\\quad c = 2",
+  "x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a} = \\frac{-(-9) \\pm \\sqrt{(-9)^2 - 4(2)(2)}}{2(2)}",
+  "x = \\frac{9 \\pm \\sqrt{81 - 16}}{4} = \\frac{9 \\pm \\sqrt{65}}{4}",
+  "x = \\frac{9 + \\sqrt{65}}{4},\\quad x = \\frac{9 - \\sqrt{65}}{4}",
+  "\\text{S.S} = \\{-1, \\frac{9 + \\sqrt{65}}{4}, \\frac{9 - \\sqrt{65}}{4}\\}"
+ ],
+ "why": [
+  {
+   "en": "This is a reciprocal equation because the coefficients from the start and the end are the same ($2, -5, -14, -5, 2$). To solve this special type of degree-4 equation, our standard rule is to divide every term by $x^2$, which reduces the highest power and creates symmetric fraction pairs.",
+   "ur": "یہ ایک معکوس مساوات (reciprocal equation) ہے کیونکہ شروع اور آخر کے عددی سر ایک جیسے ہیں ($2, -5, -14, -5, 2$)۔ اس خاص قسم کی درجہ چہارم کی مساوات کو حل کرنے کا معیاری طریقہ یہ ہے کہ ہر رقم کو $x^2$ سے تقسیم کیا جائے، جس سے بڑی طاقت کم ہو جاتی ہے اور متشابہ کسری جوڑے بن جاتے ہیں۔"
+  },
+  {
+   "en": "We bring the terms with the same coefficients ($2$ and $-5$) together and factor them out. This reveals the repeating pattern of $x + \\frac{1}{x}$ and $x^2 + \\frac{1}{x^2}$, preparing the equation for a simple substitution.",
+   "ur": "ہم ایک جیسے عددی سر ($2$ اور $-5$) والی رقموں کو اکٹھا کرتے ہیں اور انہیں مشترک لے لیتے ہیں۔ اس سے $x + \\frac{1}{x}$ اور $x^2 + \\frac{1}{x^2}$ کی ترتیب واضح ہو جاتی ہے، جو مساوات کو ایک سادہ تبدیلی (substitution) کے لیے تیار کرتی ہے۔"
+  },
+  {
+   "en": "To turn this complicated expression into a standard quadratic equation, we replace the simpler bracket $x + \\frac{1}{x}$ with a single variable $y$.",
+   "ur": "اس پیچیدہ جملے کو ایک معیاری دو درجی مساوات میں بدلنے کے لیے، ہم سادہ بریکٹ $x + \\frac{1}{x}$ کی جگہ ایک نیا متغیر $y$ فرض کر لیتے ہیں۔"
+  },
+  {
+   "en": "We also need to replace $x^2 + \\frac{1}{x^2}$ in terms of $y$. By squaring both sides of our substitution using the $(a+b)^2$ formula and moving $2$ to the other side, we find its exact value is $y^2 - 2$.",
+   "ur": "ہمیں $x^2 + \\frac{1}{x^2}$ کو بھی $y$ کی شکل میں بدلنا ہے۔ اپنی فرض کردہ مساوات کے دونوں اطراف کا $(a+b)^2$ کلیے سے مربع لے کر اور $2$ کو دوسری طرف منتقل کر کے، ہمیں اس کی قیمت $y^2 - 2$ مل جاتی ہے۔"
+  },
+  {
+   "en": "Putting these $y$ expressions into our grouped equation eliminates $x$ completely. Simplifying the brackets gives us a neat, standard quadratic equation in $y$: $2y^2 - 5y - 18 = 0$.",
+   "ur": "$y$ کی ان قیمتوں کو ہماری ترتیب دی گئی مساوات میں درج کرنے سے $x$ مکمل طور پر ختم ہو جاتا ہے۔ بریکٹوں کو مختصر کرنے سے ہمیں $y$ میں ایک صاف اور معیاری دو درجی مساوات $2y^2 - 5y - 18 = 0$ مل جاتی ہے۔"
+  },
+  {
+   "en": "We use middle-term breaking (factorization) to solve for $y$. We need two numbers that multiply to $-36$ (which is $2 \\times -18$) and add up to $-5$; the numbers $4$ and $-9$ work perfectly.",
+   "ur": "ہم $y$ کی قیمت معلوم کرنے کے لیے درمیانی رقم کو توڑنے (تجزی) کا طریقہ استعمال کرتے ہیں۔ ہمیں ایسے دو اعداد چاہئیں جن کو ضرب دینے سے $-36$ (یعنی $2 \\times -18$) آئے اور جمع کرنے سے $-5$ آئے؛ اس کے لیے $4$ اور $-9$ بالکل درست ہیں۔"
+  },
+  {
+   "en": "Grouping the four terms into two pairs allows us to pull out the highest common factor from each pair ($2y$ from the first, $-9$ from the second). Notice how the identical bracket $(y + 2)$ appears in both parts.",
+   "ur": "چار رقموں کو دو جوڑوں میں بانٹنے سے ہم ہر جوڑے سے سب سے بڑا مشترک جزو باہر نکال سکتے ہیں (پہلے سے $2y$ اور دوسرے سے $-9$)۔ غور کریں کہ دونوں حصوں میں ایک جیسی بریکٹ $(y + 2)$ آ گئی ہے۔"
+  },
+  {
+   "en": "Since $(y + 2)$ is common to both terms, we factor it out to the front. This turns the sum into a product of two linear factors equal to zero.",
+   "ur": "چونکہ $(y + 2)$ دونوں رقموں میں مشترک ہے، اس لیے ہم اسے باہر مشترک لے لیتے ہیں۔ اس سے یہ جملہ دو یک درجی اجزائے ضربی کے حاصل ضرب میں بدل جاتا ہے جو صفر کے برابر ہے۔"
+  },
+  {
+   "en": "By the zero-product property, if two brackets multiply to give $0$, at least one of them must be $0$. This lets us split the quadratic equation into two simple linear equations.",
+   "ur": "ضربی خاصیت کے مطابق، اگر دو بریکٹوں کا حاصل ضرب $0$ ہو، تو ان میں سے کم از کم ایک کو لازمی $0$ ہونا چاہیے۔ اس سے ہم دو درجی مساوات کو دو سادہ یک درجی مساواتوں میں توڑ لیتے ہیں۔"
+  },
+  {
+   "en": "Solving each small equation gives us the two values for $y$. However, our original question was about $x$, so we are only halfway done.",
+   "ur": "ہر چھوٹی مساوات کو حل کرنے سے ہمیں $y$ کی دو قیمتیں مل جاتی ہیں۔ لیکن ہمارا اصل سوال $x$ کے بارے میں تھا، اس لیے ابھی ہمارا آدھا کام مکمل ہوا ہے۔"
+  },
+  {
+   "en": "Now we replace $y$ back with $x + \\frac{1}{x}$ for the first value, $y = -2$. Multiplying the whole equation by $x$ removes the fraction and rearranges it into a quadratic equation in $x$.",
+   "ur": "اب ہم پہلی قیمت $y = -2$ کے لیے $y$ کی جگہ واپس $x + \\frac{1}{x}$ رکھتے ہیں۔ پوری مساوات کو $x$ سے ضرب دینے سے کسر ختم ہو جاتی ہے اور یہ $x$ میں ایک دو درجی مساوات بن جاتی ہے۔"
+  },
+  {
+   "en": "We write this first quadratic equation clearly in standard form ($ax^2 + bx + c = 0$) so we can solve it for $x$.",
+   "ur": "ہم اس پہلی دو درجی مساوات کو واضح طور پر معیاری شکل ($ax^2 + bx + c = 0$) میں لکھتے ہیں تاکہ ہم اسے $x$ کے لیے حل کر سکیں۔"
+  },
+  {
+   "en": "We factorize this equation by splitting the middle term $2x$ into $x + x$, since $1 \\times 1 = 1$ and $1 + 1 = 2$.",
+   "ur": "ہم درمیانی رقم $2x$ کو $x + x$ میں توڑ کر اس مساوات کی تجزی کرتے ہیں، کیونکہ $1 \\times 1 = 1$ اور $1 + 1 = 2$ ہوتا ہے۔"
+  },
+  {
+   "en": "Taking $x$ common from the first pair and $1$ from the second pair gives us the shared bracket $(x + 1)$.",
+   "ur": "پہلے جوڑے سے $x$ اور دوسرے جوڑے سے $1$ مشترک لینے سے ہمیں ایک جیسی بریکٹ $(x + 1)$ ملتی ہے۔"
+  },
+  {
+   "en": "Factoring out the common $(x + 1)$ bracket shows that this expression is actually a perfect square: $(x + 1)(x + 1) = 0$.",
+   "ur": "مشترک بریکٹ $(x + 1)$ کو باہر نکالنے سے پتہ چلتا ہے کہ یہ جملہ دراصل ایک مکمل مربع ہے: $(x + 1)(x + 1) = 0$۔"
+  },
+  {
+   "en": "Applying the zero-product rule again, we set each factor equal to $0$.",
+   "ur": "صفر کے حاصل ضرب کا اصول دوبارہ لاگو کرتے ہوئے، ہم ہر جزو کو $0$ کے برابر رکھتے ہیں۔"
+  },
+  {
+   "en": "Both identical factors give the exact same answer, so our first real solution for the original equation is $x = -1$.",
+   "ur": "دونوں ایک جیسے اجزاء بالکل ایک ہی جواب دیتے ہیں، اس لیے ہماری اصل مساوات کا پہلا حل $x = -1$ ہے۔"
+  },
+  {
+   "en": "Next, we take the second value, $y = \\frac{9}{2}$, and put back $x + \\frac{1}{x}$. Multiplying through by $2x$ clears the denominators and gives our second quadratic equation in $x$: $2x^2 - 9x + 2 = 0$.",
+   "ur": "اس کے بعد، ہم دوسری قیمت $y = \\frac{9}{2}$ لیتے ہیں اور $x + \\frac{1}{x}$ واپس درج کرتے ہیں۔ پوری مساوات کو $2x$ سے ضرب دینے سے بٹے ختم ہو جاتے ہیں اور ہمیں $x$ میں دوسری دو درجی مساوات $2x^2 - 9x + 2 = 0$ ملتی ہے۔"
+  },
+  {
+   "en": "Since factors of $4$ (from $2 \\times 2$) cannot add up to $-9$, middle-term breaking won't work here. So we prepare to use the quadratic formula by writing down the coefficients $a = 2, b = -9,$ and $c = 2$.",
+   "ur": "چونکہ $4$ (یعنی $2 \\times 2$) کے ایسے اجزاء نہیں بن سکتے جن کا مجموعہ $-9$ ہو، اس لیے یہاں تجزی کا طریقہ کام نہیں کرے گا۔ چنانچہ ہم دو درجی کلیہ استعمال کرنے کی تیاری کرتے ہیں اور عددی سر $a = 2, b = -9$ اور $c = 2$ لکھتے ہیں۔"
+  },
+  {
+   "en": "We carefully substitute the values of $a, b,$ and $c$ into the quadratic formula, keeping negative numbers inside brackets to avoid sign mistakes.",
+   "ur": "ہم علامتوں کی غلطی سے بچنے کے لیے منفی اعداد کو بریکٹ میں رکھتے ہوئے، احتیاط سے $a, b$ اور $c$ کی قیمتیں دو درجی کلیے میں درج کرتے ہیں۔"
+  },
+  {
+   "en": "Simplifying inside the square root gives $81 - 16 = 65$, and the denominator becomes $4$. Since $65$ is not a perfect square, we leave it as $\\sqrt{65}$.",
+   "ur": "جذر کے اندر حل کرنے سے $81 - 16 = 65$ آتا ہے، اور مخرج $4$ بن جاتا ہے۔ چونکہ $65$ مکمل مربع نہیں ہے، اس لیے ہم اسے $\\sqrt{65}$ ہی رہنے دیتے ہیں۔"
+  },
+  {
+   "en": "Separating the plus and minus signs gives us the remaining two roots of our equation.",
+   "ur": "جمع اور منفی کی علامتوں کو الگ کرنے سے ہمیں اپنی مساوات کے باقی دو روٹس (جذور) مل جاتے ہیں۔"
+  },
+  {
+   "en": "Finally, we collect all distinct values of $x$ from both cases into the Solution Set (S.S).",
+   "ur": "آخر میں، ہم دونوں صورتوں سے حاصل ہونے والی $x$ کی تمام مختلف قیمتوں کو حل سیٹ (S.S) میں اکٹھا کر کے لکھ دیتے ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The values $x = -1, \\frac{9 + \\sqrt{65}}{4},$ and $\\frac{9 - \\sqrt{65}}{4}$ are the exact numbers that make the original degree-4 equation $2x^4-5x^3-14x^2-5x+2=0$ true (note that $-1$ is a repeated root, which is why there are three distinct answers instead of four). You can easily check $x = -1$ by plugging it into the original equation: $2(-1)^4 - 5(-1)^3 - 14(-1)^2 - 5(-1) + 2 = 2 + 5 - 14 + 5 + 2 = 0$, which confirms our solution is correct!",
+  "ur": "قیمتیں $x = -1, \\frac{9 + \\sqrt{65}}{4}$ اور $\\frac{9 - \\sqrt{65}}{4}$ وہی مخصوص اعداد ہیں جو اصل درجہ چہارم کی مساوات $2x^4-5x^3-14x^2-5x+2=0$ کو درست ثابت کرتے ہیں (یاد رہے کہ $-1$ ایک مکرر روٹ ہے، اسی لیے چار کے بجائے تین مختلف جوابات آئے ہیں)۔ آپ اصل مساوات میں $x = -1$ درج کر کے باآسانی پڑتال کر سکتے ہیں: $2(-1)^4 - 5(-1)^3 - 14(-1)^2 - 5(-1) + 2 = 2 + 5 - 14 + 5 + 2 = 0$، جو تصدیق کرتا ہے کہ ہمارا حل بالکل درست ہے!"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

@@ -1,0 +1,55 @@
+{
+ "item": "c10-ex11.1-q2",
+ "label": "",
+ "answer_ref": "Median = 94, Q1 = 85, Q3 = 103, D6 = 97, P80 = 105, IQR = 18",
+ "math": [
+  "\\begin{array}{c|ccccc} \\text{Class} & 69-79 & 79-89 & 89-99 & 99-109 & 109-119 \\\\ \\hline f & 4 & 10 & 13 & 8 & 5 \\\\ c.f. & 4 & 14 & 27 & 35 & 40 \\end{array}",
+  "\\text{Plot (upper boundary, c.f.) and join: the ogive}",
+  "Q_2:\\ \\frac{N}{2} = 20,\\ \\text{class } 89-99,\\ L = 89,\\ c.f. = 14,\\ f = 13;\\ Q_2 = 89 + \\frac{20 - 14}{13} \\times 10 \\approx 93.62",
+  "Q_1:\\ \\frac{N}{4} = 10,\\ \\text{class } 79-89,\\ L = 79,\\ c.f. = 4,\\ f = 10;\\ Q_1 = 79 + \\frac{10 - 4}{10} \\times 10 \\approx 85.00",
+  "Q_3:\\ \\frac{3N}{4} = 30,\\ \\text{class } 99-109,\\ L = 99,\\ c.f. = 27,\\ f = 8;\\ Q_3 = 99 + \\frac{30 - 27}{8} \\times 10 \\approx 102.75",
+  "D_6:\\ \\frac{6N}{10} = 24,\\ \\text{class } 89-99,\\ L = 89,\\ c.f. = 14,\\ f = 13;\\ D_6 = 89 + \\frac{24 - 14}{13} \\times 10 \\approx 96.69",
+  "P_{80}:\\ \\frac{80N}{100} = 32,\\ \\text{class } 99-109,\\ L = 99,\\ c.f. = 27,\\ f = 8;\\ P_{80} = 99 + \\frac{32 - 27}{8} \\times 10 \\approx 105.25",
+  "IQR = Q_3 - Q_1 = 102.75 - 85.00 \\approx 17.75"
+ ],
+ "why": [
+  {
+   "en": "An ogive is a cumulative frequency graph, so we first need the running total of the frequencies. Adding the frequencies step by step gives us the cumulative frequency ($c.f.$) for each class, showing a total of $N = 40$ scores.",
+   "ur": "اوجائیو (ogive) ایک مجموعی تعدد کا گراف ہے، اس لیے ہمیں پہلے تعدد (frequencies) کے مسلسل مجموعے کی ضرورت ہے۔ تعدد کو مرحلہ وار جمع کرنے سے ہمیں ہر جماعت کا مجموعی تعدد ($c.f.$) ملتا ہے، جو کل $N = 40$ سکورز ظاہر کرتا ہے۔"
+  },
+  {
+   "en": "By definition, a 'less than' ogive plots how many scores fall below each upper class boundary. Joining these points gives us a smooth curve from which we can read positional values like the median and quartiles.",
+   "ur": "تعریف کے مطابق، اوجائیو بنانے کے لیے ہر بالائی جماعتی حد کے مقابلے میں اس کا مجموعی تعدد پلاٹ کیا جاتا ہے۔ ان نقاط کو ملانے سے ہمیں ایک ہموار خط (curve) ملتا ہے جس کی مدد سے ہم وسطانیہ اور چوتھائیوں جیسی قدریں معلوم کر سکتے ہیں۔"
+  },
+  {
+   "en": "The median ($Q_2$) divides the data into two equal halves, so we look at position $\\frac{N}{2} = 20$. On the graph (and by linear interpolation across the class $89-99$ of width $10$), this corresponds to a middle score of about $93.62$.",
+   "ur": "وسطانیہ ($Q_2$) ڈیٹا کو دو برابر حصوں میں تقسیم کرتا ہے، اس لیے ہم $\\frac{N}{2} = 20$ کی پوزیشن دیکھتے ہیں۔ گراف پر (اور جماعت $89-99$ جس کا وقفہ $10$ ہے، میں حساب لگانے سے) یہ درمیانی سکور تقریباً $93.62$ بنتا ہے۔"
+  },
+  {
+   "en": "The lower quartile ($Q_1$) marks the first quarter of the data, which is at position $\\frac{N}{4} = 10$. Reading across from $10$ on the cumulative frequency axis to the curve in class $79-89$ gives us a score of $85.00$.",
+   "ur": "زیریں چوتھائی ($Q_1$) ڈیٹا کے پہلے چوتھائی حصے کو ظاہر کرتی ہے، جو کہ پوزیشن $\\frac{N}{4} = 10$ پر ہے۔ مجموعی تعدد کے محور پر $10$ سے جماعت $79-89$ میں خط تک جانے سے ہمیں $85.00$ سکور ملتا ہے۔"
+  },
+  {
+   "en": "The upper quartile ($Q_3$) marks the three-quarter point of the data, located at position $\\frac{3N}{4} = 30$. Finding where $c.f. = 30$ meets the ogive inside the class $99-109$ tells us that three-quarters of the scores are below $102.75$.",
+   "ur": "بالائی چوتھائی ($Q_3$) ڈیٹا کے تین چوتھائی حصے کو ظاہر کرتی ہے، جو پوزیشن $\\frac{3N}{4} = 30$ پر واقع ہے۔ جہاں $c.f. = 30$ جماعت $99-109$ کے اندر اوجائیو سے ملتا ہے، وہ بتاتا ہے کہ تین چوتھائی سکورز $102.75$ سے کم ہیں۔"
+  },
+  {
+   "en": "The sixth decile ($D_6$) represents the point where $\\frac{6}{10}$ of the data lies below it, at position $\\frac{6N}{10} = 24$. Locating $24$ on the vertical axis and dropping down to the score axis in class $89-99$ gives approximately $96.69$.",
+   "ur": "چھٹا عشریہ ($D_6$) اس نقطے کو ظاہر کرتا ہے جس کے نیچے ڈیٹا کا $\\frac{6}{10}$ حصہ آتا ہے، یعنی پوزیشن $\\frac{6N}{10} = 24$۔ عمودی محور پر $24$ کو تلاش کر کے جماعت $89-99$ میں سکور کے محور پر آنے سے تقریباً $96.69$ ملتا ہے۔"
+  },
+  {
+   "en": "The $80$-th percentile ($P_{80}$) is the score below which $80$ out of $100$ parts of the data fall, found at position $\\frac{80N}{100} = 32$. Tracing from $c.f. = 32$ to the curve in class $99-109$ gives a value of $105.25$.",
+   "ur": "$80$ واں صدویہ ($P_{80}$) وہ سکور ہے جس کے نیچے ڈیٹا کے $100$ میں سے $80$ حصے آتے ہیں، جو پوزیشن $\\frac{80N}{100} = 32$ پر ملتا ہے۔ $c.f. = 32$ سے جماعت $99-109$ میں خط تک جانے سے $105.25$ کی قدر حاصل ہوتی ہے۔"
+  },
+  {
+   "en": "By definition, the interquartile range ($IQR$) is the difference between the upper and lower quartiles ($Q_3 - Q_1$). Subtracting $85.00$ from $102.75$ tells us the spread of the middle half of the scores is $17.75$.",
+   "ur": "تعریف کے مطابق، بین چوتھائی وسعت ($IQR$) بالائی اور زیریں چوتھائیوں کے درمیان فرق ($Q_3 - Q_1$) کو کہتے ہیں۔ $102.75$ میں سے $85.00$ کو تفریق کرنے سے معلوم ہوتا ہے کہ درمیانی نصف سکورز کا پھیلاؤ $17.75$ ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "Rounding to the nearest whole number as read from a graph, the middle score (median) is $94$, while the middle half of the students scored between $Q_1 = 85$ and $Q_3 = 103$, giving a middle spread ($IQR$) of $18$. Also, six-tenths of the scores are below $D_6 = 97$ and eighty hundredths are below $P_{80} = 105$; you can check that these values make sense because they increase in the exact order of their positions ($Q_1 < Q_2 < D_6 < Q_3 < P_{80}$, matching $85 < 94 < 97 < 103 < 105$).",
+  "ur": "گراف سے پڑھی گئی قدروں کو قریب ترین مکمل عدد تک محدود کرنے سے، درمیانی سکور (وسطانیہ) $94$ ہے، جبکہ درمیانی نصف طلباء کے سکورز $Q_1 = 85$ اور $Q_3 = 103$ کے درمیان ہیں، جو کہ $18$ کا درمیانی پھیلاؤ ($IQR$) دیتے ہیں۔ اسی طرح، دس میں سے چھ حصے سکورز $D_6 = 97$ سے کم ہیں اور سو میں سے اسی حصے $P_{80} = 105$ سے کم ہیں؛ آپ اس جواب کی درستگی ایسے جانچ سکتے ہیں کہ یہ تمام قدریں اپنی پوزیشن کی ترتیب سے بڑھ رہی ہیں ($Q_1 < Q_2 < D_6 < Q_3 < P_{80}$، یعنی $85 < 94 < 97 < 103 < 105$)۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

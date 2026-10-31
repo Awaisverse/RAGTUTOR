@@ -7798,7 +7798,11 @@
       {
        "math": "",
        "en": "Left-hand side: $\\overline{\\left(\\frac{z_1}{z_2}\\right)}$",
-       "ur": "بائیں جانب: $\\overline{\\left(\\frac{z_1}{z_2}\\right)}$"
+       "ur": "بائیں جانب: $\\overline{\\left(\\frac{z_1}{z_2}\\right)}$",
+       "why": {
+        "en": "To verify an equation, we start by evaluating the Left-Hand Side (LHS) on its own. Here, the wide bar means we must first divide $z_1$ by $z_2$ and then take the conjugate of that result.",
+        "ur": "مساوات کو ثابت کرنے کے لیے، ہم پہلے بائیں طرف (LHS) کو الگ سے حل کرتے ہیں۔ یہاں بڑی بار کا مطلب ہے کہ ہمیں پہلے $z_1$ کو $z_2$ پر تقسیم کرنا ہے اور پھر حاصل ہونے والے جواب کا کونجوگیٹ لینا ہے۔"
+       }
       },
       {
        "math": "\\frac{3 + 4i}{2 + 3i} \\times \\frac{2 - 3i}{2 - 3i}",
@@ -7806,7 +7810,11 @@
        "ur": "شمار کنندہ اور نسب نما کو نسب نما کے مزدوج $2 - 3i$ سے ضرب دیں۔",
        "check": [
         "(3 + 4*I)/(2 + 3*I) == (3 + 4*I)*(2 - 3*I)/((2 + 3*I)*(2 - 3*I))"
-       ]
+       ],
+       "why": {
+        "en": "We cannot divide complex numbers directly when there is an $i$ in the denominator. By multiplying both top and bottom by the denominator's conjugate, $2 - 3i$, we use a standard rule to turn the denominator into a real number.",
+        "ur": "جب مخرج (denominator) میں $i$ موجود ہو تو ہم کمپلیکس نمبرز کو براہِ راست تقسیم نہیں کر سکتے۔ شمار کنندہ اور مخرج دونوں کو مخرج کے کونجوگیٹ $2 - 3i$ سے ضرب دے کر ہم مخرج کو ایک حقیقی عدد (real number) میں تبدیل کرتے ہیں۔"
+       }
       },
       {
        "math": "= \\frac{18 - i}{2^2 + 3^2} = \\frac{18 - i}{13}",
@@ -7815,7 +7823,11 @@
        "check": [
         "(2 + 3*I)*(2 - 3*I) == (13)",
         "(3 + 4*I)*(2 - 3*I) == (18 - I)"
-       ]
+       ],
+       "why": {
+        "en": "We apply the difference of squares rule in the denominator and standard multiplication with $i^2 = -1$ in the numerator. This removes $i$ from the bottom completely, giving us a clean real denominator of $13$.",
+        "ur": "ہم مخرج میں مربعوں کے فرق کا فارمولا لگاتے ہیں اور شمار کنندہ میں عام ضرب دے کر $i^2 = -1$ درج کرتے ہیں۔ اس سے نیچے سے $i$ بالکل ختم ہو جاتا ہے اور ہمیں $13$ کا ایک سادہ حقیقی مخرج ملتا ہے۔"
+       }
       },
       {
        "math": "= \\frac{18}{13} - \\frac{1}{13}i",
@@ -7823,7 +7835,11 @@
        "ur": "ہر حصے کو نسب نما سے تقسیم کر کے سادہ کریں۔",
        "check": [
         "(3 + 4*I)/(2 + 3*I) == (18/13 - I/13)"
-       ]
+       ],
+       "why": {
+        "en": "We split the fraction to write the number in the standard complex form $a + bi$. Having the real part $\\frac{18}{13}$ and imaginary part $-\\frac{1}{13}i$ separate makes it very easy to take the conjugate in the next step.",
+        "ur": "ہم کسر کو الگ الگ کر کے عدد کو معیاری کمپلیکس شکل $a + bi$ میں لکھتے ہیں۔ حقیقی حصے $\\frac{18}{13}$ اور خیالی حصے $-\\frac{1}{13}i$ کو الگ کرنے سے اگلے مرحلے میں کونجوگیٹ لینا بہت آسان ہو جاتا ہے۔"
+       }
       },
       {
        "math": "\\overline{\\frac{18}{13} - \\frac{1}{13}i} = \\frac{18}{13} + \\frac{1}{13}i",
@@ -7831,12 +7847,20 @@
        "ur": "مزدوج میں خیالی حصے کی علامت بدل جاتی ہے۔",
        "check": [
         "conjugate((18/13 - I/13)) == (18/13 + I/13)"
-       ]
+       ],
+       "why": {
+        "en": "Now we apply the outer conjugate bar from the Left-Hand Side by reversing the sign of the imaginary part. This gives us the final simplified value of the Left-Hand Side, $\\frac{18}{13} + \\frac{1}{13}i$.",
+        "ur": "اب ہم بائیں طرف والی بیرونی کونجوگیٹ بار کا عمل مکمل کرتے ہوئے خیالی حصے کی علامت بدل دیتے ہیں۔ اس سے ہمیں بائیں طرف (LHS) کی آخری مختصر قیمت $\\frac{18}{13} + \\frac{1}{13}i$ حاصل ہو جاتی ہے۔"
+       }
       },
       {
        "math": "",
        "en": "Right-hand side: $\\frac{\\overline{z_1}}{\\overline{z_2}}$",
-       "ur": "دائیں جانب: $\\frac{\\overline{z_1}}{\\overline{z_2}}$"
+       "ur": "دائیں جانب: $\\frac{\\overline{z_1}}{\\overline{z_2}}$",
+       "why": {
+        "en": "Next, we work on the Right-Hand Side (RHS) independently to see if it matches our first result. Notice that here the bars are separate, meaning we must find the conjugates of $z_1$ and $z_2$ before dividing.",
+        "ur": "اب ہم دائیں طرف (RHS) کو الگ سے حل کرتے ہیں تاکہ دیکھ سکیں کہ کیا یہ ہمارے پہلے جواب کے برابر آتا ہے۔ غور کریں کہ یہاں بارز الگ الگ ہیں، جس کا مطلب ہے کہ ہمیں تقسیم کرنے سے پہلے $z_1$ اور $z_2$ کے کونجوگیٹ معلوم کرنے ہیں۔"
+       }
       },
       {
        "math": "\\overline{3 + 4i} = 3 - 4i",
@@ -7844,7 +7868,11 @@
        "ur": "مزدوج میں خیالی حصے کی علامت بدل جاتی ہے۔",
        "check": [
         "conjugate((3 + 4*I)) == (3 - 4*I)"
-       ]
+       ],
+       "why": {
+        "en": "Using the definition of a complex conjugate, we flip the sign of the imaginary part of $z_1$. This gives us the new numerator $\\overline{z_1} = 3 - 4i$ for our fraction.",
+        "ur": "کمپلیکس کونجوگیٹ کی تعریف کے مطابق، ہم $z_1$ کے خیالی حصے کی علامت بدل دیتے ہیں۔ اس سے ہمیں اپنی کسر کے لیے نیا شمار کنندہ $\\overline{z_1} = 3 - 4i$ مل جاتا ہے۔"
+       }
       },
       {
        "math": "\\overline{2 + 3i} = 2 - 3i",
@@ -7852,7 +7880,11 @@
        "ur": "مزدوج میں خیالی حصے کی علامت بدل جاتی ہے۔",
        "check": [
         "conjugate((2 + 3*I)) == (2 - 3*I)"
-       ]
+       ],
+       "why": {
+        "en": "Similarly, we find the conjugate of $z_2$ by changing $+3i$ to $-3i$. Now we have the denominator $\\overline{z_2} = 2 - 3i$ ready to set up the division.",
+        "ur": "اسی طرح، ہم $+3i$ کو $-3i$ میں بدل کر $z_2$ کا کونجوگیٹ معلوم کرتے ہیں۔ اب ہمارے پاس تقسیم کے عمل کے لیے مخرج $\\overline{z_2} = 2 - 3i$ تیار ہے۔"
+       }
       },
       {
        "math": "\\frac{3 - 4i}{2 - 3i} \\times \\frac{2 + 3i}{2 + 3i}",
@@ -7860,7 +7892,11 @@
        "ur": "شمار کنندہ اور نسب نما کو نسب نما کے مزدوج $2 + 3i$ سے ضرب دیں۔",
        "check": [
         "(3 - 4*I)/(2 - 3*I) == (3 - 4*I)*(2 + 3*I)/((2 - 3*I)*(2 + 3*I))"
-       ]
+       ],
+       "why": {
+        "en": "We set up the fraction $\\frac{\\overline{z_1}}{\\overline{z_2}}$ and rationalize the denominator just like before. Since the denominator is $2 - 3i$, its conjugate is $2 + 3i$, which we multiply on top and bottom to clear $i$ from the denominator.",
+        "ur": "ہم کسر $\\frac{\\overline{z_1}}{\\overline{z_2}}$ بناتے ہیں اور پہلے کی طرح مخرج کو ناطق (rationalize) بناتے ہیں۔ چونکہ مخرج $2 - 3i$ ہے، اس لیے اس کا کونجوگیٹ $2 + 3i$ ہے، جس سے ہم اوپر اور نیچے ضرب دیتے ہیں تاکہ مخرج سے $i$ ختم ہو جائے۔"
+       }
       },
       {
        "math": "= \\frac{18 + i}{2^2 + 3^2} = \\frac{18 + i}{13}",
@@ -7869,7 +7905,11 @@
        "check": [
         "(2 - 3*I)*(2 + 3*I) == (13)",
         "(3 - 4*I)*(2 + 3*I) == (18 + I)"
-       ]
+       ],
+       "why": {
+        "en": "Multiplying the conjugates in the denominator again gives the real number $13$, while expanding the numerator with $i^2 = -1$ simplifies the top to $18 + i$.",
+        "ur": "مخرج میں کونجوگیٹس کو ضرب دینے سے دوبارہ حقیقی عدد $13$ آتا ہے، جبکہ شمار کنندہ کو ضرب دے کر $i^2 = -1$ لگانے سے اوپر والا حصہ مختصر ہو کر $18 + i$ بن جاتا ہے۔"
+       }
       },
       {
        "math": "= \\frac{18}{13} + \\frac{1}{13}i",
@@ -7877,7 +7917,11 @@
        "ur": "ہر حصے کو نسب نما سے تقسیم کر کے سادہ کریں۔",
        "check": [
         "(3 - 4*I)/(2 - 3*I) == (18/13 + I/13)"
-       ]
+       ],
+       "why": {
+        "en": "We separate the fraction into real and imaginary parts to reach the standard form $a + bi$. This completes the Right-Hand Side calculation, giving $\\frac{18}{13} + \\frac{1}{13}i$.",
+        "ur": "معیاری شکل $a + bi$ حاصل کرنے کے لیے ہم کسر کو حقیقی اور خیالی حصوں میں الگ الگ کر لیتے ہیں۔ اس سے دائیں طرف (RHS) کا حل مکمل ہو کر $\\frac{18}{13} + \\frac{1}{13}i$ آ جاتا ہے۔"
+       }
       },
       {
        "math": "\\overline{\\left(\\frac{z_1}{z_2}\\right)} = \\frac{18}{13} + \\frac{1}{13}i = \\frac{\\overline{z_1}}{\\overline{z_2}}",
@@ -7885,10 +7929,18 @@
        "ur": "حاصل تقسیم کا مزدوج، مزدوجوں کا حاصل تقسیم ہے۔",
        "check": [
         "(18/13 + I/13) == (18/13 + I/13)"
-       ]
+       ],
+       "why": {
+        "en": "Comparing our two results, we see that both the Left-Hand Side and the Right-Hand Side equal $\\frac{18}{13} + \\frac{1}{13}i$. Since both sides give the exact same complex number, the property is successfully verified.",
+        "ur": "دونوں نتائج کا موازنہ کرنے سے ہم دیکھتے ہیں کہ بائیں طرف اور دائیں طرف دونوں کا جواب $\\frac{18}{13} + \\frac{1}{13}i$ ہے۔ چونکہ دونوں اطراف سے بالکل ایک جیسا کمپلیکس نمبر حاصل ہوا ہے، اس لیے یہ خاصیت کامیابی سے ثابت ہو گئی ہے۔"
+       }
       }
      ],
-     "answer": "verified: both sides $= \\frac{18}{13} + \\frac{1}{13}i$"
+     "answer": "verified: both sides $= \\frac{18}{13} + \\frac{1}{13}i$",
+     "meaning": {
+      "en": "This verification proves an important rule of complex numbers: when dividing two complex numbers, it does not matter whether you divide them first and then take the conjugate, or take their individual conjugates first and then divide—both paths lead to the exact same answer, $\\frac{18}{13} + \\frac{1}{13}i$. Because both sides were calculated independently and matched at the end, the work checks itself!",
+      "ur": "یہ تصدیق کمپلیکس نمبرز کے ایک اہم اصول کو ثابت کرتی ہے: دو کمپلیکس نمبرز کو تقسیم کرتے وقت، اس سے کوئی فرق نہیں پڑتا کہ آپ پہلے انہیں تقسیم کریں اور پھر کونجوگیٹ لیں، یا پہلے ان کے الگ الگ کونجوگیٹ لیں اور پھر تقسیم کریں—دونوں طریقوں سے بالکل ایک ہی جواب $\\frac{18}{13} + \\frac{1}{13}i$ آتا ہے۔ چونکہ دونوں اطراف کو الگ الگ حل کیا گیا اور آخر میں جواب برابر آیا، اس لیے آپ کے حل کی پڑتال خود بخود ہو گئی ہے!"
+     }
     },
     {
      "label": "iv",

@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex12.1-q4",
+ "label": "",
+ "answer_ref": "$\\frac{3}{8}$",
+ "math": [
+  "S = \\{HHH, HHT, HTH, THH, HTT, THT, TTH, TTT\\}",
+  "n(S) = 2^3 = 8",
+  "E = \\{HTT, TTH, TTT\\}",
+  "n(E) = 3",
+  "P(E) = \\frac{n(E)}{n(S)}",
+  "P(E) = \\frac{3}{8}"
+ ],
+ "why": [
+  {
+   "en": "In probability, our very first step is always to write down the sample space $S$, which is the complete list of all possible outcomes of the experiment. Listing every combination of Heads ($H$) and Tails ($T$) for three tosses lets us clearly see all the possibilities so we do not miss any.",
+   "ur": "احتمال (probability) کے سوالات میں ہمارا سب سے پہلا قدم ہمیشہ نمونہ کی فضا (sample space) $S$ لکھنا ہوتا ہے، جو تجربے کے تمام ممکنہ نتائج کی مکمل فہرست ہوتی ہے۔ تین بار سکہ اچھالنے کے لیے چت ($H$) اور پٹ ($T$) کے تمام ممکنہ مجموعے لکھنے سے سارے امکانات ہمارے سامنے آ جاتے ہیں تاکہ کوئی نتیجہ چھوٹ نہ جائے۔"
+  },
+  {
+   "en": "Next, we find $n(S)$ by counting the elements in our sample space, using the rule that tossing a coin with $2$ sides $3$ times gives $2^3$ outcomes. Knowing that there are $8$ total outcomes gives us the denominator we will need for our probability formula.",
+   "ur": "اس کے بعد، ہم اپنے نمونہ کی فضا کے ارکان کو گن کر $n(S)$ معلوم کرتے ہیں، اس اصول کے تحت کہ $2$ رخ والے سکے کو $3$ بار اچھالنے سے $2^3$ نتائج ملتے ہیں۔ کل $8$ نتائج کا علم ہمیں وہ مخرج (denominator) فراہم کرتا ہے جس کی ہمیں احتمال کے فارمولے میں ضرورت ہو گی۔"
+  },
+  {
+   "en": "Now we define our specific event $E$ by picking out only those outcomes from $S$ where two Tails ($T$) appear right next to each other. Note that $THT$ is left out because the tails are separated, while $TTT$ is included because three tails in a row definitely contain two consecutive tails.",
+   "ur": "اب ہم اپنے مخصوص واقعہ (event) $E$ کو متعین کرنے کے لیے $S$ میں سے صرف وہ نتائج چنتے ہیں جن میں دو پٹ ($T$) بالکل ایک دوسرے کے ساتھ لگاتار آتے ہیں۔ غور کریں کہ $THT$ کو چھوڑ دیا گیا ہے کیونکہ اس میں دونوں پٹ الگ ہیں، جبکہ $TTT$ کو شامل کیا گیا ہے کیونکہ تین لگاتار پٹ میں یقینی طور پر دو لگاتار پٹ موجود ہوتے ہیں۔"
+  },
+  {
+   "en": "We count the outcomes inside set $E$ to find $n(E)$, which represents the number of favourable outcomes. Getting $n(E) = 3$ gives us the numerator for our probability fraction.",
+   "ur": "ہم موافق نتائج کی تعداد معلوم کرنے کے لیے سیٹ $E$ کے اندر موجود ارکان کو گن کر $n(E)$ نکالتے ہیں۔ $n(E) = 3$ حاصل ہونے سے ہمیں اپنے احتمال کی کسر کے لیے شمار کنندہ (numerator) مل جاتا ہے۔"
+  },
+  {
+   "en": "We state the basic definition of probability, which is the ratio of the number of favourable outcomes $n(E)$ to the total number of possible outcomes $n(S)$. Writing the formula $P(E) = \\frac{n(E)}{n(S)}$ sets up the exact structure to combine our two counts.",
+   "ur": "ہم احتمال کی بنیادی تعریف لکھتے ہیں، جو موافق نتائج کی تعداد $n(E)$ اور کل ممکنہ نتائج کی تعداد $n(S)$ کے درمیان نسبت ہے۔ فارمولا $P(E) = \\frac{n(E)}{n(S)}$ لکھنے سے ہمارے پاس دونوں تعدادوں کو یکجا کرنے کا واضح ڈھانچہ آ جاتا ہے۔"
+  },
+  {
+   "en": "Finally, we substitute our counted values $n(E) = 3$ and $n(S) = 8$ directly into the formula. Since $3$ and $8$ have no common factors, the fraction $\\frac{3}{8}$ is already in its simplest form and gives us the final probability.",
+   "ur": "آخر میں، ہم اپنی گنی ہوئی قیمتیں $n(E) = 3$ اور $n(S) = 8$ براہِ راست فارمولے میں درج کرتے ہیں۔ چونکہ $3$ اور $8$ میں کوئی مشترک جزوِ ضربی نہیں ہے، اس لیے کسر $\\frac{3}{8}$ پہلے ہی اپنی سادہ ترین شکل میں ہے اور ہمیں حتمی احتمال دیتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $\\frac{3}{8}$ means that out of $8$ equally likely ways a coin can land when tossed thrice, $3$ of those ways will have at least two tails in a row. You can easily check that this answer is sensible because $\\frac{3}{8}$ is a proper fraction between $0$ and $1$, which is a strict rule for any valid probability.",
+  "ur": "حتمی جواب $\\frac{3}{8}$ کا مطلب یہ ہے کہ جب ایک سکے کو تین بار اچھالا جائے تو اس کے گرنے کے $8$ مساوی امکان والے طریقوں میں سے $3$ طریقے ایسے ہوں گے جن میں کم از کم دو پٹ لگاتار آئیں گے۔ آپ آسانی سے پڑتال کر سکتے ہیں کہ یہ جواب درست ہے کیونکہ $\\frac{3}{8}$ ایک واجب کسر ہے جو $0$ اور $1$ کے درمیان ہے، اور یہ کسی بھی درست احتمال کے لیے ایک لازمی اصول ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

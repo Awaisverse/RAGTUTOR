@@ -1,0 +1,65 @@
+{
+ "item": "c10-rev3-q3",
+ "label": "vii",
+ "answer_ref": "verified: both sides $= \\begin{bmatrix} 16 & 30 \\\\ 15 & 29 \\end{bmatrix}$",
+ "math": [
+  "",
+  "AB = \\begin{bmatrix} 2 & 3 \\\\ 4 & 5 \\end{bmatrix}\\begin{bmatrix} 5 & 6 \\\\ 2 & 1 \\end{bmatrix} = \\begin{bmatrix} (2)(5) + (3)(2) & (2)(6) + (3)(1) \\\\ (4)(5) + (5)(2) & (4)(6) + (5)(1) \\end{bmatrix}",
+  "= \\begin{bmatrix} 10 + 6 & 12 + 3 \\\\ 20 + 10 & 24 + 5 \\end{bmatrix} = \\begin{bmatrix} 16 & 15 \\\\ 30 & 29 \\end{bmatrix}",
+  "(AB)^t = \\begin{bmatrix} 16 & 15 \\\\ 30 & 29 \\end{bmatrix}^t = \\begin{bmatrix} 16 & 30 \\\\ 15 & 29 \\end{bmatrix}",
+  "",
+  "B^t = \\begin{bmatrix} 5 & 6 \\\\ 2 & 1 \\end{bmatrix}^t = \\begin{bmatrix} 5 & 2 \\\\ 6 & 1 \\end{bmatrix}",
+  "A^t = \\begin{bmatrix} 2 & 3 \\\\ 4 & 5 \\end{bmatrix}^t = \\begin{bmatrix} 2 & 4 \\\\ 3 & 5 \\end{bmatrix}",
+  "B^tA^t = \\begin{bmatrix} 5 & 2 \\\\ 6 & 1 \\end{bmatrix}\\begin{bmatrix} 2 & 4 \\\\ 3 & 5 \\end{bmatrix} = \\begin{bmatrix} (5)(2) + (2)(3) & (5)(4) + (2)(5) \\\\ (6)(2) + (1)(3) & (6)(4) + (1)(5) \\end{bmatrix}",
+  "= \\begin{bmatrix} 10 + 6 & 20 + 10 \\\\ 12 + 3 & 24 + 5 \\end{bmatrix} = \\begin{bmatrix} 16 & 30 \\\\ 15 & 29 \\end{bmatrix}",
+  "(AB)^t = \\begin{bmatrix} 16 & 30 \\\\ 15 & 29 \\end{bmatrix} = B^tA^t"
+ ],
+ "why": [
+  {
+   "en": "To verify a matrix equation, we evaluate the left-hand side and the right-hand side separately. Starting with the left-hand side $(AB)^t$, the brackets tell us we must first find the product $AB$ before taking the transpose.",
+   "ur": "میٹرکس مساوات کی تصدیق کرنے کے لیے، ہم بائیں طرف (LHS) اور دائیں طرف (RHS) کو الگ الگ حل کرتے ہیں۔ بائیں طرف $(AB)^t$ سے شروع کرتے ہوئے، بریکٹ ہمیں بتاتے ہیں کہ ٹرانسپوز لینے سے پہلے ہمیں حاصل ضرب $AB$ معلوم کرنا چاہیے۔"
+  },
+  {
+   "en": "By the rule of matrix multiplication (row-by-column method), we pair each row of $A$ with each column of $B$. This sets up the exact products we need to calculate the entries of the combined matrix $AB$.",
+   "ur": "میٹرکس کی ضرب کے اصول (قطار کو کالم سے ضرب دینے کے طریقے) کے مطابق، ہم $A$ کی ہر قطار کو $B$ کے ہر کالم کے ساتھ جوڑتے ہیں۔ اس سے وہ ضربیں ترتیب پاتی ہیں جن سے ہمیں مشترکہ میٹرکس $AB$ کے ارکان ملیں گے۔"
+  },
+  {
+   "en": "Simplifying these arithmetic expressions gives us the single matrix $AB = \\begin{bmatrix} 16 & 15 \\\\ 30 & 29 \\end{bmatrix}$. Now that the inside of the bracket is simplified, we are ready to apply the transpose.",
+   "ur": "ان حسابی جملوں کو مختصر کرنے سے ہمیں ایک واحد میٹرکس $AB = \\begin{bmatrix} 16 & 15 \\\\ 30 & 29 \\end{bmatrix}$ ملتا ہے۔ اب جب کہ بریکٹ کے اندر والا حصہ حل ہو چکا ہے، ہم ٹرانسپوز لینے کے لیے تیار ہیں۔"
+  },
+  {
+   "en": "By the definition of the transpose of a matrix, we interchange the rows and columns of $AB$. This gives $\\begin{bmatrix} 16 & 30 \\\\ 15 & 29 \\end{bmatrix}$, which completes the evaluation of the left-hand side.",
+   "ur": "میٹرکس کے ٹرانسپوز کی تعریف کے مطابق، ہم $AB$ کی قطاروں اور کالموں کو آپس میں بدل دیتے ہیں۔ اس سے ہمیں $\\begin{bmatrix} 16 & 30 \\\\ 15 & 29 \\end{bmatrix}$ ملتا ہے، جس سے بائیں طرف (LHS) کا حل مکمل ہو جاتا ہے۔"
+  },
+  {
+   "en": "Now we move to the right-hand side, $B^tA^t$, to see if it yields the same result. Notice the order here: we must first take the transpose of $B$ and $A$ individually, and then multiply them in reverse order.",
+   "ur": "اب ہم دائیں طرف (RHS) یعنی $B^tA^t$ کی طرف بڑھتے ہیں تاکہ دیکھ سکیں کہ آیا اس کا بھی یہی جواب آتا ہے۔ یہاں ترتیب پر غور کریں: ہمیں پہلے $B$ اور $A$ کا الگ الگ ٹرانسپوز لینا ہے، اور پھر انہیں الٹ ترتیب میں ضرب دینا ہے۔"
+  },
+  {
+   "en": "Applying the definition of transpose to matrix $B$, its first row $\\begin{bmatrix} 5 & 6 \\end{bmatrix}$ becomes the first column, and the second row $\\begin{bmatrix} 2 & 1 \\end{bmatrix}$ becomes the second column. This gives us the first factor needed for our right-hand side product.",
+   "ur": "میٹرکس $B$ پر ٹرانسپوز کی تعریف لاگو کرتے ہوئے، اس کی پہلی قطار $\\begin{bmatrix} 5 & 6 \\end{bmatrix}$ پہلا کالم بن جاتی ہے، اور دوسری قطار $\\begin{bmatrix} 2 & 1 \\end{bmatrix}$ دوسرا کالم بن جاتی ہے۔ اس سے ہمیں دائیں طرف کی ضرب کے لیے پہلا جزو مل جاتا ہے۔"
+  },
+  {
+   "en": "Similarly, we apply the transpose definition to matrix $A$ by turning its rows into columns. Now we have both $B^t$ and $A^t$ ready to be multiplied together.",
+   "ur": "اسی طرح، ہم میٹرکس $A$ کی قطاروں کو کالموں میں بدل کر اس کا ٹرانسپوز لیتے ہیں۔ اب ہمارے پاس $B^t$ اور $A^t$ دونوں آپس میں ضرب کھانے کے لیے تیار ہیں۔"
+  },
+  {
+   "en": "Using the row-by-column multiplication rule again, we multiply the rows of $B^t$ by the columns of $A^t$. Keeping $B^t$ first is crucial because matrix multiplication is generally not commutative.",
+   "ur": "قطار کو کالم سے ضرب دینے کا اصول دوبارہ استعمال کرتے ہوئے، ہم $B^t$ کی قطاروں کو $A^t$ کے کالموں سے ضرب دیتے ہیں۔ یہاں $B^t$ کو پہلے رکھنا بہت ضروری ہے کیونکہ میٹرکس کی ضرب میں ترتیب بدلنے سے جواب بدل جاتا ہے۔"
+  },
+  {
+   "en": "Adding the products gives the final matrix $\\begin{bmatrix} 16 & 30 \\\\ 15 & 29 \\end{bmatrix}$ for the right-hand side. We can now directly compare this result with the matrix we found in Step 4.",
+   "ur": "ضرب دے کر جمع کرنے سے دائیں طرف کے لیے حتمی میٹرکس $\\begin{bmatrix} 16 & 30 \\\\ 15 & 29 \\end{bmatrix}$ حاصل ہوتا ہے۔ اب ہم اس نتیجے کا براہِ راست موازنہ مرحلہ 4 میں حاصل کیے گئے میٹرکس سے کر سکتے ہیں۔"
+  },
+  {
+   "en": "Since both the left-hand side and right-hand side simplify to the exact same matrix $\\begin{bmatrix} 16 & 30 \\\\ 15 & 29 \\end{bmatrix}$, the law $(AB)^t = B^tA^t$ is verified.",
+   "ur": "چونکہ بائیں طرف اور دائیں طرف دونوں کو حل کرنے سے بالکل ایک جیسا میٹرکس $\\begin{bmatrix} 16 & 30 \\\\ 15 & 29 \\end{bmatrix}$ آتا ہے، اس لیے قانون $(AB)^t = B^tA^t$ کی تصدیق ہو جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This verification demonstrates the reversal law of transposes: the transpose of a product of two matrices is equal to the product of their transposes taken in the reverse order, $(AB)^t = B^tA^t$. Getting the exact same matrix $\\begin{bmatrix} 16 & 30 \\\\ 15 & 29 \\end{bmatrix}$ from two different calculation paths serves as a built-in check that our arithmetic on both sides is completely accurate.",
+  "ur": "یہ تصدیق ٹرانسپوز کے الٹ ترتیب کے قانون (reversal law) کو واضح کرتی ہے: دو میٹرکس کے حاصل ضرب کا ٹرانسپوز ان کے انفرادی ٹرانسپوز کو الٹ ترتیب میں ضرب دینے کے برابر ہوتا ہے، یعنی $(AB)^t = B^tA^t$۔ دو مختلف حسابی طریقوں سے بالکل ایک ہی میٹرکس $\\begin{bmatrix} 16 & 30 \\\\ 15 & 29 \\end{bmatrix}$ کا حاصل ہونا اس بات کی خودکار پڑتال ہے کہ دونوں طرف ہمارا حساب بالکل درست ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

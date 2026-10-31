@@ -1,0 +1,65 @@
+{
+ "item": "c10-rev5-q4",
+ "label": "ii",
+ "answer_ref": "$x = \\frac{\\sqrt{6}}{2},\\ \\frac{- \\sqrt{6}}{2},\\ \\frac{\\sqrt{10}}{2},\\ \\frac{- \\sqrt{10}}{2}$",
+ "math": [
+  "\\text{Let } y = x^2,\\ \\text{so } y^2 = x^4",
+  "4y^2 - 16y + 15 = 0",
+  "4 y^{2} - 6 y - 10 y + 15 = 0",
+  "2 y \\left(2 y - 3\\right) - 5 \\left(2 y - 3\\right) = 0",
+  "\\left(2 y - 5\\right) \\left(2 y - 3\\right) = 0",
+  "2 y - 5 = 0 \\quad\\text{or}\\quad 2 y - 3 = 0",
+  "y = \\frac{3}{2},\\quad y = \\frac{5}{2}",
+  "x^2 = \\frac{3}{2} \\Rightarrow x = \\pm \\frac{\\sqrt{6}}{2}",
+  "x^2 = \\frac{5}{2} \\Rightarrow x = \\pm \\frac{\\sqrt{10}}{2}",
+  "\\text{S.S} = \\{\\frac{\\sqrt{6}}{2}, \\frac{- \\sqrt{6}}{2}, \\frac{\\sqrt{10}}{2}, \\frac{- \\sqrt{10}}{2}\\}"
+ ],
+ "why": [
+  {
+   "en": "Since this equation has degree $4$ with only even powers of $x$, we cannot solve it directly with the quadratic formula. By using the method of substitution and setting $y = x^2$, we can reduce this complicated fourth-degree equation into a familiar quadratic form.",
+   "ur": "چونکہ اس مساوات کا درجہ $4$ ہے اور اس میں $x$ کی صرف جفت طاقتیں ہیں، ہم اسے براہِ راست دو درجی فارمولے سے حل نہیں کر سکتے۔ متبادل کا طریقہ استعمال کرتے ہوئے اور $y = x^2$ فرض کر کے، ہم اس پیچیدہ چہار درجی مساوات کو ایک مانوس دو درجی شکل میں تبدیل کر سکتے ہیں۔"
+  },
+  {
+   "en": "Here we replace $x^4$ with $y^2$ and $x^2$ with $y$ in the original equation. This gives us a standard quadratic equation in terms of $y$, which is much easier to factorize and solve.",
+   "ur": "یہاں ہم اصل مساوات میں $x^4$ کی جگہ $y^2$ اور $x^2$ کی جگہ $y$ درج کرتے ہیں۔ اس سے ہمیں $y$ کی شکل میں ایک معیاری دو درجی مساوات مل جاتی ہے، جس کی تجزی کرنا اور حل کرنا بہت آسان ہے۔"
+  },
+  {
+   "en": "To factorize this quadratic expression by midterm breaking, we look for two numbers that multiply to give $60$ and add up to $-16$. Splitting $-16y$ into $-6y$ and $-10y$ creates four terms so we can factorize by grouping.",
+   "ur": "درمیانی رقم کو توڑ کر اس دو درجی جملے کی تجزی کرنے کے لیے، ہم ایسے دو اعداد تلاش کرتے ہیں جنہیں ضرب دینے سے $60$ اور جمع کرنے سے $-16$ آئے۔ $-16y$ کو $-6y$ اور $-10y$ میں توڑنے سے چار رقوم بن جاتی ہیں تاکہ ہم گروپ بنا کر تجزی کر سکیں۔"
+  },
+  {
+   "en": "We apply the distributive law in reverse by taking out the highest common factor from the first two terms and the last two terms separately. Notice that both pairs leave the exact same bracket $(2y - 3)$, which confirms our midterm breaking is correct.",
+   "ur": "ہم پہلی دو رقوم اور آخری دو رقوم میں سے الگ الگ سب سے بڑا مشترک جزو باہر نکال کر تقسیمی قانون کا الٹ استعمال کرتے ہیں۔ غور کریں کہ دونوں جوڑوں میں بالکل ایک جیسی بریکٹ $(2y - 3)$ بچتی ہے، جو اس بات کی تصدیق کرتی ہے کہ ہم نے درمیانی رقم بالکل ٹھیک توڑی ہے۔"
+  },
+  {
+   "en": "Since $(2y - 3)$ is common to both parts of the expression, we factor it out to the front. This turns the entire quadratic expression into a neat product of two linear factors equal to zero.",
+   "ur": "چونکہ $(2y - 3)$ جملے کے دونوں حصوں میں مشترک ہے، اس لیے ہم اسے باہر نکال لیتے ہیں۔ اس سے پورا دو درجی جملہ دو یک درجی اجزائے ضربی کے حاصلِ ضرب میں بدل جاتا ہے جو صفر کے برابر ہے۔"
+  },
+  {
+   "en": "According to the zero-product property, if the product of two brackets is zero, at least one of them must be equal to zero. This rule allows us to break our quadratic equation into two simple linear equations.",
+   "ur": "ضربی خاصیتِ صفر کے مطابق، اگر دو بریکٹوں کا حاصلِ ضرب صفر ہو تو ان میں سے کم از کم ایک بریکٹ لازمی صفر کے برابر ہوتی ہے۔ یہ اصول ہمیں اپنی دو درجی مساوات کو دو سادہ یک درجی مساواتوں میں تقسیم کرنے کی اجازت دیتا ہے۔"
+  },
+  {
+   "en": "Solving each linear equation gives us the two values for our temporary variable $y$. However, our original question was in terms of $x$, so we now need to use these values to find $x$.",
+   "ur": "ہر یک درجی مساوات کو حل کرنے سے ہمیں اپنے عارضی متغیر $y$ کی دو قیمتیں مل جاتی ہیں۔ تاہم، ہمارا اصل سوال $x$ کی شکل میں تھا، اس لیے اب ہمیں $x$ معلوم کرنے کے لیے ان قیمتوں کو استعمال کرنے کی ضرورت ہے۔"
+  },
+  {
+   "en": "We reverse our initial substitution by replacing $y$ back with $x^2$ for the first value, $\\frac{3}{2}$. Taking the square root on both sides (remembering both positive and negative signs) and simplifying gives us the first two roots for $x$.",
+   "ur": "ہم پہلی قیمت $\\frac{3}{2}$ کے لیے $y$ کی جگہ واپس $x^2$ رکھ کر اپنی ابتدائی تبدیلی کو الٹ دیتے ہیں۔ دونوں طرف جذر لینے سے (مثبت اور منفی دونوں علامتیں یاد رکھتے ہوئے) اور مختصر کرنے سے ہمیں $x$ کی پہلی دو قیمتیں مل جاتی ہیں۔"
+  },
+  {
+   "en": "Similarly, we substitute $x^2$ back for the second value of $y$, which is $\\frac{5}{2}$. Taking the square root on both sides and simplifying gives us the remaining two roots of the fourth-degree equation.",
+   "ur": "اسی طرح، ہم $y$ کی دوسری قیمت $\\frac{5}{2}$ کے لیے بھی واپس $x^2$ درج کرتے ہیں۔ دونوں طرف جذر لینے اور مختصر کرنے سے ہمیں اس چہار درجی مساوات کی باقی دو قیمتیں مل جاتی ہیں۔"
+  },
+  {
+   "en": "Finally, we collect all four values of $x$ and write them together inside curly brackets as the Solution Set. Since the original equation had a highest power of $4$, getting four roots makes complete sense.",
+   "ur": "آخر میں، ہم $x$ کی تمام چاروں قیمتوں کو اکٹھا کرتے ہیں اور انہیں حل سیٹ کے طور پر درمیانی بریکٹ کے اندر لکھتے ہیں۔ چونکہ اصل مساوات کی سب سے بڑی طاقت $4$ تھی، اس لیے چار جوابات کا آنا بالکل درست ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer gives the four exact values of $x$ that make the original equation $4x^4 - 16x^2 + 15 = 0$ true. Because the equation only contains even powers ($x^4$ and $x^2$), both the positive and negative versions of each root work; you can check this by squaring any root to get $x^2 = \\frac{3}{2}$ or $\\frac{5}{2}$, which makes the left side equal to $0$.",
+  "ur": "آخری جواب ہمیں $x$ کی وہ چار درست قیمتیں بتاتا ہے جو اصل مساوات $4x^4 - 16x^2 + 15 = 0$ کو درست ثابت کرتی ہیں۔ چونکہ مساوات میں صرف جفت طاقتیں ($x^4$ اور $x^2$) شامل ہیں، اس لیے ہر جذر کی مثبت اور منفی دونوں قیمتیں درست کام کرتی ہیں؛ آپ کسی بھی قیمت کا مربع لے کر اس کی پڑتال کر سکتے ہیں جس سے $x^2 = \\frac{3}{2}$ یا $\\frac{5}{2}$ ملے گا، جو مساوات کی بائیں طرف کو $0$ کے برابر کر دیتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

@@ -1,0 +1,40 @@
+{
+ "item": "c10-ex12.1-q5",
+ "label": "i",
+ "answer_ref": "$n(S) = 12$",
+ "math": [
+  "\\text{Outcomes of a die} = \\{1, 2, 3, 4, 5, 6\\}",
+  "\\text{Outcomes of a coin} = \\{H, T\\}",
+  "\\begin{array}{c|cc} & H & T \\\\ \\hline 1 & (1, H) & (1, T) \\\\ 2 & (2, H) & (2, T) \\\\ 3 & (3, H) & (3, T) \\\\ 4 & (4, H) & (4, T) \\\\ 5 & (5, H) & (5, T) \\\\ 6 & (6, H) & (6, T) \\end{array}",
+  "S = \\{(1, H), (1, T), (2, H), (2, T), (3, H), (3, T), (4, H), (4, T), (5, H), (5, T), (6, H), (6, T)\\}",
+  "n(S) = 6 \\times 2 = 12"
+ ],
+ "why": [
+  {
+   "en": "Before combining two events, we must first list the individual sample space for the first event. By writing out the $6$ numbers on a standard die, we know exactly what will form the rows of our possibility diagram.",
+   "ur": "دو واقعات کو ملانے سے پہلے، ہمیں پہلے واقعے کی انفرادی نمونہ فضا (sample space) لکھنی چاہیے۔ ایک معیاری چھکے (die) کے $6$ نمبروں کو لکھنے سے ہمیں معلوم ہو جاتا ہے کہ ہمارے امکانی خاکے (possibility diagram) کی قطاریں کن نمبروں سے بنیں گی۔"
+  },
+  {
+   "en": "Next, we identify the possible results for the second event so we have both parts of our experiment ready. Knowing the coin can only land on $H$ or $T$ gives us the $2$ columns needed to complete our grid.",
+   "ur": "اس کے بعد، ہم دوسرے واقعے کے ممکنہ نتائج کی نشاندہی کرتے ہیں تاکہ ہمارے تجربے کے دونوں حصے تیار ہو جائیں۔ یہ جاننا کہ سکہ صرف $H$ یا $T$ پر گر سکتا ہے، ہمیں اپنا جدول مکمل کرنے کے لیے درکار $2$ کالم فراہم کرتا ہے۔"
+  },
+  {
+   "en": "A possibility diagram is a visual table used to systematically pair every outcome of one event with every outcome of another. By crossing the $6$ rows with the $2$ columns, we ensure we do not miss any possible combination of the die and the coin.",
+   "ur": "امکانی خاکہ (possibility diagram) ایک ایسا بصری جدول ہے جو ایک واقعے کے ہر نتیجے کو دوسرے واقعے کے ہر نتیجے کے ساتھ منظم طریقے سے جوڑنے کے لیے استعمال ہوتا ہے۔ $6$ قطاروں کو $2$ کالموں کے ساتھ ملانے سے ہم اس بات کو یقینی بناتے ہیں کہ چھکے اور سکے کا کوئی بھی ممکنہ جوڑا ہم سے چھوٹ نہ جائے۔"
+  },
+  {
+   "en": "By the definition of a sample space, we must gather all these paired outcomes from our table into a single set, denoted by $S$. This gives us the complete mathematical list of every result that could possibly happen when rolling a die and tossing a coin together.",
+   "ur": "نمونہ فضا (sample space) کی تعریف کے مطابق، ہمیں اپنے جدول سے ان تمام جوڑوں کی شکل کے نتائج کو ایک ہی سیٹ میں جمع کرنا ہوتا ہے، جسے $S$ سے ظاہر کیا جاتا ہے۔ اس سے ہمیں ان تمام نتائج کی مکمل ریاضیاتی فہرست مل جاتی ہے جو چھکا پھینکنے اور سکہ اچھالنے پر ممکنہ طور پر آ سکتے ہیں۔"
+  },
+  {
+   "en": "Using the fundamental counting principle, we multiply the number of outcomes of the two events ($6 \\times 2$) to find the total size of our sample space, $n(S)$. Knowing this total of $12$ is essential because it will serve as the denominator when we calculate probabilities later.",
+   "ur": "گنتی کے بنیادی اصول کا استعمال کرتے ہوئے، ہم اپنی نمونہ فضا کا کل حجم $n(S)$ معلوم کرنے کے لیے دونوں واقعات کے نتائج کی تعداد کو ضرب دیتے ہیں ($6 \\times 2$)۔ اس کل تعداد $12$ کا جاننا بہت ضروری ہے کیونکہ بعد میں جب ہم احتمال (probability) معلوم کریں گے تو یہ بٹے کے نیچے (مخرج کے طور پر) استعمال ہو گا۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final result tells us that when a $6$-sided die is rolled and a $2$-sided coin is tossed at the same time, there are exactly $12$ equally likely combined outcomes listed in the sample space $S$. You can easily check this by counting the ordered pairs inside the curly brackets of $S$, which matches $6 \\times 2 = 12$.",
+  "ur": "آخری نتیجہ ہمیں بتاتا ہے کہ جب ایک $6$ اطراف والا چھکا پھینکا جائے اور $2$ رخوں والا سکہ ایک ساتھ اچھالا جائے، تو نمونہ فضا $S$ میں بالکل $12$ یکساں ممکنہ مشترکہ نتائج موجود ہوتے ہیں۔ آپ سیٹ $S$ کی بریکٹوں کے اندر موجود مترتب جوڑوں کو گن کر اس کی باآسانی تصدیق کر سکتے ہیں، جو کہ $6 \\times 2 = 12$ کے برابر ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

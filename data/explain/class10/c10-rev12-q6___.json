@@ -1,0 +1,45 @@
+{
+ "item": "c10-rev12-q6",
+ "label": "",
+ "answer_ref": "$\\frac{7}{22}$",
+ "math": [
+  "n(S) = 7 + 5 = 12",
+  "P(O_1) = \\frac{7}{12}",
+  "\\text{Remaining total} = 12 - 1 = 11, \\quad \\text{Remaining orange} = 7 - 1 = 6",
+  "P(O_2 | O_1) = \\frac{6}{11}",
+  "",
+  "P(O_1 \\cap O_2) = \\frac{7}{12} \\times \\frac{6}{11} = \\frac{7}{22}"
+ ],
+ "why": [
+  {
+   "en": "To calculate any probability, we first need the size of our sample space $n(S)$, which is the total number of possible outcomes. Knowing there are $12$ marbles in total gives us the denominator for our first probability fraction.",
+   "ur": "کوئی بھی احتمال (probability) معلوم کرنے کے لیے ہمیں سب سے پہلے نمونہ کی فضا (sample space) کا حجم $n(S)$ چاہیے ہوتا ہے، جو ممکنہ نتائج کی کل تعداد ہے۔ یہ جاننا کہ تھیلے میں کل $12$ بنٹے ہیں، ہمیں ہماری پہلی احتمال کی کسر کے لیے مخرج (denominator) فراہم کرتا ہے۔"
+  },
+  {
+   "en": "We apply the basic probability formula (favorable outcomes divided by total outcomes) to the first draw. This tells us the exact chance of successfully getting an orange marble on our very first try, which is $\\frac{7}{12}$.",
+   "ur": "ہم پہلی باری کے لیے احتمال کا بنیادی فارمولا (موافق نتائج تقسیم کل نتائج) استعمال کرتے ہیں۔ یہ ہمیں بتاتا ہے کہ پہلی ہی کوشش میں مالٹا رنگ کا بنٹا نکلنے کا امکان $\\frac{7}{12}$ ہے۔"
+  },
+  {
+   "en": "The phrase 'without replacement' means the first marble is kept outside, which changes the sample space for the second draw. Updating the counts shows us the new reality inside the bag: $6$ orange marbles left out of a new total of $11$.",
+   "ur": "'واپس نہ رکھنے' (without replacement) کی شرط کا مطلب ہے کہ پہلا بنٹا باہر ہی رکھا گیا ہے، جس سے دوسری باری کے لیے نمونہ کی فضا بدل جاتی ہے۔ تعداد کو اپ ڈیٹ کرنے سے ہمیں تھیلے کی نئی صورتحال کا پتہ چلتا ہے کہ اب کل $11$ بنٹوں میں سے $6$ مالٹا رنگ کے بنٹے باقی ہیں۔"
+  },
+  {
+   "en": "Because the second draw depends on what happened in the first draw, we use conditional probability here. Using our updated counts from the previous step, we find the chance of picking another orange marble from the remaining ones is $\\frac{6}{11}$.",
+   "ur": "چونکہ دوسری باری کا انحصار پہلی باری کے نتیجے پر ہے، اس لیے ہم یہاں مشروط احتمال (conditional probability) کا تصور استعمال کرتے ہیں۔ پچھلے مرحلے کی نئی تعداد کو استعمال کرتے ہوئے، ہمیں معلوم ہوتا ہے کہ باقی ماندہ بنٹوں میں سے ایک اور مالٹا رنگ کا بنٹا نکلنے کا امکان $\\frac{6}{11}$ ہے۔"
+  },
+  {
+   "en": "In probability, when we want two events to happen one after the other ('first orange AND second orange'), we connect them using the multiplication law for dependent events. This sets up the correct formula to combine our two individual probabilities into one combined chance.",
+   "ur": "احتمال کے اصولوں کے مطابق، جب ہم چاہتے ہیں کہ دو واقعات یکے بعد دیگرے رونما ہوں ('پہلا مالٹا اور دوسرا بھی مالٹا')، تو ہم منحصر واقعات (dependent events) کے لیے ضرب کا قانون استعمال کرتے ہیں۔ یہ ہمارے دونوں انفرادی امکانات کو یکجا کرنے کے لیے درست فارمولا ترتیب دیتا ہے۔"
+  },
+  {
+   "en": "We now put our numbers into the multiplication law and simplify the fraction by dividing $6$ and $12$ by $6$. This final calculation combines both steps of the experiment to give us the single, overall probability of $\\frac{7}{22}$.",
+   "ur": "اب ہم ضرب کے قانون میں اپنی قیمتیں درج کرتے ہیں اور $6$ اور $12$ کو $6$ پر تقسیم کر کے کسر کو مختصر کرتے ہیں۔ یہ آخری حساب تجربے کے دونوں مراحل کو ملا کر ہمیں کل احتمال $\\frac{7}{22}$ دیتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $\\frac{7}{22}$ means that if you repeat this two-marble draw many times, you can expect both marbles to be orange in $7$ out of every $22$ attempts. You can check that this answer is reasonable because it is a proper fraction between $0$ and $1$, and it is smaller than the first draw's chance of $\\frac{7}{12}$ since getting two orange marbles in a row is harder than getting just one.",
+  "ur": "آخری جواب $\\frac{7}{22}$ کا مطلب ہے کہ اگر آپ دو بنٹے نکالنے کے اس عمل کو کئی بار دہرائیں، تو ہر $22$ کوششوں میں سے تقریباً $7$ بار دونوں بنٹے مالٹا رنگ کے نکلنے کی توقع کی جا سکتی ہے۔ آپ اس جواب کے درست ہونے کی تصدیق ایسے کر سکتے ہیں کہ یہ $0$ اور $1$ کے درمیان ایک واجب کسر ہے، اور یہ پہلی باری کے امکان $\\frac{7}{12}$ سے کم ہے کیونکہ لگاتار دو مالٹا بنٹے نکالنا صرف ایک نکالنے سے زیادہ مشکل ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

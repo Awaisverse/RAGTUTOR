@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex4.1-q3",
+ "label": "iiib",
+ "answer_ref": "$x$",
+ "math": [
+  "f(x) = 2x - 1, \\quad g(x) = \\frac{x+1}{2}",
+  "(g \\circ f)(x) = g(f(x))",
+  "(g \\circ f)(x) = g(2x - 1)",
+  "(g \\circ f)(x) = \\frac{(2x - 1) + 1}{2}",
+  "(g \\circ f)(x) = \\frac{2x}{2}",
+  "(g \\circ f)(x) = x"
+ ],
+ "why": [
+  {
+   "en": "We always begin by clearly stating the given information from the question. Having both formulas $f(x) = 2x - 1$ and $g(x) = \\frac{x+1}{2}$ in front of us helps prevent any substitution mistakes later.",
+   "ur": "ہم ہمیشہ سوال میں دی گئی معلومات کو واضح طور پر لکھ کر شروعات کرتے ہیں۔ دونوں فارمولے $f(x) = 2x - 1$ اور $g(x) = \\frac{x+1}{2}$ سامنے ہونے سے بعد میں قیمتیں درج کرتے وقت غلطی سے بچا جا سکتا ہے۔"
+  },
+  {
+   "en": "We use the definition of composition of functions to rewrite the circle notation into bracket notation. This shows us clearly that $f(x)$ is the inner function that must be handled first, while $g$ is the outer function.",
+   "ur": "ہم تفاعل کی ترکیب (composition of functions) کی تعریف استعمال کرتے ہوئے دائرے والی علامت کو بریکٹ کی شکل میں لکھتے ہیں۔ اس سے ہمیں واضح طور پر پتہ چلتا ہے کہ $f(x)$ اندرونی تفاعل ہے جسے پہلے حل کرنا ہے، جبکہ $g$ بیرونی تفاعل ہے۔"
+  },
+  {
+   "en": "Since we know the exact algebraic rule for $f(x)$, we replace $f(x)$ inside the brackets with its expression $2x - 1$. Now our task is simply to evaluate the function $g$ using $2x - 1$ as the new input.",
+   "ur": "چونکہ ہمیں $f(x)$ کا اصل الجبری فارمولا معلوم ہے، اس لیے ہم بریکٹ کے اندر $f(x)$ کی جگہ اس کی قیمت $2x - 1$ درج کرتے ہیں۔ اب ہمارا کام صرف یہ ہے کہ $2x - 1$ کو نئے ان پٹ کے طور پر استعمال کرتے ہوئے تفاعل $g$ کی قیمت معلوم کریں۔"
+  },
+  {
+   "en": "The rule for function $g$ tells us to take whatever is inside the brackets, add $1$ to it, and divide the whole thing by $2$. Applying this rule to our input $(2x - 1)$ removes the function letter $g$ and gives us a pure algebraic fraction to simplify.",
+   "ur": "تفاعل $g$ کا اصول ہمیں بتاتا ہے کہ بریکٹ کے اندر جو کچھ بھی ہے اسے لیں، اس میں $1$ جمع کریں، اور پوری رقم کو $2$ پر تقسیم کر دیں۔ اپنے ان پٹ $(2x - 1)$ پر یہ اصول لاگو کرنے سے تفاعل کی علامت $g$ ختم ہو جاتی ہے اور ہمیں مختصر کرنے کے لیے ایک خالص الجبری کسر مل جاتی ہے۔"
+  },
+  {
+   "en": "We combine the like constant terms in the numerator according to basic algebra rules. Since $-1$ and $+1$ are additive inverses, they cancel each other out and leave a much simpler numerator, $2x$.",
+   "ur": "ہم بنیادی الجبرا کے اصولوں کے مطابق شمار کنندہ (numerator) میں یکساں مستقل رقوم کو یکجا کرتے ہیں۔ چونکہ $-1$ اور $+1$ ایک دوسرے کے جمعی معکوس ہیں، اس لیے وہ ایک دوسرے کو ختم کر دیتے ہیں اور ہمارے پاس ایک بہت سادہ شمار کنندہ $2x$ بچ جاتا ہے۔"
+  },
+  {
+   "en": "Finally, we cancel the common factor $2$ from both the numerator and the denominator. This gives us the simplest form of our composite function.",
+   "ur": "آخر میں، ہم شمار کنندہ اور مخرج (denominator) دونوں سے مشترک جزو ضربی $2$ کو کاٹ دیتے ہیں۔ اس سے ہمیں اپنے مرکب تفاعل کی سب سے سادہ شکل مل جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $(g \\circ f)(x) = x$ tells us that applying $f$ first and then $g$ brings us right back to our original starting value $x$. In mathematics, this special result means that $g$ undoes the work of $f$, so $f$ and $g$ are inverse functions of each other.",
+  "ur": "حتمی جواب $(g \\circ f)(x) = x$ ہمیں بتاتا ہے کہ پہلے تفاعل $f$ اور پھر $g$ لاگو کرنے سے ہم واپس اپنی اصل ابتدائی قیمت $x$ پر آ جاتے ہیں۔ ریاضی میں اس خاص نتیجے کا مطلب یہ ہے کہ تفاعل $g$، تفاعل $f$ کے اثر کو زائل کر دیتا ہے، لہٰذا $f$ اور $g$ ایک دوسرے کے معکوس تفاعل (inverse functions) ہیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

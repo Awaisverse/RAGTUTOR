@@ -1,0 +1,40 @@
+{
+ "item": "c10-ex5.3-q1",
+ "label": "vi",
+ "answer_ref": "$1$",
+ "math": [
+  "\\frac{(a^2+ab)^2}{(a^2-ab)^2} \\div \\left(\\frac{a+b}{a-b}\\right)^2",
+  "= \\frac{[a(a+b)]^2}{[a(a-b)]^2} \\div \\frac{(a+b)^2}{(a-b)^2}",
+  "= \\frac{a^2(a+b)^2}{a^2(a-b)^2} \\div \\frac{(a+b)^2}{(a-b)^2}",
+  "= \\frac{a^2(a+b)^2}{a^2(a-b)^2} \\times \\frac{(a-b)^2}{(a+b)^2}",
+  "= 1"
+ ],
+ "why": [
+  {
+   "en": "We always begin by writing down the exact expression we need to simplify. Seeing both fractions clearly helps us spot common terms inside the brackets before we expand anything.",
+   "ur": "ہم ہمیشہ اس اصل جملے کو لکھنے سے شروعات کرتے ہیں جسے مختصر کرنا ہے۔ دونوں کسروں کو واضح طور پر دیکھنے سے ہمیں کچھ بھی کھولنے سے پہلے بریکٹ کے اندر مشترک رقوم کو پہچاننے میں مدد ملتی ہے۔"
+  },
+  {
+   "en": "Instead of expanding the squares directly—which would make the algebra messy—we take out the common factor $a$ inside the first fraction's brackets. At the same time, we apply the power rule $\\left(\\frac{x}{y}\\right)^2 = \\frac{x^2}{y^2}$ to the second fraction so that matching factors start to appear.",
+   "ur": "مربع کو براہِ راست کھولنے کے بجائے—جس سے الجبرا پیچیدہ ہو جائے گا—ہم پہلی کسر کی بریکٹوں کے اندر سے مشترک جزو ضربی $a$ کو باہر نکالتے ہیں۔ اس کے ساتھ ہی، ہم دوسری کسر پر قوت نما کا اصول $\\left(\\frac{x}{y}\\right)^2 = \\frac{x^2}{y^2}$ لاگو کرتے ہیں تاکہ ایک جیسے اجزائے ضربی نظر آنے لگیں۔"
+  },
+  {
+   "en": "Now we use the law of exponents $(xy)^2 = x^2y^2$ to distribute the square to each factor in the first fraction. This separates $a^2$ from $(a+b)^2$ and $(a-b)^2$, making the common terms completely free for cancellation.",
+   "ur": "اب ہم قوت نما کے اصول $(xy)^2 = x^2y^2$ کو استعمال کرتے ہوئے پہلی کسر کے ہر جزو پر مربع لاگو کرتے ہیں۔ اس سے $a^2$ بریکٹوں $(a+b)^2$ اور $(a-b)^2$ سے الگ ہو جاتا ہے، جس سے مشترک رقوم آپس میں کٹنے کے لیے بالکل آزاد ہو جاتی ہیں۔"
+  },
+  {
+   "en": "To divide one algebraic fraction by another, the rule is to change division into multiplication and invert the second fraction (take its reciprocal). This puts all factors into a single multiplication line where numerator and denominator terms can directly cancel.",
+   "ur": "ایک الجبری کسر کو دوسری سے تقسیم کرنے کا اصول یہ ہے کہ تقسیم کو ضرب میں بدل دیں اور دوسری کسر کو الٹا کر دیں (اس کا معکوس لے لیں)۔ اس سے تمام اجزائے ضربی ایک ہی ضرب کی قطار میں آ جاتے ہیں جہاں شمار کنندہ اور مخرج کی رقوم براہِ راست آپس میں کٹ سکتی ہیں۔"
+  },
+  {
+   "en": "Since every factor in the numerator—$a^2$, $(a+b)^2$, and $(a-b)^2$—has an identical matching factor in the denominator, they all divide out completely. When everything cancels out in multiplication and division, we are left with $1$, not zero.",
+   "ur": "چونکہ شمار کنندہ کے ہر جزو—$a^2$، $(a+b)^2$، اور $(a-b)^2$—کے بالکل یکساں اجزاء مخرج میں موجود ہیں، اس لیے یہ سب آپس میں مکمل طور پر کٹ جاتے ہیں۔ جب ضرب اور تقسیم میں تمام رقوم کٹ جائیں تو ہمارے پاس صفر نہیں بلکہ $1$ بچتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $1$ tells us that the two original expressions being divided are actually completely equal to each other, regardless of the values of $a$ and $b$ (as long as the denominators are not zero). You can easily verify this by noticing that $a^2$ cancels out inside the first fraction right away, making the dividend identical to the divisor, and anything divided by itself is always $1$.",
+  "ur": "حتمی جواب $1$ ہمیں بتاتا ہے کہ تقسیم ہونے والی دونوں اصل عبارتیں دراصل ایک دوسرے کے بالکل برابر ہیں، چاہے $a$ اور $b$ کی قیمتیں کچھ بھی ہوں (بشرطیکہ مخرج صفر نہ ہو)۔ آپ اس کی باآسانی تصدیق ایسے کر سکتے ہیں کہ پہلی کسر کے اندر ہی $a^2$ کٹ جاتا ہے، جس سے دونوں کسریں بالکل ایک جیسی ہو جاتی ہیں، اور کسی بھی مقدار کو اپنے آپ پر تقسیم کرنے سے ہمیشہ $1$ آتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

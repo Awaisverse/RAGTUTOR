@@ -1,0 +1,40 @@
+{
+ "item": "c10-ex5.1-q1",
+ "label": "x",
+ "answer_ref": "$\\frac{x + 2 y}{x^{2} + x y + y^{2}}$",
+ "math": [
+  "\\frac{x^{2} + x y - 2 y^{2}}{x^{3} - y^{3}}",
+  "= \\frac{x^{2} + 2 x y - x y - 2 y^{2}}{\\left(x - y\\right) \\left(x^{2} + x y + y^{2}\\right)}",
+  "= \\frac{x\\left(x + 2 y\\right) - y\\left(x + 2 y\\right)}{\\left(x - y\\right) \\left(x^{2} + x y + y^{2}\\right)}",
+  "= \\frac{\\left(x - y\\right) \\left(x + 2 y\\right)}{\\left(x - y\\right) \\left(x^{2} + x y + y^{2}\\right)}",
+  "= \\frac{x + 2 y}{x^{2} + x y + y^{2}}"
+ ],
+ "why": [
+  {
+   "en": "To reduce an algebraic fraction to its lowest form, we must find and cancel the common factors of the numerator and denominator. Looking at our starting expression, we see a quadratic polynomial on top and a difference of two cubes at the bottom, which tells us which factorization methods to use.",
+   "ur": "کسی بھی الجبری کسر کو اس کی مختصر ترین شکل میں لانے کے لیے ہمیں شمار کنندہ اور مخرج کے مشترک اجزائے ضربی معلوم کر کے انہیں کاٹنا ہوتا ہے۔ اپنی دی گئی عبارت کو دیکھ کر ہمیں معلوم ہوتا ہے کہ اوپر ایک دو درجی کثیر رقمی ہے اور نیچے دو مکعبوں کا فرق ہے، جس سے ہمیں تجزی کے درست طریقے چننے میں مدد ملتی ہے۔"
+  },
+  {
+   "en": "We cannot cancel individual terms that are being added or subtracted, so we must factorize both parts first. In the numerator, we use the middle-term breaking method so that the product of the split terms matches the product of the first and last terms ($-2x^2y^2$), while in the denominator we directly apply the standard algebraic formula for the difference of cubes.",
+   "ur": "ہم جمع یا تفریق ہونے والی انفرادی رقموں کو آپس میں نہیں کاٹ سکتے، اس لیے پہلے دونوں حصوں کی تجزی کرنا ضروری ہے۔ شمار کنندہ میں ہم درمیانی رقم کو توڑنے کا طریقہ استعمال کرتے ہیں تاکہ ان کا حاصلِ ضرب پہلی اور آخری رقم کے حاصلِ ضرب ($-2x^2y^2$) کے برابر ہو، جبکہ مخرج میں ہم براہِ راست دو مکعبوں کے فرق کا کلیہ لگاتے ہیں۔"
+  },
+  {
+   "en": "After splitting the middle term into four terms, the rule of factorization by grouping is applied in the numerator. Taking out the common variables $x$ and $-y$ from the pairs reveals an identical binomial $(x + 2y)$, confirming that our middle-term breaking was correct.",
+   "ur": "درمیانی رقم کو توڑ کر چار رقمیں بنانے کے بعد، شمار کنندہ میں گروپ بنا کر تجزی کرنے کا اصول لاگو کیا جاتا ہے۔ جوڑوں میں سے مشترک متغیرات $x$ اور $-y$ باہر نکالنے سے ایک جیسی دو رقمی عبارت $(x + 2y)$ سامنے آتی ہے، جو اس بات کی تصدیق کرتی ہے کہ ہم نے درمیانی رقم بالکل درست توڑی تھی۔"
+  },
+  {
+   "en": "We complete the factorization of the numerator by pulling out the common binomial factor $(x + 2y)$. Now both the numerator and the denominator are written completely as products of their factors, clearly exposing the common factor $(x - y)$ in both.",
+   "ur": "ہم مشترک دو رقمی جزوِ ضربی $(x + 2y)$ کو باہر نکال کر شمار کنندہ کی تجزی مکمل کرتے ہیں۔ اب شمار کنندہ اور مخرج دونوں مکمل طور پر اپنے اجزائے ضربی کے حاصلِ ضرب کی شکل میں لکھے جا چکے ہیں، جس سے دونوں میں موجود مشترک جزو $(x - y)$ واضح طور پر نظر آ رہا ہے۔"
+  },
+  {
+   "en": "By the fundamental property of fractions, dividing both the numerator and denominator by the same non-zero factor $(x - y)$ does not change the value of the expression. Canceling this shared part removes all common factors and brings us directly to the simplest form.",
+   "ur": "کسور کی بنیادی خصوصیت کے مطابق، شمار کنندہ اور مخرج دونوں کو ایک ہی غیر صفر جزو $(x - y)$ سے تقسیم کرنے سے عبارت کی قیمت تبدیل نہیں ہوتی۔ اس مشترک حصے کو کاٹنے سے تمام مشترک اجزائے ضربی ختم ہو جاتے ہیں اور ہمیں براہِ راست مختصر ترین شکل حاصل ہو جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $\\frac{x + 2 y}{x^{2} + x y + y^{2}}$ is the lowest form of the given rational expression because the numerator and denominator no longer share any common factors other than $1$. This means our simpler fraction has the exact same value as the original expression for all values of $x$ and $y$ (except where $x = y$, which would make the original denominator zero).",
+  "ur": "حتمی جواب $\\frac{x + 2 y}{x^{2} + x y + y^{2}}$ دی گئی ناطق عبارت کی مختصر ترین شکل ہے کیونکہ اب شمار کنندہ اور مخرج میں $1$ کے علاوہ کوئی بھی جزوِ ضربی مشترک نہیں ہے۔ اس کا مطلب یہ ہے کہ یہ سادہ کسر $x$ اور $y$ کی تمام قیمتوں کے لیے اصل عبارت کے بالکل برابر قیمت رکھتی ہے (سوائے اس صورت کے جب $x = y$ ہو، کیونکہ اس سے اصل مخرج صفر ہو جائے گا)۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

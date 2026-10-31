@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex12.1-q7",
+ "label": "v",
+ "answer_ref": "$\\frac{7}{8}$",
+ "math": [
+  "S = \\{HHH, HHT, HTH, HTT, THH, THT, TTH, TTT\\}",
+  "n(S) = 2^3 = 8",
+  "E = \\{HHT, HTH, HTT, THH, THT, TTH, TTT\\}",
+  "n(E) = 7",
+  "P(E) = \\frac{n(E)}{n(S)}",
+  "P(E) = \\frac{7}{8}"
+ ],
+ "why": [
+  {
+   "en": "In probability, we always begin by defining the sample space $S$, which is the complete list of everything that could possibly happen. Listing all combinations of heads ($H$) and tails ($T$) for the three coins ensures we do not miss any outcome when we start counting.",
+   "ur": "احتمال (probability) کے سوالات میں ہم ہمیشہ سیمپل اسپیس $S$ لکھنے سے شروعات کرتے ہیں، جو تمام ممکنہ نتائج کی مکمل فہرست ہوتی ہے۔ تینوں سکوں کے ہیڈز ($H$) اور ٹیلز ($T$) کی تمام صورتیں لکھنے سے یہ یقینی ہو جاتا ہے کہ گنتی کرتے وقت ہم سے کوئی بھی نتیجہ چھوٹ نہ جائے۔"
+  },
+  {
+   "en": "Next, we find the size of the sample space, $n(S)$, because the probability formula requires the total number of possible outcomes in the denominator. Since each of the 3 coins has 2 faces, the multiplication rule gives $2^3 = 8$ total possibilities.",
+   "ur": "اس کے بعد ہم سیمپل اسپیس کی کل تعداد $n(S)$ معلوم کرتے ہیں، کیونکہ احتمال کے فارمولے میں بٹے کے نیچے کل ممکنہ نتائج کی تعداد لکھنا ضروری ہوتا ہے۔ چونکہ 3 سکوں میں سے ہر ایک کے 2 رخ ہوتے ہیں، اس لیے ضرب کے اصول کے مطابق کل امکانات $2^3 = 8$ بنتے ہیں۔"
+  },
+  {
+   "en": "Now we identify our specific event $E$ from the sample space based on the condition 'at most 2 heads'. In math, 'at most 2' means 2 or fewer (so 0, 1, or 2 heads are all acceptable), which includes every outcome from $S$ except $HHH$.",
+   "ur": "اب ہم 'زیادہ سے زیادہ 2 ہیڈز' کی شرط کے مطابق سیمپل اسپیس میں سے اپنے مطلوبہ ایونٹ $E$ کو الگ کرتے ہیں۔ ریاضی میں 'زیادہ سے زیادہ 2' کا مطلب 2 یا اس سے کم ہوتا ہے (یعنی 0، 1، یا 2 ہیڈز سب قابلِ قبول ہیں)، جس میں $HHH$ کے علاوہ $S$ کے تمام نتائج شامل ہیں۔"
+  },
+  {
+   "en": "We count the elements inside set $E$ to get $n(E)$, which represents the number of favourable outcomes. Knowing that 7 outcomes satisfy our condition gives us the numerator we need for our probability ratio.",
+   "ur": "ہم موافق نتائج کی تعداد، یعنی $n(E)$ حاصل کرنے کے لیے سیٹ $E$ کے ارکان کو گنتے ہیں۔ یہ جاننا کہ 7 نتائج ہماری شرط کو پورا کرتے ہیں، ہمیں ہمارے احتمال کے تناسب کے لیے اوپر والا عدد (شمار کنندہ) فراہم کرتا ہے۔"
+  },
+  {
+   "en": "We state the basic definition of probability, $P(E) = \\frac{n(E)}{n(S)}$, to clearly show the mathematical rule connecting our counts. This sets up the final ratio between favourable outcomes and total possible outcomes.",
+   "ur": "ہم احتمال کی بنیادی تعریف $P(E) = \\frac{n(E)}{n(S)}$ لکھتے ہیں تاکہ اس ریاضیاتی اصول کو واضح کیا جا سکے جو ہماری گنتی کو آپس میں جوڑتا ہے۔ یہ موافق نتائج اور کل ممکنہ نتائج کے درمیان حتمی تناسب قائم کرتا ہے۔"
+  },
+  {
+   "en": "Finally, we substitute our counted values, $n(E) = 7$ and $n(S) = 8$, directly into the formula. Since 7 and 8 have no common factors, $\\frac{7}{8}$ is the simplest form of our required probability.",
+   "ur": "آخر میں، ہم اپنی گنی ہوئی قیمتیں $n(E) = 7$ اور $n(S) = 8$ براہِ راست فارمولے میں درج کرتے ہیں۔ چونکہ 7 اور 8 کسی ایک پہاڑے سے تقسیم نہیں ہوتے، اس لیے $\\frac{7}{8}$ ہمارے مطلوبہ احتمال کی سب سے سادہ شکل ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $\\frac{7}{8}$ means that when three fair coins are tossed together, there is a 7 out of 8 chance of getting at most 2 heads. You can easily check this: out of the 8 total outcomes, only $HHH$ has more than 2 heads, leaving the other 7 outcomes in our favour.",
+  "ur": "حتمی جواب $\\frac{7}{8}$ کا مطلب یہ ہے کہ جب تین سکوں کو ایک ساتھ اچھالا جائے، تو زیادہ سے زیادہ 2 ہیڈز آنے کا امکان 8 میں سے 7 ہے۔ آپ اسے آسانی سے چیک کر سکتے ہیں: کل 8 نتائج میں سے صرف $HHH$ میں 2 سے زیادہ ہیڈز ہیں، جس کے بعد باقی 7 نتائج ہمارے حق میں بچتے ہیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

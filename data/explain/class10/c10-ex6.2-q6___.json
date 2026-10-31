@@ -1,0 +1,50 @@
+{
+ "item": "c10-ex6.2-q6",
+ "label": "",
+ "answer_ref": "$m = -\\frac{3}{37},\\ n = \\frac{47}{37}$",
+ "math": [
+  "5\\underline{i} - 3\\underline{j} = m(\\underline{i} - 10\\underline{j}) + n(4\\underline{i} - 3\\underline{j})",
+  "5\\underline{i} - 3\\underline{j} = m\\underline{i} - 10m\\underline{j} + 4n\\underline{i} - 3n\\underline{j} = (m + 4n)\\underline{i} - (10m + 3n)\\underline{j}",
+  "m + 4n = 5 \\quad \\text{--- (1)}, \\qquad -10m - 3n = -3 \\implies 10m + 3n = 3 \\quad \\text{--- (2)}",
+  "10m + 40n = 50 \\quad \\text{--- (3)}",
+  "(10m + 40n) - (10m + 3n) = 50 - 3 \\implies 37n = 47 \\implies n = \\frac{47}{37}",
+  "m + 4\\left(\\frac{47}{37}\\right) = 5 \\implies m = 5 - \\frac{188}{37} = \\frac{185 - 188}{37} = -\\frac{3}{37}",
+  "m = -\\frac{3}{37}, \\quad n = \\frac{47}{37}"
+ ],
+ "why": [
+  {
+   "en": "We begin by writing down the given vector equation clearly so we can see how the scalars $m$ and $n$ are connected to the unit vectors $\\underline{i}$ and $\\underline{j}$. Our goal is to simplify the right-hand side so it looks just like the left-hand side.",
+   "ur": "ہم سب سے پہلے دی گئی ویکٹر مساوات کو واضح طور پر لکھتے ہیں تاکہ ہم دیکھ سکیں کہ اسکیلرز $m$ اور $n$ اکائی ویکٹرز $\\underline{i}$ اور $\\underline{j}$ کے ساتھ کیسے جڑے ہوئے ہیں۔ ہمارا مقصد دائیں طرف کو مختصر کرنا ہے تاکہ یہ بالکل بائیں طرف کی طرح نظر آئے۔"
+  },
+  {
+   "en": "By using the distributive law of scalar multiplication, we expand the brackets and collect the $\\underline{i}$ terms together and the $\\underline{j}$ terms together. This gives us a single combined vector on the right-hand side, making it ready for comparison with the left-hand side.",
+   "ur": "اسکیلر ضرب کے تقسیمی قانون کو استعمال کرتے ہوئے، ہم بریکٹ کھولتے ہیں اور $\\underline{i}$ والی رقوم کو ایک ساتھ اور $\\underline{j}$ والی رقوم کو ایک ساتھ جمع کر لیتے ہیں۔ اس سے ہمیں دائیں طرف ایک واحد مجموعی ویکٹر مل جاتا ہے، جس کا اب بائیں طرف کے ساتھ موازنہ کیا جا سکتا ہے۔"
+  },
+  {
+   "en": "According to the definition of equality of vectors, two vectors in a plane are equal only when their horizontal ($\\underline{i}$) and vertical ($\\underline{j}$) components are separately equal. Applying this rule turns our vector problem into two simple simultaneous linear equations in $m$ and $n$.",
+   "ur": "ویکٹرز کی برابری کی تعریف کے مطابق، مستوی میں دو ویکٹرز تبھی برابر ہوتے ہیں جب ان کے افقی ($\\underline{i}$) اور عمودی ($\\underline{j}$) اجزاء الگ الگ برابر ہوں۔ اس اصول کو لاگو کرنے سے ہمارا ویکٹر کا سوال $m$ اور $n$ میں دو سادہ یکلخت خطی مساواتوں میں تبدیل ہو جاتا ہے۔"
+  },
+  {
+   "en": "To solve these two equations using the elimination method, we need the coefficient of one variable to be the same in both equations. Multiplying equation (1) by $10$ makes the coefficient of $m$ equal to $10$, which matches the $10m$ in equation (2).",
+   "ur": "ان دو مساواتوں کو اخراج کے طریقے (elimination method) سے حل کرنے کے لیے، ہمیں دونوں مساواتوں میں کسی ایک متغیر کا عددی سر ایک جیسا بنانا ہوگا۔ مساوات (1) کو $10$ سے ضرب دینے سے $m$ کا عددی سر $10$ ہو جاتا ہے، جو کہ مساوات (2) کے $10m$ کے برابر ہے۔"
+  },
+  {
+   "en": "Subtracting the two equations cancels out $10m$ completely, leaving a simple equation with only one unknown, $n$. Solving this gives us our first required scalar value, $n = \\frac{47}{37}$.",
+   "ur": "دونوں مساواتوں کو تفریق کرنے سے $10m$ مکمل طور پر ختم ہو جاتا ہے، اور صرف ایک نامعلوم متغیر $n$ والی سادہ مساوات باقی رہ جاتی ہے۔ اسے حل کرنے سے ہمیں اپنی پہلی مطلوبہ اسکیلر قیمت $n = \\frac{47}{37}$ مل جاتی ہے۔"
+  },
+  {
+   "en": "Now that we know the exact value of $n$, we put it back into the simpler first equation to find the remaining unknown $m$. By taking the common denominator $37$ and simplifying the fractions, we get $m = -\\frac{3}{37}$.",
+   "ur": "اب جب کہ ہمیں $n$ کی درست قیمت معلوم ہے، ہم باقی ماندہ نامعلوم متغیر $m$ معلوم کرنے کے لیے اسے پہلی آسان مساوات میں درج کرتے ہیں۔ مشترک مخرج $37$ لے کر اور کسروں کو حل کر کے ہمیں $m = -\\frac{3}{37}$ حاصل ہوتا ہے۔"
+  },
+  {
+   "en": "Finally, we state both values together clearly to complete our solution. Having both $m$ and $n$ means we have fully answered the question.",
+   "ur": "آخر میں، ہم اپنا حل مکمل کرنے کے لیے دونوں قیمتوں کو ایک ساتھ واضح طور پر لکھ دیتے ہیں۔ $m$ اور $n$ دونوں کی قیمتیں معلوم ہونے کا مطلب ہے کہ ہم نے سوال کا مکمل جواب دے دیا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This final answer means that $m = -\\frac{3}{37}$ and $n = \\frac{47}{37}$ are the exact scalar multipliers needed to combine the two vectors $(\\underline{i} - 10\\underline{j})$ and $(4\\underline{i} - 3\\underline{j})$ to get the resultant vector $5\\underline{i} - 3\\underline{j}$. You can check this answer by putting $m = -\\frac{3}{37}$ and $n = \\frac{47}{37}$ back into equation (1), $m + 4n = 5$, which gives $-\\frac{3}{37} + \\frac{188}{37} = \\frac{185}{37} = 5$, confirming our work is completely correct.",
+  "ur": "اس حتمی جواب کا مطلب یہ ہے کہ $m = -\\frac{3}{37}$ اور $n = \\frac{47}{37}$ وہ درست اسکیلر ضارب ہیں جن کی مدد سے دو ویکٹرز $(\\underline{i} - 10\\underline{j})$ اور $(4\\underline{i} - 3\\underline{j})$ کو ملا کر محصلہ ویکٹر $5\\underline{i} - 3\\underline{j}$ حاصل کیا جا سکتا ہے۔ آپ اس جواب کی پڑتال $m = -\\frac{3}{37}$ اور $n = \\frac{47}{37}$ کو واپس مساوات (1) یعنی $m + 4n = 5$ میں درج کر کے کر سکتے ہیں، جس سے $-\\frac{3}{37} + \\frac{188}{37} = \\frac{185}{37} = 5$ بنتا ہے، جو تصدیق کرتا ہے کہ ہمارا حل بالکل درست ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

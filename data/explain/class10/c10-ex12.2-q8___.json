@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex12.2-q8",
+ "label": "",
+ "answer_ref": "$\\frac{1}{3}$",
+ "math": [
+  "",
+  "P(A) = \\frac{n(A)}{n(S)} = \\frac{3}{15}",
+  "P(B) = \\frac{n(B)}{n(S)} = \\frac{2}{15}",
+  "P(A \\cap B) = \\frac{n(A \\cap B)}{n(S)} = \\frac{0}{15} = 0",
+  "P(A \\cup B) = P(A) + P(B) - P(A \\cap B)",
+  "P(A \\cup B) = \\frac{3}{15} + \\frac{2}{15} - 0 = \\frac{5}{15} = \\frac{1}{3}"
+ ],
+ "why": [
+  {
+   "en": "In probability, we always begin by defining the sample space $S$, which is the set of all possible outcomes. Knowing that $n(S) = 15$ gives us the denominator we will need for all our probability fractions.",
+   "ur": "احتمال (probability) کے سوالات میں ہم ہمیشہ نمونہ کی فضاء (sample space) $S$ متعین کرنے سے شروعات کرتے ہیں، جو تمام ممکنہ نتائج کا سیٹ ہوتا ہے۔ $n(S) = 15$ معلوم کرنے سے ہمیں وہ مخرج (denominator) مل جاتا ہے جو آگے تمام احتمال کے فارمولوں میں استعمال ہو گا۔"
+  },
+  {
+   "en": "We identify the numbers from $1$ to $15$ that are divisible by $5$ to form our first event $A$, and apply the basic definition of probability (favorable outcomes divided by total outcomes). This tells us the chance of picking a multiple of $5$ on its own is $\\frac{3}{15}$.",
+   "ur": "ہم اپنے پہلے وقوعہ (event) $A$ کے لیے $1$ سے $15$ تک ایسے اعداد تلاش کرتے ہیں جو $5$ پر تقسیم ہوتے ہیں، اور احتمال کی بنیادی تعریف (موافق نتائج تقسیم کل نتائج) کا استعمال کرتے ہیں۔ اس سے ہمیں معلوم ہوتا ہے کہ صرف $5$ کا اضعاف (multiple) نکلنے کا امکان $\\frac{3}{15}$ ہے۔"
+  },
+  {
+   "en": "Similarly, we list the multiples of $7$ within our range to form the second event $B$ and use the probability formula again. This gives us $\\frac{2}{15}$ as the separate probability of drawing a multiple of $7$.",
+   "ur": "اسی طرح، ہم دوسرے وقوعہ $B$ کے لیے دی گئی حد میں $7$ کے اضعاف کی فہرست بناتے ہیں اور دوبارہ احتمال کا فارمولا لگاتے ہیں۔ اس سے ہمیں $7$ کا اضعاف نکلنے کا الگ امکان $\\frac{2}{15}$ مل جاتا ہے۔"
+  },
+  {
+   "en": "We check for any overlap between sets $A$ and $B$ so we do not double-count any card when we combine them. Since no number up to $15$ is a multiple of both $5$ and $7$, the events are mutually exclusive, meaning the probability of both happening together is $0$.",
+   "ur": "ہم سیٹ $A$ اور $B$ کے درمیان مشترک ارکان چیک کرتے ہیں تاکہ انہیں ملاتے وقت کوئی کارڈ دو بار نہ گنا جائے۔ چونکہ $15$ تک کوئی بھی عدد بیک وقت $5$ اور $7$ دونوں کا اضعاف نہیں ہے، اس لیے یہ غیر مشترک واقعات (mutually exclusive events) ہیں، جس کا مطلب ہے کہ دونوں کے ایک ساتھ ہونے کا امکان $0$ ہے۔"
+  },
+  {
+   "en": "The word 'or' in the question signals that we need the union of the two events ($A \\cup B$), so we write down the addition law of probability. This formula shows us how to properly combine the individual probabilities we just found.",
+   "ur": "سوال میں لفظ 'یا' (or) اس بات کا اشارہ ہے کہ ہمیں دونوں واقعات کا یونین ($A \\cup B$) معلوم کرنا ہے، اس لیے ہم احتمال کے جمع کا قانون (addition law of probability) لکھتے ہیں۔ یہ فارمولا ہمیں بتاتا ہے کہ ابھی معلوم کیے گئے انفرادی امکانات کو صحیح طریقے سے کیسے جوڑا جائے۔"
+  },
+  {
+   "en": "By putting our calculated fractions into the addition law and simplifying $\\frac{5}{15}$, we express the final probability in its lowest terms. This completes the calculation and gives us the exact combined chance.",
+   "ur": "جمع کے قانون میں اپنی معلوم کردہ کسریں درج کرنے اور $\\frac{5}{15}$ کو مختصر کرنے سے ہمیں حتمی احتمال اپنی سادہ ترین شکل میں مل جاتا ہے۔ اس سے ہمارا حساب مکمل ہوتا ہے اور ہمیں درست مجموعی امکان حاصل ہوتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $\\frac{1}{3}$ means that there is a $1$ in $3$ chance of randomly picking a card that is a multiple of $5$ or $7$ from the bag. You can easily check this by counting all the favorable cards directly ($5, 7, 10, 14, 15$ gives $5$ cards) and dividing by the $15$ total cards, which also simplifies to $\\frac{1}{3}$.",
+  "ur": "حتمی جواب $\\frac{1}{3}$ کا مطلب ہے کہ تھیلے میں سے بے ترتیب طور پر نکالا گیا کارڈ $5$ یا $7$ کا اضعاف ہونے کا امکان $3$ میں سے $1$ ہے۔ آپ اس کی تصدیق براہِ راست تمام موافق کارڈز ($5, 7, 10, 14, 15$ جو کل $5$ کارڈز بنتے ہیں) کو گن کر اور کل $15$ کارڈز پر تقسیم کر کے باآسانی کر سکتے ہیں، جسے مختصر کرنے سے بھی $\\frac{1}{3}$ ہی آتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

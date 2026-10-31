@@ -1,0 +1,40 @@
+{
+ "item": "c10-ex11.1-q4",
+ "label": "",
+ "answer_ref": "Median = 100, Q1 = 96, Q3 = 105, Range = 18, IQR = 9",
+ "math": [
+  "\\text{Ordered data: } 92, 93, 95, 96, 97, 98, 99, 100, 101, 102, 104, 105, 107, 108, 110,\\quad n = 15",
+  "\\text{Median} = \\left(\\frac{n + 1}{2}\\right)^{th} = 8^{th} \\text{ item} = 100",
+  "Q_1 = \\left(\\frac{n + 1}{4}\\right)^{th} = 4^{th} \\text{ item} = 96,\\quad Q_3 = \\left(\\frac{3(n + 1)}{4}\\right)^{th} = 12^{th} \\text{ item} = 105",
+  "\\text{Range} = 110 - 92 = 18,\\quad IQR = 105 - 96 = 9",
+  "\\text{Five-number summary: } (92, 96, 100, 105, 110)"
+ ],
+ "why": [
+  {
+   "en": "Before finding any positional measures like median or quartiles, we must arrange the data from smallest to largest. Counting the items gives $n = 15$, and we can immediately see the minimum value $92$ and the maximum value $110$.",
+   "ur": "میڈین یا کوارٹائلز معلوم کرنے سے پہلے، ہمیں ڈیٹا کو چھوٹے سے بڑے کی ترتیب میں لکھنا ہوتا ہے۔ اعداد کو گننے سے کل تعداد $n = 15$ ملتی ہے، اور ہمیں فوراً سب سے چھوٹی قیمت $92$ اور سب سے بڑی قیمت $110$ کا بھی پتہ چل جاتا ہے۔"
+  },
+  {
+   "en": "The median is the exact middle value of the ordered data, and since $n = 15$ is odd, we use the position formula $\\left(\\frac{n + 1}{2}\\right)^{th}$ item. This tells us the $8^{th}$ item, which is $100$, divides our dataset into two equal halves.",
+   "ur": "میڈین ترتیب دیے گئے ڈیٹا کی بالکل درمیانی قیمت ہوتی ہے، اور چونکہ $n = 15$ ایک طاق عدد ہے، ہم پوزیشن کا فارمولا $\\left(\\frac{n + 1}{2}\\right)^{th}$ استعمال کرتے ہیں۔ اس سے ہمیں پتہ چلتا ہے کہ $8^{th}$ رقم، جو کہ $100$ ہے، ہمارے ڈیٹا کو دو برابر حصوں میں تقسیم کرتی ہے۔"
+  },
+  {
+   "en": "Quartiles divide the ordered data into four equal parts, so we use the position formulas for $Q_1$ and $Q_3$ to find the quarter marks. The $4^{th}$ item gives the lower quartile $Q_1 = 96$, and the $12^{th}$ item gives the upper quartile $Q_3 = 105$.",
+   "ur": "کوارٹائلز ترتیب دیے گئے ڈیٹا کو چار برابر حصوں میں تقسیم کرتے ہیں، اس لیے ہم چوتھائی حصوں کو تلاش کرنے کے لیے $Q_1$ اور $Q_3$ کے پوزیشن فارمولے استعمال کرتے ہیں۔ $4^{th}$ رقم ہمیں لوئر کوارٹائل $Q_1 = 96$ دیتی ہے، اور $12^{th}$ رقم اپر کوارٹائل $Q_3 = 105$ دیتی ہے۔"
+  },
+  {
+   "en": "To measure how spread out the data is, we calculate the overall spread (Range) and the spread of the middle portion ($IQR$). Subtracting the minimum from the maximum gives a Range of $18$, while subtracting $Q_1$ from $Q_3$ shows the middle half of the data spans $9$ units.",
+   "ur": "ڈیٹا کے پھیلاؤ کو ماپنے کے لیے، ہم کل پھیلاؤ (رینج) اور درمیانی حصے کے پھیلاؤ ($IQR$) کا حساب لگاتے ہیں۔ سب سے بڑی قیمت میں سے سب سے چھوٹی قیمت کو تفریق کرنے سے رینج $18$ ملتی ہے، جبکہ $Q_3$ میں سے $Q_1$ کو تفریق کرنے سے پتہ چلتا ہے کہ درمیانی نصف ڈیٹا کا پھیلاؤ $9$ یونٹس ہے۔"
+  },
+  {
+   "en": "A box-and-whisker plot visually displays the five-number summary: the minimum, $Q_1$, median, $Q_3$, and maximum. Putting these five values $(92, 96, 100, 105, 110)$ together gives us the exact points needed to draw the central box and the two end whiskers on a number line.",
+   "ur": "باکس اینڈ وِسکر پلاٹ پانچ اعداد کے خلاصے کو تصویری شکل میں دکھاتا ہے: سب سے چھوٹی قیمت، $Q_1$، میڈین، $Q_3$، اور سب سے بڑی قیمت۔ ان پانچ قیمتوں $(92, 96, 100, 105, 110)$ کو یکجا کرنے سے ہمیں نمبر لائن پر درمیانی باکس اور دونوں طرف کی لکیریں (whiskers) بنانے کے لیے درست نقاط مل جاتے ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "These results summarize the center and spread of our data: the typical middle value is $100$, the total spread from the lowest value $92$ to the highest value $110$ is $18$, and the central half of the values lies compactly between $96$ and $105$ (a spread of $9$). You can easily check the positions by counting in the ordered list: there are equally $7$ values below $100$ and $7$ values above it.",
+  "ur": "یہ نتائج ہمارے ڈیٹا کے مرکز اور پھیلاؤ کا خلاصہ پیش کرتے ہیں: درمیانی قیمت $100$ ہے، سب سے کم قیمت $92$ سے سب سے زیادہ قیمت $110$ تک کل پھیلاؤ $18$ ہے، اور ڈیٹا کا درمیانی نصف حصہ $96$ اور $105$ کے درمیان واقع ہے (جس کا پھیلاؤ $9$ ہے)۔ آپ ترتیب شدہ فہرست میں گن کر پوزیشنز کی تصدیق کر سکتے ہیں: $100$ سے نیچے بھی برابر $7$ قیمتیں ہیں اور اس سے اوپر بھی $7$ قیمتیں ہیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

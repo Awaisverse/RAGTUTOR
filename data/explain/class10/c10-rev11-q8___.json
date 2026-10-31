@@ -1,0 +1,50 @@
+{
+ "item": "c10-rev11-q8",
+ "label": "",
+ "answer_ref": "A: mean 46.50, SD 0.96; B: mean 45.17, SD 5.37; Family A spends more and is more stable",
+ "math": [
+  "\\bar{x_A} = \\frac{45 + 47 + 46 + 48 + 46 + 47}{6} = \\frac{279}{6} \\approx 46.50",
+  "\\sigma^2 = \\frac{\\sum(x_A - \\bar{x_A})^2}{n} = \\frac{5.5}{6} \\approx 0.9167",
+  "\\sigma = \\sqrt{\\sigma^2} \\approx 0.96",
+  "\\bar{x_B} = \\frac{38 + 52 + 40 + 50 + 42 + 49}{6} = \\frac{271}{6} \\approx 45.17",
+  "\\sigma^2 = \\frac{\\sum(x_B - \\bar{x_B})^2}{n} = \\frac{172.8333}{6} \\approx 28.81",
+  "\\sigma = \\sqrt{\\sigma^2} \\approx 5.37",
+  "\\bar{x}_A = 46.50 > \\bar{x}_B = 45.17,\\quad \\sigma_A = 0.96 < \\sigma_B = 5.37"
+ ],
+ "why": [
+  {
+   "en": "First, we apply the formula for the arithmetic mean to find the average monthly expense for Family A. Adding all $6$ months of expenses gives $279$, and dividing by $6$ shows us that Family A spends an average of $46.50$ thousand rupees per month.",
+   "ur": "سب سے پہلے، ہم خاندان A کے اوسط ماہانہ اخراجات معلوم کرنے کے لیے حسابی اوسط کا فارمولا استعمال کرتے ہیں۔ $6$ مہینوں کے تمام اخراجات کو جمع کرنے سے $279$ آتا ہے، اور اسے $6$ پر تقسیم کرنے سے ہمیں پتہ چلتا ہے کہ خاندان A ہر مہینے اوسطاً $46.50$ ہزار روپے خرچ کرتا ہے۔"
+  },
+  {
+   "en": "To measure how much Family A's expenses fluctuate, we first calculate the variance by subtracting the mean $46.50$ from each month's expense, squaring those differences so negatives become positive, and dividing their sum $5.5$ by $6$. This gives a variance of $0.9167$, which is the direct stepping stone to finding the standard deviation.",
+   "ur": "یہ ماپنے کے لیے کہ خاندان A کے اخراجات میں کتنا اتار چڑھاؤ آتا ہے، ہم پہلے تغیر (variance) نکالتے ہیں، جس کے لیے ہر مہینے کے خرچ میں سے اوسط $46.50$ کو تفریق کر کے ان کا مربع لیتے ہیں تاکہ منفی علامت ختم ہو جائے، اور پھر ان کے مجموعے $5.5$ کو $6$ پر تقسیم کرتے ہیں۔ اس سے ہمیں تغیر $0.9167$ ملتا ہے، جو معیاری انحراف معلوم کرنے کے لیے بنیادی قدم ہے۔"
+  },
+  {
+   "en": "Because variance is in squared units, we take its positive square root to bring the measure of spread back to our original unit (thousands of rupees). The resulting standard deviation of $0.96$ is very small, telling us that Family A's monthly expenses stay very close to their average.",
+   "ur": "چونکہ تغیر مربع اکائیوں میں ہوتا ہے، اس لیے ہم پھیلاؤ کی پیمائش کو اپنی اصل اکائی (ہزار روپے) میں واپس لانے کے لیے اس کا مثبت جزر لیتے ہیں۔ نتیجے میں آنے والا معیاری انحراف $0.96$ بہت چھوٹا ہے، جو ہمیں بتاتا ہے کہ خاندان A کے ماہانہ اخراجات ان کی اوسط کے بہت قریب رہتے ہیں۔"
+  },
+  {
+   "en": "Now we repeat the exact same mean formula for Family B to find their average spending. Dividing their $6$-month total of $271$ by $6$ gives a mean of $45.17$ thousand rupees, which we can now compare with Family A's average.",
+   "ur": "اب ہم خاندان B کے اوسط اخراجات معلوم کرنے کے لیے بالکل وہی اوسط کا فارمولا دہراتے ہیں۔ ان کے $6$ مہینوں کے کل مجموعے $271$ کو $6$ پر تقسیم کرنے سے اوسط $45.17$ ہزار روپے آتی ہے، جس کا اب ہم خاندان A کی اوسط سے موازنہ کر سکتے ہیں۔"
+  },
+  {
+   "en": "Next, we find the variance for Family B using the squared deviations from their mean of $45.17$. Notice that the sum of squared differences here is much larger ($172.8333$), giving a high variance of $28.81$ because their monthly expenses jump up and down a lot.",
+   "ur": "اس کے بعد، ہم خاندان B کی اوسط $45.17$ سے مربع انحرافات کو استعمال کرتے ہوئے ان کا تغیر معلوم کرتے ہیں۔ غور کریں کہ یہاں مربع فرق کا مجموعہ بہت بڑا ($172.8333$) ہے، جس سے $28.81$ کا بڑا تغیر ملتا ہے کیونکہ ان کے ماہانہ اخراجات میں بہت زیادہ اتار چڑھاؤ ہے۔"
+  },
+  {
+   "en": "We take the square root of Family B's variance ($28.81$) to get their standard deviation in thousands of rupees. This gives $5.37$, showing a wide spread in their monthly spending from the average.",
+   "ur": "ہم خاندان B کے معیاری انحراف کو ہزار روپے میں حاصل کرنے کے لیے ان کے تغیر ($28.81$) کا جزر لیتے ہیں۔ اس سے $5.37$ حاصل ہوتا ہے، جو ان کے ماہانہ اخراجات میں اوسط سے کافی زیادہ پھیلاؤ کو ظاہر کرتا ہے۔"
+  },
+  {
+   "en": "Finally, we compare the means to see who spends more on average, and the standard deviations to see whose spending is more consistent (remembering that a smaller standard deviation means greater stability). Since $46.50 > 45.17$ and $0.96 < 5.37$, we have our complete answer for both questions.",
+   "ur": "آخر میں، ہم یہ دیکھنے کے لیے اوسطوں کا موازنہ کرتے ہیں کہ کون اوسطاً زیادہ خرچ کرتا ہے، اور یہ دیکھنے کے لیے معیاری انحرافات کا موازنہ کرتے ہیں کہ کس کے اخراجات زیادہ مستحکم ہیں (یاد رہے کہ چھوٹے معیاری انحراف کا مطلب زیادہ استحکام ہوتا ہے)۔ چونکہ $46.50 > 45.17$ اور $0.96 < 5.37$ ہے، اس لیے ہمیں دونوں سوالات کا مکمل جواب مل جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "These results tell us that over the $6$ months, Family A has a higher average monthly expense ($46.50$ thousand rupees compared to Family B's $45.17$ thousand rupees), so Family A spends more on average. At the same time, Family A's standard deviation ($0.96$) is much smaller than Family B's ($5.37$), meaning Family A has much more stable and predictable monthly expenses. You can easily verify this stability by looking at the original numbers: Family A's expenses stay tightly between $45$ and $48$, while Family B's swing widely between $38$ and $52$.",
+  "ur": "یہ نتائج ہمیں بتاتے ہیں کہ $6$ مہینوں کے دوران، خاندان A کا اوسط ماہانہ خرچ زیادہ ہے (خاندان B کے $45.17$ ہزار روپے کے مقابلے میں $46.50$ ہزار روپے)، لہٰذا خاندان A اوسطاً زیادہ خرچ کرتا ہے۔ اس کے ساتھ ساتھ، خاندان A کا معیاری انحراف ($0.96$) خاندان B ($5.37$) سے بہت کم ہے، جس کا مطلب ہے کہ خاندان A کے ماہانہ اخراجات زیادہ مستحکم اور یکساں ہیں۔ آپ اصل اعداد کو دیکھ کر اس استحکام کی آسانی سے تصدیق کر سکتے ہیں: خاندان A کے اخراجات $45$ اور $48$ کے درمیان قریب قریب رہتے ہیں، جبکہ خاندان B کے اخراجات $38$ اور $52$ کے درمیان بہت زیادہ بدلتے رہتے ہیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

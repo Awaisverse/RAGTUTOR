@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex3.6-q1",
+ "label": "i",
+ "answer_ref": "$x = 2,\\ y = 3$",
+ "math": [
+  "\\begin{bmatrix} 2 & 5 \\\\ 4 & -3 \\end{bmatrix}\\begin{bmatrix} x \\\\ y \\end{bmatrix} = \\begin{bmatrix} 19 \\\\ -1 \\end{bmatrix}",
+  "|A| = \\begin{vmatrix} 2 & 5 \\\\ 4 & -3 \\end{vmatrix} = (2)(-3) - (5)(4) = -6 - 20 = -26",
+  "\\operatorname{Adj}A = \\begin{bmatrix} -3 & -5 \\\\ -4 & 2 \\end{bmatrix}",
+  "A^{-1} = \\frac{1}{|A|}\\operatorname{Adj}A = \\frac{1}{-26}\\begin{bmatrix} -3 & -5 \\\\ -4 & 2 \\end{bmatrix} = \\begin{bmatrix} \\frac{3}{26} & \\frac{5}{26} \\\\ \\frac{2}{13} & - \\frac{1}{13} \\end{bmatrix}",
+  "X = A^{-1}B = \\frac{1}{-26}\\begin{bmatrix} -3 & -5 \\\\ -4 & 2 \\end{bmatrix}\\begin{bmatrix} 19 \\\\ -1 \\end{bmatrix} = \\frac{1}{-26}\\begin{bmatrix} (-3)(19) + (-5)(-1) \\\\ (-4)(19) + (2)(-1) \\end{bmatrix} = \\frac{1}{-26}\\begin{bmatrix} -52 \\\\ -78 \\end{bmatrix} = \\begin{bmatrix} 2 \\\\ 3 \\end{bmatrix}",
+  "x = 2,\\quad y = 3"
+ ],
+ "why": [
+  {
+   "en": "To use the matrix inversion method, we first separate the coefficients, the variables, and the constants into three matrices: $A$, $X$, and $B$. This organizes our system of linear equations into a single matrix equation $AX = B$, which we can solve for $X$.",
+   "ur": "میٹرکس انورژن کے طریقے کو استعمال کرنے کے لیے، ہم سب سے پہلے عددی سروں، متغیرات اور مستقل مقداروں کو تین قالبوں $A$، $X$ اور $B$ میں الگ کرتے ہیں۔ یہ ہماری مساواتوں کے نظام کو ایک واحد میٹرکس مساوات $AX = B$ کی شکل دیتا ہے، جسے ہم $X$ کے لیے حل کر سکتے ہیں۔"
+  },
+  {
+   "en": "Before finding the inverse of matrix $A$, we must calculate its determinant $|A|$ to see if a solution actually exists. Since $|A| = -26$ is not zero, the matrix is non-singular, which tells us that $A^{-1}$ exists and the system has a unique solution.",
+   "ur": "قالب $A$ کا معکوس معلوم کرنے سے پہلے، ہمیں اس کا مقطع $|A|$ نکالنا ہوگا تاکہ پتہ چل سکے کہ حل ممکن بھی ہے یا نہیں۔ چونکہ $|A| = -26$ صفر نہیں ہے، اس لیے یہ ایک غیر نادر قالب ہے، جو ہمیں بتاتا ہے کہ $A^{-1}$ موجود ہے اور اس نظام کا ایک منفرد حل ہے۔"
+  },
+  {
+   "en": "Finding the adjoint of matrix $A$ is a required building block in the formula for the matrix inverse. This gives us the rearranged matrix $\\operatorname{Adj}A$ that we will divide by the determinant in the next step.",
+   "ur": "قالب $A$ کا ایڈجوائنٹ معلوم کرنا معکوس قالب کے فارمولے کا ایک لازمی حصہ ہے۔ اس سے ہمیں ترتیب بدلا ہوا قالب $\\operatorname{Adj}A$ ملتا ہے جسے ہم اگلے مرحلے میں مقطع سے تقسیم کریں گے۔"
+  },
+  {
+   "en": "We apply the definition of the matrix inverse, $A^{-1} = \\frac{1}{|A|}\\operatorname{Adj}A$, using the determinant and adjoint we just found. Having $A^{-1}$ allows us to isolate the variable matrix $X$ from the equation $AX = B$.",
+   "ur": "ہم معکوس قالب کی تعریف $A^{-1} = \\frac{1}{|A|}\\operatorname{Adj}A$ استعمال کرتے ہیں جس کے لیے ہم ابھی معلوم کیے گئے مقطع اور ایڈجوائنٹ کی قیمتیں درج کرتے ہیں۔ $A^{-1}$ حاصل کرنے سے ہم مساوات $AX = B$ میں متغیرات کے قالب $X$ کو الگ کر سکتے ہیں۔"
+  },
+  {
+   "en": "Since $AX = B$ leads to $X = A^{-1}B$, we multiply the inverse matrix by the constant matrix $B$ using row-by-column multiplication. Notice how keeping $\\frac{1}{-26}$ outside until the end makes the multiplication much easier and avoids messy fractions, directly giving the values for matrix $X$.",
+   "ur": "چونکہ $AX = B$ سے $X = A^{-1}B$ بنتا ہے، اس لیے ہم معکوس قالب کو مستقل مقداروں کے قالب $B$ سے قطار در کالم ضرب دیتے ہیں۔ غور کریں کہ $\\frac{1}{-26}$ کو آخر تک باہر رکھنے سے ضرب کا عمل بہت آسان ہو جاتا ہے اور ہمیں پیچیدہ کسروں سے بچاتا ہے، جس سے براہِ راست قالب $X$ کی قیمتیں مل جاتی ہیں۔"
+  },
+  {
+   "en": "By the definition of equality of matrices, corresponding entries of equal matrices must be the same. Comparing the column matrix $X = \\begin{bmatrix} x \\\\ y \\end{bmatrix}$ with $\\begin{bmatrix} 2 \\\\ 3 \\end{bmatrix}$ gives us the exact numerical values of our two unknowns.",
+   "ur": "مساوی قالبوں کی تعریف کے مطابق، برابر قالبوں کے متناظرہ ارکان آپس میں برابر ہوتے ہیں۔ کالمی قالب $X = \\begin{bmatrix} x \\\\ y \\end{bmatrix}$ کا $\\begin{bmatrix} 2 \\\\ 3 \\end{bmatrix}$ سے موازنہ کرنے سے ہمیں دونوں نامعلوم متغیرات کی درست عددی قیمتیں مل جاتی ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $x = 2,\\ y = 3$ is the unique pair of numbers that satisfies both original equations at the same time. You can easily verify this by substituting $x = 2$ and $y = 3$ into the original equations: $2(2) + 5(3) = 19$ and $4(2) - 3(3) = -1$, confirming our solution is completely correct.",
+  "ur": "آخری جواب $x = 2,\\ y = 3$ اعداد کا وہ واحد جوڑا ہے جو دونوں اصل مساواتوں کو بیک وقت درست ثابت کرتا ہے۔ آپ اصل مساواتوں میں $x = 2$ اور $y = 3$ درج کر کے باآسانی اس کی تصدیق کر سکتے ہیں: $2(2) + 5(3) = 19$ اور $4(2) - 3(3) = -1$ بنتا ہے، جس سے ثابت ہوتا ہے کہ ہمارا حل بالکل درست ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

@@ -1,0 +1,65 @@
+{
+ "item": "c10-ex5.4-q1",
+ "label": "vi",
+ "answer_ref": "$x = 1,\\ 2$",
+ "math": [
+  "3^x + \\frac{27}{3^x} - 12 = 0",
+  "\\text{Let } y = 3^x:\\ y^2 - 12y + 27 = 0",
+  "y^{2} - 3 y - 9 y + 27 = 0",
+  "y \\left(y - 3\\right) - 9 \\left(y - 3\\right) = 0",
+  "\\left(y - 9\\right) \\left(y - 3\\right) = 0",
+  "y - 9 = 0 \\quad\\text{or}\\quad y - 3 = 0",
+  "y = 3,\\quad y = 9",
+  "3^{x} = 3 = 3^{1} \\Rightarrow x = 1 \\Rightarrow x = 1",
+  "3^{x} = 9 = 3^{2} \\Rightarrow x = 2 \\Rightarrow x = 2",
+  "\\text{S.S} = \\{1, 2\\}"
+ ],
+ "why": [
+  {
+   "en": "Using the quotient law of exponents, we split $3^{3-x}$ into $\\frac{3^3}{3^x}$, and since $3^3 = 27$, we get $\\frac{27}{3^x}$. This is done so that the variable part $3^x$ looks the same everywhere in the equation.",
+   "ur": "قوت نما کے قانون (quotient law of exponents) کو استعمال کرتے ہوئے ہم $3^{3-x}$ کو $\\frac{3^3}{3^x}$ میں توڑتے ہیں، اور چونکہ $3^3 = 27$ ہوتا ہے، اس لیے ہمیں $\\frac{27}{3^x}$ ملتا ہے۔ یہ اس لیے کیا گیا ہے تاکہ متغیر والا حصہ $3^x$ مساوات میں ہر جگہ ایک جیسا نظر آئے۔"
+  },
+  {
+   "en": "To make this exponential equation easier to solve, we substitute $y = 3^x$ and multiply the whole equation by $y$ to clear the fraction. This transforms our problem into a standard quadratic equation, $y^2 - 12y + 27 = 0$.",
+   "ur": "اس قوت نمائی مساوات کو حل کرنا آسان بنانے کے لیے، ہم $y = 3^x$ فرض کرتے ہیں اور کسر کو ختم کرنے کے لیے پوری مساوات کو $y$ سے ضرب دیتے ہیں۔ اس سے ہمارا سوال ایک معیاری دو درجی مساوات $y^2 - 12y + 27 = 0$ میں بدل جاتا ہے۔"
+  },
+  {
+   "en": "We use the middle-term breaking method to factorize the quadratic equation. We rewrite $-12y$ as $-3y - 9y$ because $(-3)$ and $(-9)$ multiply to give $+27$ and add up to $-12$.",
+   "ur": "ہم دو درجی مساوات کی تجزی کرنے کے لیے درمیانی رقم کو توڑنے کا طریقہ استعمال کرتے ہیں۔ ہم $-12y$ کو $-3y - 9y$ لکھتے ہیں کیونکہ $(-3)$ اور $(-9)$ کو ضرب دینے سے $+27$ اور جمع کرنے سے $-12$ آتا ہے۔"
+  },
+  {
+   "en": "Now we group the four terms into two pairs and factor out the greatest common value from each pair. Notice how $(y - 3)$ appears in both parts, showing our middle-term split was successful.",
+   "ur": "اب ہم چاروں رقوم کے دو جوڑے بناتے ہیں اور ہر جوڑے میں سے مشترک قدر کو باہر نکالتے ہیں۔ غور کریں کہ دونوں حصوں میں $(y - 3)$ آ گیا ہے، جو بتاتا ہے کہ ہماری درمیانی رقم بالکل صحیح ٹوٹی تھی۔"
+  },
+  {
+   "en": "Since the bracket $(y - 3)$ is common to both terms, we factor it out to complete the factorization. This leaves us with a neat product of two linear factors equal to zero.",
+   "ur": "چونکہ بریکٹ $(y - 3)$ دونوں رقوم میں مشترک ہے، اس لیے ہم تجزی مکمل کرنے کے لیے اسے باہر نکال لیتے ہیں۔ اس سے ہمارے پاس دو یک درجی اجزائے ضربی کا حاصل ضرب صفر کے برابر رہ جاتا ہے۔"
+  },
+  {
+   "en": "By the zero-product property, if two factors multiply to give zero, at least one of them must be zero. Setting each bracket equal to zero gives us two simple equations to solve for $y$.",
+   "ur": "ضربی خاصیتِ صفر (zero-product property) کے مطابق، اگر دو اجزائے ضربی کا حاصل ضرب صفر ہو تو ان میں سے کم از کم ایک لازمی صفر ہوتا ہے۔ ہر بریکٹ کو صفر کے برابر رکھنے سے ہمیں $y$ کی قیمت نکالنے کے لیے دو سادہ مساواتیں مل جاتی ہیں۔"
+  },
+  {
+   "en": "Moving the constants to the other side gives us the two values for our temporary variable, $y = 3$ and $y = 9$. However, our original question has $x$, so we now need to go back and find $x$.",
+   "ur": "مستقل اعداد کو دوسری طرف لے جانے سے ہمیں اپنے عارضی متغیر کی دو قیمتیں $y = 3$ اور $y = 9$ مل جاتی ہیں۔ لیکن ہمارا اصل سوال $x$ میں ہے، اس لیے اب ہمیں واپس جا کر $x$ کی قیمت معلوم کرنی ہے۔"
+  },
+  {
+   "en": "We replace $y$ back with $3^x$ for the first value, $y = 3$, and write $3$ as $3^1$. Since the bases on both sides are equal (both are $3$), their powers must also be equal, giving us our first root $x = 1$.",
+   "ur": "ہم پہلی قیمت $y = 3$ کے لیے $y$ کی جگہ واپس $3^x$ رکھتے ہیں اور $3$ کو $3^1$ لکھتے ہیں۔ چونکہ دونوں طرف اساس (bases) برابر ہیں (دونوں $3$ ہیں)، اس لیے ان کے قوت نما بھی برابر ہوں گے، جس سے ہمیں پہلا حل $x = 1$ ملتا ہے۔"
+  },
+  {
+   "en": "Next, we put $y = 3^x$ for the second value, $y = 9$, and express $9$ in base $3$ as $3^2$. Equating the exponents of the same base gives us the second solution, $x = 2$.",
+   "ur": "اس کے بعد، ہم دوسری قیمت $y = 9$ کے لیے $y = 3^x$ رکھتے ہیں اور $9$ کو اساس $3$ میں $3^2$ لکھتے ہیں۔ ایک جیسی اساس کے قوت نماؤں کو برابر رکھنے سے ہمیں دوسرا حل $x = 2$ مل جاتا ہے۔"
+  },
+  {
+   "en": "Finally, we write both values of $x$ together inside curly brackets as the Solution Set. This neatly presents the complete answer to the given equation.",
+   "ur": "آخر میں، ہم $x$ کی دونوں قیمتوں کو درمیانی بریکٹ کے اندر حل سیٹ (Solution Set) کے طور پر لکھتے ہیں۔ یہ دی گئی مساوات کے مکمل جواب کو واضح طور پر پیش کرتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $x = 1, 2$ means that $1$ and $2$ are the only two powers of $x$ that make the original equation $3^x + 3^{3-x} - 12 = 0$ true. You can easily check this by putting $x = 1$ into the equation: $3^1 + 3^{3-1} - 12 = 3 + 3^2 - 12 = 3 + 9 - 12 = 0$, which confirms our answer is correct.",
+  "ur": "آخری جواب $x = 1, 2$ کا مطلب یہ ہے کہ $1$ اور $2$ ہی $x$ کی وہ دو قیمتیں ہیں جو اصل مساوات $3^x + 3^{3-x} - 12 = 0$ کو درست ثابت کرتی ہیں۔ آپ مساوات میں $x = 1$ درج کر کے باآسانی اس کی پڑتال کر سکتے ہیں: $3^1 + 3^{3-1} - 12 = 3 + 3^2 - 12 = 3 + 9 - 12 = 0$، جس سے تصدیق ہوتی ہے کہ ہمارا جواب بالکل درست ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

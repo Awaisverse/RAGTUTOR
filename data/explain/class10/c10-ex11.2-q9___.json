@@ -1,0 +1,50 @@
+{
+ "item": "c10-ex11.2-q9",
+ "label": "",
+ "answer_ref": "A: mean 5.60, SD 0.13; B: mean 5.58, SD 0.67; A performs better and is more consistent",
+ "math": [
+  "\\bar{x_A} = \\frac{5.5 + 5.7 + 5.4 + 5.6 + 5.8 + 5.6}{6} = \\frac{\\frac{168}{5}}{6} \\approx 5.60",
+  "\\sigma^2 = \\frac{\\sum(x_A - \\bar{x_A})^2}{n} = \\frac{0.1}{6} \\approx 0.0167",
+  "\\sigma = \\sqrt{\\sigma^2} \\approx 0.13",
+  "\\bar{x_B} = \\frac{5.5 + 6.5 + 4.5 + 6.0 + 5.0 + 6.0}{6} = \\frac{\\frac{67}{2}}{6} \\approx 5.58",
+  "\\sigma^2 = \\frac{\\sum(x_B - \\bar{x_B})^2}{n} = \\frac{2.7083}{6} \\approx 0.4514",
+  "\\sigma = \\sqrt{\\sigma^2} \\approx 0.67",
+  "\\bar{x}_A = 5.60 > \\bar{x}_B = 5.58,\\quad \\sigma_A = 0.13 < \\sigma_B = 0.67"
+ ],
+ "why": [
+  {
+   "en": "To judge overall performance, we first find the arithmetic mean (average) of Person A's sales over the $6$ months. This gives us a typical monthly sale of $5.60$ lacs for Person A, which we will later compare with Person B.",
+   "ur": "مجموعی کارکردگی کو جانچنے کے لیے، ہم سب سے پہلے شخص A کی $6$ ماہ کی فروخت کا حسابی اوسط معلوم کرتے ہیں۔ اس سے ہمیں شخص A کی عام ماہانہ فروخت $5.60$ لاکھ ملتی ہے، جس کا موازنہ ہم بعد میں شخص B سے کریں گے۔"
+  },
+  {
+   "en": "To check how steady Person A's sales are, we use the variance formula to measure how much the monthly values spread out from the mean of $5.60$. The very small result of $0.0167$ shows that Person A's sales stay very close to the average.",
+   "ur": "یہ دیکھنے کے لیے کہ شخص A کی فروخت میں کتنا ٹھہراؤ ہے، ہم تغیر (variance) کا فارمولا استعمال کرتے ہیں تاکہ معلوم ہو سکے کہ ماہانہ قدریں اوسط $5.60$ سے کتنی پھیلی ہوئی ہیں۔ $0.0167$ کا بہت چھوٹا نتیجہ بتاتا ہے کہ شخص A کی فروخت اوسط کے بہت قریب رہتی ہے۔"
+  },
+  {
+   "en": "By definition, we take the positive square root of the variance to get the standard deviation in the same units (lacs of rupees) as the original sales. This value of $0.13$ directly measures Person A's consistency.",
+   "ur": "تعریف کے مطابق، ہم معیاری انحراف (standard deviation) کو اصل فروخت کی اکائیوں (لاکھ روپے) میں حاصل کرنے کے لیے تغیر کا مثبت جزر لیتے ہیں۔ $0.13$ کی یہ قدر براہِ راست شخص A کے تسلسل (consistency) کی پیمائش کرتی ہے۔"
+  },
+  {
+   "en": "Now we apply the same arithmetic mean formula to Person B's $6$ months of data to measure their overall performance. The result of $5.58$ lacs shows their typical monthly sales.",
+   "ur": "اب ہم شخص B کی مجموعی کارکردگی ماپنے کے لیے ان کے $6$ ماہ کے ڈیٹا پر بھی وہی حسابی اوسط کا فارمولا لگاتے ہیں۔ $5.58$ لاکھ کا نتیجہ ان کی عام ماہانہ فروخت کو ظاہر کرتا ہے۔"
+  },
+  {
+   "en": "Next, we calculate the variance for Person B to see how much their monthly sales fluctuate around their mean of $5.58$. The result $0.4514$ is much larger than Person A's, indicating wider ups and downs in Person B's sales.",
+   "ur": "اس کے بعد، ہم شخص B کے لیے تغیر (variance) معلوم کرتے ہیں تاکہ دیکھ سکیں کہ ان کی ماہانہ فروخت ان کے اوسط $5.58$ کے گرد کتنی بدلتی ہے۔ $0.4514$ کا نتیجہ شخص A کے مقابلے میں کافی بڑا ہے، جو شخص B کی فروخت میں زیادہ اتار چڑھاؤ کو ظاہر کرتا ہے۔"
+  },
+  {
+   "en": "Taking the square root of Person B's variance gives us their standard deviation in lacs of rupees. This value of $0.67$ gives us the exact figure needed to compare Person B's consistency against Person A's.",
+   "ur": "شخص B کے تغیر کا جزر لینے سے ہمیں لاکھ روپے میں ان کا معیاری انحراف ملتا ہے۔ $0.67$ کی یہ قدر ہمیں وہی عدد دیتی ہے جس کی مدد سے ہم شخص B کے تسلسل کا شخص A سے موازنہ کر سکتے ہیں۔"
+  },
+  {
+   "en": "Finally, we compare the means to judge overall performance and the standard deviations to judge consistency. Since $5.60 > 5.58$ and $0.13 < 0.67$, the rules of statistics tell us that a higher mean shows better average sales and a lower standard deviation shows greater reliability.",
+   "ur": "آخر میں، ہم مجموعی کارکردگی جانچنے کے لیے اوسطوں کا اور تسلسل جانچنے کے لیے معیاری انحراف کا موازنہ کرتے ہیں۔ چونکہ $5.60 > 5.58$ اور $0.13 < 0.67$ ہے، اس لیے شماریات کے اصول ہمیں بتاتے ہیں کہ زیادہ اوسط بہتر فروخت کو اور کم معیاری انحراف زیادہ بھروسے اور تسلسل کو ظاہر کرتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final results tell us that Person A not only sells slightly more on average ($5.60$ lacs vs $5.58$ lacs) making them the better performer, but also has a much smaller standard deviation ($0.13$ vs $0.67$), meaning their monthly sales are much more reliable and consistent. You can easily verify this consistency by looking at the original data: Person A's sales stay tightly between $5.4$ and $5.8$ lacs, whereas Person B's sales jump wildly between $4.5$ and $6.5$ lacs.",
+  "ur": "حتمی نتائج ہمیں بتاتے ہیں کہ شخص A نہ صرف اوسطاً تھوڑی زیادہ فروخت کرتا ہے ($5.58$ لاکھ کے مقابلے میں $5.60$ لاکھ) جو اسے بہتر کارکردگی والا بناتا ہے، بلکہ اس کا معیاری انحراف بھی بہت کم ہے ($0.67$ کے مقابلے میں $0.13$)، جس کا مطلب ہے کہ اس کی ماہانہ فروخت زیادہ قابلِ بھروسہ اور مستقل مزاج ہے۔ آپ اصل ڈیٹا کو دیکھ کر اس تسلسل کی باآسانی تصدیق کر سکتے ہیں: شخص A کی فروخت $5.4$ اور $5.8$ لاکھ کے درمیان قریب قریب رہتی ہے، جبکہ شخص B کی فروخت $4.5$ اور $6.5$ لاکھ کے درمیان بہت زیادہ بدلتی رہتی ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

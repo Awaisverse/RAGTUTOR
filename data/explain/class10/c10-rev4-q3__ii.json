@@ -1,0 +1,40 @@
+{
+ "item": "c10-rev4-q3",
+ "label": "ii",
+ "answer_ref": "$2 x^{3} + 14$",
+ "math": [
+  "f(x) = x^3, \\quad g(x) = 14 + 2x",
+  "(g \\circ f)(x) = g(f(x))",
+  "(g \\circ f)(x) = g\\left(x^3\\right)",
+  "(g \\circ f)(x) = 14 + 2\\left(x^3\\right)",
+  "(g \\circ f)(x) = 2 x^{3} + 14"
+ ],
+ "why": [
+  {
+   "en": "We always begin by clearly stating our starting information from the question. Having both rules $f(x) = x^3$ and $g(x) = 14 + 2x$ in front of us keeps our substitution work neat and prevents mistakes.",
+   "ur": "ہم ہمیشہ سوال میں دی گئی معلومات کو واضح طور پر لکھ کر شروعات کرتے ہیں۔ دونوں فنکشنز $f(x) = x^3$ اور $g(x) = 14 + 2x$ کو سامنے رکھنے سے قیمتیں درج کرنے کا عمل آسان ہو جاتا ہے اور غلطی کا امکان نہیں رہتا۔"
+  },
+  {
+   "en": "Here we use the definition of composition of functions, which tells us how to combine two functions in a specific order. Writing $(g \\circ f)(x)$ as $g(f(x))$ shows that $f(x)$ is the inner function that must be handled first, while $g$ is the outer function waiting to be applied.",
+   "ur": "یہاں ہم کمپوزٹ فنکشنز کی تعریف استعمال کر رہے ہیں، جو ہمیں بتاتی ہے کہ دو فنکشنز کو ایک خاص ترتیب میں کیسے ملایا جاتا ہے۔ $(g \\circ f)(x)$ کو $g(f(x))$ لکھنے سے واضح ہوتا ہے کہ $f(x)$ اندرونی فنکشن ہے جسے پہلے حل کرنا ہے، جبکہ $g$ بیرونی فنکشن ہے۔"
+  },
+  {
+   "en": "In algebra, we work from the inside out, so we replace the inner part $f(x)$ with its actual expression, $x^3$. This step tells us that our new input for the outer function $g$ is no longer just $x$, but $x^3$.",
+   "ur": "الجبرا میں ہم اندر سے باہر کی طرف حل کرتے ہیں، اس لیے ہم اندرونی حصے $f(x)$ کی جگہ اس کی اصل قیمت $x^3$ درج کرتے ہیں۔ یہ مرحلہ ہمیں بتاتا ہے کہ اب بیرونی فنکشن $g$ کے لیے ہمارا نیا ان پٹ صرف $x$ نہیں بلکہ $x^3$ ہے۔"
+  },
+  {
+   "en": "Now we apply the rule of the function $g$, which says to take $14$ plus $2$ times whatever is inside the brackets. By putting our new input $x^3$ in place of $x$ in $14 + 2x$, we successfully link the two functions together into a single algebraic expression.",
+   "ur": "اب ہم فنکشن $g$ کا اصول لاگو کرتے ہیں، جس کے مطابق بریکٹ کے اندر موجود قیمت کو $2$ سے ضرب دے کر $14$ میں جمع کیا جاتا ہے۔ $14 + 2x$ میں $x$ کی جگہ نیا ان پٹ $x^3$ رکھنے سے دونوں فنکشنز کامیابی سے ایک ہی الجبری جملے میں جڑ جاتے ہیں۔"
+  },
+  {
+   "en": "Finally, we remove the brackets and write the variable term $2x^3$ before the constant $14$ to follow the standard polynomial form. This gives us a clean, simplified formula for the composite function.",
+   "ur": "آخر میں، ہم بریکٹ ختم کرتے ہیں اور معیاری ترتیب کے مطابق متغیر والی رقم $2x^3$ کو مستقل عدد $14$ سے پہلے لکھتے ہیں۔ اس سے ہمیں کمپوزٹ فنکشن کے لیے ایک صاف اور مختصر فارمولا مل جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $2x^3 + 14$ is the new combined machine $(g \\circ f)(x)$ that directly gives the result of applying $f$ first and then $g$ to any number $x$. Notice how the order matters in composition, because applying $f$ then $g$ gives a very different rule than if we had applied $g$ first.",
+  "ur": "حتمی جواب $2x^3 + 14$ دراصل وہ نیا مشترکہ فنکشن $(g \\circ f)(x)$ ہے جو کسی بھی عدد $x$ پر پہلے $f$ اور پھر $g$ لاگو کرنے کا براہِ راست نتیجہ دیتا ہے۔ غور کریں کہ کمپوزیشن میں ترتیب کتنی اہم ہوتی ہے، کیونکہ پہلے $f$ اور پھر $g$ لگانے سے بالکل مختلف اصول بنتا ہے بہ نسبت اس کے کہ ہم پہلے $g$ لگاتے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

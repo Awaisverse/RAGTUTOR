@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex4.1-q3",
+ "label": "iib",
+ "answer_ref": "$-1 + \\frac{8}{x^{2}}$",
+ "math": [
+  "f(x) = \\frac{2}{x}, \\quad x \\ne 0; \\qquad g(x) = 2x^{2} - 1",
+  "(g \\circ f)(x) = g(f(x))",
+  "(g \\circ f)(x) = g\\left(\\frac{2}{x}\\right)",
+  "(g \\circ f)(x) = 2\\left(\\frac{2}{x}\\right)^{2} - 1",
+  "(g \\circ f)(x) = 2\\left(\\frac{4}{x^{2}}\\right) - 1",
+  "(g \\circ f)(x) = -1 + \\frac{8}{x^{2}}"
+ ],
+ "why": [
+  {
+   "en": "We start by clearly writing down our given functions so we know the exact rules for $f$ and $g$. Note the condition $x \\ne 0$, which keeps our fraction defined because we can never divide by zero.",
+   "ur": "ہم سب سے پہلے دیے گئے تفاعل (functions) کو واضح طور پر لکھتے ہیں تاکہ ہمیں $f$ اور $g$ کے اصول معلوم ہوں۔ یہاں $x \\ne 0$ کی شرط اس لیے ضروری ہے کیونکہ صفر سے تقسیم ممکن نہیں ہے۔"
+  },
+  {
+   "en": "Using the definition of composite functions, we rewrite $(g \\circ f)(x)$ as $g(f(x))$. This tells us the order of work: first we take $f(x)$, and then we use it as the input for the outer function $g$.",
+   "ur": "ترکیبی تفاعل (composite function) کی تعریف کے مطابق ہم $(g \\circ f)(x)$ کو $g(f(x))$ لکھتے ہیں۔ اس سے ہمیں کام کی ترتیب معلوم ہوتی ہے: پہلے اندرونی تفاعل $f(x)$ لیں گے اور پھر اسے بیرونی تفاعل $g$ کے ان پٹ (input) کے طور پر استعمال کریں گے۔"
+  },
+  {
+   "en": "Now we replace the inner part $f(x)$ with its actual value, $\\frac{2}{x}$. This shows us clearly that we need to evaluate the function $g$ at $\\frac{2}{x}$ instead of $x$.",
+   "ur": "اب ہم اندرونی حصے $f(x)$ کی جگہ اس کی دی گئی قیمت $\\frac{2}{x}$ درج کرتے ہیں۔ اس سے یہ واضح ہو جاتا ہے کہ ہمیں تفاعل $g$ میں $x$ کی بجائے $\\frac{2}{x}$ کو بطور ان پٹ رکھنا ہے۔"
+  },
+  {
+   "en": "The rule for function $g$ is to square the input, multiply by $2$, and subtract $1$. Applying this rule to our new input $\\frac{2}{x}$ removes the function notation $g$ and gives us a purely algebraic expression to simplify.",
+   "ur": "تفاعل $g$ کا اصول یہ ہے کہ ان پٹ کا مربع لیں، اسے $2$ سے ضرب دیں اور $1$ تفریق کریں۔ جب ہم یہ اصول اپنے نئے ان پٹ $\\frac{2}{x}$ پر لاگو کرتے ہیں، تو علامت $g$ ختم ہو جاتی ہے اور ہمیں حل کرنے کے لیے ایک الجبری جملہ مل جاتا ہے۔"
+  },
+  {
+   "en": "Following the order of operations (BODMAS), we must handle the exponent before multiplying. By the law of exponents for fractions, squaring $\\frac{2}{x}$ squares both the top and bottom to give $\\frac{4}{x^2}$.",
+   "ur": "عملی ترتیب (BODMAS) کے مطابق، ضرب دینے سے پہلے ہمیں قوت نما (مربع) کو حل کرنا چاہیے۔ کسروں کے قوت نما کے قانون کے تحت، $\\frac{2}{x}$ کا مربع لینے سے شمار کنندہ اور مخرج دونوں کا مربع ہو کر $\\frac{4}{x^2}$ بن جاتا ہے۔"
+  },
+  {
+   "en": "Finally, we multiply the whole number $2$ with the numerator $4$ to get $8$. This gives us the simplest form of our composite function, with no more brackets left to expand.",
+   "ur": "آخر میں، ہم عدد $2$ کو شمار کنندہ $4$ سے ضرب دے کر $8$ حاصل کرتے ہیں۔ اس طرح بریکٹ ختم ہو جاتی ہیں اور ہمیں ترکیبی تفاعل کی سب سے سادہ شکل مل جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $(g \\circ f)(x) = -1 + \\frac{8}{x^2}$ (or $\\frac{8}{x^2} - 1$) is a new single formula that directly gives the result of applying $f$ first and then $g$, for any non-zero number $x$.",
+  "ur": "حتمی جواب $(g \\circ f)(x) = -1 + \\frac{8}{x^2}$ (یا $\\frac{8}{x^2} - 1$) ایک نیا فارمولا ہے جو کسی بھی غیر صفر عدد $x$ کے لیے پہلے $f$ اور پھر $g$ لاگو کرنے کا براہِ راست نتیجہ دیتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

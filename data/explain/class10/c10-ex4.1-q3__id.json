@@ -1,0 +1,40 @@
+{
+ "item": "c10-ex4.1-q3",
+ "label": "id",
+ "answer_ref": "$x^{9}$",
+ "math": [
+  "g(x) = x^{3}",
+  "(g\\circ g)(x) = g(g(x))",
+  "(g\\circ g)(x) = g\\left(x^{3}\\right)",
+  "(g\\circ g)(x) = \\left(x^{3}\\right)^{3}",
+  "(g\\circ g)(x) = x^{3 \\times 3} = x^{9}"
+ ],
+ "why": [
+  {
+   "en": "Since we are asked to find $(g\\circ g)(x)$, we only need the rule for the function $g(x)$ from the question. Writing down $g(x) = x^{3}$ clearly shows the cube rule we will apply.",
+   "ur": "چونکہ ہمیں $(g\\circ g)(x)$ معلوم کرنا ہے، اس لیے ہمیں سوال میں سے صرف فنکشن $g(x)$ کی ضرورت ہے۔ $g(x) = x^{3}$ کو الگ لکھنے سے ہمارے سامنے وہ اصول واضح ہو جاتا ہے جسے ہم استعمال کریں گے۔"
+  },
+  {
+   "en": "By the definition of function composition, the notation $(g\\circ g)(x)$ means we apply the function $g$ to its own output. Rewriting it as $g(g(x))$ makes it clear that $g(x)$ is the inner input for the outer function $g$.",
+   "ur": "فنکشنز کی ترکیب (composition) کی تعریف کے مطابق، $(g\\circ g)(x)$ کا مطلب ہے کہ ہم فنکشن $g$ کو اسی کے جواب پر دوبارہ لاگو کر رہے ہیں۔ اسے $g(g(x))$ کی شکل میں لکھنے سے واضح ہو جاتا ہے کہ اندرونی $g(x)$ دراصل بیرونی فنکشن $g$ کے لیے ان پٹ (input) ہے۔"
+  },
+  {
+   "en": "In composite functions, we always work from the inside out. Replacing the inner $g(x)$ with its actual algebraic expression $x^{3}$ tells us that we now need to evaluate the function $g$ at $x^{3}$.",
+   "ur": "مرکب فنکشنز کو حل کرتے وقت ہم ہمیشہ اندر سے باہر کی طرف عمل کرتے ہیں۔ اندرونی $g(x)$ کی جگہ اس کی اصل قیمت $x^{3}$ درج کرنے سے ہمیں پتہ چلتا ہے کہ اب ہمیں فنکشن $g$ کو $x^{3}$ کے لیے حل کرنا ہے۔"
+  },
+  {
+   "en": "The function $g$ takes the cube of whatever input is inside the brackets. By applying this rule to our new input $x^{3}$, we get the expression $\\left(x^{3}\\right)^{3}$, which is ready to be simplified.",
+   "ur": "فنکشن $g$ کا اصول یہ ہے کہ بریکٹ کے اندر جو بھی ان پٹ ہو، اس کا مکعب (cube) لیا جائے۔ اس اصول کو نئے ان پٹ $x^{3}$ پر لاگو کرنے سے ہمیں $\\left(x^{3}\\right)^{3}$ حاصل ہوتا ہے، جسے اب ہم مزید مختصر کر سکتے ہیں۔"
+  },
+  {
+   "en": "According to the power of a power law of exponents, when a base with a power is raised to another power, we multiply the exponents together. Multiplying $3 \\times 3$ simplifies the expression into a single power, $x^{9}$.",
+   "ur": "قوت نما کے اصول (power of a power rule) کے مطابق، جب ایک قوت نما کے اوپر دوسرا قوت نما ہو تو وہ آپس میں ضرب کھاتے ہیں۔ اس لیے $3 \\times 3$ کو ضرب دینے سے عبارت مختصر ہو کر حتمی شکل $x^{9}$ میں آ جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $(g\\circ g)(x) = x^{9}$ means that applying the cubing function $g$ twice in a row is the same as raising the original input $x$ directly to the power of $9$.",
+  "ur": "آخری جواب $(g\\circ g)(x) = x^{9}$ کا مطلب یہ ہے کہ مکعب لینے والے فنکشن $g$ کو لگاتار دو بار لاگو کرنا بالکل ایسا ہی ہے جیسے اصل ان پٹ $x$ کی براہِ راست طاقت $9$ لے لی جائے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

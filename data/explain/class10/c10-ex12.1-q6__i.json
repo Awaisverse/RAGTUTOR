@@ -1,0 +1,40 @@
+{
+ "item": "c10-ex12.1-q6",
+ "label": "i",
+ "answer_ref": "$n(S) = 36$",
+ "math": [
+  "",
+  "\\text{Die 1} \\to \\{1, 2, 3, 4, 5, 6\\}",
+  "\\text{Die 1} \\to \\text{Die 2} \\to \\{1, 2, 3, 4, 5, 6\\}",
+  "\\begin{aligned} 1 &\\to (1,1), (1,2), (1,3), (1,4), (1,5), (1,6) \\\\ 2 &\\to (2,1), (2,2), (2,3), (2,4), (2,5), (2,6) \\\\ 3 &\\to (3,1), (3,2), (3,3), (3,4), (3,5), (3,6) \\\\ 4 &\\to (4,1), (4,2), (4,3), (4,4), (4,5), (4,6) \\\\ 5 &\\to (5,1), (5,2), (5,3), (5,4), (5,5), (5,6) \\\\ 6 &\\to (6,1), (6,2), (6,3), (6,4), (6,5), (6,6) \\end{aligned}",
+  "n(S) = 6 \\times 6 = 36"
+ ],
+ "why": [
+  {
+   "en": "A sample space is the set of all possible outcomes of a random experiment. A tree diagram helps us organize these outcomes step-by-step so that we do not miss any possibility when rolling the two dice.",
+   "ur": "سیمپل سپیس (sample space) کسی تجربے کے تمام ممکنہ نتائج کے سیٹ کو کہتے ہیں۔ ٹری ڈایاگرام (شجرہ خاندان کی طرح کا نقشہ) ہمیں ان نتائج کو مرحلہ وار ترتیب دینے میں مدد دیتا ہے تاکہ دو چھکے (dice) پھینکنے پر کوئی بھی ممکنہ نتیجہ چھوٹ نہ جائے۔"
+  },
+  {
+   "en": "Since a standard unbiased die has $6$ faces, the first roll can result in any number from $1$ to $6$ with equal chance. Drawing $6$ main branches sets up the starting points for our experiment.",
+   "ur": "چونکہ ایک غیر جانبدار چھکے کے $6$ رخ ہوتے ہیں، اس لیے پہلی باری میں $1$ سے $6$ تک کوئی بھی نمبر یکساں امکان کے ساتھ آ سکتا ہے۔ $6$ بڑی شاخیں بنانا ہمارے تجربے کے ابتدائی نکات طے کرتا ہے۔"
+  },
+  {
+   "en": "The outcome of the second die is independent of the first, meaning any of its $6$ faces can appear regardless of what happened on the first die. Adding $6$ sub-branches to each main branch visually connects every first-die result to every possible second-die result.",
+   "ur": "دوسرے چھکے کا نتیجہ پہلے سے آزاد ہوتا ہے، یعنی پہلے چھکے پر کچھ بھی آئے، دوسرے کے $6$ رخوں میں سے کوئی بھی آ سکتا ہے۔ ہر بڑی شاخ کے آگے $6$ چھوٹی شاخیں بنانے سے پہلے چھکے کا ہر نتیجہ دوسرے چھکے کے ہر ممکنہ نتیجے سے جڑ جاتا ہے۔"
+  },
+  {
+   "en": "Each complete path from start to finish represents one combined outcome of the experiment, written as an ordered pair $(\\text{Die 1}, \\text{Die 2})$. Listing all these paths gives us the complete sample space $S$ without any repetition or omission.",
+   "ur": "شروع سے آخر تک کا ہر مکمل راستہ تجربے کے ایک مشترکہ نتیجے کو ظاہر کرتا ہے، جسے مرتب جوڑے $(\\text{Die 1}, \\text{Die 2})$ کی شکل میں لکھا جاتا ہے۔ ان تمام راستوں کو لکھنے سے ہمیں بغیر کسی غلطی یا کمی کے مکمل سیمپل سپیس $S$ مل جاتی ہے۔"
+  },
+  {
+   "en": "The fundamental counting principle states that if one event can occur in $6$ ways and a second in $6$ ways, then together they can occur in $6 \\times 6$ ways. This confirms the exact size of our sample space $n(S)$, which we will need as the denominator when calculating probabilities later.",
+   "ur": "گنتی کا بنیادی اصول (fundamental counting principle) بتاتا ہے کہ اگر ایک واقعہ $6$ طریقوں سے اور دوسرا بھی $6$ طریقوں سے ہو سکتا ہے، تو دونوں مل کر $6 \\times 6$ طریقوں سے ہو سکتے ہیں۔ اس سے ہماری سیمپل سپیس کی کل تعداد $n(S)$ کی تصدیق ہو جاتی ہے، جو آگے چل کر احتمال (probability) نکالتے وقت بٹے کے نیچے (denominator کے طور پر) کام آئے گی۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer shows that rolling two unbiased dice once yields a sample space of $36$ equally likely ordered pairs, from $(1,1)$ to $(6,6)$. You can easily verify this by counting that there are $6$ rows and $6$ pairs in each row, giving $6 \\times 6 = 36$ total outcomes.",
+  "ur": "آخری جواب یہ بتاتا ہے کہ دو غیر جانبدار چھکوں کو ایک بار پھینکنے سے سیمپل سپیس میں $(1,1)$ سے لے کر $(6,6)$ تک کل $36$ یکساں ممکنہ نتائج (مرتب جوڑے) حاصل ہوتے ہیں۔ آپ اس کی تصدیق آسانی سے ایسے کر سکتے ہیں کہ کل $6$ قطاریں ہیں اور ہر قطار میں $6$ جوڑے ہیں، جو کل ملا کر $6 \\times 6 = 36$ نتائج بنتے ہیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

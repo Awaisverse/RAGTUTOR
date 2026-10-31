@@ -1,0 +1,65 @@
+{
+ "item": "c10-ex5.4-q1",
+ "label": "i",
+ "answer_ref": "$x = \\frac{2 \\sqrt{5}}{5},\\ \\frac{- 2 \\sqrt{5}}{5},\\ \\sqrt{3},\\ - \\sqrt{3}$",
+ "math": [
+  "\\text{Let } y = x^2,\\ \\text{so } y^2 = x^4",
+  "5y^2 - 19y + 12 = 0",
+  "5 y^{2} - 4 y - 15 y + 12 = 0",
+  "y \\left(5 y - 4\\right) - 3 \\left(5 y - 4\\right) = 0",
+  "\\left(y - 3\\right) \\left(5 y - 4\\right) = 0",
+  "y - 3 = 0 \\quad\\text{or}\\quad 5 y - 4 = 0",
+  "y = \\frac{4}{5},\\quad y = 3",
+  "x^2 = \\frac{4}{5} \\Rightarrow x = \\pm \\frac{2 \\sqrt{5}}{5}",
+  "x^2 = 3 \\Rightarrow x = \\pm \\sqrt{3}",
+  "\\text{S.S} = \\{\\frac{2 \\sqrt{5}}{5}, \\frac{- 2 \\sqrt{5}}{5}, \\sqrt{3}, - \\sqrt{3}\\}"
+ ],
+ "why": [
+  {
+   "en": "Since this equation has degree 4 with only $x^4$ and $x^2$ terms, we cannot use the quadratic formula directly. By substituting $y = x^2$ (and thus $y^2 = x^4$), we reduce this complex equation into a simpler, standard quadratic form that we already know how to solve.",
+   "ur": "چونکہ اس مساوات میں صرف $x^4$ اور $x^2$ کی رقمیں ہیں، اس لیے ہم اسے براہِ راست درجہ دوم کے طریقے سے حل نہیں کر سکتے۔ $y = x^2$ (اور $y^2 = x^4$) فرض کرنے سے یہ مشکل مساوات ایک آسان دو درجی مساوات (quadratic equation) میں بدل جائے گی جسے حل کرنا ہم جانتے ہیں۔"
+  },
+  {
+   "en": "We replace $x^4$ and $x^2$ with $y^2$ and $y$ in the original equation. This gives us a standard quadratic equation $5y^2 - 19y + 12 = 0$, which can now be easily solved by factorization.",
+   "ur": "اب ہم اصل مساوات میں $x^4$ اور $x^2$ کی جگہ $y^2$ اور $y$ درج کرتے ہیں۔ اس سے ہمیں ایک معیاری دو درجی مساوات $5y^2 - 19y + 12 = 0$ ملتی ہے، جس کی اب باآسانی تجزی (factorization) کی جا سکتی ہے۔"
+  },
+  {
+   "en": "To factorize by mid-term breaking, we need two numbers that multiply to $60$ ($5 \\times 12$) and add up to $-19$. Using $-4y$ and $-15y$ creates four terms so we can factor by grouping in the next step.",
+   "ur": "درمیانی رقم کو توڑ کر تجزی کرنے کے لیے ہمیں ایسے دو اعداد چاہئیں جنہیں ضرب دینے سے $60$ ($5 \\times 12$) آئے اور جمع کرنے سے $-19$ بنے۔ $-4y$ اور $-15y$ لکھنے سے مساوات میں چار رقمیں بن جاتی ہیں جن کے جوڑے بنا کر ہم اگلے مرحلے میں مشترک لے سکتے ہیں۔"
+  },
+  {
+   "en": "We group the four terms into two pairs and factor out the greatest common value from each pair ($y$ from the first, $-3$ from the second). Seeing the identical bracket $(5y - 4)$ in both parts confirms our mid-term breaking was correct.",
+   "ur": "ہم چاروں رقموں کے دو جوڑے بناتے ہیں اور ہر جوڑے میں سے مشترک نکالتے ہیں (پہلے میں سے $y$ اور دوسرے میں سے $-3$)۔ دونوں حصوں میں ایک جیسی بریکٹ $(5y - 4)$ کا آنا اس بات کی تصدیق کرتا ہے کہ ہم نے درمیانی رقم بالکل درست توڑی تھی۔"
+  },
+  {
+   "en": "Since $(5y - 4)$ is common to both terms, we factor it out to the front. This turns the expression into a single product of two linear factors equal to zero.",
+   "ur": "چونکہ بریکٹ $(5y - 4)$ دونوں حصوں میں موجود ہے، اس لیے ہم اسے مشترک لے لیتے ہیں۔ اس طرح پوری مساوات دو یک درجی اجزائے ضربی (linear factors) کے حاصلِ ضرب کی شکل میں بدل جاتی ہے جو صفر کے برابر ہے۔"
+  },
+  {
+   "en": "By the zero-product property, if two factors multiply to give zero, at least one of them must be zero. This allows us to split the quadratic equation into two simple linear equations to find $y$.",
+   "ur": "ضربی خاصیت کے مطابق، اگر دو بریکٹوں کا حاصلِ ضرب صفر ہو تو ان میں سے کم از کم ایک بریکٹ لازمی صفر کے برابر ہوتی ہے۔ اس اصول کی مدد سے ہم دو درجی مساوات کو دو سادہ یک درجی مساواتوں میں تقسیم کر لیتے ہیں تاکہ $y$ کی قیمتیں نکل سکیں۔"
+  },
+  {
+   "en": "Solving each small linear equation gives us the two values for our temporary variable $y$. However, our original question was in terms of $x$, so we must now convert these back.",
+   "ur": "ان دونوں سادہ مساواتوں کو حل کرنے سے ہمیں فرضی متغیر $y$ کی دو قیمتیں مل جاتی ہیں۔ لیکن چونکہ ہمارا اصل سوال $x$ کی شکل میں تھا، اس لیے اب ہمیں واپس $x$ کی قیمتیں معلوم کرنی ہوں گی۔"
+  },
+  {
+   "en": "We replace $y$ back with $x^2$ for the first value, $y = \\frac{4}{5}$, and take the square root on both sides. Remembering both positive and negative signs (and rationalizing the denominator) gives us our first two roots for $x$.",
+   "ur": "ہم پہلی قیمت $y = \\frac{4}{5}$ میں $y$ کی جگہ واپس $x^2$ رکھتے ہیں اور دونوں طرف جذر (square root) لیتے ہیں۔ مثبت اور منفی دونوں علامتیں لگانے (اور بٹے کو حل کرنے) سے ہمیں $x$ کے پہلے دو جواب مل جاتے ہیں۔"
+  },
+  {
+   "en": "Similarly, we substitute $y = x^2$ for the second value, $y = 3$, and take the square root on both sides. This gives us the remaining two real roots, $\\pm\\sqrt{3}$, completing all four required solutions for a degree $4$ equation.",
+   "ur": "بالکل اسی طرح، دوسری قیمت $y = 3$ میں بھی $y$ کی جگہ واپس $x^2$ رکھ کر دونوں طرف جذر لیتے ہیں۔ اس سے ہمیں باقی دو قیمتیں $\\pm\\sqrt{3}$ مل جاتی ہیں، یوں درجہ چہارم کی مساوات کے چاروں ممکنہ جواب مکمل ہو جاتے ہیں۔"
+  },
+  {
+   "en": "Finally, we collect all four values of $x$ inside curly brackets to write the final Solution Set (S.S). This neatly presents all the numbers that satisfy the original equation.",
+   "ur": "آخر میں، ہم $x$ کی چاروں قیمتوں کو درمیانی بریکٹ کے اندر لکھ کر حل سیٹ (S.S) مکمل کرتے ہیں۔ یہ سیٹ ان تمام اعداد کو ظاہر کرتا ہے جو دی گئی مساوات کو درست ثابت کرتے ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer gives the four exact values of $x$ ($\\frac{2 \\sqrt{5}}{5}, \\frac{- 2 \\sqrt{5}}{5}, \\sqrt{3}, - \\sqrt{3}$) that make the original degree-4 equation $5x^4-19x^2+12=0$ true. Because the equation only has even powers of $x$ ($x^4$ and $x^2$), the negative sign disappears when squared, making it very easy to check: for instance, putting either $x = \\sqrt{3}$ or $x = -\\sqrt{3}$ gives $x^2 = 3$ and $x^4 = 9$, so $5(9) - 19(3) + 12 = 60 - 60 = 0$, which verifies our work.",
+  "ur": "آخری جواب ہمیں $x$ کی وہ چار درست قیمتیں ($\\frac{2 \\sqrt{5}}{5}, \\frac{- 2 \\sqrt{5}}{5}, \\sqrt{3}, - \\sqrt{3}$) بتاتا ہے جو اصل مساوات $5x^4-19x^2+12=0$ کو درست ثابت کرتی ہیں۔ چونکہ مساوات میں $x$ کی طاقتیں جفت (even) ہیں ($x^4$ اور $x^2$)، اس لیے مربع لینے سے منفی علامت ختم ہو جاتی ہے اور پڑتال کرنا بہت آسان ہو جاتا ہے: مثال کے طور پر، $x = \\sqrt{3}$ یا $x = -\\sqrt{3}$ درج کرنے سے $x^2 = 3$ اور $x^4 = 9$ بنتا ہے، جس سے بائیں طرف صفر کے برابر آ جاتی ہے اور ہمارے جواب کی تصدیق ہو جاتی ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex4.1-q3",
+ "label": "iic",
+ "answer_ref": "$x$",
+ "math": [
+  "f(x) = \\frac{2}{x}, \\quad x \\ne 0",
+  "(f\\circ f)(x) = f(f(x))",
+  "(f\\circ f)(x) = f\\left(\\frac{2}{x}\\right)",
+  "(f\\circ f)(x) = \\frac{2}{\\frac{2}{x}}",
+  "(f\\circ f)(x) = 2 \\times \\frac{x}{2}",
+  "(f\\circ f)(x) = x"
+ ],
+ "why": [
+  {
+   "en": "Since we only need to find $(f\\circ f)(x)$, we just write down the function $f(x)$ and ignore $g(x)$ for this part. Note the condition $x \\ne 0$, which keeps our fraction defined because we can never divide by zero.",
+   "ur": "چونکہ ہمیں صرف $(f\\circ f)(x)$ معلوم کرنا ہے، اس لیے ہم صرف فنکشن $f(x)$ لکھتے ہیں اور اس حصے کے لیے $g(x)$ کو نظر انداز کر دیتے ہیں۔ شرط $x \\ne 0$ پر غور کریں، جو ہماری کسر کو بامعنی رکھتی ہے کیونکہ ہم کبھی بھی صفر سے تقسیم نہیں کر سکتے۔"
+  },
+  {
+   "en": "We use the definition of composition of functions to rewrite the circle notation as nested brackets. This shows clearly that the output of the inner $f(x)$ will become the input for the outer $f$.",
+   "ur": "ہم فنکشنز کی ترکیب (composition) کی تعریف استعمال کرتے ہوئے دائرے والی علامت کو بریکٹ کی شکل میں لکھتے ہیں۔ اس سے واضح ہوتا ہے کہ اندرونی $f(x)$ کا جواب بیرونی $f$ کے لیے اِن پٹ (input) بن جائے گا۔"
+  },
+  {
+   "en": "Working from the inside out, we replace the inner $f(x)$ with its actual algebraic expression, $\\frac{2}{x}$. Now we can clearly see that $\\frac{2}{x}$ is the new input we need to feed into the outer function $f$.",
+   "ur": "اندر سے باہر کی طرف حل کرتے ہوئے، ہم اندرونی $f(x)$ کی جگہ اس کی اصل الجبری قیمت $\\frac{2}{x}$ درج کرتے ہیں۔ اب ہم واضح طور پر دیکھ سکتے ہیں کہ $\\frac{2}{x}$ وہ نیا اِن پٹ ہے جسے ہمیں بیرونی فنکشن $f$ میں ڈالنا ہے۔"
+  },
+  {
+   "en": "The rule for function $f$ is to divide $2$ by whatever input is given. Applying this rule to our new input $\\frac{2}{x}$ gives us a complex fraction that we now just need to simplify.",
+   "ur": "فنکشن $f$ کا اصول یہ ہے کہ جو بھی اِن پٹ دیا جائے، $2$ کو اس پر تقسیم کیا جائے۔ اس اصول کو اپنے نئے اِن پٹ $\\frac{2}{x}$ پر لاگو کرنے سے ہمیں ایک پیچیدہ کسر ملتی ہے جسے اب ہمیں صرف مختصر کرنا ہے۔"
+  },
+  {
+   "en": "By the rule of dividing fractions, dividing by $\\frac{2}{x}$ is the same as multiplying by its reciprocal, $\\frac{x}{2}$. This turns a double fraction into a simple multiplication problem.",
+   "ur": "کسور کی تقسیم کے اصول کے مطابق، $\\frac{2}{x}$ سے تقسیم کرنا اس کے معکوس (reciprocal) یعنی $\\frac{x}{2}$ سے ضرب دینے کے برابر ہے۔ اس سے دوہری کسر ضرب کے ایک سادہ سوال میں بدل جاتی ہے۔"
+  },
+  {
+   "en": "Using basic cancellation of common factors, the $2$ in the numerator and the $2$ in the denominator cancel each other out. This leaves us with the simplest form of our composite function.",
+   "ur": "مشترکہ اجزاء کو کاٹنے کے بنیادی اصول کو استعمال کرتے ہوئے، شمار کنندہ کا $2$ اور مخرج کا $2$ ایک دوسرے سے کٹ جاتے ہیں۔ اس سے ہمیں اپنے مرکب فنکشن کی سب سے سادہ شکل مل جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $(f\\circ f)(x) = x$ tells us that applying the function $f(x) = \\frac{2}{x}$ twice in a row brings us right back to our original starting value $x$. This means the function $f$ is its own inverse, because the second application undoes the work of the first!",
+  "ur": "حتمی جواب $(f\\circ f)(x) = x$ ہمیں بتاتا ہے کہ فنکشن $f(x) = \\frac{2}{x}$ کو لگاتار دو بار لاگو کرنے سے ہم واپس اپنی اصل ابتدائی قیمت $x$ پر آ جاتے ہیں۔ اس کا مطلب ہے کہ فنکشن $f$ خود اپنا معکوس (inverse) ہے، کیونکہ دوسری بار کا عمل پہلی بار کے عمل کے اثر کو ختم کر دیتا ہے!"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

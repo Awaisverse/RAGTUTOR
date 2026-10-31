@@ -1,0 +1,45 @@
+{
+ "item": "c10-rev11-q4",
+ "label": "i",
+ "answer_ref": "$\\hat{y} = 88.16 - 2.64x$",
+ "math": [
+  "x = \\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\\},\\quad y = \\{90, 85, 83, 80, 76, 74, 72, 70, 68, 65\\}",
+  "n = 10,\\quad \\sum x = 45,\\quad \\sum y = 763,\\quad \\sum xy = 3216,\\quad \\sum x^2 = 285",
+  "b = \\frac{n\\sum xy - \\sum x\\sum y}{n\\sum x^2 - (\\sum x)^2} = \\frac{10(3216) - (45)(763)}{10(285) - (45)^2}",
+  "b = \\frac{32160 - 34335}{2850 - 2025} = \\frac{-2175}{825} = -\\frac{29}{11} \\approx -2.6364",
+  "a = \\frac{\\sum y - b\\sum x}{n} = \\frac{763 - \\left(-\\frac{29}{11}\\right)(45)}{10} = \\frac{9698}{110} \\approx 88.1636",
+  "\\hat{y} = 88.16 - 2.64x"
+ ],
+ "why": [
+  {
+   "en": "In statistics, we place the independent variable (exercise hours, $x$) on the horizontal axis and the dependent variable (heart rate, $y$) on the vertical axis because heart rate responds to exercise. Plotting these $n = 10$ pairs gives us a visual picture of how the two quantities relate.",
+   "ur": "شماریات میں ہم آزاد متغیر (ورزش کے گھنٹے، $x$) کو افقی محور پر اور تابع متغیر (دل کی دھڑکن، $y$) کو عمودی محور پر رکھتے ہیں کیونکہ دل کی دھڑکن کا انحصار ورزش پر ہوتا ہے۔ ان $n = 10$ جوڑوں کو گراف پر لگانے سے ہمیں دونوں مقداروں کے تعلق کی واضح تصویر مل جاتی ہے۔"
+  },
+  {
+   "en": "To draw the most accurate line of best fit rather than just guessing by eye, we use the mathematical 'method of least squares'. Calculating these totals ($\\sum x = 45$, $\\sum y = 763$, $\\sum xy = 3216$, and $\\sum x^2 = 285$) gives us the building blocks needed for the line's formulas.",
+   "ur": "صرف اندازے سے لکیر کھینچنے کے بجائے، سب سے درست 'لائن آف بیسٹ فٹ' بنانے کے لیے ہم ریاضی کا 'طریقہ اقل مربعات' (method of least squares) استعمال کرتے ہیں۔ ان مجموعوں ($\\sum x = 45$، $\\sum y = 763$، $\\sum xy = 3216$، اور $\\sum x^2 = 285$) کو معلوم کرنے سے ہمیں فارمولوں کے لیے ضروری بنیادی قیمتیں مل جاتی ہیں۔"
+  },
+  {
+   "en": "The slope $b$ tells us how steep our line is and how much the heart rate changes for each hour of exercise. By putting our sums into the standard least-squares slope formula, we set up the exact calculation for this rate of change.",
+   "ur": "ڈھلوان (slope) $b$ ہمیں بتاتی ہے کہ ہماری لکیر کتنی ترچھی ہے اور ورزش کے ہر گھنٹے کے ساتھ دل کی دھڑکن میں کتنی تبدیلی آتی ہے۔ اپنے حاصل کردہ مجموعوں کو ڈھلوان کے معیاری فارمولے میں درج کر کے ہم تبدیلی کی اس شرح کو معلوم کرنے کا آغاز کرتے ہیں۔"
+  },
+  {
+   "en": "Simplifying the fraction gives a negative slope, $b \\approx -2.6364$. This negative sign is very important—it confirms that as weekly exercise hours increase, the resting heart rate goes down by about $2.64$ beats per minute for each extra hour.",
+   "ur": "کسر کو مختصر کرنے سے ہمیں منفی ڈھلوان $b \\approx -2.6364$ ملتی ہے۔ یہ منفی علامت بہت اہم ہے—یہ ثابت کرتی ہے کہ جیسے جیسے ہفتہ وار ورزش کے گھنٹے بڑھتے ہیں، دل کی دھڑکن ہر اضافی گھنٹے کے بدلے تقریباً $2.64$ دھڑکن فی منٹ کم ہو جاتی ہے۔"
+  },
+  {
+   "en": "Next, we need the y-intercept $a$, which is the starting point of our line on the vertical axis (when exercise hours $x = 0$). Using the exact fraction $b = -\\frac{29}{11}$ prevents rounding errors and tells us that a person with zero exercise has an estimated heart rate of about $88.1636$.",
+   "ur": "اس کے بعد ہمیں y-مقطع (y-intercept) $a$ کی ضرورت ہے، جو عمودی محور پر ہماری لکیر کا ابتدائی نقطہ ہے (جب ورزش کے گھنٹے $x = 0$ ہوں)۔ $b = -\\frac{29}{11}$ کی اصل کسر استعمال کرنے سے اشعاریہ کی غلطی نہیں ہوتی اور ہمیں معلوم ہوتا ہے کہ صفر ورزش کرنے والے شخص کی متوقع دھڑکن تقریباً $88.1636$ ہے۔"
+  },
+  {
+   "en": "Putting our rounded values $a \\approx 88.16$ and $b \\approx -2.64$ into the general line equation $\\hat{y} = a + bx$ gives us the final formula for the line of best fit. Drawing this line through our scatter diagram summarizes the overall downward trend of the data.",
+   "ur": "ہماری راؤنڈ کی گئی قیمتوں $a \\approx 88.16$ اور $b \\approx -2.64$ کو خط کی عمومی مساوات $\\hat{y} = a + bx$ میں درج کرنے سے ہمیں 'لائن آف بیسٹ فٹ' کا حتمی فارمولا مل جاتا ہے۔ سکیٹر ڈایاگرام کے نقاط کے درمیان سے یہ لکیر کھینچنا ڈیٹا کے مجموعی گرتے ہوئے رجحان کو ظاہر کرتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final equation $\\hat{y} = 88.16 - 2.64x$ is the mathematical rule for our line of best fit, showing that resting heart rate starts around $88.16$ beats per minute (at $0$ hours of exercise) and drops by $2.64$ beats per minute for every weekly hour of exercise. To check that your drawn line is sensible on the graph, verify that it slopes downwards from left to right and passes closely through the middle of the plotted points, starting near $88.16$ on the vertical axis when $x = 0$.",
+  "ur": "حتمی مساوات $\\hat{y} = 88.16 - 2.64x$ ہماری 'لائن آف بیسٹ فٹ' کا ریاضیاتی اصول ہے، جو بتاتا ہے کہ آرام کی حالت میں دل کی دھڑکن تقریباً $88.16$ دھڑکن فی منٹ (صفر گھنٹے ورزش پر) سے شروع ہوتی ہے اور ہفتہ وار ورزش کے ہر گھنٹے کے ساتھ $2.64$ دھڑکن فی منٹ کم ہو جاتی ہے۔ گراف پر اپنی کھینچی گئی لکیر کی درستگی جانچنے کے لیے تسلی کریں کہ یہ بائیں سے دائیں نیچے کی طرف ڈھلوان بناتی ہے اور لگائے گئے نقاط کے بالکل درمیان سے گزرتی ہے، جبکہ $x = 0$ پر عمودی محور پر $88.16$ کے قریب سے شروع ہوتی ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

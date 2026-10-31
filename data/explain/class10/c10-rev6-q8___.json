@@ -1,0 +1,50 @@
+{
+ "item": "c10-rev6-q8",
+ "label": "",
+ "answer_ref": "isosceles: $|\\overrightarrow{AB}| = |\\overrightarrow{BC}| = 5$",
+ "math": [
+  "\\overrightarrow{AB} = (x_2 - x_1)\\underline{i} + (y_2 - y_1)\\underline{j} = (4 - (1))\\underline{i} + (6 - (2))\\underline{j} = 3\\underline{i} + 4\\underline{j}",
+  "\\overrightarrow{AC} = (x_2 - x_1)\\underline{i} + (y_2 - y_1)\\underline{j} = (7 - (1))\\underline{i} + (2 - (2))\\underline{j} = 6\\underline{i}",
+  "\\overrightarrow{BC} = (x_2 - x_1)\\underline{i} + (y_2 - y_1)\\underline{j} = (7 - (4))\\underline{i} + (2 - (6))\\underline{j} = 3\\underline{i} - 4\\underline{j}",
+  "|\\overrightarrow{AB}| = \\sqrt{(3)^2 + (4)^2} = 5",
+  "|\\overrightarrow{AC}| = \\sqrt{(6)^2 + (0)^2} = 6",
+  "|\\overrightarrow{BC}| = \\sqrt{(3)^2 + (-4)^2} = 5",
+  "|\\overrightarrow{AB}| = |\\overrightarrow{BC}| \\Rightarrow \\text{isosceles}"
+ ],
+ "why": [
+  {
+   "en": "To prove the triangle is isosceles using vectors, we first need the vector form of each side. By applying the position vector rule (tip minus tail) for points $A(1,2)$ and $B(4,6)$, we find the vector representing the first side, $\\overrightarrow{AB} = 3\\underline{i} + 4\\underline{j}$.",
+   "ur": "ویکٹرز کی مدد سے مثلث کو مساوی الساقین (isosceles) ثابت کرنے کے لیے، ہمیں پہلے ہر ضلع کی ویکٹر شکل معلوم کرنی ہوگی۔ نقاط $A(1,2)$ اور $B(4,6)$ پر پوزیشن ویکٹر کا اصول (ٹپ مائنس ٹیل) لگا کر ہمیں پہلے ضلع کا ویکٹر $\\overrightarrow{AB} = 3\\underline{i} + 4\\underline{j}$ ملتا ہے۔"
+  },
+  {
+   "en": "Next, we apply the same vector subtraction rule to points $A(1,2)$ and $C(7,2)$ to represent the second side of the triangle. Because the $y$-coordinates are both $2$, the $\\underline{j}$ component becomes zero, giving us $\\overrightarrow{AC} = 6\\underline{i}$.",
+   "ur": "اس کے بعد، مثلث کے دوسرے ضلع کو ظاہر کرنے کے لیے ہم نقاط $A(1,2)$ اور $C(7,2)$ پر وہی ویکٹر تفریق کا اصول لگاتے ہیں۔ چونکہ دونوں کے $y$-محددات $2$ ہیں، اس لیے $\\underline{j}$ حصہ صفر ہو جاتا ہے، اور ہمیں $\\overrightarrow{AC} = 6\\underline{i}$ ملتا ہے۔"
+  },
+  {
+   "en": "We repeat this rule one last time for points $B(4,6)$ and $C(7,2)$ to get the vector for the third side, $\\overrightarrow{BC} = 3\\underline{i} - 4\\underline{j}$. Now all three sides of triangle $ABC$ are written in vector form, ready for us to find their lengths.",
+   "ur": "تیسرے ضلع کا ویکٹر $\\overrightarrow{BC} = 3\\underline{i} - 4\\underline{j}$ حاصل کرنے کے لیے ہم نقاط $B(4,6)$ اور $C(7,2)$ کے لیے یہ اصول آخری بار دہراتے ہیں۔ اب مثلث $ABC$ کے تینوں اضلاع ویکٹر کی شکل میں آچکے ہیں، جن سے ہم ان کی لمبائیاں معلوم کر سکتے ہیں۔"
+  },
+  {
+   "en": "An isosceles triangle is defined by the lengths of its sides, and the length of a vector is given by its magnitude. Using the magnitude formula $\\sqrt{x^2 + y^2}$ on $\\overrightarrow{AB}$, we find that the length of side $AB$ is $5$ units.",
+   "ur": "مساوی الساقین مثلث کی پہچان اس کے اضلاع کی لمبائی سے ہوتی ہے، اور کسی ویکٹر کی لمبائی اس کی مقدار (magnitude) ہوتی ہے۔ $\\overrightarrow{AB}$ پر مقدار کا فارمولا $\\sqrt{x^2 + y^2}$ لگانے سے ہمیں معلوم ہوتا ہے کہ ضلع $AB$ کی لمبائی $5$ اکائیاں ہے۔"
+  },
+  {
+   "en": "We now apply the magnitude formula to vector $\\overrightarrow{AC}$ to find the length of the second side. Since its $\\underline{j}$ component is $0$, this calculation quickly tells us that side $AC$ has a length of $6$ units.",
+   "ur": "اب ہم دوسرے ضلع کی لمبائی معلوم کرنے کے لیے ویکٹر $\\overrightarrow{AC}$ پر مقدار کا فارمولا لگاتے ہیں۔ چونکہ اس کا $\\underline{j}$ جزو $0$ ہے، یہ حساب ہمیں بتاتا ہے کہ ضلع $AC$ کی لمبائی $6$ اکائیاں ہے۔"
+  },
+  {
+   "en": "Similarly, we calculate the magnitude of $\\overrightarrow{BC}$ to find the length of the third side. Squaring $3$ and $-4$ under the square root gives a length of $5$ units for side $BC$, which we can now compare with the other two sides.",
+   "ur": "اسی طرح، ہم تیسرے ضلع کی لمبائی معلوم کرنے کے لیے $\\overrightarrow{BC}$ کی مقدار نکالتے ہیں۔ جزر کے نیچے $3$ اور $-4$ کا مربع لینے سے ضلع $BC$ کی لمبائی $5$ اکائیاں آتی ہے، جس کا اب ہم دوسرے دو اضلاع سے موازنہ کر سکتے ہیں۔"
+  },
+  {
+   "en": "By definition, a triangle is isosceles if any two of its sides have equal lengths. Since our results show that $|\\overrightarrow{AB}|$ and $|\\overrightarrow{BC}|$ are both equal to $5$, we have proved that triangle $ABC$ is an isosceles triangle.",
+   "ur": "تعریف کے مطابق، ایک مثلث مساوی الساقین ہوتی ہے اگر اس کے کوئی سے دو اضلاع کی لمبائی برابر ہو۔ چونکہ ہمارے نتائج دکھاتے ہیں کہ $|\\overrightarrow{AB}|$ اور $|\\overrightarrow{BC}|$ دونوں $5$ کے برابر ہیں، اس لیے یہ ثابت ہو گیا کہ مثلث $ABC$ ایک مساوی الساقین مثلث ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer confirms that the points $A(1,2)$, $B(4,6)$, and $C(7,2)$ form an isosceles triangle because the two sides $AB$ and $BC$ have the exact same length of $5$ units (while the third side $AC$ is $6$ units long). You can easily check this using the standard coordinate distance formula on points $A$, $B$, and $C$, which will give the exact same side lengths of $5$, $6$, and $5$.",
+  "ur": "حتمی جواب تصدیق کرتا ہے کہ نقاط $A(1,2)$، $B(4,6)$ اور $C(7,2)$ ایک مساوی الساقین مثلث بناتے ہیں کیونکہ دو اضلاع $AB$ اور $BC$ کی لمبائی بالکل برابر یعنی $5$ اکائیاں ہے (جبکہ تیسرا ضلع $AC$، $6$ اکائیوں کا ہے)۔ آپ اس کی پڑتال نقاط $A$، $B$ اور $C$ پر عام فاصلے کا فارمولا (distance formula) لگا کر بھی باآسانی کر سکتے ہیں، جس سے اضلاع کی بالکل یہی لمبائیاں $5$، $6$ اور $5$ حاصل ہوں گی۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

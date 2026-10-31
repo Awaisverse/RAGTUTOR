@@ -1,0 +1,40 @@
+{
+ "item": "c10-rev11-q7",
+ "label": "",
+ "answer_ref": "Mean = 9, SD = 1.789",
+ "math": [
+  "n = 5,\\quad \\sum x = 45,\\quad \\sum x^2 = 421",
+  "\\bar{x} = \\frac{\\sum x}{n} = \\frac{45}{5} = 9",
+  "\\sigma^2 = \\frac{\\sum x^2}{n} - (\\bar{x})^2",
+  "\\sigma^2 = \\frac{421}{5} - (9)^2 = 84.2 - 81 = 3.2",
+  "\\sigma = \\sqrt{3.2} \\approx 1.789"
+ ],
+ "why": [
+  {
+   "en": "In statistics problems, we first translate the English sentences into mathematical symbols so we know which formulas we can use. Here, we do not know the 5 individual numbers, only their count $n = 5$, their total sum $\\sum x = 45$, and the sum of their squares $\\sum x^2 = 421$.",
+   "ur": "شماریات کے سوالات میں ہم سب سے پہلے دی گئی معلومات کو ریاضی کی علامتوں میں لکھتے ہیں تاکہ معلوم ہو سکے کہ کون سا فارمولا استعمال ہوگا۔ یہاں ہمیں 5 انفرادی نمبرز معلوم نہیں ہیں، بلکہ صرف ان کی تعداد $n = 5$، ان کا مجموعہ $\\sum x = 45$، اور ان کے مربوں کا مجموعہ $\\sum x^2 = 421$ دیا گیا ہے۔"
+  },
+  {
+   "en": "By definition, the arithmetic mean (average) is the total sum divided by the number of observations. This gives us the first part of our answer, $\\bar{x} = 9$, which we will also need in the next steps to find the standard deviation.",
+   "ur": "تعریف کے مطابق، حسابی اوسط (mean) نکالنے کے لیے تمام مدات کے مجموعے کو ان کی کل تعداد پر تقسیم کیا جاتا ہے۔ اس سے ہمیں اپنے جواب کا پہلا حصہ $\\bar{x} = 9$ مل جاتا ہے، جس کی ہمیں اگلے مراحل میں معیاری انحراف (standard deviation) معلوم کرنے کے لیے بھی ضرورت ہوگی۔"
+  },
+  {
+   "en": "Because we are given $\\sum x^2$ instead of the individual values, we choose the computational (direct) formula for variance. Finding the variance $\\sigma^2$ first makes it easy to get the standard deviation by just taking a square root at the end.",
+   "ur": "چونکہ ہمیں انفرادی نمبرز کے بجائے $\\sum x^2$ دیا گیا ہے، اس لیے ہم تغیر (variance) کا براہِ راست فارمولا منتخب کرتے ہیں۔ پہلے تغیر $\\sigma^2$ معلوم کرنے سے آخر میں صرف اس کا جذر (square root) لے کر معیاری انحراف نکالنا بہت آسان ہو جاتا ہے۔"
+  },
+  {
+   "en": "Plugging our known values and the mean $\\bar{x} = 9$ into the formula gives the variance $\\sigma^2 = 3.2$. Notice that the variance is positive, which is a good check because squared distances can never be negative.",
+   "ur": "فارمولے میں دی گئی قیمتیں اور اوسط $\\bar{x} = 9$ درج کرنے سے ہمیں تغیر $\\sigma^2 = 3.2$ ملتا ہے۔ غور کریں کہ یہ جواب مثبت ہے، جو اس بات کی تصدیق کرتا ہے کہ ہمارا عمل درست ہے کیونکہ مربوں کا نتیجہ کبھی منفی نہیں ہو سکتا۔"
+  },
+  {
+   "en": "By definition, standard deviation is the positive square root of the variance. Taking the square root of $3.2$ brings the spread back to the original units of our data, giving us the final required value $\\sigma \\approx 1.789$.",
+   "ur": "تعریف کے مطابق، معیاری انحراف (standard deviation) تغیر کے مثبت جذر کو کہتے ہیں۔ $3.2$ کا جذر لینے سے ڈیٹا کا پھیلاؤ واپس اپنی اصل اکائیوں میں آ جاتا ہے، جس سے ہمیں مطلوبہ حتمی قیمت $\\sigma \\approx 1.789$ حاصل ہوتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The mean of $9$ tells us the central or average value of the 5 numbers, while the small standard deviation of $1.789$ shows that the numbers are clustered closely around $9$ rather than being spread far apart. A quick mental check is that $\\frac{\\sum x^2}{n} = 84.2$ is slightly larger than $(\\bar{x})^2 = 81$, which must always be true for a valid dataset.",
+  "ur": "اوسط $9$ ہمیں بتاتی ہے کہ ان 5 نمبروں کا مرکز کیا ہے، جبکہ $1.789$ کا چھوٹا معیاری انحراف ظاہر کرتا ہے کہ یہ نمبرز ایک دوسرے سے بہت دور پھیلے ہوئے نہیں ہیں بلکہ $9$ کے آس پاس ہی موجود ہیں۔ پڑتال کے طور پر آپ دیکھ سکتے ہیں کہ $\\frac{\\sum x^2}{n} = 84.2$ کی قیمت $(\\bar{x})^2 = 81$ سے تھوڑی بڑی ہے، جو کہ کسی بھی درست ڈیٹا کے لیے ہمیشہ سچ ہونا چاہیے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

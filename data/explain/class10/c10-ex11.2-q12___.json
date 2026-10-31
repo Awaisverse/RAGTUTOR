@@ -1,0 +1,50 @@
+{
+ "item": "c10-ex11.2-q12",
+ "label": "",
+ "answer_ref": "SD = 0.51; fairly balanced",
+ "math": [
+  "x = 5.2, 6.0, 4.8, 5.5, 6.2, \\quad n = 5",
+  "\\bar{x} = \\frac{\\sum x}{n} = \\frac{5.2 + 6.0 + 4.8 + 5.5 + 6.2}{5} = \\frac{27.7}{5} = 5.54",
+  "(x - \\bar{x})^2 : (-0.34)^2 = 0.1156, \\; (0.46)^2 = 0.2116, \\; (-0.74)^2 = 0.5476, \\; (-0.04)^2 = 0.0016, \\; (0.66)^2 = 0.4356",
+  "\\sum (x - \\bar{x})^2 = 0.1156 + 0.2116 + 0.5476 + 0.0016 + 0.4356 = 1.312",
+  "\\sigma^2 = \\frac{\\sum (x - \\bar{x})^2}{n} = \\frac{1.312}{5} = 0.2624",
+  "\\sigma = \\sqrt{\\sigma^2} = \\sqrt{0.2624} \\approx 0.51",
+  ""
+ ],
+ "why": [
+  {
+   "en": "Before applying any formula, we always organize our given data clearly and count how many values we have. Here, $n = 5$ represents the five provinces, which we will need for both the mean and standard deviation formulas.",
+   "ur": "کوئی بھی فارمولا لگانے سے پہلے ہم ہمیشہ دیے گئے ڈیٹا کو ترتیب سے لکھتے ہیں اور گنتے ہیں کہ ہمارے پاس کل کتنی قیمتیں ہیں۔ یہاں $n = 5$ پانچ صوبوں کو ظاہر کرتا ہے، جس کی ہمیں اوسط اور معیاری انحراف دونوں کے فارمولوں میں ضرورت پڑے گی۔"
+  },
+  {
+   "en": "To measure how spread out the rates are, we first need a central reference point, which is the arithmetic mean $\\bar{x}$. The result $5.54$ tells us the average unemployment rate across the five provinces.",
+   "ur": "یہ دیکھنے کے لیے کہ شرحیں کتنی پھیلی ہوئی ہیں، ہمیں سب سے پہلے ایک مرکزی نقطے کی ضرورت ہوتی ہے جسے حسابی اوسط $\\bar{x}$ کہتے ہیں۔ $5.54$ کا نتیجہ ہمیں پانچوں صوبوں میں بے روزگاری کی اوسط شرح بتاتا ہے۔"
+  },
+  {
+   "en": "We find how far each province's rate is from the average of $5.54$, and we square these differences so that negative signs become positive and do not cancel out when added. These squared values show the individual spread of each province from the mean.",
+   "ur": "ہم یہ معلوم کرتے ہیں کہ ہر صوبے کی شرح اوسط $5.54$ سے کتنی دور ہے، اور پھر ان فرقوں کا مربع لیتے ہیں تاکہ منفی علامتیں مثبت ہو جائیں اور جمع کرتے وقت ایک دوسرے کو ختم نہ کریں۔ یہ مربع شدہ قیمتیں اوسط سے ہر صوبے کے انفرادی پھیلاؤ کو ظاہر کرتی ہیں۔"
+  },
+  {
+   "en": "The formula for variance requires the total of all squared deviations, $\\sum (x - \\bar{x})^2$. Adding them up gives $1.312$, which represents the combined squared spread of all five provinces.",
+   "ur": "تغیرات (variance) کے فارمولے کے لیے تمام مربع شدہ انحرافات کے مجموعے، یعنی $\\sum (x - \\bar{x})^2$ کی ضرورت ہوتی ہے۔ انہیں جمع کرنے سے $1.312$ ملتا ہے، جو پانچوں صوبوں کے مجموعی مربع پھیلاؤ کو ظاہر کرتا ہے۔"
+  },
+  {
+   "en": "By dividing the total squared spread $1.312$ by the number of provinces $n = 5$, we find the average of the squared deviations, known as the variance $\\sigma^2$. This value of $0.2624$ brings us just one step away from the standard deviation.",
+   "ur": "کل مربع پھیلاؤ $1.312$ کو صوبوں کی تعداد $n = 5$ پر تقسیم کر کے ہم مربع انحرافات کی اوسط معلوم کرتے ہیں، جسے تغیرات (variance) $\\sigma^2$ کہا جاتا ہے۔ $0.2624$ کی یہ قیمت ہمیں معیاری انحراف سے بس ایک قدم دوری پر لے آتی ہے۔"
+  },
+  {
+   "en": "Since we squared the differences earlier, we now take the positive square root of $0.2624$ to bring the measure back to the original units (percentage). This gives our standard deviation $\\sigma \\approx 0.51$, showing the typical distance of a province's rate from the mean.",
+   "ur": "چونکہ ہم نے پہلے فرقوں کا مربع لیا تھا، اس لیے اب ہم پیمائش کو واپس اصل اکائی (فیصد) میں لانے کے لیے $0.2624$ کا مثبت جزر لیتے ہیں۔ اس سے ہمیں معیاری انحراف $\\sigma \\approx 0.51$ ملتا ہے، جو اوسط سے کسی صوبے کی شرح کا عام فاصلہ دکھاتا ہے۔"
+  },
+  {
+   "en": "In statistics, a small standard deviation means the data values are clustered closely around the mean. Because $0.51$ is quite small compared to the average of $5.54$, we conclude that the unemployment rates do not vary wildly and are fairly balanced.",
+   "ur": "شماریات میں، چھوٹے معیاری انحراف کا مطلب ہوتا ہے کہ ڈیٹا کی قیمتیں اوسط کے بالکل قریب جمع ہیں۔ چونکہ $0.51$ اوسط $5.54$ کے مقابلے میں کافی چھوٹا ہے، اس لیے ہم یہ نتیجہ اخذ کرتے ہیں کہ بے روزگاری کی شرحوں میں زیادہ فرق نہیں ہے اور یہ کافی متوازن ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer tells us that the unemployment rates in the five provinces typically differ from the average rate ($5.54$) by only about $0.51$. Because this spread is so small, the unemployment situation is fairly balanced across all the provinces. You can quickly check that this makes sense by looking at the original rates ($4.8, 5.2, 5.5, 6.0, 6.2$) and noticing that they are all very close to $5.54$.",
+  "ur": "حتمی جواب ہمیں بتاتا ہے کہ پانچوں صوبوں میں بے روزگاری کی شرحیں اوسط شرح ($5.54$) سے عام طور پر صرف $0.51$ کے لگ بھگ مختلف ہیں۔ چونکہ یہ پھیلاؤ بہت کم ہے، اس لیے تمام صوبوں میں بے روزگاری کی صورتحال کافی متوازن ہے۔ آپ اصل شرحوں ($4.8, 5.2, 5.5, 6.0, 6.2$) کو دیکھ کر باآسانی تصدیق کر سکتے ہیں کہ یہ واقعی درست ہے، کیونکہ یہ تمام قیمتیں $5.54$ کے بہت قریب ہیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

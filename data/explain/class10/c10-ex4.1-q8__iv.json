@@ -1,0 +1,55 @@
+{
+ "item": "c10-ex4.1-q8",
+ "label": "iv",
+ "answer_ref": "verified: $f(f^{-1}(x)) = f^{-1}(f(x)) = x$",
+ "math": [
+  "y = \\frac{x - 4}{x + 2}, \\quad x \\ne -2",
+  "y(x + 2) = x - 4 \\implies xy + 2y = x - 4",
+  "2y + 4 = x - xy \\implies 2y + 4 = x(1 - y) \\implies x = \\frac{2y + 4}{1 - y}",
+  "f^{-1}(x) = \\frac{2x + 4}{1 - x}, \\quad x \\ne 1",
+  "f(f^{-1}(x)) = f\\left(\\frac{2x + 4}{1 - x}\\right) = \\frac{\\frac{2x + 4}{1 - x} - 4}{\\frac{2x + 4}{1 - x} + 2}",
+  "f(f^{-1}(x)) = \\frac{\\frac{2x + 4 - 4(1 - x)}{1 - x}}{\\frac{2x + 4 + 2(1 - x)}{1 - x}} = \\frac{2x + 4 - 4 + 4x}{2x + 4 + 2 - 2x} = \\frac{6x}{6} = x",
+  "f^{-1}(f(x)) = f^{-1}\\left(\\frac{x - 4}{x + 2}\\right) = \\frac{2\\left(\\frac{x - 4}{x + 2}\\right) + 4}{1 - \\left(\\frac{x - 4}{x + 2}\\right)}",
+  "f^{-1}(f(x)) = \\frac{\\frac{2(x - 4) + 4(x + 2)}{x + 2}}{\\frac{(x + 2) - (x - 4)}{x + 2}} = \\frac{2x - 8 + 4x + 8}{x + 2 - x + 4} = \\frac{6x}{6} = x"
+ ],
+ "why": [
+  {
+   "en": "To find the inverse function $f^{-1}(x)$, we first use the definition of a function by setting $y = f(x)$. This gives us an algebraic equation where we can easily reverse the roles of the input $x$ and output $y$.",
+   "ur": "معکوس تفاعل $f^{-1}(x)$ معلوم کرنے کے لیے ہم سب سے پہلے تفاعل کی تعریف کے مطابق $y = f(x)$ فرض کرتے ہیں۔ اس سے ہمیں ایک ایسی الجبری مساوات مل جاتی ہے جس میں ہم باآسانی ان پٹ $x$ اور آؤٹ پٹ $y$ کا کردار الٹ سکتے ہیں۔"
+  },
+  {
+   "en": "Because $x$ is trapped in both the numerator and denominator, we use cross-multiplication to clear the fraction. Expanding the brackets separates the terms so we can start gathering all the $x$ terms together.",
+   "ur": "چونکہ $x$ شمار کنندہ اور مخرج دونوں میں موجود ہے، اس لیے ہم کسر ختم کرنے کے لیے چلیپائی ضرب کا استعمال کرتے ہیں۔ بریکٹ کھولنے سے رقمیں الگ ہو جاتی ہیں تاکہ ہم $x$ والی تمام رقموں کو ایک طرف جمع کر سکیں۔"
+  },
+  {
+   "en": "Our goal is to express $x$ in terms of $y$, so we move all terms containing $x$ to one side and take $x$ common. Dividing by $1 - y$ isolates $x$, which gives us the formula for the inverse in terms of $y$.",
+   "ur": "ہمارا مقصد $x$ کی قیمت $y$ کی شکل میں نکالنا ہے، اس لیے ہم $x$ والی تمام رقموں کو ایک طرف لے جا کر $x$ کو مشترک لے لیتے ہیں۔ پھر $1 - y$ پر تقسیم کرنے سے $x$ اکیلا رہ جاتا ہے، جو ہمیں $y$ کی شکل میں معکوس فارمولا دیتا ہے۔"
+  },
+  {
+   "en": "By definition of an inverse function, $x = f^{-1}(y)$, and since $x$ is the standard variable we use for inputs, we simply replace $y$ with $x$. We also note the condition $x \\ne 1$ so the denominator $1 - x$ never becomes zero.",
+   "ur": "معکوس تفاعل کی تعریف کے مطابق $x = f^{-1}(y)$ ہوتا ہے، اور چونکہ ہم ان پٹ کے لیے عام طور پر متغیر $x$ استعمال کرتے ہیں، اس لیے ہم $y$ کی جگہ $x$ لکھ دیتے ہیں۔ ہم یہ شرط بھی لکھتے ہیں کہ $x \\ne 1$ تاکہ مخرج $1 - x$ کبھی صفر نہ ہو۔"
+  },
+  {
+   "en": "Now to verify the first part of our identity, we use the rule of composition of functions to plug the entire inverse function $f^{-1}(x)$ into the original function $f(x)$. Wherever we see $x$ in $f(x)$, we replace it with $\\frac{2x + 4}{1 - x}$.",
+   "ur": "اب مساوات کے پہلے حصے کی تصدیق کرنے کے لیے، ہم تفاعلات کی ترکیب کا اصول استعمال کرتے ہوئے پورے معکوس تفاعل $f^{-1}(x)$ کو اصل تفاعل $f(x)$ میں درج کرتے ہیں۔ جہاں جہاں $f(x)$ میں $x$ ہے، ہم اس کی جگہ $\\frac{2x + 4}{1 - x}$ رکھ دیتے ہیں۔"
+  },
+  {
+   "en": "To simplify this complex fraction, we take the LCM $1 - x$ in both the numerator and the denominator so their denominators cancel out. After combining the like terms, everything neatly reduces to $\\frac{6x}{6} = x$, proving that $f$ undoes the effect of $f^{-1}$.",
+   "ur": "اس پیچیدہ کسر کو مختصر کرنے کے لیے، ہم شمار کنندہ اور مخرج دونوں میں ضوافعل اقل $1 - x$ لیتے ہیں تاکہ ان کے مخرج آپس میں کٹ جائیں۔ ایک جیسی رقموں کو حل کرنے کے بعد سب کچھ مختصر ہو کر $\\frac{6x}{6} = x$ بن جاتا ہے، جو ثابت کرتا ہے کہ $f$ نے $f^{-1}$ کے اثر کو ختم کر دیا ہے۔"
+  },
+  {
+   "en": "For the second part of the verification, we compose the functions in the opposite order by substituting the original function $f(x)$ into the inverse function $f^{-1}(x)$. This means replacing every $x$ in $f^{-1}(x)$ with the expression $\\frac{x - 4}{x + 2}$.",
+   "ur": "تصدیق کے دوسرے حصے کے لیے، ہم تفاعلات کی ترتیب الٹ کر اصل تفاعل $f(x)$ کو معکوس تفاعل $f^{-1}(x)$ میں درج کرتے ہیں۔ اس کا مطلب ہے کہ $f^{-1}(x)$ میں جہاں بھی $x$ ہے، اس کی جگہ $\\frac{x - 4}{x + 2}$ لکھ دیا جائے۔"
+  },
+  {
+   "en": "Just like before, we take the LCM $x + 2$ in the top and bottom to clear the smaller fractions. Simplifying the remaining terms again gives $\\frac{6x}{6} = x$, completing our verification from both sides.",
+   "ur": "بالکل پہلے کی طرح، ہم چھوٹی کسروں کو ختم کرنے کے لیے اوپر اور نیچے ضوافعل اقل $x + 2$ لیتے ہیں۔ باقی ماندہ رقموں کو مختصر کرنے سے دوبارہ $\\frac{6x}{6} = x$ حاصل ہوتا ہے، جس سے دونوں طرف سے ہماری تصدیق مکمل ہو جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final result $f(f^{-1}(x)) = f^{-1}(f(x)) = x$ confirms that $f(x) = \\frac{x - 4}{x + 2}$ and $f^{-1}(x) = \\frac{2x + 4}{1 - x}$ are true inverses of each other. In simple words, whatever action $f$ performs on an input $x$, $f^{-1}$ completely reverses it to give you back the original $x$, and vice versa.",
+  "ur": "آخری نتیجہ $f(f^{-1}(x)) = f^{-1}(f(x)) = x$ اس بات کی تصدیق کرتا ہے کہ $f(x) = \\frac{x - 4}{x + 2}$ اور $f^{-1}(x) = \\frac{2x + 4}{1 - x}$ واقعی ایک دوسرے کے صحیح معکوس تفاعل ہیں۔ آسان الفاظ میں، تفاعل $f$ کسی ان پٹ $x$ پر جو بھی عمل کرتا ہے، $f^{-1}$ اس عمل کو مکمل طور پر الٹ کر آپ کو واپس اصل $x$ دے دیتا ہے، اور اسی طرح اس کے برعکس بھی ہوتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

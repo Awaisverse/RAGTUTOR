@@ -1,0 +1,50 @@
+{
+ "item": "c10-ex11.2-q10",
+ "label": "",
+ "answer_ref": "Mean = 1360.87, Variance = 60642.72, SD = 246.26",
+ "math": [
+  "",
+  "\\begin{array}{c|c|c|c|c} \\text{Daily Wage (Rs)} & f & x & fx & fx^2 \\\\ \\hline 800-1000 & 2 & 900 & 1800 & 1620000 \\\\ 1000-1200 & 4 & 1100 & 4400 & 4840000 \\\\ 1200-1400 & 6 & 1300 & 7800 & 10140000 \\\\ 1400-1600 & 8 & 1500 & 12000 & 18000000 \\\\ 1600-1800 & 2 & 1700 & 3400 & 5780000 \\\\ 1800-2000 & 1 & 1900 & 1900 & 3610000 \\\\ \\hline \\text{Total} & \\sum f = 23 & & \\sum fx = 31300 & \\sum fx^2 = 43990000 \\end{array}",
+  "\\bar{x} = \\frac{\\sum fx}{\\sum f} = \\frac{31300}{23} \\approx 1360.87",
+  "\\sigma^2 = \\frac{\\sum fx^2}{\\sum f} - \\left(\\frac{\\sum fx}{\\sum f}\\right)^2",
+  "\\sigma^2 = \\frac{43990000}{23} - \\left(\\frac{31300}{23}\\right)^2 = 1912608.70 - 1851965.97 \\approx 60642.72",
+  "\\sigma = \\sqrt{\\sigma^2} = \\sqrt{60642.72} \\approx 246.26",
+  "\\bar{x} = 1360.87, \\quad \\sigma^2 = 60642.72, \\quad \\sigma = 246.26"
+ ],
+ "why": [
+  {
+   "en": "Since the wages are given in intervals rather than exact numbers, we need a single representative value—the midpoint ($x$)—for each group. Preparing the products $fx$ and $fx^2$ now will give us the exact totals required by our statistical formulas.",
+   "ur": "چونکہ اجرتیں واضح اعداد کے بجائے وقفوں (intervals) میں دی گئی ہیں، اس لیے ہمیں ہر گروپ کی نمائندگی کے لیے ایک درمیانی قیمت یعنی مڈ پوائنٹ ($x$) کی ضرورت ہے۔ ابھی سے $fx$ اور $fx^2$ معلوم کرنے سے ہمیں وہ مجموعے مل جائیں گے جو ہمارے فارمولوں کے لیے ضروری ہیں۔"
+  },
+  {
+   "en": "Organizing the calculations in a table prevents mistakes and clearly shows the total number of workers ($\\sum f = 23$) and the weighted sums ($\\sum fx = 31300$ and $\\sum fx^2 = 43990000$). These bottom-row totals are the building blocks we will plug directly into the formulas for mean and variance.",
+   "ur": "حساب کتاب کو جدول (table) میں ترتیب دینے سے غلطیوں کا امکان کم ہو جاتا ہے اور ہمیں مزدوروں کی کل تعداد ($\\sum f = 23$) اور دیگر مجموعے ($\\sum fx = 31300$ اور $\\sum fx^2 = 43990000$) واضح طور پر مل جاتے ہیں۔ آخری قطار کے یہ مجموعے وہ بنیادی قیمتیں ہیں جنہیں ہم براہِ راست حسابی اوسط اور تغیر (variance) کے فارمولوں میں درج کریں گے۔"
+  },
+  {
+   "en": "By definition, the arithmetic mean for grouped data is the total estimated wages ($\\sum fx$) divided by the total number of workers ($\\sum f$). This tells us that the average daily wage of a worker in this mill is approximately Rs $1360.87$.",
+   "ur": "تعریف کے مطابق، گروہی ڈیٹا کی حسابی اوسط کل تخمینی اجرت ($\\sum fx$) کو مزدوروں کی کل تعداد ($\\sum f$) پر تقسیم کرنے سے حاصل ہوتی ہے۔ اس سے ہمیں معلوم ہوتا ہے کہ اس مل میں ایک مزدور کی اوسط یومیہ اجرت تقریباً $1360.87$ روپے ہے۔"
+  },
+  {
+   "en": "We state the direct computational formula for variance ($\\sigma^2$) because it allows us to use the column totals from our table without having to subtract the decimal mean from each midpoint. This formula measures how spread out the wages are from the average.",
+   "ur": "ہم تغیر ($\\sigma^2$) معلوم کرنے کا براہِ راست فارمولا لکھتے ہیں کیونکہ اس کی مدد سے ہم جدول کے مجموعوں کو براہِ راست استعمال کر سکتے ہیں اور ہمیں ہر مڈ پوائنٹ سے اعشاریہ والی اوسط کو تفریق نہیں کرنا پڑتا۔ یہ فارمولا ناپتا ہے کہ اجرتیں اوسط قیمت سے کتنی پھیلی ہوئی ہیں۔"
+  },
+  {
+   "en": "Substituting our table sums into the formula gives the numerical value of the variance, $60642.72$. Although this number is in squared rupees, it is the essential step needed just before finding the standard deviation.",
+   "ur": "جدول سے حاصل شدہ مجموعوں کو فارمولے میں درج کرنے سے ہمیں تغیر (variance) کی عددی قیمت $60642.72$ مل جاتی ہے۔ اگرچہ یہ عدد مربع روپوں میں ہے، لیکن معیاری انحراف (standard deviation) معلوم کرنے سے پہلے یہ ایک لازمی مرحلہ ہے۔"
+  },
+  {
+   "en": "Because variance is in squared units, we take its positive square root by definition to get the standard deviation ($\\sigma$). This brings the measure of spread back into our original unit (Rupees), giving Rs $246.26$.",
+   "ur": "چونکہ تغیر (variance) مربع اکائیوں میں ہوتا ہے، اس لیے ہم تعریف کے مطابق معیاری انحراف ($\\sigma$) حاصل کرنے کے لیے اس کا مثبت جذر (square root) لیتے ہیں۔ یہ پھیلاؤ کی پیمائش کو واپس ہماری اصل اکائی (روپے) میں لے آتا ہے، جو کہ $246.26$ روپے بنتا ہے۔"
+  },
+  {
+   "en": "Finally, we summarize all three required statistical measures clearly together. This provides a complete picture of both the central value and the spread of the workers' daily wages.",
+   "ur": "آخر میں، ہم مطلوبہ تینوں شماریاتی پیمائشوں کو واضح طور پر ایک ساتھ لکھتے ہیں۔ یہ مزدوروں کی یومیہ اجرت کی مرکزی قیمت اور پھیلاؤ دونوں کی مکمل تصویر پیش کرتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "These results tell us that a typical worker in the textile mill earns an average of Rs $1360.87$ per day, with most workers' wages varying by about Rs $246.26$ (the standard deviation) above or below this average. A quick sanity check shows our mean of Rs $1360.87$ makes sense because it lies right inside the $1200-1400$ and $1400-1600$ brackets, where the highest frequencies of workers ($6$ and $8$) are found.",
+  "ur": "یہ نتائج ہمیں بتاتے ہیں کہ ٹیکسٹائل مل میں ایک عام مزدور اوسطاً $1360.87$ روپے یومیہ کماتا ہے، اور زیادہ تر مزدوروں کی اجرت اس اوسط سے تقریباً $246.26$ روپے (معیاری انحراف) کم یا زیادہ ہوتی ہے۔ جواب کی درستگی کو پرکھنے کا ایک آسان طریقہ یہ ہے کہ ہماری اوسط $1360.87$ روپے بالکل $1200-1400$ اور $1400-1600$ کے وقفوں کے درمیان آتی ہے، جہاں مزدوروں کی سب سے زیادہ تعداد ($6$ اور $8$) موجود ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

@@ -207,9 +207,23 @@ def execute(p, question):
     return {"steps": steps, "values": values, "answers": answers, "plan": p}
 
 
+_COMPLEX = re.compile(r"(\d\s*i\b|\bi\s*[\^²³⁴]|[(+\-*/]\s*i\b|\bi\s*[)+\-*/]|\bz\s*=|\bz\b.*\b(conjugate|modulus|inverse)|"
+                      r"\b(conjugate|modulus|imaginary|complex)\b)", re.I)
+_OTHER_TOPIC = re.compile(r"\b(sin|cos|tan|cot|sec|cosec|bearing|angle|degrees?|triangle|circle|chord|tangent|radius|"
+                          r"midpoint|distance|slope|line|point|matrix|matrices|determinant|mean|median|variance|probability|"
+                          r"vector|function|speed|km|metres?|hours?)\b", re.I)
+
+
+def applies(question):
+    """The planner only chains arithmetic (+ - x / and powers, complex numbers). A trigonometry, geometry, coordinate or
+    statistics question cannot be expressed in those chunks, so it must not reach the planner: the model would fill the
+    plan with numbers combined in meaningless ways that still compute correctly."""
+    return bool(_COMPLEX.search(question)) and not _OTHER_TOPIC.search(question)
+
+
 def solve(question, klass="10", generate=None):
     """A solved item for a hard Class 10 question, worked chunk by chunk, or None."""
-    if str(klass) != "10":
+    if str(klass) != "10" or not applies(question):
         return None
     p = plan(question, klass, generate)
     if p is None:

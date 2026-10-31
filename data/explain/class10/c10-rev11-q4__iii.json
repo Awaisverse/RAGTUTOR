@@ -1,0 +1,50 @@
+{
+ "item": "c10-rev11-q4",
+ "label": "iii",
+ "answer_ref": "71.03",
+ "math": [
+  "n = 10, \\quad \\sum x = 45, \\quad \\sum y = 763",
+  "\\sum x^2 = 285, \\quad \\sum xy = 3216",
+  "b = \\frac{n\\sum xy - (\\sum x)(\\sum y)}{n\\sum x^2 - (\\sum x)^2} = \\frac{10(3216) - (45)(763)}{10(285) - (45)^2} = \\frac{-2175}{825} = -\\frac{29}{11} \\approx -2.64",
+  "a = \\frac{\\sum y - b\\sum x}{n} = \\frac{763 - (-\\frac{29}{11})(45)}{10} = \\frac{4849}{55} \\approx 88.16",
+  "",
+  "\\hat{y} = 88.16 - 2.64(6.5) \\approx 71.03",
+  ""
+ ],
+ "why": [
+  {
+   "en": "To make an accurate prediction mathematically, we first need to find the equation of the line of best fit (regression line). We start by summing up our $x$ and $y$ data values because the standard least-squares formulas require these basic totals.",
+   "ur": "درست پیش گوئی کرنے کے لیے ہمیں سب سے پہلے خطِ بہترین مطابقت (regression line) کی مساوات معلوم کرنی ہوگی۔ ہم $x$ اور $y$ کی اقدار کا مجموعہ نکال کر شروعات کرتے ہیں کیونکہ معیاری فارمولوں میں ان بنیادی مجموعوں کی ضرورت ہوتی ہے۔"
+  },
+  {
+   "en": "The formula for the slope of the regression line also needs the sum of squared $x$ values ($\\sum x^2$) and the sum of the products of $x$ and $y$ ($\\sum xy$). Calculating these two values completes all the raw ingredients we need to plug into our formulas.",
+   "ur": "ریگریشن لائن کی ڈھلوان (slope) کے فارمولے کے لیے ہمیں $x$ کے مربعات کے مجموعے ($\\sum x^2$) اور $x$ اور $y$ کے حاصل ضرب کے مجموعے ($\\sum xy$) کی بھی ضرورت ہوتی ہے۔ ان دو اقدار کو حل کرنے سے ہمارے فارمولوں کے لیے تمام ضروری معلومات مکمل ہو جاتی ہیں۔"
+  },
+  {
+   "en": "Here we use the least-squares formula to find the slope $b$, which tells us the rate of change between exercise and heart rate. The negative result of $-2.64$ shows that for every extra hour of exercise per week, a person's resting heart rate drops by about $2.64$ beats per minute.",
+   "ur": "یہاں ہم ڈھلوان $b$ معلوم کرنے کے لیے فارمولا استعمال کرتے ہیں، جو ہمیں ورزش اور دل کی دھڑکن کے درمیان تبدیلی کی شرح بتاتا ہے۔ $-2.64$ کا منفی نتیجہ یہ ظاہر کرتا ہے کہ ہفتے میں ورزش کے ہر اضافی گھنٹے کے ساتھ، انسان کے دل کی دھڑکن تقریباً $2.64$ فی منٹ کم ہو جاتی ہے۔"
+  },
+  {
+   "en": "Next, we find the $y$-intercept $a$, which is the starting value of our line when exercise hours ($x$) are zero. Using the averages of our data and the slope $b$, we see that a person who does not exercise at all is expected to have a resting heart rate of about $88.16$.",
+   "ur": "اس کے بعد، ہم $y$-intercept یعنی $a$ معلوم کرتے ہیں، جو ہماری لائن کی ابتدائی قیمت ہے جب ورزش کے گھنٹے ($x$) صفر ہوں۔ اپنے ڈیٹا کی اوسط اور ڈھلوان $b$ کو استعمال کرتے ہوئے، ہمیں معلوم ہوتا ہے کہ جو شخص بالکل ورزش نہیں کرتا اس کے دل کی دھڑکن کی متوقع رفتار تقریباً $88.16$ ہوتی ہے۔"
+  },
+  {
+   "en": "By putting the intercept $a$ and slope $b$ into the general linear equation $\\hat{y} = a + bx$, we create our mathematical model. This formula now allows us to estimate the resting heart rate ($\\hat{y}$) for any given number of exercise hours ($x$).",
+   "ur": "عمومی خطی مساوات $\\hat{y} = a + bx$ میں $a$ اور $b$ کی قیمتیں درج کر کے، ہم اپنا ریاضیاتی ماڈل بناتے ہیں۔ یہ فارمولا اب ہمیں ورزش کے کسی بھی دیے گئے گھنٹوں ($x$) کے لیے دل کی دھڑکن کی متوقع رفتار ($\\hat{y}$) کا اندازہ لگانے کے قابل بناتا ہے۔"
+  },
+  {
+   "en": "Since we want to predict the heart rate for Sakeena who exercises for $6.5$ hours, we substitute $x = 6.5$ into our new regression equation. Doing the arithmetic gives us the exact value on the line of best fit corresponding to $6.5$ hours.",
+   "ur": "چونکہ ہم سکینہ کے لیے دل کی دھڑکن کی پیش گوئی کرنا چاہتے ہیں جو $6.5$ گھنٹے ورزش کرتی ہے، اس لیے ہم اپنی نئی مساوات میں $x = 6.5$ درج کرتے ہیں۔ اس کو حل کرنے سے ہمیں خطِ بہترین مطابقت پر $6.5$ گھنٹوں کے مطابق درست قیمت مل جاتی ہے۔"
+  },
+  {
+   "en": "We state our final calculated value clearly with its proper unit (beats per minute) to directly answer the question asked about Sakeena.",
+   "ur": "ہم سکینہ کے بارے میں پوچھے گئے سوال کا براہِ راست جواب دینے کے لیے اپنی حاصل کردہ حتمی قیمت کو اس کی مناسب اکائی (دھڑکن فی منٹ) کے ساتھ واضح طور پر بیان کرتے ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer of $71.03$ means that based on the trend of the ten individuals, Sakeena, who exercises for $6.5$ hours a week, is expected to have a resting heart rate of about $71.03$ beats per minute. We can easily check that this makes sense from the table: $6.5$ hours is right between $6$ hours (heart rate $72$) and $7$ hours (heart rate $70$), and our answer $71.03$ falls neatly right between $72$ and $70$.",
+  "ur": "$71.03$ کے حتمی جواب کا مطلب یہ ہے کہ دس افراد کے ڈیٹا کے رجحان کی بنیاد پر، سکینہ، جو ہفتے میں $6.5$ گھنٹے ورزش کرتی ہے، کے دل کی دھڑکن کی متوقع رفتار تقریباً $71.03$ دھڑکن فی منٹ ہے۔ ہم جدول سے باآسانی تصدیق کر سکتے ہیں کہ یہ جواب درست ہے: $6.5$ گھنٹے کا وقت $6$ گھنٹے (دل کی دھڑکن $72$) اور $7$ گھنٹے (دل کی دھڑکن $70$) کے بالکل درمیان ہے، اور ہمارا جواب $71.03$ بھی بالکل $72$ اور $70$ کے درمیان آتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

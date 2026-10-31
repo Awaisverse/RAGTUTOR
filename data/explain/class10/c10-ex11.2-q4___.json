@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex11.2-q4",
+ "label": "",
+ "answer_ref": "Variance = 3.55, SD = 1.88",
+ "math": [
+  "x = 52, 55, 50, 53, 54, 56, 52, \\quad n = 7",
+  "\\bar{x} = \\frac{\\sum x}{n} = \\frac{52 + 55 + 50 + 53 + 54 + 56 + 52}{7} = \\frac{372}{7} \\approx 53.14",
+  "\\sum (x - \\bar{x})^2 = (52 - 53.14)^2 + (55 - 53.14)^2 + (50 - 53.14)^2 + (53 - 53.14)^2 + (54 - 53.14)^2 + (56 - 53.14)^2 + (52 - 53.14)^2",
+  "\\sum (x - \\bar{x})^2 = 1.30 + 3.46 + 9.86 + 0.02 + 0.74 + 8.18 + 1.30 \\approx 24.8571",
+  "\\text{Variance } (\\sigma^2) = \\frac{\\sum(x - \\bar{x})^2}{n} = \\frac{24.8571}{7} \\approx 3.55",
+  "\\text{S.D. } (\\sigma) = \\sqrt{\\sigma^2} = \\sqrt{3.55} \\approx 1.88"
+ ],
+ "why": [
+  {
+   "en": "To begin any statistical problem, we clearly list our observations as $x$ and count how many values we have, which gives $n = 7$. This organizes the ungrouped data so we can apply the correct formulas for variance and standard deviation.",
+   "ur": "کسی بھی شماریاتی سوال کو حل کرنے کے لیے سب سے پہلے ہم دی گئی معلومات کو $x$ کے طور پر لکھتے ہیں اور کل تعداد گنتے ہیں جو کہ $n = 7$ ہے۔ اس سے غیر گروہی ڈیٹا منظم ہو جاتا ہے تاکہ ہم تغیر (variance) اور معیاری انحراف (standard deviation) کے درست فارمولے استعمال کر سکیں۔"
+  },
+  {
+   "en": "Before measuring how spread out the data is, we need the central value, which is the arithmetic mean $\\bar{x}$. Finding $\\bar{x} \\approx 53.14$ tells us the average number of items assembled per worker, which we will use as a reference point in the next step.",
+   "ur": "ڈیٹا کے پھیلاؤ کو ماپنے سے پہلے ہمیں درمیانی قیمت یعنی حسابی اوسط $\\bar{x}$ کی ضرورت ہوتی ہے۔ $\\bar{x} \\approx 53.14$ معلوم کرنے سے ہمیں فی مزدور تیار کردہ اشیاء کی اوسط تعداد مل جاتی ہے، جسے ہم اگلے مرحلے میں ایک حوالے (reference) کے طور پر استعمال کریں گے۔"
+  },
+  {
+   "en": "By the definition of variance, we need to see how far each worker's count is from the average $\\bar{x} \\approx 53.14$. We square each difference $(x - \\bar{x})$ so that negative differences become positive and do not cancel out when added.",
+   "ur": "تغیر (variance) کی تعریف کے مطابق، ہمیں یہ دیکھنا ہے کہ ہر مزدور کا کام اوسط $\\bar{x} \\approx 53.14$ سے کتنا دور ہے۔ ہم ہر فرق $(x - \\bar{x})$ کا مربع لیتے ہیں تاکہ منفی قیمتیں مثبت ہو جائیں اور جمع کرنے پر ایک دوسرے کو ختم نہ کریں۔"
+  },
+  {
+   "en": "Here we simplify each squared term and sum them up to get $\\sum (x - \\bar{x})^2 \\approx 24.8571$. This single number represents the total squared distance of all data points from the mean, which is the numerator of our variance formula.",
+   "ur": "یہاں ہم ہر مربع والی رقم کو حل کر کے ان کو جمع کرتے ہیں جس سے $\\sum (x - \\bar{x})^2 \\approx 24.8571$ حاصل ہوتا ہے۔ یہ ایک عدد تمام قیمتوں کا اوسط سے کل مربع فاصلہ ظاہر کرتا ہے، جو ہمارے تغیر کے فارمولے کا شمار کنندہ (numerator) ہے۔"
+  },
+  {
+   "en": "Variance ($\\sigma^2$) is defined as the average of the squared deviations from the mean. Dividing our total $24.8571$ by $n = 7$ gives $\\sigma^2 \\approx 3.55$, which is the first required answer and measures the spread in squared units.",
+   "ur": "تغیر ($\\sigma^2$) دراصل اوسط سے لیے گئے مربع انحرافات کی اوسط ہوتی ہے۔ ہمارے کل مجموعے $24.8571$ کو $n = 7$ پر تقسیم کرنے سے $\\sigma^2 \\approx 3.55$ ملتا ہے، جو ہمارا پہلا مطلوبہ جواب ہے اور مربع اکائیوں میں ڈیٹا کا پھیلاؤ بتاتا ہے۔"
+  },
+  {
+   "en": "Since variance is in squared units, we take its positive square root to bring the measure of spread back to the original units (items assembled). This gives the standard deviation $\\sigma = \\sqrt{3.55} \\approx 1.88$, completing both parts of the question.",
+   "ur": "چونکہ تغیر مربع اکائیوں میں ہوتا ہے، اس لیے پھیلاؤ کی پیمائش کو واپس اصل اکائیوں (تیار کردہ اشیاء) میں لانے کے لیے ہم اس کا مثبت جذر المربع لیتے ہیں۔ اس سے معیاری انحراف $\\sigma = \\sqrt{3.55} \\approx 1.88$ حاصل ہوتا ہے، جس سے سوال کے دونوں حصے مکمل ہو جاتے ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The variance is $3.55$ and the standard deviation is $1.88$ items. This small standard deviation tells us that the workers' daily performance is very consistent, as most workers assemble within about $1.88$ items of the average $53.14$ items (which makes sense since all given values are tightly packed between $50$ and $56$).",
+  "ur": "تغیر (Variance) $3.55$ ہے اور معیاری انحراف (Standard Deviation) $1.88$ اشیاء ہے۔ یہ چھوٹا معیاری انحراف ہمیں بتاتا ہے کہ مزدوروں کی روزانہ کی کارکردگی میں بہت یکسانیت ہے، کیونکہ زیادہ تر مزدوروں کی تیار کردہ اشیاء اوسط $53.14$ سے تقریباً $1.88$ اشیاء کے فرق کے اندر ہی ہیں (جو کہ بالکل درست لگتا ہے کیونکہ دی گئی تمام قیمتیں $50$ اور $56$ کے درمیان بہت قریب قریب ہیں)۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex12.2-q5",
+ "label": "",
+ "answer_ref": "$\\frac{5}{18}$",
+ "math": [
+  "n(S) = 6 \\times 6 = 36",
+  "n(A) = 4, \\quad P(A) = \\frac{n(A)}{n(S)} = \\frac{4}{36}",
+  "n(B) = 6, \\quad P(B) = \\frac{n(B)}{n(S)} = \\frac{6}{36}",
+  "n(A \\cap B) = 0, \\quad P(A \\cap B) = \\frac{0}{36}",
+  "P(A \\cup B) = P(A) + P(B) - P(A \\cap B)",
+  "P(A \\cup B) = \\frac{4}{36} + \\frac{6}{36} - \\frac{0}{36} = \\frac{10}{36} = \\frac{5}{18}"
+ ],
+ "why": [
+  {
+   "en": "In probability, we always start by finding the total size of the sample space using the fundamental counting principle. Since each die has $6$ faces, multiplying $6 \\times 6$ gives us the denominator of $36$ for all our probability fractions.",
+   "ur": "احتمال (probability) کے سوالات میں ہم ہمیشہ گنتی کے بنیادی اصول کو استعمال کرتے ہوئے نمونہ کی جگہ (sample space) کے کل ممکنہ نتائج کی تعداد معلوم کرنے سے شروعات کرتے ہیں۔ چونکہ ہر دانے (die) کے $6$ رخ ہوتے ہیں، اس لیے $6 \\times 6$ کو ضرب دینے سے ہمیں تمام کسروں کے لیے $36$ کا مخرج (denominator) مل جاتا ہے۔"
+  },
+  {
+   "en": "Because the question asks for a sum of $5$ or $7$, we break the problem down and first use the basic definition of probability for just the sum of $5$. Counting the $4$ pairs that add up to $5$ gives us our first needed probability, $P(A) = \\frac{4}{36}$.",
+   "ur": "چونکہ سوال میں $5$ یا $7$ کا مجموعہ آنے کا پوچھا گیا ہے، اس لیے ہم مسئلے کو حصوں میں تقسیم کرتے ہیں اور پہلے صرف $5$ کے مجموعے کے لیے احتمال کی بنیادی تعریف استعمال کرتے ہیں۔ ان $4$ جوڑوں کو گننے سے جن کا مجموعہ $5$ بنتا ہے، ہمیں ہمارا پہلا مطلوبہ احتمال $P(A) = \\frac{4}{36}$ مل جاتا ہے۔"
+  },
+  {
+   "en": "Next, we apply the same basic probability definition to the second part of the question, which is getting a sum of $7$. Finding the $6$ favorable pairs gives us the second piece of our puzzle, $P(B) = \\frac{6}{36}$.",
+   "ur": "اس کے بعد، ہم سوال کے دوسرے حصے یعنی $7$ کا مجموعہ حاصل کرنے کے لیے احتمال کی وہی بنیادی تعریف لاگو کرتے ہیں۔ موافق آنے والے $6$ جوڑوں کو معلوم کرنے سے ہمیں اپنے سوال کا دوسرا حصہ، یعنی $P(B) = \\frac{6}{36}$ مل جاتا ہے۔"
+  },
+  {
+   "en": "Before combining two probabilities, we must check if the events overlap (intersect) so we do not double-count any outcomes. Since one throw cannot give a sum of $5$ and $7$ at the same time, they are mutually exclusive events, telling us the overlap probability $P(A \\cap B)$ is $\\frac{0}{36}$.",
+   "ur": "دو احتمالات کو یکجا کرنے سے پہلے، ہمیں یہ دیکھنا چاہیے کہ آیا واقعات آپس میں ملتے ہیں (تقاطع کرتے ہیں) تاکہ ہم کسی نتیجے کو دو بار نہ گن لیں۔ چونکہ ایک ہی بار پھینکنے سے ایک ہی وقت میں $5$ اور $7$ دونوں کا مجموعہ نہیں آ سکتا، اس لیے یہ باہمی طور پر غیر متعلق (mutually exclusive) واقعات ہیں، جو ہمیں بتاتا ہے کہ مشترک احتمال $P(A \\cap B)$ کی قیمت $\\frac{0}{36}$ ہے۔"
+  },
+  {
+   "en": "In probability, the word 'or' signals the union of two events ($A \\cup B$), which requires the addition law of probability. Writing down this formula shows us exactly how to combine the individual probabilities we just calculated.",
+   "ur": "احتمال میں، لفظ 'یا' (or) دو واقعات کے اتحاد ($A \\cup B$) کی نشاندہی کرتا ہے، جس کے لیے احتمال کے جمع کا قانون استعمال ہوتا ہے۔ اس فارمولے کو لکھنے سے ہمیں بالکل واضح ہو جاتا ہے کہ ہم نے ابھی جو انفرادی احتمالات نکالے ہیں انہیں آپس میں کیسے ملانا ہے۔"
+  },
+  {
+   "en": "We now substitute our calculated fractions into the addition formula and add the numerators since the denominators are all $36$. Simplifying $\\frac{10}{36}$ by dividing the top and bottom by $2$ gives the final probability in its lowest form, $\\frac{5}{18}$.",
+   "ur": "اب ہم اپنی نکالی گئی کسروں کو جمع کے فارمولے میں درج کرتے ہیں اور شمار کنندگان (numerators) کو جمع کرتے ہیں کیونکہ تمام مخرج $36$ ہیں۔ $\\frac{10}{36}$ کو مختصر کرنے سے ہمیں حتمی احتمال اپنی سادہ ترین شکل $\\frac{5}{18}$ میں مل جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $\\frac{5}{18}$ means that when you throw two fair dice, there are $10$ favorable outcomes out of $36$ total possibilities (which simplifies to a $5$ in $18$ chance) of getting a sum of either $5$ or $7$. Since $\\frac{5}{18}$ is between $0$ and $1$, our answer is a valid probability.",
+  "ur": "حتمی جواب $\\frac{5}{18}$ کا مطلب یہ ہے کہ جب آپ دو دانے (dice) پھینکتے ہیں، تو $5$ یا $7$ کا مجموعہ حاصل کرنے کے کل $36$ امکانات میں سے $10$ موافق نتائج ہوتے ہیں (جو مختصر ہو کر $18$ میں سے $5$ کا امکان بنتا ہے)۔ چونکہ $\\frac{5}{18}$ کی قیمت $0$ اور $1$ کے درمیان ہے، اس لیے ہمارا جواب ایک درست احتمال ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

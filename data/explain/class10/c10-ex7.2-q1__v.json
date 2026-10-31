@@ -1,0 +1,55 @@
+{
+ "item": "c10-ex7.2-q1",
+ "label": "v",
+ "answer_ref": "$\\gamma = 10^\\circ,\\ a = 8.38,\\ c = 1.48$ cm",
+ "math": [
+  "\\alpha = 100^\\circ, \\quad \\beta = 70^\\circ, \\quad b = 8\\text{ cm}",
+  "\\alpha + \\beta + \\gamma = 180^\\circ",
+  "\\gamma = 180^\\circ - \\alpha - \\beta = 180^\\circ - 100^\\circ - 70^\\circ = 10^\\circ",
+  "\\frac{a}{\\sin\\alpha} = \\frac{b}{\\sin\\beta} \\implies a = \\frac{b\\sin\\alpha}{\\sin\\beta}",
+  "a = \\frac{8 \\sin 100^\\circ}{\\sin 70^\\circ} \\approx \\frac{8(0.9848)}{0.9397} \\approx 8.38\\text{ cm}",
+  "\\frac{c}{\\sin\\gamma} = \\frac{b}{\\sin\\beta} \\implies c = \\frac{b\\sin\\gamma}{\\sin\\beta}",
+  "c = \\frac{8 \\sin 10^\\circ}{\\sin 70^\\circ} \\approx \\frac{8(0.1736)}{0.9397} \\approx 1.48\\text{ cm}",
+  "\\gamma = 10^\\circ,\\ a = 8.38,\\ c = 1.48\\text{ cm}"
+ ],
+ "why": [
+  {
+   "en": "In geometry, 'solving a triangle' means finding all six of its parts—three sides and three angles. By listing the given values $\\alpha = 100^\\circ$, $\\beta = 70^\\circ$, and $b = 8\\text{ cm}$, we clearly see that we need to find the third angle $\\gamma$ and the two missing sides $a$ and $c$.",
+   "ur": "جیومیٹری میں 'مثلث کو حل کرنے' کا مطلب اس کے تمام چھ حصے (تین اضلاع اور تین زاویے) معلوم کرنا ہے۔ دی گئی قیمتیں $\\alpha = 100^\\circ$، $\\beta = 70^\\circ$ اور $b = 8\\text{ cm}$ لکھنے سے ہمیں واضح ہو جاتا ہے کہ ہمیں تیسرا زاویہ $\\gamma$ اور باقی دو اضلاع $a$ اور $c$ معلوم کرنے ہیں۔"
+  },
+  {
+   "en": "Since we already know two angles of the triangle, the easiest way to find the third is using the fundamental angle sum property of a triangle. This rule states that all three interior angles always add up to $180^\\circ$.",
+   "ur": "چونکہ ہمیں مثلث کے دو زاویے پہلے سے معلوم ہیں، اس لیے تیسرا زاویہ معلوم کرنے کا سب سے آسان طریقہ مثلث کے زاویوں کے مجموعے کا بنیادی اصول ہے۔ یہ اصول بتاتا ہے کہ مثلث کے تینوں اندرونی زاویوں کا مجموعہ ہمیشہ $180^\\circ$ ہوتا ہے۔"
+  },
+  {
+   "en": "By subtracting the two known angles from $180^\\circ$, we find that $\\gamma = 10^\\circ$. Now we know all three angles of the triangle, which unlocks the ability to find the remaining sides.",
+   "ur": "معلوم شدہ دو زاویوں کو $180^\\circ$ میں سے تفریق کرنے پر ہمیں $\\gamma = 10^\\circ$ ملتا ہے۔ اب ہمیں مثلث کے تینوں زاویے معلوم ہو چکے ہیں، جس کی مدد سے ہم باقی ماندہ اضلاع باآسانی معلوم کر سکتے ہیں۔"
+  },
+  {
+   "en": "Because we know a complete pair of an angle and its opposite side ($\\beta$ and $b$), we can use the Law of Sines, which states that the ratio of a side to the sine of its opposite angle is constant. Rearranging this formula isolates the unknown side $a$ so we can calculate its length.",
+   "ur": "چونکہ ہمیں ایک زاویہ اور اس کے سامنے والے ضلع کا مکمل جوڑا ($\\beta$ اور $b$) معلوم ہے، اس لیے ہم 'لا آف سائنز' (Law of Sines) استعمال کر سکتے ہیں، جو بتاتا ہے کہ کسی ضلع اور اس کے بالمقابل زاویے کے سائن (sine) کی نسبت ہمیشہ مستقل رہتی ہے۔ اس فارمولے کو ترتیب دینے سے نامعلوم ضلع $a$ الگ ہو جاتا ہے تاکہ ہم اس کی لمبائی نکال سکیں۔"
+  },
+  {
+   "en": "Plugging in the given values and using a calculator for the sine values gives us the length of side $a$ as $8.38\\text{ cm}$. We are now just one side away from completely solving the triangle.",
+   "ur": "دی گئی قیمتیں درج کرنے اور کیلکولیٹر سے سائن (sine) کی قیمتیں نکالنے سے ہمیں ضلع $a$ کی لمبائی $8.38\\text{ cm}$ حاصل ہوتی ہے۔ اب ہم مثلث کو مکمل طور پر حل کرنے سے صرف ایک ضلع کی دوری پر ہیں۔"
+  },
+  {
+   "en": "To find the last missing side $c$, we apply the Law of Sines once more, pairing side $c$ and angle $\\gamma$ with the originally given side $b$ and angle $\\beta$. It is always good practice to use the exact given values ($b$ and $\\beta$) rather than rounded ones to keep our calculation accurate.",
+   "ur": "آخری نامعلوم ضلع $c$ معلوم کرنے کے لیے ہم ایک بار پھر 'لا آف سائنز' کا استعمال کرتے ہیں، جس میں ضلع $c$ اور زاویہ $\\gamma$ کو سوال میں دیے گئے اصل ضلع $b$ اور زاویہ $\\beta$ کے ساتھ ملایا گیا ہے۔ حساب کو درست رکھنے کے لیے ہمیشہ یہ بہتر ہوتا ہے کہ اشاریہ میں راؤنڈ کی گئی قیمتوں کے بجائے سوال میں دی گئی اصل قیمتیں ($b$ اور $\\beta$) استعمال کی جائیں۔"
+  },
+  {
+   "en": "Substituting the values and simplifying gives us the final unknown side, $c = 1.48\\text{ cm}$. Notice how small side $c$ is compared to $a$ and $b$, which makes sense because it is opposite to the smallest angle, $\\gamma = 10^\\circ$.",
+   "ur": "قیمتیں درج کرنے اور مختصر کرنے سے ہمیں آخری نامعلوم ضلع $c = 1.48\\text{ cm}$ ملتا ہے۔ غور کریں کہ ضلع $c$ اضلاع $a$ اور $b$ کے مقابلے میں کتنا چھوٹا ہے، جو کہ بالکل درست ہے کیونکہ یہ سب سے چھوٹے زاویے $\\gamma = 10^\\circ$ کے سامنے ہے۔"
+  },
+  {
+   "en": "Finally, we write down all three calculated values together to clearly present our completed solution.",
+   "ur": "آخر میں، ہم اپنے مکمل حل کو واضح طور پر پیش کرنے کے لیے معلوم کی گئی تینوں قیمتوں کو ایک ساتھ لکھتے ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "We have completely solved the triangle $ABC$ by finding all its missing parts: the third angle is $\\gamma = 10^\\circ$, and the other two sides are $a = 8.38\\text{ cm}$ and $c = 1.48\\text{ cm}$. As a quick geometry check, the largest angle ($\\alpha = 100^\\circ$) is opposite the longest side ($a = 8.38\\text{ cm}$), and the smallest angle ($\\gamma = 10^\\circ$) is opposite the shortest side ($c = 1.48\\text{ cm}$), which confirms our answers are reasonable.",
+  "ur": "ہم نے مثلث $ABC$ کے تمام نامعلوم حصے معلوم کر کے اسے مکمل طور پر حل کر لیا ہے: تیسرا زاویہ $\\gamma = 10^\\circ$ ہے، اور دیگر دو اضلاع $a = 8.38\\text{ cm}$ اور $c = 1.48\\text{ cm}$ ہیں۔ جیومیٹری کے اصول کے مطابق ایک فوری پڑتال کے طور پر، سب سے بڑا زاویہ ($\\alpha = 100^\\circ$) سب سے لمبے ضلع ($a = 8.38\\text{ cm}$) کے سامنے ہے، اور سب سے چھوٹا زاویہ ($\\gamma = 10^\\circ$) سب سے چھوٹے ضلع ($c = 1.48\\text{ cm}$) کے سامنے ہے، جو اس بات کی تصدیق کرتا ہے کہ ہمارے جوابات بالکل درست ہیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

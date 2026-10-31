@@ -1,0 +1,40 @@
+{
+ "item": "c10-ex12.3-q6",
+ "label": "iii",
+ "answer_ref": "$\\frac{1}{17}$",
+ "math": [
+  "n(S) = 52",
+  "P(A) = \\frac{13}{52} = \\frac{1}{4}",
+  "P(B|A) = \\frac{12}{51} = \\frac{4}{17}",
+  "P(A \\cap B) = P(A) \\times P(B|A)",
+  "P(A \\cap B) = \\frac{13}{52} \\times \\frac{12}{51} = \\frac{1}{4} \\times \\frac{4}{17} = \\frac{1}{17}"
+ ],
+ "why": [
+  {
+   "en": "To calculate any probability, we must first know our sample space, which is the total number of possible outcomes. A standard deck of cards is divided into 4 equal suits, so out of $52$ total cards, exactly $13$ are spades.",
+   "ur": "کوئی بھی احتمال (probability) معلوم کرنے کے لیے ہمیں سب سے پہلے اپنی سیمپل اسپیس، یعنی ممکنہ نتائج کی کل تعداد کا پتہ ہونا چاہیے۔ تاش کی ایک معیاری گڈی 4 برابر رنگوں میں تقسیم ہوتی ہے، اس لیے کل $52$ پتوں میں سے ٹھیک $13$ پتے حکم (spades) کے ہوتے ہیں۔"
+  },
+  {
+   "en": "Using the basic formula for probability (favorable outcomes divided by total outcomes), we find the chance of success on the very first draw. Simplifying $\\frac{13}{52}$ to $\\frac{1}{4}$ makes our upcoming multiplication much easier to handle.",
+   "ur": "احتمال کے بنیادی فارمولے (موافق نتائج تقسیم کل نتائج) کا استعمال کرتے ہوئے، ہم پہلی باری میں کامیابی کا امکان معلوم کرتے ہیں۔ $\\frac{13}{52}$ کو مختصر کر کے $\\frac{1}{4}$ لکھنے سے ہمارے لیے آگے ضرب کا عمل بہت آسان ہو جائے گا۔"
+  },
+  {
+   "en": "The phrase 'without replacement' tells us these are dependent events, meaning the first draw changes the conditions for the second draw. Since one spade is already out, both our favorable spades and the total cards in the deck decrease by one, giving us $\\frac{12}{51}$ (or $\\frac{4}{17}$).",
+   "ur": "'بغیر واپسی' (without replacement) کے الفاظ ہمیں بتاتے ہیں کہ یہ منحصر واقعات (dependent events) ہیں، یعنی پہلا پتہ نکالنے سے دوسرے پتے کے لیے حالات بدل جاتے ہیں۔ چونکہ حکم کا ایک پتہ پہلے ہی باہر آ چکا ہے، اس لیے ہمارے موافق حکم کے پتے اور گڈی کے کل پتے دونوں ایک ایک کم ہو جاتے ہیں، جس سے ہمیں $\\frac{12}{51}$ (یا $\\frac{4}{17}$) ملتا ہے۔"
+  },
+  {
+   "en": "Because we need both the first AND the second card to be spades, we apply the multiplication law of probability for dependent events. This rule states that to find the chance of two things happening one after another, we multiply their probabilities together.",
+   "ur": "چونکہ ہمیں پہلا اور دوسرا دونوں پتے حکم کے چاہئیں، اس لیے ہم منحصر واقعات کے لیے احتمال کا ضربی قانون (multiplication law) لگاتے ہیں۔ یہ اصول بتاتا ہے کہ یکے بعد دیگرے ہونے والے دو واقعات کا مشترکہ امکان معلوم کرنے کے لیے ہم ان کے احتمالات کو آپس میں ضرب دیتے ہیں۔"
+  },
+  {
+   "en": "Now we put the pieces together by substituting our simplified fractions into the formula. Notice how nicely the $4$ in the denominator cancels with the $4$ in the numerator, leading us directly to the simplest form of the answer.",
+   "ur": "اب ہم اپنی مختصر کی ہوئی کسروں کو فارمولے میں درج کر کے حل مکمل کرتے ہیں۔ غور کریں کہ بٹے کے نیچے والا $4$ اوپر والے $4$ سے کتنی آسانی سے کٹ جاتا ہے، اور ہمیں سیدھا مختصر ترین جواب مل جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $\\frac{1}{17}$ means that if you draw two cards one after another without putting the first one back, there is a $1$ in $17$ chance that both cards will be spades. Since $\\frac{1}{17}$ is a proper fraction between $0$ and $1$, we can be confident our probability value is valid and reasonable.",
+  "ur": "آخری جواب $\\frac{1}{17}$ کا مطلب ہے کہ اگر آپ پہلا پتہ واپس رکھے بغیر یکے بعد دیگرے دو پتے نکالیں، تو $17$ میں سے $1$ امکان ہے کہ دونوں پتے حکم (spades) کے ہوں گے۔ چونکہ $\\frac{1}{17}$ صفر اور $1$ کے درمیان ایک واجب کسر ہے، اس لیے ہم مطمئن ہو سکتے ہیں کہ ہمارے احتمال کی قیمت بالکل درست اور معقول ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

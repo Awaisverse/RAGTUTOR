@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex4.1-q9",
+ "label": "iii",
+ "answer_ref": "Domain $= (-\\infty, 1) \\cup (1, \\infty)$; Range $= (-\\infty, -1) \\cup (-1, \\infty)$",
+ "math": [
+  "f(x) = \\frac{x}{1+x}, \\quad x \\ne -1",
+  "\\text{Domain of } f^{-1} = \\text{Range of } f, \\quad \\text{Range of } f^{-1} = \\text{Domain of } f",
+  "\\text{Domain of } f = (-\\infty, -1) \\cup (-1, \\infty)",
+  "f(x) = \\frac{(1+x) - 1}{1+x} = 1 - \\frac{1}{1+x}",
+  "\\text{Range of } f = (-\\infty, 1) \\cup (1, \\infty)",
+  "\\text{Domain of } f^{-1} = (-\\infty, 1) \\cup (1, \\infty), \\quad \\text{Range of } f^{-1} = (-\\infty, -1) \\cup (-1, \\infty)"
+ ],
+ "why": [
+  {
+   "en": "We start by noting down the given rational function and its restriction $x \\ne -1$. This restriction is very important because it keeps the denominator from becoming zero, which directly helps us identify the domain of $f(x)$.",
+   "ur": "ہم سب سے پہلے دیے گئے ناطق فنکشن اور اس کی شرط $x \\ne -1$ کو لکھتے ہیں۔ یہ شرط بہت اہم ہے کیونکہ یہ مخرج (denominator) کو صفر ہونے سے بچاتی ہے، جس سے ہمیں براہِ راست $f(x)$ کی ڈومین پہچاننے میں مدد ملتی ہے۔"
+  },
+  {
+   "en": "By definition of an inverse function, the inputs and outputs are reversed. This rule tells us that we only need to find the domain and range of the original function $f(x)$, and then swap them to get our answer without actually calculating $f^{-1}(x)$.",
+   "ur": "معکوس فنکشن (inverse function) کی تعریف کے مطابق، ان پٹ اور آؤٹ پٹ آپس میں بدل جاتے ہیں۔ یہ اصول ہمیں بتاتا ہے کہ ہمیں صرف اصل فنکشن $f(x)$ کی ڈومین اور رینج معلوم کرنے کی ضرورت ہے، اور پھر انہیں آپس میں بدل کر ہم $f^{-1}(x)$ معلوم کیے بغیر اپنا جواب حاصل کر سکتے ہیں۔"
+  },
+  {
+   "en": "The domain is the set of all allowed input values ($x$) for which the function is defined. Since $x$ cannot be $-1$ (as division by $0$ is undefined), the domain of $f$ includes all real numbers except $-1$, written in interval notation as $(-\\infty, -1) \\cup (-1, \\infty)$.",
+   "ur": "ڈومین تمام ممکنہ ان پٹ قیمتوں ($x$) کا سیٹ ہے جن کے لیے فنکشن بامعنی (defined) ہوتا ہے۔ چونکہ $x$ کی قیمت $-1$ نہیں ہو سکتی (کیونکہ $0$ سے تقسیم ناممکن ہے)، اس لیے $f$ کی ڈومین میں $-1$ کے علاوہ تمام حقیقی اعداد شامل ہیں، جسے وقفے کی صورت میں $(-\\infty, -1) \\cup (-1, \\infty)$ لکھا جاتا ہے۔"
+  },
+  {
+   "en": "When $x$ appears in both the numerator and denominator, it is hard to see what output values $f(x)$ can produce. By adding and subtracting $1$, we simplify the fraction so that $x$ appears in only one place, making it much easier to find the range.",
+   "ur": "جب $x$ شمار کنندہ اور مخرج دونوں میں موجود ہو، تو یہ دیکھنا مشکل ہوتا ہے کہ $f(x)$ کیا آؤٹ پٹ دے سکتا ہے۔ $1$ کو جمع اور تفریق کر کے ہم کسر کو اس طرح سادہ بناتے ہیں کہ $x$ صرف ایک جگہ رہ جائے، جس سے رینج معلوم کرنا بہت آسان ہو جاتا ہے۔"
+  },
+  {
+   "en": "The range is the set of all possible output values of $f(x)$. In the expression $1 - \\frac{1}{1+x}$, the fraction $\\frac{1}{1+x}$ has a constant $1$ on top so it can never equal $0$; therefore, $f(x)$ can never equal $1 - 0 = 1$, giving us all real numbers except $1$.",
+   "ur": "رینج فنکشن $f(x)$ سے حاصل ہونے والی تمام ممکنہ آؤٹ پٹ قیمتوں کا سیٹ ہے۔ عبارت $1 - \\frac{1}{1+x}$ میں، کسر $\\frac{1}{1+x}$ کے اوپر مستقل عدد $1$ ہے اس لیے یہ کسر کبھی $0$ نہیں ہو سکتی؛ چنانچہ $f(x)$ کبھی بھی $1 - 0 = 1$ کے برابر نہیں ہو سکتا، جس سے ہمیں $1$ کے سوا تمام حقیقی اعداد ملتے ہیں۔"
+  },
+  {
+   "en": "Finally, we apply the swapping rule from Step 2 to our results from Steps 3 and 5. The range of $f$ becomes the domain of $f^{-1}$, and the domain of $f$ becomes the range of $f^{-1}$, completing our solution.",
+   "ur": "آخر میں، ہم مرحلہ 2 کے ادل بدل والے اصول کو مرحلہ 3 اور 5 کے نتائج پر لاگو کرتے ہیں۔ $f$ کی رینج $f^{-1}$ کی ڈومین بن جاتی ہے، اور $f$ کی ڈومین $f^{-1}$ کی رینج بن جاتی ہے، جس سے ہمارا حل مکمل ہو جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer means that the inverse function $f^{-1}(x)$ can accept any real number as an input except $1$, and it will produce every real number as an output except $-1$. You can check this by trying to solve $\\frac{x}{1+x} = 1$, which simplifies to $x = 1 + x$ or $0 = 1$ (impossible), confirming that $1$ is never an output of $f(x)$ and thus cannot be an input of $f^{-1}(x)$.",
+  "ur": "حتمی جواب کا مطلب یہ ہے کہ معکوس فنکشن $f^{-1}(x)$ بطور ان پٹ $1$ کے علاوہ کوئی بھی حقیقی عدد لے سکتا ہے، اور بطور آؤٹ پٹ $-1$ کے علاوہ ہر حقیقی عدد دے گا۔ آپ اس کی پڑتال مساوات $\\frac{x}{1+x} = 1$ کو حل کر کے کر سکتے ہیں، جو سادہ ہو کر $x = 1 + x$ یا $0 = 1$ بن جاتی ہے (جو کہ ناممکن ہے)، اور یہ تصدیق کرتی ہے کہ $1$ کبھی بھی $f(x)$ کا آؤٹ پٹ نہیں ہو سکتا اور اس لیے $f^{-1}(x)$ کا ان پٹ بھی نہیں بن سکتا۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

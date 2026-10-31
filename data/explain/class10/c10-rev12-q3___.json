@@ -1,0 +1,50 @@
+{
+ "item": "c10-rev12-q3",
+ "label": "",
+ "answer_ref": "$\\frac{4}{13}$",
+ "math": [
+  "n(S) = 52",
+  "n(A) = 4,\\quad n(B) = 13",
+  "n(A \\cap B) = 1",
+  "P(A) = \\frac{4}{52},\\quad P(B) = \\frac{13}{52},\\quad P(A \\cap B) = \\frac{1}{52}",
+  "P(A \\cup B) = P(A) + P(B) - P(A \\cap B)",
+  "P(A \\cup B) = \\frac{4}{52} + \\frac{13}{52} - \\frac{1}{52} = \\frac{16}{52}",
+  "P(A \\cup B) = \\frac{4}{13}"
+ ],
+ "why": [
+  {
+   "en": "In probability, our very first step is always to find the size of the sample space $S$, which represents all possible outcomes. Knowing that $n(S) = 52$ gives us the total number of cards we will divide by when calculating probabilities.",
+   "ur": "احتمال (probability) کے سوالات میں ہمارا پہلا قدم ہمیشہ نمونہ کی فضا (sample space) $S$ کی کل تعداد معلوم کرنا ہوتا ہے، جو تمام ممکنہ نتائج کو ظاہر کرتی ہے۔ $n(S) = 52$ سے ہمیں تاش کے ان کل پتوں کی تعداد مل جاتی ہے جس سے ہم آگے چل کر تقسیم کریں گے۔"
+  },
+  {
+   "en": "Next, we count the favourable outcomes for each separate event mentioned in the question. Writing $n(A) = 4$ and $n(B) = 13$ tells us exactly how many ways we can draw an ace or a spade individually from the deck.",
+   "ur": "اس کے بعد، ہم سوال میں دیے گئے ہر واقعے (event) کے موافق نتائج کی تعداد گنتے ہیں۔ $n(A) = 4$ اور $n(B) = 13$ لکھنے سے ہمیں پتہ چلتا ہے کہ گڈی میں سے الگ الگ یکہ (ace) یا حکم (spade) کا پتہ نکلنے کے کتنے امکانات ہیں۔"
+  },
+  {
+   "en": "We must check if the two events overlap, meaning if a single card can be both an ace and a spade at the same time. Finding $n(A \\cap B) = 1$ shows that these are overlapping (non-mutually exclusive) events, so we are careful not to count the ace of spades twice.",
+   "ur": "ہمیں یہ دیکھنا ضروری ہے کہ آیا دونوں واقعات میں کچھ مشترک ہے، یعنی کیا کوئی ایسا پتہ ہے جو بیک وقت یکہ بھی ہو اور حکم بھی۔ $n(A \\cap B) = 1$ سے ظاہر ہوتا ہے کہ یہ واقعات متراکب (overlapping) ہیں، اس لیے ہم محتاط رہتے ہیں کہ حکم کے یکے کو دو بار نہ گن لیں۔"
+  },
+  {
+   "en": "Using the basic definition of probability, we divide each event's count by the total outcomes $52$. Keeping the fractions unsimplified with the same denominator $52$ makes the addition and subtraction in the next steps much easier for us.",
+   "ur": "احتمال کے بنیادی فارمولے کو استعمال کرتے ہوئے، ہم ہر واقعے کی تعداد کو کل نتائج یعنی $52$ پر تقسیم کرتے ہیں۔ تمام کسروں کا مخرج (denominator) $52$ برقرار رکھنے سے ہمارے لیے اگلے مراحل میں جمع اور تفریق کرنا بہت آسان ہو جائے گا۔"
+  },
+  {
+   "en": "Because the word 'or' in the question means union ($A \\cup B$) and our events overlap, we state the addition law of probability for non-mutually exclusive events. This rule ensures we add the chances of both events while subtracting the overlapping part that got counted twice.",
+   "ur": "چونکہ سوال میں لفظ 'یا' (or) کا مطلب یونین ($A \\cup B$) ہوتا ہے اور ہمارے واقعات آپس میں مشترک بھی ہیں، اس لیے ہم یہاں احتمال کا قانونِ جمع (addition law) لکھتے ہیں۔ یہ اصول اس بات کو یقینی بناتا ہے کہ ہم دونوں واقعات کے امکانات کو جمع کریں اور اس مشترک حصے کو تفریق کر دیں جو دو بار گنا گیا ہے۔"
+  },
+  {
+   "en": "By substituting our values into the formula, we see that out of $52$ cards, there are actually $16$ distinct cards that are either an ace or a spade. This gives us the exact probability $\\frac{16}{52}$ before final simplification.",
+   "ur": "فارمولے میں قیمتیں درج کرنے سے ہمیں معلوم ہوتا ہے کہ $52$ پتوں میں سے دراصل $16$ ایسے منفرد پتے ہیں جو یا تو یکہ ہیں یا حکم۔ اس سے ہمیں مختصر کرنے سے پہلے کا اصل احتمال $\\frac{16}{52}$ مل جاتا ہے۔"
+  },
+  {
+   "en": "In mathematics, it is good practice to always present the final fraction in its lowest form. Dividing both $16$ and $52$ by their greatest common divisor $4$ gives us the neatest version of our final answer, $\\frac{4}{13}$.",
+   "ur": "ریاضی میں یہ ایک اچھا اصول ہے کہ حتمی کسر کو ہمیشہ اس کی مختصر ترین شکل میں لکھا جائے۔ $16$ اور $52$ دونوں کو ان کے عادِ اعظم $4$ سے تقسیم کرنے پر ہمیں اپنے حتمی جواب کی سب سے سادہ شکل $\\frac{4}{13}$ حاصل ہوتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $\\frac{4}{13}$ means that if you draw a card at random, there are $4$ chances out of $13$ (or $16$ out of $52$ cards) that it will be an ace or a spade. You can easily check this by counting directly: take all $13$ spades, and then add the remaining $3$ aces (since the ace of spades is already in your hand), giving $13 + 3 = 16$ favourable cards out of $52$, which simplifies to $\\frac{4}{13}$.",
+  "ur": "حتمی جواب $\\frac{4}{13}$ کا مطلب یہ ہے کہ اگر آپ گڈی میں سے کوئی ایک پتہ نکالیں، تو $13$ میں سے $4$ امکانات (یا $52$ میں سے $16$ امکانات) ہیں کہ وہ پتہ یکہ یا حکم ہوگا۔ آپ اسے براہِ راست گن کر بھی باآسانی چیک کر سکتے ہیں: حکم کے تمام $13$ پتے لیں، اور اس میں باقی ماندہ $3$ یکے جمع کر لیں (کیونکہ حکم کا یکہ پہلے ہی ان $13$ پتوں میں شامل ہے)، یوں $52$ میں سے $13 + 3 = 16$ موافق پتے بنتے ہیں، جنہیں مختصر کرنے پر $\\frac{4}{13}$ ہی آتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

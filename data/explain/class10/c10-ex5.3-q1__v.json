@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex5.3-q1",
+ "label": "v",
+ "answer_ref": "$x + 2$",
+ "math": [
+  "\\frac{x^{3} - 8}{x^{2} - 4} \\div \\frac{x^{2} + 2 x + 4}{x^{2} + 4 x + 4}",
+  "= \\frac{x^{3} - 2^{3}}{x^{2} - 2^{2}} \\div \\frac{x^{2} + 2 x + 4}{(x)^{2} + 2(x)(2) + (2)^{2}}",
+  "= \\frac{\\left(x - 2\\right) \\left(x^{2} + 2 x + 4\\right)}{\\left(x - 2\\right) \\left(x + 2\\right)} \\div \\frac{x^{2} + 2 x + 4}{\\left(x + 2\\right)^{2}}",
+  "= \\frac{\\left(x - 2\\right) \\left(x^{2} + 2 x + 4\\right)}{\\left(x - 2\\right) \\left(x + 2\\right)} \\times \\frac{\\left(x + 2\\right)^{2}}{x^{2} + 2 x + 4}",
+  "= \\frac{x^{2} + 2 x + 4}{x + 2} \\times \\frac{\\left(x + 2\\right)\\left(x + 2\\right)}{x^{2} + 2 x + 4}",
+  "= x + 2"
+ ],
+ "why": [
+  {
+   "en": "We start by writing down the given division of algebraic fractions clearly. This lets us examine each numerator and denominator to see which factorization formulas we can apply.",
+   "ur": "ہم سب سے پہلے دی گئی الجبری کسور کی تقسیم کو صاف طور پر لکھتے ہیں۔ اس سے ہمیں ہر شمار کنندہ اور مخرج کو غور سے دیکھنے کا موقع ملتا ہے تاکہ ہم جان سکیں کہ کون سے تجزی کے فارمولے استعمال ہو سکتے ہیں۔"
+  },
+  {
+   "en": "We rewrite $8$ as $2^3$ and $4$ as $2^2$ to match standard algebraic identities. Recognizing these patterns—difference of cubes, difference of squares, and a perfect square—prepares the polynomials to be broken down into simpler factors.",
+   "ur": "ہم معیاری الجبری کلیوں کے مطابق ڈھالنے کے لیے $8$ کو $2^3$ اور $4$ کو $2^2$ کے طور پر لکھتے ہیں۔ مکعبوں کے فرق، مربعوں کے فرق، اور مکمل مربع کی اس پہچان سے کثیر رقمی جملوں کو سادہ اجزائے ضربی میں توڑنا آسان ہو جاتا ہے۔"
+  },
+  {
+   "en": "By applying the factorization formulas, we convert sums and differences into products of factors. Notice how the trinomial $x^2 + 2x + 4$ in the second fraction was left alone because it now matches a factor from the difference of cubes!",
+   "ur": "تجزی کے فارمولے لاگو کر کے ہم جمع اور تفریق کے جملوں کو اجزائے ضربی کے حاصل ضرب میں بدل دیتے ہیں۔ غور کریں کہ دوسری کسر میں سہ رقمی جملے $x^2 + 2x + 4$ کو ویسے ہی چھوڑ دیا گیا ہے کیونکہ اب یہ مکعبوں کے فرق سے بننے والے ایک جزو سے بالکل ملتا ہے!"
+  },
+  {
+   "en": "To divide by a fraction, the rule is to multiply by its reciprocal (flipping the second fraction upside down). Changing division into multiplication allows us to cancel matching factors across both numerators and denominators.",
+   "ur": "کسی کسر سے تقسیم کرنے کا اصول یہ ہے کہ اس کے معکوس سے ضرب دی جائے (یعنی دوسری کسر کو الٹ دیا جائے)۔ تقسیم کو ضرب میں بدلنے سے ہم دونوں شمار کنندگان اور مخرجوں کے یکساں اجزائے ضربی کو آپس میں کاٹ سکتے ہیں۔"
+  },
+  {
+   "en": "Since $(x - 2)$ divided by $(x - 2)$ equals $1$, we cancel it out from the first fraction to reduce the expression. Writing $(x + 2)^2$ as $(x + 2)(x + 2)$ makes it easy to see exactly how many factors will cancel in the final step.",
+   "ur": "چونکہ $(x - 2)$ کو $(x - 2)$ سے تقسیم کرنے سے $1$ آتا ہے، اس لیے ہم جملے کو مختصر کرنے کے لیے اسے پہلی کسر میں سے کاٹ دیتے ہیں۔ $(x + 2)^2$ کو $(x + 2)(x + 2)$ لکھنے سے یہ دیکھنا آسان ہو جاتا ہے کہ آخری مرحلے میں کتنے اجزائے ضربی کٹیں گے۔"
+  },
+  {
+   "en": "Finally, we cancel the common factors $(x^2 + 2x + 4)$ and one $(x + 2)$ from the top and bottom. All the complex terms divide out to $1$, leaving us with just the single remaining factor.",
+   "ur": "آخر میں، ہم اوپر اور نیچے سے مشترک اجزائے ضربی $(x^2 + 2x + 4)$ اور ایک $(x + 2)$ کو کاٹ دیتے ہیں۔ تمام پیچیدہ رقمیں تقسیم ہو کر $1$ بن جاتی ہیں، اور ہمارے پاس صرف ایک بچ جانے والا جزو رہ جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $x + 2$ means that the entire complicated division expression is completely equivalent to just $x + 2$ (for all values where the original denominators are not zero, such as $x \\neq 2$ and $x \\neq -2$). You can check this by substituting a simple number not used in the exclusions, or by seeing how all other factors neatly paired up to equal $1$.",
+  "ur": "آخری جواب $x + 2$ کا مطلب یہ ہے کہ یہ پورا پیچیدہ تقسیمی جملہ مکمل طور پر صرف $x + 2$ کے برابر ہے (ان تمام قیمتوں کے لیے جہاں اصل مخرج صفر نہ ہوں، جیسے $x \\neq 2$ اور $x \\neq -2$)۔ آپ اس کی پڑتال یہ دیکھ کر کر سکتے ہیں کہ کس طرح باقی تمام اجزائے ضربی نے جوڑے بنا کر ایک دوسرے کو کاٹ دیا اور ان کا نتیجہ $1$ نکلا۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex12.1-q1",
+ "label": "",
+ "answer_ref": "$S = \\{HHH, HHT, HTH, HTT, THH, THT, TTH, TTT\\}$, $n(S) = 8$",
+ "math": [
+  "\\text{Outcomes for 1 coin} = \\{H, T\\}",
+  "\\text{Coin 1}: H,\\quad T",
+  "\\text{Coin 1 } (H) \\to \\begin{cases} H \\to H, T \\\\ T \\to H, T \\end{cases}",
+  "\\text{Coin 1 } (T) \\to \\begin{cases} H \\to H, T \\\\ T \\to H, T \\end{cases}",
+  "n(S) = 2 \\times 2 \\times 2 = 2^3 = 8",
+  "S = \\{HHH, HHT, HTH, HTT, THH, THT, TTH, TTT\\},\\quad n(S) = 8"
+ ],
+ "why": [
+  {
+   "en": "Before tossing three coins together, we first recall the basic probability rule for a single coin toss. Knowing that one coin only gives Head ($H$) or Tail ($T$) serves as the building block for every stage of our tree diagram.",
+   "ur": "تین سکوں کو ایک ساتھ اچھالنے سے پہلے، ہم ایک سکے کے بنیادی ممکنہ نتائج کو سمجھتے ہیں۔ یہ جاننا کہ ایک سکے کے صرف دو نتائج ہیڈ ($H$) یا ٹیل ($T$) ہوتے ہیں، ہمارے ٹری ڈایاگرام کے ہر مرحلے کی بنیاد بنتا ہے۔"
+  },
+  {
+   "en": "A tree diagram breaks a multi-step experiment into clear stages, one for each coin. Starting with the two main branches for Coin 1 sets up the roots from which all other combinations will grow.",
+   "ur": "ٹری ڈایاگرام ایک سے زیادہ مراحل والے تجربے کو آسان حصوں میں تقسیم کر دیتا ہے، جہاں ہر سکے کا اپنا مرحلہ ہوتا ہے۔ پہلے سکے (Coin 1) کے لیے دو شاخوں ($H$ اور $T$) سے شروعات کرنے سے وہ بنیاد بن جاتی ہے جس سے باقی تمام ممکنہ نتائج نکلیں گے۔"
+  },
+  {
+   "en": "Here we apply the branching rule assuming the first coin landed on Head ($H$), and then attach the possibilities for the second and third coins. Tracing each path from start to finish gives us the first half of our sample space (the $4$ outcomes starting with $H$).",
+   "ur": "یہاں ہم یہ فرض کرتے ہوئے شاخیں آگے بڑھاتے ہیں کہ پہلے سکے پر ہیڈ ($H$) آیا ہے، اور پھر اس کے ساتھ دوسرے اور تیسرے سکے کے ممکنہ نتائج جوڑتے ہیں۔ شروع سے آخر تک ہر راستے کو پڑھنے سے ہمیں سیمپل سپیس کا پہلا آدھا حصہ ($H$ سے شروع ہونے والے $4$ نتائج) مل جاتا ہے۔"
+  },
+  {
+   "en": "Now we complete the tree by following the exact same branching process for the case where the first coin landed on Tail ($T$). This gives us the remaining $4$ possible outcomes that start with $T$, ensuring no combination is missed.",
+   "ur": "اب ہم ٹری ڈایاگرام کو مکمل کرنے کے لیے بالکل وہی عمل دہراتے ہیں، لیکن اس بار فرض کرتے ہیں کہ پہلے سکے پر ٹیل ($T$) آیا ہے۔ اس سے ہمیں $T$ سے شروع ہونے والے باقی $4$ ممکنہ نتائج مل جاتے ہیں، اور یوں کوئی بھی نتیجہ چھوٹنے نہیں پاتا۔"
+  },
+  {
+   "en": "We use the fundamental principle of counting by multiplying the $2$ choices for each of the $3$ coins together ($2^3$). This tells us that our final sample space must contain exactly $8$ outcomes, which acts as a great check for our tree diagram.",
+   "ur": "ہم گنتی کے بنیادی اصول (fundamental principle of counting) کو استعمال کرتے ہوئے تینوں سکوں کے $2$، $2$ امکانات کو آپس میں ضرب دیتے ہیں ($2^3$)۔ اس سے ہمیں معلوم ہوتا ہے کہ ہماری سیمپل سپیس میں کل $8$ نتائج ہی ہونے چاہئیں، جس سے ہمارے ٹری ڈایاگرام کی تصدیق بھی ہو جاتی ہے۔"
+  },
+  {
+   "en": "By the definition of a sample space, we must gather all possible outcomes of the experiment into a single set $S$. Putting the $4$ outcomes from the $H$ branch and the $4$ outcomes from the $T$ branch together inside curly brackets completes our required list.",
+   "ur": "سیمپل سپیس کی تعریف کے مطابق، ہمیں تجربے کے تمام ممکنہ نتائج کو ایک سیٹ $S$ کی شکل میں اکٹھا لکھنا ہوتا ہے۔ $H$ شاخ کے $4$ نتائج اور $T$ شاخ کے $4$ نتائج کو درمیانی بریکٹ (curly brackets) میں ایک ساتھ لکھنے سے ہماری مطلوبہ فہرست مکمل ہو جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer shows the complete set $S$ of all $8$ possible combinations of Heads and Tails that can appear when three coins are tossed. We can easily verify our answer is complete because the $8$ listed outcomes in the set match the formula $2^3 = 8$, and each outcome has $3$ letters representing the $3$ coins.",
+  "ur": "آخری جواب ہمیں وہ مکمل سیٹ $S$ دکھاتا ہے جس میں تین سکے اچھالنے پر ہیڈ اور ٹیل کے آنے کے تمام $8$ ممکنہ نتائج شامل ہیں۔ ہم باآسانی پڑتال کر سکتے ہیں کہ ہمارا جواب درست اور مکمل ہے کیونکہ سیٹ کے اندر موجود $8$ نتائج فارمولے $2^3 = 8$ کے بالکل مطابق ہیں، اور ہر نتیجے میں $3$ حروف ہیں جو $3$ سکوں کو ظاہر کرتے ہیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

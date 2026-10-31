@@ -1,0 +1,65 @@
+{
+ "item": "c10-ex5.4-q1",
+ "label": "vii",
+ "answer_ref": "$x = - \\frac{1}{3},\\ \\frac{2}{3}$",
+ "math": [
+  "5\\cdot 5^{3x} + \\frac{25}{5^{3x}} - 126 = 0",
+  "\\text{Let } y = 5^{3x}:\\ 5y^2 - 126y + 25 = 0",
+  "5 y^{2} - y - 125 y + 25 = 0",
+  "y \\left(5 y - 1\\right) - 25 \\left(5 y - 1\\right) = 0",
+  "\\left(y - 25\\right) \\left(5 y - 1\\right) = 0",
+  "y - 25 = 0 \\quad\\text{or}\\quad 5 y - 1 = 0",
+  "y = \\frac{1}{5},\\quad y = 25",
+  "5^{3x} = \\frac{1}{5} = 5^{-1} \\Rightarrow 3x = -1 \\Rightarrow x = - \\frac{1}{3}",
+  "5^{3x} = 25 = 5^{2} \\Rightarrow 3x = 2 \\Rightarrow x = \\frac{2}{3}",
+  "\\text{S.S} = \\{- \\frac{1}{3}, \\frac{2}{3}\\}"
+ ],
+ "why": [
+  {
+   "en": "Using the laws of exponents ($a^{m+n} = a^m \\cdot a^n$ and $a^{m-n} = \\frac{a^m}{a^n}$), we separate the variable powers from the constant numbers. This clearly reveals the repeating expression $5^{3x}$ in both terms.",
+   "ur": "قوت نما کے قوانین ($a^{m+n} = a^m \\cdot a^n$ اور $a^{m-n} = \\frac{a^m}{a^n}$) کا استعمال کرتے ہوئے، ہم متغیر طاقتوں کو مستقل نمبروں سے الگ کرتے ہیں۔ اس سے دونوں رقموں میں بار بار آنے والا جملہ $5^{3x}$ واضح ہو جاتا ہے۔"
+  },
+  {
+   "en": "To turn this exponential equation into a familiar quadratic form, we substitute $y$ for $5^{3x}$ and multiply through by $y$ to clear the fraction. Now we have a standard quadratic equation $5y^2 - 126y + 25 = 0$ that is much easier to solve.",
+   "ur": "اس قوت نمائی مساوات کو ایک جانی پہچانی دو درجی شکل میں بدلنے کے لیے، ہم $5^{3x}$ کی جگہ $y$ رکھتے ہیں اور کسر کو ختم کرنے کے لیے پوری مساوات کو $y$ سے ضرب دیتے ہیں۔ اب ہمارے پاس ایک معیاری دو درجی مساوات $5y^2 - 126y + 25 = 0$ ہے جسے حل کرنا بہت آسان ہے۔"
+  },
+  {
+   "en": "We use the middle-term breaking method to factorize the quadratic equation by finding two numbers that multiply to $125$ and add up to $-126$. Splitting $-126y$ into $-y$ and $-125y$ prepares the four terms for factoring by grouping.",
+   "ur": "ہم دو درجی مساوات کی تجزی کرنے کے لیے درمیانی رقم کو توڑنے کا طریقہ استعمال کرتے ہیں اور ایسے دو نمبر تلاش کرتے ہیں جنہیں ضرب دینے سے $125$ اور جمع کرنے سے $-126$ آئے۔ $-126y$ کو $-y$ اور $-125y$ میں تقسیم کرنے سے چاروں رقمیں گروپ بنا کر تجزی کرنے کے لیے تیار ہو جاتی ہیں۔"
+  },
+  {
+   "en": "By factoring by grouping, we take out the highest common factor from the first two terms and the last two terms separately. Notice how both parts now share the exact same binomial factor $(5y - 1)$, showing we are on the right track.",
+   "ur": "گروپ بنا کر تجزی کرتے ہوئے، ہم پہلی دو رقموں اور آخری دو رقموں میں سے الگ الگ سب سے بڑا مشترک جزو ضربی باہر نکالتے ہیں۔ غور کریں کہ اب دونوں حصوں میں بالکل ایک جیسا دو رقمی جزو $(5y - 1)$ موجود ہے، جو ظاہر کرتا ہے کہ ہم صحیح راستے پر ہیں۔"
+  },
+  {
+   "en": "We factor out the common bracket $(5y - 1)$ from the entire expression using the distributive property. This successfully turns our sum of terms into a product of two linear factors equal to zero.",
+   "ur": "ہم تقسیمی خاصیت کا استعمال کرتے ہوئے پورے جملے میں سے مشترک بریکٹ $(5y - 1)$ کو باہر نکال لیتے ہیں۔ اس سے ہماری رقموں کا مجموعہ کامیابی کے ساتھ دو یک درجی اجزائے ضربی کے حاصل ضرب میں بدل جاتا ہے جو صفر کے برابر ہے۔"
+  },
+  {
+   "en": "According to the zero-product property, if the product of two factors is zero, then at least one of the factors must be zero. This allows us to split the quadratic equation into two simple linear equations.",
+   "ur": "ضربی صفر کی خاصیت کے مطابق، اگر دو اجزائے ضربی کا حاصل ضرب صفر ہو، تو ان میں سے کم از کم ایک جزو لازمی صفر کے برابر ہوتا ہے۔ اس سے ہم دو درجی مساوات کو دو سادہ یک درجی مساواتوں میں الگ کر سکتے ہیں۔"
+  },
+  {
+   "en": "Solving each simple linear equation gives us the two values for our temporary variable $y$. However, since the original question was about $x$, we now need to use these $y$ values to find $x$.",
+   "ur": "ہر سادہ یک درجی مساوات کو حل کرنے سے ہمیں اپنے عارضی متغیر $y$ کی دو قیمتیں مل جاتی ہیں۔ لیکن چونکہ اصل سوال $x$ کے بارے میں تھا، اس لیے اب ہمیں $x$ معلوم کرنے کے لیے $y$ کی ان قیمتوں کو استعمال کرنا ہوگا۔"
+  },
+  {
+   "en": "We replace $y$ back with $5^{3x}$ for the first value and write $\\frac{1}{5}$ as $5^{-1}$ using the negative exponent rule. Since the bases on both sides are equal ($5$), their powers must also be equal, which gives our first solution $x = -\\frac{1}{3}$.",
+   "ur": "ہم پہلی قیمت کے لیے $y$ کی جگہ واپس $5^{3x}$ رکھتے ہیں اور منفی قوت نما کے اصول کو استعمال کرتے ہوئے $\\frac{1}{5}$ کو $5^{-1}$ لکھتے ہیں۔ چونکہ دونوں طرف اساس برابر ($5$) ہیں، اس لیے ان کی طاقتیں بھی برابر ہوں گی، جس سے ہمیں پہلا حل $x = -\\frac{1}{3}$ ملتا ہے۔"
+  },
+  {
+   "en": "Similarly, we substitute $y = 5^{3x}$ for the second value and express $25$ as $5^2$ so both sides have the same base. Equating the exponents gives $3x = 2$, leading directly to our second solution $x = \\frac{2}{3}$.",
+   "ur": "اسی طرح، ہم دوسری قیمت کے لیے $y = 5^{3x}$ درج کرتے ہیں اور $25$ کو $5^2$ کے طور پر لکھتے ہیں تاکہ دونوں طرف اساس ایک جیسی ہو جائے۔ قوت نماؤں کو برابر رکھنے سے $3x = 2$ ملتا ہے، جو سیدھا ہمیں دوسرے حل $x = \\frac{2}{3}$ تک لے جاتا ہے۔"
+  },
+  {
+   "en": "Finally, we write both values of $x$ together inside curly brackets to represent the complete Solution Set (S.S). Both of these fractions are valid real numbers that satisfy the original exponential equation.",
+   "ur": "آخر میں، ہم مکمل حل سیٹ (S.S) کو ظاہر کرنے کے لیے $x$ کی دونوں قیمتوں کو درمیانی بریکٹ کے اندر ایک ساتھ لکھتے ہیں۔ یہ دونوں کسریں درست حقیقی اعداد ہیں جو اصل قوت نمائی مساوات کو درست ثابت کرتی ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The solution set $\\{-\\frac{1}{3}, \\frac{2}{3}\\}$ gives the exact values of $x$ that make the original equation $5^{1+3x}+5^{2-3x}-126=0$ true. You can easily check this by putting either value back into the equation—for example, with $x = \\frac{2}{3}$, the powers become $5^{1+2} + 5^{2-2} = 5^3 + 5^0 = 125 + 1 = 126$, and $126 - 126 = 0$, which confirms our answer is completely correct.",
+  "ur": "حل سیٹ $\\{-\\frac{1}{3}, \\frac{2}{3}\\}$ ہمیں $x$ کی وہ درست قیمتیں دیتا ہے جو اصل مساوات $5^{1+3x}+5^{2-3x}-126=0$ کو سچ ثابت کرتی ہیں۔ آپ ان میں سے کوئی بھی قیمت واپس مساوات میں درج کر کے باآسانی پڑتال کر سکتے ہیں—مثال کے طور پر، $x = \\frac{2}{3}$ رکھنے سے طاقتیں $5^{1+2} + 5^{2-2} = 5^3 + 5^0 = 125 + 1 = 126$ بن جاتی ہیں، اور $126 - 126 = 0$ ہوتا ہے، جو تصدیق کرتا ہے کہ ہمارا جواب بالکل درست ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

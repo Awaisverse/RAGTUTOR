@@ -1,0 +1,40 @@
+{
+ "item": "c10-ex12.1-q5",
+ "label": "ii",
+ "answer_ref": "$n(S) = 12$",
+ "math": [
+  "\\text{Die outcomes} = \\{1, 2, 3, 4, 5, 6\\}",
+  "\\text{Coin outcomes} = \\{\\text{H}, \\text{T}\\}",
+  "\\text{Die} \\to \\text{Coin}: \\quad k \\to \\begin{cases} \\text{H} \\to (k, \\text{H}) \\\\ \\text{T} \\to (k, \\text{T}) \\end{cases} \\quad \\text{for } k \\in \\{1, 2, 3, 4, 5, 6\\}",
+  "S = \\{(1,\\text{H}), (1,\\text{T}), (2,\\text{H}), (2,\\text{T}), (3,\\text{H}), (3,\\text{T}), (4,\\text{H}), (4,\\text{T}), (5,\\text{H}), (5,\\text{T}), (6,\\text{H}), (6,\\text{T})\\}",
+  "n(S) = 6 \\times 2 = 12"
+ ],
+ "why": [
+  {
+   "en": "To build a tree diagram, we first need a starting point for our main branches. Listing the $6$ faces of a standard die gives us all the possible first steps in our experiment.",
+   "ur": "ٹری ڈایاگرام بنانے کے لیے ہمیں سب سے پہلے اپنی بنیادی شاخوں کے آغاز کی ضرورت ہوتی ہے۔ ایک لڈو کے دانے (ڈائس) کے $6$ ممکّنہ نتائج لکھنے سے ہمیں اپنے تجربے کے پہلے مرحلے کے تمام امکانات مل جاتے ہیں۔"
+  },
+  {
+   "en": "Next, we identify what happens in the second stage of the experiment. Writing down the $2$ sides of a coin tells us what will split off from each of our main die branches.",
+   "ur": "اس کے بعد ہم یہ دیکھتے ہیں کہ تجربے کے دوسرے مرحلے میں کیا ہوتا ہے۔ سکے کے $2$ پہلوؤں ($\\text{H}$ اور $\\text{T}$) کو لکھنے سے ہمیں معلوم ہوتا ہے کہ ڈائس کی ہر بنیادی شاخ سے آگے کون سی ذیلی شاخیں نکلیں گی۔"
+  },
+  {
+   "en": "The rule of a tree diagram is to connect every outcome of the first event to every outcome of the second event. By splitting each number $k$ into $\\text{H}$ and $\\text{T}$, we visually guarantee that no possible combination is missed.",
+   "ur": "ٹری ڈایاگرام کا اصول یہ ہے کہ پہلے واقعے کے ہر نتیجے کو دوسرے واقعے کے ہر نتیجے سے جوڑا جائے۔ ہر نمبر $k$ کو آگے $\\text{H}$ اور $\\text{T}$ میں تقسیم کرنے سے ہم بصری طور پر یہ یقینی بناتے ہیں کہ کوئی بھی ممکّنہ جوڑا چھوٹ نہ جائے۔"
+  },
+  {
+   "en": "By definition, the sample space $S$ is the set of all possible combined outcomes of an experiment. Reading along each complete branch from start to end gives us all the ordered pairs that make up this complete set.",
+   "ur": "تعریف کے مطابق، سیمپل سپیس $S$ کسی تجربے کے تمام ممکّنہ مشترکہ نتائج کے سیٹ کو کہتے ہیں۔ شروع سے آخر تک ہر مکمل شاخ کو پڑھنے سے ہمیں وہ تمام مترتب جوڑے (ordered pairs) مل جاتے ہیں جو اس مکمل سیٹ کو بناتے ہیں۔"
+  },
+  {
+   "en": "Using the fundamental counting principle, we multiply the number of outcomes of each stage ($6 \\times 2$) to find the size of the sample space. This tells us there are $12$ equally likely outcomes in total.",
+   "ur": "گنتی کے بنیادی اصول کو استعمال کرتے ہوئے، ہم سیمپل سپیس کا سائز معلوم کرنے کے لیے ہر مرحلے کے نتائج کی تعداد کو ضرب دیتے ہیں ($6 \\times 2$)۔ اس سے ہمیں معلوم ہوتا ہے کہ کل $12$ مساوی امکان والے نتائج ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final tree diagram and sample space $S$ show all $12$ distinct ways a die roll and a coin toss can happen together. You can easily check that your list is complete by counting the ordered pairs in $S$ and verifying that there are exactly $6 \\times 2 = 12$ pairs.",
+  "ur": "حتمی ٹری ڈایاگرام اور سیمپل سپیس $S$ وہ تمام $12$ مختلف طریقے دکھاتے ہیں جن سے ڈائس پھینکنے اور سکہ اچھالنے کا عمل ایک ساتھ ہو سکتا ہے۔ آپ اپنی فہرست کے مکمل ہونے کی تصدیق آسانی سے اس طرح کر سکتے ہیں کہ $S$ میں موجود جوڑوں کو گنیں اور دیکھیں کہ وہ واقعی $6 \\times 2 = 12$ جوڑے ہی ہیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

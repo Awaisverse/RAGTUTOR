@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex7.4-q8",
+ "label": "",
+ "answer_ref": "$231.76$ km",
+ "math": [
+  "d_1 = 150\\text{ km (East)}, \\quad d_2 = 100\\text{ km at } \\theta = 45^\\circ \\text{ (North of East)}",
+  "d_{2x} = 100\\cos 45^\\circ \\approx 70.71\\text{ km}, \\quad d_{2y} = 100\\sin 45^\\circ \\approx 70.71\\text{ km}",
+  "\\text{Total East } (X) = 150 + 100\\cos 45^\\circ \\approx 150 + 70.71 = 220.71\\text{ km}",
+  "\\text{Total North } (Y) = 0 + 100\\sin 45^\\circ \\approx 70.71\\text{ km}",
+  "D = \\sqrt{X^2 + Y^2} = \\sqrt{(220.71)^2 + (70.71)^2}",
+  "D = \\sqrt{48712.9041 + 4999.9041} = \\sqrt{53712.8082} \\approx 231.76\\text{ km}"
+ ],
+ "why": [
+  {
+   "en": "We start by writing down the given distances and directions from the question so we have a clear picture of the aircraft's two-part journey. Knowing that the second part of the flight is at $45^\\circ$ tells us we cannot simply add $150\\text{ km}$ and $100\\text{ km}$ directly because the aircraft changed direction.",
+   "ur": "ہم سوال میں دیے گئے فاصلوں اور سمتوں کو لکھ کر شروعات کرتے ہیں تاکہ جہاز کے سفر کے دونوں حصوں کی واضح تصویر ہمارے سامنے ہو۔ یہ جاننا کہ سفر کا دوسرا حصہ $45^\\circ$ کے زاویے پر ہے، ہمیں بتاتا ہے کہ ہم $150\\text{ km}$ اور $100\\text{ km}$ کو براہِ راست جمع نہیں کر سکتے کیونکہ جہاز نے اپنی سمت تبدیل کی ہے۔"
+  },
+  {
+   "en": "Because the second movement of $100\\text{ km}$ is slanted at $45^\\circ$, we use basic trigonometric ratios ($\\cos 45^\\circ$ and $\\sin 45^\\circ$) to break it into a right-angled triangle. This tells us that moving $100\\text{ km}$ northeast is the exact same as moving about $70.71\\text{ km}$ East and $70.71\\text{ km}$ North.",
+   "ur": "چونکہ $100\\text{ km}$ کا دوسرا سفر $45^\\circ$ پر ترچھا ہے، اس لیے ہم بنیادی تکونیاتی نسبتوں ($\\cos 45^\\circ$ اور $\\sin 45^\\circ$) کو استعمال کرتے ہوئے اسے ایک قائمہ الزاویہ مثلث کے اجزاء میں تقسیم کرتے ہیں۔ اس سے ہمیں معلوم ہوتا ہے کہ شمال مشرق میں $100\\text{ km}$ جانا بالکل ایسا ہی ہے جیسے مشرق کی طرف تقریباً $70.71\\text{ km}$ اور شمال کی طرف $70.71\\text{ km}$ جایا جائے۔"
+  },
+  {
+   "en": "Now that both parts of the journey have an Eastward portion, we can combine distances that point in the exact same direction. Adding the initial $150\\text{ km}$ East to the $70.71\\text{ km}$ East gives us the aircraft's total horizontal progress of $220.71\\text{ km}$.",
+   "ur": "اب جب کہ سفر کے دونوں حصوں میں مشرق کی طرف کا فاصلہ واضح ہو چکا ہے، تو ہم ایک ہی سمت میں ہونے والے فاصلوں کو آپس میں جمع کر سکتے ہیں۔ ابتدائی $150\\text{ km}$ مشرقی فاصلے میں $70.71\\text{ km}$ جمع کرنے سے ہمیں مشرق کی جانب جہاز کا کل افقی فاصلہ $220.71\\text{ km}$ مل جاتا ہے۔"
+  },
+  {
+   "en": "Next, we do the same for the Northward direction to find the total vertical progress. Since the aircraft did not move North at all during the first $150\\text{ km}$ (giving a $0$ component), the total Northward distance is just the $70.71\\text{ km}$ from the second part of the flight.",
+   "ur": "اس کے بعد، کل عمودی فاصلہ معلوم کرنے کے لیے ہم شمال کی سمت کے لیے بھی یہی عمل دہراتے ہیں۔ چونکہ پہلے $150\\text{ km}$ کے دوران جہاز شمال کی طرف بالکل نہیں گیا (اس لیے اس کا شمالی جزو $0$ ہے)، لہٰذا شمال کی طرف کل فاصلہ صرف دوسرے حصے سے حاصل ہونے والا $70.71\\text{ km}$ ہی ہے۔"
+  },
+  {
+   "en": "The total Eastward ($220.71\\text{ km}$) and total Northward ($70.71\\text{ km}$) distances meet at a $90^\\circ$ angle, forming a large right-angled triangle with the straight-line displacement $D$ as the hypotenuse. This allows us to set up the Pythagoras theorem to find the direct distance from the starting point to the final position.",
+   "ur": "کل مشرقی فاصلہ ($220.71\\text{ km}$) اور کل شمالی فاصلہ ($70.71\\text{ km}$) آپس میں $90^\\circ$ کا زاویہ بناتے ہیں، جس سے ایک بڑی قائمہ الزاویہ مثلث بنتی ہے جس کا وتر کل نقل مکانی (displacement) $D$ ہے۔ اس کی مدد سے ہم مسئلہ فیثاغورث (Pythagoras theorem) کا فارمولا لگا کر نقطہ آغاز سے آخری مقام تک کا سیدھا فاصلہ معلوم کر سکتے ہیں۔"
+  },
+  {
+   "en": "We now simplify the arithmetic by squaring the two perpendicular sides, adding them to get $53712.8082$, and taking the square root. This final calculation gives us the length of the hypotenuse, which is the exact straight-line distance of $231.76\\text{ km}$.",
+   "ur": "اب ہم حساب کتاب کو مکمل کرنے کے لیے دونوں عمودی اضلاع کا مربع لیتے ہیں، انہیں جمع کر کے $53712.8082$ حاصل کرتے ہیں، اور پھر اس کا جزر (square root) لیتے ہیں۔ یہ آخری مرحلہ ہمیں وتر کی لمبائی دیتا ہے، جو کہ $231.76\\text{ km}$ کا سیدھا فاصلہ ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer of $231.76\\text{ km}$ is the aircraft's total displacement, meaning that at the end of its journey, the aircraft is $231.76\\text{ km}$ away from its starting point in a straight line. We can check that this answer is reasonable because the hypotenuse $231.76\\text{ km}$ is longer than the total Eastward side of $220.71\\text{ km}$, yet shorter than the total path flown of $150\\text{ km}$ plus $100\\text{ km}$, which must always be true for a triangle.",
+  "ur": "آخری جواب $231.76\\text{ km}$ جہاز کی کل نقل مکانی (displacement) کو ظاہر کرتا ہے، جس کا مطلب ہے کہ اپنے سفر کے اختتام پر جہاز اپنے نقطہ آغاز سے سیدھی لکیر میں $231.76\\text{ km}$ کی دوری پر ہے۔ ہم تصدیق کر سکتے ہیں کہ یہ جواب بالکل درست اور منطقی ہے کیونکہ وتر $231.76\\text{ km}$ کی لمبائی مشرقی ضلع $220.71\\text{ km}$ سے زیادہ ہے، لیکن جہاز کے طے کردہ $150\\text{ km}$ اور $100\\text{ km}$ کے کل راستے سے کم ہے، جو کہ کسی بھی مثلث کے لیے ہمیشہ درست ہوتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

@@ -1,0 +1,55 @@
+{
+ "item": "c10-ex11.1-q1",
+ "label": "",
+ "answer_ref": "Median = 61, Q1 = 55, Q3 = 66, D3 = 57, P90 = 73, IQR = 11",
+ "math": [
+  "\\begin{array}{c|ccccccc} \\text{Class} & 44-48 & 49-53 & 54-58 & 59-63 & 64-68 & 69-73 & 74-78 \\\\ \\hline f & 3 & 12 & 15 & 23 & 12 & 8 & 7 \\\\ c.f. & 3 & 15 & 30 & 53 & 65 & 73 & 80 \\end{array}",
+  "\\text{Plot (upper boundary, c.f.) and join: the ogive}",
+  "Q_2:\\ \\frac{N}{2} = 40,\\ \\text{class } 59-63,\\ L = \\frac{117}{2},\\ c.f. = 30,\\ f = 23;\\ Q_2 = \\frac{117}{2} + \\frac{40 - 30}{23} \\times 5 \\approx 60.67",
+  "Q_1:\\ \\frac{N}{4} = 20,\\ \\text{class } 54-58,\\ L = \\frac{107}{2},\\ c.f. = 15,\\ f = 15;\\ Q_1 = \\frac{107}{2} + \\frac{20 - 15}{15} \\times 5 \\approx 55.17",
+  "Q_3:\\ \\frac{3N}{4} = 60,\\ \\text{class } 64-68,\\ L = \\frac{127}{2},\\ c.f. = 53,\\ f = 12;\\ Q_3 = \\frac{127}{2} + \\frac{60 - 53}{12} \\times 5 \\approx 66.42",
+  "D_3:\\ \\frac{3N}{10} = 24,\\ \\text{class } 54-58,\\ L = \\frac{107}{2},\\ c.f. = 15,\\ f = 15;\\ D_3 = \\frac{107}{2} + \\frac{24 - 15}{15} \\times 5 \\approx 56.50",
+  "P_{90}:\\ \\frac{90N}{100} = 72,\\ \\text{class } 69-73,\\ L = \\frac{137}{2},\\ c.f. = 65,\\ f = 8;\\ P_{90} = \\frac{137}{2} + \\frac{72 - 65}{8} \\times 5 \\approx 72.88",
+  "IQR = Q_3 - Q_1 = 66.42 - 55.17 \\approx 11.25"
+ ],
+ "why": [
+  {
+   "en": "To draw a cumulative frequency graph and find positions like the median, we first need a running total of students. This step shows us that the total number of students ($N$) is $80$, and tells us how many students scored up to the end of each class.",
+   "ur": "مجموعی تعدد کا گراف (cumulative frequency graph) بنانے اور میڈین جیسی پوزیشنز معلوم کرنے کے لیے ہمیں پہلے طلباء کا ایک چلتا ہوا ٹوٹل (running total) چاہیے۔ یہ مرحلہ ہمیں بتاتا ہے کہ طلباء کی کل تعداد ($N$) $80$ ہے، اور ہر کلاس کے آخر تک کتنے طلباء نے اسکور کیا ہے۔"
+  },
+  {
+   "en": "An ogive (cumulative frequency polygon) requires continuous boundaries so there are no gaps between classes. By plotting the upper class boundaries on the x-axis against the cumulative frequencies on the y-axis, we create a smooth curve from which we can read any percentile or quartile.",
+   "ur": "اوگائیو (مجموعی تعدد کا کثیر الاضلاع) کے لیے مسلسل حدود (continuous boundaries) ضروری ہیں تاکہ کلاسز کے درمیان کوئی خلا نہ رہے۔ ایکس محور (x-axis) پر بالائی جماعتی حدود اور وائی محور (y-axis) پر مجموعی تعدد کو پلاٹ کر کے، ہم ایک ہموار منحنی خط (curve) بناتے ہیں جس سے ہم کوئی بھی پرسنٹائل یا کوارٹائل پڑھ سکتے ہیں۔"
+  },
+  {
+   "en": "The median ($Q_2$) is the middle score, which sits at the $\\frac{N}{2} = 40$th student. By locating the $40$th position on our graph (or using the interpolation formula for the class $59-63$ with lower boundary $\\frac{117}{2}$), we find that half the students scored below $60.67$.",
+   "ur": "میڈین ($Q_2$) درمیانی اسکور ہوتا ہے، جو $\\frac{N}{2} = 40$ ویں طالب علم پر آتا ہے۔ اپنے گراف پر $40$ ویں پوزیشن تلاش کر کے (یا کلاس $59-63$ جس کی زیریں حد $\\frac{117}{2}$ ہے، کے لیے فارمولا استعمال کر کے)، ہمیں معلوم ہوتا ہے کہ آدھے طلباء نے $60.67$ سے کم اسکور کیا۔"
+  },
+  {
+   "en": "The lower quartile ($Q_1$) marks the bottom quarter of the group, found at the $\\frac{N}{4} = 20$th student. Reading from the $20$th position into the class $54-58$ tells us that one-fourth of the students scored below $55.17$.",
+   "ur": "لوئر کوارٹائل ($Q_1$) گروپ کے نچلے چوتھائی حصے کو ظاہر کرتا ہے، جو $\\frac{N}{4} = 20$ ویں طالب علم پر ملتا ہے۔ $20$ ویں پوزیشن سے کلاس $54-58$ میں پڑھنے سے ہمیں پتہ چلتا ہے کہ ایک چوتھائی طلباء نے $55.17$ سے کم اسکور کیا۔"
+  },
+  {
+   "en": "The upper quartile ($Q_3$) marks the top quarter of the group, located at the $\\frac{3N}{4} = 60$th student. This lies in the class $64-68$ and gives $66.42$, meaning three-fourths of the students scored below this mark.",
+   "ur": "اپر کوارٹائل ($Q_3$) گروپ کے اوپری چوتھائی حصے کو ظاہر کرتا ہے، جو $\\frac{3N}{4} = 60$ ویں طالب علم پر واقع ہے۔ یہ کلاس $64-68$ میں آتا ہے اور $66.42$ دیتا ہے، جس کا مطلب ہے کہ تین چوتھائی طلباء نے اس سے کم اسکور کیا۔"
+  },
+  {
+   "en": "The third decile ($D_3$) represents the point below which $\\frac{3}{10}$ of the students fall, which is the $\\frac{3N}{10} = 24$th student. Tracing from $24$ into the class $54-58$ shows that this group of students scored up to $56.50$.",
+   "ur": "تیسرا ڈیسائل ($D_3$) اس پوائنٹ کو ظاہر کرتا ہے جس کے نیچے طلباء کا $\\frac{3}{10}$ حصہ آتا ہے، جو کہ $\\frac{3N}{10} = 24$ واں طالب علم ہے۔ $24$ سے کلاس $54-58$ میں دیکھنے سے پتہ چلتا ہے کہ طلباء کے اس حصے نے $56.50$ تک اسکور کیا۔"
+  },
+  {
+   "en": "The $90$th percentile ($P_{90}$) separates the bottom $\\frac{90}{100}$ of the class, corresponding to the $\\frac{90N}{100} = 72$nd student. Looking at the class $69-73$, we see that $72$ out of $80$ students scored below $72.88$.",
+   "ur": "$90$ واں پرسنٹائل ($P_{90}$) کلاس کے نچلے $\\frac{90}{100}$ حصے کو الگ کرتا ہے، جو $\\frac{90N}{100} = 72$ ویں طالب علم کے مطابق ہے۔ کلاس $69-73$ کو دیکھتے ہوئے، ہم دیکھتے ہیں کہ $80$ میں سے $72$ طلباء نے $72.88$ سے کم اسکور کیا۔"
+  },
+  {
+   "en": "By definition, the interquartile range ($IQR$) is the difference between the upper and lower quartiles ($Q_3 - Q_1$). Subtracting $55.17$ from $66.42$ gives $11.25$, which measures the spread of the middle half of the students' scores.",
+   "ur": "تعریف کے مطابق، انٹر کوارٹائل رینج ($IQR$) اپر اور لوئر کوارٹائلز کے درمیان فرق ($Q_3 - Q_1$) کو کہتے ہیں۔ $66.42$ میں سے $55.17$ کو تفریق کرنے سے $11.25$ ملتا ہے، جو درمیانی آدھے طلباء کے اسکورز کے پھیلاؤ کی پیمائش کرتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "Rounding to whole numbers as instructed, the typical middle score on the memory test is $61$ (Median), while the middle half of the students scored between $55$ ($Q_1$) and $66$ ($Q_3$), giving a middle spread ($IQR$) of $11$ points. Also, $D_3 = 57$ and $P_{90} = 73$, which makes sense as a quick check because the values steadily increase as the positions move higher ($Q_1 < D_3 < \\text{Median} < Q_3 < P_{90}$, or $55 < 57 < 61 < 66 < 73$).",
+  "ur": "ہدایت کے مطابق مکمل اعداد (whole numbers) میں راؤنڈ کرنے پر، میموری ٹیسٹ میں عام درمیانی اسکور $61$ (میڈین) ہے، جبکہ درمیانی آدھے طلباء نے $55$ ($Q_1$) اور $66$ ($Q_3$) کے درمیان اسکور کیا، جس سے درمیانی پھیلاؤ ($IQR$) $11$ پوائنٹس بنتا ہے۔ اس کے علاوہ، $D_3 = 57$ اور $P_{90} = 73$ ہے، اور اس کی پڑتال ایسے ہو سکتی ہے کہ جیسے جیسے پوزیشن اوپر جاتی ہے ویلیوز ترتیب سے بڑھتی ہیں ($Q_1 < D_3 < \\text{Median} < Q_3 < P_{90}$، یعنی $55 < 57 < 61 < 66 < 73$)۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

@@ -1,0 +1,50 @@
+{
+ "item": "c10-ex4.1-q3",
+ "label": "iiid",
+ "answer_ref": "$\\frac{x + 3}{4}$",
+ "math": [
+  "g(x) = \\frac{x+1}{2}",
+  "(g\\circ g)(x) = g(g(x))",
+  "(g\\circ g)(x) = g\\left(\\frac{x+1}{2}\\right)",
+  "(g\\circ g)(x) = \\frac{\\left(\\frac{x+1}{2}\\right) + 1}{2}",
+  "(g\\circ g)(x) = \\frac{\\frac{x+1+2}{2}}{2}",
+  "(g\\circ g)(x) = \\frac{\\frac{x+3}{2}}{2}",
+  "(g\\circ g)(x) = \\frac{x + 3}{4}"
+ ],
+ "why": [
+  {
+   "en": "Since we need to find $(g\\circ g)(x)$, we only need the rule for $g(x)$ and can ignore $f(x)$ for this part. Writing down $g(x) = \\frac{x+1}{2}$ keeps our working formula right in front of us.",
+   "ur": "چونکہ ہمیں $(g\\circ g)(x)$ معلوم کرنا ہے، اس لیے ہمیں صرف $g(x)$ کے کلیے کی ضرورت ہے اور اس حصے کے لیے ہم $f(x)$ کو نظر انداز کر سکتے ہیں۔ $g(x) = \\frac{x+1}{2}$ کو لکھ لینے سے ہمارا مطلوبہ فارمولا ہمارے سامنے رہتا ہے۔"
+  },
+  {
+   "en": "By the definition of function composition, the circle symbol means one function is placed inside another. This shows us that the output of the inner $g(x)$ will become the new input for the outer function $g$.",
+   "ur": "تفاعل کی ترکیب (composition of functions) کی تعریف کے مطابق، دائرے کی علامت کا مطلب ہے کہ ایک تفاعل کو دوسرے کے اندر رکھا گیا ہے۔ یہ ہمیں بتاتا ہے کہ اندرونی $g(x)$ کا جواب بیرونی تفاعل $g$ کے لیے نیا ان پٹ بن جائے گا۔"
+  },
+  {
+   "en": "In algebra, we always work from the inside out, so we replace the inner $g(x)$ with its actual expression $\\frac{x+1}{2}$. Now we clearly see what expression needs to be fed into the outer function $g$.",
+   "ur": "الجبرا میں ہم ہمیشہ اندر سے باہر کی طرف حل کرتے ہیں، اس لیے ہم اندرونی $g(x)$ کی جگہ اس کی اصل قیمت $\\frac{x+1}{2}$ درج کرتے ہیں۔ اب ہمیں واضح طور پر نظر آ رہا ہے کہ بیرونی تفاعل $g$ میں کون سی رقم بطور ان پٹ ڈالنی ہے۔"
+  },
+  {
+   "en": "The rule for $g$ says to take the input, add $1$, and divide the whole thing by $2$. By putting our new input $\\frac{x+1}{2}$ in place of $x$, we have removed the function notation and turned the problem into pure algebra.",
+   "ur": "تفاعل $g$ کا اصول یہ ہے کہ ان پٹ لیں، اس میں $1$ جمع کریں، اور پوری رقم کو $2$ پر تقسیم کر دیں۔ $x$ کی جگہ نیا ان پٹ $\\frac{x+1}{2}$ رکھنے سے تفاعل کی علامت ختم ہو جاتی ہے اور سوال سادہ الجبرا میں بدل جاتا ہے۔"
+  },
+  {
+   "en": "To simplify a fraction inside a fraction, we first need to combine the terms in the upper part using the Least Common Multiple (LCM) rule. Taking the LCM of $2$ allows us to write $\\frac{x+1}{2}$ and $1$ over a single denominator.",
+   "ur": "کسر کے اندر موجود کسر کو مختصر کرنے کے لیے، ہمیں پہلے اوپر والے حصے کی رقوم کو ذواضعاف اقل (LCM) کے اصول سے یکجا کرنا ہوگا۔ $2$ کو بطور LCM لینے سے ہم $\\frac{x+1}{2}$ اور $1$ کو ایک ہی مخرج کے نیچے لکھ سکتے ہیں۔"
+  },
+  {
+   "en": "We combine the like terms (the numbers $1$ and $2$) in the top numerator to make it cleaner. This gives us a single neat fraction $\\frac{x+3}{2}$ in the numerator, ready for the final division.",
+   "ur": "ہم اوپر والے شمار کنندہ میں ایک جیسی رقوم (یعنی اعداد $1$ اور $2$) کو آپس میں جمع کر کے سادہ بناتے ہیں۔ اس سے ہمیں شمار کنندہ میں ایک صاف ستھری کسر $\\frac{x+3}{2}$ مل جاتی ہے، جو آخری تقسیم کے لیے تیار ہے۔"
+  },
+  {
+   "en": "By the rule of fractions, dividing a fraction by $2$ is the same as multiplying its denominator by $2$. Multiplying the two denominators ($2$ and $2$) gives $4$, leaving us with a single, fully simplified fraction.",
+   "ur": "کسور کے اصول کے مطابق، کسی کسر کو $2$ پر تقسیم کرنا اس کے مخرج کو $2$ سے ضرب دینے کے برابر ہے۔ دونوں مخرجوں ($2$ اور $2$) کو ضرب دینے سے $4$ آتا ہے، جس سے ہمیں ایک مکمل طور پر مختصر شدہ کسر حاصل ہو جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $(g\\circ g)(x) = \\frac{x+3}{4}$ gives us a single direct formula for applying the function $g$ twice in a row to any number $x$. Instead of putting a number into $g$, getting an answer, and putting it into $g$ again, this shortcut rule gets us to the final result in just one step.",
+  "ur": "آخری جواب $(g\\circ g)(x) = \\frac{x+3}{4}$ ہمیں کسی بھی عدد $x$ پر تفاعل $g$ کو لگاتار دو بار لگانے کے لیے ایک براہِ راست فارمولا دیتا ہے۔ کسی عدد کو $g$ میں ڈالنے، جواب نکالنے، اور اسے دوبارہ $g$ میں ڈالنے کے بجائے، یہ مختصر کلیہ ہمیں صرف ایک ہی قدم میں حتمی نتیجے تک پہنچا دیتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

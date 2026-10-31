@@ -1,0 +1,40 @@
+{
+ "item": "c10-ex11.1-q3",
+ "label": "",
+ "answer_ref": "Median = 10, Q1 = 6, Q3 = 14, Range = 14, IQR = 8",
+ "math": [
+  "\\text{Ordered data: } 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17,\\quad n = 15",
+  "\\text{Median} = \\left(\\frac{n + 1}{2}\\right)^{th} = 8^{th} \\text{ item} = 10",
+  "Q_1 = \\left(\\frac{n + 1}{4}\\right)^{th} = 4^{th} \\text{ item} = 6,\\quad Q_3 = \\left(\\frac{3(n + 1)}{4}\\right)^{th} = 12^{th} \\text{ item} = 14",
+  "\\text{Range} = 17 - 3 = 14,\\quad IQR = 14 - 6 = 8",
+  "\\text{Five-number summary: } (3, 6, 10, 14, 17)"
+ ],
+ "why": [
+  {
+   "en": "Before finding the median or quartiles, we must always arrange the raw data from smallest to largest because these measures depend on the exact position of the numbers. Counting the items also gives us the total number of values, $n = 15$, which we need for our position formulas.",
+   "ur": "میڈین یا کوارٹائلز معلوم کرنے سے پہلے، ہمیں ہمیشہ ڈیٹا کو چھوٹے سے بڑے کی ترتیب میں لکھنا چاہیے کیونکہ یہ مقداریں نمبروں کی درست پوزیشن پر منحصر ہوتی ہیں۔ ارکان کو گننے سے ہمیں کل تعداد $n = 15$ بھی مل جاتی ہے، جس کی ہمیں فارمولوں میں ضرورت ہوگی۔"
+  },
+  {
+   "en": "The median is the exact middle value of an ordered dataset, and since $n = 15$ is an odd number, we use the position formula $\\left(\\frac{n + 1}{2}\\right)^{th}$ item. This tells us that the $8^{th}$ number in our sorted list, which is $10$, divides the dataset into two equal halves.",
+   "ur": "میڈین ترتیب دیے گئے ڈیٹا کی بالکل درمیانی قیمت ہوتی ہے، اور چونکہ $n = 15$ ایک طاق عدد ہے، اس لیے ہم پوزیشن کا فارمولا $\\left(\\frac{n + 1}{2}\\right)^{th}$ استعمال کرتے ہیں۔ اس سے ہمیں پتہ چلتا ہے کہ ہماری فہرست میں آٹھواں نمبر، جو کہ $10$ ہے، ڈیٹا کو دو برابر حصوں میں تقسیم کرتا ہے۔"
+  },
+  {
+   "en": "Quartiles divide our ordered data into four equal parts: $Q_1$ is the quarter-way mark and $Q_3$ is the three-quarters mark. Using their position formulas for ungrouped data, we find that the $4^{th}$ item ($6$) is $Q_1$ and the $12^{th}$ item ($14$) is $Q_3$.",
+   "ur": "کوارٹائلز ہمارے ترتیب شدہ ڈیٹا کو چار برابر حصوں میں تقسیم کرتے ہیں: $Q_1$ پہلا چوتھائی حصہ ہے اور $Q_3$ تیسرا چوتھائی حصہ ہے۔ غیر گروہی ڈیٹا کے فارمولے استعمال کرتے ہوئے، ہمیں معلوم ہوتا ہے کہ چوتھی رقم ($6$) دراصل $Q_1$ ہے اور بارہویں رقم ($14$) دراصل $Q_3$ ہے۔"
+  },
+  {
+   "en": "To measure how spread out the data is, we calculate the Range (the total spread from the minimum $3$ to the maximum $17$) and the Interquartile Range or $IQR$ (the spread of the middle half of the data between $Q_1$ and $Q_3$). This shows us that the overall data spans $14$ units, while the central half spans $8$ units.",
+   "ur": "ڈیٹا کے پھیلاؤ کو ماپنے کے لیے، ہم رینج (کم سے کم قیمت $3$ سے زیادہ سے زیادہ قیمت $17$ تک کا کل پھیلاؤ) اور انٹر کوارٹائل رینج یعنی $IQR$ ($Q_1$ اور $Q_3$ کے درمیان درمیانی آدھے ڈیٹا کا پھیلاؤ) معلوم کرتے ہیں۔ اس سے ہمیں پتہ چلتا ہے کہ پورا ڈیٹا $14$ اکائیوں پر پھیلا ہوا ہے، جبکہ درمیانی آدھا حصہ $8$ اکائیوں پر محیط ہے۔"
+  },
+  {
+   "en": "A box-and-whisker plot visually displays the spread of our data using the five-number summary: minimum ($3$), $Q_1$ ($6$), median ($10$), $Q_3$ ($14$), and maximum ($17$). Grouping these five key values together gives us the exact points needed to draw the central box and the two outer whiskers on a number line.",
+   "ur": "باکس اینڈ وِسکر پلاٹ پانچ نمبروں کے خلاصے کو استعمال کرتے ہوئے ہمارے ڈیٹا کے پھیلاؤ کو تصویر کی شکل میں دکھاتا ہے: کم سے کم قیمت ($3$)، $Q_1$ ($6$)، میڈین ($10$)، $Q_3$ ($14$)، اور زیادہ سے زیادہ قیمت ($17$)۔ ان پانچ اہم قیمتوں کو یکجا کرنے سے ہمیں نمبر لائن پر درمیانی ڈبہ (box) اور باہر کی دو لکیریں (whiskers) بنانے کے لیے درست نقاط مل جاتے ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "Our final values give a complete summary of the dataset's center and spread: the middle value is $10$, the total spread (Range) is $14$, and the middle half of the data lies between $Q_1 = 6$ and $Q_3 = 14$, giving an $IQR$ of $8$. You can easily check the positions on your ordered list by counting that there are exactly three numbers before $Q_1$, three between $Q_1$ and the median, three between the median and $Q_3$, and three after $Q_3$.",
+  "ur": "ہماری حتمی قیمتیں ڈیٹا کے مرکز اور پھیلاؤ کا مکمل خلاصہ پیش کرتی ہیں: درمیانی قیمت $10$ ہے، کل پھیلاؤ (رینج) $14$ ہے، اور ڈیٹا کا درمیانی آدھا حصہ $Q_1 = 6$ اور $Q_3 = 14$ کے درمیان ہے، جس سے $IQR$ کی قیمت $8$ آتی ہے۔ آپ اپنی ترتیب شدہ فہرست میں گن کر آسانی سے پوزیشنز کی تصدیق کر سکتے ہیں کہ $Q_1$ سے پہلے ٹھیک تین نمبر ہیں، $Q_1$ اور میڈین کے درمیان تین، میڈین اور $Q_3$ کے درمیان تین، اور $Q_3$ کے بعد بھی تین نمبر ہیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

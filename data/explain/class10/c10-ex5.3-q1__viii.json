@@ -1,0 +1,50 @@
+{
+ "item": "c10-ex5.3-q1",
+ "label": "viii",
+ "answer_ref": "$\\frac{x y}{2 \\left(x + y\\right)}$",
+ "math": [
+  "\\frac{3x^2 - 3xy}{10x^2 + 10xy - 20y^2} \\times \\frac{5xy + 10y^2}{6x^2 + 6xy + 6y^2} \\div \\frac{2x^2 - 2y^2}{4x^3 - 4y^3}",
+  "= \\frac{3x(x - y)}{10(x^2 + xy - 2y^2)} \\times \\frac{5y(x + 2y)}{6(x^2 + xy + y^2)} \\div \\frac{2(x^2 - y^2)}{4(x^3 - y^3)}",
+  "= \\frac{3x(x - y)}{10(x^2 + 2xy - xy - 2y^2)} \\times \\frac{5y(x + 2y)}{6(x^2 + xy + y^2)} \\div \\frac{2(x - y)(x + y)}{4(x - y)(x^2 + xy + y^2)}",
+  "= \\frac{3x(x - y)}{10(x - y)(x + 2y)} \\times \\frac{5y(x + 2y)}{6(x^2 + xy + y^2)} \\div \\frac{2(x - y)(x + y)}{4(x - y)(x^2 + xy + y^2)}",
+  "= \\frac{3x(x - y)}{10(x - y)(x + 2y)} \\times \\frac{5y(x + 2y)}{6(x^2 + xy + y^2)} \\times \\frac{4(x - y)(x^2 + xy + y^2)}{2(x - y)(x + y)}",
+  "= \\frac{3 \\times 5 \\times 4 \\cdot xy}{10 \\times 6 \\times 2 \\cdot (x + y)} = \\frac{60xy}{120(x + y)}",
+  "= \\frac{xy}{2(x + y)}"
+ ],
+ "why": [
+  {
+   "en": "We begin by carefully writing down the original expression so we can clearly see which fractions are being multiplied and which one is being divided. This gives us a neat starting point before we begin factoring.",
+   "ur": "ہم سب سے پہلے دی گئی الجبری عبارت کو احتیاط سے لکھتے ہیں تاکہ واضح طور پر دیکھا جا سکے کہ کون سی کسریں ضرب ہو رہی ہیں اور کون سی تقسیم۔ یہ ہمیں تجزی (factorization) شروع کرنے سے پہلے ایک صاف آغاز فراہم کرتا ہے۔"
+  },
+  {
+   "en": "The first rule of simplifying algebraic fractions is to take out the highest common factor (HCF) from every numerator and denominator. Doing this reveals simpler polynomials inside the brackets, such as $x^2 - y^2$ and $x^3 - y^3$, which we can easily recognize and factorize next.",
+   "ur": "الجبری کسروں کو مختصر کرنے کا پہلا اصول ہر شمار کنندہ اور مخرج سے عادِ اعظم (HCF) کو مشترک نکالنا ہے۔ ایسا کرنے سے بریکٹوں کے اندر سادہ کثیر رقمی جملے جیسے $x^2 - y^2$ اور $x^3 - y^3$ ظاہر ہوتے ہیں، جنہیں ہم اگلے مرحلے میں بآسانی پہچان کر ان کی تجزی کر سکتے ہیں۔"
+  },
+  {
+   "en": "Now we apply standard algebraic identities for the difference of squares and difference of cubes, and use middle-term breaking on the quadratic expression $x^2 + xy - 2y^2$. Breaking these polynomials down into smaller factors is essential so we can find matching brackets to cancel out later.",
+   "ur": "اب ہم مربّعوں کے فرق اور مکعبوں کے فرق کے معیاری الجبری کلیے لاگو کرتے ہیں، اور دو درجی جملے $x^2 + xy - 2y^2$ کی درمیانی رقم کو توڑتے ہیں۔ ان کثیر رقمی جملوں کو چھوٹے اجزائے ضربی میں توڑنا ضروری ہے تاکہ ہم بعد میں کاٹنے کے لیے ایک جیسی بریکٹیں تلاش کر سکیں۔"
+  },
+  {
+   "en": "We finish factoring the first denominator by grouping the terms to get $(x - y)(x + 2y)$. Notice how every part of our expression is now completely factored into simple brackets, making it ready for cancellation.",
+   "ur": "ہم رقموں کے گروپ بنا کر پہلے مخرج کی تجزی مکمل کرتے ہیں جس سے ہمیں $(x - y)(x + 2y)$ حاصل ہوتا ہے۔ غور کریں کہ اب ہماری عبارت کا ہر حصہ مکمل طور پر سادہ بریکٹوں کے اجزائے ضربی میں تبدیل ہو چکا ہے، اور کٹنے کے لیے بالکل تیار ہے۔"
+  },
+  {
+   "en": "To divide by a fraction, the rule is to change the division sign ($\\div$) into multiplication ($\\times$) and take the reciprocal (invert) of the fraction that follows it. This turns the entire problem into a single multiplication of three fractions, allowing us to cancel factors across all of them.",
+   "ur": "کسی کسر سے تقسیم کرنے کا اصول یہ ہے کہ تقسیم کی علامت ($\\div$) کو ضرب ($\\times$) میں بدل دیا جائے اور اس کے بعد آنے والی کسر کا معکوس لیا جائے (یعنی الٹ دیا جائے)۔ اس سے پورا سوال تین کسروں کی ایک سادہ ضرب میں بدل جاتا ہے، جس سے ہم ان سب کے درمیان مشترک اجزائے ضربی کو کاٹ سکتے ہیں۔"
+  },
+  {
+   "en": "Since any non-zero factor divided by itself equals one, we cancel out all identical brackets like $(x - y)$, $(x + 2y)$, and $(x^2 + xy + y^2)$ from the top and bottom. Multiplying the remaining numbers and variables together cleans up the expression into a single, much simpler fraction.",
+   "ur": "چونکہ کوئی بھی غیر صفر جزوِ ضربی اپنے آپ سے تقسیم ہو کر ایک بن جاتا ہے، اس لیے ہم اوپر اور نیچے سے ایک جیسی تمام بریکٹوں جیسے $(x - y)$، $(x + 2y)$، اور $(x^2 + xy + y^2)$ کو کاٹ دیتے ہیں۔ باقی ماندہ اعداد اور متغیرات کو آپس میں ضرب دینے سے عبارت صاف ہو کر ایک بہت ہی سادہ کسر میں بدل جاتی ہے۔"
+  },
+  {
+   "en": "Finally, we reduce the numerical fraction to its lowest terms by dividing both $60$ and $120$ by their highest common factor, $60$. This leaves no more common factors between the numerator and denominator, giving us our fully simplified answer.",
+   "ur": "آخر میں، ہم عددی کسر کو اس کی مختصر ترین شکل میں لانے کے لیے $60$ اور $120$ دونوں کو ان کے عادِ اعظم $60$ پر تقسیم کرتے ہیں۔ اس کے بعد شمار کنندہ اور مخرج میں کوئی مشترک جزو باقی نہیں رہتا، اور ہمیں مکمل طور پر مختصر شدہ جواب مل جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $\\frac{xy}{2(x + y)}$ means that the entire complicated original expression is algebraically equivalent to this single, neat fraction (for all values of $x$ and $y$ that do not make any denominator zero). Instead of doing dozens of calculations to evaluate the original expression, you can now get the exact same result in just two steps using this simplified form.",
+  "ur": "حتمی جواب $\\frac{xy}{2(x + y)}$ کا مطلب یہ ہے کہ دی گئی پوری پیچیدہ عبارت الجبری طور پر اس ایک سادہ سی کسر کے برابر ہے ($x$ اور $y$ کی ان تمام قیمتوں کے لیے جو کسی مخرج کو صفر نہ بنائیں)۔ اصل عبارت کی قیمت معلوم کرنے کے لیے درجنوں حساب کتاب کرنے کے بجائے، اب آپ اس مختصر شکل کو استعمال کرتے ہوئے صرف دو مراحل میں بالکل وہی نتیجہ حاصل کر سکتے ہیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

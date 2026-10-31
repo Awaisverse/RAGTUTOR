@@ -1,0 +1,40 @@
+{
+ "item": "c10-ex12.3-q7",
+ "label": "",
+ "answer_ref": "$\\frac{4}{663}$",
+ "math": [
+  "n(S) = 52",
+  "P(A) = \\frac{4}{52} = \\frac{1}{13}",
+  "P(B|A) = \\frac{4}{51}",
+  "P(A \\cap B) = P(A) \\times P(B|A)",
+  "P(A \\cap B) = \\frac{4}{52} \\times \\frac{4}{51} = \\frac{1}{13} \\times \\frac{4}{51} = \\frac{4}{663}"
+ ],
+ "why": [
+  {
+   "en": "Every probability problem starts by finding the size of the sample space, which is the total number of possible outcomes. Knowing that $n(S) = 52$ gives us the starting denominator for the very first card Saleem draws.",
+   "ur": "احتمال کا ہر سوال نمونہ کی فضا (sample space) کا حجم معلوم کرنے سے شروع ہوتا ہے، جو کہ تمام ممکنہ نتائج کی کل تعداد ہے۔ یہ جاننا کہ $n(S) = 52$ ہے ہمیں سلیم کے پہلے پتے کے لیے ابتدائی مخرج (denominator) فراہم کرتا ہے۔"
+  },
+  {
+   "en": "We use the basic definition of probability, dividing the number of favourable outcomes ($4$ Jacks) by the total outcomes ($52$ cards). Simplifying this fraction tells us that there is a $\\frac{1}{13}$ chance of getting a Jack on the first draw.",
+   "ur": "ہم احتمال کی بنیادی تعریف استعمال کرتے ہوئے موافق نتائج ($4$ غلام) کو کل نتائج ($52$ پتوں) پر تقسیم کرتے ہیں۔ اس کسر کو مختصر کرنے سے ہمیں معلوم ہوتا ہے کہ پہلی باری میں غلام نکلنے کا امکان $\\frac{1}{13}$ ہے۔"
+  },
+  {
+   "en": "The words 'without replacement' mean the first card is kept out, reducing our total remaining cards to $51$. Since the first card was a Jack, all $4$ Queens are still inside, giving a conditional probability of $\\frac{4}{51}$ for the second draw.",
+   "ur": "'واپس رکھے بغیر' (without replacement) کے الفاظ کا مطلب ہے کہ پہلا پتہ باہر ہی رکھا گیا ہے، جس سے ہمارے پاس باقی ماندہ کل پتے کم ہو کر $51$ رہ جاتے ہیں۔ چونکہ پہلا پتہ غلام تھا، اس لیے تمام $4$ ملکہ اب بھی گڈی کے اندر موجود ہیں، جس سے دوسری باری کا مشروط احتمال $\\frac{4}{51}$ بنتا ہے۔"
+  },
+  {
+   "en": "Because keeping the first card out changes the total for the second draw, these two events are dependent. We write down the multiplication law for dependent events to show that we must multiply their individual probabilities together.",
+   "ur": "چونکہ پہلے پتے کو باہر رکھنے سے دوسری باری کے لیے کل تعداد بدل جاتی ہے، اس لیے یہ دونوں واقعات منحصر (dependent) ہیں۔ ہم منحصر واقعات کے لیے ضرب کا قانون لکھتے ہیں تاکہ یہ واضح ہو سکے کہ ہمیں ان کے انفرادی احتمالات کو آپس میں ضرب دینا ہے۔"
+  },
+  {
+   "en": "Now we simply put our calculated fractions into the formula and multiply the numerators and denominators. This final calculation combines both draws into a single exact probability of $\\frac{4}{663}$.",
+   "ur": "اب ہم بس اپنی معلوم کردہ کسروں کو فارمولے میں درج کرتے ہیں اور شمار کنندگان اور مخرج کو آپس میں ضرب دیتے ہیں۔ یہ آخری حساب دونوں باریوں کو ملا کر ایک واحد اور درست احتمال $\\frac{4}{663}$ بنا دیتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $\\frac{4}{663}$ means that if Saleem repeats this two-card draw $663$ times, we expect him to get a Jack followed by a Queen only about $4$ times. You can check that this makes sense because the numerator $4$ is much smaller than the denominator $663$, showing it is a rare event.",
+  "ur": "آخری جواب $\\frac{4}{663}$ کا مطلب یہ ہے کہ اگر سلیم دو پتے نکالنے کا یہ عمل $663$ بار دہرائے، تو ہم توقع کرتے ہیں کہ اسے صرف $4$ بار ہی پہلے غلام اور پھر ملکہ ملے گی۔ آپ اس بات کی تصدیق ایسے کر سکتے ہیں کہ شمار کنندہ $4$ مخرج $663$ سے بہت چھوٹا ہے، جو ظاہر کرتا ہے کہ ایسا ہونا ایک نایاب واقعہ ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

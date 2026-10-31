@@ -1,0 +1,50 @@
+{
+ "item": "c10-ex5.2-q1",
+ "label": "x",
+ "answer_ref": "$\\frac{x - 4}{\\left(x - 3\\right) \\left(x - 2\\right) \\left(x - 1\\right)}$",
+ "math": [
+  "\\frac{1}{x^{2} - 4 x + 3} + \\frac{1}{x^{2} - 3 x + 2} - \\frac{1}{x^{2} - 5 x + 6}",
+  "= \\frac{1}{x^{2} - 3 x - x + 3} + \\frac{1}{x^{2} - 2 x - x + 2} - \\frac{1}{x^{2} - 3 x - 2 x + 6}",
+  "= \\frac{1}{x(x - 3) - 1(x - 3)} + \\frac{1}{x(x - 2) - 1(x - 2)} - \\frac{1}{x(x - 3) - 2(x - 3)}",
+  "= \\frac{1}{(x - 3)(x - 1)} + \\frac{1}{(x - 2)(x - 1)} - \\frac{1}{(x - 3)(x - 2)}",
+  "= \\frac{(x - 2) + (x - 3) - (x - 1)}{(x - 3)(x - 2)(x - 1)}",
+  "= \\frac{x - 2 + x - 3 - x + 1}{(x - 3)(x - 2)(x - 1)}",
+  "= \\frac{x - 4}{\\left(x - 3\\right) \\left(x - 2\\right) \\left(x - 1\\right)}"
+ ],
+ "why": [
+  {
+   "en": "We start by carefully writing down the three given algebraic fractions. Since their quadratic denominators are all different, we cannot add or subtract them directly without first finding a common denominator.",
+   "ur": "ہم سب سے پہلے دی گئی تینوں الجبری کسور کو احتیاط سے لکھتے ہیں۔ چونکہ ان کے دو درجی مخرج مختلف ہیں، اس لیے ہم مشترک مخرج نکالے بغیر انہیں براہِ راست جمع یا تفریق نہیں کر سکتے۔"
+  },
+  {
+   "en": "To find the Least Common Multiple (L.C.M.) of the denominators, we first need to factorize each quadratic expression using the mid-term breaking method. This breaks each 3-term denominator into 4 terms so we can easily group them.",
+   "ur": "مخرجوں کا ذواضعاف اقل (L.C.M.) معلوم کرنے کے لیے، ہمیں پہلے درمیانی رقم کو توڑنے کے طریقے (mid-term breaking) سے ہر دو درجی جملے کی تجزی کرنی ہوگی۔ اس سے ہر 3 رکنی مخرج 4 رقموں میں تبدیل ہو جاتا ہے تاکہ ہم ان کے جوڑے بنا سکیں۔"
+  },
+  {
+   "en": "By factoring by grouping, we pull out the common variable or number from each pair of terms in the denominators. Notice how a matching binomial bracket like $(x - 3)$ or $(x - 2)$ appears in each part, confirming our mid-term breaking is correct.",
+   "ur": "گروپ بندی کے ذریعے تجزی کرتے ہوئے، ہم مخرجوں میں ہر دو رقموں کے جوڑے سے مشترک متغیر یا عدد باہر نکالتے ہیں۔ غور کریں کہ ہر حصے میں $(x - 3)$ یا $(x - 2)$ جیسی ایک جیسی دو رکنی بریکٹ آ گئی ہے، جو تصدیق کرتی ہے کہ ہماری تجزی درست ہے۔"
+  },
+  {
+   "en": "Factoring out the common binomial brackets completes the factorization of all three denominators into simple linear factors. Now we can clearly see which factors are shared among the fractions, making it easy to build the L.C.M.",
+   "ur": "مشترک دو رکنی بریکٹس کو باہر نکالنے سے تینوں مخرجوں کی سادہ یک درجی اجزائے ضربی میں تجزی مکمل ہو جاتی ہے۔ اب ہم واضح طور پر دیکھ سکتے ہیں کہ کون سے اجزاء مشترک ہیں، جس سے ذواضعاف اقل (L.C.M.) بنانا آسان ہو جاتا ہے۔"
+  },
+  {
+   "en": "Using the rule for adding and subtracting fractions, we combine them over their Least Common Denominator, $(x - 3)(x - 2)(x - 1)$. Each numerator is multiplied by the single factor that was missing from its own denominator.",
+   "ur": "کسور کو جمع اور تفریق کرنے کے اصول کے تحت، ہم انہیں ان کے مشترک مخرج (L.C.M.) یعنی $(x - 3)(x - 2)(x - 1)$ کے اوپر اکٹھا کر لیتے ہیں۔ ہر شمار کنندہ کو اس ایک جزو سے ضرب دی جاتی ہے جو اس کے اپنے مخرج میں موجود نہیں تھا۔"
+  },
+  {
+   "en": "We expand the brackets in the numerator so that we can group like terms together. Be very careful with the minus sign before $(x - 1)$, as the distributive law requires it to flip the sign of $-1$ to $+1$.",
+   "ur": "ہم شمار کنندہ میں بریکٹس کو کھولتے ہیں تاکہ ہم ایک جیسی رقموں کو اکٹھا کر سکیں۔ $(x - 1)$ سے پہلے منفی کی علامت کے ساتھ بہت احتیاط کریں، کیونکہ تقسیمی قانون کے مطابق یہ اندر موجود $-1$ کی علامت کو بدل کر $+1$ کر دیتی ہے۔"
+  },
+  {
+   "en": "Finally, we collect the like terms in the numerator: $x + x - x$ leaves a single $x$, and the constants $-2 - 3 + 1$ combine to give $-4$. Since no further factors can be cancelled between the numerator and denominator, our simplification is complete.",
+   "ur": "آخر میں، ہم شمار کنندہ میں ایک جیسی رقموں کو حل کرتے ہیں: $x + x - x$ سے صرف ایک $x$ بچتا ہے، اور مستقل اعداد $-2 - 3 + 1$ مل کر $-4$ بناتے ہیں۔ چونکہ شمار کنندہ اور مخرج کے درمیان مزید کوئی جزو کٹ نہیں سکتا، اس لیے ہمارا اختصار مکمل ہو گیا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $\\frac{x - 4}{(x - 3)(x - 2)(x - 1)}$ means that the complicated sum and difference of those three original fractions is completely equivalent to this single, neat fraction (for all values of $x$ except $1, 2,$ and $3$). If you want to check your work, you can substitute $x = 4$ into the original question; each fraction will combine to give $0$, which matches our final answer because $4 - 4 = 0$ in the numerator!",
+  "ur": "آخری جواب $\\frac{x - 4}{(x - 3)(x - 2)(x - 1)}$ کا مطلب یہ ہے کہ اصل تین کسور کا وہ پیچیدہ مجموعہ اور فرق اس ایک سادہ سی کسر کے بالکل برابر ہے ($x$ کی تمام قیمتوں کے لیے سوائے $1, 2,$ اور $3$ کے)۔ اگر آپ اپنے جواب کی پڑتال کرنا چاہتے ہیں، تو اصل سوال میں $x = 4$ درج کریں؛ تمام کسور حل ہو کر $0$ جواب دیں گی، جو ہمارے آخری جواب سے بالکل مطابقت رکھتا ہے کیونکہ شمار کنندہ میں $4 - 4 = 0$ بنتا ہے!"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

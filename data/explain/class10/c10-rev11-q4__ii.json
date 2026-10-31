@@ -1,0 +1,40 @@
+{
+ "item": "c10-rev11-q4",
+ "label": "ii",
+ "answer_ref": "strong negative correlation",
+ "math": [
+  "n = 10, \\quad x = 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, \\quad y = 90, 85, 83, 80, 76, 74, 72, 70, 68, 65",
+  "r = \\frac{n\\sum xy - \\sum x\\sum y}{\\sqrt{[n\\sum x^2 - (\\sum x)^2][n\\sum y^2 - (\\sum y)^2]}}",
+  "\\sum x = 45, \\quad \\sum y = 763, \\quad \\sum x^2 = 285, \\quad \\sum y^2 = 58799, \\quad \\sum xy = 3216",
+  "r = \\frac{10(3216) - (45)(763)}{\\sqrt{[10(285) - (45)^2][10(58799) - (763)^2]}} = \\frac{-2175}{\\sqrt{825 \\times 5821}} \\approx -0.993",
+  "\\text{strong negative correlation}"
+ ],
+ "why": [
+  {
+   "en": "In statistics, we always start by clearly assigning variables to our two data sets so we can analyze their relationship. Here, setting exercise hours as $x$ and heart rate as $y$ for our $n = 10$ individuals organizes the raw data for our mathematical formulas.",
+   "ur": "شماریات (statistics) میں، ہم ہمیشہ اپنے دو ڈیٹا سیٹس کو واضح طور پر متغیرات (variables) تفویض کرنے سے شروعات کرتے ہیں تاکہ ہم ان کے تعلق کا تجزیہ کر سکیں۔ یہاں، $n = 10$ افراد کے لیے ورزش کے گھنٹوں کو $x$ اور دل کی دھڑکن کو $y$ مقرر کرنے سے ہمارا ڈیٹا ریاضی کے فارمولوں کے لیے منظم ہو جاتا ہے۔"
+  },
+  {
+   "en": "While a scatter diagram shows the general trend visually, Pearson's correlation coefficient ($r$) gives us a precise mathematical measure of both the direction and strength of the linear relationship. Writing down this formula tells us exactly which sums we need to compute from our data.",
+   "ur": "جبکہ سکیٹر ڈایاگرام بصری طور پر عمومی رجحان کو ظاہر کرتا ہے، پیئرسن کا کوریلیشن کوفیشنٹ ($r$) ہمیں خطی تعلق (linear relationship) کی سمت اور مضبوطی دونوں کی درست ریاضیاتی پیمائش دیتا ہے۔ یہ فارمولا لکھنے سے ہمیں بالکل پتہ چل جاتا ہے کہ ہمیں اپنے ڈیٹا سے کون سے مجموعے (sums) معلوم کرنے ہیں۔"
+  },
+  {
+   "en": "To use Pearson's formula without making calculation errors, we first compute the individual building blocks: the sums of $x$, $y$, their squares ($x^2$, $y^2$), and their products ($xy$). Having these পাঁচ totals ready makes substituting into the main formula much simpler and cleaner.",
+   "ur": "پیئرسن کے فارمولے کو بغیر کسی غلطی کے استعمال کرنے کے لیے، ہم پہلے بنیادی حصے حل کرتے ہیں: یعنی $x$، $y$، ان کے مربوں ($x^2$، $y^2$)، اور ان کے حاصل ضرب ($xy$) کے مجموعے۔ ان پانچ مجموعوں کو پہلے سے تیار رکھنے سے اصل فارمولے میں قیمتیں درج کرنا بہت آسان اور صاف ہو جاتا ہے۔"
+  },
+  {
+   "en": "By substituting our calculated sums into the formula and simplifying, we reduce the entire dataset of $10$ individuals down to a single correlation number, $r \\approx -0.993$. The negative sign tells us the variables move in opposite directions, and the value's closeness to $-1$ shows the relationship is very consistent.",
+   "ur": "اپنے معلوم کردہ مجموعوں کو فارمولے میں درج کر کے اور مختصر کر کے، ہم $10$ افراد کے پورے ڈیٹا کو ایک واحد کوریلیشن نمبر، $r \\approx -0.993$ تک محدود کر لیتے ہیں۔ منفی علامت ہمیں بتاتی ہے کہ دونوں متغیرات مخالف سمتوں میں حرکت کرتے ہیں، اور قیمت کا $-1$ کے قریب ہونا ظاہر کرتا ہے کہ یہ تعلق بہت مضبوط ہے۔"
+  },
+  {
+   "en": "By definition, a correlation coefficient $r$ close to $-1$ indicates a strong negative correlation. This confirms our final conclusion that as weekly exercise hours increase, the resting heart rate reliably decreases.",
+   "ur": "تعریف کے مطابق، کوریلیشن کوفیشنٹ $r$ کا $-1$ کے قریب ہونا ایک مضبوط منفی ربط (strong negative correlation) کو ظاہر کرتا ہے۔ یہ ہمارے حتمی نتیجے کی تصدیق کرتا ہے کہ جیسے جیسے ہفتہ وار ورزش کے گھنٹے بڑھتے ہیں، آرام کی حالت میں دل کی دھڑکن باقاعدگی سے کم ہوتی جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer 'strong negative correlation' means there is a very clear inverse relationship between exercising and resting heart rate: the more hours a person exercises per week, the lower their resting heart rate tends to be. You can easily check this straight from the table by noticing that as exercise hours go up from $0$ to $9$, the heart rate steadily drops from $90$ down to $65$ without any exceptions.",
+  "ur": "حتمی جواب 'مضبوط منفی ربط' (strong negative correlation) کا مطلب ہے کہ ورزش کرنے اور آرام کی حالت میں دل کی دھڑکن کے درمیان ایک بہت واضح معکوس تعلق (inverse relationship) ہے: ایک شخص ہفتے میں جتنے زیادہ گھنٹے ورزش کرتا ہے، اس کے دل کی دھڑکن اتنی ہی کم ہوتی جاتی ہے۔ آپ اسے براہِ راست جدول (table) سے باآسانی چیک کر سکتے ہیں کہ جیسے جیسے ورزش کے گھنٹے $0$ سے $9$ تک بڑھتے ہیں، دل کی دھڑکن بغیر کسی استثناء کے مسلسل $90$ سے کم ہو کر $65$ تک آ جاتی ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

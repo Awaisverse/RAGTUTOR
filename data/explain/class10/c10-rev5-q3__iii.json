@@ -1,0 +1,40 @@
+{
+ "item": "c10-rev5-q3",
+ "label": "iii",
+ "answer_ref": "$1$",
+ "math": [
+  "\\frac{a^2 - (b - c)^2}{(a + b)^2 - c^2} \\times \\frac{a^2 - (b + c)^2}{(a - b)^2 - c^2}",
+  "= \\frac{[a - (b - c)][a + (b - c)]}{[(a + b) - c][(a + b) + c]} \\times \\frac{[a - (b + c)][a + (b + c)]}{[(a - b) - c][(a - b) + c]}",
+  "= \\frac{(a - b + c)(a + b - c)}{(a + b - c)(a + b + c)} \\times \\frac{(a - b - c)(a + b + c)}{(a - b - c)(a - b + c)}",
+  "= \\frac{a - b + c}{a + b + c} \\times \\frac{a + b + c}{a - b + c}",
+  "= 1"
+ ],
+ "why": [
+  {
+   "en": "We begin by writing down the product of the two given algebraic fractions. Notice that every numerator and denominator is in the form of one squared term minus another squared term, which is a big hint for our next step.",
+   "ur": "ہم دی گئی دو الجبری کسروں کے حاصل ضرب کو لکھ کر شروعات کرتے ہیں۔ غور کریں کہ ہر شمار کنندہ اور مخرج دو مربّع رقموں کے فرق کی شکل میں ہے، جو ہمارے اگلے مرحلے کے لیے ایک بڑا اشارہ ہے۔"
+  },
+  {
+   "en": "To simplify algebraic fractions, we must factorize them first, rather than expanding the squares. By using the difference of two squares identity, $x^2 - y^2 = (x - y)(x + y)$, we break down each numerator and denominator into multiplied factors.",
+   "ur": "الجبری کسروں کو مختصر کرنے کے لیے، ہمیں مربّع کھولنے کے بجائے پہلے ان کی تجزی (factorize) کرنی چاہیے۔ دو مربّعوں کے فرق کا کلیہ $x^2 - y^2 = (x - y)(x + y)$ استعمال کرتے ہوئے، ہم ہر شمار کنندہ اور مخرج کو ضربی اجزاء میں توڑ لیتے ہیں۔"
+  },
+  {
+   "en": "We open the inner round brackets carefully, remembering the basic algebra rule that a minus sign outside a bracket changes the signs of all terms inside it. This cleans up the factors so we can clearly see which expressions are identical.",
+   "ur": "ہم اندرونی چھوٹی بریکٹوں کو احتیاط سے کھولتے ہیں، اور الجبرا کا یہ بنیادی اصول یاد رکھتے ہیں کہ بریکٹ کے باہر منفی کا نشان اندر موجود تمام رقموں کی علامتیں بدل دیتا ہے۔ اس سے اجزاء صاف ہو جاتے ہیں تاکہ ہم واضح طور پر دیکھ سکیں کہ کون سے جملے ایک جیسے ہیں۔"
+  },
+  {
+   "en": "Since a factor divided by itself equals $1$, we can cancel out identical factors that appear in both the top and bottom of each fraction. Removing $(a + b - c)$ from the first fraction and $(a - b - c)$ from the second makes the expression much simpler.",
+   "ur": "چونکہ کسی بھی جزو کو اپنے آپ پر تقسیم کرنے سے جواب $1$ آتا ہے، اس لیے ہم ہر کسر کے اوپر اور نیچے موجود ایک جیسے اجزاء کو کاٹ سکتے ہیں۔ پہلی کسر سے $(a + b - c)$ اور دوسری سے $(a - b - c)$ کو ختم کرنے سے یہ جملہ بہت سادہ ہو جاتا ہے۔"
+  },
+  {
+   "en": "When multiplying fractions, we can also cancel common factors diagonally across the multiplication sign. Since every remaining factor in the numerators matches a factor in the denominators, everything cancels out completely to leave $1$.",
+   "ur": "کسروں کو ضرب دیتے وقت، ہم ضرب کے نشان کے آر پار ترچھے (diagonally) مشترک اجزاء کو بھی کاٹ سکتے ہیں۔ چونکہ شمار کنندہ میں بچ جانے والا ہر جزو مخرج کے کسی نہ کسی جزو کے بالکل برابر ہے، اس لیے سب کچھ مکمل طور پر کٹ جاتا ہے اور پیچھے $1$ بچتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $1$ means that the entire complicated expression always equals $1$, no matter what values we choose for $a$, $b$, and $c$ (as long as the denominators do not become zero). This shows that the two original fractions are actually multiplicative inverses (reciprocals) of each other.",
+  "ur": "آخری جواب $1$ کا مطلب یہ ہے کہ یہ پورا پیچیدہ جملہ ہمیشہ $1$ کے برابر ہوتا ہے، چاہے ہم $a$، $b$ اور $c$ کی کوئی بھی قیمت رکھ لیں (بشرطیکہ مخرج صفر نہ ہوں)۔ اس سے ظاہر ہوتا ہے کہ اصل دو کسریں درحقیقت ایک دوسرے کا ضربی معکوس (reciprocals) ہیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

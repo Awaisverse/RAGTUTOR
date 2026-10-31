@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex4.1-q3",
+ "label": "iiia",
+ "answer_ref": "$x$",
+ "math": [
+  "f(x) = 2x - 1, \\quad g(x) = \\frac{x+1}{2}",
+  "(f \\circ g)(x) = f(g(x))",
+  "(f \\circ g)(x) = f\\left(\\frac{x+1}{2}\\right)",
+  "(f \\circ g)(x) = 2\\left(\\frac{x+1}{2}\\right) - 1",
+  "(f \\circ g)(x) = (x + 1) - 1",
+  "(f \\circ g)(x) = x"
+ ],
+ "why": [
+  {
+   "en": "We always start by clearly stating the given information from the question. Having both rules, $f(x) = 2x - 1$ and $g(x) = \\frac{x+1}{2}$, right in front of us prevents mistakes when we combine them in the next steps.",
+   "ur": "ہم ہمیشہ سوال میں دی گئی معلومات کو واضح طور پر لکھنے سے شروعات کرتے ہیں۔ دونوں فنکشنز $f(x) = 2x - 1$ اور $g(x) = \\frac{x+1}{2}$ کو سامنے لکھنے سے اگلے مراحل میں انہیں ملاتے وقت غلطی کا امکان نہیں رہتا۔"
+  },
+  {
+   "en": "Here we use the definition of composition of functions, which tells us to work from the inside out. Writing $(f \\circ g)(x)$ as $f(g(x))$ shows that the entire function $g(x)$ will act as the input for the outer function $f$.",
+   "ur": "یہاں ہم تفاعل کی ترکیب (composition of functions) کی تعریف استعمال کرتے ہیں، جو ہمیں اندر سے باہر کی طرف حل کرنے کا بتاتی ہے۔ $(f \\circ g)(x)$ کو $f(g(x))$ کے طور پر لکھنا یہ ظاہر کرتا ہے کہ پورا فنکشن $g(x)$ بیرونی فنکشن $f$ کے لیے ان پٹ (input) کا کام کرے گا۔"
+  },
+  {
+   "en": "Since we know the exact formula for $g(x)$, we replace the symbol $g(x)$ with its algebraic expression $\\frac{x+1}{2}$. This shows us the exact value that needs to be plugged into the function $f$.",
+   "ur": "چونکہ ہمیں $g(x)$ کا فارمولا معلوم ہے، اس لیے ہم $g(x)$ کی جگہ اس کی الجبری قیمت $\\frac{x+1}{2}$ درج کرتے ہیں۔ اس سے ہمیں وہ اصل قیمت نظر آ جاتی ہے جسے فنکشن $f$ میں پٹ (put) کرنا ہے۔"
+  },
+  {
+   "en": "Now we apply the rule of function $f$, which says to multiply the input by $2$ and then subtract $1$. By putting our new input $\\frac{x+1}{2}$ in place of $x$ in $2x - 1$, we successfully combine both functions into a single algebraic expression.",
+   "ur": "اب ہم فنکشن $f$ کا اصول لاگو کرتے ہیں، جو کہتا ہے کہ ان پٹ کو $2$ سے ضرب دیں اور پھر $1$ تفریق کریں۔ $2x - 1$ میں $x$ کی جگہ نیا ان پٹ $\\frac{x+1}{2}$ رکھنے سے دونوں فنکشنز ایک الجبری جملے میں یکجا ہو جاتے ہیں۔"
+  },
+  {
+   "en": "Because the expression $\\frac{x+1}{2}$ is being both multiplied and divided by $2$, these opposite operations cancel each other out. This removes the fraction and makes the expression much simpler to solve.",
+   "ur": "چونکہ جملہ $\\frac{x+1}{2}$ بیک وقت $2$ سے ضرب اور تقسیم ہو رہا ہے، اس لیے یہ متضاد عوامل ایک دوسرے کو کینسل کر دیتے ہیں۔ اس سے کسر (fraction) ختم ہو جاتی ہے اور جملہ حل کرنے کے لیے بہت سادہ ہو جاتا ہے۔"
+  },
+  {
+   "en": "Finally, we combine the constant terms $+1$ and $-1$, which add up to zero. This leaves us with the simplest form of our composite function, which is just $x$.",
+   "ur": "آخر میں، ہم مستقل مقداروں (constants) $+1$ اور $-1$ کو حل کرتے ہیں جو آپس میں کٹ کر صفر ہو جاتی ہیں۔ اس طرح ہمارے پاس مرکب تفاعل کی سب سے سادہ شکل، یعنی صرف $x$ بچ جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $(f \\circ g)(x) = x$ tells us that applying function $g$ and then function $f$ brings us right back to our starting input $x$. In mathematics, this special result means that $f$ and $g$ are inverse functions of each other, as one completely undoes the effect of the other.",
+  "ur": "آخری جواب $(f \\circ g)(x) = x$ ہمیں بتاتا ہے کہ پہلے فنکشن $g$ اور پھر فنکشن $f$ لگانے سے ہمیں واپس وہی ابتدائی ان پٹ $x$ مل جاتا ہے۔ ریاضی میں اس خاص نتیجے کا مطلب ہے کہ $f$ اور $g$ ایک دوسرے کے معکوس تفاعل (inverse functions) ہیں، کیونکہ ایک فنکشن دوسرے کے اثر کو مکمل طور پر ختم کر دیتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

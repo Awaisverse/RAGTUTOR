@@ -1,0 +1,105 @@
+{
+ "item": "c10-ex5.4-q1",
+ "label": "xi",
+ "answer_ref": "$x = \\frac{3 + \\sqrt{33}}{2},\\ \\frac{3 - \\sqrt{33}}{2},\\ \\frac{3 + \\sqrt{41}}{2},\\ \\frac{3 - \\sqrt{41}}{2}$",
+ "math": [
+  "[(x+1)(x-4)][(x+2)(x-5)] + 8 = (x^2 - 3x - 4)(x^2 - 3x - 10) + 8 = 0",
+  "\\text{Let } y = x^2 - 3x",
+  "y^{2} - 6 y - 8 y + 48 = 0",
+  "y \\left(y - 6\\right) - 8 \\left(y - 6\\right) = 0",
+  "\\left(y - 8\\right) \\left(y - 6\\right) = 0",
+  "y - 8 = 0 \\quad\\text{or}\\quad y - 6 = 0",
+  "y = 6,\\quad y = 8",
+  "x^2 - 3x = 6",
+  "a = 1,\\quad b = -3,\\quad c = -6",
+  "x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a} = \\frac{-(-3) \\pm \\sqrt{(-3)^2 - 4(1)(-6)}}{2(1)}",
+  "x = \\frac{3 \\pm \\sqrt{9 + 24}}{2} = \\frac{3 \\pm \\sqrt{33}}{2}",
+  "x = \\frac{3 + \\sqrt{33}}{2},\\quad x = \\frac{3 - \\sqrt{33}}{2}",
+  "x^2 - 3x = 8",
+  "a = 1,\\quad b = -3,\\quad c = -8",
+  "x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a} = \\frac{-(-3) \\pm \\sqrt{(-3)^2 - 4(1)(-8)}}{2(1)}",
+  "x = \\frac{3 \\pm \\sqrt{9 + 32}}{2} = \\frac{3 \\pm \\sqrt{41}}{2}",
+  "x = \\frac{3 + \\sqrt{41}}{2},\\quad x = \\frac{3 - \\sqrt{41}}{2}",
+  "\\text{S.S} = \\{\\frac{3 + \\sqrt{33}}{2}, \\frac{3 - \\sqrt{33}}{2}, \\frac{3 + \\sqrt{41}}{2}, \\frac{3 - \\sqrt{41}}{2}\\}"
+ ],
+ "why": [
+  {
+   "en": "In equations with four linear factors, we use the rule $a + b = c + d$ on the constant terms: here $1 + (-4) = -3$ and $2 + (-5) = -3$. Multiplying the pairs chosen this way creates an identical $x^2 - 3x$ part in both brackets, which saves us from a difficult degree-$4$ expansion.",
+   "ur": "چار یک درجی اجزائے ضربی والی مساوات میں، ہم مستقل نمبروں پر $a + b = c + d$ کا اصول استعمال کرتے ہیں: یہاں $1 + (-4) = -3$ اور $2 + (-5) = -3$ ہے۔ اس طرح جوڑے بنا کر ضرب دینے سے دونوں بریکٹس میں ایک جیسا حصہ $x^2 - 3x$ بن جاتا ہے، جو ہمیں ایک مشکل درجہ-$4$ کی مساوات کھولنے سے بچاتا ہے۔"
+  },
+  {
+   "en": "We use the substitution method by replacing the repeated expression $x^2 - 3x$ with a single variable $y$. This reduces the complicated equation into a simple quadratic equation in terms of $y$: $(y - 4)(y - 10) + 8 = 0$.",
+   "ur": "ہم متبادل کا طریقہ استعمال کرتے ہوئے بار بار آنے والے جملے $x^2 - 3x$ کی جگہ ایک نیا متغیر $y$ رکھتے ہیں۔ اس سے یہ پیچیدہ مساوات $y$ کی شکل میں ایک سادہ دو درجی مساوات $(y - 4)(y - 10) + 8 = 0$ میں بدل جاتی ہے۔"
+  },
+  {
+   "en": "After expanding the brackets and adding $8$ to get $y^2 - 14y + 48 = 0$, we use middle-term breaking to factorize it. Finding two numbers, $-6$ and $-8$, that multiply to $48$ and add to $-14$ prepares the expression for grouping.",
+   "ur": "بریکٹس کو کھولنے اور $8$ جمع کرنے سے $y^2 - 14y + 48 = 0$ حاصل ہوتا ہے، جس کی تجزی کرنے کے لیے ہم درمیانی رقم کو توڑنے کا طریقہ اپناتے ہیں۔ دو ایسے اعداد $-6$ اور $-8$ تلاش کرنا جن کی ضرب $48$ اور جمع $-14$ ہو، اس جملے کو گروپ بندی کے لیے تیار کرتا ہے۔"
+  },
+  {
+   "en": "We factor by grouping, pulling out the highest common factor from the first two terms and the last two terms separately. Seeing the exact same bracket $(y - 6)$ appear twice confirms our middle-term split was successful.",
+   "ur": "ہم گروپ بندی کے ذریعے تجزی کرتے ہیں اور پہلی دو رقوم اور آخری دو رقوم میں سے الگ الگ مشترک جزو باہر نکالتے ہیں۔ ایک جیسی بریکٹ $(y - 6)$ کا دو بار آنا اس بات کی تصدیق کرتا ہے کہ ہماری درمیانی رقم کی تقسیم بالکل درست تھی۔"
+  },
+  {
+   "en": "By the distributive property, we factor out the common binomial $(y - 6)$ from the entire expression. This changes our quadratic sum into a clean product of two linear factors set equal to $0$.",
+   "ur": "تعدی خاصیت کے تحت، ہم پورے جملے میں سے مشترک دو رقمی بریکٹ $(y - 6)$ کو باہر نکال لیتے ہیں۔ یہ عمل ہماری دو درجی مساوات کو دو یک درجی اجزائے ضربی کے حاصلِ ضرب میں بدل دیتا ہے جو $0$ کے برابر ہے۔"
+  },
+  {
+   "en": "We apply the Zero-Product Property, which tells us that if two things multiply to give $0$, at least one of them must be $0$. This lets us split one quadratic equation into two easy linear equations.",
+   "ur": "ہم ضربِ صفر کی خاصیت (Zero-Product Property) استعمال کرتے ہیں، جو بتاتی ہے کہ اگر دو چیزوں کا حاصلِ ضرب $0$ ہو تو ان میں سے کم از کم ایک لازمی $0$ ہوگی۔ اس سے ہم ایک دو درجی مساوات کو دو آسان یک درجی مساواتوں میں توڑ لیتے ہیں۔"
+  },
+  {
+   "en": "We isolate $y$ by moving the constants to the other side of the equals sign. Now we have the two exact values of our temporary helper variable $y$, and we are ready to find $x$.",
+   "ur": "ہم مستقل اعداد کو برابر کے دوسری طرف لے جا کر $y$ کو الگ کر لیتے ہیں۔ اب ہمارے پاس اپنے عارضی متغیر $y$ کی دو قیمتیں آ گئی ہیں، اور ہم $x$ معلوم کرنے کے لیے تیار ہیں۔"
+  },
+  {
+   "en": "Remembering that our real goal is to find $x$, we replace $y$ with $x^2 - 3x$ for the first value, $y = 6$. This gives us the first actual quadratic equation in $x$ that we need to solve.",
+   "ur": "یہ یاد رکھتے ہوئے کہ ہمارا اصل مقصد $x$ معلوم کرنا ہے، ہم پہلی قیمت $y = 6$ کے لیے $y$ کی جگہ واپس $x^2 - 3x$ رکھتے ہیں۔ اس سے ہمیں $x$ میں پہلی اصل دو درجی مساوات مل جاتی ہے جسے ہم نے حل کرنا ہے۔"
+  },
+  {
+   "en": "Moving $6$ to the left gives the standard quadratic form $x^2 - 3x - 6 = 0$, allowing us to read off the coefficients $a$, $b$, and $c$. Since this cannot be factored easily with whole numbers, we prepare to use the quadratic formula.",
+   "ur": "$6$ کو بائیں طرف لانے سے معیاری دو درجی شکل $x^2 - 3x - 6 = 0$ بن جاتی ہے، جس سے ہم عددی سر $a$، $b$ اور $c$ الگ کر لیتے ہیں۔ چونکہ اس کی مکمل اعداد کے ساتھ آسانی سے تجزی نہیں ہو سکتی، اس لیے ہم دو درجی فارمولا استعمال کرنے کی تیاری کرتے ہیں۔"
+  },
+  {
+   "en": "We substitute our coefficients carefully into the quadratic formula, keeping negative numbers inside brackets to avoid sign mistakes. This formula directly calculates the roots of any quadratic equation.",
+   "ur": "ہم علامتوں کی غلطی سے بچنے کے لیے منفی اعداد کو بریکٹ میں رکھتے ہوئے، عددی سروں کو احتیاط سے دو درجی فارمولے میں درج کرتے ہیں۔ یہ فارمولا کسی بھی دو درجی مساوات کے براہِ راست اصل (roots) نکال دیتا ہے۔"
+  },
+  {
+   "en": "We simplify the discriminant ($b^2 - 4ac$) under the square root first, where $(-3)^2 = 9$ and $-4(1)(-6) = +24$. Since $9 + 24 = 33$ is positive, this tells us we will get two real roots.",
+   "ur": "ہم پہلے جزر کے نیچے فرق کنندہ ($b^2 - 4ac$) کو مختصر کرتے ہیں، جہاں $(-3)^2 = 9$ اور $-4(1)(-6) = +24$ بنتا ہے۔ چونکہ $9 + 24 = 33$ ایک مثبت عدد ہے، یہ ہمیں بتاتا ہے کہ ہمیں دو حقیقی قیمتیں ملیں گی۔"
+  },
+  {
+   "en": "Because $33$ is not a perfect square, we write the $\\pm$ sign as two separate answers in exact surd form. These are the first two solutions for $x$ out of the four we expect.",
+   "ur": "چونکہ $33$ ایک مکمل مربع نہیں ہے، اس لیے ہم $\\pm$ کی علامت کو الگ کر کے جزر کی شکل میں دو جوابات لکھتے ہیں۔ یہ $x$ کے ان چار ممکنہ جوابات میں سے پہلے دو جوابات ہیں جن کی ہمیں توقع ہے۔"
+  },
+  {
+   "en": "Now we take the second value, $y = 8$, and substitute $x^2 - 3x$ back in place of $y$. This sets up the second quadratic equation in $x$ to find the remaining roots.",
+   "ur": "اب ہم دوسری قیمت $y = 8$ لیتے ہیں اور $y$ کی جگہ واپس $x^2 - 3x$ درج کرتے ہیں۔ یہ باقی ماندہ اصل معلوم کرنے کے لیے $x$ میں دوسری دو درجی مساوات بناتا ہے۔"
+  },
+  {
+   "en": "Bringing $8$ to the left side gives $x^2 - 3x - 8 = 0$ in standard form, so we can clearly identify $a$, $b$, and $c$. Just like the first branch, we need the quadratic formula because no simple factors of $-8$ add up to $-3$.",
+   "ur": "$8$ کو بائیں طرف لانے سے معیاری شکل $x^2 - 3x - 8 = 0$ بنتی ہے، جس سے ہم واضح طور پر $a$، $b$ اور $c$ کی شناخت کر سکتے ہیں۔ پہلے حصے کی طرح، یہاں بھی ہمیں دو درجی فارمولے کی ضرورت ہے کیونکہ $-8$ کے ایسے سادہ اجزاء نہیں ہیں جنہیں جمع کرنے سے $-3$ آئے۔"
+  },
+  {
+   "en": "We plug the new values $a = 1$, $b = -3$, and $c = -8$ into the quadratic formula. This sets up the direct calculation for the remaining roots of the original equation.",
+   "ur": "ہم نئی قیمتیں $a = 1$، $b = -3$ اور $c = -8$ دو درجی فارمولے میں درج کرتے ہیں۔ اس سے اصل مساوات کے باقی ماندہ جوابات نکالنے کے لیے براہِ راست حساب تیار ہو جاتا ہے۔"
+  },
+  {
+   "en": "Simplifying inside the square root gives $9 + 32 = 41$. A positive number under the root again confirms two more real roots.",
+   "ur": "جزر کے اندر مختصر کرنے سے $9 + 32 = 41$ حاصل ہوتا ہے۔ جزر کے نیچے مثبت عدد ایک بار پھر مزید دو حقیقی قیمتوں کی تصدیق کرتا ہے۔"
+  },
+  {
+   "en": "Since $\\sqrt{41}$ cannot be simplified further, we split the $\\pm$ sign to write down the third and fourth exact roots. We have now found all the solutions from the second branch.",
+   "ur": "چونکہ $\\sqrt{41}$ کو مزید مختصر نہیں کیا جا سکتا، اس لیے ہم $\\pm$ کی علامت کو الگ کر کے تیسرا اور چوتھا درست جواب لکھ لیتے ہیں۔ اب ہم نے دوسرے حصے سے بھی تمام حل معلوم کر لیے ہیں۔"
+  },
+  {
+   "en": "Finally, we gather all four values of $x$ from both cases into the Solution Set (S.S.). Having four roots makes complete sense because multiplying four linear brackets gives a degree-$4$ equation.",
+   "ur": "آخر میں، ہم دونوں صورتوں سے حاصل ہونے والی $x$ کی چاروں قیمتوں کو حل سیٹ (S.S.) میں اکٹھا لکھ دیتے ہیں۔ چار جوابات کا آنا بالکل سمجھ میں آتا ہے کیونکہ چار یک درجی بریکٹس کو ضرب دینے سے درجہ-$4$ کی مساوات بنتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "These four irrational numbers are the exact values of $x$ that make the original equation true. If you substitute any of them into $(x+1)(x+2)(x-4)(x-5) + 8$, the product of the four brackets will come out to $-8$ (because for these values, $x^2 - 3x$ equals either $6$ or $8$), and adding $8$ gives $0$, confirming our solution is correct.",
+  "ur": "یہ چار غیر ناطق اعداد $x$ کی وہ درست قیمتیں ہیں جو اصل مساوات کو درست ثابت کرتی ہیں۔ اگر آپ ان میں سے کوئی بھی قیمت $(x+1)(x+2)(x-4)(x-5) + 8$ میں درج کریں، تو چاروں بریکٹس کا حاصلِ ضرب $-8$ آئے گا (کیونکہ ان قیمتوں کے لیے $x^2 - 3x$ کا جواب $6$ یا $8$ بنتا ہے)، اور اس میں $8$ جمع کرنے سے $0$ حاصل ہوتا ہے، جو ہمارے حل کے درست ہونے کی تصدیق کرتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

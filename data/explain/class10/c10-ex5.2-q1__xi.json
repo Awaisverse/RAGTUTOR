@@ -1,0 +1,40 @@
+{
+ "item": "c10-ex5.2-q1",
+ "label": "xi",
+ "answer_ref": "$x^{2} + x y + y^{2}$",
+ "math": [
+  "\\frac{x^{3}}{x - y} + \\frac{y^{3}}{- x + y}",
+  "= \\frac{x^{3}}{x - y} + \\frac{y^{3}}{- x + y}",
+  "= \\frac{x^{3}-1 + y^{3}}{- x + y}",
+  "= \\frac{- x^{3} + y^{3}}{- x + y}",
+  "= x^{2} + x y + y^{2}"
+ ],
+ "why": [
+  {
+   "en": "We start by rearranging the terms in the second denominator in alphabetical order of variables. Seeing $x - y$ and $- x + y$ clearly shows that the denominators are exact opposites of each other.",
+   "ur": "ہم دوسری کسر کے مخرج کی رقوم کو حروفِ تہجی کی ترتیب سے لکھ کر شروعات کرتے ہیں۔ $x - y$ اور $- x + y$ کو اس طرح دیکھنے سے واضح ہو جاتا ہے کہ دونوں مخرج ایک دوسرے کے بالکل الٹ (متضاد) ہیں۔"
+  },
+  {
+   "en": "We check if the denominators can be factorized into simpler parts. Since $x - y$ and $- x + y$ are already linear factors, they remain as they are, except that one is $-1$ times the other.",
+   "ur": "ہم دیکھتے ہیں کہ کیا مخرج کی مزید تجزی ہو سکتی ہے۔ چونکہ $x - y$ اور $- x + y$ پہلے ہی یک درجی اجزائے ضربی ہیں، اس لیے یہ ایسے ہی رہتے ہیں، سوائے اس کے کہ ایک دوسرے کا منفی ($-1$ گنا) ہے۔"
+  },
+  {
+   "en": "To add the fractions, we need a Least Common Denominator (L.C.D.). By choosing $- x + y$ as the common denominator, we multiply the first numerator $x^3$ by $-1$ because its denominator $x - y$ has the opposite sign.",
+   "ur": "کسروں کو جمع کرنے کے لیے ہمیں ذواضعاف اقل (L.C.D.) کی ضرورت ہے۔ $- x + y$ کو مشترک مخرج کے طور پر چننے کی وجہ سے ہم پہلے شمار کنندہ $x^3$ کو $-1$ سے ضرب دیتے ہیں کیونکہ اس کے مخرج $x - y$ کی علامت الٹ ہے۔"
+  },
+  {
+   "en": "We perform the multiplication in the numerator to simplify the expression. This gives us $- x^3 + y^3$ (which is the same as $y^3 - x^3$), a difference of two cubes that we can easily factorize.",
+   "ur": "ہم جملے کو مختصر کرنے کے لیے شمار کنندہ میں ضرب کا عمل مکمل کرتے ہیں۔ اس سے ہمیں $- x^3 + y^3$ (یعنی $y^3 - x^3$) حاصل ہوتا ہے، جو کہ دو مکعبوں کا فرق ہے اور ہم اس کی آسانی سے تجزی کر سکتے ہیں۔"
+  },
+  {
+   "en": "Using the difference of cubes formula on the numerator gives $(- x + y)(x^2 + xy + y^2)$, allowing us to cancel the common factor $- x + y$ from both top and bottom. This cancellation removes the fraction completely and leaves the simplest polynomial.",
+   "ur": "شمار کنندہ پر دو مکعبوں کے فرق کا فارمولا لگانے سے $(- x + y)(x^2 + xy + y^2)$ بنتا ہے، جس سے ہم اوپر اور نیچے سے مشترک جزو ضربی $- x + y$ کو کاٹ سکتے ہیں۔ اس کٹوتی سے کسر مکمل طور پر ختم ہو جاتی ہے اور سادہ ترین کثیر رقمی جملہ باقی رہ جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $x^2 + xy + y^2$ means that the original sum of two algebraic fractions simplifies completely into a neat quadratic expression without any denominator (as long as $x \\neq y$). You can easily check this by substituting simple values like $x = 1$ and $y = -1$ into both the original question and this final answer to see that both give the exact same result.",
+  "ur": "حتمی جواب $x^2 + xy + y^2$ کا مطلب ہے کہ دو الجبری کسروں کا اصل مجموعہ مکمل طور پر مختصر ہو کر بغیر کسی مخرج کے ایک سادہ دو درجی جملہ بن جاتا ہے (بشرطیکہ $x \\neq y$)۔ آپ اس کی پڑتال کے لیے اصل سوال اور اس حتمی جواب دونوں میں $x = 1$ اور $y = -1$ جیسی سادہ قیمتیں درج کر کے دیکھ سکتے ہیں کہ دونوں بالکل ایک جیسا نتیجہ دیتے ہیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

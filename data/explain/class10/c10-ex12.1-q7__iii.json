@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex12.1-q7",
+ "label": "iii",
+ "answer_ref": "$\\frac{7}{8}$",
+ "math": [
+  "S = \\{HHH, HHT, HTH, HTT, THH, THT, TTH, TTT\\}",
+  "n(S) = 2^3 = 8",
+  "E = \\{HHH, HHT, HTH, HTT, THH, THT, TTH\\}",
+  "n(E) = 7",
+  "P(E) = \\frac{n(E)}{n(S)}",
+  "P(E) = \\frac{7}{8}"
+ ],
+ "why": [
+  {
+   "en": "Before we can find any probability, we must know the complete set of all possible outcomes, which we call the sample space $S$. Listing every combination of heads ($H$) and tails ($T$) for the three coins ensures we do not miss any possibility.",
+   "ur": "کسی بھی احتمال (probability) کو معلوم کرنے سے پہلے، ہمیں تمام ممکنہ نتائج کا مکمل سیٹ معلوم ہونا چاہیے، جسے ہم نمونہ کی فضا (sample space) $S$ کہتے ہیں۔ تینوں سکوں کے لیے ہیڈ ($H$) اور ٹیل ($T$) کے ہر ممکنہ ملاپ کی فہرست بنانے سے یہ یقینی ہو جاتا ہے کہ ہم سے کوئی امکان چھوٹ نہیں گیا۔"
+  },
+  {
+   "en": "Since each of the $3$ coins has $2$ faces, the fundamental counting principle gives $2^3$ total outcomes. Knowing that $n(S) = 8$ gives us the denominator we will need for our probability formula.",
+   "ur": "چونکہ $3$ میں سے ہر سکے کے $2$ رخ ہوتے ہیں، اس لیے گنتی کے بنیادی اصول کے تحت کل ممکنہ نتائج $2^3$ بنتے ہیں۔ $n(S) = 8$ معلوم ہونے سے ہمیں وہ مخرج (denominator) مل جاتا ہے جس کی ہمیں احتمال کے فارمولے کے لیے ضرورت ہو گی۔"
+  },
+  {
+   "en": "In mathematics, the phrase 'at most two tails' means the number of tails can be $2$ or less, which is $0$, $1$, or $2$ tails. By picking only these outcomes from $S$ (leaving out $TTT$ which has $3$ tails), we clearly define our favourable event $E$.",
+   "ur": "ریاضی میں، 'زیادہ سے زیادہ دو ٹیل' (at most two tails) کا مطلب ہے کہ ٹیل کی تعداد $2$ یا اس سے کم ہو سکتی ہے، یعنی $0$، $1$، یا $2$ ٹیل۔ نمونہ کی فضا $S$ سے صرف ان نتائج کو چن کر (اور $3$ ٹیل والے $TTT$ کو چھوڑ کر)، ہم اپنے موافق واقعہ $E$ کو واضح طور پر متعین کرتے ہیں۔"
+  },
+  {
+   "en": "To calculate the probability, we need the exact count of outcomes that satisfy our condition, denoted as $n(E)$. Counting the elements in set $E$ shows us that $7$ outcomes are in our favour.",
+   "ur": "احتمال کا حساب لگانے کے لیے، ہمیں ان نتائج کی صحیح تعداد کی ضرورت ہے جو ہماری شرط کو پورا کرتے ہیں، جسے $n(E)$ سے ظاہر کیا جاتا ہے۔ سیٹ $E$ کے ارکان کو گننے سے ہمیں پتہ چلتا ہے کہ $7$ نتائج ہمارے حق میں ہیں۔"
+  },
+  {
+   "en": "By the basic definition of probability, the chance of an event happening is the ratio of favourable outcomes to the total possible outcomes. Writing down this formula sets up the final division we need to perform.",
+   "ur": "احتمال کی بنیادی تعریف کے مطابق، کسی واقعے کے رونما ہونے کا امکان موافق نتائج اور کل ممکنہ نتائج کی نسبت (ratio) ہوتا ہے۔ اس فارمولے کو لکھنے سے وہ آخری تقسیم واضح ہو جاتی ہے جو ہمیں کرنی ہے۔"
+  },
+  {
+   "en": "We now put our counted values, $n(E) = 7$ and $n(S) = 8$, directly into the probability formula. Since the fraction $\\frac{7}{8}$ cannot be simplified further, this gives us our exact final probability.",
+   "ur": "اب ہم اپنی گنی ہوئی قیمتیں، $n(E) = 7$ اور $n(S) = 8$، براہ راست احتمال کے فارمولے میں درج کرتے ہیں۔ چونکہ کسر $\\frac{7}{8}$ کو مزید مختصر نہیں کیا جا سکتا، اس لیے یہ ہمیں ہمارا حتمی اور درست احتمال دیتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $\\frac{7}{8}$ means that when three fair coins are tossed together, there are $7$ chances out of $8$ of getting at most two tails ($0$, $1$, or $2$ tails). We can easily check this: the only outcome we excluded is getting all $3$ tails ($TTT$), which is just $1$ outcome out of $8$, leaving $7$ out of $8$ favourable outcomes.",
+  "ur": "حتمی جواب $\\frac{7}{8}$ کا مطلب یہ ہے کہ جب تین منصفانہ سکے ایک ساتھ اچھالے جاتے ہیں، تو زیادہ سے زیادہ دو ٹیل ($0$، $1$، یا $2$ ٹیل) آنے کے $8$ میں سے $7$ امکانات ہوتے ہیں۔ ہم اسے آسانی سے چیک کر سکتے ہیں: واحد نتیجہ جو ہم نے نکالا وہ تمام $3$ ٹیل ($TTT$) کا آنا ہے، جو کہ $8$ میں سے صرف $1$ نتیجہ ہے، اور یوں $8$ میں سے $7$ موافق نتائج باقی رہ جاتے ہیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

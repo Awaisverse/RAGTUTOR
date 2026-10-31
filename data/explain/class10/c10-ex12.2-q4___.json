@@ -1,0 +1,55 @@
+{
+ "item": "c10-ex12.2-q4",
+ "label": "",
+ "answer_ref": "$\\frac{2}{9}$",
+ "math": [
+  "n(S) = 6 \\times 6 = 36",
+  "A = \\{(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)\\}, \\quad n(A) = 6",
+  "P(A) = \\frac{n(A)}{n(S)} = \\frac{6}{36}",
+  "B = \\{(5,6), (6,5)\\}, \\quad n(B) = 2",
+  "P(B) = \\frac{n(B)}{n(S)} = \\frac{2}{36}",
+  "n(A \\cap B) = 0 \\implies P(A \\cap B) = \\frac{0}{36}",
+  "P(A \\cup B) = P(A) + P(B) - P(A \\cap B)",
+  "P(A \\cup B) = \\frac{6}{36} + \\frac{2}{36} - \\frac{0}{36} = \\frac{8}{36} = \\frac{2}{9}"
+ ],
+ "why": [
+  {
+   "en": "By the fundamental counting principle, each die has $6$ faces, so throwing two dice gives $6 \\times 6 = 36$ total possible pairs. Knowing the size of the sample space $n(S)$ gives us the denominator needed for all our probability fractions.",
+   "ur": "بنیادی گنتی کے اصول کے مطابق ہر پانسے کے $6$ رخ ہوتے ہیں، اس لیے دو پانسے پھینکنے سے کل $6 \\times 6 = 36$ ممکنہ جوڑے بنتے ہیں۔ سیمپل سپیس کی کل تعداد $n(S)$ معلوم کرنے سے ہمیں تمام احتمالی کسور کے لیے مخرج (denominator) مل جاتا ہے۔"
+  },
+  {
+   "en": "We list every pair of dice rolls whose numbers add up to $7$ to define our first event $A$. Counting these pairs tells us there are $n(A) = 6$ ways this event can successfully happen.",
+   "ur": "اپنے پہلے واقعہ $A$ کی تعریف کرنے کے لیے ہم ایسے تمام جوڑوں کی فہرست بناتے ہیں جن کے نمبروں کا مجموعہ $7$ بنتا ہے۔ ان جوڑوں کو گننے سے ہمیں معلوم ہوتا ہے کہ اس واقعے کے کامیاب ہونے کے $n(A) = 6$ طریقے ہیں۔"
+  },
+  {
+   "en": "Using the basic definition of probability, we divide the favourable outcomes for a sum of $7$ by the total possible outcomes. We leave the fraction as $\\frac{6}{36}$ for now so it will be easier to add to the other probabilities later.",
+   "ur": "احتمال (probability) کی بنیادی تعریف استعمال کرتے ہوئے، ہم مجموعہ $7$ آنے کے موافق نتائج کو کل ممکنہ نتائج پر تقسیم کرتے ہیں۔ ہم اس کسر کو فی الحال $\\frac{6}{36}$ ہی رہنے دیتے ہیں تاکہ بعد میں دوسری کسور کے ساتھ جمع کرنا آسان رہے۔"
+  },
+  {
+   "en": "Next, we identify our second event $B$ by listing all pairs on the two dice that add up to $11$. Only two pairs work, which gives us the count of favourable outcomes $n(B) = 2$.",
+   "ur": "اس کے بعد، ہم دونوں پانسوں پر ایسے تمام جوڑوں کی فہرست بنا کر اپنے دوسرے واقعہ $B$ کی نشاندہی کرتے ہیں جن کا مجموعہ $11$ ہو۔ صرف دو جوڑے اس شرط کو پورا کرتے ہیں، جس سے ہمیں موافق نتائج کی تعداد $n(B) = 2$ ملتی ہے۔"
+  },
+  {
+   "en": "Applying the probability formula again to event $B$, we place the $2$ favourable outcomes over the $36$ total outcomes. This gives us the exact chance of rolling a sum of $11$ on its own.",
+   "ur": "واقعہ $B$ پر دوبارہ احتمال کا فارمولا لاگو کرتے ہوئے، ہم $2$ موافق نتائج کو کل $36$ نتائج پر تقسیم کرتے ہیں۔ اس سے ہمیں اکیلے مجموعہ $11$ آنے کا درست امکان مل جاتا ہے۔"
+  },
+  {
+   "en": "A single throw of two dice cannot give a sum of $7$ and $11$ at the same time, meaning there is no overlap between events $A$ and $B$. Recognizing that they are mutually exclusive tells us the probability of both happening together is $\\frac{0}{36}$.",
+   "ur": "دو پانسوں کو ایک بار پھینکنے سے بیک وقت $7$ اور $11$ کا مجموعہ نہیں آ سکتا، جس کا مطلب ہے کہ واقعات $A$ اور $B$ میں کوئی قدر مشترک نہیں ہے۔ یہ پہچاننے سے کہ یہ واقعات باہمی طور پر غیر مشترک (mutually exclusive) ہیں، ہمیں پتہ چلتا ہے کہ دونوں کے ایک ساتھ ہونے کا احتمال $\\frac{0}{36}$ ہے۔"
+  },
+  {
+   "en": "The word 'or' in probability connects to the union of two events, $A \\cup B$. We write down the general addition law of probability so we can combine the individual chances of getting $7$ or $11$.",
+   "ur": "احتمال کے سوالات میں لفظ 'یا' (or) دو واقعات کے یونین $A \\cup B$ کو ظاہر کرتا ہے۔ ہم احتمال کے جمع کا عمومی قانون لکھتے ہیں تاکہ ہم $7$ یا $11$ کا مجموعہ آنے کے انفرادی امکانات کو یکجا کر سکیں۔"
+  },
+  {
+   "en": "We plug our fractions into the addition formula, where the common denominator of $36$ makes adding the numerators $6$ and $2$ very simple. Reducing $\\frac{8}{36}$ to its lowest terms gives our final simplified probability of $\\frac{2}{9}$.",
+   "ur": "ہم اپنی معلوم کردہ کسور کو جمع کے فارمولے میں درج کرتے ہیں، جہاں یکساں مخرج $36$ ہونے کی وجہ سے شمار کنندگان $6$ اور $2$ کو جمع کرنا بہت آسان ہو جاتا ہے۔ $\\frac{8}{36}$ کو مختصر ترین شکل میں لانے سے ہمیں ہمارا حتمی احتمال $\\frac{2}{9}$ ملتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $\\frac{2}{9}$ means that out of $36$ possible outcomes when throwing two dice, $8$ of them give a sum of either $7$ or $11$, which simplifies to a $2$ in $9$ chance. Since $\\frac{2}{9}$ is between $0$ and $1$, our answer is a valid probability.",
+  "ur": "حتمی جواب $\\frac{2}{9}$ کا مطلب ہے کہ دو پانسے پھینکنے پر $36$ ممکنہ نتائج میں سے $8$ ایسے ہیں جن کا مجموعہ $7$ یا $11$ بنتا ہے، جسے مختصر کرنے پر ہر $9$ میں سے $2$ کا امکان بنتا ہے۔ چونکہ $\\frac{2}{9}$ صفر اور $1$ کے درمیان ہے، اس لیے ہمارا جواب ایک درست احتمال ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

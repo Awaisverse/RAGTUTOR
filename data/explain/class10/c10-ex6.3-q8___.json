@@ -1,0 +1,50 @@
+{
+ "item": "c10-ex6.3-q8",
+ "label": "",
+ "answer_ref": "isosceles: $|\\overrightarrow{XZ}| = |\\overrightarrow{YZ}| = \\sqrt{10}$",
+ "math": [
+  "\\overrightarrow{XY} = (x_2 - x_1)\\underline{i} + (y_2 - y_1)\\underline{j} = (2 - (0))\\underline{i} + (0 - (0))\\underline{j} = 2\\underline{i}",
+  "\\overrightarrow{XZ} = (x_2 - x_1)\\underline{i} + (y_2 - y_1)\\underline{j} = (1 - (0))\\underline{i} + (3 - (0))\\underline{j} = \\underline{i} + 3\\underline{j}",
+  "\\overrightarrow{YZ} = (x_2 - x_1)\\underline{i} + (y_2 - y_1)\\underline{j} = (1 - (2))\\underline{i} + (3 - (0))\\underline{j} = -\\underline{i} + 3\\underline{j}",
+  "|\\overrightarrow{XY}| = \\sqrt{(2)^2 + (0)^2} = 2",
+  "|\\overrightarrow{XZ}| = \\sqrt{(1)^2 + (3)^2} = \\sqrt{10}",
+  "|\\overrightarrow{YZ}| = \\sqrt{(-1)^2 + (3)^2} = \\sqrt{10}",
+  "|\\overrightarrow{XZ}| = |\\overrightarrow{YZ}| \\Rightarrow \\text{isosceles}"
+ ],
+ "why": [
+  {
+   "en": "To prove a triangle is isosceles using vectors, we first need the vectors representing its three sides. Using the position vector rule (tip minus tail), we subtract the coordinates of $X(0,0)$ from $Y(2,0)$ to find the first side vector $\\overrightarrow{XY} = 2\\underline{i}$.",
+   "ur": "ویکٹرز کی مدد سے مثلث کو مساوی الساقین (isosceles) ثابت کرنے کے لیے ہمیں پہلے اس کے تینوں اضلاع کے ویکٹرز معلوم کرنے ہوں گے۔ پوزیشن ویکٹر کے اصول (سرے میں سے دم تفریق کرنا) کے تحت، ہم پہلے ضلع کا ویکٹر $\\overrightarrow{XY} = 2\\underline{i}$ حاصل کرنے کے لیے $Y(2,0)$ کے نقاط میں سے $X(0,0)$ کے نقاط تفریق کرتے ہیں۔"
+  },
+  {
+   "en": "Next, we apply the same tip-minus-tail rule to points $X(0,0)$ and $Z(1,3)$ to represent the second side of the triangle. This gives us the vector $\\overrightarrow{XZ} = \\underline{i} + 3\\underline{j}$, which we will later use to find the length of side $XZ$.",
+   "ur": "اس کے بعد، ہم مثلث کے دوسرے ضلع کو ظاہر کرنے کے لیے نقاط $X(0,0)$ اور $Z(1,3)$ پر وہی اصول لاگو کرتے ہیں۔ اس سے ہمیں ویکٹر $\\overrightarrow{XZ} = \\underline{i} + 3\\underline{j}$ ملتا ہے، جسے ہم بعد میں ضلع $XZ$ کی لمبائی معلوم کرنے کے لیے استعمال کریں گے۔"
+  },
+  {
+   "en": "Similarly, we find the vector for the third side by subtracting the coordinates of $Y(2,0)$ from $Z(1,3)$. Now we have all three side vectors, with the third one being $\\overrightarrow{YZ} = -\\underline{i} + 3\\underline{j}$.",
+   "ur": "اسی طرح، ہم $Z(1,3)$ کے نقاط میں سے $Y(2,0)$ کے نقاط تفریق کر کے تیسرے ضلع کا ویکٹر معلوم کرتے ہیں۔ اب ہمارے پاس تینوں اضلاع کے ویکٹرز آ چکے ہیں، جن میں تیسرا ویکٹر $\\overrightarrow{YZ} = -\\underline{i} + 3\\underline{j}$ ہے۔"
+  },
+  {
+   "en": "Since the length of a triangle's side is the magnitude of its vector, we apply the magnitude formula $\\sqrt{x^2 + y^2}$ to $\\overrightarrow{XY}$. This tells us that the exact length of the first side $XY$ is $2$ units.",
+   "ur": "چونکہ مثلث کے کسی ضلع کی لمبائی اس کے ویکٹر کی مقدار (magnitude) ہوتی ہے، اس لیے ہم $\\overrightarrow{XY}$ پر مقدار کا فارمولا $\\sqrt{x^2 + y^2}$ لگاتے ہیں۔ اس سے ہمیں معلوم ہوتا ہے کہ پہلے ضلع $XY$ کی لمبائی $2$ اکائی ہے۔"
+  },
+  {
+   "en": "We now use the magnitude formula on the second vector $\\overrightarrow{XZ}$ by squaring and adding its components $1$ and $3$. This gives the length of the second side $XZ$ as $\\sqrt{10}$ units.",
+   "ur": "اب ہم دوسرے ویکٹر $\\overrightarrow{XZ}$ کے اجزاء $1$ اور $3$ کا مربع لے کر جمع کرتے ہوئے مقدار کا فارمولا استعمال کرتے ہیں۔ اس سے دوسرے ضلع $XZ$ کی لمبائی $\\sqrt{10}$ اکائی حاصل ہوتی ہے۔"
+  },
+  {
+   "en": "Applying the magnitude formula one last time to $\\overrightarrow{YZ}$ with components $-1$ and $3$, we find the length of the third side. Notice that $(-1)^2$ becomes positive, giving a length of $\\sqrt{10}$ units for side $YZ$ as well.",
+   "ur": "آخر میں ویکٹر $\\overrightarrow{YZ}$ کے اجزاء $-1$ اور $3$ پر مقدار کا فارمولا لاگو کر کے ہم تیسرے ضلع کی لمبائی معلوم کرتے ہیں۔ غور کریں کہ $(-1)^2$ مثبت ہو جاتا ہے، جس سے ضلع $YZ$ کی لمبائی بھی $\\sqrt{10}$ اکائی نکلتی ہے۔"
+  },
+  {
+   "en": "By the geometric definition, an isosceles triangle is one that has at least two sides of equal length. Comparing our calculated magnitudes, we see that $|\\overrightarrow{XZ}|$ and $|\\overrightarrow{YZ}|$ are both equal to $\\sqrt{10}$, which completes our proof.",
+   "ur": "جیومیٹری کی تعریف کے مطابق، مساوی الساقین مثلث وہ ہوتی ہے جس کے کم از کم دو اضلاع کی لمبائی برابر ہو۔ اپنی معلوم کردہ مقداروں کا موازنہ کرنے سے ہم دیکھتے ہیں کہ $|\\overrightarrow{XZ}|$ اور $|\\overrightarrow{YZ}|$ دونوں $\\sqrt{10}$ کے برابر ہیں، جس سے ہمارا ثبوت مکمل ہو جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This final result confirms that triangle $XYZ$ is indeed an isosceles triangle because two of its sides, $XZ$ and $YZ$, have the exact same length of $\\sqrt{10}$, while the base $XY$ has a length of $2$. You can easily check this on graph paper: the point $Z(1,3)$ lies directly above the midpoint of $X(0,0)$ and $Y(2,0)$, making it equally distant from both.",
+  "ur": "یہ حتمی نتیجہ تصدیق کرتا ہے کہ مثلث $XYZ$ واقعی ایک مساوی الساقین مثلث ہے کیونکہ اس کے دو اضلاع، $XZ$ اور $YZ$، کی لمبائی بالکل برابر یعنی $\\sqrt{10}$ ہے، جبکہ قاعدہ $XY$ کی لمبائی $2$ ہے۔ آپ اسے گراف پیپر پر باآسانی چیک کر سکتے ہیں: نقطہ $Z(1,3)$ نقاط $X(0,0)$ اور $Y(2,0)$ کے درمیانی نقطے کے بالکل اوپر واقع ہے، جو اسے دونوں سے یکساں فاصلے پر بناتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

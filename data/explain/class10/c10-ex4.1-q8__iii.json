@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex4.1-q8",
+ "label": "iii",
+ "answer_ref": "verified: $f(f^{-1}(x)) = f^{-1}(f(x)) = x$",
+ "math": [
+  "y = \\frac{x-3}{4}",
+  "x = 4y + 3",
+  "f^{-1}(x) = 4x + 3",
+  "f(f^{-1}(x)) = f(4x + 3) = \\frac{(4x + 3) - 3}{4} = \\frac{4x}{4} = x",
+  "f^{-1}(f(x)) = f^{-1}\\left(\\frac{x-3}{4}\\right) = 4\\left(\\frac{x-3}{4}\\right) + 3 = (x - 3) + 3 = x",
+  "f(f^{-1}(x)) = f^{-1}(f(x)) = x"
+ ],
+ "why": [
+  {
+   "en": "To find the inverse of a function, we start by using the definition $y = f(x)$, which allows us to treat the output as a single variable $y$. This sets up our equation so we can easily reverse the roles of the input $x$ and output $y$ using basic algebra.",
+   "ur": "کسی فنکشن کا معکوس (inverse) معلوم کرنے کے لیے ہم تعریف $y = f(x)$ کا استعمال کرتے ہیں، جس سے ہم آؤٹ پٹ کو ایک متغیر $y$ کے طور پر لکھ سکتے ہیں۔ اس سے مساوات ایسی شکل میں آ جاتی ہے جہاں ہم آسانی سے الجبرا کی مدد سے ان پٹ $x$ اور آؤٹ پٹ $y$ کا کردار الٹ سکتے ہیں۔"
+  },
+  {
+   "en": "An inverse function reverses what the original function does, so we must solve the equation to isolate the input variable $x$. Expressing $x$ alone in terms of $y$ shows us the exact opposite operations needed to undo the original function.",
+   "ur": "چونکہ معکوس فنکشن اصل فنکشن کے عمل کو الٹ دیتا ہے، اس لیے ہم مساوات کو حل کر کے متغیر $x$ کو الگ کر لیتے ہیں۔ $x$ کو $y$ کی شکل میں تنہا کرنے سے ہمیں وہ الٹ عوامل مل جاتے ہیں جو اصل فنکشن کے اثر کو ختم کرتے ہیں۔"
+  },
+  {
+   "en": "By the definition of an inverse, $x = f^{-1}(y)$, and because we standardly write functions using $x$ as the input variable, we replace $y$ with $x$. Now we have our complete inverse function $f^{-1}(x) = 4x + 3$, which we need to test the verification identity.",
+   "ur": "معکوس کی تعریف کے مطابق $x = f^{-1}(y)$ ہوتا ہے، اور چونکہ ہم عام طور پر فنکشنز کو $x$ کے متغیر میں لکھتے ہیں، اس لیے ہم $y$ کی جگہ $x$ لکھ دیتے ہیں۔ اب ہمارے پاس مکمل معکوس فنکشن $f^{-1}(x) = 4x + 3$ آ گیا ہے جس کی ہمیں تصدیق کے لیے ضرورت ہے۔"
+  },
+  {
+   "en": "Here we use the rule of composition of functions to check the first part of our identity by putting the entire inverse $f^{-1}(x)$ inside the original function $f$. Getting $x$ as the simplified result proves that $f$ completely cancels out the effect of $f^{-1}$.",
+   "ur": "یہاں ہم ترکیبِ تفاعل (composition of functions) کا اصول استعمال کرتے ہوئے تصدیق کے پہلے حصے کو چیک کرتے ہیں اور پورے معکوس $f^{-1}(x)$ کو اصل فنکشن $f$ کے اندر درج کرتے ہیں۔ مختصر کرنے پر $x$ کا حاصل ہونا یہ ثابت کرتا ہے کہ $f$ نے $f^{-1}$ کے اثر کو مکمل طور پر ختم کر دیا ہے۔"
+  },
+  {
+   "en": "To verify the second part of the required identity, we compose the functions in the reverse order by placing $f(x)$ as the input inside $f^{-1}$. Since the operations cancel out to give $x$ again, we see that $f^{-1}$ also undoes the work of $f$.",
+   "ur": "مطلوبہ تصدیق کے دوسرے حصے کو چیک کرنے کے لیے، ہم ترتیب الٹ کر $f(x)$ کو بطور ان پٹ $f^{-1}$ کے اندر رکھتے ہیں۔ چونکہ تمام عوامل ایک دوسرے کو کاٹ کر دوبارہ $x$ دیتے ہیں، اس سے معلوم ہوتا ہے کہ $f^{-1}$ بھی $f$ کے عمل کو الٹ دیتا ہے۔"
+  },
+  {
+   "en": "Since both compositions resulted in the same value $x$, we apply the transitive property of equality to link them together. This completes our proof and satisfies the exact condition asked in the question.",
+   "ur": "چونکہ دونوں تراکیب کا جواب ایک ہی قیمت یعنی $x$ آیا ہے، اس لیے ہم مساوات کی خاصیت استعمال کرتے ہوئے ان کو آپس میں برابر لکھ دیتے ہیں۔ اس سے ہمارا ثبوت مکمل ہو جاتا ہے اور سوال میں پوچھی گئی شرط پوری ہو جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This final result confirms that $f(x) = \\frac{x-3}{4}$ and $f^{-1}(x) = 4x + 3$ are true inverses of each other because applying one after the other in either order always returns the original starting input $x$. Notice how the original function subtracts $3$ and divides by $4$, while the inverse does the exact opposite by multiplying by $4$ and adding $3$.",
+  "ur": "یہ حتمی نتیجہ تصدیق کرتا ہے کہ $f(x) = \\frac{x-3}{4}$ اور $f^{-1}(x) = 4x + 3$ واقعی ایک دوسرے کے معکوس (inverses) ہیں کیونکہ کسی بھی ترتیب سے ایک کے بعد دوسرے کا اطلاق کرنے سے ہمیشہ اصل ان پٹ $x$ واپس ملتا ہے۔ غور کریں کہ اصل فنکشن $3$ تفریق کرتا ہے اور $4$ پر تقسیم کرتا ہے، جبکہ معکوس فنکشن بالکل اس کے الٹ $4$ سے ضرب دیتا ہے اور $3$ جمع کرتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex5.3-q1",
+ "label": "iv",
+ "answer_ref": "$\\frac{\\left(a + b - c\\right)^{2}}{a \\left(a + 2 c\\right)}$",
+ "math": [
+  "\\frac{(a+b)^2-c^2}{(a+c)^2-b^2} \\times \\frac{a^2-(b-c)^2}{(a+c)^2-c^2}",
+  "= \\frac{((a+b)-c)((a+b)+c)}{((a+c)-b)((a+c)+b)} \\times \\frac{(a-(b-c))(a+(b-c))}{((a+c)-c)((a+c)+c)}",
+  "= \\frac{(a+b-c)(a+b+c)}{(a+c-b)(a+c+b)} \\times \\frac{(a-b+c)(a+b-c)}{(a+c-c)(a+c+c)}",
+  "= \\frac{(a+b-c)(a+b+c)}{(a-b+c)(a+b+c)} \\times \\frac{(a-b+c)(a+b-c)}{a(a+2c)}",
+  "= \\frac{(a+b-c) \\times (a+b-c)}{a(a+2c)}",
+  "= \\frac{\\left(a + b - c\\right)^{2}}{a \\left(a + 2 c\\right)}"
+ ],
+ "why": [
+  {
+   "en": "We begin by writing down the given product of algebraic fractions clearly so we can examine the structure of each numerator and denominator. Looking closely, we can see that every part is built around squared terms separated by a minus sign.",
+   "ur": "ہم دیے گئے الجبری کسر کے حاصل ضرب کو واضح طور پر لکھ کر شروعات کرتے ہیں تاکہ ہم ہر شمار کنندہ اور مخرج کی بناوٹ کا جائزہ لے سکیں۔ غور سے دیکھنے پر ہمیں نظر آتا ہے کہ ہر حصہ منفی کی علامت سے جڑے ہوئے مربع رقوم پر مشتمل ہے۔"
+  },
+  {
+   "en": "To simplify fractions that are multiplied together, we must first factorize them, and here the difference of two squares formula $x^2 - y^2 = (x-y)(x+y)$ fits every single part. Applying this identity breaks the heavy squared expressions into simpler linear factors that we can later cancel out.",
+   "ur": "آپس میں ضرب کھاتی ہوئی کسروں کو مختصر کرنے کے لیے ہمیں پہلے ان کی تجزی کرنی چاہیے، اور یہاں دو مربّعوں کے فرق کا فارمولا $x^2 - y^2 = (x-y)(x+y)$ ہر ایک حصے پر لاگو ہوتا ہے۔ اس کلیے کے استعمال سے پیچیدہ مربع رقوم سادہ یک درجی اجزائے ضربی میں تبدیل ہو جاتی ہیں جنہیں ہم بعد میں کاٹ سکتے ہیں۔"
+  },
+  {
+   "en": "Now we open the inner small brackets to see the exact terms inside each factor, remembering the basic algebra rule that a minus sign outside a bracket changes the signs inside. Doing this reveals the true signs of $a$, $b$, and $c$ so we can accurately spot matching factors.",
+   "ur": "اب ہم اندرونی چھوٹی بریکٹوں کو کھولتے ہیں تاکہ ہر جزو ضربی کے اندر موجود اصل رقوم کو دیکھ سکیں، اور الجبرا کے اس بنیادی اصول کو یاد رکھتے ہیں کہ بریکٹ کے باہر منفی کی علامت اندر کی علامتیں بدل دیتی ہے۔ ایسا کرنے سے $a$، $b$ اور $c$ کی اصل علامتیں واضح ہو جاتی ہیں تاکہ ہم یکساں اجزائے ضربی کو درست طریقے سے پہچان سکیں۔"
+  },
+  {
+   "en": "We combine the like terms in the second denominator and write the terms of the first denominator in alphabetical order. This tidying up makes it completely clear which factors in the numerators and denominators are identical.",
+   "ur": "ہم دوسرے مخرج میں یکساں رقوم کو جمع کرتے ہیں اور پہلے مخرج کی رقوم کو حروف تہجی کی ترتیب سے لکھتے ہیں۔ اس ترتیب سے یہ بالکل واضح ہو جاتا ہے کہ شمار کنندہ اور مخرج میں کون سے اجزائے ضربی ایک جیسے ہیں۔"
+  },
+  {
+   "en": "By the cancellation law of fractions, any factor that appears in both a numerator and a denominator divides to give $1$, so we cancel out $(a+b+c)$ and $(a-b+c)$. This removes the bulk of the expression and leaves us with only the unmatched factors.",
+   "ur": "کسروں کے اختصار کے اصول کے مطابق، کوئی بھی جزو ضربی جو شمار کنندہ اور مخرج دونوں میں موجود ہو، تقسیم ہو کر $1$ دیتا ہے، اس لیے ہم $(a+b+c)$ اور $(a-b+c)$ کو کاٹ دیتے ہیں۔ اس سے عبارت کا بڑا حصہ ختم ہو جاتا ہے اور ہمارے پاس صرف وہ اجزائے ضربی بچتے ہیں جو ایک جیسے نہیں تھے۔"
+  },
+  {
+   "en": "Finally, using the law of exponents, multiplying the base $(a+b-c)$ by itself gives the whole square $(a+b-c)^2$. This gives us the neatest, fully simplified form of our algebraic fraction.",
+   "ur": "آخر میں، قوت نما کے اصول کو استعمال کرتے ہوئے، اساس $(a+b-c)$ کو اپنے آپ سے ضرب دینے سے مکمل مربع $(a+b-c)^2$ حاصل ہوتا ہے۔ اس سے ہمیں ہماری الجبری کسر کی سب سے صاف اور مکمل طور پر مختصر شکل مل جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $\\frac{(a+b-c)^2}{a(a+2c)}$ means that the original complicated product of four differences of squares is completely equivalent to this much simpler single fraction for all allowed values of $a$, $b$, and $c$. You can verify this by substituting simple numbers like $a=1$, $b=2$, and $c=1$ into both the original question and this final result to see that both give the exact same value.",
+  "ur": "آخری جواب $\\frac{(a+b-c)^2}{a(a+2c)}$ کا مطلب یہ ہے کہ چار مربّعوں کے فرق پر مشتمل اصل پیچیدہ حاصل ضرب، $a$، $b$ اور $c$ کی تمام ممکنہ قیمتوں کے لیے اس انتہائی سادہ سی واحد کسر کے بالکل برابر ہے۔ آپ اس کی تصدیق کے لیے $a=1$، $b=2$ اور $c=1$ جیسی سادہ قیمتیں اصل سوال اور اس آخری جواب دونوں میں درج کر کے دیکھ سکتے ہیں کہ دونوں بالکل ایک جیسا جواب دیتے ہیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

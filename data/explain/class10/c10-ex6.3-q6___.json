@@ -1,0 +1,50 @@
+{
+ "item": "c10-ex6.3-q6",
+ "label": "",
+ "answer_ref": "isosceles: $|\\overrightarrow{AB}| = |\\overrightarrow{BC}| = 5$",
+ "math": [
+  "\\overrightarrow{AB} = (x_2 - x_1)\\underline{i} + (y_2 - y_1)\\underline{j} = (4 - (1))\\underline{i} + (6 - (2))\\underline{j} = 3\\underline{i} + 4\\underline{j}",
+  "\\overrightarrow{AC} = (x_2 - x_1)\\underline{i} + (y_2 - y_1)\\underline{j} = (7 - (1))\\underline{i} + (2 - (2))\\underline{j} = 6\\underline{i}",
+  "\\overrightarrow{BC} = (x_2 - x_1)\\underline{i} + (y_2 - y_1)\\underline{j} = (7 - (4))\\underline{i} + (2 - (6))\\underline{j} = 3\\underline{i} - 4\\underline{j}",
+  "|\\overrightarrow{AB}| = \\sqrt{(3)^2 + (4)^2} = 5",
+  "|\\overrightarrow{AC}| = \\sqrt{(6)^2 + (0)^2} = 6",
+  "|\\overrightarrow{BC}| = \\sqrt{(3)^2 + (-4)^2} = 5",
+  "|\\overrightarrow{AB}| = |\\overrightarrow{BC}| \\Rightarrow \\text{isosceles}"
+ ],
+ "why": [
+  {
+   "en": "To check the lengths of the triangle's sides using vectors, we first need the vectors representing each side. Using the position vector formula, we find $\\overrightarrow{AB} = 3\\underline{i} + 4\\underline{j}$, which represents the first side connecting $A(1,2)$ and $B(4,6)$.",
+   "ur": "ویکٹرز کی مدد سے مثلث کے اضلاع کی لمبائی معلوم کرنے کے لیے، ہمیں پہلے ہر ضلع کے ویکٹر کی ضرورت ہے۔ پوزیشن ویکٹر کے فارمولے کو استعمال کرتے ہوئے، ہمیں $\\overrightarrow{AB} = 3\\underline{i} + 4\\underline{j}$ ملتا ہے، جو نقاط $A(1,2)$ اور $B(4,6)$ کو ملانے والے پہلے ضلع کو ظاہر کرتا ہے۔"
+  },
+  {
+   "en": "Similarly, we apply the same vector rule to points $A(1,2)$ and $C(7,2)$ to represent the second side of the triangle. The result $\\overrightarrow{AC} = 6\\underline{i}$ shows that this side moves purely along the horizontal axis.",
+   "ur": "اسی طرح، ہم مثلث کے دوسرے ضلع کو ظاہر کرنے کے لیے نقاط $A(1,2)$ اور $C(7,2)$ پر وہی ویکٹر کا اصول لاگو کرتے ہیں۔ نتیجہ $\\overrightarrow{AC} = 6\\underline{i}$ بتاتا ہے کہ یہ ضلع صرف افقی محور کے ساتھ ہے۔"
+  },
+  {
+   "en": "Next, we find the vector for the third side connecting $B(4,6)$ and $C(7,2)$ to complete all three sides of the triangle. This gives us $\\overrightarrow{BC} = 3\\underline{i} - 4\\underline{j}$, so we are now ready to calculate their lengths.",
+   "ur": "اس کے بعد، مثلث کے تینوں اضلاع مکمل کرنے کے لیے ہم $B(4,6)$ اور $C(7,2)$ کو ملانے والے تیسرے ضلع کا ویکٹر معلوم کرتے ہیں۔ اس سے ہمیں $\\overrightarrow{BC} = 3\\underline{i} - 4\\underline{j}$ ملتا ہے، اور اب ہم ان کی لمبائیاں معلوم کرنے کے لیے تیار ہیں۔"
+  },
+  {
+   "en": "By definition, the length of a triangle's side is the magnitude of its corresponding vector. Applying the magnitude formula to $\\overrightarrow{AB}$ tells us that the exact length of side $AB$ is $5$ units.",
+   "ur": "تعریف کے مطابق، مثلث کے کسی ضلع کی لمبائی اس کے متعلقہ ویکٹر کی مقدار (magnitude) ہوتی ہے۔ $\\overrightarrow{AB}$ پر مقدار کا فارمولا لگانے سے ہمیں معلوم ہوتا ہے کہ ضلع $AB$ کی لمبائی $5$ اکائیاں ہے۔"
+  },
+  {
+   "en": "We now apply the magnitude formula to vector $\\overrightarrow{AC}$ to find the length of the second side. Since the $\\underline{j}$ component is $0$, this calculation quickly shows that side $AC$ has a length of $6$ units.",
+   "ur": "اب ہم دوسرے ضلع کی لمبائی معلوم کرنے کے لیے ویکٹر $\\overrightarrow{AC}$ پر مقدار کا فارمولا لگاتے ہیں۔ چونکہ اس میں $\\underline{j}$ والا حصہ $0$ ہے، اس لیے حساب سے فوراً پتہ چلتا ہے کہ ضلع $AC$ کی لمبائی $6$ اکائیاں ہے۔"
+  },
+  {
+   "en": "Next, we calculate the magnitude of $\\overrightarrow{BC}$ to know the length of the third and final side. Because $(-4)^2$ is positive just like $(4)^2$, this gives a length of $5$ units, matching our first side.",
+   "ur": "اس کے بعد، ہم تیسرے اور آخری ضلع کی لمبائی جاننے کے لیے $\\overrightarrow{BC}$ کی مقدار معلوم کرتے ہیں۔ چونکہ $(-4)^2$ بھی $(4)^2$ کی طرح مثبت ہوتا ہے، اس لیے اس ضلع کی لمبائی بھی $5$ اکائیاں آتی ہے، جو ہمارے پہلے ضلع کے برابر ہے۔"
+  },
+  {
+   "en": "By geometric definition, an isosceles triangle is a triangle that has at least two sides of equal length. Comparing our three magnitudes, we see that $|\\overrightarrow{AB}|$ and $|\\overrightarrow{BC}|$ are both equal to $5$, which proves the condition.",
+   "ur": "جیومیٹری کی تعریف کے مطابق، متساوی الساقین مثلث (isosceles triangle) وہ ہوتی ہے جس کے کم از کم دو اضلاع کی لمبائی برابر ہو۔ تینوں مقداروں کا موازنہ کرنے سے ہم دیکھتے ہیں کہ $|\\overrightarrow{AB}|$ اور $|\\overrightarrow{BC}|$ دونوں $5$ کے برابر ہیں، جو اس شرط کو ثابت کرتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer confirms that the points $A(1,2)$, $B(4,6)$, and $C(7,2)$ indeed form an isosceles triangle because two of its sides, $AB$ and $BC$, have the exact same length of $5$ units (while the third side $AC$ is $6$ units). You can easily verify this using the coordinate geometry distance formula on points $A, B,$ and $C$, which will give the exact same side lengths of $5$, $6$, and $5$.",
+  "ur": "حتمی جواب اس بات کی تصدیق کرتا ہے کہ نقاط $A(1,2)$، $B(4,6)$ اور $C(7,2)$ واقعی ایک متساوی الساقین مثلث بناتے ہیں کیونکہ اس کے دو اضلاع، $AB$ اور $BC$، کی لمبائی بالکل برابر یعنی $5$ اکائیاں ہے (جبکہ تیسرا ضلع $AC$، $6$ اکائیاں ہے)۔ آپ اس کی تصدیق نقاط $A, B$ اور $C$ پر کوآرڈینیٹ جیومیٹری کا فاصلے والا فارمولا لگا کر بھی باآسانی کر سکتے ہیں، جس سے اضلاع کی لمبائیاں بالکل یہی $5$، $6$ اور $5$ آئیں گی۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

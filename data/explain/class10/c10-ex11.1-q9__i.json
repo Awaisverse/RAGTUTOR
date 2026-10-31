@@ -1,0 +1,50 @@
+{
+ "item": "c10-ex11.1-q9",
+ "label": "i",
+ "answer_ref": "scatter diagram with a falling line of best fit",
+ "math": [
+  "n = 10",
+  "\\sum x = 0.5 + 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 = 45.5 = \\frac{91}{2}",
+  "\\sum y = 4.0 + 3.9 + 3.7 + 3.5 + 3.3 + 3.1 + 2.9 + 2.8 + 2.6 + 2.5 = 32.3 = \\frac{323}{10}",
+  "\\sum xy = 132.8 = \\frac{664}{5}, \\quad \\sum x^2 = 285.25 = \\frac{1141}{4}",
+  "b = \\frac{n\\sum xy - \\sum x\\sum y}{n\\sum x^2 - (\\sum x)^2} = \\frac{10(132.8) - (45.5)(32.3)}{10(285.25) - (45.5)^2} \\approx -0.1811",
+  "a = \\frac{\\sum y - b\\sum x}{n} = \\frac{32.3 - (-0.1811)(45.5)}{10} \\approx 4.0539",
+  "\\hat{y} = 4.0539 - 0.1811x"
+ ],
+ "why": [
+  {
+   "en": "We start by assigning $x$ to the independent variable (hours) and $y$ to the dependent variable (GPA), and counting the total data pairs $n = 10$. This sets up our variables so we can plot them on a graph and use the least-squares formulas.",
+   "ur": "ہم آزاد متغیر (گھنٹے) کو $x$ اور تابع متغیر (GPA) کو $y$ کا نام دے کر شروعات کرتے ہیں، اور ڈیٹا کے کل جوڑوں $n = 10$ کو گنتے ہیں۔ اس سے ہمارے متغیرات طے ہو جاتے ہیں تاکہ ہم انہیں گراف پر ظاہر کر سکیں اور لیسٹ اسکوائرز (least-squares) کے فارمولے استعمال کر سکیں۔"
+  },
+  {
+   "en": "To find the exact equation for the line of best fit, we need the total of all $x$-values, denoted as $\\sum x$. Getting $45.5$ gives us the first building block for the regression formulas.",
+   "ur": "بہترین فٹ ہونے والی لائن (line of best fit) کی درست مساوات معلوم کرنے کے لیے ہمیں تمام $x$ قدروں کے مجموعے یعنی $\\sum x$ کی ضرورت ہے۔ $45.5$ حاصل کرنا ہمیں ریگریشن فارمولوں کے لیے پہلا بنیادی جزو فراہم کرتا ہے۔"
+  },
+  {
+   "en": "Similarly, we add up all the $y$-values to find $\\sum y$ for our line of best fit formulas. This total of $32.3$ represents the combined GPA of all $10$ students and helps find the vertical position of the line.",
+   "ur": "اسی طرح، ہم اپنی لائن آف بیسٹ فٹ کے فارمولوں کے لیے $\\sum y$ معلوم کرنے کے لیے تمام $y$ قدروں کو جمع کرتے ہیں۔ $32.3$ کا یہ مجموعہ تمام $10$ طلباء کے مشترکہ GPA کو ظاہر کرتا ہے اور لائن کی عمودی پوزیشن معلوم کرنے میں مدد کرتا ہے۔"
+  },
+  {
+   "en": "The least-squares method requires $\\sum xy$ to measure how $x$ and $y$ change together, and $\\sum x^2$ to measure how spread out the $x$-values are. Calculating $132.8$ and $285.25$ completes all the sums needed to find the slope of our line.",
+   "ur": "لیسٹ اسکوائرز کے طریقے میں یہ ماپنے کے لیے کہ $x$ اور $y$ ایک ساتھ کیسے بدلتے ہیں $\\sum xy$ کی ضرورت ہوتی ہے، اور $x$ کی قدروں کا پھیلاؤ ماپنے کے لیے $\\sum x^2$ درکار ہوتا ہے۔ $132.8$ اور $285.25$ کا حساب ہماری لائن کی ڈھلوان (slope) معلوم کرنے کے لیے درکار تمام مجموعوں کو مکمل کرتا ہے۔"
+  },
+  {
+   "en": "We plug our sums into the slope formula $b$ to find the rate at which GPA changes per hour of social media use. The negative value $-0.1811$ tells us that the line of best fit slopes downward, meaning GPA drops as hours increase.",
+   "ur": "ہم اپنے مجموعوں کو ڈھلوان کے فارمولے $b$ میں درج کرتے ہیں تاکہ یہ معلوم ہو سکے کہ سوشل میڈیا کے فی گھنٹہ استعمال سے GPA کس شرح سے بدلتا ہے۔ منفی قدر $-0.1811$ ہمیں بتاتی ہے کہ لائن آف بیسٹ فٹ نیچے کی طرف جھکتی ہے، یعنی گھنٹے بڑھنے سے GPA کم ہوتا ہے۔"
+  },
+  {
+   "en": "Next, we use the y-intercept formula $a$ to find the starting point of our line on the vertical $y$-axis when $x = 0$. The result $4.0539$ gives us the fixed constant needed to complete the equation $\\hat{y} = a + bx$.",
+   "ur": "اس کے بعد، ہم عمودی $y$-محور پر اپنی لائن کا نقطہ آغاز (جب $x = 0$ ہو) معلوم کرنے کے لیے y-intercept کا فارمولا $a$ استعمال کرتے ہیں۔ نتیجہ $4.0539$ ہمیں مساوات $\\hat{y} = a + bx$ کو مکمل کرنے کے لیے درکار مستقل عدد فراہم کرتا ہے۔"
+  },
+  {
+   "en": "Finally, we combine $a$ and $b$ into the linear equation $\\hat{y} = 4.0539 - 0.1811x$ and plot it alongside the $10$ data points. Plotting the points creates the scatter diagram, and the equation lets us draw the exact straight line that best represents the downward trend.",
+   "ur": "آخر میں، ہم $a$ اور $b$ کو ملا کر یک درجی مساوات $\\hat{y} = 4.0539 - 0.1811x$ بناتے ہیں اور اسے $10$ ڈیٹا نقاط کے ساتھ گراف پر بناتے ہیں۔ نقاط لگانے سے اسکیٹر ڈایاگرام (scatter diagram) بنتی ہے، اور مساوات ہمیں وہ بالکل سیدھی لائن کھینچنے دیتی ہے جو نیچے گرتے ہوئے رجحان کی بہترین نمائندگی کرتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The scatter diagram visually shows that as daily social media hours increase from $0.5$ to $9$, the students' GPA steadily drops from $4.0$ to $2.5$, which is summarized by a falling line of best fit. You can check that your drawn line is correct by seeing that it passes right through the middle of the plotted points, with roughly an equal number of points slightly above and below the line.",
+  "ur": "اسکیٹر ڈایاگرام واضح طور پر دکھاتی ہے کہ جیسے جیسے روزانہ سوشل میڈیا کے گھنٹے $0.5$ سے بڑھ کر $9$ ہوتے ہیں، طلباء کا GPA مسلسل $4.0$ سے گر کر $2.5$ تک آ جاتا ہے، جس کا خلاصہ نیچے گرتی ہوئی لائن آف بیسٹ فٹ سے ہوتا ہے۔ آپ اپنی کھینچی گئی لائن کے درست ہونے کی تصدیق یہ دیکھ کر کر سکتے ہیں کہ یہ لگائے گئے نقاط کے بالکل درمیان سے گزرتی ہے، اور لائن کے تھوڑا اوپر اور نیچے نقاط کی تعداد تقریباً برابر ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

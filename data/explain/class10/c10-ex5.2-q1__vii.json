@@ -1,0 +1,40 @@
+{
+ "item": "c10-ex5.2-q1",
+ "label": "vii",
+ "answer_ref": "$\\frac{2 x^{2} - 3 x y - 3 y^{2}}{\\left(x - y\\right) \\left(x + y\\right)}$",
+ "math": [
+  "\\frac{2 x}{x + y} - \\frac{y}{x - y} - \\frac{2 y^{2}}{x^{2} - y^{2}}",
+  "= \\frac{2 x}{x + y} - \\frac{y}{x - y} - \\frac{2 y^{2}}{\\left(x - y\\right) \\left(x + y\\right)}",
+  "= \\frac{2 x\\left(x - y\\right) - y\\left(x + y\\right) - 2 y^{2}}{\\left(x - y\\right) \\left(x + y\\right)}",
+  "= \\frac{2 x^{2} - 2 x y - x y - y^{2} - 2 y^{2}}{\\left(x - y\\right) \\left(x + y\\right)}",
+  "= \\frac{2 x^{2} - 3 x y - 3 y^{2}}{\\left(x - y\\right) \\left(x + y\\right)}"
+ ],
+ "why": [
+  {
+   "en": "We start by carefully writing down the three given algebraic fractions that we need to subtract. Looking at the denominators first helps us plan how to combine them into a single fraction.",
+   "ur": "ہم سب سے پہلے دی گئی تینوں الجبری کسور کو احتیاط سے لکھتے ہیں جنہیں ہم نے تفریق کرنا ہے۔ نسب نماؤں (denominators) کو دیکھنے سے ہمیں یہ منصوبہ بنانے میں مدد ملتی ہے کہ انہیں ایک کسر میں کیسے ملایا جائے۔"
+  },
+  {
+   "en": "To subtract fractions, we must find their Least Common Denominator (L.C.D.), which requires factoring any quadratic denominators first. Using the difference of squares identity $a^2 - b^2 = (a - b)(a + b)$ on $x^2 - y^2$ reveals that the third denominator is already made of the first two denominators, $(x + y)$ and $(x - y)$.",
+   "ur": "کسور کو تفریق کرنے کے لیے ہمیں ان کا ذواضعاف اقل (L.C.D.) معلوم کرنا ہوتا ہے، جس کے لیے پہلے دو درجی نسب نماؤں کی تجزی کرنا ضروری ہے۔ $x^2 - y^2$ پر مربعوں کے فرق کا کلیہ $a^2 - b^2 = (a - b)(a + b)$ لگانے سے پتہ چلتا ہے کہ تیسرا نسب نما پہلے دو نسب نماؤں، $(x + y)$ اور $(x - y)$ سے مل کر بنا ہے۔"
+  },
+  {
+   "en": "Since fractions can only be combined when they share the same denominator, we rewrite all three terms over the common denominator $(x - y)(x + y)$. We multiply each numerator by the factor missing from its own denominator, which brings all the terms together under one roof.",
+   "ur": "چونکہ کسور کو صرف تب ہی ملایا جا سکتا ہے جب ان کا نسب نما ایک جیسا ہو، اس لیے ہم تینوں رقموں کو مشترک نسب نما $(x - y)(x + y)$ کے اوپر لکھتے ہیں۔ ہم ہر شمار کنندہ کو اس کے نسب نما میں موجودہ کمی والے جزو ضربی سے ضرب دیتے ہیں، جس سے تمام رقوم ایک ہی کسر میں جمع ہو جاتی ہیں۔"
+  },
+  {
+   "en": "Now we apply the distributive property to remove the brackets in the numerator so we can see all the individual terms clearly. We must be very careful with the minus sign before $y(x + y)$, as it changes the signs of both terms inside the bracket to give $-xy - y^2$.",
+   "ur": "اب ہم شمار کنندہ میں موجود بریکٹوں کو ختم کرنے کے لیے تقسیمی خاصیت کا استعمال کرتے ہیں تاکہ ہم تمام انفرادی رقوم کو واضح طور پر دیکھ سکیں۔ ہمیں $y(x + y)$ سے پہلے منفی علامت کے بارے میں بہت محتاط رہنا چاہیے، کیونکہ یہ بریکٹ کے اندر موجود دونوں رقوم کی علامتوں کو بدل کر $-xy - y^2$ بنا دیتی ہے۔"
+  },
+  {
+   "en": "Finally, we tidy up the numerator by grouping and adding the like terms together. Since the resulting quadratic expression $2x^2 - 3xy - 3y^2$ cannot be factored further to cancel anything with the denominator, we have reached the simplest form.",
+   "ur": "آخر میں، ہم شمار کنندہ میں ایک جیسی رقوم کو یکجا کر کے اور جمع کر کے اسے مختصر کرتے ہیں۔ چونکہ حاصل ہونے والے دو درجی جملے $2x^2 - 3xy - 3y^2$ کی مزید تجزی نہیں ہو سکتی کہ نسب نما سے کچھ کٹ سکے، اس لیے ہم مختصر ترین شکل تک پہنچ چکے ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "This final answer, $\\frac{2x^2 - 3xy - 3y^2}{(x - y)(x + y)}$, is the single, compact fraction that is algebraically equal to the original three-part expression for all values where $x \\neq y$ and $x \\neq -y$. Note that the denominator can also be written back as $x^2 - y^2$. You can check this result by substituting simple values like $x = 2$ and $y = 1$ into both the original question and this final fraction to see that both give the exact same value.",
+  "ur": "یہ حتمی جواب، $\\frac{2x^2 - 3xy - 3y^2}{(x - y)(x + y)}$، وہ واحد اور مختصر کسر ہے جو الجبری طور پر اصل تین حصوں والے جملے کے بالکل برابر ہے، بشرطیکہ $x \\neq y$ اور $x \\neq -y$ ہو۔ یاد رکھیں کہ نسب نما کو دوبارہ $x^2 - y^2$ بھی لکھا جا سکتا ہے۔ آپ اس نتیجے کی پڑتال $x = 2$ اور $y = 1$ جیسی سادہ قیمتیں اصل سوال اور اس حتمی کسر دونوں میں درج کر کے کر سکتے ہیں، جس سے دونوں صورتوں میں بالکل ایک جیسا جواب آئے گا۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

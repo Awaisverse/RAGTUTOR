@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex4.1-q9",
+ "label": "iv",
+ "answer_ref": "Domain $= [0, \\infty)$; Range $= [2, \\infty)$",
+ "math": [
+  "f(x) = \\sqrt{x - 2}, \\quad x \\ge 2",
+  "\\text{Domain of } f^{-1} = \\text{Range of } f, \\quad \\text{Range of } f^{-1} = \\text{Domain of } f",
+  "\\text{Domain of } f = [2, \\infty)",
+  "f(2) = \\sqrt{2 - 2} = 0",
+  "\\text{Range of } f = [0, \\infty)",
+  "\\text{Domain of } f^{-1} = [0, \\infty), \\quad \\text{Range of } f^{-1} = [2, \\infty)"
+ ],
+ "why": [
+  {
+   "en": "We begin by writing down the given function $f(x) = \\sqrt{x - 2}$ and its condition $x \\ge 2$ so we can clearly see the input restriction. This restriction ensures that the number inside the square root never becomes negative.",
+   "ur": "ہم سب سے پہلے دیا گیا فنکشن $f(x) = \\sqrt{x - 2}$ اور اس کی شرط $x \\ge 2$ لکھتے ہیں تاکہ ان پٹ کی پابندی واضح ہو سکے۔ یہ شرط یقینی بناتی ہے کہ جزر کے اندر والی رقم کبھی منفی نہ ہو۔"
+  },
+  {
+   "en": "By the fundamental definition of inverse functions, the inputs and outputs swap places. This rule allows us to find the domain and range of $f^{-1}(x)$ simply by finding the range and domain of the original function $f(x)$.",
+   "ur": "انورس فنکشنز کی بنیادی تعریف کے مطابق، ان پٹ اور آؤٹ پٹ آپس میں جگہ بدل لیتے ہیں۔ یہ اصول ہمیں بغیر فارمولا نکالے، صرف اصل فنکشن $f(x)$ کی رینج اور ڈومین معلوم کر کے $f^{-1}(x)$ کی ڈومین اور رینج بتانے میں مدد دیتا ہے۔"
+  },
+  {
+   "en": "The domain is the set of all allowed input values $x$ for the function. Since the question already specifies $x \\ge 2$, we write this directly in interval notation as $[2, \\infty)$, which gives us the first piece of our puzzle.",
+   "ur": "ڈومین کسی فنکشن میں پٹ کی جانے والی تمام ممکنہ قیمتوں $x$ کا سیٹ ہوتا ہے۔ چونکہ سوال میں پہلے سے $x \\ge 2$ دیا گیا ہے، اس لیے ہم اسے وقفے (interval) کی شکل میں $[2, \\infty)$ لکھتے ہیں، جس سے ہمارا پہلا حصہ حل ہو جاتا ہے۔"
+  },
+  {
+   "en": "To find the range (all possible outputs), we first find the starting output value by plugging in the smallest allowed input, $x = 2$. This calculation shows that the minimum output value of $f(x)$ is $0$.",
+   "ur": "رینج (تمام ممکنہ آؤٹ پٹ) معلوم کرنے کے لیے ہم سب سے پہلے سب سے چھوٹی ان پٹ قیمت $x = 2$ درج کر کے ابتدائی آؤٹ پٹ نکالتے ہیں۔ اس حساب سے پتہ چلتا ہے کہ $f(x)$ کی کم سے کم آؤٹ پٹ قیمت $0$ ہے۔"
+  },
+  {
+   "en": "A principal square root never gives negative answers, and as $x$ grows larger than $2$, the output grows endlessly from $0$ upwards. This tells us that the complete set of outputs (the range of $f$) is $[0, \\infty)$.",
+   "ur": "مثبت جزر کبھی منفی جواب نہیں دیتا، اور جیسے جیسے $x$ کی قیمت $2$ سے بڑی ہوتی جاتی ہے، آؤٹ پٹ $0$ سے آگے لا محدود طور پر بڑھتا جاتا ہے۔ اس سے ہمیں معلوم ہوتا ہے کہ تمام آؤٹ پٹس کا سیٹ یعنی $f$ کی رینج $[0, \\infty)$ ہے۔"
+  },
+  {
+   "en": "Now we apply the swapping rule from Step 2 to the domain and range of $f$ that we just found. The range $[0, \\infty)$ becomes the domain of $f^{-1}$, and the domain $[2, \\infty)$ becomes the range of $f^{-1}$, completing our solution.",
+   "ur": "اب ہم مرحلہ 2 والا ادل بدل کا اصول $f$ کی معلوم کردہ ڈومین اور رینج پر لاگو کرتے ہیں۔ $f$ کی رینج $[0, \\infty)$ اب $f^{-1}$ کی ڈومین بن جاتی ہے، اور $f$ کی ڈومین $[2, \\infty)$ اب $f^{-1}$ کی رینج بن جاتی ہے، جس سے ہمارا حل مکمل ہو جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This final answer means that the inverse function $f^{-1}(x)$ can accept any non-negative number from $[0, \\infty)$ as an input, and it will always produce an output value in $[2, \\infty)$. We can check the boundary by noting that since $f(2) = 0$, the inverse function must reverse this to give $f^{-1}(0) = 2$, which matches the starting points of our new domain and range.",
+  "ur": "اس حتمی جواب کا مطلب ہے کہ انورس فنکشن $f^{-1}(x)$ میں $[0, \\infty)$ سے کوئی بھی غیر منفی عدد بطور ان پٹ دیا جا سکتا ہے، اور یہ ہمیشہ $[2, \\infty)$ کے درمیان آؤٹ پٹ دے گا۔ ہم اس کی تصدیق ایسے کر سکتے ہیں کہ چونکہ $f(2) = 0$ ہے، اس لیے انورس فنکشن اسے الٹ کر $f^{-1}(0) = 2$ دے گا، جو ہماری نئی ڈومین اور رینج کے ابتدائی نمبروں سے بالکل مطابقت رکھتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

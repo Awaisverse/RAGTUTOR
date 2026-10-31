@@ -1,0 +1,65 @@
+{
+ "item": "c10-ex5.4-q1",
+ "label": "iv",
+ "answer_ref": "$x = -3,\\ 0$",
+ "math": [
+  "4\\cdot 2^{2x}\\cdot 2 - 9\\cdot 2^x + 1 = 0 \\Rightarrow 8\\cdot 2^{2x} - 9\\cdot 2^x + 1 = 0",
+  "\\text{Let } y = 2^x \\Rightarrow 8y^2 - 9y + 1 = 0",
+  "8 y^{2} - y - 8 y + 1 = 0",
+  "y \\left(8 y - 1\\right) - \\left(8 y - 1\\right) = 0",
+  "\\left(y - 1\\right) \\left(8 y - 1\\right) = 0",
+  "y - 1 = 0 \\quad\\text{or}\\quad 8 y - 1 = 0",
+  "y = \\frac{1}{8},\\quad y = 1",
+  "2^{x} = \\frac{1}{8} = 2^{-3} \\Rightarrow x = -3 \\Rightarrow x = -3",
+  "2^{x} = 1 = 2^{0} \\Rightarrow x = 0 \\Rightarrow x = 0",
+  "\\text{S.S} = \\{-3, 0\\}"
+ ],
+ "why": [
+  {
+   "en": "Using the product law of exponents, we split the power $2^{2x+1}$ into $2^{2x} \\cdot 2$ and multiply the constants $4$ and $2$ to get $8$. This isolates the variable power $2^x$ and its square $2^{2x}$ so we can turn this exponential equation into a quadratic one.",
+   "ur": "قوت نما کے ضرب کے قانون کو استعمال کرتے ہوئے، ہم $2^{2x+1}$ کو $2^{2x} \\cdot 2$ میں توڑتے ہیں اور مستقل اعداد $4$ اور $2$ کو ضرب دے کر $8$ حاصل کرتے ہیں۔ اس سے متغیر طاقت $2^x$ اور اس کا مربع $2^{2x}$ الگ ہو جاتے ہیں تاکہ ہم اس قوت نمائی مساوات کو دو درجی مساوات میں بدل سکیں۔"
+  },
+  {
+   "en": "To make the equation easier to solve, we substitute $y$ in place of $2^x$, which makes $2^{2x}$ become $y^2$. This transforms our complex exponential equation into a standard quadratic equation $8y^2 - 9y + 1 = 0$ that we already know how to factorize.",
+   "ur": "مساوات کو حل کرنے میں آسانی کے لیے، ہم $2^x$ کی جگہ $y$ فرض کرتے ہیں، جس سے $2^{2x}$ کی جگہ $y^2$ آ جاتا ہے۔ یہ ہماری پیچیدہ قوت نمائی مساوات کو ایک معیاری دو درجی مساوات $8y^2 - 9y + 1 = 0$ میں بدل دیتا ہے جس کی تجزی کرنا ہم پہلے سے جانتے ہیں۔"
+  },
+  {
+   "en": "We use the middle-term breaking method to factorize the quadratic equation, looking for two numbers that multiply to $8$ and add up to $-9$. By rewriting $-9y$ as $-y - 8y$, we create four terms that can be easily grouped in pairs.",
+   "ur": "دو درجی مساوات کی تجزی کرنے کے لیے ہم درمیانی رقم کو توڑنے کا طریقہ استعمال کرتے ہیں، اور ایسے دو اعداد تلاش کرتے ہیں جن کو ضرب دینے سے $8$ اور جمع کرنے سے $-9$ آئے۔ $-9y$ کو $-y - 8y$ لکھنے سے ہمارے پاس چار رقوم بن جاتی ہیں جن کے جوڑے بنا کر حل کرنا آسان ہے۔"
+  },
+  {
+   "en": "Now we factor by grouping, taking $y$ common from the first two terms and $-1$ common from the last two terms. Notice how both pairs leave the exact same bracket $(8y - 1)$, showing our middle-term split was successful.",
+   "ur": "اب ہم جوڑے بنا کر مشترک لیتے ہیں؛ پہلی دو رقوم میں سے $y$ اور آخری دو رقوم میں سے $-1$ مشترک نکالتے ہیں۔ غور کریں کہ دونوں حصوں میں ایک جیسی بریکٹ $(8y - 1)$ بچی ہے، جو بتاتی ہے کہ ہماری تجزی بالکل درست جا رہی ہے۔"
+  },
+  {
+   "en": "Since $(8y - 1)$ is present in both parts, we factor it out as a single common bracket. This turns the expression from a subtraction of terms into a clean product of two linear factors equal to $0$.",
+   "ur": "چونکہ $(8y - 1)$ دونوں حصوں میں موجود ہے، اس لیے ہم اسے بطور مشترک بریکٹ باہر نکال لیتے ہیں۔ اس سے یہ جملہ رقوم کی تفریق سے بدل کر دو یک درجی اجزائے ضربی کے حاصل ضرب میں تبدیل ہو جاتا ہے جو $0$ کے برابر ہے۔"
+  },
+  {
+   "en": "According to the zero-product property, if the product of two factors is $0$, then at least one of them must be $0$. This allows us to split the quadratic equation into two simple linear equations that we can solve separately.",
+   "ur": "ضربی خاصیتِ صفر کے مطابق، اگر دو اجزائے ضربی کا حاصل ضرب $0$ ہو، تو ان میں سے کم از کم ایک لازمی $0$ کے برابر ہوتا ہے۔ اس اصول کی مدد سے ہم دو درجی مساوات کو دو سادہ یک درجی مساواتوں میں تقسیم کر لیتے ہیں جنہیں الگ الگ حل کیا جا سکتا ہے۔"
+  },
+  {
+   "en": "By solving each small linear equation, we find the two possible values for our temporary variable $y$, which are $\\frac{1}{8}$ and $1$. However, our original question is in terms of $x$, so our next job is to reverse the substitution.",
+   "ur": "ہر چھوٹی یک درجی مساوات کو حل کر کے، ہم اپنے فرضی متغیر $y$ کی دو ممکنہ قیمتیں $\\frac{1}{8}$ اور $1$ معلوم کر لیتے ہیں۔ تاہم، ہمارا اصل سوال $x$ کی شکل میں ہے، اس لیے ہمارا اگلا کام فرضی قیمت کو واپس اصل شکل میں لانا ہے۔"
+  },
+  {
+   "en": "We replace $y$ back with $2^x$ for the first root $\\frac{1}{8}$, and rewrite $\\frac{1}{8}$ as $2^{-3}$ so both sides have the same base $2$. Since the bases are equal, their exponents must be equal, giving us our first actual solution $x = -3$.",
+   "ur": "ہم پہلی قیمت $\\frac{1}{8}$ کے لیے $y$ کی جگہ واپس $2^x$ رکھتے ہیں، اور $\\frac{1}{8}$ کو $2^{-3}$ لکھتے ہیں تاکہ دونوں طرف اساس $2$ ایک جیسی ہو جائے۔ چونکہ اساس برابر ہیں، اس لیے ان کے قوت نما بھی برابر ہوں گے، جس سے ہمیں پہلا اصل حل $x = -3$ ملتا ہے۔"
+  },
+  {
+   "en": "Similarly, we substitute $2^x$ back for the second value $y = 1$, and use the zero exponent rule to write $1$ as $2^0$. Equating the powers of the same base $2$ gives us our second solution, $x = 0$.",
+   "ur": "اسی طرح، ہم دوسری قیمت $y = 1$ کے لیے بھی واپس $2^x$ درج کرتے ہیں، اور صفر قوت نما کا اصول استعمال کرتے ہوئے $1$ کو $2^0$ لکھتے ہیں۔ ایک جیسی اساس $2$ کے قوت نماؤں کو برابر رکھنے سے ہمیں دوسرا حل $x = 0$ حاصل ہوتا ہے۔"
+  },
+  {
+   "en": "Finally, we write both values of $x$ together inside curly brackets to form the Solution Set. This clearly presents all the values that satisfy the original equation.",
+   "ur": "آخر میں، ہم $x$ کی دونوں قیمتوں کو درمیانی بریکٹ کے اندر اکٹھا لکھ کر حل سیٹ بناتے ہیں۔ یہ ان تمام قیمتوں کو واضح طور پر ظاہر کرتا ہے جو اصل مساوات کو درست ثابت کرتی ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer means that $x = -3$ and $x = 0$ are the only two real numbers that make the original exponential equation $4\\cdot2^{2x+1}-9\\cdot2^x+1=0$ true. You can easily check this by putting $x = 0$ back into the equation: since $2^0 = 1$ and $2^1 = 2$, the left side becomes $4(2) - 9(1) + 1 = 8 - 9 + 1 = 0$, which matches the right side.",
+  "ur": "حتمی جواب کا مطلب یہ ہے کہ $x = -3$ اور $x = 0$ ہی وہ دو حقیقی اعداد ہیں جو دی گئی قوت نمائی مساوات $4\\cdot2^{2x+1}-9\\cdot2^x+1=0$ کو درست ثابت کرتے ہیں۔ آپ مساوات میں $x = 0$ درج کر کے باآسانی اس کی پڑتال کر سکتے ہیں: چونکہ $2^0 = 1$ اور $2^1 = 2$ ہوتا ہے، اس لیے بائیں طرف $4(2) - 9(1) + 1 = 8 - 9 + 1 = 0$ بن جاتا ہے، جو دائیں طرف کے بالکل برابر ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

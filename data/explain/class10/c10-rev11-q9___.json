@@ -1,0 +1,50 @@
+{
+ "item": "c10-rev11-q9",
+ "label": "",
+ "answer_ref": "Mean = 1470, Variance = 57100, SD = 238.96",
+ "math": [
+  "x = \\frac{\\text{Lower Limit} + \\text{Upper Limit}}{2}",
+  "\\begin{array}{c|ccccc|c} \\text{Wages} & 1000\\text{--}1200 & 1200\\text{--}1400 & 1400\\text{--}1600 & 1600\\text{--}1800 & 1800\\text{--}2000 & \\text{Total} \\\\ \\hline f & 6 & 10 & 12 & 8 & 4 & \\sum f = 40 \\\\ x & 1100 & 1300 & 1500 & 1700 & 1900 & \\\\ fx & 6600 & 13000 & 18000 & 13600 & 7600 & \\sum fx = 58800 \\end{array}",
+  "\\bar{x} = \\frac{\\sum fx}{\\sum f} = \\frac{58800}{40} = 1470",
+  "\\begin{array}{c|ccccc|c} x & 1100 & 1300 & 1500 & 1700 & 1900 & \\text{Total} \\\\ \\hline x - \\bar{x} & -370 & -170 & 30 & 230 & 430 & \\\\ (x - \\bar{x})^2 & 136900 & 28900 & 900 & 52900 & 184900 & \\\\ f(x - \\bar{x})^2 & 821400 & 289000 & 10800 & 423200 & 739600 & 2284000 \\end{array}",
+  "\\sigma^2 = \\frac{\\sum f(x - \\bar{x})^2}{\\sum f} = \\frac{2284000}{40} = 57100",
+  "\\sigma = \\sqrt{\\sigma^2} = \\sqrt{57100} \\approx 238.96",
+  ""
+ ],
+ "why": [
+  {
+   "en": "Since the wages are given in ranges rather than exact amounts, we cannot use them directly in our formulas. By finding the midpoint $x$ of each class interval, we get a single representative value for the wages of workers in that group.",
+   "ur": "چونکہ اجرتیں واضح اعداد کے بجائے وقفوں (ranges) میں دی گئی ہیں، اس لیے ہم انہیں براہِ راست فارمولوں میں استعمال نہیں کر سکتے۔ ہر کلاس انٹرول کا درمیانی نقطہ $x$ (مڈ پوائنٹ) معلوم کر کے ہمیں اس گروپ کے مزدوروں کی اجرت کے لیے ایک نمائندہ قیمت مل جاتی ہے۔"
+  },
+  {
+   "en": "To find the total wages of all workers, we multiply the number of workers $f$ in each group by their representative wage $x$. Adding these products gives us the estimated total daily wages $\\sum fx = 58800$ for all $\\sum f = 40$ workers.",
+   "ur": "تمام مزدوروں کی کل اجرت معلوم کرنے کے لیے ہم ہر گروپ میں مزدوروں کی تعداد $f$ کو ان کی نمائندہ اجرت $x$ سے ضرب دیتے ہیں۔ ان حاصل ضربوں کو جمع کرنے سے ہمیں تمام $\\sum f = 40$ مزدوروں کی تخمینی کل یومیہ اجرت $\\sum fx = 58800$ مل جاتی ہے۔"
+  },
+  {
+   "en": "By definition, the arithmetic mean for grouped data is the total value divided by the total frequency. Dividing the total wages $58800$ by $40$ workers tells us that the average daily wage is Rs. $1470$, which we also need for calculating the spread of wages next.",
+   "ur": "تعریف کے مطابق، گروہی ڈیٹا کا حسابی اوسط کل قیمت کو کل تعداد (تعدد) پر تقسیم کرنے سے حاصل ہوتا ہے۔ کل اجرت $58800$ کو $40$ مزدوروں پر تقسیم کرنے سے ہمیں معلوم ہوتا ہے کہ اوسط یومیہ اجرت $1470$ روپے ہے، جس کی ہمیں آگے اجرتوں کا پھیلاؤ معلوم کرنے کے لیے بھی ضرورت ہو گی۔"
+  },
+  {
+   "en": "Variance measures how far the wages are spread out from the average of $1470$. We find the difference $(x - \\bar{x})$ for each group, square it so negative differences become positive, and multiply by the number of workers $f$ to get the total squared deviation $\\sum f(x - \\bar{x})^2 = 2284000$.",
+   "ur": "ویریئنس (مغائرت) یہ ناپتا ہے کہ اجرتیں اوسط $1470$ سے کتنی دور پھیلی ہوئی ہیں۔ ہم ہر گروپ کے لیے فرق $(x - \\bar{x})$ معلوم کرتے ہیں، اس کا مربع لیتے ہیں تاکہ منفی فرق مثبت ہو جائیں، اور مزدوروں کی تعداد $f$ سے ضرب دے کر کل مربع انحراف $\\sum f(x - \\bar{x})^2 = 2284000$ حاصل کرتے ہیں۔"
+  },
+  {
+   "en": "Variance is the average of the squared deviations from the mean. Dividing our total squared deviation $2284000$ by the $40$ workers gives the variance $\\sigma^2 = 57100$, showing the overall spread in squared rupees.",
+   "ur": "ویریئنس دراصل اوسط سے لیے گئے مربع انحرافات کا اوسط ہوتا ہے۔ ہمارے کل مربع انحراف $2284000$ کو $40$ مزدوروں پر تقسیم کرنے سے ویریئنس $\\sigma^2 = 57100$ حاصل ہوتا ہے، جو مربع روپوں میں مجموعی پھیلاؤ کو ظاہر کرتا ہے۔"
+  },
+  {
+   "en": "Because variance is in squared units, we take its positive square root to bring the measure of spread back into our original unit (Rupees). This gives the standard deviation $\\sigma \\approx 238.96$.",
+   "ur": "چونکہ ویریئنس مربع اکائیوں میں ہوتا ہے، اس لیے ہم اس کا مثبت جزر المربع لیتے ہیں تاکہ پھیلاؤ کی پیمائش واپس ہماری اصل اکائی (روپے) میں آ جائے۔ اس سے معیاری انحراف $\\sigma \\approx 238.96$ حاصل ہوتا ہے۔"
+  },
+  {
+   "en": "We now state all three required statistical measures clearly together to complete our solution.",
+   "ur": "اب ہم اپنے حل کو مکمل کرنے کے لیے تینوں مطلوبہ شماریاتی پیمائشوں کو ایک ساتھ واضح طور پر بیان کرتے ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "On average, a worker in this factory earns Rs. $1470$ per day. The variance of $57100$ and standard deviation of Rs. $238.96$ tell us that most workers' daily wages typically vary by about Rs. $238.96$ above or below this average of Rs. $1470$. Notice that Rs. $1470$ falls right inside the $1400\\text{--}1600$ wage group, which has the highest number of workers ($12$), confirming our average is very reasonable.",
+  "ur": "اس فیکٹری میں ایک مزدور اوسطاً $1470$ روپے یومیہ کماتا ہے۔ $57100$ کا ویریئنس اور $238.96$ روپے کا معیاری انحراف ہمیں بتاتا ہے کہ زیادہ تر مزدوروں کی یومیہ اجرت عام طور پر اس $1470$ روپے کے اوسط سے تقریباً $238.96$ روپے کم یا زیادہ ہوتی ہے۔ غور کریں کہ $1470$ روپے بالکل $1400\\text{--}1600$ والے اجرتی گروپ کے اندر آتا ہے، جس میں مزدوروں کی تعداد سب سے زیادہ ($12$) ہے، اور یہ بات تصدیق کرتی ہے کہ ہمارا اوسط بالکل درست اور معقول ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

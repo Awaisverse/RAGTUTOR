@@ -1,0 +1,50 @@
+{
+ "item": "c10-ex4.1-q6",
+ "label": "iii",
+ "answer_ref": "$f^{-1}(x) = x^{2} + 1$, $x \\ge 0$",
+ "math": [
+  "f(x) = \\sqrt{x - 1}, \\quad x \\ge 1",
+  "y = \\sqrt{x - 1}",
+  "y^2 = \\left(\\sqrt{x - 1}\\right)^2",
+  "y^2 = x - 1",
+  "x = y^2 + 1",
+  "f^{-1}(y) = y^2 + 1, \\quad y \\ge 0",
+  "f^{-1}(x) = x^{2} + 1, \\quad x \\ge 0"
+ ],
+ "why": [
+  {
+   "en": "We begin by writing down the given function and its domain restriction $x \\ge 1$, which ensures the number inside the square root is never negative. Keeping this condition in mind is very important because the range of the original function will become the domain of our inverse function.",
+   "ur": "ہم سب سے پہلے دیے گئے فنکشن اور اس کی شرط $x \\ge 1$ کو لکھتے ہیں، جو اس بات کو یقینی بناتی ہے کہ جزر (square root) کے اندر والی رقم کبھی منفی نہ ہو۔ اس شرط کو ذہن میں رکھنا بہت ضروری ہے کیونکہ اصل فنکشن کی رینج ہی ہمارے معکوس فنکشن (inverse function) کی ڈومین بنے گی۔"
+  },
+  {
+   "en": "By definition of an inverse function, if $y = f(x)$, then $x = f^{-1}(y)$. We also note that because a principal square root always gives a non-negative output, the values of $y$ must be $y \\ge 0$.",
+   "ur": "معکوس فنکشن کی تعریف کے مطابق، اگر $y = f(x)$ ہو تو $x = f^{-1}(y)$ ہوتا ہے۔ ہم یہ بھی نوٹ کرتے ہیں کہ چونکہ جزر ہمیشہ ایک غیر منفی جواب دیتا ہے، اس لیے $y$ کی قیمتیں لازمی طور پر $y \\ge 0$ ہوں گی۔"
+  },
+  {
+   "en": "Our goal is to find $x$ by itself, which is currently trapped inside a square root. Using the rule of inverse operations, we square both sides of the equation to undo the square root.",
+   "ur": "ہمارا مقصد $x$ کو اکیلا کرنا ہے، جو اس وقت جزر کے اندر قید ہے۔ الٹ عوامل (inverse operations) کے اصول کو استعمال کرتے ہوئے، ہم جزر کو ختم کرنے کے لیے مساوات کے دونوں اطراف کا مربع (square) لیتے ہیں۔"
+  },
+  {
+   "en": "Since squaring and taking the square root are opposite operations, they cancel each other out on the right side. This leaves us with a simple linear expression $x - 1$, bringing us much closer to isolating $x$.",
+   "ur": "چونکہ مربع لینا اور جزر لینا ایک دوسرے کے الٹ عمل ہیں، اس لیے دائیں جانب یہ ایک دوسرے کو ختم کر دیتے ہیں۔ اس سے ہمارے پاس ایک سادہ جملہ $x - 1$ بچ جاتا ہے، جو ہمیں $x$ کو اکیلا کرنے کے بہت قریب لے آتا ہے۔"
+  },
+  {
+   "en": "To get $x$ completely by itself, we undo the subtraction of $1$ by adding $1$ to both sides. Now we have successfully expressed the input $x$ in terms of the output $y$.",
+   "ur": "$x$ کو مکمل طور پر اکیلا کرنے کے لیے، ہم دونوں طرف $1$ جمع کر کے منفی $1$ کو ختم کرتے ہیں۔ اب ہم نے کامیابی کے ساتھ ان پٹ $x$ کو آؤٹ پٹ $y$ کی شکل میں ظاہر کر لیا ہے۔"
+  },
+  {
+   "en": "Now that $x$ is isolated, we use the inverse relationship $x = f^{-1}(y)$ from Step 2 to replace $x$. This gives us the rule for the inverse function in terms of $y$, along with its valid inputs $y \\ge 0$.",
+   "ur": "اب جبکہ $x$ اکیلا ہو چکا ہے، ہم مرحلہ 2 والے معکوس تعلق $x = f^{-1}(y)$ کو استعمال کرتے ہوئے $x$ کی جگہ اس کی قیمت درج کرتے ہیں۔ اس سے ہمیں $y$ کی شکل میں معکوس فنکشن کا اصول اور اس کی درست ان پٹ $y \\ge 0$ مل جاتی ہے۔"
+  },
+  {
+   "en": "In mathematics, we conventionally write functions using $x$ as the input variable, so we simply change the letter $y$ to $x$. The condition $y \\ge 0$ becomes the domain $x \\ge 0$ of our final inverse function.",
+   "ur": "ریاضی میں، ہم روایتی طور پر فنکشنز کو ان پٹ متغیر $x$ کے ساتھ لکھتے ہیں، اس لیے ہم بس حرف $y$ کو $x$ سے بدل دیتے ہیں۔ شرط $y \\ge 0$ ہمارے آخری معکوس فنکشن کی ڈومین $x \\ge 0$ بن جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $f^{-1}(x) = x^2 + 1$ with $x \\ge 0$ is the inverse function that reverses the action of the original function $f(x) = \\sqrt{x - 1}$. The restriction $x \\ge 0$ is crucial because the original square root function only produced outputs of $0$ or greater, so the inverse can only accept inputs of $0$ or greater. You can check this by putting $x = 1$ into $f(x)$ to get $0$, and then putting $0$ into $f^{-1}(x)$ to get $(0)^2 + 1 = 1$, which brings you right back to your starting number.",
+  "ur": "آخری جواب $f^{-1}(x) = x^2 + 1$ بمعہ شرط $x \\ge 0$ وہ معکوس فنکشن ہے جو اصل فنکشن $f(x) = \\sqrt{x - 1}$ کے عمل کو الٹ دیتا ہے۔ شرط $x \\ge 0$ بہت اہم ہے کیونکہ اصل جزر والے فنکشن نے صرف $0$ یا اس سے بڑے آؤٹ پٹ دیے تھے، اس لیے معکوس فنکشن صرف $0$ یا اس سے بڑے ان پٹ ہی قبول کر سکتا ہے۔ آپ اس کی پڑتال ایسے کر سکتے ہیں کہ $f(x)$ میں $x = 1$ درج کرنے سے $0$ ملتا ہے، اور پھر $f^{-1}(x)$ میں $0$ درج کرنے سے $(0)^2 + 1 = 1$ ملتا ہے، جو آپ کو واپس آپ کے ابتدائی نمبر پر لے آتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

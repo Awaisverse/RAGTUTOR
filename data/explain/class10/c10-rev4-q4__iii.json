@@ -1,0 +1,50 @@
+{
+ "item": "c10-rev4-q4",
+ "label": "iii",
+ "answer_ref": "$f^{-1}(x) = x^{2} + 5$, $x \\ge 0$",
+ "math": [
+  "f(x) = \\sqrt{x - 5},\\quad x \\ge 5",
+  "y = \\sqrt{x - 5},\\quad y \\ge 0",
+  "y^2 = \\left(\\sqrt{x - 5}\\right)^2",
+  "y^2 = x - 5",
+  "x = y^2 + 5",
+  "f^{-1}(y) = y^2 + 5,\\quad y \\ge 0",
+  "f^{-1}(x) = x^{2} + 5,\\quad x \\ge 0"
+ ],
+ "why": [
+  {
+   "en": "We start by writing down the given function and its condition $x \\ge 5$. This domain is very important because a square root of a negative number is not a real number, so $x - 5$ must stay zero or positive.",
+   "ur": "ہم سب سے پہلے دیے گئے تفاعل (function) اور اس کی شرط $x \\ge 5$ کو لکھتے ہیں۔ یہ ڈومین (domain) بہت اہم ہے کیونکہ منفی عدد کا جزر حقیقی عدد نہیں ہوتا، اس لیے $x - 5$ کو صفر یا مثبت رہنا چاہیے۔"
+  },
+  {
+   "en": "By the definition of a function and its inverse, we replace $f(x)$ with $y$, which also means $x = f^{-1}(y)$. Since a principal square root never gives a negative output, we note that $y \\ge 0$, which will soon become the domain of our inverse function.",
+   "ur": "تفاعل اور اس کے معکوس (inverse) کی تعریف کے مطابق، ہم $f(x)$ کی جگہ $y$ لکھتے ہیں، جس کا مطلب $x = f^{-1}(y)$ بھی ہے۔ چونکہ جزر کی علامت کبھی منفی جواب نہیں دیتی، اس لیے ہم نوٹ کرتے ہیں کہ $y \\ge 0$ ہے، جو آگے چل کر ہمارے معکوس تفاعل کی ڈومین بنے گی۔"
+  },
+  {
+   "en": "Our goal is to get $x$ alone, but right now it is trapped inside a square root. Using the algebraic rule of inverse operations, we square both sides because squaring is the exact opposite of taking a square root.",
+   "ur": "ہمارا مقصد $x$ کو اکیلا کرنا ہے، لیکن ابھی یہ جزر کے اندر بند ہے۔ الجبرا کے اصول کے مطابق، ہم دونوں طرف مربع (square) لیتے ہیں کیونکہ مربع لینا جزر لینے کا بالکل الٹ عمل ہے۔"
+  },
+  {
+   "en": "The square and the square root cancel each other out on the right side. This frees the expression $x - 5$ and gives us a simple equation without any roots.",
+   "ur": "دائیں طرف مربع اور جزر ایک دوسرے کو ختم کر دیتے ہیں۔ اس سے $x - 5$ جزر سے آزاد ہو جاتا ہے اور ہمیں بغیر جزر کے ایک سادہ مساوات مل جاتی ہے۔"
+  },
+  {
+   "en": "To completely isolate $x$, we undo the subtraction of $5$ by adding $5$ to both sides. Now $x$ is expressed purely in terms of $y$, which means we have successfully reversed the rule of the function.",
+   "ur": "$x$ کو مکمل طور پر الگ کرنے کے لیے، ہم دونوں طرف $5$ جمع کر کے تفریق کے عمل کو ختم کرتے ہیں۔ اب $x$ خالصتاً $y$ کی شکل میں آ گیا ہے، جس کا مطلب ہے کہ ہم نے تفاعل کے اصول کو کامیابی سے الٹ دیا ہے۔"
+  },
+  {
+   "en": "Since we established in Step 2 that $x = f^{-1}(y)$, we substitute $f^{-1}(y)$ in place of $x$. This shows the inverse function rule in terms of the variable $y$, along with its restriction $y \\ge 0$.",
+   "ur": "چونکہ ہم نے دوسرے مرحلے میں طے کیا تھا کہ $x = f^{-1}(y)$ ہے، اس لیے ہم $x$ کی جگہ $f^{-1}(y)$ درج کرتے ہیں۔ یہ متغیر $y$ کی شکل میں معکوس تفاعل کے اصول کو اس کی شرط $y \\ge 0$ کے ساتھ ظاہر کرتا ہے۔"
+  },
+  {
+   "en": "In mathematics, we customarily write functions using $x$ as the input variable, so we simply change the letter $y$ to $x$. Notice how the range $y \\ge 0$ of the original function has now officially become the domain $x \\ge 0$ of the inverse function $f^{-1}(x)$.",
+   "ur": "ریاضی میں، ہم عام طور پر تفاعل کو $x$ کے متغیر میں لکھتے ہیں، اس لیے ہم صرف حرف $y$ کو $x$ سے بدل دیتے ہیں۔ غور کریں کہ اصل تفاعل کی رینج $y \\ge 0$ اب باقاعدہ طور پر معکوس تفاعل $f^{-1}(x)$ کی ڈومین $x \\ge 0$ بن گئی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $f^{-1}(x) = x^{2} + 5$ with $x \\ge 0$ is the exact reverse rule of the original function: where $f$ subtracted $5$ and took the square root, $f^{-1}$ squares the number and adds $5$. The condition $x \\ge 0$ is crucial because the original square root function only produced outputs of $0$ or greater, so the inverse can only accept inputs of $0$ or greater. You can check this by taking $x = 5$ in the original function to get $f(5) = \\sqrt{5 - 5} = 0$, and then putting $0$ into the inverse to get $f^{-1}(0) = 0^{2} + 5 = 5$, which brings you right back to $5$.",
+  "ur": "آخری جواب $f^{-1}(x) = x^{2} + 5$ بمعہ شرط $x \\ge 0$ اصل تفاعل کا بالکل الٹ اصول ہے: جہاں $f$ نے $5$ تفریق کیا اور جزر لیا، وہاں $f^{-1}$ عدد کا مربع لیتا ہے اور $5$ جمع کرتا ہے۔ شرط $x \\ge 0$ بہت ضروری ہے کیونکہ اصل جزر والے تفاعل نے صرف $0$ یا اس سے بڑے جوابات دیے تھے، اس لیے معکوس تفاعل صرف $0$ یا اس سے بڑے اعداد ہی بطور اِن پُٹ لے سکتا ہے۔ آپ اس کی پڑتال ایسے کر سکتے ہیں کہ اصل تفاعل میں $x = 5$ رکھیں تو $f(5) = \\sqrt{5 - 5} = 0$ ملتا ہے، اور پھر اس $0$ کو معکوس تفاعل میں رکھیں تو $f^{-1}(0) = 0^{2} + 5 = 5$ ملتا ہے، جو آپ کو واپس $5$ پر لے آتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

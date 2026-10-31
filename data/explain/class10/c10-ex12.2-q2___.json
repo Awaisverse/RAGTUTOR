@@ -1,0 +1,50 @@
+{
+ "item": "c10-ex12.2-q2",
+ "label": "",
+ "answer_ref": "$\\frac{29}{50}$",
+ "math": [
+  "S = \\{1, 2, 3, \\dots, 50\\} \\implies n(S) = 50",
+  "A = \\{2, 4, 6, \\dots, 50\\} \\implies n(A) = 25",
+  "B = \\{1, 4, 9, 16, 25, 36, 49\\} \\implies n(B) = 7",
+  "A \\cap B = \\{4, 16, 36\\} \\implies n(A \\cap B) = 3",
+  "P(A) = \\frac{25}{50}, \\quad P(B) = \\frac{7}{50}, \\quad P(A \\cap B) = \\frac{3}{50}",
+  "P(A \\cup B) = P(A) + P(B) - P(A \\cap B)",
+  "P(A \\cup B) = \\frac{25}{50} + \\frac{7}{50} - \\frac{3}{50} = \\frac{25 + 7 - 3}{50} = \\frac{29}{50}"
+ ],
+ "why": [
+  {
+   "en": "In probability, we always start by defining the sample space $S$ so we know all the possibilities we are choosing from. This gives us the total number of outcomes, $n(S) = 50$, which will serve as the denominator in our probability fractions.",
+   "ur": "احتمال (probability) کے سوالات میں ہم ہمیشہ نمونہ کی فضا (sample space) $S$ معلوم کرنے سے شروعات کرتے ہیں تاکہ ہمیں تمام ممکنہ نتائج کا علم ہو سکے۔ اس سے ہمیں کل ممکنہ نتائج کی تعداد $n(S) = 50$ ملتی ہے، جو ہمارے احتمال کے فارمولے میں بٹے کے نیچے (denominator کے طور پر) استعمال ہو گی۔"
+  },
+  {
+   "en": "Next, we focus on the first condition in the question—getting an even number—and group these outcomes into event $A$. Finding $n(A) = 25$ tells us how many favourable outcomes exist for this specific condition alone.",
+   "ur": "اب ہم سوال کی پہلی شرط، یعنی جفت عدد (even number) آنے پر توجہ دیتے ہیں اور ان نتائج کو وقوعہ $A$ کا نام دیتے ہیں۔ $n(A) = 25$ معلوم کرنے سے ہمیں پتہ چلتا ہے کہ صرف اس پہلی شرط کے حق میں کتنے ممکنہ نتائج موجود ہیں۔"
+  },
+  {
+   "en": "Similarly, we address the second condition by listing all numbers up to $50$ that are squares of whole numbers as event $B$. Counting them gives $n(B) = 7$, which tells us the exact number of favourable outcomes for our second condition.",
+   "ur": "اسی طرح، ہم دوسری شرط کے لیے $50$ تک کے تمام مکمل مربع (perfect square) اعداد کی فہرست بنا کر اسے وقوعہ $B$ کا نام دیتے ہیں۔ انہیں گننے سے ہمیں $n(B) = 7$ ملتا ہے، جو دوسری شرط کے موافق نتائج کی تعداد بتاتا ہے۔"
+  },
+  {
+   "en": "Because the question uses the word 'or', we must check if events $A$ and $B$ overlap so we don't accidentally count the same door number twice. Finding the intersection $A \\cap B$ shows us that $3$ door numbers ($4, 16, 36$) are both even and perfect squares.",
+   "ur": "چونکہ سوال میں 'یا' (or) کا لفظ استعمال ہوا ہے، اس لیے ہمیں دیکھنا ہو گا کہ کیا وقوعہ $A$ اور $B$ میں کچھ اعداد مشترک ہیں تاکہ کوئی نمبر غلطی سے دو بار نہ گنا جائے۔ تقاطع $A \\cap B$ معلوم کرنے سے واضح ہوتا ہے کہ $3$ نمبر ($4, 16, 36$) ایسے ہیں جو جفت بھی ہیں اور مکمل مربع بھی۔"
+  },
+  {
+   "en": "Using the basic definition of probability, we divide the size of each event by the total number of outcomes $50$. We keep the denominator as $50$ without simplifying right now because having a common denominator makes the next calculation much easier.",
+   "ur": "احتمال کے بنیادی فارمولے کو استعمال کرتے ہوئے، ہم ہر وقوعہ کی تعداد کو کل نتائج یعنی $50$ پر تقسیم کرتے ہیں۔ ہم یہاں کسر کو مختصر نہیں کرتے اور بٹے کے نیچے $50$ ہی رہنے دیتے ہیں تاکہ اگلے مرحلے میں جمع اور تفریق کرنا آسان رہے۔"
+  },
+  {
+   "en": "The word 'or' in probability means we need the union of the two events, $A \\cup B$. Since the events are overlapping, we use the addition law of probability that subtracts the overlap $P(A \\cap B)$ to remove the double-counted numbers.",
+   "ur": "احتمال میں 'یا' (or) کا مطلب دو واقعات کا یونین $A \\cup B$ معلوم کرنا ہوتا ہے۔ چونکہ یہ واقعات متداخل (overlapping) ہیں، اس لیے ہم احتمال کا وہ قانونِ جمع استعمال کرتے ہیں جس میں مشترک حصے $P(A \\cap B)$ کو تفریق کیا جاتا ہے تاکہ دو بار گنے گئے نمبروں کو نکالا جا سکے۔"
+  },
+  {
+   "en": "Finally, we put our calculated fractions into the addition law formula and do simple arithmetic. Adding the two probabilities and subtracting the overlap gives us the exact combined probability of $\\frac{29}{50}$.",
+   "ur": "آخر میں، ہم اپنی معلوم کردہ کسروں کو فارمولے میں درج کر کے سادہ جمع تفریق کرتے ہیں۔ دونوں احتمالات کو جمع کرنے اور مشترک حصے کو تفریق کرنے سے ہمیں درست مجموعی احتمال $\\frac{29}{50}$ حاصل ہو جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This final answer of $\\frac{29}{50}$ means that out of the $50$ houses, there are $29$ unique door numbers that are either even, a perfect square, or both. You can check this makes sense because $25$ even numbers plus $4$ odd perfect squares ($1, 9, 25, 49$) gives exactly $29$ favourable doors out of $50$.",
+  "ur": "آخری جواب $\\frac{29}{50}$ کا مطلب یہ ہے کہ کل $50$ گھروں میں سے $29$ منفرد دروازے ایسے ہیں جن کا نمبر یا تو جفت ہے، یا مکمل مربع ہے، یا دونوں ہے۔ آپ اس کی تصدیق ایسے بھی کر سکتے ہیں کہ $25$ جفت اعداد میں اگر $4$ طاق مکمل مربع اعداد ($1, 9, 25, 49$) ملائے جائیں تو کل $50$ میں سے ٹھیک $29$ موافق نمبر ہی بنتے ہیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

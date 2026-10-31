@@ -1,0 +1,40 @@
+{
+ "item": "c10-rev11-q6",
+ "label": "",
+ "answer_ref": "Range = 30, Variance = 38.5, SD = 6.2",
+ "math": [
+  "\\text{Range} = 30 - 0 = 30",
+  "\\begin{array}{c|cccccc} x\\ (\\text{midpoint}) & \\frac{5}{2} & \\frac{15}{2} & \\frac{25}{2} & \\frac{35}{2} & \\frac{45}{2} & \\frac{55}{2} \\\\ \\hline f & 4 & 12 & 20 & 24 & 16 & 4 \\\\ fx & 10 & 90 & 250 & 420 & 360 & 110 \\end{array}",
+  "\\bar{x} = \\frac{\\sum fx}{\\sum f} = \\frac{1240}{80} \\approx 15.50",
+  "\\sigma^2 = \\frac{\\sum f(x - \\bar{x})^2}{\\sum f} \\approx 38.50",
+  "\\sigma = \\sqrt{38.50} \\approx 6.20"
+ ],
+ "why": [
+  {
+   "en": "In grouped data, the range is defined as the difference between the highest possible value and the lowest possible value. By subtracting the lower limit of the first class ($0$) from the upper limit of the last class ($30$), we find that the entire dataset is spread over a span of $30$.",
+   "ur": "گروہی ڈیٹا میں رینج معلوم کرنے کا اصول سب سے بڑی اور سب سے چھوٹی حد کا فرق نکالنا ہے۔ آخری کلاس کی بالائی حد ($30$) میں سے پہلی کلاس کی زیریں حد ($0$) کو تفریق کرنے سے ہمیں معلوم ہوتا ہے کہ پورا ڈیٹا $30$ کے پھیلاؤ میں ہے۔"
+  },
+  {
+   "en": "Since we have class intervals instead of exact values, we find the midpoint ($x$) of each class to represent it. Multiplying each midpoint by its frequency ($f$) gives us $fx$, which estimates the total value contributed by each group and prepares us to find the mean.",
+   "ur": "چونکہ ہمارے پاس اصل قیمتوں کی بجائے کلاس انٹرولز ہیں، اس لیے ہم ہر کلاس کی نمائندگی کے لیے اس کا درمیانی نقطہ ($x$) نکالتے ہیں۔ پھر ہر درمیانی نقطے کو اس کی تعدد ($f$) سے ضرب دے کر $fx$ حاصل کیا جاتا ہے، جو ہمیں اوسط (mean) نکالنے کے لیے تیار کرتا ہے۔"
+  },
+  {
+   "en": "To measure how spread out the data is, we first need the central value, which is the arithmetic mean ($\\bar{x}$). Dividing the sum of $fx$ ($1240$) by the total frequency ($80$) tells us that the average value of our data is $15.50$.",
+   "ur": "ڈیٹا کا پھیلاؤ ناپنے کے لیے ہمیں سب سے پہلے مرکزی قیمت یعنی حسابی اوسط ($\\bar{x}$) کی ضرورت ہوتی ہے۔ $fx$ کے مجموعے ($1240$) کو کل تعدد ($80$) پر تقسیم کرنے سے ہمیں پتہ چلتا ہے کہ ہمارے ڈیٹا کی اوسط قیمت $15.50$ ہے۔"
+  },
+  {
+   "en": "Variance ($\\sigma^2$) measures the average squared distance of the class midpoints from the mean ($15.50$). Using the grouped variance formula gives us $38.50$, which quantifies the overall dispersion of the data in squared units.",
+   "ur": "تغیرات (Variance، $\\sigma^2$) اوسط ($15.50$) سے درمیانی نقاط کے فاصلے کے مربع کی اوسط کو ظاہر کرتا ہے۔ گروہی تغیرات کا فارمولا استعمال کرنے سے ہمیں $38.50$ ملتا ہے، جو ڈیٹا کے مجموعی پھیلاؤ کو مربع اکائیوں میں بتاتا ہے۔"
+  },
+  {
+   "en": "Because variance is in squared units, we take its positive square root to get the standard deviation ($\\sigma$) in the original units of the data. Taking the square root of $38.50$ gives approximately $6.20$, completing our required measures of dispersion.",
+   "ur": "چونکہ تغیرات مربع اکائیوں میں ہوتا ہے، اس لیے ڈیٹا کی اصل اکائیوں میں معیاری انحراف (Standard Deviation، $\\sigma$) حاصل کرنے کے لیے ہم اس کا جزر (square root) لیتے ہیں۔ $38.50$ کا جزر لینے سے تقریباً $6.20$ آتا ہے، جس سے ہمارا مطلوبہ جواب مکمل ہو جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "These results describe the spread of the grouped data: all values fall within a total width of $30$ (Range), the average squared deviation from the mean is $38.5$, and a typical value lies about $6.2$ units away from the mean of $15.50$ (Standard Deviation). Notice how the standard deviation ($6.2$) is reasonably smaller than the total range ($30$), which is a good quick check that our calculation makes sense.",
+  "ur": "یہ نتائج گروہی ڈیٹا کے پھیلاؤ کو واضح کرتے ہیں: تمام قیمتیں $30$ کے کل پھیلاؤ (رینج) کے اندر ہیں، اوسط سے فاصلے کے مربع کی اوسط $38.5$ ہے، اور ایک عام قیمت اوسط ($15.50$) سے تقریباً $6.2$ اکائیوں کے فاصلے پر ہے (معیاری انحراف)۔ غور کریں کہ معیاری انحراف ($6.2$) کل رینج ($30$) سے مناسب حد تک چھوٹا ہے، جو اس بات کی اچھی تصدیق ہے کہ ہمارا جواب درست ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

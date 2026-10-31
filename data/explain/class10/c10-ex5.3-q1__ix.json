@@ -1,0 +1,50 @@
+{
+ "item": "c10-ex5.3-q1",
+ "label": "ix",
+ "answer_ref": "$\\frac{2 \\left(x + 2\\right)}{3 \\left(x - 2\\right)}$",
+ "math": [
+  "\\frac{2x^2 - 98}{x^3 - 125} \\times \\frac{x^2 - 3x - 10}{3x - 21} \\div \\frac{x^2 + 5x - 14}{x^2 + 5x + 25}",
+  "= \\frac{2x^2 - 98}{x^3 - 125} \\times \\frac{x^2 - 3x - 10}{3x - 21} \\times \\frac{x^2 + 5x + 25}{x^2 + 5x - 14}",
+  "= \\frac{2(x^2 - 49)}{x^3 - 5^3} \\times \\frac{x^2 - 3x - 10}{3(x - 7)} \\times \\frac{x^2 + 5x + 25}{x^2 + 5x - 14}",
+  "= \\frac{2(x^2 - 7^2)}{(x - 5)(x^2 + 5x + 25)} \\times \\frac{x^2 - 5x + 2x - 10}{3(x - 7)} \\times \\frac{x^2 + 5x + 25}{x^2 + 7x - 2x - 14}",
+  "= \\frac{2(x - 7)(x + 7)}{(x - 5)(x^2 + 5x + 25)} \\times \\frac{x(x - 5) + 2(x - 5)}{3(x - 7)} \\times \\frac{x^2 + 5x + 25}{x(x + 7) - 2(x + 7)}",
+  "= \\frac{2(x - 7)(x + 7)}{(x - 5)(x^2 + 5x + 25)} \\times \\frac{(x - 5)(x + 2)}{3(x - 7)} \\times \\frac{x^2 + 5x + 25}{(x - 2)(x + 7)}",
+  "= \\frac{2 \\left(x + 2\\right)}{3 \\left(x - 2\\right)}"
+ ],
+ "why": [
+  {
+   "en": "We always begin by writing down the exact algebraic expression from the question. This lets us clearly see the three fractions and the multiplication and division operations we need to perform.",
+   "ur": "ہم ہمیشہ سوال میں دی گئی اصل الجبری عبارت کو لکھ کر شروعات کرتے ہیں۔ اس سے ہمیں تینوں کسریں اور ان کے درمیان ضرب اور تقسیم کے عوامل واضح طور پر نظر آ جاتے ہیں۔"
+  },
+  {
+   "en": "By the rule of fraction division, dividing by a fraction is the same as multiplying by its reciprocal. Flipping the third fraction turns the whole problem into multiplication, allowing us to cancel factors across all three fractions later.",
+   "ur": "کسروں کی تقسیم کے اصول کے مطابق، کسی کسر سے تقسیم کرنا اس کے معکوس (الٹ) سے ضرب دینے کے برابر ہے۔ تیسری کسر کو الٹنے سے پورا سوال ضرب میں بدل جاتا ہے، جس سے ہم بعد میں تینوں کسروں کے مشترک اجزائے ضربی کو آپس میں کاٹ سکیں گے۔"
+  },
+  {
+   "en": "Before using algebraic formulas, we always pull out simple common numbers like $2$ and $3$, and rewrite $125$ as $5^3$. This reveals hidden standard forms like $x^2 - 49$ and a difference of cubes $x^3 - 5^3$.",
+   "ur": "الجبری فارمولے لگانے سے پہلے ہم ہمیشہ $2$ اور $3$ جیسے سادہ مشترک اعداد کو باہر نکالتے ہیں، اور $125$ کو $5^3$ کی شکل میں لکھتے ہیں۔ اس سے $x^2 - 49$ اور مکعبوں کے فرق $x^3 - 5^3$ جیسی معیاری شکلیں واضح ہو جاتی ہیں۔"
+  },
+  {
+   "en": "Here we expand $x^3 - 5^3$ using the cube formula, write $49$ as $7^2$, and break the middle terms of the two quadratic expressions. Notice how expanding the cube gives us $x^2 + 5x + 25$, which matches the numerator of the third fraction and cannot be factored further.",
+   "ur": "یہاں ہم مکعب کے فارمولے سے $x^3 - 5^3$ کو کھولتے ہیں، $49$ کو $7^2$ لکھتے ہیں، اور دونوں دو درجی عبارتوں کی درمیانی رقموں کو توڑتے ہیں۔ غور کریں کہ مکعب کا فارمولا کھولنے سے ہمیں $x^2 + 5x + 25$ ملتا ہے، جو تیسری کسر کے شمار کنندہ جیسا ہے اور اس کی مزید تجزی نہیں ہو سکتی۔"
+  },
+  {
+   "en": "We apply the difference of squares formula to turn $x^2 - 7^2$ into $(x - 7)(x + 7)$, and take out common terms from pairs in the quadratic expressions. This brings us one step away from having every piece fully factored.",
+   "ur": "ہم مربعوں کے فرق والا فارمولا لگا کر $x^2 - 7^2$ کو $(x - 7)(x + 7)$ میں بدلتے ہیں، اور دو درجی عبارتوں کے جوڑوں میں سے مشترک رقوم باہر نکالتے ہیں۔ یہ عمل ہمیں ہر حصے کی مکمل تجزی کرنے کے بالکل قریب لے آتا ہے۔"
+  },
+  {
+   "en": "By factoring out the common binomials $(x - 5)$ and $(x + 7)$, we finish factoring the quadratic parts. Now every numerator and denominator is written purely as a product of factors, making it ready for cancellation.",
+   "ur": "مشترک دو رقمی عوامل $(x - 5)$ اور $(x + 7)$ کو باہر نکال کر ہم دو درجی حصوں کی تجزی مکمل کرتے ہیں۔ اب ہر شمار کنندہ اور مخرج مکمل طور پر اجزائے ضربی کے حاصل ضرب کی شکل میں آ چکا ہے، اور کٹنے کے لیے بالکل تیار ہے۔"
+  },
+  {
+   "en": "Since any factor divided by itself equals $1$, we cancel all identical factors present in both the top and bottom, including the large trinomial $x^2 + 5x + 25$. Only the unmatched factors remain, giving us the simplest form.",
+   "ur": "چونکہ کوئی بھی جزوئے ضربی اپنے آپ سے تقسیم ہو کر $1$ بن جاتا ہے، اس لیے ہم اوپر اور نیچے موجود تمام ایک جیسے عوامل بشمول بڑی سہ رقمی عبارت $x^2 + 5x + 25$ کو کاٹ دیتے ہیں۔ صرف وہی اجزاء باقی رہ جاتے ہیں جن کا جوڑا نہیں ہے، اور یوں ہمیں مختصر ترین شکل مل جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $\\frac{2(x + 2)}{3(x - 2)}$ means that the entire complicated original expression is equivalent to this single, simple fraction for all valid values of $x$. Because no more common factors remain between the numerator and denominator, the expression is in its lowest terms.",
+  "ur": "آخری جواب $\\frac{2(x + 2)}{3(x - 2)}$ کا مطلب ہے کہ سوال کی پوری پیچیدہ عبارت $x$ کی تمام درست قیمتوں کے لیے اس ایک سادہ سی کسر کے برابر ہے۔ چونکہ اب شمار کنندہ اور مخرج میں کوئی اور مشترک جزوئے ضربی باقی نہیں رہا، اس لیے یہ عبارت اپنی مختصر ترین شکل میں ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

@@ -1,0 +1,40 @@
+{
+ "item": "c10-rev6-q7",
+ "label": "",
+ "answer_ref": "$ABCD$ is a parallelogram",
+ "math": [
+  "\\overrightarrow{AB} = (x_2 - x_1)\\underline{i} + (y_2 - y_1)\\underline{j} = (6 - (2))\\underline{i} + (3 - (3))\\underline{j} = 4\\underline{i}",
+  "\\overrightarrow{DC} = (x_2 - x_1)\\underline{i} + (y_2 - y_1)\\underline{j} = (7 - (3))\\underline{i} + (6 - (6))\\underline{j} = 4\\underline{i}",
+  "\\overrightarrow{AD} = (x_2 - x_1)\\underline{i} + (y_2 - y_1)\\underline{j} = (3 - (2))\\underline{i} + (6 - (3))\\underline{j} = \\underline{i} + 3\\underline{j}",
+  "\\overrightarrow{BC} = (x_2 - x_1)\\underline{i} + (y_2 - y_1)\\underline{j} = (7 - (6))\\underline{i} + (6 - (3))\\underline{j} = \\underline{i} + 3\\underline{j}",
+  "\\overrightarrow{AB} = \\overrightarrow{DC},\\quad \\overrightarrow{AD} = \\overrightarrow{BC}"
+ ],
+ "why": [
+  {
+   "en": "To prove a shape is a parallelogram using vectors, we first need to find the vectors representing its sides. Using the position vector formula, we find the vector for the first side, $\\overrightarrow{AB}$, which turns out to be $4\\underline{i}$.",
+   "ur": "ویکٹرز کی مدد سے متوازی الاضلاع ثابت کرنے کے لیے ہمیں پہلے اس کے اضلاع کے ویکٹرز معلوم کرنے ہوں گے۔ پوزیشن ویکٹر کے فارمولے سے ہم پہلے ضلع $\\overrightarrow{AB}$ کا ویکٹر نکالتے ہیں جو کہ $4\\underline{i}$ آتا ہے۔"
+  },
+  {
+   "en": "Next, we find the vector for the side opposite to $AB$, which is $\\overrightarrow{DC}$, making sure to keep the same left-to-right direction. Getting $4\\underline{i}$ again shows us that this opposite side has the exact same length and direction as $\\overrightarrow{AB}$.",
+   "ur": "اب ہم ضلع $AB$ کے بالمقابل ضلع $\\overrightarrow{DC}$ کا ویکٹر اسی سمت میں معلوم کرتے ہیں۔ جواب دوبارہ $4\\underline{i}$ آنے سے ہمیں پتا چلتا ہے کہ اس بالمقابل ضلع کی لمبائی اور سمت بالکل $\\overrightarrow{AB}$ جیسی ہے۔"
+  },
+  {
+   "en": "Now we check the other pair of opposite sides, starting by finding the vector for side $\\overrightarrow{AD}$. The result $\\underline{i} + 3\\underline{j}$ gives us the exact length and direction of this third side.",
+   "ur": "اب ہم بالمقابل اضلاع کے دوسرے جوڑے کو چیک کرتے ہیں اور پہلے ضلع $\\overrightarrow{AD}$ کا ویکٹر معلوم کرتے ہیں۔ نتیجہ $\\underline{i} + 3\\underline{j}$ ہمیں اس تیسرے ضلع کی درست لمبائی اور سمت بتاتا ہے۔"
+  },
+  {
+   "en": "We then calculate the vector for the remaining opposite side, $\\overrightarrow{BC}$, in the same direction as $\\overrightarrow{AD}$. The result $\\underline{i} + 3\\underline{j}$ matches $\\overrightarrow{AD}$ completely, confirming the second pair of opposite sides are also equal in magnitude and direction.",
+   "ur": "پھر ہم باقی ماندہ بالمقابل ضلع $\\overrightarrow{BC}$ کا ویکٹر، $\\overrightarrow{AD}$ ہی کی سمت میں معلوم کرتے ہیں۔ نتیجہ $\\underline{i} + 3\\underline{j}$ بالکل $\\overrightarrow{AD}$ جیسا ہے، جو تصدیق کرتا ہے کہ بالمقابل اضلاع کا دوسرا جوڑا بھی مقدار اور سمت میں برابر ہے۔"
+  },
+  {
+   "en": "By the geometric definition of equal vectors, if two vectors are equal, the line segments are both parallel and equal in length. Comparing our results proves that both pairs of opposite sides of $ABCD$ have this exact property.",
+   "ur": "مساوی ویکٹرز کی تعریف کے مطابق، اگر دو ویکٹرز برابر ہوں تو وہ خطِ مستقیم متوازی بھی ہوتے ہیں اور لمبائی میں برابر بھی۔ ہمارے نتائج کا موازنہ ثابت کرتا ہے کہ شکل $ABCD$ کے بالمقابل اضلاع کے دونوں جوڑے یہ خصوصیت رکھتے ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "Since both pairs of opposite sides are equal in length and parallel to each other ($\\overrightarrow{AB} = \\overrightarrow{DC}$ and $\\overrightarrow{AD} = \\overrightarrow{BC}$), the given points $A(2,3)$, $B(6,3)$, $C(7,6)$, and $D(3,6)$ definitely form a parallelogram. You can easily verify this by plotting the four points on a graph paper to see the parallelogram shape.",
+  "ur": "چونکہ بالمقابل اضلاع کے دونوں جوڑے لمبائی میں برابر اور ایک دوسرے کے متوازی ہیں ($\\overrightarrow{AB} = \\overrightarrow{DC}$ اور $\\overrightarrow{AD} = \\overrightarrow{BC}$)، اس لیے دیے گئے نقاط $A(2,3)$، $B(6,3)$، $C(7,6)$ اور $D(3,6)$ یقینی طور پر ایک متوازی الاضلاع بناتے ہیں۔ آپ ان چاروں نقاط کو گراف پیپر پر ظاہر کر کے بھی اس شکل کی آسانی سے تصدیق کر سکتے ہیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

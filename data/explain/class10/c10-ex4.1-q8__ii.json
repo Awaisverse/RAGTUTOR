@@ -1,0 +1,50 @@
+{
+ "item": "c10-ex4.1-q8",
+ "label": "ii",
+ "answer_ref": "verified: $f(f^{-1}(x)) = f^{-1}(f(x)) = x$",
+ "math": [
+  "f(x) = 7x - 4",
+  "y = 7x - 4 \\implies x = f^{-1}(y)",
+  "7x = y + 4 \\implies x = \\frac{y + 4}{7}",
+  "f^{-1}(y) = \\frac{y + 4}{7} \\implies f^{-1}(x) = \\frac{x + 4}{7}",
+  "f(f^{-1}(x)) = f\\left(\\frac{x + 4}{7}\\right) = 7\\left(\\frac{x + 4}{7}\\right) - 4 = (x + 4) - 4 = x",
+  "f^{-1}(f(x)) = f^{-1}(7x - 4) = \\frac{(7x - 4) + 4}{7} = \\frac{7x}{7} = x",
+  "f(f^{-1}(x)) = f^{-1}(f(x)) = x"
+ ],
+ "why": [
+  {
+   "en": "We begin by stating the given linear function $f(x) = 7x - 4$ clearly. Before we can test the composition rule, our first goal is to find the formula for the inverse function, $f^{-1}(x)$.",
+   "ur": "ہم دیے گئے لینیئر فنکشن $f(x) = 7x - 4$ کو واضح طور پر لکھ کر شروعات کرتے ہیں۔ کمپوزیشن رول کو جانچنے سے پہلے، ہمارا پہلا مقصد معکوس فنکشن $f^{-1}(x)$ کا فارمولا معلوم کرنا ہے۔"
+  },
+  {
+   "en": "By the definition of an inverse function, if $f$ maps $x$ to $y$, then $f^{-1}$ maps $y$ back to $x$. Setting $y = f(x)$ gives us a standard algebraic equation that we can rearrange.",
+   "ur": "معکوس فنکشن کی تعریف کے مطابق، اگر $f$، $x$ کو $y$ سے ملاتا ہے، تو $f^{-1}$ واپس $y$ کو $x$ سے ملاتا ہے۔ $y = f(x)$ فرض کرنے سے ہمیں ایک عام الجبری مساوات مل جاتی ہے جسے ہم ترتیب دے سکتے ہیں۔"
+  },
+  {
+   "en": "To reverse the effect of the function, we isolate the input variable $x$ using basic algebra. Adding $4$ and dividing by $7$ tells us the exact operations needed to get $x$ back from $y$.",
+   "ur": "فنکشن کے اثر کو الٹنے کے لیے، ہم بنیادی الجبرا کا استعمال کرتے ہوئے ان پٹ متغیر $x$ کو الگ کرتے ہیں۔ $4$ جمع کرنا اور $7$ سے تقسیم کرنا ہمیں بتاتا ہے کہ $y$ سے واپس $x$ حاصل کرنے کے لیے کن عوامل کی ضرورت ہے۔"
+  },
+  {
+   "en": "Since we established that $x = f^{-1}(y)$, we substitute this in and then change the dummy variable $y$ to $x$, as functions are customarily written in terms of $x$. Now we have our inverse function $f^{-1}(x) = \\frac{x + 4}{7}$ ready for verification.",
+   "ur": "چونکہ ہم طے کر چکے ہیں کہ $x = f^{-1}(y)$، ہم یہ قیمت درج کرتے ہیں اور پھر متغیر $y$ کو $x$ سے بدل دیتے ہیں، کیونکہ فنکشنز کو عام طور پر $x$ کی شکل میں لکھا جاتا ہے۔ اب تصدیق کے لیے ہمارا معکوس فنکشن $f^{-1}(x) = \\frac{x + 4}{7}$ تیار ہے۔"
+  },
+  {
+   "en": "To verify the first part of the identity, we apply the composition of functions by plugging the entire expression for $f^{-1}(x)$ into $f(x)$. Notice how multiplying by $7$ and subtracting $4$ cancels out the inverse's operations, leaving us with the original input $x$.",
+   "ur": "مساوات کے پہلے حصے کی تصدیق کے لیے، ہم فنکشنز کی ترکیب کا استعمال کرتے ہوئے $f^{-1}(x)$ کی پوری قیمت کو $f(x)$ میں درج کرتے ہیں۔ غور کریں کہ $7$ سے ضرب دینے اور $4$ تفریق کرنے سے معکوس فنکشن کے عوامل کٹ جاتے ہیں، اور ہمارے پاس اصل ان پٹ $x$ بچ جاتا ہے۔"
+  },
+  {
+   "en": "Next, we check the composition in the reverse order by substituting $f(x)$ into $f^{-1}(x)$. Here again, adding $4$ and dividing by $7$ completely undoes what $f(x)$ did, bringing us right back to $x$.",
+   "ur": "اس کے بعد، ہم الٹ ترتیب میں ترکیب کو چیک کرنے کے لیے $f(x)$ کی قیمت کو $f^{-1}(x)$ میں درج کرتے ہیں۔ یہاں بھی، $4$ جمع کرنے اور $7$ سے تقسیم کرنے سے $f(x)$ کا عمل مکمل طور پر ختم ہو جاتا ہے، اور ہمیں واپس $x$ مل جاتا ہے۔"
+  },
+  {
+   "en": "Since both compositions simplify to $x$, we combine our findings from steps 5 and 6. This completes the formal proof required by the question.",
+   "ur": "چونکہ دونوں ترکیبیں مختصر ہو کر $x$ کے برابر آتی ہیں، اس لیے ہم مرحلہ 5 اور 6 کے نتائج کو یکجا کر دیتے ہیں۔ اس سے سوال میں مطلوبہ باقاعدہ ثبوت مکمل ہو جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This verification confirms that $f(x) = 7x - 4$ and $f^{-1}(x) = \\frac{x + 4}{7}$ are true inverses of each other. It means that whatever action one function performs on a number $x$, the other function completely undoes it, always returning the original starting value $x$.",
+  "ur": "یہ تصدیق ثابت کرتی ہے کہ $f(x) = 7x - 4$ اور $f^{-1}(x) = \\frac{x + 4}{7}$ واقعی ایک دوسرے کے معکوس فنکشنز ہیں۔ اس کا مطلب یہ ہے کہ ایک فنکشن کسی عدد $x$ پر جو بھی عمل کرتا ہے، دوسرا فنکشن اسے مکمل طور پر الٹ دیتا ہے، اور ہمیشہ اصل ابتدائی قیمت $x$ واپس لاتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

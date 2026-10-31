@@ -117,7 +117,12 @@ def explain_one(klass, unit, it, p, generate):
         try:
             raw = generate(prompt if attempt == 0 else prompt + f"\n\nYour previous answer was rejected: {reason}. Fix it.")
             m = re.search(r"\{.*\}", raw or "", re.S)
-            res, reason = validate(json.loads(m.group(0)) if m else {}, it, p)
+            txt = m.group(0) if m else "{}"
+            try:
+                out = json.loads(txt)
+            except json.JSONDecodeError:                 # LaTeX with single backslashes: \sqrt is not a JSON escape
+                out = json.loads(re.sub(r'(?<!\\)\\(?![\\"])', r"\\\\", txt))
+            res, reason = validate(out, it, p)
         except Exception as exc:
             res, reason = None, f"error: {exc}"
         if res:

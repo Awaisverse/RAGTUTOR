@@ -1,0 +1,40 @@
+{
+ "item": "c10-ex11.2-q8",
+ "label": "ii",
+ "answer_ref": "Machine A is more consistent",
+ "math": [
+  "\\sigma^2 = \\frac{\\sum(x_A - \\bar{x_A})^2}{n} = \\frac{10}{5} \\approx 2.00",
+  "\\sigma = \\sqrt{\\sigma^2} \\approx 1.41",
+  "\\sigma^2 = \\frac{\\sum(x_B - \\bar{x_B})^2}{n} = \\frac{250}{5} \\approx 50.00",
+  "\\sigma = \\sqrt{\\sigma^2} \\approx 7.07",
+  "\\sigma_A \\approx 1.41 < \\sigma_B \\approx 7.07"
+ ],
+ "why": [
+  {
+   "en": "To find out how consistent Machine A is, we first calculate its variance ($\\sigma^2$) using the formula $\\frac{\\sum(x_A - \\bar{x_A})^2}{n}$, which measures how far the outputs are spread from the average. Dividing the sum of squared deviations $10$ by $n = 5$ gives a very small variance of $2.00$, showing that Machine A's outputs are tightly grouped.",
+   "ur": "مشین A کی مستقل مزاجی (consistency) معلوم کرنے کے لیے ہم سب سے پہلے فارمولا $\\frac{\\sum(x_A - \\bar{x_A})^2}{n}$ استعمال کرتے ہوئے اس کا تغیر (variance، $\\sigma^2$) نکالتے ہیں، جو یہ بتاتا ہے کہ پیداوار اوسط سے کتنی دور پھیلی ہوئی ہے۔ مربع انحرافات کے مجموعے $10$ کو $n = 5$ پر تقسیم کرنے سے ہمیں $2.00$ کا بہت چھوٹا تغیر ملتا ہے، جو ظاہر کرتا ہے کہ مشین A کی پیداوار ایک دوسرے کے بہت قریب ہے۔"
+  },
+  {
+   "en": "Next, we take the square root of the variance to find the standard deviation ($\\sigma$), which brings our measure of spread back to the original units of output. This tells us that Machine A's output typically varies by only about $1.41$ units from its mean.",
+   "ur": "اس کے بعد، ہم معیاری انحراف (standard deviation، $\\sigma$) معلوم کرنے کے لیے تغیر کا جزر (square root) لیتے ہیں، جو پھیلاؤ کی پیمائش کو واپس پیداوار کی اصل اکائیوں (units) میں لے آتا ہے۔ اس سے ہمیں معلوم ہوتا ہے کہ مشین A کی پیداوار اپنی اوسط سے عام طور پر صرف $1.41$ یونٹس کے لگ بھگ تبدیل ہوتی ہے۔"
+  },
+  {
+   "en": "Now we apply the exact same variance formula $\\frac{\\sum(x_B - \\bar{x_B})^2}{n}$ to Machine B so we can make a fair comparison between the two machines. Dividing $250$ by $5$ gives a much larger variance of $50.00$, indicating that Machine B's outputs are widely scattered.",
+   "ur": "اب ہم بالکل وہی تغیر کا فارمولا $\\frac{\\sum(x_B - \\bar{x_B})^2}{n}$ مشین B پر لاگو کرتے ہیں تاکہ ہم دونوں مشینوں کا منصفانہ موازنہ کر سکیں۔ $250$ کو $5$ پر تقسیم کرنے سے $50.00$ کا بہت بڑا تغیر ملتا ہے، جو ظاہر کرتا ہے کہ مشین B کی پیداوار کافی بکھری ہوئی ہے۔"
+  },
+  {
+   "en": "Taking the square root of Machine B's variance gives us its standard deviation ($\\sigma$) in the actual units of output. The result of $7.07$ shows a large typical fluctuation in Machine B's daily production.",
+   "ur": "مشین B کے تغیر کا جزر لینے سے ہمیں اصل اکائیوں میں اس کا معیاری انحراف ($\\sigma$) مل جاتا ہے۔ $7.07$ کا نتیجہ مشین B کی پیداوار میں ایک بڑے اتار چڑھاؤ کو ظاہر کرتا ہے۔"
+  },
+  {
+   "en": "In statistics, the dataset with the smaller standard deviation has less variation and is therefore more reliable and consistent. Comparing $\\sigma_A \\approx 1.41$ with $\\sigma_B \\approx 7.07$ clearly proves that Machine A has much less spread than Machine B.",
+   "ur": "شماریات (statistics) کے اصول کے مطابق، جس ڈیٹا کا معیاری انحراف کم ہو اس میں اتار چڑھاؤ کم ہوتا ہے اور وہ زیادہ قابلِ اعتماد اور مستقل مزاج (consistent) ہوتا ہے۔ $\\sigma_A \\approx 1.41$ کا $\\sigma_B \\approx 7.07$ سے موازنہ کرنے سے واضح طور پر ثابت ہوتا ہے کہ مشین A کا پھیلاؤ مشین B کے مقابلے میں بہت کم ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer means that Machine A is more dependable because its output stays very steady, whereas Machine B is unpredictable. You can easily check this by looking at the original numbers: Machine A's outputs ($98, 100, 102, 101, 99$) stay very close together, while Machine B's outputs ($95, 100, 105, 90, 110$) jump up and down much more.",
+  "ur": "آخری جواب کا مطلب یہ ہے کہ مشین A زیادہ قابلِ بھروسہ اور مستقل مزاج ہے کیونکہ اس کی پیداوار مستحکم رہتی ہے، جبکہ مشین B کی کارکردگی غیر متوقع ہے۔ آپ اصل اعداد کو دیکھ کر باآسانی اس کی تصدیق کر سکتے ہیں: مشین A کی پیداوار ($98, 100, 102, 101, 99$) ایک دوسرے کے بہت قریب رہتی ہے، جبکہ مشین B کی پیداوار ($95, 100, 105, 90, 110$) میں بہت زیادہ اتار چڑھاؤ آتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex12.1-q7",
+ "label": "vi",
+ "answer_ref": "$\\frac{1}{8}$",
+ "math": [
+  "S = \\{HHH, HHT, HTH, THH, HTT, THT, TTH, TTT\\}",
+  "n(S) = 2^3 = 8",
+  "E = \\{TTT\\}",
+  "n(E) = 1",
+  "P(E) = \\frac{n(E)}{n(S)}",
+  "P(E) = \\frac{1}{8}"
+ ],
+ "why": [
+  {
+   "en": "In probability, our very first step is always to define the sample space $S$, which is the complete list of everything that could possibly happen in our experiment. Listing all combinations of heads ($H$) and tails ($T$) for the three coins gives us a clear picture from which we can pick our required outcomes.",
+   "ur": "احتمال (probability) کے سوالات میں ہمارا سب سے پہلا قدم ہمیشہ نمونہ کی فضا (sample space) $S$ لکھنا ہوتا ہے، جو تجربے کے تمام ممکنہ نتائج کی مکمل فہرست ہوتی ہے۔ تینوں سکوں کے لیے ہیڈ ($H$) اور ٹیل ($T$) کے تمام ممکنہ ملاپ لکھنے سے ہمیں ایک واضح تصویر مل جاتی ہے جس میں سے ہم اپنے مطلوبہ نتائج چن سکتے ہیں۔"
+  },
+  {
+   "en": "Next, we find the size of the sample space, $n(S)$, because the probability formula requires the total number of outcomes in the denominator. Since each of the $3$ coins has $2$ faces, the fundamental counting principle tells us there are $2^3 = 8$ total possibilities.",
+   "ur": "اس کے بعد ہم نمونہ کی فضا کی کل تعداد $n(S)$ معلوم کرتے ہیں، کیونکہ احتمال کے فارمولے میں بٹے کے نیچے کل نتائج کی تعداد رکھنی ہوتی ہے۔ چونکہ $3$ سکوں میں سے ہر ایک کے $2$ رخ ہوتے ہیں، اس لیے گنتی کے بنیادی اصول کے مطابق کل ممکنہ نتائج $2^3 = 8$ بنتے ہیں۔"
+  },
+  {
+   "en": "Now we define our specific event $E$ by selecting only those outcomes from $S$ that match the condition of getting 'no head'. If none of the coins shows a head ($H$), it logically means all three must show tails, leaving us with just $TTT$.",
+   "ur": "اب ہم اپنے مخصوص وقوعہ (event) $E$ کو متعین کرتے ہیں اور $S$ میں سے صرف وہ نتائج چنتے ہیں جو 'کوئی ہیڈ نہ آنے' کی شرط پوری کرتے ہوں۔ اگر کسی بھی سکے پر ہیڈ ($H$) نہیں آتا، تو اس کا سیدھا مطلب ہے کہ تینوں سکوں پر ٹیل ہی آئے گا، جس سے ہمارے پاس صرف $TTT$ بچتا ہے۔"
+  },
+  {
+   "en": "We count the elements in set $E$ to find $n(E)$, the number of favourable outcomes. Seeing that $n(E) = 1$ tells us there is only $1$ way out of all possibilities for our event to happen, which gives us the numerator for our formula.",
+   "ur": "ہم موافق نتائج کی تعداد $n(E)$ معلوم کرنے کے لیے سیٹ $E$ کے ارکان کو گنتے ہیں۔ $n(E) = 1$ سے ہمیں پتہ چلتا ہے کہ تمام امکانات میں سے ہمارے وقوعہ کے ہونے کا صرف $1$ ہی طریقہ ہے، اور اس سے ہمیں اپنے فارمولے کے لیے شمار کنندہ (اوپر والی رقم) مل جاتا ہے۔"
+  },
+  {
+   "en": "We write down the basic definition of probability, which is the ratio of favourable outcomes $n(E)$ to the total possible outcomes $n(S)$. Stating the formula clearly before putting in the numbers prevents mistakes and shows the examiner our method.",
+   "ur": "ہم احتمال کی بنیادی تعریف یعنی فارمولا لکھتے ہیں، جو کہ موافق نتائج $n(E)$ اور کل ممکنہ نتائج $n(S)$ کے درمیان نسبت ہے۔ قیمتیں درج کرنے سے پہلے فارمولا واضح طور پر لکھنے سے غلطی کا امکان کم ہوتا ہے اور ممتحن کو ہمارے طریقہ کار کا پتہ چلتا ہے۔"
+  },
+  {
+   "en": "Finally, we substitute our counted values, $n(E) = 1$ and $n(S) = 8$, into the formula to calculate the exact numerical probability. Since $\\frac{1}{8}$ cannot be simplified further, we have reached our final answer.",
+   "ur": "آخر میں، ہم اپنی گنی ہوئی قیمتیں $n(E) = 1$ اور $n(S) = 8$ فارمولے میں درج کرتے ہیں تاکہ احتمال کی صحیح عددی قیمت نکل آئے۔ چونکہ کسر $\\frac{1}{8}$ مزید مختصر نہیں ہو سکتی، اس لیے ہم اپنے حتمی جواب تک پہنچ گئے ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $\\frac{1}{8}$ means that when three fair coins are tossed together, there is only $1$ chance out of $8$ equal possibilities that no head will appear (meaning all three coins land on tails). You can easily check this because getting 'no head' is the exact same event as part (i) 'getting all tails' ($TTT$), and the answer $\\frac{1}{8}$ properly lies between $0$ and $1$.",
+  "ur": "حتمی جواب $\\frac{1}{8}$ کا مطلب ہے کہ جب تین سکے ایک ساتھ اچھالے جائیں، تو $8$ مساوی امکانات میں سے صرف $1$ امکان ایسا ہے کہ کوئی بھی ہیڈ نہ آئے (یعنی تینوں سکوں پر ٹیل آئے)۔ آپ اس کی پڑتال آسانی سے ایسے کر سکتے ہیں کہ 'کوئی ہیڈ نہ آنا' بالکل وہی بات ہے جو جزو (i) میں 'تمام ٹیل آنے' ($TTT$) کی ہے، اور یہ جواب $\\frac{1}{8}$ بالکل درست طور پر $0$ اور $1$ کے درمیان ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

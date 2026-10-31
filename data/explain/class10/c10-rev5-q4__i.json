@@ -1,0 +1,65 @@
+{
+ "item": "c10-rev5-q4",
+ "label": "i",
+ "answer_ref": "$x = \\sqrt{7},\\ - \\sqrt{7},\\ 3,\\ -3$",
+ "math": [
+  "\\text{Let } y = x^2,\\ \\text{so } y^2 = x^4",
+  "y^2 - 16y + 63 = 0",
+  "y^{2} - 7 y - 9 y + 63 = 0",
+  "y \\left(y - 7\\right) - 9 \\left(y - 7\\right) = 0",
+  "\\left(y - 9\\right) \\left(y - 7\\right) = 0",
+  "y - 9 = 0 \\quad\\text{or}\\quad y - 7 = 0",
+  "y = 7,\\quad y = 9",
+  "x^2 = 7 \\Rightarrow x = \\pm \\sqrt{7}",
+  "x^2 = 9 \\Rightarrow x = \\pm 3",
+  "\\text{S.S} = \\{\\sqrt{7}, - \\sqrt{7}, 3, -3\\}"
+ ],
+ "why": [
+  {
+   "en": "This equation has degree $4$, which looks hard to solve directly, so we use the method of substitution to reduce its power. By letting $y = x^2$, we can turn this fourth-degree equation into a familiar quadratic equation.",
+   "ur": "اس مساوات کا درجہ $4$ ہے جسے براہِ راست حل کرنا مشکل لگتا ہے، اس لیے ہم قوت کو کم کرنے کے لیے متبادل رکھنے کا طریقہ استعمال کرتے ہیں۔ $y = x^2$ فرض کرنے سے ہم اس چوتھے درجے کی مساوات کو ایک جانی پہچانی دو درجی مساوات میں بدل سکتے ہیں۔"
+  },
+  {
+   "en": "Replacing $x^4$ with $y^2$ and $x^2$ with $y$ gives us a standard quadratic equation in the variable $y$. Now we can easily solve for $y$ using standard quadratic methods.",
+   "ur": "$x^4$ کی جگہ $y^2$ اور $x^2$ کی جگہ $y$ رکھنے سے ہمیں متغیر $y$ میں ایک معیاری دو درجی مساوات مل جاتی ہے۔ اب ہم عام دو درجی طریقوں کو استعمال کرتے ہوئے آسانی سے $y$ کی قیمت معلوم کر سکتے ہیں۔"
+  },
+  {
+   "en": "We use the factorization method by breaking the middle term $-16y$ into two parts whose product is $63$ and sum is $-16$. Having four terms now allows us to factorize the expression by grouping them in pairs.",
+   "ur": "ہم تجزی کا طریقہ استعمال کرتے ہوئے درمیانی رقم $-16y$ کو دو ایسے حصوں میں توڑتے ہیں جن کا حاصلِ ضرب $63$ اور مجموعہ $-16$ ہو۔ اب چار رقمیں بن جانے سے ہم دو دو کے جوڑے بنا کر اس جملے کی تجزی کر سکتے ہیں۔"
+  },
+  {
+   "en": "Using the distributive law in reverse, we pull out the greatest common factor from the first two terms and the last two terms separately. Notice that both groups now share the exact same bracket $(y - 7)$, which shows our middle-term breaking was correct.",
+   "ur": "قانونِ تقسیمی کو الٹ استعمال کرتے ہوئے، ہم پہلی دو رقموں اور آخری دو رقموں میں سے الگ الگ مشترک جزوِ ضربی باہر نکالتے ہیں۔ غور کریں کہ اب دونوں حصوں میں بالکل ایک جیسی بریکٹ $(y - 7)$ موجود ہے، جو ظاہر کرتی ہے کہ ہم نے درمیانی رقم کو بالکل درست توڑا تھا۔"
+  },
+  {
+   "en": "Since the bracket $(y - 7)$ is common to both parts, we factor it out completely. This successfully turns our quadratic sum into a product of two linear factors equal to $0$.",
+   "ur": "چونکہ بریکٹ $(y - 7)$ دونوں حصوں میں مشترک ہے، اس لیے ہم اسے مکمل طور پر باہر نکال لیتے ہیں۔ اس سے ہماری دو درجی مساوات کامیابی کے ساتھ دو یک درجی اجزائے ضربی کے حاصلِ ضرب میں بدل جاتی ہے جو $0$ کے برابر ہے۔"
+  },
+  {
+   "en": "By the zero-product property, if the multiplication of two factors is $0$, at least one of them must be $0$. This rule lets us split one quadratic equation into two simple linear equations.",
+   "ur": "ضربی خاصیتِ صفر کے مطابق، اگر دو اجزائے ضربی کا حاصلِ ضرب $0$ ہو، تو ان میں سے کم از کم ایک کو لازمی $0$ ہونا چاہیے۔ یہ اصول ہمیں ایک دو درجی مساوات کو دو سادہ یک درجی مساواتوں میں تقسیم کرنے کی اجازت دیتا ہے۔"
+  },
+  {
+   "en": "By shifting the constant numbers to the other side of the equals sign, we isolate $y$. This gives us the two intermediate values for $y$, though we still need to find our original variable $x$.",
+   "ur": "مستقل اعداد کو برابر کی علامت کے دوسری طرف لے جا کر ہم $y$ کو تنہا کر لیتے ہیں۔ اس سے ہمیں $y$ کی دو درمیانی قیمتیں مل جاتی ہیں، لیکن ہمیں ابھی اپنے اصل متغیر $x$ کی قیمتیں معلوم کرنی ہیں۔"
+  },
+  {
+   "en": "Remembering our initial substitution $y = x^2$, we replace $y$ back with $x^2$ for the first value $7$ and take the square root on both sides. Because both positive and negative numbers square to give a positive $7$, we get our first two answers for $x$.",
+   "ur": "اپنے ابتدائی متبادل $y = x^2$ کو یاد کرتے ہوئے، ہم پہلی قیمت $7$ کے لیے $y$ کی جگہ واپس $x^2$ رکھتے ہیں اور دونوں طرف جذر لیتے ہیں۔ چونکہ مثبت اور منفی دونوں اعداد کا مربع مثبت $7$ ہی ہوتا ہے، اس لیے ہمیں $x$ کے پہلے دو جوابات مل جاتے ہیں۔"
+  },
+  {
+   "en": "We repeat the back-substitution for the second value, $y = 9$, and take the square root on both sides. Since the square root of $9$ is $3$, this gives us the remaining two real solutions for $x$.",
+   "ur": "ہم دوسری قیمت $y = 9$ کے لیے بھی واپس قیمت رکھنے کا عمل دہراتے ہیں اور دونوں طرف جذر لیتے ہیں۔ چونکہ $9$ کا جذر $3$ ہوتا ہے، اس سے ہمیں $x$ کے باقی دو حقیقی حل مل جاتے ہیں۔"
+  },
+  {
+   "en": "Finally, we gather all four values of $x$ inside curly brackets to write the complete Solution Set. Having four roots makes complete sense because the original equation had a highest power of $4$.",
+   "ur": "آخر میں، ہم مکمل حل سیٹ لکھنے کے لیے $x$ کی چاروں قیمتوں کو درمیانی بریکٹ کے اندر اکٹھا کر لیتے ہیں۔ چار اصل (جوابات) کا آنا بالکل سمجھ میں آتا ہے کیونکہ اصل مساوات کی سب سے بڑی قوت $4$ تھی۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer gives the four exact values of $x$ ($\\sqrt{7}, -\\sqrt{7}, 3, -3$) that make the original fourth-degree equation true. Because the equation only contains even powers of $x$ ($x^4$ and $x^2$), the solutions naturally come in positive and negative pairs; you can easily check this by putting $x = 3$ or $x = -3$ into the original equation to see that $x^4 - 16x^2 + 63$ becomes $0$.",
+  "ur": "حتمی جواب ہمیں $x$ کی وہ چار درست قیمتیں ($\\sqrt{7}, -\\sqrt{7}, 3, -3$) بتاتا ہے جو اصل چوتھے درجے کی مساوات کو درست ثابت کرتی ہیں۔ چونکہ مساوات میں $x$ کی صرف جفت قوتیں ($x^4$ اور $x^2$) موجود ہیں، اس لیے جوابات قدرتی طور پر مثبت اور منفی جوڑوں کی صورت میں آتے ہیں؛ آپ اصل مساوات میں $x = 3$ یا $x = -3$ درج کر کے باآسانی پڑتال کر سکتے ہیں کہ $x^4 - 16x^2 + 63$ واقعی $0$ کے برابر ہو جاتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

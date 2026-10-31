@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex12.2-q6",
+ "label": "i",
+ "answer_ref": "$\\frac{2}{13}$",
+ "math": [
+  "n(S) = 52",
+  "n(K) = 4, \\quad n(J) = 4",
+  "P(K) = \\frac{n(K)}{n(S)} = \\frac{4}{52}, \\quad P(J) = \\frac{n(J)}{n(S)} = \\frac{4}{52}",
+  "P(K \\cup J) = P(K) + P(J)",
+  "P(K \\cup J) = \\frac{4}{52} + \\frac{4}{52} = \\frac{8}{52}",
+  "P(K \\cup J) = \\frac{2}{13}"
+ ],
+ "why": [
+  {
+   "en": "In any probability problem, we must first know the size of our sample space, $n(S)$. Writing down $n(S) = 52$ gives us the denominator we will need for our probability formulas.",
+   "ur": "احتمال کے کسی بھی سوال میں، ہمیں سب سے پہلے اپنے نمونہ کی جگہ کا سائز یعنی $n(S)$ معلوم ہونا چاہیے۔ $n(S) = 52$ لکھنے سے ہمیں وہ مخرج (denominator) مل جاتا ہے جس کی ہمیں اپنے احتمال کے فارمولوں کے لیے ضرورت ہوگی۔"
+  },
+  {
+   "en": "Next, we count the favourable outcomes for each event using our knowledge of a standard deck of cards. Knowing that $n(K) = 4$ and $n(J) = 4$ gives us the numerators needed to find the chance of each card appearing.",
+   "ur": "اس کے بعد، ہم تاش کے پتوں کی معلومات کو استعمال کرتے ہوئے ہر واقعے کے موافق نتائج گنتے ہیں۔ یہ جاننا کہ $n(K) = 4$ اور $n(J) = 4$ ہے، ہمیں وہ شمار کنندہ (numerators) دیتا ہے جو ہر پتے کے نکلنے کا امکان معلوم کرنے کے لیے ضروری ہیں۔"
+  },
+  {
+   "en": "Here we apply the basic definition of probability, which is dividing the number of favourable outcomes by the total possible outcomes. This gives us the separate probabilities $P(K) = \\frac{4}{52}$ and $P(J) = \\frac{4}{52}$, which we are now ready to combine.",
+   "ur": "یہاں ہم احتمال کی بنیادی تعریف لاگو کرتے ہیں، جو کہ موافق نتائج کی تعداد کو کل ممکنہ نتائج پر تقسیم کرنا ہے۔ اس سے ہمیں الگ الگ احتمال $P(K) = \\frac{4}{52}$ اور $P(J) = \\frac{4}{52}$ مل جاتے ہیں، جنہیں اب ہم یکجا کرنے کے لیے تیار ہیں۔"
+  },
+  {
+   "en": "The word 'or' in probability tells us to use the addition law, and since a single card cannot be both a King and a Jack, these are mutually exclusive events. This rule tells us we simply need to add the two individual probabilities together without any overlap.",
+   "ur": "احتمال میں لفظ 'یا' (or) ہمیں جمع کا قانون استعمال کرنے کا بتاتا ہے، اور چونکہ ایک پتہ بیک وقت بادشاہ (King) اور غلام (Jack) دونوں نہیں ہو سکتا، اس لیے یہ باہمی طور پر مختلف واقعات (mutually exclusive events) ہیں۔ یہ اصول ہمیں بتاتا ہے کہ ہمیں صرف دونوں کے انفرادی احتمال کو آپس میں جمع کرنا ہے۔"
+  },
+  {
+   "en": "We now put our calculated fractions into the addition formula and add the numerators because the denominators are already the same ($52$). This gives us $\\frac{8}{52}$, representing a total of $8$ favourable cards out of $52$.",
+   "ur": "اب ہم اپنی معلوم کردہ کسروں کو جمع کے فارمولے میں درج کرتے ہیں اور شمار کنندگان کو جمع کرتے ہیں کیونکہ مخرج پہلے ہی ایک جیسے ($52$) ہیں۔ اس سے ہمیں $\\frac{8}{52}$ ملتا ہے، جو کہ $52$ میں سے کل $8$ موافق پتوں کو ظاہر کرتا ہے۔"
+  },
+  {
+   "en": "In mathematics, it is good practice to always write a fraction in its simplest form by dividing out the common factor, which is $4$ here. Reducing $\\frac{8}{52}$ to $\\frac{2}{13}$ gives us the neatest and most standard form of our final probability.",
+   "ur": "ریاضی میں یہ ایک اچھا طریقہ ہے کہ مشترک جزو ضربی، جو یہاں $4$ ہے، سے تقسیم کر کے کسر کو ہمیشہ اس کی سادہ ترین شکل میں لکھا جائے۔ $\\frac{8}{52}$ کو مختصر کر کے $\\frac{2}{13}$ لکھنے سے ہمیں اپنے حتمی احتمال کی سب سے صاف اور معیاری شکل مل جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $\\frac{2}{13}$ means that when drawing a card at random, there is a $2$ in $13$ chance of picking either a King or a Jack. We can easily check that this is sensible because the value is between $0$ and $1$, and since $8$ out of $52$ cards are Kings or Jacks, the ratio $\\frac{8}{52}$ directly simplifies to $\\frac{2}{13}$.",
+  "ur": "حتمی جواب $\\frac{2}{13}$ کا مطلب یہ ہے کہ بے ترتیب طور پر ایک پتہ نکالتے وقت، بادشاہ یا غلام نکلنے کا امکان $13$ میں سے $2$ ہے۔ ہم آسانی سے تصدیق کر سکتے ہیں کہ یہ جواب درست ہے کیونکہ یہ قیمت $0$ اور $1$ کے درمیان ہے، اور چونکہ $52$ میں سے $8$ پتے بادشاہ یا غلام ہوتے ہیں، اس لیے نسبت $\\frac{8}{52}$ سیدھی سادہ ہو کر $\\frac{2}{13}$ بن جاتی ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

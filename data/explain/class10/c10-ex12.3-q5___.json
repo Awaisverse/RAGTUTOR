@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex12.3-q5",
+ "label": "",
+ "answer_ref": "$\\frac{1}{52}$",
+ "math": [
+  "n(S) = 52",
+  "P(A) = \\frac{13}{52} = \\frac{1}{4}",
+  "P(B) = \\frac{4}{52} = \\frac{1}{13}",
+  "P(A \\cap B) = P(A) \\times P(B)",
+  "P(A \\cap B) = \\frac{13}{52} \\times \\frac{4}{52}",
+  "P(A \\cap B) = \\frac{1}{4} \\times \\frac{1}{13} = \\frac{1}{52}"
+ ],
+ "why": [
+  {
+   "en": "Before finding any probability, we must know the size of our sample space, $n(S)$. Knowing there are $52$ total cards gives us the denominator we need for our probability formula.",
+   "ur": "کوئی بھی احتمال (probability) معلوم کرنے سے پہلے ہمیں اپنی سیمپل اسپیس کا کل سائز، یعنی $n(S)$ معلوم ہونا چاہیے۔ یہ جاننا کہ کل $52$ پتے ہیں، ہمیں اپنے احتمال کے فارمولے کے لیے بٹے کے نیچے والی رقم (denominator) فراہم کرتا ہے۔"
+  },
+  {
+   "en": "We use the basic definition of probability—favorable outcomes divided by total outcomes—for the first card. Simplifying $\\frac{13}{52}$ to $\\frac{1}{4}$ gives us the exact chance of drawing a heart on the first try, which we will need to combine with the second event later.",
+   "ur": "ہم پہلے پتے کے لیے احتمال کی بنیادی تعریف استعمال کرتے ہیں، یعنی موافق نتائج کو کل نتائج پر تقسیم کرنا۔ $\\frac{13}{52}$ کو مختصر کر کے $\\frac{1}{4}$ لکھنے سے ہمیں پہلی باری میں پان (heart) کا پتہ نکلنے کا درست امکان مل جاتا ہے، جسے ہم بعد میں دوسرے واقعے کے ساتھ ملائیں گے۔"
+  },
+  {
+   "en": "The words 'with replacement' are the key here: putting the first card back resets the sample space to $52$ for the second draw. This allows us to calculate the probability of getting one of the $4$ kings independently, giving us $\\frac{1}{13}$ for the second part of our problem.",
+   "ur": "یہاں 'واپسی کے ساتھ' (with replacement) کے الفاظ بہت اہم ہیں: پہلا پتہ واپس گڈی میں ڈالنے سے دوسری باری کے لیے کل پتوں کی تعداد پھر سے $52$ ہو جاتی ہے۔ اس سے ہم پہلے پتے کے اثر کے بغیر $4$ بادشاہوں میں سے ایک نکلنے کا احتمال نکال سکتے ہیں، جو ہمارے سوال کے دوسرے حصے کے لیے $\\frac{1}{13}$ آتا ہے۔"
+  },
+  {
+   "en": "Because the first card was put back, the first draw does not affect the second draw, making them independent events. The multiplication law of probability tells us that to find the chance of both $A$ and $B$ happening in order, we must multiply their separate probabilities together.",
+   "ur": "چونکہ پہلا پتہ واپس رکھ دیا گیا تھا، اس لیے پہلی باری کا نتیجہ دوسری باری پر اثر انداز نہیں ہوتا، جس سے یہ دونوں آزاد واقعات (independent events) بن جاتے ہیں۔ احتمال کا ضربی قانون ہمیں بتاتا ہے کہ $A$ اور $B$ دونوں کے ایک ساتھ واقع ہونے کا امکان معلوم کرنے کے لیے ہمیں ان کے الگ الگ احتمالات کو آپس میں ضرب دینی چاہیے۔"
+  },
+  {
+   "en": "Now we connect our work from the earlier steps by plugging the known values into the multiplication law. This sets up the final arithmetic calculation needed to solve the problem.",
+   "ur": "اب ہم پچھلے مراحل میں نکالی گئی قیمتوں کو ضربی قانون کے فارمولے میں درج کر کے اپنے کام کو جوڑتے ہیں۔ اس سے سوال کو حل کرنے کے لیے آخری حسابی عمل تیار ہو جاتا ہے۔"
+  },
+  {
+   "en": "Using the simplified fractions $\\frac{1}{4}$ and $\\frac{1}{13}$ makes the multiplication much easier to do without large numbers. Multiplying the numerators and denominators gives the single combined probability of both events happening as $\\frac{1}{52}$.",
+   "ur": "مختصر کی گئی کسروں $\\frac{1}{4}$ اور $\\frac{1}{13}$ کو استعمال کرنے سے بڑی رقموں کے بغیر ضرب کا عمل بہت آسان ہو جاتا ہے۔ شمار کنندگان (numerators) اور مخرجوں (denominators) کو آپس میں ضرب دینے سے دونوں واقعات کے رونما ہونے کا مشترکہ احتمال $\\frac{1}{52}$ حاصل ہوتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $\\frac{1}{52}$ means that if you draw two cards one by one with replacement, there is a $1$ in $52$ chance that the first card is a heart and the second card is a king. As a quick check, the answer is a valid probability between $0$ and $1$, and it makes sense that the combined chance $\\frac{1}{52}$ is smaller than the individual chances $\\frac{1}{4}$ and $\\frac{1}{13}$ because having two specific things happen in a row is rarer than just one.",
+  "ur": "آخری جواب $\\frac{1}{52}$ کا مطلب یہ ہے کہ اگر آپ گڈی میں پتہ واپس رکھتے ہوئے ایک ایک کر کے دو پتے نکالیں، تو $52$ میں سے $1$ امکان ہے کہ پہلا پتہ پان (heart) کا ہو اور دوسرا پتہ بادشاہ (king) ہو۔ پڑتال کے طور پر، یہ جواب $0$ اور $1$ کے درمیان ایک درست احتمال ہے، اور یہ بات سمجھ میں آتی ہے کہ مشترکہ امکان $\\frac{1}{52}$ انفرادی امکانات $\\frac{1}{4}$ اور $\\frac{1}{13}$ سے چھوٹا ہے کیونکہ ایک کے بعد ایک دو مخصوص واقعات کا ہونا صرف ایک واقعے کے ہونے سے کم ممکن ہوتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

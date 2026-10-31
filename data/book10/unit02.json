@@ -16725,7 +16725,11 @@
       {
        "math": "-2t^2 + 40t + 800 \\ge 1000",
        "en": "At least 1000 means $P(t) \\ge 1000$.",
-       "ur": "کم از کم 1000 کا مطلب $P(t) \\ge 1000$۔"
+       "ur": "کم از کم 1000 کا مطلب $P(t) \\ge 1000$۔",
+       "why": {
+        "en": "In mathematics, the phrase 'at least' means greater than or equal to ($\\ge$). Setting up this inequality turns our word problem into a mathematical condition that we can solve for time $t$.",
+        "ur": "ریاضی میں 'کم از کم' (at least) کا مطلب بڑا یا برابر ($\\ge$) ہوتا ہے۔ یہ عدم مساوات (inequality) بنا کر ہم اپنے لفظی سوال کو ایک ریاضیاتی شرط میں بدل لیتے ہیں جسے وقت $t$ کے لیے حل کیا جا سکتا ہے۔"
+       }
       },
       {
        "math": "-2t^2 + 40t - 200 \\ge 0",
@@ -16733,7 +16737,11 @@
        "ur": "دونوں اطراف سے 1000 تفریق کریں۔",
        "check": [
         "(-2*t**2 + 40*t + 800) - 1000 == -2*t**2 + 40*t - 200"
-       ]
+       ],
+       "why": {
+        "en": "To solve a quadratic inequality, we first bring all terms to one side so that we can compare the expression to $0$. Subtracting $1000$ puts our inequality into standard form.",
+        "ur": "دو درجی عدم مساوات کو حل کرنے کے لیے ہم سب سے پہلے تمام رقموں کو ایک طرف لاتے ہیں تاکہ اس کا موازنہ $0$ سے کیا جا سکے۔ دونوں طرف سے $1000$ تفریق کرنے سے یہ معیاری شکل (standard form) میں آ جاتی ہے۔"
+       }
       },
       {
        "math": "t^2 - 20t + 100 \\le 0",
@@ -16741,7 +16749,11 @@
        "ur": "$-2$ سے تقسیم کریں: علامت الٹ جاتی ہے۔",
        "check": [
         "(-2*t**2 + 40*t - 200)/(-2) == t**2 - 20*t + 100"
-       ]
+       ],
+       "why": {
+        "en": "We divide every term by $-2$ to make the $t^2$ term positive and simplify the numbers. By the rule of inequalities, dividing by a negative number reverses the inequality sign from $\\ge$ to $\\le$.",
+        "ur": "ہم ہر رقم کو $-2$ پر تقسیم کرتے ہیں تاکہ $t^2$ مثبت ہو جائے اور اعداد آسان ہو جائیں۔ عدم مساوات کے اصول کے مطابق، منفی عدد سے تقسیم کرنے پر علامت کا رخ $\\ge$ سے بدل کر $\\le$ ہو جاتا ہے۔"
+       }
       },
       {
        "math": "(t - 10)^2 \\le 0",
@@ -16749,7 +16761,11 @@
        "ur": "بائیں طرف مکمل مربع ہے۔",
        "check": [
         "(t - 10)**2 == t**2 - 20*t + 100"
-       ]
+       ],
+       "why": {
+        "en": "We use the algebraic identity for a perfect square trinomial to factor the left side into $(t - 10)^2$. Writing it as a single squared term makes it very easy to analyze its possible signs.",
+        "ur": "ہم بائیں طرف کو مکمل مربع کے فارمولے کی مدد سے $(t - 10)^2$ کی شکل میں لکھتے ہیں۔ اسے ایک مکمل مربع کی صورت میں لکھنے سے اس کی ممکنہ قیمتوں کا اندازہ لگانا بہت آسان ہو جاتا ہے۔"
+       }
       },
       {
        "math": "t = 10",
@@ -16757,7 +16773,11 @@
        "ur": "مربع کبھی منفی نہیں ہوتا، اس لیے یہ صرف 0 ہو سکتا ہے: $t - 10 = 0$۔",
        "check": [
         "(-2*t**2 + 40*t + 800).subs(t, 10) == 1000"
-       ]
+       ],
+       "why": {
+        "en": "Since the square of any real number can never be less than $0$, the only way for $(t - 10)^2 \\le 0$ to be true is when it equals $0$ exactly. This gives us a single value, $t = 10$.",
+        "ur": "چونکہ کسی بھی حقیقی عدد کا مربع کبھی $0$ سے چھوٹا (منفی) نہیں ہو سکتا، اس لیے $(t - 10)^2 \\le 0$ صرف اسی صورت میں درست ہو سکتا ہے جب یہ ٹھیک $0$ کے برابر ہو۔ اس سے ہمیں صرف ایک قیمت $t = 10$ ملتی ہے۔"
+       }
       },
       {
        "math": "\\text{Year} = 2020 + 10 = 2030",
@@ -16765,10 +16785,18 @@
        "ur": "$t$ سال 2020 سے گنے جاتے ہیں۔",
        "check": [
         "2020 + 10 == 2030"
-       ]
+       ],
+       "why": {
+        "en": "The variable $t$ represents the number of years passed since $2020$, not the calendar year itself. Adding $10$ to our starting year $2020$ gives us the exact calendar year required by the question.",
+        "ur": "متغیر $t$ سال $2020$ کے بعد گزرنے والے سالوں کو ظاہر کرتا ہے، نہ کہ خود کیلنڈر کے سال کو۔ اس لیے اپنے ابتدائی سال $2020$ میں $10$ جمع کرنے سے ہمیں سوال میں پوچھا گیا اصل سال مل جاتا ہے۔"
+       }
       }
      ],
      "answer": "$t = 10$, the year 2030",
+     "meaning": {
+      "en": "This means that the town's population reaches $1000$ only in a single year, $2030$ (when $t = 10$), and never goes above $1000$. You can check this by substituting $t = 10$ into the formula $P(t) = -2t^2 + 40t + 800$, which gives $-2(10)^2 + 40(10) + 800 = 1000$.",
+      "ur": "اس کا مطلب ہے کہ قصبے کی آبادی صرف ایک ہی سال یعنی $2030$ میں (جب $t = 10$ ہو) $1000$ تک پہنچتی ہے، اور کبھی $1000$ سے اوپر نہیں جاتی۔ آپ فارمولے $P(t) = -2t^2 + 40t + 800$ میں $t = 10$ درج کر کے اس کی پڑتال کر سکتے ہیں، جس سے $-2(10)^2 + 40(10) + 800 = 1000$ حاصل ہوتا ہے۔"
+     },
      "book_key": "t=10, 2030"
     }
    ],

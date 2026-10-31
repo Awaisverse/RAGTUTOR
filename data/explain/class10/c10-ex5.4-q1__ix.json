@@ -1,0 +1,110 @@
+{
+ "item": "c10-ex5.4-q1",
+ "label": "ix",
+ "answer_ref": "$x = \\frac{-1 + \\sqrt{17}}{4},\\ \\frac{-1 - \\sqrt{17}}{4},\\ \\frac{13 + \\sqrt{173}}{2},\\ \\frac{13 - \\sqrt{173}}{2}$",
+ "math": [
+  "\\text{Let } y = x - \\frac{1}{x}",
+  "y^2 = x^2 + \\frac{1}{x^2} - 2 \\Rightarrow x^2 + \\frac{1}{x^2} = y^2 + 2",
+  "2(y^2 + 2) - 25y - 17 = 0 \\Rightarrow 2y^2 - 25y - 13 = 0",
+  "2 y^{2} + y - 26 y - 13 = 0",
+  "y \\left(2 y + 1\\right) - 13 \\left(2 y + 1\\right) = 0",
+  "\\left(y - 13\\right) \\left(2 y + 1\\right) = 0",
+  "y - 13 = 0 \\quad\\text{or}\\quad 2 y + 1 = 0",
+  "y = - \\frac{1}{2},\\quad y = 13",
+  "x - \\frac{1}{x} = - \\frac{1}{2} \\Rightarrow 2 x^{2} + x - 2 = 0",
+  "a = 2,\\quad b = 1,\\quad c = -2",
+  "x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a} = \\frac{-(1) \\pm \\sqrt{(1)^2 - 4(2)(-2)}}{2(2)}",
+  "x = \\frac{-1 \\pm \\sqrt{1 + 16}}{4} = \\frac{-1 \\pm \\sqrt{17}}{4}",
+  "x = \\frac{-1 + \\sqrt{17}}{4},\\quad x = \\frac{-1 - \\sqrt{17}}{4}",
+  "x - \\frac{1}{x} = 13 \\Rightarrow x^{2} - 13 x - 1 = 0",
+  "a = 1,\\quad b = -13,\\quad c = -1",
+  "x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a} = \\frac{-(-13) \\pm \\sqrt{(-13)^2 - 4(1)(-1)}}{2(1)}",
+  "x = \\frac{13 \\pm \\sqrt{169 + 4}}{2} = \\frac{13 \\pm \\sqrt{173}}{2}",
+  "x = \\frac{13 + \\sqrt{173}}{2},\\quad x = \\frac{13 - \\sqrt{173}}{2}",
+  "\\text{S.S} = \\{\\frac{-1 + \\sqrt{17}}{4}, \\frac{-1 - \\sqrt{17}}{4}, \\frac{13 + \\sqrt{173}}{2}, \\frac{13 - \\sqrt{173}}{2}\\}"
+ ],
+ "why": [
+  {
+   "en": "To make this complex reciprocal equation easier to solve, we use the method of substitution by setting the simpler bracket $x - \\frac{1}{x}$ equal to a new variable $y$. This will help us turn the equation into a standard quadratic form.",
+   "ur": "اس پیچیدہ مساوات کو حل کرنا آسان بنانے کے لیے، ہم متبادل کا طریقہ استعمال کرتے ہیں اور چھوٹے بریکٹ $x - \\frac{1}{x}$ کو ایک نئے متغیر $y$ کے برابر رکھتے ہیں۔ اس سے ہمیں مساوات کو معیاری دو درجی شکل میں تبدیل کرنے میں مدد ملے گی۔"
+  },
+  {
+   "en": "We square both sides using the algebraic identity $(a-b)^2 = a^2 + b^2 - 2ab$ so that we can express the other bracket, $x^2 + \\frac{1}{x^2}$, in terms of $y$ as well. Moving $-2$ to the other side gives us the exact replacement $y^2 + 2$.",
+   "ur": "ہم الجبری کلیہ $(a-b)^2 = a^2 + b^2 - 2ab$ کا استعمال کرتے ہوئے دونوں طرف مربع لیتے ہیں تاکہ دوسرے بریکٹ $x^2 + \\frac{1}{x^2}$ کو بھی $y$ کی شکل میں لکھ سکیں۔ $-2$ کو دوسری طرف لے جانے سے ہمیں $y^2 + 2$ کی صورت میں متبادل مل جاتا ہے۔"
+  },
+  {
+   "en": "Now we replace the $x$ expressions in our original equation with their $y$ equivalents and simplify. This successfully transforms our difficult equation into a neat, standard quadratic equation $2y^2 - 25y - 13 = 0$.",
+   "ur": "اب ہم اپنی اصل مساوات میں $x$ والی رقوم کی جگہ ان کی $y$ والی قیمتیں درج کر کے مختصر کرتے ہیں۔ یہ عمل ہماری مشکل مساوات کو ایک سادہ اور معیاری دو درجی مساوات $2y^2 - 25y - 13 = 0$ میں بدل دیتا ہے۔"
+  },
+  {
+   "en": "To factorize this quadratic equation, we use mid-term breaking: we need two numbers that multiply to $-26$ (from $2 \\times -13$) and add up to $-25$. The numbers $1$ and $-26$ work, allowing us to split $-25y$ into $+y - 26y$.",
+   "ur": "اس دو درجی مساوات کی تجزی کرنے کے لیے ہم درمیانی رقم کو توڑنے کا طریقہ استعمال کرتے ہیں: ہمیں ایسے دو اعداد چاہئیں جن کو ضرب دینے سے $-26$ (یعنی $2 \\times -13$) آئے اور جمع کرنے سے $-25$ بنے۔ اعداد $1$ اور $-26$ یہ شرط پوری کرتے ہیں، جس سے ہم $-25y$ کو $+y - 26y$ میں توڑ لیتے ہیں۔"
+  },
+  {
+   "en": "We group the four terms into two pairs and factor out the greatest common divisor from each pair. Because the remaining bracket $(2y + 1)$ is identical in both parts, we know our factorization is on the right track.",
+   "ur": "ہم چاروں رقوم کے دو جوڑے بناتے ہیں اور ہر جوڑے میں سے مشترک رقم باہر نکالتے ہیں۔ چونکہ دونوں حصوں میں باقی بچنے والا بریکٹ $(2y + 1)$ بالکل ایک جیسا ہے، اس سے پتہ چلتا ہے کہ ہماری تجزی بالکل درست جا رہی ہے۔"
+  },
+  {
+   "en": "By factoring out the common bracket $(2y + 1)$, we complete the factorization by grouping. This turns our sum of terms into a single product of two linear factors equal to $0$.",
+   "ur": "مشترک بریکٹ $(2y + 1)$ کو باہر نکال کر ہم تجزی کا عمل مکمل کرتے ہیں۔ اس سے رقوم کا مجموعہ دو یک درجی اجزائے ضربی کے حاصل ضرب میں بدل جاتا ہے جو $0$ کے برابر ہے۔"
+  },
+  {
+   "en": "According to the zero-product property, if the product of two factors is $0$, at least one of them must be $0$. This lets us split the problem into two simple linear equations in $y$.",
+   "ur": "ضربی خاصیت کے مطابق، اگر دو اجزائے ضربی کا حاصل ضرب $0$ ہو تو ان میں سے کم از کم ایک جزو لازمی $0$ ہوتا ہے۔ اس اصول کی مدد سے ہم مساوات کو $y$ کی دو سادہ یک درجی مساواتوں میں الگ کر لیتے ہیں۔"
+  },
+  {
+   "en": "Solving these two simple equations gives us the two values for our temporary variable $y$. Now we are halfway there and ready to find the actual values of $x$.",
+   "ur": "ان دو سادہ مساواتوں کو حل کرنے سے ہمیں اپنے عارضی متغیر $y$ کی دو قیمتیں مل جاتی ہیں۔ اب ہمارا آدھا کام مکمل ہو گیا ہے اور ہم $x$ کی اصل قیمتیں معلوم کرنے کے لیے تیار ہیں۔"
+  },
+  {
+   "en": "Since the question asked for $x$, we substitute $x - \\frac{1}{x}$ back in place of our first value, $y = -\\frac{1}{2}$. Multiplying the entire equation by $2x$ clears the fractions and gives us our first standard quadratic equation in $x$.",
+   "ur": "چونکہ سوال میں $x$ کی قیمت پوچھی گئی ہے، اس لیے ہم پہلی قیمت $y = -\\frac{1}{2}$ کی جگہ واپس $x - \\frac{1}{x}$ درج کرتے ہیں۔ پوری مساوات کو $2x$ سے ضرب دینے سے بٹے ختم ہو جاتے ہیں اور ہمیں $x$ میں پہلی معیاری دو درجی مساوات مل جاتی ہے۔"
+  },
+  {
+   "en": "Because $2x^2 + x - 2 = 0$ cannot be easily factorized by mid-term breaking, we prepare to use the quadratic formula. Comparing it with $ax^2 + bx + c = 0$ clearly identifies our coefficients $a$, $b$, and $c$.",
+   "ur": "چونکہ $2x^2 + x - 2 = 0$ کی درمیانی رقم توڑ کر آسانی سے تجزی نہیں ہو سکتی، اس لیے ہم دو درجی کلیہ (quadratic formula) استعمال کرنے کی تیاری کرتے ہیں۔ اس کا معیاری مساوات $ax^2 + bx + c = 0$ سے موازنہ کرنے پر ہمیں عددی سر $a$، $b$ اور $c$ واضح طور پر مل جاتے ہیں۔"
+  },
+  {
+   "en": "We carefully substitute $a = 2$, $b = 1$, and $c = -2$ into the quadratic formula. Using brackets around negative numbers prevents sign errors during multiplication.",
+   "ur": "ہم دو درجی کلیہ میں احتیاط کے ساتھ $a = 2$، $b = 1$ اور $c = -2$ درج کرتے ہیں۔ منفی اعداد کے گرد بریکٹ لگانے سے ضرب دیتے وقت علامتوں کی غلطی نہیں ہوتی۔"
+  },
+  {
+   "en": "We simplify the expression under the square root (the discriminant) and the denominator. Multiplying $-4(2)(-2)$ gives $+16$, so the number inside the root becomes $17$.",
+   "ur": "ہم جزر کے نیچے موجود رقم اور بٹے کے نیچے والی رقم کو مختصر کرتے ہیں۔ $-4(2)(-2)$ کو ضرب دینے سے $+16$ آتا ہے، جس سے جزر کے اندر $17$ بن جاتا ہے۔"
+  },
+  {
+   "en": "Since $17$ is not a perfect square, we leave it in radical form and write out the first two exact roots for $x$, one with the plus sign and one with the minus sign.",
+   "ur": "چونکہ $17$ ایک مکمل مربع نہیں ہے، اس لیے ہم اسے جزر کی شکل میں ہی رہنے دیتے ہیں اور $x$ کے پہلے دو درست روٹس لکھ لیتے ہیں، ایک جمع کی علامت کے ساتھ اور دوسرا منفی کی علامت کے ساتھ۔"
+  },
+  {
+   "en": "Now we repeat the back-substitution for the second value of $y$, setting $x - \\frac{1}{x} = 13$. Multiplying through by $x$ clears the fraction and arranges it into a second standard quadratic equation in $x$.",
+   "ur": "اب ہم $y$ کی دوسری قیمت کے لیے بھی واپسی متبادل کا عمل دہراتے ہیں اور $x - \\frac{1}{x} = 13$ رکھتے ہیں۔ پوری مساوات کو $x$ سے ضرب دینے سے بٹا ختم ہو جاتا ہے اور یہ $x$ میں دوسری معیاری دو درجی مساوات بن جاتی ہے۔"
+  },
+  {
+   "en": "Again, since $x^2 - 13x - 1 = 0$ does not factorize neatly, we compare it with the standard form $ax^2 + bx + c = 0$ to write down the coefficients for the quadratic formula.",
+   "ur": "یہاں بھی، چونکہ $x^2 - 13x - 1 = 0$ کی آسانی سے تجزی نہیں ہوتی، اس لیے ہم دو درجی کلیہ استعمال کرنے کے لیے اس کا معیاری شکل $ax^2 + bx + c = 0$ سے موازنہ کر کے عددی سر لکھ لیتے ہیں۔"
+  },
+  {
+   "en": "We plug $a = 1$, $b = -13$, and $c = -1$ into the quadratic formula. Notice how $-(-13)$ at the front will become $+13$.",
+   "ur": "ہم دو درجی کلیہ میں $a = 1$، $b = -13$ اور $c = -1$ درج کرتے ہیں۔ غور کریں کہ شروع میں آنے والا $-(-13)$ کس طرح $+13$ بن جائے گا۔"
+  },
+  {
+   "en": "We calculate the values inside the square root: $(-13)^2$ is $169$ and $-4(1)(-1)$ is $+4$, which add up to $173$. This gives us the simplified radical expression for the remaining roots.",
+   "ur": "ہم جزر کے اندر موجود قیمتوں کو حل کرتے ہیں: $(-13)^2$ سے $169$ اور $-4(1)(-1)$ سے $+4$ بنتا ہے، جنہیں جمع کرنے سے $173$ آتا ہے۔ اس سے ہمیں باقی روٹس کے لیے مختصر شدہ جزری شکل مل جاتی ہے۔"
+  },
+  {
+   "en": "Since $\\sqrt{173}$ cannot be simplified further, we separate the plus and minus signs to write our third and fourth roots for $x$.",
+   "ur": "چونکہ $\\sqrt{173}$ کو مزید مختصر نہیں کیا جا سکتا، اس لیے ہم جمع اور منفی کی علامتوں کو الگ کر کے $x$ کی تیسری اور چوتھی قیمت لکھ لیتے ہیں۔"
+  },
+  {
+   "en": "Finally, we gather all four values of $x$ into the solution set (S.S). None of these roots is $0$, so none of them makes the denominator $\\frac{1}{x}$ undefined in the original equation.",
+   "ur": "آخر میں، ہم $x$ کی چاروں قیمتوں کو حل سیٹ (S.S) میں اکٹھا کر کے لکھ دیتے ہیں۔ ان میں سے کوئی بھی قیمت $0$ نہیں ہے، اس لیے اصل مساوات میں بٹے والی رقم $\\frac{1}{x}$ کہیں بھی غیر معین نہیں ہوتی۔"
+  }
+ ],
+ "meaning": {
+  "en": "The solution set $\\left\\{\\frac{-1 + \\sqrt{17}}{4}, \\frac{-1 - \\sqrt{17}}{4}, \\frac{13 + \\sqrt{173}}{2}, \\frac{13 - \\sqrt{173}}{2}\\right\\}$ gives the four exact real values of $x$ that make the original equation $2\\left(x^2+\\frac{1}{x^2}\\right)-25\\left(x-\\frac{1}{x}\\right)-17=0$ true. Because the first two roots came from $x - \\frac{1}{x} = -\\frac{1}{2}$ and the last two came from $x - \\frac{1}{x} = 13$, substituting any of these four numbers back into the original equation will make the left-hand side equal to $0$.",
+  "ur": "حل سیٹ $\\left\\{\\frac{-1 + \\sqrt{17}}{4}, \\frac{-1 - \\sqrt{17}}{4}, \\frac{13 + \\sqrt{173}}{2}, \\frac{13 - \\sqrt{173}}{2}\\right\\}$ ہمیں $x$ کی وہ چار درست حقیقی قیمتیں دیتا ہے جو اصل مساوات $2\\left(x^2+\\frac{1}{x^2}\\right)-25\\left(x-\\frac{1}{x}\\right)-17=0$ کو درست ثابت کرتی ہیں۔ چونکہ پہلے دو روٹس $x - \\frac{1}{x} = -\\frac{1}{2}$ سے اور آخری دو روٹس $x - \\frac{1}{x} = 13$ سے حاصل ہوئے ہیں، اس لیے ان چاروں اعداد میں سے کسی کو بھی اصل مساوات میں درج کرنے سے بائیں سائیڈ $0$ کے برابر آ جائے گی۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

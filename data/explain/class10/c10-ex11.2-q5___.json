@@ -1,0 +1,40 @@
+{
+ "item": "c10-ex11.2-q5",
+ "label": "",
+ "answer_ref": "Variance = 50, SD = 7.07",
+ "math": [
+  "x = 120, 135, 130, 125, 140 \\quad (n = 5)",
+  "\\bar{x} = \\frac{\\sum x}{n} = \\frac{120 + 135 + 130 + 125 + 140}{5} = \\frac{650}{5} = 130",
+  "\\begin{aligned} \\sum (x - \\bar{x})^2 &= (120 - 130)^2 + (135 - 130)^2 + (130 - 130)^2 + (125 - 130)^2 + (140 - 130)^2 \\\\ &= (-10)^2 + (5)^2 + (0)^2 + (-5)^2 + (10)^2 \\\\ &= 100 + 25 + 0 + 25 + 100 = 250 \\end{aligned}",
+  "\\text{Variance } (S^2) = \\frac{\\sum (x - \\bar{x})^2}{n} = \\frac{250}{5} = 50",
+  "\\text{S.D.} = \\sqrt{\\frac{\\sum (x - \\bar{x})^2}{n}} = \\sqrt{50} \\approx 7.07"
+ ],
+ "why": [
+  {
+   "en": "We start by listing the ungrouped data values ($x$) and the total number of observations ($n = 5$) so we know exactly what to put into our formulas. This organizes our daily visitor counts before we begin any calculations.",
+   "ur": "ہم سب سے پہلے غیر گروہی ڈیٹا کی قیمتیں ($x$) اور مشاہدات کی کل تعداد ($n = 5$) لکھتے ہیں تاکہ ہمیں معلوم ہو کہ فارمولوں میں کیا درج کرنا ہے۔ یہ کسی بھی حساب سے پہلے روزانہ آنے والوں کی تعداد کو منظم کرتا ہے۔"
+  },
+  {
+   "en": "Since variance and standard deviation measure how far the data spreads out from the center, we must first find that center using the arithmetic mean formula. The result $\\bar{x} = 130$ tells us that on average, $130$ visitors came to the library each day.",
+   "ur": "چونکہ تغیر (variance) اور معیاری انحراف (standard deviation) یہ ناپتے ہیں کہ ڈیٹا مرکز سے کتنا پھیلا ہوا ہے، اس لیے ہمیں پہلے حسابی اوسط کے فارمولے سے وہ مرکز معلوم کرنا ہوگا۔ نتیجہ $\\bar{x} = 130$ ہمیں بتاتا ہے کہ لائبریری میں روزانہ اوسطاً $130$ افراد آئے۔"
+  },
+  {
+   "en": "We subtract the mean ($130$) from each day's visitors to see how much each day differed from the average, and then we square these differences so the negative signs do not cancel out the positive ones. Adding them up gives $\\sum (x - \\bar{x})^2 = 250$, which is the total squared spread of the data needed for the variance formula.",
+   "ur": "ہم ہر دن کے آنے والوں میں سے اوسط ($130$) کو تفریق کرتے ہیں تاکہ دیکھا جا سکے کہ ہر دن اوسط سے کتنا مختلف تھا، اور پھر ہم ان فرقوں کا مربع لیتے ہیں تاکہ منفی علامتیں مثبت علامتوں کو ختم نہ کر دیں۔ انہیں جمع کرنے سے $\\sum (x - \\bar{x})^2 = 250$ ملتا ہے، جو ڈیٹا کے مربع پھیلاؤ کا کل مجموعہ ہے اور تغیر کے فارمولے کے لیے ضروری ہے۔"
+  },
+  {
+   "en": "By definition, variance ($S^2$) is the average of the squared deviations from the mean, so we divide our total squared spread ($250$) by the number of days ($5$). This gives us a variance of $50$, which answers the first part of our question and directly leads to the standard deviation.",
+   "ur": "تعریف کے مطابق، تغیر ($S^2$) اوسط سے مربع انحرافات کی اوسط ہوتی ہے، اس لیے ہم کل مربع پھیلاؤ ($250$) کو دنوں کی تعداد ($5$) پر تقسیم کرتے ہیں۔ اس سے ہمیں $50$ کا تغیر ملتا ہے، جو ہمارے سوال کے پہلے حصے کا جواب ہے اور سیدھا معیاری انحراف کی طرف لے جاتا ہے۔"
+  },
+  {
+   "en": "Because we squared the differences earlier, the variance ($50$) is in squared units, so we take its positive square root by definition to bring the measure of spread back to our original unit (visitors). This final step gives us the standard deviation of approximately $7.07$.",
+   "ur": "چونکہ ہم نے پہلے فرقوں کا مربع لیا تھا، اس لیے تغیر ($50$) مربع اکائیوں میں ہے، لہٰذا ہم پھیلاؤ کی پیمائش کو واپس اصل اکائی (آنے والوں کی تعداد) میں لانے کے لیے تعریف کے مطابق اس کا مثبت جذر المربع لیتے ہیں۔ یہ آخری قدم ہمیں تقریباً $7.07$ کا معیاری انحراف دیتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer shows that the variance of the library visitors is $50$ and the standard deviation is approximately $7.07$, meaning that on a typical day, the number of visitors varies by about $7.07$ people from the daily average of $130$. This makes sense when we check the actual daily deviations ($-10, 5, 0, -5, 10$), whose sizes are all reasonably close to $7.07$.",
+  "ur": "حتمی جواب ظاہر کرتا ہے کہ لائبریری میں آنے والوں کا تغیر $50$ ہے اور معیاری انحراف تقریباً $7.07$ ہے، جس کا مطلب ہے کہ ایک عام دن میں آنے والوں کی تعداد روزانہ کی اوسط $130$ سے تقریباً $7.07$ افراد کم یا زیادہ ہوتی ہے۔ جب ہم روزانہ کے اصل انحرافات ($-10, 5, 0, -5, 10$) کو چیک کرتے ہیں تو یہ بات بالکل درست لگتی ہے، کیونکہ ان سب کی مقداریں $7.07$ کے آس پاس ہی ہیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

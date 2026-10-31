@@ -1,0 +1,120 @@
+{
+ "item": "c10-rev5-q4",
+ "label": "v",
+ "answer_ref": "$x = \\frac{-3 + \\sqrt{5}}{2},\\ \\frac{-3 - \\sqrt{5}}{2},\\ 1$",
+ "math": [
+  "\\text{Let } y = x + \\frac{1}{x}",
+  "y^2 = x^2 + \\frac{1}{x^2} + 2 \\Rightarrow x^2 + \\frac{1}{x^2} = y^2 - 2",
+  "(y^2 - 2) + y - 4 = 0 \\Rightarrow y^2 + y - 6 = 0",
+  "y^{2} - 2 y + 3 y - 6 = 0",
+  "y \\left(y - 2\\right) + 3 \\left(y - 2\\right) = 0",
+  "\\left(y + 3\\right) \\left(y - 2\\right) = 0",
+  "y + 3 = 0 \\quad\\text{or}\\quad y - 2 = 0",
+  "y = -3,\\quad y = 2",
+  "x + \\frac{1}{x} = -3 \\Rightarrow x^{2} + 3 x + 1 = 0",
+  "a = 1,\\quad b = 3,\\quad c = 1",
+  "x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a} = \\frac{-(3) \\pm \\sqrt{(3)^2 - 4(1)(1)}}{2(1)}",
+  "x = \\frac{-3 \\pm \\sqrt{9 - 4}}{2} = \\frac{-3 \\pm \\sqrt{5}}{2}",
+  "x = \\frac{-3 + \\sqrt{5}}{2},\\quad x = \\frac{-3 - \\sqrt{5}}{2}",
+  "x + \\frac{1}{x} = 2 \\Rightarrow x^{2} - 2 x + 1 = 0",
+  "x^{2} - 2 x + 1 = 0",
+  "x^{2} - x - x + 1 = 0",
+  "x \\left(x - 1\\right) - \\left(x - 1\\right) = 0",
+  "\\left(x - 1\\right) \\left(x - 1\\right) = 0",
+  "x - 1 = 0 \\quad\\text{or}\\quad x - 1 = 0",
+  "x = 1",
+  "\\text{S.S} = \\{\\frac{-3 + \\sqrt{5}}{2}, \\frac{-3 - \\sqrt{5}}{2}, 1\\}"
+ ],
+ "why": [
+  {
+   "en": "To make this complex reciprocal equation easier to handle, we use the method of substitution and let the simpler bracket $x + \\frac{1}{x}$ be equal to a single variable $y$. This will help us transform the equation into a standard quadratic form.",
+   "ur": "اس پیچیدہ مساوات کو آسان بنانے کے لیے ہم تبدیلی کا طریقہ استعمال کرتے ہیں اور چھوٹی بریکٹ $x + \\frac{1}{x}$ کو ایک نئے متغیر $y$ کے برابر فرض کر لیتے ہیں۔ اس سے ہمیں مساوات کو معیاری دو درجی شکل میں لانے میں مدد ملے گی۔"
+  },
+  {
+   "en": "We square both sides of our substitution using the algebraic identity $(a+b)^2 = a^2 + b^2 + 2ab$, where $x$ and $\\frac{1}{x}$ cancel out to leave $2$. Rearranging this gives us $y^2 - 2$, which directly replaces the first bracket $x^2 + \\frac{1}{x^2}$ in our question.",
+   "ur": "ہم الجبرا کے کلیے $(a+b)^2 = a^2 + b^2 + 2ab$ کو استعمال کرتے ہوئے طرفین کا مربع لیتے ہیں، جہاں $x$ اور $\\frac{1}{x}$ آپس میں کٹ کر صرف $2$ چھوڑتے ہیں۔ اسے ترتیب دینے سے ہمیں $x^2 + \\frac{1}{x^2}$ کی قیمت $y^2 - 2$ مل جاتی ہے جسے ہم سوال کی پہلی بریکٹ کی جگہ درج کریں گے۔"
+  },
+  {
+   "en": "Now we put the values in terms of $y$ back into the original equation and move $4$ to the left side. Combining the constant terms $-2$ and $-4$ gives us a simple quadratic equation $y^2 + y - 6 = 0$ that we know how to solve.",
+   "ur": "اب ہم $y$ کی شکل میں نکالی گئی قیمتیں اصل مساوات میں درج کرتے ہیں اور $4$ کو بائیں طرف لے آتے ہیں۔ مستقل مقداروں $-2$ اور $-4$ کو ملانے سے ہمیں ایک سادہ دو درجی مساوات $y^2 + y - 6 = 0$ مل جاتی ہے جسے حل کرنا ہم جانتے ہیں۔"
+  },
+  {
+   "en": "To factorize by mid-term breaking, we look for two numbers that multiply to $-6$ and add up to $1$, which are $-2$ and $3$. Rewriting $y$ as $-2y + 3y$ creates four terms so we can factor by grouping.",
+   "ur": "درمیانی رقم کو توڑ کر تجزی کرنے کے لیے ہم ایسے دو اعداد تلاش کرتے ہیں جن کو ضرب دینے سے $-6$ اور جمع کرنے سے $1$ آئے، اور وہ $-2$ اور $3$ ہیں۔ $y$ کو $-2y + 3y$ لکھنے سے چار رقوم بن جاتی ہیں جس سے ہم جوڑے بنا کر مشترک لے سکتے ہیں۔"
+  },
+  {
+   "en": "We group the first two terms and the last two terms, pulling out the greatest common factor from each pair. Notice that both groups now leave the exact same binomial factor $(y - 2)$.",
+   "ur": "ہم پہلی دو اور آخری دو رقوم کے جوڑے بنا کر ہر جوڑے میں سے مشترک نکالتے ہیں۔ غور کریں کہ دونوں حصوں میں اب بالکل ایک جیسی بریکٹ $(y - 2)$ باقی بچی ہے۔"
+  },
+  {
+   "en": "Since $(y - 2)$ is common to both parts, we factor it out to the front. This completely factorizes our quadratic expression into a product of two linear factors equal to zero.",
+   "ur": "چونکہ بریکٹ $(y - 2)$ دونوں حصوں میں مشترک ہے، اس لیے ہم اسے باہر نکال لیتے ہیں۔ اس طرح ہماری دو درجی مساوات مکمل طور پر دو یک درجی اجزائے ضربی کے حاصل ضرب میں تبدیل ہو جاتی ہے جو صفر کے برابر ہے۔"
+  },
+  {
+   "en": "By the zero-product property, if the product of two brackets is zero, at least one of them must be zero. Setting each factor equal to zero gives us two simple linear equations.",
+   "ur": "ضربی خاصیت کے مطابق اگر دو بریکٹوں کا حاصل ضرب صفر ہو تو ان میں سے کم از کم ایک بریکٹ لازمی صفر کے برابر ہوتی ہے۔ ہر جزو کو صفر کے برابر رکھنے سے ہمیں دو سادہ یک درجی مساواتیں ملتی ہیں۔"
+  },
+  {
+   "en": "Solving these two simple equations gives us the values $y = -3$ and $y = 2$. However, remember that our original question had $x$, so we must now use these $y$ values to find $x$.",
+   "ur": "ان دو سادہ مساواتوں کو حل کرنے سے ہمیں $y = -3$ اور $y = 2$ کی قیمتیں ملتی ہیں۔ لیکن یاد رہے کہ ہمارا اصل سوال $x$ میں تھا، اس لیے اب ہمیں $y$ کی ان قیمتوں کو استعمال کر کے $x$ کی قیمتیں معلوم کرنی ہوں گی۔"
+  },
+  {
+   "en": "We take our first value, $y = -3$, and replace $y$ back with $x + \\frac{1}{x}$. Multiplying the entire equation by $x$ clears the fraction and rearranging gives a standard quadratic equation in $x$.",
+   "ur": "ہم پہلی قیمت $y = -3$ لیتے ہیں اور $y$ کی جگہ واپس $x + \\frac{1}{x}$ درج کرتے ہیں۔ پوری مساوات کو $x$ سے ضرب دینے سے بٹا ختم ہو جاتا ہے اور ترتیب دینے پر $x$ میں ایک معیاری دو درجی مساوات بن جاتی ہے۔"
+  },
+  {
+   "en": "Since $x^2 + 3x + 1 = 0$ cannot be easily factorized by mid-term breaking, we prepare to use the quadratic formula. Comparing with the standard form $ax^2 + bx + c = 0$ lets us clearly identify the coefficients $a = 1$, $b = 3$, and $c = 1$.",
+   "ur": "چونکہ $x^2 + 3x + 1 = 0$ کی درمیانی رقم توڑ کر بآسانی تجزی نہیں ہو سکتی، اس لیے ہم دو درجی کلیہ استعمال کرنے کی تیاری کرتے ہیں۔ معیاری شکل $ax^2 + bx + c = 0$ سے موازنہ کرنے پر ہمیں عددی سر $a = 1$، $b = 3$ اور $c = 1$ واضح طور پر مل جاتے ہیں۔"
+  },
+  {
+   "en": "We substitute the values of $a$, $b$, and $c$ directly into the quadratic formula. Doing this carefully with brackets ensures we do not make any sign mistakes while calculating the roots.",
+   "ur": "ہم $a$، $b$ اور $c$ کی قیمتیں براہِ راست دو درجی کلیے میں درج کرتے ہیں۔ بریکٹوں کے ساتھ احتیاط سے قیمتیں درج کرنے سے ہم علامتوں کی کسی بھی غلطی سے محفوظ رہتے ہیں۔"
+  },
+  {
+   "en": "Now we simplify the terms inside the square root, where $3^2$ is $9$ and $4(1)(1)$ is $4$, leaving $\\sqrt{5}$. Since $5$ is not a perfect square, we leave it in radical form.",
+   "ur": "اب ہم جزر کے اندر موجود رقوم کو مختصر کرتے ہیں، جہاں $3^2$ سے $9$ اور $4(1)(1)$ سے $4$ آتا ہے، جس سے جزر میں $\\sqrt{5}$ بچتا ہے۔ چونکہ $5$ ایک مکمل مربع نہیں ہے، اس لیے ہم اسے جزر کی شکل میں ہی رہنے دیتے ہیں۔"
+  },
+  {
+   "en": "Separating the plus and minus signs gives us the first two roots of our original equation. These are exact real numbers that satisfy the equation when $y = -3$.",
+   "ur": "جمع اور منفی کی علامتوں کو الگ الگ لکھنے سے ہمیں اپنی اصل مساوات کے پہلے دو روٹس (جوابات) مل جاتے ہیں۔ یہ وہ حقیقی اعداد ہیں جو $y = -3$ ہونے کی صورت میں مساوات کو درست ثابت کرتے ہیں۔"
+  },
+  {
+   "en": "Next, we take the second value $y = 2$ and substitute $x + \\frac{1}{x}$ back in for $y$. Multiplying through by $x$ and bringing all terms to one side gives us our second quadratic equation in $x$.",
+   "ur": "اس کے بعد ہم دوسری قیمت $y = 2$ لیتے ہیں اور $y$ کی جگہ واپس $x + \\frac{1}{x}$ رکھتے ہیں۔ پوری مساوات کو $x$ سے ضرب دے کر تمام رقوم کو ایک طرف لانے سے ہمیں $x$ میں دوسری دو درجی مساوات مل جاتی ہے۔"
+  },
+  {
+   "en": "We now focus on solving this standard quadratic equation $x^2 - 2x + 1 = 0$. Unlike the previous one, this equation can be easily factorized.",
+   "ur": "اب ہم اس معیاری دو درجی مساوات $x^2 - 2x + 1 = 0$ کو حل کرنے پر توجہ دیتے ہیں۔ پچھلی مساوات کے برعکس، اس مساوات کی بآسانی تجزی کی جا سکتی ہے۔"
+  },
+  {
+   "en": "We apply mid-term breaking by finding two numbers that multiply to $1$ and add up to $-2$, which are $-1$ and $-1$. Splitting $-2x$ into $-x - x$ sets up the expression for grouping.",
+   "ur": "ہم درمیانی رقم کو توڑنے کا طریقہ اپناتے ہوئے ایسے دو اعداد ڈھونڈتے ہیں جنہیں ضرب دینے سے $1$ اور جمع کرنے سے $-2$ آئے، جو کہ $-1$ اور $-1$ ہیں۔ $-2x$ کو $-x - x$ میں توڑنے سے مشترک لینے کے لیے جوڑے بن جاتے ہیں۔"
+  },
+  {
+   "en": "We factor out $x$ from the first pair and $-1$ from the second pair. Notice how factoring out $-1$ changes the sign inside the second bracket so both brackets become $(x - 1)$.",
+   "ur": "ہم پہلے جوڑے میں سے $x$ اور دوسرے جوڑے میں سے $-1$ مشترک نکالتے ہیں۔ غور کریں کہ $-1$ مشترک لینے سے دوسری بریکٹ کے اندر کی علامت بدل جاتی ہے جس سے دونوں بریکٹیں یکساں طور پر $(x - 1)$ بن جاتی ہیں۔"
+  },
+  {
+   "en": "We take out the common bracket $(x - 1)$, leaving us with $(x - 1)(x - 1) = 0$. This shows that the quadratic expression is actually a perfect square.",
+   "ur": "ہم مشترک بریکٹ $(x - 1)$ کو باہر نکال لیتے ہیں، جس سے ہمارے پاس $(x - 1)(x - 1) = 0$ بچتا ہے۔ اس سے ظاہر ہوتا ہے کہ یہ دو درجی جملہ دراصل ایک مکمل مربع ہے۔"
+  },
+  {
+   "en": "Using the zero-product property again, we set each factor equal to zero. Since both factors are identical, they give the exact same linear equation.",
+   "ur": "دوبارہ ضربی خاصیت کا استعمال کرتے ہوئے ہم ہر جزو کو صفر کے برابر رکھتے ہیں۔ چونکہ دونوں اجزائے ضربی بالکل ایک جیسے ہیں، اس لیے وہ ایک ہی یک درجی مساوات دیتے ہیں۔"
+  },
+  {
+   "en": "Adding $1$ to both sides gives the root $x = 1$. Even though it appears twice as a repeated root, it represents a single distinct value for $x$.",
+   "ur": "طرفین میں $1$ جمع کرنے سے ہمیں روٹ $x = 1$ ملتا ہے۔ اگرچہ یہ دوہرا روٹ ہونے کی وجہ سے دو بار آتا ہے، لیکن یہ $x$ کی ایک ہی منفرد قیمت کو ظاہر کرتا ہے۔"
+  },
+  {
+   "en": "Finally, we collect all the distinct values of $x$ we found from both cases and write them together inside curly brackets as the Solution Set (S.S).",
+   "ur": "آخر میں، ہم دونوں صورتوں سے حاصل ہونے والی $x$ کی تمام منفرد قیمتوں کو اکٹھا کرتے ہیں اور انہیں درمیانی بریکٹ کے اندر حل سیٹ (S.S) کے طور پر لکھ دیتے ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The solution set $\\left\\{\\frac{-3 + \\sqrt{5}}{2}, \\frac{-3 - \\sqrt{5}}{2}, 1\\right\\}$ gives the exact values of $x$ that make the original equation $\\left(x^2+\\frac{1}{x^2}\\right)+\\left(x+\\frac{1}{x}\\right)=4$ true. You can easily verify this by plugging the simplest root, $x = 1$, back into the left side: $(1^2 + \\frac{1}{1^2}) + (1 + \\frac{1}{1}) = (1 + 1) + (1 + 1) = 4$, which equals the right side and confirms our work.",
+  "ur": "حل سیٹ $\\left\\{\\frac{-3 + \\sqrt{5}}{2}, \\frac{-3 - \\sqrt{5}}{2}, 1\\right\\}$ ہمیں $x$ کی وہ تمام درست قیمتیں بتاتا ہے جو اصل مساوات $\\left(x^2+\\frac{1}{x^2}\\right)+\\left(x+\\frac{1}{x}\\right)=4$ کو درست ثابت کرتی ہیں۔ آپ سب سے آسان قیمت $x = 1$ کو مساوات کی بائیں طرف درج کر کے بآسانی پڑتال کر سکتے ہیں: $(1^2 + \\frac{1}{1^2}) + (1 + \\frac{1}{1}) = (1 + 1) + (1 + 1) = 4$، جو کہ دائیں طرف کے برابر ہے اور ہمارے جواب کے درست ہونے کی تصدیق کرتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex12.1-q2",
+ "label": "",
+ "answer_ref": "$n(S) = 4$: (Hamid, Zainab), (Hamid, Samia), (Ahmad, Zainab), (Ahmad, Samia)",
+ "math": [
+  "B = \\{\\text{Hamid}, \\text{Ahmad}\\}, \\quad G = \\{\\text{Zainab}, \\text{Samia}\\}",
+  "\\text{Boy} \\to \\text{Girl}",
+  "\\text{Hamid} \\to \\begin{cases} \\text{Zainab} \\implies (\\text{Hamid}, \\text{Zainab}) \\\\ \\text{Samia} \\implies (\\text{Hamid}, \\text{Samia}) \\end{cases}",
+  "\\text{Ahmad} \\to \\begin{cases} \\text{Zainab} \\implies (\\text{Ahmad}, \\text{Zainab}) \\\\ \\text{Samia} \\implies (\\text{Ahmad}, \\text{Samia}) \\end{cases}",
+  "S = \\{(\\text{Hamid}, \\text{Zainab}), (\\text{Hamid}, \\text{Samia}), (\\text{Ahmad}, \\text{Zainab}), (\\text{Ahmad}, \\text{Samia})\\}",
+  "n(S) = 2 \\times 2 = 4"
+ ],
+ "why": [
+  {
+   "en": "In probability, we always begin by organizing the given data into clear sets. Writing out set $B$ for the $2$ boys and set $G$ for the $2$ girls ensures we do not miss any individual when making pairs.",
+   "ur": "احتمال (probability) کے سوالات میں ہم ہمیشہ دی گئی معلومات کو واضح سیٹوں کی شکل میں ترتیب دینے سے شروعات کرتے ہیں۔ $2$ لڑکوں کے لیے سیٹ $B$ اور $2$ لڑکیوں کے لیے سیٹ $G$ لکھنے سے یہ یقینی ہو جاتا ہے کہ جوڑے بناتے وقت کوئی نام چھوٹ نہ جائے۔"
+  },
+  {
+   "en": "A tree diagram breaks a multi-step selection into simple stages, one after another. Setting up the structure as $\\text{Boy} \\to \\text{Girl}$ gives us a systematic roadmap so we can pair each boy with every girl without confusion.",
+   "ur": "ٹری ڈایاگرام (tree diagram) ایک سے زیادہ مراحل والے انتخاب کو آسان حصوں میں تقسیم کر دیتی ہے۔ $\\text{Boy} \\to \\text{Girl}$ کا خاکہ بنانے سے ہمیں ایک منظم راستہ مل جاتا ہے تاکہ ہم بغیر کسی الجھن کے ہر لڑکے کے ساتھ ہر لڑکی کا جوڑا بنا سکیں۔"
+  },
+  {
+   "en": "Following our tree diagram rule, we start with the first boy, Hamid, and draw branches connecting him to each of the $2$ girls. This gives us the first $2$ possible pairs where Hamid is the selected boy.",
+   "ur": "ٹری ڈایاگرام کے اصول کے مطابق، ہم پہلے لڑکے حامد سے شروعات کرتے ہیں اور شاخیں (branches) بنا کر اسے دونوں یعنی $2$ لڑکیوں سے ملاتے ہیں۔ اس سے ہمیں پہلے $2$ ممکنہ جوڑے مل جاتے ہیں جن میں منتخب ہونے والا لڑکا حامد ہے۔"
+  },
+  {
+   "en": "Next, we repeat the exact same branching process for the second boy, Ahmad, so that every boy gets an equal chance to be paired. This completes our tree diagram by giving us the remaining $2$ possible boy-girl pairs.",
+   "ur": "اب ہم دوسرے لڑکے احمد کے لیے بھی بالکل یہی شاخیں بنانے کا عمل دہراتے ہیں تاکہ ہر لڑکے کو جوڑا بنانے کا برابر موقع ملے۔ یہ ہمیں باقی ماندہ $2$ ممکنہ لڑکا-لڑکی کے جوڑے دے کر ہماری ٹری ڈایاگرام کو مکمل کر دیتا ہے۔"
+  },
+  {
+   "en": "By definition, the sample space $S$ is the set of all possible outcomes of an experiment. Gathering all the pairs from the ends of our tree branches into curly brackets gives us the complete list of selections the teacher could make.",
+   "ur": "تعریف کے مطابق، سیمپل اسپیس (sample space) $S$ کسی تجربے کے تمام ممکنہ نتائج کے سیٹ کو کہتے ہیں۔ ٹری ڈایاگرام کی شاخوں کے آخر میں بننے والے تمام جوڑوں کو درمیانی بریکٹ میں اکٹھا کرنے سے ہمیں ان تمام انتخاب کی مکمل فہرست مل جاتی ہے جو استاد کر سکتا ہے۔"
+  },
+  {
+   "en": "Using the fundamental counting principle, we multiply the $2$ choices for a boy by the $2$ choices for a girl to get $n(S) = 2 \\times 2 = 4$. This confirms that our sample space of $4$ pairs is complete and no outcome was left out.",
+   "ur": "گنتی کے بنیادی اصول (fundamental counting principle) کو استعمال کرتے ہوئے، ہم لڑکوں کے $2$ امکانات کو لڑکیوں کے $2$ امکانات سے ضرب دیتے ہیں جس سے $n(S) = 2 \\times 2 = 4$ حاصل ہوتا ہے۔ یہ اس بات کی تصدیق کرتا ہے کہ $4$ جوڑوں پر مشتمل ہماری سیمپل اسپیس مکمل ہے اور کوئی بھی نتیجہ چھوٹا نہیں ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer shows that there are exactly $4$ different ways the teacher can select one boy and one girl: $(\\text{Hamid}, \\text{Zainab})$, $(\\text{Hamid}, \\text{Samia})$, $(\\text{Ahmad}, \\text{Zainab})$, and $(\\text{Ahmad}, \\text{Samia})$. You can easily check this by seeing that each of the $2$ boys appears twice and each of the $2$ girls appears twice, giving $2 \\times 2 = 4$ unique pairs.",
+  "ur": "آخری جواب یہ بتاتا ہے کہ استاد کل $4$ مختلف طریقوں سے ایک لڑکا اور ایک لڑکی منتخب کر سکتا ہے: $(\\text{Hamid}, \\text{Zainab})$، $(\\text{Hamid}, \\text{Samia})$، $(\\text{Ahmad}, \\text{Zainab})$، اور $(\\text{Ahmad}, \\text{Samia})$۔ آپ اس کی پڑتال باآسانی ایسے کر سکتے ہیں کہ $2$ لڑکوں میں سے ہر ایک کا نام دو بار اور $2$ لڑکیوں میں سے ہر ایک کا نام بھی دو بار آیا ہے، جس سے $2 \\times 2 = 4$ منفرد جوڑے بنتے ہیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

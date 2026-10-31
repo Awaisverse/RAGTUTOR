@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex11.2-q13",
+ "label": "i",
+ "answer_ref": "Variance = 3.2, SD = 1.79",
+ "math": [
+  "\\sum x = 45,\\quad \\sum x^2 = 421,\\quad n = 5",
+  "\\sigma^2 = \\frac{\\sum x^2}{n} - \\left(\\frac{\\sum x}{n}\\right)^2",
+  "\\sigma^2 = \\frac{421}{5} - \\left(\\frac{45}{5}\\right)^2",
+  "\\sigma^2 = 84.2 - (9)^2 = 84.2 - 81 = 3.2",
+  "\\sigma = \\sqrt{\\sigma^2} = \\sqrt{3.2} \\approx 1.79",
+  ""
+ ],
+ "why": [
+  {
+   "en": "In any statistics problem, our first good habit is to clearly list the given summary values so we can choose the right formula. Here, having $\\sum x = 45$, $\\sum x^2 = 421$, and $n = 5$ tells us we are working with ungrouped data because there are no frequencies ($f$) mentioned.",
+   "ur": "شماریات کے کسی بھی سوال میں سب سے اچھی عادت یہ ہے کہ دی گئی قیمتوں کو واضح طور پر لکھ لیا جائے تاکہ ہم درست فارمولا چن سکیں۔ یہاں $\\sum x = 45$، $\\sum x^2 = 421$، اور $n = 5$ سے ہمیں پتہ چلتا ہے کہ یہ غیر گروہی ڈیٹا (ungrouped data) ہے کیونکہ اس میں تعدد ($f$) شامل نہیں ہے۔"
+  },
+  {
+   "en": "Since we are given the sum of values and the sum of their squares directly, we select the computational (direct) formula for the variance of ungrouped data. This formula is very helpful because it connects our exact given quantities directly to the variance ($\\sigma^2$).",
+   "ur": "چونکہ ہمیں قیمتوں کا مجموعہ اور ان کے مربعات کا مجموعہ براہِ راست دیا گیا ہے، اس لیے ہم غیر گروہی ڈیٹا کے تغیر (variance) کا براہِ راست فارمولا استعمال کریں گے۔ یہ فارمولا بہت مددگار ہے کیونکہ یہ دی گئی مقداروں کو سیدھا تغیر ($\\sigma^2$) سے جوڑتا ہے۔"
+  },
+  {
+   "en": "Now we replace each symbol in the formula with its actual number from Step 1. This turns the algebraic formula into a simple arithmetic expression that we can easily calculate.",
+   "ur": "اب ہم فارمولے میں موجود ہر علامت کی جگہ پہلے مرحلے میں دی گئی اس کی اصل قیمت درج کریں گے۔ اس سے یہ فارمولا ایک سادہ حسابی شکل اختیار کر لیتا ہے جسے ہم آسانی سے حل کر سکتے ہیں۔"
+  },
+  {
+   "en": "Following the order of operations, we first divide the fractions and square the mean ($9^2 = 81$) before subtracting. This gives us $\\sigma^2 = 3.2$, which completes the first half of our goal by finding the variance.",
+   "ur": "حسابی اصولوں کے مطابق، تفریق کرنے سے پہلے ہم کسروں کو تقسیم کرتے ہیں اور اوسط کا مربع ($9^2 = 81$) لیتے ہیں۔ اس سے ہمیں $\\sigma^2 = 3.2$ ملتا ہے، جو تغیر (variance) معلوم کر کے ہمارے سوال کا آدھا حصہ مکمل کر دیتا ہے۔"
+  },
+  {
+   "en": "By definition, the standard deviation ($\\sigma$) is always the positive square root of the variance. Taking the square root of $3.2$ brings our measure of spread back to the original units of the data, giving us approximately $1.79$.",
+   "ur": "تعریف کے مطابق، معیاری انحراف ($\\sigma$) ہمیشہ تغیر کا مثبت جزر المربع (square root) ہوتا ہے۔ $3.2$ کا جزر لینے سے پھیلاؤ کی پیمائش واپس ڈیٹا کی اصل اکائیوں میں آ جاتی ہے، جس سے ہمیں تقریباً $1.79$ حاصل ہوتا ہے۔"
+  },
+  {
+   "en": "Finally, we state both answers clearly together so the examiner can immediately see that both parts of the question have been answered.",
+   "ur": "آخر میں، ہم دونوں جوابات کو ایک ساتھ واضح طور پر لکھتے ہیں تاکہ ممتحن کو فوراً نظر آ جائے کہ سوال کے دونوں حصے حل کر لیے گئے ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The variance of $3.2$ and standard deviation of $1.79$ measure how spread out the $5$ data values are around their mean of $9$. A small standard deviation like $1.79$ tells us the numbers are quite close to $9$, and you can quickly check your work by squaring $1.79$ to see that it gives almost $3.2$.",
+  "ur": "تغیر $3.2$ اور معیاری انحراف $1.79$ ہمیں بتاتے ہیں کہ ڈیٹا کی $5$ قیمتیں اپنی اوسط $9$ کے گرد کس حد تک پھیلی ہوئی ہیں۔ $1.79$ جیسا چھوٹا معیاری انحراف ظاہر کرتا ہے کہ تمام قیمتیں $9$ کے کافی قریب ہیں، اور آپ اپنے جواب کی پڑتال کے لیے $1.79$ کا مربع لے کر دیکھ سکتے ہیں کہ یہ تقریباً $3.2$ ہی بنتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

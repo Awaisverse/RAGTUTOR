@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex12.2-q9",
+ "label": "",
+ "answer_ref": "$\\frac{3}{4}$",
+ "math": [
+  "S = \\{HH, HT, TH, TT\\}, \\quad n(S) = 4",
+  "A = \\{HH, HT, TH\\}, \\quad n(A) = 3, \\quad P(A) = \\frac{n(A)}{n(S)} = \\frac{3}{4}",
+  "B = \\{HH\\}, \\quad n(B) = 1, \\quad P(B) = \\frac{n(B)}{n(S)} = \\frac{1}{4}",
+  "A \\cap B = \\{HH\\}, \\quad n(A \\cap B) = 1, \\quad P(A \\cap B) = \\frac{n(A \\cap B)}{n(S)} = \\frac{1}{4}",
+  "P(A \\cup B) = P(A) + P(B) - P(A \\cap B)",
+  "P(A \\cup B) = \\frac{3}{4} + \\frac{1}{4} - \\frac{1}{4} = \\frac{3}{4}"
+ ],
+ "why": [
+  {
+   "en": "In any probability question, we first write the sample space $S$ by listing all possible outcomes of the experiment. Knowing the total number of outcomes $n(S) = 4$ gives us the denominator needed for all our probability fractions.",
+   "ur": "احتمال (probability) کے ہر سوال میں، ہم سب سے پہلے تجربے کے تمام ممکنہ نتائج لکھ کر سیمپل سپیس $S$ بناتے ہیں۔ کل نتائج کی تعداد $n(S) = 4$ معلوم کرنے سے ہمیں وہ بٹا (denominator) مل جاتا ہے جو آگے تمام احتمالات نکالنے کے لیے ضروری ہے۔"
+  },
+  {
+   "en": "Here we deal with the first condition: 'at least one head' means having $1$ head or $2$ heads. By counting these favorable outcomes in $S$ and dividing by the total $n(S)$, the basic definition of probability gives us the chance of event $A$ happening.",
+   "ur": "یہاں ہم پہلی شرط کو حل کرتے ہیں: 'کم از کم ایک ہیڈ' کا مطلب ہے $1$ ہیڈ یا $2$ ہیڈز آنا۔ سیمپل سپیس $S$ میں سے ان موافق نتائج کو گن کر کل تعداد $n(S)$ پر تقسیم کرنے سے ہمیں احتمال کی بنیادی تعریف کے مطابق وقوعہ $A$ کا احتمال مل جاتا ہے۔"
+  },
+  {
+   "en": "Next, we look at the second condition, which asks for 'two heads'. Counting the outcomes where both coins show heads gives us $n(B) = 1$, allowing us to find the probability of event $B$ separately.",
+   "ur": "اس کے بعد، ہم دوسری شرط کو دیکھتے ہیں جو کہ 'دو ہیڈز' آنے کی ہے۔ ایسے نتائج گننے سے جہاں دونوں سکوں پر ہیڈ ہو، ہمیں $n(B) = 1$ ملتا ہے، جس سے ہم وقوعہ $B$ کا الگ سے احتمال معلوم کر لیتے ہیں۔"
+  },
+  {
+   "en": "Because the question uses the word 'or', we must check if events $A$ and $B$ share any common outcomes (overlapping events). Finding the intersection $A \\cap B$ shows that $HH$ is counted in both, so we find its probability $P(A \\cap B)$ to avoid double-counting later.",
+   "ur": "چونکہ سوال میں 'یا' (or) کا لفظ استعمال ہوا ہے، اس لیے ہمیں دیکھنا ہوگا کہ آیا وقوعہ $A$ اور $B$ میں کوئی نتیجہ مشترک ہے (متداخل واقعات)۔ تقاطع $A \\cap B$ نکالنے سے پتہ چلتا ہے کہ $HH$ دونوں میں شامل ہے، اس لیے ہم اس کا احتمال $P(A \\cap B)$ معلوم کرتے ہیں تاکہ آگے چل کر یہ دو بار شمار نہ ہو۔"
+  },
+  {
+   "en": "The word 'or' in probability tells us to find the union $A \\cup B$ using the Addition Law of Probability. Since our events overlap, we use the formula that subtracts $P(A \\cap B)$ so the common outcome $HH$ is only counted once.",
+   "ur": "احتمال میں 'یا' کا لفظ ہمیں بتاتا ہے کہ ہم نے جمع کے قانون (Addition Law) کے ذریعے یونین $A \\cup B$ معلوم کرنا ہے۔ چونکہ ہمارے واقعات متداخل (overlapping) ہیں، اس لیے ہم وہ فارمولا استعمال کرتے ہیں جس میں $P(A \\cap B)$ کو تفریق کیا جاتا ہے تاکہ مشترک نتیجہ $HH$ صرف ایک بار شمار ہو۔"
+  },
+  {
+   "en": "Now we simply put the probabilities we found in Steps 2, 3, and 4 into the formula. Adding and subtracting these fractions gives us the exact combined probability.",
+   "ur": "اب ہم بس وہ احتمالات جو ہم نے مرحلہ 2، 3 اور 4 میں معلوم کیے تھے، اس فارمولے میں درج کرتے ہیں۔ ان کسروں کو جمع اور تفریق کرنے سے ہمیں مطلوبہ مجموعی احتمال مل جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $\\frac{3}{4}$ means that out of $4$ possible outcomes when tossing two coins, $3$ outcomes ($HH, HT, TH$) satisfy the condition of getting at least one head or two heads. You can easily check this by noticing that 'two heads' ($HH$) is already included inside 'at least one head' ($HH, HT, TH$), so the combined favourable outcomes are still just $3$ out of $4$.",
+  "ur": "آخری جواب $\\frac{3}{4}$ کا مطلب ہے کہ دو سکے اچھالنے پر ملنے والے $4$ ممکنہ نتائج میں سے $3$ نتائج ($HH, HT, TH$) کم از کم ایک ہیڈ یا دو ہیڈز آنے کی شرط کو پورا کرتے ہیں۔ آپ اس کی تصدیق باآسانی ایسے کر سکتے ہیں کہ 'دو ہیڈز' ($HH$) پہلے ہی 'کم از کم ایک ہیڈ' ($HH, HT, TH$) کے اندر شامل ہے، اس لیے دونوں کو ملا کر بھی موافق نتائج $4$ میں سے $3$ ہی رہتے ہیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

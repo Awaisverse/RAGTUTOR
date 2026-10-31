@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex12.2-q6",
+ "label": "ii",
+ "answer_ref": "$\\frac{11}{13}$",
+ "math": [
+  "n(S) = 52",
+  "n(E) = 4 + 4 = 8",
+  "P(E) = \\frac{8}{52} = \\frac{2}{13}",
+  "",
+  "P(E') = 1 - \\frac{2}{13}",
+  "P(E') = \\frac{13 - 2}{13} = \\frac{11}{13}"
+ ],
+ "why": [
+  {
+   "en": "In probability, we always start by identifying the sample space $S$, which is the set of all possible outcomes. Knowing that $n(S) = 52$ gives us the total number of cards we will divide by when calculating probabilities.",
+   "ur": "احتمال (probability) کے سوالات میں ہم ہمیشہ سیمپل اسپیس $S$ سے شروعات کرتے ہیں، جو تمام ممکنہ نتائج کی تعداد ہوتی ہے۔ $n(S) = 52$ سے ہمیں پتہ چلتا ہے کہ تاش کے کل پتے کتنے ہیں، جس سے ہم آگے چل کر تقسیم کریں گے۔"
+  },
+  {
+   "en": "Before finding what we don't want, it is easier to count the cards we are avoiding (Kings and Jacks). Since a King and a Jack cannot be the same card, we simply add their counts ($4 + 4 = 8$) to find how many cards belong to event $E$.",
+   "ur": "یہ معلوم کرنے سے پہلے کہ ہمیں کون سے پتے نہیں چاہئیں، ان پتوں کو گننا آسان ہے جن سے ہم بچنا چاہتے ہیں (یعنی بادشاہ اور غلام)۔ چونکہ بادشاہ اور غلام الگ الگ پتے ہیں، اس لیے ہم ان کی تعداد کو جمع کر کے ($4 + 4 = 8$) ایونٹ $E$ کے کل نتائج معلوم کر لیتے ہیں۔"
+  },
+  {
+   "en": "Using the basic definition of probability, we divide the favorable outcomes $n(E)$ by the total outcomes $n(S)$. Simplifying $\\frac{8}{52}$ to $\\frac{2}{13}$ gives us the exact chance of drawing a King or a Jack, which we will subtract in the next steps.",
+   "ur": "احتمال کے بنیادی فارمولے کے مطابق، ہم موافق نتائج $n(E)$ کو کل نتائج $n(S)$ پر تقسیم کرتے ہیں۔ $\\frac{8}{52}$ کو مختصر کر کے $\\frac{2}{13}$ حاصل ہوتا ہے، جو بادشاہ یا غلام نکلنے کا امکان ہے، جسے ہم اگلے مراحل میں منفی کریں گے۔"
+  },
+  {
+   "en": "The phrase 'neither a King nor a Jack' means the exact opposite (complement) of drawing a King or a Jack. The complement rule $P(E') = 1 - P(E)$ is a helpful shortcut here because total probability is always $1$, saving us from counting all the other cards in the pack.",
+   "ur": "'نہ بادشاہ اور نہ ہی غلام' کا مطلب بادشاہ یا غلام نکلنے کے بالکل برعکس (complement) ہے۔ یہاں کمپلیمنٹ کا اصول $P(E') = 1 - P(E)$ ایک بہترین شارٹ کٹ ہے کیونکہ کل احتمال ہمیشہ $1$ ہوتا ہے، اور اس طرح ہمیں گڈی کے باقی تمام پتے گننے کی ضرورت نہیں پڑتی۔"
+  },
+  {
+   "en": "Now we put the value of $P(E) = \\frac{2}{13}$ that we found earlier into our complement formula. This sets up a simple subtraction problem to remove the unwanted chances from the total probability of $1$.",
+   "ur": "اب ہم $P(E) = \\frac{2}{13}$ کی قیمت، جو ہم نے پہلے معلوم کی تھی، کمپلیمنٹ کے فارمولے میں درج کرتے ہیں۔ اس سے ایک سادہ تفریق کا سوال بن جاتا ہے جس سے کل احتمال $1$ میں سے غیر مطلوبہ امکانات کو نکالا جا سکے۔"
+  },
+  {
+   "en": "To subtract a fraction from $1$, we take the LCM ($13$) so the denominators match, giving $\\frac{13 - 2}{13}$. This final calculation gives us $\\frac{11}{13}$, which is the exact probability of our required event $E'$.",
+   "ur": "$1$ میں سے کسر کو منفی کرنے کے لیے ہم ذواضعاف اقل (LCM) $13$ لیتے ہیں تاکہ نسب نما برابر ہو جائیں، جس سے $\\frac{13 - 2}{13}$ بنتا ہے۔ یہ آخری حساب ہمیں $\\frac{11}{13}$ دیتا ہے، جو ہمارے مطلوبہ ایونٹ $E'$ کا اصل احتمال ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $\\frac{11}{13}$ tells us that if we draw a card at random, there is a very high chance ($11$ out of $13$) that it will be neither a King nor a Jack. We can easily check this is reasonable because $\\frac{11}{13}$ is between $0$ and $1$, and when added to the probability of drawing a King or a Jack ($\\frac{2}{13}$), it equals $\\frac{13}{13} = 1$.",
+  "ur": "آخری جواب $\\frac{11}{13}$ ہمیں بتاتا ہے کہ اگر ہم بے ترتیب طور پر ایک پتہ نکالیں، تو اس بات کا بہت زیادہ امکان ہے ($13$ میں سے $11$ حصے) کہ وہ نہ تو بادشاہ ہوگا اور نہ ہی غلام۔ ہم اس جواب کی درستگی ایسے جانچ سکتے ہیں کہ $\\frac{11}{13}$ صفر اور $1$ کے درمیان ہے، اور اگر اسے بادشاہ یا غلام نکلنے کے احتمال ($\\frac{2}{13}$) میں جمع کریں تو کل جواب $1$ آتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

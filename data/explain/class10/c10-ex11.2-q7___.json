@@ -1,0 +1,50 @@
+{
+ "item": "c10-ex11.2-q7",
+ "label": "",
+ "answer_ref": "Variance = 67.27, SD = 8.20",
+ "math": [
+  "x = 42, 51, 54, 61, 63, 71; \\quad f = 5, 13, 4, 9, 5, 4",
+  "S^2 = \\frac{\\sum fx^2}{\\sum f} - \\left(\\frac{\\sum fx}{\\sum f}\\right)^2, \\quad S.D. = \\sqrt{S^2}",
+  "\\begin{array}{c|c|c|c|c} x & f & fx & x^2 & fx^2 \\\\ \\hline 42 & 5 & 210 & 1764 & 8820 \\\\ 51 & 13 & 663 & 2601 & 33813 \\\\ 54 & 4 & 216 & 2916 & 11664 \\\\ 61 & 9 & 549 & 3721 & 33489 \\\\ 63 & 5 & 315 & 3969 & 19845 \\\\ 71 & 4 & 284 & 5041 & 20164 \\\\ \\hline \\text{Total} & \\sum f = 40 & \\sum fx = 2237 & & \\sum fx^2 = 127795 \\end{array}",
+  "\\bar{x} = \\frac{\\sum fx}{\\sum f} = \\frac{2237}{40} = 55.925 \\approx 55.93",
+  "S^2 = \\frac{127795}{40} - \\left(\\frac{2237}{40}\\right)^2 = 3194.875 - 3127.605625 = 67.269375 \\approx 67.27",
+  "S.D. = \\sqrt{67.269375} \\approx \\sqrt{67.27} \\approx 8.20",
+  ""
+ ],
+ "why": [
+  {
+   "en": "In statistics, we always start by labelling our data clearly so we know which formula to use. Here, the rainfall values are our observations ($x$) and the number of places tells us how often each rainfall amount occurred, which is the frequency ($f$).",
+   "ur": "شماریات (statistics) میں ہم ہمیشہ اپنے ڈیٹا کو واضح نام دینے سے شروعات کرتے ہیں تاکہ ہمیں معلوم ہو کہ کون سا فارمولا استعمال کرنا ہے۔ یہاں بارش کی مقدار ہمارے مشاہدات ($x$) ہیں اور مقامات کی تعداد ہمیں بتاتی ہے کہ بارش کی ہر مقدار کتنی بار ریکارڈ ہوئی، جو کہ تعدد (frequency $f$) ہے۔"
+  },
+  {
+   "en": "Because the data is given with frequencies, we must use the grouped data formula for variance ($S^2$) and standard deviation ($S.D.$). Writing down the formula first acts as a roadmap, showing us exactly which column totals ($\\sum f$, $\\sum fx$, and $\\sum fx^2$) we need to calculate next.",
+   "ur": "چونکہ ڈیٹا تعدد (frequencies) کے ساتھ دیا گیا ہے، اس لیے ہمیں تغیر (variance $S^2$) اور معیاری انحراف (standard deviation $S.D.$) کے لیے گروہی ڈیٹا کا فارمولا استعمال کرنا چاہیے۔ فارمولا پہلے لکھ لینے سے ہمیں ایک واضح راستہ مل جاتا ہے کہ آگے ہمیں کن کالموں کے مجموعے ($\\sum f$، $\\sum fx$، اور $\\sum fx^2$) معلوم کرنے ہیں۔"
+  },
+  {
+   "en": "We build this table to organize our arithmetic neatly and avoid calculation mistakes. The totals at the bottom ($\\sum f = 40$, $\\sum fx = 2237$, and $\\sum fx^2 = 127795$) give us the exact building blocks required by the variance formula.",
+   "ur": "ہم یہ جدول (table) اپنے حساب کتاب کو منظم رکھنے اور غلطیوں سے بچنے کے لیے بناتے ہیں۔ آخر میں حاصل ہونے والے مجموعے ($\\sum f = 40$، $\\sum fx = 2237$، اور $\\sum fx^2 = 127795$) ہمیں وہ بنیادی قیمتیں فراہم کرتے ہیں جن کی تغیر (variance) کے فارمولے میں ضرورت ہے۔"
+  },
+  {
+   "en": "Calculating the mean ($\\bar{x} = 55.925$) tells us the average rainfall across all $40$ places. This average is also the exact value of the term $\\frac{\\sum fx}{\\sum f}$ that we need to square inside the variance formula.",
+   "ur": "حسابی اوسط ($\\bar{x} = 55.925$) معلوم کرنے سے ہمیں تمام $40$ مقامات پر ہونے والی اوسط بارش کا پتہ چلتا ہے۔ یہ اوسط دراصل $\\frac{\\sum fx}{\\sum f}$ کی وہی قیمت ہے جس کا ہمیں تغیر (variance) کے فارمولے میں مربع (square) لینا ہے۔"
+  },
+  {
+   "en": "Now we plug our table totals into the formula to find the average of squared distances from the mean. This gives us the variance ($S^2 \\approx 67.27$), which measures the spread of the rainfall data in squared millimetres.",
+   "ur": "اب ہم اوسط سے فاصلوں کے مربعات کی اوسط معلوم کرنے کے لیے جدول کے مجموعوں کو فارمولے میں درج کرتے ہیں۔ اس سے ہمیں تغیر ($S^2 \\approx 67.27$) ملتا ہے، جو بارش کے ڈیٹا کے پھیلاؤ کو مربع ملی میٹر میں ناپتا ہے۔"
+  },
+  {
+   "en": "Since variance is in squared units, we take its positive square root by definition to bring the measure of spread back to our original unit (millimetres). This gives us a standard deviation of $8.20$.",
+   "ur": "چونکہ تغیر (variance) مربع اکائیوں میں ہوتا ہے، اس لیے پھیلاؤ کی پیمائش کو واپس اصل اکائی (ملی میٹر) میں لانے کے لیے ہم تعریف کے مطابق اس کا مثبت جذر (square root) لیتے ہیں۔ اس سے ہمیں معیاری انحراف $8.20$ حاصل ہوتا ہے۔"
+  },
+  {
+   "en": "We state both final values clearly to complete our solution. Having both numbers summarizes how much the rainfall varied across the different places during the week.",
+   "ur": "اپنا حل مکمل کرنے کے لیے ہم دونوں حتمی قیمتوں کو واضح طور پر لکھتے ہیں۔ یہ دونوں اعداد اس بات کا خلاصہ کرتے ہیں کہ ہفتے کے دوران مختلف مقامات پر بارش کی مقدار میں کتنا فرق رہا۔"
+  }
+ ],
+ "meaning": {
+  "en": "The average rainfall across the $40$ places is about $55.93$ mm, and the standard deviation of $8.20$ mm (with a variance of $67.27$) tells us that in most places, the rainfall varied by roughly $8.20$ mm above or below this average. You can check that $8.20$ is a very reasonable answer because the rainfall values range from $42$ to $71$ mm, so the typical distance of the data points from the mean of $55.93$ should indeed be around $8$ mm.",
+  "ur": "ان $40$ مقامات پر اوسط بارش تقریباً $55.93$ ملی میٹر ہے، اور $8.20$ ملی میٹر کا معیاری انحراف (جبکہ تغیر $67.27$ ہے) ہمیں بتاتا ہے کہ زیادہ تر مقامات پر بارش کی مقدار اس اوسط سے تقریباً $8.20$ ملی میٹر کم یا زیادہ رہی۔ آپ تصدیق کر سکتے ہیں کہ $8.20$ ایک بالکل معقول جواب ہے کیونکہ بارش کی قیمتیں $42$ سے $71$ ملی میٹر کے درمیان ہیں، اس لیے $55.93$ کی اوسط سے ڈیٹا کا عام فاصلہ واقعی $8$ ملی میٹر کے آس پاس ہونا چاہیے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

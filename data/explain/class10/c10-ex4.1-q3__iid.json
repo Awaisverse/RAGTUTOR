@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex4.1-q3",
+ "label": "iid",
+ "answer_ref": "$8 x^{4} - 8 x^{2} + 1$",
+ "math": [
+  "g(x) = 2x^{2} - 1",
+  "(g\\circ g)(x) = g(g(x)) = g\\left(2x^{2} - 1\\right)",
+  "= 2\\left(2x^{2} - 1\\right)^{2} - 1",
+  "= 2\\left(4x^{4} - 4x^{2} + 1\\right) - 1",
+  "= 8x^{4} - 8x^{2} + 2 - 1",
+  "(g\\circ g)(x) = 8 x^{4} - 8 x^{2} + 1"
+ ],
+ "why": [
+  {
+   "en": "To find $(g\\circ g)(x)$, we only need the rule for the function $g(x)$ because we are composing the function $g$ with itself. Writing down $g(x) = 2x^{2} - 1$ clearly sets up the formula we will use as both our inner and outer function.",
+   "ur": "مخلوط تفاعل $(g\\circ g)(x)$ معلوم کرنے کے لیے ہمیں صرف تفاعل $g(x)$ کی ضرورت ہے کیونکہ یہاں $g$ کا اپنے آپ کے ساتھ ہی ترکیب (composition) ہو رہا ہے۔ $g(x) = 2x^{2} - 1$ کو لکھنے سے ہمارے سامنے وہ کلیہ واضح ہو جاتا ہے جسے ہم نے اندرونی اور بیرونی دونوں تفاعل کے طور پر استعمال کرنا ہے۔"
+  },
+  {
+   "en": "By the definition of function composition, $(g\\circ g)(x)$ means $g(g(x))$, where the output of the inner $g(x)$ becomes the input for the outer $g$. Replacing the inner $g(x)$ with $2x^{2} - 1$ shows us the exact algebraic expression we need to plug into the function $g$.",
+   "ur": "تفاعل کی ترکیب (composition of functions) کی تعریف کے مطابق، $(g\\circ g)(x)$ کا مطلب $g(g(x))$ ہے، جہاں اندرونی $g(x)$ کا نتیجہ بیرونی $g$ کے لیے ان پٹ بن جاتا ہے۔ اندرونی $g(x)$ کی جگہ اس کی قیمت $2x^{2} - 1$ رکھنے سے ہمیں معلوم ہو جاتا ہے کہ ہمیں تفاعل $g$ میں کون سا الجبری جملہ درج کرنا ہے۔"
+  },
+  {
+   "en": "The rule for $g$ tells us to square the input, multiply by $2$, and then subtract $1$. By putting our new input $2x^{2} - 1$ in place of $x$, we successfully apply the outer function $g$ and turn the problem into simple algebra.",
+   "ur": "تفاعل $g$ کا اصول یہ ہے کہ ان پٹ کا مربع لیا جائے، اسے $2$ سے ضرب دی جائے، اور پھر $1$ تفریق کیا جائے۔ $x$ کی جگہ نیا ان پٹ $2x^{2} - 1$ لگانے سے بیرونی تفاعل $g$ کا عمل مکمل ہو جاتا ہے اور اب یہ سوال ایک سادہ الجبری جملے میں بدل گیا ہے۔"
+  },
+  {
+   "en": "Following the order of operations, we must expand the exponent before multiplying by the $2$ outside the bracket. Using the algebraic identity $(a - b)^{2} = a^{2} - 2ab + b^{2}$ removes the square and gives us a polynomial inside the brackets.",
+   "ur": "ریاضی کے اصولوں کے مطابق، بریکٹ کے باہر موجود $2$ سے ضرب دینے سے پہلے ہمیں قوت نما (مربع) کو کھولنا ہوگا۔ الجبری کلیہ $(a - b)^{2} = a^{2} - 2ab + b^{2}$ استعمال کرنے سے مربع ختم ہو جاتا ہے اور بریکٹ کے اندر ایک کثیر رقمی جملہ حاصل ہوتا ہے۔"
+  },
+  {
+   "en": "We use the distributive property to multiply the outer $2$ with every term inside the brackets. This clears the parentheses so that all terms are free to be combined.",
+   "ur": "اب ہم تقسیمی خاصیت (distributive property) کا استعمال کرتے ہوئے بریکٹ کے باہر موجود $2$ کو اندر کی ہر رقم سے ضرب دیتے ہیں۔ اس سے بریکٹ ختم ہو جاتی ہے اور تمام رقوم آپس میں حل ہونے کے لیے آزاد ہو جاتی ہیں۔"
+  },
+  {
+   "en": "To finish simplifying, we combine the like constant terms $2$ and $-1$ by subtraction. This gives us the simplest polynomial form for the composite function $(g\\circ g)(x)$.",
+   "ur": "سوال کو مکمل طور پر مختصر کرنے کے لیے، ہم ایک جیسی مستقل رقوم $2$ اور $-1$ کو آپس میں حل کرتے ہیں۔ اس سے ہمیں مخلوط تفاعل $(g\\circ g)(x)$ اپنی سادہ ترین شکل میں حاصل ہو جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $(g\\circ g)(x) = 8x^{4} - 8x^{2} + 1$ is a single formula that directly calculates the result of applying the function $g$ twice in a row to any number $x$. You can check this using $x = 1$: first, $g(1) = 2(1)^{2} - 1 = 1$, and applying $g$ again gives $g(1) = 1$; our final formula also gives $8(1)^{4} - 8(1)^{2} + 1 = 1$, which confirms the answer is correct.",
+  "ur": "آخری جواب $(g\\circ g)(x) = 8x^{4} - 8x^{2} + 1$ ایک ایسا واحد کلیہ ہے جو کسی بھی عدد $x$ پر تفاعل $g$ کو لگاتار دو بار لاگو کرنے کا براہِ راست نتیجہ دیتا ہے۔ آپ $x = 1$ لے کر اس کی پڑتال کر سکتے ہیں: پہلے $g(1) = 2(1)^{2} - 1 = 1$ آتا ہے، اور دوبارہ $g$ لاگو کرنے سے $g(1) = 1$ ملتا ہے؛ ہمارا نیا کلیہ بھی $8(1)^{4} - 8(1)^{2} + 1 = 1$ ہی دیتا ہے، جس سے تصدیق ہوتی ہے کہ جواب بالکل درست ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

@@ -1,0 +1,40 @@
+{
+ "item": "c10-rev4-q3",
+ "label": "iii",
+ "answer_ref": "$x^{9}$",
+ "math": [
+  "f(x) = x^{3}",
+  "(f\\circ f)(x) = f(f(x))",
+  "(f\\circ f)(x) = f(x^{3})",
+  "(f\\circ f)(x) = (x^{3})^{3}",
+  "(f\\circ f)(x) = x^{3 \\times 3} = x^{9}"
+ ],
+ "why": [
+  {
+   "en": "In part (iii), we only need to find the composition of the function $f$ with itself, so we do not need $g(x)$ here. Writing down $f(x) = x^3$ clearly sets the rule that whatever input we give to $f$, we must take its cube (power $3$).",
+   "ur": "جزو (iii) میں ہمیں صرف فنکشن $f$ کا اپنے آپ کے ساتھ کمپوزیشن (composition) معلوم کرنا ہے، اس لیے یہاں $g(x)$ کی ضرورت نہیں ہے۔ $f(x) = x^3$ کو الگ سے لکھنے سے یہ اصول واضح ہو جاتا ہے کہ ہم $f$ کو جو بھی اِن پٹ (input) دیں گے، ہمیں اس کا مکعب (طاقت $3$) لینا ہوگا۔"
+  },
+  {
+   "en": "By the definition of composition of functions, the notation $(f\\circ f)(x)$ means a function inside a function. Rewriting it as $f(f(x))$ shows us that the output of the inner $f(x)$ will become the new input for the outer function $f$.",
+   "ur": "فنکشنز کے کمپوزیشن کی تعریف کے مطابق، علامت $(f\\circ f)(x)$ کا مطلب فنکشن کے اندر فنکشن ہے۔ اسے $f(f(x))$ کی شکل میں لکھنے سے ہمیں پتہ چلتا ہے کہ اندرونی $f(x)$ کا جواب بیرونی فنکشن $f$ کے لیے نیا اِن پٹ بن جائے گا۔"
+  },
+  {
+   "en": "In algebra, we always solve from the inside of the brackets first. Putting the actual expression $x^3$ in place of the inner $f(x)$ tells us clearly that $x^3$ is the exact term we now need to feed into the outer function $f$.",
+   "ur": "الجبرا میں ہم ہمیشہ بریکٹ کو اندر سے حل کرنا شروع کرتے ہیں۔ اندرونی $f(x)$ کی جگہ اس کی اصل قیمت $x^3$ رکھنے سے یہ واضح ہو جاتا ہے کہ اب ہمیں بیرونی فنکشن $f$ میں $x^3$ کو بطور اِن پٹ استعمال کرنا ہے۔"
+  },
+  {
+   "en": "Now we apply the rule of function $f$, which is to raise its input to the power $3$. Since our new input is $x^3$, replacing $x$ with $x^3$ in the formula gives us the cube of a cube, written as $(x^3)^3$.",
+   "ur": "اب ہم فنکشن $f$ کا اصول لاگو کرتے ہیں، جو کہ اپنے اِن پٹ کی طاقت $3$ لینا ہے۔ چونکہ ہمارا نیا اِن پٹ $x^3$ ہے، اس لیے فارمولے میں $x$ کی جگہ $x^3$ رکھنے سے ہمیں مکعب کا مکعب ملتا ہے، جسے $(x^3)^3$ لکھا جاتا ہے۔"
+  },
+  {
+   "en": "To simplify a base that has two exponents separated by a bracket, we use the power of a power law of indices. Multiplying the exponents $3$ and $3$ combines them into a single power, giving us our final simplified function $x^9$.",
+   "ur": "جب ایک اساس (base) پر بریکٹ کے اندر اور باہر دو قوت نما (exponents) ہوں، تو انہیں مختصر کرنے کے لیے ہم قوت نماؤں کے ضرب کا اصول استعمال کرتے ہیں۔ طاقتوں $3$ اور $3$ کو آپس میں ضرب دینے سے یہ ایک طاقت بن جاتی ہیں، جس سے ہمیں آخری مختصر فنکشن $x^9$ حاصل ہوتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $(f\\circ f)(x) = x^9$ means that applying the cubing function $f(x) = x^3$ twice in a row is the exact same as raising the original input $x$ directly to the power $9$.",
+  "ur": "آخری جواب $(f\\circ f)(x) = x^9$ کا مطلب یہ ہے کہ مکعب لینے والے فنکشن $f(x) = x^3$ کو لگاتار دو بار لاگو کرنا بالکل ایسا ہی ہے جیسے اصل اِن پٹ $x$ کی براہِ راست طاقت $9$ لے لی جائے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

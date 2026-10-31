@@ -1,0 +1,50 @@
+{
+ "item": "c10-ex4.1-q8",
+ "label": "i",
+ "answer_ref": "verified: $f(f^{-1}(x)) = f^{-1}(f(x)) = x$",
+ "math": [
+  "f(x) = x - 6",
+  "y = x - 6",
+  "x = y + 6 \\implies f^{-1}(y) = y + 6",
+  "f^{-1}(x) = x + 6",
+  "f(f^{-1}(x)) = f(x + 6) = (x + 6) - 6 = x",
+  "f^{-1}(f(x)) = f^{-1}(x - 6) = (x - 6) + 6 = x",
+  "f(f^{-1}(x)) = f^{-1}(f(x)) = x"
+ ],
+ "why": [
+  {
+   "en": "We start by clearly writing down our original function $f(x) = x - 6$. Before we can verify the relationship between a function and its inverse, our first goal is to actually find the formula for $f^{-1}(x)$.",
+   "ur": "ہم سب سے پہلے اپنا دیا گیا فنکشن $f(x) = x - 6$ لکھتے ہیں۔ کسی فنکشن اور اس کے انورس کے درمیان تعلق کو ثابت کرنے سے پہلے، ہمارا پہلا مقصد $f^{-1}(x)$ کا فارمولا معلوم کرنا ہے۔"
+  },
+  {
+   "en": "By the definition of a function and its inverse, if $y = f(x)$, then reversing the mapping gives $x = f^{-1}(y)$. Replacing $f(x)$ with $y$ makes it much easier to do algebra and rearrange the equation.",
+   "ur": "فنکشن اور اس کے انورس کی تعریف کے مطابق، اگر $y = f(x)$ ہو تو اس کا الٹ $x = f^{-1}(y)$ ہوتا ہے۔ $f(x)$ کی جگہ $y$ لکھنے سے الجبرا حل کرنا اور مساوات کو ترتیب دینا بہت آسان ہو جاتا ہے۔"
+  },
+  {
+   "en": "To find the inverse, we must isolate the input variable $x$ by moving $-6$ to the other side as $+6$. Once $x$ is alone, we replace it with $f^{-1}(y)$, which gives us the inverse rule in terms of $y$.",
+   "ur": "انورس معلوم کرنے کے لیے، ہمیں $-6$ کو دوسری طرف $+6$ بنا کر لے جانا ہے تاکہ $x$ اکیلا رہ جائے۔ جب $x$ الگ ہو جائے، تو ہم اس کی جگہ $f^{-1}(y)$ لکھ دیتے ہیں، جس سے ہمیں $y$ کی شکل میں انورس کا اصول مل جاتا ہے۔"
+  },
+  {
+   "en": "In mathematics, we usually write functions in terms of $x$, where the letter is just a placeholder for any input. Changing $y$ back to $x$ gives us our official inverse function, $f^{-1}(x) = x + 6$, which we can now use for verification.",
+   "ur": "ریاضی میں ہم عام طور پر فنکشنز کو $x$ کی شکل میں لکھتے ہیں، جہاں یہ حرف صرف ان پٹ کو ظاہر کرتا ہے۔ $y$ کو واپس $x$ سے بدلنے سے ہمیں ہمارا مطلوبہ انورس فنکشن $f^{-1}(x) = x + 6$ مل جاتا ہے، جسے اب ہم تصدیق کے لیے استعمال کر سکتے ہیں۔"
+  },
+  {
+   "en": "Now we test the first part of the verification using the rule of composition of functions, which means putting the entire inverse $x + 6$ inside the original function $f$. Since $+6$ and $-6$ cancel each other out, we get back our starting value $x$, proving the first half is true.",
+   "ur": "اب ہم کمپوزیشن آف فنکشنز کے اصول کو استعمال کرتے ہوئے تصدیق کے پہلے حصے کو چیک کرتے ہیں، جس کا مطلب ہے کہ پورے انورس $x + 6$ کو اصل فنکشن $f$ کے اندر رکھنا۔ چونکہ $+6$ اور $-6$ ایک دوسرے کو ختم کر دیتے ہیں، ہمیں ہماری ابتدائی قیمت $x$ واپس مل جاتی ہے، جس سے پہلا حصہ ثابت ہو جاتا ہے۔"
+  },
+  {
+   "en": "Next, we test the composition in the reverse order by putting the original function $x - 6$ as the input into the inverse function $f^{-1}$. Again, $-6$ and $+6$ cancel out to leave $x$, confirming that the inverse function also undoes the original function.",
+   "ur": "اس کے بعد، ہم الٹ ترتیب میں کمپوزیشن کو چیک کرتے ہیں، یعنی اصل فنکشن $x - 6$ کو انورس فنکشن $f^{-1}$ میں بطور ان پٹ رکھتے ہیں۔ یہاں بھی $-6$ اور $+6$ آپس میں کٹ جاتے ہیں اور صرف $x$ بچتا ہے، جو تصدیق کرتا ہے کہ انورس فنکشن بھی اصل فنکشن کے اثر کو ختم کر دیتا ہے۔"
+  },
+  {
+   "en": "Since both compositions simplify to the exact same result $x$, we can set them equal to each other. This completes our formal proof and satisfies the condition asked in the question.",
+   "ur": "چونکہ دونوں کمپوزیشنز کو حل کرنے سے بالکل ایک جیسا نتیجہ $x$ نکلتا ہے، اس لیے ہم ان دونوں کو ایک دوسرے کے برابر رکھ سکتے ہیں۔ اس سے ہمارا باقاعدہ ثبوت مکمل ہو جاتا ہے اور سوال میں پوچھی گئی شرط پوری ہو جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This verification shows that $f(x) = x - 6$ and $f^{-1}(x) = x + 6$ are true inverses of each other. In simple terms, whatever the function $f$ does to a number $x$ (subtracts $6$), the inverse function $f^{-1}$ completely reverses it (adds $6$), bringing you right back to your starting value $x$.",
+  "ur": "یہ تصدیق ظاہر کرتی ہے کہ $f(x) = x - 6$ اور $f^{-1}(x) = x + 6$ واقعی ایک دوسرے کے صحیح انورس (معکوس) ہیں۔ آسان الفاظ میں، فنکشن $f$ کسی نمبر $x$ کے ساتھ جو عمل کرتا ہے (یعنی $6$ تفریق کرتا ہے)، انورس فنکشن $f^{-1}$ اس عمل کو مکمل طور پر الٹ دیتا ہے (یعنی $6$ جمع کرتا ہے)، اور آپ کو واپس آپ کی ابتدائی قیمت $x$ پر لے آتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

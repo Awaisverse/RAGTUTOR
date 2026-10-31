@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex12.3-q4",
+ "label": "",
+ "answer_ref": "$\\frac{1}{2}$",
+ "math": [
+  "n(S) = 6 \\times 6 = 36",
+  "",
+  "E = \\{(1,2), (1,4), (1,6), (3,2), (3,4), (3,6), (5,2), (5,4), (5,6), (2,1), (2,3), (2,5), (4,1), (4,3), (4,5), (6,1), (6,3), (6,5)\\}",
+  "n(E) = 9 + 9 = 18",
+  "P(E) = \\frac{n(E)}{n(S)} = \\frac{18}{36}",
+  "P(E) = \\frac{1}{2}"
+ ],
+ "why": [
+  {
+   "en": "In any probability problem, we first use the fundamental counting principle to find the size of the sample space $S$. Since each die has $6$ faces, multiplying them gives $36$ total possible pairs, which will be the denominator in our probability formula.",
+   "ur": "احتمال کے کسی بھی سوال میں ہم سب سے پہلے بنیادی گنتی کے اصول کی مدد سے نمونہ کی فضا $S$ کے کل ارکان کی تعداد معلوم کرتے ہیں۔ چونکہ ہر پانسے کے $6$ رخ ہوتے ہیں، اس لیے ان کو ضرب دینے سے کل $36$ ممکنہ جوڑے بنتے ہیں، جو ہمارے فارمولے میں بٹے کے نیچے آئیں گے۔"
+  },
+  {
+   "en": "Next, we clearly define our event $E$ by identifying which numbers on a die are odd, $\\{1, 3, 5\\}$, and which are multiples of $2$, $\\{2, 4, 6\\}$. Breaking down the condition this way helps us pair the numbers correctly without missing any outcome.",
+   "ur": "اس کے بعد ہم اپنے واقعہ $E$ کی وضاحت کرتے ہیں کہ پانسے پر کون سے اعداد طاق ہیں یعنی $\\{1, 3, 5\\}$ اور کون سے $2$ کے اضعاف ہیں یعنی $\\{2, 4, 6\\}$۔ سوال کی شرط کو اس طرح الگ کرنے سے ہمیں بغیر کسی غلطی کے درست جوڑے بنانے میں مدد ملتی ہے۔"
+  },
+  {
+   "en": "Because the question says 'on one and on other' without fixing the order, we must include both cases: first die odd with second die a multiple of $2$, and vice versa. Writing out the complete set $E$ shows all the exact pairs from the sample space that satisfy our condition.",
+   "ur": "چونکہ سوال میں ترتیب متعین کیے بغیر 'ایک پر اور دوسرے پر' کہا گیا ہے، اس لیے ہمیں دونوں صورتیں شامل کرنی ہوں گی: پہلے پانسے پر طاق اور دوسرے پر $2$ کا ضعف، اور پھر اس کا الٹ۔ سیٹ $E$ کو مکمل لکھنے سے ہمارے سامنے وہ تمام جوڑے آ جاتے ہیں جو سوال کی شرط کو پورا کرتے ہیں۔"
+  },
+  {
+   "en": "To use the probability formula, we need the numerical count of favourable outcomes, denoted as $n(E)$, rather than just the list. Adding the $9$ outcomes from the first case and $9$ from the second gives $18$, which will serve as our numerator.",
+   "ur": "احتمال کا فارمولا استعمال کرنے کے لیے ہمیں صرف فہرست نہیں بلکہ موافق نتائج کی کل تعداد $n(E)$ چاہیے ہوتی ہے۔ پہلی صورت کے $9$ اور دوسری صورت کے $9$ نتائج کو جمع کرنے سے ہمیں $18$ ملتا ہے، جو ہمارے فارمولے میں شمار کنندہ (بٹے کے اوپر) بنے گا۔"
+  },
+  {
+   "en": "By the basic definition of probability, the chance of an event happening is the ratio of favourable outcomes $n(E)$ to total possible outcomes $n(S)$. Substituting $18$ and $36$ into this formula sets up the exact mathematical fraction for our answer.",
+   "ur": "احتمال کی بنیادی تعریف کے مطابق، کسی واقعہ کے رونما ہونے کا امکان موافق نتائج $n(E)$ اور کل ممکنہ نتائج $n(S)$ کی نسبت کے برابر ہوتا ہے۔ اس فارمولے میں $18$ اور $36$ درج کرنے سے ہمارے جواب کے لیے درست کسر بن جاتی ہے۔"
+  },
+  {
+   "en": "In mathematics, we always express a final fraction in its simplest form by dividing the top and bottom by their greatest common divisor, which is $18$. This reduces $\\frac{18}{36}$ to $\\frac{1}{2}$, giving a clean and standard probability value.",
+   "ur": "ریاضی میں ہمیشہ آخری کسر کو مختصر ترین شکل میں لکھا جاتا ہے، جس کے لیے ہم اوپر اور نیچے والی رقم کو ان کے عادِ اعظم یعنی $18$ پر تقسیم کرتے ہیں۔ اس سے $\\frac{18}{36}$ مختصر ہو کر $\\frac{1}{2}$ بن جاتا ہے، جو کہ احتمال کی ایک معیاری اور سادہ قیمت ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $\\frac{1}{2}$ means that when two dice are rolled, there is an exact half-and-half chance of getting an odd number on one die and a multiple of $2$ on the other. This makes sense and is easy to check: out of $36$ total outcomes, exactly half ($18$ outcomes) have one odd and one multiple of $2$, while the other $18$ outcomes have either both odd or both multiples of $2$.",
+  "ur": "آخری جواب $\\frac{1}{2}$ کا مطلب یہ ہے کہ جب دو پانسے پھینکے جائیں تو ایک پر طاق عدد اور دوسرے پر $2$ کا ضعف آنے کا امکان بالکل آدھا ہے۔ یہ بات سمجھ میں آتی ہے اور اس کی پڑتال بھی آسان ہے: کل $36$ نتائج میں سے ٹھیک آدھے ($18$ نتائج) ایسے ہیں جن میں ایک طاق اور ایک $2$ کا ضعف ہے، جبکہ باقی $18$ نتائج میں یا تو دونوں طاق ہیں یا دونوں $2$ کے اضعاف۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

@@ -1,0 +1,40 @@
+{
+ "item": "c10-ex12.3-q6",
+ "label": "i",
+ "answer_ref": "$\\frac{25}{102}$",
+ "math": [
+  "n(S) = 52,\\quad n(A) = 26",
+  "P(A) = \\frac{26}{52} = \\frac{1}{2}",
+  "P(B|A) = \\frac{25}{51}",
+  "P(A \\cap B) = P(A) \\times P(B|A)",
+  "P(A \\cap B) = \\frac{26}{52} \\times \\frac{25}{51} = \\frac{1}{2} \\times \\frac{25}{51} = \\frac{25}{102}"
+ ],
+ "why": [
+  {
+   "en": "In any probability question, we first write down the total possible outcomes $n(S)$ and the favorable outcomes $n(A)$ for the first draw. Since half of a standard deck of $52$ cards is black ($13$ spades and $13$ clubs), we know there are $26$ favorable cards to start with.",
+   "ur": "احتمال کے کسی بھی سوال میں، ہم سب سے پہلے پہلی باری کے لیے کل ممکنہ نتائج $n(S)$ اور موافق نتائج $n(A)$ لکھتے ہیں۔ چونکہ $52$ پتوں کی معیاری گڈی کا آدھا حصہ کالا ہوتا ہے ($13$ حکم اور $13$ چڑی)، اس لیے ہمیں معلوم ہوتا ہے کہ شروع میں ہمارے پاس $26$ موافق پتے ہیں۔"
+  },
+  {
+   "en": "We apply the basic definition of probability by dividing the favorable outcomes by the total outcomes for the first draw. Simplifying $\\frac{26}{52}$ to $\\frac{1}{2}$ tells us there is an exact half-chance of getting a black card on the very first try.",
+   "ur": "ہم پہلی باری کے لیے موافق نتائج کو کل نتائج پر تقسیم کر کے احتمال کی بنیادی تعریف کا استعمال کرتے ہیں۔ $\\frac{26}{52}$ کو مختصر کر کے $\\frac{1}{2}$ لکھنے سے ہمیں معلوم ہوتا ہے کہ پہلی ہی کوشش میں کالا پتہ نکلنے کا امکان بالکل آدھا ہے۔"
+  },
+  {
+   "en": "Because the problem says 'without replacement', the first black card is kept aside, making the second draw a dependent event. This reduces both our remaining black cards to $25$ and total cards to $51$, giving the new probability $P(B|A) = \\frac{25}{51}$ for the second card.",
+   "ur": "چونکہ سوال میں 'واپس رکھے بغیر' (without replacement) کی شرط ہے، اس لیے پہلا کالا پتہ الگ رکھ دیا جاتا ہے، جس سے دوسری باری ایک منحصر واقعہ بن جاتی ہے۔ اس سے باقی بچنے والے کالے پتے کم ہو کر $25$ اور کل پتے $51$ رہ جاتے ہیں، جس سے دوسرے پتے کے لیے نیا احتمال $P(B|A) = \\frac{25}{51}$ ملتا ہے۔"
+  },
+  {
+   "en": "To find the chance of two events happening one after another, we state the multiplication law of probability for dependent events. This formula connects our two separate probabilities so we can find the combined chance of both cards being black.",
+   "ur": "دو واقعات کے یکے بعد دیگرے رونما ہونے کا امکان معلوم کرنے کے لیے، ہم منحصر واقعات کے احتمال کا ضربی قانون لکھتے ہیں۔ یہ فارمولا ہمارے دونوں الگ الگ احتمالات کو آپس میں جوڑتا ہے تاکہ ہم دونوں پتوں کے کالا ہونے کا مشترکہ امکان معلوم کر سکیں۔"
+  },
+  {
+   "en": "Finally, we put our calculated fractions into the formula and multiply the numerators and denominators. This gives us the simplest fraction $\\frac{25}{102}$, completing our calculation for the combined event.",
+   "ur": "آخر میں، ہم اپنی معلوم کردہ کسروں کو فارمولے میں درج کرتے ہیں اور شمار کنندگان اور مخرجوں کو آپس میں ضرب دیتے ہیں۔ اس سے ہمیں مختصر ترین کسر $\\frac{25}{102}$ حاصل ہوتی ہے، جو اس مشترکہ واقعے کے لیے ہمارا حساب مکمل کرتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $\\frac{25}{102}$ means that if you draw two cards one after another without putting the first one back, there are $25$ chances out of $102$ that both cards will be black. Notice that this is slightly less than $\\frac{1}{2} \\times \\frac{1}{2}$, which makes sense because removing the first black card slightly lowers the chance of getting a second black card.",
+  "ur": "حتمی جواب $\\frac{25}{102}$ کا مطلب یہ ہے کہ اگر آپ پہلا پتہ واپس رکھے بغیر یکے بعد دیگرے دو پتے نکالیں، تو $102$ میں سے $25$ امکانات ہیں کہ دونوں پتے کالے ہوں گے۔ غور کریں کہ یہ امکان $\\frac{1}{2} \\times \\frac{1}{2}$ سے تھوڑا کم ہے، جو کہ منطقی طور پر درست ہے کیونکہ پہلا کالا پتہ نکال لینے سے دوسرا کالا پتہ ملنے کا امکان تھوڑا کم ہو جاتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

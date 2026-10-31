@@ -288,8 +288,15 @@ single("ex7.3", 7, "A surveyor spots the top of a tower at an elevation angle of
     (r"\tan 28^\circ = \frac{h}{60} \Rightarrow h = 60\tan 28^\circ \approx 60 \times 0.5317 \approx 31.90\ \text{m}", "Opposite = adjacent $\\times$ tan.", "مقابل = متصل $\\times$ tan۔",
      [near(f"60*tan({dg(28)})", "31.90", 2)])], r"$31.90$ m")
 single("ex7.3", 8, "A boat crosses a river 80 m wide, at a $60^\\circ$ angle to the current. What distance does the boat actually travel?", [
-    (r"\cos 60^\circ = \frac{80}{x} \Rightarrow x = \frac{80}{\cos 60^\circ} = \frac{80}{1/2} = 160\ \text{m}", "As drawn in the notes, the width is the side next to the $60^\\circ$ angle.",
-     "نوٹس کی شکل کے مطابق چوڑائی $60^\\circ$ کے متصل ضلع ہے۔", [f"80/cos({dg(60)}) == 160"])], "$160$ m")
+    (r"\text{width } 80\ \text{m} \perp \text{bank},\quad \text{path } x \text{ at } 60^\circ \text{ to the bank (current)}",
+     "The current runs along the bank. The boat's path $x$ makes $60^\\circ$ with the bank, and the width of 80 m is straight across, so it is the side OPPOSITE the $60^\\circ$ angle.",
+     "دھارا کنارے کے ساتھ بہتا ہے۔ کشتی کا راستہ $x$ کنارے سے $60^\\circ$ بناتا ہے اور 80 m چوڑائی سیدھی آر پار ہے، اس لیے یہ $60^\\circ$ کے مقابل ضلع ہے۔", []),
+    (r"\sin 60^\circ = \frac{80}{x}", "Opposite over hypotenuse is the sine.", "مقابل تقسیم وتر = sin۔", []),
+    (r"x = \frac{80}{\sin 60^\circ} = \frac{80}{\sqrt{3}/2} = \frac{160}{\sqrt{3}} \approx 92.38\ \text{m}", "Divide 80 by $\\sin 60^\\circ = \\frac{\\sqrt{3}}{2}$.",
+     "80 کو $\\sin 60^\\circ = \\frac{\\sqrt{3}}{2}$ سے تقسیم کریں۔", [f"80/sin({dg(60)}) == 160/sqrt(3)", near("160/sqrt(3)", "92.38", 2)])],
+    r"$\frac{160}{\sqrt{3}} \approx 92.38$ m",
+    note={"en": "The reference notes use $\\cos 60^\\circ$ and print 160 m, but in their own figure the 80 m width is opposite the $60^\\circ$ angle, so $\\sin 60^\\circ$ applies: about 92.38 m.",
+          "ur": "حوالہ نوٹس میں $\\cos 60^\\circ$ سے 160 m لکھا ہے، مگر ان کی شکل میں 80 m چوڑائی $60^\\circ$ کے مقابل ہے، اس لیے $\\sin 60^\\circ$ لگے گا: تقریباً 92.38 m۔"})
 single("ex7.3", 9, "A listener hears a sound from two speakers. One is 6 m directly ahead and the other is at $30^\\circ$ to the side, 6 m away. Find the distance between the speakers.", [
     (r"d^2 = 6^2 + 6^2 - 2(6)(6)\cos 30^\circ = 72 - 72\left(\frac{\sqrt{3}}{2}\right) \approx 9.65", "Law of cosines.", "قانون جیب التمام۔",
      [f"6**2 + 6**2 - 2*6*6*cos({dg(30)}) == 72 - 36*sqrt(3)", near("72 - 36*sqrt(3)", "9.65", 2)]),
@@ -383,9 +390,20 @@ ex("rev7", 1, "Four possible answers are given for the following questions. Choo
 b3, c3 = 3.1 * sin(36) / sin(44), 3.1 * sin(100) / sin(44)
 ex("rev7", 2, r"Calculate the area of $\triangle ABC$, in which (i) $a=4$ cm, $b=6$ cm, $c=8$ cm (ii) $b=2.1$ cm, $c=5$ cm, $\gamma=45^\circ$ (iii) $c=3.1$ cm, $\gamma=44^\circ$, $\alpha=36^\circ$", [
     heron("i", 4, 6, 8, r"$a=4$ cm, $b=6$ cm, $c=8$ cm"),
-    P("ii", steps_of([(r"\text{Area} = \frac{1}{2} \times 2.1 \times 5 \times \sin 45^\circ \approx 3.71\ \text{cm}^2",
-                       "As in the reference notes, the given angle is used between the two sides.", "حوالہ نوٹس کی طرح دیا گیا زاویہ دونوں اضلاع کے درمیان لیا گیا ہے۔",
-                       [near(f"R(1,2)*R(21,10)*5*sin({dg(45)})", "3.71", 2)])]), "$3.71$ cm$^2$", prompt=r"$b=2.1$ cm, $c=5$ cm, $\gamma=45^\circ$"),
+    dict(P("ii", steps_of([
+        (r"\gamma = 45^\circ \text{ is opposite } c,\ \text{not between } b \text{ and } c",
+         "The area formula $\\frac{1}{2}bc\\sin\\alpha$ needs the angle BETWEEN $b$ and $c$, which is $\\alpha$. We are given $\\gamma$, so first find the other angles.",
+         "فارمولا $\\frac{1}{2}bc\\sin\\alpha$ میں $b$ اور $c$ کے درمیان کا زاویہ $\\alpha$ چاہیے۔ ہمیں $\\gamma$ دیا گیا ہے، اس لیے پہلے باقی زاویے معلوم کریں۔", []),
+        (r"\sin\beta = \frac{b\sin\gamma}{c} = \frac{2.1\sin 45^\circ}{5} \approx 0.2970 \Rightarrow \beta \approx 17.28^\circ", "Law of sines: $\\frac{\\sin\\beta}{b} = \\frac{\\sin\\gamma}{c}$.",
+         "قانون جیب: $\\frac{\\sin\\beta}{b} = \\frac{\\sin\\gamma}{c}$۔",
+         [near(f"R(21,10)*sin({dg(45)})/5", "0.2970", 4), near(f"asin(R(21,10)*sin({dg(45)})/5)*180/pi", "17.28", 2)]),
+        (r"\alpha = 180^\circ - 45^\circ - 17.28^\circ = 117.72^\circ", "Angles of a triangle add to $180^\\circ$ ($\\beta$ cannot be obtuse here, since $b < c$).",
+         "مثلث کے زاویوں کا مجموعہ $180^\\circ$ ہے ($b < c$ ہے، اس لیے $\\beta$ منفرجہ نہیں)۔", [near(f"180 - 45 - asin(R(21,10)*sin({dg(45)})/5)*180/pi", "117.72", 2)]),
+        (r"\text{Area} = \frac{1}{2}bc\sin\alpha = \frac{1}{2}(2.1)(5)\sin 117.72^\circ \approx 4.65\ \text{cm}^2", "Two sides and the angle between them.",
+         "دو اضلاع اور ان کے درمیان کا زاویہ۔", [near(f"R(1,2)*R(21,10)*5*sin(pi - {dg(45)} - asin(R(21,10)*sin({dg(45)})/5))", "4.65", 2)])]),
+        r"$4.65$ cm$^2$", prompt=r"$b=2.1$ cm, $c=5$ cm, $\gamma=45^\circ$"),
+        key_note={"en": "The reference notes print 3.71 cm$^2$ from $\\frac{1}{2}bc\\sin 45^\\circ$, but $\\gamma = 45^\\circ$ is not the angle between $b$ and $c$; the correct area is about 4.65 cm$^2$.",
+                  "ur": "حوالہ نوٹس میں $\\frac{1}{2}bc\\sin 45^\\circ$ سے 3.71 لکھا ہے، مگر $\\gamma$ اضلاع $b$ اور $c$ کے درمیان کا زاویہ نہیں؛ درست رقبہ تقریباً 4.65 مربع سم ہے۔"}),
     P("iii", steps_of([(r"\beta = 180^\circ - 44^\circ - 36^\circ = 100^\circ", "Angles add to $180^\\circ$.", "زاویوں کا مجموعہ $180^\\circ$۔", ["180 - 44 - 36 == 100"]),
                        (rf"a = \frac{{3.1\sin 36^\circ}}{{\sin 44^\circ}} \approx {r(b3, 3)},\quad b = \frac{{3.1\sin 100^\circ}}{{\sin 44^\circ}} \approx {r(c3, 3)}", "Law of sines.", "قانون جیب۔",
                         [near(f"R(31,10)*sin({dg(36)})/sin({dg(44)})", r(b3, 3), 3), near(f"R(31,10)*sin({dg(100)})/sin({dg(44)})", r(c3, 3), 3)]),

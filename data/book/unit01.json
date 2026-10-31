@@ -1699,17 +1699,29 @@
       {
        "math": "F = 98.6\\text{ }^\\circ\\text{F}",
        "en": "First, write down the given normal human body temperature in Fahrenheit ($F$). We need to convert this into Celsius ($C$) and Kelvin ($K$).",
-       "ur": "سب سے پہلے، فارن ہائیٹ ($F$) میں دیا گیا انسانی جسم کا نارمل درجہ حرارت لکھیں۔ ہمیں اسے سیلسیس ($C$) اور کیلون ($K$) میں تبدیل کرنا ہے۔"
+       "ur": "سب سے پہلے، فارن ہائیٹ ($F$) میں دیا گیا انسانی جسم کا نارمل درجہ حرارت لکھیں۔ ہمیں اسے سیلسیس ($C$) اور کیلون ($K$) میں تبدیل کرنا ہے۔",
+       "why": {
+        "en": "In solving any word problem, we always begin by noting down the given value clearly. Identifying $F = 98.6\\text{ }^\\circ\\text{F}$ sets our starting point so we can substitute it into our conversion formulas accurately.",
+        "ur": "کسی بھی عبارتی سوال کو حل کرنے سے پہلے ہم دی گئی قیمت کو واضح طور پر لکھتے ہیں۔ $F = 98.6\\text{ }^\\circ\\text{F}$ لکھنے سے ہمیں اپنا نقطہ آغاز مل جاتا ہے تاکہ ہم اسے فارمولوں میں درست طریقے سے درج کر سکیں۔"
+       }
       },
       {
        "math": "C = \\frac{5}{9}(F - 32)",
        "en": "To convert Fahrenheit into Celsius, we use the standard temperature conversion formula.",
-       "ur": "فارن ہائیٹ کو سیلسیس میں تبدیل کرنے کے لیے ہم درجہ حرارت کی تبدیلی کا معیاری فارمولا استعمال کرتے ہیں۔"
+       "ur": "فارن ہائیٹ کو سیلسیس میں تبدیل کرنے کے لیے ہم درجہ حرارت کی تبدیلی کا معیاری فارمولا استعمال کرتے ہیں۔",
+       "why": {
+        "en": "Since the given temperature is in Fahrenheit, we state the standard formula $C = \\frac{5}{9}(F - 32)$ that directly connects Fahrenheit to Celsius. This gives us the exact mathematical rule needed for the first part of our question.",
+        "ur": "چونکہ دیا گیا درجہ حرارت فارن ہائیٹ میں ہے، اس لیے ہم معیاری فارمولا $C = \\frac{5}{9}(F - 32)$ لکھتے ہیں جو فارن ہائیٹ کو سیلسیس سے جوڑتا ہے۔ اس سے ہمیں سوال کے پہلے حصے کو حل کرنے کا درست ریاضیاتی اصول مل جاتا ہے۔"
+       }
       },
       {
        "math": "C = \\frac{5}{9}(98.6 - 32)",
        "en": "Substitute the given value $F = 98.6$ into the formula.",
-       "ur": "فارمولے میں دی گئی قیمت $F = 98.6$ درج کریں۔"
+       "ur": "فارمولے میں دی گئی قیمت $F = 98.6$ درج کریں۔",
+       "why": {
+        "en": "By the rule of substitution, we replace the variable $F$ with its known value $98.6$. This turns the general formula into a pure numerical expression that we can now calculate.",
+        "ur": "قیمت درج کرنے کے اصول کے تحت، ہم متغیر $F$ کی جگہ اس کی معلوم قیمت $98.6$ رکھتے ہیں۔ یہ عام فارمولے کو ایک عددی جملے میں بدل دیتا ہے جسے اب ہم حل کر سکتے ہیں۔"
+       }
       },
       {
        "math": "C = \\frac{5}{9}(66.6)",
@@ -1717,7 +1729,11 @@
        "ur": "بریکٹ کے اندر $98.6$ میں سے $32$ تفریق کریں۔",
        "check": [
         "R(986,10) - 32 == R(666,10)"
-       ]
+       ],
+       "why": {
+        "en": "Following the BODMAS rule (order of operations), we must solve the brackets before multiplying outside. Subtracting $32$ adjusts for the freezing-point difference between the two scales, leaving us with $66.6$ to scale down.",
+        "ur": "BODMAS کے اصول کے مطابق، باہر ضرب دینے سے پہلے ہمیں بریکٹ کے اندر کا حصہ حل کرنا چاہیے۔ $32$ تفریق کرنے سے ہمیں $66.6$ حاصل ہوتا ہے جسے اگلے مرحلے میں مختصر کیا جائے گا۔"
+       }
       },
       {
        "math": "C = 37\\text{ }^\\circ\\text{C}",
@@ -1725,12 +1741,20 @@
        "ur": "سیلسیس میں درجہ حرارت حاصل کرنے کے لیے $66.6$ کو $5$ سے ضرب دیں اور $9$ پر تقسیم کریں۔",
        "check": [
         "R(5,9) * R(666,10) == 37"
-       ]
+       ],
+       "why": {
+        "en": "Now we complete the arithmetic by multiplying by $5$ and dividing by $9$ to adjust the size of the degree unit. This gives us $C = 37\\text{ }^\\circ\\text{C}$, which completes the first required conversion and will also help us find the Kelvin value.",
+        "ur": "اب ہم حساب مکمل کرنے کے لیے $5$ سے ضرب اور $9$ سے تقسیم کرتے ہیں۔ اس سے ہمیں $C = 37\\text{ }^\\circ\\text{C}$ ملتا ہے، جس سے پہلا مطلوبہ جواب مکمل ہو جاتا ہے اور یہی قیمت کیلون معلوم کرنے میں بھی مدد دے گی۔"
+       }
       },
       {
        "math": "K = C + 273",
        "en": "Now, to convert the Celsius temperature into Kelvin, we use the Celsius-to-Kelvin formula.",
-       "ur": "اب سیلسیس درجہ حرارت کو کیلون میں تبدیل کرنے کے لیے، ہم سیلسیس سے کیلون کا فارمولا استعمال کرتے ہیں۔"
+       "ur": "اب سیلسیس درجہ حرارت کو کیلون میں تبدیل کرنے کے لیے، ہم سیلسیس سے کیلون کا فارمولا استعمال کرتے ہیں۔",
+       "why": {
+        "en": "Because the Kelvin scale has a simple, direct relationship with the Celsius scale, we write the formula $K = C + 273$. This allows us to easily use the Celsius value we just found to reach the second part of our answer.",
+        "ur": "چونکہ کیلون پیمانے کا سیلسیس کے ساتھ سیدھا تعلق ہے، اس لیے ہم فارمولا $K = C + 273$ لکھتے ہیں۔ اس سے ہم اپنی معلوم کردہ سیلسیس قیمت کو آسانی سے استعمال کر کے سوال کے دوسرے حصے تک پہنچ سکتے ہیں۔"
+       }
       },
       {
        "math": "K = 37 + 273 = 310\\text{ K}",
@@ -1740,11 +1764,19 @@
         "37 + 273 == 310",
         "Rational(5,9)*(Rational(986,10)-32) == 37",
         "37+273 == 310"
-       ]
+       ],
+       "why": {
+        "en": "We substitute our newly found value $C = 37$ into the Kelvin formula and perform the addition. Adding $273$ shifts the temperature to the absolute Kelvin scale, giving our final required value of $310\\text{ K}$.",
+        "ur": "ہم اپنی نئی معلوم کردہ قیمت $C = 37$ کو کیلون کے فارمولے میں درج کرتے ہیں اور جمع کا عمل کرتے ہیں۔ $273$ جمع کرنے سے ہمیں کیلون پیمانے پر اپنا آخری مطلوبہ جواب $310\\text{ K}$ مل جاتا ہے۔"
+       }
       }
      ],
      "answer": "37 °C and 310 K",
-     "enriched": true
+     "enriched": true,
+     "meaning": {
+      "en": "This means that a normal human body temperature of $98.6\\text{ }^\\circ\\text{F}$ is exactly the same warmth as $37\\text{ }^\\circ\\text{C}$ on the Celsius scale and $310\\text{ K}$ on the scientific Kelvin scale. You can easily check this by working backwards: subtract $273$ from $310$ to get $37$, and then multiply $37$ by $9$, divide by $5$, and add $32$ to get back $98.6$.",
+      "ur": "اس کا مطلب یہ ہے کہ انسانی جسم کا نارمل درجہ حرارت $98.6\\text{ }^\\circ\\text{F}$، سیلسیس پیمانے پر $37\\text{ }^\\circ\\text{C}$ اور سائنسی کیلون پیمانے پر $310\\text{ K}$ کے بالکل برابر ہے۔ آپ الٹا عمل کر کے اس کی پڑتال بھی کر سکتے ہیں: $310$ میں سے $273$ تفریق کریں تو $37$ آتا ہے، اور پھر $37$ کو $9$ سے ضرب دے کر $5$ پر تقسیم کریں اور $32$ جمع کریں تو واپس $98.6$ مل جاتا ہے۔"
+     }
     }
    ]
   },

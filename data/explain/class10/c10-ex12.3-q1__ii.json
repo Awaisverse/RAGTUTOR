@@ -1,0 +1,40 @@
+{
+ "item": "c10-ex12.3-q1",
+ "label": "ii",
+ "answer_ref": "$\\frac{3}{4}$",
+ "math": [
+  "n(S) = 10 \\times 10 = 100",
+  "n(\\text{both odd}) = 5 \\times 5 = 25",
+  "n(E) = 100 - 25 = 75",
+  "P(E) = \\frac{n(E)}{n(S)} = \\frac{75}{100}",
+  "P(E) = \\frac{3}{4}"
+ ],
+ "why": [
+  {
+   "en": "In any probability question, our first step is always to find the size of the sample space $S$. Because we choose with replacement, the fundamental counting principle tells us to multiply the $10$ choices for the first number by the $10$ choices for the second, giving $100$ total possible pairs.",
+   "ur": "احتمال (probability) کے کسی بھی سوال میں ہمارا پہلا قدم ہمیشہ نمونہ کی فضا (sample space) $S$ کی کل تعداد معلوم کرنا ہوتا ہے۔ چونکہ ہم واپسی (replacement) کے ساتھ انتخاب کر رہے ہیں، اس لیے گنتی کے بنیادی اصول کے تحت پہلے عدد کے $10$ امکانات کو دوسرے عدد کے $10$ امکانات سے ضرب دینے پر کل $100$ ممکنہ جوڑے بنتے ہیں۔"
+  },
+  {
+   "en": "An even product happens in many ways (even $\\times$ even, even $\\times$ odd, odd $\\times$ even), so it is much faster to use the complement idea and first count when the product is NOT even (which is odd). A product is odd only when both numbers are odd, and multiplying the $5$ odd choices for each selection tells us there are $25$ such pairs.",
+   "ur": "دو اعداد کا حاصل ضرب کئی طریقوں سے جفت (even) ہو سکتا ہے، اس لیے مخالف وقوعہ (complement) کا طریقہ استعمال کرنا زیادہ آسان ہے کہ پہلے ہم وہ جوڑے گن لیں جن کا حاصل ضرب جفت نہیں یعنی طاق (odd) ہے۔ حاصل ضرب صرف تب طاق ہوتا ہے جب دونوں اعداد طاق ہوں، اور ہر انتخاب کے لیے $5$ طاق اعداد کو آپس میں ضرب دینے سے ہمیں معلوم ہوتا ہے کہ ایسے $25$ جوڑے ہیں۔"
+  },
+  {
+   "en": "Since the product of two whole numbers must be either even or odd, we subtract the $25$ odd-product pairs from the $100$ total pairs. This gives us $n(E) = 75$, which is the exact number of favourable outcomes where the product is even.",
+   "ur": "چونکہ دو مکمل اعداد کا حاصل ضرب یا تو جفت ہوتا ہے یا طاق، اس لیے ہم کل $100$ جوڑوں میں سے طاق حاصل ضرب والے $25$ جوڑے تفریق کر دیتے ہیں۔ اس سے ہمیں موافق نتائج کی تعداد $n(E) = 75$ مل جاتی ہے جن میں حاصل ضرب جفت ہے۔"
+  },
+  {
+   "en": "Now we apply the basic definition of probability, which is the ratio of favourable outcomes $n(E)$ to the total outcomes $n(S)$. Substituting $75$ and $100$ into the formula sets up the exact fraction for our event's probability.",
+   "ur": "اب ہم احتمال (probability) کی بنیادی تعریف استعمال کرتے ہیں، جو موافق نتائج $n(E)$ اور کل نتائج $n(S)$ کی نسبت ہے۔ فارمولے میں $75$ اور $100$ درج کرنے سے ہمیں اپنے مطلوبہ وقوعہ کے احتمال کی کسر (fraction) مل جاتی ہے۔"
+  },
+  {
+   "en": "In mathematics, we always express our final probability as a fraction in its simplest form. Dividing both the numerator and denominator by their greatest common divisor, $25$, reduces $\\frac{75}{100}$ cleanly to $\\frac{3}{4}$.",
+   "ur": "ریاضی میں ہم اپنا حتمی احتمال ہمیشہ مختصر ترین کسر کی شکل میں لکھتے ہیں۔ شمار کنندہ اور مخرج دونوں کو ان کے عادِ اعظم $25$ پر تقسیم کرنے سے $\\frac{75}{100}$ مختصر ہو کر $\\frac{3}{4}$ بن جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $\\frac{3}{4}$ means that if we randomly pick two numbers from $1$ to $10$ with replacement, there is a $3$ out of $4$ chance that their product will be an even number. Notice how this makes sense: $75$ out of $100$ pairs give an even product, which is between $0$ and $1$ as every valid probability must be.",
+  "ur": "حتمی جواب $\\frac{3}{4}$ کا مطلب یہ ہے کہ اگر ہم $1$ سے $10$ تک واپسی کے ساتھ بے ترتیب طور پر دو اعداد چنیں، تو $4$ میں سے $3$ امکانات ہیں کہ ان کا حاصل ضرب ایک جفت عدد ہو گا۔ غور کریں کہ یہ بات بالکل درست لگتی ہے کیونکہ $100$ میں سے $75$ جوڑے جفت حاصل ضرب دیتے ہیں، اور یہ جواب $0$ اور $1$ کے درمیان ہے جیسا کہ ہر درست احتمال کو ہونا چاہیے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

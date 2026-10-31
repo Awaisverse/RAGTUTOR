@@ -1,0 +1,40 @@
+{
+ "item": "c10-rev4-q4",
+ "label": "ii",
+ "answer_ref": "$f^{-1}(x) = \\frac{x + 5}{x}$",
+ "math": [
+  "y = \\frac{5}{x - 1}",
+  "y(x - 1) = 5 \\Rightarrow yx - y = 5",
+  "yx = 5 + y",
+  "x = \\frac{5 + y}{y}",
+  "f^{-1}(x) = \\frac{x + 5}{x}"
+ ],
+ "why": [
+  {
+   "en": "To find the inverse of a function, we start by letting the output $f(x)$ be represented by a single variable $y$. This makes it much easier to rearrange the algebraic equation in the next steps.",
+   "ur": "کسی فنکشن کا معکوس (inverse) معلوم کرنے کے لیے، ہم سب سے پہلے آؤٹ پٹ $f(x)$ کو ایک متغیر $y$ کے برابر فرض کرتے ہیں۔ اس سے اگلے مراحل میں الجبری مساوات کو ترتیب دینا بہت آسان ہو جاتا ہے۔"
+  },
+  {
+   "en": "Since our goal is to isolate the input variable $x$, we first need to get $x$ out of the denominator. By multiplying both sides by $(x - 1)$ and expanding the bracket, we bring $x$ onto a single line.",
+   "ur": "چونکہ ہمارا مقصد ان پٹ متغیر $x$ کو اکیلا کرنا ہے، اس لیے ہمیں پہلے $x$ کو بٹے (مخرج) سے نکالنا ہوگا۔ دونوں اطراف کو $(x - 1)$ سے ضرب دے کر اور بریکٹ کھول کر، ہم $x$ کو ایک سیدھی سطر میں لے آتے ہیں۔"
+  },
+  {
+   "en": "To isolate the term containing $x$, we shift the $-y$ term to the right-hand side where it becomes $+y$. Now, all terms without $x$ are gathered on one side of the equation.",
+   "ur": "$x$ والی رقم کو الگ کرنے کے لیے، ہم $-y$ کو دائیں طرف لے جاتے ہیں جہاں یہ $+y$ بن جاتا ہے۔ اب $x$ کے بغیر تمام رقوم مساوات کے ایک طرف جمع ہو گئی ہیں۔"
+  },
+  {
+   "en": "Finally, we divide both sides by $y$ to completely isolate $x$. Since $y = f(x)$, by the definition of an inverse function, $x$ is equal to $f^{-1}(y)$, so we now have the inverse rule in terms of $y$.",
+   "ur": "آخر میں، ہم $x$ کو مکمل طور پر اکیلا کرنے کے لیے دونوں اطراف کو $y$ سے تقسیم کرتے ہیں۔ چونکہ $y = f(x)$ ہے، اس لیے معکوس فنکشن کی تعریف کے مطابق $x = f^{-1}(y)$ ہوتا ہے، یوں ہمیں $y$ کی شکل میں معکوس کا اصول مل گیا ہے۔"
+  },
+  {
+   "en": "By mathematical convention, we always write functions using $x$ as the input variable. Replacing $y$ with $x$ gives us our final inverse function $f^{-1}(x)$.",
+   "ur": "ریاضی کے اصول کے مطابق، ہم فنکشنز کو ہمیشہ $x$ بطور ان پٹ متغیر استعمال کرتے ہوئے لکھتے ہیں۔ اس لیے $y$ کی جگہ $x$ لگانے سے ہمیں ہمارا مطلوبہ معکوس فنکشن $f^{-1}(x)$ مل جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $f^{-1}(x) = \\frac{x + 5}{x}$ is the rule that reverses the action of the original function $f(x) = \\frac{5}{x - 1}$ (note that here $x \\ne 0$). You can verify this by checking that substituting $f(x)$ into $f^{-1}(x)$ gives back the original input $x$.",
+  "ur": "آخری جواب $f^{-1}(x) = \\frac{x + 5}{x}$ وہ اصول ہے جو اصل فنکشن $f(x) = \\frac{5}{x - 1}$ کے عمل کو الٹ دیتا ہے (یاد رہے کہ یہاں $x \\ne 0$ ہے)۔ آپ اس کی تصدیق ایسے کر سکتے ہیں کہ اگر $f(x)$ کو $f^{-1}(x)$ میں درج کیا جائے تو واپس اصل ان پٹ $x$ حاصل ہوتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}
