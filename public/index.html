@@ -1338,9 +1338,16 @@
       $("math").innerHTML = '<div class="note loading-board"><span class="spinner"></span> Solving your question step by step…</div>';
       scrollToWork($("board-wrap"));
     }
-    try { showAnswer(await api("/api/answer", { question: q })); }
+    let data = null;
+    try { data = await api("/api/answer", { question: q }); showAnswer(data); }
     catch (e) { $("results").innerHTML = `<div class="note">${escapeHTML(netMessage(e))}</div>`; }
-    if ($("math").querySelector(".loading-board"))  // nothing was written on the board: say where to look
+    if (data && data.mode === "not_math") {         // a greeting or chat: say so on the board, where the student is looking
+      stopPlay();
+      $("title").textContent = "Ask a maths question";
+      $("src").style.display = "none";
+      $("qtext").textContent = ""; $("parts").innerHTML = ""; $("cvwrap").style.display = "none"; $("counter").textContent = "";
+      $("math").innerHTML = `<div class="note">${escapeHTML(data.message)}</div>`;
+    } else if ($("math").querySelector(".loading-board"))  // nothing was written on the board: say where to look
       $("math").innerHTML = '<div class="note">This question was not solved on the board. See the results for what was found.</div>';
   };
   $("q").addEventListener("keydown", (e) => { if (e.key === "Enter" && (e.ctrlKey || e.metaKey)) $("ask").click(); });

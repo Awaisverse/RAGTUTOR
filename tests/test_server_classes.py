@@ -64,5 +64,5 @@ assert ask("Exercise 1.2: simplify (7+2i)(3-5i)", 10)["mode"] == "solved"
 # bad input never crashes
 assert c.post("/api/answer", json={"question": "x" * 3000}).status_code == 400
 assert c.post("/api/answer", json={"question": "   "}).status_code == 400
-assert ask("((((((", 10)["mode"] == "none"
+assert ask("((((((", 10)["mode"] in ("none", "not_math")
 print("server classes: all tests passed")

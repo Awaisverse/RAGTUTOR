@@ -115,9 +115,14 @@ def _other_question(self):
                 "unverified_checks": [], "tries": [1], "unit": 0, "unit_title": "Live"})
 Stub.do_POST = _other_question
 d = ask("Find the area of a circle of radius 7")
-assert d["mode"] == "model" and d["item"]["verified"] is False and "different question" in d["item"]["warning"], d["item"]
-assert d["item"]["question"] == "Find the area of a circle of radius 7"            # the student's own question is shown
+assert d["mode"] in ("example_only", "none") and "item" not in d, d                 # never shown as the answer
+assert "different question" in (d.get("error") or ""), d
 Stub.do_POST = _orig
+
+# chat is not a question: "hello" is answered with a message, and no model is asked to make up a question
+calls_before = len(Stub.calls)
+d = ask("hello")
+assert d["mode"] == "not_math" and "maths question" in d["message"] and len(Stub.calls) == calls_before, d
 
 # service unreachable: a clean message, not a crash
 os.environ["MODEL_SERVICE_URL"] = "http://127.0.0.1:9"

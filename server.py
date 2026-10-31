@@ -287,12 +287,32 @@ def deepen(item, klass, budget=None):
     return item
 
 
+_MATH_WORDS = re.compile(
+    r"\b(solve|simplif\w*|find|evaluate|calculate|compute|prove|show|verify|factori[sz]\w*|expand|rationali[sz]\w*|convert|express|"
+    r"equation|expression|root|roots|square|cube|power|exponent|log\w*|fraction|decimal|percent\w*|ratio|proportion|"
+    r"rational|irrational|real|complex|imaginary|conjugate|modulus|number|integer|prime|lcm|hcf|gcd|"
+    r"matri\w*|determinant|inverse|transpose|vector|function|domain|range|graph|plot|slope|intercept|"
+    r"angle|triangle|circle|chord|arc|tangent|radius|diameter|area|perimeter|volume|length|distance|midpoint|bearing|"
+    r"sin|cos|tan|cot|sec|cosec|trigonometr\w*|theorem|polynomial|quadratic|linear|inequalit\w*|set|sets|union|intersection|"
+    r"mean|median|mode|variance|deviation|quartile|frequency|probability|chance|dice?|coin|cards?|average|"
+    r"exercise|example|review|question|q|unit|chapter|value|x|y|z|sum|product|difference|quotient)\b", re.I)
+
+
+def looks_like_math(q):
+    """A greeting or chat ("hello") is not a question to solve: there must be a number, a maths sign, or a maths word."""
+    return bool(re.search(r"\d|[=+\-*/^√π°∠×÷<>≤≥|]|\\[a-z]+|[²³⁻¹]", q) or _MATH_WORDS.search(q))
+
+
 def resolve(question, focus_part=None, klass="9", _rewritten=False):
     """Answer THIS question. Order: an exercise reference (shown for confirmation), a stored solution only if it is the same
     question, then the class's solver engine, then (when the question cannot be read as typed) Gemini rewrites it into the
     form the tutor reads and the same steps run again, then the model, and otherwise a labelled similar example."""
     q = question.strip()
     klass = str(klass) if str(klass) in CLASSES else "9"
+    if not looks_like_math(q):                         # "hello": nothing to solve, and no model is asked to invent a question
+        return {"mode": "not_math", "similar": [],
+                "message": "That doesn't look like a maths question. Type a question from your book with its numbers, for example "
+                           + ("\"Solve 3x² − 7x + 2 = 0\" or \"Exercise 2.1 Q4 (ii)\"." if klass == "10" else "\"Rationalize 3/(√5 − √3)\" or \"Exercise 1.2 Q3 (iv)\".")}
     ref = parse_reference(q)
     if ref:
         return lookup_reference(ref, klass)
@@ -329,10 +349,11 @@ def resolve(question, focus_part=None, klass="9", _rewritten=False):
             # it answered something else (perhaps a similar question it has seen), so it is not presented as the answer
             stated = str(sol.get("question", ""))
             if stated and not question_reader.same_numbers(q, stated):
-                sol["verified"] = False
-                sol["warning"] = "The model's working may be for a different question (its numbers differ from yours). Do not rely on it."
-            sol["question"] = q
-            return {"mode": "model", "item": sol, "part_index": 0}
+                # it answered some other question: never put that on the board as if it were the answer
+                error = "the model answered a different question (its numbers differ from yours)"
+            else:
+                sol["question"] = q
+                return {"mode": "model", "item": sol, "part_index": 0}
         except Exception as exc:
             error = str(exc)
     similar = similar_examples(q, klass=klass)         # 4. nothing could solve it: show related examples, labelled as such
