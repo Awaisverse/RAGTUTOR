@@ -1,0 +1,53 @@
+{
+ "item": "c10-ex9.1-q6",
+ "label": "",
+ "answer_ref": "$2\\sqrt{10} \\approx 6.32$ m",
+ "steps": [
+  {
+   "math": "r = 3\\text{ m}, \\quad d = 7\\text{ m}, \\quad L = ?",
+   "en": "Let the radius of the circular fountain be $r = 3\\text{ m}$, the distance from the centre of the fountain to the flagpole be $d = 7\\text{ m}$, and the length of each rope be $L$.",
+   "ur": "فرض کریں کہ گول فوارے کا رداس $r = 3\\text{ m}$ ہے، فوارے کے مرکز سے جھنڈے کے پول تک کا فاصلہ $d = 7\\text{ m}$ ہے، اور ہر رسی کی لمبائی $L$ ہے۔"
+  },
+  {
+   "math": "d^2 = r^2 + L^2",
+   "en": "Since each rope just touches the edge of the fountain, it acts as a tangent to the circle. By theorem, the radius is perpendicular to the tangent at the point of contact. Thus, they form a right-angled triangle with the distance $d$ as the hypotenuse. By Pythagoras' theorem:",
+   "ur": "چونکہ ہر رسی فوارے کے کنارے کو صرف چھوتی ہے، اس لیے یہ دائرے کا مماس ہے۔ مسئلہ کی رو سے، رداس نقطہ تماس پر مماس پر عمود ہوتا ہے۔ اس طرح یہ فاصلہ $d$ کو بطور وتر لے کر ایک قائمہ الزاویہ مثلث بناتے ہیں۔ مسئلہ فیثا غورث کے مطابق:"
+  },
+  {
+   "math": "7^2 = 3^2 + L^2",
+   "en": "Substitute the given values $d = 7$ and $r = 3$ into the formula.",
+   "ur": "فارمولے میں دی گئی قیمتیں $d = 7$ اور $r = 3$ درج کریں۔"
+  },
+  {
+   "math": "49 = 9 + L^2",
+   "en": "Calculate the squares of $7$ and $3$.",
+   "ur": "$7$ اور $3$ کے مربے معلوم کریں۔",
+   "check": [
+    "7**2 == 49",
+    "3**2 == 9"
+   ]
+  },
+  {
+   "math": "L^2 = 49 - 9 = 40",
+   "en": "Subtract $9$ from both sides to isolate $L^2$.",
+   "ur": "$L^2$ کی قیمت نکالنے کے لیے دونوں اطراف سے $9$ تفریق کریں۔",
+   "check": [
+    "49 - 9 == 40"
+   ]
+  },
+  {
+   "math": "L = \\sqrt{40} = 2\\sqrt{10} \\approx 6.32\\text{ m}",
+   "en": "Take the positive square root on both sides (since length cannot be negative) to find the length of each rope $L$.",
+   "ur": "ہر رسی کی لمبائی $L$ معلوم کرنے کے لیے دونوں اطراف کا مثبت جذر المربع لیں (کیونکہ لمبائی منفی نہیں ہو سکتی)۔",
+   "check": [
+    "sqrt(40) == 2*sqrt(10)",
+    "Abs(sqrt(40) - 6.32) <= 0.005",
+    "sqrt(7**2 - 3**2) == 2*sqrt(10)",
+    "Abs((sqrt(40)) - 6.32) <= 0.0050000010000000004"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

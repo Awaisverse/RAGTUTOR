@@ -1,0 +1,50 @@
+{
+ "item": "c10-ex7.4-q6",
+ "label": "",
+ "answer_ref": "$10$ km",
+ "steps": [
+  {
+   "math": "c = 20\\text{ km}, \\quad \\text{Bearing} = 120^\\circ",
+   "en": "Identify the given distance travelled by the ship (hypotenuse $c$) and the bearing angle measured clockwise from the North.",
+   "ur": "جہاز کے طے کردہ دیے گئے فاصلے (وتر $c$) اور شمال سے گھڑی کی سمت میں ماپے گئے زاویہ (بیرنگ) کی نشاندہی کریں۔"
+  },
+  {
+   "math": "\\theta = 180^\\circ - 120^\\circ = 60^\\circ",
+   "en": "Since the North-South line forms a straight angle of $180^\\circ$, find the acute angle $\\theta$ between the ship's path and the South direction.",
+   "ur": "چونکہ شمال-جنوب خط $180^\\circ$ کا خطی زاویہ بناتا ہے، اس لیے جہاز کے راستے اور جنوب کی سمت کے درمیان حادہ زاویہ $\\theta$ معلوم کریں۔",
+   "check": [
+    "180 - 120 == 60"
+   ]
+  },
+  {
+   "math": "\\cos\\theta = \\frac{\\text{Base}}{\\text{Hypotenuse}} = \\frac{\\text{Southward distance}}{c}",
+   "en": "Form a right-angled triangle where the southward distance is the adjacent side (base) to the angle $\\theta$, and apply the cosine ratio.",
+   "ur": "ایک قائمۃ الزاویہ مثلث بنائیں جہاں جنوب کی طرف فاصلہ زاویہ $\\theta$ کا متصل ضلع (قاعدہ) ہے، اور کوسائن کی نسبت لاگو کریں۔"
+  },
+  {
+   "math": "\\text{Southward distance} = c \\cos\\theta = 20 \\cos 60^\\circ",
+   "en": "Rearrange the formula and substitute $c = 20$ and $\\theta = 60^\\circ$.",
+   "ur": "فارمولے کو ترتیب دیں اور $c = 20$ اور $\\theta = 60^\\circ$ کی قیمتیں درج کریں۔"
+  },
+  {
+   "math": "\\text{Southward distance} = 20 \\times \\frac{1}{2} = 10\\text{ km}",
+   "en": "Substitute the trigonometric value $\\cos 60^\\circ = \\frac{1}{2}$ and simplify to find the final distance.",
+   "ur": "مثلثیاتی قیمت $\\cos 60^\\circ = \\frac{1}{2}$ درج کریں اور حتمی فاصلہ معلوم کرنے کے لیے مختصر کریں۔",
+   "check": [
+    "cos(60*pi/180) == R(1,2)",
+    "20 * R(1,2) == 10"
+   ]
+  },
+  {
+   "math": "",
+   "en": "Thus, the ship has moved $10$ km to the South from its original position.",
+   "ur": "چنانچہ، جہاز اپنی اصل پوزیشن سے جنوب کی طرف $10$ کلومیٹر دور چلا گیا ہے۔",
+   "check": [
+    "20*cos((60)*pi/180) == 10"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

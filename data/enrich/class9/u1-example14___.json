@@ -1,0 +1,47 @@
+{
+ "item": "u1-example14",
+ "label": "",
+ "answer_ref": "5%",
+ "steps": [
+  {
+   "math": "",
+   "en": "First, write down the given values: Principal $= \\text{Rs. } 6400$, Time $= 12 \\text{ years}$, and Simple Profit $= \\text{Rs. } 3840$. We need to find the rate of profit.",
+   "ur": "سب سے پہلے دی گئی قیمتیں لکھیں: اصل زر $= 6400$ روپے، مدت $= 12$ سال، اور سادہ منافع $= 3840$ روپے۔ ہمیں منافع کی شرح معلوم کرنی ہے۔"
+  },
+  {
+   "math": "",
+   "en": "To find the rate of simple profit, we use the formula $\\text{Rate} = \\frac{\\text{Profit} \\times 100}{\\text{Time} \\times \\text{Principal}}$.",
+   "ur": "سادہ منافع کی شرح معلوم کرنے کے لیے ہم فارمولا $\\text{Rate} = \\frac{\\text{Profit} \\times 100}{\\text{Time} \\times \\text{Principal}}$ استعمال کرتے ہیں۔"
+  },
+  {
+   "math": "\\text{Rate} = \\frac{3840 \\times 100}{12 \\times 6400}",
+   "en": "Substitute the given values of Profit, Time, and Principal into the formula.",
+   "ur": "منافع، مدت اور اصل زر کی دی گئی قیمتیں فارمولے میں درج کریں۔",
+   "check": [
+    "R(3840*100, 12*6400) == 5"
+   ]
+  },
+  {
+   "math": "\\text{Rate} = \\frac{384000}{76800}",
+   "en": "Multiply the numbers in the numerator and the denominator.",
+   "ur": "شمار کنندہ اور مخرج میں موجود اعداد کو ضرب دیں۔",
+   "check": [
+    "3840*100 == 384000",
+    "12*6400 == 76800",
+    "R(384000, 76800) == 5"
+   ]
+  },
+  {
+   "math": "\\text{Rate} = 5\\%",
+   "en": "Divide $384000$ by $76800$ to get the final rate of profit, which is $5\\%$.",
+   "ur": "$384000$ کو $76800$ پر تقسیم کریں تو منافع کی حتمی شرح $5\\%$ حاصل ہوتی ہے۔",
+   "check": [
+    "R(384000, 76800) == 5",
+    "Rational(3840*100, 12*6400) == 5"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

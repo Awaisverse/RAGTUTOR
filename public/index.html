@@ -227,7 +227,7 @@
     const listed = bookList.find((x) => x.id === id);   // keep the picker on the open question's unit and question
     if (listed && +$("bunit").value !== listed.unit) { $("bunit").value = listed.unit; fillQuestions(); }
     if (listed) $("browse").value = id;
-    if (autoplay) play(false);                   // chosen from the book: the full working plays from the first step
+    if (autoplay) play(false);                   // chosen from the book: this part's working plays from the first step
   }
 
   function titleOf(it) {
@@ -677,33 +677,24 @@
     renderBoard();
     $("prev").disabled = cur < 0;
     const atEnd = cur >= steps.length - 1;
-    $("next").disabled = atEnd && partIdx >= item.parts.length - 1;
-    if (atEnd && playing) {
-      if (partIdx < item.parts.length - 1) {
-        timer = setTimeout(() => { setPart(partIdx + 1); if (playing) play(true); }, 2200);
-      } else {
-        stopPlay();
-      }
-    }
+    const morePart = partIdx < item.parts.length - 1;
+    $("next").disabled = atEnd && !morePart;
+    // At the end of a part, playback stops; the student moves on only when they ask for the next part.
+    $("next").textContent = atEnd && morePart ? `Next part (${item.parts[partIdx + 1].label || partIdx + 2}) ▶` : "Next ▶";
+    $("next").classList.toggle("primary", atEnd && morePart);
+    if (atEnd && playing) stopPlay();
+    if (atEnd && morePart) $("counter").textContent += " · part done, press Next part when ready";
   }
 
   function play(resume) {
     if (!item) return;
-    if (!resume && cur >= steps.length - 1 && partIdx >= item.parts.length - 1) goto(-1, false);
+    if (!resume && cur >= steps.length - 1) goto(-1, false);   // at the end of this part: replay it, not the next one
     playing = true;
     $("play").textContent = "⏸ Pause";
     const delay = +$("speed").value;
     const loop = () => {
       if (!playing) return;
-      if (cur >= steps.length - 1) {
-        if (partIdx < item.parts.length - 1) {
-          setPart(partIdx + 1);
-          timer = setTimeout(loop, 600);
-        } else {
-          stopPlay();
-        }
-        return;
-      }
+      if (cur >= steps.length - 1) { stopPlay(); return; }
       goto(cur + 1);
       timer = setTimeout(loop, delay);
     };
@@ -717,7 +708,11 @@
   }
 
   $("play").onclick = () => (playing ? stopPlay() : play(false));
-  $("next").onclick = () => { stopPlay(); if (cur >= steps.length - 1 && partIdx < item.parts.length - 1) setPart(partIdx + 1); else goto(cur + 1); };
+  $("next").onclick = () => {
+    stopPlay();
+    if (cur >= steps.length - 1 && partIdx < item.parts.length - 1) { setPart(partIdx + 1); play(true); }   // asked for: play that part
+    else goto(cur + 1);
+  };
   $("prev").onclick = () => { stopPlay(); goto(cur - 1, false); };
   $("first").onclick = () => { stopPlay(); goto(-1, false); };
   document.querySelectorAll("[data-lang]").forEach((b) => b.onclick = () => {

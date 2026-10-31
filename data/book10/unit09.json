@@ -349,21 +349,51 @@
      "prompt": "",
      "steps": [
       {
-       "math": "d^2 = r^2 + L^2 \\Rightarrow 7^2 = 3^2 + L^2",
-       "en": "Pythagoras in the right triangle formed by the radius, the tangent and the line to the centre.",
-       "ur": "رداس، مماس اور مرکز تک کے خط سے بننے والی قائمہ مثلث میں فیثا غورث۔"
+       "math": "r = 3\\text{ m}, \\quad d = 7\\text{ m}, \\quad L = ?",
+       "en": "Let the radius of the circular fountain be $r = 3\\text{ m}$, the distance from the centre of the fountain to the flagpole be $d = 7\\text{ m}$, and the length of each rope be $L$.",
+       "ur": "فرض کریں کہ گول فوارے کا رداس $r = 3\\text{ m}$ ہے، فوارے کے مرکز سے جھنڈے کے پول تک کا فاصلہ $d = 7\\text{ m}$ ہے، اور ہر رسی کی لمبائی $L$ ہے۔"
       },
       {
-       "math": "L^2 = 49 - 9 = 40 \\Rightarrow L = \\sqrt{40} = 2\\sqrt{10} \\approx 6.32\\ \\text{m}",
-       "en": "Solve for $L$.",
-       "ur": "$L$ معلوم کریں۔",
+       "math": "d^2 = r^2 + L^2",
+       "en": "Since each rope just touches the edge of the fountain, it acts as a tangent to the circle. By theorem, the radius is perpendicular to the tangent at the point of contact. Thus, they form a right-angled triangle with the distance $d$ as the hypotenuse. By Pythagoras' theorem:",
+       "ur": "چونکہ ہر رسی فوارے کے کنارے کو صرف چھوتی ہے، اس لیے یہ دائرے کا مماس ہے۔ مسئلہ کی رو سے، رداس نقطہ تماس پر مماس پر عمود ہوتا ہے۔ اس طرح یہ فاصلہ $d$ کو بطور وتر لے کر ایک قائمہ الزاویہ مثلث بناتے ہیں۔ مسئلہ فیثا غورث کے مطابق:"
+      },
+      {
+       "math": "7^2 = 3^2 + L^2",
+       "en": "Substitute the given values $d = 7$ and $r = 3$ into the formula.",
+       "ur": "فارمولے میں دی گئی قیمتیں $d = 7$ اور $r = 3$ درج کریں۔"
+      },
+      {
+       "math": "49 = 9 + L^2",
+       "en": "Calculate the squares of $7$ and $3$.",
+       "ur": "$7$ اور $3$ کے مربے معلوم کریں۔",
        "check": [
+        "7**2 == 49",
+        "3**2 == 9"
+       ]
+      },
+      {
+       "math": "L^2 = 49 - 9 = 40",
+       "en": "Subtract $9$ from both sides to isolate $L^2$.",
+       "ur": "$L^2$ کی قیمت نکالنے کے لیے دونوں اطراف سے $9$ تفریق کریں۔",
+       "check": [
+        "49 - 9 == 40"
+       ]
+      },
+      {
+       "math": "L = \\sqrt{40} = 2\\sqrt{10} \\approx 6.32\\text{ m}",
+       "en": "Take the positive square root on both sides (since length cannot be negative) to find the length of each rope $L$.",
+       "ur": "ہر رسی کی لمبائی $L$ معلوم کرنے کے لیے دونوں اطراف کا مثبت جذر المربع لیں (کیونکہ لمبائی منفی نہیں ہو سکتی)۔",
+       "check": [
+        "sqrt(40) == 2*sqrt(10)",
+        "Abs(sqrt(40) - 6.32) <= 0.005",
         "sqrt(7**2 - 3**2) == 2*sqrt(10)",
         "Abs((sqrt(40)) - 6.32) <= 0.0050000010000000004"
        ]
       }
      ],
      "answer": "$2\\sqrt{10} \\approx 6.32$ m",
+     "enriched": true,
      "book_key": "2\\sqrt{10}\\approx 6.32 m"
     }
    ],
@@ -669,23 +699,53 @@
      "prompt": "(i)",
      "steps": [
       {
-       "math": "x + 74^\\circ = 180^\\circ \\Rightarrow x = 106^\\circ",
-       "en": "Opposite angles of a cyclic quadrilateral add to $180^\\circ$.",
-       "ur": "دائروی چوکور کے مخالف زاویوں کا مجموعہ $180^\\circ$ ہوتا ہے۔",
+       "math": "",
+       "en": "From the given figure (i), we have a cyclic quadrilateral (a quadrilateral whose all four vertices lie on the circumference of the circle). Two of its angles are given as $74^\\circ$ and $159^\\circ$, and their respective opposite angles are $x$ and $y$. We need to find the values of $x$ and $y$.",
+       "ur": "دی گئی شکل (i) میں، ہمارے پاس ایک دائروی چوکور ہے (ایسا چوکور جس کے چاروں کونے دائرے کے محیط پر واقع ہوں)۔ اس کے دو زاویے $74^\\circ$ اور $159^\\circ$ دیے گئے ہیں، اور ان کے بالترتیب مخالف زاویے $x$ اور $y$ ہیں۔ ہمیں $x$ اور $y$ کی قیمتیں معلوم کرنی ہیں۔"
+      },
+      {
+       "math": "",
+       "en": "According to the theorem of a cyclic quadrilateral, the sum of opposite angles of a cyclic quadrilateral is always supplementary (equal to $180^\\circ$).",
+       "ur": "دائروی چوکور کے مسئلے کے مطابق، دائروی چوکور کے مخالف زاویوں کا مجموعہ ہمیشہ سپلیمنٹری (یعنی $180^\\circ$ کے برابر) ہوتا ہے۔"
+      },
+      {
+       "math": "x + 74^\\circ = 180^\\circ",
+       "en": "First, since angle $x$ and $74^\\circ$ are opposite angles in the cyclic quadrilateral, their sum is $180^\\circ$.",
+       "ur": "سب سے پہلے، چونکہ زاویہ $x$ اور $74^\\circ$ دائروی چوکور کے مخالف زاویے ہیں، اس لیے ان کا مجموعہ $180^\\circ$ ہے۔"
+      },
+      {
+       "math": "x = 180^\\circ - 74^\\circ = 106^\\circ",
+       "en": "Subtract $74^\\circ$ from $180^\\circ$ to find the value of $x$.",
+       "ur": "$x$ کی قیمت معلوم کرنے کے لیے $180^\\circ$ میں سے $74^\\circ$ کو تفریق کریں۔",
        "check": [
         "180 - 74 == 106"
        ]
       },
       {
-       "math": "y + 159^\\circ = 180^\\circ \\Rightarrow y = 21^\\circ",
-       "en": "Opposite angles of a cyclic quadrilateral add to $180^\\circ$.",
-       "ur": "دائروی چوکور کے مخالف زاویوں کا مجموعہ $180^\\circ$ ہوتا ہے۔",
+       "math": "y + 159^\\circ = 180^\\circ",
+       "en": "Similarly, angle $y$ and $159^\\circ$ are also opposite angles in the cyclic quadrilateral, so their sum is $180^\\circ$.",
+       "ur": "اسی طرح، زاویہ $y$ اور $159^\\circ$ بھی دائروی چوکور میں مخالف زاویے ہیں، اس لیے ان کا مجموعہ بھی $180^\\circ$ ہے۔"
+      },
+      {
+       "math": "y = 180^\\circ - 159^\\circ = 21^\\circ",
+       "en": "Subtract $159^\\circ$ from $180^\\circ$ to find the value of $y$.",
+       "ur": "$y$ کی قیمت معلوم کرنے کے لیے $180^\\circ$ میں سے $159^\\circ$ کو تفریق کریں۔",
        "check": [
+        "180 - 159 == 21"
+       ]
+      },
+      {
+       "math": "x = 106^\\circ,\\ y = 21^\\circ",
+       "en": "Thus, the required unknown angles are $x = 106^\\circ$ and $y = 21^\\circ$.",
+       "ur": "پس، مطلوبہ نامعلوم زاویے $x = 106^\\circ$ اور $y = 21^\\circ$ ہیں۔",
+       "check": [
+        "180 - 74 == 106",
         "180 - 159 == 21"
        ]
       }
      ],
      "answer": "$x = 106^\\circ,\\ y = 21^\\circ$",
+     "enriched": true,
      "book_key": "x=106, y=21"
     },
     {
