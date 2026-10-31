@@ -1,0 +1,56 @@
+{
+ "item": "c10-ex6.2-q1",
+ "label": "iii",
+ "answer_ref": "$\\frac{43}{2}\\underline{i} -  \\frac{13}{2}\\underline{j}$",
+ "steps": [
+  {
+   "math": "\\underline{a} = 7\\underline{i} - 3\\underline{j}, \\quad \\underline{b} = \\underline{i} + 5\\underline{j}",
+   "en": "Write down the given vectors $\\underline{a}$ and $\\underline{b}$. We need to find the value of $3\\underline{a} + \\frac{1}{2}\\underline{b}$.",
+   "ur": "دیے گئے سمتیے $\\underline{a}$ اور $\\underline{b}$ لکھیں۔ ہمیں $3\\underline{a} + \\frac{1}{2}\\underline{b}$ کی قیمت معلوم کرنی ہے۔"
+  },
+  {
+   "math": "3\\underline{a} + \\frac{1}{2}\\underline{b} = 3\\left(7\\underline{i} - 3\\underline{j}\\right) + \\frac{1}{2}\\left(\\underline{i} + 5\\underline{j}\\right)",
+   "en": "Substitute the values of vectors $\\underline{a}$ and $\\underline{b}$ into the given expression.",
+   "ur": "دیے گئے جملے میں سمتیوں $\\underline{a}$ اور $\\underline{b}$ کی قیمتیں درج کریں۔"
+  },
+  {
+   "math": "= 21\\underline{i} - 9\\underline{j} + \\frac{1}{2}\\underline{i} + \\frac{5}{2}\\underline{j}",
+   "en": "Multiply the scalar $3$ with each component of the first vector, and $\\frac{1}{2}$ with each component of the second vector.",
+   "ur": "عدد $3$ کو پہلے سمتیے کے ہر جزو سے اور $\\frac{1}{2}$ کو دوسرے سمتیے کے ہر جزو سے ضرب دیں۔",
+   "check": [
+    "3*7 == 21",
+    "3*(-3) == -9",
+    "R(1,2)*1 == R(1,2)",
+    "R(1,2)*5 == R(5,2)"
+   ]
+  },
+  {
+   "math": "= \\left(21 + \\frac{1}{2}\\right)\\underline{i} + \\left(-9 + \\frac{5}{2}\\right)\\underline{j}",
+   "en": "Group the $\\underline{i}$ components together and the $\\underline{j}$ components together.",
+   "ur": "$\\underline{i}$ والے اجزاء اور $\\underline{j}$ والے اجزاء کو الگ الگ اکٹھا کریں۔"
+  },
+  {
+   "math": "= \\left(\\frac{42 + 1}{2}\\right)\\underline{i} + \\left(\\frac{-18 + 5}{2}\\right)\\underline{j}",
+   "en": "Take the LCM of the denominators (which is $2$) to add the fractions.",
+   "ur": "کسروں کو حل کرنے کے لیے مخرج کا ذواضعاف اقل (جو کہ $2$ ہے) لیں۔",
+   "check": [
+    "21 + R(1,2) == (42 + 1)/2",
+    "-9 + R(5,2) == (-18 + 5)/2"
+   ]
+  },
+  {
+   "math": "= \\frac{43}{2}\\underline{i} -  \\frac{13}{2}\\underline{j}",
+   "en": "Simplify the numerators to get the final resultant vector.",
+   "ur": "شمار کنندگان کو مختصر کر کے حتمی سمتیہ حاصل کریں۔",
+   "check": [
+    "(42 + 1)/2 == R(43,2)",
+    "(-18 + 5)/2 == R(-13,2)",
+    "(3)*(7) + (1/2)*(1) == (43/2)",
+    "(3)*(-3) + (1/2)*(5) == (-13/2)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

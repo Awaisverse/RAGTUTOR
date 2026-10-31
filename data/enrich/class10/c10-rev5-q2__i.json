@@ -1,0 +1,57 @@
+{
+ "item": "c10-rev5-q2",
+ "label": "i",
+ "answer_ref": "$\\frac{x - 4}{x - 3}$",
+ "steps": [
+  {
+   "math": "\\frac{x^{2} - 7 x + 12}{x^{2} - 6 x + 9}",
+   "en": "Write down the given algebraic fraction that needs to be reduced to its lowest form.",
+   "ur": "دی گئی الجبری کسر لکھیں جسے اس کی مختصر ترین شکل میں لانا ہے۔"
+  },
+  {
+   "math": "= \\frac{x^{2} - 4 x - 3 x + 12}{x^{2} - 3 x - 3 x + 9}",
+   "en": "Split the middle terms in both the numerator and the denominator to factorize the quadratic expressions. For the numerator, $-4x$ and $-3x$ add up to $-7x$ and multiply to $12x^2$. For the denominator, $-3x$ and $-3x$ add up to $-6x$ and multiply to $9x^2$.",
+   "ur": "شمار کنندہ اور مخرج دونوں میں دو درجی جملوں کی تجزی کرنے کے لیے درمیانی رقموں کو توڑ کر لکھیں۔ شمار کنندہ کے لیے، $-4x$ اور $-3x$ کو جمع کرنے سے $-7x$ اور ضرب دینے سے $12x^2$ آتا ہے۔ مخرج کے لیے، $-3x$ اور $-3x$ کو جمع کرنے سے $-6x$ اور ضرب دینے سے $9x^2$ آتا ہے۔",
+   "check": [
+    "(x**2 - 4*x - 3*x + 12)/(x**2 - 3*x - 3*x + 9) == (x**2 - 7*x + 12)/(x**2 - 6*x + 9)"
+   ]
+  },
+  {
+   "math": "= \\frac{x(x - 4) - 3(x - 4)}{x(x - 3) - 3(x - 3)}",
+   "en": "Take out the common factors from each pair of terms in the numerator and the denominator.",
+   "ur": "شمار کنندہ اور مخرج میں رقموں کے ہر جوڑے میں سے مشترک اجزاء باہر نکالیں۔",
+   "check": [
+    "(x*(x - 4) - 3*(x - 4))/(x*(x - 3) - 3*(x - 3)) == (x**2 - 7*x + 12)/(x**2 - 6*x + 9)"
+   ]
+  },
+  {
+   "math": "= \\frac{(x - 4)(x - 3)}{(x - 3)(x - 3)}",
+   "en": "Factor out the common binomials $(x - 4)$ in the numerator and $(x - 3)$ in the denominator.",
+   "ur": "شمار کنندہ میں سے مشترک دو رقمی جملہ $(x - 4)$ اور مخرج میں سے $(x - 3)$ باہر نکالیں۔",
+   "check": [
+    "((x - 4)*(x - 3))/((x - 3)*(x - 3)) == (x**2 - 7*x + 12)/(x**2 - 6*x + 9)"
+   ]
+  },
+  {
+   "math": "= \\frac{(x - 4)(x - 3)}{(x - 3)^{2}}",
+   "en": "Write the repeated factor in the denominator as a square.",
+   "ur": "مخرج میں دو بار آنے والے جزو ضربی کو مربع کی شکل میں لکھیں۔",
+   "check": [
+    "((x - 4)*(x - 3))/((x - 3)**2) == (x**2 - 7*x + 12)/(x**2 - 6*x + 9)"
+   ]
+  },
+  {
+   "math": "= \\frac{x - 4}{x - 3}",
+   "en": "Cancel out the common factor $(x - 3)$ from the numerator and the denominator to get the lowest form.",
+   "ur": "مختصر ترین شکل حاصل کرنے کے لیے شمار کنندہ اور مخرج سے مشترک جزو ضربی $(x - 3)$ کو کاٹ دیں۔",
+   "check": [
+    "(x - 4)/(x - 3) == (x**2 - 7*x + 12)/(x**2 - 6*x + 9)",
+    "((x - 4)*(x - 3))/((x - 3)**2) == (x**2 - 7*x + 12)/(x**2 - 6*x + 9)",
+    "((x - 4)/(x - 3)) == (x**2 - 7*x + 12)/(x**2 - 6*x + 9)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

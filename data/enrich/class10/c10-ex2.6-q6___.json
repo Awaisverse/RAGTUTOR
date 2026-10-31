@@ -1,0 +1,49 @@
+{
+ "item": "c10-ex2.6-q6",
+ "label": "",
+ "answer_ref": "$x = \\frac{y - c}{m}$",
+ "steps": [
+  {
+   "math": "y = mx + c",
+   "en": "Write the given linear equation. We need to make $x$ the subject of this equation by isolating it on one side.",
+   "ur": "دی گئی یک درجی مساوات لکھیں۔ ہمیں $x$ کو مساوات کا موضوع بنانے کے لیے اسے ایک طرف الگ کرنا ہے۔"
+  },
+  {
+   "math": "y - c = mx + c - c",
+   "en": "To isolate the term containing $x$, subtract $c$ from both sides of the equation.",
+   "ur": "متغیر $x$ والی رقم کو الگ کرنے کے لیے، مساوات کے دونوں اطراف سے $c$ تفریق کریں۔"
+  },
+  {
+   "math": "y - c = mx",
+   "en": "Simplify the right-hand side as $c - c = 0$.",
+   "ur": "دائیں طرف کو مختصر کریں کیونکہ $c - c = 0$ ہوتا ہے۔",
+   "check": [
+    "(mx + c) - c == mx"
+   ]
+  },
+  {
+   "math": "\\frac{y - c}{m} = \\frac{mx}{m}",
+   "en": "Since $m$ is multiplied with $x$, divide both sides of the equation by $m$ (assuming $m \\neq 0$).",
+   "ur": "چونکہ $m$ متغیر $x$ کے ساتھ ضرب ہو رہا ہے، اس لیے مساوات کے دونوں اطراف کو $m$ سے تقسیم کریں (بشرطیکہ $m \\neq 0$)۔"
+  },
+  {
+   "math": "\\frac{y - c}{m} = x",
+   "en": "Simplify the right-hand side by cancelling $m$ from the numerator and the denominator.",
+   "ur": "دائیں طرف شمار کنندہ اور مخرج سے $m$ کو کاٹ کر مختصر کریں۔",
+   "check": [
+    "(m*x)/m == x"
+   ]
+  },
+  {
+   "math": "x = \\frac{y - c}{m}",
+   "en": "Rewrite the equation with $x$ on the left-hand side. Thus, $x$ is now the subject of the equation.",
+   "ur": "مساوات کو بائیں طرف $x$ رکھ کر دوبارہ لکھیں۔ اس طرح، اب $x$ مساوات کا موضوع ہے۔",
+   "check": [
+    "m*((y - c)/m) + c == y"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

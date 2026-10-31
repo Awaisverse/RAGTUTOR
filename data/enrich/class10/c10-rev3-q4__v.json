@@ -1,0 +1,54 @@
+{
+ "item": "c10-rev3-q4",
+ "label": "v",
+ "answer_ref": "$\\begin{bmatrix} 41 & 12 \\\\ 33 & 10 \\end{bmatrix}$",
+ "steps": [
+  {
+   "math": "A = \\begin{bmatrix} 7 & 3 \\\\ 2 & 1 \\end{bmatrix}, \\quad B = \\begin{bmatrix} 5 & 3 \\\\ 2 & 4 \\end{bmatrix}",
+   "en": "Write down the given matrices $A$ and $B$. We need to find $(AB)^t$.",
+   "ur": "دیے گئے قالب $A$ اور $B$ لکھیں۔ ہمیں $(AB)^t$ معلوم کرنا ہے۔"
+  },
+  {
+   "math": "AB = \\begin{bmatrix} 7 & 3 \\\\ 2 & 1 \\end{bmatrix}\\begin{bmatrix} 5 & 3 \\\\ 2 & 4 \\end{bmatrix}",
+   "en": "First, find the product $AB$ by setting up the multiplication of matrix $A$ and matrix $B$.",
+   "ur": "سب سے پہلے، قالب $A$ اور قالب $B$ کو ضرب دے کر حاصل ضرب $AB$ معلوم کریں۔"
+  },
+  {
+   "math": "AB = \\begin{bmatrix} (7)(5) + (3)(2) & (7)(3) + (3)(4) \\\\ (2)(5) + (1)(2) & (2)(3) + (1)(4) \\end{bmatrix}",
+   "en": "Multiply each row of the first matrix $A$ by each column of the second matrix $B$, entry by entry, and add them.",
+   "ur": "پہلے قالب $A$ کی ہر قطار کو دوسرے قالب $B$ کے ہر کالم سے رکن بہ رکن ضرب دے کر جمع کریں۔",
+   "check": [
+    "Matrix([[7, 3], [2, 1]]) * Matrix([[5, 3], [2, 4]]) == Matrix([[7*5 + 3*2, 7*3 + 3*4], [2*5 + 1*2, 2*3 + 1*4]])"
+   ]
+  },
+  {
+   "math": "AB = \\begin{bmatrix} 35 + 6 & 21 + 12 \\\\ 10 + 2 & 6 + 4 \\end{bmatrix}",
+   "en": "Calculate the products inside each entry of the matrix.",
+   "ur": "قالب کے ہر رکن کے اندر موجود حاصل ضرب کو حل کریں۔",
+   "check": [
+    "Matrix([[7*5 + 3*2, 7*3 + 3*4], [2*5 + 1*2, 2*3 + 1*4]]) == Matrix([[35 + 6, 21 + 12], [10 + 2, 6 + 4]])"
+   ]
+  },
+  {
+   "math": "AB = \\begin{bmatrix} 41 & 33 \\\\ 12 & 10 \\end{bmatrix}",
+   "en": "Add the numbers to get the product matrix $AB$.",
+   "ur": "اعداد کو جمع کر کے حاصل ضرب قالب $AB$ معلوم کریں۔",
+   "check": [
+    "Matrix([[35 + 6, 21 + 12], [10 + 2, 6 + 4]]) == Matrix([[41, 33], [12, 10]])"
+   ]
+  },
+  {
+   "math": "(AB)^t = \\begin{bmatrix} 41 & 33 \\\\ 12 & 10 \\end{bmatrix}^t = \\begin{bmatrix} 41 & 12 \\\\ 33 & 10 \\end{bmatrix}",
+   "en": "Now, take the transpose of $AB$ by interchanging its rows into columns to get the final answer.",
+   "ur": "اب، حتمی جواب حاصل کرنے کے لیے $AB$ کی قطاروں کو کالموں میں بدل کر اس کا ٹرانسپوز لیں۔",
+   "check": [
+    "Matrix([[41, 33], [12, 10]]).T == Matrix([[41, 12], [33, 10]])",
+    "Eq(Matrix([[41, 33], [12, 10]]), Matrix([[41, 33], [12, 10]]))",
+    "Eq(Matrix([[41, 33], [12, 10]]).T, Matrix([[41, 12], [33, 10]]))"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

@@ -1,0 +1,49 @@
+{
+ "item": "c10-rev2-q4",
+ "label": "ii",
+ "answer_ref": "$D = 5$: roots are irrational and unequal",
+ "steps": [
+  {
+   "math": "x^2 - x - 1 = 0",
+   "en": "The given quadratic equation is written in standard form.",
+   "ur": "دی گئی دو درجی مساوات معیاری شکل میں لکھی گئی ہے۔"
+  },
+  {
+   "math": "a = 1, \\quad b = -1, \\quad c = -1",
+   "en": "Compare the given equation with the standard quadratic equation $ax^2 + bx + c = 0$ to identify the coefficients.",
+   "ur": "عددی سروں کی شناخت کے لیے دی گئی مساوات کا معیاری دو درجی مساوات $ax^2 + bx + c = 0$ سے موازنہ کریں۔"
+  },
+  {
+   "math": "\\text{Discriminant } (D) = b^2 - 4ac",
+   "en": "To examine the nature of the roots, we use the discriminant formula.",
+   "ur": "جذروں کی نوعیت معلوم کرنے کے لیے ہم فرق نندہ (ممیز) کا فارمولا استعمال کرتے ہیں۔"
+  },
+  {
+   "math": "D = (-1)^2 - 4(1)(-1)",
+   "en": "Substitute the values $a = 1$, $b = -1$, and $c = -1$ into the formula.",
+   "ur": "فارمولے میں $a = 1$، $b = -1$ اور $c = -1$ کی قیمتیں درج کریں۔",
+   "check": [
+    "(-1)**2 - 4*(1)*(-1) == 5"
+   ]
+  },
+  {
+   "math": "D = 1 + 4 = 5",
+   "en": "Simplify the expression to find the value of the discriminant $D$.",
+   "ur": "ممیز $D$ کی قیمت معلوم کرنے کے لیے جملے کو مختصر کریں۔",
+   "check": [
+    "1 + 4 == 5"
+   ]
+  },
+  {
+   "math": "\\text{Roots are irrational and unequal}",
+   "en": "Since the discriminant $D = 5 > 0$ and $5$ is not a perfect square, the roots of the equation are irrational (real) and unequal.",
+   "ur": "چونکہ ممیز $D = 5 > 0$ ہے اور $5$ ایک مکمل مربع نہیں ہے، اس لیے مساوات کے جذر غیر ناطق (حقیقی) اور غیر مساوی ہیں۔",
+   "check": [
+    "(-1)**2 - 4*(1)*(-1) == 5"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

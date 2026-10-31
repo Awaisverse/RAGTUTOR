@@ -1,0 +1,58 @@
+{
+ "item": "c10-ex5.3-q1",
+ "label": "v",
+ "answer_ref": "$x + 2$",
+ "steps": [
+  {
+   "math": "\\frac{x^{3} - 8}{x^{2} - 4} \\div \\frac{x^{2} + 2 x + 4}{x^{2} + 4 x + 4}",
+   "en": "Write the given algebraic fraction expression.",
+   "ur": "دی گئی الجبری کسر کی عبارت لکھیں۔"
+  },
+  {
+   "math": "= \\frac{x^{3} - 2^{3}}{x^{2} - 2^{2}} \\div \\frac{x^{2} + 2 x + 4}{(x)^{2} + 2(x)(2) + (2)^{2}}",
+   "en": "Rewrite the terms in standard formula forms: difference of cubes $a^3 - b^3$, difference of squares $a^2 - b^2$, and perfect square trinomial $a^2 + 2ab + b^2$.",
+   "ur": "رقوم کو معیاری فارمولوں کی شکل میں لکھیں: مکعبوں کا فرق $a^3 - b^3$، مربعات کا فرق $a^2 - b^2$، اور کامل مربع سہ رقمی $a^2 + 2ab + b^2$۔",
+   "check": [
+    "(x**3 - 8)/(x**2 - 4) == (x**3 - 2**3)/(x**2 - 2**2)",
+    "x**2 + 4*x + 4 == x**2 + 2*x*2 + 2**2"
+   ]
+  },
+  {
+   "math": "= \\frac{\\left(x - 2\\right) \\left(x^{2} + 2 x + 4\\right)}{\\left(x - 2\\right) \\left(x + 2\\right)} \\div \\frac{x^{2} + 2 x + 4}{\\left(x + 2\\right)^{2}}",
+   "en": "Apply the factorization formulas: $a^3 - b^3 = (a - b)(a^2 + ab + b^2)$, $a^2 - b^2 = (a - b)(a + b)$, and $a^2 + 2ab + b^2 = (a + b)^2$.",
+   "ur": "تجزی کے فارمولے لاگو کریں: $a^3 - b^3 = (a - b)(a^2 + ab + b^2)$، $a^2 - b^2 = (a - b)(a + b)$، اور $a^2 + 2ab + b^2 = (a + b)^2$۔",
+   "check": [
+    "x**3 - 8 == (x - 2)*(x**2 + 2*x + 4)",
+    "x**2 - 4 == (x - 2)*(x + 2)",
+    "x**2 + 4*x + 4 == (x + 2)**2"
+   ]
+  },
+  {
+   "math": "= \\frac{\\left(x - 2\\right) \\left(x^{2} + 2 x + 4\\right)}{\\left(x - 2\\right) \\left(x + 2\\right)} \\times \\frac{\\left(x + 2\\right)^{2}}{x^{2} + 2 x + 4}",
+   "en": "Change the division sign $\\div$ to multiplication $\\times$ by taking the reciprocal of the second fraction (inverting it).",
+   "ur": "دوسری کسر کا معکوس لے کر (اسے الٹ کر) تقسیم کی علامت $\\div$ کو ضرب $\\times$ میں تبدیل کریں۔",
+   "check": [
+    "((x - 2)*(x**2 + 2*x + 4)/((x - 2)*(x + 2)))*((x + 2)**2/(x**2 + 2*x + 4)) == ((x**3 - 8)/(x**2 - 4))/((x**2 + 2*x + 4)/(x**2 + 4*x + 4))"
+   ]
+  },
+  {
+   "math": "= \\frac{x^{2} + 2 x + 4}{x + 2} \\times \\frac{\\left(x + 2\\right)\\left(x + 2\\right)}{x^{2} + 2 x + 4}",
+   "en": "Cancel the common factor $(x - 2)$ in the first fraction and expand $(x + 2)^2$ as $(x + 2)(x + 2)$.",
+   "ur": "پہلی کسر میں مشترک جزو $(x - 2)$ کو کاٹ دیں اور $(x + 2)^2$ کو $(x + 2)(x + 2)$ کے طور پر کھول کر لکھیں۔",
+   "check": [
+    "((x**2 + 2*x + 4)/(x + 2))*((x + 2)*(x + 2)/(x**2 + 2*x + 4)) == ((x - 2)*(x**2 + 2*x + 4)/((x - 2)*(x + 2)))*((x + 2)**2/(x**2 + 2*x + 4))"
+   ]
+  },
+  {
+   "math": "= x + 2",
+   "en": "Cancel the remaining common factors $(x^2 + 2x + 4)$ and $(x + 2)$ from the numerator and denominator to get the final simplified answer.",
+   "ur": "مختصر ترین حتمی جواب حاصل کرنے کے لیے شمار کنندہ اور مخرج سے باقی ماندہ مشترک اجزاء $(x^2 + 2x + 4)$ اور $(x + 2)$ کو کاٹ دیں۔",
+   "check": [
+    "(x + 2) == ((x**3 - 8)*(x**2 + 4*x + 4)/((x**2 - 4)*(x**2 + 2*x + 4)))"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

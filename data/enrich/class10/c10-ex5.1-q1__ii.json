@@ -1,0 +1,49 @@
+{
+ "item": "c10-ex5.1-q1",
+ "label": "ii",
+ "answer_ref": "$\\frac{b}{c}$",
+ "steps": [
+  {
+   "math": "\\frac{abx + bx^{2}}{acx + cx^{2}}",
+   "en": "Write down the given rational expression to reduce it to its lowest form.",
+   "ur": "دیے گئے ناطق جملے کو اس کی مختصر ترین شکل میں تبدیل کرنے کے لیے لکھیں۔"
+  },
+  {
+   "math": "abx + bx^{2} = bx(a + x)",
+   "en": "First, factorize the numerator by taking out the highest common factor $bx$ from both terms.",
+   "ur": "سب سے پہلے، شمار کنندہ کی دونوں رقموں میں سے مشترک جزو ضربی $bx$ کو باہر نکال کر اس کی تجزی کریں۔",
+   "check": [
+    "a*b*x + b*x**2 == b*x*(a + x)"
+   ]
+  },
+  {
+   "math": "acx + cx^{2} = cx(a + x)",
+   "en": "Next, factorize the denominator by taking out the highest common factor $cx$ from both terms.",
+   "ur": "اس کے بعد، مخرج کی دونوں رقموں میں سے مشترک جزو ضربی $cx$ کو باہر نکال کر اس کی تجزی کریں۔",
+   "check": [
+    "a*c*x + c*x**2 == c*x*(a + x)"
+   ]
+  },
+  {
+   "math": "\\frac{abx + bx^{2}}{acx + cx^{2}} = \\frac{bx(a + x)}{cx(a + x)}",
+   "en": "Substitute the factorized forms of the numerator and the denominator back into the fraction.",
+   "ur": "شمار کنندہ اور مخرج کی تجزی شدہ صورتوں کو واپس کسر میں درج کریں۔",
+   "check": [
+    "(a*b*x + b*x**2)/(a*c*x + c*x**2) == (b*x*(a + x))/(c*x*(a + x))"
+   ]
+  },
+  {
+   "math": "= \\frac{b}{c}",
+   "en": "Cancel out the common factors $x$ and $(a + x)$ from the numerator and the denominator to obtain the final answer in its lowest form.",
+   "ur": "مختصر ترین شکل میں حتمی جواب حاصل کرنے کے لیے شمار کنندہ اور مخرج سے مشترک اجزائے ضربی $x$ اور $(a + x)$ کو کاٹ دیں۔",
+   "check": [
+    "b/c == (b*x*(a + x))/(c*x*(a + x))",
+    "(b*x*(a + x))/(c*x*(a + x)) == (a*b*x + b*x**2)/(a*c*x + c*x**2)",
+    "(b/c) == (a*b*x + b*x**2)/(a*c*x + c*x**2)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

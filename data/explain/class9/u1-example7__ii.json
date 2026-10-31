@@ -1,0 +1,45 @@
+{
+ "item": "u1-example7",
+ "label": "ii",
+ "answer_ref": "$3x^2y^3z$",
+ "math": [
+  "\\sqrt[3]{27x^6y^9z^3}",
+  "= (27x^6y^9z^3)^{\\frac{1}{3}}",
+  "= (3^3 x^6 y^9 z^3)^{\\frac{1}{3}}",
+  "= (3^3)^{\\frac{1}{3}} (x^6)^{\\frac{1}{3}} (y^9)^{\\frac{1}{3}} (z^3)^{\\frac{1}{3}}",
+  "= 3^{\\frac{3}{3}} x^{\\frac{6}{3}} y^{\\frac{9}{3}} z^{\\frac{3}{3}}",
+  "= 3^1 x^2 y^3 z^1 = 3x^2y^3z"
+ ],
+ "why": [
+  {
+   "en": "We start by carefully writing down the given cube root expression. Our main goal is to remove the radical sign by simplifying the number $27$ and the variables $x^6, y^9, z^3$ inside it.",
+   "ur": "سب سے پہلے ہم دی گئی جذر والی عبارت کو احتیاط سے لکھتے ہیں۔ ہمارا اصل مقصد اندر موجود عدد $27$ اور متغیرات $x^6, y^9, z^3$ کو مختصر کر کے جذر کی علامت کو ختم کرنا ہے۔"
+  },
+  {
+   "en": "Working with fractional exponents is much easier than working directly with radical signs, so we use the definition of radicals ($\\sqrt[n]{a} = a^{\\frac{1}{n}}$) to change the cube root into a power of $\\frac{1}{3}$. This sets up our expression so we can easily apply the laws of exponents in the next steps.",
+   "ur": "جذر کی علامت کے مقابلے میں کسر والی قوت نما (fractional exponents) کو حل کرنا زیادہ آسان ہوتا ہے، اس لیے ہم جذر کے اصول ($\\sqrt[n]{a} = a^{\\frac{1}{n}}$) کو استعمال کرتے ہوئے اس تیسرے جذر کو $\\frac{1}{3}$ کی قوت میں بدل دیتے ہیں۔ اس سے عبارت ایسی شکل میں آ جاتی ہے جہاں ہم اگلے مراحل میں قوت نما کے قوانین بآسانی لگا سکتے ہیں۔"
+  },
+  {
+   "en": "To simplify the number $27$ with the outer power $\\frac{1}{3}$, we need to write it in exponential form using prime factorization. Since $3$ multiplied by itself $3$ times is $27$, writing it as $3^3$ gives us an inner exponent of $3$ that will neatly cancel out with the $\\frac{1}{3}$ outside.",
+   "ur": "عدد $27$ کو باہر والی قوت $\\frac{1}{3}$ کے ساتھ حل کرنے کے لیے، ہمیں اس کی مفرد تجزی کر کے اسے قوت نما کی شکل میں لکھنا ہوگا۔ چونکہ $3$ کو تین بار اپنے آپ سے ضرب دینے سے $27$ آتا ہے، اس لیے اسے $3^3$ لکھنے سے ہمیں اندر $3$ کی قوت مل جاتی ہے جو باہر والی قوت $\\frac{1}{3}$ سے آسانی سے کٹ جائے گی۔"
+  },
+  {
+   "en": "Since all the terms inside the bracket are being multiplied together, the power of a product rule ($(ab)^n = a^n b^n$) allows us to give the outer exponent $\\frac{1}{3}$ to each base separately. This breaks one big problem into four smaller, easy-to-solve parts.",
+   "ur": "چونکہ بریکٹ کے اندر موجود تمام رقمیں آپس میں ضرب کھا رہی ہیں، اس لیے حاصل ضرب کی قوت کا قانون ($(ab)^n = a^n b^n$) ہمیں یہ اجازت دیتا ہے کہ ہم باہر والی قوت $\\frac{1}{3}$ کو ہر اساس (base) پر الگ الگ لگا دیں۔ یہ عمل ایک بڑے سوال کو چار چھوٹے اور آسان حصوں میں تقسیم کر دیتا ہے۔"
+  },
+  {
+   "en": "When a base has an inner power and an outer power, the power of a power rule ($(a^m)^n = a^{m \\cdot n}$) tells us to multiply the exponents together. Multiplying each inner exponent by $\\frac{1}{3}$ is the same as dividing them by $3$, which puts the powers into simple fractions ready to be reduced.",
+   "ur": "جب کسی اساس کی ایک اندرونی اور ایک بیرونی قوت ہو، تو قوت کی قوت کا قانون ($(a^m)^n = a^{m \\cdot n}$) ہمیں بتاتا ہے کہ ان قوتوں کو آپس میں ضرب دیں۔ ہر اندرونی قوت کو $\\frac{1}{3}$ سے ضرب دینا بالکل ایسا ہی ہے جیسے انہیں $3$ پر تقسیم کرنا، جس سے تمام قوتیں سادہ کسروں میں بدل جاتی ہیں جنہیں اب آسانی سے مختصر کیا جا سکتا ہے۔"
+  },
+  {
+   "en": "Finally, we divide the numbers in each exponent's fraction ($\\frac{3}{3}=1, \\frac{6}{3}=2, \\frac{9}{3}=3$) to get clean whole-number powers. Since any term with a power of $1$ is just the term itself, we drop the $1$s on $3^1$ and $z^1$ to write our neat final answer.",
+   "ur": "آخر میں، ہم قوت نماؤں میں موجود کسروں کو تقسیم کرتے ہیں ($\\frac{3}{3}=1, \\frac{6}{3}=2, \\frac{9}{3}=3$) تاکہ ہمیں مکمل اعداد والی سادہ قوتیں مل جائیں۔ چونکہ کسی بھی رقم کی قوت $1$ ہونے کا مطلب وہی رقم ہوتی ہے، اس لیے ہم $3^1$ اور $z^1$ میں سے $1$ کو ہٹا کر اپنا صاف ستھرا حتمی جواب لکھ لیتے ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $3x^2y^3z$ is the simplest form of the given radical expression, completely free of any roots or fractional powers. It means that if you multiply $3x^2y^3z$ by itself $3$ times (take its cube), you will get back the exact original expression $27x^6y^9z^3$.",
+  "ur": "حتمی جواب $3x^2y^3z$ دی گئی جذر والی عبارت کی سب سے سادہ شکل ہے، جو کسی بھی جذر یا کسر والی قوت سے بالکل پاک ہے۔ اس کا مطلب یہ ہے کہ اگر آپ $3x^2y^3z$ کو اپنے آپ سے $3$ بار ضرب دیں (یعنی اس کا مکعب لیں)، تو آپ کو واپس وہی اصل عبارت $27x^6y^9z^3$ حاصل ہو جائے گی۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

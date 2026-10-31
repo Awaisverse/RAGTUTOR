@@ -1,0 +1,62 @@
+{
+ "item": "c10-ex2.3-q6",
+ "label": "",
+ "answer_ref": "$k = 2$",
+ "steps": [
+  {
+   "math": "x^2 - (2k + 4)x + (7k + 1) = 0",
+   "en": "Write down the given quadratic equation.",
+   "ur": "دی گئی دو درجی مساوات لکھیں۔"
+  },
+  {
+   "math": "",
+   "en": "Since $3$ is a root of the given equation, it must satisfy the equation. Therefore, we substitute $x = 3$ into the equation.",
+   "ur": "چونکہ $3$ دی گئی مساوات کا ایک روٹ (جذر) ہے، اس لیے یہ مساوات کو درست ثابت کرے گا۔ لہٰذا، ہم مساوات میں $x = 3$ درج کرتے ہیں۔"
+  },
+  {
+   "math": "(3)^2 - (2k + 4)(3) + (7k + 1) = 0",
+   "en": "Substitute $x = 3$ in place of $x$.",
+   "ur": "$x$ کی جگہ $x = 3$ درج کریں۔",
+   "check": [
+    "(x**2 - (2*k + 4)*x + (7*k + 1)).subs(x, 3) == 3**2 - (2*k + 4)*3 + (7*k + 1)"
+   ]
+  },
+  {
+   "math": "9 - 6k - 12 + 7k + 1 = 0",
+   "en": "Evaluate $3^2 = 9$ and multiply $(2k + 4)$ by $3$, taking care of the negative sign outside the bracket.",
+   "ur": "$3^2 = 9$ حل کریں اور بریکٹ کے باہر منفی علامت کا خیال رکھتے ہوئے $(2k + 4)$ کو $3$ سے ضرب دیں۔",
+   "check": [
+    "3**2 - (2*k + 4)*3 + (7*k + 1) == 9 - 6*k - 12 + 7*k + 1"
+   ]
+  },
+  {
+   "math": "(7k - 6k) + (9 - 12 + 1) = 0",
+   "en": "Group the $k$ terms and the constant terms together.",
+   "ur": "$k$ والی رقموں اور مستقل مقداروں کو اکٹھا کریں۔",
+   "check": [
+    "9 - 6*k - 12 + 7*k + 1 == (7*k - 6*k) + (9 - 12 + 1)"
+   ]
+  },
+  {
+   "math": "k - 2 = 0",
+   "en": "Simplify the like terms: $7k - 6k = k$ and $9 - 12 + 1 = -2$.",
+   "ur": "متشابہ ارکان کو مختصر کریں: $7k - 6k = k$ اور $9 - 12 + 1 = -2$۔",
+   "check": [
+    "(7*k - 6*k) + (9 - 12 + 1) == k - 2"
+   ]
+  },
+  {
+   "math": "k = 2",
+   "en": "Add $2$ to both sides of the equation to find the required value of $k$.",
+   "ur": "$k$ کی مطلوبہ قیمت معلوم کرنے کے لیے مساوات کے دونوں اطراف میں $2$ جمع کریں۔",
+   "check": [
+    "(x**2 - (2*k + 4)*x + (7*k + 1)).subs({k: 2, x: 3}) == 0",
+    "(x**2 - (2*k + 4)*x + (7*k + 1)).subs(x, 3) == 3**2 - (2*k + 4)*3 + (7*k + 1)",
+    "3**2 - (2*k + 4)*3 + (7*k + 1) == k - 2"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

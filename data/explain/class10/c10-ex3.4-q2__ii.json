@@ -1,0 +1,70 @@
+{
+ "item": "c10-ex3.4-q2",
+ "label": "ii",
+ "answer_ref": "verified: both sides $= \\begin{bmatrix} -16 & -11 \\\\ -1 & -2 \\end{bmatrix}$",
+ "math": [
+  "",
+  "B - C = \\begin{bmatrix} 2 & -1 \\\\ 0 & 3 \\end{bmatrix} - \\begin{bmatrix} 5 & 1 \\\\ 1 & 4 \\end{bmatrix} = \\begin{bmatrix} 2 - 5 & -1 - 1 \\\\ 0 - 1 & 3 - 4 \\end{bmatrix} = \\begin{bmatrix} -3 & -2 \\\\ -1 & -1 \\end{bmatrix}",
+  "A(B-C) = \\begin{bmatrix} 5 & 1 \\\\ -1 & 4 \\end{bmatrix}\\begin{bmatrix} -3 & -2 \\\\ -1 & -1 \\end{bmatrix} = \\begin{bmatrix} (5)(-3) + (1)(-1) & (5)(-2) + (1)(-1) \\\\ (-1)(-3) + (4)(-1) & (-1)(-2) + (4)(-1) \\end{bmatrix}",
+  "= \\begin{bmatrix} -15 - 1 & -10 - 1 \\\\ 3 - 4 & 2 - 4 \\end{bmatrix} = \\begin{bmatrix} -16 & -11 \\\\ -1 & -2 \\end{bmatrix}",
+  "",
+  "AB = \\begin{bmatrix} 5 & 1 \\\\ -1 & 4 \\end{bmatrix}\\begin{bmatrix} 2 & -1 \\\\ 0 & 3 \\end{bmatrix} = \\begin{bmatrix} (5)(2) + (1)(0) & (5)(-1) + (1)(3) \\\\ (-1)(2) + (4)(0) & (-1)(-1) + (4)(3) \\end{bmatrix}",
+  "= \\begin{bmatrix} 10 + 0 & -5 + 3 \\\\ -2 + 0 & 1 + 12 \\end{bmatrix} = \\begin{bmatrix} 10 & -2 \\\\ -2 & 13 \\end{bmatrix}",
+  "AC = \\begin{bmatrix} 5 & 1 \\\\ -1 & 4 \\end{bmatrix}\\begin{bmatrix} 5 & 1 \\\\ 1 & 4 \\end{bmatrix} = \\begin{bmatrix} (5)(5) + (1)(1) & (5)(1) + (1)(4) \\\\ (-1)(5) + (4)(1) & (-1)(1) + (4)(4) \\end{bmatrix}",
+  "= \\begin{bmatrix} 25 + 1 & 5 + 4 \\\\ -5 + 4 & -1 + 16 \\end{bmatrix} = \\begin{bmatrix} 26 & 9 \\\\ -1 & 15 \\end{bmatrix}",
+  "AB - AC = \\begin{bmatrix} 10 & -2 \\\\ -2 & 13 \\end{bmatrix} - \\begin{bmatrix} 26 & 9 \\\\ -1 & 15 \\end{bmatrix} = \\begin{bmatrix} 10 - 26 & -2 - 9 \\\\ -2 - (-1) & 13 - 15 \\end{bmatrix} = \\begin{bmatrix} -16 & -11 \\\\ -1 & -2 \\end{bmatrix}",
+  "A(B-C) = \\begin{bmatrix} -16 & -11 \\\\ -1 & -2 \\end{bmatrix} = AB-AC"
+ ],
+ "why": [
+  {
+   "en": "To verify a matrix equation, we always evaluate one side at a time. Let us start by simplifying the Left-Hand Side, $A(B-C)$, so we have a clear target matrix to compare against later.",
+   "ur": "کسی بھی میٹرکس مساوات کی تصدیق کے لیے ہم ہمیشہ ایک وقت میں ایک سائیڈ کو حل کرتے ہیں۔ آئیے پہلے بائیں طرف یعنی $A(B-C)$ کو حل کرتے ہیں تاکہ ہمارے پاس بعد میں موازنہ کرنے کے لیے ایک واضح میٹرکس آ جائے۔"
+  },
+  {
+   "en": "According to the rule of order of operations (BODMAS), we must solve the bracket $(B-C)$ first. Since $B$ and $C$ both have order $2 \\times 2$, we subtract their corresponding entries to get a single matrix ready to be multiplied by $A$.",
+   "ur": "حساب کے اصول (BODMAS) کے مطابق، ہمیں سب سے پہلے بریکٹ $(B-C)$ کو حل کرنا چاہیے۔ چونکہ $B$ اور $C$ دونوں کا مرتبہ برابر ہے، اس لیے ہم ان کے متناظرہ ارکان کو تفریق کر کے ایک نیا میٹرکس حاصل کرتے ہیں جسے اب $A$ سے ضرب دیا جا سکے گا۔"
+  },
+  {
+   "en": "Now we multiply matrix $A$ on the left with our result for $(B-C)$ on the right. Using the row-by-column multiplication rule, we pair the rows of $A$ with the columns of $(B-C)$ to set up the entries of the product matrix.",
+   "ur": "اب ہم بائیں طرف موجود میٹرکس $A$ کو $(B-C)$ کے حاصل شدہ میٹرکس سے ضرب دیتے ہیں۔ قطار کو کالم سے ضرب دینے کے اصول کے تحت، ہم $A$ کی قطاروں کو $(B-C)$ کے کالموں سے ضرب دے کر نئے میٹرکس کے ارکان ترتیب دیتے ہیں۔"
+  },
+  {
+   "en": "By simplifying the arithmetic inside each position, we get the final $2 \\times 2$ matrix for the Left-Hand Side. This completes the first half of our verification.",
+   "ur": "ہر پوزیشن کے اندر موجود حساب کو حل کرنے سے، ہمیں بائیں سائیڈ (LHS) کا حتمی میٹرکس مل جاتا ہے۔ اس سے ہماری تصدیق کا پہلا حصہ مکمل ہو جاتا ہے۔"
+  },
+  {
+   "en": "Now we move to the Right-Hand Side, $AB-AC$, to see if expanding the expression gives the exact same result. Here, matrix multiplication must be done before subtraction.",
+   "ur": "اب ہم دائیں سائیڈ یعنی $AB-AC$ کی طرف بڑھتے ہیں تاکہ دیکھ سکیں کہ آیا اس کو حل کرنے سے بھی بالکل وہی نتیجہ نکلتا ہے۔ یہاں تفریق کرنے سے پہلے میٹرکس کی ضرب کا عمل مکمل کرنا ضروری ہے۔"
+  },
+  {
+   "en": "We first find the product $AB$ by applying the row-by-column multiplication rule to matrices $A$ and $B$. This gives us the first part of the Right-Hand Side expression.",
+   "ur": "ہم سب سے پہلے میٹرکس $A$ اور $B$ پر قطار اور کالم کی ضرب کا اصول لاگو کر کے $AB$ معلوم کرتے ہیں۔ اس سے ہمیں دائیں سائیڈ کی عبارت کا پہلا حصہ مل جاتا ہے۔"
+  },
+  {
+   "en": "Adding the products in each entry gives us the simplified matrix for $AB$. We will keep this matrix aside to subtract $AC$ from it shortly.",
+   "ur": "ہر رکن میں ضرب کے نتائج کو جمع کرنے سے ہمیں $AB$ کا سادہ میٹرکس مل جاتا ہے۔ ہم اس میٹرکس کو ایک طرف رکھیں گے تاکہ بعد میں اس میں سے $AC$ کو تفریق کر سکیں۔"
+  },
+  {
+   "en": "Next, we need the second part of the Right-Hand Side, which is the product $AC$. Again, we multiply the rows of $A$ by the columns of $C$ entry by entry.",
+   "ur": "اس کے بعد، ہمیں دائیں سائیڈ کے دوسرے حصے یعنی $AC$ کی ضرورت ہے۔ ایک بار پھر، ہم میٹرکس $A$ کی قطاروں کو میٹرکس $C$ کے کالموں سے رکن بہ رکن ضرب دیتے ہیں۔"
+  },
+  {
+   "en": "Simplifying these numbers gives us the complete matrix for $AC$. Now we have both matrices $AB$ and $AC$ ready for the final subtraction.",
+   "ur": "ان نمبروں کو حل کرنے سے ہمیں $AC$ کا مکمل میٹرکس مل جاتا ہے۔ اب ہمارے پاس آخری تفریق کے عمل کے لیے $AB$ اور $AC$ دونوں میٹرکس تیار ہیں۔"
+  },
+  {
+   "en": "Finally, we subtract the matrix $AC$ from the matrix $AB$ by subtracting their corresponding entries. Watch the signs carefully, especially $-2 - (-1)$, which simplifies to $-1$ and gives us the final matrix for the Right-Hand Side.",
+   "ur": "آخر میں، ہم $AB$ میٹرکس میں سے $AC$ میٹرکس کو ان کے متناظرہ ارکان تفریق کر کے حل کرتے ہیں۔ علامتوں کا خاص خیال رکھیں، خاص طور پر $-2 - (-1)$ جو حل ہو کر $-1$ بنتا ہے، اور یوں ہمیں دائیں سائیڈ کا حتمی میٹرکس مل جاتا ہے۔"
+  },
+  {
+   "en": "Comparing the results from Step 4 and Step 10, we see that every single entry of the Left-Hand Side matches the Right-Hand Side. This confirms that our work is complete and the given statement is true.",
+   "ur": "مرحلہ 4 اور مرحلہ 10 کے نتائج کا موازنہ کرنے سے ہم دیکھتے ہیں کہ بائیں سائیڈ کا ہر ایک رکن دائیں سائیڈ کے بالکل برابر ہے۔ اس سے تصدیق ہوتی ہے کہ ہمارا کام مکمل ہو گیا ہے اور دیا گیا بیان درست ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This final result proves the distributive law of matrix multiplication over subtraction, $A(B-C) = AB-AC$, for the given matrices. Since both sides independently produced the exact same matrix $\\begin{bmatrix} -16 & -11 \\\\ -1 & -2 \\end{bmatrix}$, this match serves as a built-in check that our multiplication and subtraction steps are completely correct.",
+  "ur": "یہ حتمی نتیجہ دیے گئے میٹرکس کے لیے تفریق پر ضرب کے تقسیمی قانون (distributive law) یعنی $A(B-C) = AB-AC$ کو ثابت کرتا ہے۔ چونکہ دونوں اطراف کو الگ الگ حل کرنے سے بالکل ایک جیسا میٹرکس $\\begin{bmatrix} -16 & -11 \\\\ -1 & -2 \\end{bmatrix}$ حاصل ہوا ہے، اس لیے یہ برابری خود اس بات کی تصدیق ہے کہ ہمارے ضرب اور تفریق کے تمام مراحل بالکل درست ہیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

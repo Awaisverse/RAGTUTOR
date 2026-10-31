@@ -1,0 +1,63 @@
+{
+ "item": "u1-example9",
+ "label": "",
+ "answer_ref": "5 and 3",
+ "steps": [
+  {
+   "math": "",
+   "en": "Let the two real numbers be $a$ and $b$, where $a > b$.",
+   "ur": "فرض کریں کہ دو حقیقی اعداد $a$ اور $b$ ہیں، جہاں $a > b$ ہے۔"
+  },
+  {
+   "math": "a + b = 8 \\quad \\text{--- (i)}",
+   "en": "According to the first condition, the sum of the two numbers is $8$.",
+   "ur": "پہلی شرط کے مطابق، دونوں اعداد کا مجموعہ $8$ ہے۔"
+  },
+  {
+   "math": "a - b = 2 \\quad \\text{--- (ii)}",
+   "en": "According to the second condition, the difference between the two numbers is $2$.",
+   "ur": "دوسری شرط کے مطابق، دونوں اعداد کا فرق $2$ ہے۔"
+  },
+  {
+   "math": "(a + b) + (a - b) = 8 + 2",
+   "en": "Add equation (i) and equation (ii) to eliminate $b$.",
+   "ur": "$b$ کو ختم کرنے کے لیے مساوات (i) اور مساوات (ii) کو جمع کریں۔",
+   "check": [
+    "8 + 2 == 10"
+   ]
+  },
+  {
+   "math": "2a = 10 \\Rightarrow a = \\frac{10}{2} = 5",
+   "en": "Simplify the equation and divide both sides by $2$ to find the value of $a$.",
+   "ur": "مساوات کو مختصر کریں اور $a$ کی قیمت معلوم کرنے کے لیے دونوں طرف $2$ سے تقسیم کریں۔",
+   "check": [
+    "R(10, 2) == 5"
+   ]
+  },
+  {
+   "math": "5 + b = 8",
+   "en": "Substitute the value $a = 5$ into equation (i).",
+   "ur": "مساوات (i) میں $a = 5$ درج کریں۔"
+  },
+  {
+   "math": "b = 8 - 5 = 3",
+   "en": "Subtract $5$ from both sides to find the value of $b$.",
+   "ur": "$b$ کی قیمت معلوم کرنے کے لیے دونوں طرف سے $5$ تفریق کریں۔",
+   "check": [
+    "8 - 5 == 3"
+   ]
+  },
+  {
+   "math": "",
+   "en": "Thus, the two required real numbers are $5$ and $3$.",
+   "ur": "پس، مطلوبہ دو حقیقی اعداد $5$ اور $3$ ہیں۔",
+   "check": [
+    "Rational(8+2,2)==5",
+    "8-5 == 3"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

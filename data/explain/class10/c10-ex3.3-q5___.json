@@ -1,0 +1,50 @@
+{
+ "item": "c10-ex3.3-q5",
+ "label": "",
+ "answer_ref": "$A + B = B + A = O$, so $B = -A$ and $A = -B$",
+ "math": [
+  "A = \\begin{bmatrix} 5 & 6 \\\\ 7 & -2 \\end{bmatrix}, \\quad B = \\begin{bmatrix} -5 & -6 \\\\ -7 & 2 \\end{bmatrix}",
+  "A + B = O = B + A",
+  "A + B = \\begin{bmatrix} 5 & 6 \\\\ 7 & -2 \\end{bmatrix} + \\begin{bmatrix} -5 & -6 \\\\ -7 & 2 \\end{bmatrix} = \\begin{bmatrix} 5 + (-5) & 6 + (-6) \\\\ 7 + (-7) & -2 + 2 \\end{bmatrix}",
+  "A + B = \\begin{bmatrix} 5 - 5 & 6 - 6 \\\\ 7 - 7 & -2 + 2 \\end{bmatrix} = \\begin{bmatrix} 0 & 0 \\\\ 0 & 0 \\end{bmatrix} = O",
+  "B + A = \\begin{bmatrix} -5 & -6 \\\\ -7 & 2 \\end{bmatrix} + \\begin{bmatrix} 5 & 6 \\\\ 7 & -2 \\end{bmatrix} = \\begin{bmatrix} -5 + 5 & -6 + 6 \\\\ -7 + 7 & 2 + (-2) \\end{bmatrix}",
+  "B + A = \\begin{bmatrix} -5 + 5 & -6 + 6 \\\\ -7 + 7 & 2 - 2 \\end{bmatrix} = \\begin{bmatrix} 0 & 0 \\\\ 0 & 0 \\end{bmatrix} = O",
+  "A + B = B + A = O \\Rightarrow B = -A, \\quad A = -B"
+ ],
+ "why": [
+  {
+   "en": "We begin by clearly writing down the given matrices $A$ and $B$ so we can easily compare their entries and see that both have the same order ($2 \\times 2$). This ensures that they can be added together.",
+   "ur": "ہم سب سے پہلے دیے گئے کالبوں $A$ اور $B$ کو واضح طور پر لکھتے ہیں تاکہ ہم ان کے ارکان کا آسانی سے موازنہ کر سکیں اور دیکھ سکیں کہ دونوں کا مرتبہ ($2 \\times 2$) یکساں ہے۔ اس سے یہ یقینی ہو جاتا ہے کہ انہیں آپس میں جمع کیا جا سکتا ہے۔"
+  },
+  {
+   "en": "Here we recall the definition of additive inverse for matrices. Just like numbers $5$ and $-5$ add up to $0$, two matrices are additive inverses of each other if adding them in either order gives the null (zero) matrix $O$.",
+   "ur": "یہاں ہم کالبوں کے جمعی معکوس کی تعریف کو ذہن میں لاتے ہیں۔ بالکل جیسے اعداد $5$ اور $-5$ کو جمع کرنے سے $0$ آتا ہے، دو کالب ایک دوسرے کے جمعی معکوس کہلاتے ہیں اگر انہیں کسی بھی ترتیب سے جمع کرنے پر صفری کالب $O$ حاصل ہو۔"
+  },
+  {
+   "en": "To check the first part of the condition ($A + B$), we apply the rule of matrix addition, which says we must add the corresponding entries (numbers in the exact same position) of both matrices.",
+   "ur": "شرط کے پہلے حصے ($A + B$) کو جانچنے کے لیے، ہم کالبوں کی جمع کا اصول لاگو کرتے ہیں، جس کے مطابق ہمیں دونوں کالبوں کے متناظرہ ارکان (جو بالکل ایک جیسی جگہ پر ہوں) کو آپس میں جمع کرنا ہوتا ہے۔"
+  },
+  {
+   "en": "When we simplify the signs and do the arithmetic, every single position becomes $0$. Getting this null matrix $O$ proves the first half of our requirement: $B$ cancels out $A$ when added from the right.",
+   "ur": "جب ہم علامتوں کو مختصر کر کے حساب کرتے ہیں، تو ہر جگہ پر $0$ آ جاتا ہے۔ اس صفری کالب $O$ کا حاصل ہونا ہماری شرط کے پہلے حصے کو ثابت کرتا ہے کہ دائیں طرف سے جمع کرنے پر $B$ کالب $A$ کے اثر کو ختم کر دیتا ہے۔"
+  },
+  {
+   "en": "Now we must check the reverse order ($B + A$) to be completely thorough, again by adding the corresponding entries of $B$ and $A$.",
+   "ur": "اب بات کو مکمل طور پر ثابت کرنے کے لیے ہمیں الٹ ترتیب ($B + A$) کو بھی جانچنا ہو گا، جس کے لیے ہم دوبارہ $B$ اور $A$ کے متناظرہ ارکان کو جمع کرتے ہیں۔"
+  },
+  {
+   "en": "Simplifying these entries also gives all zeros, resulting in the null matrix $O$ once again. This confirms that changing the order of addition still completely cancels out all the entries.",
+   "ur": "ان ارکان کو مختصر کرنے سے بھی تمام ارکان صفر ہو جاتے ہیں، جس کے نتیجے میں ایک بار پھر صفری کالب $O$ حاصل ہوتا ہے۔ اس سے تصدیق ہوتی ہے کہ جمع کی ترتیب بدلنے سے بھی تمام ارکان ایک دوسرے کو مکمل طور پر زائل کر دیتے ہیں۔"
+  },
+  {
+   "en": "Since both $A + B$ and $B + A$ equal the null matrix $O$, the definition of additive inverse is fully satisfied. This directly proves our final conclusion that $B$ is the additive inverse of $A$ ($B = -A$) and $A$ is the additive inverse of $B$ ($A = -B$).",
+   "ur": "چونکہ $A + B$ اور $B + A$ دونوں صفری کالب $O$ کے برابر ہیں، اس لیے جمعی معکوس کی تعریف مکمل طور پر پوری ہو جاتی ہے۔ اس سے ہمارا آخری نتیجہ براہِ راست ثابت ہو جاتا ہے کہ $B$ کالب $A$ کا جمعی معکوس ہے ($B = -A$) اور $A$ کالب $B$ کا جمعی معکوس ہے ($A = -B$)۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final result means that matrices $A$ and $B$ are exact opposites of each other, so adding them together leaves nothing (the zero matrix $O$). You can easily verify this at a glance by checking that every entry in $B$ is simply the negative of the matching entry in $A$ (for example, $5$ becomes $-5$, and $-2$ becomes $2$).",
+  "ur": "آخری نتیجے کا مطلب یہ ہے کہ کالب $A$ اور $B$ ایک دوسرے کے بالکل متضاد ہیں، اس لیے انہیں آپس میں جمع کرنے سے کچھ باقی نہیں بچتا (یعنی صفری کالب $O$ آتا ہے)۔ آپ ایک نظر میں اس کی تصدیق ایسے کر سکتے ہیں کہ کالب $B$ کا ہر رکن کالب $A$ کے متناظرہ رکن کا منفی ہے (مثال کے طور پر، $5$ بدل کر $-5$ ہو گیا ہے، اور $-2$ بدل کر $2$ ہو گیا ہے)۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

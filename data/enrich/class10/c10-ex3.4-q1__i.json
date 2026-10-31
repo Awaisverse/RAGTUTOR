@@ -1,0 +1,59 @@
+{
+ "item": "c10-ex3.4-q1",
+ "label": "i",
+ "answer_ref": "$AB = \\begin{bmatrix} 5 & 0 \\\\ -3 & -2 \\end{bmatrix}$, $BA = \\begin{bmatrix} 1 & 6 \\\\ 2 & 2 \\end{bmatrix}$",
+ "steps": [
+  {
+   "math": "A = \\begin{bmatrix} 1 & 2 \\\\ -1 & 0 \\end{bmatrix}, \\quad B = \\begin{bmatrix} 3 & 2 \\\\ 1 & -1 \\end{bmatrix}",
+   "en": "Write down the given matrices $A$ and $B$. Since both matrices are of order $2 \\times 2$, the number of columns in the first matrix equals the number of rows in the second matrix ($2 = 2$). Therefore, both products $AB$ and $BA$ are possible.",
+   "ur": "دیے گئے قالب $A$ اور $B$ لکھیں۔ چونکہ دونوں قالبوں کا مرتبہ $2 \\times 2$ ہے، اس لیے پہلے قالب کے کالموں کی تعداد دوسرے قالب کی قطاروں کی تعداد کے برابر ہے ($2 = 2$)۔ لہٰذا، دونوں ضربی حاصل $AB$ اور $BA$ ممکن ہیں۔"
+  },
+  {
+   "math": "AB = \\begin{bmatrix} 1 & 2 \\\\ -1 & 0 \\end{bmatrix}\\begin{bmatrix} 3 & 2 \\\\ 1 & -1 \\end{bmatrix}",
+   "en": "First, set up the matrix multiplication to find $AB$.",
+   "ur": "سب سے پہلے، $AB$ معلوم کرنے کے لیے قالبوں کی ضرب ترتیب دیں۔"
+  },
+  {
+   "math": "AB = \\begin{bmatrix} (1)(3) + (2)(1) & (1)(2) + (2)(-1) \\\\ (-1)(3) + (0)(1) & (-1)(2) + (0)(-1) \\end{bmatrix}",
+   "en": "Multiply each row of matrix $A$ by each column of matrix $B$, entry by entry, and add the products.",
+   "ur": "قالب $A$ کی ہر قطار کو قالب $B$ کے ہر کالم سے رکن بہ رکن ضرب دیں اور حاصل ضرب کو جمع کریں۔",
+   "check": [
+    "Matrix([[1, 2], [-1, 0]]) * Matrix([[3, 2], [1, -1]]) == Matrix([[1*3 + 2*1, 1*2 + 2*(-1)], [-1*3 + 0*1, -1*2 + 0*(-1)]])"
+   ]
+  },
+  {
+   "math": "AB = \\begin{bmatrix} 3 + 2 & 2 - 2 \\\\ -3 + 0 & -2 + 0 \\end{bmatrix} = \\begin{bmatrix} 5 & 0 \\\\ -3 & -2 \\end{bmatrix}",
+   "en": "Simplify the products and add the numbers to get the matrix $AB$.",
+   "ur": "حاصل ضرب کو مختصر کریں اور اعداد کو جمع کر کے قالب $AB$ حاصل کریں۔",
+   "check": [
+    "Matrix([[3 + 2, 2 - 2], [-3 + 0, -2 + 0]]) == Matrix([[5, 0], [-3, -2]])"
+   ]
+  },
+  {
+   "math": "BA = \\begin{bmatrix} 3 & 2 \\\\ 1 & -1 \\end{bmatrix}\\begin{bmatrix} 1 & 2 \\\\ -1 & 0 \\end{bmatrix}",
+   "en": "Now, set up the matrix multiplication to find $BA$ by placing matrix $B$ first and matrix $A$ second.",
+   "ur": "اب، قالب $B$ کو پہلے اور قالب $A$ کو بعد میں رکھ کر $BA$ معلوم کرنے کے لیے قالبوں کی ضرب ترتیب دیں۔"
+  },
+  {
+   "math": "BA = \\begin{bmatrix} (3)(1) + (2)(-1) & (3)(2) + (2)(0) \\\\ (1)(1) + (-1)(-1) & (1)(2) + (-1)(0) \\end{bmatrix}",
+   "en": "Multiply each row of matrix $B$ by each column of matrix $A$, entry by entry, and add the products.",
+   "ur": "قالب $B$ کی ہر قطار کو قالب $A$ کے ہر کالم سے رکن بہ رکن ضرب دیں اور حاصل ضرب کو جمع کریں۔",
+   "check": [
+    "Matrix([[3, 2], [1, -1]]) * Matrix([[1, 2], [-1, 0]]) == Matrix([[3*1 + 2*(-1), 3*2 + 2*0], [1*1 + (-1)*(-1), 1*2 + (-1)*0]])"
+   ]
+  },
+  {
+   "math": "BA = \\begin{bmatrix} 3 - 2 & 6 + 0 \\\\ 1 + 1 & 2 + 0 \\end{bmatrix} = \\begin{bmatrix} 1 & 6 \\\\ 2 & 2 \\end{bmatrix}",
+   "en": "Simplify the products and add the numbers to get the matrix $BA$.",
+   "ur": "حاصل ضرب کو مختصر کریں اور اعداد کو جمع کر کے قالب $BA$ حاصل کریں۔",
+   "check": [
+    "Matrix([[3 - 2, 6 + 0], [1 + 1, 2 + 0]]) == Matrix([[1, 6], [2, 2]])",
+    "Eq(Matrix([[5, 0], [-3, -2]]), Matrix([[5, 0], [-3, -2]]))",
+    "Eq(Matrix([[1, 6], [2, 2]]), Matrix([[1, 6], [2, 2]]))"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

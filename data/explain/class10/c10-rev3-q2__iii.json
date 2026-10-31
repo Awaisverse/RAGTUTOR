@@ -1,0 +1,40 @@
+{
+ "item": "c10-rev3-q2",
+ "label": "iii",
+ "answer_ref": "$\\begin{bmatrix} 23 & 19 \\\\ 38 & 36 \\end{bmatrix}$",
+ "math": [
+  "A = \\begin{bmatrix} 4 & 2 \\\\ 7 & 6 \\end{bmatrix}, \\quad B = \\begin{bmatrix} 5 & 5 \\\\ 8 & 8 \\end{bmatrix}",
+  "2A = 2\\begin{bmatrix} 4 & 2 \\\\ 7 & 6 \\end{bmatrix} = \\begin{bmatrix} 2 \\times 4 & 2 \\times 2 \\\\ 2 \\times 7 & 2 \\times 6 \\end{bmatrix} = \\begin{bmatrix} 8 & 4 \\\\ 14 & 12 \\end{bmatrix}",
+  "3B = 3\\begin{bmatrix} 5 & 5 \\\\ 8 & 8 \\end{bmatrix} = \\begin{bmatrix} 3 \\times 5 & 3 \\times 5 \\\\ 3 \\times 8 & 3 \\times 8 \\end{bmatrix} = \\begin{bmatrix} 15 & 15 \\\\ 24 & 24 \\end{bmatrix}",
+  "2A + 3B = \\begin{bmatrix} 8 & 4 \\\\ 14 & 12 \\end{bmatrix} + \\begin{bmatrix} 15 & 15 \\\\ 24 & 24 \\end{bmatrix} = \\begin{bmatrix} 8 + 15 & 4 + 15 \\\\ 14 + 24 & 12 + 24 \\end{bmatrix}",
+  "2A + 3B = \\begin{bmatrix} 23 & 19 \\\\ 38 & 36 \\end{bmatrix}"
+ ],
+ "why": [
+  {
+   "en": "Just like in ordinary algebra, we start by clearly writing down the given $2 \\times 2$ matrices $A$ and $B$ so we can see all their entries before doing any operations.",
+   "ur": "عام الجبرا کی طرح، ہم سب سے پہلے دیے گئے $2 \\times 2$ کالبوں $A$ اور $B$ کو واضح طور پر لکھتے ہیں تاکہ کوئی بھی عمل کرنے سے پہلے ان کے تمام ارکان ہمارے سامنے ہوں۔"
+  },
+  {
+   "en": "By the rule of scalar multiplication, multiplying a matrix by a real number means multiplying every single entry inside the matrix by that number. Doing this with $2$ gives us the new matrix $2A$, which is the first part of our required expression $2A + 3B$.",
+   "ur": "کالب کی حقیقی عدد سے ضرب (scalar multiplication) کے اصول کے مطابق، کسی کالب کو ایک عدد سے ضرب دینے کا مطلب ہے کہ اس کے اندر موجود ہر رکن کو اس عدد سے ضرب دی جائے۔ $2$ کے ساتھ ایسا کرنے سے ہمیں نیا کالب $2A$ ملتا ہے، جو ہمارے مطلوبہ جملے $2A + 3B$ کا پہلا حصہ ہے۔"
+  },
+  {
+   "en": "Using the same scalar multiplication rule, we multiply every entry of matrix $B$ by $3$. This gives us the matrix $3B$, so now we have both parts ready to be added together.",
+   "ur": "اسی حقیقی عدد سے ضرب کے اصول کو استعمال کرتے ہوئے، ہم کالب $B$ کے ہر رکن کو $3$ سے ضرب دیتے ہیں۔ اس سے ہمیں کالب $3B$ حاصل ہوتا ہے، اور اب ہمارے پاس دونوں حصے آپس میں جمع ہونے کے لیے تیار ہیں۔"
+  },
+  {
+   "en": "Two matrices can only be added if they have the exact same order, and since both $2A$ and $3B$ are of order $2 \\times 2$, we apply the rule of matrix addition by pairing up their corresponding entries (entries in the same row and column position).",
+   "ur": "دو کالبوں کو صرف تب ہی جمع کیا جا سکتا ہے جب ان کا مرتبہ بالکل ایک جیسا ہو، اور چونکہ $2A$ اور $3B$ دونوں کا مرتبہ $2 \\times 2$ ہے، اس لیے ہم کالبوں کی جمع کے اصول کے تحت ان کے متناظرہ ارکان (ایک ہی قطار اور کالم کی پوزیشن والے ارکان) کو آمنے سامنے رکھ کر جمع کرتے ہیں۔"
+  },
+  {
+   "en": "Adding the paired numbers in each position completes the matrix addition and gives us the single combined matrix for $2A + 3B$.",
+   "ur": "ہر پوزیشن پر موجود نمبروں کو جمع کرنے سے کالبوں کی جمع کا عمل مکمل ہو جاتا ہے اور ہمیں $2A + 3B$ کے لیے ایک واحد مجموعی کالب مل جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $\\begin{bmatrix} 23 & 19 \\\\ 38 & 36 \\end{bmatrix}$ is a new $2 \\times 2$ matrix where each entry is the combined result of $2$ times the entry of $A$ plus $3$ times the corresponding entry of $B$. You can quickly check your work on any one position, for example the top-left entry: $2(4) + 3(5) = 8 + 15 = 23$.",
+  "ur": "حتمی جواب $\\begin{bmatrix} 23 & 19 \\\\ 38 & 36 \\end{bmatrix}$ ایک نیا $2 \\times 2$ کالب ہے جس کا ہر رکن کالب $A$ کے رکن کے $2$ گنا اور کالب $B$ کے متناظرہ رکن کے $3$ گنا کا مجموعہ ہے۔ آپ کسی بھی ایک پوزیشن سے اپنے جواب کی باآسانی پڑتال کر سکتے ہیں، مثلاً اوپر بائیں کونے والا رکن: $2(4) + 3(5) = 8 + 15 = 23$۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex3.2-q4",
+ "label": "",
+ "answer_ref": "$A^t = \\begin{bmatrix} 2 & 4 \\\\ 3 & 5 \\end{bmatrix}$; $B^t = \\begin{bmatrix} 3 & 7 & 6 \\end{bmatrix}$; $C^t = \\begin{bmatrix} 5 \\\\ -2 \\\\ 4 \\end{bmatrix}$; $D^t = \\begin{bmatrix} 2 & 3 & 4 \\\\ 5 & 6 & 7 \\end{bmatrix}$",
+ "math": [
+  "",
+  "A = \\begin{bmatrix} 2 & 3 \\\\ 4 & 5 \\end{bmatrix} \\implies A^t = \\begin{bmatrix} 2 & 3 \\\\ 4 & 5 \\end{bmatrix}^t = \\begin{bmatrix} 2 & 4 \\\\ 3 & 5 \\end{bmatrix}",
+  "B = \\begin{bmatrix} 3 \\\\ 7 \\\\ 6 \\end{bmatrix} \\implies B^t = \\begin{bmatrix} 3 \\\\ 7 \\\\ 6 \\end{bmatrix}^t = \\begin{bmatrix} 3 & 7 & 6 \\end{bmatrix}",
+  "C = \\begin{bmatrix} 5 & -2 & 4 \\end{bmatrix} \\implies C^t = \\begin{bmatrix} 5 & -2 & 4 \\end{bmatrix}^t = \\begin{bmatrix} 5 \\\\ -2 \\\\ 4 \\end{bmatrix}",
+  "D = \\begin{bmatrix} 2 & 5 \\\\ 3 & 6 \\\\ 4 & 7 \\end{bmatrix} \\implies D^t = \\begin{bmatrix} 2 & 5 \\\\ 3 & 6 \\\\ 4 & 7 \\end{bmatrix}^t = \\begin{bmatrix} 2 & 3 & 4 \\\\ 5 & 6 & 7 \\end{bmatrix}",
+  "A^t = \\begin{bmatrix} 2 & 4 \\\\ 3 & 5 \\end{bmatrix}, \\quad B^t = \\begin{bmatrix} 3 & 7 & 6 \\end{bmatrix}, \\quad C^t = \\begin{bmatrix} 5 \\\\ -2 \\\\ 4 \\end{bmatrix}, \\quad D^t = \\begin{bmatrix} 2 & 3 & 4 \\\\ 5 & 6 & 7 \\end{bmatrix}"
+ ],
+ "why": [
+  {
+   "en": "Before solving, we state the definition of the transpose of a matrix so we know the exact rule to apply. This tells us that to find $M^t$, we simply need to interchange the horizontal rows and vertical columns of any given matrix.",
+   "ur": "سوال حل کرنے سے پہلے ہم کالب کے ٹرانسپوز کی تعریف لکھتے ہیں تاکہ ہمیں معلوم ہو کہ کون سا اصول لگانا ہے۔ یہ ہمیں بتاتا ہے کہ $M^t$ معلوم کرنے کے لیے ہمیں بس دیے گئے کالب کی افقی قطاروں اور عمودی کالموں کو آپس میں بدلنا ہے۔"
+  },
+  {
+   "en": "We apply the definition of transpose to the square matrix $A$ by turning its horizontal rows into vertical columns. Notice how the main diagonal elements $2$ and $5$ stay in their places, while $3$ and $4$ swap positions to give us $A^t$.",
+   "ur": "ہم ٹرانسپوز کی تعریف کو مربی کالب $A$ پر لاگو کرتے ہوئے اس کی افقی قطاروں کو عمودی کالموں میں بدلتے ہیں۔ غور کریں کہ وتر کے ارکان $2$ اور $5$ اپنی جگہ پر رہتے ہیں، جبکہ $3$ اور $4$ اپنی جگہ بدل لیتے ہیں جس سے ہمیں $A^t$ مل جاتا ہے۔"
+  },
+  {
+   "en": "Since $B$ is a column matrix with $3$ rows and $1$ column, applying the transpose rule flips its layout completely. By writing its vertical entries $3$, $7$, and $6$ horizontally, we get the row matrix $B^t$ of order $1$-by-$3$.",
+   "ur": "چونکہ $B$ ایک کالمی کالب ہے جس میں $3$ قطاریں اور $1$ کالم ہے، اس لیے ٹرانسپوز کا اصول لگانے سے اس کی بناوٹ بالکل الٹ جاتی ہے۔ اس کے عمودی ارکان $3$، $7$ اور $6$ کو افقی طور پر لکھنے سے ہمیں ایک قطاری کالب $B^t$ ملتا ہے۔"
+  },
+  {
+   "en": "Here, $C$ is a row matrix, so taking its transpose turns its single horizontal row into a single vertical column. This gives us the column matrix $C^t$ while keeping the signs of the numbers, like $-2$, unchanged.",
+   "ur": "یہاں $C$ ایک قطاری کالب ہے، اس لیے اس کا ٹرانسپوز لینے سے اس کی واحد افقی قطار ایک عمودی کالم میں بدل جاتی ہے۔ اس سے ہمیں کالمی کالب $C^t$ ملتا ہے جبکہ اعداد کی علامتیں، جیسے کہ $-2$، تبدیل نہیں ہوتیں۔"
+  },
+  {
+   "en": "Matrix $D$ is a rectangular matrix with $3$ rows and $2$ columns, so interchanging them will change the shape of the matrix. By turning each of the three rows into columns, we get $D^t$, which now has $2$ rows and $3$ columns.",
+   "ur": "کالب $D$ ایک مستطیلی کالب ہے جس میں $3$ قطاریں اور $2$ کالم ہیں، اس لیے ان کو آپس میں بدلنے سے کالب کی شکل بدل جائے گی۔ تینوں قطاروں کو کالموں میں تبدیل کرنے سے ہمیں $D^t$ ملتا ہے، جس میں اب $2$ قطاریں اور $3$ کالم ہیں۔"
+  },
+  {
+   "en": "Finally, we collect all four transposed matrices together to present our complete solution clearly. Each result shows the original matrix with its rows and columns successfully interchanged.",
+   "ur": "آخر میں، ہم اپنا مکمل حل واضح طور پر پیش کرنے کے لیے چاروں ٹرانسپوز کالبوں کو ایک ساتھ لکھتے ہیں۔ ہر نتیجہ اصل کالب کی قطاروں اور کالموں کے کامیاب تبادلے کو ظاہر کرتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer gives the transposed matrices $A^t, B^t, C^t,$ and $D^t$, where every row of the original matrices has become a column. You can easily check your work by taking the transpose of these answers once more—if you flip the rows and columns again and get back the original matrices $A, B, C,$ and $D$, your answer is completely correct!",
+  "ur": "حتمی جواب ہمیں ٹرانسپوز کالب $A^t, B^t, C^t,$ اور $D^t$ دیتا ہے، جہاں اصل کالبوں کی ہر قطار اب ایک کالم بن چکی ہے۔ آپ اپنے کام کی پڑتال باآسانی ان جوابات کا دوبارہ ٹرانسپوز لے کر کر سکتے ہیں—اگر آپ قطاروں اور کالموں کو دوبارہ بدلیں اور اصل کالب $A, B, C,$ اور $D$ واپس آ جائیں، تو آپ کا جواب بالکل درست ہے!"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

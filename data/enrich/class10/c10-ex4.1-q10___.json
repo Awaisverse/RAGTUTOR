@@ -1,0 +1,65 @@
+{
+ "item": "c10-ex4.1-q10",
+ "label": "",
+ "answer_ref": "$a = -3,\\ a = 4$",
+ "steps": [
+  {
+   "math": "f(x) = x^2 + 9, \\quad g(x) = x + 21",
+   "en": "Write the given functions $f(x)$ and $g(x)$.",
+   "ur": "دیے گئے تفاعلات $f(x)$ اور $g(x)$ لکھیں۔"
+  },
+  {
+   "math": "f(a) = a^2 + 9, \\quad g(a) = a + 21",
+   "en": "Substitute $x = a$ into both functions to find the expressions for $f(a)$ and $g(a)$.",
+   "ur": "$f(a)$ اور $g(a)$ کی قیمتیں معلوم کرنے کے لیے دونوں تفاعلات میں $x = a$ درج کریں۔"
+  },
+  {
+   "math": "a^2 + 9 = a + 21",
+   "en": "According to the given condition $f(a) = g(a)$, set the two expressions equal to each other.",
+   "ur": "دی گئی شرط $f(a) = g(a)$ کے مطابق، دونوں عبارتوں کو ایک دوسرے کے برابر رکھیں۔"
+  },
+  {
+   "math": "a^2 - a + 9 - 21 = 0 \\implies a^2 - a - 12 = 0",
+   "en": "Move all terms to the left-hand side and simplify to form a standard quadratic equation.",
+   "ur": "معیاری دو درجی مساوات بنانے کے لیے تمام رقوم کو بائیں طرف لے جائیں اور مختصر کریں۔",
+   "check": [
+    "(a**2 + 9) - (a + 21) == a**2 - a - 12"
+   ]
+  },
+  {
+   "math": "a^2 - 4a + 3a - 12 = 0",
+   "en": "Factorize by splitting the middle term $-a$ into $-4a + 3a$, since $(-4)(3) = -12$.",
+   "ur": "درمیانی رقم $-a$ کو $-4a + 3a$ میں توڑ کر تجزی کریں، کیونکہ $(-4)(3) = -12$ ہوتا ہے۔",
+   "check": [
+    "a**2 - 4*a + 3*a - 12 == a**2 - a - 12"
+   ]
+  },
+  {
+   "math": "a(a - 4) + 3(a - 4) = 0 \\implies (a - 4)(a + 3) = 0",
+   "en": "Take out the common factors from the pairs of terms.",
+   "ur": "رقوم کے جوڑوں میں سے مشترک اجزائے ضربی باہر نکالیں۔",
+   "check": [
+    "expand((a - 4)*(a + 3)) == a**2 - a - 12"
+   ]
+  },
+  {
+   "math": "a - 4 = 0 \\quad \\text{or} \\quad a + 3 = 0",
+   "en": "Set each factor equal to zero.",
+   "ur": "ہر جزو ضربی کو صفر کے برابر رکھیں۔"
+  },
+  {
+   "math": "a = -3, \\quad a = 4",
+   "en": "Solve each linear equation to find the required values of $a$.",
+   "ur": "$a$ کی مطلوبہ قیمتیں معلوم کرنے کے لیے ہر یک درجی مساوات کو حل کریں۔",
+   "check": [
+    "4**2 + 9 == 4 + 21",
+    "(-3)**2 + 9 == -3 + 21",
+    "(a**2 + 9) - (a + 21) == a**2 - a - 12",
+    "expand((a - 4)*(a + 3)) == a**2 - a - 12"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

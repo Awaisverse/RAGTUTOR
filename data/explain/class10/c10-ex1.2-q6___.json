@@ -1,0 +1,50 @@
+{
+ "item": "c10-ex1.2-q6",
+ "label": "",
+ "answer_ref": "$x = \\frac{1}{2},\\ y = 3$",
+ "math": [
+  "(2x+iy)(1-i) = 4+2i",
+  "2x(1) - 2x(i) + iy(1) - iy(i) = 4+2i \\;\\Rightarrow\\; 2x - 2xi + yi - yi^2 = 4+2i",
+  "2x - 2xi + yi - y(-1) = 4+2i \\;\\Rightarrow\\; (2x+y) + (-2x+y)i = 4+2i",
+  "2x + y = 4 \\quad\\text{--- (i)} \\qquad\\text{and}\\qquad -2x + y = 2 \\quad\\text{--- (ii)}",
+  "(2x+y) + (-2x+y) = 4 + 2 \\;\\Rightarrow\\; 2y = 6 \\;\\Rightarrow\\; y = 3",
+  "2x + 3 = 4 \\;\\Rightarrow\\; 2x = 4 - 3 \\;\\Rightarrow\\; 2x = 1 \\;\\Rightarrow\\; x = \\frac{1}{2}",
+  "\\text{Check: } \\left(2\\left(\\frac{1}{2}\\right) + i(3)\\right)(1-i) = (1+3i)(1-i) = 1 - i + 3i - 3i^2 = 4 + 2i"
+ ],
+ "why": [
+  {
+   "en": "We begin by stating the given complex equation clearly so we know what we are working with. Our goal is to simplify the left-hand side so that we can compare it directly with $4+2i$ on the right-hand side.",
+   "ur": "ہم سب سے پہلے دی گئی کمپلیکس مساوات کو واضح طور پر لکھتے ہیں تاکہ ہمیں معلوم ہو کہ ہم کس پر کام کر رہے ہیں۔ ہمارا مقصد بائیں جانب کو مختصر کرنا ہے تاکہ ہم اس کا دائیں جانب موجود $4+2i$ سے براہِ راست موازنہ کر سکیں۔"
+  },
+  {
+   "en": "Using the distributive property of multiplication, we expand the brackets on the left-hand side. This removes the parentheses and gives us individual terms that we can now simplify.",
+   "ur": "ضرب کی تقسیمی خاصیت کا استعمال کرتے ہوئے، ہم بائیں جانب کی بریکٹوں کو کھولتے ہیں۔ اس سے بریکٹیں ختم ہو جاتی ہیں اور ہمیں الگ الگ رقمیں مل جاتی ہیں جنہیں اب ہم مختصر کر سکتے ہیں۔"
+  },
+  {
+   "en": "By the fundamental definition of the imaginary unit, we replace $i^2$ with $-1$, which turns $-yi^2$ into a real term $+y$. Grouping the real terms and the $i$ terms separately puts the left side into the standard complex form $a+bi$, matching the right side.",
+   "ur": "ایمیجنری یونٹ کی بنیادی تعریف کے مطابق، ہم $i^2$ کی جگہ $-1$ درج کرتے ہیں، جس سے $-yi^2$ ایک حقیقی رقم $+y$ بن جاتی ہے۔ حقیقی رقموں اور $i$ والی رقموں کو الگ الگ یکجا کرنے سے بائیں جانب معیاری کمپلیکس شکل $a+bi$ میں آ جاتی ہے، جو دائیں جانب کے مطابق ہے۔"
+  },
+  {
+   "en": "Two complex numbers are equal if and only if their real parts are equal and their imaginary parts are equal. Applying this rule allows us to turn one complex equation into two simple simultaneous linear equations without $i$.",
+   "ur": "دو کمپلیکس اعداد تبھی برابر ہوتے ہیں جب ان کے حقیقی حصے آپس میں برابر ہوں اور ان کے تصوراتی (ایمیجنری) حصے آپس میں برابر ہوں۔ اس اصول کو لاگو کرنے سے ہم ایک کمپلیکس مساوات کو بغیر $i$ والی دو سادہ ہم زاد یک درجی مساواتوں میں تبدیل کر لیتے ہیں۔"
+  },
+  {
+   "en": "Notice that the coefficients of $x$ in the two equations are $+2$ and $-2$, which are opposites. By using the elimination method and adding the two equations together, the $x$ terms cancel out completely, giving us the exact value $y = 3$.",
+   "ur": "غور کریں کہ دونوں مساواتوں میں $x$ کے عددی سر $+2$ اور $-2$ ہیں، جو ایک دوسرے کے متضاد ہیں۔ اخراج کے طریقے (elimination method) کو استعمال کرتے ہوئے دونوں مساواتوں کو جمع کرنے سے $x$ والی رقمیں مکمل طور پر کٹ جاتی ہیں، اور ہمیں $y = 3$ کی درست قیمت مل جاتی ہے۔"
+  },
+  {
+   "en": "Now that we know $y = 3$, we use the substitution method by plugging this value back into the first equation. This leaves only one unknown variable, allowing us to easily isolate and find $x = \\frac{1}{2}$.",
+   "ur": "اب جب کہ ہمیں معلوم ہے کہ $y = 3$ ہے، ہم قیمت درج کرنے کے طریقے (substitution method) کو استعمال کرتے ہوئے یہ قیمت پہلی مساوات میں رکھتے ہیں۔ اس سے صرف ایک نامعلوم متغیر باقی رہ جاتا ہے، جس سے ہم باآسانی $x = \\frac{1}{2}$ معلوم کر لیتے ہیں۔"
+  },
+  {
+   "en": "To be completely sure of our work, we substitute our found values $x = \\frac{1}{2}$ and $y = 3$ back into the original left-hand side. Since simplifying it gives $4+2i$, which matches the right-hand side, our solution is confirmed to be correct.",
+   "ur": "اپنے کام کے بالکل درست ہونے کا یقین کرنے کے لیے، ہم اپنی معلوم کردہ قیمتیں $x = \\frac{1}{2}$ اور $y = 3$ واپس اصل مساوات کی بائیں جانب میں درج کرتے ہیں۔ چونکہ اسے حل کرنے سے $4+2i$ آتا ہے جو کہ دائیں جانب کے برابر ہے، اس لیے تصدیق ہو جاتی ہے کہ ہمارا حل درست ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $x = \\frac{1}{2}$ and $y = 3$ gives the unique real numbers that make the complex product $(2x+iy)(1-i)$ equal to $4+2i$. As shown in the check step, putting $x = \\frac{1}{2}$ and $y = 3$ turns the first factor into $1+3i$, and multiplying $(1+3i)(1-i)$ indeed produces $4+2i$.",
+  "ur": "آخری جواب $x = \\frac{1}{2}$ اور $y = 3$ وہ منفرد حقیقی اعداد ہیں جو کمپلیکس حاصلِ ضرب $(2x+iy)(1-i)$ کو $4+2i$ کے برابر بناتے ہیں۔ جیسا کہ پڑتال (Check) کے مرحلے میں دکھایا گیا ہے، $x = \\frac{1}{2}$ اور $y = 3$ درج کرنے سے پہلا جزو ضربی $1+3i$ بن جاتا ہے، اور $(1+3i)(1-i)$ کو ضرب دینے سے واقعی $4+2i$ حاصل ہوتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

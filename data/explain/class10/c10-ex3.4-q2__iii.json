@@ -1,0 +1,70 @@
+{
+ "item": "c10-ex3.4-q2",
+ "label": "iii",
+ "answer_ref": "verified: both sides $= \\begin{bmatrix} 48 & 2 \\\\ 3 & 50 \\end{bmatrix}$",
+ "math": [
+  "",
+  "BC = \\begin{bmatrix} 2 & -1 \\\\ 0 & 3 \\end{bmatrix}\\begin{bmatrix} 5 & 1 \\\\ 1 & 4 \\end{bmatrix} = \\begin{bmatrix} (2)(5) + (-1)(1) & (2)(1) + (-1)(4) \\\\ (0)(5) + (3)(1) & (0)(1) + (3)(4) \\end{bmatrix}",
+  "= \\begin{bmatrix} 10 - 1 & 2 - 4 \\\\ 0 + 3 & 0 + 12 \\end{bmatrix} = \\begin{bmatrix} 9 & -2 \\\\ 3 & 12 \\end{bmatrix}",
+  "A(BC) = \\begin{bmatrix} 5 & 1 \\\\ -1 & 4 \\end{bmatrix}\\begin{bmatrix} 9 & -2 \\\\ 3 & 12 \\end{bmatrix} = \\begin{bmatrix} (5)(9) + (1)(3) & (5)(-2) + (1)(12) \\\\ (-1)(9) + (4)(3) & (-1)(-2) + (4)(12) \\end{bmatrix}",
+  "= \\begin{bmatrix} 45 + 3 & -10 + 12 \\\\ -9 + 12 & 2 + 48 \\end{bmatrix} = \\begin{bmatrix} 48 & 2 \\\\ 3 & 50 \\end{bmatrix}",
+  "",
+  "AB = \\begin{bmatrix} 5 & 1 \\\\ -1 & 4 \\end{bmatrix}\\begin{bmatrix} 2 & -1 \\\\ 0 & 3 \\end{bmatrix} = \\begin{bmatrix} (5)(2) + (1)(0) & (5)(-1) + (1)(3) \\\\ (-1)(2) + (4)(0) & (-1)(-1) + (4)(3) \\end{bmatrix}",
+  "= \\begin{bmatrix} 10 + 0 & -5 + 3 \\\\ -2 + 0 & 1 + 12 \\end{bmatrix} = \\begin{bmatrix} 10 & -2 \\\\ -2 & 13 \\end{bmatrix}",
+  "(AB)C = \\begin{bmatrix} 10 & -2 \\\\ -2 & 13 \\end{bmatrix}\\begin{bmatrix} 5 & 1 \\\\ 1 & 4 \\end{bmatrix} = \\begin{bmatrix} (10)(5) + (-2)(1) & (10)(1) + (-2)(4) \\\\ (-2)(5) + (13)(1) & (-2)(1) + (13)(4) \\end{bmatrix}",
+  "= \\begin{bmatrix} 50 - 2 & 10 - 8 \\\\ -10 + 13 & -2 + 52 \\end{bmatrix} = \\begin{bmatrix} 48 & 2 \\\\ 3 & 50 \\end{bmatrix}",
+  "A(BC) = \\begin{bmatrix} 48 & 2 \\\\ 3 & 50 \\end{bmatrix} = (AB)C"
+ ],
+ "why": [
+  {
+   "en": "To verify an equation, we must calculate both sides separately. We start with the Left-Hand Side, $A(BC)$, which tells us to multiply $B$ and $C$ first because they are inside the brackets.",
+   "ur": "مساوات کو ثابت کرنے کے لیے ہمیں دونوں اطراف کو الگ الگ حل کرنا ہوگا۔ ہم بائیں طرف یعنی $A(BC)$ سے شروع کرتے ہیں، جہاں بریکٹ کی وجہ سے ہمیں پہلے $B$ اور $C$ کو ضرب دینا ہے۔"
+  },
+  {
+   "en": "We apply the row-by-column rule of matrix multiplication to find $BC$. Because both are $2 \\times 2$ matrices, their product is defined and will give us a new $2 \\times 2$ matrix.",
+   "ur": "ہم $BC$ معلوم کرنے کے لیے قطار کو کالم سے ضرب دینے کا اصول استعمال کرتے ہیں۔ چونکہ دونوں کالب $2 \\times 2$ ہیں، اس لیے ان کی ضرب ممکن ہے اور نتیجہ بھی ایک $2 \\times 2$ کالب ہوگا۔"
+  },
+  {
+   "en": "Simplifying the arithmetic gives us the single matrix $BC = \\begin{bmatrix} 9 & -2 \\\\ 3 & 12 \\end{bmatrix}$. Now we are ready to multiply this result with matrix $A$ from the left.",
+   "ur": "حساب کتاب کو مختصر کرنے سے ہمیں کالب $BC = \\begin{bmatrix} 9 & -2 \\\\ 3 & 12 \\end{bmatrix}$ ملتا ہے۔ اب ہم اس نتیجے کو بائیں طرف سے کالب $A$ کے ساتھ ضرب دینے کے لیے تیار ہیں۔"
+  },
+  {
+   "en": "Now we multiply matrix $A$ by our newly found matrix $BC$, keeping $A$ on the left because matrix multiplication is not commutative (order matters). We again use the row-by-column multiplication rule.",
+   "ur": "اب ہم کالب $A$ کو نئے حاصل شدہ کالب $BC$ سے ضرب دیتے ہیں، اور $A$ کو بائیں طرف ہی رکھتے ہیں کیونکہ کالبوں کی ضرب میں ترتیب بہت اہم ہوتی ہے۔ ہم دوبارہ قطار کو کالم سے ضرب دینے کا اصول لگاتے ہیں۔"
+  },
+  {
+   "en": "Adding the products completes the Left-Hand Side, giving us $A(BC) = \\begin{bmatrix} 48 & 2 \\\\ 3 & 50 \\end{bmatrix}$. We will save this result to compare with the Right-Hand Side.",
+   "ur": "ان حاصل ضرب کو جمع کرنے سے بائیں طرف کا حل مکمل ہوتا ہے، جو کہ $A(BC) = \\begin{bmatrix} 48 & 2 \\\\ 3 & 50 \\end{bmatrix}$ ہے۔ ہم اس نتیجے کو دائیں طرف کے جواب سے ملانے کے لیے محفوظ کر لیتے ہیں۔"
+  },
+  {
+   "en": "Now we move to the Right-Hand Side, $(AB)C$. Here, the brackets instruct us to multiply matrices $A$ and $B$ first before involving $C$.",
+   "ur": "اب ہم دائیں طرف یعنی $(AB)C$ کو حل کرتے ہیں۔ یہاں بریکٹ ہمیں بتاتی ہے کہ $C$ کو شامل کرنے سے پہلے ہمیں کالب $A$ اور $B$ کو آپس میں ضرب دینا ہے۔"
+  },
+  {
+   "en": "We set up the row-by-column multiplication for $A$ and $B$. This step finds the intermediate product $AB$ that is inside the brackets.",
+   "ur": "ہم $A$ اور $B$ کے لیے قطار کو کالم سے ضرب دینے کا عمل ترتیب دیتے ہیں۔ یہ مرحلہ بریکٹ کے اندر موجود درمیانی حاصل ضرب $AB$ کو معلوم کرتا ہے۔"
+  },
+  {
+   "en": "Simplifying the numbers gives us the matrix $AB = \\begin{bmatrix} 10 & -2 \\\\ -2 & 13 \\end{bmatrix}$. We are now one multiplication away from completing the Right-Hand Side.",
+   "ur": "اعداد کو حل کرنے سے ہمیں کالب $AB = \\begin{bmatrix} 10 & -2 \\\\ -2 & 13 \\end{bmatrix}$ حاصل ہوتا ہے۔ اب ہم دائیں طرف کو مکمل کرنے سے صرف ایک ضرب کی دوری پر ہیں۔"
+  },
+  {
+   "en": "Next, we multiply our result $AB$ by matrix $C$ on the right, strictly following the order written in $(AB)C$. We apply the same row-by-column multiplication rule.",
+   "ur": "اس کے بعد، ہم اپنے نتیجے $AB$ کو دائیں طرف سے کالب $C$ کے ساتھ ضرب دیتے ہیں، اور $(AB)C$ میں دی گئی ترتیب کا پورا خیال رکھتے ہیں۔ ہم وہی قطار کو کالم سے ضرب دینے کا اصول استعمال کرتے ہیں۔"
+  },
+  {
+   "en": "Doing the final arithmetic gives us $(AB)C = \\begin{bmatrix} 48 & 2 \\\\ 3 & 50 \\end{bmatrix}$ for the Right-Hand Side. We can now compare this directly with our Left-Hand Side result from Step 5.",
+   "ur": "آخری حساب کتاب کرنے سے ہمیں دائیں طرف کے لیے $(AB)C = \\begin{bmatrix} 48 & 2 \\\\ 3 & 50 \\end{bmatrix}$ ملتا ہے۔ اب ہم اس کا براہِ راست موازنہ مرحلہ 5 میں حاصل کردہ بائیں طرف کے نتیجے سے کر سکتے ہیں۔"
+  },
+  {
+   "en": "Comparing Step 5 and Step 10, every corresponding entry in both matrices is identical. This proves that the Left-Hand Side equals the Right-Hand Side.",
+   "ur": "مرحلہ 5 اور مرحلہ 10 کا موازنہ کرنے سے معلوم ہوتا ہے کہ دونوں کالبوں کا ہر متناظرہ رکن بالکل برابر ہے۔ اس سے ثابت ہوتا ہے کہ بائیں طرف اور دائیں طرف آپس میں برابر ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "This verification confirms the Associative Law of Matrix Multiplication for the given matrices $A$, $B$, and $C$. It means that when multiplying three matrices together in the same order, it does not matter whether we group and multiply the first two ($AB$) or the last two ($BC$) first; both paths lead to the exact same matrix $\\begin{bmatrix} 48 & 2 \\\\ 3 & 50 \\end{bmatrix}$.",
+  "ur": "یہ تصدیق دیے گئے کالبوں $A$، $B$ اور $C$ کے لیے کالبوں کی ضرب کے قانونِ تلازم (Associative Law) کو ثابت کرتی ہے۔ اس کا مطلب یہ ہے کہ جب تین کالبوں کو ایک ہی ترتیب میں ضرب دیا جائے، تو اس سے کوئی فرق نہیں پڑتا کہ ہم پہلے دو کالبوں ($AB$) کو ضرب دیں یا آخری دو ($BC$) کو؛ دونوں صورتوں میں بالکل ایک ہی کالب $\\begin{bmatrix} 48 & 2 \\\\ 3 & 50 \\end{bmatrix}$ حاصل ہوتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

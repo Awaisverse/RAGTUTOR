@@ -1,0 +1,83 @@
+{
+ "item": "rev1-q3",
+ "label": "i",
+ "answer_ref": "Verified: $\\frac{67}{12} = \\frac{67}{12}$",
+ "steps": [
+  {
+   "math": "a = \\frac{4}{3}, \\quad b = \\frac{5}{2}, \\quad c = \\frac{7}{4}",
+   "en": "First, write down the given values of the real numbers $a$, $b$, and $c$.",
+   "ur": "سب سے پہلے، حقیقی اعداد $a$، $b$، اور $c$ کی دی گئی قیمتیں لکھیں۔",
+   "check": [
+    "R(4,3) == R(4,3)",
+    "R(5,2) == R(5,2)",
+    "R(7,4) == R(7,4)"
+   ]
+  },
+  {
+   "math": "a + (b + c) = (a + b) + c",
+   "en": "State the associative property of real numbers with respect to addition.",
+   "ur": "جمع کے لحاظ سے حقیقی اعداد کی خاصیتِ تلازم (associative property) لکھیں۔"
+  },
+  {
+   "math": "\\text{LHS} = a + (b + c) = \\frac{4}{3} + \\left(\\frac{5}{2} + \\frac{7}{4}\\right)",
+   "en": "Take the Left Hand Side (LHS) and substitute the given values of $a$, $b$, and $c$.",
+   "ur": "بائیں جانب (LHS) لیں اور $a$، $b$، اور $c$ کی دی گئی قیمتیں درج کریں۔",
+   "check": [
+    "R(4,3) + (R(5,2) + R(7,4)) == R(67,12)"
+   ]
+  },
+  {
+   "math": "\\text{LHS} = \\frac{4}{3} + \\left(\\frac{10 + 7}{4}\\right) = \\frac{4}{3} + \\frac{17}{4}",
+   "en": "First, solve the bracket by taking the LCM of $2$ and $4$, which is $4$.",
+   "ur": "پہلے $2$ اور $4$ کا ذواضعاف اقل (LCM) لے کر بریکٹ کو حل کریں، جو کہ $4$ ہے۔",
+   "check": [
+    "R(5,2) + R(7,4) == R(10+7,4)",
+    "R(10+7,4) == R(17,4)"
+   ]
+  },
+  {
+   "math": "\\text{LHS} = \\frac{16 + 51}{12} = \\frac{67}{12}",
+   "en": "Now, add the two fractions by taking the LCM of $3$ and $4$, which is $12$.",
+   "ur": "اب $3$ اور $4$ کا ذواضعاف اقل (LCM) لے کر دونوں کسروں کو جمع کریں، جو کہ $12$ ہے۔",
+   "check": [
+    "R(4,3) + R(17,4) == R(16+51,12)",
+    "R(16+51,12) == R(67,12)"
+   ]
+  },
+  {
+   "math": "\\text{RHS} = (a + b) + c = \\left(\\frac{4}{3} + \\frac{5}{2}\\right) + \\frac{7}{4}",
+   "en": "Now, take the Right Hand Side (RHS) and substitute the given values of $a$, $b$, and $c$.",
+   "ur": "اب دائیں جانب (RHS) لیں اور $a$، $b$، اور $c$ کی دی گئی قیمتیں درج کریں۔",
+   "check": [
+    "(R(4,3) + R(5,2)) + R(7,4) == R(67,12)"
+   ]
+  },
+  {
+   "math": "\\text{RHS} = \\left(\\frac{8 + 15}{6}\\right) + \\frac{7}{4} = \\frac{23}{6} + \\frac{7}{4} = \\frac{46 + 21}{12} = \\frac{67}{12}",
+   "en": "First solve the bracket using the LCM of $3$ and $2$ (which is $6$), then add $\\frac{7}{4}$ using the LCM of $6$ and $4$ (which is $12$).",
+   "ur": "پہلے $3$ اور $2$ کے ذواضعاف اقل ($6$) سے بریکٹ حل کریں، پھر $6$ اور $4$ کے ذواضعاف اقل ($12$) کو استعمال کرتے ہوئے اس میں $\\frac{7}{4}$ جمع کریں۔",
+   "check": [
+    "R(4,3) + R(5,2) == R(8+15,6)",
+    "R(8+15,6) == R(23,6)",
+    "R(23,6) + R(7,4) == R(46+21,12)",
+    "R(46+21,12) == R(67,12)"
+   ]
+  },
+  {
+   "math": "\\text{LHS} = \\text{RHS} \\implies \\frac{67}{12} = \\frac{67}{12}",
+   "en": "Since both sides give the same result, the associative property of addition is verified.",
+   "ur": "چونکہ دونوں اطراف کا جواب برابر ہے، اس لیے جمع کے لحاظ سے خاصیتِ تلازم کی تصدیق ہو گئی ہے۔",
+   "check": [
+    "R(67,12) == R(67,12)",
+    "Rational(5,2)+Rational(7,4) == Rational(17,4)",
+    "Rational(4,3)+Rational(17,4) == Rational(67,12)",
+    "Rational(4,3)+Rational(5,2) == Rational(23,6)",
+    "Rational(23,6)+Rational(7,4) == Rational(67,12)",
+    "Rational(67,12) == Rational(67,12)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

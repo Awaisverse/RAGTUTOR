@@ -1,0 +1,58 @@
+{
+ "item": "c10-ex3.2-q4",
+ "label": "",
+ "answer_ref": "$A^t = \\begin{bmatrix} 2 & 4 \\\\ 3 & 5 \\end{bmatrix}$; $B^t = \\begin{bmatrix} 3 & 7 & 6 \\end{bmatrix}$; $C^t = \\begin{bmatrix} 5 \\\\ -2 \\\\ 4 \\end{bmatrix}$; $D^t = \\begin{bmatrix} 2 & 3 & 4 \\\\ 5 & 6 & 7 \\end{bmatrix}$",
+ "steps": [
+  {
+   "math": "",
+   "en": "A matrix obtained by changing the rows into columns (or columns into rows) of a matrix $M$ is called the transpose of that matrix and is denoted by $M^t$.",
+   "ur": "کسی قالب $M$ کی قطاروں کو کالموں میں (یا کالموں کو قطاروں میں) تبدیل کرنے سے حاصل ہونے والے قالب کو اس قالب کا ٹرانسپوز (پلٹ) کہتے ہیں اور اسے $M^t$ سے ظاہر کیا جاتا ہے۔"
+  },
+  {
+   "math": "A = \\begin{bmatrix} 2 & 3 \\\\ 4 & 5 \\end{bmatrix} \\implies A^t = \\begin{bmatrix} 2 & 3 \\\\ 4 & 5 \\end{bmatrix}^t = \\begin{bmatrix} 2 & 4 \\\\ 3 & 5 \\end{bmatrix}",
+   "en": "For matrix $A$, change the first row $[2 \\quad 3]$ into the first column and the second row $[4 \\quad 5]$ into the second column to get $A^t$.",
+   "ur": "قالب $A$ کے لیے، پہلی قطار $[2 \\quad 3]$ کو پہلے کالم میں اور دوسری قطار $[4 \\quad 5]$ کو دوسرے کالم میں تبدیل کر کے $A^t$ حاصل کریں۔",
+   "check": [
+    "Eq(Matrix([[2, 3], [4, 5]]).T, Matrix([[2, 4], [3, 5]]))"
+   ]
+  },
+  {
+   "math": "B = \\begin{bmatrix} 3 \\\\ 7 \\\\ 6 \\end{bmatrix} \\implies B^t = \\begin{bmatrix} 3 \\\\ 7 \\\\ 6 \\end{bmatrix}^t = \\begin{bmatrix} 3 & 7 & 6 \\end{bmatrix}",
+   "en": "For the column matrix $B$, change its single column into a single row to get the row matrix $B^t$.",
+   "ur": "کالمی قالب $B$ کے لیے، اس کے واحد کالم کو ایک قطار میں تبدیل کر کے قطاری قالب $B^t$ حاصل کریں۔",
+   "check": [
+    "Eq(Matrix([[3], [7], [6]]).T, Matrix([[3, 7, 6]]))"
+   ]
+  },
+  {
+   "math": "C = \\begin{bmatrix} 5 & -2 & 4 \\end{bmatrix} \\implies C^t = \\begin{bmatrix} 5 & -2 & 4 \\end{bmatrix}^t = \\begin{bmatrix} 5 \\\\ -2 \\\\ 4 \\end{bmatrix}",
+   "en": "For the row matrix $C$, change its single row into a single column to get the column matrix $C^t$.",
+   "ur": "قطاری قالب $C$ کے لیے، اس کی واحد قطار کو ایک کالم میں تبدیل کر کے کالمی قالب $C^t$ حاصل کریں۔",
+   "check": [
+    "Eq(Matrix([[5, -2, 4]]).T, Matrix([[5], [-2], [4]]))"
+   ]
+  },
+  {
+   "math": "D = \\begin{bmatrix} 2 & 5 \\\\ 3 & 6 \\\\ 4 & 7 \\end{bmatrix} \\implies D^t = \\begin{bmatrix} 2 & 5 \\\\ 3 & 6 \\\\ 4 & 7 \\end{bmatrix}^t = \\begin{bmatrix} 2 & 3 & 4 \\\\ 5 & 6 & 7 \\end{bmatrix}",
+   "en": "For matrix $D$, change its three rows into three columns (or its two columns into two rows) to get $D^t$.",
+   "ur": "قالب $D$ کے لیے، اس کی تینوں قطاروں کو تین کالموں میں (یا اس کے دو کالموں کو دو قطاروں میں) تبدیل کر کے $D^t$ حاصل کریں۔",
+   "check": [
+    "Eq(Matrix([[2, 5], [3, 6], [4, 7]]).T, Matrix([[2, 3, 4], [5, 6, 7]]))"
+   ]
+  },
+  {
+   "math": "A^t = \\begin{bmatrix} 2 & 4 \\\\ 3 & 5 \\end{bmatrix}, \\quad B^t = \\begin{bmatrix} 3 & 7 & 6 \\end{bmatrix}, \\quad C^t = \\begin{bmatrix} 5 \\\\ -2 \\\\ 4 \\end{bmatrix}, \\quad D^t = \\begin{bmatrix} 2 & 3 & 4 \\\\ 5 & 6 & 7 \\end{bmatrix}",
+   "en": "Thus, we have found the transpose of each of the given matrices.",
+   "ur": "یوں، ہم نے دیے گئے تمام قالبوں کا ٹرانسپوز (پلٹ) معلوم کر لیا ہے۔",
+   "check": [
+    "Eq(Matrix([[2, 3], [4, 5]]).T, Matrix([[2, 4], [3, 5]]))",
+    "Eq(Matrix([[3], [7], [6]]).T, Matrix([[3, 7, 6]]))",
+    "Eq(Matrix([[5, -2, 4]]).T, Matrix([[5], [-2], [4]]))",
+    "Eq(Matrix([[2, 5], [3, 6], [4, 7]]).T, Matrix([[2, 3, 4], [5, 6, 7]]))"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

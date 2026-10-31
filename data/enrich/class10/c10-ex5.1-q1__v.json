@@ -1,0 +1,41 @@
+{
+ "item": "c10-ex5.1-q1",
+ "label": "v",
+ "answer_ref": "$\\frac{2 x - 3 y}{2 x}$",
+ "steps": [
+  {
+   "math": "\\frac{4 x^{2} - 9 y^{2}}{4 x^{2} + 6 x y}",
+   "en": "Write down the given rational expression to reduce it to its lowest form.",
+   "ur": "دیے گئے ناطق جملے کو اس کی مختصر ترین شکل میں تبدیل کرنے کے لیے لکھیں۔"
+  },
+  {
+   "math": "= \\frac{(2x)^2 - (3y)^2}{2x(2x + 3y)}",
+   "en": "Rewrite the numerator as a difference of two squares, and take $2x$ as a common factor from the denominator.",
+   "ur": "شمار کنندہ کو دو مربعات کے فرق کے طور پر لکھیں، اور مخرج سے $2x$ کو مشترک جزو ضربی کے طور پر باہر نکالیں۔",
+   "check": [
+    "((2*x)**2 - (3*y)**2)/(2*x*(2*x + 3*y)) == (4*x**2 - 9*y**2)/(4*x**2 + 6*x*y)"
+   ]
+  },
+  {
+   "math": "= \\frac{(2x - 3y)(2x + 3y)}{2x(2x + 3y)}",
+   "en": "Apply the algebraic identity $a^2 - b^2 = (a - b)(a + b)$ to factorize the numerator.",
+   "ur": "شمار کنندہ کی تجزی کرنے کے لیے الجبری کلیہ $a^2 - b^2 = (a - b)(a + b)$ استعمال کریں۔",
+   "check": [
+    "((2*x - 3*y)*(2*x + 3*y))/(2*x*(2*x + 3*y)) == (4*x**2 - 9*y**2)/(4*x**2 + 6*x*y)"
+   ]
+  },
+  {
+   "math": "= \\frac{2 x - 3 y}{2 x}",
+   "en": "Cancel out the common factor $(2x + 3y)$ from both the numerator and the denominator to get the final answer in its lowest form.",
+   "ur": "شمار کنندہ اور مخرج دونوں میں سے مشترک جزو $(2x + 3y)$ کو کاٹ دیں تاکہ مختصر ترین شکل میں حتمی جواب حاصل ہو سکے۔",
+   "check": [
+    "(2*x - 3*y)/(2*x) == (4*x**2 - 9*y**2)/(4*x**2 + 6*x*y)",
+    "((2*x - 3*y)*(2*x + 3*y))/(2*x*(2*x + 3*y)) == (4*x**2 - 9*y**2)/(4*x**2 + 6*x*y)",
+    "((2*x - 3*y)/(2*x)) == (4*x**2 - 9*y**2)/(4*x**2 + 6*x*y)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

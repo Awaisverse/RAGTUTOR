@@ -609,28 +609,52 @@
      "prompt": "$f(x)=\\frac{2}{x},\\ x\\ne 0;\\ g(x)=2x^2-1$: $(g\\circ g)(x)$",
      "steps": [
       {
-       "math": "(g\\circ g)(x) = g(g(x)) = g\\left(2 x^{2} - 1\\right)",
-       "en": "Put $g(x)$ in place of $x$ in $g$.",
-       "ur": "$g$ میں $x$ کی جگہ $g(x)$ رکھیں۔"
+       "math": "g(x) = 2x^{2} - 1",
+       "en": "Write down the given function $g(x)$ to find the composite function $(g\\circ g)(x)$.",
+       "ur": "مخلوط تفاعل $(g\\circ g)(x)$ معلوم کرنے کے لیے دیا گیا تفاعل $g(x)$ لکھیں۔"
       },
       {
-       "math": "= 2 \\left(2 x^{2} - 1\\right)^{2} - 1",
-       "en": "Substitute into $g(x) = 2 x^{2} - 1$.",
-       "ur": "$g(x) = 2 x^{2} - 1$ میں رکھیں۔",
+       "math": "(g\\circ g)(x) = g(g(x)) = g\\left(2x^{2} - 1\\right)",
+       "en": "By the definition of composition of functions, substitute $g(x) = 2x^{2} - 1$ inside the outer function $g$.",
+       "ur": "تفاعلات کی ترکیب کی تعریف کے مطابق، بیرونی تفاعل $g$ میں $g(x) = 2x^{2} - 1$ درج کریں۔"
+      },
+      {
+       "math": "= 2\\left(2x^{2} - 1\\right)^{2} - 1",
+       "en": "Replace $x$ with $2x^{2} - 1$ in the formula of $g(x) = 2x^{2} - 1$.",
+       "ur": "تفاعل $g(x) = 2x^{2} - 1$ میں $x$ کی جگہ $2x^{2} - 1$ رکھیں۔",
        "check": [
-        "(2*x**2 - 1).subs(x, (2*x**2 - 1)) == (2*(2*x**2 - 1)**2 - 1)"
+        "(2*x**2 - 1).subs(x, 2*x**2 - 1) == 2*(2*x**2 - 1)**2 - 1"
        ]
       },
       {
-       "math": "= 8 x^{4} - 8 x^{2} + 1",
-       "en": "Simplify.",
-       "ur": "سادہ کریں۔",
+       "math": "= 2\\left(4x^{4} - 4x^{2} + 1\\right) - 1",
+       "en": "Expand the square using the algebraic identity $(a - b)^{2} = a^{2} - 2ab + b^{2}$.",
+       "ur": "جبری کلیہ $(a - b)^{2} = a^{2} - 2ab + b^{2}$ کی مدد سے مربع کو کھولیں۔",
        "check": [
+        "(2*x**2 - 1)**2 == 4*x**4 - 4*x**2 + 1"
+       ]
+      },
+      {
+       "math": "= 8x^{4} - 8x^{2} + 2 - 1",
+       "en": "Multiply $2$ with each term inside the brackets.",
+       "ur": "بریکٹ کے اندر موجود ہر رقم کو $2$ سے ضرب دیں۔",
+       "check": [
+        "2*(4*x**4 - 4*x**2 + 1) - 1 == 8*x**4 - 8*x**2 + 2 - 1"
+       ]
+      },
+      {
+       "math": "(g\\circ g)(x) = 8 x^{4} - 8 x^{2} + 1",
+       "en": "Simplify the constant terms to get the final answer.",
+       "ur": "مستقل رقوم کو مختصر کر کے حتمی جواب حاصل کریں۔",
+       "check": [
+        "8*x**4 - 8*x**2 + 2 - 1 == 8*x**4 - 8*x**2 + 1",
+        "(2*x**2 - 1).subs(x, (2*x**2 - 1)) == (2*(2*x**2 - 1)**2 - 1)",
         "(2*(2*x**2 - 1)**2 - 1) == (8*x**4 - 8*x**2 + 1)"
        ]
       }
      ],
      "answer": "$8 x^{4} - 8 x^{2} + 1$",
+     "enriched": true,
      "book_key": "8x^4-8x^2+1"
     },
     {
@@ -788,28 +812,60 @@
      "prompt": "$f(x)=2x-1;\\ g(x)=\\frac{x+1}{2}$: $(g\\circ g)(x)$",
      "steps": [
       {
-       "math": "(g\\circ g)(x) = g(g(x)) = g\\left(\\frac{x}{2} + \\frac{1}{2}\\right)",
-       "en": "Put $g(x)$ in place of $x$ in $g$.",
-       "ur": "$g$ میں $x$ کی جگہ $g(x)$ رکھیں۔"
-      },
-      {
-       "math": "= \\frac{x}{4} + \\frac{3}{4}",
-       "en": "Substitute into $g(x) = \\frac{x}{2} + \\frac{1}{2}$.",
-       "ur": "$g(x) = \\frac{x}{2} + \\frac{1}{2}$ میں رکھیں۔",
+       "math": "g(x) = \\frac{x+1}{2}",
+       "en": "Write down the given function $g(x)$ to find $(g\\circ g)(x)$.",
+       "ur": "$(g\\circ g)(x)$ معلوم کرنے کے لیے دیا گیا فنکشن $g(x)$ لکھیں۔",
        "check": [
-        "(x/2 + 1/2).subs(x, (x/2 + 1/2)) == (x/4 + 3/4)"
+        "(x + 1)/2 == (x + 1)/2"
        ]
       },
       {
-       "math": "= \\frac{x + 3}{4}",
-       "en": "Simplify.",
-       "ur": "سادہ کریں۔",
+       "math": "(g\\circ g)(x) = g(g(x))",
+       "en": "By the definition of composition of functions, $(g\\circ g)(x)$ means applying the function $g$ to $g(x)$ itself.",
+       "ur": "تفاعل کی ترکیب (composition of functions) کی تعریف کے مطابق، $(g\\circ g)(x)$ کا مطلب فنکشن $g$ کو خود $g(x)$ پر لاگو کرنا ہے۔"
+      },
+      {
+       "math": "(g\\circ g)(x) = g\\left(\\frac{x+1}{2}\\right)",
+       "en": "Substitute the value of the inner function $g(x) = \\frac{x+1}{2}$ inside the outer function $g$.",
+       "ur": "اندرونی فنکشن $g(x) = \\frac{x+1}{2}$ کی قیمت بیرونی فنکشن $g$ میں درج کریں۔"
+      },
+      {
+       "math": "(g\\circ g)(x) = \\frac{\\left(\\frac{x+1}{2}\\right) + 1}{2}",
+       "en": "Now, replace $x$ with $\\frac{x+1}{2}$ in the formula $g(x) = \\frac{x+1}{2}$.",
+       "ur": "اب، فارمولے $g(x) = \\frac{x+1}{2}$ میں $x$ کی جگہ $\\frac{x+1}{2}$ رکھیں۔",
        "check": [
+        "((x + 1)/2).subs(x, (x + 1)/2) == (((x + 1)/2) + 1)/2"
+       ]
+      },
+      {
+       "math": "(g\\circ g)(x) = \\frac{\\frac{x+1+2}{2}}{2}",
+       "en": "Take the LCM of the numerator to combine the fraction $\\frac{x+1}{2}$ and $1$.",
+       "ur": "کسر $\\frac{x+1}{2}$ اور $1$ کو جمع کرنے کے لیے شمار کنندہ (numerator) کا ذواضعاف اقل (LCM) لیں۔",
+       "check": [
+        "(((x + 1)/2) + 1)/2 == ((x + 1 + 2)/2)/2"
+       ]
+      },
+      {
+       "math": "(g\\circ g)(x) = \\frac{\\frac{x+3}{2}}{2}",
+       "en": "Add the constants $1$ and $2$ in the numerator.",
+       "ur": "شمار کنندہ میں مستقل اعداد $1$ اور $2$ کو جمع کریں۔",
+       "check": [
+        "((x + 1 + 2)/2)/2 == ((x + 3)/2)/2"
+       ]
+      },
+      {
+       "math": "(g\\circ g)(x) = \\frac{x + 3}{4}",
+       "en": "Simplify the complex fraction by multiplying the denominators $2$ and $2$ to get the final answer.",
+       "ur": "مخرج (denominators) $2$ اور $2$ کو ضرب دے کر پیچیدہ کسر کو سادہ کریں تاکہ حتمی جواب حاصل ہو سکے۔",
+       "check": [
+        "((x + 3)/2)/2 == (x + 3)/4",
+        "(x/2 + 1/2).subs(x, (x/2 + 1/2)) == (x/4 + 3/4)",
         "(x/4 + 3/4) == ((x + 3)/4)"
        ]
       }
      ],
      "answer": "$\\frac{x + 3}{4}$",
+     "enriched": true,
      "book_key": "\\frac{x+3}{4}"
     }
    ],
@@ -827,36 +883,64 @@
      "prompt": "",
      "steps": [
       {
-       "math": "(f\\circ g)(x) = f(6x - k) = 3(6x - k) + 2 = 18x - 3k + 2",
-       "en": "Put $g(x)$ in $f$.",
-       "ur": "$g(x)$ کو $f$ میں رکھیں۔",
+       "math": "f(x) = 3x + 2, \\quad g(x) = 6x - k",
+       "en": "First, write down the given functions $f(x)$ and $g(x)$.",
+       "ur": "سب سے پہلے، دیے گئے فنکشنز $f(x)$ اور $g(x)$ لکھیں۔"
+      },
+      {
+       "math": "(f \\circ g)(x) = f(g(x)) = f(6x - k)",
+       "en": "By the definition of composite functions, $(f \\circ g)(x) = f(g(x))$. Substitute $g(x) = 6x - k$ into $f$.",
+       "ur": "مخلوط فنکشنز (composite functions) کی تعریف کے مطابق، $(f \\circ g)(x) = f(g(x))$ ہوتا ہے۔ $g(x) = 6x - k$ کی قیمت $f$ میں درج کریں۔"
+      },
+      {
+       "math": "(f \\circ g)(x) = 3(6x - k) + 2 = 18x - 3k + 2",
+       "en": "Replace $x$ with $(6x - k)$ in the function $f(x) = 3x + 2$ and simplify by multiplying.",
+       "ur": "فنکشن $f(x) = 3x + 2$ میں $x$ کی جگہ $(6x - k)$ رکھیں اور ضرب دے کر مختصر کریں۔",
        "check": [
         "3*(6*x - k) + 2 == 18*x - 3*k + 2"
        ]
       },
       {
-       "math": "(g\\circ f)(x) = g(3x + 2) = 6(3x + 2) - k = 18x + 12 - k",
-       "en": "Put $f(x)$ in $g$.",
-       "ur": "$f(x)$ کو $g$ میں رکھیں۔",
+       "math": "(g \\circ f)(x) = g(f(x)) = g(3x + 2)",
+       "en": "Similarly, to find $(g \\circ f)(x)$, substitute $f(x) = 3x + 2$ into $g(f(x))$.",
+       "ur": "اسی طرح، $(g \\circ f)(x)$ معلوم کرنے کے لیے، $g(f(x))$ میں $f(x) = 3x + 2$ درج کریں۔"
+      },
+      {
+       "math": "(g \\circ f)(x) = 6(3x + 2) - k = 18x + 12 - k",
+       "en": "Replace $x$ with $(3x + 2)$ in the function $g(x) = 6x - k$ and simplify.",
+       "ur": "فنکشن $g(x) = 6x - k$ میں $x$ کی جگہ $(3x + 2)$ رکھیں اور مختصر کریں۔",
        "check": [
         "6*(3*x + 2) - k == 18*x + 12 - k"
        ]
       },
       {
-       "math": "18x - 3k + 2 = 18x + 12 - k \\Rightarrow -2k = 10",
-       "en": "Equate the two and cancel $18x$.",
-       "ur": "دونوں کو برابر کر کے $18x$ کاٹ دیں۔"
+       "math": "18x - 3k + 2 = 18x + 12 - k",
+       "en": "According to the given condition, $(f \\circ g)(x) = (g \\circ f)(x)$. Equate both expressions.",
+       "ur": "دی گئی شرط کے مطابق، $(f \\circ g)(x) = (g \\circ f)(x)$ ہے۔ دونوں عبارتوں کو برابر رکھیں۔"
       },
       {
-       "math": "k = -5",
-       "en": "Divide by $-2$.",
-       "ur": "$-2$ سے تقسیم کریں۔",
+       "math": "-3k + k = 12 - 2 \\implies -2k = 10",
+       "en": "Cancel $18x$ from both sides, then collect the $k$ terms on the left side and constant terms on the right side.",
+       "ur": "دونوں طرف سے $18x$ کو کینسل کریں، پھر $k$ والی رقموں کو بائیں طرف اور مستقل مزاج (constants) کو دائیں طرف جمع کریں۔",
        "check": [
-        "(3*(6*x - k) + 2 - (6*(3*x + 2) - k)).subs(k, -5) == 0"
+        "-3*k + k == -2*k",
+        "12 - 2 == 10"
+       ]
+      },
+      {
+       "math": "k = \\frac{10}{-2} = -5",
+       "en": "Divide both sides by $-2$ to find the value of $k$. Thus, the required value is $k = -5$.",
+       "ur": "$k$ کی قیمت معلوم کرنے کے لیے دونوں طرف $-2$ سے تقسیم کریں۔ اس طرح، مطلوبہ قیمت $k = -5$ ہے۔",
+       "check": [
+        "10 / (-2) == -5",
+        "(3*(6*x - k) + 2 - (6*(3*x + 2) - k)).subs(k, -5) == 0",
+        "3*(6*x - k) + 2 == 18*x - 3*k + 2",
+        "6*(3*x + 2) - k == 18*x + 12 - k"
        ]
       }
      ],
      "answer": "$k = -5$",
+     "enriched": true,
      "book_key": "k=-5"
     }
    ],
@@ -1050,30 +1134,48 @@
      "prompt": "$f(x)=2x-3$",
      "steps": [
       {
-       "math": "y = 2 x - 3",
-       "en": "Write $y = f(x)$.",
-       "ur": "$y = f(x)$ لکھیں۔"
+       "math": "f(x) = 2x - 3",
+       "en": "Write down the given function.",
+       "ur": "دیا گیا تفاعل لکھیں۔"
       },
       {
-       "math": "2x = y + 3",
-       "en": "Make $x$ the subject.",
-       "ur": "$x$ کو موضوع بنائیں۔"
+       "math": "y = 2x - 3",
+       "en": "Let $y = f(x)$, which implies $x = f^{-1}(y)$.",
+       "ur": "فرض کریں $y = f(x)$ ہے، جس سے $x = f^{-1}(y)$ حاصل ہوتا ہے۔"
+      },
+      {
+       "math": "y + 3 = 2x",
+       "en": "Add $3$ to both sides of the equation to isolate the term with $x$.",
+       "ur": "$x$ والی رقم کو الگ کرنے کے لیے مساوات کے دونوں اطراف میں $3$ جمع کریں۔",
+       "check": [
+        "((2*x - 3) + 3) == 2*x"
+       ]
       },
       {
        "math": "x = \\frac{y + 3}{2}",
-       "en": "Make $x$ the subject.",
-       "ur": "$x$ کو موضوع بنائیں۔"
+       "en": "Divide both sides by $2$ to make $x$ the subject.",
+       "ur": "$x$ کو موضوع بنانے کے لیے دونوں اطراف کو $2$ سے تقسیم کریں۔",
+       "check": [
+        "(2*x)/2 == x"
+       ]
+      },
+      {
+       "math": "f^{-1}(y) = \\frac{y + 3}{2}",
+       "en": "Substitute $x = f^{-1}(y)$ into the equation.",
+       "ur": "مساوات میں $x = f^{-1}(y)$ درج کریں۔"
       },
       {
        "math": "f^{-1}(x) = \\frac{x + 3}{2}",
-       "en": "Replace $y$ by $x$ to write the inverse function.",
-       "ur": "معکوس تفاعل لکھنے کے لیے $y$ کی جگہ $x$ لکھیں۔",
+       "en": "Replace $y$ with $x$ to get the required inverse function $f^{-1}(x)$.",
+       "ur": "مطلوبہ معکوس تفاعل $f^{-1}(x)$ حاصل کرنے کے لیے $y$ کی جگہ $x$ لکھیں۔",
        "check": [
+        "simplify((2*x - 3).subs(x, (x + 3)/2)) == x",
         "simplify((2*x - 3).subs(x, ((x + 3)/2))) == x"
        ]
       }
      ],
      "answer": "$f^{-1}(x) = \\frac{x + 3}{2}$",
+     "enriched": true,
      "book_key": "f^{-1}(x)=\\frac{x+3}{2}"
     },
     {
@@ -1117,30 +1219,47 @@
      "prompt": "$f(x)=\\sqrt{x-1},\\ x\\ge1$",
      "steps": [
       {
+       "math": "f(x) = \\sqrt{x - 1}, \\quad x \\ge 1",
+       "en": "Write the given function. We need to find its inverse function $f^{-1}(x)$.",
+       "ur": "دیا گیا تفاعل لکھیں۔ ہمیں اس کا معکوس تفاعل $f^{-1}(x)$ معلوم کرنا ہے۔"
+      },
+      {
        "math": "y = \\sqrt{x - 1}",
-       "en": "Write $y = f(x)$.",
-       "ur": "$y = f(x)$ لکھیں۔"
+       "en": "Let $y = f(x)$, which implies $x = f^{-1}(y)$. Since $y$ is a square root and $x \\ge 1$, the range is $y \\ge 0$.",
+       "ur": "فرض کریں $y = f(x)$ ہے، جس کا مطلب $x = f^{-1}(y)$ ہے۔ چونکہ $y$ جزر ہے اور $x \\ge 1$ ہے، اس لیے $y \\ge 0$ ہے۔"
+      },
+      {
+       "math": "y^2 = \\left(\\sqrt{x - 1}\\right)^2",
+       "en": "To make $x$ the subject, square both sides of the equation.",
+       "ur": "$x$ کو موضوع بنانے کے لیے، مساوات کے دونوں اطراف کا مربع لیں۔"
       },
       {
        "math": "y^2 = x - 1",
-       "en": "Make $x$ the subject.",
-       "ur": "$x$ کو موضوع بنائیں۔"
+       "en": "Simplify the right-hand side as the square and the square root cancel each other.",
+       "ur": "دائیں جانب کو مختصر کریں کیونکہ مربع اور جزر ایک دوسرے کو زائل کر دیتے ہیں۔"
       },
       {
        "math": "x = y^2 + 1",
-       "en": "Make $x$ the subject.",
-       "ur": "$x$ کو موضوع بنائیں۔"
+       "en": "Add $1$ to both sides to isolate $x$ in terms of $y$.",
+       "ur": "$x$ کو $y$ کی شکل میں الگ کرنے کے لیے دونوں اطراف میں $1$ جمع کریں۔"
       },
       {
-       "math": "f^{-1}(x) = x^{2} + 1,\\quad x \\ge 0",
-       "en": "Replace $y$ by $x$ to write the inverse function.",
-       "ur": "معکوس تفاعل لکھنے کے لیے $y$ کی جگہ $x$ لکھیں۔",
+       "math": "f^{-1}(y) = y^2 + 1, \\quad y \\ge 0",
+       "en": "Substitute $x = f^{-1}(y)$ into the equation.",
+       "ur": "مساوات میں $x = f^{-1}(y)$ درج کریں۔"
+      },
+      {
+       "math": "f^{-1}(x) = x^{2} + 1, \\quad x \\ge 0",
+       "en": "Replace the variable $y$ by $x$ to write the required inverse function, keeping the domain restriction $x \\ge 0$ (from $y \\ge 0$).",
+       "ur": "مطلوبہ معکوس تفاعل لکھنے کے لیے متغیر $y$ کی جگہ $x$ لکھیں، اور ڈومین کی شرط $x \\ge 0$ ($y \\ge 0$ سے) برقرار رکھیں۔",
        "check": [
+        "simplify((x**2 + 1).subs(x, sqrt(x - 1))) == x",
         "simplify((x**2 + 1).subs(x, (sqrt(x - 1)))) == x"
        ]
       }
      ],
      "answer": "$f^{-1}(x) = x^{2} + 1$, $x \\ge 0$",
+     "enriched": true,
      "book_key": "f^{-1}(x)=x^2+1, x\\ge 0"
     },
     {
@@ -1243,28 +1362,64 @@
      "prompt": "Find $x$ if $f^{-1}(x)=g^{-1}(x)$.",
      "steps": [
       {
-       "math": "\\frac{x - 2}{4} = \\frac{x + 18}{6}",
-       "en": "Equate the two inverses.",
-       "ur": "دونوں معکوس برابر کریں۔"
-      },
-      {
-       "math": "6(x - 2) = 4(x + 18) \\Rightarrow 6x - 12 = 4x + 72",
-       "en": "Cross-multiply.",
-       "ur": "کراس ضرب دیں۔",
+       "math": "f^{-1}(x) = \\frac{x - 2}{4}, \\quad g^{-1}(x) = \\frac{x + 18}{6}",
+       "en": "From part (i), we have the inverse functions $f^{-1}(x)$ and $g^{-1}(x)$.",
+       "ur": "حصہ (i) سے، ہمارے پاس معکوس تفاعل $f^{-1}(x)$ اور $g^{-1}(x)$ موجود ہیں۔",
        "check": [
-        "6*(x - 2) - 4*(x + 18) == 2*x - 84"
+        "4*((x - 2)/4) + 2 == x",
+        "6*((x + 18)/6) - 18 == x"
        ]
       },
       {
-       "math": "2x = 84 \\Rightarrow x = 42",
-       "en": "Solve.",
-       "ur": "حل کریں۔",
+       "math": "f^{-1}(x) = g^{-1}(x)",
+       "en": "We are given that the two inverse functions are equal, and we need to find the value of $x$.",
+       "ur": "ہمیں دیا گیا ہے کہ دونوں معکوس تفاعل آپس میں برابر ہیں، اور ہمیں $x$ کی قیمت معلوم کرنی ہے۔"
+      },
+      {
+       "math": "\\frac{x - 2}{4} = \\frac{x + 18}{6}",
+       "en": "Substitute the expressions for $f^{-1}(x)$ and $g^{-1}(x)$ into the equation.",
+       "ur": "مساوات میں $f^{-1}(x)$ اور $g^{-1}(x)$ کی قیمتیں درج کریں۔"
+      },
+      {
+       "math": "6(x - 2) = 4(x + 18)",
+       "en": "Cross-multiply to eliminate the denominators.",
+       "ur": "مخرج (denominators) کو ختم کرنے کے لیے چلیپائی ضرب (cross-multiply) دیں۔",
        "check": [
-        "(42 - 2)/4 == (42 + 18)/6"
+        "((x - 2)/4)*24 == 6*(x - 2)",
+        "((x + 18)/6)*24 == 4*(x + 18)"
+       ]
+      },
+      {
+       "math": "6x - 12 = 4x + 72",
+       "en": "Expand the brackets on both sides of the equation.",
+       "ur": "مساوات کے دونوں اطراف بریکٹ کھولیں۔",
+       "check": [
+        "6*(x - 2) == 6*x - 12",
+        "4*(x + 18) == 4*x + 72"
+       ]
+      },
+      {
+       "math": "6x - 4x = 72 + 12 \\Rightarrow 2x = 84",
+       "en": "Collect the $x$ terms on the left side and the constant terms on the right side, then simplify.",
+       "ur": "$x$ والی رقوم کو بائیں طرف اور مستقل رقوم (constants) کو دائیں طرف اکٹھا کریں، پھر مختصر کریں۔",
+       "check": [
+        "6*x - 4*x == 2*x",
+        "72 + 12 == 84"
+       ]
+      },
+      {
+       "math": "x = \\frac{84}{2} \\Rightarrow x = 42",
+       "en": "Divide both sides by $2$ to get the final value of $x$.",
+       "ur": "$x$ کی حتمی قیمت حاصل کرنے کے لیے دونوں اطراف کو $2$ سے تقسیم کریں۔",
+       "check": [
+        "84/2 == 42",
+        "(42 - 2)/4 == (42 + 18)/6",
+        "6*(x - 2) - 4*(x + 18) == 2*x - 84"
        ]
       }
      ],
      "answer": "$x = 42$",
+     "enriched": true,
      "book_key": "x=42"
     }
    ],
@@ -1282,28 +1437,53 @@
      "prompt": "$f(x)=x-6$",
      "steps": [
       {
-       "math": "f^{-1}(x) = x + 6",
-       "en": "First find the inverse function.",
-       "ur": "پہلے معکوس تفاعل معلوم کریں۔"
+       "math": "f(x) = x - 6",
+       "en": "Write the given function. We need to find $f^{-1}(x)$ and then verify that $f(f^{-1}(x)) = f^{-1}(f(x)) = x$.",
+       "ur": "دیا گیا تفاعل لکھیں۔ ہمیں $f^{-1}(x)$ معلوم کرنا ہے اور پھر تصدیق کرنی ہے کہ $f(f^{-1}(x)) = f^{-1}(f(x)) = x$ ہے۔"
       },
       {
-       "math": "f(f^{-1}(x)) = f\\left(x + 6\\right) = x = x",
-       "en": "Put $f^{-1}(x)$ in $f$ and simplify.",
-       "ur": "$f^{-1}(x)$ کو $f$ میں رکھ کر سادہ کریں۔",
+       "math": "y = x - 6",
+       "en": "Let $y = f(x)$, which implies $x = f^{-1}(y)$.",
+       "ur": "فرض کریں کہ $y = f(x)$ ہے، جس سے ظاہر ہوتا ہے کہ $x = f^{-1}(y)$ ہے۔"
+      },
+      {
+       "math": "x = y + 6 \\implies f^{-1}(y) = y + 6",
+       "en": "Solve the equation for $x$ in terms of $y$, and substitute $x = f^{-1}(y)$.",
+       "ur": "مساوات کو $y$ کے لحاظ سے $x$ کے لیے حل کریں، اور $x = f^{-1}(y)$ درج کریں۔"
+      },
+      {
+       "math": "f^{-1}(x) = x + 6",
+       "en": "Replace $y$ with $x$ to get the inverse function $f^{-1}(x)$.",
+       "ur": "معکوس تفاعل $f^{-1}(x)$ حاصل کرنے کے لیے $y$ کو $x$ سے بدل دیں۔"
+      },
+      {
+       "math": "f(f^{-1}(x)) = f(x + 6) = (x + 6) - 6 = x",
+       "en": "Now, substitute $f^{-1}(x) = x + 6$ into the function $f(x) = x - 6$ and simplify.",
+       "ur": "اب، تفاعل $f(x) = x - 6$ میں $f^{-1}(x) = x + 6$ درج کریں اور مختصر کریں۔",
        "check": [
-        "simplify((x - 6).subs(x, (x + 6))) == x"
+        "simplify((x + 6) - 6) == x"
        ]
       },
       {
-       "math": "f^{-1}(f(x)) = f^{-1}\\left(x - 6\\right) = x = x",
-       "en": "Put $f(x)$ in $f^{-1}$ and simplify.",
-       "ur": "$f(x)$ کو $f^{-1}$ میں رکھ کر سادہ کریں۔",
+       "math": "f^{-1}(f(x)) = f^{-1}(x - 6) = (x - 6) + 6 = x",
+       "en": "Next, substitute $f(x) = x - 6$ into the inverse function $f^{-1}(x) = x + 6$ and simplify.",
+       "ur": "اس کے بعد، معکوس تفاعل $f^{-1}(x) = x + 6$ میں $f(x) = x - 6$ درج کریں اور مختصر کریں۔",
        "check": [
+        "simplify((x - 6) + 6) == x"
+       ]
+      },
+      {
+       "math": "f(f^{-1}(x)) = f^{-1}(f(x)) = x",
+       "en": "From both results, the required identity is verified.",
+       "ur": "دونوں نتائج سے، مطلوبہ مساوات کی تصدیق ہوتی ہے۔",
+       "check": [
+        "simplify((x - 6).subs(x, (x + 6))) == x",
         "simplify((x + 6).subs(x, (x - 6))) == x"
        ]
       }
      ],
      "answer": "verified: $f(f^{-1}(x)) = f^{-1}(f(x)) = x$",
+     "enriched": true,
      "book_key": "verified: f(f^{-1}(x))=f^{-1}(f(x))=x"
     },
     {
@@ -1311,28 +1491,61 @@
      "prompt": "$f(x)=7x-4$",
      "steps": [
       {
-       "math": "f^{-1}(x) = \\frac{x}{7} + \\frac{4}{7}",
-       "en": "First find the inverse function.",
-       "ur": "پہلے معکوس تفاعل معلوم کریں۔"
+       "math": "f(x) = 7x - 4",
+       "en": "Write down the given function. We need to find its inverse $f^{-1}(x)$ and verify that $f(f^{-1}(x)) = f^{-1}(f(x)) = x$.",
+       "ur": "دیا گیا تفاعل لکھیں۔ ہمیں اس کا معکوس تفاعل $f^{-1}(x)$ معلوم کرنا ہے اور تصدیق کرنی ہے کہ $f(f^{-1}(x)) = f^{-1}(f(x)) = x$ ہے۔"
       },
       {
-       "math": "f(f^{-1}(x)) = f\\left(\\frac{x}{7} + \\frac{4}{7}\\right) = x = x",
-       "en": "Put $f^{-1}(x)$ in $f$ and simplify.",
-       "ur": "$f^{-1}(x)$ کو $f$ میں رکھ کر سادہ کریں۔",
+       "math": "y = 7x - 4 \\implies x = f^{-1}(y)",
+       "en": "To find the inverse function, let $y = f(x)$, which implies $x = f^{-1}(y)$.",
+       "ur": "معکوس تفاعل معلوم کرنے کے لیے فرض کریں کہ $y = f(x)$ ہے، جس سے $x = f^{-1}(y)$ حاصل ہوتا ہے۔"
+      },
+      {
+       "math": "7x = y + 4 \\implies x = \\frac{y + 4}{7}",
+       "en": "Solve the equation $y = 7x - 4$ for $x$ in terms of $y$.",
+       "ur": "مساوات $y = 7x - 4$ کو $x$ کی قیمت $y$ کی شکل میں معلوم کرنے کے لیے حل کریں۔",
        "check": [
-        "simplify((7*x - 4).subs(x, (x/7 + 4/7))) == x"
+        "solve(y - (7*x - 4), x)[0] == (y + 4)/7"
        ]
       },
       {
-       "math": "f^{-1}(f(x)) = f^{-1}\\left(7 x - 4\\right) = x = x",
-       "en": "Put $f(x)$ in $f^{-1}$ and simplify.",
-       "ur": "$f(x)$ کو $f^{-1}$ میں رکھ کر سادہ کریں۔",
+       "math": "f^{-1}(y) = \\frac{y + 4}{7} \\implies f^{-1}(x) = \\frac{x + 4}{7}",
+       "en": "Substitute $x = f^{-1}(y)$ and then replace $y$ with $x$ to get the inverse function $f^{-1}(x)$.",
+       "ur": "$x = f^{-1}(y)$ درج کریں اور پھر معکوس تفاعل $f^{-1}(x)$ حاصل کرنے کے لیے $y$ کو $x$ سے بدل دیں۔",
        "check": [
+        "(x + 4)/7 == x/7 + R(4,7)"
+       ]
+      },
+      {
+       "math": "f(f^{-1}(x)) = f\\left(\\frac{x + 4}{7}\\right) = 7\\left(\\frac{x + 4}{7}\\right) - 4 = (x + 4) - 4 = x",
+       "en": "Now, verify the first part by substituting $f^{-1}(x)$ into the function $f(x)$ and simplifying.",
+       "ur": "اب، تفاعل $f(x)$ میں $f^{-1}(x)$ کی قیمت درج کر کے اور مختصر کر کے پہلے حصے کی تصدیق کریں۔",
+       "check": [
+        "7*((x + 4)/7) - 4 == x + 4 - 4",
+        "x + 4 - 4 == x"
+       ]
+      },
+      {
+       "math": "f^{-1}(f(x)) = f^{-1}(7x - 4) = \\frac{(7x - 4) + 4}{7} = \\frac{7x}{7} = x",
+       "en": "Next, verify the second part by substituting $f(x)$ into the inverse function $f^{-1}(x)$ and simplifying.",
+       "ur": "اس کے بعد، معکوس تفاعل $f^{-1}(x)$ میں $f(x)$ کی قیمت درج کر کے اور مختصر کر کے دوسرے حصے کی تصدیق کریں۔",
+       "check": [
+        "((7*x - 4) + 4)/7 == (7*x)/7",
+        "(7*x)/7 == x"
+       ]
+      },
+      {
+       "math": "f(f^{-1}(x)) = f^{-1}(f(x)) = x",
+       "en": "From both results, the required identity is verified.",
+       "ur": "دونوں نتائج سے مطلوبہ مساوات کی تصدیق ہو جاتی ہے۔",
+       "check": [
+        "simplify((7*x - 4).subs(x, (x/7 + 4/7))) == x",
         "simplify((x/7 + 4/7).subs(x, (7*x - 4))) == x"
        ]
       }
      ],
      "answer": "verified: $f(f^{-1}(x)) = f^{-1}(f(x)) = x$",
+     "enriched": true,
      "book_key": "verified: f(f^{-1}(x))=f^{-1}(f(x))=x"
     },
     {
@@ -1340,28 +1553,54 @@
      "prompt": "$f(x)=\\frac{x-3}{4}$",
      "steps": [
       {
-       "math": "f^{-1}(x) = 4 x + 3",
-       "en": "First find the inverse function.",
-       "ur": "پہلے معکوس تفاعل معلوم کریں۔"
+       "math": "y = \\frac{x-3}{4}",
+       "en": "We are given the function $f(x) = \\frac{x-3}{4}$. To find its inverse $f^{-1}(x)$, first let $y = f(x)$, which implies $x = f^{-1}(y)$.",
+       "ur": "ہمیں تفاعل $f(x) = \\frac{x-3}{4}$ دیا گیا ہے۔ اس کا معکوس تفاعل $f^{-1}(x)$ معلوم کرنے کے لیے، پہلے فرض کریں کہ $y = f(x)$ ہے، جس سے مراد $x = f^{-1}(y)$ ہے۔"
       },
       {
-       "math": "f(f^{-1}(x)) = f\\left(4 x + 3\\right) = x = x",
-       "en": "Put $f^{-1}(x)$ in $f$ and simplify.",
-       "ur": "$f^{-1}(x)$ کو $f$ میں رکھ کر سادہ کریں۔",
+       "math": "x = 4y + 3",
+       "en": "Multiply both sides by $4$ to get $4y = x - 3$, and then add $3$ to both sides to express $x$ in terms of $y$.",
+       "ur": "دونوں اطراف کو $4$ سے ضرب دے کر $4y = x - 3$ حاصل کریں، اور پھر $x$ کو $y$ کی شکل میں ظاہر کرنے کے لیے دونوں اطراف میں $3$ جمع کریں۔",
        "check": [
-        "simplify((x/4 - 3/4).subs(x, (4*x + 3))) == x"
+        "solve(Eq(y, (x - 3)/4), x)[0] == 4*y + 3"
        ]
       },
       {
-       "math": "f^{-1}(f(x)) = f^{-1}\\left(\\frac{x}{4} - \\frac{3}{4}\\right) = x = x",
-       "en": "Put $f(x)$ in $f^{-1}$ and simplify.",
-       "ur": "$f(x)$ کو $f^{-1}$ میں رکھ کر سادہ کریں۔",
+       "math": "f^{-1}(x) = 4x + 3",
+       "en": "Since $x = f^{-1}(y)$, we have $f^{-1}(y) = 4y + 3$. Replacing $y$ with $x$ gives the inverse function $f^{-1}(x)$.",
+       "ur": "چونکہ $x = f^{-1}(y)$ ہے، اس لیے ہمیں $f^{-1}(y) = 4y + 3$ حاصل ہوتا ہے۔ $y$ کی جگہ $x$ رکھنے سے معکوس تفاعل $f^{-1}(x)$ ملتا ہے۔",
        "check": [
+        "(4*y + 3).subs(y, x) == 4*x + 3"
+       ]
+      },
+      {
+       "math": "f(f^{-1}(x)) = f(4x + 3) = \\frac{(4x + 3) - 3}{4} = \\frac{4x}{4} = x",
+       "en": "Now, substitute $f^{-1}(x) = 4x + 3$ into the original function $f(x)$ and simplify.",
+       "ur": "اب، $f^{-1}(x) = 4x + 3$ کو اصل تفاعل $f(x)$ میں درج کریں اور مختصر کریں۔",
+       "check": [
+        "simplify(((4*x + 3) - 3)/4) == x"
+       ]
+      },
+      {
+       "math": "f^{-1}(f(x)) = f^{-1}\\left(\\frac{x-3}{4}\\right) = 4\\left(\\frac{x-3}{4}\\right) + 3 = (x - 3) + 3 = x",
+       "en": "Next, substitute $f(x) = \\frac{x-3}{4}$ into the inverse function $f^{-1}(x)$ and simplify.",
+       "ur": "اس کے بعد، $f(x) = \\frac{x-3}{4}$ کو معکوس تفاعل $f^{-1}(x)$ میں درج کریں اور مختصر کریں۔",
+       "check": [
+        "simplify(4*((x - 3)/4) + 3) == x"
+       ]
+      },
+      {
+       "math": "f(f^{-1}(x)) = f^{-1}(f(x)) = x",
+       "en": "From both results, it is verified that $f(f^{-1}(x)) = f^{-1}(f(x)) = x$.",
+       "ur": "دونوں نتائج سے یہ تصدیق ہو جاتی ہے کہ $f(f^{-1}(x)) = f^{-1}(f(x)) = x$ ہے۔",
+       "check": [
+        "simplify((x/4 - 3/4).subs(x, (4*x + 3))) == x",
         "simplify((4*x + 3).subs(x, (x/4 - 3/4))) == x"
        ]
       }
      ],
      "answer": "verified: $f(f^{-1}(x)) = f^{-1}(f(x)) = x$",
+     "enriched": true,
      "book_key": "verified: f(f^{-1}(x))=f^{-1}(f(x))=x"
     },
     {
@@ -1369,28 +1608,78 @@
      "prompt": "$f(x)=\\frac{x-4}{x+2},\\ x\\ne-2$",
      "steps": [
       {
-       "math": "f^{-1}(x) = \\frac{2 x + 4}{1 - x}",
-       "en": "First find the inverse function.",
-       "ur": "پہلے معکوس تفاعل معلوم کریں۔"
-      },
-      {
-       "math": "f(f^{-1}(x)) = f\\left(\\frac{2 x + 4}{1 - x}\\right) = \\frac{-4 + \\frac{2 x + 4}{1 - x}}{2 + \\frac{2 x + 4}{1 - x}} = x",
-       "en": "Put $f^{-1}(x)$ in $f$ and simplify.",
-       "ur": "$f^{-1}(x)$ کو $f$ میں رکھ کر سادہ کریں۔",
+       "math": "y = \\frac{x - 4}{x + 2}, \\quad x \\ne -2",
+       "en": "Let $y = f(x)$, so that $x = f^{-1}(y)$. Write the given function in terms of $y$ and $x$.",
+       "ur": "فرض کریں $y = f(x)$، پس $x = f^{-1}(y)$۔ دیے گئے تفاعل کو $y$ اور $x$ کی شکل میں لکھیں۔",
        "check": [
-        "simplify(((x - 4)/(x + 2)).subs(x, ((2*x + 4)/(1 - x)))) == x"
+        "(x - 4)/(x + 2) == (x - 4)/(x + 2)"
        ]
       },
       {
-       "math": "f^{-1}(f(x)) = f^{-1}\\left(\\frac{x - 4}{x + 2}\\right) = \\frac{\\frac{2 \\left(x - 4\\right)}{x + 2} + 4}{- \\frac{x - 4}{x + 2} + 1} = x",
-       "en": "Put $f(x)$ in $f^{-1}$ and simplify.",
-       "ur": "$f(x)$ کو $f^{-1}$ میں رکھ کر سادہ کریں۔",
+       "math": "y(x + 2) = x - 4 \\implies xy + 2y = x - 4",
+       "en": "Multiply both sides by $x + 2$ and expand the left-hand side.",
+       "ur": "دونوں اطراف کو $x + 2$ سے ضرب دیں اور بائیں جانب کو کھولیں۔",
        "check": [
+        "expand(y*(x + 2)) == x*y + 2*y"
+       ]
+      },
+      {
+       "math": "2y + 4 = x - xy \\implies 2y + 4 = x(1 - y) \\implies x = \\frac{2y + 4}{1 - y}",
+       "en": "Collect the $x$ terms on one side, factor out $x$, and solve for $x$.",
+       "ur": "$x$ والی رقوم کو ایک طرف جمع کریں، $x$ مشترک لیں، اور $x$ کی قیمت معلوم کریں۔",
+       "check": [
+        "simplify(x*(1 - y) - (x - x*y)) == 0"
+       ]
+      },
+      {
+       "math": "f^{-1}(x) = \\frac{2x + 4}{1 - x}, \\quad x \\ne 1",
+       "en": "Since $x = f^{-1}(y)$, replace $y$ with $x$ to get the inverse function $f^{-1}(x)$.",
+       "ur": "چونکہ $x = f^{-1}(y)$ ہے، اس لیے معکوس تفاعل $f^{-1}(x)$ حاصل کرنے کے لیے $y$ کی جگہ $x$ درج کریں۔",
+       "check": [
+        "(2*x + 4)/(1 - x) == (2*x + 4)/(1 - x)"
+       ]
+      },
+      {
+       "math": "f(f^{-1}(x)) = f\\left(\\frac{2x + 4}{1 - x}\\right) = \\frac{\\frac{2x + 4}{1 - x} - 4}{\\frac{2x + 4}{1 - x} + 2}",
+       "en": "Now, substitute $f^{-1}(x)$ into the original function $f(x)$.",
+       "ur": "اب، اصل تفاعل $f(x)$ میں $f^{-1}(x)$ کی قیمت درج کریں۔",
+       "check": [
+        "((x - 4)/(x + 2)).subs(x, (2*x + 4)/(1 - x)) == ((2*x + 4)/(1 - x) - 4)/((2*x + 4)/(1 - x) + 2)"
+       ]
+      },
+      {
+       "math": "f(f^{-1}(x)) = \\frac{\\frac{2x + 4 - 4(1 - x)}{1 - x}}{\\frac{2x + 4 + 2(1 - x)}{1 - x}} = \\frac{2x + 4 - 4 + 4x}{2x + 4 + 2 - 2x} = \\frac{6x}{6} = x",
+       "en": "Take the LCM in the numerator and denominator, cancel $1 - x$, and simplify to get $x$.",
+       "ur": "شمار کنندہ اور مخرج میں ذواضعاف اقل (LCM) لیں، $1 - x$ کو منسوخ کریں، اور مختصر کر کے $x$ حاصل کریں۔",
+       "check": [
+        "simplify(2*x + 4 - 4*(1 - x)) == 6*x",
+        "simplify(2*x + 4 + 2*(1 - x)) == 6",
+        "simplify(6*x / 6) == x"
+       ]
+      },
+      {
+       "math": "f^{-1}(f(x)) = f^{-1}\\left(\\frac{x - 4}{x + 2}\\right) = \\frac{2\\left(\\frac{x - 4}{x + 2}\\right) + 4}{1 - \\left(\\frac{x - 4}{x + 2}\\right)}",
+       "en": "Next, substitute $f(x)$ into the inverse function $f^{-1}(x)$.",
+       "ur": "اس کے بعد، معکوس تفاعل $f^{-1}(x)$ میں $f(x)$ کی قیمت درج کریں۔",
+       "check": [
+        "((2*x + 4)/(1 - x)).subs(x, (x - 4)/(x + 2)) == (2*(x - 4)/(x + 2) + 4)/(1 - (x - 4)/(x + 2))"
+       ]
+      },
+      {
+       "math": "f^{-1}(f(x)) = \\frac{\\frac{2(x - 4) + 4(x + 2)}{x + 2}}{\\frac{(x + 2) - (x - 4)}{x + 2}} = \\frac{2x - 8 + 4x + 8}{x + 2 - x + 4} = \\frac{6x}{6} = x",
+       "en": "Take the LCM in the numerator and denominator, cancel $x + 2$, and simplify. Hence, $f(f^{-1}(x)) = f^{-1}(f(x)) = x$ is verified.",
+       "ur": "شمار کنندہ اور مخرج میں ذواضعاف اقل (LCM) لیں، $x + 2$ کو منسوخ کریں، اور مختصر کریں۔ پس تصدیق ہو گئی کہ $f(f^{-1}(x)) = f^{-1}(f(x)) = x$۔",
+       "check": [
+        "simplify(2*(x - 4) + 4*(x + 2)) == 6*x",
+        "simplify((x + 2) - (x - 4)) == 6",
+        "simplify(6*x / 6) == x",
+        "simplify(((x - 4)/(x + 2)).subs(x, ((2*x + 4)/(1 - x)))) == x",
         "simplify(((2*x + 4)/(1 - x)).subs(x, ((x - 4)/(x + 2)))) == x"
        ]
       }
      ],
      "answer": "verified: $f(f^{-1}(x)) = f^{-1}(f(x)) = x$",
+     "enriched": true,
      "book_key": "verified: f(f^{-1}(x))=f^{-1}(f(x))=x"
     }
    ],
@@ -1579,37 +1868,63 @@
      "prompt": "",
      "steps": [
       {
-       "math": "a^2 + 9 = a + 21",
-       "en": "Put $a$ in both functions and equate.",
-       "ur": "دونوں تفاعل میں $a$ رکھ کر برابر کریں۔"
+       "math": "f(x) = x^2 + 9, \\quad g(x) = x + 21",
+       "en": "Write the given functions $f(x)$ and $g(x)$.",
+       "ur": "دیے گئے تفاعلات $f(x)$ اور $g(x)$ لکھیں۔"
       },
       {
-       "math": "a^2 - a - 12 = 0",
-       "en": "Move all terms to one side.",
-       "ur": "تمام ارکان ایک طرف لے جائیں۔",
+       "math": "f(a) = a^2 + 9, \\quad g(a) = a + 21",
+       "en": "Substitute $x = a$ into both functions to find the expressions for $f(a)$ and $g(a)$.",
+       "ur": "$f(a)$ اور $g(a)$ کی قیمتیں معلوم کرنے کے لیے دونوں تفاعلات میں $x = a$ درج کریں۔"
+      },
+      {
+       "math": "a^2 + 9 = a + 21",
+       "en": "According to the given condition $f(a) = g(a)$, set the two expressions equal to each other.",
+       "ur": "دی گئی شرط $f(a) = g(a)$ کے مطابق، دونوں عبارتوں کو ایک دوسرے کے برابر رکھیں۔"
+      },
+      {
+       "math": "a^2 - a + 9 - 21 = 0 \\implies a^2 - a - 12 = 0",
+       "en": "Move all terms to the left-hand side and simplify to form a standard quadratic equation.",
+       "ur": "معیاری دو درجی مساوات بنانے کے لیے تمام رقوم کو بائیں طرف لے جائیں اور مختصر کریں۔",
        "check": [
         "(a**2 + 9) - (a + 21) == a**2 - a - 12"
        ]
       },
       {
-       "math": "(a - 4)(a + 3) = 0",
-       "en": "Factorize.",
-       "ur": "تجزی کریں۔",
+       "math": "a^2 - 4a + 3a - 12 = 0",
+       "en": "Factorize by splitting the middle term $-a$ into $-4a + 3a$, since $(-4)(3) = -12$.",
+       "ur": "درمیانی رقم $-a$ کو $-4a + 3a$ میں توڑ کر تجزی کریں، کیونکہ $(-4)(3) = -12$ ہوتا ہے۔",
+       "check": [
+        "a**2 - 4*a + 3*a - 12 == a**2 - a - 12"
+       ]
+      },
+      {
+       "math": "a(a - 4) + 3(a - 4) = 0 \\implies (a - 4)(a + 3) = 0",
+       "en": "Take out the common factors from the pairs of terms.",
+       "ur": "رقوم کے جوڑوں میں سے مشترک اجزائے ضربی باہر نکالیں۔",
        "check": [
         "expand((a - 4)*(a + 3)) == a**2 - a - 12"
        ]
       },
       {
-       "math": "a = 4 \\quad\\text{or}\\quad a = -3",
-       "en": "Each factor equal to 0.",
-       "ur": "ہر جزو صفر کے برابر۔",
+       "math": "a - 4 = 0 \\quad \\text{or} \\quad a + 3 = 0",
+       "en": "Set each factor equal to zero.",
+       "ur": "ہر جزو ضربی کو صفر کے برابر رکھیں۔"
+      },
+      {
+       "math": "a = -3, \\quad a = 4",
+       "en": "Solve each linear equation to find the required values of $a$.",
+       "ur": "$a$ کی مطلوبہ قیمتیں معلوم کرنے کے لیے ہر یک درجی مساوات کو حل کریں۔",
        "check": [
         "4**2 + 9 == 4 + 21",
-        "(-3)**2 + 9 == -3 + 21"
+        "(-3)**2 + 9 == -3 + 21",
+        "(a**2 + 9) - (a + 21) == a**2 - a - 12",
+        "expand((a - 4)*(a + 3)) == a**2 - a - 12"
        ]
       }
      ],
      "answer": "$a = -3,\\ a = 4$",
+     "enriched": true,
      "book_key": "a=-3, a=4"
     }
    ],
@@ -6979,30 +7294,48 @@
      "prompt": "$f(x)=9x-1$",
      "steps": [
       {
-       "math": "y = 9 x - 1",
-       "en": "Write $y = f(x)$.",
-       "ur": "$y = f(x)$ لکھیں۔"
+       "math": "f(x) = 9x - 1",
+       "en": "The given function is $f(x) = 9x - 1$. We need to find its inverse function, $f^{-1}(x)$.",
+       "ur": "دیا گیا تفاعل $f(x) = 9x - 1$ ہے۔ ہمیں اس کا معکوس تفاعل $f^{-1}(x)$ معلوم کرنا ہے۔"
       },
       {
-       "math": "9x = y + 1",
-       "en": "Make $x$ the subject.",
-       "ur": "$x$ کو موضوع بنائیں۔"
+       "math": "y = 9x - 1",
+       "en": "Let $y = f(x)$, which implies $x = f^{-1}(y)$.",
+       "ur": "فرض کریں $y = f(x)$ ہے، جس کا مطلب ہے کہ $x = f^{-1}(y)$۔"
+      },
+      {
+       "math": "y + 1 = 9x",
+       "en": "To make $x$ the subject of the equation, add $1$ to both sides.",
+       "ur": "مساوات میں $x$ کو تنہا کرنے کے لیے، دونوں اطراف میں $1$ جمع کریں۔",
+       "check": [
+        "(9*x - 1) + 1 == 9*x"
+       ]
       },
       {
        "math": "x = \\frac{y + 1}{9}",
-       "en": "Make $x$ the subject.",
-       "ur": "$x$ کو موضوع بنائیں۔"
+       "en": "Divide both sides by $9$ to isolate $x$.",
+       "ur": "$x$ کی قیمت معلوم کرنے کے لیے دونوں اطراف کو $9$ سے تقسیم کریں۔",
+       "check": [
+        "(9*x)/9 == x"
+       ]
+      },
+      {
+       "math": "f^{-1}(y) = \\frac{y + 1}{9}",
+       "en": "Substitute $x = f^{-1}(y)$ back into the equation.",
+       "ur": "مساوات میں $x$ کی جگہ واپس $f^{-1}(y)$ درج کریں۔"
       },
       {
        "math": "f^{-1}(x) = \\frac{x + 1}{9}",
-       "en": "Replace $y$ by $x$ to write the inverse function.",
-       "ur": "معکوس تفاعل لکھنے کے لیے $y$ کی جگہ $x$ لکھیں۔",
+       "en": "Replace the variable $y$ with $x$ to get the required inverse function $f^{-1}(x)$.",
+       "ur": "مطلوبہ معکوس تفاعل $f^{-1}(x)$ حاصل کرنے کے لیے متغیر $y$ کو $x$ سے بدل دیں۔",
        "check": [
+        "simplify((9*x - 1).subs(x, (x + 1)/9)) == x",
         "simplify((9*x - 1).subs(x, ((x + 1)/9))) == x"
        ]
       }
      ],
      "answer": "$f^{-1}(x) = \\frac{x + 1}{9}$",
+     "enriched": true,
      "book_key": "f^{-1}(x)=\\frac{x+1}{9}"
     },
     {
@@ -7046,30 +7379,65 @@
      "prompt": "$f(x)=\\sqrt{x-5},\\ x\\ge5$",
      "steps": [
       {
-       "math": "y = \\sqrt{x - 5}",
-       "en": "Write $y = f(x)$.",
-       "ur": "$y = f(x)$ لکھیں۔"
+       "math": "f(x) = \\sqrt{x - 5},\\quad x \\ge 5",
+       "en": "We are given the function $f(x)$ with its domain $x \\ge 5$, and we need to find its inverse function $f^{-1}(x)$.",
+       "ur": "ہمیں تفاعل $f(x)$ اس کی ڈومین $x \\ge 5$ کے ساتھ دیا گیا ہے، اور ہمیں اس کا معکوس تفاعل $f^{-1}(x)$ معلوم کرنا ہے۔",
+       "check": [
+        "sqrt(x - 5) == sqrt(x - 5)"
+       ]
+      },
+      {
+       "math": "y = \\sqrt{x - 5},\\quad y \\ge 0",
+       "en": "Let $y = f(x)$, which implies $x = f^{-1}(y)$. Since the square root is always non-negative for $x \\ge 5$, the range of $f$ is $y \\ge 0$.",
+       "ur": "فرض کریں کہ $y = f(x)$ ہے، جس کا مطلب ہے کہ $x = f^{-1}(y)$۔ چونکہ $x \\ge 5$ کے لیے جذر ہمیشہ غیر منفی ہوتا ہے، اس لیے $f$ کی رینج $y \\ge 0$ ہے۔",
+       "check": [
+        "sqrt(x - 5) == sqrt(x - 5)"
+       ]
+      },
+      {
+       "math": "y^2 = \\left(\\sqrt{x - 5}\\right)^2",
+       "en": "To make $x$ the subject, square both sides of the equation to remove the square root.",
+       "ur": "$x$ کو موضوع بنانے کے لیے، جذر کو ختم کرنے کی خاطر مساوات کے دونوں اطراف کا مربع لیں۔",
+       "check": [
+        "(sqrt(x - 5))**2 == x - 5"
+       ]
       },
       {
        "math": "y^2 = x - 5",
-       "en": "Make $x$ the subject.",
-       "ur": "$x$ کو موضوع بنائیں۔"
+       "en": "Simplify the right-hand side where the square and the square root cancel each other out.",
+       "ur": "دائیں طرف کو مختصر کریں جہاں مربع اور جذر ایک دوسرے کو زائل کر دیتے ہیں۔",
+       "check": [
+        "x - 5 == x - 5"
+       ]
       },
       {
        "math": "x = y^2 + 5",
-       "en": "Make $x$ the subject.",
-       "ur": "$x$ کو موضوع بنائیں۔"
+       "en": "Add $5$ to both sides to isolate $x$ on one side.",
+       "ur": "$x$ کو ایک طرف اکیلا کرنے کے لیے دونوں اطراف میں $5$ جمع کریں۔",
+       "check": [
+        "(x - 5) + 5 == x"
+       ]
+      },
+      {
+       "math": "f^{-1}(y) = y^2 + 5,\\quad y \\ge 0",
+       "en": "Substitute $x = f^{-1}(y)$ into the equation.",
+       "ur": "مساوات میں $x = f^{-1}(y)$ درج کریں۔",
+       "check": [
+        "y**2 + 5 == y**2 + 5"
+       ]
       },
       {
        "math": "f^{-1}(x) = x^{2} + 5,\\quad x \\ge 0",
-       "en": "Replace $y$ by $x$ to write the inverse function.",
-       "ur": "معکوس تفاعل لکھنے کے لیے $y$ کی جگہ $x$ لکھیں۔",
+       "en": "Finally, replace $y$ with $x$ to write the inverse function $f^{-1}(x)$ along with its domain $x \\ge 0$ (which is the range of $f$).",
+       "ur": "آخر میں، معکوس تفاعل $f^{-1}(x)$ اور اس کی ڈومین $x \\ge 0$ (جو کہ $f$ کی رینج ہے) لکھنے کے لیے $y$ کی جگہ $x$ درج کریں۔",
        "check": [
+        "simplify((x**2 + 5).subs(x, sqrt(x - 5))) == x",
         "simplify((x**2 + 5).subs(x, (sqrt(x - 5)))) == x"
        ]
       }
      ],
      "answer": "$f^{-1}(x) = x^{2} + 5$, $x \\ge 0$",
+     "enriched": true,
      "book_key": "f^{-1}(x)=x^2+5, x\\ge 0"
     },
     {
@@ -7077,30 +7445,56 @@
      "prompt": "$f(x)=\\frac{3-x}{2}$",
      "steps": [
       {
-       "math": "y = \\frac{3}{2} - \\frac{x}{2}",
-       "en": "Write $y = f(x)$.",
-       "ur": "$y = f(x)$ لکھیں۔"
+       "math": "f(x) = \\frac{3-x}{2}",
+       "en": "Write the given function.",
+       "ur": "دیے گئے تفاعل کو لکھیں۔",
+       "check": [
+        "(3 - x)/2 == R(3, 2) - x/2"
+       ]
+      },
+      {
+       "math": "y = \\frac{3-x}{2}",
+       "en": "Let $y = f(x)$, which implies $x = f^{-1}(y)$.",
+       "ur": "فرض کریں کہ $y = f(x)$ ہے، جس سے $x = f^{-1}(y)$ حاصل ہوتا ہے۔",
+       "check": [
+        "(3 - x)/2 == R(3, 2) - x/2"
+       ]
       },
       {
        "math": "2y = 3 - x",
-       "en": "Make $x$ the subject.",
-       "ur": "$x$ کو موضوع بنائیں۔"
+       "en": "Multiply both sides by $2$ to eliminate the fraction.",
+       "ur": "کسر کو ختم کرنے کے لیے دونوں اطراف کو $2$ سے ضرب دیں۔",
+       "check": [
+        "2*(3 - x)/2 == 3 - x"
+       ]
       },
       {
        "math": "x = 3 - 2y",
-       "en": "Make $x$ the subject.",
-       "ur": "$x$ کو موضوع بنائیں۔"
+       "en": "Rearrange the equation to make $x$ the subject.",
+       "ur": "$x$ کی قیمت معلوم کرنے کے لیے مساوات کو ترتیب دیں۔",
+       "check": [
+        "3 - (3 - x) == x"
+       ]
+      },
+      {
+       "math": "f^{-1}(y) = 3 - 2y",
+       "en": "Substitute $x = f^{-1}(y)$ into the equation.",
+       "ur": "مساوات میں $x = f^{-1}(y)$ درج کریں۔",
+       "check": [
+        "3 - 2*y == -2*y + 3"
+       ]
       },
       {
        "math": "f^{-1}(x) = 3 - 2 x",
-       "en": "Replace $y$ by $x$ to write the inverse function.",
-       "ur": "معکوس تفاعل لکھنے کے لیے $y$ کی جگہ $x$ لکھیں۔",
+       "en": "Replace $y$ by $x$ to get the required inverse function $f^{-1}(x)$.",
+       "ur": "مطلوبہ معکوس تفاعل $f^{-1}(x)$ حاصل کرنے کے لیے $y$ کی جگہ $x$ درج کریں۔",
        "check": [
         "simplify((3/2 - x/2).subs(x, (3 - 2*x))) == x"
        ]
       }
      ],
      "answer": "$f^{-1}(x) = 3 - 2 x$",
+     "enriched": true,
      "book_key": "f^{-1}(x)=3-2x"
     }
    ],
@@ -8399,30 +8793,48 @@
      "prompt": "$f^{-1}(x)$",
      "steps": [
       {
-       "math": "y = 3 x + 7",
-       "en": "Write $y = f(x)$.",
-       "ur": "$y = f(x)$ لکھیں۔"
+       "math": "f(x) = 3x + 7",
+       "en": "Write down the given function.",
+       "ur": "دیا گیا تفاعل لکھیں۔"
+      },
+      {
+       "math": "y = 3x + 7",
+       "en": "Let $y = f(x)$, which means $x = f^{-1}(y)$.",
+       "ur": "فرض کریں $y = f(x)$ ہے، جس کا مطلب ہے کہ $x = f^{-1}(y)$ ہے۔"
       },
       {
        "math": "3x = y - 7",
-       "en": "Make $x$ the subject.",
-       "ur": "$x$ کو موضوع بنائیں۔"
+       "en": "Subtract $7$ from both sides of the equation to isolate the term with $x$.",
+       "ur": "$x$ والی رقم کو الگ کرنے کے لیے مساوات کے دونوں اطراف سے $7$ تفریق کریں۔",
+       "check": [
+        "(3*x + 7) - 7 == 3*x"
+       ]
       },
       {
        "math": "x = \\frac{y - 7}{3}",
-       "en": "Make $x$ the subject.",
-       "ur": "$x$ کو موضوع بنائیں۔"
+       "en": "Divide both sides by $3$ to make $x$ the subject of the equation.",
+       "ur": "$x$ کو مساوات کا موضوع بنانے کے لیے دونوں اطراف کو $3$ پر تقسیم کریں۔",
+       "check": [
+        "(3*x)/3 == x"
+       ]
+      },
+      {
+       "math": "f^{-1}(y) = \\frac{y - 7}{3}",
+       "en": "Since $x = f^{-1}(y)$, substitute $f^{-1}(y)$ in place of $x$.",
+       "ur": "چونکہ $x = f^{-1}(y)$ ہے، اس لیے $x$ کی جگہ $f^{-1}(y)$ درج کریں۔"
       },
       {
        "math": "f^{-1}(x) = \\frac{x - 7}{3}",
-       "en": "Replace $y$ by $x$ to write the inverse function.",
-       "ur": "معکوس تفاعل لکھنے کے لیے $y$ کی جگہ $x$ لکھیں۔",
+       "en": "Replace the variable $y$ with $x$ to get the required inverse function $f^{-1}(x)$.",
+       "ur": "مطلوبہ معکوس تفاعل $f^{-1}(x)$ حاصل کرنے کے لیے متغیر $y$ کو $x$ سے تبدیل کریں۔",
        "check": [
+        "simplify((3*x + 7).subs(x, (x - 7)/3)) == x",
         "simplify((3*x + 7).subs(x, ((x - 7)/3))) == x"
        ]
       }
      ],
      "answer": "$f^{-1}(x) = \\frac{x - 7}{3}$",
+     "enriched": true,
      "book_key": "f^{-1}(x)=\\frac{x-7}{3}"
     },
     {
@@ -8430,28 +8842,70 @@
      "prompt": "the value of $x$ for which $f(x)=f^{-1}(x)$",
      "steps": [
       {
-       "math": "3x + 7 = \\frac{x - 7}{3}",
-       "en": "Equate $f(x)$ and $f^{-1}(x)$.",
-       "ur": "$f(x)$ اور $f^{-1}(x)$ برابر کریں۔"
-      },
-      {
-       "math": "9x + 21 = x - 7 \\Rightarrow 8x = -28",
-       "en": "Multiply by 3 and collect terms.",
-       "ur": "3 سے ضرب دے کر ارکان اکٹھے کریں۔",
+       "math": "f(x) = 3x + 7, \\quad f^{-1}(x) = \\frac{x - 7}{3}",
+       "en": "Write down the given function $f(x)$ and its inverse $f^{-1}(x)$ found in part (i).",
+       "ur": "دیے گئے تفاعل $f(x)$ اور حصہ (i) میں معلوم کردہ اس کے معکوس $f^{-1}(x)$ کو لکھیں۔",
        "check": [
-        "3*(3*x + 7) - (x - 7) == 8*x + 28"
+        "3*((x - 7)/3) + 7 == x"
        ]
       },
       {
-       "math": "x = -\\frac{7}{2}",
-       "en": "Divide by 8.",
-       "ur": "8 سے تقسیم کریں۔",
+       "math": "f(x) = f^{-1}(x)",
+       "en": "According to the given condition, set the function equal to its inverse.",
+       "ur": "دی گئی شرط کے مطابق، تفاعل کو اس کے معکوس کے برابر رکھیں۔"
+      },
+      {
+       "math": "3x + 7 = \\frac{x - 7}{3}",
+       "en": "Substitute the expressions for $f(x)$ and $f^{-1}(x)$ into the equation.",
+       "ur": "مساوات میں $f(x)$ اور $f^{-1}(x)$ کی قیمتیں درج کریں۔"
+      },
+      {
+       "math": "3(3x + 7) = x - 7",
+       "en": "Multiply both sides of the equation by $3$ to eliminate the fraction.",
+       "ur": "کسر کو ختم کرنے کے لیے مساوات کے دونوں اطراف کو $3$ سے ضرب دیں۔",
        "check": [
+        "3*((x - 7)/3) == x - 7"
+       ]
+      },
+      {
+       "math": "9x + 21 = x - 7",
+       "en": "Expand the bracket on the left-hand side.",
+       "ur": "بائیں جانب بریکٹ کو کھولیں۔",
+       "check": [
+        "3*(3*x + 7) == 9*x + 21"
+       ]
+      },
+      {
+       "math": "9x - x = -7 - 21",
+       "en": "Collect the $x$ terms on the left side and the constant terms on the right side.",
+       "ur": "$x$ والی رقوم کو بائیں جانب اور مستقل رقوم کو دائیں جانب اکٹھا کریں۔",
+       "check": [
+        "(9*x + 21) - (x - 7) == (9*x - x) - (-7 - 21)"
+       ]
+      },
+      {
+       "math": "8x = -28",
+       "en": "Simplify both sides of the equation.",
+       "ur": "مساوات کے دونوں اطراف کو مختصر کریں۔",
+       "check": [
+        "9*x - x == 8*x",
+        "-7 - 21 == -28"
+       ]
+      },
+      {
+       "math": "x = -\\frac{28}{8} = -\\frac{7}{2}",
+       "en": "Divide both sides by $8$ and reduce the fraction to its simplest form to get the final answer.",
+       "ur": "حتمی جواب حاصل کرنے کے لیے دونوں اطراف کو $8$ سے تقسیم کریں اور کسر کو مختصر ترین شکل میں لکھیں۔",
+       "check": [
+        "R(-28, 8) == R(-7, 2)",
+        "3*R(-7, 2) + 7 == (R(-7, 2) - 7)/3",
+        "3*(3*x + 7) - (x - 7) == 8*x + 28",
         "3*R(-7,2) + 7 == (R(-7,2) - 7)/3"
        ]
       }
      ],
      "answer": "$x = -\\frac{7}{2}$",
+     "enriched": true,
      "book_key": "x=-\\frac{7}{2}"
     }
    ],

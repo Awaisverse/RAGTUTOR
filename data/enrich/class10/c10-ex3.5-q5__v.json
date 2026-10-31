@@ -1,0 +1,65 @@
+{
+ "item": "c10-ex3.5-q5",
+ "label": "v",
+ "answer_ref": "$\\begin{bmatrix} \\frac{1}{2} & - \\frac{4}{3} \\\\ - \\frac{1}{2} & \\frac{5}{3} \\end{bmatrix}$",
+ "steps": [
+  {
+   "math": "A = \\begin{bmatrix} 10 & 8 \\\\ 3 & 3 \\end{bmatrix}",
+   "en": "Let the given matrix be $A$. We need to find its multiplicative inverse, $A^{-1}$.",
+   "ur": "فرض کریں کہ دیا گیا قالب $A$ ہے۔ ہمیں اس کا ضربی معکوس $A^{-1}$ معلوم کرنا ہے۔",
+   "check": [
+    "Eq(Matrix([[10, 8], [3, 3]]), Matrix([[10, 8], [3, 3]]))"
+   ]
+  },
+  {
+   "math": "A^{-1} = \\frac{1}{|A|} \\operatorname{Adj}A, \\quad \\text{where } |A| \\neq 0",
+   "en": "Recall the formula for the multiplicative inverse of a $2 \\times 2$ matrix.",
+   "ur": "ایک $2 \\times 2$ قالب کے ضربی معکوس کا فارمولا لکھیں۔"
+  },
+  {
+   "math": "|A| = \\begin{vmatrix} 10 & 8 \\\\ 3 & 3 \\end{vmatrix} = (10)(3) - (8)(3) = 30 - 24 = 6",
+   "en": "First, calculate the determinant $|A|$ using the rule $ad - bc$. Since $|A| = 6 \\neq 0$, the matrix is non-singular and its inverse exists.",
+   "ur": "پہلے اصول $ad - bc$ کا استعمال کرتے ہوئے مقطع $|A|$ معلوم کریں۔ چونکہ $|A| = 6 \\neq 0$ ہے، اس لیے یہ ایک غیر نادر قالب ہے اور اس کا معکوس موجود ہے۔",
+   "check": [
+    "Matrix([[10, 8], [3, 3]]).det() == 6",
+    "10*3 - 8*3 == 30 - 24",
+    "30 - 24 == 6"
+   ]
+  },
+  {
+   "math": "\\operatorname{Adj}A = \\begin{bmatrix} 3 & -8 \\\\ -3 & 10 \\end{bmatrix}",
+   "en": "Next, find the adjoint of matrix $A$ by interchanging the diagonal entries ($10$ and $3$) and changing the signs of the non-diagonal entries ($8$ and $3$).",
+   "ur": "اب قالب $A$ کا ایڈجوائنٹ (ملحقہ قالب) معلوم کریں جس کے لیے وتری ارکان ($10$ اور $3$) کی جگہ بدلیں اور غیر وتری ارکان ($8$ اور $3$) کی علامتیں تبدیل کریں۔",
+   "check": [
+    "Eq(Matrix([[10, 8], [3, 3]]).adjugate(), Matrix([[3, -8], [-3, 10]]))"
+   ]
+  },
+  {
+   "math": "A^{-1} = \\frac{1}{6}\\begin{bmatrix} 3 & -8 \\\\ -3 & 10 \\end{bmatrix} = \\begin{bmatrix} \\frac{3}{6} & \\frac{-8}{6} \\\\ \\frac{-3}{6} & \\frac{10}{6} \\end{bmatrix}",
+   "en": "Substitute $|A| = 6$ and $\\operatorname{Adj}A$ into the inverse formula, and divide each entry by $6$.",
+   "ur": "معکوس کے فارمولے میں $|A| = 6$ اور $\\operatorname{Adj}A$ کی قیمتیں درج کریں، اور ہر رکن کو $6$ سے تقسیم کریں۔",
+   "check": [
+    "Eq(R(1, 6)*Matrix([[3, -8], [-3, 10]]), Matrix([[R(3, 6), R(-8, 6)], [R(-3, 6), R(10, 6)]]))"
+   ]
+  },
+  {
+   "math": "A^{-1} = \\begin{bmatrix} \\frac{1}{2} & - \\frac{4}{3} \\\\ - \\frac{1}{2} & \\frac{5}{3} \\end{bmatrix}",
+   "en": "Simplify the fractions to obtain the final multiplicative inverse.",
+   "ur": "کسروں کو مختصر کر کے مطلوبہ ضربی معکوس حاصل کریں۔",
+   "check": [
+    "Eq(Matrix([[10, 8], [3, 3]]).inv(), Matrix([[R(1, 2), R(-4, 3)], [R(-1, 2), R(5, 3)]]))",
+    "R(3, 6) == R(1, 2)",
+    "R(-8, 6) == R(-4, 3)",
+    "R(-3, 6) == R(-1, 2)",
+    "R(10, 6) == R(5, 3)",
+    "Matrix([[10, 8], [3, 3]]).det() == 6",
+    "Eq(Matrix([[10, 8], [3, 3]]).adjugate(), Matrix([[3, -8], [-3, 10]]))",
+    "Eq(Matrix([[10, 8], [3, 3]]).inv(), Matrix([[1/2, -4/3], [-1/2, 5/3]]))",
+    "Eq(Matrix([[1, 0], [0, 1]]), Matrix([[1, 0], [0, 1]]))"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

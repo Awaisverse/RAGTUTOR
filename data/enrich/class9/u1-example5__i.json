@@ -1,0 +1,65 @@
+{
+ "item": "u1-example5",
+ "label": "i",
+ "answer_ref": "Verified: $\\frac{19}{9} = \\frac{19}{9}$",
+ "steps": [
+  {
+   "math": "a = \\frac{2}{3}, \\quad b = \\frac{3}{2}, \\quad c = \\frac{5}{3}",
+   "en": "First, write down the given values of $a$, $b$, and $c$.",
+   "ur": "سب سے پہلے $a$، $b$، اور $c$ کی دی گئی قیمتیں لکھیں۔"
+  },
+  {
+   "math": "a(b + c) = ab + ac",
+   "en": "State the distributive property of multiplication over addition that we need to verify.",
+   "ur": "جمع پر ضرب کی تقسیمی خاصیت لکھیں جس کی ہمیں تصدیق کرنی ہے۔"
+  },
+  {
+   "math": "\\text{LHS} = a(b + c) = \\frac{2}{3}\\left(\\frac{3}{2} + \\frac{5}{3}\\right)",
+   "en": "Take the Left Hand Side (LHS) and substitute the given values of $a$, $b$, and $c$.",
+   "ur": "بائیں طرف (LHS) لیں اور اس میں $a$، $b$، اور $c$ کی دی گئی قیمتیں درج کریں۔",
+   "check": [
+    "R(2,3)*(R(3,2) + R(5,3)) == R(19,9)"
+   ]
+  },
+  {
+   "math": "\\text{LHS} = \\frac{2}{3}\\left(\\frac{9 + 10}{6}\\right) = \\frac{2}{3}\\left(\\frac{19}{6}\\right) = \\frac{19}{9}",
+   "en": "Add the fractions inside the brackets by taking the LCM of $2$ and $3$, which is $6$, and then multiply by $\\frac{2}{3}$.",
+   "ur": "بریکٹ کے اندر موجود کسروں کو $2$ اور $3$ کا ذواضعاف اقل ($6$) لے کر جمع کریں، اور پھر $\\frac{2}{3}$ سے ضرب دیں۔",
+   "check": [
+    "(9 + 10)/6 == R(19,6)",
+    "R(2,3)*R(19,6) == R(19,9)"
+   ]
+  },
+  {
+   "math": "\\text{RHS} = ab + ac = \\left(\\frac{2}{3}\\right)\\left(\\frac{3}{2}\\right) + \\left(\\frac{2}{3}\\right)\\left(\\frac{5}{3}\\right)",
+   "en": "Now, take the Right Hand Side (RHS) and substitute the given values of $a$, $b$, and $c$.",
+   "ur": "اب دائیں طرف (RHS) لیں اور اس میں $a$، $b$، اور $c$ کی قیمتیں درج کریں۔",
+   "check": [
+    "R(2,3)*R(3,2) + R(2,3)*R(5,3) == R(19,9)"
+   ]
+  },
+  {
+   "math": "\\text{RHS} = 1 + \\frac{10}{9} = \\frac{9 + 10}{9} = \\frac{19}{9}",
+   "en": "Multiply the fractions in each term, and then add the results by taking the LCM, which is $9$.",
+   "ur": "ہر رقم میں کسروں کو ضرب دیں، اور پھر ذواضعاف اقل ($9$) لے کر حاصل ضرب کو جمع کریں۔",
+   "check": [
+    "R(2,3)*R(3,2) == 1",
+    "R(2,3)*R(5,3) == R(10,9)",
+    "1 + R(10,9) == R(19,9)"
+   ]
+  },
+  {
+   "math": "\\frac{19}{9} = \\frac{19}{9}",
+   "en": "Since $\\text{LHS} = \\text{RHS}$, the distributive property over addition $a(b+c) = ab+ac$ is verified.",
+   "ur": "چونکہ $\\text{LHS} = \\text{RHS}$ ہے، لہذا جمع پر تقسیمی خاصیت $a(b+c) = ab+ac$ کی تصدیق ہو گئی ہے۔",
+   "check": [
+    "R(19,9) == R(19,9)",
+    "Rational(2,3)*(Rational(3,2)+Rational(5,3)) == Rational(19,9)",
+    "Rational(2,3)*Rational(3,2) + Rational(2,3)*Rational(5,3) == Rational(19,9)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

@@ -1,0 +1,55 @@
+{
+ "item": "c10-ex3.1-q3",
+ "label": "",
+ "answer_ref": "A = F, B = D, C = E",
+ "math": [
+  "",
+  "C = \\begin{bmatrix} 2\\times3 & 2-1 \\\\ 2\\times2 & 4-2 \\\\ 4+4 & 3+0 \\end{bmatrix} = \\begin{bmatrix} 6 & 1 \\\\ 4 & 2 \\\\ 8 & 3 \\end{bmatrix}",
+  "D = \\begin{bmatrix} 5+4 \\\\ -8+1 \\end{bmatrix} = \\begin{bmatrix} 9 \\\\ -7 \\end{bmatrix}",
+  "F = \\begin{bmatrix} 3-3 & 3 \\\\ 3+1 & 1 \\end{bmatrix} = \\begin{bmatrix} 0 & 3 \\\\ 4 & 1 \\end{bmatrix}",
+  "A = \\begin{bmatrix} 0 & 3 \\\\ 4 & 1 \\end{bmatrix} = F",
+  "B = \\begin{bmatrix} 9 \\\\ -7 \\end{bmatrix} = D",
+  "C = \\begin{bmatrix} 6 & 1 \\\\ 4 & 2 \\\\ 8 & 3 \\end{bmatrix} = E",
+  "A = F,\\quad B = D,\\quad C = E"
+ ],
+ "why": [
+  {
+   "en": "Before we start comparing the matrices, we recall the definition of equal matrices. Knowing that two matrices must have the exact same size (order) and matching numbers in every position gives us a clear checklist to find the equal pairs.",
+   "ur": "قالبوں کا موازنہ شروع کرنے سے پہلے، ہم مساوی قالبوں کی تعریف کو یاد کرتے ہیں۔ یہ جاننا کہ دو قالبوں کا مرتبہ (قطاروں اور کالموں کی تعداد) بالکل یکساں ہونا چاہیے اور ہر جگہ پر موجود متناظرہ ارکان برابر ہونے چاہئیں، ہمیں برابر جوڑے تلاش کرنے کا واضح طریقہ دیتا ہے۔"
+  },
+  {
+   "en": "Some entries in matrix $C$ are written as sums, differences, or products, making it hard to compare directly. By doing the simple arithmetic inside the brackets, we reveal the final numbers of this $3 \\times 2$ matrix so we can easily spot its match.",
+   "ur": "قالب $C$ کے کچھ ارکان جمع، تفریق یا ضرب کی صورت میں لکھے ہیں، جس سے براہِ راست موازنہ کرنا مشکل ہے۔ بریکٹ کے اندر موجود ان سادہ حسابی عمل کو حل کر کے ہم اس $3 \\times 2$ قالب کے اصل اعداد حاصل کر لیتے ہیں تاکہ اس جیسا دوسرا قالب آسانی سے پہچانا جا سکے۔"
+  },
+  {
+   "en": "Just like before, we add the numbers inside matrix $D$ to put it in its simplest form. This shows us that $D$ is a $2 \\times 1$ column matrix with entries $9$ and $-7$, ready to be compared with the others.",
+   "ur": "پہلے کی طرح، ہم قالب $D$ کو اس کی سادہ ترین شکل میں لانے کے لیے اس کے اندر موجود اعداد کو جمع کرتے ہیں۔ اس سے ہمیں معلوم ہوتا ہے کہ $D$ ایک $2 \\times 1$ کالمی قالب ہے جس کے ارکان $9$ اور $-7$ ہیں، اور اب دوسرے قالبوں کے ساتھ اس کا موازنہ کیا جا سکتا ہے۔"
+  },
+  {
+   "en": "We finish our preparation by simplifying the addition and subtraction inside matrix $F$. Now every single matrix in the question is written in clean, plain numbers, making the matching process very easy.",
+   "ur": "ہم قالب $F$ کے اندر موجود جمع اور تفریق کو حل کر کے اپنی تیاری مکمل کرتے ہیں۔ اب سوال میں دیا گیا ہر ایک قالب صاف اور سادہ اعداد میں لکھا جا چکا ہے، جس سے برابر قالبوں کو ملانے کا عمل بہت آسان ہو گیا ہے۔"
+  },
+  {
+   "en": "Now we apply the equality rule by looking for matrices of order $2 \\times 2$. Both $A$ and our simplified $F$ have $2$ rows and $2$ columns, and every position has the exact same number, which proves our first equal pair is $A = F$.",
+   "ur": "اب ہم $2 \\times 2$ مرتبے کے قالبوں کو تلاش کر کے مساوات کا اصول لاگو کرتے ہیں۔ قالب $A$ اور ہمارے حل شدہ قالب $F$ دونوں میں $2$ قطاریں اور $2$ کالم ہیں، اور ہر جگہ پر بالکل ایک جیسا عدد موجود ہے، جس سے ہمارا پہلا مساوی جوڑا $A = F$ ثابت ہوتا ہے۔"
+  },
+  {
+   "en": "Next, we look at the matrices of order $2 \\times 1$ ($2$ rows and $1$ column). Comparing $B$ with the simplified form of $D$, we see both have $9$ on top and $-7$ on the bottom, giving us our second equal pair, $B = D$.",
+   "ur": "اس کے بعد، ہم $2 \\times 1$ مرتبے ($2$ قطاریں اور $1$ کالم) والے قالبوں کو دیکھتے ہیں۔ $B$ کا موازنہ $D$ کی سادہ شکل سے کرنے پر ہم دیکھتے ہیں کہ دونوں میں اوپر $9$ اور نیچے $-7$ ہے، جس سے ہمیں دوسرا مساوی جوڑا $B = D$ ملتا ہے۔"
+  },
+  {
+   "en": "We now check the remaining matrices of order $3 \\times 2$ ($3$ rows and $2$ columns). The simplified matrix $C$ matches matrix $E$ in size and in all six entries, which confirms our third equal pair, $C = E$.",
+   "ur": "اب ہم $3 \\times 2$ مرتبے ($3$ قطاریں اور $2$ کالم) والے باقی ماندہ قالبوں کو چیک کرتے ہیں۔ حل شدہ قالب $C$ سائز اور تمام چھ ارکان میں قالب $E$ کے بالکل مطابق ہے، جو ہمارے تیسرے مساوی جوڑے $C = E$ کی تصدیق کرتا ہے۔"
+  },
+  {
+   "en": "Finally, we gather all the matching pairs we discovered into one clear statement to completely answer the question.",
+   "ur": "آخر میں، سوال کا مکمل جواب دینے کے لیے ہم اپنے تلاش کیے گئے تمام مساوی جوڑوں کو ایک واضح بیان کی صورت میں اکٹھا لکھ دیتے ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer means that out of the six given matrices, they neatly form three equal pairs: $A$ is the exact same matrix as $F$, $B$ is the same as $D$, and $C$ is the same as $E$, even though some were originally disguised with arithmetic operations. You can easily check this by counting the rows and columns of each pair and verifying that the numbers in matching positions are identical.",
+  "ur": "حتمی جواب کا مطلب یہ ہے کہ دیے گئے چھ قالبوں میں سے تین مساوی جوڑے بنتے ہیں: قالب $A$ بالکل $F$ جیسا ہے، $B$ قالب $D$ کے برابر ہے، اور $C$ قالب $E$ کے برابر ہے، اگرچہ شروع میں کچھ قالب حسابی عمل کی وجہ سے مختلف نظر آ رہے تھے۔ آپ ہر جوڑے کی قطاروں اور کالموں کو گن کر اور یہ تصدیق کر کے کہ آمنے سامنے والے متناظرہ اعداد بالکل ایک جیسے ہیں، اپنے جواب کی باآسانی پڑتال کر سکتے ہیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

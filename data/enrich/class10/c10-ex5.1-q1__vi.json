@@ -1,0 +1,57 @@
+{
+ "item": "c10-ex5.1-q1",
+ "label": "vi",
+ "answer_ref": "$4 \\left(x - y\\right)$",
+ "steps": [
+  {
+   "math": "\\frac{20(x^3 - y^3)}{5x^2 + 5xy + 5y^2}",
+   "en": "Write down the given rational expression to reduce it to its lowest form.",
+   "ur": "دیے گئے ناطق جملے کو اس کی مختصر ترین شکل میں تبدیل کرنے کے لیے لکھیں۔"
+  },
+  {
+   "math": "= \\frac{20(x^3 - y^3)}{5(x^2 + xy + y^2)}",
+   "en": "First, take $5$ as a common factor from all the terms in the denominator.",
+   "ur": "سب سے پہلے، مخرج کی تمام رقوم میں سے $5$ کو مشترک جزو ضربی کے طور پر باہر نکالیں۔",
+   "check": [
+    "(20*(x**3 - y**3))/(5*x**2 + 5*x*y + 5*y**2) == (20*(x**3 - y**3))/(5*(x**2 + x*y + y**2))"
+   ]
+  },
+  {
+   "math": "x^3 - y^3 = (x - y)(x^2 + xy + y^2)",
+   "en": "Recall the algebraic formula for the difference of two cubes to factorize the numerator.",
+   "ur": "شمار کنندہ کی تجزی کرنے کے لیے دو مکعبوں کے فرق کا الجبری کلیہ یاد کریں۔",
+   "check": [
+    "x**3 - y**3 == (x - y)*(x**2 + x*y + y**2)"
+   ]
+  },
+  {
+   "math": "= \\frac{20(x - y)(x^2 + xy + y^2)}{5(x^2 + xy + y^2)}",
+   "en": "Apply this formula to expand $(x^3 - y^3)$ in the numerator.",
+   "ur": "شمار کنندہ میں $(x^3 - y^3)$ کو کھولنے کے لیے اس کلیے کا اطلاق کریں۔",
+   "check": [
+    "(20*(x - y)*(x**2 + x*y + y**2))/(5*(x**2 + x*y + y**2)) == (20*(x**3 - y**3))/(5*(x**2 + x*y + y**2))"
+   ]
+  },
+  {
+   "math": "= \\frac{20(x - y)}{5}",
+   "en": "Cancel out the common algebraic factor $(x^2 + xy + y^2)$ from both the numerator and the denominator.",
+   "ur": "شمار کنندہ اور مخرج دونوں میں سے مشترک الجبری جزو $(x^2 + xy + y^2)$ کو کاٹ دیں۔",
+   "check": [
+    "(20*(x - y))/5 == (20*(x - y)*(x**2 + x*y + y**2))/(5*(x**2 + x*y + y**2))"
+   ]
+  },
+  {
+   "math": "= 4 \\left(x - y\\right)",
+   "en": "Divide $20$ by $5$ to get $4$. Thus, the expression in its lowest form is $4(x - y)$.",
+   "ur": "$20$ کو $5$ پر تقسیم کرنے سے $4$ حاصل ہوتا ہے۔ اس طرح، مختصر ترین شکل میں مطلوبہ جملہ $4(x - y)$ ہے۔",
+   "check": [
+    "4*(x - y) == (20*(x - y))/5",
+    "(20*(x - y)*(x**2 + x*y + y**2))/(5*(x**2 + x*y + y**2)) == (20*x**3 - 20*y**3)/(5*x**2 + 5*x*y + 5*y**2)",
+    "(4*x - 4*y) == (20*x**3 - 20*y**3)/(5*x**2 + 5*x*y + 5*y**2)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

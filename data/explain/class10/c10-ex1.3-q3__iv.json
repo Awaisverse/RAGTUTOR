@@ -1,0 +1,50 @@
+{
+ "item": "c10-ex1.3-q3",
+ "label": "iv",
+ "answer_ref": "verified: both sides $= 29$",
+ "math": [
+  "z = 5 - 2i \\implies \\overline{z} = 5 + 2i",
+  "\\text{L.H.S} = z\\overline{z} = (5 - 2i)(5 + 2i)",
+  "z\\overline{z} = (5)^2 - (2i)^2 = 25 - 4i^2",
+  "z\\overline{z} = 25 - 4(-1) = 25 + 4 = 29",
+  "|z| = \\sqrt{(5)^2 + (-2)^2} = \\sqrt{25 + 4} = \\sqrt{29}",
+  "\\text{R.H.S} = |z|^2 = \\left(\\sqrt{29}\\right)^2 = 29",
+  "\\text{L.H.S} = \\text{R.H.S} \\implies z\\overline{z} = |z|^2 = 29"
+ ],
+ "why": [
+  {
+   "en": "By the definition of a complex conjugate, we reverse the sign of the imaginary part to find $\\overline{z} = 5 + 2i$. Having both $z$ and $\\overline{z}$ ready is essential before we can multiply them on the left-hand side.",
+   "ur": "مختلط مزدوج (complex conjugate) کی تعریف کے مطابق، ہم خیالی حصے کی علامت بدل کر $\\overline{z} = 5 + 2i$ حاصل کرتے ہیں۔ بائیں طرف کو حل کرنے سے پہلے ہمارے پاس $z$ اور $\\overline{z}$ دونوں کی قیمتیں ہونا ضروری ہیں۔"
+  },
+  {
+   "en": "To verify an equation, we evaluate each side separately, starting with the Left Hand Side ($z\\overline{z}$). Putting the values of $z$ and $\\overline{z}$ side by side sets up the multiplication we need to perform.",
+   "ur": "کسی مساوات کی تصدیق کے لیے ہم دونوں اطراف کو الگ الگ حل کرتے ہیں، اور آغاز بائیں طرف ($z\\overline{z}$) سے کرتے ہیں۔ $z$ اور $\\overline{z}$ کی قیمتیں درج کرنے سے ہمیں وہ رقوم مل جاتی ہیں جنہیں آپس میں ضرب دینا ہے۔"
+  },
+  {
+   "en": "Since we are multiplying two conjugates of the form $(a - b)(a + b)$, we use the difference of squares identity $a^2 - b^2$ to save time. This neatly eliminates the middle terms and gives us $25 - 4i^2$.",
+   "ur": "چونکہ ہم $(a - b)(a + b)$ کی شکل والی دو مزدوج رقوم کو ضرب دے رہے ہیں، اس لیے وقت بچانے کے لیے ہم کلیہ $a^2 - b^2$ استعمال کرتے ہیں۔ اس سے درمیانی رقوم ختم ہو جاتی ہیں اور ہمیں $25 - 4i^2$ ملتا ہے۔"
+  },
+  {
+   "en": "By the fundamental property of the imaginary unit, $i^2$ is always equal to $-1$. Replacing $i^2$ with $-1$ turns the subtraction into addition ($25 + 4$), showing that the Left Hand Side is a pure real number, $29$.",
+   "ur": "خیالی اکائی کی بنیادی خاصیت کے مطابق $i^2$ ہمیشہ $-1$ کے برابر ہوتا ہے۔ $i^2$ کی جگہ $-1$ لگانے سے تفریق کا عمل جمع ($25 + 4$) میں بدل جاتا ہے، جس سے بائیں طرف کا جواب ایک حقیقی عدد $29$ آتا ہے۔"
+  },
+  {
+   "en": "Now we work on the Right Hand Side by first using the modulus formula $|a + bi| = \\sqrt{a^2 + b^2}$, which measures the magnitude of $z$ using its real part $5$ and imaginary part $-2$. This gives us the modulus $|z| = \\sqrt{29}$, which is one step away from the R.H.S.",
+   "ur": "اب ہم دائیں طرف کو حل کرنے کے لیے سب سے پہلے ماڈولس کا کلیہ $|a + bi| = \\sqrt{a^2 + b^2}$ استعمال کرتے ہیں، جس میں حقیقی حصہ $5$ اور خیالی حصہ $-2$ لگایا جاتا ہے۔ اس سے ہمیں ماڈولس $|z| = \\sqrt{29}$ مل جاتا ہے، جو ہمیں دائیں طرف کے حتمی جواب کے قریب لے آتا ہے۔"
+  },
+  {
+   "en": "The Right Hand Side requires $|z|^2$, so we square the modulus $\\sqrt{29}$ that we just found. Because squaring and taking the square root are opposite operations, they cancel each other out and leave us with $29$.",
+   "ur": "دائیں طرف ہمیں $|z|^2$ چاہیے، اس لیے ہم ابھی معلوم کیے گئے ماڈولس $\\sqrt{29}$ کا مربع (square) لیتے ہیں۔ چونکہ مربع اور جزر ایک دوسرے کے الٹ عمل ہیں، اس لیے یہ آپس میں کٹ جاتے ہیں اور ہمارے پاس $29$ بچتا ہے۔"
+  },
+  {
+   "en": "Comparing the two results, we see that both the Left Hand Side and Right Hand Side equal $29$. This match completes our proof and confirms the property holds true for $z = 5 - 2i$.",
+   "ur": "دونوں نتائج کا موازنہ کرنے سے ہم دیکھتے ہیں کہ بائیں اور دائیں دونوں اطراف کا جواب $29$ ہے۔ یہ برابری ہماری تصدیق کو مکمل کرتی ہے کہ $z = 5 - 2i$ کے لیے یہ خاصیت بالکل درست ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This result proves an important rule of complex numbers: multiplying a complex number $z = 5 - 2i$ by its conjugate $\\overline{z} = 5 + 2i$ always eliminates the imaginary part and gives a positive real number ($29$) equal to the square of its modulus $|z|^2$. As a quick check, you can always just add the squares of the real and imaginary parts ($5^2 + (-2)^2 = 25 + 4 = 29$) to immediately know what $z\\overline{z}$ will be.",
+  "ur": "یہ نتیجہ مختلط اعداد (complex numbers) کے ایک اہم اصول کو ثابت کرتا ہے: کسی بھی مختلط عدد $z = 5 - 2i$ کو اس کے مزدوج $\\overline{z} = 5 + 2i$ سے ضرب دینے پر خیالی حصہ ہمیشہ ختم ہو جاتا ہے اور ایک مثبت حقیقی عدد ($29$) حاصل ہوتا ہے جو اس کے ماڈولس کے مربع $|z|^2$ کے برابر ہوتا ہے۔ پڑتال کے طور پر، آپ صرف حقیقی اور خیالی حصوں کے مربعوں کو جمع کر کے ($5^2 + (-2)^2 = 25 + 4 = 29$) فوری طور پر جان سکتے ہیں کہ $z\\overline{z}$ کا جواب کیا ہو گا۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

@@ -1,0 +1,65 @@
+{
+ "item": "c10-ex3.4-q1",
+ "label": "iv",
+ "answer_ref": "$AB = \\begin{bmatrix} 3 & 10 & 3 \\\\ 3 & -1 & 0 \\\\ -3 & 12 & 3 \\end{bmatrix}$, $BA = \\begin{bmatrix} -2 & 2 \\\\ 2 & 7 \\end{bmatrix}$",
+ "steps": [
+  {
+   "math": "A = \\begin{bmatrix} 1 & 2 \\\\ -1 & 1 \\\\ 3 & 0 \\end{bmatrix}, \\quad B = \\begin{bmatrix} -1 & 4 & 1 \\\\ 2 & 3 & 1 \\end{bmatrix}",
+   "en": "We are given matrix $A$ of order $3 \\times 2$ and matrix $B$ of order $2 \\times 3$. We need to find the products $AB$ and $BA$, if possible.",
+   "ur": "ہمیں $3 \\times 2$ مرتبے کا قالب $A$ اور $2 \\times 3$ مرتبے کا قالب $B$ دیا گیا ہے۔ ہمیں حاصل ضرب $AB$ اور $BA$ (اگر ممکن ہو تو) معلوم کرنے ہیں۔"
+  },
+  {
+   "math": "\\text{Columns of } A = 2 = \\text{Rows of } B",
+   "en": "First, let us check if $AB$ is possible. Two matrices can be multiplied if the number of columns of the first matrix equals the number of rows of the second matrix. Since $A$ has $2$ columns and $B$ has $2$ rows, the product $AB$ is possible and will be a $3 \\times 3$ matrix.",
+   "ur": "سب سے پہلے ہم چیک کرتے ہیں کہ کیا $AB$ ممکن ہے۔ دو قالبوں کو ضرب دی جا سکتی ہے اگر پہلے قالب کے کالموں کی تعداد دوسرے قالب کی قطاروں کی تعداد کے برابر ہو۔ چونکہ $A$ میں $2$ کالم اور $B$ میں $2$ قطاریں ہیں، اس لیے حاصل ضرب $AB$ ممکن ہے اور یہ $3 \\times 3$ کا قالب ہوگا۔",
+   "check": [
+    "2 == 2"
+   ]
+  },
+  {
+   "math": "AB = \\begin{bmatrix} 1 & 2 \\\\ -1 & 1 \\\\ 3 & 0 \\end{bmatrix}\\begin{bmatrix} -1 & 4 & 1 \\\\ 2 & 3 & 1 \\end{bmatrix} = \\begin{bmatrix} (1)(-1) + (2)(2) & (1)(4) + (2)(3) & (1)(1) + (2)(1) \\\\ (-1)(-1) + (1)(2) & (-1)(4) + (1)(3) & (-1)(1) + (1)(1) \\\\ (3)(-1) + (0)(2) & (3)(4) + (0)(3) & (3)(1) + (0)(1) \\end{bmatrix}",
+   "en": "To find $AB$, multiply each row of matrix $A$ by each column of matrix $B$, entry by entry, and add the results.",
+   "ur": "$AB$ معلوم کرنے کے لیے، قالب $A$ کی ہر قطار کو قالب $B$ کے ہر کالم سے رکن بہ رکن ضرب دیں اور نتائج کو جمع کریں۔",
+   "check": [
+    "Matrix([[1, 2], [-1, 1], [3, 0]]) * Matrix([[-1, 4, 1], [2, 3, 1]]) == Matrix([[(1)*(-1) + (2)*(2), (1)*(4) + (2)*(3), (1)*(1) + (2)*(1)], [(-1)*(-1) + (1)*(2), (-1)*(4) + (1)*(3), (-1)*(1) + (1)*(1)], [(3)*(-1) + (0)*(2), (3)*(4) + (0)*(3), (3)*(1) + (0)*(1)]])"
+   ]
+  },
+  {
+   "math": "AB = \\begin{bmatrix} -1 + 4 & 4 + 6 & 1 + 2 \\\\ 1 + 2 & -4 + 3 & -1 + 1 \\\\ -3 + 0 & 12 + 0 & 3 + 0 \\end{bmatrix} = \\begin{bmatrix} 3 & 10 & 3 \\\\ 3 & -1 & 0 \\\\ -3 & 12 & 3 \\end{bmatrix}",
+   "en": "Simplify the products and add the numbers to get the final matrix for $AB$.",
+   "ur": "حاصل ضرب کو مختصر کریں اور اعداد کو جمع کر کے $AB$ کا حتمی قالب حاصل کریں۔",
+   "check": [
+    "Matrix([[-1 + 4, 4 + 6, 1 + 2], [1 + 2, -4 + 3, -1 + 1], [-3 + 0, 12 + 0, 3 + 0]]) == Matrix([[3, 10, 3], [3, -1, 0], [-3, 12, 3]])"
+   ]
+  },
+  {
+   "math": "\\text{Columns of } B = 3 = \\text{Rows of } A",
+   "en": "Now, let us check if $BA$ is possible. Matrix $B$ has $3$ columns and matrix $A$ has $3$ rows. Since they are equal, the product $BA$ is also possible and will be a $2 \\times 2$ matrix.",
+   "ur": "اب، آئیے چیک کریں کہ کیا $BA$ ممکن ہے۔ قالب $B$ میں $3$ کالم ہیں اور قالب $A$ میں $3$ قطاریں ہیں۔ چونکہ یہ برابر ہیں، اس لیے حاصل ضرب $BA$ بھی ممکن ہے اور یہ $2 \\times 2$ کا قالب ہوگا۔",
+   "check": [
+    "3 == 3"
+   ]
+  },
+  {
+   "math": "BA = \\begin{bmatrix} -1 & 4 & 1 \\\\ 2 & 3 & 1 \\end{bmatrix}\\begin{bmatrix} 1 & 2 \\\\ -1 & 1 \\\\ 3 & 0 \\end{bmatrix} = \\begin{bmatrix} (-1)(1) + (4)(-1) + (1)(3) & (-1)(2) + (4)(1) + (1)(0) \\\\ (2)(1) + (3)(-1) + (1)(3) & (2)(2) + (3)(1) + (1)(0) \\end{bmatrix}",
+   "en": "To find $BA$, multiply each row of matrix $B$ by each column of matrix $A$, entry by entry, and add the results.",
+   "ur": "$BA$ معلوم کرنے کے لیے، قالب $B$ کی ہر قطار کو قالب $A$ کے ہر کالم سے رکن بہ رکن ضرب دیں اور نتائج کو جمع کریں۔",
+   "check": [
+    "Matrix([[-1, 4, 1], [2, 3, 1]]) * Matrix([[1, 2], [-1, 1], [3, 0]]) == Matrix([[(-1)*(1) + (4)*(-1) + (1)*(3), (-1)*(2) + (4)*(1) + (1)*(0)], [(2)*(1) + (3)*(-1) + (1)*(3), (2)*(2) + (3)*(1) + (1)*(0)]])"
+   ]
+  },
+  {
+   "math": "BA = \\begin{bmatrix} -1 - 4 + 3 & -2 + 4 + 0 \\\\ 2 - 3 + 3 & 4 + 3 + 0 \\end{bmatrix} = \\begin{bmatrix} -2 & 2 \\\\ 2 & 7 \\end{bmatrix}",
+   "en": "Simplify the products and add the numbers to get the final matrix for $BA$.",
+   "ur": "حاصل ضرب کو مختصر کریں اور اعداد کو جمع کر کے $BA$ کا حتمی قالب حاصل کریں۔",
+   "check": [
+    "Matrix([[-1 - 4 + 3, -2 + 4 + 0], [2 - 3 + 3, 4 + 3 + 0]]) == Matrix([[-2, 2], [2, 7]])",
+    "Eq(Matrix([[3, 10, 3], [3, -1, 0], [-3, 12, 3]]), Matrix([[3, 10, 3], [3, -1, 0], [-3, 12, 3]]))",
+    "Eq(Matrix([[-2, 2], [2, 7]]), Matrix([[-2, 2], [2, 7]]))"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

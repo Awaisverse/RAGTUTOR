@@ -1,0 +1,61 @@
+{
+ "item": "c10-ex1.1-q3",
+ "label": "v",
+ "answer_ref": "$x = 3,\\ y = 5$",
+ "steps": [
+  {
+   "math": "(3x-1)+(2y-3)i = 8+7i",
+   "en": "Write down the given complex equation. Both sides are already in the standard form $a+bi$, where $(3x-1)$ and $8$ are the real parts, and $(2y-3)$ and $7$ are the imaginary parts.",
+   "ur": "دی گئی مختلط مساوات لکھیں۔ دونوں اطراف پہلے ہی معیاری شکل $a+bi$ میں ہیں، جہاں $(3x-1)$ اور $8$ حقیقی حصے ہیں، اور $(2y-3)$ اور $7$ خیالی حصے ہیں۔"
+  },
+  {
+   "math": "3x - 1 = 8 \\quad \\text{and} \\quad 2y - 3 = 7",
+   "en": "By definition of equality of complex numbers, two complex numbers are equal if and only if their real parts are equal and their imaginary parts are equal. Equating the corresponding parts gives two linear equations.",
+   "ur": "مختلط اعداد کی مساوات کی تعریف کے مطابق، دو مختلط اعداد تبھی برابر ہوتے ہیں جب ان کے حقیقی حصے برابر ہوں اور ان کے خیالی حصے بھی برابر ہوں۔ متعلقہ حصوں کو برابر رکھنے سے دو یک درجی مساواتیں حاصل ہوتی ہیں۔"
+  },
+  {
+   "math": "3x = 8 + 1 \\implies 3x = 9 \\implies x = \\frac{9}{3} = 3",
+   "en": "First, solve the equation from the real parts for $x$. Add $1$ to both sides and then divide by $3$.",
+   "ur": "پہلے، $x$ کی قیمت معلوم کرنے کے لیے حقیقی حصوں والی مساوات کو حل کریں۔ دونوں طرف $1$ جمع کریں اور پھر $3$ پر تقسیم کریں۔",
+   "check": [
+    "8 + 1 == 9",
+    "R(9, 3) == 3",
+    "3*(3) - 1 == 8"
+   ]
+  },
+  {
+   "math": "2y = 7 + 3 \\implies 2y = 10 \\implies y = \\frac{10}{2} = 5",
+   "en": "Next, solve the equation from the imaginary parts for $y$. Add $3$ to both sides and then divide by $2$.",
+   "ur": "اس کے بعد، $y$ کی قیمت معلوم کرنے کے لیے خیالی حصوں والی مساوات کو حل کریں۔ دونوں طرف $3$ جمع کریں اور پھر $2$ پر تقسیم کریں۔",
+   "check": [
+    "7 + 3 == 10",
+    "R(10, 2) == 5",
+    "2*(5) - 3 == 7"
+   ]
+  },
+  {
+   "math": "\\text{Check: } (3(3)-1)+(2(5)-3)i = (9-1)+(10-3)i = 8+7i",
+   "en": "Substitute $x = 3$ and $y = 5$ back into the left-hand side of the original equation to verify. Both sides are equal.",
+   "ur": "تصدیق کرنے کے لیے اصل مساوات کی بائیں جانب $x = 3$ اور $y = 5$ درج کریں۔ دونوں اطراف برابر ہیں۔",
+   "check": [
+    "3*3 - 1 == 8",
+    "2*5 - 3 == 7",
+    "(3*3 - 1) + (2*5 - 3)*I == 8 + 7*I"
+   ]
+  },
+  {
+   "math": "x = 3,\\quad y = 5",
+   "en": "Thus, the required values of $x$ and $y$ are $3$ and $5$ respectively.",
+   "ur": "پس، $x$ اور $y$ کی مطلوبہ قیمتیں بالترتیب $3$ اور $5$ ہیں۔",
+   "check": [
+    "expand((3*(x)-1) + (2*(y)-3)*I) == expand((3*x - 1) + (2*y - 3)*I)",
+    "3*(3) - 9 == 0",
+    "2*(5) - 10 == 0",
+    "(3*(3)-1) + (2*(5)-3)*I == 8+7*I"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

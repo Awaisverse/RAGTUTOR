@@ -1,0 +1,50 @@
+{
+ "item": "c10-ex1.2-q7",
+ "label": "",
+ "answer_ref": "$a = \\frac{5}{2},\\ b = \\frac{7}{2}$",
+ "math": [
+  "(a+bi)(1+3i) = -8+11i",
+  "a(1+3i) + bi(1+3i) = a + 3ai + bi + 3bi^2 = -8+11i",
+  "(a - 3b) + (3a + b)i = -8+11i",
+  "a - 3b = -8 \\quad \\text{(1)} \\qquad \\text{and} \\qquad 3a + b = 11 \\quad \\text{(2)}",
+  "(a - 3b) + 3(3a + b) = -8 + 3(11) \\implies 10a = 25 \\implies a = \\frac{25}{10} = \\frac{5}{2}",
+  "3\\left(\\frac{5}{2}\\right) + b = 11 \\implies b = 11 - \\frac{15}{2} = \\frac{22 - 15}{2} = \\frac{7}{2}",
+  "\\text{Check: } \\left(\\frac{5}{2} + \\frac{7}{2}i\\right)(1+3i) = \\frac{5}{2} + \\frac{15}{2}i + \\frac{7}{2}i - \\frac{21}{2} = -8 + 11i"
+ ],
+ "why": [
+  {
+   "en": "We start with the given complex equation so we can clearly see the two expressions we need to compare. Notice that the right-hand side is already in standard form ($x+yi$), while the left-hand side is a product that needs to be simplified first.",
+   "ur": "ہم دی گئی کمپلیکس مساوات سے آغاز کرتے ہیں تاکہ دونوں اطراف کا موازنہ واضح ہو سکے۔ غور کریں کہ دائیں طرف پہلے ہی معیاری شکل میں ہے، جبکہ بائیں طرف دو بریکٹس کا حاصلِ ضرب ہے جسے پہلے حل کرنے کی ضرورت ہے۔"
+  },
+  {
+   "en": "We expand the brackets using the distributive law of multiplication, just like we do with ordinary algebraic expressions. This removes the parentheses and gives us individual terms that we can simplify and group.",
+   "ur": "ہم عام الجبرا کی طرح تقسیمی قانون استعمال کرتے ہوئے دونوں بریکٹس کو آپس میں ضرب دیتے ہیں۔ اس سے بریکٹس ختم ہو جاتی ہیں اور ہمیں الگ الگ رقمیں مل جاتی ہیں جنہیں ہم آگے مختصر کر سکتے ہیں۔"
+  },
+  {
+   "en": "By the fundamental definition of the imaginary unit, $i^2 = -1$, which turns the term $3bi^2$ into a purely real term $-3b$. Grouping the real terms without $i$ and the imaginary terms with $i$ puts the left side into the standard complex form, matching the right side.",
+   "ur": "ایمیجنری یونٹ کی بنیادی تعریف کے مطابق $i^2 = -1$ ہوتا ہے، جس سے $3bi^2$ کی رقم ایک حقیقی رقم $-3b$ بن جاتی ہے۔ اب بغیر $i$ والی حقیقی رقموں اور $i$ والی خیالی رقموں کو الگ الگ یکجا کرنے سے بائیں طرف بھی معیاری کمپلیکس شکل میں آ جاتی ہے۔"
+  },
+  {
+   "en": "By the definition of equality of complex numbers, two complex numbers are equal only when their real parts are equal and their imaginary parts are equal. This rule lets us break one complex equation into two simple simultaneous linear equations in $a$ and $b$ without $i$.",
+   "ur": "کمپلیکس نمبرز کی برابری کے اصول کے مطابق، دو کمپلیکس نمبرز تبھی برابر ہوتے ہیں جب ان کے حقیقی حصے آپس میں اور خیالی حصے آپس میں برابر ہوں۔ یہ اصول ہمیں ایک کمپلیکس مساوات کو $i$ کے بغیر، $a$ اور $b$ کی دو سادہ ہم زاد لینیئر مساواتوں میں تبدیل کرنے میں مدد دیتا ہے۔"
+  },
+  {
+   "en": "We use the elimination method for simultaneous equations: multiplying equation (2) by $3$ makes the coefficients of $b$ opposite in sign ($-3b$ and $+3b$). Adding the two equations cancels out $b$ completely, allowing us to directly find the exact value of $a = \\frac{5}{2}$.",
+   "ur": "ہم ہم زاد مساواتوں کو حل کرنے کا اخراجی طریقہ استعمال کرتے ہیں: مساوات (2) کو $3$ سے ضرب دینے سے $b$ کے عددی سر متضاد علامتوں والے ($-3b$ اور $+3b$) بن جاتے ہیں۔ دونوں مساواتوں کو جمع کرنے سے $b$ مکمل طور پر ختم ہو جاتا ہے اور ہمیں براہِ راست $a = \\frac{5}{2}$ کی قیمت مل جاتی ہے۔"
+  },
+  {
+   "en": "Now that we know the value of $a$, we substitute it into the simpler linear equation (2) so that $b$ is the only unknown left. Taking a common denominator of $2$ allows us to easily subtract the fractions and find $b = \\frac{7}{2}$.",
+   "ur": "اب جب کہ ہمیں $a$ کی قیمت معلوم ہو چکی ہے، ہم اسے آسان مساوات (2) میں درج کرتے ہیں تاکہ صرف $b$ نامعلوم رہ جائے۔ $2$ کو مشترک مخرج لے کر کسر کو حل کرنے سے ہمیں باآسانی $b = \\frac{7}{2}$ کی قیمت حاصل ہو جاتی ہے۔"
+  },
+  {
+   "en": "Good mathematicians always verify their work: substituting $a = \\frac{5}{2}$ and $b = \\frac{7}{2}$ back into the original left-hand side and simplifying confirms that it equals $-8+11i$. This proves our calculated values are completely accurate.",
+   "ur": "اچھے ریاضی دان ہمیشہ اپنے جواب کی تصدیق کرتے ہیں: $a = \\frac{5}{2}$ اور $b = \\frac{7}{2}$ کی قیمتوں کو اصل مساوات کی بائیں طرف میں درج کر کے حل کرنے سے واقعی $-8+11i$ حاصل ہوتا ہے۔ اس سے ثابت ہوتا ہے کہ ہمارا جواب بالکل درست ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $a = \\frac{5}{2}$ and $b = \\frac{7}{2}$ tells us that the unknown complex number in the first bracket is specifically $\\frac{5}{2} + \\frac{7}{2}i$. It means that if you multiply this exact complex number by $1+3i$, the product will be $-8+11i$, which you can always verify by expanding $\\left(\\frac{5}{2} + \\frac{7}{2}i\\right)(1+3i)$ and using $i^2 = -1$.",
+  "ur": "آخری جواب $a = \\frac{5}{2}$ اور $b = \\frac{7}{2}$ ہمیں بتاتا ہے کہ پہلی بریکٹ میں موجود نامعلوم کمپلیکس نمبر دراصل $\\frac{5}{2} + \\frac{7}{2}i$ ہے۔ اس کا مطلب یہ ہے کہ اگر آپ اس مخصوص کمپلیکس نمبر کو $1+3i$ سے ضرب دیں، تو حاصلِ ضرب $-8+11i$ آئے گا، جس کی تصدیق آپ ہمیشہ $\\left(\\frac{5}{2} + \\frac{7}{2}i\\right)(1+3i)$ کو ضرب دے کر اور $i^2 = -1$ لگا کر کر سکتے ہیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

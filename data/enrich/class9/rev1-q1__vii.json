@@ -1,0 +1,70 @@
+{
+ "item": "rev1-q1",
+ "label": "vii",
+ "answer_ref": "a",
+ "steps": [
+  {
+   "math": "",
+   "en": "We are given the exponential equation $2^x \\times 8^x = 64$ and we need to find the value of $x$.",
+   "ur": "ہمیں قوت نمائی مساوات $2^x \\times 8^x = 64$ دی گئی ہے اور ہمیں $x$ کی قیمت معلوم کرنی ہے۔"
+  },
+  {
+   "math": "2^x \\times (2^3)^x = 2^6",
+   "en": "First, express the numbers $8$ and $64$ as powers of the common base $2$, since $8 = 2^3$ and $64 = 2^6$.",
+   "ur": "سب سے پہلے، نمبروں $8$ اور $64$ کو مشترک اساس $2$ کی قوتوں کے طور پر لکھیں، کیونکہ $8 = 2^3$ اور $64 = 2^6$ ہوتا ہے۔",
+   "check": [
+    "8 == 2**3",
+    "64 == 2**6"
+   ]
+  },
+  {
+   "math": "2^x \\times 2^{3x} = 2^6",
+   "en": "Apply the power of a power law of exponents $(a^m)^n = a^{mn}$ to simplify $(2^3)^x$.",
+   "ur": "$(2^3)^x$ کو مختصر کرنے کے لیے قوت نما کا قانون $(a^m)^n = a^{mn}$ استعمال کریں۔",
+   "check": [
+    "(2**3)**x == 2**(3*x)"
+   ]
+  },
+  {
+   "math": "2^{x + 3x} = 2^6 \\;\\Rightarrow\\; 2^{4x} = 2^6",
+   "en": "Using the product law of exponents $a^m \\times a^n = a^{m+n}$, add the exponents on the left side since the bases are the same.",
+   "ur": "قوت نما کے ضرب کے قانون $a^m \\times a^n = a^{m+n}$ کا استعمال کرتے ہوئے، بائیں جانب قوتوں کو جمع کریں کیونکہ اساس ایک جیسی ہیں۔",
+   "check": [
+    "x + 3*x == 4*x",
+    "2**x * 2**(3*x) == 2**(4*x)"
+   ]
+  },
+  {
+   "math": "4x = 6",
+   "en": "Since the bases on both sides of the equation are equal (both are $2$), their exponents must also be equal.",
+   "ur": "چونکہ مساوات کے دونوں اطراف کی اساس برابر ہیں (دونوں $2$ ہیں)، اس لیے ان کے قوت نما بھی برابر ہوں گے۔",
+   "check": [
+    "2**6 == 64"
+   ]
+  },
+  {
+   "math": "x = \\frac{6}{4} = \\frac{3}{2}",
+   "en": "Divide both sides by $4$ and simplify the fraction by dividing the numerator and denominator by $2$.",
+   "ur": "دونوں اطراف کو $4$ سے تقسیم کریں اور شمار کنندہ اور مخرج کو $2$ سے تقسیم کر کے کسر کو مختصر کریں۔",
+   "check": [
+    "R(6, 4) == R(3, 2)",
+    "2**R(3, 2) * 8**R(3, 2) == 64"
+   ]
+  },
+  {
+   "math": "",
+   "en": "Therefore, the correct option is (a) $\\frac{3}{2}$.",
+   "ur": "لہٰذا، درست آپشن (a) $\\frac{3}{2}$ ہے۔",
+   "check": [
+    "8**x == 2**(3*x)",
+    "2**x*2**(3*x) == 2**(4*x)",
+    "64 == 2**6",
+    "Rational(6,4) == Rational(3,2)",
+    "2**Rational(3,2) * 8**Rational(3,2) == 64"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

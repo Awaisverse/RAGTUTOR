@@ -1,0 +1,69 @@
+{
+ "item": "c10-ex5.2-q2",
+ "label": "",
+ "answer_ref": "$\\frac{2 x^{3} + 1}{\\left(x^{2} + 2\\right)^{2}}$",
+ "steps": [
+  {
+   "math": "\\frac{2x^3+x^2+3}{(x^2+2)^2} - \\frac{1}{x^2+2}",
+   "en": "To subtract the first expression from the second, we write the second fraction first and subtract the first fraction from it.",
+   "ur": "پہلی عبارت کو دوسری عبارت میں سے تفریق کرنے کے لیے، ہم پہلے دوسری کسر لکھتے ہیں اور اس میں سے پہلی کسر کو تفریق کرتے ہیں۔",
+   "check": [
+    "((2*x**3 + x**2 + 3)/(x**2 + 2)**2 - 1/(x**2 + 2)) == ((2*x**3 + x**2 + 3)/(x**2 + 2)**2 - 1/(x**2 + 2))"
+   ]
+  },
+  {
+   "math": "\\text{L.C.M.} = (x^2+2)^2",
+   "en": "To subtract these algebraic fractions, we need a common denominator. The Least Common Multiple (L.C.M.) of the denominators $(x^2+2)^2$ and $(x^2+2)$ is $(x^2+2)^2$.",
+   "ur": "ان الجبری کسور کو تفریق کرنے کے لیے ہمیں ایک مشترک مخرج (نسب نما) کی ضرورت ہے۔ مخرج $(x^2+2)^2$ اور $(x^2+2)$ کا ذواضعاف اقل (L.C.M.) $(x^2+2)^2$ ہے۔",
+   "check": [
+    "(x**2 + 2)**2 == (x**2 + 2)*(x**2 + 2)"
+   ]
+  },
+  {
+   "math": "= \\frac{2x^3+x^2+3}{(x^2+2)^2} - \\frac{1 \\cdot (x^2+2)}{(x^2+2)(x^2+2)}",
+   "en": "Multiply the numerator and the denominator of the second fraction by $(x^2+2)$ so that both fractions have the same denominator.",
+   "ur": "دوسری کسر کے شمار کنندہ اور مخرج دونوں کو $(x^2+2)$ سے ضرب دیں تاکہ دونوں کسور کے مخرج یکساں ہو جائیں۔",
+   "check": [
+    "(2*x**3 + x**2 + 3)/(x**2 + 2)**2 - (1*(x**2 + 2))/((x**2 + 2)*(x**2 + 2)) == (2*x**3 + x**2 + 3)/(x**2 + 2)**2 - 1/(x**2 + 2)"
+   ]
+  },
+  {
+   "math": "= \\frac{(2x^3+x^2+3) - (x^2+2)}{(x^2+2)^2}",
+   "en": "Now that the denominators are the same, combine the numerators over the common denominator $(x^2+2)^2$.",
+   "ur": "اب جبکہ مخرج یکساں ہیں، شمار کنندگان کو مشترک مخرج $(x^2+2)^2$ کے اوپر یکجا کریں۔",
+   "check": [
+    "((2*x**3 + x**2 + 3) - (x**2 + 2))/(x**2 + 2)**2 == (2*x**3 + x**2 + 3)/(x**2 + 2)**2 - 1/(x**2 + 2)"
+   ]
+  },
+  {
+   "math": "= \\frac{2x^3 + x^2 + 3 - x^2 - 2}{(x^2+2)^2}",
+   "en": "Remove the brackets in the numerator. Remember to change the signs of the terms inside the second bracket because of the negative sign outside.",
+   "ur": "شمار کنندہ میں بریکٹ ختم کریں۔ باہر منفی کی علامت ہونے کی وجہ سے دوسری بریکٹ کے اندر موجود رقموں کی علامتیں تبدیل کرنا یاد رکھیں۔",
+   "check": [
+    "(2*x**3 + x**2 + 3 - x**2 - 2)/(x**2 + 2)**2 == ((2*x**3 + x**2 + 3) - (x**2 + 2))/(x**2 + 2)**2"
+   ]
+  },
+  {
+   "math": "= \\frac{2x^3 + (x^2 - x^2) + (3 - 2)}{(x^2+2)^2}",
+   "en": "Group the like terms together in the numerator.",
+   "ur": "شمار کنندہ میں متشابہ رقوم کو ایک ساتھ ملا کر لکھیں۔",
+   "check": [
+    "(2*x**3 + (x**2 - x**2) + (3 - 2))/(x**2 + 2)**2 == (2*x**3 + x**2 + 3 - x**2 - 2)/(x**2 + 2)**2"
+   ]
+  },
+  {
+   "math": "= \\frac{2 x^{3} + 1}{\\left(x^{2} + 2\\right)^{2}}",
+   "en": "Simplify the numerator by cancelling $x^2 - x^2 = 0$ and subtracting $3 - 2 = 1$ to get the final answer.",
+   "ur": "شمار کنندہ میں $x^2 - x^2 = 0$ کو کینسل کر کے اور $3 - 2 = 1$ تفریق کر کے مختصر کریں، جس سے حتمی جواب حاصل ہو جائے گا۔",
+   "check": [
+    "(2*x**3 + 1)/(x**2 + 2)**2 == (2*x**3 + x**2 + 3)/(x**2 + 2)**2 - 1/(x**2 + 2)",
+    "(-1/(x**2 + 2) + (2*x**3 + x**2 + 3)/(x**2 + 2)**2) == (-1/(x**2 + 2) + (2*x**3 + x**2 + 3)/(x**2 + 2)**2)",
+    "(2*x**3 + 1)/((x**2 + 2)**2) == (-1/(x**2 + 2) + (2*x**3 + x**2 + 3)/(x**2 + 2)**2)",
+    "(2*x**3 + 1)/((x**2 + 2)**2) == (-1/(x**2 + 2) + (2*x**3 + x**2 + 3)/(x**2 + 2)**2)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

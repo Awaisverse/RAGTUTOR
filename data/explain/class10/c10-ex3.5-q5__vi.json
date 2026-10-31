@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex3.5-q5",
+ "label": "vi",
+ "answer_ref": "$\\begin{bmatrix} \\frac{5}{2} & \\frac{3}{2} \\\\ -2 & -1 \\end{bmatrix}$",
+ "math": [
+  "A = \\begin{bmatrix} -2 & -3 \\\\ 4 & 5 \\end{bmatrix}, \\quad A^{-1} = \\frac{1}{|A|} \\operatorname{Adj} A",
+  "|A| = \\begin{vmatrix} -2 & -3 \\\\ 4 & 5 \\end{vmatrix} = (-2)(5) - (-3)(4)",
+  "|A| = -10 + 12 = 2",
+  "\\operatorname{Adj} A = \\begin{bmatrix} 5 & 3 \\\\ -4 & -2 \\end{bmatrix}",
+  "A^{-1} = \\frac{1}{2} \\begin{bmatrix} 5 & 3 \\\\ -4 & -2 \\end{bmatrix} = \\begin{bmatrix} \\frac{5}{2} & \\frac{3}{2} \\\\ \\frac{-4}{2} & \\frac{-2}{2} \\end{bmatrix}",
+  "A^{-1} = \\begin{bmatrix} \\frac{5}{2} & \\frac{3}{2} \\\\ -2 & -1 \\end{bmatrix}"
+ ],
+ "why": [
+  {
+   "en": "We begin by naming the matrix $A$ and writing down the standard formula for the multiplicative inverse. This roadmap tells us that we need to find two pieces—the determinant $|A|$ and the adjoint $\\operatorname{Adj} A$—before we can build the inverse.",
+   "ur": "ہم سب سے پہلے دیے گئے کالب کو $A$ کا نام دیتے ہیں اور ضربی معکوس کا فارمولا لکھتے ہیں۔ اس فارمولے سے ہمیں واضح ہو جاتا ہے کہ جواب تک پہنچنے کے لیے ہمیں دو چیزیں معلوم کرنی ہیں: مقطع $|A|$ اور ایڈجوائنٹ $\\operatorname{Adj} A$۔"
+  },
+  {
+   "en": "We always calculate the determinant first because division by zero is undefined in mathematics, and $|A|$ sits in the denominator of our formula. Using the cross-multiplication rule for $2 \\times 2$ matrices sets up the test to see if an inverse is even possible.",
+   "ur": "ہم ہمیشہ پہلے مقطع معلوم کرتے ہیں کیونکہ فارمولے کے بٹے میں $|A|$ موجود ہے اور ریاضی میں صفر سے تقسیم ممکن نہیں ہوتی۔ $2 \\times 2$ کالب کے مقطع کا اصول لگا کر ہم یہ جانچنے کی تیاری کرتے ہیں کہ آیا اس کالب کا معکوس ممکن بھی ہے یا نہیں۔"
+  },
+  {
+   "en": "Watch the negative signs carefully here: subtracting $(-3)(4)$ becomes adding $12$. Getting $|A| = 2$ (which is not zero) proves that $A$ is a non-singular matrix, giving us the green light to continue finding the inverse.",
+   "ur": "یہاں منفی کی علامتوں کا خاص خیال رکھیں کیونکہ $(-3)(4)$ کو تفریق کرنے سے یہ جمع کا $12$ بن جاتا ہے۔ $|A| = 2$ کا جواب (جو کہ صفر نہیں ہے) یہ ثابت کرتا ہے کہ یہ ایک غیر نادر کالب ہے، اس لیے اس کا ضربی معکوس معلوم کیا جا سکتا ہے۔"
+  },
+  {
+   "en": "Next, we apply the definition of the adjoint for a $2 \\times 2$ matrix to get the second required piece of our formula. Swapping the main diagonal entries ($-2$ and $5$) and reversing the signs of the other two entries ($-3$ and $4$) gives us $\\operatorname{Adj} A$ directly.",
+   "ur": "اب ہم فارمولے کا دوسرا حصہ حاصل کرنے کے لیے $2 \\times 2$ کالب کے ایڈجوائنٹ کی تعریف استعمال کرتے ہیں۔ وتر کے ارکان ($-2$ اور $5$) کی جگہ بدلنے اور باقی دو ارکان ($-3$ اور $4$) کی علامتیں تبدیل کرنے سے ہمیں براہِ راست $\\operatorname{Adj} A$ مل جاتا ہے۔"
+  },
+  {
+   "en": "Now we put both pieces together into the inverse formula and use the rule of scalar multiplication. Multiplying the matrix by $\\frac{1}{2}$ means every single entry inside the matrix must be divided by the determinant $2$.",
+   "ur": "اب ہم دونوں قیمتوں کو معکوس کے فارمولے میں درج کرتے ہیں اور حقیقی عدد سے ضرب کا اصول لگاتے ہیں۔ باہر موجود $\\frac{1}{2}$ کا مطلب یہ ہے کہ کالب کے اندر موجود ہر ایک رکن کو مقطع کی قیمت یعنی $2$ پر تقسیم کیا جائے گا۔"
+  },
+  {
+   "en": "In mathematics, we always write our final matrix with each entry in its simplest form. Since $-4$ and $-2$ divide evenly by $2$, reducing them to $-2$ and $-1$ completes our solution neatly.",
+   "ur": "ریاضی میں ہم کالب کے حتمی جواب کے ہر رکن کو اس کی سادہ ترین شکل میں لکھتے ہیں۔ چونکہ دوسری قطار کے ارکان $-4$ اور $-2$، عدد $2$ پر پورا پورا تقسیم ہو جاتے ہیں، اس لیے انہیں مختصر کر کے $-2$ اور $-1$ لکھنے سے ہمارا حل مکمل ہو جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The matrix $\\begin{bmatrix} \\frac{5}{2} & \\frac{3}{2} \\\\ -2 & -1 \\end{bmatrix}$ is the multiplicative inverse $A^{-1}$ of the given matrix $A$. This means that if you multiply the original matrix $\\begin{bmatrix} -2 & -3 \\\\ 4 & 5 \\end{bmatrix}$ by this answer matrix, they will cancel each other's effect and produce the identity matrix $I = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}$, which is how you can check your work in an exam.",
+  "ur": "کالب $\\begin{bmatrix} \\frac{5}{2} & \\frac{3}{2} \\\\ -2 & -1 \\end{bmatrix}$ دیے گئے کالب $A$ کا ضربی معکوس $A^{-1}$ ہے۔ اس کا مطلب یہ ہے کہ اگر آپ اصل کالب $\\begin{bmatrix} -2 & -3 \\\\ 4 & 5 \\end{bmatrix}$ کو اس جواب والے کالب سے ضرب دیں، تو نتیجے میں وحدانی کالب $I = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}$ حاصل ہو گا، اور اسی طریقے سے آپ امتحان میں اپنے جواب کی درستگی کی پڑتال بھی کر سکتے ہیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

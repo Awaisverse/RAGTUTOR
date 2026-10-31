@@ -1,0 +1,70 @@
+{
+ "item": "ex1.2-q2",
+ "label": "iii",
+ "answer_ref": "$\\frac{10}{3}$",
+ "steps": [
+  {
+   "math": "(0.027)^{-\\frac{1}{3}}",
+   "en": "We are given the decimal expression $(0.027)^{-\\frac{1}{3}}$ and we need to simplify it using the laws of exponents.",
+   "ur": "ہمیں اعشاریہ والا جملہ $(0.027)^{-\\frac{1}{3}}$ دیا گیا ہے اور ہمیں قوت نما کے قوانین کا استعمال کرتے ہوئے اسے مختصر کرنا ہے۔"
+  },
+  {
+   "math": "= \\left(\\frac{27}{1000}\\right)^{-\\frac{1}{3}}",
+   "en": "First, convert the decimal number $0.027$ into a common fraction by removing the decimal point. Since there are three digits after the decimal point, we divide $27$ by $1000$.",
+   "ur": "سب سے پہلے، اعشاریہ کو ہٹا کر اعشاری عدد $0.027$ کو عام کسر میں تبدیل کریں۔ چونکہ اعشاریہ کے بعد تین ہندسے ہیں، اس لیے ہم $27$ کو $1000$ پر تقسیم کرتے ہیں۔",
+   "check": [
+    "R(27, 1000) == R(27, 1000)"
+   ]
+  },
+  {
+   "math": "= \\left(\\frac{3^3}{10^3}\\right)^{-\\frac{1}{3}}",
+   "en": "Next, express both the numerator and the denominator in exponential (cube) form. We know that $27 = 3 \\times 3 \\times 3 = 3^3$ and $1000 = 10 \\times 10 \\times 10 = 10^3$.",
+   "ur": "اس کے بعد، شمار کنندہ اور مخرج دونوں کو قوت نما (مکعب) کی شکل میں لکھیں۔ ہم جانتے ہیں کہ $27 = 3 \\times 3 \\times 3 = 3^3$ اور $1000 = 10 \\times 10 \\times 10 = 10^3$ ہوتا ہے۔",
+   "check": [
+    "27 == 3**3",
+    "1000 == 10**3",
+    "(R(27, 1000))**R(-1, 3) == (R(3**3, 10**3))**R(-1, 3)"
+   ]
+  },
+  {
+   "math": "= \\left(\\left(\\frac{3}{10}\\right)^3\\right)^{-\\frac{1}{3}}",
+   "en": "Using the law of quotient of powers $\\frac{a^n}{b^n} = \\left(\\frac{a}{b}\\right)^n$, we can write the fraction with a single combined exponent $3$.",
+   "ur": "قوت نما کے قانون $\\frac{a^n}{b^n} = \\left(\\frac{a}{b}\\right)^n$ کا استعمال کرتے ہوئے، ہم کسر کو ایک مشترکہ قوت نما $3$ کے ساتھ لکھ سکتے ہیں۔",
+   "check": [
+    "R(3**3, 10**3) == R(3, 10)**3"
+   ]
+  },
+  {
+   "math": "= \\left(\\frac{3}{10}\\right)^{3 \\times \\left(-\\frac{1}{3}\\right)}",
+   "en": "Now, apply the power of a power rule $(a^m)^n = a^{m \\times n}$ and multiply the inner exponent $3$ by the outer exponent $-\\frac{1}{3}$.",
+   "ur": "اب، قوت کی قوت کا اصول $(a^m)^n = a^{m \\times n}$ لاگو کریں اور اندرونی قوت نما $3$ کو بیرونی قوت نما $-\\frac{1}{3}$ سے ضرب دیں۔",
+   "check": [
+    "(R(3, 10)**3)**R(-1, 3) == R(3, 10)**(3 * R(-1, 3))"
+   ]
+  },
+  {
+   "math": "= \\left(\\frac{3}{10}\\right)^{-1}",
+   "en": "The $3$ in the numerator and the $3$ in the denominator of the exponent cancel each other out, leaving an exponent of $-1$.",
+   "ur": "قوت نما کے شمار کنندہ اور مخرج میں موجود $3$ ایک دوسرے سے کٹ جاتے ہیں، جس سے قوت نما $-1$ باقی رہ جاتا ہے۔",
+   "check": [
+    "3 * R(-1, 3) == -1",
+    "R(3, 10)**(3 * R(-1, 3)) == R(3, 10)**(-1)"
+   ]
+  },
+  {
+   "math": "= \\frac{10}{3}",
+   "en": "Finally, use the negative exponent rule $\\left(\\frac{a}{b}\\right)^{-n} = \\left(\\frac{b}{a}\\right)^n$ to make the exponent positive by taking the reciprocal of the fraction. Thus, the simplified answer is $\\frac{10}{3}$.",
+   "ur": "آخر میں، منفی قوت نما کے اصول $\\left(\\frac{a}{b}\\right)^{-n} = \\left(\\frac{b}{a}\\right)^n$ کا استعمال کرتے ہوئے کسر کا معکوس لیں تاکہ قوت نما مثبت ہو جائے۔ اس طرح، مختصر ترین جواب $\\frac{10}{3}$ ہے۔",
+   "check": [
+    "R(3, 10)**(-1) == R(10, 3)",
+    "Rational('0.027') == Rational(27,1000)",
+    "Rational(27,1000) == Rational(3,10)**3",
+    "(Rational(3,10)**3)**Rational(-1,3) == Rational(3,10)**(-1)",
+    "Rational(3,10)**(-1) == Rational(10,3)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

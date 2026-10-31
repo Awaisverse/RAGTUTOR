@@ -1,0 +1,61 @@
+{
+ "item": "u1-example3",
+ "label": "ii",
+ "answer_ref": "$\\frac{93}{99} = \\frac{31}{33}$",
+ "steps": [
+  {
+   "math": "x = 0.\\overline{93}",
+   "en": "Let the given recurring decimal be equal to $x$.",
+   "ur": "فرض کریں کہ دی گئی متواتر اعشاریہ $x$ کے برابر ہے۔",
+   "check": [
+    "Rational(93, 99) == Rational(31, 33)"
+   ]
+  },
+  {
+   "math": "x = 0.939393\\ldots \\quad \\text{--- (i)}",
+   "en": "Expand the recurring decimal by writing the repeating block of digits $93$ multiple times, and label it as equation (i).",
+   "ur": "بار بار آنے والے ہندسوں $93$ کو چند بار لکھ کر اعشاریہ کو پھیلائیں اور اسے مساوات (i) کا نام دیں۔",
+   "check": [
+    "Rational(93, 99) == Rational(31, 33)"
+   ]
+  },
+  {
+   "math": "100x = 93.939393\\ldots \\quad \\text{--- (ii)}",
+   "en": "Since two digits ($93$) are repeating after the decimal point, multiply both sides of equation (i) by $100$ and label it as equation (ii).",
+   "ur": "چونکہ اعشاریہ کے بعد دو ہندسے ($93$) دہرائے جا رہے ہیں، اس لیے مساوات (i) کے دونوں اطراف کو $100$ سے ضرب دیں اور اسے مساوات (ii) کا نام دیں۔",
+   "check": [
+    "100 * Rational(93, 99) == Rational(9300, 99)"
+   ]
+  },
+  {
+   "math": "100x - x = (93.939393\\ldots) - (0.939393\\ldots)",
+   "en": "Subtract equation (i) from equation (ii) to eliminate the recurring decimal part.",
+   "ur": "متواتر اعشاری حصے کو ختم کرنے کے لیے مساوات (ii) میں سے مساوات (i) کو تفریق کریں۔",
+   "check": [
+    "100 * Rational(93, 99) - Rational(93, 99) == 93"
+   ]
+  },
+  {
+   "math": "99x = 93",
+   "en": "Simplify both sides of the equation.",
+   "ur": "مساوات کے دونوں اطراف کو مختصر کریں۔",
+   "check": [
+    "99 * Rational(93, 99) == 93"
+   ]
+  },
+  {
+   "math": "x = \\frac{93}{99} = \\frac{31}{33}",
+   "en": "Divide both sides by $99$ and simplify the fraction by dividing the numerator and the denominator by their common factor $3$. Thus, $0.\\overline{93} = \\frac{31}{33}$.",
+   "ur": "دونوں اطراف کو $99$ پر تقسیم کریں اور شمار کنندہ اور مخرج کو ان کے مشترک جزو ضربی $3$ پر تقسیم کر کے کسر کو مختصر کریں۔ پس، $0.\\overline{93} = \\frac{31}{33}$۔",
+   "check": [
+    "Rational(93, 99) == Rational(31, 33)",
+    "100*Rational(93,99) == Rational(9300,99)",
+    "100*Rational(93,99) - Rational(93,99) == 93",
+    "Rational(93,99) == Rational(31,33)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

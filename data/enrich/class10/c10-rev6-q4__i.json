@@ -1,0 +1,47 @@
+{
+ "item": "c10-rev6-q4",
+ "label": "i",
+ "answer_ref": "$17\\underline{i} + 7\\underline{j}$",
+ "steps": [
+  {
+   "math": "\\underline{a} = 2\\underline{i} - \\underline{j}, \\quad \\underline{b} = 3\\underline{i} + \\underline{j}, \\quad \\underline{c} = 4\\underline{i} + \\underline{j}",
+   "en": "Write down the given vectors $\\underline{a}$, $\\underline{b}$, and $\\underline{c}$. We need to find the value of the vector expression $5\\underline{b} - \\underline{a} + \\underline{c}$.",
+   "ur": "دیے گئے سمتیے $\\underline{a}$، $\\underline{b}$ اور $\\underline{c}$ لکھیں۔ ہمیں سمتیہ جملے $5\\underline{b} - \\underline{a} + \\underline{c}$ کی قیمت معلوم کرنی ہے۔"
+  },
+  {
+   "math": "5\\underline{b} - \\underline{a} + \\underline{c} = 5(3\\underline{i} + \\underline{j}) - (2\\underline{i} - \\underline{j}) + (4\\underline{i} + \\underline{j})",
+   "en": "Substitute the given values of vectors $\\underline{a}$, $\\underline{b}$, and $\\underline{c}$ into the expression.",
+   "ur": "جملے میں سمتیہ $\\underline{a}$، $\\underline{b}$ اور $\\underline{c}$ کی دی گئی قیمتیں درج کریں۔"
+  },
+  {
+   "math": "= 15\\underline{i} + 5\\underline{j} - 2\\underline{i} + \\underline{j} + 4\\underline{i} + \\underline{j}",
+   "en": "Multiply the first vector by the scalar $5$ and open all the brackets. Remember that the negative sign outside the second bracket changes the sign of $-\\underline{j}$ to $+\\underline{j}$.",
+   "ur": "پہلے سمتیے کو عددی مقدار $5$ سے ضرب دیں اور تمام بریکٹیں کھول لیں۔ یاد رکھیں کہ دوسری بریکٹ کے باہر منفی علامت اندر والے $-\\underline{j}$ کو $+\\underline{j}$ میں بدل دیتی ہے۔",
+   "check": [
+    "5*3 == 15",
+    "5*1 == 5",
+    "-1*2 == -2",
+    "-1*(-1) == 1"
+   ]
+  },
+  {
+   "math": "= (15 - 2 + 4)\\underline{i} + (5 + 1 + 1)\\underline{j}",
+   "en": "Group the $\\underline{i}$ components together and the $\\underline{j}$ components together so they can be added easily.",
+   "ur": "$\\underline{i}$ والے اجزاء کو ایک ساتھ اور $\\underline{j}$ والے اجزاء کو ایک ساتھ لکھیں تاکہ انہیں آسانی سے حل کیا جا سکے۔"
+  },
+  {
+   "math": "5\\underline{b} - \\underline{a} + \\underline{c} = 17\\underline{i} + 7\\underline{j}",
+   "en": "Simplify the coefficients of $\\underline{i}$ and $\\underline{j}$ to get the final resultant vector.",
+   "ur": "مطلوبہ حتمی سمتیہ حاصل کرنے کے لیے $\\underline{i}$ اور $\\underline{j}$ کے عددی سروں کو حل کریں۔",
+   "check": [
+    "15 - 2 + 4 == 17",
+    "5 + 1 + 1 == 7",
+    "(5)*(3) + (-1)*(2) + (1)*(4) == (17)",
+    "(5)*(1) + (-1)*(-1) + (1)*(1) == (7)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

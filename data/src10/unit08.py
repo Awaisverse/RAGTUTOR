@@ -101,16 +101,18 @@ simple("ex8.2", 2, r"In the given figure, find the values of $x$ and $y$ ($\angl
     r"$x \approx 26.67^\circ,\ y = 3.9$ cm", "8.2",
     note={"en": "The reference notes find $x = 26.67^\\circ$ and $y = 3.9$ cm in the working but box $x = 77^\\circ$, $y = 6$ cm; the box does not follow from the working.",
           "ur": "حوالہ نوٹس میں حل سے $x = 26.67^\\circ$ اور $y = 3.9$ آتا ہے مگر جواب $77^\\circ$ اور 6 لکھا ہے۔"})
-simple("ex8.2", 3, r"Find the values of $x$ and $y$ in the given figure, such that $m\widehat{AB} = m\widehat{BD}$ (arc $AB = 3$ cm, $\angle AOB = 140^\circ$ as in the notes, $x = \angle AOD$, arc $BD = y$ cm).", [
+simple("ex8.2", 3, r"Find the values of $x$ and $y$ in the given figure, such that $m\widehat{AB} = m\widehat{BD}$ (arc $AB = 3$ cm, arc $BD = y$ cm; the figure marks $x$ between $OD$ and $OC$ and chords $AB$, $BC$, $CD$ equal; the notes' working takes $x = \angle AOD$; the printed figure marks $154^\circ$ at $O$, the notes' working takes $\angle AOB = 140^\circ$).", [
     (r"m\widehat{AB} = m\widehat{BD} \Rightarrow \angle AOB = \angle BOD = 140^\circ", "Equal arcs subtend equal central angles.", "برابر قوسیں مرکز پر برابر زاویے بناتی ہیں۔", []),
     (r"x + 140^\circ + 140^\circ = 360^\circ \Rightarrow x = 80^\circ", "Angles round the centre.", "مرکز کے گرد زاویے۔", ["360 - 280 == 80"]),
     (r"y = \text{arc } BD = \text{arc } AB = 3\ \text{cm}", "Equal central angles subtend equal arcs.", "برابر مرکزی زاویے برابر قوسیں بناتے ہیں۔", [])],
     r"$x = 80^\circ,\ y = 3$ cm", "8.2",
-    note={"en": "The reference notes' working gives $x = 80^\\circ$ and $y = 3$ cm but the boxed answer says $x = 28^\\circ$, $y = 4$ cm.",
+    note={"en": "This question is inconsistent in the source: the figure marks $154^\\circ$, the notes' working uses $140^\\circ$ (giving $x = 80^\\circ$, $y = 3$ cm) and the boxed answer says $x = 28^\\circ$, $y = 4$ cm. Check with your teacher.",
           "ur": "حوالہ نوٹس کے حل سے $x = 80^\\circ$ اور $y = 3$ آتا ہے مگر جواب $28^\\circ$ اور 4 لکھا ہے۔"})
 simple("ex8.2", 4, "Two congruent arcs in a circular track subtend angles of $60^\\circ$ each at the centre. If the length of one chord of the circle is 10 metres, what is the length of other chord?", [
     (r"\text{Other chord} = 10\ \text{m}", "Congruent arcs (equal central angles) subtend equal chords.", "متماثل قوسیں برابر وتر بناتی ہیں۔", [])], "$10$ m", "8.2")
-simple("ex8.2", 5, "In a circular fountain, two water jets spray along arcs of equal length. If chord $PQ$ is 12 metres, what is the length of chord $RS$ for the congruent arc $RS$?", [
+simple("ex8.2", 5, "In a circular fountain, two water jets are installed such that they spray water along arcs of equal length. If one jet sprays between points $P$ and $Q$ "
+       "and the straight-line distance (chord $PQ$) is 12 metres, what is the straight-line distance (chord $RS$) covered by the second jet spraying along arc $RS$, "
+       "which is congruent to arc $PQ$?", [
     (r"\widehat{RS} \cong \widehat{PQ} \Rightarrow RS = PQ = 12\ \text{m}", "Equal arcs subtend equal chords.", "برابر قوسیں برابر وتر بناتی ہیں۔", [])], "$12$ m", "8.2")
 simple("ex8.2", 6, r"In a circular park, two walkways $\overline{AB}$ and $\overline{CD}$ are both straight paths (chords) of length 14 metres. What can be said about the minor arcs subtended by these walkways?", [
     (r"AB = CD \Rightarrow \widehat{AB} \cong \widehat{CD}", "Equal chords subtend equal (minor) arcs.", "برابر وتر برابر (چھوٹی) قوسیں بناتے ہیں۔", [])],

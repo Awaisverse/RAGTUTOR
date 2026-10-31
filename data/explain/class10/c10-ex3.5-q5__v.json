@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex3.5-q5",
+ "label": "v",
+ "answer_ref": "$\\begin{bmatrix} \\frac{1}{2} & - \\frac{4}{3} \\\\ - \\frac{1}{2} & \\frac{5}{3} \\end{bmatrix}$",
+ "math": [
+  "A = \\begin{bmatrix} 10 & 8 \\\\ 3 & 3 \\end{bmatrix}",
+  "A^{-1} = \\frac{1}{|A|} \\operatorname{Adj}A, \\quad \\text{where } |A| \\neq 0",
+  "|A| = \\begin{vmatrix} 10 & 8 \\\\ 3 & 3 \\end{vmatrix} = (10)(3) - (8)(3) = 30 - 24 = 6",
+  "\\operatorname{Adj}A = \\begin{bmatrix} 3 & -8 \\\\ -3 & 10 \\end{bmatrix}",
+  "A^{-1} = \\frac{1}{6}\\begin{bmatrix} 3 & -8 \\\\ -3 & 10 \\end{bmatrix} = \\begin{bmatrix} \\frac{3}{6} & \\frac{-8}{6} \\\\ \\frac{-3}{6} & \\frac{10}{6} \\end{bmatrix}",
+  "A^{-1} = \\begin{bmatrix} \\frac{1}{2} & - \\frac{4}{3} \\\\ - \\frac{1}{2} & \\frac{5}{3} \\end{bmatrix}"
+ ],
+ "why": [
+  {
+   "en": "In mathematics, we always start by giving our matrix a standard capital letter name like $A$. This makes it much easier to write the formula and refer to its inverse as $A^{-1}$ in the upcoming steps.",
+   "ur": "ریاضی میں ہم ہمیشہ دیے گئے کالب کو ایک معیاری بڑے حرف جیسے $A$ کا نام دے کر شروعات کرتے ہیں۔ اس سے فارمولا لکھنا اور اگلے مراحل میں اس کے ضربی معکوس کو $A^{-1}$ کے طور پر ظاہر کرنا بہت آسان ہو جاتا ہے۔"
+  },
+  {
+   "en": "Writing down the definition of the multiplicative inverse gives us a clear roadmap for our solution. It shows us that we need to find two specific things—the determinant $|A|$ and the adjoint $\\operatorname{Adj}A$—and ensures we check that $|A| \\neq 0$ first.",
+   "ur": "ضربی معکوس کا فارمولا لکھنے سے ہمیں سوال حل کرنے کا ایک واضح راستہ مل جاتا ہے۔ یہ ہمیں بتاتا ہے کہ ہمیں دو خاص چیزیں—مقطع $|A|$ اور ایڈجائنٹ $\\operatorname{Adj}A$—معلوم کرنی ہیں، اور پہلے یہ تصدیق کرنی ہے کہ $|A| \\neq 0$ ہو۔"
+  },
+  {
+   "en": "We always calculate the determinant first because a matrix only has an inverse if it is non-singular (meaning its determinant is not zero). Getting $|A| = 6$ confirms that the inverse exists and gives us the divisor we need for our formula.",
+   "ur": "ہم ہمیشہ پہلے مقطع معلوم کرتے ہیں کیونکہ کسی کالب کا معکوس تب ہی ممکن ہوتا ہے جب وہ غیر نادر ہو (یعنی اس کا مقطع صفر نہ ہو)۔ $|A| = 6$ کا جواب اس بات کی تصدیق کرتا ہے کہ معکوس موجود ہے اور ہمیں فارمولے کے لیے تقسیم کرنے والا عدد مل جاتا ہے۔"
+  },
+  {
+   "en": "By definition of the adjoint for a $2 \\times 2$ matrix, we swap the main diagonal elements ($10$ and $3$) and change the signs of the other two elements ($8$ and $3$). This gives us $\\operatorname{Adj}A$, which is the second required piece for our inverse formula.",
+   "ur": "ایک $2 \\times 2$ کالب کے ایڈجائنٹ کی تعریف کے مطابق، ہم وری ارکان ($10$ اور $3$) کی جگہ بدلتے ہیں اور دیگر دو ارکان ($8$ اور $3$) کی علامتیں تبدیل کرتے ہیں۔ اس سے ہمیں $\\operatorname{Adj}A$ مل جاتا ہے، جو ہمارے معکوس کے فارمولے کا دوسرا ضروری حصہ ہے۔"
+  },
+  {
+   "en": "Now that we have both the determinant and the adjoint, we put them together into the formula from Step 2. By the rule of scalar multiplication, multiplying the matrix by $\\frac{1}{6}$ means we divide every single entry inside the matrix by $6$.",
+   "ur": "اب جب کہ ہمارے پاس مقطع اور ایڈجائنٹ دونوں موجود ہیں، ہم انہیں مرحلہ 2 کے فارمولے میں درج کرتے ہیں۔ عددی ضرب کے اصول کے مطابق، کالب کو $\\frac{1}{6}$ سے ضرب دینے کا مطلب ہے کہ کالب کے اندر موجود ہر ایک رکن کو $6$ پر تقسیم کیا جائے۔"
+  },
+  {
+   "en": "In math, we always leave our final answers in the simplest standard form. Reducing each fraction by cancelling out common factors gives us the cleanest version of the inverse matrix $A^{-1}$.",
+   "ur": "ریاضی میں ہم ہمیشہ اپنا حتمی جواب سب سے سادہ اور معیاری شکل میں لکھتے ہیں۔ مشترک اجزائے ضربی کو کاٹ کر ہر کسر کو مختصر کرنے سے ہمیں معکوس کالب $A^{-1}$ کی سب سے صاف شکل حاصل ہوتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This final matrix $\\begin{bmatrix} \\frac{1}{2} & - \\frac{4}{3} \\\\ - \\frac{1}{2} & \\frac{5}{3} \\end{bmatrix}$ is the multiplicative inverse $A^{-1}$ of the original matrix $A = \\begin{bmatrix} 10 & 8 \\\\ 3 & 3 \\end{bmatrix}$. This means that if you multiply the original matrix $A$ by this answer $A^{-1}$, the result will be the $2 \\times 2$ identity matrix, which is a great way to check your work!",
+  "ur": "یہ حتمی کالب $\\begin{bmatrix} \\frac{1}{2} & - \\frac{4}{3} \\\\ - \\frac{1}{2} & \\frac{5}{3} \\end{bmatrix}$ اصل کالب $A = \\begin{bmatrix} 10 & 8 \\\\ 3 & 3 \\end{bmatrix}$ کا ضربی معکوس $A^{-1}$ ہے۔ اس کا مطلب یہ ہے کہ اگر آپ اصل کالب $A$ کو اس جواب $A^{-1}$ سے ضرب دیں، تو نتیجہ $2 \\times 2$ کا وحدانی کالب (identity matrix) آئے گا، جو آپ کے جواب کی پڑتال کرنے کا ایک بہترین طریقہ ہے!"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

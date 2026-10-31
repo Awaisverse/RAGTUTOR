@@ -1,0 +1,50 @@
+{
+ "item": "c10-ex3.5-q7",
+ "label": "ii",
+ "answer_ref": "$AB = I$, so they are inverses",
+ "math": [
+  "A = \\begin{bmatrix} 4 & 15 \\\\ 2 & 8 \\end{bmatrix}, \\quad B = \\begin{bmatrix} 4 & -\\frac{15}{2} \\\\ -1 & 2 \\end{bmatrix}",
+  "AB = I = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}",
+  "AB = \\begin{bmatrix} 4 & 15 \\\\ 2 & 8 \\end{bmatrix} \\begin{bmatrix} 4 & -\\frac{15}{2} \\\\ -1 & 2 \\end{bmatrix}",
+  "AB = \\begin{bmatrix} (4)(4) + (15)(-1) & (4)\\left(-\\frac{15}{2}\\right) + (15)(2) \\\\ (2)(4) + (8)(-1) & (2)\\left(-\\frac{15}{2}\\right) + (8)(2) \\end{bmatrix}",
+  "AB = \\begin{bmatrix} 16 - 15 & -30 + 30 \\\\ 8 - 8 & -15 + 16 \\end{bmatrix}",
+  "AB = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}",
+  "AB = I"
+ ],
+ "why": [
+  {
+   "en": "In mathematics, we first give capital letter names like $A$ and $B$ to unnamed matrices so we can easily write equations with them. This sets up our workspace cleanly before we apply any formula.",
+   "ur": "ریاضی میں، ہم سب سے پہلے بے نام کالبوں کو $A$ اور $B$ جیسے بڑے حروف کے نام دیتے ہیں تاکہ ہم ان کے ساتھ آسانی سے مساوات لکھ سکیں۔ یہ کوئی بھی فارمولا لگانے سے پہلے ہمارے کام کو منظم کرتا ہے۔"
+  },
+  {
+   "en": "By the definition of multiplicative inverse of matrices, two matrices are inverses only if multiplying them gives the unit (identity) matrix $I = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}$. Writing this rule down tells us clearly what final answer we are trying to reach.",
+   "ur": "کالبوں کے ضربی معکوس کی تعریف کے مطابق، دو کالب صرف اسی صورت میں ایک دوسرے کے معکوس ہوتے ہیں جب ان کا حاصلِ ضرب وحدانی کالب $I = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}$ کے برابر ہو۔ اس اصول کو لکھنے سے ہمیں واضح طور پر پتہ چل جاتا ہے کہ ہم کس حتمی جواب تک پہنچنے کی کوشش کر رہے ہیں۔"
+  },
+  {
+   "en": "To test the inverse condition, we substitute the actual values of matrices $A$ and $B$ side by side for multiplication. This prepares the rows and columns so we can see which numbers need to be multiplied together.",
+   "ur": "معکوس کی شرط کو جانچنے کے لیے، ہم ضرب کے واسطے کالب $A$ اور $B$ کی اصل قیمتیں آمنے سامنے رکھتے ہیں۔ اس سے قطاریں اور کالم تیار ہو جاتے ہیں تاکہ ہم دیکھ سکیں کہ کن نمبروں کو آپس میں ضرب دینی ہے۔"
+  },
+  {
+   "en": "Here we apply the row-by-column rule of matrix multiplication, multiplying corresponding entries of each row of $A$ with each column of $B$. This breaks the matrix product down into simple arithmetic expressions for all four positions.",
+   "ur": "یہاں ہم کالبوں کی ضرب کا 'قطار ضرب کالم' کا اصول استعمال کرتے ہیں، جس میں $A$ کی ہر قطار کے ارکان کو $B$ کے ہر کالم کے متناظرہ ارکان سے ضرب دی جاتی ہے۔ یہ کالبوں کی ضرب کو چاروں جگہوں کے لیے سادہ حسابی جملوں میں تبدیل کر دیتا ہے۔"
+  },
+  {
+   "en": "We calculate the individual products first according to the order of operations, carefully cancelling the denominator $2$ when multiplying with $4$ and $2$. Now the fractions are gone, leaving simple integers that are easy to combine.",
+   "ur": "ہم حسابی ترتیب کے مطابق پہلے انفرادی ضربوں کو حل کرتے ہیں، اور $4$ اور $2$ سے ضرب دیتے وقت بٹے کے $2$ کو احتیاط سے کاٹ دیتے ہیں۔ اب کسر ختم ہو گئی ہے اور سادہ صحیح اعداد باقی رہ گئے ہیں جنہیں ملانا آسان ہے۔"
+  },
+  {
+   "en": "Completing the addition and subtraction at each position gives us the final simplified entries of the product matrix $AB$. We can immediately see $1$s on the main diagonal and $0$s elsewhere.",
+   "ur": "ہر جگہ پر جمع اور تفریق مکمل کرنے سے ہمیں حاصلِ ضرب کالب $AB$ کے حتمی سادہ ارکان مل جاتے ہیں۔ ہم فوراً دیکھ سکتے ہیں کہ وتر کے ارکان $1$ ہیں اور باقی تمام ارکان $0$ ہیں۔"
+  },
+  {
+   "en": "Since our calculated matrix $\\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}$ is the exact definition of the identity matrix $I$, we replace it with the symbol $I$. This completes our proof that the required condition $AB = I$ holds true.",
+   "ur": "چونکہ ہمارا حاصل کردہ کالب $\\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}$ عین وحدانی کالب $I$ کی تعریف کے مطابق ہے، اس لیے ہم اس کی جگہ علامت $I$ لکھ دیتے ہیں۔ اس سے ہمارا یہ ثبوت مکمل ہو جاتا ہے کہ مطلوبہ شرط $AB = I$ درست ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "Because the product $AB$ equals the identity matrix $I = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}$, it proves that the two given matrices undo each other's effect and are indeed multiplicative inverses of each other. For extra practice, you can also check that multiplying them in the reverse order, $BA$, gives the same identity matrix $I$.",
+  "ur": "چونکہ حاصلِ ضرب $AB$ وحدانی کالب $I = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}$ کے برابر ہے، اس سے ثابت ہوتا ہے کہ دیے گئے دونوں کالب واقعی ایک دوسرے کے ضربی معکوس ہیں۔ مزید تسلی کے لیے آپ ان کی ترتیب الٹ کر یعنی $BA$ معلوم کر کے بھی چیک کر سکتے ہیں کہ جواب وہی وحدانی کالب $I$ آتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex3.6-q6",
+ "label": "",
+ "answer_ref": "$(2, 1)$",
+ "math": [
+  "",
+  "\\begin{bmatrix} 2 & 1 \\\\ 1 & -1 \\end{bmatrix}\\begin{bmatrix} x \\\\ y \\end{bmatrix} = \\begin{bmatrix} 5 \\\\ 1 \\end{bmatrix}",
+  "|A| = \\begin{vmatrix} 2 & 1 \\\\ 1 & -1 \\end{vmatrix} = (2)(-1) - (1)(1) = -3",
+  "|A_x| = \\begin{vmatrix} 5 & 1 \\\\ 1 & -1 \\end{vmatrix} = (5)(-1) - (1)(1) = -6",
+  "|A_y| = \\begin{vmatrix} 2 & 5 \\\\ 1 & 1 \\end{vmatrix} = (2)(1) - (5)(1) = -3",
+  "x = \\frac{|A_x|}{|A|} = \\frac{-6}{-3} = 2,\\quad y = \\frac{|A_y|}{|A|} = \\frac{-3}{-3} = 1"
+ ],
+ "why": [
+  {
+   "en": "First, we translate the word problem into linear equations by taking $x$ as the horizontal position and $y$ as the vertical position. Rearranging the second equation into standard form $x - y = 1$ aligns the variables so we can easily extract their coefficients in the next step.",
+   "ur": "سب سے پہلے، ہم افقی پوزیشن کو $x$ اور عمودی پوزیشن کو $y$ مان کر اس عبارت کو یک درجی مساواتوں میں تبدیل کرتے ہیں۔ دوسری مساوات کو معیاری شکل $x - y = 1$ میں ترتیب دینے سے متغیرات ایک قطار میں آ جاتے ہیں جس سے اگلے مرحلے میں ان کے عددی سر نکالنا آسان ہو جاتا ہے۔"
+  },
+  {
+   "en": "To solve the system using matrices, we separate the coefficients, variables, and constants into matrices $A$, $X$, and $B$. This organizes our equations into the standard matrix equation $AX = B$, setting us up to apply matrix rules.",
+   "ur": "کالبوں (matrices) کے ذریعے مساواتوں کو حل کرنے کے لیے، ہم عددی سروں، متغیرات اور مستقل مقداروں کو الگ الگ کالب $A$، $X$ اور $B$ میں لکھتے ہیں۔ اس سے ہماری مساواتیں معیاری کالب مساوات $AX = B$ کی شکل اختیار کر لیتی ہیں، جس پر ہم کالب کے اصول لاگو کر سکتے ہیں۔"
+  },
+  {
+   "en": "We calculate the determinant of the coefficient matrix $A$ by multiplying the main diagonal entries and subtracting the product of the other diagonal. Since $|A| = -3$ is not zero, this confirms that the two lines actually intersect at a unique point and we can proceed with Cramer's rule.",
+   "ur": "ہم عددی سروں کے کالب $A$ کا مقطع (determinant) معلوم کرنے کے لیے وتر کے ارکان کو ضرب دے کر دوسرے وتر کے حاصل ضرب کو تفریق کرتے ہیں۔ چونکہ $|A| = -3$ صفر نہیں ہے، اس سے تصدیق ہوتی ہے کہ دونوں خطوط واقعی ایک منفرد نقطے پر قطع کرتے ہیں اور ہم کریمر کا قانون استعمال کر سکتے ہیں۔"
+  },
+  {
+   "en": "According to Cramer's rule, to prepare for finding $x$, we form a new matrix $A_x$ by replacing the first column ($x$-coefficients) with the constants from matrix $B$. Finding its determinant gives us $|A_x| = -6$, which is the numerator needed to calculate $x$.",
+   "ur": "کریمر کے قانون کے مطابق، $x$ کی قیمت معلوم کرنے کی تیاری کے لیے ہم پہلے کالم ($x$ کے عددی سر) کو کالب $B$ کی مستقل مقداروں سے بدل کر نیا کالب $A_x$ بناتے ہیں۔ اس کا مقطع حل کرنے سے ہمیں $|A_x| = -6$ ملتا ہے، جو $x$ معلوم کرنے کے لیے شمار کنندہ (numerator) کا کام کرے گا۔"
+  },
+  {
+   "en": "Similarly, to prepare for finding $y$, we form matrix $A_y$ by replacing the second column ($y$-coefficients) of matrix $A$ with the constants. Evaluating this determinant gives $|A_y| = -3$, providing the numerator needed to calculate $y$.",
+   "ur": "اسی طرح، $y$ معلوم کرنے کے لیے ہم کالب $A$ کے دوسرے کالم ($y$ کے عددی سر) کو مستقل مقداروں سے بدل کر کالب $A_y$ بناتے ہیں۔ اس مقطع کو حل کرنے سے $|A_y| = -3$ حاصل ہوتا ہے، جو $y$ کی قیمت نکالنے کے لیے شمار کنندہ فراہم کرتا ہے۔"
+  },
+  {
+   "en": "Finally, we apply Cramer's rule formulas by dividing $|A_x|$ and $|A_y|$ by the main determinant $|A|$. This directly gives us the exact horizontal position $x = 2$ and vertical position $y = 1$ where the two paths cross.",
+   "ur": "آخر میں، ہم کریمر کے قانون کے فارمولے لاگو کرتے ہوئے $|A_x|$ اور $|A_y|$ کو اصل مقطع $|A|$ پر تقسیم کرتے ہیں۔ اس سے ہمیں براہِ راست وہ درست افقی پوزیشن $x = 2$ اور عمودی پوزیشن $y = 1$ مل جاتی ہے جہاں دونوں راستے ایک دوسرے کو قطع کرتے ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $(2, 1)$ means that the two characters will meet at a horizontal position of $2$ and a vertical position of $1$ in the game world. We can easily check this by putting $x = 2$ and $y = 1$ back into the original conditions: $2(2) + 1 = 5$ and $2 - 1 = 1$, which satisfies both paths.",
+  "ur": "آخری جواب $(2, 1)$ کا مطلب ہے کہ گیم کی دنیا میں دونوں کردار افقی پوزیشن $2$ اور عمودی پوزیشن $1$ پر ایک دوسرے سے ملیں گے۔ ہم $x = 2$ اور $y = 1$ کو اصل مساواتوں میں درج کر کے اس کی باآسانی پڑتال کر سکتے ہیں: $2(2) + 1 = 5$ اور $2 - 1 = 1$، جو کہ دونوں شرائط کو پورا کرتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

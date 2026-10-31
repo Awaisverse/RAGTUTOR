@@ -1,0 +1,64 @@
+{
+ "item": "c10-ex7.2-q1",
+ "label": "v",
+ "answer_ref": "$\\gamma = 10^\\circ,\\ a = 8.38,\\ c = 1.48$ cm",
+ "steps": [
+  {
+   "math": "\\alpha = 100^\\circ, \\quad \\beta = 70^\\circ, \\quad b = 8\\text{ cm}",
+   "en": "Write down the given angles $\\alpha$, $\\beta$ and side $b$ of the triangle $ABC$. We need to find the remaining angle $\\gamma$ and sides $a$ and $c$.",
+   "ur": "مثلث $ABC$ کے دیے گئے زاویے $\\alpha$، $\\beta$ اور ضلع $b$ لکھیں۔ ہمیں باقی ماندہ زاویہ $\\gamma$ اور اضلاع $a$ اور $c$ معلوم کرنے ہیں۔"
+  },
+  {
+   "math": "\\alpha + \\beta + \\gamma = 180^\\circ",
+   "en": "The sum of the interior angles of any triangle is always $180^\\circ$.",
+   "ur": "کسی بھی مثلث کے اندرونی زاویوں کا مجموعہ ہمیشہ $180^\\circ$ ہوتا ہے۔"
+  },
+  {
+   "math": "\\gamma = 180^\\circ - \\alpha - \\beta = 180^\\circ - 100^\\circ - 70^\\circ = 10^\\circ",
+   "en": "Substitute the values of $\\alpha$ and $\\beta$ to find the third angle $\\gamma$.",
+   "ur": "تیسرا زاویہ $\\gamma$ معلوم کرنے کے لیے $\\alpha$ اور $\\beta$ کی قیمتیں درج کریں۔",
+   "check": [
+    "180 - 100 - 70 == 10"
+   ]
+  },
+  {
+   "math": "\\frac{a}{\\sin\\alpha} = \\frac{b}{\\sin\\beta} \\implies a = \\frac{b\\sin\\alpha}{\\sin\\beta}",
+   "en": "Apply the Law of Sines to find the length of side $a$.",
+   "ur": "ضلع $a$ کی لمبائی معلوم کرنے کے لیے قانونِ جیب (Law of Sines) کا استعمال کریں۔"
+  },
+  {
+   "math": "a = \\frac{8 \\sin 100^\\circ}{\\sin 70^\\circ} \\approx \\frac{8(0.9848)}{0.9397} \\approx 8.38\\text{ cm}",
+   "en": "Substitute $b = 8$, $\\alpha = 100^\\circ$, and $\\beta = 70^\\circ$, then calculate the value of $a$ rounded to two decimal places.",
+   "ur": "$b = 8$، $\\alpha = 100^\\circ$ اور $\\beta = 70^\\circ$ درج کریں، اور پھر اعشاریہ کے بعد دو درجوں تک $a$ کی قیمت معلوم کریں۔",
+   "check": [
+    "Abs((8*sin(100*pi/180)/sin(70*pi/180)) - 8.38) <= 0.005"
+   ]
+  },
+  {
+   "math": "\\frac{c}{\\sin\\gamma} = \\frac{b}{\\sin\\beta} \\implies c = \\frac{b\\sin\\gamma}{\\sin\\beta}",
+   "en": "Now, apply the Law of Sines again to find the length of side $c$.",
+   "ur": "اب ضلع $c$ کی لمبائی معلوم کرنے کے لیے دوبارہ قانونِ جیب کا استعمال کریں۔"
+  },
+  {
+   "math": "c = \\frac{8 \\sin 10^\\circ}{\\sin 70^\\circ} \\approx \\frac{8(0.1736)}{0.9397} \\approx 1.48\\text{ cm}",
+   "en": "Substitute $b = 8$, $\\gamma = 10^\\circ$, and $\\beta = 70^\\circ$, then calculate the value of $c$ rounded to two decimal places.",
+   "ur": "$b = 8$، $\\gamma = 10^\\circ$ اور $\\beta = 70^\\circ$ درج کریں، اور پھر اعشاریہ کے بعد دو درجوں تک $c$ کی قیمت معلوم کریں۔",
+   "check": [
+    "Abs((8*sin(10*pi/180)/sin(70*pi/180)) - 1.48) <= 0.005"
+   ]
+  },
+  {
+   "math": "\\gamma = 10^\\circ,\\ a = 8.38,\\ c = 1.48\\text{ cm}",
+   "en": "State all the calculated parts of the triangle as the final answer.",
+   "ur": "مثلث کے تمام معلوم کردہ اجزاء کو حتمی جواب کے طور پر لکھیں۔",
+   "check": [
+    "180 - 170 == 10",
+    "Abs((8*sin((100)*pi/180)/sin((70)*pi/180)) - 8.38) <= 0.0050000010000000004",
+    "Abs((8*sin((10)*pi/180)/sin((70)*pi/180)) - 1.48) <= 0.0050000010000000004"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

@@ -1,0 +1,47 @@
+{
+ "item": "c10-ex2.4-q2",
+ "label": "",
+ "answer_ref": "$t < \\frac{1}{108}$",
+ "steps": [
+  {
+   "math": "3x^2 + x + 9t = 0",
+   "en": "Write down the given quadratic equation and compare it with the standard form $ax^2 + bx + c = 0$ to identify the coefficients: $a = 3$, $b = 1$, and $c = 9t$.",
+   "ur": "دی گئی دو درجی مساوات لکھیں اور عددی سر معلوم کرنے کے لیے اس کا معیاری شکل $ax^2 + bx + c = 0$ سے موازنہ کریں: یہاں $a = 3$، $b = 1$، اور $c = 9t$ ہے۔"
+  },
+  {
+   "math": "\\text{Discriminant } (D) = b^2 - 4ac > 0",
+   "en": "For the roots of a quadratic equation to be real and unequal, its discriminant must be strictly greater than zero ($D > 0$).",
+   "ur": "دو درجی مساوات کے روٹس (جذور) حقیقی اور غیر مساوی ہونے کے لیے ضروری ہے کہ اس کا فرق کنندہ صفر سے بڑا ہو ($D > 0$)۔"
+  },
+  {
+   "math": "(1)^2 - 4(3)(9t) > 0",
+   "en": "Substitute the values of $a = 3$, $b = 1$, and $c = 9t$ into the discriminant inequality.",
+   "ur": "فرق کنندہ کی مساوات میں $a = 3$، $b = 1$، اور $c = 9t$ کی قیمتیں درج کریں۔"
+  },
+  {
+   "math": "1 - 108t > 0",
+   "en": "Simplify the terms on the left-hand side.",
+   "ur": "بائیں جانب دی گئی رقوم کو مختصر کریں۔",
+   "check": [
+    "1**2 - 4*3*9*t == 1 - 108*t"
+   ]
+  },
+  {
+   "math": "1 > 108t",
+   "en": "Add $108t$ to both sides of the inequality.",
+   "ur": "نامساوات کے دونوں اطراف میں $108t$ جمع کریں۔"
+  },
+  {
+   "math": "t < \\frac{1}{108}",
+   "en": "Divide both sides by $108$ to find the required range of values for $t$. Thus, the roots are real and unequal when $t < \\frac{1}{108}$.",
+   "ur": "$t$ کی مطلوبہ قیمتیں معلوم کرنے کے لیے دونوں اطراف کو $108$ پر تقسیم کریں۔ پس جب $t < \\frac{1}{108}$ ہو تو روٹس حقیقی اور غیر مساوی ہوں گے۔",
+   "check": [
+    "(1 - 108*t).subs(t, R(1,108)) == 0",
+    "1**2 - 4*3*9*t == 1 - 108*t"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

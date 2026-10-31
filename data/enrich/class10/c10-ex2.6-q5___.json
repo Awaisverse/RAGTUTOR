@@ -1,0 +1,44 @@
+{
+ "item": "c10-ex2.6-q5",
+ "label": "",
+ "answer_ref": "$h = \\frac{2A}{b_1 + b_2}$",
+ "steps": [
+  {
+   "math": "A = \\frac{1}{2}h(b_1 + b_2)",
+   "en": "Write the given formula for the area of a trapezoid. We need to isolate $h$ on one side to make it the subject of the formula.",
+   "ur": "ذوزنقہ (trapezoid) کے رقبے کا دیا گیا کلیہ لکھیں۔ ہمیں $h$ کو کلیے کا موضوع بنانے کے لیے اسے مساوات کے ایک طرف اکیلا کرنا ہے۔"
+  },
+  {
+   "math": "2 \\cdot A = 2 \\cdot \\frac{1}{2}h(b_1 + b_2)",
+   "en": "Multiply both sides of the equation by $2$ to eliminate the fraction $\\frac{1}{2}$ on the right-hand side.",
+   "ur": "دائیں طرف سے کسر $\\frac{1}{2}$ کو ختم کرنے کے لیے مساوات کے دونوں اطراف کو $2$ سے ضرب دیں۔",
+   "check": [
+    "2*R(1,2) == 1"
+   ]
+  },
+  {
+   "math": "2A = h(b_1 + b_2)",
+   "en": "Simplify the right-hand side as $2$ and $\\frac{1}{2}$ cancel each other out.",
+   "ur": "دائیں طرف کو مختصر کریں کیونکہ $2$ اور $\\frac{1}{2}$ ایک دوسرے سے کٹ جاتے ہیں۔"
+  },
+  {
+   "math": "\\frac{2A}{b_1 + b_2} = \\frac{h(b_1 + b_2)}{b_1 + b_2}",
+   "en": "Since $h$ is multiplied by $(b_1 + b_2)$, divide both sides of the equation by $(b_1 + b_2)$ to isolate $h$.",
+   "ur": "چونکہ $h$، $(b_1 + b_2)$ سے ضرب ہو رہا ہے، اس لیے $h$ کو الگ کرنے کے لیے مساوات کے دونوں اطراف کو $(b_1 + b_2)$ سے تقسیم کریں۔",
+   "check": [
+    "h*(b1 + b2)/(b1 + b2) == h"
+   ]
+  },
+  {
+   "math": "h = \\frac{2A}{b_1 + b_2}",
+   "en": "Cancel out $(b_1 + b_2)$ on the right-hand side and swap the sides to write the final formula with $h$ as the subject.",
+   "ur": "دائیں طرف $(b_1 + b_2)$ کو کاٹ دیں اور اطراف کو بدل کر حتمی کلیہ لکھیں جس میں $h$ موضوع ہے۔",
+   "check": [
+    "R(1,2)*(2*Aa/(b1 + b2))*(b1 + b2) == Aa"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

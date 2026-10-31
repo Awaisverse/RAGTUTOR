@@ -1,0 +1,45 @@
+{
+ "item": "c10-rev3-q2",
+ "label": "ii",
+ "answer_ref": "$\\begin{bmatrix} 1 & 1 \\\\ 3 & 2 \\end{bmatrix}$",
+ "math": [
+  "A = \\begin{bmatrix} 4 & 2 \\\\ 7 & 6 \\end{bmatrix}, \\quad B = \\begin{bmatrix} 5 & 5 \\\\ 8 & 8 \\end{bmatrix}",
+  "B^t = \\begin{bmatrix} 5 & 5 \\\\ 8 & 8 \\end{bmatrix}^t = \\begin{bmatrix} 5 & 8 \\\\ 5 & 8 \\end{bmatrix}",
+  "A^t = \\begin{bmatrix} 4 & 2 \\\\ 7 & 6 \\end{bmatrix}^t = \\begin{bmatrix} 4 & 7 \\\\ 2 & 6 \\end{bmatrix}",
+  "B^t - A^t = \\begin{bmatrix} 5 & 8 \\\\ 5 & 8 \\end{bmatrix} - \\begin{bmatrix} 4 & 7 \\\\ 2 & 6 \\end{bmatrix}",
+  "B^t - A^t = \\begin{bmatrix} 5 - 4 & 8 - 7 \\\\ 5 - 2 & 8 - 6 \\end{bmatrix}",
+  "B^t - A^t = \\begin{bmatrix} 1 & 1 \\\\ 3 & 2 \\end{bmatrix}"
+ ],
+ "why": [
+  {
+   "en": "In any matrix problem, we begin by clearly listing the given matrices so all entries are right in front of us. Notice that the question asks for $B^t - A^t$, which tells us we must find the individual transposes first before we do any subtraction.",
+   "ur": "کسی بھی قالب (matrix) کے سوال میں، ہم سب سے پہلے دیے گئے قالب لکھتے ہیں تاکہ تمام ارکان واضح طور پر ہمارے سامنے ہوں۔ غور کریں کہ سوال میں $B^t - A^t$ معلوم کرنے کو کہا گیا ہے، جو ہمیں بتاتا ہے کہ تفریق کرنے سے پہلے ہمیں ان کا الگ الگ ٹرانسپوز لینا ہوگا۔"
+  },
+  {
+   "en": "Since $B^t$ is the first term in our expression, we apply the definition of the transpose of a matrix, which means turning rows into columns. Now the first row $\\begin{bmatrix} 5 & 5 \\end{bmatrix}$ stands vertically as the first column, giving us the required matrix $B^t$.",
+   "ur": "چونکہ ہماری عبارت میں پہلی رقم $B^t$ ہے، اس لیے ہم ٹرانسپوز کی تعریف استعمال کرتے ہوئے قطاروں کو کالموں میں بدل دیتے ہیں۔ اب پہلی قطار $\\begin{bmatrix} 5 & 5 \\end{bmatrix}$ عمودی طور پر پہلا کالم بن گئی ہے، جس سے ہمیں مطلوبہ قالب $B^t$ مل جاتا ہے۔"
+  },
+  {
+   "en": "Next, we apply the same transpose rule to matrix $A$ because we need $A^t$ to complete our expression. By interchanging its rows and columns, we now have both transposed matrices ready to be subtracted.",
+   "ur": "اس کے بعد، ہم قالب $A$ پر بھی ٹرانسپوز کا وہی اصول لاگو کرتے ہیں کیونکہ عبارت کو مکمل کرنے کے لیے ہمیں $A^t$ کی ضرورت ہے۔ اس کی قطاروں اور کالموں کو آپس میں بدلنے سے، اب ہمارے پاس تفریق کرنے کے لیے دونوں ٹرانسپوزڈ قالب تیار ہیں۔"
+  },
+  {
+   "en": "Here we bring our results together by placing the new matrices $B^t$ and $A^t$ into the required expression in the exact order asked. Keeping $B^t$ first and $A^t$ second is very important because matrix subtraction is not commutative.",
+   "ur": "یہاں ہم اپنے نتائج کو یکجا کرتے ہوئے نئے قالبوں $B^t$ اور $A^t$ کو دی گئی ترتیب کے مطابق مطلوبہ عبارت میں درج کرتے ہیں۔ $B^t$ کو پہلے اور $A^t$ کو بعد میں رکھنا بہت ضروری ہے کیونکہ قالبوں کی تفریق میں ترتیب بدلنے سے جواب بدل جاتا ہے۔"
+  },
+  {
+   "en": "According to the rule of matrix subtraction, two matrices of the same order ($2 \\times 2$) are subtracted by subtracting their corresponding (matching position) entries. Pairing up each entry like $5 - 4$ and $8 - 7$ sets up the simple arithmetic needed for the final step.",
+   "ur": "قالبوں کی تفریق کے اصول کے مطابق، یکساں مرتبے ($2 \\times 2$) کے دو قالبوں کو ان کے متناظرہ (ایک جیسی جگہ والے) ارکان کو تفریق کر کے حل کیا جاتا ہے۔ ہر رکن کا جوڑا بنانے سے، جیسے $5 - 4$ اور $8 - 7$، آخری مرحلے کے لیے سادہ حساب کتاب تیار ہو جاتا ہے۔"
+  },
+  {
+   "en": "Finally, we carry out the basic subtraction inside each position of the matrix. This gives us the single simplified $2 \\times 2$ matrix that represents the exact value of $B^t - A^t$.",
+   "ur": "آخر میں، ہم قالب کے ہر مقام کے اندر سادہ تفریق کا عمل مکمل کرتے ہیں۔ اس سے ہمیں ایک مختصر $2 \\times 2$ قالب ملتا ہے جو $B^t - A^t$ کی اصل قیمت کو ظاہر کرتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $\\begin{bmatrix} 1 & 1 \\\\ 3 & 2 \\end{bmatrix}$ is the new $2 \\times 2$ matrix obtained when the transpose of $A$ is subtracted from the transpose of $B$. You can easily check this result by first subtracting $A$ from $B$ to get $\\begin{bmatrix} 5-4 & 5-2 \\\\ 8-7 & 8-6 \\end{bmatrix} = \\begin{bmatrix} 1 & 3 \\\\ 1 & 2 \\end{bmatrix}$ and then taking its transpose, which gives the exact same matrix $\\begin{bmatrix} 1 & 1 \\\\ 3 & 2 \\end{bmatrix}$ by the transpose property $(B-A)^t = B^t - A^t$.",
+  "ur": "آخری جواب $\\begin{bmatrix} 1 & 1 \\\\ 3 & 2 \\end{bmatrix}$ وہ نیا $2 \\times 2$ قالب ہے جو $B$ کے ٹرانسپوز میں سے $A$ کا ٹرانسپوز تفریق کرنے سے حاصل ہوتا ہے۔ آپ اس جواب کیپڑتال باآسانی ایسے کر سکتے ہیں کہ پہلے $B$ میں سے $A$ کو تفریق کریں جس سے $\\begin{bmatrix} 5-4 & 5-2 \\\\ 8-7 & 8-6 \\end{bmatrix} = \\begin{bmatrix} 1 & 3 \\\\ 1 & 2 \\end{bmatrix}$ آتا ہے اور پھر اس کا ٹرانسپوز لیں، جو کہ ٹرانسپوز کی خاصیت $(B-A)^t = B^t - A^t$ کے مطابق بالکل وہی قالب $\\begin{bmatrix} 1 & 1 \\\\ 3 & 2 \\end{bmatrix}$ دیتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

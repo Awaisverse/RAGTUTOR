@@ -1,0 +1,72 @@
+{
+ "item": "ex1.2-q3",
+ "label": "iii",
+ "answer_ref": "$34$",
+ "steps": [
+  {
+   "math": "x = 3 + \\sqrt{8}",
+   "en": "Write down the given value of $x$. We need to find the value of $x^2 + \\frac{1}{x^2}$.",
+   "ur": "$x$ کی دی گئی قیمت لکھیں۔ ہمیں $x^2 + \\frac{1}{x^2}$ کی قیمت معلوم کرنی ہے۔"
+  },
+  {
+   "math": "\\frac{1}{x} = \\frac{1}{3+\\sqrt{8}} \\times \\frac{3-\\sqrt{8}}{3-\\sqrt{8}}",
+   "en": "To find $\\frac{1}{x}$, rationalize the denominator by multiplying and dividing by the conjugate $3-\\sqrt{8}$.",
+   "ur": "$\\frac{1}{x}$ معلوم کرنے کے لیے، مخرج کے مزدوج $3-\\sqrt{8}$ سے ضرب اور تقسیم کر کے مخرج کو ناطق بنائیں۔",
+   "check": [
+    "1/(3+sqrt(8)) == (3-sqrt(8))/((3+sqrt(8))*(3-sqrt(8)))"
+   ]
+  },
+  {
+   "math": "\\frac{1}{x} = \\frac{3-\\sqrt{8}}{(3)^2 - (\\sqrt{8})^2} = \\frac{3-\\sqrt{8}}{9-8} = 3-\\sqrt{8}",
+   "en": "Apply the algebraic identity $(a+b)(a-b) = a^2 - b^2$ in the denominator and simplify.",
+   "ur": "مخرج میں الجبری کلیہ $(a+b)(a-b) = a^2 - b^2$ لگائیں اور مختصر کریں۔",
+   "check": [
+    "3**2 - sqrt(8)**2 == 1",
+    "(3-sqrt(8))/(9-8) == 3-sqrt(8)",
+    "1/(3+sqrt(8)) == 3-sqrt(8)"
+   ]
+  },
+  {
+   "math": "x + \\frac{1}{x} = (3+\\sqrt{8}) + (3-\\sqrt{8}) = 6",
+   "en": "Add $x$ and $\\frac{1}{x}$. The terms $+\\sqrt{8}$ and $-\\sqrt{8}$ cancel each other out.",
+   "ur": "$x$ اور $\\frac{1}{x}$ کو جمع کریں۔ $+\\sqrt{8}$ اور $-\\sqrt{8}$ ایک دوسرے سے کٹ جاتے ہیں۔",
+   "check": [
+    "(3+sqrt(8)) + (3-sqrt(8)) == 6"
+   ]
+  },
+  {
+   "math": "\\left(x + \\frac{1}{x}\\right)^2 = (6)^2",
+   "en": "Take the square on both sides of the equation to get the $x^2 + \\frac{1}{x^2}$ terms.",
+   "ur": "$x^2 + \\frac{1}{x^2}$ حاصل کرنے کے لیے مساوات کے دونوں اطراف کا مربع لیں۔",
+   "check": [
+    "((3+sqrt(8)) + (3-sqrt(8)))**2 == 6**2"
+   ]
+  },
+  {
+   "math": "x^2 + 2(x)\\left(\\frac{1}{x}\\right) + \\frac{1}{x^2} = 36 \\;\\Rightarrow\\; x^2 + 2 + \\frac{1}{x^2} = 36",
+   "en": "Expand the left side using the formula $(a+b)^2 = a^2 + 2ab + b^2$, and simplify $2(x)\\left(\\frac{1}{x}\\right)$ to $2$.",
+   "ur": "بائیں جانب کو کلیہ $(a+b)^2 = a^2 + 2ab + b^2$ کی مدد سے کھولیں، اور $2(x)\\left(\\frac{1}{x}\\right)$ کو مختصر کر کے $2$ لکھیں۔",
+   "check": [
+    "6**2 == 36",
+    "(3+sqrt(8))**2 + 2 + (3-sqrt(8))**2 == 36"
+   ]
+  },
+  {
+   "math": "x^2 + \\frac{1}{x^2} = 36 - 2 = 34",
+   "en": "Subtract $2$ from both sides to find the final value of $x^2 + \\frac{1}{x^2}$.",
+   "ur": "$x^2 + \\frac{1}{x^2}$ کی حتمی قیمت معلوم کرنے کے لیے دونوں اطراف سے $2$ تفریق کریں۔",
+   "check": [
+    "36 - 2 == 34",
+    "(3+sqrt(8))**2 + 1/(3+sqrt(8))**2 == 34",
+    "1/(3+sqrt(8)) == 3 - sqrt(8)",
+    "3**2 - sqrt(8)**2 == 1",
+    "(3+sqrt(8)) + (3-sqrt(8)) == 6",
+    "(3+sqrt(8))**2 + (3-sqrt(8))**2 == 6**2 - 2",
+    "6**2 - 2 == 34"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

@@ -1,0 +1,63 @@
+{
+ "item": "c10-ex5.2-q1",
+ "label": "iii",
+ "answer_ref": "$\\frac{5 x + y}{18 \\left(2 x - y\\right)}$",
+ "steps": [
+  {
+   "math": "\\frac{x + y}{12 x - 6 y} + \\frac{x - y}{18 x - 9 y}",
+   "en": "We are given the following algebraic expression to simplify by adding the two fractions.",
+   "ur": "ہمیں درج ذیل الجبری عبارت دی گئی ہے جسے دونوں کسور کو جمع کر کے مختصر کرنا ہے۔"
+  },
+  {
+   "math": "= \\frac{x + y}{6(2x - y)} + \\frac{x - y}{9(2x - y)}",
+   "en": "First, factorize both denominators by taking out the greatest common factor: $6$ from the first denominator ($12x - 6y$) and $9$ from the second denominator ($18x - 9y$).",
+   "ur": "سب سے پہلے، دونوں نسب نماؤں میں سے مشترک عنصر نکال کر تجزی کریں: پہلے نسب نما ($12x - 6y$) سے $6$ اور دوسرے نسب نما ($18x - 9y$) سے $9$ مشترک لیں۔",
+   "check": [
+    "((x + y)/(6*(2*x - y)) + (x - y)/(9*(2*x - y))) == ((x + y)/(12*x - 6*y) + (x - y)/(18*x - 9*y))"
+   ]
+  },
+  {
+   "math": "\\text{L.C.M.} = 18(2x - y)",
+   "en": "To add the fractions, find the Least Common Multiple (L.C.M.) of the denominators $6(2x - y)$ and $9(2x - y)$. The L.C.M. of $6$ and $9$ is $18$, and the common algebraic factor is $(2x - y)$, giving $18(2x - y)$.",
+   "ur": "کسور کو جمع کرنے کے لیے، نسب نماؤں $6(2x - y)$ اور $9(2x - y)$ کا ذو اضعاف اقل (L.C.M.) معلوم کریں۔ $6$ اور $9$ کا ذو اضعاف اقل $18$ ہے، اور مشترک الجبری جزو ضربی $(2x - y)$ ہے، جس سے $18(2x - y)$ حاصل ہوتا ہے۔"
+  },
+  {
+   "math": "= \\frac{3(x + y) + 2(x - y)}{18(2x - y)}",
+   "en": "Combine the fractions over the common denominator $18(2x - y)$. Multiply the first numerator by $3$ (since $\\frac{18}{6} = 3$) and the second numerator by $2$ (since $\\frac{18}{9} = 2$).",
+   "ur": "مشترکہ نسب نما $18(2x - y)$ کے تحت کسور کو یکجا کریں۔ پہلے شمار کنندہ کو $3$ سے ضرب دیں (کیونکہ $\\frac{18}{6} = 3$) اور دوسرے شمار کنندہ کو $2$ سے ضرب دیں (کیونکہ $\\frac{18}{9} = 2$)۔",
+   "check": [
+    "(3*(x + y) + 2*(x - y))/(18*(2*x - y)) == ((x + y)/(12*x - 6*y) + (x - y)/(18*x - 9*y))"
+   ]
+  },
+  {
+   "math": "= \\frac{3x + 3y + 2x - 2y}{18(2x - y)}",
+   "en": "Expand the brackets in the numerator by multiplying the numbers inside.",
+   "ur": "شمار کنندہ میں قوسین کے اندر اعداد کو ضرب دے کر قوسین کھولیں۔",
+   "check": [
+    "(3*x + 3*y + 2*x - 2*y)/(18*(2*x - y)) == ((x + y)/(12*x - 6*y) + (x - y)/(18*x - 9*y))"
+   ]
+  },
+  {
+   "math": "= \\frac{(3x + 2x) + (3y - 2y)}{18(2x - y)}",
+   "en": "Group the like terms together in the numerator.",
+   "ur": "شمار کنندہ میں یکساں ارکان کو اکٹھا کریں۔",
+   "check": [
+    "((3*x + 2*x) + (3*y - 2*y))/(18*(2*x - y)) == ((x + y)/(12*x - 6*y) + (x - y)/(18*x - 9*y))"
+   ]
+  },
+  {
+   "math": "= \\frac{5 x + y}{18 \\left(2 x - y\\right)}",
+   "en": "Add and subtract the like terms ($3x + 2x = 5x$ and $3y - 2y = y$) to get the final simplified form.",
+   "ur": "یکساں ارکان کو جمع اور تفریق کریں ($3x + 2x = 5x$ اور $3y - 2y = y$) تاکہ حتمی مختصر شکل حاصل ہو سکے۔",
+   "check": [
+    "(5*x + y)/(18*(2*x - y)) == ((x + y)/(12*x - 6*y) + (x - y)/(18*x - 9*y))",
+    "((x - y)/(9*(2*x - y)) + (x + y)/(6*(2*x - y))) == ((x - y)/(18*x - 9*y) + (x + y)/(12*x - 6*y))",
+    "(5*x + y)/(18*(2*x - y)) == ((x - y)/(18*x - 9*y) + (x + y)/(12*x - 6*y))",
+    "(5*x + y)/(18*(2*x - y)) == ((x - y)/(18*x - 9*y) + (x + y)/(12*x - 6*y))"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

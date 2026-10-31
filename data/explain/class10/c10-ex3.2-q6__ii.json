@@ -1,0 +1,40 @@
+{
+ "item": "c10-ex3.2-q6",
+ "label": "ii",
+ "answer_ref": "verified: both sides $= \\begin{bmatrix} 7 & 6 \\\\ 5 & 8 \\end{bmatrix}$",
+ "math": [
+  "",
+  "B^t = \\begin{bmatrix} 7 & 6 \\\\ 5 & 8 \\end{bmatrix}^t = \\begin{bmatrix} 7 & 5 \\\\ 6 & 8 \\end{bmatrix}",
+  "(B^t)^t = \\begin{bmatrix} 7 & 5 \\\\ 6 & 8 \\end{bmatrix}^t = \\begin{bmatrix} 7 & 6 \\\\ 5 & 8 \\end{bmatrix}",
+  "",
+  "(B^t)^t = \\begin{bmatrix} 7 & 6 \\\\ 5 & 8 \\end{bmatrix} = B"
+ ],
+ "why": [
+  {
+   "en": "To verify a matrix equation, we always start by picking the more complex side first, which here is the Left-Hand Side $(B^t)^t$. Our goal is to simplify this step by step and see if it brings us back to the original matrix $B$.",
+   "ur": "کسی بھی میٹرکس مساوات کی تصدیق کرنے کے لیے ہم ہمیشہ پہلے زیادہ حل طلب سائیڈ لیتے ہیں، جو یہاں بائیں سائیڈ $(B^t)^t$ ہے۔ ہمارا مقصد اسے مرحلہ وار حل کرنا اور دیکھنا ہے کہ آیا یہ ہمیں واپس اصل میٹرکس $B$ دیتا ہے یا نہیں۔"
+  },
+  {
+   "en": "Following the order of operations, we first solve the inner bracket by finding $B^t$. Using the definition of transpose, we change the first row $\\begin{bmatrix} 7 & 6 \\end{bmatrix}$ into the first column and the second row $\\begin{bmatrix} 5 & 8 \\end{bmatrix}$ into the second column.",
+   "ur": "سب سے پہلے ہم بریکٹ کے اندر والے حصے کو حل کرتے ہوئے $B^t$ معلوم کریں گے۔ ٹرانسپوز کی تعریف کے مطابق، ہم پہلی قطار $\\begin{bmatrix} 7 & 6 \\end{bmatrix}$ کو پہلے کالم میں اور دوسری قطار $\\begin{bmatrix} 5 & 8 \\end{bmatrix}$ کو دوسرے کالم میں تبدیل کر دیتے ہیں۔"
+  },
+  {
+   "en": "Now we apply the outer transpose to the matrix $B^t$ that we just found. By turning the rows of $B^t$ into columns once again, we get the final simplified form of our Left-Hand Side.",
+   "ur": "اب ہم حاصل شدہ میٹرکس $B^t$ پر باہر والا ٹرانسپوز لگائیں گے۔ $B^t$ کی قطاروں کو ایک بار پھر کالموں میں بدلنے سے ہمیں بائیں سائیڈ کی حتمی شکل مل جاتی ہے۔"
+  },
+  {
+   "en": "Next, we look at the Right-Hand Side of the equation, which is simply the original matrix $B$ given in the question. Writing it down allows us to directly compare both sides.",
+   "ur": "اب ہم مساوات کی دائیں سائیڈ کو دیکھتے ہیں، جو کہ سوال میں دیا گیا اصل میٹرکس $B$ ہی ہے۔ اسے سامنے رکھنے سے ہم دونوں اطراف کا براہِ راست موازنہ کر سکتے ہیں۔"
+  },
+  {
+   "en": "Comparing our result from Step 3 with the original matrix $B$, we see that every corresponding entry matches exactly. This confirms that the Left-Hand Side is equal to the Right-Hand Side.",
+   "ur": "تیسرے مرحلے کے نتیجے کا اصل میٹرکس $B$ سے موازنہ کرنے پر ہم دیکھتے ہیں کہ تمام متناظرہ ارکان بالکل ایک جیسے ہیں۔ اس سے ثابت ہوتا ہے کہ بائیں سائیڈ دائیں سائیڈ کے برابر ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This verification proves an important property of matrices: taking the transpose of a matrix twice always brings it back to its original form, so $(B^t)^t = B$. You can easily check this yourself because swapping rows and columns twice naturally puts all the numbers $7, 6, 5,$ and $8$ back into their starting places.",
+  "ur": "یہ تصدیق میٹرکس کی ایک اہم خاصیت کو ثابت کرتی ہے: کسی میٹرکس کا دو بار ٹرانسپوز لینے سے وہ ہمیشہ اپنی اصل حالت میں واپس آ جاتا ہے، یعنی $(B^t)^t = B$۔ آپ اس کی پڑتال آسانی سے کر سکتے ہیں کیونکہ قطاروں اور کالموں کو دو بار آپس میں بدلنے سے تمام اعداد $7, 6, 5,$ اور $8$ قدرتی طور پر اپنی ابتدائی جگہوں پر واپس آ جاتے ہیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

@@ -1,0 +1,50 @@
+{
+ "item": "c10-ex2.3-q4",
+ "label": "iv",
+ "answer_ref": "$x^2 + 4x + 16 = 0$",
+ "math": [
+  "x^2 + 2x + 4 = 0 \\implies a = 1,\\quad b = 2,\\quad c = 4",
+  "\\alpha + \\beta = -\\frac{b}{a} = -\\frac{2}{1} = -2",
+  "\\alpha\\beta = \\frac{c}{a} = \\frac{4}{1} = 4",
+  "S = \\alpha^2 + \\beta^2 = (\\alpha + \\beta)^2 - 2\\alpha\\beta",
+  "S = (-2)^2 - 2(4) = 4 - 8 = -4",
+  "P = \\alpha^2 \\beta^2 = (\\alpha\\beta)^2 = (4)^2 = 16",
+  "x^2 - Sx + P = 0 \\implies x^2 - (-4)x + 16 = 0 \\implies x^2 + 4x + 16 = 0"
+ ],
+ "why": [
+  {
+   "en": "To use the sum and product of roots formulas without actually solving the equation, we first need the coefficients $a$, $b$, and $c$. Matching our equation with the standard quadratic form gives us $a = 1$, $b = 2$, and $c = 4$ as our starting values.",
+   "ur": "مساوات کو حل کیے بغیر روٹس کے مجموعے اور حاصل ضرب کے فارمولے استعمال کرنے کے لیے ہمیں سب سے پہلے عددی سروں $a$، $b$ اور $c$ کی ضرورت ہوتی ہے۔ اپنی مساوات کا معیاری دو درجی مساوات سے موازنہ کرنے سے ہمیں ابتدائی قیمتیں $a = 1$، $b = 2$ اور $c = 4$ مل جاتی ہیں۔"
+  },
+  {
+   "en": "Instead of finding $\\alpha$ and $\\beta$ separately, we use the sum of roots relation $-\\frac{b}{a}$ which connects the roots directly to the coefficients. This tells us that the original roots add up to $-2$, a key value we will need to build the new roots.",
+   "ur": "الگ الگ $\\alpha$ اور $\\beta$ معلوم کرنے کے بجائے، ہم روٹس کے مجموعے کا فارمولا $-\\frac{b}{a}$ استعمال کرتے ہیں جو روٹس کو براہِ راست عددی سروں سے جوڑتا ہے۔ اس سے ہمیں معلوم ہوتا ہے کہ اصل روٹس کا مجموعہ $-2$ ہے، جو نئے روٹس بنانے کے لیے ایک اہم قیمت ہے۔"
+  },
+  {
+   "en": "Similarly, we use the product of roots rule $\\frac{c}{a}$ to find what $\\alpha$ and $\\beta$ multiply to. Knowing that $\\alpha\\beta = 4$, along with their sum, gives us everything required to evaluate any symmetric expression of the roots.",
+   "ur": "اسی طرح، ہم روٹس کے حاصل ضرب کا اصول $\\frac{c}{a}$ استعمال کرتے ہیں تاکہ معلوم ہو سکے کہ $\\alpha$ اور $\\beta$ کو ضرب دینے سے کیا آتا ہے۔ $\\alpha\\beta = 4$ اور ان کے مجموعے کی قیمتیں مل جانے سے اب ہم روٹس کے کسی بھی متشاکل جملے (symmetric expression) کی قیمت نکال سکتے ہیں۔"
+  },
+  {
+   "en": "To form a new quadratic equation, we first need the sum $S$ of its given roots, $\\alpha^2$ and $\\beta^2$. Since we only know $\\alpha + \\beta$ and $\\alpha\\beta$, we rewrite $\\alpha^2 + \\beta^2$ using a standard algebraic identity so we can plug in our known numbers.",
+   "ur": "نئی دو درجی مساوات بنانے کے لیے ہمیں پہلے اس کے دیے گئے روٹس $\\alpha^2$ اور $\\beta^2$ کا مجموعہ $S$ چاہیے۔ چونکہ ہمیں صرف $\\alpha + \\beta$ اور $\\alpha\\beta$ کی قیمتیں معلوم ہیں، اس لیے ہم الجبری کلیے کی مدد سے $\\alpha^2 + \\beta^2$ کو ایسی شکل میں لکھتے ہیں جہاں ہم یہ معلوم قیمتیں درج کر سکیں۔"
+  },
+  {
+   "en": "By replacing $\\alpha + \\beta$ with $-2$ and $\\alpha\\beta$ with $4$, we turn the algebraic expression into a simple arithmetic calculation. The result $S = -4$ gives us the exact sum of the roots for our required equation.",
+   "ur": "جب ہم $\\alpha + \\beta$ کی جگہ $-2$ اور $\\alpha\\beta$ کی جگہ $4$ درج کرتے ہیں، تو یہ الجبری جملہ ایک سادہ حسابی عمل بن جاتا ہے۔ اس کا نتیجہ $S = -4$ ہمیں مطلوبہ مساوات کے روٹس کا اصل مجموعہ دیتا ہے۔"
+  },
+  {
+   "en": "Next, we need the product $P$ of the new roots $\\alpha^2$ and $\\beta^2$. Using the laws of exponents, we write $\\alpha^2\\beta^2$ as $(\\alpha\\beta)^2$, which allows us to directly square $4$ and find that the product of the new roots is $16$.",
+   "ur": "اب ہمیں نئے روٹس $\\alpha^2$ اور $\\beta^2$ کا حاصل ضرب $P$ معلوم کرنا ہے۔ قوت نما کے قوانین کے مطابق ہم $\\alpha^2\\beta^2$ کو $(\\alpha\\beta)^2$ لکھتے ہیں، جس سے ہم براہِ راست $4$ کا مربع لے کر نئے روٹس کا حاصل ضرب $16$ معلوم کر لیتے ہیں۔"
+  },
+  {
+   "en": "Any quadratic equation can be constructed directly from the sum $S$ and product $P$ of its roots using the standard formula $x^2 - Sx + P = 0$. Putting $S = -4$ and $P = 16$ into this template completes our task and gives the final equation.",
+   "ur": "کوئی بھی دو درجی مساوات اپنے روٹس کے مجموعے $S$ اور حاصل ضرب $P$ کی مدد سے معیاری فارمولے $x^2 - Sx + P = 0$ کے ذریعے بنائی جا سکتی ہے۔ اس فارمولے میں $S = -4$ اور $P = 16$ درج کرنے سے ہمارا کام مکمل ہو جاتا ہے اور مطلوبہ مساوات مل جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $x^2 + 4x + 16 = 0$ is the new quadratic equation whose roots are the squares ($\\alpha^2$ and $\\beta^2$) of the roots of the original equation $x^2 + 2x + 4 = 0$. You can quickly check this from the equation itself: the sum of its roots is $-\\frac{4}{1} = -4$ (which matches $S$) and the product of its roots is $\\frac{16}{1} = 16$ (which matches $P$).",
+  "ur": "حتمی جواب $x^2 + 4x + 16 = 0$ وہ نئی دو درجی مساوات ہے جس کے روٹس اصل مساوات $x^2 + 2x + 4 = 0$ کے روٹس کے مربعے ($\\alpha^2$ اور $\\beta^2$) ہیں۔ آپ اس مساوات کو دیکھ کر فوری پڑتال بھی کر سکتے ہیں: اس کے روٹس کا مجموعہ $-\\frac{4}{1} = -4$ ہے (جو $S$ کے برابر ہے) اور روٹس کا حاصل ضرب $\\frac{16}{1} = 16$ ہے (جو $P$ کے برابر ہے)۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

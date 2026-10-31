@@ -1,0 +1,45 @@
+{
+ "item": "c10-rev3-q6",
+ "label": "",
+ "answer_ref": "the numbers are 5 and 11",
+ "math": [
+  "",
+  "\\begin{bmatrix} 2 & 1 \\\\ 1 & 2 \\end{bmatrix}\\begin{bmatrix} x \\\\ y \\end{bmatrix} = \\begin{bmatrix} 21 \\\\ 27 \\end{bmatrix}",
+  "|A| = \\begin{vmatrix} 2 & 1 \\\\ 1 & 2 \\end{vmatrix} = (2)(2) - (1)(1) = 3",
+  "|A_x| = \\begin{vmatrix} 21 & 1 \\\\ 27 & 2 \\end{vmatrix} = (21)(2) - (1)(27) = 15",
+  "|A_y| = \\begin{vmatrix} 2 & 21 \\\\ 1 & 27 \\end{vmatrix} = (2)(27) - (21)(1) = 33",
+  "x = \\frac{|A_x|}{|A|} = \\frac{15}{3} = 5,\\quad y = \\frac{|A_y|}{|A|} = \\frac{33}{3} = 11"
+ ],
+ "why": [
+  {
+   "en": "We start by translating the English word problem into two algebraic equations using $x$ and $y$ for our unknown numbers. This gives us a standard system of linear equations, $2x + y = 21$ and $x + 2y = 27$, which we can now solve.",
+   "ur": "ہم سب سے پہلے عبارت والے سوال کو دو نامعلوم اعداد $x$ اور $y$ کی مدد سے الجبری مساواتوں میں تبدیل کرتے ہیں۔ اس سے ہمیں لینیئر مساواتوں کا ایک معیاری نظام $2x + y = 21$ اور $x + 2y = 27$ مل جاتا ہے جسے اب ہم حل کر سکتے ہیں۔"
+  },
+  {
+   "en": "Because the question specifically asks us to use matrices, we separate the coefficients, variables, and constants into the standard matrix equation $AX = B$. This organizes our numbers neatly so we can apply matrix rules to find $x$ and $y$.",
+   "ur": "چونکہ سوال میں خاص طور پر قالب (matrices) استعمال کرنے کا کہا گیا ہے، اس لیے ہم عددی سروں، متغیرات اور مستقل مقداروں کو الگ کر کے معیاری قالب مساوات $AX = B$ کی شکل میں لکھتے ہیں۔ اس سے ہمارے اعداد منظم ہو جاتے ہیں تاکہ ہم $x$ اور $y$ معلوم کرنے کے لیے قالب کے اصول لگا سکیں۔"
+  },
+  {
+   "en": "We calculate the determinant of the coefficient matrix $A$ by cross-multiplying and subtracting: $(2)(2) - (1)(1)$. Since $|A| = 3$, which is not zero, it confirms that a unique solution exists and allows us to use Cramer's rule.",
+   "ur": "ہم عددی سروں کے قالب $A$ کا مقطع (determinant) ترچھی ضرب دے کر اور تفریق کر کے معلوم کرتے ہیں: $(2)(2) - (1)(1)$۔ چونکہ $|A| = 3$ ہے جو کہ صفر نہیں ہے، اس سے تصدیق ہوتی ہے کہ اس کا حل ممکن ہے اور ہم کریمر کا قانون استعمال کر سکتے ہیں۔"
+  },
+  {
+   "en": "According to Cramer's rule, to prepare for finding $x$, we form a new matrix $A_x$ by replacing the first column ($x$-coefficients) with the constant numbers $21$ and $27$. Finding its determinant gives us $|A_x| = 15$, which is the numerator needed to calculate $x$.",
+   "ur": "کریمر کے قانون کے مطابق، $x$ کی قیمت معلوم کرنے کی تیاری کے لیے ہم پہلا کالم ($x$ کے عددی سر) ہٹا کر اس کی جگہ مستقل اعداد $21$ اور $27$ رکھتے ہیں اور نیا قالب $A_x$ بناتے ہیں۔ اس کا مقطع حل کرنے سے ہمیں $|A_x| = 15$ ملتا ہے، جو $x$ معلوم کرنے کے فارمولے میں شمار کنندہ (numerator) کے طور پر استعمال ہو گا۔"
+  },
+  {
+   "en": "Similarly, to prepare for finding $y$, we form the matrix $A_y$ by replacing the second column ($y$-coefficients) with the constants $21$ and $27$. Its determinant gives us $|A_y| = 33$, which we will divide by $|A|$ in the next step to get $y$.",
+   "ur": "اسی طرح، $y$ معلوم کرنے کے لیے ہم دوسرے کالم ($y$ کے عددی سر) کی جگہ مستقل اعداد $21$ اور $27$ رکھ کر قالب $A_y$ بناتے ہیں۔ اس کا مقطع ہمیں $|A_y| = 33$ دیتا ہے، جسے اگلے مرحلے میں $|A|$ پر تقسیم کر کے ہم $y$ حاصل کریں گے۔"
+  },
+  {
+   "en": "Finally, we apply the formulas of Cramer's rule, dividing $|A_x|$ and $|A_y|$ by the main determinant $|A|$. Dividing $15$ by $3$ and $33$ by $3$ directly gives us the values of the two unknown numbers, $x = 5$ and $y = 11$.",
+   "ur": "آخر میں، ہم کریمر کے قانون کے فارمولے لگاتے ہوئے $|A_x|$ اور $|A_y|$ کو اصل مقطع $|A|$ پر تقسیم کرتے ہیں۔ $15$ کو $3$ پر اور $33$ کو $3$ پر تقسیم کرنے سے ہمیں براہِ راست دونوں نامعلوم اعداد کی قیمتیں $x = 5$ اور $y = 11$ مل جاتی ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The two required numbers are $5$ and $11$. We can easily check this in the original conditions: twice the first added to the second is $2(5) + 11 = 21$, and twice the second added to the first is $5 + 2(11) = 27$, which matches the question perfectly.",
+  "ur": "مطلوبہ دو اعداد $5$ اور $11$ ہیں۔ ہم سوال کی اصل شرائط میں رکھ کر اس کی باآسانی پڑتال کر سکتے ہیں: پہلے عدد کے دگنے میں دوسرا جمع کریں تو $2(5) + 11 = 21$ بنتا ہے، اور دوسرے کے دگنے میں پہلا جمع کریں تو $5 + 2(11) = 27$ بنتا ہے، جو کہ سوال کے عین مطابق ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

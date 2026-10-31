@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex2.1-q1",
+ "label": "iv",
+ "answer_ref": "$9 x^{2} - 12 x + 8 = 0$",
+ "steps": [
+  {
+   "math": "4(3x - 2) = 9x^{2}",
+   "en": "Write down the given equation.",
+   "ur": "دی گئی مساوات لکھیں۔"
+  },
+  {
+   "math": "",
+   "en": "Recall that the standard form of a quadratic equation is $ax^2 + bx + c = 0$, where $a \\neq 0$.",
+   "ur": "یاد رکھیں کہ دو درجی مساوات کی معیاری شکل $ax^2 + bx + c = 0$ ہوتی ہے، جہاں $a \\neq 0$ ہو۔"
+  },
+  {
+   "math": "12x - 8 = 9x^{2}",
+   "en": "Expand the bracket on the left-hand side by multiplying $4$ with both $3x$ and $-2$.",
+   "ur": "بائیں جانب قوسین کو کھولنے کے لیے $4$ کو $3x$ اور $-2$ دونوں سے ضرب دیں۔",
+   "check": [
+    "(12*x - 8) - (9*x**2) == (4*(3*x - 2)) - (9*x**2)"
+   ]
+  },
+  {
+   "math": "0 = 9x^{2} - 12x + 8",
+   "en": "Shift the terms $12x$ and $-8$ to the right-hand side so that the coefficient of $x^2$ remains positive, changing their signs.",
+   "ur": "$x^2$ کے عددی سر کو مثبت رکھنے کے لیے $12x$ اور $-8$ کی علامتیں تبدیل کر کے انہیں دائیں جانب منتقل کریں۔",
+   "check": [
+    "(0) - (9*x**2 - 12*x + 8) == (12*x - 8) - (9*x**2)"
+   ]
+  },
+  {
+   "math": "9 x^{2} - 12 x + 8 = 0",
+   "en": "Write the equation with all terms on the left-hand side. This is the required standard form of the quadratic equation.",
+   "ur": "تمام ارکان کو بائیں جانب لکھ کر مساوات ترتیب دیں۔ یہ دو درجی مساوات کی مطلوبہ معیاری شکل ہے۔",
+   "check": [
+    "(9*x**2 - 12*x + 8) - (0) == (-1)*((12*x - 8) - (9*x**2))",
+    "(12*x - 8) - (9*x**2) == (4*(3*x - 2)) - (9*x**2)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

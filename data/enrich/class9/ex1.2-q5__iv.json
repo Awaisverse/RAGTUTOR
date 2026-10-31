@@ -1,0 +1,58 @@
+{
+ "item": "ex1.2-q5",
+ "label": "iv",
+ "answer_ref": "$a+b^2$",
+ "steps": [
+  {
+   "math": "\\left(a^{\\frac{1}{3}}+b^{\\frac{2}{3}}\\right) \\times \\left(a^{\\frac{2}{3}} - a^{\\frac{1}{3}}b^{\\frac{2}{3}} + b^{\\frac{4}{3}}\\right)",
+   "en": "Write down the given expression that we need to simplify.",
+   "ur": "دی گئی عبارت لکھیں جسے ہمیں مختصر کرنا ہے۔"
+  },
+  {
+   "math": "\\left(a^{\\frac{1}{3}}+b^{\\frac{2}{3}}\\right) \\times \\left(\\left(a^{\\frac{1}{3}}\\right)^2 - \\left(a^{\\frac{1}{3}}\\right)\\left(b^{\\frac{2}{3}}\\right) + \\left(b^{\\frac{2}{3}}\\right)^2\\right)",
+   "en": "Use the power of a power rule $(x^m)^n = x^{mn}$ to rewrite $a^{\\frac{2}{3}}$ as $\\left(a^{\\frac{1}{3}}\\right)^2$ and $b^{\\frac{4}{3}}$ as $\\left(b^{\\frac{2}{3}}\\right)^2$.",
+   "ur": "قوت کے اصول $(x^m)^n = x^{mn}$ کا استعمال کرتے ہوئے $a^{\\frac{2}{3}}$ کو $\\left(a^{\\frac{1}{3}}\\right)^2$ اور $b^{\\frac{4}{3}}$ کو $\\left(b^{\\frac{2}{3}}\\right)^2$ کے طور پر دوبارہ لکھیں۔",
+   "check": [
+    "a**R(2,3) == (a**R(1,3))**2",
+    "b**R(4,3) == (b**R(2,3))**2"
+   ]
+  },
+  {
+   "math": "\\text{Let } u = a^{\\frac{1}{3}} \\quad \\text{and} \\quad v = b^{\\frac{2}{3}}",
+   "en": "Substitute $u$ and $v$ for the two terms in the first bracket so that the algebraic pattern becomes clear.",
+   "ur": "پہلی بریکٹ میں موجود دونوں رقوم کی جگہ $u$ اور $v$ درج کریں تاکہ الجبری کلیہ واضح ہو جائے۔"
+  },
+  {
+   "math": "(u+v)(u^2 - uv + v^2) = u^3 + v^3",
+   "en": "In terms of $u$ and $v$, the expression matches the sum of cubes formula: $(u+v)(u^2 - uv + v^2) = u^3 + v^3$.",
+   "ur": "$u$ اور $v$ کی صورت میں یہ عبارت مکعبوں کے مجموعے کے کلیے $(u+v)(u^2 - uv + v^2) = u^3 + v^3$ کے مطابق ہے۔",
+   "check": [
+    "(u+v)*(u**2 - u*v + v**2) == u**3 + v**3"
+   ]
+  },
+  {
+   "math": "= \\left(a^{\\frac{1}{3}}\\right)^3 + \\left(b^{\\frac{2}{3}}\\right)^3",
+   "en": "Substitute the original values $u = a^{\\frac{1}{3}}$ and $v = b^{\\frac{2}{3}}$ back into $u^3 + v^3$.",
+   "ur": "اب $u^3 + v^3$ میں $u = a^{\\frac{1}{3}}$ اور $v = b^{\\frac{2}{3}}$ کی اصل قیمتیں واپس درج کریں۔",
+   "check": [
+    "(a**R(1,3)+b**R(2,3))*(a**R(2,3) - a**R(1,3)*b**R(2,3) + b**R(4,3)) == (a**R(1,3))**3 + (b**R(2,3))**3"
+   ]
+  },
+  {
+   "math": "= a^{\\frac{1}{3} \\times 3} + b^{\\frac{2}{3} \\times 3} = a^1 + b^2 = a + b^2",
+   "en": "Multiply the exponents using the power rule $(x^m)^n = x^{mn}$ and cancel the $3$s to get the final simplified answer.",
+   "ur": "قوت کے اصول $(x^m)^n = x^{mn}$ کے تحت قوت نماؤں کو ضرب دیں اور $3$ کو منسوخ کر کے حتمی مختصر جواب حاصل کریں۔",
+   "check": [
+    "(a**R(1,3))**3 == a",
+    "(b**R(2,3))**3 == b**2",
+    "(a**R(1,3)+b**R(2,3))*(a**R(2,3) - a**R(1,3)*b**R(2,3) + b**R(4,3)) == a + b**2",
+    "a**Rational(2,3) == (a**Rational(1,3))**2",
+    "b**Rational(4,3) == (b**Rational(2,3))**2",
+    "(a**Rational(1,3)+b**Rational(2,3))*(a**Rational(2,3) - a**Rational(1,3)*b**Rational(2,3) + b**Rational(4,3)) == a + b**2"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

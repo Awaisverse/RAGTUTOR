@@ -1,0 +1,46 @@
+{
+ "item": "c10-rev5-q6",
+ "label": "",
+ "answer_ref": "3.6 hours",
+ "steps": [
+  {
+   "math": "",
+   "en": "First, find the fraction of the tank filled by each tap in $1$ hour. The first tap takes $6$ hours, so its rate is $\\frac{1}{6}$ of the tank per hour. The second tap takes $9$ hours, so its rate is $\\frac{1}{9}$ of the tank per hour.",
+   "ur": "سب سے پہلے، ہر نل کے ذریعے $1$ گھنٹے میں بھرے گئے ٹینک کا حصہ معلوم کریں۔ پہلا نل $6$ گھنٹے لیتا ہے، اس لیے اس کی شرح $\\frac{1}{6}$ ٹینک فی گھنٹہ ہے۔ دوسرا نل $9$ گھنٹے لیتا ہے، اس لیے اس کی شرح $\\frac{1}{9}$ ٹینک فی گھنٹہ ہے۔"
+  },
+  {
+   "math": "\\frac{1}{T} = \\frac{1}{6} + \\frac{1}{9}",
+   "en": "Let $T$ be the total hours required when both taps are opened together. Their combined rate $\\frac{1}{T}$ is the sum of their individual rates.",
+   "ur": "فرض کریں کہ جب دونوں نل ایک ساتھ کھولے جائیں تو کل درکار گھنٹے $T$ ہیں۔ ان کی مشترکہ شرح $\\frac{1}{T}$ ان کی انفرادی شرحوں کا مجموعہ ہے۔"
+  },
+  {
+   "math": "\\frac{1}{T} = \\frac{3}{18} + \\frac{2}{18}",
+   "en": "Find the least common multiple (LCM) of the denominators $6$ and $9$, which is $18$, and rewrite the fractions with the common denominator.",
+   "ur": "مخرج $6$ اور $9$ کا ذواضعاف اقل (LCM) معلوم کریں، جو کہ $18$ ہے، اور کسروں کو مشترک مخرج کے ساتھ دوبارہ لکھیں۔",
+   "check": [
+    "R(1,6) == R(3,18)",
+    "R(1,9) == R(2,18)"
+   ]
+  },
+  {
+   "math": "\\frac{1}{T} = \\frac{5}{18}",
+   "en": "Add the numerators together to get the combined rate per hour.",
+   "ur": "مشترکہ شرح فی گھنٹہ حاصل کرنے کے لیے شمار کنندگان کو آپس میں جمع کریں۔",
+   "check": [
+    "R(3,18) + R(2,18) == R(5,18)"
+   ]
+  },
+  {
+   "math": "T = \\frac{18}{5} = 3.6 \\text{ hours}",
+   "en": "Take the reciprocal of both sides to find the total time $T$, and divide $18$ by $5$. Thus, it will take $3.6$ hours to fill the empty tank.",
+   "ur": "کل وقت $T$ معلوم کرنے کے لیے دونوں طرف کا معکوس (reciprocal) لیں، اور $18$ کو $5$ پر تقسیم کریں۔ اس طرح، خالی ٹینک کو بھرنے میں $3.6$ گھنٹے لگیں گے۔",
+   "check": [
+    "R(18,5) == 3.6",
+    "R(1,6) + R(1,9) == R(5,18)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

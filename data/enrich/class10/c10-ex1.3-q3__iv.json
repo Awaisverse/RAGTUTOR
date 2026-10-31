@@ -1,0 +1,70 @@
+{
+ "item": "c10-ex1.3-q3",
+ "label": "iv",
+ "answer_ref": "verified: both sides $= 29$",
+ "steps": [
+  {
+   "math": "z = 5 - 2i \\implies \\overline{z} = 5 + 2i",
+   "en": "Given the complex number $z = 5 - 2i$. To find its conjugate $\\overline{z}$, we change the sign of the imaginary part.",
+   "ur": "دی گئی مختلط عدد $z = 5 - 2i$ ہے۔ اس کا زوج (conjugate) $\\overline{z}$ معلوم کرنے کے لیے ہم خیالی حصے کی علامت تبدیل کرتے ہیں۔",
+   "check": [
+    "conjugate(5 - 2*I) == 5 + 2*I"
+   ]
+  },
+  {
+   "math": "\\text{L.H.S} = z\\overline{z} = (5 - 2i)(5 + 2i)",
+   "en": "First, take the Left Hand Side (L.H.S) and substitute the values of $z$ and $\\overline{z}$.",
+   "ur": "سب سے پہلے، بائیں طرف (L.H.S) لیں اور $z$ اور $\\overline{z}$ کی قیمتیں درج کریں۔",
+   "check": [
+    "(5 - 2*I)*(5 + 2*I) == 29"
+   ]
+  },
+  {
+   "math": "z\\overline{z} = (5)^2 - (2i)^2 = 25 - 4i^2",
+   "en": "Apply the algebraic identity $(a - b)(a + b) = a^2 - b^2$.",
+   "ur": "الجبری کلیہ $(a - b)(a + b) = a^2 - b^2$ کا اطلاق کریں۔",
+   "check": [
+    "5**2 - (2*I)**2 == 25 - 4*I**2"
+   ]
+  },
+  {
+   "math": "z\\overline{z} = 25 - 4(-1) = 25 + 4 = 29",
+   "en": "Substitute $i^2 = -1$ and simplify to get the value of the L.H.S.",
+   "ur": "$i^2 = -1$ درج کریں اور بائیں طرف (L.H.S) کی قیمت حاصل کرنے کے لیے مختصر کریں۔",
+   "check": [
+    "25 - 4*(-1) == 25 + 4",
+    "25 + 4 == 29"
+   ]
+  },
+  {
+   "math": "|z| = \\sqrt{(5)^2 + (-2)^2} = \\sqrt{25 + 4} = \\sqrt{29}",
+   "en": "Now, for the Right Hand Side (R.H.S), first find the modulus $|z|$ using the formula $|a + bi| = \\sqrt{a^2 + b^2}$.",
+   "ur": "اب، دائیں طرف (R.H.S) کے لیے، پہلے کلیہ $|a + bi| = \\sqrt{a^2 + b^2}$ کا استعمال کرتے ہوئے مقیاس (modulus) $|z|$ معلوم کریں۔",
+   "check": [
+    "Abs(5 - 2*I) == sqrt(5**2 + (-2)**2)",
+    "sqrt(5**2 + (-2)**2) == sqrt(25 + 4)",
+    "sqrt(25 + 4) == sqrt(29)"
+   ]
+  },
+  {
+   "math": "\\text{R.H.S} = |z|^2 = \\left(\\sqrt{29}\\right)^2 = 29",
+   "en": "Take the square of the modulus $|z|$ to find the value of the R.H.S.",
+   "ur": "دائیں طرف (R.H.S) کی قیمت معلوم کرنے کے لیے مقیاس $|z|$ کا مربع لیں۔",
+   "check": [
+    "(sqrt(29))**2 == 29"
+   ]
+  },
+  {
+   "math": "\\text{L.H.S} = \\text{R.H.S} \\implies z\\overline{z} = |z|^2 = 29",
+   "en": "Since both sides are equal to $29$, the relation is verified.",
+   "ur": "چونکہ دونوں اطراف $29$ کے برابر ہیں، اس لیے تصدیق ہو گئی ہے۔",
+   "check": [
+    "(5 - 2*I)*(5 + 2*I) == (29)",
+    "Abs((5 - 2*I))**2 == (29)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

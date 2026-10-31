@@ -1,0 +1,48 @@
+{
+ "item": "c10-ex5.3-q1",
+ "label": "ii",
+ "answer_ref": "$\\frac{2 x \\left(x - 2\\right)}{3 \\left(x + 2\\right)}$",
+ "steps": [
+  {
+   "math": "\\frac{x^2-3x+2}{x^2+3x-4} \\times \\frac{2x^2+8x}{3x+6}",
+   "en": "Write down the given algebraic expression to be simplified.",
+   "ur": "مختصر کرنے کے لیے دی گئی الجبری عبارت لکھیں۔"
+  },
+  {
+   "math": "= \\frac{x^2-2x-x+2}{x^2+4x-x-4} \\times \\frac{2x^2+8x}{3x+6}",
+   "en": "Split the middle terms of the quadratic expressions in the first fraction to factorize them.",
+   "ur": "پہلی کسر کی دو درجی عبارتوں کی تجزی کرنے کے لیے درمیانی رقموں کو توڑ کر لکھیں۔",
+   "check": [
+    "((x**2 - 2*x - x + 2)/(x**2 + 4*x - x - 4))*((2*x**2 + 8*x)/(3*x + 6)) == ((x**2 - 3*x + 2)/(x**2 + 3*x - 4))*((2*x**2 + 8*x)/(3*x + 6))"
+   ]
+  },
+  {
+   "math": "= \\frac{x(x-2)-1(x-2)}{x(x+4)-1(x+4)} \\times \\frac{2x(x+4)}{3(x+2)}",
+   "en": "Take out the common factors by grouping in the first fraction, and factor out $2x$ and $3$ in the second fraction.",
+   "ur": "پہلی کسر میں گروپ بنا کر مشترک اجزاء باہر نکالیں، اور دوسری کسر سے $2x$ اور $3$ مشترک لیں۔",
+   "check": [
+    "((x*(x - 2) - 1*(x - 2))/(x*(x + 4) - 1*(x + 4)))*((2*x*(x + 4))/(3*(x + 2))) == ((x**2 - 3*x + 2)/(x**2 + 3*x - 4))*((2*x**2 + 8*x)/(3*x + 6))"
+   ]
+  },
+  {
+   "math": "= \\frac{(x-2)(x-1)}{(x-1)(x+4)} \\times \\frac{2x(x+4)}{3(x+2)}",
+   "en": "Complete the factorization of the numerator and denominator of the first fraction.",
+   "ur": "پہلی کسر کے شمار کنندہ اور مخرج کی تجزی مکمل کریں۔",
+   "check": [
+    "(((x - 2)*(x - 1))/((x - 1)*(x + 4)))*((2*x*(x + 4))/(3*(x + 2))) == ((x**2 - 3*x + 2)/(x**2 + 3*x - 4))*((2*x**2 + 8*x)/(3*x + 6))"
+   ]
+  },
+  {
+   "math": "= \\frac{2 x \\left(x - 2\\right)}{3 \\left(x + 2\\right)}",
+   "en": "Cancel out the common factors $(x-1)$ and $(x+4)$ from the numerator and denominator to get the simplified answer.",
+   "ur": "مختصر جواب حاصل کرنے کے لیے شمار کنندہ اور مخرج سے مشترک اجزاء $(x-1)$ اور $(x+4)$ کو کاٹ دیں۔",
+   "check": [
+    "(2*x*(x - 2))/(3*(x + 2)) == ((x**2 - 3*x + 2)/(x**2 + 3*x - 4))*((2*x**2 + 8*x)/(3*x + 6))",
+    "((2*x**2 - 4*x)/(3*x + 6)) == ((2*x**2 + 8*x)*(x**2 - 3*x + 2)/((3*x + 6)*(x**2 + 3*x - 4)))"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

@@ -1,0 +1,62 @@
+{
+ "item": "c10-rev1-q6",
+ "label": "iv",
+ "answer_ref": "$\\sqrt{533}$",
+ "steps": [
+  {
+   "math": "z_1 = 5 + 4i, \\quad z_2 = 3 + 2i",
+   "en": "First, write down the given complex numbers $z_1$ and $z_2$. We need to find the modulus of their product, $|z_1 z_2|$.",
+   "ur": "سب سے پہلے، دیے گئے مختلط اعداد $z_1$ اور $z_2$ لکھیں۔ ہمیں ان کے حاصل ضرب کا مقیاس، یعنی $|z_1 z_2|$ معلوم کرنا ہے۔"
+  },
+  {
+   "math": "z_1 z_2 = (5 + 4i)(3 + 2i) = 5(3 + 2i) + 4i(3 + 2i)",
+   "en": "Before finding the modulus, let's find the product $z_1 z_2$ by multiplying each term of the first complex number with the second.",
+   "ur": "مقیاس معلوم کرنے سے پہلے، آئیں پہلے مختلط عدد کے ہر رکن کو دوسرے سے ضرب دے کر حاصل ضرب $z_1 z_2$ معلوم کریں۔",
+   "check": [
+    "(5 + 4*I)*(3 + 2*I) == 5*(3 + 2*I) + 4*I*(3 + 2*I)"
+   ]
+  },
+  {
+   "math": "z_1 z_2 = 15 + 10i + 12i + 8i^2",
+   "en": "Expand the brackets by multiplying the terms.",
+   "ur": "ارکان کو ضرب دے کر قوسین کو کھولیں۔",
+   "check": [
+    "5*(3 + 2*I) + 4*I*(3 + 2*I) == 15 + 10*I + 12*I + 8*I**2"
+   ]
+  },
+  {
+   "math": "z_1 z_2 = 15 + 22i + 8(-1) = 15 - 8 + 22i = 7 + 22i",
+   "en": "Combine the imaginary terms ($10i + 12i = 22i$) and substitute $i^2 = -1$. Then, simplify the real parts.",
+   "ur": "خیالی ارکان کو یکجا کریں ($10i + 12i = 22i$) اور $i^2 = -1$ درج کریں۔ پھر، حقیقی حصوں کو مختصر کریں۔",
+   "check": [
+    "I**2 == -1",
+    "15 + 22*I + 8*(-1) == 7 + 22*I"
+   ]
+  },
+  {
+   "math": "|z_1 z_2| = |7 + 22i| = \\sqrt{(7)^2 + (22)^2}",
+   "en": "Now, apply the modulus formula $|a + bi| = \\sqrt{a^2 + b^2}$, where the real part is $a = 7$ and the imaginary part is $b = 22$.",
+   "ur": "اب، مقیاس کا فارمولا $|a + bi| = \\sqrt{a^2 + b^2}$ لگائیں، جہاں حقیقی حصہ $a = 7$ اور خیالی حصہ $b = 22$ ہے۔",
+   "check": [
+    "Abs(7 + 22*I) == sqrt(7**2 + 22**2)"
+   ]
+  },
+  {
+   "math": "|z_1 z_2| = \\sqrt{49 + 484} = \\sqrt{533}",
+   "en": "Calculate the squares ($7^2 = 49$ and $22^2 = 484$) and add them together to get the final answer.",
+   "ur": "مربع حل کریں ($7^2 = 49$ اور $22^2 = 484$) اور حتمی جواب حاصل کرنے کے لیے انہیں آپس میں جمع کریں۔",
+   "check": [
+    "7**2 == 49",
+    "22**2 == 484",
+    "sqrt(49 + 484) == sqrt(533)",
+    "(5 + 4*I)*(3 + 2*I) == (15) + (22)*I + (8)*I**2",
+    "I**2 == -1",
+    "(5 + 4*I)*(3 + 2*I) == (7 + 22*I)",
+    "Abs((7 + 22*I)) == (sqrt(533))"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

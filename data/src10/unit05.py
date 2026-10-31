@@ -299,7 +299,7 @@ word("ex5.5", 7, r"Ishmal runs 10 km in $\frac{2x}{x+4}$ hours. If her average s
       (r"10x + 40 = 16x \Rightarrow 6x = 40 \Rightarrow x = \frac{20}{3} \approx 6.67", "Solve.", "حل کریں۔", ["8*(2*R(20,3))/(R(20,3) + 4) == 10"])],
      r"$x \approx 6.67$")
 
-word("ex5.5", 8, r"Fahad runs 600 m at a certain pace, and then doubling his pace, does another 600 m. If he took $2\frac{1}{2}$ minutes to cover the distance "
+word("ex5.5", 8, r"Fahad runs 600 m at a certain pace, and then doubling his pace, does another 600 m. If he took $2\frac{1}{2}$ [minutes] to cover the distance "
      "1200 m, find the pace he started at, in metres per seconds.",
      [("Let the first pace be $x$ m/s: $t_1 = \\frac{600}{x}$, $t_2 = \\frac{600}{2x} = \\frac{300}{x}$; total time $= 2.5$ min $= 150$ s.",
        "فرض کریں پہلی رفتار $x$ میٹر فی سیکنڈ ہے؛ کل وقت 150 سیکنڈ۔")],

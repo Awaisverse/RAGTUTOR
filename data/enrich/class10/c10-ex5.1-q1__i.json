@@ -1,0 +1,49 @@
+{
+ "item": "c10-ex5.1-q1",
+ "label": "i",
+ "answer_ref": "$\\frac{3}{2 b}$",
+ "steps": [
+  {
+   "math": "\\frac{3a^2-6ab}{2a^2b-4ab^2}",
+   "en": "Write down the given rational expression that needs to be reduced to its lowest form.",
+   "ur": "دی گئی ناطق عبارت لکھیں جسے مختصر ترین شکل میں تبدیل کرنا ہے۔"
+  },
+  {
+   "math": "= \\frac{3a(a - 2b)}{2a^2b - 4ab^2}",
+   "en": "First, factorize the numerator by taking $3a$ as the common factor from both terms.",
+   "ur": "سب سے پہلے، شمار کنندہ کی دونوں رقموں میں سے $3a$ مشترک لے کر اس کی تجزی کریں۔",
+   "check": [
+    "(3*a*(a - 2*b))/(2*a**2*b - 4*a*b**2) == (3*a**2 - 6*a*b)/(2*a**2*b - 4*a*b**2)"
+   ]
+  },
+  {
+   "math": "= \\frac{3a(a - 2b)}{2ab(a - 2b)}",
+   "en": "Next, factorize the denominator by taking $2ab$ as the common factor from both terms.",
+   "ur": "اس کے بعد، مخرج کی دونوں رقموں میں سے $2ab$ مشترک لے کر اس کی تجزی کریں۔",
+   "check": [
+    "(3*a*(a - 2*b))/(2*a*b*(a - 2*b)) == (3*a**2 - 6*a*b)/(2*a**2*b - 4*a*b**2)"
+   ]
+  },
+  {
+   "math": "= \\frac{3a}{2ab}",
+   "en": "Cancel out the common binomial factor $(a - 2b)$ from the numerator and the denominator.",
+   "ur": "شمار کنندہ اور مخرج میں سے مشترک جزو ضربی $(a - 2b)$ کو کاٹ دیں۔",
+   "check": [
+    "(3*a)/(2*a*b) == (3*a**2 - 6*a*b)/(2*a**2*b - 4*a*b**2)"
+   ]
+  },
+  {
+   "math": "= \\frac{3}{2 b}",
+   "en": "Finally, cancel the common variable $a$ from the numerator and the denominator to get the lowest form.",
+   "ur": "آخر میں، مختصر ترین شکل حاصل کرنے کے لیے شمار کنندہ اور مخرج میں سے مشترک متغیر $a$ کو کاٹ دیں۔",
+   "check": [
+    "3/(2*b) == (3*a**2 - 6*a*b)/(2*a**2*b - 4*a*b**2)",
+    "(3*a*(a - 2*b))/(2*a*b*(a - 2*b)) == (3*a**2 - 6*a*b)/(2*a**2*b - 4*a*b**2)",
+    "(3/(2*b)) == (3*a**2 - 6*a*b)/(2*a**2*b - 4*a*b**2)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

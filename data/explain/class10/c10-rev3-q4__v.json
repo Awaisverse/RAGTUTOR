@@ -1,0 +1,45 @@
+{
+ "item": "c10-rev3-q4",
+ "label": "v",
+ "answer_ref": "$\\begin{bmatrix} 41 & 12 \\\\ 33 & 10 \\end{bmatrix}$",
+ "math": [
+  "A = \\begin{bmatrix} 7 & 3 \\\\ 2 & 1 \\end{bmatrix}, \\quad B = \\begin{bmatrix} 5 & 3 \\\\ 2 & 4 \\end{bmatrix}",
+  "AB = \\begin{bmatrix} 7 & 3 \\\\ 2 & 1 \\end{bmatrix}\\begin{bmatrix} 5 & 3 \\\\ 2 & 4 \\end{bmatrix}",
+  "AB = \\begin{bmatrix} (7)(5) + (3)(2) & (7)(3) + (3)(4) \\\\ (2)(5) + (1)(2) & (2)(3) + (1)(4) \\end{bmatrix}",
+  "AB = \\begin{bmatrix} 35 + 6 & 21 + 12 \\\\ 10 + 2 & 6 + 4 \\end{bmatrix}",
+  "AB = \\begin{bmatrix} 41 & 33 \\\\ 12 & 10 \\end{bmatrix}",
+  "(AB)^t = \\begin{bmatrix} 41 & 33 \\\\ 12 & 10 \\end{bmatrix}^t = \\begin{bmatrix} 41 & 12 \\\\ 33 & 10 \\end{bmatrix}"
+ ],
+ "why": [
+  {
+   "en": "In mathematics, brackets tell us what to solve first. Here, the expression $(AB)^t$ shows that we must first work with the given matrices $A$ and $B$ inside the bracket before applying the transpose.",
+   "ur": "ریاضی کے اصول کے مطابق بریکٹ کے اندر والے حصے کو پہلے حل کیا جاتا ہے۔ یہاں $(AB)^t$ کا مطلب ہے کہ ٹرانسپوز لینے سے پہلے ہمیں دیے گئے کالب $A$ اور $B$ پر عمل کرنا ہوگا۔"
+  },
+  {
+   "en": "Following the order of operations, we start by finding the matrix product $AB$ inside the bracket. Since both $A$ and $B$ are $2 \\times 2$ matrices, the number of columns in $A$ equals the number of rows in $B$, so multiplication is possible.",
+   "ur": "بریکٹ کو پہلے حل کرنے کے اصول کے تحت ہم سب سے پہلے کالبوں کا حاصلِ ضرب $AB$ معلوم کریں گے۔ چونکہ $A$ کے کالموں کی تعداد $B$ کی قطاروں کے برابر ہے، اس لیے ان کی ضرب ممکن ہے۔"
+  },
+  {
+   "en": "We apply the row-by-column rule of matrix multiplication. By matching the entries of each row of $A$ with each column of $B$, we set up the exact products needed for all four positions of the new matrix.",
+   "ur": "یہاں ہم کالبوں کی ضرب کا 'قطار در کالم' (row-by-column) اصول استعمال کر رہے ہیں۔ کالب $A$ کی ہر قطار کے ارکان کو کالب $B$ کے ہر کالم کے ارکان سے ترتیب وار ضرب دے کر نئے کالب کی بنیاد رکھی گئی ہے۔"
+  },
+  {
+   "en": "By simplifying the individual multiplications first, we avoid calculation mistakes and clearly see the numbers that need to be added together for each entry.",
+   "ur": "پہلے ضرب کے عمل کو مکمل کرنے سے غلطی کا امکان کم ہو جاتا ہے اور ہمیں واضح طور پر وہ اعداد مل جاتے ہیں جنہیں ہر رکن کے لیے آپس میں جمع کرنا ہے۔"
+  },
+  {
+   "en": "Adding the pairs of numbers completes the bracketed part of our question, giving us the single product matrix $AB = \\begin{bmatrix} 41 & 33 \\\\ 12 & 10 \\end{bmatrix}$. Now we are ready to apply the outer operation.",
+   "ur": "ان اعداد کو جمع کرنے سے بریکٹ کے اندر والا حصہ مکمل ہو جاتا ہے اور ہمیں حاصلِ ضرب کالب $AB = \\begin{bmatrix} 41 & 33 \\\\ 12 & 10 \\end{bmatrix}$ مل جاتا ہے۔ اب ہم باہر والا عمل (ٹرانسپوز) کرنے کے لیے تیار ہیں۔"
+  },
+  {
+   "en": "By the definition of transpose, we turn the first row $\\begin{bmatrix} 41 & 33 \\end{bmatrix}$ into the first column and the second row $\\begin{bmatrix} 12 & 10 \\end{bmatrix}$ into the second column. This completes the required operation $(AB)^t$.",
+   "ur": "ٹرانسپوز کی تعریف کے مطابق ہم پہلی قطار $\\begin{bmatrix} 41 & 33 \\end{bmatrix}$ کو پہلے کالم میں اور دوسری قطار $\\begin{bmatrix} 12 & 10 \\end{bmatrix}$ کو دوسرے کالم میں بدل دیتے ہیں۔ اس طرح ہمارا مطلوبہ عمل $(AB)^t$ مکمل ہو جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final matrix $\\begin{bmatrix} 41 & 12 \\\\ 33 & 10 \\end{bmatrix}$ is the transpose of the product $AB$, meaning its rows are the exact columns of $AB$. You can also verify this answer using the transpose law $(AB)^t = B^t A^t$ by taking the transposes of $B$ and $A$ first and then multiplying them in reverse order.",
+  "ur": "حتمی کالب $\\begin{bmatrix} 41 & 12 \\\\ 33 & 10 \\end{bmatrix}$ دراصل حاصلِ ضرب $AB$ کا ٹرانسپوز ہے، یعنی اس کی قطاریں کالب $AB$ کے کالم ہیں۔ آپ اس جواب کی تصدیق ٹرانسپوز کے قانون $(AB)^t = B^t A^t$ کے ذریعے بھی کر سکتے ہیں، جس میں پہلے $B$ اور $A$ کا ٹرانسپوز لے کر انہیں الٹ ترتیب میں ضرب دی جاتی ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

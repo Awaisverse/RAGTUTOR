@@ -1,0 +1,40 @@
+{
+ "item": "c10-ex3.2-q7",
+ "label": "",
+ "answer_ref": "$L^t = L$, so $L$ is symmetric",
+ "math": [
+  "L = \\begin{bmatrix} 2 & 3 & 4 \\\\ 3 & -2 & 5 \\\\ 4 & 5 & 0 \\end{bmatrix}",
+  "L^t = L",
+  "L^t = \\begin{bmatrix} 2 & 3 & 4 \\\\ 3 & -2 & 5 \\\\ 4 & 5 & 0 \\end{bmatrix}^t",
+  "L^t = \\begin{bmatrix} 2 & 3 & 4 \\\\ 3 & -2 & 5 \\\\ 4 & 5 & 0 \\end{bmatrix}",
+  "L^t = L"
+ ],
+ "why": [
+  {
+   "en": "We always begin by clearly stating the given information so our work is organized and easy to follow. Having the matrix $L$ written in front of us allows us to see its rows and columns clearly before we apply any operations.",
+   "ur": "ہم ہمیشہ دی گئی معلومات کو واضح طور پر لکھ کر شروعات کرتے ہیں تاکہ ہمارا کام منظم اور سمجھنے میں آسان رہے۔ کالب $L$ کو اپنے سامنے لکھنے سے ہمیں کوئی بھی عمل کرنے سے پہلے اس کی قطاریں اور کالم صاف نظر آتے ہیں۔"
+  },
+  {
+   "en": "Next, we recall the rule for a symmetric matrix from our textbook definition. This step tells us our exact goal: we need to find the transpose $L^t$ and check if it matches the original matrix $L$.",
+   "ur": "اس کے بعد، ہم اپنی کتاب کی تعریف کے مطابق سڈول کالب (symmetric matrix) کا اصول یاد کرتے ہیں۔ یہ مرحلہ ہمیں ہمارا اصل ہدف بتاتا ہے: ہمیں ٹرانسپوز $L^t$ معلوم کرنا ہے اور دیکھنا ہے کہ کیا یہ اصل کالب $L$ کے برابر ہے۔"
+  },
+  {
+   "en": "To test the definition, we apply the transpose operation $(t)$ to both sides of our equation. Writing the $t$ symbol on the matrix shows the examiner that we are about to interchange its rows and columns.",
+   "ur": "تعریف کو جانچنے کے لیے، ہم اپنی مساوات کے دونوں اطراف پر ٹرانسپوز کا عمل $(t)$ لاگو کرتے ہیں۔ کالب پر $t$ کی علامت لکھنا ممتحن کو بتاتا ہے کہ اب ہم اس کی قطاروں اور کالموں کو آپس میں بدلنے والے ہیں۔"
+  },
+  {
+   "en": "Here we apply the definition of transpose by turning each row into its corresponding column. For instance, the first row $[2, 3, 4]$ becomes the first column, giving us the actual elements of the transposed matrix $L^t$.",
+   "ur": "یہاں ہم ہر قطار کو اس کے متعلقہ کالم میں بدل کر ٹرانسپوز کی تعریف پر عمل کرتے ہیں۔ مثال کے طور پر، پہلی قطار $[2, 3, 4]$ پہلا کالم بن جاتی ہے، جس سے ہمیں ٹرانسپوز کالب $L^t$ کے اصل ارکان مل جاتے ہیں۔"
+  },
+  {
+   "en": "Now we compare our new matrix $L^t$ with the original matrix $L$ from Step 1 element by element. Since every single entry is in the exact same position, we can replace the matrix on the right with $L$, completing our proof.",
+   "ur": "اب ہم اپنے نئے کالب $L^t$ کا پہلے مرحلے کے اصل کالب $L$ کے ساتھ رکن بہ رکن موازنہ کرتے ہیں۔ چونکہ ہر ایک عدد بالکل اسی جگہ پر ہے، اس لیے ہم دائیں طرف والے کالب کی جگہ $L$ لکھ سکتے ہیں، جس سے ہمارا ثبوت مکمل ہو جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This final result proves that the matrix $L$ is indeed a symmetric matrix because swapping its rows and columns did not change it at all ($L^t = L$). You can quickly check this visually by noticing that the numbers across the main diagonal ($2, -2, 0$) are mirror images of each other, like $3$ and $3$, $4$ and $4$, and $5$ and $5$.",
+  "ur": "یہ حتمی نتیجہ ثابت کرتا ہے کہ کالب $L$ واقعی ایک سڈول کالب (symmetric matrix) ہے کیونکہ اس کی قطاروں اور کالموں کو آپس میں بدلنے سے اس میں کوئی تبدیلی نہیں آئی ($L^t = L$)۔ آپ اسے نظر سے بھی فوراً چیک کر سکتے ہیں کہ وتر کے ارکان ($2, -2, 0$) کے دونوں طرف کے اعداد ایک دوسرے کا عکس ہیں، جیسے $3$ اور $3$، $4$ اور $4$، اور $5$ اور $5$۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

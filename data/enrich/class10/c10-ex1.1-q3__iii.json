@@ -1,0 +1,64 @@
+{
+ "item": "c10-ex1.1-q3",
+ "label": "iii",
+ "answer_ref": "$x = 2,\\ y = -1$",
+ "steps": [
+  {
+   "math": "(2+i)x + (1-2i)y = 3 + 4i",
+   "en": "Write down the given complex equation to find the real values of $x$ and $y$.",
+   "ur": "$x$ اور $y$ کی حقیقی قیمتیں معلوم کرنے کے لیے دی گئی مختلط مساوات لکھیں۔"
+  },
+  {
+   "math": "2x + xi + y - 2yi = 3 + 4i \\;\\Rightarrow\\; (2x + y) + (x - 2y)i = 3 + 4i",
+   "en": "Expand the brackets on the left-hand side and group the real terms (without $i$) and imaginary terms (with $i$) separately.",
+   "ur": "بائیں جانب بریکٹوں کو کھولیں اور حقیقی رقوم ($i$ کے بغیر) اور خیالی رقوم ($i$ والی) کو الگ الگ اکٹھا کریں۔",
+   "check": [
+    "expand((2+I)*x + (1-2*I)*y) == expand(2*x + x*I + y - 2*y*I)",
+    "expand(2*x + x*I + y - 2*y*I) == expand((2*x + y) + (x - 2*y)*I)"
+   ]
+  },
+  {
+   "math": "2x + y = 3 \\quad\\text{...(i)} \\qquad\\text{and}\\qquad x - 2y = 4 \\quad\\text{...(ii)}",
+   "en": "Two complex numbers are equal if and only if their real parts are equal and their imaginary parts are equal. Equating both parts gives two linear equations.",
+   "ur": "دو مختلط اعداد تب ہی برابر ہوتے ہیں جب ان کے حقیقی حصے آپس میں برابر ہوں اور خیالی حصے آپس میں برابر ہوں۔ دونوں حصوں کا موازنہ کرنے سے دو یک درجی مساواتیں حاصل ہوتی ہیں۔"
+  },
+  {
+   "math": "y = 3 - 2x \\quad\\text{...(iii)}",
+   "en": "From equation (i), express $y$ in terms of $x$.",
+   "ur": "مساوات (i) سے $y$ کی قیمت $x$ کی شکل میں نکالیں۔"
+  },
+  {
+   "math": "x - 2(3 - 2x) = 4 \\;\\Rightarrow\\; x - 6 + 4x = 4 \\;\\Rightarrow\\; 5x = 10 \\;\\Rightarrow\\; x = 2",
+   "en": "Substitute $y = 3 - 2x$ into equation (ii) and solve for $x$.",
+   "ur": "$y = 3 - 2x$ کو مساوات (ii) میں درج کریں اور $x$ کی قیمت معلوم کریں۔",
+   "check": [
+    "expand(x - 2*(3 - 2*x)) == 5*x - 6",
+    "10 / 5 == 2",
+    "2 - 2*(3 - 2*2) == 4"
+   ]
+  },
+  {
+   "math": "y = 3 - 2(2) = 3 - 4 = -1",
+   "en": "Now, put $x = 2$ into equation (iii) to find the value of $y$.",
+   "ur": "اب $y$ کی قیمت معلوم کرنے کے لیے مساوات (iii) میں $x = 2$ درج کریں۔",
+   "check": [
+    "3 - 2*2 == -1"
+   ]
+  },
+  {
+   "math": "x = 2,\\quad y = -1",
+   "en": "Thus, the required values of $x$ and $y$ are $2$ and $-1$ respectively.",
+   "ur": "پس $x$ اور $y$ کی مطلوبہ قیمتیں بالترتیب $2$ اور $-1$ ہیں۔",
+   "check": [
+    "(2+I)*2 + (1-2*I)*(-1) == 3 + 4*I",
+    "expand((2+I)*(x) + (1-2*I)*(y)) == expand((2*x + y) + (x - 2*y)*I)",
+    "2*(2) + (-1) - 3 == 0",
+    "(2) - 2*(-1) - 4 == 0",
+    "(2+I)*(2) + (1-2*I)*(-1) == 3+4*I"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

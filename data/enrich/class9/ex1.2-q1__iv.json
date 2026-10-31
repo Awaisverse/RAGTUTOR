@@ -1,0 +1,71 @@
+{
+ "item": "ex1.2-q1",
+ "label": "iv",
+ "answer_ref": "$17-12\\sqrt{2}$",
+ "steps": [
+  {
+   "math": "\\frac{6-4\\sqrt{2}}{6+4\\sqrt{2}}",
+   "en": "Write the given expression. To rationalize the denominator, we need to multiply both the numerator and the denominator by the conjugate of the denominator.",
+   "ur": "دی گئی عبارت لکھیں۔ مخرج (نسب نما) کو ناطق بنانے کے لیے ہمیں شمار کنندہ اور نسب نما دونوں کو نسب نما کے مزدوج سے ضرب دینا ہوگی۔"
+  },
+  {
+   "math": "= \\frac{6-4\\sqrt{2}}{6+4\\sqrt{2}} \\times \\frac{6-4\\sqrt{2}}{6-4\\sqrt{2}}",
+   "en": "The conjugate of $6+4\\sqrt{2}$ is $6-4\\sqrt{2}$. Multiply the numerator and the denominator by $6-4\\sqrt{2}$.",
+   "ur": "مخرج $6+4\\sqrt{2}$ کا مزدوج $6-4\\sqrt{2}$ ہے۔ شمار کنندہ اور نسب نما کو $6-4\\sqrt{2}$ سے ضرب دیں۔",
+   "check": [
+    "(6-4*sqrt(2))/(6+4*sqrt(2)) == (6-4*sqrt(2))/(6+4*sqrt(2)) * (6-4*sqrt(2))/(6-4*sqrt(2))"
+   ]
+  },
+  {
+   "math": "= \\frac{(6-4\\sqrt{2})^2}{(6)^2 - (4\\sqrt{2})^2}",
+   "en": "Combine the numerators as a whole square, and apply the difference of squares formula $(a+b)(a-b) = a^2 - b^2$ in the denominator.",
+   "ur": "شمار کنندہ کو کامل مربع کے طور پر لکھیں، اور نسب نما میں کلیہ $(a+b)(a-b) = a^2 - b^2$ استعمال کریں۔",
+   "check": [
+    "((6-4*sqrt(2))*(6-4*sqrt(2)))/((6+4*sqrt(2))*(6-4*sqrt(2))) == (6-4*sqrt(2))**2 / (6**2 - (4*sqrt(2))**2)"
+   ]
+  },
+  {
+   "math": "= \\frac{(6)^2 - 2(6)(4\\sqrt{2}) + (4\\sqrt{2})^2}{36 - 16(2)}",
+   "en": "Expand the numerator using the formula $(a-b)^2 = a^2 - 2ab + b^2$, and evaluate the squares in the denominator.",
+   "ur": "شمار کنندہ کو کلیہ $(a-b)^2 = a^2 - 2ab + b^2$ کی مدد سے کھولیں، اور نسب نما میں مربعات کو حل کریں۔",
+   "check": [
+    "(6-4*sqrt(2))**2 == 6**2 - 2*6*4*sqrt(2) + (4*sqrt(2))**2",
+    "6**2 - (4*sqrt(2))**2 == 36 - 16*2"
+   ]
+  },
+  {
+   "math": "= \\frac{36 - 48\\sqrt{2} + 32}{36 - 32}",
+   "en": "Simplify the terms in both the numerator and the denominator.",
+   "ur": "شمار کنندہ اور نسب نما دونوں میں ارکان کو سادہ کریں۔",
+   "check": [
+    "6**2 - 2*6*4*sqrt(2) + (4*sqrt(2))**2 == 36 - 48*sqrt(2) + 32",
+    "36 - 16*2 == 36 - 32"
+   ]
+  },
+  {
+   "math": "= \\frac{68 - 48\\sqrt{2}}{4}",
+   "en": "Add the constant terms in the numerator ($36+32=68$) and subtract the terms in the denominator ($36-32=4$).",
+   "ur": "شمار کنندہ میں مستقل ارکان کو جمع کریں ($36+32=68$) اور نسب نما میں تفریق کریں ($36-32=4$)۔",
+   "check": [
+    "36 - 48*sqrt(2) + 32 == 68 - 48*sqrt(2)",
+    "36 - 32 == 4"
+   ]
+  },
+  {
+   "math": "= \\frac{4(17 - 12\\sqrt{2})}{4} = 17 - 12\\sqrt{2}",
+   "en": "Take $4$ common from the numerator and cancel it with the denominator to get the final answer.",
+   "ur": "شمار کنندہ سے $4$ مشترک لیں اور حتمی جواب حاصل کرنے کے لیے اسے نسب نما کے ساتھ مختصر کر دیں۔",
+   "check": [
+    "(68 - 48*sqrt(2))/4 == 4*(17 - 12*sqrt(2))/4",
+    "4*(17 - 12*sqrt(2))/4 == 17 - 12*sqrt(2)",
+    "(6-4*sqrt(2))/(6+4*sqrt(2)) == (6-4*sqrt(2))**2/(6**2 - (4*sqrt(2))**2)",
+    "(6-4*sqrt(2))**2 == 68 - 48*sqrt(2)",
+    "6**2 - (4*sqrt(2))**2 == 4",
+    "(68-48*sqrt(2))/4 == 17 - 12*sqrt(2)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

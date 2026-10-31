@@ -1,0 +1,52 @@
+{
+ "item": "c10-ex6.2-q3",
+ "label": "i",
+ "answer_ref": "$x = 5,\\ y = 3$",
+ "steps": [
+  {
+   "math": "(x\\underline{i}+y\\underline{j})+(2\\underline{i}+3\\underline{j})=7\\underline{i}+6\\underline{j}",
+   "en": "Write the given vector equation to find the unknown values of $x$ and $y$.",
+   "ur": "$x$ اور $y$ کی نامعلوم قیمتیں معلوم کرنے کے لیے دی گئی سمتیہ مساوات لکھیں۔"
+  },
+  {
+   "math": "(x+2)\\underline{i} + (y+3)\\underline{j} = 7\\underline{i} + 6\\underline{j}",
+   "en": "By the rule of vector addition, group the $\\underline{i}$ components together and the $\\underline{j}$ components together on the left-hand side.",
+   "ur": "سمتیوں کی جمع کے اصول کے مطابق، بائیں جانب $\\underline{i}$ والے اجزاء اور $\\underline{j}$ والے اجزاء کو الگ الگ اکٹھا کریں۔"
+  },
+  {
+   "math": "x + 2 = 7,\\quad y + 3 = 6",
+   "en": "Since two vectors are equal if and only if their corresponding components are equal, compare the coefficients of $\\underline{i}$ and $\\underline{j}$ on both sides.",
+   "ur": "چونکہ دو سمتیے صرف اسی صورت میں برابر ہوتے ہیں جب ان کے متناظرہ اجزاء برابر ہوں، اس لیے دونوں طرف $\\underline{i}$ اور $\\underline{j}$ کے عددی سروں کا موازنہ کریں۔"
+  },
+  {
+   "math": "x = 7 - 2 = 5",
+   "en": "Solve the first equation for $x$ by subtracting $2$ from both sides.",
+   "ur": "دونوں طرف سے $2$ تفریق کر کے پہلی مساوات کو $x$ کے لیے حل کریں۔",
+   "check": [
+    "7 - 2 == 5"
+   ]
+  },
+  {
+   "math": "y = 6 - 3 = 3",
+   "en": "Solve the second equation for $y$ by subtracting $3$ from both sides.",
+   "ur": "دونوں طرف سے $3$ تفریق کر کے دوسری مساوات کو $y$ کے لیے حل کریں۔",
+   "check": [
+    "6 - 3 == 3"
+   ]
+  },
+  {
+   "math": "x = 5,\\quad y = 3",
+   "en": "Hence, the required values of $x$ and $y$ are $5$ and $3$ respectively.",
+   "ur": "پس، $x$ اور $y$ کی مطلوبہ قیمتیں بالترتیب $5$ اور $3$ ہیں۔",
+   "check": [
+    "(x + 2).subs({x: 5, y: 3}) == 7",
+    "(y + 3).subs({x: 5, y: 3}) == 6",
+    "(x + 2).subs({x: (5), y: (3)}) == (7)",
+    "(y + 3).subs({x: (5), y: (3)}) == (6)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

@@ -1,0 +1,58 @@
+{
+ "item": "c10-ex11.2-q4",
+ "label": "",
+ "answer_ref": "Variance = 3.55, SD = 1.88",
+ "steps": [
+  {
+   "math": "x = 52, 55, 50, 53, 54, 56, 52, \\quad n = 7",
+   "en": "First, write down the given data values $x$ and the total number of workers $n$.",
+   "ur": "سب سے پہلے، دی گئی مدات $x$ اور کارکنوں کی کل تعداد $n$ لکھیں۔"
+  },
+  {
+   "math": "\\bar{x} = \\frac{\\sum x}{n} = \\frac{52 + 55 + 50 + 53 + 54 + 56 + 52}{7} = \\frac{372}{7} \\approx 53.14",
+   "en": "Find the arithmetic mean $\\bar{x}$ by dividing the sum of all values by the total number of values $n$.",
+   "ur": "تمام اقدار کے مجموعے کو کل تعداد $n$ پر تقسیم کر کے حسابی اوسط $\\bar{x}$ معلوم کریں۔",
+   "check": [
+    "52 + 55 + 50 + 53 + 54 + 56 + 52 == 372",
+    "Abs(R(372, 7) - 53.14) <= 0.005"
+   ]
+  },
+  {
+   "math": "\\sum (x - \\bar{x})^2 = (52 - 53.14)^2 + (55 - 53.14)^2 + (50 - 53.14)^2 + (53 - 53.14)^2 + (54 - 53.14)^2 + (56 - 53.14)^2 + (52 - 53.14)^2",
+   "en": "Set up the sum of the squared deviations of each value $x$ from the mean $\\bar{x}$.",
+   "ur": "اوسط $\\bar{x}$ سے ہر قدر $x$ کے انحراف کے مربعوں کا مجموعہ ترتیب دیں۔"
+  },
+  {
+   "math": "\\sum (x - \\bar{x})^2 = 1.30 + 3.46 + 9.86 + 0.02 + 0.74 + 8.18 + 1.30 \\approx 24.8571",
+   "en": "Calculate the squared deviations and add them together to find $\\sum(x - \\bar{x})^2$.",
+   "ur": "انحرافات کے مربعے معلوم کریں اور $\\sum(x - \\bar{x})^2$ حاصل کرنے کے لیے انہیں جمع کریں۔",
+   "check": [
+    "Abs(((52 - R(372, 7))**2 + (55 - R(372, 7))**2 + (50 - R(372, 7))**2 + (53 - R(372, 7))**2 + (54 - R(372, 7))**2 + (56 - R(372, 7))**2 + (52 - R(372, 7))**2) - 24.8571) <= 0.001"
+   ]
+  },
+  {
+   "math": "\\text{Variance } (\\sigma^2) = \\frac{\\sum(x - \\bar{x})^2}{n} = \\frac{24.8571}{7} \\approx 3.55",
+   "en": "Apply the variance formula for ungrouped data by dividing the sum of squared deviations by $n$.",
+   "ur": "غیر گروہی مواد کے لیے تغیر (Variance) کا فارمولا استعمال کرتے ہوئے مربع انحرافات کے مجموعے کو $n$ پر تقسیم کریں۔",
+   "check": [
+    "Abs((24.8571 / 7) - 3.55) <= 0.005",
+    "Abs(R(174, 49) - 3.55) <= 0.005"
+   ]
+  },
+  {
+   "math": "\\text{S.D. } (\\sigma) = \\sqrt{\\sigma^2} = \\sqrt{3.55} \\approx 1.88",
+   "en": "Take the positive square root of the variance to find the standard deviation ($\\sigma$).",
+   "ur": "معیاری انحراف ($\\sigma$) معلوم کرنے کے لیے تغیر کا مثبت جذر لیں۔",
+   "check": [
+    "Abs(sqrt(3.55) - 1.88) <= 0.005",
+    "Abs(sqrt(R(174, 49)) - 1.88) <= 0.005",
+    "(52) + (55) + (50) + (53) + (54) + (56) + (52) == (372)",
+    "Abs(((((52) - (372/7))**2 + ((55) - (372/7))**2 + ((50) - (372/7))**2 + ((53) - (372/7))**2 + ((54) - (372/7))**2 + ((56) - (372/7))**2 + ((52) - (372/7))**2)/7) - 3.55) <= 0.0050000010000000004",
+    "Abs((sqrt((174/49))) - 1.88) <= 0.0050000010000000004"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

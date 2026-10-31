@@ -1,0 +1,81 @@
+{
+ "item": "ex1.2-q3",
+ "label": "v",
+ "answer_ref": "$1154$",
+ "steps": [
+  {
+   "math": "x = 3 + \\sqrt{8}",
+   "en": "Write down the given value of $x$. We need to find the value of $x^4 + \\frac{1}{x^4}$.",
+   "ur": "$x$ کی دی گئی قیمت لکھیں۔ ہمیں $x^4 + \\frac{1}{x^4}$ کی قیمت معلوم کرنی ہے۔"
+  },
+  {
+   "math": "\\frac{1}{x} = \\frac{1}{3+\\sqrt{8}} \\times \\frac{3-\\sqrt{8}}{3-\\sqrt{8}}",
+   "en": "First, find $\\frac{1}{x}$ by rationalizing the denominator. Multiply both the numerator and denominator by the conjugate $3-\\sqrt{8}$.",
+   "ur": "سب سے پہلے، مخرج کو ناطق بنا کر $\\frac{1}{x}$ معلوم کریں۔ شمار کنندہ اور مخرج دونوں کو مزدوج $3-\\sqrt{8}$ سے ضرب دیں۔",
+   "check": [
+    "1/(3+sqrt(8)) == (3-sqrt(8))/((3+sqrt(8))*(3-sqrt(8)))"
+   ]
+  },
+  {
+   "math": "\\frac{1}{x} = \\frac{3-\\sqrt{8}}{(3)^2 - (\\sqrt{8})^2} = \\frac{3-\\sqrt{8}}{9-8} = 3-\\sqrt{8}",
+   "en": "Apply the difference of squares formula $(a+b)(a-b) = a^2 - b^2$ in the denominator and simplify.",
+   "ur": "مخرج میں دو مربعوں کے فرق کا فارمولا $(a+b)(a-b) = a^2 - b^2$ لگائیں اور مختصر کریں۔",
+   "check": [
+    "3**2 - sqrt(8)**2 == 9 - 8",
+    "(3-sqrt(8))/(9-8) == 3 - sqrt(8)"
+   ]
+  },
+  {
+   "math": "x + \\frac{1}{x} = (3+\\sqrt{8}) + (3-\\sqrt{8}) = 6",
+   "en": "Add $x$ and $\\frac{1}{x}$ together. The radical terms $+\\sqrt{8}$ and $-\\sqrt{8}$ cancel each other out.",
+   "ur": "$x$ اور $\\frac{1}{x}$ کو آپس میں جمع کریں۔ جزر والی رقمیں $+\\sqrt{8}$ اور $-\\sqrt{8}$ ایک دوسرے سے کٹ جاتی ہیں۔",
+   "check": [
+    "(3+sqrt(8)) + (3-sqrt(8)) == 6"
+   ]
+  },
+  {
+   "math": "\\left(x + \\frac{1}{x}\\right)^2 = (6)^2 \\;\\Rightarrow\\; x^2 + 2 + \\frac{1}{x^2} = 36",
+   "en": "Square both sides and expand the left side using the identity $(a+b)^2 = a^2 + 2ab + b^2$.",
+   "ur": "دونوں اطراف کا مربع لیں اور بائیں طرف فارمولا $(a+b)^2 = a^2 + 2ab + b^2$ استعمال کرتے ہوئے پھیلائیں۔",
+   "check": [
+    "6**2 == 36",
+    "(3+sqrt(8))**2 + 2 + (3-sqrt(8))**2 == 36"
+   ]
+  },
+  {
+   "math": "x^2 + \\frac{1}{x^2} = 36 - 2 = 34",
+   "en": "Subtract $2$ from both sides to get the value of $x^2 + \\frac{1}{x^2}$ (as found in part iii).",
+   "ur": "$x^2 + \\frac{1}{x^2}$ کی قیمت حاصل کرنے کے لیے دونوں اطراف سے $2$ تفریق کریں (جیسا کہ حصہ iii میں معلوم کیا گیا ہے)۔",
+   "check": [
+    "36 - 2 == 34",
+    "(3+sqrt(8))**2 + (3-sqrt(8))**2 == 34"
+   ]
+  },
+  {
+   "math": "\\left(x^2 + \\frac{1}{x^2}\\right)^2 = (34)^2 \\;\\Rightarrow\\; x^4 + 2 + \\frac{1}{x^4} = 1156",
+   "en": "Now, square both sides again to reach power $4$. Use the same algebraic identity $(a+b)^2 = a^2 + 2ab + b^2$.",
+   "ur": "اب، طاقت $4$ تک پہنچنے کے لیے دونوں اطراف کا دوبارہ مربع لیں۔ وہی الجبری فارمولا $(a+b)^2 = a^2 + 2ab + b^2$ استعمال کریں۔",
+   "check": [
+    "34**2 == 1156",
+    "(3+sqrt(8))**4 + 2 + (3-sqrt(8))**4 == 1156"
+   ]
+  },
+  {
+   "math": "x^4 + \\frac{1}{x^4} = 1156 - 2 = 1154",
+   "en": "Subtract $2$ from both sides to isolate $x^4 + \\frac{1}{x^4}$. Thus, the final answer is $1154$.",
+   "ur": "$x^4 + \\frac{1}{x^4}$ کو الگ کرنے کے لیے دونوں اطراف سے $2$ تفریق کریں۔ اس طرح حتمی جواب $1154$ ہے۔",
+   "check": [
+    "1156 - 2 == 1154",
+    "(3+sqrt(8))**4 + (3-sqrt(8))**4 == 1154",
+    "1/(3+sqrt(8)) == 3 - sqrt(8)",
+    "3**2 - sqrt(8)**2 == 1",
+    "(3+sqrt(8))**2 + (3-sqrt(8))**2 == 34",
+    "(3+sqrt(8))**4 + (3-sqrt(8))**4 == 34**2 - 2",
+    "34**2 - 2 == 1154"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

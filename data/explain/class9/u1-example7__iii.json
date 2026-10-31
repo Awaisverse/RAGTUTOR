@@ -1,0 +1,45 @@
+{
+ "item": "u1-example7",
+ "label": "iii",
+ "answer_ref": "$\\frac{1}{256}$",
+ "math": [
+  "(64)^{-4/3}",
+  "(64)^{-4/3} = \\frac{1}{(64)^{4/3}}",
+  "64 = 4 \\times 4 \\times 4 = 4^3",
+  "\\frac{1}{(64)^{4/3}} = \\frac{1}{(4^3)^{4/3}}",
+  "\\frac{1}{(4^3)^{4/3}} = \\frac{1}{4^{3 \\times \\frac{4}{3}}} = \\frac{1}{4^4}",
+  "\\frac{1}{4^4} = \\frac{1}{256}"
+ ],
+ "why": [
+  {
+   "en": "Let us first look at the problem carefully: we have a base $64$ raised to a negative fractional power, $-4/3$. Understanding this structure tells us that we need to use the laws of exponents to handle both the negative sign and the fraction.",
+   "ur": "سب سے پہلے ہم اپنے سوال کو غور سے دیکھتے ہیں: ہمارے پاس اساس $64$ ہے جس کی قوت نما ایک منفی کسر، یعنی $-4/3$ ہے۔ اس بناوٹ کو سمجھنے سے ہمیں پتا چلتا ہے کہ منفی علامت اور کسر دونوں کو حل کرنے کے لیے ہمیں قوت نما کے قوانین استعمال کرنے ہوں گے۔"
+  },
+  {
+   "en": "In mathematics, we cannot directly calculate with a negative power, so we apply the negative exponent law ($a^{-n} = \\frac{1}{a^n}$). Moving the base $64$ to the denominator changes the power to a positive $4/3$, making it ready for simplification.",
+   "ur": "ریاضی میں ہم منفی قوت نما کے ساتھ براہِ راست حساب نہیں کر سکتے، اس لیے ہم منفی قوت نما کا قانون ($a^{-n} = \\frac{1}{a^n}$) لاگو کرتے ہیں۔ اساس $64$ کو مخرج (بٹے کے نیچے) میں لے جانے سے قوت نما مثبت $4/3$ ہو جاتی ہے، جس سے اسے مختصر کرنا آسان ہو جاتا ہے۔"
+  },
+  {
+   "en": "Because the denominator of our fractional power is $3$, we look for a way to write $64$ as a power of $3$ so they can cancel out later. By factoring, we see that multiplying $4$ three times gives $64$, which means we can rewrite $64$ as $4^3$.",
+   "ur": "چونکہ ہماری کسری قوت نما کا مخرج $3$ ہے، اس لیے ہم $64$ کو $3$ کی طاقت میں لکھنے کا طریقہ ڈھونڈتے ہیں تاکہ بعد میں یہ آپس میں کٹ سکیں۔ تجزی کرنے سے ہمیں معلوم ہوتا ہے کہ $4$ کو تین بار ضرب دینے سے $64$ آتا ہے، جس کا مطلب ہے کہ ہم $64$ کو $4^3$ لکھ سکتے ہیں۔"
+  },
+  {
+   "en": "Now we replace $64$ with its exponential form $4^3$ inside the fraction. This brings the inner power $3$ and the outer power $4/3$ right next to each other so we can apply the next law of exponents.",
+   "ur": "اب ہم کسر کے اندر $64$ کی جگہ اس کی قوت نمائی شکل $4^3$ درج کرتے ہیں۔ اس سے اندرونی طاقت $3$ اور بیرونی طاقت $4/3$ بالکل آمنے سامنے آ جاتی ہیں، تاکہ ہم قوت نما کا اگلا قانون لگا سکیں۔"
+  },
+  {
+   "en": "When a power is raised to another power, the power of a power law ($(a^m)^n = a^{m \\times n}$) tells us to multiply the exponents together. Doing this allows the $3$ and the denominator $3$ to cancel out completely, leaving us with a simple whole-number power, $4^4$, in the denominator.",
+   "ur": "جب ایک قوت نما کے اوپر دوسری قوت نما ہو، تو قانون ($(a^m)^n = a^{m \\times n}$) ہمیں بتاتا ہے کہ ان طاقتوں کو آپس میں ضرب دیں۔ ایسا کرنے سے $3$ اور مخرج والا $3$ مکمل طور پر کٹ جاتے ہیں، اور ہمارے پاس بٹے کے نیچے ایک سادہ مکمل عدد والی طاقت $4^4$ بچ جاتی ہے۔"
+  },
+  {
+   "en": "To finish the simplification, we evaluate the remaining power by multiplying $4$ by itself four times. This gives $256$ in the denominator, leaving the expression in its simplest standard form with no exponents left.",
+   "ur": "مختصر کرنے کے عمل کو مکمل کرنے کے لیے، ہم $4$ کو اپنے آپ سے چار بار ضرب دے کر بقیہ طاقت کی قیمت معلوم کرتے ہیں۔ اس سے مخرج میں $256$ آ جاتا ہے، اور یوں یہ جملہ بغیر کسی قوت نما کے اپنی سادہ ترین معیاری شکل میں آ جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $\\frac{1}{256}$ means that the complicated exponential expression $(64)^{-4/3}$ represents a very small positive fraction, not a negative number. You can verify this by noticing that the negative sign in the power $-4/3$ simply inverted the base into a fraction, while the $4/3$ part took the cube root of $64$ (which is $4$) and raised it to the $4$th power to get $256$.",
+  "ur": "آخری جواب $\\frac{1}{256}$ کا مطلب یہ ہے کہ پیچیدہ قوت نمائی جملہ $(64)^{-4/3}$ دراصل ایک بہت چھوٹی مثبت کسر کو ظاہر کرتا ہے، نہ کہ کسی منفی عدد کو۔ آپ اس کی تصدیق ایسے کر سکتے ہیں کہ طاقت $-4/3$ کی منفی علامت نے بس اساس کو الٹا کر کسر بنا دیا، جبکہ $4/3$ والے حصے نے $64$ کا جزر المکعب لیا (جو کہ $4$ ہے) اور پھر اس کی طاقت $4$ لے کر اسے $256$ بنا دیا۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex3.1-q7",
+ "label": "",
+ "answer_ref": "$p = 4,\\ q = 2$",
+ "math": [
+  "\\begin{bmatrix}p+q&5\\\\11&p-2q\\end{bmatrix}=\\begin{bmatrix}6&5\\\\11&0\\end{bmatrix}",
+  "p + q = 6 \\quad \\text{--- (i)}, \\qquad p - 2q = 0 \\quad \\text{--- (ii)}",
+  "(p + q) - (p - 2q) = 6 - 0 \\implies 3q = 6",
+  "q = \\frac{6}{3} \\implies q = 2",
+  "p + 2 = 6 \\implies p = 6 - 2 \\implies p = 4",
+  "p = 4,\\quad q = 2"
+ ],
+ "why": [
+  {
+   "en": "We begin by clearly writing the given matrix equation to see where the unknowns $p$ and $q$ are located. Notice that the two matrices are equal and have the same order, which allows us to compare them element by element.",
+   "ur": "ہم سب سے پہلے دی گئی میٹرکس مساوات کو واضح طور پر لکھتے ہیں تاکہ دیکھا جا سکے کہ نامعلوم متغیرات $p$ اور $q$ کہاں موجود ہیں۔ غور کریں کہ دونوں میٹرکس برابر ہیں اور ان کا مرتبہ (order) بھی ایک جیسا ہے، جس سے ہم ان کے ارکان کا آپس میں موازنہ کر سکتے ہیں۔"
+  },
+  {
+   "en": "According to the definition of equal matrices, two matrices are equal only when their corresponding entries in the exact same positions are equal. By matching the top-left entries ($p+q$ and $6$) and the bottom-right entries ($p-2q$ and $0$), we turn the matrix problem into two simple linear equations.",
+   "ur": "مساوی میٹرکس کی تعریف کے مطابق، دو میٹرکس صرف تب برابر ہوتے ہیں جب ایک ہی جگہ پر موجود ان کے متناظرہ ارکان (corresponding entries) آپس میں برابر ہوں۔ اوپر بائیں طرف کے ارکان ($p+q$ اور $6$) اور نیچے دائیں طرف کے ارکان ($p-2q$ اور $0$) کو برابر رکھنے سے، ہم میٹرکس کے سوال کو دو سادہ یک درجی مساواتوں میں تبدیل کر لیتے ہیں۔"
+  },
+  {
+   "en": "Since the variable $p$ has the exact same coefficient in both equations, we use the elimination method by subtracting equation (ii) from equation (i) to cancel out $p$. Be careful with the minus sign: subtracting $-2q$ turns into $+2q$, which combines with $q$ to give us $3q = 6$, an equation with only one unknown.",
+   "ur": "چونکہ دونوں مساواتوں میں متغیر $p$ کا عددی سر (coefficient) بالکل ایک جیسا ہے، اس لیے ہم اخراج کا طریقہ (elimination method) استعمال کرتے ہوئے مساوات (i) میں سے مساوات (ii) کو تفریق کرتے ہیں تاکہ $p$ ختم ہو جائے۔ منفی کی علامت کا خاص خیال رکھیں: $-2q$ کو تفریق کرنے سے یہ $+2q$ بن جاتا ہے، جو $q$ کے ساتھ مل کر ہمیں $3q = 6$ دیتا ہے، جو کہ صرف ایک نامعلوم متغیر والی مساوات ہے۔"
+  },
+  {
+   "en": "To isolate $q$, we divide both sides of the equation by its coefficient, which is $3$. This gives us the exact numerical value $q = 2$, completing half of our goal.",
+   "ur": "متغیر $q$ کو اکیلا کرنے کے لیے، ہم مساوات کے دونوں اطراف کو اس کے عددی سر یعنی $3$ سے تقسیم کرتے ہیں۔ اس سے ہمیں $q = 2$ کی صورت میں اس کی اصل قیمت مل جاتی ہے، جس سے ہمارا آدھا کام مکمل ہو جاتا ہے۔"
+  },
+  {
+   "en": "Now that we know $q = 2$, we put this value back into our simpler first equation, $p + q = 6$, so that $p$ is the only unknown left. Subtracting $2$ from $6$ directly reveals the value of $p$ as $4$.",
+   "ur": "اب جب کہ ہمیں معلوم ہے کہ $q = 2$ ہے، ہم اس قیمت کو اپنی پہلی آسان مساوات $p + q = 6$ میں درج کرتے ہیں تاکہ صرف $p$ نامعلوم رہ جائے۔ $6$ میں سے $2$ کو تفریق کرنے سے ہمیں براہِ راست $p$ کی قیمت $4$ مل جاتی ہے۔"
+  },
+  {
+   "en": "Finally, we write both answers together clearly so the examiner can easily see the complete solution to the question.",
+   "ur": "آخر میں، ہم دونوں جوابات کو ایک ساتھ واضح طور پر لکھ دیتے ہیں تاکہ ممتحن کو سوال کا مکمل حل آسانی سے نظر آ سکے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This final answer means that the two given matrices are completely identical only when $p = 4$ and $q = 2$. You can easily check this by putting $p = 4$ and $q = 2$ back into the first matrix: the top-left entry becomes $4 + 2 = 6$ and the bottom-right entry becomes $4 - 2(2) = 0$, which perfectly matches the second matrix.",
+  "ur": "اس حتمی جواب کا مطلب یہ ہے کہ دیے گئے دونوں میٹرکس صرف اس صورت میں بالکل ایک جیسے (مساوی) ہوں گے جب $p = 4$ اور $q = 2$ ہو۔ آپ اس کی پڑتال باآسانی کر سکتے ہیں: پہلے میٹرکس میں $p = 4$ اور $q = 2$ درج کرنے سے اوپر بائیں طرف والا رکن $4 + 2 = 6$ بن جاتا ہے اور نیچے دائیں طرف والا رکن $4 - 2(2) = 0$ بن جاتا ہے، جو کہ دوسرے میٹرکس کے بالکل برابر ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

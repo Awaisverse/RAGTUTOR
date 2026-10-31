@@ -1,0 +1,61 @@
+{
+ "item": "c10-rev9-q3",
+ "label": "",
+ "answer_ref": "$a = 90^\\circ,\\ b = 90^\\circ,\\ c = 48^\\circ,\\ d = 18^\\circ$",
+ "steps": [
+  {
+   "math": "\\angle PSQ = 42^\\circ,\\quad \\angle QSR = 72^\\circ",
+   "en": "First, write down the given information. $O$ is the centre of the circle, $QS$ is the diameter, and we need to find the unknown angles $a$, $b$, $c$, and $d$.",
+   "ur": "سب سے پہلے، دی گئی معلومات لکھیں۔ $O$ دائرے کا مرکز ہے، $QS$ قطر ہے، اور ہمیں نامعلوم زاویے $a$، $b$، $c$ اور $d$ معلوم کرنے ہیں۔"
+  },
+  {
+   "math": "a = \\angle QPS = 90^\\circ,\\quad b = \\angle QRS = 90^\\circ",
+   "en": "Since $QS$ is a diameter passing through the centre $O$, it divides the circle into two semicircles. By theorem, the angle in a semicircle is always a right angle ($90^\\circ$).",
+   "ur": "چونکہ $QS$ مرکز $O$ سے گزرنے والا قطر ہے، یہ دائرے کو دو نصف دائروں میں تقسیم کرتا ہے۔ مسئلے کے مطابق، نصف دائرے میں بننے والا زاویہ ہمیشہ قائمہ ($90^\\circ$) ہوتا ہے۔",
+   "check": [
+    "90 == 90"
+   ]
+  },
+  {
+   "math": "a + c + \\angle PSQ = 180^\\circ",
+   "en": "Now, consider the triangle $PQS$. The sum of the interior angles of a triangle is always $180^\\circ$.",
+   "ur": "اب، مثلث $PQS$ پر غور کریں۔ کسی بھی مثلث کے اندرونی زاویوں کا مجموعہ ہمیشہ $180^\\circ$ ہوتا ہے۔"
+  },
+  {
+   "math": "90^\\circ + c + 42^\\circ = 180^\\circ \\implies c = 180^\\circ - 90^\\circ - 42^\\circ = 48^\\circ",
+   "en": "Substitute $a = 90^\\circ$ and $\\angle PSQ = 42^\\circ$ into the equation and solve for $c$.",
+   "ur": "مساوات میں $a = 90^\\circ$ اور $\\angle PSQ = 42^\\circ$ کی قیمتیں درج کریں اور $c$ کے لیے حل کریں۔",
+   "check": [
+    "180 - 90 - 42 == 48"
+   ]
+  },
+  {
+   "math": "b + d + \\angle QSR = 180^\\circ",
+   "en": "Similarly, consider the triangle $QRS$. The sum of its interior angles is also $180^\\circ$.",
+   "ur": "اسی طرح، مثلث $QRS$ پر غور کریں۔ اس کے اندرونی زاویوں کا مجموعہ بھی $180^\\circ$ ہے۔"
+  },
+  {
+   "math": "90^\\circ + d + 72^\\circ = 180^\\circ \\implies d = 180^\\circ - 90^\\circ - 72^\\circ = 18^\\circ",
+   "en": "Substitute $b = 90^\\circ$ and $\\angle QSR = 72^\\circ$ into the equation and solve for $d$.",
+   "ur": "مساوات میں $b = 90^\\circ$ اور $\\angle QSR = 72^\\circ$ کی قیمتیں درج کریں اور $d$ کے لیے حل کریں۔",
+   "check": [
+    "180 - 90 - 72 == 18"
+   ]
+  },
+  {
+   "math": "a = 90^\\circ,\\quad b = 90^\\circ,\\quad c = 48^\\circ,\\quad d = 18^\\circ",
+   "en": "Thus, we have found all the required angles.",
+   "ur": "اس طرح، ہم نے تمام مطلوبہ زاویے معلوم کر لیے ہیں۔",
+   "check": [
+    "90 == 90",
+    "48 == 48",
+    "18 == 18",
+    "180 - 90 - 42 == 48",
+    "180 - 90 - 72 == 18"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

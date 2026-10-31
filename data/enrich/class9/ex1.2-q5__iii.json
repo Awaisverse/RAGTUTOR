@@ -1,0 +1,65 @@
+{
+ "item": "ex1.2-q5",
+ "label": "iii",
+ "answer_ref": "$\\frac{6}{5}$",
+ "steps": [
+  {
+   "math": "\\sqrt{\\frac{(216)^{\\frac{2}{3}} \\times (25)^{\\frac{1}{2}}}{(0.04)^{-\\frac{3}{2}}}}",
+   "en": "Write down the given radical expression that needs to be simplified.",
+   "ur": "دی گئی جذری عبارت لکھیں جسے مختصر کرنا ہے۔"
+  },
+  {
+   "math": "216 = 6^3, \\quad 25 = 5^2, \\quad 0.04 = \\frac{4}{100} = \\frac{1}{25} = 5^{-2}",
+   "en": "Convert the base numbers into their exponential forms, and rewrite the decimal $0.04$ as a fraction and then as a power of $5$.",
+   "ur": "بنیادی اعداد کو ان کی قوت نمائی شکل میں تبدیل کریں، اور اعشاریہ $0.04$ کو پہلے کسر اور پھر $5$ کی طاقت کے طور پر لکھیں۔",
+   "check": [
+    "216 == 6**3",
+    "25 == 5**2",
+    "R(4, 100) == 5**(-2)"
+   ]
+  },
+  {
+   "math": "= \\sqrt{\\frac{(6^3)^{\\frac{2}{3}} \\times (5^2)^{\\frac{1}{2}}}{(5^{-2})^{-\\frac{3}{2}}}}",
+   "en": "Substitute these exponential forms back into the original expression.",
+   "ur": "ان قوت نمائی شکلوں کو واپس اصل عبارت میں درج کریں۔",
+   "check": [
+    "sqrt((216**R(2,3) * 25**R(1,2)) / (R(4,100)**R(-3,2))) == sqrt(((6**3)**R(2,3) * (5**2)**R(1,2)) / ((5**(-2))**R(-3,2)))"
+   ]
+  },
+  {
+   "math": "= \\sqrt{\\frac{6^{3 \\times \\frac{2}{3}} \\times 5^{2 \\times \\frac{1}{2}}}{5^{(-2) \\times \\left(-\\frac{3}{2}\\right)}}} = \\sqrt{\\frac{6^2 \\times 5^1}{5^3}}",
+   "en": "Apply the power of a power law $(a^m)^n = a^{m \\times n}$ to multiply the exponents and simplify.",
+   "ur": "قوت کی قوت کا قانون $(a^m)^n = a^{m \\times n}$ لاگو کرتے ہوئے قوت نماؤں کو ضرب دیں اور مختصر کریں۔",
+   "check": [
+    "3 * R(2,3) == 2",
+    "2 * R(1,2) == 1",
+    "-2 * R(-3,2) == 3"
+   ]
+  },
+  {
+   "math": "= \\sqrt{\\frac{6^2}{5^{3-1}}} = \\sqrt{\\frac{6^2}{5^2}}",
+   "en": "Use the quotient law of exponents $\\frac{a^m}{a^n} = \\frac{1}{a^{n-m}}$ to simplify the powers of $5$.",
+   "ur": "قوت نماؤں کے تقسیم کے قانون $\\frac{a^m}{a^n} = \\frac{1}{a^{n-m}}$ کا استعمال کرتے ہوئے $5$ کی طاقتوں کو مختصر کریں۔",
+   "check": [
+    "(6**2 * 5**1) / 5**3 == 6**2 / 5**2"
+   ]
+  },
+  {
+   "math": "= \\frac{\\sqrt{6^2}}{\\sqrt{5^2}} = \\frac{6}{5}",
+   "en": "Take the square root of both the numerator and the denominator to get the final answer.",
+   "ur": "حتمی جواب حاصل کرنے کے لیے شمار کنندہ اور مخرج دونوں کا جذر المربع لیں۔",
+   "check": [
+    "sqrt(6**2 / 5**2) == R(6, 5)",
+    "216**Rational(2,3) == 36",
+    "25**Rational(1,2) == 5",
+    "Rational('0.04') == Rational(1,5)**2",
+    "Rational('0.04')**Rational(-3,2) == 125",
+    "Rational(36*5,125) == Rational(36,25)",
+    "sqrt(Rational(36,25)) == Rational(6,5)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

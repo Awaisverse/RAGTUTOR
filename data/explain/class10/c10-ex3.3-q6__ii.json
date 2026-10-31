@@ -1,0 +1,55 @@
+{
+ "item": "c10-ex3.3-q6",
+ "label": "ii",
+ "answer_ref": "verified: both sides $= \\begin{bmatrix} -2 & -3 \\\\ -1 & 3 \\end{bmatrix}$",
+ "math": [
+  "",
+  "A - B = \\begin{bmatrix} 6 & -2 \\\\ 0 & 3 \\end{bmatrix} - \\begin{bmatrix} 8 & -1 \\\\ 3 & 0 \\end{bmatrix} = \\begin{bmatrix} 6 - 8 & -2 - (-1) \\\\ 0 - 3 & 3 - 0 \\end{bmatrix} = \\begin{bmatrix} -2 & -1 \\\\ -3 & 3 \\end{bmatrix}",
+  "(A-B)^t = \\begin{bmatrix} -2 & -1 \\\\ -3 & 3 \\end{bmatrix}^t = \\begin{bmatrix} -2 & -3 \\\\ -1 & 3 \\end{bmatrix}",
+  "",
+  "A^t = \\begin{bmatrix} 6 & -2 \\\\ 0 & 3 \\end{bmatrix}^t = \\begin{bmatrix} 6 & 0 \\\\ -2 & 3 \\end{bmatrix}",
+  "B^t = \\begin{bmatrix} 8 & -1 \\\\ 3 & 0 \\end{bmatrix}^t = \\begin{bmatrix} 8 & 3 \\\\ -1 & 0 \\end{bmatrix}",
+  "A^t - B^t = \\begin{bmatrix} 6 & 0 \\\\ -2 & 3 \\end{bmatrix} - \\begin{bmatrix} 8 & 3 \\\\ -1 & 0 \\end{bmatrix} = \\begin{bmatrix} 6 - 8 & 0 - 3 \\\\ -2 - (-1) & 3 - 0 \\end{bmatrix} = \\begin{bmatrix} -2 & -3 \\\\ -1 & 3 \\end{bmatrix}",
+  "(A-B)^t = \\begin{bmatrix} -2 & -3 \\\\ -1 & 3 \\end{bmatrix} = A^t-B^t"
+ ],
+ "why": [
+  {
+   "en": "To verify an equation, we always solve the Left-Hand Side (LHS) and Right-Hand Side (RHS) separately. Starting with $(A-B)^t$, the brackets tell us to subtract $B$ from $A$ first before taking the transpose.",
+   "ur": "مساوات کی تصدیق کے لیے ہم ہمیشہ بائیں جانب (LHS) اور دائیں جانب (RHS) کو الگ الگ حل کرتے ہیں۔ $(A-B)^t$ سے شروع کرتے ہوئے، بریکٹ ہمیں بتاتی ہے کہ ٹرانسپوز لینے سے پہلے ہمیں $A$ میں سے $B$ کو تفریق کرنا ہے۔"
+  },
+  {
+   "en": "By the rule of matrix subtraction, we subtract the corresponding entries of $B$ from $A$, paying extra attention to the double negative in $-2 - (-1)$. This gives us the single matrix $A-B = \\begin{bmatrix} -2 & -1 \\\\ -3 & 3 \\end{bmatrix}$, which is now ready to be transposed.",
+   "ur": "کالبوں کی تفریق کے اصول کے مطابق، ہم $A$ کے ارکان میں سے $B$ کے متنازعہ ارکان کو تفریق کرتے ہیں، اور $-2 - (-1)$ میں دوہری منفی علامت کا خاص خیال رکھتے ہیں۔ اس سے ہمیں ایک واحد کالب $A-B = \\begin{bmatrix} -2 & -1 \\\\ -3 & 3 \\end{bmatrix}$ مل جاتا ہے، جس کا اب ہم ٹرانسپوز لے سکتے ہیں۔"
+  },
+  {
+   "en": "Using the definition of transpose, we interchange the rows and columns of the matrix $A-B$. This completes our Left-Hand Side, giving us the result $\\begin{bmatrix} -2 & -3 \\\\ -1 & 3 \\end{bmatrix}$ to compare with the other side later.",
+   "ur": "ٹرانسپوز کی تعریف استعمال کرتے ہوئے، ہم کالب $A-B$ کی قطاروں کو کالموں میں بدل دیتے ہیں۔ اس سے ہماری بائیں جانب (LHS) مکمل ہو جاتی ہے اور ہمیں $\\begin{bmatrix} -2 & -3 \\\\ -1 & 3 \\end{bmatrix}$ حاصل ہوتا ہے جس کا ہم بعد میں دوسری جانب سے موازنہ کریں گے۔"
+  },
+  {
+   "en": "Now we begin working on the Right-Hand Side, $A^t - B^t$. Notice that here the transpose sign is on each matrix individually, meaning we must find $A^t$ and $B^t$ first before subtracting them.",
+   "ur": "اب ہم دائیں جانب، یعنی $A^t - B^t$ کو حل کرنا شروع کرتے ہیں۔ غور کریں کہ یہاں ٹرانسپوز کی علامت ہر کالب پر الگ الگ ہے، جس کا مطلب ہے کہ تفریق کرنے سے پہلے ہمیں $A^t$ اور $B^t$ معلوم کرنے ہوں گے۔"
+  },
+  {
+   "en": "We apply the definition of transpose to matrix $A$ by writing its first row $\\begin{bmatrix} 6 & -2 \\end{bmatrix}$ as the first column, and the second row $\\begin{bmatrix} 0 & 3 \\end{bmatrix}$ as the second column. This gives us $A^t$, the first part needed for our Right-Hand Side.",
+   "ur": "ہم کالب $A$ پر ٹرانسپوز کی تعریف لاگو کرتے ہوئے اس کی پہلی قطار $\\begin{bmatrix} 6 & -2 \\end{bmatrix}$ کو پہلے کالم اور دوسری قطار $\\begin{bmatrix} 0 & 3 \\end{bmatrix}$ کو دوسرے کالم کے طور پر لکھتے ہیں۔ اس سے ہمیں $A^t$ مل جاتا ہے، جو ہماری دائیں جانب کا پہلا حصہ ہے۔"
+  },
+  {
+   "en": "Similarly, we find the transpose of matrix $B$ by turning its rows into columns. Now we have both $A^t$ and $B^t$ ready so we can perform the subtraction.",
+   "ur": "اسی طرح، ہم کالب $B$ کی قطاروں کو کالموں میں بدل کر اس کا ٹرانسپوز معلوم کرتے ہیں۔ اب ہمارے پاس $A^t$ اور $B^t$ دونوں تیار ہیں تاکہ ہم ان کی تفریق کر سکیں۔"
+  },
+  {
+   "en": "Now we subtract the corresponding entries of $B^t$ from $A^t$ because both matrices have the same order. This completes the Right-Hand Side and gives us the matrix $\\begin{bmatrix} -2 & -3 \\\\ -1 & 3 \\end{bmatrix}$.",
+   "ur": "اب ہم $A^t$ کے ارکان میں سے $B^t$ کے متنازعہ ارکان کو تفریق کرتے ہیں کیونکہ دونوں کالبوں کا مرتبہ یکساں ہے۔ اس سے دائیں جانب (RHS) مکمل ہو جاتی ہے اور ہمیں کالب $\\begin{bmatrix} -2 & -3 \\\\ -1 & 3 \\end{bmatrix}$ حاصل ہوتا ہے۔"
+  },
+  {
+   "en": "Comparing the results from Step 3 and Step 7, we see that both the Left-Hand Side and Right-Hand Side equal the exact same matrix, $\\begin{bmatrix} -2 & -3 \\\\ -1 & 3 \\end{bmatrix}$. This proves that the given statement is true.",
+   "ur": "مرحلہ 3 اور مرحلہ 7 کے نتائج کا موازنہ کرنے سے ہم دیکھتے ہیں کہ بائیں جانب اور دائیں جانب دونوں کا جواب بالکل ایک ہی کالب $\\begin{bmatrix} -2 & -3 \\\\ -1 & 3 \\end{bmatrix}$ ہے۔ اس سے ثابت ہوتا ہے کہ دیا گیا بیان درست ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This verification shows an important property of matrices: the transpose of the difference of two matrices is always equal to the difference of their individual transposes, i.e., $(A-B)^t = A^t - B^t$. Since both methods produced the exact same matrix $\\begin{bmatrix} -2 & -3 \\\\ -1 & 3 \\end{bmatrix}$, our work is automatically checked and confirmed to be correct.",
+  "ur": "یہ تصدیق کالبوں کی ایک اہم خاصیت کو ظاہر کرتی ہے: دو کالبوں کے فرق کا ٹرانسپوز ہمیشہ ان کے انفرادی ٹرانسپوز کے فرق کے برابر ہوتا ہے، یعنی $(A-B)^t = A^t - B^t$۔ چونکہ دونوں طریقوں سے بالکل ایک جیسا کالب $\\begin{bmatrix} -2 & -3 \\\\ -1 & 3 \\end{bmatrix}$ حاصل ہوا ہے، اس لیے ہمارے کام کی خود بخود پڑتال ہو گئی ہے کہ یہ بالکل درست ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

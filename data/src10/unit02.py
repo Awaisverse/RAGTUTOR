@@ -122,6 +122,7 @@ ex("ex2.3", 1, r"Form a quadratic equation whose roots are given below: (i) $-4,
    [roots_to_eq(l, a, b) for l, a, b in RT], "2.3")
 
 q2 = roots_to_eq("", -2, -3, "")
+q2["prompt"] = ""                                  # the new roots are working, not part of the book's question
 q2["steps"] = [S(r"x^2 + 9x + 20 = 0 \Rightarrow (x + 4)(x + 5) = 0 \Rightarrow x = -4,\ -5", "Find the roots of the given equation.",
                  "دی گئی مساوات کے جذر معلوم کریں۔", "expand((x + 4)*(x + 5)) == x**2 + 9*x + 20"),
                S(r"-4 + 2 = -2,\quad -5 + 2 = -3", "Each new root is 2 more.", "ہر نیا جذر 2 زیادہ ہے۔", "-4 + 2 == -2", "-5 + 2 == -3")] + q2["steps"]

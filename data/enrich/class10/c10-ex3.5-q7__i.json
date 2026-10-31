@@ -1,0 +1,65 @@
+{
+ "item": "c10-ex3.5-q7",
+ "label": "i",
+ "answer_ref": "$AB = I$, so they are inverses",
+ "steps": [
+  {
+   "math": "A = \\begin{bmatrix} 2 & -1 \\\\ -3 & 2 \\end{bmatrix}, \\quad B = \\begin{bmatrix} 2 & 1 \\\\ 3 & 2 \\end{bmatrix}",
+   "en": "Let the given matrices be $A$ and $B$. Two square matrices are multiplicative inverses of each other if their product equals the identity matrix $I = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}$.",
+   "ur": "فرض کریں کہ دیے گئے قالب $A$ اور $B$ ہیں۔ دو مربعی قالب ایک دوسرے کے ضربی معکوس ہوتے ہیں اگر ان کا حاصل ضرب وحدانی (اکائی) قالب $I = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}$ کے برابر ہو۔"
+  },
+  {
+   "math": "AB = \\begin{bmatrix} 2 & -1 \\\\ -3 & 2 \\end{bmatrix}\\begin{bmatrix} 2 & 1 \\\\ 3 & 2 \\end{bmatrix}",
+   "en": "Write the product $AB$ by placing matrix $A$ and matrix $B$ next to each other.",
+   "ur": "قالب $A$ اور قالب $B$ کو ایک ساتھ لکھ کر حاصل ضرب $AB$ معلوم کریں۔",
+   "check": [
+    "Matrix([[2, -1], [-3, 2]]) * Matrix([[2, 1], [3, 2]]) == Matrix([[1, 0], [0, 1]])"
+   ]
+  },
+  {
+   "math": "AB = \\begin{bmatrix} (2)(2) + (-1)(3) & (2)(1) + (-1)(2) \\\\ (-3)(2) + (2)(3) & (-3)(1) + (2)(2) \\end{bmatrix}",
+   "en": "Multiply each row of the first matrix $A$ by each column of the second matrix $B$, entry by entry, and add the products.",
+   "ur": "پہلے قالب $A$ کی ہر قطار کو دوسرے قالب $B$ کے ہر کالم سے رکن بہ رکن ضرب دے کر جمع کریں۔",
+   "check": [
+    "Matrix([[(2)*(2) + (-1)*(3), (2)*(1) + (-1)*(2)], [(-3)*(2) + (2)*(3), (-3)*(1) + (2)*(2)]]) == Matrix([[1, 0], [0, 1]])"
+   ]
+  },
+  {
+   "math": "AB = \\begin{bmatrix} 4 - 3 & 2 - 2 \\\\ -6 + 6 & -3 + 4 \\end{bmatrix}",
+   "en": "Calculate the products inside each entry of the matrix.",
+   "ur": "قالب کے ہر رکن کے اندر موجود حاصل ضرب کو حل کریں۔",
+   "check": [
+    "2*2 == 4",
+    "-1*3 == -3",
+    "2*1 == 2",
+    "-1*2 == -2",
+    "-3*2 == -6",
+    "2*3 == 6",
+    "-3*1 == -3",
+    "2*2 == 4"
+   ]
+  },
+  {
+   "math": "AB = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}",
+   "en": "Simplify by adding and subtracting the numbers in each entry.",
+   "ur": "ہر رکن میں موجود اعداد کو جمع اور تفریق کر کے مختصر کریں۔",
+   "check": [
+    "Matrix([[4 - 3, 2 - 2], [-6 + 6, -3 + 4]]) == Matrix([[1, 0], [0, 1]])"
+   ]
+  },
+  {
+   "math": "AB = I",
+   "en": "Since the product $AB$ is equal to the identity matrix $I$, the given matrices are multiplicative inverses of each other.",
+   "ur": "چونکہ حاصل ضرب $AB$ وحدانی قالب $I$ کے برابر ہے، اس لیے دیے گئے قالب ایک دوسرے کے ضربی معکوس ہیں۔",
+   "check": [
+    "Matrix([[1, 0], [0, 1]]) == Matrix([[1, 0], [0, 1]])",
+    "Eq(Matrix([[1, 0], [0, 1]]), Matrix([[1, 0], [0, 1]]))",
+    "Eq(Matrix([[1, 0], [0, 1]]), Matrix([[1, 0], [0, 1]]))",
+    "Eq(Matrix([[1, 0], [0, 1]]), Matrix([[1, 0], [0, 1]]))"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

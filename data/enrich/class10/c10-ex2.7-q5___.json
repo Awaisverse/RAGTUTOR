@@ -1,0 +1,53 @@
+{
+ "item": "c10-ex2.7-q5",
+ "label": "",
+ "answer_ref": "80 metres",
+ "steps": [
+  {
+   "math": "u = 40\\ \\text{ms}^{-1},\\quad v = 0\\ \\text{ms}^{-1},\\quad a = -g = -10\\ \\text{ms}^{-2}",
+   "en": "Write down the given values. Since the ball is thrown upward against gravity, the acceleration is negative ($a = -10\\ \\text{ms}^{-2}$), and at the highest point its final velocity becomes $v = 0\\ \\text{ms}^{-1}$.",
+   "ur": "دی گئی قیمتیں لکھیں۔ چونکہ گیند کو کششِ ثقل کے خلاف اوپر پھینکا گیا ہے، اس لیے اسراع منفی ہے ($a = -10\\ \\text{ms}^{-2}$)، اور سب سے اونچے مقام پر اس کی آخری رفتار $v = 0\\ \\text{ms}^{-1}$ ہو جاتی ہے۔"
+  },
+  {
+   "math": "v^2 = u^2 + 2as",
+   "en": "To find the maximum height $s$, we use the third equation of motion.",
+   "ur": "زیادہ سے زیادہ بلندی $s$ معلوم کرنے کے لیے ہم حرکت کی تیسری مساوات استعمال کرتے ہیں۔"
+  },
+  {
+   "math": "0^2 = 40^2 + 2(-10)s",
+   "en": "Substitute $v = 0$, $u = 40$, and $a = -10$ into the equation.",
+   "ur": "مساوات میں $v = 0$، $u = 40$، اور $a = -10$ درج کریں۔"
+  },
+  {
+   "math": "0 = 1600 - 20s",
+   "en": "Evaluate the squares and multiply the constants.",
+   "ur": "مربع حل کریں اور مستقل مقداروں کو ضرب دیں۔",
+   "check": [
+    "0**2 == 0",
+    "40**2 == 1600",
+    "2*(-10) == -20"
+   ]
+  },
+  {
+   "math": "20s = 1600 \\Rightarrow s = \\frac{1600}{20} = 80",
+   "en": "Rearrange the equation and divide by $20$ to solve for $s$.",
+   "ur": "مساوات کو ترتیب دیں اور $s$ کی قیمت معلوم کرنے کے لیے $20$ پر تقسیم کریں۔",
+   "check": [
+    "1600/20 == 80",
+    "40**2 + 2*(-10)*80 == 0"
+   ]
+  },
+  {
+   "math": "s = 80\\ \\text{metres}",
+   "en": "Thus, the maximum height the ball reaches above the ground level is $80$ metres.",
+   "ur": "پس، زمین کی سطح سے گیند کی زیادہ سے زیادہ بلندی $80$ میٹر ہے۔",
+   "check": [
+    "40**2 + 2*(-10)*80 == 0",
+    "1600/20 == 80"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

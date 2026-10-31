@@ -1,0 +1,59 @@
+{
+ "item": "c10-ex8.2-q2",
+ "label": "",
+ "answer_ref": "$x \\approx 26.67^\\circ,\\ y = 3.9$ cm",
+ "steps": [
+  {
+   "math": "m\\angle AOB = 80^\\circ,\\ m\\widehat{AB} = 6\\ \\text{cm},\\ m\\angle BOC = x,\\ m\\widehat{BC} = 2\\ \\text{cm},\\ m\\angle COD = 52^\\circ,\\ m\\widehat{CD} = y\\ \\text{cm}",
+   "en": "First, let us write down the given angles and their corresponding arc lengths from the figure. We need to find the values of $x$ and $y$.",
+   "ur": "سب سے پہلے، ہم شکل سے دیے گئے زاویوں اور ان کی متعلقہ قوسوں کی لمبائی لکھتے ہیں۔ ہمیں $x$ اور $y$ کی قیمتیں معلوم کرنی ہیں۔"
+  },
+  {
+   "math": "\\frac{\\text{Arc Length}}{\\text{Central Angle}} = \\text{Constant}",
+   "en": "We know the theorem that in the same circle, the lengths of the arcs are directly proportional to their corresponding central angles.",
+   "ur": "ہم اس مسئلے سے واقف ہیں کہ ایک ہی دائرے میں قوسوں کی لمبائی ان کے متعلقہ مرکزی زاویوں کے راست متناسب ہوتی ہے۔"
+  },
+  {
+   "math": "\\frac{m\\widehat{AB}}{m\\angle AOB} = \\frac{m\\widehat{BC}}{m\\angle BOC} \\Rightarrow \\frac{6}{80} = \\frac{2}{x}",
+   "en": "To find $x$, we set up a proportion between arc $AB$ and arc $BC$ with their central angles, and substitute the given values.",
+   "ur": "$x$ معلوم کرنے کے لیے، ہم قوس $AB$ اور قوس $BC$ کا ان کے مرکزی زاویوں کے ساتھ تناسب بناتے ہیں اور دی گئی قیمتیں درج کرتے ہیں۔"
+  },
+  {
+   "math": "x = \\frac{80 \\times 2}{6} = \\frac{160}{6} \\approx 26.67^\\circ",
+   "en": "By cross-multiplying and simplifying, we calculate the value of angle $x$.",
+   "ur": "چلپائی ضرب دینے اور مختصر کرنے سے، ہم زاویہ $x$ کی قیمت معلوم کرتے ہیں۔",
+   "check": [
+    "R(80*2, 6) == R(160, 6)",
+    "Abs(R(160, 6) - 26.67) <= 0.005"
+   ]
+  },
+  {
+   "math": "\\frac{m\\widehat{AB}}{m\\angle AOB} = \\frac{m\\widehat{CD}}{m\\angle COD} \\Rightarrow \\frac{6}{80} = \\frac{y}{52}",
+   "en": "Similarly, to find $y$, we set up a proportion between arc $AB$ and arc $CD$ with their central angles, and substitute the given values.",
+   "ur": "اسی طرح، $y$ معلوم کرنے کے لیے، ہم قوس $AB$ اور قوس $CD$ کا ان کے مرکزی زاویوں کے ساتھ تناسب بناتے ہیں اور دی گئی قیمتیں درج کرتے ہیں۔"
+  },
+  {
+   "math": "y = \\frac{6 \\times 52}{80} = \\frac{312}{80} = 3.9\\ \\text{cm}",
+   "en": "By cross-multiplying and simplifying, we calculate the length of arc $y$.",
+   "ur": "چلپائی ضرب دینے اور مختصر کرنے سے، ہم قوس $y$ کی لمبائی معلوم کرتے ہیں۔",
+   "check": [
+    "6*52 == 312",
+    "R(312, 80) == R(39, 10)"
+   ]
+  },
+  {
+   "math": "x \\approx 26.67^\\circ,\\ y = 3.9\\ \\text{cm}",
+   "en": "Thus, we have found the required values of $x$ and $y$.",
+   "ur": "اس طرح، ہم نے $x$ اور $y$ کی مطلوبہ قیمتیں معلوم کر لی ہیں۔",
+   "check": [
+    "Abs(R(160, 6) - 26.67) <= 0.005",
+    "R(312, 80) == R(39, 10)",
+    "Abs((R(160,6)) - 26.67) <= 0.0050000010000000004",
+    "R(6*52,80) == R(39,10)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

@@ -1,0 +1,77 @@
+{
+ "item": "ex1.2-q2",
+ "label": "v",
+ "answer_ref": "$\\frac{1}{6}$",
+ "steps": [
+  {
+   "math": "\\frac{5 \\cdot (25)^{n+1} - 25 \\cdot (5)^{2n}}{5 \\cdot (5)^{2n+3} - (25)^{n+1}}",
+   "en": "We are given the algebraic fraction with exponents and asked to simplify it.",
+   "ur": "ہمیں قوت نماؤں والی یہ الجبری کسر دی گئی ہے اور اسے مختصر کرنے کو کہا گیا ہے۔"
+  },
+  {
+   "math": "= \\frac{5^1 \\cdot (5^2)^{n+1} - 5^2 \\cdot 5^{2n}}{5^1 \\cdot 5^{2n+3} - (5^2)^{n+1}}",
+   "en": "Since $25 = 5^2$, we rewrite all bases as powers of the prime number $5$ so that we can apply the laws of exponents.",
+   "ur": "چونکہ $25 = 5^2$ ہوتا ہے، اس لیے ہم تمام اساسوں کو مفرد عدد $5$ کی طاقت کی شکل میں لکھتے ہیں تاکہ قوانینِ قوت نما استعمال کیے جا سکیں۔",
+   "check": [
+    "25 == 5**2"
+   ]
+  },
+  {
+   "math": "= \\frac{5^1 \\cdot 5^{2n+2} - 5^2 \\cdot 5^{2n}}{5^1 \\cdot 5^{2n+3} - 5^{2n+2}}",
+   "en": "Apply the power of a power law, $(a^m)^n = a^{mn}$, to simplify $(5^2)^{n+1}$ as $5^{2(n+1)} = 5^{2n+2}$.",
+   "ur": "طاقت کی طاقت کا قانون $(a^m)^n = a^{mn}$ استعمال کرتے ہوئے $(5^2)^{n+1}$ کو مختصر کر کے $5^{2(n+1)} = 5^{2n+2}$ لکھیں۔",
+   "check": [
+    "(5**2)**(n+1) == 5**(2*n+2)"
+   ]
+  },
+  {
+   "math": "= \\frac{5^{2n+3} - 5^{2n+2}}{5^{2n+4} - 5^{2n+2}}",
+   "en": "Apply the product law of exponents, $a^m \\cdot a^n = a^{m+n}$, by adding the exponents of the multiplied terms with the same base $5$.",
+   "ur": "قوت نماؤں کے ضرب کا قانون $a^m \\cdot a^n = a^{m+n}$ استعمال کرتے ہوئے، ایک جیسی اساس $5$ والی ضرب ہونے والی رقموں کے قوت نماؤں کو جمع کریں۔",
+   "check": [
+    "5**1 * 5**(2*n+2) == 5**(2*n+3)",
+    "5**2 * 5**(2*n) == 5**(2*n+2)",
+    "5**1 * 5**(2*n+3) == 5**(2*n+4)"
+   ]
+  },
+  {
+   "math": "= \\frac{5^{2n+2} \\cdot 5^1 - 5^{2n+2} \\cdot 1}{5^{2n+2} \\cdot 5^2 - 5^{2n+2} \\cdot 1}",
+   "en": "Split the exponents using $a^{m+n} = a^m \\cdot a^n$ so that the smallest power, $5^{2n+2}$, is visible in every term.",
+   "ur": "قانون $a^{m+n} = a^m \\cdot a^n$ کی مدد سے قوت نماؤں کو اس طرح توڑ کر لکھیں کہ سب سے چھوٹی طاقت $5^{2n+2}$ ہر رقم میں واضح ہو جائے۔",
+   "check": [
+    "5**(2*n+3) == 5**(2*n+2) * 5**1",
+    "5**(2*n+4) == 5**(2*n+2) * 5**2"
+   ]
+  },
+  {
+   "math": "= \\frac{5^{2n+2}(5 - 1)}{5^{2n+2}(5^2 - 1)} = \\frac{5 - 1}{25 - 1}",
+   "en": "Factor out the common term $5^{2n+2}$ from both the numerator and the denominator, then cancel it out and evaluate $5^2 = 25$.",
+   "ur": "شمار کنندہ اور مخرج دونوں میں سے مشترک رقم $5^{2n+2}$ کو باہر نکالیں، پھر اسے آپس میں کاٹ دیں اور $5^2 = 25$ حل کریں۔",
+   "check": [
+    "5**(2*n+3) - 5**(2*n+2) == 5**(2*n+2)*(5 - 1)",
+    "5**(2*n+4) - 5**(2*n+2) == 5**(2*n+2)*(5**2 - 1)",
+    "5**2 == 25"
+   ]
+  },
+  {
+   "math": "= \\frac{4}{24} = \\frac{1}{6}",
+   "en": "Subtract the numbers in the numerator and the denominator, then divide both by their greatest common divisor $4$ to get the final answer.",
+   "ur": "شمار کنندہ اور مخرج میں اعداد کو تفریق کریں، پھر حتمی جواب حاصل کرنے کے لیے دونوں کو ان کے عادِ اعظم $4$ سے تقسیم کر کے مختصر کریں۔",
+   "check": [
+    "5 - 1 == 4",
+    "25 - 1 == 24",
+    "R(4, 24) == R(1, 6)",
+    "5*25**(n+1) == 5**(2*n+3)",
+    "25*5**(2*n) == 5**(2*n+2)",
+    "5*5**(2*n+3) == 5**(2*n+4)",
+    "25**(n+1) == 5**(2*n+2)",
+    "5**(2*n+3) - 5**(2*n+2) == 5**(2*n+2)*(5-1)",
+    "5**(2*n+4) - 5**(2*n+2) == 5**(2*n+2)*(5**2-1)",
+    "Rational(4,24) == Rational(1,6)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

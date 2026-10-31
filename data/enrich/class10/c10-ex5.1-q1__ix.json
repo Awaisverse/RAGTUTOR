@@ -1,0 +1,57 @@
+{
+ "item": "c10-ex5.1-q1",
+ "label": "ix",
+ "answer_ref": "$\\frac{3 x}{x + 2}$",
+ "steps": [
+  {
+   "math": "\\frac{3x^2 + 6x}{x^2 + 4x + 4}",
+   "en": "Write down the given rational expression to reduce it to its lowest form.",
+   "ur": "دی گئی ناطق جملے کو اس کی مختصر ترین شکل میں تبدیل کرنے کے لیے لکھیں۔"
+  },
+  {
+   "math": "= \\frac{3x(x + 2)}{x^2 + 4x + 4}",
+   "en": "Factorize the numerator $3x^2 + 6x$ by taking $3x$ as a common factor.",
+   "ur": "شمار کنندہ $3x^2 + 6x$ میں سے $3x$ کو مشترک جزو کے طور پر باہر نکال کر تجزی کریں۔",
+   "check": [
+    "3*x*(x + 2) == 3*x**2 + 6*x"
+   ]
+  },
+  {
+   "math": "= \\frac{3x(x + 2)}{(x)^2 + 2(x)(2) + (2)^2}",
+   "en": "Rewrite the denominator $x^2 + 4x + 4$ in the form of a perfect square trinomial $a^2 + 2ab + b^2$.",
+   "ur": "نسب نما $x^2 + 4x + 4$ کو مکمل مربع سہ رقمی $a^2 + 2ab + b^2$ کی شکل میں لکھیں۔",
+   "check": [
+    "x**2 + 2*x*2 + 2**2 == x**2 + 4*x + 4"
+   ]
+  },
+  {
+   "math": "= \\frac{3x(x + 2)}{(x + 2)^2}",
+   "en": "Apply the algebraic identity $a^2 + 2ab + b^2 = (a + b)^2$ to factorize the denominator.",
+   "ur": "نسب نما کی تجزی کرنے کے لیے الجبری کلیہ $a^2 + 2ab + b^2 = (a + b)^2$ کا اطلاق کریں۔",
+   "check": [
+    "(x + 2)**2 == x**2 + 4*x + 4"
+   ]
+  },
+  {
+   "math": "= \\frac{3x(x + 2)}{(x + 2)(x + 2)}",
+   "en": "Expand $(x + 2)^2$ into two factors $(x + 2)(x + 2)$ to clearly see the common factor.",
+   "ur": "مشترک جزو کو واضح طور پر دیکھنے کے لیے $(x + 2)^2$ کو دو اجزائے ضربی $(x + 2)(x + 2)$ میں کھول کر لکھیں۔",
+   "check": [
+    "(x + 2)*(x + 2) == (x + 2)**2"
+   ]
+  },
+  {
+   "math": "= \\frac{3 x}{x + 2}",
+   "en": "Cancel out the common factor $(x + 2)$ from both the numerator and the denominator to get the final answer.",
+   "ur": "حتمی جواب حاصل کرنے کے لیے شمار کنندہ اور نسب نما دونوں میں سے مشترک جزو $(x + 2)$ کو کاٹ دیں۔",
+   "check": [
+    "(3*x)/(x + 2) == (3*x**2 + 6*x)/(x**2 + 4*x + 4)",
+    "(3*x*(x + 2))/((x + 2)**2) == (3*x**2 + 6*x)/(x**2 + 4*x + 4)",
+    "(3*x/(x + 2)) == (3*x**2 + 6*x)/(x**2 + 4*x + 4)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

@@ -1,0 +1,67 @@
+{
+ "item": "rev1-q10",
+ "label": "",
+ "answer_ref": "Rs. 540750",
+ "steps": [
+  {
+   "math": "P = \\text{Rs. } 350000, \\quad R_1 = 7\\frac{1}{4}\\% = 7.25\\%, \\quad T_1 = 2 \\text{ years}",
+   "en": "First, write down the given values for the initial investment period of $2$ years. Convert the mixed fraction rate $7\\frac{1}{4}\\%$ into a decimal: $7 + \\frac{1}{4} = 7.25\\%$.",
+   "ur": "سب سے پہلے، ابتدائی $2$ سال کی سرمایہ کاری کی مدت کے لیے دی گئی قدریں لکھیں۔ مخلوط کسر کی شرح $7\\frac{1}{4}\\%$ کو اعشاریہ میں تبدیل کریں: $7 + \\frac{1}{4} = 7.25\\%$۔",
+   "check": [
+    "7 + R(1,4) == 7.25"
+   ]
+  },
+  {
+   "math": "\\text{Simple Profit} = \\frac{P \\times R \\times T}{100}",
+   "en": "State the formula for calculating simple profit, where $P$ is the principal amount, $R$ is the annual profit rate, and $T$ is the time in years.",
+   "ur": "سادہ منافع معلوم کرنے کا فارمولا لکھیں، جہاں $P$ اصل زر، $R$ منافع کی سالانہ شرح، اور $T$ سالوں میں وقت ہے۔"
+  },
+  {
+   "math": "\\text{Profit}_1 = \\frac{350000 \\times 7.25 \\times 2}{100} = \\text{Rs. } 50750",
+   "en": "Substitute the values for the first $2$ years into the formula and simplify to find the first profit.",
+   "ur": "پہلے $2$ سالوں کی قدریں فارمولے میں درج کریں اور پہلا منافع معلوم کرنے کے لیے حل کریں۔",
+   "check": [
+    "350000 * R(725,10000) * 2 == 50750"
+   ]
+  },
+  {
+   "math": "T_2 = 7 - 2 = 5 \\text{ years}, \\quad R_2 = 8\\%",
+   "en": "The total investment time is $7$ years. Since the first rate applied for $2$ years, the remaining time for the new rate of $8\\%$ is $7 - 2 = 5$ years.",
+   "ur": "سرمایہ کاری کا کل وقت $7$ سال ہے۔ چونکہ پہلی شرح $2$ سال تک لاگو رہی، اس لیے $8\\%$ کی نئی شرح کے لیے باقی وقت $7 - 2 = 5$ سال ہے۔",
+   "check": [
+    "7 - 2 == 5"
+   ]
+  },
+  {
+   "math": "\\text{Profit}_2 = \\frac{350000 \\times 8 \\times 5}{100} = \\text{Rs. } 140000",
+   "en": "Now, calculate the simple profit for the remaining $5$ years at the increased rate of $8\\%$ per annum. Note that in simple profit, the principal $P$ remains the same.",
+   "ur": "اب، باقی $5$ سالوں کے لیے $8\\%$ سالانہ کی بڑھی ہوئی شرح سے سادہ منافع معلوم کریں۔ یاد رکھیں کہ سادہ منافع میں اصل زر $P$ ایک جیسا رہتا ہے۔",
+   "check": [
+    "350000 * R(8,100) * 5 == 140000"
+   ]
+  },
+  {
+   "math": "\\text{Total Profit} = 50750 + 140000 = \\text{Rs. } 190750",
+   "en": "Add the profits from both periods to find the total profit earned over the $7$ years.",
+   "ur": "$7$ سالوں میں حاصل ہونے والا کل منافع معلوم کرنے کے لیے دونوں مدتوں کے منافع کو جمع کریں۔",
+   "check": [
+    "50750 + 140000 == 190750"
+   ]
+  },
+  {
+   "math": "\\text{Total Amount} = 350000 + 190750 = \\text{Rs. } 540750",
+   "en": "Finally, add the principal amount and the total profit to find the total amount Salma had at the end of $7$ years.",
+   "ur": "آخر میں، $7$ سال کے اختتام پر سلمیٰ کے پاس موجود کل رقم معلوم کرنے کے لیے اصل زر اور کل منافع کو جمع کریں۔",
+   "check": [
+    "350000 + 190750 == 540750",
+    "350000*Rational(725,10000)*2 == 50750",
+    "350000*Rational(8,100)*5 == 140000",
+    "7 - 2 == 5",
+    "350000 + 50750 + 140000 == 540750"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

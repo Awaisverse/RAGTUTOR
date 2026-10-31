@@ -1,0 +1,64 @@
+{
+ "item": "ex1.1-q6",
+ "label": "iii",
+ "answer_ref": "$\\frac{7}{10}$ and $\\frac{3}{4}$",
+ "steps": [
+  {
+   "math": "a = \\frac{3}{5}, \\quad b = \\frac{4}{5}",
+   "en": "The given two rational numbers are $\\frac{3}{5}$ and $\\frac{4}{5}$. We need to find two rational numbers between them.",
+   "ur": "دیے گئے دو ناطق اعداد $\\frac{3}{5}$ اور $\\frac{4}{5}$ ہیں۔ ہمیں ان کے درمیان دو ناطق اعداد معلوم کرنے ہیں۔",
+   "check": [
+    "R(3,5) < R(4,5)"
+   ]
+  },
+  {
+   "math": "\\text{Midpoint} = \\frac{a + b}{2}",
+   "en": "A rational number between any two numbers $a$ and $b$ can be found by taking their average (midpoint).",
+   "ur": "کسی بھی دو اعداد $a$ اور $b$ کے درمیان ایک ناطق عدد ان کا اوسط (درمیانی نقطہ) لے کر معلوم کیا جا سکتا ہے۔"
+  },
+  {
+   "math": "\\frac{\\frac{3}{5} + \\frac{4}{5}}{2} = \\frac{\\frac{3+4}{5}}{2} = \\frac{\\frac{7}{5}}{2} = \\frac{7}{5 \\times 2} = \\frac{7}{10}",
+   "en": "Find the first rational number by taking the average of $\\frac{3}{5}$ and $\\frac{4}{5}$. Since the denominators are the same, we simply add the numerators.",
+   "ur": "$\\frac{3}{5}$ اور $\\frac{4}{5}$ کا اوسط لے کر پہلا ناطق عدد معلوم کریں۔ چونکہ مخرج ایک جیسے ہیں، اس لیے ہم صرف شمار کنندگان کو جمع کرتے ہیں۔",
+   "check": [
+    "(R(3,5) + R(4,5))/2 == R(7,5)/2",
+    "R(7,5)/2 == R(7,10)"
+   ]
+  },
+  {
+   "math": "\\frac{7}{10} + \\frac{4}{5} = \\frac{7}{10} + \\frac{4 \\times 2}{5 \\times 2} = \\frac{7 + 8}{10} = \\frac{15}{10}",
+   "en": "To find a second rational number, we take the average of the new number $\\frac{7}{10}$ and the larger given number $\\frac{4}{5}$. First, add them by taking the LCM of the denominators, which is $10$.",
+   "ur": "دوسرا ناطق عدد معلوم کرنے کے لیے، ہم نئے عدد $\\frac{7}{10}$ اور دیے گئے بڑے عدد $\\frac{4}{5}$ کا اوسط لیتے ہیں۔ پہلے مخرج کا ذواضعاف اقل (LCM) لے کر انہیں جمع کریں، جو کہ $10$ ہے۔",
+   "check": [
+    "R(7,10) + R(4,5) == R(15,10)"
+   ]
+  },
+  {
+   "math": "\\frac{\\frac{15}{10}}{2} = \\frac{15}{10 \\times 2} = \\frac{15}{20} = \\frac{3}{4}",
+   "en": "Now divide the sum by $2$ and simplify the fraction by dividing the numerator and denominator by $5$ to get the second rational number.",
+   "ur": "اب حاصل جمع کو $2$ پر تقسیم کریں اور دوسرا ناطق عدد حاصل کرنے کے لیے شمار کنندہ اور مخرج کو $5$ پر تقسیم کر کے کسر کو مختصر کریں۔",
+   "check": [
+    "R(15,10)/2 == R(15,20)",
+    "R(15,20) == R(3,4)"
+   ]
+  },
+  {
+   "math": "\\frac{3}{5} < \\frac{7}{10} < \\frac{3}{4} < \\frac{4}{5}",
+   "en": "Thus, the two required rational numbers between $\\frac{3}{5}$ and $\\frac{4}{5}$ are $\\frac{7}{10}$ and $\\frac{3}{4}$.",
+   "ur": "پس، $\\frac{3}{5}$ اور $\\frac{4}{5}$ کے درمیان مطلوبہ دو ناطق اعداد $\\frac{7}{10}$ اور $\\frac{3}{4}$ ہیں۔",
+   "check": [
+    "R(3,5) < R(7,10)",
+    "R(7,10) < R(3,4)",
+    "R(3,4) < R(4,5)",
+    "(Rational(3,5)+Rational(4,5))/2 == Rational(7,10)",
+    "(Rational(7,10)+Rational(4,5))/2 == Rational(3,4)",
+    "Rational(3,5) < Rational(7,10)",
+    "Rational(7,10) < Rational(3,4)",
+    "Rational(3,4) < Rational(4,5)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

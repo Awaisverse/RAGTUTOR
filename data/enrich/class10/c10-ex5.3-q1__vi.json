@@ -1,0 +1,47 @@
+{
+ "item": "c10-ex5.3-q1",
+ "label": "vi",
+ "answer_ref": "$1$",
+ "steps": [
+  {
+   "math": "\\frac{(a^2+ab)^2}{(a^2-ab)^2} \\div \\left(\\frac{a+b}{a-b}\\right)^2",
+   "en": "Write down the given algebraic expression to be simplified.",
+   "ur": "مختصر کرنے کے لیے دی گئی الجبری عبارت لکھیں۔"
+  },
+  {
+   "math": "= \\frac{[a(a+b)]^2}{[a(a-b)]^2} \\div \\frac{(a+b)^2}{(a-b)^2}",
+   "en": "Factor out the common variable $a$ inside the brackets of the first fraction, and apply the square to both the numerator and denominator of the second fraction.",
+   "ur": "پہلی کسر کی بریکٹوں کے اندر سے مشترک متغیر $a$ کو باہر نکالیں، اور دوسری کسر کے شمار کنندہ اور مخرج دونوں پر مربع لاگو کریں۔",
+   "check": [
+    "(a**2 + a*b)**2 == (a*(a + b))**2",
+    "(a**2 - a*b)**2 == (a*(a - b))**2"
+   ]
+  },
+  {
+   "math": "= \\frac{a^2(a+b)^2}{a^2(a-b)^2} \\div \\frac{(a+b)^2}{(a-b)^2}",
+   "en": "Apply the exponent rule $(xy)^2 = x^2y^2$ to the numerator and denominator of the first fraction.",
+   "ur": "پہلی کسر کے شمار کنندہ اور مخرج پر قوت نما کا اصول $(xy)^2 = x^2y^2$ لاگو کریں۔",
+   "check": [
+    "(a*(a + b))**2 == a**2 * (a + b)**2",
+    "(a*(a - b))**2 == a**2 * (a - b)**2"
+   ]
+  },
+  {
+   "math": "= \\frac{a^2(a+b)^2}{a^2(a-b)^2} \\times \\frac{(a-b)^2}{(a+b)^2}",
+   "en": "Change the division sign $\\div$ to multiplication $\\times$ by taking the reciprocal of the second fraction (turning it upside down).",
+   "ur": "دوسری کسر کا معکوس لے کر (اسے الٹ کر) تقسیم کی علامت $\\div$ کو ضرب $\\times$ میں تبدیل کریں۔"
+  },
+  {
+   "math": "= 1",
+   "en": "Cancel out the common factors $a^2$, $(a+b)^2$, and $(a-b)^2$ from the numerators and denominators to get the final answer.",
+   "ur": "حتمی جواب حاصل کرنے کے لیے شمار کنندہ اور مخرج سے مشترک اجزائے ضربی $a^2$، $(a+b)^2$، اور $(a-b)^2$ کو کاٹ دیں۔",
+   "check": [
+    "(a**2 * (a + b)**2 / (a**2 * (a - b)**2)) * ((a - b)**2 / (a + b)**2) == 1",
+    "(1) == ((a - b)**2*(a**2 + a*b)**2/((a + b)**2*(a**2 - a*b)**2))"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

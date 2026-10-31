@@ -1,0 +1,49 @@
+{
+ "item": "c10-ex5.1-q1",
+ "label": "x",
+ "answer_ref": "$\\frac{x + 2 y}{x^{2} + x y + y^{2}}$",
+ "steps": [
+  {
+   "math": "\\frac{x^{2} + x y - 2 y^{2}}{x^{3} - y^{3}}",
+   "en": "Write the given rational expression to reduce it to its lowest form.",
+   "ur": "دی گئی ناطق عبارت کو اس کی مختصر ترین شکل میں لانے کے لیے لکھیں۔"
+  },
+  {
+   "math": "= \\frac{x^{2} + 2 x y - x y - 2 y^{2}}{\\left(x - y\\right) \\left(x^{2} + x y + y^{2}\\right)}",
+   "en": "Break the middle term $xy$ in the numerator as $2xy - xy$, and apply the difference of cubes formula $a^3 - b^3 = (a - b)(a^2 + ab + b^2)$ in the denominator.",
+   "ur": "شمار کنندہ میں درمیانی رقم $xy$ کو $2xy - xy$ کے طور پر توڑیں، اور مخرج میں مکعبوں کے فرق کا فارمولا $a^3 - b^3 = (a - b)(a^2 + ab + b^2)$ لاگو کریں۔",
+   "check": [
+    "(x**2 + 2*x*y - x*y - 2*y**2)/((x - y)*(x**2 + x*y + y**2)) == (x**2 + x*y - 2*y**2)/(x**3 - y**3)"
+   ]
+  },
+  {
+   "math": "= \\frac{x\\left(x + 2 y\\right) - y\\left(x + 2 y\\right)}{\\left(x - y\\right) \\left(x^{2} + x y + y^{2}\\right)}",
+   "en": "Take out the common factors from the pairs of terms in the numerator.",
+   "ur": "شمار کنندہ میں رقموں کے جوڑوں سے مشترک اجزاء باہر نکالیں۔",
+   "check": [
+    "(x*(x + 2*y) - y*(x + 2*y))/((x - y)*(x**2 + x*y + y**2)) == (x**2 + x*y - 2*y**2)/(x**3 - y**3)"
+   ]
+  },
+  {
+   "math": "= \\frac{\\left(x - y\\right) \\left(x + 2 y\\right)}{\\left(x - y\\right) \\left(x^{2} + x y + y^{2}\\right)}",
+   "en": "Factor out the common binomial $(x + 2y)$ in the numerator.",
+   "ur": "شمار کنندہ میں مشترک دو رقمی جملہ $(x + 2y)$ باہر نکال کر تجزی مکمل کریں۔",
+   "check": [
+    "((x - y)*(x + 2*y))/((x - y)*(x**2 + x*y + y**2)) == (x**2 + x*y - 2*y**2)/(x**3 - y**3)"
+   ]
+  },
+  {
+   "math": "= \\frac{x + 2 y}{x^{2} + x y + y^{2}}",
+   "en": "Cancel the common factor $(x - y)$ from both the numerator and the denominator to get the final answer.",
+   "ur": "شمار کنندہ اور مخرج دونوں سے مشترک جزو ضربی $(x - y)$ کو کاٹ کر حتمی جواب حاصل کریں۔",
+   "check": [
+    "(x + 2*y)/(x**2 + x*y + y**2) == (x**2 + x*y - 2*y**2)/(x**3 - y**3)",
+    "((x - y)*(x + 2*y))/((x - y)*(x**2 + x*y + y**2)) == (x**2 + x*y - 2*y**2)/(x**3 - y**3)",
+    "((x + 2*y)/(x**2 + x*y + y**2)) == (x**2 + x*y - 2*y**2)/(x**3 - y**3)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

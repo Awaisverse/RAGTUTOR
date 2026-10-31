@@ -1,0 +1,50 @@
+{
+ "item": "c10-ex3.4-q1",
+ "label": "ii",
+ "answer_ref": "$AB = \\begin{bmatrix} 11 \\end{bmatrix}$, $BA = \\begin{bmatrix} 3 & -6 \\\\ -4 & 8 \\end{bmatrix}$",
+ "math": [
+  "A = \\begin{bmatrix} 1 & -2 \\end{bmatrix}, \\quad B = \\begin{bmatrix} 3 \\\\ -4 \\end{bmatrix}",
+  "",
+  "AB = \\begin{bmatrix} 1 & -2 \\end{bmatrix}\\begin{bmatrix} 3 \\\\ -4 \\end{bmatrix} = \\begin{bmatrix} (1)(3) + (-2)(-4) \\end{bmatrix}",
+  "AB = \\begin{bmatrix} 3 + 8 \\end{bmatrix} = \\begin{bmatrix} 11 \\end{bmatrix}",
+  "",
+  "BA = \\begin{bmatrix} 3 \\\\ -4 \\end{bmatrix}\\begin{bmatrix} 1 & -2 \\end{bmatrix} = \\begin{bmatrix} (3)(1) & (3)(-2) \\\\ (-4)(1) & (-4)(-2) \\end{bmatrix}",
+  "BA = \\begin{bmatrix} 3 & -6 \\\\ -4 & 8 \\end{bmatrix}"
+ ],
+ "why": [
+  {
+   "en": "First, we identify the order (rows $\\times$ columns) of both given matrices, $A$ and $B$. Knowing their orders ($1 \\times 2$ and $2 \\times 1$) is essential because it is the very first thing we check before multiplying matrices.",
+   "ur": "سب سے پہلے ہم دونوں دیے گئے کالبوں $A$ اور $B$ کا مرتبہ (قطاریں $\\times$ کالم) معلوم کرتے ہیں۔ ان کے مرتبے ($1 \\times 2$ اور $2 \\times 1$) کو جاننا بہت ضروری ہے کیونکہ کالبوں کو ضرب دینے سے پہلے ہم سب سے پہلی چیز یہی دیکھتے ہیں۔"
+  },
+  {
+   "en": "By the rule of matrix multiplication, the inner dimensions must match (columns of the first must equal rows of the second). Since $2$ equals $2$, we know $AB$ can be calculated, and the outer numbers tell us the answer will be a single-entry $1 \\times 1$ matrix.",
+   "ur": "کالبوں کی ضرب کے اصول کے مطابق، پہلے کالب کے کالموں کی تعداد دوسرے کالب کی قطاروں کی تعداد کے برابر ہونی چاہیے۔ چونکہ دونوں کی تعداد $2$ ہے، اس لیے $AB$ معلوم کرنا ممکن ہے، اور بیرونی اعداد ہمیں بتاتے ہیں کہ جواب ایک $1 \\times 1$ کا کالب ہو گا۔"
+  },
+  {
+   "en": "We apply the row-by-column multiplication rule here. By pairing the first entries ($1$ and $3$) and the second entries ($-2$ and $-4$) and adding them, we set up the exact calculation for our single matrix entry.",
+   "ur": "یہاں ہم قطار کو کالم سے ضرب دینے کا اصول لاگو کرتے ہیں۔ پہلے ارکان ($1$ اور $3$) اور دوسرے ارکان ($-2$ اور $-4$) کو آپس میں ضرب دے کر جمع کرنے سے ہم اپنے مطلوبہ کالب کے واحد رکن کے لیے حساب ترتیب دیتے ہیں۔"
+  },
+  {
+   "en": "Now we simply use basic arithmetic, remembering that multiplying two negative numbers ($-2$ and $-4$) gives a positive $+8$. Adding $3$ and $8$ gives us the complete result for the first part of the question, $AB = \\begin{bmatrix} 11 \\end{bmatrix}$.",
+   "ur": "اب ہم سادہ حساب کتاب کرتے ہیں، اور یاد رکھتے ہیں کہ دو منفی اعداد ($-2$ اور $-4$) کو ضرب دینے سے مثبت $+8$ آتا ہے۔ $3$ اور $8$ کو جمع کرنے سے ہمیں سوال کے پہلے حصے کا مکمل جواب $AB = \\begin{bmatrix} 11 \\end{bmatrix}$ مل جاتا ہے۔"
+  },
+  {
+   "en": "When we reverse the order to find $BA$, we must check the multiplication condition all over again because matrix multiplication is not always possible both ways. Here, $B$'s $1$ column matches $A$'s $1$ row, which tells us $BA$ exists and will be a larger $2 \\times 2$ matrix.",
+   "ur": "جب ہم $BA$ معلوم کرنے کے لیے ترتیب الٹتے ہیں، تو ہمیں ضرب کی شرط کو دوبارہ چیک کرنا پڑتا ہے کیونکہ کالبوں کی ضرب ہمیشہ دونوں طرف سے ممکن نہیں ہوتی۔ یہاں کالب $B$ کا $1$ کالم کالب $A$ کی $1$ قطار کے برابر ہے، جو بتاتا ہے کہ $BA$ ممکن ہے اور اس کا جواب ایک بڑا $2 \\times 2$ کا کالب ہو گا۔"
+  },
+  {
+   "en": "Using the same row-by-column rule, we multiply each of the $2$ rows in $B$ with each of the $2$ columns in $A$ separately. Since each row and column has only one number, there is nothing to add inside the positions, giving us four distinct products.",
+   "ur": "قطار کو کالم سے ضرب دینے کے اسی اصول کو استعمال کرتے ہوئے، ہم $B$ کی دونوں قطاروں کو باری باری $A$ کے دونوں کالموں سے ضرب دیتے ہیں۔ چونکہ ہر قطار اور کالم میں صرف ایک عدد ہے، اس لیے اندر جمع کرنے کے لیے کچھ نہیں ہے، اور یوں ہمیں چار الگ الگ حاصل ضرب ملتے ہیں۔"
+  },
+  {
+   "en": "Finally, we multiply the numbers in each of the four positions, taking care of the negative signs. This completes our $2 \\times 2$ matrix for $BA$ and finishes the entire problem.",
+   "ur": "آخر میں، ہم منفی علامتوں کا دھیان رکھتے ہوئے چاروں جگہوں پر موجود اعداد کو ضرب دیتے ہیں۔ اس سے ہمارا $BA$ کا $2 \\times 2$ کالب مکمل ہو جاتا ہے اور پورا سوال حل ہو جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "Both products $AB = \\begin{bmatrix} 11 \\end{bmatrix}$ and $BA = \\begin{bmatrix} 3 & -6 \\\\ -4 & 8 \\end{bmatrix}$ are possible, and this result clearly shows that in matrices, changing the order of multiplication ($AB$ vs $BA$) can completely change not only the numbers, but even the size (order) of the answer! You can quickly check the sizes: $(1 \\times 2)$ times $(2 \\times 1)$ gives a $1 \\times 1$ matrix, while $(2 \\times 1)$ times $(1 \\times 2)$ gives a $2 \\times 2$ matrix.",
+  "ur": "دونوں حاصل ضرب $AB = \\begin{bmatrix} 11 \\end{bmatrix}$ اور $BA = \\begin{bmatrix} 3 & -6 \\\\ -4 & 8 \\end{bmatrix}$ ممکن ہیں، اور یہ نتیجہ واضح طور پر دکھاتا ہے کہ کالبوں میں ضرب کی ترتیب بدلنے سے ($AB$ بمقابلہ $BA$) نہ صرف اعداد، بلکہ جواب کا سائز (مرتبہ) بھی مکمل طور پر بدل سکتا ہے! آپ مرتبوں سے باآسانی پڑتال کر سکتے ہیں: $(1 \\times 2)$ اور $(2 \\times 1)$ کی ضرب سے $1 \\times 1$ کا کالب بنتا ہے، جبکہ $(2 \\times 1)$ اور $(1 \\times 2)$ کی ضرب سے $2 \\times 2$ کا کالب حاصل ہوتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

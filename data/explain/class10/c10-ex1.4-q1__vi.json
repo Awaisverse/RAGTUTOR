@@ -1,0 +1,50 @@
+{
+ "item": "c10-ex1.4-q1",
+ "label": "vi",
+ "answer_ref": "$\\operatorname{Re} = - \\frac{7}{25},\\ \\operatorname{Im} = \\frac{24}{25}$",
+ "math": [
+  "",
+  "\\frac{2 + i}{2 - i} \\times \\frac{2 + i}{2 + i}",
+  "= \\frac{3 + 4i}{2^2 + 1^2} = \\frac{3 + 4i}{5}",
+  "= \\frac{3}{5} + \\frac{4}{5}i",
+  "\\left(\\frac{3}{5} + \\frac{4}{5}i\\right)^2 = (\\frac{3}{5})^2 + 2(\\frac{3}{5})(\\frac{4}{5}i) + (\\frac{4}{5}i)^2",
+  "= \\frac{9}{25} + \\frac{24}{25}i - \\frac{16}{25} = - \\frac{7}{25} + \\frac{24}{25}i",
+  "\\operatorname{Re}(z) = - \\frac{7}{25}, \\quad \\operatorname{Im}(z) = \\frac{24}{25}"
+ ],
+ "why": [
+  {
+   "en": "Using the law of negative exponents, we flip the fraction inside the brackets to make the power positive $2$. This makes our work much easier because we can first simplify the inner fraction $\\frac{2+i}{2-i}$ and then square it at the end.",
+   "ur": "منفی قوت نما (negative exponent) کے اصول کو استعمال کرتے ہوئے، ہم بریکٹ کے اندر موجود کسر کو الٹ دیتے ہیں تاکہ قوت نما مثبت $2$ ہو جائے۔ اس سے ہمارا کام بہت آسان ہو جاتا ہے کیونکہ ہم پہلے اندرونی کسر $\\frac{2+i}{2-i}$ کو مختصر کر سکتے ہیں اور آخر میں اس کا مربع لے سکتے ہیں۔"
+  },
+  {
+   "en": "We cannot leave $i$ in the denominator of a complex number, so we rationalize the inner fraction using the conjugate of $2 - i$, which is $2 + i$. Multiplying the top and bottom by $2 + i$ does not change the value of the fraction, but it will eliminate the imaginary unit from the bottom.",
+   "ur": "ہم کسی کمپلیکس نمبر کے مخرج (denominator) میں $i$ نہیں چھوڑ سکتے، اس لیے ہم $2 - i$ کے زوج (conjugate) یعنی $2 + i$ کو استعمال کرتے ہوئے اندرونی کسر کو ناطق (rationalize) بناتے ہیں۔ شمار کنندہ اور مخرج کو $2 + i$ سے ضرب دینے سے کسر کی قیمت نہیں بدلتی، لیکن اس سے نچلے حصے سے خیالی اکائی ختم ہو جائے گی۔"
+  },
+  {
+   "en": "In the denominator, multiplying conjugates gives a real number $2^2 + 1^2 = 5$, while in the numerator we expand $(2+i)(2+i)$ and replace $i^2$ with $-1$ to get $3 + 4i$. Now the fraction has a single real number in the denominator, bringing us closer to the standard form.",
+   "ur": "مخرج میں، زوج نمبروں کو ضرب دینے سے ایک حقیقی عدد $2^2 + 1^2 = 5$ حاصل ہوتا ہے، جبکہ شمار کنندہ میں ہم $(2+i)(2+i)$ کو کھولتے ہیں اور $i^2$ کی جگہ $-1$ لگا کر $3 + 4i$ حاصل کرتے ہیں۔ اب کسر کے مخرج میں ایک واحد حقیقی عدد آ گیا ہے، جو ہمیں معیاری شکل کے قریب لے آتا ہے۔"
+  },
+  {
+   "en": "We split the fraction by dividing both terms of the numerator by $5$ to write the inner expression in the standard form $a + bi$. Having it as $\\frac{3}{5} + \\frac{4}{5}i$ prepares it neatly for the squaring operation from Step 1.",
+   "ur": "اندرونی جملے کو معیاری شکل $a + bi$ میں لکھنے کے لیے ہم شمار کنندہ کی دونوں رقموں کو $5$ پر تقسیم کر کے کسر کو الگ الگ کر لیتے ہیں۔ اسے $\\frac{3}{5} + \\frac{4}{5}i$ کی شکل میں لکھنے سے یہ پہلے مرحلے والے مربع (square) کے عمل کے لیے بالکل تیار ہو جاتا ہے۔"
+  },
+  {
+   "en": "Now we apply the power $2$ from the first step using the algebraic identity $(a+b)^2 = a^2 + 2ab + b^2$. This expands the squared bracket into separate terms that we can calculate and combine.",
+   "ur": "اب ہم الجبری کلیہ $(a+b)^2 = a^2 + 2ab + b^2$ استعمال کرتے ہوئے پہلے مرحلے والی طاقت $2$ کا اطلاق کرتے ہیں۔ اس سے مربع والی بریکٹ الگ الگ رقموں میں کھل جاتی ہے جنہیں ہم حل کر کے یکجا کر سکتے ہیں۔"
+  },
+  {
+   "en": "By using the fundamental definition $i^2 = -1$, the last term $(\\frac{4}{5}i)^2$ becomes a real number $-\\frac{16}{25}$, which we combine with $\\frac{9}{25}$ to get $-\\frac{7}{25}$. This gives us the final simplified complex number in the standard form $a + bi$.",
+   "ur": "بنیادی تعریف $i^2 = -1$ کو استعمال کرتے ہوئے، آخری رقم $(\\frac{4}{5}i)^2$ ایک حقیقی عدد $-\\frac{16}{25}$ بن جاتی ہے، جسے ہم $\\frac{9}{25}$ کے ساتھ ملا کر $-\\frac{7}{25}$ حاصل کرتے ہیں۔ اس سے ہمیں معیاری شکل $a + bi$ میں آخری مختصر شدہ کمپلیکس نمبر مل جاتا ہے۔"
+  },
+  {
+   "en": "From the standard form $a + bi$, the number without $i$ is the real part and the coefficient multiplying $i$ is the imaginary part. Notice that the imaginary part is just the number $\\frac{24}{25}$, without the symbol $i$.",
+   "ur": "معیاری شکل $a + bi$ میں، $i$ کے بغیر والا عدد حقیقی حصہ (real part) ہوتا ہے اور $i$ سے ضرب کھانے والا عددی سر خیالی حصہ (imaginary part) ہوتا ہے۔ دھیان رہے کہ خیالی حصہ صرف عدد $\\frac{24}{25}$ ہے، اس کے ساتھ علامت $i$ نہیں لکھی جاتی۔"
+  }
+ ],
+ "meaning": {
+  "en": "This final answer tells us that when the complex expression $\\left(\\frac{2-i}{2+i}\\right)^{-2}$ is completely simplified into the standard form $a + bi$, its real part is $-\\frac{7}{25}$ and its imaginary part is $\\frac{24}{25}$. Notice that the original numerator and denominator are conjugates of each other with $2^2 + 1^2 = 5$, which is why the final denominator is $5^2 = 25$, and we can even check our work by seeing that $(-\\frac{7}{25})^2 + (\\frac{24}{25})^2 = 1$.",
+  "ur": "یہ آخری جواب ہمیں بتاتا ہے کہ جب کمپلیکس جملے $\\left(\\frac{2-i}{2+i}\\right)^{-2}$ کو مکمل طور پر مختصر کر کے معیاری شکل $a + bi$ میں لکھا جائے، تو اس کا حقیقی حصہ $-\\frac{7}{25}$ اور خیالی حصہ $\\frac{24}{25}$ ہوتا ہے۔ غور کریں کہ اصل شمار کنندہ اور مخرج ایک دوسرے کے زوج (conjugates) ہیں جن کے لیے $2^2 + 1^2 = 5$ بنتا ہے، اسی وجہ سے آخری مخرج $5^2 = 25$ آیا ہے، اور ہم اپنے جواب کی پڑتال اس طرح بھی کر سکتے ہیں کہ $(-\\frac{7}{25})^2 + (\\frac{24}{25})^2 = 1$ بنتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

@@ -1,0 +1,61 @@
+{
+ "item": "c10-rev7-q2",
+ "label": "iii",
+ "answer_ref": "$4.00$ cm$^2$",
+ "steps": [
+  {
+   "math": "c = 3.1\\ \\text{cm},\\quad \\gamma = 44^\\circ,\\quad \\alpha = 36^\\circ",
+   "en": "Write down the given values for the side $c$ and the angles $\\gamma$ and $\\alpha$ of $\\triangle ABC$. We need to find the area of the triangle.",
+   "ur": "$\\triangle ABC$ کے ضلع $c$ اور زاویوں $\\gamma$ اور $\\alpha$ کی دی گئی قیمتیں لکھیں۔ ہمیں مثلث کا رقبہ معلوم کرنا ہے۔"
+  },
+  {
+   "math": "\\beta = 180^\\circ - \\gamma - \\alpha = 180^\\circ - 44^\\circ - 36^\\circ = 100^\\circ",
+   "en": "Since the sum of the interior angles of a triangle is always $180^\\circ$, subtract the two given angles from $180^\\circ$ to find the third angle $\\beta$.",
+   "ur": "چونکہ مثلث کے اندرونی زاویوں کا مجموعہ ہمیشہ $180^\\circ$ ہوتا ہے، اس لیے تیسرا زاویہ $\\beta$ معلوم کرنے کے لیے دیے گئے دونوں زاویوں کو $180^\\circ$ میں سے تفریق کریں۔",
+   "check": [
+    "180 - 44 - 36 == 100"
+   ]
+  },
+  {
+   "math": "\\frac{a}{\\sin\\alpha} = \\frac{b}{\\sin\\beta} = \\frac{c}{\\sin\\gamma}",
+   "en": "Recall the Law of Sines, which relates the lengths of the sides of a triangle to the sines of its opposite angles.",
+   "ur": "قانونِ جیب (Law of Sines) کو یاد کریں، جو مثلث کے اضلاع کی لمبائیوں اور ان کے بالمقابل زاویوں کے سائن (sine) کے درمیان تعلق ظاہر کرتا ہے۔"
+  },
+  {
+   "math": "a = \\frac{c\\sin\\alpha}{\\sin\\gamma} = \\frac{3.1\\sin 36^\\circ}{\\sin 44^\\circ} \\approx 2.623\\ \\text{cm}",
+   "en": "Use the Law of Sines to find the length of side $a$ by substituting $c = 3.1$, $\\alpha = 36^\\circ$, and $\\gamma = 44^\\circ$.",
+   "ur": "قانونِ جیب کا استعمال کرتے ہوئے $c = 3.1$، $\\alpha = 36^\\circ$ اور $\\gamma = 44^\\circ$ درج کر کے ضلع $a$ کی لمبائی معلوم کریں۔",
+   "check": [
+    "Abs((R(31,10)*sin((36)*pi/180)/sin((44)*pi/180)) - 2.623) <= 0.000500001"
+   ]
+  },
+  {
+   "math": "b = \\frac{c\\sin\\beta}{\\sin\\gamma} = \\frac{3.1\\sin 100^\\circ}{\\sin 44^\\circ} \\approx 4.395\\ \\text{cm}",
+   "en": "Similarly, use the Law of Sines to find the length of side $b$ by substituting $c = 3.1$, $\\beta = 100^\\circ$, and $\\gamma = 44^\\circ$.",
+   "ur": "اسی طرح، قانونِ جیب کا استعمال کرتے ہوئے $c = 3.1$، $\\beta = 100^\\circ$ اور $\\gamma = 44^\\circ$ درج کر کے ضلع $b$ کی لمبائی معلوم کریں۔",
+   "check": [
+    "Abs((R(31,10)*sin((100)*pi/180)/sin((44)*pi/180)) - 4.395) <= 0.000500001"
+   ]
+  },
+  {
+   "math": "\\text{Area of } \\triangle ABC = \\frac{1}{2}ab\\sin\\gamma",
+   "en": "Now that we have two sides $a$ and $b$ and their included angle $\\gamma$, we can apply the area formula for a triangle.",
+   "ur": "اب جبکہ ہمارے پاس دو اضلاع $a$ اور $b$ اور ان کا درمیانی زاویہ $\\gamma$ موجود ہیں، ہم مثلث کے رقبے کا فارمولا استعمال کر سکتے ہیں۔"
+  },
+  {
+   "math": "\\text{Area} = \\frac{1}{2}(2.623)(4.395)\\sin 44^\\circ \\approx 4.00\\ \\text{cm}^2",
+   "en": "Substitute the values of $a$, $b$, and $\\gamma$ into the formula and calculate the final area of $\\triangle ABC$.",
+   "ur": "فارمولے میں $a$، $b$ اور $\\gamma$ کی قیمتیں درج کریں اور $\\triangle ABC$ کا حتمی رقبہ معلوم کریں۔",
+   "check": [
+    "Abs((R(1,2)*(R(31,10)*sin((36)*pi/180)/sin((44)*pi/180))*(R(31,10)*sin((100)*pi/180)/sin((44)*pi/180))*sin((44)*pi/180)) - 4.00) <= 0.005000001",
+    "180 - 44 - 36 == 100",
+    "Abs((R(31,10)*sin((36)*pi/180)/sin((44)*pi/180)) - 2.623) <= 0.000500001",
+    "Abs((R(31,10)*sin((100)*pi/180)/sin((44)*pi/180)) - 4.395) <= 0.000500001",
+    "Abs((R(1,2)*(R(31,10)*sin((36)*pi/180)/sin((44)*pi/180))*(R(31,10)*sin((100)*pi/180)/sin((44)*pi/180))*sin((44)*pi/180)) - 4.00) <= 0.0050000010000000004"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

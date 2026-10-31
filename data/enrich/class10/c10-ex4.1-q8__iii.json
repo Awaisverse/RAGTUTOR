@@ -1,0 +1,56 @@
+{
+ "item": "c10-ex4.1-q8",
+ "label": "iii",
+ "answer_ref": "verified: $f(f^{-1}(x)) = f^{-1}(f(x)) = x$",
+ "steps": [
+  {
+   "math": "y = \\frac{x-3}{4}",
+   "en": "We are given the function $f(x) = \\frac{x-3}{4}$. To find its inverse $f^{-1}(x)$, first let $y = f(x)$, which implies $x = f^{-1}(y)$.",
+   "ur": "ہمیں تفاعل $f(x) = \\frac{x-3}{4}$ دیا گیا ہے۔ اس کا معکوس تفاعل $f^{-1}(x)$ معلوم کرنے کے لیے، پہلے فرض کریں کہ $y = f(x)$ ہے، جس سے مراد $x = f^{-1}(y)$ ہے۔"
+  },
+  {
+   "math": "x = 4y + 3",
+   "en": "Multiply both sides by $4$ to get $4y = x - 3$, and then add $3$ to both sides to express $x$ in terms of $y$.",
+   "ur": "دونوں اطراف کو $4$ سے ضرب دے کر $4y = x - 3$ حاصل کریں، اور پھر $x$ کو $y$ کی شکل میں ظاہر کرنے کے لیے دونوں اطراف میں $3$ جمع کریں۔",
+   "check": [
+    "solve(Eq(y, (x - 3)/4), x)[0] == 4*y + 3"
+   ]
+  },
+  {
+   "math": "f^{-1}(x) = 4x + 3",
+   "en": "Since $x = f^{-1}(y)$, we have $f^{-1}(y) = 4y + 3$. Replacing $y$ with $x$ gives the inverse function $f^{-1}(x)$.",
+   "ur": "چونکہ $x = f^{-1}(y)$ ہے، اس لیے ہمیں $f^{-1}(y) = 4y + 3$ حاصل ہوتا ہے۔ $y$ کی جگہ $x$ رکھنے سے معکوس تفاعل $f^{-1}(x)$ ملتا ہے۔",
+   "check": [
+    "(4*y + 3).subs(y, x) == 4*x + 3"
+   ]
+  },
+  {
+   "math": "f(f^{-1}(x)) = f(4x + 3) = \\frac{(4x + 3) - 3}{4} = \\frac{4x}{4} = x",
+   "en": "Now, substitute $f^{-1}(x) = 4x + 3$ into the original function $f(x)$ and simplify.",
+   "ur": "اب، $f^{-1}(x) = 4x + 3$ کو اصل تفاعل $f(x)$ میں درج کریں اور مختصر کریں۔",
+   "check": [
+    "simplify(((4*x + 3) - 3)/4) == x"
+   ]
+  },
+  {
+   "math": "f^{-1}(f(x)) = f^{-1}\\left(\\frac{x-3}{4}\\right) = 4\\left(\\frac{x-3}{4}\\right) + 3 = (x - 3) + 3 = x",
+   "en": "Next, substitute $f(x) = \\frac{x-3}{4}$ into the inverse function $f^{-1}(x)$ and simplify.",
+   "ur": "اس کے بعد، $f(x) = \\frac{x-3}{4}$ کو معکوس تفاعل $f^{-1}(x)$ میں درج کریں اور مختصر کریں۔",
+   "check": [
+    "simplify(4*((x - 3)/4) + 3) == x"
+   ]
+  },
+  {
+   "math": "f(f^{-1}(x)) = f^{-1}(f(x)) = x",
+   "en": "From both results, it is verified that $f(f^{-1}(x)) = f^{-1}(f(x)) = x$.",
+   "ur": "دونوں نتائج سے یہ تصدیق ہو جاتی ہے کہ $f(f^{-1}(x)) = f^{-1}(f(x)) = x$ ہے۔",
+   "check": [
+    "simplify((x/4 - 3/4).subs(x, (4*x + 3))) == x",
+    "simplify((4*x + 3).subs(x, (x/4 - 3/4))) == x"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

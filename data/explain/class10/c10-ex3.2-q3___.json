@@ -1,0 +1,40 @@
+{
+ "item": "c10-ex3.2-q3",
+ "label": "",
+ "answer_ref": "A: unit, B: scalar, C: diagonal, D: diagonal, E: scalar",
+ "math": [
+  "A = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}:\\ \\text{unit matrix}",
+  "B = \\begin{bmatrix} 5 & 0 \\\\ 0 & 5 \\end{bmatrix}:\\ \\text{scalar matrix}",
+  "C = \\begin{bmatrix} 3 & 0 \\\\ 0 & 0 \\end{bmatrix}:\\ \\text{diagonal matrix}",
+  "D = \\begin{bmatrix} 7 & 0 \\\\ 0 & 6 \\end{bmatrix}:\\ \\text{diagonal matrix}",
+  "E = \\begin{bmatrix} 2 & 0 \\\\ 0 & 2 \\end{bmatrix}:\\ \\text{scalar matrix}"
+ ],
+ "why": [
+  {
+   "en": "By the definition of a unit (or identity) matrix, it is a diagonal matrix where every entry on the main diagonal is $1$ and all non-diagonal entries are $0$. Looking at matrix $A$, its main diagonal has only $1$s and the rest are $0$s, which immediately classifies $A$ as a unit matrix.",
+   "ur": "یونٹ (یا وحدانی) قالب کی تعریف کے مطابق، یہ ایک ایسا وتر قالب ہوتا ہے جس کے مرکزی وتر کا ہر رکن $1$ ہو اور باقی تمام غیر وتری ارکان $0$ ہوں۔ قالب $A$ کو دیکھنے سے پتہ چلتا ہے کہ اس کے مرکزی وتر میں صرف $1$ ہیں اور باقی $0$ ہیں، جس سے ثابت ہوتا ہے کہ $A$ ایک یونٹ قالب ہے۔"
+  },
+  {
+   "en": "According to the definition of a scalar matrix, it is a diagonal matrix in which all the main diagonal entries are the same non-zero number (other than $1$). Since matrix $B$ has $0$s off the diagonal and the exact same number $5$ on the main diagonal, we identify $B$ as a scalar matrix.",
+   "ur": "سکیلر قالب کی تعریف کے مطابق، یہ ایک ایسا وتر قالب ہے جس کے مرکزی وتر کے تمام ارکان ایک جیسا غیر صفر عدد ($1$ کے علاوہ) ہوں۔ چونکہ قالب $B$ میں وتر کے علاوہ باقی ارکان $0$ ہیں اور مرکزی وتر پر ایک جیسا عدد $5$ موجود ہے، اس لیے ہم $B$ کو ایک سکیلر قالب کے طور پر شناخت کرتے ہیں۔"
+  },
+  {
+   "en": "A diagonal matrix requires all non-diagonal entries to be $0$, and at least one entry on the main diagonal must be non-zero. In matrix $C$, the off-diagonal entries are $0$ and the diagonal has $3$ and $0$ (which are not equal, so it is not scalar), making $C$ strictly a diagonal matrix.",
+   "ur": "وتر قالب کی شرط یہ ہے کہ تمام غیر وتری ارکان $0$ ہوں، اور مرکزی وتر کا کم از کم ایک رکن غیر صفر ہو۔ قالب $C$ میں غیر وتری ارکان $0$ ہیں اور وتر پر $3$ اور $0$ ہیں (جو برابر نہیں ہیں، اس لیے یہ سکیلر نہیں ہے)، جس سے $C$ ایک وتر قالب بن جاتا ہے۔"
+  },
+  {
+   "en": "We apply the definition of a diagonal matrix again: a square matrix with $0$s everywhere except the main diagonal, where at least one entry is non-zero. Matrix $D$ has $0$s off the diagonal and different numbers ($7$ and $6$) on the main diagonal, so it is classified simply as a diagonal matrix.",
+   "ur": "ہم دوبارہ وتر قالب کی تعریف لاگو کرتے ہیں: ایک مربی قالب جس میں مرکزی وتر کے علاوہ ہر جگہ $0$ ہو، اور وتر کا کم از کم ایک رکن غیر صفر ہو۔ قالب $D$ میں وتر کے علاوہ باقی ارکان $0$ ہیں اور مرکزی وتر پر مختلف اعداد ($7$ اور $6$) ہیں، اس لیے اسے وتر قالب قرار دیا جاتا ہے۔"
+  },
+  {
+   "en": "Using the scalar matrix rule once more, we look for a diagonal matrix whose main diagonal entries are all equal. Because matrix $E$ has $0$s in the non-diagonal positions and the same number $2$ repeated along the main diagonal, it is clearly a scalar matrix.",
+   "ur": "سکیلر قالب کے اصول کو ایک بار پھر استعمال کرتے ہوئے، ہم ایک ایسا وتر قالب تلاش کرتے ہیں جس کے مرکزی وتر کے تمام ارکان برابر ہوں۔ چونکہ قالب $E$ میں غیر وتری جگہوں پر $0$ ہیں اور مرکزی وتر پر ایک ہی عدد $2$ موجود ہے، اس لیے یہ واضح طور پر ایک سکیلر قالب ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This final result correctly sorts all five given matrices into their most specific types by inspecting their main diagonals ($1$s for unit matrix $A$, equal numbers $5$ and $2$ for scalar matrices $B$ and $E$, and unequal numbers for diagonal matrices $C$ and $D$). Note that while every unit and scalar matrix is also technically a diagonal matrix, in exams we always write the most specific name possible, which you can quickly check by looking only at the diagonal numbers once you confirm the corners are $0$.",
+  "ur": "یہ حتمی نتیجہ دیے گئے پانچوں قالبوں کو ان کے مرکزی وتر کے معائنے کے ذریعے ان کی مخصوص ترین اقسام میں درجہ بند کرتا ہے (یونٹ قالب $A$ کے لیے $1$، سکیلر قالب $B$ اور $E$ کے لیے یکساں اعداد $5$ اور $2$، اور وتر قالب $C$ اور $D$ کے لیے مختلف اعداد)۔ یاد رکھیں کہ اگرچہ ہر یونٹ اور سکیلر قالب تکنیکی طور پر وتر قالب بھی ہوتا ہے، لیکن امتحانات میں ہم ہمیشہ سب سے مخصوص نام لکھتے ہیں، جس کی تصدیق آپ غیر وتری ارکان کے $0$ ہونے کا یقین کرنے کے بعد صرف وتر کے اعداد کو دیکھ کر باآسانی کر سکتے ہیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

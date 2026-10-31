@@ -1,0 +1,40 @@
+{
+ "item": "c10-rev1-q4",
+ "label": "ii",
+ "answer_ref": "$\\frac{8}{145} - \\frac{9}{145}i$",
+ "math": [
+  "z = 8 + 9i \\implies a = 8, \\quad b = 9",
+  "z^{-1} = \\frac{a}{a^2+b^2} - \\frac{b}{a^2+b^2}i",
+  "a^2 + b^2 = (8)^2 + (9)^2",
+  "a^2 + b^2 = 64 + 81 = 145",
+  "z^{-1} = \\frac{8}{145} - \\frac{9}{145}i"
+ ],
+ "why": [
+  {
+   "en": "To use the standard textbook formula for a multiplicative inverse, we first need to know the exact values of the real part $a$ and the imaginary part $b$. Comparing our given number $z = 8 + 9i$ with the general form $z = a + bi$ clearly shows us that $a = 8$ and $b = 9$.",
+   "ur": "ضربی معکوس (multiplicative inverse) کا معیاری فارمولا استعمال کرنے کے لیے ہمیں سب سے پہلے حقیقی حصے $a$ اور خیالی حصے $b$ کی قیمتیں معلوم ہونی چاہئیں۔ اپنے دیے گئے عدد $z = 8 + 9i$ کا موازنہ معیاری شکل $z = a + bi$ سے کرنے پر ہمیں صاف پتہ چلتا ہے کہ $a = 8$ اور $b = 9$ ہے۔"
+  },
+  {
+   "en": "Rather than dividing by a complex number and rationalizing the denominator from scratch, we recall the direct textbook formula for the multiplicative inverse $z^{-1}$. Writing this formula down gives us a clear template to plug our values of $a$ and $b$ into.",
+   "ur": "پیچیدہ عدد سے تقسیم کرنے اور مخرج کو ناطق بنانے (rationalize) کے لمبے طریقے کے بجائے، ہم کتاب میں دیا گیا ضربی معکوس $z^{-1}$ کا براہِ راست فارمولا لکھتے ہیں۔ یہ فارمولا لکھنے سے ہمیں ایک واضح خاکہ مل جاتا ہے جس میں ہم $a$ اور $b$ کی قیمتیں درج کر سکتے ہیں۔"
+  },
+  {
+   "en": "Notice that both fractions in the formula share the exact same denominator, $a^2 + b^2$. Calculating this common part first by putting in $a = 8$ and $b = 9$ makes our main substitution much cleaner and prevents calculation mistakes.",
+   "ur": "غور کریں کہ فارمولے کی دونوں کسروں کا مخرج (denominator) بالکل ایک جیسا یعنی $a^2 + b^2$ ہے۔ $a = 8$ اور $b = 9$ درج کر کے اس مشترک حصے کو پہلے حل کرنے سے ہمارا اگلا مرحلہ بہت آسان ہو جاتا ہے اور غلطی کا امکان کم ہو جاتا ہے۔"
+  },
+  {
+   "en": "By squaring $8$ to get $64$ and $9$ to get $81$, and then adding them together, we find the single number that goes at the bottom of our fractions. Knowing that $a^2 + b^2 = 145$ means the hardest part of the arithmetic is now complete.",
+   "ur": "$8$ کا مربع $64$ اور $9$ کا مربع $81$ لے کر انہیں جمع کرنے سے ہمیں وہ واحد عدد مل جاتا ہے جو ہماری کسروں کے نیچے آئے گا۔ $a^2 + b^2 = 145$ معلوم ہونے کا مطلب ہے کہ حساب کتاب کا سب سے اہم حصہ اب مکمل ہو چکا ہے۔"
+  },
+  {
+   "en": "Now we simply assemble our final complex number by placing $a = 8$, $b = 9$, and our calculated denominator $145$ into the formula from Step 2. This directly gives us the required multiplicative inverse in the standard $a + bi$ form, where the real and imaginary parts are clearly separated.",
+   "ur": "اب ہم صرف $a = 8$، $b = 9$ اور اپنے معلوم کردہ مخرج $145$ کو مرحلہ 2 کے فارمولے میں درج کر کے اپنا حتمی پیچیدہ عدد بنا لیتے ہیں۔ اس سے ہمیں مطلوبہ ضربی معکوس براہِ راست معیاری شکل $a + bi$ میں مل جاتا ہے، جہاں حقیقی اور خیالی حصے الگ الگ اور واضح ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $\\frac{8}{145} - \\frac{9}{145}i$ is the multiplicative inverse (or reciprocal) of $z = 8 + 9i$. By definition, this means that if you multiply the original number $8 + 9i$ by $\\frac{8}{145} - \\frac{9}{145}i$, the result will be the multiplicative identity, $1$.",
+  "ur": "آخری جواب $\\frac{8}{145} - \\frac{9}{145}i$ دراصل دیے گئے عدد $z = 8 + 9i$ کا ضربی معکوس (یا الٹ) ہے۔ تعریف کے مطابق اس کا مطلب یہ ہے کہ اگر آپ اصل عدد $8 + 9i$ کو $\\frac{8}{145} - \\frac{9}{145}i$ سے ضرب دیں، تو جواب ضربی ذاتی عنصر (multiplicative identity) یعنی $1$ آئے گا۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

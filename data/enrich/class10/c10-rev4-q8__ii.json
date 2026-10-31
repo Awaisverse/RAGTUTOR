@@ -1,0 +1,72 @@
+{
+ "item": "c10-rev4-q8",
+ "label": "ii",
+ "answer_ref": "$x = -\\frac{7}{2}$",
+ "steps": [
+  {
+   "math": "f(x) = 3x + 7, \\quad f^{-1}(x) = \\frac{x - 7}{3}",
+   "en": "Write down the given function $f(x)$ and its inverse $f^{-1}(x)$ found in part (i).",
+   "ur": "دیے گئے تفاعل $f(x)$ اور حصہ (i) میں معلوم کردہ اس کے معکوس $f^{-1}(x)$ کو لکھیں۔",
+   "check": [
+    "3*((x - 7)/3) + 7 == x"
+   ]
+  },
+  {
+   "math": "f(x) = f^{-1}(x)",
+   "en": "According to the given condition, set the function equal to its inverse.",
+   "ur": "دی گئی شرط کے مطابق، تفاعل کو اس کے معکوس کے برابر رکھیں۔"
+  },
+  {
+   "math": "3x + 7 = \\frac{x - 7}{3}",
+   "en": "Substitute the expressions for $f(x)$ and $f^{-1}(x)$ into the equation.",
+   "ur": "مساوات میں $f(x)$ اور $f^{-1}(x)$ کی قیمتیں درج کریں۔"
+  },
+  {
+   "math": "3(3x + 7) = x - 7",
+   "en": "Multiply both sides of the equation by $3$ to eliminate the fraction.",
+   "ur": "کسر کو ختم کرنے کے لیے مساوات کے دونوں اطراف کو $3$ سے ضرب دیں۔",
+   "check": [
+    "3*((x - 7)/3) == x - 7"
+   ]
+  },
+  {
+   "math": "9x + 21 = x - 7",
+   "en": "Expand the bracket on the left-hand side.",
+   "ur": "بائیں جانب بریکٹ کو کھولیں۔",
+   "check": [
+    "3*(3*x + 7) == 9*x + 21"
+   ]
+  },
+  {
+   "math": "9x - x = -7 - 21",
+   "en": "Collect the $x$ terms on the left side and the constant terms on the right side.",
+   "ur": "$x$ والی رقوم کو بائیں جانب اور مستقل رقوم کو دائیں جانب اکٹھا کریں۔",
+   "check": [
+    "(9*x + 21) - (x - 7) == (9*x - x) - (-7 - 21)"
+   ]
+  },
+  {
+   "math": "8x = -28",
+   "en": "Simplify both sides of the equation.",
+   "ur": "مساوات کے دونوں اطراف کو مختصر کریں۔",
+   "check": [
+    "9*x - x == 8*x",
+    "-7 - 21 == -28"
+   ]
+  },
+  {
+   "math": "x = -\\frac{28}{8} = -\\frac{7}{2}",
+   "en": "Divide both sides by $8$ and reduce the fraction to its simplest form to get the final answer.",
+   "ur": "حتمی جواب حاصل کرنے کے لیے دونوں اطراف کو $8$ سے تقسیم کریں اور کسر کو مختصر ترین شکل میں لکھیں۔",
+   "check": [
+    "R(-28, 8) == R(-7, 2)",
+    "3*R(-7, 2) + 7 == (R(-7, 2) - 7)/3",
+    "3*(3*x + 7) - (x - 7) == 8*x + 28",
+    "3*R(-7,2) + 7 == (R(-7,2) - 7)/3"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

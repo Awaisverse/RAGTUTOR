@@ -1,0 +1,40 @@
+{
+ "item": "c10-ex3.3-q4",
+ "label": "i",
+ "answer_ref": "verified: both sides $= \\begin{bmatrix} 5 & 7 \\\\ 2 & 8 \\end{bmatrix}$",
+ "math": [
+  "",
+  "A + B = \\begin{bmatrix} 2 & 3 \\\\ -3 & 2 \\end{bmatrix} + \\begin{bmatrix} 3 & 4 \\\\ 5 & 6 \\end{bmatrix} = \\begin{bmatrix} 2 + 3 & 3 + 4 \\\\ -3 + 5 & 2 + 6 \\end{bmatrix} = \\begin{bmatrix} 5 & 7 \\\\ 2 & 8 \\end{bmatrix}",
+  "",
+  "B + A = \\begin{bmatrix} 3 & 4 \\\\ 5 & 6 \\end{bmatrix} + \\begin{bmatrix} 2 & 3 \\\\ -3 & 2 \\end{bmatrix} = \\begin{bmatrix} 3 + 2 & 4 + 3 \\\\ 5 - 3 & 6 + 2 \\end{bmatrix} = \\begin{bmatrix} 5 & 7 \\\\ 2 & 8 \\end{bmatrix}",
+  "A+B = \\begin{bmatrix} 5 & 7 \\\\ 2 & 8 \\end{bmatrix} = B+A"
+ ],
+ "why": [
+  {
+   "en": "To verify an equation, we always solve the two sides separately. We start by selecting the Left-Hand Side, $A+B$, to find its single matrix value first.",
+   "ur": "کسی مساوات کی تصدیق کے لیے ہم ہمیشہ دونوں اطراف کو الگ الگ حل کرتے ہیں۔ ہم سب سے پہلے بائیں طرف، یعنی $A+B$ کو لیتے ہیں تاکہ اس کا ایک کالب کی صورت میں جواب نکال سکیں۔"
+  },
+  {
+   "en": "By the rule of matrix addition, since both $A$ and $B$ have the same order ($2$-by-$2$), we add their corresponding entries (like $2+3$ in the top-left corner). This gives us the final matrix $\\begin{bmatrix} 5 & 7 \\\\ 2 & 8 \\end{bmatrix}$ for the Left-Hand Side.",
+   "ur": "کالبوں کی جمع کے اصول کے مطابق، چونکہ $A$ اور $B$ دونوں کا مرتبہ ایک جیسا ہے، اس لیے ہم ان کے متناظرہ ارکان کو آپس میں جمع کرتے ہیں (جیسے اوپر بائیں کونے میں $2+3$)۔ اس سے ہمیں بائیں طرف کا حتمی کالب $\\begin{bmatrix} 5 & 7 \\\\ 2 & 8 \\end{bmatrix}$ مل جاتا ہے۔"
+  },
+  {
+   "en": "Now we take the Right-Hand Side, $B+A$, to evaluate it independently. Our goal is to see if reversing the order of the matrices gives the exact same result as the first side.",
+   "ur": "اب ہم دائیں طرف، یعنی $B+A$ کو لیتے ہیں تاکہ اسے الگ سے حل کر سکیں۔ ہمارا مقصد یہ دیکھنا ہے کہ کیا کالبوں کی ترتیب بدلنے سے بھی بالکل وہی جواب آتا ہے جو پہلی طرف کا آیا تھا۔"
+  },
+  {
+   "en": "Using the definition of matrix addition again, we place matrix $B$ first and add the matching entries of matrix $A$ to it (such as $3+2$ and $4+3$). This simplifies the Right-Hand Side to the single matrix $\\begin{bmatrix} 5 & 7 \\\\ 2 & 8 \\end{bmatrix}$.",
+   "ur": "کالبوں کی جمع کی تعریف کو دوبارہ استعمال کرتے ہوئے، ہم کالب $B$ کو پہلے رکھتے ہیں اور اس میں کالب $A$ کے متناظرہ ارکان جمع کرتے ہیں (جیسے $3+2$ اور $4+3$)۔ اس سے دائیں طرف بھی حل ہو کر ایک کالب $\\begin{bmatrix} 5 & 7 \\\\ 2 & 8 \\end{bmatrix}$ بن جاتی ہے۔"
+  },
+  {
+   "en": "We compare the results from Step 2 and Step 4. Since every corresponding entry in both resulting matrices is identical, it proves that the Left-Hand Side is equal to the Right-Hand Side.",
+   "ur": "ہم مرحلہ 2 اور مرحلہ 4 کے نتائج کا موازنہ کرتے ہیں۔ چونکہ دونوں حاصل شدہ کالبوں کا ہر رکن بالکل ایک جیسا ہے، اس سے ثابت ہوتا ہے کہ بائیں طرف اور دائیں طرف آپس میں برابر ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "Both $A+B$ and $B+A$ equal the same matrix $\\begin{bmatrix} 5 & 7 \\\\ 2 & 8 \\end{bmatrix}$, which verifies the commutative law of addition for these matrices. This tells us that the order in which we add two matrices of the same size does not change the final answer.",
+  "ur": "دونوں $A+B$ اور $B+A$ کا جواب ایک ہی کالب $\\begin{bmatrix} 5 & 7 \\\\ 2 & 8 \\end{bmatrix}$ آیا ہے، جس سے ان کالبوں کے لیے جمع کے قانونِ مبادلہ کی تصدیق ہوتی ہے۔ یہ ہمیں بتاتا ہے کہ یکساں مرتبے کے دو کالبوں کو جمع کرتے وقت ان کی ترتیب بدلنے سے حتمی جواب پر کوئی فرق نہیں پڑتا۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

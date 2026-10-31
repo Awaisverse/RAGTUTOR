@@ -1,0 +1,75 @@
+{
+ "item": "c10-ex2.3-q4",
+ "label": "v",
+ "answer_ref": "$x^2 + 6x + 21 = 0$",
+ "steps": [
+  {
+   "math": "x^2 + 2x + 4 = 0 \\implies a = 1,\\quad b = 2,\\quad c = 4",
+   "en": "Write down the given quadratic equation and compare it with the standard form $ax^2 + bx + c = 0$ to identify the coefficients $a$, $b$, and $c$.",
+   "ur": "دی گئی دو درجی مساوات لکھیں اور عددی سر $a$، $b$ اور $c$ معلوم کرنے کے لیے اس کا معیاری شکل $ax^2 + bx + c = 0$ سے موازنہ کریں۔"
+  },
+  {
+   "math": "\\alpha + \\beta = -\\frac{b}{a} = -\\frac{2}{1} = -2,\\quad \\alpha\\beta = \\frac{c}{a} = \\frac{4}{1} = 4",
+   "en": "Since $\\alpha$ and $\\beta$ are the roots of the given equation, find their sum and product using the formulas $\\alpha + \\beta = -\\frac{b}{a}$ and $\\alpha\\beta = \\frac{c}{a}$.",
+   "ur": "چونکہ $\\alpha$ اور $\\beta$ دی گئی مساوات کے روٹس ہیں، اس لیے فارمولوں $\\alpha + \\beta = -\\frac{b}{a}$ اور $\\alpha\\beta = \\frac{c}{a}$ کی مدد سے ان کا مجموعہ اور حاصل ضرب معلوم کریں۔",
+   "check": [
+    "-R(2, 1) == -2",
+    "R(4, 1) == 4",
+    "(-1 + I*sqrt(3)) + (-1 - I*sqrt(3)) == -2",
+    "(-1 + I*sqrt(3))*(-1 - I*sqrt(3)) == 4"
+   ]
+  },
+  {
+   "math": "S = (2\\alpha - 1) + (2\\beta - 1) = 2(\\alpha + \\beta) - 2",
+   "en": "Now, find the sum $S$ of the roots of the required equation, which are $2\\alpha - 1$ and $2\\beta - 1$, and group the $\\alpha$ and $\\beta$ terms together.",
+   "ur": "اب مطلوبہ مساوات کے روٹس $2\\alpha - 1$ اور $2\\beta - 1$ کا مجموعہ $S$ معلوم کریں، اور $\\alpha$ اور $\\beta$ والی رقوم کو اکٹھا کریں۔",
+   "check": [
+    "expand((2*a - 1) + (2*b - 1)) == expand(2*(a + b) - 2)"
+   ]
+  },
+  {
+   "math": "S = 2(-2) - 2 = -4 - 2 = -6",
+   "en": "Substitute the value $\\alpha + \\beta = -2$ into the expression for the sum $S$ and simplify.",
+   "ur": "مجموعہ $S$ کے جملے میں $\\alpha + \\beta = -2$ کی قیمت درج کریں اور مختصر کریں۔",
+   "check": [
+    "2*(-2) - 2 == -4 - 2",
+    "-4 - 2 == -6",
+    "simplify((2*(-1 + I*sqrt(3)) - 1) + (2*(-1 - I*sqrt(3)) - 1)) == -6"
+   ]
+  },
+  {
+   "math": "P = (2\\alpha - 1)(2\\beta - 1) = 4\\alpha\\beta - 2\\alpha - 2\\beta + 1 = 4\\alpha\\beta - 2(\\alpha + \\beta) + 1",
+   "en": "Next, find the product $P$ of the required roots by multiplying them and factoring out $-2$ from the middle terms.",
+   "ur": "اس کے بعد، مطلوبہ روٹس کو ضرب دے کر ان کا حاصل ضرب $P$ معلوم کریں اور درمیانی رقوم میں سے $-2$ مشترک لیں۔",
+   "check": [
+    "expand((2*a - 1)*(2*b - 1)) == expand(4*a*b - 2*(a + b) + 1)"
+   ]
+  },
+  {
+   "math": "P = 4(4) - 2(-2) + 1 = 16 + 4 + 1 = 21",
+   "en": "Substitute the values $\\alpha\\beta = 4$ and $\\alpha + \\beta = -2$ into the product expression and simplify.",
+   "ur": "حاصل ضرب کے جملے میں $\\alpha\\beta = 4$ اور $\\alpha + \\beta = -2$ کی قیمتیں درج کریں اور مختصر کریں۔",
+   "check": [
+    "4*4 - 2*(-2) + 1 == 16 + 4 + 1",
+    "16 + 4 + 1 == 21",
+    "simplify((2*(-1 + I*sqrt(3)) - 1)*(2*(-1 - I*sqrt(3)) - 1)) == 21"
+   ]
+  },
+  {
+   "math": "x^2 - Sx + P = 0 \\implies x^2 - (-6)x + 21 = 0 \\implies x^2 + 6x + 21 = 0",
+   "en": "Finally, substitute $S = -6$ and $P = 21$ into the standard formula $x^2 - Sx + P = 0$ to obtain the required quadratic equation.",
+   "ur": "آخر میں، مطلوبہ دو درجی مساوات حاصل کرنے کے لیے معیاری فارمولے $x^2 - Sx + P = 0$ میں $S = -6$ اور $P = 21$ درج کریں۔",
+   "check": [
+    "expand(x**2 - (-6)*x + 21) == expand(x**2 + 6*x + 21)",
+    "(-1 + I*sqrt(3)) + (-1 - I*sqrt(3)) == -2",
+    "(-1 + I*sqrt(3))*(-1 - I*sqrt(3)) == 4",
+    "simplify((2*(-1 + I*sqrt(3)) - 1) + (2*(-1 - I*sqrt(3)) - 1)) == (-6)",
+    "simplify((2*(-1 + I*sqrt(3)) - 1)*(2*(-1 - I*sqrt(3)) - 1)) == (21)",
+    "expand((x**2 + 6*x + 21) / 1) == expand(x**2 - (-6)*x + (21))"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

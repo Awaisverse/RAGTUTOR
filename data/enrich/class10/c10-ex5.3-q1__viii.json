@@ -1,0 +1,70 @@
+{
+ "item": "c10-ex5.3-q1",
+ "label": "viii",
+ "answer_ref": "$\\frac{x y}{2 \\left(x + y\\right)}$",
+ "steps": [
+  {
+   "math": "\\frac{3x^2 - 3xy}{10x^2 + 10xy - 20y^2} \\times \\frac{5xy + 10y^2}{6x^2 + 6xy + 6y^2} \\div \\frac{2x^2 - 2y^2}{4x^3 - 4y^3}",
+   "en": "Write down the given algebraic expression.",
+   "ur": "دی گئی الجبری عبارت لکھیں۔"
+  },
+  {
+   "math": "= \\frac{3x(x - y)}{10(x^2 + xy - 2y^2)} \\times \\frac{5y(x + 2y)}{6(x^2 + xy + y^2)} \\div \\frac{2(x^2 - y^2)}{4(x^3 - y^3)}",
+   "en": "Take out the highest common factor from each numerator and denominator.",
+   "ur": "ہر شمار کنندہ اور مخرج میں سے سب سے بڑا مشترک جزو (عادِ اعظم) باہر نکالیں۔",
+   "check": [
+    "3*x*(x - y) == 3*x**2 - 3*x*y",
+    "10*(x**2 + x*y - 2*y**2) == 10*x**2 + 10*x*y - 20*y**2",
+    "5*y*(x + 2*y) == 5*x*y + 10*y**2",
+    "6*(x**2 + x*y + y**2) == 6*x**2 + 6*x*y + 6*y**2",
+    "2*(x**2 - y**2) == 2*x**2 - 2*y**2",
+    "4*(x**3 - y**3) == 4*x**3 - 4*y**3"
+   ]
+  },
+  {
+   "math": "= \\frac{3x(x - y)}{10(x^2 + 2xy - xy - 2y^2)} \\times \\frac{5y(x + 2y)}{6(x^2 + xy + y^2)} \\div \\frac{2(x - y)(x + y)}{4(x - y)(x^2 + xy + y^2)}",
+   "en": "Split the middle term in $x^2 + xy - 2y^2$, and apply the algebraic formulas $x^2 - y^2 = (x - y)(x + y)$ and $x^3 - y^3 = (x - y)(x^2 + xy + y^2)$.",
+   "ur": "عبارت $x^2 + xy - 2y^2$ کی درمیانی رقم کو توڑیں، اور الجبری کلیے $x^2 - y^2 = (x - y)(x + y)$ اور $x^3 - y^3 = (x - y)(x^2 + xy + y^2)$ استعمال کریں۔",
+   "check": [
+    "x**2 + 2*x*y - x*y - 2*y**2 == x**2 + x*y - 2*y**2",
+    "(x - y)*(x + y) == x**2 - y**2",
+    "(x - y)*(x**2 + x*y + y**2) == x**3 - y**3"
+   ]
+  },
+  {
+   "math": "= \\frac{3x(x - y)}{10(x - y)(x + 2y)} \\times \\frac{5y(x + 2y)}{6(x^2 + xy + y^2)} \\div \\frac{2(x - y)(x + y)}{4(x - y)(x^2 + xy + y^2)}",
+   "en": "Complete the factorization of the first denominator by grouping: $x(x + 2y) - y(x + 2y) = (x - y)(x + 2y)$.",
+   "ur": "پہلے مخرج کی گروہ بندی کر کے تجزی مکمل کریں: $x(x + 2y) - y(x + 2y) = (x - y)(x + 2y)$۔",
+   "check": [
+    "(x - y)*(x + 2*y) == x**2 + 2*x*y - x*y - 2*y**2"
+   ]
+  },
+  {
+   "math": "= \\frac{3x(x - y)}{10(x - y)(x + 2y)} \\times \\frac{5y(x + 2y)}{6(x^2 + xy + y^2)} \\times \\frac{4(x - y)(x^2 + xy + y^2)}{2(x - y)(x + y)}",
+   "en": "Change the division sign ($\\div$) to multiplication ($\\times$) by taking the reciprocal of the third fraction.",
+   "ur": "تیسری کسر کا معکوس لے کر تقسیم کی علامت ($\\div$) کو ضرب ($\\times$) میں تبدیل کریں۔"
+  },
+  {
+   "math": "= \\frac{3 \\times 5 \\times 4 \\cdot xy}{10 \\times 6 \\times 2 \\cdot (x + y)} = \\frac{60xy}{120(x + y)}",
+   "en": "Cancel out the common algebraic factors $(x - y)$, $(x + 2y)$, and $(x^2 + xy + y^2)$ from the numerators and denominators, and multiply the remaining terms.",
+   "ur": "شمار کنندہ اور مخرج سے مشترک الجبری اجزاء $(x - y)$، $(x + 2y)$، اور $(x^2 + xy + y^2)$ کو کاٹ دیں، اور باقی ماندہ رقوم کو ضرب دیں۔",
+   "check": [
+    "3*5*4 == 60",
+    "10*6*2 == 120"
+   ]
+  },
+  {
+   "math": "= \\frac{xy}{2(x + y)}",
+   "en": "Simplify the numerical coefficients by dividing both $60$ and $120$ by $60$ to get the final answer.",
+   "ur": "عددی سروں کو مختصر کرنے کے لیے $60$ اور $120$ دونوں کو $60$ پر تقسیم کریں تاکہ حتمی جواب حاصل ہو سکے۔",
+   "check": [
+    "R(60, 120) == R(1, 2)",
+    "(x*y/(2*(x + y))) == ((3*x**2 - 3*x*y)*(4*x**3 - 4*y**3)*(5*x*y + 10*y**2)/((2*x**2 - 2*y**2)*(6*x**2 + 6*x*y + 6*y**2)*(10*x**2 + 10*x*y - 20*y**2)))",
+    "(x*y/(2*x + 2*y)) == ((3*x**2 - 3*x*y)*(4*x**3 - 4*y**3)*(5*x*y + 10*y**2)/((2*x**2 - 2*y**2)*(6*x**2 + 6*x*y + 6*y**2)*(10*x**2 + 10*x*y - 20*y**2)))"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

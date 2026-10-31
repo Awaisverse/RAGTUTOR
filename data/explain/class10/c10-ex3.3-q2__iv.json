@@ -1,0 +1,55 @@
+{
+ "item": "c10-ex3.3-q2",
+ "label": "iv",
+ "answer_ref": "$\\begin{bmatrix} 12 & 3 \\\\ 4 & 4 \\end{bmatrix}$",
+ "math": [
+  "X = \\begin{bmatrix} 1 & -1 \\\\ -2 & 2 \\end{bmatrix}, \\quad Y = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}, \\quad Z = \\begin{bmatrix} 3 & 0 \\\\ 0 & -2 \\end{bmatrix}",
+  "X + 2Y + 3Z = \\begin{bmatrix} 1 & -1 \\\\ -2 & 2 \\end{bmatrix} + 2\\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix} + 3\\begin{bmatrix} 3 & 0 \\\\ 0 & -2 \\end{bmatrix}",
+  "2Y = 2\\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix} = \\begin{bmatrix} 2(1) & 2(2) \\\\ 2(3) & 2(4) \\end{bmatrix} = \\begin{bmatrix} 2 & 4 \\\\ 6 & 8 \\end{bmatrix}",
+  "3Z = 3\\begin{bmatrix} 3 & 0 \\\\ 0 & -2 \\end{bmatrix} = \\begin{bmatrix} 3(3) & 3(0) \\\\ 3(0) & 3(-2) \\end{bmatrix} = \\begin{bmatrix} 9 & 0 \\\\ 0 & -6 \\end{bmatrix}",
+  "X + 2Y + 3Z = \\begin{bmatrix} 1 & -1 \\\\ -2 & 2 \\end{bmatrix} + \\begin{bmatrix} 2 & 4 \\\\ 6 & 8 \\end{bmatrix} + \\begin{bmatrix} 9 & 0 \\\\ 0 & -6 \\end{bmatrix}",
+  "= \\begin{bmatrix} 1 + 2 & -1 + 4 \\\\ -2 + 6 & 2 + 8 \\end{bmatrix} + \\begin{bmatrix} 9 & 0 \\\\ 0 & -6 \\end{bmatrix} = \\begin{bmatrix} 3 & 3 \\\\ 4 & 10 \\end{bmatrix} + \\begin{bmatrix} 9 & 0 \\\\ 0 & -6 \\end{bmatrix}",
+  "= \\begin{bmatrix} 3 + 9 & 3 + 0 \\\\ 4 + 0 & 10 + (-6) \\end{bmatrix} = \\begin{bmatrix} 3 + 9 & 3 + 0 \\\\ 4 + 0 & 10 - 6 \\end{bmatrix}",
+  "X + 2Y + 3Z = \\begin{bmatrix} 12 & 3 \\\\ 4 & 4 \\end{bmatrix}"
+ ],
+ "why": [
+  {
+   "en": "Just like in any good math solution, we begin by clearly listing our given matrices $X$, $Y$, and $Z$. Since all three are $2 \\times 2$ matrices (having the same order), we know for sure that we are allowed to add them together after scaling.",
+   "ur": "کسی بھی اچھے ریاضی کے حل کی طرح، ہم سب سے پہلے دیے گئے کالب (matrices) $X$، $Y$ اور $Z$ کو واضح طور پر لکھتے ہیں۔ چونکہ یہ تینوں $2 \\times 2$ کالب ہیں (یعنی ان کا مرتبہ یکساں ہے)، اس لیے ہم جانتے ہیں کہ ضرب دینے کے بعد ہم انہیں باآسانی جمع کر سکتے ہیں۔"
+  },
+  {
+   "en": "By the rule of substitution, we replace the letters $X$, $Y$, and $Z$ with their actual matrix arrays. This sets up the complete mathematical sentence so we can see both the scalar multiplications and the matrix additions we need to perform.",
+   "ur": "قیمتیں درج کرنے کے اصول کے تحت، ہم حروف $X$، $Y$ اور $Z$ کی جگہ ان کے اصل کالب لکھتے ہیں۔ اس سے پورا حسابی جملہ ہمارے سامنے آ جاتا ہے اور ہمیں واضح نظر آتا ہے کہ کہاں حقیقی اعداد سے ضرب دینی ہے اور کہاں کالبوں کو جمع کرنا ہے۔"
+  },
+  {
+   "en": "Following the order of operations (like BODMAS), we must do scalar multiplication before matrix addition. Using the definition of scalar multiplication, multiplying $Y$ by $2$ scales every single entry inside $Y$ by $2$, giving us the new matrix for $2Y$.",
+   "ur": "حسابی عوامل کی ترتیب (BODMAS) کے مطابق، کالبوں کو جمع کرنے سے پہلے ہمیں عددی ضرب (scalar multiplication) کا عمل کرنا چاہیے۔ اس اصول کے تحت، کالب $Y$ کو $2$ سے ضرب دینے کا مطلب ہے کہ اس کے اندر موجود ہر رکن کو $2$ سے ضرب دی جائے، جس سے ہمیں $2Y$ کا نیا کالب مل جاتا ہے۔"
+  },
+  {
+   "en": "Similarly, we apply scalar multiplication to find $3Z$ before doing any addition. Multiplying every entry of $Z$ by $3$ gives us the exact matrix needed for the last part of our expression.",
+   "ur": "بالکل اسی طرح، جمع کا عمل شروع کرنے سے پہلے ہم عددی ضرب کا اصول استعمال کرتے ہوئے $3Z$ معلوم کرتے ہیں۔ کالب $Z$ کے ہر رکن کو $3$ سے ضرب دینے سے ہمیں وہ کالب حاصل ہو جاتا ہے جو ہمارے سوال کے آخری حصے کے لیے ضروری ہے۔"
+  },
+  {
+   "en": "Now that the scalar multiplications are complete, we put our newly found matrices for $2Y$ and $3Z$ back into the main expression. This simplifies our problem into a pure matrix addition of three $2 \\times 2$ matrices.",
+   "ur": "اب جبکہ عددی ضرب کا کام مکمل ہو چکا ہے، ہم $2Y$ اور $3Z$ کے نئے حاصل شدہ کالبوں کو واپس اصل عبارت میں درج کرتے ہیں۔ اس سے ہمارا سوال آسان ہو کر صرف تین $2 \\times 2$ کالبوں کی جمع میں تبدیل ہو جاتا ہے۔"
+  },
+  {
+   "en": "To add three matrices, we take them two at a time using the rule of matrix addition, which says we add corresponding entries (same row, same column). Combining $X$ and $2Y$ first reduces the first two matrices into a single intermediate matrix $\\begin{bmatrix} 3 & 3 \\\\ 4 & 10 \\end{bmatrix}$.",
+   "ur": "تین کالبوں کو جمع کرنے کے لیے، ہم کالبوں کی جمع کے اصول کے مطابق ایک وقت میں دو کالب لیتے ہیں اور ان کے متناظرہ ارکان (ایک جیسی قطار اور کالم والے ارکان) کو آپس میں جمع کرتے ہیں۔ پہلے $X$ اور $2Y$ کو ملانے سے یہ دو کالب سمٹ کر ایک درمیانی کالب $\\begin{bmatrix} 3 & 3 \\\\ 4 & 10 \\end{bmatrix}$ بن جاتے ہیں۔"
+  },
+  {
+   "en": "Next, we apply the matrix addition rule one more time to combine our intermediate result with the remaining matrix $3Z$. Notice how in the bottom-right corner, adding a negative number $10 + (-6)$ naturally becomes subtraction $10 - 6$.",
+   "ur": "اس کے بعد، ہم کالبوں کی جمع کا اصول ایک بار پھر استعمال کرتے ہوئے اس درمیانی نتیجے میں تیسرا کالب $3Z$ جمع کرتے ہیں۔ غور کریں کہ نچلے دائیں کونے میں منفی عدد جمع کرنے سے $10 + (-6)$ قدرتی طور پر تفریق یعنی $10 - 6$ بن جاتا ہے۔"
+  },
+  {
+   "en": "Finally, performing the simple arithmetic inside each position gives us the single combined matrix. This completes all operations and brings us to the final form of $X + 2Y + 3Z$.",
+   "ur": "آخر میں، ہر جگہ پر سادہ جمع اور تفریق کا عمل مکمل کرنے سے ہمیں ایک واحد مجموعی کالب حاصل ہو جاتا ہے۔ اس طرح تمام حسابی عوامل مکمل ہو جاتے ہیں اور ہمیں $X + 2Y + 3Z$ کی حتمی شکل مل جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final matrix $\\begin{bmatrix} 12 & 3 \\\\ 4 & 4 \\end{bmatrix}$ is the single $2 \\times 2$ matrix that represents the linear combination $X + 2Y + 3Z$. You can quickly verify your work by checking one position directly from the original matrices, such as the top-left entry: $1 + 2(1) + 3(3) = 1 + 2 + 9 = 12$, which matches our answer.",
+  "ur": "حتمی کالب $\\begin{bmatrix} 12 & 3 \\\\ 4 & 4 \\end{bmatrix}$ وہ واحد $2 \\times 2$ کالب ہے جو خطی امتزاج (linear combination) $X + 2Y + 3Z$ کی نمائندگی کرتا ہے۔ آپ اصل کالبوں سے کسی ایک پوزیشن کو براہِ راست حل کر کے اپنے جواب کی باآسانی تصدیق کر سکتے ہیں، مثلاً اوپری بائیں رکن کو دیکھیں: $1 + 2(1) + 3(3) = 1 + 2 + 9 = 12$، جو ہمارے جواب کے بالکل مطابق ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

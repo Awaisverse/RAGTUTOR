@@ -1,0 +1,51 @@
+{
+ "item": "c10-ex2.1-q1",
+ "label": "v",
+ "answer_ref": "$2 x^{2} - 5 x + 2 = 0$",
+ "steps": [
+  {
+   "math": "2x + \\frac{1}{x} = 5 - \\frac{1}{x}, \\quad x \\neq 0",
+   "en": "Write the given equation. We need to convert it into the standard form of a quadratic equation, which is $ax^2 + bx + c = 0$.",
+   "ur": "دی گئی مساوات لکھیں۔ ہمیں اسے دو درجی مساوات کی معیاری شکل، یعنی $ax^2 + bx + c = 0$ میں تبدیل کرنا ہے۔"
+  },
+  {
+   "math": "x\\left(2x + \\frac{1}{x}\\right) = x\\left(5 - \\frac{1}{x}\\right)",
+   "en": "To eliminate the fractions, multiply both sides of the equation by the denominator $x$.",
+   "ur": "کسور کو ختم کرنے کے لیے مساوات کے دونوں اطراف کو مخرج $x$ سے ضرب دیں۔",
+   "check": [
+    "x*(2*x + 1/x) - x*(5 - 1/x) == x*((2*x + 1/x) - (5 - 1/x))"
+   ]
+  },
+  {
+   "math": "2x^2 + 1 = 5x - 1",
+   "en": "Expand the brackets by multiplying $x$ with each term inside the parentheses.",
+   "ur": "قوسین کے اندر موجود ہر رقم کو $x$ سے ضرب دے کر بریکٹ کھولیں۔",
+   "check": [
+    "(2*x**2 + 1) - (5*x - 1) == x*(2*x + 1/x) - x*(5 - 1/x)"
+   ]
+  },
+  {
+   "math": "2x^2 - 5x + 1 + 1 = 0",
+   "en": "Shift all terms from the right-hand side to the left-hand side by changing their signs so that the right-hand side becomes zero.",
+   "ur": "دائیں طرف کی تمام رقوم کو ان کی علامتیں تبدیل کر کے بائیں طرف لے آئیں تاکہ دائیں طرف صفر رہ جائے۔",
+   "check": [
+    "(2*x**2 - 5*x + 1 + 1) - 0 == (2*x**2 + 1) - (5*x - 1)"
+   ]
+  },
+  {
+   "math": "2x^2 - 5x + 2 = 0",
+   "en": "Combine the constant terms ($1 + 1 = 2$) to get the required quadratic equation in standard form.",
+   "ur": "مستقل رقوم کو جمع کریں ($1 + 1 = 2$) تاکہ مطلوبہ دو درجی مساوات معیاری شکل میں حاصل ہو جائے۔",
+   "check": [
+    "(2*x**2 - 5*x + 2) - 0 == (2*x**2 - 5*x + 1 + 1) - 0",
+    "1 + 1 == 2",
+    "((2*x**2 + 1)/(x)) - (5 - 1/x) == (2*x + 1/x) - (5 - 1/x)",
+    "(2*x**2 + 1) - (5*x - 1) == (x)*(((2*x**2 + 1)/(x)) - (5 - 1/x))",
+    "(2*x**2 - 5*x + 2) - (0) == (2*x**2 + 1) - (5*x - 1)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

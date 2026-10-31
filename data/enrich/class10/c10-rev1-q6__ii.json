@@ -1,0 +1,69 @@
+{
+ "item": "c10-rev1-q6",
+ "label": "ii",
+ "answer_ref": "$\\frac{23}{13} + \\frac{2}{13}i$",
+ "steps": [
+  {
+   "math": "z_1 = 5 + 4i, \\quad z_2 = 3 + 2i",
+   "en": "First, write down the given complex numbers $z_1$ and $z_2$. We need to find the quotient $\\frac{z_1}{z_2}$.",
+   "ur": "سب سے پہلے، دیے گئے مخلوط اعداد $z_1$ اور $z_2$ لکھیں۔ ہمیں ان کا حاصلِ تقسیم $\\frac{z_1}{z_2}$ معلوم کرنا ہے۔"
+  },
+  {
+   "math": "\\frac{z_1}{z_2} = \\frac{5 + 4i}{3 + 2i}",
+   "en": "Substitute the values of $z_1$ and $z_2$ into the fraction.",
+   "ur": "کسر میں $z_1$ اور $z_2$ کی قیمتیں درج کریں۔"
+  },
+  {
+   "math": "= \\frac{5 + 4i}{3 + 2i} \\times \\frac{3 - 2i}{3 - 2i}",
+   "en": "To divide complex numbers, multiply both the numerator and the denominator by the conjugate of the denominator. The conjugate of $3 + 2i$ is $3 - 2i$.",
+   "ur": "مخلوط اعداد کو تقسیم کرنے کے لیے، شمار کنندہ اور مخرج دونوں کو مخرج کے مزدوج (conjugate) سے ضرب دیں۔ یہاں $3 + 2i$ کا مزدوج $3 - 2i$ ہے۔",
+   "check": [
+    "(5 + 4*I)/(3 + 2*I) == (5 + 4*I)*(3 - 2*I)/((3 + 2*I)*(3 - 2*I))"
+   ]
+  },
+  {
+   "math": "= \\frac{5(3 - 2i) + 4i(3 - 2i)}{(3)^2 - (2i)^2} = \\frac{15 - 10i + 12i - 8i^2}{9 - 4i^2}",
+   "en": "Expand the numerator by multiplying each term, and apply the difference of squares formula $(a+b)(a-b) = a^2 - b^2$ to the denominator.",
+   "ur": "شمار کنندہ میں ہر رقم کو ضرب دے کر کھولیں، اور مخرج میں کلیہ $(a+b)(a-b) = a^2 - b^2$ کا استعمال کریں۔",
+   "check": [
+    "(5 + 4*I)*(3 - 2*I) == 15 - 10*I + 12*I - 8*I**2",
+    "(3 + 2*I)*(3 - 2*I) == 9 - 4*I**2"
+   ]
+  },
+  {
+   "math": "= \\frac{15 + 2i - 8(-1)}{9 - 4(-1)}",
+   "en": "Combine the like imaginary terms ($-10i + 12i = 2i$) and substitute $i^2 = -1$ in both the numerator and the denominator.",
+   "ur": "مماثل خیالی رقوم کو یکجا کریں ($-10i + 12i = 2i$) اور شمار کنندہ و مخرج دونوں میں $i^2 = -1$ درج کریں۔",
+   "check": [
+    "-10*I + 12*I == 2*I",
+    "15 + 2*I - 8*(-1) == 15 + 2*I - 8*I**2",
+    "9 - 4*(-1) == 9 - 4*I**2"
+   ]
+  },
+  {
+   "math": "= \\frac{15 + 8 + 2i}{9 + 4} = \\frac{23 + 2i}{13}",
+   "en": "Simplify the signs and add the real numbers in the numerator and the denominator.",
+   "ur": "علامتوں کو سادہ کریں اور شمار کنندہ اور مخرج میں حقیقی اعداد کو جمع کریں۔",
+   "check": [
+    "15 + 8 + 2*I == 23 + 2*I",
+    "9 + 4 == 13"
+   ]
+  },
+  {
+   "math": "\\frac{z_1}{z_2} = \\frac{23}{13} + \\frac{2}{13}i",
+   "en": "Separate the real and imaginary parts by dividing each term by $13$ to write the final answer in the standard form $a + bi$.",
+   "ur": "معیاری شکل $a + bi$ میں حتمی جواب لکھنے کے لیے ہر رقم کو $13$ سے تقسیم کر کے حقیقی اور خیالی حصوں کو الگ کریں۔",
+   "check": [
+    "(23 + 2*I)/13 == R(23, 13) + R(2, 13)*I",
+    "(5 + 4*I)/(3 + 2*I) == R(23, 13) + R(2, 13)*I",
+    "(5 + 4*I)/(3 + 2*I) == (5 + 4*I)*(3 - 2*I)/((3 + 2*I)*(3 - 2*I))",
+    "(3 + 2*I)*(3 - 2*I) == (13)",
+    "(5 + 4*I)*(3 - 2*I) == (23 + 2*I)",
+    "(5 + 4*I)/(3 + 2*I) == (23/13 + 2*I/13)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

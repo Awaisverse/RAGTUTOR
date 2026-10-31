@@ -1,0 +1,52 @@
+{
+ "item": "c10-ex1.2-q3",
+ "label": "i",
+ "answer_ref": "$\\frac{4}{41} - \\frac{5}{41}i$",
+ "steps": [
+  {
+   "math": "z = 4 + 5i, \\quad a = 4, \\quad b = 5",
+   "en": "Let the given complex number be $z = a + bi$. Comparing it with $4 + 5i$, the real part is $a = 4$ and the imaginary part is $b = 5$. We need to find its multiplicative inverse $z^{-1}$.",
+   "ur": "فرض کریں کہ دیا گیا مختلط عدد $z = a + bi$ ہے۔ اس کا $4 + 5i$ سے موازنہ کرنے پر، حقیقی حصہ $a = 4$ اور خیالی حصہ $b = 5$ ہے۔ ہمیں اس کا ضربی معکوس $z^{-1}$ معلوم کرنا ہے۔",
+   "check": [
+    "4 + 5*I == 4 + 5*I"
+   ]
+  },
+  {
+   "math": "z^{-1} = \\frac{a}{a^2+b^2} - \\frac{b}{a^2+b^2}i",
+   "en": "By definition, the formula for the multiplicative inverse of a complex number $z = a + bi$ is $\\frac{a}{a^2+b^2} - \\frac{b}{a^2+b^2}i$ (or in ordered pair form $\\left(\\frac{a}{a^2+b^2}, \\frac{-b}{a^2+b^2}\\right)$).",
+   "ur": "تعریف کے مطابق، مختلط عدد $z = a + bi$ کے ضربی معکوس کا کلیہ $\\frac{a}{a^2+b^2} - \\frac{b}{a^2+b^2}i$ ہے (یا مترتب جوڑے کی شکل میں $\\left(\\frac{a}{a^2+b^2}, \\frac{-b}{a^2+b^2}\\right)$)۔"
+  },
+  {
+   "math": "a^2 + b^2 = (4)^2 + (5)^2 = 16 + 25 = 41",
+   "en": "First, calculate the denominator $a^2 + b^2$ by substituting $a = 4$ and $b = 5$.",
+   "ur": "سب سے پہلے، $a = 4$ اور $b = 5$ کی قیمتیں درج کر کے مخرج $a^2 + b^2$ کی قیمت معلوم کریں۔",
+   "check": [
+    "(4)**2 + (5)**2 == 16 + 25",
+    "16 + 25 == 41"
+   ]
+  },
+  {
+   "math": "z^{-1} = \\frac{4}{41} + \\frac{-5}{41}i",
+   "en": "Now substitute $a = 4$, $b = 5$, and $a^2 + b^2 = 41$ into the multiplicative inverse formula.",
+   "ur": "اب ضربی معکوس کے کلیے میں $a = 4$، $b = 5$ اور $a^2 + b^2 = 41$ کی قیمتیں درج کریں۔",
+   "check": [
+    "1/(4 + 5*I) == R(4, 41) + R(-5, 41)*I"
+   ]
+  },
+  {
+   "math": "z^{-1} = \\frac{4}{41} - \\frac{5}{41}i",
+   "en": "Simplify the signs to write the final answer in the standard form $a + bi$. Thus, the multiplicative inverse of $4 + 5i$ is $\\frac{4}{41} - \\frac{5}{41}i$.",
+   "ur": "علامتوں کو سادہ کر کے حتمی جواب کو معیاری شکل $a + bi$ میں لکھیں۔ پس $4 + 5i$ کا ضربی معکوس $\\frac{4}{41} - \\frac{5}{41}i$ ہے۔",
+   "check": [
+    "R(4, 41) + R(-5, 41)*I == R(4, 41) - R(5, 41)*I",
+    "(4 + 5*I)*(R(4, 41) - R(5, 41)*I) == 1",
+    "(4)**2 + (5)**2 == (41)",
+    "1/(4 + 5*I) == (4/41 - 5*I/41)",
+    "(4 + 5*I)*(4/41 - 5*I/41) == 1"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

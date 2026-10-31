@@ -1,0 +1,67 @@
+{
+ "item": "c10-ex3.4-q1",
+ "label": "ii",
+ "answer_ref": "$AB = \\begin{bmatrix} 11 \\end{bmatrix}$, $BA = \\begin{bmatrix} 3 & -6 \\\\ -4 & 8 \\end{bmatrix}$",
+ "steps": [
+  {
+   "math": "A = \\begin{bmatrix} 1 & -2 \\end{bmatrix}, \\quad B = \\begin{bmatrix} 3 \\\\ -4 \\end{bmatrix}",
+   "en": "We are given a row matrix $A$ of order $1 \\times 2$ and a column matrix $B$ of order $2 \\times 1$. We need to find the products $AB$ and $BA$, if possible.",
+   "ur": "ہمیں ایک قطاری قالب $A$ جس کا مرتبہ $1 \\times 2$ ہے اور ایک کالمی قالب $B$ جس کا مرتبہ $2 \\times 1$ ہے، دیے گئے ہیں۔ ہمیں ضربی حاصل $AB$ اور $BA$ معلوم کرنے ہیں، اگر ممکن ہو۔"
+  },
+  {
+   "math": "",
+   "en": "For matrix multiplication $AB$ to be possible, the number of columns in $A$ must equal the number of rows in $B$. Since $A$ has $2$ columns and $B$ has $2$ rows, the product $AB$ is possible and will have order $1 \\times 1$.",
+   "ur": "قالبوں کی ضرب $AB$ کے ممکن ہونے کے لیے، قالب $A$ میں کالموں کی تعداد قالب $B$ میں قطاروں کی تعداد کے برابر ہونی چاہیے۔ چونکہ $A$ میں $2$ کالم اور $B$ میں $2$ قطاریں ہیں، اس لیے ضرب $AB$ ممکن ہے اور اس کا مرتبہ $1 \\times 1$ ہوگا۔",
+   "check": [
+    "2 == 2"
+   ]
+  },
+  {
+   "math": "AB = \\begin{bmatrix} 1 & -2 \\end{bmatrix}\\begin{bmatrix} 3 \\\\ -4 \\end{bmatrix} = \\begin{bmatrix} (1)(3) + (-2)(-4) \\end{bmatrix}",
+   "en": "To find $AB$, multiply the row of the first matrix $A$ by the column of the second matrix $B$, entry by entry, and add the products.",
+   "ur": "$AB$ معلوم کرنے کے لیے، پہلے قالب $A$ کی قطار کو دوسرے قالب $B$ کے کالم سے رکن بہ رکن ضرب دیں اور حاصل ضرب کو جمع کریں۔",
+   "check": [
+    "Matrix([[1, -2]]) * Matrix([[3], [-4]]) == Matrix([[(1)*(3) + (-2)*(-4)]])"
+   ]
+  },
+  {
+   "math": "AB = \\begin{bmatrix} 3 + 8 \\end{bmatrix} = \\begin{bmatrix} 11 \\end{bmatrix}",
+   "en": "Calculate the products $(1)(3) = 3$ and $(-2)(-4) = 8$, then add them together to get $AB$.",
+   "ur": "حاصل ضرب $(1)(3) = 3$ اور $(-2)(-4) = 8$ معلوم کریں، پھر $AB$ حاصل کرنے کے لیے انہیں جمع کریں۔",
+   "check": [
+    "1*3 == 3",
+    "(-2)*(-4) == 8",
+    "Matrix([[3 + 8]]) == Matrix([[11]])"
+   ]
+  },
+  {
+   "math": "",
+   "en": "Now, for the product $BA$, the number of columns in $B$ is $1$ and the number of rows in $A$ is $1$. Since they are equal, the product $BA$ is also possible and the resulting matrix will have order $2 \\times 2$.",
+   "ur": "اب، حاصل ضرب $BA$ کے لیے، $B$ میں کالموں کی تعداد $1$ ہے اور $A$ میں قطاروں کی تعداد $1$ ہے۔ چونکہ یہ برابر ہیں، اس لیے حاصل ضرب $BA$ بھی ممکن ہے اور نتیجے میں ملنے والے قالب کا مرتبہ $2 \\times 2$ ہوگا۔",
+   "check": [
+    "1 == 1"
+   ]
+  },
+  {
+   "math": "BA = \\begin{bmatrix} 3 \\\\ -4 \\end{bmatrix}\\begin{bmatrix} 1 & -2 \\end{bmatrix} = \\begin{bmatrix} (3)(1) & (3)(-2) \\\\ (-4)(1) & (-4)(-2) \\end{bmatrix}",
+   "en": "Multiply each row of matrix $B$ by each column of matrix $A$ to form the entries of the $2 \\times 2$ matrix.",
+   "ur": "$2 \\times 2$ قالب کے ارکان بنانے کے لیے قالب $B$ کی ہر قطار کو قالب $A$ کے ہر کالم سے ضرب دیں۔",
+   "check": [
+    "Matrix([[3], [-4]]) * Matrix([[1, -2]]) == Matrix([[(3)*(1), (3)*(-2)], [(-4)*(1), (-4)*(-2)]])"
+   ]
+  },
+  {
+   "math": "BA = \\begin{bmatrix} 3 & -6 \\\\ -4 & 8 \\end{bmatrix}",
+   "en": "Simplify each entry by multiplying the numbers. Thus, we have found both $AB$ and $BA$.",
+   "ur": "اعداد کو ضرب دے کر ہر رکن کو مختصر کریں۔ اس طرح، ہم نے $AB$ اور $BA$ دونوں معلوم کر لیے ہیں۔",
+   "check": [
+    "Matrix([[(3)*(1), (3)*(-2)], [(-4)*(1), (-4)*(-2)]]) == Matrix([[3, -6], [-4, 8]])",
+    "Eq(Matrix([[11]]), Matrix([[11]]))",
+    "Eq(Matrix([[3, -6], [-4, 8]]), Matrix([[3, -6], [-4, 8]]))"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

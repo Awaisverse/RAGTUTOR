@@ -1,0 +1,55 @@
+{
+ "item": "ex1.2-q2",
+ "label": "vi",
+ "answer_ref": "$\\frac{9}{2}$",
+ "math": [
+  "\\frac{(16)^{x+1} + 20(4^{2x})}{2^{x-3} \\times 8^{x+2}}",
+  "= \\frac{(2^4)^{x+1} + 20((2^2)^{2x})}{2^{x-3} \\times (2^3)^{x+2}}",
+  "= \\frac{2^{4(x+1)} + 20 \\cdot 2^{2(2x)}}{2^{x-3} \\times 2^{3(x+2)}} = \\frac{2^{4x+4} + 20 \\cdot 2^{4x}}{2^{x-3} \\times 2^{3x+6}}",
+  "= \\frac{2^{4x+4} + 20 \\cdot 2^{4x}}{2^{(x-3)+(3x+6)}} = \\frac{2^{4x+4} + 20 \\cdot 2^{4x}}{2^{4x+3}}",
+  "= \\frac{2^{4x} \\cdot 2^4 + 20 \\cdot 2^{4x}}{2^{4x} \\cdot 2^3}",
+  "= \\frac{2^{4x}(2^4 + 20)}{2^{4x} \\cdot 2^3} = \\frac{2^4 + 20}{2^3}",
+  "= \\frac{16 + 20}{8} = \\frac{36}{8}",
+  "= \\frac{9}{2}"
+ ],
+ "why": [
+  {
+   "en": "We begin by writing down the given algebraic fraction carefully. Notice that the bases $16$, $4$, $2$, and $8$ are all related to the prime number $2$, which gives us our starting clue for applying the laws of exponents.",
+   "ur": "ہم سب سے پہلے دیے گئے سوال کو احتیاط سے لکھتے ہیں۔ غور کریں کہ اس میں موجود تمام اساس (bases) یعنی $16$، $4$، $2$ اور $8$ دراصل عدد $2$ کی طاقتیں ہیں، جو ہمیں قوت نما کے قوانین استعمال کرنے کا راستہ دکھاتی ہیں۔"
+  },
+  {
+   "en": "To use the laws of exponents, we need the same base everywhere. By rewriting $16$, $4$, and $8$ as powers of $2$, we bring the entire expression into a single common base $2$ so the terms can interact.",
+   "ur": "قوت نما کے قوانین استعمال کرنے کے لیے ضروری ہے کہ تمام اساس ایک جیسی ہوں۔ اس لیے ہم $16$، $4$ اور $8$ کو $2$ کی طاقت (power) کے طور پر لکھتے ہیں تاکہ پورا سوال ایک ہی اساس $2$ میں تبدیل ہو جائے۔"
+  },
+  {
+   "en": "Here we use the power of a power law, $(a^m)^n = a^{mn}$, which tells us to multiply the inner and outer exponents. This removes the brackets and shows clearly that $2^{4x}$ is hiding inside our terms.",
+   "ur": "یہاں ہم قوت کی قوت کا قانون $(a^m)^n = a^{mn}$ استعمال کرتے ہیں، جس کے مطابق اندر اور باہر والی طاقتیں آپس میں ضرب کھاتی ہیں۔ اس سے بریکٹ ختم ہو جاتے ہیں اور ہمیں واضح نظر آتا ہے کہ رقموں میں $2^{4x}$ موجود ہے۔"
+  },
+  {
+   "en": "In the denominator, two powers of $2$ are being multiplied, so we apply the product law $a^m \\times a^n = a^{m+n}$ and add their exponents. This combines the bottom into a single neat term, $2^{4x+3}$, matching the $4x$ pattern in the numerator.",
+   "ur": "مخرج (denominator) میں یکساں اساس $2$ والی دو رقمیں ضرب ہو رہی ہیں، اس لیے ہم ضرب کا قانون $a^m \\times a^n = a^{m+n}$ لگا کر ان کے قوت نماؤں کو جمع کر لیتے ہیں۔ اس سے نچلا حصہ سمٹ کر ایک رقم $2^{4x+3}$ بن جاتا ہے۔"
+  },
+  {
+   "en": "Because the numerator has a plus sign, we cannot cancel powers directly; instead, we use the product law in reverse ($a^{m+n} = a^m \\cdot a^n$) to break apart the exponents. This separates the variable part $2^{4x}$ from the constant numbers so we can take it common.",
+   "ur": "چونکہ شمار کنندہ (numerator) میں جمع کی علامت ہے، ہم طاقتوں کو براہِ راست کاٹ نہیں سکتے؛ اس لیے ہم ضرب کے قانون کو الٹ ($a^{m+n} = a^m \\cdot a^n$) استعمال کرتے ہوئے قوت نماؤں کو توڑ کر الگ کرتے ہیں۔ اس سے متغیر والا حصہ $2^{4x}$ الگ ہو جاتا ہے جسے اب ہم مشترک (common) لے سکتے ہیں۔"
+  },
+  {
+   "en": "Now we factor out $2^{4x}$ from the numerator and divide it by the $2^{4x}$ in the denominator. This crucial step completely eliminates the variable $x$, leaving behind only simple numbers to calculate.",
+   "ur": "اب ہم شمار کنندہ میں سے $2^{4x}$ کو مشترک (common) نکالتے ہیں اور اسے مخرج کے $2^{4x}$ سے کاٹ دیتے ہیں۔ اس اہم قدم سے متغیر $x$ مکمل طور پر ختم ہو جاتا ہے اور ہمارے پاس حل کرنے کے لیے صرف سادہ اعداد بچتے ہیں۔"
+  },
+  {
+   "en": "We now calculate the actual values of the remaining powers of $2$ and add the numbers in the numerator. This turns our exponential expression into a basic arithmetic fraction, $\\frac{36}{8}$.",
+   "ur": "اب ہم $2$ کی بقیہ طاقتوں کی قیمت معلوم کرتے ہیں اور شمار کنندہ کے اعداد کو جمع کر لیتے ہیں۔ اس طرح ہمارا قوت نما والا سوال ایک سادہ کسر $\\frac{36}{8}$ میں بدل جاتا ہے۔"
+  },
+  {
+   "en": "In mathematics, we always write a fraction in its lowest form by dividing the top and bottom by their greatest common divisor, which is $4$ here. This gives us the cleanest final result, $\\frac{9}{2}$.",
+   "ur": "ریاضی میں ہمیشہ کسر کو اس کی مختصر ترین شکل میں لکھا جاتا ہے، اس لیے ہم اوپر اور نیچے دونوں کو ان کے عادِ اعظم $4$ پر تقسیم کرتے ہیں۔ اس سے ہمیں سب سے سادہ اور حتمی جواب $\\frac{9}{2}$ حاصل ہوتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $\\frac{9}{2}$ tells us that even though the original expression looked complicated with the variable $x$ in the exponents, its value is actually constant and does not depend on $x$ at all! You can check this easily by substituting $x = 0$ into the original question: the numerator becomes $16^1 + 20(4^0) = 16 + 20 = 36$, and the denominator becomes $2^{-3} \\times 8^2 = \\frac{1}{8} \\times 64 = 8$, which simplifies to $\\frac{36}{8} = \\frac{9}{2}$.",
+  "ur": "حتمی جواب $\\frac{9}{2}$ ہمیں بتاتا ہے کہ اگرچہ اصل سوال قوت نما میں متغیر $x$ کی وجہ سے کافی پیچیدہ لگ رہا تھا، لیکن اس کی اصل قیمت مستقل (constant) ہے اور $x$ کی کسی بھی قیمت پر تبدیل نہیں ہوتی! آپ اصل سوال میں $x = 0$ رکھ کر اس کی باآسانی پڑتال کر سکتے ہیں: شمار کنندہ $16^1 + 20(4^0) = 16 + 20 = 36$ بن جائے گا اور مخرج $2^{-3} \\times 8^2 = \\frac{1}{8} \\times 64 = 8$ بنے گا، جسے مختصر کرنے پر وہی جواب $\\frac{36}{8} = \\frac{9}{2}$ آتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

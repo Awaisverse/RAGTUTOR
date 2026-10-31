@@ -1,0 +1,57 @@
+{
+ "item": "c10-ex11.2-q11",
+ "label": "",
+ "answer_ref": "Variance = 6.8, SD = 2.61",
+ "steps": [
+  {
+   "math": "x = 15, 18, 14, 20, 13 \\quad (n = 5)",
+   "en": "First, write down the given monthly sales predictions and count the total number of observations $n$. To find the variability in sales predictions, we need to calculate the variance and the standard deviation.",
+   "ur": "سب سے پہلے، دی گئی ماہانہ فروخت کی پیش گوئیوں کو لکھیں اور مشاہدات کی کل تعداد $n$ گنیں۔ فروخت کی پیش گوئیوں میں تغیر (variability) معلوم کرنے کے لیے، ہمیں تغیر (variance) اور معیاری انحراف (standard deviation) معلوم کرنا ہوگا۔"
+  },
+  {
+   "math": "\\bar{x} = \\frac{\\sum x}{n} = \\frac{15 + 18 + 14 + 20 + 13}{5} = \\frac{80}{5} = 16",
+   "en": "Calculate the arithmetic mean $\\bar{x}$ by dividing the sum of all values by the total number of values $n$.",
+   "ur": "تمام قیمتوں کے مجموعے کو کل تعداد $n$ پر تقسیم کر کے حسابی اوسط $\\bar{x}$ معلوم کریں۔",
+   "check": [
+    "(15 + 18 + 14 + 20 + 13) == 80",
+    "R(80, 5) == 16"
+   ]
+  },
+  {
+   "math": "\\sum(x - \\bar{x})^2 = (15 - 16)^2 + (18 - 16)^2 + (14 - 16)^2 + (20 - 16)^2 + (13 - 16)^2",
+   "en": "Now, subtract the mean $\\bar{x} = 16$ from each value to find the deviations, square each deviation, and write their sum.",
+   "ur": "اب، انحراف معلوم کرنے کے لیے ہر قیمت میں سے اوسط $\\bar{x} = 16$ کو تفریق کریں، ہر انحراف کا مربع لیں، اور ان کا مجموعہ لکھیں۔"
+  },
+  {
+   "math": "\\sum(x - \\bar{x})^2 = (-1)^2 + (2)^2 + (-2)^2 + (4)^2 + (-3)^2 = 1 + 4 + 4 + 16 + 9 = 34",
+   "en": "Simplify the squared deviations and add them together to get $\\sum(x - \\bar{x})^2$.",
+   "ur": "مربع شدہ انحرافات کو حل کریں اور $\\sum(x - \\bar{x})^2$ حاصل کرنے کے لیے انہیں جمع کریں۔",
+   "check": [
+    "(-1)**2 + (2)**2 + (-2)**2 + (4)**2 + (-3)**2 == 34",
+    "1 + 4 + 4 + 16 + 9 == 34"
+   ]
+  },
+  {
+   "math": "\\sigma^2 = \\frac{\\sum(x - \\bar{x})^2}{n} = \\frac{34}{5} = 6.8",
+   "en": "Use the variance formula $\\sigma^2 = \\frac{\\sum(x - \\bar{x})^2}{n}$. Substitute the values and divide to find the variance.",
+   "ur": "تغیر کا فارمولا $\\sigma^2 = \\frac{\\sum(x - \\bar{x})^2}{n}$ استعمال کریں۔ قیمتیں درج کریں اور تغیر (variance) معلوم کرنے کے لیے تقسیم کریں۔",
+   "check": [
+    "Abs(R(34, 5) - 6.8) <= 0.005"
+   ]
+  },
+  {
+   "math": "\\sigma = \\sqrt{\\sigma^2} = \\sqrt{6.8} \\approx 2.61",
+   "en": "Take the positive square root of the variance to find the standard deviation $\\sigma$. Thus, the variance is $6.8$ and the standard deviation is $2.61$.",
+   "ur": "معیاری انحراف $\\sigma$ معلوم کرنے کے لیے تغیر کا مثبت جذر لیں۔ اس طرح، تغیر $6.8$ ہے اور معیاری انحراف $2.61$ ہے۔",
+   "check": [
+    "Abs(sqrt(R(34, 5)) - 2.61) <= 0.005",
+    "(15) + (18) + (14) + (20) + (13) == (80)",
+    "Abs(((((15) - (16))**2 + ((18) - (16))**2 + ((14) - (16))**2 + ((20) - (16))**2 + ((13) - (16))**2)/5) - 6.80) <= 0.0050000010000000004",
+    "Abs((sqrt((34/5))) - 2.61) <= 0.0050000010000000004"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

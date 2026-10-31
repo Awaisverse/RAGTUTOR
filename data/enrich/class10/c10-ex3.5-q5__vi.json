@@ -1,0 +1,65 @@
+{
+ "item": "c10-ex3.5-q5",
+ "label": "vi",
+ "answer_ref": "$\\begin{bmatrix} \\frac{5}{2} & \\frac{3}{2} \\\\ -2 & -1 \\end{bmatrix}$",
+ "steps": [
+  {
+   "math": "A = \\begin{bmatrix} -2 & -3 \\\\ 4 & 5 \\end{bmatrix}, \\quad A^{-1} = \\frac{1}{|A|} \\operatorname{Adj} A",
+   "en": "Let the given matrix be $A$. To find the multiplicative inverse $A^{-1}$, we use the formula $A^{-1} = \\frac{1}{|A|} \\operatorname{Adj} A$, where $|A| \\neq 0$.",
+   "ur": "فرض کریں کہ دیا گیا قالب $A$ ہے۔ ضربی معکوس $A^{-1}$ معلوم کرنے کے لیے ہم کلیہ $A^{-1} = \\frac{1}{|A|} \\operatorname{Adj} A$ استعمال کرتے ہیں، جہاں $|A| \\neq 0$ ہو۔",
+   "check": [
+    "Eq(Matrix([[-2, -3], [4, 5]]), Matrix([[-2, -3], [4, 5]]))"
+   ]
+  },
+  {
+   "math": "|A| = \\begin{vmatrix} -2 & -3 \\\\ 4 & 5 \\end{vmatrix} = (-2)(5) - (-3)(4)",
+   "en": "First, find the determinant $|A|$ of the $2 \\times 2$ matrix using the formula $ad - bc$.",
+   "ur": "سب سے پہلے، کلیہ $ad - bc$ کا استعمال کرتے ہوئے $2 \\times 2$ قالب کا مقطع $|A|$ معلوم کریں۔",
+   "check": [
+    "Matrix([[-2, -3], [4, 5]]).det() == (-2)*(5) - (-3)*(4)"
+   ]
+  },
+  {
+   "math": "|A| = -10 + 12 = 2",
+   "en": "Simplify to get the value of $|A|$. Since $|A| = 2 \\neq 0$, the matrix is non-singular and its multiplicative inverse exists.",
+   "ur": "$|A|$ کی قیمت حاصل کرنے کے لیے مختصر کریں۔ چونکہ $|A| = 2 \\neq 0$ ہے، اس لیے یہ ایک غیر نادر قالب ہے اور اس کا ضربی معکوس ممکن ہے۔",
+   "check": [
+    "-10 + 12 == 2",
+    "Matrix([[-2, -3], [4, 5]]).det() == 2"
+   ]
+  },
+  {
+   "math": "\\operatorname{Adj} A = \\begin{bmatrix} 5 & 3 \\\\ -4 & -2 \\end{bmatrix}",
+   "en": "Now, find the adjoint of matrix $A$ ($\\operatorname{Adj} A$) by interchanging the diagonal entries ($-2$ and $5$) and changing the signs of the non-diagonal entries ($-3$ and $4$).",
+   "ur": "اب، وٹری ارکان ($-2$ اور $5$) کی جگہ تبدیل کر کے اور غیر وٹری ارکان ($-3$ اور $4$) کی علامتیں بدل کر قالب $A$ کا ایڈجوائنٹ ($\\operatorname{Adj} A$) معلوم کریں۔",
+   "check": [
+    "Eq(Matrix([[-2, -3], [4, 5]]).adjugate(), Matrix([[5, 3], [-4, -2]]))"
+   ]
+  },
+  {
+   "math": "A^{-1} = \\frac{1}{2} \\begin{bmatrix} 5 & 3 \\\\ -4 & -2 \\end{bmatrix} = \\begin{bmatrix} \\frac{5}{2} & \\frac{3}{2} \\\\ \\frac{-4}{2} & \\frac{-2}{2} \\end{bmatrix}",
+   "en": "Substitute the values of $|A|$ and $\\operatorname{Adj} A$ into the inverse formula and divide each entry by $2$.",
+   "ur": "معکوس کے کلیے میں $|A|$ اور $\\operatorname{Adj} A$ کی قیمتیں درج کریں اور ہر رکن کو $2$ سے تقسیم کریں۔",
+   "check": [
+    "Eq(R(1, 2) * Matrix([[5, 3], [-4, -2]]), Matrix([[R(5, 2), R(3, 2)], [R(-4, 2), R(-2, 2)]]))"
+   ]
+  },
+  {
+   "math": "A^{-1} = \\begin{bmatrix} \\frac{5}{2} & \\frac{3}{2} \\\\ -2 & -1 \\end{bmatrix}",
+   "en": "Simplify the fractions in the second row to get the final multiplicative inverse.",
+   "ur": "مطلوبہ ضربی معکوس حاصل کرنے کے لیے دوسری قطار میں موجود کسور کو مختصر کریں۔",
+   "check": [
+    "Eq(Matrix([[-2, -3], [4, 5]]).inv(), Matrix([[R(5, 2), R(3, 2)], [-2, -1]]))",
+    "R(-4, 2) == -2",
+    "R(-2, 2) == -1",
+    "Matrix([[-2, -3], [4, 5]]).det() == 2",
+    "Eq(Matrix([[-2, -3], [4, 5]]).adjugate(), Matrix([[5, 3], [-4, -2]]))",
+    "Eq(Matrix([[-2, -3], [4, 5]]).inv(), Matrix([[5/2, 3/2], [-2, -1]]))",
+    "Eq(Matrix([[1, 0], [0, 1]]), Matrix([[1, 0], [0, 1]]))"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

@@ -1,0 +1,67 @@
+{
+ "item": "c10-ex5.3-q1",
+ "label": "x",
+ "answer_ref": "$\\frac{3 \\left(x - 2\\right)}{x}$",
+ "steps": [
+  {
+   "math": "\\frac{x^2-2x}{2x+6} \\times \\frac{x^2+x-6}{x^2-5x} \\times \\frac{6x-30}{x^2-2x}",
+   "en": "Write down the given algebraic expression to be simplified.",
+   "ur": "مختصر کرنے کے لیے دی گئی الجبری عبارت لکھیں۔"
+  },
+  {
+   "math": "= \\frac{1}{2x+6} \\times \\frac{x^2+x-6}{x^2-5x} \\times \\frac{6x-30}{1}",
+   "en": "First, notice that the term $x^2-2x$ appears in the numerator of the first fraction and the denominator of the third fraction, so we can cancel them out directly.",
+   "ur": "سب سے پہلے، نوٹ کریں کہ رقم $x^2-2x$ پہلی کسر کے شمار کنندہ اور تیسری کسر کے مخرج میں موجود ہے، اس لیے ہم انہیں براہِ راست کاٹ سکتے ہیں۔",
+   "check": [
+    "(x**2 - 2*x)/(2*x + 6) * (x**2 + x - 6)/(x**2 - 5*x) * (6*x - 30)/(x**2 - 2*x) == 1/(2*x + 6) * (x**2 + x - 6)/(x**2 - 5*x) * (6*x - 30)/1"
+   ]
+  },
+  {
+   "math": "= \\frac{1}{2(x+3)} \\times \\frac{x^2+3x-2x-6}{x(x-5)} \\times \\frac{6(x-5)}{1}",
+   "en": "Factorize by taking out common factors: $2$ from $2x+6$, $x$ from $x^2-5x$, and $6$ from $6x-30$. Also, split the middle term of the quadratic expression $x^2+x-6$ into $3x-2x$.",
+   "ur": "مشترک اجزاء باہر نکال کر تجزی کریں: $2x+6$ میں سے $2$، $x^2-5x$ میں سے $x$، اور $6x-30$ میں سے $6$۔ نیز، دو درجی عبارت $x^2+x-6$ کی درمیانی رقم کو $3x-2x$ میں توڑ کر لکھیں۔",
+   "check": [
+    "2*x + 6 == 2*(x + 3)",
+    "x**2 - 5*x == x*(x - 5)",
+    "6*x - 30 == 6*(x - 5)",
+    "x**2 + x - 6 == x**2 + 3*x - 2*x - 6"
+   ]
+  },
+  {
+   "math": "= \\frac{1}{2(x+3)} \\times \\frac{x(x+3)-2(x+3)}{x(x-5)} \\times \\frac{6(x-5)}{1}",
+   "en": "Group the terms in the middle numerator and take out common factors.",
+   "ur": "درمیانی شمار کنندہ کی رقوم کے گروپ بنائیں اور مشترک اجزاء باہر نکالیں۔",
+   "check": [
+    "x**2 + 3*x - 2*x - 6 == x*(x + 3) - 2*(x + 3)"
+   ]
+  },
+  {
+   "math": "= \\frac{1}{2(x+3)} \\times \\frac{(x-2)(x+3)}{x(x-5)} \\times \\frac{6(x-5)}{1}",
+   "en": "Complete the factorization of the middle numerator by taking $(x+3)$ as common.",
+   "ur": "$(x+3)$ کو مشترک لے کر درمیانی شمار کنندہ کی تجزی مکمل کریں۔",
+   "check": [
+    "x*(x + 3) - 2*(x + 3) == (x - 2)*(x + 3)"
+   ]
+  },
+  {
+   "math": "= \\frac{6(x-2)(x+3)(x-5)}{2x(x+3)(x-5)}",
+   "en": "Multiply the numerators together and the denominators together into a single fraction.",
+   "ur": "شمار کنندگان کو آپس میں اور مخرجوں کو آپس میں ضرب دے کر ایک کسر کی شکل میں لکھیں۔",
+   "check": [
+    "(1/(2*(x + 3))) * (((x - 2)*(x + 3))/(x*(x - 5))) * (6*(x - 5)/1) == (6*(x - 2)*(x + 3)*(x - 5))/(2*x*(x + 3)*(x - 5))"
+   ]
+  },
+  {
+   "math": "= \\frac{3 \\left(x - 2\\right)}{x}",
+   "en": "Cancel out the common factors $(x+3)$ and $(x-5)$ from the numerator and denominator, and divide $6$ by $2$ to get $3$. This gives the final simplified answer.",
+   "ur": "شمار کنندہ اور مخرج میں سے مشترک اجزاء $(x+3)$ اور $(x-5)$ کو کاٹ دیں، اور $6$ کو $2$ پر تقسیم کر کے $3$ حاصل کریں۔ اس سے حتمی مختصر جواب ملتا ہے۔",
+   "check": [
+    "(6*(x - 2)*(x + 3)*(x - 5))/(2*x*(x + 3)*(x - 5)) == 3*(x - 2)/x",
+    "((3*x - 6)/x) == ((6*x - 30)*(x**2 + x - 6)/((2*x + 6)*(x**2 - 5*x)))"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

@@ -1,0 +1,50 @@
+{
+ "item": "c10-ex3.4-q1",
+ "label": "iv",
+ "answer_ref": "$AB = \\begin{bmatrix} 3 & 10 & 3 \\\\ 3 & -1 & 0 \\\\ -3 & 12 & 3 \\end{bmatrix}$, $BA = \\begin{bmatrix} -2 & 2 \\\\ 2 & 7 \\end{bmatrix}$",
+ "math": [
+  "A = \\begin{bmatrix} 1 & 2 \\\\ -1 & 1 \\\\ 3 & 0 \\end{bmatrix}, \\quad B = \\begin{bmatrix} -1 & 4 & 1 \\\\ 2 & 3 & 1 \\end{bmatrix}",
+  "\\text{Columns of } A = 2 = \\text{Rows of } B",
+  "AB = \\begin{bmatrix} 1 & 2 \\\\ -1 & 1 \\\\ 3 & 0 \\end{bmatrix}\\begin{bmatrix} -1 & 4 & 1 \\\\ 2 & 3 & 1 \\end{bmatrix} = \\begin{bmatrix} (1)(-1) + (2)(2) & (1)(4) + (2)(3) & (1)(1) + (2)(1) \\\\ (-1)(-1) + (1)(2) & (-1)(4) + (1)(3) & (-1)(1) + (1)(1) \\\\ (3)(-1) + (0)(2) & (3)(4) + (0)(3) & (3)(1) + (0)(1) \\end{bmatrix}",
+  "AB = \\begin{bmatrix} -1 + 4 & 4 + 6 & 1 + 2 \\\\ 1 + 2 & -4 + 3 & -1 + 1 \\\\ -3 + 0 & 12 + 0 & 3 + 0 \\end{bmatrix} = \\begin{bmatrix} 3 & 10 & 3 \\\\ 3 & -1 & 0 \\\\ -3 & 12 & 3 \\end{bmatrix}",
+  "\\text{Columns of } B = 3 = \\text{Rows of } A",
+  "BA = \\begin{bmatrix} -1 & 4 & 1 \\\\ 2 & 3 & 1 \\end{bmatrix}\\begin{bmatrix} 1 & 2 \\\\ -1 & 1 \\\\ 3 & 0 \\end{bmatrix} = \\begin{bmatrix} (-1)(1) + (4)(-1) + (1)(3) & (-1)(2) + (4)(1) + (1)(0) \\\\ (2)(1) + (3)(-1) + (1)(3) & (2)(2) + (3)(1) + (1)(0) \\end{bmatrix}",
+  "BA = \\begin{bmatrix} -1 - 4 + 3 & -2 + 4 + 0 \\\\ 2 - 3 + 3 & 4 + 3 + 0 \\end{bmatrix} = \\begin{bmatrix} -2 & 2 \\\\ 2 & 7 \\end{bmatrix}"
+ ],
+ "why": [
+  {
+   "en": "We begin by noting the orders of our given matrices: $A$ is $3 \\times 2$ and $B$ is $2 \\times 3$. Knowing the number of rows and columns is essential before we attempt any matrix multiplication.",
+   "ur": "ہم سب سے پہلے دیے گئے کالبوں کے مرتبے (orders) نوٹ کرتے ہیں: $A$ کا مرتبہ $3 \\times 2$ ہے اور $B$ کا مرتبہ $2 \\times 3$ ہے۔ کسی بھی کالب کی ضرب شروع کرنے سے پہلے قطاروں اور کالموں کی تعداد جاننا بہت ضروری ہے۔"
+  },
+  {
+   "en": "By the rule of matrix multiplication, the inner dimensions must match, meaning the columns of the first matrix must equal the rows of the second. Since $2 = 2$, $AB$ is defined, and the outer dimensions tell us the answer will be a $3 \\times 3$ matrix.",
+   "ur": "کالبوں کی ضرب کے اصول کے مطابق، پہلے کالب کے کالموں کی تعداد دوسرے کالب کی قطاروں کی تعداد کے برابر ہونی چاہیے۔ چونکہ یہاں دونوں $2$ ہیں، اس لیے $AB$ ممکن ہے اور اس کے نتیجے میں ہمیں $3 \\times 3$ مرتبے کا کالب ملے گا۔"
+  },
+  {
+   "en": "We apply the row-by-column multiplication rule, pairing each of the $3$ rows of $A$ with each of the $3$ columns of $B$. This sets up the exact products we need to calculate all nine entries of our $3 \\times 3$ matrix.",
+   "ur": "اب ہم قطار کو کالم سے ضرب دینے کا اصول لاگو کرتے ہیں، جس میں کالب $A$ کی ہر قطار کو کالب $B$ کے ہر کالم کے متعلقہ ارکان سے ضرب دے کر جمع کیا جاتا ہے۔ اس سے ہمارے $3 \\times 3$ کالب کے تمام نو ارکان معلوم کرنے کا ڈھانچہ تیار ہو جاتا ہے۔"
+  },
+  {
+   "en": "Doing the basic arithmetic (multiplying and then adding) simplifies each position into a single number. This completes the first part of our question and gives us the final $3 \\times 3$ matrix for $AB$.",
+   "ur": "ان چھوٹے اعداد کو ضرب دے کر جمع کرنے سے ہر جگہ ایک واحد عدد آ جاتا ہے۔ اس سے ہمارے سوال کا پہلا حصہ مکمل ہو جاتا ہے اور ہمیں $AB$ کا حتمی $3 \\times 3$ کالب حاصل ہو جاتا ہے۔"
+  },
+  {
+   "en": "Matrix multiplication is not commutative, so we must check the condition again when reversing the order to $BA$. Here, the columns of $B$ ($3$) match the rows of $A$ ($3$), which tells us $BA$ is also possible, but it will be a smaller $2 \\times 2$ matrix.",
+   "ur": "کالبوں کی ضرب میں ترتیب بدلنے سے فرق پڑتا ہے، اس لیے $BA$ معلوم کرنے کے لیے ہمیں شرط دوبارہ چیک کرنی ہوگی۔ یہاں $B$ کے کالموں کی تعداد ($3$) اور $A$ کی قطاروں کی تعداد ($3$) برابر ہے، جو بتاتی ہے کہ $BA$ بھی ممکن ہے، لیکن اس کا جواب ایک چھوٹا $2 \\times 2$ کالب ہوگا۔"
+  },
+  {
+   "en": "Now $B$ is the first matrix, so we multiply each of the $2$ rows of $B$ by each of the $2$ columns of $A$. Notice that each entry now involves adding three pairs of products because the matching inner dimension is $3$.",
+   "ur": "اب چونکہ $B$ پہلا کالب ہے، اس لیے ہم $B$ کی دونوں قطاروں کو باری باری $A$ کے دونوں کالموں سے ضرب دیتے ہیں۔ غور کریں کہ اب ہر رکن میں تین جوڑوں کی ضرب کو جمع کیا جا رہا ہے کیونکہ مشترک تعداد $3$ ہے۔"
+  },
+  {
+   "en": "We finish by simplifying the products and adding the three numbers in each of the four positions. This gives us the complete $2 \\times 2$ matrix for $BA$.",
+   "ur": "آخر میں ہم ضرب کے عمل کو مختصر کرتے ہیں اور چاروں جگہوں پر موجود تین تین اعداد کو جمع کر لیتے ہیں۔ اس طرح ہمیں $BA$ کا مکمل $2 \\times 2$ کالب مل جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "Both products $AB$ and $BA$ exist for these two matrices, resulting in $AB = \\begin{bmatrix} 3 & 10 & 3 \\\\ 3 & -1 & 0 \\\\ -3 & 12 & 3 \\end{bmatrix}$ and $BA = \\begin{bmatrix} -2 & 2 \\\\ 2 & 7 \\end{bmatrix}$. This clearly shows that in matrix multiplication, changing the order can change not only the numbers inside the answer, but even the size of the resulting matrix ($3 \\times 3$ versus $2 \\times 2$), so $AB \\neq BA$. You can quickly verify your work by checking that the dimensions of $AB$ match (Rows of $A$ $\\times$ Columns of $B$ $= 3 \\times 3$) and $BA$ match (Rows of $B$ $\\times$ Columns of $A$ $= 2 \\times 2$).",
+  "ur": "ان دونوں کالبوں کے لیے $AB$ اور $BA$ دونوں کا وجود ممکن ہے، جن کے نتائج $AB = \\begin{bmatrix} 3 & 10 & 3 \\\\ 3 & -1 & 0 \\\\ -3 & 12 & 3 \\end{bmatrix}$ اور $BA = \\begin{bmatrix} -2 & 2 \\\\ 2 & 7 \\end{bmatrix}$ ہیں۔ اس سے صاف ظاہر ہوتا ہے کہ کالبوں کی ضرب میں ترتیب بدلنے سے نہ صرف جواب کے اندر کے اعداد بدل جاتے ہیں بلکہ حتمی کالب کا سائز بھی بدل سکتا ہے ($3 \\times 3$ بمقابلہ $2 \\times 2$)، لہٰذا $AB \\neq BA$۔ آپ اپنے جواب کے سائز کی تصدیق اس طرح کر سکتے ہیں کہ $AB$ کا مرتبہ ($A$ کی قطاریں $\\times$ $B$ کے کالم $= 3 \\times 3$) ہے اور $BA$ کا مرتبہ ($B$ کی قطاریں $\\times$ $A$ کے کالم $= 2 \\times 2$) ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

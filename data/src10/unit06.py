@@ -217,7 +217,8 @@ q1 = []
 for l, cf in Q1:
     order = [(cf[1], b1, "b"), (cf[0], a1, "a")] if l in ("iv", "v") else [(cf[0], a1, "a"), (cf[1], b1, "b")]
     st, v, _ = combo([o[0] for o in order], [o[1] for o in order], [o[2] for o in order])
-    q1.append(P(l, st, f"${vt(v)}$", prompt=f"${labelled(cf)}$"))
+    book = {"iv": r"\underline{b}-\underline{a}", "v": r"4\underline{b}-5\underline{a}"}   # as printed, b first
+    q1.append(P(l, st, f"${vt(v)}$", prompt=f"${book[l]}$" if l in book else f"${labelled(cf)}$"))
 ex("ex6.2", 1, rf"If $\underline{{a}}={vt(a1)}$ and $\underline{{b}}={vt(b1)}$, then find the following vectors: (i) $\underline{{a}}+\underline{{b}}$ "
    r"(ii) $\underline{a}+3\underline{b}$ (iii) $3\underline{a}+\frac{1}{2}\underline{b}$ (iv) $\underline{b}-\underline{a}$ (v) $4\underline{b}-5\underline{a}$ "
    r"(vi) $\frac{3}{2}\underline{a}-\underline{b}$", q1, "6.2")

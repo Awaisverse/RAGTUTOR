@@ -1,0 +1,55 @@
+{
+ "item": "c10-ex2.4-q1",
+ "label": "v",
+ "answer_ref": "$D = -196$: roots are imaginary",
+ "steps": [
+  {
+   "math": "5 x^{2} - 2 x + 10 = 0",
+   "en": "Write down the given quadratic equation to examine the nature of its roots.",
+   "ur": "دی گئی دو درجی مساوات لکھیں تاکہ اس کے جذور کی نوعیت معلوم کی جا سکے۔"
+  },
+  {
+   "math": "a = 5, \\quad b = -2, \\quad c = 10",
+   "en": "Compare the given equation with the standard quadratic equation $ax^2 + bx + c = 0$ to identify the values of $a$, $b$, and $c$.",
+   "ur": "دی گئی مساوات کا معیاری دو درجی مساوات $ax^2 + bx + c = 0$ سے موازنہ کر کے $a$، $b$ اور $c$ کی قیمتیں معلوم کریں۔"
+  },
+  {
+   "math": "D = b^{2} - 4ac",
+   "en": "Write the formula for the discriminant $D$, as the nature of the roots depends on its value.",
+   "ur": "ممیز (discriminant) $D$ کا فارمولا لکھیں، کیونکہ جذور کی نوعیت کا انحصار اس کی قیمت پر ہوتا ہے۔"
+  },
+  {
+   "math": "D = (-2)^{2} - 4(5)(10)",
+   "en": "Substitute $a = 5$, $b = -2$, and $c = 10$ into the discriminant formula.",
+   "ur": "ممیز کے فارمولے میں $a = 5$، $b = -2$ اور $c = 10$ درج کریں۔"
+  },
+  {
+   "math": "D = 4 - 200",
+   "en": "Evaluate the square $(-2)^{2} = 4$ and multiply $4(5)(10) = 200$.",
+   "ur": "مربع $(-2)^{2} = 4$ حل کریں اور $4(5)(10) = 200$ کو ضرب دیں۔",
+   "check": [
+    "(-2)**2 == 4",
+    "4*5*10 == 200"
+   ]
+  },
+  {
+   "math": "D = -196",
+   "en": "Subtract $200$ from $4$ to find the value of the discriminant $D$.",
+   "ur": "ممیز $D$ کی قیمت معلوم کرنے کے لیے $4$ میں سے $200$ تفریق کریں۔",
+   "check": [
+    "4 - 200 == -196"
+   ]
+  },
+  {
+   "math": "\\text{Since } D = -196 < 0, \\text{ roots are imaginary}",
+   "en": "Since the discriminant $D$ is negative ($D < 0$), the roots of the given equation are imaginary (complex conjugates).",
+   "ur": "چونکہ ممیز $D$ منفی ہے ($D < 0$)، اس لیے دی گئی مساوات کے جذور خیالی (غیر حقیقی) ہیں۔",
+   "check": [
+    "(-2)**2 - 4*(5)*(10) == -196"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

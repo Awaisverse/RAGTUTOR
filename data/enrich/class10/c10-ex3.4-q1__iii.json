@@ -1,0 +1,66 @@
+{
+ "item": "c10-ex3.4-q1",
+ "label": "iii",
+ "answer_ref": "$AB = \\begin{bmatrix} 8 & 20 \\\\ 8 & 20 \\end{bmatrix}$, $BA = \\begin{bmatrix} 28 \\end{bmatrix}$",
+ "steps": [
+  {
+   "math": "A = \\begin{bmatrix} 4 \\\\ 4 \\end{bmatrix}, \\quad B = \\begin{bmatrix} 2 & 5 \\end{bmatrix}",
+   "en": "First, write down the given matrices $A$ and $B$. We need to find the matrix products $AB$ and $BA$, if possible.",
+   "ur": "سب سے پہلے، دیے گئے قو الب $A$ اور $B$ لکھیں۔ ہمیں قالبوں کا حاصل ضرب $AB$ اور $BA$ (اگر ممکن ہو تو) معلوم کرنا ہے۔"
+  },
+  {
+   "math": "\\text{Order of } A = 2 \\times 1, \\quad \\text{Order of } B = 1 \\times 2",
+   "en": "Check the condition for matrix multiplication $AB$: the number of columns in $A$ ($1$) is equal to the number of rows in $B$ ($1$). Therefore, the product $AB$ is possible and will be a $2 \\times 2$ matrix.",
+   "ur": "ضرب $AB$ کے لیے شرط چیک کریں: قالب $A$ میں کالموں کی تعداد ($1$) قالب $B$ میں قطاروں کی تعداد ($1$) کے برابر ہے۔ لہٰذا، حاصل ضرب $AB$ ممکن ہے اور اس کا مرتبہ $2 \\times 2$ ہوگا۔",
+   "check": [
+    "1 == 1"
+   ]
+  },
+  {
+   "math": "AB = \\begin{bmatrix} 4 \\\\ 4 \\end{bmatrix}\\begin{bmatrix} 2 & 5 \\end{bmatrix} = \\begin{bmatrix} (4)(2) & (4)(5) \\\\ (4)(2) & (4)(5) \\end{bmatrix}",
+   "en": "To find $AB$, multiply each row of matrix $A$ by each column of matrix $B$.",
+   "ur": "$AB$ معلوم کرنے کے لیے، قالب $A$ کی ہر قطار کو قالب $B$ کے ہر کالم سے ضرب دیں۔",
+   "check": [
+    "Matrix([[4], [4]]) * Matrix([[2, 5]]) == Matrix([[4*2, 4*5], [4*2, 4*5]])"
+   ]
+  },
+  {
+   "math": "AB = \\begin{bmatrix} 8 & 20 \\\\ 8 & 20 \\end{bmatrix}",
+   "en": "Simplify the products to get the matrix $AB$.",
+   "ur": "ضرب کے عمل کو مختصر کر کے قالب $AB$ حاصل کریں۔",
+   "check": [
+    "Matrix([[4*2, 4*5], [4*2, 4*5]]) == Matrix([[8, 20], [8, 20]])"
+   ]
+  },
+  {
+   "math": "\\text{Order of } B = 1 \\times 2, \\quad \\text{Order of } A = 2 \\times 1",
+   "en": "Now, check the condition for $BA$: the number of columns in $B$ ($2$) is equal to the number of rows in $A$ ($2$). Therefore, the product $BA$ is also possible and will be a $1 \\times 1$ matrix.",
+   "ur": "اب، $BA$ کے لیے شرط چیک کریں: قالب $B$ میں کالموں کی تعداد ($2$) قالب $A$ میں قطاروں کی تعداد ($2$) کے برابر ہے۔ لہٰذا، حاصل ضرب $BA$ بھی ممکن ہے اور اس کا مرتبہ $1 \\times 1$ ہوگا۔",
+   "check": [
+    "2 == 2"
+   ]
+  },
+  {
+   "math": "BA = \\begin{bmatrix} 2 & 5 \\end{bmatrix}\\begin{bmatrix} 4 \\\\ 4 \\end{bmatrix} = \\begin{bmatrix} (2)(4) + (5)(4) \\end{bmatrix}",
+   "en": "To find $BA$, multiply the row of matrix $B$ by the column of matrix $A$, entry by entry, and add them.",
+   "ur": "$BA$ معلوم کرنے کے لیے، قالب $B$ کی قطار کو قالب $A$ کے کالم سے رکن بہ رکن ضرب دیں اور انہیں جمع کریں۔",
+   "check": [
+    "Matrix([[2, 5]]) * Matrix([[4], [4]]) == Matrix([[2*4 + 5*4]])"
+   ]
+  },
+  {
+   "math": "BA = \\begin{bmatrix} 8 + 20 \\end{bmatrix} = \\begin{bmatrix} 28 \\end{bmatrix}",
+   "en": "Work out the products and add them to get the final result for $BA$.",
+   "ur": "حاصل ضرب نکال کر جمع کریں تاکہ $BA$ کا حتمی نتیجہ حاصل ہو سکے۔",
+   "check": [
+    "Matrix([[2*4 + 5*4]]) == Matrix([[8 + 20]])",
+    "Matrix([[8 + 20]]) == Matrix([[28]])",
+    "Eq(Matrix([[8, 20], [8, 20]]), Matrix([[8, 20], [8, 20]]))",
+    "Eq(Matrix([[28]]), Matrix([[28]]))"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

@@ -1,0 +1,61 @@
+{
+ "item": "c10-ex3.1-q4",
+ "label": "",
+ "answer_ref": "$a = 3,\\ b = 7,\\ c = 11,\\ d = 0$",
+ "steps": [
+  {
+   "math": "\\begin{bmatrix}a+2&c-3\\\\b-1&d+4\\end{bmatrix} = \\begin{bmatrix}5&8\\\\6&4\\end{bmatrix}",
+   "en": "Write down the given matrix equation. We need to find the values of $a$, $b$, $c$, and $d$.",
+   "ur": "دی گئی قالب کی مساوات لکھیں۔ ہمیں $a$، $b$، $c$ اور $d$ کی قیمتیں معلوم کرنی ہیں۔"
+  },
+  {
+   "math": "a + 2 = 5,\\quad b - 1 = 6,\\quad c - 3 = 8,\\quad d + 4 = 4",
+   "en": "By the definition of equality of matrices, two equal matrices have their corresponding entries (entries in the same positions) equal to each other.",
+   "ur": "مساوی قالبوں کی تعریف کے مطابق، دو مساوی قالبوں کے متناظرہ ارکان (ایک ہی مقام پر موجود ارکان) آپس میں برابر ہوتے ہیں۔"
+  },
+  {
+   "math": "a + 2 = 5 \\implies a = 5 - 2 \\implies a = 3",
+   "en": "Solve the first equation for $a$ by subtracting $2$ from both sides.",
+   "ur": "دونوں اطراف سے $2$ تفریق کر کے $a$ کے لیے پہلی مساوات حل کریں۔",
+   "check": [
+    "5 - 2 == 3"
+   ]
+  },
+  {
+   "math": "b - 1 = 6 \\implies b = 6 + 1 \\implies b = 7",
+   "en": "Solve the second equation for $b$ by adding $1$ to both sides.",
+   "ur": "دونوں اطراف میں $1$ جمع کر کے $b$ کے لیے دوسری مساوات حل کریں۔",
+   "check": [
+    "6 + 1 == 7"
+   ]
+  },
+  {
+   "math": "c - 3 = 8 \\implies c = 8 + 3 \\implies c = 11",
+   "en": "Solve the third equation for $c$ by adding $3$ to both sides.",
+   "ur": "دونوں اطراف میں $3$ جمع کر کے $c$ کے لیے تیسری مساوات حل کریں۔",
+   "check": [
+    "8 + 3 == 11"
+   ]
+  },
+  {
+   "math": "d + 4 = 4 \\implies d = 4 - 4 \\implies d = 0",
+   "en": "Solve the fourth equation for $d$ by subtracting $4$ from both sides.",
+   "ur": "دونوں اطراف سے $4$ تفریق کر کے $d$ کے لیے چوتھی مساوات حل کریں۔",
+   "check": [
+    "4 - 4 == 0"
+   ]
+  },
+  {
+   "math": "a = 3,\\quad b = 7,\\quad c = 11,\\quad d = 0",
+   "en": "State all the found values together as the final answer.",
+   "ur": "معلوم کی گئی تمام قیمتوں کو حتمی جواب کے طور پر ایک ساتھ لکھیں۔",
+   "check": [
+    "Matrix([[3 + 2, 11 - 3], [7 - 1, 0 + 4]]) == Matrix([[5, 8], [6, 4]])",
+    "Eq(Matrix([[5, 8], [6, 4]]), Matrix([[5, 8], [6, 4]]))"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

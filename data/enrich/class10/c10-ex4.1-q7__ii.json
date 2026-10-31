@@ -1,0 +1,66 @@
+{
+ "item": "c10-ex4.1-q7",
+ "label": "ii",
+ "answer_ref": "$x = 42$",
+ "steps": [
+  {
+   "math": "f^{-1}(x) = \\frac{x - 2}{4}, \\quad g^{-1}(x) = \\frac{x + 18}{6}",
+   "en": "From part (i), we have the inverse functions $f^{-1}(x)$ and $g^{-1}(x)$.",
+   "ur": "حصہ (i) سے، ہمارے پاس معکوس تفاعل $f^{-1}(x)$ اور $g^{-1}(x)$ موجود ہیں۔",
+   "check": [
+    "4*((x - 2)/4) + 2 == x",
+    "6*((x + 18)/6) - 18 == x"
+   ]
+  },
+  {
+   "math": "f^{-1}(x) = g^{-1}(x)",
+   "en": "We are given that the two inverse functions are equal, and we need to find the value of $x$.",
+   "ur": "ہمیں دیا گیا ہے کہ دونوں معکوس تفاعل آپس میں برابر ہیں، اور ہمیں $x$ کی قیمت معلوم کرنی ہے۔"
+  },
+  {
+   "math": "\\frac{x - 2}{4} = \\frac{x + 18}{6}",
+   "en": "Substitute the expressions for $f^{-1}(x)$ and $g^{-1}(x)$ into the equation.",
+   "ur": "مساوات میں $f^{-1}(x)$ اور $g^{-1}(x)$ کی قیمتیں درج کریں۔"
+  },
+  {
+   "math": "6(x - 2) = 4(x + 18)",
+   "en": "Cross-multiply to eliminate the denominators.",
+   "ur": "مخرج (denominators) کو ختم کرنے کے لیے چلیپائی ضرب (cross-multiply) دیں۔",
+   "check": [
+    "((x - 2)/4)*24 == 6*(x - 2)",
+    "((x + 18)/6)*24 == 4*(x + 18)"
+   ]
+  },
+  {
+   "math": "6x - 12 = 4x + 72",
+   "en": "Expand the brackets on both sides of the equation.",
+   "ur": "مساوات کے دونوں اطراف بریکٹ کھولیں۔",
+   "check": [
+    "6*(x - 2) == 6*x - 12",
+    "4*(x + 18) == 4*x + 72"
+   ]
+  },
+  {
+   "math": "6x - 4x = 72 + 12 \\Rightarrow 2x = 84",
+   "en": "Collect the $x$ terms on the left side and the constant terms on the right side, then simplify.",
+   "ur": "$x$ والی رقوم کو بائیں طرف اور مستقل رقوم (constants) کو دائیں طرف اکٹھا کریں، پھر مختصر کریں۔",
+   "check": [
+    "6*x - 4*x == 2*x",
+    "72 + 12 == 84"
+   ]
+  },
+  {
+   "math": "x = \\frac{84}{2} \\Rightarrow x = 42",
+   "en": "Divide both sides by $2$ to get the final value of $x$.",
+   "ur": "$x$ کی حتمی قیمت حاصل کرنے کے لیے دونوں اطراف کو $2$ سے تقسیم کریں۔",
+   "check": [
+    "84/2 == 42",
+    "(42 - 2)/4 == (42 + 18)/6",
+    "6*(x - 2) - 4*(x + 18) == 2*x - 84"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

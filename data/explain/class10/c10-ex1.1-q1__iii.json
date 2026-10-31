@@ -1,0 +1,55 @@
+{
+ "item": "c10-ex1.1-q1",
+ "label": "iii",
+ "answer_ref": "$-i$",
+ "math": [
+  "(-i)^{-19} = (-1 \\cdot i)^{-19}",
+  "= (-1)^{-19} \\cdot i^{-19}",
+  "= -1 \\cdot i^{-19} = -i^{-19}",
+  "= -\\frac{1}{i^{19}}",
+  "= -\\frac{1}{i^{18} \\cdot i} = -\\frac{1}{(i^2)^9 \\cdot i}",
+  "= -\\frac{1}{(-1)^9 \\cdot i} = -\\frac{1}{-1 \\cdot i} = \\frac{1}{i}",
+  "= \\frac{1}{i} \\times \\frac{i}{i} = \\frac{i}{i^2}",
+  "= \\frac{i}{-1} = -i"
+ ],
+ "why": [
+  {
+   "en": "We separate the negative sign from $i$ by writing it as $-1$ multiplied by $i$. This makes it much easier to apply the exponent $-19$ to the sign and the imaginary unit separately without making a sign mistake.",
+   "ur": "ہم منفی علامت کو $i$ سے الگ کرنے کے لیے اسے $-1$ اور $i$ کے حاصلِ ضرب کے طور پر لکھتے ہیں۔ اس سے قوت نما $-19$ کو علامت اور خیالی اکائی پر الگ الگ لگانا آسان ہو جاتا ہے اور علامت کی غلطی کا امکان نہیں رہتا۔"
+  },
+  {
+   "en": "By using the power of a product rule $(ab)^n = a^n b^n$, we give the exponent $-19$ to both $-1$ and $i$. Now we can simplify the number part and the imaginary part independently.",
+   "ur": "قوت نما کے قانون $(ab)^n = a^n b^n$ کا استعمال کرتے ہوئے، ہم قوت نما $-19$ کو $-1$ اور $i$ دونوں پر الگ الگ لگاتے ہیں۔ اب ہم عددی حصے اور خیالی حصے کو الگ الگ مختصر کر سکتے ہیں۔"
+  },
+  {
+   "en": "We know that $-1$ raised to any odd integer power always equals $-1$, and since $-19$ is odd, $(-1)^{-19}$ becomes $-1$. This settles the overall sign of our expression right at the start.",
+   "ur": "ہم جانتے ہیں کہ $-1$ کی قوت اگر کوئی بھی طاق عدد ہو تو جواب ہمیشہ $-1$ آتا ہے، اور چونکہ $-19$ ایک طاق عدد ہے، اس لیے $(-1)^{-19}$ کی قیمت $-1$ ہو جاتی ہے۔ اس سے جملے کی مجموعی علامت شروع میں ہی طے ہو جاتی ہے۔"
+  },
+  {
+   "en": "We cannot directly evaluate a negative power of $i$, so we use the negative exponent rule $a^{-n} = \\frac{1}{a^n}$ to move $i^{-19}$ to the denominator. This gives us a positive power $i^{19}$, which we know how to simplify.",
+   "ur": "ہم $i$ کی منفی قوت کو براہِ راست حل نہیں کر سکتے، اس لیے منفی قوت نما کے اصول $a^{-n} = \\frac{1}{a^n}$ کو استعمال کرتے ہوئے $i^{-19}$ کو بٹے کے نیچے لے جاتے ہیں۔ اس سے ہمیں مثبت قوت $i^{19}$ مل جاتی ہے جسے مختصر کرنا ہم جانتے ہیں۔"
+  },
+  {
+   "en": "Since our fundamental identity is $i^2 = -1$, we always look for even powers of $i$. Breaking the odd power $19$ into $18$ and $1$ allows us to rewrite the even part $i^{18}$ as $(i^2)^9$.",
+   "ur": "چونکہ ہماری بنیادی اکائی $i^2 = -1$ ہے، اس لیے ہم ہمیشہ $i$ کی جفت قوتیں بناتے ہیں۔ طاق قوت $19$ کو $18$ اور $1$ میں توڑنے سے ہم جفت حصے $i^{18}$ کو $(i^2)^9$ کی شکل میں لکھ سکتے ہیں۔"
+  },
+  {
+   "en": "Replacing $i^2$ with its value $-1$ lets us turn $(i^2)^9$ into a simple number. Because $9$ is an odd power, $(-1)^9$ becomes $-1$, and this negative in the denominator cancels out the negative sign waiting in front of the fraction.",
+   "ur": "یہاں $i^2$ کی جگہ اس کی قیمت $-1$ رکھنے سے $(i^2)^9$ ایک سادہ عدد میں بدل جاتا ہے۔ چونکہ $9$ ایک طاق قوت ہے، اس لیے $(-1)^9$ کا جواب $-1$ آتا ہے، اور مخرج کی یہ منفی علامت کسر کے باہر موجود منفی علامت سے کٹ جاتی ہے۔"
+  },
+  {
+   "en": "In standard form, we never leave $i$ in the denominator of a fraction. Multiplying both the top and bottom by $i$ creates $i^2$ at the bottom, which will remove the imaginary unit from the denominator.",
+   "ur": "معیاری شکل میں ہم کبھی بھی کسر کے مخرج (نچلے حصے) میں $i$ کو نہیں چھوڑتے۔ شمار کنندہ اور مخرج دونوں کو $i$ سے ضرب دینے سے نیچے $i^2$ بن جاتا ہے، جس سے مخرج سے خیالی اکائی ختم ہو جائے گی۔"
+  },
+  {
+   "en": "Finally, substituting $i^2 = -1$ in the denominator turns it into a real number. Dividing $i$ by $-1$ gives us our clean, simplified complex number.",
+   "ur": "آخر میں، مخرج میں $i^2 = -1$ درج کرنے سے نچلا حصہ ایک حقیقی عدد بن جاتا ہے۔ $i$ کو $-1$ پر تقسیم کرنے سے ہمیں سادہ اور مختصر ترین مختلط عدد حاصل ہو جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This final answer shows that the complicated power $(-i)^{-19}$ reduces simply to $-i$, which is in standard complex form $0 - i$ with no high or negative exponents left.",
+  "ur": "یہ حتمی جواب ظاہر کرتا ہے کہ پیچیدہ قوت $(-i)^{-19}$ مختصر ہو کر صرف $-i$ رہ جاتی ہے، جو کہ معیاری شکل ہے اور اس میں کوئی بڑی یا منفی قوت باقی نہیں رہی۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-10-31"
+}

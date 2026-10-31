@@ -1,0 +1,50 @@
+{
+ "item": "c10-rev3-q3",
+ "label": "ii",
+ "answer_ref": "verified: both sides $= \\begin{bmatrix} 10 & 11 \\\\ 7 & 13 \\end{bmatrix}$",
+ "math": [
+  "",
+  "A + B = \\begin{bmatrix} 2 & 3 \\\\ 4 & 5 \\end{bmatrix} + \\begin{bmatrix} 5 & 6 \\\\ 2 & 1 \\end{bmatrix} = \\begin{bmatrix} 2 + 5 & 3 + 6 \\\\ 4 + 2 & 5 + 1 \\end{bmatrix} = \\begin{bmatrix} 7 & 9 \\\\ 6 & 6 \\end{bmatrix}",
+  "(A+B) + C = \\begin{bmatrix} 7 & 9 \\\\ 6 & 6 \\end{bmatrix} + \\begin{bmatrix} 3 & 2 \\\\ 1 & 7 \\end{bmatrix} = \\begin{bmatrix} 7 + 3 & 9 + 2 \\\\ 6 + 1 & 6 + 7 \\end{bmatrix} = \\begin{bmatrix} 10 & 11 \\\\ 7 & 13 \\end{bmatrix}",
+  "",
+  "B + C = \\begin{bmatrix} 5 & 6 \\\\ 2 & 1 \\end{bmatrix} + \\begin{bmatrix} 3 & 2 \\\\ 1 & 7 \\end{bmatrix} = \\begin{bmatrix} 5 + 3 & 6 + 2 \\\\ 2 + 1 & 1 + 7 \\end{bmatrix} = \\begin{bmatrix} 8 & 8 \\\\ 3 & 8 \\end{bmatrix}",
+  "A + (B+C) = \\begin{bmatrix} 2 & 3 \\\\ 4 & 5 \\end{bmatrix} + \\begin{bmatrix} 8 & 8 \\\\ 3 & 8 \\end{bmatrix} = \\begin{bmatrix} 2 + 8 & 3 + 8 \\\\ 4 + 3 & 5 + 8 \\end{bmatrix} = \\begin{bmatrix} 10 & 11 \\\\ 7 & 13 \\end{bmatrix}",
+  "(A+B)+C = \\begin{bmatrix} 10 & 11 \\\\ 7 & 13 \\end{bmatrix} = A+(B+C)"
+ ],
+ "why": [
+  {
+   "en": "To verify the associative law of matrix addition, we always start by calculating one side of the equation at a time. Let's begin with the Left-Hand Side, $(A+B)+C$.",
+   "ur": "کالموں کی جمع کے قانونِ تلازم (associative law) کی تصدیق کرنے کے لیے، ہم ہمیشہ مساوات کی ایک سائیڈ کو ایک وقت میں حل کرنے سے شروعات کرتے ہیں۔ آئیے بائیں سائیڈ (Left-Hand Side)، یعنی $(A+B)+C$ سے آغاز کریں۔"
+  },
+  {
+   "en": "Following the rule of brackets, we must first find the sum inside the parentheses, $A+B$. Since both are $2 \\times 2$ matrices, we add their corresponding entries to get a single combined matrix $\\begin{bmatrix} 7 & 9 \\\\ 6 & 6 \\end{bmatrix}$.",
+   "ur": "بریکٹس کے اصول پر عمل کرتے ہوئے، ہمیں سب سے پہلے بریکٹ کے اندر موجود رقم $A+B$ کا مجموعہ معلوم کرنا ہوگا۔ چونکہ دونوں $2 \\times 2$ کے کالم ہیں، اس لیے ہم ان کے متناظرہ ارکان کو جمع کر کے ایک نیا کالم $\\begin{bmatrix} 7 & 9 \\\\ 6 & 6 \\end{bmatrix}$ حاصل کرتے ہیں۔"
+  },
+  {
+   "en": "Now we complete the Left-Hand Side by adding matrix $C$ to the result of $(A+B)$ we just found. This gives us the final matrix for the Left-Hand Side, $\\begin{bmatrix} 10 & 11 \\\\ 7 & 13 \\end{bmatrix}$, which we will save to compare with the other side.",
+   "ur": "اب ہم بائیں سائیڈ کو مکمل کرنے کے لیے کالم $C$ کو $(A+B)$ کے حاصل شدہ نتیجے میں جمع کرتے ہیں۔ اس سے ہمیں بائیں سائیڈ کا حتمی کالم $\\begin{bmatrix} 10 & 11 \\\\ 7 & 13 \\end{bmatrix}$ ملتا ہے، جسے ہم دوسری سائیڈ سے موازنہ کرنے کے لیے محفوظ رکھیں گے۔"
+  },
+  {
+   "en": "Next, we move to the Right-Hand Side, $A+(B+C)$, to see if grouping the matrices differently gives the same result.",
+   "ur": "اس کے بعد، ہم دائیں سائیڈ (Right-Hand Side)، یعنی $A+(B+C)$ کی طرف بڑھتے ہیں تاکہ یہ دیکھ سکیں کہ کیا کالموں کی مختلف گروپ بندی سے بھی وہی نتیجہ نکلتا ہے۔"
+  },
+  {
+   "en": "Again, the bracket rule tells us to solve the inner part $(B+C)$ first before touching matrix $A$. Adding the matching positions of $B$ and $C$ gives us the intermediate matrix $\\begin{bmatrix} 8 & 8 \\\\ 3 & 8 \\end{bmatrix}$.",
+   "ur": "ایک بار پھر، بریکٹ کا اصول ہمیں بتاتا ہے کہ کالم $A$ کو چھیڑنے سے پہلے اندرونی حصے $(B+C)$ کو حل کیا جائے۔ $B$ اور $C$ کے متناظرہ ارکان کو جمع کرنے سے ہمیں درمیانی کالم $\\begin{bmatrix} 8 & 8 \\\\ 3 & 8 \\end{bmatrix}$ ملتا ہے۔"
+  },
+  {
+   "en": "To finish the Right-Hand Side, we add matrix $A$ to our result for $(B+C)$, keeping the exact order shown in the expression. This brings us to the final matrix for the Right-Hand Side, which is also $\\begin{bmatrix} 10 & 11 \\\\ 7 & 13 \\end{bmatrix}$.",
+   "ur": "دائیں سائیڈ کو مکمل کرنے کے لیے، ہم عبارت میں دی گئی ترتیب کے مطابق کالم $A$ کو اپنے $(B+C)$ کے نتیجے میں جمع کرتے ہیں۔ یہ ہمیں دائیں سائیڈ کے حتمی کالم تک لے آتا ہے، جو کہ $\\begin{bmatrix} 10 & 11 \\\\ 7 & 13 \\end{bmatrix}$ ہی ہے۔"
+  },
+  {
+   "en": "We now compare the final matrices from step 3 and step 6 entry by entry. Since every corresponding number matches perfectly, we have proven that the Left-Hand Side equals the Right-Hand Side.",
+   "ur": "اب ہم مرحلہ 3 اور مرحلہ 6 سے حاصل ہونے والے حتمی کالموں کے ایک ایک رکن کا موازنہ کرتے ہیں۔ چونکہ ہر متناظرہ عدد بالکل برابر ہے، اس لیے ہم نے ثابت کر دیا ہے کہ بائیں سائیڈ دائیں سائیڈ کے برابر ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer confirms the associative law of matrix addition: when adding three matrices $A$, $B$, and $C$, it does not matter whether we group and add $(A+B)$ first or $(B+C)$ first, as both ways yield the exact same matrix $\\begin{bmatrix} 10 & 11 \\\\ 7 & 13 \\end{bmatrix}$.",
+  "ur": "حتمی جواب کالموں کی جمع کے قانونِ تلازم (associative law) کی تصدیق کرتا ہے: جب تین کالموں $A$، $B$ اور $C$ کو جمع کیا جائے، تو اس سے کوئی فرق نہیں پڑتا کہ ہم پہلے $(A+B)$ کا گروپ بنا کر جمع کریں یا پہلے $(B+C)$ کو، کیونکہ دونوں طریقوں سے بالکل ایک ہی کالم $\\begin{bmatrix} 10 & 11 \\\\ 7 & 13 \\end{bmatrix}$ حاصل ہوتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

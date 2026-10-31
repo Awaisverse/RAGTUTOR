@@ -1,0 +1,55 @@
+{
+ "item": "c10-ex1.2-q1",
+ "label": "viii",
+ "answer_ref": "$\\frac{8}{15} + \\frac{3}{5}i$",
+ "math": [
+  "(5 + 2i) \\div (6 - 3i) = \\frac{5 + 2i}{6 - 3i}",
+  "= \\frac{5 + 2i}{6 - 3i} \\times \\frac{6 + 3i}{6 + 3i}",
+  "= \\frac{(5 + 2i)(6 + 3i)}{(6)^2 - (3i)^2}",
+  "= \\frac{5(6) + 5(3i) + 2i(6) + 2i(3i)}{36 - 9i^2}",
+  "= \\frac{30 + 15i + 12i + 6i^2}{36 - 9i^2}",
+  "= \\frac{30 + 27i + 6(-1)}{36 - 9(-1)}",
+  "= \\frac{30 - 6 + 27i}{36 + 9} = \\frac{24 + 27i}{45}",
+  "= \\frac{24}{45} + \\frac{27}{45}i = \\frac{8}{15} + \\frac{3}{5}i"
+ ],
+ "why": [
+  {
+   "en": "By the definition of division, writing $(5 + 2i) \\div (6 - 3i)$ as a fraction $\\frac{5 + 2i}{6 - 3i}$ helps us clearly see the denominator. Our main goal in dividing complex numbers is to eliminate the imaginary part $i$ from the bottom of the fraction.",
+   "ur": "تقسیم کی تعریف کے مطابق، $(5 + 2i) \\div (6 - 3i)$ کو کسر $\\frac{5 + 2i}{6 - 3i}$ کی شکل میں لکھنے سے ہمیں مخرج (denominator) واضح طور پر نظر آتا ہے۔ کمپلیکس نمبرز کی تقسیم میں ہمارا اصل مقصد کسر کے نچلے حصے سے خیالی عدد $i$ کو ختم کرنا ہوتا ہے۔"
+  },
+  {
+   "en": "In standard form $a+bi$, we cannot have $i$ in the denominator, so we use the rule of rationalization by multiplying with the complex conjugate $6 + 3i$. Since $\\frac{6 + 3i}{6 + 3i}$ equals $1$, the value of our expression stays the same while preparing the denominator to become a purely real number.",
+   "ur": "معیاری شکل $a+bi$ میں مخرج کے اندر $i$ نہیں ہو سکتا، اس لیے ہم مخرج کے کونجوگیٹ (conjugate) یعنی $6 + 3i$ سے ضرب دینے کا اصول استعمال کرتے ہیں۔ چونکہ $\\frac{6 + 3i}{6 + 3i}$ دراصل $1$ کے برابر ہے، اس لیے رقم کی قیمت تبدیل نہیں ہوتی اور مخرج ایک حقیقی عدد بننے کے لیے تیار ہو جاتا ہے۔"
+  },
+  {
+   "en": "We set up the multiplication at the top and apply the difference of squares formula, $(a - b)(a + b) = a^2 - b^2$, at the bottom. This algebraic identity is the exact reason we used the conjugate, as it eliminates the middle $i$ terms in the denominator.",
+   "ur": "ہم اوپر والی رقموں کو ضرب کے لیے لکھتے ہیں اور نیچے فرقِ مربّعین کا فارمولا $(a - b)(a + b) = a^2 - b^2$ لگاتے ہیں۔ یہی الجبری فارمولا وہ وجہ ہے جس کے لیے ہم نے کونجوگیٹ استعمال کیا تھا، کیونکہ اس سے مخرج میں درمیان والی $i$ کی رقمیں ختم ہو جاتی ہیں۔"
+  },
+  {
+   "en": "Using the distributive property in the numerator and evaluating the squares in the denominator breaks down the brackets. Notice how $(3i)^2$ becomes $9i^2$, which prepares the expression for substituting the fundamental property of $i^2$.",
+   "ur": "شمار کنندہ (numerator) میں تقسیمی خاصیت (distributive property) استعمال کرنے اور مخرج میں مربّع کھولنے سے بریکٹیں ختم ہو جاتی ہیں۔ غور کریں کہ کس طرح $(3i)^2$ کھل کر $9i^2$ بن جاتا ہے، جو اس عبارت کو $i^2$ کی بنیادی قیمت درج کرنے کے لیے تیار کرتا ہے۔"
+  },
+  {
+   "en": "Carrying out the simple multiplications gives us four separate terms in the numerator: $30 + 15i + 12i + 6i^2$. Now we can clearly see which terms are real, which are imaginary, and where $i^2$ appears.",
+   "ur": "سادہ ضرب کا عمل مکمل کرنے سے ہمیں شمار کنندہ میں چار الگ الگ رقمیں $30 + 15i + 12i + 6i^2$ مل جاتی ہیں۔ اب ہم واضح طور پر دیکھ سکتے ہیں کہ کون سی رقمیں حقیقی ہیں، کون سی خیالی ہیں، اور $i^2$ کہاں موجود ہے۔"
+  },
+  {
+   "en": "We combine the like imaginary terms $15i$ and $12i$ into $27i$, and apply the fundamental definition of the imaginary unit, $i^2 = -1$. This crucial substitution turns both $6i^2$ and $-9i^2$ into pure real numbers, completely freeing the denominator from $i$.",
+   "ur": "ہم ایک جیسی خیالی رقموں $15i$ اور $12i$ کو جمع کر کے $27i$ بناتے ہیں، اور خیالی اکائی کی بنیادی تعریف $i^2 = -1$ استعمال کرتے ہیں۔ اس اہم تبدیلی سے $6i^2$ اور $-9i^2$ دونوں خالص حقیقی اعداد بن جاتے ہیں، اور مخرج $i$ سے مکمل طور پر آزاد ہو جاتا ہے۔"
+  },
+  {
+   "en": "By combining the real numbers $30 - 6 = 24$ in the numerator and $36 + 9 = 45$ in the denominator, we get a neat single fraction $\\frac{24 + 27i}{45}$. The denominator is now a single real number $45$, so the division is almost complete.",
+   "ur": "شمار کنندہ میں حقیقی اعداد $30 - 6 = 24$ اور مخرج میں $36 + 9 = 45$ کو حل کرنے سے ہمیں ایک سادہ کسر $\\frac{24 + 27i}{45}$ مل جاتی ہے۔ اب مخرج ایک واحد حقیقی عدد $45$ بن چکا ہے، اس لیے تقسیم کا عمل تقریباً مکمل ہو گیا ہے۔"
+  },
+  {
+   "en": "To match the required standard form $a + bi$, we split the fraction over the common denominator $45$ and simplify both parts to their lowest terms. This clearly separates the real part $\\frac{8}{15}$ from the imaginary part $\\frac{3}{5}i$.",
+   "ur": "مطلوبہ معیاری شکل $a + bi$ حاصل کرنے کے لیے، ہم مشترک مخرج $45$ کو دونوں رقموں کے نیچے الگ الگ لکھتے ہیں اور دونوں کسروں کو ان کی مختصر ترین شکل میں لاتے ہیں۔ اس سے حقیقی حصہ $\\frac{8}{15}$ اور خیالی حصہ $\\frac{3}{5}i$ بالکل الگ اور واضح ہو جاتے ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $\\frac{8}{15} + \\frac{3}{5}i$ shows the result of dividing $(5 + 2i)$ by $(6 - 3i)$ written cleanly in the standard complex form $a + bi$, where the real part is $a = \\frac{8}{15}$ and the imaginary part is $b = \\frac{3}{5}$. You can check this answer by multiplying $(\\frac{8}{15} + \\frac{3}{5}i)$ with the divisor $(6 - 3i)$, which will simplify back to $(5 + 2i)$.",
+  "ur": "حتمی جواب $\\frac{8}{15} + \\frac{3}{5}i$ ہمیں $(5 + 2i)$ کو $(6 - 3i)$ پر تقسیم کرنے کا نتیجہ معیاری کمپلیکس شکل $a + bi$ میں دکھاتا ہے، جہاں حقیقی حصہ $a = \\frac{8}{15}$ اور خیالی حصہ $b = \\frac{3}{5}$ ہے۔ آپ اس جواب کی پڑتال $(\\frac{8}{15} + \\frac{3}{5}i)$ کو مقسوم علیہ $(6 - 3i)$ سے ضرب دے کر کر سکتے ہیں، جسے حل کرنے سے واپس $(5 + 2i)$ حاصل ہو جائے گا۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

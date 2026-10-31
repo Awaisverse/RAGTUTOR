@@ -1,0 +1,48 @@
+{
+ "item": "c10-rev5-q3",
+ "label": "iii",
+ "answer_ref": "$1$",
+ "steps": [
+  {
+   "math": "\\frac{a^2 - (b - c)^2}{(a + b)^2 - c^2} \\times \\frac{a^2 - (b + c)^2}{(a - b)^2 - c^2}",
+   "en": "Write down the given algebraic expression.",
+   "ur": "دی گئی الجبری عبارت لکھیں۔"
+  },
+  {
+   "math": "= \\frac{[a - (b - c)][a + (b - c)]}{[(a + b) - c][(a + b) + c]} \\times \\frac{[a - (b + c)][a + (b + c)]}{[(a - b) - c][(a - b) + c]}",
+   "en": "Apply the difference of two squares formula $x^2 - y^2 = (x - y)(x + y)$ to each numerator and denominator.",
+   "ur": "ہر شمار کنندہ اور مخرج پر دو مربعات کے فرق کا کلیہ $x^2 - y^2 = (x - y)(x + y)$ لاگو کریں۔",
+   "check": [
+    "((a - (b - c))*(a + (b - c)))/(((a + b) - c)*((a + b) + c)) * ((a - (b + c))*(a + (b + c)))/(((a - b) - c)*((a - b) + c)) == ((a**2 - (b - c)**2)/((a + b)**2 - c**2)) * ((a**2 - (b + c)**2)/((a - b)**2 - c**2))"
+   ]
+  },
+  {
+   "math": "= \\frac{(a - b + c)(a + b - c)}{(a + b - c)(a + b + c)} \\times \\frac{(a - b - c)(a + b + c)}{(a - b - c)(a - b + c)}",
+   "en": "Remove the inner round brackets and change the signs where there is a minus sign outside the bracket.",
+   "ur": "اندرونی چھوٹی بریکٹس ختم کریں اور جہاں بریکٹ کے باہر منفی کی علامت ہو وہاں اندرونی علامتیں تبدیل کریں۔",
+   "check": [
+    "((a - b + c)*(a + b - c))/((a + b - c)*(a + b + c)) * ((a - b - c)*(a + b + c))/((a - b - c)*(a - b + c)) == ((a**2 - (b - c)**2)/((a + b)**2 - c**2)) * ((a**2 - (b + c)**2)/((a - b)**2 - c**2))"
+   ]
+  },
+  {
+   "math": "= \\frac{a - b + c}{a + b + c} \\times \\frac{a + b + c}{a - b + c}",
+   "en": "Cancel the common factor $(a + b - c)$ in the first fraction and $(a - b - c)$ in the second fraction.",
+   "ur": "پہلی کسر میں مشترک جزو $(a + b - c)$ اور دوسری کسر میں $(a - b - c)$ کو آپس میں کاٹ دیں۔",
+   "check": [
+    "((a - b + c)/(a + b + c)) * ((a + b + c)/(a - b + c)) == ((a**2 - (b - c)**2)/((a + b)**2 - c**2)) * ((a**2 - (b + c)**2)/((a - b)**2 - c**2))"
+   ]
+  },
+  {
+   "math": "= 1",
+   "en": "Cancel the remaining cross common factors $(a - b + c)$ and $(a + b + c)$ to get the final answer.",
+   "ur": "باقی ماندہ مشترک اجزاء $(a - b + c)$ اور $(a + b + c)$ کو ترچھا کاٹ کر حتمی جواب حاصل کریں۔",
+   "check": [
+    "1 == ((a**2 - (b - c)**2)/((a + b)**2 - c**2)) * ((a**2 - (b + c)**2)/((a - b)**2 - c**2))",
+    "(1) == ((a**2 - (b - c)**2)*(a**2 - (b + c)**2)/((-c**2 + (a - b)**2)*(-c**2 + (a + b)**2)))"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

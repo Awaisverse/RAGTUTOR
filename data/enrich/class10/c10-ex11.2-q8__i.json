@@ -1,0 +1,62 @@
+{
+ "item": "c10-ex11.2-q8",
+ "label": "i",
+ "answer_ref": "equal performance (both means 100)",
+ "steps": [
+  {
+   "math": "n_A = 5, \\quad n_B = 5",
+   "en": "To compare the overall performance of Machine A and Machine B, we compare their arithmetic means (averages). Both machines have $5$ output observations.",
+   "ur": "مشین A اور مشین B کی مجموعی کارکردگی کا موازنہ کرنے کے لیے، ہم ان کے حسابی اوسط (مین) کا موازنہ کرتے ہیں۔ دونوں مشینوں کی پیداوار کے مشاہدات کی تعداد $5$ ہے۔",
+   "check": [
+    "5 == 5"
+   ]
+  },
+  {
+   "math": "\\bar{x} = \\frac{\\sum x}{n}",
+   "en": "The formula for the arithmetic mean of ungrouped data is the sum of all values divided by the total number of values.",
+   "ur": "غیر گروہی ڈیٹا کے حسابی اوسط کا فارمولا تمام قیمتوں کے مجموعے کو کل تعداد سے تقسیم کرنا ہے۔"
+  },
+  {
+   "math": "\\bar{x}_A = \\frac{98 + 100 + 102 + 101 + 99}{5}",
+   "en": "Substitute the output values of Machine A into the mean formula.",
+   "ur": "اوسط کے فارمولے میں مشین A کی پیداوار کی قیمتیں درج کریں۔"
+  },
+  {
+   "math": "\\bar{x}_A = \\frac{500}{5} = 100",
+   "en": "Add the values in the numerator and divide by $5$ to find the mean output of Machine A.",
+   "ur": "مشین A کی اوسط پیداوار معلوم کرنے کے لیے شمار کنندہ کی قیمتوں کو جمع کریں اور $5$ سے تقسیم کریں۔",
+   "check": [
+    "98 + 100 + 102 + 101 + 99 == 500",
+    "R(500, 5) == 100"
+   ]
+  },
+  {
+   "math": "\\bar{x}_B = \\frac{95 + 100 + 105 + 90 + 110}{5}",
+   "en": "Now, substitute the output values of Machine B into the mean formula.",
+   "ur": "اب، اوسط کے فارمولے میں مشین B کی پیداوار کی قیمتیں درج کریں۔"
+  },
+  {
+   "math": "\\bar{x}_B = \\frac{500}{5} = 100",
+   "en": "Add the values in the numerator and divide by $5$ to find the mean output of Machine B.",
+   "ur": "مشین B کی اوسط پیداوار معلوم کرنے کے لیے شمار کنندہ کی قیمتوں کو جمع کریں اور $5$ سے تقسیم کریں۔",
+   "check": [
+    "95 + 100 + 105 + 90 + 110 == 500",
+    "R(500, 5) == 100"
+   ]
+  },
+  {
+   "math": "\\bar{x}_A = \\bar{x}_B = 100",
+   "en": "Since both machines have the exact same mean output of $100$ units, they have equal performance.",
+   "ur": "چونکہ دونوں مشینوں کی اوسط پیداوار بالکل یکساں یعنی $100$ یونٹس ہے، اس لیے دونوں کی کارکردگی برابر ہے۔",
+   "check": [
+    "100 == 100",
+    "(98) + (100) + (102) + (101) + (99) == (500)",
+    "(95) + (100) + (105) + (90) + (110) == (500)",
+    "R(500,5) == 100"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

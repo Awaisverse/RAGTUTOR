@@ -1,0 +1,70 @@
+{
+ "item": "c10-ex3.4-q2",
+ "label": "v",
+ "answer_ref": "verified: both sides $= \\begin{bmatrix} 35 & 7 \\\\ -2 & 29 \\end{bmatrix}$",
+ "math": [
+  "",
+  "B + C = \\begin{bmatrix} 2 & -1 \\\\ 0 & 3 \\end{bmatrix} + \\begin{bmatrix} 5 & 1 \\\\ 1 & 4 \\end{bmatrix} = \\begin{bmatrix} 2 + 5 & -1 + 1 \\\\ 0 + 1 & 3 + 4 \\end{bmatrix} = \\begin{bmatrix} 7 & 0 \\\\ 1 & 7 \\end{bmatrix}",
+  "(B+C)A = \\begin{bmatrix} 7 & 0 \\\\ 1 & 7 \\end{bmatrix}\\begin{bmatrix} 5 & 1 \\\\ -1 & 4 \\end{bmatrix} = \\begin{bmatrix} (7)(5) + (0)(-1) & (7)(1) + (0)(4) \\\\ (1)(5) + (7)(-1) & (1)(1) + (7)(4) \\end{bmatrix}",
+  "= \\begin{bmatrix} 35 + 0 & 7 + 0 \\\\ 5 - 7 & 1 + 28 \\end{bmatrix} = \\begin{bmatrix} 35 & 7 \\\\ -2 & 29 \\end{bmatrix}",
+  "",
+  "BA = \\begin{bmatrix} 2 & -1 \\\\ 0 & 3 \\end{bmatrix}\\begin{bmatrix} 5 & 1 \\\\ -1 & 4 \\end{bmatrix} = \\begin{bmatrix} (2)(5) + (-1)(-1) & (2)(1) + (-1)(4) \\\\ (0)(5) + (3)(-1) & (0)(1) + (3)(4) \\end{bmatrix}",
+  "= \\begin{bmatrix} 10 + 1 & 2 - 4 \\\\ 0 - 3 & 0 + 12 \\end{bmatrix} = \\begin{bmatrix} 11 & -2 \\\\ -3 & 12 \\end{bmatrix}",
+  "CA = \\begin{bmatrix} 5 & 1 \\\\ 1 & 4 \\end{bmatrix}\\begin{bmatrix} 5 & 1 \\\\ -1 & 4 \\end{bmatrix} = \\begin{bmatrix} (5)(5) + (1)(-1) & (5)(1) + (1)(4) \\\\ (1)(5) + (4)(-1) & (1)(1) + (4)(4) \\end{bmatrix}",
+  "= \\begin{bmatrix} 25 - 1 & 5 + 4 \\\\ 5 - 4 & 1 + 16 \\end{bmatrix} = \\begin{bmatrix} 24 & 9 \\\\ 1 & 17 \\end{bmatrix}",
+  "BA + CA = \\begin{bmatrix} 11 & -2 \\\\ -3 & 12 \\end{bmatrix} + \\begin{bmatrix} 24 & 9 \\\\ 1 & 17 \\end{bmatrix} = \\begin{bmatrix} 11 + 24 & -2 + 9 \\\\ -3 + 1 & 12 + 17 \\end{bmatrix} = \\begin{bmatrix} 35 & 7 \\\\ -2 & 29 \\end{bmatrix}",
+  "(B+C)A = \\begin{bmatrix} 35 & 7 \\\\ -2 & 29 \\end{bmatrix} = BA+CA"
+ ],
+ "why": [
+  {
+   "en": "To verify an equation, we must evaluate both sides separately, starting here with the Left-Hand Side $(B+C)A$.",
+   "ur": "مساوات کی تصدیق کرنے کے لیے ہمیں دونوں اطراف کو الگ الگ حل کرنا ہوتا ہے، اس لیے ہم بائیں طرف یعنی $(B+C)A$ سے شروعات کر رہے ہیں۔"
+  },
+  {
+   "en": "According to the order of operations (BODMAS), we always solve the brackets first. This gives us the single combined matrix for $B+C$ that we need to multiply with $A$.",
+   "ur": "حساب کے اصولوں (BODMAS) کے مطابق ہم ہمیشہ پہلے بریکٹ کو حل کرتے ہیں۔ اس سے ہمیں $B+C$ کا ایک مشترکہ کالب مل جاتا ہے جسے ہم نے آگے $A$ سے ضرب دینی ہے۔"
+  },
+  {
+   "en": "Now we multiply the resulting matrix $B+C$ by matrix $A$ using the row-by-column multiplication rule. Notice that $A$ is on the right side in the expression, so we must keep it on the right when multiplying.",
+   "ur": "اب ہم حاصل شدہ کالب $B+C$ کو کالب $A$ کے ساتھ قطار کو کالم سے ضرب دینے کے اصول کے تحت ضرب دیں گے۔ دھیان رہے کہ سوال میں $A$ دائیں طرف ہے، اس لیے ضرب دیتے وقت بھی اسے دائیں طرف ہی رکھنا ضروری ہے۔"
+  },
+  {
+   "en": "Simplifying the arithmetic gives us the final matrix for the Left-Hand Side, $\\begin{bmatrix} 35 & 7 \\\\ -2 & 29 \\end{bmatrix}$. We will keep this result safe to compare with the Right-Hand Side later.",
+   "ur": "اس حساب کو مختصر کرنے سے ہمیں بائیں طرف (LHS) کا حتمی کالب $\\begin{bmatrix} 35 & 7 \\\\ -2 & 29 \\end{bmatrix}$ مل جاتا ہے۔ ہم اس نتیجے کو بعد میں دائیں طرف کے جواب سے ملانے کے لیے محفوظ رکھیں گے۔"
+  },
+  {
+   "en": "Now we move to the Right-Hand Side, $BA+CA$, to see if calculating the products separately and then adding them gives the exact same matrix.",
+   "ur": "اب ہم دائیں طرف یعنی $BA+CA$ کو حل کرنے کی طرف بڑھتے ہیں تاکہ دیکھ سکیں کہ الگ الگ ضرب دے کر جمع کرنے سے بھی وہی کالب آتا ہے یا نہیں۔"
+  },
+  {
+   "en": "In the expression $BA+CA$, multiplication comes before addition, so we first find the product $BA$ using the standard row-by-column rule.",
+   "ur": "عبارت $BA+CA$ میں ضرب کا عمل جمع سے پہلے آتا ہے، اس لیے ہم پہلے قطار اور کالم کے اصول کو استعمال کرتے ہوئے $BA$ معلوم کرتے ہیں۔"
+  },
+  {
+   "en": "Adding the products together gives us the single matrix for $BA$, which is the first part needed for our Right-Hand Side.",
+   "ur": "ضرب کے نتائج کو جمع کرنے سے ہمیں $BA$ کا واحد کالب مل جاتا ہے، جو ہماری دائیں طرف کو حل کرنے کے لیے پہلا حصہ ہے۔"
+  },
+  {
+   "en": "Next, we need the second part of the Right-Hand Side, so we multiply matrix $C$ by matrix $A$ in the exact order written.",
+   "ur": "اس کے بعد ہمیں دائیں طرف کے دوسرے حصے کی ضرورت ہے، اس لیے ہم کالب $C$ کو کالب $A$ کے ساتھ بالکل اسی ترتیب میں ضرب دیتے ہیں جیسے لکھا گیا ہے۔"
+  },
+  {
+   "en": "Completing the arithmetic gives us the matrix for $CA$. Now we have both matrices ready to be added together.",
+   "ur": "اس حساب کو مکمل کرنے سے ہمیں $CA$ کا کالب مل جاتا ہے۔ اب ہمارے پاس دونوں کالب تیار ہیں جنہیں آپس میں جمع کیا جا سکتا ہے۔"
+  },
+  {
+   "en": "Finally, we perform the addition of the two matrices $BA$ and $CA$ by adding their corresponding entries. This completes the evaluation of the Right-Hand Side.",
+   "ur": "آخر میں، ہم دونوں کالبوں $BA$ اور $CA$ کے متنازعہ ارکان کو جمع کر کے ان کی جمع کا عمل مکمل کرتے ہیں۔ اس سے دائیں طرف (RHS) کا حل مکمل ہو جاتا ہے۔"
+  },
+  {
+   "en": "We compare the final matrices from step 4 and step 10. Since both gave the exact same matrix $\\begin{bmatrix} 35 & 7 \\\\ -2 & 29 \\end{bmatrix}$, the statement is verified.",
+   "ur": "ہم چوتھے اور دسویں مرحلے کے حتمی کالبوں کا موازنہ کرتے ہیں۔ چونکہ دونوں سے بالکل ایک جیسا کالب $\\begin{bmatrix} 35 & 7 \\\\ -2 & 29 \\end{bmatrix}$ حاصل ہوا ہے، اس لیے اس بیان کی تصدیق ہو گئی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This result proves the right distributive law of matrix multiplication over addition for these matrices. It shows that adding $B$ and $C$ first and then multiplying by $A$ gives the exact same result as multiplying $B$ and $C$ by $A$ separately and then adding the results together, with both methods yielding $\\begin{bmatrix} 35 & 7 \\\\ -2 & 29 \\end{bmatrix}$.",
+  "ur": "یہ نتیجہ ان کالبوں کے لیے جمع پر ضرب کے دائیں تقسیمی قانون (right distributive law) کو ثابت کرتا ہے۔ یہ بتاتا ہے کہ پہلے $B$ اور $C$ کو جمع کر کے پھر $A$ سے ضرب دینا بالکل ویسا ہی نتیجہ دیتا ہے جیسا کہ $B$ اور $C$ کو الگ الگ $A$ سے ضرب دے کر بعد میں ان کے نتائج کو جمع کرنا، اور دونوں طریقوں سے جواب $\\begin{bmatrix} 35 & 7 \\\\ -2 & 29 \\end{bmatrix}$ ہی آتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

@@ -1,0 +1,66 @@
+{
+ "item": "c10-ex4.1-q4",
+ "label": "",
+ "answer_ref": "$k = -5$",
+ "steps": [
+  {
+   "math": "f(x) = 3x + 2, \\quad g(x) = 6x - k",
+   "en": "First, write down the given functions $f(x)$ and $g(x)$.",
+   "ur": "سب سے پہلے، دیے گئے فنکشنز $f(x)$ اور $g(x)$ لکھیں۔"
+  },
+  {
+   "math": "(f \\circ g)(x) = f(g(x)) = f(6x - k)",
+   "en": "By the definition of composite functions, $(f \\circ g)(x) = f(g(x))$. Substitute $g(x) = 6x - k$ into $f$.",
+   "ur": "مخلوط فنکشنز (composite functions) کی تعریف کے مطابق، $(f \\circ g)(x) = f(g(x))$ ہوتا ہے۔ $g(x) = 6x - k$ کی قیمت $f$ میں درج کریں۔"
+  },
+  {
+   "math": "(f \\circ g)(x) = 3(6x - k) + 2 = 18x - 3k + 2",
+   "en": "Replace $x$ with $(6x - k)$ in the function $f(x) = 3x + 2$ and simplify by multiplying.",
+   "ur": "فنکشن $f(x) = 3x + 2$ میں $x$ کی جگہ $(6x - k)$ رکھیں اور ضرب دے کر مختصر کریں۔",
+   "check": [
+    "3*(6*x - k) + 2 == 18*x - 3*k + 2"
+   ]
+  },
+  {
+   "math": "(g \\circ f)(x) = g(f(x)) = g(3x + 2)",
+   "en": "Similarly, to find $(g \\circ f)(x)$, substitute $f(x) = 3x + 2$ into $g(f(x))$.",
+   "ur": "اسی طرح، $(g \\circ f)(x)$ معلوم کرنے کے لیے، $g(f(x))$ میں $f(x) = 3x + 2$ درج کریں۔"
+  },
+  {
+   "math": "(g \\circ f)(x) = 6(3x + 2) - k = 18x + 12 - k",
+   "en": "Replace $x$ with $(3x + 2)$ in the function $g(x) = 6x - k$ and simplify.",
+   "ur": "فنکشن $g(x) = 6x - k$ میں $x$ کی جگہ $(3x + 2)$ رکھیں اور مختصر کریں۔",
+   "check": [
+    "6*(3*x + 2) - k == 18*x + 12 - k"
+   ]
+  },
+  {
+   "math": "18x - 3k + 2 = 18x + 12 - k",
+   "en": "According to the given condition, $(f \\circ g)(x) = (g \\circ f)(x)$. Equate both expressions.",
+   "ur": "دی گئی شرط کے مطابق، $(f \\circ g)(x) = (g \\circ f)(x)$ ہے۔ دونوں عبارتوں کو برابر رکھیں۔"
+  },
+  {
+   "math": "-3k + k = 12 - 2 \\implies -2k = 10",
+   "en": "Cancel $18x$ from both sides, then collect the $k$ terms on the left side and constant terms on the right side.",
+   "ur": "دونوں طرف سے $18x$ کو کینسل کریں، پھر $k$ والی رقموں کو بائیں طرف اور مستقل مزاج (constants) کو دائیں طرف جمع کریں۔",
+   "check": [
+    "-3*k + k == -2*k",
+    "12 - 2 == 10"
+   ]
+  },
+  {
+   "math": "k = \\frac{10}{-2} = -5",
+   "en": "Divide both sides by $-2$ to find the value of $k$. Thus, the required value is $k = -5$.",
+   "ur": "$k$ کی قیمت معلوم کرنے کے لیے دونوں طرف $-2$ سے تقسیم کریں۔ اس طرح، مطلوبہ قیمت $k = -5$ ہے۔",
+   "check": [
+    "10 / (-2) == -5",
+    "(3*(6*x - k) + 2 - (6*(3*x + 2) - k)).subs(k, -5) == 0",
+    "3*(6*x - k) + 2 == 18*x - 3*k + 2",
+    "6*(3*x + 2) - k == 18*x + 12 - k"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

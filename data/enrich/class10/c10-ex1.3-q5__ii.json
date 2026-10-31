@@ -1,0 +1,60 @@
+{
+ "item": "c10-ex1.3-q5",
+ "label": "ii",
+ "answer_ref": "$-1$",
+ "steps": [
+  {
+   "math": "z_1 = 2 + 3i, \\quad z_2 = -1 + i",
+   "en": "Write down the given complex numbers $z_1$ and $z_2$. We need to find $\\operatorname{Im}(z_1z_2)$, the imaginary part of their product.",
+   "ur": "دیے گئے مختلط اعداد $z_1$ اور $z_2$ لکھیں۔ ہمیں ان کے حاصل ضرب کا خیالی حصہ یعنی $\\operatorname{Im}(z_1z_2)$ معلوم کرنا ہے۔"
+  },
+  {
+   "math": "z_1z_2 = (2 + 3i)(-1 + i)",
+   "en": "First, substitute the given values of $z_1$ and $z_2$ to find their product $z_1z_2$.",
+   "ur": "سب سے پہلے، حاصل ضرب $z_1z_2$ معلوم کرنے کے لیے $z_1$ اور $z_2$ کی دی گئی قیمتیں درج کریں۔"
+  },
+  {
+   "math": "z_1z_2 = 2(-1 + i) + 3i(-1 + i) = -2 + 2i - 3i + 3i^2",
+   "en": "Multiply each term of the first bracket by each term of the second bracket.",
+   "ur": "پہلی قوس کے ہر رکن کو دوسری قوس کے ہر رکن سے ضرب دیں۔",
+   "check": [
+    "(2 + 3*I)*(-1 + I) == 2*(-1 + I) + 3*I*(-1 + I)",
+    "2*(-1 + I) + 3*I*(-1 + I) == -2 + 2*I - 3*I + 3*I**2"
+   ]
+  },
+  {
+   "math": "z_1z_2 = -2 - i + 3(-1)",
+   "en": "Combine the like imaginary terms ($2i - 3i = -i$) and substitute $i^2 = -1$.",
+   "ur": "ایک جیسے خیالی ارکان کو یکجا کریں ($2i - 3i = -i$) اور $i^2 = -1$ درج کریں۔",
+   "check": [
+    "2*I - 3*I == -I",
+    "I**2 == -1",
+    "(2 + 3*I)*(-1 + I) == -2 - I + 3*(-1)"
+   ]
+  },
+  {
+   "math": "z_1z_2 = -2 - 3 - i = -5 - i",
+   "en": "Simplify and collect the real parts together to write the complex number in the standard form $a + bi$.",
+   "ur": "مختلط عدد کو معیاری شکل $a + bi$ میں لکھنے کے لیے مختصر کریں اور حقیقی حصوں کو اکٹھا کریں۔",
+   "check": [
+    "-2 - 3 - I == -5 - I",
+    "(2 + 3*I)*(-1 + I) == -5 - I"
+   ]
+  },
+  {
+   "math": "\\operatorname{Im}(z_1z_2) = -1",
+   "en": "In a complex number $z = a + bi$, the imaginary part $\\operatorname{Im}(z)$ is the coefficient of $i$, which is $b$. Here, the coefficient of $i$ in $-5 - 1i$ is $-1$.",
+   "ur": "کسی مختلط عدد $z = a + bi$ میں، خیالی حصہ $\\operatorname{Im}(z)$ دراصل $i$ کا عددی سر یعنی $b$ ہوتا ہے۔ یہاں $-5 - 1i$ میں $i$ کا عددی سر $-1$ ہے۔",
+   "check": [
+    "im(-5 - I) == -1",
+    "(2 + 3*I)*(-1 + I) == (-2) + (-1)*I + (3)*I**2",
+    "I**2 == -1",
+    "(2 + 3*I)*(-1 + I) == (-5 - I)",
+    "im((-5 - I)) == (-1)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

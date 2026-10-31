@@ -1,0 +1,50 @@
+{
+ "item": "c10-rev4-q8",
+ "label": "i",
+ "answer_ref": "$f^{-1}(x) = \\frac{x - 7}{3}$",
+ "steps": [
+  {
+   "math": "f(x) = 3x + 7",
+   "en": "Write down the given function.",
+   "ur": "دیا گیا تفاعل لکھیں۔"
+  },
+  {
+   "math": "y = 3x + 7",
+   "en": "Let $y = f(x)$, which means $x = f^{-1}(y)$.",
+   "ur": "فرض کریں $y = f(x)$ ہے، جس کا مطلب ہے کہ $x = f^{-1}(y)$ ہے۔"
+  },
+  {
+   "math": "3x = y - 7",
+   "en": "Subtract $7$ from both sides of the equation to isolate the term with $x$.",
+   "ur": "$x$ والی رقم کو الگ کرنے کے لیے مساوات کے دونوں اطراف سے $7$ تفریق کریں۔",
+   "check": [
+    "(3*x + 7) - 7 == 3*x"
+   ]
+  },
+  {
+   "math": "x = \\frac{y - 7}{3}",
+   "en": "Divide both sides by $3$ to make $x$ the subject of the equation.",
+   "ur": "$x$ کو مساوات کا موضوع بنانے کے لیے دونوں اطراف کو $3$ پر تقسیم کریں۔",
+   "check": [
+    "(3*x)/3 == x"
+   ]
+  },
+  {
+   "math": "f^{-1}(y) = \\frac{y - 7}{3}",
+   "en": "Since $x = f^{-1}(y)$, substitute $f^{-1}(y)$ in place of $x$.",
+   "ur": "چونکہ $x = f^{-1}(y)$ ہے، اس لیے $x$ کی جگہ $f^{-1}(y)$ درج کریں۔"
+  },
+  {
+   "math": "f^{-1}(x) = \\frac{x - 7}{3}",
+   "en": "Replace the variable $y$ with $x$ to get the required inverse function $f^{-1}(x)$.",
+   "ur": "مطلوبہ معکوس تفاعل $f^{-1}(x)$ حاصل کرنے کے لیے متغیر $y$ کو $x$ سے تبدیل کریں۔",
+   "check": [
+    "simplify((3*x + 7).subs(x, (x - 7)/3)) == x",
+    "simplify((3*x + 7).subs(x, ((x - 7)/3))) == x"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

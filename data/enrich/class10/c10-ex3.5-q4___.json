@@ -1,0 +1,62 @@
+{
+ "item": "c10-ex3.5-q4",
+ "label": "",
+ "answer_ref": "$\\operatorname{Adj}A = \\begin{bmatrix} d & - b \\\\ - c & a \\end{bmatrix}$; $\\operatorname{Adj}B = \\begin{bmatrix} 7 & 2 \\\\ -3 & 5 \\end{bmatrix}$; $\\operatorname{Adj}C = \\begin{bmatrix} 2 & -5 \\\\ 3 & -3 \\end{bmatrix}$",
+ "steps": [
+  {
+   "math": "A = \\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix}, \\quad B = \\begin{bmatrix} 5 & -2 \\\\ 3 & 7 \\end{bmatrix}, \\quad C = \\begin{bmatrix} -3 & 5 \\\\ -3 & 2 \\end{bmatrix}",
+   "en": "We are given three $2 \\times 2$ matrices $A$, $B$, and $C$, and we need to find the adjoint of each matrix.",
+   "ur": "ہمیں تین $2 \\times 2$ کالب $A$، $B$ اور $C$ دیے گئے ہیں، اور ہمیں ہر کالب کا ایڈجوائنٹ معلوم کرنا ہے۔"
+  },
+  {
+   "math": "",
+   "en": "By definition, the adjoint of a $2 \\times 2$ matrix is obtained by interchanging the diagonal entries and changing the signs of the other entries.",
+   "ur": "تعریف کے مطابق، ایک $2 \\times 2$ کالب کا ایڈجوائنٹ وتری ارکان کی جگہ بدلنے اور غیر وتری ارکان کی علامتیں تبدیل کرنے سے حاصل ہوتا ہے۔"
+  },
+  {
+   "math": "\\operatorname{Adj}A = \\begin{bmatrix} d & - b \\\\ - c & a \\end{bmatrix}",
+   "en": "For matrix $A$, interchange the diagonal entries $a$ and $d$, and change the signs of the non-diagonal entries $b$ and $c$.",
+   "ur": "کالب $A$ کے لیے، وتری ارکان $a$ اور $d$ کی جگہ بدلیں، اور غیر وتری ارکان $b$ اور $c$ کی علامتیں تبدیل کریں۔",
+   "check": [
+    "Eq(Matrix([[a, b], [c, d]]).adjugate(), Matrix([[d, -b], [-c, a]]))"
+   ]
+  },
+  {
+   "math": "\\operatorname{Adj}B = \\begin{bmatrix} 7 & -(-2) \\\\ -3 & 5 \\end{bmatrix}",
+   "en": "For matrix $B = \\begin{bmatrix} 5 & -2 \\\\ 3 & 7 \\end{bmatrix}$, interchange the diagonal entries $5$ and $7$, and negate the non-diagonal entries $-2$ and $3$.",
+   "ur": "کالب $B = \\begin{bmatrix} 5 & -2 \\\\ 3 & 7 \\end{bmatrix}$ کے لیے، وتری ارکان $5$ اور $7$ کی جگہ بدلیں، اور غیر وتری ارکان $-2$ اور $3$ کی علامتیں منفی کریں۔",
+   "check": [
+    "Eq(Matrix([[5, -2], [3, 7]]).adjugate(), Matrix([[7, -(-2)], [-3, 5]]))"
+   ]
+  },
+  {
+   "math": "\\operatorname{Adj}B = \\begin{bmatrix} 7 & 2 \\\\ -3 & 5 \\end{bmatrix}",
+   "en": "Simplify the signs in $\\operatorname{Adj}B$.",
+   "ur": "$\\operatorname{Adj}B$ میں علامتوں کو مختصر کریں۔",
+   "check": [
+    "Eq(Matrix([[5, -2], [3, 7]]).adjugate(), Matrix([[7, 2], [-3, 5]]))"
+   ]
+  },
+  {
+   "math": "\\operatorname{Adj}C = \\begin{bmatrix} 2 & -5 \\\\ -(-3) & -3 \\end{bmatrix}",
+   "en": "For matrix $C = \\begin{bmatrix} -3 & 5 \\\\ -3 & 2 \\end{bmatrix}$, interchange the diagonal entries $-3$ and $2$, and negate the non-diagonal entries $5$ and $-3$.",
+   "ur": "کالب $C = \\begin{bmatrix} -3 & 5 \\\\ -3 & 2 \\end{bmatrix}$ کے لیے، وتری ارکان $-3$ اور $2$ کی جگہ بدلیں، اور غیر وتری ارکان $5$ اور $-3$ کی علامتیں منفی کریں۔",
+   "check": [
+    "Eq(Matrix([[-3, 5], [-3, 2]]).adjugate(), Matrix([[2, -5], [-(-3), -3]]))"
+   ]
+  },
+  {
+   "math": "\\operatorname{Adj}C = \\begin{bmatrix} 2 & -5 \\\\ 3 & -3 \\end{bmatrix}",
+   "en": "Simplify the signs in $\\operatorname{Adj}C$ to get the final result.",
+   "ur": "حتمی نتیجہ حاصل کرنے کے لیے $\\operatorname{Adj}C$ میں علامتوں کو مختصر کریں۔",
+   "check": [
+    "Eq(Matrix([[-3, 5], [-3, 2]]).adjugate(), Matrix([[2, -5], [3, -3]]))",
+    "Eq(Matrix([[a, b], [c, d]]).adjugate(), Matrix([[d, -b], [-c, a]]))",
+    "Eq(Matrix([[5, -2], [3, 7]]).adjugate(), Matrix([[7, 2], [-3, 5]]))"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

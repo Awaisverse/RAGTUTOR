@@ -1,0 +1,56 @@
+{
+ "item": "ex1.1-q3",
+ "label": "iii",
+ "answer_ref": "$\\frac{21}{99}$",
+ "steps": [
+  {
+   "math": "x = 0.\\overline{21}",
+   "en": "Let $x$ be equal to the given recurring decimal $0.\\overline{21}$, which we need to express in the rational form $\\frac{p}{q}$.",
+   "ur": "فرض کریں کہ $x$ دیے گئے تکرار والے اعشاریہ $0.\\overline{21}$ کے برابر ہے، جسے ہمیں ناطق شکل $\\frac{p}{q}$ میں ظاہر کرنا ہے۔"
+  },
+  {
+   "math": "x = 0.212121\\ldots \\quad \\text{--- (i)}",
+   "en": "Write the recurring decimal in its expanded form by repeating the block of digits $21$, and label this as Equation (i).",
+   "ur": "تکرار والے اعشاریہ کو ہندسوں کے بلاک $21$ کو دہراتے ہوئے اس کی پھیلی ہوئی شکل میں لکھیں، اور اسے مساوات (i) کا نام دیں۔"
+  },
+  {
+   "math": "100x = 21.212121\\ldots \\quad \\text{--- (ii)}",
+   "en": "Since two digits ($21$) are repeating after the decimal point, multiply both sides of Equation (i) by $100$. Label this as Equation (ii).",
+   "ur": "چونکہ اعشاریہ کے بعد دو ہندسے ($21$) دہرائے جا رہے ہیں، اس لیے مساوات (i) کے دونوں اطراف کو $100$ سے ضرب دیں۔ اسے مساوات (ii) کا نام دیں۔",
+   "check": [
+    "100*R(21,99) == 21 + R(21,99)"
+   ]
+  },
+  {
+   "math": "100x - x = (21.212121\\ldots) - (0.212121\\ldots)",
+   "en": "Subtract Equation (i) from Equation (ii) so that the repeating decimal part after the decimal point cancels out.",
+   "ur": "مساوات (ii) میں سے مساوات (i) کو تفریق کریں تاکہ اعشاریہ کے بعد دہرایا جانے والا حصہ ختم ہو جائے۔",
+   "check": [
+    "100*R(21,99) - R(21,99) == (21 + R(21,99)) - R(21,99)"
+   ]
+  },
+  {
+   "math": "99x = 21",
+   "en": "Simplify both sides of the equation.",
+   "ur": "مساوات کے دونوں اطراف کو مختصر کریں۔",
+   "check": [
+    "99*R(21,99) == 21"
+   ]
+  },
+  {
+   "math": "x = \\frac{21}{99}",
+   "en": "Divide both sides by $99$ to solve for $x$. Thus, $0.\\overline{21} = \\frac{21}{99}$ (which simplifies to $\\frac{7}{33}$ in lowest terms).",
+   "ur": "$x$ کی قیمت معلوم کرنے کے لیے دونوں اطراف کو $99$ پر تقسیم کریں۔ اس طرح، $0.\\overline{21} = \\frac{21}{99}$ ہے (جو مختصر ترین شکل میں $\\frac{7}{33}$ بنتا ہے)۔",
+   "check": [
+    "R(21,99) == R(7,33)",
+    "R(21,99)*99 == 21",
+    "100*Rational(21,99) == 21 + Rational(21,99)",
+    "100*Rational(21,99) - Rational(21,99) == 21",
+    "Rational(21,99)*99 == 21"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

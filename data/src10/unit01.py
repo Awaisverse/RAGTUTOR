@@ -66,7 +66,8 @@ q1 = [p_arith("i", C(2, 5), C(3, -2), "+"), p_arith("ii", C(16, -3), C(9, 2), "+
       p_arith("vii", C(3, -5), C(2, -4), "/"), p_arith("viii", C(5, 2), C(6, -3), "/")]
 q1[0]["key_note"] = {"en": "The reference prints the second number as (3 - zi), a misprint of (3 - 2i); its answer 5 + (5 - z)i follows the misprint.",
                      "ur": "حوالہ میں دوسرا عدد (3 - zi) چھپا ہے جو (3 - 2i) کی غلطی ہے؛ اس کا جواب 5 + (5 - z)i اسی غلطی سے آیا ہے۔"}
-ex("ex1.2", 1, r"Simplify and write in the form $a+bi$: (i) $(2+5i)+(3-2i)$ (ii) $(16-3i)+(9+2i)$ (iii) $(9-2i)-(7-3i)$ "
+q1[0]["prompt"] = r"$(2+5i)+(3-zi)$ [printed so; read as $(3-2i)$]"
+ex("ex1.2", 1, r"Simplify and write in the form $a+bi$: (i) $(2+5i)+(3-zi)$ [printed so; read as $(3-2i)$] (ii) $(16-3i)+(9+2i)$ (iii) $(9-2i)-(7-3i)$ "
    r"(iv) $(11+9i)-(9-7i)$ (v) $(3+4i)(2-3i)$ (vi) $(5-2i)(3-4i)$ (vii) $(3-5i)\div(2-4i)$ (viii) $(5+2i)\div(6-3i)$", q1, "1.2")
 
 q2 = [p_additive_inverse("i", C(3, 2)), p_additive_inverse("ii", C(4, -3)), p_additive_inverse("iii", C(5, -7)),

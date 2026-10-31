@@ -1,0 +1,49 @@
+{
+ "item": "c10-ex5.1-q1",
+ "label": "viii",
+ "answer_ref": "$\\frac{x}{x + 1}$",
+ "steps": [
+  {
+   "math": "\\frac{x^{2} - 5x}{x^{2} - 4x - 5}",
+   "en": "Write the given rational expression that needs to be reduced to its lowest form.",
+   "ur": "دیے گئے ناطق جملے کو لکھیں جسے اس کی مختصر ترین شکل میں لانا ہے۔"
+  },
+  {
+   "math": "= \\frac{x(x - 5)}{x^{2} - 5x + x - 5}",
+   "en": "Take $x$ common from the numerator $x^{2} - 5x$. In the denominator $x^{2} - 4x - 5$, split the middle term $-4x$ into $-5x + x$ since $(-5)(1) = -5$ and $-5 + 1 = -4$.",
+   "ur": "شمار کنندہ $x^{2} - 5x$ میں سے $x$ مشترک لیں۔ مخرج $x^{2} - 4x - 5$ میں درمیانی رقم $-4x$ کو $-5x + x$ میں توڑ کر لکھیں کیونکہ $(-5)(1) = -5$ اور $-5 + 1 = -4$ ہوتا ہے۔",
+   "check": [
+    "(x*(x - 5))/(x**2 - 5*x + x - 5) == (x**2 - 5*x)/(x**2 - 4*x - 5)"
+   ]
+  },
+  {
+   "math": "= \\frac{x(x - 5)}{x(x - 5) + 1(x - 5)}",
+   "en": "Factor by grouping in the denominator: take $x$ common from the first two terms and $1$ common from the last two terms.",
+   "ur": "مخرج میں گروہ بندی کے ذریعے تجزی کریں: پہلی دو رقوم میں سے $x$ مشترک لیں اور آخری دو رقوم میں سے $1$ مشترک لیں۔",
+   "check": [
+    "(x*(x - 5))/(x*(x - 5) + 1*(x - 5)) == (x**2 - 5*x)/(x**2 - 4*x - 5)"
+   ]
+  },
+  {
+   "math": "= \\frac{x(x - 5)}{(x - 5)(x + 1)}",
+   "en": "Take the binomial $(x - 5)$ common in the denominator to complete the factorization.",
+   "ur": "تجزی مکمل کرنے کے لیے مخرج میں سے دو رقمی جملہ $(x - 5)$ مشترک لیں۔",
+   "check": [
+    "(x*(x - 5))/((x - 5)*(x + 1)) == (x**2 - 5*x)/(x**2 - 4*x - 5)"
+   ]
+  },
+  {
+   "math": "= \\frac{x}{x + 1}",
+   "en": "Cancel out the common factor $(x - 5)$ from both the numerator and the denominator to obtain the lowest form.",
+   "ur": "مختصر ترین شکل حاصل کرنے کے لیے شمار کنندہ اور مخرج دونوں میں سے مشترک جزو ضربی $(x - 5)$ کو کاٹ دیں۔",
+   "check": [
+    "x/(x + 1) == (x**2 - 5*x)/(x**2 - 4*x - 5)",
+    "(x*(x - 5))/((x - 5)*(x + 1)) == (x**2 - 5*x)/(x**2 - 4*x - 5)",
+    "(x/(x + 1)) == (x**2 - 5*x)/(x**2 - 4*x - 5)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

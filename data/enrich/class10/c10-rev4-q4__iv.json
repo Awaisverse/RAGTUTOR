@@ -1,0 +1,58 @@
+{
+ "item": "c10-rev4-q4",
+ "label": "iv",
+ "answer_ref": "$f^{-1}(x) = 3 - 2 x$",
+ "steps": [
+  {
+   "math": "f(x) = \\frac{3-x}{2}",
+   "en": "Write the given function.",
+   "ur": "دیے گئے تفاعل کو لکھیں۔",
+   "check": [
+    "(3 - x)/2 == R(3, 2) - x/2"
+   ]
+  },
+  {
+   "math": "y = \\frac{3-x}{2}",
+   "en": "Let $y = f(x)$, which implies $x = f^{-1}(y)$.",
+   "ur": "فرض کریں کہ $y = f(x)$ ہے، جس سے $x = f^{-1}(y)$ حاصل ہوتا ہے۔",
+   "check": [
+    "(3 - x)/2 == R(3, 2) - x/2"
+   ]
+  },
+  {
+   "math": "2y = 3 - x",
+   "en": "Multiply both sides by $2$ to eliminate the fraction.",
+   "ur": "کسر کو ختم کرنے کے لیے دونوں اطراف کو $2$ سے ضرب دیں۔",
+   "check": [
+    "2*(3 - x)/2 == 3 - x"
+   ]
+  },
+  {
+   "math": "x = 3 - 2y",
+   "en": "Rearrange the equation to make $x$ the subject.",
+   "ur": "$x$ کی قیمت معلوم کرنے کے لیے مساوات کو ترتیب دیں۔",
+   "check": [
+    "3 - (3 - x) == x"
+   ]
+  },
+  {
+   "math": "f^{-1}(y) = 3 - 2y",
+   "en": "Substitute $x = f^{-1}(y)$ into the equation.",
+   "ur": "مساوات میں $x = f^{-1}(y)$ درج کریں۔",
+   "check": [
+    "3 - 2*y == -2*y + 3"
+   ]
+  },
+  {
+   "math": "f^{-1}(x) = 3 - 2 x",
+   "en": "Replace $y$ by $x$ to get the required inverse function $f^{-1}(x)$.",
+   "ur": "مطلوبہ معکوس تفاعل $f^{-1}(x)$ حاصل کرنے کے لیے $y$ کی جگہ $x$ درج کریں۔",
+   "check": [
+    "simplify((3/2 - x/2).subs(x, (3 - 2*x))) == x"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

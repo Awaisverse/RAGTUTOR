@@ -1,0 +1,47 @@
+{
+ "item": "c10-rev6-q4",
+ "label": "ii",
+ "answer_ref": "$39\\underline{i} - 2\\underline{j}$",
+ "steps": [
+  {
+   "math": "\\underline{a} = 2\\underline{i} - \\underline{j}, \\quad \\underline{b} = 3\\underline{i} + \\underline{j}, \\quad \\underline{c} = 4\\underline{i} + \\underline{j}",
+   "en": "Write down the given vectors $\\underline{a}$, $\\underline{b}$, and $\\underline{c}$. We need to find the value of $8\\underline{a} + \\underline{b} + 5\\underline{c}$.",
+   "ur": "دیے گئے سمتیے $\\underline{a}$، $\\underline{b}$ اور $\\underline{c}$ لکھیں۔ ہمیں $8\\underline{a} + \\underline{b} + 5\\underline{c}$ کی قیمت معلوم کرنی ہے۔"
+  },
+  {
+   "math": "8\\underline{a} + \\underline{b} + 5\\underline{c} = 8(2\\underline{i} - \\underline{j}) + (3\\underline{i} + \\underline{j}) + 5(4\\underline{i} + \\underline{j})",
+   "en": "Substitute the values of vectors $\\underline{a}$, $\\underline{b}$, and $\\underline{c}$ into the given expression.",
+   "ur": "دیے گئے جملے میں سمتیوں $\\underline{a}$، $\\underline{b}$ اور $\\underline{c}$ کی قیمتیں درج کریں۔"
+  },
+  {
+   "math": "= 16\\underline{i} - 8\\underline{j} + 3\\underline{i} + \\underline{j} + 20\\underline{i} + 5\\underline{j}",
+   "en": "Multiply each vector by its scalar coefficient to remove the brackets.",
+   "ur": "بریکٹ ختم کرنے کے لیے ہر سمتیے کو اس کے عددی سر (scalar) سے ضرب دیں۔",
+   "check": [
+    "8*2 == 16",
+    "8*(-1) == -8",
+    "5*4 == 20",
+    "5*1 == 5"
+   ]
+  },
+  {
+   "math": "= (16 + 3 + 20)\\underline{i} + (-8 + 1 + 5)\\underline{j}",
+   "en": "Group the $\\underline{i}$ components together and the $\\underline{j}$ components together.",
+   "ur": "$\\underline{i}$ والے اجزاء کو ایک ساتھ اور $\\underline{j}$ والے اجزاء کو ایک ساتھ لکھیں۔"
+  },
+  {
+   "math": "= 39\\underline{i} - 2\\underline{j}",
+   "en": "Add the coefficients of $\\underline{i}$ and $\\underline{j}$ to get the final resultant vector.",
+   "ur": "مطلوبہ سمتیہ حاصل کرنے کے لیے $\\underline{i}$ اور $\\underline{j}$ کے عددی سروں کو جمع کریں۔",
+   "check": [
+    "16 + 3 + 20 == 39",
+    "-8 + 1 + 5 == -2",
+    "(8)*(2) + (1)*(3) + (5)*(4) == (39)",
+    "(8)*(-1) + (1)*(1) + (5)*(1) == (-2)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

@@ -1,0 +1,50 @@
+{
+ "item": "c10-ex3.4-q1",
+ "label": "iii",
+ "answer_ref": "$AB = \\begin{bmatrix} 8 & 20 \\\\ 8 & 20 \\end{bmatrix}$, $BA = \\begin{bmatrix} 28 \\end{bmatrix}$",
+ "math": [
+  "A = \\begin{bmatrix} 4 \\\\ 4 \\end{bmatrix}, \\quad B = \\begin{bmatrix} 2 & 5 \\end{bmatrix}",
+  "\\text{Order of } A = 2 \\times 1, \\quad \\text{Order of } B = 1 \\times 2",
+  "AB = \\begin{bmatrix} 4 \\\\ 4 \\end{bmatrix}\\begin{bmatrix} 2 & 5 \\end{bmatrix} = \\begin{bmatrix} (4)(2) & (4)(5) \\\\ (4)(2) & (4)(5) \\end{bmatrix}",
+  "AB = \\begin{bmatrix} 8 & 20 \\\\ 8 & 20 \\end{bmatrix}",
+  "\\text{Order of } B = 1 \\times 2, \\quad \\text{Order of } A = 2 \\times 1",
+  "BA = \\begin{bmatrix} 2 & 5 \\end{bmatrix}\\begin{bmatrix} 4 \\\\ 4 \\end{bmatrix} = \\begin{bmatrix} (2)(4) + (5)(4) \\end{bmatrix}",
+  "BA = \\begin{bmatrix} 8 + 20 \\end{bmatrix} = \\begin{bmatrix} 28 \\end{bmatrix}"
+ ],
+ "why": [
+  {
+   "en": "We begin by clearly writing down the given column matrix $A$ and row matrix $B$ so we can easily examine their rows and columns before multiplying.",
+   "ur": "ہم سب سے پہلے دیے گئے کالم میٹرکس $A$ اور قطار میٹرکس $B$ کو واضح طور پر لکھتے ہیں تاکہ ضرب دینے سے پہلے ان کی قطاروں اور کالموں کا باآسانی جائزہ لے سکیں۔"
+  },
+  {
+   "en": "By the rule of matrix multiplication, the product $AB$ is only possible if the number of columns in the first matrix equals the number of rows in the second. Since $A$ has $1$ column and $B$ has $1$ row, multiplication is possible and the outer numbers tell us the answer will have order $2 \\times 2$.",
+   "ur": "میٹرکس کی ضرب کے اصول کے مطابق، حاصل ضرب $AB$ تبھی ممکن ہے جب پہلے میٹرکس کے کالموں کی تعداد دوسرے میٹرکس کی قطاروں کی تعداد کے برابر ہو۔ چونکہ $A$ میں $1$ کالم اور $B$ میں $1$ قطار ہے، اس لیے ضرب ممکن ہے اور بیرونی اعداد ہمیں بتاتے ہیں کہ جواب کا مرتبہ $2 \\times 2$ ہوگا۔"
+  },
+  {
+   "en": "Using the row-by-column multiplication rule, we multiply each single-number row of $A$ with each single-number column of $B$. This sets up all four entries of our $2 \\times 2$ product matrix.",
+   "ur": "قطار کو کالم سے ضرب دینے کے اصول کا استعمال کرتے ہوئے، ہم $A$ کی ہر ایک عدد والی قطار کو $B$ کے ہر ایک عدد والے کالم سے ضرب دیتے ہیں۔ اس سے ہمارے $2 \\times 2$ حاصل ضرب میٹرکس کے چاروں ارکان ترتیب پا جاتے ہیں۔"
+  },
+  {
+   "en": "Doing the simple arithmetic gives us the final entries of the matrix $AB$, completing the first part of the question.",
+   "ur": "سادہ حساب کتاب کرنے سے ہمیں میٹرکس $AB$ کے حتمی ارکان مل جاتے ہیں، جس سے سوال کا پہلا حصہ مکمل ہو جاتا ہے۔"
+  },
+  {
+   "en": "Because matrix multiplication depends on the order of the matrices, we must check the condition again for $BA$ with $B$ first and $A$ second. Here, the $2$ columns of $B$ match the $2$ rows of $A$, which tells us $BA$ is also possible and will be a tiny $1 \\times 1$ matrix.",
+   "ur": "چونکہ میٹرکس کی ضرب ان کی ترتیب پر منحصر ہوتی ہے، اس لیے ہمیں $B$ کو پہلے اور $A$ کو بعد میں رکھ کر $BA$ کے لیے شرط کو دوبارہ چیک کرنا چاہیے۔ یہاں $B$ کے $2$ کالم $A$ کی $2$ قطاروں کے برابر ہیں، جو ہمیں بتاتا ہے کہ $BA$ بھی ممکن ہے اور یہ ایک چھوٹا سا $1 \\times 1$ میٹرکس ہوگا۔"
+  },
+  {
+   "en": "Following the row-by-column rule again, we multiply the first and second entries of $B$'s row by the first and second entries of $A$'s column, and add the products together to form the single entry.",
+   "ur": "قطار کو کالم سے ضرب دینے کے اصول پر دوبارہ عمل کرتے ہوئے، ہم $B$ کی قطار کے پہلے اور دوسرے رکن کو $A$ کے کالم کے بالترتیب پہلے اور دوسرے رکن سے ضرب دیتے ہیں، اور واحد رکن بنانے کے لیے ان حاصل ضربوں کو آپس میں جمع کر لیتے ہیں۔"
+  },
+  {
+   "en": "Multiplying the pairs and adding $8$ and $20$ gives us $28$, which is our completed $1 \\times 1$ matrix for $BA$.",
+   "ur": "جوڑوں کو ضرب دینے اور $8$ اور $20$ کو جمع کرنے سے ہمیں $28$ ملتا ہے، جو کہ $BA$ کے لیے ہمارا مکمل شدہ $1 \\times 1$ میٹرکس ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "Both products $AB$ and $BA$ are possible for these two matrices, giving $AB = \\begin{bmatrix} 8 & 20 \\\\ 8 & 20 \\end{bmatrix}$ and $BA = \\begin{bmatrix} 28 \\end{bmatrix}$. This clearly shows that in matrix multiplication, changing the order can completely change the size and values of the answer ($AB \\neq BA$). As a quick check, you can notice that the sum of the diagonal entries of $AB$ ($8 + 20 = 28$) equals the single entry in $BA$.",
+  "ur": "ان دونوں میٹرکسز کے لیے دونوں حاصل ضرب $AB$ اور $BA$ ممکن ہیں، جن سے $AB = \\begin{bmatrix} 8 & 20 \\\\ 8 & 20 \\end{bmatrix}$ اور $BA = \\begin{bmatrix} 28 \\end{bmatrix}$ حاصل ہوتے ہیں۔ اس سے صاف ظاہر ہوتا ہے کہ میٹرکس کی ضرب میں ترتیب بدلنے سے جواب کا سائز (مرتبہ) اور قیمتیں بالکل بدل سکتی ہیں ($AB \\neq BA$)۔ فوری پڑتال کے طور پر، آپ دیکھ سکتے ہیں کہ $AB$ کے وتر کے ارکان کا مجموعہ ($8 + 20 = 28$) میٹرکس $BA$ کے واحد رکن کے برابر ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

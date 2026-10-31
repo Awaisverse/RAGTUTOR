@@ -1,0 +1,50 @@
+{
+ "item": "c10-ex3.4-q1",
+ "label": "v",
+ "answer_ref": "$AB = \\begin{bmatrix} 7 & 25 \\\\ 6 & 25 \\end{bmatrix}$, $BA = \\begin{bmatrix} 16 & 7 & 7 \\\\ 14 & 8 & 8 \\\\ 19 & 8 & 8 \\end{bmatrix}$",
+ "math": [
+  "A = \\begin{bmatrix} 1 & 2 & 2 \\\\ 3 & 1 & 1 \\end{bmatrix}_{2 \\times 3}, \\quad B = \\begin{bmatrix} 1 & 5 \\\\ 2 & 4 \\\\ 1 & 6 \\end{bmatrix}_{3 \\times 2}",
+  "\\text{Columns of } A = 3 = \\text{Rows of } B",
+  "AB = \\begin{bmatrix} 1 & 2 & 2 \\\\ 3 & 1 & 1 \\end{bmatrix}\\begin{bmatrix} 1 & 5 \\\\ 2 & 4 \\\\ 1 & 6 \\end{bmatrix} = \\begin{bmatrix} (1)(1) + (2)(2) + (2)(1) & (1)(5) + (2)(4) + (2)(6) \\\\ (3)(1) + (1)(2) + (1)(1) & (3)(5) + (1)(4) + (1)(6) \\end{bmatrix}",
+  "AB = \\begin{bmatrix} 1 + 4 + 2 & 5 + 8 + 12 \\\\ 3 + 2 + 1 & 15 + 4 + 6 \\end{bmatrix} = \\begin{bmatrix} 7 & 25 \\\\ 6 & 25 \\end{bmatrix}",
+  "\\text{Columns of } B = 2 = \\text{Rows of } A",
+  "BA = \\begin{bmatrix} 1 & 5 \\\\ 2 & 4 \\\\ 1 & 6 \\end{bmatrix}\\begin{bmatrix} 1 & 2 & 2 \\\\ 3 & 1 & 1 \\end{bmatrix} = \\begin{bmatrix} (1)(1) + (5)(3) & (1)(2) + (5)(1) & (1)(2) + (5)(1) \\\\ (2)(1) + (4)(3) & (2)(2) + (4)(1) & (2)(2) + (4)(1) \\\\ (1)(1) + (6)(3) & (1)(2) + (6)(1) & (1)(2) + (6)(1) \\end{bmatrix}",
+  "BA = \\begin{bmatrix} 1 + 15 & 2 + 5 & 2 + 5 \\\\ 2 + 12 & 4 + 4 & 4 + 4 \\\\ 1 + 18 & 2 + 6 & 2 + 6 \\end{bmatrix} = \\begin{bmatrix} 16 & 7 & 7 \\\\ 14 & 8 & 8 \\\\ 19 & 8 & 8 \\end{bmatrix}"
+ ],
+ "why": [
+  {
+   "en": "Before multiplying any matrices, we must always check their sizes (orders) using the definition of matrix order (rows $\\times$ columns). Knowing that $A$ is $2 \\times 3$ and $B$ is $3 \\times 2$ helps us decide whether multiplication is even allowed.",
+   "ur": "میٹرکسز کو ضرب دینے سے پہلے، ہمیں ہمیشہ قطاروں اور کالموں کی تعداد گن کر ان کا آرڈر معلوم کرنا چاہیے۔ یہ جاننا کہ $A$ کا آرڈر $2 \\times 3$ اور $B$ کا آرڈر $3 \\times 2$ ہے، ہمیں یہ فیصلہ کرنے میں مدد دیتا ہے کہ آیا ان کی ضرب ممکن بھی ہے یا نہیں۔"
+  },
+  {
+   "en": "By the rule of matrix multiplication, $AB$ exists only if the columns of the first matrix ($A$) match the rows of the second matrix ($B$). Since both are $3$, we know $AB$ can be calculated, and the outer numbers tell us the answer will be a $2 \\times 2$ matrix.",
+   "ur": "میٹرکس کی ضرب کے اصول کے مطابق، $AB$ تبھی ممکن ہے جب پہلے میٹرکس ($A$) کے کالم دوسرے میٹرکس ($B$) کی قطاروں کے برابر ہوں۔ چونکہ دونوں کی تعداد $3$ ہے، اس لیے $AB$ معلوم کیا جا سکتا ہے، اور باہر والے نمبرز بتاتے ہیں کہ جواب ایک $2 \\times 2$ میٹرکس ہوگا۔"
+  },
+  {
+   "en": "We apply the row-by-column multiplication rule, pairing each number in a row of $A$ with the corresponding number in a column of $B$. This sets up the exact arithmetic needed for all four positions of our $2 \\times 2$ product.",
+   "ur": "ہم قطار کو کالم سے ضرب دینے کا اصول لاگو کرتے ہیں، جس میں $A$ کی ہر قطار کے نمبروں کو $B$ کے متعلقہ کالم کے نمبروں سے ضرب دی جاتی ہے۔ اس سے ہمارے $2 \\times 2$ میٹرکس کے چاروں حصوں کے لیے ضروری حساب کتاب ترتیب پا جاتا ہے۔"
+  },
+  {
+   "en": "We perform basic multiplication and addition to combine the terms in each position. This completes the first half of the question by giving us the exact $2 \\times 2$ matrix for $AB$.",
+   "ur": "ہم ہر پوزیشن کے نمبروں کو یکجا کرنے کے لیے سادہ ضرب اور جمع کا عمل کرتے ہیں۔ اس سے ہمیں $AB$ کے لیے واضح $2 \\times 2$ میٹرکس مل جاتا ہے اور سوال کا پہلا حصہ مکمل ہو جاتا ہے۔"
+  },
+  {
+   "en": "Matrix multiplication is not commutative, so we must re-check the multiplication rule when the order is reversed to $BA$. Because the columns of $B$ ($2$) equal the rows of $A$ ($2$), $BA$ is also possible, and the outer numbers show it will be a larger $3 \\times 3$ matrix.",
+   "ur": "میٹرکس کی ضرب میں ترتیب بدلنے سے فرق پڑتا ہے، اس لیے $BA$ کے لیے ہمیں ضرب کا اصول دوبارہ چیک کرنا ہوگا۔ چونکہ $B$ کے کالم ($2$) اور $A$ کی قطاریں ($2$) برابر ہیں، اس لیے $BA$ بھی ممکن ہے، اور باہر والے نمبرز بتاتے ہیں کہ یہ ایک بڑا $3 \\times 3$ میٹرکس ہوگا۔"
+  },
+  {
+   "en": "Using the row-by-column rule again, we now take the rows from $B$ and multiply them by the columns of $A$. Since $B$ has $3$ rows and $A$ has $3$ columns, this creates nine separate sums for our $3 \\times 3$ matrix.",
+   "ur": "قطار کو کالم سے ضرب دینے کا اصول دوبارہ استعمال کرتے ہوئے، اب ہم $B$ کی قطاروں کو $A$ کے کالموں سے ضرب دیتے ہیں۔ چونکہ $B$ میں $3$ قطاریں اور $A$ میں $3$ کالم ہیں، اس لیے ہمارے $3 \\times 3$ میٹرکس کے لیے نو الگ الگ حصے بنتے ہیں۔"
+  },
+  {
+   "en": "Simplifying each of the nine entries by multiplying and adding gives us the final values for $BA$. This finishes the second part of the problem.",
+   "ur": "ضرب اور جمع کے ذریعے تمام نو حصوں کو حل کرنے سے ہمیں $BA$ کی حتمی قیمتیں مل جاتی ہیں۔ اس سے سوال کا دوسرا حصہ مکمل ہو جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "Both products $AB$ and $BA$ are possible to find, but they result in completely different matrices of different sizes: $AB$ is a $2 \\times 2$ matrix $\\begin{bmatrix} 7 & 25 \\\\ 6 & 25 \\end{bmatrix}$, while $BA$ is a $3 \\times 3$ matrix $\\begin{bmatrix} 16 & 7 & 7 \\\\ 14 & 8 & 8 \\\\ 19 & 8 & 8 \\end{bmatrix}$. This clearly shows that in matrix multiplication, changing the order changes the result ($AB \\neq BA$). You can check your work by verifying that the orders of the final matrices match the outer dimensions ($2 \\times 2$ and $3 \\times 3$) and noticing that because columns $2$ and $3$ of matrix $A$ are identical, columns $2$ and $3$ of $BA$ also came out identical.",
+  "ur": "یہاں $AB$ اور $BA$ دونوں معلوم کرنا ممکن ہے، لیکن ان کے جوابات بالکل مختلف سائز کے میٹرکسز ہیں: $AB$ ایک $2 \\times 2$ میٹرکس $\\begin{bmatrix} 7 & 25 \\\\ 6 & 25 \\end{bmatrix}$ ہے، جبکہ $BA$ ایک $3 \\times 3$ میٹرکس $\\begin{bmatrix} 16 & 7 & 7 \\\\ 14 & 8 & 8 \\\\ 19 & 8 & 8 \\end{bmatrix}$ ہے۔ اس سے صاف ظاہر ہوتا ہے کہ میٹرکس کی ضرب میں ترتیب بدلنے سے جواب بدل جاتا ہے ($AB \\neq BA$)۔ آپ اپنے جواب کی پڑتال اس طرح کر سکتے ہیں کہ حتمی میٹرکسز کے آرڈر ($2 \\times 2$ اور $3 \\times 3$) درست ہیں، اور چونکہ میٹرکس $A$ کا دوسرا اور تیسرا کالم بالکل ایک جیسا ہے، اس لیے $BA$ کا دوسرا اور تیسرا کالم بھی ایک جیسا ہی آیا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

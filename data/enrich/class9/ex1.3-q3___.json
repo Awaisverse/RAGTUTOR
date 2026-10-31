@@ -1,0 +1,72 @@
+{
+ "item": "ex1.3-q3",
+ "label": "",
+ "answer_ref": "$(11\\sqrt{2}-2)\\ m^2$",
+ "steps": [
+  {
+   "math": "l = 2 + \\sqrt{18}\\text{ m}, \\qquad w = 5 - \\frac{4}{\\sqrt{2}}\\text{ m}",
+   "en": "First, write down the given sides of the rectangle as length $l$ and width $w$.",
+   "ur": "سب سے پہلے، مستطیل کے دیے گئے اضلاع کو لمبائی $l$ اور چوڑائی $w$ کے طور پر لکھیں۔"
+  },
+  {
+   "math": "l = 2 + \\sqrt{9 \\times 2} = 2 + 3\\sqrt{2}\\text{ m}",
+   "en": "Simplify the radical in the length by factoring $18$ as $9 \\times 2$, and since $\\sqrt{9} = 3$, we get $3\\sqrt{2}$.",
+   "ur": "لمبائی میں موجود جذر کو سادہ کرنے کے لیے $18$ کی تجزی $9 \\times 2$ کریں، اور چونکہ $\\sqrt{9} = 3$ ہے، اس لیے ہمیں $3\\sqrt{2}$ حاصل ہوتا ہے۔",
+   "check": [
+    "2 + sqrt(18) == 2 + 3*sqrt(2)"
+   ]
+  },
+  {
+   "math": "w = 5 - \\left(\\frac{4}{\\sqrt{2}} \\times \\frac{\\sqrt{2}}{\\sqrt{2}}\\right) = 5 - \\frac{4\\sqrt{2}}{2} = 5 - 2\\sqrt{2}\\text{ m}",
+   "en": "Rationalize the denominator in the width by multiplying and dividing the fraction by $\\sqrt{2}$, then simplify.",
+   "ur": "چوڑائی میں موجود کسر کے مخرج کو ناطق بنانے کے لیے $\\sqrt{2}$ سے ضرب اور تقسیم کریں، پھر سادہ کریں۔",
+   "check": [
+    "5 - 4/sqrt(2) == 5 - 4*sqrt(2)/2",
+    "5 - 4*sqrt(2)/2 == 5 - 2*sqrt(2)"
+   ]
+  },
+  {
+   "math": "\\text{Area} = l \\times w = (2 + 3\\sqrt{2})(5 - 2\\sqrt{2})",
+   "en": "Use the formula for the area of a rectangle ($\\text{Area} = \\text{length} \\times \\text{width}$) and substitute the simplified values.",
+   "ur": "مستطیل کے رقبے کا فارمولا ($\\text{Area} = \\text{length} \\times \\text{width}$) استعمال کریں اور سادہ کی گئی قیمتیں درج کریں۔",
+   "check": [
+    "(2 + sqrt(18))*(5 - 4/sqrt(2)) == (2 + 3*sqrt(2))*(5 - 2*sqrt(2))"
+   ]
+  },
+  {
+   "math": "\\text{Area} = 2(5 - 2\\sqrt{2}) + 3\\sqrt{2}(5 - 2\\sqrt{2}) = 10 - 4\\sqrt{2} + 15\\sqrt{2} - 6(\\sqrt{2})^2",
+   "en": "Expand the brackets by multiplying each term of the first expression by each term of the second expression.",
+   "ur": "پہلے جملے کے ہر رکن کو دوسرے جملے کے ہر رکن سے ضرب دے کر قوسین کو کھولیں۔",
+   "check": [
+    "(2 + 3*sqrt(2))*(5 - 2*sqrt(2)) == 10 - 4*sqrt(2) + 15*sqrt(2) - 6*sqrt(2)**2"
+   ]
+  },
+  {
+   "math": "\\text{Area} = 10 + 11\\sqrt{2} - 6(2) = 10 - 12 + 11\\sqrt{2}",
+   "en": "Combine the like surd terms ($-4\\sqrt{2} + 15\\sqrt{2} = 11\\sqrt{2}$) and use $(\\sqrt{2})^2 = 2$.",
+   "ur": "ملتے جلتے مقادیرِ اصم ($-4\\sqrt{2} + 15\\sqrt{2} = 11\\sqrt{2}$) کو جمع کریں اور $(\\sqrt{2})^2 = 2$ استعمال کریں۔",
+   "check": [
+    "10 - 4*sqrt(2) + 15*sqrt(2) - 6*sqrt(2)**2 == 10 + 11*sqrt(2) - 6*2",
+    "10 + 11*sqrt(2) - 6*2 == 10 - 12 + 11*sqrt(2)"
+   ]
+  },
+  {
+   "math": "\\text{Area} = -2 + 11\\sqrt{2} = (11\\sqrt{2} - 2)\\text{ m}^2",
+   "en": "Subtract the integers ($10 - 12 = -2$) to get the required form $a + b\\sqrt{2}$, where $a = -2$ and $b = 11$.",
+   "ur": "مطلوبہ شکل $a + b\\sqrt{2}$ حاصل کرنے کے لیے صحیح اعداد کو تفریق کریں ($10 - 12 = -2$)، جہاں $a = -2$ اور $b = 11$ ہے۔",
+   "check": [
+    "10 - 12 + 11*sqrt(2) == -2 + 11*sqrt(2)",
+    "-2 + 11*sqrt(2) == 11*sqrt(2) - 2",
+    "sqrt(18) == 3*sqrt(2)",
+    "4/sqrt(2) == 2*sqrt(2)",
+    "2 + sqrt(18) == 2 + 3*sqrt(2)",
+    "5 - 4/sqrt(2) == 5 - 2*sqrt(2)",
+    "(2+3*sqrt(2))*(5-2*sqrt(2)) == 10 - 4*sqrt(2) + 15*sqrt(2) - 6*sqrt(2)**2",
+    "(2+3*sqrt(2))*(5-2*sqrt(2)) == -2 + 11*sqrt(2)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

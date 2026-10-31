@@ -1,0 +1,42 @@
+{
+ "item": "c10-ex2.6-q3",
+ "label": "",
+ "answer_ref": "$a = \\frac{S - (n - 1)d}{2}$",
+ "steps": [
+  {
+   "math": "S = 2a + (n - 1)d",
+   "en": "Write the given formula. We need to isolate the variable $a$ to make it the subject.",
+   "ur": "دیا گیا کلیہ لکھیں۔ ہمیں متغیر $a$ کو کلیے کا موضوع بنانے کے لیے الگ کرنا ہے۔"
+  },
+  {
+   "math": "S - (n - 1)d = 2a + (n - 1)d - (n - 1)d",
+   "en": "To isolate the term containing $a$, subtract $(n - 1)d$ from both sides of the equation.",
+   "ur": "وہ رقم جس میں $a$ شامل ہے اسے الگ کرنے کے لیے، مساوات کے دونوں اطراف سے $(n - 1)d$ تفریق کریں۔"
+  },
+  {
+   "math": "2a = S - (n - 1)d",
+   "en": "Simplify the equation and rewrite it with $2a$ on the left side.",
+   "ur": "مساوات کو مختصر کریں اور $2a$ کو بائیں طرف رکھتے ہوئے دوبارہ لکھیں۔",
+   "check": [
+    "2*a + (n - 1)*d - (n - 1)*d == 2*a"
+   ]
+  },
+  {
+   "math": "\\frac{2a}{2} = \\frac{S - (n - 1)d}{2}",
+   "en": "Since $2$ is multiplied by $a$, divide both sides of the equation by $2$.",
+   "ur": "چونکہ $2$، $a$ کے ساتھ ضرب ہو رہا ہے، اس لیے مساوات کے دونوں اطراف کو $2$ سے تقسیم کریں۔"
+  },
+  {
+   "math": "a = \\frac{S - (n - 1)d}{2}",
+   "en": "Simplify the left side to get $a$ as the subject of the formula.",
+   "ur": "کلیے کے موضوع کے طور پر $a$ حاصل کرنے کے لیے بائیں طرف کو مختصر کریں۔",
+   "check": [
+    "2*a/2 == a",
+    "2*((Ss - (n - 1)*d)/2) + (n - 1)*d == Ss"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

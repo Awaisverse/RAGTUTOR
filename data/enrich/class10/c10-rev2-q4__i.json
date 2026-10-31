@@ -1,0 +1,57 @@
+{
+ "item": "c10-rev2-q4",
+ "label": "i",
+ "answer_ref": "$D = 1$: roots are rational and unequal",
+ "steps": [
+  {
+   "math": "15x^2 + 11x + 2 = 0",
+   "en": "Write down the given quadratic equation to examine the nature of its roots.",
+   "ur": "دی گئی دو درجی مساوات کے روٹس (جذور) کی قسم معلوم کرنے کے لیے اسے لکھیں۔"
+  },
+  {
+   "math": "a = 15, \\quad b = 11, \\quad c = 2",
+   "en": "Compare the equation with the standard quadratic form $ax^2 + bx + c = 0$ to identify the coefficients $a$, $b$, and $c$.",
+   "ur": "مساوات کا معیاری دو درجی مساوات $ax^2 + bx + c = 0$ سے موازنہ کر کے عددی سروں $a$، $b$ اور $c$ کی قیمتیں معلوم کریں۔"
+  },
+  {
+   "math": "\\text{Discriminant } (D) = b^2 - 4ac",
+   "en": "Recall the formula for the discriminant, as the nature of the roots of a quadratic equation depends on the value of $b^2 - 4ac$.",
+   "ur": "ممیز (Discriminant) کا فارمولا لکھیں، کیونکہ دو درجی مساوات کے روٹس کی قسم کا انحصار $b^2 - 4ac$ کی قیمت پر ہوتا ہے۔"
+  },
+  {
+   "math": "D = (11)^2 - 4(15)(2)",
+   "en": "Substitute the values of $a = 15$, $b = 11$, and $c = 2$ into the discriminant formula.",
+   "ur": "فارمولے میں $a = 15$، $b = 11$ اور $c = 2$ کی قیمتیں درج کریں۔"
+  },
+  {
+   "math": "D = 121 - 120 = 1",
+   "en": "Simplify the expression by squaring $11$ and multiplying $4$, $15$, and $2$, then subtract to find $D$.",
+   "ur": "$11$ کا مربع لیں اور $4$، $15$ اور $2$ کو ضرب دیں، پھر تفریق کر کے $D$ کی قیمت معلوم کریں۔",
+   "check": [
+    "(11)**2 == 121",
+    "4*15*2 == 120",
+    "121 - 120 == 1"
+   ]
+  },
+  {
+   "math": "D = 1 = (1)^2 > 0",
+   "en": "Observe that the discriminant $D = 1$ is positive ($D > 0$) and is a perfect square.",
+   "ur": "مشاہدہ کریں کہ ممیز $D = 1$ مثبت ہے ($D > 0$) اور ایک مکمل مربع ہے۔",
+   "check": [
+    "sqrt(1) == 1"
+   ]
+  },
+  {
+   "math": "\\text{Roots are rational and unequal}",
+   "en": "Since the discriminant is positive and a perfect square, the roots of the given equation are rational (real) and unequal.",
+   "ur": "چونکہ ممیز مثبت اور ایک مکمل مربع ہے، اس لیے دی گئی مساوات کے روٹس ناطق (حقیقی) اور غیر مساوی (مختلف) ہیں۔",
+   "check": [
+    "(11)**2 - 4*(15)*(2) == 1",
+    "sqrt(1) == 1"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

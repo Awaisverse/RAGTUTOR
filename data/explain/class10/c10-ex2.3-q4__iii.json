@@ -1,0 +1,55 @@
+{
+ "item": "c10-ex2.3-q4",
+ "label": "iii",
+ "answer_ref": "$4x^2 + 14x + 49 = 0$",
+ "math": [
+  "x^2 + 2x + 4 = 0 \\implies a = 1, \\quad b = 2, \\quad c = 4",
+  "\\alpha + \\beta = -\\frac{b}{a} = -\\frac{2}{1} = -2, \\quad \\alpha\\beta = \\frac{c}{a} = \\frac{4}{1} = 4",
+  "S = \\left(2\\alpha - \\frac{1}{\\beta}\\right) + \\left(2\\beta - \\frac{1}{\\alpha}\\right) = 2(\\alpha + \\beta) - \\left(\\frac{1}{\\alpha} + \\frac{1}{\\beta}\\right) = 2(\\alpha + \\beta) - \\left(\\frac{\\alpha + \\beta}{\\alpha\\beta}\\right)",
+  "S = 2(-2) - \\left(\\frac{-2}{4}\\right) = -4 - \\left(-\\frac{1}{2}\\right) = -4 + \\frac{1}{2} = \\frac{-8 + 1}{2} = -\\frac{7}{2}",
+  "P = \\left(2\\alpha - \\frac{1}{\\beta}\\right)\\left(2\\beta - \\frac{1}{\\alpha}\\right) = 4\\alpha\\beta - 2\\left(\\frac{\\alpha}{\\alpha}\\right) - 2\\left(\\frac{\\beta}{\\beta}\\right) + \\frac{1}{\\alpha\\beta} = 4\\alpha\\beta - 2 - 2 + \\frac{1}{\\alpha\\beta}",
+  "P = 4(4) - 4 + \\frac{1}{4} = 16 - 4 + \\frac{1}{4} = 12 + \\frac{1}{4} = \\frac{48 + 1}{4} = \\frac{49}{4}",
+  "x^2 - Sx + P = 0 \\implies x^2 - \\left(-\\frac{7}{2}\\right)x + \\frac{49}{4} = 0 \\implies x^2 + \\frac{7}{2}x + \\frac{49}{4} = 0",
+  "4\\left(x^2 + \\frac{7}{2}x + \\frac{49}{4}\\right) = 4(0) \\implies 4x^2 + 14x + 49 = 0"
+ ],
+ "why": [
+  {
+   "en": "To use the root-coefficient relationships, we first need to know the exact values of $a$, $b$, and $c$ from our given quadratic equation. By comparing $x^2 + 2x + 4 = 0$ with the standard form $ax^2 + bx + c = 0$, we establish the building blocks needed for the next step.",
+   "ur": "جذور اور عددی سروں کے درمیان تعلق کے فارمولے استعمال کرنے کے لیے ہمیں سب سے پہلے دی گئی مساوات سے $a$، $b$ اور $c$ کی قیمتیں معلوم کرنی ہوں گی۔ مساوات $x^2 + 2x + 4 = 0$ کا معیاری صورت $ax^2 + bx + c = 0$ سے موازنہ کر کے ہم اگلے مرحلے کے لیے بنیادی قیمتیں حاصل کر لیتے ہیں۔"
+  },
+  {
+   "en": "Instead of solving the equation to find $\\alpha$ and $\\beta$ separately, we use Vieta's formulas to directly find their sum ($-\\frac{b}{a}$) and product ($\\frac{c}{a}$). Knowing that $\\alpha + \\beta = -2$ and $\\alpha\\beta = 4$ will allow us to evaluate our new roots easily.",
+   "ur": "مساوات کو حل کر کے $\\alpha$ اور $\\beta$ کی الگ الگ قیمتیں نکالنے کے بجائے، ہم فارمولوں کی مدد سے براہِ راست ان کا مجموعہ ($-\\frac{b}{a}$) اور حاصلِ ضرب ($\\frac{c}{a}$) معلوم کرتے ہیں۔ $\\alpha + \\beta = -2$ اور $\\alpha\\beta = 4$ کی قیمتیں ہمیں نئی مساوات کے جذور کو آسانی سے حل کرنے میں مدد دیں گی۔"
+  },
+  {
+   "en": "To form a new quadratic equation, we first need the sum ($S$) of its given roots, $2\\alpha - \\frac{1}{\\beta}$ and $2\\beta - \\frac{1}{\\alpha}$. We rearrange the terms and take the LCM so that the entire expression is written strictly in terms of $\\alpha + \\beta$ and $\\alpha\\beta$, whose values we already know.",
+   "ur": "نئی دو درجی مساوات بنانے کے لیے ہمیں سب سے پہلے اس کے دیے گئے جذور $2\\alpha - \\frac{1}{\\beta}$ اور $2\\beta - \\frac{1}{\\alpha}$ کا مجموعہ ($S$) درکار ہے۔ ہم رقموں کو ترتیب دے کر ذواضعاف اقل (LCM) لیتے ہیں تاکہ پورا جملہ $\\alpha + \\beta$ اور $\\alpha\\beta$ کی شکل میں آ جائے، جن کی قیمتیں ہمیں پہلے سے معلوم ہیں۔"
+  },
+  {
+   "en": "Now that the sum $S$ is written in a familiar form, we simply plug in our known values of $\\alpha + \\beta = -2$ and $\\alpha\\beta = 4$. Simplifying the fractions gives us $S = -\\frac{7}{2}$, which is the exact sum of the roots for our new equation.",
+   "ur": "اب جبکہ مجموعہ $S$ ایک جانی پہچانی شکل میں آ چکا ہے، ہم اس میں $\\alpha + \\beta = -2$ اور $\\alpha\\beta = 4$ کی معلوم شدہ قیمتیں درج کرتے ہیں۔ کسروں کو مختصر کرنے سے ہمیں $S = -\\frac{7}{2}$ ملتا ہے، جو ہماری نئی مساوات کے جذور کا مجموعہ ہے۔"
+  },
+  {
+   "en": "Next, we need the product ($P$) of the new roots to complete the required quadratic equation. By expanding the brackets and cancelling out $\\frac{\\alpha}{\\alpha}$ and $\\frac{\\beta}{\\beta}$ to $1$, we neatly express the product purely in terms of $\\alpha\\beta$.",
+   "ur": "اس کے بعد، مطلوبہ دو درجی مساوات مکمل کرنے کے لیے ہمیں نئے جذور کا حاصلِ ضرب ($P$) معلوم کرنا ہے۔ بریکٹوں کو ضرب دے کر اور $\\frac{\\alpha}{\\alpha}$ اور $\\frac{\\beta}{\\beta}$ کو کاٹ کر $1$ کرنے سے، ہم حاصلِ ضرب کو مکمل طور پر $\\alpha\\beta$ کی شکل میں لے آتے ہیں۔"
+  },
+  {
+   "en": "We substitute the known value $\\alpha\\beta = 4$ into our simplified product expression. Basic arithmetic and fraction addition give us $P = \\frac{49}{4}$, which is the exact product of the roots for our new equation.",
+   "ur": "ہم حاصلِ ضرب کے مختصر کردہ جملے میں $\\alpha\\beta = 4$ کی قیمت درج کرتے ہیں۔ سادہ حساب اور کسروں کو جمع کرنے سے ہمیں $P = \\frac{49}{4}$ حاصل ہوتا ہے، جو ہماری نئی مساوات کے جذور کا حاصلِ ضرب ہے۔"
+  },
+  {
+   "en": "A quadratic equation can always be constructed from the sum ($S$) and product ($P$) of its roots using the standard formula $x^2 - Sx + P = 0$. Substituting $S = -\\frac{7}{2}$ and $P = \\frac{49}{4}$ gives us the correct equation, though it currently contains fractions.",
+   "ur": "کسی بھی دو درجی مساوات کو اس کے جذور کے مجموعے ($S$) اور حاصلِ ضرب ($P$) کی مدد سے معیاری فارمولے $x^2 - Sx + P = 0$ کے ذریعے بنایا جا سکتا ہے۔ اس میں $S = -\\frac{7}{2}$ اور $P = \\frac{49}{4}$ درج کرنے سے ہمیں درست مساوات مل جاتی ہے، اگرچہ اس میں ابھی کسریں موجود ہیں۔"
+  },
+  {
+   "en": "In standard mathematical practice, we prefer quadratic equations to have integer coefficients rather than fractions. Multiplying the entire equation by $4$ (the LCM of the denominators $2$ and $4$) clears the fractions without changing the roots, giving our neat final equation.",
+   "ur": "ریاضی کے معیاری طریقے میں ہم ترجیح دیتے ہیں کہ دو درجی مساوات کے عددی سر کسروں کے بجائے مکمل اعداد ہوں۔ پوری مساوات کو $4$ (نسب نماؤں $2$ اور $4$ کا ذواضعاف اقل) سے ضرب دینے سے کسریں ختم ہو جاتی ہیں اور ہمیں صاف ستھری حتمی مساوات مل جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final equation $4x^2 + 14x + 49 = 0$ is the exact quadratic equation whose roots are $2\\alpha - \\frac{1}{\\beta}$ and $2\\beta - \\frac{1}{\\alpha}$, formed without ever needing to calculate the complex values of $\\alpha$ and $\\beta$ individually. You can quickly verify this answer by checking that the sum of roots from this new equation is $-\\frac{14}{4} = -\\frac{7}{2}$ (which matches $S$) and the product is $\\frac{49}{4}$ (which matches $P$).",
+  "ur": "حتمی مساوات $4x^2 + 14x + 49 = 0$ وہ مطلوبہ دو درجی مساوات ہے جس کے جذور $2\\alpha - \\frac{1}{\\beta}$ اور $2\\beta - \\frac{1}{\\alpha}$ ہیں، اور اسے ہم نے $\\alpha$ اور $\\beta$ کی پیچیدہ انفرادی قیمتیں نکالے بغیر حاصل کیا ہے۔ آپ اس جواب کی تصدیق ایسے کر سکتے ہیں کہ اس نئی مساوات سے جذور کا مجموعہ $-\\frac{14}{4} = -\\frac{7}{2}$ بنتا ہے (جو $S$ کے برابر ہے) اور حاصلِ ضرب $\\frac{49}{4}$ بنتا ہے (جو $P$ کے برابر ہے)۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

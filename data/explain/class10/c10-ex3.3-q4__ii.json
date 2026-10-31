@@ -1,0 +1,50 @@
+{
+ "item": "c10-ex3.3-q4",
+ "label": "ii",
+ "answer_ref": "verified: both sides $= \\begin{bmatrix} 6 & 5 \\\\ 2 & 13 \\end{bmatrix}$",
+ "math": [
+  "",
+  "A + B = \\begin{bmatrix} 2 & 3 \\\\ -3 & 2 \\end{bmatrix} + \\begin{bmatrix} 3 & 4 \\\\ 5 & 6 \\end{bmatrix} = \\begin{bmatrix} 2 + 3 & 3 + 4 \\\\ -3 + 5 & 2 + 6 \\end{bmatrix} = \\begin{bmatrix} 5 & 7 \\\\ 2 & 8 \\end{bmatrix}",
+  "(A+B) + C = \\begin{bmatrix} 5 & 7 \\\\ 2 & 8 \\end{bmatrix} + \\begin{bmatrix} 1 & -2 \\\\ 0 & 5 \\end{bmatrix} = \\begin{bmatrix} 5 + 1 & 7 - 2 \\\\ 2 + 0 & 8 + 5 \\end{bmatrix} = \\begin{bmatrix} 6 & 5 \\\\ 2 & 13 \\end{bmatrix}",
+  "",
+  "B + C = \\begin{bmatrix} 3 & 4 \\\\ 5 & 6 \\end{bmatrix} + \\begin{bmatrix} 1 & -2 \\\\ 0 & 5 \\end{bmatrix} = \\begin{bmatrix} 3 + 1 & 4 - 2 \\\\ 5 + 0 & 6 + 5 \\end{bmatrix} = \\begin{bmatrix} 4 & 2 \\\\ 5 & 11 \\end{bmatrix}",
+  "A + (B+C) = \\begin{bmatrix} 2 & 3 \\\\ -3 & 2 \\end{bmatrix} + \\begin{bmatrix} 4 & 2 \\\\ 5 & 11 \\end{bmatrix} = \\begin{bmatrix} 2 + 4 & 3 + 2 \\\\ -3 + 5 & 2 + 11 \\end{bmatrix} = \\begin{bmatrix} 6 & 5 \\\\ 2 & 13 \\end{bmatrix}",
+  "(A+B)+C = \\begin{bmatrix} 6 & 5 \\\\ 2 & 13 \\end{bmatrix} = A+(B+C)"
+ ],
+ "why": [
+  {
+   "en": "To verify the associative law of matrix addition, we start by evaluating the left-hand side of the equation, $(A+B)+C$, to find its resulting matrix.",
+   "ur": "کالبوں کی جمع کے تلازمی قانون کی تصدیق کرنے کے لیے، ہم مساوات کی بائیں طرف یعنی $(A+B)+C$ کو حل کرنے سے شروعات کرتے ہیں تاکہ اس کا حاصل کالب معلوم کیا جا سکے۔"
+  },
+  {
+   "en": "Following the order of operations, we always solve inside the brackets first, so we add $A$ and $B$ by combining their corresponding entries. This gives us a single intermediate matrix $\\begin{bmatrix} 5 & 7 \\\\ 2 & 8 \\end{bmatrix}$ that replaces $(A+B)$.",
+   "ur": "حسابی اصولوں کے مطابق ہم ہمیشہ پہلے بریکٹ کے اندر والا حصہ حل کرتے ہیں، اس لیے ہم کالب $A$ اور $B$ کے متناظرہ ارکان کو جمع کرتے ہیں۔ اس سے ہمیں ایک درمیانی کالب $\\begin{bmatrix} 5 & 7 \\\\ 2 & 8 \\end{bmatrix}$ ملتا ہے جو $(A+B)$ کی جگہ لے لیتا ہے۔"
+  },
+  {
+   "en": "Now we complete the left-hand side by adding matrix $C$ to our previous result $\\begin{bmatrix} 5 & 7 \\\\ 2 & 8 \\end{bmatrix}$. This gives the final matrix $\\begin{bmatrix} 6 & 5 \\\\ 2 & 13 \\end{bmatrix}$ for the entire left-hand side.",
+   "ur": "اب بائیں طرف کو مکمل کرنے کے لیے ہم اپنے پچھلے نتیجے $\\begin{bmatrix} 5 & 7 \\\\ 2 & 8 \\end{bmatrix}$ میں کالب $C$ کو جمع کرتے ہیں۔ اس سے ہمیں پوری بائیں طرف کا حتمی کالب $\\begin{bmatrix} 6 & 5 \\\\ 2 & 13 \\end{bmatrix}$ حاصل ہو جاتا ہے۔"
+  },
+  {
+   "en": "Next, we move to the right-hand side of the equation, $A+(B+C)$, to see if grouping the matrices differently gives the exact same result.",
+   "ur": "اس کے بعد، ہم مساوات کی دائیں طرف یعنی $A+(B+C)$ کی طرف بڑھتے ہیں تاکہ یہ دیکھ سکیں کہ کیا کالبوں کی ترتیب بدل کر جمع کرنے سے بھی بالکل وہی نتیجہ نکلتا ہے۔"
+  },
+  {
+   "en": "Again, the bracket rule tells us to calculate $(B+C)$ first by adding the matching positions of $B$ and $C$. This produces the matrix $\\begin{bmatrix} 4 & 2 \\\\ 5 & 11 \\end{bmatrix}$, which we will next add to $A$.",
+   "ur": "ایک بار پھر، بریکٹ کے اصول کے مطابق ہم پہلے $B$ اور $C$ کے متناظرہ ارکان کو جمع کر کے $(B+C)$ معلوم کرتے ہیں۔ اس سے ہمیں کالب $\\begin{bmatrix} 4 & 2 \\\\ 5 & 11 \\end{bmatrix}$ ملتا ہے، جسے ہم اگلے مرحلے میں $A$ میں جمع کریں گے۔"
+  },
+  {
+   "en": "We now add matrix $A$ from the left to our bracket result $(B+C)$. This completes the calculation for the right-hand side, giving us $\\begin{bmatrix} 6 & 5 \\\\ 2 & 13 \\end{bmatrix}$.",
+   "ur": "اب ہم کالب $A$ کو بائیں جانب سے اپنے بریکٹ والے نتیجے $(B+C)$ میں جمع کرتے ہیں۔ اس سے دائیں طرف کا حساب مکمل ہو جاتا ہے اور ہمیں $\\begin{bmatrix} 6 & 5 \\\\ 2 & 13 \\end{bmatrix}$ حاصل ہوتا ہے۔"
+  },
+  {
+   "en": "By comparing the results of Step 3 and Step 6, we see that every corresponding entry is identical. This proves that the left-hand side equals the right-hand side.",
+   "ur": "مرحلہ 3 اور مرحلہ 6 کے نتائج کا موازنہ کرنے سے ہم دیکھتے ہیں کہ ہر متناظرہ رکن بالکل ایک جیسا ہے۔ اس سے ثابت ہوتا ہے کہ بائیں طرف اور دائیں طرف آپس میں برابر ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "Both sides simplify to the exact same matrix $\\begin{bmatrix} 6 & 5 \\\\ 2 & 13 \\end{bmatrix}$, which successfully verifies the associative property $(A+B)+C = A+(B+C)$ for the given matrices. This tells us that when adding three matrices of the same order, the way we group them with brackets does not change the final sum.",
+  "ur": "دونوں اطراف کو حل کرنے سے بالکل ایک ہی کالب $\\begin{bmatrix} 6 & 5 \\\\ 2 & 13 \\end{bmatrix}$ حاصل ہوتا ہے، جو دیے گئے کالبوں کے لیے تلازمی خاصیت $(A+B)+C = A+(B+C)$ کی کامیابی سے تصدیق کرتا ہے۔ یہ ہمیں بتاتا ہے کہ یکساں مرتبے کے تین کالبوں کو جمع کرتے وقت، بریکٹ لگانے کی ترتیب بدلنے سے حتمی مجموعے پر کوئی فرق نہیں پڑتا۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

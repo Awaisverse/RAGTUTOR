@@ -1,0 +1,66 @@
+{
+ "item": "c10-ex5.2-q1",
+ "label": "x",
+ "answer_ref": "$\\frac{x - 4}{\\left(x - 3\\right) \\left(x - 2\\right) \\left(x - 1\\right)}$",
+ "steps": [
+  {
+   "math": "\\frac{1}{x^{2} - 4 x + 3} + \\frac{1}{x^{2} - 3 x + 2} - \\frac{1}{x^{2} - 5 x + 6}",
+   "en": "Write the given expression of algebraic fractions that we need to simplify.",
+   "ur": "دی گئی الجبری کسر کی عبارت لکھیں جسے ہمیں مختصر کرنا ہے۔"
+  },
+  {
+   "math": "= \\frac{1}{x^{2} - 3 x - x + 3} + \\frac{1}{x^{2} - 2 x - x + 2} - \\frac{1}{x^{2} - 3 x - 2 x + 6}",
+   "en": "To factorize the quadratic denominators, split the middle term of each denominator.",
+   "ur": "دو درجی نسب نماؤں کی تجزی کرنے کے لیے، ہر نسب نما کی درمیانی رقم کو دو حصوں میں توڑیں۔",
+   "check": [
+    "(1/(x**2 - 3*x - x + 3) + 1/(x**2 - 2*x - x + 2) - 1/(x**2 - 3*x - 2*x + 6)) == (1/(x**2 - 4*x + 3) + 1/(x**2 - 3*x + 2) - 1/(x**2 - 5*x + 6))"
+   ]
+  },
+  {
+   "math": "= \\frac{1}{x(x - 3) - 1(x - 3)} + \\frac{1}{x(x - 2) - 1(x - 2)} - \\frac{1}{x(x - 3) - 2(x - 3)}",
+   "en": "Take out the common factors by grouping terms in pairs in each denominator.",
+   "ur": "ہر نسب نما میں دو دو رقوم کے جوڑے بنا کر مشترک اجزاء باہر نکالیں۔",
+   "check": [
+    "(1/(x*(x - 3) - 1*(x - 3)) + 1/(x*(x - 2) - 1*(x - 2)) - 1/(x*(x - 3) - 2*(x - 3))) == (1/(x**2 - 4*x + 3) + 1/(x**2 - 3*x + 2) - 1/(x**2 - 5*x + 6))"
+   ]
+  },
+  {
+   "math": "= \\frac{1}{(x - 3)(x - 1)} + \\frac{1}{(x - 2)(x - 1)} - \\frac{1}{(x - 3)(x - 2)}",
+   "en": "Complete the factorization of each denominator by taking out the common binomial factors.",
+   "ur": "مشترک دو رقمی اجزاء باہر نکال کر ہر نسب نما کی تجزی مکمل کریں۔",
+   "check": [
+    "(1/((x - 3)*(x - 1)) + 1/((x - 2)*(x - 1)) - 1/((x - 3)*(x - 2))) == (1/(x**2 - 4*x + 3) + 1/(x**2 - 3*x + 2) - 1/(x**2 - 5*x + 6))"
+   ]
+  },
+  {
+   "math": "= \\frac{(x - 2) + (x - 3) - (x - 1)}{(x - 3)(x - 2)(x - 1)}",
+   "en": "The Least Common Denominator (L.C.D.) of the fractions is $(x - 3)(x - 2)(x - 1)$. Combine all the numerators over this common denominator.",
+   "ur": "ان کسور کا ذو اضعاف اقل (L.C.D.) $(x - 3)(x - 2)(x - 1)$ ہے۔ تمام شمار کنندگان کو اس مشترک نسب نما کے اوپر یکجا کریں۔",
+   "check": [
+    "((x - 2) + (x - 3) - (x - 1))/((x - 3)*(x - 2)*(x - 1)) == (1/((x - 3)*(x - 1)) + 1/((x - 2)*(x - 1)) - 1/((x - 3)*(x - 2)))"
+   ]
+  },
+  {
+   "math": "= \\frac{x - 2 + x - 3 - x + 1}{(x - 3)(x - 2)(x - 1)}",
+   "en": "Remove the brackets in the numerator, making sure to change the signs inside the last bracket because of the minus sign outside.",
+   "ur": "شمار کنندہ میں بریکٹ ہٹائیں، اور باہر منفی علامت ہونے کی وجہ سے آخری بریکٹ کے اندر کی علامتیں تبدیل کرنے کا خیال رکھیں۔",
+   "check": [
+    "(x - 2 + x - 3 - x + 1)/((x - 3)*(x - 2)*(x - 1)) == ((x - 2) + (x - 3) - (x - 1))/((x - 3)*(x - 2)*(x - 1))"
+   ]
+  },
+  {
+   "math": "= \\frac{x - 4}{\\left(x - 3\\right) \\left(x - 2\\right) \\left(x - 1\\right)}",
+   "en": "Combine the like terms in the numerator ($x + x - x = x$ and $-2 - 3 + 1 = -4$) to get the final simplified form.",
+   "ur": "مختصر ترین شکل حاصل کرنے کے لیے شمار کنندہ میں متشابہ ارکان کو حل کریں ($x + x - x = x$ اور $-2 - 3 + 1 = -4$)۔",
+   "check": [
+    "(x - 4)/((x - 3)*(x - 2)*(x - 1)) == (1/(x**2 - 4*x + 3) + 1/(x**2 - 3*x + 2) - 1/(x**2 - 5*x + 6))",
+    "(1/((x - 2)*(x - 1)) + 1/((x - 3)*(x - 1)) - 1/((x - 3)*(x - 2))) == (1/(x**2 - 3*x + 2) + 1/(x**2 - 4*x + 3) - 1/(x**2 - 5*x + 6))",
+    "(x - 4)/((x - 3)*(x - 2)*(x - 1)) == (1/(x**2 - 3*x + 2) + 1/(x**2 - 4*x + 3) - 1/(x**2 - 5*x + 6))",
+    "(x - 4)/((x - 3)*(x - 2)*(x - 1)) == (1/(x**2 - 3*x + 2) + 1/(x**2 - 4*x + 3) - 1/(x**2 - 5*x + 6))"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

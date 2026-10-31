@@ -1,0 +1,67 @@
+{
+ "item": "c10-ex1.2-q6",
+ "label": "",
+ "answer_ref": "$x = \\frac{1}{2},\\ y = 3$",
+ "steps": [
+  {
+   "math": "(2x+iy)(1-i) = 4+2i",
+   "en": "Write down the given complex equation to find the real values of $x$ and $y$.",
+   "ur": "$x$ اور $y$ کی حقیقی قیمتیں معلوم کرنے کے لیے دی گئی مختلط مساوات لکھیں۔"
+  },
+  {
+   "math": "2x(1) - 2x(i) + iy(1) - iy(i) = 4+2i \\;\\Rightarrow\\; 2x - 2xi + yi - yi^2 = 4+2i",
+   "en": "Multiply the two binomials on the left-hand side term by term.",
+   "ur": "بائیں جانب موجود دونوں رقوم کو آپس میں ضرب دیں۔",
+   "check": [
+    "expand((2*x+I*y)*(1-I)) == expand(2*x - 2*x*I + y*I - y*I**2)"
+   ]
+  },
+  {
+   "math": "2x - 2xi + yi - y(-1) = 4+2i \\;\\Rightarrow\\; (2x+y) + (-2x+y)i = 4+2i",
+   "en": "Substitute $i^2 = -1$ and group the real parts and imaginary parts together in the standard form $a+bi$.",
+   "ur": "$i^2 = -1$ درج کریں اور حقیقی اور خیالی حصوں کو معیاری صورت $a+bi$ میں اکٹھا لکھیں۔",
+   "check": [
+    "expand(2*x - 2*x*I + y*I - y*(-1)) == expand((2*x + y) + (-2*x + y)*I)"
+   ]
+  },
+  {
+   "math": "2x + y = 4 \\quad\\text{--- (i)} \\qquad\\text{and}\\qquad -2x + y = 2 \\quad\\text{--- (ii)}",
+   "en": "By the definition of equality of complex numbers, equate the real parts and the imaginary parts on both sides.",
+   "ur": "مختلط اعداد کی برابری کی تعریف کے مطابق، دونوں اطراف کے حقیقی حصوں اور خیالی حصوں کو آمنے سامنے برابر رکھیں۔"
+  },
+  {
+   "math": "(2x+y) + (-2x+y) = 4 + 2 \\;\\Rightarrow\\; 2y = 6 \\;\\Rightarrow\\; y = 3",
+   "en": "Add equation (i) and equation (ii) to eliminate $x$ and find the value of $y$.",
+   "ur": "$x$ کو ختم کرنے اور $y$ کی قیمت معلوم کرنے کے لیے مساوات (i) اور مساوات (ii) کو جمع کریں۔",
+   "check": [
+    "(2*x+y) + (-2*x+y) == 2*y",
+    "4 + 2 == 6",
+    "R(6, 2) == 3"
+   ]
+  },
+  {
+   "math": "2x + 3 = 4 \\;\\Rightarrow\\; 2x = 4 - 3 \\;\\Rightarrow\\; 2x = 1 \\;\\Rightarrow\\; x = \\frac{1}{2}",
+   "en": "Substitute $y = 3$ into equation (i) and solve for $x$.",
+   "ur": "مساوات (i) میں $y = 3$ درج کریں اور $x$ کی قیمت معلوم کریں۔",
+   "check": [
+    "4 - 3 == 1",
+    "2*R(1,2) + 3 == 4"
+   ]
+  },
+  {
+   "math": "\\text{Check: } \\left(2\\left(\\frac{1}{2}\\right) + i(3)\\right)(1-i) = (1+3i)(1-i) = 1 - i + 3i - 3i^2 = 4 + 2i",
+   "en": "Verify the answer by substituting $x = \\frac{1}{2}$ and $y = 3$ back into the left-hand side of the original equation.",
+   "ur": "اصل مساوات کی بائیں جانب $x = \\frac{1}{2}$ اور $y = 3$ درج کر کے جواب کی تصدیق کریں۔",
+   "check": [
+    "(2*R(1,2) + I*3)*(1 - I) == 4 + 2*I",
+    "expand((2*(x)+I*(y))*(1-I)) == expand((2*x + y) + (-2*x + y)*I)",
+    "2*(1/2) + (3) - 4 == 0",
+    "-2*(1/2) + (3) - 2 == 0",
+    "(2*(1/2)+I*(3))*(1-I) == 4+2*I"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

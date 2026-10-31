@@ -1,0 +1,57 @@
+{
+ "item": "c10-ex5.1-q1",
+ "label": "vii",
+ "answer_ref": "$\\frac{1}{2 a + 3 x}$",
+ "steps": [
+  {
+   "math": "\\frac{x(2a^2 - 3ax)}{a(4a^2x - 9x^3)}",
+   "en": "Given the rational expression to be reduced to its lowest form.",
+   "ur": "دیے گئے ناطق جملے کو اس کی مختصر ترین شکل میں لانا ہے۔"
+  },
+  {
+   "math": "= \\frac{ax(2a - 3x)}{ax(4a^2 - 9x^2)}",
+   "en": "Take $a$ common from the bracket in the numerator and $x$ common from the bracket in the denominator.",
+   "ur": "شمار کنندہ کی بریکٹ میں سے $a$ اور مخرج کی بریکٹ میں سے $x$ مشترک لیں۔",
+   "check": [
+    "(a*x*(2*a - 3*x))/(a*x*(4*a**2 - 9*x**2)) == (x*(2*a**2 - 3*a*x))/(a*(4*a**2*x - 9*x**3))"
+   ]
+  },
+  {
+   "math": "= \\frac{2a - 3x}{4a^2 - 9x^2}",
+   "en": "Cancel the common factor $ax$ from the numerator and the denominator.",
+   "ur": "شمار کنندہ اور مخرج سے مشترک جزو ضربی $ax$ کو کاٹ دیں۔",
+   "check": [
+    "(2*a - 3*x)/(4*a**2 - 9*x**2) == (a*x*(2*a - 3*x))/(a*x*(4*a**2 - 9*x**2))"
+   ]
+  },
+  {
+   "math": "= \\frac{2a - 3x}{(2a)^2 - (3x)^2}",
+   "en": "Rewrite the denominator in the form of a difference of two squares, $A^2 - B^2$.",
+   "ur": "مخرج کو دو مربعات کے فرق، $A^2 - B^2$ کی شکل میں لکھیں۔",
+   "check": [
+    "(2*a - 3*x)/((2*a)**2 - (3*x)**2) == (2*a - 3*x)/(4*a**2 - 9*x**2)"
+   ]
+  },
+  {
+   "math": "= \\frac{2a - 3x}{(2a - 3x)(2a + 3x)}",
+   "en": "Apply the algebraic identity $A^2 - B^2 = (A - B)(A + B)$ to factorize the denominator.",
+   "ur": "مخرج کی تجزی کرنے کے لیے الجبری کلیہ $A^2 - B^2 = (A - B)(A + B)$ کا اطلاق کریں۔",
+   "check": [
+    "(2*a - 3*x)/((2*a - 3*x)*(2*a + 3*x)) == (2*a - 3*x)/((2*a)**2 - (3*x)**2)"
+   ]
+  },
+  {
+   "math": "= \\frac{1}{2 a + 3 x}",
+   "en": "Cancel the common factor $(2a - 3x)$ from both the numerator and the denominator to get the final answer.",
+   "ur": "حتمی جواب حاصل کرنے کے لیے شمار کنندہ اور مخرج دونوں سے مشترک جزو ضربی $(2a - 3x)$ کو کاٹ دیں۔",
+   "check": [
+    "1/(2*a + 3*x) == (2*a - 3*x)/((2*a - 3*x)*(2*a + 3*x))",
+    "(-a*x*(-2*a + 3*x))/(-a*x*(-2*a + 3*x)*(2*a + 3*x)) == (x*(2*a**2 - 3*a*x))/(a*(4*a**2*x - 9*x**3))",
+    "(1/(2*a + 3*x)) == (x*(2*a**2 - 3*a*x))/(a*(4*a**2*x - 9*x**3))"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

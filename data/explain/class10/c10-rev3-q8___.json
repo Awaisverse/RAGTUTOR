@@ -1,0 +1,45 @@
+{
+ "item": "c10-rev3-q8",
+ "label": "",
+ "answer_ref": "man Rs. 250, woman Rs. 750",
+ "math": [
+  "",
+  "\\begin{bmatrix} 5 & 3 \\\\ 2 & 6 \\end{bmatrix}\\begin{bmatrix} m \\\\ w \\end{bmatrix} = \\begin{bmatrix} 3500 \\\\ 5000 \\end{bmatrix}",
+  "|A| = \\begin{vmatrix} 5 & 3 \\\\ 2 & 6 \\end{vmatrix} = (5)(6) - (3)(2) = 24",
+  "|A_m| = \\begin{vmatrix} 3500 & 3 \\\\ 5000 & 6 \\end{vmatrix} = (3500)(6) - (3)(5000) = 6000",
+  "|A_w| = \\begin{vmatrix} 5 & 3500 \\\\ 2 & 5000 \\end{vmatrix} = (5)(5000) - (3500)(2) = 18000",
+  "m = \\frac{|A_m|}{|A|} = \\frac{6000}{24} = 250,\\quad w = \\frac{|A_w|}{|A|} = \\frac{18000}{24} = 750"
+ ],
+ "why": [
+  {
+   "en": "First, we translate the word problem into two linear equations by assigning variables $m$ and $w$ to the unknown daily wages. Notice that adding $3$ extra women to the original $3$ gives $6$ women in the second equation, which prepares the problem for matrix methods.",
+   "ur": "سب سے پہلے ہم نامعلوم یومیہ اجرتوں کو $m$ اور $w$ فرض کر کے عبارت کو دو یک درجی مساواتوں میں تبدیل کرتے ہیں۔ غور کریں کہ پہلے والی $3$ عورتوں میں $3$ مزید عورتیں شامل کرنے سے دوسری مساوات میں $6$ عورتیں ہو جاتی ہیں، جس سے یہ سوال قالب کے طریقے سے حل ہونے کے لیے تیار ہو جاتا ہے۔"
+  },
+  {
+   "en": "We organize the coefficients, variables, and total wages into matrices to form the standard matrix equation $AX = B$. This allows us to apply matrix rules like Cramer's rule to solve the system.",
+   "ur": "ہم عددی سروں، متغیرات اور کل اجرتوں کو قالبوں کی شکل میں ترتیب دے کر معیاری مساوات $AX = B$ بناتے ہیں۔ اس سے ہمیں مساواتوں کو حل کرنے کے لیے کریمر کے قانون جیسے قالب کے اصول لاگو کرنے میں مدد ملتی ہے۔"
+  },
+  {
+   "en": "We calculate the determinant $|A|$ of the coefficient matrix by cross-multiplying and subtracting. Since the result is $24$ (which is not zero), it confirms that a unique solution exists and gives us the denominator needed for Cramer's rule.",
+   "ur": "ہم عددی سروں کے قالب کا مقطع $|A|$ چلیپائی ضرب اور تفریق کے ذریعے معلوم کرتے ہیں۔ چونکہ جواب $24$ ہے (جو صفر نہیں ہے)، اس سے تصدیق ہوتی ہے کہ اس کا ایک منفرد حل موجود ہے اور ہمیں کریمر کے قانون کے لیے بٹے کے نیچے والی قیمت مل جاتی ہے۔"
+  },
+  {
+   "en": "According to Cramer's rule, to find the first variable $m$, we form a new matrix $A_m$ by replacing the first column with the constants $B$. Its determinant $|A_m| = 6000$ gives us the numerator needed to calculate $m$.",
+   "ur": "کریمر کے قانون کے مطابق، پہلا متغیر $m$ معلوم کرنے کے لیے ہم پہلے کالم کی جگہ مستقل مقداروں $B$ کو رکھ کر نیا قالب $A_m$ بناتے ہیں۔ اس کا مقطع $|A_m| = 6000$ ہمیں $m$ کی قیمت نکالنے کے لیے شمار کنندہ (بٹے کے اوپر والی رقم) فراہم کرتا ہے۔"
+  },
+  {
+   "en": "Similarly, to find the second variable $w$, we replace the second column of $A$ with the constants $B$ to form $A_w$. Calculating its determinant gives $|A_w| = 18000$, which is the numerator needed to find $w$.",
+   "ur": "اسی طرح، دوسرا متغیر $w$ معلوم کرنے کے لیے ہم قالب $A$ کے دوسرے کالم کی جگہ مستقل مقداریں $B$ رکھ کر $A_w$ بناتے ہیں۔ اس کا مقطع حل کرنے سے $|A_w| = 18000$ ملتا ہے، جو $w$ معلوم کرنے کے لیے شمار کنندہ ہے۔"
+  },
+  {
+   "en": "Finally, we apply Cramer's rule by dividing each special determinant $|A_m|$ and $|A_w|$ by the main determinant $|A|$. This division directly gives us the exact values of our unknowns $m$ and $w$.",
+   "ur": "آخر میں، ہم کریمر کا قانون لاگو کرتے ہوئے دونوں خاص مقطعوں $|A_m|$ اور $|A_w|$ کو اصل مقطع $|A|$ پر تقسیم کرتے ہیں۔ یہ تقسیم ہمیں براہِ راست ہمارے نامعلوم متغیرات $m$ اور $w$ کی درست قیمتیں دے دیتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This final result tells us that the shop pays a daily wage of Rs. $250$ to one man and Rs. $750$ to one woman. We can easily check our answer by putting these values back into the first condition: $5(250) + 3(750) = 3500$, which matches the given total daily wages.",
+  "ur": "یہ حتمی نتیجہ ہمیں بتاتا ہے کہ دکان ایک آدمی کو روزانہ $250$ روپے اور ایک عورت کو روزانہ $750$ روپے اجرت دیتی ہے۔ ہم ان قیمتوں کو پہلی شرط میں درج کر کے باآسانی اپنے جواب کی پڑتال کر سکتے ہیں: $5(250) + 3(750) = 3500$، جو کہ دی گئی کل یومیہ اجرت کے بالکل برابر ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

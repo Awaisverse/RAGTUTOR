@@ -1,0 +1,57 @@
+{
+ "item": "c10-ex6.2-q4",
+ "label": "",
+ "answer_ref": "$\\frac{\\sqrt{5}}{2}$",
+ "steps": [
+  {
+   "math": "\\underline{a} = \\underline{i} + 3\\underline{j}, \\quad \\underline{c} = 2\\underline{i} + \\underline{j}, \\quad \\underline{a} + 2\\underline{b} = \\underline{c}",
+   "en": "Write down the given vectors $\\underline{a}$ and $\\underline{c}$, and the given vector equation. We need to find the magnitude $|\\underline{b}|$.",
+   "ur": "دیے گئے ویکٹرز $\\underline{a}$ اور $\\underline{c}$، اور دی گئی ویکٹر مساوات لکھیں۔ ہمیں مقدار $|\\underline{b}|$ معلوم کرنی ہے۔"
+  },
+  {
+   "math": "2\\underline{b} = \\underline{c} - \\underline{a}",
+   "en": "Rearrange the given equation to isolate the term with vector $\\underline{b}$ on the left side.",
+   "ur": "ویکٹر $\\underline{b}$ والی رقم کو بائیں طرف الگ کرنے کے لیے دی گئی مساوات کو ترتیب دیں۔"
+  },
+  {
+   "math": "2\\underline{b} = (2\\underline{i} + \\underline{j}) - (\\underline{i} + 3\\underline{j}) = (2 - 1)\\underline{i} + (1 - 3)\\underline{j} = \\underline{i} - 2\\underline{j}",
+   "en": "Substitute the given values of $\\underline{a}$ and $\\underline{c}$, then subtract the corresponding $\\underline{i}$ and $\\underline{j}$ components.",
+   "ur": "$\\underline{a}$ اور $\\underline{c}$ کی دی گئی قیمتیں درج کریں، پھر متعلقہ $\\underline{i}$ اور $\\underline{j}$ اجزاء کو تفریق کریں۔",
+   "check": [
+    "2 - 1 == 1",
+    "1 - 3 == -2"
+   ]
+  },
+  {
+   "math": "\\underline{b} = \\frac{1}{2}(\\underline{i} - 2\\underline{j}) = \\frac{1}{2}\\underline{i} - \\underline{j}",
+   "en": "Divide both sides by $2$ to find the vector $\\underline{b}$.",
+   "ur": "ویکٹر $\\underline{b}$ معلوم کرنے کے لیے دونوں طرف $2$ سے تقسیم کریں۔",
+   "check": [
+    "R(1, 2) * 1 == R(1, 2)",
+    "R(1, 2) * (-2) == -1"
+   ]
+  },
+  {
+   "math": "|\\underline{b}| = \\sqrt{x^2 + y^2} = \\sqrt{\\left(\\frac{1}{2}\\right)^2 + (-1)^2}",
+   "en": "Apply the magnitude formula $|\\underline{v}| = \\sqrt{x^2 + y^2}$ for $\\underline{b}$, where $x = \\frac{1}{2}$ and $y = -1$.",
+   "ur": "ویکٹر $\\underline{b}$ کے لیے مقدار کا فارمولا $|\\underline{v}| = \\sqrt{x^2 + y^2}$ لگائیں، جہاں $x = \\frac{1}{2}$ اور $y = -1$ ہے۔"
+  },
+  {
+   "math": "|\\underline{b}| = \\sqrt{\\frac{1}{4} + 1} = \\sqrt{\\frac{5}{4}} = \\frac{\\sqrt{5}}{2}",
+   "en": "Simplify the terms under the square root to get the final magnitude $|\\underline{b}| = \\frac{\\sqrt{5}}{2}$.",
+   "ur": "حتمی مقدار $|\\underline{b}| = \\frac{\\sqrt{5}}{2}$ حاصل کرنے کے لیے جزر کے نیچے موجود رقوم کو مختصر کریں۔",
+   "check": [
+    "R(1, 2)**2 == R(1, 4)",
+    "(-1)**2 == 1",
+    "R(1, 4) + 1 == R(5, 4)",
+    "sqrt(R(5, 4)) == sqrt(5)/2",
+    "2 - 1 == 1",
+    "1 - 3 == -2",
+    "sqrt((1/2)**2 + (-1)**2) == (sqrt(5)/2)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

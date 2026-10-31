@@ -1,0 +1,80 @@
+{
+ "item": "c10-ex4.1-q8",
+ "label": "iv",
+ "answer_ref": "verified: $f(f^{-1}(x)) = f^{-1}(f(x)) = x$",
+ "steps": [
+  {
+   "math": "y = \\frac{x - 4}{x + 2}, \\quad x \\ne -2",
+   "en": "Let $y = f(x)$, so that $x = f^{-1}(y)$. Write the given function in terms of $y$ and $x$.",
+   "ur": "فرض کریں $y = f(x)$، پس $x = f^{-1}(y)$۔ دیے گئے تفاعل کو $y$ اور $x$ کی شکل میں لکھیں۔",
+   "check": [
+    "(x - 4)/(x + 2) == (x - 4)/(x + 2)"
+   ]
+  },
+  {
+   "math": "y(x + 2) = x - 4 \\implies xy + 2y = x - 4",
+   "en": "Multiply both sides by $x + 2$ and expand the left-hand side.",
+   "ur": "دونوں اطراف کو $x + 2$ سے ضرب دیں اور بائیں جانب کو کھولیں۔",
+   "check": [
+    "expand(y*(x + 2)) == x*y + 2*y"
+   ]
+  },
+  {
+   "math": "2y + 4 = x - xy \\implies 2y + 4 = x(1 - y) \\implies x = \\frac{2y + 4}{1 - y}",
+   "en": "Collect the $x$ terms on one side, factor out $x$, and solve for $x$.",
+   "ur": "$x$ والی رقوم کو ایک طرف جمع کریں، $x$ مشترک لیں، اور $x$ کی قیمت معلوم کریں۔",
+   "check": [
+    "simplify(x*(1 - y) - (x - x*y)) == 0"
+   ]
+  },
+  {
+   "math": "f^{-1}(x) = \\frac{2x + 4}{1 - x}, \\quad x \\ne 1",
+   "en": "Since $x = f^{-1}(y)$, replace $y$ with $x$ to get the inverse function $f^{-1}(x)$.",
+   "ur": "چونکہ $x = f^{-1}(y)$ ہے، اس لیے معکوس تفاعل $f^{-1}(x)$ حاصل کرنے کے لیے $y$ کی جگہ $x$ درج کریں۔",
+   "check": [
+    "(2*x + 4)/(1 - x) == (2*x + 4)/(1 - x)"
+   ]
+  },
+  {
+   "math": "f(f^{-1}(x)) = f\\left(\\frac{2x + 4}{1 - x}\\right) = \\frac{\\frac{2x + 4}{1 - x} - 4}{\\frac{2x + 4}{1 - x} + 2}",
+   "en": "Now, substitute $f^{-1}(x)$ into the original function $f(x)$.",
+   "ur": "اب، اصل تفاعل $f(x)$ میں $f^{-1}(x)$ کی قیمت درج کریں۔",
+   "check": [
+    "((x - 4)/(x + 2)).subs(x, (2*x + 4)/(1 - x)) == ((2*x + 4)/(1 - x) - 4)/((2*x + 4)/(1 - x) + 2)"
+   ]
+  },
+  {
+   "math": "f(f^{-1}(x)) = \\frac{\\frac{2x + 4 - 4(1 - x)}{1 - x}}{\\frac{2x + 4 + 2(1 - x)}{1 - x}} = \\frac{2x + 4 - 4 + 4x}{2x + 4 + 2 - 2x} = \\frac{6x}{6} = x",
+   "en": "Take the LCM in the numerator and denominator, cancel $1 - x$, and simplify to get $x$.",
+   "ur": "شمار کنندہ اور مخرج میں ذواضعاف اقل (LCM) لیں، $1 - x$ کو منسوخ کریں، اور مختصر کر کے $x$ حاصل کریں۔",
+   "check": [
+    "simplify(2*x + 4 - 4*(1 - x)) == 6*x",
+    "simplify(2*x + 4 + 2*(1 - x)) == 6",
+    "simplify(6*x / 6) == x"
+   ]
+  },
+  {
+   "math": "f^{-1}(f(x)) = f^{-1}\\left(\\frac{x - 4}{x + 2}\\right) = \\frac{2\\left(\\frac{x - 4}{x + 2}\\right) + 4}{1 - \\left(\\frac{x - 4}{x + 2}\\right)}",
+   "en": "Next, substitute $f(x)$ into the inverse function $f^{-1}(x)$.",
+   "ur": "اس کے بعد، معکوس تفاعل $f^{-1}(x)$ میں $f(x)$ کی قیمت درج کریں۔",
+   "check": [
+    "((2*x + 4)/(1 - x)).subs(x, (x - 4)/(x + 2)) == (2*(x - 4)/(x + 2) + 4)/(1 - (x - 4)/(x + 2))"
+   ]
+  },
+  {
+   "math": "f^{-1}(f(x)) = \\frac{\\frac{2(x - 4) + 4(x + 2)}{x + 2}}{\\frac{(x + 2) - (x - 4)}{x + 2}} = \\frac{2x - 8 + 4x + 8}{x + 2 - x + 4} = \\frac{6x}{6} = x",
+   "en": "Take the LCM in the numerator and denominator, cancel $x + 2$, and simplify. Hence, $f(f^{-1}(x)) = f^{-1}(f(x)) = x$ is verified.",
+   "ur": "شمار کنندہ اور مخرج میں ذواضعاف اقل (LCM) لیں، $x + 2$ کو منسوخ کریں، اور مختصر کریں۔ پس تصدیق ہو گئی کہ $f(f^{-1}(x)) = f^{-1}(f(x)) = x$۔",
+   "check": [
+    "simplify(2*(x - 4) + 4*(x + 2)) == 6*x",
+    "simplify((x + 2) - (x - 4)) == 6",
+    "simplify(6*x / 6) == x",
+    "simplify(((x - 4)/(x + 2)).subs(x, ((2*x + 4)/(1 - x)))) == x",
+    "simplify(((2*x + 4)/(1 - x)).subs(x, ((x - 4)/(x + 2)))) == x"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

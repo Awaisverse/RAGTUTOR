@@ -1,0 +1,55 @@
+{
+ "item": "c10-ex3.3-q2",
+ "label": "v",
+ "answer_ref": "$\\begin{bmatrix} 0 & -9 \\\\ -14 & -16 \\end{bmatrix}$",
+ "steps": [
+  {
+   "math": "X = \\begin{bmatrix} 1 & -1 \\\\ -2 & 2 \\end{bmatrix}, \\quad Y = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}, \\quad Z = \\begin{bmatrix} 3 & 0 \\\\ 0 & -2 \\end{bmatrix}",
+   "en": "Write down the given matrices $X$, $Y$, and $Z$. We need to find the value of $X - 4Y + Z$.",
+   "ur": "دیے گئے قالب $X$، $Y$ اور $Z$ لکھیں۔ ہمیں $X - 4Y + Z$ کی قیمت معلوم کرنی ہے۔"
+  },
+  {
+   "math": "X - 4Y + Z = \\begin{bmatrix} 1 & -1 \\\\ -2 & 2 \\end{bmatrix} - 4\\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix} + \\begin{bmatrix} 3 & 0 \\\\ 0 & -2 \\end{bmatrix}",
+   "en": "Substitute the given matrices into the expression $X - 4Y + Z$.",
+   "ur": "دیے گئے قالبوں کی قیمتیں جملے $X - 4Y + Z$ میں درج کریں۔"
+  },
+  {
+   "math": "4Y = 4\\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix} = \\begin{bmatrix} 4(1) & 4(2) \\\\ 4(3) & 4(4) \\end{bmatrix} = \\begin{bmatrix} 4 & 8 \\\\ 12 & 16 \\end{bmatrix}",
+   "en": "First, perform scalar multiplication to find $4Y$ by multiplying every entry of matrix $Y$ by $4$.",
+   "ur": "سب سے پہلے، قالب $Y$ کے ہر رکن کو $4$ سے ضرب دے کر سکیلر ضرب کے ذریعے $4Y$ معلوم کریں۔",
+   "check": [
+    "4 * Matrix([[1, 2], [3, 4]]) == Matrix([[4, 8], [12, 16]])"
+   ]
+  },
+  {
+   "math": "X - 4Y = \\begin{bmatrix} 1 & -1 \\\\ -2 & 2 \\end{bmatrix} - \\begin{bmatrix} 4 & 8 \\\\ 12 & 16 \\end{bmatrix} = \\begin{bmatrix} 1 - 4 & -1 - 8 \\\\ -2 - 12 & 2 - 16 \\end{bmatrix} = \\begin{bmatrix} -3 & -9 \\\\ -14 & -14 \\end{bmatrix}",
+   "en": "Now, subtract $4Y$ from $X$. Since both are $2 \\times 2$ matrices, subtract the corresponding entries in the same positions.",
+   "ur": "اب، $X$ میں سے $4Y$ کو تفریق کریں۔ چونکہ دونوں $2 \\times 2$ درجہ کے قالب ہیں، اس لیے ایک ہی مقام کے متناظرہ ارکان کو تفریق کریں۔",
+   "check": [
+    "Matrix([[1, -1], [-2, 2]]) - Matrix([[4, 8], [12, 16]]) == Matrix([[-3, -9], [-14, -14]])"
+   ]
+  },
+  {
+   "math": "X - 4Y + Z = \\begin{bmatrix} -3 & -9 \\\\ -14 & -14 \\end{bmatrix} + \\begin{bmatrix} 3 & 0 \\\\ 0 & -2 \\end{bmatrix} = \\begin{bmatrix} -3 + 3 & -9 + 0 \\\\ -14 + 0 & -14 + (-2) \\end{bmatrix}",
+   "en": "Next, add matrix $Z$ to the result of $X - 4Y$ by adding the corresponding entries.",
+   "ur": "اس کے بعد، متناظرہ ارکان کو جمع کر کے $X - 4Y$ کے حاصل میں قالب $Z$ کو جمع کریں۔",
+   "check": [
+    "Matrix([[-3, -9], [-14, -14]]) + Matrix([[3, 0], [0, -2]]) == Matrix([[-3 + 3, -9 + 0], [-14 + 0, -14 - 2]])"
+   ]
+  },
+  {
+   "math": "X - 4Y + Z = \\begin{bmatrix} 0 & -9 \\\\ -14 & -16 \\end{bmatrix}",
+   "en": "Simplify each entry to get the final answer.",
+   "ur": "حتمی جواب حاصل کرنے کے لیے ہر رکن کو مختصر کریں۔",
+   "check": [
+    "Matrix([[-3 + 3, -9 + 0], [-14 + 0, -14 - 2]]) == Matrix([[0, -9], [-14, -16]])",
+    "Eq(Matrix([[4, 8], [12, 16]]), Matrix([[4, 8], [12, 16]]))",
+    "Eq(Matrix([[-3, -9], [-14, -14]]), Matrix([[-3, -9], [-14, -14]]))",
+    "Eq(Matrix([[0, -9], [-14, -16]]), Matrix([[0, -9], [-14, -16]]))"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

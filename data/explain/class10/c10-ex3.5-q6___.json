@@ -1,0 +1,55 @@
+{
+ "item": "c10-ex3.5-q6",
+ "label": "",
+ "answer_ref": "$A^{-1} = \\begin{bmatrix} -1 & 3 \\\\ -2 & 5 \\end{bmatrix}$; $AA^{-1} = A^{-1}A = I$",
+ "math": [
+  "|A| = \\begin{vmatrix} 5 & -3 \\\\ 2 & -1 \\end{vmatrix} = (5)(-1) - (-3)(2) = -5 + 6 = 1",
+  "\\operatorname{Adj}A = \\begin{bmatrix} -1 & 3 \\\\ -2 & 5 \\end{bmatrix}",
+  "A^{-1} = \\frac{1}{|A|}\\operatorname{Adj}A = \\frac{1}{1}\\begin{bmatrix} -1 & 3 \\\\ -2 & 5 \\end{bmatrix} = \\begin{bmatrix} -1 & 3 \\\\ -2 & 5 \\end{bmatrix}",
+  "AA^{-1} = \\begin{bmatrix} 5 & -3 \\\\ 2 & -1 \\end{bmatrix}\\begin{bmatrix} -1 & 3 \\\\ -2 & 5 \\end{bmatrix} = \\begin{bmatrix} (5)(-1) + (-3)(-2) & (5)(3) + (-3)(5) \\\\ (2)(-1) + (-1)(-2) & (2)(3) + (-1)(5) \\end{bmatrix}",
+  "= \\begin{bmatrix} -5 + 6 & 15 - 15 \\\\ -2 + 2 & 6 - 5 \\end{bmatrix} = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}",
+  "A^{-1}A = \\begin{bmatrix} -1 & 3 \\\\ -2 & 5 \\end{bmatrix}\\begin{bmatrix} 5 & -3 \\\\ 2 & -1 \\end{bmatrix} = \\begin{bmatrix} (-1)(5) + (3)(2) & (-1)(-3) + (3)(-1) \\\\ (-2)(5) + (5)(2) & (-2)(-3) + (5)(-1) \\end{bmatrix}",
+  "= \\begin{bmatrix} -5 + 6 & 3 - 3 \\\\ -10 + 10 & 6 - 5 \\end{bmatrix} = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}",
+  "AA^{-1} = A^{-1}A = I"
+ ],
+ "why": [
+  {
+   "en": "Before finding the inverse $A^{-1}$, we must first calculate the determinant $|A|$ to check if the inverse even exists. Since $|A| = 1$, which is not zero, $A$ is a non-singular matrix and we can safely move forward to find its inverse.",
+   "ur": "معکوس کالب $A^{-1}$ معلوم کرنے سے پہلے ہمیں مقطع $|A|$ نکالنا ہوتا ہے تاکہ پتہ چل سکے کہ معکوس ممکن بھی ہے یا نہیں۔ چونکہ $|A| = 1$ ہے جو کہ صفر نہیں ہے، اس لیے $A$ ایک غیر نادر کالب ہے اور ہم اس کا معکوس معلوم کر سکتے ہیں۔"
+  },
+  {
+   "en": "The formula for the inverse requires the adjoint of the matrix, $\\operatorname{Adj}A$. Finding $\\operatorname{Adj}A$ gives us the rearranged matrix needed for the numerator of the inverse formula.",
+   "ur": "معکوس کالب کے فارمولے کے لیے ہمیں ایڈجائنٹ کالب $\\operatorname{Adj}A$ کی ضرورت ہوتی ہے۔ $\\operatorname{Adj}A$ نکالنے سے ہمیں وہ کالب مل جاتا ہے جسے فارمولے میں مقطع پر تقسیم کیا جائے گا۔"
+  },
+  {
+   "en": "Now we apply the definition of the multiplicative inverse, $A^{-1} = \\frac{1}{|A|}\\operatorname{Adj}A$. Because our determinant $|A|$ is $1$, dividing by $1$ leaves the adjoint matrix unchanged, giving us the exact value of $A^{-1}$ and completing the first part of the question.",
+   "ur": "اب ہم ضربی معکوس کے فارمولے $A^{-1} = \\frac{1}{|A|}\\operatorname{Adj}A$ کا استعمال کرتے ہیں۔ چونکہ ہمارا مقطع $1$ ہے، اس لیے $1$ پر تقسیم کرنے سے ایڈجائنٹ کالب میں کوئی تبدیلی نہیں آتی اور ہمیں $A^{-1}$ مل جاتا ہے، جس سے سوال کا پہلا حصہ مکمل ہو جاتا ہے۔"
+  },
+  {
+   "en": "To prove the first part of the identity, $AA^{-1} = I$, we set up the multiplication with $A$ on the left and $A^{-1}$ on the right. Applying the row-by-column multiplication rule sets up the expressions we need to simplify.",
+   "ur": "پہلی مساوات $AA^{-1} = I$ ثابت کرنے کے لیے ہم بائیں طرف $A$ اور دائیں طرف $A^{-1}$ رکھ کر ضرب دیتے ہیں۔ قطار کو کالم سے ضرب دینے کے اصول کا استعمال ہمیں وہ حسابی جملے دیتا ہے جنہیں ہم اگلے مرحلے میں حل کریں گے۔"
+  },
+  {
+   "en": "Simplifying the arithmetic inside the matrix shows what $AA^{-1}$ actually equals. The result is $\\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}$, which is the $2 \\times 2$ identity matrix $I$, proving the first half of our required statement.",
+   "ur": "کالب کے اندر موجود اعداد کو حل کرنے سے ہمیں $AA^{-1}$ کی اصل قیمت مل جاتی ہے۔ نتیجہ $\\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}$ آتا ہے جو کہ ضربی ذاتی کالب $I$ ہے، اور یوں ہمارے مطلوبہ ثبوت کا پہلا حصہ مکمل ہو جاتا ہے۔"
+  },
+  {
+   "en": "Matrix multiplication is generally not commutative, so we must also check the reverse order, $A^{-1}A$, by placing $A^{-1}$ on the left and $A$ on the right. Setting up the row-by-column products prepares the second half of the proof.",
+   "ur": "کالبوں کی ضرب میں بالعموم مبادلہ کی خاصیت نہیں ہوتی، اس لیے ہمیں ترتیب بدل کر $A^{-1}A$ بھی معلوم کرنا ضروری ہے۔ یہاں قطاروں کو کالموں سے ضرب دے کر ہم ثبوت کے دوسرے حصے کی تیاری کرتے ہیں۔"
+  },
+  {
+   "en": "Evaluating these products and sums gives us the final entries for $A^{-1}A$. Once again, we get $\\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}$, which is the identity matrix $I$, confirming that multiplying in the reverse order gives the exact same result.",
+   "ur": "ان ضربی اجزاء کو حل کرنے اور جمع کرنے سے ہمیں $A^{-1}A$ کے حتمی ارکان مل جاتے ہیں۔ ایک بار پھر ہمیں $\\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}$ یعنی وحدانی کالب $I$ حاصل ہوتا ہے، جس سے تصدیق ہوتی ہے کہ الٹ ترتیب میں ضرب دینے سے بھی وہی نتیجہ آتا ہے۔"
+  },
+  {
+   "en": "Since both $AA^{-1}$ and $A^{-1}A$ equal the same matrix $\\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}$, we can equate them to $I$. This completes the proof and satisfies all parts of the question.",
+   "ur": "چونکہ $AA^{-1}$ اور $A^{-1}A$ دونوں کا جواب ایک ہی کالب $\\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}$ آیا ہے، اس لیے ہم ان دونوں کو $I$ کے برابر لکھ سکتے ہیں۔ یہاں ہمارا ثبوت مکمل ہوتا ہے اور سوال کے تمام حصے حل ہو جاتے ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer gives the multiplicative inverse $A^{-1} = \\begin{bmatrix} -1 & 3 \\\\ -2 & 5 \\end{bmatrix}$, which acts as the 'opposite' of matrix $A$ under multiplication. Proving that $AA^{-1} = A^{-1}A = I$ not only fulfills the second part of the question, but also serves as a built-in check confirming that our calculated $A^{-1}$ is 100% correct.",
+  "ur": "حتمی جواب ہمیں ضربی معکوس $A^{-1} = \\begin{bmatrix} -1 & 3 \\\\ -2 & 5 \\end{bmatrix}$ دیتا ہے، جو ضرب کے عمل میں کالب $A$ کے الٹ کے طور پر کام کرتا ہے۔ یہ ثابت کرنا کہ $AA^{-1} = A^{-1}A = I$ نہ صرف سوال کے دوسرے حصے کو پورا کرتا ہے، بلکہ یہ اس بات کی سو فیصد تصدیق (پڑتال) بھی کر دیتا ہے کہ ہمارا نکالا گیا معکوس کالب $A^{-1}$ بالکل درست ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

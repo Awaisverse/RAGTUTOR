@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex3.6-q8",
+ "label": "",
+ "answer_ref": "$u = \\frac{209}{15} \\approx 13.93$ km/h, $v = \\frac{121}{15} \\approx 8.07$ km/h",
+ "math": [
+  "",
+  "\\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix}\\begin{bmatrix} u \\\\ v \\end{bmatrix} = \\begin{bmatrix} 22 \\\\ \\frac{88}{15} \\end{bmatrix}",
+  "|A| = \\begin{vmatrix} 1 & 1 \\\\ 1 & -1 \\end{vmatrix} = (1)(-1) - (1)(1) = -2",
+  "|A_u| = \\begin{vmatrix} 22 & 1 \\\\ \\frac{88}{15} & -1 \\end{vmatrix} = (22)(-1) - (1)(\\frac{88}{15}) = - \\frac{418}{15}",
+  "|A_v| = \\begin{vmatrix} 1 & 22 \\\\ 1 & \\frac{88}{15} \\end{vmatrix} = (1)(\\frac{88}{15}) - (22)(1) = - \\frac{242}{15}",
+  "u = \\frac{|A_u|}{|A|} = \\frac{- \\frac{418}{15}}{-2} = \\frac{209}{15},\\quad v = \\frac{|A_v|}{|A|} = \\frac{- \\frac{242}{15}}{-2} = \\frac{121}{15}"
+ ],
+ "why": [
+  {
+   "en": "Using the distance formula (distance = speed $\\times$ time), we know that moving towards each other adds their speeds ($u + v$), while moving in the same direction subtracts them ($u - v$). This translates our word problem into two clear linear equations ready to be solved.",
+   "ur": "فاصلے کے فارمولے (فاصلہ = رفتار $\\times$ وقت) کو استعمال کرتے ہوئے، جب سائیکل سوار ایک دوسرے کی طرف آتے ہیں تو ان کی رفتار جمع ہوتی ہے ($u + v$)، اور جب ایک ہی سمت میں جاتے ہیں تو رفتار تفریق ہوتی ہے ($u - v$)۔ اس سے ہمارا سوال دو سادہ یک درجی مساواتوں میں تبدیل ہو جاتا ہے جنہیں اب ہم حل کر سکتے ہیں۔"
+  },
+  {
+   "en": "To solve the system using matrix methods as required, we separate the coefficients, variables, and constants into matrices $A$, $X$, and $B$. This organizes our equations into the standard matrix form $AX = B$.",
+   "ur": "سوال کی شرط کے مطابق کالبوں کے طریقے سے حل کرنے کے لیے، ہم عددی سروں، متغیرات اور مستقل مقداروں کو الگ الگ کالب $A$، $X$ اور $B$ میں لکھتے ہیں۔ اس سے ہماری مساواتیں معیاری کالب کی شکل $AX = B$ میں آ جاتی ہیں۔"
+  },
+  {
+   "en": "We first calculate the determinant $|A|$ to check if a unique solution exists. Since $|A| = -2$, which is not zero, the matrix is non-singular and we can safely proceed with Cramer's rule.",
+   "ur": "ہم سب سے پہلے مقطع $|A|$ معلوم کرتے ہیں تاکہ پتہ چل سکے کہ آیا مساوات کا حل ممکن ہے۔ چونکہ $|A| = -2$ ہے جو کہ صفر نہیں ہے، اس لیے یہ ایک غیر نادر کالب ہے اور ہم کریمر کے قانون کو استعمال کر کے آگے بڑھ سکتے ہیں۔"
+  },
+  {
+   "en": "According to Cramer's rule, to prepare for finding the first unknown $u$, we form matrix $A_u$ by replacing the first column of $A$ with the constant matrix $B$. Evaluating its determinant gives us the numerator $-\\frac{418}{15}$ needed for the formula of $u$.",
+   "ur": "کریمر کے قانون کے مطابق، پہلے نامعلوم متغیر $u$ کی قیمت نکالنے کے لیے ہم کالب $A$ کے پہلے کالم کی جگہ مستقل کالب $B$ لکھ کر نیا کالب $A_u$ بناتے ہیں۔ اس کا مقطع حل کرنے سے ہمیں $-\\frac{418}{15}$ ملتا ہے جو $u$ کے فارمولے میں شمار کنندہ کے طور پر استعمال ہو گا۔"
+  },
+  {
+   "en": "Similarly, to prepare for finding the second unknown $v$, we replace the second column of $A$ with the constants from $B$ to get $A_v$. Its determinant gives $-\\frac{242}{15}$, which is the numerator needed to calculate $v$.",
+   "ur": "اسی طرح، دوسرے نامعلوم متغیر $v$ کو معلوم کرنے کے لیے ہم کالب $A$ کے دوسرے کالم کو $B$ کے ارکان سے بدل کر کالب $A_v$ بناتے ہیں۔ اس کا مقطع حل کرنے سے ہمیں $-\\frac{242}{15}$ ملتا ہے، جو $v$ کی قیمت نکالنے کے لیے ضروری ہے۔"
+  },
+  {
+   "en": "Finally, we apply the Cramer's rule formulas by dividing $|A_u|$ and $|A_v|$ by the main determinant $|A| = -2$. This directly gives us the exact speeds $u$ and $v$ of the two cyclists.",
+   "ur": "آخر میں، ہم کریمر کے قانون کا فارمولا لگاتے ہوئے $|A_u|$ اور $|A_v|$ کو اصل مقطع $|A| = -2$ پر تقسیم کرتے ہیں۔ اس سے ہمیں براہِ راست دونوں سائیکل سواروں کی درست رفتاریں $u$ اور $v$ مل جاتی ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer tells us that the faster cyclist travels at $\\frac{209}{15}$ (about $13.93$) km/h and the slower cyclist travels at $\\frac{121}{15}$ (about $8.07$) km/h. We can easily check this: if we add their speeds for when they ride towards each other, $13.93 + 8.07 = 22$ km/h, so in $2$ hours they cover $2 \\times 22 = 44$ km, which matches the question.",
+  "ur": "حتمی جواب ہمیں بتاتا ہے کہ تیز سائیکل سوار کی رفتار $\\frac{209}{15}$ (تقریباً $13.93$) کلومیٹر فی گھنٹہ ہے اور سست سائیکل سوار کی رفتار $\\frac{121}{15}$ (تقریباً $8.07$) کلومیٹر فی گھنٹہ ہے۔ ہم اس کی پڑتال بھی کر سکتے ہیں: جب وہ ایک دوسرے کی طرف آتے ہیں تو ان کی مجموعی رفتار $13.93 + 8.07 = 22$ کلومیٹر فی گھنٹہ بنتی ہے، جس کا مطلب ہے کہ $2$ گھنٹوں میں وہ $2 \\times 22 = 44$ کلومیٹر کا فاصلہ طے کریں گے، جو کہ سوال کے بالکل مطابق ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

@@ -1,0 +1,61 @@
+{
+ "item": "ex1.2-q3",
+ "label": "iv",
+ "answer_ref": "$12\\sqrt{8}$",
+ "steps": [
+  {
+   "math": "x = 3+\\sqrt{8}",
+   "en": "Write down the given value of $x$. We need to find the value of $x^2-\\frac{1}{x^2}$.",
+   "ur": "دی گئی $x$ کی قیمت لکھیں۔ ہمیں $x^2-\\frac{1}{x^2}$ کی قیمت معلوم کرنی ہے۔"
+  },
+  {
+   "math": "\\frac{1}{x} = \\frac{1}{3+\\sqrt{8}} \\times \\frac{3-\\sqrt{8}}{3-\\sqrt{8}} = \\frac{3-\\sqrt{8}}{(3)^2-(\\sqrt{8})^2} = \\frac{3-\\sqrt{8}}{9-8} = 3-\\sqrt{8}",
+   "en": "First, find the reciprocal $\\frac{1}{x}$ by rationalizing the denominator using the conjugate $3-\\sqrt{8}$ and the identity $(a+b)(a-b)=a^2-b^2$.",
+   "ur": "سب سے پہلے، مزدوج $3-\\sqrt{8}$ اور کلیہ $(a+b)(a-b)=a^2-b^2$ کی مدد سے مخرج کو ناطق بنا کر معکوس $\\frac{1}{x}$ معلوم کریں۔",
+   "check": [
+    "1/(3+sqrt(8)) == 3 - sqrt(8)",
+    "3**2 - sqrt(8)**2 == 9 - 8",
+    "9 - 8 == 1"
+   ]
+  },
+  {
+   "math": "x+\\frac{1}{x} = (3+\\sqrt{8}) + (3-\\sqrt{8}) = 3+\\sqrt{8}+3-\\sqrt{8} = 6",
+   "en": "Add $x$ and $\\frac{1}{x}$ to find the value of $x+\\frac{1}{x}$. The terms $+\\sqrt{8}$ and $-\\sqrt{8}$ cancel out.",
+   "ur": "$x+\\frac{1}{x}$ کی قیمت معلوم کرنے کے لیے $x$ اور $\\frac{1}{x}$ کو جمع کریں۔ $+\\sqrt{8}$ اور $-\\sqrt{8}$ آپس میں کٹ جائیں گے۔",
+   "check": [
+    "(3+sqrt(8)) + (3-sqrt(8)) == 6"
+   ]
+  },
+  {
+   "math": "x-\\frac{1}{x} = (3+\\sqrt{8}) - (3-\\sqrt{8}) = 3+\\sqrt{8}-3+\\sqrt{8} = 2\\sqrt{8}",
+   "en": "Subtract $\\frac{1}{x}$ from $x$ to find the value of $x-\\frac{1}{x}$. Here, $+3$ and $-3$ cancel out.",
+   "ur": "$x-\\frac{1}{x}$ کی قیمت معلوم کرنے کے لیے $x$ میں سے $\\frac{1}{x}$ کو تفریق کریں۔ یہاں $+3$ اور $-3$ آپس میں کٹ جائیں گے۔",
+   "check": [
+    "(3+sqrt(8)) - (3-sqrt(8)) == 2*sqrt(8)"
+   ]
+  },
+  {
+   "math": "x^2-\\frac{1}{x^2} = \\left(x+\\frac{1}{x}\\right)\\left(x-\\frac{1}{x}\\right)",
+   "en": "Now, apply the difference of squares algebraic identity $a^2-b^2 = (a+b)(a-b)$ to expand $x^2-\\frac{1}{x^2}$.",
+   "ur": "اب، $x^2-\\frac{1}{x^2}$ کو کھولنے کے لیے دو مربّعوں کے فرق والا الجبری کلیہ $a^2-b^2 = (a+b)(a-b)$ استعمال کریں۔"
+  },
+  {
+   "math": "x^2-\\frac{1}{x^2} = (6)(2\\sqrt{8}) = 12\\sqrt{8}",
+   "en": "Substitute the values $x+\\frac{1}{x} = 6$ and $x-\\frac{1}{x} = 2\\sqrt{8}$ into the formula and multiply to get the final answer.",
+   "ur": "فارمولے میں $x+\\frac{1}{x} = 6$ اور $x-\\frac{1}{x} = 2\\sqrt{8}$ کی قیمتیں درج کریں اور حتمی جواب حاصل کرنے کے لیے ضرب دیں۔",
+   "check": [
+    "(3+sqrt(8))**2 - 1/(3+sqrt(8))**2 == 12*sqrt(8)",
+    "6 * (2*sqrt(8)) == 12*sqrt(8)",
+    "1/(3+sqrt(8)) == 3 - sqrt(8)",
+    "3**2 - sqrt(8)**2 == 1",
+    "(3+sqrt(8)) + (3-sqrt(8)) == 6",
+    "(3+sqrt(8)) - (3-sqrt(8)) == 2*sqrt(8)",
+    "(3+sqrt(8))**2 - (3-sqrt(8))**2 == 6*2*sqrt(8)",
+    "6*2*sqrt(8) == 12*sqrt(8)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

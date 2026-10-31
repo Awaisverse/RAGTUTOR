@@ -1,0 +1,45 @@
+{
+ "item": "c10-rev3-q7",
+ "label": "",
+ "answer_ref": "knife Rs. 19, fork Rs. 10",
+ "math": [
+  "",
+  "\\begin{bmatrix} 4 & 6 \\\\ 6 & 5 \\end{bmatrix}\\begin{bmatrix} x \\\\ y \\end{bmatrix} = \\begin{bmatrix} 136 \\\\ 164 \\end{bmatrix}",
+  "|A| = \\begin{vmatrix} 4 & 6 \\\\ 6 & 5 \\end{vmatrix} = (4)(5) - (6)(6) = -16",
+  "|A_x| = \\begin{vmatrix} 136 & 6 \\\\ 164 & 5 \\end{vmatrix} = (136)(5) - (6)(164) = -304",
+  "|A_y| = \\begin{vmatrix} 4 & 136 \\\\ 6 & 164 \\end{vmatrix} = (4)(164) - (136)(6) = -160",
+  "x = \\frac{|A_x|}{|A|} = \\frac{-304}{-16} = 19,\\quad y = \\frac{|A_y|}{|A|} = \\frac{-160}{-16} = 10"
+ ],
+ "why": [
+  {
+   "en": "First, we translate the word problem into algebra by assigning $x$ and $y$ to the unknown prices. This gives us a system of two linear equations representing the total cost of the two purchases.",
+   "ur": "سب سے پہلے، ہم نامعلوم قیمتوں کو $x$ اور $y$ فرض کر کے عبارت والے سوال کو الجبرا میں بدلتے ہیں۔ اس سے ہمیں دو خطی مساواتیں ملتی ہیں جو دونوں خریداریوں کی کل قیمت کو ظاہر کرتی ہیں۔"
+  },
+  {
+   "en": "To solve the system using matrices as required, we separate the coefficients ($4, 6, 6, 5$), variables ($x, y$), and total costs ($136, 164$) into matrices $A$, $X$, and $B$. This standard form $AX = B$ sets us up to apply Cramer's rule.",
+   "ur": "سوال کی شرط کے مطابق کالبوں کی مدد سے حل کرنے کے لیے، ہم عددی سروں ($4, 6, 6, 5$)، متغیروں ($x, y$) اور کل قیمتوں ($136, 164$) کو الگ کر کے کالب $A$، $X$ اور $B$ بناتے ہیں۔ یہ معیاری شکل $AX = B$ ہمیں کریمر کے قانون کے استعمال کے قابل بناتی ہے۔"
+  },
+  {
+   "en": "We calculate the determinant $|A|$ by cross-multiplying the main diagonal and subtracting the other diagonal. Since $|A| = -16$ is not zero, the matrix is non-singular, which confirms that a unique solution exists and we can divide by $|A|$ later.",
+   "ur": "ہم وتر کے ارکان کو ضرب دے کر اور دوسرے ارکان کی ضرب کو تفریق کر کے مقطع $|A|$ معلوم کرتے ہیں۔ چونکہ $|A| = -16$ صفر نہیں ہے، اس لیے کالب غیر نادر ہے، جو اس بات کی تصدیق کرتا ہے کہ حل ممکن ہے اور ہم آگے چل کر $|A|$ سے تقسیم کر سکتے ہیں۔"
+  },
+  {
+   "en": "According to Cramer's rule, to find the numerator for $x$, we form matrix $A_x$ by putting the constant costs ($136, 164$) in place of the $x$-coefficients. Its determinant $|A_x| = -304$ gives us the exact value needed to calculate $x$.",
+   "ur": "کریمر کے قانون کے مطابق، $x$ معلوم کرنے کے لیے ہم مستقل قیمتوں ($136, 164$) کو $x$ کے عددی سروں کی جگہ رکھ کر کالب $A_x$ بناتے ہیں۔ اس کا مقطع $|A_x| = -304$ ہمیں وہ قیمت دیتا ہے جو $x$ نکالنے کے لیے درکار ہے۔"
+  },
+  {
+   "en": "Similarly, to find the numerator for $y$, we form $A_y$ by replacing the $y$-coefficients ($6, 5$) with the constant costs ($136, 164$). Evaluating this determinant gives $|A_y| = -160$, which is the value needed to find $y$.",
+   "ur": "اسی طرح، $y$ معلوم کرنے کے لیے ہم $y$ کے عددی سروں ($6, 5$) کی جگہ مستقل قیمتیں ($136, 164$) رکھ کر کالب $A_y$ بناتے ہیں۔ اس مقطع کو حل کرنے سے ہمیں $|A_y| = -160$ ملتا ہے، جو $y$ کی قیمت نکالنے کے لیے ضروری ہے۔"
+  },
+  {
+   "en": "Finally, we apply Cramer's rule formulas by dividing $|A_x|$ and $|A_y|$ by the main determinant $|A| = -16$. This final division directly gives us the values of our unknowns, $x = 19$ and $y = 10$.",
+   "ur": "آخر میں، ہم کریمر کے قانون کے فارمولے کے مطابق $|A_x|$ اور $|A_y|$ کو اصل مقطع $|A| = -16$ پر تقسیم کرتے ہیں۔ یہ تقسیم ہمیں براہِ راست نامعلوم متغیروں کی قیمتیں $x = 19$ اور $y = 10$ دے دیتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This means the cost of one knife ($x$) is Rs. $19$ and the cost of one fork ($y$) is Rs. $10$. You can easily check this in the first condition: $4$ knives and $6$ forks cost $4(19) + 6(10) = 136$ rupees, which matches the question.",
+  "ur": "اس کا مطلب ہے کہ ایک چھری کی قیمت ($x$) $19$ روپے ہے اور ایک کانٹے کی قیمت ($y$) $10$ روپے ہے۔ آپ پہلی شرط میں قیمتیں درج کر کے اس کی پڑتال کر سکتے ہیں: $4$ چھریوں اور $6$ کانٹوں کی قیمت $4(19) + 6(10) = 136$ روپے بنتی ہے، جو سوال کے عین مطابق ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

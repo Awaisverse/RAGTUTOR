@@ -1,0 +1,62 @@
+{
+ "item": "c10-ex4.1-q3",
+ "label": "iiid",
+ "answer_ref": "$\\frac{x + 3}{4}$",
+ "steps": [
+  {
+   "math": "g(x) = \\frac{x+1}{2}",
+   "en": "Write down the given function $g(x)$ to find $(g\\circ g)(x)$.",
+   "ur": "$(g\\circ g)(x)$ معلوم کرنے کے لیے دیا گیا فنکشن $g(x)$ لکھیں۔",
+   "check": [
+    "(x + 1)/2 == (x + 1)/2"
+   ]
+  },
+  {
+   "math": "(g\\circ g)(x) = g(g(x))",
+   "en": "By the definition of composition of functions, $(g\\circ g)(x)$ means applying the function $g$ to $g(x)$ itself.",
+   "ur": "تفاعل کی ترکیب (composition of functions) کی تعریف کے مطابق، $(g\\circ g)(x)$ کا مطلب فنکشن $g$ کو خود $g(x)$ پر لاگو کرنا ہے۔"
+  },
+  {
+   "math": "(g\\circ g)(x) = g\\left(\\frac{x+1}{2}\\right)",
+   "en": "Substitute the value of the inner function $g(x) = \\frac{x+1}{2}$ inside the outer function $g$.",
+   "ur": "اندرونی فنکشن $g(x) = \\frac{x+1}{2}$ کی قیمت بیرونی فنکشن $g$ میں درج کریں۔"
+  },
+  {
+   "math": "(g\\circ g)(x) = \\frac{\\left(\\frac{x+1}{2}\\right) + 1}{2}",
+   "en": "Now, replace $x$ with $\\frac{x+1}{2}$ in the formula $g(x) = \\frac{x+1}{2}$.",
+   "ur": "اب، فارمولے $g(x) = \\frac{x+1}{2}$ میں $x$ کی جگہ $\\frac{x+1}{2}$ رکھیں۔",
+   "check": [
+    "((x + 1)/2).subs(x, (x + 1)/2) == (((x + 1)/2) + 1)/2"
+   ]
+  },
+  {
+   "math": "(g\\circ g)(x) = \\frac{\\frac{x+1+2}{2}}{2}",
+   "en": "Take the LCM of the numerator to combine the fraction $\\frac{x+1}{2}$ and $1$.",
+   "ur": "کسر $\\frac{x+1}{2}$ اور $1$ کو جمع کرنے کے لیے شمار کنندہ (numerator) کا ذواضعاف اقل (LCM) لیں۔",
+   "check": [
+    "(((x + 1)/2) + 1)/2 == ((x + 1 + 2)/2)/2"
+   ]
+  },
+  {
+   "math": "(g\\circ g)(x) = \\frac{\\frac{x+3}{2}}{2}",
+   "en": "Add the constants $1$ and $2$ in the numerator.",
+   "ur": "شمار کنندہ میں مستقل اعداد $1$ اور $2$ کو جمع کریں۔",
+   "check": [
+    "((x + 1 + 2)/2)/2 == ((x + 3)/2)/2"
+   ]
+  },
+  {
+   "math": "(g\\circ g)(x) = \\frac{x + 3}{4}",
+   "en": "Simplify the complex fraction by multiplying the denominators $2$ and $2$ to get the final answer.",
+   "ur": "مخرج (denominators) $2$ اور $2$ کو ضرب دے کر پیچیدہ کسر کو سادہ کریں تاکہ حتمی جواب حاصل ہو سکے۔",
+   "check": [
+    "((x + 3)/2)/2 == (x + 3)/4",
+    "(x/2 + 1/2).subs(x, (x/2 + 1/2)) == (x/4 + 3/4)",
+    "(x/4 + 3/4) == ((x + 3)/4)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

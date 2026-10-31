@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex3.6-q5",
+ "label": "",
+ "answer_ref": "A = 60 kN, B = 40 kN",
+ "math": [
+  "",
+  "\\begin{bmatrix} 1 & 1 \\\\ 2 & 3 \\end{bmatrix}\\begin{bmatrix} a \\\\ b \\end{bmatrix} = \\begin{bmatrix} 100 \\\\ 240 \\end{bmatrix}",
+  "|A| = \\begin{vmatrix} 1 & 1 \\\\ 2 & 3 \\end{vmatrix} = (1)(3) - (1)(2) = 1",
+  "|A_a| = \\begin{vmatrix} 100 & 1 \\\\ 240 & 3 \\end{vmatrix} = (100)(3) - (1)(240) = 60",
+  "|A_b| = \\begin{vmatrix} 1 & 100 \\\\ 2 & 240 \\end{vmatrix} = (1)(240) - (100)(2) = 40",
+  "a = \\frac{|A_a|}{|A|} = \\frac{60}{1} = 60,\\quad b = \\frac{|A_b|}{|A|} = \\frac{40}{1} = 40"
+ ],
+ "why": [
+  {
+   "en": "First, we translate the given word problem into two linear algebraic equations by assigning variables $a$ and $b$ to the unknown loads on the beams. This sets up the mathematical system we need to solve.",
+   "ur": "سب سے پہلے، ہم دیے گئے سوال کو دو لکیری مساواتوں میں تبدیل کرتے ہیں جس کے لیے ہم بیم کے نامعلوم وزن کو متغیرات $a$ اور $b$ کا نام دیتے ہیں۔ اس سے وہ ریاضیاتی نظام بن جاتا ہے جسے ہم نے حل کرنا ہے۔"
+  },
+  {
+   "en": "We separate the coefficients, variables, and constants to write the system as a single matrix equation $AX = B$. This standard form is necessary so we can apply matrix methods like Cramer's rule.",
+   "ur": "ہم عددی سر، متغیرات اور مستقل مقداروں کو الگ کر کے اس نظام کو ایک کالب مساوات $AX = B$ کی شکل میں لکھتے ہیں۔ یہ معیاری شکل ضروری ہے تاکہ ہم کریمر کے قانون جیسے کالب کے طریقے استعمال کر سکیں۔"
+  },
+  {
+   "en": "We calculate the determinant of the coefficient matrix $A$ by subtracting the product of the secondary diagonal from the main diagonal. Since $|A| = 1$ is not zero, it confirms that a unique solution exists and we can safely divide by $|A|$ later.",
+   "ur": "ہم عددی سروں کے کالب $A$ کا مقطع معلوم کرتے ہیں، جس کے لیے وتر کے ارکان کے حاصل ضرب میں سے دوسرے ارکان کا حاصل ضرب تفریق کیا جاتا ہے۔ چونکہ $|A| = 1$ صفر نہیں ہے، اس سے تصدیق ہوتی ہے کہ اس کا حل ممکن ہے اور ہم آگے چل کر $|A|$ سے تقسیم کر سکتے ہیں۔"
+  },
+  {
+   "en": "According to Cramer's rule, to find the first variable $a$, we form a new matrix $A_a$ by replacing the first column of $A$ with the constants $100$ and $240$. Its determinant gives us $|A_a| = 60$, which is the numerator needed to find $a$.",
+   "ur": "کریمر کے قانون کے مطابق، پہلا متغیر $a$ معلوم کرنے کے لیے ہم کالب $A$ کے پہلے کالم کی جگہ مستقل مقداریں $100$ اور $240$ لکھ کر نیا کالب $A_a$ بناتے ہیں۔ اس کا مقطع ہمیں $|A_a| = 60$ دیتا ہے، جو $a$ کی قیمت نکالنے کے لیے شمار کنندہ کا کام کرے گا۔"
+  },
+  {
+   "en": "Similarly, for the second variable $b$, we replace the second column of $A$ with the constants to form matrix $A_b$. Evaluating its determinant gives $|A_b| = 40$, which serves as the numerator for finding $b$.",
+   "ur": "اسی طرح دوسرے متغیر $b$ کے لیے، ہم $A$ کے دوسرے کالم کو مستقل مقداروں سے بدل کر کالب $A_b$ بناتے ہیں۔ اس کا مقطع حل کرنے سے $|A_b| = 40$ ملتا ہے، جو $b$ معلوم کرنے کے لیے شمار کنندہ ہے۔"
+  },
+  {
+   "en": "Finally, we apply Cramer's rule formulas by dividing each special determinant $|A_a|$ and $|A_b|$ by the main determinant $|A|$. This directly gives us the exact values of the unknowns, $a = 60$ and $b = 40$.",
+   "ur": "آخر میں، ہم کریمر کے قانون کے فارمولے استعمال کرتے ہوئے $|A_a|$ اور $|A_b|$ دونوں کو اصل مقطع $|A|$ پر تقسیم کرتے ہیں۔ اس سے ہمیں نامعلوم متغیرات کی اصل قیمتیں $a = 60$ اور $b = 40$ براہِ راست مل جاتی ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "This means that support beam A is holding a load of $60\\text{ kN}$ and support beam B is holding a load of $40\\text{ kN}$. We can easily check our answer: their combined load is $60 + 40 = 100\\text{ kN}$, and $2(60) + 3(40) = 240\\text{ kN}$, which satisfies both conditions of the question.",
+  "ur": "اس جواب کا مطلب ہے کہ سپورٹ بیم A پر $60\\text{ kN}$ اور بیم B پر $40\\text{ kN}$ کا وزن ہے۔ ہم اپنے جواب کی پڑتال بھی کر سکتے ہیں: ان کا مجموعی وزن $60 + 40 = 100\\text{ kN}$ بنتا ہے، اور $2(60) + 3(40) = 240\\text{ kN}$ ہوتا ہے، جو سوال کی دونوں شرائط کو پورا کرتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

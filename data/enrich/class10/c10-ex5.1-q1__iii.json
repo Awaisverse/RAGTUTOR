@@ -1,0 +1,49 @@
+{
+ "item": "c10-ex5.1-q1",
+ "label": "iii",
+ "answer_ref": "$\\frac{c}{x \\left(a x - 1\\right)}$",
+ "steps": [
+  {
+   "math": "\\frac{ac}{a^2x^2 - ax}",
+   "en": "Write down the given rational expression that needs to be reduced to its lowest form.",
+   "ur": "دی گئی ناطق عبارت لکھیں جسے مختصر ترین شکل میں تبدیل کرنا ہے۔"
+  },
+  {
+   "math": "a^2x^2 - ax = ax(ax - 1)",
+   "en": "To simplify the fraction, first factorize the denominator by taking out the highest common factor, which is $ax$.",
+   "ur": "کسر کو مختصر کرنے کے لیے، سب سے پہلے نسب نما میں سے مشترک جزو ضربی $ax$ باہر نکال کر اس کی تجزی کریں۔",
+   "check": [
+    "a**2*x**2 - a*x == a*x*(a*x - 1)"
+   ]
+  },
+  {
+   "math": "= \\frac{ac}{ax(ax - 1)}",
+   "en": "Substitute the factorized form of the denominator back into the given fraction.",
+   "ur": "نسب نما کی تجزی شدہ شکل کو واپس دی گئی کسر میں درج کریں۔",
+   "check": [
+    "(a*c)/(a*x*(a*x - 1)) == (a*c)/(a**2*x**2 - a*x)"
+   ]
+  },
+  {
+   "math": "= \\frac{a \\cdot c}{a \\cdot x(ax - 1)}",
+   "en": "Identify the common factor $a$ present in both the numerator and the denominator.",
+   "ur": "شمار کنندہ اور نسب نما دونوں میں موجود مشترک جزو ضربی $a$ کی نشاندہی کریں۔",
+   "check": [
+    "(a*c)/(a*x*(a*x - 1)) == (a*c)/(a**2*x**2 - a*x)"
+   ]
+  },
+  {
+   "math": "= \\frac{c}{x \\left(a x - 1\\right)}",
+   "en": "Cancel out the common factor $a$ from the numerator and the denominator to get the expression in its lowest form.",
+   "ur": "عبارت کو اس کی مختصر ترین شکل میں حاصل کرنے کے لیے شمار کنندہ اور نسب نما سے مشترک جزو ضربی $a$ کو کاٹ دیں۔",
+   "check": [
+    "c/(x*(a*x - 1)) == (a*c)/(a**2*x**2 - a*x)",
+    "(a*c)/(a*x*(a*x - 1)) == (a*c)/(a**2*x**2 - a*x)",
+    "(c/(a*x**2 - x)) == (a*c)/(a**2*x**2 - a*x)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

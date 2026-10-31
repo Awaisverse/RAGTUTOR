@@ -1,0 +1,57 @@
+{
+ "item": "rev1-q9",
+ "label": "",
+ "answer_ref": "$34,\\ 62$",
+ "steps": [
+  {
+   "math": "\\text{Smaller bucket} = x, \\quad \\text{Larger bucket} = x + 28",
+   "en": "Let the number of balls in the smaller bucket be $x$. Since the other bucket has $28$ more balls, it contains $x + 28$ balls.",
+   "ur": "فرض کریں کہ چھوٹی بالٹی میں گیندوں کی تعداد $x$ ہے۔ چونکہ دوسری بالٹی میں $28$ گیندیں زیادہ ہیں، اس لیے اس میں $x + 28$ گیندیں ہیں۔"
+  },
+  {
+   "math": "x + (x + 28) = 96",
+   "en": "The total number of balls in both buckets is given as $96$, so we add both expressions and set them equal to $96$.",
+   "ur": "دونوں بالٹیوں میں گیندوں کی کل تعداد $96$ دی گئی ہے، اس لیے ہم دونوں مقداروں کو جمع کر کے $96$ کے برابر رکھتے ہیں۔"
+  },
+  {
+   "math": "2x + 28 = 96",
+   "en": "Combine the like terms $x$ and $x$ on the left side.",
+   "ur": "بائیں طرف ایک جیسی رقوم $x$ اور $x$ کو آپس میں جمع کریں۔",
+   "check": [
+    "x + (x + 28) == 2*x + 28"
+   ]
+  },
+  {
+   "math": "2x = 96 - 28 \\;\\Rightarrow\\; 2x = 68",
+   "en": "Subtract $28$ from both sides of the equation to isolate the term with $x$.",
+   "ur": "$x$ والی رقم کو الگ کرنے کے لیے مساوات کے دونوں اطراف سے $28$ تفریق کریں۔",
+   "check": [
+    "96 - 28 == 68"
+   ]
+  },
+  {
+   "math": "x = \\frac{68}{2} = 34",
+   "en": "Divide both sides by $2$ to find $x$. Thus, the smaller bucket has $34$ balls.",
+   "ur": "$x$ کی قیمت معلوم کرنے کے لیے دونوں اطراف کو $2$ پر تقسیم کریں۔ اس طرح چھوٹی بالٹی میں $34$ گیندیں ہیں۔",
+   "check": [
+    "R(68, 2) == 34"
+   ]
+  },
+  {
+   "math": "\\text{Larger bucket} = 34 + 28 = 62",
+   "en": "Substitute $x = 34$ into $x + 28$ to find the number of balls in the larger bucket. Therefore, the two buckets have $34$ and $62$ balls.",
+   "ur": "بڑی بالٹی میں گیندوں کی تعداد معلوم کرنے کے لیے $x + 28$ میں $x = 34$ درج کریں۔ لہٰذا، دونوں بالٹیوں میں بالترتیب $34$ اور $62$ گیندیں ہیں۔",
+   "check": [
+    "34 + 28 == 62",
+    "34 + 62 == 96",
+    "x + (x+28) == 2*x + 28",
+    "96 - 28 == 68",
+    "Rational(68,2) == 34",
+    "62 - 34 == 28"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

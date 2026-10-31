@@ -1,0 +1,58 @@
+{
+ "item": "c10-ex2.1-q1",
+ "label": "ii",
+ "answer_ref": "$x^{2} - 3 x - 6 = 0$",
+ "steps": [
+  {
+   "math": "2 x \\left(x + 1\\right) = 4 \\left(2 x + 3\\right)",
+   "en": "Write the given equation. We need to convert it into the standard form of a quadratic equation, which is $a x^2 + b x + c = 0$.",
+   "ur": "دی گئی مساوات لکھیں۔ ہمیں اسے دو درجی مساوات کی معیاری شکل یعنی $a x^2 + b x + c = 0$ میں تبدیل کرنا ہے۔"
+  },
+  {
+   "math": "2 x^{2} + 2 x = 8 x + 12",
+   "en": "Expand the brackets by multiplying $2x$ inside the left bracket and $4$ inside the right bracket.",
+   "ur": "قوسین (بریکٹس) کو کھولنے کے لیے بائیں طرف $2x$ کو اور دائیں طرف $4$ کو اندر ضرب دیں۔",
+   "check": [
+    "(2*x**2 + 2*x) - (8*x + 12) == (2*x*(x + 1)) - (4*(2*x + 3))"
+   ]
+  },
+  {
+   "math": "2 x^{2} + 2 x - 8 x - 12 = 0",
+   "en": "Shift the terms $8x$ and $12$ from the right-hand side to the left-hand side by changing their signs.",
+   "ur": "دائیں طرف موجود رقوم $8x$ اور $12$ کی علامتیں تبدیل کر کے انہیں بائیں طرف لے آئیں۔",
+   "check": [
+    "(2*x**2 + 2*x - 8*x - 12) - 0 == (2*x**2 + 2*x) - (8*x + 12)"
+   ]
+  },
+  {
+   "math": "2 x^{2} - 6 x - 12 = 0",
+   "en": "Combine the like terms $2x$ and $-8x$ to get $-6x$.",
+   "ur": "ہم جنس رقوم $2x$ اور $-8x$ کو حل کریں جس سے $-6x$ حاصل ہوتا ہے۔",
+   "check": [
+    "(2*x**2 - 6*x - 12) - 0 == (2*x**2 + 2*x - 8*x - 12) - 0"
+   ]
+  },
+  {
+   "math": "\\frac{2 x^{2}}{2} - \\frac{6 x}{2} - \\frac{12}{2} = \\frac{0}{2}",
+   "en": "Since $2$ is a common factor of all terms, divide both sides of the equation by $2$ to simplify.",
+   "ur": "چونکہ تمام رقوم میں $2$ مشترک ہے، اس لیے مساوات کو مختصر کرنے کے لیے دونوں اطراف کو $2$ سے تقسیم کریں۔",
+   "check": [
+    "(2*x**2/2 - 6*x/2 - 12/2) - 0/2 == R(1,2)*((2*x**2 - 6*x - 12) - 0)"
+   ]
+  },
+  {
+   "math": "x^{2} - 3 x - 6 = 0",
+   "en": "Simplify the fractions. This is the required standard form of the quadratic equation.",
+   "ur": "کسور کو مختصر کریں۔ یہ دو درجی مساوات کی مطلوبہ معیاری شکل ہے۔",
+   "check": [
+    "(x**2 - 3*x - 6) - 0 == (2*x**2/2 - 6*x/2 - 12/2) - 0",
+    "(2*x**2 + 2*x) - (8*x + 12) == (2*x*(x + 1)) - (4*(2*x + 3))",
+    "(2*x**2 - 6*x - 12) - (0) == (2*x**2 + 2*x) - (8*x + 12)",
+    "(x**2 - 3*x - 6) - (0) == (1/2)*((2*x**2 - 6*x - 12) - (0))"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

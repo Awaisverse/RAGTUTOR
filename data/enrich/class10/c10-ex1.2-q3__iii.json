@@ -1,0 +1,54 @@
+{
+ "item": "c10-ex1.2-q3",
+ "label": "iii",
+ "answer_ref": "$\\frac{7}{58} + \\frac{3}{58}i$",
+ "steps": [
+  {
+   "math": "z = 7 - 3i",
+   "en": "Let the given complex number be $z = 7 - 3i$. We need to find its multiplicative inverse $z^{-1}$.",
+   "ur": "فرض کریں کہ دیا گیا مختلط عدد $z = 7 - 3i$ ہے۔ ہمیں اس کا ضربی معکوس $z^{-1}$ معلوم کرنا ہے۔"
+  },
+  {
+   "math": "a = 7, \\quad b = -3",
+   "en": "Comparing $z = 7 - 3i$ with the standard form $z = a + bi$, we identify the real part $a$ and the imaginary part $b$.",
+   "ur": "معیاری شکل $z = a + bi$ کے ساتھ $z = 7 - 3i$ کا موازنہ کرنے سے ہمیں حقیقی حصہ $a$ اور خیالی حصہ $b$ حاصل ہوتا ہے۔"
+  },
+  {
+   "math": "z^{-1} = \\frac{a}{a^2 + b^2} - \\frac{b}{a^2 + b^2}i",
+   "en": "Write the formula for the multiplicative inverse of a complex number $z = a + bi$.",
+   "ur": "مختلط عدد $z = a + bi$ کے ضربی معکوس کا فارمولا لکھیں۔"
+  },
+  {
+   "math": "a^2 + b^2 = (7)^2 + (-3)^2 = 49 + 9 = 58",
+   "en": "First, calculate the denominator $a^2 + b^2$ by substituting $a = 7$ and $b = -3$.",
+   "ur": "سب سے پہلے، $a = 7$ اور $b = -3$ درج کر کے مخرج $a^2 + b^2$ کی قیمت معلوم کریں۔",
+   "check": [
+    "(7)**2 + (-3)**2 == 49 + 9",
+    "49 + 9 == 58"
+   ]
+  },
+  {
+   "math": "z^{-1} = \\frac{7}{58} - \\frac{-3}{58}i",
+   "en": "Substitute $a = 7$, $b = -3$, and $a^2 + b^2 = 58$ into the multiplicative inverse formula.",
+   "ur": "ضربی معکوس کے فارمولے میں $a = 7$، $b = -3$، اور $a^2 + b^2 = 58$ درج کریں۔",
+   "check": [
+    "R(7, 58) - R(-3, 58)*I == 1/(7 - 3*I)"
+   ]
+  },
+  {
+   "math": "z^{-1} = \\frac{7}{58} + \\frac{3}{58}i",
+   "en": "Simplify the signs to get the final multiplicative inverse in standard form $a + bi$.",
+   "ur": "علامتوں کو سادہ کریں تاکہ معیاری شکل $a + bi$ میں حتمی ضربی معکوس حاصل ہو سکے۔",
+   "check": [
+    "R(7, 58) - R(-3, 58)*I == R(7, 58) + R(3, 58)*I",
+    "(7 - 3*I)*(R(7, 58) + R(3, 58)*I) == 1",
+    "(7)**2 + (-3)**2 == (58)",
+    "1/(7 - 3*I) == (7/58 + 3*I/58)",
+    "(7 - 3*I)*(7/58 + 3*I/58) == 1"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

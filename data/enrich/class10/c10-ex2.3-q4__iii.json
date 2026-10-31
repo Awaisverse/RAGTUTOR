@@ -1,0 +1,84 @@
+{
+ "item": "c10-ex2.3-q4",
+ "label": "iii",
+ "answer_ref": "$4x^2 + 14x + 49 = 0$",
+ "steps": [
+  {
+   "math": "x^2 + 2x + 4 = 0 \\implies a = 1, \\quad b = 2, \\quad c = 4",
+   "en": "Compare the given quadratic equation $x^2 + 2x + 4 = 0$ with the standard form $ax^2 + bx + c = 0$ to identify the coefficients $a$, $b$, and $c$.",
+   "ur": "دی گئی دو درجی مساوات $x^2 + 2x + 4 = 0$ کا معیاری شکل $ax^2 + bx + c = 0$ سے موازنہ کر کے عددی سر $a$، $b$ اور $c$ معلوم کریں۔",
+   "check": [
+    "1 == 1",
+    "2 == 2",
+    "4 == 4"
+   ]
+  },
+  {
+   "math": "\\alpha + \\beta = -\\frac{b}{a} = -\\frac{2}{1} = -2, \\quad \\alpha\\beta = \\frac{c}{a} = \\frac{4}{1} = 4",
+   "en": "Since $\\alpha$ and $\\beta$ are the roots of the given equation, find their sum ($\\alpha + \\beta$) and product ($\\alpha\\beta$) using the standard formulas.",
+   "ur": "چونکہ $\\alpha$ اور $\\beta$ دی گئی مساوات کے روٹس ہیں، اس لیے معیاری کلیوں کی مدد سے ان کا مجموعہ ($\\alpha + \\beta$) اور حاصل ضرب ($\\alpha\\beta$) معلوم کریں۔",
+   "check": [
+    "-R(2, 1) == -2",
+    "R(4, 1) == 4"
+   ]
+  },
+  {
+   "math": "S = \\left(2\\alpha - \\frac{1}{\\beta}\\right) + \\left(2\\beta - \\frac{1}{\\alpha}\\right) = 2(\\alpha + \\beta) - \\left(\\frac{1}{\\alpha} + \\frac{1}{\\beta}\\right) = 2(\\alpha + \\beta) - \\left(\\frac{\\alpha + \\beta}{\\alpha\\beta}\\right)",
+   "en": "Let $S$ be the sum of the roots of the required equation, which are $2\\alpha - \\frac{1}{\\beta}$ and $2\\beta - \\frac{1}{\\alpha}$. Group the terms and take the LCM of the fractions to express $S$ in terms of $\\alpha + \\beta$ and $\\alpha\\beta$.",
+   "ur": "فرض کریں کہ مطلوبہ مساوات کے روٹس $2\\alpha - \\frac{1}{\\beta}$ اور $2\\beta - \\frac{1}{\\alpha}$ کا مجموعہ $S$ ہے۔ رقموں کو ترتیب دیں اور کسروں کا ذواضعاف اقل (LCM) لے کر $S$ کو $\\alpha + \\beta$ اور $\\alpha\\beta$ کی شکل میں لکھیں۔",
+   "check": [
+    "simplify((2*a - 1/b) + (2*b - 1/a) - (2*(a + b) - (a + b)/(a*b))) == 0"
+   ]
+  },
+  {
+   "math": "S = 2(-2) - \\left(\\frac{-2}{4}\\right) = -4 - \\left(-\\frac{1}{2}\\right) = -4 + \\frac{1}{2} = \\frac{-8 + 1}{2} = -\\frac{7}{2}",
+   "en": "Substitute the values $\\alpha + \\beta = -2$ and $\\alpha\\beta = 4$ into the expression for $S$ and simplify.",
+   "ur": "$S$ کی مساوات میں $\\alpha + \\beta = -2$ اور $\\alpha\\beta = 4$ کی قیمتیں درج کریں اور مختصر کریں۔",
+   "check": [
+    "2*(-2) - (R(-2, 4)) == -R(7, 2)",
+    "-4 + R(1, 2) == -R(7, 2)"
+   ]
+  },
+  {
+   "math": "P = \\left(2\\alpha - \\frac{1}{\\beta}\\right)\\left(2\\beta - \\frac{1}{\\alpha}\\right) = 4\\alpha\\beta - 2\\left(\\frac{\\alpha}{\\alpha}\\right) - 2\\left(\\frac{\\beta}{\\beta}\\right) + \\frac{1}{\\alpha\\beta} = 4\\alpha\\beta - 2 - 2 + \\frac{1}{\\alpha\\beta}",
+   "en": "Let $P$ be the product of the roots of the required equation. Multiply the two roots together and simplify the middle terms.",
+   "ur": "فرض کریں کہ مطلوبہ مساوات کے روٹس کا حاصل ضرب $P$ ہے۔ دونوں روٹس کو آپس میں ضرب دیں اور درمیانی رقموں کو مختصر کریں۔",
+   "check": [
+    "simplify((2*a - 1/b)*(2*b - 1/a) - (4*a*b - 4 + 1/(a*b))) == 0"
+   ]
+  },
+  {
+   "math": "P = 4(4) - 4 + \\frac{1}{4} = 16 - 4 + \\frac{1}{4} = 12 + \\frac{1}{4} = \\frac{48 + 1}{4} = \\frac{49}{4}",
+   "en": "Substitute the value $\\alpha\\beta = 4$ into the expression for $P$ and simplify.",
+   "ur": "$P$ کی مساوات میں $\\alpha\\beta = 4$ کی قیمت درج کریں اور مختصر کریں۔",
+   "check": [
+    "4*4 - 4 + R(1, 4) == R(49, 4)",
+    "12 + R(1, 4) == R(49, 4)"
+   ]
+  },
+  {
+   "math": "x^2 - Sx + P = 0 \\implies x^2 - \\left(-\\frac{7}{2}\\right)x + \\frac{49}{4} = 0 \\implies x^2 + \\frac{7}{2}x + \\frac{49}{4} = 0",
+   "en": "Substitute the sum $S = -\\frac{7}{2}$ and product $P = \\frac{49}{4}$ into the standard quadratic equation formula $x^2 - Sx + P = 0$.",
+   "ur": "مجموعہ $S = -\\frac{7}{2}$ اور حاصل ضرب $P = \\frac{49}{4}$ کی قیمتیں معیاری دو درجی مساوات کے کلیے $x^2 - Sx + P = 0$ میں درج کریں۔",
+   "check": [
+    "expand(x**2 - (-R(7, 2))*x + R(49, 4)) == expand(x**2 + R(7, 2)*x + R(49, 4))"
+   ]
+  },
+  {
+   "math": "4\\left(x^2 + \\frac{7}{2}x + \\frac{49}{4}\\right) = 4(0) \\implies 4x^2 + 14x + 49 = 0",
+   "en": "Multiply the entire equation by $4$ (the LCM of the denominators) to clear the fractions and get the final required quadratic equation.",
+   "ur": "کسروں کو ختم کرنے کے لیے پوری مساوات کو $4$ (مخرج کا ذواضعاف اقل) سے ضرب دیں تاکہ مطلوبہ دو درجی مساوات حاصل ہو سکے۔",
+   "check": [
+    "expand(4*(x**2 + R(7, 2)*x + R(49, 4))) == expand(4*x**2 + 14*x + 49)",
+    "(-1 + I*sqrt(3)) + (-1 - I*sqrt(3)) == -2",
+    "(-1 + I*sqrt(3))*(-1 - I*sqrt(3)) == 4",
+    "simplify((2*(-1 + I*sqrt(3)) - 1/(-1 - I*sqrt(3))) + (2*(-1 - I*sqrt(3)) - 1/(-1 + I*sqrt(3)))) == (-7/2)",
+    "simplify((2*(-1 + I*sqrt(3)) - 1/(-1 - I*sqrt(3)))*(2*(-1 - I*sqrt(3)) - 1/(-1 + I*sqrt(3)))) == (49/4)",
+    "expand((4*x**2 + 14*x + 49) / 4) == expand(x**2 - (-7/2)*x + (49/4))"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

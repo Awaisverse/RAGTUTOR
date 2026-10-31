@@ -1,0 +1,40 @@
+{
+ "item": "c10-rev3-q4",
+ "label": "ii",
+ "answer_ref": "$\\begin{bmatrix} 4 & -3 \\\\ -2 & 5 \\end{bmatrix}$",
+ "math": [
+  "B = \\begin{bmatrix} 5 & 3 \\\\ 2 & 4 \\end{bmatrix}",
+  "\\operatorname{Adj}\\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix} = \\begin{bmatrix} d & -b \\\\ -c & a \\end{bmatrix}",
+  "",
+  "",
+  "\\operatorname{Adj}B = \\begin{bmatrix} 4 & -3 \\\\ -2 & 5 \\end{bmatrix}"
+ ],
+ "why": [
+  {
+   "en": "We start by isolating the matrix $B$ from the question so we can focus only on its elements. This prevents us from mixing up its numbers with matrix $A$.",
+   "ur": "ہم سوال میں سے کالب $B$ کو الگ کر کے لکھتے ہیں تاکہ ہماری توجہ صرف اس کے ارکان پر رہے۔ اس سے ہمیں اس کے نمبروں کو کالب $A$ کے ساتھ ملانے کی غلطی سے بچنے میں مدد ملتی ہے۔"
+  },
+  {
+   "en": "We recall the standard rule for the adjoint of a $2 \\times 2$ matrix, where the main diagonal elements $a$ and $d$ swap places, and the other elements $b$ and $c$ change their signs. Knowing this formula gives us a direct roadmap for what to do with the numbers in matrix $B$.",
+   "ur": "ہم $2 \\times 2$ کالب کے ایڈجوائنٹ کا بنیادی اصول یاد کرتے ہیں، جس میں وتر کے ارکان $a$ اور $d$ اپنی جگہ بدلتے ہیں، اور باقی ارکان $b$ اور $c$ کی علامتیں بدل جاتی ہیں۔ یہ فارمولا ہمیں بتاتا ہے کہ کالب $B$ کے نمبروں کے ساتھ کیا کرنا ہے۔"
+  },
+  {
+   "en": "Applying the first part of our rule, we identify $5$ and $4$ as the main diagonal entries and interchange their positions. This gives us the new main diagonal for our adjoint matrix.",
+   "ur": "اپنے اصول کے پہلے حصے پر عمل کرتے ہوئے، ہم $5$ اور $4$ کو وتر کے ارکان کے طور پر پہچانتے ہیں اور ان کی جگہیں آپس میں بدل دیتے ہیں۔ اس سے ہمیں اپنے ایڈجوائنٹ کالب کا نیا وتر مل جاتا ہے۔"
+  },
+  {
+   "en": "Next, we apply the second part of the rule to the non-diagonal entries $3$ and $2$ by multiplying them by a negative sign while keeping them in their original spots. Since both are positive, they simply become $-3$ and $-2$.",
+   "ur": "اس کے بعد، ہم اصول کے دوسرے حصے کو غیر وتری ارکان $3$ اور $2$ پر لاگو کرتے ہیں اور ان کی جگہ بدلے بغیر ان کی علامتیں تبدیل کر دیتے ہیں۔ چونکہ یہ دونوں مثبت ہیں، اس لیے یہ $-3$ اور $-2$ بن جاتے ہیں۔"
+  },
+  {
+   "en": "Finally, we place all these updated numbers together inside the matrix brackets to complete the operation. This gives us the required matrix $\\operatorname{Adj}B$.",
+   "ur": "آخر میں، ہم ان تمام تبدیل شدہ نمبروں کو کالب کی بریکٹوں کے اندر ایک ساتھ لکھ دیتے ہیں تاکہ عمل مکمل ہو جائے۔ اس سے ہمیں مطلوبہ کالب $\\operatorname{Adj}B$ حاصل ہو جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $\\begin{bmatrix} 4 & -3 \\\\ -2 & 5 \\end{bmatrix}$ is the adjoint of matrix $B$, which is a special rearranged form of $B$ that is essential when finding the inverse of a matrix. You can quickly check your work by verifying that $4$ and $5$ have swapped places, and $3$ and $2$ now have negative signs as $-3$ and $-2$.",
+  "ur": "آخری جواب $\\begin{bmatrix} 4 & -3 \\\\ -2 & 5 \\end{bmatrix}$ کالب $B$ کا ایڈجوائنٹ ہے، جو کہ $B$ کی ایک خاص ترتیب شدہ شکل ہے اور کسی کالب کا ضربی معکوس معلوم کرنے کے لیے بہت ضروری ہے۔ آپ اپنے جواب کی تصدیق ایسے کر سکتے ہیں کہ $4$ اور $5$ کی جگہ بدل چکی ہے، اور $3$ اور $2$ کے ساتھ اب منفی کی علامت لگا کر انہیں $-3$ اور $-2$ بنا دیا گیا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

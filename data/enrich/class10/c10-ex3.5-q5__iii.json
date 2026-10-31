@@ -1,0 +1,65 @@
+{
+ "item": "c10-ex3.5-q5",
+ "label": "iii",
+ "answer_ref": "$\\begin{bmatrix} \\frac{1}{20} & - \\frac{1}{5} \\\\ - \\frac{1}{8} & 1 \\end{bmatrix}$",
+ "steps": [
+  {
+   "math": "A = \\begin{bmatrix} 40 & 8 \\\\ 5 & 2 \\end{bmatrix}",
+   "en": "Let the given matrix be $A$. We need to find its multiplicative inverse $A^{-1}$.",
+   "ur": "فرض کریں کہ دیا گیا قالب $A$ ہے۔ ہمیں اس کا ضربی معکوس $A^{-1}$ معلوم کرنا ہے۔",
+   "check": [
+    "Eq(Matrix([[40, 8], [5, 2]]), Matrix([[40, 8], [5, 2]]))"
+   ]
+  },
+  {
+   "math": "A^{-1} = \\frac{1}{|A|} \\operatorname{Adj}A",
+   "en": "The formula for the multiplicative inverse of a non-singular matrix $A$ is:",
+   "ur": "کسی غیر نادر قالب $A$ کے ضربی معکوس کا فارمولا یہ ہے:"
+  },
+  {
+   "math": "|A| = \\begin{vmatrix} 40 & 8 \\\\ 5 & 2 \\end{vmatrix} = (40)(2) - (8)(5) = 80 - 40 = 40",
+   "en": "First, find the determinant $|A|$ using the formula $ad - bc$. Since $|A| = 40 \\neq 0$, the matrix is non-singular and its inverse exists.",
+   "ur": "سب سے پہلے فارمولا $ad - bc$ استعمال کرتے ہوئے مقطع $|A|$ معلوم کریں۔ چونکہ $|A| = 40 \\neq 0$ ہے، اس لیے یہ ایک غیر نادر قالب ہے اور اس کا معکوس ممکن ہے۔",
+   "check": [
+    "Matrix([[40, 8], [5, 2]]).det() == 40",
+    "40*2 - 8*5 == 80 - 40",
+    "80 - 40 == 40"
+   ]
+  },
+  {
+   "math": "\\operatorname{Adj}A = \\begin{bmatrix} 2 & -8 \\\\ -5 & 40 \\end{bmatrix}",
+   "en": "Next, find the adjoint $\\operatorname{Adj}A$ by interchanging the diagonal entries ($40$ and $2$) and changing the signs of the non-diagonal entries ($8$ and $5$).",
+   "ur": "اب وتری ارکان ($40$ اور $2$) کی جگہ بدل کر اور غیر وتری ارکان ($8$ اور $5$) کی علامتیں تبدیل کر کے ایڈجوائنٹ $\\operatorname{Adj}A$ معلوم کریں۔",
+   "check": [
+    "Eq(Matrix([[40, 8], [5, 2]]).adjugate(), Matrix([[2, -8], [-5, 40]]))"
+   ]
+  },
+  {
+   "math": "A^{-1} = \\frac{1}{40}\\begin{bmatrix} 2 & -8 \\\\ -5 & 40 \\end{bmatrix} = \\begin{bmatrix} \\frac{2}{40} & \\frac{-8}{40} \\\\ \\frac{-5}{40} & \\frac{40}{40} \\end{bmatrix}",
+   "en": "Substitute $|A|$ and $\\operatorname{Adj}A$ into the inverse formula and divide each entry by $40$.",
+   "ur": "معکوس کے فارمولے میں $|A|$ اور $\\operatorname{Adj}A$ کی قیمتیں درج کریں اور ہر رکن کو $40$ سے تقسیم کریں۔",
+   "check": [
+    "Eq(R(1, 40)*Matrix([[2, -8], [-5, 40]]), Matrix([[R(2, 40), R(-8, 40)], [R(-5, 40), R(40, 40)]]))"
+   ]
+  },
+  {
+   "math": "A^{-1} = \\begin{bmatrix} \\frac{1}{20} & - \\frac{1}{5} \\\\ - \\frac{1}{8} & 1 \\end{bmatrix}",
+   "en": "Simplify the fractions to get the final multiplicative inverse.",
+   "ur": "کسروں کو مختصر کرنے پر مطلوبہ ضربی معکوس حاصل ہوتا ہے۔",
+   "check": [
+    "Eq(Matrix([[40, 8], [5, 2]]).inv(), Matrix([[R(1, 20), -R(1, 5)], [-R(1, 8), 1]]))",
+    "R(2, 40) == R(1, 20)",
+    "R(-8, 40) == -R(1, 5)",
+    "R(-5, 40) == -R(1, 8)",
+    "R(40, 40) == 1",
+    "Matrix([[40, 8], [5, 2]]).det() == 40",
+    "Eq(Matrix([[40, 8], [5, 2]]).adjugate(), Matrix([[2, -8], [-5, 40]]))",
+    "Eq(Matrix([[40, 8], [5, 2]]).inv(), Matrix([[1/20, -1/5], [-1/8, 1]]))",
+    "Eq(Matrix([[1, 0], [0, 1]]), Matrix([[1, 0], [0, 1]]))"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

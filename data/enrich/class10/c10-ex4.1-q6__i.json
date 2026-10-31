@@ -1,0 +1,50 @@
+{
+ "item": "c10-ex4.1-q6",
+ "label": "i",
+ "answer_ref": "$f^{-1}(x) = \\frac{x + 3}{2}$",
+ "steps": [
+  {
+   "math": "f(x) = 2x - 3",
+   "en": "Write down the given function.",
+   "ur": "دیا گیا تفاعل لکھیں۔"
+  },
+  {
+   "math": "y = 2x - 3",
+   "en": "Let $y = f(x)$, which implies $x = f^{-1}(y)$.",
+   "ur": "فرض کریں $y = f(x)$ ہے، جس سے $x = f^{-1}(y)$ حاصل ہوتا ہے۔"
+  },
+  {
+   "math": "y + 3 = 2x",
+   "en": "Add $3$ to both sides of the equation to isolate the term with $x$.",
+   "ur": "$x$ والی رقم کو الگ کرنے کے لیے مساوات کے دونوں اطراف میں $3$ جمع کریں۔",
+   "check": [
+    "((2*x - 3) + 3) == 2*x"
+   ]
+  },
+  {
+   "math": "x = \\frac{y + 3}{2}",
+   "en": "Divide both sides by $2$ to make $x$ the subject.",
+   "ur": "$x$ کو موضوع بنانے کے لیے دونوں اطراف کو $2$ سے تقسیم کریں۔",
+   "check": [
+    "(2*x)/2 == x"
+   ]
+  },
+  {
+   "math": "f^{-1}(y) = \\frac{y + 3}{2}",
+   "en": "Substitute $x = f^{-1}(y)$ into the equation.",
+   "ur": "مساوات میں $x = f^{-1}(y)$ درج کریں۔"
+  },
+  {
+   "math": "f^{-1}(x) = \\frac{x + 3}{2}",
+   "en": "Replace $y$ with $x$ to get the required inverse function $f^{-1}(x)$.",
+   "ur": "مطلوبہ معکوس تفاعل $f^{-1}(x)$ حاصل کرنے کے لیے $y$ کی جگہ $x$ لکھیں۔",
+   "check": [
+    "simplify((2*x - 3).subs(x, (x + 3)/2)) == x",
+    "simplify((2*x - 3).subs(x, ((x + 3)/2))) == x"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

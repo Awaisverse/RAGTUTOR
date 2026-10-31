@@ -1,0 +1,85 @@
+{
+ "item": "c10-ex2.5-q1",
+ "label": "vi",
+ "answer_ref": "$x \\in [1, 2]$",
+ "math": [
+  "- x^{2} + 3 x - 2 \\ge 0",
+  "x^{2} - 3 x + 2 \\le 0",
+  "",
+  "x^{2} - 3 x + 2 = 0",
+  "x^{2} - x - 2 x + 2 = 0",
+  "x \\left(x - 1\\right) - 2 \\left(x - 1\\right) = 0",
+  "\\left(x - 2\\right) \\left(x - 1\\right) = 0",
+  "x - 2 = 0 \\quad\\text{or}\\quad x - 1 = 0",
+  "x = 1,\\quad x = 2",
+  "\\text{Critical points: } 1, 2",
+  "x = 0:\\ (0)^{2} - 3 (0) + 2 = 2 \\Rightarrow \\text{not satisfied}",
+  "x = \\frac{3}{2}:\\ (\\frac{3}{2})^{2} - 3 (\\frac{3}{2}) + 2 = - \\frac{1}{4} \\Rightarrow \\text{satisfied}",
+  "x = 3:\\ (3)^{2} - 3 (3) + 2 = 2 \\Rightarrow \\text{not satisfied}",
+  "x \\in [1, 2]"
+ ],
+ "why": [
+  {
+   "en": "We begin by writing down the given quadratic inequality clearly. Notice that the expression is compared to $0$, which is the standard starting point for finding the solution set.",
+   "ur": "ہم دی گئی دو درجی مساوات (نا مساوات) کو صاف طور پر لکھ کر شروعات کرتے ہیں۔ غور کریں کہ اس کا موازنہ $0$ سے کیا گیا ہے، جو حل معلوم کرنے کے لیے معیاری شروعات ہے۔"
+  },
+  {
+   "en": "It is much easier to factorize when the $x^{2}$ term is positive, so we multiply the whole inequality by $-1$. Remember the golden rule of inequalities: multiplying by a negative number reverses the sign from $\\ge$ to $\\le$.",
+   "ur": "جب $x^{2}$ والی رقم مثبت ہو تو تجزی کرنا بہت آسان ہو جاتا ہے، اس لیے ہم پوری نا مساوات کو $-1$ سے ضرب دیتے ہیں۔ نا مساوات کا سنہری اصول یاد رکھیں: منفی عدد سے ضرب دینے سے علامت $\\ge$ سے الٹ کر $\\le$ ہو جاتی ہے۔"
+  },
+  {
+   "en": "To find the boundary points of our solution, we temporarily replace the inequality sign with an equals sign. This gives us an associated quadratic equation whose roots will divide the number line.",
+   "ur": "اپنے حل کے باؤنڈری پوائنٹس (سرحدی نقاط) معلوم کرنے کے لیے، ہم عارضی طور پر نا مساوات کی علامت کو برابر کی علامت سے بدل دیتے ہیں۔ اس سے ہمیں ایک متعلقہ دو درجی مساوات ملتی ہے جس کے روٹس عددی خط کو حصوں میں تقسیم کریں گے۔"
+  },
+  {
+   "en": "Now we have a standard quadratic equation $x^{2} - 3 x + 2 = 0$. Finding the values of $x$ that make this expression exactly $0$ will help us find where the expression is less than $0$.",
+   "ur": "اب ہمارے پاس ایک معیاری دو درجی مساوات $x^{2} - 3 x + 2 = 0$ ہے۔ $x$ کی وہ قیمتیں معلوم کرنا جو اس جملے کو بالکل $0$ بناتی ہیں، ہمیں یہ جاننے میں مدد دے گا کہ یہ جملہ کہاں $0$ سے چھوٹا ہے۔"
+  },
+  {
+   "en": "We use the mid-term breaking method to factorize the quadratic expression. We look for two numbers that multiply to $+2$ and add up to $-3$, which are $-1$ and $-2$, allowing us to rewrite $-3x$ as $-x - 2x$.",
+   "ur": "ہم اس دو درجی جملے کی تجزی کرنے کے لیے درمیانی رقم کو توڑنے کا طریقہ استعمال کرتے ہیں۔ ہم ایسے دو اعداد تلاش کرتے ہیں جنہیں ضرب دینے سے $+2$ اور جمع کرنے سے $-3$ آئے، جو کہ $-1$ اور $-2$ ہیں، اس طرح ہم $-3x$ کو $-x - 2x$ لکھ سکتے ہیں۔"
+  },
+  {
+   "en": "Grouping the four terms into two pairs allows us to factor out the greatest common value from each pair. Notice how both terms now share the exact same bracket, $(x - 1)$, which tells us our factorization is on the right track.",
+   "ur": "چار رقموں کو دو جوڑوں میں تقسیم کرنے سے ہم ہر جوڑے میں سے مشترک قیمت باہر نکال سکتے ہیں۔ غور کریں کہ اب دونوں حصوں میں بالکل ایک جیسی بریکٹ $(x - 1)$ موجود ہے، جو بتاتی ہے کہ ہماری تجزی بالکل ٹھیک جا رہی ہے۔"
+  },
+  {
+   "en": "By factoring out the common bracket $(x - 1)$, we successfully turn the quadratic sum into a product of two linear factors. Having a product equal to $0$ makes it very easy to solve for $x$.",
+   "ur": "مشترک بریکٹ $(x - 1)$ کو باہر نکال کر، ہم نے کامیابی سے دو درجی جملے کو دو یک درجی اجزائے ضربی کے حاصل ضرب میں بدل دیا ہے۔ جب حاصل ضرب $0$ کے برابر ہو تو $x$ کی قیمت نکالنا بہت آسان ہو جاتا ہے۔"
+  },
+  {
+   "en": "According to the zero-product property, if the product of two brackets is $0$, then at least one of them must be $0$. This lets us split the single quadratic equation into two simple linear equations.",
+   "ur": "ضربی خاصیت کے مطابق، اگر دو بریکٹوں کا حاصل ضرب $0$ ہے، تو ان میں سے کم از کم ایک کو لازمی $0$ ہونا چاہیے۔ اس اصول کی مدد سے ہم ایک دو درجی مساوات کو دو سادہ یک درجی مساواتوں میں توڑ لیتے ہیں۔"
+  },
+  {
+   "en": "Solving each simple equation gives us the roots $x = 1$ and $x = 2$. At these exact values of $x$, the expression $x^{2} - 3 x + 2$ equals $0$, which already satisfies the 'equal to' part of our inequality $\\le 0$.",
+   "ur": "ہر سادہ مساوات کو حل کرنے سے ہمیں روٹس $x = 1$ اور $x = 2$ ملتے ہیں۔ $x$ کی ان خاص قیمتوں پر، جملہ $x^{2} - 3 x + 2$ بالکل $0$ کے برابر ہو جاتا ہے، جو ہماری نا مساوات $\\le 0$ کے 'برابر' والے حصے کو پورا کرتا ہے۔"
+  },
+  {
+   "en": "In inequalities, these roots are called critical points because they act as boundaries on the number line. The points $1$ and $2$ divide the entire number line into three separate intervals to test: numbers less than $1$, numbers between $1$ and $2$, and numbers greater than $2$.",
+   "ur": "نا مساواتوں میں، ان روٹس کو کریٹیکل پوائنٹس (اہم نقاط) کہا جاتا ہے کیونکہ یہ عددی خط پر سرحدوں کا کام کرتے ہیں۔ نقاط $1$ اور $2$ پورے عددی خط کو جانچنے کے لیے تین الگ الگ وقفوں میں تقسیم کرتے ہیں: $1$ سے چھوٹے اعداد، $1$ اور $2$ کے درمیان والے اعداد، اور $2$ سے بڑے اعداد۔"
+  },
+  {
+   "en": "To check the first interval (numbers less than $1$), we pick an easy test point like $x = 0$ and substitute it into $x^{2} - 3 x + 2 \\le 0$. Since the result is $2$, which is not less than or equal to $0$, this entire first interval is excluded from our answer.",
+   "ur": "پہلے وقفے ($1$ سے چھوٹے اعداد) کو چیک کرنے کے لیے، ہم $x = 0$ جیسا ایک آسان ٹیسٹ پوائنٹ لیتے ہیں اور اسے $x^{2} - 3 x + 2 \\le 0$ میں درج کرتے ہیں۔ چونکہ نتیجہ $2$ آتا ہے، جو $0$ سے چھوٹا یا برابر نہیں ہے، اس لیے یہ پورا پہلا وقفہ ہمارے جواب میں شامل نہیں ہوگا۔"
+  },
+  {
+   "en": "Next, we test the middle interval (between $1$ and $2$) using $x = \\frac{3}{2}$. This gives $-\\frac{1}{4}$, which is indeed less than $0$, proving that all numbers between $1$ and $2$ satisfy the inequality.",
+   "ur": "اس کے بعد، ہم $x = \\frac{3}{2}$ کو استعمال کرتے ہوئے درمیانی وقفے ($1$ اور $2$ کے درمیان) کو چیک کرتے ہیں۔ اس سے جواب $-\\frac{1}{4}$ آتا ہے، جو واقعی $0$ سے چھوٹا ہے، جس سے ثابت ہوتا ہے کہ $1$ اور $2$ کے درمیان تمام اعداد اس نا مساوات کو درست ثابت کرتے ہیں۔"
+  },
+  {
+   "en": "Finally, we test the third interval (numbers greater than $2$) by substituting $x = 3$. The result is $2$, which is not $\\le 0$, telling us that numbers greater than $2$ do not work either.",
+   "ur": "آخر میں، ہم $x = 3$ درج کر کے تیسرے وقفے ($2$ سے بڑے اعداد) کو چیک کرتے ہیں۔ نتیجہ $2$ آتا ہے، جو کہ $\\le 0$ نہیں ہے، جس سے ہمیں پتہ چلتا ہے کہ $2$ سے بڑے اعداد بھی ہمارا حل نہیں ہیں۔"
+  },
+  {
+   "en": "We write the final solution using the interval that worked, which is from $1$ to $2$. We use square brackets $[1, 2]$ to show that the boundary points $1$ and $2$ are included in the answer because the inequality has an 'or equal to' sign ($\\le$).",
+   "ur": "ہم اپنا حتمی حل اس وقفے کو استعمال کرتے ہوئے لکھتے ہیں جس نے شرائط کو پورا کیا، جو کہ $1$ سے $2$ تک ہے۔ ہم بڑی بریکٹیں $[1, 2]$ استعمال کرتے ہیں تاکہ یہ ظاہر ہو سکے کہ سرحدی نقاط $1$ اور $2$ بھی جواب میں شامل ہیں، کیونکہ نا مساوات میں 'برابر' کی علامت ($\\le$) موجود ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $x \\in [1, 2]$ means that any real number from $1$ to $2$, including $1$ and $2$ themselves, will make the original expression $- x^{2} + 3 x - 2$ greater than or equal to $0$. You can easily verify this by plugging the endpoints $x = 1$ or $x = 2$ back into the original inequality to see it become $0 \\ge 0$, or by using our test value $x = \\frac{3}{2}$ to get a positive result.",
+  "ur": "حتمی جواب $x \\in [1, 2]$ کا مطلب یہ ہے کہ $1$ سے لے کر $2$ تک کوئی بھی حقیقی عدد (بشمول $1$ اور $2$ خود) اصل جملے $- x^{2} + 3 x - 2$ کو $0$ سے بڑا یا اس کے برابر بنا دے گا۔ آپ اس کی تصدیق آسانی سے کر سکتے ہیں: اگر آپ سرے والے نقاط $x = 1$ یا $x = 2$ کو اصل نا مساوات میں درج کریں تو یہ $0 \\ge 0$ بن جائے گی، یا پھر ہماری ٹیسٹ قیمت $x = \\frac{3}{2}$ درج کرنے سے مثبت جواب آئے گا۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

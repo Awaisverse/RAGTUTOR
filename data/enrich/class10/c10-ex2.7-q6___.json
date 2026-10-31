@@ -1,0 +1,51 @@
+{
+ "item": "c10-ex2.7-q6",
+ "label": "",
+ "answer_ref": "10 hours per week",
+ "steps": [
+  {
+   "math": "E(h) = -2h^2 + 40h",
+   "en": "Write the given quadratic model for the freelancer's earnings $E$ in terms of hours worked $h$.",
+   "ur": "فری لانسر کی آمدنی $E$ کے لیے کام کے گھنٹوں $h$ کے لحاظ سے دی گئی دو درجی مساوات لکھیں۔"
+  },
+  {
+   "math": "a = -2, \\quad b = 40, \\quad c = 0",
+   "en": "Compare the equation with the standard quadratic form $E(h) = ah^2 + bh + c$ to identify the coefficients $a$, $b$, and $c$.",
+   "ur": "عددی سروں $a$، $b$ اور $c$ کی شناخت کے لیے مساوات کا معیاری دو درجی شکل $E(h) = ah^2 + bh + c$ سے موازنہ کریں۔"
+  },
+  {
+   "math": "h = -\\frac{b}{2a}",
+   "en": "Since $a = -2 < 0$, the parabola opens downwards and has a maximum value at its vertex. The formula for the $h$-coordinate of the vertex is:",
+   "ur": "چونکہ $a = -2 < 0$ ہے، اس لیے پیرابولا کا رخ نیچے کی طرف ہے اور اس کے راس (vertex) پر قیمت زیادہ سے زیادہ ہے۔ راس کے $h$-محدد کا فارمولا یہ ہے:"
+  },
+  {
+   "math": "h = -\\frac{40}{2(-2)}",
+   "en": "Substitute the values $a = -2$ and $b = 40$ into the vertex formula.",
+   "ur": "راس کے فارمولے میں $a = -2$ اور $b = 40$ کی قیمتیں درج کریں۔"
+  },
+  {
+   "math": "h = \\frac{-40}{-4} = 10",
+   "en": "Simplify the fraction to find the number of hours $h$ that maximizes the earnings.",
+   "ur": "آمدنی کو زیادہ سے زیادہ کرنے والے گھنٹوں کی تعداد $h$ معلوم کرنے کے لیے کسر کو مختصر کریں۔",
+   "check": [
+    "-40/(-4) == 10",
+    "-40/(2*(-2)) == 10"
+   ]
+  },
+  {
+   "math": "E(10) = -2(10)^2 + 40(10) = -2(100) + 400 = -200 + 400 = 200",
+   "en": "We can also verify the maximum earnings by substituting $h = 10$ into the original equation, which gives Rs. 200. Thus, the freelancer should work 10 hours per week.",
+   "ur": "ہم اصل مساوات میں $h = 10$ درج کر کے زیادہ سے زیادہ آمدنی کی تصدیق بھی کر سکتے ہیں، جو کہ 200 روپے بنتی ہے۔ لہذا، فری لانسر کو ہر ہفتے 10 گھنٹے کام کرنا چاہیے۔",
+   "check": [
+    "-2*10**2 + 40*10 == -2*100 + 400",
+    "-2*100 + 400 == -200 + 400",
+    "-200 + 400 == 200",
+    "-40/(2*(-2)) == 10",
+    "-2*10**2 + 40*10 == 200"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

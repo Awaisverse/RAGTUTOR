@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex3.3-q2",
+ "label": "v",
+ "answer_ref": "$\\begin{bmatrix} 0 & -9 \\\\ -14 & -16 \\end{bmatrix}$",
+ "math": [
+  "X = \\begin{bmatrix} 1 & -1 \\\\ -2 & 2 \\end{bmatrix}, \\quad Y = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}, \\quad Z = \\begin{bmatrix} 3 & 0 \\\\ 0 & -2 \\end{bmatrix}",
+  "X - 4Y + Z = \\begin{bmatrix} 1 & -1 \\\\ -2 & 2 \\end{bmatrix} - 4\\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix} + \\begin{bmatrix} 3 & 0 \\\\ 0 & -2 \\end{bmatrix}",
+  "4Y = 4\\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix} = \\begin{bmatrix} 4(1) & 4(2) \\\\ 4(3) & 4(4) \\end{bmatrix} = \\begin{bmatrix} 4 & 8 \\\\ 12 & 16 \\end{bmatrix}",
+  "X - 4Y = \\begin{bmatrix} 1 & -1 \\\\ -2 & 2 \\end{bmatrix} - \\begin{bmatrix} 4 & 8 \\\\ 12 & 16 \\end{bmatrix} = \\begin{bmatrix} 1 - 4 & -1 - 8 \\\\ -2 - 12 & 2 - 16 \\end{bmatrix} = \\begin{bmatrix} -3 & -9 \\\\ -14 & -14 \\end{bmatrix}",
+  "X - 4Y + Z = \\begin{bmatrix} -3 & -9 \\\\ -14 & -14 \\end{bmatrix} + \\begin{bmatrix} 3 & 0 \\\\ 0 & -2 \\end{bmatrix} = \\begin{bmatrix} -3 + 3 & -9 + 0 \\\\ -14 + 0 & -14 + (-2) \\end{bmatrix}",
+  "X - 4Y + Z = \\begin{bmatrix} 0 & -9 \\\\ -14 & -16 \\end{bmatrix}"
+ ],
+ "why": [
+  {
+   "en": "We begin by clearly writing down the given $2 \\times 2$ matrices $X$, $Y$, and $Z$. Since all three matrices have the exact same order, we know that addition and subtraction between them are possible.",
+   "ur": "ہم سب سے پہلے دیے گئے $2 \\times 2$ کالبوں $X$، $Y$ اور $Z$ کو واضح طور پر لکھتے ہیں۔ چونکہ ان تینوں کالبوں کا مرتبہ یکساں ہے، اس لیے ہمیں معلوم ہے کہ ان کے درمیان جمع اور تفریق کا عمل ممکن ہے۔"
+  },
+  {
+   "en": "By the rule of substitution, we replace the letter names with their actual matrix arrays in the expression $X - 4Y + Z$. This sets up our mathematical sentence so we can see all the numbers we need to work with.",
+   "ur": "قیمتیں درج کرنے کے اصول کے تحت، ہم عبارت $X - 4Y + Z$ میں حروف کی جگہ ان کے اصل کالب لکھتے ہیں۔ اس سے ہمارا حسابی جملہ تیار ہو جاتا ہے تاکہ ہم ان تمام نمبروں کو دیکھ سکیں جن پر عمل کرنا ہے۔"
+  },
+  {
+   "en": "Following the order of operations, we must do scalar multiplication before addition or subtraction. Using the definition of scalar multiplication, multiplying every entry of $Y$ by $4$ gives us the new matrix $4Y$, which is ready to be subtracted from $X$.",
+   "ur": "حسابی عوامل کی ترتیب کے مطابق، ہمیں جمع یا تفریق سے پہلے عددی ضرب کا عمل کرنا چاہیے۔ عددی ضرب کی تعریف کے مطابق، کالب $Y$ کے ہر رکن کو $4$ سے ضرب دینے سے ہمیں نیا کالب $4Y$ ملتا ہے، جو اب $X$ میں سے تفریق ہونے کے لیے تیار ہے۔"
+  },
+  {
+   "en": "Now we apply the rule of matrix subtraction, which says we subtract corresponding entries that sit in the same position. This simplifies the first two parts of our expression into a single matrix representing $X - 4Y$.",
+   "ur": "اب ہم کالبوں کی تفریق کا اصول لاگو کرتے ہیں، جس کے مطابق ہم یکساں جگہ پر موجود متنازعہ ارکان کو آپس میں تفریق کرتے ہیں۔ اس سے ہماری عبارت کے پہلے دو حصے حل ہو کر $X - 4Y$ کی نمائندگی کرنے والے ایک واحد کالب میں بدل جاتے ہیں۔"
+  },
+  {
+   "en": "To include the last part of the expression, we use the definition of matrix addition and add the corresponding entries of matrix $Z$ to our result from the previous step. This combines all three original matrices into one final setup.",
+   "ur": "عبارت کے آخری حصے کو شامل کرنے کے لیے، ہم کالبوں کی جمع کی تعریف استعمال کرتے ہوئے پچھلے مرحلے کے نتیجے میں کالب $Z$ کے متنازعہ ارکان کو جمع کرتے ہیں۔ یہ عمل تینوں اصل کالبوں کو ملا کر ایک حتمی شکل میں لے آتا ہے۔"
+  },
+  {
+   "en": "Finally, we perform basic arithmetic on each pair of numbers inside the brackets. Completing these simple additions gives us the exact final entries of the required matrix.",
+   "ur": "آخر میں، ہم بریکٹ کے اندر موجود نمبروں کے ہر جوڑے پر بنیادی حسابی عمل کرتے ہیں۔ ان سادہ جمع کے عوامل کو مکمل کرنے سے ہمیں مطلوبہ کالب کے حتمی ارکان مل جاتے ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $\\begin{bmatrix} 0 & -9 \\\\ -14 & -16 \\end{bmatrix}$ is the single $2 \\times 2$ matrix that results from combining $X$, $Y$, and $Z$ according to the rule $X - 4Y + Z$. You can easily check your work by picking one position, such as the top-left corner, and verifying the arithmetic directly from the original matrices: $1 - 4(1) + 3 = 0$.",
+  "ur": "حتمی جواب $\\begin{bmatrix} 0 & -9 \\\\ -14 & -16 \\end{bmatrix}$ وہ واحد $2 \\times 2$ کالب ہے جو $X$، $Y$ اور $Z$ کو اصول $X - 4Y + Z$ کے مطابق حل کرنے سے حاصل ہوتا ہے۔ آپ کسی ایک جگہ کے رکن، مثلاً اوپر والے بائیں کونے کو چن کر اصل کالبوں سے براہِ راست حساب کی پڑتال کر سکتے ہیں: $1 - 4(1) + 3 = 0$۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

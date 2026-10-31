@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex3.2-q1",
+ "label": "",
+ "answer_ref": "A: row, B: null, C: unit, D: null, E: column, F: column",
+ "math": [
+  "A = \\begin{bmatrix} 5 & 7 & 8 \\end{bmatrix}:\\ \\text{row matrix}",
+  "B = \\begin{bmatrix} 0 \\end{bmatrix}:\\ \\text{null matrix}",
+  "C = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}:\\ \\text{unit matrix}",
+  "D = \\begin{bmatrix} 0 & 0 \\\\ 0 & 0 \\end{bmatrix}:\\ \\text{null matrix}",
+  "E = \\begin{bmatrix} 6 \\\\ 0 \\\\ 8 \\end{bmatrix}:\\ \\text{column matrix}",
+  "F = \\begin{bmatrix} 7 \\\\ 1 \\\\ 9 \\end{bmatrix}:\\ \\text{column matrix}"
+ ],
+ "why": [
+  {
+   "en": "By the definition of a row matrix, any matrix whose entries are arranged in just a single horizontal line is called a row matrix. Since $A$ has the entries $5$, $7$, and $8$ all in one horizontal row, this rule lets us classify $A$ as a row matrix.",
+   "ur": "قطاری قالب (row matrix) کی تعریف کے مطابق، ایسا قالب جس کے تمام ارکان صرف ایک افقی لائن میں ہوں، قطاری قالب کہلاتا ہے۔ چونکہ قالب $A$ میں ارکان $5$، $7$ اور $8$ ایک ہی قطار میں ہیں، اس لیے ہم اسے قطاری قالب کے طور پر شناخت کرتے ہیں۔"
+  },
+  {
+   "en": "According to the definition of a null (or zero) matrix, if every single entry inside a matrix is $0$, it is a null matrix. Because $B$ contains only the entry $0$, we can immediately classify $B$ as a null matrix.",
+   "ur": "صفری قالب (null matrix) کی تعریف کے مطابق، اگر کسی قالب کا ہر رکن $0$ ہو تو وہ صفری قالب کہلاتا ہے۔ چونکہ قالب $B$ میں صرف $0$ موجود ہے، اس لیے یہ اصول ہمیں بتاتا ہے کہ $B$ ایک صفری قالب ہے۔"
+  },
+  {
+   "en": "We use the definition of a unit (or identity) matrix, which requires a square matrix to have $1$s on its main diagonal and $0$s everywhere else. Observing that $C$ has $1$s on the diagonal and $0$s in the other positions confirms that $C$ is a unit matrix.",
+   "ur": "ہم وحدانی قالب (unit matrix) کی تعریف استعمال کرتے ہیں، جس کے تحت ایک مربی قالب کے وتر (diagonal) کے تمام ارکان $1$ اور باقی تمام ارکان $0$ ہونے چاہئیں۔ قالب $C$ کے وتر میں $1$ اور دیگر جگہوں پر $0$ دیکھ کر تصدیق ہوتی ہے کہ $C$ ایک وحدانی قالب ہے۔"
+  },
+  {
+   "en": "Applying the rule for a null matrix again, we check if all elements in the matrix are zero. Since all entries inside $D$ are $0$, this tells us that $D$ is also a null matrix regardless of its size.",
+   "ur": "صفری قالب کا اصول دوبارہ لاگو کرتے ہوئے، ہم دیکھتے ہیں کہ کیا قالب کے تمام ارکان صفر ہیں۔ چونکہ قالب $D$ کے اندر تمام ارکان $0$ ہیں، اس سے معلوم ہوتا ہے کہ $D$ بھی ایک صفری قالب ہے۔"
+  },
+  {
+   "en": "By the definition of a column matrix, a matrix that has all its entries arranged in a single vertical line is a column matrix. Seeing that $6$, $0$, and $8$ stand in one vertical column allows us to identify $E$ as a column matrix.",
+   "ur": "کالمی قالب (column matrix) کی تعریف کے مطابق، ایسا قالب جس کے تمام ارکان صرف ایک عمودی لائن میں ہوں، کالمی قالب کہلاتا ہے۔ یہ دیکھتے ہوئے کہ $6$، $0$ اور $8$ ایک ہی عمودی کالم میں ہیں، ہم $E$ کو کالمی قالب کے طور پر پہچان لیتے ہیں۔"
+  },
+  {
+   "en": "Using the same column matrix definition, we look at the arrangement of the entries $7$, $1$, and $9$ in $F$. Because they form a single vertical column, we classify $F$ as a column matrix to complete our identification.",
+   "ur": "کالمی قالب کی اسی تعریف کو استعمال کرتے ہوئے، ہم قالب $F$ میں ارکان $7$، $1$ اور $9$ کی ترتیب کو دیکھتے ہیں۔ چونکہ یہ صرف ایک عمودی کالم بناتے ہیں، اس لیے ہم $F$ کو بھی کالمی قالب قرار دیتے ہیں جس سے ہمارا سوال مکمل ہو جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "We have successfully sorted all six given matrices into their correct types: $A$ is a row matrix, $B$ and $D$ are null matrices, $C$ is a unit matrix, and $E$ and $F$ are column matrices. You can easily verify this by glancing at the shape (single row or single column) and the specific numbers ($0$s and $1$s) inside each bracket.",
+  "ur": "ہم نے دیے گئے تمام چھ قالبوں کو کامیابی سے ان کی درست اقسام میں تقسیم کر دیا ہے: $A$ قطاری قالب ہے، $B$ اور $D$ صفری قالب ہیں، $C$ وحدانی قالب ہے، جبکہ $E$ اور $F$ کالمی قالب ہیں۔ آپ ہر بریکٹ کی بناوٹ (ایک قطار یا ایک کالم) اور اس کے اندر موجود مخصوص اعداد ($0$ اور $1$) کو دیکھ کر باآسانی اس جواب کی پڑتال کر سکتے ہیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

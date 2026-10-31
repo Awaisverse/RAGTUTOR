@@ -1,0 +1,55 @@
+{
+ "item": "c10-ex3.5-q2",
+ "label": "",
+ "answer_ref": "A: non-singular, B: singular, C: non-singular, D: singular",
+ "math": [
+  "|A| = \\begin{vmatrix} 5 & 3 \\\\ 3 & 2 \\end{vmatrix} = (5)(2) - (3)(3) = 10 - 9 = 1",
+  "|A| \\ne 0 \\Rightarrow \\text{non-singular}",
+  "|B| = \\begin{vmatrix} 7 & 21 \\\\ 2 & 6 \\end{vmatrix} = (7)(6) - (21)(2) = 42 - 42 = 0",
+  "|B| = 0 \\Rightarrow \\text{singular}",
+  "|C| = \\begin{vmatrix} 13 & 5 \\\\ 7 & 3 \\end{vmatrix} = (13)(3) - (5)(7) = 39 - 35 = 4",
+  "|C| \\ne 0 \\Rightarrow \\text{non-singular}",
+  "|D| = \\begin{vmatrix} 2 & 0 \\\\ 0 & 0 \\end{vmatrix} = (2)(0) - (0)(0) = 0 - 0 = 0",
+  "|D| = 0 \\Rightarrow \\text{singular}"
+ ],
+ "why": [
+  {
+   "en": "To check whether matrix $A$ is singular or non-singular, we first need to find its determinant using the $2\\times2$ determinant rule: multiply the main diagonal $(5)(2)$ and subtract the other diagonal $(3)(3)$. This gives us $|A| = 1$, which is the number we need to classify the matrix.",
+   "ur": "یہ جاننے کے لیے کہ قالب $A$ نادر (singular) ہے یا غیر نادر (non-singular)، ہمیں پہلے اس کا مقطع (determinant) معلوم کرنا ہوگا جس کا طریقہ یہ ہے کہ وتر کے ارکان کی ضرب $(5)(2)$ میں سے دوسرے وتر کی ضرب $(3)(3)$ کو تفریق کریں۔ اس سے ہمیں $|A| = 1$ ملتا ہے، جو ہمیں قالب کی قسم بتائے گا۔"
+  },
+  {
+   "en": "By definition, a matrix is non-singular if its determinant is not equal to $0$. Since $|A| = 1$, which is not $0$, we can immediately conclude that matrix $A$ is non-singular.",
+   "ur": "تعریف کے مطابق، اگر کسی قالب کا مقطع $0$ کے برابر نہ ہو تو وہ غیر نادر (non-singular) کہلاتا ہے۔ چونکہ $|A| = 1$ ہے جو کہ $0$ نہیں ہے، اس لیے ہم نتیجہ نکالتے ہیں کہ قالب $A$ غیر نادر ہے۔"
+  },
+  {
+   "en": "Now we apply the same determinant formula to matrix $B$ by subtracting the product $(21)(2)$ from the main diagonal product $(7)(6)$. Both products equal $42$, so subtracting them gives us $|B| = 0$.",
+   "ur": "اب ہم قالب $B$ پر بھی مقطع کا وہی فارمولا لگاتے ہیں اور وتر کی ضرب $(7)(6)$ میں سے دوسرے وتر کی ضرب $(21)(2)$ کو تفریق کرتے ہیں۔ دونوں کا حاصل ضرب $42$ ہے، اس لیے تفریق کرنے سے ہمیں $|B| = 0$ ملتا ہے۔"
+  },
+  {
+   "en": "According to the definition of a singular matrix, any square matrix whose determinant equals $0$ is called singular. Because we found $|B| = 0$, matrix $B$ is classified as singular.",
+   "ur": "نادر قالب کی تعریف کے مطابق، ہر وہ مربی قالب جس کا مقطع $0$ کے برابر ہو، نادر (singular) کہلاتا ہے۔ چونکہ یہاں $|B| = 0$ آیا ہے، اس لیے قالب $B$ نادر ہے۔"
+  },
+  {
+   "en": "Next, we calculate the determinant of matrix $C$ by finding $(13)(3) - (5)(7) = 39 - 35$. This leaves us with $|C| = 4$, which tells us the exact value needed to test matrix $C$.",
+   "ur": "اس کے بعد، ہم قالب $C$ کا مقطع معلوم کرنے کے لیے $(13)(3) - (5)(7) = 39 - 35$ حل کرتے ہیں۔ اس سے ہمیں $|C| = 4$ ملتا ہے، جو قالب $C$ کی پہچان کے لیے ضروری قیمت ہے۔"
+  },
+  {
+   "en": "Again, using the definition of a non-singular matrix, we check if the determinant is non-zero. Since $4$ is not equal to $0$, matrix $C$ is confirmed to be non-singular.",
+   "ur": "دوبارہ غیر نادر قالب کی تعریف استعمال کرتے ہوئے ہم دیکھتے ہیں کہ آیا مقطع صفر کے علاوہ کوئی عدد ہے۔ چونکہ $4$، $0$ کے برابر نہیں ہے، اس لیے ثابت ہوا کہ قالب $C$ غیر نادر (non-singular) ہے۔"
+  },
+  {
+   "en": "Finally, we find the determinant of matrix $D$ by multiplying $(2)(0)$ and subtracting $(0)(0)$. Because multiplying by $0$ gives $0$, the determinant $|D|$ comes out to be $0$.",
+   "ur": "آخر میں، ہم قالب $D$ کا مقطع معلوم کرنے کے لیے $(2)(0)$ میں سے $(0)(0)$ کو تفریق کرتے ہیں۔ چونکہ $0$ سے ضرب دینے سے جواب $0$ آتا ہے، اس لیے مقطع $|D|$ کی قیمت $0$ نکلتی ہے۔"
+  },
+  {
+   "en": "Applying the singular matrix rule one last time, a determinant of $0$ means the matrix is singular. Therefore, $|D| = 0$ tells us that matrix $D$ is singular.",
+   "ur": "نادر قالب کا اصول آخری بار استعمال کرتے ہوئے، مقطع کا $0$ ہونا بتاتا ہے کہ قالب نادر ہے۔ لہٰذا، $|D| = 0$ سے ہمیں معلوم ہوتا ہے کہ قالب $D$ نادر (singular) ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This final answer tells us that matrices $A$ and $C$ are non-singular (because their determinants, $1$ and $4$, are not $0$, meaning their inverses exist), while matrices $B$ and $D$ are singular (because their determinants are $0$). You can quickly double-check the singular ones by noticing that in $B$, the first column multiplied by $3$ gives the second column, and $D$ has a whole row of $0$s.",
+  "ur": "یہ حتمی جواب ہمیں بتاتا ہے کہ قالب $A$ اور $C$ غیر نادر (non-singular) ہیں (کیونکہ ان کے مقطعے $1$ اور $4$ ہیں جو کہ $0$ نہیں ہیں، یعنی ان کا ضربی معکوس ممکن ہے)، جبکہ قالب $B$ اور $D$ نادر (singular) ہیں (کیونکہ ان کے مقطعے $0$ ہیں)۔ آپ نادر قالبوں کی آسانی سے تصدیق ایسے بھی کر سکتے ہیں کہ قالب $B$ کے پہلے کالم کو $3$ سے ضرب دیں تو دوسرا کالم بنتا ہے، اور قالب $D$ کی ایک پوری قطار $0$ پر مشتمل ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

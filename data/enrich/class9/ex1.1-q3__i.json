@@ -1,0 +1,55 @@
+{
+ "item": "ex1.1-q3",
+ "label": "i",
+ "answer_ref": "$\\frac{4}{9}$",
+ "steps": [
+  {
+   "math": "x = 0.\\bar{4}",
+   "en": "Let $x$ be the given recurring decimal.",
+   "ur": "فرض کریں کہ دیا گیا تکراری اعشاریہ $x$ کے برابر ہے۔"
+  },
+  {
+   "math": "x = 0.444\\ldots \\quad \\text{--- (1)}",
+   "en": "Write the recurring decimal in its expanded form by repeating the digit $4$, and label it as equation $(1)$.",
+   "ur": "ہندسہ $4$ کو دہراتے ہوئے تکراری اعشاریہ کو پھیلا کر لکھیں اور اسے مساوات $(1)$ کا نام دیں۔"
+  },
+  {
+   "math": "10x = 4.444\\ldots \\quad \\text{--- (2)}",
+   "en": "Since only one digit is repeating, multiply both sides of equation $(1)$ by $10$ and label it as equation $(2)$.",
+   "ur": "چونکہ صرف ایک ہندسہ بار بار آ رہا ہے، اس لیے مساوات $(1)$ کے دونوں اطراف کو $10$ سے ضرب دیں اور اسے مساوات $(2)$ کا نام دیں۔",
+   "check": [
+    "10*R(4,9) == 4 + R(4,9)"
+   ]
+  },
+  {
+   "math": "10x - x = 4.444\\ldots - 0.444\\ldots",
+   "en": "Subtract equation $(1)$ from equation $(2)$ to eliminate the repeating decimal part.",
+   "ur": "اعشاریہ کے تکراری حصے کو ختم کرنے کے لیے مساوات $(2)$ میں سے مساوات $(1)$ کو تفریق کریں۔",
+   "check": [
+    "10*R(4,9) - R(4,9) == (4 + R(4,9)) - R(4,9)"
+   ]
+  },
+  {
+   "math": "9x = 4",
+   "en": "Simplify both sides of the equation.",
+   "ur": "مساوات کے دونوں اطراف کو مختصر کریں۔",
+   "check": [
+    "9*R(4,9) == 4"
+   ]
+  },
+  {
+   "math": "x = \\frac{4}{9}",
+   "en": "Divide both sides by $9$ to find the value of $x$. Thus, $0.\\bar{4}$ in the rational form $\\frac{p}{q}$ is $\\frac{4}{9}$.",
+   "ur": "$x$ کی قیمت معلوم کرنے کے لیے دونوں اطراف کو $9$ سے تقسیم کریں۔ پس $0.\\bar{4}$ کی ناطق شکل $\\frac{p}{q}$ میں قیمت $\\frac{4}{9}$ ہے۔",
+   "check": [
+    "R(4,9)*9 == 4",
+    "10*Rational(4,9) == 4 + Rational(4,9)",
+    "10*Rational(4,9) - Rational(4,9) == 4",
+    "Rational(4,9)*9 == 4"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

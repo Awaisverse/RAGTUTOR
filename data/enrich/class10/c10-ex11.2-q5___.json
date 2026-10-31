@@ -1,0 +1,59 @@
+{
+ "item": "c10-ex11.2-q5",
+ "label": "",
+ "answer_ref": "Variance = 50, SD = 7.07",
+ "steps": [
+  {
+   "math": "x = 120, 135, 130, 125, 140 \\quad (n = 5)",
+   "en": "Write down the given number of visitors for $n = 5$ days.",
+   "ur": "$n = 5$ دنوں کے لیے آنے والے افراد کی دی گئی تعداد لکھیں۔",
+   "check": [
+    "5 == 5"
+   ]
+  },
+  {
+   "math": "\\bar{x} = \\frac{\\sum x}{n} = \\frac{120 + 135 + 130 + 125 + 140}{5} = \\frac{650}{5} = 130",
+   "en": "First, calculate the arithmetic mean ($\\bar{x}$) by dividing the sum of all values by the total number of days.",
+   "ur": "سب سے پہلے، تمام قیمتوں کے مجموعے کو دنوں کی کل تعداد پر تقسیم کر کے حسابی اوسط ($\\bar{x}$) معلوم کریں۔",
+   "check": [
+    "120 + 135 + 130 + 125 + 140 == 650",
+    "650 / 5 == 130"
+   ]
+  },
+  {
+   "math": "\\begin{aligned} \\sum (x - \\bar{x})^2 &= (120 - 130)^2 + (135 - 130)^2 + (130 - 130)^2 + (125 - 130)^2 + (140 - 130)^2 \\\\ &= (-10)^2 + (5)^2 + (0)^2 + (-5)^2 + (10)^2 \\\\ &= 100 + 25 + 0 + 25 + 100 = 250 \\end{aligned}",
+   "en": "Find the deviation of each value from the mean ($x - \\bar{x}$), square each deviation, and add them together.",
+   "ur": "ہر قیمت کا اوسط سے انحراف ($x - \\bar{x}$) معلوم کریں، ہر انحراف کا مربع لیں، اور انہیں آپس میں جمع کریں۔",
+   "check": [
+    "(120 - 130)**2 == 100",
+    "(135 - 130)**2 == 25",
+    "(130 - 130)**2 == 0",
+    "(125 - 130)**2 == 25",
+    "(140 - 130)**2 == 100",
+    "100 + 25 + 0 + 25 + 100 == 250"
+   ]
+  },
+  {
+   "math": "\\text{Variance } (S^2) = \\frac{\\sum (x - \\bar{x})^2}{n} = \\frac{250}{5} = 50",
+   "en": "Substitute $\\sum (x - \\bar{x})^2 = 250$ and $n = 5$ into the variance formula.",
+   "ur": "تغیر (Variance) کے فارمولے میں $\\sum (x - \\bar{x})^2 = 250$ اور $n = 5$ درج کریں۔",
+   "check": [
+    "250 / 5 == 50"
+   ]
+  },
+  {
+   "math": "\\text{S.D.} = \\sqrt{\\frac{\\sum (x - \\bar{x})^2}{n}} = \\sqrt{50} \\approx 7.07",
+   "en": "Take the positive square root of the variance to find the standard deviation.",
+   "ur": "معیاری انحراف (Standard Deviation) معلوم کرنے کے لیے تغیر کا مثبت جذر لیں۔",
+   "check": [
+    "Abs(sqrt(50) - 7.07) <= 0.005",
+    "(120) + (135) + (130) + (125) + (140) == (650)",
+    "Abs(((((120) - (130))**2 + ((135) - (130))**2 + ((130) - (130))**2 + ((125) - (130))**2 + ((140) - (130))**2)/5) - 50.00) <= 0.0050000010000000004",
+    "Abs((sqrt((50))) - 7.07) <= 0.0050000010000000004"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

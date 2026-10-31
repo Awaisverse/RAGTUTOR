@@ -1,0 +1,69 @@
+{
+ "item": "c10-ex7.3-q4",
+ "label": "",
+ "answer_ref": "$124^\\circ$",
+ "steps": [
+  {
+   "math": "m\\overline{AB} = 15\\text{ cm}, \\quad m\\overline{BE} = m\\overline{DE} = 12\\text{ cm}",
+   "en": "Write down the given lengths of the square base $ABCD$ and the slant edges of the pyramid.",
+   "ur": "مربع قاعدے $ABCD$ اور اہرام کے ترچھے کناروں کی دی گئی لمبائیاں لکھیں۔"
+  },
+  {
+   "math": "(m\\overline{BD})^2 = (m\\overline{AB})^2 + (m\\overline{AD})^2 = 15^2 + 15^2 = 225 + 225 = 450",
+   "en": "Since $ABCD$ is a square, $\\angle BAD = 90^\\circ$ and $m\\overline{AD} = m\\overline{AB} = 15\\text{ cm}$. Apply Pythagoras' theorem in right-angled triangle $ABD$ to find $(m\\overline{BD})^2$.",
+   "ur": "چونکہ $ABCD$ ایک مربع ہے، اس لیے $\\angle BAD = 90^\\circ$ اور $m\\overline{AD} = m\\overline{AB} = 15\\text{ cm}$ ہے۔ قائمۃ الزاویہ مثلث $ABD$ میں مسئلہ فیثاغورث استعمال کرتے ہوئے $(m\\overline{BD})^2$ معلوم کریں۔",
+   "check": [
+    "15**2 + 15**2 == 450",
+    "225 + 225 == 450"
+   ]
+  },
+  {
+   "math": "m\\overline{BD} = \\sqrt{450} = 15\\sqrt{2} \\approx 21.21\\text{ cm}",
+   "en": "Take the square root to find the length of the diagonal $BD$ of the square base.",
+   "ur": "مربع قاعدے کے وتر $BD$ کی لمبائی معلوم کرنے کے لیے جزر لیں۔",
+   "check": [
+    "sqrt(450) == 15*sqrt(2)",
+    "Abs(sqrt(450) - 21.21) < 0.01"
+   ]
+  },
+  {
+   "math": "(m\\overline{BD})^2 = (m\\overline{DE})^2 + (m\\overline{BE})^2 - 2(m\\overline{DE})(m\\overline{BE})\\cos\\angle DEB",
+   "en": "Now consider the triangle $DEB$ formed by the two slant edges and the diagonal. State the Law of Cosines to find $\\angle DEB$.",
+   "ur": "اب دو ترچھے کناروں اور وتر سے بننے والی مثلث $DEB$ پر غور کریں۔ $\\angle DEB$ معلوم کرنے کے لیے قانون جیب التمام (Law of Cosines) لکھیں۔"
+  },
+  {
+   "math": "450 = 12^2 + 12^2 - 2(12)(12)\\cos\\angle DEB \\implies 450 = 144 + 144 - 288\\cos\\angle DEB = 288 - 288\\cos\\angle DEB",
+   "en": "Substitute the known values $(m\\overline{BD})^2 = 450$, $m\\overline{DE} = 12$, and $m\\overline{BE} = 12$ into the formula and simplify.",
+   "ur": "فارمولے میں معلوم قیمتیں $(m\\overline{BD})^2 = 450$، $m\\overline{DE} = 12$ اور $m\\overline{BE} = 12$ درج کریں اور مختصر کریں۔",
+   "check": [
+    "12**2 + 12**2 == 288",
+    "2*12*12 == 288"
+   ]
+  },
+  {
+   "math": "288\\cos\\angle DEB = 288 - 450 = -162 \\implies \\cos\\angle DEB = -\\frac{162}{288} = -0.5625",
+   "en": "Rearrange the equation to isolate and solve for $\\cos\\angle DEB$.",
+   "ur": "مساوات کو ترتیب دے کر $\\cos\\angle DEB$ کی قیمت معلوم کریں۔",
+   "check": [
+    "288 - 450 == -162",
+    "-R(162, 288) == -R(9, 16)",
+    "-162/288 == -0.5625"
+   ]
+  },
+  {
+   "math": "\\angle DEB = \\cos^{-1}(-0.5625) \\approx 124.23^\\circ \\approx 124^\\circ",
+   "en": "Take the inverse cosine ($\\cos^{-1}$) to find the angle $\\angle DEB$ and round the final answer to the nearest whole degree.",
+   "ur": "زاویہ $\\angle DEB$ معلوم کرنے کے لیے معکوس کوسائن ($\\cos^{-1}$) لیں اور حتمی جواب کو قریبی مکمل درجہ (ڈگری) تک محدود کریں۔",
+   "check": [
+    "Abs((acos(-R(9,16))*180/pi) - 124) <= 0.5",
+    "sqrt(450) == 15*sqrt(2)",
+    "12**2 + 12**2 == 288",
+    "(288 - 450)/R(288) == -R(9,16)",
+    "Abs((acos(-R(9,16))*180/pi) - 124) <= 0.500000001"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

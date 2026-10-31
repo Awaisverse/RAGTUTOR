@@ -1,0 +1,70 @@
+{
+ "item": "c10-rev3-q3",
+ "label": "viii",
+ "answer_ref": "verified: both sides $= \\begin{bmatrix} 63 & 137 \\\\ 119 & 263 \\end{bmatrix}$",
+ "math": [
+  "",
+  "AB = \\begin{bmatrix} 2 & 3 \\\\ 4 & 5 \\end{bmatrix}\\begin{bmatrix} 5 & 6 \\\\ 2 & 1 \\end{bmatrix} = \\begin{bmatrix} (2)(5) + (3)(2) & (2)(6) + (3)(1) \\\\ (4)(5) + (5)(2) & (4)(6) + (5)(1) \\end{bmatrix}",
+  "= \\begin{bmatrix} 10 + 6 & 12 + 3 \\\\ 20 + 10 & 24 + 5 \\end{bmatrix} = \\begin{bmatrix} 16 & 15 \\\\ 30 & 29 \\end{bmatrix}",
+  "(AB)C = \\begin{bmatrix} 16 & 15 \\\\ 30 & 29 \\end{bmatrix}\\begin{bmatrix} 3 & 2 \\\\ 1 & 7 \\end{bmatrix} = \\begin{bmatrix} (16)(3) + (15)(1) & (16)(2) + (15)(7) \\\\ (30)(3) + (29)(1) & (30)(2) + (29)(7) \\end{bmatrix}",
+  "= \\begin{bmatrix} 48 + 15 & 32 + 105 \\\\ 90 + 29 & 60 + 203 \\end{bmatrix} = \\begin{bmatrix} 63 & 137 \\\\ 119 & 263 \\end{bmatrix}",
+  "",
+  "BC = \\begin{bmatrix} 5 & 6 \\\\ 2 & 1 \\end{bmatrix}\\begin{bmatrix} 3 & 2 \\\\ 1 & 7 \\end{bmatrix} = \\begin{bmatrix} (5)(3) + (6)(1) & (5)(2) + (6)(7) \\\\ (2)(3) + (1)(1) & (2)(2) + (1)(7) \\end{bmatrix}",
+  "= \\begin{bmatrix} 15 + 6 & 10 + 42 \\\\ 6 + 1 & 4 + 7 \\end{bmatrix} = \\begin{bmatrix} 21 & 52 \\\\ 7 & 11 \\end{bmatrix}",
+  "A(BC) = \\begin{bmatrix} 2 & 3 \\\\ 4 & 5 \\end{bmatrix}\\begin{bmatrix} 21 & 52 \\\\ 7 & 11 \\end{bmatrix} = \\begin{bmatrix} (2)(21) + (3)(7) & (2)(52) + (3)(11) \\\\ (4)(21) + (5)(7) & (4)(52) + (5)(11) \\end{bmatrix}",
+  "= \\begin{bmatrix} 42 + 21 & 104 + 33 \\\\ 84 + 35 & 208 + 55 \\end{bmatrix} = \\begin{bmatrix} 63 & 137 \\\\ 119 & 263 \\end{bmatrix}",
+  "(AB)C = \\begin{bmatrix} 63 & 137 \\\\ 119 & 263 \\end{bmatrix} = A(BC)"
+ ],
+ "why": [
+  {
+   "en": "To prove a matrix equation, we always solve the Left-Hand Side (LHS) and Right-Hand Side (RHS) separately. We start with $(AB)C$, where the brackets tell us to multiply $A$ and $B$ first.",
+   "ur": "کسی بھی میٹرکس مساوات کو ثابت کرنے کے لیے ہم بائیں طرف (LHS) اور دائیں طرف (RHS) کو الگ الگ حل کرتے ہیں۔ ہم $(AB)C$ سے شروع کرتے ہیں، جہاں بریکٹ ہمیں بتاتی ہے کہ پہلے $A$ اور $B$ کو ضرب دینی ہے۔"
+  },
+  {
+   "en": "Using the row-by-column rule of matrix multiplication, we set up the product $AB$. This prepares the inner bracket so we can later multiply its result with $C$.",
+   "ur": "میٹرکس کی ضرب کے 'قطار ضرب کالم' (row-by-column) اصول کو استعمال کرتے ہوئے ہم $AB$ کی ضرب ترتیب دیتے ہیں۔ اس سے بریکٹ والا حصہ حل ہو جائے گا جسے ہم بعد میں $C$ سے ضرب دے سکیں گے۔"
+  },
+  {
+   "en": "Simplifying the arithmetic gives us the single matrix $AB = \\begin{bmatrix} 16 & 15 \\\\ 30 & 29 \\end{bmatrix}$. Now the bracketed part of the Left-Hand Side is complete.",
+   "ur": "حساب کتاب کو مختصر کرنے سے ہمیں ایک میٹرکس $AB = \\begin{bmatrix} 16 & 15 \\\\ 30 & 29 \\end{bmatrix}$ مل جاتا ہے۔ اب بائیں طرف کا بریکٹ والا حصہ مکمل ہو چکا ہے۔"
+  },
+  {
+   "en": "Next, we multiply our result $AB$ on the left with matrix $C$ on the right, keeping the exact order shown in $(AB)C$. Remember, order matters in matrix multiplication!",
+   "ur": "اب ہم اپنے حاصل کردہ نتیجے $AB$ کو بائیں طرف اور میٹرکس $C$ کو دائیں طرف رکھ کر ضرب دیتے ہیں، بالکل اسی ترتیب سے جیسے $(AB)C$ میں دکھایا گیا ہے۔ یاد رکھیں، میٹرکس کی ضرب میں ترتیب بہت اہم ہوتی ہے!"
+  },
+  {
+   "en": "Adding the products gives $\\begin{bmatrix} 63 & 137 \\\\ 119 & 263 \\end{bmatrix}$, which is the final answer for our Left-Hand Side. We will keep this result in mind to compare with the Right-Hand Side.",
+   "ur": "ضرب دے کر جمع کرنے سے ہمیں $\\begin{bmatrix} 63 & 137 \\\\ 119 & 263 \\end{bmatrix}$ ملتا ہے، جو ہماری بائیں طرف (LHS) کا حتمی جواب ہے۔ ہم دائیں طرف کے جواب سے موازنہ کرنے کے لیے اس نتیجے کو ذہن میں رکھیں گے۔"
+  },
+  {
+   "en": "Now we begin solving the Right-Hand Side, $A(BC)$. According to the brackets, we must first find the product of $B$ and $C$ before involving $A$.",
+   "ur": "اب ہم دائیں طرف یعنی $A(BC)$ کو حل کرنا شروع کرتے ہیں۔ بریکٹ کے اصول کے مطابق، $A$ کو شامل کرنے سے پہلے ہمیں $B$ اور $C$ کا حاصل ضرب معلوم کرنا ہوگا۔"
+  },
+  {
+   "en": "We apply the row-by-column multiplication rule to matrices $B$ and $C$. This sets up the calculation for the new inner bracket $BC$.",
+   "ur": "ہم میٹرکس $B$ اور $C$ پر قطار کو کالم سے ضرب دینے کا اصول لاگو کرتے ہیں۔ اس سے نئی بریکٹ $BC$ کا حساب ترتیب پا جاتا ہے۔"
+  },
+  {
+   "en": "Completing the addition gives $BC = \\begin{bmatrix} 21 & 52 \\\\ 7 & 11 \\end{bmatrix}$. Having this single matrix allows us to perform the final multiplication with $A$.",
+   "ur": "جمع کا عمل مکمل کرنے سے ہمیں $BC = \\begin{bmatrix} 21 & 52 \\\\ 7 & 11 \\end{bmatrix}$ ملتا ہے۔ اس ایک میٹرکس کے ملنے کے بعد اب ہم $A$ کے ساتھ آخری ضرب دے سکتے ہیں۔"
+  },
+  {
+   "en": "To finish the Right-Hand Side, we place matrix $A$ first and multiply it by our new matrix $BC$, strictly following the order in $A(BC)$.",
+   "ur": "دائیں طرف کو مکمل کرنے کے لیے، ہم میٹرکس $A$ کو پہلے رکھتے ہیں اور اسے اپنے نئے میٹرکس $BC$ سے ضرب دیتے ہیں، اور $A(BC)$ کی ترتیب کا پورا خیال رکھتے ہیں۔"
+  },
+  {
+   "en": "Simplifying these numbers gives $\\begin{bmatrix} 63 & 137 \\\\ 119 & 263 \\end{bmatrix}$ as the final value of the Right-Hand Side. Notice how every entry matches what we got in Step 5.",
+   "ur": "ان نمبروں کو حل کرنے سے دائیں طرف (RHS) کی حتمی قیمت $\\begin{bmatrix} 63 & 137 \\\\ 119 & 263 \\end{bmatrix}$ آتی ہے۔ غور کریں کہ اس کا ہر رکن بالکل وہی ہے جو ہمیں مرحلہ 5 میں ملا تھا۔"
+  },
+  {
+   "en": "By comparing Step 5 and Step 10, we see that both sides produce the exact same matrix. This completes our verification.",
+   "ur": "مرحلہ 5 اور مرحلہ 10 کا موازنہ کرنے سے ہم دیکھتے ہیں کہ دونوں اطراف سے بالکل ایک جیسا میٹرکس حاصل ہوتا ہے۔ اس سے ہماری تصدیق مکمل ہو جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This result verifies the associative law of matrix multiplication, $(AB)C = A(BC)$, for the given matrices. It tells us that when multiplying three matrices in a fixed order, it does not matter which pair we group and multiply first—both ways lead to the exact same matrix $\\begin{bmatrix} 63 & 137 \\\\ 119 & 263 \\end{bmatrix}$.",
+  "ur": "یہ نتیجہ دیے گئے میٹرکسز کے لیے ضرب کے تلازمی قانون (associative law) یعنی $(AB)C = A(BC)$ کی تصدیق کرتا ہے۔ یہ ہمیں بتاتا ہے کہ جب تین میٹرکسز کو ایک خاص ترتیب میں ضرب دی جائے، تو اس سے کوئی فرق نہیں پڑتا کہ ہم پہلے کس جوڑے کو بریکٹ میں رکھ کر ضرب دیتے ہیں—دونوں طریقوں سے بالکل ایک ہی میٹرکس $\\begin{bmatrix} 63 & 137 \\\\ 119 & 263 \\end{bmatrix}$ حاصل ہوتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

@@ -1,0 +1,40 @@
+{
+ "item": "c10-rev1-q5",
+ "label": "v",
+ "answer_ref": "verified: $\\overline{\\overline{z_2}} = z_2$",
+ "math": [
+  "z_2 = 2 + 3i",
+  "\\overline{z} = a - bi",
+  "\\overline{z_2} = \\overline{2 + 3i} = 2 - 3i",
+  "\\overline{\\overline{z_2}} = \\overline{2 - 3i} = 2 + 3i",
+  "\\overline{\\overline{z_2}} = z_2"
+ ],
+ "why": [
+  {
+   "en": "In any verification question, our first job is to select only the value we need from the given data. Here, the equation only involves $z_2$, so writing down $z_2 = 2 + 3i$ sets our starting point and represents the Right Hand Side ($\\text{R.H.S}$) of our goal.",
+   "ur": "تصدیق کرنے والے کسی بھی سوال میں ہمارا پہلا کام دی گئی معلومات میں سے صرف مطلوبہ قیمت کو الگ کرنا ہوتا ہے۔ یہاں مساوات میں صرف $z_2$ شامل ہے، اس لیے $z_2 = 2 + 3i$ لکھنا ہمیں نقطہ آغاز فراہم کرتا ہے اور یہ ہمارے سوال کی دائیں سائیڈ ($\\text{R.H.S}$) بھی ہے۔"
+  },
+  {
+   "en": "Before applying the bars on $z_2$, we state the basic definition of a complex conjugate. This rule reminds us that the real part $a$ stays the same, and only the sign of the imaginary part $bi$ flips, which is the exact operation we must perform twice.",
+   "ur": "کمپلیکس نمبر $z_2$ پر بار (کونجوگیٹ) لگانے سے پہلے ہم کمپلیکس کونجوگیٹ کی بنیادی تعریف لکھتے ہیں۔ یہ اصول ہمیں یاد دلاتا ہے کہ حقیقی حصہ $a$ ویسا ہی رہتا ہے اور صرف امیجنری حصے $bi$ کی علامت بدلتی ہے، اور یہی عمل ہمیں دو بار دہرانا ہے۔"
+  },
+  {
+   "en": "To build the Left Hand Side ($\\overline{\\overline{z_2}}$), we always work from the inside out, starting with the inner bar $\\overline{z_2}$. Applying the conjugate rule once gives us $2 - 3i$, which completes the halfway stage of our calculation.",
+   "ur": "بائیں سائیڈ ($\\overline{\\overline{z_2}}$) معلوم کرنے کے لیے ہم ہمیشہ اندر سے باہر کی طرف حل کرتے ہیں، اس لیے پہلے اندرونی بار $\\overline{z_2}$ کو حل کریں گے۔ کونجوگیٹ کا اصول ایک بار لگانے سے ہمیں $2 - 3i$ ملتا ہے، جس سے ہمارا آدھا کام مکمل ہو جاتا ہے۔"
+  },
+  {
+   "en": "Now we apply the outer bar to our previous result $2 - 3i$ by using the conjugate definition a second time. Flipping the sign of the imaginary part again turns $-3i$ back into $+3i$, giving us the final value of the Left Hand Side.",
+   "ur": "اب ہم اپنے پچھلے نتیجے $2 - 3i$ پر بیرونی بار لگانے کے لیے کونجوگیٹ کی تعریف دوسری بار استعمال کرتے ہیں۔ امیجنری حصے کی علامت دوبارہ بدلنے سے $-3i$ واپس $+3i$ بن جاتا ہے، جس سے ہمیں بائیں سائیڈ ($\\text{L.H.S}$) کی حتمی قیمت مل جاتی ہے۔"
+  },
+  {
+   "en": "Finally, we compare our calculated Left Hand Side with the original $z_2$ from Step 1. Because both equal $2 + 3i$, we can replace $2 + 3i$ with $z_2$, which completes the proof that $\\text{L.H.S} = \\text{R.H.S}$.",
+   "ur": "آخر میں ہم اپنی معلوم کردہ بائیں سائیڈ کا پہلے مرحلے والے اصل نمبر $z_2$ سے موازنہ کرتے ہیں۔ چونکہ دونوں $2 + 3i$ کے برابر ہیں، اس لیے ہم $2 + 3i$ کی جگہ $z_2$ لکھ سکتے ہیں، جس سے یہ ثابت ہو جاتا ہے کہ $\\text{L.H.S} = \\text{R.H.S}$۔"
+  }
+ ],
+ "meaning": {
+  "en": "This verification shows a fundamental property of complex numbers: taking the conjugate twice cancels out the sign change and brings you right back to the original complex number $z_2 = 2 + 3i$. You can easily check this at a glance by seeing that changing $+3i$ to $-3i$ and then back to $+3i$ leaves the number unchanged.",
+  "ur": "یہ تصدیق کمپلیکس نمبرز کی ایک بنیادی خاصیت کو ظاہر کرتی ہے: کسی کمپلیکس نمبر کا دو بار کونجوگیٹ لینے سے علامت کی تبدیلی ختم ہو جاتی ہے اور ہمیں واپس اصل کمپلیکس نمبر $z_2 = 2 + 3i$ مل جاتا ہے۔ آپ ایک نظر میں اس کی پڑتال ایسے کر سکتے ہیں کہ $+3i$ کو $-3i$ میں بدلنے اور پھر واپس $+3i$ کرنے سے اصل نمبر میں کوئی فرق نہیں پڑتا۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

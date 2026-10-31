@@ -93,6 +93,8 @@ def validate(out, part):
     steps = out.get("steps")
     if not isinstance(steps, list) or not 3 <= len(steps) <= 8:
         return None, "needs 3 to 8 steps"
+    if len(part["steps"]) >= 3 and len(steps) <= len(part["steps"]):
+        return None, f"not more detailed than the {len(part['steps'])} steps already there: split the working into more steps"
     if not answer_ok(str(out.get("answer", "")), part["answer"]) and str(out.get("answer", "")).replace(" ", "") != part["answer"].replace(" ", ""):
         return None, f"answer changed: {str(out.get('answer'))[:60]!r} vs {part['answer'][:60]!r}"
     clean = []

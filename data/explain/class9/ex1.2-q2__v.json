@@ -1,0 +1,50 @@
+{
+ "item": "ex1.2-q2",
+ "label": "v",
+ "answer_ref": "$\\frac{1}{6}$",
+ "math": [
+  "\\frac{5 \\cdot (25)^{n+1} - 25 \\cdot (5)^{2n}}{5 \\cdot (5)^{2n+3} - (25)^{n+1}}",
+  "= \\frac{5^1 \\cdot (5^2)^{n+1} - 5^2 \\cdot 5^{2n}}{5^1 \\cdot 5^{2n+3} - (5^2)^{n+1}}",
+  "= \\frac{5^1 \\cdot 5^{2n+2} - 5^2 \\cdot 5^{2n}}{5^1 \\cdot 5^{2n+3} - 5^{2n+2}}",
+  "= \\frac{5^{2n+3} - 5^{2n+2}}{5^{2n+4} - 5^{2n+2}}",
+  "= \\frac{5^{2n+2} \\cdot 5^1 - 5^{2n+2} \\cdot 1}{5^{2n+2} \\cdot 5^2 - 5^{2n+2} \\cdot 1}",
+  "= \\frac{5^{2n+2}(5 - 1)}{5^{2n+2}(5^2 - 1)} = \\frac{5 - 1}{25 - 1}",
+  "= \\frac{4}{24} = \\frac{1}{6}"
+ ],
+ "why": [
+  {
+   "en": "Let us start by writing down the given fraction carefully. Notice that the bases are $5$ and $25$, and there are subtraction signs separating the terms, which means we cannot cancel anything directly yet.",
+   "ur": "آئیے سب سے پہلے دیے گئے کسر کو احتیاط سے لکھتے ہیں۔ غور کریں کہ یہاں اساس $5$ اور $25$ ہیں، اور رقموں کے درمیان تفریق کی علامتیں ہیں، جس کا مطلب ہے کہ ہم ابھی براہِ راست کچھ بھی مختصر نہیں کر سکتے۔"
+  },
+  {
+   "en": "To use the laws of exponents, we need the same base everywhere. Since $25$ is just $5^2$, we replace every $25$ with $5^2$ so that the entire expression is written in terms of base $5$.",
+   "ur": "قوت نما کے قوانین استعمال کرنے کے لیے ہمیں ہر جگہ ایک جیسی اساس چاہیے۔ چونکہ $25$ دراصل $5^2$ ہے، اس لیے ہم ہر $25$ کی جگہ $5^2$ لکھ دیتے ہیں تاکہ پورا جملہ اساس $5$ کی شکل میں آ جائے۔"
+  },
+  {
+   "en": "Here we use the power of a power rule, which tells us to multiply the exponents when a power is raised to another power. Multiplying $2$ by $n+1$ gives $2n+2$, removing the brackets and making the terms simpler.",
+   "ur": "یہاں ہم قوت کی قوت کا قانون استعمال کرتے ہیں، جو ہمیں بتاتا ہے کہ جب کسی قوت پر دوسری قوت ہو تو قوت نماؤں کو آپس میں ضرب دی جاتی ہے۔ $2$ کو $n+1$ سے ضرب دینے سے $2n+2$ ملتا ہے، جس سے بریکٹ ختم ہو جاتے ہیں اور رقمیں سادہ ہو جاتی ہیں۔"
+  },
+  {
+   "en": "Now we apply the product law of exponents: when multiplying terms with the same base $5$, we simply add their powers. This combines each product into a single power of $5$, making the numerator and denominator much cleaner.",
+   "ur": "اب ہم قوت نماؤں کا ضربی قانون لاگو کرتے ہیں: جب ایک جیسی اساس $5$ والی رقموں کو ضرب دی جائے تو ان کی قوتیں جمع ہو جاتی ہیں۔ اس سے ہر ضرب کی رقم $5$ کی ایک واحد قوت میں بدل جاتی ہے، جس سے شمار کنندہ اور مخرج بہت صاف ہو جاتے ہیں۔"
+  },
+  {
+   "en": "Because there is subtraction in both the top and bottom, we must factor out a common term to simplify further. By rewriting the powers so that the smallest power, $5^{2n+2}$, appears in every piece, we prepare the expression for factoring.",
+   "ur": "چونکہ اوپر اور نیچے دونوں جگہ تفریق کا عمل ہے، اس لیے مزید مختصر کرنے کے لیے ہمیں مشترک رقم باہر نکالنی ہوگی۔ قوتوں کو اس طرح دوبارہ لکھنے سے کہ سب سے چھوٹی قوت $5^{2n+2}$ ہر حصے میں نظر آئے، ہم جملے کو تجزی کے لیے تیار کرتے ہیں۔"
+  },
+  {
+   "en": "We take the common factor $5^{2n+2}$ outside the brackets in both the numerator and denominator. Since $5^{2n+2}$ is now multiplying the whole top and bottom, it cancels out completely, leaving us with simple numbers without any $n$!",
+   "ur": "ہم شمار کنندہ اور مخرج دونوں میں مشترک جزو ضربی $5^{2n+2}$ کو بریکٹ سے باہر نکال لیتے ہیں۔ چونکہ $5^{2n+2}$ اب اوپر اور نیچے پوری رقم سے ضرب کھا رہا ہے، اس لیے یہ مکمل طور پر کٹ جاتا ہے، اور ہمارے پاس بغیر کسی $n$ کے صرف سادہ اعداد بچ جاتے ہیں!"
+  },
+  {
+   "en": "Finally, we do the simple subtraction to get $\\frac{4}{24}$ and divide both top and bottom by $4$ to reduce the fraction to its lowest form. This gives our final simplified answer, $\\frac{1}{6}$.",
+   "ur": "آخر میں، ہم سادہ تفریق کر کے $\\frac{4}{24}$ حاصل کرتے ہیں اور کسر کو اس کی مختصر ترین شکل میں لانے کے لیے اوپر اور نیچے دونوں کو $4$ سے تقسیم کرتے ہیں۔ اس سے ہمیں ہمارا حتمی مختصر جواب $\\frac{1}{6}$ مل جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $\\frac{1}{6}$ means that no matter what value the variable $n$ has, this entire complicated expression always equals $\\frac{1}{6}$ because all the parts with $n$ cancel out. You can easily check this by putting a simple number like $n = 0$ into the original question, which also simplifies to $\\frac{4}{24} = \\frac{1}{6}$.",
+  "ur": "حتمی جواب $\\frac{1}{6}$ کا مطلب یہ ہے کہ متغیر $n$ کی قیمت کچھ بھی ہو، یہ پورا پیچیدہ جملہ ہمیشہ $\\frac{1}{6}$ کے برابر ہوتا ہے کیونکہ $n$ والے تمام حصے آپس میں کٹ جاتے ہیں۔ آپ اصل سوال میں $n = 0$ جیسا کوئی سادہ عدد رکھ کر باآسانی اس کی پڑتال کر سکتے ہیں، جو حل ہو کر $\\frac{4}{24} = \\frac{1}{6}$ ہی بنتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

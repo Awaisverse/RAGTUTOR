@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex3.5-q5",
+ "label": "i",
+ "answer_ref": "$\\begin{bmatrix} \\frac{1}{5} & 0 \\\\ 0 & \\frac{1}{5} \\end{bmatrix}$",
+ "math": [
+  "A = \\begin{bmatrix} 5 & 0 \\\\ 0 & 5 \\end{bmatrix}",
+  "A^{-1} = \\frac{1}{|A|} \\operatorname{Adj}A, \\quad |A| \\neq 0",
+  "|A| = \\begin{vmatrix} 5 & 0 \\\\ 0 & 5 \\end{vmatrix} = (5)(5) - (0)(0) = 25 - 0 = 25",
+  "\\operatorname{Adj}A = \\begin{bmatrix} 5 & 0 \\\\ 0 & 5 \\end{bmatrix}",
+  "A^{-1} = \\frac{1}{25} \\begin{bmatrix} 5 & 0 \\\\ 0 & 5 \\end{bmatrix} = \\begin{bmatrix} \\frac{5}{25} & \\frac{0}{25} \\\\ \\frac{0}{25} & \\frac{5}{25} \\end{bmatrix}",
+  "A^{-1} = \\begin{bmatrix} \\frac{1}{5} & 0 \\\\ 0 & \\frac{1}{5} \\end{bmatrix}"
+ ],
+ "why": [
+  {
+   "en": "In algebra, we always begin by giving a name like $A$ to our unnamed matrix. This allows us to easily refer to its determinant $|A|$, its adjoint $\\operatorname{Adj}A$, and its inverse $A^{-1}$ in the upcoming steps.",
+   "ur": "الجبرا میں ہم ہمیشہ دیے گئے قالب کو $A$ جیسا کوئی نام دے کر شروعات کرتے ہیں۔ اس سے ہمیں اگلے مراحل میں اس کے مقطع $|A|$، ایڈجوائنٹ $\\operatorname{Adj}A$، اور ضربی معکوس $A^{-1}$ کو لکھنے میں آسانی ہوتی ہے۔"
+  },
+  {
+   "en": "Writing down the formula for the multiplicative inverse serves as our roadmap for the solution. It clearly shows us that we need to find two specific things—the determinant $|A|$ and the adjoint $\\operatorname{Adj}A$—and reminds us that the determinant cannot be $0$.",
+   "ur": "ضربی معکوس کا فارمولا لکھنا ہمارے حل کے لیے ایک نقشے کا کام کرتا ہے۔ یہ ہمیں واضح طور پر بتاتا ہے کہ ہمیں دو چیزیں—مقطع $|A|$ اور ایڈجوائنٹ $\\operatorname{Adj}A$—معلوم کرنی ہیں، اور یہ یاد دلاتا ہے کہ مقطع $0$ نہیں ہونا چاہیے۔"
+  },
+  {
+   "en": "We calculate the determinant first because division by $0$ is undefined, so a singular matrix (where $|A| = 0$) has no inverse. Getting $25$ confirms that our matrix is non-singular and gives us the exact number we will divide by later.",
+   "ur": "ہم سب سے پہلے مقطع معلوم کرتے ہیں کیونکہ $0$ سے تقسیم ممکن نہیں ہے، اس لیے نادر قالب (جہاں $|A| = 0$ ہو) کا معکوس ممکن نہیں ہوتا۔ جواب $25$ آنا اس بات کی تصدیق کرتا ہے کہ ہمارا قالب غیر نادر ہے اور ہمیں وہ عدد مل جاتا ہے جس سے ہم بعد میں تقسیم کریں گے۔"
+  },
+  {
+   "en": "By the definition of the adjoint of a $2 \\times 2$ matrix, we swap the main diagonal entries ($5$ and $5$) and change the signs of the other two entries ($0$ and $0$). Because both diagonal entries are $5$ and $0$ has no sign, the adjoint matrix happens to look identical to our original matrix $A$.",
+   "ur": "$2 \\times 2$ قالب کے ایڈجوائنٹ کی تعریف کے مطابق، ہم وتر کے ارکان ($5$ اور $5$) کی جگہ بدلتے ہیں اور باقی دو ارکان ($0$ اور $0$) کی علامتیں تبدیل کرتے ہیں۔ چونکہ وتر کے دونوں ارکان $5$ ہیں اور $0$ کی کوئی علامت نہیں ہوتی، اس لیے ایڈجوائنٹ قالب بالکل اصل قالب $A$ جیسا ہی رہتا ہے۔"
+  },
+  {
+   "en": "Now that we have both required pieces, we put $|A| = 25$ and $\\operatorname{Adj}A$ into our formula. By the rule of scalar multiplication, multiplying the matrix by $\\frac{1}{25}$ means dividing every single entry inside the matrix by $25$.",
+   "ur": "اب جبکہ ہمارے پاس دونوں ضروری حصے موجود ہیں، ہم $|A| = 25$ اور $\\operatorname{Adj}A$ کی قیمتیں اپنے فارمولے میں درج کرتے ہیں۔ عددی ضرب کے اصول کے تحت، قالب کو $\\frac{1}{25}$ سے ضرب دینے کا مطلب ہے کہ قالب کے اندر موجود ہر ایک رکن کو $25$ پر تقسیم کیا جائے۔"
+  },
+  {
+   "en": "In mathematics, we always write our final answers in the simplest form by reducing fractions. Dividing $5$ by $25$ gives $\\frac{1}{5}$ and $0$ divided by $25$ gives $0$, which completes our calculation neatly.",
+   "ur": "ریاضی میں ہم کسر کو مختصر کر کے اپنا حتمی جواب ہمیشہ سادہ ترین شکل میں لکھتے ہیں۔ $5$ کو $25$ پر تقسیم کرنے سے $\\frac{1}{5}$ اور $0$ کو $25$ پر تقسیم کرنے سے $0$ ملتا ہے، جس سے ہمارا حل مکمل ہو جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final matrix $A^{-1} = \\begin{bmatrix} \\frac{1}{5} & 0 \\\\ 0 & \\frac{1}{5} \\end{bmatrix}$ is the multiplicative inverse of the given matrix $A = \\begin{bmatrix} 5 & 0 \\\\ 0 & 5 \\end{bmatrix}$. This means that if you multiply the original matrix $A$ by this new matrix $A^{-1}$, the $5$ and $\\frac{1}{5}$ will cancel out to give the identity matrix $I = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}$, which is how you can easily check your answer.",
+  "ur": "حاصل ہونے والا قالب $A^{-1} = \\begin{bmatrix} \\frac{1}{5} & 0 \\\\ 0 & \\frac{1}{5} \\end{bmatrix}$ دیے گئے قالب $A = \\begin{bmatrix} 5 & 0 \\\\ 0 & 5 \\end{bmatrix}$ کا ضربی معکوس ہے۔ اس کا مطلب یہ ہے کہ اگر آپ اصل قالب $A$ کو اس نئے قالب $A^{-1}$ سے ضرب دیں، تو $5$ اور $\\frac{1}{5}$ آپس میں کٹ کر وحدانی قالب $I = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}$ دیں گے، اور اسی طریقے سے آپ اپنے جواب کی آسانی سے پڑتال بھی کر سکتے ہیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

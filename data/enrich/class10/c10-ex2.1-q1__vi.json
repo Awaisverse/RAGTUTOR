@@ -1,0 +1,50 @@
+{
+ "item": "c10-ex2.1-q1",
+ "label": "vi",
+ "answer_ref": "$6 x^{2} + 7 x - 20 = 0$",
+ "steps": [
+  {
+   "math": "\\frac{6x + 6}{20 - x} = \\frac{1}{x}",
+   "en": "Write down the given equation. We need to convert this into the standard form of a quadratic equation, which is $ax^2 + bx + c = 0$.",
+   "ur": "دی گئی مساوات لکھیں۔ ہمیں اسے دو درجی مساوات کی معیاری شکل، یعنی $ax^2 + bx + c = 0$ میں تبدیل کرنا ہے۔"
+  },
+  {
+   "math": "x(6x + 6) = 1(20 - x)",
+   "en": "To eliminate the fractions, cross-multiply the denominators across the equals sign (or multiply both sides by the LCM, $x(20 - x)$).",
+   "ur": "کسور ختم کرنے کے لیے چلیپائی ضرب (کراس ملٹی پلائی) کریں، یا دونوں اطراف کو ذواضعاف اقل $x(20 - x)$ سے ضرب دیں۔",
+   "check": [
+    "(x*(6*x + 6)) - (1*(20 - x)) == (x*(20 - x))*((6*x + 6)/(20 - x) - 1/x)"
+   ]
+  },
+  {
+   "math": "6x^2 + 6x = 20 - x",
+   "en": "Expand the brackets by multiplying $x$ with each term inside the parentheses on the left-hand side.",
+   "ur": "بائیں طرف قوسین کے اندر موجود ہر رکن کو $x$ سے ضرب دے کر قوسین کھولیں۔",
+   "check": [
+    "(6*x**2 + 6*x) - (20 - x) == (x*(6*x + 6)) - (1*(20 - x))"
+   ]
+  },
+  {
+   "math": "6x^2 + 6x + x - 20 = 0",
+   "en": "Move all terms from the right-hand side to the left-hand side so that the right side becomes zero. Remember to change their signs.",
+   "ur": "دائیں طرف کے تمام ارکان کو بائیں طرف منتقل کریں تاکہ دائیں طرف صفر رہ جائے۔ علامتیں تبدیل کرنا یاد رکھیں۔",
+   "check": [
+    "(6*x**2 + 6*x + x - 20) - 0 == (6*x**2 + 6*x) - (20 - x)"
+   ]
+  },
+  {
+   "math": "6 x^{2} + 7 x - 20 = 0",
+   "en": "Combine the like terms ($6x + x = 7x$). This is the required standard form of the quadratic equation.",
+   "ur": "ایک جیسے ارکان کو جمع کریں ($6x + x = 7x$)۔ یہ دو درجی مساوات کی مطلوبہ معیاری شکل ہے۔",
+   "check": [
+    "6*x**2 + 7*x - 20 == 6*x**2 + 6*x + x - 20",
+    "((6*x + 6)*(x)) - (20 - x) == (-x**2 + 20*x)*(((6*x + 6)/(20 - x)) - (1/x))",
+    "(6*x**2 + 6*x) - (20 - x) == ((6*x + 6)*(x)) - (20 - x)",
+    "(6*x**2 + 7*x - 20) - (0) == (6*x**2 + 6*x) - (20 - x)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

@@ -1,0 +1,65 @@
+{
+ "item": "c10-ex2.7-q3",
+ "label": "",
+ "answer_ref": "$t \\approx 3.79$ seconds",
+ "steps": [
+  {
+   "math": "d = t^2 - 0.5t",
+   "en": "The given equation relates the distance $d$ (in metres) to the time $t$ (in seconds). We need to find the time $t$ when the distance is $d = 12.5$ metres.",
+   "ur": "دی گئی مساوات فاصلے $d$ (میٹر میں) اور وقت $t$ (سیکنڈ میں) کے درمیان تعلق ظاہر کرتی ہے۔ ہمیں وقت $t$ معلوم کرنا ہے جب فاصلہ $d = 12.5$ میٹر ہو۔"
+  },
+  {
+   "math": "12.5 = t^2 - 0.5t \\Rightarrow t^2 - 0.5t - 12.5 = 0",
+   "en": "Substitute $d = 12.5$ into the equation and rearrange all terms to one side to write it in standard quadratic form $at^2 + bt + c = 0$.",
+   "ur": "مساوات میں $d = 12.5$ درج کریں اور تمام رقوم کو ایک طرف لے جا کر معیاری دو درجی شکل $at^2 + bt + c = 0$ میں لکھیں۔"
+  },
+  {
+   "math": "a = 1, \\quad b = -0.5, \\quad c = -12.5",
+   "en": "Compare the equation with the standard quadratic equation $at^2 + bt + c = 0$ to identify the coefficients.",
+   "ur": "عددی سروں کی شناخت کے لیے مساوات کا معیاری دو درجی مساوات $at^2 + bt + c = 0$ سے موازنہ کریں۔"
+  },
+  {
+   "math": "t = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a} = \\frac{-(-0.5) \\pm \\sqrt{(-0.5)^2 - 4(1)(-12.5)}}{2(1)}",
+   "en": "Apply the quadratic formula and substitute the values of $a$, $b$, and $c$.",
+   "ur": "دو درجی کلیہ (quadratic formula) لگائیں اور $a$، $b$ اور $c$ کی قیمتیں درج کریں۔",
+   "check": [
+    "-(-R(1,2)) == R(1,2)",
+    "2*1 == 2"
+   ]
+  },
+  {
+   "math": "t = \\frac{0.5 \\pm \\sqrt{0.25 + 50}}{2} = \\frac{0.5 \\pm \\sqrt{50.25}}{2}",
+   "en": "Simplify the expression inside the square root.",
+   "ur": "جذر کے اندر موجود عبارت کو مختصر کریں۔",
+   "check": [
+    "(-R(1,2))**2 == R(1,4)",
+    "-4*1*(-R(25,2)) == 50",
+    "R(1,4) + 50 == R(201,4)"
+   ]
+  },
+  {
+   "math": "t \\approx \\frac{0.5 \\pm 7.089}{2}",
+   "en": "Calculate the square root: $\\sqrt{50.25} \\approx 7.089$.",
+   "ur": "جذر کی قیمت معلوم کریں: $\\sqrt{50.25} \\approx 7.089$۔",
+   "check": [
+    "Abs(sqrt(R(201,4)) - R(7089,1000)) < R(1,1000)"
+   ]
+  },
+  {
+   "math": "t = \\frac{0.5 + 7.089}{2} = \\frac{7.589}{2} \\approx 3.79",
+   "en": "Since time $t$ cannot be negative, we ignore the negative sign and take only the positive sign. Thus, the time taken is approximately $3.79$ seconds.",
+   "ur": "چونکہ وقت $t$ منفی نہیں ہو سکتا، اس لیے ہم منفی علامت کو نظر انداز کرتے ہیں اور صرف مثبت علامت لیتے ہیں۔ اس طرح درکار وقت تقریباً $3.79$ سیکنڈ ہے۔",
+   "check": [
+    "R(1,2) + R(7089,1000) == R(7589,1000)",
+    "R(7589,1000)/2 == R(7589,2000)",
+    "Abs(R(7589,2000) - R(379,100)) < R(1,100)",
+    "R(1,4) + 50 == R(201,4)",
+    "Abs((R(1,2) + sqrt(R(201,4)))/2 - 3.794) < 0.001",
+    "Abs(3.794**2 - 0.5*3.794 - 12.5) < 0.01"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

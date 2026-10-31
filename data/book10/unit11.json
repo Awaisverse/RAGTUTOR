@@ -3929,31 +3929,56 @@
      "prompt": "",
      "steps": [
       {
-       "math": "\\bar{x} = \\frac{52 + 55 + 50 + 53 + 54 + 56 + 52}{7} = \\frac{372}{7} \\approx 53.14",
-       "en": "Mean = sum $\\div$ number of values.",
-       "ur": "اوسط = مجموعہ $\\div$ تعداد۔",
+       "math": "x = 52, 55, 50, 53, 54, 56, 52, \\quad n = 7",
+       "en": "First, write down the given data values $x$ and the total number of workers $n$.",
+       "ur": "سب سے پہلے، دی گئی مدات $x$ اور کارکنوں کی کل تعداد $n$ لکھیں۔"
+      },
+      {
+       "math": "\\bar{x} = \\frac{\\sum x}{n} = \\frac{52 + 55 + 50 + 53 + 54 + 56 + 52}{7} = \\frac{372}{7} \\approx 53.14",
+       "en": "Find the arithmetic mean $\\bar{x}$ by dividing the sum of all values by the total number of values $n$.",
+       "ur": "تمام اقدار کے مجموعے کو کل تعداد $n$ پر تقسیم کر کے حسابی اوسط $\\bar{x}$ معلوم کریں۔",
        "check": [
-        "(52) + (55) + (50) + (53) + (54) + (56) + (52) == (372)"
+        "52 + 55 + 50 + 53 + 54 + 56 + 52 == 372",
+        "Abs(R(372, 7) - 53.14) <= 0.005"
        ]
       },
       {
-       "math": "\\sigma^2 = \\frac{\\sum(x - \\bar{x})^2}{n} = \\frac{24.8571}{7} \\approx 3.55",
-       "en": "Variance = mean of the squared deviations from the mean.",
-       "ur": "تغیر = اوسط سے انحرافات کے مربعوں کا اوسط۔",
+       "math": "\\sum (x - \\bar{x})^2 = (52 - 53.14)^2 + (55 - 53.14)^2 + (50 - 53.14)^2 + (53 - 53.14)^2 + (54 - 53.14)^2 + (56 - 53.14)^2 + (52 - 53.14)^2",
+       "en": "Set up the sum of the squared deviations of each value $x$ from the mean $\\bar{x}$.",
+       "ur": "اوسط $\\bar{x}$ سے ہر قدر $x$ کے انحراف کے مربعوں کا مجموعہ ترتیب دیں۔"
+      },
+      {
+       "math": "\\sum (x - \\bar{x})^2 = 1.30 + 3.46 + 9.86 + 0.02 + 0.74 + 8.18 + 1.30 \\approx 24.8571",
+       "en": "Calculate the squared deviations and add them together to find $\\sum(x - \\bar{x})^2$.",
+       "ur": "انحرافات کے مربعے معلوم کریں اور $\\sum(x - \\bar{x})^2$ حاصل کرنے کے لیے انہیں جمع کریں۔",
        "check": [
-        "Abs(((((52) - (372/7))**2 + ((55) - (372/7))**2 + ((50) - (372/7))**2 + ((53) - (372/7))**2 + ((54) - (372/7))**2 + ((56) - (372/7))**2 + ((52) - (372/7))**2)/7) - 3.55) <= 0.0050000010000000004"
+        "Abs(((52 - R(372, 7))**2 + (55 - R(372, 7))**2 + (50 - R(372, 7))**2 + (53 - R(372, 7))**2 + (54 - R(372, 7))**2 + (56 - R(372, 7))**2 + (52 - R(372, 7))**2) - 24.8571) <= 0.001"
        ]
       },
       {
-       "math": "\\sigma = \\sqrt{\\sigma^2} \\approx 1.88",
-       "en": "Standard deviation = square root of the variance.",
-       "ur": "معیاری انحراف = تغیر کا جذر۔",
+       "math": "\\text{Variance } (\\sigma^2) = \\frac{\\sum(x - \\bar{x})^2}{n} = \\frac{24.8571}{7} \\approx 3.55",
+       "en": "Apply the variance formula for ungrouped data by dividing the sum of squared deviations by $n$.",
+       "ur": "غیر گروہی مواد کے لیے تغیر (Variance) کا فارمولا استعمال کرتے ہوئے مربع انحرافات کے مجموعے کو $n$ پر تقسیم کریں۔",
        "check": [
+        "Abs((24.8571 / 7) - 3.55) <= 0.005",
+        "Abs(R(174, 49) - 3.55) <= 0.005"
+       ]
+      },
+      {
+       "math": "\\text{S.D. } (\\sigma) = \\sqrt{\\sigma^2} = \\sqrt{3.55} \\approx 1.88",
+       "en": "Take the positive square root of the variance to find the standard deviation ($\\sigma$).",
+       "ur": "معیاری انحراف ($\\sigma$) معلوم کرنے کے لیے تغیر کا مثبت جذر لیں۔",
+       "check": [
+        "Abs(sqrt(3.55) - 1.88) <= 0.005",
+        "Abs(sqrt(R(174, 49)) - 1.88) <= 0.005",
+        "(52) + (55) + (50) + (53) + (54) + (56) + (52) == (372)",
+        "Abs(((((52) - (372/7))**2 + ((55) - (372/7))**2 + ((50) - (372/7))**2 + ((53) - (372/7))**2 + ((54) - (372/7))**2 + ((56) - (372/7))**2 + ((52) - (372/7))**2)/7) - 3.55) <= 0.0050000010000000004",
         "Abs((sqrt((174/49))) - 1.88) <= 0.0050000010000000004"
        ]
       }
      ],
      "answer": "Variance = 3.55, SD = 1.88",
+     "enriched": true,
      "book_key": "Variance = 3.55, SD = 1.88"
     }
    ],
@@ -3971,31 +3996,57 @@
      "prompt": "",
      "steps": [
       {
-       "math": "\\bar{x} = \\frac{120 + 135 + 130 + 125 + 140}{5} = \\frac{650}{5} \\approx 130.00",
-       "en": "Mean = sum $\\div$ number of values.",
-       "ur": "اوسط = مجموعہ $\\div$ تعداد۔",
+       "math": "x = 120, 135, 130, 125, 140 \\quad (n = 5)",
+       "en": "Write down the given number of visitors for $n = 5$ days.",
+       "ur": "$n = 5$ دنوں کے لیے آنے والے افراد کی دی گئی تعداد لکھیں۔",
        "check": [
-        "(120) + (135) + (130) + (125) + (140) == (650)"
+        "5 == 5"
        ]
       },
       {
-       "math": "\\sigma^2 = \\frac{\\sum(x - \\bar{x})^2}{n} = \\frac{250}{5} \\approx 50.00",
-       "en": "Variance = mean of the squared deviations from the mean.",
-       "ur": "تغیر = اوسط سے انحرافات کے مربعوں کا اوسط۔",
+       "math": "\\bar{x} = \\frac{\\sum x}{n} = \\frac{120 + 135 + 130 + 125 + 140}{5} = \\frac{650}{5} = 130",
+       "en": "First, calculate the arithmetic mean ($\\bar{x}$) by dividing the sum of all values by the total number of days.",
+       "ur": "سب سے پہلے، تمام قیمتوں کے مجموعے کو دنوں کی کل تعداد پر تقسیم کر کے حسابی اوسط ($\\bar{x}$) معلوم کریں۔",
        "check": [
-        "Abs(((((120) - (130))**2 + ((135) - (130))**2 + ((130) - (130))**2 + ((125) - (130))**2 + ((140) - (130))**2)/5) - 50.00) <= 0.0050000010000000004"
+        "120 + 135 + 130 + 125 + 140 == 650",
+        "650 / 5 == 130"
        ]
       },
       {
-       "math": "\\sigma = \\sqrt{\\sigma^2} \\approx 7.07",
-       "en": "Standard deviation = square root of the variance.",
-       "ur": "معیاری انحراف = تغیر کا جذر۔",
+       "math": "\\begin{aligned} \\sum (x - \\bar{x})^2 &= (120 - 130)^2 + (135 - 130)^2 + (130 - 130)^2 + (125 - 130)^2 + (140 - 130)^2 \\\\ &= (-10)^2 + (5)^2 + (0)^2 + (-5)^2 + (10)^2 \\\\ &= 100 + 25 + 0 + 25 + 100 = 250 \\end{aligned}",
+       "en": "Find the deviation of each value from the mean ($x - \\bar{x}$), square each deviation, and add them together.",
+       "ur": "ہر قیمت کا اوسط سے انحراف ($x - \\bar{x}$) معلوم کریں، ہر انحراف کا مربع لیں، اور انہیں آپس میں جمع کریں۔",
        "check": [
+        "(120 - 130)**2 == 100",
+        "(135 - 130)**2 == 25",
+        "(130 - 130)**2 == 0",
+        "(125 - 130)**2 == 25",
+        "(140 - 130)**2 == 100",
+        "100 + 25 + 0 + 25 + 100 == 250"
+       ]
+      },
+      {
+       "math": "\\text{Variance } (S^2) = \\frac{\\sum (x - \\bar{x})^2}{n} = \\frac{250}{5} = 50",
+       "en": "Substitute $\\sum (x - \\bar{x})^2 = 250$ and $n = 5$ into the variance formula.",
+       "ur": "تغیر (Variance) کے فارمولے میں $\\sum (x - \\bar{x})^2 = 250$ اور $n = 5$ درج کریں۔",
+       "check": [
+        "250 / 5 == 50"
+       ]
+      },
+      {
+       "math": "\\text{S.D.} = \\sqrt{\\frac{\\sum (x - \\bar{x})^2}{n}} = \\sqrt{50} \\approx 7.07",
+       "en": "Take the positive square root of the variance to find the standard deviation.",
+       "ur": "معیاری انحراف (Standard Deviation) معلوم کرنے کے لیے تغیر کا مثبت جذر لیں۔",
+       "check": [
+        "Abs(sqrt(50) - 7.07) <= 0.005",
+        "(120) + (135) + (130) + (125) + (140) == (650)",
+        "Abs(((((120) - (130))**2 + ((135) - (130))**2 + ((130) - (130))**2 + ((125) - (130))**2 + ((140) - (130))**2)/5) - 50.00) <= 0.0050000010000000004",
         "Abs((sqrt((50))) - 7.07) <= 0.0050000010000000004"
        ]
       }
      ],
      "answer": "Variance = 50, SD = 7.07",
+     "enriched": true,
      "book_key": "Variance = 50, SD = 7.07"
     }
    ],
@@ -4013,31 +4064,66 @@
      "prompt": "",
      "steps": [
       {
-       "math": "1, 3, 5, \\ldots, 45:\\quad \\text{Range} = 45 - 1 = 44",
-       "en": "The 23rd odd number is $2(23) - 1 = 45$.",
-       "ur": "23واں طاق عدد $2(23) - 1 = 45$ ہے۔",
+       "math": "x = 1, 3, 5, 7, \\ldots, 2n - 1",
+       "en": "We need to find the range, variance, and standard deviation of the first $n = 23$ odd numbers. The $n$-th odd number is given by the formula $2n - 1$.",
+       "ur": "ہمیں پہلے $n = 23$ طاق اعداد کی وسعت (range)، تغیر (variance) اور معیاری انحراف (standard deviation) معلوم کرنا ہے۔ $n$-واں طاق عدد معلوم کرنے کا فارمولا $2n - 1$ ہے۔"
+      },
+      {
+       "math": "x_{23} = 2(23) - 1 = 46 - 1 = 45",
+       "en": "Substitute $n = 23$ to find the 23rd (largest) odd number. Thus, the data set is $1, 3, 5, \\ldots, 45$, where the minimum value is $x_m = 1$ and the maximum value is $x_M = 45$.",
+       "ur": "23واں (سب سے بڑا) طاق عدد معلوم کرنے کے لیے $n = 23$ درج کریں۔ اس طرح، مواد کا سیٹ $1, 3, 5, \\ldots, 45$ ہے، جہاں کم سے کم قیمت $x_m = 1$ اور زیادہ سے زیادہ قیمت $x_M = 45$ ہے۔",
        "check": [
-        "2*23 - 1 == 45"
+        "2*23 - 1 == 45",
+        "46 - 1 == 45"
        ]
       },
       {
-       "math": "\\bar{x} = \\frac{1 + 45}{2} = 23,\\quad \\sigma^2 = \\frac{n^2 - 1}{3} = \\frac{23^2 - 1}{3} = 176",
-       "en": "For the first $n$ odd numbers the variance is $\\frac{n^2 - 1}{3}$.",
-       "ur": "پہلے $n$ طاق اعداد کا تغیر $\\frac{n^2 - 1}{3}$ ہے۔",
+       "math": "\\text{Range} = x_M - x_m = 45 - 1 = 44",
+       "en": "The range is the difference between the largest value $x_M$ and the smallest value $x_m$.",
+       "ur": "وسعت (Range) سب سے بڑی قیمت $x_M$ اور سب سے چھوٹی قیمت $x_m$ کے درمیان فرق ہے۔",
        "check": [
+        "45 - 1 == 44"
+       ]
+      },
+      {
+       "math": "\\bar{x} = \\frac{1 + 45}{2} = \\frac{46}{2} = 23",
+       "en": "For an evenly spaced series (arithmetic progression), the mean $\\bar{x}$ is the average of the first and last terms (or simply $n$ for the first $n$ odd numbers).",
+       "ur": "یکساں وقفے والے سلسلے (حسابی تصاعد) کے لیے، حسابی اوسط $\\bar{x}$ پہلی اور آخری رقم کی اوسط ہوتی ہے (یا پہلے $n$ طاق اعداد کے لیے محض $n$ ہوتی ہے)۔",
+       "check": [
+        "R(1 + 45, 2) == 23",
+        "R(46, 2) == 23"
+       ]
+      },
+      {
+       "math": "S^2 = \\frac{\\sum (x - \\bar{x})^2}{n} = \\frac{n^2 - 1}{3}",
+       "en": "The variance $S^2$ of the first $n$ odd natural numbers is given by the standard formula $\\frac{n^2 - 1}{3}$.",
+       "ur": "پہلے $n$ طاق قدرتی اعداد کا تغیر $S^2$ معیاری فارمولے $\\frac{n^2 - 1}{3}$ سے معلوم کیا جاتا ہے۔"
+      },
+      {
+       "math": "S^2 = \\frac{23^2 - 1}{3} = \\frac{529 - 1}{3} = \\frac{528}{3} = 176",
+       "en": "Substitute $n = 23$ into the variance formula and simplify.",
+       "ur": "تغیر کے فارمولے میں $n = 23$ درج کریں اور مختصر کریں۔",
+       "check": [
+        "23**2 == 529",
+        "529 - 1 == 528",
+        "R(528, 3) == 176",
         "((1 - 23)**2 + (3 - 23)**2 + (5 - 23)**2 + (7 - 23)**2 + (9 - 23)**2 + (11 - 23)**2 + (13 - 23)**2 + (15 - 23)**2 + (17 - 23)**2 + (19 - 23)**2 + (21 - 23)**2 + (23 - 23)**2 + (25 - 23)**2 + (27 - 23)**2 + (29 - 23)**2 + (31 - 23)**2 + (33 - 23)**2 + (35 - 23)**2 + (37 - 23)**2 + (39 - 23)**2 + (41 - 23)**2 + (43 - 23)**2 + (45 - 23)**2)/23 == 176"
        ]
       },
       {
-       "math": "\\sigma = \\sqrt{176} \\approx 13.27",
-       "en": "Square root.",
-       "ur": "جذر۔",
+       "math": "\\text{S.D.} = \\sqrt{S^2} = \\sqrt{176} \\approx 13.27",
+       "en": "Take the positive square root of the variance to find the standard deviation (S.D.), rounded to two decimal places.",
+       "ur": "معیاری انحراف (S.D.) معلوم کرنے کے لیے تغیر کا مثبت جذر لیں، اور اشعاریہ کے بعد دو درجوں تک محدود کریں۔",
        "check": [
+        "Abs(sqrt(176) - 13.27) <= 0.005000001",
+        "2*23 - 1 == 45",
+        "((1 - 23)**2 + (3 - 23)**2 + (5 - 23)**2 + (7 - 23)**2 + (9 - 23)**2 + (11 - 23)**2 + (13 - 23)**2 + (15 - 23)**2 + (17 - 23)**2 + (19 - 23)**2 + (21 - 23)**2 + (23 - 23)**2 + (25 - 23)**2 + (27 - 23)**2 + (29 - 23)**2 + (31 - 23)**2 + (33 - 23)**2 + (35 - 23)**2 + (37 - 23)**2 + (39 - 23)**2 + (41 - 23)**2 + (43 - 23)**2 + (45 - 23)**2)/23 == 176",
         "Abs((sqrt(176)) - 13.27) <= 0.0050000010000000004"
        ]
       }
      ],
      "answer": "Range = 44, Variance = 176, SD = 13.27",
+     "enriched": true,
      "book_key": "Range = 44, Variance = 176, SD = 13.27"
     }
    ],
@@ -4055,34 +4141,65 @@
      "prompt": "",
      "steps": [
       {
-       "math": "\\begin{array}{c|cccccc} x\\ (\\text{midpoint}) & 42 & 51 & 54 & 61 & 63 & 71 \\\\ \\hline f & 5 & 13 & 4 & 9 & 5 & 4 \\\\ fx & 210 & 663 & 216 & 549 & 315 & 284 \\end{array}",
-       "en": "Use the class midpoints as $x$.",
-       "ur": "جماعت کے درمیانی نقاط کو $x$ لیں۔",
+       "math": "x = 42, 51, 54, 61, 63, 71; \\quad f = 5, 13, 4, 9, 5, 4",
+       "en": "Let the rainfall (in mm) be represented by $x$ and the number of places be the frequency $f$. We need to find the variance and standard deviation of this frequency distribution.",
+       "ur": "فرض کریں کہ بارش (ملی میٹر میں) کو $x$ سے اور مقامات کی تعداد کو تعدد $f$ سے ظاہر کیا گیا ہے۔ ہمیں اس تعددی تقسیم کا تغیر (variance) اور معیاری انحراف (standard deviation) معلوم کرنا ہے۔",
        "check": [
         "5 + 13 + 4 + 9 + 5 + 4 == 40"
        ]
       },
       {
-       "math": "\\bar{x} = \\frac{\\sum fx}{\\sum f} = \\frac{2237}{40} \\approx 55.93",
-       "en": "Mean of grouped data.",
-       "ur": "گروہی مواد کا اوسط۔",
+       "math": "S^2 = \\frac{\\sum fx^2}{\\sum f} - \\left(\\frac{\\sum fx}{\\sum f}\\right)^2, \\quad S.D. = \\sqrt{S^2}",
+       "en": "Recall the standard formulas for variance ($S^2$) and standard deviation ($S.D.$) for grouped (frequency) data.",
+       "ur": "گروہی (تعددی) مواد کے لیے تغیر ($S^2$) اور معیاری انحراف ($S.D.$) کے معیاری کلیے یاد کریں۔"
+      },
+      {
+       "math": "\\begin{array}{c|c|c|c|c} x & f & fx & x^2 & fx^2 \\\\ \\hline 42 & 5 & 210 & 1764 & 8820 \\\\ 51 & 13 & 663 & 2601 & 33813 \\\\ 54 & 4 & 216 & 2916 & 11664 \\\\ 61 & 9 & 549 & 3721 & 33489 \\\\ 63 & 5 & 315 & 3969 & 19845 \\\\ 71 & 4 & 284 & 5041 & 20164 \\\\ \\hline \\text{Total} & \\sum f = 40 & \\sum fx = 2237 & & \\sum fx^2 = 127795 \\end{array}",
+       "en": "Construct a frequency table to calculate the required values: $fx$, $x^2$, and $fx^2$, and then find the sums $\\sum f$, $\\sum fx$, and $\\sum fx^2$.",
+       "ur": "مطلوبہ قیمتیں $fx$، $x^2$ اور $fx^2$ معلوم کرنے کے لیے ایک تعددی جدول بنائیں، اور پھر مجموعے $\\sum f$، $\\sum fx$ اور $\\sum fx^2$ معلوم کریں۔",
        "check": [
-        "Abs(((2237)/40) - 55.93) <= 0.0050000010000000004"
+        "5 + 13 + 4 + 9 + 5 + 4 == 40",
+        "42*5 + 51*13 + 54*4 + 61*9 + 63*5 + 71*4 == 2237",
+        "5*42**2 + 13*51**2 + 4*54**2 + 9*61**2 + 5*63**2 + 4*71**2 == 127795"
        ]
       },
       {
-       "math": "\\sigma^2 = \\frac{\\sum f(x - \\bar{x})^2}{\\sum f} \\approx 67.27",
-       "en": "Variance of grouped data.",
-       "ur": "گروہی مواد کا تغیر۔",
+       "math": "\\bar{x} = \\frac{\\sum fx}{\\sum f} = \\frac{2237}{40} = 55.925 \\approx 55.93",
+       "en": "First, calculate the arithmetic mean $\\bar{x}$ by dividing $\\sum fx$ by $\\sum f$.",
+       "ur": "سب سے پہلے، $\\sum fx$ کو $\\sum f$ پر تقسیم کر کے حسابی اوسط $\\bar{x}$ معلوم کریں۔",
        "check": [
-        "Abs(((5*((42) - (2237/40))**2 + 13*((51) - (2237/40))**2 + 4*((54) - (2237/40))**2 + 9*((61) - (2237/40))**2 + 5*((63) - (2237/40))**2 + 4*((71) - (2237/40))**2)/40) - 67.27) <= 0.0050000010000000004"
+        "R(2237, 40) == 55.925",
+        "Abs(R(2237, 40) - 55.93) <= 0.005000001"
        ]
       },
       {
-       "math": "\\sigma = \\sqrt{67.27} \\approx 8.20",
-       "en": "Standard deviation.",
-       "ur": "معیاری انحراف۔",
+       "math": "S^2 = \\frac{127795}{40} - \\left(\\frac{2237}{40}\\right)^2 = 3194.875 - 3127.605625 = 67.269375 \\approx 67.27",
+       "en": "Substitute the sums into the variance formula and simplify to get the variance.",
+       "ur": "تغیر کے کلیے میں مجموعوں کی قیمتیں درج کریں اور حل کر کے تغیر معلوم کریں۔",
        "check": [
+        "R(127795, 40) == 3194.875",
+        "R(2237, 40)**2 == 3127.605625",
+        "3194.875 - 3127.605625 == 67.269375",
+        "Abs(67.269375 - 67.27) <= 0.005000001"
+       ]
+      },
+      {
+       "math": "S.D. = \\sqrt{67.269375} \\approx \\sqrt{67.27} \\approx 8.20",
+       "en": "Take the positive square root of the variance to find the standard deviation.",
+       "ur": "معیاری انحراف معلوم کرنے کے لیے تغیر کا مثبت جزر المربع لیں۔",
+       "check": [
+        "Abs(sqrt(R(107631, 1600)) - 8.20) <= 0.005000001",
+        "Abs(sqrt(67.27) - 8.20) <= 0.005000001"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Thus, the variance of the rainfall is $67.27$ and the standard deviation is $8.20$.",
+       "ur": "پس، بارش کا تغیر $67.27$ اور معیاری انحراف $8.20$ ہے۔",
+       "check": [
+        "5 + 13 + 4 + 9 + 5 + 4 == 40",
+        "Abs(((2237)/40) - 55.93) <= 0.0050000010000000004",
+        "Abs(((5*((42) - (2237/40))**2 + 13*((51) - (2237/40))**2 + 4*((54) - (2237/40))**2 + 9*((61) - (2237/40))**2 + 5*((63) - (2237/40))**2 + 4*((71) - (2237/40))**2)/40) - 67.27) <= 0.0050000010000000004",
         "Abs((sqrt((107631/1600))) - 8.20) <= 0.0050000010000000004"
        ]
       }
@@ -4092,6 +4209,7 @@
       "en": "The reference notes give 67.282 from rounded squares; the exact variance is 67.27 (SD 8.20 either way).",
       "ur": "حوالہ نوٹس میں 67.282 ہے؛ درست تغیر 67.27 ہے۔"
      },
+     "enriched": true,
      "book_key": "Variance = 67.282, SD = 8.20"
     }
    ],
@@ -4109,31 +4227,60 @@
      "prompt": "better performance",
      "steps": [
       {
-       "math": "\\bar{x_A} = \\frac{98 + 100 + 102 + 101 + 99}{5} = \\frac{500}{5} \\approx 100.00",
-       "en": "Mean = sum $\\div$ number of values.",
-       "ur": "اوسط = مجموعہ $\\div$ تعداد۔",
+       "math": "n_A = 5, \\quad n_B = 5",
+       "en": "To compare the overall performance of Machine A and Machine B, we compare their arithmetic means (averages). Both machines have $5$ output observations.",
+       "ur": "مشین A اور مشین B کی مجموعی کارکردگی کا موازنہ کرنے کے لیے، ہم ان کے حسابی اوسط (مین) کا موازنہ کرتے ہیں۔ دونوں مشینوں کی پیداوار کے مشاہدات کی تعداد $5$ ہے۔",
        "check": [
-        "(98) + (100) + (102) + (101) + (99) == (500)"
+        "5 == 5"
        ]
       },
       {
-       "math": "\\bar{x_B} = \\frac{95 + 100 + 105 + 90 + 110}{5} = \\frac{500}{5} \\approx 100.00",
-       "en": "Mean = sum $\\div$ number of values.",
-       "ur": "اوسط = مجموعہ $\\div$ تعداد۔",
+       "math": "\\bar{x} = \\frac{\\sum x}{n}",
+       "en": "The formula for the arithmetic mean of ungrouped data is the sum of all values divided by the total number of values.",
+       "ur": "غیر گروہی ڈیٹا کے حسابی اوسط کا فارمولا تمام قیمتوں کے مجموعے کو کل تعداد سے تقسیم کرنا ہے۔"
+      },
+      {
+       "math": "\\bar{x}_A = \\frac{98 + 100 + 102 + 101 + 99}{5}",
+       "en": "Substitute the output values of Machine A into the mean formula.",
+       "ur": "اوسط کے فارمولے میں مشین A کی پیداوار کی قیمتیں درج کریں۔"
+      },
+      {
+       "math": "\\bar{x}_A = \\frac{500}{5} = 100",
+       "en": "Add the values in the numerator and divide by $5$ to find the mean output of Machine A.",
+       "ur": "مشین A کی اوسط پیداوار معلوم کرنے کے لیے شمار کنندہ کی قیمتوں کو جمع کریں اور $5$ سے تقسیم کریں۔",
        "check": [
-        "(95) + (100) + (105) + (90) + (110) == (500)"
+        "98 + 100 + 102 + 101 + 99 == 500",
+        "R(500, 5) == 100"
+       ]
+      },
+      {
+       "math": "\\bar{x}_B = \\frac{95 + 100 + 105 + 90 + 110}{5}",
+       "en": "Now, substitute the output values of Machine B into the mean formula.",
+       "ur": "اب، اوسط کے فارمولے میں مشین B کی پیداوار کی قیمتیں درج کریں۔"
+      },
+      {
+       "math": "\\bar{x}_B = \\frac{500}{5} = 100",
+       "en": "Add the values in the numerator and divide by $5$ to find the mean output of Machine B.",
+       "ur": "مشین B کی اوسط پیداوار معلوم کرنے کے لیے شمار کنندہ کی قیمتوں کو جمع کریں اور $5$ سے تقسیم کریں۔",
+       "check": [
+        "95 + 100 + 105 + 90 + 110 == 500",
+        "R(500, 5) == 100"
        ]
       },
       {
        "math": "\\bar{x}_A = \\bar{x}_B = 100",
-       "en": "Equal means: equal performance.",
-       "ur": "اوسط برابر: کارکردگی برابر۔",
+       "en": "Since both machines have the exact same mean output of $100$ units, they have equal performance.",
+       "ur": "چونکہ دونوں مشینوں کی اوسط پیداوار بالکل یکساں یعنی $100$ یونٹس ہے، اس لیے دونوں کی کارکردگی برابر ہے۔",
        "check": [
+        "100 == 100",
+        "(98) + (100) + (102) + (101) + (99) == (500)",
+        "(95) + (100) + (105) + (90) + (110) == (500)",
         "R(500,5) == 100"
        ]
       }
      ],
      "answer": "equal performance (both means 100)",
+     "enriched": true,
      "book_key": "equal performance (both means 100)"
     },
     {
@@ -4267,46 +4414,73 @@
    "kind": "exercise",
    "number": "10",
    "page": 0,
-   "question": "The table given below shows the daily wages of workers in a textile mill, grouped into six income brackets: 800-1000, 1000-1200, 1200-1400, 1400-1600, 1600-1800, 1800-2000 with frequency 2, 4, 6, 8, 2, 1. Calculate the mean, variance and standard deviation of the wages.",
+   "question": "The table given below shows the daily wages of workers in a textile mill, grouped into six income brackets (Daily Wage in Rs): 800-1000, 1000-1200, 1200-1400, 1400-1600, 1600-1800, 1800-2000 with frequency 2, 4, 6, 8, 2, 1. Calculate the mean, variance and standard deviation of the wages.",
    "parts": [
     {
      "label": "",
      "prompt": "",
      "steps": [
       {
-       "math": "\\begin{array}{c|cccccc} x\\ (\\text{midpoint}) & 900 & 1100 & 1300 & 1500 & 1700 & 1900 \\\\ \\hline f & 2 & 4 & 6 & 8 & 2 & 1 \\\\ fx & 1800 & 4400 & 7800 & 12000 & 3400 & 1900 \\end{array}",
-       "en": "Use the class midpoints as $x$.",
-       "ur": "جماعت کے درمیانی نقاط کو $x$ لیں۔",
+       "math": "",
+       "en": "First, we find the midpoint ($x$) of each class interval by adding the lower and upper limits and dividing by $2$. Then we calculate $fx$ and $fx^2$ to find the mean, variance, and standard deviation of the grouped data.",
+       "ur": "سب سے پہلے، ہم ہر جماعتی وقفے کی نچلی اور بالائی حدود کو جمع کر کے $2$ پر تقسیم کر کے درمیانی نقطہ ($x$) معلوم کرتے ہیں۔ پھر ہم گروہی مواد کا اوسط، تغیر اور معیاری انحراف معلوم کرنے کے لیے $fx$ اور $fx^2$ کا حساب لگاتے ہیں۔"
+      },
+      {
+       "math": "\\begin{array}{c|c|c|c|c} \\text{Daily Wage (Rs)} & f & x & fx & fx^2 \\\\ \\hline 800-1000 & 2 & 900 & 1800 & 1620000 \\\\ 1000-1200 & 4 & 1100 & 4400 & 4840000 \\\\ 1200-1400 & 6 & 1300 & 7800 & 10140000 \\\\ 1400-1600 & 8 & 1500 & 12000 & 18000000 \\\\ 1600-1800 & 2 & 1700 & 3400 & 5780000 \\\\ 1800-2000 & 1 & 1900 & 1900 & 3610000 \\\\ \\hline \\text{Total} & \\sum f = 23 & & \\sum fx = 31300 & \\sum fx^2 = 43990000 \\end{array}",
+       "en": "Construct the frequency distribution table with columns for $f$, midpoint $x$, $fx$, and $fx^2$, and find the sums.",
+       "ur": "تعدد $f$، درمیانی نقطہ $x$، $fx$ اور $fx^2$ کے کالموں کے ساتھ تعددی تقسیم کا جدول بنائیں اور ان کا مجموعہ معلوم کریں۔",
        "check": [
-        "2 + 4 + 6 + 8 + 2 + 1 == 23"
+        "2 + 4 + 6 + 8 + 2 + 1 == 23",
+        "1800 + 4400 + 7800 + 12000 + 3400 + 1900 == 31300",
+        "1620000 + 4840000 + 10140000 + 18000000 + 5780000 + 3610000 == 43990000"
        ]
       },
       {
        "math": "\\bar{x} = \\frac{\\sum fx}{\\sum f} = \\frac{31300}{23} \\approx 1360.87",
-       "en": "Mean of grouped data.",
-       "ur": "گروہی مواد کا اوسط۔",
+       "en": "Substitute $\\sum fx = 31300$ and $\\sum f = 23$ into the formula for the arithmetic mean of grouped data.",
+       "ur": "گروہی مواد کے حسابی اوسط کے کلیے میں $\\sum fx = 31300$ اور $\\sum f = 23$ کی قیمتیں درج کریں۔",
        "check": [
-        "Abs(((31300)/23) - 1360.87) <= 0.0050000010000000004"
+        "Abs((31300/23) - 1360.87) <= 0.005"
        ]
       },
       {
-       "math": "\\sigma^2 = \\frac{\\sum f(x - \\bar{x})^2}{\\sum f} \\approx 60642.72",
-       "en": "Variance of grouped data.",
-       "ur": "گروہی مواد کا تغیر۔",
+       "math": "\\sigma^2 = \\frac{\\sum fx^2}{\\sum f} - \\left(\\frac{\\sum fx}{\\sum f}\\right)^2",
+       "en": "Write down the computational formula for the variance ($\\sigma^2$) of grouped data, which is algebraically equivalent to $\\frac{\\sum f(x - \\bar{x})^2}{\\sum f}$.",
+       "ur": "گروہی مواد کے تغیر ($\\sigma^2$) کا حسابی کلیہ لکھیں، جو کہ الجبرائی طور پر $\\frac{\\sum f(x - \\bar{x})^2}{\\sum f}$ کے برابر ہے۔"
+      },
+      {
+       "math": "\\sigma^2 = \\frac{43990000}{23} - \\left(\\frac{31300}{23}\\right)^2 = 1912608.70 - 1851965.97 \\approx 60642.72",
+       "en": "Substitute the sums from the table into the variance formula and simplify.",
+       "ur": "جدول سے حاصل کردہ مجموعوں کو تغیر کے کلیے میں درج کریں اور حل کریں۔",
        "check": [
-        "Abs(((2*((900) - (31300/23))**2 + 4*((1100) - (31300/23))**2 + 6*((1300) - (31300/23))**2 + 8*((1500) - (31300/23))**2 + 2*((1700) - (31300/23))**2 + 1*((1900) - (31300/23))**2)/23) - 60642.72) <= 0.0050000010000000004"
+        "Abs(((43990000/23) - (31300/23)**2) - 60642.72) <= 0.005"
        ]
       },
       {
-       "math": "\\sigma = \\sqrt{60642.72} \\approx 246.26",
-       "en": "Standard deviation.",
-       "ur": "معیاری انحراف۔",
+       "math": "\\sigma = \\sqrt{\\sigma^2} = \\sqrt{60642.72} \\approx 246.26",
+       "en": "Take the positive square root of the variance to find the standard deviation ($\\sigma$).",
+       "ur": "معیاری انحراف ($\\sigma$) معلوم کرنے کے لیے تغیر کا مثبت جزر المربع لیں۔",
        "check": [
+        "Abs(sqrt(60642.72) - 246.26) <= 0.005"
+       ]
+      },
+      {
+       "math": "\\bar{x} = 1360.87, \\quad \\sigma^2 = 60642.72, \\quad \\sigma = 246.26",
+       "en": "Thus, the mean daily wage is Rs $1360.87$, the variance is $60642.72$, and the standard deviation is Rs $246.26$.",
+       "ur": "پس، اوسط یومیہ اجرت $1360.87$ روپے، تغیر $60642.72$، اور معیاری انحراف $246.26$ روپے ہے۔",
+       "check": [
+        "1360.87 == 1360.87",
+        "60642.72 == 60642.72",
+        "246.26 == 246.26",
+        "2 + 4 + 6 + 8 + 2 + 1 == 23",
+        "Abs(((31300)/23) - 1360.87) <= 0.0050000010000000004",
+        "Abs(((2*((900) - (31300/23))**2 + 4*((1100) - (31300/23))**2 + 6*((1300) - (31300/23))**2 + 8*((1500) - (31300/23))**2 + 2*((1700) - (31300/23))**2 + 1*((1900) - (31300/23))**2)/23) - 60642.72) <= 0.0050000010000000004",
         "Abs((sqrt((32080000/529))) - 246.26) <= 0.0050000010000000004"
        ]
       }
      ],
      "answer": "Mean = 1360.87, Variance = 60642.72, SD = 246.26",
+     "enriched": true,
      "book_key": "Mean = 1360.87, Variance = 60642.72, SD = 246.26"
     }
    ],
@@ -4324,31 +4498,55 @@
      "prompt": "",
      "steps": [
       {
-       "math": "\\bar{x} = \\frac{15 + 18 + 14 + 20 + 13}{5} = \\frac{80}{5} \\approx 16.00",
-       "en": "Mean = sum $\\div$ number of values.",
-       "ur": "اوسط = مجموعہ $\\div$ تعداد۔",
+       "math": "x = 15, 18, 14, 20, 13 \\quad (n = 5)",
+       "en": "First, write down the given monthly sales predictions and count the total number of observations $n$. To find the variability in sales predictions, we need to calculate the variance and the standard deviation.",
+       "ur": "سب سے پہلے، دی گئی ماہانہ فروخت کی پیش گوئیوں کو لکھیں اور مشاہدات کی کل تعداد $n$ گنیں۔ فروخت کی پیش گوئیوں میں تغیر (variability) معلوم کرنے کے لیے، ہمیں تغیر (variance) اور معیاری انحراف (standard deviation) معلوم کرنا ہوگا۔"
+      },
+      {
+       "math": "\\bar{x} = \\frac{\\sum x}{n} = \\frac{15 + 18 + 14 + 20 + 13}{5} = \\frac{80}{5} = 16",
+       "en": "Calculate the arithmetic mean $\\bar{x}$ by dividing the sum of all values by the total number of values $n$.",
+       "ur": "تمام قیمتوں کے مجموعے کو کل تعداد $n$ پر تقسیم کر کے حسابی اوسط $\\bar{x}$ معلوم کریں۔",
        "check": [
-        "(15) + (18) + (14) + (20) + (13) == (80)"
+        "(15 + 18 + 14 + 20 + 13) == 80",
+        "R(80, 5) == 16"
        ]
       },
       {
-       "math": "\\sigma^2 = \\frac{\\sum(x - \\bar{x})^2}{n} = \\frac{34}{5} \\approx 6.80",
-       "en": "Variance = mean of the squared deviations from the mean.",
-       "ur": "تغیر = اوسط سے انحرافات کے مربعوں کا اوسط۔",
+       "math": "\\sum(x - \\bar{x})^2 = (15 - 16)^2 + (18 - 16)^2 + (14 - 16)^2 + (20 - 16)^2 + (13 - 16)^2",
+       "en": "Now, subtract the mean $\\bar{x} = 16$ from each value to find the deviations, square each deviation, and write their sum.",
+       "ur": "اب، انحراف معلوم کرنے کے لیے ہر قیمت میں سے اوسط $\\bar{x} = 16$ کو تفریق کریں، ہر انحراف کا مربع لیں، اور ان کا مجموعہ لکھیں۔"
+      },
+      {
+       "math": "\\sum(x - \\bar{x})^2 = (-1)^2 + (2)^2 + (-2)^2 + (4)^2 + (-3)^2 = 1 + 4 + 4 + 16 + 9 = 34",
+       "en": "Simplify the squared deviations and add them together to get $\\sum(x - \\bar{x})^2$.",
+       "ur": "مربع شدہ انحرافات کو حل کریں اور $\\sum(x - \\bar{x})^2$ حاصل کرنے کے لیے انہیں جمع کریں۔",
        "check": [
-        "Abs(((((15) - (16))**2 + ((18) - (16))**2 + ((14) - (16))**2 + ((20) - (16))**2 + ((13) - (16))**2)/5) - 6.80) <= 0.0050000010000000004"
+        "(-1)**2 + (2)**2 + (-2)**2 + (4)**2 + (-3)**2 == 34",
+        "1 + 4 + 4 + 16 + 9 == 34"
        ]
       },
       {
-       "math": "\\sigma = \\sqrt{\\sigma^2} \\approx 2.61",
-       "en": "Standard deviation = square root of the variance.",
-       "ur": "معیاری انحراف = تغیر کا جذر۔",
+       "math": "\\sigma^2 = \\frac{\\sum(x - \\bar{x})^2}{n} = \\frac{34}{5} = 6.8",
+       "en": "Use the variance formula $\\sigma^2 = \\frac{\\sum(x - \\bar{x})^2}{n}$. Substitute the values and divide to find the variance.",
+       "ur": "تغیر کا فارمولا $\\sigma^2 = \\frac{\\sum(x - \\bar{x})^2}{n}$ استعمال کریں۔ قیمتیں درج کریں اور تغیر (variance) معلوم کرنے کے لیے تقسیم کریں۔",
        "check": [
+        "Abs(R(34, 5) - 6.8) <= 0.005"
+       ]
+      },
+      {
+       "math": "\\sigma = \\sqrt{\\sigma^2} = \\sqrt{6.8} \\approx 2.61",
+       "en": "Take the positive square root of the variance to find the standard deviation $\\sigma$. Thus, the variance is $6.8$ and the standard deviation is $2.61$.",
+       "ur": "معیاری انحراف $\\sigma$ معلوم کرنے کے لیے تغیر کا مثبت جذر لیں۔ اس طرح، تغیر $6.8$ ہے اور معیاری انحراف $2.61$ ہے۔",
+       "check": [
+        "Abs(sqrt(R(34, 5)) - 2.61) <= 0.005",
+        "(15) + (18) + (14) + (20) + (13) == (80)",
+        "Abs(((((15) - (16))**2 + ((18) - (16))**2 + ((14) - (16))**2 + ((20) - (16))**2 + ((13) - (16))**2)/5) - 6.80) <= 0.0050000010000000004",
         "Abs((sqrt((34/5))) - 2.61) <= 0.0050000010000000004"
        ]
       }
      ],
      "answer": "Variance = 6.8, SD = 2.61",
+     "enriched": true,
      "book_key": "Variance = 6.8, SD = 2.61"
     }
    ],
@@ -4366,36 +4564,71 @@
      "prompt": "",
      "steps": [
       {
-       "math": "\\bar{x} = \\frac{5.2 + 6.0 + 4.8 + 5.5 + 6.2}{5} = \\frac{\\frac{277}{10}}{5} \\approx 5.54",
-       "en": "Mean = sum $\\div$ number of values.",
-       "ur": "اوسط = مجموعہ $\\div$ تعداد۔",
+       "math": "x = 5.2, 6.0, 4.8, 5.5, 6.2, \\quad n = 5",
+       "en": "The given unemployment rates in five provinces are listed, so the total number of values is $n = 5$. We need to find the standard deviation and describe if the rates are balanced.",
+       "ur": "پانچ صوبوں میں بے روزگاری کی دی گئی شرحیں درج ہیں، اس لیے مدات کی کل تعداد $n = 5$ ہے۔ ہمیں معیاری انحراف معلوم کرنا ہے اور بتانا ہے کہ آیا یہ شرحیں متوازن ہیں۔",
        "check": [
-        "(26/5) + (6) + (24/5) + (11/2) + (31/5) == (277/10)"
+        "5 == 5"
        ]
       },
       {
-       "math": "\\sigma^2 = \\frac{\\sum(x - \\bar{x})^2}{n} = \\frac{1.312}{5} \\approx 0.2624",
-       "en": "Variance = mean of the squared deviations from the mean.",
-       "ur": "تغیر = اوسط سے انحرافات کے مربعوں کا اوسط۔",
+       "math": "\\bar{x} = \\frac{\\sum x}{n} = \\frac{5.2 + 6.0 + 4.8 + 5.5 + 6.2}{5} = \\frac{27.7}{5} = 5.54",
+       "en": "First, calculate the arithmetic mean $\\bar{x}$ by dividing the sum of all values by the total number of values $n$.",
+       "ur": "سب سے پہلے، تمام قیمتوں کے مجموعے کو کل تعداد $n$ پر تقسیم کر کے حسابی اوسط $\\bar{x}$ معلوم کریں۔",
        "check": [
-        "Abs(((((26/5) - (277/50))**2 + ((6) - (277/50))**2 + ((24/5) - (277/50))**2 + ((11/2) - (277/50))**2 + ((31/5) - (277/50))**2)/5) - 0.2624) <= 5.0001000000000005e-05"
+        "R(26,5) + 6 + R(24,5) + R(11,2) + R(31,5) == R(277,10)",
+        "R(277,10) / 5 == R(277,50)"
        ]
       },
       {
-       "math": "\\sigma = \\sqrt{\\sigma^2} \\approx 0.51",
-       "en": "Standard deviation = square root of the variance.",
-       "ur": "معیاری انحراف = تغیر کا جذر۔",
+       "math": "(x - \\bar{x})^2 : (-0.34)^2 = 0.1156, \\; (0.46)^2 = 0.2116, \\; (-0.74)^2 = 0.5476, \\; (-0.04)^2 = 0.0016, \\; (0.66)^2 = 0.4356",
+       "en": "Subtract the mean $\\bar{x} = 5.54$ from each value $x$ to find the deviations, and then square each deviation.",
+       "ur": "انحراف معلوم کرنے کے لیے ہر قیمت $x$ میں سے اوسط $\\bar{x} = 5.54$ کو تفریق کریں، اور پھر ہر انحراف کا مربع لیں۔",
        "check": [
+        "(R(26,5) - R(277,50))**2 == R(289,2500)",
+        "(6 - R(277,50))**2 == R(529,2500)",
+        "(R(24,5) - R(277,50))**2 == R(1369,2500)",
+        "(R(11,2) - R(277,50))**2 == R(4,2500)",
+        "(R(31,5) - R(277,50))**2 == R(1089,2500)"
+       ]
+      },
+      {
+       "math": "\\sum (x - \\bar{x})^2 = 0.1156 + 0.2116 + 0.5476 + 0.0016 + 0.4356 = 1.312",
+       "en": "Add all the squared deviations together to find $\\sum (x - \\bar{x})^2$.",
+       "ur": "مجموعہ $\\sum (x - \\bar{x})^2$ معلوم کرنے کے لیے تمام مربع انحرافات کو جمع کریں۔",
+       "check": [
+        "R(289,2500) + R(529,2500) + R(1369,2500) + R(4,2500) + R(1089,2500) == R(164,125)"
+       ]
+      },
+      {
+       "math": "\\sigma^2 = \\frac{\\sum (x - \\bar{x})^2}{n} = \\frac{1.312}{5} = 0.2624",
+       "en": "Now, calculate the variance $\\sigma^2$ by dividing the sum of squared deviations by $n = 5$.",
+       "ur": "اب، مربع انحرافات کے مجموعے کو $n = 5$ پر تقسیم کر کے تغیر $\\sigma^2$ معلوم کریں۔",
+       "check": [
+        "R(164,125) / 5 == R(164,625)"
+       ]
+      },
+      {
+       "math": "\\sigma = \\sqrt{\\sigma^2} = \\sqrt{0.2624} \\approx 0.51",
+       "en": "Take the positive square root of the variance to get the standard deviation $\\sigma$.",
+       "ur": "معیاری انحراف $\\sigma$ حاصل کرنے کے لیے تغیر کا مثبت جذر المربع لیں۔",
+       "check": [
+        "Abs(sqrt(R(164,625)) - R(51,100)) <= R(1,200)"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Since the standard deviation ($0.51$) is very small compared to the mean ($5.54$), the unemployment rates across the provinces are close to each other and hence fairly balanced. Thus, $\\text{SD} = 0.51$; fairly balanced.",
+       "ur": "چونکہ معیاری انحراف ($0.51$) اوسط ($5.54$) کے مقابلے میں بہت کم ہے، اس لیے صوبوں میں بے روزگاری کی شرحیں ایک دوسرے کے قریب ہیں اور کافی حد تک متوازن ہیں۔ چنانچہ، $\\text{SD} = 0.51$؛ کافی متوازن۔",
+       "check": [
+        "(26/5) + (6) + (24/5) + (11/2) + (31/5) == (277/10)",
+        "Abs(((((26/5) - (277/50))**2 + ((6) - (277/50))**2 + ((24/5) - (277/50))**2 + ((11/2) - (277/50))**2 + ((31/5) - (277/50))**2)/5) - 0.2624) <= 5.0001000000000005e-05",
         "Abs((sqrt((164/625))) - 0.51) <= 0.0050000010000000004"
        ]
-      },
-      {
-       "math": "\\text{fairly balanced}",
-       "en": "The standard deviation is small compared with the mean, so the rates are close together.",
-       "ur": "معیاری انحراف اوسط کے مقابلے میں کم ہے۔"
       }
      ],
      "answer": "SD = 0.51; fairly balanced",
+     "enriched": true,
      "book_key": "SD = 0.51; fairly balanced"
     }
    ],
@@ -4410,7 +4643,7 @@
    "parts": [
     {
      "label": "i",
-     "prompt": "(i)",
+     "prompt": "$\\sum x = 45$, $\\sum x^2 = 421$, $n = 5$",
      "steps": [
       {
        "math": "\\sum x = 45,\\quad \\sum x^2 = 421,\\quad n = 5",
@@ -4470,7 +4703,7 @@
     },
     {
      "label": "ii",
-     "prompt": "(ii)",
+     "prompt": "$\\sum fx = 210$, $\\sum fx^2 = 7560$, $\\sum f = 6$",
      "steps": [
       {
        "math": "\\sum fx = 210,\\quad \\sum fx^2 = 7560,\\quad \\sum f = 6",
@@ -4522,7 +4755,7 @@
     },
     {
      "label": "iii",
-     "prompt": "(iii)",
+     "prompt": "$\\bar{x} = 18$, $\\sum fx^2 = 1670$, $\\sum f = 5$",
      "steps": [
       {
        "math": "\\bar{x} = 18, \\quad \\sum fx^2 = 1670, \\quad \\sum f = 5",
@@ -6674,46 +6907,75 @@
    "kind": "review",
    "number": "9",
    "page": 0,
-   "question": "The daily wages of 40 workers in a factory are grouped as follows: 1000-1200, 1200-1400, 1400-1600, 1600-1800, 1800-2000 with No. of Workers 6, 10, 12, 8, 4. Find the mean, variance and standard deviation of the daily wages.",
+   "question": "The daily wages of 40 workers in a factory are grouped as follows (Daily Wages in Rs.): 1000-1200, 1200-1400, 1400-1600, 1600-1800, 1800-2000 with No. of Workers 6, 10, 12, 8, 4. Find the mean, variance and standard deviation of the daily wages.",
    "parts": [
     {
      "label": "",
      "prompt": "",
      "steps": [
       {
-       "math": "\\begin{array}{c|ccccc} x\\ (\\text{midpoint}) & 1100 & 1300 & 1500 & 1700 & 1900 \\\\ \\hline f & 6 & 10 & 12 & 8 & 4 \\\\ fx & 6600 & 13000 & 18000 & 13600 & 7600 \\end{array}",
-       "en": "Use the class midpoints as $x$.",
-       "ur": "جماعت کے درمیانی نقاط کو $x$ لیں۔",
+       "math": "x = \\frac{\\text{Lower Limit} + \\text{Upper Limit}}{2}",
+       "en": "First, we find the midpoint (class mark) $x$ for each class interval by averaging its lower and upper limits.",
+       "ur": "سب سے پہلے، ہم ہر جماعتی وقفے کی زیریں اور بالائی حدود کا اوسط نکال کر درمیانی نقطہ (کلاس مارک) $x$ معلوم کرتے ہیں۔"
+      },
+      {
+       "math": "\\begin{array}{c|ccccc|c} \\text{Wages} & 1000\\text{--}1200 & 1200\\text{--}1400 & 1400\\text{--}1600 & 1600\\text{--}1800 & 1800\\text{--}2000 & \\text{Total} \\\\ \\hline f & 6 & 10 & 12 & 8 & 4 & \\sum f = 40 \\\\ x & 1100 & 1300 & 1500 & 1700 & 1900 & \\\\ fx & 6600 & 13000 & 18000 & 13600 & 7600 & \\sum fx = 58800 \\end{array}",
+       "en": "Construct a table for the frequencies $f$, midpoints $x$, and their products $fx$, then find the sums $\\sum f$ and $\\sum fx$.",
+       "ur": "تعدد $f$، درمیانی نقاط $x$ اور ان کے حاصل ضرب $fx$ کے لیے ایک جدول بنائیں، پھر مجموعے $\\sum f$ اور $\\sum fx$ معلوم کریں۔",
        "check": [
-        "6 + 10 + 12 + 8 + 4 == 40"
+        "6 + 10 + 12 + 8 + 4 == 40",
+        "6*1100 + 10*1300 + 12*1500 + 8*1700 + 4*1900 == 58800"
        ]
       },
       {
-       "math": "\\bar{x} = \\frac{\\sum fx}{\\sum f} = \\frac{58800}{40} \\approx 1470.00",
-       "en": "Mean of grouped data.",
-       "ur": "گروہی مواد کا اوسط۔",
+       "math": "\\bar{x} = \\frac{\\sum fx}{\\sum f} = \\frac{58800}{40} = 1470",
+       "en": "Apply the formula for the arithmetic mean of grouped data and substitute the sums to find the mean daily wage $\\bar{x}$.",
+       "ur": "گروہی مواد کے حسابی اوسط کا فارمولا لگائیں اور یومیہ اجرت کا اوسط $\\bar{x}$ معلوم کرنے کے لیے مجموعوں کی قیمتیں درج کریں۔",
        "check": [
-        "Abs(((58800)/40) - 1470.00) <= 0.0050000010000000004"
+        "58800 / 40 == 1470"
        ]
       },
       {
-       "math": "\\sigma^2 = \\frac{\\sum f(x - \\bar{x})^2}{\\sum f} \\approx 57100.00",
-       "en": "Variance of grouped data.",
-       "ur": "گروہی مواد کا تغیر۔",
+       "math": "\\begin{array}{c|ccccc|c} x & 1100 & 1300 & 1500 & 1700 & 1900 & \\text{Total} \\\\ \\hline x - \\bar{x} & -370 & -170 & 30 & 230 & 430 & \\\\ (x - \\bar{x})^2 & 136900 & 28900 & 900 & 52900 & 184900 & \\\\ f(x - \\bar{x})^2 & 821400 & 289000 & 10800 & 423200 & 739600 & 2284000 \\end{array}",
+       "en": "To find the variance, calculate the deviations $(x - \\bar{x})$ from the mean $1470$, square them, multiply by the corresponding frequencies $f$, and sum them up to get $\\sum f(x - \\bar{x})^2 = 2284000$.",
+       "ur": "تغیر (variance) معلوم کرنے کے لیے، اوسط $1470$ سے انحراف $(x - \\bar{x})$ نکالیں، ان کا مربع لیں، متعلقہ تعدد $f$ سے ضرب دیں، اور جمع کر کے $\\sum f(x - \\bar{x})^2 = 2284000$ حاصل کریں۔",
        "check": [
-        "Abs(((6*((1100) - (1470))**2 + 10*((1300) - (1470))**2 + 12*((1500) - (1470))**2 + 8*((1700) - (1470))**2 + 4*((1900) - (1470))**2)/40) - 57100.00) <= 0.0050000010000000004"
+        "1100 - 1470 == -370",
+        "(-370)**2 == 136900",
+        "6 * 136900 == 821400",
+        "821400 + 289000 + 10800 + 423200 + 739600 == 2284000"
        ]
       },
       {
-       "math": "\\sigma = \\sqrt{57100.00} \\approx 238.96",
-       "en": "Standard deviation.",
-       "ur": "معیاری انحراف۔",
+       "math": "\\sigma^2 = \\frac{\\sum f(x - \\bar{x})^2}{\\sum f} = \\frac{2284000}{40} = 57100",
+       "en": "Substitute $\\sum f(x - \\bar{x})^2 = 2284000$ and $\\sum f = 40$ into the variance formula for grouped data.",
+       "ur": "گروہی مواد کے تغیر کے فارمولے میں $\\sum f(x - \\bar{x})^2 = 2284000$ اور $\\sum f = 40$ درج کریں۔",
        "check": [
+        "2284000 / 40 == 57100"
+       ]
+      },
+      {
+       "math": "\\sigma = \\sqrt{\\sigma^2} = \\sqrt{57100} \\approx 238.96",
+       "en": "Take the positive square root of the variance to find the standard deviation $\\sigma$.",
+       "ur": "معیاری انحراف $\\sigma$ معلوم کرنے کے لیے تغیر کا مثبت جزر المربع لیں۔",
+       "check": [
+        "Abs(sqrt(57100) - 238.96) <= 0.005"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Thus, for the daily wages of the workers, the mean is Rs. $1470$, the variance is $57100$, and the standard deviation is Rs. $238.96$.",
+       "ur": "پس، مزدوروں کی یومیہ اجرت کا اوسط $1470$ روپے، تغیر $57100$، اور معیاری انحراف $238.96$ روپے ہے۔",
+       "check": [
+        "6 + 10 + 12 + 8 + 4 == 40",
+        "Abs(((58800)/40) - 1470.00) <= 0.0050000010000000004",
+        "Abs(((6*((1100) - (1470))**2 + 10*((1300) - (1470))**2 + 12*((1500) - (1470))**2 + 8*((1700) - (1470))**2 + 4*((1900) - (1470))**2)/40) - 57100.00) <= 0.0050000010000000004",
         "Abs((sqrt((57100))) - 238.96) <= 0.0050000010000000004"
        ]
       }
      ],
      "answer": "Mean = 1470, Variance = 57100, SD = 238.96",
+     "enriched": true,
      "book_key": "Mean = 1470, Variance = 57100, SD = 238.96"
     }
    ],

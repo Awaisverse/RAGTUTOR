@@ -1,0 +1,45 @@
+{
+ "item": "ex1.2-q5",
+ "label": "iv",
+ "answer_ref": "$a+b^2$",
+ "math": [
+  "\\left(a^{\\frac{1}{3}}+b^{\\frac{2}{3}}\\right) \\times \\left(a^{\\frac{2}{3}} - a^{\\frac{1}{3}}b^{\\frac{2}{3}} + b^{\\frac{4}{3}}\\right)",
+  "\\left(a^{\\frac{1}{3}}+b^{\\frac{2}{3}}\\right) \\times \\left(\\left(a^{\\frac{1}{3}}\\right)^2 - \\left(a^{\\frac{1}{3}}\\right)\\left(b^{\\frac{2}{3}}\\right) + \\left(b^{\\frac{2}{3}}\\right)^2\\right)",
+  "\\text{Let } u = a^{\\frac{1}{3}} \\quad \\text{and} \\quad v = b^{\\frac{2}{3}}",
+  "(u+v)(u^2 - uv + v^2) = u^3 + v^3",
+  "= \\left(a^{\\frac{1}{3}}\\right)^3 + \\left(b^{\\frac{2}{3}}\\right)^3",
+  "= a^{\\frac{1}{3} \\times 3} + b^{\\frac{2}{3} \\times 3} = a^1 + b^2 = a + b^2"
+ ],
+ "why": [
+  {
+   "en": "We begin by carefully observing the two brackets we need to multiply. Notice how the fractional exponents in the second bracket, $\\frac{2}{3}$ and $\\frac{4}{3}$, are exact doubles of the exponents $\\frac{1}{3}$ and $\\frac{2}{3}$ in the first bracket, which hints at a special algebraic formula.",
+   "ur": "ہم سب سے پہلے ان دو بریکٹوں کو غور سے دیکھتے ہیں جنہیں آپس میں ضرب دینا ہے۔ غور کریں کہ دوسری بریکٹ کی قوت نما (exponents) یعنی $\\frac{2}{3}$ اور $\\frac{4}{3}$، پہلی بریکٹ کی قوت نما $\\frac{1}{3}$ اور $\\frac{2}{3}$ کا بالکل دگنا ہیں، جو ہمیں ایک خاص الجبری فارمولے کا اشارہ دیتا ہے۔"
+  },
+  {
+   "en": "By using the power of a power law of exponents, $(x^m)^n = x^{mn}$, in reverse, we express the terms in the second bracket as squares of the first bracket's terms. This reshapes the expression so that its hidden algebraic structure becomes clearly visible.",
+   "ur": "قوت نما کے قانون $(x^m)^n = x^{mn}$ کو الٹ استعمال کرتے ہوئے، ہم دوسری بریکٹ کی رقموں کو پہلی بریکٹ کی رقموں کے مربع (square) کی شکل میں لکھتے ہیں۔ اس سے عبارت کی شکل ایسی بن جاتی ہے کہ اس میں چھپا ہوا الجبری ڈھانچہ واضح طور پر نظر آنے لگتا ہے۔"
+  },
+  {
+   "en": "Since fractional powers like $a^{\\frac{1}{3}}$ and $b^{\\frac{2}{3}}$ can look confusing, we temporarily replace them with simple variables $u$ and $v$. This substitution technique clears away the clutter so we can easily recognize the standard formula.",
+   "ur": "چونکہ $a^{\\frac{1}{3}}$ اور $b^{\\frac{2}{3}}$ جیسی بٹے والی طاقتیں دیکھنے میں الجھن پیدا کر سکتی ہیں، اس لیے ہم عارضی طور پر ان کی جگہ سادہ متغیرات $u$ اور $v$ فرض کر لیتے ہیں۔ اس طریقے سے پیچیدگی دور ہو جاتی ہے اور ہم آسانی سے معیاری فارمولے کو پہچان سکتے ہیں۔"
+  },
+  {
+   "en": "With $u$ and $v$, we immediately see the famous sum of cubes identity, $(u+v)(u^2 - uv + v^2) = u^3 + v^3$. Instead of doing a long term-by-term multiplication, this formula collapses the entire product into just two cubed terms.",
+   "ur": "$u$ اور $v$ کی مدد سے ہمیں فوراً مکعبوں کے مجموعے کا مشہور فارمولا $(u+v)(u^2 - uv + v^2) = u^3 + v^3$ نظر آجاتا ہے۔ ایک ایک رقم کو لمبی ضرب دینے کے بجائے، یہ فارمولا پوری ضرب کو سمیٹ کر صرف دو مکعب (cubed) رقموں میں بدل دیتا ہے۔"
+  },
+  {
+   "en": "Now that the algebraic formula has done its job, we replace $u$ and $v$ with their original values, $a^{\\frac{1}{3}}$ and $b^{\\frac{2}{3}}$. The cube power $3$ from the formula is exactly what we need to cancel out the denominator $3$ in our fractional exponents.",
+   "ur": "اب جبکہ الجبری فارمولے نے اپنا کام کر دیا ہے، ہم $u$ اور $v$ کی جگہ ان کی اصل قیمتیں $a^{\\frac{1}{3}}$ اور $b^{\\frac{2}{3}}$ واپس درج کر دیتے ہیں۔ فارمولے کی طاقت $3$ بالکل وہی چیز ہے جس کی ہمیں اپنی بٹے والی طاقتوں کے مخرج (denominator) $3$ کو کاٹنے کے لیے ضرورت تھی۔"
+  },
+  {
+   "en": "Applying the power of a power rule $(x^m)^n = x^{mn}$ one last time, multiplying the exponents by $3$ eliminates the fractions completely. This leaves us with clean, whole-number powers $a^1$ and $b^2$, giving the simplest form.",
+   "ur": "قوت نما کے قانون $(x^m)^n = x^{mn}$ کو آخری بار لاگو کرتے ہوئے، طاقتوں کو $3$ سے ضرب دینے سے بٹے مکمل طور پر ختم ہو جاتے ہیں۔ اس طرح ہمارے پاس سادہ طاقتیں $a^1$ اور $b^2$ بچتی ہیں، جو کہ سب سے مختصر شکل ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $a + b^2$ shows that the complicated product of fractional powers is actually just a disguised form of the sum of cubes, which simplifies to a neat expression without any roots or fractions. You could verify this by multiplying the original two brackets term by term; all the middle terms with fractional powers will cancel each other out, leaving only $a + b^2$.",
+  "ur": "آخری جواب $a + b^2$ یہ بتاتا ہے کہ بٹے والی طاقتوں کی یہ پیچیدہ ضرب دراصل مکعبوں کے مجموعے کے فارمولے کی ایک چھپی ہوئی شکل تھی، جو حل ہو کر بغیر کسی جزر یا بٹے کے ایک سادہ سی عبارت بن جاتی ہے۔ آپ اس کی تصدیق اصل دو بریکٹوں کو ایک ایک رقم کر کے ضرب دے کر بھی کر سکتے ہیں؛ بٹے والی طاقتوں کی تمام درمیانی رقمیں ایک دوسرے سے کٹ جائیں گی اور صرف $a + b^2$ باقی بچے گا۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

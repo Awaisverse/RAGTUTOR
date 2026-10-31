@@ -1,0 +1,64 @@
+{
+ "item": "c10-ex7.2-q1",
+ "label": "vi",
+ "answer_ref": "$\\beta = 65^\\circ,\\ b = 6.64,\\ c = 6.34$ cm",
+ "steps": [
+  {
+   "math": "a = 6 \\text{ cm}, \\quad \\alpha = 55^\\circ, \\quad \\gamma = 60^\\circ",
+   "en": "First, write down the given side and angles of the triangle $ABC$. To solve the triangle, we need to find the unknown angle $\\beta$ and the unknown sides $b$ and $c$.",
+   "ur": "سب سے پہلے، مثلث $ABC$ کا دیا گیا ضلع اور زاویے لکھیں۔ مثلث کو حل کرنے کے لیے، ہمیں نامعلوم زاویہ $\\beta$ اور نامعلوم اضلاع $b$ اور $c$ معلوم کرنے ہیں۔"
+  },
+  {
+   "math": "\\alpha + \\beta + \\gamma = 180^\\circ",
+   "en": "We know that the sum of the interior angles of any triangle is always equal to $180^\\circ$.",
+   "ur": "ہم جانتے ہیں کہ کسی بھی مثلث کے اندرونی زاویوں کا مجموعہ ہمیشہ $180^\\circ$ کے برابر ہوتا ہے۔"
+  },
+  {
+   "math": "\\beta = 180^\\circ - \\alpha - \\gamma = 180^\\circ - 55^\\circ - 60^\\circ = 65^\\circ",
+   "en": "Substitute the given values of $\\alpha = 55^\\circ$ and $\\gamma = 60^\\circ$ into the formula to find the third angle $\\beta$.",
+   "ur": "تیسرا زاویہ $\\beta$ معلوم کرنے کے لیے فارمولے میں دی گئی قیمتیں $\\alpha = 55^\\circ$ اور $\\gamma = 60^\\circ$ درج کریں۔",
+   "check": [
+    "180 - 55 - 60 == 65"
+   ]
+  },
+  {
+   "math": "\\frac{a}{\\sin\\alpha} = \\frac{b}{\\sin\\beta} = \\frac{c}{\\sin\\gamma}",
+   "en": "Now, we use the Law of Sines to find the lengths of the unknown sides $b$ and $c$.",
+   "ur": "اب، ہم نامعلوم اضلاع $b$ اور $c$ کی لمبائیاں معلوم کرنے کے لیے قانونِ جیب (Law of Sines) کا استعمال کرتے ہیں۔"
+  },
+  {
+   "math": "\\frac{b}{\\sin\\beta} = \\frac{a}{\\sin\\alpha} \\implies b = \\frac{a\\sin\\beta}{\\sin\\alpha}",
+   "en": "Take the first two ratios from the Law of Sines and rearrange the equation to solve for side $b$.",
+   "ur": "قانونِ جیب سے پہلی دو نسبتیں لیں اور ضلع $b$ کے لیے حل کرنے کے لیے مساوات کو ترتیب دیں۔"
+  },
+  {
+   "math": "b = \\frac{6 \\times \\sin 65^\\circ}{\\sin 55^\\circ} = \\frac{6 \\times 0.9063}{0.8192} \\approx 6.64 \\text{ cm}",
+   "en": "Substitute $a = 6$, $\\alpha = 55^\\circ$, and $\\beta = 65^\\circ$, then calculate the value of $b$ rounded to two decimal places.",
+   "ur": "اس میں $a = 6$، $\\alpha = 55^\\circ$، اور $\\beta = 65^\\circ$ درج کریں، پھر اعشاریہ کے بعد دو درجوں تک محدود کر کے $b$ کی قیمت معلوم کریں۔",
+   "check": [
+    "Abs((6*sin(65*pi/180)/sin(55*pi/180)) - 6.64) <= 0.005000001"
+   ]
+  },
+  {
+   "math": "\\frac{c}{\\sin\\gamma} = \\frac{a}{\\sin\\alpha} \\implies c = \\frac{a\\sin\\gamma}{\\sin\\alpha} = \\frac{6 \\times \\sin 60^\\circ}{\\sin 55^\\circ} \\approx 6.34 \\text{ cm}",
+   "en": "Similarly, use the Law of Sines for side $c$, substitute $a = 6$, $\\alpha = 55^\\circ$, and $\\gamma = 60^\\circ$, and calculate the value of $c$.",
+   "ur": "اسی طرح، ضلع $c$ کے لیے قانونِ جیب استعمال کریں، $a = 6$، $\\alpha = 55^\\circ$، اور $\\gamma = 60^\\circ$ درج کریں، اور $c$ کی قیمت معلوم کریں۔",
+   "check": [
+    "Abs((6*sin(60*pi/180)/sin(55*pi/180)) - 6.34) <= 0.005000001"
+   ]
+  },
+  {
+   "math": "\\beta = 65^\\circ, \\quad b = 6.64, \\quad c = 6.34 \\text{ cm}",
+   "en": "Thus, all the unknown elements of the triangle $ABC$ have been found.",
+   "ur": "اس طرح، مثلث $ABC$ کے تمام نامعلوم اجزاء معلوم کر لیے گئے ہیں۔",
+   "check": [
+    "180 - 115 == 65",
+    "Abs((6*sin((65)*pi/180)/sin((55)*pi/180)) - 6.64) <= 0.0050000010000000004",
+    "Abs((6*sin((60)*pi/180)/sin((55)*pi/180)) - 6.34) <= 0.0050000010000000004"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

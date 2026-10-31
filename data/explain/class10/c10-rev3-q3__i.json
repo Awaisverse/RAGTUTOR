@@ -1,0 +1,55 @@
+{
+ "item": "c10-rev3-q3",
+ "label": "i",
+ "answer_ref": "verified: both sides $= \\begin{bmatrix} 14 & 18 \\\\ 12 & 12 \\end{bmatrix}$",
+ "math": [
+  "",
+  "A + B = \\begin{bmatrix} 2 & 3 \\\\ 4 & 5 \\end{bmatrix} + \\begin{bmatrix} 5 & 6 \\\\ 2 & 1 \\end{bmatrix} = \\begin{bmatrix} 2 + 5 & 3 + 6 \\\\ 4 + 2 & 5 + 1 \\end{bmatrix} = \\begin{bmatrix} 7 & 9 \\\\ 6 & 6 \\end{bmatrix}",
+  "2(A+B) = 2\\begin{bmatrix} 7 & 9 \\\\ 6 & 6 \\end{bmatrix} = \\begin{bmatrix} 14 & 18 \\\\ 12 & 12 \\end{bmatrix}",
+  "",
+  "2A = 2\\begin{bmatrix} 2 & 3 \\\\ 4 & 5 \\end{bmatrix} = \\begin{bmatrix} 4 & 6 \\\\ 8 & 10 \\end{bmatrix}",
+  "2B = 2\\begin{bmatrix} 5 & 6 \\\\ 2 & 1 \\end{bmatrix} = \\begin{bmatrix} 10 & 12 \\\\ 4 & 2 \\end{bmatrix}",
+  "2A + 2B = \\begin{bmatrix} 4 & 6 \\\\ 8 & 10 \\end{bmatrix} + \\begin{bmatrix} 10 & 12 \\\\ 4 & 2 \\end{bmatrix} = \\begin{bmatrix} 4 + 10 & 6 + 12 \\\\ 8 + 4 & 10 + 2 \\end{bmatrix} = \\begin{bmatrix} 14 & 18 \\\\ 12 & 12 \\end{bmatrix}",
+  "2(A+B) = \\begin{bmatrix} 14 & 18 \\\\ 12 & 12 \\end{bmatrix} = 2A+2B"
+ ],
+ "why": [
+  {
+   "en": "To verify an equation, we always solve the Left-Hand Side (LHS) and Right-Hand Side (RHS) separately. We start with the LHS, $2(A+B)$, to find its final matrix value first.",
+   "ur": "کسی مساوات کی تصدیق کرنے کے لیے ہم ہمیشہ بائیں سائیڈ (LHS) اور دائیں سائیڈ (RHS) کو الگ الگ حل کرتے ہیں۔ ہم پہلے بائیں سائیڈ $2(A+B)$ سے شروعات کرتے ہیں تاکہ اس کا حتمی کالب معلوم کر سکیں۔"
+  },
+  {
+   "en": "By the order of operations (BODMAS), we must solve the bracket $(A+B)$ first. Since matrices $A$ and $B$ both have the same order ($2 \\times 2$), we apply matrix addition by adding their corresponding entries to get a single combined matrix.",
+   "ur": "حسابی اصول (BODMAS) کے مطابق ہمیں پہلے بریکٹ $(A+B)$ کو حل کرنا ہوگا۔ چونکہ کالب $A$ اور $B$ دونوں کا مرتبہ یکساں ہے، اس لیے ہم کالبوں کی جمع کے اصول کے تحت ان کے متناظرہ ارکان کو جمع کر کے ایک نیا کالب حاصل کرتے ہیں۔"
+  },
+  {
+   "en": "Now we apply the definition of scalar multiplication to multiply the number $2$ outside the bracket with our sum matrix. Multiplying every entry inside the matrix by $2$ gives us the complete result for the Left-Hand Side.",
+   "ur": "اب ہم سکیلر ضرب (scalar multiplication) کی تعریف استعمال کرتے ہوئے بریکٹ کے باہر موجود عدد $2$ کو اپنے حاصل شدہ کالب سے ضرب دیتے ہیں۔ کالب کے ہر رکن کو $2$ سے ضرب دینے پر ہمیں بائیں سائیڈ (LHS) کا مکمل جواب مل جاتا ہے۔"
+  },
+  {
+   "en": "Now we move to the Right-Hand Side (RHS), $2A+2B$, to calculate its value independently and see if it matches our LHS result.",
+   "ur": "اب ہم دائیں سائیڈ (RHS) یعنی $2A+2B$ کی طرف آتے ہیں تاکہ اس کی قیمت الگ سے معلوم کریں اور دیکھیں کہ کیا یہ بائیں سائیڈ کے جواب کے برابر آتی ہے۔"
+  },
+  {
+   "en": "In the expression $2A+2B$, scalar multiplication comes before addition. So we first find $2A$ by multiplying each entry of matrix $A$ by the scalar $2$.",
+   "ur": "عبارت $2A+2B$ میں جمع سے پہلے سکیلر ضرب کا عمل ہوتا ہے۔ اس لیے ہم سب سے پہلے کالب $A$ کے ہر رکن کو عدد $2$ سے ضرب دے کر $2A$ معلوم کرتے ہیں۔"
+  },
+  {
+   "en": "Similarly, we need the second part of the RHS expression, which is $2B$. Using scalar multiplication again, we multiply every entry of matrix $B$ by $2$.",
+   "ur": "اسی طرح ہمیں دائیں سائیڈ کے دوسرے حصے یعنی $2B$ کی قیمت چاہیے۔ سکیلر ضرب کا اصول دوبارہ استعمال کرتے ہوئے ہم کالب $B$ کے ہر رکن کو $2$ سے ضرب دیتے ہیں۔"
+  },
+  {
+   "en": "Now that we have the matrices for both $2A$ and $2B$, we apply matrix addition to combine them. Adding their corresponding entries gives us the final matrix for the Right-Hand Side.",
+   "ur": "اب جبکہ ہمارے پاس $2A$ اور $2B$ دونوں کے کالب موجود ہیں، ہم کالبوں کی جمع کا اصول لگا کر انہیں ملا دیتے ہیں۔ ان کے متناظرہ ارکان کو جمع کرنے سے ہمیں دائیں سائیڈ (RHS) کا حتمی کالب مل جاتا ہے۔"
+  },
+  {
+   "en": "We compare the final matrix of the LHS from Step 3 with the final matrix of the RHS from Step 7. Since every corresponding entry is identical, the given matrix property is proved true.",
+   "ur": "ہم مرحلہ 3 سے حاصل شدہ بائیں سائیڈ کے کالب کا موازنہ مرحلہ 7 سے حاصل شدہ دائیں سائیڈ کے کالب سے کرتے ہیں۔ چونکہ دونوں کے تمام متناظرہ ارکان بالکل برابر ہیں، اس لیے دی گئی خاصیت درست ثابت ہوتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This result verifies the distributive law of scalar multiplication over matrix addition, $2(A+B) = 2A+2B$. It shows that whether you add matrices $A$ and $B$ first and then multiply by $2$, or multiply each matrix by $2$ first and then add them, you get the exact same matrix $\\begin{bmatrix} 14 & 18 \\\\ 12 & 12 \\end{bmatrix}$.",
+  "ur": "یہ نتیجہ کالبوں کی جمع پر سکیلر ضرب کے تقسیمی قانون $2(A+B) = 2A+2B$ کی تصدیق کرتا ہے۔ اس سے معلوم ہوتا ہے کہ چاہے آپ پہلے کالب $A$ اور $B$ کو جمع کر کے $2$ سے ضرب دیں، یا پہلے دونوں کالبوں کو الگ الگ $2$ سے ضرب دے کر پھر جمع کریں، دونوں صورتوں میں بالکل ایک جیسا کالب $\\begin{bmatrix} 14 & 18 \\\\ 12 & 12 \\end{bmatrix}$ حاصل ہوتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

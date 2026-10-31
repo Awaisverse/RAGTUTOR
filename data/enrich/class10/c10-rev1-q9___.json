@@ -1,0 +1,73 @@
+{
+ "item": "c10-rev1-q9",
+ "label": "",
+ "answer_ref": "$a = \\frac{3}{25},\\ b = \\frac{4}{25}$",
+ "steps": [
+  {
+   "math": "(3-4i)(a+bi) = 1+0i",
+   "en": "Write down the given complex equation to find the real values of $a$ and $b$.",
+   "ur": "$a$ اور $b$ کی حقیقی قیمتیں معلوم کرنے کے لیے دی گئی مختلط مساوات لکھیں۔"
+  },
+  {
+   "math": "3a + 3bi - 4ai - 4bi^2 = 1 + 0i",
+   "en": "Multiply the two brackets on the left-hand side term by term.",
+   "ur": "بائیں جانب موجود دونوں قوسین کو رکن بہ رکن ضرب دیں۔",
+   "check": [
+    "expand((3-4*I)*(a+b*I)) == expand(3*a + 3*b*I - 4*a*I - 4*b*I**2)"
+   ]
+  },
+  {
+   "math": "(3a + 4b) + (-4a + 3b)i = 1 + 0i",
+   "en": "Put $i^2 = -1$, so $-4bi^2 = +4b$. Then group the real terms and the imaginary terms together.",
+   "ur": "$i^2 = -1$ درج کریں، جس سے $-4bi^2 = +4b$ ہو جائے گا۔ پھر حقیقی اور خیالی ارکان کو الگ الگ اکٹھا کریں۔",
+   "check": [
+    "expand((3-4*I)*(a+b*I)) == expand((3*a + 4*b) + (-4*a + 3*b)*I)"
+   ]
+  },
+  {
+   "math": "3a + 4b = 1 \\quad \\text{(1)} \\qquad \\text{and} \\qquad -4a + 3b = 0 \\quad \\text{(2)}",
+   "en": "Two complex numbers are equal only if their real parts are equal and their imaginary parts are equal. Equating both sides gives two linear equations.",
+   "ur": "دو مختلط اعداد صرف تب برابر ہوتے ہیں جب ان کے حقیقی حصے آپس میں برابر ہوں اور خیالی حصے آپس میں برابر ہوں۔ موازنہ کرنے سے دو یک درجی مساوات ملتی ہیں۔"
+  },
+  {
+   "math": "-4a + 3b = 0 \\implies 3b = 4a \\implies b = \\frac{4}{3}a",
+   "en": "From equation (2), express $b$ in terms of $a$.",
+   "ur": "مساوات (2) سے $b$ کی قیمت $a$ کی شکل میں نکالیں۔",
+   "check": [
+    "3*(4*a/3) - 4*a == 0"
+   ]
+  },
+  {
+   "math": "3a + 4\\left(\\frac{4}{3}a\\right) = 1 \\implies 3a + \\frac{16}{3}a = 1 \\implies \\frac{25}{3}a = 1 \\implies a = \\frac{3}{25}",
+   "en": "Substitute $b = \\frac{4}{3}a$ into equation (1) and simplify to find the value of $a$.",
+   "ur": "$b = \\frac{4}{3}a$ کو مساوات (1) میں درج کریں اور حل کر کے $a$ کی قیمت معلوم کریں۔",
+   "check": [
+    "3*a + 4*(4*a/3) == 25*a/3",
+    "3*R(3,25) + 4*(4*R(3,25)/3) == 1"
+   ]
+  },
+  {
+   "math": "b = \\frac{4}{3}\\left(\\frac{3}{25}\\right) = \\frac{4}{25}",
+   "en": "Now put $a = \\frac{3}{25}$ back into $b = \\frac{4}{3}a$ to find the value of $b$.",
+   "ur": "اب $a = \\frac{3}{25}$ کو واپس $b = \\frac{4}{3}a$ میں درج کر کے $b$ کی قیمت معلوم کریں۔",
+   "check": [
+    "R(4,3)*R(3,25) == R(4,25)"
+   ]
+  },
+  {
+   "math": "a = \\frac{3}{25},\\quad b = \\frac{4}{25}",
+   "en": "State the final values of $a$ and $b$. Checking in the original equation: $(3-4i)\\left(\\frac{3}{25}+\\frac{4}{25}i\\right) = 1+0i$.",
+   "ur": "آخر میں $a$ اور $b$ کی مطلوبہ قیمتیں لکھیں۔ اصل مساوات میں پڑتال کرنے سے دونوں اطراف برابر آتی ہیں۔",
+   "check": [
+    "(3-4*I)*(R(3,25)+R(4,25)*I) == 1",
+    "expand((3-4*I)*((a)+(b)*I)) == expand((3*a + 4*b) + (-4*a + 3*b)*I)",
+    "3*(3/25) + 4*(4/25) - 1 == 0",
+    "-4*(3/25) + 3*(4/25) == 0",
+    "(3-4*I)*((3/25)+(4/25)*I) == 1"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

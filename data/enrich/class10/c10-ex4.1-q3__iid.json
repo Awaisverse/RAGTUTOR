@@ -1,0 +1,54 @@
+{
+ "item": "c10-ex4.1-q3",
+ "label": "iid",
+ "answer_ref": "$8 x^{4} - 8 x^{2} + 1$",
+ "steps": [
+  {
+   "math": "g(x) = 2x^{2} - 1",
+   "en": "Write down the given function $g(x)$ to find the composite function $(g\\circ g)(x)$.",
+   "ur": "مخلوط تفاعل $(g\\circ g)(x)$ معلوم کرنے کے لیے دیا گیا تفاعل $g(x)$ لکھیں۔"
+  },
+  {
+   "math": "(g\\circ g)(x) = g(g(x)) = g\\left(2x^{2} - 1\\right)",
+   "en": "By the definition of composition of functions, substitute $g(x) = 2x^{2} - 1$ inside the outer function $g$.",
+   "ur": "تفاعلات کی ترکیب کی تعریف کے مطابق، بیرونی تفاعل $g$ میں $g(x) = 2x^{2} - 1$ درج کریں۔"
+  },
+  {
+   "math": "= 2\\left(2x^{2} - 1\\right)^{2} - 1",
+   "en": "Replace $x$ with $2x^{2} - 1$ in the formula of $g(x) = 2x^{2} - 1$.",
+   "ur": "تفاعل $g(x) = 2x^{2} - 1$ میں $x$ کی جگہ $2x^{2} - 1$ رکھیں۔",
+   "check": [
+    "(2*x**2 - 1).subs(x, 2*x**2 - 1) == 2*(2*x**2 - 1)**2 - 1"
+   ]
+  },
+  {
+   "math": "= 2\\left(4x^{4} - 4x^{2} + 1\\right) - 1",
+   "en": "Expand the square using the algebraic identity $(a - b)^{2} = a^{2} - 2ab + b^{2}$.",
+   "ur": "جبری کلیہ $(a - b)^{2} = a^{2} - 2ab + b^{2}$ کی مدد سے مربع کو کھولیں۔",
+   "check": [
+    "(2*x**2 - 1)**2 == 4*x**4 - 4*x**2 + 1"
+   ]
+  },
+  {
+   "math": "= 8x^{4} - 8x^{2} + 2 - 1",
+   "en": "Multiply $2$ with each term inside the brackets.",
+   "ur": "بریکٹ کے اندر موجود ہر رقم کو $2$ سے ضرب دیں۔",
+   "check": [
+    "2*(4*x**4 - 4*x**2 + 1) - 1 == 8*x**4 - 8*x**2 + 2 - 1"
+   ]
+  },
+  {
+   "math": "(g\\circ g)(x) = 8 x^{4} - 8 x^{2} + 1",
+   "en": "Simplify the constant terms to get the final answer.",
+   "ur": "مستقل رقوم کو مختصر کر کے حتمی جواب حاصل کریں۔",
+   "check": [
+    "8*x**4 - 8*x**2 + 2 - 1 == 8*x**4 - 8*x**2 + 1",
+    "(2*x**2 - 1).subs(x, (2*x**2 - 1)) == (2*(2*x**2 - 1)**2 - 1)",
+    "(2*(2*x**2 - 1)**2 - 1) == (8*x**4 - 8*x**2 + 1)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

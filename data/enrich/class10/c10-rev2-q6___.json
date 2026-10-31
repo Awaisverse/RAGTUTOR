@@ -1,0 +1,57 @@
+{
+ "item": "c10-rev2-q6",
+ "label": "",
+ "answer_ref": "$k = -\\frac{1}{2}$",
+ "steps": [
+  {
+   "math": "x^2 + 2(1 + k)x + k^2 = 0",
+   "en": "Write down the given quadratic equation.",
+   "ur": "دی گئی دو درجی مساوات لکھیں۔"
+  },
+  {
+   "math": "a = 1, \\quad b = 2(1 + k), \\quad c = k^2",
+   "en": "Compare the equation with the standard form $ax^2 + bx + c = 0$ to identify the coefficients $a$, $b$, and $c$.",
+   "ur": "دی گئی مساوات کا معیاری شکل $ax^2 + bx + c = 0$ سے موازنہ کرتے ہوئے عددی سر $a$، $b$ اور $c$ معلوم کریں۔"
+  },
+  {
+   "math": "b^2 - 4ac = 0",
+   "en": "Since the roots of the equation are equal, its discriminant must be equal to zero.",
+   "ur": "چونکہ مساوات کے روٹس (جذر) برابر ہیں، اس لیے اس کا فرق کنندہ صفر کے برابر ہو گا۔"
+  },
+  {
+   "math": "[2(1 + k)]^2 - 4(1)(k^2) = 0",
+   "en": "Substitute the values of $a$, $b$, and $c$ into the discriminant formula.",
+   "ur": "فرق کنندہ کے فارمولے میں $a$، $b$ اور $c$ کی قیمتیں درج کریں۔"
+  },
+  {
+   "math": "4(1 + 2k + k^2) - 4k^2 = 0",
+   "en": "Expand the square using the algebraic identity $(1+k)^2 = 1 + 2k + k^2$.",
+   "ur": "الجبری کلیہ $(1+k)^2 = 1 + 2k + k^2$ استعمال کرتے ہوئے مربع کھولیں۔",
+   "check": [
+    "(2*(1 + k))**2 - 4*1*(k**2) == 4*(1 + 2*k + k**2) - 4*k**2"
+   ]
+  },
+  {
+   "math": "4 + 8k + 4k^2 - 4k^2 = 0 \\Rightarrow 4 + 8k = 0",
+   "en": "Multiply $4$ inside the brackets and cancel out the opposite terms $4k^2$ and $-4k^2$.",
+   "ur": "بریکٹ کے اندر $4$ کو ضرب دیں اور متضاد رقوم $4k^2$ اور $-4k^2$ کو منسوخ کریں۔",
+   "check": [
+    "4*(1 + 2*k + k**2) - 4*k**2 == 4 + 8*k"
+   ]
+  },
+  {
+   "math": "8k = -4 \\Rightarrow k = -\\frac{4}{8} = -\\frac{1}{2}",
+   "en": "Isolate $k$ and simplify the fraction to find the final answer.",
+   "ur": "$k$ کو الگ کریں اور کسر کو مختصر کر کے حتمی جواب معلوم کریں۔",
+   "check": [
+    "R(-4, 8) == R(-1, 2)",
+    "(4 + 8*k).subs(k, R(-1, 2)) == 0",
+    "(2*(1 + k))**2 - 4*k**2 == 4 + 8*k",
+    "(4 + 8*k).subs(k, R(-1,2)) == 0"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

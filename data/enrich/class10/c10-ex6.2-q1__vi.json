@@ -1,0 +1,54 @@
+{
+ "item": "c10-ex6.2-q1",
+ "label": "vi",
+ "answer_ref": "$\\frac{19}{2}\\underline{i} -  \\frac{19}{2}\\underline{j}$",
+ "steps": [
+  {
+   "math": "\\underline{a} = 7\\underline{i} - 3\\underline{j}, \\quad \\underline{b} = \\underline{i} + 5\\underline{j}",
+   "en": "Write down the given vectors $\\underline{a}$ and $\\underline{b}$. We need to find the value of $\\frac{3}{2}\\underline{a} - \\underline{b}$.",
+   "ur": "دیے گئے سمتیے $\\underline{a}$ اور $\\underline{b}$ لکھیں۔ ہمیں $\\frac{3}{2}\\underline{a} - \\underline{b}$ کی قیمت معلوم کرنی ہے۔"
+  },
+  {
+   "math": "\\frac{3}{2}\\underline{a} - \\underline{b} = \\frac{3}{2}\\left(7\\underline{i} - 3\\underline{j}\\right) - \\left(\\underline{i} + 5\\underline{j}\\right)",
+   "en": "Substitute the given values of vectors $\\underline{a}$ and $\\underline{b}$ into the expression.",
+   "ur": "دیے گئے جملے میں سمتیہ $\\underline{a}$ اور $\\underline{b}$ کی قیمتیں درج کریں۔"
+  },
+  {
+   "math": "= \\frac{21}{2}\\underline{i} - \\frac{9}{2}\\underline{j} - \\underline{i} - 5\\underline{j}",
+   "en": "Multiply the scalar $\\frac{3}{2}$ with each component of the first vector and apply the negative sign to each component of the second vector.",
+   "ur": "پہلے سمتیے کے ہر جزو کو عدد $\\frac{3}{2}$ سے ضرب دیں اور دوسرے سمتیے کے ہر جزو کے ساتھ منفی کی علامت لگائیں۔",
+   "check": [
+    "R(3,2)*7 == R(21,2)",
+    "R(3,2)*(-3) == -R(9,2)"
+   ]
+  },
+  {
+   "math": "= \\left(\\frac{21}{2} - 1\\right)\\underline{i} + \\left(-\\frac{9}{2} - 5\\right)\\underline{j}",
+   "en": "Group the $\\underline{i}$ components together and the $\\underline{j}$ components together.",
+   "ur": "$\\underline{i}$ والے اجزاء اور $\\underline{j}$ والے اجزاء کو الگ الگ اکٹھا کریں۔"
+  },
+  {
+   "math": "= \\left(\\frac{21 - 2}{2}\\right)\\underline{i} + \\left(\\frac{-9 - 10}{2}\\right)\\underline{j}",
+   "en": "Take the LCM of the fractions in each group to simplify.",
+   "ur": "مختصر کرنے کے لیے ہر گروپ میں کسروں کا ذواضعاف اقل (LCM) لیں۔",
+   "check": [
+    "R(21,2) - 1 == R(21 - 2, 2)",
+    "-R(9,2) - 5 == R(-9 - 10, 2)"
+   ]
+  },
+  {
+   "math": "\\frac{3}{2}\\underline{a} - \\underline{b} = \\frac{19}{2}\\underline{i} -  \\frac{19}{2}\\underline{j}",
+   "en": "Simplify the numerators to get the final resultant vector.",
+   "ur": "شمار کنندگان کو حل کر کے حتمی حاصل سمتیہ معلوم کریں۔",
+   "check": [
+    "R(21 - 2, 2) == R(19, 2)",
+    "R(-9 - 10, 2) == -R(19, 2)",
+    "(3/2)*(7) + (-1)*(1) == (19/2)",
+    "(3/2)*(-3) + (-1)*(5) == (-19/2)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

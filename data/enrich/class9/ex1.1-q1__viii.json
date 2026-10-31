@@ -1,0 +1,60 @@
+{
+ "item": "ex1.1-q1",
+ "label": "viii",
+ "answer_ref": "Irrational",
+ "steps": [
+  {
+   "math": "\\sqrt{3}+\\sqrt{13}",
+   "en": "We are given the number $\\sqrt{3}+\\sqrt{13}$ and we need to determine whether it is a rational or an irrational number.",
+   "ur": "ہمیں عدد $\\sqrt{3}+\\sqrt{13}$ دیا گیا ہے اور ہمیں یہ معلوم کرنا ہے کہ آیا یہ ایک ناطق عدد ہے یا غیر ناطق۔"
+  },
+  {
+   "math": "",
+   "en": "We know that the square of any rational number is always rational. Therefore, let us take the square of $\\sqrt{3}+\\sqrt{13}$ to check its nature.",
+   "ur": "ہم جانتے ہیں کہ کسی بھی ناطق عدد کا مربع ہمیشہ ناطق ہوتا ہے۔ اس لیے، آئیے اس کی نوعیت جانچنے کے لیے $\\sqrt{3}+\\sqrt{13}$ کا مربع لیتے ہیں۔"
+  },
+  {
+   "math": "(\\sqrt{3}+\\sqrt{13})^2 = (\\sqrt{3})^2 + (\\sqrt{13})^2 + 2(\\sqrt{3})(\\sqrt{13})",
+   "en": "Apply the algebraic identity $(a+b)^2 = a^2 + b^2 + 2ab$, where $a = \\sqrt{3}$ and $b = \\sqrt{13}$.",
+   "ur": "الجبری کلیہ $(a+b)^2 = a^2 + b^2 + 2ab$ استعمال کریں، جہاں $a = \\sqrt{3}$ اور $b = \\sqrt{13}$ ہے۔",
+   "check": [
+    "(sqrt(3)+sqrt(13))**2 == (sqrt(3))**2 + (sqrt(13))**2 + 2*sqrt(3)*sqrt(13)"
+   ]
+  },
+  {
+   "math": "(\\sqrt{3}+\\sqrt{13})^2 = 3 + 13 + 2\\sqrt{3 \\times 13} = 16 + 2\\sqrt{39}",
+   "en": "Simplify the squares and multiply the numbers inside the radical.",
+   "ur": "مربعوں کو مختصر کریں اور جذر کے اندر موجود اعداد کو ضرب دیں۔",
+   "check": [
+    "(sqrt(3))**2 + (sqrt(13))**2 + 2*sqrt(3*13) == 16 + 2*sqrt(39)"
+   ]
+  },
+  {
+   "math": "36 < 39 < 49 \\implies \\sqrt{39}\\ \\text{is irrational}",
+   "en": "Since $39$ lies between two consecutive perfect squares $36$ ($6^2$) and $49$ ($7^2$), $39$ is not a perfect square. Thus, $\\sqrt{39}$ is an irrational number.",
+   "ur": "چونکہ $39$ دو مسلسل مکمل مربع اعداد $36$ ($6^2$) اور $49$ ($7^2$) کے درمیان آتا ہے، اس لیے $39$ ایک مکمل مربع نہیں ہے۔ لہٰذا، $\\sqrt{39}$ ایک غیر ناطق عدد ہے۔",
+   "check": [
+    "floor(sqrt(39))**2 == 36",
+    "(floor(sqrt(39))+1)**2 == 49"
+   ]
+  },
+  {
+   "math": "16 + 2\\sqrt{39}\\ \\text{is irrational}",
+   "en": "Since the product of a non-zero rational number ($2$) and an irrational number ($\\sqrt{39}$) is irrational, and adding a rational number ($16$) to an irrational number gives an irrational result, $16+2\\sqrt{39}$ is irrational.",
+   "ur": "چونکہ ایک غیر صفر ناطق عدد ($2$) اور غیر ناطق عدد ($\\sqrt{39}$) کا حاصلِ ضرب غیر ناطق ہوتا ہے، اور غیر ناطق عدد میں ناطق عدد ($16$) جمع کرنے سے نتیجہ غیر ناطق آتا ہے، اس لیے $16+2\\sqrt{39}$ غیر ناطق ہے۔"
+  },
+  {
+   "math": "\\therefore \\sqrt{3}+\\sqrt{13}\\ \\text{is an irrational number.}",
+   "en": "Because its square ($16+2\\sqrt{39}$) is irrational, the original number $\\sqrt{3}+\\sqrt{13}$ cannot be rational. Hence, $\\sqrt{3}+\\sqrt{13}$ is an irrational number.",
+   "ur": "چونکہ اس کا مربع ($16+2\\sqrt{39}$) غیر ناطق ہے، اس لیے اصل عدد $\\sqrt{3}+\\sqrt{13}$ ناطق نہیں ہو سکتا۔ لہٰذا، $\\sqrt{3}+\\sqrt{13}$ ایک غیر ناطق عدد ہے۔",
+   "check": [
+    "(sqrt(3)+sqrt(13))**2 == 16 + 2*sqrt(39)",
+    "floor(sqrt(39))**2 < 39",
+    "(floor(sqrt(39))+1)**2 > 39"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

@@ -1,0 +1,63 @@
+{
+ "item": "c10-ex5.5-q7",
+ "label": "",
+ "answer_ref": "$x \\approx 6.67$",
+ "steps": [
+  {
+   "math": "",
+   "en": "First, write down the given values from the question. The distance is $10\\text{ km}$, the time taken is $\\frac{2x}{x+4}\\text{ hours}$, and the average speed is $8\\text{ km/h}$. We need to find the value of $x$.",
+   "ur": "سب سے پہلے سوال میں دی گئی معلومات لکھیں۔ فاصلہ $10\\text{ km}$ ہے، وقت $\\frac{2x}{x+4}\\text{ hours}$ ہے، اور اوسط رفتار $8\\text{ km/h}$ ہے۔ ہمیں $x$ کی قیمت معلوم کرنی ہے۔"
+  },
+  {
+   "math": "\\text{Distance} = \\text{Speed} \\times \\text{Time}",
+   "en": "Use the standard formula relating distance, speed, and time.",
+   "ur": "فاصلہ، رفتار اور وقت کے درمیان تعلق کا بنیادی فارمولا استعمال کریں۔"
+  },
+  {
+   "math": "10 = 8 \\times \\frac{2x}{x + 4}",
+   "en": "Substitute the given values of distance, speed, and time into the formula.",
+   "ur": "فارمولے میں فاصلہ، رفتار اور وقت کی دی گئی قیمتیں درج کریں۔"
+  },
+  {
+   "math": "10 = \\frac{16x}{x + 4}",
+   "en": "Multiply $8$ by the numerator $2x$ on the right-hand side.",
+   "ur": "دائیں طرف $8$ کو شمار کنندہ $2x$ سے ضرب دیں۔",
+   "check": [
+    "8 * 2 == 16"
+   ]
+  },
+  {
+   "math": "10(x + 4) = 16x",
+   "en": "Multiply both sides of the equation by $(x + 4)$ to eliminate the denominator.",
+   "ur": "نصب نما کو ختم کرنے کے لیے مساوات کے دونوں اطراف کو $(x + 4)$ سے ضرب دیں۔"
+  },
+  {
+   "math": "10x + 40 = 16x",
+   "en": "Expand the brackets on the left-hand side by multiplying $10$ with both terms inside.",
+   "ur": "بائیں طرف بریکٹ کے اندر موجود دونوں رقوم کو $10$ سے ضرب دے کر بریکٹ کھولیں۔",
+   "check": [
+    "10 * 4 == 40"
+   ]
+  },
+  {
+   "math": "40 = 16x - 10x \\Rightarrow 6x = 40",
+   "en": "Subtract $10x$ from both sides to collect the $x$ terms on one side and simplify.",
+   "ur": "$x$ والی رقوم کو ایک طرف اکٹھا کرنے کے لیے دونوں اطراف سے $10x$ تفریق کریں اور مختصر کریں۔",
+   "check": [
+    "16 - 10 == 6"
+   ]
+  },
+  {
+   "math": "x = \\frac{40}{6} = \\frac{20}{3} \\approx 6.67",
+   "en": "Divide both sides by $6$, simplify the fraction by dividing the numerator and denominator by $2$, and write the final answer rounded to two decimal places.",
+   "ur": "دونوں اطراف کو $6$ پر تقسیم کریں، شمار کنندہ اور نصب نما کو $2$ پر تقسیم کر کے کسر کو مختصر کریں، اور حتمی جواب اعشاریہ کے بعد دو درجوں تک لکھیں۔",
+   "check": [
+    "R(40, 6) == R(20, 3)",
+    "8*(2*R(20,3))/(R(20,3) + 4) == 10"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

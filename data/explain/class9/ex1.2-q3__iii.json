@@ -1,0 +1,50 @@
+{
+ "item": "ex1.2-q3",
+ "label": "iii",
+ "answer_ref": "$34$",
+ "math": [
+  "x = 3 + \\sqrt{8}",
+  "\\frac{1}{x} = \\frac{1}{3+\\sqrt{8}} \\times \\frac{3-\\sqrt{8}}{3-\\sqrt{8}}",
+  "\\frac{1}{x} = \\frac{3-\\sqrt{8}}{(3)^2 - (\\sqrt{8})^2} = \\frac{3-\\sqrt{8}}{9-8} = 3-\\sqrt{8}",
+  "x + \\frac{1}{x} = (3+\\sqrt{8}) + (3-\\sqrt{8}) = 6",
+  "\\left(x + \\frac{1}{x}\\right)^2 = (6)^2",
+  "x^2 + 2(x)\\left(\\frac{1}{x}\\right) + \\frac{1}{x^2} = 36 \\;\\Rightarrow\\; x^2 + 2 + \\frac{1}{x^2} = 36",
+  "x^2 + \\frac{1}{x^2} = 36 - 2 = 34"
+ ],
+ "why": [
+  {
+   "en": "We always begin by clearly stating our starting information so we can plan the easiest path to our target expression, $x^2 + \\frac{1}{x^2}$. Instead of squaring $x$ directly, it is much simpler to first find $x + \\frac{1}{x}$ and then square that result.",
+   "ur": "ہم ہمیشہ دی گئی معلومات کو واضح طور پر لکھ کر شروعات کرتے ہیں تاکہ ہم اپنی مطلوبہ مقدار $x^2 + \\frac{1}{x^2}$ تک پہنچنے کا سب سے آسان راستہ چن سکیں۔ براہِ راست $x$ کا مربع لینے کے بجائے، پہلے $x + \\frac{1}{x}$ معلوم کر کے اس کا مربع لینا کہیں زیادہ آسان ہے۔"
+  },
+  {
+   "en": "In algebra, we do not like to keep square roots in the bottom of a fraction, so we use the rule of rationalization. Multiplying and dividing by the conjugate $3-\\sqrt{8}$ will help us clear the radical from the denominator without changing the fraction's value.",
+   "ur": "الجبرا میں ہم کسر کے مخرج (نچلے حصے) میں جزر رکھنا پسند نہیں کرتے، اس لیے ہم ناطق بنانے (rationalization) کا اصول استعمال کرتے ہیں۔ زوج جملے (conjugate) یعنی $3-\\sqrt{8}$ سے ضرب اور تقسیم کرنے سے کسر کی قیمت بدلے بغیر مخرج سے جزر ختم ہو جائے گا۔"
+  },
+  {
+   "en": "By applying the difference of two squares formula, $(a+b)(a-b) = a^2 - b^2$, the square root in the denominator disappears completely. Because $9 - 8$ leaves just $1$ at the bottom, we get a neat, simple expression for $\\frac{1}{x}$.",
+   "ur": "دو مربوں کے فرق کا فارمولا $(a+b)(a-b) = a^2 - b^2$ لگانے سے مخرج سے جزر مکمل طور پر ختم ہو جاتا ہے۔ چونکہ $9 - 8$ سے نیچے صرف $1$ بچتا ہے، اس لیے ہمیں $\\frac{1}{x}$ کی ایک صاف اور سادہ قیمت مل جاتی ہے۔"
+  },
+  {
+   "en": "Now we combine $x$ and $\\frac{1}{x}$ because their sum is the building block for the squared expression we actually need. Notice how nicely the opposite surd terms $+\\sqrt{8}$ and $-\\sqrt{8}$ cancel out, leaving us with a simple whole number, $6$.",
+   "ur": "اب ہم $x$ اور $\\frac{1}{x}$ کو جمع کرتے ہیں کیونکہ ان کا مجموعہ ہی دراصل اس مربع والی مقدار کی بنیاد ہے جو ہمیں چاہیے۔ دیکھیے کس خوبصورتی سے مخالف علامتوں والے جزر $+\\sqrt{8}$ اور $-\\sqrt{8}$ ایک دوسرے کو کینسل کر دیتے ہیں اور ہمارے پاس ایک سادہ عدد $6$ بچ جاتا ہے۔"
+  },
+  {
+   "en": "To generate the $x^2$ and $\\frac{1}{x^2}$ terms required by the question, we square both sides of our new equation. Doing the exact same operation to both sides keeps the equation balanced.",
+   "ur": "سوال میں مطلوب $x^2$ اور $\\frac{1}{x^2}$ کی رقوم حاصل کرنے کے لیے ہم اپنی نئی مساوات کے دونوں اطراف کا مربع لیتے ہیں۔ دونوں طرف بالکل ایک جیسا عمل کرنے سے مساوات کا توازن برقرار رہتا ہے۔"
+  },
+  {
+   "en": "We expand the left side using the whole-square identity $(a+b)^2 = a^2 + 2ab + b^2$. The beauty of this step is that $x$ and $\\frac{1}{x}$ are reciprocals, so their product in the middle term cancels out completely, leaving just the number $2$.",
+   "ur": "ہم بائیں جانب کو کامل مربع کے فارمولے $(a+b)^2 = a^2 + 2ab + b^2$ کی مدد سے کھولتے ہیں۔ اس قدم کی خوبصورتی یہ ہے کہ $x$ اور $\\frac{1}{x}$ ایک دوسرے کے معکوس ہیں، اس لیے درمیانی رقم میں ان کا حاصلِ ضرب مکمل طور پر کٹ جاتا ہے اور صرف عدد $2$ بچتا ہے۔"
+  },
+  {
+   "en": "Finally, to isolate our target expression $x^2 + \\frac{1}{x^2}$ on the left side, we shift the extra $+2$ to the other side where it becomes $-2$. This simple subtraction gives us our exact final value.",
+   "ur": "آخر میں، اپنی مطلوبہ مقدار $x^2 + \\frac{1}{x^2}$ کو بائیں جانب تنہا کرنے کے لیے ہم اضافی $+2$ کو دوسری طرف لے جاتے ہیں جہاں جا کر وہ $-2$ ہو جاتا ہے۔ یہ سادہ سی تفریق ہمیں ہمارا حتمی جواب دے دیتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This final answer tells us that even though $x = 3+\\sqrt{8}$ contains an irrational square root, the combined expression $x^2 + \\frac{1}{x^2}$ simplifies to the exact whole number $34$. You can easily check that this makes sense: since $x + \\frac{1}{x} = 6$, its square is $36$, and removing the middle $+2$ term naturally leaves $34$.",
+  "ur": "یہ حتمی جواب ہمیں بتاتا ہے کہ اگرچہ $x = 3+\\sqrt{8}$ میں ایک غیر ناطق جزر شامل ہے، لیکن جملہ $x^2 + \\frac{1}{x^2}$ حل ہو کر ایک مکمل عدد $34$ بن جاتا ہے۔ آپ اس کی درستگی کو باآسانی سمجھ سکتے ہیں: چونکہ $x + \\frac{1}{x} = 6$ ہے، اس کا مربع $36$ بنتا ہے، اور درمیانی رقم $+2$ کو نکال دینے سے فطری طور پر $34$ ہی بچتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

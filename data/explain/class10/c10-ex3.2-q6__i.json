@@ -1,0 +1,40 @@
+{
+ "item": "c10-ex3.2-q6",
+ "label": "i",
+ "answer_ref": "verified: both sides $= \\begin{bmatrix} 2 & 3 \\\\ 4 & 5 \\end{bmatrix}$",
+ "math": [
+  "",
+  "A^t = \\begin{bmatrix} 2 & 3 \\\\ 4 & 5 \\end{bmatrix}^t = \\begin{bmatrix} 2 & 4 \\\\ 3 & 5 \\end{bmatrix}",
+  "(A^t)^t = \\begin{bmatrix} 2 & 4 \\\\ 3 & 5 \\end{bmatrix}^t = \\begin{bmatrix} 2 & 3 \\\\ 4 & 5 \\end{bmatrix}",
+  "",
+  "(A^t)^t = \\begin{bmatrix} 2 & 3 \\\\ 4 & 5 \\end{bmatrix} = A"
+ ],
+ "why": [
+  {
+   "en": "To verify an equation, we always start by evaluating one side first, usually the more complex Left-Hand Side $(A^t)^t$. This gives us a clear target: simplify this expression step by step to see if it matches the Right-Hand Side.",
+   "ur": "کسی مساوات کی تصدیق کرنے کے لیے، ہم ہمیشہ پہلے ایک سائیڈ کو حل کرنے سے شروعات کرتے ہیں، عام طور پر زیادہ پیچیدہ بائیں سائیڈ $(A^t)^t$ سے۔ اس سے ہمیں ایک واضح ہدف ملتا ہے کہ اس عبارت کو مرحلہ وار مختصر کریں تاکہ دیکھ سکیں کہ کیا یہ دائیں سائیڈ کے برابر آتی ہے۔"
+  },
+  {
+   "en": "According to the rules of algebra, we must work from the inside of the brackets outward, so we first find the transpose $A^t$. By the definition of transpose, we interchange the rows and columns of $A$, turning the first row $[2, 3]$ into the first column and $[4, 5]$ into the second column.",
+   "ur": "الجبرا کے اصولوں کے مطابق، ہمیں بریکٹ کے اندر سے باہر کی طرف کام کرنا چاہیے، اس لیے ہم پہلے اندرونی ٹرانسپوز $A^t$ معلوم کرتے ہیں۔ ٹرانسپوز کی تعریف کے مطابق، ہم کالب $A$ کی قطاروں اور کالموں کو آپس میں بدل دیتے ہیں، جس سے پہلی قطار $[2, 3]$ پہلا کالم اور دوسری قطار $[4, 5]$ دوسرا کالم بن جاتی ہے۔"
+  },
+  {
+   "en": "Now we apply the outer transpose to the matrix $A^t$ that we just found. Interchanging the rows and columns a second time puts the numbers $2, 3, 4,$ and $5$ right back into their original positions.",
+   "ur": "اب ہم اس کالب $A^t$ پر بیرونی ٹرانسپوز لاگو کرتے ہیں جو ہم نے ابھی معلوم کیا ہے۔ قطاروں اور کالموں کو دوسری بار آپس میں بدلنے سے اعداد $2, 3, 4$ اور $5$ بالکل اپنی اصل جگہوں پر واپس آ جاتے ہیں۔"
+  },
+  {
+   "en": "Next, we look at the Right-Hand Side of the equation, which is simply the original matrix $A$ given in the question. Writing it down allows us to directly compare it with the result we got from the Left-Hand Side.",
+   "ur": "اس کے بعد، ہم مساوات کی دائیں سائیڈ کو دیکھتے ہیں، جو کہ سوال میں دیا گیا اصل کالب $A$ ہی ہے۔ اسے لکھنے سے ہم بائیں سائیڈ سے حاصل ہونے والے نتیجے کے ساتھ اس کا براہِ راست موازنہ کر سکتے ہیں۔"
+  },
+  {
+   "en": "By comparing our final matrix from Step 3 with the original matrix $A$, we see that every corresponding entry is identical. This completes our proof that the Left-Hand Side is equal to the Right-Hand Side.",
+   "ur": "تیسرے مرحلے کے آخری کالب کا اصل کالب $A$ سے موازنہ کرنے پر، ہم دیکھتے ہیں کہ ہر متناظر رکن بالکل ایک جیسا ہے۔ اس سے ہمارا یہ ثبوت مکمل ہوتا ہے کہ بائیں سائیڈ دائیں سائیڈ کے برابر ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This result proves an important property of matrices: taking the transpose of a matrix twice always brings you back to the original matrix $A = \\begin{bmatrix} 2 & 3 \\\\ 4 & 5 \\end{bmatrix}$. It is a great self-check because if your final matrix does not match the question's starting matrix, you know a mistake was made while swapping rows and columns.",
+  "ur": "یہ نتیجہ کالبوں کی ایک اہم خصوصیت کو ثابت کرتا ہے: کسی کالب کا دو بار ٹرانسپوز لینے سے آپ کو ہمیشہ اصل کالب $A = \\begin{bmatrix} 2 & 3 \\\\ 4 & 5 \\end{bmatrix}$ ہی واپس ملتا ہے۔ یہ خود پڑتال کا ایک بہترین طریقہ بھی ہے کیونکہ اگر آپ کا آخری کالب سوال میں دیے گئے ابتدائی کالب سے مطابقت نہیں رکھتا، تو آپ جان جائیں گے کہ قطاروں اور کالموں کو بدلتے وقت کوئی غلطی ہوئی ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

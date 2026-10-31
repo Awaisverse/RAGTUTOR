@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex3.3-q2",
+ "label": "ii",
+ "answer_ref": "$\\begin{bmatrix} 22 & 2 \\\\ 3 & -10 \\end{bmatrix}$",
+ "math": [
+  "Y = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}, \\quad Z = \\begin{bmatrix} 3 & 0 \\\\ 0 & -2 \\end{bmatrix}",
+  "Y + 7Z = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix} + 7\\begin{bmatrix} 3 & 0 \\\\ 0 & -2 \\end{bmatrix}",
+  "Y + 7Z = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix} + \\begin{bmatrix} 7(3) & 7(0) \\\\ 7(0) & 7(-2) \\end{bmatrix}",
+  "Y + 7Z = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix} + \\begin{bmatrix} 21 & 0 \\\\ 0 & -14 \\end{bmatrix}",
+  "Y + 7Z = \\begin{bmatrix} 1 + 21 & 2 + 0 \\\\ 3 + 0 & 4 + (-14) \\end{bmatrix}",
+  "Y + 7Z = \\begin{bmatrix} 22 & 2 \\\\ 3 & -10 \\end{bmatrix}"
+ ],
+ "why": [
+  {
+   "en": "Just like in any algebra problem, we start by clearly writing down the values we need for our expression $Y + 7Z$. Since $X$ is not part of this expression, we only bring down matrices $Y$ and $Z$ to keep our work neat and avoid confusion.",
+   "ur": "الجبرا کے کسی بھی سوال کی طرح، ہم سب سے پہلے ان قیمتوں کو صاف طور پر لکھتے ہیں جن کی ہمیں اپنی عبارت $Y + 7Z$ کے لیے ضرورت ہے۔ چونکہ $X$ اس عبارت کا حصہ نہیں ہے، اس لیے الجھن سے بچنے کے لیے ہم صرف کالب $Y$ اور $Z$ لکھتے ہیں۔"
+  },
+  {
+   "en": "We replace the letters $Y$ and $Z$ with their actual matrix forms using the rule of substitution. This sets up the problem so we can clearly see both the scalar multiplication by $7$ and the matrix addition that need to be performed.",
+   "ur": "ہم قیمت درج کرنے کے اصول کو استعمال کرتے ہوئے حروف $Y$ اور $Z$ کی جگہ ان کے اصل کالب لکھتے ہیں۔ اس سے سوال اس طرح ترتیب پا جاتا ہے کہ ہم $7$ کے ساتھ عددی ضرب اور کالبوں کی جمع، دونوں کو واضح طور پر دیکھ سکتے ہیں۔"
+  },
+  {
+   "en": "Following the order of operations (BODMAS), multiplication comes before addition, so we must calculate $7Z$ first. By the definition of scalar multiplication, the outside number $7$ goes inside to multiply with every single element of matrix $Z$.",
+   "ur": "عملیات کی ترتیب (BODMAS) کے مطابق ضرب جمع سے پہلے آتی ہے، اس لیے ہمیں پہلے $7Z$ معلوم کرنا ہوگا۔ عددی ضرب کی تعریف کے مطابق، باہر والا عدد $7$ اندر جا کر کالب $Z$ کے ہر ایک رکن کے ساتھ ضرب کھاتا ہے۔"
+  },
+  {
+   "en": "We simplify the multiplications inside the second matrix to get the complete matrix $7Z$. Be careful with the signs here, as $7$ multiplied by $-2$ gives $-14$, leaving us with two plain matrices ready to be added.",
+   "ur": "ہم دوسرے کالب کے اندر ضرب کو مختصر کرتے ہیں تاکہ مکمل کالب $7Z$ حاصل ہو سکے۔ یہاں علامتوں کا خاص خیال رکھیں کیونکہ $7$ کو $-2$ سے ضرب دینے سے $-14$ آتا ہے، اور یوں ہمارے پاس دو سادہ کالب آ جاتے ہیں جو جمع ہونے کے لیے تیار ہیں۔"
+  },
+  {
+   "en": "Two matrices can only be added if they have the same order, and here both are $2 \\times 2$ matrices. According to the rule of matrix addition, we pair up and add the entries that sit in the exact same positions.",
+   "ur": "دو کالبوں کو صرف تب جمع کیا جا سکتا ہے جب ان کا مرتبہ یکساں ہو، اور یہاں دونوں $2 \\times 2$ کے کالب ہیں۔ کالبوں کی جمع کے اصول کے مطابق، ہم بالکل ایک جیسی جگہوں پر موجود متناظرہ ارکان کو آپس میں ملا کر جمع کرتے ہیں۔"
+  },
+  {
+   "en": "Finally, we do the simple arithmetic for each position, paying attention to $4 + (-14)$ which becomes $4 - 14 = -10$. This completes all the operations and gives us the single resulting matrix.",
+   "ur": "آخر میں، ہم ہر جگہ کے لیے سادہ حساب کرتے ہیں، خاص طور پر $4 + (-14)$ پر توجہ دیتے ہوئے جو $4 - 14 = -10$ بن جاتا ہے۔ اس سے تمام عوامل مکمل ہو جاتے ہیں اور ہمیں واحد مطلوبہ کالب مل جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $\\begin{bmatrix} 22 & 2 \\\\ 3 & -10 \\end{bmatrix}$ is the single $2 \\times 2$ matrix that represents the combined expression $Y + 7Z$. You can quickly check your work by testing one position mentally, such as the top-left entry: $1 + 7(3) = 1 + 21 = 22$, which matches our result.",
+  "ur": "حتمی جواب $\\begin{bmatrix} 22 & 2 \\\\ 3 & -10 \\end{bmatrix}$ وہ واحد $2 \\times 2$ کالب ہے جو عبارت $Y + 7Z$ کی قیمت کو ظاہر کرتا ہے۔ آپ اپنے کام کی درستگی کو جانچنے کے لیے ذہن میں کسی ایک رکن کو چیک کر سکتے ہیں، جیسے اوپر بائیں طرف والا رکن: $1 + 7(3) = 1 + 21 = 22$، جو ہمارے جواب کے بالکل مطابق ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

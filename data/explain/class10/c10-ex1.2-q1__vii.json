@@ -1,0 +1,50 @@
+{
+ "item": "c10-ex1.2-q1",
+ "label": "vii",
+ "answer_ref": "$\\frac{13}{10} + \\frac{1}{10}i$",
+ "math": [
+  "\\left(3 - 5i\\right) \\div \\left(2 - 4i\\right) = \\frac{3 - 5i}{2 - 4i}",
+  "= \\frac{3 - 5i}{2 - 4i} \\times \\frac{2 + 4i}{2 + 4i}",
+  "= \\frac{3(2 + 4i) - 5i(2 + 4i)}{(2)^2 - (4i)^2}",
+  "= \\frac{6 + 12i - 10i - 20i^2}{4 - 16i^2}",
+  "= \\frac{6 + 2i - 20(-1)}{4 - 16(-1)}",
+  "= \\frac{6 + 2i + 20}{4 + 16} = \\frac{26 + 2i}{20}",
+  "= \\frac{26}{20} + \\frac{2}{20}i = \\frac{13}{10} + \\frac{1}{10}i"
+ ],
+ "why": [
+  {
+   "en": "By the definition of division, we first write the problem as a fraction with $3 - 5i$ on top and $2 - 4i$ at the bottom. Seeing it as a fraction clearly shows us the complex denominator that we need to simplify.",
+   "ur": "تقسیم کی تعریف کے مطابق، ہم پہلے اس سوال کو بٹے کی صورت میں لکھتے ہیں جس میں $3 - 5i$ شمار کنندہ اور $2 - 4i$ مخرج ہے۔ اسے کسر کے طور پر لکھنے سے ہمیں واضح نظر آتا ہے کہ نیچے والے حصے کو حل کرنے کی ضرورت ہے۔"
+  },
+  {
+   "en": "In complex numbers, we cannot leave $i$ in the denominator, so we use the conjugate rule by multiplying top and bottom by $2 + 4i$. Since $\\frac{2 + 4i}{2 + 4i}$ equals $1$, the value of our expression does not change, and it sets up the denominator to become a pure real number.",
+   "ur": "مخلوط اعداد میں ہم مخرج (denominator) میں $i$ نہیں چھوڑ سکتے، اس لیے ہم کونجوگیٹ کا اصول استعمال کرتے ہوئے اوپر اور نیچے $2 + 4i$ سے ضرب دیتے ہیں۔ چونکہ $\\frac{2 + 4i}{2 + 4i}$ دراصل $1$ کے برابر ہے، اس سے رقم کی قیمت نہیں بدلتی اور مخرج ایک حقیقی عدد بننے کے لیے تیار ہو جاتا ہے۔"
+  },
+  {
+   "en": "Now we multiply the numerators together using the distributive law, and apply the difference of squares formula, $(a - b)(a + b) = a^2 - b^2$, to the denominator. This formula is the reason we used the conjugate: it eliminates the middle $i$ terms at the bottom.",
+   "ur": "اب ہم تقسیمی قانون (distributive law) کے تحت شمار کنندہ کو ضرب دیتے ہیں، اور مخرج پر کلیہ $(a - b)(a + b) = a^2 - b^2$ لگاتے ہیں۔ یہی کلیہ کونجوگیٹ استعمال کرنے کی اصل وجہ ہے کیونکہ اس سے نیچے والی رقم میں درمیانی $i$ ختم ہو جاتا ہے۔"
+  },
+  {
+   "en": "Carrying out the multiplication removes all the brackets and gives us individual terms in the numerator and squared terms in the denominator. Notice how $i^2$ has appeared in both places, which will allow us to turn those terms into real numbers next.",
+   "ur": "ضرب کا عمل مکمل کرنے سے تمام بریکٹیں ختم ہو جاتی ہیں اور ہمیں اوپر الگ الگ رقوم اور نیچے مربّع والی رقوم مل جاتی ہیں۔ غور کریں کہ دونوں جگہ $i^2$ آ گیا ہے، جس کی مدد سے اگلے مرحلے میں ہم انہیں حقیقی اعداد میں بدل سکیں گے۔"
+  },
+  {
+   "en": "Here we use the fundamental definition of the imaginary unit, $i^2 = -1$, and also combine the like imaginary terms $12i - 10i$ into $2i$. Replacing $i^2$ with $-1$ completely removes $i$ from the denominator, which was our main goal.",
+   "ur": "یہاں ہم خیالی اکائی کی بنیادی تعریف $i^2 = -1$ استعمال کرتے ہیں، اور یکساں خیالی رقوم $12i - 10i$ کو ملا کر $2i$ بنا لیتے ہیں۔ $i^2$ کی جگہ $-1$ لگانے سے مخرج سے $i$ بالکل ختم ہو جاتا ہے، جو کہ ہمارا اصل مقصد تھا۔"
+  },
+  {
+   "en": "Multiplying the negative signs turns $-20(-1)$ into $+20$ and $-16(-1)$ into $+16$, allowing us to add the real numbers together. We now have a single complex numerator $26 + 2i$ divided by a single real number $20$.",
+   "ur": "منفی علامتوں کو ضرب دینے سے $-20(-1)$ جمع کا $+20$ اور $-16(-1)$ جمع کا $+16$ بن جاتا ہے، جس سے ہم حقیقی اعداد کو آپس میں جمع کر سکتے ہیں۔ اب ہمارے پاس اوپر ایک مخلوط عدد $26 + 2i$ ہے جو نیچے ایک حقیقی عدد $20$ پر تقسیم ہو رہا ہے۔"
+  },
+  {
+   "en": "Finally, the question asks for the standard form $a + bi$, so we divide both $26$ and $2i$ separately by the common denominator $20$ and cancel the common factor of $2$. This clearly separates the real part $\\frac{13}{10}$ from the imaginary part $\\frac{1}{10}i$.",
+   "ur": "آخر میں، چونکہ سوال میں معیاری شکل $a + bi$ مانگی گئی ہے، اس لیے ہم $26$ اور $2i$ دونوں کو الگ الگ مشترک مخرج $20$ پر تقسیم کرتے ہیں اور $2$ کے پہاڑے سے مختصر کر لیتے ہیں۔ اس سے حقیقی حصہ $\\frac{13}{10}$ اور خیالی حصہ $\\frac{1}{10}i$ بالکل الگ اور واضح ہو جاتے ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "This final answer tells us that dividing the complex number $3 - 5i$ by $2 - 4i$ gives another complex number whose real part is $a = \\frac{13}{10}$ and imaginary part is $b = \\frac{1}{10}$. You can check this result by multiplying $\\left(\\frac{13}{10} + \\frac{1}{10}i\\right)$ by the divisor $(2 - 4i)$, which simplifies back to $3 - 5i$.",
+  "ur": "یہ حتمی جواب ہمیں بتاتا ہے کہ مخلوط عدد $3 - 5i$ کو $2 - 4i$ پر تقسیم کرنے سے ایک نیا مخلوط عدد حاصل ہوتا ہے جس کا حقیقی حصہ $a = \\frac{13}{10}$ اور خیالی حصہ $b = \\frac{1}{10}$ ہے۔ آپ اس جواب کی پڑتال کرنے کے لیے $\\left(\\frac{13}{10} + \\frac{1}{10}i\\right)$ کو مقسوم علیہ $(2 - 4i)$ سے ضرب دے کر دیکھ سکتے ہیں، جس سے واپس $3 - 5i$ حاصل ہو جائے گا۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

@@ -1,0 +1,49 @@
+{
+ "item": "c10-ex1.2-q3",
+ "label": "ii",
+ "answer_ref": "$\\frac{3}{20} - \\frac{1}{20}i$",
+ "steps": [
+  {
+   "math": "z = 6 + 2i \\implies a = 6, \\quad b = 2",
+   "en": "Let the given complex number be $z = a + bi$. By comparing, we identify the real part $a = 6$ and the imaginary part $b = 2$.",
+   "ur": "فرض کریں کہ دیا گیا مختلط عدد $z = a + bi$ ہے۔ موازنہ کرنے سے ہمیں حقیقی حصہ $a = 6$ اور خیالی حصہ $b = 2$ معلوم ہوتا ہے۔"
+  },
+  {
+   "math": "z^{-1} = \\frac{a}{a^2+b^2} - \\frac{b}{a^2+b^2}i",
+   "en": "Recall the formula for the multiplicative inverse of a complex number $z = a + bi$.",
+   "ur": "مختلط عدد $z = a + bi$ کا ضربی معکوس معلوم کرنے کا فارمولا یاد کریں۔"
+  },
+  {
+   "math": "a^2 + b^2 = (6)^2 + (2)^2 = 36 + 4 = 40",
+   "en": "First, calculate the denominator $a^2 + b^2$ by substituting $a = 6$ and $b = 2$.",
+   "ur": "سب سے پہلے، $a = 6$ اور $b = 2$ کی قیمتیں درج کر کے مخرج $a^2 + b^2$ کی قیمت معلوم کریں۔",
+   "check": [
+    "(6)**2 + (2)**2 == 36 + 4",
+    "36 + 4 == 40"
+   ]
+  },
+  {
+   "math": "z^{-1} = \\frac{6}{40} - \\frac{2}{40}i",
+   "en": "Now, substitute $a = 6$, $b = 2$, and $a^2 + b^2 = 40$ into the multiplicative inverse formula.",
+   "ur": "اب ضربی معکوس کے فارمولے میں $a = 6$، $b = 2$، اور $a^2 + b^2 = 40$ کی قیمتیں درج کریں۔",
+   "check": [
+    "1/(6 + 2*I) == R(6,40) - R(2,40)*I"
+   ]
+  },
+  {
+   "math": "z^{-1} = \\frac{3}{20} - \\frac{1}{20}i",
+   "en": "Simplify the fractions by dividing the numerators and denominators by $2$ to get the final answer.",
+   "ur": "حتمی جواب حاصل کرنے کے لیے شمار کنندہ اور مخرج کو $2$ پر تقسیم کر کے کسور کو مختصر کریں۔",
+   "check": [
+    "R(6,40) - R(2,40)*I == R(3,20) - R(1,20)*I",
+    "(6 + 2*I)*(R(3,20) - R(1,20)*I) == 1",
+    "(6)**2 + (2)**2 == (40)",
+    "1/(6 + 2*I) == (3/20 - I/20)",
+    "(6 + 2*I)*(3/20 - I/20) == 1"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

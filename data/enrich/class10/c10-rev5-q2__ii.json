@@ -1,0 +1,49 @@
+{
+ "item": "c10-rev5-q2",
+ "label": "ii",
+ "answer_ref": "$\\frac{x + 6}{7}$",
+ "steps": [
+  {
+   "math": "\\frac{x^{2} + 3x - 18}{7x - 21}",
+   "en": "Write down the given algebraic fraction to be reduced to its lowest form.",
+   "ur": "دی گئی الجبری کسر کو مختصر ترین شکل میں لانے کے لیے لکھیں۔"
+  },
+  {
+   "math": "= \\frac{x^{2} + 6x - 3x - 18}{7(x - 3)}",
+   "en": "Factorize the numerator by splitting the middle term ($6x - 3x = 3x$ and $6 \\times (-3) = -18$), and take $7$ common from the denominator.",
+   "ur": "شمار کنندہ کی درمیانی رقم کو توڑ کر تجزی کریں ($6x - 3x = 3x$ اور $6 \\times (-3) = -18$)، اور مخرج سے $7$ مشترک لیں۔",
+   "check": [
+    "(x**2 + 6*x - 3*x - 18)/(7*(x - 3)) == (x**2 + 3*x - 18)/(7*x - 21)"
+   ]
+  },
+  {
+   "math": "= \\frac{x(x + 6) - 3(x + 6)}{7(x - 3)}",
+   "en": "Take common factors from the pairs of terms in the numerator.",
+   "ur": "شمار کنندہ میں رقموں کے جوڑوں سے مشترک اجزاء باہر نکالیں۔",
+   "check": [
+    "(x*(x + 6) - 3*(x + 6))/(7*(x - 3)) == (x**2 + 3*x - 18)/(7*x - 21)"
+   ]
+  },
+  {
+   "math": "= \\frac{(x - 3)(x + 6)}{7(x - 3)}",
+   "en": "Factor out $(x + 6)$ in the numerator to complete the factorization.",
+   "ur": "تجزی مکمل کرنے کے لیے شمار کنندہ میں سے $(x + 6)$ مشترک لیں۔",
+   "check": [
+    "((x - 3)*(x + 6))/(7*(x - 3)) == (x**2 + 3*x - 18)/(7*x - 21)"
+   ]
+  },
+  {
+   "math": "= \\frac{x + 6}{7}",
+   "en": "Cancel out the common factor $(x - 3)$ from both the numerator and the denominator to get the lowest form.",
+   "ur": "مختصر ترین شکل حاصل کرنے کے لیے شمار کنندہ اور مخرج دونوں سے مشترک جزو $(x - 3)$ کو کاٹ دیں۔",
+   "check": [
+    "(x + 6)/7 == (x**2 + 3*x - 18)/(7*x - 21)",
+    "((x - 3)*(x + 6))/(7*(x - 3)) == (x**2 + 3*x - 18)/(7*x - 21)",
+    "(x/7 + 6/7) == (x**2 + 3*x - 18)/(7*x - 21)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

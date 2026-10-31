@@ -1,0 +1,84 @@
+{
+ "item": "rev1-q2",
+ "label": "i",
+ "answer_ref": "Verified: $\\frac{23}{5} = \\frac{23}{5}$",
+ "steps": [
+  {
+   "math": "a = \\frac{3}{2}, \\quad b = \\frac{5}{3}, \\quad c = \\frac{7}{5}",
+   "en": "Write down the given values of $a$, $b$, and $c$. We need to verify the left distributive property: $a(b+c) = ab+ac$.",
+   "ur": "$a$، $b$ اور $c$ کی دی گئی قیمتیں لکھیں۔ ہمیں بائیں تقسیمی خاصیت کی تصدیق کرنی ہے: $a(b+c) = ab+ac$۔",
+   "check": [
+    "R(3,2) == R(3,2)",
+    "R(5,3) == R(5,3)",
+    "R(7,5) == R(7,5)"
+   ]
+  },
+  {
+   "math": "\\text{LHS} = a(b+c) = \\frac{3}{2}\\left(\\frac{5}{3} + \\frac{7}{5}\\right)",
+   "en": "First, take the Left Hand Side (LHS) and substitute the given values of $a$, $b$, and $c$.",
+   "ur": "سب سے پہلے، بائیں طرف (LHS) لیں اور $a$، $b$ اور $c$ کی دی گئی قیمتیں درج کریں۔",
+   "check": [
+    "R(3,2)*(R(5,3) + R(7,5)) == R(23,5)"
+   ]
+  },
+  {
+   "math": "\\text{LHS} = \\frac{3}{2}\\left(\\frac{25 + 21}{15}\\right) = \\frac{3}{2}\\left(\\frac{46}{15}\\right)",
+   "en": "To add the fractions inside the bracket, take the LCM of denominators $3$ and $5$, which is $15$. Then simplify the numerator.",
+   "ur": "قوسین کے اندر موجود کسور کو جمع کرنے کے لیے، نصب نما $3$ اور $5$ کا ذواضعاف اقل (LCM) لیں، جو کہ $15$ ہے۔ پھر شمار کنندہ کو حل کریں۔",
+   "check": [
+    "R(5,3) + R(7,5) == R(25+21,15)",
+    "R(25+21,15) == R(46,15)"
+   ]
+  },
+  {
+   "math": "\\text{LHS} = \\frac{138}{30} = \\frac{23}{5}",
+   "en": "Multiply the fractions and simplify to the lowest form by dividing the numerator and denominator by $6$.",
+   "ur": "کسور کو ضرب دیں اور شمار کنندہ اور نصب نما کو $6$ پر تقسیم کر کے مختصر ترین شکل میں لکھیں۔",
+   "check": [
+    "R(3,2)*R(46,15) == R(138,30)",
+    "R(138,30) == R(23,5)"
+   ]
+  },
+  {
+   "math": "\\text{RHS} = ab + ac = \\left(\\frac{3}{2}\\right)\\left(\\frac{5}{3}\\right) + \\left(\\frac{3}{2}\\right)\\left(\\frac{7}{5}\\right)",
+   "en": "Now, take the Right Hand Side (RHS) and substitute the values of $a$, $b$, and $c$.",
+   "ur": "اب، دائیں طرف (RHS) لیں اور $a$، $b$ اور $c$ کی قیمتیں درج کریں۔",
+   "check": [
+    "R(3,2)*R(5,3) + R(3,2)*R(7,5) == R(23,5)"
+   ]
+  },
+  {
+   "math": "\\text{RHS} = \\frac{5}{2} + \\frac{21}{10}",
+   "en": "Multiply the fractions in each term separately. In the first term, $3$ cancels out with $3$.",
+   "ur": "ہر رقم میں کسور کو الگ الگ ضرب دیں۔ پہلی رقم میں $3$، $3$ سے کٹ جاتا ہے۔",
+   "check": [
+    "R(3,2)*R(5,3) == R(5,2)",
+    "R(3,2)*R(7,5) == R(21,10)"
+   ]
+  },
+  {
+   "math": "\\text{RHS} = \\frac{25 + 21}{10} = \\frac{46}{10} = \\frac{23}{5}",
+   "en": "Add the two fractions by taking the LCM of $2$ and $10$, which is $10$, and simplify the result by dividing by $2$.",
+   "ur": "$2$ اور $10$ کا ذواضعاف اقل (LCM) جو کہ $10$ ہے، لے کر دونوں کسور کو جمع کریں اور نتیجے کو $2$ پر تقسیم کر کے مختصر کریں۔",
+   "check": [
+    "R(5,2) + R(21,10) == R(46,10)",
+    "R(46,10) == R(23,5)"
+   ]
+  },
+  {
+   "math": "\\text{LHS} = \\text{RHS} = \\frac{23}{5}",
+   "en": "Since LHS equals RHS, the property $a(b+c) = ab+ac$ is verified.",
+   "ur": "چونکہ بائیں طرف (LHS) اور دائیں طرف (RHS) برابر ہیں، لہذا خاصیت $a(b+c) = ab+ac$ کی تصدیق ہو گئی۔",
+   "check": [
+    "R(23,5) == R(23,5)",
+    "Rational(5,3)+Rational(7,5) == Rational(46,15)",
+    "Rational(3,2)*(Rational(46,15)) == Rational(23,5)",
+    "Rational(3,2)*Rational(5,3) + Rational(3,2)*Rational(7,5) == Rational(23,5)",
+    "Rational(23,5) == Rational(23,5)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

@@ -1,0 +1,56 @@
+{
+ "item": "c10-ex2.6-q7",
+ "label": "",
+ "answer_ref": "$\\ell = \\frac{P - 2w}{2}$",
+ "steps": [
+  {
+   "math": "P = 2(\\ell + w)",
+   "en": "We are given the formula for the perimeter $(P)$ of a rectangle, where $\\ell$ is the length and $w$ is the width. We need to make $\\ell$ the subject of this formula by isolating it on one side of the equation.",
+   "ur": "ہمیں مستطیل کے احاطہ $(P)$ کا کلیہ دیا گیا ہے، جہاں $\\ell$ لمبائی اور $w$ چوڑائی ہے۔ ہمیں مساوات کے ایک طرف $\\ell$ کو الگ کر کے اسے کلیہ کا موضوع بنانا ہے۔"
+  },
+  {
+   "math": "\\frac{P}{2} = \\frac{2(\\ell + w)}{2}",
+   "en": "To remove the factor of $2$ from the right-hand side, divide both sides of the equation by $2$.",
+   "ur": "دائیں طرف سے $2$ کو ختم کرنے کے لیے، مساوات کے دونوں اطراف کو $2$ سے تقسیم کریں۔",
+   "check": [
+    "2*(l + w)/2 == l + w"
+   ]
+  },
+  {
+   "math": "\\frac{P}{2} = \\ell + w",
+   "en": "Simplify the right-hand side by cancelling out $2$.",
+   "ur": "دائیں طرف $2$ کو کاٹ کر مختصر کریں۔",
+   "check": [
+    "2*(l + w)/2 == l + w"
+   ]
+  },
+  {
+   "math": "\\frac{P}{2} - w = \\ell",
+   "en": "To isolate $\\ell$, subtract $w$ from both sides of the equation.",
+   "ur": "$\\ell$ کو الگ کرنے کے لیے، مساوات کے دونوں اطراف سے $w$ تفریق کریں۔",
+   "check": [
+    "(l + w) - w == l"
+   ]
+  },
+  {
+   "math": "\\ell = \\frac{P}{2} - w",
+   "en": "Rewrite the equation with $\\ell$ on the left-hand side.",
+   "ur": "مساوات کو بائیں طرف $\\ell$ رکھ کر دوبارہ لکھیں۔",
+   "check": [
+    "Pp/2 - w == Pp/2 - w"
+   ]
+  },
+  {
+   "math": "\\ell = \\frac{P - 2w}{2}",
+   "en": "Take the LCM of the denominators on the right-hand side, which is $2$, to combine the terms into a single fraction. Thus, $\\ell$ is now the subject of the formula.",
+   "ur": "دائیں طرف کے مخرج کا ذواضعاف اقل (LCM) لیں، جو کہ $2$ ہے، تاکہ رقوم کو ایک ہی کسر میں ملایا جا سکے۔ اس طرح، اب $\\ell$ کلیہ کا موضوع بن گیا ہے۔",
+   "check": [
+    "Pp/2 - w == (Pp - 2*w)/2",
+    "2*((Pp - 2*w)/2 + w) == Pp"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

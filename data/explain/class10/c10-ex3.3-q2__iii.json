@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex3.3-q2",
+ "label": "iii",
+ "answer_ref": "$\\begin{bmatrix} 1 & -4 \\\\ -8 & 10 \\end{bmatrix}$",
+ "math": [
+  "X = \\begin{bmatrix} 1 & -1 \\\\ -2 & 2 \\end{bmatrix}, \\quad Z = \\begin{bmatrix} 3 & 0 \\\\ 0 & -2 \\end{bmatrix}",
+  "4X = 4\\begin{bmatrix} 1 & -1 \\\\ -2 & 2 \\end{bmatrix} = \\begin{bmatrix} 4(1) & 4(-1) \\\\ 4(-2) & 4(2) \\end{bmatrix}",
+  "4X = \\begin{bmatrix} 4 & -4 \\\\ -8 & 8 \\end{bmatrix}",
+  "4X - Z = \\begin{bmatrix} 4 & -4 \\\\ -8 & 8 \\end{bmatrix} - \\begin{bmatrix} 3 & 0 \\\\ 0 & -2 \\end{bmatrix}",
+  "4X - Z = \\begin{bmatrix} 4 - 3 & -4 - 0 \\\\ -8 - 0 & 8 - (-2) \\end{bmatrix}",
+  "4X - Z = \\begin{bmatrix} 1 & -4 \\\\ -8 & 8 + 2 \\end{bmatrix} = \\begin{bmatrix} 1 & -4 \\\\ -8 & 10 \\end{bmatrix}"
+ ],
+ "why": [
+  {
+   "en": "In our question, we are given three matrices, $X$, $Y$, and $Z$, so we start by listing only $X$ and $Z$ because part (iii) asks for $4X - Z$. This keeps our work neat and prevents us from accidentally picking numbers from matrix $Y$.",
+   "ur": "ہمارے سوال میں تین کالب $X$، $Y$ اور $Z$ دیے گئے ہیں، لیکن چونکہ جزو (iii) میں صرف $4X - Z$ معلوم کرنا ہے، اس لیے ہم صرف $X$ اور $Z$ کو الگ لکھ لیتے ہیں۔ اس سے ہمارا کام صاف ستھرا رہتا ہے اور غلطی سے کالب $Y$ کے ارکان لکھے جانے سے بچت ہو جاتی ہے۔"
+  },
+  {
+   "en": "According to the order of operations in matrices, we must perform scalar multiplication before subtraction. By the definition of scalar multiplication, multiplying matrix $X$ by the real number $4$ means multiplying every single entry inside $X$ by $4$.",
+   "ur": "کالبوں میں عمل کی ترتیب کے مطابق، تفریق کرنے سے پہلے ہمیں عددی ضرب کا عمل کرنا ہوتا ہے۔ عددی ضرب کی تعریف کے مطابق، کالب $X$ کو حقیقی عدد $4$ سے ضرب دینے کا مطلب ہے کہ $X$ کے اندر موجود ہر ایک رکن کو $4$ سے ضرب دی جائے۔"
+  },
+  {
+   "en": "We carry out the simple multiplication for each position, paying close attention to the negative signs on $-1$ and $-2$. This gives us the complete matrix $4X$, which is the first half of the expression we need to evaluate.",
+   "ur": "ہم منفی علامتوں ($-1$ اور $-2$) کا خاص خیال رکھتے ہوئے ہر رکن کی سادہ ضرب مکمل کرتے ہیں۔ اس سے ہمیں مکمل کالب $4X$ حاصل ہو جاتا ہے، جو کہ ہمارے مطلوبہ جملے کا پہلا حصہ ہے۔"
+  },
+  {
+   "en": "Now that we know what $4X$ is, we place it side-by-side with matrix $Z$ with a minus sign in between, just as the expression $4X - Z$ demands. This sets up our matrix subtraction clearly.",
+   "ur": "اب جب کہ ہم نے $4X$ معلوم کر لیا ہے، تو ہم جملے $4X - Z$ کے مطابق اس کے اور کالب $Z$ کے درمیان تفریق کی علامت لگا کر انہیں آمنے سامنے لکھتے ہیں۔ اس سے کالبوں کی تفریق کا مرحلہ بالکل واضح ہو جاتا ہے۔"
+  },
+  {
+   "en": "Two matrices can only be subtracted if they have the exact same order, and here both $4X$ and $Z$ are of order $2 \\times 2$. By the rule of matrix subtraction, we subtract each entry of $Z$ from the entry sitting in the exact same position in $4X$.",
+   "ur": "دو کالبوں کو صرف تب ہی تفریق کیا جا سکتا ہے جب ان کا مرتبہ بالکل ایک جیسا ہو، اور یہاں $4X$ اور $Z$ دونوں کا مرتبہ $2 \\times 2$ ہے۔ کالبوں کی تفریق کے اصول کے مطابق، ہم $4X$ کے ہر رکن میں سے کالب $Z$ کے بالکل اسی جگہ موجود متناظره رکن کو تفریق کرتے ہیں۔"
+  },
+  {
+   "en": "We finish the arithmetic at each position, being extra careful at the bottom-right corner where subtracting $-2$ from $8$ becomes $8 + 2$ because two negatives make a positive. This gives us the final simplified $2 \\times 2$ matrix.",
+   "ur": "ہم ہر مقام پر حساب مکمل کرتے ہیں، اور نچلے دائیں کونے میں خاص احتیاط کرتے ہیں جہاں $8$ میں سے $-2$ کو تفریق کرنے سے منفی اور منفی مل کر جمع ہو جاتے ہیں اور یہ $8 + 2$ بن جاتا ہے۔ اس طرح ہمیں حتمی مختصر شدہ $2 \\times 2$ کالب حاصل ہو جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final matrix $\\begin{bmatrix} 1 & -4 \\\\ -8 & 10 \\end{bmatrix}$ is the single $2 \\times 2$ matrix that represents the expression $4X - Z$. You can quickly check your work by picking one position, such as the bottom-right entry: $4(2) - (-2) = 8 + 2 = 10$, which matches our answer.",
+  "ur": "حتمی کالب $\\begin{bmatrix} 1 & -4 \\\\ -8 & 10 \\end{bmatrix}$ وہ واحد $2 \\times 2$ کالب ہے جو جملے $4X - Z$ کی قیمت کو ظاہر کرتا ہے۔ آپ کسی ایک رکن کو لے کر اپنے جواب کی باآسانی پڑتال کر سکتے ہیں، مثلاً نچلے دائیں رکن کو دیکھیں: $4(2) - (-2) = 8 + 2 = 10$، جو ہمارے جواب کے بالکل مطابق ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

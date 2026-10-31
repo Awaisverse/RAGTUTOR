@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex2.3-q9",
+ "label": "i",
+ "answer_ref": "$p^2 = 4q$",
+ "math": [
+  "x^2 + px + q = 0 \\implies a = 1, \\quad b = p, \\quad c = q",
+  "\\text{Sum of roots } (S) = \\alpha + \\beta = -\\frac{b}{a} = -\\frac{p}{1} = -p",
+  "\\text{Product of roots } (P) = \\alpha\\beta = \\frac{c}{a} = \\frac{q}{1} = q",
+  "\\alpha + \\alpha = -p \\implies 2\\alpha = -p \\implies \\alpha = -\\frac{p}{2}",
+  "\\alpha \\cdot \\alpha = q \\implies \\alpha^2 = q",
+  "\\left(-\\frac{p}{2}\\right)^2 = q \\implies \\frac{p^2}{4} = q \\implies p^2 = 4q"
+ ],
+ "why": [
+  {
+   "en": "To connect the roots $\\alpha$ and $\\beta$ with the equation's coefficients, we first need to know the values of $a$, $b$, and $c$. By comparing our equation with the standard quadratic form $ax^2 + bx + c = 0$, we get the exact values needed for our root formulas.",
+   "ur": "روٹس $\\alpha$ اور $\\beta$ کا مساوات کے عددی سروں (coefficients) سے تعلق جوڑنے کے لیے ہمیں پہلے $a$، $b$ اور $c$ کی قیمتیں معلوم کرنی ہوں گی۔ اپنی مساوات کا معیاری دو درجی مساوات $ax^2 + bx + c = 0$ سے موازنہ کر کے ہمیں وہ قیمتیں مل جاتی ہیں جو روٹس کے فارمولوں میں استعمال ہوں گی۔"
+  },
+  {
+   "en": "Instead of finding the roots directly, we use the sum of roots formula, $\\alpha + \\beta = -\\frac{b}{a}$. This gives us our first useful equation linking the roots $\\alpha$ and $\\beta$ to the coefficient $p$.",
+   "ur": "روٹس کو براہِ راست معلوم کرنے کے بجائے ہم روٹس کے مجموعے کا فارمولا $\\alpha + \\beta = -\\frac{b}{a}$ استعمال کرتے ہیں۔ اس سے ہمیں پہلی کارآمد مساوات ملتی ہے جو روٹس $\\alpha$ اور $\\beta$ کا تعلق عددی سر $p$ سے جوڑتی ہے۔"
+  },
+  {
+   "en": "Next, we apply the product of roots formula, $\\alpha\\beta = \\frac{c}{a}$. This provides a second equation that connects the roots to the constant term $q$, completing our basic setup.",
+   "ur": "اس کے بعد ہم روٹس کے حاصلِ ضرب کا فارمولا $\\alpha\\beta = \\frac{c}{a}$ لگاتے ہیں۔ اس سے ہمیں دوسری مساوات ملتی ہے جو روٹس کا تعلق مستقل مقدار $q$ سے جوڑتی ہے، اور یوں ہمارا بنیادی کام مکمل ہو جاتا ہے۔"
+  },
+  {
+   "en": "Now we apply the given condition of equal roots, $\\alpha = \\beta$, into the sum equation. Doing this eliminates $\\beta$ and allows us to express the root $\\alpha$ purely in terms of $p$, as $\\alpha = -\\frac{p}{2}$.",
+   "ur": "اب ہم برابر روٹس کی دی گئی شرط $\\alpha = \\beta$ کو مجموعے والی مساوات میں درج کرتے ہیں۔ ایسا کرنے سے $\\beta$ ختم ہو جاتا ہے اور ہمیں روٹ $\\alpha$ کی قیمت خالصتاً $p$ کی شکل میں $\\alpha = -\\frac{p}{2}$ کے طور پر مل جاتی ہے۔"
+  },
+  {
+   "en": "We apply the same condition $\\alpha = \\beta$ to the product equation as well. This simplifies the product into $\\alpha^2 = q$, giving us a direct place to plug in the value of $\\alpha$ we just found.",
+   "ur": "ہم یہی شرط $\\alpha = \\beta$ حاصلِ ضرب والی مساوات پر بھی لاگو کرتے ہیں۔ اس سے حاصلِ ضرب مختصر ہو کر $\\alpha^2 = q$ بن جاتا ہے، جہاں ہم ابھی معلوم کی گئی $\\alpha$ کی قیمت براہِ راست درج کر سکتے ہیں۔"
+  },
+  {
+   "en": "To find a condition, we must eliminate the unknown root $\\alpha$ completely so only $p$ and $q$ remain. Substituting $\\alpha = -\\frac{p}{2}$ into $\\alpha^2 = q$ and simplifying gives us the final relationship between the coefficients.",
+   "ur": "مطلوبہ شرط معلوم کرنے کے لیے ہمیں نامعلوم روٹ $\\alpha$ کو مکمل طور پر ختم کرنا ہوگا تاکہ صرف $p$ اور $q$ باقی رہ جائیں۔ مساوات $\\alpha^2 = q$ میں $\\alpha = -\\frac{p}{2}$ درج کر کے حل کرنے سے ہمیں عددی سروں کے درمیان حتمی تعلق مل جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $p^2 = 4q$ is the exact condition required for the quadratic equation $x^2 + px + q = 0$ to have two equal roots ($\\alpha = \\beta$). You can easily verify this using the discriminant formula for equal roots ($b^2 - 4ac = 0$), which gives $p^2 - 4(1)(q) = 0$, or $p^2 = 4q$.",
+  "ur": "حتمی جواب $p^2 = 4q$ وہ مطلوبہ شرط ہے جس کے تحت دو درجی مساوات $x^2 + px + q = 0$ کے دونوں روٹس آپس میں برابر ($\\alpha = \\beta$) ہوں گے۔ آپ اس کی تصدیق برابر روٹس کے لیے فرق کندہ (discriminant) کے فارمولے $b^2 - 4ac = 0$ سے باآسانی کر سکتے ہیں، جس میں قیمتیں رکھنے سے $p^2 - 4(1)(q) = 0$ یعنی $p^2 = 4q$ ہی آتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

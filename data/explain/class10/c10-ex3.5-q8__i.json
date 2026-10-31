@@ -1,0 +1,95 @@
+{
+ "item": "c10-ex3.5-q8",
+ "label": "i",
+ "answer_ref": "verified: both sides $= \\begin{bmatrix} - \\frac{7}{8} & - \\frac{1}{8} \\\\ -1 & 0 \\end{bmatrix}$",
+ "math": [
+  "",
+  "AB = \\begin{bmatrix} -3 & -2 \\\\ 5 & 6 \\end{bmatrix}\\begin{bmatrix} 2 & -1 \\\\ -3 & 2 \\end{bmatrix} = \\begin{bmatrix} (-3)(2) + (-2)(-3) & (-3)(-1) + (-2)(2) \\\\ (5)(2) + (6)(-3) & (5)(-1) + (6)(2) \\end{bmatrix}",
+  "= \\begin{bmatrix} -6 + 6 & 3 - 4 \\\\ 10 - 18 & -5 + 12 \\end{bmatrix} = \\begin{bmatrix} 0 & -1 \\\\ -8 & 7 \\end{bmatrix}",
+  "|(AB)| = \\begin{vmatrix} 0 & -1 \\\\ -8 & 7 \\end{vmatrix} = (0)(7) - (-1)(-8) = 0 - 8 = -8",
+  "\\operatorname{Adj}(AB) = \\begin{bmatrix} 7 & 1 \\\\ 8 & 0 \\end{bmatrix}",
+  "(AB)^{-1} = \\frac{1}{|(AB)|}\\operatorname{Adj}(AB) = \\frac{1}{-8}\\begin{bmatrix} 7 & 1 \\\\ 8 & 0 \\end{bmatrix} = \\begin{bmatrix} - \\frac{7}{8} & - \\frac{1}{8} \\\\ -1 & 0 \\end{bmatrix}",
+  "",
+  "|A| = \\begin{vmatrix} -3 & -2 \\\\ 5 & 6 \\end{vmatrix} = (-3)(6) - (-2)(5) = -18 + 10 = -8",
+  "\\operatorname{Adj}A = \\begin{bmatrix} 6 & 2 \\\\ -5 & -3 \\end{bmatrix}",
+  "A^{-1} = \\frac{1}{|A|}\\operatorname{Adj}A = \\frac{1}{-8}\\begin{bmatrix} 6 & 2 \\\\ -5 & -3 \\end{bmatrix} = \\begin{bmatrix} - \\frac{3}{4} & - \\frac{1}{4} \\\\ \\frac{5}{8} & \\frac{3}{8} \\end{bmatrix}",
+  "|B| = \\begin{vmatrix} 2 & -1 \\\\ -3 & 2 \\end{vmatrix} = (2)(2) - (-1)(-3) = 4 - 3 = 1",
+  "\\operatorname{Adj}B = \\begin{bmatrix} 2 & 1 \\\\ 3 & 2 \\end{bmatrix}",
+  "B^{-1} = \\frac{1}{|B|}\\operatorname{Adj}B = \\frac{1}{1}\\begin{bmatrix} 2 & 1 \\\\ 3 & 2 \\end{bmatrix} = \\begin{bmatrix} 2 & 1 \\\\ 3 & 2 \\end{bmatrix}",
+  "B^{-1}A^{-1} = \\begin{bmatrix} 2 & 1 \\\\ 3 & 2 \\end{bmatrix}\\begin{bmatrix} - \\frac{3}{4} & - \\frac{1}{4} \\\\ \\frac{5}{8} & \\frac{3}{8} \\end{bmatrix} = \\begin{bmatrix} (2)(- \\frac{3}{4}) + (1)(\\frac{5}{8}) & (2)(- \\frac{1}{4}) + (1)(\\frac{3}{8}) \\\\ (3)(- \\frac{3}{4}) + (2)(\\frac{5}{8}) & (3)(- \\frac{1}{4}) + (2)(\\frac{3}{8}) \\end{bmatrix}",
+  "= \\begin{bmatrix} - \\frac{3}{2} + \\frac{5}{8} & - \\frac{1}{2} + \\frac{3}{8} \\\\ - \\frac{9}{4} + \\frac{5}{4} & - \\frac{3}{4} + \\frac{3}{4} \\end{bmatrix} = \\begin{bmatrix} - \\frac{7}{8} & - \\frac{1}{8} \\\\ -1 & 0 \\end{bmatrix}",
+  "(AB)^{-1} = \\begin{bmatrix} - \\frac{7}{8} & - \\frac{1}{8} \\\\ -1 & 0 \\end{bmatrix} = B^{-1}A^{-1}"
+ ],
+ "why": [
+  {
+   "en": "To prove a matrix equation, we calculate the Left-Hand Side (LHS) and Right-Hand Side (RHS) separately. We begin with the LHS, $(AB)^{-1}$, which means we must first find the product matrix $AB$ inside the brackets and then take its inverse.",
+   "ur": "کسی کالب کی مساوات کو ثابت کرنے کے لیے ہم بائیں طرف (LHS) اور دائیں طرف (RHS) کو الگ الگ حل کرتے ہیں۔ ہم بائیں طرف یعنی $(AB)^{-1}$ سے شروعات کرتے ہیں، جس کا مطلب ہے کہ ہمیں پہلے بریکٹ کے اندر حاصلِ ضرب کالب $AB$ معلوم کرنا ہو گا اور پھر اس کا ضربی معکوس لینا ہو گا۔"
+  },
+  {
+   "en": "Using the row-by-column rule of matrix multiplication, we set up the products of the entries of $A$ and $B$. This prepares the expressions needed to form the single combined matrix $AB$.",
+   "ur": "کالبوں کی ضرب کے قطار ضرب کالم اصول کو استعمال کرتے ہوئے ہم $A$ اور $B$ کے ارکان کے حاصلِ ضرب ترتیب دیتے ہیں۔ اس سے وہ عبارتیں تیار ہو جاتی ہیں جن سے ایک نیا کالب $AB$ بنے گا۔"
+  },
+  {
+   "en": "Simplifying the arithmetic gives us the final $2$-by-$2$ product matrix $AB$. Now we treat $AB$ as a single matrix so we can find its inverse in the next steps.",
+   "ur": "حساب کتاب کو سادہ کرنے سے ہمیں حاصلِ ضرب کالب $AB$ مل جاتا ہے۔ اب ہم $AB$ کو ایک واحد کالب کے طور پر لیں گے تاکہ اگلے مراحل میں اس کا ضربی معکوس معلوم کر سکیں۔"
+  },
+  {
+   "en": "By the formula for a matrix inverse, we first need the determinant $|(AB)|$. Because the result $-8$ is not $0$, we know that $AB$ is non-singular and its inverse exists.",
+   "ur": "ضربی معکوس کے کلیے کے مطابق ہمیں پہلے مقطع $|(AB)|$ درکار ہے۔ چونکہ جواب $-8$ آیا ہے جو کہ $0$ نہیں ہے، اس سے ہمیں معلوم ہوتا ہے کہ $AB$ ایک غیر نادر کالب ہے اور اس کا ضربی معکوس ممکن ہے۔"
+  },
+  {
+   "en": "The second requirement for the inverse formula is the adjoint matrix, $\\operatorname{Adj}(AB)$. Finding this puts all the necessary pieces in place to compute $(AB)^{-1}$.",
+   "ur": "ضربی معکوس کے کلیے کی دوسری ضرورت ایڈجائنٹ کالب $\\operatorname{Adj}(AB)$ ہے۔ اسے معلوم کرنے سے $(AB)^{-1}$ نکالنے کے لیے تمام ضروری حصے مکمل ہو جاتے ہیں۔"
+  },
+  {
+   "en": "Applying the inverse definition $(AB)^{-1} = \\frac{1}{|(AB)|}\\operatorname{Adj}(AB)$, we divide each entry of the adjoint by $-8$ and simplify the fractions. This completes our evaluation of the Left-Hand Side.",
+   "ur": "ضربی معکوس کی تعریف $(AB)^{-1} = \\frac{1}{|(AB)|}\\operatorname{Adj}(AB)$ کا اطلاق کرتے ہوئے ہم ایڈجائنٹ کے ہر رکن کو $-8$ پر تقسیم کرتے ہیں اور کسروں کو مختصر کرتے ہیں۔ اس طرح بائیں طرف (LHS) کا حل مکمل ہو جاتا ہے۔"
+  },
+  {
+   "en": "Now we move to the Right-Hand Side, $B^{-1}A^{-1}$. Notice the reversal law of inverses here: we must find the individual inverses $B^{-1}$ and $A^{-1}$ separately and then multiply them in reverse order.",
+   "ur": "اب ہم دائیں طرف یعنی $B^{-1}A^{-1}$ کی جانب بڑھتے ہیں۔ یہاں معکوس کے الٹ ترتیب کے قانون پر غور کریں: ہمیں پہلے انفرادی طور پر $B^{-1}$ اور $A^{-1}$ معلوم کرنے ہیں اور پھر انہیں الٹ ترتیب میں ضرب دینی ہے۔"
+  },
+  {
+   "en": "To find $A^{-1}$, we start by calculating the determinant $|A|$. Since $|A| = -8$ is non-zero, matrix $A$ is non-singular and invertible.",
+   "ur": "$A^{-1}$ معلوم کرنے کے لیے ہم پہلے مقطع $|A|$ نکالتے ہیں۔ چونکہ $|A| = -8$ غیر صفر ہے، اس لیے کالب $A$ غیر نادر ہے اور اس کا معکوس لیا جا سکتا ہے۔"
+  },
+  {
+   "en": "Next, we find $\\operatorname{Adj}A$ using the standard $2$-by-$2$ adjoint rule. Together with $|A|$, this will give us the inverse of matrix $A$.",
+   "ur": "اس کے بعد ہم $2$-by-$2$ ایڈجائنٹ کے اصول کے تحت $\\operatorname{Adj}A$ معلوم کرتے ہیں۔ مقطع $|A|$ کے ساتھ مل کر یہ ہمیں کالب $A$ کا ضربی معکوس دے گا۔"
+  },
+  {
+   "en": "Using the formula $A^{-1} = \\frac{1}{|A|}\\operatorname{Adj}A$, we divide each entry by $-8$ and reduce the fractions like $\\frac{6}{-8}$ to $-\\frac{3}{4}$ and $\\frac{2}{-8}$ to $-\\frac{1}{4}$. We now have the second factor needed for the product $B^{-1}A^{-1}$.",
+   "ur": "کلیہ $A^{-1} = \\frac{1}{|A|}\\operatorname{Adj}A$ استعمال کرتے ہوئے ہم ہر رکن کو $-8$ پر تقسیم کرتے ہیں اور کسروں کو مختصر کرتے ہیں، جیسے $\\frac{6}{-8}$ کو $-\\frac{3}{4}$ اور $\\frac{2}{-8}$ کو $-\\frac{1}{4}$۔ اب ہمیں حاصلِ ضرب $B^{-1}A^{-1}$ کے لیے درکار دوسرا جزو مل گیا ہے۔"
+  },
+  {
+   "en": "Now we repeat the inverse process for matrix $B$, starting with its determinant $|B|$. Because $|B| = 1$, $B$ is non-singular and dividing by $|B|$ will be very simple.",
+   "ur": "اب ہم کالب $B$ کے لیے معکوس کا عمل دہراتے ہیں اور اس کے مقطع $|B|$ سے شروعات کرتے ہیں۔ چونکہ $|B| = 1$ ہے، اس لیے $B$ غیر نادر ہے اور $|B|$ پر تقسیم کرنا بہت آسان ہو گا۔"
+  },
+  {
+   "en": "We form $\\operatorname{Adj}B$ by the $2$-by-$2$ adjoint rule so that we are ready to write down $B^{-1}$.",
+   "ur": "ہم $2$-by-$2$ ایڈجائنٹ کے اصول سے $\\operatorname{Adj}B$ بناتے ہیں تاکہ ہم $B^{-1}$ لکھنے کے لیے تیار ہو جائیں۔"
+  },
+  {
+   "en": "Applying $B^{-1} = \\frac{1}{|B|}\\operatorname{Adj}B$ with $|B| = 1$ leaves the adjoint matrix unchanged. We now have both $B^{-1}$ and $A^{-1}$ ready to be multiplied.",
+   "ur": "$|B| = 1$ کے ساتھ کلیہ $B^{-1} = \\frac{1}{|B|}\\operatorname{Adj}B$ لگانے سے ایڈجائنٹ کالب جوں کا توں رہتا ہے۔ اب ہمارے پاس $B^{-1}$ اور $A^{-1}$ دونوں ضرب دینے کے لیے تیار ہیں۔"
+  },
+  {
+   "en": "We multiply $B^{-1}$ on the left by $A^{-1}$ on the right using the row-by-column rule, carefully keeping the exact order required by the Right-Hand Side.",
+   "ur": "ہم قطار ضرب کالم کے اصول کے تحت بائیں جانب $B^{-1}$ کو دائیں جانب $A^{-1}$ سے ضرب دیتے ہیں، اور دائیں طرف (RHS) کی مطلوبہ ترتیب کا خاص خیال رکھتے ہیں۔"
+  },
+  {
+   "en": "Simplifying the fraction products and adding them gives the final matrix for the Right-Hand Side, $B^{-1}A^{-1}$.",
+   "ur": "کسروں کے حاصلِ ضرب کو مختصر کرنے اور جمع کرنے سے ہمیں دائیں طرف یعنی $B^{-1}A^{-1}$ کا حتمی کالب مل جاتا ہے۔"
+  },
+  {
+   "en": "Comparing our result for $(AB)^{-1}$ from the Left-Hand Side with our result for $B^{-1}A^{-1}$ from the Right-Hand Side, we see that every corresponding entry is identical. This completes the proof.",
+   "ur": "بائیں طرف کے حاصل کردہ نتیجے $(AB)^{-1}$ کا دائیں طرف کے نتیجے $B^{-1}A^{-1}$ سے موازنہ کرنے پر ہم دیکھتے ہیں کہ ہر متناظرہ رکن بالکل برابر ہے۔ یہاں ہمارا ثبوت مکمل ہوتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "Both sides simplify to the exact same matrix $\\begin{bmatrix} - \\frac{7}{8} & - \\frac{1}{8} \\\\ -1 & 0 \\end{bmatrix}$, which verifies the reversal law of matrix inverses, $(AB)^{-1} = B^{-1}A^{-1}$: the inverse of a product of two matrices equals the product of their inverses in reverse order. You can also check that this matrix is truly the inverse of $AB$ by multiplying $\\begin{bmatrix} 0 & -1 \\\\ -8 & 7 \\end{bmatrix}$ and $\\begin{bmatrix} - \\frac{7}{8} & - \\frac{1}{8} \\\\ -1 & 0 \\end{bmatrix}$ to see that they give the identity matrix $\\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}$.",
+  "ur": "دونوں اطراف کو حل کرنے سے بالکل ایک جیسا کالب $\\begin{bmatrix} - \\frac{7}{8} & - \\frac{1}{8} \\\\ -1 & 0 \\end{bmatrix}$ حاصل ہوتا ہے، جس سے کالبوں کے ضربی معکوس کے الٹ ترتیب کے قانون $(AB)^{-1} = B^{-1}A^{-1}$ کی تصدیق ہوتی ہے: یعنی دو کالبوں کے حاصلِ ضرب کا معکوس ان کے انفرادی معکوسوں کے الٹ ترتیب میں حاصلِ ضرب کے برابر ہوتا ہے۔ آپ اس بات کی پڑتال بھی کر سکتے ہیں کہ یہ کالب واقعی $AB$ کا ضربی معکوس ہے؛ اس کے لیے $\\begin{bmatrix} 0 & -1 \\\\ -8 & 7 \\end{bmatrix}$ اور $\\begin{bmatrix} - \\frac{7}{8} & - \\frac{1}{8} \\\\ -1 & 0 \\end{bmatrix}$ کو ضرب دیں تو وحدانی کالب $\\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}$ حاصل ہو گا۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

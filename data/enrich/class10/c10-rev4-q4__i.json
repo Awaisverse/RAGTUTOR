@@ -1,0 +1,50 @@
+{
+ "item": "c10-rev4-q4",
+ "label": "i",
+ "answer_ref": "$f^{-1}(x) = \\frac{x + 1}{9}$",
+ "steps": [
+  {
+   "math": "f(x) = 9x - 1",
+   "en": "The given function is $f(x) = 9x - 1$. We need to find its inverse function, $f^{-1}(x)$.",
+   "ur": "دیا گیا تفاعل $f(x) = 9x - 1$ ہے۔ ہمیں اس کا معکوس تفاعل $f^{-1}(x)$ معلوم کرنا ہے۔"
+  },
+  {
+   "math": "y = 9x - 1",
+   "en": "Let $y = f(x)$, which implies $x = f^{-1}(y)$.",
+   "ur": "فرض کریں $y = f(x)$ ہے، جس کا مطلب ہے کہ $x = f^{-1}(y)$۔"
+  },
+  {
+   "math": "y + 1 = 9x",
+   "en": "To make $x$ the subject of the equation, add $1$ to both sides.",
+   "ur": "مساوات میں $x$ کو تنہا کرنے کے لیے، دونوں اطراف میں $1$ جمع کریں۔",
+   "check": [
+    "(9*x - 1) + 1 == 9*x"
+   ]
+  },
+  {
+   "math": "x = \\frac{y + 1}{9}",
+   "en": "Divide both sides by $9$ to isolate $x$.",
+   "ur": "$x$ کی قیمت معلوم کرنے کے لیے دونوں اطراف کو $9$ سے تقسیم کریں۔",
+   "check": [
+    "(9*x)/9 == x"
+   ]
+  },
+  {
+   "math": "f^{-1}(y) = \\frac{y + 1}{9}",
+   "en": "Substitute $x = f^{-1}(y)$ back into the equation.",
+   "ur": "مساوات میں $x$ کی جگہ واپس $f^{-1}(y)$ درج کریں۔"
+  },
+  {
+   "math": "f^{-1}(x) = \\frac{x + 1}{9}",
+   "en": "Replace the variable $y$ with $x$ to get the required inverse function $f^{-1}(x)$.",
+   "ur": "مطلوبہ معکوس تفاعل $f^{-1}(x)$ حاصل کرنے کے لیے متغیر $y$ کو $x$ سے بدل دیں۔",
+   "check": [
+    "simplify((9*x - 1).subs(x, (x + 1)/9)) == x",
+    "simplify((9*x - 1).subs(x, ((x + 1)/9))) == x"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

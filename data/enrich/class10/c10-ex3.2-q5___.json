@@ -1,0 +1,71 @@
+{
+ "item": "c10-ex3.2-q5",
+ "label": "",
+ "answer_ref": "$-A = \\begin{bmatrix} 3 & 0 \\\\ -5 & -6 \\end{bmatrix}$; $-B = \\begin{bmatrix} 3 & -3 \\\\ 2 & -2 \\end{bmatrix}$; $-C = \\begin{bmatrix} 9 & -1 \\\\ -1 & 7 \\end{bmatrix}$",
+ "steps": [
+  {
+   "math": "A = \\begin{bmatrix} -3 & 0 \\\\ 5 & 6 \\end{bmatrix}, \\quad B = \\begin{bmatrix} -3 & 3 \\\\ -2 & 2 \\end{bmatrix}, \\quad C = \\begin{bmatrix} -9 & 1 \\\\ 1 & -7 \\end{bmatrix}",
+   "en": "First, write down the given matrices $A$, $B$, and $C$. We need to find the negative of each matrix, which are $-A$, $-B$, and $-C$.",
+   "ur": "سب سے پہلے دیے گئے کالب $A$، $B$ اور $C$ لکھیں۔ ہمیں ہر کالب کا منفی کالب یعنی $-A$، $-B$ اور $-C$ معلوم کرنا ہے۔"
+  },
+  {
+   "math": "",
+   "en": "By definition, the negative of a matrix is obtained by changing the signs of all the non-zero entries in the matrix (i.e., multiplying every entry by $-1$). Note that the sign of $0$ remains unchanged.",
+   "ur": "تعریف کے مطابق، کسی بھی کالب کا منفی کالب اس کے تمام غیر صفری ارکان کی علامتیں تبدیل کرنے (یعنی ہر رکن کو $-1$ سے ضرب دینے) سے حاصل ہوتا ہے۔ یاد رہے کہ $0$ کی کوئی علامت نہیں ہوتی۔"
+  },
+  {
+   "math": "-A = -\\begin{bmatrix} -3 & 0 \\\\ 5 & 6 \\end{bmatrix} = \\begin{bmatrix} -(-3) & 0 \\\\ -(5) & -(6) \\end{bmatrix}",
+   "en": "To find $-A$, apply the negative sign to each entry of matrix $A$.",
+   "ur": "$-A$ معلوم کرنے کے لیے، کالب $A$ کے ہر رکن کے ساتھ منفی کی علامت لگائیں۔",
+   "check": [
+    "Matrix([[-3, 0], [5, 6]]) * -1 == Matrix([[-(-3), 0], [-(5), -(6)]])"
+   ]
+  },
+  {
+   "math": "-A = \\begin{bmatrix} 3 & 0 \\\\ -5 & -6 \\end{bmatrix}",
+   "en": "Simplify the signs to get the negative of matrix $A$.",
+   "ur": "علامتوں کو حل کر کے کالب $A$ کا منفی کالب حاصل کریں۔",
+   "check": [
+    "Matrix([[-(-3), 0], [-(5), -(6)]]) == Matrix([[3, 0], [-5, -6]])"
+   ]
+  },
+  {
+   "math": "-B = -\\begin{bmatrix} -3 & 3 \\\\ -2 & 2 \\end{bmatrix} = \\begin{bmatrix} -(-3) & -(3) \\\\ -(-2) & -(2) \\end{bmatrix}",
+   "en": "Similarly, to find $-B$, apply the negative sign to each entry of matrix $B$.",
+   "ur": "اسی طرح، $-B$ معلوم کرنے کے لیے کالب $B$ کے ہر رکن کے ساتھ منفی کی علامت لگائیں۔",
+   "check": [
+    "Matrix([[-3, 3], [-2, 2]]) * -1 == Matrix([[-(-3), -(3)], [-(-2), -(2)]])"
+   ]
+  },
+  {
+   "math": "-B = \\begin{bmatrix} 3 & -3 \\\\ 2 & -2 \\end{bmatrix}",
+   "en": "Simplify the signs to get the negative of matrix $B$.",
+   "ur": "علامتوں کو حل کر کے کالب $B$ کا منفی کالب حاصل کریں۔",
+   "check": [
+    "Matrix([[-(-3), -(3)], [-(-2), -(2)]]) == Matrix([[3, -3], [2, -2]])"
+   ]
+  },
+  {
+   "math": "-C = -\\begin{bmatrix} -9 & 1 \\\\ 1 & -7 \\end{bmatrix} = \\begin{bmatrix} -(-9) & -(1) \\\\ -(1) & -(-7) \\end{bmatrix}",
+   "en": "Now, to find $-C$, apply the negative sign to each entry of matrix $C$.",
+   "ur": "اب، $-C$ معلوم کرنے کے لیے کالب $C$ کے ہر رکن کے ساتھ منفی کی علامت لگائیں۔",
+   "check": [
+    "Matrix([[-9, 1], [1, -7]]) * -1 == Matrix([[-(-9), -(1)], [-(1), -(-7)]])"
+   ]
+  },
+  {
+   "math": "-C = \\begin{bmatrix} 9 & -1 \\\\ -1 & 7 \\end{bmatrix}",
+   "en": "Simplify the signs to get the negative of matrix $C$. This completes our solution.",
+   "ur": "علامتوں کو حل کر کے کالب $C$ کا منفی کالب حاصل کریں۔ یہاں ہمارا حل مکمل ہوتا ہے۔",
+   "check": [
+    "Matrix([[-(-9), -(1)], [-(1), -(-7)]]) == Matrix([[9, -1], [-1, 7]])",
+    "Eq(Matrix([[0, 0], [0, 0]]), Matrix([[0, 0], [0, 0]]))",
+    "Eq(Matrix([[0, 0], [0, 0]]), Matrix([[0, 0], [0, 0]]))",
+    "Eq(Matrix([[0, 0], [0, 0]]), Matrix([[0, 0], [0, 0]]))"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

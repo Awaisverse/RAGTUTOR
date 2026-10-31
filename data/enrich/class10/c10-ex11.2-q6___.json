@@ -1,0 +1,68 @@
+{
+ "item": "c10-ex11.2-q6",
+ "label": "",
+ "answer_ref": "Range = 44, Variance = 176, SD = 13.27",
+ "steps": [
+  {
+   "math": "x = 1, 3, 5, 7, \\ldots, 2n - 1",
+   "en": "We need to find the range, variance, and standard deviation of the first $n = 23$ odd numbers. The $n$-th odd number is given by the formula $2n - 1$.",
+   "ur": "ہمیں پہلے $n = 23$ طاق اعداد کی وسعت (range)، تغیر (variance) اور معیاری انحراف (standard deviation) معلوم کرنا ہے۔ $n$-واں طاق عدد معلوم کرنے کا فارمولا $2n - 1$ ہے۔"
+  },
+  {
+   "math": "x_{23} = 2(23) - 1 = 46 - 1 = 45",
+   "en": "Substitute $n = 23$ to find the 23rd (largest) odd number. Thus, the data set is $1, 3, 5, \\ldots, 45$, where the minimum value is $x_m = 1$ and the maximum value is $x_M = 45$.",
+   "ur": "23واں (سب سے بڑا) طاق عدد معلوم کرنے کے لیے $n = 23$ درج کریں۔ اس طرح، مواد کا سیٹ $1, 3, 5, \\ldots, 45$ ہے، جہاں کم سے کم قیمت $x_m = 1$ اور زیادہ سے زیادہ قیمت $x_M = 45$ ہے۔",
+   "check": [
+    "2*23 - 1 == 45",
+    "46 - 1 == 45"
+   ]
+  },
+  {
+   "math": "\\text{Range} = x_M - x_m = 45 - 1 = 44",
+   "en": "The range is the difference between the largest value $x_M$ and the smallest value $x_m$.",
+   "ur": "وسعت (Range) سب سے بڑی قیمت $x_M$ اور سب سے چھوٹی قیمت $x_m$ کے درمیان فرق ہے۔",
+   "check": [
+    "45 - 1 == 44"
+   ]
+  },
+  {
+   "math": "\\bar{x} = \\frac{1 + 45}{2} = \\frac{46}{2} = 23",
+   "en": "For an evenly spaced series (arithmetic progression), the mean $\\bar{x}$ is the average of the first and last terms (or simply $n$ for the first $n$ odd numbers).",
+   "ur": "یکساں وقفے والے سلسلے (حسابی تصاعد) کے لیے، حسابی اوسط $\\bar{x}$ پہلی اور آخری رقم کی اوسط ہوتی ہے (یا پہلے $n$ طاق اعداد کے لیے محض $n$ ہوتی ہے)۔",
+   "check": [
+    "R(1 + 45, 2) == 23",
+    "R(46, 2) == 23"
+   ]
+  },
+  {
+   "math": "S^2 = \\frac{\\sum (x - \\bar{x})^2}{n} = \\frac{n^2 - 1}{3}",
+   "en": "The variance $S^2$ of the first $n$ odd natural numbers is given by the standard formula $\\frac{n^2 - 1}{3}$.",
+   "ur": "پہلے $n$ طاق قدرتی اعداد کا تغیر $S^2$ معیاری فارمولے $\\frac{n^2 - 1}{3}$ سے معلوم کیا جاتا ہے۔"
+  },
+  {
+   "math": "S^2 = \\frac{23^2 - 1}{3} = \\frac{529 - 1}{3} = \\frac{528}{3} = 176",
+   "en": "Substitute $n = 23$ into the variance formula and simplify.",
+   "ur": "تغیر کے فارمولے میں $n = 23$ درج کریں اور مختصر کریں۔",
+   "check": [
+    "23**2 == 529",
+    "529 - 1 == 528",
+    "R(528, 3) == 176",
+    "((1 - 23)**2 + (3 - 23)**2 + (5 - 23)**2 + (7 - 23)**2 + (9 - 23)**2 + (11 - 23)**2 + (13 - 23)**2 + (15 - 23)**2 + (17 - 23)**2 + (19 - 23)**2 + (21 - 23)**2 + (23 - 23)**2 + (25 - 23)**2 + (27 - 23)**2 + (29 - 23)**2 + (31 - 23)**2 + (33 - 23)**2 + (35 - 23)**2 + (37 - 23)**2 + (39 - 23)**2 + (41 - 23)**2 + (43 - 23)**2 + (45 - 23)**2)/23 == 176"
+   ]
+  },
+  {
+   "math": "\\text{S.D.} = \\sqrt{S^2} = \\sqrt{176} \\approx 13.27",
+   "en": "Take the positive square root of the variance to find the standard deviation (S.D.), rounded to two decimal places.",
+   "ur": "معیاری انحراف (S.D.) معلوم کرنے کے لیے تغیر کا مثبت جذر لیں، اور اشعاریہ کے بعد دو درجوں تک محدود کریں۔",
+   "check": [
+    "Abs(sqrt(176) - 13.27) <= 0.005000001",
+    "2*23 - 1 == 45",
+    "((1 - 23)**2 + (3 - 23)**2 + (5 - 23)**2 + (7 - 23)**2 + (9 - 23)**2 + (11 - 23)**2 + (13 - 23)**2 + (15 - 23)**2 + (17 - 23)**2 + (19 - 23)**2 + (21 - 23)**2 + (23 - 23)**2 + (25 - 23)**2 + (27 - 23)**2 + (29 - 23)**2 + (31 - 23)**2 + (33 - 23)**2 + (35 - 23)**2 + (37 - 23)**2 + (39 - 23)**2 + (41 - 23)**2 + (43 - 23)**2 + (45 - 23)**2)/23 == 176",
+    "Abs((sqrt(176)) - 13.27) <= 0.0050000010000000004"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

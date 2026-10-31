@@ -1,0 +1,73 @@
+{
+ "item": "c10-ex11.2-q7",
+ "label": "",
+ "answer_ref": "Variance = 67.27, SD = 8.20",
+ "steps": [
+  {
+   "math": "x = 42, 51, 54, 61, 63, 71; \\quad f = 5, 13, 4, 9, 5, 4",
+   "en": "Let the rainfall (in mm) be represented by $x$ and the number of places be the frequency $f$. We need to find the variance and standard deviation of this frequency distribution.",
+   "ur": "فرض کریں کہ بارش (ملی میٹر میں) کو $x$ سے اور مقامات کی تعداد کو تعدد $f$ سے ظاہر کیا گیا ہے۔ ہمیں اس تعددی تقسیم کا تغیر (variance) اور معیاری انحراف (standard deviation) معلوم کرنا ہے۔",
+   "check": [
+    "5 + 13 + 4 + 9 + 5 + 4 == 40"
+   ]
+  },
+  {
+   "math": "S^2 = \\frac{\\sum fx^2}{\\sum f} - \\left(\\frac{\\sum fx}{\\sum f}\\right)^2, \\quad S.D. = \\sqrt{S^2}",
+   "en": "Recall the standard formulas for variance ($S^2$) and standard deviation ($S.D.$) for grouped (frequency) data.",
+   "ur": "گروہی (تعددی) مواد کے لیے تغیر ($S^2$) اور معیاری انحراف ($S.D.$) کے معیاری کلیے یاد کریں۔"
+  },
+  {
+   "math": "\\begin{array}{c|c|c|c|c} x & f & fx & x^2 & fx^2 \\\\ \\hline 42 & 5 & 210 & 1764 & 8820 \\\\ 51 & 13 & 663 & 2601 & 33813 \\\\ 54 & 4 & 216 & 2916 & 11664 \\\\ 61 & 9 & 549 & 3721 & 33489 \\\\ 63 & 5 & 315 & 3969 & 19845 \\\\ 71 & 4 & 284 & 5041 & 20164 \\\\ \\hline \\text{Total} & \\sum f = 40 & \\sum fx = 2237 & & \\sum fx^2 = 127795 \\end{array}",
+   "en": "Construct a frequency table to calculate the required values: $fx$, $x^2$, and $fx^2$, and then find the sums $\\sum f$, $\\sum fx$, and $\\sum fx^2$.",
+   "ur": "مطلوبہ قیمتیں $fx$، $x^2$ اور $fx^2$ معلوم کرنے کے لیے ایک تعددی جدول بنائیں، اور پھر مجموعے $\\sum f$، $\\sum fx$ اور $\\sum fx^2$ معلوم کریں۔",
+   "check": [
+    "5 + 13 + 4 + 9 + 5 + 4 == 40",
+    "42*5 + 51*13 + 54*4 + 61*9 + 63*5 + 71*4 == 2237",
+    "5*42**2 + 13*51**2 + 4*54**2 + 9*61**2 + 5*63**2 + 4*71**2 == 127795"
+   ]
+  },
+  {
+   "math": "\\bar{x} = \\frac{\\sum fx}{\\sum f} = \\frac{2237}{40} = 55.925 \\approx 55.93",
+   "en": "First, calculate the arithmetic mean $\\bar{x}$ by dividing $\\sum fx$ by $\\sum f$.",
+   "ur": "سب سے پہلے، $\\sum fx$ کو $\\sum f$ پر تقسیم کر کے حسابی اوسط $\\bar{x}$ معلوم کریں۔",
+   "check": [
+    "R(2237, 40) == 55.925",
+    "Abs(R(2237, 40) - 55.93) <= 0.005000001"
+   ]
+  },
+  {
+   "math": "S^2 = \\frac{127795}{40} - \\left(\\frac{2237}{40}\\right)^2 = 3194.875 - 3127.605625 = 67.269375 \\approx 67.27",
+   "en": "Substitute the sums into the variance formula and simplify to get the variance.",
+   "ur": "تغیر کے کلیے میں مجموعوں کی قیمتیں درج کریں اور حل کر کے تغیر معلوم کریں۔",
+   "check": [
+    "R(127795, 40) == 3194.875",
+    "R(2237, 40)**2 == 3127.605625",
+    "3194.875 - 3127.605625 == 67.269375",
+    "Abs(67.269375 - 67.27) <= 0.005000001"
+   ]
+  },
+  {
+   "math": "S.D. = \\sqrt{67.269375} \\approx \\sqrt{67.27} \\approx 8.20",
+   "en": "Take the positive square root of the variance to find the standard deviation.",
+   "ur": "معیاری انحراف معلوم کرنے کے لیے تغیر کا مثبت جزر المربع لیں۔",
+   "check": [
+    "Abs(sqrt(R(107631, 1600)) - 8.20) <= 0.005000001",
+    "Abs(sqrt(67.27) - 8.20) <= 0.005000001"
+   ]
+  },
+  {
+   "math": "",
+   "en": "Thus, the variance of the rainfall is $67.27$ and the standard deviation is $8.20$.",
+   "ur": "پس، بارش کا تغیر $67.27$ اور معیاری انحراف $8.20$ ہے۔",
+   "check": [
+    "5 + 13 + 4 + 9 + 5 + 4 == 40",
+    "Abs(((2237)/40) - 55.93) <= 0.0050000010000000004",
+    "Abs(((5*((42) - (2237/40))**2 + 13*((51) - (2237/40))**2 + 4*((54) - (2237/40))**2 + 9*((61) - (2237/40))**2 + 5*((63) - (2237/40))**2 + 4*((71) - (2237/40))**2)/40) - 67.27) <= 0.0050000010000000004",
+    "Abs((sqrt((107631/1600))) - 8.20) <= 0.0050000010000000004"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

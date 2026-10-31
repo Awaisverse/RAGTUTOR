@@ -1,0 +1,55 @@
+{
+ "item": "c10-rev1-q9",
+ "label": "",
+ "answer_ref": "$a = \\frac{3}{25},\\ b = \\frac{4}{25}$",
+ "math": [
+  "(3-4i)(a+bi) = 1+0i",
+  "3a + 3bi - 4ai - 4bi^2 = 1 + 0i",
+  "(3a + 4b) + (-4a + 3b)i = 1 + 0i",
+  "3a + 4b = 1 \\quad \\text{(1)} \\qquad \\text{and} \\qquad -4a + 3b = 0 \\quad \\text{(2)}",
+  "-4a + 3b = 0 \\implies 3b = 4a \\implies b = \\frac{4}{3}a",
+  "3a + 4\\left(\\frac{4}{3}a\\right) = 1 \\implies 3a + \\frac{16}{3}a = 1 \\implies \\frac{25}{3}a = 1 \\implies a = \\frac{3}{25}",
+  "b = \\frac{4}{3}\\left(\\frac{3}{25}\\right) = \\frac{4}{25}",
+  "a = \\frac{3}{25},\\quad b = \\frac{4}{25}"
+ ],
+ "why": [
+  {
+   "en": "We start by looking closely at the given equation. Our goal is to simplify the left side into the standard complex form $x+yi$ so we can compare it directly with $1+0i$ on the right side.",
+   "ur": "ہم سب سے پہلے دی گئی مساوات کو غور سے دیکھتے ہیں۔ ہمارا مقصد بائیں طرف کو معیاری کمپلیکس شکل $x+yi$ میں لانا ہے تاکہ ہم اس کا دائیں طرف والے $1+0i$ سے براہِ راست موازنہ کر سکیں۔"
+  },
+  {
+   "en": "We use the distributive property of multiplication to expand the brackets, just like we do in ordinary algebra. This removes the brackets and shows all the individual terms involving $a$, $b$, and $i$.",
+   "ur": "ہم عام الجبرا کی طرح تقسیمی خاصیت (distributive property) کا استعمال کرتے ہوئے بریکٹ کو کھولتے ہیں۔ اس سے بریکٹس ختم ہو جاتی ہیں اور $a$، $b$ اور $i$ والی تمام رقمیں الگ الگ نظر آنے لگتی ہیں۔"
+  },
+  {
+   "en": "By the fundamental definition of the imaginary unit, $i^2 = -1$, which turns $-4bi^2$ into a real term $+4b$. Grouping the real parts (without $i$) and imaginary parts (with $i$) puts the left side into the standard complex form.",
+   "ur": "امیجنری یونٹ کی بنیادی تعریف کے مطابق $i^2 = -1$ ہوتا ہے، جس سے $-4bi^2$ ایک حقیقی رقم $+4b$ بن جاتی ہے۔ حقیقی حصوں ($i$ کے بغیر) اور خیالی حصوں ($i$ کے ساتھ) کو الگ الگ اکٹھا کرنے سے بایاں حصہ معیاری کمپلیکس شکل میں آ جاتا ہے۔"
+  },
+  {
+   "en": "Using the definition of equality of complex numbers, the real part on the left must equal $1$, and the imaginary part must equal $0$. This smartly converts one complex equation into two simple simultaneous linear equations.",
+   "ur": "کمپلیکس نمبرز کی برابری کے اصول کے مطابق، بائیں طرف کا حقیقی حصہ دائیں طرف کے حقیقی حصے $1$ کے برابر اور خیالی حصہ $0$ کے برابر ہونا چاہیے۔ یہ اصول ایک کمپلیکس مساوات کو دو سادہ یک درجی مساواتوں (linear equations) میں بدل دیتا ہے۔"
+  },
+  {
+   "en": "To solve these two equations by the substitution method, we isolate $b$ in the second equation because it equals $0$ and is easier to rearrange. This gives us a direct formula for $b$ in terms of $a$.",
+   "ur": "ان دو مساواتوں کو بذریعہ قیمت درج کرنے کے طریقے (substitution method) سے حل کرنے کے لیے، ہم دوسری مساوات سے $b$ کو الگ کرتے ہیں کیونکہ اس میں $0$ ہونے کی وجہ سے یہ زیادہ آسان ہے۔ اس سے ہمیں $a$ کی شکل میں $b$ کی قیمت مل جاتی ہے۔"
+  },
+  {
+   "en": "Replacing $b$ with $\\frac{4}{3}a$ in the first equation eliminates $b$, leaving an equation with only one unknown, $a$. Taking the LCM and simplifying gives us the exact real value of $a$.",
+   "ur": "پہلی مساوات میں $b$ کی جگہ $\\frac{4}{3}a$ رکھنے سے $b$ ختم ہو جاتا ہے، اور ہمارے پاس صرف ایک نامعلوم متغیر $a$ والی مساوات بچتی ہے۔ ضوافقل (LCM) لے کر حل کرنے سے ہمیں $a$ کی درست حقیقی قیمت مل جاتی ہے۔"
+  },
+  {
+   "en": "Now that we know the exact value of $a$, we plug it back into the relation $b = \\frac{4}{3}a$ from step 5. The $3$ in the numerator and denominator cancels out neatly, giving us the exact value of $b$.",
+   "ur": "اب جب کہ ہمیں $a$ کی قیمت معلوم ہو چکی ہے، ہم اسے مرحلہ 5 والے تعلق $b = \\frac{4}{3}a$ میں درج کرتے ہیں۔ شمار کنندہ اور مخرج میں موجود $3$ آپس میں کٹ جاتے ہیں، اور ہمیں $b$ کی درست قیمت مل جاتی ہے۔"
+  },
+  {
+   "en": "We write both values together to complete our solution. Substituting them back into the original equation confirms that the product is indeed $1+0i$, proving our work is completely accurate.",
+   "ur": "ہم اپنا حل مکمل کرنے کے لیے دونوں قیمتوں کو ایک ساتھ لکھتے ہیں۔ انہیں اصل مساوات میں واپس درج کرنے سے تصدیق ہوتی ہے کہ حاصل ضرب واقعی $1+0i$ ہے، جو ثابت کرتا ہے کہ ہمارا جواب بالکل درست ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The values $a = \\frac{3}{25}$ and $b = \\frac{4}{25}$ mean that the complex number $\\frac{3}{25} + \\frac{4}{25}i$ is the exact number which, when multiplied by $3-4i$, gives $1+0i$ (in fact, it is the multiplicative inverse of $3-4i$). You can easily check this by multiplying $(3-4i)\\left(\\frac{3}{25}+\\frac{4}{25}i\\right)$ to see that it simplifies to $1+0i$.",
+  "ur": "قیمتوں $a = \\frac{3}{25}$ اور $b = \\frac{4}{25}$ کا مطلب یہ ہے کہ کمپلیکس نمبر $\\frac{3}{25} + \\frac{4}{25}i$ وہ خاص عدد ہے جسے $3-4i$ سے ضرب دینے پر $1+0i$ حاصل ہوتا ہے (درحقیقت، یہ $3-4i$ کا ضربی معکوس ہے)۔ آپ اس کی پڑتال $(3-4i)\\left(\\frac{3}{25}+\\frac{4}{25}i\\right)$ کو ضرب دے کر باآسانی کر سکتے ہیں، جسے مختصر کرنے پر $1+0i$ ہی آتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

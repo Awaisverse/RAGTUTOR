@@ -1,0 +1,48 @@
+{
+ "item": "c10-ex2.6-q1",
+ "label": "",
+ "answer_ref": "$F = \\frac{9}{5}C + 32$",
+ "steps": [
+  {
+   "math": "C = \\frac{5}{9}(F - 32)",
+   "en": "Write down the given formula for temperature conversion without the degree signs.",
+   "ur": "دیے گئے درجۂ حرارت کی تبدیلی کے کلیے کو ڈگری کے نشان کے بغیر لکھیں۔"
+  },
+  {
+   "math": "9C = 5(F - 32)",
+   "en": "To make $F$ the subject of the formula, we need to isolate it on one side. First, multiply both sides of the equation by $9$ to eliminate the fraction.",
+   "ur": "$F$ کو کلیے کا موضوع بنانے کے لیے، ہمیں اسے ایک طرف تنہا کرنا ہوگا۔ کسر کو ختم کرنے کے لیے مساوات کے دونوں اطراف کو $9$ سے ضرب دیں۔",
+   "check": [
+    "R(9, 5)*5 == 9"
+   ]
+  },
+  {
+   "math": "\\frac{9}{5}C = F - 32",
+   "en": "Divide both sides of the equation by $5$ to remove the coefficient of the bracket.",
+   "ur": "قوسین کے عددی سر کو ختم کرنے کے لیے مساوات کے دونوں اطراف کو $5$ سے تقسیم کریں۔",
+   "check": [
+    "R(5, 5) == 1"
+   ]
+  },
+  {
+   "math": "\\frac{9}{5}C + 32 = F",
+   "en": "Add $32$ to both sides of the equation to isolate the variable $F$.",
+   "ur": "متغیر $F$ کو تنہا کرنے کے لیے مساوات کے دونوں اطراف میں $32$ جمع کریں۔",
+   "check": [
+    "-32 + 32 == 0"
+   ]
+  },
+  {
+   "math": "F = \\frac{9}{5}C + 32",
+   "en": "Rewrite the equation with $F$ on the left-hand side to state the final answer.",
+   "ur": "حتمی جواب ظاہر کرنے کے لیے مساوات کو $F$ کو بائیں طرف رکھ کر دوبارہ لکھیں۔",
+   "check": [
+    "R(5, 9)*((R(9, 5)*Cc + 32) - 32) == Cc",
+    "R(5,9)*((R(9,5)*Cc + 32) - 32) == Cc"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

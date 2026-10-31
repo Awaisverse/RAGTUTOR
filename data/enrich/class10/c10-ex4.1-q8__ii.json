@@ -1,0 +1,63 @@
+{
+ "item": "c10-ex4.1-q8",
+ "label": "ii",
+ "answer_ref": "verified: $f(f^{-1}(x)) = f^{-1}(f(x)) = x$",
+ "steps": [
+  {
+   "math": "f(x) = 7x - 4",
+   "en": "Write down the given function. We need to find its inverse $f^{-1}(x)$ and verify that $f(f^{-1}(x)) = f^{-1}(f(x)) = x$.",
+   "ur": "دیا گیا تفاعل لکھیں۔ ہمیں اس کا معکوس تفاعل $f^{-1}(x)$ معلوم کرنا ہے اور تصدیق کرنی ہے کہ $f(f^{-1}(x)) = f^{-1}(f(x)) = x$ ہے۔"
+  },
+  {
+   "math": "y = 7x - 4 \\implies x = f^{-1}(y)",
+   "en": "To find the inverse function, let $y = f(x)$, which implies $x = f^{-1}(y)$.",
+   "ur": "معکوس تفاعل معلوم کرنے کے لیے فرض کریں کہ $y = f(x)$ ہے، جس سے $x = f^{-1}(y)$ حاصل ہوتا ہے۔"
+  },
+  {
+   "math": "7x = y + 4 \\implies x = \\frac{y + 4}{7}",
+   "en": "Solve the equation $y = 7x - 4$ for $x$ in terms of $y$.",
+   "ur": "مساوات $y = 7x - 4$ کو $x$ کی قیمت $y$ کی شکل میں معلوم کرنے کے لیے حل کریں۔",
+   "check": [
+    "solve(y - (7*x - 4), x)[0] == (y + 4)/7"
+   ]
+  },
+  {
+   "math": "f^{-1}(y) = \\frac{y + 4}{7} \\implies f^{-1}(x) = \\frac{x + 4}{7}",
+   "en": "Substitute $x = f^{-1}(y)$ and then replace $y$ with $x$ to get the inverse function $f^{-1}(x)$.",
+   "ur": "$x = f^{-1}(y)$ درج کریں اور پھر معکوس تفاعل $f^{-1}(x)$ حاصل کرنے کے لیے $y$ کو $x$ سے بدل دیں۔",
+   "check": [
+    "(x + 4)/7 == x/7 + R(4,7)"
+   ]
+  },
+  {
+   "math": "f(f^{-1}(x)) = f\\left(\\frac{x + 4}{7}\\right) = 7\\left(\\frac{x + 4}{7}\\right) - 4 = (x + 4) - 4 = x",
+   "en": "Now, verify the first part by substituting $f^{-1}(x)$ into the function $f(x)$ and simplifying.",
+   "ur": "اب، تفاعل $f(x)$ میں $f^{-1}(x)$ کی قیمت درج کر کے اور مختصر کر کے پہلے حصے کی تصدیق کریں۔",
+   "check": [
+    "7*((x + 4)/7) - 4 == x + 4 - 4",
+    "x + 4 - 4 == x"
+   ]
+  },
+  {
+   "math": "f^{-1}(f(x)) = f^{-1}(7x - 4) = \\frac{(7x - 4) + 4}{7} = \\frac{7x}{7} = x",
+   "en": "Next, verify the second part by substituting $f(x)$ into the inverse function $f^{-1}(x)$ and simplifying.",
+   "ur": "اس کے بعد، معکوس تفاعل $f^{-1}(x)$ میں $f(x)$ کی قیمت درج کر کے اور مختصر کر کے دوسرے حصے کی تصدیق کریں۔",
+   "check": [
+    "((7*x - 4) + 4)/7 == (7*x)/7",
+    "(7*x)/7 == x"
+   ]
+  },
+  {
+   "math": "f(f^{-1}(x)) = f^{-1}(f(x)) = x",
+   "en": "From both results, the required identity is verified.",
+   "ur": "دونوں نتائج سے مطلوبہ مساوات کی تصدیق ہو جاتی ہے۔",
+   "check": [
+    "simplify((7*x - 4).subs(x, (x/7 + 4/7))) == x",
+    "simplify((x/7 + 4/7).subs(x, (7*x - 4))) == x"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

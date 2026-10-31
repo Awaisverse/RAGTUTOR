@@ -1,0 +1,61 @@
+{
+ "item": "u1-example3",
+ "label": "i",
+ "answer_ref": "$\\frac{5}{9}$",
+ "steps": [
+  {
+   "math": "x = 0.\\bar{5}",
+   "en": "Let the given recurring decimal be equal to $x$.",
+   "ur": "فرض کریں کہ دیا گیا متوالی اعشاریہ $x$ کے برابر ہے۔",
+   "check": [
+    "R(5, 9) == R(5, 9)"
+   ]
+  },
+  {
+   "math": "x = 0.555\\ldots \\quad \\text{--- (i)}",
+   "en": "Since the bar is over the digit $5$, it repeats indefinitely. Label this as equation (i).",
+   "ur": "چونکہ ہندسہ $5$ کے اوپر بار ہے، اس لیے یہ لا محدود طور پر دہرایا جاتا ہے۔ اسے مساوات (i) کا نام دیں۔",
+   "check": [
+    "R(5, 9) == R(5, 9)"
+   ]
+  },
+  {
+   "math": "10x = 5.555\\ldots \\quad \\text{--- (ii)}",
+   "en": "Because only one digit is repeating, multiply both sides of equation (i) by $10$. Label this as equation (ii).",
+   "ur": "چونکہ صرف ایک ہندسہ دہرایا جا رہا ہے، اس لیے مساوات (i) کے دونوں اطراف کو $10$ سے ضرب دیں۔ اسے مساوات (ii) کا نام دیں۔",
+   "check": [
+    "10 * R(5, 9) == R(50, 9)"
+   ]
+  },
+  {
+   "math": "10x - x = (5.555\\ldots) - (0.555\\ldots)",
+   "en": "Subtract equation (i) from equation (ii) to eliminate the repeating decimal part.",
+   "ur": "اعشاریہ کے دہرائے جانے والے حصے کو ختم کرنے کے لیے مساوات (ii) میں سے مساوات (i) کو تفریق کریں۔",
+   "check": [
+    "10 * R(5, 9) - R(5, 9) == R(50, 9) - R(5, 9)"
+   ]
+  },
+  {
+   "math": "9x = 5",
+   "en": "Simplify both sides of the equation.",
+   "ur": "مساوات کے دونوں اطراف کو مختصر کریں۔",
+   "check": [
+    "(10 - 1) * R(5, 9) == 5"
+   ]
+  },
+  {
+   "math": "x = \\frac{5}{9}",
+   "en": "Divide both sides by $9$ to solve for $x$. Thus, $0.\\bar{5}$ in the form of $\\frac{p}{q}$ is $\\frac{5}{9}$.",
+   "ur": "$x$ کی قیمت معلوم کرنے کے لیے دونوں اطراف کو $9$ پر تقسیم کریں۔ اس طرح، $0.\\bar{5}$ کو $\\frac{p}{q}$ کی شکل میں لکھنے سے $\\frac{5}{9}$ حاصل ہوتا ہے۔",
+   "check": [
+    "5 / 9 == R(5, 9)",
+    "10*Rational(5,9) == Rational(50,9)",
+    "10*Rational(5,9) - Rational(5,9) == 5",
+    "Rational(5,9)*9 == 5"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

@@ -1,0 +1,55 @@
+{
+ "item": "c10-ex7.2-q1",
+ "label": "viii",
+ "answer_ref": "$\\gamma = 11^\\circ,\\ a = 12.31,\\ c = 2.35$ cm",
+ "steps": [
+  {
+   "math": "b = 12\\text{ cm},\\quad \\alpha = 92^\\circ,\\quad \\beta = 77^\\circ",
+   "en": "Write down the given side and angles of triangle $ABC$. We need to find the third angle $\\gamma$ and the remaining sides $a$ and $c$.",
+   "ur": "مثلث $ABC$ کا دیا گیا ضلع اور زاویے لکھیں۔ ہمیں تیسرا زاویہ $\\gamma$ اور باقی اضلاع $a$ اور $c$ معلوم کرنے ہیں۔"
+  },
+  {
+   "math": "\\gamma = 180^\\circ - (\\alpha + \\beta) = 180^\\circ - (92^\\circ + 77^\\circ) = 180^\\circ - 169^\\circ = 11^\\circ",
+   "en": "Since the sum of the interior angles of a triangle is $180^\\circ$, subtract the sum of $\\alpha$ and $\\beta$ from $180^\\circ$ to find $\\gamma$.",
+   "ur": "چونکہ مثلث کے اندرونی زاویوں کا مجموعہ $180^\\circ$ ہوتا ہے، اس لیے $\\gamma$ معلوم کرنے کے لیے $180^\\circ$ میں سے $\\alpha$ اور $\\beta$ کا مجموعہ تفریق کریں۔",
+   "check": [
+    "92 + 77 == 169",
+    "180 - 169 == 11"
+   ]
+  },
+  {
+   "math": "\\frac{a}{\\sin\\alpha} = \\frac{b}{\\sin\\beta} = \\frac{c}{\\sin\\gamma}",
+   "en": "State the Law of Sines, which relates the sides of a triangle to the sines of their opposite angles.",
+   "ur": "قانونِ جیب (Law of Sines) لکھیں، جو مثلث کے اضلاع اور ان کے بالمقابل زاویوں کے سائن (sine) کے درمیان تعلق ظاہر کرتا ہے۔"
+  },
+  {
+   "math": "a = \\frac{b\\sin\\alpha}{\\sin\\beta} = \\frac{12 \\times \\sin 92^\\circ}{\\sin 77^\\circ} \\approx \\frac{12 \\times 0.9994}{0.9744} \\approx 12.31\\text{ cm}",
+   "en": "Use the first two ratios of the Law of Sines and substitute $b = 12$, $\\alpha = 92^\\circ$, and $\\beta = 77^\\circ$ to calculate side $a$.",
+   "ur": "قانونِ جیب کی پہلی دو نسبتیں استعمال کریں اور ضلع $a$ معلوم کرنے کے لیے $b = 12$، $\\alpha = 92^\\circ$، اور $\\beta = 77^\\circ$ کی قیمتیں درج کریں۔",
+   "check": [
+    "Abs((12*sin((92)*pi/180)/sin((77)*pi/180)) - 12.31) <= 0.005"
+   ]
+  },
+  {
+   "math": "c = \\frac{b\\sin\\gamma}{\\sin\\beta} = \\frac{12 \\times \\sin 11^\\circ}{\\sin 77^\\circ} \\approx \\frac{12 \\times 0.1908}{0.9744} \\approx 2.35\\text{ cm}",
+   "en": "Similarly, use the Law of Sines with $b = 12$, $\\beta = 77^\\circ$, and $\\gamma = 11^\\circ$ to calculate side $c$.",
+   "ur": "اسی طرح، ضلع $c$ معلوم کرنے کے لیے قانونِ جیب میں $b = 12$، $\\beta = 77^\\circ$، اور $\\gamma = 11^\\circ$ کی قیمتیں استعمال کریں۔",
+   "check": [
+    "Abs((12*sin((11)*pi/180)/sin((77)*pi/180)) - 2.35) <= 0.005"
+   ]
+  },
+  {
+   "math": "\\gamma = 11^\\circ,\\quad a = 12.31\\text{ cm},\\quad c = 2.35\\text{ cm}",
+   "en": "Thus, all unknown elements of the triangle $ABC$ have been found.",
+   "ur": "اس طرح، مثلث $ABC$ کے تمام نامعلوم اجزاء معلوم کر لیے گئے ہیں۔",
+   "check": [
+    "180 - 169 == 11",
+    "Abs((12*sin((92)*pi/180)/sin((77)*pi/180)) - 12.31) <= 0.0050000010000000004",
+    "Abs((12*sin((11)*pi/180)/sin((77)*pi/180)) - 2.35) <= 0.0050000010000000004"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

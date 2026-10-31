@@ -1,0 +1,54 @@
+{
+ "item": "c10-ex3.1-q7",
+ "label": "",
+ "answer_ref": "$p = 4,\\ q = 2$",
+ "steps": [
+  {
+   "math": "\\begin{bmatrix}p+q&5\\\\11&p-2q\\end{bmatrix}=\\begin{bmatrix}6&5\\\\11&0\\end{bmatrix}",
+   "en": "Write down the given matrix equation. We need to find the values of $p$ and $q$.",
+   "ur": "دی گئی قالبوں کی مساوات لکھیں۔ ہمیں $p$ اور $q$ کی قیمتیں معلوم کرنی ہیں۔"
+  },
+  {
+   "math": "p + q = 6 \\quad \\text{--- (i)}, \\qquad p - 2q = 0 \\quad \\text{--- (ii)}",
+   "en": "By the definition of equal matrices, their corresponding entries in the same positions are equal.",
+   "ur": "مساوی قالبوں کی تعریف کے مطابق، ان کے ایک ہی مقام کے متناظرہ ارکان آپس میں برابر ہوتے ہیں۔"
+  },
+  {
+   "math": "(p + q) - (p - 2q) = 6 - 0 \\implies 3q = 6",
+   "en": "Subtract equation (ii) from equation (i) to eliminate $p$.",
+   "ur": "$p$ کو ختم کرنے کے لیے مساوات (ii) کو مساوات (i) میں سے تفریق کریں۔",
+   "check": [
+    "6 - 0 == 6"
+   ]
+  },
+  {
+   "math": "q = \\frac{6}{3} \\implies q = 2",
+   "en": "Divide both sides by $3$ to find the value of $q$.",
+   "ur": "$q$ کی قیمت معلوم کرنے کے لیے دونوں اطراف کو $3$ پر تقسیم کریں۔",
+   "check": [
+    "R(6, 3) == 2"
+   ]
+  },
+  {
+   "math": "p + 2 = 6 \\implies p = 6 - 2 \\implies p = 4",
+   "en": "Substitute $q = 2$ into equation (i) and solve for $p$.",
+   "ur": "مساوات (i) میں $q = 2$ درج کریں اور $p$ کے لیے حل کریں۔",
+   "check": [
+    "6 - 2 == 4"
+   ]
+  },
+  {
+   "math": "p = 4,\\quad q = 2",
+   "en": "State the final values of $p$ and $q$.",
+   "ur": "$p$ اور $q$ کی حتمی قیمتیں لکھیں۔",
+   "check": [
+    "4 + 2 == 6",
+    "4 - 2*2 == 0",
+    "Eq(Matrix([[6, 5], [11, 0]]), Matrix([[6, 5], [11, 0]]))"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

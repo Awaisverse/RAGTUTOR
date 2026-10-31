@@ -1,0 +1,51 @@
+{
+ "item": "c10-ex1.1-q3",
+ "label": "i",
+ "answer_ref": "$x = -2,\\ y = 5$",
+ "steps": [
+  {
+   "math": "(2x+5)+(y-3)i = 1+2i",
+   "en": "Write the given equation of complex numbers. Both sides are already in the standard form $a+bi$, where $(2x+5)$ and $1$ are the real parts, and $(y-3)$ and $2$ are the imaginary parts.",
+   "ur": "مختلط اعداد کی دی گئی مساوات لکھیں۔ دونوں اطراف پہلے ہی معیاری صورت $a+bi$ میں ہیں، جہاں $(2x+5)$ اور $1$ حقیقی حصے ہیں، اور $(y-3)$ اور $2$ خیالی حصے ہیں۔"
+  },
+  {
+   "math": "2x + 5 = 1 \\quad\\text{and}\\quad y - 3 = 2",
+   "en": "By the definition of equality of complex numbers, two complex numbers are equal if and only if their real parts are equal and their imaginary parts are equal. Equating both parts gives two equations.",
+   "ur": "مختلط اعداد کی مساوات کی تعریف کے مطابق، دو مختلط اعداد تب ہی برابر ہوتے ہیں جب ان کے حقیقی حصے آپس میں برابر ہوں اور خیالی حصے آپس میں برابر ہوں۔ دونوں حصوں کا موازنہ کرنے سے دو مساوات ملتی ہیں۔"
+  },
+  {
+   "math": "2x = 1 - 5 \\;\\Rightarrow\\; 2x = -4 \\;\\Rightarrow\\; x = \\frac{-4}{2} = -2",
+   "en": "First, solve the equation from the real parts for $x$ by subtracting $5$ from both sides and then dividing by $2$.",
+   "ur": "پہلے، حقیقی حصوں والی مساوات کو $x$ کے لیے حل کریں: دونوں اطراف سے $5$ تفریق کریں اور پھر $2$ پر تقسیم کریں۔",
+   "check": [
+    "1 - 5 == -4",
+    "R(-4, 2) == -2",
+    "2*(-2) + 5 == 1"
+   ]
+  },
+  {
+   "math": "y = 2 + 3 \\;\\Rightarrow\\; y = 5",
+   "en": "Next, solve the equation from the imaginary parts for $y$ by adding $3$ to both sides.",
+   "ur": "اب، خیالی حصوں والی مساوات کو $y$ کے لیے حل کرنے کے لیے دونوں اطراف میں $3$ جمع کریں۔",
+   "check": [
+    "2 + 3 == 5",
+    "5 - 3 == 2"
+   ]
+  },
+  {
+   "math": "\\text{Check: } (2(-2)+5)+(5-3)i = (-4+5)+2i = 1+2i",
+   "en": "Substitute $x = -2$ and $y = 5$ back into the left side of the given equation to verify. Thus, the required values are $x = -2$ and $y = 5$.",
+   "ur": "تصدیق کے لیے $x = -2$ اور $y = 5$ کو دی گئی مساوات کی بائیں جانب درج کریں۔ پس، مطلوبہ قیمتیں $x = -2$ اور $y = 5$ ہیں۔",
+   "check": [
+    "(2*(-2)+5) + (5-3)*I == 1 + 2*I",
+    "expand((2*(x)+5) + ((y)-3)*I) == expand((2*x + 5) + (y - 3)*I)",
+    "2*(-2) + 4 == 0",
+    "(5) - 5 == 0",
+    "(2*(-2)+5) + ((5)-3)*I == 1+2*I"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

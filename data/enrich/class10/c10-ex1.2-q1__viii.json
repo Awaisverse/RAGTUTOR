@@ -1,0 +1,82 @@
+{
+ "item": "c10-ex1.2-q1",
+ "label": "viii",
+ "answer_ref": "$\\frac{8}{15} + \\frac{3}{5}i$",
+ "steps": [
+  {
+   "math": "(5 + 2i) \\div (6 - 3i) = \\frac{5 + 2i}{6 - 3i}",
+   "en": "First, write the given division of complex numbers as a fraction. We need to simplify this and write it in the standard form $a+bi$.",
+   "ur": "سب سے پہلے، دی گئی مختلط اعداد کی تقسیم کو کسر کی شکل میں لکھیں۔ ہمیں اسے مختصر کر کے معیاری شکل $a+bi$ میں لکھنا ہے۔",
+   "check": [
+    "(5 + 2*I)/(6 - 3*I) == (5 + 2*I)/(6 - 3*I)"
+   ]
+  },
+  {
+   "math": "= \\frac{5 + 2i}{6 - 3i} \\times \\frac{6 + 3i}{6 + 3i}",
+   "en": "To remove the imaginary number from the denominator, multiply both the numerator and the denominator by the conjugate of the denominator. The conjugate of $6 - 3i$ is $6 + 3i$.",
+   "ur": "نسب نما سے خیالی عدد کو ختم کرنے کے لیے، شمار کنندہ اور نسب نما دونوں کو نسب نما کے مزدوج سے ضرب دیں۔ $6 - 3i$ کا مزدوج $6 + 3i$ ہے۔",
+   "check": [
+    "(5 + 2*I)/(6 - 3*I) == (5 + 2*I)*(6 + 3*I)/((6 - 3*I)*(6 + 3*I))"
+   ]
+  },
+  {
+   "math": "= \\frac{(5 + 2i)(6 + 3i)}{(6)^2 - (3i)^2}",
+   "en": "Multiply the two binomials in the numerator. In the denominator, apply the algebraic identity $(a - b)(a + b) = a^2 - b^2$.",
+   "ur": "شمار کنندہ میں دونوں جملوں کو آپس میں ضرب دیں۔ نسب نما میں الجبری کلیہ $(a - b)(a + b) = a^2 - b^2$ استعمال کریں۔",
+   "check": [
+    "(6 - 3*I)*(6 + 3*I) == 6**2 - (3*I)**2"
+   ]
+  },
+  {
+   "math": "= \\frac{5(6) + 5(3i) + 2i(6) + 2i(3i)}{36 - 9i^2}",
+   "en": "Expand the terms in the numerator by multiplying each term of the first bracket with each term of the second bracket, and simplify the squares in the denominator.",
+   "ur": "پہلی بریکٹ کے ہر رکن کو دوسری بریکٹ کے ہر رکن سے ضرب دے کر شمار کنندہ کو کھولیں، اور نسب نما میں مربعات کو حل کریں۔",
+   "check": [
+    "(5 + 2*I)*(6 + 3*I) == 5*6 + 5*3*I + 2*I*6 + 2*I*3*I",
+    "6**2 - (3*I)**2 == 36 - 9*I**2"
+   ]
+  },
+  {
+   "math": "= \\frac{30 + 15i + 12i + 6i^2}{36 - 9i^2}",
+   "en": "Perform the multiplications in the numerator.",
+   "ur": "شمار کنندہ میں ضرب کا عمل مکمل کریں۔",
+   "check": [
+    "5*6 + 5*3*I + 2*I*6 + 2*I*3*I == 30 + 15*I + 12*I + 6*I**2"
+   ]
+  },
+  {
+   "math": "= \\frac{30 + 27i + 6(-1)}{36 - 9(-1)}",
+   "en": "Combine the like imaginary terms $15i + 12i = 27i$, and substitute the value $i^2 = -1$ in both the numerator and the denominator.",
+   "ur": "ایک جیسی خیالی رقوم کو جمع کریں یعنی $15i + 12i = 27i$، اور شمار کنندہ اور نسب نما دونوں میں $i^2 = -1$ کی قیمت درج کریں۔",
+   "check": [
+    "30 + 15*I + 12*I + 6*I**2 == 30 + 27*I + 6*(-1)",
+    "36 - 9*I**2 == 36 - 9*(-1)"
+   ]
+  },
+  {
+   "math": "= \\frac{30 - 6 + 27i}{36 + 9} = \\frac{24 + 27i}{45}",
+   "en": "Simplify the real numbers in both the numerator and the denominator.",
+   "ur": "شمار کنندہ اور نسب نما دونوں میں حقیقی اعداد کو حل کریں۔",
+   "check": [
+    "(30 - 6 + 27*I)/(36 + 9) == (24 + 27*I)/45"
+   ]
+  },
+  {
+   "math": "= \\frac{24}{45} + \\frac{27}{45}i = \\frac{8}{15} + \\frac{3}{5}i",
+   "en": "Separate the fraction into real and imaginary parts, then reduce both fractions to their lowest form (dividing the first by $3$ and the second by $9$) to get the final answer in the form $a + bi$.",
+   "ur": "کسر کو حقیقی اور خیالی حصوں میں الگ الگ کریں، پھر دونوں کسروں کو ان کی مختصر ترین شکل میں لائیں (پہلی کو $3$ پر اور دوسری کو $9$ پر تقسیم کر کے) تاکہ $a + bi$ کی شکل میں حتمی جواب حاصل ہو سکے۔",
+   "check": [
+    "(24 + 27*I)/45 == R(24, 45) + R(27, 45)*I",
+    "R(24, 45) + R(27, 45)*I == R(8, 15) + R(3, 5)*I",
+    "(5 + 2*I)/(6 - 3*I) == R(8, 15) + R(3, 5)*I",
+    "(5 + 2*I)/(6 - 3*I) == (5 + 2*I)*(6 + 3*I)/((6 - 3*I)*(6 + 3*I))",
+    "(6 - 3*I)*(6 + 3*I) == (45)",
+    "(5 + 2*I)*(6 + 3*I) == (24 + 27*I)",
+    "(5 + 2*I)/(6 - 3*I) == (8/15 + 3*I/5)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

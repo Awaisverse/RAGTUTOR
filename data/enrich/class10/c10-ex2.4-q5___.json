@@ -1,0 +1,48 @@
+{
+ "item": "c10-ex2.4-q5",
+ "label": "",
+ "answer_ref": "$m = 16$",
+ "steps": [
+  {
+   "math": "mx^2 - 8x + 1 = 0",
+   "en": "Write down the given quadratic equation and compare it with the standard form $ax^2 + bx + c = 0$. Here, $a = m$, $b = -8$, and $c = 1$.",
+   "ur": "دی گئی دو درجی مساوات لکھیں اور اس کا معیاری شکل $ax^2 + bx + c = 0$ سے موازنہ کریں۔ یہاں $a = m$، $b = -8$ اور $c = 1$ ہے۔"
+  },
+  {
+   "math": "\\text{Discriminant} = b^2 - 4ac = 0",
+   "en": "Since the roots of the equation are real and equal, the discriminant must be equal to zero.",
+   "ur": "چونکہ مساوات کے روٹس حقیقی اور برابر ہیں، اس لیے فرق کنندہ (Discriminant) صفر کے برابر ہونا چاہیے۔"
+  },
+  {
+   "math": "(-8)^2 - 4(m)(1) = 0",
+   "en": "Substitute the values of $a$, $b$, and $c$ into the discriminant formula.",
+   "ur": "فرق کنندہ کے فارمولے میں $a$، $b$ اور $c$ کی قیمتیں درج کریں۔"
+  },
+  {
+   "math": "64 - 4m = 0",
+   "en": "Simplify the expression by calculating the square of $-8$ and multiplying the terms.",
+   "ur": "$-8$ کا مربع لے کر اور رقوم کو ضرب دے کر مساوات کو مختصر کریں۔",
+   "check": [
+    "(-8)**2 == 64",
+    "4*1 == 4"
+   ]
+  },
+  {
+   "math": "4m = 64",
+   "en": "Move $-4m$ to the other side of the equation.",
+   "ur": "$-4m$ کو مساوات کی دوسری طرف لے جائیں۔"
+  },
+  {
+   "math": "m = \\frac{64}{4} = 16",
+   "en": "Divide both sides by $4$ to find the value of $m$. Thus, the required value is $m = 16$.",
+   "ur": "$m$ کی قیمت معلوم کرنے کے لیے دونوں طرف $4$ سے تقسیم کریں۔ اس طرح مطلوبہ قیمت $m = 16$ ہے۔",
+   "check": [
+    "R(64, 4) == 16",
+    "(-8)**2 - 4*16*1 == 0"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

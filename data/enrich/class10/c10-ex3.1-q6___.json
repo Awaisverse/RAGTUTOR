@@ -1,0 +1,66 @@
+{
+ "item": "c10-ex3.1-q6",
+ "label": "",
+ "answer_ref": "$a = 7,\\ b = 3,\\ c = 4,\\ d = 3$",
+ "steps": [
+  {
+   "math": "\\begin{bmatrix}a+b&2d-1\\\\3b+2&4\\end{bmatrix}=\\begin{bmatrix}10&5\\\\11&c\\end{bmatrix}",
+   "en": "Write down the given matrix equation. We need to find the values of the unknowns $a$, $b$, $c$, and $d$.",
+   "ur": "دی گئی قالب مساوات لکھیں۔ ہمیں نامعلوم متغیرات $a$، $b$، $c$ اور $d$ کی قیمتیں معلوم کرنی ہیں۔"
+  },
+  {
+   "math": "a + b = 10 \\text{ --- (i)},\\quad 2d - 1 = 5 \\text{ --- (ii)},\\quad 3b + 2 = 11 \\text{ --- (iii)},\\quad 4 = c \\text{ --- (iv)}",
+   "en": "By the definition of equal matrices, two matrices of the same order are equal if and only if their corresponding entries (elements in the same position) are equal.",
+   "ur": "مساوی قالبوں کی تعریف کے مطابق، ایک ہی مرتبے کے دو قالب برابر ہوتے ہیں اگر ان کے متناظرہ ارکان (ایک ہی مقام کے ارکان) آپس میں برابر ہوں۔"
+  },
+  {
+   "math": "c = 4",
+   "en": "From equation (iv), we directly get the value of $c$.",
+   "ur": "مساوات (iv) سے ہمیں براہِ راست $c$ کی قیمت معلوم ہو جاتی ہے۔",
+   "check": [
+    "4 == 4"
+   ]
+  },
+  {
+   "math": "3b + 2 = 11 \\implies 3b = 11 - 2 \\implies 3b = 9 \\implies b = \\frac{9}{3} = 3",
+   "en": "Now, solve equation (iii) to find the value of $b$. Subtract $2$ from both sides and then divide by $3$.",
+   "ur": "اب، $b$ کی قیمت معلوم کرنے کے لیے مساوات (iii) کو حل کریں۔ دونوں طرف سے $2$ تفریق کریں اور پھر $3$ پر تقسیم کریں۔",
+   "check": [
+    "11 - 2 == 9",
+    "R(9, 3) == 3"
+   ]
+  },
+  {
+   "math": "a + 3 = 10 \\implies a = 10 - 3 = 7",
+   "en": "Substitute $b = 3$ into equation (i) to find the value of $a$.",
+   "ur": "$a$ کی قیمت معلوم کرنے کے لیے مساوات (i) میں $b = 3$ درج کریں۔",
+   "check": [
+    "10 - 3 == 7"
+   ]
+  },
+  {
+   "math": "2d - 1 = 5 \\implies 2d = 5 + 1 \\implies 2d = 6 \\implies d = \\frac{6}{2} = 3",
+   "en": "Next, solve equation (ii) to find the value of $d$. Add $1$ to both sides and then divide by $2$.",
+   "ur": "اس کے بعد، $d$ کی قیمت معلوم کرنے کے لیے مساوات (ii) کو حل کریں۔ دونوں طرف $1$ جمع کریں اور پھر $2$ پر تقسیم کریں۔",
+   "check": [
+    "5 + 1 == 6",
+    "R(6, 2) == 3"
+   ]
+  },
+  {
+   "math": "a = 7,\\quad b = 3,\\quad c = 4,\\quad d = 3",
+   "en": "Thus, the required values of $a$, $b$, $c$, and $d$ are found.",
+   "ur": "پس، $a$، $b$، $c$ اور $d$ کی مطلوبہ قیمتیں معلوم ہو گئیں۔",
+   "check": [
+    "7 + 3 == 10",
+    "2*3 - 1 == 5",
+    "3*3 + 2 == 11",
+    "4 == 4",
+    "Eq(Matrix([[10, 5], [11, 4]]), Matrix([[10, 5], [11, 4]]))"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

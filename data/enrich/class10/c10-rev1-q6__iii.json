@@ -1,0 +1,71 @@
+{
+ "item": "c10-rev1-q6",
+ "label": "iii",
+ "answer_ref": "$7 - 22i$",
+ "steps": [
+  {
+   "math": "z_1 = 5 + 4i, \\quad z_2 = 3 + 2i",
+   "en": "Write down the given complex numbers $z_1$ and $z_2$. We need to find the product of their conjugates, $\\overline{z_1}\\,\\overline{z_2}$.",
+   "ur": "دیے گئے مخلوط اعداد $z_1$ اور $z_2$ لکھیں۔ ہمیں ان کے مزدوج کا حاصلِ ضرب، یعنی $\\overline{z_1}\\,\\overline{z_2}$ معلوم کرنا ہے۔"
+  },
+  {
+   "math": "\\overline{z_1} = \\overline{5 + 4i} = 5 - 4i",
+   "en": "Find the conjugate of $z_1$ by changing the sign of its imaginary part.",
+   "ur": "$z_1$ کے خیالی حصے کی علامت بدل کر اس کا مزدوج معلوم کریں۔",
+   "check": [
+    "conjugate(5 + 4*I) == 5 - 4*I"
+   ]
+  },
+  {
+   "math": "\\overline{z_2} = \\overline{3 + 2i} = 3 - 2i",
+   "en": "Similarly, find the conjugate of $z_2$ by changing the sign of its imaginary part.",
+   "ur": "اسی طرح، $z_2$ کے خیالی حصے کی علامت بدل کر اس کا مزدوج معلوم کریں۔",
+   "check": [
+    "conjugate(3 + 2*I) == 3 - 2*I"
+   ]
+  },
+  {
+   "math": "\\overline{z_1}\\,\\overline{z_2} = (5 - 4i)(3 - 2i)",
+   "en": "Substitute the values of $\\overline{z_1}$ and $\\overline{z_2}$ into the product $\\overline{z_1}\\,\\overline{z_2}$.",
+   "ur": "حاصلِ ضرب $\\overline{z_1}\\,\\overline{z_2}$ میں $\\overline{z_1}$ اور $\\overline{z_2}$ کی قیمتیں درج کریں۔",
+   "check": [
+    "conjugate(5 + 4*I)*conjugate(3 + 2*I) == (5 - 4*I)*(3 - 2*I)"
+   ]
+  },
+  {
+   "math": "\\overline{z_1}\\,\\overline{z_2} = 5(3 - 2i) - 4i(3 - 2i) = 15 - 10i - 12i + 8i^2",
+   "en": "Multiply each term of the first complex number by each term of the second complex number.",
+   "ur": "پہلے مخلوط عدد کے ہر رکن کو دوسرے مخلوط عدد کے ہر رکن سے ضرب دیں۔",
+   "check": [
+    "(5 - 4*I)*(3 - 2*I) == 15 - 10*I - 12*I + 8*I**2"
+   ]
+  },
+  {
+   "math": "\\overline{z_1}\\,\\overline{z_2} = 15 - 22i + 8(-1)",
+   "en": "Combine the like imaginary terms ($-10i - 12i = -22i$) and substitute $i^2 = -1$.",
+   "ur": "ایک جیسے خیالی ارکان کو یکجا کریں ($-10i - 12i = -22i$) اور $i^2 = -1$ درج کریں۔",
+   "check": [
+    "-10*I - 12*I == -22*I",
+    "I**2 == -1",
+    "(5 - 4*I)*(3 - 2*I) == 15 - 22*I + 8*(-1)"
+   ]
+  },
+  {
+   "math": "\\overline{z_1}\\,\\overline{z_2} = 15 - 8 - 22i = 7 - 22i",
+   "en": "Simplify the real parts ($15 - 8 = 7$) to get the final answer in the standard form $a + bi$.",
+   "ur": "حقیقی حصوں کو مختصر کریں ($15 - 8 = 7$) تاکہ معیاری شکل $a + bi$ میں حتمی جواب حاصل ہو سکے۔",
+   "check": [
+    "15 - 8 == 7",
+    "(5 - 4*I)*(3 - 2*I) == 7 - 22*I",
+    "conjugate((5 + 4*I)) == (5 - 4*I)",
+    "conjugate((3 + 2*I)) == (3 - 2*I)",
+    "(5 - 4*I)*(3 - 2*I) == (15) + (-22)*I + (8)*I**2",
+    "I**2 == -1",
+    "(5 - 4*I)*(3 - 2*I) == (7 - 22*I)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

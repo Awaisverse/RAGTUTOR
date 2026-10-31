@@ -1,0 +1,58 @@
+{
+ "item": "c10-ex6.2-q2",
+ "label": "i",
+ "answer_ref": "$2$",
+ "steps": [
+  {
+   "math": "\\underline{b} = \\underline{i} + 5\\underline{j}, \\quad \\underline{c} = 3\\underline{i} + 5\\underline{j}",
+   "en": "Write down the given vectors $\\underline{b}$ and $\\underline{c}$. We need to find the magnitude of $\\underline{b} - \\underline{c}$.",
+   "ur": "دیے گئے سمتیے $\\underline{b}$ اور $\\underline{c}$ لکھیں۔ ہمیں $\\underline{b} - \\underline{c}$ کی مقدار معلوم کرنی ہے۔"
+  },
+  {
+   "math": "\\underline{b} - \\underline{c} = \\left(\\underline{i} + 5\\underline{j}\\right) - \\left(3\\underline{i} + 5\\underline{j}\\right)",
+   "en": "Substitute the values of vectors $\\underline{b}$ and $\\underline{c}$ into the expression $\\underline{b} - \\underline{c}$.",
+   "ur": "جملے $\\underline{b} - \\underline{c}$ میں سمتیوں $\\underline{b}$ اور $\\underline{c}$ کی قیمتیں درج کریں۔"
+  },
+  {
+   "math": "\\underline{b} - \\underline{c} = \\underline{i} + 5\\underline{j} - 3\\underline{i} - 5\\underline{j}",
+   "en": "Remove the brackets and change the signs of the terms inside the second bracket.",
+   "ur": "بریکٹ ہٹائیں اور دوسری بریکٹ کے اندر والی رقموں کی علامتیں تبدیل کریں۔"
+  },
+  {
+   "math": "\\underline{b} - \\underline{c} = (1 - 3)\\underline{i} + (5 - 5)\\underline{j} = -2\\underline{i} + 0\\underline{j}",
+   "en": "Combine the $\\underline{i}$ components and the $\\underline{j}$ components separately.",
+   "ur": "$\\underline{i}$ والے اجزاء اور $\\underline{j}$ والے اجزاء کو الگ الگ یکجا کریں۔",
+   "check": [
+    "1 - 3 == -2",
+    "5 - 5 == 0"
+   ]
+  },
+  {
+   "math": "|\\underline{v}| = \\sqrt{x^2 + y^2}",
+   "en": "Recall the formula for the magnitude of a vector $\\underline{v} = x\\underline{i} + y\\underline{j}$.",
+   "ur": "کسی سمتیے $\\underline{v} = x\\underline{i} + y\\underline{j}$ کی مقدار معلوم کرنے کا کلیہ لکھیں۔"
+  },
+  {
+   "math": "|\\underline{b} - \\underline{c}| = \\sqrt{(-2)^2 + (0)^2}",
+   "en": "Substitute $x = -2$ and $y = 0$ into the magnitude formula.",
+   "ur": "مقدار کے کلیے میں $x = -2$ اور $y = 0$ درج کریں۔"
+  },
+  {
+   "math": "|\\underline{b} - \\underline{c}| = \\sqrt{4 + 0} = \\sqrt{4} = 2",
+   "en": "Simplify the expression and take the square root to get the final answer.",
+   "ur": "جملے کو مختصر کریں اور حتمی جواب حاصل کرنے کے لیے جزر المربع لیں۔",
+   "check": [
+    "(-2)**2 == 4",
+    "0**2 == 0",
+    "4 + 0 == 4",
+    "sqrt(4) == 2",
+    "(1)*(1) + (-1)*(3) == (-2)",
+    "(1)*(5) + (-1)*(5) == (0)",
+    "sqrt((-2)**2 + (0)**2) == (2)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

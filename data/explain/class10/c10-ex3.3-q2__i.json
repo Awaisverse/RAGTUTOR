@@ -1,0 +1,35 @@
+{
+ "item": "c10-ex3.3-q2",
+ "label": "i",
+ "answer_ref": "$\\begin{bmatrix} 2 & 1 \\\\ 1 & 6 \\end{bmatrix}$",
+ "math": [
+  "X = \\begin{bmatrix} 1 & -1 \\\\ -2 & 2 \\end{bmatrix}, \\quad Y = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}",
+  "X + Y = \\begin{bmatrix} 1 & -1 \\\\ -2 & 2 \\end{bmatrix} + \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}",
+  "X + Y = \\begin{bmatrix} 1 + 1 & -1 + 2 \\\\ -2 + 3 & 2 + 4 \\end{bmatrix}",
+  "X + Y = \\begin{bmatrix} 2 & 1 \\\\ 1 & 6 \\end{bmatrix}"
+ ],
+ "why": [
+  {
+   "en": "We start by identifying and writing down only the matrices needed for this specific part, which are $X$ and $Y$. This keeps our work neat and lets us verify that both are $2 \\times 2$ matrices before we try to combine them.",
+   "ur": "ہم سب سے پہلے صرف ان کالبوں (matrices) کو الگ لکھتے ہیں جن کی اس حصے میں ضرورت ہے، یعنی $X$ اور $Y$۔ اس سے ہمارا کام صاف رہتا ہے اور ہم یہ تصدیق کر سکتے ہیں کہ دونوں کالبوں کا مرتبہ (order) یکساں یعنی $2 \\times 2$ ہے۔"
+  },
+  {
+   "en": "By the rule of matrix addition, two matrices can only be added if they have the exact same order (number of rows and columns). Setting them up side-by-side with a plus sign shows they are conformable for addition and prepares the corresponding elements to be paired.",
+   "ur": "کالبوں کی جمع کے اصول کے مطابق، دو کالب صرف تب جمع ہو سکتے ہیں جب ان کا مرتبہ بالکل ایک جیسا ہو۔ انہیں جمع کے نشان کے ساتھ آمنے سامنے لکھنے سے واضح ہوتا ہے کہ یہ جمع کے لیے موزوں ہیں اور اس سے متناظرہ ارکان کو ملانا آسان ہو جاتا ہے۔"
+  },
+  {
+   "en": "The definition of matrix addition states that we must add the corresponding entries—meaning the number in the first row, first column of $X$ is added to the number in the first row, first column of $Y$, and so on. This groups the pairs inside a single $2 \\times 2$ matrix framework.",
+   "ur": "کالبوں کی جمع کی تعریف یہ بتاتی ہے کہ ہمیں متناظرہ ارکان (ایک جیسی جگہ والے نمبروں) کو آپس میں جمع کرنا ہے، جیسے پہلی قطار اور پہلے کالم کے رکن کو دوسرے کالب کے اسی جگہ والے رکن میں جمع کرنا۔ یہ قدم تمام جوڑوں کو ایک ہی $2 \\times 2$ کالب کے اندر اکٹھا کر دیتا ہے۔"
+  },
+  {
+   "en": "Now we use basic arithmetic (paying careful attention to negative signs, like $-1+2$ and $-2+3$) to find the single value for each position. This completes the operation and gives us the final simplified matrix.",
+   "ur": "اب ہم عام حساب کتاب کا استعمال کرتے ہوئے (منفی علامتوں کا خاص خیال رکھتے ہوئے، جیسے $-1+2$ اور $-2+3$) ہر جگہ کے لیے ایک قیمت نکالتے ہیں۔ اس سے جمع کا عمل مکمل ہو جاتا ہے اور ہمیں حتمی سادہ کالب مل جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $\\begin{bmatrix} 2 & 1 \\\\ 1 & 6 \\end{bmatrix}$ is the single $2 \\times 2$ matrix that represents the sum $X+Y$, where every entry is the exact total of the matching entries from $X$ and $Y$. You can quickly check your work by subtracting the entries of $Y$ from this result (for example, $2 - 1 = 1$ and $6 - 4 = 2$) to see that you get the original matrix $X$ back.",
+  "ur": "حتمی جواب $\\begin{bmatrix} 2 & 1 \\\\ 1 & 6 \\end{bmatrix}$ وہ نیا $2 \\times 2$ کالب ہے جو مجموعہ $X+Y$ کو ظاہر کرتا ہے، جس کا ہر رکن کالب $X$ اور $Y$ کے متناظرہ ارکان کا مجموعہ ہے۔ آپ اپنے جواب کی پڑتال اس نتیجے میں سے کالب $Y$ کے ارکان کو تفریق کر کے کر سکتے ہیں (مثال کے طور پر $2 - 1 = 1$ اور $6 - 4 = 2$)، جس سے آپ کو واپس اصل کالب $X$ مل جائے گا۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

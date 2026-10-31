@@ -1,0 +1,40 @@
+{
+ "item": "c10-rev3-q4",
+ "label": "vi",
+ "answer_ref": "$\\begin{bmatrix} 5 & 3 \\\\ 2 & 4 \\end{bmatrix}$",
+ "math": [
+  "B = \\begin{bmatrix} 5 & 3 \\\\ 2 & 4 \\end{bmatrix}",
+  "B^t = \\begin{bmatrix} 5 & 3 \\\\ 2 & 4 \\end{bmatrix}^t",
+  "B^t = \\begin{bmatrix} 5 & 2 \\\\ 3 & 4 \\end{bmatrix}",
+  "(B^t)^t = \\begin{bmatrix} 5 & 2 \\\\ 3 & 4 \\end{bmatrix}^t",
+  "(B^t)^t = \\begin{bmatrix} 5 & 3 \\\\ 2 & 4 \\end{bmatrix}"
+ ],
+ "why": [
+  {
+   "en": "In mathematics, we always solve inside the brackets first. Since we need to find $(B^t)^t$, we start by writing down the given matrix $B$ so we can work on the inner part, $B^t$, first.",
+   "ur": "ریاضی کے اصول کے مطابق ہم ہمیشہ بریکٹ کے اندر والے حصے کو پہلے حل کرتے ہیں۔ چونکہ ہمیں $(B^t)^t$ معلوم کرنا ہے، اس لیے ہم سب سے پہلے دیے گئے کالب $B$ کو لکھتے ہیں تاکہ اندرونی حصے $B^t$ کو حل کر سکیں۔"
+  },
+  {
+   "en": "Here we apply thetranspose operation to matrix $B$ to solve the inside of the bracket. By definition, the transpose symbol $t$ tells us that we are about to swap the rows and columns of this matrix.",
+   "ur": "یہاں ہم بریکٹ کے اندرونی حصے کو حل کرنے کے لیے کالب $B$ پر ٹرانسپوز (transpose) کا عمل لاگو کرتے ہیں۔ تعریف کے مطابق، علامت $t$ ہمیں بتاتی ہے کہ ہم اس کالب کی قطاروں کو کالموں میں بدلنے والے ہیں۔"
+  },
+  {
+   "en": "Following the rule of transpose, we turn the horizontal rows of $B$ into vertical columns. This gives us the new matrix $B^t$, which completes the first half of our problem.",
+   "ur": "ٹرانسپوز کے اصول کے مطابق، ہم کالب $B$ کی افقی قطاروں کو عمودی کالموں میں تبدیل کر دیتے ہیں۔ اس سے ہمیں نیا کالب $B^t$ مل جاتا ہے، جس سے ہمارے سوال کا آدھا حصہ مکمل ہو جاتا ہے۔"
+  },
+  {
+   "en": "Now that we have the inner result $B^t$, we apply the outer transpose $t$ to it. This sets up our final step where we will once again swap the rows and columns.",
+   "ur": "اب جب کہ ہم نے اندرونی حصہ $B^t$ معلوم کر لیا ہے، ہم اس پر باہر والا ٹرانسپوز $t$ لگاتے ہیں۔ یہ ہمیں آخری مرحلے کی طرف لے جاتا ہے جہاں ہم ایک بار پھر قطاروں اور کالموں کی جگہ بدلیں گے۔"
+  },
+  {
+   "en": "By applying the definition of transpose a second time, the rows of $B^t$ become columns again. This completes the operation and brings every number right back to its original position.",
+   "ur": "دوسری بار ٹرانسپوز کی تعریف پر عمل کرتے ہوئے، $B^t$ کی قطاریں دوبارہ کالم بن جاتی ہیں۔ اس سے ہمارا عمل مکمل ہو جاتا ہے اور ہر عدد واپس اپنی اصل جگہ پر آ جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $\\begin{bmatrix} 5 & 3 \\\\ 2 & 4 \\end{bmatrix}$ shows that taking the transpose of a matrix twice simply gives you back the original matrix $B$. You can easily check that this result is correct by comparing it with the given matrix $B$ in the question—they are exactly the same, confirming the matrix property $(B^t)^t = B$.",
+  "ur": "حتمی جواب $\\begin{bmatrix} 5 & 3 \\\\ 2 & 4 \\end{bmatrix}$ یہ ظاہر کرتا ہے کہ کسی کالب کا دو بار ٹرانسپوز لینے سے ہمیں واپس اصل کالب $B$ ہی حاصل ہوتا ہے۔ آپ اس جواب کی درستگی کو سوال میں دیے گئے کالب $B$ سے ملا کر باآسانی چیک کر سکتے ہیں—دونوں بالکل ایک جیسے ہیں، جو کالبوں کی اس خصوصیت کی تصدیق کرتا ہے کہ $(B^t)^t = B$ ہوتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

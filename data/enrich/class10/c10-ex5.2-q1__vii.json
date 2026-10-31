@@ -1,0 +1,50 @@
+{
+ "item": "c10-ex5.2-q1",
+ "label": "vii",
+ "answer_ref": "$\\frac{2 x^{2} - 3 x y - 3 y^{2}}{\\left(x - y\\right) \\left(x + y\\right)}$",
+ "steps": [
+  {
+   "math": "\\frac{2 x}{x + y} - \\frac{y}{x - y} - \\frac{2 y^{2}}{x^{2} - y^{2}}",
+   "en": "Write down the given algebraic expression.",
+   "ur": "دی گئی الجبری عبارت لکھیں۔"
+  },
+  {
+   "math": "= \\frac{2 x}{x + y} - \\frac{y}{x - y} - \\frac{2 y^{2}}{\\left(x - y\\right) \\left(x + y\\right)}",
+   "en": "Factorize the denominator of the third fraction using the difference of squares formula $a^{2} - b^{2} = (a - b)(a + b)$.",
+   "ur": "تیسری کسر کے نسب نما کی کلیہ $a^{2} - b^{2} = (a - b)(a + b)$ کی مدد سے تجزی کریں۔",
+   "check": [
+    "(2*x/(x + y) - y/(x - y) - 2*y**2/((x - y)*(x + y))) == (2*x/(x + y) - y/(x - y) - 2*y**2/(x**2 - y**2))"
+   ]
+  },
+  {
+   "math": "= \\frac{2 x\\left(x - y\\right) - y\\left(x + y\\right) - 2 y^{2}}{\\left(x - y\\right) \\left(x + y\\right)}",
+   "en": "The Least Common Denominator (L.C.D.) is $\\left(x - y\\right) \\left(x + y\\right)$. Combine the numerators over this common denominator.",
+   "ur": "ذو اضعاف اقل (L.C.D.) $\\left(x - y\\right) \\left(x + y\\right)$ ہے۔ اس مشترک نسب نما کے اوپر تمام شمار کنندگان کو یکجا کریں۔",
+   "check": [
+    "(2*x*(x - y) - y*(x + y) - 2*y**2)/((x - y)*(x + y)) == (2*x/(x + y) - y/(x - y) - 2*y**2/(x**2 - y**2))"
+   ]
+  },
+  {
+   "math": "= \\frac{2 x^{2} - 2 x y - x y - y^{2} - 2 y^{2}}{\\left(x - y\\right) \\left(x + y\\right)}",
+   "en": "Expand the brackets in the numerator by multiplying the terms.",
+   "ur": "شمار کنندہ میں ارکان کو ضرب دے کر قوسین (بریکٹس) کو کھولیں۔",
+   "check": [
+    "(2*x**2 - 2*x*y - x*y - y**2 - 2*y**2)/((x - y)*(x + y)) == (2*x/(x + y) - y/(x - y) - 2*y**2/(x**2 - y**2))"
+   ]
+  },
+  {
+   "math": "= \\frac{2 x^{2} - 3 x y - 3 y^{2}}{\\left(x - y\\right) \\left(x + y\\right)}",
+   "en": "Combine the like terms ($-2xy - xy = -3xy$ and $-y^{2} - 2y^{2} = -3y^{2}$) in the numerator to get the final simplified form.",
+   "ur": "مختصر ترین شکل حاصل کرنے کے لیے شمار کنندہ میں متشابہ ارکان ($-2xy - xy = -3xy$ اور $-y^{2} - 2y^{2} = -3y^{2}$) کو یکجا کریں۔",
+   "check": [
+    "(2*x**2 - 3*x*y - 3*y**2)/((x - y)*(x + y)) == (2*x/(x + y) - y/(x - y) - 2*y**2/(x**2 - y**2))",
+    "(2*x/(x + y) - 2*y**2/((x - y)*(x + y)) - y/(x - y)) == (2*x/(x + y) - 2*y**2/(x**2 - y**2) - y/(x - y))",
+    "(2*x*(x - y) - 2*y**2 - y*(x + y))/((x - y)*(x + y)) == (2*x/(x + y) - 2*y**2/(x**2 - y**2) - y/(x - y))",
+    "(2*x**2 - 3*x*y - 3*y**2)/((x - y)*(x + y)) == (2*x/(x + y) - 2*y**2/(x**2 - y**2) - y/(x - y))"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

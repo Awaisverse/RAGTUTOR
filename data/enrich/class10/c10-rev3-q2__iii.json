@@ -1,0 +1,50 @@
+{
+ "item": "c10-rev3-q2",
+ "label": "iii",
+ "answer_ref": "$\\begin{bmatrix} 23 & 19 \\\\ 38 & 36 \\end{bmatrix}$",
+ "steps": [
+  {
+   "math": "A = \\begin{bmatrix} 4 & 2 \\\\ 7 & 6 \\end{bmatrix}, \\quad B = \\begin{bmatrix} 5 & 5 \\\\ 8 & 8 \\end{bmatrix}",
+   "en": "Write the given matrices $A$ and $B$. We need to find the value of $2A + 3B$.",
+   "ur": "دیے گئے قالب $A$ اور $B$ لکھیں۔ ہمیں $2A + 3B$ کی قیمت معلوم کرنی ہے۔"
+  },
+  {
+   "math": "2A = 2\\begin{bmatrix} 4 & 2 \\\\ 7 & 6 \\end{bmatrix} = \\begin{bmatrix} 2 \\times 4 & 2 \\times 2 \\\\ 2 \\times 7 & 2 \\times 6 \\end{bmatrix} = \\begin{bmatrix} 8 & 4 \\\\ 14 & 12 \\end{bmatrix}",
+   "en": "First, find $2A$ by multiplying each entry of matrix $A$ by the scalar $2$.",
+   "ur": "سب سے پہلے، قالب $A$ کے ہر رکن کو عددی مقدار $2$ سے ضرب دے کر $2A$ معلوم کریں۔",
+   "check": [
+    "2*Matrix([[4, 2], [7, 6]]) == Matrix([[8, 4], [14, 12]])"
+   ]
+  },
+  {
+   "math": "3B = 3\\begin{bmatrix} 5 & 5 \\\\ 8 & 8 \\end{bmatrix} = \\begin{bmatrix} 3 \\times 5 & 3 \\times 5 \\\\ 3 \\times 8 & 3 \\times 8 \\end{bmatrix} = \\begin{bmatrix} 15 & 15 \\\\ 24 & 24 \\end{bmatrix}",
+   "en": "Next, find $3B$ by multiplying each entry of matrix $B$ by the scalar $3$.",
+   "ur": "اس کے بعد، قالب $B$ کے ہر رکن کو عددی مقدار $3$ سے ضرب دے کر $3B$ معلوم کریں۔",
+   "check": [
+    "3*Matrix([[5, 5], [8, 8]]) == Matrix([[15, 15], [24, 24]])"
+   ]
+  },
+  {
+   "math": "2A + 3B = \\begin{bmatrix} 8 & 4 \\\\ 14 & 12 \\end{bmatrix} + \\begin{bmatrix} 15 & 15 \\\\ 24 & 24 \\end{bmatrix} = \\begin{bmatrix} 8 + 15 & 4 + 15 \\\\ 14 + 24 & 12 + 24 \\end{bmatrix}",
+   "en": "Since $2A$ and $3B$ have the same order ($2 \\times 2$), add their corresponding entries.",
+   "ur": "چونکہ $2A$ اور $3B$ کا درجہ یکساں ($2 \\times 2$) ہے، اس لیے ان کے متناظرہ ارکان کو جمع کریں۔",
+   "check": [
+    "Matrix([[8, 4], [14, 12]]) + Matrix([[15, 15], [24, 24]]) == Matrix([[8+15, 4+15], [14+24, 12+24]])"
+   ]
+  },
+  {
+   "math": "2A + 3B = \\begin{bmatrix} 23 & 19 \\\\ 38 & 36 \\end{bmatrix}",
+   "en": "Simplify each entry by performing the addition to get the final answer.",
+   "ur": "حتمی جواب حاصل کرنے کے لیے جمع کا عمل مکمل کر کے ہر رکن کو مختصر کریں۔",
+   "check": [
+    "Matrix([[8+15, 4+15], [14+24, 12+24]]) == Matrix([[23, 19], [38, 36]])",
+    "Eq(Matrix([[8, 4], [14, 12]]), Matrix([[8, 4], [14, 12]]))",
+    "Eq(Matrix([[15, 15], [24, 24]]), Matrix([[15, 15], [24, 24]]))",
+    "Eq(Matrix([[23, 19], [38, 36]]), Matrix([[23, 19], [38, 36]]))"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

@@ -1,0 +1,69 @@
+{
+ "item": "c10-ex3.4-q3",
+ "label": "",
+ "answer_ref": "$a = -3,\\ b = -\\frac{5}{2}$",
+ "steps": [
+  {
+   "math": "\\begin{bmatrix} 4 & a \\\\ b & 3 \\end{bmatrix} \\begin{bmatrix} 6 \\\\ 6 \\end{bmatrix} = \\begin{bmatrix} 6 \\\\ 3 \\end{bmatrix}",
+   "en": "Write the given matrix equation. We need to find the values of $a$ and $b$.",
+   "ur": "دی گئی قالب مساوات لکھیں۔ ہمیں $a$ اور $b$ کی قیمتیں معلوم کرنی ہیں۔"
+  },
+  {
+   "math": "\\begin{bmatrix} (4)(6) + (a)(6) \\\\ (b)(6) + (3)(6) \\end{bmatrix} = \\begin{bmatrix} 6 \\\\ 3 \\end{bmatrix}",
+   "en": "Multiply the matrices on the left-hand side by multiplying each row of the first matrix by the column of the second matrix.",
+   "ur": "بائیں طرف والے قالبوں کو ضرب دیں، جس میں پہلے قالب کی ہر قطار کو دوسرے قالب کے کالم سے ضرب دی جاتی ہے۔",
+   "check": [
+    "Eq(Matrix([[4, a], [b, 3]])*Matrix([[6], [6]]), Matrix([[4*6 + a*6], [b*6 + 3*6]]))"
+   ]
+  },
+  {
+   "math": "\\begin{bmatrix} 24 + 6a \\\\ 6b + 18 \\end{bmatrix} = \\begin{bmatrix} 6 \\\\ 3 \\end{bmatrix}",
+   "en": "Simplify the products inside the matrix.",
+   "ur": "قالب کے اندر حاصل ضرب کو مختصر کریں۔",
+   "check": [
+    "4*6 == 24",
+    "3*6 == 18",
+    "Eq(Matrix([[4, a], [b, 3]])*Matrix([[6], [6]]), Matrix([[24 + 6*a], [6*b + 18]]))"
+   ]
+  },
+  {
+   "math": "24 + 6a = 6 \\quad \\text{and} \\quad 6b + 18 = 3",
+   "en": "Since the two matrices are equal, their corresponding entries must be equal.",
+   "ur": "چونکہ دونوں قالب برابر ہیں، اس لیے ان کے متناظرہ ارکان آپس میں برابر ہوں گے۔"
+  },
+  {
+   "math": "6a = 6 - 24 \\implies 6a = -18 \\implies a = \\frac{-18}{6} = -3",
+   "en": "Solve the first equation for $a$ by subtracting $24$ from both sides and then dividing by $6$.",
+   "ur": "پہلی مساوات کو $a$ کے لیے حل کریں: دونوں طرف سے $24$ تفریق کریں اور پھر $6$ پر تقسیم کریں۔",
+   "check": [
+    "6 - 24 == -18",
+    "R(-18, 6) == -3",
+    "24 + 6*(-3) == 6"
+   ]
+  },
+  {
+   "math": "6b = 3 - 18 \\implies 6b = -15 \\implies b = \\frac{-15}{6} = -\\frac{5}{2}",
+   "en": "Solve the second equation for $b$ by subtracting $18$ from both sides, dividing by $6$, and simplifying the fraction.",
+   "ur": "دوسری مساوات کو $b$ کے لیے حل کریں: دونوں طرف سے $18$ تفریق کریں، $6$ پر تقسیم کریں اور کسر کو مختصر کریں۔",
+   "check": [
+    "3 - 18 == -15",
+    "R(-15, 6) == R(-5, 2)",
+    "6*R(-5, 2) + 18 == 3"
+   ]
+  },
+  {
+   "math": "a = -3, \\quad b = -\\frac{5}{2}",
+   "en": "Thus, the required values of $a$ and $b$ are $-3$ and $-\\frac{5}{2}$ respectively.",
+   "ur": "پس، $a$ اور $b$ کی مطلوبہ قیمتیں بالترتیب $-3$ اور $-\\frac{5}{2}$ ہیں۔",
+   "check": [
+    "Eq(Matrix([[4, -3], [R(-5, 2), 3]])*Matrix([[6], [6]]), Matrix([[6], [3]]))",
+    "Eq(Matrix([[4, a], [b, 3]])*Matrix([[6], [6]]), Matrix([[24 + 6*a], [6*b + 18]]))",
+    "24 + 6*(-3) == 6",
+    "Eq(Matrix([[4, -3], [R(-5,2), 3]])*Matrix([[6], [6]]), Matrix([[6], [3]]))"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

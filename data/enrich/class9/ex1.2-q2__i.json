@@ -1,0 +1,64 @@
+{
+ "item": "ex1.2-q2",
+ "label": "i",
+ "answer_ref": "$\\frac{8}{27}$",
+ "steps": [
+  {
+   "math": "\\left(\\frac{81}{16}\\right)^{-\\frac{3}{4}}",
+   "en": "Write down the given expression that needs to be simplified.",
+   "ur": "دی گئی عبارت لکھیں جسے مختصر کرنا ہے۔"
+  },
+  {
+   "math": "= \\left(\\frac{16}{81}\\right)^{\\frac{3}{4}}",
+   "en": "Apply the negative exponent law $\\left(\\frac{a}{b}\\right)^{-n} = \\left(\\frac{b}{a}\\right)^n$ to make the exponent positive by taking the reciprocal of the base.",
+   "ur": "منفی قوت نما کے قانون $\\left(\\frac{a}{b}\\right)^{-n} = \\left(\\frac{b}{a}\\right)^n$ کا اطلاق کریں اور اساس کا معکوس لے کر قوت نما کو مثبت بنائیں۔",
+   "check": [
+    "R(81,16)**R(-3,4) == R(16,81)**R(3,4)"
+   ]
+  },
+  {
+   "math": "= \\left(\\frac{2^4}{3^4}\\right)^{\\frac{3}{4}}",
+   "en": "Express the numerator and the denominator in prime factor exponential form: $16 = 2^4$ and $81 = 3^4$.",
+   "ur": "شمار کنندہ اور مخرج کو مفرد اجزائے ضربی کی قوت نمائی شکل میں لکھیں: $16 = 2^4$ اور $81 = 3^4$۔",
+   "check": [
+    "16 == 2**4",
+    "81 == 3**4",
+    "R(16,81)**R(3,4) == R(2**4, 3**4)**R(3,4)"
+   ]
+  },
+  {
+   "math": "= \\left(\\left(\\frac{2}{3}\\right)^4\\right)^{\\frac{3}{4}}",
+   "en": "Use the quotient law of exponents $\\frac{a^n}{b^n} = \\left(\\frac{a}{b}\\right)^n$ to combine the powers inside the bracket.",
+   "ur": "قوت نما کے حاصل تقسیم کے قانون $\\frac{a^n}{b^n} = \\left(\\frac{a}{b}\\right)^n$ کا استعمال کرتے ہوئے بریکٹ کے اندر طاقتوں کو یکجا کریں۔",
+   "check": [
+    "R(2**4, 3**4) == R(2,3)**4"
+   ]
+  },
+  {
+   "math": "= \\left(\\frac{2}{3}\\right)^{4 \\times \\frac{3}{4}} = \\left(\\frac{2}{3}\\right)^3",
+   "en": "Apply the power of a power law $(a^m)^n = a^{m \\times n}$ and cancel out the $4$ in the exponent.",
+   "ur": "قوت کی قوت کے قانون $(a^m)^n = a^{m \\times n}$ کا اطلاق کریں اور قوت نما میں $4$ کو منسوخ کریں۔",
+   "check": [
+    "4 * R(3,4) == 3",
+    "(R(2,3)**4)**R(3,4) == R(2,3)**3"
+   ]
+  },
+  {
+   "math": "= \\frac{2^3}{3^3} = \\frac{8}{27}",
+   "en": "Cube both the numerator and the denominator ($2^3 = 8$ and $3^3 = 27$) to get the final simplified answer.",
+   "ur": "مختصر ترین حتمی جواب حاصل کرنے کے لیے شمار کنندہ اور مخرج دونوں کا مکعب لیں ($2^3 = 8$ اور $3^3 = 27$)۔",
+   "check": [
+    "2**3 == 8",
+    "3**3 == 27",
+    "R(2,3)**3 == R(8,27)",
+    "Rational(81,16)**Rational(-3,4) == Rational(16,81)**Rational(3,4)",
+    "Rational(16,81) == Rational(2,3)**4",
+    "(Rational(2,3)**4)**Rational(3,4) == Rational(2,3)**3",
+    "Rational(2,3)**3 == Rational(8,27)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

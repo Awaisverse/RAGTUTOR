@@ -1,0 +1,55 @@
+{
+ "item": "c10-ex2.4-q1",
+ "label": "i",
+ "answer_ref": "$D = 105$: roots are irrational and unequal",
+ "steps": [
+  {
+   "math": "3 x^{2} - 9 x - 2 = 0",
+   "en": "Write the given quadratic equation.",
+   "ur": "دی گئی دو درجی مساوات لکھیں۔"
+  },
+  {
+   "math": "a = 3, \\quad b = -9, \\quad c = -2",
+   "en": "Compare the equation with the standard quadratic form $ax^2 + bx + c = 0$ to find the values of $a$, $b$, and $c$.",
+   "ur": "$a$، $b$ اور $c$ کی قیمتیں معلوم کرنے کے لیے مساوات کا معیاری دو درجی مساوات $ax^2 + bx + c = 0$ سے موازنہ کریں۔"
+  },
+  {
+   "math": "\\text{Discriminant } (D) = b^2 - 4ac",
+   "en": "Write the formula for the discriminant to determine the nature of the roots.",
+   "ur": "جذروں کی نوعیت معلوم کرنے کے لیے ممیز (Discriminant) کا فارمولا لکھیں۔"
+  },
+  {
+   "math": "D = (-9)^2 - 4(3)(-2)",
+   "en": "Substitute the values of $a = 3$, $b = -9$, and $c = -2$ into the formula.",
+   "ur": "فارمولے میں $a = 3$، $b = -9$ اور $c = -2$ کی قیمتیں درج کریں۔"
+  },
+  {
+   "math": "D = 81 + 24",
+   "en": "Evaluate the square of $-9$ and multiply the remaining terms.",
+   "ur": "$-9$ کا مربع لیں اور باقی رقوم کو ضرب دیں۔",
+   "check": [
+    "(-9)**2 == 81",
+    "-4*(3)*(-2) == 24"
+   ]
+  },
+  {
+   "math": "D = 105",
+   "en": "Add the numbers to find the value of the discriminant $D$.",
+   "ur": "ممیز $D$ کی قیمت معلوم کرنے کے لیے اعداد کو جمع کریں۔",
+   "check": [
+    "81 + 24 == 105"
+   ]
+  },
+  {
+   "math": "\\text{Roots are irrational and unequal}",
+   "en": "Since the discriminant $D = 105 > 0$ and $105$ is not a perfect square, the roots of the equation are irrational (real) and unequal.",
+   "ur": "چونکہ ممیز $D = 105 > 0$ ہے اور $105$ ایک مکمل مربع نہیں ہے، اس لیے مساوات کے جذر غیر ناطق (حقیقی) اور غیر مساوی ہیں۔",
+   "check": [
+    "(-9)**2 - 4*(3)*(-2) == 105"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

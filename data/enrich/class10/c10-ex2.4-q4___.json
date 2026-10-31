@@ -1,0 +1,58 @@
+{
+ "item": "c10-ex2.4-q4",
+ "label": "",
+ "answer_ref": "$q < 4$",
+ "steps": [
+  {
+   "math": "4u^2 + 8u + q = 0",
+   "en": "Write the given quadratic equation and compare it with the standard form $au^2 + bu + c = 0$ to find $a = 4$, $b = 8$, and $c = q$.",
+   "ur": "دی گئی دو درجی مساوات لکھیں اور اس کا معیاری شکل $au^2 + bu + c = 0$ سے موازنہ کر کے $a = 4$، $b = 8$، اور $c = q$ معلوم کریں۔"
+  },
+  {
+   "math": "D = b^2 - 4ac > 0",
+   "en": "For a quadratic equation to have real and unequal roots, its discriminant ($D$) must be strictly greater than zero.",
+   "ur": "کسی دو درجی مساوات کے جذور حقیقی اور غیر مساوی ہونے کے لیے، اس کا فرق کنندہ ($D$) صفر سے بڑا ہونا ضروری ہے۔"
+  },
+  {
+   "math": "(8)^2 - 4(4)(q) > 0",
+   "en": "Substitute the values of $a = 4$, $b = 8$, and $c = q$ into the discriminant inequality.",
+   "ur": "فرق کنندہ کی مساوات میں $a = 4$، $b = 8$، اور $c = q$ کی قیمتیں درج کریں۔"
+  },
+  {
+   "math": "64 - 16q > 0",
+   "en": "Evaluate the square of $8$ and multiply the terms.",
+   "ur": "$8$ کا مربع لیں اور رقموں کو ضرب دیں۔",
+   "check": [
+    "8**2 - 4*4*q == 64 - 16*q"
+   ]
+  },
+  {
+   "math": "64 > 16q",
+   "en": "Add $16q$ to both sides of the inequality.",
+   "ur": "عدم مساوات کے دونوں اطراف میں $16q$ جمع کریں۔",
+   "check": [
+    "(64 - 16*q) + 16*q == 64"
+   ]
+  },
+  {
+   "math": "\\frac{64}{16} > q \\Rightarrow 4 > q",
+   "en": "Divide both sides by $16$ to isolate $q$.",
+   "ur": "$q$ کو الگ کرنے کے لیے دونوں اطراف کو $16$ سے تقسیم کریں۔",
+   "check": [
+    "R(64, 16) == 4"
+   ]
+  },
+  {
+   "math": "q < 4",
+   "en": "Therefore, the possible values for $q$ are all real numbers less than $4$.",
+   "ur": "لہٰذا، $q$ کی ممکنہ قیمتیں $4$ سے چھوٹے تمام حقیقی اعداد ہیں۔",
+   "check": [
+    "(64 - 16*q).subs(q, 4) == 0",
+    "8**2 - 4*4*q == 64 - 16*q"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

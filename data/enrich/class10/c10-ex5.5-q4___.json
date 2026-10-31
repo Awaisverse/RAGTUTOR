@@ -1,0 +1,49 @@
+{
+ "item": "c10-ex5.5-q4",
+ "label": "",
+ "answer_ref": "$\\approx 8.57$ hours",
+ "steps": [
+  {
+   "math": "",
+   "en": "Let the time taken by Abdul Hadi to complete the project alone be $x$ hours.",
+   "ur": "فرض کریں کہ عبدالہادی کو اکیلے پروجیکٹ مکمل کرنے میں $x$ گھنٹے لگتے ہیں۔"
+  },
+  {
+   "math": "\\text{Huria's rate} = \\frac{1}{12}, \\quad \\text{Abdul Hadi's rate} = \\frac{1}{x}, \\quad \\text{Combined rate} = \\frac{1}{5}",
+   "en": "If a person completes a project in $t$ hours, the fraction of work done in $1$ hour (rate of work) is $\\frac{1}{t}$. Given Huria takes $12$ hours and together they take $5$ hours.",
+   "ur": "اگر کوئی شخص $t$ گھنٹوں میں ایک پروجیکٹ مکمل کرتا ہے، تو $1$ گھنٹے میں کیے گئے کام کا حصہ (کام کی شرح) $\\frac{1}{t}$ ہوتا ہے۔ دی گئی معلومات کے مطابق حوریہ $12$ گھنٹے لیتی ہے اور وہ دونوں مل کر $5$ گھنٹے لیتے ہیں۔"
+  },
+  {
+   "math": "\\frac{1}{12} + \\frac{1}{x} = \\frac{1}{5}",
+   "en": "The sum of their individual work rates equals their combined work rate.",
+   "ur": "ان کی انفرادی کام کی شرحوں کا مجموعہ ان کی مشترکہ کام کی شرح کے برابر ہے۔"
+  },
+  {
+   "math": "\\frac{1}{x} = \\frac{1}{5} - \\frac{1}{12}",
+   "en": "Subtract $\\frac{1}{12}$ from both sides to isolate $\\frac{1}{x}$.",
+   "ur": "$\\frac{1}{x}$ کو الگ کرنے کے لیے دونوں طرف سے $\\frac{1}{12}$ تفریق کریں۔"
+  },
+  {
+   "math": "\\frac{1}{x} = \\frac{12 - 5}{60} = \\frac{7}{60}",
+   "en": "Take the LCM of the denominators $5$ and $12$, which is $60$, and simplify the fraction.",
+   "ur": "مخرج $5$ اور $12$ کا ذواضعاف اقل (LCM) لیں جو کہ $60$ ہے، اور کسر کو مختصر کریں۔",
+   "check": [
+    "R(1,5) - R(1,12) == R(12-5,60)",
+    "R(12-5,60) == R(7,60)"
+   ]
+  },
+  {
+   "math": "x = \\frac{60}{7} \\approx 8.57 \\text{ hours} \\approx 8 \\text{ h } 34 \\text{ min}",
+   "en": "Take the reciprocal on both sides to find $x$. Thus, Abdul Hadi would take approximately $8.57$ hours working alone.",
+   "ur": "$x$ معلوم کرنے کے لیے دونوں طرف معکوس لیں۔ اس طرح، عبدالہادی کو اکیلے کام کرتے ہوئے تقریباً $8.57$ گھنٹے لگیں گے۔",
+   "check": [
+    "1 / R(7,60) == R(60,7)",
+    "Abs(R(60,7) - 8.57) < 0.01",
+    "R(1,5) - R(1,12) == R(7,60)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

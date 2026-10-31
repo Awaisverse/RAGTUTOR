@@ -1,0 +1,50 @@
+{
+ "item": "c10-ex2.3-q4",
+ "label": "i",
+ "answer_ref": "$4x^2 + 2x + 1 = 0$",
+ "math": [
+  "x^2 + 2x + 4 = 0 \\implies a = 1, \\quad b = 2, \\quad c = 4",
+  "\\alpha + \\beta = -\\frac{b}{a} = -\\frac{2}{1} = -2, \\quad \\alpha\\beta = \\frac{c}{a} = \\frac{4}{1} = 4",
+  "S = \\frac{1}{\\alpha} + \\frac{1}{\\beta} = \\frac{\\beta + \\alpha}{\\alpha\\beta} = \\frac{\\alpha + \\beta}{\\alpha\\beta}",
+  "S = \\frac{-2}{4} = -\\frac{1}{2}",
+  "P = \\left(\\frac{1}{\\alpha}\\right)\\left(\\frac{1}{\\beta}\\right) = \\frac{1}{\\alpha\\beta} = \\frac{1}{4}",
+  "x^2 - Sx + P = 0 \\implies x^2 - \\left(-\\frac{1}{2}\\right)x + \\frac{1}{4} = 0",
+  "4\\left(x^2 + \\frac{1}{2}x + \\frac{1}{4}\\right) = 0 \\implies 4x^2 + 2x + 1 = 0"
+ ],
+ "why": [
+  {
+   "en": "To use the sum and product of roots formulas without actually solving the equation, we first need the values of $a$, $b$, and $c$. Matching our equation with the standard quadratic form gives us $a = 1$, $b = 2$, and $c = 4$ to use in our next calculations.",
+   "ur": "مساوات کو حل کیے بغیر روٹس کے مجموعے اور حاصل ضرب کے فارمولے استعمال کرنے کے لیے ہمیں پہلے $a$، $b$ اور $c$ کی قیمتیں درکار ہیں۔ اپنی مساوات کا معیاری دو درجی مساوات سے موازنہ کرنے پر ہمیں اگلے مراحل کے لیے $a = 1$، $b = 2$ اور $c = 4$ ملتے ہیں۔"
+  },
+  {
+   "en": "Instead of finding $\\alpha$ and $\\beta$ separately, we use the relationship between roots and coefficients. This gives us the building blocks $\\alpha + \\beta = -2$ and $\\alpha\\beta = 4$, which will help us evaluate the new roots easily.",
+   "ur": "$\\alpha$ اور $\\beta$ کو الگ الگ معلوم کرنے کے بجائے، ہم روٹس اور عددی سروں کے درمیان تعلق کا استعمال کرتے ہیں۔ اس سے ہمیں بنیادی قیمتیں $\\alpha + \\beta = -2$ اور $\\alpha\\beta = 4$ مل جاتی ہیں، جو نئے روٹس کو آسانی سے حل کرنے میں ہماری مدد کریں گی۔"
+  },
+  {
+   "en": "To form a new quadratic equation, we first need the sum ($S$) of its roots, $\\frac{1}{\\alpha}$ and $\\frac{1}{\\beta}$. Taking the LCM rewrites this sum in terms of $\\alpha + \\beta$ and $\\alpha\\beta$, whose values we already know.",
+   "ur": "نئی دو درجی مساوات بنانے کے لیے ہمیں پہلے اس کے روٹس $\\frac{1}{\\alpha}$ اور $\\frac{1}{\\beta}$ کا مجموعہ ($S$) درکار ہے۔ ذواضعاف اقل (LCM) لینے سے یہ مجموعہ $\\alpha + \\beta$ اور $\\alpha\\beta$ کی شکل میں آ جاتا ہے، جن کی قیمتیں ہم پہلے ہی جانتے ہیں۔"
+  },
+  {
+   "en": "By putting our known values of $-2$ and $4$ into the simplified fraction, we find the exact numerical value for $S$. Knowing that $S = -\\frac{1}{2}$ gives us the middle part of our required quadratic equation.",
+   "ur": "مختصر کی گئی کسر میں اپنی معلوم کردہ قیمتیں $-2$ اور $4$ درج کرنے سے ہمیں $S$ کی اصل عددی قیمت مل جاتی ہے۔ $S = -\\frac{1}{2}$ معلوم ہونے سے ہمیں مطلوبہ دو درجی مساوات کا درمیانی حصہ مل جاتا ہے۔"
+  },
+  {
+   "en": "Next, we need the product ($P$) of the new roots to complete the equation-forming formula. Multiplying the fractions directly lets us use $\\alpha\\beta = 4$ to find that the product is $\\frac{1}{4}$.",
+   "ur": "اس کے بعد، مساوات بنانے والے فارمولے کو مکمل کرنے کے لیے ہمیں نئے روٹس کا حاصل ضرب ($P$) درکار ہے۔ کسروں کو براہ راست ضرب دینے سے ہم $\\alpha\\beta = 4$ کو استعمال کر سکتے ہیں جس سے حاصل ضرب $\\frac{1}{4}$ ملتا ہے۔"
+  },
+  {
+   "en": "Any quadratic equation can be written using the rule $x^2 - Sx + P = 0$ once we know the sum and product of its roots. Putting $S = -\\frac{1}{2}$ and $P = \\frac{1}{4}$ into this rule builds our new equation.",
+   "ur": "جب ہمیں کسی دو درجی مساوات کے روٹس کا مجموعہ اور حاصل ضرب معلوم ہو جائے تو اسے $x^2 - Sx + P = 0$ کے اصول سے لکھا جا سکتا ہے۔ اس اصول میں $S = -\\frac{1}{2}$ اور $P = \\frac{1}{4}$ درج کرنے سے ہماری نئی مساوات بن جاتی ہے۔"
+  },
+  {
+   "en": "In standard form, we prefer whole numbers as coefficients rather than fractions like $\\frac{1}{2}$ and $\\frac{1}{4}$. Multiplying both sides by the denominator $4$ clears the fractions and gives a neat final equation.",
+   "ur": "معیاری شکل میں ہم $\\frac{1}{2}$ اور $\\frac{1}{4}$ جیسی کسروں کے بجائے مکمل اعداد کو عددی سر کے طور پر ترجیح دیتے ہیں۔ دونوں اطراف کو مخرج $4$ سے ضرب دینے سے کسریں ختم ہو جاتی ہیں اور ایک صاف ستھری حتمی مساوات حاصل ہوتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final equation $4x^2 + 2x + 1 = 0$ is the exact quadratic equation whose roots are the reciprocals ($\\frac{1}{\\alpha}$ and $\\frac{1}{\\beta}$) of the original equation's roots. You can quickly check this by noticing that the coefficients $1, 2, 4$ of the original equation $x^2 + 2x + 4 = 0$ have simply been reversed to $4, 2, 1$, which always happens when the new roots are reciprocals!",
+  "ur": "حتمی مساوات $4x^2 + 2x + 1 = 0$ وہ مطلوبہ دو درجی مساوات ہے جس کے روٹس اصل مساوات کے روٹس کے معکوس ($\\frac{1}{\\alpha}$ اور $\\frac{1}{\\beta}$) ہیں۔ آپ اس کی فوری پڑتال ایسے کر سکتے ہیں کہ اصل مساوات $x^2 + 2x + 4 = 0$ کے عددی سر $1, 2, 4$ الٹ کر $4, 2, 1$ ہو گئے ہیں، اور جب نئے روٹس معکوس ہوں تو ہمیشہ ایسا ہی ہوتا ہے!"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

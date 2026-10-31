@@ -1,0 +1,52 @@
+{
+ "item": "c10-ex6.3-q9",
+ "label": "",
+ "answer_ref": "$H = 20$ m, $R = 40$ m",
+ "steps": [
+  {
+   "math": "v_{0x} = 10,\\quad v_{0y} = 20,\\quad g = 10",
+   "en": "From the given initial velocity vector $\\underline{v}_0 = 10\\underline{i} + 20\\underline{j}$, the horizontal component is $v_{0x} = 10$ and the vertical component is $v_{0y} = 20$. From the gravity vector $\\underline{g} = 0\\underline{i} - 10\\underline{j}$, the magnitude of acceleration due to gravity is $g = 10$.",
+   "ur": "دیے گئے ابتدائی ولاسٹی ویکٹر $\\underline{v}_0 = 10\\underline{i} + 20\\underline{j}$ سے، افقی جزو $v_{0x} = 10$ اور عمودی جزو $v_{0y} = 20$ ہے۔ کشش ثقل کے ویکٹر $\\underline{g} = 0\\underline{i} - 10\\underline{j}$ سے، کشش ثقل کی وجہ سے ایکسلریشن کی مقدار $g = 10$ ہے۔"
+  },
+  {
+   "math": "H = \\frac{v_{0y}^2}{2g}",
+   "en": "To find the maximum height $H$ reached by the projectile, we use the standard formula in terms of the vertical velocity component.",
+   "ur": "پروجیکٹائل کی زیادہ سے زیادہ بلندی $H$ معلوم کرنے کے لیے، ہم عمودی ولاسٹی کے جزو کے لحاظ سے معیاری فارمولا استعمال کرتے ہیں۔"
+  },
+  {
+   "math": "H = \\frac{20^2}{2 \\cdot 10} = \\frac{400}{20} = 20",
+   "en": "Substitute $v_{0y} = 20$ and $g = 10$ into the formula and simplify to find the maximum height.",
+   "ur": "فارمولے میں $v_{0y} = 20$ اور $g = 10$ درج کریں اور زیادہ سے زیادہ بلندی معلوم کرنے کے لیے مختصر کریں۔",
+   "check": [
+    "20**2/(2*10) == 400/20",
+    "400/20 == 20"
+   ]
+  },
+  {
+   "math": "R = \\frac{2 v_{0x} v_{0y}}{g}",
+   "en": "To find the horizontal range $R$, we use the range formula in terms of both horizontal and vertical velocity components.",
+   "ur": "افقی فاصلہ (رینج) $R$ معلوم کرنے کے لیے، ہم افقی اور عمودی دونوں ولاسٹی کے اجزاء کے لحاظ سے رینج کا فارمولا استعمال کرتے ہیں۔"
+  },
+  {
+   "math": "R = \\frac{2 \\cdot 10 \\cdot 20}{10} = \\frac{400}{10} = 40",
+   "en": "Substitute $v_{0x} = 10$, $v_{0y} = 20$, and $g = 10$ into the formula and simplify to find the horizontal range.",
+   "ur": "فارمولے میں $v_{0x} = 10$، $v_{0y} = 20$، اور $g = 10$ درج کریں اور افقی فاصلہ معلوم کرنے کے لیے مختصر کریں۔",
+   "check": [
+    "2*10*20/10 == 400/10",
+    "400/10 == 40"
+   ]
+  },
+  {
+   "math": "H = 20\\text{ m},\\quad R = 40\\text{ m}",
+   "en": "Thus, the maximum height is $20$ m and the horizontal range is $40$ m.",
+   "ur": "چنانچہ، زیادہ سے زیادہ بلندی $20$ میٹر اور افقی فاصلہ $40$ میٹر ہے۔",
+   "check": [
+    "20**2/(2*10) == 20",
+    "2*10*20/10 == 40"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

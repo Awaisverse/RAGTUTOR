@@ -1,0 +1,50 @@
+{
+ "item": "ex1.2-q5",
+ "label": "ii",
+ "answer_ref": "$\\frac{2}{3}$",
+ "math": [
+  "\\frac{54 \\times \\sqrt[3]{(27)^{2x}}}{9^{x+1} + 216(3^{2x-1})}",
+  "\\sqrt[3]{(27)^{2x}} = \\left((3^3)^{2x}\\right)^{\\frac{1}{3}} = 3^{3 \\times 2x \\times \\frac{1}{3}} = 3^{2x}",
+  "9^{x+1} = (3^2)^{x+1} = 3^{2x+2} = 3^{2x} \\cdot 3^2 = 9 \\cdot 3^{2x}",
+  "216(3^{2x-1}) = 216 \\cdot 3^{2x} \\cdot 3^{-1} = \\frac{216}{3} \\cdot 3^{2x} = 72 \\cdot 3^{2x}",
+  "\\frac{54 \\times \\sqrt[3]{(27)^{2x}}}{9^{x+1} + 216(3^{2x-1})} = \\frac{54 \\cdot 3^{2x}}{9 \\cdot 3^{2x} + 72 \\cdot 3^{2x}}",
+  "= \\frac{54 \\cdot 3^{2x}}{(9 + 72) \\cdot 3^{2x}} = \\frac{54 \\cdot 3^{2x}}{81 \\cdot 3^{2x}}",
+  "= \\frac{54}{81} = \\frac{2}{3}"
+ ],
+ "why": [
+  {
+   "en": "Notice that the numbers $27$, $9$, and $3$ all belong to the family of powers of $3$. Because the laws of exponents only work when bases are the same, our main strategy is to rewrite every exponential part with a base of $3$ so that the terms with $x$ can eventually combine and cancel out.",
+   "ur": "غور کریں کہ $27$، $9$ اور $3$ سب $3$ کی طاقتوں (powers) کے خاندان سے تعلق رکھتے ہیں۔ چونکہ قوت نما کے قوانین صرف اس وقت لاگو ہوتے ہیں جب اساس (base) ایک جیسی ہو، اس لیے ہماری بنیادی حکمت عملی یہ ہے کہ ہر قوت نما والے حصے کو اساس $3$ میں لکھا جائے تاکہ $x$ والی رقمیں آپس میں حل ہو کر کٹ سکیں۔"
+  },
+  {
+   "en": "We convert the radical form into exponential form and rewrite $27$ as $3^3$ so we can apply the power-of-a-power rule. This neatly cancels the cube root with the cube of $3$, leaving us with a simple $3^{2x}$ term in the numerator.",
+   "ur": "ہم جزر کی علامت کو قوت نمائی شکل میں بدلتے ہیں اور $27$ کو $3^3$ لکھتے ہیں تاکہ ہم 'طاقت کی طاقت' کا اصول لاگو کر سکیں۔ اس سے جزر المکعب (cube root) اور $3$ کی طاقت $3$ آپس میں کٹ جاتے ہیں، اور شمار کنندہ میں ہمارے پاس ایک سادہ رقم $3^{2x}$ بچ جاتی ہے۔"
+  },
+  {
+   "en": "Because the denominator has addition ($+$), we cannot cancel terms directly; we must prepare to take a common factor. By changing base $9$ to $3^2$ and splitting the exponent using the product law in reverse, we deliberately create the exact same $3^{2x}$ term that we found in the numerator.",
+   "ur": "چونکہ مخرج (denominator) میں جمع ($+$) کا نشان ہے، ہم رقموں کو براہِ راست نہیں کاٹ سکتے؛ ہمیں مشترک (common) لینے کی تیاری کرنی ہوگی۔ اساس $9$ کو $3^2$ میں بدل کر اور ضربی قانون کو الٹ استعمال کرتے ہوئے قوت نما کو توڑ کر، ہم جان بوجھ کر وہی $3^{2x}$ بناتے ہیں جو ہمیں شمار کنندہ میں ملا تھا۔"
+  },
+  {
+   "en": "Here again, we use the laws of exponents to split $3^{2x-1}$ so that $3^{2x}$ stands alone. Turning $3^{-1}$ into $\\frac{1}{3}$ allows it to divide $216$ cleanly into $72$, giving us a second term in the denominator that also contains $3^{2x}$.",
+   "ur": "یہاں بھی ہم قوت نما کے قوانین استعمال کرتے ہوئے $3^{2x-1}$ کو توڑتے ہیں تاکہ $3^{2x}$ الگ ہو جائے۔ $3^{-1}$ کو $\\frac{1}{3}$ میں بدلنے سے یہ $216$ کو پورا پورا تقسیم کر کے $72$ بنا دیتا ہے، جس سے ہمیں مخرج کی دوسری رقم میں بھی $3^{2x}$ مل جاتا ہے۔"
+  },
+  {
+   "en": "Putting all our simplified pieces back into the fraction shows how our strategy worked. Every single part of the expression is now written as a simple number multiplied by $3^{2x}$, making it ready for factoring.",
+   "ur": "اپنے تمام مختصر کیے گئے حصوں کو واپس کسر میں رکھنے سے صاف نظر آتا ہے کہ ہماری حکمت عملی کیسے کامیاب رہی۔ اب عبارت کا ہر حصہ ایک سادہ عدد اور $3^{2x}$ کے حاصلِ ضرب کے طور پر لکھا جا چکا ہے، جس سے اب مشترک لینا آسان ہو گیا ہے۔"
+  },
+  {
+   "en": "Using the distributive property, we factor out $3^{2x}$ from the two terms in the denominator. This crucial step turns the addition in the denominator into multiplication ($81 \\cdot 3^{2x}$), which is the only way we are allowed to cancel factors across a fraction.",
+   "ur": "تقسیمی خاصیت کا استعمال کرتے ہوئے، ہم مخرج کی دونوں رقموں میں سے $3^{2x}$ کو مشترک (common) نکال لیتے ہیں۔ یہ اہم قدم مخرج کے جمع کے عمل کو ضرب ($81 \\cdot 3^{2x}$) میں بدل دیتا ہے، کیونکہ کسر میں اوپر نیچے رقمیں کاٹنے کی اجازت صرف ضرب کی صورت میں ہوتی ہے۔"
+  },
+  {
+   "en": "Since $3^{2x}$ is now a common multiplier in both the top and bottom, it divides out completely to $1$, eliminating the variable $x$. All that remains is a basic fraction $\\frac{54}{81}$, which reduces by a common table of $27$ to give our cleanest form, $\\frac{2}{3}$.",
+   "ur": "چونکہ اب $3^{2x}$ اوپر اور نیچے دونوں جگہ ضرب ہو رہا ہے، اس لیے یہ مکمل طور پر کٹ کر $1$ ہو جاتا ہے اور متغیر $x$ ختم ہو جاتا ہے۔ اب صرف ایک سادہ کسر $\\frac{54}{81}$ بچتی ہے، جسے $27$ کے مشترک پہاڑے سے مختصر کرنے پر ہمیں سب سے سادہ شکل $\\frac{2}{3}$ مل جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $\\frac{2}{3}$ tells us that no matter what real number you put in place of $x$, the $x$ parts always balance and cancel out, so the entire expression always has the constant value $\\frac{2}{3}$. You can easily check this by putting a simple value like $x = 1$ into the original question; both the top and bottom will simplify to give the same ratio of $\\frac{2}{3}$.",
+  "ur": "حتمی جواب $\\frac{2}{3}$ ہمیں بتاتا ہے کہ آپ $x$ کی جگہ کوئی بھی حقیقی عدد رکھ لیں، $x$ والے حصے ہمیشہ آپس میں کٹ جاتے ہیں، اس لیے اس پوری عبارت کی قیمت ہمیشہ مستقل یعنی $\\frac{2}{3}$ ہی رہتی ہے۔ آپ اصل سوال میں $x = 1$ جیسی کوئی سادہ قیمت رکھ کر باآسانی اس کی پڑتال کر سکتے ہیں؛ شمار کنندہ اور مخرج دونوں حل ہو کر یہی نسبت یعنی $\\frac{2}{3}$ دیں گے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

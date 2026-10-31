@@ -1,0 +1,40 @@
+{
+ "item": "c10-ex3.5-q5",
+ "label": "ii",
+ "answer_ref": "$\\begin{bmatrix} - \\frac{1}{32} & \\frac{1}{8} \\\\ \\frac{7}{64} & \\frac{1}{16} \\end{bmatrix}$",
+ "math": [
+  "A = \\begin{bmatrix} -4 & 8 \\\\ 7 & 2 \\end{bmatrix}, \\quad A^{-1} = \\frac{1}{|A|} \\operatorname{Adj} A",
+  "|A| = \\begin{vmatrix} -4 & 8 \\\\ 7 & 2 \\end{vmatrix} = (-4)(2) - (8)(7) = -8 - 56 = -64",
+  "\\operatorname{Adj} A = \\begin{bmatrix} 2 & -8 \\\\ -7 & -4 \\end{bmatrix}",
+  "A^{-1} = \\frac{1}{-64} \\begin{bmatrix} 2 & -8 \\\\ -7 & -4 \\end{bmatrix} = \\begin{bmatrix} \\frac{2}{-64} & \\frac{-8}{-64} \\\\ \\frac{-7}{-64} & \\frac{-4}{-64} \\end{bmatrix}",
+  "A^{-1} = \\begin{bmatrix} - \\frac{1}{32} & \\frac{1}{8} \\\\ \\frac{7}{64} & \\frac{1}{16} \\end{bmatrix}"
+ ],
+ "why": [
+  {
+   "en": "We begin by naming our matrix $A$ and writing down the standard formula for the multiplicative inverse, $A^{-1} = \\frac{1}{|A|} \\operatorname{Adj} A$. This formula acts as our roadmap, showing us that we must find two main pieces—the determinant $|A|$ and the adjoint $\\operatorname{Adj} A$—to solve the problem.",
+   "ur": "ہم سب سے پہلے دیے گئے کالب کو $A$ کا نام دیتے ہیں اور ضربی معکوس کا معیاری کلیہ $A^{-1} = \\frac{1}{|A|} \\operatorname{Adj} A$ لکھتے ہیں۔ یہ کلیہ ہمیں بتاتا ہے کہ جواب تک پہنچنے کے لیے ہمیں دو چیزیں معلوم کرنی ہیں: مقطع $|A|$ اور ایڈجوائنٹ $\\operatorname{Adj} A$۔"
+  },
+  {
+   "en": "We calculate the determinant first because a matrix only has an inverse if it is non-singular (meaning its determinant is not zero). Getting $|A| = -64$ confirms that the inverse exists and gives us the exact number we will divide by later.",
+   "ur": "ہم سب سے پہلے مقطع معلوم کرتے ہیں کیونکہ کسی کالب کا معکوس تبھی ممکن ہوتا ہے جب وہ غیر نادر ہو (یعنی اس کا مقطع صفر نہ ہو)۔ $|A| = -64$ کا جواب ہمیں یقین دلاتا ہے کہ معکوس موجود ہے اور ہمیں وہ عدد بھی مل جاتا ہے جس سے آگے چل کر تقسیم کرنا ہے۔"
+  },
+  {
+   "en": "By the definition of the adjoint of a $2 \\times 2$ matrix, we swap the main diagonal elements ($-4$ and $2$) and change the signs of the other two elements ($8$ and $7$). This gives us $\\operatorname{Adj} A$, which is the second required piece for our inverse formula.",
+   "ur": "دو در دو ($2 \\times 2$) کالب کے ایڈجوائنٹ کی تعریف کے مطابق، ہم وتری ارکان ($-4$ اور $2$) کی جگہ بدلتے ہیں اور باقی دو ارکان ($8$ اور $7$) کی علامتیں تبدیل کرتے ہیں۔ اس طرح ہمیں $\\operatorname{Adj} A$ مل جاتا ہے جو ہمارے کلیے کا دوسرا اہم حصہ ہے۔"
+  },
+  {
+   "en": "Now we put both pieces together into the formula and apply the rule of scalar multiplication, which means dividing every single entry inside the adjoint matrix by the determinant $-64$. This sets up the raw entries of our inverse matrix.",
+   "ur": "اب ہم دونوں قیمتوں کو کلیے میں درج کرتے ہیں اور عددی ضرب کے اصول کے تحت ایڈجوائنٹ کالب کے ہر رکن کو مقطع $-64$ پر تقسیم کرتے ہیں۔ اس عمل سے ہمیں معکوس کالب کے ابتدائی ارکان حاصل ہو جاتے ہیں۔"
+  },
+  {
+   "en": "In mathematics, we always express fractions in their simplest form by cancelling out common factors and simplifying the negative signs. Reducing these fractions gives us the neat and final form of the multiplicative inverse $A^{-1}$.",
+   "ur": "ریاضی میں ہم ہمیشہ کسروں کو مشترک اجزاء کاٹ کر اور منفی علامتوں کو حل کر کے ان کی سادہ ترین شکل میں لکھتے ہیں۔ ان کسروں کو مختصر کرنے سے ہمیں ضربی معکوس $A^{-1}$ کی حتمی اور صاف شکل مل جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final matrix $A^{-1} = \\begin{bmatrix} - \\frac{1}{32} & \\frac{1}{8} \\\\ \\frac{7}{64} & \\frac{1}{16} \\end{bmatrix}$ is the multiplicative inverse of the given matrix $A$. This means that if you multiply the original matrix $A = \\begin{bmatrix} -4 & 8 \\\\ 7 & 2 \\end{bmatrix}$ by this answer matrix, the result will be the identity matrix $I = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}$, which is how you can easily check your work in an exam.",
+  "ur": "حتمی کالب $A^{-1} = \\begin{bmatrix} - \\frac{1}{32} & \\frac{1}{8} \\\\ \\frac{7}{64} & \\frac{1}{16} \\end{bmatrix}$ دیے گئے کالب $A$ کا ضربی معکوس ہے۔ اس کا مطلب یہ ہے کہ اگر آپ اصل کالب $A = \\begin{bmatrix} -4 & 8 \\\\ 7 & 2 \\end{bmatrix}$ کو اس جوابی کالب سے ضرب دیں، تو حاصل ضرب وحدانی کالب $I = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}$ آئے گا، اور اسی طریقے سے آپ امتحان میں اپنے جواب کی درستگی کی پڑتال بھی کر سکتے ہیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

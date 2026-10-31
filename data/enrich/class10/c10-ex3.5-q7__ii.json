@@ -1,0 +1,70 @@
+{
+ "item": "c10-ex3.5-q7",
+ "label": "ii",
+ "answer_ref": "$AB = I$, so they are inverses",
+ "steps": [
+  {
+   "math": "A = \\begin{bmatrix} 4 & 15 \\\\ 2 & 8 \\end{bmatrix}, \\quad B = \\begin{bmatrix} 4 & -\\frac{15}{2} \\\\ -1 & 2 \\end{bmatrix}",
+   "en": "Let us name the given matrices as $A$ and $B$. We need to show that they are multiplicative inverses of each other.",
+   "ur": "آئیے دیے گئے قالبوں کو $A$ اور $B$ کا نام دیں۔ ہمیں یہ ثابت کرنا ہے کہ وہ ایک دوسرے کے ضربی معکوس ہیں۔"
+  },
+  {
+   "math": "AB = I = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}",
+   "en": "Two matrices $A$ and $B$ are multiplicative inverses of each other if their product equals the identity matrix $I$.",
+   "ur": "دو قالب $A$ اور $B$ ایک دوسرے کے ضربی معکوس ہوتے ہیں اگر ان کا حاصل ضرب وحدانی (اکائی) قالب $I$ کے برابر ہو۔",
+   "check": [
+    "Matrix([[1, 0], [0, 1]]) == Matrix([[1, 0], [0, 1]])"
+   ]
+  },
+  {
+   "math": "AB = \\begin{bmatrix} 4 & 15 \\\\ 2 & 8 \\end{bmatrix} \\begin{bmatrix} 4 & -\\frac{15}{2} \\\\ -1 & 2 \\end{bmatrix}",
+   "en": "Write the matrices together to find their product $AB$.",
+   "ur": "ان کا حاصل ضرب $AB$ معلوم کرنے کے لیے قالبوں کو ایک ساتھ لکھیں۔"
+  },
+  {
+   "math": "AB = \\begin{bmatrix} (4)(4) + (15)(-1) & (4)\\left(-\\frac{15}{2}\\right) + (15)(2) \\\\ (2)(4) + (8)(-1) & (2)\\left(-\\frac{15}{2}\\right) + (8)(2) \\end{bmatrix}",
+   "en": "Multiply each row of the first matrix by each column of the second matrix, entry by entry, and add the products.",
+   "ur": "پہلے قالب کی ہر قطار کو دوسرے قالب کے ہر کالم سے رکن بہ رکن ضرب دیں اور حاصل ضرب کو جمع کریں۔",
+   "check": [
+    "Matrix([[4, 15], [2, 8]]) * Matrix([[4, -R(15, 2)], [-1, 2]]) == Matrix([[(4)*(4) + (15)*(-1), (4)*(-R(15, 2)) + (15)*(2)], [(2)*(4) + (8)*(-1), (2)*(-R(15, 2)) + (8)*(2)]])"
+   ]
+  },
+  {
+   "math": "AB = \\begin{bmatrix} 16 - 15 & -30 + 30 \\\\ 8 - 8 & -15 + 16 \\end{bmatrix}",
+   "en": "Simplify each product inside the matrix. Note that $4 \\times \\left(-\\frac{15}{2}\\right) = -30$ and $2 \\times \\left(-\\frac{15}{2}\\right) = -15$.",
+   "ur": "قالب کے اندر موجود ہر حاصل ضرب کو مختصر کریں۔ نوٹ کریں کہ $4 \\times \\left(-\\frac{15}{2}\\right) = -30$ اور $2 \\times \\left(-\\frac{15}{2}\\right) = -15$ ہے۔",
+   "check": [
+    "(4)*(4) == 16",
+    "(15)*(-1) == -15",
+    "(4)*(-R(15, 2)) == -30",
+    "(15)*(2) == 30",
+    "(2)*(4) == 8",
+    "(8)*(-1) == -8",
+    "(2)*(-R(15, 2)) == -15",
+    "(8)*(2) == 16"
+   ]
+  },
+  {
+   "math": "AB = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}",
+   "en": "Perform the addition and subtraction for each entry.",
+   "ur": "ہر رکن کے لیے جمع اور تفریق کا عمل مکمل کریں۔",
+   "check": [
+    "Matrix([[16 - 15, -30 + 30], [8 - 8, -15 + 16]]) == Matrix([[1, 0], [0, 1]])"
+   ]
+  },
+  {
+   "math": "AB = I",
+   "en": "Since the product $AB$ is the identity matrix $I$, the given matrices are multiplicative inverses of each other.",
+   "ur": "چونکہ حاصل ضرب $AB$ وحدانی قالب $I$ ہے، اس لیے دیے گئے قالب ایک دوسرے کے ضربی معکوس ہیں۔",
+   "check": [
+    "Matrix([[4, 15], [2, 8]]) * Matrix([[4, -R(15, 2)], [-1, 2]]) == Matrix([[1, 0], [0, 1]])",
+    "Eq(Matrix([[1, 0], [0, 1]]), Matrix([[1, 0], [0, 1]]))",
+    "Eq(Matrix([[1, 0], [0, 1]]), Matrix([[1, 0], [0, 1]]))",
+    "Eq(Matrix([[1, 0], [0, 1]]), Matrix([[1, 0], [0, 1]]))"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

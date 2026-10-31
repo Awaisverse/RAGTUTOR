@@ -1,0 +1,56 @@
+{
+ "item": "c10-ex5.3-q1",
+ "label": "iii",
+ "answer_ref": "$2$",
+ "steps": [
+  {
+   "math": "\\frac{a^{2} - 4b^{2}}{a^{2} + 2ba} \\times \\frac{2a^{2} + 10ab}{a^{2} + 3ab - 10b^{2}}",
+   "en": "Write the given algebraic fraction expression.",
+   "ur": "دی گئی الجبری کسر کی عبارت لکھیں۔"
+  },
+  {
+   "math": "= \\frac{a^{2} - (2b)^{2}}{a(a + 2b)} \\times \\frac{2a(a + 5b)}{a^{2} + 5ab - 2ab - 10b^{2}}",
+   "en": "Rewrite $4b^2$ as $(2b)^2$, take out common factors $a$ and $2a$, and split the middle term $3ab$ into $5ab - 2ab$ to factorize.",
+   "ur": "تجزی کرنے کے لیے $4b^2$ کو $(2b)^2$ لکھیں، مشترک اجزاء $a$ اور $2a$ باہر نکالیں، اور درمیانی رقم $3ab$ کو $5ab - 2ab$ میں توڑیں۔",
+   "check": [
+    "((a**2 - (2*b)**2)/(a*(a + 2*b))) * ((2*a*(a + 5*b))/(a**2 + 5*a*b - 2*a*b - 10*b**2)) == ((a**2 - 4*b**2)/(a**2 + 2*b*a)) * ((2*a**2 + 10*a*b)/(a**2 + 3*a*b - 10*b**2))"
+   ]
+  },
+  {
+   "math": "= \\frac{(a - 2b)(a + 2b)}{a(a + 2b)} \\times \\frac{2a(a + 5b)}{a(a + 5b) - 2b(a + 5b)}",
+   "en": "Apply the difference of squares formula $x^2 - y^2 = (x - y)(x + y)$ to the first numerator, and factor by grouping in the second denominator.",
+   "ur": "پہلے شمار کنندہ پر کلیہ $x^2 - y^2 = (x - y)(x + y)$ لاگو کریں، اور دوسرے مخرج میں گروپ بنا کر مشترک لیں۔",
+   "check": [
+    "(((a - 2*b)*(a + 2*b))/(a*(a + 2*b))) * ((2*a*(a + 5*b))/(a*(a + 5*b) - 2*b*(a + 5*b))) == ((a**2 - 4*b**2)/(a**2 + 2*b*a)) * ((2*a**2 + 10*a*b)/(a**2 + 3*a*b - 10*b**2))"
+   ]
+  },
+  {
+   "math": "= \\frac{(a - 2b)(a + 2b)}{a(a + 2b)} \\times \\frac{2a(a + 5b)}{(a - 2b)(a + 5b)}",
+   "en": "Factor out $(a + 5b)$ in the second denominator to complete the factorization.",
+   "ur": "تجزی مکمل کرنے کے لیے دوسرے مخرج میں سے $(a + 5b)$ مشترک لیں۔",
+   "check": [
+    "(((a - 2*b)*(a + 2*b))/(a*(a + 2*b))) * ((2*a*(a + 5*b))/((a - 2*b)*(a + 5*b))) == ((a**2 - 4*b**2)/(a**2 + 2*b*a)) * ((2*a**2 + 10*a*b)/(a**2 + 3*a*b - 10*b**2))"
+   ]
+  },
+  {
+   "math": "= \\frac{a - 2b}{a} \\times \\frac{2a}{a - 2b}",
+   "en": "Cancel out the common factor $(a + 2b)$ in the first fraction and $(a + 5b)$ in the second fraction.",
+   "ur": "پہلی کسر میں مشترک جزو $(a + 2b)$ اور دوسری کسر میں $(a + 5b)$ کو کاٹ دیں۔",
+   "check": [
+    "((a - 2*b)/a) * ((2*a)/(a - 2*b)) == ((a**2 - 4*b**2)/(a**2 + 2*b*a)) * ((2*a**2 + 10*a*b)/(a**2 + 3*a*b - 10*b**2))"
+   ]
+  },
+  {
+   "math": "= 2",
+   "en": "Cancel the remaining common factors $(a - 2b)$ and $a$ across the numerators and denominators to get the final answer.",
+   "ur": "شمار کنندہ اور مخرج میں سے باقی ماندہ مشترک اجزاء $(a - 2b)$ اور $a$ کو کاٹ کر حتمی جواب حاصل کریں۔",
+   "check": [
+    "2 == ((a**2 - 4*b**2)/(a**2 + 2*b*a)) * ((2*a**2 + 10*a*b)/(a**2 + 3*a*b - 10*b**2))",
+    "(2) == ((a**2 - 4*b**2)*(2*a**2 + 10*a*b)/((a**2 + 2*a*b)*(a**2 + 3*a*b - 10*b**2)))"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

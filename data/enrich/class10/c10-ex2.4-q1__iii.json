@@ -1,0 +1,51 @@
+{
+ "item": "c10-ex2.4-q1",
+ "label": "iii",
+ "answer_ref": "$D = -24$: roots are imaginary",
+ "steps": [
+  {
+   "math": "2x^2 + 4x + 5 = 0",
+   "en": "We are given the quadratic equation and need to examine the nature of its roots.",
+   "ur": "ہمیں یہ دو درجی مساوات دی گئی ہے اور ہمیں اس کے جذور کی نوعیت معلوم کرنی ہے۔"
+  },
+  {
+   "math": "a = 2, \\quad b = 4, \\quad c = 5",
+   "en": "Compare the given equation with the standard quadratic form $ax^2 + bx + c = 0$ to identify the coefficients $a$, $b$, and $c$.",
+   "ur": "دی گئی مساوات کا معیاری دو درجی مساوات $ax^2 + bx + c = 0$ سے موازنہ کر کے $a$، $b$ اور $c$ کی قیمتیں معلوم کریں۔"
+  },
+  {
+   "math": "D = b^2 - 4ac",
+   "en": "The nature of the roots of a quadratic equation is determined by its discriminant, $D$.",
+   "ur": "دو درجی مساوات کے جذور کی نوعیت کا تعین اس کے فرق کنندہ (discriminant) یعنی $D$ سے کیا جاتا ہے۔"
+  },
+  {
+   "math": "D = (4)^2 - 4(2)(5)",
+   "en": "Substitute the values of $a = 2$, $b = 4$, and $c = 5$ into the discriminant formula.",
+   "ur": "فرق کنندہ کے فارمولے میں $a = 2$، $b = 4$ اور $c = 5$ کی قیمتیں درج کریں۔",
+   "check": [
+    "(4)**2 - 4*(2)*(5) == -24"
+   ]
+  },
+  {
+   "math": "D = 16 - 40 = -24",
+   "en": "Simplify the expression by calculating the square and the product, then subtract.",
+   "ur": "مربع اور ضرب حل کر کے عبارت کو مختصر کریں اور پھر تفریق کریں۔",
+   "check": [
+    "(4)**2 == 16",
+    "4*2*5 == 40",
+    "16 - 40 == -24"
+   ]
+  },
+  {
+   "math": "D = -24 < 0 \\implies \\text{Roots are imaginary}",
+   "en": "Since the discriminant $D$ is negative ($D < 0$), the roots of the given quadratic equation are imaginary (complex conjugates) and unequal.",
+   "ur": "چونکہ فرق کنندہ $D$ منفی ہے ($D < 0$)، اس لیے دی گئی مساوات کے جذور خیالی (غیر حقیقی) اور نابرابر ہیں۔",
+   "check": [
+    "(4)**2 - 4*(2)*(5) == -24"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

@@ -1,0 +1,56 @@
+{
+ "item": "c10-ex2.7-q2",
+ "label": "",
+ "answer_ref": "Rs. 15",
+ "steps": [
+  {
+   "math": "P(x) = -5x^2 + 150x - 1000",
+   "en": "The given profit function is a quadratic equation where $x$ represents the price per item in rupees.",
+   "ur": "دی گئی منافع کی مساوات ایک دو درجی مساوات ہے جہاں $x$ فی شے قیمت (روپے میں) کو ظاہر کرتا ہے۔"
+  },
+  {
+   "math": "a = -5,\\quad b = 150,\\quad c = -1000",
+   "en": "Compare the given equation with the standard quadratic form $ax^2 + bx + c$ to identify the coefficients $a$, $b$, and $c$.",
+   "ur": "عددی سروں $a$، $b$ اور $c$ کی شناخت کے لیے دی گئی مساوات کا معیاری دو درجی مساوات $ax^2 + bx + c$ سے موازنہ کریں۔"
+  },
+  {
+   "math": "x = -\\frac{b}{2a}",
+   "en": "Since $a = -5 < 0$, the graph is a parabola opening downwards. Its highest point (vertex) gives the maximum profit, which occurs at $x = -\\frac{b}{2a}$.",
+   "ur": "چونکہ $a = -5 < 0$ ہے، اس لیے گراف نیچے کی طرف کھلنے والا پیرابولا (شلجمی شکل) ہے۔ اس کا سب سے اونچا نقطہ (راس) زیادہ سے زیادہ منافع دیتا ہے، جو $x = -\\frac{b}{2a}$ پر ہوتا ہے۔"
+  },
+  {
+   "math": "x = -\\frac{150}{2(-5)}",
+   "en": "Substitute the values of $a = -5$ and $b = 150$ into the vertex formula.",
+   "ur": "راس کے فارمولے میں $a = -5$ اور $b = 150$ کی قیمتیں درج کریں۔"
+  },
+  {
+   "math": "x = \\frac{-150}{-10} = 15",
+   "en": "Simplify the fraction to find the value of $x$.",
+   "ur": "$x$ کی قیمت معلوم کرنے کے لیے کسر کو مختصر کریں۔",
+   "check": [
+    "-150/(2*(-5)) == 15",
+    "-150/(-10) == 15"
+   ]
+  },
+  {
+   "math": "P(15) = -5(15)^2 + 150(15) - 1000 = 125",
+   "en": "We can also verify the maximum profit by substituting $x = 15$ into the profit equation, which gives $125$ thousand rupees.",
+   "ur": "ہم منافع کی مساوات میں $x = 15$ درج کر کے زیادہ سے زیادہ منافع کی تصدیق بھی کر سکتے ہیں، جو کہ $125$ ہزار روپے آتا ہے۔",
+   "check": [
+    "-5*15**2 + 150*15 - 1000 == 125"
+   ]
+  },
+  {
+   "math": "",
+   "en": "Thus, the price per item that gives the maximum profit is $\\text{Rs. } 15$.",
+   "ur": "لہذا، فی شے قیمت جو زیادہ سے زیادہ منافع دیتی ہے وہ $15$ روپے ہے۔",
+   "check": [
+    "-150/(2*(-5)) == 15",
+    "-5*15**2 + 150*15 - 1000 == 125"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

@@ -1,0 +1,55 @@
+{
+ "item": "c10-ex3.3-q4",
+ "label": "iv",
+ "answer_ref": "verified: both sides $= \\begin{bmatrix} 15 & 21 \\\\ 6 & 24 \\end{bmatrix}$",
+ "math": [
+  "",
+  "A + B = \\begin{bmatrix} 2 & 3 \\\\ -3 & 2 \\end{bmatrix} + \\begin{bmatrix} 3 & 4 \\\\ 5 & 6 \\end{bmatrix} = \\begin{bmatrix} 2 + 3 & 3 + 4 \\\\ -3 + 5 & 2 + 6 \\end{bmatrix} = \\begin{bmatrix} 5 & 7 \\\\ 2 & 8 \\end{bmatrix}",
+  "3(A+B) = 3\\begin{bmatrix} 5 & 7 \\\\ 2 & 8 \\end{bmatrix} = \\begin{bmatrix} 15 & 21 \\\\ 6 & 24 \\end{bmatrix}",
+  "",
+  "3A = 3\\begin{bmatrix} 2 & 3 \\\\ -3 & 2 \\end{bmatrix} = \\begin{bmatrix} 6 & 9 \\\\ -9 & 6 \\end{bmatrix}",
+  "3B = 3\\begin{bmatrix} 3 & 4 \\\\ 5 & 6 \\end{bmatrix} = \\begin{bmatrix} 9 & 12 \\\\ 15 & 18 \\end{bmatrix}",
+  "3A + 3B = \\begin{bmatrix} 6 & 9 \\\\ -9 & 6 \\end{bmatrix} + \\begin{bmatrix} 9 & 12 \\\\ 15 & 18 \\end{bmatrix} = \\begin{bmatrix} 6 + 9 & 9 + 12 \\\\ -9 + 15 & 6 + 18 \\end{bmatrix} = \\begin{bmatrix} 15 & 21 \\\\ 6 & 24 \\end{bmatrix}",
+  "3(A+B) = \\begin{bmatrix} 15 & 21 \\\\ 6 & 24 \\end{bmatrix} = 3A+3B"
+ ],
+ "why": [
+  {
+   "en": "To verify an equation, we always solve the Left-Hand Side (L.H.S.) and the Right-Hand Side (R.H.S.) separately. Starting with $3(A+B)$ gives us a single target matrix to compare against the other side later.",
+   "ur": "کسی مساوات کی تصدیق کرنے کے لیے ہم ہمیشہ بائیں سائیڈ (L.H.S.) اور دائیں سائیڈ (R.H.S.) کو الگ الگ حل کرتے ہیں۔ $3(A+B)$ سے شروعات کرنے سے ہمیں ایک کالب ملے گا جس کا بعد میں دوسری سائیڈ سے موازنہ کیا جائے گا۔"
+  },
+  {
+   "en": "Following the order of operations (BODMAS), we must solve the expression inside the brackets first. Using the definition of matrix addition on $A$ and $B$ gives us the combined matrix $\\begin{bmatrix} 5 & 7 \\\\ 2 & 8 \\end{bmatrix}$, which is now ready to be multiplied by $3$.",
+   "ur": "حسابی اصولوں (BODMAS) کے مطابق ہمیں پہلے بریکٹ کے اندر والے حصے کو حل کرنا ہوگا۔ کالبوں کی جمع کی تعریف کے مطابق $A$ اور $B$ کو جمع کرنے سے ہمیں کالب $\\begin{bmatrix} 5 & 7 \\\\ 2 & 8 \\end{bmatrix}$ حاصل ہوتا ہے، جو اب $3$ سے ضرب کھانے کے لیے تیار ہے۔"
+  },
+  {
+   "en": "By the rule of scalar multiplication, a number outside a matrix multiplies every single entry inside it. Doing this completes our Left-Hand Side and gives us the final L.H.S. matrix $\\begin{bmatrix} 15 & 21 \\\\ 6 & 24 \\end{bmatrix}$.",
+   "ur": "عددی ضرب (scalar multiplication) کے اصول کے مطابق، کالب کے باہر موجود عدد اندر کے ہر ایک رکن سے ضرب کھاتا ہے۔ ایسا کرنے سے ہماری بائیں سائیڈ مکمل ہو جاتی ہے اور ہمیں حتمی کالب $\\begin{bmatrix} 15 & 21 \\\\ 6 & 24 \\end{bmatrix}$ مل جاتا ہے۔"
+  },
+  {
+   "en": "Now we move to the Right-Hand Side, $3A+3B$, to see if calculating it in this different order gives the exact same matrix as the Left-Hand Side.",
+   "ur": "اب ہم دائیں سائیڈ $3A+3B$ کی طرف بڑھتے ہیں تاکہ دیکھ سکیں کہ کیا اس مختلف ترتیب سے حل کرنے پر بھی وہی کالب آتا ہے جو بائیں سائیڈ کا آیا تھا۔"
+  },
+  {
+   "en": "Since multiplication comes before addition, we first apply scalar multiplication to matrix $A$ by $3$. This gives us the first part of our sum, $3A = \\begin{bmatrix} 6 & 9 \\\\ -9 & 6 \\end{bmatrix}$.",
+   "ur": "چونکہ ضرب کا عمل جمع سے پہلے آتا ہے، اس لیے ہم پہلے کالب $A$ کو $3$ سے ضرب دیتے ہیں۔ اس سے ہمیں جمع کے عمل کا پہلا حصہ یعنی $3A = \\begin{bmatrix} 6 & 9 \\\\ -9 & 6 \\end{bmatrix}$ مل جاتا ہے۔"
+  },
+  {
+   "en": "Similarly, we apply scalar multiplication to matrix $B$ by $3$ before we can do any addition. This gives us the second required matrix, $3B = \\begin{bmatrix} 9 & 12 \\\\ 15 & 18 \\end{bmatrix}$.",
+   "ur": "اسی طرح، جمع کا عمل کرنے سے پہلے ہم کالب $B$ کو بھی $3$ سے ضرب دیتے ہیں۔ اس سے ہمیں دوسرا مطلوبہ کالب $3B = \\begin{bmatrix} 9 & 12 \\\\ 15 & 18 \\end{bmatrix}$ حاصل ہوتا ہے۔"
+  },
+  {
+   "en": "Now that we have both $3A$ and $3B$, we apply the rule of matrix addition to combine their corresponding entries. This finishes the Right-Hand Side and gives us $\\begin{bmatrix} 15 & 21 \\\\ 6 & 24 \\end{bmatrix}$.",
+   "ur": "اب جب کہ ہمارے پاس $3A$ اور $3B$ دونوں موجود ہیں، ہم کالبوں کی جمع کے اصول کے مطابق ان کے متنازعہ ارکان کو جمع کرتے ہیں۔ اس سے دائیں سائیڈ مکمل ہو جاتی ہے اور ہمیں $\\begin{bmatrix} 15 & 21 \\\\ 6 & 24 \\end{bmatrix}$ ملتا ہے۔"
+  },
+  {
+   "en": "By the definition of equality of matrices, two matrices are equal if they have the same order and identical corresponding entries. Since both sides simplified to the exact same matrix $\\begin{bmatrix} 15 & 21 \\\\ 6 & 24 \\end{bmatrix}$, the equation is proved true.",
+   "ur": "مساوی کالبوں کی تعریف کے مطابق، دو کالب برابر ہوتے ہیں اگر ان کا مرتبہ یکساں ہو اور آمنے سامنے والے ارکان ایک جیسے ہوں۔ چونکہ دونوں اطراف کو حل کرنے سے بالکل ایک ہی کالب $\\begin{bmatrix} 15 & 21 \\\\ 6 & 24 \\end{bmatrix}$ آیا ہے، اس لیے مساوات درست ثابت ہو گئی۔"
+  }
+ ],
+ "meaning": {
+  "en": "This final result proves the distributive property of scalar multiplication over matrix addition for matrices $A$ and $B$: whether you add $A$ and $B$ first and then multiply by $3$, or multiply each by $3$ first and then add them, you get the exact same matrix $\\begin{bmatrix} 15 & 21 \\\\ 6 & 24 \\end{bmatrix}$. The fact that both independent methods produced the identical 4 entries is a built-in check that our arithmetic is completely correct.",
+  "ur": "یہ حتمی نتیجہ کالب $A$ اور $B$ کے لیے جمع پر عددی ضرب کی تقسیمی خاصیت کو ثابت کرتا ہے: چاہے آپ پہلے $A$ اور $B$ کو جمع کریں اور پھر $3$ سے ضرب دیں، یا پہلے ہر ایک کو $3$ سے ضرب دیں اور پھر انہیں جمع کریں، آپ کو بالکل ایک ہی کالب $\\begin{bmatrix} 15 & 21 \\\\ 6 & 24 \\end{bmatrix}$ ملتا ہے۔ دونوں الگ الگ طریقوں سے بالکل یکساں 4 ارکان کا آنا اس بات کی خودکار پڑتال ہے کہ ہمارا حساب بالکل درست ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

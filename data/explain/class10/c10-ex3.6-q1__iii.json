@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex3.6-q1",
+ "label": "iii",
+ "answer_ref": "$x = 5,\\ y = -2$",
+ "math": [
+  "\\begin{bmatrix} 1 & -2 \\\\ 2 & 7 \\end{bmatrix}\\begin{bmatrix} x \\\\ y \\end{bmatrix} = \\begin{bmatrix} 9 \\\\ -4 \\end{bmatrix}",
+  "|A| = \\begin{vmatrix} 1 & -2 \\\\ 2 & 7 \\end{vmatrix} = (1)(7) - (-2)(2) = 7 + 4 = 11",
+  "\\operatorname{Adj}A = \\begin{bmatrix} 7 & 2 \\\\ -2 & 1 \\end{bmatrix}",
+  "A^{-1} = \\frac{1}{|A|}\\operatorname{Adj}A = \\frac{1}{11}\\begin{bmatrix} 7 & 2 \\\\ -2 & 1 \\end{bmatrix} = \\begin{bmatrix} \\frac{7}{11} & \\frac{2}{11} \\\\ - \\frac{2}{11} & \\frac{1}{11} \\end{bmatrix}",
+  "X = A^{-1}B = \\frac{1}{11}\\begin{bmatrix} 7 & 2 \\\\ -2 & 1 \\end{bmatrix}\\begin{bmatrix} 9 \\\\ -4 \\end{bmatrix} = \\frac{1}{11}\\begin{bmatrix} (7)(9) + (2)(-4) \\\\ (-2)(9) + (1)(-4) \\end{bmatrix} = \\frac{1}{11}\\begin{bmatrix} 55 \\\\ -22 \\end{bmatrix} = \\begin{bmatrix} 5 \\\\ -2 \\end{bmatrix}",
+  "x = 5,\\quad y = -2"
+ ],
+ "why": [
+  {
+   "en": "To use the matrix inversion method, we first separate the coefficients, the variables, and the constants into three distinct matrices: $A$, $X$, and $B$. This allows us to treat the entire system of equations as a single matrix equation $AX = B$, which we can solve for $X$.",
+   "ur": "میٹرکس انورژن کا طریقہ استعمال کرنے کے لیے، ہم سب سے پہلے عددی سروں (coefficients)، متغیرات (variables) اور مستقل مقداروں (constants) کو تین الگ الگ میٹرکس $A$، $X$ اور $B$ میں لکھتے ہیں۔ اس سے ہم مساواتوں کے پورے نظام کو ایک واحد میٹرکس مساوات $AX = B$ کے طور پر حل کر سکتے ہیں۔"
+  },
+  {
+   "en": "Before trying to find the inverse of matrix $A$, we must calculate its determinant $|A|$ to check if a solution is even possible. Since $|A| = 11$, which is not zero, $A$ is a non-singular matrix, telling us that its inverse $A^{-1}$ exists and the system has a unique solution.",
+   "ur": "میٹرکس $A$ کا معکوس (inverse) معلوم کرنے سے پہلے، ہمیں اس کا مقطع (determinant) $|A|$ نکالنا ہوگا تاکہ پتہ چل سکے کہ حل ممکن بھی ہے یا نہیں۔ چونکہ $|A| = 11$ ہے جو کہ صفر نہیں ہے، اس لیے $A$ ایک غیر نادر (non-singular) میٹرکس ہے، جس سے ہمیں معلوم ہوتا ہے کہ اس کا معکوس $A^{-1}$ موجود ہے اور اس سوال کا ایک منفرد حل ہے۔"
+  },
+  {
+   "en": "Finding the adjoint of $A$ is a required building block in the formula for the inverse of a 2-by-2 matrix. This rearranged matrix prepares us to construct $A^{-1}$ in the very next step.",
+   "ur": "دو بائی دو میٹرکس کے معکوس کے فارمولے کے لیے $\\operatorname{Adj}A$ معلوم کرنا ایک لازمی حصہ ہے۔ یہ نیا ترتیب دیا گیا میٹرکس ہمیں اگلے ہی مرحلے میں $A^{-1}$ بنانے کے قابل بناتا ہے۔"
+  },
+  {
+   "en": "Using the definition of the matrix inverse, we combine our determinant and adjoint using the formula $A^{-1} = \\frac{1}{|A|}\\operatorname{Adj}A$. Having $A^{-1}$ is the key to the inversion method because it lets us undo the multiplication by $A$ and isolate the unknown matrix $X$.",
+   "ur": "میٹرکس کے معکوس کی تعریف کے مطابق، ہم فارمولہ $A^{-1} = \\frac{1}{|A|}\\operatorname{Adj}A$ استعمال کرتے ہوئے اپنے مقطع اور ایڈجوائنٹ کو یکجا کرتے ہیں۔ $A^{-1}$ کا حصول ہی اس طریقے کی اصل کنجی ہے کیونکہ اس کی مدد سے ہم مساوات میں سے $A$ کو ختم کر کے نامعلوم میٹرکس $X$ کو الگ کر سکتے ہیں۔"
+  },
+  {
+   "en": "From $AX = B$, multiplying both sides by $A^{-1}$ gives the working formula $X = A^{-1}B$. Notice how it is much easier to multiply the two matrices first to get $\\begin{bmatrix} 55 \\\\ -22 \\end{bmatrix}$ and then divide by $11$ at the end to get clean whole numbers.",
+   "ur": "مساوات $AX = B$ سے، دونوں طرف $A^{-1}$ سے ضرب دینے سے ہمیں فارمولہ $X = A^{-1}B$ ملتا ہے۔ غور کریں کہ پہلے دونوں میٹرکس کو ضرب دے کر $\\begin{bmatrix} 55 \\\\ -22 \\end{bmatrix}$ حاصل کرنا اور پھر آخر میں $11$ سے تقسیم کرنا کتنا آسان ہے، جس سے ہمیں سیدھے سادے مکمل اعداد مل جاتے ہیں۔"
+  },
+  {
+   "en": "By the definition of equality of matrices, since $X = \\begin{bmatrix} x \\\\ y \\end{bmatrix}$ equals $\\begin{bmatrix} 5 \\\\ -2 \\end{bmatrix}$, their corresponding entries must be equal. This gives us the exact numerical values for both unknowns.",
+   "ur": "مساوی میٹرکس کی تعریف کے مطابق، چونکہ $X = \\begin{bmatrix} x \\\\ y \\end{bmatrix}$ برابر ہے $\\begin{bmatrix} 5 \\\\ -2 \\end{bmatrix}$ کے، اس لیے ان کے آمنے سامنے والے ارکان بھی برابر ہوں گے۔ اس سے ہمیں دونوں نامعلوم متغیرات کی اصل قیمتیں مل جاتی ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $x = 5,\\ y = -2$ is the unique pair of numbers that satisfies both original equations at the same time. You can easily check this by substituting them back into the first equation: $(5) - 2(-2) = 5 + 4 = 9$, and into the second equation: $2(5) + 7(-2) = -4$, which confirms our solution is completely correct.",
+  "ur": "آخری جواب $x = 5,\\ y = -2$ اعداد کا وہ واحد جوڑا ہے جو دونوں دی گئی مساواتوں کو بیک وقت درست ثابت کرتا ہے۔ آپ ان قیمتوں کو پہلی مساوات میں درج کر کے باآسانی پڑتال کر سکتے ہیں: $(5) - 2(-2) = 5 + 4 = 9$، اور دوسری مساوات میں: $2(5) + 7(-2) = -4$، جو تصدیق کرتا ہے کہ ہمارا حل بالکل درست ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

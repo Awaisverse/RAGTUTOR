@@ -1,0 +1,62 @@
+{
+ "item": "c10-ex9.2-q2",
+ "label": "",
+ "answer_ref": "$\\angle BAC = 74^\\circ,\\ \\angle BOC = 148^\\circ,\\ \\angle OBC = 16^\\circ$",
+ "steps": [
+  {
+   "math": "m\\angle BDC = 74^\\circ",
+   "en": "We are given that the inscribed angle $m\\angle BDC = 74^\\circ$. We need to find $m\\angle BAC$, $m\\angle BOC$, and $m\\angle OBC$.",
+   "ur": "ہمیں دیا گیا ہے کہ محصور زاویہ $m\\angle BDC = 74^\\circ$ ہے۔ ہمیں $m\\angle BAC$، $m\\angle BOC$ اور $m\\angle OBC$ معلوم کرنے ہیں۔"
+  },
+  {
+   "math": "m\\angle BAC = m\\angle BDC = 74^\\circ",
+   "en": "Both $\\angle BAC$ and $\\angle BDC$ are circumscribed angles subtended by the same arc $BC$ (angles in the same segment). Since angles in the same segment of a circle are equal, $m\\angle BAC$ is also $74^\\circ$.",
+   "ur": "$\\angle BAC$ اور $\\angle BDC$ دونوں ایک ہی قوس $BC$ پر بننے والے محصور زاویے ہیں (ایک ہی قطعہ دائرہ کے زاویے)۔ چونکہ دائرے کے ایک ہی قطعے کے زاویے برابر ہوتے ہیں، اس لیے $m\\angle BAC$ بھی $74^\\circ$ ہے۔",
+   "check": [
+    "74 == 74"
+   ]
+  },
+  {
+   "math": "m\\angle BOC = 2 \\times m\\angle BDC = 2 \\times 74^\\circ = 148^\\circ",
+   "en": "The central angle $\\angle BOC$ and the circumscribed angle $\\angle BDC$ stand on the same arc $BC$. By theorem, the central angle is twice the circumscribed angle subtended by the same arc.",
+   "ur": "مرکزی زاویہ $\\angle BOC$ اور محصور زاویہ $\\angle BDC$ ایک ہی قوس $BC$ پر بنے ہیں۔ مسئلے کے مطابق، ایک ہی قوس پر بننے والا مرکزی زاویہ محصور زاویے کا دگنا ہوتا ہے۔",
+   "check": [
+    "2*74 == 148"
+   ]
+  },
+  {
+   "math": "\\overline{OB} = \\overline{OC} \\implies m\\angle OBC = m\\angle OCB",
+   "en": "In $\\triangle BOC$, the sides $\\overline{OB}$ and $\\overline{OC}$ are radii of the same circle, so they are equal in length. Therefore, $\\triangle BOC$ is an isosceles triangle and the angles opposite to these equal sides are also equal.",
+   "ur": "مثلث $BOC$ میں، اضلاع $\\overline{OB}$ اور $\\overline{OC}$ ایک ہی دائرے کے رداس ہیں، اس لیے ان کی لمبائی برابر ہے۔ لہٰذا، $\\triangle BOC$ ایک متساوی الساقین مثلث ہے اور ان برابر اضلاع کے بالمقابل زاویے بھی برابر ہیں۔"
+  },
+  {
+   "math": "m\\angle OBC + m\\angle OCB + m\\angle BOC = 180^\\circ",
+   "en": "The sum of the interior angles of any triangle is always $180^\\circ$. We apply this rule to $\\triangle BOC$.",
+   "ur": "کسی بھی مثلث کے اندرونی زاویوں کا مجموعہ ہمیشہ $180^\\circ$ ہوتا ہے۔ ہم اس اصول کو $\\triangle BOC$ پر لاگو کرتے ہیں۔"
+  },
+  {
+   "math": "2m\\angle OBC + 148^\\circ = 180^\\circ \\implies m\\angle OBC = \\frac{180^\\circ - 148^\\circ}{2} = \\frac{32^\\circ}{2} = 16^\\circ",
+   "en": "Substitute $m\\angle OCB = m\\angle OBC$ and $m\\angle BOC = 148^\\circ$ into the equation, then solve for $m\\angle OBC$.",
+   "ur": "مساوات میں $m\\angle OCB = m\\angle OBC$ اور $m\\angle BOC = 148^\\circ$ درج کریں، اور پھر $m\\angle OBC$ کے لیے حل کریں۔",
+   "check": [
+    "180 - 148 == 32",
+    "(180 - 148)/2 == 16"
+   ]
+  },
+  {
+   "math": "\\angle BAC = 74^\\circ,\\ \\angle BOC = 148^\\circ,\\ \\angle OBC = 16^\\circ",
+   "en": "Thus, we have found all three required angles.",
+   "ur": "اس طرح، ہم نے تینوں مطلوبہ زاویے معلوم کر لیے ہیں۔",
+   "check": [
+    "74 == 74",
+    "148 == 148",
+    "16 == 16",
+    "2*74 == 148",
+    "(180 - 148)/2 == 16"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

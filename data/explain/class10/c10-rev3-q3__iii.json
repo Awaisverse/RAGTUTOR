@@ -1,0 +1,70 @@
+{
+ "item": "c10-rev3-q3",
+ "label": "iii",
+ "answer_ref": "verified: both sides $= \\begin{bmatrix} 30 & 77 \\\\ 24 & 54 \\end{bmatrix}$",
+ "math": [
+  "",
+  "A + B = \\begin{bmatrix} 2 & 3 \\\\ 4 & 5 \\end{bmatrix} + \\begin{bmatrix} 5 & 6 \\\\ 2 & 1 \\end{bmatrix} = \\begin{bmatrix} 2 + 5 & 3 + 6 \\\\ 4 + 2 & 5 + 1 \\end{bmatrix} = \\begin{bmatrix} 7 & 9 \\\\ 6 & 6 \\end{bmatrix}",
+  "(A+B)C = \\begin{bmatrix} 7 & 9 \\\\ 6 & 6 \\end{bmatrix}\\begin{bmatrix} 3 & 2 \\\\ 1 & 7 \\end{bmatrix} = \\begin{bmatrix} (7)(3) + (9)(1) & (7)(2) + (9)(7) \\\\ (6)(3) + (6)(1) & (6)(2) + (6)(7) \\end{bmatrix}",
+  "= \\begin{bmatrix} 21 + 9 & 14 + 63 \\\\ 18 + 6 & 12 + 42 \\end{bmatrix} = \\begin{bmatrix} 30 & 77 \\\\ 24 & 54 \\end{bmatrix}",
+  "",
+  "AC = \\begin{bmatrix} 2 & 3 \\\\ 4 & 5 \\end{bmatrix}\\begin{bmatrix} 3 & 2 \\\\ 1 & 7 \\end{bmatrix} = \\begin{bmatrix} (2)(3) + (3)(1) & (2)(2) + (3)(7) \\\\ (4)(3) + (5)(1) & (4)(2) + (5)(7) \\end{bmatrix}",
+  "= \\begin{bmatrix} 6 + 3 & 4 + 21 \\\\ 12 + 5 & 8 + 35 \\end{bmatrix} = \\begin{bmatrix} 9 & 25 \\\\ 17 & 43 \\end{bmatrix}",
+  "BC = \\begin{bmatrix} 5 & 6 \\\\ 2 & 1 \\end{bmatrix}\\begin{bmatrix} 3 & 2 \\\\ 1 & 7 \\end{bmatrix} = \\begin{bmatrix} (5)(3) + (6)(1) & (5)(2) + (6)(7) \\\\ (2)(3) + (1)(1) & (2)(2) + (1)(7) \\end{bmatrix}",
+  "= \\begin{bmatrix} 15 + 6 & 10 + 42 \\\\ 6 + 1 & 4 + 7 \\end{bmatrix} = \\begin{bmatrix} 21 & 52 \\\\ 7 & 11 \\end{bmatrix}",
+  "AC + BC = \\begin{bmatrix} 9 & 25 \\\\ 17 & 43 \\end{bmatrix} + \\begin{bmatrix} 21 & 52 \\\\ 7 & 11 \\end{bmatrix} = \\begin{bmatrix} 9 + 21 & 25 + 52 \\\\ 17 + 7 & 43 + 11 \\end{bmatrix} = \\begin{bmatrix} 30 & 77 \\\\ 24 & 54 \\end{bmatrix}",
+  "(A+B)C = \\begin{bmatrix} 30 & 77 \\\\ 24 & 54 \\end{bmatrix} = AC+BC"
+ ],
+ "why": [
+  {
+   "en": "To verify a matrix equation, we must calculate both sides separately to see if they match. We begin by focusing on the Left-Hand Side, $(A+B)C$.",
+   "ur": "کسی بھی میٹرکس مساوات کی تصدیق کرنے کے لیے ہمیں دونوں اطراف کو الگ الگ حل کر کے دیکھنا ہوتا ہے کہ کیا وہ برابر ہیں۔ ہم بائیں طرف یعنی $(A+B)C$ سے شروعات کرتے ہیں۔"
+  },
+  {
+   "en": "Following the order of operations, we always solve inside the brackets first. Using the definition of matrix addition for matrices of the same order, this gives us a single combined matrix for $A+B$ that is ready to be multiplied by $C$.",
+   "ur": "طریقہ کار کے مطابق ہم ہمیشہ پہلے بریکٹ کے اندر والے حصے کو حل کرتے ہیں۔ یکساں مرتبے کے میٹرکسز کو جمع کرنے کے اصول کے تحت ہمیں $A+B$ کے لیے ایک نیا میٹرکس مل جاتا ہے جسے اب $C$ سے ضرب دیا جا سکتا ہے۔"
+  },
+  {
+   "en": "Now we apply the row-by-column rule of matrix multiplication to multiply our sum $(A+B)$ with matrix $C$. Setting up the products of rows from the first matrix and columns from the second prepares each entry of the final Left-Hand Side matrix.",
+   "ur": "اب ہم میٹرکس کی ضرب کے قطار ضرب کالم (row-by-column) اصول کے تحت $(A+B)$ کے حاصل جمع کو میٹرکس $C$ سے ضرب دیتے ہیں۔ پہلے میٹرکس کی قطاروں اور دوسرے کے کالموں کی ضرب ترتیب دینے سے بائیں طرف کے حتمی میٹرکس کا ہر رکن تیار ہو جاتا ہے۔"
+  },
+  {
+   "en": "By simplifying the arithmetic, we obtain the final single matrix $\\begin{bmatrix} 30 & 77 \\\\ 24 & 54 \\end{bmatrix}$ for the Left-Hand Side. We will keep this result safe to compare with the Right-Hand Side.",
+   "ur": "حساب کتاب کو مختصر کرنے پر ہمیں بائیں طرف کا حتمی میٹرکس $\\begin{bmatrix} 30 & 77 \\\\ 24 & 54 \\end{bmatrix}$ حاصل ہوتا ہے۔ ہم اس نتیجے کو دائیں طرف کے جواب سے موازنہ کرنے کے لیے محفوظ رکھیں گے۔"
+  },
+  {
+   "en": "Now we move to the Right-Hand Side, $AC+BC$, to see if multiplying first and adding later gives the exact same result.",
+   "ur": "اب ہم دائیں طرف یعنی $AC+BC$ کی جانب بڑھتے ہیں تاکہ دیکھ سکیں کہ پہلے ضرب دینے اور بعد میں جمع کرنے سے بھی کیا بالکل وہی نتیجہ نکلتا ہے۔"
+  },
+  {
+   "en": "Before we can add $AC$ and $BC$, we must find each product individually according to the order of operations. Here we apply the row-by-column multiplication rule to matrices $A$ and $C$ first.",
+   "ur": "حساب کے اصول کے مطابق $AC$ اور $BC$ کو جمع کرنے سے پہلے ہمیں ان کا حاصل ضرب الگ الگ معلوم کرنا ہوگا۔ یہاں ہم سب سے پہلے میٹرکس $A$ اور $C$ پر قطار ضرب کالم کا اصول لاگو کرتے ہیں۔"
+  },
+  {
+   "en": "Completing the multiplication and addition gives us the matrix $\\begin{bmatrix} 9 & 25 \\\\ 17 & 43 \\end{bmatrix}$ for $AC$, which is the first part needed for the Right-Hand Side.",
+   "ur": "ضرب اور جمع کا عمل مکمل کرنے پر ہمیں $AC$ کے لیے میٹرکس $\\begin{bmatrix} 9 & 25 \\\\ 17 & 43 \\end{bmatrix}$ ملتا ہے، جو کہ دائیں طرف کو حل کرنے کے لیے پہلا ضروری حصہ ہے۔"
+  },
+  {
+   "en": "Next, we need the second product, $BC$, so we apply the same row-by-column matrix multiplication rule to matrices $B$ and $C$.",
+   "ur": "اس کے بعد ہمیں دوسرے حاصل ضرب یعنی $BC$ کی ضرورت ہے، اس لیے ہم میٹرکس $B$ اور $C$ پر بھی وہی قطار ضرب کالم والا اصول لاگو کرتے ہیں۔"
+  },
+  {
+   "en": "Simplifying these numbers gives $\\begin{bmatrix} 21 & 52 \\\\ 7 & 11 \\end{bmatrix}$ for the matrix $BC$. Now we have both matrices required to complete the Right-Hand Side.",
+   "ur": "ان نمبروں کو حل کرنے سے ہمیں میٹرکس $BC$ کے لیے $\\begin{bmatrix} 21 & 52 \\\\ 7 & 11 \\end{bmatrix}$ ملتا ہے۔ اب ہمارے پاس دائیں طرف کو مکمل کرنے کے لیے دونوں مطلوبہ میٹرکس موجود ہیں۔"
+  },
+  {
+   "en": "Finally, we apply the rule of matrix addition to combine our results for $AC$ and $BC$. Adding their corresponding entries produces the complete Right-Hand Side matrix, $\\begin{bmatrix} 30 & 77 \\\\ 24 & 54 \\end{bmatrix}$.",
+   "ur": "آخر میں، ہم $AC$ اور $BC$ کے نتائج کو ملانے کے لیے میٹرکس کی جمع کا اصول اپناتے ہیں۔ ان کے متنازعہ ارکان کو جمع کرنے سے دائیں طرف کا مکمل میٹرکس $\\begin{bmatrix} 30 & 77 \\\\ 24 & 54 \\end{bmatrix}$ حاصل ہو جاتا ہے۔"
+  },
+  {
+   "en": "By comparing the results from Step 4 and Step 10, we see that Every corresponding entry is identical. This confirms that the Left-Hand Side equals the Right-Hand Side.",
+   "ur": "مرحلہ 4 اور مرحلہ 10 کے نتائج کا موازنہ کرنے سے ہم دیکھتے ہیں کہ ہر متنازعہ رکن بالکل ایک جیسا ہے۔ اس سے ثابت ہوتا ہے کہ بائیں طرف اور دائیں طرف آپس میں برابر ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "This final result proves the right distributive law of matrix multiplication over addition, $(A+B)C = AC+BC$, for the given matrices. Since both sides independently produced the exact same matrix $\\begin{bmatrix} 30 & 77 \\\\ 24 & 54 \\end{bmatrix}$, our work is automatically checked and verified to be completely accurate.",
+  "ur": "یہ حتمی نتیجہ دیے گئے میٹرکسز کے لیے جمع پر ضرب کے دائیں تقسیمی قانون (distributive law) یعنی $(A+B)C = AC+BC$ کو ثابت کرتا ہے۔ چونکہ دونوں اطراف کو الگ الگ حل کرنے سے بالکل ایک ہی میٹرکس $\\begin{bmatrix} 30 & 77 \\\\ 24 & 54 \\end{bmatrix}$ حاصل ہوا ہے، اس لیے ہمارے کام کی خود بخود پڑتال اور تصدیق ہو گئی ہے کہ یہ بالکل درست ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

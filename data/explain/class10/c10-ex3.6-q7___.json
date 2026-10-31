@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex3.6-q7",
+ "label": "",
+ "answer_ref": "man 42 years, son 10 years",
+ "math": [
+  "",
+  "\\begin{bmatrix} 1 & -5 \\\\ 1 & -3 \\end{bmatrix}\\begin{bmatrix} x \\\\ y \\end{bmatrix} = \\begin{bmatrix} -8 \\\\ 12 \\end{bmatrix}",
+  "|A| = \\begin{vmatrix} 1 & -5 \\\\ 1 & -3 \\end{vmatrix} = (1)(-3) - (-5)(1) = 2",
+  "|A_x| = \\begin{vmatrix} -8 & -5 \\\\ 12 & -3 \\end{vmatrix} = (-8)(-3) - (-5)(12) = 84",
+  "|A_y| = \\begin{vmatrix} 1 & -8 \\\\ 1 & 12 \\end{vmatrix} = (1)(12) - (-8)(1) = 20",
+  "x = \\frac{|A_x|}{|A|} = \\frac{84}{2} = 42,\\quad y = \\frac{|A_y|}{|A|} = \\frac{20}{2} = 10"
+ ],
+ "why": [
+  {
+   "en": "First, we translate the word problem into algebra by subtracting $2$ for the past and adding $6$ for the future to both ages. Simplifying these gives us two neat linear equations in standard form, which we need before we can use matrices.",
+   "ur": "سب سے پہلے ہم سوال کی عبارت کو الجبرا میں بدلتے ہیں، جس کے لیے ماضی کی عمر کے لیے $2$ تفریق کیا اور مستقبل کی عمر کے لیے دونوں میں $6$ جمع کیا۔ انہیں مختصر کرنے سے ہمیں معیاری شکل میں دو مساواتیں مل جاتی ہیں، جو کالب (matrices) کا طریقہ استعمال کرنے کے لیے ضروری ہیں۔"
+  },
+  {
+   "en": "To solve the system using matrices, we separate the coefficients, variables, and constants into three matrices to form the equation $AX = B$. This organizes our numbers into columns so we can easily apply matrix rules.",
+   "ur": "مساواتوں کو کالب کی مدد سے حل کرنے کے لیے ہم عددی سروں، متغیرات اور مستقل مقداروں کو الگ الگ کر کے $AX = B$ کی شکل میں لکھتے ہیں۔ اس سے ہمارے اعداد کالموں میں ترتیب پا جاتے ہیں اور کالب کے اصول لگانا آسان ہو جاتا ہے۔"
+  },
+  {
+   "en": "We calculate the determinant $|A|$ by cross-multiplying the main diagonal and subtracting the other diagonal. Since $|A| = 2$ (which is not zero), it confirms that a unique solution exists and we can safely divide by $|A|$ later.",
+   "ur": "ہم وتر کے ارکان کو ضرب دے کر دوسرے وتر کی ضرب کو تفریق کرتے ہوئے مقطع $|A|$ معلوم کرتے ہیں۔ چونکہ $|A| = 2$ ہے (جو کہ صفر نہیں ہے)، اس سے تصدیق ہوتی ہے کہ اس سوال کا حل ممکن ہے اور ہم آگے چل کر $|A|$ سے تقسیم کر سکتے ہیں۔"
+  },
+  {
+   "en": "Following Cramer's rule, we form matrix $A_x$ by putting the constant column $\\begin{bmatrix} -8 \\\\ 12 \\end{bmatrix}$ in place of the $x$-coefficients. Its determinant $|A_x| = 84$ gives us the numerator needed to find $x$.",
+   "ur": "کریمر کے قانون کے مطابق، ہم $x$ کے عددی سروں کی جگہ مستقل مقداروں کا کالم $\\begin{bmatrix} -8 \\\\ 12 \\end{bmatrix}$ رکھ کر کالب $A_x$ بناتے ہیں۔ اس کا مقطع $|A_x| = 84$ ہمیں وہ شمار کنندہ (numerator) دیتا ہے جو $x$ معلوم کرنے کے لیے درکار ہے۔"
+  },
+  {
+   "en": "Similarly, we form matrix $A_y$ by replacing the $y$-coefficients with the constants $\\begin{bmatrix} -8 \\\\ 12 \\end{bmatrix}$. Finding its determinant $|A_y| = 20$ gives us the numerator needed to calculate $y$.",
+   "ur": "اسی طرح، ہم $y$ کے عددی سروں کی جگہ مستقل مقداریں $\\begin{bmatrix} -8 \\\\ 12 \\end{bmatrix}$ رکھ کر کالب $A_y$ بناتے ہیں۔ اس کا مقطع $|A_y| = 20$ معلوم کرنے سے ہمیں $y$ کی قیمت نکالنے کے لیے شمار کنندہ مل جاتا ہے۔"
+  },
+  {
+   "en": "Finally, we apply Cramer's rule formulas by dividing $|A_x|$ and $|A_y|$ by the main determinant $|A| = 2$. This directly gives us the values of our unknowns, $x = 42$ and $y = 10$.",
+   "ur": "آخر میں، ہم کریمر کے قانون کے فارمولے استعمال کرتے ہوئے $|A_x|$ اور $|A_y|$ کو اصل مقطع $|A| = 2$ پر تقسیم کرتے ہیں۔ اس سے ہمیں براہِ راست نامعلوم متغیرات کی قیمتیں $x = 42$ اور $y = 10$ حاصل ہو جاتی ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The values $x = 42$ and $y = 10$ mean that the man's present age is $42$ years and his son's present age is $10$ years. We can easily check this: $2$ years ago they were $42 - 2$ and $10 - 2$, which satisfies $42 - 2 = 5(10 - 2)$, and after $6$ years they will satisfy $42 + 6 = 3(10 + 6)$.",
+  "ur": "$x = 42$ اور $y = 10$ کا مطلب ہے کہ اس وقت آدمی کی موجودہ عمر $42$ سال اور اس کے بیٹے کی موجودہ عمر $10$ سال ہے۔ ہم اس کی پڑتال بھی کر سکتے ہیں: $2$ سال پہلے ان کی عمریں $42 - 2$ اور $10 - 2$ تھیں جو پہلی شرط $42 - 2 = 5(10 - 2)$ کو پورا کرتی ہیں، اور $6$ سال بعد یہ دوسری شرط $42 + 6 = 3(10 + 6)$ کو بھی پورا کریں گی۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

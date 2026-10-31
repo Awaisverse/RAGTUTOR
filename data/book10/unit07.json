@@ -256,7 +256,7 @@
    "parts": [
     {
      "label": "i",
-     "prompt": "$\\tan(180^\\circ - \\theta) $",
+     "prompt": "$\\tan(180^\\circ - \\theta) = \\ldots \\tan\\theta$",
      "steps": [
       {
        "math": "\\tan(180^\\circ - \\theta)",
@@ -291,7 +291,7 @@
     },
     {
      "label": "ii",
-     "prompt": "$\\sin(180^\\circ - \\theta) $",
+     "prompt": "$\\sin(180^\\circ - \\theta) = \\ldots \\sin\\theta$",
      "steps": [
       {
        "math": "\\sin(180^\\circ - \\theta)",
@@ -326,7 +326,7 @@
     },
     {
      "label": "iii",
-     "prompt": "$\\tan(90^\\circ + \\theta) $",
+     "prompt": "$\\tan(90^\\circ + \\theta) = \\ldots \\cot\\theta$",
      "steps": [
       {
        "math": "\\tan(90^\\circ + \\theta)",
@@ -366,7 +366,7 @@
     },
     {
      "label": "iv",
-     "prompt": "$\\cos(90^\\circ + \\theta) $",
+     "prompt": "$\\cos(90^\\circ + \\theta) = \\ldots \\sin\\theta$",
      "steps": [
       {
        "math": "\\cos(90^\\circ + \\theta)",
@@ -401,7 +401,7 @@
     },
     {
      "label": "v",
-     "prompt": "$\\operatorname{cosec}(180^\\circ - \\theta) $",
+     "prompt": "$\\operatorname{cosec}(180^\\circ - \\theta) = \\ldots \\operatorname{cosec}\\theta$",
      "steps": [
       {
        "math": "\\operatorname{cosec}(180^\\circ - \\theta)",
@@ -433,7 +433,7 @@
     },
     {
      "label": "vi",
-     "prompt": "$\\sec(90^\\circ - \\theta) $",
+     "prompt": "$\\sec(90^\\circ - \\theta) = \\ldots \\operatorname{cosec}\\theta$",
      "steps": [
       {
        "math": "\\sec(90^\\circ - \\theta)",
@@ -1156,26 +1156,56 @@
      "prompt": "$\\beta=70^\\circ$, $b=8$ cm, $\\alpha=100^\\circ$",
      "steps": [
       {
-       "math": "\\gamma = 180^\\circ - 70^\\circ - 100^\\circ = 10^\\circ",
-       "en": "The angles of a triangle add to $180^\\circ$.",
-       "ur": "مثلث کے زاویوں کا مجموعہ $180^\\circ$ ہے۔",
+       "math": "\\alpha = 100^\\circ, \\quad \\beta = 70^\\circ, \\quad b = 8\\text{ cm}",
+       "en": "Write down the given angles $\\alpha$, $\\beta$ and side $b$ of the triangle $ABC$. We need to find the remaining angle $\\gamma$ and sides $a$ and $c$.",
+       "ur": "مثلث $ABC$ کے دیے گئے زاویے $\\alpha$، $\\beta$ اور ضلع $b$ لکھیں۔ ہمیں باقی ماندہ زاویہ $\\gamma$ اور اضلاع $a$ اور $c$ معلوم کرنے ہیں۔"
+      },
+      {
+       "math": "\\alpha + \\beta + \\gamma = 180^\\circ",
+       "en": "The sum of the interior angles of any triangle is always $180^\\circ$.",
+       "ur": "کسی بھی مثلث کے اندرونی زاویوں کا مجموعہ ہمیشہ $180^\\circ$ ہوتا ہے۔"
+      },
+      {
+       "math": "\\gamma = 180^\\circ - \\alpha - \\beta = 180^\\circ - 100^\\circ - 70^\\circ = 10^\\circ",
+       "en": "Substitute the values of $\\alpha$ and $\\beta$ to find the third angle $\\gamma$.",
+       "ur": "تیسرا زاویہ $\\gamma$ معلوم کرنے کے لیے $\\alpha$ اور $\\beta$ کی قیمتیں درج کریں۔",
        "check": [
-        "180 - 170 == 10"
+        "180 - 100 - 70 == 10"
        ]
       },
       {
-       "math": "a = \\frac{b\\sin\\alpha}{\\sin\\beta} = \\frac{8\\sin 100^\\circ}{\\sin 70^\\circ} = 8.38",
-       "en": "Law of sines.",
-       "ur": "قانون جیب۔",
+       "math": "\\frac{a}{\\sin\\alpha} = \\frac{b}{\\sin\\beta} \\implies a = \\frac{b\\sin\\alpha}{\\sin\\beta}",
+       "en": "Apply the Law of Sines to find the length of side $a$.",
+       "ur": "ضلع $a$ کی لمبائی معلوم کرنے کے لیے قانونِ جیب (Law of Sines) کا استعمال کریں۔"
+      },
+      {
+       "math": "a = \\frac{8 \\sin 100^\\circ}{\\sin 70^\\circ} \\approx \\frac{8(0.9848)}{0.9397} \\approx 8.38\\text{ cm}",
+       "en": "Substitute $b = 8$, $\\alpha = 100^\\circ$, and $\\beta = 70^\\circ$, then calculate the value of $a$ rounded to two decimal places.",
+       "ur": "$b = 8$، $\\alpha = 100^\\circ$ اور $\\beta = 70^\\circ$ درج کریں، اور پھر اعشاریہ کے بعد دو درجوں تک $a$ کی قیمت معلوم کریں۔",
        "check": [
-        "Abs((8*sin((100)*pi/180)/sin((70)*pi/180)) - 8.38) <= 0.0050000010000000004"
+        "Abs((8*sin(100*pi/180)/sin(70*pi/180)) - 8.38) <= 0.005"
        ]
       },
       {
-       "math": "c = \\frac{b\\sin\\gamma}{\\sin\\beta} = \\frac{8\\sin 10^\\circ}{\\sin 70^\\circ} = 1.48",
-       "en": "Law of sines.",
-       "ur": "قانون جیب۔",
+       "math": "\\frac{c}{\\sin\\gamma} = \\frac{b}{\\sin\\beta} \\implies c = \\frac{b\\sin\\gamma}{\\sin\\beta}",
+       "en": "Now, apply the Law of Sines again to find the length of side $c$.",
+       "ur": "اب ضلع $c$ کی لمبائی معلوم کرنے کے لیے دوبارہ قانونِ جیب کا استعمال کریں۔"
+      },
+      {
+       "math": "c = \\frac{8 \\sin 10^\\circ}{\\sin 70^\\circ} \\approx \\frac{8(0.1736)}{0.9397} \\approx 1.48\\text{ cm}",
+       "en": "Substitute $b = 8$, $\\gamma = 10^\\circ$, and $\\beta = 70^\\circ$, then calculate the value of $c$ rounded to two decimal places.",
+       "ur": "$b = 8$، $\\gamma = 10^\\circ$ اور $\\beta = 70^\\circ$ درج کریں، اور پھر اعشاریہ کے بعد دو درجوں تک $c$ کی قیمت معلوم کریں۔",
        "check": [
+        "Abs((8*sin(10*pi/180)/sin(70*pi/180)) - 1.48) <= 0.005"
+       ]
+      },
+      {
+       "math": "\\gamma = 10^\\circ,\\ a = 8.38,\\ c = 1.48\\text{ cm}",
+       "en": "State all the calculated parts of the triangle as the final answer.",
+       "ur": "مثلث کے تمام معلوم کردہ اجزاء کو حتمی جواب کے طور پر لکھیں۔",
+       "check": [
+        "180 - 170 == 10",
+        "Abs((8*sin((100)*pi/180)/sin((70)*pi/180)) - 8.38) <= 0.0050000010000000004",
         "Abs((8*sin((10)*pi/180)/sin((70)*pi/180)) - 1.48) <= 0.0050000010000000004"
        ]
       }
@@ -1185,6 +1215,7 @@
       "en": "The reference notes round an intermediate value or the last digit differently; the value here is computed from the exact expression and rounded once.",
       "ur": "حوالہ نوٹس میں درمیانی قیمت یا آخری ہندسہ مختلف طریقے سے گول کیا گیا ہے؛ یہاں قیمت درست عبارت سے نکال کر ایک بار گول کی گئی ہے۔"
      },
+     "enriched": true,
      "book_key": "\\gamma=10, a=8.39, c=1.48"
     },
     {
@@ -1192,31 +1223,62 @@
      "prompt": "$a=6$ cm, $\\alpha=55^\\circ$, $\\gamma=60^\\circ$",
      "steps": [
       {
-       "math": "\\beta = 180^\\circ - 55^\\circ - 60^\\circ = 65^\\circ",
-       "en": "The angles of a triangle add to $180^\\circ$.",
-       "ur": "مثلث کے زاویوں کا مجموعہ $180^\\circ$ ہے۔",
+       "math": "a = 6 \\text{ cm}, \\quad \\alpha = 55^\\circ, \\quad \\gamma = 60^\\circ",
+       "en": "First, write down the given side and angles of the triangle $ABC$. To solve the triangle, we need to find the unknown angle $\\beta$ and the unknown sides $b$ and $c$.",
+       "ur": "سب سے پہلے، مثلث $ABC$ کا دیا گیا ضلع اور زاویے لکھیں۔ مثلث کو حل کرنے کے لیے، ہمیں نامعلوم زاویہ $\\beta$ اور نامعلوم اضلاع $b$ اور $c$ معلوم کرنے ہیں۔"
+      },
+      {
+       "math": "\\alpha + \\beta + \\gamma = 180^\\circ",
+       "en": "We know that the sum of the interior angles of any triangle is always equal to $180^\\circ$.",
+       "ur": "ہم جانتے ہیں کہ کسی بھی مثلث کے اندرونی زاویوں کا مجموعہ ہمیشہ $180^\\circ$ کے برابر ہوتا ہے۔"
+      },
+      {
+       "math": "\\beta = 180^\\circ - \\alpha - \\gamma = 180^\\circ - 55^\\circ - 60^\\circ = 65^\\circ",
+       "en": "Substitute the given values of $\\alpha = 55^\\circ$ and $\\gamma = 60^\\circ$ into the formula to find the third angle $\\beta$.",
+       "ur": "تیسرا زاویہ $\\beta$ معلوم کرنے کے لیے فارمولے میں دی گئی قیمتیں $\\alpha = 55^\\circ$ اور $\\gamma = 60^\\circ$ درج کریں۔",
        "check": [
-        "180 - 115 == 65"
+        "180 - 55 - 60 == 65"
        ]
       },
       {
-       "math": "b = \\frac{a\\sin\\beta}{\\sin\\alpha} = \\frac{6\\sin 65^\\circ}{\\sin 55^\\circ} = 6.64",
-       "en": "Law of sines.",
-       "ur": "قانون جیب۔",
+       "math": "\\frac{a}{\\sin\\alpha} = \\frac{b}{\\sin\\beta} = \\frac{c}{\\sin\\gamma}",
+       "en": "Now, we use the Law of Sines to find the lengths of the unknown sides $b$ and $c$.",
+       "ur": "اب، ہم نامعلوم اضلاع $b$ اور $c$ کی لمبائیاں معلوم کرنے کے لیے قانونِ جیب (Law of Sines) کا استعمال کرتے ہیں۔"
+      },
+      {
+       "math": "\\frac{b}{\\sin\\beta} = \\frac{a}{\\sin\\alpha} \\implies b = \\frac{a\\sin\\beta}{\\sin\\alpha}",
+       "en": "Take the first two ratios from the Law of Sines and rearrange the equation to solve for side $b$.",
+       "ur": "قانونِ جیب سے پہلی دو نسبتیں لیں اور ضلع $b$ کے لیے حل کرنے کے لیے مساوات کو ترتیب دیں۔"
+      },
+      {
+       "math": "b = \\frac{6 \\times \\sin 65^\\circ}{\\sin 55^\\circ} = \\frac{6 \\times 0.9063}{0.8192} \\approx 6.64 \\text{ cm}",
+       "en": "Substitute $a = 6$, $\\alpha = 55^\\circ$, and $\\beta = 65^\\circ$, then calculate the value of $b$ rounded to two decimal places.",
+       "ur": "اس میں $a = 6$، $\\alpha = 55^\\circ$، اور $\\beta = 65^\\circ$ درج کریں، پھر اعشاریہ کے بعد دو درجوں تک محدود کر کے $b$ کی قیمت معلوم کریں۔",
        "check": [
-        "Abs((6*sin((65)*pi/180)/sin((55)*pi/180)) - 6.64) <= 0.0050000010000000004"
+        "Abs((6*sin(65*pi/180)/sin(55*pi/180)) - 6.64) <= 0.005000001"
        ]
       },
       {
-       "math": "c = \\frac{a\\sin\\gamma}{\\sin\\alpha} = \\frac{6\\sin 60^\\circ}{\\sin 55^\\circ} = 6.34",
-       "en": "Law of sines.",
-       "ur": "قانون جیب۔",
+       "math": "\\frac{c}{\\sin\\gamma} = \\frac{a}{\\sin\\alpha} \\implies c = \\frac{a\\sin\\gamma}{\\sin\\alpha} = \\frac{6 \\times \\sin 60^\\circ}{\\sin 55^\\circ} \\approx 6.34 \\text{ cm}",
+       "en": "Similarly, use the Law of Sines for side $c$, substitute $a = 6$, $\\alpha = 55^\\circ$, and $\\gamma = 60^\\circ$, and calculate the value of $c$.",
+       "ur": "اسی طرح، ضلع $c$ کے لیے قانونِ جیب استعمال کریں، $a = 6$، $\\alpha = 55^\\circ$، اور $\\gamma = 60^\\circ$ درج کریں، اور $c$ کی قیمت معلوم کریں۔",
        "check": [
+        "Abs((6*sin(60*pi/180)/sin(55*pi/180)) - 6.34) <= 0.005000001"
+       ]
+      },
+      {
+       "math": "\\beta = 65^\\circ, \\quad b = 6.64, \\quad c = 6.34 \\text{ cm}",
+       "en": "Thus, all the unknown elements of the triangle $ABC$ have been found.",
+       "ur": "اس طرح، مثلث $ABC$ کے تمام نامعلوم اجزاء معلوم کر لیے گئے ہیں۔",
+       "check": [
+        "180 - 115 == 65",
+        "Abs((6*sin((65)*pi/180)/sin((55)*pi/180)) - 6.64) <= 0.0050000010000000004",
         "Abs((6*sin((60)*pi/180)/sin((55)*pi/180)) - 6.34) <= 0.0050000010000000004"
        ]
       }
      ],
      "answer": "$\\beta = 65^\\circ,\\ b = 6.64,\\ c = 6.34$ cm",
+     "enriched": true,
      "book_key": "\\beta=65, b=6.64, c=6.34"
     },
     {
@@ -1224,26 +1286,47 @@
      "prompt": "$c=7$ cm, $\\beta=34^\\circ$, $\\gamma=64^\\circ$",
      "steps": [
       {
-       "math": "\\alpha = 180^\\circ - 34^\\circ - 64^\\circ = 82^\\circ",
-       "en": "The angles of a triangle add to $180^\\circ$.",
-       "ur": "مثلث کے زاویوں کا مجموعہ $180^\\circ$ ہے۔",
+       "math": "c = 7\\text{ cm},\\ \\beta = 34^\\circ,\\ \\gamma = 64^\\circ",
+       "en": "We are given the length of side $c$ and two angles $\\beta$ and $\\gamma$ of triangle $ABC$. We need to find the remaining angle $\\alpha$ and the sides $a$ and $b$.",
+       "ur": "ہمیں مثلث $ABC$ کا ضلع $c$ اور دو زاویے $\\beta$ اور $\\gamma$ دیے گئے ہیں۔ ہمیں باقی زاویہ $\\alpha$ اور اضلاع $a$ اور $b$ معلوم کرنے ہیں۔"
+      },
+      {
+       "math": "\\alpha = 180^\\circ - (\\beta + \\gamma) = 180^\\circ - (34^\\circ + 64^\\circ) = 180^\\circ - 98^\\circ = 82^\\circ",
+       "en": "Since the sum of the interior angles of any triangle is $180^\\circ$, we subtract the given angles from $180^\\circ$ to find $\\alpha$.",
+       "ur": "چونکہ کسی بھی مثلث کے اندرونی زاویوں کا مجموعہ $180^\\circ$ ہوتا ہے، اس لیے ہم $\\alpha$ معلوم کرنے کے لیے دیے گئے زاویوں کو $180^\\circ$ میں سے تفریق کرتے ہیں۔",
        "check": [
+        "34 + 64 == 98",
         "180 - 98 == 82"
        ]
       },
       {
-       "math": "a = \\frac{c\\sin\\alpha}{\\sin\\gamma} = \\frac{7\\sin 82^\\circ}{\\sin 64^\\circ} = 7.71",
-       "en": "Law of sines.",
-       "ur": "قانون جیب۔",
+       "math": "\\frac{a}{\\sin\\alpha} = \\frac{b}{\\sin\\beta} = \\frac{c}{\\sin\\gamma}",
+       "en": "To find the unknown sides $a$ and $b$, we use the Law of Sines.",
+       "ur": "نامعلوم اضلاع $a$ اور $b$ معلوم کرنے کے لیے ہم قانونِ جیب (Law of Sines) استعمال کرتے ہیں۔"
+      },
+      {
+       "math": "a = \\frac{c\\sin\\alpha}{\\sin\\gamma} = \\frac{7\\sin 82^\\circ}{\\sin 64^\\circ} = 7.71\\text{ cm}",
+       "en": "First, take the relation $\\frac{a}{\\sin\\alpha} = \\frac{c}{\\sin\\gamma}$ and substitute $c = 7$, $\\alpha = 82^\\circ$, and $\\gamma = 64^\\circ$ to calculate side $a$.",
+       "ur": "پہلے تعلق $\\frac{a}{\\sin\\alpha} = \\frac{c}{\\sin\\gamma}$ لیں اور ضلع $a$ معلوم کرنے کے لیے $c = 7$، $\\alpha = 82^\\circ$ اور $\\gamma = 64^\\circ$ کی قیمتیں درج کریں۔",
        "check": [
-        "Abs((7*sin((82)*pi/180)/sin((64)*pi/180)) - 7.71) <= 0.0050000010000000004"
+        "Abs((7*sin(82*pi/180)/sin(64*pi/180)) - 7.71) <= 0.005"
        ]
       },
       {
-       "math": "b = \\frac{c\\sin\\beta}{\\sin\\gamma} = \\frac{7\\sin 34^\\circ}{\\sin 64^\\circ} = 4.36",
-       "en": "Law of sines.",
-       "ur": "قانون جیب۔",
+       "math": "b = \\frac{c\\sin\\beta}{\\sin\\gamma} = \\frac{7\\sin 34^\\circ}{\\sin 64^\\circ} = 4.36\\text{ cm}",
+       "en": "Next, take the relation $\\frac{b}{\\sin\\beta} = \\frac{c}{\\sin\\gamma}$ and substitute $c = 7$, $\\beta = 34^\\circ$, and $\\gamma = 64^\\circ$ to calculate side $b$.",
+       "ur": "اس کے بعد، تعلق $\\frac{b}{\\sin\\beta} = \\frac{c}{\\sin\\gamma}$ لیں اور ضلع $b$ معلوم کرنے کے لیے $c = 7$، $\\beta = 34^\\circ$ اور $\\gamma = 64^\\circ$ کی قیمتیں درج کریں۔",
        "check": [
+        "Abs((7*sin(34*pi/180)/sin(64*pi/180)) - 4.36) <= 0.005"
+       ]
+      },
+      {
+       "math": "\\alpha = 82^\\circ,\\ a = 7.71,\\ b = 4.36\\text{ cm}",
+       "en": "Thus, the unknown elements of the triangle $ABC$ have been found.",
+       "ur": "اس طرح مثلث $ABC$ کے تمام نامعلوم اجزاء معلوم ہو گئے ہیں۔",
+       "check": [
+        "180 - 98 == 82",
+        "Abs((7*sin((82)*pi/180)/sin((64)*pi/180)) - 7.71) <= 0.0050000010000000004",
         "Abs((7*sin((34)*pi/180)/sin((64)*pi/180)) - 4.36) <= 0.0050000010000000004"
        ]
       }
@@ -1253,6 +1336,7 @@
       "en": "The reference notes round an intermediate value or the last digit differently; the value here is computed from the exact expression and rounded once.",
       "ur": "حوالہ نوٹس میں درمیانی قیمت یا آخری ہندسہ مختلف طریقے سے گول کیا گیا ہے؛ یہاں قیمت درست عبارت سے نکال کر ایک بار گول کی گئی ہے۔"
      },
+     "enriched": true,
      "book_key": "\\alpha=82, a=7.72, b=4.35"
     },
     {
@@ -1260,26 +1344,47 @@
      "prompt": "$b=12$ cm, $\\alpha=92^\\circ$, $\\beta=77^\\circ$",
      "steps": [
       {
-       "math": "\\gamma = 180^\\circ - 92^\\circ - 77^\\circ = 11^\\circ",
-       "en": "The angles of a triangle add to $180^\\circ$.",
-       "ur": "مثلث کے زاویوں کا مجموعہ $180^\\circ$ ہے۔",
+       "math": "b = 12\\text{ cm},\\quad \\alpha = 92^\\circ,\\quad \\beta = 77^\\circ",
+       "en": "Write down the given side and angles of triangle $ABC$. We need to find the third angle $\\gamma$ and the remaining sides $a$ and $c$.",
+       "ur": "مثلث $ABC$ کا دیا گیا ضلع اور زاویے لکھیں۔ ہمیں تیسرا زاویہ $\\gamma$ اور باقی اضلاع $a$ اور $c$ معلوم کرنے ہیں۔"
+      },
+      {
+       "math": "\\gamma = 180^\\circ - (\\alpha + \\beta) = 180^\\circ - (92^\\circ + 77^\\circ) = 180^\\circ - 169^\\circ = 11^\\circ",
+       "en": "Since the sum of the interior angles of a triangle is $180^\\circ$, subtract the sum of $\\alpha$ and $\\beta$ from $180^\\circ$ to find $\\gamma$.",
+       "ur": "چونکہ مثلث کے اندرونی زاویوں کا مجموعہ $180^\\circ$ ہوتا ہے، اس لیے $\\gamma$ معلوم کرنے کے لیے $180^\\circ$ میں سے $\\alpha$ اور $\\beta$ کا مجموعہ تفریق کریں۔",
        "check": [
+        "92 + 77 == 169",
         "180 - 169 == 11"
        ]
       },
       {
-       "math": "a = \\frac{b\\sin\\alpha}{\\sin\\beta} = \\frac{12\\sin 92^\\circ}{\\sin 77^\\circ} = 12.31",
-       "en": "Law of sines.",
-       "ur": "قانون جیب۔",
+       "math": "\\frac{a}{\\sin\\alpha} = \\frac{b}{\\sin\\beta} = \\frac{c}{\\sin\\gamma}",
+       "en": "State the Law of Sines, which relates the sides of a triangle to the sines of their opposite angles.",
+       "ur": "قانونِ جیب (Law of Sines) لکھیں، جو مثلث کے اضلاع اور ان کے بالمقابل زاویوں کے سائن (sine) کے درمیان تعلق ظاہر کرتا ہے۔"
+      },
+      {
+       "math": "a = \\frac{b\\sin\\alpha}{\\sin\\beta} = \\frac{12 \\times \\sin 92^\\circ}{\\sin 77^\\circ} \\approx \\frac{12 \\times 0.9994}{0.9744} \\approx 12.31\\text{ cm}",
+       "en": "Use the first two ratios of the Law of Sines and substitute $b = 12$, $\\alpha = 92^\\circ$, and $\\beta = 77^\\circ$ to calculate side $a$.",
+       "ur": "قانونِ جیب کی پہلی دو نسبتیں استعمال کریں اور ضلع $a$ معلوم کرنے کے لیے $b = 12$، $\\alpha = 92^\\circ$، اور $\\beta = 77^\\circ$ کی قیمتیں درج کریں۔",
        "check": [
-        "Abs((12*sin((92)*pi/180)/sin((77)*pi/180)) - 12.31) <= 0.0050000010000000004"
+        "Abs((12*sin((92)*pi/180)/sin((77)*pi/180)) - 12.31) <= 0.005"
        ]
       },
       {
-       "math": "c = \\frac{b\\sin\\gamma}{\\sin\\beta} = \\frac{12\\sin 11^\\circ}{\\sin 77^\\circ} = 2.35",
-       "en": "Law of sines.",
-       "ur": "قانون جیب۔",
+       "math": "c = \\frac{b\\sin\\gamma}{\\sin\\beta} = \\frac{12 \\times \\sin 11^\\circ}{\\sin 77^\\circ} \\approx \\frac{12 \\times 0.1908}{0.9744} \\approx 2.35\\text{ cm}",
+       "en": "Similarly, use the Law of Sines with $b = 12$, $\\beta = 77^\\circ$, and $\\gamma = 11^\\circ$ to calculate side $c$.",
+       "ur": "اسی طرح، ضلع $c$ معلوم کرنے کے لیے قانونِ جیب میں $b = 12$، $\\beta = 77^\\circ$، اور $\\gamma = 11^\\circ$ کی قیمتیں استعمال کریں۔",
        "check": [
+        "Abs((12*sin((11)*pi/180)/sin((77)*pi/180)) - 2.35) <= 0.005"
+       ]
+      },
+      {
+       "math": "\\gamma = 11^\\circ,\\quad a = 12.31\\text{ cm},\\quad c = 2.35\\text{ cm}",
+       "en": "Thus, all unknown elements of the triangle $ABC$ have been found.",
+       "ur": "اس طرح، مثلث $ABC$ کے تمام نامعلوم اجزاء معلوم کر لیے گئے ہیں۔",
+       "check": [
+        "180 - 169 == 11",
+        "Abs((12*sin((92)*pi/180)/sin((77)*pi/180)) - 12.31) <= 0.0050000010000000004",
         "Abs((12*sin((11)*pi/180)/sin((77)*pi/180)) - 2.35) <= 0.0050000010000000004"
        ]
       }
@@ -1289,6 +1394,7 @@
       "en": "The reference notes give $c = 2.29$; $c = \\frac{12\\sin 11^\\circ}{\\sin 77^\\circ} = 2.35$ cm.",
       "ur": "حوالہ نوٹس میں $c = 2.29$ ہے؛ درست $c = 2.35$ سینٹی میٹر ہے۔"
      },
+     "enriched": true,
      "book_key": "\\gamma=11, a=12.3, c=2.29"
     }
    ],
@@ -1975,32 +2081,67 @@
      "prompt": "",
      "steps": [
       {
-       "math": "BD = \\sqrt{15^2 + 15^2} = \\sqrt{450} = 15\\sqrt{2} \\approx 21.21\\ \\text{cm}",
-       "en": "Diagonal of the square base.",
-       "ur": "مربع قاعدے کا وتر۔",
+       "math": "m\\overline{AB} = 15\\text{ cm}, \\quad m\\overline{BE} = m\\overline{DE} = 12\\text{ cm}",
+       "en": "Write down the given lengths of the square base $ABCD$ and the slant edges of the pyramid.",
+       "ur": "مربع قاعدے $ABCD$ اور اہرام کے ترچھے کناروں کی دی گئی لمبائیاں لکھیں۔"
+      },
+      {
+       "math": "(m\\overline{BD})^2 = (m\\overline{AB})^2 + (m\\overline{AD})^2 = 15^2 + 15^2 = 225 + 225 = 450",
+       "en": "Since $ABCD$ is a square, $\\angle BAD = 90^\\circ$ and $m\\overline{AD} = m\\overline{AB} = 15\\text{ cm}$. Apply Pythagoras' theorem in right-angled triangle $ABD$ to find $(m\\overline{BD})^2$.",
+       "ur": "چونکہ $ABCD$ ایک مربع ہے، اس لیے $\\angle BAD = 90^\\circ$ اور $m\\overline{AD} = m\\overline{AB} = 15\\text{ cm}$ ہے۔ قائمۃ الزاویہ مثلث $ABD$ میں مسئلہ فیثاغورث استعمال کرتے ہوئے $(m\\overline{BD})^2$ معلوم کریں۔",
        "check": [
-        "sqrt(450) == 15*sqrt(2)"
+        "15**2 + 15**2 == 450",
+        "225 + 225 == 450"
        ]
       },
       {
-       "math": "BD^2 = DE^2 + BE^2 - 2(DE)(BE)\\cos\\angle DEB \\Rightarrow 450 = 288 - 288\\cos\\angle DEB",
-       "en": "Law of cosines in triangle $DEB$.",
-       "ur": "مثلث $DEB$ میں قانون جیب التمام۔",
+       "math": "m\\overline{BD} = \\sqrt{450} = 15\\sqrt{2} \\approx 21.21\\text{ cm}",
+       "en": "Take the square root to find the length of the diagonal $BD$ of the square base.",
+       "ur": "مربع قاعدے کے وتر $BD$ کی لمبائی معلوم کرنے کے لیے جزر لیں۔",
        "check": [
-        "12**2 + 12**2 == 288"
+        "sqrt(450) == 15*sqrt(2)",
+        "Abs(sqrt(450) - 21.21) < 0.01"
        ]
       },
       {
-       "math": "\\cos\\angle DEB = -\\frac{162}{288} = -0.5625 \\Rightarrow \\angle DEB \\approx 124^\\circ",
-       "en": "Solve for the angle.",
-       "ur": "زاویہ معلوم کریں۔",
+       "math": "(m\\overline{BD})^2 = (m\\overline{DE})^2 + (m\\overline{BE})^2 - 2(m\\overline{DE})(m\\overline{BE})\\cos\\angle DEB",
+       "en": "Now consider the triangle $DEB$ formed by the two slant edges and the diagonal. State the Law of Cosines to find $\\angle DEB$.",
+       "ur": "اب دو ترچھے کناروں اور وتر سے بننے والی مثلث $DEB$ پر غور کریں۔ $\\angle DEB$ معلوم کرنے کے لیے قانون جیب التمام (Law of Cosines) لکھیں۔"
+      },
+      {
+       "math": "450 = 12^2 + 12^2 - 2(12)(12)\\cos\\angle DEB \\implies 450 = 144 + 144 - 288\\cos\\angle DEB = 288 - 288\\cos\\angle DEB",
+       "en": "Substitute the known values $(m\\overline{BD})^2 = 450$, $m\\overline{DE} = 12$, and $m\\overline{BE} = 12$ into the formula and simplify.",
+       "ur": "فارمولے میں معلوم قیمتیں $(m\\overline{BD})^2 = 450$، $m\\overline{DE} = 12$ اور $m\\overline{BE} = 12$ درج کریں اور مختصر کریں۔",
        "check": [
+        "12**2 + 12**2 == 288",
+        "2*12*12 == 288"
+       ]
+      },
+      {
+       "math": "288\\cos\\angle DEB = 288 - 450 = -162 \\implies \\cos\\angle DEB = -\\frac{162}{288} = -0.5625",
+       "en": "Rearrange the equation to isolate and solve for $\\cos\\angle DEB$.",
+       "ur": "مساوات کو ترتیب دے کر $\\cos\\angle DEB$ کی قیمت معلوم کریں۔",
+       "check": [
+        "288 - 450 == -162",
+        "-R(162, 288) == -R(9, 16)",
+        "-162/288 == -0.5625"
+       ]
+      },
+      {
+       "math": "\\angle DEB = \\cos^{-1}(-0.5625) \\approx 124.23^\\circ \\approx 124^\\circ",
+       "en": "Take the inverse cosine ($\\cos^{-1}$) to find the angle $\\angle DEB$ and round the final answer to the nearest whole degree.",
+       "ur": "زاویہ $\\angle DEB$ معلوم کرنے کے لیے معکوس کوسائن ($\\cos^{-1}$) لیں اور حتمی جواب کو قریبی مکمل درجہ (ڈگری) تک محدود کریں۔",
+       "check": [
+        "Abs((acos(-R(9,16))*180/pi) - 124) <= 0.5",
+        "sqrt(450) == 15*sqrt(2)",
+        "12**2 + 12**2 == 288",
         "(288 - 450)/R(288) == -R(9,16)",
         "Abs((acos(-R(9,16))*180/pi) - 124) <= 0.500000001"
        ]
       }
      ],
      "answer": "$124^\\circ$",
+     "enriched": true,
      "book_key": "124"
     }
    ],
@@ -2941,7 +3082,7 @@
    "kind": "exercise",
    "number": "5",
    "page": 0,
-   "question": "Three ships $L$, $M$, $N$ are in the position shown in the diagram ($L$ is due West of $M$, $LM = 12$ km). Ship $M$ is North East of ship $N$. Find the bearing of $L$ from $M$.",
+   "question": "Three ships $L$, $M$, $N$ are in the position shown in the diagram (from the diagram: $L$ is due West of $M$, $LM = 12$ km, $LN = 14$ km, $MN = 15$ km). Ship $M$ is North East of ship $N$. Find the bearing of $L$ from $M$.",
    "parts": [
     {
      "label": "",
@@ -3054,7 +3195,7 @@
    "kind": "exercise",
    "number": "7",
    "page": 0,
-   "question": "Fatima walked South for 5.5 km and then turned West for 1.3 km. Calculate her bearing from her starting point.",
+   "question": "Fatima walked South for 5.5 km and then turned West for 1.3 km. Calculate Huria's [i.e. Fatima's, as printed] bearing from her starting point.",
    "parts": [
     {
      "label": "",
@@ -3738,27 +3879,53 @@
      "prompt": "$c=3.1$ cm, $\\gamma=44^\\circ$, $\\alpha=36^\\circ$",
      "steps": [
       {
-       "math": "\\beta = 180^\\circ - 44^\\circ - 36^\\circ = 100^\\circ",
-       "en": "Angles add to $180^\\circ$.",
-       "ur": "زاویوں کا مجموعہ $180^\\circ$۔",
+       "math": "c = 3.1\\ \\text{cm},\\quad \\gamma = 44^\\circ,\\quad \\alpha = 36^\\circ",
+       "en": "Write down the given values for the side $c$ and the angles $\\gamma$ and $\\alpha$ of $\\triangle ABC$. We need to find the area of the triangle.",
+       "ur": "$\\triangle ABC$ کے ضلع $c$ اور زاویوں $\\gamma$ اور $\\alpha$ کی دی گئی قیمتیں لکھیں۔ ہمیں مثلث کا رقبہ معلوم کرنا ہے۔"
+      },
+      {
+       "math": "\\beta = 180^\\circ - \\gamma - \\alpha = 180^\\circ - 44^\\circ - 36^\\circ = 100^\\circ",
+       "en": "Since the sum of the interior angles of a triangle is always $180^\\circ$, subtract the two given angles from $180^\\circ$ to find the third angle $\\beta$.",
+       "ur": "چونکہ مثلث کے اندرونی زاویوں کا مجموعہ ہمیشہ $180^\\circ$ ہوتا ہے، اس لیے تیسرا زاویہ $\\beta$ معلوم کرنے کے لیے دیے گئے دونوں زاویوں کو $180^\\circ$ میں سے تفریق کریں۔",
        "check": [
         "180 - 44 - 36 == 100"
        ]
       },
       {
-       "math": "a = \\frac{3.1\\sin 36^\\circ}{\\sin 44^\\circ} \\approx 2.623,\\quad b = \\frac{3.1\\sin 100^\\circ}{\\sin 44^\\circ} \\approx 4.395",
-       "en": "Law of sines.",
-       "ur": "قانون جیب۔",
+       "math": "\\frac{a}{\\sin\\alpha} = \\frac{b}{\\sin\\beta} = \\frac{c}{\\sin\\gamma}",
+       "en": "Recall the Law of Sines, which relates the lengths of the sides of a triangle to the sines of its opposite angles.",
+       "ur": "قانونِ جیب (Law of Sines) کو یاد کریں، جو مثلث کے اضلاع کی لمبائیوں اور ان کے بالمقابل زاویوں کے سائن (sine) کے درمیان تعلق ظاہر کرتا ہے۔"
+      },
+      {
+       "math": "a = \\frac{c\\sin\\alpha}{\\sin\\gamma} = \\frac{3.1\\sin 36^\\circ}{\\sin 44^\\circ} \\approx 2.623\\ \\text{cm}",
+       "en": "Use the Law of Sines to find the length of side $a$ by substituting $c = 3.1$, $\\alpha = 36^\\circ$, and $\\gamma = 44^\\circ$.",
+       "ur": "قانونِ جیب کا استعمال کرتے ہوئے $c = 3.1$، $\\alpha = 36^\\circ$ اور $\\gamma = 44^\\circ$ درج کر کے ضلع $a$ کی لمبائی معلوم کریں۔",
        "check": [
-        "Abs((R(31,10)*sin((36)*pi/180)/sin((44)*pi/180)) - 2.623) <= 0.000500001",
+        "Abs((R(31,10)*sin((36)*pi/180)/sin((44)*pi/180)) - 2.623) <= 0.000500001"
+       ]
+      },
+      {
+       "math": "b = \\frac{c\\sin\\beta}{\\sin\\gamma} = \\frac{3.1\\sin 100^\\circ}{\\sin 44^\\circ} \\approx 4.395\\ \\text{cm}",
+       "en": "Similarly, use the Law of Sines to find the length of side $b$ by substituting $c = 3.1$, $\\beta = 100^\\circ$, and $\\gamma = 44^\\circ$.",
+       "ur": "اسی طرح، قانونِ جیب کا استعمال کرتے ہوئے $c = 3.1$، $\\beta = 100^\\circ$ اور $\\gamma = 44^\\circ$ درج کر کے ضلع $b$ کی لمبائی معلوم کریں۔",
+       "check": [
         "Abs((R(31,10)*sin((100)*pi/180)/sin((44)*pi/180)) - 4.395) <= 0.000500001"
        ]
       },
       {
-       "math": "\\text{Area} = \\frac{1}{2}ab\\sin\\gamma = \\frac{1}{2}(2.623)(4.395)\\sin 44^\\circ \\approx 4.00\\ \\text{cm}^2",
-       "en": "Two sides and the included angle.",
-       "ur": "دو اضلاع اور درمیانی زاویہ۔",
+       "math": "\\text{Area of } \\triangle ABC = \\frac{1}{2}ab\\sin\\gamma",
+       "en": "Now that we have two sides $a$ and $b$ and their included angle $\\gamma$, we can apply the area formula for a triangle.",
+       "ur": "اب جبکہ ہمارے پاس دو اضلاع $a$ اور $b$ اور ان کا درمیانی زاویہ $\\gamma$ موجود ہیں، ہم مثلث کے رقبے کا فارمولا استعمال کر سکتے ہیں۔"
+      },
+      {
+       "math": "\\text{Area} = \\frac{1}{2}(2.623)(4.395)\\sin 44^\\circ \\approx 4.00\\ \\text{cm}^2",
+       "en": "Substitute the values of $a$, $b$, and $\\gamma$ into the formula and calculate the final area of $\\triangle ABC$.",
+       "ur": "فارمولے میں $a$، $b$ اور $\\gamma$ کی قیمتیں درج کریں اور $\\triangle ABC$ کا حتمی رقبہ معلوم کریں۔",
        "check": [
+        "Abs((R(1,2)*(R(31,10)*sin((36)*pi/180)/sin((44)*pi/180))*(R(31,10)*sin((100)*pi/180)/sin((44)*pi/180))*sin((44)*pi/180)) - 4.00) <= 0.005000001",
+        "180 - 44 - 36 == 100",
+        "Abs((R(31,10)*sin((36)*pi/180)/sin((44)*pi/180)) - 2.623) <= 0.000500001",
+        "Abs((R(31,10)*sin((100)*pi/180)/sin((44)*pi/180)) - 4.395) <= 0.000500001",
         "Abs((R(1,2)*(R(31,10)*sin((36)*pi/180)/sin((44)*pi/180))*(R(31,10)*sin((100)*pi/180)/sin((44)*pi/180))*sin((44)*pi/180)) - 4.00) <= 0.0050000010000000004"
        ]
       }
@@ -3768,6 +3935,7 @@
       "en": "The reference notes give 4.01 cm$^2$; with $a = 2.623$, $b = 4.395$ the area is $4.00$ cm$^2$.",
       "ur": "حوالہ نوٹس میں 4.01 لکھا ہے؛ درست 4.00 ہے۔"
      },
+     "enriched": true,
      "book_key": "4.01 cm^2"
     }
    ],
@@ -3834,31 +4002,53 @@
      "prompt": "$\\alpha=32^\\circ$, $\\gamma=48^\\circ$, $c=81$ cm",
      "steps": [
       {
-       "math": "\\beta = 180^\\circ - 32^\\circ - 48^\\circ = 100^\\circ",
-       "en": "The angles of a triangle add to $180^\\circ$.",
-       "ur": "مثلث کے زاویوں کا مجموعہ $180^\\circ$ ہے۔",
+       "math": "\\alpha = 32^\\circ, \\quad \\gamma = 48^\\circ, \\quad c = 81\\text{ cm}",
+       "en": "We are given two angles $\\alpha$, $\\gamma$ and one side $c$ of the triangle $ABC$. To solve the triangle, we need to find the remaining angle $\\beta$ and the two sides $a$ and $b$.",
+       "ur": "ہمیں مثلث $ABC$ کے دو زاویے $\\alpha$، $\\gamma$ اور ایک ضلع $c$ دیا گیا ہے۔ مثلث کو حل کرنے کے لیے ہمیں باقی ماندہ زاویہ $\\beta$ اور دو اضلاع $a$ اور $b$ معلوم کرنے ہیں۔"
+      },
+      {
+       "math": "\\beta = 180^\\circ - (\\alpha + \\gamma) = 180^\\circ - (32^\\circ + 48^\\circ) = 180^\\circ - 80^\\circ = 100^\\circ",
+       "en": "Since the sum of the interior angles of a triangle is always $180^\\circ$ ($\\alpha + \\beta + \\gamma = 180^\\circ$), we substitute the values of $\\alpha$ and $\\gamma$ to find $\\beta$.",
+       "ur": "چونکہ مثلث کے اندرونی زاویوں کا مجموعہ ہمیشہ $180^\\circ$ ہوتا ہے ($\\alpha + \\beta + \\gamma = 180^\\circ$)، اس لیے ہم $\\beta$ معلوم کرنے کے لیے $\\alpha$ اور $\\gamma$ کی قیمتیں درج کرتے ہیں۔",
        "check": [
+        "32 + 48 == 80",
         "180 - 80 == 100"
        ]
       },
       {
-       "math": "a = \\frac{c\\sin\\alpha}{\\sin\\gamma} = \\frac{81\\sin 32^\\circ}{\\sin 48^\\circ} = 57.8",
-       "en": "Law of sines.",
-       "ur": "قانون جیب۔",
+       "math": "\\frac{a}{\\sin\\alpha} = \\frac{b}{\\sin\\beta} = \\frac{c}{\\sin\\gamma}",
+       "en": "Now, we apply the Law of Sines to find the unknown sides $a$ and $b$.",
+       "ur": "اب، ہم نامعلوم اضلاع $a$ اور $b$ معلوم کرنے کے لیے قانونِ جیب (Law of Sines) کا استعمال کرتے ہیں۔"
+      },
+      {
+       "math": "a = \\frac{c\\sin\\alpha}{\\sin\\gamma} = \\frac{81\\sin 32^\\circ}{\\sin 48^\\circ} \\approx 57.8\\text{ cm}",
+       "en": "Using the relation $\\frac{a}{\\sin\\alpha} = \\frac{c}{\\sin\\gamma}$, we substitute $c = 81$, $\\alpha = 32^\\circ$, and $\\gamma = 48^\\circ$ to calculate side $a$.",
+       "ur": "تعلق $\\frac{a}{\\sin\\alpha} = \\frac{c}{\\sin\\gamma}$ کو استعمال کرتے ہوئے، ہم ضلع $a$ معلوم کرنے کے لیے $c = 81$، $\\alpha = 32^\\circ$ اور $\\gamma = 48^\\circ$ درج کرتے ہیں۔",
        "check": [
         "Abs((81*sin((32)*pi/180)/sin((48)*pi/180)) - 57.8) <= 0.050000001"
        ]
       },
       {
-       "math": "b = \\frac{c\\sin\\beta}{\\sin\\gamma} = \\frac{81\\sin 100^\\circ}{\\sin 48^\\circ} = 107.3",
-       "en": "Law of sines.",
-       "ur": "قانون جیب۔",
+       "math": "b = \\frac{c\\sin\\beta}{\\sin\\gamma} = \\frac{81\\sin 100^\\circ}{\\sin 48^\\circ} \\approx 107.3\\text{ cm}",
+       "en": "Similarly, using $\\frac{b}{\\sin\\beta} = \\frac{c}{\\sin\\gamma}$, we substitute $c = 81$, $\\beta = 100^\\circ$, and $\\gamma = 48^\\circ$ to calculate side $b$.",
+       "ur": "اسی طرح، $\\frac{b}{\\sin\\beta} = \\frac{c}{\\sin\\gamma}$ کو استعمال کرتے ہوئے، ہم ضلع $b$ معلوم کرنے کے لیے $c = 81$، $\\beta = 100^\\circ$ اور $\\gamma = 48^\\circ$ درج کرتے ہیں۔",
        "check": [
+        "Abs((81*sin((100)*pi/180)/sin((48)*pi/180)) - 107.3) <= 0.050000001"
+       ]
+      },
+      {
+       "math": "\\beta = 100^\\circ, \\quad a = 57.8\\text{ cm}, \\quad b = 107.3\\text{ cm}",
+       "en": "Thus, all the unknown elements of the triangle $ABC$ have been found.",
+       "ur": "اس طرح مثلث $ABC$ کے تمام نامعلوم اجزاء معلوم ہو گئے ہیں۔",
+       "check": [
+        "180 - 80 == 100",
+        "Abs((81*sin((32)*pi/180)/sin((48)*pi/180)) - 57.8) <= 0.050000001",
         "Abs((81*sin((100)*pi/180)/sin((48)*pi/180)) - 107.3) <= 0.050000001"
        ]
       }
      ],
      "answer": "$\\beta = 100^\\circ,\\ a = 57.8,\\ b = 107.3$ cm",
+     "enriched": true,
      "book_key": "\\beta=100, a=57.8, b=107.3"
     }
    ],

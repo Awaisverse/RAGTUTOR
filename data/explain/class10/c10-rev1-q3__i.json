@@ -1,0 +1,40 @@
+{
+ "item": "c10-rev1-q3",
+ "label": "i",
+ "answer_ref": "$i$",
+ "math": [
+  "i^{37}",
+  "i^{37} = i^{36 + 1} = i^{36} \\cdot i^1",
+  "= (i^2)^{18} \\cdot i",
+  "= (-1)^{18} \\cdot i",
+  "= (1) \\cdot i = i"
+ ],
+ "why": [
+  {
+   "en": "In complex numbers, our main tool for simplifying large powers of the imaginary unit $i$ is the fundamental definition $i^2 = -1$. Keeping this rule in mind shows us that our goal is to rewrite the exponent $37$ in terms of $2$.",
+   "ur": "مختلط اعداد (complex numbers) میں، خیالی اکائی $i$ کی بڑی طاقتوں کو مختصر کرنے کے لیے ہمارا سب سے اہم اصول بنیادی تعریف $i^2 = -1$ ہے۔ اس اصول کو ذہن میں رکھنے سے ہمیں پتہ چلتا ہے کہ ہمارا مقصد قوت نما $37$ کو $2$ کے لحاظ سے لکھنا ہے۔"
+  },
+  {
+   "en": "Since $37$ is an odd number and cannot be divided evenly by $2$, we use the product law of exponents ($a^{m+n} = a^m \\cdot a^n$) to split it into $36$ and $1$. This gives us an even power, $i^{36}$, which is much easier to handle, along with a single $i^1$.",
+   "ur": "چونکہ $37$ ایک طاق عدد ہے اور $2$ پر پورا تقسیم نہیں ہو سکتا، اس لیے ہم قوت نماؤں کے ضرب کے قانون ($a^{m+n} = a^m \\cdot a^n$) کو استعمال کرتے ہوئے اسے $36$ اور $1$ میں توڑ لیتے ہیں۔ اس سے ہمیں ایک جفت طاقت $i^{36}$ مل جاتی ہے جسے حل کرنا بہت آسان ہے، اور ساتھ میں ایک اکیلا $i^1$ بچتا ہے۔"
+  },
+  {
+   "en": "Here we apply the power of a power rule, $(a^m)^n = a^{m \\times n}$, to rewrite $i^{36}$ with $i^2$ as the base because $36 = 2 \\times 18$. Doing this directly sets up the expression so we can replace $i^2$ with its known real value in the next step.",
+   "ur": "یہاں ہم طاقت کی طاقت کا قانون $(a^m)^n = a^{m \\times n}$ لاگو کر کے $i^{36}$ کو $i^2$ کی بنیاد (base) کے طور پر لکھتے ہیں کیونکہ $36 = 2 \\times 18$ ہوتا ہے۔ ایسا کرنے سے ہماری عبارت بالکل تیار ہو جاتی ہے تاکہ ہم اگلے مرحلے میں $i^2$ کی جگہ اس کی معلوم حقیقی قیمت درج کر سکیں۔"
+  },
+  {
+   "en": "By substituting the definition $i^2 = -1$, we eliminate the imaginary unit from the high power of $18$. This turns the complicated part of our problem into simple arithmetic with $-1$.",
+   "ur": "تعریف $i^2 = -1$ درج کرنے سے، ہم $18$ کی بڑی طاقت سے خیالی اکائی کو ختم کر دیتے ہیں۔ اس سے ہمارے سوال کا مشکل حصہ $-1$ کے ساتھ ایک سادہ حساب میں بدل جاتا ہے۔"
+  },
+  {
+   "en": "A negative number raised to an even power is always positive, so $(-1)^{18}$ simply becomes $1$. Multiplying $1$ by $i$ leaves us with the simplest form of the expression.",
+   "ur": "ایک منفی عدد کی طاقت اگر جفت عدد ہو تو جواب ہمیشہ مثبت آتا ہے، اس لیے $(-1)^{18}$ سادہ ہو کر $1$ بن جاتا ہے۔ $1$ کو $i$ سے ضرب دینے پر ہمیں عبارت کی مختصر ترین شکل حاصل ہو جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $i$ tells us that multiplying the imaginary unit $i$ by itself $37$ times brings us right back to $i$, because powers of $i$ repeat in a cycle of four and $36$ is a multiple of $4$ ($36 + 1 = 37$).",
+  "ur": "آخری جواب $i$ ہمیں بتاتا ہے کہ خیالی اکائی $i$ کو اپنے آپ سے $37$ بار ضرب دینے سے ہمیں واپس $i$ ہی ملتا ہے، کیونکہ $i$ کی طاقتیں ہر چار کے چکر کے بعد دہرائی جاتی ہیں اور $36$ چار کے پہاڑے میں آتا ہے ($36 + 1 = 37$)۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

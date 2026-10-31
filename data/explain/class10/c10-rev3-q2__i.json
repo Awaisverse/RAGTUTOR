@@ -1,0 +1,45 @@
+{
+ "item": "c10-rev3-q2",
+ "label": "i",
+ "answer_ref": "$\\begin{bmatrix} -1 & -1 \\\\ -3 & -2 \\end{bmatrix}$",
+ "math": [
+  "",
+  "A - B = \\begin{bmatrix} 4 & 2 \\\\ 7 & 6 \\end{bmatrix} - \\begin{bmatrix} 5 & 5 \\\\ 8 & 8 \\end{bmatrix}",
+  "A - B = \\begin{bmatrix} 4 - 5 & 2 - 5 \\\\ 7 - 8 & 6 - 8 \\end{bmatrix}",
+  "A - B = \\begin{bmatrix} -1 & -3 \\\\ -1 & -2 \\end{bmatrix}",
+  "(A - B)^t = \\begin{bmatrix} -1 & -3 \\\\ -1 & -2 \\end{bmatrix}^t",
+  "(A - B)^t = \\begin{bmatrix} -1 & -1 \\\\ -3 & -2 \\end{bmatrix}"
+ ],
+ "why": [
+  {
+   "en": "In algebra, we always solve the brackets first before applying any outside operation. So, to find $(A - B)^t$, our clear plan is to first find the difference matrix $A - B$ and then take its transpose.",
+   "ur": "الجبرا میں ہم ہمیشہ باہر والا عمل کرنے سے پہلے بریکٹ کو حل کرتے ہیں۔ اس لیے $(A - B)^t$ معلوم کرنے کے لیے ہمارا منصوبہ یہ ہے کہ پہلے تفریق والا قالب $A - B$ معلوم کریں اور پھر اس کا ٹرانسپوز لیں۔"
+  },
+  {
+   "en": "We replace the names $A$ and $B$ with their actual $2 \\times 2$ matrices so we can clearly see all the numbers in front of us. This sets up the subtraction problem neatly and prevents mistakes.",
+   "ur": "ہم $A$ اور $B$ کی جگہ ان کے دیے گئے $2 \\times 2$ کے قالب رکھتے ہیں تاکہ تمام اعداد واضح طور پر ہمارے سامنے آ جائیں۔ اس سے تفریق کا عمل آسان ہو جاتا ہے اور غلطی کا امکان کم رہتا ہے۔"
+  },
+  {
+   "en": "By the rule of matrix subtraction, two matrices of the same order ($2 \\times 2$) are subtracted by subtracting their corresponding entries. Pairing up the numbers in matching positions like $4 - 5$ and $2 - 5$ prepares each spot for simple arithmetic.",
+   "ur": "قالبوں کی تفریق کے اصول کے مطابق، یکساں مرتبے ($2 \\times 2$) کے دو قالبوں کو ان کے متناظرہ ارکان کو تفریق کر کے حل کیا جاتا ہے۔ ایک جیسی جگہوں پر موجود اعداد جیسے $4 - 5$ اور $2 - 5$ کو آمنے سامنے لکھنے سے حساب لگانا آسان ہو جاتا ہے۔"
+  },
+  {
+   "en": "Doing the simple subtraction in each position gives us the single matrix $A - B = \\begin{bmatrix} -1 & -3 \\\\ -1 & -2 \\end{bmatrix}$. Now the bracket part of our question is completely solved, and we have one matrix ready for the transpose.",
+   "ur": "ہر جگہ پر سادہ تفریق کرنے سے ہمیں ایک نیا قالب $A - B = \\begin{bmatrix} -1 & -3 \\\\ -1 & -2 \\end{bmatrix}$ مل جاتا ہے۔ اب ہمارے سوال کے بریکٹ والا حصہ مکمل طور پر حل ہو چکا ہے، اور ہمارے پاس ٹرانسپوز لینے کے لیے ایک قالب تیار ہے۔"
+  },
+  {
+   "en": "Now we apply the outside operation $t$ (transpose) to the result of our bracket. Putting the $t$ on the matrix $\\begin{bmatrix} -1 & -3 \\\\ -1 & -2 \\end{bmatrix}$ reminds us that our final task is to interchange its rows and columns.",
+   "ur": "اب ہم بریکٹ کے جواب پر باہر والا عمل یعنی $t$ (ٹرانسپوز) لگاتے ہیں۔ قالب $\\begin{bmatrix} -1 & -3 \\\\ -1 & -2 \\end{bmatrix}$ کے اوپر $t$ لکھنے سے ہمیں یاد رہتا ہے کہ ہمارا آخری کام اس کی قطاروں اور کالموں کو آپس میں بدلنا ہے۔"
+  },
+  {
+   "en": "By definition, the transpose of a matrix is found by turning each row into a column. Turning the first row $\\begin{bmatrix} -1 & -3 \\end{bmatrix}$ into the first column and the second row $\\begin{bmatrix} -1 & -2 \\end{bmatrix}$ into the second column gives us our final required matrix.",
+   "ur": "تعریف کے مطابق، کسی قالب کا ٹرانسپوز اس کی ہر قطار کو کالم میں بدلنے سے حاصل ہوتا ہے۔ پہلی قطار $\\begin{bmatrix} -1 & -3 \\end{bmatrix}$ کو پہلا کالم اور دوسری قطار $\\begin{bmatrix} -1 & -2 \\end{bmatrix}$ کو دوسرا کالم بنانے سے ہمیں ہمارا مطلوبہ حتمی قالب مل جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final matrix $\\begin{bmatrix} -1 & -1 \\\\ -3 & -2 \\end{bmatrix}$ is the transpose of the difference between $A$ and $B$, which completes part (i). You can easily check this answer by taking its transpose again—turning the rows back into columns gives $\\begin{bmatrix} -1 & -3 \\\\ -1 & -2 \\end{bmatrix}$, which matches our $A - B$ from Step 4.",
+  "ur": "حتمی قالب $\\begin{bmatrix} -1 & -1 \\\\ -3 & -2 \\end{bmatrix}$ دراصل $A$ اور $B$ کے فرق کا ٹرانسپوز ہے، جس سے جزو (i) مکمل ہوتا ہے۔ آپ اس جواب کی پڑتال دوبارہ اس کا ٹرانسپوز لے کر باآسانی کر سکتے ہیں—قطاروں کو واپس کالموں میں بدلنے سے $\\begin{bmatrix} -1 & -3 \\\\ -1 & -2 \\end{bmatrix}$ بنتا ہے، جو بالکل چوتھے مرحلے والے ہمارے $A - B$ کے برابر ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

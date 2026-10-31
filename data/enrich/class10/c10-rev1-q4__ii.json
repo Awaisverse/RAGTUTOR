@@ -1,0 +1,53 @@
+{
+ "item": "c10-rev1-q4",
+ "label": "ii",
+ "answer_ref": "$\\frac{8}{145} - \\frac{9}{145}i$",
+ "steps": [
+  {
+   "math": "z = 8 + 9i \\implies a = 8, \\quad b = 9",
+   "en": "Write the given complex number $z = 8 + 9i$ and compare it with the standard form $z = a + bi$ to identify the real part $a$ and imaginary part $b$.",
+   "ur": "دیے گئے مخلوط عدد $z = 8 + 9i$ کو معیاری شکل $z = a + bi$ سے موازنہ کر کے حقیقی حصہ $a$ اور خیالی حصہ $b$ الگ کریں۔",
+   "check": [
+    "8 + 9*I == 8 + 9*I"
+   ]
+  },
+  {
+   "math": "z^{-1} = \\frac{a}{a^2+b^2} - \\frac{b}{a^2+b^2}i",
+   "en": "State the formula for the multiplicative inverse $z^{-1}$ of a complex number $z = a + bi$.",
+   "ur": "کسی مخلوط عدد $z = a + bi$ کا ضربی معکوس $z^{-1}$ معلوم کرنے کا فارمولا لکھیں۔"
+  },
+  {
+   "math": "a^2 + b^2 = (8)^2 + (9)^2",
+   "en": "First, substitute $a = 8$ and $b = 9$ to find the denominator $a^2 + b^2$.",
+   "ur": "سب سے پہلے، مخرج $a^2 + b^2$ کی قیمت نکالنے کے لیے $a = 8$ اور $b = 9$ درج کریں۔",
+   "check": [
+    "(8)**2 + (9)**2 == 145"
+   ]
+  },
+  {
+   "math": "a^2 + b^2 = 64 + 81 = 145",
+   "en": "Calculate the squares and add them together.",
+   "ur": "مربع لیں اور انہیں آپس میں جمع کریں۔",
+   "check": [
+    "(8)**2 == 64",
+    "(9)**2 == 81",
+    "64 + 81 == 145"
+   ]
+  },
+  {
+   "math": "z^{-1} = \\frac{8}{145} - \\frac{9}{145}i",
+   "en": "Now substitute $a = 8$, $b = 9$, and $a^2 + b^2 = 145$ into the multiplicative inverse formula to get the final answer.",
+   "ur": "اب ضربی معکوس کے فارمولے میں $a = 8$، $b = 9$ اور $a^2 + b^2 = 145$ درج کر کے حتمی جواب حاصل کریں۔",
+   "check": [
+    "1/(8 + 9*I) == R(8, 145) - R(9, 145)*I",
+    "(8 + 9*I)*(R(8, 145) - R(9, 145)*I) == 1",
+    "(8)**2 + (9)**2 == (145)",
+    "1/(8 + 9*I) == (8/145 - 9*I/145)",
+    "(8 + 9*I)*(8/145 - 9*I/145) == 1"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

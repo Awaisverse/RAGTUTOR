@@ -1,0 +1,60 @@
+{
+ "item": "c10-ex8.2-q1",
+ "label": "",
+ "answer_ref": "$x = 145^\\circ$",
+ "steps": [
+  {
+   "math": "m\\overline{PQ} = m\\overline{QR} = m\\overline{RS} = m\\overline{ST} \\quad \\text{and} \\quad m\\angle POT = 70^\\circ",
+   "en": "First, write down the given information from the figure.",
+   "ur": "سب سے پہلے، دی گئی شکل سے معلوم معلومات لکھیں۔"
+  },
+  {
+   "math": "m\\angle POQ = m\\angle QOR = m\\angle ROS = m\\angle SOT = \\theta",
+   "en": "According to the theorem, equal chords of a circle subtend equal angles at the centre $O$. Let each of these four equal central angles be $\\theta$.",
+   "ur": "مسئلہ کے مطابق، دائرے کے برابر وتر مرکز $O$ پر برابر زاویے بناتے ہیں۔ فرض کریں کہ ان چار برابر مرکزی زاویوں میں سے ہر ایک $\\theta$ ہے۔"
+  },
+  {
+   "math": "m\\angle POT + m\\angle POQ + m\\angle QOR + m\\angle ROS + m\\angle SOT = 360^\\circ",
+   "en": "The sum of all angles around the centre of a circle is always $360^\\circ$.",
+   "ur": "دائرے کے مرکز کے گرد تمام زاویوں کا مجموعہ ہمیشہ $360^\\circ$ ہوتا ہے۔"
+  },
+  {
+   "math": "70^\\circ + \\theta + \\theta + \\theta + \\theta = 360^\\circ \\Rightarrow 70^\\circ + 4\\theta = 360^\\circ",
+   "en": "Substitute the given angle $70^\\circ$ and $\\theta$ for each of the four equal angles.",
+   "ur": "دیے گئے زاویے کی قیمت $70^\\circ$ اور چاروں برابر زاویوں کی جگہ $\\theta$ درج کریں۔",
+   "check": [
+    "1 + 1 + 1 + 1 == 4"
+   ]
+  },
+  {
+   "math": "4\\theta = 360^\\circ - 70^\\circ = 290^\\circ \\Rightarrow \\theta = \\frac{290^\\circ}{4} = 72.5^\\circ",
+   "en": "Subtract $70^\\circ$ from $360^\\circ$ and divide by $4$ to find the value of $\\theta$.",
+   "ur": "$360^\\circ$ میں سے $70^\\circ$ تفریق کریں اور $\\theta$ کی قیمت معلوم کرنے کے لیے $4$ پر تقسیم کریں۔",
+   "check": [
+    "360 - 70 == 290",
+    "R(290, 4) == R(145, 2)"
+   ]
+  },
+  {
+   "math": "x = m\\angle TOR = m\\angle SOT + m\\angle ROS = 2\\theta",
+   "en": "From the figure, the required angle $x$ ($m\\angle TOR$) is the sum of the two central angles subtended by chords $\\overline{ST}$ and $\\overline{RS}$.",
+   "ur": "شکل کے مطابق، مطلوبہ زاویہ $x$ ($m\\angle TOR$) دو وتروں $\\overline{ST}$ اور $\\overline{RS}$ کے بنائے گئے مرکزی زاویوں کا مجموعہ ہے۔",
+   "check": [
+    "1 + 1 == 2"
+   ]
+  },
+  {
+   "math": "x = 2(72.5^\\circ) = 145^\\circ",
+   "en": "Substitute $\\theta = 72.5^\\circ$ to get the final value of $x$.",
+   "ur": "$x$ کی حتمی قیمت حاصل کرنے کے لیے $\\theta = 72.5^\\circ$ درج کریں۔",
+   "check": [
+    "2 * R(145, 2) == 145",
+    "(360 - 70)/R(4) == R(145,2)",
+    "2*R(145,2) == 145"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

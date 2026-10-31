@@ -1,0 +1,64 @@
+{
+ "item": "ex1.1-q6",
+ "label": "i",
+ "answer_ref": "$\\frac{7}{24}$ and $\\frac{5}{16}$",
+ "steps": [
+  {
+   "math": "",
+   "en": "To find a rational number between two given numbers $a$ and $b$, we calculate their average using the formula $\\frac{a+b}{2}$. Here, the given numbers are $\\frac{1}{4}$ and $\\frac{1}{3}$.",
+   "ur": "دو دیے گئے اعداد $a$ اور $b$ کے درمیان ایک ناطق عدد معلوم کرنے کے لیے، ہم فارمولہ $\\frac{a+b}{2}$ استعمال کرتے ہوئے ان کا اوسط نکالتے ہیں۔ یہاں دیے گئے اعداد $\\frac{1}{4}$ اور $\\frac{1}{3}$ ہیں۔"
+  },
+  {
+   "math": "\\frac{\\frac{1}{4} + \\frac{1}{3}}{2} = \\frac{\\frac{3 + 4}{12}}{2}",
+   "en": "Substitute $\\frac{1}{4}$ and $\\frac{1}{3}$ into the formula to find the first rational number, taking the LCM of $4$ and $3$ which is $12$.",
+   "ur": "پہلا ناطق عدد معلوم کرنے کے لیے فارمولے میں $\\frac{1}{4}$ اور $\\frac{1}{3}$ درج کریں، اور $4$ اور $3$ کا ذواضعاف اقل (LCM) لیں جو کہ $12$ ہے۔",
+   "check": [
+    "(R(1,4) + R(1,3))/2 == (R(3 + 4, 12))/2"
+   ]
+  },
+  {
+   "math": "\\frac{\\frac{7}{12}}{2} = \\frac{7}{12 \\times 2} = \\frac{7}{24}",
+   "en": "Simplify the fraction to get the first rational number.",
+   "ur": "پہلا ناطق عدد حاصل کرنے کے لیے کسر کو مختصر کریں۔",
+   "check": [
+    "R(7,12)/2 == R(7, 12*2)",
+    "R(7, 12*2) == R(7,24)"
+   ]
+  },
+  {
+   "math": "\\frac{\\frac{7}{24} + \\frac{1}{3}}{2} = \\frac{\\frac{7 + 8}{24}}{2}",
+   "en": "To find the second rational number, take the average of the first result $\\frac{7}{24}$ and $\\frac{1}{3}$. The LCM of $24$ and $3$ is $24$.",
+   "ur": "دوسرا ناطق عدد معلوم کرنے کے لیے، پہلے نتیجے $\\frac{7}{24}$ اور $\\frac{1}{3}$ کا اوسط لیں۔ $24$ اور $3$ کا ذواضعاف اقل $24$ ہے۔",
+   "check": [
+    "(R(7,24) + R(1,3))/2 == (R(7 + 8, 24))/2"
+   ]
+  },
+  {
+   "math": "\\frac{\\frac{15}{24}}{2} = \\frac{15}{48} = \\frac{5}{16}",
+   "en": "Simplify the fraction by dividing the numerator and denominator by $3$ to get the second rational number.",
+   "ur": "دوسرا ناطق عدد حاصل کرنے کے لیے شمار کنندہ اور مخرج کو $3$ پر تقسیم کر کے کسر کو مختصر کریں۔",
+   "check": [
+    "R(15,24)/2 == R(15,48)",
+    "R(15,48) == R(5,16)"
+   ]
+  },
+  {
+   "math": "\\frac{1}{4} < \\frac{7}{24} < \\frac{5}{16} < \\frac{1}{3}",
+   "en": "Thus, the two rational numbers between $\\frac{1}{4}$ and $\\frac{1}{3}$ are $\\frac{7}{24}$ and $\\frac{5}{16}$.",
+   "ur": "پس، $\\frac{1}{4}$ اور $\\frac{1}{3}$ کے درمیان دو ناطق اعداد $\\frac{7}{24}$ اور $\\frac{5}{16}$ ہیں۔",
+   "check": [
+    "R(1,4) < R(7,24)",
+    "R(7,24) < R(5,16)",
+    "R(5,16) < R(1,3)",
+    "(Rational(1,4)+Rational(1,3))/2 == Rational(7,24)",
+    "(Rational(7,24)+Rational(1,3))/2 == Rational(5,16)",
+    "Rational(1,4) < Rational(7,24)",
+    "Rational(7,24) < Rational(5,16)",
+    "Rational(5,16) < Rational(1,3)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

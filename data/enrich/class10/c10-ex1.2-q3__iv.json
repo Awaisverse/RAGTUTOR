@@ -1,0 +1,61 @@
+{
+ "item": "c10-ex1.2-q3",
+ "label": "iv",
+ "answer_ref": "$\\frac{\\sqrt{5}}{21} + \\frac{4}{21}i$",
+ "steps": [
+  {
+   "math": "z = \\sqrt{5} - 4i, \\quad a = \\sqrt{5}, \\quad b = -4",
+   "en": "Let the given complex number be $z = a + bi$. Comparing with $\\sqrt{5} - 4i$, we identify the real part $a = \\sqrt{5}$ and the imaginary part $b = -4$.",
+   "ur": "فرض کریں کہ دیا گیا مخلوط عدد $z = a + bi$ ہے۔ $\\sqrt{5} - 4i$ کے ساتھ موازنہ کرنے پر، حقیقی حصہ $a = \\sqrt{5}$ اور خیالی حصہ $b = -4$ ہے۔",
+   "check": [
+    "sqrt(5) - 4*I == sqrt(5) + (-4)*I"
+   ]
+  },
+  {
+   "math": "z^{-1} = \\frac{a}{a^2+b^2} - \\frac{b}{a^2+b^2}i",
+   "en": "Recall the formula for the multiplicative inverse $z^{-1}$ of a non-zero complex number $z = a + bi$.",
+   "ur": "ایک غیر صفری مخلوط عدد $z = a + bi$ کے ضربی معکوس $z^{-1}$ کا فارمولا لکھیں۔"
+  },
+  {
+   "math": "a^2 + b^2 = (\\sqrt{5})^2 + (-4)^2",
+   "en": "First, substitute the values of $a$ and $b$ to find the denominator $a^2 + b^2$.",
+   "ur": "سب سے پہلے، مخرج $a^2 + b^2$ معلوم کرنے کے لیے $a$ اور $b$ کی قیمتیں درج کریں۔",
+   "check": [
+    "(sqrt(5))**2 + (-4)**2 == 21"
+   ]
+  },
+  {
+   "math": "a^2 + b^2 = 5 + 16 = 21",
+   "en": "Simplify the squares and add them together.",
+   "ur": "مربع کو حل کریں اور انہیں آپس میں جمع کریں۔",
+   "check": [
+    "(sqrt(5))**2 == 5",
+    "(-4)**2 == 16",
+    "5 + 16 == 21"
+   ]
+  },
+  {
+   "math": "z^{-1} = \\frac{\\sqrt{5}}{21} - \\frac{-4}{21}i",
+   "en": "Substitute $a = \\sqrt{5}$, $b = -4$, and $a^2 + b^2 = 21$ into the multiplicative inverse formula.",
+   "ur": "ضربی معکوس کے فارمولے میں $a = \\sqrt{5}$، $b = -4$، اور $a^2 + b^2 = 21$ کی قیمتیں درج کریں۔",
+   "check": [
+    "sqrt(5)/21 - (-4)/21*I == 1/(sqrt(5) - 4*I)"
+   ]
+  },
+  {
+   "math": "z^{-1} = \\frac{\\sqrt{5}}{21} + \\frac{4}{21}i",
+   "en": "Simplify the signs to get the final multiplicative inverse.",
+   "ur": "علامتوں کو سادہ کر کے حتمی ضربی معکوس حاصل کریں۔",
+   "check": [
+    "sqrt(5)/21 - (-4)/21*I == sqrt(5)/21 + R(4,21)*I",
+    "(sqrt(5) - 4*I)*(sqrt(5)/21 + R(4,21)*I) == 1",
+    "(sqrt(5))**2 + (-4)**2 == (21)",
+    "1/(sqrt(5) - 4*I) == (1/(sqrt(5) - 4*I))",
+    "(sqrt(5) - 4*I)*(1/(sqrt(5) - 4*I)) == 1"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

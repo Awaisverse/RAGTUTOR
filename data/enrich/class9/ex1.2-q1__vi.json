@@ -1,0 +1,69 @@
+{
+ "item": "ex1.2-q1",
+ "label": "vi",
+ "answer_ref": "$2\\sqrt{3}(\\sqrt{7}-\\sqrt{5})$",
+ "steps": [
+  {
+   "math": "\\frac{4\\sqrt{3}}{\\sqrt{7}+\\sqrt{5}}",
+   "en": "Write the given expression. To rationalize the denominator, we need to eliminate the square roots from the denominator.",
+   "ur": "دی گئی عبارت لکھیں۔ نسب نما کو ناطق بنانے کے لیے ہمیں نسب نما سے جذر المربع کو ختم کرنا ہوگا۔"
+  },
+  {
+   "math": "= \\frac{4\\sqrt{3}}{\\sqrt{7}+\\sqrt{5}} \\times \\frac{\\sqrt{7}-\\sqrt{5}}{\\sqrt{7}-\\sqrt{5}}",
+   "en": "Multiply both the numerator and the denominator by the conjugate of the denominator, which is $\\sqrt{7}-\\sqrt{5}$.",
+   "ur": "شمار کنندہ اور نسب نما دونوں کو نسب نما کے مزدوج یعنی $\\sqrt{7}-\\sqrt{5}$ سے ضرب دیں۔",
+   "check": [
+    "4*sqrt(3)/(sqrt(7)+sqrt(5)) == (4*sqrt(3)/(sqrt(7)+sqrt(5))) * ((sqrt(7)-sqrt(5))/(sqrt(7)-sqrt(5)))"
+   ]
+  },
+  {
+   "math": "= \\frac{4\\sqrt{3}(\\sqrt{7}-\\sqrt{5})}{(\\sqrt{7}+\\sqrt{5})(\\sqrt{7}-\\sqrt{5})}",
+   "en": "Combine the numerators and denominators into a single fraction.",
+   "ur": "شمار کنندہ اور نسب نما کو ایک ہی کسر میں یکجا کریں۔",
+   "check": [
+    "(4*sqrt(3)/(sqrt(7)+sqrt(5))) * ((sqrt(7)-sqrt(5))/(sqrt(7)-sqrt(5))) == (4*sqrt(3)*(sqrt(7)-sqrt(5)))/((sqrt(7)+sqrt(5))*(sqrt(7)-sqrt(5)))"
+   ]
+  },
+  {
+   "math": "= \\frac{4\\sqrt{3}(\\sqrt{7}-\\sqrt{5})}{(\\sqrt{7})^2-(\\sqrt{5})^2}",
+   "en": "Apply the algebraic identity $(a+b)(a-b) = a^2-b^2$ in the denominator, where $a = \\sqrt{7}$ and $b = \\sqrt{5}$.",
+   "ur": "نسب نما میں الجبری کلیہ $(a+b)(a-b) = a^2-b^2$ لاگو کریں، جہاں $a = \\sqrt{7}$ اور $b = \\sqrt{5}$ ہے۔",
+   "check": [
+    "(4*sqrt(3)*(sqrt(7)-sqrt(5)))/((sqrt(7)+sqrt(5))*(sqrt(7)-sqrt(5))) == (4*sqrt(3)*(sqrt(7)-sqrt(5)))/(sqrt(7)**2 - sqrt(5)**2)"
+   ]
+  },
+  {
+   "math": "= \\frac{4\\sqrt{3}(\\sqrt{7}-\\sqrt{5})}{7-5}",
+   "en": "Simplify the squares in the denominator since $(\\sqrt{7})^2 = 7$ and $(\\sqrt{5})^2 = 5$.",
+   "ur": "نسب نما میں مربعوں کو مختصر کریں کیونکہ $(\\sqrt{7})^2 = 7$ اور $(\\sqrt{5})^2 = 5$ ہوتا ہے۔",
+   "check": [
+    "sqrt(7)**2 == 7",
+    "sqrt(5)**2 == 5",
+    "(4*sqrt(3)*(sqrt(7)-sqrt(5)))/(sqrt(7)**2 - sqrt(5)**2) == (4*sqrt(3)*(sqrt(7)-sqrt(5)))/(7 - 5)"
+   ]
+  },
+  {
+   "math": "= \\frac{4\\sqrt{3}(\\sqrt{7}-\\sqrt{5})}{2}",
+   "en": "Subtract $5$ from $7$ in the denominator.",
+   "ur": "نسب نما میں $7$ میں سے $5$ تفریق کریں۔",
+   "check": [
+    "7 - 5 == 2",
+    "(4*sqrt(3)*(sqrt(7)-sqrt(5)))/(7 - 5) == (4*sqrt(3)*(sqrt(7)-sqrt(5)))/2"
+   ]
+  },
+  {
+   "math": "= 2\\sqrt{3}(\\sqrt{7}-\\sqrt{5})",
+   "en": "Divide $4$ by $2$ to get the final simplified expression with a rational denominator.",
+   "ur": "ناطق نسب نما کے ساتھ حتمی مختصر عبارت حاصل کرنے کے لیے $4$ کو $2$ پر تقسیم کریں۔",
+   "check": [
+    "(4*sqrt(3)*(sqrt(7)-sqrt(5)))/2 == 2*sqrt(3)*(sqrt(7)-sqrt(5))",
+    "4*sqrt(3)/(sqrt(7)+sqrt(5)) == 4*sqrt(3)*(sqrt(7)-sqrt(5))/(7-5)",
+    "sqrt(7)**2 - sqrt(5)**2 == 2",
+    "4*sqrt(3)*(sqrt(7)-sqrt(5))/2 == 2*sqrt(3)*(sqrt(7)-sqrt(5))"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

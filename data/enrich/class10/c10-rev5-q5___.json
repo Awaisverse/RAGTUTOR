@@ -1,0 +1,56 @@
+{
+ "item": "c10-rev5-q5",
+ "label": "",
+ "answer_ref": "$\\approx 3.16$ hours",
+ "steps": [
+  {
+   "math": "",
+   "en": "First, we find the individual work rate (glasses painted per hour) for both Ahmad and Faiza by dividing the number of glasses by the time taken.",
+   "ur": "سب سے پہلے، ہم گلاسوں کی تعداد کو لگنے والے وقت پر تقسیم کر کے احمد اور فائزہ دونوں کے کام کرنے کی انفرادی شرح (فی گھنٹہ رنگے گئے گلاس) معلوم کرتے ہیں۔"
+  },
+  {
+   "math": "\\text{Ahmad's rate} = \\frac{50}{2} = 25 \\text{ glasses per hour}",
+   "en": "Ahmad paints $50$ glasses in $2$ hours, so his rate per hour is:",
+   "ur": "احمد $2$ گھنٹے میں $50$ گلاس رنگتا ہے، اس لیے اس کی فی گھنٹہ شرح یہ ہے:",
+   "check": [
+    "R(50,2) == 25"
+   ]
+  },
+  {
+   "math": "\\text{Faiza's rate} = \\frac{45}{2} = 22.5 \\text{ glasses per hour}",
+   "en": "Faiza paints $45$ glasses in $2$ hours, so her rate per hour is:",
+   "ur": "فائزہ $2$ گھنٹے میں $45$ گلاس رنگتی ہے، اس لیے اس کی فی گھنٹہ شرح یہ ہے:",
+   "check": [
+    "R(45,2) == R(45,2)"
+   ]
+  },
+  {
+   "math": "\\text{Combined rate} = \\frac{50}{2} + \\frac{45}{2} = 25 + 22.5 = 47.5 \\text{ glasses per hour}",
+   "en": "When they work together, we add their individual rates to find their combined rate.",
+   "ur": "جب وہ اکٹھے کام کرتے ہیں، تو ہم ان کی مشترکہ شرح معلوم کرنے کے لیے ان کی انفرادی شرحوں کو جمع کرتے ہیں۔",
+   "check": [
+    "R(50,2) + R(45,2) == R(95,2)"
+   ]
+  },
+  {
+   "math": "\\text{Time} = \\frac{\\text{Total Work}}{\\text{Combined Rate}} = \\frac{150}{47.5} = \\frac{60}{19} \\approx 3.16 \\text{ hours}",
+   "en": "To find the time required to paint $150$ glasses together, we divide the total work by their combined rate.",
+   "ur": "اکٹھے $150$ گلاس رنگنے کے لیے درکار وقت معلوم کرنے کے لیے، ہم کل کام کو ان کی مشترکہ شرح پر تقسیم کرتے ہیں۔",
+   "check": [
+    "150/R(95,2) == R(60,19)"
+   ]
+  },
+  {
+   "math": "",
+   "en": "Thus, working together, it will take them approximately $3.16$ hours to paint $150$ glasses.",
+   "ur": "چنانچہ، اکٹھے کام کرتے ہوئے انہیں $150$ گلاس رنگنے میں تقریباً $3.16$ گھنٹے لگیں گے۔",
+   "check": [
+    "R(50,2) + R(45,2) == R(95,2)",
+    "150/R(95,2) == R(60,19)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

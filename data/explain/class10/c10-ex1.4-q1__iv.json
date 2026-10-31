@@ -1,0 +1,50 @@
+{
+ "item": "c10-ex1.4-q1",
+ "label": "iv",
+ "answer_ref": "$\\operatorname{Re} = \\frac{7}{625},\\ \\operatorname{Im} = \\frac{24}{625}$",
+ "math": [
+  "\\left(4 - 3i\\right)^2 = (4)^2 + 2(4)(-3i) + (-3i)^2",
+  "= 16 - 24i - 9 = 7 - 24i",
+  "\\left(7 - 24i\\right)^{-1} = \\frac{1}{7 - 24i}",
+  "\\frac{1}{7 - 24i} \\times \\frac{7 + 24i}{7 + 24i}",
+  "= \\frac{7 + 24i}{7^2 + 24^2} = \\frac{7 + 24i}{625}",
+  "= \\frac{7}{625} + \\frac{24}{625}i",
+  "\\operatorname{Re}(z) = \\frac{7}{625}, \\quad \\operatorname{Im}(z) = \\frac{24}{625}"
+ ],
+ "why": [
+  {
+   "en": "To handle the power of $-2$ on $(4-3i)^{-2}$, we first calculate the square $(4-3i)^2$ using the familiar algebraic expansion formula. This breaks the bracket down into separate terms so we can simplify the complex number before taking its reciprocal.",
+   "ur": "$(4-3i)^{-2}$ میں قوت نما $-2$ کو حل کرنے کے لیے ہم پہلے عام الجبری کلیے کی مدد سے $(4-3i)^2$ کا مربع کھولتے ہیں۔ اس سے بریکٹ کھل کر الگ الگ رقوم بن جاتی ہیں جس سے الٹ لینے سے پہلے مخلوط عدد کو مختصر کرنا آسان ہو جاتا ہے۔"
+  },
+  {
+   "en": "By the basic definition of the imaginary unit, $i^2$ is always equal to $-1$, which turns the $(-3i)^2$ term into a real number $-9$. Combining the real numbers $16$ and $-9$ gives us a neat single complex number, $7 - 24i$, as the result of the squaring.",
+   "ur": "خیالی اکائی کی بنیادی تعریف کے مطابق $i^2$ ہمیشہ $-1$ کے برابر ہوتا ہے، جس کی وجہ سے $(-3i)^2$ کی رقم ایک حقیقی عدد $-9$ بن جاتی ہے۔ حقیقی اعداد $16$ اور $-9$ کو ملانے سے ہمیں مربع کے نتیجے کے طور پر ایک سادہ مخلوط عدد $7 - 24i$ مل جاتا ہے۔"
+  },
+  {
+   "en": "Now we apply the negative part of our original exponent $-2$, using the law of exponents where a power of $-1$ means taking the multiplicative inverse. This places $7 - 24i$ in the denominator of a fraction.",
+   "ur": "اب ہم اپنے اصل قوت نما $-2$ کے منفی حصے کو لاگو کرتے ہیں، جس کے اصول کے مطابق قوت نما $-1$ کا مطلب ضربی معکوس (الٹ) لینا ہے۔ اس سے $7 - 24i$ ایک کسر کے مخرج (نچلے حصے) میں چلا جاتا ہے۔"
+  },
+  {
+   "en": "To find the real and imaginary parts, we cannot leave $i$ in the denominator, so we rationalize it using the complex conjugate $7 + 24i$. Multiplying both top and bottom by $7 + 24i$ does not change the value of our expression, as it is just like multiplying by $1$.",
+   "ur": "حقیقی اور خیالی حصے معلوم کرنے کے لیے ہم مخرج میں $i$ کو نہیں چھوڑ سکتے، اس لیے ہم مخلوط زوج (conjugate) یعنی $7 + 24i$ کو استعمال کرتے ہیں۔ شمار کنندہ اور مخرج دونوں کو $7 + 24i$ سے ضرب دینے سے رقم کی قیمت تبدیل نہیں ہوتی کیونکہ یہ $1$ سے ضرب دینے کے برابر ہے۔"
+  },
+  {
+   "en": "When a complex number is multiplied by its conjugate, the imaginary parts cancel out completely, leaving the sum of squares $7^2 + 24^2$ in the denominator. This gives a pure real denominator of $625$, successfully moving $i$ only to the numerator.",
+   "ur": "جب کسی مخلوط عدد کو اس کے زوج سے ضرب دی جاتی ہے تو خیالی حصے مکمل طور پر ختم ہو جاتے ہیں اور مخرج میں مربوں کا مجموعہ $7^2 + 24^2$ بچ جاتا ہے۔ اس سے مخرج میں خالص حقیقی عدد $625$ آ جاتا ہے اور $i$ کامیابی سے صرف شمار کنندہ میں رہ جاتا ہے۔"
+  },
+  {
+   "en": "We split the single fraction over the common denominator $625$ into two separate fractions. This writes the complex number in the standard form $a + bi$, clearly separating the term without $i$ from the term with $i$.",
+   "ur": "ہم مشترک مخرج $625$ کو الگ الگ کر کے ایک کسر کو دو کسروں میں بانٹ دیتے ہیں۔ اس طرح یہ مخلوط عدد معیاری شکل $a + bi$ میں آ جاتا ہے، جس سے بغیر $i$ والی رقم اور $i$ والی رقم واضح طور پر الگ ہو جاتی ہیں۔"
+  },
+  {
+   "en": "By the definition of standard form, the standalone number is the real part and the number multiplying $i$ is the imaginary part. Remember that the imaginary part is just the coefficient $\\frac{24}{625}$ itself, without the $i$.",
+   "ur": "معیاری شکل کی تعریف کے مطابق، اکیلا عدد حقیقی حصہ ہوتا ہے اور $i$ کے ساتھ ضرب کھانے والا عدد خیالی حصہ کہلاتا ہے۔ یاد رکھیں کہ خیالی حصہ صرف عددی سر $\\frac{24}{625}$ ہے، اس کے ساتھ $i$ نہیں لکھا جاتا۔"
+  }
+ ],
+ "meaning": {
+  "en": "This final result tells us that when the complex expression $(4-3i)^{-2}$ is simplified into standard form, its real part is $\\frac{7}{625}$ and its imaginary part is $\\frac{24}{625}$. Notice how both parts are pure real fractions, which completely answers the question.",
+  "ur": "یہ حتمی جواب ہمیں بتاتا ہے کہ جب مخلوط جملے $(4-3i)^{-2}$ کو مختصر کر کے معیاری شکل میں لکھا جائے تو اس کا حقیقی حصہ $\\frac{7}{625}$ اور خیالی حصہ $\\frac{24}{625}$ ہے۔ غور کریں کہ دونوں حصے خالص حقیقی کسریں ہیں، جو کہ سوال کا مکمل اور درست جواب ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

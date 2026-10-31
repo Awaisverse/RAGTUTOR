@@ -1,0 +1,48 @@
+{
+ "item": "c10-ex5.5-q2",
+ "label": "",
+ "answer_ref": "12 hours",
+ "steps": [
+  {
+   "math": "",
+   "en": "Given that Arshia and Ibraheem complete a job together in $4$ hours, and Arshia alone takes $6$ hours. Let $x$ be the time (in hours) that Ibraheem takes to complete the job alone.",
+   "ur": "دیا گیا ہے کہ عرشیہ اور ابراہیم مل کر ایک کام $4$ گھنٹے میں مکمل کرتے ہیں، اور عرشیہ اکیلے $6$ گھنٹے لیتی ہے۔ فرض کریں کہ ابراہیم کو اکیلے کام مکمل کرنے میں $x$ گھنٹے لگتے ہیں۔"
+  },
+  {
+   "math": "\\text{Arshia's 1 hour work} = \\frac{1}{6}, \\quad \\text{Ibraheem's 1 hour work} = \\frac{1}{x}, \\quad \\text{Combined 1 hour work} = \\frac{1}{4}",
+   "en": "If a person completes a job in $t$ hours, the fraction of work done in $1$ hour (work rate) is $\\frac{1}{t}$.",
+   "ur": "اگر کوئی شخص ایک کام $t$ گھنٹوں میں مکمل کرتا ہے، تو $1$ گھنٹے میں کیے گئے کام کا حصہ (کام کی شرح) $\\frac{1}{t}$ ہوتا ہے۔"
+  },
+  {
+   "math": "\\frac{1}{6} + \\frac{1}{x} = \\frac{1}{4}",
+   "en": "The sum of their individual work rates equals their combined work rate.",
+   "ur": "ان کی انفرادی کام کی شرحوں کا مجموعہ ان کی مشترکہ کام کی شرح کے برابر ہے۔"
+  },
+  {
+   "math": "\\frac{1}{x} = \\frac{1}{4} - \\frac{1}{6}",
+   "en": "Subtract $\\frac{1}{6}$ from both sides to isolate $\\frac{1}{x}$.",
+   "ur": "$\\frac{1}{x}$ کو الگ کرنے کے لیے دونوں طرف سے $\\frac{1}{6}$ تفریق کریں۔"
+  },
+  {
+   "math": "\\frac{1}{x} = \\frac{3 - 2}{12} = \\frac{1}{12}",
+   "en": "Take the LCM of the denominators $4$ and $6$, which is $12$, and simplify the fraction.",
+   "ur": "مخرج $4$ اور $6$ کا ذواضعاف اقل (LCM) لیں جو کہ $12$ ہے، اور کسر کو مختصر کریں۔",
+   "check": [
+    "R(1,4) - R(1,6) == R(3-2, 12)",
+    "R(3-2, 12) == R(1,12)"
+   ]
+  },
+  {
+   "math": "x = 12 \\text{ hours}",
+   "en": "Take the reciprocal on both sides to find $x$. Thus, Ibraheem will take $12$ hours to complete the job alone.",
+   "ur": "$x$ کی قیمت معلوم کرنے کے لیے دونوں طرف معکوس (reciprocal) لیں۔ اس طرح، ابراہیم کو اکیلے کام مکمل کرنے میں $12$ گھنٹے لگیں گے۔",
+   "check": [
+    "R(1,6) + R(1,12) == R(1,4)",
+    "R(1,4) - R(1,6) == R(1,12)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

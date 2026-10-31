@@ -1,0 +1,55 @@
+{
+ "item": "c10-rev7-q3",
+ "label": "ii",
+ "answer_ref": "$\\beta = 100^\\circ,\\ a = 57.8,\\ b = 107.3$ cm",
+ "steps": [
+  {
+   "math": "\\alpha = 32^\\circ, \\quad \\gamma = 48^\\circ, \\quad c = 81\\text{ cm}",
+   "en": "We are given two angles $\\alpha$, $\\gamma$ and one side $c$ of the triangle $ABC$. To solve the triangle, we need to find the remaining angle $\\beta$ and the two sides $a$ and $b$.",
+   "ur": "ہمیں مثلث $ABC$ کے دو زاویے $\\alpha$، $\\gamma$ اور ایک ضلع $c$ دیا گیا ہے۔ مثلث کو حل کرنے کے لیے ہمیں باقی ماندہ زاویہ $\\beta$ اور دو اضلاع $a$ اور $b$ معلوم کرنے ہیں۔"
+  },
+  {
+   "math": "\\beta = 180^\\circ - (\\alpha + \\gamma) = 180^\\circ - (32^\\circ + 48^\\circ) = 180^\\circ - 80^\\circ = 100^\\circ",
+   "en": "Since the sum of the interior angles of a triangle is always $180^\\circ$ ($\\alpha + \\beta + \\gamma = 180^\\circ$), we substitute the values of $\\alpha$ and $\\gamma$ to find $\\beta$.",
+   "ur": "چونکہ مثلث کے اندرونی زاویوں کا مجموعہ ہمیشہ $180^\\circ$ ہوتا ہے ($\\alpha + \\beta + \\gamma = 180^\\circ$)، اس لیے ہم $\\beta$ معلوم کرنے کے لیے $\\alpha$ اور $\\gamma$ کی قیمتیں درج کرتے ہیں۔",
+   "check": [
+    "32 + 48 == 80",
+    "180 - 80 == 100"
+   ]
+  },
+  {
+   "math": "\\frac{a}{\\sin\\alpha} = \\frac{b}{\\sin\\beta} = \\frac{c}{\\sin\\gamma}",
+   "en": "Now, we apply the Law of Sines to find the unknown sides $a$ and $b$.",
+   "ur": "اب، ہم نامعلوم اضلاع $a$ اور $b$ معلوم کرنے کے لیے قانونِ جیب (Law of Sines) کا استعمال کرتے ہیں۔"
+  },
+  {
+   "math": "a = \\frac{c\\sin\\alpha}{\\sin\\gamma} = \\frac{81\\sin 32^\\circ}{\\sin 48^\\circ} \\approx 57.8\\text{ cm}",
+   "en": "Using the relation $\\frac{a}{\\sin\\alpha} = \\frac{c}{\\sin\\gamma}$, we substitute $c = 81$, $\\alpha = 32^\\circ$, and $\\gamma = 48^\\circ$ to calculate side $a$.",
+   "ur": "تعلق $\\frac{a}{\\sin\\alpha} = \\frac{c}{\\sin\\gamma}$ کو استعمال کرتے ہوئے، ہم ضلع $a$ معلوم کرنے کے لیے $c = 81$، $\\alpha = 32^\\circ$ اور $\\gamma = 48^\\circ$ درج کرتے ہیں۔",
+   "check": [
+    "Abs((81*sin((32)*pi/180)/sin((48)*pi/180)) - 57.8) <= 0.050000001"
+   ]
+  },
+  {
+   "math": "b = \\frac{c\\sin\\beta}{\\sin\\gamma} = \\frac{81\\sin 100^\\circ}{\\sin 48^\\circ} \\approx 107.3\\text{ cm}",
+   "en": "Similarly, using $\\frac{b}{\\sin\\beta} = \\frac{c}{\\sin\\gamma}$, we substitute $c = 81$, $\\beta = 100^\\circ$, and $\\gamma = 48^\\circ$ to calculate side $b$.",
+   "ur": "اسی طرح، $\\frac{b}{\\sin\\beta} = \\frac{c}{\\sin\\gamma}$ کو استعمال کرتے ہوئے، ہم ضلع $b$ معلوم کرنے کے لیے $c = 81$، $\\beta = 100^\\circ$ اور $\\gamma = 48^\\circ$ درج کرتے ہیں۔",
+   "check": [
+    "Abs((81*sin((100)*pi/180)/sin((48)*pi/180)) - 107.3) <= 0.050000001"
+   ]
+  },
+  {
+   "math": "\\beta = 100^\\circ, \\quad a = 57.8\\text{ cm}, \\quad b = 107.3\\text{ cm}",
+   "en": "Thus, all the unknown elements of the triangle $ABC$ have been found.",
+   "ur": "اس طرح مثلث $ABC$ کے تمام نامعلوم اجزاء معلوم ہو گئے ہیں۔",
+   "check": [
+    "180 - 80 == 100",
+    "Abs((81*sin((32)*pi/180)/sin((48)*pi/180)) - 57.8) <= 0.050000001",
+    "Abs((81*sin((100)*pi/180)/sin((48)*pi/180)) - 107.3) <= 0.050000001"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

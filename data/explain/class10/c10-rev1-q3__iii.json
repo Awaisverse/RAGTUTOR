@@ -1,0 +1,45 @@
+{
+ "item": "c10-rev1-q3",
+ "label": "iii",
+ "answer_ref": "$i$",
+ "math": [
+  "(-i)^{-9}",
+  "(-i)^{-9} = (-1 \\cdot i)^{-9} = (-1)^{-9} \\cdot i^{-9}",
+  "= -1 \\cdot i^{-9} = -i^{-9}",
+  "= -i^{-9} \\cdot 1 = -i^{-9} \\cdot i^{12}",
+  "= -i^{-9+12} = -i^{3}",
+  "= -(i^2 \\cdot i) = -(-1 \\cdot i) = -(-i) = i"
+ ],
+ "why": [
+  {
+   "en": "We begin by writing down the expression $(-i)^{-9}$. Our goal is to reduce this negative power of $-i$ into a standard, simple form without any exponents.",
+   "ur": "ہم سب سے پہلے دی گئی عبارت $(-i)^{-9}$ کو لکھتے ہیں۔ ہمارا مقصد $-i$ کی اس منفی طاقت (پاور) کو حل کر کے بغیر کسی طاقت کے سادہ شکل میں لانا ہے۔"
+  },
+  {
+   "en": "Using the law of exponents $(ab)^n = a^n b^n$, we treat $-i$ as $-1 \\cdot i$ so we can handle the negative sign and the imaginary unit $i$ separately. This makes the problem much easier because we won't confuse the negative sign inside the bracket with the negative exponent outside.",
+   "ur": "قوت نما کے قانون $(ab)^n = a^n b^n$ کو استعمال کرتے ہوئے، ہم $-i$ کو $-1 \\cdot i$ کے طور پر لکھتے ہیں تاکہ منفی علامت اور امیجنری یونٹ $i$ کو الگ الگ حل کر سکیں۔ اس سے سوال بہت آسان ہو جاتا ہے کیونکہ بریکٹ کے اندر کی منفی علامت اور باہر کی منفی طاقت آپس میں خلط ملط نہیں ہوں گی۔"
+  },
+  {
+   "en": "Any time $-1$ is raised to an odd integer power like $-9$, the result is always $-1$. This settles the sign of our expression and leaves us to focus only on simplifying $i^{-9}$.",
+   "ur": "جب بھی $-1$ کی طاقت کوئی طاق عدد (جیسے $-9$) ہو، تو جواب ہمیشہ $-1$ ہی آتا ہے۔ اس سے ہماری عبارت کی علامت کا فیصلہ ہو جاتا ہے اور اب ہمیں صرف $i^{-9}$ کو مختصر کرنے پر توجہ دینی ہے۔"
+  },
+  {
+   "en": "Because standard powers of $i$ are easier to evaluate when the exponent is positive, we multiply by $i^{12}$, which is the smallest multiple of $4$ greater than $9$. Since $i^4 = 1$, $i^{12}$ is also equal to $1$, so multiplying by it does not change the value of our expression.",
+   "ur": "چونکہ $i$ کی طاقت کو حل کرنا تب آسان ہوتا ہے جب وہ مثبت ہو، اس لیے ہم اسے $i^{12}$ سے ضرب دیتے ہیں، جو کہ $9$ سے بڑا $4$ کا سب سے چھوٹا مضاعف (ملٹیپل) ہے۔ کیونکہ $i^4 = 1$ ہوتا ہے، اس لیے $i^{12}$ بھی $1$ کے برابر ہے، لہٰذا اس سے ضرب دینے سے عبارت کی قیمت تبدیل نہیں ہوتی۔"
+  },
+  {
+   "en": "Now we apply the product law of exponents, $a^m \\cdot a^n = a^{m+n}$, to combine the powers of $i$. Adding $-9$ and $12$ gives us a small, positive exponent of $3$, which we know how to simplify easily.",
+   "ur": "اب ہم $i$ کی طاقتوں کو یکجا کرنے کے لیے قوت نما کا ضربی قانون $a^m \\cdot a^n = a^{m+n}$ لگاتے ہیں۔ $-9$ اور $12$ کو جمع کرنے سے ہمیں ایک چھوٹی اور مثبت طاقت $3$ ملتی ہے، جسے ہم آسانی سے حل کرنا جانتے ہیں۔"
+  },
+  {
+   "en": "To reduce $i^3$ completely, we split it into $i^2 \\cdot i$ so we can use the fundamental definition of the imaginary unit, $i^2 = -1$. Multiplying the two negative signs together gives us our final, clean result of $i$.",
+   "ur": "$i^3$ کو مکمل طور پر مختصر کرنے کے لیے، ہم اسے $i^2 \\cdot i$ میں توڑتے ہیں تاکہ ہم امیجنری یونٹ کی بنیادی تعریف $i^2 = -1$ استعمال کر سکیں۔ دونوں منفی علامتوں کو آپس میں ضرب دینے سے ہمیں ہمارا حتمی اور سادہ جواب $i$ مل جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $i$ tells us that the complex expression $(-i)^{-9}$, despite having a negative base and a negative exponent, simplifies directly to the basic imaginary unit $i$. This happens because the powers of $i$ repeat in a cycle of $4$, so any integer power of $i$ or $-i$ will always reduce to $1$, $-1$, $i$, or $-i$.",
+  "ur": "حتمی جواب $i$ ہمیں بتاتا ہے کہ پیچیدہ عبارت $(-i)^{-9}$، منفی اساس اور منفی طاقت ہونے کے باوجود، سیدھے سادے بنیادی امیجنری یونٹ $i$ میں بدل جاتی ہے۔ ایسا اس لیے ہوتا ہے کیونکہ $i$ کی طاقتیں ہر $4$ کے چکر کے بعد خود کو دہراتی ہیں، اس لیے $i$ یا $-i$ کی کوئی بھی عددی طاقت ہمیشہ مختصر ہو کر $1$، $-1$، $i$ یا $-i$ ہی بنتی ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

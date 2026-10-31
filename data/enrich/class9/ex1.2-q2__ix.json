@@ -1,0 +1,64 @@
+{
+ "item": "ex1.2-q2",
+ "label": "ix",
+ "answer_ref": "$19$",
+ "steps": [
+  {
+   "math": "\\frac{5^{n+3} - 6 \\cdot 5^{n+1}}{9 \\times 5^n - 4 \\times 5^n}",
+   "en": "Write down the given algebraic expression to be simplified.",
+   "ur": "مختصر کرنے کے لیے دی گئی الجبری عبارت لکھیں۔"
+  },
+  {
+   "math": "= \\frac{5^n \\cdot 5^3 - 6 \\cdot 5^n \\cdot 5^1}{9 \\cdot 5^n - 4 \\cdot 5^n}",
+   "en": "Use the product law of exponents, $a^{m+n} = a^m \\cdot a^n$, to split the powers in the numerator.",
+   "ur": "شمار کنندہ میں قوت نماؤں کو الگ کرنے کے لیے قوت نما کا ضربی قانون $a^{m+n} = a^m \\cdot a^n$ استعمال کریں۔",
+   "check": [
+    "5**(n+3) == 5**n * 5**3",
+    "5**(n+1) == 5**n * 5**1"
+   ]
+  },
+  {
+   "math": "= \\frac{5^n(5^3 - 6 \\cdot 5)}{5^n(9 - 4)}",
+   "en": "Take out $5^n$ as a common factor from both the numerator and the denominator.",
+   "ur": "شمار کنندہ اور مخرج دونوں میں سے $5^n$ کو بطور مشترک جزو ضربی باہر نکالیں۔",
+   "check": [
+    "5**n * 5**3 - 6 * 5**n * 5 == 5**n * (5**3 - 6*5)",
+    "9 * 5**n - 4 * 5**n == 5**n * (9 - 4)"
+   ]
+  },
+  {
+   "math": "= \\frac{5^3 - 6 \\cdot 5}{9 - 4}",
+   "en": "Cancel out the common factor $5^n$ from the numerator and the denominator.",
+   "ur": "شمار کنندہ اور مخرج سے مشترک جزو $5^n$ کو کاٹ دیں۔",
+   "check": [
+    "(5**n * (5**3 - 6*5)) / (5**n * (9 - 4)) == (5**3 - 6*5) / (9 - 4)"
+   ]
+  },
+  {
+   "math": "= \\frac{125 - 30}{5}",
+   "en": "Evaluate $5^3 = 125$, multiply $6 \\times 5 = 30$, and subtract $9 - 4 = 5$ in the denominator.",
+   "ur": "$5^3 = 125$ کی قیمت نکالیں، $6 \\times 5 = 30$ کو ضرب دیں، اور مخرج میں $9 - 4 = 5$ تفریق کریں۔",
+   "check": [
+    "5**3 == 125",
+    "6*5 == 30",
+    "9 - 4 == 5"
+   ]
+  },
+  {
+   "math": "= \\frac{95}{5} = 19",
+   "en": "Subtract $30$ from $125$ to get $95$, then divide $95$ by $5$ to get the final answer $19$.",
+   "ur": "$125$ میں سے $30$ تفریق کر کے $95$ حاصل کریں، پھر حتمی جواب $19$ حاصل کرنے کے لیے $95$ کو $5$ پر تقسیم کریں۔",
+   "check": [
+    "125 - 30 == 95",
+    "R(95, 5) == 19",
+    "5**(n+3) - 6*5**(n+1) == 5**n*(125-30)",
+    "125-30 == 95",
+    "9*5**n - 4*5**n == 5**n*(9-4)",
+    "Rational(95,5) == 19"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

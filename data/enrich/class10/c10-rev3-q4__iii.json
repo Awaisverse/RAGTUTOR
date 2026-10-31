@@ -1,0 +1,64 @@
+{
+ "item": "c10-rev3-q4",
+ "label": "iii",
+ "answer_ref": "$\\begin{bmatrix} 1 & -3 \\\\ -2 & 7 \\end{bmatrix}$",
+ "steps": [
+  {
+   "math": "A = \\begin{bmatrix} 7 & 3 \\\\ 2 & 1 \\end{bmatrix}",
+   "en": "Write down the given matrix $A$. We need to find its multiplicative inverse, $A^{-1}$.",
+   "ur": "دیا گیا قالب $A$ لکھیں۔ ہمیں اس کا ضربی معکوس، یعنی $A^{-1}$ معلوم کرنا ہے۔"
+  },
+  {
+   "math": "A^{-1} = \\frac{1}{|A|} \\operatorname{Adj}A",
+   "en": "State the formula for the multiplicative inverse of a square matrix $A$, which is valid when $|A| \\neq 0$.",
+   "ur": "مربع قالب $A$ کے ضربی معکوس کا فارمولا لکھیں، جو اس وقت لاگو ہوتا ہے جب $|A| \\neq 0$ ہو۔"
+  },
+  {
+   "math": "|A| = \\begin{vmatrix} 7 & 3 \\\\ 2 & 1 \\end{vmatrix} = (7)(1) - (3)(2)",
+   "en": "First, find the determinant $|A|$. For a $2 \\times 2$ matrix, multiply the leading diagonal entries and subtract the product of the other diagonal entries ($ad - bc$).",
+   "ur": "پہلے مقطع $|A|$ معلوم کریں۔ $2 \\times 2$ قالب کے لیے، وتر کے ارکان کو ضرب دیں اور دوسرے وتر کے ارکان کے حاصلِ ضرب کو اس میں سے تفریق کریں ($ad - bc$)۔",
+   "check": [
+    "Matrix([[7, 3], [2, 1]]).det() == 7*1 - 3*2"
+   ]
+  },
+  {
+   "math": "|A| = 7 - 6 = 1",
+   "en": "Simplify the expression to get the determinant. Since $|A| = 1 \\neq 0$, the matrix is non-singular and $A^{-1}$ exists.",
+   "ur": "مقطع حاصل کرنے کے لیے عبارت کو مختصر کریں۔ چونکہ $|A| = 1 \\neq 0$ ہے، اس لیے یہ ایک غیر نادر قالب ہے اور $A^{-1}$ ممکن ہے۔",
+   "check": [
+    "7 - 6 == 1",
+    "Matrix([[7, 3], [2, 1]]).det() == 1"
+   ]
+  },
+  {
+   "math": "\\operatorname{Adj}A = \\begin{bmatrix} 1 & -3 \\\\ -2 & 7 \\end{bmatrix}",
+   "en": "Next, find the adjoint of matrix $A$ ($\\operatorname{Adj}A$) by interchanging the entries of the leading diagonal ($7$ and $1$) and changing the signs of the other two entries ($3$ and $2$).",
+   "ur": "اب، قالب $A$ کا ایڈجوائنٹ ($\\operatorname{Adj}A$) معلوم کریں، جس کے لیے وتر کے ارکان ($7$ اور $1$) کی جگہ آپس میں بدلیں اور باقی دو ارکان ($3$ اور $2$) کی علامتیں تبدیل کریں۔",
+   "check": [
+    "Eq(Matrix([[7, 3], [2, 1]]).adjugate(), Matrix([[1, -3], [-2, 7]]))"
+   ]
+  },
+  {
+   "math": "A^{-1} = \\frac{1}{1} \\begin{bmatrix} 1 & -3 \\\\ -2 & 7 \\end{bmatrix}",
+   "en": "Substitute the values of $|A|$ and $\\operatorname{Adj}A$ into the inverse formula.",
+   "ur": "معکوس کے فارمولے میں $|A|$ اور $\\operatorname{Adj}A$ کی قیمتیں درج کریں۔",
+   "check": [
+    "Eq(Matrix([[7, 3], [2, 1]]).inv(), (1/1)*Matrix([[1, -3], [-2, 7]]))"
+   ]
+  },
+  {
+   "math": "A^{-1} = \\begin{bmatrix} 1 & -3 \\\\ -2 & 7 \\end{bmatrix}",
+   "en": "Divide each entry of the adjoint matrix by $1$ to get the final answer for $A^{-1}$.",
+   "ur": "$A^{-1}$ کا حتمی جواب حاصل کرنے کے لیے ایڈجوائنٹ قالب کے ہر رکن کو $1$ سے تقسیم کریں۔",
+   "check": [
+    "Eq(Matrix([[7, 3], [2, 1]]).inv(), Matrix([[1, -3], [-2, 7]]))",
+    "Matrix([[7, 3], [2, 1]]).det() == 1",
+    "Eq(Matrix([[7, 3], [2, 1]]).adjugate(), Matrix([[1, -3], [-2, 7]]))",
+    "Eq(Matrix([[1, 0], [0, 1]]), Matrix([[1, 0], [0, 1]]))"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

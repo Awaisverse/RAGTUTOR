@@ -1,0 +1,35 @@
+{
+ "item": "c10-ex3.3-q3",
+ "label": "iii",
+ "answer_ref": "$\\begin{bmatrix} -2 & 1 \\\\ 2 & -3 \\end{bmatrix}$",
+ "math": [
+  "R = \\begin{bmatrix} 2 & -1 \\\\ -2 & 3 \\end{bmatrix}",
+  "-R = -\\begin{bmatrix} 2 & -1 \\\\ -2 & 3 \\end{bmatrix}",
+  "-R = \\begin{bmatrix} -(2) & -(-1) \\\\ -(-2) & -(3) \\end{bmatrix}",
+  "-R = \\begin{bmatrix} -2 & 1 \\\\ 2 & -3 \\end{bmatrix}"
+ ],
+ "why": [
+  {
+   "en": "We begin by clearly writing down the original matrix $R$ so we can see the exact signs of all its entries before we start changing them.",
+   "ur": "ہم سب سے پہلے دیے گئے کالب $R$ کو واضح طور پر لکھتے ہیں تاکہ علامتیں تبدیل کرنے سے پہلے ہمیں اس کے تمام ارکان کی اصل علامتیں صاف نظر آئیں۔"
+  },
+  {
+   "en": "By the definition of additive inverse, the opposite of matrix $R$ is written as $-R$. Putting a negative sign outside the whole matrix sets up our main task: we must negate the entire matrix.",
+   "ur": "جمعی معکوس کی تعریف کے مطابق، کالب $R$ کے الٹ کو $-R$ سے ظاہر کیا جاتا ہے۔ پورے کالب کے باہر منفی کی علامت لگانے سے ہمارا اگلا کام طے ہو جاتا ہے کہ ہمیں اس پورے کالب کی علامت بدلنی ہے۔"
+  },
+  {
+   "en": "According to the rule of scalar multiplication, a negative sign outside a matrix applies to every single number inside it. Doing this step-by-step with brackets prevents mistakes, especially where entries like $-1$ and $-2$ already have a minus sign.",
+   "ur": "کالب کے اصول کے مطابق، باہر موجود منفی کی علامت اندر موجود ہر ایک رکن سے ضرب کھاتی ہے۔ بریکٹ لگا کر یہ کام مرحلہ وار کرنے سے غلطی کا امکان نہیں رہتا، خاص طور پر $-1$ اور $-2$ جیسے ارکان میں جن کے ساتھ پہلے ہی منفی کی علامت موجود ہے۔"
+  },
+  {
+   "en": "Using basic sign rules where a negative times a positive becomes negative and a negative times a negative becomes positive, we simplify each entry. This gives us the final matrix with all signs successfully flipped.",
+   "ur": "علامتوں کے بنیادی اصول (کہ منفی ضرب مثبت، منفی ہوتا ہے اور منفی ضرب منفی، مثبت ہو جاتا ہے) کو استعمال کرتے ہوئے ہم ہر رکن کو مختصر کر لیتے ہیں۔ اس سے ہمیں حتمی کالب مل جاتا ہے جس میں تمام علامتیں کامیابی سے بدل چکی ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The matrix $\\begin{bmatrix} -2 & 1 \\\\ 2 & -3 \\end{bmatrix}$ is the additive inverse of $R$. This means if you add this new matrix to the original matrix $R$, every pair of corresponding entries will cancel out (like $2 + (-2)$ and $-1 + 1$), giving you a zero matrix.",
+  "ur": "کالب $\\begin{bmatrix} -2 & 1 \\\\ 2 & -3 \\end{bmatrix}$ دیے گئے کالب $R$ کا جمعی معکوس ہے۔ اس کا مطلب یہ ہے کہ اگر آپ اس نئے کالب کو اصل کالب $R$ میں جمع کریں، تو آمنے سامنے والے تمام ارکان ایک دوسرے کو زائل کر دیں گے (جیسے $2 + (-2)$ اور $-1 + 1$)، اور آپ کو ایک صفری کالب حاصل ہو گا۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

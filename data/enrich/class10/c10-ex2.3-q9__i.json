@@ -1,0 +1,55 @@
+{
+ "item": "c10-ex2.3-q9",
+ "label": "i",
+ "answer_ref": "$p^2 = 4q$",
+ "steps": [
+  {
+   "math": "x^2 + px + q = 0 \\implies a = 1, \\quad b = p, \\quad c = q",
+   "en": "Write the given quadratic equation and identify the coefficients $a$, $b$, and $c$ by comparing it with the standard form $ax^2 + bx + c = 0$.",
+   "ur": "دی گئی دو درجی مساوات لکھیں اور معیاری شکل $ax^2 + bx + c = 0$ سے موازنہ کرتے ہوئے عددی سر $a$، $b$ اور $c$ کی شناخت کریں۔"
+  },
+  {
+   "math": "\\text{Sum of roots } (S) = \\alpha + \\beta = -\\frac{b}{a} = -\\frac{p}{1} = -p",
+   "en": "Since $\\alpha$ and $\\beta$ are the roots of the equation, find the sum of the roots using the formula $-\\frac{b}{a}$.",
+   "ur": "چونکہ $\\alpha$ اور $\\beta$ مساوات کے روٹس ہیں، اس لیے کلیہ $-\\frac{b}{a}$ استعمال کرتے ہوئے روٹس کا مجموعہ معلوم کریں۔",
+   "check": [
+    "-p/1 == -p"
+   ]
+  },
+  {
+   "math": "\\text{Product of roots } (P) = \\alpha\\beta = \\frac{c}{a} = \\frac{q}{1} = q",
+   "en": "Now, find the product of the roots using the formula $\\frac{c}{a}$.",
+   "ur": "اب کلیہ $\\frac{c}{a}$ استعمال کرتے ہوئے روٹس کا حاصل ضرب معلوم کریں۔",
+   "check": [
+    "q/1 == q"
+   ]
+  },
+  {
+   "math": "\\alpha + \\alpha = -p \\implies 2\\alpha = -p \\implies \\alpha = -\\frac{p}{2}",
+   "en": "According to the given condition $\\alpha = \\beta$, substitute $\\beta = \\alpha$ into the sum of roots equation to find the value of $\\alpha$.",
+   "ur": "دی گئی شرط $\\alpha = \\beta$ کے مطابق، $\\alpha$ کی قیمت معلوم کرنے کے لیے روٹس کے مجموعہ کی مساوات میں $\\beta = \\alpha$ درج کریں۔",
+   "check": [
+    "alpha + alpha == 2*alpha"
+   ]
+  },
+  {
+   "math": "\\alpha \\cdot \\alpha = q \\implies \\alpha^2 = q",
+   "en": "Similarly, substitute $\\beta = \\alpha$ into the product of roots equation.",
+   "ur": "اسی طرح، روٹس کے حاصل ضرب کی مساوات میں بھی $\\beta = \\alpha$ درج کریں۔",
+   "check": [
+    "alpha * alpha == alpha**2"
+   ]
+  },
+  {
+   "math": "\\left(-\\frac{p}{2}\\right)^2 = q \\implies \\frac{p^2}{4} = q \\implies p^2 = 4q",
+   "en": "Substitute $\\alpha = -\\frac{p}{2}$ into the equation $\\alpha^2 = q$ and simplify to get the required condition.",
+   "ur": "مطلوبہ شرط حاصل کرنے کے لیے مساوات $\\alpha^2 = q$ میں $\\alpha = -\\frac{p}{2}$ درج کریں اور مختصر کریں۔",
+   "check": [
+    "(-p/2)**2 == p**2/4"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

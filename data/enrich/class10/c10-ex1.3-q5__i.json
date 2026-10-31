@@ -1,0 +1,66 @@
+{
+ "item": "c10-ex1.3-q5",
+ "label": "i",
+ "answer_ref": "$-5$",
+ "steps": [
+  {
+   "math": "z_1 = 2 + 3i, \\quad z_2 = -1 + i",
+   "en": "Write down the given complex numbers $z_1$ and $z_2$. We need to find the real part of their product, $\\operatorname{Re}(z_1z_2)$.",
+   "ur": "دیے گئے مخلوط اعداد $z_1$ اور $z_2$ لکھیں۔ ہمیں ان کے حاصل ضرب کا حقیقی حصہ یعنی $\\operatorname{Re}(z_1z_2)$ معلوم کرنا ہے۔",
+   "check": [
+    "2 + 3*I == 2 + 3*I",
+    "-1 + I == -1 + I"
+   ]
+  },
+  {
+   "math": "z_1z_2 = (2 + 3i)(-1 + i)",
+   "en": "First, substitute the values of $z_1$ and $z_2$ to find their product $z_1z_2$.",
+   "ur": "سب سے پہلے، $z_1$ اور $z_2$ کا حاصل ضرب $z_1z_2$ معلوم کرنے کے لیے ان کی قیمتیں درج کریں۔",
+   "check": [
+    "(2 + 3*I)*(-1 + I) == (2 + 3*I)*(-1 + I)"
+   ]
+  },
+  {
+   "math": "z_1z_2 = 2(-1) + 2(i) + 3i(-1) + 3i(i) = -2 + 2i - 3i + 3i^2",
+   "en": "Multiply each term of the first bracket by each term of the second bracket.",
+   "ur": "پہلی قوسین کے ہر رکن کو دوسری قوسین کے ہر رکن سے ضرب دیں۔",
+   "check": [
+    "(2 + 3*I)*(-1 + I) == -2 + 2*I - 3*I + 3*I**2"
+   ]
+  },
+  {
+   "math": "z_1z_2 = -2 - i + 3(-1)",
+   "en": "Combine the imaginary terms ($2i - 3i = -i$) and substitute the fundamental property $i^2 = -1$.",
+   "ur": "خیالی ارکان کو یکجا کریں ($2i - 3i = -i$) اور بنیادی خاصیت $i^2 = -1$ درج کریں۔",
+   "check": [
+    "2*I - 3*I == -I",
+    "I**2 == -1",
+    "(2 + 3*I)*(-1 + I) == -2 - I + 3*(-1)"
+   ]
+  },
+  {
+   "math": "z_1z_2 = -2 - 3 - i = -5 - i",
+   "en": "Simplify the real numbers to write the product $z_1z_2$ in the standard form $a + bi$.",
+   "ur": "حاصل ضرب $z_1z_2$ کو معیاری شکل $a + bi$ میں لکھنے کے لیے حقیقی اعداد کو مختصر کریں۔",
+   "check": [
+    "-2 - 3 - I == -5 - I",
+    "(2 + 3*I)*(-1 + I) == -5 - I"
+   ]
+  },
+  {
+   "math": "\\operatorname{Re}(z_1z_2) = -5",
+   "en": "In a complex number $a + bi$, the real part is $a$ (the term without $i$). Therefore, the real part of $z_1z_2$ is $-5$.",
+   "ur": "کسی مخلوط عدد $a + bi$ میں حقیقی حصہ $a$ ہوتا ہے (وہ رکن جس کے ساتھ $i$ نہ ہو)۔ لہٰذا، $z_1z_2$ کا حقیقی حصہ $-5$ ہے۔",
+   "check": [
+    "re(-5 - I) == -5",
+    "(2 + 3*I)*(-1 + I) == (-2) + (-1)*I + (3)*I**2",
+    "I**2 == -1",
+    "(2 + 3*I)*(-1 + I) == (-5 - I)",
+    "re((-5 - I)) == (-5)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

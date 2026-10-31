@@ -1,0 +1,55 @@
+{
+ "item": "c10-ex2.4-q1",
+ "label": "vi",
+ "answer_ref": "$D = 0$: roots are real and equal",
+ "steps": [
+  {
+   "math": "x^2 - 8x + 16 = 0",
+   "en": "Write down the given quadratic equation.",
+   "ur": "دی گئی دو درجی مساوات لکھیں۔"
+  },
+  {
+   "math": "a = 1, \\quad b = -8, \\quad c = 16",
+   "en": "Compare the equation with the standard quadratic form $ax^2 + bx + c = 0$ to identify the coefficients $a$, $b$, and $c$.",
+   "ur": "مساوات کا معیاری دو درجی صورت $ax^2 + bx + c = 0$ سے موازنہ کرتے ہوئے عددی سر $a$، $b$ اور $c$ کی قیمتیں معلوم کریں۔"
+  },
+  {
+   "math": "\\text{Discriminant } (D) = b^2 - 4ac",
+   "en": "To examine the nature of the roots, we use the discriminant formula.",
+   "ur": "روٹس (جذر) کی نوعیت معلوم کرنے کے لیے ہم فرق نندہ (ممیز) کا فارمولا استعمال کرتے ہیں۔"
+  },
+  {
+   "math": "D = (-8)^2 - 4(1)(16)",
+   "en": "Substitute the values of $a = 1$, $b = -8$, and $c = 16$ into the formula.",
+   "ur": "فارمولے میں $a = 1$، $b = -8$ اور $c = 16$ کی قیمتیں درج کریں۔"
+  },
+  {
+   "math": "D = 64 - 64",
+   "en": "Evaluate $(-8)^2 = 64$ and multiply $4 \\times 1 \\times 16 = 64$.",
+   "ur": "$(-8)^2 = 64$ حل کریں اور $4 \\times 1 \\times 16 = 64$ کو ضرب دیں۔",
+   "check": [
+    "(-8)**2 == 64",
+    "4 * 1 * 16 == 64"
+   ]
+  },
+  {
+   "math": "D = 0",
+   "en": "Subtract the numbers to find the value of the discriminant $D$.",
+   "ur": "ممیز $D$ کی قیمت معلوم کرنے کے لیے اعداد کو تفریق کریں۔",
+   "check": [
+    "64 - 64 == 0"
+   ]
+  },
+  {
+   "math": "\\text{Roots are real and equal}",
+   "en": "Since the discriminant $D = 0$, the roots of the given quadratic equation are real and equal (rational).",
+   "ur": "چونکہ ممیز $D = 0$ ہے، اس لیے دی گئی دو درجی مساوات کے روٹس (جذر) حقیقی اور برابر (ناطق) ہیں۔",
+   "check": [
+    "(-8)**2 - 4*(1)*(16) == 0"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

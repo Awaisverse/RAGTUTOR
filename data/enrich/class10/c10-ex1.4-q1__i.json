@@ -1,0 +1,61 @@
+{
+ "item": "c10-ex1.4-q1",
+ "label": "i",
+ "answer_ref": "$\\operatorname{Re} = 55,\\ \\operatorname{Im} = -48$",
+ "steps": [
+  {
+   "math": "z = (8 - 3i)^2",
+   "en": "Let the given complex number be $z$. We need to simplify it into the standard form $a + bi$ to find its real and imaginary parts.",
+   "ur": "فرض کریں کہ دیا گیا مختلط عدد $z$ ہے۔ ہمیں اس کے حقیقی اور خیالی حصے معلوم کرنے کے لیے اسے معیاری شکل $a + bi$ میں لانا ہے۔"
+  },
+  {
+   "math": "z = (8)^2 - 2(8)(3i) + (3i)^2",
+   "en": "Expand the square using the algebraic formula $(a - b)^2 = a^2 - 2ab + b^2$, where $a = 8$ and $b = 3i$.",
+   "ur": "الجبرے کے کلیے $(a - b)^2 = a^2 - 2ab + b^2$ کا استعمال کرتے ہوئے مربع کھولیں، جہاں $a = 8$ اور $b = 3i$ ہے۔",
+   "check": [
+    "(8 - 3*I)**2 == (8)**2 - 2*(8)*(3*I) + (3*I)**2"
+   ]
+  },
+  {
+   "math": "z = 64 - 48i + 9i^2",
+   "en": "Evaluate the squares and multiply the middle terms.",
+   "ur": "مربع حل کریں اور درمیانی رقموں کو ضرب دیں۔",
+   "check": [
+    "(8 - 3*I)**2 == 64 - 48*I + 9*I**2"
+   ]
+  },
+  {
+   "math": "z = 64 - 48i + 9(-1)",
+   "en": "Since $i = \\sqrt{-1}$, substitute the value $i^2 = -1$.",
+   "ur": "چونکہ $i = \\sqrt{-1}$ ہے، اس لیے $i^2 = -1$ کی قیمت درج کریں۔",
+   "check": [
+    "(8 - 3*I)**2 == 64 - 48*I + 9*(-1)"
+   ]
+  },
+  {
+   "math": "z = 64 - 48i - 9 = 55 - 48i",
+   "en": "Simplify the real numbers ($64 - 9$) to get the standard form $a + bi$.",
+   "ur": "معیاری شکل $a + bi$ حاصل کرنے کے لیے حقیقی اعداد ($64 - 9$) کو حل کریں۔",
+   "check": [
+    "64 - 48*I - 9 == 55 - 48*I",
+    "(8 - 3*I)**2 == 55 - 48*I"
+   ]
+  },
+  {
+   "math": "\\operatorname{Re}(z) = 55, \\quad \\operatorname{Im}(z) = -48",
+   "en": "From the standard form $55 - 48i$, the real part is $55$ and the imaginary part (the coefficient of $i$) is $-48$.",
+   "ur": "معیاری شکل $55 - 48i$ سے، حقیقی حصہ $55$ ہے اور خیالی حصہ ($i$ کا عددی سر) $-48$ ہے۔",
+   "check": [
+    "re(55 - 48*I) == 55",
+    "im(55 - 48*I) == -48",
+    "(8 - 3*I)**2 == (8)**2 + 2*(8)*(-3*I) + (-3*I)**2",
+    "(8 - 3*I)**2 == (55 - 48*I)",
+    "re((55 - 48*I)) == (55)",
+    "im((55 - 48*I)) == (-48)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

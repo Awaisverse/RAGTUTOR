@@ -1,0 +1,75 @@
+{
+ "item": "ex1.2-q2",
+ "label": "vii",
+ "answer_ref": "$\\frac{27}{16}$",
+ "steps": [
+  {
+   "math": "(64)^{-\\frac{2}{3}} \\div (9)^{-\\frac{3}{2}}",
+   "en": "We are given the exponential expression to simplify.",
+   "ur": "ہمیں مختصر کرنے کے لیے قوت نمائی جملہ دیا گیا ہے۔"
+  },
+  {
+   "math": "= (4^3)^{-\\frac{2}{3}} \\div (3^2)^{-\\frac{3}{2}}",
+   "en": "First, write the base numbers $64$ and $9$ in index (power) form as $64 = 4^3$ and $9 = 3^2$ so that the denominators of the fractional exponents can be cancelled.",
+   "ur": "سب سے پہلے، اساس کے اعداد $64$ اور $9$ کو طاقت کی شکل میں $64 = 4^3$ اور $9 = 3^2$ کے طور پر لکھیں تاکہ کسری قوت نماؤں کے مخرج کٹ سکیں۔",
+   "check": [
+    "64 == 4**3",
+    "9 == 3**2",
+    "64**R(-2,3) / 9**R(-3,2) == (4**3)**R(-2,3) / (3**2)**R(-3,2)"
+   ]
+  },
+  {
+   "math": "= 4^{3 \\times \\left(-\\frac{2}{3}\\right)} \\div 3^{2 \\times \\left(-\\frac{3}{2}\\right)}",
+   "en": "Apply the power of a power law of exponents, which states that $(a^m)^n = a^{m \\times n}$.",
+   "ur": "قوت نما کے قانون $(a^m)^n = a^{m \\times n}$ کا اطلاق کریں۔",
+   "check": [
+    "(4**3)**R(-2,3) / (3**2)**R(-3,2) == 4**(3*R(-2,3)) / 3**(2*R(-3,2))"
+   ]
+  },
+  {
+   "math": "= 4^{-2} \\div 3^{-3}",
+   "en": "Multiply the exponents in both terms to simplify them.",
+   "ur": "دونوں رقموں میں قوت نماؤں کو ضرب دے کر مختصر کریں۔",
+   "check": [
+    "3*R(-2,3) == -2",
+    "2*R(-3,2) == -3",
+    "4**(3*R(-2,3)) / 3**(2*R(-3,2)) == 4**(-2) / 3**(-3)"
+   ]
+  },
+  {
+   "math": "= \\frac{1}{4^2} \\div \\frac{1}{3^3}",
+   "en": "Use the negative exponent law $a^{-n} = \\frac{1}{a^n}$ to make the exponents positive.",
+   "ur": "منفی قوت نما کے قانون $a^{-n} = \\frac{1}{a^n}$ کا استعمال کرتے ہوئے قوت نماؤں کو مثبت بنائیں۔",
+   "check": [
+    "4**(-2) == 1/4**2",
+    "3**(-3) == 1/3**3",
+    "4**(-2) / 3**(-3) == (1/4**2) / (1/3**3)"
+   ]
+  },
+  {
+   "math": "= \\frac{1}{16} \\div \\frac{1}{27}",
+   "en": "Evaluate the powers: $4^2 = 16$ and $3^3 = 27$.",
+   "ur": "طاقتوں کی قیمت معلوم کریں: $4^2 = 16$ اور $3^3 = 27$۔",
+   "check": [
+    "4**2 == 16",
+    "3**3 == 27",
+    "(1/4**2) / (1/3**3) == R(1,16) / R(1,27)"
+   ]
+  },
+  {
+   "math": "= \\frac{1}{16} \\times \\frac{27}{1} = \\frac{27}{16}",
+   "en": "Change the division sign to multiplication by taking the reciprocal of the second fraction $\\frac{1}{27}$, and then multiply to get the final answer.",
+   "ur": "دوسری کسر $\\frac{1}{27}$ کا معکوس لے کر تقسیم کی علامت کو ضرب میں تبدیل کریں، اور پھر ضرب دے کر حتمی جواب حاصل کریں۔",
+   "check": [
+    "R(1,16) / R(1,27) == R(1,16) * R(27,1)",
+    "R(1,16) * R(27,1) == R(27,16)",
+    "64**Rational(-2,3) == Rational(1,16)",
+    "9**Rational(-3,2) == Rational(1,27)",
+    "Rational(1,16)/Rational(1,27) == Rational(27,16)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

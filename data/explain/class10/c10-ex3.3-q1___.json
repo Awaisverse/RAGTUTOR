@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex3.3-q1",
+ "label": "",
+ "answer_ref": "A and D; B and G and M; C and F; E and H",
+ "math": [
+  "\\text{Order of a matrix} = m\\text{-by-}n = (\\text{number of rows})\\text{-by-}(\\text{number of columns})",
+  "\\text{Order of } A = 2\\text{-by-}2, \\quad \\text{Order of } D = 2\\text{-by-}2",
+  "\\text{Order of } B = 2\\text{-by-}1, \\quad \\text{Order of } G = 2\\text{-by-}1, \\quad \\text{Order of } M = 2\\text{-by-}1",
+  "\\text{Order of } C = 1\\text{-by-}2, \\quad \\text{Order of } F = 1\\text{-by-}2",
+  "\\text{Order of } E = 1\\text{-by-}1, \\quad \\text{Order of } H = 1\\text{-by-}1",
+  "\\text{Conformable groups: } (A, D),\\ (B, G, M),\\ (C, F),\\ (E, H)"
+ ],
+ "why": [
+  {
+   "en": "Before checking the matrices, we recall the rule of matrix addition and subtraction: matrices can only be added or subtracted if their orders are exactly the same. This tells us that our main task is simply to count the rows and columns of each matrix and match the ones with identical orders.",
+   "ur": "میٹرکس کو چیک کرنے سے پہلے، ہم جمع اور تفریق کا اصول یاد کرتے ہیں: دو یا زیادہ میٹرکس صرف تب ہی جمع یا تفریق ہو سکتے ہیں جب ان کا مرتبہ (order) بالکل ایک جیسا ہو۔ اس سے ہمیں پتہ چلتا ہے کہ ہمارا اصل کام ہر میٹرکس کی قطاروں اور کالموں کو گننا اور ایک جیسے مرتبے والے میٹرکس کو ملانا ہے۔"
+  },
+  {
+   "en": "We start by looking for square matrices of size $2\\text{-by-}2$ by counting $2$ horizontal rows and $2$ vertical columns. Since both $A$ and $D$ have this exact same order, they form our first pair that can be added or subtracted together.",
+   "ur": "ہم $2$ افقی قطاروں اور $2$ عمودی کالموں کو گن کر $2\\text{-by-}2$ سائز کے مربع میٹرکس تلاش کرنے سے شروعات کرتے ہیں۔ چونکہ $A$ اور $D$ دونوں کا مرتبہ بالکل ایک جیسا ہے، اس لیے یہ ہمارا پہلا جوڑا بناتے ہیں جنہیں آپس میں جمع یا تفریق کیا جا سکتا ہے۔"
+  },
+  {
+   "en": "Next, we examine the column matrices that have $2$ rows and $1$ column, giving an order of $2\\text{-by-}1$. Even though $G$ and $M$ contain letters instead of numbers, their order is still $2\\text{-by-}1$ just like $B$, so all three can be added or subtracted with each other.",
+   "ur": "اس کے بعد، ہم ان کالم میٹرکس کو دیکھتے ہیں جن میں $2$ قطاریں اور $1$ کالم ہے، جس سے ان کا مرتبہ $2\\text{-by-}1$ بنتا ہے۔ اگرچہ $G$ اور $M$ میں نمبروں کی بجائے حروف ہیں، پھر بھی ان کا مرتبہ $B$ کی طرح $2\\text{-by-}1$ ہی ہے، اس لیے ان تینوں کو ایک دوسرے کے ساتھ جمع یا تفریق کیا جا سکتا ہے۔"
+  },
+  {
+   "en": "Now we look at the row matrices that have $1$ horizontal row and $2$ vertical columns, which means an order of $1\\text{-by-}2$. Matching $C$ and $F$ by this order tells us that these two are also conformable with each other.",
+   "ur": "اب ہم ان قطاری میٹرکس کو دیکھتے ہیں جن میں $1$ افقی قطار اور $2$ عمودی کالم ہیں، جس کا مطلب ہے کہ ان کا مرتبہ $1\\text{-by-}2$ ہے۔ اس مرتبے کے لحاظ سے $C$ اور $F$ کو ملانے سے پتہ چلتا ہے کہ یہ دونوں بھی ایک دوسرے کے ساتھ جمع یا تفریق کے قابل ہیں۔"
+  },
+  {
+   "en": "We then check the remaining matrices $E$ and $H$, which each have just a single entry, meaning $1$ row and $1$ column. Because both share the order $1\\text{-by-}1$, they form our final matching pair.",
+   "ur": "پھر ہم باقی ماندہ میٹرکس $E$ اور $H$ کو چیک کرتے ہیں، جن میں سے ہر ایک میں صرف ایک ہی رکن ہے، یعنی $1$ قطار اور $1$ کالم۔ چونکہ دونوں کا مرتبہ $1\\text{-by-}1$ ہے، اس لیے یہ ہمارا آخری یکساں جوڑا بناتے ہیں۔"
+  },
+  {
+   "en": "Finally, we gather all the matrices with identical orders into separate groups to directly answer the question. Any matrices within the same group have matching dimensions and are therefore conformable for addition and subtraction.",
+   "ur": "آخر میں، ہم سوال کا براہِ راست جواب دینے کے لیے ایک جیسے مرتبے والے تمام میٹرکس کو الگ الگ گروپوں میں اکٹھا کرتے ہیں۔ ایک ہی گروپ کے اندر موجود تمام میٹرکس کے سائز یکساں ہیں اور اس لیے وہ جمع اور تفریق کے لیے موزوں (conformable) ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer groups the given matrices by their orders: $(A, D)$, $(B, G, M)$, $(C, F)$, and $(E, H)$. This means you can add or subtract matrices within the same group because every entry has a corresponding partner in the exact same position, which you can easily check by seeing that their row and column counts match.",
+  "ur": "حتمی جواب دیے گئے میٹرکس کو ان کے مرتبے کے لحاظ سے گروپوں میں تقسیم کرتا ہے: $(A, D)$، $(B, G, M)$، $(C, F)$، اور $(E, H)$۔ اس کا مطلب ہے کہ آپ ایک ہی گروپ کے میٹرکس کو جمع یا تفریق کر سکتے ہیں کیونکہ ہر رکن کے لیے بالکل اسی جگہ پر دوسرے میٹرکس میں ایک ساتھی رکن موجود ہے، جس کی تصدیق آپ ان کی قطاروں اور کالموں کی یکساں تعداد دیکھ کر باآسانی کر سکتے ہیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

@@ -1,0 +1,57 @@
+{
+ "item": "c10-ex2.4-q1",
+ "label": "iv",
+ "answer_ref": "$D = 64$: roots are rational and unequal",
+ "steps": [
+  {
+   "math": "7x^2 - 6x - 1 = 0",
+   "en": "The given quadratic equation is:",
+   "ur": "دی گئی دو درجی مساوات یہ ہے:"
+  },
+  {
+   "math": "a = 7, \\quad b = -6, \\quad c = -1",
+   "en": "Compare this equation with the standard quadratic equation $ax^2 + bx + c = 0$ to identify the coefficients $a$, $b$, and $c$.",
+   "ur": "$a$، $b$ اور $c$ کی قیمتیں معلوم کرنے کے لیے اس مساوات کا معیاری دو درجی مساوات $ax^2 + bx + c = 0$ سے موازنہ کریں۔"
+  },
+  {
+   "math": "\\text{Discriminant } (D) = b^2 - 4ac",
+   "en": "To examine the nature of the roots, we use the discriminant formula.",
+   "ur": "جذروں (roots) کی نوعیت معلوم کرنے کے لیے ہم فرق نندہ (discriminant) کا فارمولا استعمال کرتے ہیں۔"
+  },
+  {
+   "math": "D = (-6)^2 - 4(7)(-1)",
+   "en": "Substitute the values of $a = 7$, $b = -6$, and $c = -1$ into the discriminant formula.",
+   "ur": "فرق نندہ کے فارمولے میں $a = 7$، $b = -6$ اور $c = -1$ کی قیمتیں درج کریں۔"
+  },
+  {
+   "math": "D = 36 + 28",
+   "en": "Evaluate the square $(-6)^2 = 36$ and the product $-4(7)(-1) = 28$.",
+   "ur": "مربع $(-6)^2 = 36$ اور حاصل ضرب $-4(7)(-1) = 28$ کو حل کریں۔",
+   "check": [
+    "(-6)**2 == 36",
+    "-4*(7)*(-1) == 28"
+   ]
+  },
+  {
+   "math": "D = 64 = (8)^2 > 0",
+   "en": "Add the numbers to find the value of the discriminant $D$, and note that $64$ is a positive perfect square.",
+   "ur": "فرق نندہ $D$ کی قیمت معلوم کرنے کے لیے اعداد کو جمع کریں، اور نوٹ کریں کہ $64$ ایک مثبت اور مکمل مربع ہے۔",
+   "check": [
+    "36 + 28 == 64",
+    "8**2 == 64"
+   ]
+  },
+  {
+   "math": "\\text{Roots are rational (real) and unequal}",
+   "en": "Since the discriminant $D > 0$ and is a perfect square ($64 = 8^2$), the roots of the given equation are rational (real) and unequal.",
+   "ur": "چونکہ فرق نندہ $D > 0$ ہے اور ایک مکمل مربع ($64 = 8^2$) ہے، اس لیے دی گئی مساوات کے جذر ناطق (حقیقی) اور غیر مساوی ہیں۔",
+   "check": [
+    "(-6)**2 - 4*(7)*(-1) == 64",
+    "sqrt(64) == 8"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

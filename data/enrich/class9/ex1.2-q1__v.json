@@ -1,0 +1,66 @@
+{
+ "item": "ex1.2-q1",
+ "label": "v",
+ "answer_ref": "$5-2\\sqrt{6}$",
+ "steps": [
+  {
+   "math": "\\frac{\\sqrt{3}-\\sqrt{2}}{\\sqrt{3}+\\sqrt{2}}",
+   "en": "Write down the given expression. To rationalize the denominator, we need to multiply both the numerator and the denominator by the conjugate of the denominator.",
+   "ur": "دی گئی عبارت لکھیں۔ نسب نما کو ناطق بنانے کے لیے، ہمیں شمار کنندہ اور نسب نما دونوں کو نسب نما کے مزدوج (conjugate) سے ضرب دینے کی ضرورت ہے۔"
+  },
+  {
+   "math": "",
+   "en": "The denominator is $\\sqrt{3}+\\sqrt{2}$, so its conjugate is $\\sqrt{3}-\\sqrt{2}$ (obtained by changing the sign between the two terms).",
+   "ur": "نسب نما $\\sqrt{3}+\\sqrt{2}$ ہے، اس لیے اس کا مزدوج $\\sqrt{3}-\\sqrt{2}$ ہے (جو دونوں رقموں کے درمیان علامت بدلنے سے حاصل ہوتا ہے)۔"
+  },
+  {
+   "math": "= \\frac{\\sqrt{3}-\\sqrt{2}}{\\sqrt{3}+\\sqrt{2}} \\times \\frac{\\sqrt{3}-\\sqrt{2}}{\\sqrt{3}-\\sqrt{2}}",
+   "en": "Multiply the numerator and the denominator by the conjugate $\\sqrt{3}-\\sqrt{2}$.",
+   "ur": "شمار کنندہ اور نسب نما کو مزدوج $\\sqrt{3}-\\sqrt{2}$ سے ضرب دیں۔",
+   "check": [
+    "(sqrt(3)-sqrt(2))/(sqrt(3)+sqrt(2)) == ((sqrt(3)-sqrt(2))/(sqrt(3)+sqrt(2))) * ((sqrt(3)-sqrt(2))/(sqrt(3)-sqrt(2)))"
+   ]
+  },
+  {
+   "math": "= \\frac{(\\sqrt{3}-\\sqrt{2})^2}{(\\sqrt{3})^2 - (\\sqrt{2})^2}",
+   "en": "Combine the numerators as a whole square $(a-b)^2$, and apply the difference of squares formula $(a+b)(a-b) = a^2 - b^2$ to the denominator.",
+   "ur": "شمار کنندہ کو مکمل مربع $(a-b)^2$ کے طور پر لکھیں، اور نسب نما پر مربعوں کے فرق کا فارمولا $(a+b)(a-b) = a^2 - b^2$ لاگو کریں۔",
+   "check": [
+    "(sqrt(3)-sqrt(2))/(sqrt(3)+sqrt(2)) == (sqrt(3)-sqrt(2))**2 / (sqrt(3)**2 - sqrt(2)**2)"
+   ]
+  },
+  {
+   "math": "= \\frac{(\\sqrt{3})^2 - 2(\\sqrt{3})(\\sqrt{2}) + (\\sqrt{2})^2}{3 - 2}",
+   "en": "Expand the numerator using the formula $(a-b)^2 = a^2 - 2ab + b^2$, and simplify the squares in the denominator.",
+   "ur": "شمار کنندہ کو فارمولا $(a-b)^2 = a^2 - 2ab + b^2$ استعمال کرتے ہوئے پھیلائیں، اور نسب نما میں مربعوں کو مختصر کریں۔",
+   "check": [
+    "(sqrt(3)-sqrt(2))**2 == sqrt(3)**2 - 2*sqrt(3)*sqrt(2) + sqrt(2)**2",
+    "sqrt(3)**2 - sqrt(2)**2 == 3 - 2"
+   ]
+  },
+  {
+   "math": "= \\frac{3 - 2\\sqrt{6} + 2}{1}",
+   "en": "Simplify the terms in the numerator (note that $\\sqrt{3} \\times \\sqrt{2} = \\sqrt{6}$) and subtract the numbers in the denominator.",
+   "ur": "شمار کنندہ کی رقموں کو مختصر کریں (یاد رکھیں کہ $\\sqrt{3} \\times \\sqrt{2} = \\sqrt{6}$) اور نسب نما میں اعداد کو تفریق کریں۔",
+   "check": [
+    "sqrt(3)**2 - 2*sqrt(3)*sqrt(2) + sqrt(2)**2 == 3 - 2*sqrt(6) + 2",
+    "3 - 2 == 1"
+   ]
+  },
+  {
+   "math": "= 5 - 2\\sqrt{6}",
+   "en": "Add the rational numbers $3$ and $2$ in the numerator. Dividing by $1$ leaves the expression unchanged, giving the final answer.",
+   "ur": "شمار کنندہ میں ناطق اعداد $3$ اور $2$ کو جمع کریں۔ $1$ سے تقسیم کرنے سے عبارت میں کوئی تبدیلی نہیں آتی، جس سے حتمی جواب حاصل ہوتا ہے۔",
+   "check": [
+    "(3 - 2*sqrt(6) + 2)/1 == 5 - 2*sqrt(6)",
+    "(sqrt(3)-sqrt(2))/(sqrt(3)+sqrt(2)) == (sqrt(3)-sqrt(2))**2/(3-2)",
+    "(sqrt(3)-sqrt(2))**2 == 5 - 2*sqrt(6)",
+    "sqrt(3)**2 - sqrt(2)**2 == 1",
+    "(5-2*sqrt(6))/1 == 5 - 2*sqrt(6)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

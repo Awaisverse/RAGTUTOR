@@ -1,0 +1,73 @@
+{
+ "item": "c10-ex11.2-q12",
+ "label": "",
+ "answer_ref": "SD = 0.51; fairly balanced",
+ "steps": [
+  {
+   "math": "x = 5.2, 6.0, 4.8, 5.5, 6.2, \\quad n = 5",
+   "en": "The given unemployment rates in five provinces are listed, so the total number of values is $n = 5$. We need to find the standard deviation and describe if the rates are balanced.",
+   "ur": "پانچ صوبوں میں بے روزگاری کی دی گئی شرحیں درج ہیں، اس لیے مدات کی کل تعداد $n = 5$ ہے۔ ہمیں معیاری انحراف معلوم کرنا ہے اور بتانا ہے کہ آیا یہ شرحیں متوازن ہیں۔",
+   "check": [
+    "5 == 5"
+   ]
+  },
+  {
+   "math": "\\bar{x} = \\frac{\\sum x}{n} = \\frac{5.2 + 6.0 + 4.8 + 5.5 + 6.2}{5} = \\frac{27.7}{5} = 5.54",
+   "en": "First, calculate the arithmetic mean $\\bar{x}$ by dividing the sum of all values by the total number of values $n$.",
+   "ur": "سب سے پہلے، تمام قیمتوں کے مجموعے کو کل تعداد $n$ پر تقسیم کر کے حسابی اوسط $\\bar{x}$ معلوم کریں۔",
+   "check": [
+    "R(26,5) + 6 + R(24,5) + R(11,2) + R(31,5) == R(277,10)",
+    "R(277,10) / 5 == R(277,50)"
+   ]
+  },
+  {
+   "math": "(x - \\bar{x})^2 : (-0.34)^2 = 0.1156, \\; (0.46)^2 = 0.2116, \\; (-0.74)^2 = 0.5476, \\; (-0.04)^2 = 0.0016, \\; (0.66)^2 = 0.4356",
+   "en": "Subtract the mean $\\bar{x} = 5.54$ from each value $x$ to find the deviations, and then square each deviation.",
+   "ur": "انحراف معلوم کرنے کے لیے ہر قیمت $x$ میں سے اوسط $\\bar{x} = 5.54$ کو تفریق کریں، اور پھر ہر انحراف کا مربع لیں۔",
+   "check": [
+    "(R(26,5) - R(277,50))**2 == R(289,2500)",
+    "(6 - R(277,50))**2 == R(529,2500)",
+    "(R(24,5) - R(277,50))**2 == R(1369,2500)",
+    "(R(11,2) - R(277,50))**2 == R(4,2500)",
+    "(R(31,5) - R(277,50))**2 == R(1089,2500)"
+   ]
+  },
+  {
+   "math": "\\sum (x - \\bar{x})^2 = 0.1156 + 0.2116 + 0.5476 + 0.0016 + 0.4356 = 1.312",
+   "en": "Add all the squared deviations together to find $\\sum (x - \\bar{x})^2$.",
+   "ur": "مجموعہ $\\sum (x - \\bar{x})^2$ معلوم کرنے کے لیے تمام مربع انحرافات کو جمع کریں۔",
+   "check": [
+    "R(289,2500) + R(529,2500) + R(1369,2500) + R(4,2500) + R(1089,2500) == R(164,125)"
+   ]
+  },
+  {
+   "math": "\\sigma^2 = \\frac{\\sum (x - \\bar{x})^2}{n} = \\frac{1.312}{5} = 0.2624",
+   "en": "Now, calculate the variance $\\sigma^2$ by dividing the sum of squared deviations by $n = 5$.",
+   "ur": "اب، مربع انحرافات کے مجموعے کو $n = 5$ پر تقسیم کر کے تغیر $\\sigma^2$ معلوم کریں۔",
+   "check": [
+    "R(164,125) / 5 == R(164,625)"
+   ]
+  },
+  {
+   "math": "\\sigma = \\sqrt{\\sigma^2} = \\sqrt{0.2624} \\approx 0.51",
+   "en": "Take the positive square root of the variance to get the standard deviation $\\sigma$.",
+   "ur": "معیاری انحراف $\\sigma$ حاصل کرنے کے لیے تغیر کا مثبت جذر المربع لیں۔",
+   "check": [
+    "Abs(sqrt(R(164,625)) - R(51,100)) <= R(1,200)"
+   ]
+  },
+  {
+   "math": "",
+   "en": "Since the standard deviation ($0.51$) is very small compared to the mean ($5.54$), the unemployment rates across the provinces are close to each other and hence fairly balanced. Thus, $\\text{SD} = 0.51$; fairly balanced.",
+   "ur": "چونکہ معیاری انحراف ($0.51$) اوسط ($5.54$) کے مقابلے میں بہت کم ہے، اس لیے صوبوں میں بے روزگاری کی شرحیں ایک دوسرے کے قریب ہیں اور کافی حد تک متوازن ہیں۔ چنانچہ، $\\text{SD} = 0.51$؛ کافی متوازن۔",
+   "check": [
+    "(26/5) + (6) + (24/5) + (11/2) + (31/5) == (277/10)",
+    "Abs(((((26/5) - (277/50))**2 + ((6) - (277/50))**2 + ((24/5) - (277/50))**2 + ((11/2) - (277/50))**2 + ((31/5) - (277/50))**2)/5) - 0.2624) <= 5.0001000000000005e-05",
+    "Abs((sqrt((164/625))) - 0.51) <= 0.0050000010000000004"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

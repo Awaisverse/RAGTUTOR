@@ -1,0 +1,80 @@
+{
+ "item": "c10-rev3-q5",
+ "label": "ii",
+ "answer_ref": "$x = -6,\\ y = \\frac{3}{2}$",
+ "math": [
+  "",
+  "\\begin{bmatrix} 1 & -6 \\\\ 2 & 6 \\end{bmatrix}\\begin{bmatrix} x \\\\ y \\end{bmatrix} = \\begin{bmatrix} -15 \\\\ -3 \\end{bmatrix}",
+  "|A| = \\begin{vmatrix} 1 & -6 \\\\ 2 & 6 \\end{vmatrix} = (1)(6) - (-6)(2) = 6 + 12 = 18",
+  "\\operatorname{Adj}A = \\begin{bmatrix} 6 & 6 \\\\ -2 & 1 \\end{bmatrix}",
+  "A^{-1} = \\frac{1}{|A|}\\operatorname{Adj}A = \\frac{1}{18}\\begin{bmatrix} 6 & 6 \\\\ -2 & 1 \\end{bmatrix} = \\begin{bmatrix} \\frac{1}{3} & \\frac{1}{3} \\\\ - \\frac{1}{9} & \\frac{1}{18} \\end{bmatrix}",
+  "X = A^{-1}B = \\frac{1}{18}\\begin{bmatrix} 6 & 6 \\\\ -2 & 1 \\end{bmatrix}\\begin{bmatrix} -15 \\\\ -3 \\end{bmatrix} = \\frac{1}{18}\\begin{bmatrix} (6)(-15) + (6)(-3) \\\\ (-2)(-15) + (1)(-3) \\end{bmatrix} = \\frac{1}{18}\\begin{bmatrix} -108 \\\\ 27 \\end{bmatrix} = \\begin{bmatrix} -6 \\\\ \\frac{3}{2} \\end{bmatrix}",
+  "x = -6,\\quad y = \\frac{3}{2}",
+  "",
+  "\\begin{bmatrix} 1 & -6 \\\\ 2 & 6 \\end{bmatrix}\\begin{bmatrix} x \\\\ y \\end{bmatrix} = \\begin{bmatrix} -15 \\\\ -3 \\end{bmatrix}",
+  "|A| = \\begin{vmatrix} 1 & -6 \\\\ 2 & 6 \\end{vmatrix} = (1)(6) - (-6)(2) = 18",
+  "|A_x| = \\begin{vmatrix} -15 & -6 \\\\ -3 & 6 \\end{vmatrix} = (-15)(6) - (-6)(-3) = -108",
+  "|A_y| = \\begin{vmatrix} 1 & -15 \\\\ 2 & -3 \\end{vmatrix} = (1)(-3) - (-15)(2) = 27",
+  "x = \\frac{|A_x|}{|A|} = \\frac{-108}{18} = -6,\\quad y = \\frac{|A_y|}{|A|} = \\frac{27}{18} = \\frac{3}{2}"
+ ],
+ "why": [
+  {
+   "en": "We begin with the matrix inversion method, which uses the inverse of the coefficient matrix to isolate the unknowns $x$ and $y$.",
+   "ur": "ہم کالب کے معکوس کے طریقے سے شروعات کرتے ہیں، جو نامعلوم متغیرات $x$ اور $y$ کی قیمتیں معلوم کرنے کے لیے عددی سروں کے کالب کا ضربی معکوس استعمال کرتا ہے۔"
+  },
+  {
+   "en": "We organize the coefficients, variables, and constants into matrices to form the single matrix equation $AX = B$. This lets us solve for the entire variable matrix $X$ at once.",
+   "ur": "ہم عددی سروں، متغیرات اور مستقل مقداروں کو کالبوں کی شکل دے کر ایک مساوات $AX = B$ بناتے ہیں۔ اس سے ہمیں پورے متغیر کالب $X$ کو ایک ساتھ حل کرنے میں مدد ملتی ہے۔"
+  },
+  {
+   "en": "Before finding the inverse, we must calculate the determinant $|A|$ to check if a solution is possible. Since $|A| = 18$ is not zero, the matrix is non-singular and a unique solution exists.",
+   "ur": "معکوس معلوم کرنے سے پہلے، ہمیں مقطع $|A|$ نکالنا ہوگا تاکہ پتہ چل سکے کہ حل ممکن ہے یا نہیں۔ چونکہ $|A| = 18$ صفر نہیں ہے، اس لیے کالب غیر نادر ہے اور اس کا حل ممکن ہے۔"
+  },
+  {
+   "en": "We find the adjoint of matrix $A$ because it is a required part of the formula for the matrix inverse. Swapping the main diagonal entries and changing the other signs prepares the matrix for division by the determinant.",
+   "ur": "ہم کالب $A$ کا ایڈجوائنٹ معلوم کرتے ہیں کیونکہ یہ کالب کے معکوس کے کلیے کا لازمی حصہ ہے۔ وتر کے ارکان کی جگہ بدلنے اور باقی دو کی علامتیں تبدیل کرنے سے کالب مقطع سے تقسیم ہونے کے لیے تیار ہو جاتا ہے۔"
+  },
+  {
+   "en": "Using the definition of the multiplicative inverse, $A^{-1} = \\frac{1}{|A|}\\operatorname{Adj}A$, we combine our determinant and adjoint. This gives us the exact inverse matrix needed to isolate $X$.",
+   "ur": "ضربی معکوس کی تعریف $A^{-1} = \\frac{1}{|A|}\\operatorname{Adj}A$ استعمال کرتے ہوئے ہم مقطع اور ایڈجوائنٹ کو یکجا کرتے ہیں۔ اس سے ہمیں وہ معکوس کالب مل جاتا ہے جو $X$ کو الگ کرنے کے لیے ضروری ہے۔"
+  },
+  {
+   "en": "From $AX = B$, multiplying both sides by $A^{-1}$ gives the working formula $X = A^{-1}B$. Performing this row-by-column multiplication directly calculates the numerical values for our variables.",
+   "ur": "مساوات $AX = B$ کے دونوں طرف $A^{-1}$ سے ضرب دینے سے ہمیں کلیہ $X = A^{-1}B$ ملتا ہے۔ قطار کو کالم سے ضرب دینے کے اس عمل سے ہمیں براہِ راست متغیرات کی عددی قیمتیں حاصل ہو جاتی ہیں۔"
+  },
+  {
+   "en": "Since two equal matrices have equal corresponding entries, the top value in $X$ is $x$ and the bottom value is $y$. This completes the matrix inversion method.",
+   "ur": "چونکہ دو مساوی کالبوں کے متناظرہ ارکان برابر ہوتے ہیں، اس لیے کالب $X$ کی اوپر والی قیمت $x$ اور نیچے والی قیمت $y$ ہے۔ یہاں کالب کے معکوس کا طریقہ مکمل ہوتا ہے۔"
+  },
+  {
+   "en": "Now we solve the same system using Cramer's rule, which finds the unknowns directly using determinants without needing the matrix inverse.",
+   "ur": "اب ہم اسی نظام کو کریمر کے قانون سے حل کرتے ہیں، جو کالب کے معکوس کے بغیر صرف مقاطع کی مدد سے براہِ راست نامعلوم قیمتیں نکالتا ہے۔"
+  },
+  {
+   "en": "Just as before, we write the system in matrix form so we can clearly see the columns of coefficients for $x$ and $y$, as well as the constants.",
+   "ur": "پہلے کی طرح، ہم مساواتوں کو کالب کی شکل میں لکھتے ہیں تاکہ $x$ اور $y$ کے عددی سروں کے کالم اور مستقل مقداریں واضح طور پر نظر آئیں۔"
+  },
+  {
+   "en": "We find the determinant of the main coefficient matrix $A$, which will serve as the denominator in Cramer's rule. Getting $18$ again confirms the system can be solved.",
+   "ur": "ہم بنیادی عددی سروں کے کالب $A$ کا مقطع معلوم کرتے ہیں، جو کریمر کے قانون میں مخرج (بٹے کے نیچے) کے طور پر استعمال ہوگا۔ دوبارہ $18$ آنا اس بات کی تصدیق کرتا ہے کہ حل ممکن ہے۔"
+  },
+  {
+   "en": "By Cramer's rule, we form matrix $A_x$ by replacing the $x$-coefficients with the constant matrix $B$. Its determinant, $-108$, gives us the numerator needed to find $x$.",
+   "ur": "کریمر کے قانون کے مطابق، ہم $x$ کے عددی سروں کی جگہ مستقل کالب $B$ لکھ کر نیا کالب $A_x$ بناتے ہیں۔ اس کا مقطع $-108$ ہمیں $x$ معلوم کرنے کے لیے شمار کنندہ (بٹے کے اوپر والی رقم) دیتا ہے۔"
+  },
+  {
+   "en": "Similarly, we form matrix $A_y$ by replacing the $y$-coefficients with the constants from $B$. Its determinant, $27$, gives us the numerator needed to find $y$.",
+   "ur": "اسی طرح، ہم $y$ کے عددی سروں کی جگہ کالب $B$ کی مستقل مقداریں رکھ کر کالب $A_y$ بناتے ہیں۔ اس کا مقطع $27$ ہمیں $y$ معلوم کرنے کے لیے شمار کنندہ دیتا ہے۔"
+  },
+  {
+   "en": "Finally, dividing $|A_x|$ and $|A_y|$ by the main determinant $|A|$ gives the values of $x$ and $y$. Getting the exact same answers by both methods confirms our work is correct.",
+   "ur": "آخر میں، $|A_x|$ اور $|A_y|$ کو بنیادی مقطع $|A|$ پر تقسیم کرنے سے $x$ اور $y$ کی قیمتیں مل جاتی ہیں۔ دونوں طریقوں سے بالکل ایک جیسا جواب آنا ہمارے حل کے درست ہونے کی تصدیق کرتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The solution $x = -6$ and $y = \\frac{3}{2}$ represents the unique values that satisfy both linear equations simultaneously. You can check this by substituting them into the first equation: $(-6) - 6(\\frac{3}{2}) = -6 - 9 = -15$, which matches the right-hand side.",
+  "ur": "یہ حل $x = -6$ اور $y = \\frac{3}{2}$ وہ واحد قیمتیں ہیں جو دونوں یک درجی مساواتوں کو بیک وقت درست ثابت کرتی ہیں۔ آپ پہلی مساوات میں قیمتیں درج کر کے اس کی پڑتال کر سکتے ہیں: $(-6) - 6(\\frac{3}{2}) = -6 - 9 = -15$، جو کہ دائیں طرف کے بالکل برابر ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

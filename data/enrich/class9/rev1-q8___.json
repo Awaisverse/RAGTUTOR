@@ -1,0 +1,65 @@
+{
+ "item": "rev1-q8",
+ "label": "",
+ "answer_ref": "$15,\\ 17,\\ 19$",
+ "steps": [
+  {
+   "math": "\\text{First integer} = x, \\quad \\text{Second integer} = x+2, \\quad \\text{Third integer} = x+4",
+   "en": "Let the first odd integer be $x$. Since consecutive odd integers always differ by $2$, the three consecutive odd integers can be represented as $x$, $x+2$, and $x+4$.",
+   "ur": "فرض کریں کہ پہلا طاق عدد $x$ ہے۔ چونکہ متواتر طاق اعداد میں ہمیشہ $2$ کا فرق ہوتا ہے، اس لیے تین متواتر طاق اعداد کو $x$، $x+2$ اور $x+4$ سے ظاہر کیا جا سکتا ہے۔"
+  },
+  {
+   "math": "x + (x + 2) + (x + 4) = 51",
+   "en": "According to the given condition, the sum of these three consecutive odd integers is $51$.",
+   "ur": "دی گئی شرط کے مطابق، ان تین متواتر طاق اعداد کا مجموعہ $51$ ہے۔"
+  },
+  {
+   "math": "3x + 6 = 51",
+   "en": "Combine the like terms on the left-hand side: $x + x + x = 3x$ and $2 + 4 = 6$.",
+   "ur": "بائیں جانب یکساں رقوم کو جمع کریں: $x + x + x = 3x$ اور $2 + 4 = 6$۔",
+   "check": [
+    "x + (x + 2) + (x + 4) == 3*x + 6",
+    "2 + 4 == 6"
+   ]
+  },
+  {
+   "math": "3x = 51 - 6 \\implies 3x = 45",
+   "en": "Subtract $6$ from both sides of the equation to isolate the term with $x$.",
+   "ur": "$x$ والی رقم کو الگ کرنے کے لیے مساوات کے دونوں اطراف سے $6$ تفریق کریں۔",
+   "check": [
+    "51 - 6 == 45"
+   ]
+  },
+  {
+   "math": "x = \\frac{45}{3} \\implies x = 15",
+   "en": "Divide both sides by $3$ to find the value of $x$, which gives the first odd integer.",
+   "ur": "$x$ کی قیمت معلوم کرنے کے لیے دونوں اطراف کو $3$ سے تقسیم کریں، جس سے پہلا طاق عدد حاصل ہوتا ہے۔",
+   "check": [
+    "R(45, 3) == 15"
+   ]
+  },
+  {
+   "math": "x + 2 = 15 + 2 = 17, \\quad x + 4 = 15 + 4 = 19",
+   "en": "Substitute $x = 15$ into $x+2$ and $x+4$ to find the second and third odd integers.",
+   "ur": "دوسرا اور تیسرا طاق عدد معلوم کرنے کے لیے $x+2$ اور $x+4$ میں $x = 15$ درج کریں۔",
+   "check": [
+    "15 + 2 == 17",
+    "15 + 4 == 19"
+   ]
+  },
+  {
+   "math": "\\text{The three integers are } 15,\\ 17,\\ 19",
+   "en": "Thus, the three consecutive odd integers whose sum is $51$ are $15$, $17$, and $19$.",
+   "ur": "پس، تین متواتر طاق اعداد جن کا مجموعہ $51$ ہے، $15$، $17$ اور $19$ ہیں۔",
+   "check": [
+    "15 + 17 + 19 == 51",
+    "x + (x+2) + (x+4) == 3*x + 6",
+    "51 - 6 == 45",
+    "Rational(45,3) == 15"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

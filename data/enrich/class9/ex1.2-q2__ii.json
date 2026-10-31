@@ -1,0 +1,63 @@
+{
+ "item": "ex1.2-q2",
+ "label": "ii",
+ "answer_ref": "$12$",
+ "steps": [
+  {
+   "math": "\\left(\\frac{3}{4}\\right)^{-2} \\div \\left(\\frac{4}{9}\\right)^{3} \\times \\frac{16}{27}",
+   "en": "Write down the given expression that needs to be simplified.",
+   "ur": "دی گئی عبارت لکھیں جسے مختصر کرنا ہے۔"
+  },
+  {
+   "math": "\\left(\\frac{3}{4}\\right)^{-2} \\div \\left(\\frac{4}{9}\\right)^{3} \\times \\frac{16}{27} = \\left(\\frac{4}{3}\\right)^{2} \\div \\left(\\frac{4}{9}\\right)^{3} \\times \\frac{16}{27}",
+   "en": "Apply the negative exponent law $\\left(\\frac{a}{b}\\right)^{-m} = \\left(\\frac{b}{a}\\right)^{m}$ to make the exponent of the first fraction positive by taking its reciprocal.",
+   "ur": "پہلی کسر کا معکوس لے کر اس کی طاقت کو مثبت بنانے کے لیے منفی قوت نما کا قانون $\\left(\\frac{a}{b}\\right)^{-m} = \\left(\\frac{b}{a}\\right)^{m}$ استعمال کریں۔",
+   "check": [
+    "R(3,4)**(-2) == R(4,3)**2"
+   ]
+  },
+  {
+   "math": "= \\frac{4^2}{3^2} \\div \\frac{4^3}{9^3} \\times \\frac{16}{27} = \\frac{16}{9} \\div \\frac{64}{729} \\times \\frac{16}{27}",
+   "en": "Evaluate the powers of the numerators and denominators: $4^2 = 16$, $3^2 = 9$, $4^3 = 64$, and $9^3 = 729$.",
+   "ur": "شمار کنندگان اور مخرجوں کی طاقتیں حل کریں: $4^2 = 16$، $3^2 = 9$، $4^3 = 64$، اور $9^3 = 729$۔",
+   "check": [
+    "R(4,3)**2 == R(16,9)",
+    "R(4,9)**3 == R(64,729)"
+   ]
+  },
+  {
+   "math": "= \\frac{16}{9} \\times \\frac{729}{64} \\times \\frac{16}{27}",
+   "en": "Change the division sign ($\\div$) into multiplication ($\\times$) by taking the reciprocal of the fraction $\\frac{64}{729}$, which gives $\\frac{729}{64}$.",
+   "ur": "کسر $\\frac{64}{729}$ کا معکوس $\\frac{729}{64}$ لے کر تقسیم کی علامت ($\\div$) کو ضرب ($\\times$) میں تبدیل کریں۔",
+   "check": [
+    "(R(16,9) / R(64,729)) * R(16,27) == R(16,9) * R(729,64) * R(16,27)"
+   ]
+  },
+  {
+   "math": "= \\frac{16 \\times 16}{64} \\times \\frac{729}{9 \\times 27} = \\frac{256}{64} \\times \\frac{729}{243}",
+   "en": "Group and multiply the numerators and denominators to make cancellation easier: $16 \\times 16 = 256$ and $9 \\times 27 = 243$.",
+   "ur": "کینسل کرنے کو آسان بنانے کے لیے شمار کنندگان اور مخرجوں کو ترتیب دے کر ضرب دیں: $16 \\times 16 = 256$ اور $9 \\times 27 = 243$۔",
+   "check": [
+    "16 * 16 == 256",
+    "9 * 27 == 243",
+    "R(16,9) * R(729,64) * R(16,27) == R(256,64) * R(729,243)"
+   ]
+  },
+  {
+   "math": "= 4 \\times 3 = 12",
+   "en": "Divide the fractions ($\\frac{256}{64} = 4$ and $\\frac{729}{243} = 3$) and multiply the results to get the final answer $12$.",
+   "ur": "کسروں کو تقسیم کریں ($\\frac{256}{64} = 4$ اور $\\frac{729}{243} = 3$) اور حتمی جواب $12$ حاصل کرنے کے لیے نتائج کو ضرب دیں۔",
+   "check": [
+    "R(256,64) == 4",
+    "R(729,243) == 3",
+    "4 * 3 == 12",
+    "Rational(3,4)**(-2) == Rational(16,9)",
+    "Rational(4,9)**3 == Rational(64,729)",
+    "Rational(16,9)/Rational(64,729)*Rational(16,27) == 12"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

@@ -1,0 +1,62 @@
+{
+ "item": "c10-ex3.5-q5",
+ "label": "i",
+ "answer_ref": "$\\begin{bmatrix} \\frac{1}{5} & 0 \\\\ 0 & \\frac{1}{5} \\end{bmatrix}$",
+ "steps": [
+  {
+   "math": "A = \\begin{bmatrix} 5 & 0 \\\\ 0 & 5 \\end{bmatrix}",
+   "en": "Let the given matrix be $A$. We need to find its multiplicative inverse, $A^{-1}$.",
+   "ur": "فرض کریں کہ دیا گیا قالب $A$ ہے۔ ہمیں اس کا ضربی معکوس $A^{-1}$ معلوم کرنا ہے۔",
+   "check": [
+    "Eq(Matrix([[5, 0], [0, 5]]), Matrix([[5, 0], [0, 5]]))"
+   ]
+  },
+  {
+   "math": "A^{-1} = \\frac{1}{|A|} \\operatorname{Adj}A, \\quad |A| \\neq 0",
+   "en": "Recall the formula for the multiplicative inverse of a matrix.",
+   "ur": "قالب کے ضربی معکوس کا فارمولا لکھیں۔"
+  },
+  {
+   "math": "|A| = \\begin{vmatrix} 5 & 0 \\\\ 0 & 5 \\end{vmatrix} = (5)(5) - (0)(0) = 25 - 0 = 25",
+   "en": "First, find the determinant $|A|$ using the rule $|A| = ad - bc$. Since $|A| = 25 \\neq 0$, the matrix is non-singular and $A^{-1}$ exists.",
+   "ur": "سب سے پہلے، کلیہ $|A| = ad - bc$ کی مدد سے مقطع $|A|$ معلوم کریں۔ چونکہ $|A| = 25 \\neq 0$ ہے، اس لیے یہ ایک غیر نادر قالب ہے اور $A^{-1}$ ممکن ہے۔",
+   "check": [
+    "Matrix([[5, 0], [0, 5]]).det() == 25",
+    "5*5 - 0*0 == 25"
+   ]
+  },
+  {
+   "math": "\\operatorname{Adj}A = \\begin{bmatrix} 5 & 0 \\\\ 0 & 5 \\end{bmatrix}",
+   "en": "Next, find the adjoint of $A$ by interchanging the diagonal entries and changing the signs of the other two entries (since $-0 = 0$, the zeros remain unchanged).",
+   "ur": "اب، وٹری ارکان کی جگہ بدل کر اور باقی دو ارکان کی علامتیں تبدیل کر کے $A$ کا ایڈجائنٹ معلوم کریں (چونکہ $-0 = 0$ ہوتا ہے، اس لیے صفر برقرار رہیں گے)۔",
+   "check": [
+    "Eq(Matrix([[5, 0], [0, 5]]).adjugate(), Matrix([[5, 0], [0, 5]]))"
+   ]
+  },
+  {
+   "math": "A^{-1} = \\frac{1}{25} \\begin{bmatrix} 5 & 0 \\\\ 0 & 5 \\end{bmatrix} = \\begin{bmatrix} \\frac{5}{25} & \\frac{0}{25} \\\\ \\frac{0}{25} & \\frac{5}{25} \\end{bmatrix}",
+   "en": "Substitute $|A|$ and $\\operatorname{Adj}A$ into the inverse formula and divide each entry by $25$.",
+   "ur": "معکوس کے فارمولے میں $|A|$ اور $\\operatorname{Adj}A$ کی قیمتیں درج کریں اور ہر رکن کو $25$ سے تقسیم کریں۔",
+   "check": [
+    "Eq(R(1, 25)*Matrix([[5, 0], [0, 5]]), Matrix([[R(5, 25), 0], [0, R(5, 25)]]))"
+   ]
+  },
+  {
+   "math": "A^{-1} = \\begin{bmatrix} \\frac{1}{5} & 0 \\\\ 0 & \\frac{1}{5} \\end{bmatrix}",
+   "en": "Simplify the fractions to obtain the final multiplicative inverse.",
+   "ur": "کسور کو مختصر کر کے مطلوبہ ضربی معکوس حاصل کریں۔",
+   "check": [
+    "Eq(Matrix([[5, 0], [0, 5]]).inv(), Matrix([[R(1, 5), 0], [0, R(1, 5)]]))",
+    "R(5, 25) == R(1, 5)",
+    "R(0, 25) == 0",
+    "Matrix([[5, 0], [0, 5]]).det() == 25",
+    "Eq(Matrix([[5, 0], [0, 5]]).adjugate(), Matrix([[5, 0], [0, 5]]))",
+    "Eq(Matrix([[5, 0], [0, 5]]).inv(), Matrix([[1/5, 0], [0, 1/5]]))",
+    "Eq(Matrix([[1, 0], [0, 1]]), Matrix([[1, 0], [0, 1]]))"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

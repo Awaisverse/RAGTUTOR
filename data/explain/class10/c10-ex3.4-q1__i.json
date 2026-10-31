@@ -1,0 +1,50 @@
+{
+ "item": "c10-ex3.4-q1",
+ "label": "i",
+ "answer_ref": "$AB = \\begin{bmatrix} 5 & 0 \\\\ -3 & -2 \\end{bmatrix}$, $BA = \\begin{bmatrix} 1 & 6 \\\\ 2 & 2 \\end{bmatrix}$",
+ "math": [
+  "A = \\begin{bmatrix} 1 & 2 \\\\ -1 & 0 \\end{bmatrix}, \\quad B = \\begin{bmatrix} 3 & 2 \\\\ 1 & -1 \\end{bmatrix}",
+  "AB = \\begin{bmatrix} 1 & 2 \\\\ -1 & 0 \\end{bmatrix}\\begin{bmatrix} 3 & 2 \\\\ 1 & -1 \\end{bmatrix}",
+  "AB = \\begin{bmatrix} (1)(3) + (2)(1) & (1)(2) + (2)(-1) \\\\ (-1)(3) + (0)(1) & (-1)(2) + (0)(-1) \\end{bmatrix}",
+  "AB = \\begin{bmatrix} 3 + 2 & 2 - 2 \\\\ -3 + 0 & -2 + 0 \\end{bmatrix} = \\begin{bmatrix} 5 & 0 \\\\ -3 & -2 \\end{bmatrix}",
+  "BA = \\begin{bmatrix} 3 & 2 \\\\ 1 & -1 \\end{bmatrix}\\begin{bmatrix} 1 & 2 \\\\ -1 & 0 \\end{bmatrix}",
+  "BA = \\begin{bmatrix} (3)(1) + (2)(-1) & (3)(2) + (2)(0) \\\\ (1)(1) + (-1)(-1) & (1)(2) + (-1)(0) \\end{bmatrix}",
+  "BA = \\begin{bmatrix} 3 - 2 & 6 + 0 \\\\ 1 + 1 & 2 + 0 \\end{bmatrix} = \\begin{bmatrix} 1 & 6 \\\\ 2 & 2 \\end{bmatrix}"
+ ],
+ "why": [
+  {
+   "en": "Before multiplying matrices, we must always check the conformability rule: the number of columns in the first matrix must equal the number of rows in the second. Since both $A$ and $B$ have order $2 \\times 2$, this condition ($2 = 2$) is met in both directions, confirming we can safely calculate both $AB$ and $BA$.",
+   "ur": "کالبوں کو ضرب دینے سے پہلے ہمیں ہمیشہ ضرب کے اصول کو چیک کرنا چاہیے: پہلے کالب کے کالموں کی تعداد دوسرے کالب کی قطاروں کی تعداد کے برابر ہونی چاہیے۔ چونکہ $A$ اور $B$ دونوں کا مرتبہ $2 \\times 2$ ہے، اس لیے یہ شرط ($2 = 2$) دونوں صورتوں میں پوری ہوتی ہے، جو تصدیق کرتی ہے کہ ہم $AB$ اور $BA$ دونوں معلوم کر سکتے ہیں۔"
+  },
+  {
+   "en": "We write matrix $A$ on the left and matrix $B$ on the right because the order of matrices matters in multiplication. This visual setup helps us clearly see the rows of $A$ that will interact with the columns of $B$.",
+   "ur": "ہم کالب $A$ کو بائیں طرف اور کالب $B$ کو دائیں طرف لکھتے ہیں کیونکہ ضرب میں کالبوں کی ترتیب بہت اہم ہوتی ہے۔ اس ترتیب سے ہمیں واضح طور پر نظر آتا ہے کہ $A$ کی قطاریں $B$ کے کالموں کے ساتھ کیسے ضرب کھائیں گی۔"
+  },
+  {
+   "en": "Using the row-by-column multiplication rule, we pair each number across a row of $A$ with the corresponding number down a column of $B$. This sets up the exact arithmetic needed to find each of the four positions in our new $2 \\times 2$ matrix.",
+   "ur": "قطار کو کالم سے ضرب دینے کے اصول کو استعمال کرتے ہوئے، ہم $A$ کی ہر قطار کے ارکان کو $B$ کے متعلقہ کالم کے ارکان کے ساتھ جوڑتے ہیں۔ اس سے وہ حسابی عمل تیار ہو جاتا ہے جو ہمارے نئے $2 \\times 2$ کالب کے چاروں ارکان کو معلوم کرنے کے لیے ضروری ہے۔"
+  },
+  {
+   "en": "We perform the basic multiplication and addition for each entry to complete the calculation of the first product. This gives us our final $2 \\times 2$ matrix for $AB$, completing the first half of the question.",
+   "ur": "پہلے حاصلِ ضرب کو مکمل کرنے کے لیے ہم ہر رکن کی سادہ ضرب اور جمع کا عمل کرتے ہیں۔ اس سے ہمیں $AB$ کے لیے ہمارا حتمی $2 \\times 2$ کالب مل جاتا ہے، جس سے سوال کا پہلا حصہ مکمل ہو جاتا ہے۔"
+  },
+  {
+   "en": "To find $BA$, we must reverse the order and place matrix $B$ first and matrix $A$ second. In matrix algebra, changing the order changes which rows and columns are multiplied, so we treat this as a fresh setup.",
+   "ur": "$BA$ معلوم کرنے کے لیے ہمیں ترتیب الٹنی ہوگی اور کالب $B$ کو پہلے اور کالب $A$ کو بعد میں رکھنا ہوگا۔ کالبوں کے الجبرا میں ترتیب بدلنے سے ضرب کھانے والی قطاریں اور کالم بدل جاتے ہیں، اس لیے ہم اسے ایک نئے سوال کے طور پر حل کرتے ہیں۔"
+  },
+  {
+   "en": "Applying the same row-by-column rule, we now take the rows from matrix $B$ and multiply them by the columns of matrix $A$. Notice how the pairs of numbers being multiplied are different from step 3 because the roles of the matrices have switched.",
+   "ur": "قطار کو کالم سے ضرب دینے کا وہی اصول لاگو کرتے ہوئے، اب ہم کالب $B$ کی قطاریں لیتے ہیں اور انہیں کالب $A$ کے کالموں سے ضرب دیتے ہیں۔ غور کریں کہ ضرب کھانے والے نمبروں کے جوڑے مرحلہ 3 سے مختلف ہیں کیونکہ کالبوں کی جگہ تبدیل ہو چکی ہے۔"
+  },
+  {
+   "en": "Simplifying the products and sums gives us the final entries for the matrix $BA$. With this, we have successfully found the second required product.",
+   "ur": "ضرب اور جمع کو مختصر کرنے سے ہمیں کالب $BA$ کے حتمی ارکان مل جاتے ہیں۔ اس کے ساتھ ہی ہم نے دوسرا مطلوبہ حاصلِ ضرب بھی کامیابی سے معلوم کر لیا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "We have found that both products exist and are $AB = \\begin{bmatrix} 5 & 0 \\\\ -3 & -2 \\end{bmatrix}$ and $BA = \\begin{bmatrix} 1 & 6 \\\\ 2 & 2 \\end{bmatrix}$. Notice that $AB$ and $BA$ are completely different matrices, which is a great example showing that matrix multiplication is generally not commutative ($AB \\neq BA$). You can quickly check your work by verifying the top-left entries: for $AB$ it is $(1)(3) + (2)(1) = 5$, and for $BA$ it is $(3)(1) + (2)(-1) = 1$.",
+  "ur": "ہم نے معلوم کر لیا ہے کہ دونوں حاصلِ ضرب ممکن ہیں اور وہ $AB = \\begin{bmatrix} 5 & 0 \\\\ -3 & -2 \\end{bmatrix}$ اور $BA = \\begin{bmatrix} 1 & 6 \\\\ 2 & 2 \\end{bmatrix}$ ہیں۔ غور کریں کہ $AB$ اور $BA$ بالکل مختلف کالب ہیں، جو اس بات کی بہترین مثال ہے کہ کالبوں کی ضرب میں عام طور پر خاصیتِ مبادلہ نہیں پائی جاتی ($AB \\neq BA$)۔ آپ اوپر بائیں کونے والے ارکان کی تصدیق کر کے اپنے کام کو جلدی سے چیک کر سکتے ہیں: $AB$ کے لیے یہ $(1)(3) + (2)(1) = 5$ ہے، اور $BA$ کے لیے یہ $(3)(1) + (2)(-1) = 1$ ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

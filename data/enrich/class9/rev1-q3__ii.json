@@ -1,0 +1,72 @@
+{
+ "item": "rev1-q3",
+ "label": "ii",
+ "answer_ref": "Verified: $\\frac{35}{6} = \\frac{35}{6}$",
+ "steps": [
+  {
+   "math": "a = \\frac{4}{3}, \\quad b = \\frac{5}{2}, \\quad c = \\frac{7}{4}",
+   "en": "The given values of the real numbers $a$, $b$, and $c$ are written down.",
+   "ur": "حقیقی اعداد $a$، $b$ اور $c$ کی دی گئی قیمتیں لکھی گئی ہیں۔",
+   "check": [
+    "R(4,3) == R(4,3)",
+    "R(5,2) == R(5,2)",
+    "R(7,4) == R(7,4)"
+   ]
+  },
+  {
+   "math": "a(bc) = (ab)c",
+   "en": "According to the associative property of real numbers with respect to multiplication, changing the grouping of factors does not change the product.",
+   "ur": "حقیقی اعداد کی بلحاظ ضرب خاصیتِ تلازم کے مطابق، ضرب کھانے والے اجزاء کی ترتیب (گروپنگ) بدلنے سے حاصل ضرب میں فرق نہیں پڑتا۔"
+  },
+  {
+   "math": "\\text{LHS} = a(bc) = \\frac{4}{3} \\left( \\frac{5}{2} \\cdot \\frac{7}{4} \\right)",
+   "en": "Take the Left Hand Side (LHS) and substitute the given values of $a$, $b$, and $c$.",
+   "ur": "بائیں طرف (LHS) لیں اور اس میں $a$، $b$ اور $c$ کی دی گئی قیمتیں درج کریں۔",
+   "check": [
+    "R(4,3)*(R(5,2)*R(7,4)) == R(35,6)"
+   ]
+  },
+  {
+   "math": "\\text{LHS} = \\frac{4}{3} \\cdot \\frac{35}{8} = \\frac{35}{6}",
+   "en": "First multiply the fractions inside the brackets ($\\frac{5 \\times 7}{2 \\times 4} = \\frac{35}{8}$), then multiply by $\\frac{4}{3}$ and simplify by dividing $4$ and $8$ by $4$.",
+   "ur": "پہلے بریکٹ کے اندر والی کسروں کو ضرب دیں ($\\frac{5 \\times 7}{2 \\times 4} = \\frac{35}{8}$)، پھر اسے $\\frac{4}{3}$ سے ضرب دیں اور $4$ اور $8$ کو $4$ پر تقسیم کر کے مختصر کریں۔",
+   "check": [
+    "R(5,2)*R(7,4) == R(35,8)",
+    "R(4,3)*R(35,8) == R(35,6)"
+   ]
+  },
+  {
+   "math": "\\text{RHS} = (ab)c = \\left( \\frac{4}{3} \\cdot \\frac{5}{2} \\right) \\frac{7}{4}",
+   "en": "Now, take the Right Hand Side (RHS) and substitute the given values of $a$, $b$, and $c$.",
+   "ur": "اب دائیں طرف (RHS) لیں اور اس میں $a$، $b$ اور $c$ کی دی گئی قیمتیں درج کریں۔",
+   "check": [
+    "(R(4,3)*R(5,2))*R(7,4) == R(35,6)"
+   ]
+  },
+  {
+   "math": "\\text{RHS} = \\frac{10}{3} \\cdot \\frac{7}{4} = \\frac{35}{6}",
+   "en": "First multiply the fractions inside the brackets and simplify ($\\frac{4}{3} \\cdot \\frac{5}{2} = \\frac{10}{3}$), then multiply by $\\frac{7}{4}$ and simplify by dividing $10$ and $4$ by $2$.",
+   "ur": "پہلے بریکٹ کے اندر والی کسروں کو ضرب دے کر مختصر کریں ($\\frac{4}{3} \\cdot \\frac{5}{2} = \\frac{10}{3}$)، پھر اسے $\\frac{7}{4}$ سے ضرب دیں اور $10$ اور $4$ کو $2$ پر تقسیم کر کے مختصر کریں۔",
+   "check": [
+    "R(4,3)*R(5,2) == R(10,3)",
+    "R(10,3)*R(7,4) == R(35,6)"
+   ]
+  },
+  {
+   "math": "\\text{LHS} = \\text{RHS} \\implies \\frac{35}{6} = \\frac{35}{6}",
+   "en": "Since the Left Hand Side equals the Right Hand Side, the associative property of multiplication is verified.",
+   "ur": "چونکہ بائیں طرف اور دائیں طرف برابر ہیں، اس لیے ضرب کے لحاظ سے خاصیتِ تلازم کی تصدیق ہو گئی ہے۔",
+   "check": [
+    "R(35,6) == R(35,6)",
+    "Rational(5,2)*Rational(7,4) == Rational(35,8)",
+    "Rational(4,3)*Rational(35,8) == Rational(35,6)",
+    "Rational(4,3)*Rational(5,2) == Rational(10,3)",
+    "Rational(10,3)*Rational(7,4) == Rational(35,6)",
+    "Rational(35,6) == Rational(35,6)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

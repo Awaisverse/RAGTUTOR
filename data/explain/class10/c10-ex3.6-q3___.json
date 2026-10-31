@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex3.6-q3",
+ "label": "",
+ "answer_ref": "$x = 3,\\ y = 4$",
+ "math": [
+  "",
+  "\\begin{bmatrix} 1 & 1 \\\\ 2 & -1 \\end{bmatrix}\\begin{bmatrix} x \\\\ y \\end{bmatrix} = \\begin{bmatrix} 7 \\\\ 2 \\end{bmatrix}",
+  "|A| = \\begin{vmatrix} 1 & 1 \\\\ 2 & -1 \\end{vmatrix} = (1)(-1) - (1)(2) = -3",
+  "|A_x| = \\begin{vmatrix} 7 & 1 \\\\ 2 & -1 \\end{vmatrix} = (7)(-1) - (1)(2) = -9",
+  "|A_y| = \\begin{vmatrix} 1 & 7 \\\\ 2 & 2 \\end{vmatrix} = (1)(2) - (7)(2) = -12",
+  "x = \\frac{|A_x|}{|A|} = \\frac{-9}{-3} = 3,\\quad y = \\frac{|A_y|}{|A|} = \\frac{-12}{-3} = 4"
+ ],
+ "why": [
+  {
+   "en": "To find the unknown currents $x$ and $y$ using matrices, we choose Cramer's rule, which is a direct method using determinants to solve a system of linear equations.",
+   "ur": "مجبول کرنٹ $x$ اور $y$ کو میٹرکس کے ذریعے معلوم کرنے کے لیے ہم کریمر کا قانون (Cramer's rule) منتخب کرتے ہیں، جو کہ ڈیٹرمیننٹس (determinants) کے استعمال سے مساواتوں کو حل کرنے کا ایک براہِ راست طریقہ ہے۔"
+  },
+  {
+   "en": "We separate the coefficients of $x$ and $y$, the variables, and the constants on the right side into matrices $A$, $X$, and $B$. This organizes the system so we can clearly see the numbers needed for our determinants.",
+   "ur": "ہم $x$ اور $y$ کے عددی سروں (coefficients)، متغیرات (variables)، اور مستقل نمبروں (constants) کو الگ کر کے میٹرکس $A$، $X$ اور $B$ کی شکل میں لکھتے ہیں۔ اس سے مساواتیں منظم ہو جاتی ہیں اور ہمیں ڈیٹرمیننٹ کے لیے ضروری نمبرز صاف نظر آتے ہیں۔"
+  },
+  {
+   "en": "We calculate the determinant of the coefficient matrix, $|A|$, by cross-multiplying the diagonals and subtracting: $(1)(-1) - (1)(2)$. Since the result is $-3$ (which is not zero), it confirms that a unique solution exists and gives us the denominator for Cramer's rule.",
+   "ur": "ہم عددی سروں کے میٹرکس کا ڈیٹرمیننٹ $|A|$ ترچھی ضرب (cross-multiplication) دے کر اور تفریق کر کے نکالتے ہیں: $(1)(-1) - (1)(2)$۔ چونکہ جواب $-3$ آیا ہے (جو صفر نہیں ہے)، اس سے تصدیق ہوتی ہے کہ اس سوال کا حل ممکن ہے اور یہ ہمیں کریمر کے فارمولے کے لیے بٹے کے نیچے کی قیمت دیتا ہے۔"
+  },
+  {
+   "en": "To prepare for finding $x$, we form matrix $A_x$ by replacing the first column ($x$-coefficients) with the constant numbers $7$ and $2$. Its determinant $|A_x| = -9$ gives us the numerator needed to calculate $x$.",
+   "ur": "$x$ کی قیمت نکالنے کی تیاری کے لیے، ہم پہلے کالم ($x$ کے عددی سروں) کی جگہ مستقل نمبرز $7$ اور $2$ رکھ کر میٹرکس $A_x$ بناتے ہیں۔ اس کا ڈیٹرمیننٹ $|A_x| = -9$ ہمیں $x$ معلوم کرنے کے لیے فارمولے کے اوپر والی رقم (numerator) دیتا ہے۔"
+  },
+  {
+   "en": "Similarly, to find $y$, we form matrix $A_y$ by replacing the second column ($y$-coefficients) with the constants $7$ and $2$. Calculating its determinant gives $|A_y| = -12$, which is the numerator for $y$.",
+   "ur": "اسی طرح $y$ معلوم کرنے کے لیے، ہم دوسرے کالم ($y$ کے عددی سروں) کی جگہ مستقل نمبرز $7$ اور $2$ رکھ کر میٹرکس $A_y$ بناتے ہیں۔ اس کا ڈیٹرمیننٹ حل کرنے سے $|A_y| = -12$ ملتا ہے، جو کہ $y$ کے فارمولے کے اوپر والی رقم ہے۔"
+  },
+  {
+   "en": "Finally, we apply Cramer's rule formulas by dividing $|A_x|$ and $|A_y|$ by the main determinant $|A|$. Dividing $-9$ by $-3$ gives $x = 3$, and dividing $-12$ by $-3$ gives $y = 4$.",
+   "ur": "آخر میں، ہم کریمر کے قانون کے فارمولے استعمال کرتے ہوئے $|A_x|$ اور $|A_y|$ کو اصل ڈیٹرمیننٹ $|A|$ پر تقسیم کرتے ہیں۔ $-9$ کو $-3$ پر تقسیم کرنے سے $x = 3$ اور $-12$ کو $-3$ پر تقسیم کرنے سے $y = 4$ حاصل ہوتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This final answer tells the electrical engineer that the current in branch A is $x = 3$ and the current in branch B is $y = 4$. We can easily check this by putting the values back into the first equation: $3 + 4 = 7$, which matches the given total.",
+  "ur": "یہ حتمی جواب الیکٹریکل انجینئر کو بتاتا ہے کہ شاخ A میں کرنٹ $x = 3$ ہے اور شاخ B میں کرنٹ $y = 4$ ہے۔ ہم پہلی مساوات میں یہ قیمتیں درج کر کے باآسانی اپنے جواب کی پڑتال کر سکتے ہیں: $3 + 4 = 7$، جو کہ بالکل درست ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

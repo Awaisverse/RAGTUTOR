@@ -1,0 +1,68 @@
+{
+ "item": "c10-ex11.2-q10",
+ "label": "",
+ "answer_ref": "Mean = 1360.87, Variance = 60642.72, SD = 246.26",
+ "steps": [
+  {
+   "math": "",
+   "en": "First, we find the midpoint ($x$) of each class interval by adding the lower and upper limits and dividing by $2$. Then we calculate $fx$ and $fx^2$ to find the mean, variance, and standard deviation of the grouped data.",
+   "ur": "سب سے پہلے، ہم ہر جماعتی وقفے کی نچلی اور بالائی حدود کو جمع کر کے $2$ پر تقسیم کر کے درمیانی نقطہ ($x$) معلوم کرتے ہیں۔ پھر ہم گروہی مواد کا اوسط، تغیر اور معیاری انحراف معلوم کرنے کے لیے $fx$ اور $fx^2$ کا حساب لگاتے ہیں۔"
+  },
+  {
+   "math": "\\begin{array}{c|c|c|c|c} \\text{Daily Wage (Rs)} & f & x & fx & fx^2 \\\\ \\hline 800-1000 & 2 & 900 & 1800 & 1620000 \\\\ 1000-1200 & 4 & 1100 & 4400 & 4840000 \\\\ 1200-1400 & 6 & 1300 & 7800 & 10140000 \\\\ 1400-1600 & 8 & 1500 & 12000 & 18000000 \\\\ 1600-1800 & 2 & 1700 & 3400 & 5780000 \\\\ 1800-2000 & 1 & 1900 & 1900 & 3610000 \\\\ \\hline \\text{Total} & \\sum f = 23 & & \\sum fx = 31300 & \\sum fx^2 = 43990000 \\end{array}",
+   "en": "Construct the frequency distribution table with columns for $f$, midpoint $x$, $fx$, and $fx^2$, and find the sums.",
+   "ur": "تعدد $f$، درمیانی نقطہ $x$، $fx$ اور $fx^2$ کے کالموں کے ساتھ تعددی تقسیم کا جدول بنائیں اور ان کا مجموعہ معلوم کریں۔",
+   "check": [
+    "2 + 4 + 6 + 8 + 2 + 1 == 23",
+    "1800 + 4400 + 7800 + 12000 + 3400 + 1900 == 31300",
+    "1620000 + 4840000 + 10140000 + 18000000 + 5780000 + 3610000 == 43990000"
+   ]
+  },
+  {
+   "math": "\\bar{x} = \\frac{\\sum fx}{\\sum f} = \\frac{31300}{23} \\approx 1360.87",
+   "en": "Substitute $\\sum fx = 31300$ and $\\sum f = 23$ into the formula for the arithmetic mean of grouped data.",
+   "ur": "گروہی مواد کے حسابی اوسط کے کلیے میں $\\sum fx = 31300$ اور $\\sum f = 23$ کی قیمتیں درج کریں۔",
+   "check": [
+    "Abs((31300/23) - 1360.87) <= 0.005"
+   ]
+  },
+  {
+   "math": "\\sigma^2 = \\frac{\\sum fx^2}{\\sum f} - \\left(\\frac{\\sum fx}{\\sum f}\\right)^2",
+   "en": "Write down the computational formula for the variance ($\\sigma^2$) of grouped data, which is algebraically equivalent to $\\frac{\\sum f(x - \\bar{x})^2}{\\sum f}$.",
+   "ur": "گروہی مواد کے تغیر ($\\sigma^2$) کا حسابی کلیہ لکھیں، جو کہ الجبرائی طور پر $\\frac{\\sum f(x - \\bar{x})^2}{\\sum f}$ کے برابر ہے۔"
+  },
+  {
+   "math": "\\sigma^2 = \\frac{43990000}{23} - \\left(\\frac{31300}{23}\\right)^2 = 1912608.70 - 1851965.97 \\approx 60642.72",
+   "en": "Substitute the sums from the table into the variance formula and simplify.",
+   "ur": "جدول سے حاصل کردہ مجموعوں کو تغیر کے کلیے میں درج کریں اور حل کریں۔",
+   "check": [
+    "Abs(((43990000/23) - (31300/23)**2) - 60642.72) <= 0.005"
+   ]
+  },
+  {
+   "math": "\\sigma = \\sqrt{\\sigma^2} = \\sqrt{60642.72} \\approx 246.26",
+   "en": "Take the positive square root of the variance to find the standard deviation ($\\sigma$).",
+   "ur": "معیاری انحراف ($\\sigma$) معلوم کرنے کے لیے تغیر کا مثبت جزر المربع لیں۔",
+   "check": [
+    "Abs(sqrt(60642.72) - 246.26) <= 0.005"
+   ]
+  },
+  {
+   "math": "\\bar{x} = 1360.87, \\quad \\sigma^2 = 60642.72, \\quad \\sigma = 246.26",
+   "en": "Thus, the mean daily wage is Rs $1360.87$, the variance is $60642.72$, and the standard deviation is Rs $246.26$.",
+   "ur": "پس، اوسط یومیہ اجرت $1360.87$ روپے، تغیر $60642.72$، اور معیاری انحراف $246.26$ روپے ہے۔",
+   "check": [
+    "1360.87 == 1360.87",
+    "60642.72 == 60642.72",
+    "246.26 == 246.26",
+    "2 + 4 + 6 + 8 + 2 + 1 == 23",
+    "Abs(((31300)/23) - 1360.87) <= 0.0050000010000000004",
+    "Abs(((2*((900) - (31300/23))**2 + 4*((1100) - (31300/23))**2 + 6*((1300) - (31300/23))**2 + 8*((1500) - (31300/23))**2 + 2*((1700) - (31300/23))**2 + 1*((1900) - (31300/23))**2)/23) - 60642.72) <= 0.0050000010000000004",
+    "Abs((sqrt((32080000/529))) - 246.26) <= 0.0050000010000000004"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

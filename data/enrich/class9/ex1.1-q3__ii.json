@@ -1,0 +1,55 @@
+{
+ "item": "ex1.1-q3",
+ "label": "ii",
+ "answer_ref": "$\\frac{37}{99}$",
+ "steps": [
+  {
+   "math": "x = 0.\\overline{37}",
+   "en": "Let the given recurring decimal be equal to $x$.",
+   "ur": "فرض کریں کہ دیے گئے متوالی اعشاری عدد کی قیمت $x$ کے برابر ہے۔"
+  },
+  {
+   "math": "x = 0.373737\\ldots \\quad \\text{--- (i)}",
+   "en": "Write the recurring decimal in its expanded form by repeating the digits $37$, and label this as equation (i).",
+   "ur": "بار کے نیچے موجود ہندسوں $37$ کو بار بار لکھ کر متوالی اعشاریہ کو پھیلا کر لکھیں اور اسے مساوات (i) کا نام دیں۔"
+  },
+  {
+   "math": "100x = 37.373737\\ldots \\quad \\text{--- (ii)}",
+   "en": "Since two digits ($3$ and $7$) are repeating after the decimal point, multiply both sides of equation (i) by $100$. Label this as equation (ii).",
+   "ur": "چونکہ اعشاریہ کے بعد دو ہندسے ($3$ اور $7$) دہرائے جا رہے ہیں، اس لیے مساوات (i) کے دونوں طرف $100$ سے ضرب دیں اور اسے مساوات (ii) کا نام دیں۔",
+   "check": [
+    "100*R(37,99) == 37 + R(37,99)"
+   ]
+  },
+  {
+   "math": "100x - x = (37.373737\\ldots) - (0.373737\\ldots)",
+   "en": "Subtract equation (i) from equation (ii) to eliminate the non-terminating repeating decimal part.",
+   "ur": "لامتناہی متوالی اعشاری حصے کو ختم کرنے کے لیے مساوات (ii) میں سے مساوات (i) کو تفریق کریں۔",
+   "check": [
+    "100*R(37,99) - R(37,99) == (37 + R(37,99)) - R(37,99)"
+   ]
+  },
+  {
+   "math": "99x = 37",
+   "en": "On the left side, $100x - x$ gives $99x$. On the right side, the repeating decimal parts cancel out, leaving $37$.",
+   "ur": "بائیں طرف $100x - x$ سے $99x$ حاصل ہوتا ہے، جبکہ دائیں طرف اعشاریہ کے بعد والا حصہ کٹ جاتا ہے اور صرف $37$ باقی بچتا ہے۔",
+   "check": [
+    "(100 - 1)*R(37,99) == 37"
+   ]
+  },
+  {
+   "math": "x = \\frac{37}{99}",
+   "en": "Divide both sides by $99$ to solve for $x$. Thus, $0.\\overline{37}$ in the rational form $\\frac{p}{q}$ is $\\frac{37}{99}$.",
+   "ur": "$x$ کی قیمت معلوم کرنے کے لیے دونوں طرف $99$ سے تقسیم کریں۔ پس $0.\\overline{37}$ کی ناطق شکل $\\frac{p}{q}$ مساوی ہے $\\frac{37}{99}$ کے۔",
+   "check": [
+    "R(37,99)*99 == 37",
+    "100*Rational(37,99) == 37 + Rational(37,99)",
+    "100*Rational(37,99) - Rational(37,99) == 37",
+    "Rational(37,99)*99 == 37"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

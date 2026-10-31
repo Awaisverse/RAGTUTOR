@@ -1,0 +1,55 @@
+{
+ "item": "c10-ex3.3-q6",
+ "label": "i",
+ "answer_ref": "verified: both sides $= \\begin{bmatrix} 14 & 3 \\\\ -3 & 3 \\end{bmatrix}$",
+ "math": [
+  "",
+  "A + B = \\begin{bmatrix} 6 & -2 \\\\ 0 & 3 \\end{bmatrix} + \\begin{bmatrix} 8 & -1 \\\\ 3 & 0 \\end{bmatrix} = \\begin{bmatrix} 6 + 8 & -2 - 1 \\\\ 0 + 3 & 3 + 0 \\end{bmatrix} = \\begin{bmatrix} 14 & -3 \\\\ 3 & 3 \\end{bmatrix}",
+  "(A+B)^t = \\begin{bmatrix} 14 & -3 \\\\ 3 & 3 \\end{bmatrix}^t = \\begin{bmatrix} 14 & 3 \\\\ -3 & 3 \\end{bmatrix}",
+  "",
+  "A^t = \\begin{bmatrix} 6 & -2 \\\\ 0 & 3 \\end{bmatrix}^t = \\begin{bmatrix} 6 & 0 \\\\ -2 & 3 \\end{bmatrix}",
+  "B^t = \\begin{bmatrix} 8 & -1 \\\\ 3 & 0 \\end{bmatrix}^t = \\begin{bmatrix} 8 & 3 \\\\ -1 & 0 \\end{bmatrix}",
+  "A^t + B^t = \\begin{bmatrix} 6 & 0 \\\\ -2 & 3 \\end{bmatrix} + \\begin{bmatrix} 8 & 3 \\\\ -1 & 0 \\end{bmatrix} = \\begin{bmatrix} 6 + 8 & 0 + 3 \\\\ -2 - 1 & 3 + 0 \\end{bmatrix} = \\begin{bmatrix} 14 & 3 \\\\ -3 & 3 \\end{bmatrix}",
+  "(A+B)^t = \\begin{bmatrix} 14 & 3 \\\\ -3 & 3 \\end{bmatrix} = A^t+B^t"
+ ],
+ "why": [
+  {
+   "en": "To verify an equation, we must evaluate both sides separately to see if they yield the same matrix. We start by choosing the Left-Hand Side, $(A+B)^t$, so we can work out its exact value first.",
+   "ur": "کسی مساوات کی تصدیق کرنے کے لیے، ہمیں دونوں اطراف کو الگ الگ حل کرنا ہوتا ہے تاکہ دیکھا جا سکے کہ کیا ان سے ایک ہی قالب (matrix) حاصل ہوتا ہے۔ ہم بائیں طرف یعنی $(A+B)^t$ سے شروعات کرتے ہیں تاکہ پہلے اس کی قیمت معلوم کر سکیں۔"
+  },
+  {
+   "en": "Following the order of operations (brackets first), we apply the definition of matrix addition before taking the transpose. Adding the corresponding entries gives us the single combined matrix $A+B = \\begin{bmatrix} 14 & -3 \\\\ 3 & 3 \\end{bmatrix}$, which is now ready to be transposed.",
+   "ur": "حسابی عوامل کی ترتیب کے مطابق (پہلے بریکٹ حل کرنا)، ہم ٹرانسپوز لینے سے پہلے قالبوں کی جمع کا اصول لاگو کرتے ہیں۔ متنازعہ ارکان کو جمع کرنے سے ہمیں ایک مشترکہ قالب $A+B = \\begin{bmatrix} 14 & -3 \\\\ 3 & 3 \\end{bmatrix}$ ملتا ہے، جس کا اب ہم ٹرانسپوز لے سکتے ہیں۔"
+  },
+  {
+   "en": "Now we apply the definition of transpose by interchanging the rows and columns of the sum $A+B$. This completes the Left-Hand Side, giving us the final matrix $\\begin{bmatrix} 14 & 3 \\\\ -3 & 3 \\end{bmatrix}$ to compare against the other side.",
+   "ur": "اب ہم حاصل جمع $A+B$ کی قطاروں اور کالموں کو آپس میں بدل کر ٹرانسپوز کی تعریف پر عمل کرتے ہیں۔ اس سے بائیں طرف حل ہو جاتی ہے اور ہمیں دوسری طرف سے موازنہ کرنے کے لیے حتمی قالب $\\begin{bmatrix} 14 & 3 \\\\ -3 & 3 \\end{bmatrix}$ مل جاتا ہے۔"
+  },
+  {
+   "en": "Having finished the first part, we now turn our attention to the Right-Hand Side, $A^t+B^t$. Notice that here the transpose sign is on each individual matrix, meaning we must transpose them before adding.",
+   "ur": "پہلا حصہ مکمل کرنے کے بعد، اب ہم دائیں طرف یعنی $A^t+B^t$ پر توجہ دیتے ہیں۔ غور کریں کہ یہاں ٹرانسپوز کی علامت ہر قالب پر الگ الگ ہے، جس کا مطلب ہے کہ جمع کرنے سے پہلے ہمیں ان کا ٹرانسپوز لینا ہوگا۔"
+  },
+  {
+   "en": "We first find $A^t$ by turning the rows of matrix $A$ into columns. This prepares the first matrix needed for our right-hand side addition, resulting in $\\begin{bmatrix} 6 & 0 \\\\ -2 & 3 \\end{bmatrix}$.",
+   "ur": "ہم سب سے پہلے قالب $A$ کی قطاروں کو کالموں میں بدل کر $A^t$ معلوم کرتے ہیں۔ اس سے دائیں طرف کی جمع کے لیے پہلا قالب $\\begin{bmatrix} 6 & 0 \\\\ -2 & 3 \\end{bmatrix}$ تیار ہو جاتا ہے۔"
+  },
+  {
+   "en": "Similarly, we find $B^t$ by interchanging the rows and columns of matrix $B$. Now we have both transposed matrices, $A^t$ and $B^t$, ready to be added together.",
+   "ur": "اسی طرح، ہم قالب $B$ کی قطاروں اور کالموں کو آپس میں بدل کر $B^t$ معلوم کرتے ہیں۔ اب ہمارے پاس دونوں ٹرانسپوز شدہ قالب، $A^t$ اور $B^t$، آپس میں جمع ہونے کے لیے تیار ہیں۔"
+  },
+  {
+   "en": "Using the rule of matrix addition, we add the corresponding entries of $A^t$ and $B^t$. This gives the final value of the Right-Hand Side as $\\begin{bmatrix} 14 & 3 \\\\ -3 & 3 \\end{bmatrix}$.",
+   "ur": "قالبوں کی جمع کے اصول کو استعمال کرتے ہوئے، ہم $A^t$ اور $B^t$ کے متنازعہ ارکان کو جمع کرتے ہیں۔ اس سے ہمیں دائیں طرف کی حتمی قیمت $\\begin{bmatrix} 14 & 3 \\\\ -3 & 3 \\end{bmatrix}$ حاصل ہوتی ہے۔"
+  },
+  {
+   "en": "Finally, we compare the result from Step 3 with the result from Step 7. Since both calculations produce the exact same matrix $\\begin{bmatrix} 14 & 3 \\\\ -3 & 3 \\end{bmatrix}$, the law is successfully verified.",
+   "ur": "آخر میں، ہم مرحلہ 3 کے نتیجے کا مرحلہ 7 کے نتیجے سے موازنہ کرتے ہیں۔ چونکہ دونوں حسابات سے بالکل ایک جیسا قالب $\\begin{bmatrix} 14 & 3 \\\\ -3 & 3 \\end{bmatrix}$ حاصل ہوتا ہے، اس لیے اس قانون کی کامیابی سے تصدیق ہو جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This verification proves an important property of matrices: the transpose of a sum is always equal to the sum of the individual transposes, $(A+B)^t = A^t+B^t$. Whether you add the matrices first and then flip rows and columns, or flip them first and then add, both methods naturally check each other by arriving at the exact same matrix $\\begin{bmatrix} 14 & 3 \\\\ -3 & 3 \\end{bmatrix}$.",
+  "ur": "یہ تصدیق قالبوں کی ایک اہم خاصیت کو ثابت کرتی ہے: دو قالبوں کے حاصل جمع کا ٹرانسپوز ہمیشہ ان کے انفرادی ٹرانسپوز کے حاصل جمع کے برابر ہوتا ہے، یعنی $(A+B)^t = A^t+B^t$۔ چاہے آپ پہلے قالبوں کو جمع کریں اور پھر قطاروں اور کالموں کو بدلیں، یا پہلے انہیں بدلیں اور پھر جمع کریں، دونوں طریقے ایک ہی قالب $\\begin{bmatrix} 14 & 3 \\\\ -3 & 3 \\end{bmatrix}$ پر پہنچ کر قدرتی طور پر ایک دوسرے کی درستی کی تصدیق کرتے ہیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

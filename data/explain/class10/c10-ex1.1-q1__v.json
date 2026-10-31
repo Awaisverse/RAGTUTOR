@@ -1,0 +1,50 @@
+{
+ "item": "c10-ex1.1-q1",
+ "label": "v",
+ "answer_ref": "$0$",
+ "math": [
+  "i^{11} + i^{5}",
+  "i^{11} + i^{5} = i^{8 + 3} + i^{4 + 1}",
+  "= i^{8} \\cdot i^{3} + i^{4} \\cdot i^{1}",
+  "= (i^{4})^{2} \\cdot i^{3} + i^{4} \\cdot i",
+  "= (1)^{2} \\cdot i^{3} + (1) \\cdot i = i^{3} + i",
+  "= -i + i",
+  "= 0"
+ ],
+ "why": [
+  {
+   "en": "We begin by writing down the given expression $i^{11} + i^{5}$ so we can see the higher powers of the imaginary unit $i$ that need to be reduced.",
+   "ur": "ہم سب سے پہلے دی گئی عبارت $i^{11} + i^{5}$ کو لکھتے ہیں تاکہ ہم امیجنری یونٹ $i$ کی ان بڑی طاقتوں کو دیکھ سکیں جنہیں مختصر کرنا ہے۔"
+  },
+  {
+   "en": "Because the powers of $i$ repeat in a cycle of $4$ (since $i^{4} = 1$), we break $11$ into $8 + 3$ and $5$ into $4 + 1$ using multiples of $4$. This prepares the exponents so we can easily remove the parts that equal $1$.",
+   "ur": "چونکہ $i$ کی طاقتیں $4$ کے چکر میں دہرائی جاتی ہیں (کیونکہ $i^{4} = 1$ ہوتا ہے)، اس لیے ہم $4$ کے ضعات کا استعمال کرتے ہوئے $11$ کو $8 + 3$ اور $5$ کو $4 + 1$ میں توڑتے ہیں۔ یہ قوت نماؤں کو تیار کرتا ہے تاکہ ہم ان حصوں کو آسانی سے ختم کر سکیں جو $1$ کے برابر ہیں۔"
+  },
+  {
+   "en": "Using the product law of exponents ($a^{m+n} = a^{m} \\cdot a^{n}$), we separate the added exponents into multiplied terms. This isolates $i^{8}$ and $i^{4}$ from the smaller remaining powers of $i$.",
+   "ur": "قوت نما کے ضرب کے قانون ($a^{m+n} = a^{m} \\cdot a^{n}$) کا استعمال کرتے ہوئے، ہم جمع شدہ طاقتوں کو ضربی رقوم میں الگ کرتے ہیں۔ یہ عمل $i^{8}$ اور $i^{4}$ کو $i$ کی باقی چھوٹی طاقتوں سے الگ کر دیتا ہے۔"
+  },
+  {
+   "en": "We apply the power of a power rule to write $i^{8}$ directly in terms of $i^{4}$ as $(i^{4})^{2}$. Doing this makes it completely clear where we can plug in the value of $i^{4}$.",
+   "ur": "ہم طاقت کی طاقت کا اصول استعمال کرتے ہوئے $i^{8}$ کو براہ راست $i^{4}$ کی شکل میں $(i^{4})^{2}$ لکھتے ہیں۔ ایسا کرنے سے یہ بالکل واضح ہو جاتا ہے کہ ہم کہاں $i^{4}$ کی قیمت درج کر سکتے ہیں۔"
+  },
+  {
+   "en": "Now we use the fundamental property $i^{4} = 1$, which turns $(1)^{2}$ and $1$ into simple multipliers that disappear. This reduces our original large powers down to a much simpler expression, $i^{3} + i$.",
+   "ur": "اب ہم بنیادی خاصیت $i^{4} = 1$ کا استعمال کرتے ہیں، جس سے $(1)^{2}$ اور $1$ سادہ ضربی الفاظ بن کر ختم ہو جاتے ہیں۔ اس سے ہماری اصل بڑی طاقتیں گھٹ کر ایک بہت ہی سادہ عبارت $i^{3} + i$ میں بدل جاتی ہیں۔"
+  },
+  {
+   "en": "By definition of the imaginary unit, $i^{2} = -1$, which means $i^{3} = i^{2} \\cdot i = -i$. Replacing $i^{3}$ with $-i$ leaves us with only first-degree terms of $i$ that can be combined.",
+   "ur": "امیجنری یونٹ کی تعریف کے مطابق $i^{2} = -1$ ہے، جس کا مطلب ہے کہ $i^{3} = i^{2} \\cdot i = -i$ ہوتا ہے۔ $i^{3}$ کی جگہ $-i$ لگانے سے ہمارے پاس صرف $i$ کی پہلی طاقت والی رقوم بچتی ہیں جنہیں آپس میں ملایا جا سکتا ہے۔"
+  },
+  {
+   "en": "Finally, we combine the like terms $-i$ and $+i$, which are additive inverses of each other. They cancel out completely to give us the simplest form, $0$.",
+   "ur": "آخر میں، ہم ایک جیسی رقوم $-i$ اور $+i$ کو ملاتے ہیں، جو ایک دوسرے کے جمعی معکوس ہیں۔ یہ ایک دوسرے کو مکمل طور پر ختم کر کے ہمیں سب سے مختصر شکل، یعنی $0$ دیتے ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $0$ means that the two complex powers $i^{11}$ and $i^{5}$ are exact opposites ($-i$ and $+i$), so their sum has neither a real part nor an imaginary part. You can quickly check this by noting that $11$ leaves a remainder of $3$ when divided by $4$ (giving $i^{3} = -i$) and $5$ leaves a remainder of $1$ (giving $i^{1} = i$), which add up to $0$.",
+  "ur": "حتمی جواب $0$ کا مطلب یہ ہے کہ دو کمپلیکس طاقتیں $i^{11}$ اور $i^{5}$ ایک دوسرے کے بالکل متضاد ہیں ($-i$ اور $+i$)، اس لیے ان کے مجموعے میں نہ کوئی حقیقی حصہ ہے اور نہ ہی کوئی خیالی حصہ۔ آپ اس کی تصدیق ایسے کر سکتے ہیں کہ $11$ کو $4$ پر تقسیم کرنے سے باقی $3$ بچتا ہے (جو $i^{3} = -i$ دیتا ہے) اور $5$ کو تقسیم کرنے سے باقی $1$ بچتا ہے (جو $i^{1} = i$ دیتا ہے)، اور ان کا مجموعہ $0$ بنتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

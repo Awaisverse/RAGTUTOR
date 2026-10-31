@@ -1,0 +1,65 @@
+{
+ "item": "c10-ex3.5-q5",
+ "label": "iv",
+ "answer_ref": "$\\begin{bmatrix} \\frac{3}{34} & \\frac{5}{34} \\\\ \\frac{5}{34} & - \\frac{3}{34} \\end{bmatrix}$",
+ "steps": [
+  {
+   "math": "A = \\begin{bmatrix} 3 & 5 \\\\ 5 & -3 \\end{bmatrix}",
+   "en": "Let us denote the given matrix by $A$. We need to find its multiplicative inverse, $A^{-1}$.",
+   "ur": "فرض کریں کہ دیا گیا قالب $A$ ہے۔ ہمیں اس کا ضربی معکوس $A^{-1}$ معلوم کرنا ہے۔"
+  },
+  {
+   "math": "A^{-1} = \\frac{1}{|A|} \\operatorname{Adj}A, \\quad \\text{where } |A| \\neq 0",
+   "en": "The formula for the multiplicative inverse of a non-singular matrix $A$ is:",
+   "ur": "ایک غیر نادر قالب $A$ کے ضربی معکوس کا فارمولا یہ ہے:"
+  },
+  {
+   "math": "|A| = \\begin{vmatrix} 3 & 5 \\\\ 5 & -3 \\end{vmatrix} = (3)(-3) - (5)(5)",
+   "en": "First, we find the determinant $|A|$ using the rule $|A| = ad - bc$.",
+   "ur": "سب سے پہلے، ہم اصول $|A| = ad - bc$ استعمال کرتے ہوئے مقطع $|A|$ معلوم کرتے ہیں۔",
+   "check": [
+    "Matrix([[3, 5], [5, -3]]).det() == (3)*(-3) - (5)*(5)"
+   ]
+  },
+  {
+   "math": "|A| = -9 - 25 = -34",
+   "en": "Simplify to get the determinant. Since $|A| = -34 \\neq 0$, the matrix is non-singular and its inverse exists.",
+   "ur": "مقطع حاصل کرنے کے لیے مختصر کریں۔ چونکہ $|A| = -34 \\neq 0$ ہے، اس لیے یہ ایک غیر نادر قالب ہے اور اس کا معکوس موجود ہے۔",
+   "check": [
+    "-9 - 25 == -34",
+    "Matrix([[3, 5], [5, -3]]).det() == -34"
+   ]
+  },
+  {
+   "math": "\\operatorname{Adj}A = \\begin{bmatrix} -3 & -5 \\\\ -5 & 3 \\end{bmatrix}",
+   "en": "Next, find the adjoint of $A$ ($\\operatorname{Adj}A$) by swapping the diagonal entries ($3$ and $-3$) and changing the signs of the non-diagonal entries ($5$ and $5$).",
+   "ur": "اس کے بعد، وتری ارکان ($3$ اور $-3$) کی جگہ بدل کر اور غیر وتری ارکان ($5$ اور $5$) کی علامتیں تبدیل کر کے $A$ کا ایڈجوائنٹ ($\\operatorname{Adj}A$) معلوم کریں۔",
+   "check": [
+    "Eq(Matrix([[3, 5], [5, -3]]).adjugate(), Matrix([[-3, -5], [-5, 3]]))"
+   ]
+  },
+  {
+   "math": "A^{-1} = \\frac{1}{-34} \\begin{bmatrix} -3 & -5 \\\\ -5 & 3 \\end{bmatrix} = \\begin{bmatrix} \\frac{-3}{-34} & \\frac{-5}{-34} \\\\ \\frac{-5}{-34} & \\frac{3}{-34} \\end{bmatrix}",
+   "en": "Substitute $|A|$ and $\\operatorname{Adj}A$ into the inverse formula and divide each entry by $-34$.",
+   "ur": "معکوس کے فارمولے میں $|A|$ اور $\\operatorname{Adj}A$ کی قیمتیں درج کریں اور ہر رکن کو $-34$ سے تقسیم کریں۔",
+   "check": [
+    "Eq(R(1, -34) * Matrix([[-3, -5], [-5, 3]]), Matrix([[R(-3, -34), R(-5, -34)], [R(-5, -34), R(3, -34)]]))"
+   ]
+  },
+  {
+   "math": "A^{-1} = \\begin{bmatrix} \\frac{3}{34} & \\frac{5}{34} \\\\ \\frac{5}{34} & - \\frac{3}{34} \\end{bmatrix}",
+   "en": "Simplify the fractions by cancelling the negative signs to get the final multiplicative inverse.",
+   "ur": "حتمی ضربی معکوس حاصل کرنے کے لیے منفی علامتوں کو ختم کر کے کسور کو مختصر کریں۔",
+   "check": [
+    "Eq(Matrix([[3, 5], [5, -3]]).inv(), Matrix([[R(3, 34), R(5, 34)], [R(5, 34), R(-3, 34)]]))",
+    "Matrix([[3, 5], [5, -3]]).det() == -34",
+    "Eq(Matrix([[3, 5], [5, -3]]).adjugate(), Matrix([[-3, -5], [-5, 3]]))",
+    "Eq(Matrix([[3, 5], [5, -3]]).inv(), Matrix([[3/34, 5/34], [5/34, -3/34]]))",
+    "Eq(Matrix([[1, 0], [0, 1]]), Matrix([[1, 0], [0, 1]]))"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

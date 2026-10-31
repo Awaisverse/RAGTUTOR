@@ -1,0 +1,55 @@
+{
+ "item": "ex1.2-q3",
+ "label": "v",
+ "answer_ref": "$1154$",
+ "math": [
+  "x = 3 + \\sqrt{8}",
+  "\\frac{1}{x} = \\frac{1}{3+\\sqrt{8}} \\times \\frac{3-\\sqrt{8}}{3-\\sqrt{8}}",
+  "\\frac{1}{x} = \\frac{3-\\sqrt{8}}{(3)^2 - (\\sqrt{8})^2} = \\frac{3-\\sqrt{8}}{9-8} = 3-\\sqrt{8}",
+  "x + \\frac{1}{x} = (3+\\sqrt{8}) + (3-\\sqrt{8}) = 6",
+  "\\left(x + \\frac{1}{x}\\right)^2 = (6)^2 \\;\\Rightarrow\\; x^2 + 2 + \\frac{1}{x^2} = 36",
+  "x^2 + \\frac{1}{x^2} = 36 - 2 = 34",
+  "\\left(x^2 + \\frac{1}{x^2}\\right)^2 = (34)^2 \\;\\Rightarrow\\; x^4 + 2 + \\frac{1}{x^4} = 1156",
+  "x^4 + \\frac{1}{x^4} = 1156 - 2 = 1154"
+ ],
+ "why": [
+  {
+   "en": "We begin by stating our starting value for $x$ clearly. Directly raising a surd like $3 + \\sqrt{8}$ to the power of $4$ is very lengthy, so we will build up to $x^4 + \\frac{1}{x^4}$ step-by-step using algebraic formulas.",
+   "ur": "ہم سب سے پہلے $x$ کی دی گئی قیمت لکھتے ہیں۔ چونکہ $3 + \\sqrt{8}$ کی براہِ راست طاقت $4$ لینا بہت مشکل ہے، اس لیے ہم الجبری فارمولوں کی مدد سے مرحلہ وار $x^4 + \\frac{1}{x^4}$ تک پہنچیں گے۔"
+  },
+  {
+   "en": "We cannot easily add a fraction that has a square root in the denominator, so we use the rule of rationalization. Multiplying the top and bottom by the conjugate $3 - \\sqrt{8}$ prepares the denominator to become a simple whole number.",
+   "ur": "مخرج (denominator) میں جذر ہونے کی وجہ سے جمع کرنا مشکل ہوتا ہے، اس لیے ہم ناطق بنانے (rationalization) کا اصول استعمال کرتے ہیں۔ شمار کنندہ اور مخرج کو زوج جملے (conjugate) یعنی $3 - \\sqrt{8}$ سے ضرب دینے سے نیچے والا جذر ختم کرنے کی راہ ہموار ہوتی ہے۔"
+  },
+  {
+   "en": "Using the difference of squares identity $(a+b)(a-b) = a^2 - b^2$ removes the square root from the denominator completely. Since $9 - 8$ is just $1$, we get a very neat expression for $\\frac{1}{x}$ without any fraction left.",
+   "ur": "مربعوں کے فرق کے فارمولے $(a+b)(a-b) = a^2 - b^2$ کو لگانے سے مخرج سے جذر مکمل طور پر ختم ہو جاتا ہے۔ چونکہ $9 - 8$ کا جواب $1$ آتا ہے، اس لیے ہمیں بغیر کسی کسر کے $\\frac{1}{x}$ کی ایک سادہ قیمت مل جاتی ہے۔"
+  },
+  {
+   "en": "Before we can reach higher powers, we need the basic sum $x + \\frac{1}{x}$. Adding them together cancels out the $+\\sqrt{8}$ and $-\\sqrt{8}$ terms, leaving us with a simple whole number $6$ that is very easy to square.",
+   "ur": "بڑی طاقتوں تک پہنچنے سے پہلے ہمیں بنیادی مجموعہ $x + \\frac{1}{x}$ درکار ہے۔ ان دونوں کو جمع کرنے سے $+\\sqrt{8}$ اور $-\\sqrt{8}$ آپس میں کٹ جاتے ہیں، اور ہمارے پاس ایک سادہ عدد $6$ بچتا ہے جس کا مربع لینا بہت آسان ہے۔"
+  },
+  {
+   "en": "To move from power $1$ to power $2$, we apply the whole square identity $(a+b)^2 = a^2 + 2ab + b^2$ on both sides. Notice how the middle term $2(x)\\left(\\frac{1}{x}\\right)$ simplifies to just $2$ because $x$ and $\\frac{1}{x}$ are reciprocals and cancel each other.",
+   "ur": "طاقت $1$ سے طاقت $2$ تک جانے کے لیے ہم دونوں طرف کامل مربع کا فارمولا $(a+b)^2 = a^2 + 2ab + b^2$ لگاتے ہیں۔ غور کریں کہ درمیانی رقم میں $x$ اور $\\frac{1}{x}$ ایک دوسرے کے معکوس ہونے کی وجہ سے کٹ جاتے ہیں اور صرف $2$ رہ جاتا ہے۔"
+  },
+  {
+   "en": "We isolate $x^2 + \\frac{1}{x^2}$ by shifting the extra $+2$ to the other side of the equation. This gives us the value for the second power, $34$, which serves as our stepping stone to reach the fourth power.",
+   "ur": "مساوات کے، بائیں طرف صرف $x^2 + \\frac{1}{x^2}$ کو اکیلا کرنے کے لیے ہم اضافی $+2$ کو دوسری طرف لے جا کر تفریق کر دیتے ہیں۔ اس سے ہمیں دوسری طاقت کی قیمت $34$ مل جاتی ہے، جو چوتھی طاقت تک پہنچنے کے لیے سیڑھی کا کام دے گی۔"
+  },
+  {
+   "en": "Since squaring $x^2$ gives $x^4$, we apply the exact same squaring identity $(a+b)^2 = a^2 + 2ab + b^2$ once more to $x^2 + \\frac{1}{x^2} = 34$. Again, the middle product cancels out neatly to leave $+2$, bringing the required $x^4 + \\frac{1}{x^4}$ into view.",
+   "ur": "چونکہ $x^2$ کا مربع لینے سے $x^4$ بنتا ہے، اس لیے ہم $x^2 + \\frac{1}{x^2} = 34$ کے دونوں طرف دوبارہ وہی فارمولا $(a+b)^2 = a^2 + 2ab + b^2$ لگاتے ہیں۔ ایک بار پھر درمیانی رقم کٹ کر صرف $+2$ رہ جاتی ہے اور ہماری مطلوبہ رقم $x^4 + \\frac{1}{x^4}$ سامنے آ جاتی ہے۔"
+  },
+  {
+   "en": "Finally, we subtract the extra $2$ from $1156$ to keep only the fourth-power terms on the left side. This completes our chain of steps and gives the exact value of $x^4 + \\frac{1}{x^4}$.",
+   "ur": "آخر میں، بائیں طرف صرف چوتھی طاقت والی رقوم رکھنے کے لیے ہم $1156$ میں سے اضافی $2$ کو تفریق کرتے ہیں۔ اس طرح ہمارا حل مکمل ہوتا ہے اور ہمیں $x^4 + \\frac{1}{x^4}$ کی درست قیمت مل جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $1154$ means that even though $x = 3 + \\sqrt{8}$ contains an irrational square root, the combination $x^4 + \\frac{1}{x^4}$ works out to a clean, exact whole number because all the radical parts cancel out symmetrically. You can quickly verify this by checking the reverse: adding $2$ to $1154$ gives $1156$, whose square root is $34$, and adding $2$ to $34$ gives $36$, whose square root brings us right back to $x + \\frac{1}{x} = 6$.",
+  "ur": "حتمی جواب $1154$ کا مطلب یہ ہے کہ اگرچہ $x = 3 + \\sqrt{8}$ میں ایک غیر ناطق جذر موجود ہے، لیکن $x^4 + \\frac{1}{x^4}$ کا مجموعہ ایک مکمل اور پورا عدد بنتا ہے کیونکہ تمام جذر والی رقوم ترتیب کے ساتھ آپس میں کٹ جاتی ہیں۔ آپ الٹ چل کر اس کی پڑتال بھی کر سکتے ہیں: $1154$ میں $2$ جمع کریں تو $1156$ بنتا ہے جس کا جذر $34$ ہے، اور $34$ میں $2$ جمع کریں تو $36$ بنتا ہے جس کا جذر ہمیں واپس $x + \\frac{1}{x} = 6$ تک لے آتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

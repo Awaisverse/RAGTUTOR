@@ -1,0 +1,95 @@
+{
+ "item": "c10-rev3-q3",
+ "label": "v",
+ "answer_ref": "verified: both sides $= \\begin{bmatrix} \\frac{29}{14} & - \\frac{15}{14} \\\\ - \\frac{15}{7} & \\frac{8}{7} \\end{bmatrix}$",
+ "math": [
+  "",
+  "AB = \\begin{bmatrix} 2 & 3 \\\\ 4 & 5 \\end{bmatrix}\\begin{bmatrix} 5 & 6 \\\\ 2 & 1 \\end{bmatrix} = \\begin{bmatrix} (2)(5) + (3)(2) & (2)(6) + (3)(1) \\\\ (4)(5) + (5)(2) & (4)(6) + (5)(1) \\end{bmatrix}",
+  "= \\begin{bmatrix} 10 + 6 & 12 + 3 \\\\ 20 + 10 & 24 + 5 \\end{bmatrix} = \\begin{bmatrix} 16 & 15 \\\\ 30 & 29 \\end{bmatrix}",
+  "|(AB)| = \\begin{vmatrix} 16 & 15 \\\\ 30 & 29 \\end{vmatrix} = (16)(29) - (15)(30) = 464 - 450 = 14",
+  "\\operatorname{Adj}(AB) = \\begin{bmatrix} 29 & -15 \\\\ -30 & 16 \\end{bmatrix}",
+  "(AB)^{-1} = \\frac{1}{|(AB)|}\\operatorname{Adj}(AB) = \\frac{1}{14}\\begin{bmatrix} 29 & -15 \\\\ -30 & 16 \\end{bmatrix} = \\begin{bmatrix} \\frac{29}{14} & - \\frac{15}{14} \\\\ - \\frac{15}{7} & \\frac{8}{7} \\end{bmatrix}",
+  "",
+  "|A| = \\begin{vmatrix} 2 & 3 \\\\ 4 & 5 \\end{vmatrix} = (2)(5) - (3)(4) = 10 - 12 = -2",
+  "\\operatorname{Adj}A = \\begin{bmatrix} 5 & -3 \\\\ -4 & 2 \\end{bmatrix}",
+  "A^{-1} = \\frac{1}{|A|}\\operatorname{Adj}A = \\frac{1}{-2}\\begin{bmatrix} 5 & -3 \\\\ -4 & 2 \\end{bmatrix} = \\begin{bmatrix} - \\frac{5}{2} & \\frac{3}{2} \\\\ 2 & -1 \\end{bmatrix}",
+  "|B| = \\begin{vmatrix} 5 & 6 \\\\ 2 & 1 \\end{vmatrix} = (5)(1) - (6)(2) = 5 - 12 = -7",
+  "\\operatorname{Adj}B = \\begin{bmatrix} 1 & -6 \\\\ -2 & 5 \\end{bmatrix}",
+  "B^{-1} = \\frac{1}{|B|}\\operatorname{Adj}B = \\frac{1}{-7}\\begin{bmatrix} 1 & -6 \\\\ -2 & 5 \\end{bmatrix} = \\begin{bmatrix} - \\frac{1}{7} & \\frac{6}{7} \\\\ \\frac{2}{7} & - \\frac{5}{7} \\end{bmatrix}",
+  "B^{-1}A^{-1} = \\begin{bmatrix} - \\frac{1}{7} & \\frac{6}{7} \\\\ \\frac{2}{7} & - \\frac{5}{7} \\end{bmatrix}\\begin{bmatrix} - \\frac{5}{2} & \\frac{3}{2} \\\\ 2 & -1 \\end{bmatrix} = \\begin{bmatrix} (- \\frac{1}{7})(- \\frac{5}{2}) + (\\frac{6}{7})(2) & (- \\frac{1}{7})(\\frac{3}{2}) + (\\frac{6}{7})(-1) \\\\ (\\frac{2}{7})(- \\frac{5}{2}) + (- \\frac{5}{7})(2) & (\\frac{2}{7})(\\frac{3}{2}) + (- \\frac{5}{7})(-1) \\end{bmatrix}",
+  "= \\begin{bmatrix} \\frac{5}{14} + \\frac{12}{7} & - \\frac{3}{14} -  \\frac{6}{7} \\\\ - \\frac{5}{7} -  \\frac{10}{7} & \\frac{3}{7} + \\frac{5}{7} \\end{bmatrix} = \\begin{bmatrix} \\frac{29}{14} & - \\frac{15}{14} \\\\ - \\frac{15}{7} & \\frac{8}{7} \\end{bmatrix}",
+  "(AB)^{-1} = \\begin{bmatrix} \\frac{29}{14} & - \\frac{15}{14} \\\\ - \\frac{15}{7} & \\frac{8}{7} \\end{bmatrix} = B^{-1}A^{-1}"
+ ],
+ "why": [
+  {
+   "en": "To verify a matrix equation, we always solve both sides separately to see if they match. Let us begin with the Left-Hand Side, $(AB)^{-1}$, which means we first multiply $A$ and $B$, and then take the inverse of their product.",
+   "ur": "کسی بھی قالب کی مساوات کی تصدیق کے لیے ہم ہمیشہ دونوں اطراف کو الگ الگ حل کرتے ہیں تاکہ دیکھ سکیں کہ آیا وہ برابر ہیں یا نہیں۔ آئیے بائیں طرف یعنی $(AB)^{-1}$ سے شروع کرتے ہیں، جس کا مطلب ہے کہ ہم پہلے $A$ اور $B$ کو ضرب دیں گے اور پھر ان کے حاصلِ ضرب کا معکوس (inverse) معلوم کریں گے۔"
+  },
+  {
+   "en": "According to the brackets, we must first find the single matrix $AB$ before we can take the inverse. Using the row-by-column multiplication rule, we set up the products of the entries of $A$ and $B$.",
+   "ur": "بریکٹ کے اصول کے مطابق، معکوس لینے سے پہلے ہمیں واحد قالب $AB$ معلوم کرنا ہوگا۔ قطار کو کالم سے ضرب دینے کے اصول کو استعمال کرتے ہوئے، ہم قالب $A$ اور $B$ کے ارکان کی ضرب ترتیب دیتے ہیں۔"
+  },
+  {
+   "en": "By simplifying the arithmetic, we obtain the final product matrix $AB = \\begin{bmatrix} 16 & 15 \\\\ 30 & 29 \\end{bmatrix}$. Now we treat this as a single matrix whose inverse we need to find.",
+   "ur": "حساب کتاب کو سادہ کرنے سے ہمیں حاصلِ ضرب قالب $AB = \\begin{bmatrix} 16 & 15 \\\\ 30 & 29 \\end{bmatrix}$ ملتا ہے۔ اب ہم اسے ایک واحد قالب کے طور پر لیں گے جس کا معکوس ہمیں معلوم کرنا ہے۔"
+  },
+  {
+   "en": "The formula for a matrix inverse requires its determinant and its adjoint. First, we calculate the determinant $|(AB)| = 14$; since this is not zero, the matrix is non-singular and its inverse exists.",
+   "ur": "قالب کے معکوس کے فارمولے کے لیے اس کے مقطع (determinant) اور ایڈجائنٹ (adjoint) کی ضرورت ہوتی ہے۔ سب سے پہلے ہم مقطع $|(AB)| = 14$ معلوم کرتے ہیں؛ چونکہ یہ صفر نہیں ہے، اس لیے یہ ایک غیر نادر قالب ہے اور اس کا معکوس ممکن ہے۔"
+  },
+  {
+   "en": "Next, we find the adjoint of $AB$, which is the second piece needed for the inverse formula. For a $2 \\times 2$ matrix, this prepares the rearranged matrix that we will divide by the determinant.",
+   "ur": "اس کے بعد ہم $AB$ کا ایڈجائنٹ معلوم کرتے ہیں، جو معکوس کے فارمولے کا دوسرا ضروری حصہ ہے۔ ایک $2 \\times 2$ قالب کے لیے یہ وہ ترتیب شدہ قالب تیار کرتا ہے جسے ہم مقطع سے تقسیم کریں گے۔"
+  },
+  {
+   "en": "Applying the inverse definition $(AB)^{-1} = \\frac{1}{|(AB)|}\\operatorname{Adj}(AB)$ and simplifying the fractions gives us the final matrix for the Left-Hand Side. We will save this result to compare with the Right-Hand Side.",
+   "ur": "معکوس کی تعریف $(AB)^{-1} = \\frac{1}{|(AB)|}\\operatorname{Adj}(AB)$ لاگو کرنے اور کسروں کو مختصر کرنے سے ہمیں بائیں طرف (LHS) کا حتمی قالب مل جاتا ہے۔ ہم اس نتیجے کو دائیں طرف کے جواب سے موازنہ کرنے کے لیے محفوظ کر لیتے ہیں۔"
+  },
+  {
+   "en": "Now we start working on the Right-Hand Side, $B^{-1}A^{-1}$. Notice the reverse order: here we must find the individual inverses of $A$ and $B$ first, and then multiply $B^{-1}$ by $A^{-1}$.",
+   "ur": "اب ہم دائیں طرف یعنی $B^{-1}A^{-1}$ کو حل کرنا شروع کرتے ہیں۔ الٹی ترتیب پر غور کریں: یہاں ہمیں پہلے $A$ اور $B$ کے الگ الگ معکوس معلوم کرنے ہوں گے، اور پھر $B^{-1}$ کو $A^{-1}$ سے ضرب دینی ہوگی۔"
+  },
+  {
+   "en": "To find $A^{-1}$, we first compute the determinant $|A| = -2$. Because it is non-zero, $A^{-1}$ exists and we have our divisor for the inverse formula.",
+   "ur": "$A^{-1}$ معلوم کرنے کے لیے ہم پہلے مقطع $|A| = -2$ نکالتے ہیں۔ چونکہ یہ غیر صفر ہے، اس لیے $A^{-1}$ موجود ہے اور ہمیں معکوس کے فارمولے کے لیے تقسیم کرنے والا عدد مل گیا ہے۔"
+  },
+  {
+   "en": "We now write down $\\operatorname{Adj}A$ using the $2 \\times 2$ adjoint rule so that we have the numerator part of the formula for $A^{-1}$.",
+   "ur": "اب ہم $2 \\times 2$ کے ایڈجائنٹ اصول کو استعمال کرتے ہوئے $\\operatorname{Adj}A$ لکھتے ہیں تاکہ ہمارے پاس $A^{-1}$ کے فارمولے کا شمار کنندہ (numerator) والا حصہ آ جائے۔"
+  },
+  {
+   "en": "Combining the determinant and adjoint gives us the complete matrix $A^{-1} = \\begin{bmatrix} - \\frac{5}{2} & \\frac{3}{2} \\\\ 2 & -1 \\end{bmatrix}$. This is one of the two matrices we need to multiply on the Right-Hand Side.",
+   "ur": "مقطع اور ایڈجائنٹ کو ملانے سے ہمیں مکمل قالب $A^{-1} = \\begin{bmatrix} - \\frac{5}{2} & \\frac{3}{2} \\\\ 2 & -1 \\end{bmatrix}$ حاصل ہوتا ہے۔ یہ ان دو قالبوں میں سے ایک ہے جنہیں ہمیں دائیں طرف ضرب دینا ہے۔"
+  },
+  {
+   "en": "Similarly, to find $B^{-1}$, we first find its determinant $|B| = -7$. This non-zero value confirms that $B^{-1}$ also exists.",
+   "ur": "اسی طرح $B^{-1}$ معلوم کرنے کے لیے ہم پہلے اس کا مقطع $|B| = -7$ نکالتے ہیں۔ یہ غیر صفر قیمت تصدیق کرتی ہے کہ $B^{-1}$ بھی ممکن ہے۔"
+  },
+  {
+   "en": "We find $\\operatorname{Adj}B$ to complete the requirements for the inverse formula of matrix $B$.",
+   "ur": "ہم قالب $B$ کے معکوس کے فارمولے کی ضرورت پوری کرنے کے لیے $\\operatorname{Adj}B$ معلوم کرتے ہیں۔"
+  },
+  {
+   "en": "Dividing each entry of $\\operatorname{Adj}B$ by $|B| = -7$ gives us $B^{-1}$. Now we have both individual inverses ready for multiplication.",
+   "ur": "$\\operatorname{Adj}B$ کے ہر رکن کو $|B| = -7$ سے تقسیم کرنے پر ہمیں $B^{-1}$ ملتا ہے۔ اب ہمارے پاس ضرب دینے کے لیے دونوں انفرادی معکوس تیار ہیں۔"
+  },
+  {
+   "en": "Now we multiply $B^{-1}$ and $A^{-1}$ in the exact order given on the Right-Hand Side ($B^{-1}$ first, then $A^{-1}$). Matrix multiplication is not commutative, so keeping this order is essential.",
+   "ur": "اب ہم $B^{-1}$ اور $A^{-1}$ کو بالکل اسی ترتیب سے ضرب دیتے ہیں جو دائیں طرف دی گئی ہے (پہلے $B^{-1}$، پھر $A^{-1}$)۔ قالبوں کی ضرب میں ترتیب بدلنے سے جواب بدل جاتا ہے، اس لیے اس ترتیب کو برقرار رکھنا بہت ضروری ہے۔"
+  },
+  {
+   "en": "After multiplying the fractions and adding them with a common denominator, the Right-Hand Side simplifies to $\\begin{bmatrix} \\frac{29}{14} & - \\frac{15}{14} \\\\ - \\frac{15}{7} & \\frac{8}{7} \\end{bmatrix}$.",
+   "ur": "کسروں کو ضرب دینے اور مشترک مخرج (common denominator) لے کر جمع کرنے کے بعد، دائیں طرف سے ہمیں سادہ شکل میں $\\begin{bmatrix} \\frac{29}{14} & - \\frac{15}{14} \\\\ - \\frac{15}{7} & \\frac{8}{7} \\end{bmatrix}$ حاصل ہوتا ہے۔"
+  },
+  {
+   "en": "Comparing the results from Step 6 and Step 15, we see that every corresponding entry is identical. This completes the proof that the Left-Hand Side equals the Right-Hand Side.",
+   "ur": "مرحلہ 6 اور مرحلہ 15 کے نتائج کا موازنہ کرنے سے ہم دیکھتے ہیں کہ ہر متناظرہ رکن بالکل ایک جیسا ہے۔ اس سے یہ ثبوت مکمل ہوتا ہے کہ بائیں طرف اور دائیں طرف آپس میں برابر ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "This verification proves the important reversal law for the inverse of a product: the inverse of $AB$ is equal to the product of their individual inverses in reverse order, $B^{-1}A^{-1}$. Both methods produce the exact same matrix $\\begin{bmatrix} \\frac{29}{14} & - \\frac{15}{14} \\\\ - \\frac{15}{7} & \\frac{8}{7} \\end{bmatrix}$. As a quick check, notice that $|(AB)| = 14$ is equal to $|A| \\times |B| = (-2)(-7) = 14$, which is why both sides have the same denominator of $14$.",
+  "ur": "یہ تصدیق حاصلِ ضرب کے معکوس کے ایک اہم اصول (reversal law) کو ثابت کرتی ہے: $AB$ کا معکوس ان کے انفرادی معکوسوں کو الٹی ترتیب میں ضرب دینے یعنی $B^{-1}A^{-1}$ کے برابر ہوتا ہے۔ دونوں طریقوں سے بالکل ایک ہی قالب $\\begin{bmatrix} \\frac{29}{14} & - \\frac{15}{14} \\\\ - \\frac{15}{7} & \\frac{8}{7} \\end{bmatrix}$ حاصل ہوتا ہے۔ ایک فوری پڑتال کے طور پر دیکھیں کہ $|(AB)| = 14$ دراصل $|A| \\times |B| = (-2)(-7) = 14$ کے برابر ہے، اور یہی وجہ ہے کہ دونوں اطراف کے جواب میں بٹے کے نیچے $14$ آتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

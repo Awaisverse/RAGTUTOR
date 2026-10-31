@@ -1,0 +1,79 @@
+{
+ "item": "c10-ex9.2-q12",
+ "label": "",
+ "answer_ref": "$r = 5$ cm, $\\theta = 0.8$ rad or $r = 2$ cm, $\\theta = 5$ rad",
+ "steps": [
+  {
+   "math": "P = 14\\text{ cm},\\quad A = 10\\text{ cm}^2",
+   "en": "Let $r$ be the radius of the circle, $\\ell$ be the arc length, and $\\theta$ (in radians) be the central angle of the sector. Write down the given perimeter $P$ and area $A$.",
+   "ur": "فرص کریں کہ دائرے کا رداس $r$، قوس کی لمبائی $\\ell$، اور قطاع کا مرکزی زاویہ $\\theta$ (ریڈین میں) ہے۔ دیے گئے احاطہ $P$ اور رقبہ $A$ کو لکھیں۔"
+  },
+  {
+   "math": "2r + \\ell = 14 \\implies \\ell = 14 - 2r",
+   "en": "The perimeter of a sector is the sum of two radii and the arc length ($P = 2r + \\ell$). Substitute $P = 14$ and express $\\ell$ in terms of $r$.",
+   "ur": "قطاع کا احاطہ دو رداسوں اور قوس کی لمبائی کا مجموعہ ہوتا ہے ($P = 2r + \\ell$)۔ $P = 14$ درج کریں اور $\\ell$ کو $r$ کی شکل میں لکھیں۔",
+   "check": [
+    "(14 - 2*r) + 2*r == 14"
+   ]
+  },
+  {
+   "math": "A = \\frac{1}{2}r\\ell \\implies 10 = \\frac{1}{2}r(14 - 2r)",
+   "en": "Since $\\ell = r\\theta$, the area of a sector is $A = \\frac{1}{2}r^2\\theta = \\frac{1}{2}r\\ell$. Substitute $A = 10$ and $\\ell = 14 - 2r$ into this formula.",
+   "ur": "چونکہ $\\ell = r\\theta$ ہوتا ہے، اس لیے قطاع کا رقبہ $A = \\frac{1}{2}r^2\\theta = \\frac{1}{2}r\\ell$ ہے۔ اس کلیے میں $A = 10$ اور $\\ell = 14 - 2r$ درج کریں۔"
+  },
+  {
+   "math": "10 = 7r - r^2 \\implies r^2 - 7r + 10 = 0",
+   "en": "Multiply out the brackets and rearrange the terms to form a standard quadratic equation in $r$.",
+   "ur": "بریکٹ کو حل کریں اور رقموں کو ترتیب دے کر $r$ میں ایک معیاری دو درجی مساوات بنائیں۔",
+   "check": [
+    "expand(R(1,2)*r*(14 - 2*r)) == 7*r - r**2",
+    "expand(R(1,2)*r*(14 - 2*r) - 10) == -(r**2 - 7*r + 10)"
+   ]
+  },
+  {
+   "math": "r^2 - 5r - 2r + 10 = 0 \\implies (r - 5)(r - 2) = 0",
+   "en": "Factorize the quadratic equation by splitting the middle term.",
+   "ur": "درمیانی رقم کو توڑ کر دو درجی مساوات کی تجزی کریں۔",
+   "check": [
+    "expand((r - 5)*(r - 2)) == r**2 - 7*r + 10"
+   ]
+  },
+  {
+   "math": "r = 5\\text{ cm} \\quad \\text{or} \\quad r = 2\\text{ cm}",
+   "en": "Set each factor to zero to find the two possible values for the radius $r$.",
+   "ur": "رداس $r$ کی دو ممکنہ قیمتیں معلوم کرنے کے لیے ہر جزو ضربی کو صفر کے برابر رکھیں۔",
+   "check": [
+    "5**2 - 7*5 + 10 == 0",
+    "2**2 - 7*2 + 10 == 0"
+   ]
+  },
+  {
+   "math": "\\text{For } r = 5:\\quad \\ell = 14 - 2(5) = 4\\text{ cm},\\quad \\theta = \\frac{\\ell}{r} = \\frac{4}{5} = 0.8\\text{ rad}",
+   "en": "Substitute $r = 5$ into $\\ell = 14 - 2r$, then use $\\theta = \\frac{\\ell}{r}$ to find the corresponding central angle.",
+   "ur": "مساوات $\\ell = 14 - 2r$ میں $r = 5$ درج کریں، پھر متعلقہ مرکزی زاویہ معلوم کرنے کے لیے $\\theta = \\frac{\\ell}{r}$ استعمال کریں۔",
+   "check": [
+    "14 - 2*5 == 4",
+    "R(4,5) == R(8,10)",
+    "R(1,2)*5*4 == 10"
+   ]
+  },
+  {
+   "math": "\\text{For } r = 2:\\quad \\ell = 14 - 2(2) = 10\\text{ cm},\\quad \\theta = \\frac{\\ell}{r} = \\frac{10}{2} = 5\\text{ rad}",
+   "en": "Similarly, substitute $r = 2$ to find the second set of values for $\\ell$ and $\\theta$. Since both angles are less than $2\\pi \\approx 6.28$ rad, both solutions are valid.",
+   "ur": "اسی طرح، $\\ell$ اور $\\theta$ کی قیمتوں کا دوسرا سیٹ معلوم کرنے کے لیے $r = 2$ درج کریں۔ چونکہ دونوں زاویے $2\\pi \\approx 6.28$ ریڈین سے چھوٹے ہیں، اس لیے دونوں حل درست ہیں۔",
+   "check": [
+    "14 - 2*2 == 10",
+    "R(10,2) == 5",
+    "R(1,2)*2*10 == 10",
+    "expand(R(1,2)*r*(14 - 2*r) - 10) == -(r**2 - 7*r + 10)",
+    "expand((r - 5)*(r - 2)) == r**2 - 7*r + 10",
+    "R(1,2)*5*4 == 10",
+    "2*5 + 4 == 14",
+    "2*2 + 10 == 14"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

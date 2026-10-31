@@ -89,7 +89,7 @@ ex("ex9.2", 3, r"Find the angles $x$ and $y$ in the following figures: (i) cycli
        P("ii", rows([(r"y = 90^\circ", *SEMI, []), (r"x + 90^\circ + 38^\circ = 180^\circ \Rightarrow x = 52^\circ", *TRI, ["180 - 90 - 38 == 52"])]), r"$x = 52^\circ,\ y = 90^\circ$", prompt="(ii)"),
        P("iii", rows([(r"x = 90^\circ", *TAN, []), (r"62^\circ + 90^\circ + y = 180^\circ \Rightarrow y = 28^\circ", *TRI, ["180 - 62 - 90 == 28"])]), r"$x = 90^\circ,\ y = 28^\circ$", prompt="(iii)")],
    "9.2")
-one("ex9.2", 4, r"Find the angle $x$ in the given figure ($EF$ is a tangent at $C$, $\angle BCE = 70^\circ$, $CD$ a diameter through $O$, $\widehat{AB} = \widehat{AD}$).", [
+one("ex9.2", 4, r"Find the angle $x$ in the given figure ($EF$ is a tangent at $C$, $\angle BCE = 70^\circ$, $AC$ a diameter through $O$, $x = \angle ACD$, $\widehat{AB} = \widehat{AD}$).", [
     (r"\angle OCE = 90^\circ \Rightarrow \angle OCB = 90^\circ - 70^\circ = 20^\circ", *TAN, ["90 - 70 == 20"]),
     (r"\widehat{AB} = \widehat{AD} \Rightarrow \angle ACD = \angle ACB \text{ ... so } x = \angle ACD = 20^\circ", r"Equal arcs subtend equal angles at the circumference.",
      r"برابر قوسیں محیط پر برابر زاویے بناتی ہیں۔", [])], r"$x = 20^\circ$", "9.2")

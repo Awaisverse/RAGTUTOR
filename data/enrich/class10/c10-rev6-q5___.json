@@ -1,0 +1,66 @@
+{
+ "item": "c10-rev6-q5",
+ "label": "",
+ "answer_ref": "$x = \\frac{5}{8},\\ y = -13$",
+ "steps": [
+  {
+   "math": "(2x\\underline{i} + y\\underline{j}) + (-\\underline{i} + 5\\underline{j}) = \\frac{1}{4}\\underline{i} - 8\\underline{j}",
+   "en": "Write down the given vector equation to find the unknown values of $x$ and $y$.",
+   "ur": "$x$ اور $y$ کی نامعلوم قیمتیں معلوم کرنے کے لیے دی گئی ویکٹر مساوات لکھیں۔"
+  },
+  {
+   "math": "(2x - 1)\\underline{i} + (y + 5)\\underline{j} = \\frac{1}{4}\\underline{i} - 8\\underline{j}",
+   "en": "Add the two vectors on the left-hand side by grouping the $\\underline{i}$ components together and the $\\underline{j}$ components together.",
+   "ur": "بائیں طرف موجود دونوں ویکٹرز کو جمع کرنے کے لیے $\\underline{i}$ کے اجزاء کو ایک ساتھ اور $\\underline{j}$ کے اجزاء کو ایک ساتھ اکٹھا کریں۔",
+   "check": [
+    "(2*x) + (-1) == 2*x - 1",
+    "y + 5 == y + 5"
+   ]
+  },
+  {
+   "math": "2x - 1 = \\frac{1}{4}, \\quad y + 5 = -8",
+   "en": "By definition of equality of vectors, two vectors are equal if and only if their corresponding $\\underline{i}$ and $\\underline{j}$ components are equal. Equate the coefficients on both sides.",
+   "ur": "مساوی ویکٹرز کی تعریف کے مطابق، دو ویکٹرز تبھی برابر ہوتے ہیں جب ان کے متناظرہ $\\underline{i}$ اور $\\underline{j}$ اجزاء آپس میں برابر ہوں۔ دونوں اطراف کے عددی سروں کو برابر رکھیں۔"
+  },
+  {
+   "math": "2x = \\frac{1}{4} + 1 = \\frac{1 + 4}{4} = \\frac{5}{4}",
+   "en": "First, take the equation for $x$ and add $1$ to both sides, then simplify the fraction by taking the LCM.",
+   "ur": "پہلے $x$ والی مساوات لیں اور دونوں طرف $1$ جمع کریں، پھر ذواضعاف اقل (LCM) لے کر کسر کو مختصر کریں۔",
+   "check": [
+    "R(1, 4) + 1 == R(5, 4)"
+   ]
+  },
+  {
+   "math": "x = \\frac{5}{4 \\times 2} = \\frac{5}{8}",
+   "en": "Divide both sides by $2$ to find the value of $x$.",
+   "ur": "$x$ کی قیمت معلوم کرنے کے لیے دونوں اطراف کو $2$ پر تقسیم کریں۔",
+   "check": [
+    "R(5, 4) / 2 == R(5, 8)",
+    "(2*x - 1).subs(x, R(5, 8)) == R(1, 4)"
+   ]
+  },
+  {
+   "math": "y = -8 - 5 = -13",
+   "en": "Now, take the equation for $y$ and subtract $5$ from both sides to find the value of $y$.",
+   "ur": "اب $y$ والی مساوات لیں اور $y$ کی قیمت معلوم کرنے کے لیے دونوں اطراف سے $5$ تفریق کریں۔",
+   "check": [
+    "-8 - 5 == -13",
+    "(y + 5).subs(y, -13) == -8"
+   ]
+  },
+  {
+   "math": "x = \\frac{5}{8},\\ y = -13",
+   "en": "State the final values of $x$ and $y$.",
+   "ur": "آخر میں $x$ اور $y$ کی مطلوبہ قیمتیں لکھیں۔",
+   "check": [
+    "(2*x - 1).subs({x: R(5, 8), y: -13}) == R(1, 4)",
+    "(y + 5).subs({x: R(5, 8), y: -13}) == -8",
+    "(2*x - 1).subs({x: (5/8), y: (-13)}) == (1/4)",
+    "(y + 5).subs({x: (5/8), y: (-13)}) == (-8)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

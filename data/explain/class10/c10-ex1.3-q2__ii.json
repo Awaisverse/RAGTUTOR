@@ -1,0 +1,65 @@
+{
+ "item": "c10-ex1.3-q2",
+ "label": "ii",
+ "answer_ref": "verified: both sides $= 29 - 22i$",
+ "math": [
+  "",
+  "\\left(2 + 7i\\right)\\left(4 - 3i\\right) = 8 - 6i + 28i - 21i^2",
+  "= 8 + 22i + 21 = 29 + 22i",
+  "\\overline{29 + 22i} = 29 - 22i",
+  "",
+  "\\overline{2 + 7i} = 2 - 7i",
+  "\\overline{4 - 3i} = 4 + 3i",
+  "\\left(2 - 7i\\right)\\left(4 + 3i\\right) = 8 + 6i - 28i - 21i^2",
+  "= 8 - 22i + 21 = 29 - 22i",
+  "\\overline{z_1z_2} = 29 - 22i = \\overline{z_1}\\,\\overline{z_2}"
+ ],
+ "why": [
+  {
+   "en": "To prove that an equation is true, we evaluate both sides separately. Let's start with the left-hand side, $\\overline{z_1z_2}$, where the long bar means we must first multiply the two complex numbers and then take the conjugate of their product.",
+   "ur": "کسی مساوات کو درست ثابت کرنے کے لیے ہم اس کی دونوں اطراف کو الگ الگ حل کرتے ہیں۔ آئیے بائیں طرف یعنی $\\overline{z_1z_2}$ سے شروع کرتے ہیں، جہاں لمبی بار کا مطلب ہے کہ ہمیں پہلے دونوں مخلوط اعداد کو ضرب دینی ہے اور پھر ان کے حاصلِ ضرب کا کونجوگیٹ لینا ہے۔"
+  },
+  {
+   "en": "Using the distributive law of multiplication, we multiply each part of $z_1$ by each part of $z_2$. This expands the brackets into four separate terms so we can simplify the product $z_1z_2$.",
+   "ur": "ضرب کے تقسیمی قانون کو استعمال کرتے ہوئے، ہم $z_1$ کے ہر حصے کو $z_2$ کے ہر حصے سے ضرب دیتے ہیں۔ اس سے بریکٹس کھل کر چار الگ الگ رقمیں بن جاتی ہیں تاکہ ہم حاصلِ ضرب $z_1z_2$ کو مختصر کر سکیں۔"
+  },
+  {
+   "en": "By the fundamental definition of the imaginary unit, $i^2 = -1$, which turns $-21i^2$ into $+21$. Combining the real numbers ($8$ and $21$) and the imaginary terms ($-6i$ and $28i$) gives the product $z_1z_2 = 29 + 22i$ in standard form.",
+   "ur": "خیالی اکائی کی بنیادی تعریف کے مطابق $i^2 = -1$ ہوتا ہے، جس کی وجہ سے $-21i^2$ بدل کر $+21$ بن جاتا ہے۔ حقیقی اعداد ($8$ اور $21$) اور خیالی رقموں ($-6i$ اور $28i$) کو آپس میں ملانے سے ہمیں معیاری شکل میں حاصلِ ضرب $z_1z_2 = 29 + 22i$ ملتا ہے۔"
+  },
+  {
+   "en": "Now we apply the definition of a complex conjugate by reversing the sign of the imaginary part from $+22i$ to $-22i$. This completes our calculation for the left-hand side, giving us $29 - 22i$.",
+   "ur": "اب ہم مخلوط کونجوگیٹ کی تعریف لاگو کرتے ہوئے خیالی حصے کی علامت کو $+22i$ سے بدل کر $-22i$ کر دیتے ہیں۔ اس طرح بائیں طرف کا حل مکمل ہو جاتا ہے اور ہمیں $29 - 22i$ حاصل ہوتا ہے۔"
+  },
+  {
+   "en": "Next, we move to the right-hand side, $\\overline{z_1}\\,\\overline{z_2}$. Here, the separate bars tell us to find the conjugate of each complex number individually before multiplying them together.",
+   "ur": "اب ہم دائیں طرف یعنی $\\overline{z_1}\\,\\overline{z_2}$ کو حل کرتے ہیں۔ یہاں الگ الگ بارز ہمیں بتاتی ہیں کہ دونوں مخلوط اعداد کو ضرب دینے سے پہلے ہمیں ہر ایک کا الگ الگ کونجوگیٹ معلوم کرنا ہے۔"
+  },
+  {
+   "en": "Applying the conjugate rule to $z_1 = 2 + 7i$, we change the sign of its imaginary part $+7i$. This gives us $\\overline{z_1} = 2 - 7i$, which is the first factor needed for the right-hand side.",
+   "ur": "عدد $z_1 = 2 + 7i$ پر کونجوگیٹ کا اصول لاگو کرتے ہوئے ہم اس کے خیالی حصے $+7i$ کی علامت بدل دیتے ہیں۔ اس سے ہمیں $\\overline{z_1} = 2 - 7i$ ملتا ہے، جو دائیں طرف کے لیے پہلا جزوِ ضربی ہے۔"
+  },
+  {
+   "en": "Similarly, we take the conjugate of $z_2 = 4 - 3i$ by changing $-3i$ to $+3i$. Now we have the second factor, $\\overline{z_2} = 4 + 3i$, and we are ready to multiply the two conjugates.",
+   "ur": "اسی طرح، ہم $-3i$ کو $+3i$ میں بدل کر $z_2 = 4 - 3i$ کا کونجوگیٹ لیتے ہیں۔ اب ہمارے پاس دوسرا جزوِ ضربی $\\overline{z_2} = 4 + 3i$ بھی آ گیا ہے، اور ہم ان دونوں کونجوگیٹس کو ضرب دینے کے لیے تیار ہیں۔"
+  },
+  {
+   "en": "We expand the product of the two conjugates, $(2 - 7i)(4 + 3i)$, using term-by-term multiplication. This removes the brackets so we can gather the real and imaginary parts.",
+   "ur": "ہم دونوں کونجوگیٹس کے حاصلِ ضرب $(2 - 7i)(4 + 3i)$ کو رقم بہ رقم ضرب دے کر کھولتے ہیں۔ اس سے بریکٹس ختم ہو جاتی ہیں تاکہ ہم حقیقی اور خیالی حصوں کو اکٹھا کر سکیں۔"
+  },
+  {
+   "en": "Substituting $i^2 = -1$ again makes $-21i^2$ equal to $+21$. Adding the real parts ($8 + 21$) and combining the imaginary parts ($6i - 28i$) simplifies the right-hand side to $29 - 22i$.",
+   "ur": "دوبارہ $i^2 = -1$ درج کرنے سے $-21i^2$ کی قیمت $+21$ ہو جاتی ہے۔ حقیقی حصوں ($8 + 21$) کو جمع کرنے اور خیالی حصوں ($6i - 28i$) کو ملانے سے دائیں طرف مختصر ہو کر $29 - 22i$ بن جاتی ہے۔"
+  },
+  {
+   "en": "Comparing the results from Step 4 and Step 9, we see that both sides equal $29 - 22i$. Since the left-hand side equals the right-hand side, the property $\\overline{z_1z_2} = \\overline{z_1}\\,\\overline{z_2}$ is verified.",
+   "ur": "چوتھے اور نویں مرحلے کے نتائج کا موازنہ کرنے سے ہم دیکھتے ہیں کہ دونوں اطراف کا جواب $29 - 22i$ ہے۔ چونکہ بائیں طرف اور دائیں طرف برابر ہیں، اس لیے خاصیت $\\overline{z_1z_2} = \\overline{z_1}\\,\\overline{z_2}$ کی تصدیق ہو جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final result shows that both the left-hand side and the right-hand side simplify to the exact same complex number, $29 - 22i$. This confirms the general rule that for complex numbers, taking the conjugate after multiplying gives the exact same answer as taking the conjugates first and then multiplying them.",
+  "ur": "حتمی نتیجہ یہ ظاہر کرتا ہے کہ بائیں اور دائیں دونوں اطراف حل ہونے کے بعد بالکل ایک ہی مخلوط عدد $29 - 22i$ دیتی ہیں۔ اس سے اس عمومی اصول کی تصدیق ہوتی ہے کہ مخلوط اعداد کو ضرب دینے کے بعد کونجوگیٹ لینا بالکل ویسا ہی جواب دیتا ہے جیسا کہ پہلے الگ الگ کونجوگیٹ لے کر پھر انہیں ضرب دینا۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

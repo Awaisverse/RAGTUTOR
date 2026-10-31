@@ -1,0 +1,59 @@
+{
+ "item": "c10-rev5-q3",
+ "label": "ii",
+ "answer_ref": "$x + 3$",
+ "steps": [
+  {
+   "math": "\\frac{x^{3} - 27}{x^{2} - 9} \\div \\frac{x^{2} + 3x + 9}{x^{2} + 6x + 9}",
+   "en": "Write down the given algebraic expression to be simplified.",
+   "ur": "دی گئی الجبری عبارت کو مختصر کرنے کے لیے لکھیں۔"
+  },
+  {
+   "math": "= \\frac{x^{3} - 3^{3}}{x^{2} - 3^{2}} \\div \\frac{x^{2} + 3x + 9}{(x)^{2} + 2(x)(3) + (3)^{2}}",
+   "en": "Rewrite $27$ as $3^{3}$, $9$ as $3^{2}$, and express $x^{2} + 6x + 9$ in the perfect square form $a^{2} + 2ab + b^{2}$.",
+   "ur": "$27$ کو $3^{3}$، $9$ کو $3^{2}$ لکھیں اور $x^{2} + 6x + 9$ کو کامل مربع کی شکل $a^{2} + 2ab + b^{2}$ میں لکھیں۔",
+   "check": [
+    "x**3 - 27 == x**3 - 3**3",
+    "x**2 - 9 == x**2 - 3**2",
+    "x**2 + 6*x + 9 == x**2 + 2*x*3 + 3**2"
+   ]
+  },
+  {
+   "math": "= \\frac{(x - 3)(x^{2} + 3x + 9)}{(x - 3)(x + 3)} \\div \\frac{x^{2} + 3x + 9}{(x + 3)^{2}}",
+   "en": "Apply the algebraic identities $a^{3} - b^{3} = (a - b)(a^{2} + ab + b^{2})$, $a^{2} - b^{2} = (a - b)(a + b)$, and $a^{2} + 2ab + b^{2} = (a + b)^{2}$ to factorize the numerators and denominators.",
+   "ur": "شمار کنندہ اور مخرج کی تجزی کرنے کے لیے الجبری کلیے $a^{3} - b^{3} = (a - b)(a^{2} + ab + b^{2})$، $a^{2} - b^{2} = (a - b)(a + b)$ اور $a^{2} + 2ab + b^{2} = (a + b)^{2}$ استعمال کریں۔",
+   "check": [
+    "x**3 - 27 == (x - 3)*(x**2 + 3*x + 9)",
+    "x**2 - 9 == (x - 3)*(x + 3)",
+    "x**2 + 6*x + 9 == (x + 3)**2"
+   ]
+  },
+  {
+   "math": "= \\frac{(x - 3)(x^{2} + 3x + 9)}{(x - 3)(x + 3)} \\times \\frac{(x + 3)^{2}}{x^{2} + 3x + 9}",
+   "en": "Change the division sign $\\div$ into multiplication $\\times$ by taking the reciprocal of the second fraction (inverting its numerator and denominator).",
+   "ur": "دوسری کسر کا معکوس لے کر (اس کے شمار کنندہ اور مخرج کو الٹ کر) تقسیم کی علامت $\\div$ کو ضرب $\\times$ میں تبدیل کریں۔",
+   "check": [
+    "((x - 3)*(x**2 + 3*x + 9))/((x - 3)*(x + 3)) / ((x**2 + 3*x + 9)/(x + 3)**2) == (((x - 3)*(x**2 + 3*x + 9))/((x - 3)*(x + 3))) * ((x + 3)**2/(x**2 + 3*x + 9))"
+   ]
+  },
+  {
+   "math": "= \\frac{(x - 3)(x^{2} + 3x + 9)(x + 3)(x + 3)}{(x - 3)(x + 3)(x^{2} + 3x + 9)}",
+   "en": "Combine into a single fraction and expand $(x + 3)^{2}$ as $(x + 3)(x + 3)$ to clearly see all common factors.",
+   "ur": "ایک واحد کسر میں یکجا کریں اور تمام مشترک اجزائے ضربی کو واضح طور پر دیکھنے کے لیے $(x + 3)^{2}$ کو $(x + 3)(x + 3)$ کے طور پر کھول کر لکھیں۔",
+   "check": [
+    "(x + 3)**2 == (x + 3)*(x + 3)"
+   ]
+  },
+  {
+   "math": "= x + 3",
+   "en": "Cancel out the common factors $(x - 3)$, $(x^{2} + 3x + 9)$, and $(x + 3)$ from the numerator and denominator to get the final simplified answer.",
+   "ur": "آخری مختصر جواب حاصل کرنے کے لیے شمار کنندہ اور مخرج سے مشترک اجزاء $(x - 3)$، $(x^{2} + 3x + 9)$ اور $(x + 3)$ کو کاٹ دیں۔",
+   "check": [
+    "(x + 3) == ((x**3 - 27)*(x**2 + 6*x + 9)/((x**2 - 9)*(x**2 + 3*x + 9)))"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

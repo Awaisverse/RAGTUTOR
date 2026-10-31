@@ -17,12 +17,20 @@
       {
        "math": "2.353535",
        "en": "We are given the decimal number $2.353535$ and asked to identify whether it is a rational or an irrational number.",
-       "ur": "ہمیں اعشاری عدد $2.353535$ دیا گیا ہے اور یہ بتانا ہے کہ آیا یہ ناطق عدد ہے یا غیر ناطق عدد۔"
+       "ur": "ہمیں اعشاری عدد $2.353535$ دیا گیا ہے اور یہ بتانا ہے کہ آیا یہ ناطق عدد ہے یا غیر ناطق عدد۔",
+       "why": {
+        "en": "First, we carefully observe the given decimal $2.353535$ because its decimal structure will tell us whether it is a rational or an irrational number.",
+        "ur": "سب سے پہلے، ہم دیے گئے اعشاریہ والے عدد $2.353535$ کا بغور مشاہدہ کرتے ہیں کیونکہ اس کی اعشاری ساخت ہمیں بتائے گی کہ یہ ناطق عدد ہے یا غیر ناطق۔"
+       }
       },
       {
        "math": "",
        "en": "Look at the digits after the decimal point. There are no dots ($\\ldots$) at the end, and there are exactly $6$ digits ($353535$) after the decimal point. Since the number of digits is finite, it is a terminating decimal fraction.",
-       "ur": "اعشاریہ کے بعد والے ہندسوں کو دیکھیں۔ آخر میں کوئی نقطے ($\\ldots$) نہیں ہیں، اور اعشاریہ کے بعد ٹھیک $6$ ہندسے ($353535$) موجود ہیں۔ چونکہ ہندسوں کی تعداد محدود ہے، اس لیے یہ ایک مختتم اعشاری کسر (terminating decimal fraction) ہے۔"
+       "ur": "اعشاریہ کے بعد والے ہندسوں کو دیکھیں۔ آخر میں کوئی نقطے ($\\ldots$) نہیں ہیں، اور اعشاریہ کے بعد ٹھیک $6$ ہندسے ($353535$) موجود ہیں۔ چونکہ ہندسوں کی تعداد محدود ہے، اس لیے یہ ایک مختتم اعشاری کسر (terminating decimal fraction) ہے۔",
+       "why": {
+        "en": "We check the digits after the decimal point to apply the definition of a terminating decimal. Even though the digits $353535$ look like a repeating pattern, there are no dots ($\\ldots$) at the end, which proves the decimal stops after $6$ digits and is completely finite.",
+        "ur": "ہم اختتامی اعشاریہ (terminating decimal) کی تعریف لاگو کرنے کے لیے اعشاریہ کے بعد والے ہندسوں کو دیکھتے ہیں۔ اگرچہ ہندسے $353535$ ایک دہرائے جانے والے پیٹرن کی طرح لگتے ہیں، لیکن آخر میں کوئی نقطے ($\\ldots$) نہیں ہیں، جو ثابت کرتا ہے کہ اعشاریہ $6$ ہندسوں کے بعد رک جاتا ہے اور مکمل طور پر محدود ہے۔"
+       }
       },
       {
        "math": "2.353535 = \\frac{2353535}{1000000}",
@@ -30,7 +38,11 @@
        "ur": "اصول کے مطابق، ہر مختتم اعشاری کسر کو $\\frac{p}{q}$ کی شکل میں لکھا جا سکتا ہے جہاں $p, q \\in \\mathbb{Z}$ اور $q \\neq 0$ ہو۔ اعشاریہ ہٹانے سے ہمیں ملتا ہے:",
        "check": [
         "Rational('2.353535') == R(2353535, 1000000)"
-       ]
+       ],
+       "why": {
+        "en": "We convert the decimal into a fraction to test the main definition of a rational number, which requires the form $\\frac{p}{q}$ with integers $p, q \\in \\mathbb{Z}$ and $q \\neq 0$. Since there are $6$ decimal places, removing the decimal point puts $1000000$ in the denominator, giving us the exact fraction $\\frac{2353535}{1000000}$.",
+        "ur": "ہم ناطق عدد کی بنیادی تعریف کو جانچنے کے لیے اعشاریہ کو کسر (fraction) میں تبدیل کرتے ہیں، جس کے لیے $\\frac{p}{q}$ کی شکل درکار ہوتی ہے جہاں $p, q \\in \\mathbb{Z}$ صحیح اعداد ہوں اور $q \\neq 0$ ہو۔ چونکہ اعشاریہ کے بعد $6$ ہندسے ہیں، اس لیے اعشاریہ ہٹانے سے مخرج (denominator) میں $1000000$ آتا ہے، جو ہمیں $\\frac{2353535}{1000000}$ کی درست کسر دیتا ہے۔"
+       }
       },
       {
        "math": "",
@@ -38,11 +50,19 @@
        "ur": "چونکہ $2.353535$ ایک مختتم اعشاری عدد ہے اور اسے $\\frac{p}{q}$ کی شکل میں لکھا جا سکتا ہے، اس لیے یہ ایک ناطق عدد (Rational number) ہے۔",
        "check": [
         "Rational('2.353535') == Rational(2353535, 1000000)"
-       ]
+       ],
+       "why": {
+        "en": "Now we connect our fraction to the definition of rational numbers. Because we successfully wrote $2.353535$ as a ratio of two integers $\\frac{p}{q}$, it fulfills the exact condition needed to be classified as a rational number.",
+        "ur": "اب ہم اپنی کسر کو ناطق اعداد کی تعریف سے جوڑتے ہیں۔ چونکہ ہم نے کامیابی کے ساتھ $2.353535$ کو دو صحیح اعداد کی نسبت $\\frac{p}{q}$ کے طور پر لکھ لیا ہے، اس لیے یہ ناطق عدد قرار دیے جانے کی مکمل شرط پوری کرتا ہے۔"
+       }
       }
      ],
      "answer": "Rational",
      "enriched": true,
+     "meaning": {
+      "en": "The final answer means that $2.353535$ belongs to the set of rational numbers because its decimal expansion terminates. You can easily verify this by dividing $2353535$ by $1000000$, which gives back the exact starting number $2.353535$.",
+      "ur": "حتمی جواب کا مطلب یہ ہے کہ $2.353535$ ناطق اعداد کے سیٹ سے تعلق رکھتا ہے کیونکہ اس کا اعشاریہ رک جاتا ہے (ختم ہو جاتا ہے)۔ آپ $2353535$ کو $1000000$ پر تقسیم کر کے باآسانی اس کی تصدیق کر سکتے ہیں، جس سے بالکل وہی ابتدائی عدد $2.353535$ واپس مل جاتا ہے۔"
+     },
      "book_key": "Rational"
     },
     {
@@ -52,17 +72,29 @@
       {
        "math": "0.\\bar{6}",
        "en": "We are given the decimal number $0.\\bar{6}$ and need to identify whether it is a rational or irrational number.",
-       "ur": "ہمیں اعشاری عدد $0.\\bar{6}$ دیا گیا ہے اور ہمیں یہ بتانا ہے کہ یہ ناطق عدد ہے یا غیر ناطق عدد۔"
+       "ur": "ہمیں اعشاری عدد $0.\\bar{6}$ دیا گیا ہے اور ہمیں یہ بتانا ہے کہ یہ ناطق عدد ہے یا غیر ناطق عدد۔",
+       "why": {
+        "en": "First, let us carefully observe the mathematical notation of the given number $0.\\bar{6}$. Notice the little line, or bar, placed directly above the digit $6$, which is our main clue to classify this number.",
+        "ur": "سب سے پہلے، آئیں دیے گئے نمبر $0.\\bar{6}$ کی علامت کو غور سے دیکھتے ہیں۔ ہندسہ $6$ کے اوپر لگی ہوئی چھوٹی لکیر (بار) پر غور کریں، جو اس نمبر کی پہچان کے لیے ہمارا سب سے بڑا اشارہ ہے۔"
+       }
       },
       {
        "math": "0.\\bar{6} = 0.666\\ldots",
        "en": "The bar over the digit $6$ indicates that $6$ repeats endlessly. Therefore, this is a non-terminating recurring (repeating) decimal.",
-       "ur": "ہندسہ $6$ کے اوپر بار کا نشان یہ ظاہر کرتا ہے کہ $6$ لامحدود طور پر بار بار آ رہا ہے۔ اس لیے یہ ایک غیر مختتم تکرار والا (دوری) اعشاری عدد ہے۔"
+       "ur": "ہندسہ $6$ کے اوپر بار کا نشان یہ ظاہر کرتا ہے کہ $6$ لامحدود طور پر بار بار آ رہا ہے۔ اس لیے یہ ایک غیر مختتم تکرار والا (دوری) اعشاری عدد ہے۔",
+       "why": {
+        "en": "In mathematics, the bar notation is a rule used to show that a digit repeats forever without ending, which we write as $0.666\\ldots$. This tells us that our number is a non-terminating recurring decimal.",
+        "ur": "ریاضی میں، ہندسے کے اوپر بار کا اصول یہ بتاتا ہے کہ وہ ہندسہ بغیر رکے لامحدود طور پر دہرایا جا رہا ہے، جسے ہم $0.666\\ldots$ لکھتے ہیں۔ اس سے ہمیں پتہ چلتا ہے کہ ہمارا نمبر ایک غیر اختتامی تکراری اعشاریہ (non-terminating recurring decimal) ہے۔"
+       }
       },
       {
        "math": "\\text{Rule: Non-terminating recurring decimals are rational numbers.}",
        "en": "According to the properties of real numbers, every non-terminating recurring decimal can be converted into a fraction of the form $\\frac{p}{q}$, where $p, q \\in \\mathbb{Z}$ and $q \\neq 0$.",
-       "ur": "حقیقی اعداد کی خصوصیات کے مطابق، ہر غیر مختتم تکرار والے اعشاری عدد کو $\\frac{p}{q}$ کی کسر کی شکل میں تبدیل کیا جا سکتا ہے، جہاں $p, q \\in \\mathbb{Z}$ اور $q \\neq 0$ ہو۔"
+       "ur": "حقیقی اعداد کی خصوصیات کے مطابق، ہر غیر مختتم تکرار والے اعشاری عدد کو $\\frac{p}{q}$ کی کسر کی شکل میں تبدیل کیا جا سکتا ہے، جہاں $p, q \\in \\mathbb{Z}$ اور $q \\neq 0$ ہو۔",
+       "why": {
+        "en": "We recall the fundamental rule of real numbers that all non-terminating recurring decimals are always rational. This is because any endlessly repeating pattern allows us to rewrite the decimal as a clean fraction $\\frac{p}{q}$ of two integers where $q \\neq 0$.",
+        "ur": "ہم حقیقی اعداد کا بنیادی اصول یاد کرتے ہیں کہ تمام غیر اختتامی تکراری اعشاریے ہمیشہ ناطق (rational) ہوتے ہیں۔ اس کی وجہ یہ ہے کہ کسی بھی مسلسل دہرانے والے ترتیب کو دو صحیح اعداد کی کسر $\\frac{p}{q}$ کے طور پر لکھا جا سکتا ہے، جہاں $q \\neq 0$ ہو۔"
+       }
       },
       {
        "math": "0.\\bar{6} = \\frac{6}{9} = \\frac{2}{3}",
@@ -70,7 +102,11 @@
        "ur": "اس تکرار والے اعشاری عدد کو کسر میں تبدیل کرنے اور شمار کنندہ اور مخرج کو $3$ پر تقسیم کر کے مختصر کرنے سے ہمیں $\\frac{2}{3}$ حاصل ہوتا ہے۔",
        "check": [
         "R(6,9) == R(2,3)"
-       ]
+       ],
+       "why": {
+        "en": "Using the shortcut rule for converting single-digit repeating decimals, we put the repeating digit $6$ over $9$ to get $\\frac{6}{9}$, and then divide both by $3$ to simplify it to $\\frac{2}{3}$. Successfully finding this fraction proves our rule in action.",
+        "ur": "ایک ہندسے والے تکراری اعشاریے کو کسر میں بدلنے کا اصول استعمال کرتے ہوئے، ہم دہرانے والے ہندسے $6$ کے نیچے $9$ لکھ کر $\\frac{6}{9}$ حاصل کرتے ہیں، اور پھر دونوں کو $3$ پر تقسیم کر کے مختصر صورت $\\frac{2}{3}$ بناتے ہیں۔ یہ کسر حاصل ہونا ہمارے اصول کو ثابت کرتا ہے۔"
+       }
       },
       {
        "math": "\\text{Rational}",
@@ -78,11 +114,19 @@
        "ur": "چونکہ $0.\\bar{6}$ کو $\\frac{p}{q}$ کی شکل میں بطور $\\frac{2}{3}$ لکھا جا سکتا ہے، اس لیے یہ ایک ناطق عدد (Rational number) ہے۔",
        "check": [
         "9*Rational(2,3) == 6"
-       ]
+       ],
+       "why": {
+        "en": "By the formal definition of rational numbers, any number that can be written as a fraction of integers $\\frac{p}{q}$ is rational. Since we showed $0.\\bar{6}$ is equal to $\\frac{2}{3}$, our classification is complete.",
+        "ur": "ناطق اعداد کی تعریف کے مطابق، کوئی بھی نمبر جسے صحیح اعداد کی کسر $\\frac{p}{q}$ کے طور پر لکھا جا سکے، ناطق کہلاتا ہے۔ چونکہ ہم نے دکھا دیا کہ $0.\\bar{6}$ دراصل $\\frac{2}{3}$ کے برابر ہے، اس لیے ہمارا جواب مکمل ہو گیا۔"
+       }
       }
      ],
      "answer": "Rational",
      "enriched": true,
+     "meaning": {
+      "en": "The final answer means that $0.\\bar{6}$ belongs to the family of rational numbers because its endlessly repeating $6$s come from the simple fraction $\\frac{2}{3}$. You can easily check this yourself by dividing $2$ by $3$ on a calculator or by long division to see that it gives $0.666\\ldots$.",
+      "ur": "آخری جواب کا مطلب یہ ہے کہ $0.\\bar{6}$ ناطق اعداد (rational numbers) کے خاندان سے تعلق رکھتا ہے کیونکہ اس میں مسلسل دہرایا جانے والا ہندسہ $6$ دراصل سادہ کسر $\\frac{2}{3}$ سے آتا ہے۔ آپ اس کی پڑتال خود بھی باآسانی کر سکتے ہیں: کیلکولیٹر یا تقسیم کے طریقے سے $2$ کو $3$ پر تقسیم کریں تو آپ دیکھیں گے کہ جواب $0.666\\ldots$ ہی آتا ہے۔"
+     },
      "book_key": "Rational"
     },
     {
@@ -92,26 +136,46 @@
       {
        "math": "2.236067\\ldots",
        "en": "We are given the decimal number $2.236067\\ldots$ and we need to determine whether it is a rational or an irrational number.",
-       "ur": "ہمیں اعشاری عدد $2.236067\\ldots$ دیا گیا ہے اور ہمیں یہ معلوم کرنا ہے کہ یہ ناطق عدد ہے یا غیر ناطق عدد۔"
+       "ur": "ہمیں اعشاری عدد $2.236067\\ldots$ دیا گیا ہے اور ہمیں یہ معلوم کرنا ہے کہ یہ ناطق عدد ہے یا غیر ناطق عدد۔",
+       "why": {
+        "en": "First, we carefully look at the given number $2.236067\\ldots$ to see its decimal structure. This helps us decide which definition of real numbers we need to apply.",
+        "ur": "سب سے پہلے، ہم دیے گئے نمبر $2.236067\\ldots$ کی اشعاری ساخت کو غور سے دیکھتے ہیں۔ اس سے ہمیں یہ طے کرنے میں مدد ملتی ہے کہ ہمیں حقیقی اعداد کی کون سی تعریف لاگو کرنی ہے۔"
+       }
       },
       {
        "math": "",
        "en": "By definition, a decimal representation that is non-terminating (does not end) and non-recurring (no block of digits repeats endlessly) represents an irrational number.",
-       "ur": "تعریف کے مطابق، ایک ایسا اعشاریہ جو غیر مختتم (ختم نہ ہونے والا) اور غیر متوالی (جس میں ہندسوں کا کوئی گروہ بار بار نہ دہرایا جائے) ہو، ایک غیر ناطق عدد کو ظاہر کرتا ہے۔"
+       "ur": "تعریف کے مطابق، ایک ایسا اعشاریہ جو غیر مختتم (ختم نہ ہونے والا) اور غیر متوالی (جس میں ہندسوں کا کوئی گروہ بار بار نہ دہرایا جائے) ہو، ایک غیر ناطق عدد کو ظاہر کرتا ہے۔",
+       "why": {
+        "en": "We recall the textbook definition for identifying irrational numbers in decimal form. Knowing this rule gives us the exact two conditions—non-terminating and non-recurring—that we must check for in our number.",
+        "ur": "ہم اشعاری شکل میں غیر ناطق اعداد کی شناخت کے لیے کتاب کی تعریف کو یاد کرتے ہیں۔ اس اصول کو جاننے سے ہمیں وہ دو شرائط (غیر اختتامی اور غیر متوالی) مل جاتی ہیں جنہیں ہمیں اپنے نمبر میں چیک کرنا ہے۔"
+       }
       },
       {
        "math": "",
        "en": "Observing $2.236067\\ldots$: the three dots ($\\ldots$) at the end show that the digits continue infinitely without terminating. Also, the digits $2, 3, 6, 0, 6, 7$ do not follow any repeating pattern.",
-       "ur": "عدد $2.236067\\ldots$ کا مشاہدہ کرنے سے معلوم ہوتا ہے کہ آخر میں موجود تین نقطے ($\\ldots$) ظاہر کرتے ہیں کہ ہندسے ختم ہوئے بغیر لامحدود طور پر جاری رہتے ہیں۔ نیز، ہندسے $2, 3, 6, 0, 6, 7$ کسی خاص ترتیب سے دہرائے نہیں جا رہے۔"
+       "ur": "عدد $2.236067\\ldots$ کا مشاہدہ کرنے سے معلوم ہوتا ہے کہ آخر میں موجود تین نقطے ($\\ldots$) ظاہر کرتے ہیں کہ ہندسے ختم ہوئے بغیر لامحدود طور پر جاری رہتے ہیں۔ نیز، ہندسے $2, 3, 6, 0, 6, 7$ کسی خاص ترتیب سے دہرائے نہیں جا رہے۔",
+       "why": {
+        "en": "Now we apply the rule by examining the digits $2, 3, 6, 0, 6, 7$ and the three dots ($\\ldots$) at the end. This observation confirms that the decimal goes on forever without any repeating block, matching both conditions of the rule.",
+        "ur": "اب ہم ہندسوں $2, 3, 6, 0, 6, 7$ اور آخر میں تین نقطوں ($\\ldots$) کا معائنہ کر کے اس اصول کو لاگو کرتے ہیں۔ یہ مشاہدہ تصدیق کرتا ہے کہ اعشاریہ بغیر کسی دہرائے جانے والے ترتیب کے ہمیشہ کے لیے جاری رہتا ہے، جو اصول کی دونوں شرائط کو پورا کرتا ہے۔"
+       }
       },
       {
        "math": "",
        "en": "Since $2.236067\\ldots$ is a non-terminating and non-recurring decimal, it cannot be written in the form $\\frac{p}{q}$. Therefore, it is an irrational number.",
-       "ur": "چونکہ $2.236067\\ldots$ ایک غیر مختتم اور غیر متوالی اعشاریہ ہے، اس لیے اسے $\\frac{p}{q}$ کی شکل میں نہیں لکھا جا سکتا۔ لہٰذا، یہ ایک غیر ناطق عدد (Irrational number) ہے۔"
+       "ur": "چونکہ $2.236067\\ldots$ ایک غیر مختتم اور غیر متوالی اعشاریہ ہے، اس لیے اسے $\\frac{p}{q}$ کی شکل میں نہیں لکھا جا سکتا۔ لہٰذا، یہ ایک غیر ناطق عدد (Irrational number) ہے۔",
+       "why": {
+        "en": "Finally, we connect our observation to the fundamental definition of rational and irrational numbers. Because the decimal never ends and never repeats, it is impossible to write it as a simple fraction $\\frac{p}{q}$, which completes our proof.",
+        "ur": "آخر میں، ہم اپنے مشاہدے کو ناطق اور غیر ناطق اعداد کی بنیادی تعریف سے جوڑتے ہیں۔ چونکہ یہ اعشاریہ کبھی ختم نہیں ہوتا اور نہ ہی دہرایا جاتا ہے، اس لیے اسے سادہ کسر $\\frac{p}{q}$ کی شکل میں لکھنا ناممکن ہے، جس سے ہمارا ثبوت مکمل ہو جاتا ہے۔"
+       }
       }
      ],
      "answer": "Irrational",
      "enriched": true,
+     "meaning": {
+      "en": "The final answer means that $2.236067\\ldots$ belongs to the set of irrational numbers because its decimal expansion continues endlessly without any repeating pattern, so it cannot be expressed as a fraction $\\frac{p}{q}$. You can always verify this quickly by checking for the three dots ($\\ldots$) at the end and making sure no group of digits among $2, 3, 6, 0, 6, 7$ is repeating.",
+      "ur": "حتمی جواب کا مطلب یہ ہے کہ $2.236067\\ldots$ غیر ناطق اعداد کے سیٹ سے تعلق رکھتا ہے کیونکہ اس کا اعشاریہ بغیر کسی خاص ترتیب کے لامحدود طور پر جاری رہتا ہے، اس لیے اسے کسر $\\frac{p}{q}$ کے طور پر نہیں لکھا جا سکتا۔ آپ ہمیشہ آخر میں تین نقطوں ($\\ldots$) کو دیکھ کر اور یہ یقینی بنا کر اس کی تصدیق کر سکتے ہیں کہ ہندسوں $2, 3, 6, 0, 6, 7$ میں کوئی بھی گروپ بار بار نہیں آ رہا ہے۔"
+     },
      "book_key": "Irrational"
     },
     {
@@ -121,12 +185,20 @@
       {
        "math": "\\sqrt{7}",
        "en": "We are given the number $\\sqrt{7}$ and asked to identify whether it is a rational or irrational number.",
-       "ur": "ہمیں عدد $\\sqrt{7}$ دیا گیا ہے اور یہ بتانا ہے کہ آیا یہ ناطق عدد ہے یا غیر ناطق۔"
+       "ur": "ہمیں عدد $\\sqrt{7}$ دیا گیا ہے اور یہ بتانا ہے کہ آیا یہ ناطق عدد ہے یا غیر ناطق۔",
+       "why": {
+        "en": "First, we look closely at our given number $\\sqrt{7}$ to see that it has a square root sign (radical). Knowing the form of the number helps us decide which rule of real numbers to apply.",
+        "ur": "سب سے پہلے، ہم دیے گئے عدد $\\sqrt{7}$ کو غور سے دیکھتے ہیں کہ اس پر جذر کی علامت موجود ہے۔ عدد کی شکل کو پہچاننے سے ہمیں یہ فیصلہ کرنے میں مدد ملتی ہے کہ حقیقی اعداد کا کون سا اصول لاگو کرنا ہے۔"
+       }
       },
       {
        "math": "",
        "en": "Recall the rule: The square root of any positive integer that is not a perfect square is always an irrational number. Also, the square root of any prime number is irrational.",
-       "ur": "اصول یاد رکھیں: کسی بھی ایسے مثبت صحیح عدد کا جذر جو مکمل مربع نہ ہو، ہمیشہ ایک غیر ناطق عدد ہوتا ہے۔ نیز، کسی بھی مفرد عدد کا جذر غیر ناطق ہوتا ہے۔"
+       "ur": "اصول یاد رکھیں: کسی بھی ایسے مثبت صحیح عدد کا جذر جو مکمل مربع نہ ہو، ہمیشہ ایک غیر ناطق عدد ہوتا ہے۔ نیز، کسی بھی مفرد عدد کا جذر غیر ناطق ہوتا ہے۔",
+       "why": {
+        "en": "We recall the fundamental rule for square roots: if the number inside the root is a prime number or not a perfect square, the result is always irrational. This gives us a clear test to check the number $7$.",
+        "ur": "ہم جذر کے بنیادی اصول کو یاد کرتے ہیں: اگر جذر کے اندر موجود عدد مفرد ہو یا مکمل مربع نہ ہو، تو وہ ہمیشہ ایک غیر ناطق عدد ہوتا ہے۔ اس سے ہمیں عدد $7$ کو جانچنے کا ایک واضح طریقہ مل جاتا ہے۔"
+       }
       },
       {
        "math": "2^2 = 4, \\quad 3^2 = 9",
@@ -135,7 +207,11 @@
        "check": [
         "2**2 == 4",
         "3**2 == 9"
-       ]
+       ],
+       "why": {
+        "en": "To test if $7$ is a perfect square, we find the squares of whole numbers like $2$ and $3$. Seeing that $2^2 = 4$ and $3^2 = 9$ helps us locate where $7$ stands among the perfect squares.",
+        "ur": "یہ جانچنے کے لیے کہ آیا $7$ ایک مکمل مربع ہے، ہم $2$ اور $3$ جیسے مکمل اعداد کے مربع معلوم کرتے ہیں۔ یہ دیکھ کر کہ $2^2 = 4$ اور $3^2 = 9$ ہے، ہمیں پتہ چلتا ہے کہ مکمل مربع اعداد کے درمیان $7$ کہاں واقع ہے۔"
+       }
       },
       {
        "math": "4 < 7 < 9",
@@ -144,7 +220,11 @@
        "check": [
         "floor(sqrt(7))**2 < 7",
         "(floor(sqrt(7))+1)**2 > 7"
-       ]
+       ],
+       "why": {
+        "en": "Comparing the numbers shows $4 < 7 < 9$, which proves there is no whole number between $2$ and $3$ whose square is $7$. Since $7$ is not a perfect square (and is a prime number), we now know the exact nature of its square root.",
+        "ur": "اعداد کا موازنہ کرنے سے $4 < 7 < 9$ ظاہر ہوتا ہے، جو ثابت کرتا ہے کہ $2$ اور $3$ کے درمیان کوئی ایسا مکمل عدد نہیں ہے جس کا مربع $7$ ہو۔ چونکہ $7$ مکمل مربع نہیں ہے (اور ایک مفرد عدد بھی ہے)، اس لیے اب ہم اس کے جذر کی اصل نوعیت جان چکے ہیں۔"
+       }
       },
       {
        "math": "\\sqrt{7} \\text{ is an irrational number}",
@@ -153,11 +233,19 @@
        "check": [
         "floor(sqrt(7))**2 < 7",
         "(floor(sqrt(7))+1)**2 > 7"
-       ]
+       ],
+       "why": {
+        "en": "By the definition of irrational numbers, since $\\sqrt{7}$ does not simplify to a whole number, it cannot be written as a simple fraction $\\frac{p}{q}$. This directly gives us our final conclusion that $\\sqrt{7}$ is irrational.",
+        "ur": "غیر ناطق اعداد کی تعریف کے مطابق، چونکہ $\\sqrt{7}$ حل ہو کر کوئی مکمل عدد نہیں بنتا، اس لیے اسے سادہ کسر $\\frac{p}{q}$ کی شکل میں نہیں لکھا جا سکتا۔ اس سے ہمیں براہِ راست اپنا حتمی نتیجہ مل جاتا ہے کہ $\\sqrt{7}$ ایک غیر ناطق عدد ہے۔"
+       }
       }
      ],
      "answer": "Irrational",
      "enriched": true,
+     "meaning": {
+      "en": "The final answer means that $\\sqrt{7}$ is an irrational number because $7$ is not a perfect square, so $\\sqrt{7}$ cannot be written as a fraction $\\frac{p}{q}$ of two integers. You can always quickly check any square root this way: if the number inside is prime like $7$, it is definitely irrational.",
+      "ur": "حتمی جواب کا مطلب یہ ہے کہ $\\sqrt{7}$ ایک غیر ناطق عدد ہے کیونکہ $7$ ایک مکمل مربع نہیں ہے، اس لیے $\\sqrt{7}$ کو دو صحیح اعداد کی کسر $\\frac{p}{q}$ کے طور پر نہیں لکھا جا سکتا۔ آپ ہمیشہ کسی بھی جذر کو اس طرح جلدی سے چیک کر سکتے ہیں: اگر اندر والا عدد $7$ کی طرح مفرد ہے، تو وہ یقیناً غیر ناطق ہے۔"
+     },
      "book_key": "Irrational"
     },
     {
@@ -167,26 +255,46 @@
       {
        "math": "e",
        "en": "We are given the mathematical constant $e$ (Euler's number) and asked to identify whether it is a rational or an irrational number.",
-       "ur": "ہمیں ریاضیاتی مستقل $e$ (یولر کا عدد) دیا گیا ہے اور یہ بتانا ہے کہ آیا یہ ناطق عدد ہے یا غیر ناطق۔"
+       "ur": "ہمیں ریاضیاتی مستقل $e$ (یولر کا عدد) دیا گیا ہے اور یہ بتانا ہے کہ آیا یہ ناطق عدد ہے یا غیر ناطق۔",
+       "why": {
+        "en": "First, we identify what the symbol $e$ stands for in mathematics. Recognizing that it is a special constant, Euler's number, prepares us to look at its decimal value rather than treating it as an unknown algebra variable.",
+        "ur": "سب سے پہلے ہم یہ پہچانتے ہیں کہ ریاضی میں علامت $e$ کا کیا مطلب ہے۔ یہ جاننا کہ یہ ایک خاص مستقل مزاج (Euler's number) ہے، ہمیں اسے ایک نامعلوم الجبری متغیر سمجھنے کے بجائے اس کی اعشاری قیمت دیکھنے کے لیے تیار کرتا ہے۔"
+       }
       },
       {
        "math": "",
        "en": "Recall the rule for decimal numbers: a number whose decimal expansion is non-terminating (goes on forever) and non-recurring (does not have a repeating block of digits) cannot be written in the form $\\frac{p}{q}$ (where $p, q \\in \\mathbb{Z}$ and $q \\neq 0$), so it is an irrational number.",
-       "ur": "اعشاری اعداد کا اصول یاد کریں: ایسا عدد جس کی اعشاری شکل غیر مختتم (ہمیشہ جاری رہنے والی) اور غیر متوالی (جس میں ہندسوں کا کوئی خاص بلاک بار بار نہ دہرایا جائے) ہو، اسے $\\frac{p}{q}$ کی شکل میں نہیں لکھا جا سکتا (جہاں $p, q \\in \\mathbb{Z}$ اور $q \\neq 0$)، اس لیے وہ غیر ناطق عدد ہوتا ہے۔"
+       "ur": "اعشاری اعداد کا اصول یاد کریں: ایسا عدد جس کی اعشاری شکل غیر مختتم (ہمیشہ جاری رہنے والی) اور غیر متوالی (جس میں ہندسوں کا کوئی خاص بلاک بار بار نہ دہرایا جائے) ہو، اسے $\\frac{p}{q}$ کی شکل میں نہیں لکھا جا سکتا (جہاں $p, q \\in \\mathbb{Z}$ اور $q \\neq 0$)، اس لیے وہ غیر ناطق عدد ہوتا ہے۔",
+       "why": {
+        "en": "To classify any number using its decimal form, we must first recall the definition of an irrational number. This rule gives us a clear test: we need to check if the digits after the decimal point go on forever without a repeating block.",
+        "ur": "کسی بھی عدد کو اس کی اعشاری شکل کی مدد سے پرکھنے کے لیے، ہمیں پہلے غیر ناطق عدد کی تعریف یاد کرنی چاہیے۔ یہ اصول ہمیں ایک واضح کسوٹی دیتا ہے: ہمیں یہ دیکھنا ہے کہ کیا اعشاریہ کے بعد ہندسے بغیر کسی تکرار کے لامحدود طور پر چلتے رہتے ہیں۔"
+       }
       },
       {
        "math": "e = 2.7182818284\\ldots",
        "en": "The decimal value of Euler's number $e$ is $2.71828\\ldots$. Observe that the digits after the decimal point continue endlessly without any repeating pattern.",
-       "ur": "یولر کے عدد $e$ کی اعشاری قیمت $2.71828\\ldots$ ہے۔ غور کریں کہ اعشاریہ کے بعد کے ہندسے بغیر کسی تکرار کے لامحدود طور پر جاری رہتے ہیں۔"
+       "ur": "یولر کے عدد $e$ کی اعشاری قیمت $2.71828\\ldots$ ہے۔ غور کریں کہ اعشاریہ کے بعد کے ہندسے بغیر کسی تکرار کے لامحدود طور پر جاری رہتے ہیں۔",
+       "why": {
+        "en": "Now we write down the known decimal value of $e$, which is $2.7182818284\\ldots$, to apply our test. Looking at the digits and the three dots at the end, we see that the decimal neither stops nor forms a repeating pattern.",
+        "ur": "اب ہم اپنی کسوٹی کو لاگو کرنے کے لیے $e$ کی معلوم اعشاری قیمت لکھتے ہیں، جو کہ $2.7182818284\\ldots$ ہے۔ ہندسوں اور آخر میں موجود تین نقطوں کو دیکھ کر ہمیں پتہ چلتا ہے کہ اعشاریہ نہ تو رکتا ہے اور نہ ہی کوئی بار بار دہرانے والا نمونہ بناتا ہے۔"
+       }
       },
       {
        "math": "",
        "en": "Since the decimal representation of $e$ is non-terminating and non-recurring, $e$ is an irrational number.",
-       "ur": "چونکہ $e$ کی اعشاری شکل غیر مختتم اور غیر متوالی (غیر دوری) ہے، اس لیے $e$ ایک غیر ناطق (Irrational) عدد ہے۔"
+       "ur": "چونکہ $e$ کی اعشاری شکل غیر مختتم اور غیر متوالی (غیر دوری) ہے، اس لیے $e$ ایک غیر ناطق (Irrational) عدد ہے۔",
+       "why": {
+        "en": "Finally, we match our observation from the previous step with the definition of irrational numbers. Because the decimal is both non-terminating and non-recurring, we can confidently reach our conclusion.",
+        "ur": "آخر میں، ہم پچھلے مرحلے کے اپنے مشاہدے کو غیر ناطق اعداد کی تعریف کے ساتھ ملاتے ہیں۔ چونکہ اعشاریہ غیر مختتم اور غیر متوالی دونوں ہے، اس لیے ہم اعتماد کے ساتھ اپنے نتیجے پر پہنچ سکتے ہیں۔"
+       }
       }
      ],
      "answer": "Irrational",
      "enriched": true,
+     "meaning": {
+      "en": "The final answer means that the constant $e$ is an irrational number, so it cannot be written as a simple fraction $\\frac{p}{q}$ of two integers. You can verify this by checking the $e$ button on a scientific calculator and seeing that the decimal digits $2.7182818284\\ldots$ fill the screen without a repeating pattern.",
+      "ur": "حتمی جواب کا مطلب یہ ہے کہ مستقل $e$ ایک غیر ناطق عدد ہے، اس لیے اسے دو صحیح اعداد کی سادہ کسر $\\frac{p}{q}$ کی شکل میں نہیں لکھا جا سکتا۔ آپ سائنسی کیلکولیٹر پر $e$ کا بٹن دبا کر اس کی تصدیق کر سکتے ہیں اور دیکھ سکتے ہیں کہ اعشاری ہندسے $2.7182818284\\ldots$ بغیر کسی تکرار کے اسکرین کو بھر دیتے ہیں۔"
+     },
      "book_key": "Irrational"
     },
     {
@@ -196,31 +304,55 @@
       {
        "math": "\\pi",
        "en": "We are given the mathematical constant $\\pi$ (pi) and asked to identify whether it is a rational or an irrational number.",
-       "ur": "ہمیں ریاضی کا مستقل عدد $\\pi$ (پائی) دیا گیا ہے اور ہمیں یہ بتانا ہے کہ یہ ناطق عدد ہے یا غیر ناطق عدد۔"
+       "ur": "ہمیں ریاضی کا مستقل عدد $\\pi$ (پائی) دیا گیا ہے اور ہمیں یہ بتانا ہے کہ یہ ناطق عدد ہے یا غیر ناطق عدد۔",
+       "why": {
+        "en": "We begin by clearly identifying the given symbol, $\\pi$, so we know exactly which special mathematical constant we need to test for rationality.",
+        "ur": "ہم سب سے پہلے دی گئی علامت $\\pi$ کو واضح طور پر پہچانتے ہیں تاکہ ہمیں معلوم ہو سکے کہ ہمیں کس خاص ریاضیاتی مستقل کے ناطق یا غیر ناطق ہونے کی جانچ کرنی ہے۔"
+       }
       },
       {
        "math": "",
        "en": "Recall that an irrational number is a number whose decimal representation is non-terminating (goes on forever) and non-recurring (does not have a repeating pattern of digits). It cannot be written exactly in the form $\\frac{p}{q}$ where $p, q \\in \\mathbb{Z}$ and $q \\neq 0$.",
-       "ur": "یاد رکھیں کہ غیر ناطق عدد وہ ہوتا ہے جس کی اعشاری شکل غیر مختتم (ہمیشہ جاری رہنے والی) اور غیر تکراری (جس میں ہندسوں کی تکرار نہ ہو) ہوتی ہے۔ اسے $\\frac{p}{q}$ کی شکل میں نہیں لکھا جا سکتا جہاں $p, q \\in \\mathbb{Z}$ اور $q \\neq 0$ ہو۔"
+       "ur": "یاد رکھیں کہ غیر ناطق عدد وہ ہوتا ہے جس کی اعشاری شکل غیر مختتم (ہمیشہ جاری رہنے والی) اور غیر تکراری (جس میں ہندسوں کی تکرار نہ ہو) ہوتی ہے۔ اسے $\\frac{p}{q}$ کی شکل میں نہیں لکھا جا سکتا جہاں $p, q \\in \\mathbb{Z}$ اور $q \\neq 0$ ہو۔",
+       "why": {
+        "en": "To classify any number correctly, we first bring to mind the exact textbook definition of an irrational number based on its decimal behavior and fraction form. This gives us the rule we will use to judge $\\pi$.",
+        "ur": "کسی بھی عدد کی درست درجہ بندی کرنے کے لیے، ہم سب سے پہلے اعشاریہ کی خاصیت اور کسر کی شکل کی بنیاد پر غیر ناطق عدد کی کتاب والی تعریف ذہن میں لاتے ہیں۔ اس سے ہمیں وہ اصول مل جاتا ہے جس کے ذریعے ہم $\\pi$ کو پرکھیں گے۔"
+       }
       },
       {
        "math": "\\pi = 3.14159\\ldots",
        "en": "When we write the decimal expansion of $\\pi$, we get $3.14159\\ldots$ (note that $\\frac{22}{7}$ is only an approximate value, not the exact value of $\\pi$).",
-       "ur": "جب ہم $\\pi$ کو اعشاری شکل میں لکھتے ہیں تو ہمیں $3.14159\\ldots$ حاصل ہوتا ہے (واضح رہے کہ $\\frac{22}{7}$ صرف ایک تقریبی قیمت ہے، $\\pi$ کی اصل قیمت نہیں)۔"
+       "ur": "جب ہم $\\pi$ کو اعشاری شکل میں لکھتے ہیں تو ہمیں $3.14159\\ldots$ حاصل ہوتا ہے (واضح رہے کہ $\\frac{22}{7}$ صرف ایک تقریبی قیمت ہے، $\\pi$ کی اصل قیمت نہیں)۔",
+       "why": {
+        "en": "We look at the actual decimal value of $\\pi$ to see how its digits behave, while reminding ourselves not to be confused by the common fraction $\\frac{22}{7}$, which is just a rough estimate used in calculations.",
+        "ur": "ہم $\\pi$ کی اصل اعشاری قیمت کو دیکھتے ہیں تاکہ معلوم ہو سکے کہ اس کے ہندسے کس طرح آگے بڑھتے ہیں، اور ساتھ ہی یہ بات ذہن میں رکھتے ہیں کہ عام کسر $\\frac{22}{7}$ سے دھوکہ نہیں کھانا کیونکہ وہ صرف حساب کتاب کے لیے ایک قریبی قیمت ہے۔"
+       }
       },
       {
        "math": "",
        "en": "Since the digits after the decimal point in $3.14159\\ldots$ continue infinitely without any repeating block of digits, it is a non-terminating and non-recurring decimal.",
-       "ur": "چونکہ $3.14159\\ldots$ میں اعشاریہ کے بعد ہندسے بغیر کسی خاص تکرار کے لامحدود طور پر چلتے رہتے ہیں، اس لیے یہ ایک غیر مختتم اور غیر تکراری اعشاری عدد ہے۔"
+       "ur": "چونکہ $3.14159\\ldots$ میں اعشاریہ کے بعد ہندسے بغیر کسی خاص تکرار کے لامحدود طور پر چلتے رہتے ہیں، اس لیے یہ ایک غیر مختتم اور غیر تکراری اعشاری عدد ہے۔",
+       "why": {
+        "en": "By examining the decimal $3.14159\\ldots$, we observe that the digits neither end nor form a repeating pattern. This observation directly matches the condition for a non-terminating, non-recurring decimal.",
+        "ur": "اعشاریہ $3.14159\\ldots$ کا معائنہ کرنے سے ہمیں نظر آتا ہے کہ اس کے ہندسے نہ تو ختم ہوتے ہیں اور نہ ہی کسی خاص ترتیب سے بار بار دہرائے جاتے ہیں۔ یہ مشاہدہ براہِ راست غیر مختتم اور غیر متوالی اعشاریہ کی شرط سے میل کھاتا ہے۔"
+       }
       },
       {
        "math": "",
        "en": "Therefore, $\\pi$ is an irrational number.",
-       "ur": "لہٰذا، $\\pi$ ایک غیر ناطق عدد (irrational number) ہے۔"
+       "ur": "لہٰذا، $\\pi$ ایک غیر ناطق عدد (irrational number) ہے۔",
+       "why": {
+        "en": "Since the decimal form of $\\pi$ satisfies the exact definition of a non-terminating and non-recurring decimal, we can confidently reach our final conclusion.",
+        "ur": "چونکہ $\\pi$ کی اعشاری شکل غیر مختتم اور غیر متوالی اعشاریہ کی تعریف پر بالکل پورا اترتی ہے، اس لیے ہم اعتماد کے ساتھ اپنے حتمی نتیجے پر پہنچ سکتے ہیں۔"
+       }
       }
      ],
      "answer": "Irrational",
      "enriched": true,
+     "meaning": {
+      "en": "The final answer means that $\\pi$ is an irrational number because its exact value $3.14159\\ldots$ goes on forever without any repeating pattern, so it can never be written as an exact fraction $\\frac{p}{q}$ (remembering that $\\frac{22}{7}$ is only an approximation).",
+      "ur": "حتمی جواب کا مطلب یہ ہے کہ $\\pi$ ایک غیر ناطق عدد (Irrational number) ہے کیونکہ اس کی اصل قیمت $3.14159\\ldots$ بغیر کسی تکرار کے لا محدود طور پر چلتی رہتی ہے، اس لیے اسے کبھی بھی ایک مکمل کسر $\\frac{p}{q}$ کی شکل میں نہیں لکھا جا سکتا (یاد رہے کہ $\\frac{22}{7}$ صرف ایک قریبی یا تقریبی قیمت ہے)۔"
+     },
      "book_key": "Irrational"
     },
     {
@@ -230,7 +362,11 @@
       {
        "math": "5 + \\sqrt{11}",
        "en": "We are given the expression $5 + \\sqrt{11}$ and asked to identify whether it is a rational or irrational number.",
-       "ur": "ہمیں $5 + \\sqrt{11}$ دیا گیا ہے اور یہ بتانا ہے کہ یہ ناطق عدد ہے یا غیر ناطق عدد۔"
+       "ur": "ہمیں $5 + \\sqrt{11}$ دیا گیا ہے اور یہ بتانا ہے کہ یہ ناطق عدد ہے یا غیر ناطق عدد۔",
+       "why": {
+        "en": "To classify a compound expression like $5 + \\sqrt{11}$, our strategy is to first examine each of its parts separately. Once we know the nature of both numbers being added, we can use a basic property of real numbers to find the nature of their sum.",
+        "ur": "اس طرح کے مرکب جملے $5 + \\sqrt{11}$ کی درجہ بندی کرنے کے لیے، ہماری حکمت عملی یہ ہے کہ پہلے اس کے ہر حصے کا الگ الگ جائزہ لیا جائے۔ جب ہمیں جمع ہونے والے دونوں اعداد کی نوعیت معلوم ہو جائے گی، تو ہم حقیقی اعداد کی ایک بنیادی خاصیت استعمال کر کے ان کے مجموعے کی نوعیت معلوم کر سکتے ہیں۔"
+       }
       },
       {
        "math": "5 = \\frac{5}{1}",
@@ -238,7 +374,11 @@
        "ur": "سب سے پہلے پہلی رقم $5$ کو دیکھیں۔ چونکہ $5$ کو $\\frac{p}{q}$ کی شکل میں $\\frac{5}{1}$ لکھا جا سکتا ہے (جہاں $p, q \\in \\mathbb{Z}$ اور $q \\neq 0$)، اس لیے $5$ ایک ناطق عدد ہے۔",
        "check": [
         "5 == R(5, 1)"
-       ]
+       ],
+       "why": {
+        "en": "We check the first part, $5$, using the definition of a rational number, which requires a number to be written as a fraction $\\frac{p}{q}$ of two integers with $q \\neq 0$. Writing $5$ as $\\frac{5}{1}$ confirms that this first part of our sum is a rational number.",
+        "ur": "ہم پہلے حصے، یعنی $5$ کو ناطق عدد کی تعریف کے مطابق جانچتے ہیں، جس کے تحت عدد کو دو صحیح اعداد کی کسر $\\frac{p}{q}$ کے طور پر لکھا جا سکے جہاں $q \\neq 0$ ہو۔ $5$ کو $\\frac{5}{1}$ کے طور پر لکھنے سے یہ تصدیق ہو جاتی ہے کہ ہمارے مجموعے کا یہ پہلا حصہ ایک ناطق عدد (rational number) ہے۔"
+       }
       },
       {
        "math": "\\sqrt{11} \\text{ is irrational}",
@@ -247,12 +387,20 @@
        "check": [
         "floor(sqrt(11))**2 == 9",
         "(floor(sqrt(11))+1)**2 == 16"
-       ]
+       ],
+       "why": {
+        "en": "Now we use the rule that the square root of any prime number (or a number that is not a perfect square) is always irrational. Because $11$ lies between the perfect squares $9$ and $16$, its square root cannot be simplified to a whole number or fraction, telling us that the second part $\\sqrt{11}$ is irrational.",
+        "ur": "اب ہم یہ اصول استعمال کرتے ہیں کہ کسی بھی مفرد عدد (یا ایسا عدد جو مکمل مربع نہ ہو) کا جزر ہمیشہ غیر ناطق ہوتا ہے۔ چونکہ $11$ مکمل مربعات $9$ اور $16$ کے درمیان آتا ہے، اس لیے اس کے جزر کو کسی مکمل عدد یا کسر میں تبدیل نہیں کیا جا سکتا، جس سے ہمیں معلوم ہوتا ہے کہ دوسرا حصہ $\\sqrt{11}$ غیر ناطق (irrational) ہے۔"
+       }
       },
       {
        "math": "\\text{Rational} + \\text{Irrational} = \\text{Irrational}",
        "en": "According to the properties of real numbers, the sum of a rational number and an irrational number is always an irrational number.",
-       "ur": "حقیقی اعداد کی خصوصیات کے مطابق، ایک ناطق عدد اور ایک غیر ناطق عدد کا مجموعہ ہمیشہ ایک غیر ناطق عدد ہوتا ہے۔"
+       "ur": "حقیقی اعداد کی خصوصیات کے مطابق، ایک ناطق عدد اور ایک غیر ناطق عدد کا مجموعہ ہمیشہ ایک غیر ناطق عدد ہوتا ہے۔",
+       "why": {
+        "en": "Here we recall an important closure property of real numbers regarding addition. When a non-terminating, non-repeating decimal (irrational) is added to a simple fraction (rational), the decimal part remains non-terminating and non-repeating, so the result must be irrational.",
+        "ur": "یہاں ہم جمع کے حوالے سے حقیقی اعداد کی ایک اہم خاصیت کو یاد کرتے ہیں۔ جب ایک غیر مختتم اور غیر متوالی اعشاریہ (غیر ناطق) کو ایک سادہ کسر (ناطق) میں جمع کیا جاتا ہے، تو اعشاریہ والا حصہ غیر مختتم اور غیر متوالی ہی رہتا ہے، اس لیے نتیجہ لازمی طور پر غیر ناطق ہوتا ہے۔"
+       }
       },
       {
        "math": "5 + \\sqrt{11} \\text{ is irrational}",
@@ -261,11 +409,19 @@
        "check": [
         "floor(sqrt(11))**2 < 11",
         "(floor(sqrt(11))+1)**2 > 11"
-       ]
+       ],
+       "why": {
+        "en": "Applying the rule from the previous step directly to our two parts ($5$ and $\\sqrt{11}$) gives us the final classification. This completes our proof and shows that the combined expression is irrational.",
+        "ur": "پچھلے مرحلے کے اصول کو براہِ راست اپنے دونوں حصوں ($5$ اور $\\sqrt{11}$) پر لاگو کرنے سے ہمیں حتمی درجہ بندی مل جاتی ہے۔ اس سے ہمارا ثبوت مکمل ہوتا ہے اور یہ ظاہر ہوتا ہے کہ یہ پورا جملہ غیر ناطق ہے۔"
+       }
       }
      ],
      "answer": "Irrational",
      "enriched": true,
+     "meaning": {
+      "en": "The final answer means that the number $5 + \\sqrt{11}$ is an irrational number, so it cannot be written as a simple fraction $\\frac{p}{q}$ of two integers. Because $\\sqrt{11}$ has an endless, non-repeating decimal part, adding $5$ to it only changes the whole-number part while the decimal part remains endless and non-repeating.",
+      "ur": "حتمی جواب کا مطلب یہ ہے کہ عدد $5 + \\sqrt{11}$ ایک غیر ناطق عدد (irrational number) ہے، لہٰذا اسے دو صحیح اعداد کی سادہ کسر $\\frac{p}{q}$ کی شکل میں نہیں لکھا جا سکتا۔ چونکہ $\\sqrt{11}$ کا اعشاریہ والا حصہ نہ ختم ہونے والا اور نہ دہرانے والا ہے، اس میں $5$ جمع کرنے سے صرف صحیح عدد والا حصہ بدلتا ہے جبکہ اعشاریہ والا حصہ ویسا ہی غیر مختتم اور غیر متوالی رہتا ہے۔"
+     },
      "book_key": "Irrational"
     },
     {
@@ -273,29 +429,90 @@
      "prompt": "$\\sqrt{3}+\\sqrt{13}$",
      "steps": [
       {
-       "math": "(\\sqrt{3}+\\sqrt{13})^2 = 3+13+2\\sqrt{39} = 16+2\\sqrt{39}",
-       "en": "Square the number. If $\\sqrt{3}+\\sqrt{13}$ were rational, its square would be rational too.",
-       "ur": "عدد کا مربع لیں۔ اگر $\\sqrt{3}+\\sqrt{13}$ ناطق ہوتا تو اس کا مربع بھی ناطق ہوتا۔",
-       "check": [
-        "(sqrt(3)+sqrt(13))**2 == 16 + 2*sqrt(39)"
-       ]
-      },
-      {
-       "math": "\\sqrt{39}\\ \\text{is irrational}",
-       "en": "36 < 39 < 49, so 39 is not a perfect square and $\\sqrt{39}$ is irrational.",
-       "ur": "36 < 39 < 49، اس لیے 39 مکمل مربع نہیں اور $\\sqrt{39}$ غیر ناطق ہے۔",
-       "check": [
-        "floor(sqrt(39))**2 < 39",
-        "(floor(sqrt(39))+1)**2 > 39"
-       ]
+       "math": "\\sqrt{3}+\\sqrt{13}",
+       "en": "We are given the number $\\sqrt{3}+\\sqrt{13}$ and we need to determine whether it is a rational or an irrational number.",
+       "ur": "ہمیں عدد $\\sqrt{3}+\\sqrt{13}$ دیا گیا ہے اور ہمیں یہ معلوم کرنا ہے کہ آیا یہ ایک ناطق عدد ہے یا غیر ناطق۔",
+       "why": {
+        "en": "First, let us clearly look at the expression $\\sqrt{3}+\\sqrt{13}$ that we need to classify. Both $3$ and $13$ are inside square roots, and since we are adding two separate radicals, we need a clear mathematical method to see if the combined result is rational or irrational.",
+        "ur": "سب سے پہلے ہم دیے گئے جملے $\\sqrt{3}+\\sqrt{13}$ کو غور سے دیکھتے ہیں جس کی قسم ہمیں معلوم کرنی ہے۔ چونکہ یہاں دو مختلف جذر والی رقمیں جمع ہو رہی ہیں، اس لیے ہمیں ایک واضح ریاضیاتی طریقے کی ضرورت ہے تاکہ پتہ چل سکے کہ ان کا مجموعہ ناطق ہے یا غیر ناطق۔"
+       }
       },
       {
        "math": "",
-       "en": "So $16+2\\sqrt{39}$ is irrational, which means its square root $\\sqrt{3}+\\sqrt{13}$ cannot be rational. It is irrational.",
-       "ur": "اس لیے $16+2\\sqrt{39}$ غیر ناطق ہے، یعنی اس کا جذر $\\sqrt{3}+\\sqrt{13}$ ناطق نہیں ہو سکتا۔ یہ غیر ناطق ہے۔"
+       "en": "We know that the square of any rational number is always rational. Therefore, let us take the square of $\\sqrt{3}+\\sqrt{13}$ to check its nature.",
+       "ur": "ہم جانتے ہیں کہ کسی بھی ناطق عدد کا مربع ہمیشہ ناطق ہوتا ہے۔ اس لیے، آئیے اس کی نوعیت جانچنے کے لیے $\\sqrt{3}+\\sqrt{13}$ کا مربع لیتے ہیں۔",
+       "why": {
+        "en": "When two square roots are added together, it is hard to judge the sum directly, so we use the property that the square of any rational number must also be rational. By squaring $\\sqrt{3}+\\sqrt{13}$, we can eliminate some of the radicals and get a simpler expression to test.",
+        "ur": "جب دو جذر والی رقمیں جمع ہو رہی ہوں تو براہِ راست فیصلہ کرنا مشکل ہوتا ہے، اس لیے ہم یہ اصول استعمال کرتے ہیں کہ کسی بھی ناطق عدد کا مربع ہمیشہ ناطق ہوتا ہے۔ $\\sqrt{3}+\\sqrt{13}$ کا مربع لینے سے کچھ جذر ختم ہو جائیں گے اور ہمیں جانچنے کے لیے ایک آسان شکل مل جائے گی۔"
+       }
+      },
+      {
+       "math": "(\\sqrt{3}+\\sqrt{13})^2 = (\\sqrt{3})^2 + (\\sqrt{13})^2 + 2(\\sqrt{3})(\\sqrt{13})",
+       "en": "Apply the algebraic identity $(a+b)^2 = a^2 + b^2 + 2ab$, where $a = \\sqrt{3}$ and $b = \\sqrt{13}$.",
+       "ur": "الجبری کلیہ $(a+b)^2 = a^2 + b^2 + 2ab$ استعمال کریں، جہاں $a = \\sqrt{3}$ اور $b = \\sqrt{13}$ ہے۔",
+       "check": [
+        "(sqrt(3)+sqrt(13))**2 == (sqrt(3))**2 + (sqrt(13))**2 + 2*sqrt(3)*sqrt(13)"
+       ],
+       "why": {
+        "en": "To square the sum of two terms properly, we must use the standard algebraic formula $(a+b)^2 = a^2 + b^2 + 2ab$. This expands our expression so that each square root can be squared individually in the next step.",
+        "ur": "دو رقموں کے مجموعے کا درست طریقے سے مربع لینے کے لیے ہم الجبرا کا مشہور کلیہ $(a+b)^2 = a^2 + b^2 + 2ab$ استعمال کرتے ہیں۔ اس سے ہماری رقم کھل جاتی ہے تاکہ اگلے مرحلے میں ہر جذر کا الگ الگ مربع لیا جا سکے۔"
+       }
+      },
+      {
+       "math": "(\\sqrt{3}+\\sqrt{13})^2 = 3 + 13 + 2\\sqrt{3 \\times 13} = 16 + 2\\sqrt{39}",
+       "en": "Simplify the squares and multiply the numbers inside the radical.",
+       "ur": "مربعوں کو مختصر کریں اور جذر کے اندر موجود اعداد کو ضرب دیں۔",
+       "check": [
+        "(sqrt(3))**2 + (sqrt(13))**2 + 2*sqrt(3*13) == 16 + 2*sqrt(39)"
+       ],
+       "why": {
+        "en": "Here we use the rule that squaring a square root cancels the radical sign, and we combine the remaining roots using $\\sqrt{a}\\sqrt{b} = \\sqrt{ab}$. This simplifies our expression down to $16 + 2\\sqrt{39}$, where only a single square root remains to be checked.",
+        "ur": "یہاں ہم یہ اصول استعمال کرتے ہیں کہ مربع اور جذر ایک دوسرے کو ختم کر دیتے ہیں، اور باقی جذر والی رقموں کو ضربی اصول کے تحت ملا کر لکھتے ہیں۔ اس طرح یہ حل ہو کر $16 + 2\\sqrt{39}$ بن جاتا ہے، جس میں اب جانچنے کے لیے صرف ایک جذر باقی رہ گیا ہے۔"
+       }
+      },
+      {
+       "math": "36 < 39 < 49 \\implies \\sqrt{39}\\ \\text{is irrational}",
+       "en": "Since $39$ lies between two consecutive perfect squares $36$ ($6^2$) and $49$ ($7^2$), $39$ is not a perfect square. Thus, $\\sqrt{39}$ is an irrational number.",
+       "ur": "چونکہ $39$ دو مسلسل مکمل مربع اعداد $36$ ($6^2$) اور $49$ ($7^2$) کے درمیان آتا ہے، اس لیے $39$ ایک مکمل مربع نہیں ہے۔ لہٰذا، $\\sqrt{39}$ ایک غیر ناطق عدد ہے۔",
+       "check": [
+        "floor(sqrt(39))**2 == 36",
+        "(floor(sqrt(39))+1)**2 == 49"
+       ],
+       "why": {
+        "en": "We know that the square root of an integer is rational only if that integer is a perfect square. Because $39$ falls strictly between two consecutive perfect squares, $36$ ($6^2$) and $49$ ($7^2$), there is no whole number whose square is $39$, proving that $\\sqrt{39}$ is irrational.",
+        "ur": "ہم جانتے ہیں کہ کسی عدد کا جذر صرف اسی صورت میں ناطق ہوتا ہے جب وہ عدد ایک مکمل مربع ہو۔ چونکہ $39$ دو مسلسل مکمل مربع اعداد $36$ ($6^2$) اور $49$ ($7^2$) کے درمیان آتا ہے، اس لیے یہ مکمل مربع نہیں ہے، جس سے ثابت ہوتا ہے کہ $\\sqrt{39}$ ایک غیر ناطق عدد ہے۔"
+       }
+      },
+      {
+       "math": "16 + 2\\sqrt{39}\\ \\text{is irrational}",
+       "en": "Since the product of a non-zero rational number ($2$) and an irrational number ($\\sqrt{39}$) is irrational, and adding a rational number ($16$) to an irrational number gives an irrational result, $16+2\\sqrt{39}$ is irrational.",
+       "ur": "چونکہ ایک غیر صفر ناطق عدد ($2$) اور غیر ناطق عدد ($\\sqrt{39}$) کا حاصلِ ضرب غیر ناطق ہوتا ہے، اور غیر ناطق عدد میں ناطق عدد ($16$) جمع کرنے سے نتیجہ غیر ناطق آتا ہے، اس لیے $16+2\\sqrt{39}$ غیر ناطق ہے۔",
+       "why": {
+        "en": "Now we apply the closure properties of real numbers: multiplying an irrational number ($\\sqrt{39}$) by a non-zero rational ($2$) keeps it irrational, and adding a rational number ($16$) to it still gives an irrational result. This tells us that the entire squared expression $16 + 2\\sqrt{39}$ is definitely irrational.",
+        "ur": "اب ہم حقیقی اعداد کی خصوصیات استعمال کرتے ہیں: ایک غیر ناطق عدد ($\\sqrt{39}$) کو غیر صفر ناطق عدد ($2$) سے ضرب دینے اور پھر اس میں ناطق عدد ($16$) جمع کرنے سے جواب غیر ناطق ہی رہتا ہے۔ اس سے ہمیں معلوم ہوتا ہے کہ مربع لینے سے حاصل ہونے والی پوری رقم $16 + 2\\sqrt{39}$ یقینی طور پر غیر ناطق ہے۔"
+       }
+      },
+      {
+       "math": "\\therefore \\sqrt{3}+\\sqrt{13}\\ \\text{is an irrational number.}",
+       "en": "Because its square ($16+2\\sqrt{39}$) is irrational, the original number $\\sqrt{3}+\\sqrt{13}$ cannot be rational. Hence, $\\sqrt{3}+\\sqrt{13}$ is an irrational number.",
+       "ur": "چونکہ اس کا مربع ($16+2\\sqrt{39}$) غیر ناطق ہے، اس لیے اصل عدد $\\sqrt{3}+\\sqrt{13}$ ناطق نہیں ہو سکتا۔ لہٰذا، $\\sqrt{3}+\\sqrt{13}$ ایک غیر ناطق عدد ہے۔",
+       "check": [
+        "(sqrt(3)+sqrt(13))**2 == 16 + 2*sqrt(39)",
+        "floor(sqrt(39))**2 < 39",
+        "(floor(sqrt(39))+1)**2 > 39"
+       ],
+       "why": {
+        "en": "Finally, we connect this back to our rule from Step 2: if the original number were rational, its square would have been rational too. Since the square ($16+2\\sqrt{39}$) turned out to be irrational, our original number $\\sqrt{3}+\\sqrt{13}$ must also be irrational.",
+        "ur": "آخر میں ہم اسے دوسرے مرحلے والے اصول سے جوڑتے ہیں: اگر اصل عدد ناطق ہوتا تو اس کا مربع بھی ناطق ہونا چاہیے تھا۔ چونکہ اس کا مربع ($16+2\\sqrt{39}$) غیر ناطق نکلا ہے، اس لیے ہمارا اصل عدد $\\sqrt{3}+\\sqrt{13}$ بھی لازمی طور پر ایک غیر ناطق عدد ہے۔"
+       }
       }
      ],
      "answer": "Irrational",
+     "enriched": true,
+     "meaning": {
+      "en": "The final answer means that $\\sqrt{3}+\\sqrt{13}$ is an irrational number, so it cannot be written as a simple fraction $\\frac{p}{q}$ of two integers. If you check both $\\sqrt{3}$ and $\\sqrt{13}$ on a calculator and add them, their decimal expansion will go on forever without any repeating pattern.",
+      "ur": "آخری جواب کا مطلب یہ ہے کہ $\\sqrt{3}+\\sqrt{13}$ ایک غیر ناطق عدد ہے، یعنی اسے دو صحیح اعداد کی سادہ کسر $\\frac{p}{q}$ کی شکل میں نہیں لکھا جا سکتا۔ اگر آپ کیلکولیٹر پر $\\sqrt{3}$ اور $\\sqrt{13}$ کی قیمتیں نکال کر جمع کریں، تو اعشاریہ کے بعد کے ہندسے بغیر کسی خاص ترتیب کے لامحدود طور پر چلتے رہیں گے۔"
+     },
      "book_key": "Irrational"
     },
     {
@@ -305,17 +522,29 @@
       {
        "math": "\\frac{15}{4}",
        "en": "We are given the number $\\frac{15}{4}$ and asked to identify whether it is a rational or an irrational number.",
-       "ur": "ہمیں عدد $\\frac{15}{4}$ دیا گیا ہے اور یہ معلوم کرنا ہے کہ آیا یہ ناطق عدد ہے یا غیر ناطق۔"
+       "ur": "ہمیں عدد $\\frac{15}{4}$ دیا گیا ہے اور یہ معلوم کرنا ہے کہ آیا یہ ناطق عدد ہے یا غیر ناطق۔",
+       "why": {
+        "en": "First, let's carefully look at our given number, $\\frac{15}{4}$. Observing its fraction form is our starting point to decide whether it is rational or irrational.",
+        "ur": "سب سے پہلے ہم اپنے دیے گئے عدد $\\frac{15}{4}$ کو غور سے دیکھتے ہیں۔ اس کی کسری شکل کو دیکھنا ہمارا پہلا قدم ہے تاکہ ہم فیصلہ کر سکیں کہ یہ ناطق ہے یا غیر ناطق۔"
+       }
       },
       {
        "math": "\\frac{p}{q}, \\quad p, q \\in \\mathbb{Z}, \\quad q \\neq 0",
        "en": "By definition, a rational number is any number that can be expressed in the form $\\frac{p}{q}$, where $p$ and $q$ are integers ($\\mathbb{Z}$) and the denominator $q$ is not equal to $0$.",
-       "ur": "تعریف کے مطابق، ناطق عدد ہر وہ عدد ہے جسے $\\frac{p}{q}$ کی شکل میں لکھا جا سکے، جہاں $p$ اور $q$ صحیح اعداد ($\\mathbb{Z}$) ہیں اور مخرج $q$ صفر ($0$) کے برابر نہیں ہے۔"
+       "ur": "تعریف کے مطابق، ناطق عدد ہر وہ عدد ہے جسے $\\frac{p}{q}$ کی شکل میں لکھا جا سکے، جہاں $p$ اور $q$ صحیح اعداد ($\\mathbb{Z}$) ہیں اور مخرج $q$ صفر ($0$) کے برابر نہیں ہے۔",
+       "why": {
+        "en": "We recall the standard textbook definition of a rational number so we have a clear rule to test our fraction against. This tells us we must check if the top and bottom numbers are integers ($\\mathbb{Z}$) and that the bottom is not $0$.",
+        "ur": "ہم ناطق عدد کی کتاب والی تعریف یاد کرتے ہیں تاکہ ہمارے پاس اپنی کسر کو جانچنے کے لیے ایک واضح اصول ہو۔ یہ ہمیں بتاتا ہے کہ ہمیں دیکھنا ہوگا کہ آیا اوپر اور نیچے والے اعداد صحیح اعداد ($\\mathbb{Z}$) ہیں اور نیچے والا عدد $0$ نہیں ہے۔"
+       }
       },
       {
        "math": "p = 15, \\quad q = 4 \\neq 0",
        "en": "Comparing $\\frac{15}{4}$ with $\\frac{p}{q}$, we see that the numerator $p = 15$ and the denominator $q = 4$ are both integers, and $q \\neq 0$.",
-       "ur": "عدد $\\frac{15}{4}$ کا $\\frac{p}{q}$ سے موازنہ کرنے پر، ہم دیکھتے ہیں کہ شمار کنندہ $p = 15$ اور مخرج $q = 4$ دونوں صحیح اعداد ہیں، اور $q \\neq 0$۔"
+       "ur": "عدد $\\frac{15}{4}$ کا $\\frac{p}{q}$ سے موازنہ کرنے پر، ہم دیکھتے ہیں کہ شمار کنندہ $p = 15$ اور مخرج $q = 4$ دونوں صحیح اعداد ہیں، اور $q \\neq 0$۔",
+       "why": {
+        "en": "By matching our number directly with the $\\frac{p}{q}$ rule, we confirm that both $15$ and $4$ are indeed integers and the denominator $4$ is not $0$. This directly proves that the fraction satisfies all the conditions of a rational number.",
+        "ur": "اپنے عدد کا براہِ راست $\\frac{p}{q}$ کے اصول سے موازنہ کر کے ہم تصدیق کرتے ہیں کہ $15$ اور $4$ دونوں واقعی صحیح اعداد ہیں اور مخرج $4$ صفر ($0$) کے برابر نہیں ہے۔ اس سے ثابت ہوتا ہے کہ یہ کسر ناطق عدد کی تمام شرائط پوری کرتی ہے۔"
+       }
       },
       {
        "math": "\\frac{15}{4} = 3.75",
@@ -323,7 +552,11 @@
        "ur": "مزید برآں، اگر ہم $15$ کو $4$ پر تقسیم کریں تو ہمیں $3.75$ حاصل ہوتا ہے، جو کہ ایک مختتم اعشاری کسر ہے۔ ہر مختتم اعشاری کسر ایک ناطق عدد ہوتی ہے۔",
        "check": [
         "R(15, 4) == R(375, 100)"
-       ]
+       ],
+       "why": {
+        "en": "We can also check this using the decimal rule by dividing $15$ by $4$ to see if the decimal stops. Getting $3.75$ shows it is a terminating decimal, which gives us a second solid confirmation that the number is rational.",
+        "ur": "ہم اعشاریہ کے اصول کو استعمال کرتے ہوئے بھی اسے چیک کر سکتے ہیں، یعنی $15$ کو $4$ پر تقسیم کر کے دیکھیں کہ کیا اعشاریہ رک جاتا ہے۔ $3.75$ کا آنا ظاہر کرتا ہے کہ یہ ایک مختتم اعشاریہ ہے، جو ہمیں دوسری پکی تصدیق دیتا ہے کہ یہ عدد ناطق ہے۔"
+       }
       },
       {
        "math": "",
@@ -331,11 +564,19 @@
        "ur": "لہٰذا، $\\frac{15}{4}$ ایک ناطق عدد (Rational number) ہے۔",
        "check": [
         "Rational(15,4) == Rational('3.75')"
-       ]
+       ],
+       "why": {
+        "en": "Since both the fraction definition and the decimal test are satisfied, we can now state our final conclusion with full confidence.",
+        "ur": "چونکہ کسر کی تعریف اور اعشاریہ کا ٹیسٹ دونوں پورے ہو گئے ہیں، اس لیے اب ہم پورے اعتماد کے ساتھ اپنا حتمی نتیجہ بیان کر سکتے ہیں۔"
+       }
       }
      ],
      "answer": "Rational",
      "enriched": true,
+     "meaning": {
+      "en": "This final answer means that $\\frac{15}{4}$ belongs to the family of rational numbers because it is a simple fraction of two integers ($15$ and $4$). You can always verify this yourself by dividing $15$ by $4$ to see that the decimal ends neatly at $3.75$.",
+      "ur": "اس حتمی جواب کا مطلب ہے کہ $\\frac{15}{4}$ ناطق اعداد کے خاندان سے تعلق رکھتا ہے کیونکہ یہ دو صحیح اعداد ($15$ اور $4$) کی ایک سادہ کسر ہے۔ آپ خود بھی $15$ کو $4$ پر تقسیم کر کے اس کی تصدیق کر سکتے ہیں کہ اس کا اعشاریہ $3.75$ پر مکمل طور پر ختم ہو جاتا ہے۔"
+     },
      "book_key": "Rational"
     },
     {
@@ -345,12 +586,20 @@
       {
        "math": "(2-\\sqrt{2})(2+\\sqrt{2})",
        "en": "We are given the expression $(2-\\sqrt{2})(2+\\sqrt{2})$ and need to determine whether it is a rational or irrational number.",
-       "ur": "ہمیں جملہ $(2-\\sqrt{2})(2+\\sqrt{2})$ دیا گیا ہے اور ہمیں یہ معلوم کرنا ہے کہ یہ ناطق عدد ہے یا غیر ناطق۔"
+       "ur": "ہمیں جملہ $(2-\\sqrt{2})(2+\\sqrt{2})$ دیا گیا ہے اور ہمیں یہ معلوم کرنا ہے کہ یہ ناطق عدد ہے یا غیر ناطق۔",
+       "why": {
+        "en": "Even though $\\sqrt{2}$ is an irrational number, we must never judge a combined expression just by looking at its parts. First, we need to multiply and simplify the brackets to see the actual value of the whole expression.",
+        "ur": "اگرچہ $\\sqrt{2}$ ایک غیر ناطق عدد ہے، لیکن ہمیں کسی بھی جملے کو صرف اس کے حصوں کو دیکھ کر فیصلہ نہیں کرنا چاہیے۔ سب سے پہلے ہمیں بریکٹوں کو ضرب دے کر مختصر کرنا ہوگا تاکہ پورے جملے کی اصل قیمت معلوم ہو سکے۔"
+       }
       },
       {
        "math": "(a-b)(a+b) = a^2 - b^2",
        "en": "First, we simplify the expression using the algebraic identity $(a-b)(a+b) = a^2 - b^2$, where $a = 2$ and $b = \\sqrt{2}$.",
-       "ur": "سب سے پہلے، ہم الجبری کلیہ $(a-b)(a+b) = a^2 - b^2$ استعمال کرتے ہوئے اس جملے کو مختصر کرتے ہیں، جہاں $a = 2$ اور $b = \\sqrt{2}$ ہے۔"
+       "ur": "سب سے پہلے، ہم الجبری کلیہ $(a-b)(a+b) = a^2 - b^2$ استعمال کرتے ہوئے اس جملے کو مختصر کرتے ہیں، جہاں $a = 2$ اور $b = \\sqrt{2}$ ہے۔",
+       "why": {
+        "en": "Notice that both brackets have the exact same terms, $2$ and $\\sqrt{2}$, just with opposite signs in the middle. This allows us to use the difference of two squares formula, $(a-b)(a+b) = a^2 - b^2$, which makes multiplication much faster and eliminates the middle terms.",
+        "ur": "غور کریں کہ دونوں بریکٹوں میں بالکل ایک جیسی رقمیں $2$ اور $\\sqrt{2}$ موجود ہیں، بس درمیان میں علامتیں مختلف ہیں۔ اس سے ہم دو مربعات کے فرق کا فارمولا $(a-b)(a+b) = a^2 - b^2$ استعمال کر سکتے ہیں، جو ضرب کو بہت آسان بنا دیتا ہے۔"
+       }
       },
       {
        "math": "(2-\\sqrt{2})(2+\\sqrt{2}) = (2)^2 - (\\sqrt{2})^2",
@@ -358,7 +607,11 @@
        "ur": "کلیے میں $a$ اور $b$ کی قیمتیں درج کریں۔",
        "check": [
         "(2-sqrt(2))*(2+sqrt(2)) == 2**2 - (sqrt(2))**2"
-       ]
+       ],
+       "why": {
+        "en": "By putting $a = 2$ and $b = \\sqrt{2}$ into the formula, we get a square directly on top of the square root. This is very helpful because the square and the square root will cancel each other out in the next step.",
+        "ur": "فارمولے میں $a = 2$ اور $b = \\sqrt{2}$ درج کرنے سے جزر کے اوپر مربع آ جاتا ہے۔ یہ بہت مددگار ہے کیونکہ اگلے مرحلے میں مربع اور جزر ایک دوسرے کو ختم کر دیں گے۔"
+       }
       },
       {
        "math": "= 4 - 2",
@@ -366,7 +619,11 @@
        "ur": "مربع حل کریں: $(2)^2 = 4$ اور $(\\sqrt{2})^2 = 2$۔",
        "check": [
         "2**2 - (sqrt(2))**2 == 4 - 2"
-       ]
+       ],
+       "why": {
+        "en": "Here we apply the rule that squaring a square root removes the root sign, so $(\\sqrt{2})^2$ simply becomes $2$, while $(2)^2$ becomes $4$. Now the irrational root is completely gone, leaving us with simple whole numbers.",
+        "ur": "یہاں ہم یہ اصول استعمال کرتے ہیں کہ جزر کا مربع لینے سے جزر کی علامت ختم ہو جاتی ہے، اس لیے $(\\sqrt{2})^2$ صرف $2$ بن جاتا ہے جبکہ $(2)^2$ برابر $4$ ہوتا ہے۔ اب غیر ناطق جزر مکمل طور پر ختم ہو چکا ہے اور ہمارے پاس سادہ اعداد رہ گئے ہیں۔"
+       }
       },
       {
        "math": "= 2",
@@ -374,7 +631,11 @@
        "ur": "اعداد کو تفریق کرنے سے مختصر جواب $2$ حاصل ہوتا ہے۔",
        "check": [
         "4 - 2 == 2"
-       ]
+       ],
+       "why": {
+        "en": "Subtracting $2$ from $4$ gives us the single, fully simplified number $2$. Now that the expression is in its simplest form, we can easily apply the definition of rational numbers to it.",
+        "ur": "$4$ میں سے $2$ تفریق کرنے پر ہمیں ایک سادہ اور مختصر ترین عدد $2$ حاصل ہوتا ہے۔ اب جبکہ یہ جملہ اپنی سادہ ترین شکل میں آ گیا ہے، ہم اس پر ناطق اعداد کی تعریف آسانی سے لاگو کر سکتے ہیں۔"
+       }
       },
       {
        "math": "2 = \\frac{2}{1}",
@@ -384,7 +645,11 @@
         "2 == R(2,1)",
         "(2-sqrt(2))*(2+sqrt(2)) == 2",
         "2**2 - sqrt(2)**2 == 2"
-       ]
+       ],
+       "why": {
+        "en": "By definition, a rational number is any number that can be written as a fraction $\\frac{p}{q}$ of two integers where the bottom number $q \\neq 0$. Since $2$ can be written as $\\frac{2}{1}$, it fulfills this condition completely.",
+        "ur": "تعریف کے مطابق، ناطق عدد وہ ہوتا ہے جسے دو صحیح اعداد کی کسر $\\frac{p}{q}$ کی شکل میں لکھا جا سکے جہاں نچلا عدد $q \\neq 0$ ہو۔ چونکہ $2$ کو $\\frac{2}{1}$ لکھا جا سکتا ہے، اس لیے یہ اس شرط کو مکمل طور پر پورا کرتا ہے۔"
+       }
       }
      ],
      "answer": "Rational",
@@ -394,6 +659,10 @@
       "ur": "کتاب کے آخر میں دیے گئے جوابات میں اس حصے کے لیے \"غیر ناطق\" لکھا ہے۔ یہ غلطی ہے: حاصل ضرب 2 ہے جو ناطق عدد ہے۔"
      },
      "enriched": true,
+     "meaning": {
+      "en": "The final answer means that the original expression $(2-\\sqrt{2})(2+\\sqrt{2})$ is a rational number because its irrational parts cancel out upon multiplication, leaving the integer $2$. You can always check such questions by expanding the brackets completely to see if the square root disappears.",
+      "ur": "آخری جواب کا مطلب یہ ہے کہ دیا گیا جملہ $(2-\\sqrt{2})(2+\\sqrt{2})$ ایک ناطق عدد (Rational number) ہے کیونکہ ضرب دینے سے اس کے غیر ناطق حصے ختم ہو جاتے ہیں اور صرف صحیح عدد $2$ باقی رہ جاتا ہے۔ آپ ایسے سوالات کو ہمیشہ بریکٹ کھول کر چیک کر سکتے ہیں کہ آیا جزر کی علامت ختم ہوتی ہے یا نہیں۔"
+     },
      "book_key": "Irrational"
     }
    ],
@@ -424,7 +693,11 @@
          "to": 3,
          "y": 46.0
         }
-       ]
+       ],
+       "why": {
+        "en": "Since $\\sqrt{2}$ is an irrational number, we cannot measure it directly with a simple ruler. We use the idea of the Pythagoras theorem to break the number $2$ into a sum of two simple squares ($1^2 + 1^2$), which tells us that $\\sqrt{2}$ can be drawn as the hypotenuse of a right-angled triangle with base $1$ and perpendicular $1$.",
+        "ur": "چونکہ $\\sqrt{2}$ ایک غیر ناطق (irrational) عدد ہے، ہم اسے براہِ راست پیمانے سے نہیں ماپ سکتے۔ ہم مسئلہ فیثاغورث (Pythagoras theorem) کا تصور استعمال کرتے ہوئے $2$ کو دو آسان مربّعوں کے مجموعے ($1^2 + 1^2$) کے طور پر لکھتے ہیں، جس سے ہمیں پتہ چلتا ہے کہ $\\sqrt{2}$ کو ایک ایسی قائمۃ الزاویہ مثلث کے وتر (hypotenuse) کے طور پر بنایا جا سکتا ہے جس کا قاعدہ $1$ اور عمود $1$ ہو۔"
+       }
       },
       {
        "math": "m\\overline{OA} = 1, \\quad m\\overline{AB} = 1",
@@ -480,7 +753,11 @@
          ],
          "s": "B"
         }
-       ]
+       ],
+       "why": {
+        "en": "To build this triangle on our number line, we use the lengths we found in the first step. Starting from $0$ (point $O$), we take $1$ unit along the line for the base $OA$ and $1$ unit straight up for the perpendicular $AB$, setting up the exact geometry we need.",
+        "ur": "عددی خط پر یہ مثلث بنانے کے لیے ہم پہلے مرحلے میں حاصل کردہ لمبائیاں استعمال کرتے ہیں۔ $0$ (نقطہ $O$) سے شروع کرتے ہوئے، ہم قاعدہ $OA$ کے لیے خط پر $1$ اکائی اور عمود $AB$ کے لیے بالکل سیدھا اوپر $1$ اکائی لیتے ہیں، جس سے ہماری مطلوبہ شکل تیار ہو جاتی ہے۔"
+       }
       },
       {
        "math": "(m\\overline{OB})^2 = 1^2+1^2 = 2 \\;\\Rightarrow\\; m\\overline{OB} = \\sqrt{2}",
@@ -488,7 +765,11 @@
        "ur": "فیثاغورث کے قضیے سے وتر OB کی لمبائی $\\sqrt{2}$ ہے۔",
        "check": [
         "1**2 + 1**2 == 2"
-       ]
+       ],
+       "why": {
+        "en": "Now we apply the Pythagoras theorem ($\\text{Hypotenuse}^2 = \\text{Base}^2 + \\text{Perpendicular}^2$) to the triangle $OAB$ we just drew. This confirms mathematically that the slanted side $OB$ has the exact length of $\\sqrt{2}$ units.",
+        "ur": "اب ہم اپنی بنائی ہوئی مثلث $OAB$ پر مسئلہ فیثاغورث ($\\text{وتر}^2 = \\text{قاعدہ}^2 + \\text{عمود}^2$) لاگو کرتے ہیں۔ اس سے ریاضیاتی طور پر تصدیق ہو جاتی ہے کہ ترچھی ضلع $OB$ کی لمبائی بالکل $\\sqrt{2}$ اکائی ہے۔"
+       }
       },
       {
        "math": "|\\overline{OP}| = \\sqrt{2}",
@@ -522,10 +803,18 @@
          ],
          "s": "P"
         }
-       ]
+       ],
+       "why": {
+        "en": "The length $OB$ is currently in the air above the number line, so we use a compass to transfer this exact distance down onto the line. Since all radii of a circle are equal, the arc from $B$ down to $P$ guarantees that the distance $OP$ on the number line is also exactly $\\sqrt{2}$.",
+        "ur": "لمبائی $OB$ اس وقت عددی خط سے اوپر ہوا میں ہے، اس لیے ہم پرکار (compass) کی مدد سے اس فاصلے کو بالکل درست طور پر خط کے اوپر منتقل کرتے ہیں۔ چونکہ دائرے کے تمام رداس برابر ہوتے ہیں، اس لیے $B$ سے $P$ تک کی قوس اس بات کی ضمانت دیتی ہے کہ عددی خط پر فاصلہ $OP$ بھی بالکل $\\sqrt{2}$ ہی ہے۔"
+       }
       }
      ],
-     "answer": "P represents $\\sqrt{2}$ on the number line."
+     "answer": "P represents $\\sqrt{2}$ on the number line.",
+     "meaning": {
+      "en": "The point $P$ shows the exact position of the irrational number $\\sqrt{2}$ on the real number line. You can visually check your work by seeing that $P$ lands just before halfway between $1$ and $2$, which matches the decimal value of $\\sqrt{2}$.",
+      "ur": "نقطہ $P$ حقیقی عددی خط پر غیر ناطق عدد $\\sqrt{2}$ کی بالکل درست جگہ کو ظاہر کرتا ہے۔ آپ اپنے کام کی جانچ یہ دیکھ کر سکتے ہیں کہ نقطہ $P$ عددی خط پر $1$ اور $2$ کے درمیانی حصے سے تھوڑا پہلے آتا ہے، جو کہ $\\sqrt{2}$ کی اعشاری قیمت کے عین مطابق ہے۔"
+     }
     },
     {
      "label": "ii",
@@ -537,7 +826,11 @@
        "ur": "چونکہ 3 = 2 + 1 ہے، اس لیے $\\sqrt{3}$ اس قائمۃ الزاویہ مثلث کا وتر ہے جس کے ضلع $\\sqrt{2}$ اور 1 ہیں۔ پہلے $\\sqrt{2}$ بنائیں، پھر اسے ایک ضلع کے طور پر استعمال کریں۔",
        "check": [
         "sqrt(3) == sqrt(sqrt(2)**2 + 1**2)"
-       ]
+       ],
+       "why": {
+        "en": "Because $\\sqrt{3}$ is an irrational number, we cannot measure it directly with a ruler, so we use the Pythagoras theorem to build it geometrically. Breaking $3$ into $(\\sqrt{2})^2 + 1^2$ tells us that we can get a length of $\\sqrt{3}$ as the hypotenuse of a right triangle if we first build a base of $\\sqrt{2}$ and a perpendicular of $1$.",
+        "ur": "چونکہ $\\sqrt{3}$ ایک غیر ناطق عدد ہے، ہم اسے فٹے سے براہِ راست نہیں ناپ سکتے، اس لیے ہم مسئلہ فیثاغورث کی مدد سے اسے جیومیٹری کے ذریعے بناتے ہیں۔ $3$ کو $(\\sqrt{2})^2 + 1^2$ میں توڑنے سے ہمیں پتہ چلتا ہے کہ اگر ہم پہلے $\\sqrt{2}$ کا قاعدہ اور $1$ کا عمود بنا لیں، تو ہمیں قائمۃ الزاویہ مثلث کے وتر کے طور پر $\\sqrt{3}$ کی لمبائی مل سکتی ہے۔"
+       }
       },
       {
        "math": "\\sqrt{2} = \\sqrt{1^2+1^2}",
@@ -553,7 +846,11 @@
          "to": 3,
          "y": 46.0
         }
-       ]
+       ],
+       "why": {
+        "en": "To get the base of $\\sqrt{2}$ that we need for our main triangle, we apply the Pythagoras theorem once again. Writing $2$ as $1^2 + 1^2$ shows us that $\\sqrt{2}$ can be easily constructed first by using simple whole-number lengths of $1$ and $1$.",
+        "ur": "اپنی اصل مثلث کے لیے درکار $\\sqrt{2}$ کا قاعدہ حاصل کرنے کے لیے، ہم ایک بار پھر مسئلہ فیثاغورث کا استعمال کرتے ہیں۔ $2$ کو $1^2 + 1^2$ کے طور پر لکھنے سے ہمیں پتہ چلتا ہے کہ پہلے $1$ اور $1$ کی سادہ مکمل عددی لمبائیوں کو استعمال کر کے $\\sqrt{2}$ کو آسانی سے بنایا جا سکتا ہے۔"
+       }
       },
       {
        "math": "m\\overline{OA} = 1, \\quad m\\overline{AB} = 1",
@@ -609,7 +906,11 @@
          ],
          "s": "B"
         }
-       ]
+       ],
+       "why": {
+        "en": "We now bring our plan onto the number line by marking the base $OA = 1$ unit from zero and drawing a perpendicular $AB = 1$ unit. The $90^\\circ$ angle at $A$ is essential because the Pythagoras theorem only works for right-angled triangles.",
+        "ur": "اب ہم صفر سے قاعدہ $OA = 1$ اکائی کا نشان لگا کر اور $AB = 1$ اکائی کا عمود کھینچ کر اپنے منصوبے کو عددی خط پر لاتے ہیں۔ نقطہ $A$ پر $90^\\circ$ کا زاویہ ضروری ہے کیونکہ مسئلہ فیثاغورث صرف قائمۃ الزاویہ مثلث کے لیے کام کرتا ہے۔"
+       }
       },
       {
        "math": "(m\\overline{OB})^2 = 1^2+1^2 = 2 \\;\\Rightarrow\\; m\\overline{OB} = \\sqrt{2}",
@@ -617,7 +918,11 @@
        "ur": "فیثاغورث کے قضیے سے وتر OB کی لمبائی $\\sqrt{2}$ ہے۔",
        "check": [
         "1**2 + 1**2 == 2"
-       ]
+       ],
+       "why": {
+        "en": "Applying the Pythagoras theorem ($\\text{hypotenuse}^2 = \\text{base}^2 + \\text{perpendicular}^2$) to triangle $OAB$ gives us the exact length of the slanted side $OB$. This confirms that the distance from $O$ to $B$ is $\\sqrt{2}$, which is the first piece we needed.",
+        "ur": "مثلث $OAB$ پر مسئلہ فیثاغورث ($\\text{وتر}^2 = \\text{قاعدہ}^2 + \\text{عمود}^2$) لگانے سے ہمیں ترچھے ضلع $OB$ کی بالکل درست لمبائی مل جاتی ہے۔ اس سے تصدیق ہوتی ہے کہ $O$ سے $B$ تک کا فاصلہ $\\sqrt{2}$ ہے، جو کہ پہلا حصہ ہے جس کی ہمیں ضرورت تھی۔"
+       }
       },
       {
        "math": "|\\overline{OD}| = \\sqrt{2}",
@@ -651,7 +956,11 @@
          ],
          "s": "D"
         }
-       ]
+       ],
+       "why": {
+        "en": "Since point $B$ is in the air above the number line, we use a compass centered at $O$ to swing the length $OB$ down onto the line at $D$. Because all radii of a circle are equal, the distance $OD$ on the number line is now exactly $\\sqrt{2}$.",
+        "ur": "چونکہ نقطہ $B$ عددی خط کے اوپر ہوا میں ہے، اس لیے ہم مرکز $O$ پر پرکار رکھ کر لمبائی $OB$ کو گھما کر خط پر نقطہ $D$ پر لاتے ہیں۔ چونکہ دائرے کے تمام رداس برابر ہوتے ہیں، اس لیے عددی خط پر فاصلہ $OD$ اب بالکل $\\sqrt{2}$ ہے۔"
+       }
       },
       {
        "math": "m\\overline{OD} = \\sqrt{2}, \\quad m\\overline{DE} = 1",
@@ -697,7 +1006,11 @@
          ],
          "s": "E"
         }
-       ]
+       ],
+       "why": {
+        "en": "Now that we have $OD = \\sqrt{2}$ on the number line, we use it as the base for our second right-angled triangle by drawing a perpendicular $DE = 1$ unit. This sets up the exact triangle $ODE$ that we planned in Step 1.",
+        "ur": "اب جبکہ ہمارے پاس عددی خط پر $OD = \\sqrt{2}$ موجود ہے، ہم $DE = 1$ اکائی کا عمود کھینچ کر اسے اپنی دوسری قائمۃ الزاویہ مثلث کے قاعدے کے طور پر استعمال کرتے ہیں۔ اس سے بالکل وہی مثلث $ODE$ تیار ہو جاتی ہے جس کا منصوبہ ہم نے پہلے مرحلے میں بنایا تھا۔"
+       }
       },
       {
        "math": "(m\\overline{OE})^2 = (\\sqrt{2})^2+1^2 = 3 \\;\\Rightarrow\\; m\\overline{OE} = \\sqrt{3}",
@@ -705,7 +1018,11 @@
        "ur": "فیثاغورث کے قضیے سے OE = $\\sqrt{3}$ ہے۔",
        "check": [
         "sqrt(2)**2 + 1**2 == 3"
-       ]
+       ],
+       "why": {
+        "en": "Using the Pythagoras theorem on this new triangle $ODE$ combines the base $\\sqrt{2}$ and perpendicular $1$. This proves that the new hypotenuse $OE$ has the exact length of $\\sqrt{3}$ that the question asked for.",
+        "ur": "اس نئی مثلث $ODE$ پر مسئلہ فیثاغورث کا استعمال قاعدہ $\\sqrt{2}$ اور عمود $1$ کو ملاتا ہے۔ اس سے ثابت ہوتا ہے کہ نئے وتر $OE$ کی لمبائی بالکل $\\sqrt{3}$ ہے جو سوال میں پوچھی گئی تھی۔"
+       }
       },
       {
        "math": "|\\overline{OF}| = \\sqrt{3}",
@@ -739,10 +1056,18 @@
          ],
          "s": "F"
         }
-       ]
+       ],
+       "why": {
+        "en": "Finally, to bring the length $OE = \\sqrt{3}$ down onto the number line, we use the compass centered at $O$ to draw an arc cutting the line at $F$. Because a compass keeps the radius constant, $OF$ has the same length as $OE$, placing $\\sqrt{3}$ directly on the number line.",
+        "ur": "آخر میں، لمبائی $OE = \\sqrt{3}$ کو عددی خط پر نیچے لانے کے لیے، ہم مرکز $O$ پر پرکار رکھ کر ایک قوس لگاتے ہیں جو خط کو نقطہ $F$ پر قطع کرتی ہے۔ چونکہ پرکار رداس کو یکساں رکھتی ہے، اس لیے $OF$ کی لمبائی $OE$ کے برابر ہے، جس سے $\\sqrt{3}$ براہِ راست عددی خط پر آ جاتا ہے۔"
+       }
       }
      ],
-     "answer": "F represents $\\sqrt{3}$ on the number line."
+     "answer": "F represents $\\sqrt{3}$ on the number line.",
+     "meaning": {
+      "en": "Point $F$ marks the exact position of the irrational number $\\sqrt{3}$ on the number line, meaning its distance from $0$ is $\\sqrt{3}$ units. Since $1^2 = 1$ and $2^2 = 4$, you can visually check your drawing by seeing that point $F$ lies between $1$ and $2$, slightly to the right of point $D$ ($\\sqrt{2}$).",
+      "ur": "نقطہ $F$ عددی خط پر غیر ناطق عدد $\\sqrt{3}$ کی بالکل درست جگہ کو ظاہر کرتا ہے، جس کا مطلب ہے کہ $0$ سے اس کا فاصلہ $\\sqrt{3}$ اکائی ہے۔ چونکہ $1^2 = 1$ اور $2^2 = 4$ ہوتا ہے، آپ اپنی شکل کو دیکھ کر ایسے جانچ سکتے ہیں کہ نقطہ $F$، $1$ اور $2$ کے درمیان، نقطہ $D$ ($\\sqrt{2}$) کے تھوڑا سا دائیں طرف واقع ہے۔"
+     }
     },
     {
      "label": "iii",
@@ -763,7 +1088,11 @@
          "to": 6,
          "y": 46.0
         }
-       ]
+       ],
+       "why": {
+        "en": "A mixed number like $4\\frac{1}{3}$ means a whole $4$ plus an extra fraction $\\frac{1}{3}$. Since it is slightly greater than $4$ bu not yet $5$, this tells us to focus only on the segment between $4$ and $5$ on our number line.",
+        "ur": "مخلوط عدد $4\\frac{1}{3}$ کا مطلب مکمل $4$ اور اس کے ساتھ اضافی کسر $\\frac{1}{3}$ ہے۔ چونکہ یہ $4$ سے تھوڑا بڑا ہے لیکن $5$ سے چھوٹا ہے، اس سے ہمیں پتہ چلتا ہے کہ ہمیں عددی خط پر صرف $4$ اور $5$ کے درمیانی حصے پر توجہ دینی ہے۔"
+       }
       },
       {
        "math": "\\text{Divide } [4,5] \\text{ into } 3 \\text{ equal parts}",
@@ -779,7 +1108,11 @@
          "hi": 5,
          "n": 3
         }
-       ]
+       ],
+       "why": {
+        "en": "The denominator of the fraction $\\frac{1}{3}$ is $3$, which by definition tells us how many equal pieces make up a whole unit. Dividing the space between $4$ and $5$ into $3$ equal parts makes each small step worth exactly $\\frac{1}{3}$.",
+        "ur": "کسر $\\frac{1}{3}$ کا مخرج $3$ ہے، جو اصول کے مطابق ہمیں بتاتا ہے کہ ایک مکمل اکائی کو کتنے برابر حصوں میں بانٹنا ہے۔ $4$ اور $5$ کے درمیانی فاصلے کو $3$ برابر حصوں میں تقسیم کرنے سے ہر چھوٹا حصہ بالکل $\\frac{1}{3}$ کے برابر ہو جاتا ہے۔"
+       }
       },
       {
        "math": "4\\frac{1}{3} = 4 + \\frac{1}{3}",
@@ -801,10 +1134,18 @@
           }
          ]
         }
-       ]
+       ],
+       "why": {
+        "en": "The numerator of $\\frac{1}{3}$ is $1$, which tells us how many of those $\\frac{1}{3}$ parts we need to count. Starting from $4$ and moving $1$ part to the right adds $\\frac{1}{3}$ to $4$, landing us on the exact spot for $4\\frac{1}{3}$.",
+        "ur": "کسر $\\frac{1}{3}$ کا شمار کنندہ $1$ ہے، جو ہمیں بتاتا ہے کہ ہمیں $\\frac{1}{3}$ کے کتنے حصے گننے ہیں۔ $4$ سے شروع کر کے دائیں طرف $1$ حصہ آگے بڑھنے سے $4$ میں $\\frac{1}{3}$ جمع ہو جاتا ہے، اور ہم بالکل $4\\frac{1}{3}$ کے مقام پر پہنچ جاتے ہیں۔"
+       }
       }
      ],
-     "answer": "$4\\frac{1}{3}$ is the first division to the right of 4."
+     "answer": "$4\\frac{1}{3}$ is the first division to the right of 4.",
+     "meaning": {
+      "en": "This final position shows the exact location of the real number $4\\frac{1}{3}$ on the number line. You can check it easily: starting from $4$, if you count all $3$ equal parts to the right ($1$st part is $4\\frac{1}{3}$, followed by the next parts), you will land right on $5$.",
+      "ur": "یہ آخری نشان عددی خط پر حقیقی عدد $4\\frac{1}{3}$ کی بالکل درست جگہ کو ظاہر کرتا ہے۔ آپ اسے آسانی سے چیک کر سکتے ہیں: $4$ سے شروع کر کے اگر آپ دائیں طرف تینوں برابر حصے گنیں (پہلا حصہ $4\\frac{1}{3}$ ہے)، تو تیسرے حصے پر آپ بالکل $5$ پر پہنچ جائیں گے۔"
+     }
     },
     {
      "label": "iv",
@@ -825,7 +1166,11 @@
          "to": 0,
          "y": 46.0
         }
-       ]
+       ],
+       "why": {
+        "en": "A negative mixed fraction like $-2\\frac{1}{7}$ means we go to $-2$ and then move a further $\\frac{1}{7}$ to the left. This tells us our number is smaller than $-2$ and lies in the interval between $-2$ and $-3$.",
+        "ur": "منفی مخلوط کسر جیسے $-2\\frac{1}{7}$ کا مطلب ہے کہ ہم پہلے $-2$ تک جاتے ہیں اور پھر بائیں طرف مزید $\\frac{1}{7}$ چلتے ہیں۔ اس سے ہمیں پتہ چلتا ہے کہ ہمارا عدد $-2$ سے چھوٹا ہے اور $-2$ اور $-3$ کے درمیانی حصے میں آتا ہے۔"
+       }
       },
       {
        "math": "\\text{Divide } [-3,-2] \\text{ into } 7 \\text{ equal parts}",
@@ -841,7 +1186,11 @@
          "hi": -2,
          "n": 7
         }
-       ]
+       ],
+       "why": {
+        "en": "The denominator of the fractional part $\\frac{1}{7}$ tells us how many equal pieces make up one whole unit. Dividing the space between $-2$ and $-3$ into $7$ equal parts gives us exact steps of size $\\frac{1}{7}$ each.",
+        "ur": "کسری حصے $\\frac{1}{7}$ کا مخرج (denominator) ہمیں بتاتا ہے کہ ایک مکمل اکائی کو کتنے برابر حصوں میں بانٹنا ہے۔ $-2$ اور $-3$ کے درمیانی فاصلے کو $7$ برابر حصوں میں تقسیم کرنے سے ہمیں $\\frac{1}{7}$ کے برابر چھوٹے حصے مل جاتے ہیں۔"
+       }
       },
       {
        "math": "-2\\frac{1}{7} = -2 - \\frac{1}{7}",
@@ -863,10 +1212,18 @@
           }
          ]
         }
-       ]
+       ],
+       "why": {
+        "en": "Because the number is negative, we count our fractional steps to the left of $-2$, and the numerator $1$ tells us how many steps to take. Moving $1$ part to the left of $-2$ brings us to the exact spot for $-2\\frac{1}{7}$.",
+        "ur": "چونکہ یہ عدد منفی ہے، اس لیے ہم کسری حصوں کو $-2$ کے بائیں طرف گنتے ہیں، اور شمار کنندہ (numerator) $1$ ہمیں بتاتا ہے کہ کتنے قدم چلنا ہے۔ $-2$ سے بائیں طرف $1$ حصہ آگے بڑھنے سے ہم ٹھیک $-2\\frac{1}{7}$ کے مقام پر پہنچ جاتے ہیں۔"
+       }
       }
      ],
-     "answer": "$-2\\frac{1}{7}$ is the first division to the left of $-2$."
+     "answer": "$-2\\frac{1}{7}$ is the first division to the left of $-2$.",
+     "meaning": {
+      "en": "This final mark shows the exact location of the real number $-2\\frac{1}{7}$ on the number line. You can check it is reasonable because it sits just to the left of $-2$, which matches being only $\\frac{1}{7}$ of the way toward $-3$.",
+      "ur": "یہ آخری نشان عددی خط پر حقیقی عدد $-2\\frac{1}{7}$ کی بالکل درست جگہ کو ظاہر کرتا ہے۔ آپ اس کی درستگی کو یوں جانچ سکتے ہیں کہ یہ $-2$ کے بالکل بائیں طرف واقع ہے، جو کہ $-3$ کی طرف جاتے ہوئے صرف $\\frac{1}{7}$ فاصلہ بنتا ہے۔"
+     }
     },
     {
      "label": "v",
@@ -887,7 +1244,11 @@
          "to": 2,
          "y": 46.0
         }
-       ]
+       ],
+       "why": {
+        "en": "Because $\\frac{5}{8}$ is a positive proper fraction (the numerator $5$ is smaller than the denominator $8$), its value is greater than $0$ but less than $1$. This tells us that we only need to focus on the section of the number line between the whole numbers $0$ and $1$.",
+        "ur": "چونکہ $\\frac{5}{8}$ ایک مثبت واجب کسر ہے (شمار کنندہ $5$ مخرج $8$ سے چھوٹا ہے)، اس لیے اس کی قیمت $0$ سے بڑی لیکن $1$ سے چھوٹی ہے۔ اس سے ہمیں پتہ چلتا ہے کہ ہمیں نمبر لائن پر صرف $0$ اور $1$ کے درمیانی حصے پر توجہ دینی ہے۔"
+       }
       },
       {
        "math": "\\text{Divide } [0,1] \\text{ into } 8 \\text{ equal parts}",
@@ -903,7 +1264,11 @@
          "hi": 1,
          "n": 8
         }
-       ]
+       ],
+       "why": {
+        "en": "The denominator of a fraction tells us the total number of equal parts a whole unit is divided into. By dividing the space between $0$ and $1$ into $8$ equal segments, each small mark represents a step of $\\frac{1}{8}$, allowing us to count in eighths.",
+        "ur": "کسر کا مخرج ہمیں بتاتا ہے کہ ایک مکمل اکائی کو کل کتنے برابر حصوں میں تقسیم کیا گیا ہے۔ $0$ اور $1$ کے درمیانی فاصلے کو $8$ برابر حصوں میں تقسیم کرنے سے، ہر چھوٹا نشان $\\frac{1}{8}$ کے فاصلے کو ظاہر کرتا ہے، جس سے ہم آٹھویں حصے کو گن سکتے ہیں۔"
+       }
       },
       {
        "math": "\\frac{5}{8} = 5 \\times \\frac{1}{8}",
@@ -925,10 +1290,18 @@
           }
          ]
         }
-       ]
+       ],
+       "why": {
+        "en": "The numerator $5$ tells us how many of those $\\frac{1}{8}$ parts we need to take. Since the fraction is positive, we start at $0$ and count $5$ marks to the right to land on the exact position of $\\frac{5}{8}$.",
+        "ur": "شمار کنندہ $5$ ہمیں بتاتا ہے کہ ہمیں $\\frac{1}{8}$ کے کتنے حصے لینے ہیں۔ چونکہ یہ کسر مثبت ہے، اس لیے ہم $0$ سے شروع کرتے ہیں اور دائیں طرف $5$ نشان گنتے ہیں تاکہ $\\frac{5}{8}$ کی بالکل درست جگہ پر پہنچ سکیں۔"
+       }
       }
      ],
-     "answer": "$\\frac{5}{8}$ is the fifth division to the right of 0."
+     "answer": "$\\frac{5}{8}$ is the fifth division to the right of 0.",
+     "meaning": {
+      "en": "The final position shows the exact geometric location of the rational number $\\frac{5}{8}$ on the real number line. You can easily check this by seeing that the point is past the halfway mark between $0$ and $1$, and if you count $3$ more parts to the right from $\\frac{5}{8}$, you reach the $8$th mark, which is $1$.",
+      "ur": "یہ آخری مقام حقیقی نمبر لائن پر ناطق عدد $\\frac{5}{8}$ کی بالکل درست جگہ کو ظاہر کرتا ہے۔ آپ اس کی تصدیق ایسے کر سکتے ہیں کہ یہ نقطہ $0$ اور $1$ کے درمیانی حصے سے تھوڑا آگے ہے، اور اگر آپ $\\frac{5}{8}$ سے دائیں طرف مزید $3$ حصے گنیں تو آپ $8$ ویں نشان پر پہنچ جاتے ہیں، جو کہ $1$ ہے۔"
+     }
     },
     {
      "label": "vi",
@@ -949,7 +1322,11 @@
          "to": 4,
          "y": 46.0
         }
-       ]
+       ],
+       "why": {
+        "en": "A mixed number like $2\\frac{3}{4}$ means $2$ whole units plus an extra fraction, $\\frac{3}{4}$. Since it is positive and greater than $2$ by less than a full unit, this tells us to focus on the section of the number line between $2$ and $3$.",
+        "ur": "مخلوط عدد $2\\frac{3}{4}$ کا مطلب ہے $2$ مکمل اکائیاں اور اس کے ساتھ کسر $\\frac{3}{4}$۔ چونکہ یہ ایک مثبت عدد ہے جو $2$ سے بڑا لیکن اگلے پورے عدد سے چھوٹا ہے، اس سے ہمیں پتہ چلتا ہے کہ یہ نمبر لائن پر $2$ اور $3$ کے درمیان واقع ہے۔"
+       }
       },
       {
        "math": "\\text{Divide } [2,3] \\text{ into } 4 \\text{ equal parts}",
@@ -965,7 +1342,11 @@
          "hi": 3,
          "n": 4
         }
-       ]
+       ],
+       "why": {
+        "en": "The denominator of the fraction part is $4$, which by definition tells us how many equal pieces make one whole unit. Dividing the space between $2$ and $3$ into $4$ equal parts creates a scale where each small step represents $\\frac{1}{4}$.",
+        "ur": "کسر کا مخرج (denominator) $4$ ہے، جو اصول کے مطابق ہمیں بتاتا ہے کہ ایک مکمل اکائی کے کتنے برابر حصے کرنے ہیں۔ $2$ اور $3$ کے درمیانی فاصلے کو $4$ برابر حصوں میں تقسیم کرنے سے ہر چھوٹا حصہ $\\frac{1}{4}$ کو ظاہر کرتا ہے۔"
+       }
       },
       {
        "math": "2\\frac{3}{4} = 2 + 3 \\times \\frac{1}{4}",
@@ -987,10 +1368,18 @@
           }
          ]
         }
-       ]
+       ],
+       "why": {
+        "en": "The numerator is $3$, which tells us how many of those $\\frac{1}{4}$ parts we need to count. Starting from $2$ and moving $3$ small marks to the right brings us to the exact location of $2\\frac{3}{4}$.",
+        "ur": "شمار کنندہ (numerator) $3$ ہے، جو ہمیں بتاتا ہے کہ ہمیں $\\frac{1}{4}$ کے کتنے حصے گننے ہیں۔ اس لیے $2$ سے شروع کر کے دائیں طرف $3$ چھوٹے نشانات آگے بڑھنے سے ہمیں $2\\frac{3}{4}$ کا بالکل درست مقام مل جاتا ہے۔"
+       }
       }
      ],
-     "answer": "$2\\frac{3}{4}$ is the third division to the right of 2."
+     "answer": "$2\\frac{3}{4}$ is the third division to the right of 2.",
+     "meaning": {
+      "en": "This final position shows the exact point for $2\\frac{3}{4}$ on the number line. You can easily check it by seeing that it is past $2$, and sits three-quarters of the way toward $3$ (just $1$ small part away from $3$).",
+      "ur": "یہ آخری مقام نمبر لائن پر $2\\frac{3}{4}$ کے بالکل درست نقطے کو ظاہر کرتا ہے۔ آپ اس کی تصدیق ایسے کر سکتے ہیں کہ یہ نقطہ $2$ سے آگے ہے اور $3$ کی طرف جاتے ہوئے چوتھائی حصوں کے تیسرے نشان پر ہے (یعنی $3$ سے صرف $1$ چھوٹا حصہ پیچھے ہے)۔"
+     }
     }
    ],
    "exercise": "1.1"
@@ -1007,36 +1396,81 @@
      "prompt": "$0.\\bar{4}$",
      "steps": [
       {
-       "math": "x = 0.444\\ldots",
-       "en": "Let x be the recurring decimal.",
-       "ur": "فرض کریں x یہ دوری اعشاری عدد ہے۔"
+       "math": "x = 0.\\bar{4}",
+       "en": "Let $x$ be the given recurring decimal.",
+       "ur": "فرض کریں کہ دیا گیا تکراری اعشاریہ $x$ کے برابر ہے۔",
+       "why": {
+        "en": "We start by giving a name, $x$, to our repeating decimal $0.\\bar{4}$. This turns our number into an algebraic equation so we can easily apply mathematical operations to both sides.",
+        "ur": "ہم سب سے پہلے اپنے متوالی اعشاریہ $0.\\bar{4}$ کو ایک نام یعنی $x$ دیتے ہیں۔ اس سے ہمارا عدد ایک الجبری مساوات بن جاتا ہے تاکہ ہم دونوں اطراف پر آسانی سے حسابی عمل کر سکیں۔"
+       }
       },
       {
-       "math": "10x = 4.444\\ldots",
-       "en": "One digit repeats, so multiply both sides by 10.",
-       "ur": "ایک ہندسہ دہرائے جاتے ہیں، اس لیے دونوں طرف 10 سے ضرب دیں۔",
-       "check": [
-        "10*Rational(4,9) == 4 + Rational(4,9)"
-       ]
+       "math": "x = 0.444\\ldots \\quad \\text{--- (1)}",
+       "en": "Write the recurring decimal in its expanded form by repeating the digit $4$, and label it as equation $(1)$.",
+       "ur": "ہندسہ $4$ کو دہراتے ہوئے تکراری اعشاریہ کو پھیلا کر لکھیں اور اسے مساوات $(1)$ کا نام دیں۔",
+       "why": {
+        "en": "By definition, the bar over the digit $4$ means it repeats endlessly. Writing it out as $0.444\\ldots$ helps us clearly see the infinite tail that we need to remove to make a clean fraction.",
+        "ur": "تعریف کے مطابق، ہندسہ $4$ کے اوپر بار کا مطلب ہے کہ یہ لامتناہی طور پر دہرایا جا رہا ہے۔ اسے کھول کر $0.444\\ldots$ لکھنے سے ہمیں وہ لامتناہی حصہ صاف نظر آتا ہے جسے ہم نے کسر بنانے کے لیے ختم کرنا ہے۔"
+       }
       },
       {
-       "math": "10x - x = 4.444\\ldots - 0.444\\ldots \\;\\Rightarrow\\; 9x = 4",
-       "en": "Subtract the first line from the second so the repeating part cancels.",
-       "ur": "پہلی لکیر کو دوسری میں سے منہا کریں، دہرایا جانے والا حصہ ختم ہو جاتا ہے۔",
+       "math": "10x = 4.444\\ldots \\quad \\text{--- (2)}",
+       "en": "Since only one digit is repeating, multiply both sides of equation $(1)$ by $10$ and label it as equation $(2)$.",
+       "ur": "چونکہ صرف ایک ہندسہ بار بار آ رہا ہے، اس لیے مساوات $(1)$ کے دونوں اطراف کو $10$ سے ضرب دیں اور اسے مساوات $(2)$ کا نام دیں۔",
        "check": [
-        "10*Rational(4,9) - Rational(4,9) == 4"
-       ]
+        "10*R(4,9) == 4 + R(4,9)"
+       ],
+       "why": {
+        "en": "The rule for recurring decimals is to multiply by $10$ when only one digit repeats, because this shifts the decimal point one place to the right. Notice how the repeating decimal part after the point in $4.444\\ldots$ still matches equation $(1)$.",
+        "ur": "متوالی اعشاریہ کا اصول یہ ہے کہ جب صرف ایک ہندسہ دہرایا جا رہا ہو تو $10$ سے ضرب دیتے ہیں، کیونکہ اس سے اعشاریہ ایک درجہ دائیں طرف چلا جاتا ہے۔ غور کریں کہ $4.444\\ldots$ میں اعشاریہ کے بعد دہرایا جانے والا حصہ اب بھی بالکل مساوات $(1)$ جیسا ہی ہے۔"
+       }
+      },
+      {
+       "math": "10x - x = 4.444\\ldots - 0.444\\ldots",
+       "en": "Subtract equation $(1)$ from equation $(2)$ to eliminate the repeating decimal part.",
+       "ur": "اعشاریہ کے تکراری حصے کو ختم کرنے کے لیے مساوات $(2)$ میں سے مساوات $(1)$ کو تفریق کریں۔",
+       "check": [
+        "10*R(4,9) - R(4,9) == (4 + R(4,9)) - R(4,9)"
+       ],
+       "why": {
+        "en": "Because equations $(1)$ and $(2)$ have the exact same endless decimal tail, subtracting them will completely cancel out the repeating part. This clever trick gets rid of the infinite $4$s after the decimal point.",
+        "ur": "چونکہ مساوات $(1)$ اور $(2)$ میں اعشاریہ کے بعد بالکل ایک جیسا لامتناہی حصہ موجود ہے، اس لیے انہیں تفریق کرنے سے یہ دہرایا جانے والا حصہ مکمل طور پر ختم ہو جائے گا۔ اس طریقے سے اعشاریہ کے بعد آنے والے لامتناہی $4$ ختم ہو جاتے ہیں۔"
+       }
+      },
+      {
+       "math": "9x = 4",
+       "en": "Simplify both sides of the equation.",
+       "ur": "مساوات کے دونوں اطراف کو مختصر کریں۔",
+       "check": [
+        "9*R(4,9) == 4"
+       ],
+       "why": {
+        "en": "After the repeating decimal parts cancel each other out on the right side, we are left with a simple whole number $4$, and $10x - x$ gives $9x$. Now we have a neat linear equation with no decimals at all.",
+        "ur": "دائیں طرف دہرائے جانے والے اعشاری حصے کے آپس میں کٹ جانے کے بعد ہمارے پاس ایک سادہ مکمل عدد $4$ بچتا ہے، اور بائیں طرف $10x - x$ سے $9x$ حاصل ہوتا ہے۔ اب ہمارے پاس بغیر کسی اعشاریے کے ایک سادہ مساوات آ گئی ہے۔"
+       }
       },
       {
        "math": "x = \\frac{4}{9}",
-       "en": "Divide both sides by 9.",
-       "ur": "دونوں طرف 9 سے تقسیم کریں۔",
+       "en": "Divide both sides by $9$ to find the value of $x$. Thus, $0.\\bar{4}$ in the rational form $\\frac{p}{q}$ is $\\frac{4}{9}$.",
+       "ur": "$x$ کی قیمت معلوم کرنے کے لیے دونوں اطراف کو $9$ سے تقسیم کریں۔ پس $0.\\bar{4}$ کی ناطق شکل $\\frac{p}{q}$ میں قیمت $\\frac{4}{9}$ ہے۔",
        "check": [
+        "R(4,9)*9 == 4",
+        "10*Rational(4,9) == 4 + Rational(4,9)",
+        "10*Rational(4,9) - Rational(4,9) == 4",
         "Rational(4,9)*9 == 4"
-       ]
+       ],
+       "why": {
+        "en": "To get $x$ by itself, we divide both sides by $9$. Since $x$ was our original number, this gives us the exact fraction form $\\frac{p}{q}$ that the question asked for.",
+        "ur": "$x$ کی قیمت معلوم کرنے کے لیے ہم دونوں اطراف کو $9$ پر تقسیم کرتے ہیں۔ چونکہ $x$ ہمارا اصل عدد تھا، اس لیے یہ ہمیں بالکل وہی ناطق شکل $\\frac{p}{q}$ دے دیتا ہے جو سوال میں پوچھی گئی تھی۔"
+       }
       }
      ],
      "answer": "$\\frac{4}{9}$",
+     "enriched": true,
+     "meaning": {
+      "en": "This means the endlessly repeating decimal $0.\\bar{4}$ is actually equal to the simple rational fraction $\\frac{4}{9}$, where $4$ and $9$ are integers and the denominator is not $0$. You can easily check this by dividing $4$ by $9$ on a calculator or by long division to see that it gives $0.444\\ldots$ again.",
+      "ur": "اس کا مطلب ہے کہ لامتناہی طور پر دہرایا جانے والا اعشاریہ $0.\\bar{4}$ دراصل ایک سادہ ناطق کسر $\\frac{4}{9}$ کے برابر ہے، جہاں $4$ اور $9$ صحیح اعداد ہیں اور مخرج $0$ نہیں ہے۔ آپ اس کی پڑتال آسانی سے کر سکتے ہیں: کیلکولیٹر یا تقسیم کے طریقے سے $4$ کو $9$ پر تقسیم کریں تو آپ کو دوبارہ $0.444\\ldots$ ہی ملے گا۔"
+     },
      "book_key": "\\frac{4}{9}"
     },
     {
@@ -1044,36 +1478,81 @@
      "prompt": "$0.\\overline{37}$",
      "steps": [
       {
-       "math": "x = 0.373737\\ldots",
-       "en": "Let x be the recurring decimal.",
-       "ur": "فرض کریں x یہ دوری اعشاری عدد ہے۔"
+       "math": "x = 0.\\overline{37}",
+       "en": "Let the given recurring decimal be equal to $x$.",
+       "ur": "فرض کریں کہ دیے گئے متوالی اعشاری عدد کی قیمت $x$ کے برابر ہے۔",
+       "why": {
+        "en": "In algebra, we start by naming our unknown value $x$ so we can build an equation around it. This gives us a clear way to work with the recurring decimal $0.\\overline{37}$ and eventually turn it into a fraction.",
+        "ur": "الجبرے میں ہم اپنی نامعلوم قیمت کو $x$ کا نام دے کر شروعات کرتے ہیں تاکہ اس کی مساوات بنا سکیں۔ اس سے ہمیں متوالی اعشاریہ $0.\\overline{37}$ کو کسر میں بدلنے کے لیے ایک واضح راستہ مل جاتا ہے۔"
+       }
       },
       {
-       "math": "100x = 37.373737\\ldots",
-       "en": "Two digits repeat, so multiply both sides by 100.",
-       "ur": "دو ہندسے دہرائے جاتے ہیں، اس لیے دونوں طرف 100 سے ضرب دیں۔",
-       "check": [
-        "100*Rational(37,99) == 37 + Rational(37,99)"
-       ]
+       "math": "x = 0.373737\\ldots \\quad \\text{--- (i)}",
+       "en": "Write the recurring decimal in its expanded form by repeating the digits $37$, and label this as equation (i).",
+       "ur": "بار کے نیچے موجود ہندسوں $37$ کو بار بار لکھ کر متوالی اعشاریہ کو پھیلا کر لکھیں اور اسے مساوات (i) کا نام دیں۔",
+       "why": {
+        "en": "By the definition of a recurring bar, the digits $37$ repeat forever without ending. Writing the number out as $0.373737\\ldots$ lets us clearly see the endless decimal part that we need to eliminate.",
+        "ur": "بار (خط) کی تعریف کے مطابق ہندسے $37$ لامحدود طور پر بار بار آتے ہیں۔ اسے $0.373737\\ldots$ کی صورت میں کھول کر لکھنے سے ہمیں وہ لامتناہی اعشاری حصہ صاف نظر آ جاتا ہے جسے ہم نے ختم کرنا ہے۔"
+       }
       },
       {
-       "math": "100x - x = 37.373737\\ldots - 0.373737\\ldots \\;\\Rightarrow\\; 99x = 37",
-       "en": "Subtract the first line from the second so the repeating part cancels.",
-       "ur": "پہلی لکیر کو دوسری میں سے منہا کریں، دہرایا جانے والا حصہ ختم ہو جاتا ہے۔",
+       "math": "100x = 37.373737\\ldots \\quad \\text{--- (ii)}",
+       "en": "Since two digits ($3$ and $7$) are repeating after the decimal point, multiply both sides of equation (i) by $100$. Label this as equation (ii).",
+       "ur": "چونکہ اعشاریہ کے بعد دو ہندسے ($3$ اور $7$) دہرائے جا رہے ہیں، اس لیے مساوات (i) کے دونوں طرف $100$ سے ضرب دیں اور اسے مساوات (ii) کا نام دیں۔",
        "check": [
-        "100*Rational(37,99) - Rational(37,99) == 37"
-       ]
+        "100*R(37,99) == 37 + R(37,99)"
+       ],
+       "why": {
+        "en": "Because a block of two digits ($3$ and $7$) is repeating, the rule is to multiply by $100$ to shift the decimal point two places to the right. Notice how the new number $37.373737\\ldots$ still has the exact same endless decimal tail as equation (i).",
+        "ur": "چونکہ یہاں دو ہندسے ($3$ اور $7$) بار بار آ رہے ہیں، اس لیے اصول کے مطابق ہم اعشاریہ کو دو درجے دائیں طرف لے جانے کے لیے $100$ سے ضرب دیتے ہیں۔ غور کریں کہ نئی قیمت $37.373737\\ldots$ میں بھی اعشاریہ کے بعد کا لامتناہی حصہ بالکل مساوات (i) جیسا ہی ہے۔"
+       }
+      },
+      {
+       "math": "100x - x = (37.373737\\ldots) - (0.373737\\ldots)",
+       "en": "Subtract equation (i) from equation (ii) to eliminate the non-terminating repeating decimal part.",
+       "ur": "لامتناہی متوالی اعشاری حصے کو ختم کرنے کے لیے مساوات (ii) میں سے مساوات (i) کو تفریق کریں۔",
+       "check": [
+        "100*R(37,99) - R(37,99) == (37 + R(37,99)) - R(37,99)"
+       ],
+       "why": {
+        "en": "Since both equations have the identical repeating decimal tail, subtracting equation (i) from equation (ii) is our key move to cancel out that infinite part. This sets up a subtraction where the endless decimals will completely disappear.",
+        "ur": "چونکہ دونوں مساواتوں میں اعشاریہ کے بعد کا حصہ بالکل ایک جیسا ہے، اس لیے مساوات (ii) میں سے مساوات (i) کو تفریق کرنا اس لامتناہی حصے کو ختم کرنے کا سب سے اہم قدم ہے۔ اس عمل سے اعشاریہ والا نہ ختم ہونے والا حصہ مکمل طور پر کٹ جائے گا۔"
+       }
+      },
+      {
+       "math": "99x = 37",
+       "en": "On the left side, $100x - x$ gives $99x$. On the right side, the repeating decimal parts cancel out, leaving $37$.",
+       "ur": "بائیں طرف $100x - x$ سے $99x$ حاصل ہوتا ہے، جبکہ دائیں طرف اعشاریہ کے بعد والا حصہ کٹ جاتا ہے اور صرف $37$ باقی بچتا ہے۔",
+       "check": [
+        "(100 - 1)*R(37,99) == 37"
+       ],
+       "why": {
+        "en": "Performing the subtraction removes the infinite decimal part completely and leaves us with whole numbers on both sides. Now, instead of a tricky recurring decimal, we have a simple linear equation $99x = 37$.",
+        "ur": "تفریق کا عمل کرنے سے لامتناہی اعشاری حصہ مکمل طور پر ختم ہو جاتا ہے اور دونوں طرف مکمل اعداد بچ جاتے ہیں۔ اب ایک مشکل متوالی اعشاریہ کے بجائے ہمارے پاس ایک سادہ مساوات $99x = 37$ آ گئی ہے۔"
+       }
       },
       {
        "math": "x = \\frac{37}{99}",
-       "en": "Divide both sides by 99.",
-       "ur": "دونوں طرف 99 سے تقسیم کریں۔",
+       "en": "Divide both sides by $99$ to solve for $x$. Thus, $0.\\overline{37}$ in the rational form $\\frac{p}{q}$ is $\\frac{37}{99}$.",
+       "ur": "$x$ کی قیمت معلوم کرنے کے لیے دونوں طرف $99$ سے تقسیم کریں۔ پس $0.\\overline{37}$ کی ناطق شکل $\\frac{p}{q}$ مساوی ہے $\\frac{37}{99}$ کے۔",
        "check": [
+        "R(37,99)*99 == 37",
+        "100*Rational(37,99) == 37 + Rational(37,99)",
+        "100*Rational(37,99) - Rational(37,99) == 37",
         "Rational(37,99)*99 == 37"
-       ]
+       ],
+       "why": {
+        "en": "To find the value of $x$ alone, we divide both sides by $99$ using the basic rule of solving equations. Since we originally set $x = 0.\\overline{37}$, this gives us our required $\\frac{p}{q}$ rational form directly.",
+        "ur": "اکیلے $x$ کی قیمت معلوم کرنے کے لیے ہم مساوات حل کرنے کے بنیادی اصول کے تحت دونوں اطراف کو $99$ پر تقسیم کرتے ہیں۔ چونکہ ہم نے شروع میں $x = 0.\\overline{37}$ فرض کیا تھا، اس لیے یہ ہمیں براہِ راست مطلوبہ ناطق شکل $\\frac{p}{q}$ دے دیتا ہے۔"
+       }
       }
      ],
      "answer": "$\\frac{37}{99}$",
+     "enriched": true,
+     "meaning": {
+      "en": "The final answer $\\frac{37}{99}$ shows that the endless repeating decimal $0.\\overline{37}$ is actually a rational number because it can be written as a fraction of two integers $37$ and $99$ (where the denominator is not $0$). You can easily check this on a calculator by dividing $37$ by $99$, which will give you $0.373737\\ldots$ back again.",
+      "ur": "آخری جواب $\\frac{37}{99}$ یہ ظاہر کرتا ہے کہ نہ ختم ہونے والا متوالی اعشاریہ $0.\\overline{37}$ دراصل ایک ناطق عدد ہے کیونکہ اسے دو صحیح اعداد $37$ اور $99$ کی کسر کے طور پر لکھا جا سکتا ہے (جہاں مخرج $0$ نہیں ہے)۔ آپ کیلکولیٹر پر $37$ کو $99$ پر تقسیم کر کے باآسانی اس کی پڑتال کر سکتے ہیں، جس سے آپ کو واپس $0.373737\\ldots$ ہی ملے گا۔"
+     },
      "book_key": "\\frac{37}{99}"
     },
     {
@@ -1081,36 +1560,54 @@
      "prompt": "$0.\\overline{21}$",
      "steps": [
       {
-       "math": "x = 0.212121\\ldots",
-       "en": "Let x be the recurring decimal.",
-       "ur": "فرض کریں x یہ دوری اعشاری عدد ہے۔"
+       "math": "x = 0.\\overline{21}",
+       "en": "Let $x$ be equal to the given recurring decimal $0.\\overline{21}$, which we need to express in the rational form $\\frac{p}{q}$.",
+       "ur": "فرض کریں کہ $x$ دیے گئے تکرار والے اعشاریہ $0.\\overline{21}$ کے برابر ہے، جسے ہمیں ناطق شکل $\\frac{p}{q}$ میں ظاہر کرنا ہے۔"
       },
       {
-       "math": "100x = 21.212121\\ldots",
-       "en": "Two digits repeat, so multiply both sides by 100.",
-       "ur": "دو ہندسے دہرائے جاتے ہیں، اس لیے دونوں طرف 100 سے ضرب دیں۔",
+       "math": "x = 0.212121\\ldots \\quad \\text{--- (i)}",
+       "en": "Write the recurring decimal in its expanded form by repeating the block of digits $21$, and label this as Equation (i).",
+       "ur": "تکرار والے اعشاریہ کو ہندسوں کے بلاک $21$ کو دہراتے ہوئے اس کی پھیلی ہوئی شکل میں لکھیں، اور اسے مساوات (i) کا نام دیں۔"
+      },
+      {
+       "math": "100x = 21.212121\\ldots \\quad \\text{--- (ii)}",
+       "en": "Since two digits ($21$) are repeating after the decimal point, multiply both sides of Equation (i) by $100$. Label this as Equation (ii).",
+       "ur": "چونکہ اعشاریہ کے بعد دو ہندسے ($21$) دہرائے جا رہے ہیں، اس لیے مساوات (i) کے دونوں اطراف کو $100$ سے ضرب دیں۔ اسے مساوات (ii) کا نام دیں۔",
        "check": [
-        "100*Rational(21,99) == 21 + Rational(21,99)"
+        "100*R(21,99) == 21 + R(21,99)"
        ]
       },
       {
-       "math": "100x - x = 21.212121\\ldots - 0.212121\\ldots \\;\\Rightarrow\\; 99x = 21",
-       "en": "Subtract the first line from the second so the repeating part cancels.",
-       "ur": "پہلی لکیر کو دوسری میں سے منہا کریں، دہرایا جانے والا حصہ ختم ہو جاتا ہے۔",
+       "math": "100x - x = (21.212121\\ldots) - (0.212121\\ldots)",
+       "en": "Subtract Equation (i) from Equation (ii) so that the repeating decimal part after the decimal point cancels out.",
+       "ur": "مساوات (ii) میں سے مساوات (i) کو تفریق کریں تاکہ اعشاریہ کے بعد دہرایا جانے والا حصہ ختم ہو جائے۔",
        "check": [
-        "100*Rational(21,99) - Rational(21,99) == 21"
+        "100*R(21,99) - R(21,99) == (21 + R(21,99)) - R(21,99)"
+       ]
+      },
+      {
+       "math": "99x = 21",
+       "en": "Simplify both sides of the equation.",
+       "ur": "مساوات کے دونوں اطراف کو مختصر کریں۔",
+       "check": [
+        "99*R(21,99) == 21"
        ]
       },
       {
        "math": "x = \\frac{21}{99}",
-       "en": "Divide both sides by 99. In lowest terms this is 7/33.",
-       "ur": "دونوں طرف 99 سے تقسیم کریں۔ سب سے چھوٹی صورت میں یہ 7/33 ہے۔",
+       "en": "Divide both sides by $99$ to solve for $x$. Thus, $0.\\overline{21} = \\frac{21}{99}$ (which simplifies to $\\frac{7}{33}$ in lowest terms).",
+       "ur": "$x$ کی قیمت معلوم کرنے کے لیے دونوں اطراف کو $99$ پر تقسیم کریں۔ اس طرح، $0.\\overline{21} = \\frac{21}{99}$ ہے (جو مختصر ترین شکل میں $\\frac{7}{33}$ بنتا ہے)۔",
        "check": [
+        "R(21,99) == R(7,33)",
+        "R(21,99)*99 == 21",
+        "100*Rational(21,99) == 21 + Rational(21,99)",
+        "100*Rational(21,99) - Rational(21,99) == 21",
         "Rational(21,99)*99 == 21"
        ]
       }
      ],
      "answer": "$\\frac{21}{99}$",
+     "enriched": true,
      "book_key": "\\frac{21}{99}"
     }
    ],
@@ -1133,7 +1630,11 @@
        "ur": "ہمیں مساوات $(a+4)+b = a+(4+b)$ دی گئی ہے اور ہمیں یہاں استعمال ہونے والی حقیقی اعداد کی خاصیت کی نشاندہی کرنی ہے۔",
        "check": [
         "(a+4)+b == a+(4+b)"
-       ]
+       ],
+       "why": {
+        "en": "First, let us carefully observe the both sides of the equation $(a+4)+b = a+(4+b)$. Notice that the exact same terms $a$, $4$, and $b$ are being added in the same order, and only the position of the brackets has changed.",
+        "ur": "سب سے پہلے، آئیے مساوات $(a+4)+b = a+(4+b)$ کے دونوں اطراف کا غور سے مشاہدہ کریں۔ دیکھیں کہ بالکل ایک جیسی رقوم $a$، $4$، اور $b$ ایک ہی ترتیب میں جمع ہو رہی ہیں، اور صرف بریکٹ کی جگہ تبدیل ہوئی ہے۔"
+       }
       },
       {
        "math": "(x+y)+z = x+(y+z)",
@@ -1141,7 +1642,11 @@
        "ur": "جمع کی تلازمی خاصیت (associative property of addition) کے مطابق، کسی بھی تین حقیقی اعداد $x$، $y$ اور $z$ کے لیے، اعداد کی گروہ بندی تبدیل کرنے سے ان کے مجموعے پر کوئی فرق نہیں پڑتا۔",
        "check": [
         "(x+y)+z == x+(y+z)"
-       ]
+       ],
+       "why": {
+        "en": "We recall the general rule for the associative property of addition, $(x+y)+z = x+(y+z)$, because our question also involves adding three terms with different bracket groupings. Knowing this standard definition gives us a model to match our equation against.",
+        "ur": "ہم جمع کی تلازمی خاصیت کا عمومی اصول $(x+y)+z = x+(y+z)$ یاد کرتے ہیں، کیونکہ ہمارے سوال میں بھی مختلف بریکٹ گروپنگ کے ساتھ تین رقوم کو جمع کیا جا رہا ہے۔ اس معیاری تعریف کو جاننے سے ہمیں اپنی مساوات کا موازنہ کرنے کے لیے ایک نمونہ مل جاتا ہے۔"
+       }
       },
       {
        "math": "(a+4)+b = a+(4+b)",
@@ -1149,7 +1654,11 @@
        "ur": "دی گئی مساوات کا عمومی اصول سے موازنہ کرتے ہوئے، اگر ہم $x = a$، $y = 4$ اور $z = b$ لیں، تو ہم دیکھتے ہیں کہ بائیں جانب $a$ اور $4$ کا گروپ بنایا گیا ہے، جبکہ دائیں جانب $4$ اور $b$ کا گروپ بنایا گیا ہے۔",
        "check": [
         "(a+4)+b == a+(4+b)"
-       ]
+       ],
+       "why": {
+        "en": "By matching $x=a$, $y=4$, and $z=b$, we verify that our given equation follows the exact pattern of the general rule. This confirms that shifting the brackets from $(a+4)$ to $(4+b)$ is simply a change in grouping.",
+        "ur": "یہاں $x=a$، $y=4$، اور $z=b$ کا موازنہ کر کے ہم تصدیق کرتے ہیں کہ ہماری دی گئی مساوات بالکل عمومی اصول کے نمونے پر پورا اترتی ہے۔ اس سے یہ ثابت ہوتا ہے کہ بریکٹ کو $(a+4)$ سے ہٹا کر $(4+b)$ پر لانا صرف گروپ بندی کی تبدیلی ہے۔"
+       }
       },
       {
        "math": "",
@@ -1157,11 +1666,19 @@
        "ur": "لہٰذا، دیے گئے بیان میں استعمال ہونے والی خاصیت جمع کے لحاظ سے تلازمی خاصیت (Associative property over addition) ہے۔",
        "check": [
         "(a+4)+b == a+(4+b)"
-       ]
+       ],
+       "why": {
+        "en": "Since the equation matches the standard rule completely, we can now confidently state the exact name of the property. This completes our identification and gives the required final answer.",
+        "ur": "چونکہ یہ مساوات معیاری اصول کے بالکل مطابق ہے، اس لیے اب ہم اعتماد کے ساتھ اس خاصیت کا درست نام بتا سکتے ہیں۔ اس سے ہماری شناخت مکمل ہو جاتی ہے اور مطلوبہ حتمی جواب مل جاتا ہے۔"
+       }
       }
      ],
      "answer": "Associative property over addition",
      "enriched": true,
+     "meaning": {
+      "en": "The final answer means that when adding $a$, $4$, and $b$, the way we group them in brackets does not change their total sum. You can check this by seeing that the order of $a$, $4$, and $b$ stays the same on both sides, while only the brackets shift from $(a+4)$ to $(4+b)$.",
+      "ur": "حتمی جواب کا مطلب یہ ہے کہ $a$، $4$، اور $b$ کو جمع کرتے وقت، بریکٹ میں ان کی گروپ بندی کا طریقہ ان کے کل مجموعے کو تبدیل نہیں کرتا۔ آپ اس کی پڑتال ایسے کر سکتے ہیں کہ دونوں اطراف میں $a$، $4$، اور $b$ کی ترتیب ایک جیسی رہتی ہے، جبکہ صرف بریکٹ $(a+4)$ سے منتقل ہو کر $(4+b)$ پر چلی جاتی ہے۔"
+     },
      "book_key": "Associative property over addition"
     },
     {
@@ -1174,17 +1691,29 @@
        "ur": "ہمیں مندرجہ ذیل ریاضیاتی بیان دیا گیا ہے اور اس میں استعمال ہونے والی حقیقی اعداد کی خاصیت کی نشاندہی کرنے کو کہا گیا ہے۔",
        "check": [
         "sqrt(2)+sqrt(3) == sqrt(3)+sqrt(2)"
-       ]
+       ],
+       "why": {
+        "en": "We start by looking closely at the given equation $\\sqrt{2}+\\sqrt{3} = \\sqrt{3}+\\sqrt{2}$ to see what mathematical operation is happening and how the numbers behave. This helps us figure out which rule of real numbers is being shown here.",
+        "ur": "ہم سب سے پہلے دی گئی مساوات $\\sqrt{2}+\\sqrt{3} = \\sqrt{3}+\\sqrt{2}$ کو غور سے دیکھتے ہیں تاکہ یہ سمجھ سکیں کہ یہاں کون سا حسابی عمل ہو رہا ہے اور اعداد کس طرح ترتیب دیے گئے ہیں۔ اس سے ہمیں یہ جاننے میں مدد ملتی ہے کہ یہاں حقیقی اعداد کا کون سا اصول استعمال ہوا ہے۔"
+       }
       },
       {
        "math": "",
        "en": "Observe the two real numbers $\\sqrt{2}$ and $\\sqrt{3}$. On the left-hand side, $\\sqrt{2}$ is added to $\\sqrt{3}$. On the right-hand side, their order is reversed, so $\\sqrt{3}$ is added to $\\sqrt{2}$.",
-       "ur": "دو حقیقی اعداد $\\sqrt{2}$ اور $\\sqrt{3}$ کا مشاہدہ کریں۔ بائیں جانب $\\sqrt{2}$ کو $\\sqrt{3}$ میں جمع کیا گیا ہے۔ دائیں جانب ان کی ترتیب الٹ دی گئی ہے، یعنی $\\sqrt{3}$ کو $\\sqrt{2}$ میں جمع کیا گیا ہے۔"
+       "ur": "دو حقیقی اعداد $\\sqrt{2}$ اور $\\sqrt{3}$ کا مشاہدہ کریں۔ بائیں جانب $\\sqrt{2}$ کو $\\sqrt{3}$ میں جمع کیا گیا ہے۔ دائیں جانب ان کی ترتیب الٹ دی گئی ہے، یعنی $\\sqrt{3}$ کو $\\sqrt{2}$ میں جمع کیا گیا ہے۔",
+       "why": {
+        "en": "We compare the left side and the right side of the equals sign to spot the change. Notice that the two real numbers $\\sqrt{2}$ and $\\sqrt{3}$ are simply swapping places while being added, which is our biggest clue for naming the property.",
+        "ur": "ہم تبدیلی کو پہچاننے کے لیے برابر کے نشان کے بائیں اور دائیں طرف کا موازنہ کرتے ہیں۔ غور کریں کہ دو حقیقی اعداد $\\sqrt{2}$ اور $\\sqrt{3}$ جمع ہوتے وقت صرف اپنی جگہ بدل رہے ہیں، جو اس خاصیت کا نام جاننے کے لیے ہمارا سب سے بڑا اشارہ ہے۔"
+       }
       },
       {
        "math": "a + b = b + a",
        "en": "According to the properties of real numbers, changing the order of two numbers when adding them does not change their sum. For any two real numbers $a$ and $b$, this rule is written as $a + b = b + a$.",
-       "ur": "حقیقی اعداد کی خصوصیات کے مطابق، دو اعداد کو جمع کرتے وقت ان کی ترتیب بدلنے سے ان کے مجموعے پر کوئی فرق نہیں پڑتا۔ کسی بھی دو حقیقی اعداد $a$ اور $b$ کے لیے، اس اصول کو $a + b = b + a$ کے طور پر لکھا جاتا ہے۔"
+       "ur": "حقیقی اعداد کی خصوصیات کے مطابق، دو اعداد کو جمع کرتے وقت ان کی ترتیب بدلنے سے ان کے مجموعے پر کوئی فرق نہیں پڑتا۔ کسی بھی دو حقیقی اعداد $a$ اور $b$ کے لیے، اس اصول کو $a + b = b + a$ کے طور پر لکھا جاتا ہے۔",
+       "why": {
+        "en": "We recall the basic rule of real numbers that says changing the order of numbers during addition does not affect the answer. Writing this general rule as $a + b = b + a$ gives us a standard textbook formula to match our question against.",
+        "ur": "ہم حقیقی اعداد کے اس بنیادی اصول کو یاد کرتے ہیں جو کہتا ہے کہ جمع کے عمل کے دوران اعداد کی ترتیب بدلنے سے جواب پر کوئی فرق نہیں پڑتا۔ اس عام اصول کو $a + b = b + a$ کے طور پر لکھنے سے ہمیں اپنے سوال کا موازنہ کرنے کے لیے کتاب کا ایک معیاری فارمولا مل جاتا ہے۔"
+       }
       },
       {
        "math": "\\sqrt{2}+\\sqrt{3} = \\sqrt{3}+\\sqrt{2}",
@@ -1192,7 +1721,11 @@
        "ur": "عمومی اصول $a + b = b + a$ میں $a = \\sqrt{2}$ اور $b = \\sqrt{3}$ درج کرنے سے ہمیں بالکل دیا گیا بیان حاصل ہوتا ہے۔",
        "check": [
         "sqrt(2)+sqrt(3) == sqrt(3)+sqrt(2)"
-       ]
+       ],
+       "why": {
+        "en": "To be completely sure our rule fits, we put $a = \\sqrt{2}$ and $b = \\sqrt{3}$ into the general formula $a + b = b + a$. Since this gives back our exact question $\\sqrt{2}+\\sqrt{3} = \\sqrt{3}+\\sqrt{2}$, it proves we have selected the right mathematical rule.",
+        "ur": "اس بات کا مکمل یقین کرنے کے لیے کہ ہمارا اصول بالکل ٹھیک بیٹھتا ہے، ہم عام فارمولے $a + b = b + a$ میں $a = \\sqrt{2}$ اور $b = \\sqrt{3}$ درج کرتے ہیں۔ چونکہ اس سے ہمیں بالکل ہمارا دیا گیا سوال $\\sqrt{2}+\\sqrt{3} = \\sqrt{3}+\\sqrt{2}$ واپس مل جاتا ہے، اس سے ثابت ہوتا ہے کہ ہم نے صحیح ریاضیاتی اصول کا انتخاب کیا ہے۔"
+       }
       },
       {
        "math": "",
@@ -1200,11 +1733,19 @@
        "ur": "لہٰذا، دی گئی مساوات میں استعمال ہونے والی خاصیت **خاصیت مبادلہ بلحاظ جمع** (Commutative property over addition) ہے۔",
        "check": [
         "sqrt(2)+sqrt(3) == sqrt(3)+sqrt(2)"
-       ]
+       ],
+       "why": {
+        "en": "Now that the pattern $a + b = b + a$ is confirmed, we simply write down its official mathematical name. In algebra, swapping the order of numbers is called 'commutative', and since the operation is addition, it is the commutative property over addition.",
+        "ur": "اب جب کہ $a + b = b + a$ کے پیٹرن کی تصدیق ہو چکی ہے، ہم بس اس کا باقاعدہ ریاضیاتی نام لکھ دیتے ہیں۔ الجبرا میں، اعداد کی ترتیب بدلنے کو 'مبادلہ' (commutative) کہتے ہیں، اور چونکہ یہاں جمع کا عمل ہو رہا ہے، اس لیے یہ جمع کے لحاظ سے خاصیتِ مبادلہ (Commutative property over addition) ہے۔"
+       }
       }
      ],
      "answer": "Commutative property over addition",
      "enriched": true,
+     "meaning": {
+      "en": "The final answer means that the equation $\\sqrt{2}+\\sqrt{3} = \\sqrt{3}+\\sqrt{2}$ demonstrates the **Commutative property over addition**, which tells us that real numbers can be added in any order and the total sum will remain the same. You can easily check this at a glance: the only difference between the two sides of the equation is the swapped positions of $\\sqrt{2}$ and $\\sqrt{3}$ around the plus sign.",
+      "ur": "حتمی جواب کا مطلب یہ ہے کہ مساوات $\\sqrt{2}+\\sqrt{3} = \\sqrt{3}+\\sqrt{2}$ **جمع کے لحاظ سے خاصیتِ مبادلہ (Commutative property over addition)** کو ظاہر کرتی ہے، جو ہمیں بتاتی ہے کہ حقیقی اعداد کو کسی بھی ترتیب سے جمع کیا جا سکتا ہے اور ان کا مجموعہ ایک جیسا ہی رہے گا۔ آپ ایک نظر میں اس کی تصدیق کر سکتے ہیں: مساوات کے دونوں اطراف میں واحد فرق جمع کے نشان کے گرد $\\sqrt{2}$ اور $\\sqrt{3}$ کی بدلی ہوئی جگہ ہے۔"
+     },
      "book_key": "Commutative property over addition"
     },
     {
@@ -1217,7 +1758,11 @@
        "ur": "ہمیں مساوات $x - x = 0$ دی گئی ہے اور اس میں استعمال ہونے والی حقیقی اعداد کی خاصیت کا نام بتانا ہے۔",
        "check": [
         "x - x == 0"
-       ]
+       ],
+       "why": {
+        "en": "First, let us look closely at the given equation $x - x = 0$ to understand how the numbers are interacting. Observing how a number combines with itself to give $0$ helps us think about the basic addition rules of real numbers.",
+        "ur": "سب سے پہلے، آئیے دی گئی مساوات $x - x = 0$ کو غور سے دیکھیں تاکہ سمجھ سکیں کہ اعداد آپس میں کیسے عمل کر رہے ہیں۔ یہ دیکھنا کہ ایک عدد اپنے آپ کے ساتھ مل کر کیسے $0$ بناتا ہے، ہمیں حقیقی اعداد کے جمع کے بنیادی اصولوں کے بارے میں سوچنے میں مدد دیتا ہے۔"
+       }
       },
       {
        "math": "x - x = x + (-x)",
@@ -1225,7 +1770,11 @@
        "ur": "کسی عدد کو تفریق کرنا اس کے منفی کو جمع کرنے کے برابر ہوتا ہے، اس لیے ہم $x - x$ کو $x + (-x)$ لکھ سکتے ہیں۔",
        "check": [
         "x - x == x + (-x)"
-       ]
+       ],
+       "why": {
+        "en": "In algebra, properties of real numbers are officially written in terms of addition, not subtraction. By using the definition of subtraction, we rewrite $x - x$ as $x + (-x)$ so that it clearly matches the standard addition rules in our textbook.",
+        "ur": "الجبرا میں، حقیقی اعداد کی خصوصیات کو تفریق کے بجائے جمع کی شکل میں لکھا جاتا ہے۔ تفریق کی تعریف استعمال کرتے ہوئے، ہم $x - x$ کو $x + (-x)$ کے طور پر دوبارہ لکھتے ہیں تاکہ یہ ہماری کتاب میں دیے گئے جمع کے معیاری اصولوں سے واضح طور پر میل کھا سکے۔"
+       }
       },
       {
        "math": "a + (-a) = 0",
@@ -1233,7 +1782,11 @@
        "ur": "حقیقی اعداد کی جمعی معکوس کی خاصیت کو یاد کریں: کسی بھی حقیقی عدد $a$ کے لیے ایک منفرد حقیقی عدد $-a$ (جسے $a$ کا جمعی معکوس کہتے ہیں) موجود ہوتا ہے، جس کو جمع کرنے سے جواب صفر (جمعی ذاتی عنصر) آتا ہے۔",
        "check": [
         "a + (-a) == 0"
-       ]
+       ],
+       "why": {
+        "en": "Now we bring to mind the standard textbook rule $a + (-a) = 0$, which is the definition of the Additive Inverse Property. Having this general formula in front of us allows us to directly test if our expression fits this exact pattern.",
+        "ur": "اب ہم کتاب کے معیاری اصول $a + (-a) = 0$ کو ذہن میں لاتے ہیں، جو کہ جمعی معکوس کی خاصیت (Additive Inverse Property) کی تعریف ہے۔ اس عمومی فارمولے کو سامنے رکھنے سے ہم براہِ راست جانچ سکتے ہیں کہ آیا ہماری عبارت بالکل اسی نمونے پر پوری اترتی ہے۔"
+       }
       },
       {
        "math": "x + (-x) = 0",
@@ -1241,7 +1794,11 @@
        "ur": "اپنی مساوات $x + (-x) = 0$ کا عمومی اصول $a + (-a) = 0$ سے موازنہ کرنے پر، ہم دیکھتے ہیں کہ $-x$ عدد $x$ کا جمعی معکوس ہے، اور ان کا مجموعہ $0$ ہے۔",
        "check": [
         "x + (-x) == 0"
-       ]
+       ],
+       "why": {
+        "en": "By placing our rewritten equation $x + (-x) = 0$ right next to the rule $a + (-a) = 0$, we see an exact match where $x$ takes the place of $a$. This confirms that we are simply adding a number $x$ and its opposite $-x$ to get the additive identity $0$.",
+        "ur": "اپنی دوبارہ لکھی گئی مساوات $x + (-x) = 0$ کو اصول $a + (-a) = 0$ کے بالکل ساتھ رکھنے سے، ہمیں مکمل مماثلت نظر آتی ہے جہاں $x$ نے $a$ کی جگہ لے لی ہے۔ اس سے تصدیق ہوتی ہے کہ ہم صرف ایک عدد $x$ اور اس کے متضاد $-x$ کو جمع کر کے جمعی ذاتی عنصر $0$ حاصل کر رہے ہیں۔"
+       }
       },
       {
        "math": "",
@@ -1249,11 +1806,19 @@
        "ur": "لہٰذا، دیے گئے بیان میں استعمال ہونے والی خاصیت جمعی معکوس (Additive inverse) ہے۔",
        "check": [
         "x - x == 0"
-       ]
+       ],
+       "why": {
+        "en": "Since our equation follows the exact pattern of adding a number and its negative to get $0$, we can confidently name the rule. This completes our task and gives us the exact name required by the question.",
+        "ur": "چونکہ ہماری مساوات کسی عدد اور اس کے منفی کو جمع کر کے $0$ حاصل کرنے کے عین مطابق ہے، اس لیے ہم اعتماد کے ساتھ اس اصول کا نام بتا سکتے ہیں۔ اس سے ہمارا کام مکمل ہوتا ہے اور ہمیں وہی نام مل جاتا ہے جو سوال میں پوچھا گیا تھا۔"
+       }
       }
      ],
      "answer": "Additive inverse",
      "enriched": true,
+     "meaning": {
+      "en": "The final answer 'Additive inverse' means that the equation $x - x = 0$ demonstrates how any real number $x$ and its opposite $-x$ cancel each other out when added, leaving $0$. You can always check this by remembering that whenever two opposite terms combine to make $0$, it is the additive inverse property at work.",
+      "ur": "آخری جواب 'جمعی معکوس' (Additive inverse) کا مطلب ہے کہ مساوات $x - x = 0$ یہ ظاہر کرتی ہے کہ کس طرح کوئی بھی حقیقی عدد $x$ اور اس کا متضاد $-x$ جمع ہونے پر ایک دوسرے کا اثر ختم کر دیتے ہیں، جس سے $0$ باقی رہ جاتا ہے۔ آپ اس کی پڑتال ہمیشہ یہ یاد رکھ کر کر سکتے ہیں کہ جب بھی دو متضاد رقمیں مل کر $0$ بناتی ہیں، تو وہاں جمعی معکوس کی خاصیت ہی کام کر رہی ہوتی ہے۔"
+     },
      "book_key": "Additive inverse"
     },
     {
@@ -1266,12 +1831,20 @@
        "ur": "ہمیں الجبری مساوات $a(b+c) = ab+ac$ دی گئی ہے اور ہمیں یہاں استعمال ہونے والی حقیقی اعداد کی خاصیت کی پہچان کرنی ہے۔",
        "check": [
         "a*(b+c) == a*b + a*c"
-       ]
+       ],
+       "why": {
+        "en": "First, we carefully observe the given equation $a(b+c) = ab+ac$ so we can see how the operations of multiplication and addition are arranged. This helps us recognize the exact pattern of real numbers being shown.",
+        "ur": "سب سے پہلے، ہم دی گئی مساوات $a(b+c) = ab+ac$ کا بغور مشاہدہ کرتے ہیں تاکہ ہم دیکھ سکیں کہ ضرب اور جمع کے عوامل کو کس طرح ترتیب دیا گیا ہے۔ اس سے ہمیں حقیقی اعداد کے درست پیٹرن کو پہچاننے میں مدد ملتی ہے۔"
+       }
       },
       {
        "math": "",
        "en": "Look at the left-hand side, $a(b+c)$. Here, the real number $a$ is outside the bracket on the left and is being multiplied by the sum $(b+c)$.",
-       "ur": "بائیں طرف یعنی $a(b+c)$ کو دیکھیں۔ یہاں حقیقی عدد $a$ بریکٹ کے باہر بائیں جانب ہے اور مجموعہ $(b+c)$ سے ضرب کھا رہا ہے۔"
+       "ur": "بائیں طرف یعنی $a(b+c)$ کو دیکھیں۔ یہاں حقیقی عدد $a$ بریکٹ کے باہر بائیں جانب ہے اور مجموعہ $(b+c)$ سے ضرب کھا رہا ہے۔",
+       "why": {
+        "en": "We examine the left side $a(b+c)$ to note the exact position of the multiplier $a$ outside the bracket. Noticing that $a$ is on the left side of the sum $(b+c)$ is key to naming the exact direction of the property.",
+        "ur": "ہم بائیں جانب $a(b+c)$ کا جائزہ لیتے ہیں تاکہ بریکٹ کے باہر ضرب کھانے والے عدد $a$ کی درست جگہ معلوم کر سکیں۔ یہ نوٹ کرنا کہ $a$ مجموعہ $(b+c)$ کے بائیں طرف ہے، اس خاصیت کی درست سمت کا نام بتانے کے لیے بہت ضروری ہے۔"
+       }
       },
       {
        "math": "a \\times (b+c) = (a \\times b) + (a \\times c)",
@@ -1279,7 +1852,11 @@
        "ur": "دائیں طرف، $a$ کی ضرب کو بائیں جانب سے $b$ اور $c$ کی جمع پر تقسیم کیا گیا ہے، جس سے $ab + ac$ حاصل ہوتا ہے۔",
        "check": [
         "a*(b+c) == a*b + a*c"
-       ]
+       ],
+       "why": {
+        "en": "Now we compare both sides to see the rule of distribution in action, where the outside number $a$ multiplies with each term inside the bracket separately. This shows us that multiplication is being spread over addition, turning $a \\times (b+c)$ into $(a \\times b) + (a \\times c)$.",
+        "ur": "اب ہم دونوں اطراف کا موازنہ کرتے ہیں تاکہ تقسیم کے اصول کو عمل میں دیکھ سکیں، جہاں باہر والا عدد $a$ بریکٹ کے اندر موجود ہر رقم سے الگ الگ ضرب کھاتا ہے۔ یہ ہمیں دکھاتا ہے کہ ضرب کا عمل جمع کے عمل پر پھیل رہا ہے، جو $a \\times (b+c)$ کو $(a \\times b) + (a \\times c)$ میں بدل دیتا ہے۔"
+       }
       },
       {
        "math": "",
@@ -1287,11 +1864,19 @@
        "ur": "حقیقی اعداد کی خصوصیات کے مطابق، جب ضرب کو بائیں طرف سے جمع پر تقسیم کیا جائے تو اسے بائیں تقسیمی خاصیت (Left distributive property) کہتے ہیں۔ لہٰذا، حتمی جواب Left distributive property ہے۔",
        "check": [
         "a*(b+c) == a*b + a*c"
-       ]
+       ],
+       "why": {
+        "en": "Finally, we match this pattern to the standard definitions of real number properties in our textbook. Because the number $a$ was distributed from the left side over the addition $(b+c)$, we can confidently name it the Left distributive property.",
+        "ur": "آخر میں، ہم اس پیٹرن کو اپنی کتاب میں موجود حقیقی اعداد کی خصوصیات کی معیاری تعریفوں سے ملاتے ہیں۔ چونکہ عدد $a$ کو بائیں طرف سے جمع کے عمل $(b+c)$ پر تقسیم کیا گیا تھا، اس لیے ہم اعتماد کے ساتھ اسے بائیں تقسیمی خاصیت (Left distributive property) کا نام دے سکتے ہیں۔"
+       }
       }
      ],
      "answer": "Left distributive property",
      "enriched": true,
+     "meaning": {
+      "en": "The final answer means that multiplying a real number $a$ from the left by a sum $(b+c)$ gives the exact same result as multiplying $a$ with $b$ and $c$ separately and then adding them together, $ab+ac$. You can always check this by seeing that $a$ starts on the left of the bracket and attaches to the left of both $b$ and $c$.",
+      "ur": "حتمی جواب کا مطلب یہ ہے کہ ایک حقیقی عدد $a$ کو بائیں طرف سے کسی مجموعے $(b+c)$ سے ضرب دینے سے بالکل وہی نتیجہ نکلتا ہے جو $a$ کو $b$ اور $c$ سے الگ الگ ضرب دے کر پھر انہیں آپس میں جمع کرنے یعنی $ab+ac$ سے آتا ہے۔ آپ اس کی پڑتال ہمیشہ یہ دیکھ کر کر سکتے ہیں کہ $a$ بریکٹ کے بائیں طرف سے شروع ہوتا ہے اور $b$ اور $c$ دونوں کے بائیں طرف جڑ جاتا ہے۔"
+     },
      "book_key": "Left distributive property"
     },
     {
@@ -1304,12 +1889,20 @@
        "ur": "ہمیں حسابی مساوات $16 + 0 = 16$ دی گئی ہے اور ہمیں یہاں استعمال ہونے والی حقیقی اعداد کی خاصیت کی نشاندہی کرنی ہے۔",
        "check": [
         "16 + 0 == 16"
-       ]
+       ],
+       "why": {
+        "en": "First, let's carefully observe the given equation $16 + 0 = 16$. Seeing what happens to the number $16$ when $0$ is added to it will help us recognize which rule of real numbers is at work.",
+        "ur": "سب سے پہلے، دی گئی مساوات $16 + 0 = 16$ کو غور سے دیکھیں۔ یہ دیکھنا کہ $16$ میں $0$ جمع کرنے سے اس پر کیا اثر پڑتا ہے، ہمیں یہ پہچاننے میں مدد دے گا کہ یہاں حقیقی اعداد کا کون سا اصول استعمال ہوا ہے۔"
+       }
       },
       {
        "math": "a + 0 = a",
        "en": "Recall the Additive Identity property of real numbers: for any real number $a$, adding $0$ to it leaves the number unchanged, which is written as $a + 0 = a$. Here, $0$ is called the additive identity.",
-       "ur": "حقیقی اعداد کی جمعی محائدہ (Additive Identity) کی خاصیت کو یاد کریں: کسی بھی حقیقی عدد $a$ کے لیے، اس میں $0$ جمع کرنے سے وہ عدد تبدیل نہیں ہوتا، جسے $a + 0 = a$ لکھا جاتا ہے۔ یہاں $0$ کو جمعی محائدہ کہتے ہیں۔"
+       "ur": "حقیقی اعداد کی جمعی محائدہ (Additive Identity) کی خاصیت کو یاد کریں: کسی بھی حقیقی عدد $a$ کے لیے، اس میں $0$ جمع کرنے سے وہ عدد تبدیل نہیں ہوتا، جسے $a + 0 = a$ لکھا جاتا ہے۔ یہاں $0$ کو جمعی محائدہ کہتے ہیں۔",
+       "why": {
+        "en": "We recall the general rule called the Additive Identity property, which states that $a + 0 = a$. This rule tells us that $0$ is a special number in addition because adding it to any real number $a$ keeps the number's identity unchanged.",
+        "ur": "ہم جمعی ذاتی عنصر کی خاصیت (Additive Identity property) کے عمومی اصول کو یاد کرتے ہیں، جو کہتا ہے کہ $a + 0 = a$۔ یہ اصول ہمیں بتاتا ہے کہ جمع کے عمل میں $0$ ایک خاص عدد ہے کیونکہ اسے کسی بھی حقیقی عدد $a$ میں جمع کرنے سے اس عدد کی شناخت تبدیل نہیں ہوتی۔"
+       }
       },
       {
        "math": "16 + 0 = 16",
@@ -1317,7 +1910,11 @@
        "ur": "اگر ہم عمومی خاصیت $a + 0 = a$ میں $a = 16$ درج کریں، تو ہمیں عین دی گئی مساوات $16 + 0 = 16$ حاصل ہوتی ہے۔",
        "check": [
         "16 + 0 == 16"
-       ]
+       ],
+       "why": {
+        "en": "Now, we match our given statement with the general rule by putting $16$ in place of $a$. Since $16 + 0 = 16$ fits the pattern $a + 0 = a$ perfectly, it confirms we have found the right property.",
+        "ur": "اب، ہم $a$ کی جگہ $16$ رکھ کر اپنی دی گئی مساوات کا عمومی اصول سے موازنہ کرتے ہیں۔ چونکہ $16 + 0 = 16$ بالکل $a + 0 = a$ کے نمونے پر پورا اترتا ہے، اس لیے یہ تصدیق ہو جاتی ہے کہ ہم نے درست خاصیت تلاش کر لی ہے۔"
+       }
       },
       {
        "math": "",
@@ -1325,11 +1922,19 @@
        "ur": "چونکہ $16$ میں $0$ جمع کرنے سے اس کی قیمت تبدیل نہیں ہوتی، اس لیے اس بیان میں استعمال ہونے والی خاصیت جمعی محائدہ (Additive identity) ہے۔",
        "check": [
         "16 + 0 == 16"
-       ]
+       ],
+       "why": {
+        "en": "Finally, we state the name of the property based on our comparison. Because $16$ remained exactly $16$ after adding $0$, we can confidently conclude the rule is the Additive identity.",
+        "ur": "آخر میں، ہم اپنے موازنے کی بنیاد پر اس خاصیت کا نام لکھتے ہیں۔ چونکہ $0$ جمع کرنے کے بعد بھی $16$ بالکل $16$ ہی رہا، اس لیے ہم یقین کے ساتھ نتیجہ اخذ کر سکتے ہیں کہ یہ اصول جمعی ذاتی عنصر (Additive identity) ہے۔"
+       }
       }
      ],
      "answer": "Additive identity",
      "enriched": true,
+     "meaning": {
+      "en": "The final answer 'Additive identity' means that the equation $16 + 0 = 16$ demonstrates the rule where adding $0$ to a number does not change its value. You can easily check this by noticing that the operation is addition ($+$) with $0$, and the starting number $16$ stays the exact same on the other side of the equals sign.",
+      "ur": "حتمی جواب 'جمعی ذاتی عنصر' (Additive identity) کا مطلب ہے کہ مساوات $16 + 0 = 16$ اس اصول کو ظاہر کرتی ہے جہاں کسی عدد میں $0$ جمع کرنے سے اس کی قیمت تبدیل نہیں ہوتی۔ آپ اس کی باآسانی تصدیق ایسے کر سکتے ہیں کہ یہاں جمع ($+$) کا عمل $0$ کے ساتھ ہو رہا ہے، اور ابتدائی عدد $16$ برابر کے نشان کے دوسری طرف بھی بالکل ویسا ہی رہتا ہے۔"
+     },
      "book_key": "Additive identity"
     },
     {
@@ -1342,12 +1947,20 @@
        "ur": "ہمیں حسابی بیان $100 \\times 1 = 100$ دیا گیا ہے اور پوچھا گیا ہے کہ یہاں حقیقی اعداد کی کون سی خاصیت استعمال ہوئی ہے۔",
        "check": [
         "100*1 == 100"
-       ]
+       ],
+       "why": {
+        "en": "First, let's carefully look at the given equation $100 \\times 1 = 100$. We need to observe how the number $100$ behaves when it is multiplied by $1$ so we can match it with the correct rule of real numbers.",
+        "ur": "سب سے پہلے ہم دی گئی مساوات $100 \\times 1 = 100$ کو غور سے دیکھتے ہیں۔ ہمیں یہ دیکھنا ہے کہ جب $100$ کو $1$ سے ضرب دی جاتی ہے تو کیا ہوتا ہے، تاکہ ہم اسے حقیقی اعداد کے صحیح اصول کے ساتھ ملا سکیں۔"
+       }
       },
       {
        "math": "a \\times 1 = a",
        "en": "Recall the Multiplicative Identity property of real numbers, which states that for any real number $a$, multiplying it by $1$ leaves the number unchanged ($a \\times 1 = 1 \\times a = a$). Here, $1$ is called the multiplicative identity.",
-       "ur": "حقیقی اعداد کی ضربی ذاتی خاصیت (Multiplicative Identity property) کو یاد کریں، جس کے مطابق کسی بھی حقیقی عدد $a$ کو $1$ سے ضرب دینے سے اس عدد کی قیمت میں کوئی تبدیلی نہیں آتی ($a \\times 1 = 1 \\times a = a$)۔ یہاں $1$ کو ضربی ذاتی عنصر (multiplicative identity) کہا جاتا ہے۔"
+       "ur": "حقیقی اعداد کی ضربی ذاتی خاصیت (Multiplicative Identity property) کو یاد کریں، جس کے مطابق کسی بھی حقیقی عدد $a$ کو $1$ سے ضرب دینے سے اس عدد کی قیمت میں کوئی تبدیلی نہیں آتی ($a \\times 1 = 1 \\times a = a$)۔ یہاں $1$ کو ضربی ذاتی عنصر (multiplicative identity) کہا جاتا ہے۔",
+       "why": {
+        "en": "We write down the general rule $a \\times 1 = a$, which is the definition of the Multiplicative Identity property. This rule reminds us that $1$ is a special number because multiplying any real number $a$ by $1$ keeps its identity exactly the same.",
+        "ur": "ہم عام اصول $a \\times 1 = a$ لکھتے ہیں، جو کہ ضربی ذاتی عنصر کی خاصیت (Multiplicative Identity property) کی تعریف ہے۔ یہ اصول ہمیں یاد دلاتا ہے کہ $1$ ایک خاص عدد ہے کیونکہ کسی بھی حقیقی عدد $a$ کو $1$ سے ضرب دینے سے اس کی اپنی پہچان برقرار رہتی ہے۔"
+       }
       },
       {
        "math": "100 \\times 1 = 100",
@@ -1355,7 +1968,11 @@
        "ur": "دی گئی مساوات کا عمومی اصول سے موازنہ کرنے پر، ہم دیکھتے ہیں کہ $a = 100$ کو $1$ سے ضرب دی گئی ہے، اور نتیجہ $100$ ہی رہتا ہے۔",
        "check": [
         "100*1 == 100"
-       ]
+       ],
+       "why": {
+        "en": "By comparing our equation $100 \\times 1 = 100$ with the general rule $a \\times 1 = a$, we see that $100$ is simply taking the place of $a$. Since multiplying $100$ by $1$ leaves it unchanged at $100$, our statement fits this rule perfectly.",
+        "ur": "اپنی مساوات $100 \\times 1 = 100$ کا عام اصول $a \\times 1 = a$ سے موازنہ کرنے پر ہم دیکھتے ہیں کہ $a$ کی جگہ صرف $100$ نے لے لی ہے۔ چونکہ $100$ کو $1$ سے ضرب دینے پر اس میں کوئی تبدیلی نہیں آتی اور جواب $100$ ہی رہتا ہے، اس لیے ہماری عبارت اس اصول پر بالکل پوری اترتی ہے۔"
+       }
       },
       {
        "math": "",
@@ -1363,11 +1980,19 @@
        "ur": "لہٰذا، دیے گئے بیان میں استعمال ہونے والی خاصیت ضربی ذاتی عنصر (Multiplicative identity) ہے۔",
        "check": [
         "100*1 == 100"
-       ]
+       ],
+       "why": {
+        "en": "Since our equation matches the exact pattern of $a \\times 1 = a$, we can confidently state the final name of the property. This completes our solution by directly answering what was asked in the question.",
+        "ur": "چونکہ ہماری مساوات $a \\times 1 = a$ کے اصول کے بالکل مطابق ہے، اس لیے ہم اعتماد کے ساتھ اس خاصیت کا حتمی نام لکھ سکتے ہیں۔ اس سے ہمارا حل مکمل ہو جاتا ہے اور سوال کا سیدھا جواب مل جاتا ہے۔"
+       }
       }
      ],
      "answer": "Multiplicative identity",
      "enriched": true,
+     "meaning": {
+      "en": "The final answer 'Multiplicative identity' means that the equation $100 \\times 1 = 100$ demonstrates the special role of the number $1$ in multiplication, where any number multiplied by $1$ remains unchanged. You can easily check this in your head: Whenever you see a number multiplied by $1$ giving the exact same number back, the property is always the Multiplicative identity.",
+      "ur": "حتمی جواب 'ضربی ذاتی عنصر' (Multiplicative identity) کا مطلب ہے کہ مساوات $100 \\times 1 = 100$ ضرب کے عمل میں عدد $1$ کے خاص کردار کو ظاہر کرتی ہے، جہاں کسی بھی عدد کو $1$ سے ضرب دینے پر وہ تبدیل نہیں ہوتا۔ آپ اسے آسانی سے ذہن میں چیک کر سکتے ہیں: جب بھی آپ دیکھیں کہ کسی عدد کو $1$ سے ضرب دینے پر واپس وہی عدد آ رہا ہے، تو یہ ہمیشہ ضربی ذاتی عنصر کی خاصیت ہوتی ہے۔"
+     },
      "book_key": "Multiplicative identity"
     },
     {
@@ -1380,12 +2005,20 @@
        "ur": "دی گئی ریاضی کی مساوات پر غور کریں۔",
        "check": [
         "4*(5*8) == (4*5)*8"
-       ]
+       ],
+       "why": {
+        "en": "We start by carefully observing the operations and the placement of brackets in the given equation. Noticing that all three numbers are being multiplied, while only the brackets have shifted, gives us our main clue about which rule of real numbers is being used.",
+        "ur": "ہم دی گئی مساوات میں ریاضی کے عمل اور بریکٹس کی جگہ کو غور سے دیکھ کر شروعات کرتے ہیں۔ یہ دیکھنا کہ تینوں اعداد آپس میں ضرب کھا رہے ہیں جبکہ صرف بریکٹس کی جگہ بدلی ہے، ہمیں اس بات کا اہم اشارہ دیتا ہے کہ یہاں حقیقی اعداد کا کون سا اصول استعمال ہو رہا ہے۔"
+       }
       },
       {
        "math": "a\\times(b\\times c) = (a\\times b)\\times c",
        "en": "According to the associative property under multiplication, for any real numbers $a$, $b$, and $c$, changing the grouping of the numbers does not change their product.",
-       "ur": "ضرب کی تلازمی خاصیت کے مطابق، کسی بھی حقیقی اعداد $a$، $b$ اور $c$ کے لیے، اعداد کی گروہ بندی بدلنے سے ان کا حاصل ضرب تبدیل نہیں ہوتا۔"
+       "ur": "ضرب کی تلازمی خاصیت کے مطابق، کسی بھی حقیقی اعداد $a$، $b$ اور $c$ کے لیے، اعداد کی گروہ بندی بدلنے سے ان کا حاصل ضرب تبدیل نہیں ہوتا۔",
+       "why": {
+        "en": "We recall the standard general form of the associative property of multiplication to match it with our question. This rule tells us that when multiplying three real numbers $a$, $b$, and $c$, it does not matter which pair we group and multiply first.",
+        "ur": "ہم اپنے سوال سے ملانے کے لیے ضرب کی تلازمی خاصیت (associative property) کی معیاری شکل کو یاد کرتے ہیں۔ یہ اصول ہمیں بتاتا ہے کہ تین حقیقی اعداد $a$، $b$ اور $c$ کو ضرب دیتے وقت اس بات سے کوئی فرق نہیں پڑتا کہ ہم پہلے کس جوڑے کو بریکٹ میں رکھ کر ضرب دیتے ہیں۔"
+       }
       },
       {
        "math": "4\\times(5\\times 8) = (4\\times 5)\\times 8",
@@ -1393,7 +2026,11 @@
        "ur": "دی گئی مساوات کا معیاری شکل سے موازنہ کرنے پر، ہمارے پاس $a=4$، $b=5$ اور $c=8$ ہیں۔ بائیں طرف $5$ اور $8$ کا گروپ ہے، جبکہ دائیں طرف $4$ اور $5$ کا گروپ ہے۔",
        "check": [
         "4*(5*8) == (4*5)*8"
-       ]
+       ],
+       "why": {
+        "en": "By matching the general letters with our specific numbers ($a=4$, $b=5$, $c=8$), we see the exact same pattern of shifting brackets. This comparison confirms that our equation follows the structure of the associative law.",
+        "ur": "عمومی حروف کو اپنے مخصوص اعداد ($a=4$، $b=5$، $c=8$) کے ساتھ ملانے سے ہمیں بریکٹس کی تبدیلی کا بالکل وہی نمونہ نظر آتا ہے۔ یہ موازنہ تصدیق کرتا ہے کہ ہماری مساوات تلازمی قانون کی ساخت کے عین مطابق ہے۔"
+       }
       },
       {
        "math": "4\\times 40 = 20\\times 8 \\implies 160 = 160",
@@ -1404,11 +2041,19 @@
         "4*40 == 160",
         "20*8 == 160",
         "4*(5*8) == (4*5)*8"
-       ]
+       ],
+       "why": {
+        "en": "By actually multiplying the grouped numbers first on each side, we verify that both sides equal $160$. This proves that changing the brackets did not change the final product, confirming our choice of property.",
+        "ur": "دونوں طرف بریکٹ میں موجود اعداد کو پہلے ضرب دے کر ہم تصدیق کرتے ہیں کہ دونوں اطراف کا جواب $160$ آتا ہے۔ اس سے ثابت ہوتا ہے کہ بریکٹس کی جگہ بدلنے سے حتمی حاصل ضرب نہیں بدلا، جو ہماری منتخب کردہ خاصیت کی تصدیق کرتا ہے۔"
+       }
       }
      ],
      "answer": "Associative property under multiplication",
      "enriched": true,
+     "meaning": {
+      "en": "The final answer means that the equation demonstrates the associative property under multiplication, which states that changing the grouping of multiplied numbers does not change the answer. You can easily check this by solving the brackets first on both sides: $4\\times 40$ and $20\\times 8$ both give $160$.",
+      "ur": "حتمی جواب کا مطلب یہ ہے کہ یہ مساوات ضرب کے تحت تلازمی خاصیت (associative property under multiplication) کو ظاہر کرتی ہے، جو بتاتی ہے کہ ضرب کھانے والے اعداد کی گروپ بندی (بریکٹس) بدلنے سے جواب تبدیل نہیں ہوتا۔ آپ دونوں طرف پہلے بریکٹس کو حل کر کے باآسانی اس کی پڑتال کر سکتے ہیں: $4\\times 40$ اور $20\\times 8$ دونوں کا جواب $160$ ہی آتا ہے۔"
+     },
      "book_key": "Associative property under multiplication"
     },
     {
@@ -1421,7 +2066,11 @@
        "ur": "ہمیں ریاضیاتی مساوات $ab = ba$ دی گئی ہے اور ہم سے پوچھا گیا ہے کہ یہاں حقیقی اعداد کی کون سی خاصیت استعمال ہوئی ہے۔",
        "check": [
         "a*b == b*a"
-       ]
+       ],
+       "why": {
+        "en": "First, let us carefully observe the given equation $ab = ba$ to see what mathematical operation is happening between the two variables. By looking closely at how both sides are written, we can figure out which rule of real numbers is being applied.",
+        "ur": "سب سے پہلے، آئیے دی گئی مساوات $ab = ba$ کا بغور مشاہدہ کریں تاکہ یہ دیکھا جا سکے کہ دونوں متغیرات کے درمیان کون سا ریاضیاتی عمل ہو رہا ہے۔ دونوں اطراف کو غور سے دیکھ کر، ہم یہ معلوم کر سکتے ہیں کہ یہاں حقیقی اعداد کا کون سا اصول لاگو ہو رہا ہے۔"
+       }
       },
       {
        "math": "a \\times b = b \\times a",
@@ -1429,12 +2078,20 @@
        "ur": "غور کریں کہ بائیں جانب $a$ کو $b$ سے ضرب دی گئی ہے، جبکہ دائیں جانب ترتیب الٹ دی گئی ہے یعنی $b$ کو $a$ سے ضرب دی گئی ہے۔",
        "check": [
         "a*b == b*a"
-       ]
+       ],
+       "why": {
+        "en": "In algebra, writing two letters together like $ab$ means they are being multiplied, so we can clearly see this as $a \\times b = b \\times a$. This shows us that only the positions of $a$ and $b$ have been swapped from the left side to the right side.",
+        "ur": "الجبرا میں، دو حروف کو $ab$ کی طرح ایک ساتھ لکھنے کا مطلب ہے کہ وہ آپس میں ضرب کھا رہے ہیں، اس لیے ہم اسے واضح طور پر $a \\times b = b \\times a$ کے طور پر دیکھ سکتے ہیں۔ اس سے ہمیں پتہ چلتا ہے کہ بائیں سے دائیں طرف جاتے ہوئے صرف $a$ اور $b$ کی جگہیں آپس میں بدلی گئی ہیں۔"
+       }
       },
       {
        "math": "",
        "en": "According to the properties of real numbers, when the order of two numbers being multiplied is changed, the product remains the same.",
-       "ur": "حقیقی اعداد کی خصوصیات کے مطابق، جب ضرب ہونے والے دو اعداد کی ترتیب بدل دی جائے تو ان کا حاصل ضرب وہی رہتا ہے۔"
+       "ur": "حقیقی اعداد کی خصوصیات کے مطابق، جب ضرب ہونے والے دو اعداد کی ترتیب بدل دی جائے تو ان کا حاصل ضرب وہی رہتا ہے۔",
+       "why": {
+        "en": "We recall the fundamental rule of real numbers which says that swapping the order of two numbers during multiplication does not change the final answer. Recognizing this pattern helps us connect the given equation to its exact mathematical name.",
+        "ur": "ہم حقیقی اعداد کے اس بنیادی اصول کو یاد کرتے ہیں جو بتاتا ہے کہ ضرب کے عمل کے دوران دو اعداد کی ترتیب بدلنے سے حتمی جواب تبدیل نہیں ہوتا۔ اس ترتیب کو پہچاننے سے ہمیں دی گئی مساوات کو اس کے درست ریاضیاتی نام سے جوڑنے میں مدد ملتی ہے۔"
+       }
       },
       {
        "math": "",
@@ -1442,11 +2099,19 @@
        "ur": "لہٰذا، دی گئی مساوات میں استعمال ہونے والی خاصیت 'باللحاظ ضرب خاصیت مبادلہ' (Commutative property under multiplication) ہے۔",
        "check": [
         "a*b == b*a"
-       ]
+       ],
+       "why": {
+        "en": "In mathematics, the rule that allows numbers to move around or swap places without changing the result is called the 'Commutative property'. Since the operation here is multiplication, we complete our answer by naming it the Commutative property under multiplication.",
+        "ur": "ریاضی میں، وہ اصول جو اعداد کو نتیجہ بدلے بغیر اپنی جگہ بدلنے کی اجازت دیتا ہے، 'خاصیت مبادلہ' (Commutative property) کہلاتا ہے۔ چونکہ یہاں ضرب کا عمل ہو رہا ہے، اس لیے ہم اسے 'ضرب کے لحاظ سے خاصیت مبادلہ' کا نام دے کر اپنا جواب مکمل کرتے ہیں۔"
+       }
       }
      ],
      "answer": "Commutative property under multiplication",
      "enriched": true,
+     "meaning": {
+      "en": "The final answer means that the statement $ab = ba$ is a direct representation of the Commutative property under multiplication. It tells us that for any real numbers $a$ and $b$, multiplying $a$ by $b$ gives the exact same result as multiplying $b$ by $a$.",
+      "ur": "حتمی جواب کا مطلب یہ ہے کہ مساوات $ab = ba$ براہ راست 'ضرب کے لحاظ سے خاصیت مبادلہ' کی نمائندگی کرتی ہے۔ یہ ہمیں بتاتی ہے کہ کسی بھی حقیقی اعداد $a$ اور $b$ کے لیے، $a$ کو $b$ سے ضرب دینے سے بالکل وہی نتیجہ نکلتا ہے جو $b$ کو $a$ سے ضرب دینے سے آتا ہے۔"
+     },
      "book_key": "Commutative property under multiplication"
     }
    ],
@@ -1466,12 +2131,20 @@
       {
        "math": "-3 < -1 \\;\\Rightarrow\\; 0 < 2",
        "en": "We are given the inequality statement $-3 < -1 \\Rightarrow 0 < 2$ and asked to name the property of real numbers used here.",
-       "ur": "ہمیں عدم مساوات کا بیان $-3 < -1 \\Rightarrow 0 < 2$ دیا گیا ہے اور ہمیں یہاں استعمال ہونے والی حقیقی اعداد کی خاصیت کا نام بتانا ہے۔"
+       "ur": "ہمیں عدم مساوات کا بیان $-3 < -1 \\Rightarrow 0 < 2$ دیا گیا ہے اور ہمیں یہاں استعمال ہونے والی حقیقی اعداد کی خاصیت کا نام بتانا ہے۔",
+       "why": {
+        "en": "We start by carefully looking at the given statement to see how the first inequality $-3 < -1$ changes into the second inequality $0 < 2$. Understanding this change is the key to identifying the correct property of real numbers.",
+        "ur": "ہم سب سے پہلے دیے گئے بیان کو غور سے دیکھتے ہیں تاکہ سمجھ سکیں کہ پہلی نا مساوات $-3 < -1$ دوسری نا مساوات $0 < 2$ میں کیسے تبدیل ہو رہی ہے۔ اس تبدیلی کو سمجھنا ہی حقیقی اعداد کی درست خاصیت پہچاننے کی کنجی ہے۔"
+       }
       },
       {
        "math": "-3 + 3 < -1 + 3",
        "en": "Observe the first inequality $-3 < -1$. If we add the same real number $3$ to both sides of the inequality, we get $-3 + 3 < -1 + 3$.",
-       "ur": "پہلی عدم مساوات $-3 < -1$ کا مشاہدہ کریں۔ اگر ہم اس کے دونوں اطراف میں ایک ہی حقیقی عدد $3$ جمع کریں تو ہمیں $-3 + 3 < -1 + 3$ حاصل ہوتا ہے۔"
+       "ur": "پہلی عدم مساوات $-3 < -1$ کا مشاہدہ کریں۔ اگر ہم اس کے دونوں اطراف میں ایک ہی حقیقی عدد $3$ جمع کریں تو ہمیں $-3 + 3 < -1 + 3$ حاصل ہوتا ہے۔",
+       "why": {
+        "en": "To turn $-3$ into $0$, we need to add $3$, so we test adding $3$ to both sides of $-3 < -1$. This helps us see if a single addition operation connects the two parts of the statement.",
+        "ur": "$-3$ کو $0$ بنانے کے لیے ہمیں اس میں $3$ جمع کرنے کی ضرورت ہے، اس لیے ہم $-3 < -1$ کے دونوں اطراف میں $3$ جمع کر کے دیکھتے ہیں۔ اس سے ہمیں یہ جاننے میں مدد ملتی ہے کہ آیا جمع کا ایک ہی عمل اس بیان کے دونوں حصوں کو آپس میں جوڑتا ہے۔"
+       }
       },
       {
        "math": "-3 + 3 = 0, \\quad -1 + 3 = 2",
@@ -1480,12 +2153,20 @@
        "check": [
         "-3 + 3 == 0",
         "-1 + 3 == 2"
-       ]
+       ],
+       "why": {
+        "en": "By doing the simple addition on both sides, we get $0$ on the left and $2$ on the right, which matches $0 < 2$. This proves that the second inequality was indeed formed by adding $3$ to both sides.",
+        "ur": "دونوں طرف جمع کا سادہ عمل کرنے سے ہمیں بائیں طرف $0$ اور دائیں طرف $2$ ملتا ہے، جو کہ بالکل $0 < 2$ کے مطابق ہے۔ اس سے ثابت ہوتا ہے کہ دوسری نا مساوات واقعی دونوں اطراف میں $3$ جمع کرنے سے بنی ہے۔"
+       }
       },
       {
        "math": "\\forall a, b, c \\in \\mathbb{R}, \\quad a < b \\;\\Rightarrow\\; a + c < b + c",
        "en": "According to the additive property of inequalities, adding the same number to both sides of an inequality does not change its direction.",
-       "ur": "عدم مساوات کی جمعی خاصیت کے مطابق، کسی عدم مساوات کے دونوں اطراف میں ایک ہی عدد جمع کرنے سے اس کی سمت نہیں بدلتی۔"
+       "ur": "عدم مساوات کی جمعی خاصیت کے مطابق، کسی عدم مساوات کے دونوں اطراف میں ایک ہی عدد جمع کرنے سے اس کی سمت نہیں بدلتی۔",
+       "why": {
+        "en": "Now we recall the general rule from our textbook: when we add the same real number $c$ to both sides of $a < b$, the inequality sign stays the same. Writing this formal definition connects our specific numbers to a named mathematical law.",
+        "ur": "اب ہم اپنی کتاب سے عمومی اصول یاد کرتے ہیں: جب ہم $a < b$ کے دونوں اطراف میں ایک ہی حقیقی عدد $c$ جمع کرتے ہیں، تو نا مساوات کی علامت تبدیل نہیں ہوتی۔ یہ باقاعدہ تعریف لکھنے سے ہمارے مخصوص اعداد کا تعلق ریاضی کے ایک معلوم قانون سے جڑ جاتا ہے۔"
+       }
       },
       {
        "math": "",
@@ -1494,11 +2175,19 @@
        "check": [
         "-3+3 == 0",
         "-1+3 == 2"
-       ]
+       ],
+       "why": {
+        "en": "By matching our numbers $a = -3$, $b = -1$, and $c = 3$ with the general rule, we can confidently name the exact property. This completes our identification and gives the final answer.",
+        "ur": "اپنے اعداد $a = -3$، $b = -1$، اور $c = 3$ کا عمومی اصول سے موازنہ کر کے، ہم اعتماد کے ساتھ اس خاصیت کا درست نام بتا سکتے ہیں۔ اس سے ہماری شناخت مکمل ہو جاتی ہے اور ہمیں حتمی جواب مل جاتا ہے۔"
+       }
       }
      ],
      "answer": "Additive property",
      "enriched": true,
+     "meaning": {
+      "en": "The final answer 'Additive property' means that the statement $-3 < -1 \\Rightarrow 0 < 2$ is a direct example of the rule that adding the same number to both sides of an inequality keeps it true. You can easily check this by seeing that $-3 + 3 = 0$ and $-1 + 3 = 2$, and indeed $0 < 2$ is a true statement.",
+      "ur": "حتمی جواب 'جمعی خاصیت' (Additive property) کا مطلب ہے کہ بیان $-3 < -1 \\Rightarrow 0 < 2$ اس اصول کی ایک براہِ راست مثال ہے کہ کسی نا مساوات کے دونوں اطراف میں ایک ہی عدد جمع کرنے سے وہ درست رہتی ہے۔ آپ اس کی باآسانی پڑتال ایسے کر سکتے ہیں کہ $-3 + 3 = 0$ اور $-1 + 3 = 2$ ہوتا ہے، اور واقعی $0 < 2$ ایک درست بیان ہے۔"
+     },
      "book_key": "Additive property"
     },
     {
@@ -1508,17 +2197,29 @@
       {
        "math": "a < b \\;\\Rightarrow\\; \\frac{1}{a} > \\frac{1}{b}",
        "en": "We are given a conditional statement about an inequality and need to identify the mathematical property being used.",
-       "ur": "ہمیں عدم مساوات کے بارے میں ایک مشروط بیان دیا گیا ہے اور ہمیں استعمال ہونے والی ریاضیاتی خاصیت کی نشاندہی کرنی ہے۔"
+       "ur": "ہمیں عدم مساوات کے بارے میں ایک مشروط بیان دیا گیا ہے اور ہمیں استعمال ہونے والی ریاضیاتی خاصیت کی نشاندہی کرنی ہے۔",
+       "why": {
+        "en": "To name a mathematical property, we first look closely at how the starting statement $a < b$ transforms into the final statement $\\frac{1}{a} > \\frac{1}{b}$. This helps us see what exact operation was performed on both sides.",
+        "ur": "کسی ریاضیاتی خاصیت کا نام بتانے کے لیے ہم سب سے پہلے یہ غور سے دیکھتے ہیں کہ ابتدائی جملہ $a < b$ آخری جملے $\\frac{1}{a} > \\frac{1}{b}$ میں کیسے تبدیل ہوا ہے۔ اس سے ہمیں یہ سمجھنے میں مدد ملتی ہے کہ دونوں طرف کون سا عمل کیا گیا ہے۔"
+       }
       },
       {
        "math": "a \\text{ and } \\frac{1}{a}, \\quad b \\text{ and } \\frac{1}{b}",
        "en": "Observe the two sides of the statement. In the first part, we have the numbers $a$ and $b$. In the second part, these numbers are inverted to their multiplicative inverses (reciprocals), $\\frac{1}{a}$ and $\\frac{1}{b}$.",
-       "ur": "بیان کے دونوں حصوں کا مشاہدہ کریں۔ پہلے حصے میں ہمارے پاس اعداد $a$ اور $b$ ہیں۔ دوسرے حصے میں، ان اعداد کو ان کے ضربی معکوس (مقلوب) یعنی $\\frac{1}{a}$ اور $\\frac{1}{b}$ میں بدل دیا گیا ہے۔"
+       "ur": "بیان کے دونوں حصوں کا مشاہدہ کریں۔ پہلے حصے میں ہمارے پاس اعداد $a$ اور $b$ ہیں۔ دوسرے حصے میں، ان اعداد کو ان کے ضربی معکوس (مقلوب) یعنی $\\frac{1}{a}$ اور $\\frac{1}{b}$ میں بدل دیا گیا ہے۔",
+       "why": {
+        "en": "We compare the numbers before and after to identify the algebraic change. Seeing $a$ become $\\frac{1}{a}$ and $b$ become $\\frac{1}{b}$ tells us that we have taken the reciprocal (multiplicative inverse) of both sides.",
+        "ur": "ہم الجبری تبدیلی کی نشاندہی کرنے کے لیے پہلے اور بعد کے اعداد کا موازنہ کرتے ہیں۔ $a$ کو $\\frac{1}{a}$ اور $b$ کو $\\frac{1}{b}$ بنتے دیکھ کر ہمیں پتہ چلتا ہے کہ ہم نے دونوں اطراف کا معکوس (ضربی معکوس) لیا ہے۔"
+       }
       },
       {
        "math": "< \\;\\text{ changes to }\\; >",
        "en": "Notice that when we take the reciprocals of both sides (assuming $a$ and $b$ have the same sign), the direction of the inequality sign reverses from less than ($<$) to greater than ($>$).",
-       "ur": "غور کریں کہ جب ہم دونوں اطراف کا مقلوب لیتے ہیں (فرض کریں کہ $a$ اور $b$ کی علامت ایک جیسی ہے)، تو عدم مساوات کی علامت کی سمت چھوٹے ($<$) سے بڑے ($>$) میں الٹ جاتی ہے۔"
+       "ur": "غور کریں کہ جب ہم دونوں اطراف کا مقلوب لیتے ہیں (فرض کریں کہ $a$ اور $b$ کی علامت ایک جیسی ہے)، تو عدم مساوات کی علامت کی سمت چھوٹے ($<$) سے بڑے ($>$) میں الٹ جاتی ہے۔",
+       "why": {
+        "en": "In inequalities, it is crucial to watch the direction of the symbol when an operation is applied. Dividing $1$ by a larger number gives a smaller fraction, which explains why the $<$ sign must flip to $>$ to keep the statement true.",
+        "ur": "نا مساوات میں، جب کوئی عمل کیا جائے تو علامت کے رخ پر نظر رکھنا بہت ضروری ہوتا ہے۔ $1$ کو بڑے عدد سے تقسیم کرنے پر چھوٹی کسر حاصل ہوتی ہے، جو یہ واضح کرتی ہے کہ بیان کو درست رکھنے کے لیے $<$ کی علامت کو $>$ میں کیوں بدلنا چاہیے۔"
+       }
       },
       {
        "math": "2 < 3 \\;\\Rightarrow\\; \\frac{1}{2} > \\frac{1}{3}",
@@ -1526,7 +2227,11 @@
        "ur": "مثال کے طور پر، فرض کریں $a = 2$ اور $b = 3$ ہے۔ ہم جانتے ہیں کہ $2 < 3$ ہے، اور ان کا مقلوب لینے سے $\\frac{1}{2} > \\frac{1}{3}$ حاصل ہوتا ہے (کیونکہ $0.5 > 0.333...$ ہے)۔",
        "check": [
         "R(1,2) > R(1,3)"
-       ]
+       ],
+       "why": {
+        "en": "Testing a rule with simple numbers like $2$ and $3$ is a great way to verify our understanding. This example confirms that even though $2 < 3$, flipping them into fractions makes $\\frac{1}{2}$ ($0.5$) greater than $\\frac{1}{3}$ ($0.333...$).",
+        "ur": "اپنی سمجھ کی تصدیق کے لیے $2$ اور $3$ جیسے سادہ اعداد کے ساتھ اصول کو جانچنا ایک بہترین طریقہ ہے۔ یہ مثال تصدیق کرتی ہے کہ اگرچہ $2 < 3$ ہے، لیکن انہیں کسور میں الٹنے سے $\\frac{1}{2}$ ($0.5$)، $\\frac{1}{3}$ ($0.333...$) سے بڑا ہو جاتا ہے۔"
+       }
       },
       {
        "math": "",
@@ -1534,11 +2239,19 @@
        "ur": "عدم مساوات کا یہ اصول، جہاں مقلوب لینے سے عدم مساوات کی علامت الٹ جاتی ہے، معکوس خاصیت (Reciprocal property) کہلاتا ہے۔",
        "check": [
         "Rational(1,2) > Rational(1,3)"
-       ]
+       ],
+       "why": {
+        "en": "Now that we have seen both the numbers and the inequality sign flip, we match this exact behavior to its official textbook name. This brings us directly to the Reciprocal property of inequalities.",
+        "ur": "اب جب کہ ہم نے اعداد اور نا مساوات کی علامت دونوں کو الٹتے ہوئے دیکھ لیا ہے، ہم اس عمل کو کتاب میں دیے گئے اس کے اصل نام سے ملاتے ہیں۔ یہ ہمیں براہِ راست نا مساوات کی معکوس خاصیت (Reciprocal property) تک لے آتا ہے۔"
+       }
       }
      ],
      "answer": "Reciprocal property",
      "enriched": true,
+     "meaning": {
+      "en": "The final answer means that the rule governing how an inequality flips when we invert its numbers is officially called the Reciprocal property. You can always check this by remembering that a smaller denominator like $2$ in $\\frac{1}{2}$ gives a bigger share than a larger denominator like $3$ in $\\frac{1}{3}$.",
+      "ur": "حتمی جواب کا مطلب یہ ہے کہ وہ اصول جو بتاتا ہے کہ اعداد کو الٹنے پر نا مساوات کی علامت کیسے الٹ جاتی ہے، اسے باقاعدہ طور پر معکوس خاصیت (Reciprocal property) کہا جاتا ہے۔ آپ اس کی پڑتال ہمیشہ یہ یاد رکھ کر کر سکتے ہیں کہ $\\frac{1}{2}$ میں $2$ جیسا چھوٹا مخرج، $\\frac{1}{3}$ میں $3$ جیسے بڑے مخرج کے مقابلے میں بڑا حصہ دیتا ہے۔"
+     },
      "book_key": "Reciprocal property"
     },
     {
@@ -1548,17 +2261,29 @@
       {
        "math": "a < b \\Rightarrow a+c < b+c",
        "en": "We are given the inequality statement: if $a < b$, then $a+c < b+c$, and we need to name the property of real numbers used here.",
-       "ur": "ہمیں عدم مساوات کا یہ بیان دیا گیا ہے: اگر $a < b$ ہو، تو $a+c < b+c$ ہوتا ہے، اور ہمیں یہاں استعمال ہونے والی حقیقی اعداد کی خاصیت کا نام بتانا ہے۔"
+       "ur": "ہمیں عدم مساوات کا یہ بیان دیا گیا ہے: اگر $a < b$ ہو، تو $a+c < b+c$ ہوتا ہے، اور ہمیں یہاں استعمال ہونے والی حقیقی اعداد کی خاصیت کا نام بتانا ہے۔",
+       "why": {
+        "en": "First, we carefully look at the starting condition $a < b$ and the resulting statement $a+c < b+c$ to understand how the inequality is changing. This helps us identify which mathematical operation is being applied to the real numbers.",
+        "ur": "سب سے پہلے، ہم ابتدائی شرط $a < b$ اور نتیجے میں ملنے والے بیان $a+c < b+c$ کو غور سے دیکھتے ہیں تاکہ سمجھ سکیں کہ مساوات میں کیا تبدیلی آ رہی ہے۔ اس سے ہمیں یہ پہچاننے میں مدد ملتی ہے کہ حقیقی اعداد پر کون سا ریاضی کا عمل استعمال ہو رہا ہے۔"
+       }
       },
       {
        "math": "a+c < b+c",
        "en": "Observe that the same real number $c$ is added to both sides of the original inequality $a < b$, and the direction of the inequality sign ($<$) remains unchanged.",
-       "ur": "غور کریں کہ اصل عدم مساوات $a < b$ کے دونوں اطراف میں ایک ہی حقیقی عدد $c$ جمع کیا گیا ہے، اور عدم مساوات کی علامت ($<$) کی سمت تبدیل نہیں ہوئی۔"
+       "ur": "غور کریں کہ اصل عدم مساوات $a < b$ کے دونوں اطراف میں ایک ہی حقیقی عدد $c$ جمع کیا گیا ہے، اور عدم مساوات کی علامت ($<$) کی سمت تبدیل نہیں ہوئی۔",
+       "why": {
+        "en": "Next, we compare both sides of the original inequality with the new one to see the exact change. Noticing that the same number $c$ is added to both $a$ and $b$ without flipping the $<$ sign points us directly to an addition rule.",
+        "ur": "اس کے بعد، ہم اصل نابرابری (inequality) کی دونوں اطراف کا نئی نابرابری سے موازنہ کرتے ہیں تاکہ اصل تبدیلی کو دیکھ سکیں۔ یہ دیکھنا کہ علامت $<$ کو بدلے بغیر $a$ اور $b$ دونوں میں ایک ہی عدد $c$ جمع کیا گیا ہے، ہمیں سیدھا جمع کے اصول کی طرف لے جاتا ہے۔"
+       }
       },
       {
        "math": "\\forall a, b, c \\in \\mathbb{R}, \\quad a < b \\Rightarrow a+c < b+c",
        "en": "According to the properties of inequalities of real numbers, adding the same number to both sides of an inequality preserves the inequality. This rule is called the Additive property.",
-       "ur": "حقیقی اعداد کی عدم مساوات کی خصوصیات کے مطابق، کسی عدم مساوات کے دونوں اطراف میں ایک ہی عدد جمع کرنے سے عدم مساوات برقرار رہتی ہے۔ اس اصول کو جمعی خاصیت (Additive property) کہتے ہیں۔"
+       "ur": "حقیقی اعداد کی عدم مساوات کی خصوصیات کے مطابق، کسی عدم مساوات کے دونوں اطراف میں ایک ہی عدد جمع کرنے سے عدم مساوات برقرار رہتی ہے۔ اس اصول کو جمعی خاصیت (Additive property) کہتے ہیں۔",
+       "why": {
+        "en": "Now, we match our observation with the standard rules of inequalities for real numbers from our textbook. Because the operation used is addition and it keeps the inequality true, we recall that the definition for this exact rule is the Additive property.",
+        "ur": "اب، ہم اپنے مشاہدے کا موازنہ اپنی کتاب میں دیے گئے حقیقی اعداد کی نابرابری کے معیاری اصولوں سے کرتے ہیں۔ چونکہ یہاں جمع کا عمل استعمال ہوا ہے اور یہ نابرابری کو برقرار رکھتا ہے، اس لیے ہم یاد کرتے ہیں کہ اس اصول کی تعریف کو جمعی خاصیت (Additive property) کہتے ہیں۔"
+       }
       },
       {
        "math": "",
@@ -1566,11 +2291,19 @@
        "ur": "لہٰذا، دیے گئے بیان میں استعمال ہونے والی خاصیت جمعی خاصیت (Additive property) ہے۔",
        "check": [
         "1+5 < 2+5"
-       ]
+       ],
+       "why": {
+        "en": "Finally, having matched the mathematical statement with its textbook definition, we clearly state the name of the property to complete our answer.",
+        "ur": "آخر میں، ریاضی کے اس بیان کو کتاب کی تعریف کے ساتھ ملانے کے بعد، ہم اپنا جواب مکمل کرنے کے لیے اس خاصیت کا نام واضح طور پر لکھ دیتے ہیں۔"
+       }
       }
      ],
      "answer": "Additive property",
      "enriched": true,
+     "meaning": {
+      "en": "The final answer means that the Additive property of inequalities is the rule that allows us to add the same real number $c$ to both sides of $a < b$ while keeping the $<$ sign unchanged. You can easily check this by comparing the statement directly with the list of inequality properties in Unit 1 of your textbook.",
+      "ur": "حتمی جواب کا مطلب یہ ہے کہ نابرابری کی جمعی خاصیت (Additive property) وہ اصول ہے جو ہمیں علامت $<$ کو تبدیل کیے بغیر $a < b$ کی دونوں اطراف میں ایک ہی حقیقی عدد $c$ جمع کرنے کی اجازت دیتا ہے۔ آپ اپنی کتاب کے یونٹ 1 میں دی گئی نابرابری کی خصوصیات کی فہرست سے اس بیان کا براہِ راست موازنہ کر کے اسے باآسانی چیک کر سکتے ہیں۔"
+     },
      "book_key": "Additive property"
     },
     {
@@ -1580,17 +2313,29 @@
       {
        "math": "ac < bc, \\quad c > 0",
        "en": "We are given the inequality $ac < bc$ where $c$ is a positive real number ($c > 0$), and we need to name the property that leads to $a < b$.",
-       "ur": "ہمیں غیر مساوات $ac < bc$ دی گئی ہے جہاں $c$ ایک مثبت حقیقی عدد ہے ($c > 0$)، اور ہمیں اس خاصیت کا نام بتانا ہے جس سے $a < b$ حاصل ہوتا ہے۔"
+       "ur": "ہمیں غیر مساوات $ac < bc$ دی گئی ہے جہاں $c$ ایک مثبت حقیقی عدد ہے ($c > 0$)، اور ہمیں اس خاصیت کا نام بتانا ہے جس سے $a < b$ حاصل ہوتا ہے۔",
+       "why": {
+        "en": "We begin by clearly stating our starting condition: $ac < bc$ and $c$ is a positive number ($c > 0$). Noticing that $c > 0$ is the key clue because the sign of $c$ decides whether the inequality symbol stays the same or flips when we remove $c$.",
+        "ur": "ہم سب سے پہلے دی گئی شرط کو واضح طور پر لکھتے ہیں کہ $ac < bc$ ہے اور $c$ ایک مثبت عدد ($c > 0$) ہے۔ یہاں $c > 0$ پر غور کرنا بہت ضروری ہے کیونکہ $c$ کی علامت ہی طے کرتی ہے کہ اسے ختم کرنے پر نابرابری (inequality) کا نشان وہی رہے گا یا الٹ جائے گا۔"
+       }
       },
       {
        "math": "c > 0 \\;\\Rightarrow\\; \\frac{1}{c} > 0",
        "en": "Since $c$ is positive, its multiplicative inverse $\\frac{1}{c}$ is also a positive real number.",
-       "ur": "چونکہ $c$ مثبت ہے، اس لیے اس کا ضربی معکوس $\\frac{1}{c}$ بھی ایک مثبت حقیقی عدد ہے۔"
+       "ur": "چونکہ $c$ مثبت ہے، اس لیے اس کا ضربی معکوس $\\frac{1}{c}$ بھی ایک مثبت حقیقی عدد ہے۔",
+       "why": {
+        "en": "To remove $c$ from both sides of $ac < bc$, we need to multiply by its reciprocal, $\\frac{1}{c}$. Because the reciprocal of a positive number is also positive, knowing $\\frac{1}{c} > 0$ guarantees we are multiplying by a positive value.",
+        "ur": "مساوات $ac < bc$ کی دونوں اطراف سے $c$ کو ختم کرنے کے لیے ہمیں اس کے ضربی معکوس $\\frac{1}{c}$ سے ضرب دینی ہوگی۔ چونکہ کسی مثبت عدد کا معکوس بھی مثبت ہوتا ہے، اس لیے $\\frac{1}{c} > 0$ ہمیں یقین دلاتا ہے کہ ہم ایک مثبت عدد سے ضرب دے رہے ہیں۔"
+       }
       },
       {
        "math": "(ac) \\cdot \\frac{1}{c} < (bc) \\cdot \\frac{1}{c}",
        "en": "According to the multiplicative property of inequality, when we multiply both sides of an inequality by a positive number ($\\frac{1}{c} > 0$), the direction of the inequality sign does not change.",
-       "ur": "غیر مساوات کی ضربی خاصیت کے مطابق، جب ہم کسی غیر مساوات کے دونوں اطراف کو ایک مثبت عدد ($\\frac{1}{c} > 0$) سے ضرب دیتے ہیں، تو غیر مساوات کی علامت کا رخ تبدیل نہیں ہوتا۔"
+       "ur": "غیر مساوات کی ضربی خاصیت کے مطابق، جب ہم کسی غیر مساوات کے دونوں اطراف کو ایک مثبت عدد ($\\frac{1}{c} > 0$) سے ضرب دیتے ہیں، تو غیر مساوات کی علامت کا رخ تبدیل نہیں ہوتا۔",
+       "why": {
+        "en": "Here we apply the multiplicative property of inequality by multiplying both sides by the positive number $\\frac{1}{c}$. Because $\\frac{1}{c} > 0$, the rule of inequalities tells us that the $<$ sign stays pointing in the exact same direction.",
+        "ur": "یہاں ہم نابرابری کی ضربی خاصیت کا استعمال کرتے ہوئے دونوں اطراف کو مثبت عدد $\\frac{1}{c}$ سے ضرب دیتے ہیں۔ چونکہ $\\frac{1}{c} > 0$ ہے، اس لیے نابرابری کا اصول ہمیں بتاتا ہے کہ $<$ کا نشان اپنی اصل سمت میں ہی رہے گا۔"
+       }
       },
       {
        "math": "a < b",
@@ -1599,7 +2344,11 @@
        "check": [
         "2*3 < 5*3",
         "2 < 5"
-       ]
+       ],
+       "why": {
+        "en": "By the multiplicative inverse rule, $c$ and $\\frac{1}{c}$ cancel each other out to leave $1$, simplifying the statement directly to $a < b$. The numerical example with $2 \\cdot 3 < 5 \\cdot 3$ clearly shows how removing the positive factor $3$ leaves the true statement $2 < 5$.",
+        "ur": "ضربی معکوس کے اصول کے تحت $c$ اور $\\frac{1}{c}$ ایک دوسرے سے کٹ کر $1$ بن جاتے ہیں، جس سے یہ عبارت سادہ ہو کر سیدھی $a < b$ رہ جاتی ہے۔ $2 \\cdot 3 < 5 \\cdot 3$ کی عددی مثال سے یہ بات بالکل واضح ہو جاتی ہے کہ مثبت عدد $3$ کو ہٹانے سے درست بیان $2 < 5$ باقی بچتا ہے۔"
+       }
       },
       {
        "math": "",
@@ -1608,11 +2357,19 @@
        "check": [
         "2*3 < 5*3",
         "2 < 5"
-       ]
+       ],
+       "why": {
+        "en": "Since the entire process of going from $ac < bc$ to $a < b$ relied on multiplying both sides by a positive number ($\\frac{1}{c}$), we can confidently name this rule the Multiplicative property.",
+        "ur": "چونکہ $ac < bc$ سے $a < b$ تک پہنچنے کا پورا عمل دونوں اطراف کو ایک مثبت عدد ($\\frac{1}{c}$) سے ضرب دینے پر مشتمل ہے، اس لیے ہم اعتماد کے ساتھ اس اصول کو ضربی خاصیت (Multiplicative property) کا نام دے سکتے ہیں۔"
+       }
       }
      ],
      "answer": "Multiplicative property",
      "enriched": true,
+     "meaning": {
+      "en": "The final answer tells us that the Multiplicative property of inequality is the rule that allows us to cancel a positive factor $c$ from both sides of $ac < bc$ without changing the $<$ sign (sometimes also called the cancellation property for multiplication). You can easily check this using the step's example: since $2 \\cdot 3 < 5 \\cdot 3$ and $3 > 0$, multiplying by $\\frac{1}{3}$ keeps the inequality true as $2 < 5$.",
+      "ur": "حتمی جواب ہمیں بتاتا ہے کہ نابرابری کی ضربی خاصیت (Multiplicative property) ہی وہ اصول ہے جو ہمیں $<$ کا نشان بدلے بغیر $ac < bc$ کی دونوں اطراف سے مثبت جزو ضربی $c$ کو کاٹنے کی اجازت دیتا ہے۔ آپ حل میں دی گئی مثال سے اسے باآسانی چیک کر سکتے ہیں: چونکہ $2 \\cdot 3 < 5 \\cdot 3$ ہے اور $3 > 0$ ہے، اس لیے $\\frac{1}{3}$ سے ضرب دینے پر نابرابری $2 < 5$ کی صورت میں بالکل درست رہتی ہے۔"
+     },
      "book_key": "Multiplicative property"
     },
     {
@@ -1622,17 +2379,29 @@
       {
        "math": "ac < bc \\quad \\text{and} \\quad c < 0 \\;\\Rightarrow\\; a > b",
        "en": "We are given the inequality $ac < bc$ where $c$ is a negative real number ($c < 0$), which implies $a > b$. We need to identify the property of real numbers used here.",
-       "ur": "ہمیں عدم مساوات $ac < bc$ دی گئی ہے جہاں $c$ ایک منفی حقیقی عدد ہے ($c < 0$)، جس سے نتیجہ نکلتا ہے کہ $a > b$۔ ہمیں یہاں استعمال ہونے والی حقیقی اعداد کی خاصیت کا نام بتانا ہے۔"
+       "ur": "ہمیں عدم مساوات $ac < bc$ دی گئی ہے جہاں $c$ ایک منفی حقیقی عدد ہے ($c < 0$)، جس سے نتیجہ نکلتا ہے کہ $a > b$۔ ہمیں یہاں استعمال ہونے والی حقیقی اعداد کی خاصیت کا نام بتانا ہے۔",
+       "why": {
+        "en": "First, let us carefully observe what is happening in the given statement. We see that the common factor $c$ is removed from both sides of $ac < bc$, and because $c$ is negative ($c < 0$), the inequality sign flips from $<$ to $>$.",
+        "ur": "سب سے پہلے ہم دیے گئے بیان کو غور سے دیکھتے ہیں کہ اس میں کیا تبدیلی آ رہی ہے۔ ہم دیکھتے ہیں کہ $ac < bc$ کی دونوں طرف سے مشترک جزو $c$ ختم ہو رہا ہے، اور چونکہ $c$ ایک منفی عدد ہے ($c < 0$)، اس لیے نابرابری کی علامت $<$ سے بدل کر $>$ ہو گئی ہے۔"
+       }
       },
       {
        "math": "c < 0 \\;\\Rightarrow\\; \\frac{1}{c} < 0",
        "en": "Since $c$ is a negative number ($c < 0$), its multiplicative inverse (reciprocal) $\\frac{1}{c}$ is also a negative number.",
-       "ur": "چونکہ $c$ ایک منفی عدد ہے ($c < 0$)، اس لیے اس کا ضربی معکوس $\\frac{1}{c}$ بھی ایک منفی عدد ہے۔"
+       "ur": "چونکہ $c$ ایک منفی عدد ہے ($c < 0$)، اس لیے اس کا ضربی معکوس $\\frac{1}{c}$ بھی ایک منفی عدد ہے۔",
+       "why": {
+        "en": "To remove $c$ from $ac$ and $bc$, we need to multiply by its reciprocal $\\frac{1}{c}$. By the rule of signs, the reciprocal of a negative number is also negative, which prepares us to apply the multiplication rule for negative numbers.",
+        "ur": "$ac$ اور $bc$ میں سے $c$ کو ختم کرنے کے لیے ہمیں اس کے ضربی معکوس $\\frac{1}{c}$ سے ضرب دینے کی ضرورت ہے۔ علامتوں کے اصول کے مطابق ایک منفی عدد کا معکوس بھی منفی ہوتا ہے، جس سے ہمیں منفی اعداد کی ضرب کا اصول لگانے میں مدد ملتی ہے۔"
+       }
       },
       {
        "math": "(ac) \\cdot \\frac{1}{c} > (bc) \\cdot \\frac{1}{c} \\;\\Rightarrow\\; a > b",
        "en": "To isolate $a$ and $b$, we multiply both sides of $ac < bc$ by the negative number $\\frac{1}{c}$ (which is the same as dividing by $c$). According to the rules of inequalities, multiplying or dividing both sides by a negative number reverses the inequality sign from $<$ to $>$.",
-       "ur": "$a$ اور $b$ کو الگ کرنے کے لیے، ہم $ac < bc$ کے دونوں اطراف کو منفی عدد $\\frac{1}{c}$ سے ضرب دیتے ہیں (جو کہ $c$ سے تقسیم کرنے کے برابر ہے)۔ عدم مساوات کے اصولوں کے مطابق، دونوں اطراف کو منفی عدد سے ضرب یا تقسیم کرنے سے عدم مساوات کی علامت $<$ سے الٹ کر $>$ ہو جاتی ہے۔"
+       "ur": "$a$ اور $b$ کو الگ کرنے کے لیے، ہم $ac < bc$ کے دونوں اطراف کو منفی عدد $\\frac{1}{c}$ سے ضرب دیتے ہیں (جو کہ $c$ سے تقسیم کرنے کے برابر ہے)۔ عدم مساوات کے اصولوں کے مطابق، دونوں اطراف کو منفی عدد سے ضرب یا تقسیم کرنے سے عدم مساوات کی علامت $<$ سے الٹ کر $>$ ہو جاتی ہے۔",
+       "why": {
+        "en": "Here we apply the core rule of inequalities: multiplying both sides by the same negative number $\\frac{1}{c}$ reverses the direction of the inequality. This cancels out $c$ and directly gives us the result $a > b$, showing that multiplication is the operation at work.",
+        "ur": "یہاں ہم نابرابری کا بنیادی اصول استعمال کرتے ہیں: دونوں طرف ایک ہی منفی عدد $\\frac{1}{c}$ سے ضرب دینے سے نابرابری کا رخ الٹ جاتا ہے۔ اس سے $c$ کٹ جاتا ہے اور ہمیں براہِ راست $a > b$ حاصل ہوتا ہے، جو ثابت کرتا ہے کہ یہاں ضرب کا عمل کارفرما ہے۔"
+       }
       },
       {
        "math": "5(-2) < 2(-2) \\;\\Rightarrow\\; -10 < -4",
@@ -1642,7 +2411,11 @@
         "5*(-2) == -10",
         "2*(-2) == -4",
         "-10 < -4"
-       ]
+       ],
+       "why": {
+        "en": "To see this rule in action with real numbers, we test it by choosing $a = 5$, $b = 2$, and a negative number $c = -2$. This gives a true starting inequality $-10 < -4$ so we can verify how the sign behaves.",
+        "ur": "اس اصول کو حقیقی اعداد کے ساتھ سمجھنے کے لیے، ہم $a = 5$، $b = 2$ اور ایک منفی عدد $c = -2$ لے کر اسے چیک کرتے ہیں۔ اس سے ہمیں ایک درست ابتدائی نابرابری $-10 < -4$ ملتی ہے تاکہ ہم دیکھ سکیں کہ علامت کیسے بدلتی ہے۔"
+       }
       },
       {
        "math": "(-10)\\left(-\\frac{1}{2}\\right) > (-4)\\left(-\\frac{1}{2}\\right) \\;\\Rightarrow\\; 5 > 2",
@@ -1652,7 +2425,11 @@
         "(-10)*(-R(1,2)) == 5",
         "(-4)*(-R(1,2)) == 2",
         "5 > 2"
-       ]
+       ],
+       "why": {
+        "en": "When we multiply both sides of $-10 < -4$ by $-\\frac{1}{2}$, we get $5$ and $2$. For the statement to remain true ($5 > 2$), the $<$ sign must flip to $>$, proving why the rule requires reversing the inequality.",
+        "ur": "جب ہم $-10 < -4$ کے دونوں طرف $-\\frac{1}{2}$ سے ضرب دیتے ہیں تو ہمیں $5$ اور $2$ ملتے ہیں۔ بیان کو درست رکھنے کے لیے ($5 > 2$)، علامت $<$ کا الٹ کر $>$ ہونا ضروری ہے، جو ثابت کرتا ہے کہ اس اصول میں نابرابری کا رخ کیوں بدلتا ہے۔"
+       }
       },
       {
        "math": "",
@@ -1661,11 +2438,19 @@
        "check": [
         "5*(-2) < 2*(-2)",
         "5 > 2"
-       ]
+       ],
+       "why": {
+        "en": "Since the entire process relies on multiplying (or dividing) both sides of an inequality by a negative number, we name the rule the Multiplicative property of inequality.",
+        "ur": "چونکہ یہ پورا عمل نابرابری کے دونوں اطراف کو ایک منفی عدد سے ضرب (یا تقسیم) کرنے پر مبنی ہے، اس لیے ہم اس اصول کو نابرابری کی ضربی خاصیت (Multiplicative property) کا نام دیتے ہیں۔"
+       }
       }
      ],
      "answer": "Multiplicative property",
      "enriched": true,
+     "meaning": {
+      "en": "The final answer 'Multiplicative property' means that the statement demonstrates the rule for multiplying or dividing an inequality by a negative number ($c < 0$). Whenever we cancel a negative factor from both sides of an inequality, the inequality sign must reverse (from $<$ to $>$) to keep the mathematical statement true, as we checked using $-10 < -4$ becoming $5 > 2$.",
+      "ur": "آخری جواب 'ضربی خاصیت' (Multiplicative property) کا مطلب یہ ہے کہ دیا گیا بیان کسی نابرابری کو منفی عدد ($c < 0$) سے ضرب یا تقسیم کرنے کے اصول کو ظاہر کرتا ہے۔ جب بھی ہم نابرابری کے دونوں طرف سے کسی منفی عدد کو کاٹتے (ختم کرتے) ہیں، تو ریاضیاتی بیان کو درست رکھنے کے لیے نابرابری کی علامت کا الٹ جانا ($<$ سے $>$ ہو جانا) لازمی ہے، جیسا کہ ہم نے $-10 < -4$ سے $5 > 2$ بنا کر پڑتال کی۔"
+     },
      "book_key": "Multiplicative property"
     },
     {
@@ -1675,12 +2460,20 @@
       {
        "math": "a > b \\ \\text{or} \\ a = b \\ \\text{or} \\ a < b",
        "en": "We are given the statement that for any two real numbers $a$ and $b$, either $a > b$, or $a = b$, or $a < b$. We need to name the property of real numbers used here.",
-       "ur": "ہمیں یہ بیان دیا گیا ہے کہ کسی بھی دو حقیقی اعداد $a$ اور $b$ کے لیے، یا تو $a > b$ ہے، یا $a = b$ ہے، یا $a < b$ ہے۔ ہمیں یہاں استعمال ہونے والی حقیقی اعداد کی خاصیت کا نام بتانا ہے۔"
+       "ur": "ہمیں یہ بیان دیا گیا ہے کہ کسی بھی دو حقیقی اعداد $a$ اور $b$ کے لیے، یا تو $a > b$ ہے، یا $a = b$ ہے، یا $a < b$ ہے۔ ہمیں یہاں استعمال ہونے والی حقیقی اعداد کی خاصیت کا نام بتانا ہے۔",
+       "why": {
+        "en": "First, we carefully observe the given mathematical statement to understand how the two real numbers $a$ and $b$ are being compared. This helps us identify which fundamental rule of real number inequalities matches this exact pattern.",
+        "ur": "سب سے پہلے، ہم دیے گئے ریاضیاتی بیان کو غور سے دیکھتے ہیں تاکہ سمجھ سکیں کہ دو حقیقی اعداد $a$ اور $b$ کا موازنہ کیسے کیا جا رہا ہے۔ اس سے ہمیں یہ پہچاننے میں مدد ملتی ہے کہ حقیقی اعداد کی مساوات اور نامساوات کا کون سا بنیادی اصول اس ترتیب سے مطابقت رکھتا ہے۔"
+       }
       },
       {
        "math": "",
        "en": "According to the properties of inequalities of real numbers, when we compare any two real numbers $a$ and $b$, there are only three possibilities: the first number is greater than the second, they are equal, or the first number is less than the second. Exactly one of these three relations holds true at a time.",
-       "ur": "حقیقی اعداد کی عدم مساوات کی خصوصیات کے مطابق، جب ہم کسی بھی دو حقیقی اعداد $a$ اور $b$ کا موازنہ کرتے ہیں، تو صرف تین امکانات ہوتے ہیں: پہلا عدد دوسرے سے بڑا ہے، وہ برابر ہیں، یا پہلا عدد دوسرے سے چھوٹا ہے۔ ایک وقت میں ان تین رشتوں میں سے صرف ایک ہی درست ہوتا ہے۔"
+       "ur": "حقیقی اعداد کی عدم مساوات کی خصوصیات کے مطابق، جب ہم کسی بھی دو حقیقی اعداد $a$ اور $b$ کا موازنہ کرتے ہیں، تو صرف تین امکانات ہوتے ہیں: پہلا عدد دوسرے سے بڑا ہے، وہ برابر ہیں، یا پہلا عدد دوسرے سے چھوٹا ہے۔ ایک وقت میں ان تین رشتوں میں سے صرف ایک ہی درست ہوتا ہے۔",
+       "why": {
+        "en": "We recall the basic rule of order for real numbers, which states that comparing any two numbers always gives three distinct possibilities. Recognizing that only one of the conditions ($a > b$, $a = b$, or $a < b$) can be true at a time points us directly to a specific three-part property.",
+        "ur": "ہم حقیقی اعداد کی ترتیب کے بنیادی اصول کو یاد کرتے ہیں، جو بتاتا ہے کہ کسی بھی دو اعداد کا موازنہ کرنے سے ہمیشہ تین مختلف امکانات سامنے آتے ہیں۔ یہ سمجھنا کہ ان تین شرطوں ($a > b$، $a = b$، یا $a < b$) میں سے ایک وقت میں صرف ایک ہی درست ہو سکتی ہے، ہمیں براہِ راست ایک خاص تین حصوں والی خاصیت کی طرف لے جاتا ہے۔"
+       }
       },
       {
        "math": "\\frac{1}{3} < \\frac{1}{2}",
@@ -1688,7 +2481,11 @@
        "ur": "مثال کے طور پر، اگر ہم دو حقیقی اعداد $\\frac{1}{3}$ اور $\\frac{1}{2}$ لیں، تو صرف تیسرا رشتہ $\\frac{1}{3} < \\frac{1}{2}$ درست ہے، جبکہ $\\frac{1}{3} > \\frac{1}{2}$ اور $\\frac{1}{3} = \\frac{1}{2}$ غلط ہیں۔",
        "check": [
         "R(1,3) < R(1,2)"
-       ]
+       ],
+       "why": {
+        "en": "We test this idea using two actual real numbers, $\\frac{1}{3}$ and $\\frac{1}{2}$, to see the rule in action. Since $\\frac{1}{3} < \\frac{1}{2}$ is true, the other two possibilities are automatically false, which confirms that our comparison is strictly divided into three mutually exclusive cases.",
+        "ur": "ہم اس اصول کو عملی طور پر دیکھنے کے لیے دو حقیقی اعداد $\\frac{1}{3}$ اور $\\frac{1}{2}$ لے کر پرکھتے ہیں۔ چونکہ $\\frac{1}{3} < \\frac{1}{2}$ درست ہے، اس لیے باقی دو امکانات خود بخود غلط ثابت ہوتے ہیں، جس سے تصدیق ہوتی ہے کہ ہمارا موازنہ سختی سے تین الگ الگ صورتوں میں بٹا ہوا ہے۔"
+       }
       },
       {
        "math": "\\text{Trichotomy property}",
@@ -1696,11 +2493,19 @@
        "ur": "دو حقیقی اعداد کے موازنے کو تین باہمی طور پر مختلف امکانات میں تقسیم کرنے کے اس بنیادی اصول کو خاصیتِ تثلیث (Trichotomy property) کہتے ہیں۔",
        "check": [
         "Rational(1,3) < Rational(1,2)"
-       ]
+       ],
+       "why": {
+        "en": "Since the word 'trichotomy' literally means a division into three parts, we connect our three-case comparison directly to its official mathematical name. This gives us the exact name of the property required by the question.",
+        "ur": "چونکہ لفظ 'ٹرائیکوٹومی' (ثلاثی تقسیمی) کا لغوی معنی تین حصوں میں تقسیم ہے، اس لیے ہم اپنے تین صورتوں والے موازنے کو اس کے باقاعدہ ریاضیاتی نام سے جوڑتے ہیں۔ اس سے ہمیں اس خاصیت کا بالکل وہی نام مل جاتا ہے جو سوال میں پوچھا گیا تھا۔"
+       }
       }
      ],
      "answer": "Trichotomy property",
      "enriched": true,
+     "meaning": {
+      "en": "The final answer means that the statement 'Either $a > b$ or $a = b$ or $a < b$' is known as the Trichotomy property of real numbers. You can easily remember and check this because 'tri' means three, matching the three possible ways ($>$, $=$, $<$) to compare any two numbers.",
+      "ur": "حتمی جواب کا مطلب یہ ہے کہ بیان 'یا تو $a > b$ یا $a = b$ یا $a < b$' کو حقیقی اعداد کی ٹرائیکوٹومی خاصیت (ثلاثی تقسیمی خاصیت) کہا جاتا ہے۔ آپ اسے آسانی سے یاد رکھ سکتے ہیں اور جانچ سکتے ہیں کیونکہ 'ٹرائی' (ثلاثی) کا مطلب تین ہے، جو کسی بھی دو اعداد کا موازنہ کرنے کے تین ممکنہ طریقوں ($>$، $=$، $<$) سے بالکل میل کھاتا ہے۔"
+     },
      "book_key": "Trichotomy property"
     }
    ],
@@ -1718,99 +2523,263 @@
      "prompt": "$\\frac{1}{4}$ and $\\frac{1}{3}$",
      "steps": [
       {
-       "math": "\\frac{\\frac{1}{4}+\\frac{1}{3}}{2} = \\frac{7}{24}",
-       "en": "The average of two numbers lies between them. This is the first rational number.",
-       "ur": "دو اعداد کا اوسط ان کے درمیان ہوتا ہے۔ یہ پہلا ناطق عدد ہے۔",
-       "check": [
-        "(Rational(1,4)+Rational(1,3))/2 == Rational(7,24)"
-       ]
-      },
-      {
-       "math": "\\frac{\\frac{7}{24}+\\frac{1}{3}}{2} = \\frac{5}{16}",
-       "en": "Take the average of \\frac{7}{24} and the larger number to get a second rational number.",
-       "ur": "\\frac{7}{24} اور بڑے عدد کا اوسط لیں، یہ دوسرا ناطق عدد ہے۔",
-       "check": [
-        "(Rational(7,24)+Rational(1,3))/2 == Rational(5,16)"
-       ]
-      },
-      {
        "math": "",
-       "en": "Check: \\frac{1}{4} < \\frac{7}{24} < \\frac{5}{16} < \\frac{1}{3}.",
-       "ur": "تصدیق: \\frac{1}{4} < \\frac{7}{24} < \\frac{5}{16} < \\frac{1}{3}۔",
+       "en": "To find a rational number between two given numbers $a$ and $b$, we calculate their average using the formula $\\frac{a+b}{2}$. Here, the given numbers are $\\frac{1}{4}$ and $\\frac{1}{3}$.",
+       "ur": "دو دیے گئے اعداد $a$ اور $b$ کے درمیان ایک ناطق عدد معلوم کرنے کے لیے، ہم فارمولہ $\\frac{a+b}{2}$ استعمال کرتے ہوئے ان کا اوسط نکالتے ہیں۔ یہاں دیے گئے اعداد $\\frac{1}{4}$ اور $\\frac{1}{3}$ ہیں۔",
+       "why": {
+        "en": "By the density property of rational numbers, the exact midpoint (average) between any two rational numbers is also a rational number that lies strictly between them. Using the midpoint formula $\\frac{a+b}{2}$ gives us a reliable way to find our first number between $\\frac{1}{4}$ and $\\frac{1}{3}$.",
+        "ur": "ناطق اعداد کی خاصیت کے مطابق، کسی بھی دو ناطق اعداد کا درمیانی نقطہ (اوسط) بھی ایک ناطق عدد ہوتا ہے جو بالکل ان کے درمیان واقع ہوتا ہے۔ فارمولا $\\frac{a+b}{2}$ استعمال کرنے سے ہمیں $\\frac{1}{4}$ اور $\\frac{1}{3}$ کے درمیان پہلا عدد معلوم کرنے کا ایک آسان طریقہ مل جاتا ہے۔"
+       }
+      },
+      {
+       "math": "\\frac{\\frac{1}{4} + \\frac{1}{3}}{2} = \\frac{\\frac{3 + 4}{12}}{2}",
+       "en": "Substitute $\\frac{1}{4}$ and $\\frac{1}{3}$ into the formula to find the first rational number, taking the LCM of $4$ and $3$ which is $12$.",
+       "ur": "پہلا ناطق عدد معلوم کرنے کے لیے فارمولے میں $\\frac{1}{4}$ اور $\\frac{1}{3}$ درج کریں، اور $4$ اور $3$ کا ذواضعاف اقل (LCM) لیں جو کہ $12$ ہے۔",
        "check": [
+        "(R(1,4) + R(1,3))/2 == (R(3 + 4, 12))/2"
+       ],
+       "why": {
+        "en": "To add two fractions with different denominators ($4$ and $3$), the rule of fraction addition requires us to find a common denominator first. Finding their LCM ($12$) allows us to combine the two fractions in the numerator into a single fraction.",
+        "ur": "مختلف مخرج ($4$ اور $3$) والی دو کسروں کو جمع کرنے کے اصول کے مطابق پہلے ان کا مشترک مخرج معلوم کرنا ضروری ہے۔ ان کا ذواضعاف اقل ($12$) لینے سے ہم شمار کنندہ میں موجود دونوں کسروں کو ملا کر ایک کسر بنا سکتے ہیں۔"
+       }
+      },
+      {
+       "math": "\\frac{\\frac{7}{12}}{2} = \\frac{7}{12 \\times 2} = \\frac{7}{24}",
+       "en": "Simplify the fraction to get the first rational number.",
+       "ur": "پہلا ناطق عدد حاصل کرنے کے لیے کسر کو مختصر کریں۔",
+       "check": [
+        "R(7,12)/2 == R(7, 12*2)",
+        "R(7, 12*2) == R(7,24)"
+       ],
+       "why": {
+        "en": "When dividing a fraction by a whole number ($2$), we multiply the denominator of the fraction by that whole number. This simplification gives us $\\frac{7}{24}$, which is our first required rational number lying exactly halfway between $\\frac{1}{4}$ and $\\frac{1}{3}$.",
+        "ur": "جب کسی کسر کو ایک مکمل عدد ($2$) سے تقسیم کیا جاتا ہے، تو ہم کسر کے مخرج کو اس عدد سے ضرب دیتے ہیں۔ اس مختصر عمل سے ہمیں $\\frac{7}{24}$ حاصل ہوتا ہے، جو ہمارا پہلا مطلوبہ ناطق عدد ہے اور $\\frac{1}{4}$ اور $\\frac{1}{3}$ کے بالکل درمیان واقع ہے۔"
+       }
+      },
+      {
+       "math": "\\frac{\\frac{7}{24} + \\frac{1}{3}}{2} = \\frac{\\frac{7 + 8}{24}}{2}",
+       "en": "To find the second rational number, take the average of the first result $\\frac{7}{24}$ and $\\frac{1}{3}$. The LCM of $24$ and $3$ is $24$.",
+       "ur": "دوسرا ناطق عدد معلوم کرنے کے لیے، پہلے نتیجے $\\frac{7}{24}$ اور $\\frac{1}{3}$ کا اوسط لیں۔ $24$ اور $3$ کا ذواضعاف اقل $24$ ہے۔",
+       "check": [
+        "(R(7,24) + R(1,3))/2 == (R(7 + 8, 24))/2"
+       ],
+       "why": {
+        "en": "Since $\\frac{7}{24}$ is already between $\\frac{1}{4}$ and $\\frac{1}{3}$, any number between $\\frac{7}{24}$ and $\\frac{1}{3}$ will also lie inside our original interval. We apply the average formula again using the common denominator $24$ to step toward the second rational number.",
+        "ur": "چونکہ $\\frac{7}{24}$ پہلے ہی $\\frac{1}{4}$ اور $\\frac{1}{3}$ کے درمیان ہے، اس لیے $\\frac{7}{24}$ اور $\\frac{1}{3}$ کے درمیان آنے والا کوئی بھی عدد ہمارے اصل اعداد کے درمیان ہی ہو گا۔ دوسرا ناطق عدد معلوم کرنے کے لیے ہم مشترک مخرج $24$ کی مدد سے دوبارہ اوسط کا فارمولا لگاتے ہیں۔"
+       }
+      },
+      {
+       "math": "\\frac{\\frac{15}{24}}{2} = \\frac{15}{48} = \\frac{5}{16}",
+       "en": "Simplify the fraction by dividing the numerator and denominator by $3$ to get the second rational number.",
+       "ur": "دوسرا ناطق عدد حاصل کرنے کے لیے شمار کنندہ اور مخرج کو $3$ پر تقسیم کر کے کسر کو مختصر کریں۔",
+       "check": [
+        "R(15,24)/2 == R(15,48)",
+        "R(15,48) == R(5,16)"
+       ],
+       "why": {
+        "en": "We simplify the complex fraction into $\\frac{15}{48}$ and then reduce it to its lowest form by dividing both top and bottom by their common factor $3$. This gives us $\\frac{5}{16}$ as our second neat rational number in standard form.",
+        "ur": "ہم اس پیچیدہ کسر کو حل کر کے $\\frac{15}{48}$ بناتے ہیں اور پھر شمار کنندہ اور مخرج دونوں کو ان کے مشترک جزو ضربی $3$ پر تقسیم کر کے مختصر ترین شکل میں لاتے ہیں۔ اس سے ہمیں معیاری شکل میں ہمارا دوسرا ناطق عدد $\\frac{5}{16}$ مل جاتا ہے۔"
+       }
+      },
+      {
+       "math": "\\frac{1}{4} < \\frac{7}{24} < \\frac{5}{16} < \\frac{1}{3}",
+       "en": "Thus, the two rational numbers between $\\frac{1}{4}$ and $\\frac{1}{3}$ are $\\frac{7}{24}$ and $\\frac{5}{16}$.",
+       "ur": "پس، $\\frac{1}{4}$ اور $\\frac{1}{3}$ کے درمیان دو ناطق اعداد $\\frac{7}{24}$ اور $\\frac{5}{16}$ ہیں۔",
+       "check": [
+        "R(1,4) < R(7,24)",
+        "R(7,24) < R(5,16)",
+        "R(5,16) < R(1,3)",
+        "(Rational(1,4)+Rational(1,3))/2 == Rational(7,24)",
+        "(Rational(7,24)+Rational(1,3))/2 == Rational(5,16)",
         "Rational(1,4) < Rational(7,24)",
         "Rational(7,24) < Rational(5,16)",
         "Rational(5,16) < Rational(1,3)"
-       ]
+       ],
+       "why": {
+        "en": "Writing the numbers with the inequality sign ($<$) shows their exact order on the number line from smallest to largest. This confirms that both of our newly found numbers sit properly inside the boundary of $\\frac{1}{4}$ and $\\frac{1}{3}$.",
+        "ur": "اعداد کو عدم مساوات کی علامت ($<$) کے ساتھ لکھنے سے عددی خط پر ان کی چھوٹے سے بڑے کی طرف درست ترتیب واضح ہوتی ہے۔ اس سے تصدیق ہو جاتی ہے کہ ہمارے معلوم کردہ دونوں نئے اعداد واقعی $\\frac{1}{4}$ اور $\\frac{1}{3}$ کی حدود کے اندر موجود ہیں۔"
+       }
       }
      ],
-     "answer": "$\\frac{7}{24}$ and $\\frac{5}{16}$"
+     "answer": "$\\frac{7}{24}$ and $\\frac{5}{16}$",
+     "enriched": true,
+     "meaning": {
+      "en": "The final answer means that $\\frac{7}{24}$ and $\\frac{5}{16}$ are two exact fractions (rational numbers) that are greater than $\\frac{1}{4}$ and smaller than $\\frac{1}{3}$. You can easily check this by rewriting all of them with a common denominator or noticing the inequality $\\frac{1}{4} < \\frac{7}{24} < \\frac{5}{16} < \\frac{1}{3}$.",
+      "ur": "حتمی جواب کا مطلب یہ ہے کہ $\\frac{7}{24}$ اور $\\frac{5}{16}$ ایسی دو کسریں (ناطق اعداد) ہیں جو $\\frac{1}{4}$ سے بڑی اور $\\frac{1}{3}$ سے چھوٹی ہیں۔ آپ ان تمام کسروں کا مخرج یکساں کر کے یا ترتیب $\\frac{1}{4} < \\frac{7}{24} < \\frac{5}{16} < \\frac{1}{3}$ کو دیکھ کر باآسانی اس جواب کی پڑتال کر سکتے ہیں۔"
+     }
     },
     {
      "label": "ii",
      "prompt": "$3$ and $4$",
      "steps": [
       {
-       "math": "\\frac{3+4}{2} = \\frac{7}{2}",
-       "en": "The average of two numbers lies between them. This is the first rational number.",
-       "ur": "دو اعداد کا اوسط ان کے درمیان ہوتا ہے۔ یہ پہلا ناطق عدد ہے۔",
-       "check": [
-        "(Rational(3,1)+Rational(4,1))/2 == Rational(7,2)"
-       ]
-      },
-      {
-       "math": "\\frac{\\frac{7}{2}+4}{2} = \\frac{15}{4}",
-       "en": "Take the average of \\frac{7}{2} and the larger number to get a second rational number.",
-       "ur": "\\frac{7}{2} اور بڑے عدد کا اوسط لیں، یہ دوسرا ناطق عدد ہے۔",
-       "check": [
-        "(Rational(7,2)+Rational(4,1))/2 == Rational(15,4)"
-       ]
-      },
-      {
        "math": "",
-       "en": "Check: 3 < \\frac{7}{2} < \\frac{15}{4} < 4.",
-       "ur": "تصدیق: 3 < \\frac{7}{2} < \\frac{15}{4} < 4۔",
+       "en": "We are given two rational numbers $3$ and $4$, and we need to find two rational numbers between them.",
+       "ur": "ہمیں دو ناطق اعداد $3$ اور $4$ دیے گئے ہیں، اور ہمیں ان کے درمیان دو ناطق اعداد معلوم کرنے ہیں۔",
+       "why": {
+        "en": "Even though $3$ and $4$ are consecutive whole numbers, there are infinitely many rational numbers (fractions) between them. Our goal is to find just two of these fractions that sit on the number line between $3$ and $4$.",
+        "ur": "اگرچہ $3$ اور $4$ دو لگاتار مکمل اعداد ہیں، لیکن ان کے درمیان لا تعداد ناطق اعداد (کسر) موجود ہیں۔ ہمارا مقصد عددی خط پر $3$ اور $4$ کے درمیان آنے والے ایسے ہی کوئی سے دو ناطق اعداد تلاش کرنا ہے۔"
+       }
+      },
+      {
+       "math": "\\frac{a + b}{2}",
+       "en": "By the density property of rational numbers, the average of any two rational numbers $a$ and $b$ is also a rational number that lies exactly between them.",
+       "ur": "ناطق اعداد کی کثافتی خاصیت کے مطابق، کسی بھی دو ناطق اعداد $a$ اور $b$ کا اوسط بھی ایک ناطق عدد ہوتا ہے جو بالکل ان کے درمیان واقع ہوتا ہے۔",
+       "why": {
+        "en": "The easiest way to find a number strictly between two numbers $a$ and $b$ is to find their midpoint (average) using the formula $\\frac{a + b}{2}$. This guarantees that our new number is rational and lies right in the middle.",
+        "ur": "دو اعداد $a$ اور $b$ کے بالکل درمیان کوئی عدد معلوم کرنے کا سب سے آسان طریقہ فارمولا $\\frac{a + b}{2}$ کے ذریعے ان کا وسطی نقطہ (اوسط) نکالنا ہے۔ یہ اس بات کی ضمانت دیتا ہے کہ ہمارا نیا عدد ناطق ہے اور بالکل درمیان میں واقع ہے۔"
+       }
+      },
+      {
+       "math": "\\frac{3 + 4}{2} = \\frac{7}{2}",
+       "en": "First, we find the average of $3$ and $4$. This gives us our first rational number, which is $\\frac{7}{2}$.",
+       "ur": "سب سے پہلے، ہم $3$ اور $4$ کا اوسط معلوم کرتے ہیں۔ اس سے ہمیں پہلا ناطق عدد $\\frac{7}{2}$ ملتا ہے۔",
+       "check": [
+        "(Rational(3,1) + Rational(4,1))/2 == Rational(7,2)"
+       ],
+       "why": {
+        "en": "By putting $3$ and $4$ into our average formula, we get $\\frac{7}{2}$. This gives us the exact midpoint between $3$ and $4$, which completes half of our question by giving us the first required rational number.",
+        "ur": "اپنے اوسط کے فارمولے میں $3$ اور $4$ درج کرنے سے ہمیں $\\frac{7}{2}$ ملتا ہے۔ یہ ہمیں $3$ اور $4$ کے بالکل درمیان کا نقطہ دیتا ہے، جس سے پہلا مطلوبہ ناطق عدد مل جاتا ہے اور ہمارا آدھا سوال حل ہو جاتا ہے۔"
+       }
+      },
+      {
+       "math": "\\frac{\\frac{7}{2} + 4}{2} = \\frac{\\frac{7 + 8}{2}}{2}",
+       "en": "To find the second rational number, we take the average of the first rational number $\\frac{7}{2}$ and the larger given number $4$. We start by taking the LCM of the numerator.",
+       "ur": "دوسرا ناطق عدد معلوم کرنے کے لیے، ہم پہلے ناطق عدد $\\frac{7}{2}$ اور دیے گئے بڑے عدد $4$ کا اوسط لیتے ہیں۔ ہم شمار کنندہ کا ذواضعاف اقل (LCM) لے کر شروعات کرتے ہیں۔",
+       "check": [
+        "(Rational(7,2) + Rational(4,1))/2 == ((Rational(7,1) + Rational(8,1))/2)/2"
+       ],
+       "why": {
+        "en": "Since $\\frac{7}{2}$ is already between $3$ and $4$, any number between $\\frac{7}{2}$ and $4$ will also lie between $3$ and $4$. We apply the average formula again to $\\frac{7}{2}$ and $4$, using the LCM in the numerator so we can add the fraction and the whole number.",
+        "ur": "چونکہ $\\frac{7}{2}$ پہلے ہی $3$ اور $4$ کے درمیان ہے، اس لیے $\\frac{7}{2}$ اور $4$ کے درمیان آنے والا کوئی بھی عدد $3$ اور $4$ کے درمیان بھی ہو گا۔ ہم $\\frac{7}{2}$ اور $4$ پر دوبارہ اوسط کا فارمولا لگاتے ہیں، اور کسر اور مکمل عدد کو جمع کرنے کے لیے شمار کنندہ میں ذواضعاف اقل (LCM) لیتے ہیں۔"
+       }
+      },
+      {
+       "math": "\\frac{\\frac{15}{2}}{2} = \\frac{15}{2 \\times 2} = \\frac{15}{4}",
+       "en": "Simplifying the fraction further gives our second rational number, which is $\\frac{15}{4}$.",
+       "ur": "کسر کو مزید مختصر کرنے سے ہمیں دوسرا ناطق عدد ملتا ہے، جو کہ $\\frac{15}{4}$ ہے۔",
+       "check": [
+        "Rational(15,2)/2 == Rational(15,4)",
+        "Rational(15, 2*2) == Rational(15,4)"
+       ],
+       "why": {
+        "en": "By adding the numerator to get $15$ and multiplying the denominators $2 \\times 2$, we simplify the complex fraction into a single clean fraction, $\\frac{15}{4}$. This gives us our second required rational number.",
+        "ur": "شمار کنندہ کو جمع کر کے $15$ حاصل کرنے اور مخرج $2 \\times 2$ کو ضرب دینے سے، ہم اس پیچیدہ کسر کو ایک سادہ کسر $\\frac{15}{4}$ میں بدل لیتے ہیں۔ اس سے ہمیں ہمارا دوسرا مطلوبہ ناطق عدد مل جاتا ہے۔"
+       }
+      },
+      {
+       "math": "3 < \\frac{7}{2} < \\frac{15}{4} < 4",
+       "en": "Thus, the two required rational numbers between $3$ and $4$ are $\\frac{7}{2}$ and $\\frac{15}{4}$.",
+       "ur": "پس، $3$ اور $4$ کے درمیان مطلوبہ دو ناطق اعداد $\\frac{7}{2}$ اور $\\frac{15}{4}$ ہیں۔",
        "check": [
         "Rational(3,1) < Rational(7,2)",
         "Rational(7,2) < Rational(15,4)",
-        "Rational(15,4) < Rational(4,1)"
-       ]
+        "Rational(15,4) < Rational(4,1)",
+        "(Rational(3,1)+Rational(4,1))/2 == Rational(7,2)",
+        "(Rational(7,2)+Rational(4,1))/2 == Rational(15,4)"
+       ],
+       "why": {
+        "en": "Finally, we write the numbers in ascending order using inequality signs to clearly show their positions on the number line. This confirms that both $\\frac{7}{2}$ and $\\frac{15}{4}$ lie strictly between $3$ and $4$.",
+        "ur": "آخر میں، عددی خط پر ان کی جگہ واضح کرنے کے لیے ہم ان اعداد کو علامتِ عدم مساوات کی مدد سے صعودی ترتیب (چھوٹے سے بڑے کی طرف) میں لکھتے ہیں۔ یہ تصدیق کرتا ہے کہ $\\frac{7}{2}$ اور $\\frac{15}{4}$ دونوں واقعی $3$ اور $4$ کے درمیان واقع ہیں۔"
+       }
       }
      ],
-     "answer": "$\\frac{7}{2}$ and $\\frac{15}{4}$"
+     "answer": "$\\frac{7}{2}$ and $\\frac{15}{4}$",
+     "enriched": true,
+     "meaning": {
+      "en": "The final answer means that $\\frac{7}{2}$ and $\\frac{15}{4}$ are two fractions that sit on the number line between the whole numbers $3$ and $4$. You can check this by remembering how we found them: $\\frac{7}{2}$ is the exact midpoint between $3$ and $4$, and $\\frac{15}{4}$ is the exact midpoint between $\\frac{7}{2}$ and $4$, which confirms that $3 < \\frac{7}{2} < \\frac{15}{4} < 4$.",
+      "ur": "حتمی جواب کا مطلب یہ ہے کہ $\\frac{7}{2}$ اور $\\frac{15}{4}$ دو ایسی کسریں ہیں جو عددی خط پر مکمل اعداد $3$ اور $4$ کے درمیان واقع ہیں۔ آپ اس کی پڑتال اپنے حل کے طریقے کو یاد کر کے کر سکتے ہیں: $\\frac{7}{2}$ بالکل $3$ اور $4$ کے درمیان کا نقطہ ہے، اور $\\frac{15}{4}$ بالکل $\\frac{7}{2}$ اور $4$ کے درمیان کا نقطہ ہے، جس سے تصدیق ہوتی ہے کہ $3 < \\frac{7}{2} < \\frac{15}{4} < 4$ ہے۔"
+     }
     },
     {
      "label": "iii",
      "prompt": "$\\frac{3}{5}$ and $\\frac{4}{5}$",
      "steps": [
       {
-       "math": "\\frac{\\frac{3}{5}+\\frac{4}{5}}{2} = \\frac{7}{10}",
-       "en": "The average of two numbers lies between them. This is the first rational number.",
-       "ur": "دو اعداد کا اوسط ان کے درمیان ہوتا ہے۔ یہ پہلا ناطق عدد ہے۔",
+       "math": "a = \\frac{3}{5}, \\quad b = \\frac{4}{5}",
+       "en": "The given two rational numbers are $\\frac{3}{5}$ and $\\frac{4}{5}$. We need to find two rational numbers between them.",
+       "ur": "دیے گئے دو ناطق اعداد $\\frac{3}{5}$ اور $\\frac{4}{5}$ ہیں۔ ہمیں ان کے درمیان دو ناطق اعداد معلوم کرنے ہیں۔",
        "check": [
-        "(Rational(3,5)+Rational(4,5))/2 == Rational(7,10)"
-       ]
+        "R(3,5) < R(4,5)"
+       ],
+       "why": {
+        "en": "We start by labeling the two given fractions as $a = \\frac{3}{5}$ and $b = \\frac{4}{5}$. This makes it easy to substitute them into our formula in the next steps.",
+        "ur": "ہم دیے گئے دونوں ناطق اعداد کو $a = \\frac{3}{5}$ اور $b = \\frac{4}{5}$ کا نام دیتے ہیں۔ اس سے اگلے مراحل میں انہیں فارمولے میں درج کرنا آسان ہو جائے گا۔"
+       }
       },
       {
-       "math": "\\frac{\\frac{7}{10}+\\frac{4}{5}}{2} = \\frac{3}{4}",
-       "en": "Take the average of \\frac{7}{10} and the larger number to get a second rational number.",
-       "ur": "\\frac{7}{10} اور بڑے عدد کا اوسط لیں، یہ دوسرا ناطق عدد ہے۔",
-       "check": [
-        "(Rational(7,10)+Rational(4,5))/2 == Rational(3,4)"
-       ]
+       "math": "\\text{Midpoint} = \\frac{a + b}{2}",
+       "en": "A rational number between any two numbers $a$ and $b$ can be found by taking their average (midpoint).",
+       "ur": "کسی بھی دو اعداد $a$ اور $b$ کے درمیان ایک ناطق عدد ان کا اوسط (درمیانی نقطہ) لے کر معلوم کیا جا سکتا ہے۔",
+       "why": {
+        "en": "By the density property of real numbers, the exact middle (average) of any two rational numbers is also a rational number that lies right between them. Writing down the midpoint formula $\\frac{a + b}{2}$ gives us a clear rule to find our answers.",
+        "ur": "حقیقی اعداد کی خاصیت کے مطابق، کسی بھی دو ناطق اعداد کا درمیانی نقطہ (اوسط) بھی ایک ناطق عدد ہوتا ہے جو بالکل ان کے درمیان واقع ہوتا ہے۔ درمیانی نقطے کا فارمولا $\\frac{a + b}{2}$ لکھنے سے ہمیں مطلوبہ اعداد معلوم کرنے کا واضح طریقہ مل جاتا ہے۔"
+       }
       },
       {
-       "math": "",
-       "en": "Check: \\frac{3}{5} < \\frac{7}{10} < \\frac{3}{4} < \\frac{4}{5}.",
-       "ur": "تصدیق: \\frac{3}{5} < \\frac{7}{10} < \\frac{3}{4} < \\frac{4}{5}۔",
+       "math": "\\frac{\\frac{3}{5} + \\frac{4}{5}}{2} = \\frac{\\frac{3+4}{5}}{2} = \\frac{\\frac{7}{5}}{2} = \\frac{7}{5 \\times 2} = \\frac{7}{10}",
+       "en": "Find the first rational number by taking the average of $\\frac{3}{5}$ and $\\frac{4}{5}$. Since the denominators are the same, we simply add the numerators.",
+       "ur": "$\\frac{3}{5}$ اور $\\frac{4}{5}$ کا اوسط لے کر پہلا ناطق عدد معلوم کریں۔ چونکہ مخرج ایک جیسے ہیں، اس لیے ہم صرف شمار کنندگان کو جمع کرتے ہیں۔",
        "check": [
+        "(R(3,5) + R(4,5))/2 == R(7,5)/2",
+        "R(7,5)/2 == R(7,10)"
+       ],
+       "why": {
+        "en": "We apply the midpoint formula to $\\frac{3}{5}$ and $\\frac{4}{5}$, adding the numerators directly since the denominator $5$ is the same, and then dividing by $2$. This gives us $\\frac{7}{10}$, which is our first rational number sitting halfway between $\\frac{3}{5}$ and $\\frac{4}{5}$.",
+        "ur": "ہم $\\frac{3}{5}$ اور $\\frac{4}{5}$ پر درمیانی نقطے کا فارمولا لگاتے ہیں؛ کیونکہ نسب نما $5$ یکساں ہے اس لیے شمار کنندگان کو براہِ راست جمع کر کے $2$ پر تقسیم کرتے ہیں۔ اس سے ہمیں پہلا ناطق عدد $\\frac{7}{10}$ ملتا ہے جو $\\frac{3}{5}$ اور $\\frac{4}{5}$ کے بالکل درمیان ہے۔"
+       }
+      },
+      {
+       "math": "\\frac{7}{10} + \\frac{4}{5} = \\frac{7}{10} + \\frac{4 \\times 2}{5 \\times 2} = \\frac{7 + 8}{10} = \\frac{15}{10}",
+       "en": "To find a second rational number, we take the average of the new number $\\frac{7}{10}$ and the larger given number $\\frac{4}{5}$. First, add them by taking the LCM of the denominators, which is $10$.",
+       "ur": "دوسرا ناطق عدد معلوم کرنے کے لیے، ہم نئے عدد $\\frac{7}{10}$ اور دیے گئے بڑے عدد $\\frac{4}{5}$ کا اوسط لیتے ہیں۔ پہلے مخرج کا ذواضعاف اقل (LCM) لے کر انہیں جمع کریں، جو کہ $10$ ہے۔",
+       "check": [
+        "R(7,10) + R(4,5) == R(15,10)"
+       ],
+       "why": {
+        "en": "To find a second number in the same interval, we can find the middle of our new number $\\frac{7}{10}$ and the boundary $\\frac{4}{5}$. First, we add them by making a common denominator of $10$, which gives the sum $\\frac{15}{10}$.",
+        "ur": "اسی وقفے میں دوسرا عدد معلوم کرنے کے لیے ہم نئے عدد $\\frac{7}{10}$ اور دیے گئے عدد $\\frac{4}{5}$ کا درمیانی نقطہ نکال سکتے ہیں۔ پہلے ہم ذواضعاف اقل $10$ لے کر ان دونوں کو جمع کرتے ہیں، جس سے مجموعہ $\\frac{15}{10}$ حاصل ہوتا ہے۔"
+       }
+      },
+      {
+       "math": "\\frac{\\frac{15}{10}}{2} = \\frac{15}{10 \\times 2} = \\frac{15}{20} = \\frac{3}{4}",
+       "en": "Now divide the sum by $2$ and simplify the fraction by dividing the numerator and denominator by $5$ to get the second rational number.",
+       "ur": "اب حاصل جمع کو $2$ پر تقسیم کریں اور دوسرا ناطق عدد حاصل کرنے کے لیے شمار کنندہ اور مخرج کو $5$ پر تقسیم کر کے کسر کو مختصر کریں۔",
+       "check": [
+        "R(15,10)/2 == R(15,20)",
+        "R(15,20) == R(3,4)"
+       ],
+       "why": {
+        "en": "To complete the average formula, we divide the sum $\\frac{15}{10}$ by $2$ to get $\\frac{15}{20}$, and then simplify it by dividing the top and bottom by $5$. This gives $\\frac{3}{4}$ in its simplest form, which is our second required rational number.",
+        "ur": "اوسط کا فارمولا مکمل کرنے کے لیے ہم مجموعہ $\\frac{15}{10}$ کو $2$ پر تقسیم کر کے $\\frac{15}{20}$ حاصل کرتے ہیں، اور پھر اوپر نیچے $5$ پر تقسیم کر کے اسے مختصر کرتے ہیں۔ اس سے ہمیں مختصر ترین شکل میں دوسرا مطلوبہ ناطق عدد $\\frac{3}{4}$ مل جاتا ہے۔"
+       }
+      },
+      {
+       "math": "\\frac{3}{5} < \\frac{7}{10} < \\frac{3}{4} < \\frac{4}{5}",
+       "en": "Thus, the two required rational numbers between $\\frac{3}{5}$ and $\\frac{4}{5}$ are $\\frac{7}{10}$ and $\\frac{3}{4}$.",
+       "ur": "پس، $\\frac{3}{5}$ اور $\\frac{4}{5}$ کے درمیان مطلوبہ دو ناطق اعداد $\\frac{7}{10}$ اور $\\frac{3}{4}$ ہیں۔",
+       "check": [
+        "R(3,5) < R(7,10)",
+        "R(7,10) < R(3,4)",
+        "R(3,4) < R(4,5)",
+        "(Rational(3,5)+Rational(4,5))/2 == Rational(7,10)",
+        "(Rational(7,10)+Rational(4,5))/2 == Rational(3,4)",
         "Rational(3,5) < Rational(7,10)",
         "Rational(7,10) < Rational(3,4)",
         "Rational(3,4) < Rational(4,5)"
-       ]
+       ],
+       "why": {
+        "en": "Finally, we arrange all the fractions in ascending order from $\\frac{3}{5}$ to $\\frac{4}{5}$. This clearly shows that both $\\frac{7}{10}$ and $\\frac{3}{4}$ lie strictly inside our given interval.",
+        "ur": "آخر میں، ہم تمام کسور کو $\\frac{3}{5}$ سے $\\frac{4}{5}$ تک سعودی ترتیب میں لکھتے ہیں۔ اس سے واضح ہو جاتا ہے کہ $\\frac{7}{10}$ اور $\\frac{3}{4}$ دونوں دیے گئے اعداد کے درمیان واقع ہیں۔"
+       }
       }
      ],
-     "answer": "$\\frac{7}{10}$ and $\\frac{3}{4}$"
+     "answer": "$\\frac{7}{10}$ and $\\frac{3}{4}$",
+     "enriched": true,
+     "meaning": {
+      "en": "The final answer means that $\\frac{7}{10}$ and $\\frac{3}{4}$ are two fractions that lie on the number line between $\\frac{3}{5}$ and $\\frac{4}{5}$. Because $\\frac{7}{10}$ is the midpoint of $\\frac{3}{5}$ and $\\frac{4}{5}$, and $\\frac{3}{4}$ is the midpoint of $\\frac{7}{10}$ and $\\frac{4}{5}$, we can be completely sure that $\\frac{3}{5} < \\frac{7}{10} < \\frac{3}{4} < \\frac{4}{5}$.",
+      "ur": "آخری جواب کا مطلب یہ ہے کہ $\\frac{7}{10}$ اور $\\frac{3}{4}$ ایسی دو ناطق کسور ہیں جو عددی خط پر $\\frac{3}{5}$ اور $\\frac{4}{5}$ کے درمیان واقع ہیں۔ چونکہ $\\frac{7}{10}$، اعداد $\\frac{3}{5}$ اور $\\frac{4}{5}$ کا درمیانی نقطہ ہے، اور $\\frac{3}{4}$، اعداد $\\frac{7}{10}$ اور $\\frac{4}{5}$ کا درمیانی نقطہ ہے، اس لیے ہم پورے یقین سے کہہ سکتے ہیں کہ $\\frac{3}{5} < \\frac{7}{10} < \\frac{3}{4} < \\frac{4}{5}$ درست ہے۔"
+     }
     }
    ],
    "exercise": "1.1"

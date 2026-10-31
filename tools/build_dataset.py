@@ -122,8 +122,29 @@ def apply_overlay(item, part):
     return 1
 
 
+EXPLAIN = ROOT / "data" / "explain" / f"class{KLASS}"
+
+
+def apply_explain(item, part):
+    """Add the teacher's interpretation (tools/explain_steps.py) to each step: why the step is done and what its result
+    means. Applied only when the overlay was written for exactly these math lines, so it never describes other working."""
+    safe = re.sub(r"[^A-Za-z0-9._-]+", "_", item["id"])
+    path = EXPLAIN / f"{safe}__{part.get('label') or '_'}.json"
+    if not path.exists():
+        return 0
+    data = json.loads(path.read_text(encoding="utf-8"))
+    if data.get("math") != [s.get("math", "") for s in part["steps"]] or data.get("answer_ref") != part["answer"]:
+        return 0
+    for s, w in zip(part["steps"], data["why"]):
+        s["why"] = w
+    if data.get("meaning"):
+        part["meaning"] = data["meaning"]
+    return 1
+
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
+    explained = 0
     enriched = 0
     report = "--report" in sys.argv
     failures, total_checks, total_items = [], 0, 0
@@ -138,6 +159,7 @@ def main():
             ids.add(item["id"])
             for part in item["parts"]:
                 enriched += apply_overlay(item, part)       # detailed working from tools/enrich_steps.py, re-verified below
+                explained += apply_explain(item, part)      # why each step is done and what it means
                 if item["kind"] in ("exercise", "review"):
                     printed = key_for(keys, item, part.get("label", ""))
                     if printed is not None:
@@ -169,7 +191,7 @@ def main():
                 kinds[it["kind"]] = kinds.get(it["kind"], 0) + 1
             print(f"{path.stem}: {unit['title']:<35} {kinds}")
     print(f"items: {total_items}   math checks: {total_checks}   answers agreeing with the book's key: {key_ok}   "
-          f"known key errors: {key_known_errors}   detailed (enriched) parts: {enriched}   failed: {len(failures)}")
+          f"known key errors: {key_known_errors}   detailed (enriched) parts: {enriched}   explained parts: {explained}   failed: {len(failures)}")
     for f in failures:
         print("  FAIL", f)
     sys.exit(1 if failures else 0)

@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex1.2-q3",
+ "label": "iv",
+ "answer_ref": "$\\frac{\\sqrt{5}}{21} + \\frac{4}{21}i$",
+ "math": [
+  "z = \\sqrt{5} - 4i, \\quad a = \\sqrt{5}, \\quad b = -4",
+  "z^{-1} = \\frac{a}{a^2+b^2} - \\frac{b}{a^2+b^2}i",
+  "a^2 + b^2 = (\\sqrt{5})^2 + (-4)^2",
+  "a^2 + b^2 = 5 + 16 = 21",
+  "z^{-1} = \\frac{\\sqrt{5}}{21} - \\frac{-4}{21}i",
+  "z^{-1} = \\frac{\\sqrt{5}}{21} + \\frac{4}{21}i"
+ ],
+ "why": [
+  {
+   "en": "To use the standard multiplicative inverse formula, we first need to clearly separate our complex number into its real part $a$ and imaginary part $b$. Notice that we must take the negative sign along with $4$ so that $b = -4$, which prevents sign mistakes later.",
+   "ur": "ضربی معکوس کا معیاری فارمولا استعمال کرنے کے لیے، ہمیں سب سے پہلے اپنے مخلوط عدد کے حقیقی حصے $a$ اور خیالی حصے $b$ کو واضح طور پر الگ کرنا ہوگا۔ دھیان رہے کہ ہمیں $4$ کے ساتھ منفی کی علامت بھی لینی ہے تاکہ $b = -4$ ہو، جس سے بعد میں علامتوں کی غلطی نہیں ہوگی۔"
+  },
+  {
+   "en": "Instead of dividing directly by a complex number and rationalizing, we state the direct formula for the multiplicative inverse $z^{-1}$. This rule gives us a neat roadmap and immediately writes the inverse in standard $a + bi$ form.",
+   "ur": "مخلوط عدد سے براہِ راست تقسیم کرنے کے بجائے، ہم ضربی معکوس $z^{-1}$ کا براہِ راست فارمولا لکھتے ہیں۔ یہ اصول ہمیں حل کا ایک واضح راستہ دیتا ہے اور معکوس کو فوری طور پر معیاری شکل $a + bi$ میں لکھ دیتا ہے۔"
+  },
+  {
+   "en": "Both fractions in our formula share the same denominator, $a^2 + b^2$, which is the square of the modulus of $z$. Calculating this part separately first keeps our main equation clean and easy to manage.",
+   "ur": "ہمارے فارمولے کی دونوں کسروں کا مخرج ایک ہی ہے، یعنی $a^2 + b^2$۔ اس حصے کو پہلے الگ سے حل کرنے سے ہماری اصل مساوات صاف اور آسان رہتی ہے۔"
+  },
+  {
+   "en": "Remember that squaring a square root cancels the root, so $(\\sqrt{5})^2$ becomes $5$, and the square of a negative number like $-4$ is always positive $16$. Adding them gives $21$, which will be the single real denominator for both parts of our answer.",
+   "ur": "یاد رکھیں کہ جزر کا مربع لینے سے جزر ختم ہو جاتا ہے، اس لیے $(\\sqrt{5})^2$ بن جاتا ہے $5$، اور منفی عدد جیسے $-4$ کا مربع ہمیشہ مثبت $16$ ہوتا ہے۔ انہیں جمع کرنے سے $21$ ملتا ہے، جو ہمارے جواب کے دونوں حصوں کا حقیقی مخرج ہوگا۔"
+  },
+  {
+   "en": "Now that we have the denominator $21$ and the values of $a$ and $b$, we plug them directly into the formula from Step 2. We carefully put $-4$ in the numerator while keeping the formula's own minus sign outside.",
+   "ur": "اب جب کہ ہمارے پاس مخرج $21$ اور $a$ اور $b$ کی قیمتیں موجود ہیں، ہم انہیں براہِ راست مرحلہ 2 کے فارمولے میں درج کرتے ہیں۔ ہم فارمولے کی اپنی منفی علامت کو باہر رکھتے ہوئے شمار کنندہ میں احتیاط سے $-4$ لکھتے ہیں۔"
+  },
+  {
+   "en": "By the basic rule of signs, the two negatives in the imaginary part multiply to become a positive sign. This gives us the simplest standard form of the multiplicative inverse, with clear real and imaginary parts.",
+   "ur": "علامتوں کے بنیادی اصول کے مطابق، خیالی حصے میں موجود دو منفی علامتیں آپس میں ضرب کھا کر مثبت بن جاتی ہیں۔ اس سے ہمیں ضربی معکوس کی سادہ ترین معیاری شکل مل جاتی ہے، جس میں حقیقی اور خیالی حصے واضح ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The complex number $\\frac{\\sqrt{5}}{21} + \\frac{4}{21}i$ is the multiplicative inverse of $\\sqrt{5} - 4i$. This means that if you multiply our original number $\\sqrt{5} - 4i$ by this answer, the product will be exactly the multiplicative identity, $1$ (which is $1 + 0i$).",
+  "ur": "مخلوط عدد $\\frac{\\sqrt{5}}{21} + \\frac{4}{21}i$ دیے گئے عدد $\\sqrt{5} - 4i$ کا ضربی معکوس ہے۔ اس کا مطلب یہ ہے کہ اگر آپ ہمارے اصل عدد $\\sqrt{5} - 4i$ کو اس جواب سے ضرب دیں، تو حاصلِ ضرب بالکل ضربی ذاتی عنصر یعنی $1$ ($1 + 0i$) آئے گا۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

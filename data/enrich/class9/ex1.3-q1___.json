@@ -1,0 +1,65 @@
+{
+ "item": "ex1.3-q1",
+ "label": "",
+ "answer_ref": "$13,\\ 14,\\ 15$",
+ "steps": [
+  {
+   "math": "\\text{Let the three consecutive integers be } x,\\; x+1,\\; x+2",
+   "en": "Consecutive integers come one after another and differ by $1$. If we let the first integer be $x$, then the next two consecutive integers will be $x+1$ and $x+2$.",
+   "ur": "متواتر صحیح اعداد ایک کے بعد ایک آتے ہیں اور ان میں $1$ کا فرق ہوتا ہے۔ اگر ہم پہلے عدد کو $x$ فرض کریں، تو اگلے دو متواتر اعداد $x+1$ اور $x+2$ ہوں گے۔"
+  },
+  {
+   "math": "x + (x+1) + (x+2) = 42",
+   "en": "According to the given condition, the sum of these three integers is $42$. We write this as an algebraic equation.",
+   "ur": "دی گئی شرط کے مطابق، ان تینوں اعداد کا مجموعہ $42$ ہے۔ ہم اسے ایک الجبری مساوات کے طور پر لکھتے ہیں۔"
+  },
+  {
+   "math": "(x + x + x) + (1 + 2) = 42 \\;\\Rightarrow\\; 3x + 3 = 42",
+   "en": "Remove the brackets and combine the like terms: adding the $x$ terms gives $3x$, and adding the constants gives $3$.",
+   "ur": "بریکٹ ہٹائیں اور ایک جیسی رقموں کو ملا کر لکھیں: $x$ والی رقموں کو جمع کرنے سے $3x$ اور مستقل اعداد کو جمع کرنے سے $3$ حاصل ہوتا ہے۔",
+   "check": [
+    "x + (x+1) + (x+2) == 3*x + 3",
+    "1 + 2 == 3"
+   ]
+  },
+  {
+   "math": "3x = 42 - 3 \\;\\Rightarrow\\; 3x = 39",
+   "en": "To isolate the term with $x$, subtract $3$ from both sides of the equation.",
+   "ur": "$x$ والی رقم کو الگ کرنے کے لیے، مساوات کے دونوں اطراف سے $3$ تفریق کریں۔",
+   "check": [
+    "42 - 3 == 39"
+   ]
+  },
+  {
+   "math": "x = \\frac{39}{3} = 13",
+   "en": "Now, divide both sides by $3$ to find the value of the first integer $x$.",
+   "ur": "اب پہلے عدد $x$ کی قیمت معلوم کرنے کے لیے دونوں اطراف کو $3$ پر تقسیم کریں۔",
+   "check": [
+    "R(39, 3) == 13"
+   ]
+  },
+  {
+   "math": "x+1 = 13+1 = 14, \\quad x+2 = 13+2 = 15",
+   "en": "Substitute $x = 13$ into $x+1$ and $x+2$ to find the second and third consecutive integers.",
+   "ur": "دوسرا اور تیسرا متواتر عدد معلوم کرنے کے لیے $x+1$ اور $x+2$ میں $x = 13$ درج کریں۔",
+   "check": [
+    "13 + 1 == 14",
+    "13 + 2 == 15"
+   ]
+  },
+  {
+   "math": "\\text{Required integers: } 13,\\; 14,\\; 15",
+   "en": "Thus, the three consecutive integers are $13$, $14$, and $15$ (we can check that $13 + 14 + 15 = 42$).",
+   "ur": "پس، تین متواتر صحیح اعداد $13$، $14$ اور $15$ ہیں (ہم پڑتال کر سکتے ہیں کہ $13 + 14 + 15 = 42$)۔",
+   "check": [
+    "13 + 14 + 15 == 42",
+    "x + (x+1) + (x+2) == 3*x + 3",
+    "42 - 3 == 39",
+    "Rational(39,3) == 13"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

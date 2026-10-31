@@ -1,0 +1,76 @@
+{
+ "item": "c10-ex6.2-q6",
+ "label": "",
+ "answer_ref": "$m = -\\frac{3}{37},\\ n = \\frac{47}{37}$",
+ "steps": [
+  {
+   "math": "5\\underline{i} - 3\\underline{j} = m(\\underline{i} - 10\\underline{j}) + n(4\\underline{i} - 3\\underline{j})",
+   "en": "We are given the vector equation and need to find the scalar values $m$ and $n$.",
+   "ur": "ہمیں ایک ویکٹر مساوات دی گئی ہے اور ہمیں سکیلر قیمتیں $m$ اور $n$ معلوم کرنی ہیں۔"
+  },
+  {
+   "math": "5\\underline{i} - 3\\underline{j} = m\\underline{i} - 10m\\underline{j} + 4n\\underline{i} - 3n\\underline{j} = (m + 4n)\\underline{i} - (10m + 3n)\\underline{j}",
+   "en": "First, multiply $m$ and $n$ inside the brackets on the right-hand side, and then group the $\\underline{i}$ and $\\underline{j}$ components together.",
+   "ur": "سب سے پہلے دائیں طرف بریکٹ کے اندر $m$ اور $n$ کو ضرب دیں، اور پھر $\\underline{i}$ اور $\\underline{j}$ کے اجزاء کو اکٹھا کریں۔",
+   "check": [
+    "1*1 == 1",
+    "1*(-10) == -10",
+    "1*4 == 4",
+    "1*(-3) == -3"
+   ]
+  },
+  {
+   "math": "m + 4n = 5 \\quad \\text{--- (1)}, \\qquad -10m - 3n = -3 \\implies 10m + 3n = 3 \\quad \\text{--- (2)}",
+   "en": "Since two vectors are equal if and only if their corresponding components are equal, compare the coefficients of $\\underline{i}$ and $\\underline{j}$ on both sides to form two linear equations.",
+   "ur": "چونکہ دو ویکٹرز تبھی برابر ہوتے ہیں جب ان کے متعلقہ اجزاء برابر ہوں، اس لیے دونوں طرف $\\underline{i}$ اور $\\underline{j}$ کے عددی سروں کا موازنہ کر کے دو یک درجی مساواتیں بنائیں۔",
+   "check": [
+    "-(-10) == 10",
+    "-(-3) == 3"
+   ]
+  },
+  {
+   "math": "10m + 40n = 50 \\quad \\text{--- (3)}",
+   "en": "To eliminate $m$, multiply equation (1) by $10$.",
+   "ur": "$m$ کو ختم کرنے کے لیے مساوات (1) کو $10$ سے ضرب دیں۔",
+   "check": [
+    "10*1 == 10",
+    "10*4 == 40",
+    "10*5 == 50"
+   ]
+  },
+  {
+   "math": "(10m + 40n) - (10m + 3n) = 50 - 3 \\implies 37n = 47 \\implies n = \\frac{47}{37}",
+   "en": "Subtract equation (2) from equation (3) and solve for $n$.",
+   "ur": "مساوات (2) کو مساوات (3) میں سے تفریق کریں اور $n$ کی قیمت نکالیں۔",
+   "check": [
+    "40 - 3 == 37",
+    "50 - 3 == 47"
+   ]
+  },
+  {
+   "math": "m + 4\\left(\\frac{47}{37}\\right) = 5 \\implies m = 5 - \\frac{188}{37} = \\frac{185 - 188}{37} = -\\frac{3}{37}",
+   "en": "Substitute $n = \\frac{47}{37}$ into equation (1) and simplify to find the value of $m$.",
+   "ur": "مساوات (1) میں $n = \\frac{47}{37}$ درج کریں اور $m$ کی قیمت معلوم کرنے کے لیے مختصر کریں۔",
+   "check": [
+    "4*47 == 188",
+    "5*37 == 185",
+    "185 - 188 == -3",
+    "5 - 4*R(47,37) == R(-3,37)"
+   ]
+  },
+  {
+   "math": "m = -\\frac{3}{37}, \\quad n = \\frac{47}{37}",
+   "en": "Thus, the required values of $m$ and $n$ are $-\\frac{3}{37}$ and $\\frac{47}{37}$ respectively.",
+   "ur": "پس $m$ اور $n$ کی مطلوبہ قیمتیں بالترتیب $-\\frac{3}{37}$ اور $\\frac{47}{37}$ ہیں۔",
+   "check": [
+    "R(-3,37) + 4*R(47,37) == 5",
+    "10*R(-3,37) + 3*R(47,37) == 3",
+    "40 - 3 == 37",
+    "50 - 3 == 47"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

@@ -1,0 +1,47 @@
+{
+ "item": "c10-ex2.3-q5",
+ "label": "",
+ "answer_ref": "$a = c$",
+ "steps": [
+  {
+   "math": "ax^2 + bx + c = 0",
+   "en": "The given standard quadratic equation is $ax^2 + bx + c = 0$.",
+   "ur": "دی گئی معیاری دو درجی مساوات $ax^2 + bx + c = 0$ ہے۔"
+  },
+  {
+   "math": "\\text{Roots} = \\alpha, \\frac{1}{\\alpha}",
+   "en": "According to the given condition, the roots are reciprocals of each other. Let the roots be $\\alpha$ and $\\frac{1}{\\alpha}$.",
+   "ur": "دی گئی شرط کے مطابق، مساوات کے روٹس (جذر) ایک دوسرے کے معکوس ہیں۔ فرض کریں کہ روٹس $\\alpha$ اور $\\frac{1}{\\alpha}$ ہیں۔"
+  },
+  {
+   "math": "\\text{Product of roots} = \\frac{c}{a}",
+   "en": "Recall the formula for the product of the roots of a quadratic equation, which is $\\frac{\\text{constant term}}{\\text{coefficient of } x^2}$.",
+   "ur": "دو درجی مساوات کے روٹس کے حاصلِ ضرب کا فارمولا یاد کریں، جو کہ $\\frac{\\text{مستقل رقم}}{x^2 \\text{ کا عددی سر}}$ ہے۔"
+  },
+  {
+   "math": "\\alpha \\cdot \\frac{1}{\\alpha} = \\frac{c}{a}",
+   "en": "Substitute the assumed roots $\\alpha$ and $\\frac{1}{\\alpha}$ into the product formula.",
+   "ur": "فرض کیے گئے روٹس $\\alpha$ اور $\\frac{1}{\\alpha}$ کو حاصلِ ضرب کے فارمولے میں درج کریں۔"
+  },
+  {
+   "math": "1 = \\frac{c}{a}",
+   "en": "Since $\\alpha$ and $\\frac{1}{\\alpha}$ cancel each other out, their product is $1$.",
+   "ur": "چونکہ $\\alpha$ اور $\\frac{1}{\\alpha}$ ایک دوسرے سے کٹ جاتے ہیں، اس لیے ان کا حاصلِ ضرب $1$ ہے۔",
+   "check": [
+    "al * (1/al) == 1"
+   ]
+  },
+  {
+   "math": "a = c",
+   "en": "Multiply both sides by $a$ to get the required condition.",
+   "ur": "مطلوبہ شرط حاصل کرنے کے لیے دونوں اطراف کو $a$ سے ضرب دیں۔",
+   "check": [
+    "(c/a).subs(c, a) == 1",
+    "be*(1/be) == 1"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

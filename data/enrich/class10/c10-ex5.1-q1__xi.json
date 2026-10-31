@@ -1,0 +1,53 @@
+{
+ "item": "c10-ex5.1-q1",
+ "label": "xi",
+ "answer_ref": "$\\frac{2 x + 3}{3 x + 5}$",
+ "steps": [
+  {
+   "math": "\\frac{2x^2 + 17x + 21}{3x^2 + 26x + 35}",
+   "en": "Write the given rational expression. To reduce it to the lowest form, we will factorize both the numerator and the denominator by splitting the middle term.",
+   "ur": "دیے گئے ناطق جملے کو لکھیں۔ اسے مختصر ترین شکل میں لانے کے لیے، ہم درمیانی رقم کو توڑ کر شمار کنندہ اور مخرج دونوں کی تجزی (factorization) کریں گے۔"
+  },
+  {
+   "math": "= \\frac{2x^2 + 14x + 3x + 21}{3x^2 + 21x + 5x + 35}",
+   "en": "In the numerator, split $17x$ into $14x + 3x$ (since $14 \\times 3 = 42 = 2 \\times 21$). In the denominator, split $26x$ into $21x + 5x$ (since $21 \\times 5 = 105 = 3 \\times 35$).",
+   "ur": "شمار کنندہ میں $17x$ کو $14x + 3x$ میں توڑیں (کیونکہ $14 \\times 3 = 42 = 2 \\times 21$)۔ مخرج میں $26x$ کو $21x + 5x$ میں توڑیں (کیونکہ $21 \\times 5 = 105 = 3 \\times 35$)۔",
+   "check": [
+    "(2*x**2 + 14*x + 3*x + 21)/(3*x**2 + 21*x + 5*x + 35) == (2*x**2 + 17*x + 21)/(3*x**2 + 26*x + 35)",
+    "14 + 3 == 17",
+    "14 * 3 == 2 * 21",
+    "21 + 5 == 26",
+    "21 * 5 == 3 * 35"
+   ]
+  },
+  {
+   "math": "= \\frac{2x(x + 7) + 3(x + 7)}{3x(x + 7) + 5(x + 7)}",
+   "en": "Take out the common factors from the pairs of terms in both the numerator and the denominator.",
+   "ur": "شمار کنندہ اور مخرج دونوں میں رقموں کے جوڑوں سے مشترک اجزاء (common factors) باہر نکالیں۔",
+   "check": [
+    "(2*x*(x + 7) + 3*(x + 7))/(3*x*(x + 7) + 5*(x + 7)) == (2*x**2 + 17*x + 21)/(3*x**2 + 26*x + 35)"
+   ]
+  },
+  {
+   "math": "= \\frac{(x + 7)(2x + 3)}{(x + 7)(3x + 5)}",
+   "en": "Factor out the common binomial $(x + 7)$ in both the numerator and the denominator.",
+   "ur": "شمار کنندہ اور مخرج دونوں میں سے مشترک دو رقمی جملہ $(x + 7)$ مشترک لیں۔",
+   "check": [
+    "((x + 7)*(2*x + 3))/((x + 7)*(3*x + 5)) == (2*x**2 + 17*x + 21)/(3*x**2 + 26*x + 35)"
+   ]
+  },
+  {
+   "math": "= \\frac{2 x + 3}{3 x + 5}",
+   "en": "Cancel out the common factor $(x + 7)$ from the numerator and the denominator to get the rational expression in its lowest form.",
+   "ur": "مختصر ترین شکل حاصل کرنے کے لیے شمار کنندہ اور مخرج سے مشترک جزو $(x + 7)$ کو کاٹ دیں۔",
+   "check": [
+    "(2*x + 3)/(3*x + 5) == (2*x**2 + 17*x + 21)/(3*x**2 + 26*x + 35)",
+    "((x + 7)*(2*x + 3))/((x + 7)*(3*x + 5)) == (2*x**2 + 17*x + 21)/(3*x**2 + 26*x + 35)",
+    "((2*x + 3)/(3*x + 5)) == (2*x**2 + 17*x + 21)/(3*x**2 + 26*x + 35)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

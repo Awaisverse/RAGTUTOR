@@ -1,0 +1,55 @@
+{
+ "item": "c10-ex6.2-q3",
+ "label": "iii",
+ "answer_ref": "$x = 2,\\ y = 14$",
+ "steps": [
+  {
+   "math": "(y\\underline{i} + 3\\underline{j}) + (-5\\underline{i} + 2x\\underline{j}) = 9\\underline{i} + 7\\underline{j}",
+   "en": "Write down the given vector equation to find the unknown values of $x$ and $y$.",
+   "ur": "$x$ اور $y$ کی نامعلوم قیمتیں معلوم کرنے کے لیے دی گئی سمتی مساوات لکھیں۔"
+  },
+  {
+   "math": "(y - 5)\\underline{i} + (3 + 2x)\\underline{j} = 9\\underline{i} + 7\\underline{j}",
+   "en": "Add the two vectors on the left-hand side by combining the $\\underline{i}$ components together and the $\\underline{j}$ components together.",
+   "ur": "بائیں جانب موجود دونوں سمتیوں کو جمع کرنے کے لیے $\\underline{i}$ والے اجزاء اور $\\underline{j}$ والے اجزاء کو الگ الگ اکٹھا کریں۔"
+  },
+  {
+   "math": "y - 5 = 9 \\quad \\text{and} \\quad 3 + 2x = 7",
+   "en": "Two vectors are equal if and only if their corresponding components are equal. Compare the coefficients of $\\underline{i}$ and $\\underline{j}$ on both sides.",
+   "ur": "دو سمتیے تبھی برابر ہوتے ہیں جب ان کے متناظرہ اجزاء برابر ہوں۔ دونوں اطراف میں $\\underline{i}$ اور $\\underline{j}$ کے عددی سروں کا موازنہ کریں۔"
+  },
+  {
+   "math": "y = 9 + 5 = 14",
+   "en": "Solve the first equation for $y$ by adding $5$ to both sides.",
+   "ur": "پہلی مساوات کو $y$ کے لیے حل کرنے کے لیے دونوں اطراف میں $5$ جمع کریں۔",
+   "check": [
+    "9 + 5 == 14",
+    "(y - 5).subs(y, 14) == 9"
+   ]
+  },
+  {
+   "math": "2x = 7 - 3 = 4 \\implies x = \\frac{4}{2} = 2",
+   "en": "Solve the second equation for $x$ by subtracting $3$ from both sides and then dividing by $2$.",
+   "ur": "دوسری مساوات کو $x$ کے لیے حل کرنے کے لیے دونوں اطراف سے $3$ تفریق کریں اور پھر $2$ پر تقسیم کریں۔",
+   "check": [
+    "7 - 3 == 4",
+    "R(4, 2) == 2",
+    "(3 + 2*x).subs(x, 2) == 7"
+   ]
+  },
+  {
+   "math": "x = 2,\\quad y = 14",
+   "en": "State the final values of $x$ and $y$.",
+   "ur": "$x$ اور $y$ کی حتمی قیمتیں بیان کریں۔",
+   "check": [
+    "(y - 5).subs({x: 2, y: 14}) == 9",
+    "(2*x + 3).subs({x: 2, y: 14}) == 7",
+    "(y - 5).subs({x: (2), y: (14)}) == (9)",
+    "(2*x + 3).subs({x: (2), y: (14)}) == (7)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

@@ -1,0 +1,95 @@
+{
+ "item": "c10-ex3.5-q8",
+ "label": "ii",
+ "answer_ref": "verified: both sides $= \\begin{bmatrix} \\frac{1}{10} & \\frac{3}{80} \\\\ 0 & - \\frac{1}{8} \\end{bmatrix}$",
+ "math": [
+  "",
+  "AB = \\begin{bmatrix} 1 & 2 \\\\ 8 & 0 \\end{bmatrix}\\begin{bmatrix} 0 & -1 \\\\ 5 & 2 \\end{bmatrix} = \\begin{bmatrix} (1)(0) + (2)(5) & (1)(-1) + (2)(2) \\\\ (8)(0) + (0)(5) & (8)(-1) + (0)(2) \\end{bmatrix}",
+  "= \\begin{bmatrix} 0 + 10 & -1 + 4 \\\\ 0 + 0 & -8 + 0 \\end{bmatrix} = \\begin{bmatrix} 10 & 3 \\\\ 0 & -8 \\end{bmatrix}",
+  "|(AB)| = \\begin{vmatrix} 10 & 3 \\\\ 0 & -8 \\end{vmatrix} = (10)(-8) - (3)(0) = -80 - 0 = -80",
+  "\\operatorname{Adj}(AB) = \\begin{bmatrix} -8 & -3 \\\\ 0 & 10 \\end{bmatrix}",
+  "(AB)^{-1} = \\frac{1}{|(AB)|}\\operatorname{Adj}(AB) = \\frac{1}{-80}\\begin{bmatrix} -8 & -3 \\\\ 0 & 10 \\end{bmatrix} = \\begin{bmatrix} \\frac{1}{10} & \\frac{3}{80} \\\\ 0 & - \\frac{1}{8} \\end{bmatrix}",
+  "",
+  "|A| = \\begin{vmatrix} 1 & 2 \\\\ 8 & 0 \\end{vmatrix} = (1)(0) - (2)(8) = 0 - 16 = -16",
+  "\\operatorname{Adj}A = \\begin{bmatrix} 0 & -2 \\\\ -8 & 1 \\end{bmatrix}",
+  "A^{-1} = \\frac{1}{|A|}\\operatorname{Adj}A = \\frac{1}{-16}\\begin{bmatrix} 0 & -2 \\\\ -8 & 1 \\end{bmatrix} = \\begin{bmatrix} 0 & \\frac{1}{8} \\\\ \\frac{1}{2} & - \\frac{1}{16} \\end{bmatrix}",
+  "|B| = \\begin{vmatrix} 0 & -1 \\\\ 5 & 2 \\end{vmatrix} = (0)(2) - (-1)(5) = 0 + 5 = 5",
+  "\\operatorname{Adj}B = \\begin{bmatrix} 2 & 1 \\\\ -5 & 0 \\end{bmatrix}",
+  "B^{-1} = \\frac{1}{|B|}\\operatorname{Adj}B = \\frac{1}{5}\\begin{bmatrix} 2 & 1 \\\\ -5 & 0 \\end{bmatrix} = \\begin{bmatrix} \\frac{2}{5} & \\frac{1}{5} \\\\ -1 & 0 \\end{bmatrix}",
+  "B^{-1}A^{-1} = \\begin{bmatrix} \\frac{2}{5} & \\frac{1}{5} \\\\ -1 & 0 \\end{bmatrix}\\begin{bmatrix} 0 & \\frac{1}{8} \\\\ \\frac{1}{2} & - \\frac{1}{16} \\end{bmatrix} = \\begin{bmatrix} (\\frac{2}{5})(0) + (\\frac{1}{5})(\\frac{1}{2}) & (\\frac{2}{5})(\\frac{1}{8}) + (\\frac{1}{5})(- \\frac{1}{16}) \\\\ (-1)(0) + (0)(\\frac{1}{2}) & (-1)(\\frac{1}{8}) + (0)(- \\frac{1}{16}) \\end{bmatrix}",
+  "= \\begin{bmatrix} 0 + \\frac{1}{10} & \\frac{1}{20} -  \\frac{1}{80} \\\\ 0 + 0 & - \\frac{1}{8} + 0 \\end{bmatrix} = \\begin{bmatrix} \\frac{1}{10} & \\frac{3}{80} \\\\ 0 & - \\frac{1}{8} \\end{bmatrix}",
+  "(AB)^{-1} = \\begin{bmatrix} \\frac{1}{10} & \\frac{3}{80} \\\\ 0 & - \\frac{1}{8} \\end{bmatrix} = B^{-1}A^{-1}"
+ ],
+ "why": [
+  {
+   "en": "To prove a matrix identity, we evaluate each side separately. We start with the left-hand side, $(AB)^{-1}$, which requires us to first multiply $A$ and $B$ inside the brackets and then find the inverse of that product.",
+   "ur": "کالبوں کی اس مساوات کو ثابت کرنے کے لیے ہم دونوں اطراف کو الگ الگ حل کریں گے۔ ہم بائیں طرف یعنی $(AB)^{-1}$ سے شروعات کرتے ہیں، جس کے لیے ہمیں پہلے بریکٹ کے اندر موجود $A$ اور $B$ کو ضرب دینا ہوگا اور پھر حاصل ضرب کا معکوس (inverse) معلوم کرنا ہوگا۔"
+  },
+  {
+   "en": "By the rule of matrix multiplication, we multiply the rows of the first matrix $A$ by the columns of the second matrix $B$. This sets up the arithmetic needed to combine $A$ and $B$ into the single product matrix $AB$.",
+   "ur": "کالبوں کی ضرب کے اصول کے مطابق، ہم پہلے کالب $A$ کی قطاروں کو دوسرے کالب $B$ کے کالموں سے ضرب دیتے ہیں۔ اس سے ہمیں وہ حسابی شکل مل جاتی ہے جس سے $A$ اور $B$ مل کر ایک نیا کالب $AB$ بنائیں گے۔"
+  },
+  {
+   "en": "Simplifying the products and sums gives us the single matrix $AB = \\begin{bmatrix} 10 & 3 \\\\ 0 & -8 \\end{bmatrix}$. Now that we have the matrix inside the brackets, we are ready to find its inverse.",
+   "ur": "ضرب اور جمع کے عمل کو مختصر کرنے سے ہمیں کالب $AB = \\begin{bmatrix} 10 & 3 \\\\ 0 & -8 \\end{bmatrix}$ حاصل ہوتا ہے۔ اب جب کہ بریکٹ کے اندر والا کالب معلوم ہو چکا ہے، ہم اس کا معکوس معلوم کرنے کے لیے تیار ہیں۔"
+  },
+  {
+   "en": "Before finding a matrix's inverse, we must calculate its determinant to make sure the inverse exists. Since $|(AB)| = -80$, which is not $0$, the matrix is non-singular and we have the divisor needed for the inverse formula.",
+   "ur": "کسی بھی کالب کا معکوس معلوم کرنے سے پہلے اس کا مقطع (determinant) نکالنا ضروری ہے تاکہ معلوم ہو سکے کہ معکوس ممکن ہے یا نہیں۔ چونکہ $|(AB)| = -80$ ہے جو کہ $0$ نہیں ہے، اس لیے یہ ایک غیر نادر (non-singular) کالب ہے اور ہمیں معکوس کے فارمولے کے لیے تقسیم کرنے والا عدد مل گیا ہے۔"
+  },
+  {
+   "en": "The inverse formula also requires the adjoint of the matrix, $\\operatorname{Adj}(AB)$. Finding this gives us the numerator part of the inverse formula.",
+   "ur": "معکوس کے فارمولے کے لیے ہمیں کالب کا ایڈجوائنٹ یعنی $\\operatorname{Adj}(AB)$ بھی درکار ہوتا ہے۔ یہ معلوم کرنے سے ہمارے پاس معکوس کے فارمولے کا اوپر والا حصہ آ جاتا ہے۔"
+  },
+  {
+   "en": "Applying the definition of a matrix inverse, we divide each entry of $\\operatorname{Adj}(AB)$ by the determinant $-80$ and simplify the fractions. This completes the left-hand side, giving us $(AB)^{-1} = \\begin{bmatrix} \\frac{1}{10} & \\frac{3}{80} \\\\ 0 & - \\frac{1}{8} \\end{bmatrix}$.",
+   "ur": "کالب کے معکوس کی تعریف کے مطابق، ہم $\\operatorname{Adj}(AB)$ کے ہر رکن کو مقطع $-80$ پر تقسیم کرتے ہیں اور کسروں کو مختصر کرتے ہیں۔ اس سے ہماری بائیں طرف مکمل ہو جاتی ہے اور ہمیں $(AB)^{-1} = \\begin{bmatrix} \\frac{1}{10} & \\frac{3}{80} \\\\ 0 & - \\frac{1}{8} \\end{bmatrix}$ حاصل ہوتا ہے۔"
+  },
+  {
+   "en": "Now we move to the right-hand side, $B^{-1}A^{-1}$. Notice the reversed order: we must find the individual inverses $A^{-1}$ and $B^{-1}$ first, and then multiply $B^{-1}$ by $A^{-1}$.",
+   "ur": "اب ہم دائیں طرف یعنی $B^{-1}A^{-1}$ کو حل کرتے ہیں۔ یہاں ترتیب کے الٹ ہونے پر غور کریں: ہمیں پہلے الگ الگ معکوس $A^{-1}$ اور $B^{-1}$ معلوم کرنے ہوں گے، اور پھر $B^{-1}$ کو $A^{-1}$ سے ضرب دینا ہوگا۔"
+  },
+  {
+   "en": "To find $A^{-1}$, we first compute the determinant $|A|$. The result $-16$ is non-zero, confirming that $A^{-1}$ exists and giving us the number we will divide by.",
+   "ur": "$A^{-1}$ معلوم کرنے کے لیے ہم پہلے مقطع $|A|$ نکالتے ہیں۔ اس کا جواب $-16$ ہے جو کہ صفر نہیں ہے، جس سے تصدیق ہوتی ہے کہ $A^{-1}$ موجود ہے اور ہمیں تقسیم کرنے کے لیے عدد مل جاتا ہے۔"
+  },
+  {
+   "en": "Next, we find $\\operatorname{Adj}A$ using the standard rule for a $2$-by-$2$ matrix. This prepares the matrix needed for the inverse formula of $A$.",
+   "ur": "اس کے بعد، ہم $2$-by-$2$ کالب کے اصول کے مطابق $\\operatorname{Adj}A$ معلوم کرتے ہیں۔ اس سے $A$ کے معکوس کے فارمولے کے لیے ضروری کالب تیار ہو جاتا ہے۔"
+  },
+  {
+   "en": "Dividing each entry of $\\operatorname{Adj}A$ by $|A| = -16$ and simplifying gives us the matrix $A^{-1}$. We now have one of the two matrices needed for the right-hand side product.",
+   "ur": "$\\operatorname{Adj}A$ کے ہر رکن کو $|A| = -16$ پر تقسیم کرنے اور مختصر کرنے سے ہمیں کالب $A^{-1}$ مل جاتا ہے۔ اب ہمارے پاس دائیں طرف کی ضرب کے لیے درکار دو کالبوں میں سے ایک آ چکا ہے۔"
+  },
+  {
+   "en": "Similarly, to find $B^{-1}$, we start by calculating the determinant $|B|$. Since $|B| = 5 \\neq 0$, the inverse $B^{-1}$ exists.",
+   "ur": "بالکل اسی طرح، $B^{-1}$ معلوم کرنے کے لیے ہم پہلے مقطع $|B|$ نکالتے ہیں۔ چونکہ $|B| = 5$ ہے جو $0$ کے برابر نہیں، اس لیے معکوس $B^{-1}$ موجود ہے۔"
+  },
+  {
+   "en": "We then find $\\operatorname{Adj}B$ so that we can apply the inverse formula for matrix $B$.",
+   "ur": "پھر ہم $\\operatorname{Adj}B$ معلوم کرتے ہیں تاکہ کالب $B$ کے معکوس کا فارمولا لگایا جا سکے۔"
+  },
+  {
+   "en": "Dividing each entry of $\\operatorname{Adj}B$ by $|B| = 5$ gives us the complete matrix $B^{-1}$. Now we have both $B^{-1}$ and $A^{-1}$ ready to be multiplied.",
+   "ur": "$\\operatorname{Adj}B$ کے ہر رکن کو $|B| = 5$ پر تقسیم کرنے سے ہمیں مکمل کالب $B^{-1}$ حاصل ہو جاتا ہے۔ اب ہمارے پاس $B^{-1}$ اور $A^{-1}$ دونوں ضرب دینے کے لیے تیار ہیں۔"
+  },
+  {
+   "en": "We now multiply $B^{-1}$ (first) by $A^{-1}$ (second) using row-by-column multiplication. Keeping $B^{-1}$ on the left and $A^{-1}$ on the right is essential because matrix multiplication is not commutative.",
+   "ur": "اب ہم قطار کو کالم سے ضرب دینے کے اصول کے تحت پہلے $B^{-1}$ کو رکھتے ہوئے دوسرے کالب $A^{-1}$ سے ضرب دیتے ہیں۔ $B^{-1}$ کو بائیں اور $A^{-1}$ کو دائیں رکھنا بہت ضروری ہے کیونکہ کالبوں کی ضرب میں ترتیب بدلنے سے جواب بدل جاتا ہے۔"
+  },
+  {
+   "en": "Simplifying the fraction products and adding them gives the final matrix for the right-hand side, $B^{-1}A^{-1} = \\begin{bmatrix} \\frac{1}{10} & \\frac{3}{80} \\\\ 0 & - \\frac{1}{8} \\end{bmatrix}$.",
+   "ur": "کسروں کی ضرب اور جمع کو حل کرنے سے ہمیں دائیں طرف کا حتمی کالب $B^{-1}A^{-1} = \\begin{bmatrix} \\frac{1}{10} & \\frac{3}{80} \\\\ 0 & - \\frac{1}{8} \\end{bmatrix}$ حاصل ہوتا ہے۔"
+  },
+  {
+   "en": "Comparing our result for the left-hand side with our result for the right-hand side, we see that every corresponding entry is identical. This completes the proof that $(AB)^{-1} = B^{-1}A^{-1}$.",
+   "ur": "بائیں طرف کے نتیجے کا دائیں طرف کے نتیجے سے موازنہ کرنے پر ہم دیکھتے ہیں کہ دونوں کالبوں کا ہر متناظرہ رکن بالکل برابر ہے۔ اس سے ثابت ہو جاتا ہے کہ $(AB)^{-1} = B^{-1}A^{-1}$ ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This result verifies the reversal law for the inverse of a product of matrices: the inverse of $AB$ is equal to the product of their individual inverses in reverse order, $B^{-1}A^{-1}$, with both sides equalling $\\begin{bmatrix} \\frac{1}{10} & \\frac{3}{80} \\\\ 0 & - \\frac{1}{8} \\end{bmatrix}$. You can also check that this matrix is truly the inverse of $AB = \\begin{bmatrix} 10 & 3 \\\\ 0 & -8 \\end{bmatrix}$ by multiplying them together to see that they produce the identity matrix $\\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}$.",
+  "ur": "یہ نتیجہ کالبوں کے حاصل ضرب کے معکوس کے الٹ ترتیب کے قانون (reversal law) کی تصدیق کرتا ہے: $AB$ کا معکوس ان کے انفرادی معکوسوں کو الٹ ترتیب میں ضرب دینے یعنی $B^{-1}A^{-1}$ کے برابر ہوتا ہے، اور دونوں اطراف کا جواب $\\begin{bmatrix} \\frac{1}{10} & \\frac{3}{80} \\\\ 0 & - \\frac{1}{8} \\end{bmatrix}$ ہے۔ آپ اس بات کی پڑتال بھی کر سکتے ہیں کہ یہ کالب واقعی $AB = \\begin{bmatrix} 10 & 3 \\\\ 0 & -8 \\end{bmatrix}$ کا معکوس ہے؛ اگر آپ ان دونوں کو ضرب دیں تو وحدانی کالب (identity matrix) $\\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}$ حاصل ہوگا۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

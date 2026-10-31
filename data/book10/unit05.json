@@ -16,28 +16,47 @@
      "prompt": "$\\frac{3a^2-6ab}{2a^2b-4ab^2}$",
      "steps": [
       {
-       "math": "\\frac{3 a^{2} - 6 a b}{2 a^{2} b - 4 a b^{2}}",
-       "en": "Write the fraction.",
-       "ur": "کسر لکھیں۔"
+       "math": "\\frac{3a^2-6ab}{2a^2b-4ab^2}",
+       "en": "Write down the given rational expression that needs to be reduced to its lowest form.",
+       "ur": "دی گئی ناطق عبارت لکھیں جسے مختصر ترین شکل میں تبدیل کرنا ہے۔"
       },
       {
-       "math": "= \\frac{3 a \\left(a - 2 b\\right)}{2 a b \\left(a - 2 b\\right)}",
-       "en": "Factorize the numerator and the denominator.",
-       "ur": "شمار کنندہ اور نسب نما کی تجزی کریں۔",
+       "math": "= \\frac{3a(a - 2b)}{2a^2b - 4ab^2}",
+       "en": "First, factorize the numerator by taking $3a$ as the common factor from both terms.",
+       "ur": "سب سے پہلے، شمار کنندہ کی دونوں رقموں میں سے $3a$ مشترک لے کر اس کی تجزی کریں۔",
+       "check": [
+        "(3*a*(a - 2*b))/(2*a**2*b - 4*a*b**2) == (3*a**2 - 6*a*b)/(2*a**2*b - 4*a*b**2)"
+       ]
+      },
+      {
+       "math": "= \\frac{3a(a - 2b)}{2ab(a - 2b)}",
+       "en": "Next, factorize the denominator by taking $2ab$ as the common factor from both terms.",
+       "ur": "اس کے بعد، مخرج کی دونوں رقموں میں سے $2ab$ مشترک لے کر اس کی تجزی کریں۔",
        "check": [
         "(3*a*(a - 2*b))/(2*a*b*(a - 2*b)) == (3*a**2 - 6*a*b)/(2*a**2*b - 4*a*b**2)"
        ]
       },
       {
-       "math": "= \\frac{3}{2 b}",
-       "en": "Cancel the common factors.",
-       "ur": "مشترک اجزاء کاٹ دیں۔",
+       "math": "= \\frac{3a}{2ab}",
+       "en": "Cancel out the common binomial factor $(a - 2b)$ from the numerator and the denominator.",
+       "ur": "شمار کنندہ اور مخرج میں سے مشترک جزو ضربی $(a - 2b)$ کو کاٹ دیں۔",
        "check": [
+        "(3*a)/(2*a*b) == (3*a**2 - 6*a*b)/(2*a**2*b - 4*a*b**2)"
+       ]
+      },
+      {
+       "math": "= \\frac{3}{2 b}",
+       "en": "Finally, cancel the common variable $a$ from the numerator and the denominator to get the lowest form.",
+       "ur": "آخر میں، مختصر ترین شکل حاصل کرنے کے لیے شمار کنندہ اور مخرج میں سے مشترک متغیر $a$ کو کاٹ دیں۔",
+       "check": [
+        "3/(2*b) == (3*a**2 - 6*a*b)/(2*a**2*b - 4*a*b**2)",
+        "(3*a*(a - 2*b))/(2*a*b*(a - 2*b)) == (3*a**2 - 6*a*b)/(2*a**2*b - 4*a*b**2)",
         "(3/(2*b)) == (3*a**2 - 6*a*b)/(2*a**2*b - 4*a*b**2)"
        ]
       }
      ],
      "answer": "$\\frac{3}{2 b}$",
+     "enriched": true,
      "book_key": "\\frac{3}{2b}"
     },
     {
@@ -45,28 +64,47 @@
      "prompt": "$\\frac{abx+bx^2}{acx+cx^2}$",
      "steps": [
       {
-       "math": "\\frac{a b x + b x^{2}}{a c x + c x^{2}}",
-       "en": "Write the fraction.",
-       "ur": "کسر لکھیں۔"
+       "math": "\\frac{abx + bx^{2}}{acx + cx^{2}}",
+       "en": "Write down the given rational expression to reduce it to its lowest form.",
+       "ur": "دیے گئے ناطق جملے کو اس کی مختصر ترین شکل میں تبدیل کرنے کے لیے لکھیں۔"
       },
       {
-       "math": "= \\frac{b x \\left(a + x\\right)}{c x \\left(a + x\\right)}",
-       "en": "Factorize the numerator and the denominator.",
-       "ur": "شمار کنندہ اور نسب نما کی تجزی کریں۔",
+       "math": "abx + bx^{2} = bx(a + x)",
+       "en": "First, factorize the numerator by taking out the highest common factor $bx$ from both terms.",
+       "ur": "سب سے پہلے، شمار کنندہ کی دونوں رقموں میں سے مشترک جزو ضربی $bx$ کو باہر نکال کر اس کی تجزی کریں۔",
        "check": [
-        "(b*x*(a + x))/(c*x*(a + x)) == (a*b*x + b*x**2)/(a*c*x + c*x**2)"
+        "a*b*x + b*x**2 == b*x*(a + x)"
+       ]
+      },
+      {
+       "math": "acx + cx^{2} = cx(a + x)",
+       "en": "Next, factorize the denominator by taking out the highest common factor $cx$ from both terms.",
+       "ur": "اس کے بعد، مخرج کی دونوں رقموں میں سے مشترک جزو ضربی $cx$ کو باہر نکال کر اس کی تجزی کریں۔",
+       "check": [
+        "a*c*x + c*x**2 == c*x*(a + x)"
+       ]
+      },
+      {
+       "math": "\\frac{abx + bx^{2}}{acx + cx^{2}} = \\frac{bx(a + x)}{cx(a + x)}",
+       "en": "Substitute the factorized forms of the numerator and the denominator back into the fraction.",
+       "ur": "شمار کنندہ اور مخرج کی تجزی شدہ صورتوں کو واپس کسر میں درج کریں۔",
+       "check": [
+        "(a*b*x + b*x**2)/(a*c*x + c*x**2) == (b*x*(a + x))/(c*x*(a + x))"
        ]
       },
       {
        "math": "= \\frac{b}{c}",
-       "en": "Cancel the common factors.",
-       "ur": "مشترک اجزاء کاٹ دیں۔",
+       "en": "Cancel out the common factors $x$ and $(a + x)$ from the numerator and the denominator to obtain the final answer in its lowest form.",
+       "ur": "مختصر ترین شکل میں حتمی جواب حاصل کرنے کے لیے شمار کنندہ اور مخرج سے مشترک اجزائے ضربی $x$ اور $(a + x)$ کو کاٹ دیں۔",
        "check": [
+        "b/c == (b*x*(a + x))/(c*x*(a + x))",
+        "(b*x*(a + x))/(c*x*(a + x)) == (a*b*x + b*x**2)/(a*c*x + c*x**2)",
         "(b/c) == (a*b*x + b*x**2)/(a*c*x + c*x**2)"
        ]
       }
      ],
      "answer": "$\\frac{b}{c}$",
+     "enriched": true,
      "book_key": "\\frac{b}{c}"
     },
     {
@@ -74,28 +112,47 @@
      "prompt": "$\\frac{ac}{a^2x^2-ax}$",
      "steps": [
       {
-       "math": "\\frac{a c}{a^{2} x^{2} - a x}",
-       "en": "Write the fraction.",
-       "ur": "کسر لکھیں۔"
+       "math": "\\frac{ac}{a^2x^2 - ax}",
+       "en": "Write down the given rational expression that needs to be reduced to its lowest form.",
+       "ur": "دی گئی ناطق عبارت لکھیں جسے مختصر ترین شکل میں تبدیل کرنا ہے۔"
       },
       {
-       "math": "= \\frac{a c}{a x \\left(a x - 1\\right)}",
-       "en": "Factorize the numerator and the denominator.",
-       "ur": "شمار کنندہ اور نسب نما کی تجزی کریں۔",
+       "math": "a^2x^2 - ax = ax(ax - 1)",
+       "en": "To simplify the fraction, first factorize the denominator by taking out the highest common factor, which is $ax$.",
+       "ur": "کسر کو مختصر کرنے کے لیے، سب سے پہلے نسب نما میں سے مشترک جزو ضربی $ax$ باہر نکال کر اس کی تجزی کریں۔",
+       "check": [
+        "a**2*x**2 - a*x == a*x*(a*x - 1)"
+       ]
+      },
+      {
+       "math": "= \\frac{ac}{ax(ax - 1)}",
+       "en": "Substitute the factorized form of the denominator back into the given fraction.",
+       "ur": "نسب نما کی تجزی شدہ شکل کو واپس دی گئی کسر میں درج کریں۔",
+       "check": [
+        "(a*c)/(a*x*(a*x - 1)) == (a*c)/(a**2*x**2 - a*x)"
+       ]
+      },
+      {
+       "math": "= \\frac{a \\cdot c}{a \\cdot x(ax - 1)}",
+       "en": "Identify the common factor $a$ present in both the numerator and the denominator.",
+       "ur": "شمار کنندہ اور نسب نما دونوں میں موجود مشترک جزو ضربی $a$ کی نشاندہی کریں۔",
        "check": [
         "(a*c)/(a*x*(a*x - 1)) == (a*c)/(a**2*x**2 - a*x)"
        ]
       },
       {
        "math": "= \\frac{c}{x \\left(a x - 1\\right)}",
-       "en": "Cancel the common factors.",
-       "ur": "مشترک اجزاء کاٹ دیں۔",
+       "en": "Cancel out the common factor $a$ from the numerator and the denominator to get the expression in its lowest form.",
+       "ur": "عبارت کو اس کی مختصر ترین شکل میں حاصل کرنے کے لیے شمار کنندہ اور نسب نما سے مشترک جزو ضربی $a$ کو کاٹ دیں۔",
        "check": [
+        "c/(x*(a*x - 1)) == (a*c)/(a**2*x**2 - a*x)",
+        "(a*c)/(a*x*(a*x - 1)) == (a*c)/(a**2*x**2 - a*x)",
         "(c/(a*x**2 - x)) == (a*c)/(a**2*x**2 - a*x)"
        ]
       }
      ],
      "answer": "$\\frac{c}{x \\left(a x - 1\\right)}$",
+     "enriched": true,
      "book_key": "\\frac{c}{x(ax-1)}"
     },
     {
@@ -103,28 +160,39 @@
      "prompt": "$\\frac{15a^2b^2c}{100(a^2-a^2b)}$",
      "steps": [
       {
-       "math": "\\frac{15 a^{2} b^{2} c}{- 100 a^{2} b + 100 a^{2}}",
-       "en": "Write the fraction.",
-       "ur": "کسر لکھیں۔"
+       "math": "\\frac{15a^2b^2c}{100(a^2-a^2b)}",
+       "en": "Write down the given rational expression to reduce it to its lowest form.",
+       "ur": "دیے گئے ناطق جملے کو اس کی مختصر ترین شکل میں تبدیل کرنے کے لیے لکھیں۔"
       },
       {
-       "math": "= \\frac{15 a^{2} b^{2} c}{- 100 a^{2} \\left(b - 1\\right)}",
-       "en": "Factorize the numerator and the denominator.",
-       "ur": "شمار کنندہ اور نسب نما کی تجزی کریں۔",
+       "math": "= \\frac{15a^2b^2c}{100a^2(1 - b)}",
+       "en": "Take $a^2$ common from the expression $(a^2 - a^2b)$ in the denominator.",
+       "ur": "مخرج میں موجود جملے $(a^2 - a^2b)$ میں سے $a^2$ کو مشترک (کامن) لیں۔",
        "check": [
-        "(15*a**2*b**2*c)/(-100*a**2*(b - 1)) == (15*a**2*b**2*c)/(-100*a**2*b + 100*a**2)"
+        "(15*a**2*b**2*c)/(100*(a**2 - a**2*b)) == (15*a**2*b**2*c)/(100*a**2*(1 - b))"
+       ]
+      },
+      {
+       "math": "= \\frac{5 \\cdot 3 \\cdot a^2 \\cdot b^2c}{5 \\cdot 20 \\cdot a^2 \\cdot (1 - b)}",
+       "en": "Factorize the numerical coefficients $15$ and $100$ to clearly see the greatest common factor, which is $5a^2$.",
+       "ur": "عددی سر $15$ اور $100$ کی تجزی کریں تاکہ سب سے بڑا مشترک جزو ضربی $5a^2$ واضح ہو سکے۔",
+       "check": [
+        "(15*a**2*b**2*c)/(100*a**2*(1 - b)) == (5*3*a**2*b**2*c)/(5*20*a**2*(1 - b))"
        ]
       },
       {
        "math": "= \\frac{3 b^{2} c}{20 \\left(1 - b\\right)}",
-       "en": "Cancel the common factors.",
-       "ur": "مشترک اجزاء کاٹ دیں۔",
+       "en": "Cancel out the common factors $5$ and $a^2$ from both the numerator and the denominator to get the final answer in its lowest form.",
+       "ur": "شمار کنندہ اور مخرج دونوں میں سے مشترک اجزائے ضربی $5$ اور $a^2$ کو کاٹ دیں تاکہ مختصر ترین شکل میں حتمی جواب حاصل ہو سکے۔",
        "check": [
+        "(5*3*a**2*b**2*c)/(5*20*a**2*(1 - b)) == (3*b**2*c)/(20*(1 - b))",
+        "(15*a**2*b**2*c)/(-100*a**2*(b - 1)) == (15*a**2*b**2*c)/(-100*a**2*b + 100*a**2)",
         "(-3*b**2*c/(20*b - 20)) == (15*a**2*b**2*c)/(-100*a**2*b + 100*a**2)"
        ]
       }
      ],
      "answer": "$\\frac{3 b^{2} c}{20 \\left(1 - b\\right)}$",
+     "enriched": true,
      "book_key": "\\frac{3b^2c}{20(1-b)}"
     },
     {
@@ -133,27 +201,38 @@
      "steps": [
       {
        "math": "\\frac{4 x^{2} - 9 y^{2}}{4 x^{2} + 6 x y}",
-       "en": "Write the fraction.",
-       "ur": "کسر لکھیں۔"
+       "en": "Write down the given rational expression to reduce it to its lowest form.",
+       "ur": "دیے گئے ناطق جملے کو اس کی مختصر ترین شکل میں تبدیل کرنے کے لیے لکھیں۔"
       },
       {
-       "math": "= \\frac{\\left(2 x - 3 y\\right) \\left(2 x + 3 y\\right)}{2 x \\left(2 x + 3 y\\right)}",
-       "en": "Factorize the numerator and the denominator.",
-       "ur": "شمار کنندہ اور نسب نما کی تجزی کریں۔",
+       "math": "= \\frac{(2x)^2 - (3y)^2}{2x(2x + 3y)}",
+       "en": "Rewrite the numerator as a difference of two squares, and take $2x$ as a common factor from the denominator.",
+       "ur": "شمار کنندہ کو دو مربعات کے فرق کے طور پر لکھیں، اور مخرج سے $2x$ کو مشترک جزو ضربی کے طور پر باہر نکالیں۔",
+       "check": [
+        "((2*x)**2 - (3*y)**2)/(2*x*(2*x + 3*y)) == (4*x**2 - 9*y**2)/(4*x**2 + 6*x*y)"
+       ]
+      },
+      {
+       "math": "= \\frac{(2x - 3y)(2x + 3y)}{2x(2x + 3y)}",
+       "en": "Apply the algebraic identity $a^2 - b^2 = (a - b)(a + b)$ to factorize the numerator.",
+       "ur": "شمار کنندہ کی تجزی کرنے کے لیے الجبری کلیہ $a^2 - b^2 = (a - b)(a + b)$ استعمال کریں۔",
        "check": [
         "((2*x - 3*y)*(2*x + 3*y))/(2*x*(2*x + 3*y)) == (4*x**2 - 9*y**2)/(4*x**2 + 6*x*y)"
        ]
       },
       {
        "math": "= \\frac{2 x - 3 y}{2 x}",
-       "en": "Cancel the common factors.",
-       "ur": "مشترک اجزاء کاٹ دیں۔",
+       "en": "Cancel out the common factor $(2x + 3y)$ from both the numerator and the denominator to get the final answer in its lowest form.",
+       "ur": "شمار کنندہ اور مخرج دونوں میں سے مشترک جزو $(2x + 3y)$ کو کاٹ دیں تاکہ مختصر ترین شکل میں حتمی جواب حاصل ہو سکے۔",
        "check": [
+        "(2*x - 3*y)/(2*x) == (4*x**2 - 9*y**2)/(4*x**2 + 6*x*y)",
+        "((2*x - 3*y)*(2*x + 3*y))/(2*x*(2*x + 3*y)) == (4*x**2 - 9*y**2)/(4*x**2 + 6*x*y)",
         "((2*x - 3*y)/(2*x)) == (4*x**2 - 9*y**2)/(4*x**2 + 6*x*y)"
        ]
       }
      ],
      "answer": "$\\frac{2 x - 3 y}{2 x}$",
+     "enriched": true,
      "book_key": "\\frac{2x-3y}{2x}"
     },
     {
@@ -161,28 +240,55 @@
      "prompt": "$\\frac{20(x^3-y^3)}{5x^2+5xy+5y^2}$",
      "steps": [
       {
-       "math": "\\frac{20 x^{3} - 20 y^{3}}{5 x^{2} + 5 x y + 5 y^{2}}",
-       "en": "Write the fraction.",
-       "ur": "کسر لکھیں۔"
+       "math": "\\frac{20(x^3 - y^3)}{5x^2 + 5xy + 5y^2}",
+       "en": "Write down the given rational expression to reduce it to its lowest form.",
+       "ur": "دیے گئے ناطق جملے کو اس کی مختصر ترین شکل میں تبدیل کرنے کے لیے لکھیں۔"
       },
       {
-       "math": "= \\frac{20 \\left(x - y\\right) \\left(x^{2} + x y + y^{2}\\right)}{5 \\left(x^{2} + x y + y^{2}\\right)}",
-       "en": "Factorize the numerator and the denominator.",
-       "ur": "شمار کنندہ اور نسب نما کی تجزی کریں۔",
+       "math": "= \\frac{20(x^3 - y^3)}{5(x^2 + xy + y^2)}",
+       "en": "First, take $5$ as a common factor from all the terms in the denominator.",
+       "ur": "سب سے پہلے، مخرج کی تمام رقوم میں سے $5$ کو مشترک جزو ضربی کے طور پر باہر نکالیں۔",
        "check": [
-        "(20*(x - y)*(x**2 + x*y + y**2))/(5*(x**2 + x*y + y**2)) == (20*x**3 - 20*y**3)/(5*x**2 + 5*x*y + 5*y**2)"
+        "(20*(x**3 - y**3))/(5*x**2 + 5*x*y + 5*y**2) == (20*(x**3 - y**3))/(5*(x**2 + x*y + y**2))"
+       ]
+      },
+      {
+       "math": "x^3 - y^3 = (x - y)(x^2 + xy + y^2)",
+       "en": "Recall the algebraic formula for the difference of two cubes to factorize the numerator.",
+       "ur": "شمار کنندہ کی تجزی کرنے کے لیے دو مکعبوں کے فرق کا الجبری کلیہ یاد کریں۔",
+       "check": [
+        "x**3 - y**3 == (x - y)*(x**2 + x*y + y**2)"
+       ]
+      },
+      {
+       "math": "= \\frac{20(x - y)(x^2 + xy + y^2)}{5(x^2 + xy + y^2)}",
+       "en": "Apply this formula to expand $(x^3 - y^3)$ in the numerator.",
+       "ur": "شمار کنندہ میں $(x^3 - y^3)$ کو کھولنے کے لیے اس کلیے کا اطلاق کریں۔",
+       "check": [
+        "(20*(x - y)*(x**2 + x*y + y**2))/(5*(x**2 + x*y + y**2)) == (20*(x**3 - y**3))/(5*(x**2 + x*y + y**2))"
+       ]
+      },
+      {
+       "math": "= \\frac{20(x - y)}{5}",
+       "en": "Cancel out the common algebraic factor $(x^2 + xy + y^2)$ from both the numerator and the denominator.",
+       "ur": "شمار کنندہ اور مخرج دونوں میں سے مشترک الجبری جزو $(x^2 + xy + y^2)$ کو کاٹ دیں۔",
+       "check": [
+        "(20*(x - y))/5 == (20*(x - y)*(x**2 + x*y + y**2))/(5*(x**2 + x*y + y**2))"
        ]
       },
       {
        "math": "= 4 \\left(x - y\\right)",
-       "en": "Cancel the common factors.",
-       "ur": "مشترک اجزاء کاٹ دیں۔",
+       "en": "Divide $20$ by $5$ to get $4$. Thus, the expression in its lowest form is $4(x - y)$.",
+       "ur": "$20$ کو $5$ پر تقسیم کرنے سے $4$ حاصل ہوتا ہے۔ اس طرح، مختصر ترین شکل میں مطلوبہ جملہ $4(x - y)$ ہے۔",
        "check": [
+        "4*(x - y) == (20*(x - y))/5",
+        "(20*(x - y)*(x**2 + x*y + y**2))/(5*(x**2 + x*y + y**2)) == (20*x**3 - 20*y**3)/(5*x**2 + 5*x*y + 5*y**2)",
         "(4*x - 4*y) == (20*x**3 - 20*y**3)/(5*x**2 + 5*x*y + 5*y**2)"
        ]
       }
      ],
      "answer": "$4 \\left(x - y\\right)$",
+     "enriched": true,
      "book_key": "4(x-y)"
     },
     {
@@ -190,28 +296,55 @@
      "prompt": "$\\frac{x(2a^2-3ax)}{a(4a^2x-9x^3)}$",
      "steps": [
       {
-       "math": "\\frac{x \\left(2 a^{2} - 3 a x\\right)}{a \\left(4 a^{2} x - 9 x^{3}\\right)}",
-       "en": "Write the fraction.",
-       "ur": "کسر لکھیں۔"
+       "math": "\\frac{x(2a^2 - 3ax)}{a(4a^2x - 9x^3)}",
+       "en": "Given the rational expression to be reduced to its lowest form.",
+       "ur": "دیے گئے ناطق جملے کو اس کی مختصر ترین شکل میں لانا ہے۔"
       },
       {
-       "math": "= \\frac{- a x \\left(- 2 a + 3 x\\right)}{- a x \\left(- 2 a + 3 x\\right) \\left(2 a + 3 x\\right)}",
-       "en": "Factorize the numerator and the denominator.",
-       "ur": "شمار کنندہ اور نسب نما کی تجزی کریں۔",
+       "math": "= \\frac{ax(2a - 3x)}{ax(4a^2 - 9x^2)}",
+       "en": "Take $a$ common from the bracket in the numerator and $x$ common from the bracket in the denominator.",
+       "ur": "شمار کنندہ کی بریکٹ میں سے $a$ اور مخرج کی بریکٹ میں سے $x$ مشترک لیں۔",
        "check": [
-        "(-a*x*(-2*a + 3*x))/(-a*x*(-2*a + 3*x)*(2*a + 3*x)) == (x*(2*a**2 - 3*a*x))/(a*(4*a**2*x - 9*x**3))"
+        "(a*x*(2*a - 3*x))/(a*x*(4*a**2 - 9*x**2)) == (x*(2*a**2 - 3*a*x))/(a*(4*a**2*x - 9*x**3))"
+       ]
+      },
+      {
+       "math": "= \\frac{2a - 3x}{4a^2 - 9x^2}",
+       "en": "Cancel the common factor $ax$ from the numerator and the denominator.",
+       "ur": "شمار کنندہ اور مخرج سے مشترک جزو ضربی $ax$ کو کاٹ دیں۔",
+       "check": [
+        "(2*a - 3*x)/(4*a**2 - 9*x**2) == (a*x*(2*a - 3*x))/(a*x*(4*a**2 - 9*x**2))"
+       ]
+      },
+      {
+       "math": "= \\frac{2a - 3x}{(2a)^2 - (3x)^2}",
+       "en": "Rewrite the denominator in the form of a difference of two squares, $A^2 - B^2$.",
+       "ur": "مخرج کو دو مربعات کے فرق، $A^2 - B^2$ کی شکل میں لکھیں۔",
+       "check": [
+        "(2*a - 3*x)/((2*a)**2 - (3*x)**2) == (2*a - 3*x)/(4*a**2 - 9*x**2)"
+       ]
+      },
+      {
+       "math": "= \\frac{2a - 3x}{(2a - 3x)(2a + 3x)}",
+       "en": "Apply the algebraic identity $A^2 - B^2 = (A - B)(A + B)$ to factorize the denominator.",
+       "ur": "مخرج کی تجزی کرنے کے لیے الجبری کلیہ $A^2 - B^2 = (A - B)(A + B)$ کا اطلاق کریں۔",
+       "check": [
+        "(2*a - 3*x)/((2*a - 3*x)*(2*a + 3*x)) == (2*a - 3*x)/((2*a)**2 - (3*x)**2)"
        ]
       },
       {
        "math": "= \\frac{1}{2 a + 3 x}",
-       "en": "Cancel the common factors.",
-       "ur": "مشترک اجزاء کاٹ دیں۔",
+       "en": "Cancel the common factor $(2a - 3x)$ from both the numerator and the denominator to get the final answer.",
+       "ur": "حتمی جواب حاصل کرنے کے لیے شمار کنندہ اور مخرج دونوں سے مشترک جزو ضربی $(2a - 3x)$ کو کاٹ دیں۔",
        "check": [
+        "1/(2*a + 3*x) == (2*a - 3*x)/((2*a - 3*x)*(2*a + 3*x))",
+        "(-a*x*(-2*a + 3*x))/(-a*x*(-2*a + 3*x)*(2*a + 3*x)) == (x*(2*a**2 - 3*a*x))/(a*(4*a**2*x - 9*x**3))",
         "(1/(2*a + 3*x)) == (x*(2*a**2 - 3*a*x))/(a*(4*a**2*x - 9*x**3))"
        ]
       }
      ],
      "answer": "$\\frac{1}{2 a + 3 x}$",
+     "enriched": true,
      "book_key": "\\frac{1}{2a+3x}"
     },
     {
@@ -219,28 +352,47 @@
      "prompt": "$\\frac{x^2-5x}{x^2-4x-5}$",
      "steps": [
       {
-       "math": "\\frac{x^{2} - 5 x}{x^{2} - 4 x - 5}",
-       "en": "Write the fraction.",
-       "ur": "کسر لکھیں۔"
+       "math": "\\frac{x^{2} - 5x}{x^{2} - 4x - 5}",
+       "en": "Write the given rational expression that needs to be reduced to its lowest form.",
+       "ur": "دیے گئے ناطق جملے کو لکھیں جسے اس کی مختصر ترین شکل میں لانا ہے۔"
       },
       {
-       "math": "= \\frac{x \\left(x - 5\\right)}{\\left(x - 5\\right) \\left(x + 1\\right)}",
-       "en": "Factorize the numerator and the denominator.",
-       "ur": "شمار کنندہ اور نسب نما کی تجزی کریں۔",
+       "math": "= \\frac{x(x - 5)}{x^{2} - 5x + x - 5}",
+       "en": "Take $x$ common from the numerator $x^{2} - 5x$. In the denominator $x^{2} - 4x - 5$, split the middle term $-4x$ into $-5x + x$ since $(-5)(1) = -5$ and $-5 + 1 = -4$.",
+       "ur": "شمار کنندہ $x^{2} - 5x$ میں سے $x$ مشترک لیں۔ مخرج $x^{2} - 4x - 5$ میں درمیانی رقم $-4x$ کو $-5x + x$ میں توڑ کر لکھیں کیونکہ $(-5)(1) = -5$ اور $-5 + 1 = -4$ ہوتا ہے۔",
+       "check": [
+        "(x*(x - 5))/(x**2 - 5*x + x - 5) == (x**2 - 5*x)/(x**2 - 4*x - 5)"
+       ]
+      },
+      {
+       "math": "= \\frac{x(x - 5)}{x(x - 5) + 1(x - 5)}",
+       "en": "Factor by grouping in the denominator: take $x$ common from the first two terms and $1$ common from the last two terms.",
+       "ur": "مخرج میں گروہ بندی کے ذریعے تجزی کریں: پہلی دو رقوم میں سے $x$ مشترک لیں اور آخری دو رقوم میں سے $1$ مشترک لیں۔",
+       "check": [
+        "(x*(x - 5))/(x*(x - 5) + 1*(x - 5)) == (x**2 - 5*x)/(x**2 - 4*x - 5)"
+       ]
+      },
+      {
+       "math": "= \\frac{x(x - 5)}{(x - 5)(x + 1)}",
+       "en": "Take the binomial $(x - 5)$ common in the denominator to complete the factorization.",
+       "ur": "تجزی مکمل کرنے کے لیے مخرج میں سے دو رقمی جملہ $(x - 5)$ مشترک لیں۔",
        "check": [
         "(x*(x - 5))/((x - 5)*(x + 1)) == (x**2 - 5*x)/(x**2 - 4*x - 5)"
        ]
       },
       {
        "math": "= \\frac{x}{x + 1}",
-       "en": "Cancel the common factors.",
-       "ur": "مشترک اجزاء کاٹ دیں۔",
+       "en": "Cancel out the common factor $(x - 5)$ from both the numerator and the denominator to obtain the lowest form.",
+       "ur": "مختصر ترین شکل حاصل کرنے کے لیے شمار کنندہ اور مخرج دونوں میں سے مشترک جزو ضربی $(x - 5)$ کو کاٹ دیں۔",
        "check": [
+        "x/(x + 1) == (x**2 - 5*x)/(x**2 - 4*x - 5)",
+        "(x*(x - 5))/((x - 5)*(x + 1)) == (x**2 - 5*x)/(x**2 - 4*x - 5)",
         "(x/(x + 1)) == (x**2 - 5*x)/(x**2 - 4*x - 5)"
        ]
       }
      ],
      "answer": "$\\frac{x}{x + 1}$",
+     "enriched": true,
      "book_key": "\\frac{x}{x+1}"
     },
     {
@@ -248,28 +400,55 @@
      "prompt": "$\\frac{3x^2+6x}{x^2+4x+4}$",
      "steps": [
       {
-       "math": "\\frac{3 x^{2} + 6 x}{x^{2} + 4 x + 4}",
-       "en": "Write the fraction.",
-       "ur": "کسر لکھیں۔"
+       "math": "\\frac{3x^2 + 6x}{x^2 + 4x + 4}",
+       "en": "Write down the given rational expression to reduce it to its lowest form.",
+       "ur": "دی گئی ناطق جملے کو اس کی مختصر ترین شکل میں تبدیل کرنے کے لیے لکھیں۔"
       },
       {
-       "math": "= \\frac{3 x \\left(x + 2\\right)}{\\left(x + 2\\right)^{2}}",
-       "en": "Factorize the numerator and the denominator.",
-       "ur": "شمار کنندہ اور نسب نما کی تجزی کریں۔",
+       "math": "= \\frac{3x(x + 2)}{x^2 + 4x + 4}",
+       "en": "Factorize the numerator $3x^2 + 6x$ by taking $3x$ as a common factor.",
+       "ur": "شمار کنندہ $3x^2 + 6x$ میں سے $3x$ کو مشترک جزو کے طور پر باہر نکال کر تجزی کریں۔",
        "check": [
-        "(3*x*(x + 2))/((x + 2)**2) == (3*x**2 + 6*x)/(x**2 + 4*x + 4)"
+        "3*x*(x + 2) == 3*x**2 + 6*x"
+       ]
+      },
+      {
+       "math": "= \\frac{3x(x + 2)}{(x)^2 + 2(x)(2) + (2)^2}",
+       "en": "Rewrite the denominator $x^2 + 4x + 4$ in the form of a perfect square trinomial $a^2 + 2ab + b^2$.",
+       "ur": "نسب نما $x^2 + 4x + 4$ کو مکمل مربع سہ رقمی $a^2 + 2ab + b^2$ کی شکل میں لکھیں۔",
+       "check": [
+        "x**2 + 2*x*2 + 2**2 == x**2 + 4*x + 4"
+       ]
+      },
+      {
+       "math": "= \\frac{3x(x + 2)}{(x + 2)^2}",
+       "en": "Apply the algebraic identity $a^2 + 2ab + b^2 = (a + b)^2$ to factorize the denominator.",
+       "ur": "نسب نما کی تجزی کرنے کے لیے الجبری کلیہ $a^2 + 2ab + b^2 = (a + b)^2$ کا اطلاق کریں۔",
+       "check": [
+        "(x + 2)**2 == x**2 + 4*x + 4"
+       ]
+      },
+      {
+       "math": "= \\frac{3x(x + 2)}{(x + 2)(x + 2)}",
+       "en": "Expand $(x + 2)^2$ into two factors $(x + 2)(x + 2)$ to clearly see the common factor.",
+       "ur": "مشترک جزو کو واضح طور پر دیکھنے کے لیے $(x + 2)^2$ کو دو اجزائے ضربی $(x + 2)(x + 2)$ میں کھول کر لکھیں۔",
+       "check": [
+        "(x + 2)*(x + 2) == (x + 2)**2"
        ]
       },
       {
        "math": "= \\frac{3 x}{x + 2}",
-       "en": "Cancel the common factors.",
-       "ur": "مشترک اجزاء کاٹ دیں۔",
+       "en": "Cancel out the common factor $(x + 2)$ from both the numerator and the denominator to get the final answer.",
+       "ur": "حتمی جواب حاصل کرنے کے لیے شمار کنندہ اور نسب نما دونوں میں سے مشترک جزو $(x + 2)$ کو کاٹ دیں۔",
        "check": [
+        "(3*x)/(x + 2) == (3*x**2 + 6*x)/(x**2 + 4*x + 4)",
+        "(3*x*(x + 2))/((x + 2)**2) == (3*x**2 + 6*x)/(x**2 + 4*x + 4)",
         "(3*x/(x + 2)) == (3*x**2 + 6*x)/(x**2 + 4*x + 4)"
        ]
       }
      ],
      "answer": "$\\frac{3 x}{x + 2}$",
+     "enriched": true,
      "book_key": "\\frac{3x}{x+2}"
     },
     {
@@ -278,27 +457,46 @@
      "steps": [
       {
        "math": "\\frac{x^{2} + x y - 2 y^{2}}{x^{3} - y^{3}}",
-       "en": "Write the fraction.",
-       "ur": "کسر لکھیں۔"
+       "en": "Write the given rational expression to reduce it to its lowest form.",
+       "ur": "دی گئی ناطق عبارت کو اس کی مختصر ترین شکل میں لانے کے لیے لکھیں۔"
+      },
+      {
+       "math": "= \\frac{x^{2} + 2 x y - x y - 2 y^{2}}{\\left(x - y\\right) \\left(x^{2} + x y + y^{2}\\right)}",
+       "en": "Break the middle term $xy$ in the numerator as $2xy - xy$, and apply the difference of cubes formula $a^3 - b^3 = (a - b)(a^2 + ab + b^2)$ in the denominator.",
+       "ur": "شمار کنندہ میں درمیانی رقم $xy$ کو $2xy - xy$ کے طور پر توڑیں، اور مخرج میں مکعبوں کے فرق کا فارمولا $a^3 - b^3 = (a - b)(a^2 + ab + b^2)$ لاگو کریں۔",
+       "check": [
+        "(x**2 + 2*x*y - x*y - 2*y**2)/((x - y)*(x**2 + x*y + y**2)) == (x**2 + x*y - 2*y**2)/(x**3 - y**3)"
+       ]
+      },
+      {
+       "math": "= \\frac{x\\left(x + 2 y\\right) - y\\left(x + 2 y\\right)}{\\left(x - y\\right) \\left(x^{2} + x y + y^{2}\\right)}",
+       "en": "Take out the common factors from the pairs of terms in the numerator.",
+       "ur": "شمار کنندہ میں رقموں کے جوڑوں سے مشترک اجزاء باہر نکالیں۔",
+       "check": [
+        "(x*(x + 2*y) - y*(x + 2*y))/((x - y)*(x**2 + x*y + y**2)) == (x**2 + x*y - 2*y**2)/(x**3 - y**3)"
+       ]
       },
       {
        "math": "= \\frac{\\left(x - y\\right) \\left(x + 2 y\\right)}{\\left(x - y\\right) \\left(x^{2} + x y + y^{2}\\right)}",
-       "en": "Factorize the numerator and the denominator.",
-       "ur": "شمار کنندہ اور نسب نما کی تجزی کریں۔",
+       "en": "Factor out the common binomial $(x + 2y)$ in the numerator.",
+       "ur": "شمار کنندہ میں مشترک دو رقمی جملہ $(x + 2y)$ باہر نکال کر تجزی مکمل کریں۔",
        "check": [
         "((x - y)*(x + 2*y))/((x - y)*(x**2 + x*y + y**2)) == (x**2 + x*y - 2*y**2)/(x**3 - y**3)"
        ]
       },
       {
        "math": "= \\frac{x + 2 y}{x^{2} + x y + y^{2}}",
-       "en": "Cancel the common factors.",
-       "ur": "مشترک اجزاء کاٹ دیں۔",
+       "en": "Cancel the common factor $(x - y)$ from both the numerator and the denominator to get the final answer.",
+       "ur": "شمار کنندہ اور مخرج دونوں سے مشترک جزو ضربی $(x - y)$ کو کاٹ کر حتمی جواب حاصل کریں۔",
        "check": [
+        "(x + 2*y)/(x**2 + x*y + y**2) == (x**2 + x*y - 2*y**2)/(x**3 - y**3)",
+        "((x - y)*(x + 2*y))/((x - y)*(x**2 + x*y + y**2)) == (x**2 + x*y - 2*y**2)/(x**3 - y**3)",
         "((x + 2*y)/(x**2 + x*y + y**2)) == (x**2 + x*y - 2*y**2)/(x**3 - y**3)"
        ]
       }
      ],
      "answer": "$\\frac{x + 2 y}{x^{2} + x y + y^{2}}$",
+     "enriched": true,
      "book_key": "\\frac{x+2y}{x^2+xy+y^2}"
     },
     {
@@ -306,28 +504,51 @@
      "prompt": "$\\frac{2x^2+17x+21}{3x^2+26x+35}$",
      "steps": [
       {
-       "math": "\\frac{2 x^{2} + 17 x + 21}{3 x^{2} + 26 x + 35}",
-       "en": "Write the fraction.",
-       "ur": "کسر لکھیں۔"
+       "math": "\\frac{2x^2 + 17x + 21}{3x^2 + 26x + 35}",
+       "en": "Write the given rational expression. To reduce it to the lowest form, we will factorize both the numerator and the denominator by splitting the middle term.",
+       "ur": "دیے گئے ناطق جملے کو لکھیں۔ اسے مختصر ترین شکل میں لانے کے لیے، ہم درمیانی رقم کو توڑ کر شمار کنندہ اور مخرج دونوں کی تجزی (factorization) کریں گے۔"
       },
       {
-       "math": "= \\frac{\\left(x + 7\\right) \\left(2 x + 3\\right)}{\\left(x + 7\\right) \\left(3 x + 5\\right)}",
-       "en": "Factorize the numerator and the denominator.",
-       "ur": "شمار کنندہ اور نسب نما کی تجزی کریں۔",
+       "math": "= \\frac{2x^2 + 14x + 3x + 21}{3x^2 + 21x + 5x + 35}",
+       "en": "In the numerator, split $17x$ into $14x + 3x$ (since $14 \\times 3 = 42 = 2 \\times 21$). In the denominator, split $26x$ into $21x + 5x$ (since $21 \\times 5 = 105 = 3 \\times 35$).",
+       "ur": "شمار کنندہ میں $17x$ کو $14x + 3x$ میں توڑیں (کیونکہ $14 \\times 3 = 42 = 2 \\times 21$)۔ مخرج میں $26x$ کو $21x + 5x$ میں توڑیں (کیونکہ $21 \\times 5 = 105 = 3 \\times 35$)۔",
+       "check": [
+        "(2*x**2 + 14*x + 3*x + 21)/(3*x**2 + 21*x + 5*x + 35) == (2*x**2 + 17*x + 21)/(3*x**2 + 26*x + 35)",
+        "14 + 3 == 17",
+        "14 * 3 == 2 * 21",
+        "21 + 5 == 26",
+        "21 * 5 == 3 * 35"
+       ]
+      },
+      {
+       "math": "= \\frac{2x(x + 7) + 3(x + 7)}{3x(x + 7) + 5(x + 7)}",
+       "en": "Take out the common factors from the pairs of terms in both the numerator and the denominator.",
+       "ur": "شمار کنندہ اور مخرج دونوں میں رقموں کے جوڑوں سے مشترک اجزاء (common factors) باہر نکالیں۔",
+       "check": [
+        "(2*x*(x + 7) + 3*(x + 7))/(3*x*(x + 7) + 5*(x + 7)) == (2*x**2 + 17*x + 21)/(3*x**2 + 26*x + 35)"
+       ]
+      },
+      {
+       "math": "= \\frac{(x + 7)(2x + 3)}{(x + 7)(3x + 5)}",
+       "en": "Factor out the common binomial $(x + 7)$ in both the numerator and the denominator.",
+       "ur": "شمار کنندہ اور مخرج دونوں میں سے مشترک دو رقمی جملہ $(x + 7)$ مشترک لیں۔",
        "check": [
         "((x + 7)*(2*x + 3))/((x + 7)*(3*x + 5)) == (2*x**2 + 17*x + 21)/(3*x**2 + 26*x + 35)"
        ]
       },
       {
        "math": "= \\frac{2 x + 3}{3 x + 5}",
-       "en": "Cancel the common factors.",
-       "ur": "مشترک اجزاء کاٹ دیں۔",
+       "en": "Cancel out the common factor $(x + 7)$ from the numerator and the denominator to get the rational expression in its lowest form.",
+       "ur": "مختصر ترین شکل حاصل کرنے کے لیے شمار کنندہ اور مخرج سے مشترک جزو $(x + 7)$ کو کاٹ دیں۔",
        "check": [
+        "(2*x + 3)/(3*x + 5) == (2*x**2 + 17*x + 21)/(3*x**2 + 26*x + 35)",
+        "((x + 7)*(2*x + 3))/((x + 7)*(3*x + 5)) == (2*x**2 + 17*x + 21)/(3*x**2 + 26*x + 35)",
         "((2*x + 3)/(3*x + 5)) == (2*x**2 + 17*x + 21)/(3*x**2 + 26*x + 35)"
        ]
       }
      ],
      "answer": "$\\frac{2 x + 3}{3 x + 5}$",
+     "enriched": true,
      "book_key": "\\frac{2x+3}{3x+5}"
     }
    ],
@@ -436,35 +657,60 @@
      "steps": [
       {
        "math": "\\frac{x + y}{12 x - 6 y} + \\frac{x - y}{18 x - 9 y}",
-       "en": "Write the expression.",
-       "ur": "عبارت لکھیں۔"
+       "en": "We are given the following algebraic expression to simplify by adding the two fractions.",
+       "ur": "ہمیں درج ذیل الجبری عبارت دی گئی ہے جسے دونوں کسور کو جمع کر کے مختصر کرنا ہے۔"
       },
       {
-       "math": "= \\frac{x + y}{6 \\left(2 x - y\\right)} + \\frac{x - y}{9 \\left(2 x - y\\right)}",
-       "en": "Factorize each denominator.",
-       "ur": "ہر نسب نما کی تجزی کریں۔",
+       "math": "= \\frac{x + y}{6(2x - y)} + \\frac{x - y}{9(2x - y)}",
+       "en": "First, factorize both denominators by taking out the greatest common factor: $6$ from the first denominator ($12x - 6y$) and $9$ from the second denominator ($18x - 9y$).",
+       "ur": "سب سے پہلے، دونوں نسب نماؤں میں سے مشترک عنصر نکال کر تجزی کریں: پہلے نسب نما ($12x - 6y$) سے $6$ اور دوسرے نسب نما ($18x - 9y$) سے $9$ مشترک لیں۔",
        "check": [
-        "((x - y)/(9*(2*x - y)) + (x + y)/(6*(2*x - y))) == ((x - y)/(18*x - 9*y) + (x + y)/(12*x - 6*y))"
+        "((x + y)/(6*(2*x - y)) + (x - y)/(9*(2*x - y))) == ((x + y)/(12*x - 6*y) + (x - y)/(18*x - 9*y))"
        ]
       },
       {
-       "math": "= \\frac{\\left(x + y\\right)3 + \\left(x - y\\right)2}{18 \\left(2 x - y\\right)}",
-       "en": "The L.C.D. is $18 \\left(2 x - y\\right)$; write each numerator over it.",
-       "ur": "ل.م.م (L.C.D.) $18 \\left(2 x - y\\right)$ ہے؛ ہر شمار کنندہ اس پر لکھیں۔",
+       "math": "\\text{L.C.M.} = 18(2x - y)",
+       "en": "To add the fractions, find the Least Common Multiple (L.C.M.) of the denominators $6(2x - y)$ and $9(2x - y)$. The L.C.M. of $6$ and $9$ is $18$, and the common algebraic factor is $(2x - y)$, giving $18(2x - y)$.",
+       "ur": "کسور کو جمع کرنے کے لیے، نسب نماؤں $6(2x - y)$ اور $9(2x - y)$ کا ذو اضعاف اقل (L.C.M.) معلوم کریں۔ $6$ اور $9$ کا ذو اضعاف اقل $18$ ہے، اور مشترک الجبری جزو ضربی $(2x - y)$ ہے، جس سے $18(2x - y)$ حاصل ہوتا ہے۔"
+      },
+      {
+       "math": "= \\frac{3(x + y) + 2(x - y)}{18(2x - y)}",
+       "en": "Combine the fractions over the common denominator $18(2x - y)$. Multiply the first numerator by $3$ (since $\\frac{18}{6} = 3$) and the second numerator by $2$ (since $\\frac{18}{9} = 2$).",
+       "ur": "مشترکہ نسب نما $18(2x - y)$ کے تحت کسور کو یکجا کریں۔ پہلے شمار کنندہ کو $3$ سے ضرب دیں (کیونکہ $\\frac{18}{6} = 3$) اور دوسرے شمار کنندہ کو $2$ سے ضرب دیں (کیونکہ $\\frac{18}{9} = 2$)۔",
        "check": [
-        "(5*x + y)/(18*(2*x - y)) == ((x - y)/(18*x - 9*y) + (x + y)/(12*x - 6*y))"
+        "(3*(x + y) + 2*(x - y))/(18*(2*x - y)) == ((x + y)/(12*x - 6*y) + (x - y)/(18*x - 9*y))"
+       ]
+      },
+      {
+       "math": "= \\frac{3x + 3y + 2x - 2y}{18(2x - y)}",
+       "en": "Expand the brackets in the numerator by multiplying the numbers inside.",
+       "ur": "شمار کنندہ میں قوسین کے اندر اعداد کو ضرب دے کر قوسین کھولیں۔",
+       "check": [
+        "(3*x + 3*y + 2*x - 2*y)/(18*(2*x - y)) == ((x + y)/(12*x - 6*y) + (x - y)/(18*x - 9*y))"
+       ]
+      },
+      {
+       "math": "= \\frac{(3x + 2x) + (3y - 2y)}{18(2x - y)}",
+       "en": "Group the like terms together in the numerator.",
+       "ur": "شمار کنندہ میں یکساں ارکان کو اکٹھا کریں۔",
+       "check": [
+        "((3*x + 2*x) + (3*y - 2*y))/(18*(2*x - y)) == ((x + y)/(12*x - 6*y) + (x - y)/(18*x - 9*y))"
        ]
       },
       {
        "math": "= \\frac{5 x + y}{18 \\left(2 x - y\\right)}",
-       "en": "Multiply out and collect like terms in the numerator.",
-       "ur": "شمار کنندہ میں ضرب دے کر متشابہ ارکان اکٹھے کریں۔",
+       "en": "Add and subtract the like terms ($3x + 2x = 5x$ and $3y - 2y = y$) to get the final simplified form.",
+       "ur": "یکساں ارکان کو جمع اور تفریق کریں ($3x + 2x = 5x$ اور $3y - 2y = y$) تاکہ حتمی مختصر شکل حاصل ہو سکے۔",
        "check": [
+        "(5*x + y)/(18*(2*x - y)) == ((x + y)/(12*x - 6*y) + (x - y)/(18*x - 9*y))",
+        "((x - y)/(9*(2*x - y)) + (x + y)/(6*(2*x - y))) == ((x - y)/(18*x - 9*y) + (x + y)/(12*x - 6*y))",
+        "(5*x + y)/(18*(2*x - y)) == ((x - y)/(18*x - 9*y) + (x + y)/(12*x - 6*y))",
         "(5*x + y)/(18*(2*x - y)) == ((x - y)/(18*x - 9*y) + (x + y)/(12*x - 6*y))"
        ]
       }
      ],
      "answer": "$\\frac{5 x + y}{18 \\left(2 x - y\\right)}$",
+     "enriched": true,
      "book_key": "\\frac{5x+y}{18(2x-y)}"
     },
     {
@@ -608,35 +854,47 @@
      "steps": [
       {
        "math": "\\frac{2 x}{x + y} - \\frac{y}{x - y} - \\frac{2 y^{2}}{x^{2} - y^{2}}",
-       "en": "Write the expression.",
-       "ur": "عبارت لکھیں۔"
+       "en": "Write down the given algebraic expression.",
+       "ur": "دی گئی الجبری عبارت لکھیں۔"
       },
       {
        "math": "= \\frac{2 x}{x + y} - \\frac{y}{x - y} - \\frac{2 y^{2}}{\\left(x - y\\right) \\left(x + y\\right)}",
-       "en": "Factorize each denominator.",
-       "ur": "ہر نسب نما کی تجزی کریں۔",
+       "en": "Factorize the denominator of the third fraction using the difference of squares formula $a^{2} - b^{2} = (a - b)(a + b)$.",
+       "ur": "تیسری کسر کے نسب نما کی کلیہ $a^{2} - b^{2} = (a - b)(a + b)$ کی مدد سے تجزی کریں۔",
        "check": [
-        "(2*x/(x + y) - 2*y**2/((x - y)*(x + y)) - y/(x - y)) == (2*x/(x + y) - 2*y**2/(x**2 - y**2) - y/(x - y))"
+        "(2*x/(x + y) - y/(x - y) - 2*y**2/((x - y)*(x + y))) == (2*x/(x + y) - y/(x - y) - 2*y**2/(x**2 - y**2))"
        ]
       },
       {
        "math": "= \\frac{2 x\\left(x - y\\right) - y\\left(x + y\\right) - 2 y^{2}}{\\left(x - y\\right) \\left(x + y\\right)}",
-       "en": "The L.C.D. is $\\left(x - y\\right) \\left(x + y\\right)$; write each numerator over it.",
-       "ur": "ل.م.م (L.C.D.) $\\left(x - y\\right) \\left(x + y\\right)$ ہے؛ ہر شمار کنندہ اس پر لکھیں۔",
+       "en": "The Least Common Denominator (L.C.D.) is $\\left(x - y\\right) \\left(x + y\\right)$. Combine the numerators over this common denominator.",
+       "ur": "ذو اضعاف اقل (L.C.D.) $\\left(x - y\\right) \\left(x + y\\right)$ ہے۔ اس مشترک نسب نما کے اوپر تمام شمار کنندگان کو یکجا کریں۔",
        "check": [
-        "(2*x*(x - y) - 2*y**2 - y*(x + y))/((x - y)*(x + y)) == (2*x/(x + y) - 2*y**2/(x**2 - y**2) - y/(x - y))"
+        "(2*x*(x - y) - y*(x + y) - 2*y**2)/((x - y)*(x + y)) == (2*x/(x + y) - y/(x - y) - 2*y**2/(x**2 - y**2))"
+       ]
+      },
+      {
+       "math": "= \\frac{2 x^{2} - 2 x y - x y - y^{2} - 2 y^{2}}{\\left(x - y\\right) \\left(x + y\\right)}",
+       "en": "Expand the brackets in the numerator by multiplying the terms.",
+       "ur": "شمار کنندہ میں ارکان کو ضرب دے کر قوسین (بریکٹس) کو کھولیں۔",
+       "check": [
+        "(2*x**2 - 2*x*y - x*y - y**2 - 2*y**2)/((x - y)*(x + y)) == (2*x/(x + y) - y/(x - y) - 2*y**2/(x**2 - y**2))"
        ]
       },
       {
        "math": "= \\frac{2 x^{2} - 3 x y - 3 y^{2}}{\\left(x - y\\right) \\left(x + y\\right)}",
-       "en": "Multiply out and collect like terms in the numerator.",
-       "ur": "شمار کنندہ میں ضرب دے کر متشابہ ارکان اکٹھے کریں۔",
+       "en": "Combine the like terms ($-2xy - xy = -3xy$ and $-y^{2} - 2y^{2} = -3y^{2}$) in the numerator to get the final simplified form.",
+       "ur": "مختصر ترین شکل حاصل کرنے کے لیے شمار کنندہ میں متشابہ ارکان ($-2xy - xy = -3xy$ اور $-y^{2} - 2y^{2} = -3y^{2}$) کو یکجا کریں۔",
        "check": [
+        "(2*x**2 - 3*x*y - 3*y**2)/((x - y)*(x + y)) == (2*x/(x + y) - y/(x - y) - 2*y**2/(x**2 - y**2))",
+        "(2*x/(x + y) - 2*y**2/((x - y)*(x + y)) - y/(x - y)) == (2*x/(x + y) - 2*y**2/(x**2 - y**2) - y/(x - y))",
+        "(2*x*(x - y) - 2*y**2 - y*(x + y))/((x - y)*(x + y)) == (2*x/(x + y) - 2*y**2/(x**2 - y**2) - y/(x - y))",
         "(2*x**2 - 3*x*y - 3*y**2)/((x - y)*(x + y)) == (2*x/(x + y) - 2*y**2/(x**2 - y**2) - y/(x - y))"
        ]
       }
      ],
      "answer": "$\\frac{2 x^{2} - 3 x y - 3 y^{2}}{\\left(x - y\\right) \\left(x + y\\right)}$",
+     "enriched": true,
      "book_key": "\\frac{2x^2-3xy-3y^2}{(x-y)(x+y)}"
     },
     {
@@ -735,35 +993,63 @@
      "steps": [
       {
        "math": "\\frac{1}{x^{2} - 4 x + 3} + \\frac{1}{x^{2} - 3 x + 2} - \\frac{1}{x^{2} - 5 x + 6}",
-       "en": "Write the expression.",
-       "ur": "عبارت لکھیں۔"
+       "en": "Write the given expression of algebraic fractions that we need to simplify.",
+       "ur": "دی گئی الجبری کسر کی عبارت لکھیں جسے ہمیں مختصر کرنا ہے۔"
       },
       {
-       "math": "= \\frac{1}{\\left(x - 3\\right) \\left(x - 1\\right)} + \\frac{1}{\\left(x - 2\\right) \\left(x - 1\\right)} - \\frac{1}{\\left(x - 3\\right) \\left(x - 2\\right)}",
-       "en": "Factorize each denominator.",
-       "ur": "ہر نسب نما کی تجزی کریں۔",
+       "math": "= \\frac{1}{x^{2} - 3 x - x + 3} + \\frac{1}{x^{2} - 2 x - x + 2} - \\frac{1}{x^{2} - 3 x - 2 x + 6}",
+       "en": "To factorize the quadratic denominators, split the middle term of each denominator.",
+       "ur": "دو درجی نسب نماؤں کی تجزی کرنے کے لیے، ہر نسب نما کی درمیانی رقم کو دو حصوں میں توڑیں۔",
        "check": [
-        "(1/((x - 2)*(x - 1)) + 1/((x - 3)*(x - 1)) - 1/((x - 3)*(x - 2))) == (1/(x**2 - 3*x + 2) + 1/(x**2 - 4*x + 3) - 1/(x**2 - 5*x + 6))"
+        "(1/(x**2 - 3*x - x + 3) + 1/(x**2 - 2*x - x + 2) - 1/(x**2 - 3*x - 2*x + 6)) == (1/(x**2 - 4*x + 3) + 1/(x**2 - 3*x + 2) - 1/(x**2 - 5*x + 6))"
        ]
       },
       {
-       "math": "= \\frac{\\left(x - 2\\right) + \\left(x - 3\\right) - \\left(x - 1\\right)}{\\left(x - 3\\right) \\left(x - 2\\right) \\left(x - 1\\right)}",
-       "en": "The L.C.D. is $\\left(x - 3\\right) \\left(x - 2\\right) \\left(x - 1\\right)$; write each numerator over it.",
-       "ur": "ل.م.م (L.C.D.) $\\left(x - 3\\right) \\left(x - 2\\right) \\left(x - 1\\right)$ ہے؛ ہر شمار کنندہ اس پر لکھیں۔",
+       "math": "= \\frac{1}{x(x - 3) - 1(x - 3)} + \\frac{1}{x(x - 2) - 1(x - 2)} - \\frac{1}{x(x - 3) - 2(x - 3)}",
+       "en": "Take out the common factors by grouping terms in pairs in each denominator.",
+       "ur": "ہر نسب نما میں دو دو رقوم کے جوڑے بنا کر مشترک اجزاء باہر نکالیں۔",
        "check": [
-        "(x - 4)/((x - 3)*(x - 2)*(x - 1)) == (1/(x**2 - 3*x + 2) + 1/(x**2 - 4*x + 3) - 1/(x**2 - 5*x + 6))"
+        "(1/(x*(x - 3) - 1*(x - 3)) + 1/(x*(x - 2) - 1*(x - 2)) - 1/(x*(x - 3) - 2*(x - 3))) == (1/(x**2 - 4*x + 3) + 1/(x**2 - 3*x + 2) - 1/(x**2 - 5*x + 6))"
+       ]
+      },
+      {
+       "math": "= \\frac{1}{(x - 3)(x - 1)} + \\frac{1}{(x - 2)(x - 1)} - \\frac{1}{(x - 3)(x - 2)}",
+       "en": "Complete the factorization of each denominator by taking out the common binomial factors.",
+       "ur": "مشترک دو رقمی اجزاء باہر نکال کر ہر نسب نما کی تجزی مکمل کریں۔",
+       "check": [
+        "(1/((x - 3)*(x - 1)) + 1/((x - 2)*(x - 1)) - 1/((x - 3)*(x - 2))) == (1/(x**2 - 4*x + 3) + 1/(x**2 - 3*x + 2) - 1/(x**2 - 5*x + 6))"
+       ]
+      },
+      {
+       "math": "= \\frac{(x - 2) + (x - 3) - (x - 1)}{(x - 3)(x - 2)(x - 1)}",
+       "en": "The Least Common Denominator (L.C.D.) of the fractions is $(x - 3)(x - 2)(x - 1)$. Combine all the numerators over this common denominator.",
+       "ur": "ان کسور کا ذو اضعاف اقل (L.C.D.) $(x - 3)(x - 2)(x - 1)$ ہے۔ تمام شمار کنندگان کو اس مشترک نسب نما کے اوپر یکجا کریں۔",
+       "check": [
+        "((x - 2) + (x - 3) - (x - 1))/((x - 3)*(x - 2)*(x - 1)) == (1/((x - 3)*(x - 1)) + 1/((x - 2)*(x - 1)) - 1/((x - 3)*(x - 2)))"
+       ]
+      },
+      {
+       "math": "= \\frac{x - 2 + x - 3 - x + 1}{(x - 3)(x - 2)(x - 1)}",
+       "en": "Remove the brackets in the numerator, making sure to change the signs inside the last bracket because of the minus sign outside.",
+       "ur": "شمار کنندہ میں بریکٹ ہٹائیں، اور باہر منفی علامت ہونے کی وجہ سے آخری بریکٹ کے اندر کی علامتیں تبدیل کرنے کا خیال رکھیں۔",
+       "check": [
+        "(x - 2 + x - 3 - x + 1)/((x - 3)*(x - 2)*(x - 1)) == ((x - 2) + (x - 3) - (x - 1))/((x - 3)*(x - 2)*(x - 1))"
        ]
       },
       {
        "math": "= \\frac{x - 4}{\\left(x - 3\\right) \\left(x - 2\\right) \\left(x - 1\\right)}",
-       "en": "Multiply out and collect like terms in the numerator.",
-       "ur": "شمار کنندہ میں ضرب دے کر متشابہ ارکان اکٹھے کریں۔",
+       "en": "Combine the like terms in the numerator ($x + x - x = x$ and $-2 - 3 + 1 = -4$) to get the final simplified form.",
+       "ur": "مختصر ترین شکل حاصل کرنے کے لیے شمار کنندہ میں متشابہ ارکان کو حل کریں ($x + x - x = x$ اور $-2 - 3 + 1 = -4$)۔",
        "check": [
+        "(x - 4)/((x - 3)*(x - 2)*(x - 1)) == (1/(x**2 - 4*x + 3) + 1/(x**2 - 3*x + 2) - 1/(x**2 - 5*x + 6))",
+        "(1/((x - 2)*(x - 1)) + 1/((x - 3)*(x - 1)) - 1/((x - 3)*(x - 2))) == (1/(x**2 - 3*x + 2) + 1/(x**2 - 4*x + 3) - 1/(x**2 - 5*x + 6))",
+        "(x - 4)/((x - 3)*(x - 2)*(x - 1)) == (1/(x**2 - 3*x + 2) + 1/(x**2 - 4*x + 3) - 1/(x**2 - 5*x + 6))",
         "(x - 4)/((x - 3)*(x - 2)*(x - 1)) == (1/(x**2 - 3*x + 2) + 1/(x**2 - 4*x + 3) - 1/(x**2 - 5*x + 6))"
        ]
       }
      ],
      "answer": "$\\frac{x - 4}{\\left(x - 3\\right) \\left(x - 2\\right) \\left(x - 1\\right)}$",
+     "enriched": true,
      "book_key": "\\frac{x-4}{(x-3)(x-2)(x-1)}"
     },
     {
@@ -826,36 +1112,67 @@
      "prompt": "",
      "steps": [
       {
-       "math": "\\frac{2 x^{3} + x^{2} + 3}{\\left(x^{2} + 2\\right)^{2}} - \\frac{1}{x^{2} + 2}",
-       "en": "Write the expression.",
-       "ur": "عبارت لکھیں۔"
-      },
-      {
-       "math": "= \\frac{2 x^{3} + x^{2} + 3}{\\left(x^{2} + 2\\right)^{2}} - \\frac{1}{x^{2} + 2}",
-       "en": "Factorize each denominator.",
-       "ur": "ہر نسب نما کی تجزی کریں۔",
+       "math": "\\frac{2x^3+x^2+3}{(x^2+2)^2} - \\frac{1}{x^2+2}",
+       "en": "To subtract the first expression from the second, we write the second fraction first and subtract the first fraction from it.",
+       "ur": "پہلی عبارت کو دوسری عبارت میں سے تفریق کرنے کے لیے، ہم پہلے دوسری کسر لکھتے ہیں اور اس میں سے پہلی کسر کو تفریق کرتے ہیں۔",
        "check": [
-        "(-1/(x**2 + 2) + (2*x**3 + x**2 + 3)/(x**2 + 2)**2) == (-1/(x**2 + 2) + (2*x**3 + x**2 + 3)/(x**2 + 2)**2)"
+        "((2*x**3 + x**2 + 3)/(x**2 + 2)**2 - 1/(x**2 + 2)) == ((2*x**3 + x**2 + 3)/(x**2 + 2)**2 - 1/(x**2 + 2))"
        ]
       },
       {
-       "math": "= \\frac{\\left(2 x^{3} + x^{2} + 3\\right) - \\left(x^{2} + 2\\right)}{\\left(x^{2} + 2\\right)^{2}}",
-       "en": "The L.C.D. is $\\left(x^{2} + 2\\right)^{2}$; write each numerator over it.",
-       "ur": "ل.م.م (L.C.D.) $\\left(x^{2} + 2\\right)^{2}$ ہے؛ ہر شمار کنندہ اس پر لکھیں۔",
+       "math": "\\text{L.C.M.} = (x^2+2)^2",
+       "en": "To subtract these algebraic fractions, we need a common denominator. The Least Common Multiple (L.C.M.) of the denominators $(x^2+2)^2$ and $(x^2+2)$ is $(x^2+2)^2$.",
+       "ur": "ان الجبری کسور کو تفریق کرنے کے لیے ہمیں ایک مشترک مخرج (نسب نما) کی ضرورت ہے۔ مخرج $(x^2+2)^2$ اور $(x^2+2)$ کا ذواضعاف اقل (L.C.M.) $(x^2+2)^2$ ہے۔",
        "check": [
-        "(2*x**3 + 1)/((x**2 + 2)**2) == (-1/(x**2 + 2) + (2*x**3 + x**2 + 3)/(x**2 + 2)**2)"
+        "(x**2 + 2)**2 == (x**2 + 2)*(x**2 + 2)"
+       ]
+      },
+      {
+       "math": "= \\frac{2x^3+x^2+3}{(x^2+2)^2} - \\frac{1 \\cdot (x^2+2)}{(x^2+2)(x^2+2)}",
+       "en": "Multiply the numerator and the denominator of the second fraction by $(x^2+2)$ so that both fractions have the same denominator.",
+       "ur": "دوسری کسر کے شمار کنندہ اور مخرج دونوں کو $(x^2+2)$ سے ضرب دیں تاکہ دونوں کسور کے مخرج یکساں ہو جائیں۔",
+       "check": [
+        "(2*x**3 + x**2 + 3)/(x**2 + 2)**2 - (1*(x**2 + 2))/((x**2 + 2)*(x**2 + 2)) == (2*x**3 + x**2 + 3)/(x**2 + 2)**2 - 1/(x**2 + 2)"
+       ]
+      },
+      {
+       "math": "= \\frac{(2x^3+x^2+3) - (x^2+2)}{(x^2+2)^2}",
+       "en": "Now that the denominators are the same, combine the numerators over the common denominator $(x^2+2)^2$.",
+       "ur": "اب جبکہ مخرج یکساں ہیں، شمار کنندگان کو مشترک مخرج $(x^2+2)^2$ کے اوپر یکجا کریں۔",
+       "check": [
+        "((2*x**3 + x**2 + 3) - (x**2 + 2))/(x**2 + 2)**2 == (2*x**3 + x**2 + 3)/(x**2 + 2)**2 - 1/(x**2 + 2)"
+       ]
+      },
+      {
+       "math": "= \\frac{2x^3 + x^2 + 3 - x^2 - 2}{(x^2+2)^2}",
+       "en": "Remove the brackets in the numerator. Remember to change the signs of the terms inside the second bracket because of the negative sign outside.",
+       "ur": "شمار کنندہ میں بریکٹ ختم کریں۔ باہر منفی کی علامت ہونے کی وجہ سے دوسری بریکٹ کے اندر موجود رقموں کی علامتیں تبدیل کرنا یاد رکھیں۔",
+       "check": [
+        "(2*x**3 + x**2 + 3 - x**2 - 2)/(x**2 + 2)**2 == ((2*x**3 + x**2 + 3) - (x**2 + 2))/(x**2 + 2)**2"
+       ]
+      },
+      {
+       "math": "= \\frac{2x^3 + (x^2 - x^2) + (3 - 2)}{(x^2+2)^2}",
+       "en": "Group the like terms together in the numerator.",
+       "ur": "شمار کنندہ میں متشابہ رقوم کو ایک ساتھ ملا کر لکھیں۔",
+       "check": [
+        "(2*x**3 + (x**2 - x**2) + (3 - 2))/(x**2 + 2)**2 == (2*x**3 + x**2 + 3 - x**2 - 2)/(x**2 + 2)**2"
        ]
       },
       {
        "math": "= \\frac{2 x^{3} + 1}{\\left(x^{2} + 2\\right)^{2}}",
-       "en": "Multiply out and collect like terms in the numerator.",
-       "ur": "شمار کنندہ میں ضرب دے کر متشابہ ارکان اکٹھے کریں۔",
+       "en": "Simplify the numerator by cancelling $x^2 - x^2 = 0$ and subtracting $3 - 2 = 1$ to get the final answer.",
+       "ur": "شمار کنندہ میں $x^2 - x^2 = 0$ کو کینسل کر کے اور $3 - 2 = 1$ تفریق کر کے مختصر کریں، جس سے حتمی جواب حاصل ہو جائے گا۔",
        "check": [
+        "(2*x**3 + 1)/(x**2 + 2)**2 == (2*x**3 + x**2 + 3)/(x**2 + 2)**2 - 1/(x**2 + 2)",
+        "(-1/(x**2 + 2) + (2*x**3 + x**2 + 3)/(x**2 + 2)**2) == (-1/(x**2 + 2) + (2*x**3 + x**2 + 3)/(x**2 + 2)**2)",
+        "(2*x**3 + 1)/((x**2 + 2)**2) == (-1/(x**2 + 2) + (2*x**3 + x**2 + 3)/(x**2 + 2)**2)",
         "(2*x**3 + 1)/((x**2 + 2)**2) == (-1/(x**2 + 2) + (2*x**3 + x**2 + 3)/(x**2 + 2)**2)"
        ]
       }
      ],
      "answer": "$\\frac{2 x^{3} + 1}{\\left(x^{2} + 2\\right)^{2}}$",
+     "enriched": true,
      "book_key": "\\frac{2x^3+1}{(x^2+2)^2}"
     }
    ],
@@ -873,25 +1190,55 @@
      "prompt": "$\\frac{24lm}{5l+10m}\\times\\frac{5l^2-20m^2}{16mn}$",
      "steps": [
       {
-       "math": "\\frac{24 l m}{5 l + 10 m} \\times \\frac{5 l^{2} - 20 m^{2}}{16 m n}",
-       "en": "Write the expression.",
-       "ur": "عبارت لکھیں۔"
+       "math": "\\frac{24lm}{5l+10m} \\times \\frac{5l^{2}-20m^{2}}{16mn}",
+       "en": "Write down the given algebraic expression to simplify.",
+       "ur": "مختصر کرنے کے لیے دی گئی الجبری عبارت لکھیں۔"
       },
       {
-       "math": "= \\frac{24 l m}{5 \\left(l + 2 m\\right)} \\times \\frac{5 \\left(l - 2 m\\right) \\left(l + 2 m\\right)}{16 m n}",
-       "en": "Factorize every numerator and denominator.",
-       "ur": "ہر شمار کنندہ اور نسب نما کی تجزی کریں۔"
+       "math": "= \\frac{24lm}{5(l+2m)} \\times \\frac{5(l^{2}-4m^{2})}{16mn}",
+       "en": "Take $5$ as a common factor from the denominator $5l+10m$ and from the numerator $5l^{2}-20m^{2}$.",
+       "ur": "مخرج $5l+10m$ اور شمار کنندہ $5l^{2}-20m^{2}$ میں سے $5$ کو مشترک لیں۔",
+       "check": [
+        "(24*l*m/(5*l+10*m))*((5*l**2-20*m**2)/(16*m*n)) == (24*l*m/(5*(l+2*m)))*(5*(l**2-4*m**2)/(16*m*n))"
+       ]
+      },
+      {
+       "math": "= \\frac{24lm}{5(l+2m)} \\times \\frac{5((l)^{2}-(2m)^{2})}{16mn}",
+       "en": "Write the term $l^{2}-4m^{2}$ as the difference of two squares, $(l)^{2}-(2m)^{2}$.",
+       "ur": "رقم $l^{2}-4m^{2}$ کو دو مربعات کے فرق یعنی $(l)^{2}-(2m)^{2}$ کی شکل میں لکھیں۔",
+       "check": [
+        "l**2 - 4*m**2 == l**2 - (2*m)**2"
+       ]
+      },
+      {
+       "math": "= \\frac{24lm}{5(l+2m)} \\times \\frac{5(l-2m)(l+2m)}{16mn}",
+       "en": "Apply the difference of squares formula $a^{2}-b^{2}=(a-b)(a+b)$ to factorize $(l)^{2}-(2m)^{2}$.",
+       "ur": "$(l)^{2}-(2m)^{2}$ کی تجزی کرنے کے لیے دو مربعات کے فرق کا کلیہ $a^{2}-b^{2}=(a-b)(a+b)$ استعمال کریں۔",
+       "check": [
+        "l**2 - (2*m)**2 == (l - 2*m)*(l + 2*m)"
+       ]
+      },
+      {
+       "math": "= \\frac{8 \\times 3 \\times l \\times m}{5(l+2m)} \\times \\frac{5(l-2m)(l+2m)}{8 \\times 2 \\times m \\times n}",
+       "en": "Break down the coefficients $24$ and $16$ into their factors to easily identify common terms.",
+       "ur": "مشترک اجزاء کی آسانی سے شناخت کے لیے عددی سروں $24$ اور $16$ کی تجزی کریں۔",
+       "check": [
+        "24 == 8*3",
+        "16 == 8*2"
+       ]
       },
       {
        "math": "= \\frac{3 l \\left(l - 2 m\\right)}{2 n}",
-       "en": "Cancel the common factors.",
-       "ur": "مشترک اجزاء کاٹ دیں۔",
+       "en": "Cancel out the common factors $8$, $5$, $m$, and $(l+2m)$ from the numerators and denominators to get the final answer.",
+       "ur": "حتمی جواب حاصل کرنے کے لیے شمار کنندہ اور مخرج میں سے مشترک اجزاء $8$، $5$، $m$ اور $(l+2m)$ کو کاٹ دیں۔",
        "check": [
+        "(24*l*m/(5*(l+2*m)))*(5*(l-2*m)*(l+2*m)/(16*m*n)) == 3*l*(l-2*m)/(2*n)",
         "((3*l**2 - 6*l*m)/(2*n)) == (3*l*(5*l**2 - 20*m**2)/(2*n*(5*l + 10*m)))"
        ]
       }
      ],
      "answer": "$\\frac{3 l \\left(l - 2 m\\right)}{2 n}$",
+     "enriched": true,
      "book_key": "\\frac{3l(l-2m)}{2n}"
     },
     {
@@ -899,25 +1246,46 @@
      "prompt": "$\\frac{x^2-3x+2}{x^2+3x-4}\\times\\frac{2x^2+8x}{3x+6}$",
      "steps": [
       {
-       "math": "\\frac{x^{2} - 3 x + 2}{x^{2} + 3 x - 4} \\times \\frac{2 x^{2} + 8 x}{3 x + 6}",
-       "en": "Write the expression.",
-       "ur": "عبارت لکھیں۔"
+       "math": "\\frac{x^2-3x+2}{x^2+3x-4} \\times \\frac{2x^2+8x}{3x+6}",
+       "en": "Write down the given algebraic expression to be simplified.",
+       "ur": "مختصر کرنے کے لیے دی گئی الجبری عبارت لکھیں۔"
       },
       {
-       "math": "= \\frac{\\left(x - 2\\right) \\left(x - 1\\right)}{\\left(x - 1\\right) \\left(x + 4\\right)} \\times \\frac{2 x \\left(x + 4\\right)}{3 \\left(x + 2\\right)}",
-       "en": "Factorize every numerator and denominator.",
-       "ur": "ہر شمار کنندہ اور نسب نما کی تجزی کریں۔"
+       "math": "= \\frac{x^2-2x-x+2}{x^2+4x-x-4} \\times \\frac{2x^2+8x}{3x+6}",
+       "en": "Split the middle terms of the quadratic expressions in the first fraction to factorize them.",
+       "ur": "پہلی کسر کی دو درجی عبارتوں کی تجزی کرنے کے لیے درمیانی رقموں کو توڑ کر لکھیں۔",
+       "check": [
+        "((x**2 - 2*x - x + 2)/(x**2 + 4*x - x - 4))*((2*x**2 + 8*x)/(3*x + 6)) == ((x**2 - 3*x + 2)/(x**2 + 3*x - 4))*((2*x**2 + 8*x)/(3*x + 6))"
+       ]
+      },
+      {
+       "math": "= \\frac{x(x-2)-1(x-2)}{x(x+4)-1(x+4)} \\times \\frac{2x(x+4)}{3(x+2)}",
+       "en": "Take out the common factors by grouping in the first fraction, and factor out $2x$ and $3$ in the second fraction.",
+       "ur": "پہلی کسر میں گروپ بنا کر مشترک اجزاء باہر نکالیں، اور دوسری کسر سے $2x$ اور $3$ مشترک لیں۔",
+       "check": [
+        "((x*(x - 2) - 1*(x - 2))/(x*(x + 4) - 1*(x + 4)))*((2*x*(x + 4))/(3*(x + 2))) == ((x**2 - 3*x + 2)/(x**2 + 3*x - 4))*((2*x**2 + 8*x)/(3*x + 6))"
+       ]
+      },
+      {
+       "math": "= \\frac{(x-2)(x-1)}{(x-1)(x+4)} \\times \\frac{2x(x+4)}{3(x+2)}",
+       "en": "Complete the factorization of the numerator and denominator of the first fraction.",
+       "ur": "پہلی کسر کے شمار کنندہ اور مخرج کی تجزی مکمل کریں۔",
+       "check": [
+        "(((x - 2)*(x - 1))/((x - 1)*(x + 4)))*((2*x*(x + 4))/(3*(x + 2))) == ((x**2 - 3*x + 2)/(x**2 + 3*x - 4))*((2*x**2 + 8*x)/(3*x + 6))"
+       ]
       },
       {
        "math": "= \\frac{2 x \\left(x - 2\\right)}{3 \\left(x + 2\\right)}",
-       "en": "Cancel the common factors.",
-       "ur": "مشترک اجزاء کاٹ دیں۔",
+       "en": "Cancel out the common factors $(x-1)$ and $(x+4)$ from the numerator and denominator to get the simplified answer.",
+       "ur": "مختصر جواب حاصل کرنے کے لیے شمار کنندہ اور مخرج سے مشترک اجزاء $(x-1)$ اور $(x+4)$ کو کاٹ دیں۔",
        "check": [
+        "(2*x*(x - 2))/(3*(x + 2)) == ((x**2 - 3*x + 2)/(x**2 + 3*x - 4))*((2*x**2 + 8*x)/(3*x + 6))",
         "((2*x**2 - 4*x)/(3*x + 6)) == ((2*x**2 + 8*x)*(x**2 - 3*x + 2)/((3*x + 6)*(x**2 + 3*x - 4)))"
        ]
       }
      ],
      "answer": "$\\frac{2 x \\left(x - 2\\right)}{3 \\left(x + 2\\right)}$",
+     "enriched": true,
      "book_key": "\\frac{2x(x-2)}{3(x+2)}"
     },
     {
@@ -925,25 +1293,54 @@
      "prompt": "$\\frac{a^2-4b^2}{a^2+2ba}\\times\\frac{2a^2+10ab}{a^2+3ab-10b^2}$",
      "steps": [
       {
-       "math": "\\frac{a^{2} - 4 b^{2}}{a^{2} + 2 a b} \\times \\frac{2 a^{2} + 10 a b}{a^{2} + 3 a b - 10 b^{2}}",
-       "en": "Write the expression.",
-       "ur": "عبارت لکھیں۔"
+       "math": "\\frac{a^{2} - 4b^{2}}{a^{2} + 2ba} \\times \\frac{2a^{2} + 10ab}{a^{2} + 3ab - 10b^{2}}",
+       "en": "Write the given algebraic fraction expression.",
+       "ur": "دی گئی الجبری کسر کی عبارت لکھیں۔"
       },
       {
-       "math": "= \\frac{\\left(a - 2 b\\right) \\left(a + 2 b\\right)}{a \\left(a + 2 b\\right)} \\times \\frac{2 a \\left(a + 5 b\\right)}{\\left(a - 2 b\\right) \\left(a + 5 b\\right)}",
-       "en": "Factorize every numerator and denominator.",
-       "ur": "ہر شمار کنندہ اور نسب نما کی تجزی کریں۔"
+       "math": "= \\frac{a^{2} - (2b)^{2}}{a(a + 2b)} \\times \\frac{2a(a + 5b)}{a^{2} + 5ab - 2ab - 10b^{2}}",
+       "en": "Rewrite $4b^2$ as $(2b)^2$, take out common factors $a$ and $2a$, and split the middle term $3ab$ into $5ab - 2ab$ to factorize.",
+       "ur": "تجزی کرنے کے لیے $4b^2$ کو $(2b)^2$ لکھیں، مشترک اجزاء $a$ اور $2a$ باہر نکالیں، اور درمیانی رقم $3ab$ کو $5ab - 2ab$ میں توڑیں۔",
+       "check": [
+        "((a**2 - (2*b)**2)/(a*(a + 2*b))) * ((2*a*(a + 5*b))/(a**2 + 5*a*b - 2*a*b - 10*b**2)) == ((a**2 - 4*b**2)/(a**2 + 2*b*a)) * ((2*a**2 + 10*a*b)/(a**2 + 3*a*b - 10*b**2))"
+       ]
+      },
+      {
+       "math": "= \\frac{(a - 2b)(a + 2b)}{a(a + 2b)} \\times \\frac{2a(a + 5b)}{a(a + 5b) - 2b(a + 5b)}",
+       "en": "Apply the difference of squares formula $x^2 - y^2 = (x - y)(x + y)$ to the first numerator, and factor by grouping in the second denominator.",
+       "ur": "پہلے شمار کنندہ پر کلیہ $x^2 - y^2 = (x - y)(x + y)$ لاگو کریں، اور دوسرے مخرج میں گروپ بنا کر مشترک لیں۔",
+       "check": [
+        "(((a - 2*b)*(a + 2*b))/(a*(a + 2*b))) * ((2*a*(a + 5*b))/(a*(a + 5*b) - 2*b*(a + 5*b))) == ((a**2 - 4*b**2)/(a**2 + 2*b*a)) * ((2*a**2 + 10*a*b)/(a**2 + 3*a*b - 10*b**2))"
+       ]
+      },
+      {
+       "math": "= \\frac{(a - 2b)(a + 2b)}{a(a + 2b)} \\times \\frac{2a(a + 5b)}{(a - 2b)(a + 5b)}",
+       "en": "Factor out $(a + 5b)$ in the second denominator to complete the factorization.",
+       "ur": "تجزی مکمل کرنے کے لیے دوسرے مخرج میں سے $(a + 5b)$ مشترک لیں۔",
+       "check": [
+        "(((a - 2*b)*(a + 2*b))/(a*(a + 2*b))) * ((2*a*(a + 5*b))/((a - 2*b)*(a + 5*b))) == ((a**2 - 4*b**2)/(a**2 + 2*b*a)) * ((2*a**2 + 10*a*b)/(a**2 + 3*a*b - 10*b**2))"
+       ]
+      },
+      {
+       "math": "= \\frac{a - 2b}{a} \\times \\frac{2a}{a - 2b}",
+       "en": "Cancel out the common factor $(a + 2b)$ in the first fraction and $(a + 5b)$ in the second fraction.",
+       "ur": "پہلی کسر میں مشترک جزو $(a + 2b)$ اور دوسری کسر میں $(a + 5b)$ کو کاٹ دیں۔",
+       "check": [
+        "((a - 2*b)/a) * ((2*a)/(a - 2*b)) == ((a**2 - 4*b**2)/(a**2 + 2*b*a)) * ((2*a**2 + 10*a*b)/(a**2 + 3*a*b - 10*b**2))"
+       ]
       },
       {
        "math": "= 2",
-       "en": "Cancel the common factors.",
-       "ur": "مشترک اجزاء کاٹ دیں۔",
+       "en": "Cancel the remaining common factors $(a - 2b)$ and $a$ across the numerators and denominators to get the final answer.",
+       "ur": "شمار کنندہ اور مخرج میں سے باقی ماندہ مشترک اجزاء $(a - 2b)$ اور $a$ کو کاٹ کر حتمی جواب حاصل کریں۔",
        "check": [
+        "2 == ((a**2 - 4*b**2)/(a**2 + 2*b*a)) * ((2*a**2 + 10*a*b)/(a**2 + 3*a*b - 10*b**2))",
         "(2) == ((a**2 - 4*b**2)*(2*a**2 + 10*a*b)/((a**2 + 2*a*b)*(a**2 + 3*a*b - 10*b**2)))"
        ]
       }
      ],
      "answer": "$2$",
+     "enriched": true,
      "book_key": "2"
     },
     {
@@ -951,25 +1348,54 @@
      "prompt": "$\\frac{(a+b)^2-c^2}{(a+c)^2-b^2}\\times\\frac{a^2-(b-c)^2}{(a+c)^2-c^2}$",
      "steps": [
       {
-       "math": "\\frac{- c^{2} + \\left(a + b\\right)^{2}}{- b^{2} + \\left(a + c\\right)^{2}} \\times \\frac{a^{2} - \\left(b - c\\right)^{2}}{- c^{2} + \\left(a + c\\right)^{2}}",
-       "en": "Write the expression.",
-       "ur": "عبارت لکھیں۔"
+       "math": "\\frac{(a+b)^2-c^2}{(a+c)^2-b^2} \\times \\frac{a^2-(b-c)^2}{(a+c)^2-c^2}",
+       "en": "Write down the given algebraic expression to simplify.",
+       "ur": "مختصر کرنے کے لیے دی گئی الجبری عبارت لکھیں۔"
       },
       {
-       "math": "= \\frac{\\left(a + b - c\\right) \\left(a + b + c\\right)}{\\left(a - b + c\\right) \\left(a + b + c\\right)} \\times \\frac{\\left(a - b + c\\right) \\left(a + b - c\\right)}{a \\left(a + 2 c\\right)}",
-       "en": "Factorize every numerator and denominator.",
-       "ur": "ہر شمار کنندہ اور نسب نما کی تجزی کریں۔"
+       "math": "= \\frac{((a+b)-c)((a+b)+c)}{((a+c)-b)((a+c)+b)} \\times \\frac{(a-(b-c))(a+(b-c))}{((a+c)-c)((a+c)+c)}",
+       "en": "Notice that each numerator and denominator is in the form of a difference of two squares. Apply the formula $x^2 - y^2 = (x-y)(x+y)$ to factorize every part.",
+       "ur": "غور کریں کہ ہر شمار کنندہ اور مخرج دو مربعات کے فرق کی شکل میں ہے۔ ہر حصے کی تجزی کرنے کے لیے فارمولا $x^2 - y^2 = (x-y)(x+y)$ لاگو کریں۔",
+       "check": [
+        "(((a+b)**2-c**2)/((a+c)**2-b**2))*((a**2-(b-c)**2)/((a+c)**2-c**2)) == (((a+b)-c)*((a+b)+c)/(((a+c)-b)*((a+c)+b)))*((a-(b-c))*(a+(b-c))/(((a+c)-c)*((a+c)+c)))"
+       ]
+      },
+      {
+       "math": "= \\frac{(a+b-c)(a+b+c)}{(a+c-b)(a+c+b)} \\times \\frac{(a-b+c)(a+b-c)}{(a+c-c)(a+c+c)}",
+       "en": "Remove the inner brackets. Be careful to change the sign inside $(b-c)$ when preceded by a minus sign, so $a-(b-c)$ becomes $a-b+c$.",
+       "ur": "اندرونی بریکٹ ہٹا دیں۔ مائنس کے نشان کی وجہ سے $(b-c)$ کے اندر کی علامت تبدیل کرنے کا خیال رکھیں، اس طرح $a-(b-c)$ حل ہو کر $a-b+c$ بن جائے گا۔",
+       "check": [
+        "(((a+b)-c)*((a+b)+c)/(((a+c)-b)*((a+c)+b)))*((a-(b-c))*(a+(b-c))/(((a+c)-c)*((a+c)+c))) == ((a+b-c)*(a+b+c)/((a+c-b)*(a+c+b)))*((a-b+c)*(a+b-c)/((a+c-c)*(a+c+c)))"
+       ]
+      },
+      {
+       "math": "= \\frac{(a+b-c)(a+b+c)}{(a-b+c)(a+b+c)} \\times \\frac{(a-b+c)(a+b-c)}{a(a+2c)}",
+       "en": "Simplify the like terms in the second denominator ($a+c-c = a$ and $a+c+c = a+2c$), and rearrange the terms in the first denominator to clearly see the common factors.",
+       "ur": "دوسرے مخرج میں یکساں رقوم کو مختصر کریں ($a+c-c = a$ اور $a+c+c = a+2c$)، اور مشترک اجزاء کو واضح طور پر دیکھنے کے لیے پہلے مخرج کی رقوم کو ترتیب دیں۔",
+       "check": [
+        "((a+b-c)*(a+b+c)/((a+c-b)*(a+c+b)))*((a-b+c)*(a+b-c)/((a+c-c)*(a+c+c))) == ((a+b-c)*(a+b+c)/((a-b+c)*(a+b+c)))*((a-b+c)*(a+b-c)/(a*(a+2*c)))"
+       ]
+      },
+      {
+       "math": "= \\frac{(a+b-c) \\times (a+b-c)}{a(a+2c)}",
+       "en": "Cancel out the common factors $(a+b+c)$ and $(a-b+c)$ from the numerators and denominators.",
+       "ur": "شمار کنندہ اور مخرج سے مشترک اجزاء $(a+b+c)$ اور $(a-b+c)$ کو کاٹ دیں۔",
+       "check": [
+        "((a+b-c)*(a+b+c)/((a-b+c)*(a+b+c)))*((a-b+c)*(a+b-c)/(a*(a+2*c))) == ((a+b-c)*(a+b-c))/(a*(a+2*c))"
+       ]
       },
       {
        "math": "= \\frac{\\left(a + b - c\\right)^{2}}{a \\left(a + 2 c\\right)}",
-       "en": "Cancel the common factors.",
-       "ur": "مشترک اجزاء کاٹ دیں۔",
+       "en": "Multiply the remaining identical factors in the numerator to write them as a whole square. This is the final simplified answer.",
+       "ur": "شمار کنندہ میں بچ جانے والے ایک جیسے اجزاء کو ضرب دے کر مکمل مربع کی شکل میں لکھیں۔ یہ آخری مختصر جواب ہے۔",
        "check": [
+        "((a+b-c)*(a+b-c))/(a*(a+2*c)) == (a+b-c)**2/(a*(a+2*c))",
         "((a**2 + 2*a*b - 2*a*c + b**2 - 2*b*c + c**2)/(a**2 + 2*a*c)) == ((a**2 - (b - c)**2)*(-c**2 + (a + b)**2)/((-b**2 + (a + c)**2)*(-c**2 + (a + c)**2)))"
        ]
       }
      ],
      "answer": "$\\frac{\\left(a + b - c\\right)^{2}}{a \\left(a + 2 c\\right)}$",
+     "enriched": true,
      "book_key": "\\frac{(a+b-c)^2}{a(a+2c)}"
     },
     {
@@ -978,29 +1404,55 @@
      "steps": [
       {
        "math": "\\frac{x^{3} - 8}{x^{2} - 4} \\div \\frac{x^{2} + 2 x + 4}{x^{2} + 4 x + 4}",
-       "en": "Write the expression.",
-       "ur": "عبارت لکھیں۔"
+       "en": "Write the given algebraic fraction expression.",
+       "ur": "دی گئی الجبری کسر کی عبارت لکھیں۔"
+      },
+      {
+       "math": "= \\frac{x^{3} - 2^{3}}{x^{2} - 2^{2}} \\div \\frac{x^{2} + 2 x + 4}{(x)^{2} + 2(x)(2) + (2)^{2}}",
+       "en": "Rewrite the terms in standard formula forms: difference of cubes $a^3 - b^3$, difference of squares $a^2 - b^2$, and perfect square trinomial $a^2 + 2ab + b^2$.",
+       "ur": "رقوم کو معیاری فارمولوں کی شکل میں لکھیں: مکعبوں کا فرق $a^3 - b^3$، مربعات کا فرق $a^2 - b^2$، اور کامل مربع سہ رقمی $a^2 + 2ab + b^2$۔",
+       "check": [
+        "(x**3 - 8)/(x**2 - 4) == (x**3 - 2**3)/(x**2 - 2**2)",
+        "x**2 + 4*x + 4 == x**2 + 2*x*2 + 2**2"
+       ]
       },
       {
        "math": "= \\frac{\\left(x - 2\\right) \\left(x^{2} + 2 x + 4\\right)}{\\left(x - 2\\right) \\left(x + 2\\right)} \\div \\frac{x^{2} + 2 x + 4}{\\left(x + 2\\right)^{2}}",
-       "en": "Factorize every numerator and denominator.",
-       "ur": "ہر شمار کنندہ اور نسب نما کی تجزی کریں۔"
+       "en": "Apply the factorization formulas: $a^3 - b^3 = (a - b)(a^2 + ab + b^2)$, $a^2 - b^2 = (a - b)(a + b)$, and $a^2 + 2ab + b^2 = (a + b)^2$.",
+       "ur": "تجزی کے فارمولے لاگو کریں: $a^3 - b^3 = (a - b)(a^2 + ab + b^2)$، $a^2 - b^2 = (a - b)(a + b)$، اور $a^2 + 2ab + b^2 = (a + b)^2$۔",
+       "check": [
+        "x**3 - 8 == (x - 2)*(x**2 + 2*x + 4)",
+        "x**2 - 4 == (x - 2)*(x + 2)",
+        "x**2 + 4*x + 4 == (x + 2)**2"
+       ]
       },
       {
        "math": "= \\frac{\\left(x - 2\\right) \\left(x^{2} + 2 x + 4\\right)}{\\left(x - 2\\right) \\left(x + 2\\right)} \\times \\frac{\\left(x + 2\\right)^{2}}{x^{2} + 2 x + 4}",
-       "en": "Dividing by a fraction is multiplying by its reciprocal (turn the fraction after $\\div$ upside down).",
-       "ur": "کسر سے تقسیم کرنا اس کے معکوس سے ضرب دینا ہے ($\\div$ کے بعد والی کسر الٹ دیں)۔"
+       "en": "Change the division sign $\\div$ to multiplication $\\times$ by taking the reciprocal of the second fraction (inverting it).",
+       "ur": "دوسری کسر کا معکوس لے کر (اسے الٹ کر) تقسیم کی علامت $\\div$ کو ضرب $\\times$ میں تبدیل کریں۔",
+       "check": [
+        "((x - 2)*(x**2 + 2*x + 4)/((x - 2)*(x + 2)))*((x + 2)**2/(x**2 + 2*x + 4)) == ((x**3 - 8)/(x**2 - 4))/((x**2 + 2*x + 4)/(x**2 + 4*x + 4))"
+       ]
+      },
+      {
+       "math": "= \\frac{x^{2} + 2 x + 4}{x + 2} \\times \\frac{\\left(x + 2\\right)\\left(x + 2\\right)}{x^{2} + 2 x + 4}",
+       "en": "Cancel the common factor $(x - 2)$ in the first fraction and expand $(x + 2)^2$ as $(x + 2)(x + 2)$.",
+       "ur": "پہلی کسر میں مشترک جزو $(x - 2)$ کو کاٹ دیں اور $(x + 2)^2$ کو $(x + 2)(x + 2)$ کے طور پر کھول کر لکھیں۔",
+       "check": [
+        "((x**2 + 2*x + 4)/(x + 2))*((x + 2)*(x + 2)/(x**2 + 2*x + 4)) == ((x - 2)*(x**2 + 2*x + 4)/((x - 2)*(x + 2)))*((x + 2)**2/(x**2 + 2*x + 4))"
+       ]
       },
       {
        "math": "= x + 2",
-       "en": "Cancel the common factors.",
-       "ur": "مشترک اجزاء کاٹ دیں۔",
+       "en": "Cancel the remaining common factors $(x^2 + 2x + 4)$ and $(x + 2)$ from the numerator and denominator to get the final simplified answer.",
+       "ur": "مختصر ترین حتمی جواب حاصل کرنے کے لیے شمار کنندہ اور مخرج سے باقی ماندہ مشترک اجزاء $(x^2 + 2x + 4)$ اور $(x + 2)$ کو کاٹ دیں۔",
        "check": [
         "(x + 2) == ((x**3 - 8)*(x**2 + 4*x + 4)/((x**2 - 4)*(x**2 + 2*x + 4)))"
        ]
       }
      ],
      "answer": "$x + 2$",
+     "enriched": true,
      "book_key": "x+2"
     },
     {
@@ -1008,30 +1460,45 @@
      "prompt": "$\\frac{(a^2+ab)^2}{(a^2-ab)^2}\\div\\left(\\frac{a+b}{a-b}\\right)^2$",
      "steps": [
       {
-       "math": "\\frac{\\left(a^{2} + a b\\right)^{2}}{\\left(a^{2} - a b\\right)^{2}} \\div \\frac{\\left(a + b\\right)^{2}}{\\left(a - b\\right)^{2}}",
-       "en": "Write the expression.",
-       "ur": "عبارت لکھیں۔"
+       "math": "\\frac{(a^2+ab)^2}{(a^2-ab)^2} \\div \\left(\\frac{a+b}{a-b}\\right)^2",
+       "en": "Write down the given algebraic expression to be simplified.",
+       "ur": "مختصر کرنے کے لیے دی گئی الجبری عبارت لکھیں۔"
       },
       {
-       "math": "= \\frac{a^{2} \\left(a + b\\right)^{2}}{a^{2} \\left(a - b\\right)^{2}} \\div \\frac{\\left(a + b\\right)^{2}}{\\left(a - b\\right)^{2}}",
-       "en": "Factorize every numerator and denominator.",
-       "ur": "ہر شمار کنندہ اور نسب نما کی تجزی کریں۔"
+       "math": "= \\frac{[a(a+b)]^2}{[a(a-b)]^2} \\div \\frac{(a+b)^2}{(a-b)^2}",
+       "en": "Factor out the common variable $a$ inside the brackets of the first fraction, and apply the square to both the numerator and denominator of the second fraction.",
+       "ur": "پہلی کسر کی بریکٹوں کے اندر سے مشترک متغیر $a$ کو باہر نکالیں، اور دوسری کسر کے شمار کنندہ اور مخرج دونوں پر مربع لاگو کریں۔",
+       "check": [
+        "(a**2 + a*b)**2 == (a*(a + b))**2",
+        "(a**2 - a*b)**2 == (a*(a - b))**2"
+       ]
       },
       {
-       "math": "= \\frac{a^{2} \\left(a + b\\right)^{2}}{a^{2} \\left(a - b\\right)^{2}} \\times \\frac{\\left(a - b\\right)^{2}}{\\left(a + b\\right)^{2}}",
-       "en": "Dividing by a fraction is multiplying by its reciprocal (turn the fraction after $\\div$ upside down).",
-       "ur": "کسر سے تقسیم کرنا اس کے معکوس سے ضرب دینا ہے ($\\div$ کے بعد والی کسر الٹ دیں)۔"
+       "math": "= \\frac{a^2(a+b)^2}{a^2(a-b)^2} \\div \\frac{(a+b)^2}{(a-b)^2}",
+       "en": "Apply the exponent rule $(xy)^2 = x^2y^2$ to the numerator and denominator of the first fraction.",
+       "ur": "پہلی کسر کے شمار کنندہ اور مخرج پر قوت نما کا اصول $(xy)^2 = x^2y^2$ لاگو کریں۔",
+       "check": [
+        "(a*(a + b))**2 == a**2 * (a + b)**2",
+        "(a*(a - b))**2 == a**2 * (a - b)**2"
+       ]
+      },
+      {
+       "math": "= \\frac{a^2(a+b)^2}{a^2(a-b)^2} \\times \\frac{(a-b)^2}{(a+b)^2}",
+       "en": "Change the division sign $\\div$ to multiplication $\\times$ by taking the reciprocal of the second fraction (turning it upside down).",
+       "ur": "دوسری کسر کا معکوس لے کر (اسے الٹ کر) تقسیم کی علامت $\\div$ کو ضرب $\\times$ میں تبدیل کریں۔"
       },
       {
        "math": "= 1",
-       "en": "Cancel the common factors.",
-       "ur": "مشترک اجزاء کاٹ دیں۔",
+       "en": "Cancel out the common factors $a^2$, $(a+b)^2$, and $(a-b)^2$ from the numerators and denominators to get the final answer.",
+       "ur": "حتمی جواب حاصل کرنے کے لیے شمار کنندہ اور مخرج سے مشترک اجزائے ضربی $a^2$، $(a+b)^2$، اور $(a-b)^2$ کو کاٹ دیں۔",
        "check": [
+        "(a**2 * (a + b)**2 / (a**2 * (a - b)**2)) * ((a - b)**2 / (a + b)**2) == 1",
         "(1) == ((a - b)**2*(a**2 + a*b)**2/((a + b)**2*(a**2 - a*b)**2))"
        ]
       }
      ],
      "answer": "$1$",
+     "enriched": true,
      "book_key": "1"
     },
     {
@@ -1039,30 +1506,70 @@
      "prompt": "$\\frac{x^2-x-6}{x^2-x-20}\\div\\left\\{\\frac{x^3-3x^2}{x^2+4x}\\times\\frac{x^3-5x^2-14x}{x^2-12x+35}\\right\\}$",
      "steps": [
       {
-       "math": "\\frac{x^{2} - x - 6}{x^{2} - x - 20} \\div \\frac{\\left(x^{3} - 3 x^{2}\\right) \\left(x^{3} - 5 x^{2} - 14 x\\right)}{\\left(x^{2} + 4 x\\right) \\left(x^{2} - 12 x + 35\\right)}",
-       "en": "Write the expression.",
-       "ur": "عبارت لکھیں۔"
+       "math": "\\frac{x^2-x-6}{x^2-x-20} \\div \\left\\{ \\frac{x^3-3x^2}{x^2+4x} \\times \\frac{x^3-5x^2-14x}{x^2-12x+35} \\right\\}",
+       "en": "Write down the given algebraic expression.",
+       "ur": "دی گئی الجبری عبارت کو لکھیں۔"
       },
       {
-       "math": "= \\frac{\\left(x - 3\\right) \\left(x + 2\\right)}{\\left(x - 5\\right) \\left(x + 4\\right)} \\div \\frac{x^{3} \\left(x - 7\\right) \\left(x - 3\\right) \\left(x + 2\\right)}{x \\left(x - 7\\right) \\left(x - 5\\right) \\left(x + 4\\right)}",
-       "en": "Factorize every numerator and denominator.",
-       "ur": "ہر شمار کنندہ اور نسب نما کی تجزی کریں۔"
-      },
-      {
-       "math": "= \\frac{\\left(x - 3\\right) \\left(x + 2\\right)}{\\left(x - 5\\right) \\left(x + 4\\right)} \\times \\frac{x \\left(x - 7\\right) \\left(x - 5\\right) \\left(x + 4\\right)}{x^{3} \\left(x - 7\\right) \\left(x - 3\\right) \\left(x + 2\\right)}",
-       "en": "Dividing by a fraction is multiplying by its reciprocal (turn the fraction after $\\div$ upside down).",
-       "ur": "کسر سے تقسیم کرنا اس کے معکوس سے ضرب دینا ہے ($\\div$ کے بعد والی کسر الٹ دیں)۔"
-      },
-      {
-       "math": "= \\frac{1}{x^{2}}",
-       "en": "Cancel the common factors.",
-       "ur": "مشترک اجزاء کاٹ دیں۔",
+       "math": "= \\frac{x^2-3x+2x-6}{x^2-5x+4x-20} \\div \\left\\{ \\frac{x^2(x-3)}{x(x+4)} \\times \\frac{x(x^2-5x-14)}{x^2-7x-5x+35} \\right\\}",
+       "en": "Take out the common powers of $x$ and split the middle terms of the quadratic expressions.",
+       "ur": "$x$ کی مشترک طاقتیں باہر نکالیں اور دو درجی عبارتوں کی درمیانی رقوم کو توڑ کر لکھیں۔",
        "check": [
+        "(x**2 - 3*x + 2*x - 6) == (x**2 - x - 6)",
+        "(x**2 - 5*x + 4*x - 20) == (x**2 - x - 20)",
+        "x**2*(x - 3) == x**3 - 3*x**2",
+        "x*(x + 4) == x**2 + 4*x",
+        "x*(x**2 - 5*x - 14) == x**3 - 5*x**2 - 14*x",
+        "(x**2 - 7*x - 5*x + 35) == (x**2 - 12*x + 35)"
+       ]
+      },
+      {
+       "math": "= \\frac{(x-3)(x+2)}{(x-5)(x+4)} \\div \\left\\{ \\frac{x^2(x-3)}{x(x+4)} \\times \\frac{x(x^2-7x+2x-14)}{(x-7)(x-5)} \\right\\}",
+       "en": "Factorize by grouping and split the remaining middle term $x^2-5x-14$.",
+       "ur": "گروپ بندی کے ذریعے تجزی کریں اور باقی ماندہ درمیانی رقم $x^2-5x-14$ کو توڑیں۔",
+       "check": [
+        "(x - 3)*(x + 2) == (x**2 - x - 6)",
+        "(x - 5)*(x + 4) == (x**2 - x - 20)",
+        "(x - 7)*(x - 5) == (x**2 - 12*x + 35)",
+        "(x**2 - 7*x + 2*x - 14) == (x**2 - 5*x - 14)"
+       ]
+      },
+      {
+       "math": "= \\frac{(x-3)(x+2)}{(x-5)(x+4)} \\div \\left\\{ \\frac{x^2(x-3)}{x(x+4)} \\times \\frac{x(x-7)(x+2)}{(x-7)(x-5)} \\right\\}",
+       "en": "Complete the factorization of all numerators and denominators.",
+       "ur": "تمام شمار کنندگان اور مخرجوں کی تجزی مکمل کریں۔",
+       "check": [
+        "(x - 7)*(x + 2) == (x**2 - 5*x - 14)"
+       ]
+      },
+      {
+       "math": "= \\frac{(x-3)(x+2)}{(x-5)(x+4)} \\div \\frac{x^3(x-3)(x-7)(x+2)}{x(x+4)(x-7)(x-5)}",
+       "en": "Multiply the fractions inside the curly brackets.",
+       "ur": "درمیانی بریکٹ کے اندر موجود کسروں کو ضرب دیں۔",
+       "check": [
+        "(x**2*(x - 3)*x*(x - 7)*(x + 2)) == (x**3*(x - 3)*(x - 7)*(x + 2))"
+       ]
+      },
+      {
+       "math": "= \\frac{(x-3)(x+2)}{(x-5)(x+4)} \\times \\frac{x(x+4)(x-7)(x-5)}{x^3(x-3)(x-7)(x+2)}",
+       "en": "Change the division sign $\\div$ to multiplication $\\times$ by taking the reciprocal of the second fraction.",
+       "ur": "دوسری کسر کا معکوس لے کر تقسیم کی علامت $\\div$ کو ضرب $\\times$ میں تبدیل کریں۔",
+       "check": [
+        "((x - 3)*(x + 2)/((x - 5)*(x + 4))) * (x*(x + 4)*(x - 7)*(x - 5)/(x**3*(x - 3)*(x - 7)*(x + 2))) == 1/x**2"
+       ]
+      },
+      {
+       "math": "= \\frac{1}{x^2}",
+       "en": "Cancel out all the common factors from the numerator and the denominator to get the final simplified answer.",
+       "ur": "شمار کنندہ اور مخرج سے تمام مشترک اجزائے ضربی کو کاٹ کر مختصر ترین جواب حاصل کریں۔",
+       "check": [
+        "(1/x**2) == ((x**2 + 4*x)*(x**2 - 12*x + 35)*(x**2 - x - 6)/((x**3 - 3*x**2)*(x**2 - x - 20)*(x**3 - 5*x**2 - 14*x)))",
         "(x**(-2)) == ((x**2 + 4*x)*(x**2 - 12*x + 35)*(x**2 - x - 6)/((x**3 - 3*x**2)*(x**2 - x - 20)*(x**3 - 5*x**2 - 14*x)))"
        ]
       }
      ],
      "answer": "$\\frac{1}{x^{2}}$",
+     "enriched": true,
      "book_key": "\\frac{1}{x^2}"
     },
     {
@@ -1070,30 +1577,68 @@
      "prompt": "$\\frac{3x^2-3xy}{10x^2+10xy-20y^2}\\times\\frac{5xy+10y^2}{6x^2+6xy+6y^2}\\div\\frac{2x^2-2y^2}{4x^3-4y^3}$",
      "steps": [
       {
-       "math": "\\frac{3 x^{2} - 3 x y}{10 x^{2} + 10 x y - 20 y^{2}} \\times \\frac{5 x y + 10 y^{2}}{6 x^{2} + 6 x y + 6 y^{2}} \\div \\frac{2 x^{2} - 2 y^{2}}{4 x^{3} - 4 y^{3}}",
-       "en": "Write the expression.",
-       "ur": "عبارت لکھیں۔"
+       "math": "\\frac{3x^2 - 3xy}{10x^2 + 10xy - 20y^2} \\times \\frac{5xy + 10y^2}{6x^2 + 6xy + 6y^2} \\div \\frac{2x^2 - 2y^2}{4x^3 - 4y^3}",
+       "en": "Write down the given algebraic expression.",
+       "ur": "دی گئی الجبری عبارت لکھیں۔"
       },
       {
-       "math": "= \\frac{3 x \\left(x - y\\right)}{10 \\left(x - y\\right) \\left(x + 2 y\\right)} \\times \\frac{5 y \\left(x + 2 y\\right)}{6 \\left(x^{2} + x y + y^{2}\\right)} \\div \\frac{2 \\left(x - y\\right) \\left(x + y\\right)}{4 \\left(x - y\\right) \\left(x^{2} + x y + y^{2}\\right)}",
-       "en": "Factorize every numerator and denominator.",
-       "ur": "ہر شمار کنندہ اور نسب نما کی تجزی کریں۔"
-      },
-      {
-       "math": "= \\frac{3 x \\left(x - y\\right)}{10 \\left(x - y\\right) \\left(x + 2 y\\right)} \\times \\frac{5 y \\left(x + 2 y\\right)}{6 \\left(x^{2} + x y + y^{2}\\right)} \\times \\frac{4 \\left(x - y\\right) \\left(x^{2} + x y + y^{2}\\right)}{2 \\left(x - y\\right) \\left(x + y\\right)}",
-       "en": "Dividing by a fraction is multiplying by its reciprocal (turn the fraction after $\\div$ upside down).",
-       "ur": "کسر سے تقسیم کرنا اس کے معکوس سے ضرب دینا ہے ($\\div$ کے بعد والی کسر الٹ دیں)۔"
-      },
-      {
-       "math": "= \\frac{x y}{2 \\left(x + y\\right)}",
-       "en": "Cancel the common factors.",
-       "ur": "مشترک اجزاء کاٹ دیں۔",
+       "math": "= \\frac{3x(x - y)}{10(x^2 + xy - 2y^2)} \\times \\frac{5y(x + 2y)}{6(x^2 + xy + y^2)} \\div \\frac{2(x^2 - y^2)}{4(x^3 - y^3)}",
+       "en": "Take out the highest common factor from each numerator and denominator.",
+       "ur": "ہر شمار کنندہ اور مخرج میں سے سب سے بڑا مشترک جزو (عادِ اعظم) باہر نکالیں۔",
        "check": [
+        "3*x*(x - y) == 3*x**2 - 3*x*y",
+        "10*(x**2 + x*y - 2*y**2) == 10*x**2 + 10*x*y - 20*y**2",
+        "5*y*(x + 2*y) == 5*x*y + 10*y**2",
+        "6*(x**2 + x*y + y**2) == 6*x**2 + 6*x*y + 6*y**2",
+        "2*(x**2 - y**2) == 2*x**2 - 2*y**2",
+        "4*(x**3 - y**3) == 4*x**3 - 4*y**3"
+       ]
+      },
+      {
+       "math": "= \\frac{3x(x - y)}{10(x^2 + 2xy - xy - 2y^2)} \\times \\frac{5y(x + 2y)}{6(x^2 + xy + y^2)} \\div \\frac{2(x - y)(x + y)}{4(x - y)(x^2 + xy + y^2)}",
+       "en": "Split the middle term in $x^2 + xy - 2y^2$, and apply the algebraic formulas $x^2 - y^2 = (x - y)(x + y)$ and $x^3 - y^3 = (x - y)(x^2 + xy + y^2)$.",
+       "ur": "عبارت $x^2 + xy - 2y^2$ کی درمیانی رقم کو توڑیں، اور الجبری کلیے $x^2 - y^2 = (x - y)(x + y)$ اور $x^3 - y^3 = (x - y)(x^2 + xy + y^2)$ استعمال کریں۔",
+       "check": [
+        "x**2 + 2*x*y - x*y - 2*y**2 == x**2 + x*y - 2*y**2",
+        "(x - y)*(x + y) == x**2 - y**2",
+        "(x - y)*(x**2 + x*y + y**2) == x**3 - y**3"
+       ]
+      },
+      {
+       "math": "= \\frac{3x(x - y)}{10(x - y)(x + 2y)} \\times \\frac{5y(x + 2y)}{6(x^2 + xy + y^2)} \\div \\frac{2(x - y)(x + y)}{4(x - y)(x^2 + xy + y^2)}",
+       "en": "Complete the factorization of the first denominator by grouping: $x(x + 2y) - y(x + 2y) = (x - y)(x + 2y)$.",
+       "ur": "پہلے مخرج کی گروہ بندی کر کے تجزی مکمل کریں: $x(x + 2y) - y(x + 2y) = (x - y)(x + 2y)$۔",
+       "check": [
+        "(x - y)*(x + 2*y) == x**2 + 2*x*y - x*y - 2*y**2"
+       ]
+      },
+      {
+       "math": "= \\frac{3x(x - y)}{10(x - y)(x + 2y)} \\times \\frac{5y(x + 2y)}{6(x^2 + xy + y^2)} \\times \\frac{4(x - y)(x^2 + xy + y^2)}{2(x - y)(x + y)}",
+       "en": "Change the division sign ($\\div$) to multiplication ($\\times$) by taking the reciprocal of the third fraction.",
+       "ur": "تیسری کسر کا معکوس لے کر تقسیم کی علامت ($\\div$) کو ضرب ($\\times$) میں تبدیل کریں۔"
+      },
+      {
+       "math": "= \\frac{3 \\times 5 \\times 4 \\cdot xy}{10 \\times 6 \\times 2 \\cdot (x + y)} = \\frac{60xy}{120(x + y)}",
+       "en": "Cancel out the common algebraic factors $(x - y)$, $(x + 2y)$, and $(x^2 + xy + y^2)$ from the numerators and denominators, and multiply the remaining terms.",
+       "ur": "شمار کنندہ اور مخرج سے مشترک الجبری اجزاء $(x - y)$، $(x + 2y)$، اور $(x^2 + xy + y^2)$ کو کاٹ دیں، اور باقی ماندہ رقوم کو ضرب دیں۔",
+       "check": [
+        "3*5*4 == 60",
+        "10*6*2 == 120"
+       ]
+      },
+      {
+       "math": "= \\frac{xy}{2(x + y)}",
+       "en": "Simplify the numerical coefficients by dividing both $60$ and $120$ by $60$ to get the final answer.",
+       "ur": "عددی سروں کو مختصر کرنے کے لیے $60$ اور $120$ دونوں کو $60$ پر تقسیم کریں تاکہ حتمی جواب حاصل ہو سکے۔",
+       "check": [
+        "R(60, 120) == R(1, 2)",
+        "(x*y/(2*(x + y))) == ((3*x**2 - 3*x*y)*(4*x**3 - 4*y**3)*(5*x*y + 10*y**2)/((2*x**2 - 2*y**2)*(6*x**2 + 6*x*y + 6*y**2)*(10*x**2 + 10*x*y - 20*y**2)))",
         "(x*y/(2*x + 2*y)) == ((3*x**2 - 3*x*y)*(4*x**3 - 4*y**3)*(5*x*y + 10*y**2)/((2*x**2 - 2*y**2)*(6*x**2 + 6*x*y + 6*y**2)*(10*x**2 + 10*x*y - 20*y**2)))"
        ]
       }
      ],
      "answer": "$\\frac{x y}{2 \\left(x + y\\right)}$",
+     "enriched": true,
      "book_key": "\\frac{xy}{2(x+y)}"
     },
     {
@@ -1101,30 +1646,69 @@
      "prompt": "$\\frac{2x^2-98}{x^3-125}\\times\\frac{x^2-3x-10}{3x-21}\\div\\frac{x^2+5x-14}{x^2+5x+25}$",
      "steps": [
       {
-       "math": "\\frac{2 x^{2} - 98}{x^{3} - 125} \\times \\frac{x^{2} - 3 x - 10}{3 x - 21} \\div \\frac{x^{2} + 5 x - 14}{x^{2} + 5 x + 25}",
-       "en": "Write the expression.",
-       "ur": "عبارت لکھیں۔"
+       "math": "\\frac{2x^2 - 98}{x^3 - 125} \\times \\frac{x^2 - 3x - 10}{3x - 21} \\div \\frac{x^2 + 5x - 14}{x^2 + 5x + 25}",
+       "en": "Write the given algebraic expression to be simplified.",
+       "ur": "مختصر کرنے کے لیے دی گئی الجبری عبارت لکھیں۔"
       },
       {
-       "math": "= \\frac{2 \\left(x - 7\\right) \\left(x + 7\\right)}{\\left(x - 5\\right) \\left(x^{2} + 5 x + 25\\right)} \\times \\frac{\\left(x - 5\\right) \\left(x + 2\\right)}{3 \\left(x - 7\\right)} \\div \\frac{\\left(x - 2\\right) \\left(x + 7\\right)}{x^{2} + 5 x + 25}",
-       "en": "Factorize every numerator and denominator.",
-       "ur": "ہر شمار کنندہ اور نسب نما کی تجزی کریں۔"
+       "math": "= \\frac{2x^2 - 98}{x^3 - 125} \\times \\frac{x^2 - 3x - 10}{3x - 21} \\times \\frac{x^2 + 5x + 25}{x^2 + 5x - 14}",
+       "en": "Change the division sign $\\div$ into a multiplication sign $\\times$ by taking the reciprocal of the third fraction.",
+       "ur": "تیسری کسر کا معکوس لے کر تقسیم کی علامت $\\div$ کو ضرب کی علامت $\\times$ میں تبدیل کریں۔",
+       "check": [
+        "((2*x**2 - 98)/(x**3 - 125)) * ((x**2 - 3*x - 10)/(3*x - 21)) / ((x**2 + 5*x - 14)/(x**2 + 5*x + 25)) == ((2*x**2 - 98)/(x**3 - 125)) * ((x**2 - 3*x - 10)/(3*x - 21)) * ((x**2 + 5*x + 25)/(x**2 + 5*x - 14))"
+       ]
       },
       {
-       "math": "= \\frac{2 \\left(x - 7\\right) \\left(x + 7\\right)}{\\left(x - 5\\right) \\left(x^{2} + 5 x + 25\\right)} \\times \\frac{\\left(x - 5\\right) \\left(x + 2\\right)}{3 \\left(x - 7\\right)} \\times \\frac{x^{2} + 5 x + 25}{\\left(x - 2\\right) \\left(x + 7\\right)}",
-       "en": "Dividing by a fraction is multiplying by its reciprocal (turn the fraction after $\\div$ upside down).",
-       "ur": "کسر سے تقسیم کرنا اس کے معکوس سے ضرب دینا ہے ($\\div$ کے بعد والی کسر الٹ دیں)۔"
+       "math": "= \\frac{2(x^2 - 49)}{x^3 - 5^3} \\times \\frac{x^2 - 3x - 10}{3(x - 7)} \\times \\frac{x^2 + 5x + 25}{x^2 + 5x - 14}",
+       "en": "Take out common factors $2$ and $3$, and write $125$ as $5^3$.",
+       "ur": "مشترک اجزاء $2$ اور $3$ کو باہر نکالیں، اور $125$ کو $5^3$ کے طور پر لکھیں۔",
+       "check": [
+        "2*(x**2 - 49) == 2*x**2 - 98",
+        "x**3 - 5**3 == x**3 - 125",
+        "3*(x - 7) == 3*x - 21"
+       ]
+      },
+      {
+       "math": "= \\frac{2(x^2 - 7^2)}{(x - 5)(x^2 + 5x + 25)} \\times \\frac{x^2 - 5x + 2x - 10}{3(x - 7)} \\times \\frac{x^2 + 5x + 25}{x^2 + 7x - 2x - 14}",
+       "en": "Apply the difference of cubes formula $a^3 - b^3 = (a - b)(a^2 + ab + b^2)$ to $x^3 - 5^3$, write $49$ as $7^2$, and split the middle terms of the quadratic expressions.",
+       "ur": "مکعبوں کے فرق کا فارمولا $a^3 - b^3 = (a - b)(a^2 + ab + b^2)$، $x^3 - 5^3$ پر لاگو کریں، $49$ کو $7^2$ لکھیں، اور دو درجی عبارات کی درمیانی رقوم کو توڑ کر لکھیں۔",
+       "check": [
+        "(x - 5)*(x**2 + 5*x + 25) == x**3 - 125",
+        "x**2 - 5*x + 2*x - 10 == x**2 - 3*x - 10",
+        "x**2 + 7*x - 2*x - 14 == x**2 + 5*x - 14"
+       ]
+      },
+      {
+       "math": "= \\frac{2(x - 7)(x + 7)}{(x - 5)(x^2 + 5x + 25)} \\times \\frac{x(x - 5) + 2(x - 5)}{3(x - 7)} \\times \\frac{x^2 + 5x + 25}{x(x + 7) - 2(x + 7)}",
+       "en": "Use the difference of squares formula $a^2 - b^2 = (a - b)(a + b)$ on $x^2 - 7^2$, and factor by grouping in the numerators and denominators.",
+       "ur": "مربعوں کے فرق کا فارمولا $a^2 - b^2 = (a - b)(a + b)$، $x^2 - 7^2$ پر استعمال کریں، اور شمار کنندگان اور نسب نماؤں میں گروپ بنا کر تجزی کریں۔",
+       "check": [
+        "2*(x - 7)*(x + 7) == 2*(x**2 - 49)",
+        "x*(x - 5) + 2*(x - 5) == x**2 - 3*x - 10",
+        "x*(x + 7) - 2*(x + 7) == x**2 + 5*x - 14"
+       ]
+      },
+      {
+       "math": "= \\frac{2(x - 7)(x + 7)}{(x - 5)(x^2 + 5x + 25)} \\times \\frac{(x - 5)(x + 2)}{3(x - 7)} \\times \\frac{x^2 + 5x + 25}{(x - 2)(x + 7)}",
+       "en": "Complete the factorization of the quadratic expressions.",
+       "ur": "دو درجی عبارات کی تجزی مکمل کریں۔",
+       "check": [
+        "(x - 5)*(x + 2) == x*(x - 5) + 2*(x - 5)",
+        "(x - 2)*(x + 7) == x*(x + 7) - 2*(x + 7)"
+       ]
       },
       {
        "math": "= \\frac{2 \\left(x + 2\\right)}{3 \\left(x - 2\\right)}",
-       "en": "Cancel the common factors.",
-       "ur": "مشترک اجزاء کاٹ دیں۔",
+       "en": "Cancel out the common factors $(x - 7)$, $(x + 7)$, $(x - 5)$, and $(x^2 + 5x + 25)$ from the numerators and denominators to get the final simplified answer.",
+       "ur": "شمار کنندگان اور نسب نماؤں سے مشترک اجزاء $(x - 7)$، $(x + 7)$، $(x - 5)$، اور $(x^2 + 5x + 25)$ کو کاٹ کر حتمی مختصر جواب حاصل کریں۔",
        "check": [
+        "(2*(x + 2))/(3*(x - 2)) == ((2*(x - 7)*(x + 7))/((x - 5)*(x**2 + 5*x + 25))) * (((x - 5)*(x + 2))/(3*(x - 7))) * ((x**2 + 5*x + 25)/((x - 2)*(x + 7)))",
         "((2*x + 4)/(3*x - 6)) == ((2*x**2 - 98)*(x**2 - 3*x - 10)*(x**2 + 5*x + 25)/((3*x - 21)*(x**3 - 125)*(x**2 + 5*x - 14)))"
        ]
       }
      ],
      "answer": "$\\frac{2 \\left(x + 2\\right)}{3 \\left(x - 2\\right)}$",
+     "enriched": true,
      "book_key": "\\frac{2(x+2)}{3(x-2)}"
     },
     {
@@ -1132,25 +1716,65 @@
      "prompt": "$\\frac{x^2-2x}{2x+6}\\times\\frac{x^2+x-6}{x^2-5x}\\times\\frac{6x-30}{x^2-2x}$",
      "steps": [
       {
-       "math": "\\frac{x^{2} - 2 x}{2 x + 6} \\times \\frac{x^{2} + x - 6}{x^{2} - 5 x} \\times \\frac{6 x - 30}{x^{2} - 2 x}",
-       "en": "Write the expression.",
-       "ur": "عبارت لکھیں۔"
+       "math": "\\frac{x^2-2x}{2x+6} \\times \\frac{x^2+x-6}{x^2-5x} \\times \\frac{6x-30}{x^2-2x}",
+       "en": "Write down the given algebraic expression to be simplified.",
+       "ur": "مختصر کرنے کے لیے دی گئی الجبری عبارت لکھیں۔"
       },
       {
-       "math": "= \\frac{x \\left(x - 2\\right)}{2 \\left(x + 3\\right)} \\times \\frac{\\left(x - 2\\right) \\left(x + 3\\right)}{x \\left(x - 5\\right)} \\times \\frac{6 \\left(x - 5\\right)}{x \\left(x - 2\\right)}",
-       "en": "Factorize every numerator and denominator.",
-       "ur": "ہر شمار کنندہ اور نسب نما کی تجزی کریں۔"
+       "math": "= \\frac{1}{2x+6} \\times \\frac{x^2+x-6}{x^2-5x} \\times \\frac{6x-30}{1}",
+       "en": "First, notice that the term $x^2-2x$ appears in the numerator of the first fraction and the denominator of the third fraction, so we can cancel them out directly.",
+       "ur": "سب سے پہلے، نوٹ کریں کہ رقم $x^2-2x$ پہلی کسر کے شمار کنندہ اور تیسری کسر کے مخرج میں موجود ہے، اس لیے ہم انہیں براہِ راست کاٹ سکتے ہیں۔",
+       "check": [
+        "(x**2 - 2*x)/(2*x + 6) * (x**2 + x - 6)/(x**2 - 5*x) * (6*x - 30)/(x**2 - 2*x) == 1/(2*x + 6) * (x**2 + x - 6)/(x**2 - 5*x) * (6*x - 30)/1"
+       ]
+      },
+      {
+       "math": "= \\frac{1}{2(x+3)} \\times \\frac{x^2+3x-2x-6}{x(x-5)} \\times \\frac{6(x-5)}{1}",
+       "en": "Factorize by taking out common factors: $2$ from $2x+6$, $x$ from $x^2-5x$, and $6$ from $6x-30$. Also, split the middle term of the quadratic expression $x^2+x-6$ into $3x-2x$.",
+       "ur": "مشترک اجزاء باہر نکال کر تجزی کریں: $2x+6$ میں سے $2$، $x^2-5x$ میں سے $x$، اور $6x-30$ میں سے $6$۔ نیز، دو درجی عبارت $x^2+x-6$ کی درمیانی رقم کو $3x-2x$ میں توڑ کر لکھیں۔",
+       "check": [
+        "2*x + 6 == 2*(x + 3)",
+        "x**2 - 5*x == x*(x - 5)",
+        "6*x - 30 == 6*(x - 5)",
+        "x**2 + x - 6 == x**2 + 3*x - 2*x - 6"
+       ]
+      },
+      {
+       "math": "= \\frac{1}{2(x+3)} \\times \\frac{x(x+3)-2(x+3)}{x(x-5)} \\times \\frac{6(x-5)}{1}",
+       "en": "Group the terms in the middle numerator and take out common factors.",
+       "ur": "درمیانی شمار کنندہ کی رقوم کے گروپ بنائیں اور مشترک اجزاء باہر نکالیں۔",
+       "check": [
+        "x**2 + 3*x - 2*x - 6 == x*(x + 3) - 2*(x + 3)"
+       ]
+      },
+      {
+       "math": "= \\frac{1}{2(x+3)} \\times \\frac{(x-2)(x+3)}{x(x-5)} \\times \\frac{6(x-5)}{1}",
+       "en": "Complete the factorization of the middle numerator by taking $(x+3)$ as common.",
+       "ur": "$(x+3)$ کو مشترک لے کر درمیانی شمار کنندہ کی تجزی مکمل کریں۔",
+       "check": [
+        "x*(x + 3) - 2*(x + 3) == (x - 2)*(x + 3)"
+       ]
+      },
+      {
+       "math": "= \\frac{6(x-2)(x+3)(x-5)}{2x(x+3)(x-5)}",
+       "en": "Multiply the numerators together and the denominators together into a single fraction.",
+       "ur": "شمار کنندگان کو آپس میں اور مخرجوں کو آپس میں ضرب دے کر ایک کسر کی شکل میں لکھیں۔",
+       "check": [
+        "(1/(2*(x + 3))) * (((x - 2)*(x + 3))/(x*(x - 5))) * (6*(x - 5)/1) == (6*(x - 2)*(x + 3)*(x - 5))/(2*x*(x + 3)*(x - 5))"
+       ]
       },
       {
        "math": "= \\frac{3 \\left(x - 2\\right)}{x}",
-       "en": "Cancel the common factors.",
-       "ur": "مشترک اجزاء کاٹ دیں۔",
+       "en": "Cancel out the common factors $(x+3)$ and $(x-5)$ from the numerator and denominator, and divide $6$ by $2$ to get $3$. This gives the final simplified answer.",
+       "ur": "شمار کنندہ اور مخرج میں سے مشترک اجزاء $(x+3)$ اور $(x-5)$ کو کاٹ دیں، اور $6$ کو $2$ پر تقسیم کر کے $3$ حاصل کریں۔ اس سے حتمی مختصر جواب ملتا ہے۔",
        "check": [
+        "(6*(x - 2)*(x + 3)*(x - 5))/(2*x*(x + 3)*(x - 5)) == 3*(x - 2)/x",
         "((3*x - 6)/x) == ((6*x - 30)*(x**2 + x - 6)/((2*x + 6)*(x**2 - 5*x)))"
        ]
       }
      ],
      "answer": "$\\frac{3 \\left(x - 2\\right)}{x}$",
+     "enriched": true,
      "book_key": "\\frac{3(x-2)}{x}"
     }
    ],
@@ -2541,27 +3165,45 @@
      "steps": [
       {
        "math": "",
-       "en": "Work rates: together $\\frac{1}{4}$ job/hour, Arshia $\\frac{1}{6}$, Ibraheem $\\frac{1}{x}$.",
-       "ur": "کام کی شرح: اکٹھے $\\frac{1}{4}$، عرشیہ $\\frac{1}{6}$، ابراہیم $\\frac{1}{x}$۔"
+       "en": "Given that Arshia and Ibraheem complete a job together in $4$ hours, and Arshia alone takes $6$ hours. Let $x$ be the time (in hours) that Ibraheem takes to complete the job alone.",
+       "ur": "دیا گیا ہے کہ عرشیہ اور ابراہیم مل کر ایک کام $4$ گھنٹے میں مکمل کرتے ہیں، اور عرشیہ اکیلے $6$ گھنٹے لیتی ہے۔ فرض کریں کہ ابراہیم کو اکیلے کام مکمل کرنے میں $x$ گھنٹے لگتے ہیں۔"
       },
       {
-       "math": "\\frac{1}{6} + \\frac{1}{x} = \\frac{1}{4} \\Rightarrow \\frac{1}{x} = \\frac{1}{4} - \\frac{1}{6} = \\frac{6 - 4}{24} = \\frac{1}{12}",
-       "en": "Rates add up.",
-       "ur": "شرحیں جمع ہوتی ہیں۔",
+       "math": "\\text{Arshia's 1 hour work} = \\frac{1}{6}, \\quad \\text{Ibraheem's 1 hour work} = \\frac{1}{x}, \\quad \\text{Combined 1 hour work} = \\frac{1}{4}",
+       "en": "If a person completes a job in $t$ hours, the fraction of work done in $1$ hour (work rate) is $\\frac{1}{t}$.",
+       "ur": "اگر کوئی شخص ایک کام $t$ گھنٹوں میں مکمل کرتا ہے، تو $1$ گھنٹے میں کیے گئے کام کا حصہ (کام کی شرح) $\\frac{1}{t}$ ہوتا ہے۔"
+      },
+      {
+       "math": "\\frac{1}{6} + \\frac{1}{x} = \\frac{1}{4}",
+       "en": "The sum of their individual work rates equals their combined work rate.",
+       "ur": "ان کی انفرادی کام کی شرحوں کا مجموعہ ان کی مشترکہ کام کی شرح کے برابر ہے۔"
+      },
+      {
+       "math": "\\frac{1}{x} = \\frac{1}{4} - \\frac{1}{6}",
+       "en": "Subtract $\\frac{1}{6}$ from both sides to isolate $\\frac{1}{x}$.",
+       "ur": "$\\frac{1}{x}$ کو الگ کرنے کے لیے دونوں طرف سے $\\frac{1}{6}$ تفریق کریں۔"
+      },
+      {
+       "math": "\\frac{1}{x} = \\frac{3 - 2}{12} = \\frac{1}{12}",
+       "en": "Take the LCM of the denominators $4$ and $6$, which is $12$, and simplify the fraction.",
+       "ur": "مخرج $4$ اور $6$ کا ذواضعاف اقل (LCM) لیں جو کہ $12$ ہے، اور کسر کو مختصر کریں۔",
        "check": [
-        "R(1,4) - R(1,6) == R(1,12)"
+        "R(1,4) - R(1,6) == R(3-2, 12)",
+        "R(3-2, 12) == R(1,12)"
        ]
       },
       {
        "math": "x = 12 \\text{ hours}",
-       "en": "Take the reciprocal.",
-       "ur": "معکوس لیں۔",
+       "en": "Take the reciprocal on both sides to find $x$. Thus, Ibraheem will take $12$ hours to complete the job alone.",
+       "ur": "$x$ کی قیمت معلوم کرنے کے لیے دونوں طرف معکوس (reciprocal) لیں۔ اس طرح، ابراہیم کو اکیلے کام مکمل کرنے میں $12$ گھنٹے لگیں گے۔",
        "check": [
-        "R(1,6) + R(1,12) == R(1,4)"
+        "R(1,6) + R(1,12) == R(1,4)",
+        "R(1,4) - R(1,6) == R(1,12)"
        ]
       }
      ],
      "answer": "12 hours",
+     "enriched": true,
      "book_key": "12 hours"
     }
    ],
@@ -2635,27 +3277,46 @@
      "steps": [
       {
        "math": "",
-       "en": "Rates: Huria $\\frac{1}{12}$, together $\\frac{1}{5}$, Abdul Hadi $\\frac{1}{x}$.",
-       "ur": "شرحیں: حوریہ $\\frac{1}{12}$، اکٹھے $\\frac{1}{5}$، عبدالہادی $\\frac{1}{x}$۔"
+       "en": "Let the time taken by Abdul Hadi to complete the project alone be $x$ hours.",
+       "ur": "فرض کریں کہ عبدالہادی کو اکیلے پروجیکٹ مکمل کرنے میں $x$ گھنٹے لگتے ہیں۔"
       },
       {
-       "math": "\\frac{1}{x} = \\frac{1}{5} - \\frac{1}{12} = \\frac{12 - 5}{60} = \\frac{7}{60}",
-       "en": "Subtract Huria's rate from the combined rate.",
-       "ur": "مشترکہ شرح سے حوریہ کی شرح تفریق کریں۔",
+       "math": "\\text{Huria's rate} = \\frac{1}{12}, \\quad \\text{Abdul Hadi's rate} = \\frac{1}{x}, \\quad \\text{Combined rate} = \\frac{1}{5}",
+       "en": "If a person completes a project in $t$ hours, the fraction of work done in $1$ hour (rate of work) is $\\frac{1}{t}$. Given Huria takes $12$ hours and together they take $5$ hours.",
+       "ur": "اگر کوئی شخص $t$ گھنٹوں میں ایک پروجیکٹ مکمل کرتا ہے، تو $1$ گھنٹے میں کیے گئے کام کا حصہ (کام کی شرح) $\\frac{1}{t}$ ہوتا ہے۔ دی گئی معلومات کے مطابق حوریہ $12$ گھنٹے لیتی ہے اور وہ دونوں مل کر $5$ گھنٹے لیتے ہیں۔"
+      },
+      {
+       "math": "\\frac{1}{12} + \\frac{1}{x} = \\frac{1}{5}",
+       "en": "The sum of their individual work rates equals their combined work rate.",
+       "ur": "ان کی انفرادی کام کی شرحوں کا مجموعہ ان کی مشترکہ کام کی شرح کے برابر ہے۔"
+      },
+      {
+       "math": "\\frac{1}{x} = \\frac{1}{5} - \\frac{1}{12}",
+       "en": "Subtract $\\frac{1}{12}$ from both sides to isolate $\\frac{1}{x}$.",
+       "ur": "$\\frac{1}{x}$ کو الگ کرنے کے لیے دونوں طرف سے $\\frac{1}{12}$ تفریق کریں۔"
+      },
+      {
+       "math": "\\frac{1}{x} = \\frac{12 - 5}{60} = \\frac{7}{60}",
+       "en": "Take the LCM of the denominators $5$ and $12$, which is $60$, and simplify the fraction.",
+       "ur": "مخرج $5$ اور $12$ کا ذواضعاف اقل (LCM) لیں جو کہ $60$ ہے، اور کسر کو مختصر کریں۔",
        "check": [
-        "R(1,5) - R(1,12) == R(7,60)"
+        "R(1,5) - R(1,12) == R(12-5,60)",
+        "R(12-5,60) == R(7,60)"
        ]
       },
       {
        "math": "x = \\frac{60}{7} \\approx 8.57 \\text{ hours} \\approx 8 \\text{ h } 34 \\text{ min}",
-       "en": "Take the reciprocal.",
-       "ur": "معکوس لیں۔",
+       "en": "Take the reciprocal on both sides to find $x$. Thus, Abdul Hadi would take approximately $8.57$ hours working alone.",
+       "ur": "$x$ معلوم کرنے کے لیے دونوں طرف معکوس لیں۔ اس طرح، عبدالہادی کو اکیلے کام کرتے ہوئے تقریباً $8.57$ گھنٹے لگیں گے۔",
        "check": [
-        "Abs(R(60,7) - 8.57) < 0.01"
+        "1 / R(7,60) == R(60,7)",
+        "Abs(R(60,7) - 8.57) < 0.01",
+        "R(1,5) - R(1,12) == R(7,60)"
        ]
       }
      ],
      "answer": "$\\approx 8.57$ hours",
+     "enriched": true,
      "book_key": "8.57 hours"
     }
    ],
@@ -2674,29 +3335,61 @@
      "steps": [
       {
        "math": "",
-       "en": "Moving towards each other, their speeds add: $x + (x + 10) = 2x + 10$.",
-       "ur": "ایک دوسرے کی طرف چلتے ہوئے رفتاریں جمع ہوتی ہیں: $2x + 10$۔"
+       "en": "Total distance between the two towns is $240\\text{ km}$ and the time taken to meet is $2\\text{ hours}$. The speed of the first car is $x\\text{ km/h}$ and the speed of the second car is $(x + 10)\\text{ km/h}$.",
+       "ur": "دونوں قصبوں کے درمیان کل فاصلہ $240\\text{ km}$ ہے اور ملنے کا وقت $2\\text{ hours}$ ہے۔ پہلی گاڑی کی رفتار $x\\text{ km/h}$ اور دوسری گاڑی کی رفتار $(x + 10)\\text{ km/h}$ ہے۔"
       },
       {
-       "math": "240 = (2x + 10) \\times 2 \\Rightarrow 120 = 2x + 10",
-       "en": "Distance = speed $\\times$ time; divide by 2.",
-       "ur": "فاصلہ = رفتار $\\times$ وقت؛ 2 سے تقسیم کریں۔"
+       "math": "\\text{Relative Speed} = x + (x + 10) = 2x + 10\\text{ km/h}",
+       "en": "Since the two cars are moving towards each other from opposite directions, their speeds add up to give the relative speed.",
+       "ur": "چونکہ دونوں گاڑیاں مخالف سمتوں سے ایک دوسرے کی طرف آ رہی ہیں، اس لیے ان کی رفتاریں جمع ہو کر اضافی رفتار بناتی ہیں۔"
       },
       {
-       "math": "2x = 110 \\Rightarrow x = 55",
-       "en": "Solve.",
-       "ur": "حل کریں۔",
+       "math": "\\text{Distance} = \\text{Speed} \\times \\text{Time}",
+       "en": "We use the fundamental formula relating distance, speed, and time.",
+       "ur": "ہم فاصلہ، رفتار اور وقت کے بنیادی فارمولے کا استعمال کرتے ہیں۔"
+      },
+      {
+       "math": "240 = (2x + 10) \\times 2",
+       "en": "Substitute the given distance ($240\\text{ km}$), relative speed ($(2x + 10)\\text{ km/h}$), and time ($2\\text{ hours}$) into the formula.",
+       "ur": "فارمولے میں دیے گئے فاصلے ($240\\text{ km}$)، اضافی رفتار ($(2x + 10)\\text{ km/h}$)، اور وقت ($2\\text{ hours}$) کی قیمتیں درج کریں۔"
+      },
+      {
+       "math": "\\frac{240}{2} = 2x + 10 \\implies 120 = 2x + 10",
+       "en": "Divide both sides of the equation by $2$ to simplify.",
+       "ur": "مساوات کو سادہ کرنے کے لیے دونوں اطراف کو $2$ سے تقسیم کریں۔",
        "check": [
+        "240/2 == 120"
+       ]
+      },
+      {
+       "math": "2x = 120 - 10 \\implies 2x = 110",
+       "en": "Subtract $10$ from both sides to isolate the term with $x$.",
+       "ur": "$x$ والی رقم کو الگ کرنے کے لیے دونوں اطراف سے $10$ تفریق کریں۔",
+       "check": [
+        "120 - 10 == 110"
+       ]
+      },
+      {
+       "math": "x = \\frac{110}{2} = 55",
+       "en": "Divide both sides by $2$ to find the value of $x$.",
+       "ur": "$x$ کی قیمت معلوم کرنے کے لیے دونوں اطراف کو $2$ سے تقسیم کریں۔",
+       "check": [
+        "110/2 == 55",
         "(2*55 + 10)*2 == 240"
        ]
       },
       {
-       "math": "\\text{Car A} = 55 \\text{ km/h},\\quad \\text{Car B} = 55 + 10 = 65 \\text{ km/h}",
-       "en": "The second car is 10 km/h faster.",
-       "ur": "دوسری گاڑی 10 کلومیٹر فی گھنٹہ تیز ہے۔"
+       "math": "\\text{First car} = 55\\text{ km/h}, \\quad \\text{Second car} = 55 + 10 = 65\\text{ km/h}",
+       "en": "Thus, the speed of the first car is $55\\text{ km/h}$ and the speed of the second car is $65\\text{ km/h}$.",
+       "ur": "پس، پہلی گاڑی کی رفتار $55\\text{ km/h}$ ہے اور دوسری گاڑی کی رفتار $65\\text{ km/h}$ ہے۔",
+       "check": [
+        "55 + 10 == 65",
+        "(2*55 + 10)*2 == 240"
+       ]
       }
      ],
      "answer": "55 km/h and 65 km/h",
+     "enriched": true,
      "book_key": "55 km/h and 65 km/h"
     }
    ],
@@ -2715,24 +3408,45 @@
      "steps": [
       {
        "math": "",
-       "en": "Rates: Rashid $\\frac{1}{6}$, together $\\frac{1}{4}$, helper $\\frac{1}{x}$.",
-       "ur": "شرحیں: راشد $\\frac{1}{6}$، اکٹھے $\\frac{1}{4}$، مددگار $\\frac{1}{x}$۔"
+       "en": "Let the time taken by the helper to paint the house alone be $x$ days. It is given that Rashid takes $6$ days alone, and together they take $4$ days.",
+       "ur": "فرض کریں کہ مددگار کو اکیلے گھر رنگنے میں $x$ دن لگتے ہیں۔ یہ دیا گیا ہے کہ راشد کو اکیلے $6$ دن لگتے ہیں، اور دونوں کو مل کر $4$ دن لگتے ہیں۔"
       },
       {
-       "math": "\\frac{1}{x} = \\frac{1}{4} - \\frac{1}{6} = \\frac{1}{12}",
-       "en": "Subtract Rashid's rate.",
-       "ur": "راشد کی شرح تفریق کریں۔",
+       "math": "",
+       "en": "Now, we write the work done by each in $1$ day (their daily work rates): Rashid's rate is $\\frac{1}{6}$, the helper's rate is $\\frac{1}{x}$, and their combined rate is $\\frac{1}{4}$.",
+       "ur": "اب ہم ہر ایک کا $1$ دن کا کام (ان کی روزانہ کام کی شرح) لکھتے ہیں: راشد کی شرح $\\frac{1}{6}$ ہے، مددگار کی شرح $\\frac{1}{x}$ ہے، اور ان کی مشترکہ شرح $\\frac{1}{4}$ ہے۔"
+      },
+      {
+       "math": "\\frac{1}{6} + \\frac{1}{x} = \\frac{1}{4}",
+       "en": "The sum of their individual daily rates is equal to their combined daily rate.",
+       "ur": "ان کی انفرادی روزانہ شرحوں کا مجموعہ ان کی مشترکہ روزانہ شرح کے برابر ہے۔"
+      },
+      {
+       "math": "\\frac{1}{x} = \\frac{1}{4} - \\frac{1}{6}",
+       "en": "Subtract $\\frac{1}{6}$ from both sides to isolate $\\frac{1}{x}$.",
+       "ur": "$\\frac{1}{x}$ کو الگ کرنے کے لیے دونوں طرف سے $\\frac{1}{6}$ تفریق کریں۔"
+      },
+      {
+       "math": "\\frac{1}{x} = \\frac{3 - 2}{12} = \\frac{1}{12}",
+       "en": "Take the LCM of the denominators $4$ and $6$, which is $12$, and simplify the algebraic fraction.",
+       "ur": "نصب نما $4$ اور $6$ کا ذواضعاف اقل (LCM) لیں جو کہ $12$ ہے، اور الجبری کسر کو مختصر کریں۔",
        "check": [
-        "R(1,4) - R(1,6) == R(1,12)"
+        "R(1,4) - R(1,6) == R(3 - 2, 12)",
+        "R(3 - 2, 12) == R(1,12)"
        ]
       },
       {
        "math": "x = 12 \\text{ days}",
-       "en": "Take the reciprocal.",
-       "ur": "معکوس لیں۔"
+       "en": "Take the reciprocal of both sides to find $x$. Thus, the helper would take $12$ days to paint the house alone.",
+       "ur": "$x$ کی قیمت معلوم کرنے کے لیے دونوں اطراف کا معکوس لیں۔ اس طرح، مددگار کو اکیلے گھر رنگنے میں $12$ دن لگیں گے۔",
+       "check": [
+        "1 / R(1,12) == 12",
+        "R(1,4) - R(1,6) == R(1,12)"
+       ]
       }
      ],
      "answer": "12 days",
+     "enriched": true,
      "book_key": "12 days"
     }
    ],
@@ -2751,24 +3465,60 @@
      "steps": [
       {
        "math": "",
-       "en": "Distance = speed $\\times$ time.",
-       "ur": "فاصلہ = رفتار $\\times$ وقت۔"
+       "en": "First, write down the given values from the question. The distance is $10\\text{ km}$, the time taken is $\\frac{2x}{x+4}\\text{ hours}$, and the average speed is $8\\text{ km/h}$. We need to find the value of $x$.",
+       "ur": "سب سے پہلے سوال میں دی گئی معلومات لکھیں۔ فاصلہ $10\\text{ km}$ ہے، وقت $\\frac{2x}{x+4}\\text{ hours}$ ہے، اور اوسط رفتار $8\\text{ km/h}$ ہے۔ ہمیں $x$ کی قیمت معلوم کرنی ہے۔"
       },
       {
-       "math": "10 = 8 \\times \\frac{2x}{x + 4} \\Rightarrow 10(x + 4) = 16x",
-       "en": "Substitute and multiply by $(x + 4)$.",
-       "ur": "قیمتیں رکھ کر $(x + 4)$ سے ضرب دیں۔"
+       "math": "\\text{Distance} = \\text{Speed} \\times \\text{Time}",
+       "en": "Use the standard formula relating distance, speed, and time.",
+       "ur": "فاصلہ، رفتار اور وقت کے درمیان تعلق کا بنیادی فارمولا استعمال کریں۔"
       },
       {
-       "math": "10x + 40 = 16x \\Rightarrow 6x = 40 \\Rightarrow x = \\frac{20}{3} \\approx 6.67",
-       "en": "Solve.",
-       "ur": "حل کریں۔",
+       "math": "10 = 8 \\times \\frac{2x}{x + 4}",
+       "en": "Substitute the given values of distance, speed, and time into the formula.",
+       "ur": "فارمولے میں فاصلہ، رفتار اور وقت کی دی گئی قیمتیں درج کریں۔"
+      },
+      {
+       "math": "10 = \\frac{16x}{x + 4}",
+       "en": "Multiply $8$ by the numerator $2x$ on the right-hand side.",
+       "ur": "دائیں طرف $8$ کو شمار کنندہ $2x$ سے ضرب دیں۔",
        "check": [
+        "8 * 2 == 16"
+       ]
+      },
+      {
+       "math": "10(x + 4) = 16x",
+       "en": "Multiply both sides of the equation by $(x + 4)$ to eliminate the denominator.",
+       "ur": "نصب نما کو ختم کرنے کے لیے مساوات کے دونوں اطراف کو $(x + 4)$ سے ضرب دیں۔"
+      },
+      {
+       "math": "10x + 40 = 16x",
+       "en": "Expand the brackets on the left-hand side by multiplying $10$ with both terms inside.",
+       "ur": "بائیں طرف بریکٹ کے اندر موجود دونوں رقوم کو $10$ سے ضرب دے کر بریکٹ کھولیں۔",
+       "check": [
+        "10 * 4 == 40"
+       ]
+      },
+      {
+       "math": "40 = 16x - 10x \\Rightarrow 6x = 40",
+       "en": "Subtract $10x$ from both sides to collect the $x$ terms on one side and simplify.",
+       "ur": "$x$ والی رقوم کو ایک طرف اکٹھا کرنے کے لیے دونوں اطراف سے $10x$ تفریق کریں اور مختصر کریں۔",
+       "check": [
+        "16 - 10 == 6"
+       ]
+      },
+      {
+       "math": "x = \\frac{40}{6} = \\frac{20}{3} \\approx 6.67",
+       "en": "Divide both sides by $6$, simplify the fraction by dividing the numerator and denominator by $2$, and write the final answer rounded to two decimal places.",
+       "ur": "دونوں اطراف کو $6$ پر تقسیم کریں، شمار کنندہ اور نصب نما کو $2$ پر تقسیم کر کے کسر کو مختصر کریں، اور حتمی جواب اعشاریہ کے بعد دو درجوں تک لکھیں۔",
+       "check": [
+        "R(40, 6) == R(20, 3)",
         "8*(2*R(20,3))/(R(20,3) + 4) == 10"
        ]
       }
      ],
      "answer": "$x \\approx 6.67$",
+     "enriched": true,
      "book_key": "x=6.67"
     }
    ],
@@ -2779,7 +3529,7 @@
    "kind": "exercise",
    "number": "8",
    "page": 0,
-   "question": "Fahad runs 600 m at a certain pace, and then doubling his pace, does another 600 m. If he took $2\\frac{1}{2}$ minutes to cover the distance 1200 m, find the pace he started at, in metres per seconds.",
+   "question": "Fahad runs 600 m at a certain pace, and then doubling his pace, does another 600 m. If he took $2\\frac{1}{2}$ [minutes] to cover the distance 1200 m, find the pace he started at, in metres per seconds.",
    "parts": [
     {
      "label": "",
@@ -2787,24 +3537,51 @@
      "steps": [
       {
        "math": "",
-       "en": "Let the first pace be $x$ m/s: $t_1 = \\frac{600}{x}$, $t_2 = \\frac{600}{2x} = \\frac{300}{x}$; total time $= 2.5$ min $= 150$ s.",
-       "ur": "فرض کریں پہلی رفتار $x$ میٹر فی سیکنڈ ہے؛ کل وقت 150 سیکنڈ۔"
+       "en": "Let the starting pace (speed) of Fahad be $x$ m/s. Since he doubles his pace for the second part, his new pace is $2x$ m/s.",
+       "ur": "فرض کریں کہ فہد کی ابتدائی رفتار $x$ میٹر فی سیکنڈ ہے۔ چونکہ وہ دوسرے حصے کے لیے اپنی رفتار دگنی کر لیتا ہے، اس لیے اس کی نئی رفتار $2x$ میٹر فی سیکنڈ ہے۔"
       },
       {
-       "math": "\\frac{600}{x} + \\frac{300}{x} = 150 \\Rightarrow \\frac{900}{x} = 150",
-       "en": "Add the two times.",
-       "ur": "دونوں وقت جمع کریں۔"
-      },
-      {
-       "math": "x = \\frac{900}{150} = 6 \\text{ m/s}",
-       "en": "Solve.",
-       "ur": "حل کریں۔",
+       "math": "t_1 = \\frac{600}{x}, \\quad t_2 = \\frac{600}{2x} = \\frac{300}{x}",
+       "en": "Using the formula $\\text{Time} = \\frac{\\text{Distance}}{\\text{Speed}}$, write the time $t_1$ for the first $600$ m and $t_2$ for the next $600$ m.",
+       "ur": "فارمولا $\\text{Time} = \\frac{\\text{Distance}}{\\text{Speed}}$ استعمال کرتے ہوئے، پہلے $600$ میٹر کے لیے وقت $t_1$ اور اگلے $600$ میٹر کے لیے وقت $t_2$ لکھیں۔",
        "check": [
+        "600/2 == 300"
+       ]
+      },
+      {
+       "math": "T = 2\\frac{1}{2}\\text{ min} = \\frac{5}{2} \\times 60\\text{ s} = 150\\text{ s}",
+       "en": "Convert the given total time of $2\\frac{1}{2}$ minutes into seconds by multiplying by $60$.",
+       "ur": "دیے گئے کل وقت $2\\frac{1}{2}$ منٹ کو $60$ سے ضرب دے کر سیکنڈوں میں تبدیل کریں۔",
+       "check": [
+        "(2 + R(1,2)) == R(5,2)",
+        "R(5,2) * 60 == 150"
+       ]
+      },
+      {
+       "math": "\\frac{600}{x} + \\frac{300}{x} = 150",
+       "en": "According to the given condition, the sum of the two times equals the total time of $150$ seconds.",
+       "ur": "دی گئی شرط کے مطابق، دونوں اوقات کا مجموعہ کل وقت یعنی $150$ سیکنڈ کے برابر ہے۔"
+      },
+      {
+       "math": "\\frac{600 + 300}{x} = 150 \\Rightarrow \\frac{900}{x} = 150",
+       "en": "Since the denominators on the left-hand side are the same, add the numerators.",
+       "ur": "چونکہ بائیں جانب مخرج یکساں ہیں، اس لیے شمار کنندگان کو جمع کریں۔",
+       "check": [
+        "600 + 300 == 900"
+       ]
+      },
+      {
+       "math": "x = \\frac{900}{150} = 6\\text{ m/s}",
+       "en": "Solve the equation for $x$. Thus, the pace Fahad started at is $6$ m/s.",
+       "ur": "$x$ کی قیمت معلوم کرنے کے لیے مساوات کو حل کریں۔ پس فہد کی ابتدائی رفتار $6$ میٹر فی سیکنڈ ہے۔",
+       "check": [
+        "900 / 150 == 6",
         "600/6 + 300/6 == 150"
        ]
       }
      ],
      "answer": "6 m/s",
+     "enriched": true,
      "book_key": "6 m/s"
     }
    ],
@@ -3368,27 +4145,54 @@
      "steps": [
       {
        "math": "\\frac{x^{2} - 7 x + 12}{x^{2} - 6 x + 9}",
-       "en": "Write the fraction.",
-       "ur": "کسر لکھیں۔"
+       "en": "Write down the given algebraic fraction that needs to be reduced to its lowest form.",
+       "ur": "دی گئی الجبری کسر لکھیں جسے اس کی مختصر ترین شکل میں لانا ہے۔"
       },
       {
-       "math": "= \\frac{\\left(x - 4\\right) \\left(x - 3\\right)}{\\left(x - 3\\right)^{2}}",
-       "en": "Factorize the numerator and the denominator.",
-       "ur": "شمار کنندہ اور نسب نما کی تجزی کریں۔",
+       "math": "= \\frac{x^{2} - 4 x - 3 x + 12}{x^{2} - 3 x - 3 x + 9}",
+       "en": "Split the middle terms in both the numerator and the denominator to factorize the quadratic expressions. For the numerator, $-4x$ and $-3x$ add up to $-7x$ and multiply to $12x^2$. For the denominator, $-3x$ and $-3x$ add up to $-6x$ and multiply to $9x^2$.",
+       "ur": "شمار کنندہ اور مخرج دونوں میں دو درجی جملوں کی تجزی کرنے کے لیے درمیانی رقموں کو توڑ کر لکھیں۔ شمار کنندہ کے لیے، $-4x$ اور $-3x$ کو جمع کرنے سے $-7x$ اور ضرب دینے سے $12x^2$ آتا ہے۔ مخرج کے لیے، $-3x$ اور $-3x$ کو جمع کرنے سے $-6x$ اور ضرب دینے سے $9x^2$ آتا ہے۔",
+       "check": [
+        "(x**2 - 4*x - 3*x + 12)/(x**2 - 3*x - 3*x + 9) == (x**2 - 7*x + 12)/(x**2 - 6*x + 9)"
+       ]
+      },
+      {
+       "math": "= \\frac{x(x - 4) - 3(x - 4)}{x(x - 3) - 3(x - 3)}",
+       "en": "Take out the common factors from each pair of terms in the numerator and the denominator.",
+       "ur": "شمار کنندہ اور مخرج میں رقموں کے ہر جوڑے میں سے مشترک اجزاء باہر نکالیں۔",
+       "check": [
+        "(x*(x - 4) - 3*(x - 4))/(x*(x - 3) - 3*(x - 3)) == (x**2 - 7*x + 12)/(x**2 - 6*x + 9)"
+       ]
+      },
+      {
+       "math": "= \\frac{(x - 4)(x - 3)}{(x - 3)(x - 3)}",
+       "en": "Factor out the common binomials $(x - 4)$ in the numerator and $(x - 3)$ in the denominator.",
+       "ur": "شمار کنندہ میں سے مشترک دو رقمی جملہ $(x - 4)$ اور مخرج میں سے $(x - 3)$ باہر نکالیں۔",
+       "check": [
+        "((x - 4)*(x - 3))/((x - 3)*(x - 3)) == (x**2 - 7*x + 12)/(x**2 - 6*x + 9)"
+       ]
+      },
+      {
+       "math": "= \\frac{(x - 4)(x - 3)}{(x - 3)^{2}}",
+       "en": "Write the repeated factor in the denominator as a square.",
+       "ur": "مخرج میں دو بار آنے والے جزو ضربی کو مربع کی شکل میں لکھیں۔",
        "check": [
         "((x - 4)*(x - 3))/((x - 3)**2) == (x**2 - 7*x + 12)/(x**2 - 6*x + 9)"
        ]
       },
       {
        "math": "= \\frac{x - 4}{x - 3}",
-       "en": "Cancel the common factors.",
-       "ur": "مشترک اجزاء کاٹ دیں۔",
+       "en": "Cancel out the common factor $(x - 3)$ from the numerator and the denominator to get the lowest form.",
+       "ur": "مختصر ترین شکل حاصل کرنے کے لیے شمار کنندہ اور مخرج سے مشترک جزو ضربی $(x - 3)$ کو کاٹ دیں۔",
        "check": [
+        "(x - 4)/(x - 3) == (x**2 - 7*x + 12)/(x**2 - 6*x + 9)",
+        "((x - 4)*(x - 3))/((x - 3)**2) == (x**2 - 7*x + 12)/(x**2 - 6*x + 9)",
         "((x - 4)/(x - 3)) == (x**2 - 7*x + 12)/(x**2 - 6*x + 9)"
        ]
       }
      ],
      "answer": "$\\frac{x - 4}{x - 3}$",
+     "enriched": true,
      "book_key": "\\frac{x-4}{x-3}"
     },
     {
@@ -3396,28 +4200,47 @@
      "prompt": "$\\frac{x^2+3x-18}{7x-21}$",
      "steps": [
       {
-       "math": "\\frac{x^{2} + 3 x - 18}{7 x - 21}",
-       "en": "Write the fraction.",
-       "ur": "کسر لکھیں۔"
+       "math": "\\frac{x^{2} + 3x - 18}{7x - 21}",
+       "en": "Write down the given algebraic fraction to be reduced to its lowest form.",
+       "ur": "دی گئی الجبری کسر کو مختصر ترین شکل میں لانے کے لیے لکھیں۔"
       },
       {
-       "math": "= \\frac{\\left(x - 3\\right) \\left(x + 6\\right)}{7 \\left(x - 3\\right)}",
-       "en": "Factorize the numerator and the denominator.",
-       "ur": "شمار کنندہ اور نسب نما کی تجزی کریں۔",
+       "math": "= \\frac{x^{2} + 6x - 3x - 18}{7(x - 3)}",
+       "en": "Factorize the numerator by splitting the middle term ($6x - 3x = 3x$ and $6 \\times (-3) = -18$), and take $7$ common from the denominator.",
+       "ur": "شمار کنندہ کی درمیانی رقم کو توڑ کر تجزی کریں ($6x - 3x = 3x$ اور $6 \\times (-3) = -18$)، اور مخرج سے $7$ مشترک لیں۔",
+       "check": [
+        "(x**2 + 6*x - 3*x - 18)/(7*(x - 3)) == (x**2 + 3*x - 18)/(7*x - 21)"
+       ]
+      },
+      {
+       "math": "= \\frac{x(x + 6) - 3(x + 6)}{7(x - 3)}",
+       "en": "Take common factors from the pairs of terms in the numerator.",
+       "ur": "شمار کنندہ میں رقموں کے جوڑوں سے مشترک اجزاء باہر نکالیں۔",
+       "check": [
+        "(x*(x + 6) - 3*(x + 6))/(7*(x - 3)) == (x**2 + 3*x - 18)/(7*x - 21)"
+       ]
+      },
+      {
+       "math": "= \\frac{(x - 3)(x + 6)}{7(x - 3)}",
+       "en": "Factor out $(x + 6)$ in the numerator to complete the factorization.",
+       "ur": "تجزی مکمل کرنے کے لیے شمار کنندہ میں سے $(x + 6)$ مشترک لیں۔",
        "check": [
         "((x - 3)*(x + 6))/(7*(x - 3)) == (x**2 + 3*x - 18)/(7*x - 21)"
        ]
       },
       {
        "math": "= \\frac{x + 6}{7}",
-       "en": "Cancel the common factors.",
-       "ur": "مشترک اجزاء کاٹ دیں۔",
+       "en": "Cancel out the common factor $(x - 3)$ from both the numerator and the denominator to get the lowest form.",
+       "ur": "مختصر ترین شکل حاصل کرنے کے لیے شمار کنندہ اور مخرج دونوں سے مشترک جزو $(x - 3)$ کو کاٹ دیں۔",
        "check": [
+        "(x + 6)/7 == (x**2 + 3*x - 18)/(7*x - 21)",
+        "((x - 3)*(x + 6))/(7*(x - 3)) == (x**2 + 3*x - 18)/(7*x - 21)",
         "(x/7 + 6/7) == (x**2 + 3*x - 18)/(7*x - 21)"
        ]
       }
      ],
      "answer": "$\\frac{x + 6}{7}$",
+     "enriched": true,
      "book_key": "\\frac{x+6}{7}"
     }
    ],
@@ -3480,30 +4303,57 @@
      "prompt": "$\\frac{x^3-27}{x^2-9}\\div\\frac{x^2+3x+9}{x^2+6x+9}$",
      "steps": [
       {
-       "math": "\\frac{x^{3} - 27}{x^{2} - 9} \\div \\frac{x^{2} + 3 x + 9}{x^{2} + 6 x + 9}",
-       "en": "Write the expression.",
-       "ur": "عبارت لکھیں۔"
+       "math": "\\frac{x^{3} - 27}{x^{2} - 9} \\div \\frac{x^{2} + 3x + 9}{x^{2} + 6x + 9}",
+       "en": "Write down the given algebraic expression to be simplified.",
+       "ur": "دی گئی الجبری عبارت کو مختصر کرنے کے لیے لکھیں۔"
       },
       {
-       "math": "= \\frac{\\left(x - 3\\right) \\left(x^{2} + 3 x + 9\\right)}{\\left(x - 3\\right) \\left(x + 3\\right)} \\div \\frac{x^{2} + 3 x + 9}{\\left(x + 3\\right)^{2}}",
-       "en": "Factorize every numerator and denominator.",
-       "ur": "ہر شمار کنندہ اور نسب نما کی تجزی کریں۔"
+       "math": "= \\frac{x^{3} - 3^{3}}{x^{2} - 3^{2}} \\div \\frac{x^{2} + 3x + 9}{(x)^{2} + 2(x)(3) + (3)^{2}}",
+       "en": "Rewrite $27$ as $3^{3}$, $9$ as $3^{2}$, and express $x^{2} + 6x + 9$ in the perfect square form $a^{2} + 2ab + b^{2}$.",
+       "ur": "$27$ کو $3^{3}$، $9$ کو $3^{2}$ لکھیں اور $x^{2} + 6x + 9$ کو کامل مربع کی شکل $a^{2} + 2ab + b^{2}$ میں لکھیں۔",
+       "check": [
+        "x**3 - 27 == x**3 - 3**3",
+        "x**2 - 9 == x**2 - 3**2",
+        "x**2 + 6*x + 9 == x**2 + 2*x*3 + 3**2"
+       ]
       },
       {
-       "math": "= \\frac{\\left(x - 3\\right) \\left(x^{2} + 3 x + 9\\right)}{\\left(x - 3\\right) \\left(x + 3\\right)} \\times \\frac{\\left(x + 3\\right)^{2}}{x^{2} + 3 x + 9}",
-       "en": "Dividing by a fraction is multiplying by its reciprocal (turn the fraction after $\\div$ upside down).",
-       "ur": "کسر سے تقسیم کرنا اس کے معکوس سے ضرب دینا ہے ($\\div$ کے بعد والی کسر الٹ دیں)۔"
+       "math": "= \\frac{(x - 3)(x^{2} + 3x + 9)}{(x - 3)(x + 3)} \\div \\frac{x^{2} + 3x + 9}{(x + 3)^{2}}",
+       "en": "Apply the algebraic identities $a^{3} - b^{3} = (a - b)(a^{2} + ab + b^{2})$, $a^{2} - b^{2} = (a - b)(a + b)$, and $a^{2} + 2ab + b^{2} = (a + b)^{2}$ to factorize the numerators and denominators.",
+       "ur": "شمار کنندہ اور مخرج کی تجزی کرنے کے لیے الجبری کلیے $a^{3} - b^{3} = (a - b)(a^{2} + ab + b^{2})$، $a^{2} - b^{2} = (a - b)(a + b)$ اور $a^{2} + 2ab + b^{2} = (a + b)^{2}$ استعمال کریں۔",
+       "check": [
+        "x**3 - 27 == (x - 3)*(x**2 + 3*x + 9)",
+        "x**2 - 9 == (x - 3)*(x + 3)",
+        "x**2 + 6*x + 9 == (x + 3)**2"
+       ]
+      },
+      {
+       "math": "= \\frac{(x - 3)(x^{2} + 3x + 9)}{(x - 3)(x + 3)} \\times \\frac{(x + 3)^{2}}{x^{2} + 3x + 9}",
+       "en": "Change the division sign $\\div$ into multiplication $\\times$ by taking the reciprocal of the second fraction (inverting its numerator and denominator).",
+       "ur": "دوسری کسر کا معکوس لے کر (اس کے شمار کنندہ اور مخرج کو الٹ کر) تقسیم کی علامت $\\div$ کو ضرب $\\times$ میں تبدیل کریں۔",
+       "check": [
+        "((x - 3)*(x**2 + 3*x + 9))/((x - 3)*(x + 3)) / ((x**2 + 3*x + 9)/(x + 3)**2) == (((x - 3)*(x**2 + 3*x + 9))/((x - 3)*(x + 3))) * ((x + 3)**2/(x**2 + 3*x + 9))"
+       ]
+      },
+      {
+       "math": "= \\frac{(x - 3)(x^{2} + 3x + 9)(x + 3)(x + 3)}{(x - 3)(x + 3)(x^{2} + 3x + 9)}",
+       "en": "Combine into a single fraction and expand $(x + 3)^{2}$ as $(x + 3)(x + 3)$ to clearly see all common factors.",
+       "ur": "ایک واحد کسر میں یکجا کریں اور تمام مشترک اجزائے ضربی کو واضح طور پر دیکھنے کے لیے $(x + 3)^{2}$ کو $(x + 3)(x + 3)$ کے طور پر کھول کر لکھیں۔",
+       "check": [
+        "(x + 3)**2 == (x + 3)*(x + 3)"
+       ]
       },
       {
        "math": "= x + 3",
-       "en": "Cancel the common factors.",
-       "ur": "مشترک اجزاء کاٹ دیں۔",
+       "en": "Cancel out the common factors $(x - 3)$, $(x^{2} + 3x + 9)$, and $(x + 3)$ from the numerator and denominator to get the final simplified answer.",
+       "ur": "آخری مختصر جواب حاصل کرنے کے لیے شمار کنندہ اور مخرج سے مشترک اجزاء $(x - 3)$، $(x^{2} + 3x + 9)$ اور $(x + 3)$ کو کاٹ دیں۔",
        "check": [
         "(x + 3) == ((x**3 - 27)*(x**2 + 6*x + 9)/((x**2 - 9)*(x**2 + 3*x + 9)))"
        ]
       }
      ],
      "answer": "$x + 3$",
+     "enriched": true,
      "book_key": "x+3"
     },
     {
@@ -3511,25 +4361,46 @@
      "prompt": "$\\frac{a^2-(b-c)^2}{(a+b)^2-c^2}\\times\\frac{a^2-(b+c)^2}{(a-b)^2-c^2}$",
      "steps": [
       {
-       "math": "\\frac{a^{2} - \\left(b - c\\right)^{2}}{- c^{2} + \\left(a + b\\right)^{2}} \\times \\frac{a^{2} - \\left(b + c\\right)^{2}}{- c^{2} + \\left(a - b\\right)^{2}}",
-       "en": "Write the expression.",
-       "ur": "عبارت لکھیں۔"
+       "math": "\\frac{a^2 - (b - c)^2}{(a + b)^2 - c^2} \\times \\frac{a^2 - (b + c)^2}{(a - b)^2 - c^2}",
+       "en": "Write down the given algebraic expression.",
+       "ur": "دی گئی الجبری عبارت لکھیں۔"
       },
       {
-       "math": "= \\frac{\\left(a - b + c\\right) \\left(a + b - c\\right)}{\\left(a + b - c\\right) \\left(a + b + c\\right)} \\times \\frac{\\left(a - b - c\\right) \\left(a + b + c\\right)}{\\left(a - b - c\\right) \\left(a - b + c\\right)}",
-       "en": "Factorize every numerator and denominator.",
-       "ur": "ہر شمار کنندہ اور نسب نما کی تجزی کریں۔"
+       "math": "= \\frac{[a - (b - c)][a + (b - c)]}{[(a + b) - c][(a + b) + c]} \\times \\frac{[a - (b + c)][a + (b + c)]}{[(a - b) - c][(a - b) + c]}",
+       "en": "Apply the difference of two squares formula $x^2 - y^2 = (x - y)(x + y)$ to each numerator and denominator.",
+       "ur": "ہر شمار کنندہ اور مخرج پر دو مربعات کے فرق کا کلیہ $x^2 - y^2 = (x - y)(x + y)$ لاگو کریں۔",
+       "check": [
+        "((a - (b - c))*(a + (b - c)))/(((a + b) - c)*((a + b) + c)) * ((a - (b + c))*(a + (b + c)))/(((a - b) - c)*((a - b) + c)) == ((a**2 - (b - c)**2)/((a + b)**2 - c**2)) * ((a**2 - (b + c)**2)/((a - b)**2 - c**2))"
+       ]
+      },
+      {
+       "math": "= \\frac{(a - b + c)(a + b - c)}{(a + b - c)(a + b + c)} \\times \\frac{(a - b - c)(a + b + c)}{(a - b - c)(a - b + c)}",
+       "en": "Remove the inner round brackets and change the signs where there is a minus sign outside the bracket.",
+       "ur": "اندرونی چھوٹی بریکٹس ختم کریں اور جہاں بریکٹ کے باہر منفی کی علامت ہو وہاں اندرونی علامتیں تبدیل کریں۔",
+       "check": [
+        "((a - b + c)*(a + b - c))/((a + b - c)*(a + b + c)) * ((a - b - c)*(a + b + c))/((a - b - c)*(a - b + c)) == ((a**2 - (b - c)**2)/((a + b)**2 - c**2)) * ((a**2 - (b + c)**2)/((a - b)**2 - c**2))"
+       ]
+      },
+      {
+       "math": "= \\frac{a - b + c}{a + b + c} \\times \\frac{a + b + c}{a - b + c}",
+       "en": "Cancel the common factor $(a + b - c)$ in the first fraction and $(a - b - c)$ in the second fraction.",
+       "ur": "پہلی کسر میں مشترک جزو $(a + b - c)$ اور دوسری کسر میں $(a - b - c)$ کو آپس میں کاٹ دیں۔",
+       "check": [
+        "((a - b + c)/(a + b + c)) * ((a + b + c)/(a - b + c)) == ((a**2 - (b - c)**2)/((a + b)**2 - c**2)) * ((a**2 - (b + c)**2)/((a - b)**2 - c**2))"
+       ]
       },
       {
        "math": "= 1",
-       "en": "Cancel the common factors.",
-       "ur": "مشترک اجزاء کاٹ دیں۔",
+       "en": "Cancel the remaining cross common factors $(a - b + c)$ and $(a + b + c)$ to get the final answer.",
+       "ur": "باقی ماندہ مشترک اجزاء $(a - b + c)$ اور $(a + b + c)$ کو ترچھا کاٹ کر حتمی جواب حاصل کریں۔",
        "check": [
+        "1 == ((a**2 - (b - c)**2)/((a + b)**2 - c**2)) * ((a**2 - (b + c)**2)/((a - b)**2 - c**2))",
         "(1) == ((a**2 - (b - c)**2)*(a**2 - (b + c)**2)/((-c**2 + (a - b)**2)*(-c**2 + (a + b)**2)))"
        ]
       }
      ],
      "answer": "$1$",
+     "enriched": true,
      "book_key": "1"
     }
    ],
@@ -4406,27 +5277,53 @@
      "steps": [
       {
        "math": "",
-       "en": "Rates in glasses per hour: Ahmad $\\frac{50}{2}$, Faiza $\\frac{45}{2}$.",
-       "ur": "شرحیں (گلاس فی گھنٹہ): احمد $\\frac{50}{2}$، فائزہ $\\frac{45}{2}$۔"
+       "en": "First, we find the individual work rate (glasses painted per hour) for both Ahmad and Faiza by dividing the number of glasses by the time taken.",
+       "ur": "سب سے پہلے، ہم گلاسوں کی تعداد کو لگنے والے وقت پر تقسیم کر کے احمد اور فائزہ دونوں کے کام کرنے کی انفرادی شرح (فی گھنٹہ رنگے گئے گلاس) معلوم کرتے ہیں۔"
       },
       {
-       "math": "\\frac{50}{2} + \\frac{45}{2} = 25 + 22.5 = 47.5 \\text{ glasses per hour}",
-       "en": "Combined rate.",
-       "ur": "مشترکہ شرح۔",
+       "math": "\\text{Ahmad's rate} = \\frac{50}{2} = 25 \\text{ glasses per hour}",
+       "en": "Ahmad paints $50$ glasses in $2$ hours, so his rate per hour is:",
+       "ur": "احمد $2$ گھنٹے میں $50$ گلاس رنگتا ہے، اس لیے اس کی فی گھنٹہ شرح یہ ہے:",
+       "check": [
+        "R(50,2) == 25"
+       ]
+      },
+      {
+       "math": "\\text{Faiza's rate} = \\frac{45}{2} = 22.5 \\text{ glasses per hour}",
+       "en": "Faiza paints $45$ glasses in $2$ hours, so her rate per hour is:",
+       "ur": "فائزہ $2$ گھنٹے میں $45$ گلاس رنگتی ہے، اس لیے اس کی فی گھنٹہ شرح یہ ہے:",
+       "check": [
+        "R(45,2) == R(45,2)"
+       ]
+      },
+      {
+       "math": "\\text{Combined rate} = \\frac{50}{2} + \\frac{45}{2} = 25 + 22.5 = 47.5 \\text{ glasses per hour}",
+       "en": "When they work together, we add their individual rates to find their combined rate.",
+       "ur": "جب وہ اکٹھے کام کرتے ہیں، تو ہم ان کی مشترکہ شرح معلوم کرنے کے لیے ان کی انفرادی شرحوں کو جمع کرتے ہیں۔",
        "check": [
         "R(50,2) + R(45,2) == R(95,2)"
        ]
       },
       {
-       "math": "\\text{time} = \\frac{150}{47.5} = \\frac{60}{19} \\approx 3.16 \\text{ hours}",
-       "en": "Time = work $\\div$ rate.",
-       "ur": "وقت = کام $\\div$ شرح۔",
+       "math": "\\text{Time} = \\frac{\\text{Total Work}}{\\text{Combined Rate}} = \\frac{150}{47.5} = \\frac{60}{19} \\approx 3.16 \\text{ hours}",
+       "en": "To find the time required to paint $150$ glasses together, we divide the total work by their combined rate.",
+       "ur": "اکٹھے $150$ گلاس رنگنے کے لیے درکار وقت معلوم کرنے کے لیے، ہم کل کام کو ان کی مشترکہ شرح پر تقسیم کرتے ہیں۔",
        "check": [
+        "150/R(95,2) == R(60,19)"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Thus, working together, it will take them approximately $3.16$ hours to paint $150$ glasses.",
+       "ur": "چنانچہ، اکٹھے کام کرتے ہوئے انہیں $150$ گلاس رنگنے میں تقریباً $3.16$ گھنٹے لگیں گے۔",
+       "check": [
+        "R(50,2) + R(45,2) == R(95,2)",
         "150/R(95,2) == R(60,19)"
        ]
       }
      ],
      "answer": "$\\approx 3.16$ hours",
+     "enriched": true,
      "book_key": "3.16 hours"
     }
    ],
@@ -4445,24 +5342,43 @@
      "steps": [
       {
        "math": "",
-       "en": "Rates: $\\frac{1}{6}$ and $\\frac{1}{9}$ tank per hour.",
-       "ur": "شرحیں: $\\frac{1}{6}$ اور $\\frac{1}{9}$ ٹینک فی گھنٹہ۔"
+       "en": "First, find the fraction of the tank filled by each tap in $1$ hour. The first tap takes $6$ hours, so its rate is $\\frac{1}{6}$ of the tank per hour. The second tap takes $9$ hours, so its rate is $\\frac{1}{9}$ of the tank per hour.",
+       "ur": "سب سے پہلے، ہر نل کے ذریعے $1$ گھنٹے میں بھرے گئے ٹینک کا حصہ معلوم کریں۔ پہلا نل $6$ گھنٹے لیتا ہے، اس لیے اس کی شرح $\\frac{1}{6}$ ٹینک فی گھنٹہ ہے۔ دوسرا نل $9$ گھنٹے لیتا ہے، اس لیے اس کی شرح $\\frac{1}{9}$ ٹینک فی گھنٹہ ہے۔"
       },
       {
-       "math": "\\frac{1}{T} = \\frac{1}{6} + \\frac{1}{9} = \\frac{3}{18} + \\frac{2}{18} = \\frac{5}{18}",
-       "en": "Rates add up.",
-       "ur": "شرحیں جمع ہوتی ہیں۔",
+       "math": "\\frac{1}{T} = \\frac{1}{6} + \\frac{1}{9}",
+       "en": "Let $T$ be the total hours required when both taps are opened together. Their combined rate $\\frac{1}{T}$ is the sum of their individual rates.",
+       "ur": "فرض کریں کہ جب دونوں نل ایک ساتھ کھولے جائیں تو کل درکار گھنٹے $T$ ہیں۔ ان کی مشترکہ شرح $\\frac{1}{T}$ ان کی انفرادی شرحوں کا مجموعہ ہے۔"
+      },
+      {
+       "math": "\\frac{1}{T} = \\frac{3}{18} + \\frac{2}{18}",
+       "en": "Find the least common multiple (LCM) of the denominators $6$ and $9$, which is $18$, and rewrite the fractions with the common denominator.",
+       "ur": "مخرج $6$ اور $9$ کا ذواضعاف اقل (LCM) معلوم کریں، جو کہ $18$ ہے، اور کسروں کو مشترک مخرج کے ساتھ دوبارہ لکھیں۔",
        "check": [
-        "R(1,6) + R(1,9) == R(5,18)"
+        "R(1,6) == R(3,18)",
+        "R(1,9) == R(2,18)"
+       ]
+      },
+      {
+       "math": "\\frac{1}{T} = \\frac{5}{18}",
+       "en": "Add the numerators together to get the combined rate per hour.",
+       "ur": "مشترکہ شرح فی گھنٹہ حاصل کرنے کے لیے شمار کنندگان کو آپس میں جمع کریں۔",
+       "check": [
+        "R(3,18) + R(2,18) == R(5,18)"
        ]
       },
       {
        "math": "T = \\frac{18}{5} = 3.6 \\text{ hours}",
-       "en": "Take the reciprocal.",
-       "ur": "معکوس لیں۔"
+       "en": "Take the reciprocal of both sides to find the total time $T$, and divide $18$ by $5$. Thus, it will take $3.6$ hours to fill the empty tank.",
+       "ur": "کل وقت $T$ معلوم کرنے کے لیے دونوں طرف کا معکوس (reciprocal) لیں، اور $18$ کو $5$ پر تقسیم کریں۔ اس طرح، خالی ٹینک کو بھرنے میں $3.6$ گھنٹے لگیں گے۔",
+       "check": [
+        "R(18,5) == 3.6",
+        "R(1,6) + R(1,9) == R(5,18)"
+       ]
       }
      ],
      "answer": "3.6 hours",
+     "enriched": true,
      "book_key": "3.6 hours"
     }
    ],

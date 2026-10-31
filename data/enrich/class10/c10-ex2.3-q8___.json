@@ -1,0 +1,67 @@
+{
+ "item": "c10-ex2.3-q8",
+ "label": "",
+ "answer_ref": "proved: $A = 2b - a^2,\\ B = b^2$",
+ "steps": [
+  {
+   "math": "x^2 + ax + b = 0",
+   "en": "Consider the first given quadratic equation, whose roots are $\\alpha$ and $\\beta$. Comparing it with the standard form $px^2 + qx + r = 0$, we have $p = 1$, $q = a$, and $r = b$.",
+   "ur": "پہلی دی گئی دو درجی مساوات پر غور کریں، جس کے روٹس $\\alpha$ اور $\\beta$ ہیں۔ معیاری شکل $px^2 + qx + r = 0$ سے موازنہ کرنے پر، ہمیں $p = 1$، $q = a$، اور $r = b$ حاصل ہوتا ہے۔"
+  },
+  {
+   "math": "\\alpha + \\beta = -\\frac{a}{1} = -a, \\quad \\alpha\\beta = \\frac{b}{1} = b",
+   "en": "Using the formulas for the sum of roots ($-\\frac{q}{p}$) and the product of roots ($\\frac{r}{p}$), we find $\\alpha + \\beta$ and $\\alpha\\beta$.",
+   "ur": "روٹس کے مجموعے ($-\\frac{q}{p}$) اور روٹس کے حاصلِ ضرب ($\\frac{r}{p}$) کے فارمولے استعمال کرتے ہوئے، ہم $\\alpha + \\beta$ اور $\\alpha\\beta$ معلوم کرتے ہیں۔",
+   "check": [
+    "-a/1 == -a",
+    "b/1 == b"
+   ]
+  },
+  {
+   "math": "x^2 + Ax + B = 0",
+   "en": "Now consider the second given quadratic equation, whose roots are $\\alpha^2$ and $\\beta^2$. Here, the coefficients are $p = 1$, $q = A$, and $r = B$.",
+   "ur": "اب دوسری دی گئی دو درجی مساوات پر غور کریں، جس کے روٹس $\\alpha^2$ اور $\\beta^2$ ہیں۔ یہاں عددی سر $p = 1$، $q = A$، اور $r = B$ ہیں۔"
+  },
+  {
+   "math": "\\alpha^2 + \\beta^2 = -\\frac{A}{1} = -A, \\quad \\alpha^2\\beta^2 = \\frac{B}{1} = B",
+   "en": "Similarly, write the sum and product of the roots for the second equation.",
+   "ur": "اسی طرح، دوسری مساوات کے روٹس کا مجموعہ اور حاصلِ ضرب لکھیں۔",
+   "check": [
+    "-A/1 == -A",
+    "B/1 == B"
+   ]
+  },
+  {
+   "math": "(\\alpha + \\beta)^2 - 2\\alpha\\beta = -A",
+   "en": "Take the sum of roots equation $\\alpha^2 + \\beta^2 = -A$ and apply the algebraic identity $\\alpha^2 + \\beta^2 = (\\alpha + \\beta)^2 - 2\\alpha\\beta$.",
+   "ur": "روٹس کے مجموعے کی مساوات $\\alpha^2 + \\beta^2 = -A$ لیں اور الجبری کلیہ $\\alpha^2 + \\beta^2 = (\\alpha + \\beta)^2 - 2\\alpha\\beta$ استعمال کریں۔",
+   "check": [
+    "al**2 + be**2 == (al + be)**2 - 2*al*be"
+   ]
+  },
+  {
+   "math": "(-a)^2 - 2(b) = -A \\implies a^2 - 2b = -A \\implies A = 2b - a^2",
+   "en": "Substitute the values $\\alpha + \\beta = -a$ and $\\alpha\\beta = b$ from the first equation, then simplify and multiply both sides by $-1$ to find $A$.",
+   "ur": "پہلی مساوات سے $\\alpha + \\beta = -a$ اور $\\alpha\\beta = b$ کی قیمتیں درج کریں، پھر مختصر کریں اور $A$ معلوم کرنے کے لیے دونوں طرف $-1$ سے ضرب دیں۔",
+   "check": [
+    "(-a)**2 - 2*b == a**2 - 2*b",
+    "-(a**2 - 2*b) == 2*b - a**2"
+   ]
+  },
+  {
+   "math": "(\\alpha\\beta)^2 = B \\implies (b)^2 = B \\implies B = b^2",
+   "en": "Now take the product of roots equation $\\alpha^2\\beta^2 = B$, rewrite it as $(\\alpha\\beta)^2 = B$, and substitute $\\alpha\\beta = b$ to find $B$. Hence proved.",
+   "ur": "اب روٹس کے حاصلِ ضرب کی مساوات $\\alpha^2\\beta^2 = B$ لیں، اسے $(\\alpha\\beta)^2 = B$ کے طور پر لکھیں، اور $B$ معلوم کرنے کے لیے $\\alpha\\beta = b$ درج کریں۔ پس ثابت ہوا۔",
+   "check": [
+    "al**2 * be**2 == (al*be)**2",
+    "al**2 + be**2 == (al + be)**2 - 2*al*be",
+    "(-a)**2 - 2*b == a**2 - 2*b",
+    "al**2*be**2 == (al*be)**2",
+    "-(a**2 - 2*b) == 2*b - a**2"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

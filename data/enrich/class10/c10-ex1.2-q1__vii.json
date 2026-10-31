@@ -1,0 +1,76 @@
+{
+ "item": "c10-ex1.2-q1",
+ "label": "vii",
+ "answer_ref": "$\\frac{13}{10} + \\frac{1}{10}i$",
+ "steps": [
+  {
+   "math": "\\left(3 - 5i\\right) \\div \\left(2 - 4i\\right) = \\frac{3 - 5i}{2 - 4i}",
+   "en": "Write the given division of complex numbers in fraction form.",
+   "ur": "دی گئی مخلوط اعداد کی تقسیم کو کسر کی شکل میں لکھیں۔",
+   "check": [
+    "(3 - 5*I)/(2 - 4*I) == (3 - 5*I)/(2 - 4*I)"
+   ]
+  },
+  {
+   "math": "= \\frac{3 - 5i}{2 - 4i} \\times \\frac{2 + 4i}{2 + 4i}",
+   "en": "To rationalize the denominator, multiply both the numerator and the denominator by the conjugate of the denominator, which is $2 + 4i$.",
+   "ur": "نسب نما کو ناطق بنانے کے لیے، شمار کنندہ اور نسب نما دونوں کو نسب نما کے مزدوج (conjugate) یعنی $2 + 4i$ سے ضرب دیں۔",
+   "check": [
+    "(3 - 5*I)/(2 - 4*I) == ((3 - 5*I)*(2 + 4*I))/((2 - 4*I)*(2 + 4*I))"
+   ]
+  },
+  {
+   "math": "= \\frac{3(2 + 4i) - 5i(2 + 4i)}{(2)^2 - (4i)^2}",
+   "en": "Expand the numerator using the distributive property, and apply the algebraic identity $(a - b)(a + b) = a^2 - b^2$ in the denominator.",
+   "ur": "شمار کنندہ کو تقسیمی خاصیت کے تحت کھولیں، اور نسب نما میں الجبری کلیہ $(a - b)(a + b) = a^2 - b^2$ لاگو کریں۔",
+   "check": [
+    "(3 - 5*I)*(2 + 4*I) == 3*(2 + 4*I) - 5*I*(2 + 4*I)",
+    "(2 - 4*I)*(2 + 4*I) == 2**2 - (4*I)**2"
+   ]
+  },
+  {
+   "math": "= \\frac{6 + 12i - 10i - 20i^2}{4 - 16i^2}",
+   "en": "Perform the multiplications in both the numerator and the denominator.",
+   "ur": "شمار کنندہ اور نسب نما دونوں میں ضرب کا عمل مکمل کریں۔",
+   "check": [
+    "3*(2 + 4*I) - 5*I*(2 + 4*I) == 6 + 12*I - 10*I - 20*I**2",
+    "2**2 - (4*I)**2 == 4 - 16*I**2"
+   ]
+  },
+  {
+   "math": "= \\frac{6 + 2i - 20(-1)}{4 - 16(-1)}",
+   "en": "Combine the like imaginary terms $12i - 10i = 2i$, and substitute $i^2 = -1$.",
+   "ur": "یکساں خیالی رقوم $12i - 10i = 2i$ کو یکجا کریں، اور $i^2 = -1$ درج کریں۔",
+   "check": [
+    "6 + 12*I - 10*I - 20*I**2 == 6 + 2*I - 20*(-1)",
+    "4 - 16*I**2 == 4 - 16*(-1)"
+   ]
+  },
+  {
+   "math": "= \\frac{6 + 2i + 20}{4 + 16} = \\frac{26 + 2i}{20}",
+   "en": "Simplify the signs and add the real numbers in the numerator and the denominator.",
+   "ur": "علامتوں کو سادہ کریں اور شمار کنندہ اور نسب نما میں حقیقی اعداد کو جمع کریں۔",
+   "check": [
+    "6 + 2*I + 20 == 26 + 2*I",
+    "4 + 16 == 20",
+    "(6 + 2*I + 20)/(4 + 16) == (26 + 2*I)/20"
+   ]
+  },
+  {
+   "math": "= \\frac{26}{20} + \\frac{2}{20}i = \\frac{13}{10} + \\frac{1}{10}i",
+   "en": "Separate into real and imaginary parts by dividing each term by $20$, then reduce the fractions to their lowest form to get the standard form $a + bi$.",
+   "ur": "ہر رقم کو $20$ سے تقسیم کر کے حقیقی اور خیالی حصوں کو الگ کریں، پھر معیاری شکل $a + bi$ حاصل کرنے کے لیے کسروں کو ان کی مختصر ترین شکل میں لائیں۔",
+   "check": [
+    "(26 + 2*I)/20 == R(26, 20) + R(2, 20)*I",
+    "R(26, 20) + R(2, 20)*I == R(13, 10) + R(1, 10)*I",
+    "(3 - 5*I)/(2 - 4*I) == (3 - 5*I)*(2 + 4*I)/((2 - 4*I)*(2 + 4*I))",
+    "(2 - 4*I)*(2 + 4*I) == (20)",
+    "(3 - 5*I)*(2 + 4*I) == (26 + 2*I)",
+    "(3 - 5*I)/(2 - 4*I) == (13/10 + I/10)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

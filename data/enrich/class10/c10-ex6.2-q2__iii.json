@@ -1,0 +1,65 @@
+{
+ "item": "c10-ex6.2-q2",
+ "label": "iii",
+ "answer_ref": "$\\sqrt{17}$",
+ "steps": [
+  {
+   "math": "\\underline{a} = 6\\underline{i} - \\underline{j}, \\quad \\underline{b} = \\underline{i} + 5\\underline{j}, \\quad \\underline{c} = 3\\underline{i} + 5\\underline{j}",
+   "en": "First, write down the given vectors. We need to find the magnitude of the vector $\\underline{c} - \\underline{b} - \\underline{a}$.",
+   "ur": "سب سے پہلے دیے گئے سمتیے لکھیں۔ ہمیں سمتیہ $\\underline{c} - \\underline{b} - \\underline{a}$ کی مقدار معلوم کرنی ہے۔"
+  },
+  {
+   "math": "\\underline{c} - \\underline{b} - \\underline{a} = \\left(3\\underline{i} + 5\\underline{j}\\right) - \\left(\\underline{i} + 5\\underline{j}\\right) - \\left(6\\underline{i} - \\underline{j}\\right)",
+   "en": "Substitute the values of vectors $\\underline{a}$, $\\underline{b}$, and $\\underline{c}$ into the expression $\\underline{c} - \\underline{b} - \\underline{a}$.",
+   "ur": "عبارت $\\underline{c} - \\underline{b} - \\underline{a}$ میں سمتیوں $\\underline{a}$، $\\underline{b}$ اور $\\underline{c}$ کی قیمتیں درج کریں۔"
+  },
+  {
+   "math": "\\underline{c} - \\underline{b} - \\underline{a} = 3\\underline{i} + 5\\underline{j} - \\underline{i} - 5\\underline{j} - 6\\underline{i} + \\underline{j}",
+   "en": "Remove the brackets and change the signs of the terms inside the subtracted brackets.",
+   "ur": "بریکٹ ہٹائیں اور تفریق ہونے والی بریکٹس کے اندر کی رقموں کی علامتیں تبدیل کریں۔",
+   "check": [
+    "(1)*(3) == 3",
+    "(1)*(5) == 5",
+    "(-1)*(1) == -1",
+    "(-1)*(5) == -5",
+    "(-1)*(6) == -6",
+    "(-1)*(-1) == 1"
+   ]
+  },
+  {
+   "math": "\\underline{c} - \\underline{b} - \\underline{a} = (3 - 1 - 6)\\underline{i} + (5 - 5 + 1)\\underline{j} = -4\\underline{i} + \\underline{j}",
+   "en": "Group and add the $\\underline{i}$ components together and the $\\underline{j}$ components together.",
+   "ur": "$\\underline{i}$ کے اجزاء کو ایک ساتھ اور $\\underline{j}$ کے اجزاء کو ایک ساتھ ملا کر حل کریں۔",
+   "check": [
+    "3 - 1 - 6 == -4",
+    "5 - 5 + 1 == 1"
+   ]
+  },
+  {
+   "math": "|\\underline{v}| = \\sqrt{x^2 + y^2}",
+   "en": "The magnitude of a vector $\\underline{v} = x\\underline{i} + y\\underline{j}$ is calculated using the formula $\\sqrt{x^2 + y^2}$. Here, $x = -4$ and $y = 1$.",
+   "ur": "کسی سمتیے $\\underline{v} = x\\underline{i} + y\\underline{j}$ کی مقدار معلوم کرنے کا کلیہ $\\sqrt{x^2 + y^2}$ ہے۔ یہاں $x = -4$ اور $y = 1$ ہے۔"
+  },
+  {
+   "math": "|\\underline{c} - \\underline{b} - \\underline{a}| = \\sqrt{(-4)^2 + (1)^2}",
+   "en": "Substitute $x = -4$ and $y = 1$ into the magnitude formula.",
+   "ur": "مقدار کے کلیے میں $x = -4$ اور $y = 1$ درج کریں۔"
+  },
+  {
+   "math": "|\\underline{c} - \\underline{b} - \\underline{a}| = \\sqrt{16 + 1} = \\sqrt{17}",
+   "en": "Simplify the squares and add them to get the final magnitude.",
+   "ur": "مربع کھول کر جمع کریں، یوں مطلوبہ سمتیے کی مقدار $\\sqrt{17}$ حاصل ہوتی ہے۔",
+   "check": [
+    "(-4)**2 == 16",
+    "(1)**2 == 1",
+    "sqrt(16 + 1) == sqrt(17)",
+    "(1)*(3) + (-1)*(1) + (-1)*(6) == (-4)",
+    "(1)*(5) + (-1)*(5) + (-1)*(-1) == (1)",
+    "sqrt((-4)**2 + (1)**2) == (sqrt(17))"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

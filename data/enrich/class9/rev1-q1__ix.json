@@ -1,0 +1,62 @@
+{
+ "item": "rev1-q1",
+ "label": "ix",
+ "answer_ref": "d",
+ "steps": [
+  {
+   "math": "\\sqrt{75} + \\sqrt{27}",
+   "en": "We are given the radical expression $\\sqrt{75} + \\sqrt{27}$ and need to simplify it to find the correct option.",
+   "ur": "ہمیں جزر والا جملہ $\\sqrt{75} + \\sqrt{27}$ دیا گیا ہے اور درست آپشن تلاش کرنے کے لیے ہمیں اسے مختصر کرنا ہے۔"
+  },
+  {
+   "math": "\\sqrt{75} + \\sqrt{27} = \\sqrt{25 \\times 3} + \\sqrt{9 \\times 3}",
+   "en": "First, factorize the numbers inside the square roots so that each contains the largest possible perfect square factor ($25$ for $75$, and $9$ for $27$).",
+   "ur": "سب سے پہلے، جزر کے اندر موجود اعداد کی اس طرح تجزی کریں کہ ہر ایک میں بڑے سے بڑا مکمل مربع جزوِ ضربی شامل ہو ($75$ کے لیے $25$، اور $27$ کے لیے $9$)۔",
+   "check": [
+    "sqrt(75) + sqrt(27) == sqrt(25*3) + sqrt(9*3)",
+    "75 == 25*3",
+    "27 == 9*3"
+   ]
+  },
+  {
+   "math": "= \\sqrt{5^2 \\times 3} + \\sqrt{3^2 \\times 3}",
+   "en": "Write the perfect squares $25$ and $9$ in exponential form as $5^2$ and $3^2$.",
+   "ur": "مکمل مربع اعداد $25$ اور $9$ کو قوت نمائی شکل میں $5^2$ اور $3^2$ کے طور پر لکھیں۔",
+   "check": [
+    "sqrt(25*3) + sqrt(9*3) == sqrt(5**2 * 3) + sqrt(3**2 * 3)"
+   ]
+  },
+  {
+   "math": "= 5\\sqrt{3} + 3\\sqrt{3}",
+   "en": "Using the product rule of radicals $\\sqrt{a \\times b} = \\sqrt{a} \\times \\sqrt{b}$, take the square roots of the perfect squares out of the radical signs.",
+   "ur": "جزر کے ضربی اصول $\\sqrt{a \\times b} = \\sqrt{a} \\times \\sqrt{b}$ کا استعمال کرتے ہوئے، مکمل مربع اعداد کا جزر لے کر انہیں جزر کی علامت سے باہر نکالیں۔",
+   "check": [
+    "sqrt(5**2 * 3) == 5*sqrt(3)",
+    "sqrt(3**2 * 3) == 3*sqrt(3)"
+   ]
+  },
+  {
+   "math": "= (5 + 3)\\sqrt{3} = 8\\sqrt{3}",
+   "en": "Since both terms have the same radical part $\\sqrt{3}$ (like surds), take $\\sqrt{3}$ common and add the coefficients $5$ and $3$.",
+   "ur": "چونکہ دونوں رقموں میں جزر والا حصہ $\\sqrt{3}$ ایک جیسا ہے (یکساں مقادیرِ اصم)، اس لیے $\\sqrt{3}$ کو مشترک لیں اور عددی سروں $5$ اور $3$ کو جمع کریں۔",
+   "check": [
+    "5*sqrt(3) + 3*sqrt(3) == (5 + 3)*sqrt(3)",
+    "(5 + 3)*sqrt(3) == 8*sqrt(3)"
+   ]
+  },
+  {
+   "math": "",
+   "en": "Thus, the correct option is (d) $8\\sqrt{3}$.",
+   "ur": "لہٰذا، درست جواب (d) $8\\sqrt{3}$ ہے۔",
+   "check": [
+    "sqrt(75) == 5*sqrt(3)",
+    "sqrt(27) == 3*sqrt(3)",
+    "5*sqrt(3) + 3*sqrt(3) == 8*sqrt(3)",
+    "sqrt(75) + sqrt(27) == 8*sqrt(3)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

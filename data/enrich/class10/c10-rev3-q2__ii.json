@@ -1,0 +1,55 @@
+{
+ "item": "c10-rev3-q2",
+ "label": "ii",
+ "answer_ref": "$\\begin{bmatrix} 1 & 1 \\\\ 3 & 2 \\end{bmatrix}$",
+ "steps": [
+  {
+   "math": "A = \\begin{bmatrix} 4 & 2 \\\\ 7 & 6 \\end{bmatrix}, \\quad B = \\begin{bmatrix} 5 & 5 \\\\ 8 & 8 \\end{bmatrix}",
+   "en": "First, write down the given matrices $A$ and $B$. We need to find the value of $B^t - A^t$.",
+   "ur": "سب سے پہلے، دیے گئے قوالب $A$ اور $B$ لکھیں۔ ہمیں $B^t - A^t$ کی قیمت معلوم کرنی ہے۔"
+  },
+  {
+   "math": "B^t = \\begin{bmatrix} 5 & 5 \\\\ 8 & 8 \\end{bmatrix}^t = \\begin{bmatrix} 5 & 8 \\\\ 5 & 8 \\end{bmatrix}",
+   "en": "Find the transpose of matrix $B$, denoted as $B^t$, by changing its rows into columns.",
+   "ur": "قالب $B$ کی قطاروں کو کالموں میں تبدیل کر کے اس کا ٹرانسپوز ($B^t$) معلوم کریں۔",
+   "check": [
+    "Eq(Matrix([[5, 5], [8, 8]]).T, Matrix([[5, 8], [5, 8]]))"
+   ]
+  },
+  {
+   "math": "A^t = \\begin{bmatrix} 4 & 2 \\\\ 7 & 6 \\end{bmatrix}^t = \\begin{bmatrix} 4 & 7 \\\\ 2 & 6 \\end{bmatrix}",
+   "en": "Similarly, find the transpose of matrix $A$, denoted as $A^t$, by changing its rows into columns.",
+   "ur": "اسی طرح، قالب $A$ کی قطاروں کو کالموں میں تبدیل کر کے اس کا ٹرانسپوز ($A^t$) معلوم کریں۔",
+   "check": [
+    "Eq(Matrix([[4, 2], [7, 6]]).T, Matrix([[4, 7], [2, 6]]))"
+   ]
+  },
+  {
+   "math": "B^t - A^t = \\begin{bmatrix} 5 & 8 \\\\ 5 & 8 \\end{bmatrix} - \\begin{bmatrix} 4 & 7 \\\\ 2 & 6 \\end{bmatrix}",
+   "en": "Substitute the transposed matrices $B^t$ and $A^t$ into the expression $B^t - A^t$.",
+   "ur": "اب $B^t$ اور $A^t$ کی قیمتیں جملے $B^t - A^t$ میں درج کریں۔"
+  },
+  {
+   "math": "B^t - A^t = \\begin{bmatrix} 5 - 4 & 8 - 7 \\\\ 5 - 2 & 8 - 6 \\end{bmatrix}",
+   "en": "Since both matrices have the same order ($2 \\times 2$), subtract the corresponding entries of $A^t$ from $B^t$.",
+   "ur": "چونکہ دونوں قوالب کا درجہ یکساں ($2 \\times 2$) ہے، اس لیے $B^t$ کے ارکان میں سے $A^t$ کے متناظرہ ارکان کو تفریق کریں۔",
+   "check": [
+    "Eq(Matrix([[5, 8], [5, 8]]) - Matrix([[4, 7], [2, 6]]), Matrix([[5 - 4, 8 - 7], [5 - 2, 8 - 6]]))"
+   ]
+  },
+  {
+   "math": "B^t - A^t = \\begin{bmatrix} 1 & 1 \\\\ 3 & 2 \\end{bmatrix}",
+   "en": "Simplify each entry by performing the subtraction to get the final answer.",
+   "ur": "تفریق کا عمل مکمل کر کے حتمی جواب حاصل کریں۔",
+   "check": [
+    "Eq(Matrix([[5 - 4, 8 - 7], [5 - 2, 8 - 6]]), Matrix([[1, 1], [3, 2]]))",
+    "Eq(Matrix([[5, 5], [8, 8]]).T, Matrix([[5, 8], [5, 8]]))",
+    "Eq(Matrix([[4, 2], [7, 6]]).T, Matrix([[4, 7], [2, 6]]))",
+    "Eq(Matrix([[1, 1], [3, 2]]), Matrix([[1, 1], [3, 2]]))"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

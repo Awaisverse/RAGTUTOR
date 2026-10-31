@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex3.6-q1",
+ "label": "ii",
+ "answer_ref": "$x = 3,\\ y = -1$",
+ "math": [
+  "\\begin{bmatrix} 3 & 2 \\\\ 5 & -1 \\end{bmatrix}\\begin{bmatrix} x \\\\ y \\end{bmatrix} = \\begin{bmatrix} 7 \\\\ 16 \\end{bmatrix}",
+  "|A| = \\begin{vmatrix} 3 & 2 \\\\ 5 & -1 \\end{vmatrix} = (3)(-1) - (2)(5) = -3 - 10 = -13",
+  "\\operatorname{Adj}A = \\begin{bmatrix} -1 & -2 \\\\ -5 & 3 \\end{bmatrix}",
+  "A^{-1} = \\frac{1}{|A|}\\operatorname{Adj}A = \\frac{1}{-13}\\begin{bmatrix} -1 & -2 \\\\ -5 & 3 \\end{bmatrix} = \\begin{bmatrix} \\frac{1}{13} & \\frac{2}{13} \\\\ \\frac{5}{13} & - \\frac{3}{13} \\end{bmatrix}",
+  "X = A^{-1}B = \\frac{1}{-13}\\begin{bmatrix} -1 & -2 \\\\ -5 & 3 \\end{bmatrix}\\begin{bmatrix} 7 \\\\ 16 \\end{bmatrix} = \\frac{1}{-13}\\begin{bmatrix} (-1)(7) + (-2)(16) \\\\ (-5)(7) + (3)(16) \\end{bmatrix} = \\frac{1}{-13}\\begin{bmatrix} -39 \\\\ 13 \\end{bmatrix} = \\begin{bmatrix} 3 \\\\ -1 \\end{bmatrix}",
+  "x = 3,\\quad y = -1"
+ ],
+ "why": [
+  {
+   "en": "To use the matrix inversion method, we first separate the coefficients, variables, and constants into matrices $A$, $X$, and $B$. This organizes the system of linear equations into a single matrix equation $AX = B$ that we can solve.",
+   "ur": "میٹرکس انورژن کا طریقہ استعمال کرنے کے لیے، ہم سب سے پہلے عددی سروں، متغیرات اور مستقل مقداروں کو الگ الگ کالبوں $A$، $X$ اور $B$ کی شکل میں لکھتے ہیں۔ اس سے مساواتوں کا یہ نظام ایک واحد کالب مساوات $AX = B$ میں تبدیل ہو جاتا ہے جسے ہم حل کر سکتے ہیں۔"
+  },
+  {
+   "en": "We calculate the determinant $|A|$ first to check if a unique solution exists. Since $|A| = -13$ is not zero, $A$ is a non-singular matrix, which confirms that its inverse $A^{-1}$ exists and we can proceed.",
+   "ur": "ہم سب سے پہلے مقطع $|A|$ معلوم کرتے ہیں تاکہ یہ چیک کیا جا سکے کہ آیا اس کا حل ممکن ہے۔ چونکہ $|A| = -13$ صفر نہیں ہے، اس لیے $A$ ایک غیر نادر کالب ہے، جس سے تصدیق ہوتی ہے کہ اس کا معکوس $A^{-1}$ موجود ہے اور ہم سوال کو آگے بڑھا سکتے ہیں۔"
+  },
+  {
+   "en": "Finding the adjoint of matrix $A$ is a necessary building block for the inverse formula. By swapping the main diagonal entries $3$ and $-1$, and changing the signs of $2$ and $5$, we prepare the matrix needed to calculate $A^{-1}$.",
+   "ur": "کالب $A$ کا ایڈجوائنٹ معلوم کرنا معکوس کے فارمولے کا ایک ضروری حصہ ہے۔ وتر کے ارکان $3$ اور $-1$ کی جگہ بدل کر اور دوسرے دو ارکان $2$ اور $5$ کی علامتیں تبدیل کر کے، ہم $A^{-1}$ نکالنے کے لیے ضروری کالب تیار کر لیتے ہیں۔"
+  },
+  {
+   "en": "We apply the definition of the multiplicative inverse, $A^{-1} = \\frac{1}{|A|}\\operatorname{Adj}A$, using the determinant and adjoint we just found. Having $A^{-1}$ allows us to isolate the variable matrix $X$ in the next step.",
+   "ur": "ہم ضربی معکوس کی تعریف $A^{-1} = \\frac{1}{|A|}\\operatorname{Adj}A$ استعمال کرتے ہوئے اپنے معلوم کردہ مقطع اور ایڈجوائنٹ کی قیمتیں درج کرتے ہیں۔ $A^{-1}$ حاصل کرنے سے ہم اگلے مرحلے میں متغیرات کے کالب $X$ کو الگ کر سکیں گے۔"
+  },
+  {
+   "en": "From $AX = B$, multiplying both sides by $A^{-1}$ gives the working formula $X = A^{-1}B$. Performing this row-by-column multiplication and dividing by $-13$ simplifies the right side into a single column matrix containing our solutions.",
+   "ur": "مساوات $AX = B$ کے دونوں اطراف کو $A^{-1}$ سے ضرب دینے سے ہمیں فارمولا $X = A^{-1}B$ ملتا ہے۔ قطار کو کالم سے ضرب دے کر اور $-13$ پر تقسیم کرنے سے دائیں طرف ایک کالم کالب آ جاتا ہے جس میں ہمارے مطلوبہ جوابات موجود ہیں۔"
+  },
+  {
+   "en": "By the definition of equality of matrices, corresponding entries of equal matrices must be equal. Comparing the variable matrix $X$ with our result directly gives us the final values of $x$ and $y$.",
+   "ur": "مساوی کالبوں کی تعریف کے مطابق، دو برابر کالبوں کے متناظرہ ارکان آپس میں برابر ہوتے ہیں۔ متغیر کالب $X$ کا حاصل شدہ کالب سے موازنہ کرنے پر ہمیں براہ راست $x$ اور $y$ کی آخری قیمتیں مل جاتی ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The solution $x = 3$ and $y = -1$ gives the unique values that satisfy both original equations simultaneously. You can easily verify this by substituting them back into the first equation: $3(3) + 2(-1) = 7$, which is true, confirming our answer is correct.",
+  "ur": "یہ حل $x = 3$ اور $y = -1$ وہ واحد قیمتیں بتاتا ہے جو دی گئی دونوں مساواتوں کو بیک وقت درست ثابت کرتی ہیں۔ آپ ان قیمتوں کو پہلی مساوات میں درج کر کے باآسانی پڑتال کر سکتے ہیں: $3(3) + 2(-1) = 7$، جو کہ بالکل درست ہے اور ہمارے جواب کی تصدیق کرتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

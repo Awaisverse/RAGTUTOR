@@ -1,0 +1,59 @@
+{
+ "item": "ex1.2-q1",
+ "label": "i",
+ "answer_ref": "$4-\\sqrt{3}$",
+ "steps": [
+  {
+   "math": "\\frac{13}{4+\\sqrt{3}}",
+   "en": "We are given the fraction $\\frac{13}{4+\\sqrt{3}}$ and we need to rationalize its denominator.",
+   "ur": "ہمیں کسر $\\frac{13}{4+\\sqrt{3}}$ دی گئی ہے اور ہمیں اس کے نسب نما کو ناطق بنانا ہے۔"
+  },
+  {
+   "math": "= \\frac{13}{4+\\sqrt{3}} \\times \\frac{4-\\sqrt{3}}{4-\\sqrt{3}}",
+   "en": "The conjugate of the denominator $4+\\sqrt{3}$ is $4-\\sqrt{3}$. Multiply both the numerator and the denominator by $4-\\sqrt{3}$.",
+   "ur": "نسب نما $4+\\sqrt{3}$ کا مزدوج (conjugate) $4-\\sqrt{3}$ ہے۔ شمار کنندہ اور نسب نما دونوں کو $4-\\sqrt{3}$ سے ضرب دیں۔",
+   "check": [
+    "13/(4+sqrt(3)) == (13/(4+sqrt(3)))*((4-sqrt(3))/(4-sqrt(3)))"
+   ]
+  },
+  {
+   "math": "= \\frac{13(4-\\sqrt{3})}{(4)^2 - (\\sqrt{3})^2}",
+   "en": "Multiply the numerators together, and apply the algebraic identity $(a+b)(a-b) = a^2 - b^2$ in the denominator.",
+   "ur": "شمار کنندگان کو آپس میں ضرب دیں، اور نسب نما میں الجبری کلیہ $(a+b)(a-b) = a^2 - b^2$ لاگو کریں۔",
+   "check": [
+    "(4+sqrt(3))*(4-sqrt(3)) == 4**2 - sqrt(3)**2"
+   ]
+  },
+  {
+   "math": "= \\frac{13(4-\\sqrt{3})}{16 - 3}",
+   "en": "Simplify the squares in the denominator: $(4)^2 = 16$ and $(\\sqrt{3})^2 = 3$.",
+   "ur": "نسب نما میں مربعات کو حل کریں: $(4)^2 = 16$ اور $(\\sqrt{3})^2 = 3$۔",
+   "check": [
+    "4**2 == 16",
+    "sqrt(3)**2 == 3"
+   ]
+  },
+  {
+   "math": "= \\frac{13(4-\\sqrt{3})}{13}",
+   "en": "Subtract the numbers in the denominator: $16 - 3 = 13$.",
+   "ur": "نسب نما میں اعداد کو تفریق کریں: $16 - 3 = 13$۔",
+   "check": [
+    "16 - 3 == 13"
+   ]
+  },
+  {
+   "math": "= 4-\\sqrt{3}",
+   "en": "Cancel the common factor $13$ from the numerator and the denominator to get the final answer.",
+   "ur": "حتمی جواب حاصل کرنے کے لیے شمار کنندہ اور نسب نما سے مشترک جزو ضربی $13$ کو کاٹ دیں۔",
+   "check": [
+    "13*(4-sqrt(3))/13 == 4-sqrt(3)",
+    "13/(4+sqrt(3)) == 13*(4-sqrt(3))/(4**2 - 3)",
+    "4**2 - sqrt(3)**2 == 13",
+    "13*(4-sqrt(3))/13 == 4 - sqrt(3)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

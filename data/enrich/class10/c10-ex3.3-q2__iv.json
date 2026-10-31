@@ -1,0 +1,75 @@
+{
+ "item": "c10-ex3.3-q2",
+ "label": "iv",
+ "answer_ref": "$\\begin{bmatrix} 12 & 3 \\\\ 4 & 4 \\end{bmatrix}$",
+ "steps": [
+  {
+   "math": "X = \\begin{bmatrix} 1 & -1 \\\\ -2 & 2 \\end{bmatrix}, \\quad Y = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}, \\quad Z = \\begin{bmatrix} 3 & 0 \\\\ 0 & -2 \\end{bmatrix}",
+   "en": "Write down the given matrices $X$, $Y$, and $Z$. We need to find the value of $X + 2Y + 3Z$.",
+   "ur": "دیے گئے قالب $X$، $Y$ اور $Z$ لکھیں۔ ہمیں $X + 2Y + 3Z$ کی قیمت معلوم کرنی ہے۔"
+  },
+  {
+   "math": "X + 2Y + 3Z = \\begin{bmatrix} 1 & -1 \\\\ -2 & 2 \\end{bmatrix} + 2\\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix} + 3\\begin{bmatrix} 3 & 0 \\\\ 0 & -2 \\end{bmatrix}",
+   "en": "Substitute the given matrices $X$, $Y$, and $Z$ into the expression $X + 2Y + 3Z$.",
+   "ur": "دیے گئے قالب $X$، $Y$ اور $Z$ کی قیمتیں جملے $X + 2Y + 3Z$ میں درج کریں۔",
+   "check": [
+    "Eq(Matrix([[1, -1], [-2, 2]]) + 2*Matrix([[1, 2], [3, 4]]) + 3*Matrix([[3, 0], [0, -2]]), Matrix([[12, 3], [4, 4]]))"
+   ]
+  },
+  {
+   "math": "2Y = 2\\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix} = \\begin{bmatrix} 2(1) & 2(2) \\\\ 2(3) & 2(4) \\end{bmatrix} = \\begin{bmatrix} 2 & 4 \\\\ 6 & 8 \\end{bmatrix}",
+   "en": "First, find $2Y$ by multiplying every entry of matrix $Y$ by the scalar $2$.",
+   "ur": "سب سے پہلے، قالب $Y$ کے ہر رکن کو عددی مقدار $2$ سے ضرب دے کر $2Y$ معلوم کریں۔",
+   "check": [
+    "Eq(2*Matrix([[1, 2], [3, 4]]), Matrix([[2, 4], [6, 8]]))"
+   ]
+  },
+  {
+   "math": "3Z = 3\\begin{bmatrix} 3 & 0 \\\\ 0 & -2 \\end{bmatrix} = \\begin{bmatrix} 3(3) & 3(0) \\\\ 3(0) & 3(-2) \\end{bmatrix} = \\begin{bmatrix} 9 & 0 \\\\ 0 & -6 \\end{bmatrix}",
+   "en": "Next, find $3Z$ by multiplying every entry of matrix $Z$ by the scalar $3$.",
+   "ur": "اس کے بعد، قالب $Z$ کے ہر رکن کو عددی مقدار $3$ سے ضرب دے کر $3Z$ معلوم کریں۔",
+   "check": [
+    "Eq(3*Matrix([[3, 0], [0, -2]]), Matrix([[9, 0], [0, -6]]))"
+   ]
+  },
+  {
+   "math": "X + 2Y + 3Z = \\begin{bmatrix} 1 & -1 \\\\ -2 & 2 \\end{bmatrix} + \\begin{bmatrix} 2 & 4 \\\\ 6 & 8 \\end{bmatrix} + \\begin{bmatrix} 9 & 0 \\\\ 0 & -6 \\end{bmatrix}",
+   "en": "Rewrite the expression by substituting the calculated matrices $2Y$ and $3Z$.",
+   "ur": "معلوم کیے گئے قالب $2Y$ اور $3Z$ کی قیمتیں درج کر کے جملے کو دوبارہ لکھیں۔",
+   "check": [
+    "Eq(Matrix([[1, -1], [-2, 2]]) + Matrix([[2, 4], [6, 8]]) + Matrix([[9, 0], [0, -6]]), Matrix([[12, 3], [4, 4]]))"
+   ]
+  },
+  {
+   "math": "= \\begin{bmatrix} 1 + 2 & -1 + 4 \\\\ -2 + 6 & 2 + 8 \\end{bmatrix} + \\begin{bmatrix} 9 & 0 \\\\ 0 & -6 \\end{bmatrix} = \\begin{bmatrix} 3 & 3 \\\\ 4 & 10 \\end{bmatrix} + \\begin{bmatrix} 9 & 0 \\\\ 0 & -6 \\end{bmatrix}",
+   "en": "Since the matrices have the same order ($2 \\times 2$), add the corresponding entries of the first two matrices ($X$ and $2Y$).",
+   "ur": "چونکہ قالبوں کا درجہ یکساں ($2 \\times 2$) ہے، اس لیے پہلے دو قالبوں ($X$ اور $2Y$) کے متناظرہ ارکان کو جمع کریں۔",
+   "check": [
+    "Eq(Matrix([[1, -1], [-2, 2]]) + Matrix([[2, 4], [6, 8]]), Matrix([[3, 3], [4, 10]]))"
+   ]
+  },
+  {
+   "math": "= \\begin{bmatrix} 3 + 9 & 3 + 0 \\\\ 4 + 0 & 10 + (-6) \\end{bmatrix} = \\begin{bmatrix} 3 + 9 & 3 + 0 \\\\ 4 + 0 & 10 - 6 \\end{bmatrix}",
+   "en": "Now, add the corresponding entries of the resulting matrix and the third matrix ($3Z$).",
+   "ur": "اب، حاصل ہونے والے قالب اور تیسرے قالب ($3Z$) کے متناظرہ ارکان کو جمع کریں۔",
+   "check": [
+    "Eq(Matrix([[3, 3], [4, 10]]) + Matrix([[9, 0], [0, -6]]), Matrix([[12, 3], [4, 4]]))"
+   ]
+  },
+  {
+   "math": "X + 2Y + 3Z = \\begin{bmatrix} 12 & 3 \\\\ 4 & 4 \\end{bmatrix}",
+   "en": "Simplify the entries to get the final answer.",
+   "ur": "ارکان کو مختصر کر کے حتمی جواب حاصل کریں۔",
+   "check": [
+    "Eq(Matrix([[3 + 9, 3 + 0], [4 + 0, 10 - 6]]), Matrix([[12, 3], [4, 4]]))",
+    "Eq(Matrix([[2, 4], [6, 8]]), Matrix([[2, 4], [6, 8]]))",
+    "Eq(Matrix([[9, 0], [0, -6]]), Matrix([[9, 0], [0, -6]]))",
+    "Eq(Matrix([[3, 3], [4, 10]]), Matrix([[3, 3], [4, 10]]))",
+    "Eq(Matrix([[12, 3], [4, 4]]), Matrix([[12, 3], [4, 4]]))"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

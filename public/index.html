@@ -69,6 +69,11 @@
   .bubble .ur { direction: rtl; text-align: right; font-family: "Noto Nastaliq Urdu", serif; font-size: 18px; line-height: 2.05; margin: 4px 0 0; }
   .bubble .ur > span { direction: ltr; unicode-bidi: isolate; display: inline-block; }   /* maths inside Urdu text must not be mirrored */
   .bubble .en { margin: 0; }
+  .bubble .why { margin: 6px 0 0; padding: 4px 8px; border-left: 3px solid var(--accent); background: color-mix(in srgb, var(--accent) 7%, transparent); border-radius: 4px; font-size: 14px; }
+  .bubble .why b { color: var(--accent); font-weight: 700; }
+  .bubble .why.ur { border-left: 0; border-right: 3px solid var(--accent); }
+  .meaning { margin-top: 6px; padding: 6px 10px; border-left: 3px solid var(--accent); border-radius: 4px; font-size: 14px; }
+  .meaning.ur { direction: rtl; text-align: right; font-family: "Noto Nastaliq Urdu", serif; line-height: 2; border-left: 0; border-right: 3px solid var(--accent); }
   .answer { color: var(--ok); font-weight: 700; font-size: 18px; margin-top: 8px; padding: 4px 8px; display: inline-block; }
   .answer .katex { font-size: 1.2em; }
   /* attention: the part being discussed pulses and an arrow bobs at it */
@@ -257,7 +262,7 @@
     steps = part.steps.map((s) => ({ ...s, _answer: null }));
     if (steps.length) {
       const last = steps[steps.length - 1];
-      last._answer = part.answer; last._note = part.note; last._key = part.book_key;
+      last._answer = part.answer; last._note = part.note; last._key = part.book_key; last._meaning = part.meaning;
     }
     renderQuestionBlock(item);
     document.querySelectorAll("#parts button").forEach((b) => b.classList.toggle("on", +b.dataset.i === i));
@@ -354,6 +359,17 @@
     b.appendChild(tag);
     if ((lang === "en" || lang === "both") && text.en) { const p = document.createElement("p"); p.className = "en"; renderMixed(p, text.en); b.appendChild(p); }
     if ((lang === "ur" || lang === "both") && text.ur) { const p = document.createElement("p"); p.className = "ur"; p.lang = "ur"; renderMixed(p, text.ur); b.appendChild(p); }
+    // the teacher's interpretation: why this step is done and what its result tells us
+    if (s.why && (lang === "en" || lang === "both") && s.why.en) {
+      const w = document.createElement("p"); w.className = "why en";
+      const t = document.createElement("b"); t.textContent = "Why: "; w.appendChild(t);
+      w.appendChild(renderMixed(document.createElement("span"), s.why.en)); b.appendChild(w);
+    }
+    if (s.why && (lang === "ur" || lang === "both") && s.why.ur) {
+      const w = document.createElement("p"); w.className = "why ur"; w.lang = "ur";
+      const t = document.createElement("b"); t.textContent = "کیوں: "; w.appendChild(t);
+      w.appendChild(renderMixed(document.createElement("span"), s.why.ur)); b.appendChild(w);
+    }
     return b;
   }
 
@@ -378,6 +394,18 @@
       n.className = "answer-note";
       n.textContent = lang === "ur" ? s._note.ur : s._note.en;
       frag.appendChild(n);
+    }
+    if (s._meaning) {                              // what the answer says about the question
+      for (const l of (lang === "both" ? ["en", "ur"] : [lang])) {
+        if (!s._meaning[l]) continue;
+        const m = document.createElement("div");
+        m.className = "meaning " + l;
+        if (l === "ur") m.lang = "ur";
+        const t = document.createElement("b"); t.textContent = l === "ur" ? "جواب کا مطلب: " : "What this answer means: ";
+        m.appendChild(t);
+        m.appendChild(renderMixed(document.createElement("span"), s._meaning[l]));
+        frag.appendChild(m);
+      }
     }
     return frag;
   }

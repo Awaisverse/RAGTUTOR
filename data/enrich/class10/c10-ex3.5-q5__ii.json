@@ -1,0 +1,59 @@
+{
+ "item": "c10-ex3.5-q5",
+ "label": "ii",
+ "answer_ref": "$\\begin{bmatrix} - \\frac{1}{32} & \\frac{1}{8} \\\\ \\frac{7}{64} & \\frac{1}{16} \\end{bmatrix}$",
+ "steps": [
+  {
+   "math": "A = \\begin{bmatrix} -4 & 8 \\\\ 7 & 2 \\end{bmatrix}, \\quad A^{-1} = \\frac{1}{|A|} \\operatorname{Adj} A",
+   "en": "Let the given matrix be $A$. The multiplicative inverse of a matrix $A$ is given by the formula $A^{-1} = \\frac{1}{|A|} \\operatorname{Adj} A$, provided that $|A| \\neq 0$.",
+   "ur": "فرض کریں کہ دیا گیا قالب $A$ ہے۔ کسی قالب $A$ کا ضربی معکوس کلیے $A^{-1} = \\frac{1}{|A|} \\operatorname{Adj} A$ کی مدد سے معلوم کیا جاتا ہے، بشرطیکہ $|A| \\neq 0$ ہو۔",
+   "check": [
+    "Eq(Matrix([[-4, 8], [7, 2]]), Matrix([[-4, 8], [7, 2]]))"
+   ]
+  },
+  {
+   "math": "|A| = \\begin{vmatrix} -4 & 8 \\\\ 7 & 2 \\end{vmatrix} = (-4)(2) - (8)(7) = -8 - 56 = -64",
+   "en": "First, find the determinant of matrix $A$ using the rule $|A| = ad - bc$. Since $|A| = -64 \\neq 0$, the matrix is non-singular and its multiplicative inverse exists.",
+   "ur": "سب سے پہلے، قاعدے $|A| = ad - bc$ کو استعمال کرتے ہوئے قالب $A$ کا مقطع معلوم کریں۔ چونکہ $|A| = -64 \\neq 0$ ہے، اس لیے یہ ایک غیر نادر قالب ہے اور اس کا ضربی معکوس ممکن ہے۔",
+   "check": [
+    "Matrix([[-4, 8], [7, 2]]).det() == -64",
+    "(-4)*(2) - (8)*(7) == -64"
+   ]
+  },
+  {
+   "math": "\\operatorname{Adj} A = \\begin{bmatrix} 2 & -8 \\\\ -7 & -4 \\end{bmatrix}",
+   "en": "Next, find the adjoint of matrix $A$ ($\\operatorname{Adj} A$) by interchanging the entries of the main diagonal ($-4$ and $2$) and changing the signs of the other two entries ($8$ and $7$).",
+   "ur": "اس کے بعد، وُتری ارکان ($-4$ اور $2$) کی جگہ آپس میں بدل کر اور باقی دو ارکان ($8$ اور $7$) کی علامتیں تبدیل کر کے قالب $A$ کا ایڈجائنٹ ($\\operatorname{Adj} A$) معلوم کریں۔",
+   "check": [
+    "Eq(Matrix([[-4, 8], [7, 2]]).adjugate(), Matrix([[2, -8], [-7, -4]]))"
+   ]
+  },
+  {
+   "math": "A^{-1} = \\frac{1}{-64} \\begin{bmatrix} 2 & -8 \\\\ -7 & -4 \\end{bmatrix} = \\begin{bmatrix} \\frac{2}{-64} & \\frac{-8}{-64} \\\\ \\frac{-7}{-64} & \\frac{-4}{-64} \\end{bmatrix}",
+   "en": "Now, substitute the values of $|A|$ and $\\operatorname{Adj} A$ into the inverse formula and divide each entry of the adjoint matrix by $-64$.",
+   "ur": "اب، $|A|$ اور $\\operatorname{Adj} A$ کی قیمتیں معکوس کے کلیے میں درج کریں اور ایڈجائنٹ قالب کے ہر رکن کو $-64$ پر تقسیم کریں۔",
+   "check": [
+    "Eq(R(1, -64) * Matrix([[2, -8], [-7, -4]]), Matrix([[R(2, -64), R(-8, -64)], [R(-7, -64), R(-4, -64)]]))"
+   ]
+  },
+  {
+   "math": "A^{-1} = \\begin{bmatrix} - \\frac{1}{32} & \\frac{1}{8} \\\\ \\frac{7}{64} & \\frac{1}{16} \\end{bmatrix}",
+   "en": "Simplify each fraction to its lowest form to obtain the required multiplicative inverse.",
+   "ur": "مطلوبہ ضربی معکوس حاصل کرنے کے لیے ہر کسر کو اس کی مختصر ترین شکل میں لکھیں۔",
+   "check": [
+    "Eq(Matrix([[-4, 8], [7, 2]]).inv(), Matrix([[-R(1, 32), R(1, 8)], [R(7, 64), R(1, 16)]]))",
+    "R(2, -64) == -R(1, 32)",
+    "R(-8, -64) == R(1, 8)",
+    "R(-7, -64) == R(7, 64)",
+    "R(-4, -64) == R(1, 16)",
+    "Matrix([[-4, 8], [7, 2]]).det() == -64",
+    "Eq(Matrix([[-4, 8], [7, 2]]).adjugate(), Matrix([[2, -8], [-7, -4]]))",
+    "Eq(Matrix([[-4, 8], [7, 2]]).inv(), Matrix([[-1/32, 1/8], [7/64, 1/16]]))",
+    "Eq(Matrix([[1, 0], [0, 1]]), Matrix([[1, 0], [0, 1]]))"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

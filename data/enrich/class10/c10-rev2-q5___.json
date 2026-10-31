@@ -1,0 +1,43 @@
+{
+ "item": "c10-rev2-q5",
+ "label": "",
+ "answer_ref": "$v = \\sqrt{2gh}$",
+ "steps": [
+  {
+   "math": "h = \\frac{v^2}{2g}",
+   "en": "Write down the given formula for the maximum height $h$, where $v$ is the velocity and $g$ is the acceleration due to gravity. We need to make $v$ the subject of this formula.",
+   "ur": "زیادہ سے زیادہ بلندی $h$ کے لیے دیا گیا کلیہ لکھیں، جہاں $v$ رفتار ہے اور $g$ کشش ثقل کی وجہ سے اسراع ہے۔ ہمیں اس کلیے میں $v$ کو موضوع بنانا ہے۔"
+  },
+  {
+   "math": "h \\times 2g = \\frac{v^2}{2g} \\times 2g",
+   "en": "Multiply both sides of the equation by $2g$ to eliminate the denominator on the right-hand side.",
+   "ur": "داہنی طرف سے مخرج کو ختم کرنے کے لیے مساوات کے دونوں اطراف کو $2g$ سے ضرب دیں۔"
+  },
+  {
+   "math": "2gh = v^2",
+   "en": "Simplify the equation by cancelling $2g$ on the right-hand side.",
+   "ur": "داہنی طرف $2g$ کو منسوخ کر کے مساوات کو مختصر کریں۔"
+  },
+  {
+   "math": "v^2 = 2gh",
+   "en": "Rewrite the equation so that the term containing $v$ is on the left-hand side.",
+   "ur": "مساوات کو دوبارہ اس طرح لکھیں کہ $v$ والی رقم بائیں طرف آ جائے۔"
+  },
+  {
+   "math": "\\sqrt{v^2} = \\sqrt{2gh}",
+   "en": "Take the square root on both sides of the equation to isolate $v$.",
+   "ur": "$v$ کو الگ کرنے کے لیے مساوات کے دونوں اطراف کا جذر لیں۔"
+  },
+  {
+   "math": "v = \\sqrt{2gh}",
+   "en": "Since the upward speed $v$ is a positive physical quantity, we only take the positive square root. Thus, $v$ is now the subject of the formula.",
+   "ur": "چونکہ اوپر کی طرف رفتار $v$ ایک مثبت طبعی مقدار ہے، اس لیے ہم صرف مثبت جذر لیتے ہیں۔ اس طرح، اب $v$ کلیے کا موضوع ہے۔",
+   "check": [
+    "(sqrt(2*g*h))**2/(2*g) == h"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

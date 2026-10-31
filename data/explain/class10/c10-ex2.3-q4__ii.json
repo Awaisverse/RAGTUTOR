@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex2.3-q4",
+ "label": "ii",
+ "answer_ref": "$x^2 + x + 1 = 0$",
+ "math": [
+  "x^2 + 2x + 4 = 0 \\implies a = 1,\\quad b = 2,\\quad c = 4",
+  "\\alpha + \\beta = -\\frac{b}{a} = -\\frac{2}{1} = -2,\\quad \\alpha\\beta = \\frac{c}{a} = \\frac{4}{1} = 4",
+  "S = \\frac{\\alpha}{\\beta} + \\frac{\\beta}{\\alpha} = \\frac{\\alpha^2 + \\beta^2}{\\alpha\\beta} = \\frac{(\\alpha + \\beta)^2 - 2\\alpha\\beta}{\\alpha\\beta}",
+  "S = \\frac{(-2)^2 - 2(4)}{4} = \\frac{4 - 8}{4} = \\frac{-4}{4} = -1",
+  "P = \\left(\\frac{\\alpha}{\\beta}\\right)\\left(\\frac{\\beta}{\\alpha}\\right) = \\frac{\\alpha\\beta}{\\alpha\\beta} = 1",
+  "x^2 - Sx + P = 0 \\implies x^2 - (-1)x + 1 = 0 \\implies x^2 + x + 1 = 0"
+ ],
+ "why": [
+  {
+   "en": "To use the root formulas, we first match our equation $x^2 + 2x + 4 = 0$ with the standard quadratic form $ax^2 + bx + c = 0$. This gives us the exact values of $a = 1$, $b = 2$, and $c = 4$ to use in the next step.",
+   "ur": "روٹس کے فارمولے استعمال کرنے کے لیے ہم سب سے پہلے اپنی مساوات $x^2 + 2x + 4 = 0$ کا معیاری دو درجی مساوات $ax^2 + bx + c = 0$ سے موازنہ کرتے ہیں۔ اس سے ہمیں اگلے مرحلے میں استعمال کرنے کے لیے $a = 1$، $b = 2$ اور $c = 4$ کی قیمتیں مل جاتی ہیں۔"
+  },
+  {
+   "en": "Instead of solving the equation for $\\alpha$ and $\\beta$ directly, we use the relationship between roots and coefficients. Knowing that the sum $\\alpha + \\beta = -2$ and the product $\\alpha\\beta = 4$ gives us the building blocks to form our new equation.",
+   "ur": "$\\alpha$ اور $\\beta$ کے لیے مساوات کو براہ راست حل کرنے کے بجائے، ہم روٹس اور عددی سروں کے درمیان تعلق کا فارمولا استعمال کرتے ہیں۔ مجموعہ $\\alpha + \\beta = -2$ اور حاصل ضرب $\\alpha\\beta = 4$ معلوم ہونے سے ہمیں نئی مساوات بنانے کے لیے بنیادی قیمتیں مل جاتی ہیں۔"
+  },
+  {
+   "en": "To build the new quadratic equation, we first need the sum ($S$) of its given roots, $\\frac{\\alpha}{\\beta}$ and $\\frac{\\beta}{\\alpha}$. By taking a common denominator and using the algebraic identity $\\alpha^2 + \\beta^2 = (\\alpha + \\beta)^2 - 2\\alpha\\beta$, we rewrite the expression entirely in terms of $\\alpha + \\beta$ and $\\alpha\\beta$ whose values we already know.",
+   "ur": "نئی دو درجی مساوات بنانے کے لیے، ہمیں پہلے اس کے دیے گئے روٹس $\\frac{\\alpha}{\\beta}$ اور $\\frac{\\beta}{\\alpha}$ کا مجموعہ ($S$) معلوم کرنا ہوگا۔ ذواضعاف اقل (LCM) لے کر اور الجبری کلیہ $\\alpha^2 + \\beta^2 = (\\alpha + \\beta)^2 - 2\\alpha\\beta$ استعمال کر کے، ہم اس جملے کو مکمل طور پر $\\alpha + \\beta$ اور $\\alpha\\beta$ کی شکل میں لکھ لیتے ہیں جن کی قیمتیں ہمیں پہلے سے معلوم ہیں۔"
+  },
+  {
+   "en": "Now we plug our known values of $\\alpha + \\beta = -2$ and $\\alpha\\beta = 4$ into the simplified expression for $S$. This calculation gives us $S = -1$, which is the exact sum of the roots for our new equation.",
+   "ur": "اب ہم $S$ کے سادہ کیے گئے جملے میں اپنی معلوم شدہ قیمتیں $\\alpha + \\beta = -2$ اور $\\alpha\\beta = 4$ درج کرتے ہیں۔ اس حساب سے ہمیں $S = -1$ ملتا ہے، جو ہماری نئی مساوات کے روٹس کا مجموعہ ہے۔"
+  },
+  {
+   "en": "Next, we need the product ($P$) of the new roots to complete the equation setup. Notice how neatly $\\alpha$ and $\\beta$ cancel out when we multiply $\\frac{\\alpha}{\\beta}$ and $\\frac{\\beta}{\\alpha}$, directly giving us the product $P = 1$ without needing any further substitution.",
+   "ur": "اس کے بعد، مساوات کو مکمل کرنے کے لیے ہمیں نئے روٹس کا حاصل ضرب ($P$) چاہیے۔ غور کریں کہ جب ہم $\\frac{\\alpha}{\\beta}$ اور $\\frac{\\beta}{\\alpha}$ کو ضرب دیتے ہیں تو $\\alpha$ اور $\\beta$ کتنی آسانی سے آپس میں کٹ جاتے ہیں، جس سے ہمیں کسی مزید قیمت کو درج کیے بغیر براہ راست حاصل ضرب $P = 1$ مل جاتا ہے۔"
+  },
+  {
+   "en": "Any quadratic equation can be written using its sum ($S$) and product ($P$) of roots with the standard formula $x^2 - Sx + P = 0$. Putting $S = -1$ and $P = 1$ into this formula gives us our final required equation.",
+   "ur": "کسی بھی دو درجی مساوات کو اس کے روٹس کے مجموعہ ($S$) اور حاصل ضرب ($P$) کی مدد سے معیاری فارمولے $x^2 - Sx + P = 0$ کے ذریعے لکھا جا سکتا ہے۔ اس فارمولے میں $S = -1$ اور $P = 1$ درج کرنے سے ہمیں ہماری مطلوبہ مساوات مل جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $x^2 + x + 1 = 0$ is the required quadratic equation whose roots are exactly the ratios $\\frac{\\alpha}{\\beta}$ and $\\frac{\\beta}{\\alpha}$ of the original roots. You can quickly verify this from the equation itself: its sum of roots is $-\\frac{1}{1} = -1$ (matching $S = -1$) and its product of roots is $\\frac{1}{1} = 1$ (matching $P = 1$).",
+  "ur": "آخری جواب $x^2 + x + 1 = 0$ وہ مطلوبہ دو درجی مساوات ہے جس کے روٹس اصل روٹس کی نسبتیں یعنی $\\frac{\\alpha}{\\beta}$ اور $\\frac{\\beta}{\\alpha}$ ہیں۔ آپ خود اس مساوات سے اس کی تصدیق کر سکتے ہیں: اس کے روٹس کا مجموعہ $-\\frac{1}{1} = -1$ ہے (جو $S = -1$ کے برابر ہے) اور روٹس کا حاصل ضرب $\\frac{1}{1} = 1$ ہے (جو $P = 1$ کے برابر ہے)۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

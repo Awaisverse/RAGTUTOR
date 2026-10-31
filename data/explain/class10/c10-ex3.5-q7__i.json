@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex3.5-q7",
+ "label": "i",
+ "answer_ref": "$AB = I$, so they are inverses",
+ "math": [
+  "A = \\begin{bmatrix} 2 & -1 \\\\ -3 & 2 \\end{bmatrix}, \\quad B = \\begin{bmatrix} 2 & 1 \\\\ 3 & 2 \\end{bmatrix}",
+  "AB = \\begin{bmatrix} 2 & -1 \\\\ -3 & 2 \\end{bmatrix}\\begin{bmatrix} 2 & 1 \\\\ 3 & 2 \\end{bmatrix}",
+  "AB = \\begin{bmatrix} (2)(2) + (-1)(3) & (2)(1) + (-1)(2) \\\\ (-3)(2) + (2)(3) & (-3)(1) + (2)(2) \\end{bmatrix}",
+  "AB = \\begin{bmatrix} 4 - 3 & 2 - 2 \\\\ -6 + 6 & -3 + 4 \\end{bmatrix}",
+  "AB = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}",
+  "AB = I"
+ ],
+ "why": [
+  {
+   "en": "First, we name the matrices $A$ and $B$ so we can easily refer to them in our work. By the definition of multiplicative inverse, our goal is to multiply them together and see if the answer is the identity matrix $I = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}$.",
+   "ur": "سب سے پہلے، ہم کالبوں کو $A$ اور $B$ کا نام دیتے ہیں تاکہ حل کے دوران ان کا حوالہ دینا آسان ہو۔ ضربی معکوس کی تعریف کے مطابق، ہمارا مقصد انہیں آپس میں ضرب دینا اور یہ دیکھنا ہے کہ کیا جواب وحدانی کالب $I = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}$ آتا ہے یا نہیں۔"
+  },
+  {
+   "en": "We set up the multiplication $AB$ to test the inverse rule. Writing them side by side helps us clearly see the rows of $A$ and columns of $B$ before we multiply.",
+   "ur": "ہم معکوس کے اصول کو جانچنے کے لیے حاصل ضرب $AB$ لکھتے ہیں۔ انہیں آمنے سامنے لکھنے سے ہمیں ضرب دینے سے پہلے کالب $A$ کی قطاریں اور کالب $B$ کے کالم واضح طور پر نظر آتے ہیں۔"
+  },
+  {
+   "en": "Here we apply the row-by-column rule of matrix multiplication. This pairs up the matching numbers from the rows of $A$ and columns of $B$ so we can find the new entries of the product matrix.",
+   "ur": "یہاں ہم کالبوں کی ضرب کا 'قطار ضرب کالم' والا اصول استعمال کرتے ہیں۔ اس سے کالب $A$ کی قطاروں اور کالب $B$ کے کالموں کے متعلقہ نمبروں کے جوڑے بن جاتے ہیں تاکہ ہم حاصل ضرب کالب کے نئے ارکان معلوم کر سکیں۔"
+  },
+  {
+   "en": "We do the basic multiplication inside each position first, following the order of operations. This simplifies the expressions into simple addition and subtraction.",
+   "ur": "ہم حساب کے اصولوں کے مطابق پہلے ہر جگہ کے اندر موجود سادہ ضرب کا عمل مکمل کرتے ہیں۔ اس سے یہ عبارتیں سادہ جمع اور تفریق میں بدل جاتی ہیں۔"
+  },
+  {
+   "en": "Combining the numbers gives us the final entries of the product $AB$. Notice how the result $\\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}$ has $1$s on the main diagonal and $0$s everywhere else.",
+   "ur": "نمبروں کو جمع اور تفریق کرنے سے ہمیں حاصل ضرب $AB$ کے حتمی ارکان مل جاتے ہیں۔ غور کریں کہ نتیجہ $\\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}$ میں وتر کے ارکان $1$ ہیں اور باقی تمام ارکان $0$ ہیں۔"
+  },
+  {
+   "en": "We recognize $\\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}$ as the $2 \\times 2$ identity matrix $I$. Reaching $AB = I$ completes our proof and confirms the relationship between $A$ and $B$.",
+   "ur": "ہم جانتے ہیں کہ $\\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}$ ایک $2 \\times 2$ کا وحدانی کالب $I$ ہے۔ $AB = I$ تک پہنچنا ہمارے ثبوت کو مکمل کرتا ہے اور $A$ اور $B$ کے درمیان تعلق کی تصدیق کرتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "Because the product of the two matrices is the identity matrix $I$, it proves that the two given matrices are indeed multiplicative inverses of each other, just like $A$ and $A^{-1}$. To be even more certain, you can also check by multiplying them in the reverse order ($BA$) to see that it also gives $I = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}$.",
+  "ur": "چونکہ دونوں کالبوں کا حاصل ضرب وحدانی کالب $I$ ہے، اس سے ثابت ہوتا ہے کہ دیے گئے دونوں کالب واقعی ایک دوسرے کے ضربی معکوس ہیں، بالکل $A$ اور $A^{-1}$ کی طرح۔ مزید تسلی کے لیے، آپ انہیں الٹ ترتیب ($BA$) میں ضرب دے کر بھی چیک کر سکتے ہیں کہ اس سے بھی جواب $I = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}$ ہی آتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

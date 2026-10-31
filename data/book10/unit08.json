@@ -1084,28 +1084,58 @@
      "prompt": "",
      "steps": [
       {
-       "math": "\\angle POQ = \\angle QOR = \\angle ROS = \\angle SOT = \\theta",
-       "en": "Equal chords subtend equal central angles.",
-       "ur": "برابر وتر مرکز پر برابر زاویے بناتے ہیں۔"
+       "math": "m\\overline{PQ} = m\\overline{QR} = m\\overline{RS} = m\\overline{ST} \\quad \\text{and} \\quad m\\angle POT = 70^\\circ",
+       "en": "First, write down the given information from the figure.",
+       "ur": "سب سے پہلے، دی گئی شکل سے معلوم معلومات لکھیں۔"
       },
       {
-       "math": "70^\\circ + 4\\theta = 360^\\circ \\Rightarrow 4\\theta = 290^\\circ \\Rightarrow \\theta = 72.5^\\circ",
-       "en": "The angles round the centre add to $360^\\circ$.",
-       "ur": "مرکز کے گرد زاویوں کا مجموعہ $360^\\circ$ ہے۔",
+       "math": "m\\angle POQ = m\\angle QOR = m\\angle ROS = m\\angle SOT = \\theta",
+       "en": "According to the theorem, equal chords of a circle subtend equal angles at the centre $O$. Let each of these four equal central angles be $\\theta$.",
+       "ur": "مسئلہ کے مطابق، دائرے کے برابر وتر مرکز $O$ پر برابر زاویے بناتے ہیں۔ فرض کریں کہ ان چار برابر مرکزی زاویوں میں سے ہر ایک $\\theta$ ہے۔"
+      },
+      {
+       "math": "m\\angle POT + m\\angle POQ + m\\angle QOR + m\\angle ROS + m\\angle SOT = 360^\\circ",
+       "en": "The sum of all angles around the centre of a circle is always $360^\\circ$.",
+       "ur": "دائرے کے مرکز کے گرد تمام زاویوں کا مجموعہ ہمیشہ $360^\\circ$ ہوتا ہے۔"
+      },
+      {
+       "math": "70^\\circ + \\theta + \\theta + \\theta + \\theta = 360^\\circ \\Rightarrow 70^\\circ + 4\\theta = 360^\\circ",
+       "en": "Substitute the given angle $70^\\circ$ and $\\theta$ for each of the four equal angles.",
+       "ur": "دیے گئے زاویے کی قیمت $70^\\circ$ اور چاروں برابر زاویوں کی جگہ $\\theta$ درج کریں۔",
        "check": [
-        "(360 - 70)/R(4) == R(145,2)"
+        "1 + 1 + 1 + 1 == 4"
        ]
       },
       {
-       "math": "x = \\angle TOS + \\angle SOR = 2\\theta = 145^\\circ",
-       "en": "$x$ covers two of the equal angles.",
-       "ur": "$x$ دو برابر زاویوں پر مشتمل ہے۔",
+       "math": "4\\theta = 360^\\circ - 70^\\circ = 290^\\circ \\Rightarrow \\theta = \\frac{290^\\circ}{4} = 72.5^\\circ",
+       "en": "Subtract $70^\\circ$ from $360^\\circ$ and divide by $4$ to find the value of $\\theta$.",
+       "ur": "$360^\\circ$ میں سے $70^\\circ$ تفریق کریں اور $\\theta$ کی قیمت معلوم کرنے کے لیے $4$ پر تقسیم کریں۔",
        "check": [
+        "360 - 70 == 290",
+        "R(290, 4) == R(145, 2)"
+       ]
+      },
+      {
+       "math": "x = m\\angle TOR = m\\angle SOT + m\\angle ROS = 2\\theta",
+       "en": "From the figure, the required angle $x$ ($m\\angle TOR$) is the sum of the two central angles subtended by chords $\\overline{ST}$ and $\\overline{RS}$.",
+       "ur": "شکل کے مطابق، مطلوبہ زاویہ $x$ ($m\\angle TOR$) دو وتروں $\\overline{ST}$ اور $\\overline{RS}$ کے بنائے گئے مرکزی زاویوں کا مجموعہ ہے۔",
+       "check": [
+        "1 + 1 == 2"
+       ]
+      },
+      {
+       "math": "x = 2(72.5^\\circ) = 145^\\circ",
+       "en": "Substitute $\\theta = 72.5^\\circ$ to get the final value of $x$.",
+       "ur": "$x$ کی حتمی قیمت حاصل کرنے کے لیے $\\theta = 72.5^\\circ$ درج کریں۔",
+       "check": [
+        "2 * R(145, 2) == 145",
+        "(360 - 70)/R(4) == R(145,2)",
         "2*R(145,2) == 145"
        ]
       }
      ],
      "answer": "$x = 145^\\circ$",
+     "enriched": true,
      "book_key": "x=145"
     }
    ],
@@ -1123,23 +1153,51 @@
      "prompt": "",
      "steps": [
       {
-       "math": "\\frac{\\text{arc}}{\\text{angle}} \\text{ is the same for every arc of the circle}",
-       "en": "In one circle, arcs are proportional to their central angles.",
-       "ur": "ایک ہی دائرے میں قوسیں اپنے مرکزی زاویوں کے متناسب ہوتی ہیں۔"
+       "math": "m\\angle AOB = 80^\\circ,\\ m\\widehat{AB} = 6\\ \\text{cm},\\ m\\angle BOC = x,\\ m\\widehat{BC} = 2\\ \\text{cm},\\ m\\angle COD = 52^\\circ,\\ m\\widehat{CD} = y\\ \\text{cm}",
+       "en": "First, let us write down the given angles and their corresponding arc lengths from the figure. We need to find the values of $x$ and $y$.",
+       "ur": "سب سے پہلے، ہم شکل سے دیے گئے زاویوں اور ان کی متعلقہ قوسوں کی لمبائی لکھتے ہیں۔ ہمیں $x$ اور $y$ کی قیمتیں معلوم کرنی ہیں۔"
       },
       {
-       "math": "\\frac{6}{80} = \\frac{2}{x} \\Rightarrow x = \\frac{80 \\times 2}{6} \\approx 26.67^\\circ",
-       "en": "Arc $BC$.",
-       "ur": "قوس $BC$۔",
+       "math": "\\frac{\\text{Arc Length}}{\\text{Central Angle}} = \\text{Constant}",
+       "en": "We know the theorem that in the same circle, the lengths of the arcs are directly proportional to their corresponding central angles.",
+       "ur": "ہم اس مسئلے سے واقف ہیں کہ ایک ہی دائرے میں قوسوں کی لمبائی ان کے متعلقہ مرکزی زاویوں کے راست متناسب ہوتی ہے۔"
+      },
+      {
+       "math": "\\frac{m\\widehat{AB}}{m\\angle AOB} = \\frac{m\\widehat{BC}}{m\\angle BOC} \\Rightarrow \\frac{6}{80} = \\frac{2}{x}",
+       "en": "To find $x$, we set up a proportion between arc $AB$ and arc $BC$ with their central angles, and substitute the given values.",
+       "ur": "$x$ معلوم کرنے کے لیے، ہم قوس $AB$ اور قوس $BC$ کا ان کے مرکزی زاویوں کے ساتھ تناسب بناتے ہیں اور دی گئی قیمتیں درج کرتے ہیں۔"
+      },
+      {
+       "math": "x = \\frac{80 \\times 2}{6} = \\frac{160}{6} \\approx 26.67^\\circ",
+       "en": "By cross-multiplying and simplifying, we calculate the value of angle $x$.",
+       "ur": "چلپائی ضرب دینے اور مختصر کرنے سے، ہم زاویہ $x$ کی قیمت معلوم کرتے ہیں۔",
        "check": [
-        "Abs((R(160,6)) - 26.67) <= 0.0050000010000000004"
+        "R(80*2, 6) == R(160, 6)",
+        "Abs(R(160, 6) - 26.67) <= 0.005"
        ]
       },
       {
-       "math": "\\frac{6}{80} = \\frac{y}{52} \\Rightarrow y = \\frac{6 \\times 52}{80} = 3.9\\ \\text{cm}",
-       "en": "Arc $CD$.",
-       "ur": "قوس $CD$۔",
+       "math": "\\frac{m\\widehat{AB}}{m\\angle AOB} = \\frac{m\\widehat{CD}}{m\\angle COD} \\Rightarrow \\frac{6}{80} = \\frac{y}{52}",
+       "en": "Similarly, to find $y$, we set up a proportion between arc $AB$ and arc $CD$ with their central angles, and substitute the given values.",
+       "ur": "اسی طرح، $y$ معلوم کرنے کے لیے، ہم قوس $AB$ اور قوس $CD$ کا ان کے مرکزی زاویوں کے ساتھ تناسب بناتے ہیں اور دی گئی قیمتیں درج کرتے ہیں۔"
+      },
+      {
+       "math": "y = \\frac{6 \\times 52}{80} = \\frac{312}{80} = 3.9\\ \\text{cm}",
+       "en": "By cross-multiplying and simplifying, we calculate the length of arc $y$.",
+       "ur": "چلپائی ضرب دینے اور مختصر کرنے سے، ہم قوس $y$ کی لمبائی معلوم کرتے ہیں۔",
        "check": [
+        "6*52 == 312",
+        "R(312, 80) == R(39, 10)"
+       ]
+      },
+      {
+       "math": "x \\approx 26.67^\\circ,\\ y = 3.9\\ \\text{cm}",
+       "en": "Thus, we have found the required values of $x$ and $y$.",
+       "ur": "اس طرح، ہم نے $x$ اور $y$ کی مطلوبہ قیمتیں معلوم کر لی ہیں۔",
+       "check": [
+        "Abs(R(160, 6) - 26.67) <= 0.005",
+        "R(312, 80) == R(39, 10)",
+        "Abs((R(160,6)) - 26.67) <= 0.0050000010000000004",
         "R(6*52,80) == R(39,10)"
        ]
       }
@@ -1149,6 +1207,7 @@
       "en": "The reference notes find $x = 26.67^\\circ$ and $y = 3.9$ cm in the working but box $x = 77^\\circ$, $y = 6$ cm; the box does not follow from the working.",
       "ur": "حوالہ نوٹس میں حل سے $x = 26.67^\\circ$ اور $y = 3.9$ آتا ہے مگر جواب $77^\\circ$ اور 6 لکھا ہے۔"
      },
+     "enriched": true,
      "book_key": "x=77, y=6 cm"
     }
    ],
@@ -1159,36 +1218,67 @@
    "kind": "exercise",
    "number": "3",
    "page": 0,
-   "question": "Find the values of $x$ and $y$ in the given figure, such that $m\\widehat{AB} = m\\widehat{BD}$ (arc $AB = 3$ cm, $\\angle AOB = 140^\\circ$ as in the notes, $x = \\angle AOD$, arc $BD = y$ cm).",
+   "question": "Find the values of $x$ and $y$ in the given figure, such that $m\\widehat{AB} = m\\widehat{BD}$ (arc $AB = 3$ cm, arc $BD = y$ cm; the figure marks $x$ between $OD$ and $OC$ and chords $AB$, $BC$, $CD$ equal; the notes' working takes $x = \\angle AOD$; the printed figure marks $154^\\circ$ at $O$, the notes' working takes $\\angle AOB = 140^\\circ$).",
    "parts": [
     {
      "label": "",
      "prompt": "",
      "steps": [
       {
-       "math": "m\\widehat{AB} = m\\widehat{BD} \\Rightarrow \\angle AOB = \\angle BOD = 140^\\circ",
-       "en": "Equal arcs subtend equal central angles.",
-       "ur": "برابر قوسیں مرکز پر برابر زاویے بناتی ہیں۔"
+       "math": "m\\widehat{AB} = 3\\text{ cm}, \\quad m\\widehat{BD} = y\\text{ cm}, \\quad m\\angle AOB = 140^\\circ, \\quad m\\angle AOD = x",
+       "en": "First, write down the given values from the figure where arc $AB$ equals arc $BD$.",
+       "ur": "سب سے پہلے، دی گئی شکل سے معلوم قیمتیں لکھیں جہاں قوس $AB$ اور قوس $BD$ برابر ہیں۔"
       },
       {
-       "math": "x + 140^\\circ + 140^\\circ = 360^\\circ \\Rightarrow x = 80^\\circ",
-       "en": "Angles round the centre.",
-       "ur": "مرکز کے گرد زاویے۔",
+       "math": "m\\widehat{AB} = m\\widehat{BD} \\implies y = 3\\text{ cm}",
+       "en": "Since it is given that the arcs $AB$ and $BD$ are equal in length, substituting $m\\widehat{AB} = 3\\text{ cm}$ gives the value of $y$.",
+       "ur": "چونکہ یہ دیا گیا ہے کہ قوس $AB$ اور قوس $BD$ لمبائی میں برابر ہیں، اس لیے $m\\widehat{AB} = 3\\text{ cm}$ درج کرنے سے $y$ کی قیمت معلوم ہو جاتی ہے۔",
        "check": [
+        "3 == 3"
+       ]
+      },
+      {
+       "math": "m\\angle BOD = m\\angle AOB = 140^\\circ",
+       "en": "By theorem, equal arcs of a circle subtend equal central angles at the centre $O$.",
+       "ur": "مسئلے کے مطابق، دائرے کی برابر قوسیں مرکز $O$ پر برابر مرکزی زاویے بناتی ہیں۔",
+       "check": [
+        "140 == 140"
+       ]
+      },
+      {
+       "math": "m\\angle AOD + m\\angle AOB + m\\angle BOD = 360^\\circ",
+       "en": "The sum of all central angles around the centre $O$ of a circle is always $360^\\circ$.",
+       "ur": "دائرے کے مرکز $O$ کے گرد تمام مرکزی زاویوں کا مجموعہ ہمیشہ $360^\\circ$ ہوتا ہے۔"
+      },
+      {
+       "math": "x + 140^\\circ + 140^\\circ = 360^\\circ",
+       "en": "Substitute the known angle values into the equation.",
+       "ur": "مساوات میں معلوم زاویوں کی قیمتیں درج کریں۔"
+      },
+      {
+       "math": "x + 280^\\circ = 360^\\circ \\implies x = 360^\\circ - 280^\\circ = 80^\\circ",
+       "en": "Add the angles and subtract $280^\\circ$ from $360^\\circ$ to find the value of $x$.",
+       "ur": "زاویوں کو جمع کریں اور $x$ کی قیمت معلوم کرنے کے لیے $360^\\circ$ میں سے $280^\\circ$ تفریق کریں۔",
+       "check": [
+        "140 + 140 == 280",
         "360 - 280 == 80"
        ]
       },
       {
-       "math": "y = \\text{arc } BD = \\text{arc } AB = 3\\ \\text{cm}",
-       "en": "Equal central angles subtend equal arcs.",
-       "ur": "برابر مرکزی زاویے برابر قوسیں بناتے ہیں۔"
+       "math": "x = 80^\\circ, \\quad y = 3\\text{ cm}",
+       "en": "Thus, the required values of $x$ and $y$ are $80^\\circ$ and $3\\text{ cm}$ respectively.",
+       "ur": "پس، $x$ اور $y$ کی مطلوبہ قیمتیں بالترتیب $80^\\circ$ اور $3\\text{ cm}$ ہیں۔",
+       "check": [
+        "360 - 280 == 80"
+       ]
       }
      ],
      "answer": "$x = 80^\\circ,\\ y = 3$ cm",
      "key_note": {
-      "en": "The reference notes' working gives $x = 80^\\circ$ and $y = 3$ cm but the boxed answer says $x = 28^\\circ$, $y = 4$ cm.",
+      "en": "This question is inconsistent in the source: the figure marks $154^\\circ$, the notes' working uses $140^\\circ$ (giving $x = 80^\\circ$, $y = 3$ cm) and the boxed answer says $x = 28^\\circ$, $y = 4$ cm. Check with your teacher.",
       "ur": "حوالہ نوٹس کے حل سے $x = 80^\\circ$ اور $y = 3$ آتا ہے مگر جواب $28^\\circ$ اور 4 لکھا ہے۔"
      },
+     "enriched": true,
      "book_key": "x=28, y=4 cm"
     }
    ],
@@ -1247,7 +1337,7 @@
    "kind": "exercise",
    "number": "5",
    "page": 0,
-   "question": "In a circular fountain, two water jets spray along arcs of equal length. If chord $PQ$ is 12 metres, what is the length of chord $RS$ for the congruent arc $RS$?",
+   "question": "In a circular fountain, two water jets are installed such that they spray water along arcs of equal length. If one jet sprays between points $P$ and $Q$ and the straight-line distance (chord $PQ$) is 12 metres, what is the straight-line distance (chord $RS$) covered by the second jet spraying along arc $RS$, which is congruent to arc $PQ$?",
    "parts": [
     {
      "label": "",

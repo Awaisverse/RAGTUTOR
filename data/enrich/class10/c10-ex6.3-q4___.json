@@ -1,0 +1,66 @@
+{
+ "item": "c10-ex6.3-q4",
+ "label": "",
+ "answer_ref": "$C(7, 9)$",
+ "steps": [
+  {
+   "math": "A(1, 2),\\quad B(6, 3),\\quad D(2, 8),\\quad C(x_C, y_C)",
+   "en": "Write down the given coordinates of vertices $A$, $B$, and $D$, and let the unknown coordinates of vertex $C$ be $(x_C, y_C)$.",
+   "ur": "دیے گئے راسوں $A$، $B$ اور $D$ کے محددیے لکھیں، اور فرض کریں کہ نامعلوم راس $C$ کے محددیے $(x_C, y_C)$ ہیں۔"
+  },
+  {
+   "math": "\\overrightarrow{AB} = \\overrightarrow{DC}",
+   "en": "Since $ABCD$ is a parallelogram, its opposite sides are equal in magnitude and have the same direction, so vector $\\overrightarrow{AB}$ is equal to vector $\\overrightarrow{DC}$.",
+   "ur": "چونکہ $ABCD$ ایک متوازی الاضلاع ہے، اس کے مخالف اضلاع مقدار میں برابر اور ایک ہی سمت میں ہوتے ہیں، اس لیے سمتیہ $\\overrightarrow{AB}$ سمتیہ $\\overrightarrow{DC}$ کے برابر ہے۔"
+  },
+  {
+   "math": "\\overrightarrow{AB} = (6 - 1,\\ 3 - 2) = (5, 1)",
+   "en": "Find the components of vector $\\overrightarrow{AB}$ by subtracting the coordinates of $A$ from the coordinates of $B$.",
+   "ur": "نقطہ $B$ کے محددیوں میں سے نقطہ $A$ کے محددیے تفریق کر کے سمتیہ $\\overrightarrow{AB}$ کے اجزاء معلوم کریں۔",
+   "check": [
+    "6 - 1 == 5",
+    "3 - 2 == 1"
+   ]
+  },
+  {
+   "math": "\\overrightarrow{DC} = (x_C - 2,\\ y_C - 8)",
+   "en": "Similarly, express vector $\\overrightarrow{DC}$ by subtracting the coordinates of $D$ from the coordinates of $C$.",
+   "ur": "اسی طرح، نقطہ $C$ کے محددیوں میں سے نقطہ $D$ کے محددیے تفریق کر کے سمتیہ $\\overrightarrow{DC}$ کو ظاہر کریں۔"
+  },
+  {
+   "math": "(5, 1) = (x_C - 2,\\ y_C - 8)",
+   "en": "Substitute the components of both vectors into the relation $\\overrightarrow{AB} = \\overrightarrow{DC}$.",
+   "ur": "دونوں سمتیوں کے اجزاء کو مساوات $\\overrightarrow{AB} = \\overrightarrow{DC}$ میں درج کریں۔"
+  },
+  {
+   "math": "x_C - 2 = 5 \\Rightarrow x_C = 5 + 2 = 7",
+   "en": "Equate the $x$-components to solve for $x_C$.",
+   "ur": "$x_C$ کی قیمت معلوم کرنے کے لیے $x$-اجزاء کو آپس میں برابر رکھیں۔",
+   "check": [
+    "5 + 2 == 7",
+    "7 - 2 == 5"
+   ]
+  },
+  {
+   "math": "y_C - 8 = 1 \\Rightarrow y_C = 1 + 8 = 9",
+   "en": "Equate the $y$-components to solve for $y_C$.",
+   "ur": "$y_C$ کی قیمت معلوم کرنے کے لیے $y$-اجزاء کو آپس میں برابر رکھیں۔",
+   "check": [
+    "1 + 8 == 9",
+    "9 - 8 == 1"
+   ]
+  },
+  {
+   "math": "C(x_C, y_C) = C(7, 9)",
+   "en": "Thus, the required coordinates of the fourth vertex $C$ are $(7, 9)$.",
+   "ur": "پس، چوتھے راس $C$ کے مطلوبہ محددیے $(7, 9)$ ہیں۔",
+   "check": [
+    "7 - 2 == 6 - 1",
+    "9 - 8 == 3 - 2"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

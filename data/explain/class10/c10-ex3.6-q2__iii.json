@@ -1,0 +1,40 @@
+{
+ "item": "c10-ex3.6-q2",
+ "label": "iii",
+ "answer_ref": "$x = -3,\\ y = 0$",
+ "math": [
+  "\\begin{bmatrix} 2 & -5 \\\\ 4 & -3 \\end{bmatrix}\\begin{bmatrix} x \\\\ y \\end{bmatrix} = \\begin{bmatrix} -6 \\\\ -12 \\end{bmatrix}",
+  "|A| = \\begin{vmatrix} 2 & -5 \\\\ 4 & -3 \\end{vmatrix} = (2)(-3) - (-5)(4) = 14",
+  "|A_x| = \\begin{vmatrix} -6 & -5 \\\\ -12 & -3 \\end{vmatrix} = (-6)(-3) - (-5)(-12) = -42",
+  "|A_y| = \\begin{vmatrix} 2 & -6 \\\\ 4 & -12 \\end{vmatrix} = (2)(-12) - (-6)(4) = 0",
+  "x = \\frac{|A_x|}{|A|} = \\frac{-42}{14} = -3,\\quad y = \\frac{|A_y|}{|A|} = \\frac{0}{14} = 0"
+ ],
+ "why": [
+  {
+   "en": "To apply Cramer's rule, we first separate the coefficients of $x$ and $y$, the variables, and the constants on the right side into distinct matrices. This gives us our main coefficient matrix $A$ and the constant matrix $B$, which we will use to build our determinants.",
+   "ur": "کمر کے اصول (Cramer's rule) کو استعمال کرنے کے لیے، ہم سب سے پہلے $x$ اور $y$ کے عددی سروں، متغیرات، اور برابر کے دوسری طرف موجود مستقل نمبروں کو الگ الگ کالبوں (matrices) میں لکھتے ہیں۔ اس سے ہمیں بنیادی کالب $A$ اور مستقل کالب $B$ مل جاتے ہیں، جن کی مدد سے ہم اپنے مقطعات (determinants) بنائیں گے۔"
+  },
+  {
+   "en": "We always calculate the determinant of the coefficient matrix, $|A|$, first to see if a solution is even possible. Because $|A| = 14$ is not zero, the matrix is non-singular, confirming that a unique solution exists and giving us the denominator for our final formulas.",
+   "ur": "ہم ہمیشہ سب سے پہلے عددی سروں کے کالب کا مقطع $|A|$ معلوم کرتے ہیں تاکہ یہ دیکھا جا سکے کہ کیا اس کا حل ممکن بھی ہے یا نہیں۔ چونکہ $|A| = 14$ صفر نہیں ہے، اس لیے یہ ایک غیر نادر کالب ہے، جس سے یہ ثابت ہوتا ہے کہ ایک منفرد حل موجود ہے اور ہمیں اپنے آخری فارمولوں کے لیے مخرج (denominator) بھی مل جاتا ہے۔"
+  },
+  {
+   "en": "According to Cramer's rule, to prepare for finding $x$, we form a new matrix $A_x$ by putting the constants $-6$ and $-12$ in place of the $x$-coefficients. Its determinant gives us $-42$, which is the numerator needed to calculate $x$.",
+   "ur": "کمر کے اصول کے مطابق، $x$ کی قیمت معلوم کرنے کی تیاری کے لیے ہم $x$ کے عددی سروں کی جگہ مستقل نمبر $-6$ اور $-12$ رکھ کر ایک نیا کالب $A_x$ بناتے ہیں۔ اس کا مقطع ہمیں $-42$ دیتا ہے، جو $x$ معلوم کرنے کے فارمولے کا شمار کنندہ (numerator) ہے۔"
+  },
+  {
+   "en": "Similarly, to prepare for finding $y$, we create the matrix $A_y$ by putting the constants $-6$ and $-12$ in the second column where the $y$-coefficients were. Evaluating this determinant gives $0$, which will serve as the numerator for $y$.",
+   "ur": "اسی طرح، $y$ کی قیمت معلوم کرنے کے لیے ہم دوسرے کالم میں $y$ کے عددی سروں کی جگہ مستقل نمبر $-6$ اور $-12$ رکھ کر کالب $A_y$ بناتے ہیں۔ اس مقطع کو حل کرنے سے ہمیں $0$ ملتا ہے، جو $y$ معلوم کرنے کے لیے شمار کنندہ کا کام کرے گا۔"
+  },
+  {
+   "en": "Finally, we apply the Cramer's rule formulas by dividing $|A_x|$ and $|A_y|$ by our main determinant $|A| = 14$. This simple division directly gives us the exact values of our unknowns, $x = -3$ and $y = 0$.",
+   "ur": "آخر میں، ہم کمر کے اصول کے فارمولے لگاتے ہوئے $|A_x|$ اور $|A_y|$ کو اپنے بنیادی مقطع $|A| = 14$ پر تقسیم کرتے ہیں۔ یہ سادہ سی تقسیم ہمیں براہِ راست ہمارے نامعلوم متغیرات کی درست قیمتیں $x = -3$ اور $y = 0$ دے دیتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The values $x = -3$ and $y = 0$ form the unique solution that satisfies both original linear equations at the same time. You can easily check this by putting $x = -3$ and $y = 0$ into the first equation: $2(-3) - 5(0) = -6$, which confirms our answer is completely correct.",
+  "ur": "قیمتیں $x = -3$ اور $y = 0$ وہ واحد حل ہیں جو دی گئی دونوں یک درجی مساواتوں کو بیک وقت درست ثابت کرتی ہیں۔ آپ پہلی مساوات میں $x = -3$ اور $y = 0$ درج کر کے باآسانی اس کی پڑتال کر سکتے ہیں: $2(-3) - 5(0) = -6$، جس سے تصدیق ہوتی ہے کہ ہمارا جواب بالکل درست ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

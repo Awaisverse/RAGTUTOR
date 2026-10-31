@@ -1,0 +1,70 @@
+{
+ "item": "ex1.2-q4",
+ "label": "",
+ "answer_ref": "$p=-25,\\ q=18$",
+ "steps": [
+  {
+   "math": "\\frac{8-3\\sqrt{2}}{4+3\\sqrt{2}} = p+q\\sqrt{2}",
+   "en": "Write down the given equation. To find the rational numbers $p$ and $q$, we first need to rationalize the denominator of the left-hand side.",
+   "ur": "دی گئی مساوات لکھیں۔ ناطق اعداد $p$ اور $q$ معلوم کرنے کے لیے، ہمیں پہلے بائیں طرف کے مخرج کو ناطق بنانا ہوگا۔"
+  },
+  {
+   "math": "\\text{L.H.S} = \\frac{8-3\\sqrt{2}}{4+3\\sqrt{2}} \\times \\frac{4-3\\sqrt{2}}{4-3\\sqrt{2}}",
+   "en": "The conjugate of the denominator $4+3\\sqrt{2}$ is $4-3\\sqrt{2}$. Multiply both the numerator and the denominator by this conjugate.",
+   "ur": "مخرج $4+3\\sqrt{2}$ کا مزدوج (conjugate) $4-3\\sqrt{2}$ ہے۔ شمار کنندہ اور مخرج دونوں کو اس مزدوج سے ضرب دیں۔",
+   "check": [
+    "(8-3*sqrt(2))/(4+3*sqrt(2)) == (8-3*sqrt(2))*(4-3*sqrt(2))/((4+3*sqrt(2))*(4-3*sqrt(2)))"
+   ]
+  },
+  {
+   "math": "= \\frac{(8-3\\sqrt{2})(4-3\\sqrt{2})}{(4)^2-(3\\sqrt{2})^2}",
+   "en": "Apply the algebraic identity $(a+b)(a-b) = a^2-b^2$ to the denominator.",
+   "ur": "مخرج پر الجبری کلیہ $(a+b)(a-b) = a^2-b^2$ لاگو کریں۔",
+   "check": [
+    "(8-3*sqrt(2))*(4-3*sqrt(2))/((4+3*sqrt(2))*(4-3*sqrt(2))) == (8-3*sqrt(2))*(4-3*sqrt(2))/(4**2 - (3*sqrt(2))**2)"
+   ]
+  },
+  {
+   "math": "(8-3\\sqrt{2})(4-3\\sqrt{2}) = 8(4) - 8(3\\sqrt{2}) - 3\\sqrt{2}(4) + (-3\\sqrt{2})(-3\\sqrt{2}) = 32 - 24\\sqrt{2} - 12\\sqrt{2} + 9(2) = 32 - 36\\sqrt{2} + 18 = 50 - 36\\sqrt{2}",
+   "en": "Expand and simplify the numerator by multiplying each term.",
+   "ur": "ہر رکن کو ضرب دے کر شمار کنندہ کو پھیلائیں اور سادہ کریں۔",
+   "check": [
+    "(8-3*sqrt(2))*(4-3*sqrt(2)) == 32 - 24*sqrt(2) - 12*sqrt(2) + 9*2",
+    "32 - 24*sqrt(2) - 12*sqrt(2) + 9*2 == 50 - 36*sqrt(2)"
+   ]
+  },
+  {
+   "math": "(4)^2 - (3\\sqrt{2})^2 = 16 - 9(2) = 16 - 18 = -2",
+   "en": "Simplify the denominator by evaluating the squares.",
+   "ur": "مربعوں کی قیمت نکال کر مخرج کو سادہ کریں۔",
+   "check": [
+    "4**2 - (3*sqrt(2))**2 == 16 - 9*2",
+    "16 - 9*2 == -2"
+   ]
+  },
+  {
+   "math": "\\text{L.H.S} = \\frac{50-36\\sqrt{2}}{-2} = \\frac{50}{-2} - \\frac{36\\sqrt{2}}{-2} = -25 + 18\\sqrt{2}",
+   "en": "Substitute the simplified numerator and denominator back into the fraction, then divide each term by $-2$.",
+   "ur": "سادہ کیے گئے شمار کنندہ اور مخرج کو واپس کسر میں درج کریں، پھر ہر رکن کو $-2$ پر تقسیم کریں۔",
+   "check": [
+    "(50-36*sqrt(2))/(-2) == 50/(-2) - 36*sqrt(2)/(-2)",
+    "50/(-2) - 36*sqrt(2)/(-2) == -25 + 18*sqrt(2)"
+   ]
+  },
+  {
+   "math": "-25 + 18\\sqrt{2} = p + q\\sqrt{2} \\implies p = -25, \\quad q = 18",
+   "en": "Equate the simplified left-hand side to the right-hand side $p+q\\sqrt{2}$. Comparing the rational parts and the coefficients of $\\sqrt{2}$ gives the values of $p$ and $q$.",
+   "ur": "سادہ کی گئی بائیں طرف کو دائیں طرف $p+q\\sqrt{2}$ کے برابر رکھیں۔ ناطق حصوں اور $\\sqrt{2}$ کے عددی سروں کا موازنہ کرنے سے $p$ اور $q$ کی قیمتیں حاصل ہوتی ہیں۔",
+   "check": [
+    "-25 + 18*sqrt(2) == (-25) + 18*sqrt(2)",
+    "(8-3*sqrt(2))/(4+3*sqrt(2)) == (8-3*sqrt(2))*(4-3*sqrt(2))/(4**2 - (3*sqrt(2))**2)",
+    "(8-3*sqrt(2))*(4-3*sqrt(2)) == 50 - 36*sqrt(2)",
+    "4**2 - (3*sqrt(2))**2 == -2",
+    "(50-36*sqrt(2))/(-2) == -25 + 18*sqrt(2)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

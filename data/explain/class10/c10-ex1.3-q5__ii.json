@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex1.3-q5",
+ "label": "ii",
+ "answer_ref": "$-1$",
+ "math": [
+  "z_1 = 2 + 3i, \\quad z_2 = -1 + i",
+  "z_1z_2 = (2 + 3i)(-1 + i)",
+  "z_1z_2 = 2(-1 + i) + 3i(-1 + i) = -2 + 2i - 3i + 3i^2",
+  "z_1z_2 = -2 - i + 3(-1)",
+  "z_1z_2 = -2 - 3 - i = -5 - i",
+  "\\operatorname{Im}(z_1z_2) = -1"
+ ],
+ "why": [
+  {
+   "en": "We begin by clearly stating our given complex numbers, $z_1 = 2 + 3i$ and $z_2 = -1 + i$. Before we can extract the imaginary part $\\operatorname{Im}(z_1z_2)$, we must first calculate the product $z_1z_2$ inside the brackets.",
+   "ur": "ہم سب سے پہلے دیے گئے کمپلیکس نمبرز $z_1 = 2 + 3i$ اور $z_2 = -1 + i$ کو واضح طور پر لکھتے ہیں۔ خیالی حصہ (imaginary part) یعنی $\\operatorname{Im}(z_1z_2)$ معلوم کرنے سے پہلے ہمیں بریکٹ کے اندر موجود حاصلِ ضرب $z_1z_2$ کو حل کرنا ہو گا۔"
+  },
+  {
+   "en": "Here we replace $z_1$ and $z_2$ with their actual values using brackets. Putting brackets around $2 + 3i$ and $-1 + i$ is very important so that we multiply the whole complex numbers together, not just single terms.",
+   "ur": "یہاں ہم $z_1$ اور $z_2$ کی اصل قیمتیں بریکٹ لگا کر درج کرتے ہیں۔ $2 + 3i$ اور $-1 + i$ کے گرد بریکٹ لگانا بہت ضروری ہے تاکہ پورے کمپلیکس نمبرز آپس میں ضرب کھائیں، نہ کہ صرف اکیلی رقمیں۔"
+  },
+  {
+   "en": "Using the distributive law of multiplication, we expand the brackets just like we do in ordinary algebra. This gives us four separate terms, including a term with $i^2$ which we will simplify next.",
+   "ur": "ضرب کے تقسیمی قانون (distributive law) کو استعمال کرتے ہوئے، ہم عام الجبرا کی طرح بریکٹوں کو کھولتے ہیں۔ اس سے ہمیں چار الگ الگ رقمیں ملتی ہیں، جن میں $i^2$ والی رقم بھی شامل ہے جسے ہم اگلے مرحلے میں مختصر کریں گے۔"
+  },
+  {
+   "en": "We use the fundamental definition of the imaginary unit, $i^2 = -1$, to turn the $3i^2$ term into a real number $3(-1)$, while also combining the like $i$ terms ($2i - 3i = -i$). This step removes higher powers of $i$ and brings us closer to the standard form.",
+   "ur": "ہم ایوٹا کی بنیادی تعریف $i^2 = -1$ کو استعمال کرتے ہوئے $3i^2$ کو ایک حقیقی عدد $3(-1)$ میں تبدیل کرتے ہیں، اور ساتھ ہی ایک جیسی $i$ والی رقموں کو ملا کر مختصر کرتے ہیں ($2i - 3i = -i$)۔ یہ عمل $i$ کی بڑی طاقت کو ختم کر دیتا ہے اور ہمیں معیاری شکل کے قریب لے آتا ہے۔"
+  },
+  {
+   "en": "Now we add the two real numbers $-2$ and $-3$ together to get $-5$. This puts our product $z_1z_2$ into the neat standard form of a complex number, $a + bi$, where the real and imaginary parts are clearly separated as $-5 - i$.",
+   "ur": "اب ہم دو حقیقی اعداد $-2$ اور $-3$ کو آپس میں ملا کر $-5$ حاصل کرتے ہیں۔ اس طرح ہمارا حاصلِ ضرب $z_1z_2$ کمپلیکس نمبر کی معیاری شکل $a + bi$ یعنی $-5 - i$ میں آ جاتا ہے، جہاں حقیقی اور خیالی حصے بالکل الگ اور واضح ہیں۔"
+  },
+  {
+   "en": "By the definition of a complex number $z = a + bi$, the imaginary part $\\operatorname{Im}(z)$ is simply the real number $b$ multiplied with $i$ (without writing the $i$ itself). Looking at $-5 - i$ as $-5 + (-1)i$, we can directly pick out $-1$ as our required answer.",
+   "ur": "کمپلیکس نمبر $z = a + bi$ کی تعریف کے مطابق، خیالی حصہ $\\operatorname{Im}(z)$ دراصل $i$ کے ساتھ ضرب کھانے والا عددی سر $b$ ہوتا ہے (اس میں $i$ کو ساتھ نہیں لکھتے)۔ $-5 - i$ کو دیکھتے ہوئے ہم براہِ راست بتا سکتے ہیں کہ $i$ کا عددی سر $-1$ ہے، جو کہ ہمارا مطلوبہ جواب ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $-1$ tells us that when the complex numbers $z_1 = 2 + 3i$ and $z_2 = -1 + i$ are multiplied together, the imaginary part of the resulting complex number $-5 - i$ is $-1$. Remember, a common mistake is to write $-i$, so always check that your imaginary part is a pure real number without $i$. You can also quickly check the $-1$ by mentally doing the 'outer' and 'inner' products that create $i$: $(2)(1) + (3)(-1) = 2 - 3 = -1$.",
+  "ur": "آخری جواب $-1$ ہمیں بتاتا ہے کہ جب کمپلیکس نمبرز $z_1 = 2 + 3i$ اور $z_2 = -1 + i$ کو آپس میں ضرب دی جائے، تو حاصل ہونے والے کمپلیکس نمبر $-5 - i$ کا خیالی حصہ (imaginary part) $-1$ ہے۔ یاد رکھیں کہ طلباء اکثر غلطی سے جواب میں $-i$ لکھ دیتے ہیں، اس لیے ہمیشہ تسلی کر لیں کہ خیالی حصے کے جواب میں $i$ شامل نہ ہو۔ آپ اس جواب $-1$ کی فوری پڑتال ذہن میں صرف ان رقموں کو ضرب دے کر بھی کر سکتے ہیں جو $i$ بناتی ہیں: $(2)(1) + (3)(-1) = 2 - 3 = -1$۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

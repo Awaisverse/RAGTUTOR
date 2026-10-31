@@ -89,7 +89,7 @@ BL = [("i", r"\tan(180^\circ - \theta) = -\tan\theta", "tan(pi - t) == -tan(t)",
       ("vi", r"\sec(90^\circ - \theta) = +\operatorname{cosec}\theta", "sec(pi/2 - t) == csc(t)", r"+\operatorname{cosec}\theta", "I: all positive; $90^\\circ$ changes sec to cosec")]
 ex("ex7.1", 2, r"Fill in the blanks: (i) $\tan(180^\circ-\theta)=\ldots\tan\theta$ (ii) $\sin(180^\circ-\theta)=\ldots\sin\theta$ (iii) $\tan(90^\circ+\theta)=\ldots\cot\theta$ "
    r"(iv) $\cos(90^\circ+\theta)=\ldots\sin\theta$ (v) $\operatorname{cosec}(180^\circ-\theta)=\ldots\operatorname{cosec}\theta$ (vi) $\sec(90^\circ-\theta)=\ldots\operatorname{cosec}\theta$", [
-       P(l, [S(t, f"For acute $\\theta$ the angle is in quadrant {why}.", "زاویے کا ربع اور ریشو کی تبدیلی دیکھیں۔", chk)], f"${a}$", prompt=f"${t.split('=')[0]}$")
+       P(l, [S(t, f"For acute $\\theta$ the angle is in quadrant {why}.", "زاویے کا ربع اور ریشو کی تبدیلی دیکھیں۔", chk)], f"${a}$", prompt=f"${t.split('=')[0]}= \\ldots {a.lstrip('+-')}$")   # the blank as printed
        for l, t, chk, a, why in BL], "7.1")
 
 EX = [("i", "sin", 150, r"\sin(1\times 90^\circ + 60^\circ) = \cos 60^\circ", R(1, 2)),
@@ -333,13 +333,13 @@ ex("ex7.4", 4, "Abdul Hadi walks 100 m North and then 300 m East. (i) How far is
                near("atan(3)*180/pi", "71.57", 2)),
              S(r"\text{Bearing back} = 180^\circ + 71.57^\circ = 251.57^\circ \approx 252^\circ", "To go back he walks S $71.57^\\circ$ W.", "واپسی کے لیے جنوب سے $71.57^\\circ$ مغرب۔",
                near("180 + atan(3)*180/pi", "252", 0))], r"$252^\circ$ (S $71.57^\circ$ W)", prompt="bearing back to the start")], "7.4")
-single("ex7.4", 5, "Three ships $L$, $M$, $N$ are in the position shown in the diagram ($L$ is due West of $M$, $LM = 12$ km). Ship $M$ is North East of ship $N$. Find the bearing of $L$ from $M$.", [
+single("ex7.4", 5, "Three ships $L$, $M$, $N$ are in the position shown in the diagram (from the diagram: $L$ is due West of $M$, $LM = 12$ km, $LN = 14$ km, $MN = 15$ km). Ship $M$ is North East of ship $N$. Find the bearing of $L$ from $M$.", [
     (r"\text{Bearing of } L \text{ from } M = 270^\circ", "$L$ is due West of $M$ (the line $LM$ is horizontal in the diagram).", "$L$، $M$ کے بالکل مغرب میں ہے۔", ["360 - 90 == 270"])],
     r"$270^\circ$", exercise="7.4")
 single("ex7.4", 6, "A ship sails 20 km on a bearing of $120^\\circ$. How far to the South has the ship moved from its original position?", [
     (r"\text{southward} = 20\cos(180^\circ - 120^\circ) = 20\cos 60^\circ = 20 \times \frac{1}{2} = 10\ \text{km}", "Angle between the path and South is $60^\\circ$.",
      "راستے اور جنوب کے درمیان زاویہ $60^\\circ$ ہے۔", [f"20*cos({dg(60)}) == 10"])], "$10$ km", exercise="7.4")
-single("ex7.4", 7, "Fatima walked South for 5.5 km and then turned West for 1.3 km. Calculate her bearing from her starting point.", [
+single("ex7.4", 7, "Fatima walked South for 5.5 km and then turned West for 1.3 km. Calculate Huria's [i.e. Fatima's, as printed] bearing from her starting point.", [
     (r"\tan\alpha = \frac{1.3}{5.5} \approx 0.236 \Rightarrow \alpha \approx 13.30^\circ", "Angle west of South.", "جنوب سے مغرب کی طرف زاویہ۔", [near("atan(R(13,55))*180/pi", "13.30", 2)]),
     (r"\text{Bearing} = 180^\circ + 13.30^\circ \approx 193.3^\circ", "South is $180^\\circ$; add the angle towards West.", "جنوب $180^\\circ$ ہے؛ مغرب کی طرف کا زاویہ جمع کریں۔",
      [near("180 + atan(R(13,55))*180/pi", "193.3", 1)])], r"$193.3^\circ$", exercise="7.4",

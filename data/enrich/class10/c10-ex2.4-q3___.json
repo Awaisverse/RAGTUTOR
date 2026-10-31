@@ -1,0 +1,59 @@
+{
+ "item": "c10-ex2.4-q3",
+ "label": "",
+ "answer_ref": "$p = \\pm 8$",
+ "steps": [
+  {
+   "math": "16x^2 + 7px + 49 = 0",
+   "en": "Write down the given quadratic equation and compare it with the standard form $ax^2 + bx + c = 0$.",
+   "ur": "دی گئی دو درجی مساوات لکھیں اور اس کا معیاری شکل $ax^2 + bx + c = 0$ سے موازنہ کریں۔"
+  },
+  {
+   "math": "a = 16, \\quad b = 7p, \\quad c = 49",
+   "en": "Identify the coefficients $a$, $b$, and the constant term $c$ from the equation.",
+   "ur": "مساوات سے عددی سر $a$، $b$ اور مستقل مقدار $c$ کی شناخت کریں۔"
+  },
+  {
+   "math": "\\text{Discriminant } (D) = b^2 - 4ac = 0",
+   "en": "Since the roots of the given quadratic equation are equal, the discriminant must be equal to zero.",
+   "ur": "چونکہ دی گئی دو درجی مساوات کے روٹس (جذر) برابر ہیں، اس لیے فرق کنندہ صفر کے برابر ہونا چاہیے۔"
+  },
+  {
+   "math": "(7p)^2 - 4(16)(49) = 0",
+   "en": "Substitute the values of $a = 16$, $b = 7p$, and $c = 49$ into the discriminant formula.",
+   "ur": "فرق کنندہ کے کلیے میں $a = 16$، $b = 7p$ اور $c = 49$ کی قیمتیں درج کریں۔"
+  },
+  {
+   "math": "49p^2 - 3136 = 0 \\Rightarrow 49p^2 = 3136",
+   "en": "Simplify the square and the product, then move the constant term to the right-hand side.",
+   "ur": "مربع اور حاصل ضرب کو مختصر کریں، پھر مستقل مقدار کو دائیں جانب لے جائیں۔",
+   "check": [
+    "7**2 == 49",
+    "4*16*49 == 3136"
+   ]
+  },
+  {
+   "math": "p^2 = \\frac{3136}{49} \\Rightarrow p^2 = 64",
+   "en": "Divide both sides of the equation by $49$ to isolate $p^2$.",
+   "ur": "$p^2$ کو الگ کرنے کے لیے مساوات کے دونوں اطراف کو $49$ سے تقسیم کریں۔",
+   "check": [
+    "3136/49 == 64"
+   ]
+  },
+  {
+   "math": "p = \\pm\\sqrt{64} \\Rightarrow p = \\pm 8",
+   "en": "Take the square root on both sides to find the required values of $p$.",
+   "ur": "$p$ کی مطلوبہ قیمتیں معلوم کرنے کے لیے دونوں اطراف کا جزر المربع لیں۔",
+   "check": [
+    "sqrt(64) == 8",
+    "(7*8)**2 - 4*16*49 == 0",
+    "(7*(-8))**2 - 4*16*49 == 0",
+    "4*16*49 == 3136",
+    "3136/49 == 64"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

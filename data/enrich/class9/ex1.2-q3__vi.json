@@ -1,0 +1,70 @@
+{
+ "item": "ex1.2-q3",
+ "label": "vi",
+ "answer_ref": "$32$",
+ "steps": [
+  {
+   "math": "x = 3 + \\sqrt{8}",
+   "en": "We are given the value of $x$ and need to find the value of $\\left(x - \\frac{1}{x}\\right)^2$.",
+   "ur": "ہمیں $x$ کی قیمت دی گئی ہے اور ہمیں $\\left(x - \\frac{1}{x}\\right)^2$ کی قیمت معلوم کرنی ہے۔"
+  },
+  {
+   "math": "\\frac{1}{x} = \\frac{1}{3 + \\sqrt{8}} \\times \\frac{3 - \\sqrt{8}}{3 - \\sqrt{8}}",
+   "en": "First, find the reciprocal $\\frac{1}{x}$ and rationalize the denominator by multiplying and dividing by the conjugate $3 - \\sqrt{8}$.",
+   "ur": "سب سے پہلے، معکوس $\\frac{1}{x}$ معلوم کریں اور مزدوج $3 - \\sqrt{8}$ سے ضرب اور تقسیم کر کے مخرج کو ناطق بنائیں۔",
+   "check": [
+    "1/(3 + sqrt(8)) == (3 - sqrt(8))/((3 + sqrt(8))*(3 - sqrt(8)))"
+   ]
+  },
+  {
+   "math": "\\frac{1}{x} = \\frac{3 - \\sqrt{8}}{(3)^2 - (\\sqrt{8})^2} = \\frac{3 - \\sqrt{8}}{9 - 8} = 3 - \\sqrt{8}",
+   "en": "Apply the algebraic identity $(a+b)(a-b) = a^2 - b^2$ in the denominator and simplify.",
+   "ur": "مخرج میں الجبری کلیہ $(a+b)(a-b) = a^2 - b^2$ استعمال کریں اور مختصر کریں۔",
+   "check": [
+    "3**2 - sqrt(8)**2 == 9 - 8",
+    "(3 - sqrt(8))/(9 - 8) == 3 - sqrt(8)",
+    "1/(3 + sqrt(8)) == 3 - sqrt(8)"
+   ]
+  },
+  {
+   "math": "x - \\frac{1}{x} = (3 + \\sqrt{8}) - (3 - \\sqrt{8})",
+   "en": "Now, substitute the values of $x$ and $\\frac{1}{x}$ to find the difference $x - \\frac{1}{x}$.",
+   "ur": "اب، فرق $x - \\frac{1}{x}$ معلوم کرنے کے لیے $x$ اور $\\frac{1}{x}$ کی قیمتیں درج کریں۔"
+  },
+  {
+   "math": "x - \\frac{1}{x} = 3 + \\sqrt{8} - 3 + \\sqrt{8} = 2\\sqrt{8}",
+   "en": "Remove the brackets, change the sign inside the second bracket, and combine like terms (the $3$ and $-3$ cancel out).",
+   "ur": "بریکٹ ہٹائیں، دوسری بریکٹ کے اندر علامت تبدیل کریں، اور ایک جیسی رقموں کو جمع کریں ($3$ اور $-3$ آپس میں کٹ جائیں گے)۔",
+   "check": [
+    "(3 + sqrt(8)) - (3 - sqrt(8)) == 2*sqrt(8)"
+   ]
+  },
+  {
+   "math": "\\left(x - \\frac{1}{x}\\right)^2 = (2\\sqrt{8})^2 = 2^2 \\times (\\sqrt{8})^2",
+   "en": "Take the square of both sides to get $\\left(x - \\frac{1}{x}\\right)^2$. Square both the coefficient $2$ and the radical $\\sqrt{8}$.",
+   "ur": "$\\left(x - \\frac{1}{x}\\right)^2$ حاصل کرنے کے لیے دونوں طرف مربع لیں۔ عددی سر $2$ اور جذر $\\sqrt{8}$ دونوں کا مربع لیں۔",
+   "check": [
+    "(2*sqrt(8))**2 == 2**2 * sqrt(8)**2"
+   ]
+  },
+  {
+   "math": "\\left(x - \\frac{1}{x}\\right)^2 = 4 \\times 8 = 32",
+   "en": "Since $2^2 = 4$ and $(\\sqrt{8})^2 = 8$, multiply them together to get the final answer $32$.",
+   "ur": "چونکہ $2^2 = 4$ اور $(\\sqrt{8})^2 = 8$ ہوتا ہے، اس لیے حتمی جواب $32$ حاصل کرنے کے لیے انہیں آپس میں ضرب دیں۔",
+   "check": [
+    "2**2 == 4",
+    "sqrt(8)**2 == 8",
+    "4 * 8 == 32",
+    "((3 + sqrt(8)) - 1/(3 + sqrt(8)))**2 == 32",
+    "1/(3+sqrt(8)) == 3 - sqrt(8)",
+    "3**2 - sqrt(8)**2 == 1",
+    "(3+sqrt(8)) - (3-sqrt(8)) == 2*sqrt(8)",
+    "((3+sqrt(8)) - (3-sqrt(8)))**2 == 32",
+    "(2*sqrt(8))**2 == 32"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

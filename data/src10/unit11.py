@@ -346,7 +346,7 @@ p9["key_note"] = {"en": "The reference notes give $\\sigma_A = 0.14$ and $\\sigm
 ex("ex11.2", 9, "The monthly sales (rupees in lacs) for two salespersons over 6 months are: Person A: 5.5, 5.7, 5.4, 5.6, 5.8, 5.6; Person B: 5.5, 6.5, 4.5, 6.0, 5.0, 6.0. "
    "Compare their performance and consistency.", [p9], "11.2")
 st, m, v, s = grouped_dispersion([900, 1100, 1300, 1500, 1700, 1900], [2, 4, 6, 8, 2, 1])
-ex("ex11.2", 10, "The table given below shows the daily wages of workers in a textile mill, grouped into six income brackets: 800-1000, 1000-1200, 1200-1400, 1400-1600, 1600-1800, "
+ex("ex11.2", 10, "The table given below shows the daily wages of workers in a textile mill, grouped into six income brackets (Daily Wage in Rs): 800-1000, 1000-1200, 1200-1400, 1400-1600, 1600-1800, "
    "1800-2000 with frequency 2, 4, 6, 8, 2, 1. Calculate the mean, variance and standard deviation of the wages.", [P("", st, f"Mean = {fmt(m, 2)}, Variance = {fmt(v, 2)}, SD = {fmt(s, 2)}")],
    "11.2")
 st, m, v, s = dispersion([15, 18, 14, 20, 13])
@@ -364,11 +364,11 @@ def short(label, rs, ans, prompt):
 ex("ex11.2", 13, r"Find variance and standard deviation: (i) $\sum x = 45$, $\sum x^2 = 421$, $n = 5$ (ii) $\sum fx = 210$, $\sum fx^2 = 7560$, $\sum f = 6$ "
    r"(iii) $\bar{x} = 18$, $\sum fx^2 = 1670$, $\sum f = 5$", [
        short("i", [(r"\sigma^2 = \frac{421}{5} - \left(\frac{45}{5}\right)^2 = 84.2 - 81 = 3.2,\quad \sigma = \sqrt{3.2} \approx 1.79", "$\\sigma^2 = \\frac{\\sum x^2}{n} - \\bar{x}^2$.",
-                    "$\\sigma^2 = \\frac{\\sum x^2}{n} - \\bar{x}^2$۔", ["R(421,5) - 9**2 == R(16,5)", near("sqrt(R(16,5))", "1.79", 2)])], "Variance = 3.2, SD = 1.79", "(i)"),
+                    "$\\sigma^2 = \\frac{\\sum x^2}{n} - \\bar{x}^2$۔", ["R(421,5) - 9**2 == R(16,5)", near("sqrt(R(16,5))", "1.79", 2)])], "Variance = 3.2, SD = 1.79", r"$\sum x = 45$, $\sum x^2 = 421$, $n = 5$"),
        short("ii", [(r"\sigma^2 = \frac{7560}{6} - \left(\frac{210}{6}\right)^2 = 1260 - 1225 = 35,\quad \sigma = \sqrt{35} \approx 5.92", "$\\sigma^2 = \\frac{\\sum fx^2}{\\sum f} - \\bar{x}^2$.",
-                     "$\\sigma^2 = \\frac{\\sum fx^2}{\\sum f} - \\bar{x}^2$۔", ["7560/6 - 35**2 == 35", near("sqrt(35)", "5.92", 2)])], "Variance = 35, SD = 5.92", "(ii)"),
+                     "$\\sigma^2 = \\frac{\\sum fx^2}{\\sum f} - \\bar{x}^2$۔", ["7560/6 - 35**2 == 35", near("sqrt(35)", "5.92", 2)])], "Variance = 35, SD = 5.92", r"$\sum fx = 210$, $\sum fx^2 = 7560$, $\sum f = 6$"),
        short("iii", [(r"\sigma^2 = \frac{1670}{5} - 18^2 = 334 - 324 = 10,\quad \sigma = \sqrt{10} \approx 3.16", "Same formula with the given mean.", "دیے گئے اوسط کے ساتھ وہی کلیہ۔",
-                      ["1670/5 - 18**2 == 10", near("sqrt(10)", "3.16", 2)])], "Variance = 10, SD = 3.16", "(iii)")], "11.2")
+                      ["1670/5 - 18**2 == 10", near("sqrt(10)", "3.16", 2)])], "Variance = 10, SD = 3.16", r"$\bar{x} = 18$, $\sum fx^2 = 1670$, $\sum f = 5$")], "11.2")
 
 # ------------------------------------------------------------------------------------------ Review Exercise 11
 
@@ -426,5 +426,5 @@ p8["key_note"] = {"en": "The reference notes use $\\sum x_B^2 = 12521$ (the corr
 ex("rev11", 8, "The monthly household expenses (rupees in thousands) of two families for 6 months were: Family A: 45, 47, 46, 48, 46, 47; Family B: 38, 52, 40, 50, 42, 49. Calculate the "
    "mean and standard deviation of the monthly expenses. Which family spends more on average? Which family has more stable expenses?", [p8], "Review 11")
 st, m, v, s = grouped_dispersion([1100, 1300, 1500, 1700, 1900], [6, 10, 12, 8, 4])
-ex("rev11", 9, "The daily wages of 40 workers in a factory are grouped as follows: 1000-1200, 1200-1400, 1400-1600, 1600-1800, 1800-2000 with No. of Workers 6, 10, 12, 8, 4. Find the mean, "
+ex("rev11", 9, "The daily wages of 40 workers in a factory are grouped as follows (Daily Wages in Rs.): 1000-1200, 1200-1400, 1400-1600, 1600-1800, 1800-2000 with No. of Workers 6, 10, 12, 8, 4. Find the mean, "
    "variance and standard deviation of the daily wages.", [P("", st, f"Mean = {fmt(m, 0)}, Variance = {fmt(v, 0)}, SD = {fmt(s, 2)}")], "Review 11")

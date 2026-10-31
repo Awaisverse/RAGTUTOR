@@ -1,0 +1,59 @@
+{
+ "item": "rev1-q6",
+ "label": "",
+ "answer_ref": "$\\frac{9}{2}$ and $\\frac{19}{4}$",
+ "steps": [
+  {
+   "math": "",
+   "en": "We need to find two rational numbers that lie between $4$ and $5$.",
+   "ur": "ہمیں $4$ اور $5$ کے درمیان دو ناطق اعداد معلوم کرنے ہیں۔"
+  },
+  {
+   "math": "\\frac{a + b}{2}",
+   "en": "By the density property of real numbers, a rational number between any two numbers $a$ and $b$ can be found by taking their average (mean).",
+   "ur": "حقیقی اعداد کی خاصیت کے مطابق، کسی بھی دو اعداد $a$ اور $b$ کے درمیان ایک ناطق عدد ان کا اوسط لے کر معلوم کیا جا سکتا ہے۔"
+  },
+  {
+   "math": "\\frac{4 + 5}{2} = \\frac{9}{2}",
+   "en": "Substitute $a = 4$ and $b = 5$ into the formula to find the first rational number.",
+   "ur": "پہلا ناطق عدد معلوم کرنے کے لیے فارمولے میں $a = 4$ اور $b = 5$ درج کریں۔",
+   "check": [
+    "(R(4,1) + R(5,1))/2 == R(9,2)"
+   ]
+  },
+  {
+   "math": "\\frac{\\frac{9}{2} + 5}{2} = \\frac{\\frac{9 + 10}{2}}{2}",
+   "en": "To find the second rational number, take the average of the first rational number $\\frac{9}{2}$ and the larger given number $5$. First, take the LCM of the numerator.",
+   "ur": "دوسرا ناطق عدد معلوم کرنے کے لیے، پہلے ناطق عدد $\\frac{9}{2}$ اور دیے گئے بڑے عدد $5$ کا اوسط لیں۔ پہلے شمار کنندہ کا ذواضعاف اقل (LCM) لیں۔",
+   "check": [
+    "(R(9,2) + R(5,1))/2 == ((R(9,1) + R(10,1))/2)/2"
+   ]
+  },
+  {
+   "math": "\\frac{\\frac{19}{2}}{2} = \\frac{19}{4}",
+   "en": "Simplify the fraction to get the second rational number.",
+   "ur": "دوسرا ناطق عدد حاصل کرنے کے لیے کسر کو مختصر کریں۔",
+   "check": [
+    "R(19,2)/2 == R(19,4)"
+   ]
+  },
+  {
+   "math": "4 < \\frac{9}{2} < \\frac{19}{4} < 5",
+   "en": "Both $\\frac{9}{2}$ and $\\frac{19}{4}$ lie strictly between $4$ and $5$. Thus, the two required rational numbers are $\\frac{9}{2}$ and $\\frac{19}{4}$.",
+   "ur": "دونوں اعداد $\\frac{9}{2}$ اور $\\frac{19}{4}$، $4$ اور $5$ کے درمیان واقع ہیں۔ لہٰذا، مطلوبہ دو ناطق اعداد $\\frac{9}{2}$ اور $\\frac{19}{4}$ ہیں۔",
+   "check": [
+    "R(4,1) < R(9,2)",
+    "R(9,2) < R(19,4)",
+    "R(19,4) < R(5,1)",
+    "(Rational(4,1)+Rational(5,1))/2 == Rational(9,2)",
+    "(Rational(9,2)+Rational(5,1))/2 == Rational(19,4)",
+    "Rational(4,1) < Rational(9,2)",
+    "Rational(9,2) < Rational(19,4)",
+    "Rational(19,4) < Rational(5,1)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

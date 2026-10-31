@@ -1,0 +1,54 @@
+{
+ "item": "c10-ex3.6-q4",
+ "label": "",
+ "answer_ref": "$x = 8,\\ y = -6$",
+ "steps": [
+  {
+   "math": "F_1 = \\begin{bmatrix} 8 \\\\ x \\end{bmatrix}, \\quad F_2 = \\begin{bmatrix} -2 \\\\ -7 \\end{bmatrix}, \\quad F_3 = \\begin{bmatrix} y \\\\ -1 \\end{bmatrix}",
+   "en": "Write down the given force matrices $F_1$, $F_2$, and $F_3$.",
+   "ur": "دیے گئے قوت کے قالب $F_1$، $F_2$ اور $F_3$ لکھیں۔"
+  },
+  {
+   "math": "F_1 + F_2 + F_3 = O",
+   "en": "Since the particle is in equilibrium, the sum of all the forces acting on it must be equal to the null (zero) matrix $O$.",
+   "ur": "چونکہ ذرہ توازن (equilibrium) کی حالت میں ہے، اس لیے اس پر عمل کرنے والی تمام قوتوں کا مجموعہ صفری قالب $O$ کے برابر ہونا چاہیے۔"
+  },
+  {
+   "math": "\\begin{bmatrix} 8 \\\\ x \\end{bmatrix} + \\begin{bmatrix} -2 \\\\ -7 \\end{bmatrix} + \\begin{bmatrix} y \\\\ -1 \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 0 \\end{bmatrix}",
+   "en": "Substitute the given matrices into the equilibrium equation.",
+   "ur": "توازن کی مساوات میں دیے گئے قالب درج کریں۔"
+  },
+  {
+   "math": "\\begin{bmatrix} 8 + (-2) + y \\\\ x + (-7) + (-1) \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 0 \\end{bmatrix}",
+   "en": "Add the corresponding entries of the matrices on the left-hand side.",
+   "ur": "بائیں جانب والے قالبوں کے متناظرہ ارکان کو جمع کریں۔"
+  },
+  {
+   "math": "\\begin{bmatrix} 6 + y \\\\ x - 8 \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 0 \\end{bmatrix}",
+   "en": "Simplify the numerical terms inside the matrix.",
+   "ur": "قالب کے اندر موجود عددی رقوم کو مختصر کریں۔",
+   "check": [
+    "8 - 2 == 6",
+    "-7 - 1 == -8"
+   ]
+  },
+  {
+   "math": "6 + y = 0 \\quad \\text{and} \\quad x - 8 = 0",
+   "en": "By the definition of equality of matrices, equate the corresponding entries from both sides.",
+   "ur": "مساوی قالبوں کی تعریف کے مطابق، دونوں اطراف کے متناظرہ ارکان کو برابر رکھیں۔"
+  },
+  {
+   "math": "x = 8, \\quad y = -6",
+   "en": "Solve both linear equations to find the required values of $x$ and $y$.",
+   "ur": "$x$ اور $y$ کی مطلوبہ قیمتیں معلوم کرنے کے لیے دونوں یک درجی مساواتوں کو حل کریں۔",
+   "check": [
+    "8 - 8 == 0",
+    "6 + (-6) == 0",
+    "Eq(Matrix([[8], [8]]) + Matrix([[-2], [-7]]) + Matrix([[-6], [-1]]), Matrix([[0], [0]]))"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

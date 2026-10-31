@@ -1,0 +1,71 @@
+{
+ "item": "c10-ex5.3-q1",
+ "label": "ix",
+ "answer_ref": "$\\frac{2 \\left(x + 2\\right)}{3 \\left(x - 2\\right)}$",
+ "steps": [
+  {
+   "math": "\\frac{2x^2 - 98}{x^3 - 125} \\times \\frac{x^2 - 3x - 10}{3x - 21} \\div \\frac{x^2 + 5x - 14}{x^2 + 5x + 25}",
+   "en": "Write the given algebraic expression to be simplified.",
+   "ur": "مختصر کرنے کے لیے دی گئی الجبری عبارت لکھیں۔"
+  },
+  {
+   "math": "= \\frac{2x^2 - 98}{x^3 - 125} \\times \\frac{x^2 - 3x - 10}{3x - 21} \\times \\frac{x^2 + 5x + 25}{x^2 + 5x - 14}",
+   "en": "Change the division sign $\\div$ into a multiplication sign $\\times$ by taking the reciprocal of the third fraction.",
+   "ur": "تیسری کسر کا معکوس لے کر تقسیم کی علامت $\\div$ کو ضرب کی علامت $\\times$ میں تبدیل کریں۔",
+   "check": [
+    "((2*x**2 - 98)/(x**3 - 125)) * ((x**2 - 3*x - 10)/(3*x - 21)) / ((x**2 + 5*x - 14)/(x**2 + 5*x + 25)) == ((2*x**2 - 98)/(x**3 - 125)) * ((x**2 - 3*x - 10)/(3*x - 21)) * ((x**2 + 5*x + 25)/(x**2 + 5*x - 14))"
+   ]
+  },
+  {
+   "math": "= \\frac{2(x^2 - 49)}{x^3 - 5^3} \\times \\frac{x^2 - 3x - 10}{3(x - 7)} \\times \\frac{x^2 + 5x + 25}{x^2 + 5x - 14}",
+   "en": "Take out common factors $2$ and $3$, and write $125$ as $5^3$.",
+   "ur": "مشترک اجزاء $2$ اور $3$ کو باہر نکالیں، اور $125$ کو $5^3$ کے طور پر لکھیں۔",
+   "check": [
+    "2*(x**2 - 49) == 2*x**2 - 98",
+    "x**3 - 5**3 == x**3 - 125",
+    "3*(x - 7) == 3*x - 21"
+   ]
+  },
+  {
+   "math": "= \\frac{2(x^2 - 7^2)}{(x - 5)(x^2 + 5x + 25)} \\times \\frac{x^2 - 5x + 2x - 10}{3(x - 7)} \\times \\frac{x^2 + 5x + 25}{x^2 + 7x - 2x - 14}",
+   "en": "Apply the difference of cubes formula $a^3 - b^3 = (a - b)(a^2 + ab + b^2)$ to $x^3 - 5^3$, write $49$ as $7^2$, and split the middle terms of the quadratic expressions.",
+   "ur": "مکعبوں کے فرق کا فارمولا $a^3 - b^3 = (a - b)(a^2 + ab + b^2)$، $x^3 - 5^3$ پر لاگو کریں، $49$ کو $7^2$ لکھیں، اور دو درجی عبارات کی درمیانی رقوم کو توڑ کر لکھیں۔",
+   "check": [
+    "(x - 5)*(x**2 + 5*x + 25) == x**3 - 125",
+    "x**2 - 5*x + 2*x - 10 == x**2 - 3*x - 10",
+    "x**2 + 7*x - 2*x - 14 == x**2 + 5*x - 14"
+   ]
+  },
+  {
+   "math": "= \\frac{2(x - 7)(x + 7)}{(x - 5)(x^2 + 5x + 25)} \\times \\frac{x(x - 5) + 2(x - 5)}{3(x - 7)} \\times \\frac{x^2 + 5x + 25}{x(x + 7) - 2(x + 7)}",
+   "en": "Use the difference of squares formula $a^2 - b^2 = (a - b)(a + b)$ on $x^2 - 7^2$, and factor by grouping in the numerators and denominators.",
+   "ur": "مربعوں کے فرق کا فارمولا $a^2 - b^2 = (a - b)(a + b)$، $x^2 - 7^2$ پر استعمال کریں، اور شمار کنندگان اور نسب نماؤں میں گروپ بنا کر تجزی کریں۔",
+   "check": [
+    "2*(x - 7)*(x + 7) == 2*(x**2 - 49)",
+    "x*(x - 5) + 2*(x - 5) == x**2 - 3*x - 10",
+    "x*(x + 7) - 2*(x + 7) == x**2 + 5*x - 14"
+   ]
+  },
+  {
+   "math": "= \\frac{2(x - 7)(x + 7)}{(x - 5)(x^2 + 5x + 25)} \\times \\frac{(x - 5)(x + 2)}{3(x - 7)} \\times \\frac{x^2 + 5x + 25}{(x - 2)(x + 7)}",
+   "en": "Complete the factorization of the quadratic expressions.",
+   "ur": "دو درجی عبارات کی تجزی مکمل کریں۔",
+   "check": [
+    "(x - 5)*(x + 2) == x*(x - 5) + 2*(x - 5)",
+    "(x - 2)*(x + 7) == x*(x + 7) - 2*(x + 7)"
+   ]
+  },
+  {
+   "math": "= \\frac{2 \\left(x + 2\\right)}{3 \\left(x - 2\\right)}",
+   "en": "Cancel out the common factors $(x - 7)$, $(x + 7)$, $(x - 5)$, and $(x^2 + 5x + 25)$ from the numerators and denominators to get the final simplified answer.",
+   "ur": "شمار کنندگان اور نسب نماؤں سے مشترک اجزاء $(x - 7)$، $(x + 7)$، $(x - 5)$، اور $(x^2 + 5x + 25)$ کو کاٹ کر حتمی مختصر جواب حاصل کریں۔",
+   "check": [
+    "(2*(x + 2))/(3*(x - 2)) == ((2*(x - 7)*(x + 7))/((x - 5)*(x**2 + 5*x + 25))) * (((x - 5)*(x + 2))/(3*(x - 7))) * ((x**2 + 5*x + 25)/((x - 2)*(x + 7)))",
+    "((2*x + 4)/(3*x - 6)) == ((2*x**2 - 98)*(x**2 - 3*x - 10)*(x**2 + 5*x + 25)/((3*x - 21)*(x**3 - 125)*(x**2 + 5*x - 14)))"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

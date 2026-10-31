@@ -1,0 +1,70 @@
+{
+ "item": "c10-rev3-q3",
+ "label": "iv",
+ "answer_ref": "verified: both sides $= \\begin{bmatrix} -5 & -1 \\\\ 11 & 25 \\end{bmatrix}$",
+ "math": [
+  "",
+  "A - B = \\begin{bmatrix} 2 & 3 \\\\ 4 & 5 \\end{bmatrix} - \\begin{bmatrix} 5 & 6 \\\\ 2 & 1 \\end{bmatrix} = \\begin{bmatrix} 2 - 5 & 3 - 6 \\\\ 4 - 2 & 5 - 1 \\end{bmatrix} = \\begin{bmatrix} -3 & -3 \\\\ 2 & 4 \\end{bmatrix}",
+  "C(A-B) = \\begin{bmatrix} 3 & 2 \\\\ 1 & 7 \\end{bmatrix}\\begin{bmatrix} -3 & -3 \\\\ 2 & 4 \\end{bmatrix} = \\begin{bmatrix} (3)(-3) + (2)(2) & (3)(-3) + (2)(4) \\\\ (1)(-3) + (7)(2) & (1)(-3) + (7)(4) \\end{bmatrix}",
+  "= \\begin{bmatrix} -9 + 4 & -9 + 8 \\\\ -3 + 14 & -3 + 28 \\end{bmatrix} = \\begin{bmatrix} -5 & -1 \\\\ 11 & 25 \\end{bmatrix}",
+  "",
+  "CA = \\begin{bmatrix} 3 & 2 \\\\ 1 & 7 \\end{bmatrix}\\begin{bmatrix} 2 & 3 \\\\ 4 & 5 \\end{bmatrix} = \\begin{bmatrix} (3)(2) + (2)(4) & (3)(3) + (2)(5) \\\\ (1)(2) + (7)(4) & (1)(3) + (7)(5) \\end{bmatrix}",
+  "= \\begin{bmatrix} 6 + 8 & 9 + 10 \\\\ 2 + 28 & 3 + 35 \\end{bmatrix} = \\begin{bmatrix} 14 & 19 \\\\ 30 & 38 \\end{bmatrix}",
+  "CB = \\begin{bmatrix} 3 & 2 \\\\ 1 & 7 \\end{bmatrix}\\begin{bmatrix} 5 & 6 \\\\ 2 & 1 \\end{bmatrix} = \\begin{bmatrix} (3)(5) + (2)(2) & (3)(6) + (2)(1) \\\\ (1)(5) + (7)(2) & (1)(6) + (7)(1) \\end{bmatrix}",
+  "= \\begin{bmatrix} 15 + 4 & 18 + 2 \\\\ 5 + 14 & 6 + 7 \\end{bmatrix} = \\begin{bmatrix} 19 & 20 \\\\ 19 & 13 \\end{bmatrix}",
+  "CA - CB = \\begin{bmatrix} 14 & 19 \\\\ 30 & 38 \\end{bmatrix} - \\begin{bmatrix} 19 & 20 \\\\ 19 & 13 \\end{bmatrix} = \\begin{bmatrix} 14 - 19 & 19 - 20 \\\\ 30 - 19 & 38 - 13 \\end{bmatrix} = \\begin{bmatrix} -5 & -1 \\\\ 11 & 25 \\end{bmatrix}",
+  "C(A-B) = \\begin{bmatrix} -5 & -1 \\\\ 11 & 25 \\end{bmatrix} = CA-CB"
+ ],
+ "why": [
+  {
+   "en": "To prove a matrix equation, we always solve the Left-Hand Side (LHS) and Right-Hand Side (RHS) separately. Let us start by simplifying $C(A-B)$.",
+   "ur": "کسی بھی میٹرکس مساوات کو ثابت کرنے کے لیے ہم ہمیشہ بائیں جانب (LHS) اور دائیں جانب (RHS) کو الگ الگ حل کرتے ہیں۔ آئیے پہلے $C(A-B)$ کو حل کرنے سے شروعات کریں۔"
+  },
+  {
+   "en": "Following the BODMAS rule, we must first solve the brackets by finding $A-B$. This gives us a single difference matrix $\\begin{bmatrix} -3 & -3 \\\\ 2 & 4 \\end{bmatrix}$ that is ready to be multiplied by $C$.",
+   "ur": "BODMAS کے اصول کے مطابق ہمیں پہلے بریکٹ کے اندر موجود $A-B$ کو حل کرنا ہے۔ اس سے ہمیں تفریق شدہ میٹرکس $\\begin{bmatrix} -3 & -3 \\\\ 2 & 4 \\end{bmatrix}$ مل جاتا ہے جسے اب ہم $C$ سے ضرب دے سکتے ہیں۔"
+  },
+  {
+   "en": "Now we apply the rule of matrix multiplication (row by column) to multiply $C$ with our result from $(A-B)$. Notice how we keep $C$ on the left because matrix multiplication is not commutative, so order matters!",
+   "ur": "اب ہم میٹرکس کی ضرب کے اصول (قطار کو کالم سے) کے تحت $C$ کو $(A-B)$ کے جواب سے ضرب دیتے ہیں۔ دھیان رہے کہ $C$ کو بائیں طرف ہی رکھنا ہے کیونکہ میٹرکس کی ضرب میں ترتیب بہت اہم ہوتی ہے!"
+  },
+  {
+   "en": "By simplifying the arithmetic inside the matrix, we get the final answer for the Left-Hand Side: $\\begin{bmatrix} -5 & -1 \\\\ 11 & 25 \\end{bmatrix}$. We will keep this safe to compare with the Right-Hand Side later.",
+   "ur": "میٹرکس کے اندر موجود اعداد کو حل کرنے سے ہمیں بائیں جانب (LHS) کا حتمی جواب $\\begin{bmatrix} -5 & -1 \\\\ 11 & 25 \\end{bmatrix}$ مل جاتا ہے۔ ہم اسے محفوظ کر لیتے ہیں تاکہ بعد میں دائیں جانب کے جواب سے اس کا موازنہ کر سکیں۔"
+  },
+  {
+   "en": "Now we move to the Right-Hand Side, $CA-CB$. According to the order of operations, we must perform the two matrix multiplications ($CA$ and $CB$) before subtracting them.",
+   "ur": "اب ہم دائیں جانب (RHS) یعنی $CA-CB$ کی طرف آتے ہیں۔ ریاضی کے اصولوں کے مطابق تفریق کرنے سے پہلے ہمیں دونوں ضربی عمل ($CA$ اور $CB$) الگ الگ معلوم کرنے ہوں گے۔"
+  },
+  {
+   "en": "First, we find the product $CA$ by multiplying the rows of $C$ with the columns of $A$. This sets up the first part of our Right-Hand Side expression.",
+   "ur": "سب سے پہلے ہم $C$ کی قطاروں کو $A$ کے کالموں سے ضرب دے کر $CA$ معلوم کرتے ہیں۔ اس سے دائیں جانب کی عبارت کا پہلا حصہ تیار ہو جاتا ہے۔"
+  },
+  {
+   "en": "Completing the addition gives us the matrix $CA = \\begin{bmatrix} 14 & 19 \\\\ 30 & 38 \\end{bmatrix}$. Half of our work for the Right-Hand Side is now done.",
+   "ur": "جمع کا عمل مکمل کرنے پر ہمیں میٹرکس $CA = \\begin{bmatrix} 14 & 19 \\\\ 30 & 38 \\end{bmatrix}$ حاصل ہوتا ہے۔ دائیں جانب کا ہمارا آدھا کام اب مکمل ہو چکا ہے۔"
+  },
+  {
+   "en": "Next, we find the second product $CB$ in the exact same way, multiplying the rows of $C$ by the columns of $B$.",
+   "ur": "اس کے بعد، ہم بالکل اسی طریقے سے $C$ کی قطاروں کو $B$ کے کالموں سے ضرب دے کر دوسرا حاصل ضرب $CB$ معلوم کرتے ہیں۔"
+  },
+  {
+   "en": "Simplifying these numbers gives us the matrix $CB = \\begin{bmatrix} 19 & 20 \\\\ 19 & 13 \\end{bmatrix}$. Now we have both matrices needed to perform the final subtraction.",
+   "ur": "ان اعداد کو حل کرنے سے ہمیں میٹرکس $CB = \\begin{bmatrix} 19 & 20 \\\\ 19 & 13 \\end{bmatrix}$ ملتا ہے۔ اب ہمارے پاس آخری تفریق کرنے کے لیے دونوں میٹرکس موجود ہیں۔"
+  },
+  {
+   "en": "Finally, we subtract the matrix $CB$ from $CA$ by subtracting their corresponding entries. This gives us the final matrix for the Right-Hand Side, which is $\\begin{bmatrix} -5 & -1 \\\\ 11 & 25 \\end{bmatrix}$.",
+   "ur": "آخر میں، ہم آمنے سامنے والے ارکان کو تفریق کر کے میٹرکس $CA$ میں سے $CB$ کو تفریق کرتے ہیں۔ اس سے ہمیں دائیں جانب (RHS) کا حتمی میٹرکس $\\begin{bmatrix} -5 & -1 \\\\ 11 & 25 \\end{bmatrix}$ مل جاتا ہے۔"
+  },
+  {
+   "en": "Comparing the results from Step 4 and Step 10, we see that both sides give the exact same matrix. This successfully proves that the left-hand side is equal to the right-hand side.",
+   "ur": "مرحلہ 4 اور مرحلہ 10 کے نتائج کا موازنہ کرنے سے ہم دیکھتے ہیں کہ دونوں اطراف سے بالکل ایک جیسا میٹرکس حاصل ہوا ہے۔ اس سے کامیابی کے ساتھ ثابت ہو جاتا ہے کہ بائیں جانب دائیں جانب کے برابر ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This result verifies the Left Distributive Law of matrix multiplication over subtraction, $C(A-B)=CA-CB$. It shows us that subtracting two matrices first and then multiplying by $C$ gives the exact same result as multiplying $C$ with each matrix separately and then subtracting. Since every single entry in $\\begin{bmatrix} -5 & -1 \\\\ 11 & 25 \\end{bmatrix}$ matches on both sides, our calculation is 100% checked and correct!",
+  "ur": "یہ نتیجہ میٹرکس کی تفریق پر ضرب کے بائیں تقسیمی قانون (Left Distributive Law) یعنی $C(A-B)=CA-CB$ کی تصدیق کرتا ہے۔ یہ ہمیں بتاتا ہے کہ پہلے دو میٹرکس کو تفریق کر کے $C$ سے ضرب دیں، یا پہلے $C$ کو دونوں میٹرکس سے الگ الگ ضرب دے کر پھر تفریق کریں، دونوں صورتوں میں جواب بالکل ایک جیسا آتا ہے۔ چونکہ دونوں طرف کے میٹرکس $\\begin{bmatrix} -5 & -1 \\\\ 11 & 25 \\end{bmatrix}$ کا ہر ایک رکن آپس میں برابر ہے، اس لیے ہمارا حل سو فیصد درست ہے!"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

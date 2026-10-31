@@ -1,0 +1,45 @@
+{
+ "item": "c10-rev1-q6",
+ "label": "iv",
+ "answer_ref": "$\\sqrt{533}$",
+ "math": [
+  "z_1 = 5 + 4i, \\quad z_2 = 3 + 2i",
+  "z_1 z_2 = (5 + 4i)(3 + 2i) = 5(3 + 2i) + 4i(3 + 2i)",
+  "z_1 z_2 = 15 + 10i + 12i + 8i^2",
+  "z_1 z_2 = 15 + 22i + 8(-1) = 15 - 8 + 22i = 7 + 22i",
+  "|z_1 z_2| = |7 + 22i| = \\sqrt{(7)^2 + (22)^2}",
+  "|z_1 z_2| = \\sqrt{49 + 484} = \\sqrt{533}"
+ ],
+ "why": [
+  {
+   "en": "We always begin by noting down the given values clearly so we do not make any copying mistakes. Looking at $|z_1 z_2|$ tells us our clear plan: first multiply the two complex numbers inside the bars, and then find the modulus of that single result.",
+   "ur": "ہم ہمیشہ دی گئی قیمتوں کو واضح طور پر لکھ کر شروعات کرتے ہیں تاکہ کوئی غلطی نہ ہو۔ $|z_1 z_2|$ کو دیکھ کر ہمیں اپنا لائحہ عمل صاف نظر آتا ہے: پہلے بارز کے اندر موجود دونوں کمپلیکس نمبرز کو ضرب دیں، اور پھر اس حاصل ضرب کا ماڈیولس (modulus) معلوم کریں۔"
+  },
+  {
+   "en": "To multiply two complex numbers, we use the distributive law of multiplication, just like we do with algebraic brackets. This breaks the multiplication into two simpler parts that are easy to expand.",
+   "ur": "دو کمپلیکس نمبرز کو ضرب دینے کے لیے ہم ضرب کا تقسیمی قانون (distributive law) استعمال کرتے ہیں، بالکل ویسے ہی جیسے الجبرا کی بریکٹس کھولتے وقت کرتے ہیں۔ اس سے یہ عمل دو آسان حصوں میں تقسیم ہو جاتا ہے۔"
+  },
+  {
+   "en": "By multiplying the numbers inside the brackets, we remove the parentheses completely. Notice how multiplying the two imaginary parts ($4i$ and $2i$) gives us an $i^2$ term, which we will handle next.",
+   "ur": "بریکٹ کے اندر موجود رقموں کو ضرب دے کر ہم نے بریکٹس کو مکمل طور پر ختم کر دیا ہے۔ غور کریں کہ دو خیالی حصوں ($4i$ اور $2i$) کو ضرب دینے سے ہمیں $i^2$ والی رقم ملی ہے، جسے ہم اگلے مرحلے میں حل کریں گے۔"
+  },
+  {
+   "en": "Here we use the fundamental definition of the imaginary unit, $i^2 = -1$, which turns $8i^2$ into a real number, $-8$. Grouping the real parts ($15 - 8$) and imaginary parts ($10i + 12i$) puts our product into the standard form $a + bi$, which is $7 + 22i$, making it ready for the modulus formula.",
+   "ur": "یہاں ہم ایوٹا کی بنیادی تعریف $i^2 = -1$ استعمال کرتے ہیں، جو $8i^2$ کو ایک حقیقی عدد $-8$ میں بدل دیتی ہے۔ حقیقی حصوں ($15 - 8$) اور خیالی حصوں ($10i + 12i$) کو یکجا کرنے سے ہمارا حاصل ضرب معیاری شکل $a + bi$ یعنی $7 + 22i$ میں آ جاتا ہے، جس کے بعد ماڈیولس کا فارمولا لگانا آسان ہے۔"
+  },
+  {
+   "en": "The modulus of a complex number $a + bi$ is defined by the formula $\\sqrt{a^2 + b^2}$. Be very careful here: we only take the real number $7$ and the coefficient $22$ (without the $i$) to set up our square root.",
+   "ur": "کسی کمپلیکس نمبر $a + bi$ کے ماڈیولس کی تعریف کا فارمولا $\\sqrt{a^2 + b^2}$ ہے۔ یہاں بہت احتیاط کریں: ہم جزر کے اندر صرف حقیقی حصہ $7$ اور خیالی حصے کا عددی سر $22$ لیتے ہیں (اس کے ساتھ $i$ شامل نہیں کرتے)۔"
+  },
+  {
+   "en": "Finally, we apply simple arithmetic to square both numbers and add them under the square root. This gives us the exact, simplified value of the modulus.",
+   "ur": "آخر میں، ہم سادہ حساب سے دونوں نمبروں کا مربع لیتے ہیں اور انہیں جزر کے نیچے جمع کر لیتے ہیں۔ اس سے ہمیں ماڈیولس کی بالکل درست اور مختصر قیمت مل جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $\\sqrt{533}$ is the modulus (or absolute value) of the product $z_1 z_2 = 7 + 22i$, which represents its distance from the origin in the complex plane. Notice that because it is a distance, our final answer is a positive real number with no $i$ in it.",
+  "ur": "حتمی جواب $\\sqrt{533}$ حاصل ضرب $z_1 z_2 = 7 + 22i$ کا ماڈیولس (مطلق قیمت) ہے، جو کمپلیکس پلین میں مبدأ (origin) سے اس کے فاصلے کو ظاہر کرتا ہے۔ غور کریں کہ چونکہ یہ ایک فاصلہ ہے، اس لیے ہمارا حتمی جواب ایک مثبت حقیقی عدد ہے جس میں $i$ موجود نہیں ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

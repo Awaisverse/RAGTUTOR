@@ -1,0 +1,56 @@
+{
+ "item": "c10-ex5.3-q1",
+ "label": "iv",
+ "answer_ref": "$\\frac{\\left(a + b - c\\right)^{2}}{a \\left(a + 2 c\\right)}$",
+ "steps": [
+  {
+   "math": "\\frac{(a+b)^2-c^2}{(a+c)^2-b^2} \\times \\frac{a^2-(b-c)^2}{(a+c)^2-c^2}",
+   "en": "Write down the given algebraic expression to simplify.",
+   "ur": "مختصر کرنے کے لیے دی گئی الجبری عبارت لکھیں۔"
+  },
+  {
+   "math": "= \\frac{((a+b)-c)((a+b)+c)}{((a+c)-b)((a+c)+b)} \\times \\frac{(a-(b-c))(a+(b-c))}{((a+c)-c)((a+c)+c)}",
+   "en": "Notice that each numerator and denominator is in the form of a difference of two squares. Apply the formula $x^2 - y^2 = (x-y)(x+y)$ to factorize every part.",
+   "ur": "غور کریں کہ ہر شمار کنندہ اور مخرج دو مربعات کے فرق کی شکل میں ہے۔ ہر حصے کی تجزی کرنے کے لیے فارمولا $x^2 - y^2 = (x-y)(x+y)$ لاگو کریں۔",
+   "check": [
+    "(((a+b)**2-c**2)/((a+c)**2-b**2))*((a**2-(b-c)**2)/((a+c)**2-c**2)) == (((a+b)-c)*((a+b)+c)/(((a+c)-b)*((a+c)+b)))*((a-(b-c))*(a+(b-c))/(((a+c)-c)*((a+c)+c)))"
+   ]
+  },
+  {
+   "math": "= \\frac{(a+b-c)(a+b+c)}{(a+c-b)(a+c+b)} \\times \\frac{(a-b+c)(a+b-c)}{(a+c-c)(a+c+c)}",
+   "en": "Remove the inner brackets. Be careful to change the sign inside $(b-c)$ when preceded by a minus sign, so $a-(b-c)$ becomes $a-b+c$.",
+   "ur": "اندرونی بریکٹ ہٹا دیں۔ مائنس کے نشان کی وجہ سے $(b-c)$ کے اندر کی علامت تبدیل کرنے کا خیال رکھیں، اس طرح $a-(b-c)$ حل ہو کر $a-b+c$ بن جائے گا۔",
+   "check": [
+    "(((a+b)-c)*((a+b)+c)/(((a+c)-b)*((a+c)+b)))*((a-(b-c))*(a+(b-c))/(((a+c)-c)*((a+c)+c))) == ((a+b-c)*(a+b+c)/((a+c-b)*(a+c+b)))*((a-b+c)*(a+b-c)/((a+c-c)*(a+c+c)))"
+   ]
+  },
+  {
+   "math": "= \\frac{(a+b-c)(a+b+c)}{(a-b+c)(a+b+c)} \\times \\frac{(a-b+c)(a+b-c)}{a(a+2c)}",
+   "en": "Simplify the like terms in the second denominator ($a+c-c = a$ and $a+c+c = a+2c$), and rearrange the terms in the first denominator to clearly see the common factors.",
+   "ur": "دوسرے مخرج میں یکساں رقوم کو مختصر کریں ($a+c-c = a$ اور $a+c+c = a+2c$)، اور مشترک اجزاء کو واضح طور پر دیکھنے کے لیے پہلے مخرج کی رقوم کو ترتیب دیں۔",
+   "check": [
+    "((a+b-c)*(a+b+c)/((a+c-b)*(a+c+b)))*((a-b+c)*(a+b-c)/((a+c-c)*(a+c+c))) == ((a+b-c)*(a+b+c)/((a-b+c)*(a+b+c)))*((a-b+c)*(a+b-c)/(a*(a+2*c)))"
+   ]
+  },
+  {
+   "math": "= \\frac{(a+b-c) \\times (a+b-c)}{a(a+2c)}",
+   "en": "Cancel out the common factors $(a+b+c)$ and $(a-b+c)$ from the numerators and denominators.",
+   "ur": "شمار کنندہ اور مخرج سے مشترک اجزاء $(a+b+c)$ اور $(a-b+c)$ کو کاٹ دیں۔",
+   "check": [
+    "((a+b-c)*(a+b+c)/((a-b+c)*(a+b+c)))*((a-b+c)*(a+b-c)/(a*(a+2*c))) == ((a+b-c)*(a+b-c))/(a*(a+2*c))"
+   ]
+  },
+  {
+   "math": "= \\frac{\\left(a + b - c\\right)^{2}}{a \\left(a + 2 c\\right)}",
+   "en": "Multiply the remaining identical factors in the numerator to write them as a whole square. This is the final simplified answer.",
+   "ur": "شمار کنندہ میں بچ جانے والے ایک جیسے اجزاء کو ضرب دے کر مکمل مربع کی شکل میں لکھیں۔ یہ آخری مختصر جواب ہے۔",
+   "check": [
+    "((a+b-c)*(a+b-c))/(a*(a+2*c)) == (a+b-c)**2/(a*(a+2*c))",
+    "((a**2 + 2*a*b - 2*a*c + b**2 - 2*b*c + c**2)/(a**2 + 2*a*c)) == ((a**2 - (b - c)**2)*(-c**2 + (a + b)**2)/((-b**2 + (a + c)**2)*(-c**2 + (a + c)**2)))"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

@@ -1,0 +1,57 @@
+{
+ "item": "c10-ex5.3-q1",
+ "label": "i",
+ "answer_ref": "$\\frac{3 l \\left(l - 2 m\\right)}{2 n}$",
+ "steps": [
+  {
+   "math": "\\frac{24lm}{5l+10m} \\times \\frac{5l^{2}-20m^{2}}{16mn}",
+   "en": "Write down the given algebraic expression to simplify.",
+   "ur": "مختصر کرنے کے لیے دی گئی الجبری عبارت لکھیں۔"
+  },
+  {
+   "math": "= \\frac{24lm}{5(l+2m)} \\times \\frac{5(l^{2}-4m^{2})}{16mn}",
+   "en": "Take $5$ as a common factor from the denominator $5l+10m$ and from the numerator $5l^{2}-20m^{2}$.",
+   "ur": "مخرج $5l+10m$ اور شمار کنندہ $5l^{2}-20m^{2}$ میں سے $5$ کو مشترک لیں۔",
+   "check": [
+    "(24*l*m/(5*l+10*m))*((5*l**2-20*m**2)/(16*m*n)) == (24*l*m/(5*(l+2*m)))*(5*(l**2-4*m**2)/(16*m*n))"
+   ]
+  },
+  {
+   "math": "= \\frac{24lm}{5(l+2m)} \\times \\frac{5((l)^{2}-(2m)^{2})}{16mn}",
+   "en": "Write the term $l^{2}-4m^{2}$ as the difference of two squares, $(l)^{2}-(2m)^{2}$.",
+   "ur": "رقم $l^{2}-4m^{2}$ کو دو مربعات کے فرق یعنی $(l)^{2}-(2m)^{2}$ کی شکل میں لکھیں۔",
+   "check": [
+    "l**2 - 4*m**2 == l**2 - (2*m)**2"
+   ]
+  },
+  {
+   "math": "= \\frac{24lm}{5(l+2m)} \\times \\frac{5(l-2m)(l+2m)}{16mn}",
+   "en": "Apply the difference of squares formula $a^{2}-b^{2}=(a-b)(a+b)$ to factorize $(l)^{2}-(2m)^{2}$.",
+   "ur": "$(l)^{2}-(2m)^{2}$ کی تجزی کرنے کے لیے دو مربعات کے فرق کا کلیہ $a^{2}-b^{2}=(a-b)(a+b)$ استعمال کریں۔",
+   "check": [
+    "l**2 - (2*m)**2 == (l - 2*m)*(l + 2*m)"
+   ]
+  },
+  {
+   "math": "= \\frac{8 \\times 3 \\times l \\times m}{5(l+2m)} \\times \\frac{5(l-2m)(l+2m)}{8 \\times 2 \\times m \\times n}",
+   "en": "Break down the coefficients $24$ and $16$ into their factors to easily identify common terms.",
+   "ur": "مشترک اجزاء کی آسانی سے شناخت کے لیے عددی سروں $24$ اور $16$ کی تجزی کریں۔",
+   "check": [
+    "24 == 8*3",
+    "16 == 8*2"
+   ]
+  },
+  {
+   "math": "= \\frac{3 l \\left(l - 2 m\\right)}{2 n}",
+   "en": "Cancel out the common factors $8$, $5$, $m$, and $(l+2m)$ from the numerators and denominators to get the final answer.",
+   "ur": "حتمی جواب حاصل کرنے کے لیے شمار کنندہ اور مخرج میں سے مشترک اجزاء $8$، $5$، $m$ اور $(l+2m)$ کو کاٹ دیں۔",
+   "check": [
+    "(24*l*m/(5*(l+2*m)))*(5*(l-2*m)*(l+2*m)/(16*m*n)) == 3*l*(l-2*m)/(2*n)",
+    "((3*l**2 - 6*l*m)/(2*n)) == (3*l*(5*l**2 - 20*m**2)/(2*n*(5*l + 10*m)))"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

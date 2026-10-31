@@ -1943,26 +1943,39 @@
      "prompt": "$\\underline{a} + \\underline{b}$",
      "steps": [
       {
+       "math": "\\underline{a} = 7\\underline{i} - 3\\underline{j}, \\quad \\underline{b} = \\underline{i} + 5\\underline{j}",
+       "en": "First, write down the given vectors $\\underline{a}$ and $\\underline{b}$. We need to find their sum $\\underline{a} + \\underline{b}$.",
+       "ur": "سب سے پہلے دیے گئے سمتیے $\\underline{a}$ اور $\\underline{b}$ لکھیں۔ ہمیں ان کا مجموعہ $\\underline{a} + \\underline{b}$ معلوم کرنا ہے۔"
+      },
+      {
        "math": "\\underline{a} + \\underline{b} = \\left(7\\underline{i} - 3\\underline{j}\\right) + \\left(\\underline{i} + 5\\underline{j}\\right)",
-       "en": "Put in the vectors.",
-       "ur": "سمتیے رکھیں۔"
+       "en": "Substitute the values of vectors $\\underline{a}$ and $\\underline{b}$ into the expression $\\underline{a} + \\underline{b}$.",
+       "ur": "جملے $\\underline{a} + \\underline{b}$ میں سمتیوں $\\underline{a}$ اور $\\underline{b}$ کی قیمتیں درج کریں۔"
       },
       {
        "math": "= 7\\underline{i} - 3\\underline{j} + \\underline{i} + 5\\underline{j}",
-       "en": "Multiply each vector by its number.",
-       "ur": "ہر سمتیے کو اس کے عدد سے ضرب دیں۔"
+       "en": "Remove the brackets to combine the terms.",
+       "ur": "رقوم کو یکجا کرنے کے لیے بریکٹ ختم کریں۔"
       },
       {
-       "math": "= 8\\underline{i} + 2\\underline{j}",
-       "en": "Add the $\\underline{i}$ parts and the $\\underline{j}$ parts.",
-       "ur": "$\\underline{i}$ والے اور $\\underline{j}$ والے حصے الگ الگ جمع کریں۔",
+       "math": "= \\left(7 + 1\\right)\\underline{i} + \\left(-3 + 5\\right)\\underline{j}",
+       "en": "To add two vectors, we group the $\\underline{i}$ components together and the $\\underline{j}$ components together.",
+       "ur": "دو سمتیوں کو جمع کرنے کے لیے، ہم $\\underline{i}$ کے اجزاء کو ایک ساتھ اور $\\underline{j}$ کے اجزاء کو ایک ساتھ لکھتے ہیں۔"
+      },
+      {
+       "math": "\\underline{a} + \\underline{b} = 8\\underline{i} + 2\\underline{j}",
+       "en": "Add the numbers for each component to get the final resultant vector.",
+       "ur": "حتمی حاصل جمع سمتیہ حاصل کرنے کے لیے ہر جزو کے اعداد کو جمع کریں۔",
        "check": [
+        "7 + 1 == 8",
+        "-3 + 5 == 2",
         "(1)*(7) + (1)*(1) == (8)",
         "(1)*(-3) + (1)*(5) == (2)"
        ]
       }
      ],
      "answer": "$8\\underline{i} + 2\\underline{j}$",
+     "enriched": true,
      "book_key": "8i+2j"
     },
     {
@@ -1970,26 +1983,51 @@
      "prompt": "$\\underline{a} + 3\\underline{b}$",
      "steps": [
       {
+       "math": "\\underline{a} = 7\\underline{i} - 3\\underline{j}, \\quad \\underline{b} = \\underline{i} + 5\\underline{j}",
+       "en": "First, write down the given vectors $\\underline{a}$ and $\\underline{b}$. We need to find the value of $\\underline{a} + 3\\underline{b}$.",
+       "ur": "سب سے پہلے دیے گئے سمتیے $\\underline{a}$ اور $\\underline{b}$ لکھیں۔ ہمیں $\\underline{a} + 3\\underline{b}$ کی قیمت معلوم کرنی ہے۔"
+      },
+      {
        "math": "\\underline{a} + 3\\underline{b} = \\left(7\\underline{i} - 3\\underline{j}\\right) + 3\\left(\\underline{i} + 5\\underline{j}\\right)",
-       "en": "Put in the vectors.",
-       "ur": "سمتیے رکھیں۔"
+       "en": "Substitute the given values of vectors $\\underline{a}$ and $\\underline{b}$ into the expression $\\underline{a} + 3\\underline{b}$.",
+       "ur": "سمتیوں $\\underline{a}$ اور $\\underline{b}$ کی دی گئی قیمتیں جملے $\\underline{a} + 3\\underline{b}$ میں درج کریں۔",
+       "check": [
+        "1*7 == 7",
+        "1*(-3) == -3"
+       ]
       },
       {
        "math": "= 7\\underline{i} - 3\\underline{j} + 3\\underline{i} + 15\\underline{j}",
-       "en": "Multiply each vector by its number.",
-       "ur": "ہر سمتیے کو اس کے عدد سے ضرب دیں۔"
+       "en": "Multiply the scalar $3$ with each component inside the second bracket.",
+       "ur": "عدد $3$ کو دوسری بریکٹ کے اندر موجود ہر جزو سے ضرب دیں۔",
+       "check": [
+        "3*1 == 3",
+        "3*5 == 15"
+       ]
       },
       {
-       "math": "= 10\\underline{i} + 12\\underline{j}",
-       "en": "Add the $\\underline{i}$ parts and the $\\underline{j}$ parts.",
-       "ur": "$\\underline{i}$ والے اور $\\underline{j}$ والے حصے الگ الگ جمع کریں۔",
+       "math": "= \\left(7 + 3\\right)\\underline{i} + \\left(-3 + 15\\right)\\underline{j}",
+       "en": "Group the $\\underline{i}$ components together and the $\\underline{j}$ components together so they can be added.",
+       "ur": "$\\underline{i}$ والے اجزاء اور $\\underline{j}$ والے اجزاء کو الگ الگ اکٹھا کریں تاکہ انہیں جمع کیا جا سکے۔",
        "check": [
+        "7 + 3 == 7 + 3",
+        "-3 + 15 == -3 + 15"
+       ]
+      },
+      {
+       "math": "\\underline{a} + 3\\underline{b} = 10\\underline{i} + 12\\underline{j}",
+       "en": "Add the coefficients of $\\underline{i}$ and $\\underline{j}$ to get the final resultant vector.",
+       "ur": "مطلوبہ سمتیہ حاصل کرنے کے لیے $\\underline{i}$ اور $\\underline{j}$ کے عددی سروں کو جمع کریں۔",
+       "check": [
+        "7 + 3 == 10",
+        "-3 + 15 == 12",
         "(1)*(7) + (3)*(1) == (10)",
         "(1)*(-3) + (3)*(5) == (12)"
        ]
       }
      ],
      "answer": "$10\\underline{i} + 12\\underline{j}$",
+     "enriched": true,
      "book_key": "10i+12j"
     },
     {
@@ -1997,46 +2035,92 @@
      "prompt": "$3\\underline{a} + \\frac{1}{2}\\underline{b}$",
      "steps": [
       {
+       "math": "\\underline{a} = 7\\underline{i} - 3\\underline{j}, \\quad \\underline{b} = \\underline{i} + 5\\underline{j}",
+       "en": "Write down the given vectors $\\underline{a}$ and $\\underline{b}$. We need to find the value of $3\\underline{a} + \\frac{1}{2}\\underline{b}$.",
+       "ur": "دیے گئے سمتیے $\\underline{a}$ اور $\\underline{b}$ لکھیں۔ ہمیں $3\\underline{a} + \\frac{1}{2}\\underline{b}$ کی قیمت معلوم کرنی ہے۔"
+      },
+      {
        "math": "3\\underline{a} + \\frac{1}{2}\\underline{b} = 3\\left(7\\underline{i} - 3\\underline{j}\\right) + \\frac{1}{2}\\left(\\underline{i} + 5\\underline{j}\\right)",
-       "en": "Put in the vectors.",
-       "ur": "سمتیے رکھیں۔"
+       "en": "Substitute the values of vectors $\\underline{a}$ and $\\underline{b}$ into the given expression.",
+       "ur": "دیے گئے جملے میں سمتیوں $\\underline{a}$ اور $\\underline{b}$ کی قیمتیں درج کریں۔"
       },
       {
        "math": "= 21\\underline{i} - 9\\underline{j} + \\frac{1}{2}\\underline{i} + \\frac{5}{2}\\underline{j}",
-       "en": "Multiply each vector by its number.",
-       "ur": "ہر سمتیے کو اس کے عدد سے ضرب دیں۔"
+       "en": "Multiply the scalar $3$ with each component of the first vector, and $\\frac{1}{2}$ with each component of the second vector.",
+       "ur": "عدد $3$ کو پہلے سمتیے کے ہر جزو سے اور $\\frac{1}{2}$ کو دوسرے سمتیے کے ہر جزو سے ضرب دیں۔",
+       "check": [
+        "3*7 == 21",
+        "3*(-3) == -9",
+        "R(1,2)*1 == R(1,2)",
+        "R(1,2)*5 == R(5,2)"
+       ]
+      },
+      {
+       "math": "= \\left(21 + \\frac{1}{2}\\right)\\underline{i} + \\left(-9 + \\frac{5}{2}\\right)\\underline{j}",
+       "en": "Group the $\\underline{i}$ components together and the $\\underline{j}$ components together.",
+       "ur": "$\\underline{i}$ والے اجزاء اور $\\underline{j}$ والے اجزاء کو الگ الگ اکٹھا کریں۔"
+      },
+      {
+       "math": "= \\left(\\frac{42 + 1}{2}\\right)\\underline{i} + \\left(\\frac{-18 + 5}{2}\\right)\\underline{j}",
+       "en": "Take the LCM of the denominators (which is $2$) to add the fractions.",
+       "ur": "کسروں کو حل کرنے کے لیے مخرج کا ذواضعاف اقل (جو کہ $2$ ہے) لیں۔",
+       "check": [
+        "21 + R(1,2) == (42 + 1)/2",
+        "-9 + R(5,2) == (-18 + 5)/2"
+       ]
       },
       {
        "math": "= \\frac{43}{2}\\underline{i} -  \\frac{13}{2}\\underline{j}",
-       "en": "Add the $\\underline{i}$ parts and the $\\underline{j}$ parts.",
-       "ur": "$\\underline{i}$ والے اور $\\underline{j}$ والے حصے الگ الگ جمع کریں۔",
+       "en": "Simplify the numerators to get the final resultant vector.",
+       "ur": "شمار کنندگان کو مختصر کر کے حتمی سمتیہ حاصل کریں۔",
        "check": [
+        "(42 + 1)/2 == R(43,2)",
+        "(-18 + 5)/2 == R(-13,2)",
         "(3)*(7) + (1/2)*(1) == (43/2)",
         "(3)*(-3) + (1/2)*(5) == (-13/2)"
        ]
       }
      ],
      "answer": "$\\frac{43}{2}\\underline{i} -  \\frac{13}{2}\\underline{j}$",
+     "enriched": true,
      "book_key": "\\frac{43}{2}i-\\frac{13}{2}j"
     },
     {
      "label": "iv",
-     "prompt": "$-\\underline{a} + \\underline{b}$",
+     "prompt": "$\\underline{b}-\\underline{a}$",
      "steps": [
       {
+       "math": "\\underline{a} = 7\\underline{i} - 3\\underline{j}, \\quad \\underline{b} = \\underline{i} + 5\\underline{j}",
+       "en": "Write down the given vectors $\\underline{a}$ and $\\underline{b}$. We need to find the difference vector $\\underline{b} - \\underline{a}$.",
+       "ur": "دیے گئے سمتیے $\\underline{a}$ اور $\\underline{b}$ لکھیں۔ ہمیں ان کا فرق $\\underline{b} - \\underline{a}$ معلوم کرنا ہے۔"
+      },
+      {
        "math": "\\underline{b} - \\underline{a} = \\left(\\underline{i} + 5\\underline{j}\\right) - \\left(7\\underline{i} - 3\\underline{j}\\right)",
-       "en": "Put in the vectors.",
-       "ur": "سمتیے رکھیں۔"
+       "en": "Substitute the given values of vectors $\\underline{b}$ and $\\underline{a}$ into the expression $\\underline{b} - \\underline{a}$.",
+       "ur": "سمتیوں $\\underline{b}$ اور $\\underline{a}$ کی دی گئی قیمتیں جملے $\\underline{b} - \\underline{a}$ میں درج کریں۔"
       },
       {
        "math": "= \\underline{i} + 5\\underline{j} - 7\\underline{i} + 3\\underline{j}",
-       "en": "Multiply each vector by its number.",
-       "ur": "ہر سمتیے کو اس کے عدد سے ضرب دیں۔"
+       "en": "Remove the brackets. Multiply the terms inside the second bracket by the negative sign, which changes $-3\\underline{j}$ to $+3\\underline{j}$.",
+       "ur": "بریکٹیں ہٹائیں۔ دوسری بریکٹ کے اندر والی رقموں کو منفی علامت سے ضرب دیں، جس سے $-3\\underline{j}$ بدل کر $+3\\underline{j}$ ہو جائے گا۔",
+       "check": [
+        "-1 * 7 == -7",
+        "-1 * (-3) == 3"
+       ]
       },
       {
-       "math": "= -6\\underline{i} + 8\\underline{j}",
-       "en": "Add the $\\underline{i}$ parts and the $\\underline{j}$ parts.",
-       "ur": "$\\underline{i}$ والے اور $\\underline{j}$ والے حصے الگ الگ جمع کریں۔",
+       "math": "= (1 - 7)\\underline{i} + (5 + 3)\\underline{j}",
+       "en": "To subtract vectors in component form, group the $\\underline{i}$ components together and the $\\underline{j}$ components together.",
+       "ur": "سمتیوں کو تفریق کرنے کے لیے، $\\underline{i}$ والے اجزاء کو ایک ساتھ اور $\\underline{j}$ والے اجزاء کو ایک ساتھ ملا کر لکھیں۔",
+       "check": [
+        "1 - 7 == -6",
+        "5 + 3 == 8"
+       ]
+      },
+      {
+       "math": "\\underline{b} - \\underline{a} = -6\\underline{i} + 8\\underline{j}",
+       "en": "Simplify the coefficients of $\\underline{i}$ and $\\underline{j}$ to get the final resultant vector.",
+       "ur": "$\\underline{i}$ اور $\\underline{j}$ کے عددی سروں کو حل کر کے حتمی سمتیہ حاصل کریں۔",
        "check": [
         "(1)*(1) + (-1)*(7) == (-6)",
         "(1)*(5) + (-1)*(-3) == (8)"
@@ -2044,33 +2128,53 @@
       }
      ],
      "answer": "$-6\\underline{i} + 8\\underline{j}$",
+     "enriched": true,
      "book_key": "-6i+8j"
     },
     {
      "label": "v",
-     "prompt": "$-5\\underline{a} + 4\\underline{b}$",
+     "prompt": "$4\\underline{b}-5\\underline{a}$",
      "steps": [
       {
-       "math": "4\\underline{b} - 5\\underline{a} = 4\\left(\\underline{i} + 5\\underline{j}\\right) - 5\\left(7\\underline{i} - 3\\underline{j}\\right)",
-       "en": "Put in the vectors.",
-       "ur": "سمتیے رکھیں۔"
+       "math": "\\underline{a} = 7\\underline{i} - 3\\underline{j}, \\quad \\underline{b} = \\underline{i} + 5\\underline{j}",
+       "en": "Write down the given vectors $\\underline{a}$ and $\\underline{b}$. We need to find the vector $4\\underline{b} - 5\\underline{a}$.",
+       "ur": "دیے گئے سمتیے $\\underline{a}$ اور $\\underline{b}$ لکھیں۔ ہمیں سمتیہ $4\\underline{b} - 5\\underline{a}$ معلوم کرنا ہے۔"
+      },
+      {
+       "math": "4\\underline{b} - 5\\underline{a} = 4(\\underline{i} + 5\\underline{j}) - 5(7\\underline{i} - 3\\underline{j})",
+       "en": "Substitute the values of vectors $\\underline{b}$ and $\\underline{a}$ into the expression $4\\underline{b} - 5\\underline{a}$.",
+       "ur": "جملے $4\\underline{b} - 5\\underline{a}$ میں سمتیوں $\\underline{b}$ اور $\\underline{a}$ کی قیمتیں درج کریں۔"
       },
       {
        "math": "= 4\\underline{i} + 20\\underline{j} - 35\\underline{i} + 15\\underline{j}",
-       "en": "Multiply each vector by its number.",
-       "ur": "ہر سمتیے کو اس کے عدد سے ضرب دیں۔"
+       "en": "Multiply the first vector by $4$ and the second vector by $-5$ using scalar multiplication.",
+       "ur": "عددی ضرب کے اصول کے تحت پہلے سمتیے کو $4$ سے اور دوسرے سمتیے کو $-5$ سے ضرب دیں۔",
+       "check": [
+        "4 * 1 == 4",
+        "4 * 5 == 20",
+        "-5 * 7 == -35",
+        "-5 * (-3) == 15"
+       ]
       },
       {
-       "math": "= -31\\underline{i} + 35\\underline{j}",
-       "en": "Add the $\\underline{i}$ parts and the $\\underline{j}$ parts.",
-       "ur": "$\\underline{i}$ والے اور $\\underline{j}$ والے حصے الگ الگ جمع کریں۔",
+       "math": "= (4 - 35)\\underline{i} + (20 + 15)\\underline{j}",
+       "en": "Group the $\\underline{i}$ components and the $\\underline{j}$ components together.",
+       "ur": "$\\underline{i}$ والے اجزاء اور $\\underline{j}$ والے اجزاء کو الگ الگ اکٹھا کریں۔"
+      },
+      {
+       "math": "4\\underline{b} - 5\\underline{a} = -31\\underline{i} + 35\\underline{j}",
+       "en": "Simplify the coefficients to get the final resultant vector.",
+       "ur": "عددی سروں کو حل کر کے مطلوبہ حاصل سمتیہ معلوم کریں۔",
        "check": [
+        "4 - 35 == -31",
+        "20 + 15 == 35",
         "(4)*(1) + (-5)*(7) == (-31)",
         "(4)*(5) + (-5)*(-3) == (35)"
        ]
       }
      ],
      "answer": "$-31\\underline{i} + 35\\underline{j}$",
+     "enriched": true,
      "book_key": "-31i+35j"
     },
     {
@@ -2078,26 +2182,52 @@
      "prompt": "$\\frac{3}{2}\\underline{a} - \\underline{b}$",
      "steps": [
       {
+       "math": "\\underline{a} = 7\\underline{i} - 3\\underline{j}, \\quad \\underline{b} = \\underline{i} + 5\\underline{j}",
+       "en": "Write down the given vectors $\\underline{a}$ and $\\underline{b}$. We need to find the value of $\\frac{3}{2}\\underline{a} - \\underline{b}$.",
+       "ur": "دیے گئے سمتیے $\\underline{a}$ اور $\\underline{b}$ لکھیں۔ ہمیں $\\frac{3}{2}\\underline{a} - \\underline{b}$ کی قیمت معلوم کرنی ہے۔"
+      },
+      {
        "math": "\\frac{3}{2}\\underline{a} - \\underline{b} = \\frac{3}{2}\\left(7\\underline{i} - 3\\underline{j}\\right) - \\left(\\underline{i} + 5\\underline{j}\\right)",
-       "en": "Put in the vectors.",
-       "ur": "سمتیے رکھیں۔"
+       "en": "Substitute the given values of vectors $\\underline{a}$ and $\\underline{b}$ into the expression.",
+       "ur": "دیے گئے جملے میں سمتیہ $\\underline{a}$ اور $\\underline{b}$ کی قیمتیں درج کریں۔"
       },
       {
-       "math": "= \\frac{21}{2}\\underline{i} -  \\frac{9}{2}\\underline{j} - \\underline{i} - 5\\underline{j}",
-       "en": "Multiply each vector by its number.",
-       "ur": "ہر سمتیے کو اس کے عدد سے ضرب دیں۔"
-      },
-      {
-       "math": "= \\frac{19}{2}\\underline{i} -  \\frac{19}{2}\\underline{j}",
-       "en": "Add the $\\underline{i}$ parts and the $\\underline{j}$ parts.",
-       "ur": "$\\underline{i}$ والے اور $\\underline{j}$ والے حصے الگ الگ جمع کریں۔",
+       "math": "= \\frac{21}{2}\\underline{i} - \\frac{9}{2}\\underline{j} - \\underline{i} - 5\\underline{j}",
+       "en": "Multiply the scalar $\\frac{3}{2}$ with each component of the first vector and apply the negative sign to each component of the second vector.",
+       "ur": "پہلے سمتیے کے ہر جزو کو عدد $\\frac{3}{2}$ سے ضرب دیں اور دوسرے سمتیے کے ہر جزو کے ساتھ منفی کی علامت لگائیں۔",
        "check": [
+        "R(3,2)*7 == R(21,2)",
+        "R(3,2)*(-3) == -R(9,2)"
+       ]
+      },
+      {
+       "math": "= \\left(\\frac{21}{2} - 1\\right)\\underline{i} + \\left(-\\frac{9}{2} - 5\\right)\\underline{j}",
+       "en": "Group the $\\underline{i}$ components together and the $\\underline{j}$ components together.",
+       "ur": "$\\underline{i}$ والے اجزاء اور $\\underline{j}$ والے اجزاء کو الگ الگ اکٹھا کریں۔"
+      },
+      {
+       "math": "= \\left(\\frac{21 - 2}{2}\\right)\\underline{i} + \\left(\\frac{-9 - 10}{2}\\right)\\underline{j}",
+       "en": "Take the LCM of the fractions in each group to simplify.",
+       "ur": "مختصر کرنے کے لیے ہر گروپ میں کسروں کا ذواضعاف اقل (LCM) لیں۔",
+       "check": [
+        "R(21,2) - 1 == R(21 - 2, 2)",
+        "-R(9,2) - 5 == R(-9 - 10, 2)"
+       ]
+      },
+      {
+       "math": "\\frac{3}{2}\\underline{a} - \\underline{b} = \\frac{19}{2}\\underline{i} -  \\frac{19}{2}\\underline{j}",
+       "en": "Simplify the numerators to get the final resultant vector.",
+       "ur": "شمار کنندگان کو حل کر کے حتمی حاصل سمتیہ معلوم کریں۔",
+       "check": [
+        "R(21 - 2, 2) == R(19, 2)",
+        "R(-9 - 10, 2) == -R(19, 2)",
         "(3/2)*(7) + (-1)*(1) == (19/2)",
         "(3/2)*(-3) + (-1)*(5) == (-19/2)"
        ]
       }
      ],
      "answer": "$\\frac{19}{2}\\underline{i} -  \\frac{19}{2}\\underline{j}$",
+     "enriched": true,
      "book_key": "\\frac{19}{2}i-\\frac{19}{2}j"
     }
    ],
@@ -2115,34 +2245,56 @@
      "prompt": "$\\underline{b}-\\underline{c}$",
      "steps": [
       {
+       "math": "\\underline{b} = \\underline{i} + 5\\underline{j}, \\quad \\underline{c} = 3\\underline{i} + 5\\underline{j}",
+       "en": "Write down the given vectors $\\underline{b}$ and $\\underline{c}$. We need to find the magnitude of $\\underline{b} - \\underline{c}$.",
+       "ur": "دیے گئے سمتیے $\\underline{b}$ اور $\\underline{c}$ لکھیں۔ ہمیں $\\underline{b} - \\underline{c}$ کی مقدار معلوم کرنی ہے۔"
+      },
+      {
        "math": "\\underline{b} - \\underline{c} = \\left(\\underline{i} + 5\\underline{j}\\right) - \\left(3\\underline{i} + 5\\underline{j}\\right)",
-       "en": "Put in the vectors.",
-       "ur": "سمتیے رکھیں۔"
+       "en": "Substitute the values of vectors $\\underline{b}$ and $\\underline{c}$ into the expression $\\underline{b} - \\underline{c}$.",
+       "ur": "جملے $\\underline{b} - \\underline{c}$ میں سمتیوں $\\underline{b}$ اور $\\underline{c}$ کی قیمتیں درج کریں۔"
       },
       {
-       "math": "= \\underline{i} + 5\\underline{j} - 3\\underline{i} - 5\\underline{j}",
-       "en": "Multiply each vector by its number.",
-       "ur": "ہر سمتیے کو اس کے عدد سے ضرب دیں۔"
+       "math": "\\underline{b} - \\underline{c} = \\underline{i} + 5\\underline{j} - 3\\underline{i} - 5\\underline{j}",
+       "en": "Remove the brackets and change the signs of the terms inside the second bracket.",
+       "ur": "بریکٹ ہٹائیں اور دوسری بریکٹ کے اندر والی رقموں کی علامتیں تبدیل کریں۔"
       },
       {
-       "math": "= -2\\underline{i}",
-       "en": "Add the $\\underline{i}$ parts and the $\\underline{j}$ parts.",
-       "ur": "$\\underline{i}$ والے اور $\\underline{j}$ والے حصے الگ الگ جمع کریں۔",
+       "math": "\\underline{b} - \\underline{c} = (1 - 3)\\underline{i} + (5 - 5)\\underline{j} = -2\\underline{i} + 0\\underline{j}",
+       "en": "Combine the $\\underline{i}$ components and the $\\underline{j}$ components separately.",
+       "ur": "$\\underline{i}$ والے اجزاء اور $\\underline{j}$ والے اجزاء کو الگ الگ یکجا کریں۔",
        "check": [
-        "(1)*(1) + (-1)*(3) == (-2)",
-        "(1)*(5) + (-1)*(5) == (0)"
+        "1 - 3 == -2",
+        "5 - 5 == 0"
        ]
       },
       {
-       "math": "|v| = \\sqrt{(-2)^2 + (0)^2} = \\sqrt{4 + 0} = 2",
-       "en": "Magnitude $= \\sqrt{x^2 + y^2}$.",
-       "ur": "مقدار $= \\sqrt{x^2 + y^2}$۔",
+       "math": "|\\underline{v}| = \\sqrt{x^2 + y^2}",
+       "en": "Recall the formula for the magnitude of a vector $\\underline{v} = x\\underline{i} + y\\underline{j}$.",
+       "ur": "کسی سمتیے $\\underline{v} = x\\underline{i} + y\\underline{j}$ کی مقدار معلوم کرنے کا کلیہ لکھیں۔"
+      },
+      {
+       "math": "|\\underline{b} - \\underline{c}| = \\sqrt{(-2)^2 + (0)^2}",
+       "en": "Substitute $x = -2$ and $y = 0$ into the magnitude formula.",
+       "ur": "مقدار کے کلیے میں $x = -2$ اور $y = 0$ درج کریں۔"
+      },
+      {
+       "math": "|\\underline{b} - \\underline{c}| = \\sqrt{4 + 0} = \\sqrt{4} = 2",
+       "en": "Simplify the expression and take the square root to get the final answer.",
+       "ur": "جملے کو مختصر کریں اور حتمی جواب حاصل کرنے کے لیے جزر المربع لیں۔",
        "check": [
+        "(-2)**2 == 4",
+        "0**2 == 0",
+        "4 + 0 == 4",
+        "sqrt(4) == 2",
+        "(1)*(1) + (-1)*(3) == (-2)",
+        "(1)*(5) + (-1)*(5) == (0)",
         "sqrt((-2)**2 + (0)**2) == (2)"
        ]
       }
      ],
      "answer": "$2$",
+     "enriched": true,
      "book_key": "2"
     },
     {
@@ -2150,34 +2302,60 @@
      "prompt": "$\\underline{a}-2\\underline{b}+\\underline{c}$",
      "steps": [
       {
+       "math": "\\underline{a} = 6\\underline{i} - \\underline{j}, \\quad \\underline{b} = \\underline{i} + 5\\underline{j}, \\quad \\underline{c} = 3\\underline{i} + 5\\underline{j}",
+       "en": "First, write down the given vectors. We need to find the magnitude of the vector $\\underline{a} - 2\\underline{b} + \\underline{c}$.",
+       "ur": "سب سے پہلے دیے گئے سمتیے (vectors) لکھیں۔ ہمیں سمتیے $\\underline{a} - 2\\underline{b} + \\underline{c}$ کی مقدار (magnitude) معلوم کرنی ہے۔"
+      },
+      {
        "math": "\\underline{a} - 2\\underline{b} + \\underline{c} = \\left(6\\underline{i} - \\underline{j}\\right) - 2\\left(\\underline{i} + 5\\underline{j}\\right) + \\left(3\\underline{i} + 5\\underline{j}\\right)",
-       "en": "Put in the vectors.",
-       "ur": "سمتیے رکھیں۔"
+       "en": "Substitute the values of vectors $\\underline{a}$, $\\underline{b}$, and $\\underline{c}$ into the expression $\\underline{a} - 2\\underline{b} + \\underline{c}$.",
+       "ur": "جملے $\\underline{a} - 2\\underline{b} + \\underline{c}$ میں سمتیوں $\\underline{a}$، $\\underline{b}$ اور $\\underline{c}$ کی قیمتیں درج کریں۔"
       },
       {
        "math": "= 6\\underline{i} - \\underline{j} - 2\\underline{i} - 10\\underline{j} + 3\\underline{i} + 5\\underline{j}",
-       "en": "Multiply each vector by its number.",
-       "ur": "ہر سمتیے کو اس کے عدد سے ضرب دیں۔"
-      },
-      {
-       "math": "= 7\\underline{i} - 6\\underline{j}",
-       "en": "Add the $\\underline{i}$ parts and the $\\underline{j}$ parts.",
-       "ur": "$\\underline{i}$ والے اور $\\underline{j}$ والے حصے الگ الگ جمع کریں۔",
+       "en": "Expand the brackets by multiplying the second vector by $-2$.",
+       "ur": "دوسرے سمتیے کو $-2$ سے ضرب دے کر بریکٹیں کھولیں۔",
        "check": [
-        "(1)*(6) + (-2)*(1) + (1)*(3) == (7)",
-        "(1)*(-1) + (-2)*(5) + (1)*(5) == (-6)"
+        "(-2)*(1) == -2",
+        "(-2)*(5) == -10"
        ]
       },
       {
-       "math": "|v| = \\sqrt{(7)^2 + (-6)^2} = \\sqrt{49 + 36} = \\sqrt{85}",
-       "en": "Magnitude $= \\sqrt{x^2 + y^2}$.",
-       "ur": "مقدار $= \\sqrt{x^2 + y^2}$۔",
+       "math": "= (6 - 2 + 3)\\underline{i} + (-1 - 10 + 5)\\underline{j} = 7\\underline{i} - 6\\underline{j}",
+       "en": "Group the $\\underline{i}$ components and the $\\underline{j}$ components together and simplify.",
+       "ur": "$\\underline{i}$ کے اجزاء اور $\\underline{j}$ کے اجزاء کو الگ الگ اکٹھا کریں اور مختصر کریں۔",
        "check": [
+        "6 - 2 + 3 == 7",
+        "-1 - 10 + 5 == -6"
+       ]
+      },
+      {
+       "math": "|\\underline{v}| = \\sqrt{x^2 + y^2}",
+       "en": "Now, use the magnitude formula for a vector $\\underline{v} = x\\underline{i} + y\\underline{j}$. Here, $x = 7$ and $y = -6$.",
+       "ur": "اب، سمتیے $\\underline{v} = x\\underline{i} + y\\underline{j}$ کی مقدار کا فارمولا استعمال کریں۔ یہاں $x = 7$ اور $y = -6$ ہے۔"
+      },
+      {
+       "math": "|\\underline{a} - 2\\underline{b} + \\underline{c}| = \\sqrt{(7)^2 + (-6)^2}",
+       "en": "Substitute $x = 7$ and $y = -6$ into the magnitude formula.",
+       "ur": "مقدار کے فارمولے میں $x = 7$ اور $y = -6$ درج کریں۔"
+      },
+      {
+       "math": "= \\sqrt{49 + 36} = \\sqrt{85}",
+       "en": "Calculate the squares and add them to get the final magnitude.",
+       "ur": "مربع معلوم کریں اور انہیں جمع کر کے حتمی مقدار حاصل کریں۔",
+       "check": [
+        "(7)**2 == 49",
+        "(-6)**2 == 36",
+        "49 + 36 == 85",
+        "sqrt((7)**2 + (-6)**2) == sqrt(85)",
+        "(1)*(6) + (-2)*(1) + (1)*(3) == (7)",
+        "(1)*(-1) + (-2)*(5) + (1)*(5) == (-6)",
         "sqrt((7)**2 + (-6)**2) == (sqrt(85))"
        ]
       }
      ],
      "answer": "$\\sqrt{85}$",
+     "enriched": true,
      "book_key": "\\sqrt{85}"
     },
     {
@@ -2185,34 +2363,63 @@
      "prompt": "$\\underline{c}-\\underline{b}-\\underline{a}$",
      "steps": [
       {
+       "math": "\\underline{a} = 6\\underline{i} - \\underline{j}, \\quad \\underline{b} = \\underline{i} + 5\\underline{j}, \\quad \\underline{c} = 3\\underline{i} + 5\\underline{j}",
+       "en": "First, write down the given vectors. We need to find the magnitude of the vector $\\underline{c} - \\underline{b} - \\underline{a}$.",
+       "ur": "سب سے پہلے دیے گئے سمتیے لکھیں۔ ہمیں سمتیہ $\\underline{c} - \\underline{b} - \\underline{a}$ کی مقدار معلوم کرنی ہے۔"
+      },
+      {
        "math": "\\underline{c} - \\underline{b} - \\underline{a} = \\left(3\\underline{i} + 5\\underline{j}\\right) - \\left(\\underline{i} + 5\\underline{j}\\right) - \\left(6\\underline{i} - \\underline{j}\\right)",
-       "en": "Put in the vectors.",
-       "ur": "سمتیے رکھیں۔"
+       "en": "Substitute the values of vectors $\\underline{a}$, $\\underline{b}$, and $\\underline{c}$ into the expression $\\underline{c} - \\underline{b} - \\underline{a}$.",
+       "ur": "عبارت $\\underline{c} - \\underline{b} - \\underline{a}$ میں سمتیوں $\\underline{a}$، $\\underline{b}$ اور $\\underline{c}$ کی قیمتیں درج کریں۔"
       },
       {
-       "math": "= 3\\underline{i} + 5\\underline{j} - \\underline{i} - 5\\underline{j} - 6\\underline{i} + \\underline{j}",
-       "en": "Multiply each vector by its number.",
-       "ur": "ہر سمتیے کو اس کے عدد سے ضرب دیں۔"
-      },
-      {
-       "math": "= -4\\underline{i} + \\underline{j}",
-       "en": "Add the $\\underline{i}$ parts and the $\\underline{j}$ parts.",
-       "ur": "$\\underline{i}$ والے اور $\\underline{j}$ والے حصے الگ الگ جمع کریں۔",
+       "math": "\\underline{c} - \\underline{b} - \\underline{a} = 3\\underline{i} + 5\\underline{j} - \\underline{i} - 5\\underline{j} - 6\\underline{i} + \\underline{j}",
+       "en": "Remove the brackets and change the signs of the terms inside the subtracted brackets.",
+       "ur": "بریکٹ ہٹائیں اور تفریق ہونے والی بریکٹس کے اندر کی رقموں کی علامتیں تبدیل کریں۔",
        "check": [
-        "(1)*(3) + (-1)*(1) + (-1)*(6) == (-4)",
-        "(1)*(5) + (-1)*(5) + (-1)*(-1) == (1)"
+        "(1)*(3) == 3",
+        "(1)*(5) == 5",
+        "(-1)*(1) == -1",
+        "(-1)*(5) == -5",
+        "(-1)*(6) == -6",
+        "(-1)*(-1) == 1"
        ]
       },
       {
-       "math": "|v| = \\sqrt{(-4)^2 + (1)^2} = \\sqrt{16 + 1} = \\sqrt{17}",
-       "en": "Magnitude $= \\sqrt{x^2 + y^2}$.",
-       "ur": "مقدار $= \\sqrt{x^2 + y^2}$۔",
+       "math": "\\underline{c} - \\underline{b} - \\underline{a} = (3 - 1 - 6)\\underline{i} + (5 - 5 + 1)\\underline{j} = -4\\underline{i} + \\underline{j}",
+       "en": "Group and add the $\\underline{i}$ components together and the $\\underline{j}$ components together.",
+       "ur": "$\\underline{i}$ کے اجزاء کو ایک ساتھ اور $\\underline{j}$ کے اجزاء کو ایک ساتھ ملا کر حل کریں۔",
        "check": [
+        "3 - 1 - 6 == -4",
+        "5 - 5 + 1 == 1"
+       ]
+      },
+      {
+       "math": "|\\underline{v}| = \\sqrt{x^2 + y^2}",
+       "en": "The magnitude of a vector $\\underline{v} = x\\underline{i} + y\\underline{j}$ is calculated using the formula $\\sqrt{x^2 + y^2}$. Here, $x = -4$ and $y = 1$.",
+       "ur": "کسی سمتیے $\\underline{v} = x\\underline{i} + y\\underline{j}$ کی مقدار معلوم کرنے کا کلیہ $\\sqrt{x^2 + y^2}$ ہے۔ یہاں $x = -4$ اور $y = 1$ ہے۔"
+      },
+      {
+       "math": "|\\underline{c} - \\underline{b} - \\underline{a}| = \\sqrt{(-4)^2 + (1)^2}",
+       "en": "Substitute $x = -4$ and $y = 1$ into the magnitude formula.",
+       "ur": "مقدار کے کلیے میں $x = -4$ اور $y = 1$ درج کریں۔"
+      },
+      {
+       "math": "|\\underline{c} - \\underline{b} - \\underline{a}| = \\sqrt{16 + 1} = \\sqrt{17}",
+       "en": "Simplify the squares and add them to get the final magnitude.",
+       "ur": "مربع کھول کر جمع کریں، یوں مطلوبہ سمتیے کی مقدار $\\sqrt{17}$ حاصل ہوتی ہے۔",
+       "check": [
+        "(-4)**2 == 16",
+        "(1)**2 == 1",
+        "sqrt(16 + 1) == sqrt(17)",
+        "(1)*(3) + (-1)*(1) + (-1)*(6) == (-4)",
+        "(1)*(5) + (-1)*(5) + (-1)*(-1) == (1)",
         "sqrt((-4)**2 + (1)**2) == (sqrt(17))"
        ]
       }
      ],
      "answer": "$\\sqrt{17}$",
+     "enriched": true,
      "book_key": "\\sqrt{17}"
     }
    ],
@@ -2230,26 +2437,50 @@
      "prompt": "$(x\\underline{i}+y\\underline{j})+(2\\underline{i}+3\\underline{j})=7\\underline{i}+6\\underline{j}$",
      "steps": [
       {
-       "math": "(x\\underline{i} + y\\underline{j}) + (2\\underline{i} + 3\\underline{j}) = (x + 2)\\underline{i} + (y + 3)\\underline{j} = 7\\underline{i} + 6\\underline{j}",
-       "en": "Collect the $\\underline{i}$ terms and the $\\underline{j}$ terms.",
-       "ur": "$\\underline{i}$ والے اور $\\underline{j}$ والے ارکان اکٹھے کریں۔"
+       "math": "(x\\underline{i}+y\\underline{j})+(2\\underline{i}+3\\underline{j})=7\\underline{i}+6\\underline{j}",
+       "en": "Write the given vector equation to find the unknown values of $x$ and $y$.",
+       "ur": "$x$ اور $y$ کی نامعلوم قیمتیں معلوم کرنے کے لیے دی گئی سمتیہ مساوات لکھیں۔"
+      },
+      {
+       "math": "(x+2)\\underline{i} + (y+3)\\underline{j} = 7\\underline{i} + 6\\underline{j}",
+       "en": "By the rule of vector addition, group the $\\underline{i}$ components together and the $\\underline{j}$ components together on the left-hand side.",
+       "ur": "سمتیوں کی جمع کے اصول کے مطابق، بائیں جانب $\\underline{i}$ والے اجزاء اور $\\underline{j}$ والے اجزاء کو الگ الگ اکٹھا کریں۔"
       },
       {
        "math": "x + 2 = 7,\\quad y + 3 = 6",
-       "en": "Equal vectors have equal components: compare the coefficients.",
-       "ur": "مساوی سمتیوں کے اجزاء برابر ہوتے ہیں: عددی سروں کا موازنہ کریں۔"
+       "en": "Since two vectors are equal if and only if their corresponding components are equal, compare the coefficients of $\\underline{i}$ and $\\underline{j}$ on both sides.",
+       "ur": "چونکہ دو سمتیے صرف اسی صورت میں برابر ہوتے ہیں جب ان کے متناظرہ اجزاء برابر ہوں، اس لیے دونوں طرف $\\underline{i}$ اور $\\underline{j}$ کے عددی سروں کا موازنہ کریں۔"
+      },
+      {
+       "math": "x = 7 - 2 = 5",
+       "en": "Solve the first equation for $x$ by subtracting $2$ from both sides.",
+       "ur": "دونوں طرف سے $2$ تفریق کر کے پہلی مساوات کو $x$ کے لیے حل کریں۔",
+       "check": [
+        "7 - 2 == 5"
+       ]
+      },
+      {
+       "math": "y = 6 - 3 = 3",
+       "en": "Solve the second equation for $y$ by subtracting $3$ from both sides.",
+       "ur": "دونوں طرف سے $3$ تفریق کر کے دوسری مساوات کو $y$ کے لیے حل کریں۔",
+       "check": [
+        "6 - 3 == 3"
+       ]
       },
       {
        "math": "x = 5,\\quad y = 3",
-       "en": "Solve.",
-       "ur": "حل کریں۔",
+       "en": "Hence, the required values of $x$ and $y$ are $5$ and $3$ respectively.",
+       "ur": "پس، $x$ اور $y$ کی مطلوبہ قیمتیں بالترتیب $5$ اور $3$ ہیں۔",
        "check": [
+        "(x + 2).subs({x: 5, y: 3}) == 7",
+        "(y + 3).subs({x: 5, y: 3}) == 6",
         "(x + 2).subs({x: (5), y: (3)}) == (7)",
         "(y + 3).subs({x: (5), y: (3)}) == (6)"
        ]
       }
      ],
      "answer": "$x = 5,\\ y = 3$",
+     "enriched": true,
      "book_key": "x=5, y=3"
     },
     {
@@ -2257,19 +2488,40 @@
      "prompt": "$(x\\underline{i}-5\\underline{j})+(3\\underline{i}+5\\underline{j})=-8\\underline{i}+y\\underline{j}$",
      "steps": [
       {
-       "math": "(x\\underline{i} - 5\\underline{j}) + (3\\underline{i} + 5\\underline{j}) = (x + 3)\\underline{i} + 0\\underline{j} = -8\\underline{i} + y\\underline{j}",
-       "en": "Collect the components.",
-       "ur": "اجزاء اکٹھے کریں۔"
+       "math": "(x\\underline{i} - 5\\underline{j}) + (3\\underline{i} + 5\\underline{j}) = -8\\underline{i} + y\\underline{j}",
+       "en": "Write down the given vector equation to find the unknown values of $x$ and $y$.",
+       "ur": "دی گئی ویکٹر مساوات لکھیں تاکہ $x$ اور $y$ کی نامعلوم قیمتیں معلوم کی جا سکیں۔"
       },
       {
-       "math": "x + 3 = -8,\\quad y = 0",
-       "en": "Compare the coefficients.",
-       "ur": "عددی سروں کا موازنہ کریں۔"
+       "math": "(x + 3)\\underline{i} + (-5 + 5)\\underline{j} = -8\\underline{i} + y\\underline{j}",
+       "en": "Add the two vectors on the left-hand side by combining the corresponding $\\underline{i}$ and $\\underline{j}$ components.",
+       "ur": "بائیں طرف موجود دونوں ویکٹرز کو ان کے متعلقہ $\\underline{i}$ اور $\\underline{j}$ اجزاء کو ملا کر جمع کریں۔"
+      },
+      {
+       "math": "(x + 3)\\underline{i} + 0\\underline{j} = -8\\underline{i} + y\\underline{j}",
+       "en": "Simplify the coefficient of $\\underline{j}$ on the left-hand side since $-5 + 5 = 0$.",
+       "ur": "بائیں طرف $\\underline{j}$ کے عددی سر کو مختصر کریں کیونکہ $-5 + 5 = 0$ ہوتا ہے۔",
+       "check": [
+        "-5 + 5 == 0"
+       ]
+      },
+      {
+       "math": "x + 3 = -8,\\quad 0 = y",
+       "en": "By definition of equality of vectors, equate the corresponding coefficients of $\\underline{i}$ and $\\underline{j}$ on both sides.",
+       "ur": "مساوی ویکٹرز کی تعریف کے مطابق، دونوں اطراف سے $\\underline{i}$ اور $\\underline{j}$ کے متعلقہ عددی سروں کا موازنہ کریں۔"
+      },
+      {
+       "math": "x = -8 - 3 = -11",
+       "en": "Solve the first equation for $x$ by subtracting $3$ from both sides.",
+       "ur": "دونوں اطراف سے $3$ تفریق کر کے پہلی مساوات کو $x$ کے لیے حل کریں۔",
+       "check": [
+        "-8 - 3 == -11"
+       ]
       },
       {
        "math": "x = -11,\\quad y = 0",
-       "en": "Solve.",
-       "ur": "حل کریں۔",
+       "en": "Hence, state the final values of $x$ and $y$.",
+       "ur": "پس، $x$ اور $y$ کی حتمی قیمتیں درج کریں۔",
        "check": [
         "-11 + 3 == -8",
         "-5 + 5 == 0"
@@ -2277,6 +2529,7 @@
       }
      ],
      "answer": "$x = -11,\\ y = 0$",
+     "enriched": true,
      "book_key": "x=-11, y=0"
     },
     {
@@ -2284,26 +2537,53 @@
      "prompt": "$(y\\underline{i}+3\\underline{j})+(-5\\underline{i}+2x\\underline{j})=9\\underline{i}+7\\underline{j}$",
      "steps": [
       {
-       "math": "(y\\underline{i} + 3\\underline{j}) + (-5\\underline{i} + 2x\\underline{j}) = (y - 5)\\underline{i} + (2 x + 3)\\underline{j} = 9\\underline{i} + 7\\underline{j}",
-       "en": "Collect the $\\underline{i}$ terms and the $\\underline{j}$ terms.",
-       "ur": "$\\underline{i}$ والے اور $\\underline{j}$ والے ارکان اکٹھے کریں۔"
+       "math": "(y\\underline{i} + 3\\underline{j}) + (-5\\underline{i} + 2x\\underline{j}) = 9\\underline{i} + 7\\underline{j}",
+       "en": "Write down the given vector equation to find the unknown values of $x$ and $y$.",
+       "ur": "$x$ اور $y$ کی نامعلوم قیمتیں معلوم کرنے کے لیے دی گئی سمتی مساوات لکھیں۔"
       },
       {
-       "math": "y - 5 = 9,\\quad 2 x + 3 = 7",
-       "en": "Equal vectors have equal components: compare the coefficients.",
-       "ur": "مساوی سمتیوں کے اجزاء برابر ہوتے ہیں: عددی سروں کا موازنہ کریں۔"
+       "math": "(y - 5)\\underline{i} + (3 + 2x)\\underline{j} = 9\\underline{i} + 7\\underline{j}",
+       "en": "Add the two vectors on the left-hand side by combining the $\\underline{i}$ components together and the $\\underline{j}$ components together.",
+       "ur": "بائیں جانب موجود دونوں سمتیوں کو جمع کرنے کے لیے $\\underline{i}$ والے اجزاء اور $\\underline{j}$ والے اجزاء کو الگ الگ اکٹھا کریں۔"
+      },
+      {
+       "math": "y - 5 = 9 \\quad \\text{and} \\quad 3 + 2x = 7",
+       "en": "Two vectors are equal if and only if their corresponding components are equal. Compare the coefficients of $\\underline{i}$ and $\\underline{j}$ on both sides.",
+       "ur": "دو سمتیے تبھی برابر ہوتے ہیں جب ان کے متناظرہ اجزاء برابر ہوں۔ دونوں اطراف میں $\\underline{i}$ اور $\\underline{j}$ کے عددی سروں کا موازنہ کریں۔"
+      },
+      {
+       "math": "y = 9 + 5 = 14",
+       "en": "Solve the first equation for $y$ by adding $5$ to both sides.",
+       "ur": "پہلی مساوات کو $y$ کے لیے حل کرنے کے لیے دونوں اطراف میں $5$ جمع کریں۔",
+       "check": [
+        "9 + 5 == 14",
+        "(y - 5).subs(y, 14) == 9"
+       ]
+      },
+      {
+       "math": "2x = 7 - 3 = 4 \\implies x = \\frac{4}{2} = 2",
+       "en": "Solve the second equation for $x$ by subtracting $3$ from both sides and then dividing by $2$.",
+       "ur": "دوسری مساوات کو $x$ کے لیے حل کرنے کے لیے دونوں اطراف سے $3$ تفریق کریں اور پھر $2$ پر تقسیم کریں۔",
+       "check": [
+        "7 - 3 == 4",
+        "R(4, 2) == 2",
+        "(3 + 2*x).subs(x, 2) == 7"
+       ]
       },
       {
        "math": "x = 2,\\quad y = 14",
-       "en": "Solve.",
-       "ur": "حل کریں۔",
+       "en": "State the final values of $x$ and $y$.",
+       "ur": "$x$ اور $y$ کی حتمی قیمتیں بیان کریں۔",
        "check": [
+        "(y - 5).subs({x: 2, y: 14}) == 9",
+        "(2*x + 3).subs({x: 2, y: 14}) == 7",
         "(y - 5).subs({x: (2), y: (14)}) == (9)",
         "(2*x + 3).subs({x: (2), y: (14)}) == (7)"
        ]
       }
      ],
      "answer": "$x = 2,\\ y = 14$",
+     "enriched": true,
      "book_key": "x=2, y=14"
     }
    ],
@@ -2321,29 +2601,55 @@
      "prompt": "",
      "steps": [
       {
-       "math": "2\\underline{b} = \\underline{c} - \\underline{a} = (2\\underline{i} + \\underline{j}) - (\\underline{i} + 3\\underline{j}) = \\underline{i} - 2\\underline{j}",
-       "en": "Make $\\underline{b}$ the subject.",
-       "ur": "$\\underline{b}$ کو موضوع بنائیں۔",
+       "math": "\\underline{a} = \\underline{i} + 3\\underline{j}, \\quad \\underline{c} = 2\\underline{i} + \\underline{j}, \\quad \\underline{a} + 2\\underline{b} = \\underline{c}",
+       "en": "Write down the given vectors $\\underline{a}$ and $\\underline{c}$, and the given vector equation. We need to find the magnitude $|\\underline{b}|$.",
+       "ur": "دیے گئے ویکٹرز $\\underline{a}$ اور $\\underline{c}$، اور دی گئی ویکٹر مساوات لکھیں۔ ہمیں مقدار $|\\underline{b}|$ معلوم کرنی ہے۔"
+      },
+      {
+       "math": "2\\underline{b} = \\underline{c} - \\underline{a}",
+       "en": "Rearrange the given equation to isolate the term with vector $\\underline{b}$ on the left side.",
+       "ur": "ویکٹر $\\underline{b}$ والی رقم کو بائیں طرف الگ کرنے کے لیے دی گئی مساوات کو ترتیب دیں۔"
+      },
+      {
+       "math": "2\\underline{b} = (2\\underline{i} + \\underline{j}) - (\\underline{i} + 3\\underline{j}) = (2 - 1)\\underline{i} + (1 - 3)\\underline{j} = \\underline{i} - 2\\underline{j}",
+       "en": "Substitute the given values of $\\underline{a}$ and $\\underline{c}$, then subtract the corresponding $\\underline{i}$ and $\\underline{j}$ components.",
+       "ur": "$\\underline{a}$ اور $\\underline{c}$ کی دی گئی قیمتیں درج کریں، پھر متعلقہ $\\underline{i}$ اور $\\underline{j}$ اجزاء کو تفریق کریں۔",
        "check": [
         "2 - 1 == 1",
         "1 - 3 == -2"
        ]
       },
       {
-       "math": "\\underline{b} = \\frac{1}{2}\\underline{i} - \\underline{j}",
-       "en": "Divide by 2.",
-       "ur": "2 سے تقسیم کریں۔"
+       "math": "\\underline{b} = \\frac{1}{2}(\\underline{i} - 2\\underline{j}) = \\frac{1}{2}\\underline{i} - \\underline{j}",
+       "en": "Divide both sides by $2$ to find the vector $\\underline{b}$.",
+       "ur": "ویکٹر $\\underline{b}$ معلوم کرنے کے لیے دونوں طرف $2$ سے تقسیم کریں۔",
+       "check": [
+        "R(1, 2) * 1 == R(1, 2)",
+        "R(1, 2) * (-2) == -1"
+       ]
       },
       {
-       "math": "|b| = \\sqrt{(\\frac{1}{2})^2 + (-1)^2} = \\sqrt{\\frac{1}{4} + 1} = \\frac{\\sqrt{5}}{2}",
-       "en": "Magnitude $= \\sqrt{x^2 + y^2}$.",
-       "ur": "مقدار $= \\sqrt{x^2 + y^2}$۔",
+       "math": "|\\underline{b}| = \\sqrt{x^2 + y^2} = \\sqrt{\\left(\\frac{1}{2}\\right)^2 + (-1)^2}",
+       "en": "Apply the magnitude formula $|\\underline{v}| = \\sqrt{x^2 + y^2}$ for $\\underline{b}$, where $x = \\frac{1}{2}$ and $y = -1$.",
+       "ur": "ویکٹر $\\underline{b}$ کے لیے مقدار کا فارمولا $|\\underline{v}| = \\sqrt{x^2 + y^2}$ لگائیں، جہاں $x = \\frac{1}{2}$ اور $y = -1$ ہے۔"
+      },
+      {
+       "math": "|\\underline{b}| = \\sqrt{\\frac{1}{4} + 1} = \\sqrt{\\frac{5}{4}} = \\frac{\\sqrt{5}}{2}",
+       "en": "Simplify the terms under the square root to get the final magnitude $|\\underline{b}| = \\frac{\\sqrt{5}}{2}$.",
+       "ur": "حتمی مقدار $|\\underline{b}| = \\frac{\\sqrt{5}}{2}$ حاصل کرنے کے لیے جزر کے نیچے موجود رقوم کو مختصر کریں۔",
        "check": [
+        "R(1, 2)**2 == R(1, 4)",
+        "(-1)**2 == 1",
+        "R(1, 4) + 1 == R(5, 4)",
+        "sqrt(R(5, 4)) == sqrt(5)/2",
+        "2 - 1 == 1",
+        "1 - 3 == -2",
         "sqrt((1/2)**2 + (-1)**2) == (sqrt(5)/2)"
        ]
       }
      ],
      "answer": "$\\frac{\\sqrt{5}}{2}$",
+     "enriched": true,
      "book_key": "\\frac{\\sqrt{5}}{2}"
     }
    ],
@@ -2361,31 +2667,50 @@
      "prompt": "",
      "steps": [
       {
+       "math": "\\underline{a} = -2\\underline{i} + 7\\underline{j}, \\quad \\underline{b} = 3\\underline{i} - 5\\underline{j}",
+       "en": "Write down the given vectors $\\underline{a}$ and $\\underline{b}$. We need to find the resultant vector and the components of $\\underline{a} + 5\\underline{b}$.",
+       "ur": "دیے گئے سمتیے $\\underline{a}$ اور $\\underline{b}$ لکھیں۔ ہمیں $\\underline{a} + 5\\underline{b}$ کا حاصل سمتیہ اور اس کے اجزاء معلوم کرنے ہیں۔"
+      },
+      {
        "math": "\\underline{a} + 5\\underline{b} = \\left(-2\\underline{i} + 7\\underline{j}\\right) + 5\\left(3\\underline{i} - 5\\underline{j}\\right)",
-       "en": "Put in the vectors.",
-       "ur": "سمتیے رکھیں۔"
+       "en": "Substitute the given expressions for vectors $\\underline{a}$ and $\\underline{b}$ into $\\underline{a} + 5\\underline{b}$.",
+       "ur": "$\\underline{a} + 5\\underline{b}$ میں سمتیوں $\\underline{a}$ اور $\\underline{b}$ کی دی گئی قیمتیں درج کریں۔"
       },
       {
        "math": "= -2\\underline{i} + 7\\underline{j} + 15\\underline{i} - 25\\underline{j}",
-       "en": "Multiply each vector by its number.",
-       "ur": "ہر سمتیے کو اس کے عدد سے ضرب دیں۔"
+       "en": "Multiply the scalar $5$ with each component of vector $\\underline{b}$ using the rule of scalar multiplication.",
+       "ur": "عددی ضرب کے اصول کے تحت عدد $5$ کو سمتیہ $\\underline{b}$ کے ہر جزو سے ضرب دیں۔",
+       "check": [
+        "5 * 3 == 15",
+        "5 * (-5) == -25"
+       ]
       },
       {
-       "math": "= 13\\underline{i} - 18\\underline{j}",
-       "en": "Add the $\\underline{i}$ parts and the $\\underline{j}$ parts.",
-       "ur": "$\\underline{i}$ والے اور $\\underline{j}$ والے حصے الگ الگ جمع کریں۔",
+       "math": "= (-2 + 15)\\underline{i} + (7 - 25)\\underline{j}",
+       "en": "Group the $\\underline{i}$ components together and the $\\underline{j}$ components together for vector addition.",
+       "ur": "سمتیوں کی جمع کے لیے $\\underline{i}$ والے اجزاء اور $\\underline{j}$ والے اجزاء کو الگ الگ اکٹھا کریں۔"
+      },
+      {
+       "math": "\\underline{a} + 5\\underline{b} = 13\\underline{i} - 18\\underline{j}",
+       "en": "Simplify the grouped terms to get the resultant vector.",
+       "ur": "اکٹھی کی گئی رقوم کو حل کر کے حاصل سمتیہ معلوم کریں۔",
+       "check": [
+        "-2 + 15 == 13",
+        "7 - 25 == -18"
+       ]
+      },
+      {
+       "math": "\\text{Components: } 13\\underline{i} \\text{ and } -18\\underline{j} \\quad (\\text{or } 13 \\text{ along } \\underline{i},\\ -18 \\text{ along } \\underline{j})",
+       "en": "Hence, the required vector is $13\\underline{i} - 18\\underline{j}$, with components $13$ along $\\underline{i}$ and $-18$ along $\\underline{j}$.",
+       "ur": "پس مطلوبہ سمتیہ $13\\underline{i} - 18\\underline{j}$ ہے، جس کے اجزاء $\\underline{i}$ کی سمت میں $13$ اور $\\underline{j}$ کی سمت میں $-18$ ہیں۔",
        "check": [
         "(1)*(-2) + (5)*(3) == (13)",
         "(1)*(7) + (5)*(-5) == (-18)"
        ]
-      },
-      {
-       "math": "\\text{components: } 13\\ \\text{along } \\underline{i},\\ -18\\ \\text{along } \\underline{j}",
-       "en": "Read off the components.",
-       "ur": "اجزاء پڑھیں۔"
       }
      ],
      "answer": "$13\\underline{i} - 18\\underline{j}$",
+     "enriched": true,
      "book_key": "13i-18j"
     }
    ],
@@ -2403,35 +2728,74 @@
      "prompt": "",
      "steps": [
       {
+       "math": "5\\underline{i} - 3\\underline{j} = m(\\underline{i} - 10\\underline{j}) + n(4\\underline{i} - 3\\underline{j})",
+       "en": "We are given the vector equation and need to find the scalar values $m$ and $n$.",
+       "ur": "ہمیں ایک ویکٹر مساوات دی گئی ہے اور ہمیں سکیلر قیمتیں $m$ اور $n$ معلوم کرنی ہیں۔"
+      },
+      {
        "math": "5\\underline{i} - 3\\underline{j} = m\\underline{i} - 10m\\underline{j} + 4n\\underline{i} - 3n\\underline{j} = (m + 4n)\\underline{i} - (10m + 3n)\\underline{j}",
-       "en": "Multiply out and collect the components.",
-       "ur": "ضرب دے کر اجزاء اکٹھے کریں۔"
+       "en": "First, multiply $m$ and $n$ inside the brackets on the right-hand side, and then group the $\\underline{i}$ and $\\underline{j}$ components together.",
+       "ur": "سب سے پہلے دائیں طرف بریکٹ کے اندر $m$ اور $n$ کو ضرب دیں، اور پھر $\\underline{i}$ اور $\\underline{j}$ کے اجزاء کو اکٹھا کریں۔",
+       "check": [
+        "1*1 == 1",
+        "1*(-10) == -10",
+        "1*4 == 4",
+        "1*(-3) == -3"
+       ]
       },
       {
-       "math": "m + 4n = 5 \\quad (1),\\qquad 10m + 3n = 3 \\quad (2)",
-       "en": "Compare the coefficients.",
-       "ur": "عددی سروں کا موازنہ کریں۔"
+       "math": "m + 4n = 5 \\quad \\text{--- (1)}, \\qquad -10m - 3n = -3 \\implies 10m + 3n = 3 \\quad \\text{--- (2)}",
+       "en": "Since two vectors are equal if and only if their corresponding components are equal, compare the coefficients of $\\underline{i}$ and $\\underline{j}$ on both sides to form two linear equations.",
+       "ur": "چونکہ دو ویکٹرز تبھی برابر ہوتے ہیں جب ان کے متعلقہ اجزاء برابر ہوں، اس لیے دونوں طرف $\\underline{i}$ اور $\\underline{j}$ کے عددی سروں کا موازنہ کر کے دو یک درجی مساواتیں بنائیں۔",
+       "check": [
+        "-(-10) == 10",
+        "-(-3) == 3"
+       ]
       },
       {
-       "math": "10(1) - (2):\\ 40n - 3n = 50 - 3 \\Rightarrow 37n = 47 \\Rightarrow n = \\frac{47}{37}",
-       "en": "Eliminate $m$.",
-       "ur": "$m$ ختم کریں۔",
+       "math": "10m + 40n = 50 \\quad \\text{--- (3)}",
+       "en": "To eliminate $m$, multiply equation (1) by $10$.",
+       "ur": "$m$ کو ختم کرنے کے لیے مساوات (1) کو $10$ سے ضرب دیں۔",
+       "check": [
+        "10*1 == 10",
+        "10*4 == 40",
+        "10*5 == 50"
+       ]
+      },
+      {
+       "math": "(10m + 40n) - (10m + 3n) = 50 - 3 \\implies 37n = 47 \\implies n = \\frac{47}{37}",
+       "en": "Subtract equation (2) from equation (3) and solve for $n$.",
+       "ur": "مساوات (2) کو مساوات (3) میں سے تفریق کریں اور $n$ کی قیمت نکالیں۔",
        "check": [
         "40 - 3 == 37",
         "50 - 3 == 47"
        ]
       },
       {
-       "math": "m = 5 - 4\\left(\\frac{47}{37}\\right) = \\frac{185 - 188}{37} = -\\frac{3}{37}",
-       "en": "Put $n$ in (1).",
-       "ur": "$n$ کی قیمت (1) میں رکھیں۔",
+       "math": "m + 4\\left(\\frac{47}{37}\\right) = 5 \\implies m = 5 - \\frac{188}{37} = \\frac{185 - 188}{37} = -\\frac{3}{37}",
+       "en": "Substitute $n = \\frac{47}{37}$ into equation (1) and simplify to find the value of $m$.",
+       "ur": "مساوات (1) میں $n = \\frac{47}{37}$ درج کریں اور $m$ کی قیمت معلوم کرنے کے لیے مختصر کریں۔",
+       "check": [
+        "4*47 == 188",
+        "5*37 == 185",
+        "185 - 188 == -3",
+        "5 - 4*R(47,37) == R(-3,37)"
+       ]
+      },
+      {
+       "math": "m = -\\frac{3}{37}, \\quad n = \\frac{47}{37}",
+       "en": "Thus, the required values of $m$ and $n$ are $-\\frac{3}{37}$ and $\\frac{47}{37}$ respectively.",
+       "ur": "پس $m$ اور $n$ کی مطلوبہ قیمتیں بالترتیب $-\\frac{3}{37}$ اور $\\frac{47}{37}$ ہیں۔",
        "check": [
         "R(-3,37) + 4*R(47,37) == 5",
-        "10*R(-3,37) + 3*R(47,37) == 3"
+        "10*R(-3,37) + 3*R(47,37) == 3",
+        "40 - 3 == 37",
+        "50 - 3 == 47"
        ]
       }
      ],
      "answer": "$m = -\\frac{3}{37},\\ n = \\frac{47}{37}$",
+     "enriched": true,
      "book_key": "m=-\\frac{3}{37}, n=\\frac{47}{37}"
     }
    ],
@@ -3994,19 +4358,56 @@
      "prompt": "",
      "steps": [
       {
+       "math": "A(1, 2),\\quad B(6, 3),\\quad D(2, 8),\\quad C(x_C, y_C)",
+       "en": "Write down the given coordinates of vertices $A$, $B$, and $D$, and let the unknown coordinates of vertex $C$ be $(x_C, y_C)$.",
+       "ur": "دیے گئے راسوں $A$، $B$ اور $D$ کے محددیے لکھیں، اور فرض کریں کہ نامعلوم راس $C$ کے محددیے $(x_C, y_C)$ ہیں۔"
+      },
+      {
        "math": "\\overrightarrow{AB} = \\overrightarrow{DC}",
-       "en": "In a parallelogram opposite sides are equal and parallel.",
-       "ur": "متوازی الاضلاع میں مخالف اضلاع برابر اور متوازی ہوتے ہیں۔"
+       "en": "Since $ABCD$ is a parallelogram, its opposite sides are equal in magnitude and have the same direction, so vector $\\overrightarrow{AB}$ is equal to vector $\\overrightarrow{DC}$.",
+       "ur": "چونکہ $ABCD$ ایک متوازی الاضلاع ہے، اس کے مخالف اضلاع مقدار میں برابر اور ایک ہی سمت میں ہوتے ہیں، اس لیے سمتیہ $\\overrightarrow{AB}$ سمتیہ $\\overrightarrow{DC}$ کے برابر ہے۔"
       },
       {
-       "math": "\\overrightarrow{AB} = (6 - 1, 3 - 2) = (5, 1),\\quad \\overrightarrow{DC} = (x_C - 2,\\ y_C - 8)",
-       "en": "Write both vectors.",
-       "ur": "دونوں سمتیے لکھیں۔"
+       "math": "\\overrightarrow{AB} = (6 - 1,\\ 3 - 2) = (5, 1)",
+       "en": "Find the components of vector $\\overrightarrow{AB}$ by subtracting the coordinates of $A$ from the coordinates of $B$.",
+       "ur": "نقطہ $B$ کے محددیوں میں سے نقطہ $A$ کے محددیے تفریق کر کے سمتیہ $\\overrightarrow{AB}$ کے اجزاء معلوم کریں۔",
+       "check": [
+        "6 - 1 == 5",
+        "3 - 2 == 1"
+       ]
       },
       {
-       "math": "x_C - 2 = 5 \\Rightarrow x_C = 7,\\quad y_C - 8 = 1 \\Rightarrow y_C = 9",
-       "en": "Equate the components.",
-       "ur": "اجزاء برابر کریں۔",
+       "math": "\\overrightarrow{DC} = (x_C - 2,\\ y_C - 8)",
+       "en": "Similarly, express vector $\\overrightarrow{DC}$ by subtracting the coordinates of $D$ from the coordinates of $C$.",
+       "ur": "اسی طرح، نقطہ $C$ کے محددیوں میں سے نقطہ $D$ کے محددیے تفریق کر کے سمتیہ $\\overrightarrow{DC}$ کو ظاہر کریں۔"
+      },
+      {
+       "math": "(5, 1) = (x_C - 2,\\ y_C - 8)",
+       "en": "Substitute the components of both vectors into the relation $\\overrightarrow{AB} = \\overrightarrow{DC}$.",
+       "ur": "دونوں سمتیوں کے اجزاء کو مساوات $\\overrightarrow{AB} = \\overrightarrow{DC}$ میں درج کریں۔"
+      },
+      {
+       "math": "x_C - 2 = 5 \\Rightarrow x_C = 5 + 2 = 7",
+       "en": "Equate the $x$-components to solve for $x_C$.",
+       "ur": "$x_C$ کی قیمت معلوم کرنے کے لیے $x$-اجزاء کو آپس میں برابر رکھیں۔",
+       "check": [
+        "5 + 2 == 7",
+        "7 - 2 == 5"
+       ]
+      },
+      {
+       "math": "y_C - 8 = 1 \\Rightarrow y_C = 1 + 8 = 9",
+       "en": "Equate the $y$-components to solve for $y_C$.",
+       "ur": "$y_C$ کی قیمت معلوم کرنے کے لیے $y$-اجزاء کو آپس میں برابر رکھیں۔",
+       "check": [
+        "1 + 8 == 9",
+        "9 - 8 == 1"
+       ]
+      },
+      {
+       "math": "C(x_C, y_C) = C(7, 9)",
+       "en": "Thus, the required coordinates of the fourth vertex $C$ are $(7, 9)$.",
+       "ur": "پس، چوتھے راس $C$ کے مطلوبہ محددیے $(7, 9)$ ہیں۔",
        "check": [
         "7 - 2 == 6 - 1",
         "9 - 8 == 3 - 2"
@@ -4014,6 +4415,7 @@
       }
      ],
      "answer": "$C(7, 9)$",
+     "enriched": true,
      "book_key": "C(7,9)"
     }
    ],
@@ -4312,27 +4714,49 @@
      "steps": [
       {
        "math": "v_{0x} = 10,\\quad v_{0y} = 20,\\quad g = 10",
-       "en": "Read the components.",
-       "ur": "اجزاء پڑھیں۔"
+       "en": "From the given initial velocity vector $\\underline{v}_0 = 10\\underline{i} + 20\\underline{j}$, the horizontal component is $v_{0x} = 10$ and the vertical component is $v_{0y} = 20$. From the gravity vector $\\underline{g} = 0\\underline{i} - 10\\underline{j}$, the magnitude of acceleration due to gravity is $g = 10$.",
+       "ur": "دیے گئے ابتدائی ولاسٹی ویکٹر $\\underline{v}_0 = 10\\underline{i} + 20\\underline{j}$ سے، افقی جزو $v_{0x} = 10$ اور عمودی جزو $v_{0y} = 20$ ہے۔ کشش ثقل کے ویکٹر $\\underline{g} = 0\\underline{i} - 10\\underline{j}$ سے، کشش ثقل کی وجہ سے ایکسلریشن کی مقدار $g = 10$ ہے۔"
       },
       {
-       "math": "H = \\frac{v_{0y}^2}{2g} = \\frac{20^2}{2 \\cdot 10} = 20",
-       "en": "Maximum height.",
-       "ur": "زیادہ سے زیادہ بلندی۔",
+       "math": "H = \\frac{v_{0y}^2}{2g}",
+       "en": "To find the maximum height $H$ reached by the projectile, we use the standard formula in terms of the vertical velocity component.",
+       "ur": "پروجیکٹائل کی زیادہ سے زیادہ بلندی $H$ معلوم کرنے کے لیے، ہم عمودی ولاسٹی کے جزو کے لحاظ سے معیاری فارمولا استعمال کرتے ہیں۔"
+      },
+      {
+       "math": "H = \\frac{20^2}{2 \\cdot 10} = \\frac{400}{20} = 20",
+       "en": "Substitute $v_{0y} = 20$ and $g = 10$ into the formula and simplify to find the maximum height.",
+       "ur": "فارمولے میں $v_{0y} = 20$ اور $g = 10$ درج کریں اور زیادہ سے زیادہ بلندی معلوم کرنے کے لیے مختصر کریں۔",
        "check": [
-        "20**2/(2*10) == 20"
+        "20**2/(2*10) == 400/20",
+        "400/20 == 20"
        ]
       },
       {
-       "math": "R = \\frac{2 v_{0x} v_{0y}}{g} = \\frac{2 \\cdot 10 \\cdot 20}{10} = 40",
-       "en": "Horizontal range.",
-       "ur": "افقی فاصلہ۔",
+       "math": "R = \\frac{2 v_{0x} v_{0y}}{g}",
+       "en": "To find the horizontal range $R$, we use the range formula in terms of both horizontal and vertical velocity components.",
+       "ur": "افقی فاصلہ (رینج) $R$ معلوم کرنے کے لیے، ہم افقی اور عمودی دونوں ولاسٹی کے اجزاء کے لحاظ سے رینج کا فارمولا استعمال کرتے ہیں۔"
+      },
+      {
+       "math": "R = \\frac{2 \\cdot 10 \\cdot 20}{10} = \\frac{400}{10} = 40",
+       "en": "Substitute $v_{0x} = 10$, $v_{0y} = 20$, and $g = 10$ into the formula and simplify to find the horizontal range.",
+       "ur": "فارمولے میں $v_{0x} = 10$، $v_{0y} = 20$، اور $g = 10$ درج کریں اور افقی فاصلہ معلوم کرنے کے لیے مختصر کریں۔",
        "check": [
+        "2*10*20/10 == 400/10",
+        "400/10 == 40"
+       ]
+      },
+      {
+       "math": "H = 20\\text{ m},\\quad R = 40\\text{ m}",
+       "en": "Thus, the maximum height is $20$ m and the horizontal range is $40$ m.",
+       "ur": "چنانچہ، زیادہ سے زیادہ بلندی $20$ میٹر اور افقی فاصلہ $40$ میٹر ہے۔",
+       "check": [
+        "20**2/(2*10) == 20",
         "2*10*20/10 == 40"
        ]
       }
      ],
      "answer": "$H = 20$ m, $R = 40$ m",
+     "enriched": true,
      "book_key": "H=20 m, R=40 m"
     }
    ],
@@ -5043,26 +5467,45 @@
      "prompt": "$5\\underline{b}-\\underline{a}+\\underline{c}$",
      "steps": [
       {
-       "math": "5\\underline{b} - \\underline{a} + \\underline{c} = 5\\left(3\\underline{i} + \\underline{j}\\right) - \\left(2\\underline{i} - \\underline{j}\\right) + \\left(4\\underline{i} + \\underline{j}\\right)",
-       "en": "Put in the vectors.",
-       "ur": "سمتیے رکھیں۔"
+       "math": "\\underline{a} = 2\\underline{i} - \\underline{j}, \\quad \\underline{b} = 3\\underline{i} + \\underline{j}, \\quad \\underline{c} = 4\\underline{i} + \\underline{j}",
+       "en": "Write down the given vectors $\\underline{a}$, $\\underline{b}$, and $\\underline{c}$. We need to find the value of the vector expression $5\\underline{b} - \\underline{a} + \\underline{c}$.",
+       "ur": "دیے گئے سمتیے $\\underline{a}$، $\\underline{b}$ اور $\\underline{c}$ لکھیں۔ ہمیں سمتیہ جملے $5\\underline{b} - \\underline{a} + \\underline{c}$ کی قیمت معلوم کرنی ہے۔"
+      },
+      {
+       "math": "5\\underline{b} - \\underline{a} + \\underline{c} = 5(3\\underline{i} + \\underline{j}) - (2\\underline{i} - \\underline{j}) + (4\\underline{i} + \\underline{j})",
+       "en": "Substitute the given values of vectors $\\underline{a}$, $\\underline{b}$, and $\\underline{c}$ into the expression.",
+       "ur": "جملے میں سمتیہ $\\underline{a}$، $\\underline{b}$ اور $\\underline{c}$ کی دی گئی قیمتیں درج کریں۔"
       },
       {
        "math": "= 15\\underline{i} + 5\\underline{j} - 2\\underline{i} + \\underline{j} + 4\\underline{i} + \\underline{j}",
-       "en": "Multiply each vector by its number.",
-       "ur": "ہر سمتیے کو اس کے عدد سے ضرب دیں۔"
+       "en": "Multiply the first vector by the scalar $5$ and open all the brackets. Remember that the negative sign outside the second bracket changes the sign of $-\\underline{j}$ to $+\\underline{j}$.",
+       "ur": "پہلے سمتیے کو عددی مقدار $5$ سے ضرب دیں اور تمام بریکٹیں کھول لیں۔ یاد رکھیں کہ دوسری بریکٹ کے باہر منفی علامت اندر والے $-\\underline{j}$ کو $+\\underline{j}$ میں بدل دیتی ہے۔",
+       "check": [
+        "5*3 == 15",
+        "5*1 == 5",
+        "-1*2 == -2",
+        "-1*(-1) == 1"
+       ]
       },
       {
-       "math": "= 17\\underline{i} + 7\\underline{j}",
-       "en": "Add the $\\underline{i}$ parts and the $\\underline{j}$ parts.",
-       "ur": "$\\underline{i}$ والے اور $\\underline{j}$ والے حصے الگ الگ جمع کریں۔",
+       "math": "= (15 - 2 + 4)\\underline{i} + (5 + 1 + 1)\\underline{j}",
+       "en": "Group the $\\underline{i}$ components together and the $\\underline{j}$ components together so they can be added easily.",
+       "ur": "$\\underline{i}$ والے اجزاء کو ایک ساتھ اور $\\underline{j}$ والے اجزاء کو ایک ساتھ لکھیں تاکہ انہیں آسانی سے حل کیا جا سکے۔"
+      },
+      {
+       "math": "5\\underline{b} - \\underline{a} + \\underline{c} = 17\\underline{i} + 7\\underline{j}",
+       "en": "Simplify the coefficients of $\\underline{i}$ and $\\underline{j}$ to get the final resultant vector.",
+       "ur": "مطلوبہ حتمی سمتیہ حاصل کرنے کے لیے $\\underline{i}$ اور $\\underline{j}$ کے عددی سروں کو حل کریں۔",
        "check": [
+        "15 - 2 + 4 == 17",
+        "5 + 1 + 1 == 7",
         "(5)*(3) + (-1)*(2) + (1)*(4) == (17)",
         "(5)*(1) + (-1)*(-1) + (1)*(1) == (7)"
        ]
       }
      ],
      "answer": "$17\\underline{i} + 7\\underline{j}$",
+     "enriched": true,
      "book_key": "17i+7j"
     },
     {
@@ -5070,26 +5513,45 @@
      "prompt": "$8\\underline{a}+\\underline{b}+5\\underline{c}$",
      "steps": [
       {
-       "math": "8\\underline{a} + \\underline{b} + 5\\underline{c} = 8\\left(2\\underline{i} - \\underline{j}\\right) + \\left(3\\underline{i} + \\underline{j}\\right) + 5\\left(4\\underline{i} + \\underline{j}\\right)",
-       "en": "Put in the vectors.",
-       "ur": "سمتیے رکھیں۔"
+       "math": "\\underline{a} = 2\\underline{i} - \\underline{j}, \\quad \\underline{b} = 3\\underline{i} + \\underline{j}, \\quad \\underline{c} = 4\\underline{i} + \\underline{j}",
+       "en": "Write down the given vectors $\\underline{a}$, $\\underline{b}$, and $\\underline{c}$. We need to find the value of $8\\underline{a} + \\underline{b} + 5\\underline{c}$.",
+       "ur": "دیے گئے سمتیے $\\underline{a}$، $\\underline{b}$ اور $\\underline{c}$ لکھیں۔ ہمیں $8\\underline{a} + \\underline{b} + 5\\underline{c}$ کی قیمت معلوم کرنی ہے۔"
+      },
+      {
+       "math": "8\\underline{a} + \\underline{b} + 5\\underline{c} = 8(2\\underline{i} - \\underline{j}) + (3\\underline{i} + \\underline{j}) + 5(4\\underline{i} + \\underline{j})",
+       "en": "Substitute the values of vectors $\\underline{a}$, $\\underline{b}$, and $\\underline{c}$ into the given expression.",
+       "ur": "دیے گئے جملے میں سمتیوں $\\underline{a}$، $\\underline{b}$ اور $\\underline{c}$ کی قیمتیں درج کریں۔"
       },
       {
        "math": "= 16\\underline{i} - 8\\underline{j} + 3\\underline{i} + \\underline{j} + 20\\underline{i} + 5\\underline{j}",
-       "en": "Multiply each vector by its number.",
-       "ur": "ہر سمتیے کو اس کے عدد سے ضرب دیں۔"
+       "en": "Multiply each vector by its scalar coefficient to remove the brackets.",
+       "ur": "بریکٹ ختم کرنے کے لیے ہر سمتیے کو اس کے عددی سر (scalar) سے ضرب دیں۔",
+       "check": [
+        "8*2 == 16",
+        "8*(-1) == -8",
+        "5*4 == 20",
+        "5*1 == 5"
+       ]
+      },
+      {
+       "math": "= (16 + 3 + 20)\\underline{i} + (-8 + 1 + 5)\\underline{j}",
+       "en": "Group the $\\underline{i}$ components together and the $\\underline{j}$ components together.",
+       "ur": "$\\underline{i}$ والے اجزاء کو ایک ساتھ اور $\\underline{j}$ والے اجزاء کو ایک ساتھ لکھیں۔"
       },
       {
        "math": "= 39\\underline{i} - 2\\underline{j}",
-       "en": "Add the $\\underline{i}$ parts and the $\\underline{j}$ parts.",
-       "ur": "$\\underline{i}$ والے اور $\\underline{j}$ والے حصے الگ الگ جمع کریں۔",
+       "en": "Add the coefficients of $\\underline{i}$ and $\\underline{j}$ to get the final resultant vector.",
+       "ur": "مطلوبہ سمتیہ حاصل کرنے کے لیے $\\underline{i}$ اور $\\underline{j}$ کے عددی سروں کو جمع کریں۔",
        "check": [
+        "16 + 3 + 20 == 39",
+        "-8 + 1 + 5 == -2",
         "(8)*(2) + (1)*(3) + (5)*(4) == (39)",
         "(8)*(-1) + (1)*(1) + (5)*(1) == (-2)"
        ]
       }
      ],
      "answer": "$39\\underline{i} - 2\\underline{j}$",
+     "enriched": true,
      "book_key": "39i-2j"
     },
     {
@@ -5097,26 +5559,43 @@
      "prompt": "$\\underline{c}+\\underline{b}-4\\underline{a}$",
      "steps": [
       {
-       "math": "\\underline{c} + \\underline{b} - 4\\underline{a} = \\left(4\\underline{i} + \\underline{j}\\right) + \\left(3\\underline{i} + \\underline{j}\\right) - 4\\left(2\\underline{i} - \\underline{j}\\right)",
-       "en": "Put in the vectors.",
-       "ur": "سمتیے رکھیں۔"
+       "math": "\\underline{a} = 2\\underline{i} - \\underline{j}, \\quad \\underline{b} = 3\\underline{i} + \\underline{j}, \\quad \\underline{c} = 4\\underline{i} + \\underline{j}",
+       "en": "Write down the given vectors $\\underline{a}$, $\\underline{b}$, and $\\underline{c}$. We need to find the value of $\\underline{c} + \\underline{b} - 4\\underline{a}$.",
+       "ur": "دیے گئے سمتیے $\\underline{a}$، $\\underline{b}$ اور $\\underline{c}$ لکھیں۔ ہمیں $\\underline{c} + \\underline{b} - 4\\underline{a}$ کی قیمت معلوم کرنی ہے۔"
+      },
+      {
+       "math": "\\underline{c} + \\underline{b} - 4\\underline{a} = (4\\underline{i} + \\underline{j}) + (3\\underline{i} + \\underline{j}) - 4(2\\underline{i} - \\underline{j})",
+       "en": "Substitute the given expressions for vectors $\\underline{a}$, $\\underline{b}$, and $\\underline{c}$ into the required expression.",
+       "ur": "مطلوبہ جملے میں سمتیہ $\\underline{a}$، $\\underline{b}$ اور $\\underline{c}$ کی دی گئی قیمتیں درج کریں۔"
       },
       {
        "math": "= 4\\underline{i} + \\underline{j} + 3\\underline{i} + \\underline{j} - 8\\underline{i} + 4\\underline{j}",
-       "en": "Multiply each vector by its number.",
-       "ur": "ہر سمتیے کو اس کے عدد سے ضرب دیں۔"
+       "en": "Remove the brackets and multiply the vector $\\underline{a}$ by the scalar $-4$. Note that $(-4)(-\\underline{j}) = +4\\underline{j}$.",
+       "ur": "بریکٹیں ہٹائیں اور سمتیہ $\\underline{a}$ کو عددی قیمت $-4$ سے ضرب دیں۔ دھیان رہے کہ $(-4)(-\\underline{j}) = +4\\underline{j}$ ہوتا ہے۔",
+       "check": [
+        "-4 * 2 == -8",
+        "-4 * (-1) == 4"
+       ]
+      },
+      {
+       "math": "= (4 + 3 - 8)\\underline{i} + (1 + 1 + 4)\\underline{j}",
+       "en": "Group the $\\underline{i}$ components together and the $\\underline{j}$ components together.",
+       "ur": "$\\underline{i}$ والے اجزاء اور $\\underline{j}$ والے اجزاء کو الگ الگ اکٹھا کریں۔"
       },
       {
        "math": "= -\\underline{i} + 6\\underline{j}",
-       "en": "Add the $\\underline{i}$ parts and the $\\underline{j}$ parts.",
-       "ur": "$\\underline{i}$ والے اور $\\underline{j}$ والے حصے الگ الگ جمع کریں۔",
+       "en": "Add and subtract the coefficients of $\\underline{i}$ and $\\underline{j}$ to get the final resultant vector.",
+       "ur": "حتمی سمتیہ حاصل کرنے کے لیے $\\underline{i}$ اور $\\underline{j}$ کے عددی سروں کو جمع اور تفریق کریں۔",
        "check": [
+        "4 + 3 - 8 == -1",
+        "1 + 1 + 4 == 6",
         "(1)*(4) + (1)*(3) + (-4)*(2) == (-1)",
         "(1)*(1) + (1)*(1) + (-4)*(-1) == (6)"
        ]
       }
      ],
      "answer": "$-\\underline{i} + 6\\underline{j}$",
+     "enriched": true,
      "book_key": "-i+6j"
     }
    ],
@@ -5134,26 +5613,64 @@
      "prompt": "",
      "steps": [
       {
-       "math": "(2x\\underline{i} + y\\underline{j}) + (-\\underline{i} + 5\\underline{j}) = (2 x - 1)\\underline{i} + (y + 5)\\underline{j} = \\frac{1}{4}\\underline{i} - 8\\underline{j}",
-       "en": "Collect the $\\underline{i}$ terms and the $\\underline{j}$ terms.",
-       "ur": "$\\underline{i}$ والے اور $\\underline{j}$ والے ارکان اکٹھے کریں۔"
+       "math": "(2x\\underline{i} + y\\underline{j}) + (-\\underline{i} + 5\\underline{j}) = \\frac{1}{4}\\underline{i} - 8\\underline{j}",
+       "en": "Write down the given vector equation to find the unknown values of $x$ and $y$.",
+       "ur": "$x$ اور $y$ کی نامعلوم قیمتیں معلوم کرنے کے لیے دی گئی ویکٹر مساوات لکھیں۔"
       },
       {
-       "math": "2 x - 1 = \\frac{1}{4},\\quad y + 5 = -8",
-       "en": "Equal vectors have equal components: compare the coefficients.",
-       "ur": "مساوی سمتیوں کے اجزاء برابر ہوتے ہیں: عددی سروں کا موازنہ کریں۔"
-      },
-      {
-       "math": "x = \\frac{5}{8},\\quad y = -13",
-       "en": "Solve.",
-       "ur": "حل کریں۔",
+       "math": "(2x - 1)\\underline{i} + (y + 5)\\underline{j} = \\frac{1}{4}\\underline{i} - 8\\underline{j}",
+       "en": "Add the two vectors on the left-hand side by grouping the $\\underline{i}$ components together and the $\\underline{j}$ components together.",
+       "ur": "بائیں طرف موجود دونوں ویکٹرز کو جمع کرنے کے لیے $\\underline{i}$ کے اجزاء کو ایک ساتھ اور $\\underline{j}$ کے اجزاء کو ایک ساتھ اکٹھا کریں۔",
        "check": [
+        "(2*x) + (-1) == 2*x - 1",
+        "y + 5 == y + 5"
+       ]
+      },
+      {
+       "math": "2x - 1 = \\frac{1}{4}, \\quad y + 5 = -8",
+       "en": "By definition of equality of vectors, two vectors are equal if and only if their corresponding $\\underline{i}$ and $\\underline{j}$ components are equal. Equate the coefficients on both sides.",
+       "ur": "مساوی ویکٹرز کی تعریف کے مطابق، دو ویکٹرز تبھی برابر ہوتے ہیں جب ان کے متناظرہ $\\underline{i}$ اور $\\underline{j}$ اجزاء آپس میں برابر ہوں۔ دونوں اطراف کے عددی سروں کو برابر رکھیں۔"
+      },
+      {
+       "math": "2x = \\frac{1}{4} + 1 = \\frac{1 + 4}{4} = \\frac{5}{4}",
+       "en": "First, take the equation for $x$ and add $1$ to both sides, then simplify the fraction by taking the LCM.",
+       "ur": "پہلے $x$ والی مساوات لیں اور دونوں طرف $1$ جمع کریں، پھر ذواضعاف اقل (LCM) لے کر کسر کو مختصر کریں۔",
+       "check": [
+        "R(1, 4) + 1 == R(5, 4)"
+       ]
+      },
+      {
+       "math": "x = \\frac{5}{4 \\times 2} = \\frac{5}{8}",
+       "en": "Divide both sides by $2$ to find the value of $x$.",
+       "ur": "$x$ کی قیمت معلوم کرنے کے لیے دونوں اطراف کو $2$ پر تقسیم کریں۔",
+       "check": [
+        "R(5, 4) / 2 == R(5, 8)",
+        "(2*x - 1).subs(x, R(5, 8)) == R(1, 4)"
+       ]
+      },
+      {
+       "math": "y = -8 - 5 = -13",
+       "en": "Now, take the equation for $y$ and subtract $5$ from both sides to find the value of $y$.",
+       "ur": "اب $y$ والی مساوات لیں اور $y$ کی قیمت معلوم کرنے کے لیے دونوں اطراف سے $5$ تفریق کریں۔",
+       "check": [
+        "-8 - 5 == -13",
+        "(y + 5).subs(y, -13) == -8"
+       ]
+      },
+      {
+       "math": "x = \\frac{5}{8},\\ y = -13",
+       "en": "State the final values of $x$ and $y$.",
+       "ur": "آخر میں $x$ اور $y$ کی مطلوبہ قیمتیں لکھیں۔",
+       "check": [
+        "(2*x - 1).subs({x: R(5, 8), y: -13}) == R(1, 4)",
+        "(y + 5).subs({x: R(5, 8), y: -13}) == -8",
         "(2*x - 1).subs({x: (5/8), y: (-13)}) == (1/4)",
         "(y + 5).subs({x: (5/8), y: (-13)}) == (-8)"
        ]
       }
      ],
      "answer": "$x = \\frac{5}{8},\\ y = -13$",
+     "enriched": true,
      "book_key": "x=\\frac{5}{8}, y=-13"
     }
    ],

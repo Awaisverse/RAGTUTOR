@@ -1,0 +1,55 @@
+{
+ "item": "c10-ex7.2-q1",
+ "label": "vii",
+ "answer_ref": "$\\alpha = 82^\\circ,\\ a = 7.71,\\ b = 4.36$ cm",
+ "steps": [
+  {
+   "math": "c = 7\\text{ cm},\\ \\beta = 34^\\circ,\\ \\gamma = 64^\\circ",
+   "en": "We are given the length of side $c$ and two angles $\\beta$ and $\\gamma$ of triangle $ABC$. We need to find the remaining angle $\\alpha$ and the sides $a$ and $b$.",
+   "ur": "ہمیں مثلث $ABC$ کا ضلع $c$ اور دو زاویے $\\beta$ اور $\\gamma$ دیے گئے ہیں۔ ہمیں باقی زاویہ $\\alpha$ اور اضلاع $a$ اور $b$ معلوم کرنے ہیں۔"
+  },
+  {
+   "math": "\\alpha = 180^\\circ - (\\beta + \\gamma) = 180^\\circ - (34^\\circ + 64^\\circ) = 180^\\circ - 98^\\circ = 82^\\circ",
+   "en": "Since the sum of the interior angles of any triangle is $180^\\circ$, we subtract the given angles from $180^\\circ$ to find $\\alpha$.",
+   "ur": "چونکہ کسی بھی مثلث کے اندرونی زاویوں کا مجموعہ $180^\\circ$ ہوتا ہے، اس لیے ہم $\\alpha$ معلوم کرنے کے لیے دیے گئے زاویوں کو $180^\\circ$ میں سے تفریق کرتے ہیں۔",
+   "check": [
+    "34 + 64 == 98",
+    "180 - 98 == 82"
+   ]
+  },
+  {
+   "math": "\\frac{a}{\\sin\\alpha} = \\frac{b}{\\sin\\beta} = \\frac{c}{\\sin\\gamma}",
+   "en": "To find the unknown sides $a$ and $b$, we use the Law of Sines.",
+   "ur": "نامعلوم اضلاع $a$ اور $b$ معلوم کرنے کے لیے ہم قانونِ جیب (Law of Sines) استعمال کرتے ہیں۔"
+  },
+  {
+   "math": "a = \\frac{c\\sin\\alpha}{\\sin\\gamma} = \\frac{7\\sin 82^\\circ}{\\sin 64^\\circ} = 7.71\\text{ cm}",
+   "en": "First, take the relation $\\frac{a}{\\sin\\alpha} = \\frac{c}{\\sin\\gamma}$ and substitute $c = 7$, $\\alpha = 82^\\circ$, and $\\gamma = 64^\\circ$ to calculate side $a$.",
+   "ur": "پہلے تعلق $\\frac{a}{\\sin\\alpha} = \\frac{c}{\\sin\\gamma}$ لیں اور ضلع $a$ معلوم کرنے کے لیے $c = 7$، $\\alpha = 82^\\circ$ اور $\\gamma = 64^\\circ$ کی قیمتیں درج کریں۔",
+   "check": [
+    "Abs((7*sin(82*pi/180)/sin(64*pi/180)) - 7.71) <= 0.005"
+   ]
+  },
+  {
+   "math": "b = \\frac{c\\sin\\beta}{\\sin\\gamma} = \\frac{7\\sin 34^\\circ}{\\sin 64^\\circ} = 4.36\\text{ cm}",
+   "en": "Next, take the relation $\\frac{b}{\\sin\\beta} = \\frac{c}{\\sin\\gamma}$ and substitute $c = 7$, $\\beta = 34^\\circ$, and $\\gamma = 64^\\circ$ to calculate side $b$.",
+   "ur": "اس کے بعد، تعلق $\\frac{b}{\\sin\\beta} = \\frac{c}{\\sin\\gamma}$ لیں اور ضلع $b$ معلوم کرنے کے لیے $c = 7$، $\\beta = 34^\\circ$ اور $\\gamma = 64^\\circ$ کی قیمتیں درج کریں۔",
+   "check": [
+    "Abs((7*sin(34*pi/180)/sin(64*pi/180)) - 4.36) <= 0.005"
+   ]
+  },
+  {
+   "math": "\\alpha = 82^\\circ,\\ a = 7.71,\\ b = 4.36\\text{ cm}",
+   "en": "Thus, the unknown elements of the triangle $ABC$ have been found.",
+   "ur": "اس طرح مثلث $ABC$ کے تمام نامعلوم اجزاء معلوم ہو گئے ہیں۔",
+   "check": [
+    "180 - 98 == 82",
+    "Abs((7*sin((82)*pi/180)/sin((64)*pi/180)) - 7.71) <= 0.0050000010000000004",
+    "Abs((7*sin((34)*pi/180)/sin((64)*pi/180)) - 4.36) <= 0.0050000010000000004"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

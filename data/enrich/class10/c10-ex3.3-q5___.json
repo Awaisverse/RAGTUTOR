@@ -1,0 +1,64 @@
+{
+ "item": "c10-ex3.3-q5",
+ "label": "",
+ "answer_ref": "$A + B = B + A = O$, so $B = -A$ and $A = -B$",
+ "steps": [
+  {
+   "math": "A = \\begin{bmatrix} 5 & 6 \\\\ 7 & -2 \\end{bmatrix}, \\quad B = \\begin{bmatrix} -5 & -6 \\\\ -7 & 2 \\end{bmatrix}",
+   "en": "Write down the given matrices $A$ and $B$. We need to show that $B$ is the additive inverse of $A$ and $A$ is the additive inverse of $B$.",
+   "ur": "دیے گئے قوالب $A$ اور $B$ لکھیں۔ ہمیں یہ ثابت کرنا ہے کہ $B$، قالب $A$ کا جمعی معکوس ہے اور $A$، قالب $B$ کا جمعی معکوس ہے۔"
+  },
+  {
+   "math": "A + B = O = B + A",
+   "en": "By definition, two matrices $A$ and $B$ of the same order are additive inverses of each other if their sum is the null (zero) matrix $O$.",
+   "ur": "تعریف کے مطابق، ایک ہی درجہ کے دو قوالب $A$ اور $B$ ایک دوسرے کے جمعی معکوس ہوتے ہیں اگر ان کا مجموعہ صفری قالب $O$ کے برابر ہو۔"
+  },
+  {
+   "math": "A + B = \\begin{bmatrix} 5 & 6 \\\\ 7 & -2 \\end{bmatrix} + \\begin{bmatrix} -5 & -6 \\\\ -7 & 2 \\end{bmatrix} = \\begin{bmatrix} 5 + (-5) & 6 + (-6) \\\\ 7 + (-7) & -2 + 2 \\end{bmatrix}",
+   "en": "First, find $A + B$ by adding the corresponding entries of matrices $A$ and $B$.",
+   "ur": "سب سے پہلے، قوالب $A$ اور $B$ کے متناظرہ ارکان کو جمع کر کے $A + B$ معلوم کریں۔",
+   "check": [
+    "Matrix([[5, 6], [7, -2]]) + Matrix([[-5, -6], [-7, 2]]) == Matrix([[5 - 5, 6 - 6], [7 - 7, -2 + 2]])"
+   ]
+  },
+  {
+   "math": "A + B = \\begin{bmatrix} 5 - 5 & 6 - 6 \\\\ 7 - 7 & -2 + 2 \\end{bmatrix} = \\begin{bmatrix} 0 & 0 \\\\ 0 & 0 \\end{bmatrix} = O",
+   "en": "Simplify each entry to get the null matrix $O$.",
+   "ur": "صفری قالب $O$ حاصل کرنے کے لیے ہر رکن کو مختصر کریں۔",
+   "check": [
+    "Matrix([[5 - 5, 6 - 6], [7 - 7, -2 + 2]]) == Matrix([[0, 0], [0, 0]])"
+   ]
+  },
+  {
+   "math": "B + A = \\begin{bmatrix} -5 & -6 \\\\ -7 & 2 \\end{bmatrix} + \\begin{bmatrix} 5 & 6 \\\\ 7 & -2 \\end{bmatrix} = \\begin{bmatrix} -5 + 5 & -6 + 6 \\\\ -7 + 7 & 2 + (-2) \\end{bmatrix}",
+   "en": "Next, find $B + A$ by adding the corresponding entries of matrices $B$ and $A$.",
+   "ur": "اس کے بعد، قوالب $B$ اور $A$ کے متناظرہ ارکان کو جمع کر کے $B + A$ معلوم کریں۔",
+   "check": [
+    "Matrix([[-5, -6], [-7, 2]]) + Matrix([[5, 6], [7, -2]]) == Matrix([[-5 + 5, -6 + 6], [-7 + 7, 2 - 2]])"
+   ]
+  },
+  {
+   "math": "B + A = \\begin{bmatrix} -5 + 5 & -6 + 6 \\\\ -7 + 7 & 2 - 2 \\end{bmatrix} = \\begin{bmatrix} 0 & 0 \\\\ 0 & 0 \\end{bmatrix} = O",
+   "en": "Simplify each entry to get the null matrix $O$.",
+   "ur": "صفری قالب $O$ حاصل کرنے کے لیے ہر رکن کو مختصر کریں۔",
+   "check": [
+    "Matrix([[-5 + 5, -6 + 6], [-7 + 7, 2 - 2]]) == Matrix([[0, 0], [0, 0]])"
+   ]
+  },
+  {
+   "math": "A + B = B + A = O \\Rightarrow B = -A, \\quad A = -B",
+   "en": "Since both sums equal the null matrix $O$, $B$ is the additive inverse of $A$ and $A$ is the additive inverse of $B$.",
+   "ur": "چونکہ دونوں مجموعے صفری قالب $O$ کے برابر ہیں، اس لیے $B$ قالب $A$ کا جمعی معکوس ہے اور $A$ قالب $B$ کا جمعی معکوس ہے۔",
+   "check": [
+    "Matrix([[-5, -6], [-7, 2]]) == -Matrix([[5, 6], [7, -2]])",
+    "Matrix([[5, 6], [7, -2]]) == -Matrix([[-5, -6], [-7, 2]])",
+    "Eq(Matrix([[0, 0], [0, 0]]), Matrix([[0, 0], [0, 0]]))",
+    "Eq(Matrix([[0, 0], [0, 0]]), Matrix([[0, 0], [0, 0]]))",
+    "Eq(Matrix([[-5, -6], [-7, 2]]), Matrix([[-5, -6], [-7, 2]]))"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

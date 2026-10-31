@@ -1,0 +1,62 @@
+{
+ "item": "c10-ex6.2-q2",
+ "label": "ii",
+ "answer_ref": "$\\sqrt{85}$",
+ "steps": [
+  {
+   "math": "\\underline{a} = 6\\underline{i} - \\underline{j}, \\quad \\underline{b} = \\underline{i} + 5\\underline{j}, \\quad \\underline{c} = 3\\underline{i} + 5\\underline{j}",
+   "en": "First, write down the given vectors. We need to find the magnitude of the vector $\\underline{a} - 2\\underline{b} + \\underline{c}$.",
+   "ur": "سب سے پہلے دیے گئے سمتیے (vectors) لکھیں۔ ہمیں سمتیے $\\underline{a} - 2\\underline{b} + \\underline{c}$ کی مقدار (magnitude) معلوم کرنی ہے۔"
+  },
+  {
+   "math": "\\underline{a} - 2\\underline{b} + \\underline{c} = \\left(6\\underline{i} - \\underline{j}\\right) - 2\\left(\\underline{i} + 5\\underline{j}\\right) + \\left(3\\underline{i} + 5\\underline{j}\\right)",
+   "en": "Substitute the values of vectors $\\underline{a}$, $\\underline{b}$, and $\\underline{c}$ into the expression $\\underline{a} - 2\\underline{b} + \\underline{c}$.",
+   "ur": "جملے $\\underline{a} - 2\\underline{b} + \\underline{c}$ میں سمتیوں $\\underline{a}$، $\\underline{b}$ اور $\\underline{c}$ کی قیمتیں درج کریں۔"
+  },
+  {
+   "math": "= 6\\underline{i} - \\underline{j} - 2\\underline{i} - 10\\underline{j} + 3\\underline{i} + 5\\underline{j}",
+   "en": "Expand the brackets by multiplying the second vector by $-2$.",
+   "ur": "دوسرے سمتیے کو $-2$ سے ضرب دے کر بریکٹیں کھولیں۔",
+   "check": [
+    "(-2)*(1) == -2",
+    "(-2)*(5) == -10"
+   ]
+  },
+  {
+   "math": "= (6 - 2 + 3)\\underline{i} + (-1 - 10 + 5)\\underline{j} = 7\\underline{i} - 6\\underline{j}",
+   "en": "Group the $\\underline{i}$ components and the $\\underline{j}$ components together and simplify.",
+   "ur": "$\\underline{i}$ کے اجزاء اور $\\underline{j}$ کے اجزاء کو الگ الگ اکٹھا کریں اور مختصر کریں۔",
+   "check": [
+    "6 - 2 + 3 == 7",
+    "-1 - 10 + 5 == -6"
+   ]
+  },
+  {
+   "math": "|\\underline{v}| = \\sqrt{x^2 + y^2}",
+   "en": "Now, use the magnitude formula for a vector $\\underline{v} = x\\underline{i} + y\\underline{j}$. Here, $x = 7$ and $y = -6$.",
+   "ur": "اب، سمتیے $\\underline{v} = x\\underline{i} + y\\underline{j}$ کی مقدار کا فارمولا استعمال کریں۔ یہاں $x = 7$ اور $y = -6$ ہے۔"
+  },
+  {
+   "math": "|\\underline{a} - 2\\underline{b} + \\underline{c}| = \\sqrt{(7)^2 + (-6)^2}",
+   "en": "Substitute $x = 7$ and $y = -6$ into the magnitude formula.",
+   "ur": "مقدار کے فارمولے میں $x = 7$ اور $y = -6$ درج کریں۔"
+  },
+  {
+   "math": "= \\sqrt{49 + 36} = \\sqrt{85}",
+   "en": "Calculate the squares and add them to get the final magnitude.",
+   "ur": "مربع معلوم کریں اور انہیں جمع کر کے حتمی مقدار حاصل کریں۔",
+   "check": [
+    "(7)**2 == 49",
+    "(-6)**2 == 36",
+    "49 + 36 == 85",
+    "sqrt((7)**2 + (-6)**2) == sqrt(85)",
+    "(1)*(6) + (-2)*(1) + (1)*(3) == (7)",
+    "(1)*(-1) + (-2)*(5) + (1)*(5) == (-6)",
+    "sqrt((7)**2 + (-6)**2) == (sqrt(85))"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

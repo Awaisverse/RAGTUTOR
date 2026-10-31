@@ -1,0 +1,50 @@
+{
+ "item": "c10-ex3.5-q4",
+ "label": "",
+ "answer_ref": "$\\operatorname{Adj}A = \\begin{bmatrix} d & - b \\\\ - c & a \\end{bmatrix}$; $\\operatorname{Adj}B = \\begin{bmatrix} 7 & 2 \\\\ -3 & 5 \\end{bmatrix}$; $\\operatorname{Adj}C = \\begin{bmatrix} 2 & -5 \\\\ 3 & -3 \\end{bmatrix}$",
+ "math": [
+  "A = \\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix}, \\quad B = \\begin{bmatrix} 5 & -2 \\\\ 3 & 7 \\end{bmatrix}, \\quad C = \\begin{bmatrix} -3 & 5 \\\\ -3 & 2 \\end{bmatrix}",
+  "",
+  "\\operatorname{Adj}A = \\begin{bmatrix} d & - b \\\\ - c & a \\end{bmatrix}",
+  "\\operatorname{Adj}B = \\begin{bmatrix} 7 & -(-2) \\\\ -3 & 5 \\end{bmatrix}",
+  "\\operatorname{Adj}B = \\begin{bmatrix} 7 & 2 \\\\ -3 & 5 \\end{bmatrix}",
+  "\\operatorname{Adj}C = \\begin{bmatrix} 2 & -5 \\\\ -(-3) & -3 \\end{bmatrix}",
+  "\\operatorname{Adj}C = \\begin{bmatrix} 2 & -5 \\\\ 3 & -3 \\end{bmatrix}"
+ ],
+ "why": [
+  {
+   "en": "First, we carefully write down the given $2 \\times 2$ matrices $A$, $B$, and $C$. Seeing their exact entries clearly helps us avoid sign mistakes when we apply the adjoint rule.",
+   "ur": "سب سے پہلے ہم دیے گئے تینوں $2 \\times 2$ کالبوں $A$، $B$ اور $C$ کو احتیاط سے لکھتے ہیں۔ ان کے ارکان کو واضح طور پر دیکھنے سے ہمیں ایڈجوائنٹ کا اصول لگاتے وقت علامتوں کی غلطی سے بچنے میں مدد ملتی ہے۔"
+  },
+  {
+   "en": "We recall the definition of the adjoint for a $2 \\times 2$ matrix. This rule tells us our exact plan: swap the main diagonal elements (top-left and bottom-right) and flip the signs of the other two elements.",
+   "ur": "ہم $2 \\times 2$ کالب کے ایڈجوائنٹ کی تعریف کو یاد کرتے ہیں۔ یہ اصول ہمیں بتاتا ہے کہ ہمیں وِتری ارکان (بائیں اوپر اور دائیں نیچے والے) کی جگہ آپس میں بدلنی ہے اور باقی دو ارکان کی علامتیں تبدیل کرنی ہیں۔"
+  },
+  {
+   "en": "Applying this definition directly to the general matrix $A$, we swap $a$ and $d$, and put a minus sign with $b$ and $c$. This gives us the standard formula for the adjoint of any $2 \\times 2$ matrix.",
+   "ur": "اس تعریف کو براہِ راست کالب $A$ پر لاگو کرتے ہوئے، ہم $a$ اور $d$ کی جگہ بدل دیتے ہیں اور $b$ اور $c$ کے ساتھ منفی کی علامت لگا دیتے ہیں۔ اس سے ہمیں کسی بھی $2 \\times 2$ کالب کے ایڈجوائنٹ کا بنیادی فارمولا مل جاتا ہے۔"
+  },
+  {
+   "en": "Now we apply the same rule to matrix $B$: the diagonal entries $5$ and $7$ trade places, while the non-diagonal entries $-2$ and $3$ get a negative sign in front of them. Writing $-(-2)$ in brackets is a good habit to prevent sign errors.",
+   "ur": "اب ہم یہی اصول کالب $B$ پر لاگو کرتے ہیں: وِتری ارکان $5$ اور $7$ اپنی جگہ بدل لیتے ہیں، جبکہ غیر وِتری ارکان $-2$ اور $3$ کے آگے منفی کی علامت آ جاتی ہے۔ علامت کی غلطی سے بچنے کے لیے $-(-2)$ کو بریکٹ میں لکھنا ایک اچھی عادت ہے۔"
+  },
+  {
+   "en": "Using the basic multiplication rule of signs where two negatives make a positive, $-(-2)$ simplifies to $2$. This gives us the neat, final form of $\\operatorname{Adj}B$.",
+   "ur": "علامتوں کی ضرب کے بنیادی اصول کے مطابق، جہاں دو منفی مل کر مثبت بن جاتے ہیں، $-(-2)$ حل ہو کر $2$ بن جاتا ہے۔ اس سے ہمیں $\\operatorname{Adj}B$ کی صاف اور حتمی شکل مل جاتی ہے۔"
+  },
+  {
+   "en": "Moving on to matrix $C$, we again apply the adjoint definition by swapping the diagonal entries $-3$ and $2$, and attaching a minus sign to the other two entries, $5$ and $-3$. Notice that the diagonal $-3$ keeps its sign because we only change its position, not its sign.",
+   "ur": "کالب $C$ کی طرف بڑھتے ہوئے، ہم دوبارہ ایڈجوائنٹ کی تعریف کے مطابق وِتری ارکان $-3$ اور $2$ کی جگہ بدلتے ہیں، اور باقی دو ارکان $5$ اور $-3$ کے ساتھ منفی کی علامت لگاتے ہیں۔ غور کریں کہ وِتر والے $-3$ کی علامت نہیں بدلی کیونکہ ہم صرف اس کی جگہ تبدیل کرتے ہیں، علامت نہیں۔"
+  },
+  {
+   "en": "Finally, we simplify the double negative $-(-3)$ into a positive $3$. This completes the simplification and gives us the final matrix for $\\operatorname{Adj}C$.",
+   "ur": "آخر میں، ہم دوہری منفی علامت $-(-3)$ کو حل کر کے مثبت $3$ بنا لیتے ہیں۔ اس سے ہمارا عمل مکمل ہو جاتا ہے اور ہمیں $\\operatorname{Adj}C$ کا حتمی کالب مل جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "These resulting matrices are the required adjoints $\\operatorname{Adj}A$, $\\operatorname{Adj}B$, and $\\operatorname{Adj}C$, which are essential building blocks used later to find the multiplicative inverse of a matrix. You can easily check your answers by verifying that the main diagonal numbers have swapped places and the other two numbers have opposite signs compared to the original matrices.",
+  "ur": "حاصل ہونے والے یہ کالب مطلوبہ ایڈجوائنٹ $\\operatorname{Adj}A$، $\\operatorname{Adj}B$ اور $\\operatorname{Adj}C$ ہیں، جو آگے چل کر کسی کالب کا ضربی معکوس (inverse) معلوم کرنے کے لیے بنیادی حیثیت رکھتے ہیں۔ آپ اپنے جوابات کی پڑتال باآسانی اس طرح کر سکتے ہیں کہ اصل کالبوں کے مقابلے میں وِتری ارکان کی جگہ بدل چکی ہے اور باقی دو ارکان کی علامتیں الٹ ہو گئی ہیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

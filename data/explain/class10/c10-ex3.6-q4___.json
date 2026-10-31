@@ -1,0 +1,50 @@
+{
+ "item": "c10-ex3.6-q4",
+ "label": "",
+ "answer_ref": "$x = 8,\\ y = -6$",
+ "math": [
+  "F_1 = \\begin{bmatrix} 8 \\\\ x \\end{bmatrix}, \\quad F_2 = \\begin{bmatrix} -2 \\\\ -7 \\end{bmatrix}, \\quad F_3 = \\begin{bmatrix} y \\\\ -1 \\end{bmatrix}",
+  "F_1 + F_2 + F_3 = O",
+  "\\begin{bmatrix} 8 \\\\ x \\end{bmatrix} + \\begin{bmatrix} -2 \\\\ -7 \\end{bmatrix} + \\begin{bmatrix} y \\\\ -1 \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 0 \\end{bmatrix}",
+  "\\begin{bmatrix} 8 + (-2) + y \\\\ x + (-7) + (-1) \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 0 \\end{bmatrix}",
+  "\\begin{bmatrix} 6 + y \\\\ x - 8 \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 0 \\end{bmatrix}",
+  "6 + y = 0 \\quad \\text{and} \\quad x - 8 = 0",
+  "x = 8, \\quad y = -6"
+ ],
+ "why": [
+  {
+   "en": "We start by organizing the given information clearly so we can see the unknown values $x$ and $y$ inside their respective force matrices. Having all three matrices side by side prepares us to apply the condition given in the question.",
+   "ur": "ہم سب سے پہلے دی گئی معلومات کو واضح طور پر لکھتے ہیں تاکہ ہم قوت کے کالبوں (matrices) میں نامعلوم اقدار $x$ اور $y$ کو دیکھ سکیں۔ تینوں کالبوں کو ایک ساتھ لکھنے سے ہمیں سوال میں دی گئی شرط کو لاگو کرنے میں آسانی ہوگی۔"
+  },
+  {
+   "en": "In physics and mathematics, equilibrium means all forces balance each other out completely, leaving zero net force. Since our forces are written as matrices, their sum must equal the null (zero) matrix $O$.",
+   "ur": "طبیعیات اور ریاضی میں توازن (equilibrium) کا مطلب ہے کہ تمام قوتیں ایک دوسرے کو مکمل طور پر متوازن کر دیتی ہیں، جس سے کل قوت صفر رہ جاتی ہے۔ چونکہ ہماری قوتیں کالبوں کی شکل میں ہیں، اس لیے ان کا مجموعہ صفری کالب (null matrix) $O$ کے برابر ہونا چاہیے۔"
+  },
+  {
+   "en": "Now we replace the symbols $F_1$, $F_2$, and $F_3$ with their actual $2 \\times 1$ column matrices, and write the zero matrix $O$ as $\\begin{bmatrix} 0 \\\\ 0 \\end{bmatrix}$ to match their order. This turns the physical condition into a clear matrix equation that we can solve.",
+   "ur": "اب ہم علامتوں $F_1$، $F_2$ اور $F_3$ کی جگہ ان کے اصل $2 \\times 1$ کالمی کالب درج کرتے ہیں، اور صفری کالب $O$ کو بھی ان کے مرتبے کے مطابق $\\begin{bmatrix} 0 \\\\ 0 \\end{bmatrix}$ لکھتے ہیں۔ اس سے یہ شرط ایک واضح کالب مساوات میں بدل جاتی ہے جسے ہم حل کر سکتے ہیں۔"
+  },
+  {
+   "en": "By the rule of matrix addition, we combine matrices of the same order by adding their corresponding entries (top with top, bottom with bottom). This merges the three separate matrices on the left side into one single matrix.",
+   "ur": "کالبوں کی جمع کے اصول کے مطابق، ہم یکساں مرتبے کے کالبوں کو ان کے متناظرہ ارکان (اوپر والے کو اوپر والے میں، نیچے والے کو نیچے والے میں) جمع کر کے یکجا کرتے ہیں۔ یہ بائیں طرف موجود تین الگ الگ کالبوں کو ایک واحد کالب میں ضم کر دیتا ہے۔"
+  },
+  {
+   "en": "We do simple arithmetic on the numbers ($8 - 2 = 6$ and $-7 - 1 = -8$) to make the entries inside our combined matrix as neat as possible. Now we can clearly see the simple expressions containing $x$ and $y$.",
+   "ur": "ہم نمبروں کا سادہ حساب ($8 - 2 = 6$ اور $-7 - 1 = -8$) کرتے ہیں تاکہ ہمارے یکجا کردہ کالب کے اندر کے ارکان مختصر ہو جائیں۔ اب ہم $x$ اور $y$ والے سادہ جملوں کو واضح طور پر دیکھ سکتے ہیں۔"
+  },
+  {
+   "en": "According to the definition of equal matrices, two matrices are equal only if their corresponding entries are equal. This vital rule lets us step out of the matrix brackets and form two simple linear equations.",
+   "ur": "مساوی کالبوں کی تعریف کے مطابق، دو کالب تبھی برابر ہوتے ہیں جب ان کے متناظرہ ارکان آپس میں برابر ہوں۔ یہ اہم اصول ہمیں کالب کی بریکٹوں سے باہر نکلنے اور دو سادہ یک درجی مساواتیں بنانے میں مدد دیتا ہے۔"
+  },
+  {
+   "en": "Finally, we shift the numbers to the other side of the equals sign (changing $+6$ to $-6$ and $-8$ to $+8$) to isolate our variables. This gives us the exact values of $x$ and $y$ that satisfy the problem.",
+   "ur": "آخر میں، ہم متغیرات کو الگ کرنے کے لیے نمبروں کو برابر کے نشان کے دوسری طرف لے جاتے ہیں (جس سے $+6$ بدل کر $-6$ اور $-8$ بدل کر $+8$ ہو جاتا ہے)۔ اس سے ہمیں $x$ اور $y$ کی وہ درست قیمتیں مل جاتی ہیں جو سوال کی شرط کو پورا کرتی ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer means that for the three forces to be in complete equilibrium, the missing force components must be $x = 8$ and $y = -6$. You can easily check this by adding the top entries ($8 + (-2) + (-6) = 0$) and the bottom entries ($8 + (-7) + (-1) = 0$), which both correctly give $0$.",
+  "ur": "حتمی جواب کا مطلب یہ ہے کہ تینوں قوتوں کے مکمل توازن (equilibrium) میں ہونے کے لیے نامعلوم اجزاء کی قیمتیں $x = 8$ اور $y = -6$ ہونی چاہئیں۔ آپ اوپر والے ارکان ($8 + (-2) + (-6) = 0$) اور نیچے والے ارکان ($8 + (-7) + (-1) = 0$) کو جمع کر کے باآسانی اس کی پڑتال کر سکتے ہیں، جو دونوں بالکل درست طور پر $0$ جواب دیتے ہیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

@@ -1,0 +1,59 @@
+{
+ "item": "ex1.3-q6",
+ "label": "",
+ "answer_ref": "$20$ years",
+ "steps": [
+  {
+   "math": "\\text{Let the son's age six years ago} = x\\text{ years}",
+   "en": "First, we define the unknown variable $x$ as the son's age six years ago, since this is exactly what the question asks us to find.",
+   "ur": "سب سے پہلے، ہم نامعلوم متغیر $x$ کو بیٹے کی چھ سال پہلے کی عمر فرض کرتے ہیں، کیونکہ سوال میں ہم سے یہی معلوم کرنے کو کہا گیا ہے۔"
+  },
+  {
+   "math": "\\text{Father's age six years ago} = 2x\\text{ years}",
+   "en": "According to the given condition, six years ago the father's age was $2$ times the age of the son, so we multiply the son's age $x$ by $2$.",
+   "ur": "دی گئی شرط کے مطابق، چھ سال پہلے باپ کی عمر بیٹے کی عمر کا $2$ گنا تھی، اس لیے ہم بیٹے کی عمر $x$ کو $2$ سے ضرب دیتے ہیں۔"
+  },
+  {
+   "math": "\\text{Son's present age} = (x + 6)\\text{ years}, \\quad \\text{Father's present age} = (2x + 6)\\text{ years}",
+   "en": "To find their present ages from their ages six years ago, we add $6$ years to each of their ages.",
+   "ur": "چھ سال پہلے کی عمروں سے ان کی موجودہ عمریں معلوم کرنے کے لیے، ہم ان میں سے ہر ایک کی عمر میں $6$ سال جمع کرتے ہیں۔"
+  },
+  {
+   "math": "(x + 6) + (2x + 6) = 72",
+   "en": "The problem states that the sum of their present ages is $72$ years, so we set up a linear equation by adding both present ages.",
+   "ur": "سوال میں بتایا گیا ہے کہ ان کی موجودہ عمروں کا مجموعہ $72$ سال ہے، اس لیے ہم دونوں موجودہ عمروں کو جمع کر کے ایک یک درجی مساوات بناتے ہیں۔"
+  },
+  {
+   "math": "3x + 12 = 72",
+   "en": "Combine the like terms on the left-hand side: $x + 2x = 3x$ and $6 + 6 = 12$.",
+   "ur": "بائیں طرف ایک جیسی رقموں کو جمع کریں: $x + 2x = 3x$ اور $6 + 6 = 12$۔",
+   "check": [
+    "(x + 6) + (2*x + 6) == 3*x + 12"
+   ]
+  },
+  {
+   "math": "3x = 72 - 12 \\;\\Rightarrow\\; 3x = 60",
+   "en": "Subtract $12$ from both sides of the equation to isolate the term with $x$.",
+   "ur": "$x$ والی رقم کو الگ کرنے کے لیے مساوات کے دونوں اطراف سے $12$ منفی کریں۔",
+   "check": [
+    "72 - 12 == 60"
+   ]
+  },
+  {
+   "math": "x = \\frac{60}{3} \\;\\Rightarrow\\; x = 20",
+   "en": "Divide both sides by $3$ to find the value of $x$. Thus, the son's age six years ago was $20$ years.",
+   "ur": "$x$ کی قیمت معلوم کرنے کے لیے دونوں اطراف کو $3$ سے تقسیم کریں۔ اس طرح، چھ سال پہلے بیٹے کی عمر $20$ سال تھی۔",
+   "check": [
+    "R(60, 3) == 20",
+    "(20 + 6) + (2*20 + 6) == 72",
+    "(x+6) + (2*x+6) == 3*x + 12",
+    "72 - 12 == 60",
+    "Rational(60,3) == 20",
+    "(20+6) + (2*20+6) == 72"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

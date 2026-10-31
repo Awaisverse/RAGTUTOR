@@ -1,0 +1,57 @@
+{
+ "item": "ex1.1-q6",
+ "label": "ii",
+ "answer_ref": "$\\frac{7}{2}$ and $\\frac{15}{4}$",
+ "steps": [
+  {
+   "math": "",
+   "en": "We are given two rational numbers $3$ and $4$, and we need to find two rational numbers between them.",
+   "ur": "ہمیں دو ناطق اعداد $3$ اور $4$ دیے گئے ہیں، اور ہمیں ان کے درمیان دو ناطق اعداد معلوم کرنے ہیں۔"
+  },
+  {
+   "math": "\\frac{a + b}{2}",
+   "en": "By the density property of rational numbers, the average of any two rational numbers $a$ and $b$ is also a rational number that lies exactly between them.",
+   "ur": "ناطق اعداد کی کثافتی خاصیت کے مطابق، کسی بھی دو ناطق اعداد $a$ اور $b$ کا اوسط بھی ایک ناطق عدد ہوتا ہے جو بالکل ان کے درمیان واقع ہوتا ہے۔"
+  },
+  {
+   "math": "\\frac{3 + 4}{2} = \\frac{7}{2}",
+   "en": "First, we find the average of $3$ and $4$. This gives us our first rational number, which is $\\frac{7}{2}$.",
+   "ur": "سب سے پہلے، ہم $3$ اور $4$ کا اوسط معلوم کرتے ہیں۔ اس سے ہمیں پہلا ناطق عدد $\\frac{7}{2}$ ملتا ہے۔",
+   "check": [
+    "(Rational(3,1) + Rational(4,1))/2 == Rational(7,2)"
+   ]
+  },
+  {
+   "math": "\\frac{\\frac{7}{2} + 4}{2} = \\frac{\\frac{7 + 8}{2}}{2}",
+   "en": "To find the second rational number, we take the average of the first rational number $\\frac{7}{2}$ and the larger given number $4$. We start by taking the LCM of the numerator.",
+   "ur": "دوسرا ناطق عدد معلوم کرنے کے لیے، ہم پہلے ناطق عدد $\\frac{7}{2}$ اور دیے گئے بڑے عدد $4$ کا اوسط لیتے ہیں۔ ہم شمار کنندہ کا ذواضعاف اقل (LCM) لے کر شروعات کرتے ہیں۔",
+   "check": [
+    "(Rational(7,2) + Rational(4,1))/2 == ((Rational(7,1) + Rational(8,1))/2)/2"
+   ]
+  },
+  {
+   "math": "\\frac{\\frac{15}{2}}{2} = \\frac{15}{2 \\times 2} = \\frac{15}{4}",
+   "en": "Simplifying the fraction further gives our second rational number, which is $\\frac{15}{4}$.",
+   "ur": "کسر کو مزید مختصر کرنے سے ہمیں دوسرا ناطق عدد ملتا ہے، جو کہ $\\frac{15}{4}$ ہے۔",
+   "check": [
+    "Rational(15,2)/2 == Rational(15,4)",
+    "Rational(15, 2*2) == Rational(15,4)"
+   ]
+  },
+  {
+   "math": "3 < \\frac{7}{2} < \\frac{15}{4} < 4",
+   "en": "Thus, the two required rational numbers between $3$ and $4$ are $\\frac{7}{2}$ and $\\frac{15}{4}$.",
+   "ur": "پس، $3$ اور $4$ کے درمیان مطلوبہ دو ناطق اعداد $\\frac{7}{2}$ اور $\\frac{15}{4}$ ہیں۔",
+   "check": [
+    "Rational(3,1) < Rational(7,2)",
+    "Rational(7,2) < Rational(15,4)",
+    "Rational(15,4) < Rational(4,1)",
+    "(Rational(3,1)+Rational(4,1))/2 == Rational(7,2)",
+    "(Rational(7,2)+Rational(4,1))/2 == Rational(15,4)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

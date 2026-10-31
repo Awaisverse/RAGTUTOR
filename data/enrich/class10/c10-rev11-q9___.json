@@ -1,0 +1,70 @@
+{
+ "item": "c10-rev11-q9",
+ "label": "",
+ "answer_ref": "Mean = 1470, Variance = 57100, SD = 238.96",
+ "steps": [
+  {
+   "math": "x = \\frac{\\text{Lower Limit} + \\text{Upper Limit}}{2}",
+   "en": "First, we find the midpoint (class mark) $x$ for each class interval by averaging its lower and upper limits.",
+   "ur": "سب سے پہلے، ہم ہر جماعتی وقفے کی زیریں اور بالائی حدود کا اوسط نکال کر درمیانی نقطہ (کلاس مارک) $x$ معلوم کرتے ہیں۔"
+  },
+  {
+   "math": "\\begin{array}{c|ccccc|c} \\text{Wages} & 1000\\text{--}1200 & 1200\\text{--}1400 & 1400\\text{--}1600 & 1600\\text{--}1800 & 1800\\text{--}2000 & \\text{Total} \\\\ \\hline f & 6 & 10 & 12 & 8 & 4 & \\sum f = 40 \\\\ x & 1100 & 1300 & 1500 & 1700 & 1900 & \\\\ fx & 6600 & 13000 & 18000 & 13600 & 7600 & \\sum fx = 58800 \\end{array}",
+   "en": "Construct a table for the frequencies $f$, midpoints $x$, and their products $fx$, then find the sums $\\sum f$ and $\\sum fx$.",
+   "ur": "تعدد $f$، درمیانی نقاط $x$ اور ان کے حاصل ضرب $fx$ کے لیے ایک جدول بنائیں، پھر مجموعے $\\sum f$ اور $\\sum fx$ معلوم کریں۔",
+   "check": [
+    "6 + 10 + 12 + 8 + 4 == 40",
+    "6*1100 + 10*1300 + 12*1500 + 8*1700 + 4*1900 == 58800"
+   ]
+  },
+  {
+   "math": "\\bar{x} = \\frac{\\sum fx}{\\sum f} = \\frac{58800}{40} = 1470",
+   "en": "Apply the formula for the arithmetic mean of grouped data and substitute the sums to find the mean daily wage $\\bar{x}$.",
+   "ur": "گروہی مواد کے حسابی اوسط کا فارمولا لگائیں اور یومیہ اجرت کا اوسط $\\bar{x}$ معلوم کرنے کے لیے مجموعوں کی قیمتیں درج کریں۔",
+   "check": [
+    "58800 / 40 == 1470"
+   ]
+  },
+  {
+   "math": "\\begin{array}{c|ccccc|c} x & 1100 & 1300 & 1500 & 1700 & 1900 & \\text{Total} \\\\ \\hline x - \\bar{x} & -370 & -170 & 30 & 230 & 430 & \\\\ (x - \\bar{x})^2 & 136900 & 28900 & 900 & 52900 & 184900 & \\\\ f(x - \\bar{x})^2 & 821400 & 289000 & 10800 & 423200 & 739600 & 2284000 \\end{array}",
+   "en": "To find the variance, calculate the deviations $(x - \\bar{x})$ from the mean $1470$, square them, multiply by the corresponding frequencies $f$, and sum them up to get $\\sum f(x - \\bar{x})^2 = 2284000$.",
+   "ur": "تغیر (variance) معلوم کرنے کے لیے، اوسط $1470$ سے انحراف $(x - \\bar{x})$ نکالیں، ان کا مربع لیں، متعلقہ تعدد $f$ سے ضرب دیں، اور جمع کر کے $\\sum f(x - \\bar{x})^2 = 2284000$ حاصل کریں۔",
+   "check": [
+    "1100 - 1470 == -370",
+    "(-370)**2 == 136900",
+    "6 * 136900 == 821400",
+    "821400 + 289000 + 10800 + 423200 + 739600 == 2284000"
+   ]
+  },
+  {
+   "math": "\\sigma^2 = \\frac{\\sum f(x - \\bar{x})^2}{\\sum f} = \\frac{2284000}{40} = 57100",
+   "en": "Substitute $\\sum f(x - \\bar{x})^2 = 2284000$ and $\\sum f = 40$ into the variance formula for grouped data.",
+   "ur": "گروہی مواد کے تغیر کے فارمولے میں $\\sum f(x - \\bar{x})^2 = 2284000$ اور $\\sum f = 40$ درج کریں۔",
+   "check": [
+    "2284000 / 40 == 57100"
+   ]
+  },
+  {
+   "math": "\\sigma = \\sqrt{\\sigma^2} = \\sqrt{57100} \\approx 238.96",
+   "en": "Take the positive square root of the variance to find the standard deviation $\\sigma$.",
+   "ur": "معیاری انحراف $\\sigma$ معلوم کرنے کے لیے تغیر کا مثبت جزر المربع لیں۔",
+   "check": [
+    "Abs(sqrt(57100) - 238.96) <= 0.005"
+   ]
+  },
+  {
+   "math": "",
+   "en": "Thus, for the daily wages of the workers, the mean is Rs. $1470$, the variance is $57100$, and the standard deviation is Rs. $238.96$.",
+   "ur": "پس، مزدوروں کی یومیہ اجرت کا اوسط $1470$ روپے، تغیر $57100$، اور معیاری انحراف $238.96$ روپے ہے۔",
+   "check": [
+    "6 + 10 + 12 + 8 + 4 == 40",
+    "Abs(((58800)/40) - 1470.00) <= 0.0050000010000000004",
+    "Abs(((6*((1100) - (1470))**2 + 10*((1300) - (1470))**2 + 12*((1500) - (1470))**2 + 8*((1700) - (1470))**2 + 4*((1900) - (1470))**2)/40) - 57100.00) <= 0.0050000010000000004",
+    "Abs((sqrt((57100))) - 238.96) <= 0.0050000010000000004"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-01"
+}

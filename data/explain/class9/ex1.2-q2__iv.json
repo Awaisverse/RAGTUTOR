@@ -1,0 +1,50 @@
+{
+ "item": "ex1.2-q2",
+ "label": "iv",
+ "answer_ref": "$x^2 y z^4$",
+ "math": [
+  "\\sqrt[7]{\\frac{x^{14} \\times y^{21} \\times z^{35}}{y^{14} z^{7}}}",
+  "= \\sqrt[7]{x^{14} \\cdot y^{21-14} \\cdot z^{35-7}}",
+  "= \\sqrt[7]{x^{14} y^{7} z^{28}}",
+  "= \\left(x^{14} y^{7} z^{28}\\right)^{\\frac{1}{7}}",
+  "= \\left(x^{14}\\right)^{\\frac{1}{7}} \\cdot \\left(y^{7}\\right)^{\\frac{1}{7}} \\cdot \\left(z^{28}\\right)^{\\frac{1}{7}}",
+  "= x^{14 \\times \\frac{1}{7}} \\cdot y^{7 \\times \\frac{1}{7}} \\cdot z^{28 \\times \\frac{1}{7}}",
+  "= x^2 y z^4"
+ ],
+ "why": [
+  {
+   "en": "Look closely at the expression inside the $7$-th root: the variables $y$ and $z$ appear in both the numerator and the denominator. In algebra, it is always easiest to clean up the fraction inside the root first before dealing with the radical sign itself.",
+   "ur": "سب سے پہلے $7$-ویں جزر (root) کے اندر موجود رقم کو غور سے دیکھیں: متغیرات $y$ اور $z$ شمار کنندہ اور مخرج دونوں میں موجود ہیں۔ الجبرا میں ہمیشہ یہ طریقہ آسان ہوتا ہے کہ جزر کو حل کرنے سے پہلے اس کے اندر موجود کسر کو مختصر کر لیا جائے۔"
+  },
+  {
+   "en": "When the same base is divided, the Quotient Law of Exponents tells us to bring the bottom power up and subtract it from the top power. Doing this removes the fraction completely and leaves a single $y$ and a single $z$ inside the root.",
+   "ur": "جب ایک جیسی اساس (base) تقسیم ہو رہی ہو، تو قوت نما کے تقسیم کے قانون کے مطابق ہم نیچے والی طاقت کو اوپر لا کر اوپر والی طاقت میں سے تفریق کر دیتے ہیں۔ ایسا کرنے سے کسر مکمل طور پر ختم ہو جاتی ہے اور جزر کے اندر صرف ایک $y$ اور ایک $z$ رہ جاتا ہے۔"
+  },
+  {
+   "en": "Completing the subtraction gives us the new powers $7$ and $28$. Notice how neat this is: every power inside the root ($14$, $7$, and $28$) is now cleanly divisible by the root's index, $7$.",
+   "ur": "تفریق مکمل کرنے سے ہمیں نئی طاقتیں $7$ اور $28$ ملتی ہیں۔ دیکھیں اب یہ کتنا آسان ہو گیا ہے: جزر کے اندر موجود ہر طاقت ($14$، $7$، اور $28$) اب جزر کے درجے $7$ پر پورا پورا تقسیم ہو سکتی ہے۔"
+  },
+  {
+   "en": "To apply the laws of exponents to the root itself, we convert the radical sign $\\sqrt[7]{\\phantom{x}}$ into a fractional power of $\\frac{1}{7}$ by definition. This turns a radical problem into a standard bracket-and-power problem.",
+   "ur": "جزر پر قوت نما کے قوانین لاگو کرنے کے لیے، ہم تعریف کے مطابق جزر کی علامت $\\sqrt[7]{\\phantom{x}}$ کو کسری طاقت $\\frac{1}{7}$ میں بدل دیتے ہیں۔ اس سے یہ جزر کا سوال بریکٹ اور طاقت کے ایک عام سوال میں تبدیل ہو جاتا ہے۔"
+  },
+  {
+   "en": "Because $x^{14}$, $y^7$, and $z^{28}$ are all multiplied together inside the bracket, the Power of a Product rule lets us give the outer power $\\frac{1}{7}$ to each variable separately. Now we can simplify each variable on its own.",
+   "ur": "چونکہ بریکٹ کے اندر $x^{14}$، $y^7$ اور $z^{28}$ آپس میں ضرب کھا رہے ہیں، اس لیے حاصل ضرب کی طاقت کا قانون ہمیں باہر والی طاقت $\\frac{1}{7}$ کو ہر متغیر پر الگ الگ لگانے کی اجازت دیتا ہے۔ اب ہم ہر متغیر کو علیحدہ علیحدہ مختصر کر سکتے ہیں۔"
+  },
+  {
+   "en": "When a power is raised to another power, the Power of a Power law says we multiply the two exponents together. Setting up this multiplication shows clearly how the $\\frac{1}{7}$ will cancel with the powers $14$, $7$, and $28$.",
+   "ur": "جب کسی طاقت کے اوپر ایک اور طاقت ہو، تو 'طاقت کی طاقت' کے قانون کے مطابق ہم دونوں قوت نماؤں کو آپس میں ضرب دیتے ہیں۔ اس ضرب کو لکھنے سے صاف نظر آتا ہے کہ $\\frac{1}{7}$ کس طرح طاقتوں $14$، $7$ اور $28$ کو کاٹ دے گا۔"
+  },
+  {
+   "en": "Dividing each power by $7$ eliminates all the fractions in the exponents, and since $y^1$ is simply written as $y$, we reach our cleanest form. No roots, fractions, or repeated bases remain, so the simplification is complete.",
+   "ur": "ہر طاقت کو $7$ پر تقسیم کرنے سے قوت نماؤں میں موجود تمام کسریں ختم ہو جاتی ہیں، اور چونکہ $y^1$ کو صرف $y$ لکھا جاتا ہے، اس لیے ہمیں سب سے سادہ شکل مل جاتی ہے۔ اب کوئی جزر، کسر یا بار بار آنے والی اساس باقی نہیں رہی، لہٰذا اختصار مکمل ہو گیا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This final answer means that the complicated $7$-th root fraction in the question is algebraically identical to the simple product $x^2 y z^4$. You can easily check this by reversing the process: if you raise $x^2 y z^4$ to the power $7$, you multiply each exponent by $7$ ($2 \\times 7 = 14$, $1 \\times 7 = 7$, and $4 \\times 7 = 28$) to get $x^{14} y^7 z^{28}$, which matches our simplified expression inside the root in Step 3.",
+  "ur": "اس حتمی جواب کا مطلب یہ ہے کہ سوال میں دی گئی پیچیدہ $7$-ویں جزر والی کسر الجبرا کے لحاظ سے سادہ حاصل ضرب $x^2 y z^4$ کے بالکل برابر ہے۔ آپ اس عمل کو الٹ کر کے باآسانی جواب کی پڑتال کر سکتے ہیں: اگر آپ $x^2 y z^4$ کی طاقت $7$ لیں، تو ہر قوت نما کو $7$ سے ضرب دینے سے ($2 \\times 7 = 14$، $1 \\times 7 = 7$، اور $4 \\times 7 = 28$) آپ کو $x^{14} y^7 z^{28}$ ملتا ہے، جو کہ بالکل وہی رقم ہے جو مرحلہ 3 میں جزر کے اندر ہمیں ملی تھی۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}

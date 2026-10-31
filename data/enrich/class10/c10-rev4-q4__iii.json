@@ -1,0 +1,67 @@
+{
+ "item": "c10-rev4-q4",
+ "label": "iii",
+ "answer_ref": "$f^{-1}(x) = x^{2} + 5$, $x \\ge 0$",
+ "steps": [
+  {
+   "math": "f(x) = \\sqrt{x - 5},\\quad x \\ge 5",
+   "en": "We are given the function $f(x)$ with its domain $x \\ge 5$, and we need to find its inverse function $f^{-1}(x)$.",
+   "ur": "ہمیں تفاعل $f(x)$ اس کی ڈومین $x \\ge 5$ کے ساتھ دیا گیا ہے، اور ہمیں اس کا معکوس تفاعل $f^{-1}(x)$ معلوم کرنا ہے۔",
+   "check": [
+    "sqrt(x - 5) == sqrt(x - 5)"
+   ]
+  },
+  {
+   "math": "y = \\sqrt{x - 5},\\quad y \\ge 0",
+   "en": "Let $y = f(x)$, which implies $x = f^{-1}(y)$. Since the square root is always non-negative for $x \\ge 5$, the range of $f$ is $y \\ge 0$.",
+   "ur": "فرض کریں کہ $y = f(x)$ ہے، جس کا مطلب ہے کہ $x = f^{-1}(y)$۔ چونکہ $x \\ge 5$ کے لیے جذر ہمیشہ غیر منفی ہوتا ہے، اس لیے $f$ کی رینج $y \\ge 0$ ہے۔",
+   "check": [
+    "sqrt(x - 5) == sqrt(x - 5)"
+   ]
+  },
+  {
+   "math": "y^2 = \\left(\\sqrt{x - 5}\\right)^2",
+   "en": "To make $x$ the subject, square both sides of the equation to remove the square root.",
+   "ur": "$x$ کو موضوع بنانے کے لیے، جذر کو ختم کرنے کی خاطر مساوات کے دونوں اطراف کا مربع لیں۔",
+   "check": [
+    "(sqrt(x - 5))**2 == x - 5"
+   ]
+  },
+  {
+   "math": "y^2 = x - 5",
+   "en": "Simplify the right-hand side where the square and the square root cancel each other out.",
+   "ur": "دائیں طرف کو مختصر کریں جہاں مربع اور جذر ایک دوسرے کو زائل کر دیتے ہیں۔",
+   "check": [
+    "x - 5 == x - 5"
+   ]
+  },
+  {
+   "math": "x = y^2 + 5",
+   "en": "Add $5$ to both sides to isolate $x$ on one side.",
+   "ur": "$x$ کو ایک طرف اکیلا کرنے کے لیے دونوں اطراف میں $5$ جمع کریں۔",
+   "check": [
+    "(x - 5) + 5 == x"
+   ]
+  },
+  {
+   "math": "f^{-1}(y) = y^2 + 5,\\quad y \\ge 0",
+   "en": "Substitute $x = f^{-1}(y)$ into the equation.",
+   "ur": "مساوات میں $x = f^{-1}(y)$ درج کریں۔",
+   "check": [
+    "y**2 + 5 == y**2 + 5"
+   ]
+  },
+  {
+   "math": "f^{-1}(x) = x^{2} + 5,\\quad x \\ge 0",
+   "en": "Finally, replace $y$ with $x$ to write the inverse function $f^{-1}(x)$ along with its domain $x \\ge 0$ (which is the range of $f$).",
+   "ur": "آخر میں، معکوس تفاعل $f^{-1}(x)$ اور اس کی ڈومین $x \\ge 0$ (جو کہ $f$ کی رینج ہے) لکھنے کے لیے $y$ کی جگہ $x$ درج کریں۔",
+   "check": [
+    "simplify((x**2 + 5).subs(x, sqrt(x - 5))) == x",
+    "simplify((x**2 + 5).subs(x, (sqrt(x - 5)))) == x"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

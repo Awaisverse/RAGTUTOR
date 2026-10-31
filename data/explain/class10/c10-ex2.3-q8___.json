@@ -1,0 +1,50 @@
+{
+ "item": "c10-ex2.3-q8",
+ "label": "",
+ "answer_ref": "proved: $A = 2b - a^2,\\ B = b^2$",
+ "math": [
+  "x^2 + ax + b = 0",
+  "\\alpha + \\beta = -\\frac{a}{1} = -a, \\quad \\alpha\\beta = \\frac{b}{1} = b",
+  "x^2 + Ax + B = 0",
+  "\\alpha^2 + \\beta^2 = -\\frac{A}{1} = -A, \\quad \\alpha^2\\beta^2 = \\frac{B}{1} = B",
+  "(\\alpha + \\beta)^2 - 2\\alpha\\beta = -A",
+  "(-a)^2 - 2(b) = -A \\implies a^2 - 2b = -A \\implies A = 2b - a^2",
+  "(\\alpha\\beta)^2 = B \\implies (b)^2 = B \\implies B = b^2"
+ ],
+ "why": [
+  {
+   "en": "We begin by matching our first equation with the standard quadratic form so we can clearly identify its coefficients. Knowing that the coefficients are $1$, $a$, and $b$ prepares us to use the root-coefficient relationships without any confusion.",
+   "ur": "ہم سب سے پہلے اپنی پہلی مساوات کا معیاری دو درجی مساوات سے موازنہ کرتے ہیں تاکہ اس کے عددی سر واضح طور پر معلوم ہو سکیں۔ عددی سر $1$، $a$ اور $b$ کی پہچان ہمیں بغیر کسی الجھن کے روٹس اور عددی سروں کے درمیان تعلق والے کلیے استعمال کرنے کے لیے تیار کرتی ہے۔"
+  },
+  {
+   "en": "Instead of solving for the roots $\\alpha$ and $\\beta$ directly, we use Vieta's formulas to link them to the coefficients $a$ and $b$. This gives us the exact values for $\\alpha + \\beta$ and $\\alpha\\beta$, which will serve as our building blocks for the proof.",
+   "ur": "روٹس $\\alpha$ اور $\\beta$ کو براہِ راست حل کرنے کے بجائے، ہم انہیں عددی سر $a$ اور $b$ سے جوڑنے کے لیے مجموعہ اور حاصلِ ضرب کے کلیے استعمال کرتے ہیں۔ اس سے ہمیں $\\alpha + \\beta$ اور $\\alpha\\beta$ کی قیمتیں مل جاتی ہیں، جو آگے چل کر ہمارے ثبوت کی بنیاد بنیں گی۔"
+  },
+  {
+   "en": "Now we shift our focus to the second equation and identify its coefficients $1$, $A$, and $B$ using the same standard form. This sets the stage to connect the new squared roots, $\\alpha^2$ and $\\beta^2$, with the capital letters $A$ and $B$ that we need to find.",
+   "ur": "اب ہم اپنی توجہ دوسری مساوات پر مرکوز کرتے ہیں اور اسی معیاری صورت کو استعمال کرتے ہوئے اس کے عددی سر $1$، $A$ اور $B$ الگ کر لیتے ہیں۔ یہ قدم نئے روٹس $\\alpha^2$ اور $\\beta^2$ کو ان بڑے حروف $A$ اور $B$ سے جوڑنے کی راہ ہموار کرتا ہے جن کی قیمتیں ہم نے معلوم کرنی ہیں۔"
+  },
+  {
+   "en": "We apply the sum and product rules again, this time for the roots $\\alpha^2$ and $\\beta^2$. This directly expresses $-A$ and $B$ in terms of $\\alpha$ and $\\beta$, creating a bridge between the second equation and the first one.",
+   "ur": "ہم یہاں دوبارہ روٹس کے مجموعے اور حاصلِ ضرب کے اصول لاگو کرتے ہیں، لیکن اس بار روٹس $\\alpha^2$ اور $\\beta^2$ کے لیے۔ یہ عمل براہِ راست $-A$ اور $B$ کو $\\alpha$ اور $\\beta$ کی شکل میں ظاہر کرتا ہے، جس سے دوسری اور پہلی مساوات کے درمیان ایک مضبوط تعلق بن جاتا ہے۔"
+  },
+  {
+   "en": "Because we only know the value of $\\alpha + \\beta$ and not $\\alpha^2 + \\beta^2$ directly, we use a standard algebraic identity to rewrite $\\alpha^2 + \\beta^2$. This clever transformation allows us to express the left side entirely using the simple sum and product we found in Step 2.",
+   "ur": "چونکہ ہمیں صرف $\\alpha + \\beta$ کی قیمت معلوم ہے اور براہِ راست $\\alpha^2 + \\beta^2$ کی نہیں، اس لیے ہم الجبرا کی ایک مشہور اکائی (identity) استعمال کرتے ہوئے $\\alpha^2 + \\beta^2$ کو نئی شکل میں لکھتے ہیں۔ اس تبدیلی کی بدولت ہم بائیں طرف کو مکمل طور پر اس سادہ مجموعے اور حاصلِ ضرب کی صورت میں لکھ سکتے ہیں جو ہم نے دوسرے مرحلے میں معلوم کیے تھے۔"
+  },
+  {
+   "en": "By plugging in the known values $-a$ and $b$ from our first equation, we eliminate the Greek letters $\\alpha$ and $\\beta$ completely. Simplifying the signs gives us the exact formula for $A$ in terms of $a$ and $b$, completing the first half of our proof.",
+   "ur": "پہلی مساوات سے حاصل کردہ قیمتیں $-a$ اور $b$ درج کر کے، ہم یونانی حروف $\\alpha$ اور $\\beta$ کو مکمل طور پر ختم کر دیتے ہیں۔ علامتوں کو سادہ کرنے سے ہمیں $a$ اور $b$ کی شکل میں $A$ کا بالکل وہی کلیہ مل جاتا ہے جو مطلوب تھا، اور یوں ہمارے ثبوت کا پہلا حصہ مکمل ہو جاتا ہے۔"
+  },
+  {
+   "en": "By the laws of exponents, the product of squares $\\alpha^2\\beta^2$ is just the square of the product $(\\alpha\\beta)^2$. Substituting $b$ for $\\alpha\\beta$ immediately gives us $B = b^2$, which completes the entire proof neatly.",
+   "ur": "قوت نما کے قوانین کے مطابق، مربّعوں کا حاصلِ ضرب $\\alpha^2\\beta^2$ دراصل حاصلِ ضرب کے مربّع $(\\alpha\\beta)^2$ کے برابر ہوتا ہے۔ یہاں $\\alpha\\beta$ کی جگہ $b$ درج کرنے سے ہمیں فوراً $B = b^2$ مل جاتا ہے، جس سے ہمارا پورا ثبوت عمدگی سے مکمل ہو جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This result proves that if the roots of a new quadratic equation are the squares of the roots of an original equation $x^2+ax+b=0$, we do not need to find the roots themselves to know the new equation. Its coefficients $A$ and $B$ can be found directly from the original coefficients $a$ and $b$ using the relations $A = 2b - a^2$ and $B = b^2$.",
+  "ur": "یہ نتیجہ ثابت کرتا ہے کہ اگر کسی نئی دو درجی مساوات کے روٹس اصل مساوات $x^2+ax+b=0$ کے روٹس کے مربّع ہوں، تو ہمیں نئی مساوات معلوم کرنے کے لیے خود روٹس نکالنے کی ضرورت نہیں پڑتی۔ اس کے عددی سر $A$ اور $B$ براہِ راست اصل عددی سروں $a$ اور $b$ سے ان تعلقات $A = 2b - a^2$ اور $B = b^2$ کے ذریعے معلوم کیے جا سکتے ہیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-01"
+}
