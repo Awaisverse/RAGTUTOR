@@ -1,0 +1,50 @@
+{
+ "item": "c10-ex12.2-q3",
+ "label": "ii",
+ "answer_ref": "$\\frac{1}{2}$",
+ "steps": [
+  {
+   "math": "P(W) = \\frac{3}{10}, \\quad P(L) = \\frac{2}{10}",
+   "en": "Let $W$ be the event of winning a match and $L$ be the event of losing a match. Write down their given probabilities.",
+   "ur": "فرض کریں کہ $W$ میچ جیتنے کا واقعہ ہے اور $L$ میچ ہارنے کا واقعہ ہے۔ ان کے دیے گئے احتمالات لکھیں۔",
+   "check": [
+    "R(3,10) == R(3,10)",
+    "R(2,10) == R(2,10)"
+   ]
+  },
+  {
+   "math": "P(W \\cup L) = P(W) + P(L) = \\frac{3}{10} + \\frac{2}{10} = \\frac{5}{10} = \\frac{1}{2}",
+   "en": "Since winning and losing a match are mutually exclusive events, the probability that the team either wins or loses is the sum of their individual probabilities.",
+   "ur": "چونکہ میچ جیتنا اور ہارنا باہمی غیر مشترک واقعات ہیں، اس لیے ٹیم کے جیتنے یا ہارنے کا احتمال ان کے انفرادی احتمالات کا مجموعہ ہے۔",
+   "check": [
+    "R(3,10) + R(2,10) == R(5,10)",
+    "R(5,10) == R(1,2)"
+   ]
+  },
+  {
+   "math": "P(\\text{neither win nor lose}) = P((W \\cup L)') = 1 - P(W \\cup L)",
+   "en": "The event that the team neither wins nor loses (i.e., a draw) is the complement of the event that the team wins or loses. By the complement rule of probability:",
+   "ur": "ٹیم کے نہ جیتنے اور نہ ہارنے (یعنی میچ برابر ہونے) کا واقعہ، جیتنے یا ہارنے کے واقعے کا کمپلیمنٹ (متمم) ہے۔ احتمال کے متمم کے اصول کے مطابق:"
+  },
+  {
+   "math": "P(\\text{neither win nor lose}) = 1 - \\frac{1}{2}",
+   "en": "Substitute the value of $P(W \\cup L) = \\frac{1}{2}$ into the formula.",
+   "ur": "فارمولے میں $P(W \\cup L) = \\frac{1}{2}$ کی قیمت درج کریں۔",
+   "check": [
+    "1 - R(1,2) == 1 - R(1,2)"
+   ]
+  },
+  {
+   "math": "P(\\text{neither win nor lose}) = \\frac{2 - 1}{2} = \\frac{1}{2}",
+   "en": "Simplify the fraction to find the final probability. Thus, the probability that the team neither wins nor loses a match is $\\frac{1}{2}$.",
+   "ur": "حتمی احتمال معلوم کرنے کے لیے کسر کو مختصر کریں۔ پس، ٹیم کے میچ نہ جیتنے اور نہ ہارنے کا احتمال $\\frac{1}{2}$ ہے۔",
+   "check": [
+    "1 - R(1,2) == R(2-1,2)",
+    "R(2-1,2) == R(1,2)",
+    "1 - R(1,2) == R(1,2)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

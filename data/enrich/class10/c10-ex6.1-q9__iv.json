@@ -1,0 +1,42 @@
+{
+ "item": "c10-ex6.1-q9",
+ "label": "iv",
+ "answer_ref": "parallel ($\\underline{b} = 2\\underline{a}$)",
+ "steps": [
+  {
+   "math": "\\underline{a} = 3\\underline{i} - 7\\underline{j}, \\quad \\underline{b} = 6\\underline{i} - 14\\underline{j}",
+   "en": "Write down the two given vectors $\\underline{a}$ and $\\underline{b}$. We need to check whether they are parallel.",
+   "ur": "دیے گئے دو سمتیے $\\underline{a}$ اور $\\underline{b}$ لکھیں۔ ہمیں معلوم کرنا ہے کہ آیا یہ متوازی ہیں۔"
+  },
+  {
+   "math": "\\underline{b} = k\\underline{a}",
+   "en": "Two non-zero vectors $\\underline{a}$ and $\\underline{b}$ are parallel if one can be written as a scalar multiple of the other, where $k$ is a non-zero real number.",
+   "ur": "دو غیر صفری سمتیے $\\underline{a}$ اور $\\underline{b}$ متوازی ہوتے ہیں اگر ایک کو دوسرے کے عددی مضرب کے طور پر لکھا جا سکے، جہاں $k$ ایک غیر صفری حقیقی عدد ہے۔"
+  },
+  {
+   "math": "\\underline{b} = 6\\underline{i} - 14\\underline{j} = 2\\left(3\\underline{i} - 7\\underline{j}\\right)",
+   "en": "Take $2$ as a common factor from both components of vector $\\underline{b}$.",
+   "ur": "سمتیہ $\\underline{b}$ کے دونوں اجزاء میں سے $2$ مشترک لیں۔",
+   "check": [
+    "2*3 == 6",
+    "2*-7 == -14"
+   ]
+  },
+  {
+   "math": "\\underline{b} = 2\\underline{a}",
+   "en": "Substitute $\\underline{a} = 3\\underline{i} - 7\\underline{j}$ into the equation. This shows that vector $\\underline{b}$ is a scalar multiple of vector $\\underline{a}$ (with $k = 2$).",
+   "ur": "مساوات میں $\\underline{a} = 3\\underline{i} - 7\\underline{j}$ درج کریں۔ اس سے ظاہر ہوتا ہے کہ سمتیہ $\\underline{b}$ سمتیہ $\\underline{a}$ کا عددی مضرب ہے (جہاں $k = 2$ ہے)۔"
+  },
+  {
+   "math": "\\text{parallel} \\quad (\\underline{b} = 2\\underline{a})",
+   "en": "Since one vector is a scalar multiple of the other, the given vectors $\\underline{a}$ and $\\underline{b}$ are parallel.",
+   "ur": "چونکہ ایک سمتیہ دوسرے کا عددی مضرب ہے، اس لیے دیے گئے سمتیے $\\underline{a}$ اور $\\underline{b}$ متوازی ہیں۔",
+   "check": [
+    "2*3 == 6",
+    "2*-7 == -14"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

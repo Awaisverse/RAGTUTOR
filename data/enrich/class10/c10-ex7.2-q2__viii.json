@@ -1,0 +1,48 @@
+{
+ "item": "c10-ex7.2-q2",
+ "label": "viii",
+ "answer_ref": "$21.29$ cm$^2$",
+ "steps": [
+  {
+   "math": "",
+   "en": "We are given the lengths of all three sides of the triangle $ABC$: $a = 6.12$ cm, $b = 8.34$ cm, and $c = 7.12$ cm. Since all three sides are known, we will use Hero's formula to find the area $\\Delta$.",
+   "ur": "ہمیں مثلث $ABC$ کے تینوں اضلاع کی لمبائیاں دی گئی ہیں: $a = 6.12$ سینٹی میٹر، $b = 8.34$ سینٹی میٹر، اور $c = 7.12$ سینٹی میٹر۔ چونکہ تینوں اضلاع معلوم ہیں، اس لیے ہم رقبہ $\\Delta$ معلوم کرنے کے لیے ہیرو کا کلیہ استعمال کریں گے۔"
+  },
+  {
+   "math": "s = \\frac{a + b + c}{2} = \\frac{6.12 + 8.34 + 7.12}{2} = \\frac{21.58}{2} = 10.79\\ \\text{cm}",
+   "en": "First, calculate the semi-perimeter $s$ of the triangle by dividing the sum of the three sides by $2$.",
+   "ur": "سب سے پہلے، تینوں اضلاع کے مجموعے کو $2$ پر تقسیم کر کے مثلث کا نصف احاطہ $s$ معلوم کریں۔",
+   "check": [
+    "R(612, 100) + R(834, 100) + R(712, 100) == R(2158, 100)",
+    "R(2158, 100) / 2 == R(1079, 100)"
+   ]
+  },
+  {
+   "math": "s - a = 10.79 - 6.12 = 4.67,\\quad s - b = 10.79 - 8.34 = 2.45,\\quad s - c = 10.79 - 7.12 = 3.67",
+   "en": "Next, subtract each side from the semi-perimeter $s$ to find $(s - a)$, $(s - b)$, and $(s - c)$.",
+   "ur": "اس کے بعد، $(s - a)$، $(s - b)$، اور $(s - c)$ معلوم کرنے کے لیے نصف احاطہ $s$ میں سے ہر ضلع کو تفریق کریں۔",
+   "check": [
+    "R(1079, 100) - R(612, 100) == R(467, 100)",
+    "R(1079, 100) - R(834, 100) == R(245, 100)",
+    "R(1079, 100) - R(712, 100) == R(367, 100)"
+   ]
+  },
+  {
+   "math": "\\Delta = \\sqrt{s(s - a)(s - b)(s - c)}",
+   "en": "Write down Hero's formula for the area of a triangle.",
+   "ur": "مثلث کے رقبے کے لیے ہیرو کا کلیہ لکھیں۔"
+  },
+  {
+   "math": "\\Delta = \\sqrt{10.79 \\times 4.67 \\times 2.45 \\times 3.67} = 21.29\\ \\text{cm}^2",
+   "en": "Substitute the calculated values into the formula and simplify to get the final area of the triangle $ABC$.",
+   "ur": "فارمولے میں حاصل کردہ قیمتیں درج کریں اور مثلث $ABC$ کا حتمی رقبہ حاصل کرنے کے لیے مختصر کریں۔",
+   "check": [
+    "Abs(sqrt(10.79 * 4.67 * 2.45 * 3.67) - 21.29) <= 0.005",
+    "(6.12 + 8.34 + 7.12)/2 == 10.790000000000001",
+    "Abs((sqrt(10.790000000000001*(10.790000000000001 - 6.12)*(10.790000000000001 - 8.34)*(10.790000000000001 - 7.12))) - 21.29) <= 0.0050000010000000004"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

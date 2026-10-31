@@ -1,0 +1,45 @@
+{
+ "item": "c10-rev5-q1",
+ "label": "iii",
+ "answer_ref": "(a) $\\frac{3xyz}{2}$",
+ "steps": [
+  {
+   "math": "\\frac{15xyz}{10}",
+   "en": "We are given the algebraic fraction $\\frac{15xyz}{10}$ and we need to reduce it to its lowest form.",
+   "ur": "ہمیں الجبری کسر $\\frac{15xyz}{10}$ دی گئی ہے اور ہمیں اسے اس کی مختصر ترین شکل میں لانا ہے۔"
+  },
+  {
+   "math": "",
+   "en": "To reduce a fraction to its lowest form, we divide both the numerator and the denominator by their highest common factor (HCF). Here, the HCF of $15$ and $10$ is $5$.",
+   "ur": "کسی کسر کو مختصر ترین شکل میں لانے کے لیے، ہم شمار کنندہ اور مخرج دونوں کو ان کے عادِ اعظم (HCF) سے تقسیم کرتے ہیں۔ یہاں $15$ اور $10$ کا عادِ اعظم $5$ ہے۔"
+  },
+  {
+   "math": "\\frac{15xyz}{10} = \\frac{5 \\times 3xyz}{5 \\times 2}",
+   "en": "Factor out $5$ from both the numerator $15xyz$ and the denominator $10$.",
+   "ur": "شمار کنندہ $15xyz$ اور مخرج $10$ دونوں میں سے $5$ کو بطور جزوِ ضربی الگ کریں۔",
+   "check": [
+    "15*x*y*z/10 == (5*3*x*y*z)/(5*2)",
+    "15 == 5*3",
+    "10 == 5*2"
+   ]
+  },
+  {
+   "math": "\\frac{5 \\times 3xyz}{5 \\times 2} = \\frac{3xyz}{2}",
+   "en": "Cancel out the common factor $5$ from the numerator and the denominator.",
+   "ur": "شمار کنندہ اور مخرج میں سے مشترک جزوِ ضربی $5$ کو کاٹ دیں۔",
+   "check": [
+    "(5*3*x*y*z)/(5*2) == 3*x*y*z/2"
+   ]
+  },
+  {
+   "math": "\\text{Answer: (a) } \\frac{3xyz}{2}",
+   "en": "The lowest form of the fraction is $\\frac{3xyz}{2}$, which matches option (a).",
+   "ur": "کسر کی مختصر ترین شکل $\\frac{3xyz}{2}$ ہے، جو کہ آپشن (a) سے مطابقت رکھتی ہے۔",
+   "check": [
+    "15*x*y*z/10 == 3*x*y*z/2"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

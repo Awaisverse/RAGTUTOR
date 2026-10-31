@@ -1,0 +1,55 @@
+{
+ "item": "c10-ex7.1-q3",
+ "label": "i",
+ "answer_ref": "$\\frac{1}{2}$",
+ "steps": [
+  {
+   "math": "\\sin 150^\\circ",
+   "en": "We need to find the exact value of $\\sin 150^\\circ$ without using a calculator.",
+   "ur": "ہمیں کیلکولیٹر کے بغیر $\\sin 150^\\circ$ کی اصل قیمت معلوم کرنی ہے۔"
+  },
+  {
+   "math": "150^\\circ = 1 \\times 90^\\circ + 60^\\circ",
+   "en": "First, express the angle $150^\\circ$ in terms of a multiple of $90^\\circ$ plus an acute angle $\\theta$.",
+   "ur": "سب سے پہلے، زاویہ $150^\\circ$ کو $90^\\circ$ کے مضرب اور ایک حادہ زاویہ $\\theta$ کے مجموعے کے طور پر لکھیں۔",
+   "check": [
+    "150 == 1*90 + 60"
+   ]
+  },
+  {
+   "math": "\\sin 150^\\circ = \\sin(1 \\times 90^\\circ + 60^\\circ)",
+   "en": "Substitute this expression into the given trigonometric function.",
+   "ur": "اس اظہار کو دیے گئے تکونیاتی تفاعل میں درج کریں۔",
+   "check": [
+    "sin(150*pi/180) == sin((1*90 + 60)*pi/180)"
+   ]
+  },
+  {
+   "math": "\\sin(1 \\times 90^\\circ + 60^\\circ) = +\\cos 60^\\circ",
+   "en": "Since $1$ is an odd multiple of $90^\\circ$, $\\sin$ changes to its co-ratio $\\cos$. Also, $150^\\circ$ lies in Quadrant II where $\\sin$ is positive, so the sign remains positive.",
+   "ur": "چونکہ $1$ زاویہ $90^\\circ$ کا ایک طاق مضرب ہے، اس لیے $\\sin$ اپنی ہم ریشو $\\cos$ میں تبدیل ہو جاتا ہے۔ نیز، $150^\\circ$ دوسرے ربع (Quadrant II) میں واقع ہے جہاں $\\sin$ مثبت ہوتا ہے، اس لیے علامت مثبت رہے گی۔",
+   "check": [
+    "sin((1*90 + 60)*pi/180) == cos(60*pi/180)"
+   ]
+  },
+  {
+   "math": "\\cos 60^\\circ = \\frac{1}{2}",
+   "en": "Recall the standard exact value of $\\cos 60^\\circ$, which is $\\frac{1}{2}$.",
+   "ur": "$\\cos 60^\\circ$ کی معیاری قیمت یاد کریں، جو کہ $\\frac{1}{2}$ ہے۔",
+   "check": [
+    "cos(60*pi/180) == R(1,2)"
+   ]
+  },
+  {
+   "math": "\\sin 150^\\circ = \\frac{1}{2}",
+   "en": "Thus, the exact value of $\\sin 150^\\circ$ is $\\frac{1}{2}$.",
+   "ur": "پس، $\\sin 150^\\circ$ کی اصل قیمت $\\frac{1}{2}$ ہے۔",
+   "check": [
+    "sin(150*pi/180) == R(1,2)",
+    "sin((150)*pi/180) == 1/2"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

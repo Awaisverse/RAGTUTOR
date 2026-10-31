@@ -16,20 +16,41 @@
      "prompt": "$\\sin\\ 55^\\circ$",
      "steps": [
       {
-       "math": "55^\\circ \\text{ lies in quadrant I}",
-       "en": "$55^\\circ$ is between $0^\\circ$ and $90^\\circ$.",
-       "ur": "$55^\\circ$، $0^\\circ$ اور $90^\\circ$ کے درمیان ہے۔"
+       "math": "\\sin 55^\\circ",
+       "en": "We need to find the sign of the given trigonometric ratio $\\sin 55^\\circ$, where the angle is $55^\\circ$.",
+       "ur": "ہمیں دیے گئے مثلثیاتی نسبت $\\sin 55^\\circ$ کی علامت معلوم کرنی ہے، جہاں زاویہ $55^\\circ$ ہے۔"
       },
       {
-       "math": "\\sin\\ 55^\\circ \\text{ is positive}",
-       "en": "All are positive in I; sin and cosec in II; tan and cot in III; cos and sec in IV.",
-       "ur": "ربع I میں سب مثبت؛ II میں sin اور cosec؛ III میں tan اور cot؛ IV میں cos اور sec۔",
+       "math": "0^\\circ < 55^\\circ < 90^\\circ",
+       "en": "First, we determine the quadrant in which the angle lies. Since $55^\\circ$ is greater than $0^\\circ$ and less than $90^\\circ$, it lies between $0^\\circ$ and $90^\\circ$.",
+       "ur": "سب سے پہلے، ہم یہ طے کرتے ہیں کہ زاویہ کس ربع (quadrant) میں واقع ہے۔ چونکہ $55^\\circ$ زاویہ $0^\\circ$ سے بڑا اور $90^\\circ$ سے چھوٹا ہے، اس لیے یہ $0^\\circ$ اور $90^\\circ$ کے درمیان ہے۔",
        "check": [
+        "0 < 55",
+        "55 < 90"
+       ]
+      },
+      {
+       "math": "55^\\circ \\text{ lies in Quadrant I}",
+       "en": "Any angle between $0^\\circ$ and $90^\\circ$ lies in the first quadrant (Quadrant I).",
+       "ur": "$0^\\circ$ اور $90^\\circ$ کے درمیان کوئی بھی زاویہ پہلے ربع (Quadrant I) میں واقع ہوتا ہے۔"
+      },
+      {
+       "math": "\\sin \\theta > 0 \\text{ in Quadrant I}",
+       "en": "According to the rules of signs of trigonometric functions, all six trigonometric ratios (including $\\sin$) are positive in Quadrant I.",
+       "ur": "مثلثیاتی تفاعل کی علامات کے اصولوں کے مطابق، پہلے ربع (Quadrant I) میں تمام چھ مثلثیاتی نسبتیں (بشمول $\\sin$) مثبت ہوتی ہیں۔"
+      },
+      {
+       "math": "\\sin 55^\\circ \\text{ is positive}",
+       "en": "Therefore, the sign of $\\sin 55^\\circ$ is positive ($+$).",
+       "ur": "لہذا، $\\sin 55^\\circ$ کی علامت مثبت ($+$) ہے۔",
+       "check": [
+        "sin(55*pi/180) > 0",
         "sin((55)*pi/180) > 0"
        ]
       }
      ],
      "answer": "Positive",
+     "enriched": true,
      "book_key": "Positive"
     },
     {
@@ -37,20 +58,36 @@
      "prompt": "$\\cos\\ 145^\\circ$",
      "steps": [
       {
-       "math": "145^\\circ \\text{ lies in quadrant II}",
-       "en": "$145^\\circ$ is between $90^\\circ$ and $180^\\circ$.",
-       "ur": "$145^\\circ$، $90^\\circ$ اور $180^\\circ$ کے درمیان ہے۔"
+       "math": "\\cos 145^\\circ",
+       "en": "We need to find the sign of the given trigonometric ratio, where the angle is $145^\\circ$.",
+       "ur": "ہمیں دی گئی تکونیاتی نسبت کی علامت معلوم کرنی ہے، جہاں زاویہ $145^\\circ$ ہے۔"
       },
       {
-       "math": "\\cos\\ 145^\\circ \\text{ is negative}",
-       "en": "All are positive in I; sin and cosec in II; tan and cot in III; cos and sec in IV.",
-       "ur": "ربع I میں سب مثبت؛ II میں sin اور cosec؛ III میں tan اور cot؛ IV میں cos اور sec۔",
+       "math": "90^\\circ < 145^\\circ < 180^\\circ",
+       "en": "Compare the given angle $145^\\circ$ with the standard quadrantal angles. Since $145^\\circ$ is greater than $90^\\circ$ and less than $180^\\circ$, it lies between them.",
+       "ur": "دیے گئے زاویے $145^\\circ$ کا معیاری ربعی زاویوں سے موازنہ کریں۔ چونکہ $145^\\circ$، $90^\\circ$ سے بڑا اور $180^\\circ$ سے چھوٹا ہے، اس لیے یہ ان کے درمیان واقع ہے۔"
+      },
+      {
+       "math": "145^\\circ \\text{ lies in Quadrant II}",
+       "en": "Any angle between $90^\\circ$ and $180^\\circ$ has its terminal arm in the second quadrant.",
+       "ur": "$90^\\circ$ اور $180^\\circ$ کے درمیان کسی بھی زاویے کا اختتامی بازو دوسرے ربع (Quadrant II) میں واقع ہوتا ہے۔"
+      },
+      {
+       "math": "\\cos \\theta < 0 \\text{ in Quadrant II}",
+       "en": "According to the quadrant sign rules, only $\\sin \\theta$ and $\\operatorname{cosec} \\theta$ are positive in Quadrant II, while all other trigonometric ratios including $\\cos \\theta$ are negative.",
+       "ur": "ربع کے علامتی اصولوں کے مطابق، دوسرے ربع (Quadrant II) میں صرف $\\sin \\theta$ اور $\\operatorname{cosec} \\theta$ مثبت ہوتے ہیں، جبکہ $\\cos \\theta$ سمیت باقی تمام تکونیاتی نسبتیں منفی ہوتی ہیں۔"
+      },
+      {
+       "math": "\\cos 145^\\circ \\text{ is negative}",
+       "en": "Therefore, the sign of $\\cos 145^\\circ$ is negative.",
+       "ur": "لہٰذا، $\\cos 145^\\circ$ کی علامت منفی (Negative) ہے۔",
        "check": [
         "cos((145)*pi/180) < 0"
        ]
       }
      ],
      "answer": "Negative",
+     "enriched": true,
      "book_key": "Negative"
     },
     {
@@ -58,20 +95,41 @@
      "prompt": "$\\tan\\ 111^\\circ$",
      "steps": [
       {
-       "math": "111^\\circ \\text{ lies in quadrant II}",
-       "en": "$111^\\circ$ is between $90^\\circ$ and $180^\\circ$.",
-       "ur": "$111^\\circ$، $90^\\circ$ اور $180^\\circ$ کے درمیان ہے۔"
+       "math": "\\tan 111^\\circ",
+       "en": "We need to find the algebraic sign of the trigonometric expression $\\tan 111^\\circ$, where the given angle is $111^\\circ$.",
+       "ur": "ہمیں مثلثیاتی مقدار $\\tan 111^\\circ$ کی علامت معلوم کرنی ہے، جہاں دیا گیا زاویہ $111^\\circ$ ہے۔"
       },
       {
-       "math": "\\tan\\ 111^\\circ \\text{ is negative}",
-       "en": "All are positive in I; sin and cosec in II; tan and cot in III; cos and sec in IV.",
-       "ur": "ربع I میں سب مثبت؛ II میں sin اور cosec؛ III میں tan اور cot؛ IV میں cos اور sec۔",
+       "math": "90^\\circ < 111^\\circ < 180^\\circ",
+       "en": "First, let us determine the quadrant in which the terminal arm of the angle $111^\\circ$ lies. Since $111^\\circ$ is greater than $90^\\circ$ and less than $180^\\circ$, it lies between them.",
+       "ur": "سب سے پہلے، ہم یہ طے کرتے ہیں کہ زاویہ $111^\\circ$ کا اختتامی بازو کس ربع میں واقع ہے۔ چونکہ $111^\\circ$، $90^\\circ$ سے بڑا اور $180^\\circ$ سے چھوٹا ہے، اس لیے یہ ان کے درمیان آتا ہے۔",
        "check": [
+        "111 > 90",
+        "111 < 180"
+       ]
+      },
+      {
+       "math": "111^\\circ \\text{ lies in Quadrant II}",
+       "en": "Any angle between $90^\\circ$ and $180^\\circ$ has its terminal side in the second quadrant (Quadrant II).",
+       "ur": "$90^\\circ$ اور $180^\\circ$ کے درمیان کسی بھی زاویے کا اختتامی بازو دوسرے ربع (ربع II) میں واقع ہوتا ہے۔"
+      },
+      {
+       "math": "",
+       "en": "According to the signs of trigonometric ratios in different quadrants (CAST rule), only $\\sin \\theta$ and $\\operatorname{cosec} \\theta$ are positive in Quadrant II, while all other ratios including $\\tan \\theta$ are negative.",
+       "ur": "مختلف ربعات میں مثلثیاتی نسبتوں کی علامات کے اصول کے مطابق، دوسرے ربع (ربع II) میں صرف $\\sin \\theta$ اور $\\operatorname{cosec} \\theta$ مثبت ہوتے ہیں، جبکہ $\\tan \\theta$ سمیت باقی تمام نسبتیں منفی ہوتی ہیں۔"
+      },
+      {
+       "math": "\\tan 111^\\circ < 0 \\implies \\tan 111^\\circ \\text{ is negative}",
+       "en": "Therefore, the sign of $\\tan 111^\\circ$ is negative.",
+       "ur": "لہٰذا، $\\tan 111^\\circ$ کی علامت منفی (Negative) ہے۔",
+       "check": [
+        "tan(111*pi/180) < 0",
         "tan((111)*pi/180) < 0"
        ]
       }
      ],
      "answer": "Negative",
+     "enriched": true,
      "book_key": "Negative"
     },
     {
@@ -79,20 +137,41 @@
      "prompt": "$\\sec\\ 179^\\circ$",
      "steps": [
       {
-       "math": "179^\\circ \\text{ lies in quadrant II}",
-       "en": "$179^\\circ$ is between $90^\\circ$ and $180^\\circ$.",
-       "ur": "$179^\\circ$، $90^\\circ$ اور $180^\\circ$ کے درمیان ہے۔"
+       "math": "\\sec 179^\\circ",
+       "en": "We need to determine the sign (positive or negative) of the trigonometric expression $\\sec 179^\\circ$.",
+       "ur": "ہمیں مثلثیاتی جملے $\\sec 179^\\circ$ کی علامت (مثبت یا منفی) معلوم کرنی ہے۔"
       },
       {
-       "math": "\\sec\\ 179^\\circ \\text{ is negative}",
-       "en": "All are positive in I; sin and cosec in II; tan and cot in III; cos and sec in IV.",
-       "ur": "ربع I میں سب مثبت؛ II میں sin اور cosec؛ III میں tan اور cot؛ IV میں cos اور sec۔",
+       "math": "90^\\circ < 179^\\circ < 180^\\circ",
+       "en": "First, let's find the quadrant in which the angle $\\theta = 179^\\circ$ lies. Notice that $179^\\circ$ is greater than $90^\\circ$ and less than $180^\\circ$.",
+       "ur": "سب سے پہلے، ہم وہ ربع معلوم کرتے ہیں جس میں زاویہ $\\theta = 179^\\circ$ واقع ہے۔ غور کریں کہ $179^\\circ$، $90^\\circ$ سے بڑا اور $180^\\circ$ سے چھوٹا ہے۔",
        "check": [
+        "90 < 179",
+        "179 < 180"
+       ]
+      },
+      {
+       "math": "179^\\circ \\text{ lies in Quadrant II}",
+       "en": "Since any angle between $90^\\circ$ and $180^\\circ$ lies in the second quadrant, the terminal arm of $179^\\circ$ is in Quadrant II.",
+       "ur": "چونکہ $90^\\circ$ اور $180^\\circ$ کے درمیان کوئی بھی زاویہ دوسرے ربع میں ہوتا ہے، اس لیے $179^\\circ$ کا اختتامی بازو ربع II میں واقع ہے۔"
+      },
+      {
+       "math": "\\text{In Quadrant II: } \\sin\\theta > 0, \\operatorname{cosec}\\theta > 0 \\text{ and } \\sec\\theta < 0",
+       "en": "According to the quadrant sign rules, only $\\sin\\theta$ and $\\operatorname{cosec}\\theta$ are positive in Quadrant II. All other trigonometric ratios, including $\\sec\\theta$, are negative.",
+       "ur": "ربعی علامات کے اصول کے مطابق، ربع II میں صرف $\\sin\\theta$ اور $\\operatorname{cosec}\\theta$ مثبت ہوتے ہیں۔ باقی تمام مثلثیاتی نسبتیں، بشمول $\\sec\\theta$، منفی ہوتی ہیں۔"
+      },
+      {
+       "math": "\\sec 179^\\circ < 0 \\implies \\text{Negative}",
+       "en": "Therefore, the sign of $\\sec 179^\\circ$ is negative.",
+       "ur": "لہذا، $\\sec 179^\\circ$ کی علامت منفی (negative) ہے۔",
+       "check": [
+        "sec(179*pi/180) < 0",
         "sec((179)*pi/180) < 0"
        ]
       }
      ],
      "answer": "Negative",
+     "enriched": true,
      "book_key": "Negative"
     },
     {
@@ -100,20 +179,37 @@
      "prompt": "$\\operatorname{cosec}\\ 88^\\circ$",
      "steps": [
       {
-       "math": "88^\\circ \\text{ lies in quadrant I}",
-       "en": "$88^\\circ$ is between $0^\\circ$ and $90^\\circ$.",
-       "ur": "$88^\\circ$، $0^\\circ$ اور $90^\\circ$ کے درمیان ہے۔"
+       "math": "\\operatorname{cosec} 88^\\circ",
+       "en": "We need to find the sign of the given trigonometric ratio $\\operatorname{cosec} 88^\\circ$. Here, the given angle is $88^\\circ$.",
+       "ur": "ہمیں دی گئی تکونیاتی نسبت $\\operatorname{cosec} 88^\\circ$ کی علامت معلوم کرنی ہے۔ یہاں دیا گیا زاویہ $88^\\circ$ ہے۔"
       },
       {
-       "math": "\\operatorname{cosec}\\ 88^\\circ \\text{ is positive}",
-       "en": "All are positive in I; sin and cosec in II; tan and cot in III; cos and sec in IV.",
-       "ur": "ربع I میں سب مثبت؛ II میں sin اور cosec؛ III میں tan اور cot؛ IV میں cos اور sec۔",
+       "math": "0^\\circ < 88^\\circ < 90^\\circ",
+       "en": "First, we determine the quadrant in which the angle $88^\\circ$ lies. Notice that $88^\\circ$ is greater than $0^\\circ$ and less than $90^\\circ$.",
+       "ur": "سب سے پہلے، ہم یہ طے کرتے ہیں کہ زاویہ $88^\\circ$ کس ربع (quadrant) میں واقع ہے۔ غور کریں کہ $88^\\circ$، $0^\\circ$ سے بڑا اور $90^\\circ$ سے چھوٹا ہے۔"
+      },
+      {
+       "math": "88^\\circ \\text{ lies in Quadrant I}",
+       "en": "Since the terminal side of any angle between $0^\\circ$ and $90^\\circ$ lies in the first quadrant, the angle $88^\\circ$ lies in Quadrant I.",
+       "ur": "چونکہ $0^\\circ$ اور $90^\\circ$ کے درمیان کسی بھی زاویے کا اختتامی بازو پہلے ربع میں ہوتا ہے، اس لیے زاویہ $88^\\circ$ ربع اول (Quadrant I) میں واقع ہے۔"
+      },
+      {
+       "math": "\\operatorname{cosec} \\theta > 0 \\text{ in Quadrant I}",
+       "en": "According to the rules of signs for trigonometric ratios, all six trigonometric ratios (including $\\operatorname{cosec}$) are positive in Quadrant I.",
+       "ur": "تکونیاتی نسبتوں کی علامتوں کے اصولوں کے مطابق، ربع اول میں تمام چھ تکونیاتی نسبتیں (بشمول $\\operatorname{cosec}$) مثبت (positive) ہوتی ہیں۔"
+      },
+      {
+       "math": "\\operatorname{cosec} 88^\\circ \\text{ is Positive}",
+       "en": "Therefore, the sign of $\\operatorname{cosec} 88^\\circ$ is positive.",
+       "ur": "لہٰذا، $\\operatorname{cosec} 88^\\circ$ کی علامت مثبت (Positive) ہے۔",
        "check": [
+        "csc(88*pi/180) > 0",
         "csc((88)*pi/180) > 0"
        ]
       }
      ],
      "answer": "Positive",
+     "enriched": true,
      "book_key": "Positive"
     },
     {
@@ -121,20 +217,31 @@
      "prompt": "$\\cot\\ 14^\\circ$",
      "steps": [
       {
-       "math": "14^\\circ \\text{ lies in quadrant I}",
-       "en": "$14^\\circ$ is between $0^\\circ$ and $90^\\circ$.",
-       "ur": "$14^\\circ$، $0^\\circ$ اور $90^\\circ$ کے درمیان ہے۔"
+       "math": "\\cot 14^\\circ",
+       "en": "We need to find the sign of the trigonometric ratio $\\cot 14^\\circ$.",
+       "ur": "ہمیں مثلثیاتی نسبت $\\cot 14^\\circ$ کی علامت معلوم کرنی ہے۔"
       },
       {
-       "math": "\\cot\\ 14^\\circ \\text{ is positive}",
-       "en": "All are positive in I; sin and cosec in II; tan and cot in III; cos and sec in IV.",
-       "ur": "ربع I میں سب مثبت؛ II میں sin اور cosec؛ III میں tan اور cot؛ IV میں cos اور sec۔",
+       "math": "0^\\circ < 14^\\circ < 90^\\circ",
+       "en": "First, let's check the given angle $\\theta = 14^\\circ$. Since $14^\\circ$ is greater than $0^\\circ$ and less than $90^\\circ$, the terminal arm of the angle lies in the First Quadrant (Quadrant I).",
+       "ur": "سب سے پہلے، دیے گئے زاویے $\\theta = 14^\\circ$ کا جائزہ لیتے ہیں۔ چونکہ $14^\\circ$، $0^\\circ$ سے بڑا اور $90^\\circ$ سے چھوٹا ہے، اس لیے زاویے کا اختتامی بازو پہلے ربع (Quadrant I) میں واقع ہے۔"
+      },
+      {
+       "math": "\\text{In Quadrant I, all trigonometric ratios are } +\\text{ve}",
+       "en": "According to the quadrant sign rules, all six trigonometric functions ($\\sin, \\cos, \\tan, \\operatorname{cosec}, \\sec, \\cot$) are positive in the First Quadrant.",
+       "ur": "اربع کے اصولوں کے مطابق، پہلے ربع میں تمام چھ مثلثیاتی تفاعل ($\\sin, \\cos, \\tan, \\operatorname{cosec}, \\sec, \\cot$) مثبت ہوتے ہیں۔"
+      },
+      {
+       "math": "\\cot 14^\\circ > 0",
+       "en": "Therefore, the value of $\\cot 14^\\circ$ is positive.",
+       "ur": "لہٰذا، $\\cot 14^\\circ$ کی قیمت مثبت (positive) ہے۔",
        "check": [
         "cot((14)*pi/180) > 0"
        ]
       }
      ],
      "answer": "Positive",
+     "enriched": true,
      "book_key": "Positive"
     }
    ],
@@ -152,15 +259,34 @@
      "prompt": "$\\tan(180^\\circ - \\theta) $",
      "steps": [
       {
+       "math": "\\tan(180^\\circ - \\theta)",
+       "en": "We need to simplify the given trigonometric expression $\\tan(180^\\circ - \\theta)$ using the rules of allied angles.",
+       "ur": "ہمیں دیے گئے مثلثیاتی جملے $\\tan(180^\\circ - \\theta)$ کو متعلقہ زاویوں (allied angles) کے اصولوں کا استعمال کرتے ہوئے مختصر کرنا ہے۔"
+      },
+      {
+       "math": "180^\\circ = 2 \\times 90^\\circ",
+       "en": "First, observe the angle $180^\\circ$. Since $180^\\circ$ is an even multiple of $90^\\circ$, the trigonometric ratio remains unchanged (so $\\tan$ stays $\\tan$).",
+       "ur": "سب سے پہلے، زاویہ $180^\\circ$ کا مشاہدہ کریں۔ چونکہ $180^\\circ$ زاویہ $90^\\circ$ کا جفت حاصل ضرب ہے، اس لیے مثلثیاتی نسبت تبدیل نہیں ہوتی (لہٰذا $\\tan$ ہی رہے گا)۔",
+       "check": [
+        "180 == 2 * 90"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Next, determine the sign. Assuming $\\theta$ is an acute angle, the angle $(180^\\circ - \\theta)$ lies in the second quadrant (Quadrant II). In Quadrant II, the tangent function is negative.",
+       "ur": "اس کے بعد، علامت کا تعین کریں۔ فرض کریں کہ $\\theta$ ایک حادہ زاویہ ہے، تو زاویہ $(180^\\circ - \\theta)$ دوسرے ربع (Quadrant II) میں واقع ہوتا ہے۔ دوسرے ربع میں، $\\tan$ منفی ہوتا ہے۔"
+      },
+      {
        "math": "\\tan(180^\\circ - \\theta) = -\\tan\\theta",
-       "en": "For acute $\\theta$ the angle is in quadrant II: tan is negative; $180^\\circ$ keeps the same ratio.",
-       "ur": "زاویے کا ربع اور ریشو کی تبدیلی دیکھیں۔",
+       "en": "Combining the negative sign and the unchanged ratio, we get $-\\tan\\theta$. Therefore, the blank is filled with a minus sign ($-$).",
+       "ur": "منفی علامت اور غیر تبدیل شدہ نسبت کو ملا کر، ہمیں $-\\tan\\theta$ حاصل ہوتا ہے۔ لہٰذا، خالی جگہ میں منفی کی علامت ($-$) آئے گی۔",
        "check": [
         "tan(pi - t) == -tan(t)"
        ]
       }
      ],
      "answer": "$-\\tan\\theta$",
+     "enriched": true,
      "book_key": "-\\tan\\theta"
     },
     {
@@ -168,15 +294,34 @@
      "prompt": "$\\sin(180^\\circ - \\theta) $",
      "steps": [
       {
+       "math": "\\sin(180^\\circ - \\theta)",
+       "en": "We are given the trigonometric expression $\\sin(180^\\circ - \\theta)$ and need to find the correct sign for the blank in $\\sin(180^\\circ - \\theta) = \\ldots \\sin\\theta$.",
+       "ur": "ہمیں مثلثیاتی جملہ $\\sin(180^\\circ - \\theta)$ دیا گیا ہے اور ہمیں $\\sin(180^\\circ - \\theta) = \\ldots \\sin\\theta$ میں خالی جگہ کے لیے درست علامت معلوم کرنی ہے۔"
+      },
+      {
+       "math": "180^\\circ = 2 \\times 90^\\circ",
+       "en": "First, we express $180^\\circ$ as a multiple of $90^\\circ$. Since $2$ is an even multiple of $90^\\circ$, the trigonometric ratio $\\sin$ does not change to its co-ratio and remains $\\sin\\theta$.",
+       "ur": "سب سے پہلے، ہم $180^\\circ$ کو $90^\\circ$ کے حاصل ضرب کے طور پر لکھتے ہیں۔ چونکہ $2$ ایک جفت عدد ہے، اس لیے مثلثیاتی نسبت $\\sin$ تبدیل نہیں ہوگی اور $\\sin\\theta$ ہی رہے گی۔",
+       "check": [
+        "180 == 2 * 90"
+       ]
+      },
+      {
+       "math": "90^\\circ < 180^\\circ - \\theta < 180^\\circ",
+       "en": "Assuming $\\theta$ is an acute angle, the angle $(180^\\circ - \\theta)$ lies in the second quadrant (Quadrant II). In the second quadrant, the sine function is positive ($+$).",
+       "ur": "فرض کریں کہ $\\theta$ ایک حادہ زاویہ ہے، تو زاویہ $(180^\\circ - \\theta)$ دوسرے ربع (Quadrant II) میں واقع ہوگا۔ دوسرے ربع میں $\\sin$ کی قیمت مثبت ($+$) ہوتی ہے۔"
+      },
+      {
        "math": "\\sin(180^\\circ - \\theta) = +\\sin\\theta",
-       "en": "For acute $\\theta$ the angle is in quadrant II: sin is positive; $180^\\circ$ keeps the same ratio.",
-       "ur": "زاویے کا ربع اور ریشو کی تبدیلی دیکھیں۔",
+       "en": "Combining the positive sign from the second quadrant with the unchanged ratio gives $+\\sin\\theta$. Thus, the blank is filled with a $+$ sign.",
+       "ur": "دوسرے ربع کی مثبت علامت اور بغیر تبدیلی کے مثلثیاتی نسبت کو ملانے سے $+\\sin\\theta$ حاصل ہوتا ہے۔ لہٰذا، خالی جگہ میں $+$ کی علامت آئے گی۔",
        "check": [
         "sin(pi - t) == sin(t)"
        ]
       }
      ],
      "answer": "$+\\sin\\theta$",
+     "enriched": true,
      "book_key": "+\\sin\\theta"
     },
     {
@@ -184,15 +329,39 @@
      "prompt": "$\\tan(90^\\circ + \\theta) $",
      "steps": [
       {
+       "math": "\\tan(90^\\circ + \\theta)",
+       "en": "We are given the trigonometric expression $\\tan(90^\\circ + \\theta)$ and need to simplify it.",
+       "ur": "ہمیں مثلثیاتی جملہ $\\tan(90^\\circ + \\theta)$ دیا گیا ہے اور ہمیں اسے مختصر کرنا ہے۔"
+      },
+      {
+       "math": "90^\\circ + \\theta \\in \\text{Quadrant II}",
+       "en": "Assuming $\\theta$ is an acute angle, adding $\\theta$ to $90^\\circ$ places the terminal arm of the angle in the second quadrant (Quadrant II).",
+       "ur": "فرض کریں کہ $\\theta$ ایک حادہ زاویہ ہے، تو $90^\\circ$ میں $\\theta$ جمع کرنے سے زاویے کا اختتامی بازو دوسرے ربع (Quadrant II) میں آتا ہے۔"
+      },
+      {
+       "math": "",
+       "en": "In the second quadrant, only $\\sin$ and $\\operatorname{cosec}$ are positive, so the $\\tan$ function is negative.",
+       "ur": "دوسرے ربع میں صرف $\\sin$ اور $\\operatorname{cosec}$ مثبت ہوتے ہیں، اس لیے $\\tan$ تفاعل منفی ہوتا ہے۔"
+      },
+      {
+       "math": "90^\\circ = 1 \\times 90^\\circ",
+       "en": "Since the angle involves $90^\\circ$ (which is an odd multiple of $90^\\circ$), the trigonometric ratio $\\tan$ changes to its co-ratio $\\cot$.",
+       "ur": "چونکہ زاویے میں $90^\\circ$ شامل ہے (جو کہ $90^\\circ$ کا طاق ضعف ہے)، اس لیے مثلثیاتی نسبت $\\tan$ اپنی معاون نسبت (co-ratio) یعنی $\\cot$ میں تبدیل ہو جاتی ہے۔",
+       "check": [
+        "90 == 1*90"
+       ]
+      },
+      {
        "math": "\\tan(90^\\circ + \\theta) = -\\cot\\theta",
-       "en": "For acute $\\theta$ the angle is in quadrant II: tan is negative; $90^\\circ$ changes tan to cot.",
-       "ur": "زاویے کا ربع اور ریشو کی تبدیلی دیکھیں۔",
+       "en": "Combining the negative sign from Quadrant II and the co-ratio $\\cot\\theta$, we get the final result.",
+       "ur": "دوسرے ربع کی منفی علامت اور معاون نسبت $\\cot\\theta$ کو ملانے سے ہمیں حتمی نتیجہ حاصل ہوتا ہے۔",
        "check": [
         "tan(pi/2 + t) == -cot(t)"
        ]
       }
      ],
      "answer": "$-\\cot\\theta$",
+     "enriched": true,
      "book_key": "-\\cot\\theta"
     },
     {
@@ -200,15 +369,34 @@
      "prompt": "$\\cos(90^\\circ + \\theta) $",
      "steps": [
       {
+       "math": "\\cos(90^\\circ + \\theta)",
+       "en": "We need to simplify the trigonometric expression $\\cos(90^\\circ + \\theta)$ to fill in the blank.",
+       "ur": "ہمیں خالی جگہ پر کرنے کے لیے مثلثیاتی جملے $\\cos(90^\\circ + \\theta)$ کو مختصر کرنا ہے۔"
+      },
+      {
+       "math": "\\text{Angle } (90^\\circ + \\theta) \\text{ lies in Quadrant II}",
+       "en": "Assuming $\\theta$ is an acute angle, adding $\\theta$ to $90^\\circ$ places the terminal arm of the angle in the second quadrant. In Quadrant II, the cosine function is negative.",
+       "ur": "فرض کریں کہ $\\theta$ ایک حادہ زاویہ ہے، تو $90^\\circ$ میں $\\theta$ جمع کرنے سے زاویہ دوسرے ربع (Quadrant II) میں چلا جاتا ہے۔ دوسرے ربع میں کوسائن (cosine) منفی ہوتا ہے۔"
+      },
+      {
+       "math": "90^\\circ = 1 \\times 90^\\circ",
+       "en": "Since the angle involves $90^\\circ$ (which is an odd multiple of $90^\\circ$), the trigonometric ratio changes to its co-ratio. Therefore, $\\cos$ changes to $\\sin$.",
+       "ur": "چونکہ زاویے میں $90^\\circ$ شامل ہے (جو کہ $90^\\circ$ کا طاق ضعف ہے)، اس لیے مثلثیاتی نسبت اپنی معاون نسبت (co-ratio) میں تبدیل ہو جاتی ہے۔ اس طرح $\\cos$ تبدیل ہو کر $\\sin$ بن جاتا ہے۔",
+       "check": [
+        "90 == 1 * 90"
+       ]
+      },
+      {
        "math": "\\cos(90^\\circ + \\theta) = -\\sin\\theta",
-       "en": "For acute $\\theta$ the angle is in quadrant II: cos is negative; $90^\\circ$ changes cos to sin.",
-       "ur": "زاویے کا ربع اور ریشو کی تبدیلی دیکھیں۔",
+       "en": "Combining the negative sign from the second quadrant and the co-ratio $\\sin\\theta$, we get the final result $-\\sin\\theta$. Thus, the blank is filled with a negative sign ($-$).",
+       "ur": "دوسرے ربع کی منفی علامت اور معاون نسبت $\\sin\\theta$ کو ملانے سے ہمیں حتمی نتیجہ $-\\sin\\theta$ حاصل ہوتا ہے۔ اس طرح خالی جگہ میں منفی علامت ($-$) آئے گی۔",
        "check": [
         "cos(pi/2 + t) == -sin(t)"
        ]
       }
      ],
      "answer": "$-\\sin\\theta$",
+     "enriched": true,
      "book_key": "-\\sin\\theta"
     },
     {
@@ -216,15 +404,31 @@
      "prompt": "$\\operatorname{cosec}(180^\\circ - \\theta) $",
      "steps": [
       {
+       "math": "\\operatorname{cosec}(180^\\circ - \\theta)",
+       "en": "We need to find the appropriate sign for the expression $\\operatorname{cosec}(180^\\circ - \\theta)$ when it is simplified in terms of $\\operatorname{cosec}\\theta$.",
+       "ur": "ہمیں $\\operatorname{cosec}(180^\\circ - \\theta)$ کو $\\operatorname{cosec}\\theta$ کی شکل میں مختصر کرتے وقت درست علامت معلوم کرنی ہے۔"
+      },
+      {
+       "math": "",
+       "en": "Since $180^\\circ = 2 \\times 90^\\circ$ is an even multiple of $90^\\circ$, the trigonometric ratio $\\operatorname{cosec}$ does not change into its co-ratio.",
+       "ur": "چونکہ $180^\\circ = 2 \\times 90^\\circ$ زاویہ $90^\\circ$ کا جفت (even) حاصل ضرب ہے، اس لیے مثلثیاتی نسبت $\\operatorname{cosec}$ اپنی کو-ریشو (co-ratio) میں تبدیل نہیں ہوگی۔"
+      },
+      {
+       "math": "",
+       "en": "Assuming $\\theta$ is an acute angle, the angle $(180^\\circ - \\theta)$ lies in the second quadrant (Quadrant II). In the second quadrant, both $\\sin$ and $\\operatorname{cosec}$ are positive ($+$).",
+       "ur": "فرض کریں کہ $\\theta$ ایک حادہ زاویہ ہے، تو زاویہ $(180^\\circ - \\theta)$ دوسرے ربع (Quadrant II) میں واقع ہوگا۔ دوسرے ربع میں $\\sin$ اور $\\operatorname{cosec}$ دونوں مثبت ($+$) ہوتے ہیں۔"
+      },
+      {
        "math": "\\operatorname{cosec}(180^\\circ - \\theta) = +\\operatorname{cosec}\\theta",
-       "en": "For acute $\\theta$ the angle is in quadrant II: cosec is positive.",
-       "ur": "زاویے کا ربع اور ریشو کی تبدیلی دیکھیں۔",
+       "en": "Therefore, we place a positive sign ($+$) in the blank.",
+       "ur": "لہٰذا، ہم خالی جگہ میں مثبت علامت ($+$) لگائیں گے۔",
        "check": [
         "csc(pi - t) == csc(t)"
        ]
       }
      ],
      "answer": "$+\\operatorname{cosec}\\theta$",
+     "enriched": true,
      "book_key": "+\\operatorname{cosec}\\theta"
     },
     {
@@ -232,15 +436,39 @@
      "prompt": "$\\sec(90^\\circ - \\theta) $",
      "steps": [
       {
+       "math": "\\sec(90^\\circ - \\theta)",
+       "en": "We are given the trigonometric expression $\\sec(90^\\circ - \\theta)$ and need to find the correct sign in front of $\\operatorname{cosec}\\theta$.",
+       "ur": "ہمیں مثلثیاتی جملہ $\\sec(90^\\circ - \\theta)$ دیا گیا ہے اور ہمیں $\\operatorname{cosec}\\theta$ کے سامنے درست علامت معلوم کرنی ہے۔"
+      },
+      {
+       "math": "90^\\circ - \\theta \\in \\text{Quadrant I}",
+       "en": "Assuming $\\theta$ is an acute angle, the angle $(90^\\circ - \\theta)$ lies in the first quadrant (Quadrant I).",
+       "ur": "فرض کریں کہ $\\theta$ ایک حادہ زاویہ ہے، تو زاویہ $(90^\\circ - \\theta)$ پہلے ربع (Quadrant I) میں واقع ہوتا ہے۔"
+      },
+      {
+       "math": "",
+       "en": "In Quadrant I, all trigonometric ratios are positive, so $\\sec(90^\\circ - \\theta)$ will have a positive ($+$) sign.",
+       "ur": "پہلے ربع میں تمام مثلثیاتی نسبتیں مثبت ہوتی ہیں، اس لیے $\\sec(90^\\circ - \\theta)$ کے ساتھ مثبت ($+$) کی علامت آئے گی۔"
+      },
+      {
+       "math": "90^\\circ = 1 \\times 90^\\circ",
+       "en": "Since the angle involves $90^\\circ$ (an odd multiple of $90^\\circ$), the trigonometric ratio $\\sec$ changes to its co-ratio $\\operatorname{cosec}$.",
+       "ur": "چونکہ زاویہ میں $90^\\circ$ شامل ہے ($90^\\circ$ کا طاق ضعف)، اس لیے مثلثیاتی نسبت $\\sec$ اپنی معاون نسبت (co-ratio) یعنی $\\operatorname{cosec}$ میں تبدیل ہو جاتی ہے۔",
+       "check": [
+        "90 == 1*90"
+       ]
+      },
+      {
        "math": "\\sec(90^\\circ - \\theta) = +\\operatorname{cosec}\\theta",
-       "en": "For acute $\\theta$ the angle is in quadrant I: all positive; $90^\\circ$ changes sec to cosec.",
-       "ur": "زاویے کا ربع اور ریشو کی تبدیلی دیکھیں۔",
+       "en": "Combining the positive sign and the co-ratio gives the final result.",
+       "ur": "مثبت علامت اور معاون نسبت کو ملانے سے حتمی نتیجہ حاصل ہوتا ہے۔",
        "check": [
         "sec(pi/2 - t) == csc(t)"
        ]
       }
      ],
      "answer": "$+\\operatorname{cosec}\\theta$",
+     "enriched": true,
      "book_key": "+\\operatorname{cosec}\\theta"
     }
    ],
@@ -258,15 +486,54 @@
      "prompt": "$\\sin\\ 150^\\circ$",
      "steps": [
       {
-       "math": "\\sin\\ 150^\\circ = \\sin(1\\times 90^\\circ + 60^\\circ) = \\cos 60^\\circ = \\frac{1}{2}",
-       "en": "Write the angle as $90^\\circ + \\theta$: an odd multiple of $90^\\circ$ changes the ratio to its co-ratio; the sign is the sign of the ratio in quadrant II.",
-       "ur": "زاویہ $90^\\circ + \\theta$ لکھیں: $90^\\circ$ کا طاق مضرب ریشو کو اس کی ہم ریشو میں بدل دیتا ہے؛ علامت ربع II والی ہے۔",
+       "math": "\\sin 150^\\circ",
+       "en": "We need to find the exact value of $\\sin 150^\\circ$ without using a calculator.",
+       "ur": "ہمیں کیلکولیٹر کے بغیر $\\sin 150^\\circ$ کی اصل قیمت معلوم کرنی ہے۔"
+      },
+      {
+       "math": "150^\\circ = 1 \\times 90^\\circ + 60^\\circ",
+       "en": "First, express the angle $150^\\circ$ in terms of a multiple of $90^\\circ$ plus an acute angle $\\theta$.",
+       "ur": "سب سے پہلے، زاویہ $150^\\circ$ کو $90^\\circ$ کے مضرب اور ایک حادہ زاویہ $\\theta$ کے مجموعے کے طور پر لکھیں۔",
        "check": [
+        "150 == 1*90 + 60"
+       ]
+      },
+      {
+       "math": "\\sin 150^\\circ = \\sin(1 \\times 90^\\circ + 60^\\circ)",
+       "en": "Substitute this expression into the given trigonometric function.",
+       "ur": "اس اظہار کو دیے گئے تکونیاتی تفاعل میں درج کریں۔",
+       "check": [
+        "sin(150*pi/180) == sin((1*90 + 60)*pi/180)"
+       ]
+      },
+      {
+       "math": "\\sin(1 \\times 90^\\circ + 60^\\circ) = +\\cos 60^\\circ",
+       "en": "Since $1$ is an odd multiple of $90^\\circ$, $\\sin$ changes to its co-ratio $\\cos$. Also, $150^\\circ$ lies in Quadrant II where $\\sin$ is positive, so the sign remains positive.",
+       "ur": "چونکہ $1$ زاویہ $90^\\circ$ کا ایک طاق مضرب ہے، اس لیے $\\sin$ اپنی ہم ریشو $\\cos$ میں تبدیل ہو جاتا ہے۔ نیز، $150^\\circ$ دوسرے ربع (Quadrant II) میں واقع ہے جہاں $\\sin$ مثبت ہوتا ہے، اس لیے علامت مثبت رہے گی۔",
+       "check": [
+        "sin((1*90 + 60)*pi/180) == cos(60*pi/180)"
+       ]
+      },
+      {
+       "math": "\\cos 60^\\circ = \\frac{1}{2}",
+       "en": "Recall the standard exact value of $\\cos 60^\\circ$, which is $\\frac{1}{2}$.",
+       "ur": "$\\cos 60^\\circ$ کی معیاری قیمت یاد کریں، جو کہ $\\frac{1}{2}$ ہے۔",
+       "check": [
+        "cos(60*pi/180) == R(1,2)"
+       ]
+      },
+      {
+       "math": "\\sin 150^\\circ = \\frac{1}{2}",
+       "en": "Thus, the exact value of $\\sin 150^\\circ$ is $\\frac{1}{2}$.",
+       "ur": "پس، $\\sin 150^\\circ$ کی اصل قیمت $\\frac{1}{2}$ ہے۔",
+       "check": [
+        "sin(150*pi/180) == R(1,2)",
         "sin((150)*pi/180) == 1/2"
        ]
       }
      ],
      "answer": "$\\frac{1}{2}$",
+     "enriched": true,
      "book_key": "\\frac{1}{2}"
     },
     {
@@ -274,15 +541,48 @@
      "prompt": "$\\tan\\ 150^\\circ$",
      "steps": [
       {
-       "math": "\\tan\\ 150^\\circ = \\tan(1\\times 90^\\circ + 60^\\circ) = -\\cot 60^\\circ = -\\frac{1}{\\sqrt{3}}",
-       "en": "Write the angle as $90^\\circ + \\theta$: an odd multiple of $90^\\circ$ changes the ratio to its co-ratio; the sign is the sign of the ratio in quadrant II.",
-       "ur": "زاویہ $90^\\circ + \\theta$ لکھیں: $90^\\circ$ کا طاق مضرب ریشو کو اس کی ہم ریشو میں بدل دیتا ہے؛ علامت ربع II والی ہے۔",
+       "math": "\\tan 150^\\circ",
+       "en": "We need to find the exact value of $\\tan 150^\\circ$ without using a calculator.",
+       "ur": "ہمیں کیلکولیٹر کے بغیر $\\tan 150^\\circ$ کی اصل قیمت معلوم کرنی ہے۔"
+      },
+      {
+       "math": "150^\\circ = 90^\\circ + 60^\\circ = 1 \\times 90^\\circ + 60^\\circ",
+       "en": "First, express the angle $150^\\circ$ as a multiple of $90^\\circ$ plus an acute angle.",
+       "ur": "سب سے پہلے، زاویہ $150^\\circ$ کو $90^\\circ$ کے مضرب اور ایک حادہ زاویہ کے مجموعے کے طور پر لکھیں۔",
        "check": [
+        "150 == 90 + 60",
+        "150 == 1*90 + 60"
+       ]
+      },
+      {
+       "math": "\\tan 150^\\circ = \\tan(1 \\times 90^\\circ + 60^\\circ)",
+       "en": "Substitute this expression into the given trigonometric function.",
+       "ur": "اس قیمت کو دیے گئے تکونیاتی تفاعل میں درج کریں۔",
+       "check": [
+        "tan(150*pi/180) == tan((1*90 + 60)*pi/180)"
+       ]
+      },
+      {
+       "math": "\\tan(1 \\times 90^\\circ + 60^\\circ) = -\\cot 60^\\circ",
+       "en": "Since $1$ is an odd multiple of $90^\\circ$, the ratio $\\tan$ changes to its co-ratio $\\cot$. Also, $150^\\circ$ lies in Quadrant II where $\\tan$ is negative, so we put a minus sign.",
+       "ur": "چونکہ $1$، $90^\\circ$ کا ایک طاق مضرب ہے، اس لیے نسبت $\\tan$ اپنی ہم نسبت $\\cot$ میں تبدیل ہو جاتی ہے۔ نیز، $150^\\circ$ دوسرے ربع (Quadrant II) میں واقع ہے جہاں $\\tan$ منفی ہوتا ہے، اس لیے ہم منفی کی علامت لگاتے ہیں۔",
+       "check": [
+        "tan((1*90 + 60)*pi/180) == -cot(60*pi/180)"
+       ]
+      },
+      {
+       "math": "\\tan 150^\\circ = -\\frac{1}{\\sqrt{3}}",
+       "en": "Finally, substitute the known standard value of $\\cot 60^\\circ = \\frac{1}{\\sqrt{3}}$ to get the final answer.",
+       "ur": "آخر میں، حتمی جواب حاصل کرنے کے لیے $\\cot 60^\\circ = \\frac{1}{\\sqrt{3}}$ کی معلوم معیاری قیمت درج کریں۔",
+       "check": [
+        "tan(150*pi/180) == -1/sqrt(3)",
+        "cot(60*pi/180) == 1/sqrt(3)",
         "tan((150)*pi/180) == -sqrt(3)/3"
        ]
       }
      ],
      "answer": "$-\\frac{1}{\\sqrt{3}}$",
+     "enriched": true,
      "book_key": "-\\frac{1}{\\sqrt{3}}"
     },
     {
@@ -290,15 +590,55 @@
      "prompt": "$\\sec\\ 150^\\circ$",
      "steps": [
       {
-       "math": "\\sec\\ 150^\\circ = \\sec(1\\times 90^\\circ + 60^\\circ) = -\\operatorname{cosec} 60^\\circ = -\\frac{2}{\\sqrt{3}}",
-       "en": "Write the angle as $90^\\circ + \\theta$: an odd multiple of $90^\\circ$ changes the ratio to its co-ratio; the sign is the sign of the ratio in quadrant II.",
-       "ur": "زاویہ $90^\\circ + \\theta$ لکھیں: $90^\\circ$ کا طاق مضرب ریشو کو اس کی ہم ریشو میں بدل دیتا ہے؛ علامت ربع II والی ہے۔",
+       "math": "\\sec 150^\\circ",
+       "en": "We need to find the exact value of $\\sec 150^\\circ$ without using a calculator.",
+       "ur": "ہمیں کیلکولیٹر کا استعمال کیے بغیر $\\sec 150^\\circ$ کی اصل قیمت معلوم کرنی ہے۔"
+      },
+      {
+       "math": "150^\\circ = 90^\\circ + 60^\\circ = 1 \\times 90^\\circ + 60^\\circ",
+       "en": "First, express the angle $150^\\circ$ as a multiple of $90^\\circ$ plus an acute angle $\\theta$.",
+       "ur": "سب سے پہلے، زاویہ $150^\\circ$ کو $90^\\circ$ کے مضرب اور ایک حادہ زاویہ $\\theta$ کے مجموعے کے طور پر لکھیں۔",
        "check": [
+        "150 == 90 + 60",
+        "150 == 1*90 + 60"
+       ]
+      },
+      {
+       "math": "\\sec 150^\\circ = \\sec(1 \\times 90^\\circ + 60^\\circ)",
+       "en": "Substitute this expression into the given trigonometric function.",
+       "ur": "اس قیمت کو دیے گئے مثلثیاتی تفاعل میں درج کریں۔",
+       "check": [
+        "sec(150*pi/180) == sec((1*90 + 60)*pi/180)"
+       ]
+      },
+      {
+       "math": "\\sec(1 \\times 90^\\circ + 60^\\circ) = -\\operatorname{cosec} 60^\\circ",
+       "en": "Since $1$ is an odd multiple of $90^\\circ$, $\\sec$ changes to its co-ratio $\\operatorname{cosec}$. Also, the angle $150^\\circ$ lies in Quadrant II where $\\sec$ is negative, so we put a negative sign.",
+       "ur": "چونکہ $1$ زاویہ $90^\\circ$ کا ایک طاق مضرب ہے، اس لیے $\\sec$ اپنی ہم ریشو $\\operatorname{cosec}$ میں تبدیل ہو جاتا ہے۔ نیز، زاویہ $150^\\circ$ دوسرے ربع (Quadrant II) میں واقع ہے جہاں $\\sec$ منفی ہوتا ہے، اس لیے ہم منفی علامت لگاتے ہیں۔",
+       "check": [
+        "sec((1*90 + 60)*pi/180) == -csc(60*pi/180)"
+       ]
+      },
+      {
+       "math": "-\\operatorname{cosec} 60^\\circ = -\\frac{2}{\\sqrt{3}}",
+       "en": "Recall the standard value $\\operatorname{cosec} 60^\\circ = \\frac{2}{\\sqrt{3}}$ and substitute it to get the final answer.",
+       "ur": "معیاری قیمت $\\operatorname{cosec} 60^\\circ = \\frac{2}{\\sqrt{3}}$ کو یاد کریں اور حتمی جواب حاصل کرنے کے لیے اسے درج کریں۔",
+       "check": [
+        "-csc(60*pi/180) == -2/sqrt(3)"
+       ]
+      },
+      {
+       "math": "\\sec 150^\\circ = -\\frac{2}{\\sqrt{3}}",
+       "en": "Thus, the exact value of $\\sec 150^\\circ$ is $-\\frac{2}{\\sqrt{3}}$.",
+       "ur": "پس، $\\sec 150^\\circ$ کی اصل قیمت $-\\frac{2}{\\sqrt{3}}$ ہے۔",
+       "check": [
+        "sec(150*pi/180) == -2/sqrt(3)",
         "sec((150)*pi/180) == -2*sqrt(3)/3"
        ]
       }
      ],
      "answer": "$-\\frac{2}{\\sqrt{3}}$",
+     "enriched": true,
      "book_key": "-\\frac{2}{\\sqrt{3}}"
     },
     {
@@ -306,15 +646,46 @@
      "prompt": "$\\operatorname{cosec}\\ 120^\\circ$",
      "steps": [
       {
-       "math": "\\operatorname{cosec}\\ 120^\\circ = \\operatorname{cosec}(1\\times 90^\\circ + 30^\\circ) = \\sec 30^\\circ = \\frac{2}{\\sqrt{3}}",
-       "en": "Write the angle as $90^\\circ + \\theta$: an odd multiple of $90^\\circ$ changes the ratio to its co-ratio; the sign is the sign of the ratio in quadrant II.",
-       "ur": "زاویہ $90^\\circ + \\theta$ لکھیں: $90^\\circ$ کا طاق مضرب ریشو کو اس کی ہم ریشو میں بدل دیتا ہے؛ علامت ربع II والی ہے۔",
+       "math": "\\operatorname{cosec}\\ 120^\\circ",
+       "en": "We need to find the exact value of $\\operatorname{cosec} 120^\\circ$ without using a calculator.",
+       "ur": "ہمیں کیلکولیٹر کے استعمال کے بغیر $\\operatorname{cosec} 120^\\circ$ کی اصل قیمت معلوم کرنی ہے۔"
+      },
+      {
+       "math": "120^\\circ = 90^\\circ + 30^\\circ = 1 \\times 90^\\circ + 30^\\circ",
+       "en": "First, express the angle $120^\\circ$ as a sum of a multiple of $90^\\circ$ and an acute angle $\\theta$.",
+       "ur": "سب سے پہلے، زاویہ $120^\\circ$ کو $90^\\circ$ کے مضرب اور ایک حادہ زاویہ $\\theta$ کے مجموعے کے طور پر لکھیں۔",
        "check": [
+        "120 == 1*90 + 30"
+       ]
+      },
+      {
+       "math": "\\operatorname{cosec}\\ 120^\\circ = \\operatorname{cosec}(1 \\times 90^\\circ + 30^\\circ)",
+       "en": "Substitute this expression for the angle into the given trigonometric function.",
+       "ur": "دیے گئے تکونیاتی تفاعل میں زاویہ کی اس قیمت کو درج کریں۔",
+       "check": [
+        "csc(120*pi/180) == csc((1*90 + 30)*pi/180)"
+       ]
+      },
+      {
+       "math": "\\operatorname{cosec}(1 \\times 90^\\circ + 30^\\circ) = +\\sec 30^\\circ",
+       "en": "Since $120^\\circ$ is an odd multiple of $90^\\circ$ plus $30^\\circ$, the trigonometric ratio $\\operatorname{cosec}$ changes to its co-ratio $\\sec$. Also, $120^\\circ$ lies in Quadrant II where $\\operatorname{cosec}$ is positive, so the sign remains positive.",
+       "ur": "چونکہ یہاں $90^\\circ$ کا طاق مضرب ($1$) ہے، اس لیے تکونیاتی نسبت $\\operatorname{cosec}$ اپنی ہم نسبت (co-ratio) یعنی $\\sec$ میں تبدیل ہو جائے گی۔ نیز، زاویہ $120^\\circ$ دوسرے ربع (Quadrant II) میں واقع ہے جہاں $\\operatorname{cosec}$ مثبت ہوتا ہے، اس لیے علامت مثبت رہے گی۔",
+       "check": [
+        "csc((1*90 + 30)*pi/180) == sec(30*pi/180)"
+       ]
+      },
+      {
+       "math": "\\operatorname{cosec}\\ 120^\\circ = \\frac{2}{\\sqrt{3}}",
+       "en": "From the table of standard trigonometric values, we know that $\\sec 30^\\circ = \\frac{2}{\\sqrt{3}}$. Thus, the exact value of $\\operatorname{cosec} 120^\\circ$ is $\\frac{2}{\\sqrt{3}}$.",
+       "ur": "معیاری تکونیاتی قیمتوں کے جدول سے ہم جانتے ہیں کہ $\\sec 30^\\circ = \\frac{2}{\\sqrt{3}}$ ہے۔ پس، $\\operatorname{cosec} 120^\\circ$ کی اصل قیمت $\\frac{2}{\\sqrt{3}}$ ہے۔",
+       "check": [
+        "csc(120*pi/180) == 2/sqrt(3)",
         "csc((120)*pi/180) == 2*sqrt(3)/3"
        ]
       }
      ],
      "answer": "$\\frac{2}{\\sqrt{3}}$",
+     "enriched": true,
      "book_key": "\\frac{2}{\\sqrt{3}}"
     },
     {
@@ -322,15 +693,47 @@
      "prompt": "$\\cos\\ 120^\\circ$",
      "steps": [
       {
-       "math": "\\cos\\ 120^\\circ = \\cos(1\\times 90^\\circ + 30^\\circ) = -\\sin 30^\\circ = - \\frac{1}{2}",
-       "en": "Write the angle as $90^\\circ + \\theta$: an odd multiple of $90^\\circ$ changes the ratio to its co-ratio; the sign is the sign of the ratio in quadrant II.",
-       "ur": "زاویہ $90^\\circ + \\theta$ لکھیں: $90^\\circ$ کا طاق مضرب ریشو کو اس کی ہم ریشو میں بدل دیتا ہے؛ علامت ربع II والی ہے۔",
+       "math": "\\cos 120^\\circ",
+       "en": "We need to find the exact value of the given trigonometric ratio without using a calculator.",
+       "ur": "ہمیں کیلکولیٹر کا استعمال کیے بغیر دی گئی تکونیاتی نسبت کی درست قیمت معلوم کرنی ہے۔"
+      },
+      {
+       "math": "120^\\circ = 90^\\circ + 30^\\circ = 1 \\times 90^\\circ + 30^\\circ",
+       "en": "First, express the angle $120^\\circ$ in the form of $n \\times 90^\\circ + \\theta$, where $\\theta$ is an acute angle ($30^\\circ$).",
+       "ur": "سب سے پہلے، زاویہ $120^\\circ$ کو $n \\times 90^\\circ + \\theta$ کی شکل میں لکھیں، جہاں $\\theta$ ایک حادہ زاویہ ($30^\\circ$) ہے۔",
        "check": [
+        "120 == 90 + 30",
+        "120 == 1*90 + 30"
+       ]
+      },
+      {
+       "math": "\\cos 120^\\circ = \\cos(1 \\times 90^\\circ + 30^\\circ)",
+       "en": "Substitute this expression of the angle into the given cosine function.",
+       "ur": "زاویہ کی اس شکل کو دیے گئے کوسائن فنکشن میں درج کریں۔",
+       "check": [
+        "cos(120*pi/180) == cos((1*90 + 30)*pi/180)"
+       ]
+      },
+      {
+       "math": "\\cos(1 \\times 90^\\circ + 30^\\circ) = -\\sin 30^\\circ",
+       "en": "Since $1$ is an odd multiple of $90^\\circ$, $\\cos$ changes to its co-ratio $\\sin$. Also, the angle $120^\\circ$ lies in Quadrant II where $\\cos$ is negative, so we put a minus sign.",
+       "ur": "چونکہ $1$ زاویہ $90^\\circ$ کا ایک طاق مضرب ہے، اس لیے $\\cos$ اپنی ہم ریشو $\\sin$ میں تبدیل ہو جاتا ہے۔ نیز، زاویہ $120^\\circ$ ربع دوم (Quadrant II) میں واقع ہے جہاں $\\cos$ منفی ہوتا ہے، اس لیے ہم منفی کی علامت لگاتے ہیں۔",
+       "check": [
+        "cos((1*90 + 30)*pi/180) == -sin(30*pi/180)"
+       ]
+      },
+      {
+       "math": "-\\sin 30^\\circ = - \\frac{1}{2}",
+       "en": "Recall the standard value $\\sin 30^\\circ = \\frac{1}{2}$ from the trigonometric table and substitute it to get the final answer.",
+       "ur": "تکونیاتی جدول سے معیاری قیمت $\\sin 30^\\circ = \\frac{1}{2}$ یاد کریں اور حتمی جواب حاصل کرنے کے لیے اسے درج کریں۔",
+       "check": [
+        "-sin(30*pi/180) == -R(1, 2)",
         "cos((120)*pi/180) == -1/2"
        ]
       }
      ],
      "answer": "$- \\frac{1}{2}$",
+     "enriched": true,
      "book_key": "-\\frac{1}{2}"
     },
     {
@@ -338,15 +741,55 @@
      "prompt": "$\\cot\\ 120^\\circ$",
      "steps": [
       {
-       "math": "\\cot\\ 120^\\circ = \\cot(1\\times 90^\\circ + 30^\\circ) = -\\tan 30^\\circ = -\\frac{1}{\\sqrt{3}}",
-       "en": "Write the angle as $90^\\circ + \\theta$: an odd multiple of $90^\\circ$ changes the ratio to its co-ratio; the sign is the sign of the ratio in quadrant II.",
-       "ur": "زاویہ $90^\\circ + \\theta$ لکھیں: $90^\\circ$ کا طاق مضرب ریشو کو اس کی ہم ریشو میں بدل دیتا ہے؛ علامت ربع II والی ہے۔",
+       "math": "\\cot 120^\\circ",
+       "en": "We need to find the exact value of the given trigonometric ratio without using a calculator.",
+       "ur": "ہمیں کیلکولیٹر کا استعمال کیے بغیر دی گئی مثلثیاتی نسبت کی اصل قیمت معلوم کرنی ہے۔"
+      },
+      {
+       "math": "120^\\circ = 90^\\circ + 30^\\circ = 1(90^\\circ) + 30^\\circ",
+       "en": "First, express the angle $120^\\circ$ in terms of a multiple of $90^\\circ$ and an acute angle $\\theta$.",
+       "ur": "سب سے پہلے، زاویہ $120^\\circ$ کو $90^\\circ$ کے مضرب اور ایک حادہ زاویہ $\\theta$ کی صورت میں لکھیں۔",
        "check": [
+        "120 == 90 + 30",
+        "120 == 1*90 + 30"
+       ]
+      },
+      {
+       "math": "\\cot 120^\\circ = \\cot(1 \\times 90^\\circ + 30^\\circ)",
+       "en": "Substitute this expression for the angle into the trigonometric function.",
+       "ur": "زاویہ کے اس اظہار کو مثلثیاتی تفاعل میں درج کریں۔",
+       "check": [
+        "cot(120*pi/180) == cot((1*90 + 30)*pi/180)"
+       ]
+      },
+      {
+       "math": "\\cot(1 \\times 90^\\circ + 30^\\circ) = -\\tan 30^\\circ",
+       "en": "Since $1$ is an odd multiple of $90^\\circ$, the ratio $\\cot$ changes to its co-ratio $\\tan$. Also, the angle $120^\\circ$ lies in Quadrant II where $\\cot$ is negative, so we place a minus sign.",
+       "ur": "چونکہ $1$، $90^\\circ$ کا ایک طاق مضرب ہے، اس لیے نسبت $\\cot$ اپنی ہم نسبت $\\tan$ میں بدل جاتی ہے۔ نیز، زاویہ $120^\\circ$ دوسرے ربع (Quadrant II) میں واقع ہے جہاں $\\cot$ منفی ہوتا ہے، اس لیے ہم منفی کی علامت لگاتے ہیں۔",
+       "check": [
+        "cot((1*90 + 30)*pi/180) == -tan(30*pi/180)"
+       ]
+      },
+      {
+       "math": "-\\tan 30^\\circ = -\\frac{1}{\\sqrt{3}}",
+       "en": "We know from the table of standard trigonometric values that $\\tan 30^\\circ = \\frac{1}{\\sqrt{3}}$. Substitute this value.",
+       "ur": "ہم معیاری مثلثیاتی قیمتوں کے جدول سے جانتے ہیں کہ $\\tan 30^\\circ = \\frac{1}{\\sqrt{3}}$ ہے۔ یہ قیمت درج کریں۔",
+       "check": [
+        "-tan(30*pi/180) == -1/sqrt(3)"
+       ]
+      },
+      {
+       "math": "\\cot 120^\\circ = -\\frac{1}{\\sqrt{3}}",
+       "en": "Thus, the exact value of $\\cot 120^\\circ$ is $-\\frac{1}{\\sqrt{3}}$.",
+       "ur": "پس، $\\cot 120^\\circ$ کی اصل قیمت $-\\frac{1}{\\sqrt{3}}$ ہے۔",
+       "check": [
+        "cot(120*pi/180) == -1/sqrt(3)",
         "cot((120)*pi/180) == -sqrt(3)/3"
        ]
       }
      ],
      "answer": "$-\\frac{1}{\\sqrt{3}}$",
+     "enriched": true,
      "book_key": "-\\frac{1}{\\sqrt{3}}"
     },
     {
@@ -354,15 +797,55 @@
      "prompt": "$\\sin\\ 135^\\circ$",
      "steps": [
       {
-       "math": "\\sin\\ 135^\\circ = \\sin(1\\times 90^\\circ + 45^\\circ) = \\cos 45^\\circ = \\frac{1}{\\sqrt{2}}",
-       "en": "Write the angle as $90^\\circ + \\theta$: an odd multiple of $90^\\circ$ changes the ratio to its co-ratio; the sign is the sign of the ratio in quadrant II.",
-       "ur": "زاویہ $90^\\circ + \\theta$ لکھیں: $90^\\circ$ کا طاق مضرب ریشو کو اس کی ہم ریشو میں بدل دیتا ہے؛ علامت ربع II والی ہے۔",
+       "math": "\\sin 135^\\circ",
+       "en": "We need to find the exact value of $\\sin 135^\\circ$ without using a calculator.",
+       "ur": "ہمیں کیلکولیٹر کے بغیر $\\sin 135^\\circ$ کی اصل قیمت معلوم کرنی ہے۔"
+      },
+      {
+       "math": "135^\\circ = 90^\\circ + 45^\\circ = 1 \\times 90^\\circ + 45^\\circ",
+       "en": "Express the given angle $135^\\circ$ in the form of $n \\times 90^\\circ + \\theta$, where $\\theta$ is an acute angle.",
+       "ur": "دیے گئے زاویے $135^\\circ$ کو $n \\times 90^\\circ + \\theta$ کی شکل میں لکھیں، جہاں $\\theta$ ایک حادہ زاویہ ہے۔",
        "check": [
+        "135 == 90 + 45",
+        "135 == 1*90 + 45"
+       ]
+      },
+      {
+       "math": "\\sin 135^\\circ = \\sin(1 \\times 90^\\circ + 45^\\circ)",
+       "en": "Substitute this split angle back into the sine function.",
+       "ur": "اس تقسیم شدہ زاویے کو واپس سائن فنکشن میں درج کریں۔",
+       "check": [
+        "sin(135*pi/180) == sin((1*90 + 45)*pi/180)"
+       ]
+      },
+      {
+       "math": "\\sin(1 \\times 90^\\circ + 45^\\circ) = +\\cos 45^\\circ",
+       "en": "Since $135^\\circ$ lies in Quadrant II where the sine function is positive, and we have an odd multiple of $90^\\circ$ ($n=1$), the trigonometric ratio $\\sin$ changes to its co-ratio $\\cos$.",
+       "ur": "چونکہ $135^\\circ$ دوسرے ربع (Quadrant II) میں واقع ہے جہاں سائن فنکشن مثبت ہوتا ہے، اور ہمارے پاس $90^\\circ$ کا طاق مضرب ($n=1$) ہے، اس لیے مثلثیاتی نسبت $\\sin$ اپنی ہم ریشو (co-ratio) یعنی $\\cos$ میں تبدیل ہو جاتی ہے۔",
+       "check": [
+        "sin((1*90 + 45)*pi/180) == cos(45*pi/180)"
+       ]
+      },
+      {
+       "math": "\\cos 45^\\circ = \\frac{1}{\\sqrt{2}}",
+       "en": "Recall the standard exact value for $\\cos 45^\\circ$ from the trigonometric table.",
+       "ur": "مثلثیاتی جدول سے $\\cos 45^\\circ$ کی معیاری قیمت لکھیں۔",
+       "check": [
+        "cos(45*pi/180) == 1/sqrt(2)"
+       ]
+      },
+      {
+       "math": "\\sin 135^\\circ = \\frac{1}{\\sqrt{2}}",
+       "en": "Therefore, the exact value of $\\sin 135^\\circ$ is $\\frac{1}{\\sqrt{2}}$.",
+       "ur": "لہٰذا، $\\sin 135^\\circ$ کی اصل قیمت $\\frac{1}{\\sqrt{2}}$ ہے۔",
+       "check": [
+        "sin(135*pi/180) == 1/sqrt(2)",
         "sin((135)*pi/180) == sqrt(2)/2"
        ]
       }
      ],
      "answer": "$\\frac{1}{\\sqrt{2}}$",
+     "enriched": true,
      "book_key": "\\frac{1}{\\sqrt{2}}"
     },
     {
@@ -370,15 +853,48 @@
      "prompt": "$\\sec\\ 135^\\circ$",
      "steps": [
       {
-       "math": "\\sec\\ 135^\\circ = \\sec(1\\times 90^\\circ + 45^\\circ) = -\\operatorname{cosec} 45^\\circ = - \\sqrt{2}",
-       "en": "Write the angle as $90^\\circ + \\theta$: an odd multiple of $90^\\circ$ changes the ratio to its co-ratio; the sign is the sign of the ratio in quadrant II.",
-       "ur": "زاویہ $90^\\circ + \\theta$ لکھیں: $90^\\circ$ کا طاق مضرب ریشو کو اس کی ہم ریشو میں بدل دیتا ہے؛ علامت ربع II والی ہے۔",
+       "math": "\\sec 135^\\circ",
+       "en": "We need to find the exact value of $\\sec 135^\\circ$ without using a calculator.",
+       "ur": "ہمیں کیلکولیٹر کے بغیر $\\sec 135^\\circ$ کی اصل قیمت معلوم کرنی ہے۔"
+      },
+      {
+       "math": "135^\\circ = 90^\\circ + 45^\\circ = 1 \\times 90^\\circ + 45^\\circ",
+       "en": "First, express the angle $135^\\circ$ in the form of $n \\times 90^\\circ + \\theta$, where $\\theta$ is an acute angle ($45^\\circ$).",
+       "ur": "سب سے پہلے، زاویہ $135^\\circ$ کو $n \\times 90^\\circ + \\theta$ کی شکل میں لکھیں، جہاں $\\theta$ ایک حادہ زاویہ ($45^\\circ$) ہے۔",
        "check": [
+        "135 == 90 + 45",
+        "135 == 1*90 + 45"
+       ]
+      },
+      {
+       "math": "\\sec 135^\\circ = \\sec(1 \\times 90^\\circ + 45^\\circ)",
+       "en": "Substitute this angle expression into the given trigonometric function.",
+       "ur": "اس زاویے کو دیے گئے تکونیاتی تفاعل میں درج کریں۔",
+       "check": [
+        "sec(135*pi/180) == sec((1*90 + 45)*pi/180)"
+       ]
+      },
+      {
+       "math": "\\sec(1 \\times 90^\\circ + 45^\\circ) = -\\operatorname{cosec} 45^\\circ",
+       "en": "Since $1$ is an odd multiple of $90^\\circ$, the trigonometric ratio $\\sec$ changes to its co-ratio $\\operatorname{cosec}$. Also, $135^\\circ$ lies in Quadrant II where $\\sec$ is negative, so we put a negative sign.",
+       "ur": "چونکہ $1$ زاویہ $90^\\circ$ کا ایک طاق مضرب ہے، اس لیے تکونیاتی نسبت $\\sec$ اپنی ہم نسبت $\\operatorname{cosec}$ میں تبدیل ہو جاتی ہے۔ نیز، $135^\\circ$ دوسرے ربع (Quadrant II) میں واقع ہے جہاں $\\sec$ منفی ہوتا ہے، اس لیے ہم منفی علامت لگاتے ہیں۔",
+       "check": [
+        "sec((1*90 + 45)*pi/180) == -csc(45*pi/180)"
+       ]
+      },
+      {
+       "math": "\\sec 135^\\circ = -\\sqrt{2}",
+       "en": "We know that the exact value of $\\operatorname{cosec} 45^\\circ$ is $\\sqrt{2}$. Substituting this value gives the final answer.",
+       "ur": "ہم جانتے ہیں کہ $\\operatorname{cosec} 45^\\circ$ کی اصل قیمت $\\sqrt{2}$ ہے۔ یہ قیمت درج کرنے سے حتمی جواب حاصل ہوتا ہے۔",
+       "check": [
+        "sec(135*pi/180) == -sqrt(2)",
+        "-csc(45*pi/180) == -sqrt(2)",
         "sec((135)*pi/180) == -sqrt(2)"
        ]
       }
      ],
      "answer": "$- \\sqrt{2}$",
+     "enriched": true,
      "book_key": "-\\sqrt{2}"
     },
     {
@@ -386,15 +902,47 @@
      "prompt": "$\\cot\\ 135^\\circ$",
      "steps": [
       {
-       "math": "\\cot\\ 135^\\circ = \\cot(1\\times 90^\\circ + 45^\\circ) = -\\tan 45^\\circ = -1",
-       "en": "Write the angle as $90^\\circ + \\theta$: an odd multiple of $90^\\circ$ changes the ratio to its co-ratio; the sign is the sign of the ratio in quadrant II.",
-       "ur": "زاویہ $90^\\circ + \\theta$ لکھیں: $90^\\circ$ کا طاق مضرب ریشو کو اس کی ہم ریشو میں بدل دیتا ہے؛ علامت ربع II والی ہے۔",
+       "math": "\\cot 135^\\circ",
+       "en": "We need to find the exact value of the given trigonometric expression $\\cot 135^\\circ$ without using a calculator.",
+       "ur": "ہمیں کیلکولیٹر کا استعمال کیے بغیر دیے گئے مثلثیاتی جملے $\\cot 135^\\circ$ کی اصل قیمت معلوم کرنی ہے۔"
+      },
+      {
+       "math": "135^\\circ = 1 \\times 90^\\circ + 45^\\circ",
+       "en": "First, express the angle $135^\\circ$ as a multiple of $90^\\circ$ plus an acute angle $\\theta$.",
+       "ur": "سب سے پہلے، زاویہ $135^\\circ$ کو $90^\\circ$ کے مضرب اور ایک حادہ زاویے $\\theta$ کے مجموعے کے طور پر لکھیں۔",
        "check": [
+        "135 == 1*90 + 45"
+       ]
+      },
+      {
+       "math": "\\cot 135^\\circ = \\cot(1 \\times 90^\\circ + 45^\\circ)",
+       "en": "Substitute this angle form into the given trigonometric function.",
+       "ur": "زاویے کی اس شکل کو دیے گئے مثلثیاتی فنکشن میں درج کریں۔",
+       "check": [
+        "cot(135*pi/180) == cot((1*90 + 45)*pi/180)"
+       ]
+      },
+      {
+       "math": "\\cot(1 \\times 90^\\circ + 45^\\circ) = -\\tan 45^\\circ",
+       "en": "Since we have an odd multiple ($1$) of $90^\\circ$, the ratio $\\cot$ changes to its co-ratio $\\tan$. Also, the angle $135^\\circ$ lies in Quadrant II where $\\cot$ is negative, so we put a negative sign.",
+       "ur": "چونکہ ہمارے پاس $90^\\circ$ کا طاق مضرب ($1$) ہے، اس لیے نسبت $\\cot$ اپنی ہم نسبت (co-ratio) یعنی $\\tan$ میں تبدیل ہو جائے گی۔ نیز، زاویہ $135^\\circ$ دوسرے ربع (Quadrant II) میں واقع ہے جہاں $\\cot$ منفی ہوتا ہے، اس لیے ہم منفی علامت لگائیں گے۔",
+       "check": [
+        "cot(135*pi/180) == -tan(45*pi/180)"
+       ]
+      },
+      {
+       "math": "-\\tan 45^\\circ = -1",
+       "en": "Substitute the known exact value $\\tan 45^\\circ = 1$ to get the final answer.",
+       "ur": "حتمی جواب حاصل کرنے کے لیے معلوم قیمت $\\tan 45^\\circ = 1$ درج کریں۔",
+       "check": [
+        "-tan(45*pi/180) == -1",
+        "cot(135*pi/180) == -1",
         "cot((135)*pi/180) == -1"
        ]
       }
      ],
      "answer": "$-1$",
+     "enriched": true,
      "book_key": "-1"
     }
    ],
@@ -758,20 +1306,41 @@
      "prompt": "$a=7$ cm, $b=8$ cm, $\\gamma=38^\\circ$",
      "steps": [
       {
-       "math": "\\text{Area} = \\frac{1}{2}ab\\sin\\gamma",
-       "en": "Area = half the product of two sides and the sine of the angle between them.",
-       "ur": "رقبہ = دو اضلاع کے حاصل ضرب کا آدھا ضرب ان کے درمیانی زاویے کا جیب۔"
+       "math": "a = 7\\ \\text{cm}, \\quad b = 8\\ \\text{cm}, \\quad \\gamma = 38^\\circ",
+       "en": "Write down the given lengths of the two sides $a$ and $b$, and the measure of the included angle $\\gamma$. We need to find the area of triangle $ABC$.",
+       "ur": "دی گئی دو اضلاع $a$ اور $b$ کی لمبائیاں اور ان کے درمیانی زاویے $\\gamma$ کی مقدار لکھیں۔ ہمیں مثلث $ABC$ کا رقبہ معلوم کرنا ہے۔"
       },
       {
-       "math": "= \\frac{1}{2}(7)(8)\\sin 38^\\circ = 17.24\\ \\text{cm}^2",
-       "en": "Substitute.",
-       "ur": "قیمتیں رکھیں۔",
+       "math": "\\Delta = \\frac{1}{2}ab\\sin\\gamma",
+       "en": "When two sides and the included angle are given, the area of the triangle ($\\Delta$) is equal to half the product of the two sides and the sine of the angle between them.",
+       "ur": "جب دو اضلاع اور ان کا درمیانی زاویہ دیا گیا ہو، تو مثلث کا رقبہ ($\\Delta$) دونوں اضلاع کے حاصل ضرب کے آدھے اور ان کے درمیانی زاویے کے سائن ($\\sin$) کے حاصل ضرب کے برابر ہوتا ہے۔"
+      },
+      {
+       "math": "\\Delta = \\frac{1}{2}(7)(8)\\sin 38^\\circ",
+       "en": "Substitute the given values $a = 7$, $b = 8$, and $\\gamma = 38^\\circ$ into the formula.",
+       "ur": "فارمولے میں دی گئی قیمتیں $a = 7$، $b = 8$ اور $\\gamma = 38^\\circ$ درج کریں۔"
+      },
+      {
+       "math": "\\Delta = 28 \\times \\sin 38^\\circ",
+       "en": "Multiply the numbers $\\frac{1}{2}$, $7$, and $8$ to get $28$.",
+       "ur": "اعداد $\\frac{1}{2}$، $7$ اور $8$ کو ضرب دیں جس سے $28$ حاصل ہوتا ہے۔",
        "check": [
+        "R(1,2)*7*8 == 28"
+       ]
+      },
+      {
+       "math": "\\Delta = 28 \\times 0.6157 = 17.24\\ \\text{cm}^2",
+       "en": "Find the value of $\\sin 38^\\circ \\approx 0.6157$ using a scientific calculator and multiply it by $28$ to get the final area, rounded to two decimal places.",
+       "ur": "سائنٹیفک کیلکولیٹر کی مدد سے $\\sin 38^\\circ \\approx 0.6157$ کی قیمت معلوم کریں اور اسے $28$ سے ضرب دے کر اشعاریہ کے بعد دو درجوں تک حتمی رقبہ حاصل کریں۔",
+       "check": [
+        "Abs(sin(38*pi/180) - 0.6157) <= 0.0001",
+        "Abs(28*sin(38*pi/180) - 17.24) <= 0.005",
         "Abs((R(1,2)*7*8*sin((38)*pi/180)) - 17.24) <= 0.0050000010000000004"
        ]
       }
      ],
      "answer": "$17.24$ cm$^2$",
+     "enriched": true,
      "book_key": "17.24 cm^2"
     },
     {
@@ -779,15 +1348,42 @@
      "prompt": "$a=11$ cm, $c=14$ cm, $\\beta=51^\\circ$",
      "steps": [
       {
-       "math": "\\text{Area} = \\frac{1}{2}ac\\sin\\beta",
-       "en": "Area = half the product of two sides and the sine of the angle between them.",
-       "ur": "رقبہ = دو اضلاع کے حاصل ضرب کا آدھا ضرب ان کے درمیانی زاویے کا جیب۔"
+       "math": "a = 11\\ \\text{cm}, \\quad c = 14\\ \\text{cm}, \\quad \\beta = 51^\\circ",
+       "en": "First, write down the given sides and the included angle of the triangle $ABC$.",
+       "ur": "سب سے پہلے، مثلث $ABC$ کے دیے گئے اضلاع اور ان کے درمیانی زاویے کو لکھیں۔"
       },
       {
-       "math": "= \\frac{1}{2}(11)(14)\\sin 51^\\circ = 59.84\\ \\text{cm}^2",
-       "en": "Substitute.",
-       "ur": "قیمتیں رکھیں۔",
+       "math": "\\Delta = \\frac{1}{2}ac\\sin\\beta",
+       "en": "When two sides and their included angle are known, we use this formula to find the area of the triangle ($\\Delta$).",
+       "ur": "جب دو اضلاع اور ان کا درمیانی زاویہ معلوم ہو، تو ہم مثلث کا رقبہ ($\\Delta$) معلوم کرنے کے لیے یہ فارمولا استعمال کرتے ہیں۔"
+      },
+      {
+       "math": "\\Delta = \\frac{1}{2}(11)(14)\\sin 51^\\circ",
+       "en": "Substitute the given values $a = 11$, $c = 14$, and $\\beta = 51^\\circ$ into the formula.",
+       "ur": "فارمولے میں دی گئی قیمتیں $a = 11$، $c = 14$ اور $\\beta = 51^\\circ$ درج کریں۔"
+      },
+      {
+       "math": "\\Delta = 77 \\sin 51^\\circ",
+       "en": "Multiply $\\frac{1}{2}$ by $11$ and $14$ to get $77$.",
+       "ur": "$\\frac{1}{2}$ کو $11$ اور $14$ سے ضرب دیں جس سے $77$ حاصل ہوتا ہے۔",
        "check": [
+        "R(1,2)*11*14 == 77"
+       ]
+      },
+      {
+       "math": "\\Delta \\approx 77 (0.7771)",
+       "en": "Find the value of $\\sin 51^\\circ \\approx 0.7771$ using a scientific calculator.",
+       "ur": "سائنٹیفک کیلکولیٹر کی مدد سے $\\sin 51^\\circ \\approx 0.7771$ کی قیمت معلوم کریں۔",
+       "check": [
+        "Abs(sin(51*pi/180) - 0.7771) <= 0.0005"
+       ]
+      },
+      {
+       "math": "\\Delta = 59.84\\ \\text{cm}^2",
+       "en": "Multiply the numbers and round to two decimal places to get the final area of the triangle.",
+       "ur": "ان اعداد کو ضرب دیں اور مثلث کا حتمی رقبہ حاصل کرنے کے لیے اعشاریہ کے بعد دو درجوں تک محدود کریں۔",
+       "check": [
+        "Abs((R(1,2)*11*14*sin(51*pi/180)) - 59.84) <= 0.005",
         "Abs((R(1,2)*11*14*sin((51)*pi/180)) - 59.84) <= 0.0050000010000000004"
        ]
       }
@@ -797,6 +1393,7 @@
       "en": "The reference notes round an intermediate value or the last digit differently; the value here is computed from the exact expression and rounded once.",
       "ur": "حوالہ نوٹس میں درمیانی قیمت یا آخری ہندسہ مختلف طریقے سے گول کیا گیا ہے؛ یہاں قیمت درست عبارت سے نکال کر ایک بار گول کی گئی ہے۔"
      },
+     "enriched": true,
      "book_key": "59.82 cm^2"
     },
     {
@@ -804,15 +1401,35 @@
      "prompt": "$b=3$ cm, $c=9$ cm, $\\alpha=78^\\circ$",
      "steps": [
       {
-       "math": "\\text{Area} = \\frac{1}{2}bc\\sin\\alpha",
-       "en": "Area = half the product of two sides and the sine of the angle between them.",
-       "ur": "رقبہ = دو اضلاع کے حاصل ضرب کا آدھا ضرب ان کے درمیانی زاویے کا جیب۔"
+       "math": "b = 3\\text{ cm}, \\quad c = 9\\text{ cm}, \\quad \\alpha = 78^\\circ",
+       "en": "Write down the given lengths of the two sides $b$ and $c$, and the included angle $\\alpha$.",
+       "ur": "دیے گئے دو اضلاع $b$ اور $c$ کی لمبائیاں اور ان کا درمیانی زاویہ $\\alpha$ لکھیں۔"
       },
       {
-       "math": "= \\frac{1}{2}(3)(9)\\sin 78^\\circ = 13.20\\ \\text{cm}^2",
-       "en": "Substitute.",
-       "ur": "قیمتیں رکھیں۔",
+       "math": "\\Delta = \\frac{1}{2}bc\\sin\\alpha",
+       "en": "Use the formula for the area of a triangle ($\\Delta$) when two sides and the included angle are known.",
+       "ur": "جب دو اضلاع اور ان کا درمیانی زاویہ معلوم ہوں تو مثلث کا رقبہ ($\\Delta$) معلوم کرنے کا فارمولا استعمال کریں۔"
+      },
+      {
+       "math": "\\Delta = \\frac{1}{2}(3)(9)\\sin 78^\\circ",
+       "en": "Substitute the given values $b = 3$, $c = 9$, and $\\alpha = 78^\\circ$ into the formula.",
+       "ur": "فارمولے میں دی گئی قیمتیں $b = 3$، $c = 9$ اور $\\alpha = 78^\\circ$ درج کریں۔"
+      },
+      {
+       "math": "\\Delta = 13.5 \\times \\sin 78^\\circ",
+       "en": "Multiply the numerical values $\\frac{1}{2} \\times 3 \\times 9$ to get $13.5$.",
+       "ur": "عددی قیمتوں $\\frac{1}{2} \\times 3 \\times 9$ کو ضرب دیں جس سے $13.5$ حاصل ہوتا ہے۔",
        "check": [
+        "R(1,2)*3*9 == 13.5"
+       ]
+      },
+      {
+       "math": "\\Delta \\approx 13.5 \\times 0.9781 = 13.20\\text{ cm}^2",
+       "en": "Substitute $\\sin 78^\\circ \\approx 0.9781$ and multiply to find the area rounded to two decimal places.",
+       "ur": "$\\sin 78^\\circ \\approx 0.9781$ کی قیمت درج کریں اور ضرب دے کر اعشاریہ کے بعد دو درجوں تک رقبہ معلوم کریں۔",
+       "check": [
+        "Abs(sin(78*pi/180) - 0.9781) <= 0.0001",
+        "Abs(13.5 * sin(78*pi/180) - 13.20) <= 0.005",
         "Abs((R(1,2)*3*9*sin((78)*pi/180)) - 13.20) <= 0.0050000010000000004"
        ]
       }
@@ -822,6 +1439,7 @@
       "en": "The reference notes round an intermediate value or the last digit differently; the value here is computed from the exact expression and rounded once.",
       "ur": "حوالہ نوٹس میں درمیانی قیمت یا آخری ہندسہ مختلف طریقے سے گول کیا گیا ہے؛ یہاں قیمت درست عبارت سے نکال کر ایک بار گول کی گئی ہے۔"
      },
+     "enriched": true,
      "book_key": "13.21 cm^2"
     },
     {
@@ -829,18 +1447,46 @@
      "prompt": "$a=10$ cm, $\\alpha=62^\\circ$, $\\beta=69^\\circ$",
      "steps": [
       {
-       "math": "\\gamma = 180^\\circ - 62^\\circ - 69^\\circ = 49^\\circ",
-       "en": "The angles add to $180^\\circ$.",
-       "ur": "زاویوں کا مجموعہ $180^\\circ$ ہے۔",
+       "math": "a = 10\\text{ cm}, \\quad \\alpha = 62^\\circ, \\quad \\beta = 69^\\circ",
+       "en": "First, write down the given values for the side and two angles of triangle $ABC$. We need to find the area of the triangle.",
+       "ur": "سب سے پہلے، مثلث $ABC$ کے دیے گئے ایک ضلع اور دو زاویوں کی قیمتیں لکھیں۔ ہمیں اس مثلث کا رقبہ معلوم کرنا ہے۔"
+      },
+      {
+       "math": "\\gamma = 180^\\circ - (\\alpha + \\beta) = 180^\\circ - (62^\\circ + 69^\\circ) = 180^\\circ - 131^\\circ = 49^\\circ",
+       "en": "Since the sum of interior angles of a triangle is always $180^\\circ$, we subtract $\\alpha$ and $\\beta$ from $180^\\circ$ to find the third angle $\\gamma$.",
+       "ur": "چونکہ کسی بھی مثلث کے اندرونی زاویوں کا مجموعہ ہمیشہ $180^\\circ$ ہوتا ہے، اس لیے ہم تیسرا زاویہ $\\gamma$ معلوم کرنے کے لیے $\\alpha$ اور $\\beta$ کو $180^\\circ$ میں سے تفریق کرتے ہیں۔",
        "check": [
+        "62 + 69 == 131",
         "180 - 131 == 49"
        ]
       },
       {
-       "math": "\\text{Area} = \\frac{a^2\\sin\\beta\\sin\\gamma}{2\\sin\\alpha} = \\frac{10^2\\sin 69^\\circ\\sin 49^\\circ}{2\\sin 62^\\circ} = 39.90\\ \\text{cm}^2",
-       "en": "Area from one side and the angles.",
-       "ur": "ایک ضلع اور زاویوں سے رقبہ۔",
+       "math": "\\text{Area of } \\triangle ABC = \\frac{a^2 \\sin\\beta \\sin\\gamma}{2 \\sin\\alpha}",
+       "en": "When one side $a$ and the angles are known, we use this trigonometric formula to calculate the area of the triangle.",
+       "ur": "جب ایک ضلع $a$ اور زاویے معلوم ہوں، تو ہم مثلث کا رقبہ معلوم کرنے کے لیے یہ تکونیاتی فارمولا استعمال کرتے ہیں۔"
+      },
+      {
+       "math": "\\text{Area} = \\frac{(10)^2 \\sin 69^\\circ \\sin 49^\\circ}{2 \\sin 62^\\circ} = \\frac{100 \\sin 69^\\circ \\sin 49^\\circ}{2 \\sin 62^\\circ}",
+       "en": "Substitute $a = 10$, $\\alpha = 62^\\circ$, $\\beta = 69^\\circ$, and $\\gamma = 49^\\circ$ into the formula and square $10$.",
+       "ur": "فارمولے میں $a = 10$، $\\alpha = 62^\\circ$، $\\beta = 69^\\circ$، اور $\\gamma = 49^\\circ$ کی قیمتیں درج کریں اور $10$ کا مربع لیں۔",
        "check": [
+        "10**2 == 100"
+       ]
+      },
+      {
+       "math": "\\text{Area} \\approx \\frac{100 \\times 0.9336 \\times 0.7547}{2 \\times 0.8829} \\approx \\frac{70.4588}{1.7658} \\approx 39.90\\text{ cm}^2",
+       "en": "Evaluate the trigonometric functions using a calculator, then multiply and divide to get the area rounded to two decimal places.",
+       "ur": "کیلکولیٹر کی مدد سے تکونیاتی تفاعل کی قیمتیں نکالیں، پھر ضرب اور تقسیم کر کے دو اعشاریہ تک رقبہ معلوم کریں۔",
+       "check": [
+        "Abs((100*sin(69*pi/180)*sin(49*pi/180)/(2*sin(62*pi/180))) - 39.90) <= 0.005"
+       ]
+      },
+      {
+       "math": "\\text{Area of } \\triangle ABC = 39.90\\text{ cm}^2",
+       "en": "Thus, the area of triangle $ABC$ is $39.90\\text{ cm}^2$.",
+       "ur": "پس، مثلث $ABC$ کا رقبہ $39.90\\text{ cm}^2$ ہے۔",
+       "check": [
+        "180 - 131 == 49",
         "Abs((10**2*sin((69)*pi/180)*sin((49)*pi/180)/(2*sin((62)*pi/180))) - 39.90) <= 0.0050000010000000004"
        ]
       }
@@ -850,6 +1496,7 @@
       "en": "The reference notes round an intermediate value or the last digit differently; the value here is computed from the exact expression and rounded once.",
       "ur": "حوالہ نوٹس میں درمیانی قیمت یا آخری ہندسہ مختلف طریقے سے گول کیا گیا ہے؛ یہاں قیمت درست عبارت سے نکال کر ایک بار گول کی گئی ہے۔"
      },
+     "enriched": true,
      "book_key": "39.89 cm^2"
     },
     {
@@ -857,23 +1504,55 @@
      "prompt": "$c=4$ cm, $\\beta=36^\\circ$, $\\gamma=80^\\circ$",
      "steps": [
       {
-       "math": "\\alpha = 180^\\circ - 36^\\circ - 80^\\circ = 64^\\circ",
-       "en": "The angles add to $180^\\circ$.",
-       "ur": "زاویوں کا مجموعہ $180^\\circ$ ہے۔",
+       "math": "c = 4\\text{ cm},\\quad \\beta = 36^\\circ,\\quad \\gamma = 80^\\circ",
+       "en": "Write down the given side and two angles of triangle $ABC$.",
+       "ur": "مثلث $ABC$ کا دیا گیا ضلع اور دو زاویے لکھیں۔",
        "check": [
-        "180 - 116 == 64"
+        "4 == 4",
+        "36 == 36",
+        "80 == 80"
        ]
       },
       {
-       "math": "\\text{Area} = \\frac{c^2\\sin\\alpha\\sin\\beta}{2\\sin\\gamma} = \\frac{4^2\\sin 64^\\circ\\sin 36^\\circ}{2\\sin 80^\\circ} = 4.29\\ \\text{cm}^2",
-       "en": "Area from one side and the angles.",
-       "ur": "ایک ضلع اور زاویوں سے رقبہ۔",
+       "math": "\\alpha + \\beta + \\gamma = 180^\\circ",
+       "en": "The sum of the interior angles of a triangle is always $180^\\circ$.",
+       "ur": "مثلث کے اندرونی زاویوں کا مجموعہ ہمیشہ $180^\\circ$ ہوتا ہے۔"
+      },
+      {
+       "math": "\\alpha = 180^\\circ - 36^\\circ - 80^\\circ = 64^\\circ",
+       "en": "Substitute the values of $\\beta$ and $\\gamma$ to find the third angle $\\alpha$.",
+       "ur": "تیسرا زاویہ $\\alpha$ معلوم کرنے کے لیے $\\beta$ اور $\\gamma$ کی قیمتیں درج کریں۔",
        "check": [
+        "180 - 36 - 80 == 64"
+       ]
+      },
+      {
+       "math": "\\text{Area of } \\triangle ABC = \\frac{c^2 \\sin\\alpha \\sin\\beta}{2 \\sin\\gamma}",
+       "en": "Use the formula for the area of a triangle when one side $c$ and the angles are known.",
+       "ur": "مثلث کے رقبے کا فارمولا استعمال کریں جب ایک ضلع $c$ اور زاویے معلوم ہوں۔"
+      },
+      {
+       "math": "\\text{Area of } \\triangle ABC = \\frac{4^2 \\sin 64^\\circ \\sin 36^\\circ}{2 \\sin 80^\\circ} = \\frac{16 \\sin 64^\\circ \\sin 36^\\circ}{2 \\sin 80^\\circ}",
+       "en": "Substitute $c = 4$, $\\alpha = 64^\\circ$, $\\beta = 36^\\circ$, and $\\gamma = 80^\\circ$ into the formula and evaluate $4^2 = 16$.",
+       "ur": "فارمولے میں $c = 4$، $\\alpha = 64^\\circ$، $\\beta = 36^\\circ$ اور $\\gamma = 80^\\circ$ درج کریں اور $4^2 = 16$ حل کریں۔",
+       "check": [
+        "4**2 == 16",
+        "(4**2*sin(64*pi/180)*sin(36*pi/180))/(2*sin(80*pi/180)) == (16*sin(64*pi/180)*sin(36*pi/180))/(2*sin(80*pi/180))"
+       ]
+      },
+      {
+       "math": "\\text{Area of } \\triangle ABC \\approx \\frac{16 (0.8988) (0.5878)}{2 (0.9848)} \\approx \\frac{8.4528}{1.9696} \\approx 4.29\\text{ cm}^2",
+       "en": "Substitute the trigonometric values and simplify to find the area rounded to two decimal places.",
+       "ur": "تکونیاتی قیمتیں درج کریں اور دو اعشاریہ تک رقبہ معلوم کرنے کے لیے مختصر کریں۔",
+       "check": [
+        "Abs((16*sin(64*pi/180)*sin(36*pi/180))/(2*sin(80*pi/180)) - 4.29) <= 0.005",
+        "180 - 116 == 64",
         "Abs((4**2*sin((64)*pi/180)*sin((36)*pi/180)/(2*sin((80)*pi/180))) - 4.29) <= 0.0050000010000000004"
        ]
       }
      ],
      "answer": "$4.29$ cm$^2$",
+     "enriched": true,
      "book_key": "4.29 cm^2"
     },
     {
@@ -881,23 +1560,47 @@
      "prompt": "$c=6.6$ cm, $\\alpha=23^\\circ$, $\\gamma=89^\\circ$",
      "steps": [
       {
-       "math": "\\beta = 180^\\circ - 23^\\circ - 89^\\circ = 68^\\circ",
-       "en": "The angles add to $180^\\circ$.",
-       "ur": "زاویوں کا مجموعہ $180^\\circ$ ہے۔",
+       "math": "c = 6.6\\text{ cm}, \\quad \\alpha = 23^\\circ, \\quad \\gamma = 89^\\circ",
+       "en": "Write down the given side and angles of the triangle $ABC$.",
+       "ur": "مثلث $ABC$ کا دیا گیا ضلع اور زاویے لکھیں۔"
+      },
+      {
+       "math": "\\alpha + \\beta + \\gamma = 180^\\circ",
+       "en": "The sum of the interior angles of a triangle is always $180^\\circ$.",
+       "ur": "مثلث کے اندرونی زاویوں کا مجموعہ ہمیشہ $180^\\circ$ ہوتا ہے۔"
+      },
+      {
+       "math": "\\beta = 180^\\circ - \\alpha - \\gamma = 180^\\circ - 23^\\circ - 89^\\circ = 68^\\circ",
+       "en": "Substitute the values of $\\alpha$ and $\\gamma$ to find the third angle $\\beta$.",
+       "ur": "تیسرا زاویہ $\\beta$ معلوم کرنے کے لیے $\\alpha$ اور $\\gamma$ کی قیمتیں درج کریں۔",
        "check": [
-        "180 - 112 == 68"
+        "180 - 23 - 89 == 68"
        ]
       },
       {
-       "math": "\\text{Area} = \\frac{c^2\\sin\\alpha\\sin\\beta}{2\\sin\\gamma} = \\frac{6.6^2\\sin 23^\\circ\\sin 68^\\circ}{2\\sin 89^\\circ} = 7.89\\ \\text{cm}^2",
-       "en": "Area from one side and the angles.",
-       "ur": "ایک ضلع اور زاویوں سے رقبہ۔",
+       "math": "\\Delta = \\frac{1}{2} \\frac{c^2 \\sin\\alpha \\sin\\beta}{\\sin\\gamma}",
+       "en": "Since one side $c$ and the angles are known, use the formula for the area of a triangle given one side and two angles.",
+       "ur": "چونکہ ایک ضلع $c$ اور زاویے معلوم ہیں، اس لیے ایک ضلع اور دو زاویوں کی مدد سے مثلث کا رقبہ معلوم کرنے کا فارمولا استعمال کریں۔"
+      },
+      {
+       "math": "\\Delta = \\frac{1}{2} \\frac{(6.6)^2 \\sin 23^\\circ \\sin 68^\\circ}{\\sin 89^\\circ}",
+       "en": "Substitute the values of $c$, $\\alpha$, $\\beta$, and $\\gamma$ into the formula.",
+       "ur": "فارمولے میں $c$، $\\alpha$، $\\beta$ اور $\\gamma$ کی قیمتیں درج کریں۔"
+      },
+      {
+       "math": "\\Delta = \\frac{43.56 \\times 0.39073 \\times 0.92718}{2 \\times 0.99985} \\approx 7.89\\text{ cm}^2",
+       "en": "Evaluate the trigonometric ratios and simplify to get the area of the triangle.",
+       "ur": "تکونیاتی نسبتوں کی قیمتیں نکالیں اور مثلث کا رقبہ حاصل کرنے کے لیے مختصر کریں۔",
        "check": [
+        "Abs((6.6**2) - 43.56) <= 1e-9",
+        "Abs((6.6**2*sin(23*pi/180)*sin(68*pi/180)/(2*sin(89*pi/180))) - 7.89) <= 0.005",
+        "180 - 112 == 68",
         "Abs((6.6**2*sin((23)*pi/180)*sin((68)*pi/180)/(2*sin((89)*pi/180))) - 7.89) <= 0.0050000010000000004"
        ]
       }
      ],
      "answer": "$7.89$ cm$^2$",
+     "enriched": true,
      "book_key": "7.89 cm^2"
     },
     {
@@ -929,23 +1632,47 @@
      "prompt": "$a=6.12$ cm, $b=8.34$ cm, $c=7.12$ cm",
      "steps": [
       {
-       "math": "s = \\frac{a + b + c}{2} = \\frac{6.12 + 8.34 + 7.12}{2} = 10.79",
-       "en": "Half the perimeter.",
-       "ur": "نصف احاطہ۔",
+       "math": "",
+       "en": "We are given the lengths of all three sides of the triangle $ABC$: $a = 6.12$ cm, $b = 8.34$ cm, and $c = 7.12$ cm. Since all three sides are known, we will use Hero's formula to find the area $\\Delta$.",
+       "ur": "ہمیں مثلث $ABC$ کے تینوں اضلاع کی لمبائیاں دی گئی ہیں: $a = 6.12$ سینٹی میٹر، $b = 8.34$ سینٹی میٹر، اور $c = 7.12$ سینٹی میٹر۔ چونکہ تینوں اضلاع معلوم ہیں، اس لیے ہم رقبہ $\\Delta$ معلوم کرنے کے لیے ہیرو کا کلیہ استعمال کریں گے۔"
+      },
+      {
+       "math": "s = \\frac{a + b + c}{2} = \\frac{6.12 + 8.34 + 7.12}{2} = \\frac{21.58}{2} = 10.79\\ \\text{cm}",
+       "en": "First, calculate the semi-perimeter $s$ of the triangle by dividing the sum of the three sides by $2$.",
+       "ur": "سب سے پہلے، تینوں اضلاع کے مجموعے کو $2$ پر تقسیم کر کے مثلث کا نصف احاطہ $s$ معلوم کریں۔",
        "check": [
-        "(6.12 + 8.34 + 7.12)/2 == 10.790000000000001"
+        "R(612, 100) + R(834, 100) + R(712, 100) == R(2158, 100)",
+        "R(2158, 100) / 2 == R(1079, 100)"
        ]
       },
       {
-       "math": "\\Delta = \\sqrt{s(s - a)(s - b)(s - c)} = \\sqrt{10.79(4.67)(2.45)(3.67)} = 21.29\\ \\text{cm}^2",
-       "en": "Hero's formula.",
-       "ur": "ہیرو کا کلیہ۔",
+       "math": "s - a = 10.79 - 6.12 = 4.67,\\quad s - b = 10.79 - 8.34 = 2.45,\\quad s - c = 10.79 - 7.12 = 3.67",
+       "en": "Next, subtract each side from the semi-perimeter $s$ to find $(s - a)$, $(s - b)$, and $(s - c)$.",
+       "ur": "اس کے بعد، $(s - a)$، $(s - b)$، اور $(s - c)$ معلوم کرنے کے لیے نصف احاطہ $s$ میں سے ہر ضلع کو تفریق کریں۔",
        "check": [
+        "R(1079, 100) - R(612, 100) == R(467, 100)",
+        "R(1079, 100) - R(834, 100) == R(245, 100)",
+        "R(1079, 100) - R(712, 100) == R(367, 100)"
+       ]
+      },
+      {
+       "math": "\\Delta = \\sqrt{s(s - a)(s - b)(s - c)}",
+       "en": "Write down Hero's formula for the area of a triangle.",
+       "ur": "مثلث کے رقبے کے لیے ہیرو کا کلیہ لکھیں۔"
+      },
+      {
+       "math": "\\Delta = \\sqrt{10.79 \\times 4.67 \\times 2.45 \\times 3.67} = 21.29\\ \\text{cm}^2",
+       "en": "Substitute the calculated values into the formula and simplify to get the final area of the triangle $ABC$.",
+       "ur": "فارمولے میں حاصل کردہ قیمتیں درج کریں اور مثلث $ABC$ کا حتمی رقبہ حاصل کرنے کے لیے مختصر کریں۔",
+       "check": [
+        "Abs(sqrt(10.79 * 4.67 * 2.45 * 3.67) - 21.29) <= 0.005",
+        "(6.12 + 8.34 + 7.12)/2 == 10.790000000000001",
         "Abs((sqrt(10.790000000000001*(10.790000000000001 - 6.12)*(10.790000000000001 - 8.34)*(10.790000000000001 - 7.12))) - 21.29) <= 0.0050000010000000004"
        ]
       }
      ],
      "answer": "$21.29$ cm$^2$",
+     "enriched": true,
      "book_key": "21.29 cm^2"
     }
    ],
@@ -963,16 +1690,42 @@
      "prompt": "the length $CF$",
      "steps": [
       {
-       "math": "CF^2 = FE^2 + EC^2 = 5^2 + 4^2 = 41 \\Rightarrow CF = \\sqrt{41} \\approx 6.4\\ \\text{cm}",
-       "en": "Pythagoras in the right triangle $FEC$.",
-       "ur": "قائمہ مثلث $FEC$ میں فیثا غورث۔",
+       "math": "FE = 5\\ \\text{cm}, \\quad EC = 4\\ \\text{cm}, \\quad m\\angle FEC = 90^\\circ",
+       "en": "Identify the given lengths and the right angle in the triangle $FEC$ to find the length of the hypotenuse $\\overline{CF}$.",
+       "ur": "وتر $\\overline{CF}$ کی لمبائی معلوم کرنے کے لیے مثلث $FEC$ میں دی گئی لمبائیاں اور قائمہ زاویہ لکھیں۔"
+      },
+      {
+       "math": "CF^2 = FE^2 + EC^2",
+       "en": "Since $\\triangle FEC$ is a right-angled triangle with the right angle at $E$, we apply the Pythagoras theorem.",
+       "ur": "چونکہ $\\triangle FEC$ ایک قائمہ الزاویہ مثلث ہے جس میں زاویہ $E$ قائمہ ہے، اس لیے ہم مسئلہ فیثا غورث کا اطلاق کرتے ہیں۔"
+      },
+      {
+       "math": "CF^2 = 5^2 + 4^2",
+       "en": "Substitute the given values $FE = 5$ and $EC = 4$ into the formula.",
+       "ur": "فارمولے میں دی گئی قیمتیں $FE = 5$ اور $EC = 4$ درج کریں۔"
+      },
+      {
+       "math": "CF^2 = 25 + 16 = 41",
+       "en": "Evaluate the squares and add them together.",
+       "ur": "مربع لیں اور انہیں آپس میں جمع کریں۔",
        "check": [
-        "5**2 + 4**2 == 41",
-        "Abs((sqrt(41)) - 6.4) <= 0.050000001"
+        "5**2 == 25",
+        "4**2 == 16",
+        "25 + 16 == 41"
+       ]
+      },
+      {
+       "math": "CF = \\sqrt{41} \\approx 6.4\\ \\text{cm}",
+       "en": "Take the square root on both sides and round the result to one decimal place. Thus, the length of $\\overline{CF}$ is $6.4$ cm.",
+       "ur": "دونوں طرف جزر المربع لیں اور جواب کو اعشاریہ کے ایک درجہ تک محدود کریں۔ اس طرح $\\overline{CF}$ کی لمبائی $6.4$ سینٹی میٹر ہے۔",
+       "check": [
+        "Abs((sqrt(41)) - 6.4) <= 0.050000001",
+        "5**2 + 4**2 == 41"
        ]
       }
      ],
      "answer": "$6.4$ cm",
+     "enriched": true,
      "book_key": "6.4 cm"
     },
     {
@@ -980,10 +1733,47 @@
      "prompt": "the length $BF$",
      "steps": [
       {
-       "math": "BF^2 = BC^2 + CF^2 = 3^2 + 41 = 50 \\Rightarrow BF = \\sqrt{50} = 5\\sqrt{2} \\approx 7.1\\ \\text{cm}",
-       "en": "Pythagoras in the right triangle $BCF$.",
-       "ur": "قائمہ مثلث $BCF$ میں فیثا غورث۔",
+       "math": "FE = 5\\text{ cm}, \\quad EC = 4\\text{ cm}, \\quad BC = 3\\text{ cm}",
+       "en": "Write down the given lengths from the figure. We need to find the length of $\\overline{BF}$.",
+       "ur": "شکل میں دی گئی لمبائیاں لکھیں۔ ہمیں $\\overline{BF}$ کی لمبائی معلوم کرنی ہے۔"
+      },
+      {
+       "math": "CF^2 = FE^2 + EC^2 = 5^2 + 4^2 = 25 + 16 = 41",
+       "en": "First, using Pythagoras theorem in the right-angled triangle $CEF$ (from part i), we have the value of $CF^2$.",
+       "ur": "سب سے پہلے، قائمہ الزاویہ مثلث $CEF$ میں مسئلہ فیثا غورث استعمال کرتے ہوئے (حصہ اول سے)، ہمارے پاس $CF^2$ کی قیمت موجود ہے۔",
        "check": [
+        "5**2 + 4**2 == 25 + 16",
+        "25 + 16 == 41"
+       ]
+      },
+      {
+       "math": "BF^2 = BC^2 + CF^2",
+       "en": "Since there is a right angle at $C$, triangle $BCF$ is a right-angled triangle. Apply the Pythagoras theorem to $\\triangle BCF$.",
+       "ur": "چونکہ نکتہ $C$ پر قائمہ زاویہ ہے، اس لیے مثلث $BCF$ ایک قائمہ الزاویہ مثلث ہے۔ $\\triangle BCF$ پر مسئلہ فیثا غورث لاگو کریں۔"
+      },
+      {
+       "math": "BF^2 = 3^2 + 41 = 9 + 41 = 50",
+       "en": "Substitute $BC = 3$ and $CF^2 = 41$ into the equation and simplify.",
+       "ur": "مساوات میں $BC = 3$ اور $CF^2 = 41$ درج کریں اور حل کریں۔",
+       "check": [
+        "3**2 + 41 == 9 + 41",
+        "9 + 41 == 50"
+       ]
+      },
+      {
+       "math": "BF = \\sqrt{50} = 5\\sqrt{2}",
+       "en": "Take the square root on both sides to find $BF$.",
+       "ur": "$BF$ معلوم کرنے کے لیے دونوں طرف جزر لیں۔",
+       "check": [
+        "sqrt(50) == 5*sqrt(2)"
+       ]
+      },
+      {
+       "math": "BF \\approx 7.1\\text{ cm}",
+       "en": "Calculate the numerical value and round it to one decimal place. Thus, the length $\\overline{BF}$ is $7.1$ cm.",
+       "ur": "عددی قیمت معلوم کریں اور اسے اعشاریہ کے ایک درجہ تک محدود کریں۔ پس، $\\overline{BF}$ کی لمبائی $7.1$ سینٹی میٹر ہے۔",
+       "check": [
+        "Abs(sqrt(50) - 7.1) <= 0.050000001",
         "3**2 + 41 == 50",
         "sqrt(50) == 5*sqrt(2)",
         "Abs((sqrt(50)) - 7.1) <= 0.050000001"
@@ -991,6 +1781,7 @@
       }
      ],
      "answer": "$7.1$ cm",
+     "enriched": true,
      "book_key": "7.1 cm"
     },
     {
@@ -998,23 +1789,41 @@
      "prompt": "the angle $BFC$",
      "steps": [
       {
-       "math": "\\tan\\angle BFC = \\frac{BC}{CF} = \\frac{3}{\\sqrt{41}} \\approx 0.4685",
-       "en": "Opposite over adjacent in the right triangle $BCF$.",
-       "ur": "قائمہ مثلث $BCF$ میں مقابل تقسیم متصل۔",
+       "math": "BC = 3\\text{ cm}, \\quad CF = \\sqrt{41}\\text{ cm}",
+       "en": "Consider the right-angled triangle $BCF$ with the right angle at $C$. From the given figure, $BC = 3$ cm, and from part (i), we know that $CF = \\sqrt{41}$ cm.",
+       "ur": "قائمہ الزاویہ مثلث $BCF$ پر غور کریں جس میں زاویہ $C$ قائمہ ہے۔ دی گئی شکل سے $BC = 3$ سینٹی میٹر ہے، اور جزو (i) سے ہم جانتے ہیں کہ $CF = \\sqrt{41}$ سینٹی میٹر ہے۔"
+      },
+      {
+       "math": "\\tan\\angle BFC = \\frac{\\text{Opposite}}{\\text{Adjacent}} = \\frac{BC}{CF}",
+       "en": "To find the angle $BFC$, we use the tangent trigonometric ratio, which is the ratio of the opposite side ($BC$) to the adjacent side ($CF$).",
+       "ur": "زاویہ $BFC$ معلوم کرنے کے لیے ہم ٹینجنٹ کی مثلثیاتی نسبت استعمال کرتے ہیں، جو کہ عمود ($BC$) اور قاعدہ ($CF$) کی نسبت ہے۔"
+      },
+      {
+       "math": "\\tan\\angle BFC = \\frac{3}{\\sqrt{41}} \\approx 0.4685",
+       "en": "Substitute the values of $BC$ and $CF$ into the formula and calculate the decimal value.",
+       "ur": "فارمولے میں $BC$ اور $CF$ کی قیمتیں درج کریں اور اعشاریہ میں قیمت معلوم کریں۔",
        "check": [
-        "Abs((3/sqrt(41)) - 0.4685) <= 5.0001000000000005e-05"
+        "Abs((3/sqrt(41)) - 0.4685) <= 0.00005"
        ]
       },
       {
-       "math": "\\angle BFC = \\tan^{-1}(0.4685) \\approx 25.1^\\circ",
-       "en": "Inverse tangent.",
-       "ur": "معکوس ٹینجنٹ۔",
+       "math": "\\angle BFC = \\tan^{-1}(0.4685)",
+       "en": "Take the inverse tangent ($\\tan^{-1}$) on both sides to isolate the angle $BFC$.",
+       "ur": "زاویہ $BFC$ کی قیمت نکالنے کے لیے دونوں طرف معکوس ٹینجنٹ ($\\tan^{-1}$) لیں۔"
+      },
+      {
+       "math": "\\angle BFC \\approx 25.1^\\circ",
+       "en": "Using a calculator, we find the angle $BFC$ correct to one decimal place.",
+       "ur": "کیلکولیٹر کا استعمال کرتے ہوئے، ہم اعشاریہ کے ایک درجہ تک درست زاویہ $BFC$ معلوم کرتے ہیں۔",
        "check": [
+        "Abs((atan(3/sqrt(41))*180/pi) - 25.1) <= 0.05",
+        "Abs((3/sqrt(41)) - 0.4685) <= 5.0001000000000005e-05",
         "Abs((atan(3/sqrt(41))*180/pi) - 25.1) <= 0.050000001"
        ]
       }
      ],
      "answer": "$25.1^\\circ$",
+     "enriched": true,
      "book_key": "25.1"
     }
    ],
@@ -1032,24 +1841,62 @@
      "prompt": "",
      "steps": [
       {
-       "math": "PR = \\sqrt{16^2 + 10^2} = \\sqrt{356} \\approx 18.87\\ \\text{cm},\\quad PM = \\frac{PR}{2} \\approx 9.43\\ \\text{cm}",
-       "en": "Diagonal of the base; $M$ is its midpoint.",
-       "ur": "قاعدے کا وتر؛ $M$ اس کا وسطی نقطہ ہے۔",
+       "math": "m\\overline{PQ} = 16\\ \\text{cm},\\quad m\\overline{QR} = 10\\ \\text{cm},\\quad m\\overline{MT} = 15\\ \\text{cm}",
+       "en": "Write down the given dimensions of the rectangular base $PQRS$ and the vertical height $MT$ of the pyramid.",
+       "ur": "مستطیل قاعدے $PQRS$ کی دی گئی پیمائشیں اور اہرام کی عمودی اونچائی $MT$ لکھیں۔",
        "check": [
-        "16**2 + 10**2 == 356",
-        "Abs((sqrt(356)/2) - 9.43) <= 0.0050000010000000004"
+        "16 == 16",
+        "10 == 10",
+        "15 == 15"
        ]
       },
       {
-       "math": "\\tan\\theta = \\frac{MT}{PM} = \\frac{15}{9.43} \\Rightarrow \\theta = \\tan^{-1}(1.590) \\approx 57.8^\\circ",
-       "en": "In the right triangle $TPM$.",
-       "ur": "قائمہ مثلث $TPM$ میں۔",
+       "math": "(PR)^2 = (PQ)^2 + (QR)^2",
+       "en": "Since the base $PQRS$ is a rectangle, $\\angle PQR = 90^\\circ$. Apply the Pythagoras theorem in the right-angled triangle $PQR$ to find the length of the diagonal $PR$.",
+       "ur": "چونکہ قاعدہ $PQRS$ ایک مستطیل ہے، اس لیے $\\angle PQR = 90^\\circ$ ہے۔ وتر $PR$ کی لمبائی معلوم کرنے کے لیے قائمہ الزاویہ مثلث $PQR$ میں مسئلہ فیثاغورث کا اطلاق کریں۔"
+      },
+      {
+       "math": "PR = \\sqrt{16^2 + 10^2} = \\sqrt{256 + 100} = \\sqrt{356} \\approx 18.87\\ \\text{cm}",
+       "en": "Substitute $PQ = 16$ and $QR = 10$, then simplify to find $PR$.",
+       "ur": "$PQ = 16$ اور $QR = 10$ کی قیمتیں درج کریں، اور پھر $PR$ معلوم کرنے کے لیے مختصر کریں۔",
        "check": [
+        "16**2 == 256",
+        "10**2 == 100",
+        "256 + 100 == 356",
+        "Abs(sqrt(356) - 18.87) <= 0.005"
+       ]
+      },
+      {
+       "math": "PM = \\frac{PR}{2} = \\frac{\\sqrt{356}}{2} \\approx 9.43\\ \\text{cm}",
+       "en": "Since $M$ is the midpoint of the diagonal $PR$, divide the length of $PR$ by $2$ to find $PM$.",
+       "ur": "چونکہ $M$ وتر $PR$ کا وسطی نقطہ ہے، اس لیے $PM$ معلوم کرنے کے لیے $PR$ کی لمبائی کو $2$ پر تقسیم کریں۔",
+       "check": [
+        "Abs((sqrt(356)/2) - 9.43) <= 0.005"
+       ]
+      },
+      {
+       "math": "\\tan\\theta = \\frac{MT}{PM} = \\frac{15}{9.43} \\approx 1.590",
+       "en": "The vertex $T$ is vertically above $M$, so $\\triangle TPM$ is a right-angled triangle with $\\angle TMP = 90^\\circ$. Let $\\theta$ be the angle between $TP$ and the base $PQRS$ (which is $\\angle TPM$). Use the tangent ratio.",
+       "ur": "راس $T$ نقطہ $M$ کے بالکل اوپر عموداً واقع ہے، اس لیے $\\triangle TPM$ ایک قائمہ الزاویہ مثلث ہے جس میں $\\angle TMP = 90^\\circ$ ہے۔ فرض کریں کہ $TP$ اور قاعدہ $PQRS$ کے درمیان زاویہ $\\theta$ ہے (جو کہ $\\angle TPM$ ہے)۔ ٹینجنٹ کی نسبت استعمال کریں۔",
+       "check": [
+        "Abs(15/9.43 - 1.590) <= 0.001"
+       ]
+      },
+      {
+       "math": "\\theta = \\tan^{-1}(1.590) \\approx 57.8^\\circ",
+       "en": "Take the inverse tangent to find the angle $\\theta$, rounded to 1 decimal place.",
+       "ur": "زاویہ $\\theta$ معلوم کرنے کے لیے معکوس ٹینجنٹ لیں اور جواب کو اعشاریہ کے بعد ایک درجہ تک محدود کریں۔",
+       "check": [
+        "Abs((atan(15/(sqrt(356)/2))*180/pi) - 57.8) <= 0.05",
+        "Abs((atan(1.590)*180/pi) - 57.8) <= 0.05",
+        "16**2 + 10**2 == 356",
+        "Abs((sqrt(356)/2) - 9.43) <= 0.0050000010000000004",
         "Abs((atan(15/(sqrt(356)/2))*180/pi) - 57.8) <= 0.050000001"
        ]
       }
      ],
      "answer": "$57.8^\\circ$",
+     "enriched": true,
      "book_key": "57.8"
     }
    ],
@@ -1067,23 +1914,50 @@
      "prompt": "",
      "steps": [
       {
-       "math": "PR = \\sqrt{10^2 + 10^2} = \\sqrt{200} \\approx 14.14,\\quad PM = 7.07\\ \\text{cm}",
-       "en": "Half the diagonal of the square.",
-       "ur": "مربع کے وتر کا آدھا۔",
+       "math": "",
+       "en": "The base $PQRS$ is a square with side length $10\\text{ cm}$, so $m\\overline{PQ} = 10\\text{ cm}$ and $m\\overline{QR} = 10\\text{ cm}$. The height of the pyramid is $m\\overline{VM} = 12\\text{ cm}$. We need to find the size of $\\angle VPM$.",
+       "ur": "قاعدہ $PQRS$ ایک مربع ہے جس کے ضلع کی لمبائی $10\\text{ cm}$ ہے، اس لیے $m\\overline{PQ} = 10\\text{ cm}$ اور $m\\overline{QR} = 10\\text{ cm}$ ہے۔ اہرام کی اونچائی $m\\overline{VM} = 12\\text{ cm}$ ہے۔ ہمیں زاویہ $\\angle VPM$ کی مقدار معلوم کرنی ہے۔"
+      },
+      {
+       "math": "m\\overline{PR} = \\sqrt{10^2 + 10^2} = \\sqrt{100 + 100} = \\sqrt{200} \\approx 14.14\\text{ cm}",
+       "en": "First, find the length of the diagonal $PR$ of the square base by applying the Pythagoras theorem to the right-angled triangle $PQR$.",
+       "ur": "سب سے پہلے، قائمہ الزاویہ مثلث $PQR$ پر مسئلہ فیثاغورث لاگو کر کے مربع قاعدے کے وتر $PR$ کی لمبائی معلوم کریں۔",
        "check": [
-        "Abs((sqrt(200)/2) - 7.07) <= 0.0050000010000000004"
+        "10**2 + 10**2 == 200",
+        "Abs(sqrt(200) - 14.14) <= 0.005"
        ]
       },
       {
-       "math": "\\tan\\theta = \\frac{12}{7.07} \\approx 1.697 \\Rightarrow \\theta \\approx 59.5^\\circ",
-       "en": "Right triangle $VPM$.",
-       "ur": "قائمہ مثلث $VPM$۔",
+       "math": "m\\overline{PM} = \\frac{14.14}{2} = 7.07\\text{ cm}",
+       "en": "Since $M$ is the midpoint of the square base, the distance $PM$ is half of the diagonal $PR$.",
+       "ur": "چونکہ $M$ مربع قاعدے کا وسطی نقطہ ہے، اس لیے فاصلہ $PM$ وتر $PR$ کا نصف ہے۔",
        "check": [
+        "R(1414, 100) / 2 == R(707, 100)",
+        "Abs(sqrt(200)/2 - 7.07) <= 0.005"
+       ]
+      },
+      {
+       "math": "\\tan\\theta = \\frac{m\\overline{VM}}{m\\overline{PM}} = \\frac{12}{7.07} \\approx 1.697",
+       "en": "Now consider the right-angled triangle $VMP$, where $\\angle VMP = 90^\\circ$. Let $\\angle VPM = \\theta$ and use the tangent ratio.",
+       "ur": "اب قائمہ الزاویہ مثلث $VMP$ پر غور کریں، جہاں $\\angle VMP = 90^\\circ$ ہے۔ فرض کریں $\\angle VPM = \\theta$ ہے اور ٹینجنٹ نسبت کا استعمال کریں۔",
+       "check": [
+        "Abs(12/7.07 - 1.697) <= 0.001"
+       ]
+      },
+      {
+       "math": "\\theta = \\tan^{-1}(1.697) \\approx 59.5^\\circ",
+       "en": "Take the inverse tangent to find the angle $\\theta$, which gives the size of $\\angle VPM$.",
+       "ur": "زاویہ $\\theta$ معلوم کرنے کے لیے معکوس ٹینجنٹ لیں، جس سے $\\angle VPM$ کی مقدار حاصل ہوتی ہے۔",
+       "check": [
+        "Abs(atan(1.697)*180/pi - 59.5) <= 0.05",
+        "Abs(atan(12/(sqrt(200)/2))*180/pi - 59.5) <= 0.05",
+        "Abs((sqrt(200)/2) - 7.07) <= 0.0050000010000000004",
         "Abs((atan(12/(sqrt(200)/2))*180/pi) - 59.5) <= 0.050000001"
        ]
       }
      ],
      "answer": "$59.5^\\circ$",
+     "enriched": true,
      "book_key": "59.5"
     }
    ],
@@ -1144,23 +2018,51 @@
      "prompt": "",
      "steps": [
       {
-       "math": "MB = \\sqrt{AM^2 + AB^2} = \\sqrt{3.5^2 + 10^2} \\approx 10.59\\ \\text{cm}",
-       "en": "$AM = 3.5$ cm (half of $AD = 7$); right angle at $A$.",
-       "ur": "$AM = 3.5$ سینٹی میٹر؛ $A$ پر قائمہ۔",
+       "math": "m\\overline{AB} = 10\\text{ cm},\\quad m\\overline{AD} = m\\overline{BC} = 7\\text{ cm},\\quad m\\overline{MT} = 6\\text{ cm}",
+       "en": "Write down the given lengths. Since $ABCD$ is a rectangle, opposite sides $AD$ and $BC$ are equal.",
+       "ur": "دی گئی لمبائیاں لکھیں۔ چونکہ $ABCD$ ایک مستطیل ہے، اس کے بالمقابل اضلاع $AD$ اور $BC$ برابر ہیں۔",
        "check": [
-        "Abs((sqrt(R(7,2)**2 + 10**2)) - 10.59) <= 0.0050000010000000004"
+        "7 == 7"
        ]
       },
       {
-       "math": "\\tan\\theta = \\frac{MT}{MB} = \\frac{6}{10.59} \\approx 0.5663 \\Rightarrow \\theta \\approx 29.5^\\circ",
-       "en": "Right triangle $TMB$.",
-       "ur": "قائمہ مثلث $TMB$۔",
+       "math": "m\\overline{AM} = \\frac{m\\overline{AD}}{2} = \\frac{7}{2} = 3.5\\text{ cm}",
+       "en": "Since $M$ is the midpoint of $AD$, divide the length of $AD$ by $2$ to find $m\\overline{AM}$.",
+       "ur": "چونکہ $M$ ضلع $AD$ کا وسطی نقطہ ہے، اس لیے $m\\overline{AM}$ معلوم کرنے کے لیے $AD$ کی لمبائی کو $2$ پر تقسیم کریں۔",
        "check": [
+        "R(7, 2) == 3.5"
+       ]
+      },
+      {
+       "math": "m\\overline{MB} = \\sqrt{m\\overline{AM}^2 + m\\overline{AB}^2} = \\sqrt{3.5^2 + 10^2} = \\sqrt{112.25} \\approx 10.59\\text{ cm}",
+       "en": "In the base rectangle, $\\angle MAB = 90^\\circ$. Apply the Pythagoras theorem to the right-angled triangle $MAB$ to find the length of $MB$.",
+       "ur": "قاعدہ کی مستطیل میں $\\angle MAB = 90^\\circ$ ہے۔ $MB$ کی لمبائی معلوم کرنے کے لیے قائمۃ الزاویہ مثلث $MAB$ پر مسئلہ فیثاغورث لاگو کریں۔",
+       "check": [
+        "R(7,2)**2 + 10**2 == R(449,4)",
+        "Abs(sqrt(R(449,4)) - 10.59) <= 0.005"
+       ]
+      },
+      {
+       "math": "\\tan\\theta = \\frac{m\\overline{MT}}{m\\overline{MB}} = \\frac{6}{10.59} \\approx 0.5663",
+       "en": "Since $T$ is vertically above $M$, $\\triangle TMB$ is a right-angled triangle with $\\angle TMB = 90^\\circ$. Let $\\theta$ be the angle $\\angle TBM$ between $\\overline{TB}$ and the base.",
+       "ur": "چونکہ نقطہ $T$ عمودی طور پر $M$ کے اوپر ہے، اس لیے $\\triangle TMB$ ایک قائمۃ الزاویہ مثلث ہے جس میں $\\angle TMB = 90^\\circ$ ہے۔ فرض کریں کہ $\\overline{TB}$ اور قاعدہ کے درمیان زاویہ $\\angle TBM = \\theta$ ہے۔",
+       "check": [
+        "Abs(6/sqrt(R(449,4)) - 0.5663) <= 0.0005"
+       ]
+      },
+      {
+       "math": "\\theta = \\tan^{-1}(0.5663) \\approx 29.5^\\circ",
+       "en": "Take the inverse tangent to find the size of the angle $\\theta$ between $\\overline{TB}$ and the base.",
+       "ur": "$\\overline{TB}$ اور قاعدہ کے درمیان زاویہ $\\theta$ کی مقدار معلوم کرنے کے لیے معکوس ٹینجنٹ ($\\tan^{-1}$) لیں۔",
+       "check": [
+        "Abs((atan(6/sqrt(R(7,2)**2 + 10**2))*180/pi) - 29.5) <= 0.05",
+        "Abs((sqrt(R(7,2)**2 + 10**2)) - 10.59) <= 0.0050000010000000004",
         "Abs((atan(6/sqrt(R(7,2)**2 + 10**2))*180/pi) - 29.5) <= 0.050000001"
        ]
       }
      ],
      "answer": "$29.5^\\circ$",
+     "enriched": true,
      "book_key": "29.5"
     }
    ],
@@ -1178,16 +2080,50 @@
      "prompt": "",
      "steps": [
       {
-       "math": "d = \\sqrt{10^2 + 10^2} = \\sqrt{200} = 10\\sqrt{2} \\approx 14.14\\ \\text{units}",
-       "en": "Pythagoras.",
-       "ur": "فیثا غورث۔",
+       "math": "x = 10\\ \\text{units},\\quad y = 10\\ \\text{units}",
+       "en": "Identify the given horizontal distance ($x$) in front of the player and the vertical distance ($y$) above the player. We need to find the direct line of sight distance ($d$).",
+       "ur": "دیے گئے افقی فاصلے ($x$) اور عمودی فاصلے ($y$) کی نشاندہی کریں۔ ہمیں براہِ راست خطِ نظر کا فاصلہ ($d$) معلوم کرنا ہے۔"
+      },
+      {
+       "math": "d = \\sqrt{x^2 + y^2}",
+       "en": "Since the horizontal and vertical distances are perpendicular to each other, they form a right-angled triangle with the direct line of sight as the hypotenuse. Therefore, we apply the Pythagoras theorem.",
+       "ur": "چونکہ افقی اور عمودی فاصلے ایک دوسرے پر عمود ہیں، اس لیے یہ ایک قائمۃ الزاویہ مثلث بناتے ہیں جس میں خطِ نظر وتر ہے۔ لہٰذا، ہم مسئلہ فیثا غورث استعمال کرتے ہیں۔"
+      },
+      {
+       "math": "d = \\sqrt{10^2 + 10^2}",
+       "en": "Substitute the given values $x = 10$ and $y = 10$ into the formula.",
+       "ur": "فارمولے میں دی گئی قیمتیں $x = 10$ اور $y = 10$ درج کریں۔"
+      },
+      {
+       "math": "d = \\sqrt{100 + 100} = \\sqrt{200}",
+       "en": "Calculate the squares of $10$ and add them together.",
+       "ur": "$10$ کا مربع معلوم کریں اور انہیں آپس میں جمع کریں۔",
        "check": [
-        "sqrt(200) == 10*sqrt(2)",
-        "Abs((10*sqrt(2)) - 14.14) <= 0.0050000010000000004"
+        "sqrt(10**2 + 10**2) == sqrt(100 + 100)",
+        "sqrt(100 + 100) == sqrt(200)"
+       ]
+      },
+      {
+       "math": "d = \\sqrt{100 \\times 2} = 10\\sqrt{2}",
+       "en": "Simplify the square root by factoring $200$ as $100 \\times 2$ and taking the square root of $100$.",
+       "ur": "$200$ کی تجزی $100 \\times 2$ کے طور پر کر کے اور $100$ کا جزر لے کر مختصر کریں۔",
+       "check": [
+        "sqrt(200) == sqrt(100 * 2)",
+        "sqrt(100 * 2) == 10*sqrt(2)"
+       ]
+      },
+      {
+       "math": "d \\approx 14.14\\ \\text{units}",
+       "en": "Evaluate the decimal approximation of $10\\sqrt{2}$. Thus, the direct line of sight distance is $10\\sqrt{2} \\approx 14.14$ units.",
+       "ur": "$10\\sqrt{2}$ کی اعشاریہ میں تقریبی قیمت معلوم کریں۔ پس، براہِ راست خطِ نظر کا فاصلہ $10\\sqrt{2} \\approx 14.14$ اکائیاں ہے۔",
+       "check": [
+        "Abs((10*sqrt(2)) - 14.14) <= 0.0050000010000000004",
+        "sqrt(200) == 10*sqrt(2)"
        ]
       }
      ],
      "answer": "$10\\sqrt{2} \\approx 14.14$ units",
+     "enriched": true,
      "book_key": "10\\sqrt{2}\\approx 14.14 units"
     }
    ],
@@ -1205,15 +2141,45 @@
      "prompt": "",
      "steps": [
       {
-       "math": "\\tan 28^\\circ = \\frac{h}{60} \\Rightarrow h = 60\\tan 28^\\circ \\approx 60 \\times 0.5317 \\approx 31.90\\ \\text{m}",
-       "en": "Opposite = adjacent $\\times$ tan.",
-       "ur": "مقابل = متصل $\\times$ tan۔",
+       "math": "\\theta = 28^\\circ, \\quad \\text{Base} = 60\\ \\text{m}",
+       "en": "Let the height of the tower be $h$ metres. The angle of elevation is $\\theta = 28^\\circ$, and the distance from the base of the tower (adjacent side) is $60\\ \\text{m}$.",
+       "ur": "فرض کریں کہ مینار کی بلندی $h$ میٹر ہے۔ زاویہ فراز $\\theta = 28^\\circ$ ہے، اور مینار کے پیندے سے فاصلہ (متصل ضلع) $60\\ \\text{m}$ ہے۔"
+      },
+      {
+       "math": "\\tan \\theta = \\frac{\\text{Opposite}}{\\text{Adjacent}}",
+       "en": "In a right-angled triangle, the tangent trigonometric ratio relates the opposite side (height) to the adjacent side (base).",
+       "ur": "قائمہ الزاویہ مثلث میں، ٹینجنٹ کی مثلثیاتی نسبت مقابل ضلع (بلندی) کو متصل ضلع (قاعدہ) سے جوڑتی ہے۔"
+      },
+      {
+       "math": "\\tan 28^\\circ = \\frac{h}{60}",
+       "en": "Substitute the given values $\\theta = 28^\\circ$, $\\text{Opposite} = h$, and $\\text{Adjacent} = 60$ into the formula.",
+       "ur": "فارمولے میں دی گئی قیمتیں $\\theta = 28^\\circ$، $\\text{Opposite} = h$، اور $\\text{Adjacent} = 60$ درج کریں۔"
+      },
+      {
+       "math": "h = 60 \\times \\tan 28^\\circ",
+       "en": "Multiply both sides by $60$ to isolate $h$.",
+       "ur": "$h$ کی قیمت نکالنے کے لیے دونوں اطراف کو $60$ سے ضرب دیں۔"
+      },
+      {
+       "math": "h \\approx 60 \\times 0.5317",
+       "en": "From a scientific calculator, the value of $\\tan 28^\\circ$ is approximately $0.5317$.",
+       "ur": "سائنٹیفک کیلکولیٹر کی مدد سے، $\\tan 28^\\circ$ کی قیمت تقریباً $0.5317$ ہے۔",
        "check": [
+        "Abs(tan(28*pi/180) - 0.5317) <= 0.0001"
+       ]
+      },
+      {
+       "math": "h \\approx 31.90\\ \\text{m}",
+       "en": "Multiply the numbers and round to two decimal places to find the final height of the tower.",
+       "ur": "مینار کی حتمی بلندی معلوم کرنے کے لیے اعداد کو ضرب دیں اور اعشاریہ کے بعد دو درجوں تک محدود کریں۔",
+       "check": [
+        "Abs((60*tan(28*pi/180)) - 31.90) <= 0.005",
         "Abs((60*tan((28)*pi/180)) - 31.90) <= 0.0050000010000000004"
        ]
       }
      ],
      "answer": "$31.90$ m",
+     "enriched": true,
      "book_key": "31.90 m"
     }
    ],
@@ -1231,15 +2197,52 @@
      "prompt": "",
      "steps": [
       {
-       "math": "\\cos 60^\\circ = \\frac{80}{x} \\Rightarrow x = \\frac{80}{\\cos 60^\\circ} = \\frac{80}{1/2} = 160\\ \\text{m}",
-       "en": "As drawn in the notes, the width is the side next to the $60^\\circ$ angle.",
-       "ur": "نوٹس کی شکل کے مطابق چوڑائی $60^\\circ$ کے متصل ضلع ہے۔",
+       "math": "",
+       "en": "Consider a right-angled triangle formed by the river's width and the boat's path. As drawn in the diagram, the width of the river is the side adjacent (base) to the angle $\\theta = 60^\\circ$, which is $80\\text{ m}$. Let the actual distance travelled by the boat (the hypotenuse) be $x$.",
+       "ur": "دریا کی چوڑائی اور کشتی کے راستے سے بننے والی ایک قائمۃ الزاویہ مثلث پر غور کریں۔ شکل کے مطابق، دریا کی چوڑائی زاویہ $\\theta = 60^\\circ$ کا متصل ضلع (قاعدہ) ہے جو کہ $80\\text{ m}$ ہے۔ فرض کریں کہ کشتی کا طے کردہ اصل فاصلہ (وتر) $x$ ہے۔"
+      },
+      {
+       "math": "\\cos \\theta = \\frac{\\text{Base}}{\\text{Hypotenuse}}",
+       "en": "Recall the trigonometric ratio for cosine, which relates the adjacent side (base) and the hypotenuse.",
+       "ur": "کوسائن (cosine) کی مثلثیاتی نسبت کو یاد کریں، جو متصل ضلع (قاعدہ) اور وتر کے درمیان تعلق کو ظاہر کرتی ہے۔"
+      },
+      {
+       "math": "\\cos 60^\\circ = \\frac{80}{x}",
+       "en": "Substitute the given values $\\theta = 60^\\circ$, $\\text{Base} = 80$, and $\\text{Hypotenuse} = x$ into the formula.",
+       "ur": "فارمولے میں دی گئی قیمتیں $\\theta = 60^\\circ$، قاعدہ $= 80$، اور وتر $= x$ درج کریں۔",
        "check": [
+        "cos(60*pi/180) == R(1,2)"
+       ]
+      },
+      {
+       "math": "x = \\frac{80}{\\cos 60^\\circ}",
+       "en": "Rearrange the equation to solve for the unknown distance $x$.",
+       "ur": "نامعلوم فاصلے $x$ کی قیمت معلوم کرنے کے لیے مساوات کو ترتیب دیں۔",
+       "check": [
+        "80 / cos(60*pi/180) == 160"
+       ]
+      },
+      {
+       "math": "x = \\frac{80}{\\frac{1}{2}}",
+       "en": "Substitute the standard trigonometric value $\\cos 60^\\circ = \\frac{1}{2}$.",
+       "ur": "معیاری مثلثیاتی قیمت $\\cos 60^\\circ = \\frac{1}{2}$ درج کریں۔",
+       "check": [
+        "cos(60*pi/180) == R(1,2)",
+        "80 / R(1,2) == 160"
+       ]
+      },
+      {
+       "math": "x = 80 \\times 2 = 160\\ \\text{m}",
+       "en": "Simplify the fraction to find the value of $x$. Thus, the boat actually travels a distance of $160\\text{ m}$.",
+       "ur": "$x$ کی قیمت معلوم کرنے کے لیے کسر کو مختصر کریں۔ اس طرح، کشتی درحقیقت $160\\text{ m}$ کا فاصلہ طے کرتی ہے۔",
+       "check": [
+        "80 * 2 == 160",
         "80/cos((60)*pi/180) == 160"
        ]
       }
      ],
      "answer": "$160$ m",
+     "enriched": true,
      "book_key": "160 m"
     }
    ],
@@ -1257,24 +2260,52 @@
      "prompt": "",
      "steps": [
       {
-       "math": "d^2 = 6^2 + 6^2 - 2(6)(6)\\cos 30^\\circ = 72 - 72\\left(\\frac{\\sqrt{3}}{2}\\right) \\approx 9.65",
-       "en": "Law of cosines.",
-       "ur": "قانون جیب التمام۔",
+       "math": "a = 6\\text{ m}, \\quad b = 6\\text{ m}, \\quad \\gamma = 30^\\circ",
+       "en": "Let the distances from the listener to the two speakers be $a = 6$ m and $b = 6$ m, and the angle between them be $\\gamma = 30^\\circ$. We need to find the distance $d$ between the two speakers.",
+       "ur": "فرض کریں کہ سامع سے دونوں سپیکرز کا فاصلہ $a = 6$ میٹر اور $b = 6$ میٹر ہے، اور ان کے درمیان زاویہ $\\gamma = 30^\\circ$ ہے۔ ہمیں دونوں سپیکرز کے درمیان فاصلہ $d$ معلوم کرنا ہے۔"
+      },
+      {
+       "math": "d^2 = a^2 + b^2 - 2ab\\cos\\gamma",
+       "en": "Since we know two sides and the included angle of the triangle formed, we apply the Law of Cosines.",
+       "ur": "چونکہ ہمیں بننے والی مثلث کے دو اضلاع اور ان کے درمیانی زاویے کا علم ہے، اس لیے ہم قانونِ جیب التمام (Law of Cosines) استعمال کرتے ہیں۔"
+      },
+      {
+       "math": "d^2 = 6^2 + 6^2 - 2(6)(6)\\cos 30^\\circ",
+       "en": "Substitute the given values $a = 6$, $b = 6$, and $\\gamma = 30^\\circ$ into the formula.",
+       "ur": "فارمولے میں دی گئی قیمتیں $a = 6$، $b = 6$ اور $\\gamma = 30^\\circ$ درج کریں۔"
+      },
+      {
+       "math": "d^2 = 36 + 36 - 72\\left(\\frac{\\sqrt{3}}{2}\\right) = 72 - 36\\sqrt{3}",
+       "en": "Simplify the squares and substitute the exact value $\\cos 30^\\circ = \\frac{\\sqrt{3}}{2}$.",
+       "ur": "مربعوں کو حل کریں اور $\\cos 30^\\circ = \\frac{\\sqrt{3}}{2}$ کی قیمت درج کریں۔",
        "check": [
-        "6**2 + 6**2 - 2*6*6*cos((30)*pi/180) == 72 - 36*sqrt(3)",
-        "Abs((72 - 36*sqrt(3)) - 9.65) <= 0.0050000010000000004"
+        "6**2 + 6**2 - 2*6*6*cos(30*pi/180) == 72 - 36*sqrt(3)"
        ]
       },
       {
-       "math": "d = \\sqrt{9.65} \\approx 3.1\\ \\text{m}",
-       "en": "Square root.",
-       "ur": "جذر۔",
+       "math": "d^2 \\approx 72 - 62.35 = 9.65",
+       "en": "Calculate the decimal value to find $d^2$.",
+       "ur": "$d^2$ معلوم کرنے کے لیے اعشاریہ میں قیمت نکالیں۔",
        "check": [
+        "72 - 62.35 == 9.65",
+        "Abs((72 - 36*sqrt(3)) - 9.65) <= 0.005000001"
+       ]
+      },
+      {
+       "math": "d = \\sqrt{9.65} \\approx 3.1\\text{ m}",
+       "en": "Take the square root on both sides to find the distance $d$ between the speakers.",
+       "ur": "سپیکرز کے درمیان فاصلہ $d$ معلوم کرنے کے لیے دونوں طرف جذر لیں۔",
+       "check": [
+        "Abs(sqrt(9.65) - 3.1) <= 0.050000001",
+        "Abs(sqrt(72 - 36*sqrt(3)) - 3.1) <= 0.050000001",
+        "6**2 + 6**2 - 2*6*6*cos((30)*pi/180) == 72 - 36*sqrt(3)",
+        "Abs((72 - 36*sqrt(3)) - 9.65) <= 0.0050000010000000004",
         "Abs((sqrt(72 - 36*sqrt(3))) - 3.1) <= 0.050000001"
        ]
       }
      ],
      "answer": "$3.1$ m",
+     "enriched": true,
      "book_key": "3.1 m"
     }
    ],
@@ -1292,15 +2323,46 @@
      "prompt": "",
      "steps": [
       {
-       "math": "h = 10\\sin 75^\\circ \\approx 10 \\times 0.9659 \\approx 9.66\\ \\text{m}",
-       "en": "Opposite = hypotenuse $\\times$ sin.",
-       "ur": "مقابل = وتر $\\times$ sin۔",
+       "math": "l = 10\\text{ m}, \\quad \\theta = 75^\\circ, \\quad h = ?",
+       "en": "The ladder, the wall, and the ground form a right-angled triangle. We are given the length of the ladder (hypotenuse) $l = 10\\text{ m}$ and the angle with the ground $\\theta = 75^\\circ$. We need to find the height of the wall (opposite side) $h$.",
+       "ur": "سیڑھی، دیوار اور زمین مل کر ایک قائمہ الزاویہ مثلث بناتے ہیں۔ ہمیں سیڑھی کی لمبائی (وتر) $l = 10\\text{ m}$ اور زمین کے ساتھ بننے والا زاویہ $\\theta = 75^\\circ$ دیا گیا ہے۔ ہمیں دیوار کی بلندی (عمود یا مقابل ضلع) $h$ معلوم کرنی ہے۔"
+      },
+      {
+       "math": "\\sin \\theta = \\frac{\\text{Opposite}}{\\text{Hypotenuse}} = \\frac{h}{l}",
+       "en": "Since we know the hypotenuse and want to find the opposite side relative to the given angle, we use the sine trigonometric ratio.",
+       "ur": "چونکہ ہمیں وتر معلوم ہے اور دیے گئے زاویے کے مقابل ضلع (عمود) کی لمبائی معلوم کرنی ہے، اس لیے ہم سائن ($\\sin$) کی تکونیاتی نسبت استعمال کریں گے۔"
+      },
+      {
+       "math": "\\sin 75^\\circ = \\frac{h}{10}",
+       "en": "Substitute the given values $l = 10$ and $\\theta = 75^\\circ$ into the formula.",
+       "ur": "فارمولے میں دی گئی قیمتیں $l = 10$ اور $\\theta = 75^\\circ$ درج کریں۔"
+      },
+      {
+       "math": "h = 10 \\times \\sin 75^\\circ",
+       "en": "Multiply both sides by $10$ to isolate $h$.",
+       "ur": "$h$ کی قیمت نکالنے کے لیے دونوں اطراف کو $10$ سے ضرب دیں۔"
+      },
+      {
+       "math": "h \\approx 10 \\times 0.9659",
+       "en": "From the calculator or trigonometric table, substitute the value $\\sin 75^\\circ \\approx 0.9659$.",
+       "ur": "کیلکولیٹر یا ٹرگنومیٹرک ٹیبل سے $\\sin 75^\\circ \\approx 0.9659$ کی قیمت درج کریں۔",
        "check": [
+        "Abs(sin(75*pi/180) - 0.9659) <= 0.0001"
+       ]
+      },
+      {
+       "math": "h \\approx 9.659\\text{ m} \\approx 9.66\\text{ m}",
+       "en": "Multiply the numbers and round the result to two decimal places. Thus, the ladder reaches $9.66\\text{ m}$ high up the wall.",
+       "ur": "ان اعداد کو ضرب دیں اور جواب کو اعشاریہ کے بعد دو درجوں تک محدود کریں۔ اس طرح، سیڑھی دیوار پر $9.66\\text{ m}$ کی بلندی تک پہنچتی ہے۔",
+       "check": [
+        "10 * 0.9659 == 9.659",
+        "Abs(10*sin(75*pi/180) - 9.66) <= 0.005",
         "Abs((10*sin((75)*pi/180)) - 9.66) <= 0.0050000010000000004"
        ]
       }
      ],
      "answer": "$9.66$ m",
+     "enriched": true,
      "book_key": "9.66 m"
     }
    ],
@@ -1318,10 +2380,50 @@
      "prompt": "",
      "steps": [
       {
-       "math": "\\tan 12^\\circ = \\frac{80}{d} \\Rightarrow d = \\frac{80}{\\tan 12^\\circ} \\approx \\frac{80}{0.2126} \\approx 376.4\\ \\text{m}",
-       "en": "The angle of depression equals the angle of elevation from the ship (alternate angles).",
-       "ur": "زاویہ نشیب، جہاز سے زاویہ ارتفاع کے برابر ہے (متبادل زاویے)۔",
+       "math": "",
+       "en": "Let the height of the cliff be $h = 80$ m and the distance of the ship from the base of the cliff be $d$. The angle of depression is $12^\\circ$.",
+       "ur": "فرض کریں کہ چٹان کی بلندی $h = 80$ میٹر ہے اور چٹان کی بنیاد سے بحری جہاز کا فاصلہ $d$ ہے۔ زاویہ نشیب $12^\\circ$ ہے۔"
+      },
+      {
+       "math": "",
+       "en": "Since the horizontal line of sight is parallel to the sea level, the angle of elevation $\\theta$ from the ship to the lighthouse is equal to the angle of depression (alternate interior angles), so $\\theta = 12^\\circ$.",
+       "ur": "چونکہ نظر کی افقی لائن سطح سمندر کے متوازی ہے، اس لیے جہاز سے لائٹ ہاؤس کا زاویہ ارتفاع $\\theta$ زاویہ نشیب کے برابر ہے (متبادل اندرونی زاویے)، لہذا $\\theta = 12^\\circ$ ہے۔"
+      },
+      {
+       "math": "\\tan \\theta = \\frac{\\text{Opposite}}{\\text{Adjacent}}",
+       "en": "In the right-angled triangle formed by the cliff, the sea level, and the line of sight, we apply the tangent ratio.",
+       "ur": "چٹان، سطح سمندر اور نظر کی لائن سے بننے والیقائم الزاویہ مثلث میں، ہم ٹینجنٹ (tangent) کی نسبت استعمال کرتے ہیں۔"
+      },
+      {
+       "math": "\\tan 12^\\circ = \\frac{80}{d}",
+       "en": "Substitute the given height $80$ m as the opposite side, $d$ as the adjacent side, and the angle $\\theta = 12^\\circ$.",
+       "ur": "دی گئی بلندی $80$ میٹر کو عمود، $d$ کو قاعدہ، اور زاویہ $\\theta = 12^\\circ$ درج کریں۔",
        "check": [
+        "tan(12*pi/180) == 80 / (80/tan(12*pi/180))"
+       ]
+      },
+      {
+       "math": "d = \\frac{80}{\\tan 12^\\circ}",
+       "en": "Rearrange the equation to solve for the distance $d$.",
+       "ur": "فاصلہ $d$ معلوم کرنے کے لیے مساوات کو ترتیب دیں۔",
+       "check": [
+        "80/tan(12*pi/180) == 80/tan(12*pi/180)"
+       ]
+      },
+      {
+       "math": "d \\approx \\frac{80}{0.2126}",
+       "en": "Substitute the value $\\tan 12^\\circ \\approx 0.2126$ using a scientific calculator.",
+       "ur": "سائنسی کیلکولیٹر کا استعمال کرتے ہوئے $\\tan 12^\\circ \\approx 0.2126$ کی قیمت درج کریں۔",
+       "check": [
+        "Abs(tan(12*pi/180) - 0.2126) <= 0.0001"
+       ]
+      },
+      {
+       "math": "d \\approx 376.4\\ \\text{m}",
+       "en": "Divide $80$ by $0.2126$ to get the final distance. Thus, the ship is $376.4$ m away from the base of the cliff.",
+       "ur": "حتمی فاصلہ حاصل کرنے کے لیے $80$ کو $0.2126$ پر تقسیم کریں۔ اس طرح، جہاز چٹان کی بنیاد سے $376.4$ میٹر دور ہے۔",
+       "check": [
+        "Abs((80/tan(12*pi/180)) - 376.4) <= 0.050000001",
         "Abs((80/tan((12)*pi/180)) - 376.4) <= 0.050000001"
        ]
       }
@@ -1331,6 +2433,7 @@
       "en": "The reference notes round $80/0.2126$ to 376.5; the exact value is 376.37... m, i.e. 376.4 m to one decimal place.",
       "ur": "حوالہ نوٹس میں 376.5 لکھا ہے؛ درست قیمت ایک اعشاریہ تک 376.4 میٹر ہے۔"
      },
+     "enriched": true,
      "book_key": "376.5 m"
     }
    ],
@@ -1348,15 +2451,34 @@
      "prompt": "",
      "steps": [
       {
-       "math": "\\text{Bearing of } \\overrightarrow{OP} = 180^\\circ - 40^\\circ = 140^\\circ",
-       "en": "$P$ is $40^\\circ$ east of South: measure clockwise from North. A bearing is measured clockwise from North and written with 3 figures.",
-       "ur": "سمت (bearing) شمال سے گھڑی کی سوئی کی سمت میں ناپی جاتی ہے اور 3 ہندسوں میں لکھی جاتی ہے۔",
+       "math": "",
+       "en": "We are given that the point $P$ is located at an angle of $40^\\circ$ east of South. We need to find the three-figure bearing of $P$.",
+       "ur": "ہمیں دیا گیا ہے کہ نقطہ $P$ جنوب سے مشرق کی طرف $40^\\circ$ کے زاویے پر واقع ہے۔ ہمیں نقطہ $P$ کی تین ہندسوں والی سمت (bearing) معلوم کرنی ہے۔"
+      },
+      {
+       "math": "",
+       "en": "By definition, a bearing is always measured clockwise starting from the North direction ($000^\\circ$). The straight line from North to South represents an angle of $180^\\circ$.",
+       "ur": "تعریف کے مطابق، سمت (bearing) ہمیشہ شمال ($000^\\circ$) سے گھڑی کی سوئی کی سمت (clockwise) میں ناپی جاتی ہے۔ شمال سے جنوب تک سیدھی لائن $180^\\circ$ کا زاویہ بناتی ہے۔"
+      },
+      {
+       "math": "\\text{Bearing of } P = 180^\\circ - 40^\\circ",
+       "en": "Since the point $P$ lies $40^\\circ$ towards the East (backwards towards North) from the South line, we subtract $40^\\circ$ from $180^\\circ$ to get the clockwise angle from North.",
+       "ur": "چونکہ نقطہ $P$ جنوب کی لائن سے مشرق کی طرف (واپس شمال کی جانب) $40^\\circ$ پر واقع ہے، اس لیے شمال سے گھڑی کی سوئی کی سمت زاویہ معلوم کرنے کے لیے ہم $180^\\circ$ میں سے $40^\\circ$ تفریق کریں گے۔",
+       "check": [
+        "180 - 40 == 140"
+       ]
+      },
+      {
+       "math": "\\text{Bearing of } P = 140^\\circ",
+       "en": "Subtracting the angles gives $140^\\circ$. Therefore, the required bearing of point $P$ is $140^\\circ$.",
+       "ur": "زاویوں کو تفریق کرنے سے $140^\\circ$ حاصل ہوتا ہے۔ لہٰذا، نقطہ $P$ کی مطلوبہ سمت $140^\\circ$ ہے۔",
        "check": [
         "180 - 40 == 140"
        ]
       }
      ],
      "answer": "$140^\\circ$",
+     "enriched": true,
      "book_key": "140"
     },
     {
@@ -1364,15 +2486,42 @@
      "prompt": "",
      "steps": [
       {
-       "math": "\\text{Bearing of } \\overrightarrow{OP} = 270^\\circ + 20^\\circ = 290^\\circ",
-       "en": "$P$ is $20^\\circ$ north of West. A bearing is measured clockwise from North and written with 3 figures.",
-       "ur": "سمت (bearing) شمال سے گھڑی کی سوئی کی سمت میں ناپی جاتی ہے اور 3 ہندسوں میں لکھی جاتی ہے۔",
+       "math": "",
+       "en": "We are given that point $P$ is located at an angle of $20^\\circ$ north of West.",
+       "ur": "ہمیں دیا گیا ہے کہ نقطہ $P$ مغرب سے شمال کی طرف $20^\\circ$ کے زاویے پر واقع ہے۔"
+      },
+      {
+       "math": "",
+       "en": "A bearing is always measured clockwise starting from the North direction and is written as a three-digit angle.",
+       "ur": "سمت (bearing) ہمیشہ شمال سے شروع ہو کر گھڑی کی سوئی کی سمت (clockwise) میں ناپی جاتی ہے اور اسے تین ہندسوں کے زاویے کے طور پر لکھا جاتا ہے۔"
+      },
+      {
+       "math": "\\text{Angle of West from North} = 270^\\circ",
+       "en": "Moving clockwise from North ($000^\\circ$), the West direction is at an angle of $270^\\circ$.",
+       "ur": "شمال ($000^\\circ$) سے گھڑی کی سوئی کی سمت میں چلتے ہوئے، مغرب کی سمت $270^\\circ$ کے زاویے پر ہوتی ہے۔",
+       "check": [
+        "270 == 270"
+       ]
+      },
+      {
+       "math": "\\text{Bearing of } \\overrightarrow{OP} = 270^\\circ + 20^\\circ",
+       "en": "Since point $P$ is $20^\\circ$ north of West, we move an additional $20^\\circ$ clockwise past the West line, so we add $20^\\circ$ to $270^\\circ$.",
+       "ur": "چونکہ نقطہ $P$ مغرب سے شمال کی طرف $20^\\circ$ پر ہے، اس لیے ہم مغرب کی لکیر سے آگے گھڑی کی سوئی کی سمت میں مزید $20^\\circ$ چلتے ہیں، لہٰذا ہم $270^\\circ$ میں $20^\\circ$ جمع کرتے ہیں۔",
+       "check": [
+        "270 + 20 == 290"
+       ]
+      },
+      {
+       "math": "\\text{Bearing of } \\overrightarrow{OP} = 290^\\circ",
+       "en": "Adding the two angles gives the final bearing of point $P$ as $290^\\circ$.",
+       "ur": "دونوں زاویوں کو جمع کرنے سے نقطہ $P$ کی مطلوبہ سمت $290^\\circ$ حاصل ہوتی ہے۔",
        "check": [
         "270 + 20 == 290"
        ]
       }
      ],
      "answer": "$290^\\circ$",
+     "enriched": true,
      "book_key": "290"
     },
     {
@@ -1380,15 +2529,34 @@
      "prompt": "",
      "steps": [
       {
-       "math": "\\text{Bearing of } \\overrightarrow{OP} = 270^\\circ - 50^\\circ = 220^\\circ",
-       "en": "$P$ is $50^\\circ$ south of West. A bearing is measured clockwise from North and written with 3 figures.",
-       "ur": "سمت (bearing) شمال سے گھڑی کی سوئی کی سمت میں ناپی جاتی ہے اور 3 ہندسوں میں لکھی جاتی ہے۔",
+       "math": "",
+       "en": "The point $P$ is given at an angle of $50^\\circ$ south of West. We need to find the three-figure bearing of $P$.",
+       "ur": "نقطہ $P$ مغرب سے جنوب کی طرف $50^\\circ$ کے زاویے پر دیا گیا ہے۔ ہمیں نقطہ $P$ کی تین ہندسوں والی سمت (bearing) معلوم کرنی ہے۔"
+      },
+      {
+       "math": "\\text{Angle of West from North} = 3 \\times 90^\\circ = 270^\\circ",
+       "en": "A bearing is always measured clockwise starting from the North line ($000^\\circ$). Moving clockwise, the West direction is three right angles from North, which is $270^\\circ$.",
+       "ur": "سمت (bearing) ہمیشہ شمال کی لکیر ($000^\\circ$) سے گھڑی کی سوئی کی سمت (clockwise) میں ناپی جاتی ہے۔ گھڑی کی سوئی کی سمت میں چلتے ہوئے، مغرب کی سمت شمال سے تین قائمہ زاویوں کے فاصلے پر ہے، جو کہ $270^\\circ$ بنتا ہے۔",
+       "check": [
+        "3 * 90 == 270"
+       ]
+      },
+      {
+       "math": "\\text{Bearing of } \\overrightarrow{OP} = 270^\\circ - 50^\\circ",
+       "en": "Since the point $P$ is $50^\\circ$ towards the South from the West line, we move $50^\\circ$ anti-clockwise (backwards) from $270^\\circ$. Therefore, we subtract $50^\\circ$ from $270^\\circ$.",
+       "ur": "چونکہ نقطہ $P$ مغرب کی لکیر سے جنوب کی طرف $50^\\circ$ پر ہے، اس لیے ہم $270^\\circ$ سے گھڑی کی مخالف سمت (پیچھے کی طرف) $50^\\circ$ آتے ہیں۔ لہٰذا، ہم $270^\\circ$ میں سے $50^\\circ$ تفریق کریں گے۔"
+      },
+      {
+       "math": "\\text{Bearing of } \\overrightarrow{OP} = 220^\\circ",
+       "en": "Subtracting the angles gives the final three-figure bearing of point $P$ as $220^\\circ$.",
+       "ur": "زاویوں کو تفریق کرنے سے نقطہ $P$ کی مطلوبہ تین ہندسوں والی سمت $220^\\circ$ حاصل ہوتی ہے۔",
        "check": [
         "270 - 50 == 220"
        ]
       }
      ],
      "answer": "$220^\\circ$",
+     "enriched": true,
      "book_key": "220"
     },
     {
@@ -1396,15 +2564,35 @@
      "prompt": "",
      "steps": [
       {
-       "math": "\\text{Bearing of } \\overrightarrow{OP} = 90^\\circ - 75^\\circ = 015^\\circ",
-       "en": "$P$ is $75^\\circ$ north of East. A bearing is measured clockwise from North and written with 3 figures.",
-       "ur": "سمت (bearing) شمال سے گھڑی کی سوئی کی سمت میں ناپی جاتی ہے اور 3 ہندسوں میں لکھی جاتی ہے۔",
+       "math": "",
+       "en": "We are given that the point $P$ is at an angle of $75^\\circ$ north of East. We need to find the bearing of point $P$.",
+       "ur": "ہمیں دیا گیا ہے کہ نقطہ $P$ مشرق سے شمال کی طرف $75^\\circ$ کے زاویے پر ہے۔ ہمیں نقطہ $P$ کی سمت (bearing) معلوم کرنی ہے۔"
+      },
+      {
+       "math": "",
+       "en": "By definition, a bearing is an angle measured clockwise from the North line and is always written using three digits. The total angle between the North line and the East line is $90^\\circ$.",
+       "ur": "تعریف کے مطابق، سمت (bearing) شمال کی لکیر سے گھڑی کی سوئی کی سمت (clockwise) میں ناپا جانے والا زاویہ ہے اور اسے ہمیشہ تین ہندسوں میں لکھا جاتا ہے۔ شمال اور مشرق کی لکیروں کے درمیان کل زاویہ $90^\\circ$ ہوتا ہے۔"
+      },
+      {
+       "math": "\\text{Angle from North} = 90^\\circ - 75^\\circ = 15^\\circ",
+       "en": "Since the point $P$ is $75^\\circ$ north of East, we subtract $75^\\circ$ from $90^\\circ$ to find the clockwise angle from the North line.",
+       "ur": "چونکہ نقطہ $P$ مشرق سے شمال کی طرف $75^\\circ$ پر ہے، اس لیے ہم شمال کی لکیر سے گھڑی کی سوئی کی سمت میں زاویہ معلوم کرنے کے لیے $90^\\circ$ میں سے $75^\\circ$ کو تفریق کرتے ہیں۔",
        "check": [
+        "90 - 75 == 15"
+       ]
+      },
+      {
+       "math": "\\text{Bearing of } \\overrightarrow{OP} = 015^\\circ",
+       "en": "Writing the angle $15^\\circ$ in the standard three-figure format gives the final bearing of point $P$ as $015^\\circ$.",
+       "ur": "$15^\\circ$ کے زاویے کو معیاری تین ہندسوں کی شکل میں لکھنے سے نقطہ $P$ کی حتمی سمت $015^\\circ$ حاصل ہوتی ہے۔",
+       "check": [
+        "15 == 15",
         "90 - 75 == 15"
        ]
       }
      ],
      "answer": "$015^\\circ$",
+     "enriched": true,
      "book_key": "015"
     }
    ],
@@ -1422,15 +2610,31 @@
      "prompt": "bearing of $P$ from $Q$",
      "steps": [
       {
+       "math": "",
+       "en": "From the diagram, at ship $Q$, the angle between the North line and the line $QP$ is $60^\\circ$ towards the West (counter-clockwise). We need to find the bearing of ship $P$ from ship $Q$.",
+       "ur": "ڈایاگرام کے مطابق، جہاز $Q$ پر شمال کی لکیر اور لکیر $QP$ کے درمیان زاویہ مغرب کی طرف (گھڑی کی مخالف سمت میں) $60^\\circ$ ہے۔ ہمیں جہاز $Q$ سے جہاز $P$ کی سمت (bearing) معلوم کرنی ہے۔"
+      },
+      {
+       "math": "",
+       "en": "A bearing is always measured clockwise from the North line, and a complete angle around a point is $360^\\circ$.",
+       "ur": "سمت (bearing) کی پیمائش ہمیشہ شمال کی لکیر سے گھڑی کی سمت (clockwise) میں کی جاتی ہے، اور ایک نقطے کے گرد مکمل زاویہ $360^\\circ$ ہوتا ہے۔"
+      },
+      {
+       "math": "\\text{Bearing of } P \\text{ from } Q = 360^\\circ - 60^\\circ",
+       "en": "To find the clockwise angle from the North line at $Q$ to the line $QP$, we subtract the given counter-clockwise angle $60^\\circ$ from $360^\\circ$.",
+       "ur": "نقطہ $Q$ پر شمال کی لکیر سے لکیر $QP$ تک گھڑی کی سمت میں زاویہ معلوم کرنے کے لیے، ہم دیے گئے زاویے $60^\\circ$ کو $360^\\circ$ میں سے تفریق کرتے ہیں۔"
+      },
+      {
        "math": "360^\\circ - 60^\\circ = 300^\\circ",
-       "en": "$P$ is $60^\\circ$ west of North as seen from $Q$.",
-       "ur": "$Q$ سے دیکھیں تو $P$ شمال سے $60^\\circ$ مغرب کی طرف ہے۔",
+       "en": "Subtracting the angles gives $300^\\circ$. Therefore, the bearing of ship $P$ from ship $Q$ is $300^\\circ$.",
+       "ur": "زاویوں کو تفریق کرنے سے $300^\\circ$ حاصل ہوتا ہے۔ لہذا، جہاز $Q$ سے جہاز $P$ کی سمت (bearing) $300^\\circ$ ہے۔",
        "check": [
         "360 - 60 == 300"
        ]
       }
      ],
      "answer": "$300^\\circ$",
+     "enriched": true,
      "book_key": "300"
     },
     {
@@ -1438,15 +2642,34 @@
      "prompt": "bearing of $Q$ from $P$",
      "steps": [
       {
+       "math": "300^\\circ",
+       "en": "From part (i), the forward bearing of ship $P$ from ship $Q$ is $300^\\circ$.",
+       "ur": "حصہ (i) سے، جہاز $Q$ سے جہاز $P$ کی اگلی سمت (فارورڈ بیئرنگ) $300^\\circ$ ہے۔"
+      },
+      {
+       "math": "",
+       "en": "A back bearing differs from the forward bearing by $180^\\circ$. Since the forward bearing ($300^\\circ$) is greater than $180^\\circ$, we subtract $180^\\circ$ to find the bearing of $Q$ from $P$.",
+       "ur": "الٹی سمت (بیک بیئرنگ) اور اگلی سمت میں $180^\\circ$ کا فرق ہوتا ہے۔ چونکہ اگلی سمت ($300^\\circ$) زاویہ $180^\\circ$ سے بڑی ہے، اس لیے $P$ سے $Q$ کی سمت معلوم کرنے کے لیے ہم $180^\\circ$ تفریق کریں گے۔"
+      },
+      {
        "math": "300^\\circ - 180^\\circ = 120^\\circ",
-       "en": "A back bearing differs by $180^\\circ$.",
-       "ur": "الٹی سمت میں $180^\\circ$ کا فرق ہوتا ہے۔",
+       "en": "Subtract $180^\\circ$ from $300^\\circ$.",
+       "ur": "$300^\\circ$ میں سے $180^\\circ$ تفریق کریں۔",
+       "check": [
+        "300 - 180 == 120"
+       ]
+      },
+      {
+       "math": "120^\\circ",
+       "en": "Thus, the bearing of ship $Q$ from ship $P$ is $120^\\circ$.",
+       "ur": "پس، جہاز $P$ سے جہاز $Q$ کی سمت (بیئرنگ) $120^\\circ$ ہے۔",
        "check": [
         "300 - 180 == 120"
        ]
       }
      ],
      "answer": "$120^\\circ$",
+     "enriched": true,
      "book_key": "120"
     }
    ],
@@ -1464,15 +2687,34 @@
      "prompt": "A from C",
      "steps": [
       {
+       "math": "",
+       "en": "We are given that place $A$ is at an angle of $50^\\circ$ west of North from place $C$. We need to find the bearing of $A$ from $C$.",
+       "ur": "ہمیں دیا گیا ہے کہ مقام $A$ مقام $C$ سے شمال کے مغرب میں $50^\\circ$ کے زاویے پر واقع ہے۔ ہمیں $C$ سے $A$ کی سمت (bearing) معلوم کرنی ہے۔"
+      },
+      {
+       "math": "",
+       "en": "By definition, the bearing of a point is always measured clockwise from the North line. A full circle around a point is $360^\\circ$.",
+       "ur": "تعریف کے مطابق، کسی نقطے کی سمت (bearing) ہمیشہ شمال کی لکیر سے گھڑی کی سمت (clockwise) میں ناپی جاتی ہے۔ ایک نقطے کے گرد مکمل چکر $360^\\circ$ کا ہوتا ہے۔"
+      },
+      {
        "math": "360^\\circ - 50^\\circ = 310^\\circ",
-       "en": "Measure clockwise from North; a back bearing differs by $180^\\circ$.",
-       "ur": "شمال سے گھڑی کی سمت ناپیں؛ الٹی سمت میں $180^\\circ$ کا فرق۔",
+       "en": "Since $A$ is $50^\\circ$ west (counter-clockwise) of North from $C$, we subtract $50^\\circ$ from $360^\\circ$ to get the clockwise angle from North.",
+       "ur": "چونکہ $A$ مقام $C$ سے شمال کے مغرب (گھڑی کی مخالف سمت) میں $50^\\circ$ پر ہے، اس لیے ہم شمال سے گھڑی کی سمت میں زاویہ حاصل کرنے کے لیے $360^\\circ$ میں سے $50^\\circ$ تفریق کرتے ہیں۔",
+       "check": [
+        "360 - 50 == 310"
+       ]
+      },
+      {
+       "math": "310^\\circ",
+       "en": "Therefore, the bearing of $A$ from $C$ is $310^\\circ$.",
+       "ur": "لہذا، $C$ سے $A$ کی سمت $310^\\circ$ ہے۔",
        "check": [
         "360 - 50 == 310"
        ]
       }
      ],
      "answer": "$310^\\circ$",
+     "enriched": true,
      "book_key": "310"
     },
     {
@@ -1480,15 +2722,42 @@
      "prompt": "C from A",
      "steps": [
       {
-       "math": "310^\\circ - 180^\\circ = 130^\\circ",
-       "en": "Measure clockwise from North; a back bearing differs by $180^\\circ$.",
-       "ur": "شمال سے گھڑی کی سمت ناپیں؛ الٹی سمت میں $180^\\circ$ کا فرق۔",
+       "math": "",
+       "en": "We are given that place $A$ is $50^\\circ$ west of North from place $C$. We need to find the bearing of $C$ from $A$.",
+       "ur": "ہمیں دیا گیا ہے کہ مقام $A$، مقام $C$ کے شمال سے $50^\\circ$ مغرب کی طرف ہے۔ ہمیں $A$ سے $C$ کی سمت (بیرنگ) معلوم کرنی ہے۔"
+      },
+      {
+       "math": "\\text{Bearing of } A \\text{ from } C = 360^\\circ - 50^\\circ = 310^\\circ",
+       "en": "First, we find the forward bearing of $A$ from $C$. A bearing is always measured clockwise from the North line, and a full circle is $360^\\circ$.",
+       "ur": "سب سے پہلے، ہم $C$ سے $A$ کی بیرنگ معلوم کرتے ہیں۔ بیرنگ ہمیشہ شمال کی لکیر سے گھڑی کی سمت میں ناپی جاتی ہے، اور ایک مکمل دائرہ $360^\\circ$ کا ہوتا ہے۔",
+       "check": [
+        "360 - 50 == 310"
+       ]
+      },
+      {
+       "math": "",
+       "en": "The bearing of $C$ from $A$ is the back bearing of $A$ from $C$. Since the forward bearing ($310^\\circ$) is greater than $180^\\circ$, we subtract $180^\\circ$ to find the back bearing.",
+       "ur": "$A$ سے $C$ کی بیرنگ دراصل $C$ سے $A$ کی الٹی بیرنگ (بیک بیرنگ) ہے۔ چونکہ سیدھی بیرنگ ($310^\\circ$) زاویہ $180^\\circ$ سے بڑی ہے، اس لیے ہم بیک بیرنگ معلوم کرنے کے لیے اس میں سے $180^\\circ$ تفریق کریں گے۔"
+      },
+      {
+       "math": "\\text{Bearing of } C \\text{ from } A = 310^\\circ - 180^\\circ = 130^\\circ",
+       "en": "Subtract $180^\\circ$ from $310^\\circ$ to get the final answer.",
+       "ur": "حتمی جواب حاصل کرنے کے لیے $310^\\circ$ میں سے $180^\\circ$ تفریق کریں۔",
+       "check": [
+        "310 - 180 == 130"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Thus, the bearing of $C$ from $A$ is $130^\\circ$.",
+       "ur": "لہٰذا، $A$ سے $C$ کی بیرنگ $130^\\circ$ ہے۔",
        "check": [
         "310 - 180 == 130"
        ]
       }
      ],
      "answer": "$130^\\circ$",
+     "enriched": true,
      "book_key": "130"
     },
     {
@@ -1496,15 +2765,39 @@
      "prompt": "C from B",
      "steps": [
       {
+       "math": "",
+       "en": "First, note the given position of $B$ relative to $C$: $B$ is $40^\\circ$ East of North from $C$. Since bearings are measured clockwise from the North line, the bearing of $B$ from $C$ is $040^\\circ$.",
+       "ur": "سب سے پہلے، $C$ کے لحاظ سے $B$ کی دی گئی پوزیشن نوٹ کریں: $B$، نقطہ $C$ کے شمال سے مشرق کی طرف $40^\\circ$ کے زاویے پر ہے۔ چونکہ بیئرنگ (سمت) کو شمال سے گھڑی کی سمت میں ناپا جاتا ہے، اس لیے $C$ سے $B$ کی بیئرنگ $040^\\circ$ ہے۔"
+      },
+      {
+       "math": "",
+       "en": "To find the bearing of $C$ from $B$ (known as the back bearing), we draw a North-South line at $B$. Because the North lines at $C$ and $B$ are parallel, the angle between the South line at $B$ and the line $BC$ is also $40^\\circ$ (alternate interior angles).",
+       "ur": "$B$ سے $C$ کی بیئرنگ (جسے بیک بیئرنگ کہتے ہیں) معلوم کرنے کے لیے، ہم $B$ پر ایک شمال-جنوب خط کھینچتے ہیں۔ چونکہ $C$ اور $B$ پر شمال کے خطوط متوازی ہیں، اس لیے $B$ کے جنوب کے خط اور خط $BC$ کے درمیان زاویہ بھی $40^\\circ$ ہے (متبادل اندرونی زاویے)۔"
+      },
+      {
+       "math": "180^\\circ + 40^\\circ",
+       "en": "Rule: When the forward bearing is less than $180^\\circ$, we add $180^\\circ$ to find the back bearing. Measuring clockwise from the North line at $B$, we cover the straight line to the South ($180^\\circ$) plus the extra $40^\\circ$:",
+       "ur": "اصول: جب آگے کی بیئرنگ $180^\\circ$ سے کم ہو، تو ہم بیک بیئرنگ معلوم کرنے کے لیے اس میں $180^\\circ$ جمع کرتے ہیں۔ $B$ پر شمال کے خط سے گھڑی کی سمت میں ناپتے ہوئے، ہم جنوب تک سیدھے خط ($180^\\circ$) میں اضافی $40^\\circ$ جمع کرتے ہیں:"
+      },
+      {
        "math": "180^\\circ + 40^\\circ = 220^\\circ",
-       "en": "Measure clockwise from North; a back bearing differs by $180^\\circ$.",
-       "ur": "شمال سے گھڑی کی سمت ناپیں؛ الٹی سمت میں $180^\\circ$ کا فرق۔",
+       "en": "Perform the addition to get the required bearing.",
+       "ur": "مطلوبہ بیئرنگ حاصل کرنے کے لیے جمع کا عمل مکمل کریں۔",
+       "check": [
+        "180 + 40 == 220"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Therefore, the bearing of $C$ from $B$ is $220^\\circ$.",
+       "ur": "لہٰذا، $B$ سے $C$ کی بیئرنگ $220^\\circ$ ہے۔",
        "check": [
         "180 + 40 == 220"
        ]
       }
      ],
      "answer": "$220^\\circ$",
+     "enriched": true,
      "book_key": "220"
     },
     {
@@ -1512,15 +2805,34 @@
      "prompt": "B from C",
      "steps": [
       {
-       "math": "040^\\circ",
-       "en": "Measure clockwise from North; a back bearing differs by $180^\\circ$.",
-       "ur": "شمال سے گھڑی کی سمت ناپیں؛ الٹی سمت میں $180^\\circ$ کا فرق۔",
+       "math": "",
+       "en": "We need to find the bearing of point $B$ from point $C$. Here, $C$ is the reference point from where we start measuring.",
+       "ur": "ہمیں نقطہ $C$ سے نقطہ $B$ کی بیئرنگ (سمت) معلوم کرنی ہے۔ یہاں نقطہ $C$ ہمارا حوالہ جاتی نقطہ ہے جہاں سے ہم پیمائش شروع کریں گے۔"
+      },
+      {
+       "math": "",
+       "en": "By definition, a three-figure bearing is the angle measured clockwise from the North line at the reference point ($C$), always written using three digits.",
+       "ur": "تعریف کے مطابق، بیئرنگ وہ زاویہ ہے جو حوالہ جاتی نقطہ ($C$) پر شمال کی لکیر سے گھڑی کی سمت (clockwise) میں ناپا جاتا ہے، اور اسے ہمیشہ تین ہندسوں میں لکھا جاتا ہے۔"
+      },
+      {
+       "math": "\\theta = 40^\\circ",
+       "en": "From the given information, point $B$ is $40^\\circ$ East of North from point $C$. Since East is in the clockwise direction from North, the clockwise angle from the North line at $C$ to the line $CB$ is $40^\\circ$.",
+       "ur": "دی گئی معلومات کے مطابق، نقطہ $B$، نقطہ $C$ سے شمال کے مشرق میں $40^\\circ$ کے زاویے پر ہے۔ چونکہ مشرق شمال سے گھڑی کی سمت میں ہوتا ہے، اس لیے $C$ پر شمال کی لکیر سے خط $CB$ تک گھڑی کی سمت زاویہ $40^\\circ$ ہے۔",
+       "check": [
+        "40 == 40"
+       ]
+      },
+      {
+       "math": "\\text{Bearing of } B \\text{ from } C = 040^\\circ",
+       "en": "Writing the angle $40^\\circ$ in standard three-digit bearing format by placing a zero at the beginning gives $040^\\circ$.",
+       "ur": "$40^\\circ$ کے زاویے کو معیاری تین ہندسوں کی بیئرنگ کی شکل میں لکھنے کے لیے شروع میں صفر لگانے سے $040^\\circ$ حاصل ہوتا ہے۔",
        "check": [
         "40 == 40"
        ]
       }
      ],
      "answer": "$040^\\circ$",
+     "enriched": true,
      "book_key": "040"
     }
    ],
@@ -1538,16 +2850,42 @@
      "prompt": "distance from the start",
      "steps": [
       {
-       "math": "\\sqrt{100^2 + 300^2} = \\sqrt{100000} \\approx 316.2\\ \\text{m}",
-       "en": "Pythagoras.",
-       "ur": "فیثا غورث۔",
+       "math": "AB = 100\\ \\text{m}, \\quad BC = 300\\ \\text{m}",
+       "en": "Let the starting point be $A$. Abdul Hadi walks $100\\ \\text{m}$ North to point $B$, and then $300\\ \\text{m}$ East to point $C$. We need to find the distance $AC$ from his starting position.",
+       "ur": "فرض کریں کہ ابتدائی نقطہ $A$ ہے۔ عبدالہادی $100\\ \\text{m}$ شمال کی طرف نقطہ $B$ تک چلتا ہے، اور پھر $300\\ \\text{m}$ مشرق کی طرف نقطہ $C$ تک چلتا ہے۔ ہمیں اس کے ابتدائی مقام سے فاصلہ $AC$ معلوم کرنا ہے۔"
+      },
+      {
+       "math": "AC^2 = AB^2 + BC^2",
+       "en": "Since the directions North and East are perpendicular to each other, the path forms a right-angled triangle $ABC$ with $\\angle B = 90^\\circ$. Therefore, we can apply the Pythagoras theorem.",
+       "ur": "چونکہ شمال اور مشرق کی سمتیں ایک دوسرے پر عمود ہیں، اس لیے یہ راستہ ایک قائمۃ الزاویہ مثلث $ABC$ بناتا ہے جس میں $\\angle B = 90^\\circ$ ہے۔ لہذا، ہم مسئلہ فیثا غورث استعمال کر سکتے ہیں۔"
+      },
+      {
+       "math": "AC = \\sqrt{100^2 + 300^2}",
+       "en": "Substitute the given distances $AB = 100$ and $BC = 300$ into the formula and take the square root.",
+       "ur": "فارمولے میں دیے گئے فاصلے $AB = 100$ اور $BC = 300$ درج کریں اور جزر لیں۔"
+      },
+      {
+       "math": "AC = \\sqrt{10000 + 90000} = \\sqrt{100000}",
+       "en": "Calculate the squares of the numbers and add them together.",
+       "ur": "اعداد کے مربع معلوم کریں اور انہیں آپس میں جمع کریں۔",
        "check": [
-        "100**2 + 300**2 == 100000",
-        "Abs((sqrt(100000)) - 316.2) <= 0.050000001"
+        "100**2 == 10000",
+        "300**2 == 90000",
+        "10000 + 90000 == 100000"
+       ]
+      },
+      {
+       "math": "AC \\approx 316.2\\ \\text{m}",
+       "en": "Evaluating the square root gives the final distance from the starting position, rounded to one decimal place.",
+       "ur": "جزر معلوم کرنے پر ابتدائی مقام سے حتمی فاصلہ، اعشاریہ کے ایک درجے تک، حاصل ہوتا ہے۔",
+       "check": [
+        "Abs((sqrt(100000)) - 316.2) <= 0.050000001",
+        "100**2 + 300**2 == 100000"
        ]
       }
      ],
      "answer": "$316.2$ m",
+     "enriched": true,
      "book_key": "316.2 m"
     },
     {
@@ -1555,23 +2893,44 @@
      "prompt": "bearing back to the start",
      "steps": [
       {
-       "math": "\\tan\\theta = \\frac{300}{100} = 3 \\Rightarrow \\theta \\approx 71.57^\\circ",
-       "en": "Angle at the start between North and the path.",
-       "ur": "ابتدائی نقطے پر شمال اور راستے کے درمیان زاویہ۔",
+       "math": "",
+       "en": "Let the starting point be $O$, the point $100\\text{ m}$ North be $A$, and the final point $300\\text{ m}$ East be $B$. This forms a right-angled triangle $OAB$ with a right angle at $A$.",
+       "ur": "فرض کریں کہ ابتدائی نقطہ $O$ ہے، $100\\text{ m}$ شمال کا نقطہ $A$ ہے، اور $300\\text{ m}$ مشرق کا آخری نقطہ $B$ ہے۔ یہ ایک قائمۃ الزاویہ مثلث $OAB$ بناتی ہے جس میں نقطہ $A$ پر زاویہ قائمہ ہے۔"
+      },
+      {
+       "math": "\\tan\\theta = \\frac{\\text{Opposite}}{\\text{Adjacent}} = \\frac{300}{100} = 3",
+       "en": "Let $\\theta$ be the angle $\\angle AOB$ between the North line and his path $OB$. Using the tangent ratio in $\\triangle OAB$, we substitute the given distances.",
+       "ur": "فرض کریں کہ $\\theta$ شمال کی سمت اور اس کے راستے $OB$ کے درمیان زاویہ $\\angle AOB$ ہے۔ مثلث $OAB$ میں ٹینجنٹ کی نسبت استعمال کرتے ہوئے ہم دیے گئے فاصلوں کی قیمتیں درج کرتے ہیں۔",
+       "check": [
+        "300 / 100 == 3"
+       ]
+      },
+      {
+       "math": "\\theta = \\tan^{-1}(3) \\approx 71.57^\\circ",
+       "en": "Take the inverse tangent to find the angle $\\theta$.",
+       "ur": "زاویہ $\\theta$ معلوم کرنے کے لیے معکوس ٹینجنٹ لیں۔",
        "check": [
         "Abs((atan(3)*180/pi) - 71.57) <= 0.0050000010000000004"
        ]
       },
       {
+       "math": "",
+       "en": "Since the North-South lines at $O$ and $B$ are parallel, by alternate interior angles, the angle between the South line at $B$ and the return path $BO$ is also $\\theta = 71.57^\\circ$ towards the West (i.e., S $71.57^\\circ$ W).",
+       "ur": "چونکہ نقاط $O$ اور $B$ پر شمال-جنوب کے خطوط متوازی ہیں، اس لیے متبادلہ داخلہ زاویوں کی رو سے نقطہ $B$ پر جنوب کی سمت اور واپسی کے راستے $BO$ کے درمیان زاویہ بھی مغرب کی طرف $\\theta = 71.57^\\circ$ ہے (یعنی S $71.57^\\circ$ W)۔"
+      },
+      {
        "math": "\\text{Bearing back} = 180^\\circ + 71.57^\\circ = 251.57^\\circ \\approx 252^\\circ",
-       "en": "To go back he walks S $71.57^\\circ$ W.",
-       "ur": "واپسی کے لیے جنوب سے $71.57^\\circ$ مغرب۔",
+       "en": "A three-figure bearing is measured clockwise from the North. Since South is at $180^\\circ$, we add $71.57^\\circ$ to $180^\\circ$ to get the bearing back to the starting position.",
+       "ur": "تین ہندسوں کی بیئرنگ شمال سے گھڑی کی سمت میں ماپی جاتی ہے۔ چونکہ جنوب $180^\\circ$ پر ہوتا ہے، اس لیے ابتدائی مقام پر واپسی کی بیئرنگ حاصل کرنے کے لیے ہم $180^\\circ$ میں $71.57^\\circ$ جمع کرتے ہیں۔",
        "check": [
-        "Abs((180 + atan(3)*180/pi) - 252) <= 0.500000001"
+        "180 + 71.57 == 251.57",
+        "Abs((180 + atan(3)*180/pi) - 252) <= 0.500000001",
+        "Abs((atan(3)*180/pi) - 71.57) <= 0.0050000010000000004"
        ]
       }
      ],
      "answer": "$252^\\circ$ (S $71.57^\\circ$ W)",
+     "enriched": true,
      "book_key": "252 (S 71.57 W)"
     }
    ],
@@ -1589,15 +2948,43 @@
      "prompt": "",
      "steps": [
       {
-       "math": "\\text{Bearing of } L \\text{ from } M = 270^\\circ",
-       "en": "$L$ is due West of $M$ (the line $LM$ is horizontal in the diagram).",
-       "ur": "$L$، $M$ کے بالکل مغرب میں ہے۔",
+       "math": "",
+       "en": "From the given statement and diagram, ship $L$ is located due West of ship $M$. We need to find the bearing of $L$ from $M$.",
+       "ur": "دی گئی عبارت اور شکل کے مطابق، جہاز $L$، جہاز $M$ کے بالکل مغرب (West) میں واقع ہے۔ ہمیں $M$ سے $L$ کی سمت (bearing) معلوم کرنی ہے۔"
+      },
+      {
+       "math": "",
+       "en": "A bearing is always measured as a three-figure angle in the clockwise direction starting from the North line at the reference point (here, point $M$).",
+       "ur": "سمت (bearing) کو ہمیشہ حوالہ جاتی نقطہ (یہاں نقطہ $M$) پر شمال (North) کی لکیر سے گھڑی کی سمت (clockwise) میں تین ہندسوں کے زاویے کے طور پر ماپا جاتا ہے۔"
+      },
+      {
+       "math": "\\text{Angle from North to West (anticlockwise)} = 90^\\circ",
+       "en": "On a standard compass, the four main directions (North, East, South, West) are $90^\\circ$ apart from each other. The angle between North and West in the anticlockwise direction is $90^\\circ$.",
+       "ur": "قطب نما پر چاروں بنیادی سمتیں (شمال، مشرق، جنوب، مغرب) ایک دوسرے سے $90^\\circ$ کے فاصلے پر ہوتی ہیں۔ شمال اور مغرب کے درمیان گھڑی کی مخالف سمت میں زاویہ $90^\\circ$ ہوتا ہے۔",
        "check": [
+        "360/4 == 90"
+       ]
+      },
+      {
+       "math": "\\text{Bearing of } L \\text{ from } M = 360^\\circ - 90^\\circ = 270^\\circ",
+       "en": "Since a full circle is $360^\\circ$, the clockwise angle from the North line at $M$ to the West line $ML$ is obtained by subtracting $90^\\circ$ from $360^\\circ$.",
+       "ur": "چونکہ ایک مکمل دائرہ $360^\\circ$ کا ہوتا ہے، اس لیے $M$ پر شمال کی لکیر سے مغرب کی لکیر $ML$ تک گھڑی کی سمت میں زاویہ $360^\\circ$ میں سے $90^\\circ$ کو تفریق کر کے حاصل کیا جاتا ہے۔",
+       "check": [
+        "360 - 90 == 270"
+       ]
+      },
+      {
+       "math": "\\text{Bearing of } L \\text{ from } M = 270^\\circ",
+       "en": "Thus, the bearing of ship $L$ from ship $M$ is $270^\\circ$.",
+       "ur": "پس، جہاز $M$ سے جہاز $L$ کی سمت $270^\\circ$ ہے۔",
+       "check": [
+        "270 == 270",
         "360 - 90 == 270"
        ]
       }
      ],
      "answer": "$270^\\circ$",
+     "enriched": true,
      "book_key": "270"
     }
    ],
@@ -1641,19 +3028,42 @@
      "prompt": "",
      "steps": [
       {
-       "math": "\\tan\\alpha = \\frac{1.3}{5.5} \\approx 0.236 \\Rightarrow \\alpha \\approx 13.30^\\circ",
-       "en": "Angle west of South.",
-       "ur": "جنوب سے مغرب کی طرف زاویہ۔",
+       "math": "AB = 5.5\\text{ km}, \\quad BC = 1.3\\text{ km}",
+       "en": "Let $A$ be the starting point. Fatima walks $5.5\\text{ km}$ South to point $B$, and then turns $90^\\circ$ West and walks $1.3\\text{ km}$ to point $C$. This forms a right-angled triangle $ABC$ with $\\angle B = 90^\\circ$.",
+       "ur": "فرض کریں $A$ ابتدائی نقطہ ہے۔ فاطمہ $5.5\\text{ km}$ جنوب کی طرف نقطہ $B$ تک چلتی ہے، اور پھر $90^\\circ$ مغرب کی طرف مڑ کر $1.3\\text{ km}$ نقطہ $C$ تک چلتی ہے۔ اس سے ایک قائمۃ الزاویہ مثلث $ABC$ بنتی ہے جس میں $\\angle B = 90^\\circ$ ہے۔",
+       "check": [
+        "5.5 == R(11, 2)",
+        "1.3 == R(13, 10)"
+       ]
+      },
+      {
+       "math": "\\tan\\alpha = \\frac{\\text{Opposite}}{\\text{Adjacent}} = \\frac{BC}{AB}",
+       "en": "Let $\\alpha$ be the angle $\\angle BAC$ (the angle West of South). In the right-angled triangle $ABC$, we use the tangent ratio.",
+       "ur": "فرض کریں کہ زاویہ $\\angle BAC$ (جنوب سے مغرب کی طرف زاویہ) $\\alpha$ ہے۔ قائمۃ الزاویہ مثلث $ABC$ میں، ہم ٹینجنٹ نسبت کا استعمال کرتے ہیں۔"
+      },
+      {
+       "math": "\\tan\\alpha = \\frac{1.3}{5.5} \\approx 0.236",
+       "en": "Substitute the given distances $BC = 1.3$ and $AB = 5.5$ into the formula and divide.",
+       "ur": "فارمولے میں دیے گئے فاصلے $BC = 1.3$ اور $AB = 5.5$ درج کریں اور تقسیم کریں۔",
+       "check": [
+        "Abs(R(13, 55) - 0.236) <= 0.0005"
+       ]
+      },
+      {
+       "math": "\\alpha = \\tan^{-1}\\left(\\frac{1.3}{5.5}\\right) \\approx 13.30^\\circ",
+       "en": "Take the inverse tangent ($\\tan^{-1}$) to find the angle $\\alpha$ in degrees.",
+       "ur": "زاویہ $\\alpha$ کو ڈگری میں معلوم کرنے کے لیے معکوس ٹینجنٹ ($\\tan^{-1}$) لیں۔",
        "check": [
         "Abs((atan(R(13,55))*180/pi) - 13.30) <= 0.0050000010000000004"
        ]
       },
       {
-       "math": "\\text{Bearing} = 180^\\circ + 13.30^\\circ \\approx 193.3^\\circ",
-       "en": "South is $180^\\circ$; add the angle towards West.",
-       "ur": "جنوب $180^\\circ$ ہے؛ مغرب کی طرف کا زاویہ جمع کریں۔",
+       "math": "\\text{Bearing} = 180^\\circ + \\alpha = 180^\\circ + 13.30^\\circ \\approx 193.3^\\circ",
+       "en": "A bearing is measured clockwise from North ($0^\\circ$). Since South is at $180^\\circ$ and point $C$ is West of South, we add $\\alpha$ to $180^\\circ$ to get the final bearing.",
+       "ur": "بیئرنگ (سمت) شمال ($0^\\circ$) سے گھڑی کی سوئی کی سمت میں ناپی جاتی ہے۔ چونکہ جنوب $180^\\circ$ پر ہے اور نقطہ $C$ جنوب کے مغرب میں ہے، اس لیے ہم حتمی بیئرنگ حاصل کرنے کے لیے $180^\\circ$ میں $\\alpha$ جمع کرتے ہیں۔",
        "check": [
-        "Abs((180 + atan(R(13,55))*180/pi) - 193.3) <= 0.050000001"
+        "Abs((180 + atan(R(13,55))*180/pi) - 193.3) <= 0.050000001",
+        "Abs((atan(R(13,55))*180/pi) - 13.30) <= 0.0050000010000000004"
        ]
       }
      ],
@@ -1662,6 +3072,7 @@
       "en": "The reference notes give 193.2 after $180^\\circ + 13.29^\\circ$; $\\tan^{-1}(1.3/5.5) = 13.30^\\circ$, so the bearing is $193.3^\\circ$ to one decimal place.",
       "ur": "حوالہ نوٹس میں 193.2 لکھا ہے؛ درست قیمت $193.3^\\circ$ ہے۔"
      },
+     "enriched": true,
      "book_key": "193.2"
     }
    ],
@@ -1679,19 +3090,61 @@
      "prompt": "",
      "steps": [
       {
-       "math": "\\text{East} = 150 + 100\\cos 45^\\circ \\approx 220.71,\\quad \\text{North} = 100\\sin 45^\\circ \\approx 70.71",
-       "en": "Add the components.",
-       "ur": "اجزاء جمع کریں۔",
+       "math": "d_1 = 150\\text{ km (East)}, \\quad d_2 = 100\\text{ km at } \\theta = 45^\\circ \\text{ (North of East)}",
+       "en": "Identify the given distances and the angle of the second part of the flight.",
+       "ur": "دیے گئے فاصلوں اور پرواز کے دوسرے حصے کے زاویے کی نشاندہی کریں۔",
        "check": [
-        "Abs((150 + 100*cos((45)*pi/180)) - 220.71) <= 0.0050000010000000004",
-        "Abs((100*sin((45)*pi/180)) - 70.71) <= 0.0050000010000000004"
+        "150 == 150",
+        "100 == 100",
+        "45 == 45"
        ]
       },
       {
-       "math": "\\text{Displacement} = \\sqrt{220.71^2 + 70.71^2} \\approx 231.76\\ \\text{km}",
-       "en": "Pythagoras.",
-       "ur": "فیثا غورث۔",
+       "math": "d_{2x} = 100\\cos 45^\\circ \\approx 70.71\\text{ km}, \\quad d_{2y} = 100\\sin 45^\\circ \\approx 70.71\\text{ km}",
+       "en": "Resolve the second displacement $d_2$ into its East ($x$) and North ($y$) components using trigonometric ratios.",
+       "ur": "مثلثیاتی نسبتوں کا استعمال کرتے ہوئے دوسرے ہٹاؤ $d_2$ کو اس کے مشرقی ($x$) اور شمالی ($y$) اجزاء میں تحلیل کریں۔",
        "check": [
+        "Abs((100*cos(45*pi/180)) - 70.71) <= 0.005",
+        "Abs((100*sin(45*pi/180)) - 70.71) <= 0.005"
+       ]
+      },
+      {
+       "math": "\\text{Total East } (X) = 150 + 100\\cos 45^\\circ \\approx 150 + 70.71 = 220.71\\text{ km}",
+       "en": "Find the total displacement towards the East by adding the Eastward distances.",
+       "ur": "مشرق کی طرف فاصلوں کو جمع کر کے مشرق کی طرف کل ہٹاؤ معلوم کریں۔",
+       "check": [
+        "150 + 70.71 == 220.71",
+        "Abs((150 + 100*cos(45*pi/180)) - 220.71) <= 0.005"
+       ]
+      },
+      {
+       "math": "\\text{Total North } (Y) = 0 + 100\\sin 45^\\circ \\approx 70.71\\text{ km}",
+       "en": "Find the total displacement towards the North. Since the first part of the flight is purely East, its North component is $0$.",
+       "ur": "شمال کی طرف کل ہٹاؤ معلوم کریں۔ چونکہ پرواز کا پہلا حصہ خالصتاً مشرق کی طرف ہے، اس لیے اس کا شمالی جزو $0$ ہے۔",
+       "check": [
+        "0 + 70.71 == 70.71",
+        "Abs((100*sin(45*pi/180)) - 70.71) <= 0.005"
+       ]
+      },
+      {
+       "math": "D = \\sqrt{X^2 + Y^2} = \\sqrt{(220.71)^2 + (70.71)^2}",
+       "en": "Since East and North are perpendicular to each other, apply the Pythagoras theorem to find the magnitude of the total displacement $D$.",
+       "ur": "چونکہ مشرق اور شمال ایک دوسرے پر عمود ہیں، اس لیے کل ہٹاؤ $D$ کی مقدار معلوم کرنے کے لیے مسئلہ فیثا غورث کا اطلاق کریں۔",
+       "check": [
+        "sqrt(220.71**2 + 70.71**2) == sqrt(220.71**2 + 70.71**2)"
+       ]
+      },
+      {
+       "math": "D = \\sqrt{48712.9041 + 4999.9041} = \\sqrt{53712.8082} \\approx 231.76\\text{ km}",
+       "en": "Calculate the squares, add them together, and take the square root to get the final displacement.",
+       "ur": "مربع معلوم کریں، انہیں آپس میں جمع کریں، اور حتمی ہٹاؤ حاصل کرنے کے لیے جزر لیں۔",
+       "check": [
+        "Abs(220.71**2 - 48712.9041) <= 1e-6",
+        "Abs(70.71**2 - 4999.9041) <= 1e-6",
+        "Abs((48712.9041 + 4999.9041) - 53712.8082) <= 1e-6",
+        "Abs(sqrt(53712.8082) - 231.76) <= 0.005",
+        "Abs((150 + 100*cos((45)*pi/180)) - 220.71) <= 0.0050000010000000004",
+        "Abs((100*sin((45)*pi/180)) - 70.71) <= 0.0050000010000000004",
         "Abs((sqrt((150 + 100*cos((45)*pi/180))**2 + (100*sin((45)*pi/180))**2)) - 231.76) <= 0.0050000010000000004"
        ]
       }
@@ -1701,6 +3154,7 @@
       "en": "The reference notes give 231.91 km; $\\sqrt{220.71^2 + 70.71^2} = 231.76$ km.",
       "ur": "حوالہ نوٹس میں 231.91 لکھا ہے؛ درست 231.76 کلومیٹر ہے۔"
      },
+     "enriched": true,
      "book_key": "231.91 km"
     }
    ],
@@ -1718,24 +3172,54 @@
      "prompt": "",
      "steps": [
       {
-       "math": "\\text{Angle between the courses} = 135^\\circ - 45^\\circ = 90^\\circ",
-       "en": "The two legs are at right angles.",
-       "ur": "دونوں راستوں کے درمیان قائمہ زاویہ ہے۔",
+       "math": "a = 100\\text{ km}, \\quad b = 120\\text{ km}",
+       "en": "Let the starting point be $A$, the turning point be $B$, and the final position be $C$. The distances of the two legs of the journey are $a = 100\\text{ km}$ and $b = 120\\text{ km}$. We need to find the distance $d$ from $A$ to $C$.",
+       "ur": "فرض کریں کہ نقطہ آغاز $A$ ہے، مڑنے کا مقام $B$ ہے، اور آخری مقام $C$ ہے۔ سفر کے دونوں حصوں کا فاصلہ $a = 100\\text{ km}$ اور $b = 120\\text{ km}$ ہے۔ ہمیں $A$ سے $C$ تک کا فاصلہ $d$ معلوم کرنا ہے۔"
+      },
+      {
+       "math": "\\theta = 135^\\circ - 45^\\circ = 90^\\circ",
+       "en": "First, we find the angle $\\theta$ between the two courses. Since the bearings are $045^\\circ$ and $135^\\circ$, the change in direction is $90^\\circ$, which means the two legs are at right angles to each other.",
+       "ur": "سب سے پہلے ہم دونوں راستوں کے درمیان زاویہ $\\theta$ معلوم کرتے ہیں۔ چونکہ سمتیں (bearings) $045^\\circ$ اور $135^\\circ$ ہیں، اس لیے سمت میں تبدیلی $90^\\circ$ ہے، جس کا مطلب ہے کہ دونوں راستے ایک دوسرے کے ساتھ قائمہ زاویہ بناتے ہیں۔",
        "check": [
         "135 - 45 == 90"
        ]
       },
       {
-       "math": "d^2 = 100^2 + 120^2 - 2(100)(120)\\cos 90^\\circ = 24400 \\Rightarrow d \\approx 156.2\\ \\text{km}",
-       "en": "Law of cosines ($\\cos 90^\\circ = 0$).",
-       "ur": "قانون جیب التمام۔",
+       "math": "d^2 = a^2 + b^2 - 2ab\\cos\\theta",
+       "en": "To find the distance $d$ between the starting point and the final position, we apply the Law of Cosines.",
+       "ur": "نقطہ آغاز اور آخری مقام کے درمیان فاصلہ $d$ معلوم کرنے کے لیے ہم قانونِ جیب التمام (Law of Cosines) استعمال کرتے ہیں۔"
+      },
+      {
+       "math": "d^2 = 100^2 + 120^2 - 2(100)(120)\\cos 90^\\circ",
+       "en": "Substitute the given values $a = 100$, $b = 120$, and $\\theta = 90^\\circ$ into the formula.",
+       "ur": "فارمولے میں دی گئی قیمتیں $a = 100$، $b = 120$ اور $\\theta = 90^\\circ$ درج کریں۔"
+      },
+      {
+       "math": "d^2 = 10000 + 14400 - 24000(0) = 24400",
+       "en": "Since $\\cos 90^\\circ = 0$, the last term becomes zero. Simplifying the squares gives $24400$.",
+       "ur": "چونکہ $\\cos 90^\\circ = 0$ ہوتا ہے، اس لیے آخری رقم صفر ہو جاتی ہے۔ مربعوں کو حل کرنے سے $24400$ حاصل ہوتا ہے۔",
        "check": [
+        "100**2 == 10000",
+        "120**2 == 14400",
+        "2*100*120 == 24000",
+        "cos(90*pi/180) == 0",
+        "10000 + 14400 - 24000*0 == 24400"
+       ]
+      },
+      {
+       "math": "d = \\sqrt{24400} \\approx 156.2\\text{ km}",
+       "en": "Take the square root on both sides to find $d$. Thus, the distance between the starting point and the final position is approximately $156.2\\text{ km}$.",
+       "ur": "$d$ معلوم کرنے کے لیے دونوں طرف جزر لیں۔ اس طرح نقطہ آغاز اور آخری مقام کے درمیان فاصلہ تقریباً $156.2\\text{ km}$ ہے۔",
+       "check": [
+        "Abs(sqrt(24400) - 156.2) <= 0.05",
+        "135 - 45 == 90",
         "100**2 + 120**2 - 2*100*120*cos((90)*pi/180) == 24400",
         "Abs((sqrt(24400)) - 156.2) <= 0.050000001"
        ]
       }
      ],
      "answer": "$156.2$ km",
+     "enriched": true,
      "book_key": "156.2 km"
     }
    ],
@@ -1753,20 +3237,50 @@
      "prompt": "What is the value of $\\cot 60^\\circ$? (a) $0$ (b) $1$ (c) $\\sqrt{3}$ (d) $\\frac{1}{\\sqrt{3}}$",
      "steps": [
       {
-       "math": "\\cot 60^\\circ = \\frac{1}{\\tan 60^\\circ} = \\frac{1}{\\sqrt{3}}",
-       "en": "Reciprocal of tan.",
-       "ur": "tan کا معکوس۔",
+       "math": "\\cot 60^\\circ",
+       "en": "We need to find the exact value of the trigonometric ratio $\\cot 60^\\circ$.",
+       "ur": "ہمیں مثلثیاتی نسبت $\\cot 60^\\circ$ کی صحیح قیمت معلوم کرنی ہے۔"
+      },
+      {
+       "math": "\\cot \\theta = \\frac{1}{\\tan \\theta}",
+       "en": "We know that the cotangent function is the reciprocal of the tangent function.",
+       "ur": "ہم جانتے ہیں کہ کوٹینجنٹ (cotangent) فنکشن، ٹینجنٹ (tangent) فنکشن کا معکوس (reciprocal) ہوتا ہے۔"
+      },
+      {
+       "math": "\\cot 60^\\circ = \\frac{1}{\\tan 60^\\circ}",
+       "en": "Substitute $\\theta = 60^\\circ$ into the reciprocal identity.",
+       "ur": "معکوس کلیے میں $\\theta = 60^\\circ$ درج کریں۔",
        "check": [
-        "cot((60)*pi/180) == 1/sqrt(3)"
+        "cot(60*pi/180) == 1/tan(60*pi/180)"
+       ]
+      },
+      {
+       "math": "\\tan 60^\\circ = \\sqrt{3}",
+       "en": "From the table of trigonometric values for standard angles, the value of $\\tan 60^\\circ$ is $\\sqrt{3}$.",
+       "ur": "معیاری زاویوں کی مثلثیاتی قیمتوں کے جدول کے مطابق، $\\tan 60^\\circ$ کی قیمت $\\sqrt{3}$ ہوتی ہے۔",
+       "check": [
+        "tan(60*pi/180) == sqrt(3)"
+       ]
+      },
+      {
+       "math": "\\cot 60^\\circ = \\frac{1}{\\sqrt{3}}",
+       "en": "Substitute $\\tan 60^\\circ = \\sqrt{3}$ into the equation to get the value of $\\cot 60^\\circ$.",
+       "ur": "$\\cot 60^\\circ$ کی قیمت حاصل کرنے کے لیے مساوات میں $\\tan 60^\\circ = \\sqrt{3}$ درج کریں۔",
+       "check": [
+        "cot(60*pi/180) == 1/sqrt(3)"
        ]
       },
       {
        "math": "\\text{Answer: (d) } \\frac{1}{\\sqrt{3}}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Compare the result with the given choices; option (d) is the correct answer.",
+       "ur": "نتیجے کا دیے گئے ممکنہ جوابات سے موازنہ کریں؛ آپشن (d) درست جواب ہے۔",
+       "check": [
+        "cot((60)*pi/180) == 1/sqrt(3)"
+       ]
       }
      ],
      "answer": "(d) $\\frac{1}{\\sqrt{3}}$",
+     "enriched": true,
      "book_key": "(d) \\frac{1}{\\sqrt{3}}"
     },
     {
@@ -1793,16 +3307,35 @@
      "steps": [
       {
        "math": "",
-       "en": "cosec has the sign of sin: positive in I and II.",
-       "ur": "cosec کی علامت sin والی ہے: I اور II میں مثبت۔"
+       "en": "We need to find the quadrants in which $\\operatorname{cosec}\\theta$ is positive.",
+       "ur": "ہمیں وہ ربعات معلوم کرنے ہیں جن میں $\\operatorname{cosec}\\theta$ مثبت ہوتا ہے۔"
+      },
+      {
+       "math": "\\operatorname{cosec}\\theta = \\frac{1}{\\sin\\theta}",
+       "en": "Recall that $\\operatorname{cosec}\\theta$ is the reciprocal of $\\sin\\theta$. Therefore, $\\operatorname{cosec}\\theta$ has the same sign as $\\sin\\theta$ in all four quadrants.",
+       "ur": "یاد رکھیں کہ $\\operatorname{cosec}\\theta$، $\\sin\\theta$ کا معکوس ہے۔ اس لیے تمام چاروں ربعات میں $\\operatorname{cosec}\\theta$ کی علامت وہی ہوتی ہے جو $\\sin\\theta$ کی ہوتی ہے۔",
+       "check": [
+        "csc(x) == 1/sin(x)"
+       ]
+      },
+      {
+       "math": "\\sin\\theta > 0 \\implies \\operatorname{cosec}\\theta > 0",
+       "en": "In the first quadrant (I), all trigonometric functions are positive. In the second quadrant (II), $\\sin\\theta$ and its reciprocal $\\operatorname{cosec}\\theta$ are positive.",
+       "ur": "پہلے ربع (I) میں تمام مثلثیاتی تفاعل مثبت ہوتے ہیں۔ دوسرے ربع (II) میں $\\sin\\theta$ اور اس کا معکوس $\\operatorname{cosec}\\theta$ مثبت ہوتے ہیں۔"
+      },
+      {
+       "math": "",
+       "en": "Thus, $\\operatorname{cosec}\\theta$ is positive in the I and II quadrants.",
+       "ur": "اس طرح، $\\operatorname{cosec}\\theta$ پہلے (I) اور دوسرے (II) ربع میں مثبت ہوتا ہے۔"
       },
       {
        "math": "\\text{Answer: (c) } \\text{I \\& II-quadrants}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Matching this result with the given options, option (c) is the correct answer.",
+       "ur": "اس نتیجے کو دیے گئے ممکنہ جوابات سے ملانے پر، آپشن (c) درست جواب ہے۔"
       }
      ],
      "answer": "(c) $\\text{I \\& II-quadrants}$",
+     "enriched": true,
      "book_key": "(c) I \\& II-quadrants"
     },
     {
@@ -1810,20 +3343,42 @@
      "prompt": "$\\sin(90^\\circ+\\theta)=$ (a) $\\sin\\theta$ (b) $-\\sin\\theta$ (c) $\\cos\\theta$ (d) $-\\cos\\theta$",
      "steps": [
       {
-       "math": "\\sin(90^\\circ + \\theta) = \\cos\\theta",
-       "en": "Quadrant II, sin positive; $90^\\circ$ changes sin to cos.",
-       "ur": "ربع II، sin مثبت۔",
+       "math": "\\sin(90^\\circ + \\theta)",
+       "en": "We need to find the simplified form of the trigonometric expression $\\sin(90^\\circ + \\theta)$ using allied angles.",
+       "ur": "ہمیں مثلثیاتی جملے $\\sin(90^\\circ + \\theta)$ کی مختصر شکل معلوم کرنی ہے۔"
+      },
+      {
+       "math": "90^\\circ + \\theta \\in \\text{Quadrant II}",
+       "en": "Assuming $\\theta$ is an acute angle, adding it to $90^\\circ$ places the angle $(90^\\circ + \\theta)$ in the second quadrant, where the sine function is positive.",
+       "ur": "فرض کریں کہ $\\theta$ ایک حادہ زاویہ ہے، تو اسے $90^\\circ$ میں جمع کرنے سے زاویہ $(90^\\circ + \\theta)$ دوسرے ربع (Quadrant II) میں آتا ہے، جہاں $\\sin$ مثبت ہوتا ہے۔"
+      },
+      {
+       "math": "90^\\circ = 1 \\times 90^\\circ",
+       "en": "Since the angle is associated with $90^\\circ$ (which is an odd multiple of $90^\\circ$), the trigonometric ratio changes to its co-ratio, so $\\sin$ changes to $\\cos$.",
+       "ur": "چونکہ زاویہ $90^\\circ$ کے ساتھ منسلک ہے (جو کہ $90^\\circ$ کا طاق ضعف ہے)، اس لیے مثلثیاتی نسبت अपनी شریک نسبت (co-ratio) میں تبدیل ہو جاتی ہے، یعنی $\\sin$ تبدیل ہو کر $\\cos$ بن جاتا ہے۔",
+       "check": [
+        "90 == 1*90"
+       ]
+      },
+      {
+       "math": "\\sin(90^\\circ + \\theta) = +\\cos\\theta = \\cos\\theta",
+       "en": "Combining the positive sign from Quadrant II and the co-ratio $\\cos\\theta$, we get the simplified expression.",
+       "ur": "دوسرے ربع کی مثبت علامت اور شریک نسبت $\\cos\\theta$ کو ملا کر ہمیں مختصر شکل حاصل ہوتی ہے۔",
        "check": [
         "sin(pi/2 + t) == cos(t)"
        ]
       },
       {
        "math": "\\text{Answer: (c) } \\cos\\theta",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Comparing our result with the given options, option (c) is the correct answer.",
+       "ur": "اپنے نتیجے کا دیے گئے آپشنز سے موازنہ کرنے پر، آپشن (c) درست جواب ہے۔",
+       "check": [
+        "sin(pi/2 + t) == cos(t)"
+       ]
       }
      ],
      "answer": "(c) $\\cos\\theta$",
+     "enriched": true,
      "book_key": "(c) \\cos\\theta"
     },
     {
@@ -1831,20 +3386,42 @@
      "prompt": "$\\tan(180^\\circ-\\theta)=$ (a) $\\tan\\theta$ (b) $\\cot\\theta$ (c) $-\\cot\\theta$ (d) $-\\tan\\theta$",
      "steps": [
       {
+       "math": "\\tan(180^\\circ - \\theta)",
+       "en": "We need to simplify the given trigonometric expression $\\tan(180^\\circ - \\theta)$ using the rules of allied angles.",
+       "ur": "ہمیں دیے گئے مثلثیاتی جملے $\\tan(180^\\circ - \\theta)$ کو متعلقہ زاویوں (allied angles) کے اصولوں کی مدد سے مختصر کرنا ہے۔"
+      },
+      {
+       "math": "180^\\circ = 2 \\times 90^\\circ",
+       "en": "First, notice that $180^\\circ$ is an even multiple of $90^\\circ$. According to the allied angles rule, when the angle is an even multiple of $90^\\circ$, the trigonometric ratio remains the same (so $\\tan$ stays $\\tan$).",
+       "ur": "سب سے پہلے، غور کریں کہ $180^\\circ$ دراصل $90^\\circ$ کا جفت مضاعف (even multiple) ہے۔ متعلقہ زاویوں کے اصول کے مطابق، جب زاویہ $90^\\circ$ کا جفت مضاعف ہو تو مثلثیاتی نسبت تبدیل نہیں ہوتی (یعنی $\\tan$ ہی رہتا ہے)۔",
+       "check": [
+        "180 == 2 * 90"
+       ]
+      },
+      {
+       "math": "90^\\circ < 180^\\circ - \\theta < 180^\\circ",
+       "en": "Assuming $\\theta$ is an acute angle, the angle $(180^\\circ - \\theta)$ lies in the second quadrant (Quadrant II). In Quadrant II, only $\\sin$ and $\\csc$ are positive, while $\\tan$ is negative.",
+       "ur": "فرض کریں کہ $\\theta$ ایک حادہ زاویہ ہے، تو زاویہ $(180^\\circ - \\theta)$ دوسرے ربع (Quadrant II) میں واقع ہوتا ہے۔ دوسرے ربع میں صرف $\\sin$ اور $\\csc$ مثبت ہوتے ہیں، جبکہ $\\tan$ منفی ہوتا ہے۔"
+      },
+      {
        "math": "\\tan(180^\\circ - \\theta) = -\\tan\\theta",
-       "en": "Quadrant II, tan negative.",
-       "ur": "ربع II، tan منفی۔",
+       "en": "Combining the unchanged trigonometric ratio with the negative sign from the second quadrant gives $-\\tan\\theta$.",
+       "ur": "تبدیل نہ ہونے والی مثلثیاتی نسبت کو دوسرے ربع کی منفی علامت کے ساتھ ملانے سے ہمیں $-\\tan\\theta$ حاصل ہوتا ہے۔",
        "check": [
         "tan(pi - t) == -tan(t)"
        ]
       },
       {
        "math": "\\text{Answer: (d) } -\\tan\\theta",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Comparing our result with the given choices, option (d) is the correct answer.",
+       "ur": "ہمارے نتیجے کا دیے گئے اختیارات سے موازنہ کرنے پر، آپشن (d) درست جواب ہے۔",
+       "check": [
+        "tan(pi - t) == -tan(t)"
+       ]
       }
      ],
      "answer": "(d) $-\\tan\\theta$",
+     "enriched": true,
      "book_key": "(d) -\\tan\\theta"
     },
     {
@@ -1853,16 +3430,32 @@
      "steps": [
       {
        "math": "",
-       "en": "Each side over the sine of the opposite angle.",
-       "ur": "ہر ضلع تقسیم مقابل زاویے کا جیب۔"
+       "en": "We are asked to identify the correct formula for the Law of Sines from the given options.",
+       "ur": "ہمیں دیے گئے اختیارات میں سے 'قانونِ جیب' (Law of Sines) کا درست فارمولا منتخب کرنے کو کہا گیا ہے۔"
+      },
+      {
+       "math": "",
+       "en": "In any triangle $ABC$, the lengths of the sides opposite to the angles $\\alpha$, $\\beta$, and $\\gamma$ are denoted by $a$, $b$, and $c$ respectively.",
+       "ur": "کسی بھی مثلث $ABC$ میں، زاویوں $\\alpha$، $\\beta$ اور $\\gamma$ کے بالمقابل اضلاع کی لمبائیوں کو بالترتیب $a$، $b$ اور $c$ سے ظاہر کیا جاتا ہے۔"
+      },
+      {
+       "math": "",
+       "en": "According to the Law of Sines, the lengths of the sides of a triangle are proportional to the sines of the measures of their opposite angles.",
+       "ur": "قانونِ جیب کے مطابق، کسی مثلث کے اضلاع کی لمبائیاں ان کے بالمقابل زاویوں کے سائن (sines) کے متناسب ہوتی ہیں۔"
+      },
+      {
+       "math": "\\frac{a}{\\sin\\alpha} = \\frac{b}{\\sin\\beta} = \\frac{c}{\\sin\\gamma}",
+       "en": "Therefore, each side divided by the sine of its opposite angle gives an equal ratio.",
+       "ur": "لہٰذا، ہر ضلع کو اس کے بالمقابل زاویے کے سائن سے تقسیم کرنے سے برابر نسبت حاصل ہوتی ہے۔"
       },
       {
        "math": "\\text{Answer: (c) } \\frac{a}{\\sin\\alpha}=\\frac{b}{\\sin\\beta}=\\frac{c}{\\sin\\gamma}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Comparing this formula with the given choices, we see that option (c) is the correct answer.",
+       "ur": "اس فارمولے کا دیے گئے اختیارات سے موازنہ کرنے پر، ہم دیکھتے ہیں کہ آپشن (c) درست جواب ہے۔"
       }
      ],
      "answer": "(c) $\\frac{a}{\\sin\\alpha}=\\frac{b}{\\sin\\beta}=\\frac{c}{\\sin\\gamma}$",
+     "enriched": true,
      "book_key": "(c) \\frac{a}{\\sin\\alpha}=\\frac{b}{\\sin\\beta}=\\frac{c}{\\sin\\gamma}"
     },
     {
@@ -1871,16 +3464,32 @@
      "steps": [
       {
        "math": "",
-       "en": "The angle's own side is the one subtracted.",
-       "ur": "زاویے کے مقابل ضلع کا مربع تفریق ہوتا ہے۔"
+       "en": "We need to identify the correct formula for the Law of Cosines from the given options.",
+       "ur": "ہمیں دیے گئے آپشنز میں سے جیب التمام کے قانون (Law of Cosines) کے درست فارمولے کی نشاندہی کرنی ہے۔"
+      },
+      {
+       "math": "c^2 = a^2 + b^2 - 2ab\\cos\\gamma",
+       "en": "Recall the standard form of the Law of Cosines for any triangle $ABC$ with sides $a, b, c$ and opposite angles $\\alpha, \\beta, \\gamma$ respectively.",
+       "ur": "کسی بھی مثلث $ABC$ کے لیے جس کے اضلاع بالترتیب $a, b, c$ اور ان کے مقابل زاویے $\\alpha, \\beta, \\gamma$ ہوں، جیب التمام کے قانون کی معیاری شکل کو یاد کریں۔"
+      },
+      {
+       "math": "2ab\\cos\\gamma = a^2 + b^2 - c^2",
+       "en": "Rearrange the equation by moving $-2ab\\cos\\gamma$ to the left side and $c^2$ to the right side.",
+       "ur": "مساوات کو ترتیب دیتے ہوئے $-2ab\\cos\\gamma$ کو بائیں طرف اور $c^2$ کو دائیں طرف لے جائیں۔"
+      },
+      {
+       "math": "\\cos\\gamma = \\frac{a^2 + b^2 - c^2}{2ab}",
+       "en": "Divide both sides by $2ab$ to isolate $\\cos\\gamma$. Notice that the square of the side opposite to the angle $\\gamma$ (which is $c^2$) is subtracted.",
+       "ur": "$\\cos\\gamma$ کو الگ کرنے کے لیے دونوں طرف $2ab$ سے تقسیم کریں۔ غور کریں کہ زاویے $\\gamma$ کے مقابل ضلع کا مربع (یعنی $c^2$) تفریق ہوتا ہے۔"
       },
       {
        "math": "\\text{Answer: (c) } \\cos\\gamma=\\frac{a^2+b^2-c^2}{2ab}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Comparing this result with the given choices, option (c) is the correct answer.",
+       "ur": "اس نتیجے کا دیے گئے آپشنز سے موازنہ کرنے پر، آپشن (c) درست جواب ہے۔"
       }
      ],
      "answer": "(c) $\\cos\\gamma=\\frac{a^2+b^2-c^2}{2ab}$",
+     "enriched": true,
      "book_key": "(c) \\cos\\gamma=\\frac{a^2+b^2-c^2}{2ab}"
     },
     {
@@ -1889,16 +3498,32 @@
      "steps": [
       {
        "math": "",
-       "en": "Two sides and the angle between them ($\\beta$ is between $a$ and $c$).",
-       "ur": "دو اضلاع اور ان کا درمیانی زاویہ۔"
+       "en": "We need to identify the correct formula for the area of a triangle $\\triangle ABC$ from the given options.",
+       "ur": "ہمیں دیے گئے اختیارات میں سے مثلث $\\triangle ABC$ کے رقبے کا درست فارمولا تلاش کرنا ہے۔"
+      },
+      {
+       "math": "\\text{Area of } \\triangle = \\frac{1}{2} \\times (\\text{product of two sides}) \\times \\sin(\\text{included angle})",
+       "en": "According to trigonometry, the area of any triangle is half the product of the lengths of two sides and the sine of the angle between them.",
+       "ur": "علمِ مثلثات کے مطابق، کسی بھی مثلث کا رقبہ اس کے دو اضلاع کی لمبائیوں کے حاصلِ ضرب اور ان کے درمیانی زاویے کے سائن ($\\sin$) کے نصف کے برابر ہوتا ہے۔"
+      },
+      {
+       "math": "\\Delta = \\frac{1}{2}ab\\sin\\gamma = \\frac{1}{2}bc\\sin\\alpha = \\frac{1}{2}ac\\sin\\beta",
+       "en": "In a standard $\\triangle ABC$, angle $\\alpha$ is between sides $b$ and $c$, angle $\\beta$ is between sides $a$ and $c$, and angle $\\gamma$ is between sides $a$ and $b$. This gives us three standard formulas for the area.",
+       "ur": "ایک معیاری مثلث $\\triangle ABC$ میں، زاویہ $\\alpha$ اضلاع $b$ اور $c$ کے درمیان، زاویہ $\\beta$ اضلاع $a$ اور $c$ کے درمیان، اور زاویہ $\\gamma$ اضلاع $a$ اور $b$ کے درمیان ہوتا ہے۔ اس سے ہمیں رقبے کے تین معیاری فارمولے ملتے ہیں۔"
+      },
+      {
+       "math": "",
+       "en": "Comparing the given options with the standard formulas, we see that options (a), (b), and (c) are incorrect because they do not use the correct included angle or are missing the side lengths. Only option (d) correctly pairs sides $a$ and $c$ with their included angle $\\beta$.",
+       "ur": "دیے گئے اختیارات کا معیاری فارمولوں سے موازنہ کرنے پر، ہم دیکھتے ہیں کہ اختیارات (a)، (b) اور (c) غلط ہیں کیونکہ ان میں درست درمیانی زاویہ استعمال نہیں کیا گیا یا اضلاع کی لمبائیاں غائب ہیں۔ صرف آپشن (d) میں اضلاع $a$ اور $c$ کو ان کے درمیانی زاویے $\\beta$ کے ساتھ درست طریقے سے ملایا گیا ہے۔"
       },
       {
        "math": "\\text{Answer: (d) } \\frac{1}{2}ac\\sin\\beta",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Therefore, option (d) is the correct answer.",
+       "ur": "لہذا، آپشن (d) درست جواب ہے۔"
       }
      ],
      "answer": "(d) $\\frac{1}{2}ac\\sin\\beta$",
+     "enriched": true,
      "book_key": "(d) \\frac{1}{2}ac\\sin\\beta"
     },
     {
@@ -1907,16 +3532,27 @@
      "steps": [
       {
        "math": "",
-       "en": "Bearings start at North.",
-       "ur": "سمت شمال سے شروع ہوتی ہے۔"
+       "en": "We need to identify the standard reference direction from which a bearing is measured in trigonometry and navigation.",
+       "ur": "ہمیں وہ معیاری حوالہ جاتی سمت معلوم کرنی ہے جہاں سے تکونیات اور جہاز رانی میں سمت (bearing) کی پیمائش کی جاتی ہے۔"
+      },
+      {
+       "math": "\\text{Reference Direction: North}",
+       "en": "By definition, a bearing is an angle measured clockwise in degrees, always starting from the $\\text{North}$ direction.",
+       "ur": "تعریف کے مطابق، سمت ایک زاویہ ہے جسے ڈگریوں میں گھڑی کی سوئی کی سمت (clockwise) میں ناپا جاتا ہے، اور اس کا آغاز ہمیشہ $\\text{North}$ (شمال) کی سمت سے ہوتا ہے۔"
+      },
+      {
+       "math": "",
+       "en": "Comparing this standard rule with the given options, we see that $\\text{North}$ corresponds to option (c).",
+       "ur": "اس معیاری اصول کا دیے گئے آپشنز سے موازنہ کرنے پر، ہم دیکھتے ہیں کہ $\\text{North}$ (شمال) آپشن (c) سے مطابقت رکھتا ہے۔"
       },
       {
        "math": "\\text{Answer: (c) } \\text{North}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Therefore, the correct option is (c).",
+       "ur": "لہذا، درست آپشن (c) ہے۔"
       }
      ],
      "answer": "(c) $\\text{North}$",
+     "enriched": true,
      "book_key": "(c) North"
     },
     {
@@ -1925,16 +3561,27 @@
      "steps": [
       {
        "math": "",
-       "en": "For example $045^\\circ$.",
-       "ur": "مثلاً $045^\\circ$۔"
+       "en": "We need to determine how many figures (digits) are used in the standard notation to write a bearing.",
+       "ur": "ہمیں یہ معلوم کرنا ہے کہ معیاری طریقے میں سمت (بیرنگ) لکھنے کے لیے کتنے ہندسے (figures) استعمال ہوتے ہیں۔"
+      },
+      {
+       "math": "",
+       "en": "In navigation and trigonometry, a bearing is an angle measured clockwise from the North direction. By convention, it is always expressed using a three-figure (three-digit) format to avoid any confusion.",
+       "ur": "نیویگیشن اور تکونیات میں، بیرنگ ایک زاویہ ہے جو شمال کی سمت سے گھڑی کی سوئی کی سمت میں ماپا جاتا ہے۔ اصولی طور پر، کسی بھی الجھن سے بچنے کے لیے اسے ہمیشہ تین ہندسوں کی صورت میں لکھا جاتا ہے۔"
+      },
+      {
+       "math": "45^\\circ \\rightarrow 045^\\circ",
+       "en": "If the angle is less than $100^\\circ$, we place leading zeros before the number so that it still consists of three digits. For example, an angle of $45^\\circ$ is written as a bearing of $045^\\circ$.",
+       "ur": "اگر زاویہ $100^\\circ$ سے کم ہو تو ہم عدد سے پہلے صفر لگا دیتے ہیں تاکہ یہ پھر بھی تین ہندسوں پر مشتمل رہے۔ مثلاً $45^\\circ$ کے زاویے کو بیرنگ کے طور پر $045^\\circ$ لکھا جاتا ہے۔"
       },
       {
        "math": "\\text{Answer: (c) } \\text{3 figures}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Therefore, a bearing is always written as 3 figures, which matches option (c).",
+       "ur": "اس لیے، بیرنگ کو ہمیشہ 3 ہندسوں میں لکھا جاتا ہے، جو کہ آپشن (c) سے مطابقت رکھتا ہے۔"
       }
      ],
      "answer": "(c) $\\text{3 figures}$",
+     "enriched": true,
      "book_key": "(c) 3 figures"
     }
    ],
@@ -1952,23 +3599,55 @@
      "prompt": "$a=4$ cm, $b=6$ cm, $c=8$ cm",
      "steps": [
       {
-       "math": "s = \\frac{a + b + c}{2} = \\frac{4 + 6 + 8}{2} = 9",
-       "en": "Half the perimeter.",
-       "ur": "نصف احاطہ۔",
+       "math": "",
+       "en": "The lengths of the three sides of $\\triangle ABC$ are given as $a = 4$ cm, $b = 6$ cm, and $c = 8$ cm. We need to find the area of the triangle.",
+       "ur": "مثلث $\\triangle ABC$ کے تینوں اضلاع کی لمبائیاں $a = 4$ سینٹی میٹر، $b = 6$ سینٹی میٹر اور $c = 8$ سینٹی میٹر دی گئی ہیں۔ ہمیں مثلث کا رقبہ معلوم کرنا ہے۔"
+      },
+      {
+       "math": "s = \\frac{a + b + c}{2} = \\frac{4 + 6 + 8}{2} = \\frac{18}{2} = 9\\ \\text{cm}",
+       "en": "Since all three sides are given, we will use Hero's formula. First, calculate the semi-perimeter $s$.",
+       "ur": "چونکہ تینوں اضلاع دیے گئے ہیں، اس لیے ہم ہیرو کا کلیہ استعمال کریں گے۔ سب سے پہلے نصف احاطہ $s$ معلوم کریں۔",
        "check": [
-        "(4 + 6 + 8)/2 == 9.0"
+        "4 + 6 + 8 == 18",
+        "18/2 == 9"
        ]
       },
       {
-       "math": "\\Delta = \\sqrt{s(s - a)(s - b)(s - c)} = \\sqrt{9(5)(3)(1)} = 11.62\\ \\text{cm}^2",
-       "en": "Hero's formula.",
-       "ur": "ہیرو کا کلیہ۔",
+       "math": "s - a = 9 - 4 = 5\\ \\text{cm}, \\quad s - b = 9 - 6 = 3\\ \\text{cm}, \\quad s - c = 9 - 8 = 1\\ \\text{cm}",
+       "en": "Now, subtract each side length from the semi-perimeter $s$.",
+       "ur": "اب نصف احاطہ $s$ میں سے ہر ضلع کی لمبائی کو تفریق کریں۔",
        "check": [
+        "9 - 4 == 5",
+        "9 - 6 == 3",
+        "9 - 8 == 1"
+       ]
+      },
+      {
+       "math": "\\Delta = \\sqrt{s(s - a)(s - b)(s - c)}",
+       "en": "Write down Hero's formula for the area of a triangle $\\Delta$.",
+       "ur": "مثلث کے رقبہ $\\Delta$ کے لیے ہیرو کا کلیہ لکھیں۔"
+      },
+      {
+       "math": "\\Delta = \\sqrt{9(5)(3)(1)} = \\sqrt{135}",
+       "en": "Substitute the values of $s$, $s - a$, $s - b$, and $s - c$ into the formula and multiply them.",
+       "ur": "کلیہ میں $s$، $s - a$، $s - b$ اور $s - c$ کی قیمتیں درج کریں اور انہیں ضرب دیں۔",
+       "check": [
+        "9*5*3*1 == 135"
+       ]
+      },
+      {
+       "math": "\\Delta = 11.62\\ \\text{cm}^2",
+       "en": "Take the square root of $135$ and round to two decimal places to get the final area.",
+       "ur": "$135$ کا جزر لیں اور حتمی رقبہ حاصل کرنے کے لیے اشاریہ کے بعد دو درجوں تک محدود کریں۔",
+       "check": [
+        "Abs(sqrt(135) - 11.62) <= 0.005",
+        "(4 + 6 + 8)/2 == 9.0",
         "Abs((sqrt(9.0*(9.0 - 4)*(9.0 - 6)*(9.0 - 8))) - 11.62) <= 0.0050000010000000004"
        ]
       }
      ],
      "answer": "$11.62$ cm$^2$",
+     "enriched": true,
      "book_key": "11.62 cm^2"
     },
     {
@@ -1976,15 +3655,43 @@
      "prompt": "$b=2.1$ cm, $c=5$ cm, $\\gamma=45^\\circ$",
      "steps": [
       {
-       "math": "\\text{Area} = \\frac{1}{2} \\times 2.1 \\times 5 \\times \\sin 45^\\circ \\approx 3.71\\ \\text{cm}^2",
-       "en": "As in the reference notes, the given angle is used between the two sides.",
-       "ur": "حوالہ نوٹس کی طرح دیا گیا زاویہ دونوں اضلاع کے درمیان لیا گیا ہے۔",
+       "math": "",
+       "en": "We are given two sides of $\\triangle ABC$, $b = 2.1\\text{ cm}$ and $c = 5\\text{ cm}$, and the angle $\\gamma = 45^\\circ$.",
+       "ur": "ہمیں مثلث $\\triangle ABC$ کے دو اضلاع $b = 2.1\\text{ cm}$ اور $c = 5\\text{ cm}$، اور زاویہ $\\gamma = 45^\\circ$ دیے گئے ہیں۔"
+      },
+      {
+       "math": "",
+       "en": "As in the reference textbook, the given angle is used as the included angle between the two sides. Therefore, we use the formula $\\text{Area} = \\frac{1}{2} \\times b \\times c \\times \\sin \\gamma$.",
+       "ur": "حوالہ درسی کتاب کی طرح، دیے گئے زاویے کو دونوں اضلاع کے درمیانی زاویے کے طور پر لیا گیا ہے۔ اس لیے ہم فارمولا $\\text{Area} = \\frac{1}{2} \\times b \\times c \\times \\sin \\gamma$ استعمال کریں گے۔"
+      },
+      {
+       "math": "\\text{Area} = \\frac{1}{2} \\times 2.1 \\times 5 \\times \\sin 45^\\circ",
+       "en": "Substitute the given values $b = 2.1$, $c = 5$, and $\\gamma = 45^\\circ$ into the formula.",
+       "ur": "فارمولے میں دی گئی قیمتیں $b = 2.1$، $c = 5$ اور $\\gamma = 45^\\circ$ درج کریں۔",
        "check": [
+        "R(1,2) * R(21,10) * 5 * sin(45*pi/180) == R(21,4) * sin(45*pi/180)"
+       ]
+      },
+      {
+       "math": "\\text{Area} = 5.25 \\times \\sin 45^\\circ",
+       "en": "Multiply the numerical values $\\frac{1}{2} \\times 2.1 \\times 5$ to get $5.25$.",
+       "ur": "عددی قیمتوں $\\frac{1}{2} \\times 2.1 \\times 5$ کو ضرب دیں جس سے $5.25$ حاصل ہوتا ہے۔",
+       "check": [
+        "R(1,2) * R(21,10) * 5 == R(525,100)"
+       ]
+      },
+      {
+       "math": "\\text{Area} \\approx 3.71\\text{ cm}^2",
+       "en": "Multiply $5.25$ by the value of $\\sin 45^\\circ \\approx 0.7071$ and round to two decimal places to get the final area.",
+       "ur": "$5.25$ کو $\\sin 45^\\circ \\approx 0.7071$ کی قیمت سے ضرب دیں اور حتمی رقبہ حاصل کرنے کے لیے اعشاریہ کے دو درجوں تک محدود کریں۔",
+       "check": [
+        "Abs((R(525,100)*sin(45*pi/180)) - R(371,100)) <= 0.005",
         "Abs((R(1,2)*R(21,10)*5*sin((45)*pi/180)) - 3.71) <= 0.0050000010000000004"
        ]
       }
      ],
      "answer": "$3.71$ cm$^2$",
+     "enriched": true,
      "book_key": "3.71 cm^2"
     },
     {
@@ -2130,16 +3837,52 @@
      "prompt": "the length $AG$",
      "steps": [
       {
-       "math": "AG = \\sqrt{AB^2 + BC^2 + AE^2} = \\sqrt{5^2 + 7^2 + 3^2} = \\sqrt{83} \\approx 9.11\\ \\text{cm}",
-       "en": "The space diagonal of a cuboid.",
-       "ur": "مکعب نما کا فضائی وتر۔",
+       "math": "m\\overline{AB} = 5\\text{ cm},\\quad m\\overline{BC} = 7\\text{ cm},\\quad m\\overline{AE} = 3\\text{ cm}",
+       "en": "Given the dimensions of the cuboid $ABCDEFGH$: length $m\\overline{AB}$, width $m\\overline{BC}$, and height $m\\overline{AE}$. We need to find the length of the space diagonal $\\overline{AG}$.",
+       "ur": "مکعب نما $ABCDEFGH$ کی دی گئی پیمائشیں: لمبائی $m\\overline{AB}$، چوڑائی $m\\overline{BC}$، اور اونچائی $m\\overline{AE}$ ہیں۔ ہمیں فضائی وتر $\\overline{AG}$ کی لمبائی معلوم کرنی ہے۔"
+      },
+      {
+       "math": "m\\overline{AC}^2 = m\\overline{AB}^2 + m\\overline{BC}^2",
+       "en": "First, consider the right-angled triangle $ABC$ on the base $ABCD$, where $\\angle B = 90^\\circ$. By Pythagoras' theorem, the square of the base diagonal $\\overline{AC}$ is equal to the sum of the squares of $\\overline{AB}$ and $\\overline{BC}$.",
+       "ur": "سب سے پہلے، قاعدہ $ABCD$ پر قائم الزاویہ مثلث $ABC$ پر غور کریں، جہاں $\\angle B = 90^\\circ$ ہے۔ مسئلہ فیثاغورث کے مطابق، قاعدے کے وتر $\\overline{AC}$ کا مربع $\\overline{AB}$ اور $\\overline{BC}$ کے مربعات کے مجموعے کے برابر ہے۔"
+      },
+      {
+       "math": "m\\overline{AC}^2 = 5^2 + 7^2 = 25 + 49 = 74",
+       "en": "Substitute the given values $m\\overline{AB} = 5$ and $m\\overline{BC} = 7$ to find $m\\overline{AC}^2$.",
+       "ur": "$m\\overline{AC}^2$ معلوم کرنے کے لیے دی گئی قیمتیں $m\\overline{AB} = 5$ اور $m\\overline{BC} = 7$ درج کریں۔",
        "check": [
+        "5**2 == 25",
+        "7**2 == 49",
+        "25 + 49 == 74"
+       ]
+      },
+      {
+       "math": "m\\overline{AG}^2 = m\\overline{AC}^2 + m\\overline{CG}^2",
+       "en": "Now, consider the vertical right-angled triangle $ACG$, where $\\angle C = 90^\\circ$. Since $\\overline{CG}$ is the vertical height of the cuboid, $m\\overline{CG} = m\\overline{AE} = 3\\text{ cm}$. Apply Pythagoras' theorem again.",
+       "ur": "اب، عمودی قائم الزاویہ مثلث $ACG$ پر غور کریں، جہاں $\\angle C = 90^\\circ$ ہے۔ چونکہ $\\overline{CG}$ مکعب نما کی عمودی اونچائی ہے، اس لیے $m\\overline{CG} = m\\overline{AE} = 3\\text{ cm}$ ہے۔ دوبارہ مسئلہ فیثاغورث لاگو کریں۔"
+      },
+      {
+       "math": "m\\overline{AG}^2 = 74 + 3^2 = 74 + 9 = 83",
+       "en": "Substitute $m\\overline{AC}^2 = 74$ and $m\\overline{CG} = 3$ into the equation.",
+       "ur": "مساوات میں $m\\overline{AC}^2 = 74$ اور $m\\overline{CG} = 3$ درج کریں۔",
+       "check": [
+        "3**2 == 9",
+        "74 + 9 == 83"
+       ]
+      },
+      {
+       "math": "m\\overline{AG} = \\sqrt{83} \\approx 9.11\\text{ cm}",
+       "en": "Take the square root on both sides to find the length of $\\overline{AG}$, rounded to $3$ significant figures.",
+       "ur": "$\\overline{AG}$ کی لمبائی معلوم کرنے کے لیے دونوں طرف جذر لیں اور جواب کو $3$ نمایاں ہندسوں تک محدود کریں۔",
+       "check": [
+        "Abs(sqrt(83) - 9.11) <= 0.005",
         "5**2 + 7**2 + 3**2 == 83",
         "Abs((sqrt(83)) - 9.11) <= 0.0050000010000000004"
        ]
       }
      ],
      "answer": "$9.11$ cm",
+     "enriched": true,
      "book_key": "9.11 cm"
     },
     {
@@ -2147,9 +3890,42 @@
      "prompt": "the angle between $AG$ and $ABCD$",
      "steps": [
       {
-       "math": "\\tan\\theta = \\frac{3}{\\sqrt{5^2 + 7^2}} = \\frac{3}{\\sqrt{74}} \\Rightarrow \\theta \\approx 19.2^\\circ",
-       "en": "The vertical edge over the base diagonal.",
-       "ur": "عمودی کنارہ تقسیم قاعدے کا وتر۔",
+       "math": "m\\overline{AB} = 5\\text{ cm}, \\quad m\\overline{BC} = 7\\text{ cm}, \\quad m\\overline{CG} = m\\overline{AE} = 3\\text{ cm}",
+       "en": "Write down the given dimensions of the cuboid. Since it is a cuboid, the vertical edge $m\\overline{CG}$ is equal to $m\\overline{AE}$.",
+       "ur": "مکعب نما کی دی گئی پیمائشیں لکھیں۔ چونکہ یہ ایک مکعب نما ہے، اس لیے عمودی کنارہ $m\\overline{CG}$ کنارے $m\\overline{AE}$ کے برابر ہے۔",
+       "check": [
+        "3 == 3"
+       ]
+      },
+      {
+       "math": "m\\overline{AC} = \\sqrt{(m\\overline{AB})^2 + (m\\overline{BC})^2} = \\sqrt{5^2 + 7^2}",
+       "en": "To find the angle between $\\overline{AG}$ and the base plane $ABCD$, we first find the length of the base diagonal $\\overline{AC}$ using Pythagoras' theorem in the right-angled triangle $ABC$.",
+       "ur": "وتر $\\overline{AG}$ اور قاعدے کی سطح $ABCD$ کے درمیان زاویہ معلوم کرنے کے لیے، ہم پہلے قائمۃ الزاویہ مثلث $ABC$ میں مسئلہ فیثاغورث کی مدد سے قاعدے کے وتر $\\overline{AC}$ کی لمبائی معلوم کرتے ہیں۔",
+       "check": [
+        "sqrt(5**2 + 7**2) == sqrt(74)"
+       ]
+      },
+      {
+       "math": "m\\overline{AC} = \\sqrt{25 + 49} = \\sqrt{74}\\text{ cm}",
+       "en": "Simplify the expression to get the exact length of the base diagonal $\\overline{AC}$.",
+       "ur": "قاعدے کے وتر $\\overline{AC}$ کی لمبائی حاصل کرنے کے لیے عبارت کو مختصر کریں۔",
+       "check": [
+        "25 + 49 == 74",
+        "sqrt(25 + 49) == sqrt(74)"
+       ]
+      },
+      {
+       "math": "\\tan\\theta = \\frac{m\\overline{CG}}{m\\overline{AC}} = \\frac{3}{\\sqrt{74}}",
+       "en": "Let $\\theta$ be the angle $\\angle GAC$ between $\\overline{AG}$ and the plane $ABCD$. In the right-angled triangle $ACG$, apply the tangent ratio (opposite side divided by adjacent side).",
+       "ur": "فرض کریں کہ $\\overline{AG}$ اور سطح $ABCD$ کے درمیان زاویہ $\\angle GAC = \\theta$ ہے۔ قائمۃ الزاویہ مثلث $ACG$ میں ٹینجنٹ کی نسبت (عمود تقسیم قاعدہ) کا استعمال کریں۔",
+       "check": [
+        "3/sqrt(74) == 3/sqrt(74)"
+       ]
+      },
+      {
+       "math": "\\theta = \\tan^{-1}\\left(\\frac{3}{\\sqrt{74}}\\right) \\approx 19.2^\\circ",
+       "en": "Take the inverse tangent to find the angle $\\theta$ and round the final answer to $1$ decimal place.",
+       "ur": "زاویہ $\\theta$ معلوم کرنے کے لیے معکوس ٹینجنٹ لیں اور حتمی جواب کو اعشاریہ کے بعد ایک درجے تک محدود کریں۔",
        "check": [
         "Abs((atan(3/sqrt(74))*180/pi) - 19.2) <= 0.050000001"
        ]
@@ -2160,6 +3936,7 @@
       "en": "The reference notes give $20.9^\\circ$; $\\tan^{-1}(3/\\sqrt{74}) = 19.2^\\circ$.",
       "ur": "حوالہ نوٹس میں $20.9^\\circ$ لکھا ہے؛ درست $19.2^\\circ$ ہے۔"
      },
+     "enriched": true,
      "book_key": "20.9"
     }
    ],
@@ -2177,16 +3954,43 @@
      "prompt": "the distance $AF$",
      "steps": [
       {
-       "math": "AF = \\sqrt{AB^2 + BF^2} = \\sqrt{8^2 + 14^2} = \\sqrt{260} \\approx 16.1\\ \\text{cm}",
-       "en": "Right triangle $ABF$ (right angle at $B$).",
-       "ur": "قائمہ مثلث $ABF$۔",
+       "math": "m\\overline{AB} = 8\\ \\text{cm},\\quad m\\overline{BF} = 14\\ \\text{cm}",
+       "en": "Write down the given lengths from the diagram for the right-angled triangle $ABF$ (where the right angle is at $B$). We need to find the distance $m\\overline{AF}$.",
+       "ur": "دی گئی شکل سے قائمہ الزاویہ مثلث $ABF$ (جہاں زاویہ قائمہ $B$ پر ہے) کے لیے دی گئی لمبائیاں لکھیں۔ ہمیں فاصلہ $m\\overline{AF}$ معلوم کرنا ہے۔"
+      },
+      {
+       "math": "(m\\overline{AF})^2 = (m\\overline{AB})^2 + (m\\overline{BF})^2",
+       "en": "Since $\\triangle ABF$ is a right-angled triangle, we apply the Pythagoras theorem, where $\\overline{AF}$ is the hypotenuse.",
+       "ur": "چونکہ $\\triangle ABF$ ایک قائمہ الزاویہ مثلث ہے، اس لیے ہم مسئلہ فیثاغورث کا اطلاق کرتے ہیں، جہاں $\\overline{AF}$ وتر ہے۔"
+      },
+      {
+       "math": "(m\\overline{AF})^2 = 8^2 + 14^2",
+       "en": "Substitute the given values $m\\overline{AB} = 8$ and $m\\overline{BF} = 14$ into the formula.",
+       "ur": "فارمولے میں دی گئی قیمتیں $m\\overline{AB} = 8$ اور $m\\overline{BF} = 14$ درج کریں۔"
+      },
+      {
+       "math": "(m\\overline{AF})^2 = 64 + 196 = 260",
+       "en": "Calculate the squares of both numbers and add them together.",
+       "ur": "دونوں اعداد کا مربع معلوم کریں اور انہیں آپس میں جمع کریں۔",
        "check": [
+        "8**2 == 64",
+        "14**2 == 196",
+        "64 + 196 == 260"
+       ]
+      },
+      {
+       "math": "m\\overline{AF} = \\sqrt{260} \\approx 16.1\\ \\text{cm}",
+       "en": "Take the square root on both sides to find the distance between $A$ and $F$, rounded to one decimal place.",
+       "ur": "$A$ اور $F$ کے درمیان فاصلہ معلوم کرنے کے لیے دونوں طرف جزر لیں، اور جواب کو اشاریہ کے ایک درجہ تک محدود کریں۔",
+       "check": [
+        "Abs(sqrt(260) - 16.1) <= 0.05",
         "8**2 + 14**2 == 260",
         "Abs((sqrt(260)) - 16.1) <= 0.050000001"
        ]
       }
      ],
      "answer": "$16.1$ cm",
+     "enriched": true,
      "book_key": "16.1 cm"
     },
     {
@@ -2194,15 +3998,39 @@
      "prompt": "the angle between $AF$ and $BCEF$",
      "steps": [
       {
-       "math": "\\sin\\theta = \\frac{AB}{AF} = \\frac{8}{\\sqrt{260}} \\Rightarrow \\theta \\approx 29.7^\\circ",
-       "en": "$AB$ is perpendicular to the plane $BCEF$.",
-       "ur": "$AB$ مستوی $BCEF$ پر عمود ہے۔",
+       "math": "",
+       "en": "The line segment $\\overline{AB}$ is perpendicular to the plane $BCEF$. Therefore, $\\triangle ABF$ is a right-angled triangle at $B$, and the angle between $\\overline{AF}$ and the plane $BCEF$ is $\\angle AFB = \\theta$.",
+       "ur": "قطعہ خط $\\overline{AB}$ مستوی $BCEF$ پر عمود ہے۔ اس لیے $\\triangle ABF$ نقطہ $B$ پر ایک قائمۃ الزاویہ مثلث ہے، اور $\\overline{AF}$ اور مستوی $BCEF$ کے درمیان زاویہ $\\angle AFB = \\theta$ ہے۔"
+      },
+      {
+       "math": "",
+       "en": "From the given data and part (i), we have the side opposite to $\\theta$ as $m\\overline{AB} = 8$ cm and the hypotenuse as $m\\overline{AF} = \\sqrt{260}$ cm.",
+       "ur": "دی گئی معلومات اور جزو (i) سے، ہمارے پاس زاویہ $\\theta$ کے مقابل ضلع $m\\overline{AB} = 8$ سینٹی میٹر اور وتر $m\\overline{AF} = \\sqrt{260}$ سینٹی میٹر ہے۔"
+      },
+      {
+       "math": "\\sin\\theta = \\frac{m\\overline{AB}}{m\\overline{AF}}",
+       "en": "In the right-angled $\\triangle ABF$, we apply the sine trigonometric ratio, which is the ratio of the opposite side to the hypotenuse.",
+       "ur": "قائمۃ الزاویہ مثلث $ABF$ میں، ہم سائن (sine) کی مثلثیاتی نسبت استعمال کرتے ہیں، جو کہ عمود اور وتر کی نسبت ہے۔"
+      },
+      {
+       "math": "\\sin\\theta = \\frac{8}{\\sqrt{260}}",
+       "en": "Substitute the values of $m\\overline{AB} = 8$ and $m\\overline{AF} = \\sqrt{260}$ into the formula.",
+       "ur": "فارمولے میں $m\\overline{AB} = 8$ اور $m\\overline{AF} = \\sqrt{260}$ کی قیمتیں درج کریں۔",
+       "check": [
+        "8/sqrt(260) == 4/sqrt(65)"
+       ]
+      },
+      {
+       "math": "\\theta = \\sin^{-1}\\left(\\frac{8}{\\sqrt{260}}\\right) \\approx 29.7^\\circ",
+       "en": "Take the inverse sine ($\\sin^{-1}$) on both sides to find the angle $\\theta$, which rounds to $29.7^\\circ$.",
+       "ur": "زاویہ $\\theta$ معلوم کرنے کے لیے دونوں طرف معکوس سائن ($\\sin^{-1}$) لیں، جو کہ تقریباً $29.7^\\circ$ بنتا ہے۔",
        "check": [
         "Abs((asin(8/sqrt(260))*180/pi) - 29.7) <= 0.050000001"
        ]
       }
      ],
      "answer": "$29.7^\\circ$",
+     "enriched": true,
      "book_key": "29.7"
     }
    ],
@@ -2220,24 +4048,49 @@
      "prompt": "",
      "steps": [
       {
-       "math": "OP = \\sqrt{4^2 + 3^2} = 5\\ \\text{km},\\quad \\tan\\theta = \\frac{3}{4} \\Rightarrow \\theta \\approx 36.9^\\circ",
-       "en": "Angle east of North.",
-       "ur": "شمال سے مشرق کی طرف زاویہ۔",
+       "math": "",
+       "en": "Hashim walks $4\\text{ km}$ due North and then turns $90^\\circ$ to walk $3\\text{ km}$ due East. This forms a right-angled triangle. Let $\\theta$ be the angle from the North line towards the East, so the adjacent side is $4\\text{ km}$ and the opposite side is $3\\text{ km}$.",
+       "ur": "ہاشم شمال کی طرف $4\\text{ km}$ چلتا ہے اور پھر $90^\\circ$ مڑ کر مشرق کی طرف $3\\text{ km}$ چلتا ہے۔ اس سے ایک قائمۃ الزاویہ مثلث بنتی ہے۔ فرض کریں کہ شمال کی سمت سے مشرق کی طرف زاویہ $\\theta$ ہے، تو متصل ضلع $4\\text{ km}$ اور مقابل ضلع $3\\text{ km}$ ہے۔"
+      },
+      {
+       "math": "OP = \\sqrt{4^2 + 3^2} = \\sqrt{16 + 9} = \\sqrt{25} = 5\\ \\text{km}",
+       "en": "By using the Pythagorean theorem, we can find the direct distance $OP$ from the starting point to his final position.",
+       "ur": "مسئلہ فیثاغورث کا استعمال کرتے ہوئے، ہم نقطہ آغاز سے اس کی آخری پوزیشن تک براہ راست فاصلہ $OP$ معلوم کر سکتے ہیں۔",
        "check": [
         "sqrt(4**2 + 3**2) == 5",
+        "16 + 9 == 25",
+        "sqrt(25) == 5"
+       ]
+      },
+      {
+       "math": "\\tan\\theta = \\frac{\\text{Opposite}}{\\text{Adjacent}} = \\frac{3}{4} = 0.75",
+       "en": "To find the angle $\\theta$ east of North, we use the tangent trigonometric ratio.",
+       "ur": "شمال سے مشرق کی طرف زاویہ $\\theta$ معلوم کرنے کے لیے، ہم ٹینجنٹ کی مثلثیاتی نسبت استعمال کرتے ہیں۔",
+       "check": [
+        "R(3,4) == 0.75"
+       ]
+      },
+      {
+       "math": "\\theta = \\tan^{-1}\\left(\\frac{3}{4}\\right) \\approx 36.9^\\circ",
+       "en": "Taking the inverse tangent on both sides gives the angle $\\theta$.",
+       "ur": "دونوں طرف معکوس ٹینجنٹ لینے سے زاویہ $\\theta$ حاصل ہوتا ہے۔",
+       "check": [
         "Abs((atan(R(3,4))*180/pi) - 36.9) <= 0.050000001"
        ]
       },
       {
        "math": "\\text{Bearing} \\approx 037^\\circ",
-       "en": "Measured clockwise from North, to the nearest degree.",
-       "ur": "شمال سے گھڑی کی سمت، قریب ترین درجہ تک۔",
+       "en": "A bearing is measured clockwise from North and written as a three-digit angle rounded to the nearest degree. Thus, the bearing is $037^\\circ$.",
+       "ur": "بیئرنگ (سمت) کو شمال سے گھڑی کی سمت میں ناپا جاتا ہے اور قریب ترین درجہ تک راؤنڈ کر کے تین ہندسوں کے زاویے کے طور پر لکھا جاتا ہے۔ اس طرح، بیئرنگ $037^\\circ$ ہے۔",
        "check": [
-        "Abs((atan(R(3,4))*180/pi) - 37) <= 0.500000001"
+        "Abs((atan(R(3,4))*180/pi) - 37) <= 0.500000001",
+        "sqrt(4**2 + 3**2) == 5",
+        "Abs((atan(R(3,4))*180/pi) - 36.9) <= 0.050000001"
        ]
       }
      ],
      "answer": "$037^\\circ$",
+     "enriched": true,
      "book_key": "037"
     }
    ],
@@ -2255,24 +4108,49 @@
      "prompt": "",
      "steps": [
       {
-       "math": "\\text{Angle} = 135^\\circ - 45^\\circ = 90^\\circ",
-       "en": "The legs are at right angles.",
-       "ur": "دونوں راستے قائمہ زاویے پر ہیں۔",
+       "math": "",
+       "en": "Let the starting point be $A$, the turning point be $B$, and the final position be $C$. We are given the distances $AB = 200\\ \\text{km}$ on a bearing of $045^\\circ$ and $BC = 150\\ \\text{km}$ on a bearing of $135^\\circ$. We need to find the distance $d = AC$ from the original position.",
+       "ur": "فرض کریں کہ ابتدائی نقطہ $A$ ہے، مڑنے کا نقطہ $B$ ہے، اور آخری مقام $C$ ہے۔ ہمیں فاصلہ $AB = 200\\ \\text{km}$ سمتیہ $045^\\circ$ پر اور فاصلہ $BC = 150\\ \\text{km}$ سمتیہ $135^\\circ$ پر دیا گیا ہے۔ ہمیں ابتدائی مقام سے فاصلہ $d = AC$ معلوم کرنا ہے۔"
+      },
+      {
+       "math": "\\theta = 135^\\circ - 45^\\circ = 90^\\circ",
+       "en": "First, we find the angle between the two flight paths by subtracting the two bearings. Since the difference is $90^\\circ$, the two legs of the journey are at right angles to each other, forming a right-angled triangle $ABC$ at $B$.",
+       "ur": "سب سے پہلے، ہم دونوں سمتیوں کی تفریق کر کے پرواز کے دونوں راستوں کے درمیان زاویہ معلوم کرتے ہیں۔ چونکہ فرق $90^\\circ$ ہے، اس لیے سفر کے دونوں حصے ایک دوسرے کے ساتھ قائمہ زاویہ بناتے ہیں، جس سے نقطہ $B$ پر ایک قائمہ الزاویہ مثلث $ABC$ بنتی ہے۔",
        "check": [
         "135 - 45 == 90"
        ]
       },
       {
-       "math": "d^2 = 200^2 + 150^2 - 2(200)(150)\\cos 90^\\circ = 62500 \\Rightarrow d = 250\\ \\text{km}",
-       "en": "Law of cosines.",
-       "ur": "قانون جیب التمام۔",
+       "math": "d^2 = 200^2 + 150^2 - 2(200)(150)\\cos 90^\\circ = 40000 + 22500 - 0",
+       "en": "Using the Law of Cosines (or Pythagoras theorem since the angle is $90^\\circ$), we substitute the lengths of the two legs and the included angle.",
+       "ur": "قانونِ جیب التمام (یا مسئلہ فیثاغورث کیونکہ زاویہ $90^\\circ$ ہے) کا استعمال کرتے ہوئے، ہم دونوں اطراف کی لمبائی اور درمیانی زاویہ کی قیمتیں درج کرتے ہیں۔",
        "check": [
-        "200**2 + 150**2 - 2*200*150*cos((90)*pi/180) == 62500",
-        "sqrt(62500) == 250"
+        "200**2 + 150**2 - 2*200*150*cos(90*pi/180) == 40000 + 22500 - 0",
+        "200**2 == 40000",
+        "150**2 == 22500"
+       ]
+      },
+      {
+       "math": "d^2 = 40000 + 22500 = 62500",
+       "en": "Now, we add the values to find $d^2$.",
+       "ur": "اب، ہم $d^2$ معلوم کرنے کے لیے ان قیمتوں کو جمع کرتے ہیں۔",
+       "check": [
+        "40000 + 22500 == 62500"
+       ]
+      },
+      {
+       "math": "d = \\sqrt{62500} = 250\\ \\text{km}",
+       "en": "Taking the square root on both sides gives the final distance of the plane from its original position.",
+       "ur": "دونوں طرف جزر المربع لینے سے جہاز کا اس کے ابتدائی مقام سے حتمی فاصلہ حاصل ہوتا ہے۔",
+       "check": [
+        "sqrt(62500) == 250",
+        "135 - 45 == 90",
+        "200**2 + 150**2 - 2*200*150*cos((90)*pi/180) == 62500"
        ]
       }
      ],
      "answer": "$250$ km",
+     "enriched": true,
      "book_key": "250 km"
     }
    ],

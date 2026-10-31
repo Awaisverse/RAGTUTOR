@@ -1,0 +1,145 @@
+{
+ "item": "c10-rev12-q2",
+ "label": "",
+ "answer_ref": "4 outcomes: (M, T), (M, W), (E, T), (E, W)",
+ "steps": [
+  {
+   "math": "\\text{Days} = \\{T, W\\}, \\quad \\text{Times} = \\{M, E\\}",
+   "en": "Let us denote the days Tuesday and Wednesday by $T$ and $W$, and the times Morning and Evening by $M$ and $E$ respectively.",
+   "ur": "آئیے منگل اور بدھ کے دنوں کو بالترتیب $T$ اور $W$ سے، اور صبح اور شام کے اوقات کو بالترتیب $M$ اور $E$ سے ظاہر کرتے ہیں۔",
+   "draw": [
+    {
+     "t": "line",
+     "p": [
+      8.0,
+      30.0,
+      50.0,
+      17.5
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      51.0,
+      18.5
+     ],
+     "s": "M"
+    },
+    {
+     "t": "line",
+     "p": [
+      8.0,
+      30.0,
+      50.0,
+      42.5
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      51.0,
+      43.5
+     ],
+     "s": "E"
+    },
+    {
+     "t": "line",
+     "p": [
+      54.0,
+      17.5,
+      92.0,
+      11.25
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      93.0,
+      12.25
+     ],
+     "s": "T"
+    },
+    {
+     "t": "line",
+     "p": [
+      54.0,
+      17.5,
+      92.0,
+      23.75
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      93.0,
+      24.75
+     ],
+     "s": "W"
+    },
+    {
+     "t": "line",
+     "p": [
+      54.0,
+      42.5,
+      92.0,
+      36.25
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      93.0,
+      37.25
+     ],
+     "s": "T"
+    },
+    {
+     "t": "line",
+     "p": [
+      54.0,
+      42.5,
+      92.0,
+      48.75
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      93.0,
+      49.75
+     ],
+     "s": "W"
+    }
+   ]
+  },
+  {
+   "math": "\\text{Total outcomes} = 2 \\times 2 = 4",
+   "en": "Since there are $2$ choices for the time and $2$ choices for the day, the total number of possible outcomes is $4$.",
+   "ur": "چونکہ وقت کے لیے $2$ اور دن کے لیے بھی $2$ انتخاب ہیں، اس لیے ممکنہ نتائج کی کل تعداد $4$ ہے۔",
+   "check": [
+    "2*2 == 4"
+   ]
+  },
+  {
+   "math": "\\begin{array}{c|cc} \\text{Time / Day} & \\text{Tuesday } (T) & \\text{Wednesday } (W) \\\\ \\hline \\text{Morning } (M) & (M, T) & (M, W) \\\\ \\text{Evening } (E) & (E, T) & (E, W) \\end{array}",
+   "en": "To draw the possibility diagram, we place the times in the rows and the days in the columns. Each cell represents a pair of (Time, Day).",
+   "ur": "امکانی خاکہ (possibility diagram) بنانے کے لیے ہم اوقات کو قطاروں میں اور دنوں کو کالموں میں رکھتے ہیں۔ ہر خانہ (وقت، دن) کے ایک جوڑے کو ظاہر کرتا ہے۔"
+  },
+  {
+   "math": "\\text{Start} \\begin{cases} M \\begin{cases} T \\longrightarrow (M, T) \\\\ W \\longrightarrow (M, W) \\end{cases} \\\\ E \\begin{cases} T \\longrightarrow (E, T) \\\\ W \\longrightarrow (E, W) \\end{cases} \\end{cases}",
+   "en": "Next, we sketch the tree diagram. The first set of branches represents the selection of Time ($M$ or $E$), and the second set of branches represents the selection of Day ($T$ or $W$).",
+   "ur": "اب ہم درختی خاکہ (tree diagram) بناتے ہیں۔ شاخوں کا پہلا حصہ وقت ($M$ یا $E$) کے انتخاب کو ظاہر کرتا ہے، اور شاخوں کا دوسرا حصہ دن ($T$ یا $W$) کے انتخاب کو ظاہر کرتا ہے۔"
+  },
+  {
+   "math": "S = \\{(M, T), (M, W), (E, T), (E, W)\\}",
+   "en": "Both the possibility diagram and the tree diagram give the same $4$ possible outcomes.",
+   "ur": "امکانی خاکہ اور درختی خاکہ دونوں ہی ایک جیسے $4$ ممکنہ نتائج دیتے ہیں۔",
+   "check": [
+    "2*2 == 4"
+   ]
+  }
+ ],
+ "keeps_drawing": true,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

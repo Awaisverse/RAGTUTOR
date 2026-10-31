@@ -1,0 +1,48 @@
+{
+ "item": "c10-ex1.3-q1",
+ "label": "iv",
+ "answer_ref": "$\\sqrt{5}$",
+ "steps": [
+  {
+   "math": "z = -\\sqrt{2} - \\sqrt{3}i",
+   "en": "Let the given complex number be $z$. Comparing it with the standard form $a + bi$, the real part is $a = -\\sqrt{2}$ and the imaginary part is $b = -\\sqrt{3}$.",
+   "ur": "فرض کریں کہ دیا گیا مخلوط عدد $z$ ہے۔ اس کا معیاری شکل $a + bi$ سے موازنہ کرنے پر، حقیقی حصہ $a = -\\sqrt{2}$ اور خیالی حصہ $b = -\\sqrt{3}$ ہے۔"
+  },
+  {
+   "math": "|z| = \\sqrt{a^2 + b^2}",
+   "en": "Write down the formula for the modulus of a complex number $z = a + bi$.",
+   "ur": "مخلوط عدد $z = a + bi$ کے مقیاس (ماڈولس) کا فارمولا لکھیں۔"
+  },
+  {
+   "math": "|z| = \\sqrt{(-\\sqrt{2})^2 + (-\\sqrt{3})^2}",
+   "en": "Substitute the values $a = -\\sqrt{2}$ and $b = -\\sqrt{3}$ into the formula.",
+   "ur": "فارمولے میں $a = -\\sqrt{2}$ اور $b = -\\sqrt{3}$ کی قیمتیں درج کریں۔",
+   "check": [
+    "Abs(-sqrt(2) - sqrt(3)*I) == sqrt((-sqrt(2))**2 + (-sqrt(3))**2)"
+   ]
+  },
+  {
+   "math": "|z| = \\sqrt{2 + 3}",
+   "en": "Square both terms inside the square root. Since the square of a negative number is positive, $(-\\sqrt{2})^2 = 2$ and $(-\\sqrt{3})^2 = 3$.",
+   "ur": "جذر کے اندر موجود دونوں رقموں کا مربع لیں۔ چونکہ منفی عدد کا مربع مثبت ہوتا ہے، اس لیے $(-\\sqrt{2})^2 = 2$ اور $(-\\sqrt{3})^2 = 3$ بنتا ہے۔",
+   "check": [
+    "(-sqrt(2))**2 == 2",
+    "(-sqrt(3))**2 == 3",
+    "sqrt((-sqrt(2))**2 + (-sqrt(3))**2) == sqrt(2 + 3)"
+   ]
+  },
+  {
+   "math": "|z| = \\sqrt{5}",
+   "en": "Add the numbers inside the square root to get the final answer.",
+   "ur": "حتمی جواب حاصل کرنے کے لیے جذر کے اندر موجود اعداد کو جمع کریں۔",
+   "check": [
+    "sqrt(2 + 3) == sqrt(5)",
+    "Abs(-sqrt(2) - sqrt(3)*I) == sqrt(5)",
+    "sqrt((-sqrt(2))**2 + (-sqrt(3))**2) == (sqrt(5))",
+    "Abs((-sqrt(2) - sqrt(3)*I)) == (sqrt(5))"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

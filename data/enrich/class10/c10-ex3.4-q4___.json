@@ -1,0 +1,62 @@
+{
+ "item": "c10-ex3.4-q4",
+ "label": "",
+ "answer_ref": "$x = 4,\\ y = -2$",
+ "steps": [
+  {
+   "math": "\\begin{bmatrix} x & 1 \\\\ y & 2 \\end{bmatrix}\\begin{bmatrix} 1 & 0 \\\\ 3 & -1 \\end{bmatrix} = \\begin{bmatrix} 7 & -1 \\\\ 4 & -2 \\end{bmatrix}",
+   "en": "We are given the following matrix equation and need to find the values of $x$ and $y$.",
+   "ur": "ہمیں درج ذیل قالب مساوات دی گئی ہے اور ہمیں $x$ اور $y$ کی قیمتیں معلوم کرنی ہیں۔"
+  },
+  {
+   "math": "\\begin{bmatrix} x(1) + 1(3) & x(0) + 1(-1) \\\\ y(1) + 2(3) & y(0) + 2(-1) \\end{bmatrix} = \\begin{bmatrix} 7 & -1 \\\\ 4 & -2 \\end{bmatrix}",
+   "en": "Multiply the two matrices on the left-hand side by applying the row-by-column multiplication rule.",
+   "ur": "بائیں طرف موجود دونوں قالبوں کو قطار ضرب کالم کے اصول کے مطابق ضرب دیں۔",
+   "check": [
+    "Matrix([[x, 1], [y, 2]]) * Matrix([[1, 0], [3, -1]]) == Matrix([[x*1 + 1*3, x*0 + 1*(-1)], [y*1 + 2*3, y*0 + 2*(-1)]])"
+   ]
+  },
+  {
+   "math": "\\begin{bmatrix} x + 3 & 0 - 1 \\\\ y + 6 & 0 - 2 \\end{bmatrix} = \\begin{bmatrix} 7 & -1 \\\\ 4 & -2 \\end{bmatrix}",
+   "en": "Perform the multiplications inside the matrix on the left-hand side.",
+   "ur": "بائیں طرف کے قالب کے اندر ضرب کا عمل مکمل کریں۔",
+   "check": [
+    "Matrix([[x*1 + 1*3, x*0 + 1*(-1)], [y*1 + 2*3, y*0 + 2*(-1)]]) == Matrix([[x + 3, 0 - 1], [y + 6, 0 - 2]])"
+   ]
+  },
+  {
+   "math": "\\begin{bmatrix} x + 3 & -1 \\\\ y + 6 & -2 \\end{bmatrix} = \\begin{bmatrix} 7 & -1 \\\\ 4 & -2 \\end{bmatrix}",
+   "en": "Simplify the entries of the resulting matrix.",
+   "ur": "حاصل ہونے والے قالب کے ارکان کو مختصر کریں۔",
+   "check": [
+    "Matrix([[x + 3, 0 - 1], [y + 6, 0 - 2]]) == Matrix([[x + 3, -1], [y + 6, -2]])"
+   ]
+  },
+  {
+   "math": "x + 3 = 7, \\quad y + 6 = 4",
+   "en": "Since the two matrices are equal, their corresponding entries must also be equal. Equate the matching entries to form linear equations.",
+   "ur": "چونکہ دونوں قالب برابر ہیں، اس لیے ان کے متناظرہ ارکان بھی برابر ہوں گے۔ متعلقہ ارکان کو برابر رکھ کر یک درجی مساواتیں بنائیں۔"
+  },
+  {
+   "math": "x = 7 - 3 \\Rightarrow x = 4",
+   "en": "Solve the first equation for $x$ by subtracting $3$ from both sides.",
+   "ur": "پہلی مساوات کو $x$ کے لیے حل کرنے کے لیے دونوں طرف سے $3$ تفریق کریں۔",
+   "check": [
+    "7 - 3 == 4"
+   ]
+  },
+  {
+   "math": "y = 4 - 6 \\Rightarrow y = -2",
+   "en": "Solve the second equation for $y$ by subtracting $6$ from both sides. Thus, the required values are $x = 4$ and $y = -2$.",
+   "ur": "دوسری مساوات کو $y$ کے لیے حل کرنے کے لیے دونوں طرف سے $6$ تفریق کریں۔ اس طرح مطلوبہ قیمتیں $x = 4$ اور $y = -2$ ہیں۔",
+   "check": [
+    "4 - 6 == -2",
+    "Matrix([[4, 1], [-2, 2]]) * Matrix([[1, 0], [3, -1]]) == Matrix([[7, -1], [4, -2]])",
+    "Eq(Matrix([[x, 1], [y, 2]])*Matrix([[1, 0], [3, -1]]), Matrix([[x + 3, -1], [y + 6, -2]]))",
+    "Eq(Matrix([[4, 1], [-2, 2]])*Matrix([[1, 0], [3, -1]]), Matrix([[7, -1], [4, -2]]))"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

@@ -16,20 +16,50 @@
      "prompt": "$f(x)+g(x)$",
      "steps": [
       {
-       "math": "f(x) + g(x) = (2 x + 5) + (3 x - 2)",
-       "en": "Put in the two functions.",
-       "ur": "دونوں تفاعل رکھیں۔"
+       "math": "f(x) = 2x + 5, \\quad g(x) = 3x - 2",
+       "en": "Write down the given functions $f(x)$ and $g(x)$.",
+       "ur": "دیے گئے تفاعل $f(x)$ اور $g(x)$ لکھیں۔",
+       "check": [
+        "(2*x + 5) == (2*x + 5)",
+        "(3*x - 2) == (3*x - 2)"
+       ]
       },
       {
-       "math": "= 5 x + 3",
-       "en": "Add like terms.",
-       "ur": "متشابہ ارکان جمع کریں۔",
+       "math": "f(x) + g(x) = (2x + 5) + (3x - 2)",
+       "en": "To find $f(x) + g(x)$, substitute the given expressions for both functions.",
+       "ur": "$f(x) + g(x)$ معلوم کرنے کے لیے دونوں تفاعل کی قیمتیں درج کریں۔",
        "check": [
+        "(2*x + 5) + (3*x - 2) == 5*x + 3"
+       ]
+      },
+      {
+       "math": "= 2x + 5 + 3x - 2",
+       "en": "Remove the brackets.",
+       "ur": "بریکٹ ہٹائیں۔",
+       "check": [
+        "(2*x + 5) + (3*x - 2) == 2*x + 5 + 3*x - 2"
+       ]
+      },
+      {
+       "math": "= (2x + 3x) + (5 - 2)",
+       "en": "Group the like terms ($x$-terms together and constant terms together).",
+       "ur": "متشابہ ارکان کو اکٹھا کریں ($x$ والی رقوم ایک ساتھ اور مستقل رقوم ایک ساتھ)۔",
+       "check": [
+        "2*x + 5 + 3*x - 2 == (2*x + 3*x) + (5 - 2)"
+       ]
+      },
+      {
+       "math": "f(x) + g(x) = 5 x + 3",
+       "en": "Add the like terms to get the final answer.",
+       "ur": "حتمی جواب حاصل کرنے کے لیے متشابہ ارکان کو جمع کریں۔",
+       "check": [
+        "(2*x + 3*x) + (5 - 2) == 5*x + 3",
         "(5*x + 3) == (5*x + 3)"
        ]
       }
      ],
      "answer": "$5 x + 3$",
+     "enriched": true,
      "book_key": "5x+3"
     },
     {
@@ -37,20 +67,46 @@
      "prompt": "$f(x)-g(x)$",
      "steps": [
       {
-       "math": "f(x) - g(x) = (2 x + 5) - (3 x - 2)",
-       "en": "Put in the two functions.",
-       "ur": "دونوں تفاعل رکھیں۔"
+       "math": "",
+       "en": "We are given the two functions $f(x) = 2x + 5$ and $g(x) = 3x - 2$. We need to find their difference, $f(x) - g(x)$.",
+       "ur": "ہمیں دو تفاعل $f(x) = 2x + 5$ اور $g(x) = 3x - 2$ دیے گئے ہیں۔ ہمیں ان کا فرق $f(x) - g(x)$ معلوم کرنا ہے۔"
+      },
+      {
+       "math": "f(x) - g(x) = (2x + 5) - (3x - 2)",
+       "en": "Substitute the given expressions for $f(x)$ and $g(x)$ using brackets to avoid sign errors.",
+       "ur": "علامتوں کی غلطی سے بچنے کے لیے قوسین کا استعمال کرتے ہوئے $f(x)$ اور $g(x)$ کی دی گئی قیمتیں درج کریں۔",
+       "check": [
+        "(2*x + 5) - (3*x - 2) == 7 - x"
+       ]
+      },
+      {
+       "math": "= 2x + 5 - 3x + 2",
+       "en": "Remove the brackets. Because there is a minus sign before the second bracket, the signs of the terms inside it change.",
+       "ur": "قوسین کو ہٹائیں۔ چونکہ دوسری قوس سے پہلے منفی کی علامت ہے، اس لیے اس کے اندر موجود ارکان کی علامتیں بدل جائیں گی۔",
+       "check": [
+        "(2*x + 5) - (3*x - 2) == 2*x + 5 - 3*x + 2"
+       ]
+      },
+      {
+       "math": "= (5 + 2) + (2x - 3x)",
+       "en": "Group the constant terms and the like terms in $x$ together.",
+       "ur": "مستقل ارکان اور $x$ والے متشابہ ارکان کو اکٹھا کریں۔",
+       "check": [
+        "2*x + 5 - 3*x + 2 == (5 + 2) + (2*x - 3*x)"
+       ]
       },
       {
        "math": "= 7 - x",
-       "en": "Remove the brackets (change the signs of the second) and collect like terms.",
-       "ur": "قوسین ہٹائیں (دوسری کی علامتیں بدلیں) اور متشابہ ارکان اکٹھے کریں۔",
+       "en": "Simplify the grouped terms to get the final answer: $5 + 2 = 7$ and $2x - 3x = -x$.",
+       "ur": "حتمی جواب حاصل کرنے کے لیے اکٹھے کیے گئے ارکان کو مختصر کریں: $5 + 2 = 7$ اور $2x - 3x = -x$۔",
        "check": [
+        "(5 + 2) + (2*x - 3*x) == 7 - x",
         "(7 - x) == (7 - x)"
        ]
       }
      ],
      "answer": "$7 - x$",
+     "enriched": true,
      "book_key": "7-x"
     }
    ],
@@ -68,20 +124,46 @@
      "prompt": "$f(x)\\cdot g(x)$",
      "steps": [
       {
-       "math": "f(x) \\cdot g(x) = (x + 2) \\cdot (2 x + 4)",
-       "en": "Put in the two functions.",
-       "ur": "دونوں تفاعل رکھیں۔"
+       "math": "",
+       "en": "We are given the two functions $f(x) = x + 2$ and $g(x) = 2x + 4$, and we need to find the product $f(x) \\cdot g(x)$.",
+       "ur": "ہمیں دو تفاعل $f(x) = x + 2$ اور $g(x) = 2x + 4$ دیے گئے ہیں، اور ہمیں ان کا حاصلِ ضرب $f(x) \\cdot g(x)$ معلوم کرنا ہے۔"
       },
       {
-       "math": "= 2 x^{2} + 8 x + 8",
-       "en": "Multiply out and collect like terms.",
-       "ur": "ضرب دے کر متشابہ ارکان اکٹھے کریں۔",
+       "math": "f(x) \\cdot g(x) = (x + 2) \\cdot (2x + 4)",
+       "en": "Substitute the given expressions for $f(x)$ and $g(x)$ into the product.",
+       "ur": "حاصلِ ضرب میں $f(x)$ اور $g(x)$ کی دی گئی قیمتیں درج کریں۔",
        "check": [
+        "(x + 2)*(2*x + 4) == (x + 2)*(2*x + 4)"
+       ]
+      },
+      {
+       "math": "= x(2x + 4) + 2(2x + 4)",
+       "en": "Apply the distributive property to multiply each term of the first expression by the second expression.",
+       "ur": "تقسیمی خاصیت کا استعمال کرتے ہوئے پہلے جملے کے ہر رکن کو دوسرے جملے سے ضرب دیں۔",
+       "check": [
+        "(x + 2)*(2*x + 4) == x*(2*x + 4) + 2*(2*x + 4)"
+       ]
+      },
+      {
+       "math": "= 2x^{2} + 4x + 4x + 8",
+       "en": "Multiply the terms inside the brackets.",
+       "ur": "بریکٹ کے اندر موجود ارکان کو ضرب دیں۔",
+       "check": [
+        "x*(2*x + 4) + 2*(2*x + 4) == 2*x**2 + 4*x + 4*x + 8"
+       ]
+      },
+      {
+       "math": "f(x) \\cdot g(x) = 2 x^{2} + 8 x + 8",
+       "en": "Combine the like terms $4x$ and $4x$ to get the final answer.",
+       "ur": "آخری جواب حاصل کرنے کے لیے متشابہ ارکان $4x$ اور $4x$ کو جمع کریں۔",
+       "check": [
+        "2*x**2 + 4*x + 4*x + 8 == 2*x**2 + 8*x + 8",
         "((x + 2)*(2*x + 4)) == (2*x**2 + 8*x + 8)"
        ]
       }
      ],
      "answer": "$2 x^{2} + 8 x + 8$",
+     "enriched": true,
      "book_key": "2x^2+8x+8"
     },
     {
@@ -89,20 +171,46 @@
      "prompt": "$g(x)\\cdot f(x)$",
      "steps": [
       {
-       "math": "g(x) \\cdot f(x) = (2 x + 4) \\cdot (x + 2)",
-       "en": "Put in the two functions.",
-       "ur": "دونوں تفاعل رکھیں۔"
+       "math": "",
+       "en": "We are given the two functions $f(x) = x + 2$ and $g(x) = 2x + 4$, and we need to find the product $g(x) \\cdot f(x)$.",
+       "ur": "ہمیں دو تفاعل $f(x) = x + 2$ اور $g(x) = 2x + 4$ دیے گئے ہیں، اور ہمیں ان کا حاصلِ ضرب $g(x) \\cdot f(x)$ معلوم کرنا ہے۔"
       },
       {
-       "math": "= 2 x^{2} + 8 x + 8",
-       "en": "Multiply out and collect like terms.",
-       "ur": "ضرب دے کر متشابہ ارکان اکٹھے کریں۔",
+       "math": "g(x) \\cdot f(x) = (2 x + 4) \\cdot (x + 2)",
+       "en": "Substitute the given expressions for $g(x)$ and $f(x)$ into the product.",
+       "ur": "حاصلِ ضرب میں $g(x)$ اور $f(x)$ کی دی گئی قیمتیں درج کریں۔",
        "check": [
+        "(2*x + 4)*(x + 2) == (2*x + 4)*(x + 2)"
+       ]
+      },
+      {
+       "math": "= 2x(x + 2) + 4(x + 2)",
+       "en": "Apply the distributive property to multiply each term of the first expression by the second expression.",
+       "ur": "پہلے جملے کے ہر رکن کو دوسرے جملے سے ضرب دینے کے لیے تقسیمی خاصیت کا استعمال کریں۔",
+       "check": [
+        "(2*x + 4)*(x + 2) == 2*x*(x + 2) + 4*(x + 2)"
+       ]
+      },
+      {
+       "math": "= 2 x^{2} + 4 x + 4 x + 8",
+       "en": "Expand the brackets by multiplying the terms inside.",
+       "ur": "اندرونی ارکان کو ضرب دے کر بریکٹ کھولیں۔",
+       "check": [
+        "2*x*(x + 2) + 4*(x + 2) == 2*x**2 + 4*x + 4*x + 8"
+       ]
+      },
+      {
+       "math": "g(x) \\cdot f(x) = 2 x^{2} + 8 x + 8",
+       "en": "Combine the like terms $4x$ and $4x$ to get the final answer.",
+       "ur": "حتمی جواب حاصل کرنے کے لیے متشابہ ارکان $4x$ اور $4x$ کو آپس میں جمع کریں۔",
+       "check": [
+        "2*x**2 + 4*x + 4*x + 8 == 2*x**2 + 8*x + 8",
         "((x + 2)*(2*x + 4)) == (2*x**2 + 8*x + 8)"
        ]
       }
      ],
      "answer": "$2 x^{2} + 8 x + 8$",
+     "enriched": true,
      "book_key": "2x^2+8x+8"
     },
     {
@@ -110,20 +218,39 @@
      "prompt": "$\\frac{f(x)}{g(x)}$",
      "steps": [
       {
-       "math": "\\frac{f(x)}{g(x)} = \\frac{x + 2}{2 x + 4}",
-       "en": "Put in the two functions.",
-       "ur": "دونوں تفاعل رکھیں۔"
+       "math": "f(x) = x + 2, \\quad g(x) = 2x + 4",
+       "en": "Write down the given functions $f(x)$ and $g(x)$.",
+       "ur": "دیے گئے تفاعل $f(x)$ اور $g(x)$ لکھیں۔"
       },
       {
-       "math": "= \\frac{1}{2}",
-       "en": "Factorize and cancel the common factor.",
-       "ur": "تجزی کر کے مشترک جزو کاٹ دیں۔",
+       "math": "\\frac{f(x)}{g(x)} = \\frac{x + 2}{2x + 4}",
+       "en": "Substitute the given expressions for $f(x)$ in the numerator and $g(x)$ in the denominator.",
+       "ur": "شمار کنندہ میں $f(x)$ اور مخرج میں $g(x)$ کی دی گئی قیمتیں درج کریں۔",
        "check": [
+        "(x + 2)/(2*x + 4) == (x + 2)/(2*x + 4)"
+       ]
+      },
+      {
+       "math": "\\frac{f(x)}{g(x)} = \\frac{x + 2}{2(x + 2)}",
+       "en": "Factorize the denominator by taking $2$ as a common factor from $2x + 4$.",
+       "ur": "مخرج $2x + 4$ میں سے $2$ مشترک لے کر اس کی تجزی کریں۔",
+       "check": [
+        "2*x + 4 == 2*(x + 2)",
+        "(x + 2)/(2*x + 4) == (x + 2)/(2*(x + 2))"
+       ]
+      },
+      {
+       "math": "\\frac{f(x)}{g(x)} = \\frac{1}{2}",
+       "en": "Cancel out the common factor $(x + 2)$ from the numerator and the denominator to get the final answer.",
+       "ur": "آخری جواب حاصل کرنے کے لیے شمار کنندہ اور مخرج میں سے مشترک جزو ضربی $(x + 2)$ کو کاٹ دیں۔",
+       "check": [
+        "(x + 2)/(2*(x + 2)) == R(1, 2)",
         "((x + 2)/(2*x + 4)) == (1/2)"
        ]
       }
      ],
      "answer": "$\\frac{1}{2}$",
+     "enriched": true,
      "book_key": "\\frac{1}{2}"
     },
     {
@@ -131,20 +258,38 @@
      "prompt": "$\\frac{g(x)}{f(x)}$",
      "steps": [
       {
-       "math": "\\frac{g(x)}{f(x)} = \\frac{2 x + 4}{x + 2}",
-       "en": "Put in the two functions.",
-       "ur": "دونوں تفاعل رکھیں۔"
+       "math": "",
+       "en": "We are given the two functions $f(x) = x + 2$ and $g(x) = 2x + 4$, and we need to find the quotient $\\frac{g(x)}{f(x)}$.",
+       "ur": "ہمیں دو تفاعل $f(x) = x + 2$ اور $g(x) = 2x + 4$ دیے گئے ہیں، اور ہمیں ان کا حاصلِ تقسیم $\\frac{g(x)}{f(x)}$ معلوم کرنا ہے۔"
+      },
+      {
+       "math": "\\frac{g(x)}{f(x)} = \\frac{2x + 4}{x + 2}",
+       "en": "Substitute the given expressions for $g(x)$ in the numerator and $f(x)$ in the denominator.",
+       "ur": "شمار کنندہ میں $g(x)$ اور مخرج میں $f(x)$ کی دی گئی قیمتیں درج کریں۔",
+       "check": [
+        "(2*x + 4)/(x + 2) == (2*x + 4)/(x + 2)"
+       ]
+      },
+      {
+       "math": "= \\frac{2(x + 2)}{x + 2}",
+       "en": "Factor out the common number $2$ from the numerator $2x + 4$.",
+       "ur": "شمار کنندہ $2x + 4$ میں سے مشترک عدد $2$ کو باہر نکالیں (تجزی کریں)۔",
+       "check": [
+        "(2*x + 4)/(x + 2) == 2*(x + 2)/(x + 2)"
+       ]
       },
       {
        "math": "= 2",
-       "en": "Factorize and cancel the common factor.",
-       "ur": "تجزی کر کے مشترک جزو کاٹ دیں۔",
+       "en": "Cancel out the common factor $(x + 2)$ from the numerator and denominator (where $x \\neq -2$) to get the final answer.",
+       "ur": "شمار کنندہ اور مخرج سے مشترک جزو $(x + 2)$ کو کاٹ دیں (جہاں $x \\neq -2$) تاکہ حتمی جواب حاصل ہو سکے۔",
        "check": [
+        "2*(x + 2)/(x + 2) == 2",
         "((2*x + 4)/(x + 2)) == (2)"
        ]
       }
      ],
      "answer": "$2$",
+     "enriched": true,
      "book_key": "2"
     }
    ],
@@ -162,20 +307,43 @@
      "prompt": "$f(x)=2x+3;\\ g(x)=x^3$: $(f\\circ g)(x)$",
      "steps": [
       {
-       "math": "(f\\circ g)(x) = f(g(x)) = f\\left(x^{3}\\right)",
-       "en": "Put $g(x)$ in place of $x$ in $f$.",
-       "ur": "$f$ میں $x$ کی جگہ $g(x)$ رکھیں۔"
+       "math": "",
+       "en": "We are given two functions $f(x) = 2x + 3$ and $g(x) = x^3$. We need to find the composite function $(f\\circ g)(x)$.",
+       "ur": "ہمیں دو فنکشنز $f(x) = 2x + 3$ اور $g(x) = x^3$ دیے گئے ہیں۔ ہمیں مرکب فنکشن $(f\\circ g)(x)$ معلوم کرنا ہے۔"
       },
       {
-       "math": "= 2 x^{3} + 3",
-       "en": "Substitute into $f(x) = 2 x + 3$.",
-       "ur": "$f(x) = 2 x + 3$ میں رکھیں۔",
+       "math": "(f\\circ g)(x) = f(g(x))",
+       "en": "By the definition of composition of functions, $(f\\circ g)(x)$ means applying function $f$ to $g(x)$.",
+       "ur": "فنکشنز کی ترکیب (composition) کی تعریف کے مطابق، $(f\\circ g)(x)$ کو $f(g(x))$ لکھا جاتا ہے۔"
+      },
+      {
+       "math": "(f\\circ g)(x) = f(x^{3})",
+       "en": "Substitute the given value of $g(x) = x^3$ inside the function $f$.",
+       "ur": "فنکشن $f$ کے اندر $g(x) = x^3$ کی دی گئی قیمت درج کریں۔",
        "check": [
+        "x**3 == x**3"
+       ]
+      },
+      {
+       "math": "(f\\circ g)(x) = 2(x^{3}) + 3",
+       "en": "Now, replace $x$ with $x^3$ in the given function $f(x) = 2x + 3$.",
+       "ur": "اب دیے گئے فنکشن $f(x) = 2x + 3$ میں جہاں $x$ ہے وہاں $x^3$ رکھیں۔",
+       "check": [
+        "(2*x + 3).subs(x, x**3) == 2*(x**3) + 3"
+       ]
+      },
+      {
+       "math": "(f\\circ g)(x) = 2 x^{3} + 3",
+       "en": "Simplify the expression to get the final answer.",
+       "ur": "حتمی جواب حاصل کرنے کے لیے جملے کو مختصر کریں۔",
+       "check": [
+        "2*(x**3) + 3 == 2*x**3 + 3",
         "(2*x + 3).subs(x, (x**3)) == (2*x**3 + 3)"
        ]
       }
      ],
      "answer": "$2 x^{3} + 3$",
+     "enriched": true,
      "book_key": "2x^3+3"
     },
     {
@@ -183,20 +351,32 @@
      "prompt": "$f(x)=2x+3;\\ g(x)=x^3$: $(g\\circ f)(x)$",
      "steps": [
       {
-       "math": "(g\\circ f)(x) = g(f(x)) = g\\left(2 x + 3\\right)",
-       "en": "Put $f(x)$ in place of $x$ in $g$.",
-       "ur": "$g$ میں $x$ کی جگہ $f(x)$ رکھیں۔"
+       "math": "f(x) = 2x + 3, \\quad g(x) = x^3",
+       "en": "First, write down the given functions $f(x)$ and $g(x)$.",
+       "ur": "سب سے پہلے دیے گئے تفاعل $f(x)$ اور $g(x)$ لکھیں۔"
       },
       {
-       "math": "= \\left(2 x + 3\\right)^{3}",
-       "en": "Substitute into $g(x) = x^{3}$.",
-       "ur": "$g(x) = x^{3}$ میں رکھیں۔",
+       "math": "(g \\circ f)(x) = g(f(x))",
+       "en": "By the definition of composition of functions, $(g \\circ f)(x)$ means applying function $f$ first and then applying function $g$ to the result.",
+       "ur": "تفاعل کی ترکیب کی تعریف کے مطابق، $(g \\circ f)(x)$ کا مطلب ہے پہلے تفاعل $f$ لاگو کرنا اور پھر اس کے نتیجے پر تفاعل $g$ لاگو کرنا۔"
+      },
+      {
+       "math": "(g \\circ f)(x) = g(2x + 3)",
+       "en": "Substitute the value of $f(x) = 2x + 3$ inside the function $g$.",
+       "ur": "تفاعل $g$ کے اندر $f(x) = 2x + 3$ کی قیمت درج کریں۔"
+      },
+      {
+       "math": "(g \\circ f)(x) = \\left(2 x + 3\\right)^{3}",
+       "en": "Since $g(x) = x^3$, replace $x$ with $2x + 3$ in the function $g(x)$ to get the final answer.",
+       "ur": "چونکہ $g(x) = x^3$ ہے، اس لیے حتمی جواب حاصل کرنے کے لیے تفاعل $g(x)$ میں $x$ کی جگہ $2x + 3$ رکھیں۔",
        "check": [
+        "(x**3).subs(x, 2*x + 3) == (2*x + 3)**3",
         "(x**3).subs(x, (2*x + 3)) == ((2*x + 3)**3)"
        ]
       }
      ],
      "answer": "$\\left(2 x + 3\\right)^{3}$",
+     "enriched": true,
      "book_key": "(2x+3)^3"
     },
     {
@@ -204,20 +384,51 @@
      "prompt": "$f(x)=2x+3;\\ g(x)=x^3$: $(f\\circ f)(x)$",
      "steps": [
       {
-       "math": "(f\\circ f)(x) = f(f(x)) = f\\left(2 x + 3\\right)",
-       "en": "Put $f(x)$ in place of $x$ in $f$.",
-       "ur": "$f$ میں $x$ کی جگہ $f(x)$ رکھیں۔"
+       "math": "f(x) = 2x + 3",
+       "en": "Write the given function $f(x)$. We need to find the composite function $(f\\circ f)(x)$.",
+       "ur": "دیا گیا فنکشن $f(x)$ لکھیں۔ ہمیں مرکب فنکشن $(f\\circ f)(x)$ معلوم کرنا ہے۔",
+       "check": [
+        "2*x + 3 == 2*x + 3"
+       ]
       },
       {
-       "math": "= 4 x + 9",
-       "en": "Substitute into $f(x) = 2 x + 3$.",
-       "ur": "$f(x) = 2 x + 3$ میں رکھیں۔",
+       "math": "(f\\circ f)(x) = f(f(x))",
+       "en": "By the definition of composition of functions, $(f\\circ f)(x)$ is written as $f(f(x))$.",
+       "ur": "فنکشنز کی ترکیب (composition) کی تعریف کے مطابق، $(f\\circ f)(x)$ کو $f(f(x))$ لکھا جاتا ہے۔"
+      },
+      {
+       "math": "(f\\circ f)(x) = f(2x + 3)",
+       "en": "Substitute the value of the inner function $f(x) = 2x + 3$.",
+       "ur": "اندرونی فنکشن $f(x) = 2x + 3$ کی قیمت درج کریں۔"
+      },
+      {
+       "math": "(f\\circ f)(x) = 2(2x + 3) + 3",
+       "en": "Now, replace $x$ with $(2x + 3)$ in the function $f(x) = 2x + 3$.",
+       "ur": "اب فنکشن $f(x) = 2x + 3$ میں $x$ کی جگہ $(2x + 3)$ رکھیں۔",
        "check": [
+        "(2*x + 3).subs(x, 2*x + 3) == 2*(2*x + 3) + 3"
+       ]
+      },
+      {
+       "math": "(f\\circ f)(x) = 4x + 6 + 3",
+       "en": "Multiply $2$ inside the brackets to expand the expression.",
+       "ur": "عبارت کو کھولنے کے لیے بریکٹ کے اندر $2$ سے ضرب دیں۔",
+       "check": [
+        "2*(2*x + 3) + 3 == 4*x + 6 + 3"
+       ]
+      },
+      {
+       "math": "(f\\circ f)(x) = 4 x + 9",
+       "en": "Add the constant terms $6$ and $3$ to get the final answer.",
+       "ur": "حتمی جواب حاصل کرنے کے لیے مستقل اعداد $6$ اور $3$ کو جمع کریں۔",
+       "check": [
+        "4*x + 6 + 3 == 4*x + 9",
         "(2*x + 3).subs(x, (2*x + 3)) == (4*x + 9)"
        ]
       }
      ],
      "answer": "$4 x + 9$",
+     "enriched": true,
      "book_key": "4x+9"
     },
     {
@@ -225,20 +436,41 @@
      "prompt": "$f(x)=2x+3;\\ g(x)=x^3$: $(g\\circ g)(x)$",
      "steps": [
       {
-       "math": "(g\\circ g)(x) = g(g(x)) = g\\left(x^{3}\\right)",
-       "en": "Put $g(x)$ in place of $x$ in $g$.",
-       "ur": "$g$ میں $x$ کی جگہ $g(x)$ رکھیں۔"
+       "math": "g(x) = x^{3}",
+       "en": "Write the given function $g(x)$. We need to find the composite function $(g\\circ g)(x)$.",
+       "ur": "دیا گیا فنکشن $g(x)$ لکھیں۔ ہمیں مرکب فنکشن $(g\\circ g)(x)$ معلوم کرنا ہے۔"
       },
       {
-       "math": "= x^{9}",
-       "en": "Substitute into $g(x) = x^{3}$.",
-       "ur": "$g(x) = x^{3}$ میں رکھیں۔",
+       "math": "(g\\circ g)(x) = g(g(x))",
+       "en": "By the definition of composition of a function with itself, $(g\\circ g)(x)$ is written as $g(g(x))$.",
+       "ur": "فنکشن کی اپنے آپ کے ساتھ ترکیب (composition) کی تعریف کے مطابق، $(g\\circ g)(x)$ کو $g(g(x))$ لکھا جاتا ہے۔"
+      },
+      {
+       "math": "(g\\circ g)(x) = g\\left(x^{3}\\right)",
+       "en": "Substitute the value of the inner function $g(x) = x^{3}$ inside the outer function $g$.",
+       "ur": "بیرونی فنکشن $g$ کے اندر اندرونی فنکشن $g(x) = x^{3}$ کی قیمت درج کریں۔"
+      },
+      {
+       "math": "(g\\circ g)(x) = \\left(x^{3}\\right)^{3}",
+       "en": "Now, replace $x$ with $x^{3}$ in the given function $g(x) = x^{3}$.",
+       "ur": "اب دیے گئے فنکشن $g(x) = x^{3}$ میں $x$ کی جگہ $x^{3}$ رکھیں۔",
        "check": [
+        "(x**3).subs(x, x**3) == (x**3)**3"
+       ]
+      },
+      {
+       "math": "(g\\circ g)(x) = x^{3 \\times 3} = x^{9}",
+       "en": "Apply the power of a power rule of exponents, $(a^{m})^{n} = a^{m \\times n}$, to get the final answer.",
+       "ur": "قوت نما کے اصول $(a^{m})^{n} = a^{m \\times n}$ کا اطلاق کرتے ہوئے طاقتوں کو ضرب دیں تاکہ حتمی جواب حاصل ہو سکے۔",
+       "check": [
+        "(x**3)**3 == x**9",
+        "3*3 == 9",
         "(x**3).subs(x, (x**3)) == (x**9)"
        ]
       }
      ],
      "answer": "$x^{9}$",
+     "enriched": true,
      "book_key": "x^9"
     },
     {
@@ -246,20 +478,32 @@
      "prompt": "$f(x)=\\frac{2}{x},\\ x\\ne 0;\\ g(x)=2x^2-1$: $(f\\circ g)(x)$",
      "steps": [
       {
-       "math": "(f\\circ g)(x) = f(g(x)) = f\\left(2 x^{2} - 1\\right)",
-       "en": "Put $g(x)$ in place of $x$ in $f$.",
-       "ur": "$f$ میں $x$ کی جگہ $g(x)$ رکھیں۔"
+       "math": "f(x) = \\frac{2}{x} \\quad (x \\ne 0), \\quad g(x) = 2x^{2} - 1",
+       "en": "Write down the given functions $f(x)$ and $g(x)$.",
+       "ur": "دیے گئے فنکشنز $f(x)$ اور $g(x)$ لکھیں۔"
       },
       {
-       "math": "= \\frac{2}{2 x^{2} - 1}",
-       "en": "Substitute into $f(x) = \\frac{2}{x}$.",
-       "ur": "$f(x) = \\frac{2}{x}$ میں رکھیں۔",
+       "math": "(f \\circ g)(x) = f(g(x))",
+       "en": "By the definition of composition of functions, $(f \\circ g)(x)$ means applying the function $f$ to $g(x)$.",
+       "ur": "فنکشنز کی ترکیب (composition) کی تعریف کے مطابق، $(f \\circ g)(x)$ کا مطلب ہے فنکشن $f$ کو $g(x)$ پر لاگو کرنا۔"
+      },
+      {
+       "math": "(f \\circ g)(x) = f\\left(2x^{2} - 1\\right)",
+       "en": "Substitute the given expression $g(x) = 2x^{2} - 1$ inside the function $f$.",
+       "ur": "فنکشن $f$ کے اندر دی گئی قیمت $g(x) = 2x^{2} - 1$ درج کریں۔"
+      },
+      {
+       "math": "(f \\circ g)(x) = \\frac{2}{2 x^{2} - 1}",
+       "en": "Now, replace $x$ with $(2x^{2} - 1)$ in the function $f(x) = \\frac{2}{x}$ to get the final answer.",
+       "ur": "اب حتمی جواب حاصل کرنے کے لیے فنکشن $f(x) = \\frac{2}{x}$ میں $x$ کی جگہ $(2x^{2} - 1)$ رکھیں۔",
        "check": [
+        "(2/x).subs(x, 2*x**2 - 1) == 2/(2*x**2 - 1)",
         "(2/x).subs(x, (2*x**2 - 1)) == (2/(2*x**2 - 1))"
        ]
       }
      ],
      "answer": "$\\frac{2}{2 x^{2} - 1}$",
+     "enriched": true,
      "book_key": "\\frac{2}{2x^2-1}"
     },
     {
@@ -267,20 +511,48 @@
      "prompt": "$f(x)=\\frac{2}{x},\\ x\\ne 0;\\ g(x)=2x^2-1$: $(g\\circ f)(x)$",
      "steps": [
       {
-       "math": "(g\\circ f)(x) = g(f(x)) = g\\left(\\frac{2}{x}\\right)",
-       "en": "Put $f(x)$ in place of $x$ in $g$.",
-       "ur": "$g$ میں $x$ کی جگہ $f(x)$ رکھیں۔"
+       "math": "f(x) = \\frac{2}{x}, \\quad x \\ne 0; \\qquad g(x) = 2x^{2} - 1",
+       "en": "Write down the given functions $f(x)$ and $g(x)$. We need to find the composite function $(g \\circ f)(x)$.",
+       "ur": "دیے گئے تفاعل $f(x)$ اور $g(x)$ لکھیں۔ ہمیں ترکیبی تفاعل $(g \\circ f)(x)$ معلوم کرنا ہے۔"
       },
       {
-       "math": "= -1 + \\frac{8}{x^{2}}",
-       "en": "Substitute into $g(x) = 2 x^{2} - 1$.",
-       "ur": "$g(x) = 2 x^{2} - 1$ میں رکھیں۔",
+       "math": "(g \\circ f)(x) = g(f(x))",
+       "en": "By the definition of composition of functions, $(g \\circ f)(x)$ means applying the function $g$ to $f(x)$.",
+       "ur": "تفاعل کی ترکیب کی تعریف کے مطابق، $(g \\circ f)(x)$ کا مطلب تفاعل $g$ کو $f(x)$ پر لاگو کرنا ہے۔"
+      },
+      {
+       "math": "(g \\circ f)(x) = g\\left(\\frac{2}{x}\\right)",
+       "en": "Substitute the given expression $f(x) = \\frac{2}{x}$ inside the function $g$.",
+       "ur": "تفاعل $g$ کے اندر دی گئی قیمت $f(x) = \\frac{2}{x}$ درج کریں۔"
+      },
+      {
+       "math": "(g \\circ f)(x) = 2\\left(\\frac{2}{x}\\right)^{2} - 1",
+       "en": "Now, replace $x$ with $\\frac{2}{x}$ in the formula for $g(x) = 2x^{2} - 1$.",
+       "ur": "اب، $g(x) = 2x^{2} - 1$ کے فارمولے میں $x$ کی جگہ $\\frac{2}{x}$ رکھیں۔",
        "check": [
+        "(2*x**2 - 1).subs(x, 2/x) == 2*(2/x)**2 - 1"
+       ]
+      },
+      {
+       "math": "(g \\circ f)(x) = 2\\left(\\frac{4}{x^{2}}\\right) - 1",
+       "en": "Square both the numerator and the denominator of the fraction: $\\left(\\frac{2}{x}\\right)^{2} = \\frac{4}{x^{2}}$.",
+       "ur": "کسر کے شمار کنندہ اور مخرج دونوں کا مربع لیں: $\\left(\\frac{2}{x}\\right)^{2} = \\frac{4}{x^{2}}$۔",
+       "check": [
+        "2*(2/x)**2 - 1 == 2*(4/x**2) - 1"
+       ]
+      },
+      {
+       "math": "(g \\circ f)(x) = -1 + \\frac{8}{x^{2}}",
+       "en": "Multiply $2$ by $4$ in the numerator and write the final simplified expression.",
+       "ur": "شمار کنندہ میں $2$ کو $4$ سے ضرب دیں اور حتمی مختصر شکل لکھیں۔",
+       "check": [
+        "2*(4/x**2) - 1 == -1 + 8/x**2",
         "(2*x**2 - 1).subs(x, (2/x)) == (-1 + 8/x**2)"
        ]
       }
      ],
      "answer": "$-1 + \\frac{8}{x^{2}}$",
+     "enriched": true,
      "book_key": "-1+\\frac{8}{x^2}"
     },
     {
@@ -288,20 +560,48 @@
      "prompt": "$f(x)=\\frac{2}{x},\\ x\\ne 0;\\ g(x)=2x^2-1$: $(f\\circ f)(x)$",
      "steps": [
       {
-       "math": "(f\\circ f)(x) = f(f(x)) = f\\left(\\frac{2}{x}\\right)",
-       "en": "Put $f(x)$ in place of $x$ in $f$.",
-       "ur": "$f$ میں $x$ کی جگہ $f(x)$ رکھیں۔"
+       "math": "f(x) = \\frac{2}{x}, \\quad x \\ne 0",
+       "en": "Write down the given function $f(x)$ needed to find $(f\\circ f)(x)$.",
+       "ur": "$(f\\circ f)(x)$ معلوم کرنے کے لیے دیے گئے تفاعل $f(x)$ کو لکھیں۔"
       },
       {
-       "math": "= x",
-       "en": "Substitute into $f(x) = \\frac{2}{x}$.",
-       "ur": "$f(x) = \\frac{2}{x}$ میں رکھیں۔",
+       "math": "(f\\circ f)(x) = f(f(x))",
+       "en": "By the definition of composition of a function with itself, $(f\\circ f)(x)$ means applying the function $f$ to $f(x)$.",
+       "ur": "تفاعل کی اپنے آپ کے ساتھ ترکیب کی تعریف کے مطابق، $(f\\circ f)(x)$ کا مطلب تفاعل $f$ کو $f(x)$ پر لاگو کرنا ہے۔"
+      },
+      {
+       "math": "(f\\circ f)(x) = f\\left(\\frac{2}{x}\\right)",
+       "en": "Substitute the given value $f(x) = \\frac{2}{x}$ inside the outer function $f$.",
+       "ur": "بیرونی تفاعل $f$ کے اندر دی گئی قیمت $f(x) = \\frac{2}{x}$ درج کریں۔"
+      },
+      {
+       "math": "(f\\circ f)(x) = \\frac{2}{\\frac{2}{x}}",
+       "en": "Now, replace $x$ with $\\frac{2}{x}$ in the formula $f(x) = \\frac{2}{x}$.",
+       "ur": "اب کلیہ $f(x) = \\frac{2}{x}$ میں $x$ کی جگہ $\\frac{2}{x}$ رکھیں۔",
        "check": [
+        "(2/x).subs(x, 2/x) == 2/(2/x)"
+       ]
+      },
+      {
+       "math": "(f\\circ f)(x) = 2 \\times \\frac{x}{2}",
+       "en": "To divide by the fraction $\\frac{2}{x}$, multiply $2$ by its reciprocal $\\frac{x}{2}$.",
+       "ur": "کسر $\\frac{2}{x}$ سے تقسیم کرنے کے لیے، $2$ کو اس کے معکوس $\\frac{x}{2}$ سے ضرب دیں۔",
+       "check": [
+        "2/(2/x) == 2*(x/2)"
+       ]
+      },
+      {
+       "math": "(f\\circ f)(x) = x",
+       "en": "Cancel out $2$ from the numerator and the denominator to get the final answer.",
+       "ur": "حتمی جواب حاصل کرنے کے لیے شمار کنندہ اور مخرج سے $2$ کو کاٹ دیں۔",
+       "check": [
+        "2*(x/2) == x",
         "(2/x).subs(x, (2/x)) == (x)"
        ]
       }
      ],
      "answer": "$x$",
+     "enriched": true,
      "book_key": "x"
     },
     {
@@ -338,20 +638,48 @@
      "prompt": "$f(x)=2x-1;\\ g(x)=\\frac{x+1}{2}$: $(f\\circ g)(x)$",
      "steps": [
       {
-       "math": "(f\\circ g)(x) = f(g(x)) = f\\left(\\frac{x}{2} + \\frac{1}{2}\\right)",
-       "en": "Put $g(x)$ in place of $x$ in $f$.",
-       "ur": "$f$ میں $x$ کی جگہ $g(x)$ رکھیں۔"
+       "math": "f(x) = 2x - 1, \\quad g(x) = \\frac{x+1}{2}",
+       "en": "Write down the given functions $f(x)$ and $g(x)$.",
+       "ur": "دیے گئے تفاعل $f(x)$ اور $g(x)$ لکھیں۔"
       },
       {
-       "math": "= x",
-       "en": "Substitute into $f(x) = 2 x - 1$.",
-       "ur": "$f(x) = 2 x - 1$ میں رکھیں۔",
+       "math": "(f \\circ g)(x) = f(g(x))",
+       "en": "By the definition of composition of functions, $(f \\circ g)(x)$ means applying function $f$ to $g(x)$.",
+       "ur": "تفاعلات کی ترکیب کی تعریف کے مطابق، $(f \\circ g)(x)$ کا مطلب $g(x)$ پر تفاعل $f$ کا اطلاق کرنا ہے۔"
+      },
+      {
+       "math": "(f \\circ g)(x) = f\\left(\\frac{x+1}{2}\\right)",
+       "en": "Substitute the given value of $g(x) = \\frac{x+1}{2}$ inside the bracket.",
+       "ur": "بریکٹ کے اندر $g(x) = \\frac{x+1}{2}$ کی دی گئی قیمت درج کریں۔"
+      },
+      {
+       "math": "(f \\circ g)(x) = 2\\left(\\frac{x+1}{2}\\right) - 1",
+       "en": "Now, replace $x$ with $\\frac{x+1}{2}$ in the function $f(x) = 2x - 1$.",
+       "ur": "اب، تفاعل $f(x) = 2x - 1$ میں $x$ کی جگہ $\\frac{x+1}{2}$ درج کریں۔",
        "check": [
+        "(2*x - 1).subs(x, (x + 1)/2) == 2*((x + 1)/2) - 1"
+       ]
+      },
+      {
+       "math": "(f \\circ g)(x) = (x + 1) - 1",
+       "en": "Cancel out $2$ from the numerator and the denominator.",
+       "ur": "شمار کنندہ اور مخرج سے $2$ کو کاٹ دیں۔",
+       "check": [
+        "2*((x + 1)/2) - 1 == (x + 1) - 1"
+       ]
+      },
+      {
+       "math": "(f \\circ g)(x) = x",
+       "en": "Simplify the expression by subtracting $1$ from $1$ to get the final answer.",
+       "ur": "حتمی جواب حاصل کرنے کے لیے $1$ میں سے $1$ تفریق کر کے عبارت کو مختصر کریں۔",
+       "check": [
+        "(x + 1) - 1 == x",
         "(2*x - 1).subs(x, (x/2 + 1/2)) == (x)"
        ]
       }
      ],
      "answer": "$x$",
+     "enriched": true,
      "book_key": "x"
     },
     {
@@ -359,20 +687,48 @@
      "prompt": "$f(x)=2x-1;\\ g(x)=\\frac{x+1}{2}$: $(g\\circ f)(x)$",
      "steps": [
       {
-       "math": "(g\\circ f)(x) = g(f(x)) = g\\left(2 x - 1\\right)",
-       "en": "Put $f(x)$ in place of $x$ in $g$.",
-       "ur": "$g$ میں $x$ کی جگہ $f(x)$ رکھیں۔"
+       "math": "f(x) = 2x - 1, \\quad g(x) = \\frac{x+1}{2}",
+       "en": "Write down the given functions $f(x)$ and $g(x)$.",
+       "ur": "دیے گئے تفاعل $f(x)$ اور $g(x)$ لکھیں۔"
       },
       {
-       "math": "= x",
-       "en": "Substitute into $g(x) = \\frac{x}{2} + \\frac{1}{2}$.",
-       "ur": "$g(x) = \\frac{x}{2} + \\frac{1}{2}$ میں رکھیں۔",
+       "math": "(g \\circ f)(x) = g(f(x))",
+       "en": "By the definition of composition of functions, $(g \\circ f)(x)$ means applying the function $g$ to $f(x)$.",
+       "ur": "تفاعلات کی ترکیب کی تعریف کے مطابق، $(g \\circ f)(x)$ کا مطلب تفاعل $g$ کو $f(x)$ پر لاگو کرنا ہے۔"
+      },
+      {
+       "math": "(g \\circ f)(x) = g(2x - 1)",
+       "en": "Substitute the given expression $f(x) = 2x - 1$ inside the function $g$.",
+       "ur": "تفاعل $g$ کے اندر دی گئی قیمت $f(x) = 2x - 1$ درج کریں۔"
+      },
+      {
+       "math": "(g \\circ f)(x) = \\frac{(2x - 1) + 1}{2}",
+       "en": "Now, replace $x$ with $(2x - 1)$ in the formula $g(x) = \\frac{x+1}{2}$.",
+       "ur": "اب، فارمولہ $g(x) = \\frac{x+1}{2}$ میں $x$ کی جگہ $(2x - 1)$ رکھیں۔",
        "check": [
+        "((x + 1)/2).subs(x, 2*x - 1) == ((2*x - 1) + 1)/2"
+       ]
+      },
+      {
+       "math": "(g \\circ f)(x) = \\frac{2x}{2}",
+       "en": "Simplify the numerator by cancelling $-1$ and $+1$.",
+       "ur": "شمار کنندہ میں $-1$ اور $+1$ کو آپس میں کینسل کر کے مختصر کریں۔",
+       "check": [
+        "((2*x - 1) + 1)/2 == (2*x)/2"
+       ]
+      },
+      {
+       "math": "(g \\circ f)(x) = x",
+       "en": "Divide the numerator by $2$ to get the final answer.",
+       "ur": "حتمی جواب حاصل کرنے کے لیے شمار کنندہ کو $2$ سے تقسیم کریں۔",
+       "check": [
+        "(2*x)/2 == x",
         "(x/2 + 1/2).subs(x, (2*x - 1)) == (x)"
        ]
       }
      ],
      "answer": "$x$",
+     "enriched": true,
      "book_key": "x"
     },
     {
@@ -380,20 +736,51 @@
      "prompt": "$f(x)=2x-1;\\ g(x)=\\frac{x+1}{2}$: $(f\\circ f)(x)$",
      "steps": [
       {
-       "math": "(f\\circ f)(x) = f(f(x)) = f\\left(2 x - 1\\right)",
-       "en": "Put $f(x)$ in place of $x$ in $f$.",
-       "ur": "$f$ میں $x$ کی جگہ $f(x)$ رکھیں۔"
+       "math": "",
+       "en": "We are given the functions $f(x) = 2x - 1$ and $g(x) = \\frac{x+1}{2}$, and we need to find the composite function $(f\\circ f)(x)$.",
+       "ur": "ہمیں فنکشنز $f(x) = 2x - 1$ اور $g(x) = \\frac{x+1}{2}$ دیے گئے ہیں، اور ہمیں کمپوزٹ فنکشن $(f\\circ f)(x)$ معلوم کرنا ہے۔"
       },
       {
-       "math": "= 4 x - 3",
-       "en": "Substitute into $f(x) = 2 x - 1$.",
-       "ur": "$f(x) = 2 x - 1$ میں رکھیں۔",
+       "math": "(f\\circ f)(x) = f(f(x))",
+       "en": "By the definition of composition of functions, $(f\\circ f)(x)$ means applying the function $f$ to $f(x)$.",
+       "ur": "فنکشنز کی ترکیب (composition) کی تعریف کے مطابق، $(f\\circ f)(x)$ کا مطلب فنکشن $f$ کو $f(x)$ پر لاگو کرنا ہے۔"
+      },
+      {
+       "math": "(f\\circ f)(x) = f(2x - 1)",
+       "en": "Substitute the given expression $f(x) = 2x - 1$ inside the outer function $f$.",
+       "ur": "دی گئی قیمت $f(x) = 2x - 1$ کو بیرونی فنکشن $f$ کے اندر درج کریں۔",
        "check": [
+        "2*x - 1 == 2*x - 1"
+       ]
+      },
+      {
+       "math": "(f\\circ f)(x) = 2(2x - 1) - 1",
+       "en": "Now, replace $x$ with $(2x - 1)$ in the formula $f(x) = 2x - 1$.",
+       "ur": "اب، فارمولہ $f(x) = 2x - 1$ میں $x$ کی جگہ $(2x - 1)$ رکھیں۔",
+       "check": [
+        "(2*x - 1).subs(x, 2*x - 1) == 2*(2*x - 1) - 1"
+       ]
+      },
+      {
+       "math": "(f\\circ f)(x) = 4x - 2 - 1",
+       "en": "Multiply $2$ inside the bracket to expand the expression.",
+       "ur": "عبارت کو کھولنے کے لیے بریکٹ کے اندر $2$ کو ضرب دیں۔",
+       "check": [
+        "2*(2*x - 1) - 1 == 4*x - 2 - 1"
+       ]
+      },
+      {
+       "math": "(f\\circ f)(x) = 4 x - 3",
+       "en": "Simplify the constant terms to get the final answer.",
+       "ur": "حتمی جواب حاصل کرنے کے لیے مستقل مقداروں (constants) کو مختصر کریں۔",
+       "check": [
+        "4*x - 2 - 1 == 4*x - 3",
         "(2*x - 1).subs(x, (2*x - 1)) == (4*x - 3)"
        ]
       }
      ],
      "answer": "$4 x - 3$",
+     "enriched": true,
      "book_key": "4x-3"
     },
     {
@@ -487,23 +874,49 @@
      "prompt": "$g(f(4))$",
      "steps": [
       {
-       "math": "f(4) = 3(4) + 2 = 14",
-       "en": "Work out the inside function first.",
-       "ur": "پہلے اندر والا تفاعل نکالیں۔",
+       "math": "",
+       "en": "We are given the functions $f(x) = 3x + 2$ and $g(x) = 2x + 3$. We need to find the composite value $g(f(4))$.",
+       "ur": "ہمیں دو تفاعل $f(x) = 3x + 2$ اور $g(x) = 2x + 3$ دیے گئے ہیں۔ ہمیں مرکب تفاعل $g(f(4))$ کی قیمت معلوم کرنی ہے۔"
+      },
+      {
+       "math": "f(4) = 3(4) + 2",
+       "en": "First, evaluate the inner function $f(4)$ by substituting $x = 4$ into $f(x) = 3x + 2$.",
+       "ur": "سب سے پہلے، $f(x) = 3x + 2$ میں $x = 4$ درج کر کے اندرونی تفاعل $f(4)$ کی قیمت معلوم کریں۔",
        "check": [
         "3*4 + 2 == 14"
        ]
       },
       {
-       "math": "g(f(4)) = g(14) = 2(14) + 3 = 31",
-       "en": "Then put the result in $g$.",
-       "ur": "پھر نتیجہ $g$ میں رکھیں۔",
+       "math": "f(4) = 12 + 2 = 14",
+       "en": "Multiply and add the numbers to get the value of $f(4)$.",
+       "ur": "اعداد کو ضرب اور جمع کر کے $f(4)$ کی قیمت حاصل کریں۔",
        "check": [
+        "3*4 == 12",
+        "12 + 2 == 14"
+       ]
+      },
+      {
+       "math": "g(f(4)) = g(14) = 2(14) + 3",
+       "en": "Now, substitute $f(4) = 14$ into the outer function $g(x) = 2x + 3$.",
+       "ur": "اب، بیرونی تفاعل $g(x) = 2x + 3$ میں $f(4) = 14$ درج کریں۔",
+       "check": [
+        "2*14 + 3 == 31"
+       ]
+      },
+      {
+       "math": "g(f(4)) = 28 + 3 = 31",
+       "en": "Simplify the expression to get the final answer.",
+       "ur": "جملے کو مختصر کر کے حتمی جواب حاصل کریں۔",
+       "check": [
+        "2*14 == 28",
+        "28 + 3 == 31",
+        "3*4 + 2 == 14",
         "2*14 + 3 == 31"
        ]
       }
      ],
      "answer": "$31$",
+     "enriched": true,
      "book_key": "31"
     },
     {
@@ -511,23 +924,57 @@
      "prompt": "$f(f(3))$",
      "steps": [
       {
-       "math": "f(3) = 3(3) + 2 = 11",
-       "en": "Inside first.",
-       "ur": "پہلے اندر والا۔",
+       "math": "",
+       "en": "We are given the function $f(x) = 3x + 2$ and we need to find the value of the composite function $f(f(3))$.",
+       "ur": "ہمیں فنکشن $f(x) = 3x + 2$ دیا گیا ہے اور ہمیں مرکب فنکشن $f(f(3))$ کی قیمت معلوم کرنی ہے۔"
+      },
+      {
+       "math": "f(3) = 3(3) + 2",
+       "en": "To evaluate $f(f(3))$, we first find the inner value $f(3)$ by substituting $x = 3$ into $f(x)$.",
+       "ur": "$f(f(3))$ کی قیمت معلوم کرنے کے لیے، ہم پہلے $f(x)$ میں $x = 3$ درج کر کے اندرونی قیمت $f(3)$ معلوم کرتے ہیں۔",
        "check": [
         "3*3 + 2 == 11"
        ]
       },
       {
-       "math": "f(f(3)) = f(11) = 3(11) + 2 = 35",
-       "en": "Then $f$ again.",
-       "ur": "پھر دوبارہ $f$۔",
+       "math": "f(3) = 9 + 2 = 11",
+       "en": "Multiply and add to get the value of $f(3)$.",
+       "ur": "$f(3)$ کی قیمت حاصل کرنے کے لیے ضرب دیں اور جمع کریں۔",
        "check": [
+        "3*3 == 9",
+        "9 + 2 == 11"
+       ]
+      },
+      {
+       "math": "f(f(3)) = f(11)",
+       "en": "Now, substitute $f(3) = 11$ into the expression $f(f(3))$.",
+       "ur": "اب، عبارت $f(f(3))$ میں $f(3) = 11$ درج کریں۔",
+       "check": [
+        "11 == 11"
+       ]
+      },
+      {
+       "math": "f(11) = 3(11) + 2",
+       "en": "Next, evaluate $f(11)$ by substituting $x = 11$ into the function $f(x) = 3x + 2$.",
+       "ur": "اس کے بعد، فنکشن $f(x) = 3x + 2$ میں $x = 11$ درج کر کے $f(11)$ کی قیمت معلوم کریں۔",
+       "check": [
+        "3*11 + 2 == 35"
+       ]
+      },
+      {
+       "math": "f(f(3)) = 33 + 2 = 35",
+       "en": "Simplify to get the final answer.",
+       "ur": "حتمی جواب حاصل کرنے کے لیے مختصر کریں۔",
+       "check": [
+        "3*11 == 33",
+        "33 + 2 == 35",
+        "3*3 + 2 == 11",
         "3*11 + 2 == 35"
        ]
       }
      ],
      "answer": "$35$",
+     "enriched": true,
      "book_key": "35"
     },
     {
@@ -535,23 +982,57 @@
      "prompt": "$f(g(-2))$",
      "steps": [
       {
-       "math": "g(-2) = 2(-2) + 3 = -1",
-       "en": "Inside first.",
-       "ur": "پہلے اندر والا۔",
+       "math": "",
+       "en": "We are given the functions $f(x) = 3x + 2$ and $g(x) = 2x + 3$, and we need to find the composite value $f(g(-2))$.",
+       "ur": "ہمیں فنکشنز $f(x) = 3x + 2$ اور $g(x) = 2x + 3$ دیے گئے ہیں، اور ہمیں $f(g(-2))$ کی قیمت معلوم کرنی ہے۔"
+      },
+      {
+       "math": "g(-2) = 2(-2) + 3",
+       "en": "First, evaluate the inner function $g(-2)$ by substituting $x = -2$ into $g(x) = 2x + 3$.",
+       "ur": "پہلے اندرونی فنکشن $g(-2)$ کی قیمت معلوم کرنے کے لیے $g(x) = 2x + 3$ میں $x = -2$ درج کریں۔",
        "check": [
         "2*(-2) + 3 == -1"
        ]
       },
       {
-       "math": "f(g(-2)) = f(-1) = 3(-1) + 2 = -1",
-       "en": "Then $f$.",
-       "ur": "پھر $f$۔",
+       "math": "g(-2) = -4 + 3 = -1",
+       "en": "Simplify to find the value of $g(-2)$.",
+       "ur": "$g(-2)$ کی قیمت معلوم کرنے کے لیے مختصر کریں۔",
        "check": [
+        "2*(-2) == -4",
+        "-4 + 3 == -1"
+       ]
+      },
+      {
+       "math": "f(g(-2)) = f(-1)",
+       "en": "Now substitute $g(-2) = -1$ into the outer function $f$.",
+       "ur": "اب بیرونی فنکشن $f$ میں $g(-2) = -1$ درج کریں۔",
+       "check": [
+        "-1 == -1"
+       ]
+      },
+      {
+       "math": "f(-1) = 3(-1) + 2",
+       "en": "Substitute $x = -1$ into the function $f(x) = 3x + 2$.",
+       "ur": "فنکشن $f(x) = 3x + 2$ میں $x = -1$ درج کریں۔",
+       "check": [
+        "3*(-1) + 2 == -1"
+       ]
+      },
+      {
+       "math": "f(g(-2)) = -3 + 2 = -1",
+       "en": "Simplify to get the final answer.",
+       "ur": "حتمی جواب حاصل کرنے کے لیے مختصر کریں۔",
+       "check": [
+        "3*(-1) == -3",
+        "-3 + 2 == -1",
+        "2*(-2) + 3 == -1",
         "3*(-1) + 2 == -1"
        ]
       }
      ],
      "answer": "$-1$",
+     "enriched": true,
      "book_key": "-1"
     }
    ],
@@ -927,17 +1408,33 @@
      "prompt": "$f(x)=12x-3$",
      "steps": [
       {
-       "math": "\\text{Domain of } f^{-1} = \\text{Range of } f,\\quad \\text{Range of } f^{-1} = \\text{Domain of } f",
-       "en": "The inverse swaps the roles of input and output.",
-       "ur": "معکوس تفاعل ان پٹ اور آؤٹ پٹ کا کردار بدل دیتا ہے۔"
+       "math": "f(x) = 12x - 3",
+       "en": "Write down the given linear function.",
+       "ur": "دیے گئے خطی تفاعل کو لکھیں۔"
       },
       {
-       "math": "\\text{Domain} = (-\\infty, \\infty),\\quad \\text{Range} = (-\\infty, \\infty)",
-       "en": "Here a straight line takes every real value.",
-       "ur": "یہاں a straight line takes every real value۔"
+       "math": "\\text{Domain of } f = (-\\infty, \\infty)",
+       "en": "Since $f(x) = 12x - 3$ is a linear polynomial with no fractions or square roots, it is defined for all real numbers $x$.",
+       "ur": "چونکہ $f(x) = 12x - 3$ ایک خطی کثیر رقمی ہے جس میں کوئی کسر یا جذر نہیں ہے، اس لیے یہ تمام حقیقی اعداد $x$ کے لیے تعریف شدہ ہے۔"
+      },
+      {
+       "math": "\\text{Range of } f = (-\\infty, \\infty)",
+       "en": "As $x$ takes all real values, the output of this straight-line function also covers all real values.",
+       "ur": "چونکہ $x$ تمام حقیقی قیمتیں لیتا ہے، اس خط مستقیم تفاعل کا آؤٹ پٹ بھی تمام حقیقی قیمتوں کا احاطہ کرتا ہے۔"
+      },
+      {
+       "math": "\\text{Domain of } f^{-1} = \\text{Range of } f,\\quad \\text{Range of } f^{-1} = \\text{Domain of } f",
+       "en": "Recall the fundamental property that an inverse function swaps the domain and the range of the original function.",
+       "ur": "یہ بنیادی خصوصیت یاد رکھیں کہ معکوس تفاعل اصل تفاعل کی ڈومین اور رینج کو آپس میں بدل دیتا ہے۔"
+      },
+      {
+       "math": "\\text{Domain of } f^{-1} = (-\\infty, \\infty),\\quad \\text{Range of } f^{-1} = (-\\infty, \\infty)",
+       "en": "Substitute the domain and range of $f$ to state the final domain and range of $f^{-1}(x)$.",
+       "ur": "$f^{-1}(x)$ کی حتمی ڈومین اور رینج بتانے کے لیے $f$ کی ڈومین اور رینج درج کریں۔"
       }
      ],
      "answer": "Domain $= (-\\infty, \\infty)$; Range $= (-\\infty, \\infty)$",
+     "enriched": true,
      "book_key": "Domain=(-\\infty,\\infty); Range=(-\\infty,\\infty)"
     },
     {
@@ -945,17 +1442,36 @@
      "prompt": "$f(x)=\\frac{1}{2}x+8$",
      "steps": [
       {
-       "math": "\\text{Domain of } f^{-1} = \\text{Range of } f,\\quad \\text{Range of } f^{-1} = \\text{Domain of } f",
-       "en": "The inverse swaps the roles of input and output.",
-       "ur": "معکوس تفاعل ان پٹ اور آؤٹ پٹ کا کردار بدل دیتا ہے۔"
+       "math": "f(x) = \\frac{1}{2}x + 8",
+       "en": "Write down the given linear function $f(x)$.",
+       "ur": "دیے گئے یک درجی تفاعل $f(x)$ کو لکھیں۔",
+       "check": [
+        "R(1, 2)*x + 8 == x/2 + 8"
+       ]
       },
       {
-       "math": "\\text{Domain} = (-\\infty, \\infty),\\quad \\text{Range} = (-\\infty, \\infty)",
-       "en": "Here a straight line takes every real value.",
-       "ur": "یہاں a straight line takes every real value۔"
+       "math": "",
+       "en": "Recall the property of an inverse function: the domain of $f^{-1}(x)$ is equal to the range of $f(x)$, and the range of $f^{-1}(x)$ is equal to the domain of $f(x)$.",
+       "ur": "معکوس تفاعل کی خاصیت یاد رکھیں: $f^{-1}(x)$ کی ڈومین $f(x)$ کی رینج کے برابر ہوتی ہے، اور $f^{-1}(x)$ کی رینج $f(x)$ کی ڈومین کے برابر ہوتی ہے۔"
+      },
+      {
+       "math": "",
+       "en": "Since $f(x) = \\frac{1}{2}x + 8$ is a linear polynomial, it is defined for all real numbers $x$, so the domain of $f(x)$ is $(-\\infty, \\infty)$.",
+       "ur": "چونکہ $f(x) = \\frac{1}{2}x + 8$ ایک یک درجی کثیر رقمی ہے، یہ تمام حقیقی اعداد $x$ کے لیے متعین ہے، اس لیے $f(x)$ کی ڈومین $(-\\infty, \\infty)$ ہے۔"
+      },
+      {
+       "math": "",
+       "en": "Similarly, as $x$ takes all real values, the output of this straight line also takes every real value, so the range of $f(x)$ is $(-\\infty, \\infty)$.",
+       "ur": "اسی طرح، جب $x$ تمام حقیقی قیمتیں لیتا ہے تو اس خطِ مستقیم کا آؤٹ پٹ بھی ہر حقیقی قیمت لیتا ہے، اس لیے $f(x)$ کی رینج $(-\\infty, \\infty)$ ہے۔"
+      },
+      {
+       "math": "",
+       "en": "By swapping the domain and range of $f(x)$, we get the domain of $f^{-1}(x)$ as $(-\\infty, \\infty)$ and the range of $f^{-1}(x)$ as $(-\\infty, \\infty)$.",
+       "ur": "تفاعل $f(x)$ کی ڈومین اور رینج کو آپس میں بدلنے سے، ہمیں $f^{-1}(x)$ کی ڈومین $(-\\infty, \\infty)$ اور $f^{-1}(x)$ کی رینج $(-\\infty, \\infty)$ حاصل ہوتی ہے۔"
       }
      ],
      "answer": "Domain $= (-\\infty, \\infty)$; Range $= (-\\infty, \\infty)$",
+     "enriched": true,
      "book_key": "Domain=(-\\infty,\\infty); Range=(-\\infty,\\infty)"
     },
     {
@@ -963,20 +1479,44 @@
      "prompt": "$f(x)=\\frac{x}{1+x},\\ x\\ne-1$",
      "steps": [
       {
-       "math": "\\text{Domain of } f^{-1} = \\text{Range of } f,\\quad \\text{Range of } f^{-1} = \\text{Domain of } f",
-       "en": "The inverse swaps the roles of input and output.",
-       "ur": "معکوس تفاعل ان پٹ اور آؤٹ پٹ کا کردار بدل دیتا ہے۔"
+       "math": "f(x) = \\frac{x}{1+x}, \\quad x \\ne -1",
+       "en": "First, write down the given function.",
+       "ur": "سب سے پہلے، دیے گئے تفاعل کو لکھیں۔"
       },
       {
-       "math": "\\text{Domain} = (-\\infty, 1) \\cup (1, \\infty),\\quad \\text{Range} = (-\\infty, -1) \\cup (-1, \\infty)",
-       "en": "Here $f$ never equals 1 and $x \\ne -1$.",
-       "ur": "یہاں $f$ never equals 1 and $x \\ne -1$۔",
+       "math": "\\text{Domain of } f^{-1} = \\text{Range of } f, \\quad \\text{Range of } f^{-1} = \\text{Domain of } f",
+       "en": "To find the domain and range of $f^{-1}(x)$ without finding the inverse itself, we use the property that the inverse function swaps the domain and range of the original function.",
+       "ur": "معکوس معلوم کیے بغیر $f^{-1}(x)$ کی ڈومین اور رینج معلوم کرنے کے لیے، ہم یہ خاصیت استعمال کرتے ہیں کہ معکوس تفاعل اصل تفاعل کی ڈومین اور رینج کو آپس میں بدل دیتا ہے۔"
+      },
+      {
+       "math": "\\text{Domain of } f = (-\\infty, -1) \\cup (-1, \\infty)",
+       "en": "The denominator $1+x$ cannot be zero, so $x \\ne -1$. Thus, the domain of $f$ is all real numbers except $-1$.",
+       "ur": "مخرج $1+x$ صفر نہیں ہو سکتا، اس لیے $x \\ne -1$۔ چنانچہ، $f$ کی ڈومین $-1$ کے علاوہ تمام حقیقی اعداد ہیں۔"
+      },
+      {
+       "math": "f(x) = \\frac{(1+x) - 1}{1+x} = 1 - \\frac{1}{1+x}",
+       "en": "To find the range of $f$, rewrite the expression by adding and subtracting $1$ in the numerator.",
+       "ur": "$f$ کی رینج معلوم کرنے کے لیے، شمار کنندہ میں $1$ جمع اور تفریق کر کے عبارت کو دوبارہ لکھیں۔",
+       "check": [
+        "x/(1 + x) == 1 - 1/(1 + x)"
+       ]
+      },
+      {
+       "math": "\\text{Range of } f = (-\\infty, 1) \\cup (1, \\infty)",
+       "en": "Since $\\frac{1}{1+x}$ can never be $0$, $f(x)$ can take any real value except $1$.",
+       "ur": "چونکہ $\\frac{1}{1+x}$ کبھی بھی $0$ نہیں ہو سکتا، اس لیے $f(x)$ سوائے $1$ کے کوئی بھی حقیقی قیمت لے سکتا ہے۔"
+      },
+      {
+       "math": "\\text{Domain of } f^{-1} = (-\\infty, 1) \\cup (1, \\infty), \\quad \\text{Range of } f^{-1} = (-\\infty, -1) \\cup (-1, \\infty)",
+       "en": "Now, swap the domain and range of $f$ to state the final domain and range of $f^{-1}(x)$.",
+       "ur": "اب، $f^{-1}(x)$ کی حتمی ڈومین اور رینج لکھنے کے لیے $f$ کی ڈومین اور رینج کو آپس میں بدل دیں۔",
        "check": [
         "x/(1 + x) - 1 == -1/(1 + x)"
        ]
       }
      ],
      "answer": "Domain $= (-\\infty, 1) \\cup (1, \\infty)$; Range $= (-\\infty, -1) \\cup (-1, \\infty)$",
+     "enriched": true,
      "book_key": "Domain=(-\\infty,1)\\cup(1,\\infty); Range=(-\\infty,-1)\\cup(-1,\\infty)"
     },
     {
@@ -984,20 +1524,44 @@
      "prompt": "$f(x)=\\sqrt{x-2},\\ x\\ge2$",
      "steps": [
       {
-       "math": "\\text{Domain of } f^{-1} = \\text{Range of } f,\\quad \\text{Range of } f^{-1} = \\text{Domain of } f",
-       "en": "The inverse swaps the roles of input and output.",
-       "ur": "معکوس تفاعل ان پٹ اور آؤٹ پٹ کا کردار بدل دیتا ہے۔"
+       "math": "f(x) = \\sqrt{x - 2}, \\quad x \\ge 2",
+       "en": "We are given the function $f(x)$ with the condition that $x \\ge 2$. We need to find the domain and range of its inverse function $f^{-1}(x)$ without actually finding the formula for $f^{-1}(x)$.",
+       "ur": "ہمیں تفاعل $f(x)$ اس شرط کے ساتھ دیا گیا ہے کہ $x \\ge 2$۔ ہمیں معکوس تفاعل $f^{-1}(x)$ کا فارمولا معلوم کیے بغیر اس کی ڈومین اور رینج معلوم کرنی ہے۔"
       },
       {
-       "math": "\\text{Domain} = [0, \\infty),\\quad \\text{Range} = [2, \\infty)",
-       "en": "Here a square root is never negative and $x \\ge 2$.",
-       "ur": "یہاں a square root is never negative and $x \\ge 2$۔",
+       "math": "\\text{Domain of } f^{-1} = \\text{Range of } f, \\quad \\text{Range of } f^{-1} = \\text{Domain of } f",
+       "en": "By the property of inverse functions, the domain and range are interchanged between a function and its inverse.",
+       "ur": "معکوس تفاعل کی خصوصیت کے مطابق، ایک تفاعل اور اس کے معکوس کے درمیان ڈومین اور رینج آپس میں بدل جاتے ہیں۔"
+      },
+      {
+       "math": "\\text{Domain of } f = [2, \\infty)",
+       "en": "First, we find the domain of $f(x)$. Since the condition $x \\ge 2$ is already given, the domain of $f(x)$ consists of all real numbers greater than or equal to $2$.",
+       "ur": "سب سے پہلے، ہم $f(x)$ کی ڈومین معلوم کرتے ہیں۔ چونکہ شرط $x \\ge 2$ پہلے سے دی گئی ہے، اس لیے $f(x)$ کی ڈومین میں $2$ یا اس سے بڑے تمام حقیقی اعداد شامل ہیں۔"
+      },
+      {
+       "math": "f(2) = \\sqrt{2 - 2} = 0",
+       "en": "Next, to find the range of $f(x)$, we check the minimum output value by substituting the smallest value of $x$, which is $x = 2$.",
+       "ur": "اس کے بعد، $f(x)$ کی رینج معلوم کرنے کے لیے، ہم $x$ کی سب سے چھوٹی قیمت یعنی $x = 2$ درج کر کے کم از کم آؤٹ پٹ قیمت چیک کرتے ہیں۔",
+       "check": [
+        "sqrt(2 - 2) == 0"
+       ]
+      },
+      {
+       "math": "\\text{Range of } f = [0, \\infty)",
+       "en": "As $x$ increases beyond $2$, the square root $\\sqrt{x-2}$ gives all non-negative real numbers. Thus, the range of $f(x)$ is from $0$ to $\\infty$.",
+       "ur": "جیسے جیسے $x$ کی قیمت $2$ سے بڑھتی ہے، جذر $\\sqrt{x-2}$ تمام غیر منفی حقیقی اعداد دیتا ہے۔ اس طرح، $f(x)$ کی رینج $0$ سے $\\infty$ تک ہے۔"
+      },
+      {
+       "math": "\\text{Domain of } f^{-1} = [0, \\infty), \\quad \\text{Range of } f^{-1} = [2, \\infty)",
+       "en": "Finally, swapping the domain and range of $f(x)$ gives us the domain and range of $f^{-1}(x)$.",
+       "ur": "آخر میں، $f(x)$ کی ڈومین اور رینج کو آپس میں بدلنے سے ہمیں $f^{-1}(x)$ کی ڈومین اور رینج حاصل ہوتی ہے۔",
        "check": [
         "sqrt(2 - 2) == 0"
        ]
       }
      ],
      "answer": "Domain $= [0, \\infty)$; Range $= [2, \\infty)$",
+     "enriched": true,
      "book_key": "Domain=[0,\\infty); Range=[2,\\infty)"
     }
    ],
@@ -5071,20 +5635,53 @@
      "prompt": "",
      "steps": [
       {
-       "math": "B(t) = 200 t + 5000",
-       "en": "Write the model.",
-       "ur": "ماڈل لکھیں۔"
+       "math": "B(t) = 5000 + 200t",
+       "en": "Write down the given function that represents the total balance (in rupees) after $t$ months.",
+       "ur": "دیا گیا فنکشن لکھیں جو $t$ مہینوں کے بعد کل بیلنس (روپوں میں) کو ظاہر کرتا ہے۔",
+       "check": [
+        "5000 + 200*t == 200*t + 5000"
+       ]
       },
       {
-       "math": "B(6) = 200 (6) + 5000 = 6200",
-       "en": "Put $t = 6$.",
-       "ur": "$t = 6$ رکھیں۔",
+       "math": "",
+       "en": "We need to find the balance after $6$ months, so we will substitute $t = 6$ into the given function.",
+       "ur": "ہمیں $6$ مہینوں کے بعد بیلنس معلوم کرنا ہے، اس لیے ہم دیے گئے فنکشن میں $t = 6$ درج کریں گے۔"
+      },
+      {
+       "math": "B(6) = 5000 + 200(6)",
+       "en": "Substitute $t = 6$ into the function $B(t)$.",
+       "ur": "فنکشن $B(t)$ میں $t = 6$ درج کریں۔",
+       "check": [
+        "(5000 + 200*t).subs(t, 6) == 5000 + 200*6"
+       ]
+      },
+      {
+       "math": "B(6) = 5000 + 1200",
+       "en": "Multiply $200$ by $6$.",
+       "ur": "$200$ کو $6$ سے ضرب دیں۔",
+       "check": [
+        "200 * 6 == 1200"
+       ]
+      },
+      {
+       "math": "B(6) = 6200",
+       "en": "Add $5000$ and $1200$ to get the final balance.",
+       "ur": "حتمی بیلنس حاصل کرنے کے لیے $5000$ اور $1200$ کو جمع کریں۔",
+       "check": [
+        "5000 + 1200 == 6200"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Hence, the total balance after $6$ months will be $6200$ rupees.",
+       "ur": "لہذا، $6$ مہینوں کے بعد کل بیلنس $6200$ روپے ہوگا۔",
        "check": [
         "(5000 + 200*t).subs(t, (6)) == (6200)"
        ]
       }
      ],
      "answer": "6200 rupees",
+     "enriched": true,
      "book_key": "6200 rupees"
     }
    ],
@@ -5102,20 +5699,44 @@
      "prompt": "",
      "steps": [
       {
-       "math": "f(k) = 20 k + 150",
-       "en": "Write the model.",
-       "ur": "ماڈل لکھیں۔"
+       "math": "",
+       "en": "The given function representing the total fare in rupees for $k$ kilometres is $f(k) = 150 + 20k$.",
+       "ur": "$k$ کلومیٹر کے لیے کل کرایہ (روپے میں) ظاہر کرنے والا دیا گیا فنکشن $f(k) = 150 + 20k$ ہے۔"
       },
       {
-       "math": "f(12) = 20 (12) + 150 = 390",
-       "en": "Put $k = 12$.",
-       "ur": "$k = 12$ رکھیں۔",
+       "math": "",
+       "en": "To find the total fare for a 12 kilometres ride, we need to evaluate the function at $k = 12$.",
+       "ur": "12 کلومیٹر کے سفر کا کل کرایہ معلوم کرنے کے لیے، ہمیں $k = 12$ پر فنکشن کی قیمت معلوم کرنی ہوگی۔"
+      },
+      {
+       "math": "f(12) = 150 + 20(12)",
+       "en": "Substitute $k = 12$ into the given function.",
+       "ur": "دیے گئے فنکشن میں $k = 12$ درج کریں۔",
        "check": [
+        "(150 + 20*k).subs(k, 12) == 150 + 20*12"
+       ]
+      },
+      {
+       "math": "f(12) = 150 + 240",
+       "en": "Multiply 20 by 12.",
+       "ur": "20 کو 12 سے ضرب دیں۔",
+       "check": [
+        "20 * 12 == 240",
+        "150 + 20 * 12 == 150 + 240"
+       ]
+      },
+      {
+       "math": "f(12) = 390",
+       "en": "Add the numbers to get the final value. Thus, the total fare for a 12 kilometres ride is 390 rupees.",
+       "ur": "حتمی قیمت حاصل کرنے کے لیے نمبروں کو جمع کریں۔ اس طرح، 12 کلومیٹر کے سفر کا کل کرایہ 390 روپے ہے۔",
+       "check": [
+        "150 + 240 == 390",
         "(150 + 20*k).subs(k, (12)) == (390)"
        ]
       }
      ],
      "answer": "390 rupees",
+     "enriched": true,
      "book_key": "390 rupees"
     }
    ],
@@ -5133,20 +5754,45 @@
      "prompt": "",
      "steps": [
       {
-       "math": "f(n) = 5500 n",
-       "en": "Write the model.",
-       "ur": "ماڈل لکھیں۔"
+       "math": "",
+       "en": "The given cost function for manufacturing $n$ fancy sofa sets is $f(n) = 5500n$.",
+       "ur": "$n$ فینسی صوفہ سیٹ بنانے کے لیے دیا گیا لاگت کا فنکشن $f(n) = 5500n$ ہے۔"
       },
       {
-       "math": "f(50) = 5500 (50) = 275000",
-       "en": "Put $n = 50$.",
-       "ur": "$n = 50$ رکھیں۔",
+       "math": "n = 50",
+       "en": "We need to find the cost of manufacturing $50$ sofa sets, so the number of sofa sets is $n = 50$.",
+       "ur": "ہمیں $50$ صوفہ سیٹس بنانے کی لاگت معلوم کرنی ہے، اس لیے صوفہ سیٹس کی تعداد $n = 50$ ہے۔",
+       "check": [
+        "50 == 50"
+       ]
+      },
+      {
+       "math": "f(50) = 5500(50)",
+       "en": "Substitute $n = 50$ into the cost function $f(n) = 5500n$.",
+       "ur": "لاگت کے فنکشن $f(n) = 5500n$ میں $n = 50$ درج کریں۔",
+       "check": [
+        "(5500*n).subs(n, 50) == 5500*50"
+       ]
+      },
+      {
+       "math": "f(50) = 275000",
+       "en": "Multiply $5500$ by $50$ to find the total cost.",
+       "ur": "کل لاگت معلوم کرنے کے لیے $5500$ کو $50$ سے ضرب دیں۔",
+       "check": [
+        "5500*50 == 275000"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Thus, the cost of manufacturing $50$ sofa sets is $275000$ rupees.",
+       "ur": "پس، $50$ صوفہ سیٹ بنانے کی لاگت $275000$ روپے ہے۔",
        "check": [
         "(5500*n).subs(n, (50)) == (275000)"
        ]
       }
      ],
      "answer": "275000 rupees",
+     "enriched": true,
      "book_key": "275000 rupees"
     }
    ],
@@ -5164,20 +5810,42 @@
      "prompt": "",
      "steps": [
       {
-       "math": "T(d) = \\frac{d}{60}",
-       "en": "Write the model.",
-       "ur": "ماڈل لکھیں۔"
+       "math": "",
+       "en": "The given function representing the time $T$ in hours to travel a distance $d$ in kilometres is $T(d) = \\frac{d}{60}$.",
+       "ur": "فاصلہ $d$ (کلومیٹر میں) طے کرنے کے لیے وقت $T$ (گھنٹوں میں) کو ظاہر کرنے والا دیا گیا فنکشن $T(d) = \\frac{d}{60}$ ہے۔"
       },
       {
-       "math": "T(180) = \\frac{(180)}{60} = 3",
-       "en": "Put $d = 180$.",
-       "ur": "$d = 180$ رکھیں۔",
+       "math": "",
+       "en": "We need to find the time required to travel a distance of $180$ km, which means we are given $d = 180$.",
+       "ur": "ہمیں $180$ کلومیٹر کا فاصلہ طے کرنے کے لیے درکار وقت معلوم کرنا ہے، جس کا مطلب ہے کہ ہمیں $d = 180$ دیا گیا ہے۔"
+      },
+      {
+       "math": "T(180) = \\frac{180}{60}",
+       "en": "Substitute $d = 180$ into the given function $T(d) = \\frac{d}{60}$.",
+       "ur": "دیے گئے فنکشن $T(d) = \\frac{d}{60}$ میں $d = 180$ درج کریں۔",
+       "check": [
+        "(d/60).subs(d, 180) == R(180, 60)"
+       ]
+      },
+      {
+       "math": "T(180) = 3",
+       "en": "Divide $180$ by $60$ to find the time.",
+       "ur": "وقت معلوم کرنے کے لیے $180$ کو $60$ پر تقسیم کریں۔",
+       "check": [
+        "R(180, 60) == 3"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Therefore, it will take $3$ hours to travel $180$ km.",
+       "ur": "لہٰذا، $180$ کلومیٹر کا سفر طے کرنے میں $3$ گھنٹے لگیں گے۔",
        "check": [
         "(d/60).subs(d, (180)) == (3)"
        ]
       }
      ],
      "answer": "3 hours",
+     "enriched": true,
      "book_key": "3 hours"
     }
    ],
@@ -5195,20 +5863,50 @@
      "prompt": "",
      "steps": [
       {
-       "math": "f(x) = 5 x + 100",
-       "en": "Write the model.",
-       "ur": "ماڈل لکھیں۔"
+       "math": "f(x) = 100 + 5x",
+       "en": "Write down the given function that models the total charges, where $x$ represents the number of printed pages.",
+       "ur": "دی گئی فنکشن لکھیں جو کل اخراجات کو ظاہر کرتی ہے، جہاں $x$ پرنٹ شدہ صفحات کی تعداد ہے۔",
+       "check": [
+        "100 + 5*x == 5*x + 100"
+       ]
       },
       {
-       "math": "f(55) = 5 (55) + 100 = 375",
-       "en": "Put $x = 55$.",
-       "ur": "$x = 55$ رکھیں۔",
+       "math": "x = 55",
+       "en": "We need to find the total charges for $55$ pages, so the given number of pages is $x = 55$.",
+       "ur": "ہمیں $55$ صفحات کے لیے کل چارجز معلوم کرنے ہیں، اس لیے دیے گئے صفحات کی تعداد $x = 55$ ہے۔",
        "check": [
+        "55 == 55"
+       ]
+      },
+      {
+       "math": "f(55) = 100 + 5(55)",
+       "en": "Substitute $x = 55$ into the function $f(x)$.",
+       "ur": "فنکشن $f(x)$ میں $x = 55$ درج کریں۔",
+       "check": [
+        "(100 + 5*x).subs(x, 55) == 100 + 5*55"
+       ]
+      },
+      {
+       "math": "f(55) = 100 + 275",
+       "en": "Multiply $5$ by $55$ to find the printing cost for $55$ pages.",
+       "ur": "$55$ صفحات کی پرنٹنگ لاگت معلوم کرنے کے لیے $5$ کو $55$ سے ضرب دیں۔",
+       "check": [
+        "5 * 55 == 275",
+        "100 + 5*55 == 100 + 275"
+       ]
+      },
+      {
+       "math": "f(55) = 375",
+       "en": "Add $100$ and $275$ to get the total charges. Thus, the company will charge $375$ rupees.",
+       "ur": "کل چارجز حاصل کرنے کے لیے $100$ اور $275$ کو جمع کریں۔ اس طرح کمپنی $375$ روپے چارج کرے گی۔",
+       "check": [
+        "100 + 275 == 375",
         "(100 + 5*x).subs(x, (55)) == (375)"
        ]
       }
      ],
      "answer": "375 rupees",
+     "enriched": true,
      "book_key": "375 rupees"
     }
    ],
@@ -5226,14 +5924,35 @@
      "prompt": "",
      "steps": [
       {
-       "math": "T - 37 < -2.5 \\quad\\text{or}\\quad T - 37 > 2.5",
-       "en": "$|A| > k$ means $A < -k$ or $A > k$.",
-       "ur": "$|A| > k$ کا مطلب $A < -k$ یا $A > k$۔"
+       "math": "|T - 37^\\circ| > 2.5^\\circ",
+       "en": "Write down the given absolute value inequality representing the temperature condition.",
+       "ur": "درجہ حرارت کی شرط کو ظاہر کرنے والی دی گئی مطلق قیمت کی ناہمواری لکھیں۔"
       },
       {
-       "math": "T < 34.5 \\quad\\text{or}\\quad T > 39.5",
-       "en": "Add 37.",
-       "ur": "37 جمع کریں۔",
+       "math": "T - 37 < -2.5 \\quad \\text{or} \\quad T - 37 > 2.5",
+       "en": "By the property of absolute value inequalities, $|A| > k$ is equivalent to $A < -k$ or $A > k$.",
+       "ur": "مطلق قیمت کی ناہمواریوں کی خاصیت کے مطابق، $|A| > k$ کا مطلب $A < -k$ یا $A > k$ ہوتا ہے۔"
+      },
+      {
+       "math": "T < 37 - 2.5 \\quad \\text{or} \\quad T > 37 + 2.5",
+       "en": "Add $37$ to both sides of each inequality to isolate $T$.",
+       "ur": "$T$ کو الگ کرنے کے لیے ہر ناہمواری کے دونوں اطراف میں $37$ جمع کریں۔"
+      },
+      {
+       "math": "T < 34.5 \\quad \\text{or} \\quad T > 39.5",
+       "en": "Simplify both inequalities by performing the subtraction and addition.",
+       "ur": "تفریق اور جمع کا عمل کر کے دونوں ناہمواریوں کو مختصر کریں۔",
+       "check": [
+        "37 - 2.5 == 34.5",
+        "37 + 2.5 == 39.5",
+        "Abs(34.4 - 37) > 2.5",
+        "Abs(39.6 - 37) > 2.5"
+       ]
+      },
+      {
+       "math": "T < 34.5^\\circ \\quad \\text{or} \\quad T > 39.5^\\circ",
+       "en": "Thus, the process must be stopped if the temperature is below $34.5^\\circ C$ or above $39.5^\\circ C$.",
+       "ur": "اس طرح، اگر درجہ حرارت $34.5^\\circ C$ سے کم یا $39.5^\\circ C$ سے زیادہ ہو جائے تو عمل کو روک دینا چاہیے۔",
        "check": [
         "Abs(34.4 - 37) > 2.5",
         "Abs(39.6 - 37) > 2.5",
@@ -5242,6 +5961,7 @@
       }
      ],
      "answer": "$T < 34.5^\\circ$ or $T > 39.5^\\circ$",
+     "enriched": true,
      "book_key": "T<34.5 or T>39.5"
     }
    ],
@@ -5259,21 +5979,34 @@
      "prompt": "",
      "steps": [
       {
+       "math": "|x - 2.5| \\le 0.04",
+       "en": "Write down the given absolute value inequality representing the acceptable length $x$ of the metal rods.",
+       "ur": "دی گئی مطلق قیمت کی ناہمواری لکھیں جو دھاتی سلاخوں کی قابل قبول لمبائی $x$ کو ظاہر کرتی ہے۔"
+      },
+      {
        "math": "-0.04 \\le x - 2.5 \\le 0.04",
-       "en": "Remove the absolute value: $|A| \\le k$ means $-k \\le A \\le k$.",
-       "ur": "مطلق قیمت ہٹائیں: $|A| \\le k$ کا مطلب $-k \\le A \\le k$۔"
+       "en": "Remove the absolute value sign by using the rule: if $|A| \\le k$, then $-k \\le A \\le k$.",
+       "ur": "مطلق قیمت کی علامت کو اس اصول کا استعمال کرتے ہوئے ہٹائیں: اگر $|A| \\le k$ ہو، تو $-k \\le A \\le k$ ہوتا ہے۔"
+      },
+      {
+       "math": "-0.04 + 2.5 \\le x - 2.5 + 2.5 \\le 0.04 + 2.5",
+       "en": "To isolate $x$ in the middle, add $2.5$ to all three parts of the inequality.",
+       "ur": "درمیان میں $x$ کو الگ کرنے کے لیے، ناہمواری کے تینوں حصوں میں $2.5$ جمع کریں۔"
       },
       {
        "math": "2.46 \\le x \\le 2.54",
-       "en": "Add 2.5.",
-       "ur": "2.5 جمع کریں۔",
+       "en": "Simplify the values on both sides to find the range of acceptable lengths in metres.",
+       "ur": "قابل قبول لمبائی کی حد (میٹر میں) معلوم کرنے کے لیے دونوں اطراف کی قیمتوں کو مختصر کریں۔",
        "check": [
+        "-R(4,100) + R(25,10) == R(246,100)",
+        "R(4,100) + R(25,10) == R(254,100)",
         "Abs(R(246,100) - R(5,2)) <= R(4,100)",
         "Abs(R(254,100) - R(5,2)) <= R(4,100)"
        ]
       }
      ],
      "answer": "$2.46 \\le x \\le 2.54$",
+     "enriched": true,
      "book_key": "2.46\\le x\\le 2.54"
     }
    ],
@@ -5291,9 +6024,29 @@
      "prompt": "",
      "steps": [
       {
-       "math": "|x| > 0.1 \\Rightarrow x < -0.1 \\quad\\text{or}\\quad x > 0.1",
-       "en": "$|A| > k$ means $A < -k$ or $A > k$.",
-       "ur": "$|A| > k$ کا مطلب $A < -k$ یا $A > k$۔",
+       "math": "|x| > 0.1",
+       "en": "The given absolute value inequality models the positions $x$ of the centre that cause the machine part to be rejected.",
+       "ur": "دی گئی مطلق قیمت کی غیر مساوات مرکز کی ان پوزیشنز $x$ کو ظاہر کرتی ہے جن کی وجہ سے مشین کا پرزہ مسترد ہو جاتا ہے۔"
+      },
+      {
+       "math": "|A| > k \\iff A < -k \\quad\\text{or}\\quad A > k",
+       "en": "Recall the property of absolute value inequalities: for any positive number $k$, $|A| > k$ is equivalent to $A < -k$ or $A > k$.",
+       "ur": "مطلق قیمت کی غیر مساوات کی خاصیت یاد رکھیں: کسی بھی مثبت عدد $k$ کے لیے، $|A| > k$ کا مطلب $A < -k$ یا $A > k$ ہوتا ہے۔"
+      },
+      {
+       "math": "x < -0.1 \\quad\\text{or}\\quad x > 0.1",
+       "en": "Substitute $A = x$ and $k = 0.1$ into the rule to remove the absolute value bars.",
+       "ur": "مطلق قیمت کی علامت کو ہٹانے کے لیے اصول میں $A = x$ اور $k = 0.1$ درج کریں۔",
+       "check": [
+        "Abs(-0.2) > 0.1",
+        "Abs(0.2) > 0.1",
+        "Abs(0.05) <= 0.1"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Therefore, the part is rejected if the position of its centre is less than $-0.1\\text{ mm}$ or greater than $0.1\\text{ mm}$, which is written as $x < -0.1$ or $x > 0.1$.",
+       "ur": "لہٰذا، پرزہ مسترد کر دیا جاتا ہے اگر اس کے مرکز کی پوزیشن $-0.1\\text{ mm}$ سے کم یا $0.1\\text{ mm}$ سے زیادہ ہو، جسے $x < -0.1$ یا $x > 0.1$ لکھا جاتا ہے۔",
        "check": [
         "Abs(-0.2) > 0.1",
         "Abs(0.05) <= 0.1"
@@ -5301,6 +6054,7 @@
       }
      ],
      "answer": "$x < -0.1$ or $x > 0.1$",
+     "enriched": true,
      "book_key": "x<-0.1 or x>0.1"
     }
    ],
@@ -5318,20 +6072,55 @@
      "prompt": "If $f(x)=\\frac{5x-6}{3}$, then what is the value of $f(3)$? (a) $-1$ (b) $3$ (c) $9$ (d) $15$",
      "steps": [
       {
-       "math": "f(3) = \\frac{5(3) - 6}{3} = \\frac{9}{3} = 3",
-       "en": "Put $x = 3$.",
-       "ur": "$x = 3$ رکھیں۔",
+       "math": "",
+       "en": "We are given the function $f(x) = \\frac{5x - 6}{3}$ and we need to find the value of $f(3)$.",
+       "ur": "ہمیں فنکشن $f(x) = \\frac{5x - 6}{3}$ دیا گیا ہے اور ہمیں $f(3)$ کی قیمت معلوم کرنی ہے۔"
+      },
+      {
+       "math": "f(3) = \\frac{5(3) - 6}{3}",
+       "en": "Substitute $x = 3$ into the given function.",
+       "ur": "دیے گئے فنکشن میں $x = 3$ درج کریں۔",
        "check": [
         "(5*3 - 6)/3 == 3"
        ]
       },
       {
+       "math": "f(3) = \\frac{15 - 6}{3}",
+       "en": "Multiply the numbers in the numerator: $5 \\times 3 = 15$.",
+       "ur": "شمار کنندہ میں اعداد کو ضرب دیں: $5 \\times 3 = 15$۔",
+       "check": [
+        "5*3 == 15",
+        "(5*3 - 6)/3 == (15 - 6)/3"
+       ]
+      },
+      {
+       "math": "f(3) = \\frac{9}{3}",
+       "en": "Subtract the numbers in the numerator: $15 - 6 = 9$.",
+       "ur": "شمار کنندہ میں تفریق کا عمل کریں: $15 - 6 = 9$۔",
+       "check": [
+        "15 - 6 == 9",
+        "(15 - 6)/3 == R(9, 3)"
+       ]
+      },
+      {
+       "math": "f(3) = 3",
+       "en": "Divide $9$ by $3$ to get the simplified value.",
+       "ur": "مختصر قیمت حاصل کرنے کے لیے $9$ کو $3$ پر تقسیم کریں۔",
+       "check": [
+        "R(9, 3) == 3"
+       ]
+      },
+      {
        "math": "\\text{Answer: (b) } 3",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Comparing with the given options, the correct choice is (b) $3$.",
+       "ur": "دیے گئے آپشنز سے موازنہ کرنے پر، درست انتخاب (b) $3$ ہے۔",
+       "check": [
+        "(5*3 - 6)/3 == 3"
+       ]
       }
      ],
      "answer": "(b) $3$",
+     "enriched": true,
      "book_key": "(b) 3"
     },
     {
@@ -5340,16 +6129,27 @@
      "steps": [
       {
        "math": "",
-       "en": "A function from $X$ to $Y$ is written $f: X \\to Y$.",
-       "ur": "$X$ سے $Y$ کا تفاعل $f: X \\to Y$ لکھا جاتا ہے۔"
+       "en": "We need to identify the standard mathematical notation for a function $f$ from a set $X$ to a set $Y$.",
+       "ur": "ہمیں سیٹ $X$ سے سیٹ $Y$ میں ایک تفاعل (function) $f$ کو ظاہر کرنے کی معیاری ریاضیاتی علامت کی نشاندہی کرنی ہے۔"
+      },
+      {
+       "math": "",
+       "en": "Here, $X$ is the starting set (domain) and $Y$ is the target set (codomain). In mathematics, an arrow $\\to$ is used to show a mapping from the first set to the second set.",
+       "ur": "یہاں، $X$ ابتدائی سیٹ (ڈومین) ہے اور $Y$ ہدف والا سیٹ (کوڈومین) ہے۔ ریاضی میں، پہلے سیٹ سے دوسرے سیٹ میں ربط کو ظاہر کرنے کے لیے تیر کے نشان $\\to$ کا استعمال کیا جاتا ہے۔"
+      },
+      {
+       "math": "f: X \\to Y",
+       "en": "Therefore, a function $f$ from $X$ to $Y$ is symbolically written by placing a colon after $f$, followed by $X \\to Y$.",
+       "ur": "لہٰذا، $X$ سے $Y$ تک کے تفاعل $f$ کو علامتی طور پر $f$ کے بعد کولن (:) لگا کر، اور پھر $X \\to Y$ لکھ کر ظاہر کیا جاتا ہے۔"
       },
       {
        "math": "\\text{Answer: (c) } f: X\\to Y",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Comparing this with the given choices, option (c) is the correct answer.",
+       "ur": "دیے گئے ممکنہ جوابات سے موازنہ کرنے پر، آپشن (c) درست جواب ہے۔"
       }
      ],
      "answer": "(c) $f: X\\to Y$",
+     "enriched": true,
      "book_key": "(c) f: X\\to Y"
     },
     {
@@ -5357,17 +6157,28 @@
      "prompt": "$(f\\circ g)(x)=$ (a) $(f+g)(x)$ (b) $(f-g)(x)$ (c) $f(g(x))$ (d) $f(x)\\div g(x)$",
      "steps": [
       {
+       "math": "(f \\circ g)(x)",
+       "en": "We are given the composite function notation $(f \\circ g)(x)$ and asked to find its correct mathematical definition.",
+       "ur": "ہمیں مرکب تفاعل کی علامت $(f \\circ g)(x)$ دی گئی ہے اور اس کی درست ریاضیاتی تعریف معلوم کرنے کو کہا گیا ہے۔"
+      },
+      {
        "math": "",
-       "en": "Composition: $g$ first, then $f$.",
-       "ur": "ترکیب: پہلے $g$ پھر $f$۔"
+       "en": "In mathematics, the symbol $\\circ$ represents the composition of two functions.",
+       "ur": "ریاضی میں، علامت $\\circ$ دو تفاعل کی ترکیب کو ظاہر کرتی ہے۔"
+      },
+      {
+       "math": "(f \\circ g)(x) = f(g(x))",
+       "en": "By the definition of function composition, applying $f \\circ g$ to $x$ means we first apply the inner function $g$ to $x$ to get $g(x)$, and then apply the outer function $f$ to that result.",
+       "ur": "تفاعل کی ترکیب کی تعریف کے مطابق، $x$ پر $f \\circ g$ کا اطلاق کرنے کا مطلب ہے کہ ہم پہلے اندرونی تفاعل $g$ کو $x$ پر لاگو کر کے $g(x)$ حاصل کرتے ہیں، اور پھر اس نتیجے پر بیرونی تفاعل $f$ کا اطلاق کرتے ہیں۔"
       },
       {
        "math": "\\text{Answer: (c) } f(g(x))",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Comparing this definition with the given options, we see that option (c) is the correct answer.",
+       "ur": "اس تعریف کا دیے گئے آپشنز سے موازنہ کرنے پر، ہم دیکھتے ہیں کہ آپشن (c) درست جواب ہے۔"
       }
      ],
      "answer": "(c) $f(g(x))$",
+     "enriched": true,
      "book_key": "(c) f(g(x))"
     },
     {
@@ -5375,20 +6186,45 @@
      "prompt": "If $f(x)=2x+3$, $g(x)=x+1$, then $f(x)+g(x)=$ (a) $3x$ (b) $3x+4$ (c) $4$ (d) $2x^2+3$",
      "steps": [
       {
-       "math": "(2x + 3) + (x + 1) = 3x + 4",
-       "en": "Add like terms.",
-       "ur": "متشابہ ارکان جمع کریں۔",
+       "math": "",
+       "en": "Write down the given functions $f(x) = 2x + 3$ and $g(x) = x + 1$. We need to find the sum $f(x) + g(x)$.",
+       "ur": "دیے گئے تفاعل $f(x) = 2x + 3$ اور $g(x) = x + 1$ لکھیں۔ ہمیں ان کا مجموعہ $f(x) + g(x)$ معلوم کرنا ہے۔"
+      },
+      {
+       "math": "f(x) + g(x) = (2x + 3) + (x + 1)",
+       "en": "Substitute the given expressions for $f(x)$ and $g(x)$ into the sum.",
+       "ur": "مجموعہ میں $f(x)$ اور $g(x)$ کی دی گئی قیمتیں درج کریں۔",
        "check": [
-        "(2*x + 3) + (x + 1) == 3*x + 4"
+        "(2*x + 3) + (x + 1) == 2*x + 3 + x + 1"
+       ]
+      },
+      {
+       "math": "f(x) + g(x) = (2x + x) + (3 + 1)",
+       "en": "Remove the brackets and group the like terms together.",
+       "ur": "بریکٹ ہٹائیں اور متشابہ ارکان کو ایک ساتھ ملا کر لکھیں۔",
+       "check": [
+        "(2*x + 3) + (x + 1) == (2*x + x) + (3 + 1)"
+       ]
+      },
+      {
+       "math": "f(x) + g(x) = 3x + 4",
+       "en": "Add the like terms to simplify the expression.",
+       "ur": "جملے کو مختصر کرنے کے لیے متشابہ ارکان کو جمع کریں۔",
+       "check": [
+        "(2*x + x) + (3 + 1) == 3*x + 4"
        ]
       },
       {
        "math": "\\text{Answer: (b) } 3x+4",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "The result matches option (b), so (b) is the correct answer.",
+       "ur": "یہ نتیجہ آپشن (b) سے مطابقت رکھتا ہے، لہٰذا درست جواب (b) ہے۔",
+       "check": [
+        "(2*x + 3) + (x + 1) == 3*x + 4"
+       ]
       }
      ],
      "answer": "(b) $3x+4$",
+     "enriched": true,
      "book_key": "(b) 3x+4"
     },
     {
@@ -5396,20 +6232,45 @@
      "prompt": "If $f(x)=5x+2$, $h(x)=2x-2$, then $f(x)-h(x)=$ (a) $3x$ (b) $5x^2-4$ (c) $3x+4$ (d) $-3x-4$",
      "steps": [
       {
-       "math": "(5x + 2) - (2x - 2) = 3x + 4",
-       "en": "Subtract.",
-       "ur": "تفریق کریں۔",
+       "math": "",
+       "en": "We are given the two functions $f(x) = 5x + 2$ and $h(x) = 2x - 2$, and we need to find the difference $f(x) - h(x)$.",
+       "ur": "ہمیں دو تفاعل $f(x) = 5x + 2$ اور $h(x) = 2x - 2$ دیے گئے ہیں، اور ہمیں ان کا فرق $f(x) - h(x)$ معلوم کرنا ہے۔"
+      },
+      {
+       "math": "f(x) - h(x) = (5x + 2) - (2x - 2)",
+       "en": "Substitute the given expressions for $f(x)$ and $h(x)$ into $f(x) - h(x)$.",
+       "ur": "$f(x) - h(x)$ میں $f(x)$ اور $h(x)$ کی دی گئی قیمتیں درج کریں۔",
        "check": [
         "(5*x + 2) - (2*x - 2) == 3*x + 4"
        ]
       },
       {
+       "math": "(5x + 2) - (2x - 2) = 5x + 2 - 2x + 2",
+       "en": "Remove the brackets. Remember that the negative sign outside the second bracket changes the signs of the terms inside it.",
+       "ur": "بریکٹ ختم کریں۔ یاد رکھیں کہ دوسری بریکٹ کے باہر منفی کی علامت اندر موجود رقموں کی علامتیں بدل دیتی ہے۔",
+       "check": [
+        "(5*x + 2) - (2*x - 2) == 5*x + 2 - 2*x + 2"
+       ]
+      },
+      {
+       "math": "5x - 2x + 2 + 2 = 3x + 4",
+       "en": "Combine the like terms by subtracting the $x$ terms and adding the constant numbers.",
+       "ur": "یکساں رقموں کو یکجا کریں، یعنی $x$ والی رقموں کو تفریق کریں اور مستقل اعداد کو جمع کریں۔",
+       "check": [
+        "5*x - 2*x + 2 + 2 == 3*x + 4"
+       ]
+      },
+      {
        "math": "\\text{Answer: (c) } 3x+4",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "The result $3x + 4$ matches option (c), so (c) is the correct answer.",
+       "ur": "نتیجہ $3x + 4$ آپشن (c) سے مطابقت رکھتا ہے، اس لیے (c) درست جواب ہے۔",
+       "check": [
+        "(5*x + 2) - (2*x - 2) == 3*x + 4"
+       ]
       }
      ],
      "answer": "(c) $3x+4$",
+     "enriched": true,
      "book_key": "(c) 3x+4"
     },
     {
@@ -5417,20 +6278,45 @@
      "prompt": "If $f(x)=3x+1$, $g(x)=2x$, then $g(x)\\times f(x)=$ (a) $6x+2x$ (b) $5x^2+1$ (c) $x+1$ (d) $6x^2+2x$",
      "steps": [
       {
-       "math": "2x(3x + 1) = 6x^2 + 2x",
-       "en": "Multiply.",
-       "ur": "ضرب دیں۔",
+       "math": "",
+       "en": "We are given two functions $f(x) = 3x + 1$ and $g(x) = 2x$, and we need to find the product $g(x) \\times f(x)$.",
+       "ur": "ہمیں دو تفاعل $f(x) = 3x + 1$ اور $g(x) = 2x$ دیے گئے ہیں، اور ہمیں ان کا حاصلِ ضرب $g(x) \\times f(x)$ معلوم کرنا ہے۔"
+      },
+      {
+       "math": "g(x) \\times f(x) = (2x)(3x + 1)",
+       "en": "Substitute the given expressions for $g(x)$ and $f(x)$ into the product.",
+       "ur": "حاصلِ ضرب میں $g(x)$ اور $f(x)$ کی دی گئی قیمتیں درج کریں۔",
        "check": [
-        "2*x*(3*x + 1) == 6*x**2 + 2*x"
+        "(2*x)*(3*x + 1) == 2*x*(3*x + 1)"
+       ]
+      },
+      {
+       "math": "(2x)(3x + 1) = (2x)(3x) + (2x)(1)",
+       "en": "Apply the distributive property of multiplication over addition to multiply $2x$ with each term inside the brackets.",
+       "ur": "ضرب کی تقسیمی خاصیت کا استعمال کرتے ہوئے بریکٹ کے اندر موجود ہر رقم کو $2x$ سے ضرب دیں۔",
+       "check": [
+        "(2*x)*(3*x + 1) == (2*x)*(3*x) + (2*x)*(1)"
+       ]
+      },
+      {
+       "math": "(2x)(3x) + (2x)(1) = 6x^2 + 2x",
+       "en": "Simplify the terms by multiplying the coefficients and adding the exponents of $x$.",
+       "ur": "عددی سروں کو ضرب دے کر اور $x$ کے قوت نماؤں کو جمع کر کے رقوم کو مختصر کریں۔",
+       "check": [
+        "(2*x)*(3*x) + (2*x)*(1) == 6*x**2 + 2*x"
        ]
       },
       {
        "math": "\\text{Answer: (d) } 6x^2+2x",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "The result matches option (d), so we choose (d) as the correct answer.",
+       "ur": "یہ نتیجہ آپشن (d) سے مطابقت رکھتا ہے، اس لیے ہم درست جواب کے طور پر (d) کا انتخاب کرتے ہیں۔",
+       "check": [
+        "2*x*(3*x + 1) == 6*x**2 + 2*x"
+       ]
       }
      ],
      "answer": "(d) $6x^2+2x$",
+     "enriched": true,
      "book_key": "(d) 6x^2+2x"
     },
     {
@@ -5438,20 +6324,54 @@
      "prompt": "If $f(x)=x^2-4$, $g(x)=x+2,\\ x\\ne-2$, then $\\frac{f(x)}{g(x)}=$ (a) $\\frac{1}{x-2}$ (b) $\\frac{1}{x+2}$ (c) $x+2$ (d) $x-2$",
      "steps": [
       {
-       "math": "\\frac{(x - 2)(x + 2)}{x + 2} = x - 2",
-       "en": "Factorize and cancel.",
-       "ur": "تجزی کر کے کاٹ دیں۔",
+       "math": "",
+       "en": "We are given two functions $f(x) = x^2 - 4$ and $g(x) = x + 2$ where $x \\neq -2$, and we need to find the quotient $\\frac{f(x)}{g(x)}$.",
+       "ur": "ہمیں دو تفاعل $f(x) = x^2 - 4$ اور $g(x) = x + 2$ دیے گئے ہیں جہاں $x \\neq -2$ ہے، اور ہمیں حاصلِ تقسیم $\\frac{f(x)}{g(x)}$ معلوم کرنا ہے۔"
+      },
+      {
+       "math": "\\frac{f(x)}{g(x)} = \\frac{x^2 - 4}{x + 2}",
+       "en": "Substitute the given expressions for $f(x)$ and $g(x)$ into the fraction $\\frac{f(x)}{g(x)}$.",
+       "ur": "کسر $\\frac{f(x)}{g(x)}$ میں $f(x)$ اور $g(x)$ کی دی گئی قیمتیں درج کریں۔",
        "check": [
-        "(x**2 - 4)/(x + 2) == x - 2"
+        "(x**2 - 4)/(x + 2) == (x**2 - 4)/(x + 2)"
+       ]
+      },
+      {
+       "math": "x^2 - 4 = x^2 - 2^2 = (x - 2)(x + 2)",
+       "en": "Factorize the numerator $x^2 - 4$ using the difference of two squares formula, $a^2 - b^2 = (a - b)(a + b)$.",
+       "ur": "دو مربعات کے فرق کے کلیے $a^2 - b^2 = (a - b)(a + b)$ کو استعمال کرتے ہوئے شمار کنندہ $x^2 - 4$ کی تجزی کریں۔",
+       "check": [
+        "x**2 - 4 == x**2 - 2**2",
+        "x**2 - 4 == (x - 2)*(x + 2)"
+       ]
+      },
+      {
+       "math": "\\frac{f(x)}{g(x)} = \\frac{(x - 2)(x + 2)}{x + 2}",
+       "en": "Replace the numerator with its factorized form in the fraction.",
+       "ur": "کسر میں شمار کنندہ کی جگہ اس کی تجزی شدہ شکل لکھیں۔",
+       "check": [
+        "(x**2 - 4)/(x + 2) == ((x - 2)*(x + 2))/(x + 2)"
+       ]
+      },
+      {
+       "math": "\\frac{(x - 2)(x + 2)}{x + 2} = x - 2",
+       "en": "Since $x \\neq -2$, the term $x + 2$ is non-zero, so we can cancel out the common factor $(x + 2)$ from the numerator and the denominator.",
+       "ur": "چونکہ $x \\neq -2$ ہے، اس لیے $x + 2$ صفر نہیں ہے، لہذا ہم شمار کنندہ اور مخرج سے مشترک جزو ضربی $(x + 2)$ کو کاٹ سکتے ہیں۔",
+       "check": [
+        "((x - 2)*(x + 2))/(x + 2) == x - 2"
        ]
       },
       {
        "math": "\\text{Answer: (d) } x-2",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Thus, $\\frac{f(x)}{g(x)} = x - 2$, which matches option (d).",
+       "ur": "پس $\\frac{f(x)}{g(x)} = x - 2$ ہے، جو کہ آپشن (d) سے مطابقت رکھتا ہے۔",
+       "check": [
+        "(x**2 - 4)/(x + 2) == x - 2"
+       ]
       }
      ],
      "answer": "(d) $x-2$",
+     "enriched": true,
      "book_key": "(d) x-2"
     },
     {
@@ -5459,17 +6379,36 @@
      "prompt": "What is the shape of the graph of an absolute value function? (a) $\\text{U-shaped}$ (b) $\\text{V-shaped}$ (c) $\\text{L-shaped}$ (d) $\\text{M-shaped}$",
      "steps": [
       {
+       "math": "f(x) = |x|",
+       "en": "Consider the standard absolute value function $f(x) = |x|$.",
+       "ur": "معیاری مطلق قیمت کے تفاعل $f(x) = |x|$ پر غور کریں۔"
+      },
+      {
        "math": "",
-       "en": "Two straight lines meeting at a corner make a V.",
-       "ur": "دو خطوط مستقیم ایک کونے پر مل کر V بناتے ہیں۔"
+       "en": "By definition, for $x \\ge 0$, the graph is the straight line $y = x$, and for $x < 0$, the graph is the straight line $y = -x$.",
+       "ur": "تعریف کے مطابق، $x \\ge 0$ کے لیے گراف ایک خط مستقیم $y = x$ ہے، اور $x < 0$ کے لیے گراف ایک خط مستقیم $y = -x$ ہے۔"
+      },
+      {
+       "math": "|0| = 0",
+       "en": "At $x = 0$, the value of the function is $0$, so both straight lines meet at the origin $(0, 0)$.",
+       "ur": "$x = 0$ پر تفاعل کی قیمت $0$ ہے، اس لیے دونوں خطوط مستقیم مبدأ $(0, 0)$ پر ملتے ہیں۔",
+       "check": [
+        "Abs(0) == 0"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Since two straight lines meeting at a sharp corner point upwards, the graph forms a $\\text{V-shaped}$ curve.",
+       "ur": "چونکہ دو خطوط مستقیم ایک تیز کونے پر مل کر اوپر کی طرف جاتے ہیں، اس لیے گراف ایک $\\text{V-shaped}$ شکل بناتا ہے۔"
       },
       {
        "math": "\\text{Answer: (b) } \\text{V-shaped}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Therefore, the correct option is (b).",
+       "ur": "لہذا، درست جواب (b) ہے۔"
       }
      ],
      "answer": "(b) $\\text{V-shaped}$",
+     "enriched": true,
      "book_key": "(b) V-shaped"
     },
     {
@@ -5478,16 +6417,35 @@
      "steps": [
       {
        "math": "",
-       "en": "Vertical line test: each $x$ has exactly one $y$.",
-       "ur": "عمودی خط کی جانچ: ہر $x$ کا صرف ایک $y$ ہوتا ہے۔"
+       "en": "We are asked to find the maximum number of points at which a vertical line can intersect the graph of a function.",
+       "ur": "ہمیں یہ معلوم کرنا ہے کہ ایک عمودی خط (vertical line) کسی تفاعل (function) کے گراف کو زیادہ سے زیادہ کتنے نقاط پر قطع کر سکتا ہے۔"
+      },
+      {
+       "math": "y = f(x)",
+       "en": "By the definition of a function, every input value $x$ in the domain must correspond to exactly one output value $y$.",
+       "ur": "تفاعل کی تعریف کے مطابق، ڈومین میں موجود ہر ان پٹ قیمت $x$ کے بدلے میں صرف اور صرف ایک آؤٹ پٹ قیمت $y$ ہونی چاہیے۔"
+      },
+      {
+       "math": "",
+       "en": "According to the Vertical Line Test, if any vertical line intersects a graph at more than $1$ point, then a single $x$-value would have multiple $y$-values, meaning the graph does not represent a function.",
+       "ur": "عمودی خط کی جانچ (Vertical Line Test) کے مطابق، اگر کوئی عمودی خط کسی گراف کو $1$ سے زیادہ نقاط پر قطع کرے، تو ایک ہی $x$ کی قیمت کے لیے $y$ کی ایک سے زیادہ قیمتیں ہوں گی، جس کا مطلب ہے کہ وہ گراف تفاعل کو ظاہر نہیں کرتا۔"
+      },
+      {
+       "math": "\\text{Number of intersection points} = 1",
+       "en": "Therefore, for a graph to represent a function, every vertical line intersecting it must do so at most at $1$ point.",
+       "ur": "لہٰذا، ایک گراف کے تفاعل ہونے کے لیے ضروری ہے کہ اسے قطع کرنے والا ہر عمودی خط اسے صرف $1$ نقطہ پر قطع کرے۔",
+       "check": [
+        "1 == 1"
+       ]
       },
       {
        "math": "\\text{Answer: (d) } \\text{1 point}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Comparing this result with the given options, we see that option (d) is the correct choice.",
+       "ur": "اس نتیجے کا دیے گئے آپشنز سے موازنہ کرنے پر معلوم ہوتا ہے کہ آپشن (d) درست جواب ہے۔"
       }
      ],
      "answer": "(d) $\\text{1 point}$",
+     "enriched": true,
      "book_key": "(d) 1 point"
     },
     {
@@ -5495,20 +6453,48 @@
      "prompt": "If $f(x)=x^3$, then $f(-2)=$ (a) $-8$ (b) $8$ (c) $4$ (d) $-6$",
      "steps": [
       {
-       "math": "(-2)^3 = -8",
-       "en": "Cube $-2$.",
-       "ur": "$-2$ کا مکعب۔",
+       "math": "f(x) = x^3",
+       "en": "Write down the given function.",
+       "ur": "دیا گیا فنکشن لکھیں۔",
        "check": [
-        "(-2)**3 == -8"
+        "x**3 == x**3"
+       ]
+      },
+      {
+       "math": "f(-2) = (-2)^3",
+       "en": "Substitute $x = -2$ into the function to find the value of $f(-2)$.",
+       "ur": "$f(-2)$ کی قیمت معلوم کرنے کے لیے فنکشن میں $x = -2$ درج کریں۔",
+       "check": [
+        "(-2)**3 == (-2)**3"
+       ]
+      },
+      {
+       "math": "f(-2) = (-2) \\times (-2) \\times (-2)",
+       "en": "Expand the cube by multiplying $-2$ by itself three times.",
+       "ur": "مکعب کو کھولنے کے لیے $-2$ کو اپنے آپ سے تین بار ضرب دیں۔",
+       "check": [
+        "(-2)**3 == (-2)*(-2)*(-2)"
+       ]
+      },
+      {
+       "math": "f(-2) = -8",
+       "en": "Multiply the numbers together. Since the exponent is an odd number, the result of cubing a negative number is negative.",
+       "ur": "ان اعداد کو آپس میں ضرب دیں۔ چونکہ قوت نما ایک طاق عدد ہے، اس لیے منفی عدد کا مکعب منفی ہوتا ہے۔",
+       "check": [
+        "(-2)*(-2)*(-2) == -8"
        ]
       },
       {
        "math": "\\text{Answer: (a) } -8",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "This matches option (a), which is the correct answer.",
+       "ur": "یہ آپشن (a) سے مطابقت رکھتا ہے، جو کہ درست جواب ہے۔",
+       "check": [
+        "(-2)**3 == -8"
+       ]
       }
      ],
      "answer": "(a) $-8$",
+     "enriched": true,
      "book_key": "(a) -8"
     }
    ],
@@ -5526,20 +6512,47 @@
      "prompt": "$f(x)+g(x)$",
      "steps": [
       {
-       "math": "f(x) + g(x) = (25 - x^{2}) + (x + 5)",
-       "en": "Put in the two functions.",
-       "ur": "دونوں تفاعل رکھیں۔"
+       "math": "",
+       "en": "We are given the two functions $f(x) = 25 - x^{2}$ and $g(x) = 5 + x$, and we need to find their sum $f(x) + g(x)$.",
+       "ur": "ہمیں دو تفاعل $f(x) = 25 - x^{2}$ اور $g(x) = 5 + x$ دیے گئے ہیں، اور ہمیں ان کا مجموعہ $f(x) + g(x)$ معلوم کرنا ہے۔"
       },
       {
-       "math": "= - x^{2} + x + 30",
-       "en": "Add like terms.",
-       "ur": "متشابہ ارکان جمع کریں۔",
+       "math": "f(x) + g(x) = (25 - x^{2}) + (5 + x)",
+       "en": "Substitute the given expressions for $f(x)$ and $g(x)$ into $f(x) + g(x)$.",
+       "ur": "$f(x) + g(x)$ میں $f(x)$ اور $g(x)$ کی دی گئی قیمتیں درج کریں۔",
        "check": [
+        "(25 - x**2) + (5 + x) == 30 + x - x**2"
+       ]
+      },
+      {
+       "math": "f(x) + g(x) = 25 - x^{2} + 5 + x",
+       "en": "Remove the brackets.",
+       "ur": "بریکٹ ہٹائیں۔",
+       "check": [
+        "(25 - x**2) + (5 + x) == 25 - x**2 + 5 + x"
+       ]
+      },
+      {
+       "math": "f(x) + g(x) = - x^{2} + x + (25 + 5)",
+       "en": "Rearrange the terms in descending powers of $x$ and group the constant terms together.",
+       "ur": "$x$ کی قوتوں کو نزولی ترتیب میں لکھیں اور مستقل ارکان کو اکٹھا کریں۔",
+       "check": [
+        "25 - x**2 + 5 + x == -x**2 + x + (25 + 5)"
+       ]
+      },
+      {
+       "math": "f(x) + g(x) = - x^{2} + x + 30",
+       "en": "Add the constant terms $25$ and $5$ to get the final answer.",
+       "ur": "آخری جواب حاصل کرنے کے لیے مستقل ارکان $25$ اور $5$ کو جمع کریں۔",
+       "check": [
+        "25 + 5 == 30",
+        "-x**2 + x + (25 + 5) == -x**2 + x + 30",
         "(-x**2 + x + 30) == (-x**2 + x + 30)"
        ]
       }
      ],
      "answer": "$- x^{2} + x + 30$",
+     "enriched": true,
      "book_key": "-x^2+x+30"
     },
     {
@@ -5547,20 +6560,51 @@
      "prompt": "$f(x)-g(x)$",
      "steps": [
       {
-       "math": "f(x) - g(x) = (25 - x^{2}) - (x + 5)",
-       "en": "Put in the two functions.",
-       "ur": "دونوں تفاعل رکھیں۔"
+       "math": "f(x) = 25 - x^{2}, \\quad g(x) = 5 + x",
+       "en": "First, write down the two given functions $f(x)$ and $g(x)$ from the question.",
+       "ur": "سب سے پہلے، سوال میں دیے گئے دونوں تفاعل $f(x)$ اور $g(x)$ لکھیں۔",
+       "check": [
+        "(25 - x**2) == (25 - x**2)",
+        "(5 + x) == (5 + x)"
+       ]
       },
       {
-       "math": "= - x^{2} - x + 20",
-       "en": "Remove the brackets (change the signs of the second) and collect like terms.",
-       "ur": "قوسین ہٹائیں (دوسری کی علامتیں بدلیں) اور متشابہ ارکان اکٹھے کریں۔",
+       "math": "f(x) - g(x) = (25 - x^{2}) - (5 + x)",
+       "en": "To find $f(x) - g(x)$, substitute the algebraic expressions for both functions inside brackets.",
+       "ur": "$f(x) - g(x)$ معلوم کرنے کے لیے، دونوں تفاعل کے الجبری جملے قوسین میں درج کریں۔",
        "check": [
+        "((25 - x**2) - (5 + x)) == ((25 - x**2) - (5 + x))"
+       ]
+      },
+      {
+       "math": "f(x) - g(x) = 25 - x^{2} - 5 - x",
+       "en": "Remove the brackets. Because there is a minus sign before the second bracket, the signs of both terms inside it will change.",
+       "ur": "قوسین ہٹائیں۔ چونکہ دوسری قوس کے باہر نفی کی علامت ہے، اس لیے اس کے اندر موجود دونوں ارکان کی علامتیں بدل جائیں گی۔",
+       "check": [
+        "((25 - x**2) - (5 + x)) == (25 - x**2 - 5 - x)"
+       ]
+      },
+      {
+       "math": "f(x) - g(x) = - x^{2} - x + 25 - 5",
+       "en": "Rearrange the terms in descending powers of $x$ and group the constant numbers together.",
+       "ur": "ارکان کو $x$ کی قوتوں کی نزولی ترتیب میں لکھیں اور مستقل اعداد کو اکٹھا کریں۔",
+       "check": [
+        "(25 - x**2 - 5 - x) == (-x**2 - x + 25 - 5)"
+       ]
+      },
+      {
+       "math": "f(x) - g(x) = - x^{2} - x + 20",
+       "en": "Subtract $5$ from $25$ to get the final simplified expression.",
+       "ur": "آخری مختصر جملہ حاصل کرنے کے لیے $25$ میں سے $5$ تفریق کریں۔",
+       "check": [
+        "(25 - 5) == 20",
+        "(-x**2 - x + 25 - 5) == (-x**2 - x + 20)",
         "(-x**2 - x + 20) == (-x**2 - x + 20)"
        ]
       }
      ],
      "answer": "$- x^{2} - x + 20$",
+     "enriched": true,
      "book_key": "-x^2-x+20"
     },
     {
@@ -5568,15 +6612,40 @@
      "prompt": "$f(x)\\cdot g(x)$",
      "steps": [
       {
-       "math": "f(x) \\cdot g(x) = (25 - x^{2}) \\cdot (x + 5)",
-       "en": "Put in the two functions.",
-       "ur": "دونوں تفاعل رکھیں۔"
+       "math": "",
+       "en": "We are given the two functions $f(x) = 25 - x^{2}$ and $g(x) = 5 + x$, and we need to find their product $f(x) \\cdot g(x)$.",
+       "ur": "ہمیں دو تفاعلات $f(x) = 25 - x^{2}$ اور $g(x) = 5 + x$ دیے گئے ہیں، اور ہمیں ان کا حاصلِ ضرب $f(x) \\cdot g(x)$ معلوم کرنا ہے۔"
       },
       {
-       "math": "= - x^{3} - 5 x^{2} + 25 x + 125",
-       "en": "Multiply out and collect like terms.",
-       "ur": "ضرب دے کر متشابہ ارکان اکٹھے کریں۔",
+       "math": "f(x) \\cdot g(x) = (25 - x^{2})(5 + x)",
+       "en": "Substitute the expressions of $f(x)$ and $g(x)$ into the product.",
+       "ur": "حاصلِ ضرب میں $f(x)$ اور $g(x)$ کی قیمتیں درج کریں۔",
        "check": [
+        "(25 - x**2)*(5 + x) == (25 - x**2)*(5 + x)"
+       ]
+      },
+      {
+       "math": "= 25(5 + x) - x^{2}(5 + x)",
+       "en": "Apply the distributive property to multiply each term of the first polynomial by the second polynomial.",
+       "ur": "تقسیمی خاصیت کا استعمال کرتے ہوئے پہلے کثیر رقمی کے ہر رکن کو دوسرے کثیر رقمی سے ضرب دیں۔",
+       "check": [
+        "(25 - x**2)*(5 + x) == 25*(5 + x) - x**2*(5 + x)"
+       ]
+      },
+      {
+       "math": "= 125 + 25x - 5x^{2} - x^{3}",
+       "en": "Multiply the terms inside the parentheses.",
+       "ur": "قوسین کے اندر موجود ارکان کو ضرب دیں۔",
+       "check": [
+        "25*(5 + x) - x**2*(5 + x) == 125 + 25*x - 5*x**2 - x**3"
+       ]
+      },
+      {
+       "math": "f(x) \\cdot g(x) = - x^{3} - 5 x^{2} + 25 x + 125",
+       "en": "Arrange the terms in descending order of powers of $x$ to get the final answer.",
+       "ur": "حتمی جواب حاصل کرنے کے لیے ارکان کو $x$ کی قوتوں کی نزولی ترتیب میں لکھیں۔",
+       "check": [
+        "125 + 25*x - 5*x**2 - x**3 == -x**3 - 5*x**2 + 25*x + 125",
         "((25 - x**2)*(x + 5)) == (-x**3 - 5*x**2 + 25*x + 125)"
        ]
       }
@@ -5586,6 +6655,7 @@
       "en": "The reference notes drop the $-x^3$ term: $(25 - x^2)(5 + x) = 125 + 25x - 5x^2 - x^3$.",
       "ur": "حوالہ نوٹس میں $-x^3$ کا رکن چھوٹ گیا ہے۔"
      },
+     "enriched": true,
      "book_key": "-5x^2+25x+125"
     },
     {
@@ -5593,20 +6663,46 @@
      "prompt": "$\\frac{f(x)}{g(x)}$",
      "steps": [
       {
-       "math": "\\frac{f(x)}{g(x)} = \\frac{25 - x^{2}}{x + 5}",
-       "en": "Put in the two functions.",
-       "ur": "دونوں تفاعل رکھیں۔"
+       "math": "",
+       "en": "We are given the two functions $f(x) = 25 - x^2$ and $g(x) = 5 + x$, and we need to find the quotient $\\frac{f(x)}{g(x)}$.",
+       "ur": "ہمیں دو تفاعل $f(x) = 25 - x^2$ اور $g(x) = 5 + x$ دیے گئے ہیں، اور ہمیں ان کی تقسیم $\\frac{f(x)}{g(x)}$ معلوم کرنی ہے۔"
       },
       {
-       "math": "= 5 - x",
-       "en": "Factorize and cancel the common factor.",
-       "ur": "تجزی کر کے مشترک جزو کاٹ دیں۔",
+       "math": "\\frac{f(x)}{g(x)} = \\frac{25 - x^{2}}{5 + x}",
+       "en": "Substitute the given expressions for $f(x)$ and $g(x)$ into the fraction.",
+       "ur": "کسر میں $f(x)$ اور $g(x)$ کی دی گئی قیمتیں درج کریں۔",
        "check": [
+        "(25 - x**2)/(5 + x) == (25 - x**2)/(x + 5)"
+       ]
+      },
+      {
+       "math": "\\frac{f(x)}{g(x)} = \\frac{5^{2} - x^{2}}{5 + x}",
+       "en": "Rewrite $25$ as $5^2$ in the numerator so that we can apply the difference of two squares formula, $a^2 - b^2 = (a - b)(a + b)$.",
+       "ur": "شمار کنندہ میں $25$ کو $5^2$ کے طور پر لکھیں تاکہ ہم دو مربّعوں کے فرق کا فارمولا $a^2 - b^2 = (a - b)(a + b)$ استعمال کر سکیں۔",
+       "check": [
+        "(25 - x**2)/(5 + x) == (5**2 - x**2)/(5 + x)"
+       ]
+      },
+      {
+       "math": "\\frac{f(x)}{g(x)} = \\frac{(5 - x)(5 + x)}{5 + x}",
+       "en": "Factorize the numerator using the formula.",
+       "ur": "فارمولے کی مدد سے شمار کنندہ کی تجزی کریں۔",
+       "check": [
+        "(5**2 - x**2)/(5 + x) == ((5 - x)*(5 + x))/(5 + x)"
+       ]
+      },
+      {
+       "math": "\\frac{f(x)}{g(x)} = 5 - x",
+       "en": "Cancel out the common factor $(5 + x)$ from the numerator and the denominator to get the final answer.",
+       "ur": "حتمی جواب حاصل کرنے کے لیے شمار کنندہ اور مخرج سے مشترک جزو $(5 + x)$ کو کاٹ دیں۔",
+       "check": [
+        "((5 - x)*(5 + x))/(5 + x) == 5 - x",
         "((25 - x**2)/(x + 5)) == (5 - x)"
        ]
       }
      ],
      "answer": "$5 - x$",
+     "enriched": true,
      "book_key": "5-x"
     },
     {
@@ -5614,15 +6710,39 @@
      "prompt": "$f(7)$",
      "steps": [
       {
-       "math": "f(7) = 25 - 7^2 = 25 - 49 = -24",
-       "en": "Put $x = 7$.",
-       "ur": "$x = 7$ رکھیں۔",
+       "math": "",
+       "en": "We are given the function $f(x) = 25 - x^2$ and we need to find the value of $f(7)$.",
+       "ur": "ہمیں فنکشن $f(x) = 25 - x^2$ دیا گیا ہے اور ہمیں $f(7)$ کی قیمت معلوم کرنی ہے۔"
+      },
+      {
+       "math": "f(7) = 25 - (7)^2",
+       "en": "Substitute $x = 7$ into the given function $f(x)$.",
+       "ur": "دیے گئے فنکشن $f(x)$ میں $x = 7$ درج کریں۔",
        "check": [
+        "25 - 7**2 == -24"
+       ]
+      },
+      {
+       "math": "f(7) = 25 - 49",
+       "en": "Evaluate the square of $7$, which is $7^2 = 49$.",
+       "ur": "$7$ کا مربع معلوم کریں، جو کہ $7^2 = 49$ ہے۔",
+       "check": [
+        "7**2 == 49",
+        "25 - 7**2 == 25 - 49"
+       ]
+      },
+      {
+       "math": "f(7) = -24",
+       "en": "Subtract $49$ from $25$ to get the final answer.",
+       "ur": "حتمی جواب حاصل کرنے کے لیے $25$ میں سے $49$ کو تفریق کریں۔",
+       "check": [
+        "25 - 49 == -24",
         "25 - 7**2 == -24"
        ]
       }
      ],
      "answer": "$-24$",
+     "enriched": true,
      "book_key": "-24"
     },
     {
@@ -5630,15 +6750,38 @@
      "prompt": "$g(-8)$",
      "steps": [
       {
-       "math": "g(-8) = 5 + (-8) = -3",
-       "en": "Put $x = -8$.",
-       "ur": "$x = -8$ رکھیں۔",
+       "math": "",
+       "en": "We are given the function $g(x) = 5 + x$, and we need to find the value of $g(-8)$.",
+       "ur": "ہمیں فنکشن $g(x) = 5 + x$ دیا گیا ہے، اور ہمیں $g(-8)$ کی قیمت معلوم کرنی ہے۔"
+      },
+      {
+       "math": "g(-8) = 5 + (-8)",
+       "en": "To find $g(-8)$, substitute $x = -8$ into the given function $g(x)$.",
+       "ur": "$g(-8)$ معلوم کرنے کے لیے، دیے گئے فنکشن $g(x)$ میں $x = -8$ درج کریں۔",
        "check": [
+        "5 + (-8) == -3"
+       ]
+      },
+      {
+       "math": "g(-8) = 5 - 8",
+       "en": "Remove the brackets by multiplying the positive and negative signs.",
+       "ur": "مثبت اور منفی علامات کو ضرب دے کر بریکٹ ختم کریں۔",
+       "check": [
+        "5 + (-8) == 5 - 8"
+       ]
+      },
+      {
+       "math": "g(-8) = -3",
+       "en": "Subtract $8$ from $5$ to get the final answer.",
+       "ur": "حتمی جواب حاصل کرنے کے لیے $5$ میں سے $8$ کو تفریق کریں۔",
+       "check": [
+        "5 - 8 == -3",
         "5 + (-8) == -3"
        ]
       }
      ],
      "answer": "$-3$",
+     "enriched": true,
      "book_key": "-3"
     }
    ],
@@ -5656,15 +6799,34 @@
      "prompt": "$(f\\circ g)(x)$",
      "steps": [
       {
-       "math": "(f\\circ g)(x) = f(14 + 2x) = (14 + 2x)^3",
-       "en": "Put $g(x)$ in place of $x$ in $f$.",
-       "ur": "$f$ میں $x$ کی جگہ $g(x)$ رکھیں۔",
+       "math": "",
+       "en": "We are given two functions $f(x) = x^3$ and $g(x) = 14 + 2x$, and we need to find the composite function $(f\\circ g)(x)$.",
+       "ur": "ہمیں دو فنکشنز $f(x) = x^3$ اور $g(x) = 14 + 2x$ دیے گئے ہیں، اور ہمیں مرکب فنکشن $(f\\circ g)(x)$ معلوم کرنا ہے۔"
+      },
+      {
+       "math": "(f\\circ g)(x) = f(g(x))",
+       "en": "By the definition of the composition of functions, $(f\\circ g)(x)$ means applying the function $f$ to $g(x)$.",
+       "ur": "فنکشنز کی ترکیب کی تعریف کے مطابق، $(f\\circ g)(x)$ کا مطلب $g(x)$ پر فنکشن $f$ کا اطلاق کرنا ہے۔"
+      },
+      {
+       "math": "(f\\circ g)(x) = f(14 + 2x)",
+       "en": "Substitute the given value of $g(x) = 14 + 2x$ inside the function $f$.",
+       "ur": "فنکشن $f$ کے اندر دی گئی قیمت $g(x) = 14 + 2x$ درج کریں۔",
+       "check": [
+        "14 + 2*x == 14 + 2*x"
+       ]
+      },
+      {
+       "math": "(f\\circ g)(x) = (14 + 2x)^3",
+       "en": "Now, replace $x$ with $(14 + 2x)$ in the function $f(x) = x^3$ to get the final answer.",
+       "ur": "اب، حتمی جواب حاصل کرنے کے لیے فنکشن $f(x) = x^3$ میں $x$ کی جگہ $(14 + 2x)$ رکھیں۔",
        "check": [
         "(x**3).subs(x, 14 + 2*x) == (14 + 2*x)**3"
        ]
       }
      ],
      "answer": "$(14 + 2x)^3$",
+     "enriched": true,
      "book_key": "(14+2x)^3"
     },
     {
@@ -5672,20 +6834,40 @@
      "prompt": "$(g\\circ f)(x)$",
      "steps": [
       {
-       "math": "(g\\circ f)(x) = g(f(x)) = g\\left(x^{3}\\right)",
-       "en": "Put $f(x)$ in place of $x$ in $g$.",
-       "ur": "$g$ میں $x$ کی جگہ $f(x)$ رکھیں۔"
+       "math": "f(x) = x^3, \\quad g(x) = 14 + 2x",
+       "en": "Write down the given functions $f(x)$ and $g(x)$.",
+       "ur": "دیے گئے تفاعل $f(x)$ اور $g(x)$ لکھیں۔"
       },
       {
-       "math": "= 2 x^{3} + 14",
-       "en": "Substitute into $g(x) = 2 x + 14$.",
-       "ur": "$g(x) = 2 x + 14$ میں رکھیں۔",
+       "math": "(g \\circ f)(x) = g(f(x))",
+       "en": "By definition of composite functions, $(g \\circ f)(x)$ means applying function $g$ to $f(x)$.",
+       "ur": "مرکب تفاعل کی تعریف کے مطابق، $(g \\circ f)(x)$ کا مطلب تفاعل $g$ کو $f(x)$ پر لاگو کرنا ہے۔"
+      },
+      {
+       "math": "(g \\circ f)(x) = g\\left(x^3\\right)",
+       "en": "Substitute the given value of $f(x) = x^3$ inside the function $g$.",
+       "ur": "تفاعل $g$ کے اندر $f(x) = x^3$ کی دی گئی قیمت درج کریں۔"
+      },
+      {
+       "math": "(g \\circ f)(x) = 14 + 2\\left(x^3\\right)",
+       "en": "Now, replace $x$ with $x^3$ in the function $g(x) = 14 + 2x$.",
+       "ur": "اب، تفاعل $g(x) = 14 + 2x$ میں $x$ کی جگہ $x^3$ رکھیں۔",
        "check": [
+        "(14 + 2*x).subs(x, x**3) == 14 + 2*(x**3)"
+       ]
+      },
+      {
+       "math": "(g \\circ f)(x) = 2 x^{3} + 14",
+       "en": "Simplify and write the final answer in standard form.",
+       "ur": "مختصر کریں اور حتمی جواب کو معیاری شکل میں لکھیں۔",
+       "check": [
+        "14 + 2*(x**3) == 2*x**3 + 14",
         "(2*x + 14).subs(x, (x**3)) == (2*x**3 + 14)"
        ]
       }
      ],
      "answer": "$2 x^{3} + 14$",
+     "enriched": true,
      "book_key": "2x^3+14"
     },
     {
@@ -5693,20 +6875,41 @@
      "prompt": "$(f\\circ f)(x)$",
      "steps": [
       {
-       "math": "(f\\circ f)(x) = f(f(x)) = f\\left(x^{3}\\right)",
-       "en": "Put $f(x)$ in place of $x$ in $f$.",
-       "ur": "$f$ میں $x$ کی جگہ $f(x)$ رکھیں۔"
+       "math": "f(x) = x^{3}",
+       "en": "Write the given function $f(x)$ from the question.",
+       "ur": "سوال میں دیا گیا فنکشن $f(x)$ لکھیں۔"
       },
       {
-       "math": "= x^{9}",
-       "en": "Substitute into $f(x) = x^{3}$.",
-       "ur": "$f(x) = x^{3}$ میں رکھیں۔",
+       "math": "(f\\circ f)(x) = f(f(x))",
+       "en": "By the definition of composition of functions, $(f\\circ f)(x)$ means applying the function $f$ to $f(x)$.",
+       "ur": "تفاعل کی ترکیب (composition of functions) کی تعریف کے مطابق، $(f\\circ f)(x)$ کا مطلب فنکشن $f$ کو $f(x)$ پر لاگو کرنا ہے۔"
+      },
+      {
+       "math": "(f\\circ f)(x) = f(x^{3})",
+       "en": "Substitute the value of the inner function $f(x) = x^{3}$.",
+       "ur": "اندرونی فنکشن $f(x) = x^{3}$ کی قیمت درج کریں۔"
+      },
+      {
+       "math": "(f\\circ f)(x) = (x^{3})^{3}",
+       "en": "Now, replace $x$ with $x^{3}$ in the given function $f(x) = x^{3}$.",
+       "ur": "اب دیے گئے فنکشن $f(x) = x^{3}$ میں $x$ کی جگہ $x^{3}$ رکھیں۔",
        "check": [
+        "(x**3).subs(x, x**3) == (x**3)**3"
+       ]
+      },
+      {
+       "math": "(f\\circ f)(x) = x^{3 \\times 3} = x^{9}",
+       "en": "Using the power law of exponents $(a^{m})^{n} = a^{m \\times n}$, multiply the powers to get the final answer.",
+       "ur": "قوت نما کے قانون $(a^{m})^{n} = a^{m \\times n}$ کا استعمال کرتے ہوئے، حتمی جواب حاصل کرنے کے لیے طاقتوں کو ضرب دیں۔",
+       "check": [
+        "(x**3)**3 == x**(3*3)",
+        "x**(3*3) == x**9",
         "(x**3).subs(x, (x**3)) == (x**9)"
        ]
       }
      ],
      "answer": "$x^{9}$",
+     "enriched": true,
      "book_key": "x^9"
     },
     {
@@ -5714,20 +6917,51 @@
      "prompt": "$(g\\circ g)(x)$",
      "steps": [
       {
-       "math": "(g\\circ g)(x) = g(g(x)) = g\\left(2 x + 14\\right)",
-       "en": "Put $g(x)$ in place of $x$ in $g$.",
-       "ur": "$g$ میں $x$ کی جگہ $g(x)$ رکھیں۔"
+       "math": "g(x) = 14 + 2x",
+       "en": "First, write down the given function $g(x)$ to find $(g\\circ g)(x)$.",
+       "ur": "سب سے پہلے، $(g\\circ g)(x)$ معلوم کرنے کے لیے دیے گئے تفاعل $g(x)$ کو لکھیں۔",
+       "check": [
+        "14 + 2*x == 2*x + 14"
+       ]
       },
       {
-       "math": "= 4 x + 42",
-       "en": "Substitute into $g(x) = 2 x + 14$.",
-       "ur": "$g(x) = 2 x + 14$ میں رکھیں۔",
+       "math": "(g\\circ g)(x) = g(g(x))",
+       "en": "By the definition of composition of functions, $(g\\circ g)(x)$ means applying the function $g$ to $g(x)$ itself.",
+       "ur": "تفاعلات کی ترکیب کی تعریف کے مطابق، $(g\\circ g)(x)$ کا مطلب تفاعل $g$ کو خود $g(x)$ پر لاگو کرنا ہے۔"
+      },
+      {
+       "math": "",
+       "en": "Substitute the value of the inner function $g(x) = 14 + 2x$ into $g(g(x))$ to get $g(14 + 2x)$.",
+       "ur": "اندرونی تفاعل $g(x) = 14 + 2x$ کی قیمت کو $g(g(x))$ میں درج کرنے سے ہمیں $g(14 + 2x)$ حاصل ہوتا ہے۔"
+      },
+      {
+       "math": "(g\\circ g)(x) = 14 + 2(14 + 2x)",
+       "en": "Now, replace $x$ with $(14 + 2x)$ in the original function $g(x) = 14 + 2x$.",
+       "ur": "اب، اصل تفاعل $g(x) = 14 + 2x$ میں $x$ کی جگہ $(14 + 2x)$ درج کریں۔",
        "check": [
+        "(14 + 2*x).subs(x, 14 + 2*x) == 14 + 2*(14 + 2*x)"
+       ]
+      },
+      {
+       "math": "(g\\circ g)(x) = 14 + 28 + 4x",
+       "en": "Multiply $2$ with the terms inside the brackets.",
+       "ur": "بریکٹ کے اندر موجود رقموں کو $2$ سے ضرب دیں۔",
+       "check": [
+        "14 + 2*(14 + 2*x) == 14 + 28 + 4*x"
+       ]
+      },
+      {
+       "math": "(g\\circ g)(x) = 4 x + 42",
+       "en": "Add the constant terms $14$ and $28$ together and rearrange to get the final answer.",
+       "ur": "حتمی جواب حاصل کرنے کے لیے مستقل رقموں $14$ اور $28$ کو آپس میں جمع کریں اور ترتیب دیں۔",
+       "check": [
+        "14 + 28 + 4*x == 4*x + 42",
         "(2*x + 14).subs(x, (2*x + 14)) == (4*x + 42)"
        ]
       }
      ],
      "answer": "$4 x + 42$",
+     "enriched": true,
      "book_key": "4x+42"
     }
    ],
@@ -7235,20 +8469,51 @@
      "prompt": "",
      "steps": [
       {
-       "math": "100x - 10000 = 0",
-       "en": "Break even: profit is 0.",
-       "ur": "نہ نفع نہ نقصان: منافع 0 ہے۔"
+       "math": "",
+       "en": "We are given the profit function $P(x) = 100x - 10{,}000$, where $x$ represents the number of items sold.",
+       "ur": "ہمیں منافع کا تفاعل $P(x) = 100x - 10{,}000$ دیا گیا ہے، جہاں $x$ فروخت ہونے والی اشیاء کی تعداد کو ظاہر کرتا ہے۔"
       },
       {
-       "math": "x = \\frac{10000}{100} = 100",
-       "en": "Solve for $x$.",
-       "ur": "$x$ معلوم کریں۔",
+       "math": "",
+       "en": "To break even, the total profit must be zero, which means $P(x) = 0$.",
+       "ur": "نہ نفع نہ نقصان (برابر رہنے) کی صورت حال کے لیے، کل منافع صفر ہونا چاہیے، جس کا مطلب ہے کہ $P(x) = 0$ ہے۔"
+      },
+      {
+       "math": "100x - 10000 = 0",
+       "en": "Substitute $P(x) = 0$ into the given function to form a linear equation.",
+       "ur": "ایک یک درجی مساوات بنانے کے لیے دیے گئے تفاعل میں $P(x) = 0$ درج کریں۔",
        "check": [
+        "100*100 - 10000 == 0"
+       ]
+      },
+      {
+       "math": "100x = 10000",
+       "en": "Add $10{,}000$ to both sides of the equation to isolate the term with $x$.",
+       "ur": "$x$ والی رقم کو الگ کرنے کے لیے مساوات کے دونوں اطراف میں $10{,}000$ جمع کریں۔",
+       "check": [
+        "100*100 == 10000"
+       ]
+      },
+      {
+       "math": "x = \\frac{10000}{100}",
+       "en": "Divide both sides by $100$ to solve for $x$.",
+       "ur": "$x$ کی قیمت معلوم کرنے کے لیے دونوں اطراف کو $100$ پر تقسیم کریں۔",
+       "check": [
+        "100 == R(10000, 100)"
+       ]
+      },
+      {
+       "math": "x = 100",
+       "en": "Simplify the fraction. Thus, the company must sell $100$ items to break even.",
+       "ur": "کسر کو مختصر کریں۔ اس طرح، کمپنی کو نہ نفع نہ نقصان کی سطح تک پہنچنے کے لیے $100$ اشیاء فروخت کرنی ہوں گی۔",
+       "check": [
+        "R(10000, 100) == 100",
         "100*100 - 10000 == 0"
        ]
       }
      ],
      "answer": "100 items",
+     "enriched": true,
      "book_key": "100 items"
     }
    ],
@@ -7266,20 +8531,54 @@
      "prompt": "",
      "steps": [
       {
-       "math": "D(p) = \\frac{17 p}{20}",
-       "en": "Write the model.",
-       "ur": "ماڈل لکھیں۔"
+       "math": "",
+       "en": "First, write down the given function $D(p) = 0.85p$, which represents the selling price after the $15\\%$ discount on an original price $p$.",
+       "ur": "سب سے پہلے دیا گیا تفاعل $D(p) = 0.85p$ لکھیں، جو اصل قیمت $p$ پر $15\\%$ رعایت کے بعد فروخت کی قیمت کو ظاہر کرتا ہے۔"
       },
       {
-       "math": "D(2000) = \\frac{17 (2000)}{20} = 1700",
-       "en": "Put $p = 2000$.",
-       "ur": "$p = 2000$ رکھیں۔",
+       "math": "D(p) = \\frac{85}{100}p = \\frac{17}{20}p",
+       "en": "Convert the decimal $0.85$ into a simplified fraction to make the calculation easier.",
+       "ur": "حساب کو آسان بنانے کے لیے اعشاریہ $0.85$ کو ایک مختصر کسر میں تبدیل کریں۔",
+       "check": [
+        "R(85,100)*p == R(17,20)*p"
+       ]
+      },
+      {
+       "math": "p = 2000",
+       "en": "The given original price of the item is Rs. $2,000$.",
+       "ur": "دی گئی چیز کی اصل قیمت $2,000$ روپے ہے۔",
+       "check": [
+        "2000 == 2000"
+       ]
+      },
+      {
+       "math": "D(2000) = \\frac{17}{20}(2000)",
+       "en": "Substitute $p = 2000$ into the function to find the discounted selling price.",
+       "ur": "رعایتی فروخت کی قیمت معلوم کرنے کے لیے تفاعل میں $p = 2000$ درج کریں۔",
+       "check": [
+        "(R(17,20)*p).subs(p, 2000) == R(17,20)*2000"
+       ]
+      },
+      {
+       "math": "D(2000) = 17 \\times 100 = 1700",
+       "en": "Divide $2000$ by $20$ to get $100$, and then multiply by $17$.",
+       "ur": "$2000$ کو $20$ سے تقسیم کریں جس سے $100$ حاصل ہوگا، اور پھر اسے $17$ سے ضرب دیں۔",
+       "check": [
+        "R(17,20)*2000 == 17*100",
+        "17*100 == 1700"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Therefore, the selling price of the item after the discount is $1700$ rupees.",
+       "ur": "لہٰذا، رعایت کے بعد اس چیز کی فروخت کی قیمت $1700$ روپے ہے۔",
        "check": [
         "(R(85,100)*p).subs(p, (2000)) == (1700)"
        ]
       }
      ],
      "answer": "1700 rupees",
+     "enriched": true,
      "book_key": "1700 rupees"
     }
    ],
@@ -7297,15 +8596,37 @@
      "prompt": "",
      "steps": [
       {
-       "math": "|r - 100| \\le 6 \\Rightarrow -6 \\le r - 100 \\le 6",
-       "en": "Remove the absolute value: $|A| \\le k$ means $-k \\le A \\le k$.",
-       "ur": "مطلق قیمت ہٹائیں: $|A| \\le k$ کا مطلب $-k \\le A \\le k$۔"
+       "math": "|x - r| \\le 6",
+       "en": "We are given the inequality for the allowed range of the GPS, where the actual location is $x = 100$ and $r$ is the reported location.",
+       "ur": "ہمیں جی پی ایس کی قابل قبول حد کے لیے نابرابری دی گئی ہے، جہاں اصل مقام $x = 100$ ہے اور $r$ رپورٹ شدہ مقام ہے۔"
+      },
+      {
+       "math": "|100 - r| \\le 6",
+       "en": "Substitute the given actual location $x = 100$ into the inequality.",
+       "ur": "دیے گئے اصل مقام $x = 100$ کی قیمت نابرابری میں درج کریں۔"
+      },
+      {
+       "math": "|r - 100| \\le 6",
+       "en": "Since $|a - b| = |b - a|$, we can rewrite $|100 - r|$ as $|r - 100|$ to make solving for $r$ easier.",
+       "ur": "چونکہ $|a - b| = |b - a|$ ہوتا ہے، ہم $r$ کے لیے حل کو آسان بنانے کی خاطر $|100 - r|$ کو $|r - 100|$ لکھ سکتے ہیں۔"
+      },
+      {
+       "math": "-6 \\le r - 100 \\le 6",
+       "en": "By the property of absolute value inequalities, $|A| \\le k$ is equivalent to $-k \\le A \\le k$.",
+       "ur": "مطلق قیمت کی نابرابریوں کی خاصیت کے مطابق، $|A| \\le k$ برابر ہوتا ہے $-k \\le A \\le k$ کے۔"
+      },
+      {
+       "math": "-6 + 100 \\le r - 100 + 100 \\le 6 + 100",
+       "en": "Add $100$ to all parts of the inequality to isolate $r$ in the middle.",
+       "ur": "درمیان میں $r$ کو اکیلا کرنے کے لیے نابرابری کے تمام حصوں میں $100$ جمع کریں۔"
       },
       {
        "math": "94 \\le r \\le 106",
-       "en": "Add 100.",
-       "ur": "100 جمع کریں۔",
+       "en": "Simplify the numbers. Therefore, the range of acceptable reported locations is from $94$ metres to $106$ metres.",
+       "ur": "اعداد کو مختصر کریں۔ لہٰذا، قابل قبول رپورٹ شدہ مقامات کی حد $94$ میٹر سے $106$ میٹر تک ہے۔",
        "check": [
+        "-6 + 100 == 94",
+        "6 + 100 == 106",
         "Abs(94 - 100) <= 6",
         "Abs(106 - 100) <= 6",
         "Abs(107 - 100) > 6"
@@ -7313,6 +8634,7 @@
       }
      ],
      "answer": "$94 \\le r \\le 106$",
+     "enriched": true,
      "book_key": "94\\le r\\le 106"
     }
    ],

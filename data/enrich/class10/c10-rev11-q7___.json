@@ -1,0 +1,49 @@
+{
+ "item": "c10-rev11-q7",
+ "label": "",
+ "answer_ref": "Mean = 9, SD = 1.789",
+ "steps": [
+  {
+   "math": "n = 5,\\quad \\sum x = 45,\\quad \\sum x^2 = 421",
+   "en": "First, write down the given values: the number of observations $n$, the sum of the numbers $\\sum x$, and the sum of their squares $\\sum x^2$.",
+   "ur": "سب سے پہلے دی گئی قیمتیں لکھیں: مشاہدات کی تعداد $n$، اعداد کا مجموعہ $\\sum x$، اور ان کے مربعات کا مجموعہ $\\sum x^2$۔"
+  },
+  {
+   "math": "\\bar{x} = \\frac{\\sum x}{n} = \\frac{45}{5} = 9",
+   "en": "Use the formula for the arithmetic mean $\\bar{x} = \\frac{\\sum x}{n}$ and substitute the given values.",
+   "ur": "حسابی اوسط کا فارمولا $\\bar{x} = \\frac{\\sum x}{n}$ استعمال کریں اور دی گئی قیمتیں درج کریں۔",
+   "check": [
+    "45/5 == 9"
+   ]
+  },
+  {
+   "math": "\\sigma^2 = \\frac{\\sum x^2}{n} - (\\bar{x})^2",
+   "en": "Next, write the computational formula for the variance $\\sigma^2$ of ungrouped data.",
+   "ur": "اس کے بعد، غیر گروہی ڈیٹا کے تغیر (variance) $\\sigma^2$ کا فارمولا لکھیں۔"
+  },
+  {
+   "math": "\\sigma^2 = \\frac{421}{5} - (9)^2 = 84.2 - 81 = 3.2",
+   "en": "Substitute $\\sum x^2 = 421$, $n = 5$, and $\\bar{x} = 9$ into the variance formula and simplify.",
+   "ur": "تغیر کے فارمولے میں $\\sum x^2 = 421$، $n = 5$، اور $\\bar{x} = 9$ درج کریں اور مختصر کریں۔",
+   "check": [
+    "R(421,5) == 84.2",
+    "9**2 == 81",
+    "R(421,5) - 81 == R(16,5)",
+    "R(16,5) == 3.2"
+   ]
+  },
+  {
+   "math": "\\sigma = \\sqrt{3.2} \\approx 1.789",
+   "en": "Take the positive square root of the variance $\\sigma^2$ to find the standard deviation $\\sigma$. Thus, the mean is $9$ and the standard deviation is $1.789$.",
+   "ur": "معیاری انحراف $\\sigma$ معلوم کرنے کے لیے تغیر $\\sigma^2$ کا مثبت جذر المربع لیں۔ پس، اوسط $9$ ہے اور معیاری انحراف $1.789$ ہے۔",
+   "check": [
+    "Abs(sqrt(R(16,5)) - 1.789) <= 0.000500001",
+    "45/5 == 9",
+    "R(421,5) - 81 == R(16,5)",
+    "Abs((sqrt(R(16,5))) - 1.789) <= 0.000500001"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

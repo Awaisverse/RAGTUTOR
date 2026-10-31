@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex2.3-q7",
+ "label": "",
+ "answer_ref": "$m = -\\frac{3}{2}$",
+ "steps": [
+  {
+   "math": "2x^2 + 3x + m = 0",
+   "en": "Write the given quadratic equation and compare it with the standard form $ax^2 + bx + c = 0$ to find the coefficients: $a = 2$, $b = 3$, and $c = m$.",
+   "ur": "دی گئی دو درجی مساوات لکھیں اور اس کا معیاری شکل $ax^2 + bx + c = 0$ سے موازنہ کر کے عددی سر معلوم کریں: $a = 2$، $b = 3$، اور $c = m$۔"
+  },
+  {
+   "math": "\\text{Sum of roots } (S) = \\alpha + \\beta = -\\frac{b}{a} = -\\frac{3}{2}",
+   "en": "Let $\\alpha$ and $\\beta$ be the roots of the equation. First, find the sum of the roots using the formula $-\\frac{b}{a}$.",
+   "ur": "فرض کریں کہ $\\alpha$ اور $\\beta$ مساوات کے روٹس ہیں۔ سب سے پہلے، فارمولا $-\\frac{b}{a}$ استعمال کرتے ہوئے روٹس کا مجموعہ معلوم کریں۔",
+   "check": [
+    "-3/2 == -R(3,2)"
+   ]
+  },
+  {
+   "math": "\\text{Product of roots } (P) = \\alpha\\beta = \\frac{c}{a} = \\frac{m}{2}",
+   "en": "Next, find the product of the roots using the formula $\\frac{c}{a}$.",
+   "ur": "اس کے بعد، فارمولا $\\frac{c}{a}$ استعمال کرتے ہوئے روٹس کا حاصل ضرب معلوم کریں۔"
+  },
+  {
+   "math": "\\alpha + \\beta = 2(\\alpha\\beta)",
+   "en": "According to the given condition, the sum of the roots is equal to double the product of the roots.",
+   "ur": "دی گئی شرط کے مطابق، روٹس کا مجموعہ روٹس کے حاصل ضرب کے دگنے کے برابر ہے۔"
+  },
+  {
+   "math": "-\\frac{3}{2} = 2 \\left(\\frac{m}{2}\\right)",
+   "en": "Substitute the values of the sum ($\\alpha + \\beta$) and the product ($\\alpha\\beta$) into the condition.",
+   "ur": "شرط میں مجموعہ ($\\alpha + \\beta$) اور حاصل ضرب ($\\alpha\\beta$) کی قیمتیں درج کریں۔"
+  },
+  {
+   "math": "m = -\\frac{3}{2}",
+   "en": "Simplify the right-hand side by cancelling out $2$ in the numerator and denominator to get the final value of $m$.",
+   "ur": "دائیں طرف شمار کنندہ اور مخرج میں سے $2$ کو منسوخ کر کے مختصر کریں تاکہ $m$ کی حتمی قیمت حاصل ہو سکے۔",
+   "check": [
+    "-R(3,2) == 2*(R(-3,2)/2)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

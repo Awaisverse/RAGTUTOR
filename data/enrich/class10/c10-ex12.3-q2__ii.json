@@ -1,0 +1,57 @@
+{
+ "item": "c10-ex12.3-q2",
+ "label": "ii",
+ "answer_ref": "$\\frac{1}{2}$",
+ "steps": [
+  {
+   "math": "n(S) = 6 \\times 6 = 36",
+   "en": "The word PUNJAB has $6$ letters and the word LAHORE also has $6$ letters. Choosing one letter from each word gives a total of $36$ possible pairs in the sample space $S$.",
+   "ur": "لفظ PUNJAB میں $6$ حروف ہیں اور لفظ LAHORE میں بھی $6$ حروف ہیں۔ ہر لفظ میں سے ایک حرف منتخب کرنے سے نمونہ فضا $S$ میں کل $36$ ممکنہ جوڑے بنتے ہیں۔",
+   "check": [
+    "6 * 6 == 36"
+   ]
+  },
+  {
+   "math": "\\text{PUNJAB}: \\text{Vowels} = 2, \\quad \\text{Consonants} = 4",
+   "en": "In the word PUNJAB, the vowels are U and A ($2$ vowels), and the consonants are P, N, J, and B ($4$ consonants).",
+   "ur": "لفظ PUNJAB میں حروفِ علت U اور A ($2$ حروفِ علت) ہیں، اور حروفِ صحیح P, N, J اور B ($4$ حروفِ صحیح) ہیں۔",
+   "check": [
+    "2 + 4 == 6"
+   ]
+  },
+  {
+   "math": "\\text{LAHORE}: \\text{Vowels} = 3, \\quad \\text{Consonants} = 3",
+   "en": "In the word LAHORE, the vowels are A, O, and E ($3$ vowels), and the consonants are L, H, and R ($3$ consonants).",
+   "ur": "لفظ LAHORE میں حروفِ علت A, O اور E ($3$ حروفِ علت) ہیں، اور حروفِ صحیح L, H اور R ($3$ حروفِ صحیح) ہیں۔",
+   "check": [
+    "3 + 3 == 6"
+   ]
+  },
+  {
+   "math": "n(E) = (4 \\times 3) + (2 \\times 3) = 12 + 6 = 18",
+   "en": "Let $E$ be the event of getting one consonant and one vowel. This happens in two ways: (consonant from PUNJAB and vowel from LAHORE) or (vowel from PUNJAB and consonant from LAHORE).",
+   "ur": "فرض کریں کہ $E$ ایک حرفِ صحیح اور ایک حرفِ علت حاصل کرنے کا واقعہ ہے۔ یہ دو طرح سے ہو سکتا ہے: (PUNJAB سے حرفِ صحیح اور LAHORE سے حرفِ علت) یا (PUNJAB سے حرفِ علت اور LAHORE سے حرفِ صحیح)۔",
+   "check": [
+    "4 * 3 + 2 * 3 == 18",
+    "12 + 6 == 18"
+   ]
+  },
+  {
+   "math": "P(E) = \\frac{n(E)}{n(S)}",
+   "en": "The probability of an event is given by the ratio of favourable outcomes to the total number of outcomes.",
+   "ur": "کسی واقعے کا احتمال موافق نتائج اور کل نتائج کی نسبت سے معلوم کیا جاتا ہے۔"
+  },
+  {
+   "math": "P(E) = \\frac{18}{36} = \\frac{1}{2}",
+   "en": "Substitute $n(E) = 18$ and $n(S) = 36$, then simplify the fraction to get the final answer.",
+   "ur": "$n(E) = 18$ اور $n(S) = 36$ کی قیمتیں درج کریں، پھر کسر کو مختصر کر کے حتمی جواب حاصل کریں۔",
+   "check": [
+    "R(18, 36) == R(1, 2)",
+    "36 == 36",
+    "R(18, 36) == 1/2"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

@@ -1,0 +1,59 @@
+{
+ "item": "c10-ex1.1-q1",
+ "label": "vi",
+ "answer_ref": "$0$",
+ "steps": [
+  {
+   "math": "(i^4 + i^3 + i^2 + i)^2",
+   "en": "Write down the given expression to simplify.",
+   "ur": "مختصر کرنے کے لیے دی گئی عبارت لکھیں۔"
+  },
+  {
+   "math": "i^2 = -1, \\quad i^3 = i^2 \\cdot i = (-1)i = -i, \\quad i^4 = (i^2)^2 = (-1)^2 = 1",
+   "en": "Recall the fundamental property of iota ($i^2 = -1$) and find the values of the higher powers $i^3$ and $i^4$.",
+   "ur": "ایوٹا کی بنیادی خاصیت ($i^2 = -1$) کو یاد کریں اور بڑی طاقتوں $i^3$ اور $i^4$ کی قیمتیں معلوم کریں۔",
+   "check": [
+    "I**2 == -1",
+    "I**3 == -I",
+    "I**4 == 1"
+   ]
+  },
+  {
+   "math": "(i^4 + i^3 + i^2 + i)^2 = (1 + (-i) + (-1) + i)^2",
+   "en": "Substitute the values $i^4 = 1$, $i^3 = -i$, and $i^2 = -1$ into the given expression.",
+   "ur": "دی گئی عبارت میں $i^4 = 1$، $i^3 = -i$، اور $i^2 = -1$ کی قیمتیں درج کریں۔",
+   "check": [
+    "(I**4 + I**3 + I**2 + I)**2 == (1 + (-I) + (-1) + I)**2"
+   ]
+  },
+  {
+   "math": "= (1 - i - 1 + i)^2",
+   "en": "Remove the inner brackets by applying the sign rules.",
+   "ur": "علامتوں کے اصول استعمال کرتے ہوئے اندرونی قوسین کو ختم کریں۔",
+   "check": [
+    "(1 + (-I) + (-1) + I)**2 == (1 - I - 1 + I)**2"
+   ]
+  },
+  {
+   "math": "= (1 - 1 - i + i)^2 = (0)^2",
+   "en": "Group the real and imaginary parts together. Since $1 - 1 = 0$ and $-i + i = 0$, the terms cancel out in pairs.",
+   "ur": "حقیقی اور خیالی حصوں کو اکٹھا کریں۔ چونکہ $1 - 1 = 0$ اور $-i + i = 0$ ہے، اس لیے ارکان جوڑوں میں ایک دوسرے کو ختم کر دیتے ہیں۔",
+   "check": [
+    "1 - 1 - I + I == 0",
+    "(1 - I - 1 + I)**2 == 0**2"
+   ]
+  },
+  {
+   "math": "= 0",
+   "en": "The square of $0$ is $0$. Thus, the simplified answer is $0$.",
+   "ur": "$0$ کا مربع $0$ ہوتا ہے۔ لہٰذا، مختصر کرنے کے بعد جواب $0$ ہے۔",
+   "check": [
+    "0**2 == 0",
+    "(I**4 + I**3 + I**2 + I)**2 == 0",
+    "I**4 + I**3 + I**2 + I == 0"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

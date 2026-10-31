@@ -1,0 +1,51 @@
+{
+ "item": "c10-rev6-q1",
+ "label": "iv",
+ "answer_ref": "(c) $5$",
+ "steps": [
+  {
+   "math": "\\vec{v} = 3\\underline{i} + 4\\underline{j}",
+   "en": "Let the given vector be $\\vec{v}$. Here, the components are $x = 3$ and $y = 4$. We need to find its magnitude $|3\\underline{i} + 4\\underline{j}|$.",
+   "ur": "فرض کریں کہ دیا گیا ویکٹر $\\vec{v}$ ہے۔ یہاں، اجزاء $x = 3$ اور $y = 4$ ہیں۔ ہمیں اس کی مقدار $|3\\underline{i} + 4\\underline{j}|$ معلوم کرنی ہے۔"
+  },
+  {
+   "math": "|x\\underline{i} + y\\underline{j}| = \\sqrt{x^2 + y^2}",
+   "en": "Recall the formula for the magnitude of a vector in a plane.",
+   "ur": "مستوی میں ویکٹر کی مقدار معلوم کرنے کا فارمولا یاد کریں۔"
+  },
+  {
+   "math": "|3\\underline{i} + 4\\underline{j}| = \\sqrt{3^2 + 4^2}",
+   "en": "Substitute the values $x = 3$ and $y = 4$ into the magnitude formula.",
+   "ur": "مقدار کے فارمولے میں $x = 3$ اور $y = 4$ کی قیمتیں درج کریں۔"
+  },
+  {
+   "math": "|3\\underline{i} + 4\\underline{j}| = \\sqrt{9 + 16}",
+   "en": "Calculate the squares of $3$ and $4$.",
+   "ur": "$3$ اور $4$ کے مربع کا حساب لگائیں۔",
+   "check": [
+    "3**2 == 9",
+    "4**2 == 16",
+    "sqrt(3**2 + 4**2) == sqrt(9 + 16)"
+   ]
+  },
+  {
+   "math": "|3\\underline{i} + 4\\underline{j}| = \\sqrt{25} = 5",
+   "en": "Add the numbers inside the square root and take the positive square root to get the magnitude.",
+   "ur": "جذر کے اندر موجود اعداد کو جمع کریں اور مقدار حاصل کرنے کے لیے مثبت جذر لیں۔",
+   "check": [
+    "9 + 16 == 25",
+    "sqrt(25) == 5"
+   ]
+  },
+  {
+   "math": "\\text{Answer: (c) } 5",
+   "en": "The calculated magnitude is $5$, which matches option (c).",
+   "ur": "حساب کی گئی مقدار $5$ ہے، جو آپشن (c) سے مطابقت رکھتی ہے۔",
+   "check": [
+    "sqrt(3**2 + 4**2) == 5"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

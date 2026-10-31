@@ -1,0 +1,57 @@
+{
+ "item": "c10-ex6.3-q5",
+ "label": "",
+ "answer_ref": "$|\\overrightarrow{AB}| = |\\overrightarrow{DC}| = \\sqrt{40}$ and $\\overrightarrow{AB} = -\\overrightarrow{DC}$ (parallel)",
+ "steps": [
+  {
+   "math": "\\overrightarrow{AB} = 6\\underline{i} + 2\\underline{j}, \\quad \\overrightarrow{DC} = -6\\underline{i} - 2\\underline{j}",
+   "en": "First, write down the given vectors representing the two opposite sides of the parallelogram $ABCD$.",
+   "ur": "سب سے پہلے، متوازی الاضلاع $ABCD$ کے دو بالمقابل اضلاع کو ظاہر کرنے والے دیے گئے ویکٹرز لکھیں۔"
+  },
+  {
+   "math": "|\\overrightarrow{v}| = \\sqrt{x^2 + y^2}",
+   "en": "To show that the sides are equal in magnitude, we use the magnitude formula for a vector $\\overrightarrow{v} = x\\underline{i} + y\\underline{j}$.",
+   "ur": "یہ ثابت کرنے کے لیے کہ اضلاع مقدار میں برابر ہیں، ہم ویکٹر $\\overrightarrow{v} = x\\underline{i} + y\\underline{j}$ کی مقدار کا فارمولا استعمال کرتے ہیں۔"
+  },
+  {
+   "math": "|\\overrightarrow{AB}| = \\sqrt{6^2 + 2^2} = \\sqrt{36 + 4} = \\sqrt{40}",
+   "en": "Substitute the components of $\\overrightarrow{AB}$ into the formula to find its magnitude.",
+   "ur": "$\\overrightarrow{AB}$ کی مقدار معلوم کرنے کے لیے اس کے اجزاء کو فارمولے میں درج کریں۔",
+   "check": [
+    "sqrt(6**2 + 2**2) == sqrt(36 + 4)",
+    "sqrt(36 + 4) == sqrt(40)"
+   ]
+  },
+  {
+   "math": "|\\overrightarrow{DC}| = \\sqrt{(-6)^2 + (-2)^2} = \\sqrt{36 + 4} = \\sqrt{40}",
+   "en": "Similarly, substitute the components of $\\overrightarrow{DC}$ to find its magnitude. Since $|\\overrightarrow{AB}| = |\\overrightarrow{DC}| = \\sqrt{40}$, the opposite sides are equal in magnitude.",
+   "ur": "اسی طرح، $\\overrightarrow{DC}$ کی مقدار معلوم کرنے کے لیے اس کے اجزاء درج کریں۔ چونکہ $|\\overrightarrow{AB}| = |\\overrightarrow{DC}| = \\sqrt{40}$ ہے، اس لیے بالمقابل اضلاع مقدار میں برابر ہیں۔",
+   "check": [
+    "sqrt((-6)**2 + (-2)**2) == sqrt(36 + 4)",
+    "sqrt(36 + 4) == sqrt(40)"
+   ]
+  },
+  {
+   "math": "\\overrightarrow{DC} = -6\\underline{i} - 2\\underline{j} = -1(6\\underline{i} + 2\\underline{j}) = -\\overrightarrow{AB}",
+   "en": "Now, factor out $-1$ from the vector $\\overrightarrow{DC}$. We see that $\\overrightarrow{AB} = -\\overrightarrow{DC}$.",
+   "ur": "اب، ویکٹر $\\overrightarrow{DC}$ میں سے $-1$ مشترک لیں۔ ہم دیکھتے ہیں کہ $\\overrightarrow{AB} = -\\overrightarrow{DC}$ ہے۔",
+   "check": [
+    "-1*6 == -6",
+    "-1*2 == -2"
+   ]
+  },
+  {
+   "math": "|\\overrightarrow{AB}| = |\\overrightarrow{DC}| = \\sqrt{40} \\quad \\text{and} \\quad \\overrightarrow{AB} = -\\overrightarrow{DC}",
+   "en": "Two vectors are parallel if one is a non-zero scalar multiple of the other. Since $\\overrightarrow{AB}$ is $-1$ times $\\overrightarrow{DC}$, the opposite sides are parallel.",
+   "ur": "دو ویکٹرز متوازی ہوتے ہیں اگر ایک دوسرے کا غیر صفری عددی حاصل ضرب ہو۔ چونکہ $\\overrightarrow{AB}$، ویکٹر $\\overrightarrow{DC}$ کا $-1$ گنا ہے، اس لیے بالمقابل اضلاع متوازی ہیں۔",
+   "check": [
+    "sqrt(6**2 + 2**2) == sqrt(40)",
+    "sqrt((-6)**2 + (-2)**2) == sqrt(40)",
+    "-(-6) == 6",
+    "-(-2) == 2"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

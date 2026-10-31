@@ -1,0 +1,58 @@
+{
+ "item": "u1-example7",
+ "label": "iii",
+ "answer_ref": "$\\frac{1}{256}$",
+ "steps": [
+  {
+   "math": "(64)^{-4/3}",
+   "en": "We are given the exponential expression $(64)^{-4/3}$ and asked to simplify it.",
+   "ur": "ہمیں قوت نمائی جملہ $(64)^{-4/3}$ دیا گیا ہے اور اسے مختصر کرنے کو کہا گیا ہے۔"
+  },
+  {
+   "math": "(64)^{-4/3} = \\frac{1}{(64)^{4/3}}",
+   "en": "Using the law of negative exponents, $a^{-n} = \\frac{1}{a^n}$, we take the reciprocal to make the exponent positive.",
+   "ur": "منفی قوت نما کے قانون $a^{-n} = \\frac{1}{a^n}$ کو استعمال کرتے ہوئے، ہم قوت کو مثبت بنانے کے لیے معکوس لیتے ہیں۔",
+   "check": [
+    "64**R(-4,3) == 1/(64**R(4,3))"
+   ]
+  },
+  {
+   "math": "64 = 4 \\times 4 \\times 4 = 4^3",
+   "en": "Since the denominator of the fractional exponent is $3$, we express the base $64$ as a cube of $4$.",
+   "ur": "چونکہ کسری قوت نما کا مخرج $3$ ہے، اس لیے ہم اساس $64$ کو $4$ کے مکعب کی شکل میں لکھتے ہیں۔",
+   "check": [
+    "64 == 4**3"
+   ]
+  },
+  {
+   "math": "\\frac{1}{(64)^{4/3}} = \\frac{1}{(4^3)^{4/3}}",
+   "en": "Substitute $64 = 4^3$ into the denominator of our expression.",
+   "ur": "اپنے جملے کے مخرج میں $64 = 4^3$ درج کریں۔",
+   "check": [
+    "1/(64**R(4,3)) == 1/((4**3)**R(4,3))"
+   ]
+  },
+  {
+   "math": "\\frac{1}{(4^3)^{4/3}} = \\frac{1}{4^{3 \\times \\frac{4}{3}}} = \\frac{1}{4^4}",
+   "en": "Apply the power of a power law, $(a^m)^n = a^{m \\times n}$, and cancel out the $3$ in the exponent.",
+   "ur": "قوت کی قوت کا قانون $(a^m)^n = a^{m \\times n}$ لاگو کریں، اور قوت نما میں موجود $3$ کو کینسل کریں۔",
+   "check": [
+    "1/((4**3)**R(4,3)) == 1/(4**(3*R(4,3)))",
+    "1/(4**(3*R(4,3))) == 1/(4**4)"
+   ]
+  },
+  {
+   "math": "\\frac{1}{4^4} = \\frac{1}{256}",
+   "en": "Finally, calculate $4^4 = 4 \\times 4 \\times 4 \\times 4 = 256$ to get the simplified answer.",
+   "ur": "آخر میں، مختصر جواب حاصل کرنے کے لیے $4^4 = 4 \\times 4 \\times 4 \\times 4 = 256$ کا حساب لگائیں۔",
+   "check": [
+    "1/(4**4) == R(1,256)",
+    "64**Rational(-4,3) == 1/64**Rational(4,3)",
+    "4**4 == 256",
+    "64**Rational(4,3) == 256"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

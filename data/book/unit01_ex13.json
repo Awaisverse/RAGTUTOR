@@ -264,21 +264,49 @@
      "prompt": "",
      "steps": [
       {
-       "math": "{}^\\circ F = \\frac{9}{5}\\,{}^\\circ C + 32",
-       "en": "Use the Celsius-to-Fahrenheit formula.",
-       "ur": "سیلسیس سے فارن ہائیٹ کا فارمولا استعمال کریں۔"
+       "math": "{}^\\circ C = 48",
+       "en": "First, write down the given temperature in Celsius from the question.",
+       "ur": "سب سے پہلے، سوال میں دیے گئے سیلسیس درجہ حرارت کو لکھیں۔"
       },
       {
-       "math": "^\\circ F = \\frac{9}{5} \\times 48 + 32 = 86.4 + 32 = 118.4",
-       "en": "Put $^\\circ C = 48$ and calculate.",
-       "ur": "$^\\circ C = 48$ رکھیں اور حساب کریں۔",
+       "math": "{}^\\circ F = \\frac{9}{5}\\,{}^\\circ C + 32",
+       "en": "We need to find the temperature on the Fahrenheit scale. Write down the given formula for converting Celsius to Fahrenheit.",
+       "ur": "ہمیں فارن ہائیٹ سکیل پر درجہ حرارت معلوم کرنا ہے۔ سیلسیس کو فارن ہائیٹ میں تبدیل کرنے کا دیا گیا فارمولا لکھیں۔"
+      },
+      {
+       "math": "{}^\\circ F = \\frac{9}{5} (48) + 32",
+       "en": "Substitute the given value ${}^\\circ C = 48$ into the formula.",
+       "ur": "فارمولے میں دی گئی قیمت ${}^\\circ C = 48$ درج کریں۔"
+      },
+      {
+       "math": "{}^\\circ F = \\frac{432}{5} + 32",
+       "en": "Multiply $9$ by $48$ in the numerator.",
+       "ur": "شمار کنندہ (numerator) میں $9$ کو $48$ سے ضرب دیں۔",
        "check": [
+        "9 * 48 == 432"
+       ]
+      },
+      {
+       "math": "{}^\\circ F = 86.4 + 32",
+       "en": "Divide $432$ by $5$ to convert the fraction into a decimal.",
+       "ur": "کسر کو اعشاریہ میں تبدیل کرنے کے لیے $432$ کو $5$ پر تقسیم کریں۔",
+       "check": [
+        "R(432, 5) == R('86.4')"
+       ]
+      },
+      {
+       "math": "{}^\\circ F = 118.4",
+       "en": "Add $86.4$ and $32$ to get the final temperature in Fahrenheit. Thus, the temperature is $118.4^{\\circ}F$.",
+       "ur": "فارن ہائیٹ میں حتمی درجہ حرارت حاصل کرنے کے لیے $86.4$ اور $32$ کو جمع کریں۔ اس طرح، درجہ حرارت $118.4^{\\circ}F$ ہے۔",
+       "check": [
+        "R('86.4') + 32 == R('118.4')",
         "Rational(9,5)*48 == Rational('86.4')",
         "Rational('86.4') + 32 == Rational('118.4')"
        ]
       }
      ],
      "answer": "$118.4^{\\circ}F$",
+     "enriched": true,
      "book_key": "118.4"
     }
    ],
@@ -342,23 +370,50 @@
      "prompt": "",
      "steps": [
       {
-       "math": "\\text{Profit} = SP - CP = 1520 - 1500 = 20",
-       "en": "Profit is selling price minus cost price.",
-       "ur": "منافع = فروخت قیمت − خرید قیمت۔",
+       "math": "",
+       "en": "From the question, the Cost Price ($CP$) of the toy is Rs. $1500$ and the Selling Price ($SP$) is Rs. $1520$. We need to find the profit percentage.",
+       "ur": "سوال کے مطابق، کھلونے کی قیمتِ خرید ($CP$) $1500$ روپے اور قیمتِ فروخت ($SP$) $1520$ روپے ہے۔ ہمیں منافع کا فیصد معلوم کرنا ہے۔"
+      },
+      {
+       "math": "\\text{Profit} = SP - CP",
+       "en": "Since the selling price is greater than the cost price ($SP > CP$), Mirha made a profit. The formula to calculate profit is selling price minus cost price.",
+       "ur": "چونکہ قیمتِ فروخت قیمتِ خرید سے زیادہ ہے ($SP > CP$)، اس لیے مرحا کو منافع ہوا۔ منافع معلوم کرنے کا فارمولا قیمتِ فروخت منفی قیمتِ خرید ہے۔"
+      },
+      {
+       "math": "\\text{Profit} = 1520 - 1500 = \\text{Rs. } 20",
+       "en": "Substitute the given values of $SP$ and $CP$ into the formula and subtract to find the profit amount.",
+       "ur": "فارمولے میں $SP$ اور $CP$ کی دی گئی قیمتیں درج کریں اور منافع کی رقم معلوم کرنے کے لیے تفریق کریں۔",
        "check": [
         "1520 - 1500 == 20"
        ]
       },
       {
-       "math": "\\text{Profit\\%} = \\frac{20}{1500} \\times 100 = 1.33\\%",
-       "en": "Profit % = profit / CP × 100.",
-       "ur": "منافع فیصد = منافع / خرید قیمت × 100۔",
+       "math": "\\text{Profit\\%} = \\left( \\frac{\\text{Profit}}{CP} \\times 100 \\right)\\%",
+       "en": "Now, to find the profit percentage, we divide the profit by the cost price ($CP$) and multiply by $100$.",
+       "ur": "اب، منافع فیصد معلوم کرنے کے لیے، ہم منافع کو قیمتِ خرید ($CP$) پر تقسیم کرتے ہیں اور $100$ سے ضرب دیتے ہیں۔"
+      },
+      {
+       "math": "\\text{Profit\\%} = \\left( \\frac{20}{1500} \\times 100 \\right)\\% = \\frac{2000}{1500}\\% = \\frac{4}{3}\\%",
+       "en": "Substitute $\\text{Profit} = 20$ and $CP = 1500$ into the formula and simplify the fraction.",
+       "ur": "فارمولے میں $\\text{Profit} = 20$ اور $CP = 1500$ درج کریں اور کسر کو مختصر کریں۔",
        "check": [
+        "R(20, 1500) * 100 == R(2000, 1500)",
+        "R(2000, 1500) == R(4, 3)"
+       ]
+      },
+      {
+       "math": "\\text{Profit\\%} = 1.33\\%",
+       "en": "Divide $4$ by $3$ and round to two decimal places. Thus, Mirha's profit percentage is $1.33\\%$.",
+       "ur": "$4$ کو $3$ پر تقسیم کریں اور اعشاریہ کے بعد دو درجوں تک محدود کریں۔ اس طرح، مرحا کا منافع فیصد $1.33\\%$ ہے۔",
+       "check": [
+        "Abs(R(4, 3) - R(133, 100)) < R(1, 100)",
+        "1520 - 1500 == 20",
         "abs(Rational(20*100,1500) - Rational('1.33')) < Rational(1,100)"
        ]
       }
      ],
      "answer": "$1.33\\%$",
+     "enriched": true,
      "book_key": "1.33%"
     }
    ],
@@ -376,23 +431,50 @@
      "prompt": "",
      "steps": [
       {
-       "math": "\\text{Taxable income} = 960000 - 130000 = 830000",
-       "en": "Tax is paid only on the income above the exempted amount.",
-       "ur": "ٹیکس صرف مستثنیٰ رقم سے زائد آمدنی پر دیا جاتا ہے۔",
+       "math": "",
+       "en": "First, write down the given values: the annual income is Rs. $9,60,000$, the exempted amount is Rs. $1,30,000$, and the rate of income tax is $0.75\\%$.",
+       "ur": "سب سے پہلے دی گئی معلومات لکھیں: سالانہ آمدنی $9,60,000$ روپے ہے، مستثنیٰ رقم $1,30,000$ روپے ہے، اور انکم ٹیکس کی شرح $0.75\\%$ ہے۔"
+      },
+      {
+       "math": "\\text{Taxable Income} = \\text{Annual Income} - \\text{Exempted Amount}",
+       "en": "Income tax is paid only on the taxable income, which is found by subtracting the exempted amount from the total annual income.",
+       "ur": "انکم ٹیکس صرف قابلِ ٹیکس آمدنی پر ادا کیا جاتا ہے، جو کل سالانہ آمدنی سے مستثنیٰ رقم کو تفریق کر کے معلوم کی جاتی ہے۔"
+      },
+      {
+       "math": "\\text{Taxable Income} = 960000 - 130000 = 830000",
+       "en": "Substitute the given values and subtract to find the taxable income, which is Rs. $8,30,000$.",
+       "ur": "دی گئی قیمتیں درج کریں اور تفریق کر کے قابلِ ٹیکس آمدنی معلوم کریں، جو کہ $8,30,000$ روپے ہے۔",
        "check": [
         "960000 - 130000 == 830000"
        ]
       },
       {
-       "math": "\\text{Tax} = 830000 \\times \\frac{0.75}{100} = 6225",
-       "en": "Find 0.75% of the taxable income.",
-       "ur": "قابل ٹیکس آمدنی کا 0.75 فیصد نکالیں۔",
+       "math": "\\text{Income Tax} = \\text{Taxable Income} \\times \\text{Rate of Tax}",
+       "en": "Now, use the formula to calculate the total income tax.",
+       "ur": "اب کل انکم ٹیکس معلوم کرنے کے لیے فارمولا استعمال کریں۔"
+      },
+      {
+       "math": "\\text{Income Tax} = 830000 \\times \\frac{0.75}{100}",
+       "en": "Substitute the taxable income of $8,30,000$ and the tax rate of $0.75\\%$ (written as $\\frac{0.75}{100}$) into the formula.",
+       "ur": "فارمولے میں قابلِ ٹیکس آمدنی $8,30,000$ اور ٹیکس کی شرح $0.75\\%$ (جسے $\\frac{0.75}{100}$ لکھا جاتا ہے) درج کریں۔",
        "check": [
+        "830000 * R(75, 10000) == 6225"
+       ]
+      },
+      {
+       "math": "\\text{Income Tax} = 8300 \\times 0.75 = 6225",
+       "en": "Simplify by dividing $8,30,000$ by $100$ to get $8300$, and then multiply by $0.75$. Thus, Tayyab has to pay Rs. $6225$ in tax.",
+       "ur": "$8,30,000$ کو $100$ پر تقسیم کر کے $8300$ حاصل کریں، اور پھر اسے $0.75$ سے ضرب دیں۔ اس طرح طیب کو $6225$ روپے ٹیکس ادا کرنا ہو گا۔",
+       "check": [
+        "830000 / 100 == 8300",
+        "8300 * R(75, 100) == 6225",
+        "960000 - 130000 == 830000",
         "830000*Rational(75,10000) == 6225"
        ]
       }
      ],
      "answer": "Rs. 6225",
+     "enriched": true,
      "book_key": "Rs.6225"
     }
    ],
@@ -410,23 +492,49 @@
      "prompt": "",
      "steps": [
       {
-       "math": "A = P\\left(1+\\frac{r}{100}\\right)^t = 375000 \\times \\left(1+\\frac{14}{100}\\right)^1 = 375000 \\times 1.14 = 427500",
-       "en": "Find the amount after 1 year with the compound formula.",
-       "ur": "مرکب فارمولے سے ایک سال بعد کی کل رقم معلوم کریں۔",
+       "math": "P = 375000, \\quad r = 14\\%, \\quad t = 1 \\text{ year}",
+       "en": "Write down the given values: Principal ($P$), rate of markup ($r$), and time period ($t$).",
+       "ur": "دی گئی قیمتیں لکھیں: اصل زر ($P$)، شرح منافع ($r$)، اور مدت ($t$)۔"
+      },
+      {
+       "math": "A = P\\left(1 + \\frac{r}{100}\\right)^t",
+       "en": "To find the total amount ($A$) when markup is compounded annually, we use the compound amount formula.",
+       "ur": "جب منافع سالانہ بنیادوں پر مرکب ہو تو کل رقم ($A$) معلوم کرنے کے لیے ہم مرکب رقم کا فارمولا استعمال کرتے ہیں۔"
+      },
+      {
+       "math": "A = 375000\\left(1 + \\frac{14}{100}\\right)^1",
+       "en": "Substitute the given values $P = 375000$, $r = 14$, and $t = 1$ into the formula.",
+       "ur": "فارمولے میں دی گئی قیمتیں $P = 375000$، $r = 14$ اور $t = 1$ درج کریں۔"
+      },
+      {
+       "math": "A = 375000 \\times (1 + 0.14) = 375000 \\times 1.14",
+       "en": "Simplify the fraction $\\frac{14}{100} = 0.14$ and add it to $1$.",
+       "ur": "کسر $\\frac{14}{100} = 0.14$ کو مختصر کریں اور اسے $1$ میں جمع کریں۔",
        "check": [
-        "375000*Rational(114,100) == 427500"
+        "1 + R(14, 100) == R(114, 100)",
+        "375000 * (1 + R(14, 100)) == 375000 * R(114, 100)"
        ]
       },
       {
-       "math": "\\text{Compound markup} = A - P = 427500 - 375000 = 52500",
-       "en": "The markup is the amount minus the principal.",
-       "ur": "منافع = کل رقم − اصل رقم۔",
+       "math": "A = 427500",
+       "en": "Multiply $375000$ by $1.14$ to get the total amount after one year.",
+       "ur": "ایک سال بعد کی کل رقم حاصل کرنے کے لیے $375000$ کو $1.14$ سے ضرب دیں۔",
        "check": [
-        "427500 - 375000 == 52500"
+        "375000 * R(114, 100) == 427500"
+       ]
+      },
+      {
+       "math": "\\text{Compound Markup} = A - P = 427500 - 375000 = 52500",
+       "en": "Subtract the principal ($P$) from the total amount ($A$) to find the compound markup. Thus, the compound markup is Rs. $52500$.",
+       "ur": "مرکب منافع معلوم کرنے کے لیے کل رقم ($A$) میں سے اصل زر ($P$) کو تفریق کریں۔ اس طرح، مرکب منافع $52500$ روپے ہے۔",
+       "check": [
+        "427500 - 375000 == 52500",
+        "375000*Rational(114,100) == 427500"
        ]
       }
      ],
      "answer": "Rs. 52500",
+     "enriched": true,
      "book_key": "Rs.52500"
     }
    ],
@@ -444,21 +552,50 @@
      "prompt": "$\\sqrt{7}$ is:  (a) integer  (b) rational number  (c) irrational number  (d) natural number",
      "steps": [
       {
+       "math": "\\sqrt{7}",
+       "en": "We are given the number $\\sqrt{7}$ and asked to identify whether it is an integer, a rational number, an irrational number, or a natural number.",
+       "ur": "ہمیں عدد $\\sqrt{7}$ دیا گیا ہے اور یہ پہچاننے کو کہا گیا ہے کہ آیا یہ ایک صحیح عدد، ناطق عدد، غیر ناطق عدد، یا قدرتی عدد ہے۔"
+      },
+      {
+       "math": "",
+       "en": "Recall the rule: The square root of any positive integer $n$ (that is, $\\sqrt{n}$) is a rational number if and only if $n$ is a perfect square. If $n$ is not a perfect square, then $\\sqrt{n}$ is an irrational number.",
+       "ur": "اصول یاد کریں: کسی بھی مثبت صحیح عدد $n$ کا جذر المربع (یعنی $\\sqrt{n}$) صرف اس صورت میں ناطق عدد ہوتا ہے جب $n$ ایک مکمل مربع ہو۔ اگر $n$ مکمل مربع نہ ہو، تو $\\sqrt{n}$ ایک غیر ناطق عدد ہوتا ہے۔"
+      },
+      {
+       "math": "2^2 = 4, \\quad 3^2 = 9",
+       "en": "Let us check the perfect squares of consecutive integers around the number $7$.",
+       "ur": "آئیے عدد $7$ کے آس پاس کے متواتر صحیح اعداد کے مکمل مربعات کو چیک کرتے ہیں۔",
+       "check": [
+        "2**2 == 4",
+        "3**2 == 9"
+       ]
+      },
+      {
        "math": "4 < 7 < 9",
-       "en": "7 lies between the consecutive squares 4 and 9, so it is not a perfect square and $\\sqrt{7}$ is irrational.",
-       "ur": "7 دو متواتر مربعات 4 اور 9 کے درمیان ہے، یہ مکمل مربع نہیں، اس لیے $\\sqrt{7}$ غیر ناطق ہے۔",
+       "en": "Since $7$ lies strictly between the two consecutive perfect squares $4$ and $9$, there is no integer whose square is $7$. Also, $7$ is a prime number, so it is not a perfect square.",
+       "ur": "چونکہ $7$ دو متواتر مکمل مربعات $4$ اور $9$ کے درمیان واقع ہے، اس لیے کوئی ایسا صحیح عدد نہیں جس کا مربع $7$ ہو۔ مزید یہ کہ $7$ ایک مفرد عدد ہے، اس لیے یہ مکمل مربع نہیں ہے۔",
+       "check": [
+        "floor(sqrt(7))**2 == 4",
+        "(floor(sqrt(7))+1)**2 == 9"
+       ]
+      },
+      {
+       "math": "\\sqrt{7} \\notin \\mathbb{Q}",
+       "en": "Because $7$ is not a perfect square, $\\sqrt{7}$ cannot be written in the form $\\frac{p}{q}$ (where $p, q \\in \\mathbb{Z}$ and $q \\neq 0$). Therefore, $\\sqrt{7}$ is an irrational number.",
+       "ur": "چونکہ $7$ ایک مکمل مربع نہیں ہے، اس لیے $\\sqrt{7}$ کو $\\frac{p}{q}$ کی شکل میں نہیں لکھا جا سکتا (جہاں $p, q \\in \\mathbb{Z}$ اور $q \\neq 0$)۔ لہذا، $\\sqrt{7}$ ایک غیر ناطق عدد ہے۔"
+      },
+      {
+       "math": "",
+       "en": "Thus, $\\sqrt{7}$ is not a natural number, not an integer, and not a rational number. The correct option is (c) irrational number.",
+       "ur": "اس طرح، $\\sqrt{7}$ نہ تو قدرتی عدد ہے، نہ صحیح عدد، اور نہ ہی ناطق عدد۔ درست آپشن (c) غیر ناطق عدد (irrational number) ہے۔",
        "check": [
         "floor(sqrt(7))**2 < 7",
         "(floor(sqrt(7))+1)**2 > 7"
        ]
-      },
-      {
-       "math": "",
-       "en": "The correct option is (c) irrational number. It is not an integer, not rational and not natural.",
-       "ur": "درست جواب (c) irrational number ہے۔ یہ نہ صحیح عدد ہے، نہ ناطق اور نہ قدرتی۔"
       }
      ],
      "answer": "c",
+     "enriched": true,
      "book_key": "c"
     },
     {
@@ -467,11 +604,32 @@
      "steps": [
       {
        "math": "",
-       "en": "The correct option is (d) irrational numbers. Both $\\pi = 3.14159\\ldots$ and $e = 2.71828\\ldots$ are non-terminating, non-recurring decimals.",
-       "ur": "درست جواب (d) irrational numbers ہے۔ $\\pi = 3.14159\\ldots$ اور $e = 2.71828\\ldots$ دونوں غیر محدود غیر دوری اعشاری اعداد ہیں۔"
+       "en": "We need to identify which set of numbers the mathematical constants $\\pi$ (pi) and $e$ (Euler's number) belong to from the given options.",
+       "ur": "ہمیں دیے گئے آپشنز میں سے یہ معلوم کرنا ہے کہ ریاضیاتی مستقلات $\\pi$ (پائی) اور $e$ (آئلر نمبر) اعداد کے کس سیٹ سے تعلق رکھتے ہیں۔"
+      },
+      {
+       "math": "",
+       "en": "Recall the definition of irrational numbers: numbers whose decimal representations are both non-terminating (they go on forever) and non-recurring (they do not repeat in a fixed pattern). Such numbers cannot be written as a simple fraction $\\frac{p}{q}$ where $p, q \\in \\mathbb{Z}$ and $q \\neq 0$.",
+       "ur": "غیر ناطق اعداد (irrational numbers) کی تعریف یاد کریں: ایسے اعداد جن کی اعشاری شکل غیر مختتم (کبھی ختم نہ ہونے والی) اور غیر متوالی (بغیر کسی خاص ترتیب کے دہرائی جانے والی) ہوتی ہے۔ ایسے اعداد کو سادہ کسر $\\frac{p}{q}$ کی شکل میں نہیں لکھا جا سکتا جہاں $p, q \\in \\mathbb{Z}$ اور $q \\neq 0$ ہو۔"
+      },
+      {
+       "math": "\\pi = 3.14159\\ldots",
+       "en": "Looking at the decimal expansion of $\\pi$, we see that the digits after the decimal point continue infinitely without any repeating pattern.",
+       "ur": "$\\pi$ کی اعشاری توسیع کو دیکھتے ہوئے، ہم دیکھتے ہیں کہ اعشاریہ کے بعد کے ہندسے بغیر کسی تکرار کے لامحدود طور پر جاری رہتے ہیں۔"
+      },
+      {
+       "math": "e = 2.71828\\ldots",
+       "en": "Similarly, the decimal expansion of Euler's number $e$ is also non-terminating and non-recurring.",
+       "ur": "اسی طرح، آئلر نمبر $e$ کی اعشاری توسیع بھی غیر مختتم اور غیر متوالی (غیر دوری) ہے۔"
+      },
+      {
+       "math": "",
+       "en": "Since both $\\pi$ and $e$ are non-terminating and non-recurring decimals, they are irrational numbers. Therefore, the correct option is (d).",
+       "ur": "چونکہ $\\pi$ اور $e$ دونوں غیر مختتم اور غیر دوری اعشاری اعداد ہیں، اس لیے یہ غیر ناطق اعداد (irrational numbers) ہیں۔ لہٰذا، درست آپشن (d) ہے۔"
       }
      ],
      "answer": "d",
+     "enriched": true,
      "book_key": "d"
     },
     {
@@ -480,11 +638,27 @@
      "steps": [
       {
        "math": "",
-       "en": "The correct option is (d) irrational number. A square root that is not a whole number is a non-terminating, non-recurring decimal. For example $\\sqrt{7}$ with 7 between 4 and 9.",
-       "ur": "درست جواب (d) irrational number ہے۔ جو جذر مکمل عدد نہ ہو وہ غیر محدود غیر دوری اعشاری عدد ہوتا ہے۔ مثلاً $\\sqrt{7}$ جبکہ 7، 4 اور 9 کے درمیان ہے۔"
+       "en": "We are given that $n$ is a number that is not a perfect square, and we need to determine what type of number $\\sqrt{n}$ is.",
+       "ur": "ہمیں دیا گیا ہے کہ $n$ ایک ایسا عدد ہے جو مکمل مربع نہیں ہے، اور ہمیں یہ معلوم کرنا ہے کہ $\\sqrt{n}$ کس قسم کا عدد ہے۔"
+      },
+      {
+       "math": "",
+       "en": "A perfect square is a number that is the square of a whole number (for example, $4$ and $9$). If $n$ is not a perfect square (for example, $n = 7$, which lies between $4$ and $9$), then its square root $\\sqrt{n}$ is not a whole number.",
+       "ur": "مکمل مربع ایک ایسا عدد ہوتا ہے جو کسی مکمل عدد کا مربع ہو (مثلاً $4$ اور $9$)۔ اگر $n$ مکمل مربع نہ ہو (مثلاً $n = 7$، جو $4$ اور $9$ کے درمیان ہے)، تو اس کا جذر $\\sqrt{n}$ ایک مکمل عدد نہیں ہوتا۔"
+      },
+      {
+       "math": "",
+       "en": "According to the properties of real numbers, the square root of any positive integer that is not a perfect square results in a non-terminating and non-recurring decimal. Such numbers cannot be written in the form $\\frac{p}{q}$ (where $p, q \\in \\mathbb{Z}$ and $q \\neq 0$), which means they are irrational numbers.",
+       "ur": "حقیقی اعداد کی خصوصیات کے مطابق، کسی بھی ایسے مثبت صحیح عدد کا جذر جو مکمل مربع نہ ہو، ایک غیر مختتم اور غیر متوالی اعشاری عدد ہوتا ہے۔ ایسے اعداد کو $\\frac{p}{q}$ کی شکل میں نہیں لکھا جا سکتا (جہاں $p, q \\in \\mathbb{Z}$ اور $q \\neq 0$)، جس کا مطلب ہے کہ وہ غیر ناطق اعداد (irrational numbers) ہیں۔"
+      },
+      {
+       "math": "",
+       "en": "Therefore, $\\sqrt{n}$ is an irrational number, and the correct option is (d).",
+       "ur": "لہٰذا، $\\sqrt{n}$ ایک غیر ناطق عدد (irrational number) ہے، اور درست آپشن (d) ہے۔"
       }
      ],
      "answer": "d",
+     "enriched": true,
      "book_key": "d"
     },
     {
@@ -492,22 +666,47 @@
      "prompt": "$\\sqrt{3}+\\sqrt{5}$ is:  (a) whole number  (b) integer  (c) rational number  (d) irrational number",
      "steps": [
       {
-       "math": "(\\sqrt{3}+\\sqrt{5})^2 = 8+2\\sqrt{15}",
-       "en": "Square the number. $\\sqrt{15}$ is irrational because 15 lies between 9 and 16.",
-       "ur": "عدد کا مربع لیں۔ $\\sqrt{15}$ غیر ناطق ہے کیونکہ 15، 9 اور 16 کے درمیان ہے۔",
+       "math": "x = \\sqrt{3} + \\sqrt{5}",
+       "en": "Let the given number be $x$. We need to determine whether it is a whole number, an integer, a rational number, or an irrational number.",
+       "ur": "فرض کریں کہ دیا گیا عدد $x$ ہے۔ ہمیں یہ معلوم کرنا ہے کہ آیا یہ مکمل عدد، صحیح عدد، ناطق عدد، یا غیر ناطق عدد ہے۔"
+      },
+      {
+       "math": "x^2 = (\\sqrt{3} + \\sqrt{5})^2",
+       "en": "To check the nature of the number, we take the square of both sides using the algebraic identity $(a+b)^2 = a^2 + b^2 + 2ab$.",
+       "ur": "عدد کی نوعیت جانچنے کے لیے، ہم الجبری کلیہ $(a+b)^2 = a^2 + b^2 + 2ab$ کا استعمال کرتے ہوئے دونوں طرف مربع لیتے ہیں۔"
+      },
+      {
+       "math": "x^2 = (\\sqrt{3})^2 + (\\sqrt{5})^2 + 2(\\sqrt{3})(\\sqrt{5})",
+       "en": "Substitute $a = \\sqrt{3}$ and $b = \\sqrt{5}$ into the formula.",
+       "ur": "کلیہ میں $a = \\sqrt{3}$ اور $b = \\sqrt{5}$ درج کریں۔",
        "check": [
-        "(sqrt(3)+sqrt(5))**2 == 8 + 2*sqrt(15)",
+        "(sqrt(3) + sqrt(5))**2 == (sqrt(3))**2 + (sqrt(5))**2 + 2*sqrt(3)*sqrt(5)"
+       ]
+      },
+      {
+       "math": "x^2 = 3 + 5 + 2\\sqrt{15} = 8 + 2\\sqrt{15}",
+       "en": "Simplify the terms. Since $15$ is not a perfect square (it lies between $9$ and $16$), $\\sqrt{15}$ is an irrational number.",
+       "ur": "رقوم کو مختصر کریں۔ چونکہ $15$ ایک مکمل مربع نہیں ہے (یہ $9$ اور $16$ کے درمیان ہے)، اس لیے $\\sqrt{15}$ ایک غیر ناطق عدد ہے۔",
+       "check": [
+        "(sqrt(3))**2 + (sqrt(5))**2 + 2*sqrt(3)*sqrt(5) == 3 + 5 + 2*sqrt(15)",
+        "3 + 5 + 2*sqrt(15) == 8 + 2*sqrt(15)",
         "floor(sqrt(15))**2 < 15",
         "(floor(sqrt(15))+1)**2 > 15"
        ]
       },
       {
        "math": "",
-       "en": "The correct option is (d) irrational number. The square is irrational, so $\\sqrt{3}+\\sqrt{5}$ cannot be rational.",
-       "ur": "درست جواب (d) irrational number ہے۔ مربع غیر ناطق ہے، اس لیے $\\sqrt{3}+\\sqrt{5}$ ناطق نہیں ہو سکتا۔"
+       "en": "Because $8 + 2\\sqrt{15}$ is irrational, the square of our number is irrational. Since the square of any rational number is always rational, $\\sqrt{3}+\\sqrt{5}$ cannot be rational. Therefore, the correct option is (d) irrational number.",
+       "ur": "چونکہ $8 + 2\\sqrt{15}$ غیر ناطق ہے، اس لیے ہمارے عدد کا مربع غیر ناطق ہے۔ چونکہ کسی بھی ناطق عدد کا مربع ہمیشہ ناطق ہوتا ہے، اس لیے $\\sqrt{3}+\\sqrt{5}$ ناطق نہیں ہو سکتا۔ لہٰذا، درست آپشن (d) irrational number (غیر ناطق عدد) ہے۔",
+       "check": [
+        "(sqrt(3)+sqrt(5))**2 == 8 + 2*sqrt(15)",
+        "floor(sqrt(15))**2 < 15",
+        "(floor(sqrt(15))+1)**2 > 15"
+       ]
       }
      ],
      "answer": "d",
+     "enriched": true,
      "book_key": "d"
     },
     {
@@ -515,12 +714,28 @@
      "prompt": "For all $x \\in R$, $x = x$ is called:  (a) reflexive property  (b) transitive number  (c) symmetric property  (d) trichotomy property",
      "steps": [
       {
+       "math": "\\forall x \\in \\mathbb{R}, \\quad x = x",
+       "en": "We are given the statement: for all real numbers $x \\in \\mathbb{R}$, $x = x$. We need to identify the name of this property of real numbers.",
+       "ur": "ہمیں یہ بیان دیا گیا ہے: تمام حقیقی اعداد $x \\in \\mathbb{R}$ کے لیے، $x = x$۔ ہمیں حقیقی اعداد کی اس خاصیت کا نام بتانا ہے۔"
+      },
+      {
        "math": "",
-       "en": "The correct option is (a) reflexive property. Every number is equal to itself: the reflexive property.",
-       "ur": "درست جواب (a) reflexive property ہے۔ ہر عدد اپنے برابر ہوتا ہے: خاصیت انعکاس۔"
+       "en": "According to the properties of equality of real numbers, the reflexive property states that every real number is equal to itself.",
+       "ur": "حقیقی اعداد کی مساوات کی خصوصیات کے مطابق، خاصیتِ انعکاس (reflexive property) یہ بتاتی ہے کہ ہر حقیقی عدد اپنے آپ کے برابر ہوتا ہے۔"
+      },
+      {
+       "math": "",
+       "en": "Let us briefly check the other options to be sure: the symmetric property states that if $x = y$, then $y = x$; the transitive property states that if $x = y$ and $y = z$, then $x = z$; and the trichotomy property states that for any $x, y \\in \\mathbb{R}$, either $x < y$, $x = y$, or $x > y$.",
+       "ur": "آئیے تصدیق کے لیے دیگر آپشنز کا مختصراً جائزہ لیتے ہیں: خاصیتِ تشاکل (symmetric property) کے مطابق اگر $x = y$ ہو تو $y = x$ ہوتا ہے؛ خاصیتِ تعدیہ (transitive property) کے مطابق اگر $x = y$ اور $y = z$ ہو تو $x = z$ ہوتا ہے؛ اور خاصیتِ تثلیث (trichotomy property) کے مطابق کسی بھی $x, y \\in \\mathbb{R}$ کے لیے یا تو $x < y$، یا $x = y$، یا پھر $x > y$ ہوتا ہے۔"
+      },
+      {
+       "math": "",
+       "en": "Therefore, the statement $x = x$ represents the reflexive property. The correct option is (a).",
+       "ur": "لہٰذا، بیان $x = x$ خاصیتِ انعکاس (reflexive property) کو ظاہر کرتا ہے۔ درست آپشن (a) ہے۔"
       }
      ],
      "answer": "a",
+     "enriched": true,
      "book_key": "a"
     },
     {
@@ -528,12 +743,28 @@
      "prompt": "Let $a, b, c \\in R$, then $a > b$ and $b > c \\Rightarrow a > c$ is called ______ property.  (a) trichotomy  (b) transitive  (c) additive  (d) multiplicative",
      "steps": [
       {
+       "math": "a, b, c \\in \\mathbb{R}, \\quad a > b \\text{ and } b > c \\Rightarrow a > c",
+       "en": "We are given three real numbers $a, b,$ and $c$, and we need to identify the name of the inequality property where $a > b$ and $b > c$ implies $a > c$.",
+       "ur": "ہمیں تین حقیقی اعداد $a, b,$ اور $c$ دیے گئے ہیں، اور ہمیں نامساوات کی اس خاصیت کا نام بتانا ہے جس میں اگر $a > b$ اور $b > c$ ہو تو اس سے مراد $a > c$ ہوتا ہے۔"
+      },
+      {
        "math": "",
-       "en": "The correct option is (b) transitive. If a is greater than b and b is greater than c, then a is greater than c: the transitive property.",
-       "ur": "درست جواب (b) transitive ہے۔ اگر a بڑا ہے b سے اور b بڑا ہے c سے تو a بڑا ہے c سے: خاصیت تعدی۔"
+       "en": "According to the order properties of real numbers, when a relation holds between the first and second element ($a > b$), and between the second and third element ($b > c$), it automatically transfers to the first and third element ($a > c$).",
+       "ur": "حقیقی اعداد کی ترتیبی خصوصیات کے مطابق، جب کوئی تعلق پہلے اور دوسرے رکن ($a > b$) کے درمیان ہو، اور وہی تعلق دوسرے اور تیسرے رکن ($b > c$) کے درمیان ہو، تو یہ تعلق خود بخود پہلے اور تیسرے رکن ($a > c$) میں منتقل ہو جاتا ہے۔"
+      },
+      {
+       "math": "",
+       "en": "In mathematics, this transferring rule is called the **transitive property** of inequality.",
+       "ur": "ریاضی میں، اس منتقلی کے اصول کو نامساوات کی **خاصیتِ تعدی (transitive property)** کہا جاتا ہے۔"
+      },
+      {
+       "math": "",
+       "en": "Comparing this with the given choices, option (b) is the correct answer.",
+       "ur": "دیے گئے ممکنہ جوابات سے موازنہ کرنے پر، آپشن (b) درست جواب ہے۔"
       }
      ],
      "answer": "b",
+     "enriched": true,
      "book_key": "b"
     },
     {
@@ -578,9 +809,34 @@
      "prompt": "Let $a, b \\in R$, then $a = b$ and $b = a$ is called ______ property.  (a) reflexive  (b) symmetric  (c) transitive  (d) additive",
      "steps": [
       {
+       "math": "a, b \\in \\mathbb{R}, \\quad a = b \\implies b = a",
+       "en": "We are given that $a$ and $b$ are real numbers ($a, b \\in \\mathbb{R}$), and we need to identify the property of equality where if $a = b$, then $b = a$.",
+       "ur": "ہمیں دیا گیا ہے کہ $a$ اور $b$ حقیقی اعداد ہیں ($a, b \\in \\mathbb{R}$)، اور ہمیں مساوات کی اس خاصیت کی نشاندہی کرنی ہے جس کے مطابق اگر $a = b$ ہو تو $b = a$ ہوتا ہے۔"
+      },
+      {
        "math": "",
-       "en": "The correct option is (b) symmetric. If a = b then b = a: the symmetric property.",
-       "ur": "درست جواب (b) symmetric ہے۔ اگر a = b ہو تو b = a: خاصیت تشاکل۔"
+       "en": "Let us recall the basic properties of equality for real numbers:",
+       "ur": "آئیے حقیقی اعداد کے لیے مساوات کی بنیادی خصوصیات کو دہراتے ہیں:"
+      },
+      {
+       "math": "\\text{Reflexive property: } a = a",
+       "en": "1. The reflexive property states that every real number is equal to itself, i.e., $a = a$.",
+       "ur": "1. خاصیتِ انعکاس (Reflexive property) کے مطابق ہر حقیقی عدد اپنے آپ کے برابر ہوتا ہے، یعنی $a = a$۔"
+      },
+      {
+       "math": "\\text{Symmetric property: } a = b \\implies b = a",
+       "en": "2. The symmetric property states that if the first number is equal to the second ($a = b$), then the second number is also equal to the first ($b = a$).",
+       "ur": "2. خاصیتِ تشاکل (Symmetric property) کے مطابق اگر پہلا عدد دوسرے کے برابر ہو ($a = b$)، تو دوسرا عدد بھی پہلے کے برابر ہوتا ہے ($b = a$)۔"
+      },
+      {
+       "math": "\\text{Transitive property: } a = b \\text{ and } b = c \\implies a = c",
+       "en": "3. The transitive property states that if $a = b$ and $b = c$, then $a = c$.",
+       "ur": "3. خاصیتِ تعدی (Transitive property) کے مطابق اگر $a = b$ اور $b = c$ ہو، تو $a = c$ ہوتا ہے۔"
+      },
+      {
+       "math": "",
+       "en": "Comparing the given statement with the definitions above, we see that it matches the symmetric property. Therefore, the correct option is (b).",
+       "ur": "دیے گئے بیان کا مندرجہ بالا تعریفوں سے موازنہ کرنے پر، ہم دیکھتے ہیں کہ یہ خاصیتِ تشاکل (symmetric property) سے مطابقت رکھتا ہے۔ لہٰذا، درست آپشن (b) ہے۔"
       }
      ],
      "answer": "b",
@@ -589,6 +845,7 @@
       "en": "The book's printed answer key says (a) for this part. That is a misprint: a = b and b = a is the symmetric property, which is option (b).",
       "ur": "کتاب کے آخر میں دیے گئے جوابات میں اس حصے کے لیے (a) لکھا ہے۔ یہ غلطی ہے: a = b اور b = a خاصیت تشاکل ہے جو (b) ہے۔"
      },
+     "enriched": true,
      "book_key": "a"
     },
     {
@@ -627,20 +884,50 @@
      "prompt": "The product of $(3+\\sqrt{5})(3-\\sqrt{5})$ is:  (a) prime number  (b) odd number  (c) irrational number  (d) rational number",
      "steps": [
       {
-       "math": "(3+\\sqrt{5})(3-\\sqrt{5}) = 3^2-(\\sqrt{5})^2 = 9-5 = 4",
-       "en": "Use $(a+b)(a-b) = a^2-b^2$.",
-       "ur": "$(a+b)(a-b) = a^2-b^2$ استعمال کریں۔",
+       "math": "(3+\\sqrt{5})(3-\\sqrt{5})",
+       "en": "Write down the given algebraic expression to find its product.",
+       "ur": "حاصلِ ضرب معلوم کرنے کے لیے دی گئی الجبری عبارت لکھیں۔"
+      },
+      {
+       "math": "(a+b)(a-b) = a^2 - b^2",
+       "en": "Notice that the expression is in the form of $(a+b)(a-b)$, where $a=3$ and $b=\\sqrt{5}$. We can apply the difference of two squares formula.",
+       "ur": "غور کریں کہ یہ عبارت $(a+b)(a-b)$ کی شکل میں ہے، جہاں $a=3$ اور $b=\\sqrt{5}$ ہے۔ ہم یہاں دو مربعات کے فرق کا فارمولا استعمال کر سکتے ہیں۔"
+      },
+      {
+       "math": "(3+\\sqrt{5})(3-\\sqrt{5}) = (3)^2 - (\\sqrt{5})^2",
+       "en": "Substitute $a=3$ and $b=\\sqrt{5}$ into the formula.",
+       "ur": "فارمولے میں $a=3$ اور $b=\\sqrt{5}$ درج کریں۔",
        "check": [
-        "(3+sqrt(5))*(3-sqrt(5)) == 4"
+        "(3+sqrt(5))*(3-sqrt(5)) == 3**2 - sqrt(5)**2"
+       ]
+      },
+      {
+       "math": "= 9 - 5",
+       "en": "Calculate the squares: $3^2 = 9$ and $(\\sqrt{5})^2 = 5$.",
+       "ur": "مربع حل کریں: $3^2 = 9$ اور $(\\sqrt{5})^2 = 5$ ہوتا ہے۔",
+       "check": [
+        "3**2 - sqrt(5)**2 == 9 - 5"
+       ]
+      },
+      {
+       "math": "= 4",
+       "en": "Subtract $5$ from $9$ to get $4$.",
+       "ur": "$9$ میں سے $5$ تفریق کرنے سے $4$ حاصل ہوتا ہے۔",
+       "check": [
+        "9 - 5 == 4"
        ]
       },
       {
        "math": "",
-       "en": "The correct option is (d) rational number. 4 is a rational number (it is also not prime and not odd).",
-       "ur": "درست جواب (d) rational number ہے۔ 4 ناطق عدد ہے (یہ مفرد اور طاق بھی نہیں)۔"
+       "en": "Since $4$ can be written in the form $\\frac{p}{q}$ as $\\frac{4}{1}$, it is a rational number (note that $4$ is an even composite number, so it is neither prime nor odd). Therefore, the correct option is (d) rational number.",
+       "ur": "چونکہ $4$ کو $\\frac{p}{q}$ کی شکل میں $\\frac{4}{1}$ کے طور پر لکھا جا سکتا ہے، اس لیے یہ ایک ناطق عدد (rational number) ہے (یاد رہے کہ $4$ ایک جفت اور مرکب عدد ہے، اس لیے یہ نہ تو مفرد ہے اور نہ ہی طاق)۔ لہذا، درست آپشن (d) rational number ہے۔",
+       "check": [
+        "(3+sqrt(5))*(3-sqrt(5)) == 4"
+       ]
       }
      ],
      "answer": "d",
+     "enriched": true,
      "book_key": "d"
     }
    ],
@@ -808,20 +1095,39 @@
      "prompt": "",
      "steps": [
       {
+       "math": "",
+       "en": "We are asked to determine whether the number $0$ is a rational number and to explain the reason.",
+       "ur": "ہمیں یہ معلوم کرنا ہے کہ آیا عدد $0$ ایک ناطق عدد ہے یا نہیں اور اس کی وجہ بیان کرنی ہے۔"
+      },
+      {
+       "math": "\\frac{p}{q}, \\quad p, q \\in \\mathbb{Z}, \\quad q \\neq 0",
+       "en": "By definition, a rational number is any number that can be expressed in the form $\\frac{p}{q}$, where $p$ and $q$ are integers ($\\mathbb{Z}$) and the denominator $q$ is not equal to $0$.",
+       "ur": "تعریف کے مطابق، ناطق عدد وہ ہوتا ہے جسے $\\frac{p}{q}$ کی شکل میں لکھا جا سکے، جہاں $p$ اور $q$ صحیح اعداد ($\\mathbb{Z}$) ہوں اور مخرج $q$ صفر کے برابر نہ ہو ($q \\neq 0$)۔"
+      },
+      {
        "math": "0 = \\frac{0}{1}",
-       "en": "A rational number is a number that can be written as $\\frac{p}{q}$ with p and q integers and $q \\neq 0$. Here p = 0 and q = 1.",
-       "ur": "ناطق عدد وہ ہے جسے $\\frac{p}{q}$ کی شکل میں لکھا جا سکے جہاں p اور q صحیح اعداد ہوں اور $q \\neq 0$ ہو۔ یہاں p = 0 اور q = 1 ہے۔",
+       "en": "Any whole number can be written as a fraction by placing $1$ in the denominator. Therefore, we can write $0$ as $\\frac{0}{1}$.",
+       "ur": "کسی بھی مکمل عدد کے مخرج میں $1$ لکھ کر اسے کسر کی شکل میں لکھا جا سکتا ہے۔ اس لیے، ہم $0$ کو $\\frac{0}{1}$ لکھ سکتے ہیں۔",
        "check": [
-        "Rational(0,1) == 0"
+        "0 == R(0, 1)"
        ]
       },
       {
+       "math": "p = 0, \\quad q = 1",
+       "en": "Comparing $\\frac{0}{1}$ with the standard form $\\frac{p}{q}$, we have $p = 0$ and $q = 1$. Since both $0$ and $1$ are integers and the denominator $q = 1 \\neq 0$, all conditions of a rational number are satisfied.",
+       "ur": "کسر $\\frac{0}{1}$ کا معیاری شکل $\\frac{p}{q}$ سے موازنہ کرنے پر، ہمیں $p = 0$ اور $q = 1$ ملتا ہے۔ چونکہ $0$ اور $1$ دونوں صحیح اعداد ہیں اور مخرج $q = 1 \\neq 0$ ہے، اس لیے ناطق عدد کی تمام شرائط پوری ہوتی ہیں۔"
+      },
+      {
        "math": "",
-       "en": "So 0 can be written in the form $\\frac{p}{q}$ and it is a rational number.",
-       "ur": "اس لیے 0 کو $\\frac{p}{q}$ کی شکل میں لکھا جا سکتا ہے اور یہ ناطق عدد ہے۔"
+       "en": "Yes, $0$ is a rational number because $0 = \\frac{0}{1}$.",
+       "ur": "جی ہاں، $0$ ایک ناطق عدد ہے کیونکہ $0 = \\frac{0}{1}$ ہے۔",
+       "check": [
+        "Rational(0,1) == 0"
+       ]
       }
      ],
-     "answer": "Yes, 0 is a rational number because $0 = \\frac{0}{1}$."
+     "answer": "Yes, 0 is a rational number because $0 = \\frac{0}{1}$.",
+     "enriched": true
     }
    ],
    "exercise": "Review 1"
@@ -839,11 +1145,27 @@
      "steps": [
       {
        "math": "",
-       "en": "The trichotomy property says: for any two real numbers a and b, exactly one of the three relations is true: a = b, a > b or a < b.",
-       "ur": "خاصیت سہ شقی کہتی ہے: کسی بھی دو حقیقی اعداد a اور b کے لیے تین رشتوں میں سے ایک اور صرف ایک درست ہوتا ہے: a = b، a > b یا a < b۔"
+       "en": "We are asked to state the trichotomy property of real numbers.",
+       "ur": "ہمیں حقیقی اعداد کی خاصیتِ سہ شقی (trichotomy property) بیان کرنے کو کہا گیا ہے۔"
+      },
+      {
+       "math": "a, b \\in \\mathbb{R}",
+       "en": "Consider any two arbitrary real numbers $a$ and $b$. The word 'trichotomy' means a division into three parts or possibilities.",
+       "ur": "فرض کریں کہ $a$ اور $b$ کوئی سے دو حقیقی اعداد ہیں۔ لفظ 'سہ شقی' (trichotomy) کا مطلب تین حصوں یا امکانات میں تقسیم ہے۔"
+      },
+      {
+       "math": "a = b \\quad \\text{or} \\quad a > b \\quad \\text{or} \\quad a < b",
+       "en": "According to the trichotomy property of order (inequalities), when we compare any two real numbers $a$ and $b$, one and only one of the following three relations must hold true: either $a$ is equal to $b$, or $a$ is greater than $b$, or $a$ is less than $b$.",
+       "ur": "ترتیب (عدم مساوات) کی خاصیتِ سہ شقی کے مطابق، جب ہم کسی بھی دو حقیقی اعداد $a$ اور $b$ کا موازنہ کرتے ہیں، تو درج ذیل تین رشتوں میں سے ایک اور صرف ایک رشتہ درست ہوتا ہے: یا تو $a$ اور $b$ برابر ہیں، یا $a$ بڑا ہے $b$ سے، یا $a$ چھوٹا ہے $b$ سے۔"
+      },
+      {
+       "math": "\\forall a, b \\in \\mathbb{R}, \\quad a = b \\quad \\text{or} \\quad a > b \\quad \\text{or} \\quad a < b",
+       "en": "Therefore, we can state the trichotomy property in standard mathematical form as: For all $a, b \\in R$, either $a = b$ or $a > b$ or $a < b$.",
+       "ur": "لہٰذا، ہم خاصیتِ سہ شقی کو معیاری ریاضیاتی شکل میں اس طرح بیان کر سکتے ہیں: تمام $a, b \\in R$ کے لیے، یا تو $a = b$ یا $a > b$ یا $a < b$۔"
       }
      ],
-     "answer": "For all $a, b \\in R$, either $a = b$ or $a > b$ or $a < b$."
+     "answer": "For all $a, b \\in R$, either $a = b$ or $a > b$ or $a < b$.",
+     "enriched": true
     }
    ],
    "exercise": "Review 1"
@@ -903,15 +1225,33 @@
      "prompt": "$\\sqrt[5]{\\frac{x^{15} y^{35}}{z^{20}}}$",
      "steps": [
       {
-       "math": "\\frac{x^{15} y^{35}}{z^{20}} \\text{ under a fifth root} \\;\\Rightarrow\\; \\left(\\frac{x^{15} y^{35}}{z^{20}}\\right)^{\\frac{1}{5}}",
-       "en": "Write the 5th root as the power $\\frac{1}{5}$.",
-       "ur": "پانچویں جذر کو طاقت $\\frac{1}{5}$ کی شکل میں لکھیں۔"
+       "math": "\\sqrt[5]{\\frac{x^{15} y^{35}}{z^{20}}}",
+       "en": "We are given the radical expression and asked to simplify it.",
+       "ur": "ہمیں یہ جذری جملہ دیا گیا ہے اور اسے مختصر کرنے کو کہا گیا ہے۔"
       },
       {
-       "math": "= \\frac{x^{15 \\times \\frac{1}{5}} \\, y^{35 \\times \\frac{1}{5}}}{z^{20 \\times \\frac{1}{5}}} = \\frac{x^3 y^7}{z^4}",
-       "en": "Multiply each exponent by $\\frac{1}{5}$.",
-       "ur": "ہر قوت کو $\\frac{1}{5}$ سے ضرب دیں۔",
+       "math": "= \\left( \\frac{x^{15} y^{35}}{z^{20}} \\right)^{\\frac{1}{5}}",
+       "en": "First, convert the radical form into exponential form using the rule $\\sqrt[n]{a} = a^{\\frac{1}{n}}$. Here, the index is $5$, so the power becomes $\\frac{1}{5}$.",
+       "ur": "سب سے پہلے، اصول $\\sqrt[n]{a} = a^{\\frac{1}{n}}$ کا استعمال کرتے ہوئے جذری شکل کو قوت نمائی شکل میں تبدیل کریں۔ یہاں اشاریہ $5$ ہے، اس لیے طاقت $\\frac{1}{5}$ بن جائے گی۔"
+      },
+      {
+       "math": "= \\frac{(x^{15})^{\\frac{1}{5}} \\cdot (y^{35})^{\\frac{1}{5}}}{(z^{20})^{\\frac{1}{5}}}",
+       "en": "Apply the power of a quotient and power of a product laws of exponents: $\\left(\\frac{a \\cdot b}{c}\\right)^m = \\frac{a^m \\cdot b^m}{c^m}$.",
+       "ur": "قوت نما کے حاصلِ ضرب اور حاصلِ تقسیم کے قوانین لاگو کریں: $\\left(\\frac{a \\cdot b}{c}\\right)^m = \\frac{a^m \\cdot b^m}{c^m}$۔"
+      },
+      {
+       "math": "= \\frac{x^{15 \\times \\frac{1}{5}} \\, y^{35 \\times \\frac{1}{5}}}{z^{20 \\times \\frac{1}{5}}}",
+       "en": "Use the power of a power rule $(a^m)^n = a^{m \\times n}$ and multiply each inner exponent by the outer exponent $\\frac{1}{5}$.",
+       "ur": "قوت کی قوت کا اصول $(a^m)^n = a^{m \\times n}$ استعمال کریں اور ہر اندرونی قوت نما کو بیرونی قوت نما $\\frac{1}{5}$ سے ضرب دیں۔"
+      },
+      {
+       "math": "= \\frac{x^3 y^7}{z^4}",
+       "en": "Simplify the fractions in the exponents ($15 \\div 5 = 3$, $35 \\div 5 = 7$, and $20 \\div 5 = 4$) to get the final answer.",
+       "ur": "حتمی جواب حاصل کرنے کے لیے قوت نماؤں میں موجود کسور کو مختصر کریں ($15 \\div 5 = 3$، $35 \\div 5 = 7$، اور $20 \\div 5 = 4$)۔",
        "check": [
+        "15 * R(1, 5) == 3",
+        "35 * R(1, 5) == 7",
+        "20 * R(1, 5) == 4",
         "(x**15*y**35/z**20)**Rational(1,5) == x**3*y**7/z**4",
         "Rational(15,5) == 3",
         "Rational(35,5) == 7",
@@ -920,6 +1260,7 @@
       }
      ],
      "answer": "$\\frac{x^3 y^7}{z^4}$",
+     "enriched": true,
      "book_key": "\\frac{x^3y^7}{z^4}"
     },
     {
@@ -927,15 +1268,46 @@
      "prompt": "$\\sqrt[3]{(27)^{2x}}$",
      "steps": [
       {
-       "math": "\\sqrt[3]{(27)^{2x}} = \\left((3^3)^{2x}\\right)^{\\frac{1}{3}} = 3^{3 \\times 2x \\times \\frac{1}{3}} = 3^{2x}",
-       "en": "Write 27 as $3^3$ and multiply the exponents.",
-       "ur": "27 کو $3^3$ لکھیں اور قوتیں ضرب دیں۔",
+       "math": "\\sqrt[3]{(27)^{2x}}",
+       "en": "We are given the radical expression $\\sqrt[3]{(27)^{2x}}$ to simplify.",
+       "ur": "ہمیں مختصر کرنے کے لیے ریڈیکل جملہ $\\sqrt[3]{(27)^{2x}}$ دیا گیا ہے۔"
+      },
+      {
+       "math": "= \\left((27)^{2x}\\right)^{\\frac{1}{3}}",
+       "en": "First, convert the radical form into exponential form using the rule $\\sqrt[n]{a} = a^{\\frac{1}{n}}$. Here, the index of the root is $3$.",
+       "ur": "سب سے پہلے، اصول $\\sqrt[n]{a} = a^{\\frac{1}{n}}$ کا استعمال کرتے ہوئے ریڈیکل شکل کو قوت نمائی شکل میں تبدیل کریں۔ یہاں روٹ کا انڈیکس $3$ ہے۔",
        "check": [
+        "cbrt(27**(2*x)) == (27**(2*x))**(R(1,3))"
+       ]
+      },
+      {
+       "math": "= \\left((3^3)^{2x}\\right)^{\\frac{1}{3}}",
+       "en": "Factorize the base $27$ into its prime factors: $27 = 3 \\times 3 \\times 3 = 3^3$.",
+       "ur": "اساس $27$ کی مفرد تجزی کریں: $27 = 3 \\times 3 \\times 3 = 3^3$۔",
+       "check": [
+        "27 == 3**3"
+       ]
+      },
+      {
+       "math": "= 3^{3 \\times 2x \\times \\frac{1}{3}}",
+       "en": "Apply the power of a power law of exponents, $(a^m)^n = a^{m \\times n}$, and multiply all the exponents together.",
+       "ur": "قوت نما کے قانون $(a^m)^n = a^{m \\times n}$ کا اطلاق کریں اور تمام قوت نماؤں کو آپس میں ضرب دیں۔",
+       "check": [
+        "((3**3)**(2*x))**(R(1,3)) == 3**(3 * 2*x * R(1,3))"
+       ]
+      },
+      {
+       "math": "= 3^{2x}",
+       "en": "Cancel out $3$ in the exponent with $\\frac{1}{3}$ to get the final simplified answer.",
+       "ur": "قوت نما میں موجود $3$ کو $\\frac{1}{3}$ سے کاٹ کر حتمی مختصر جواب حاصل کریں۔",
+       "check": [
+        "3 * 2*x * R(1,3) == 2*x",
         "cbrt(27**(2*x)) == 3**(2*x)"
        ]
       }
      ],
      "answer": "$3^{2x}$",
+     "enriched": true,
      "book_key": "3^{2x}"
     },
     {

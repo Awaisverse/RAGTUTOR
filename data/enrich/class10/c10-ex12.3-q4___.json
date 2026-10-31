@@ -1,0 +1,56 @@
+{
+ "item": "c10-ex12.3-q4",
+ "label": "",
+ "answer_ref": "$\\frac{1}{2}$",
+ "steps": [
+  {
+   "math": "n(S) = 6 \\times 6 = 36",
+   "en": "When two fair dice are rolled simultaneously, the total number of possible outcomes in the sample space $S$ is $36$.",
+   "ur": "جب دو پانسے ایک ساتھ پھینکے جاتے ہیں، تو نمونہ فضا $S$ میں ممکنہ نتائج کی کل تعداد $36$ ہوتی ہے۔",
+   "check": [
+    "6 * 6 == 36"
+   ]
+  },
+  {
+   "math": "",
+   "en": "Let $E$ be the event of getting an odd number from $\\{1, 3, 5\\}$ on one die and a multiple of $2$ from $\\{2, 4, 6\\}$ on the other die.",
+   "ur": "فرض کریں کہ $E$ ایک پانسے پر طاق عدد $\\{1, 3, 5\\}$ اور دوسرے پانسے پر $2$ کا ضعف $\\{2, 4, 6\\}$ آنے کا وقوعہ ہے۔"
+  },
+  {
+   "math": "E = \\{(1,2), (1,4), (1,6), (3,2), (3,4), (3,6), (5,2), (5,4), (5,6), (2,1), (2,3), (2,5), (4,1), (4,3), (4,5), (6,1), (6,3), (6,5)\\}",
+   "en": "List all the favourable outcomes where the first die is odd and the second is a multiple of $2$ ($9$ outcomes), or the first is a multiple of $2$ and the second is odd ($9$ outcomes).",
+   "ur": "تمام موافق نتائج کی فہرست بنائیں جہاں پہلے پانسے پر طاق عدد اور دوسرے پر $2$ کا ضعف ہو ($9$ نتائج)، یا پہلے پر $2$ کا ضعف اور دوسرے پر طاق عدد ہو ($9$ نتائج)۔",
+   "check": [
+    "9 + 9 == 18"
+   ]
+  },
+  {
+   "math": "n(E) = 9 + 9 = 18",
+   "en": "Count the total number of favourable outcomes in event $E$.",
+   "ur": "وقوعہ $E$ میں موافق نتائج کی کل تعداد گنیں۔",
+   "check": [
+    "9 + 9 == 18"
+   ]
+  },
+  {
+   "math": "P(E) = \\frac{n(E)}{n(S)} = \\frac{18}{36}",
+   "en": "Apply the probability formula $P(E) = \\frac{n(E)}{n(S)}$ and substitute the values.",
+   "ur": "احتمال کا فارمولا $P(E) = \\frac{n(E)}{n(S)}$ لگائیں اور قیمتیں درج کریں۔",
+   "check": [
+    "R(18, 36) == R(18, 36)"
+   ]
+  },
+  {
+   "math": "P(E) = \\frac{1}{2}",
+   "en": "Simplify the fraction to get the final probability.",
+   "ur": "حتمی احتمال حاصل کرنے کے لیے کسر کو مختصر کریں۔",
+   "check": [
+    "R(18, 36) == R(1, 2)",
+    "36 == 36",
+    "R(18, 36) == 1/2"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

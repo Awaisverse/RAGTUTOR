@@ -1,0 +1,58 @@
+{
+ "item": "c10-ex9.1-q2",
+ "label": "",
+ "answer_ref": "$\\angle ABC = 57.5^\\circ$",
+ "steps": [
+  {
+   "math": "\\text{m}\\angle BAC = 65^\\circ",
+   "en": "We are given that $AB$ and $AC$ are two tangents drawn to a circle from an external point $A$, and the angle between them is $65^\\circ$. We need to find $\\angle ABC$.",
+   "ur": "ہمیں دیا گیا ہے کہ $AB$ اور $AC$ ایک بیرونی نقطے $A$ سے دائرے پر کھینچے گئے دو مماس ہیں، اور ان کے درمیان زاویہ $65^\\circ$ ہے۔ ہمیں $\\angle ABC$ معلوم کرنا ہے۔"
+  },
+  {
+   "math": "AB = AC",
+   "en": "According to the theorem, the lengths of two tangents drawn from an external point to a circle are equal.",
+   "ur": "مسئلے کے مطابق، کسی بیرونی نقطے سے دائرے پر کھینچے گئے دو مماسوں کی لمبائیاں برابر ہوتی ہیں۔"
+  },
+  {
+   "math": "\\text{m}\\angle ABC = \\text{m}\\angle ACB = y",
+   "en": "Since sides $AB$ and $AC$ are equal, $\\triangle ABC$ is an isosceles triangle. Therefore, the angles opposite to these equal sides are also equal. Let each of these angles be $y$.",
+   "ur": "چونکہ اضلاع $AB$ اور $AC$ برابر ہیں، اس لیے $\\triangle ABC$ ایک متساوی الساقین مثلث ہے۔ لہذا، ان برابر اضلاع کے بالمقابل زاویے بھی برابر ہوں گے۔ فرض کریں کہ ان میں سے ہر ایک زاویہ $y$ ہے۔"
+  },
+  {
+   "math": "\\text{m}\\angle ABC + \\text{m}\\angle ACB + \\text{m}\\angle BAC = 180^\\circ",
+   "en": "We know that the sum of the interior angles of any triangle is always $180^\\circ$.",
+   "ur": "ہم جانتے ہیں کہ کسی بھی مثلث کے اندرونی زاویوں کا مجموعہ ہمیشہ $180^\\circ$ ہوتا ہے۔"
+  },
+  {
+   "math": "y + y + 65^\\circ = 180^\\circ",
+   "en": "Substitute the values of the angles into the equation.",
+   "ur": "مساوات میں زاویوں کی قیمتیں درج کریں۔"
+  },
+  {
+   "math": "2y = 180^\\circ - 65^\\circ = 115^\\circ",
+   "en": "Combine the like terms and subtract $65^\\circ$ from both sides.",
+   "ur": "یکساں رقموں کو جمع کریں اور دونوں طرف سے $65^\\circ$ تفریق کریں۔",
+   "check": [
+    "180 - 65 == 115"
+   ]
+  },
+  {
+   "math": "y = \\frac{115^\\circ}{2} = 57.5^\\circ",
+   "en": "Divide both sides by $2$ to find the value of $y$.",
+   "ur": "$y$ کی قیمت معلوم کرنے کے لیے دونوں طرف $2$ سے تقسیم کریں۔",
+   "check": [
+    "R(115, 2) == R(575, 10)"
+   ]
+  },
+  {
+   "math": "\\angle ABC = 57.5^\\circ",
+   "en": "Since $y$ represents $\\angle ABC$, the required angle is $57.5^\\circ$.",
+   "ur": "چونکہ $y$ زاویہ $\\angle ABC$ کو ظاہر کرتا ہے، اس لیے مطلوبہ زاویہ $57.5^\\circ$ ہے۔",
+   "check": [
+    "(180 - 65)/R(2) == R(115,2)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

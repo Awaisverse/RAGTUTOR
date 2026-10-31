@@ -1,0 +1,42 @@
+{
+ "item": "c10-ex1.2-q1",
+ "label": "iv",
+ "answer_ref": "$2 + 16i$",
+ "steps": [
+  {
+   "math": "\\left(11 + 9i\\right) - \\left(9 - 7i\\right)",
+   "en": "Write down the given expression of complex numbers to be simplified.",
+   "ur": "مختصر کرنے کے لیے دی گئی مخلوط اعداد کی عبارت لکھیں۔"
+  },
+  {
+   "math": "= 11 + 9i - 9 + 7i",
+   "en": "Remove the brackets. Since there is a minus sign before the second bracket, the signs of the terms inside it will change (so $-(-7i)$ becomes $+7i$).",
+   "ur": "بریکٹ ہٹائیں۔ چونکہ دوسری بریکٹ سے پہلے منفی کی علامت ہے، اس لیے اس کے اندر کی رقموں کی علامتیں بدل جائیں گی (چنانچہ $-(-7i)$، $+7i$ بن جائے گا)۔",
+   "check": [
+    "(11 + 9*I) - (9 - 7*I) == 11 + 9*I - 9 + 7*I"
+   ]
+  },
+  {
+   "math": "= (11 - 9) + (9 + 7)i",
+   "en": "Group the real parts together and the imaginary parts together.",
+   "ur": "حقیقی حصوں کو ایک ساتھ اور خیالی حصوں کو ایک ساتھ ترتیب دیں۔",
+   "check": [
+    "11 + 9*I - 9 + 7*I == (11 - 9) + (9 + 7)*I"
+   ]
+  },
+  {
+   "math": "= 2 + 16i",
+   "en": "Perform the subtraction of the real parts ($11 - 9 = 2$) and the addition of the imaginary parts ($9 + 7 = 16$). This is the required standard form $a + bi$.",
+   "ur": "حقیقی حصوں کی تفریق ($11 - 9 = 2$) اور خیالی حصوں کی جمع ($9 + 7 = 16$) کریں۔ یہ مطلوبہ معیاری شکل $a + bi$ ہے۔",
+   "check": [
+    "11 - 9 == 2",
+    "9 + 7 == 16",
+    "(11 - 9) + (9 + 7)*I == 2 + 16*I",
+    "(11 + 9*I) - (9 - 7*I) == (2 + 16*I)",
+    "(11) - (9) == (2)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

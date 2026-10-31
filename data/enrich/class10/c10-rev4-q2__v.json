@@ -1,0 +1,40 @@
+{
+ "item": "c10-rev4-q2",
+ "label": "v",
+ "answer_ref": "$-24$",
+ "steps": [
+  {
+   "math": "",
+   "en": "We are given the function $f(x) = 25 - x^2$ and we need to find the value of $f(7)$.",
+   "ur": "ہمیں فنکشن $f(x) = 25 - x^2$ دیا گیا ہے اور ہمیں $f(7)$ کی قیمت معلوم کرنی ہے۔"
+  },
+  {
+   "math": "f(7) = 25 - (7)^2",
+   "en": "Substitute $x = 7$ into the given function $f(x)$.",
+   "ur": "دیے گئے فنکشن $f(x)$ میں $x = 7$ درج کریں۔",
+   "check": [
+    "25 - 7**2 == -24"
+   ]
+  },
+  {
+   "math": "f(7) = 25 - 49",
+   "en": "Evaluate the square of $7$, which is $7^2 = 49$.",
+   "ur": "$7$ کا مربع معلوم کریں، جو کہ $7^2 = 49$ ہے۔",
+   "check": [
+    "7**2 == 49",
+    "25 - 7**2 == 25 - 49"
+   ]
+  },
+  {
+   "math": "f(7) = -24",
+   "en": "Subtract $49$ from $25$ to get the final answer.",
+   "ur": "حتمی جواب حاصل کرنے کے لیے $25$ میں سے $49$ کو تفریق کریں۔",
+   "check": [
+    "25 - 49 == -24",
+    "25 - 7**2 == -24"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

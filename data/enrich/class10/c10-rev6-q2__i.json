@@ -1,0 +1,54 @@
+{
+ "item": "c10-rev6-q2",
+ "label": "i",
+ "answer_ref": "$\\sqrt{410}$",
+ "steps": [
+  {
+   "math": "A(x_1, y_1) = A(7, 7), \\quad B(x_2, y_2) = B(-12, 0)",
+   "en": "Identify the coordinates of the initial point $A$ and the terminal point $B$ from the given question.",
+   "ur": "دیے گئے سوال سے ابتدائی نقطہ $A$ اور اختتامی نقطہ $B$ کے محددات لکھیں۔"
+  },
+  {
+   "math": "\\overrightarrow{AB} = (x_2 - x_1)\\underline{i} + (y_2 - y_1)\\underline{j}",
+   "en": "Write the formula to find the vector $\\overrightarrow{AB}$ by subtracting the coordinates of the initial point $A$ from the terminal point $B$.",
+   "ur": "اختتامی نقطہ $B$ کے محددات میں سے ابتدائی نقطہ $A$ کے محددات کو تفریق کر کے ویکٹر $\\overrightarrow{AB}$ معلوم کرنے کا فارمولا لکھیں۔"
+  },
+  {
+   "math": "\\overrightarrow{AB} = (-12 - 7)\\underline{i} + (0 - 7)\\underline{j} = -19\\underline{i} - 7\\underline{j}",
+   "en": "Substitute the coordinates of $A(7, 7)$ and $B(-12, 0)$ into the formula and simplify to get the components of $\\overrightarrow{AB}$.",
+   "ur": "فارمولے میں $A(7, 7)$ اور $B(-12, 0)$ کے محددات درج کریں اور مختصر کر کے $\\overrightarrow{AB}$ کے اجزاء حاصل کریں۔",
+   "check": [
+    "(-12) - (7) == -19",
+    "(0) - (7) == -7"
+   ]
+  },
+  {
+   "math": "|\\overrightarrow{AB}| = \\sqrt{x^2 + y^2}",
+   "en": "Now, use the magnitude formula for a vector $x\\underline{i} + y\\underline{j}$ in the plane.",
+   "ur": "اب، مستوی میں ویکٹر $x\\underline{i} + y\\underline{j}$ کی مقدار معلوم کرنے کا فارمولا استعمال کریں۔"
+  },
+  {
+   "math": "|\\overrightarrow{AB}| = \\sqrt{(-19)^2 + (-7)^2}",
+   "en": "Substitute the components $x = -19$ and $y = -7$ into the magnitude formula.",
+   "ur": "مقدار کے فارمولے میں اجزاء $x = -19$ اور $y = -7$ کی قیمتیں درج کریں۔",
+   "check": [
+    "(-19)**2 == 361",
+    "(-7)**2 == 49"
+   ]
+  },
+  {
+   "math": "|\\overrightarrow{AB}| = \\sqrt{361 + 49} = \\sqrt{410}",
+   "en": "Evaluate the squares and add them together. Thus, the magnitude of $\\overrightarrow{AB}$ is $\\sqrt{410}$.",
+   "ur": "مربع لیں اور انہیں آپس میں جمع کریں۔ اس طرح، ویکٹر $\\overrightarrow{AB}$ کی مقدار $\\sqrt{410}$ ہے۔",
+   "check": [
+    "361 + 49 == 410",
+    "sqrt((-19)**2 + (-7)**2) == sqrt(410)",
+    "(-12) - (7) == (-19)",
+    "(0) - (7) == (-7)",
+    "sqrt((-19)**2 + (-7)**2) == (sqrt(410))"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

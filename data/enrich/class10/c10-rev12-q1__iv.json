@@ -1,0 +1,40 @@
+{
+ "item": "c10-rev12-q1",
+ "label": "iv",
+ "answer_ref": "(a) $0.4$",
+ "steps": [
+  {
+   "math": "P(A) = 0.6",
+   "en": "Write down the given probability of event $A$ happening.",
+   "ur": "واقعہ $A$ کے وقوع پذیر ہونے کا دیا گیا احتمال لکھیں۔"
+  },
+  {
+   "math": "P(A') = 1 - P(A)",
+   "en": "The probability of event $A$ not happening is denoted by $P(A')$. By the complement rule of probability, the sum of $P(A)$ and $P(A')$ is $1$.",
+   "ur": "واقعہ $A$ کے وقوع پذیر نہ ہونے کے احتمال کو $P(A')$ سے ظاہر کیا جاتا ہے۔ احتمال کے تکمیلی اصول (متمم) کے مطابق، $P(A)$ اور $P(A')$ کا مجموعہ $1$ ہوتا ہے۔"
+  },
+  {
+   "math": "P(A') = 1 - 0.6",
+   "en": "Substitute the given value $P(A) = 0.6$ into the formula.",
+   "ur": "فارمولے میں دی گئی قیمت $P(A) = 0.6$ درج کریں۔"
+  },
+  {
+   "math": "P(A') = 0.4",
+   "en": "Subtract $0.6$ from $1$ to find the probability of event $A$ not happening.",
+   "ur": "واقعہ $A$ کے وقوع پذیر نہ ہونے کا احتمال معلوم کرنے کے لیے $1$ میں سے $0.6$ تفریق کریں۔",
+   "check": [
+    "1 - R(6,10) == R(4,10)"
+   ]
+  },
+  {
+   "math": "\\text{Answer: (a) } 0.4",
+   "en": "Therefore, the correct option is (a).",
+   "ur": "لہٰذا، درست جواب (a) ہے۔",
+   "check": [
+    "1 - R(6,10) == R(4,10)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

@@ -1,0 +1,47 @@
+{
+ "item": "c10-ex3.2-q7",
+ "label": "",
+ "answer_ref": "$L^t = L$, so $L$ is symmetric",
+ "steps": [
+  {
+   "math": "L = \\begin{bmatrix} 2 & 3 & 4 \\\\ 3 & -2 & 5 \\\\ 4 & 5 & 0 \\end{bmatrix}",
+   "en": "Write down the given matrix $L$. We need to show that it is a symmetric matrix.",
+   "ur": "دیا گیا قالب $L$ لکھیں۔ ہمیں ثابت کرنا ہے کہ یہ ایک سڈول (متشاکل) قالب ہے۔",
+   "check": [
+    "Eq(Matrix([[2, 3, 4], [3, -2, 5], [4, 5, 0]]), Matrix([[2, 3, 4], [3, -2, 5], [4, 5, 0]]))"
+   ]
+  },
+  {
+   "math": "L^t = L",
+   "en": "By definition, a square matrix $L$ is called a symmetric matrix if its transpose $L^t$ is equal to the original matrix $L$.",
+   "ur": "تعریف کے مطابق، ایک مربی قالب $L$ کو سڈول قالب کہا جاتا ہے اگر اس کا ٹرانسپوز (پلٹ) $L^t$ اصل قالب $L$ کے برابر ہو۔"
+  },
+  {
+   "math": "L^t = \\begin{bmatrix} 2 & 3 & 4 \\\\ 3 & -2 & 5 \\\\ 4 & 5 & 0 \\end{bmatrix}^t",
+   "en": "Take the transpose of both sides.",
+   "ur": "دونوں اطراف کا ٹرانسپوز (پلٹ) لیں۔",
+   "check": [
+    "Eq(Matrix([[2, 3, 4], [3, -2, 5], [4, 5, 0]]).T, Matrix([[2, 3, 4], [3, -2, 5], [4, 5, 0]]).T)"
+   ]
+  },
+  {
+   "math": "L^t = \\begin{bmatrix} 2 & 3 & 4 \\\\ 3 & -2 & 5 \\\\ 4 & 5 & 0 \\end{bmatrix}",
+   "en": "To find the transpose, interchange the rows and columns: the first row becomes the first column, the second row becomes the second column, and the third row becomes the third column.",
+   "ur": "ٹرانسپوز معلوم کرنے کے لیے قطاروں کو کالموں میں بدل دیں: پہلی قطار پہلا کالم، دوسری قطار دوسرا کالم، اور تیسری قطار تیسرا کالم بن جاتی ہے۔",
+   "check": [
+    "Eq(Matrix([[2, 3, 4], [3, -2, 5], [4, 5, 0]]).T, Matrix([[2, 3, 4], [3, -2, 5], [4, 5, 0]]))"
+   ]
+  },
+  {
+   "math": "L^t = L",
+   "en": "We observe that the resulting matrix $L^t$ is identical to the original matrix $L$. Hence, $L$ is a symmetric matrix.",
+   "ur": "ہم دیکھتے ہیں کہ حاصل ہونے والا قالب $L^t$ بالکل اصل قالب $L$ جیسا ہے۔ لہٰذا، $L$ ایک سڈول (متشاکل) قالب ہے۔",
+   "check": [
+    "Eq(Matrix([[2, 3, 4], [3, -2, 5], [4, 5, 0]]).T, Matrix([[2, 3, 4], [3, -2, 5], [4, 5, 0]]))",
+    "Eq(Matrix([[2, 3, 4], [3, -2, 5], [4, 5, 0]]), Matrix([[2, 3, 4], [3, -2, 5], [4, 5, 0]]))"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

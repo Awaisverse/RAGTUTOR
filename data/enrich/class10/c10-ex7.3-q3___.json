@@ -1,0 +1,51 @@
+{
+ "item": "c10-ex7.3-q3",
+ "label": "",
+ "answer_ref": "$59.5^\\circ$",
+ "steps": [
+  {
+   "math": "",
+   "en": "The base $PQRS$ is a square with side length $10\\text{ cm}$, so $m\\overline{PQ} = 10\\text{ cm}$ and $m\\overline{QR} = 10\\text{ cm}$. The height of the pyramid is $m\\overline{VM} = 12\\text{ cm}$. We need to find the size of $\\angle VPM$.",
+   "ur": "قاعدہ $PQRS$ ایک مربع ہے جس کے ضلع کی لمبائی $10\\text{ cm}$ ہے، اس لیے $m\\overline{PQ} = 10\\text{ cm}$ اور $m\\overline{QR} = 10\\text{ cm}$ ہے۔ اہرام کی اونچائی $m\\overline{VM} = 12\\text{ cm}$ ہے۔ ہمیں زاویہ $\\angle VPM$ کی مقدار معلوم کرنی ہے۔"
+  },
+  {
+   "math": "m\\overline{PR} = \\sqrt{10^2 + 10^2} = \\sqrt{100 + 100} = \\sqrt{200} \\approx 14.14\\text{ cm}",
+   "en": "First, find the length of the diagonal $PR$ of the square base by applying the Pythagoras theorem to the right-angled triangle $PQR$.",
+   "ur": "سب سے پہلے، قائمہ الزاویہ مثلث $PQR$ پر مسئلہ فیثاغورث لاگو کر کے مربع قاعدے کے وتر $PR$ کی لمبائی معلوم کریں۔",
+   "check": [
+    "10**2 + 10**2 == 200",
+    "Abs(sqrt(200) - 14.14) <= 0.005"
+   ]
+  },
+  {
+   "math": "m\\overline{PM} = \\frac{14.14}{2} = 7.07\\text{ cm}",
+   "en": "Since $M$ is the midpoint of the square base, the distance $PM$ is half of the diagonal $PR$.",
+   "ur": "چونکہ $M$ مربع قاعدے کا وسطی نقطہ ہے، اس لیے فاصلہ $PM$ وتر $PR$ کا نصف ہے۔",
+   "check": [
+    "R(1414, 100) / 2 == R(707, 100)",
+    "Abs(sqrt(200)/2 - 7.07) <= 0.005"
+   ]
+  },
+  {
+   "math": "\\tan\\theta = \\frac{m\\overline{VM}}{m\\overline{PM}} = \\frac{12}{7.07} \\approx 1.697",
+   "en": "Now consider the right-angled triangle $VMP$, where $\\angle VMP = 90^\\circ$. Let $\\angle VPM = \\theta$ and use the tangent ratio.",
+   "ur": "اب قائمہ الزاویہ مثلث $VMP$ پر غور کریں، جہاں $\\angle VMP = 90^\\circ$ ہے۔ فرض کریں $\\angle VPM = \\theta$ ہے اور ٹینجنٹ نسبت کا استعمال کریں۔",
+   "check": [
+    "Abs(12/7.07 - 1.697) <= 0.001"
+   ]
+  },
+  {
+   "math": "\\theta = \\tan^{-1}(1.697) \\approx 59.5^\\circ",
+   "en": "Take the inverse tangent to find the angle $\\theta$, which gives the size of $\\angle VPM$.",
+   "ur": "زاویہ $\\theta$ معلوم کرنے کے لیے معکوس ٹینجنٹ لیں، جس سے $\\angle VPM$ کی مقدار حاصل ہوتی ہے۔",
+   "check": [
+    "Abs(atan(1.697)*180/pi - 59.5) <= 0.05",
+    "Abs(atan(12/(sqrt(200)/2))*180/pi - 59.5) <= 0.05",
+    "Abs((sqrt(200)/2) - 7.07) <= 0.0050000010000000004",
+    "Abs((atan(12/(sqrt(200)/2))*180/pi) - 59.5) <= 0.050000001"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

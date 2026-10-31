@@ -1,0 +1,43 @@
+{
+ "item": "c10-rev12-q1",
+ "label": "x",
+ "answer_ref": "(c) $0.93$",
+ "steps": [
+  {
+   "math": "P(E) = 0.07",
+   "en": "Write down the given probability of event $E$. We need to find the probability of 'not $E$', which is the complement of $E$, denoted as $P(E')$.",
+   "ur": "دیے گئے وقوعہ $E$ کا احتمال لکھیں۔ ہمیں '$E$ نہ ہونے' کا احتمال معلوم کرنا ہے، جو کہ $E$ کا متمم (complement) ہے اور اسے $P(E')$ سے ظاہر کیا جاتا ہے۔",
+   "check": [
+    "R(7,100) == R(7,100)"
+   ]
+  },
+  {
+   "math": "P(E) + P(E') = 1 \\implies P(E') = 1 - P(E)",
+   "en": "According to the complement rule of probability, the sum of the probabilities of an event and its complement is always equal to $1$.",
+   "ur": "احتمال کے قانونِ متمم (complement rule) کے مطابق، کسی وقوعہ اور اس کے متمم کے احتمالات کا مجموعہ ہمیشہ $1$ کے برابر ہوتا ہے۔"
+  },
+  {
+   "math": "P(E') = 1 - 0.07",
+   "en": "Substitute the given value $P(E) = 0.07$ into the formula.",
+   "ur": "فارمولے میں دی گئی قیمت $P(E) = 0.07$ درج کریں۔"
+  },
+  {
+   "math": "P(E') = 0.93",
+   "en": "Subtract $0.07$ from $1$ to get the probability of 'not $E$'.",
+   "ur": "'$E$ نہ ہونے' کا احتمال حاصل کرنے کے لیے $1$ میں سے $0.07$ کو تفریق کریں۔",
+   "check": [
+    "1 - R(7,100) == R(93,100)"
+   ]
+  },
+  {
+   "math": "\\text{Answer: (c) } 0.93",
+   "en": "Comparing our result with the given options, option (c) is the correct answer.",
+   "ur": "ہمارے نتیجے کا دیے گئے آپشنز سے موازنہ کرنے پر، آپشن (c) درست جواب ہے۔",
+   "check": [
+    "1 - R(7,100) == R(93,100)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

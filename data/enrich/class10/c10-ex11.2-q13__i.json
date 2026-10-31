@@ -1,0 +1,60 @@
+{
+ "item": "c10-ex11.2-q13",
+ "label": "i",
+ "answer_ref": "Variance = 3.2, SD = 1.79",
+ "steps": [
+  {
+   "math": "\\sum x = 45,\\quad \\sum x^2 = 421,\\quad n = 5",
+   "en": "First, write down the given values from the question. We need to find the variance ($\\sigma^2$) and standard deviation ($\\sigma$).",
+   "ur": "سب سے پہلے، سوال میں دی گئی قیمتیں لکھیں۔ ہمیں تغیر ($\\sigma^2$) اور معیاری انحراف ($\\sigma$) معلوم کرنا ہے۔",
+   "check": [
+    "45 == 45",
+    "421 == 421",
+    "5 == 5"
+   ]
+  },
+  {
+   "math": "\\sigma^2 = \\frac{\\sum x^2}{n} - \\left(\\frac{\\sum x}{n}\\right)^2",
+   "en": "Use the direct formula for variance of ungrouped data.",
+   "ur": "غیر گروہی ڈیٹا کے تغیر (variance) کا براہِ راست فارمولا استعمال کریں۔"
+  },
+  {
+   "math": "\\sigma^2 = \\frac{421}{5} - \\left(\\frac{45}{5}\\right)^2",
+   "en": "Substitute the given values into the variance formula.",
+   "ur": "دی گئی قیمتیں تغیر کے فارمولے میں درج کریں۔",
+   "check": [
+    "R(421,5) - (R(45,5))**2 == R(16,5)"
+   ]
+  },
+  {
+   "math": "\\sigma^2 = 84.2 - (9)^2 = 84.2 - 81 = 3.2",
+   "en": "Divide the fractions, calculate the square of $9$, and subtract to find the variance.",
+   "ur": "کسروں کو تقسیم کریں، $9$ کا مربع لیں، اور تغیر معلوم کرنے کے لیے تفریق کریں۔",
+   "check": [
+    "R(421,5) == R(842,10)",
+    "R(45,5) == 9",
+    "9**2 == 81",
+    "R(842,10) - 81 == R(16,5)"
+   ]
+  },
+  {
+   "math": "\\sigma = \\sqrt{\\sigma^2} = \\sqrt{3.2} \\approx 1.79",
+   "en": "Take the positive square root of the variance to find the standard deviation.",
+   "ur": "معیاری انحراف معلوم کرنے کے لیے تغیر کا مثبت جزر المربع لیں۔",
+   "check": [
+    "Abs(sqrt(R(16,5)) - R(179,100)) <= R(5,1000)"
+   ]
+  },
+  {
+   "math": "",
+   "en": "Therefore, the final values are Variance = $3.2$ and SD = $1.79$.",
+   "ur": "لہذا، آخری قیمتیں تغیر (Variance) = $3.2$ اور معیاری انحراف (SD) = $1.79$ ہیں۔",
+   "check": [
+    "R(421,5) - 9**2 == R(16,5)",
+    "Abs((sqrt(R(16,5))) - 1.79) <= 0.0050000010000000004"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

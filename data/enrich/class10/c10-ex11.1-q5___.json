@@ -1,0 +1,145 @@
+{
+ "item": "c10-ex11.1-q5",
+ "label": "",
+ "answer_ref": "Min = 10, Q1 = 22, Median = 25, Q3 = 35, Max = 46",
+ "steps": [
+  {
+   "math": "",
+   "en": "We are given a box-and-whisker plot and asked to find the five-number summary: the minimum value, the first quartile ($Q_1$), the median, the third quartile ($Q_3$), and the maximum value.",
+   "ur": "ہمیں ایک باکس اینڈ وسکر پلاٹ (box-and-whisker plot) دیا گیا ہے اور ہمیں پانچ نمبروں کا خلاصہ معلوم کرنا ہے: کم از کم قیمت، پہلا چوتھائی ($Q_1$)، وسطانیہ (median)، تیسرا چوتھائی ($Q_3$)، اور زیادہ سے زیادہ قیمت۔",
+   "draw": [
+    {
+     "t": "numberline",
+     "from": 8,
+     "to": 50,
+     "y": 45,
+     "marks": []
+    },
+    {
+     "t": "line",
+     "p": [
+      10.19,
+      22,
+      35.33,
+      22
+     ]
+    },
+    {
+     "t": "line",
+     "p": [
+      62.57,
+      22,
+      85.62,
+      22
+     ]
+    },
+    {
+     "t": "line",
+     "p": [
+      10.19,
+      19,
+      10.19,
+      25
+     ]
+    },
+    {
+     "t": "line",
+     "p": [
+      85.62,
+      19,
+      85.62,
+      25
+     ]
+    },
+    {
+     "t": "poly",
+     "p": [
+      35.33,
+      16,
+      62.57,
+      16,
+      62.57,
+      28,
+      35.33,
+      28
+     ],
+     "close": true
+    },
+    {
+     "t": "line",
+     "p": [
+      41.62,
+      16,
+      41.62,
+      28
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      33.33,
+      13
+     ],
+     "s": "Q1"
+    },
+    {
+     "t": "text",
+     "p": [
+      38.62,
+      13
+     ],
+     "s": "Med"
+    },
+    {
+     "t": "text",
+     "p": [
+      60.57,
+      13
+     ],
+     "s": "Q3"
+    }
+   ]
+  },
+  {
+   "math": "\\text{Minimum} = 10, \\quad \\text{Maximum} = 46",
+   "en": "In a box-and-whisker plot, the two ends of the whiskers (the outer vertical lines) represent the minimum and maximum values of the data. Reading the scale at the left and right ends of the whiskers gives $10$ and $46$ respectively.",
+   "ur": "باکس اینڈ وسکر پلاٹ میں، دونوں اطراف کی لکیروں (whiskers) کے سرے ڈیٹا کی کم از کم اور زیادہ سے زیادہ قیمتوں کو ظاہر کرتے ہیں۔ بائیں اور دائیں سرے کو سکیل پر پڑھنے سے بالترتیب $10$ اور $46$ حاصل ہوتا ہے۔",
+   "check": [
+    "10 == 10",
+    "46 == 46"
+   ]
+  },
+  {
+   "math": "Q_1 = 22, \\quad Q_3 = 35",
+   "en": "The left edge of the rectangular box represents the first quartile ($Q_1$) and the right edge represents the third quartile ($Q_3$). Reading these edges against the number line gives $Q_1 = 22$ and $Q_3 = 35$.",
+   "ur": "مستطیل باکس کا بایاں کنارہ پہلے چوتھائی ($Q_1$) اور دایاں کنارہ تیسرے چوتھائی ($Q_3$) کو ظاہر کرتا ہے۔ ان کناروں کو نمبر لائن پر پڑھنے سے $Q_1 = 22$ اور $Q_3 = 35$ ملتا ہے۔",
+   "check": [
+    "22 == 22",
+    "35 == 35"
+   ]
+  },
+  {
+   "math": "\\text{Median} = 25",
+   "en": "The vertical line inside the box represents the median (or second quartile, $Q_2$) of the dataset. Reading the position of this line on the scale gives $25$.",
+   "ur": "باکس کے اندر موجود عمودی لکیر ڈیٹا کے وسطانیہ (یا دوسرے چوتھائی، $Q_2$) کو ظاہر کرتی ہے۔ سکیل پر اس لکیر کی پوزیشن پڑھنے سے $25$ حاصل ہوتا ہے۔",
+   "check": [
+    "25 == 25"
+   ]
+  },
+  {
+   "math": "\\text{Minimum} = 10, \\quad Q_1 = 22, \\quad \\text{Median} = 25, \\quad Q_3 = 35, \\quad \\text{Maximum} = 46",
+   "en": "Combining all the values read from the plot, we get the complete required summary.",
+   "ur": "پلاٹ سے پڑھی گئی تمام قیمتوں کو یکجا کرنے پر، ہمیں مطلوبہ مکمل خلاصہ حاصل ہوتا ہے۔",
+   "check": [
+    "10 == 10",
+    "22 == 22",
+    "25 == 25",
+    "35 == 35",
+    "46 == 46"
+   ]
+  }
+ ],
+ "keeps_drawing": true,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

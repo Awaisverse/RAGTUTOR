@@ -1,0 +1,52 @@
+{
+ "item": "c10-ex4.1-q3",
+ "label": "iiic",
+ "answer_ref": "$4 x - 3$",
+ "steps": [
+  {
+   "math": "",
+   "en": "We are given the functions $f(x) = 2x - 1$ and $g(x) = \\frac{x+1}{2}$, and we need to find the composite function $(f\\circ f)(x)$.",
+   "ur": "ہمیں فنکشنز $f(x) = 2x - 1$ اور $g(x) = \\frac{x+1}{2}$ دیے گئے ہیں، اور ہمیں کمپوزٹ فنکشن $(f\\circ f)(x)$ معلوم کرنا ہے۔"
+  },
+  {
+   "math": "(f\\circ f)(x) = f(f(x))",
+   "en": "By the definition of composition of functions, $(f\\circ f)(x)$ means applying the function $f$ to $f(x)$.",
+   "ur": "فنکشنز کی ترکیب (composition) کی تعریف کے مطابق، $(f\\circ f)(x)$ کا مطلب فنکشن $f$ کو $f(x)$ پر لاگو کرنا ہے۔"
+  },
+  {
+   "math": "(f\\circ f)(x) = f(2x - 1)",
+   "en": "Substitute the given expression $f(x) = 2x - 1$ inside the outer function $f$.",
+   "ur": "دی گئی قیمت $f(x) = 2x - 1$ کو بیرونی فنکشن $f$ کے اندر درج کریں۔",
+   "check": [
+    "2*x - 1 == 2*x - 1"
+   ]
+  },
+  {
+   "math": "(f\\circ f)(x) = 2(2x - 1) - 1",
+   "en": "Now, replace $x$ with $(2x - 1)$ in the formula $f(x) = 2x - 1$.",
+   "ur": "اب، فارمولہ $f(x) = 2x - 1$ میں $x$ کی جگہ $(2x - 1)$ رکھیں۔",
+   "check": [
+    "(2*x - 1).subs(x, 2*x - 1) == 2*(2*x - 1) - 1"
+   ]
+  },
+  {
+   "math": "(f\\circ f)(x) = 4x - 2 - 1",
+   "en": "Multiply $2$ inside the bracket to expand the expression.",
+   "ur": "عبارت کو کھولنے کے لیے بریکٹ کے اندر $2$ کو ضرب دیں۔",
+   "check": [
+    "2*(2*x - 1) - 1 == 4*x - 2 - 1"
+   ]
+  },
+  {
+   "math": "(f\\circ f)(x) = 4 x - 3",
+   "en": "Simplify the constant terms to get the final answer.",
+   "ur": "حتمی جواب حاصل کرنے کے لیے مستقل مقداروں (constants) کو مختصر کریں۔",
+   "check": [
+    "4*x - 2 - 1 == 4*x - 3",
+    "(2*x - 1).subs(x, (2*x - 1)) == (4*x - 3)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

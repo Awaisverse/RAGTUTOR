@@ -1,0 +1,142 @@
+{
+ "item": "c10-rev8-q2",
+ "label": "",
+ "answer_ref": "$\\sqrt{11}$ cm",
+ "steps": [
+  {
+   "math": "OP = 6\\text{ cm}, \\quad PQ = 10\\text{ cm}",
+   "en": "Let $O$ be the centre of the circular clock and $PQ$ be the chord of length $10\\text{ cm}$. The radius of the clock is $OP = 6\\text{ cm}$. We need to find the perpendicular distance $OM$ from the centre $O$ to the chord $PQ$.",
+   "ur": "فرض کریں کہ $O$ گول گھڑی کا مرکز ہے اور $PQ$ ایک وتر ہے جس کی لمبائی $10\\text{ cm}$ ہے۔ گھڑی کا رداس $OP = 6\\text{ cm}$ ہے۔ ہمیں مرکز $O$ سے وتر $PQ$ تک کا عمودی فاصلہ $OM$ معلوم کرنا ہے۔",
+   "draw": [
+    {
+     "t": "circle",
+     "c": [
+      50,
+      30
+     ],
+     "r": 25
+    },
+    {
+     "t": "dot",
+     "p": [
+      50,
+      30
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      51.5,
+      28
+     ],
+     "s": "O"
+    },
+    {
+     "t": "line",
+     "p": [
+      29.166666666666664,
+      43.819269959814164,
+      70.83333333333334,
+      43.819269959814164
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      25.166666666666664,
+      44.819269959814164
+     ],
+     "s": "A"
+    },
+    {
+     "t": "text",
+     "p": [
+      72.33333333333334,
+      44.819269959814164
+     ],
+     "s": "B"
+    },
+    {
+     "t": "line",
+     "p": [
+      50,
+      30,
+      50,
+      43.819269959814164
+     ],
+     "dash": true
+    },
+    {
+     "t": "right",
+     "p": [
+      50,
+      43.819269959814164
+     ],
+     "d": [
+      1,
+      0,
+      0,
+      -1
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      51.5,
+      47.819269959814164
+     ],
+     "s": "M"
+    },
+    {
+     "t": "line",
+     "p": [
+      50,
+      30,
+      70.83333333333334,
+      43.819269959814164
+     ]
+    }
+   ]
+  },
+  {
+   "math": "PM = \\frac{PQ}{2} = \\frac{10}{2} = 5\\text{ cm}",
+   "en": "By the theorem that a perpendicular drawn from the centre of a circle to a chord bisects the chord, $OM \\perp PQ$ divides $PQ$ into two equal parts at point $M$.",
+   "ur": "اس مسئلے کے مطابق کہ دائرے کے مرکز سے وتر پر گرایا گیا عمود وتر کی تنصیف کرتا ہے، $OM \\perp PQ$ وتر $PQ$ کو نقطہ $M$ پر دو برابر حصوں میں تقسیم کرتا ہے۔",
+   "check": [
+    "10/2 == 5"
+   ]
+  },
+  {
+   "math": "OP^2 = OM^2 + PM^2",
+   "en": "Now, in the right-angled triangle $\\triangle OMP$, we apply the Pythagoras theorem.",
+   "ur": "اب، قائمہ الزاویہ مثلث $\\triangle OMP$ میں ہم مسئلہ فیثاغورث لاگو کرتے ہیں۔"
+  },
+  {
+   "math": "6^2 = OM^2 + 5^2",
+   "en": "Substitute the known values $OP = 6$ and $PM = 5$ into the equation.",
+   "ur": "مساوات میں معلوم قیمتیں $OP = 6$ اور $PM = 5$ درج کریں۔"
+  },
+  {
+   "math": "OM^2 = 36 - 25 = 11",
+   "en": "Simplify the squares and solve for $OM^2$.",
+   "ur": "مربعوں کو حل کریں اور $OM^2$ کی قیمت نکالیں۔",
+   "check": [
+    "6**2 == 36",
+    "5**2 == 25",
+    "36 - 25 == 11"
+   ]
+  },
+  {
+   "math": "OM = \\sqrt{11}\\text{ cm}",
+   "en": "Taking the square root on both sides gives the required perpendicular distance from the centre to the chord.",
+   "ur": "دونوں طرف جزر المربع لینے سے مرکز سے وتر تک کا مطلوبہ عمودی فاصلہ حاصل ہوتا ہے۔",
+   "check": [
+    "sqrt(11) == sqrt(11)",
+    "6**2 - 5**2 == 11"
+   ]
+  }
+ ],
+ "keeps_drawing": true,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

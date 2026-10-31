@@ -1,0 +1,40 @@
+{
+ "item": "rev1-q4",
+ "label": "",
+ "answer_ref": "Yes, 0 is a rational number because $0 = \\frac{0}{1}$.",
+ "steps": [
+  {
+   "math": "",
+   "en": "We are asked to determine whether the number $0$ is a rational number and to explain the reason.",
+   "ur": "ہمیں یہ معلوم کرنا ہے کہ آیا عدد $0$ ایک ناطق عدد ہے یا نہیں اور اس کی وجہ بیان کرنی ہے۔"
+  },
+  {
+   "math": "\\frac{p}{q}, \\quad p, q \\in \\mathbb{Z}, \\quad q \\neq 0",
+   "en": "By definition, a rational number is any number that can be expressed in the form $\\frac{p}{q}$, where $p$ and $q$ are integers ($\\mathbb{Z}$) and the denominator $q$ is not equal to $0$.",
+   "ur": "تعریف کے مطابق، ناطق عدد وہ ہوتا ہے جسے $\\frac{p}{q}$ کی شکل میں لکھا جا سکے، جہاں $p$ اور $q$ صحیح اعداد ($\\mathbb{Z}$) ہوں اور مخرج $q$ صفر کے برابر نہ ہو ($q \\neq 0$)۔"
+  },
+  {
+   "math": "0 = \\frac{0}{1}",
+   "en": "Any whole number can be written as a fraction by placing $1$ in the denominator. Therefore, we can write $0$ as $\\frac{0}{1}$.",
+   "ur": "کسی بھی مکمل عدد کے مخرج میں $1$ لکھ کر اسے کسر کی شکل میں لکھا جا سکتا ہے۔ اس لیے، ہم $0$ کو $\\frac{0}{1}$ لکھ سکتے ہیں۔",
+   "check": [
+    "0 == R(0, 1)"
+   ]
+  },
+  {
+   "math": "p = 0, \\quad q = 1",
+   "en": "Comparing $\\frac{0}{1}$ with the standard form $\\frac{p}{q}$, we have $p = 0$ and $q = 1$. Since both $0$ and $1$ are integers and the denominator $q = 1 \\neq 0$, all conditions of a rational number are satisfied.",
+   "ur": "کسر $\\frac{0}{1}$ کا معیاری شکل $\\frac{p}{q}$ سے موازنہ کرنے پر، ہمیں $p = 0$ اور $q = 1$ ملتا ہے۔ چونکہ $0$ اور $1$ دونوں صحیح اعداد ہیں اور مخرج $q = 1 \\neq 0$ ہے، اس لیے ناطق عدد کی تمام شرائط پوری ہوتی ہیں۔"
+  },
+  {
+   "math": "",
+   "en": "Yes, $0$ is a rational number because $0 = \\frac{0}{1}$.",
+   "ur": "جی ہاں، $0$ ایک ناطق عدد ہے کیونکہ $0 = \\frac{0}{1}$ ہے۔",
+   "check": [
+    "Rational(0,1) == 0"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

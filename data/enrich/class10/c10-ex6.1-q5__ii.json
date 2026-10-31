@@ -1,0 +1,52 @@
+{
+ "item": "c10-ex6.1-q5",
+ "label": "ii",
+ "answer_ref": "$5$",
+ "steps": [
+  {
+   "math": "\\underline{a} = 4\\underline{i} - 3\\underline{j}",
+   "en": "First, write down the given vector $\\underline{a}$. Here, the components are $x = 4$ and $y = -3$.",
+   "ur": "سب سے پہلے، دیے گئے ویکٹر $\\underline{a}$ کو لکھیں۔ یہاں، اجزاء $x = 4$ اور $y = -3$ ہیں۔"
+  },
+  {
+   "math": "|\\underline{a}| = \\sqrt{x^2 + y^2}",
+   "en": "Recall the formula for the magnitude of a vector in the plane.",
+   "ur": "مستوی میں ویکٹر کی مقدار معلوم کرنے کا فارمولا لکھیں۔"
+  },
+  {
+   "math": "|\\underline{a}| = \\sqrt{(4)^2 + (-3)^2}",
+   "en": "Substitute the values $x = 4$ and $y = -3$ into the formula.",
+   "ur": "فارمولے میں $x = 4$ اور $y = -3$ کی قیمتیں درج کریں۔"
+  },
+  {
+   "math": "|\\underline{a}| = \\sqrt{16 + 9}",
+   "en": "Calculate the squares of both numbers: $(4)^2 = 16$ and $(-3)^2 = 9$.",
+   "ur": "دونوں نمبروں کا مربع لیں: $(4)^2 = 16$ اور $(-3)^2 = 9$۔",
+   "check": [
+    "(4)**2 == 16",
+    "(-3)**2 == 9",
+    "sqrt((4)**2 + (-3)**2) == sqrt(16 + 9)"
+   ]
+  },
+  {
+   "math": "|\\underline{a}| = \\sqrt{25}",
+   "en": "Add the values inside the square root.",
+   "ur": "جذر کے اندر موجود قیمتوں کو جمع کریں۔",
+   "check": [
+    "16 + 9 == 25",
+    "sqrt(16 + 9) == sqrt(25)"
+   ]
+  },
+  {
+   "math": "|\\underline{a}| = 5",
+   "en": "Take the square root of $25$ to get the final answer.",
+   "ur": "حتمی جواب حاصل کرنے کے لیے $25$ کا جذر لیں۔",
+   "check": [
+    "sqrt(25) == 5",
+    "sqrt((4)**2 + (-3)**2) == (5)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

@@ -133,7 +133,11 @@
     </div>
     <div class="card col">
       <h2>Browse the book</h2>
+      <label class="note" for="bunit">Unit</label>
+      <select id="bunit"></select>
+      <label class="note" for="browse">Question</label>
       <select id="browse"></select>
+      <div class="note" id="bcount"></div>
     </div>
     <div class="card col">
       <h2>Photo of a question</h2>
@@ -209,7 +213,9 @@
   }
 
   // ---------- load a question ----------
-  async function openItem(id, src, cls) {
+  let bookList = [];
+
+  async function openItem(id, src, cls, autoplay) {
     stopPlay();
     item = await api("/api/item/" + encodeURIComponent(id));
     $("src").style.display = "";
@@ -218,6 +224,10 @@
     $("title").innerHTML = titleOf(item);
     renderParts();
     setPart(0);
+    const listed = bookList.find((x) => x.id === id);   // keep the picker on the open question's unit and question
+    if (listed && +$("bunit").value !== listed.unit) { $("bunit").value = listed.unit; fillQuestions(); }
+    if (listed) $("browse").value = id;
+    if (autoplay) play(false);                   // chosen from the book: the full working plays from the first step
   }
 
   function titleOf(it) {
@@ -916,7 +926,8 @@
   $("q").addEventListener("keydown", (e) => { if (e.key === "Enter" && (e.ctrlKey || e.metaKey)) $("ask").click(); });
   $("clear").onclick = () => { $("q").value = ""; };
 
-  $("browse").onchange = (e) => openItem(e.target.value, "From the book");
+  $("browse").onchange = (e) => { if (e.target.value) openItem(e.target.value, "From the book · " + groupOf(bookList.find((x) => x.id === e.target.value) || {}), "", true); };
+  $("bunit").onchange = () => fillQuestions();
 
   function escapeHTML(s) { return String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c])); }
 
@@ -931,16 +942,45 @@
     document.querySelectorAll("[data-klass]").forEach((b) => b.classList.toggle("on", b.dataset.klass === klass));
     $("q").placeholder = PLACEHOLDER[klass];
     const list = await api("/api/items");
+    bookList = list;
     $("count").textContent = list.length + " solved questions";
-    const sel = $("browse");
-    sel.innerHTML = '<option value="">— choose —</option>';
-    list.forEach((it) => {
-      const o = document.createElement("option");
-      o.value = it.id;
-      o.textContent = titleOf(it) + " · " + it.question.replace(/\$/g, "").slice(0, 40);
-      sel.appendChild(o);
+    const units = [];
+    list.forEach((it) => { if (!units.some((u) => u.unit === it.unit)) units.push({ unit: it.unit, title: it.unit_title }); });
+    const us = $("bunit");
+    us.innerHTML = "";
+    units.forEach((u) => {
+      const n = list.filter((it) => it.unit === u.unit).length;
+      us.appendChild(Object.assign(document.createElement("option"), { value: u.unit, textContent: `Unit ${u.unit} · ${u.title} (${n})` }));
     });
+    fillQuestions();
     return list;
+  }
+
+  // the questions of the chosen unit, grouped as the book groups them: examples, each exercise, the review exercise
+  function groupOf(it) {
+    if (it.kind === "example") return "Examples";
+    if (it.kind === "review" || String(it.exercise || "").toLowerCase().startsWith("review")) return "Review Exercise";
+    return it.exercise ? "Exercise " + it.exercise : "Other";
+  }
+
+  function fillQuestions() {
+    const unit = +$("bunit").value;
+    const items = bookList.filter((it) => it.unit === unit);
+    const sel = $("browse");
+    sel.innerHTML = '<option value="">— choose a question —</option>';
+    const groups = [];
+    items.forEach((it) => { const g = groupOf(it); if (!groups.includes(g)) groups.push(g); });
+    groups.forEach((g) => {
+      const og = document.createElement("optgroup");
+      og.label = g;
+      items.filter((it) => groupOf(it) === g).forEach((it) => {
+        const label = it.kind === "example" ? `Example ${it.number}` : `Q${it.number}`;
+        og.appendChild(Object.assign(document.createElement("option"), {
+          value: it.id, textContent: `${label} · ${it.question.replace(/\$|\\[a-z]+|[{}]/gi, "").replace(/\s+/g, " ").slice(0, 46)}` }));
+      });
+      sel.appendChild(og);
+    });
+    $("bcount").textContent = `${items.length} questions in this unit, every step checked by computer.`;
   }
 
   document.querySelectorAll("[data-klass]").forEach((b) => b.onclick = async () => {
@@ -949,7 +989,7 @@
     try { localStorage.setItem("klass", klass); } catch (e) {}
     $("results").innerHTML = '<div class="empty">Ask something to see matches.</div>';
     const list = await loadClass().catch((e) => { $("results").innerHTML = `<div class="note">${escapeHTML(netMessage(e))}</div>`; return []; });
-    if (list.length) { $("browse").value = list[0].id; openItem(list[0].id, "From the book"); }
+    if (list.length) { fillQuestions(); $("browse").value = list[0].id; openItem(list[0].id, "From the book"); }
   });
 
   // ---------- boot ----------
@@ -965,12 +1005,15 @@
     // a link can carry the question: /?ask=Rationalize 3/(2+sqrt5)&step=3&lang=both
     const qs = new URLSearchParams(location.search);
     if (qs.get("lang")) { const lb = document.querySelector(`[data-lang="${qs.get("lang")}"]`); if (lb) lb.click(); }
-    if (qs.get("ask")) {
+    if (qs.get("item")) {                          // a link straight to one book question: /?class=10&item=c10-ex11.1-q5&step=3
+      await openItem(qs.get("item"), "From the book");
+      if (qs.get("step")) goto(+qs.get("step") - 1, false);
+    } else if (qs.get("ask")) {
       $("q").value = qs.get("ask");
       $("results").innerHTML = '<div class="note">Working on your question…</div>';
       showAnswer(await api("/api/answer", { question: qs.get("ask") }));
       if (qs.get("step")) goto(+qs.get("step") - 1, false);
-    } else if (list.length) { $("browse").value = list[0].id; openItem(list[0].id, "From the book"); }
+    } else if (list.length) { fillQuestions(); $("browse").value = list[0].id; openItem(list[0].id, "From the book"); }
   })().catch((e) => { $("results").innerHTML = `<div class="note">Could not load: ${escapeHTML(e.message)}</div>`; });
 })();
 </script>

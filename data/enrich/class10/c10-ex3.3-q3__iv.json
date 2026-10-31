@@ -1,0 +1,36 @@
+{
+ "item": "c10-ex3.3-q3",
+ "label": "iv",
+ "answer_ref": "$\\begin{bmatrix} -1 & 0 \\\\ 0 & -1 \\end{bmatrix}$",
+ "steps": [
+  {
+   "math": "S = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}",
+   "en": "We are given the matrix $S$ and we need to find its additive inverse.",
+   "ur": "ہمیں کالب $S$ دیا گیا ہے اور ہمیں اس کا جمعی معکوس معلوم کرنا ہے۔"
+  },
+  {
+   "math": "-S = (-1)S",
+   "en": "The additive inverse of a matrix $S$ is denoted by $-S$. It is obtained by changing the sign of every non-zero entry of the matrix (or multiplying each entry by $-1$).",
+   "ur": "کالب $S$ کے جمعی معکوس کو $-S$ سے ظاہر کیا جاتا ہے۔ یہ کالب کے ہر غیر صفر رکن کی علامت بدل کر (یا ہر رکن کو $-1$ سے ضرب دے کر) حاصل کیا جاتا ہے۔"
+  },
+  {
+   "math": "-S = -\\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix} = \\begin{bmatrix} -(1) & -(0) \\\\ -(0) & -(1) \\end{bmatrix}",
+   "en": "Substitute the matrix $S$ and apply the negative sign to each entry inside the matrix.",
+   "ur": "کالب $S$ کی قیمت درج کریں اور کالب کے اندر موجود ہر رکن کے ساتھ منفی علامت لگائیں۔",
+   "check": [
+    "-Matrix([[1, 0], [0, 1]]) == Matrix([[-(1), -(0)], [-(0), -(1)]])"
+   ]
+  },
+  {
+   "math": "-S = \\begin{bmatrix} -1 & 0 \\\\ 0 & -1 \\end{bmatrix}",
+   "en": "Simplify each entry. Note that $0$ is neither positive nor negative, so $-0 = 0$. Thus, the additive inverse of matrix $S$ is $\\begin{bmatrix} -1 & 0 \\\\ 0 & -1 \\end{bmatrix}$.",
+   "ur": "ہر رکن کو مختصر کریں۔ یاد رہے کہ $0$ نہ مثبت ہوتا ہے اور نہ منفی، اس لیے $-0 = 0$ ہوتا ہے۔ پس کالب $S$ کا جمعی معکوس $\\begin{bmatrix} -1 & 0 \\\\ 0 & -1 \\end{bmatrix}$ ہے۔",
+   "check": [
+    "Matrix([[-(1), -(0)], [-(0), -(1)]]) == Matrix([[-1, 0], [0, -1]])",
+    "Eq(Matrix([[0, 0], [0, 0]]), Matrix([[0, 0], [0, 0]]))"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

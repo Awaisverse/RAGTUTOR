@@ -1,0 +1,35 @@
+{
+ "item": "c10-rev11-q1",
+ "label": "ii",
+ "answer_ref": "(c) $\\text{median}$",
+ "steps": [
+  {
+   "math": "",
+   "en": "We need to identify which statistical measure the second quartile ($Q_2$) represents.",
+   "ur": "ہمیں یہ شناخت کرنا ہے کہ دوسرا چوتھائی ($Q_2$) کس شماریاتی پیمانے کی نمائندگی کرتا ہے۔"
+  },
+  {
+   "math": "\\frac{2}{4} = \\frac{1}{2}",
+   "en": "Quartiles divide a sorted dataset into four equal parts. The second quartile ($Q_2$) represents two-fourths, or one-half, of the data.",
+   "ur": "چوتھائی (Quartiles) ترتیب شدہ ڈیٹا کو چار برابر حصوں میں تقسیم کرتے ہیں۔ دوسرا چوتھائی ($Q_2$) ڈیٹا کے دو چوتھائی یعنی آدھے حصے کی نمائندگی کرتا ہے۔",
+   "check": [
+    "R(2, 4) == R(1, 2)"
+   ]
+  },
+  {
+   "math": "\\frac{1}{2} \\times 100 = 50",
+   "en": "One-half corresponds to $50\\%$ of the observations. By definition, the value that divides a dataset into two equal halves ($50\\%$ below and $50\\%$ above) is the median.",
+   "ur": "نصف حصہ $50\\%$ مشاہدات کے برابر ہے۔ تعریف کے مطابق، وہ قدر جو ڈیٹا کو دو برابر حصوں ($50\\%$ نیچے اور $50\\%$ اوپر) میں تقسیم کرتی ہے، وسطانیہ (median) کہلاتی ہے۔",
+   "check": [
+    "R(1, 2)*100 == 50"
+   ]
+  },
+  {
+   "math": "\\text{Answer: (c) } \\text{median}",
+   "en": "Therefore, the second quartile ($Q_2$) represents the median, which matches option (c).",
+   "ur": "لہٰذا، دوسرا چوتھائی ($Q_2$) وسطانیہ (median) کی نمائندگی کرتا ہے، جو کہ آپشن (c) سے مطابقت رکھتا ہے۔"
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

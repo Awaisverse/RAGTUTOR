@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex4.1-q9",
+ "label": "iv",
+ "answer_ref": "Domain $= [0, \\infty)$; Range $= [2, \\infty)$",
+ "steps": [
+  {
+   "math": "f(x) = \\sqrt{x - 2}, \\quad x \\ge 2",
+   "en": "We are given the function $f(x)$ with the condition that $x \\ge 2$. We need to find the domain and range of its inverse function $f^{-1}(x)$ without actually finding the formula for $f^{-1}(x)$.",
+   "ur": "ہمیں تفاعل $f(x)$ اس شرط کے ساتھ دیا گیا ہے کہ $x \\ge 2$۔ ہمیں معکوس تفاعل $f^{-1}(x)$ کا فارمولا معلوم کیے بغیر اس کی ڈومین اور رینج معلوم کرنی ہے۔"
+  },
+  {
+   "math": "\\text{Domain of } f^{-1} = \\text{Range of } f, \\quad \\text{Range of } f^{-1} = \\text{Domain of } f",
+   "en": "By the property of inverse functions, the domain and range are interchanged between a function and its inverse.",
+   "ur": "معکوس تفاعل کی خصوصیت کے مطابق، ایک تفاعل اور اس کے معکوس کے درمیان ڈومین اور رینج آپس میں بدل جاتے ہیں۔"
+  },
+  {
+   "math": "\\text{Domain of } f = [2, \\infty)",
+   "en": "First, we find the domain of $f(x)$. Since the condition $x \\ge 2$ is already given, the domain of $f(x)$ consists of all real numbers greater than or equal to $2$.",
+   "ur": "سب سے پہلے، ہم $f(x)$ کی ڈومین معلوم کرتے ہیں۔ چونکہ شرط $x \\ge 2$ پہلے سے دی گئی ہے، اس لیے $f(x)$ کی ڈومین میں $2$ یا اس سے بڑے تمام حقیقی اعداد شامل ہیں۔"
+  },
+  {
+   "math": "f(2) = \\sqrt{2 - 2} = 0",
+   "en": "Next, to find the range of $f(x)$, we check the minimum output value by substituting the smallest value of $x$, which is $x = 2$.",
+   "ur": "اس کے بعد، $f(x)$ کی رینج معلوم کرنے کے لیے، ہم $x$ کی سب سے چھوٹی قیمت یعنی $x = 2$ درج کر کے کم از کم آؤٹ پٹ قیمت چیک کرتے ہیں۔",
+   "check": [
+    "sqrt(2 - 2) == 0"
+   ]
+  },
+  {
+   "math": "\\text{Range of } f = [0, \\infty)",
+   "en": "As $x$ increases beyond $2$, the square root $\\sqrt{x-2}$ gives all non-negative real numbers. Thus, the range of $f(x)$ is from $0$ to $\\infty$.",
+   "ur": "جیسے جیسے $x$ کی قیمت $2$ سے بڑھتی ہے، جذر $\\sqrt{x-2}$ تمام غیر منفی حقیقی اعداد دیتا ہے۔ اس طرح، $f(x)$ کی رینج $0$ سے $\\infty$ تک ہے۔"
+  },
+  {
+   "math": "\\text{Domain of } f^{-1} = [0, \\infty), \\quad \\text{Range of } f^{-1} = [2, \\infty)",
+   "en": "Finally, swapping the domain and range of $f(x)$ gives us the domain and range of $f^{-1}(x)$.",
+   "ur": "آخر میں، $f(x)$ کی ڈومین اور رینج کو آپس میں بدلنے سے ہمیں $f^{-1}(x)$ کی ڈومین اور رینج حاصل ہوتی ہے۔",
+   "check": [
+    "sqrt(2 - 2) == 0"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

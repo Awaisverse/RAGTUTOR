@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex12.2-q14",
+ "label": "iii",
+ "answer_ref": "$0.74$",
+ "steps": [
+  {
+   "math": "",
+   "en": "First, write down the given probabilities from the question: $P(A) = 0.42$, $P(B) = 0.48$, and $P(A \\cap B) = 0.16$. We need to find $P(A \\cup B)$.",
+   "ur": "سب سے پہلے سوال میں دیے گئے احتمالات لکھیں: $P(A) = 0.42$، $P(B) = 0.48$، اور $P(A \\cap B) = 0.16$۔ ہمیں $P(A \\cup B)$ معلوم کرنا ہے۔"
+  },
+  {
+   "math": "P(A \\cup B) = P(A) + P(B) - P(A \\cap B)",
+   "en": "Since $P(A \\cap B) \\neq 0$, the events $A$ and $B$ are overlapping (not mutually exclusive). Therefore, we apply the general addition law of probability.",
+   "ur": "چونکہ $P(A \\cap B) \\neq 0$ ہے، اس لیے واقعات $A$ اور $B$ متداخل (غير متنافی) ہیں۔ لہٰذا، ہم احتمال کے جمع کا عمومی قانون لاگو کرتے ہیں۔"
+  },
+  {
+   "math": "P(A \\cup B) = 0.42 + 0.48 - 0.16",
+   "en": "Substitute the given values into the formula.",
+   "ur": "دی گئی قیمتیں فارمولے میں درج کریں۔",
+   "check": [
+    "R(42,100) + R(48,100) - R(16,100) == R(74,100)"
+   ]
+  },
+  {
+   "math": "P(A \\cup B) = 0.90 - 0.16",
+   "en": "First, add $0.42$ and $0.48$ to get $0.90$.",
+   "ur": "پہلے $0.42$ اور $0.48$ کو جمع کریں جس سے $0.90$ حاصل ہوتا ہے۔",
+   "check": [
+    "R(42,100) + R(48,100) == R(90,100)",
+    "R(90,100) - R(16,100) == R(74,100)"
+   ]
+  },
+  {
+   "math": "P(A \\cup B) = 0.74",
+   "en": "Subtract $0.16$ from $0.90$ to get the final answer.",
+   "ur": "حتمی جواب حاصل کرنے کے لیے $0.90$ میں سے $0.16$ کو تفریق کریں۔",
+   "check": [
+    "R(90,100) - R(16,100) == R(74,100)",
+    "R(42,100) + R(48,100) - R(16,100) == R(74,100)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

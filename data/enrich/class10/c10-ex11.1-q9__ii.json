@@ -1,0 +1,47 @@
+{
+ "item": "c10-ex11.1-q9",
+ "label": "ii",
+ "answer_ref": "strong negative correlation",
+ "steps": [
+  {
+   "math": "n = 10, \\quad x = \\{0.5, 1, 2, 3, 4, 5, 6, 7, 8, 9\\}, \\quad y = \\{4.0, 3.9, 3.7, 3.5, 3.3, 3.1, 2.9, 2.8, 2.6, 2.5\\}",
+   "en": "Let $x$ represent the daily social media hours and $y$ represent the GPA of the students. There are $n = 10$ pairs of values.",
+   "ur": "فرض کریں کہ $x$ روزانہ سوشل میڈیا کے گھنٹوں کو اور $y$ طلباء کے GPA کو ظاہر کرتا ہے۔ یہاں قیمتوں کے $n = 10$ جوڑے ہیں۔"
+  },
+  {
+   "math": "\\sum x = 45.5, \\quad \\sum y = 32.3, \\quad \\sum x^2 = 285.25, \\quad \\sum y^2 = 106.91, \\quad \\sum xy = 132.8",
+   "en": "Calculate the required sums from the given data to find the correlation coefficient.",
+   "ur": "ارتباطی سر (correlation coefficient) معلوم کرنے کے لیے دیے گئے ڈیٹا سے مطلوبہ مجموعے حساب کریں۔",
+   "check": [
+    "R(1,2) + 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 == R(91,2)",
+    "R(40,10) + R(39,10) + R(37,10) + R(35,10) + R(33,10) + R(31,10) + R(29,10) + R(28,10) + R(26,10) + R(25,10) == R(323,10)",
+    "R(1,2)**2 + 1**2 + 2**2 + 3**2 + 4**2 + 5**2 + 6**2 + 7**2 + 8**2 + 9**2 == R(1141,4)",
+    "R(40,10)**2 + R(39,10)**2 + R(37,10)**2 + R(35,10)**2 + R(33,10)**2 + R(31,10)**2 + R(29,10)**2 + R(28,10)**2 + R(26,10)**2 + R(25,10)**2 == R(10691,100)",
+    "R(1,2)*R(40,10) + 1*R(39,10) + 2*R(37,10) + 3*R(35,10) + 4*R(33,10) + 5*R(31,10) + 6*R(29,10) + 7*R(28,10) + 8*R(26,10) + 9*R(25,10) == R(664,5)"
+   ]
+  },
+  {
+   "math": "r = \\frac{n\\sum xy - \\sum x\\sum y}{\\sqrt{[n\\sum x^2 - (\\sum x)^2][n\\sum y^2 - (\\sum y)^2]}}",
+   "en": "Write down the formula for Pearson's correlation coefficient $r$ to determine the mathematical nature of the correlation.",
+   "ur": "ارتباط کی ریاضیاتی نوعیت کا تعین کرنے کے لیے پیئرسن کے ارتباطی سر $r$ کا فارمولا لکھیں۔"
+  },
+  {
+   "math": "r = \\frac{10(132.8) - (45.5)(32.3)}{\\sqrt{[10(285.25) - (45.5)^2][10(106.91) - (32.3)^2]}} \\approx -0.997",
+   "en": "Substitute the calculated sums into the formula and simplify. A value close to $-1$ indicates a strong negative correlation.",
+   "ur": "فارمولے میں حاصل کردہ مجموعوں کی قیمتیں درج کریں اور مختصر کریں۔ $-1$ کے قریب قیمت مضبوط منفی ارتباط کو ظاہر کرتی ہے۔",
+   "check": [
+    "Abs(((10*R(664,5) - R(91,2)*R(323,10))/sqrt((10*R(1141,4) - R(91,2)**2)*(10*R(10691,100) - R(323,10)**2))) - (-0.997)) <= 0.000500001"
+   ]
+  },
+  {
+   "math": "\\text{strong negative correlation}",
+   "en": "Since $r \\approx -0.997$ (and as observed from the downward trend in the data, more hours lead to a lower GPA), there is a strong negative correlation between social media use and GPA.",
+   "ur": "چونکہ $r \\approx -0.997$ ہے (اور جیسا کہ ڈیٹا کے گرتے ہوئے رجحان سے واضح ہے کہ زیادہ گھنٹے کم GPA کا باعث بنتے ہیں)، اس لیے سوشل میڈیا کے استعمال اور GPA کے درمیان ایک مضبوط منفی ارتباط (strong negative correlation) ہے۔",
+   "check": [
+    "Abs(((10*(664/5) - (91/2)*(323/10))/sqrt((10*(1141/4) - (91/2)**2)*(10*(10691/100) - (323/10)**2))) - -0.997) <= 0.000500001"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

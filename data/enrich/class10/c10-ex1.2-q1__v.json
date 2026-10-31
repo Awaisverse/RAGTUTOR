@@ -1,0 +1,61 @@
+{
+ "item": "c10-ex1.2-q1",
+ "label": "v",
+ "answer_ref": "$18 - i$",
+ "steps": [
+  {
+   "math": "\\left(3 + 4i\\right)\\left(2 - 3i\\right)",
+   "en": "We are given the product of two complex numbers and need to simplify it into the standard form $a+bi$.",
+   "ur": "ہمیں دو مخلوط اعداد کا حاصلِ ضرب دیا گیا ہے اور ہمیں اسے معیاری شکل $a+bi$ میں مختصر کرنا ہے۔"
+  },
+  {
+   "math": "= 3\\left(2 - 3i\\right) + 4i\\left(2 - 3i\\right)",
+   "en": "Apply the distributive property by multiplying each term of the first complex number by the entire second complex number.",
+   "ur": "پہلے مخلوط عدد کے ہر رکن کو دوسرے پورے مخلوط عدد سے ضرب دے کر تقسیمی خاصیت کا اطلاق کریں۔",
+   "check": [
+    "(3 + 4*I)*(2 - 3*I) == 3*(2 - 3*I) + 4*I*(2 - 3*I)"
+   ]
+  },
+  {
+   "math": "= 6 - 9i + 8i - 12i^2",
+   "en": "Multiply the terms inside the brackets.",
+   "ur": "قوسین کے اندر موجود ارکان کو ضرب دیں۔",
+   "check": [
+    "3*(2 - 3*I) + 4*I*(2 - 3*I) == 6 - 9*I + 8*I - 12*I**2"
+   ]
+  },
+  {
+   "math": "= 6 - i - 12(-1)",
+   "en": "Combine the like imaginary terms ($-9i + 8i = -i$) and substitute the fundamental property of the imaginary unit, $i^2 = -1$.",
+   "ur": "یکساں خیالی ارکان کو یکجا کریں ($-9i + 8i = -i$) اور خیالی اکائی کی بنیادی خاصیت $i^2 = -1$ درج کریں۔",
+   "check": [
+    "-9*I + 8*I == -I",
+    "I**2 == -1",
+    "6 - 9*I + 8*I - 12*I**2 == 6 - I - 12*(-1)"
+   ]
+  },
+  {
+   "math": "= 6 - i + 12",
+   "en": "Simplify the product $-12(-1)$ to $+12$.",
+   "ur": "حاصلِ ضرب $-12(-1)$ کو مختصر کر کے $+12$ لکھیں۔",
+   "check": [
+    "-12*(-1) == 12",
+    "6 - I - 12*(-1) == 6 - I + 12"
+   ]
+  },
+  {
+   "math": "= (6 + 12) - i = 18 - i",
+   "en": "Add the real parts together to write the final answer in the standard form $a+bi$.",
+   "ur": "حقیقی حصوں کو آپس میں جمع کر کے حتمی جواب کو معیاری شکل $a+bi$ میں لکھیں۔",
+   "check": [
+    "(6 + 12) - I == 18 - I",
+    "(3 + 4*I)*(2 - 3*I) == 18 - I",
+    "(3 + 4*I)*(2 - 3*I) == (6) + (-1)*I + (-12)*I**2",
+    "I**2 == -1",
+    "(3 + 4*I)*(2 - 3*I) == (18 - I)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

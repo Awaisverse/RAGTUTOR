@@ -1,0 +1,50 @@
+{
+ "item": "c10-ex12.3-q3",
+ "label": "",
+ "answer_ref": "$\\frac{1}{9}$",
+ "steps": [
+  {
+   "math": "n(S) = 6 \\times 6 = 36",
+   "en": "When a single six-sided dice is rolled twice, each roll has $6$ possible outcomes. Therefore, the total number of possible outcomes in the sample space $S$ is $36$.",
+   "ur": "جب ایک چھ رخے پانسے کو دو بار پھینکا جاتا ہے، تو ہر باری کے $6$ ممکنہ نتائج ہوتے ہیں۔ لہذا، نمونہ فضا $S$ میں کل ممکنہ نتائج کی تعداد $36$ ہے۔",
+   "check": [
+    "6 * 6 == 36"
+   ]
+  },
+  {
+   "math": "",
+   "en": "On a standard dice with faces $\\{1, 2, 3, 4, 5, 6\\}$, the multiples of $3$ are $3$ and $6$. We need one roll to be a multiple of $3$ (either $3$ or $6$) and the other roll to be $5$.",
+   "ur": "ایک معیاری پانسے کے رخوں $\\{1, 2, 3, 4, 5, 6\\}$ پر $3$ کے اضعاف $3$ اور $6$ ہیں۔ ہمیں چاہیے کہ ایک باری میں $3$ کا ضعف ($3$ یا $6$) آئے اور دوسری باری میں $5$ آئے۔"
+  },
+  {
+   "math": "E = \\{(3, 5), (5, 3), (6, 5), (5, 6)\\}",
+   "en": "Let $E$ be the event of getting a multiple of $3$ on one roll and a $5$ on the other roll. Listing all such ordered pairs gives the set $E$.",
+   "ur": "فرض کریں کہ $E$ ایک باری میں $3$ کا ضعف اور دوسری باری میں $5$ آنے کا واقعہ ہے۔ ایسے تمام مترتب جوڑوں کی فہرست بنانے سے سیٹ $E$ حاصل ہوتا ہے۔"
+  },
+  {
+   "math": "n(E) = 4",
+   "en": "Counting the pairs in set $E$, the number of favourable outcomes is $4$.",
+   "ur": "سیٹ $E$ میں جوڑوں کو گننے سے، موافق نتائج کی تعداد $4$ ہے۔",
+   "check": [
+    "4 == 4"
+   ]
+  },
+  {
+   "math": "P(E) = \\frac{n(E)}{n(S)}",
+   "en": "The probability of an event is given by the ratio of the number of favourable outcomes to the total number of outcomes.",
+   "ur": "کسی واقعے کا احتمال موافق نتائج کی تعداد اور کل نتائج کی تعداد کی نسبت سے معلوم کیا جاتا ہے۔"
+  },
+  {
+   "math": "P(E) = \\frac{4}{36} = \\frac{1}{9}",
+   "en": "Substitute $n(E) = 4$ and $n(S) = 36$ into the formula and simplify the fraction by dividing the numerator and denominator by $4$. Thus, the required probability is $\\frac{1}{9}$.",
+   "ur": "فارمولے میں $n(E) = 4$ اور $n(S) = 36$ درج کریں اور شمار کنندہ اور مخرج کو $4$ پر تقسیم کر کے کسر کو مختصر کریں۔ پس، مطلوبہ احتمال $\\frac{1}{9}$ ہے۔",
+   "check": [
+    "R(4, 36) == R(1, 9)",
+    "36 == 36",
+    "R(4, 36) == 1/9"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

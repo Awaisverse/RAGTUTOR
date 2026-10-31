@@ -1,0 +1,35 @@
+{
+ "item": "c10-ex12.2-q14",
+ "label": "i",
+ "answer_ref": "$0.58$",
+ "steps": [
+  {
+   "math": "P(A) = 0.42",
+   "en": "Write down the given probability of event $A$.",
+   "ur": "واقعہ $A$ کا دیا گیا احتمال لکھیں۔",
+   "check": [
+    "R(42,100) == R(42,100)"
+   ]
+  },
+  {
+   "math": "P(\\overline{A}) = 1 - P(A)",
+   "en": "According to the complement rule of probability, the probability of an event not occurring ($\\overline{A}$) is equal to $1$ minus the probability of the event occurring.",
+   "ur": "احتمال کے متمم کے اصول کے مطابق، کسی واقعہ کے رونما نہ ہونے ($\\overline{A}$) کا احتمال $1$ منفی اس واقعہ کے رونما ہونے کے احتمال کے برابر ہوتا ہے۔"
+  },
+  {
+   "math": "P(\\overline{A}) = 1 - 0.42",
+   "en": "Substitute the given value $P(A) = 0.42$ into the formula.",
+   "ur": "فارمولے میں دی گئی قیمت $P(A) = 0.42$ درج کریں۔"
+  },
+  {
+   "math": "P(\\overline{A}) = 0.58",
+   "en": "Subtract $0.42$ from $1$ to get the final answer.",
+   "ur": "حتمی جواب حاصل کرنے کے لیے $1$ میں سے $0.42$ تفریق کریں۔",
+   "check": [
+    "1 - R(42,100) == R(58,100)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

@@ -1,0 +1,42 @@
+{
+ "item": "c10-ex9.2-q11",
+ "label": "",
+ "answer_ref": "$77$ cm$^2$",
+ "steps": [
+  {
+   "math": "r = 14\\text{ cm}",
+   "en": "First, write down the given radius ($r$) of the circular pizza.",
+   "ur": "سب سے پہلے، گول پیزا کا دیا گیا رداس ($r$) لکھیں۔"
+  },
+  {
+   "math": "\\text{Area of a circle} = \\pi r^2",
+   "en": "To find the total area of the whole pizza, we use the formula for the area of a circle.",
+   "ur": "پورے پیزا کا کل رقبہ معلوم کرنے کے لیے، ہم دائرے کے رقبے کا فارمولا استعمال کرتے ہیں۔"
+  },
+  {
+   "math": "\\text{Total Area} = \\frac{22}{7} \\times (14)^2 = \\frac{22}{7} \\times 196 = 616\\text{ cm}^2",
+   "en": "Substitute $r = 14\\text{ cm}$ and $\\pi = \\frac{22}{7}$ into the formula to calculate the total area.",
+   "ur": "کل رقبہ معلوم کرنے کے لیے فارمولے میں $r = 14\\text{ cm}$ اور $\\pi = \\frac{22}{7}$ درج کریں۔",
+   "check": [
+    "14**2 == 196",
+    "R(22,7)*196 == 616"
+   ]
+  },
+  {
+   "math": "\\text{Area of 1 slice} = \\frac{\\text{Total Area}}{n}",
+   "en": "Since the pizza is cut into $n = 8$ equal slices (sectors), the area of one slice is the total area divided by $n$.",
+   "ur": "چونکہ پیزا کو $n = 8$ برابر ٹکڑوں (سیکٹرز) میں کاٹا گیا ہے، اس لیے ایک ٹکڑے کا رقبہ کل رقبے کو $n$ پر تقسیم کرنے سے حاصل ہوگا۔"
+  },
+  {
+   "math": "\\text{Area of 1 slice} = \\frac{616}{8} = 77\\text{ cm}^2",
+   "en": "Divide the total area $616\\text{ cm}^2$ by $8$ to find the area of a single slice.",
+   "ur": "ایک ٹکڑے کا رقبہ معلوم کرنے کے لیے کل رقبہ $616\\text{ cm}^2$ کو $8$ پر تقسیم کریں۔",
+   "check": [
+    "616/8 == 77",
+    "R(22,7)*14**2 == 616"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

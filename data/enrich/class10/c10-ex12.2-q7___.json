@@ -1,0 +1,47 @@
+{
+ "item": "c10-ex12.2-q7",
+ "label": "",
+ "answer_ref": "$\\frac{11}{36}$",
+ "steps": [
+  {
+   "math": "n(S) = 6 \\times 6 = 36",
+   "en": "When a fair six-sided dice is thrown twice, each throw has $6$ possible outcomes. Therefore, the total number of possible outcomes in the sample space $S$ is $36$.",
+   "ur": "جب ایک چھ رخے پانسے کو دو بار پھینکا جاتا ہے، تو ہر بار کے لیے $6$ ممکنہ نتائج ہوتے ہیں۔ لہٰذا، نمونہ فضا $S$ میں کل ممکنہ نتائج کی تعداد $36$ ہے۔",
+   "check": [
+    "6 * 6 == 36"
+   ]
+  },
+  {
+   "math": "E = \\{(1, 3), (2, 3), (3, 1), (3, 2), (3, 3), (3, 4), (3, 5), (3, 6), (4, 3), (5, 3), (6, 3)\\}",
+   "en": "Let $E$ be the event that at least one of the two throws comes up with the number $3$. We list all the pairs from the sample space that contain $3$ in the first throw, the second throw, or both.",
+   "ur": "فرض کریں کہ $E$ وہ وقوعہ ہے جس میں دونوں باریوں میں سے کم از کم ایک بار نمبر $3$ آتا ہے۔ ہم نمونہ فضا سے وہ تمام جوڑے لکھتے ہیں جن میں پہلی باری، دوسری باری، یا دونوں میں $3$ شامل ہو۔",
+   "check": [
+    "1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 == 11"
+   ]
+  },
+  {
+   "math": "n(E) = 11",
+   "en": "By counting the pairs in set $E$, we find that the number of favourable outcomes is $11$.",
+   "ur": "سیٹ $E$ میں جوڑوں کو گننے سے معلوم ہوتا ہے کہ موافق نتائج کی تعداد $11$ ہے۔",
+   "check": [
+    "11 == 11"
+   ]
+  },
+  {
+   "math": "P(E) = \\frac{n(E)}{n(S)}",
+   "en": "According to the formula of probability, the probability of an event $E$ is the ratio of the number of favourable outcomes $n(E)$ to the total number of possible outcomes $n(S)$.",
+   "ur": "احتمال کے فارمولے کے مطابق، کسی وقوعہ $E$ کا احتمال موافق نتائج کی تعداد $n(E)$ اور کل ممکنہ نتائج کی تعداد $n(S)$ کی نسبت کے برابر ہوتا ہے۔"
+  },
+  {
+   "math": "P(E) = \\frac{11}{36}",
+   "en": "Substitute $n(E) = 11$ and $n(S) = 36$ into the formula. Thus, the required probability is $\\frac{11}{36}$.",
+   "ur": "فارمولے میں $n(E) = 11$ اور $n(S) = 36$ درج کریں۔ پس، مطلوبہ احتمال $\\frac{11}{36}$ ہے۔",
+   "check": [
+    "R(11, 36) == 11/36",
+    "36 == 36"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

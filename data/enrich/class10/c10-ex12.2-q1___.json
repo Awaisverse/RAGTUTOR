@@ -1,0 +1,44 @@
+{
+ "item": "c10-ex12.2-q1",
+ "label": "",
+ "answer_ref": "$\\frac{5}{8}$",
+ "steps": [
+  {
+   "math": "",
+   "en": "First, write down the given probabilities of events $A$, $B$, and their intersection $A \\cap B$. We are given $P(A) = \\frac{1}{4}$, $P(B) = \\frac{1}{2}$, and $P(A \\cap B) = \\frac{1}{8}$. We need to find the probability of their union, $P(A \\cup B)$.",
+   "ur": "سب سے پہلے، واقعات $A$، $B$ اور ان کے تقاطع $A \\cap B$ کے دیے گئے احتمالات لکھیں۔ ہمیں $P(A) = \\frac{1}{4}$، $P(B) = \\frac{1}{2}$، اور $P(A \\cap B) = \\frac{1}{8}$ دیے گئے ہیں۔ ہمیں ان کے یونین کا احتمال، $P(A \\cup B)$ معلوم کرنا ہے۔"
+  },
+  {
+   "math": "P(A \\cup B) = P(A) + P(B) - P(A \\cap B)",
+   "en": "Since $P(A \\cap B) \\neq 0$, the events $A$ and $B$ are overlapping (not mutually exclusive). Therefore, we apply the addition law of probability for overlapping events.",
+   "ur": "چونکہ $P(A \\cap B) \\neq 0$ ہے، اس لیے واقعات $A$ اور $B$ غیر متنافی (متداخل) واقعات ہیں۔ لہٰذا، ہم متداخل واقعات کے لیے احتمال کے جمع کا قانون استعمال کریں گے۔"
+  },
+  {
+   "math": "P(A \\cup B) = \\frac{1}{4} + \\frac{1}{2} - \\frac{1}{8}",
+   "en": "Substitute the given values of $P(A)$, $P(B)$, and $P(A \\cap B)$ into the formula.",
+   "ur": "فارمولے میں $P(A)$، $P(B)$ اور $P(A \\cap B)$ کی دی گئی قیمتیں درج کریں۔",
+   "check": [
+    "R(1,4) + R(1,2) - R(1,8) == R(5,8)"
+   ]
+  },
+  {
+   "math": "P(A \\cup B) = \\frac{2 + 4 - 1}{8}",
+   "en": "Take the Least Common Multiple (LCM) of the denominators $4$, $2$, and $8$, which is $8$, to combine the fractions.",
+   "ur": "کسروں کو حل کرنے کے لیے مخرج $4$، $2$ اور $8$ کا ذواضعاف اقل (LCM) لیں، جو کہ $8$ ہے۔",
+   "check": [
+    "R(1,4) + R(1,2) - R(1,8) == R(2 + 4 - 1, 8)"
+   ]
+  },
+  {
+   "math": "P(A \\cup B) = \\frac{5}{8}",
+   "en": "Simplify the numerator ($2 + 4 - 1 = 5$) to get the final answer.",
+   "ur": "حتمی جواب حاصل کرنے کے لیے شمار کنندہ کو مختصر کریں ($2 + 4 - 1 = 5$)۔",
+   "check": [
+    "R(2 + 4 - 1, 8) == R(5, 8)",
+    "R(1,4) + R(1,2) - R(1,8) == R(5,8)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

@@ -1,0 +1,49 @@
+{
+ "item": "c10-ex7.1-q3",
+ "label": "viii",
+ "answer_ref": "$- \\sqrt{2}$",
+ "steps": [
+  {
+   "math": "\\sec 135^\\circ",
+   "en": "We need to find the exact value of $\\sec 135^\\circ$ without using a calculator.",
+   "ur": "ہمیں کیلکولیٹر کے بغیر $\\sec 135^\\circ$ کی اصل قیمت معلوم کرنی ہے۔"
+  },
+  {
+   "math": "135^\\circ = 90^\\circ + 45^\\circ = 1 \\times 90^\\circ + 45^\\circ",
+   "en": "First, express the angle $135^\\circ$ in the form of $n \\times 90^\\circ + \\theta$, where $\\theta$ is an acute angle ($45^\\circ$).",
+   "ur": "سب سے پہلے، زاویہ $135^\\circ$ کو $n \\times 90^\\circ + \\theta$ کی شکل میں لکھیں، جہاں $\\theta$ ایک حادہ زاویہ ($45^\\circ$) ہے۔",
+   "check": [
+    "135 == 90 + 45",
+    "135 == 1*90 + 45"
+   ]
+  },
+  {
+   "math": "\\sec 135^\\circ = \\sec(1 \\times 90^\\circ + 45^\\circ)",
+   "en": "Substitute this angle expression into the given trigonometric function.",
+   "ur": "اس زاویے کو دیے گئے تکونیاتی تفاعل میں درج کریں۔",
+   "check": [
+    "sec(135*pi/180) == sec((1*90 + 45)*pi/180)"
+   ]
+  },
+  {
+   "math": "\\sec(1 \\times 90^\\circ + 45^\\circ) = -\\operatorname{cosec} 45^\\circ",
+   "en": "Since $1$ is an odd multiple of $90^\\circ$, the trigonometric ratio $\\sec$ changes to its co-ratio $\\operatorname{cosec}$. Also, $135^\\circ$ lies in Quadrant II where $\\sec$ is negative, so we put a negative sign.",
+   "ur": "چونکہ $1$ زاویہ $90^\\circ$ کا ایک طاق مضرب ہے، اس لیے تکونیاتی نسبت $\\sec$ اپنی ہم نسبت $\\operatorname{cosec}$ میں تبدیل ہو جاتی ہے۔ نیز، $135^\\circ$ دوسرے ربع (Quadrant II) میں واقع ہے جہاں $\\sec$ منفی ہوتا ہے، اس لیے ہم منفی علامت لگاتے ہیں۔",
+   "check": [
+    "sec((1*90 + 45)*pi/180) == -csc(45*pi/180)"
+   ]
+  },
+  {
+   "math": "\\sec 135^\\circ = -\\sqrt{2}",
+   "en": "We know that the exact value of $\\operatorname{cosec} 45^\\circ$ is $\\sqrt{2}$. Substituting this value gives the final answer.",
+   "ur": "ہم جانتے ہیں کہ $\\operatorname{cosec} 45^\\circ$ کی اصل قیمت $\\sqrt{2}$ ہے۔ یہ قیمت درج کرنے سے حتمی جواب حاصل ہوتا ہے۔",
+   "check": [
+    "sec(135*pi/180) == -sqrt(2)",
+    "-csc(45*pi/180) == -sqrt(2)",
+    "sec((135)*pi/180) == -sqrt(2)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

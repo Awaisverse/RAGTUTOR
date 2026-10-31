@@ -1,0 +1,55 @@
+{
+ "item": "c10-rev1-q1",
+ "label": "x",
+ "answer_ref": "(d) $\\sqrt{41}$",
+ "steps": [
+  {
+   "math": "z = 5 + 4i",
+   "en": "Write the given complex number. Comparing it with the standard form $z = a + bi$, we have the real part $a = 5$ and the imaginary part $b = 4$.",
+   "ur": "دیے گئے مخلوط عدد کو لکھیں۔ اس کا معیاری شکل $z = a + bi$ سے موازنہ کرنے پر، حقیقی حصہ $a = 5$ اور خیالی حصہ $b = 4$ ہے۔",
+   "check": [
+    "5 + 4*I == 5 + 4*I"
+   ]
+  },
+  {
+   "math": "",
+   "en": "Recall the formula for the modulus (absolute value) of a complex number $z = a + bi$, which is $|z| = \\sqrt{a^2 + b^2}$.",
+   "ur": "کسی مخلوط عدد $z = a + bi$ کے ماڈیولس (مطلق قیمت) کا فارمولا یاد کریں، جو کہ $|z| = \\sqrt{a^2 + b^2}$ ہے۔"
+  },
+  {
+   "math": "|z| = \\sqrt{5^2 + 4^2}",
+   "en": "Substitute the values $a = 5$ and $b = 4$ into the modulus formula.",
+   "ur": "ماڈیولس کے فارمولے میں $a = 5$ اور $b = 4$ کی قیمتیں درج کریں۔",
+   "check": [
+    "Abs(5 + 4*I) == sqrt(5**2 + 4**2)"
+   ]
+  },
+  {
+   "math": "|z| = \\sqrt{25 + 16}",
+   "en": "Evaluate the squares of $5$ and $4$.",
+   "ur": "$5$ اور $4$ کے مربع حل کریں۔",
+   "check": [
+    "sqrt(5**2 + 4**2) == sqrt(25 + 16)"
+   ]
+  },
+  {
+   "math": "|z| = \\sqrt{41}",
+   "en": "Add the numbers inside the square root to get the modulus.",
+   "ur": "ماڈیولس حاصل کرنے کے لیے جزر کے اندر موجود اعداد کو جمع کریں۔",
+   "check": [
+    "sqrt(25 + 16) == sqrt(41)",
+    "Abs(5 + 4*I) == sqrt(41)"
+   ]
+  },
+  {
+   "math": "\\text{Answer: (d) } \\sqrt{41}",
+   "en": "Thus, the correct option is (d).",
+   "ur": "چنانچہ، درست جواب (d) ہے۔",
+   "check": [
+    "Abs(5+4*I) == sqrt(41)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

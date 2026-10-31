@@ -1,0 +1,48 @@
+{
+ "item": "c10-ex7.1-q3",
+ "label": "v",
+ "answer_ref": "$- \\frac{1}{2}$",
+ "steps": [
+  {
+   "math": "\\cos 120^\\circ",
+   "en": "We need to find the exact value of the given trigonometric ratio without using a calculator.",
+   "ur": "ہمیں کیلکولیٹر کا استعمال کیے بغیر دی گئی تکونیاتی نسبت کی درست قیمت معلوم کرنی ہے۔"
+  },
+  {
+   "math": "120^\\circ = 90^\\circ + 30^\\circ = 1 \\times 90^\\circ + 30^\\circ",
+   "en": "First, express the angle $120^\\circ$ in the form of $n \\times 90^\\circ + \\theta$, where $\\theta$ is an acute angle ($30^\\circ$).",
+   "ur": "سب سے پہلے، زاویہ $120^\\circ$ کو $n \\times 90^\\circ + \\theta$ کی شکل میں لکھیں، جہاں $\\theta$ ایک حادہ زاویہ ($30^\\circ$) ہے۔",
+   "check": [
+    "120 == 90 + 30",
+    "120 == 1*90 + 30"
+   ]
+  },
+  {
+   "math": "\\cos 120^\\circ = \\cos(1 \\times 90^\\circ + 30^\\circ)",
+   "en": "Substitute this expression of the angle into the given cosine function.",
+   "ur": "زاویہ کی اس شکل کو دیے گئے کوسائن فنکشن میں درج کریں۔",
+   "check": [
+    "cos(120*pi/180) == cos((1*90 + 30)*pi/180)"
+   ]
+  },
+  {
+   "math": "\\cos(1 \\times 90^\\circ + 30^\\circ) = -\\sin 30^\\circ",
+   "en": "Since $1$ is an odd multiple of $90^\\circ$, $\\cos$ changes to its co-ratio $\\sin$. Also, the angle $120^\\circ$ lies in Quadrant II where $\\cos$ is negative, so we put a minus sign.",
+   "ur": "چونکہ $1$ زاویہ $90^\\circ$ کا ایک طاق مضرب ہے، اس لیے $\\cos$ اپنی ہم ریشو $\\sin$ میں تبدیل ہو جاتا ہے۔ نیز، زاویہ $120^\\circ$ ربع دوم (Quadrant II) میں واقع ہے جہاں $\\cos$ منفی ہوتا ہے، اس لیے ہم منفی کی علامت لگاتے ہیں۔",
+   "check": [
+    "cos((1*90 + 30)*pi/180) == -sin(30*pi/180)"
+   ]
+  },
+  {
+   "math": "-\\sin 30^\\circ = - \\frac{1}{2}",
+   "en": "Recall the standard value $\\sin 30^\\circ = \\frac{1}{2}$ from the trigonometric table and substitute it to get the final answer.",
+   "ur": "تکونیاتی جدول سے معیاری قیمت $\\sin 30^\\circ = \\frac{1}{2}$ یاد کریں اور حتمی جواب حاصل کرنے کے لیے اسے درج کریں۔",
+   "check": [
+    "-sin(30*pi/180) == -R(1, 2)",
+    "cos((120)*pi/180) == -1/2"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

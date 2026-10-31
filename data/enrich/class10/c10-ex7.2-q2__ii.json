@@ -1,0 +1,49 @@
+{
+ "item": "c10-ex7.2-q2",
+ "label": "ii",
+ "answer_ref": "$59.84$ cm$^2$",
+ "steps": [
+  {
+   "math": "a = 11\\ \\text{cm}, \\quad c = 14\\ \\text{cm}, \\quad \\beta = 51^\\circ",
+   "en": "First, write down the given sides and the included angle of the triangle $ABC$.",
+   "ur": "سب سے پہلے، مثلث $ABC$ کے دیے گئے اضلاع اور ان کے درمیانی زاویے کو لکھیں۔"
+  },
+  {
+   "math": "\\Delta = \\frac{1}{2}ac\\sin\\beta",
+   "en": "When two sides and their included angle are known, we use this formula to find the area of the triangle ($\\Delta$).",
+   "ur": "جب دو اضلاع اور ان کا درمیانی زاویہ معلوم ہو، تو ہم مثلث کا رقبہ ($\\Delta$) معلوم کرنے کے لیے یہ فارمولا استعمال کرتے ہیں۔"
+  },
+  {
+   "math": "\\Delta = \\frac{1}{2}(11)(14)\\sin 51^\\circ",
+   "en": "Substitute the given values $a = 11$, $c = 14$, and $\\beta = 51^\\circ$ into the formula.",
+   "ur": "فارمولے میں دی گئی قیمتیں $a = 11$، $c = 14$ اور $\\beta = 51^\\circ$ درج کریں۔"
+  },
+  {
+   "math": "\\Delta = 77 \\sin 51^\\circ",
+   "en": "Multiply $\\frac{1}{2}$ by $11$ and $14$ to get $77$.",
+   "ur": "$\\frac{1}{2}$ کو $11$ اور $14$ سے ضرب دیں جس سے $77$ حاصل ہوتا ہے۔",
+   "check": [
+    "R(1,2)*11*14 == 77"
+   ]
+  },
+  {
+   "math": "\\Delta \\approx 77 (0.7771)",
+   "en": "Find the value of $\\sin 51^\\circ \\approx 0.7771$ using a scientific calculator.",
+   "ur": "سائنٹیفک کیلکولیٹر کی مدد سے $\\sin 51^\\circ \\approx 0.7771$ کی قیمت معلوم کریں۔",
+   "check": [
+    "Abs(sin(51*pi/180) - 0.7771) <= 0.0005"
+   ]
+  },
+  {
+   "math": "\\Delta = 59.84\\ \\text{cm}^2",
+   "en": "Multiply the numbers and round to two decimal places to get the final area of the triangle.",
+   "ur": "ان اعداد کو ضرب دیں اور مثلث کا حتمی رقبہ حاصل کرنے کے لیے اعشاریہ کے بعد دو درجوں تک محدود کریں۔",
+   "check": [
+    "Abs((R(1,2)*11*14*sin(51*pi/180)) - 59.84) <= 0.005",
+    "Abs((R(1,2)*11*14*sin((51)*pi/180)) - 59.84) <= 0.0050000010000000004"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

@@ -1,0 +1,38 @@
+{
+ "item": "c10-ex2.3-q9",
+ "label": "ii",
+ "answer_ref": "$q = 1$",
+ "steps": [
+  {
+   "math": "",
+   "en": "Consider the given quadratic equation $x^2 + px + q = 0$. Comparing it with the standard form $ax^2 + bx + c = 0$, we have $a = 1$, $b = p$, and $c = q$.",
+   "ur": "دی گئی دو درجی مساوات $x^2 + px + q = 0$ پر غور کریں۔ اس کا معیاری شکل $ax^2 + bx + c = 0$ سے موازنہ کرنے پر، ہمیں $a = 1$، $b = p$، اور $c = q$ حاصل ہوتا ہے۔"
+  },
+  {
+   "math": "\\alpha\\beta = \\frac{c}{a} = \\frac{q}{1} = q",
+   "en": "Using the formula for the product of the roots $\\alpha$ and $\\beta$ of a quadratic equation:",
+   "ur": "دو درجی مساوات کے روٹس $\\alpha$ اور $\\beta$ کے حاصل ضرب کا فارمولا استعمال کرتے ہوئے:",
+   "check": [
+    "q/1 == q"
+   ]
+  },
+  {
+   "math": "\\alpha\\beta = 1",
+   "en": "According to the given condition, the roots are reciprocals of each other, i.e., $\\alpha = \\frac{1}{\\beta}$. Multiplying both sides by $\\beta$ gives:",
+   "ur": "دی گئی شرط کے مطابق، روٹس ایک دوسرے کا معکوس ہیں، یعنی $\\alpha = \\frac{1}{\\beta}$۔ دونوں طرف $\\beta$ سے ضرب دینے پر:",
+   "check": [
+    "(1/be)*be == 1"
+   ]
+  },
+  {
+   "math": "",
+   "en": "Substituting the value of the product of the roots $\\alpha\\beta = q$ into the above relation $\\alpha\\beta = 1$, we get the required condition $q = 1$.",
+   "ur": "روٹس کے حاصل ضرب کی قیمت $\\alpha\\beta = q$ کو مندرجہ بالا تعلق $\\alpha\\beta = 1$ میں درج کرنے سے، ہمیں مطلوبہ شرط $q = 1$ حاصل ہوتی ہے۔",
+   "check": [
+    "be*(1/be) == 1"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

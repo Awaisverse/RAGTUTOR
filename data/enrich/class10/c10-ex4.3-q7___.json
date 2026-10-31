@@ -1,0 +1,35 @@
+{
+ "item": "c10-ex4.3-q7",
+ "label": "",
+ "answer_ref": "$2.46 \\le x \\le 2.54$",
+ "steps": [
+  {
+   "math": "|x - 2.5| \\le 0.04",
+   "en": "Write down the given absolute value inequality representing the acceptable length $x$ of the metal rods.",
+   "ur": "دی گئی مطلق قیمت کی ناہمواری لکھیں جو دھاتی سلاخوں کی قابل قبول لمبائی $x$ کو ظاہر کرتی ہے۔"
+  },
+  {
+   "math": "-0.04 \\le x - 2.5 \\le 0.04",
+   "en": "Remove the absolute value sign by using the rule: if $|A| \\le k$, then $-k \\le A \\le k$.",
+   "ur": "مطلق قیمت کی علامت کو اس اصول کا استعمال کرتے ہوئے ہٹائیں: اگر $|A| \\le k$ ہو، تو $-k \\le A \\le k$ ہوتا ہے۔"
+  },
+  {
+   "math": "-0.04 + 2.5 \\le x - 2.5 + 2.5 \\le 0.04 + 2.5",
+   "en": "To isolate $x$ in the middle, add $2.5$ to all three parts of the inequality.",
+   "ur": "درمیان میں $x$ کو الگ کرنے کے لیے، ناہمواری کے تینوں حصوں میں $2.5$ جمع کریں۔"
+  },
+  {
+   "math": "2.46 \\le x \\le 2.54",
+   "en": "Simplify the values on both sides to find the range of acceptable lengths in metres.",
+   "ur": "قابل قبول لمبائی کی حد (میٹر میں) معلوم کرنے کے لیے دونوں اطراف کی قیمتوں کو مختصر کریں۔",
+   "check": [
+    "-R(4,100) + R(25,10) == R(246,100)",
+    "R(4,100) + R(25,10) == R(254,100)",
+    "Abs(R(246,100) - R(5,2)) <= R(4,100)",
+    "Abs(R(254,100) - R(5,2)) <= R(4,100)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

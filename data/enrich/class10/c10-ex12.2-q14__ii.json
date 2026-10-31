@@ -1,0 +1,35 @@
+{
+ "item": "c10-ex12.2-q14",
+ "label": "ii",
+ "answer_ref": "$0.52$",
+ "steps": [
+  {
+   "math": "P(B) = 0.48",
+   "en": "First, write down the given probability of event $B$.",
+   "ur": "سب سے پہلے، دیے گئے واقعہ $B$ کا احتمال لکھیں۔",
+   "check": [
+    "R(48,100) == R(48,100)"
+   ]
+  },
+  {
+   "math": "P(\\overline{B}) = 1 - P(B)",
+   "en": "Recall the rule for the probability of the complement of an event.",
+   "ur": "کسی واقعہ کے متمم (complement) کے احتمال کا کلیہ استعمال کریں۔"
+  },
+  {
+   "math": "P(\\overline{B}) = 1 - 0.48",
+   "en": "Substitute the given value $P(B) = 0.48$ into the formula.",
+   "ur": "کلیہ میں دی گئی قیمت $P(B) = 0.48$ درج کریں۔"
+  },
+  {
+   "math": "P(\\overline{B}) = 0.52",
+   "en": "Subtract $0.48$ from $1$ to get the final answer.",
+   "ur": "حتمی جواب حاصل کرنے کے لیے $1$ میں سے $0.48$ تفریق کریں۔",
+   "check": [
+    "1 - R(48,100) == R(52,100)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

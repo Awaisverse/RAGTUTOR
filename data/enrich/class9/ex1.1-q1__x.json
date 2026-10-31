@@ -1,0 +1,53 @@
+{
+ "item": "ex1.1-q1",
+ "label": "x",
+ "answer_ref": "Rational",
+ "steps": [
+  {
+   "math": "(2-\\sqrt{2})(2+\\sqrt{2})",
+   "en": "We are given the expression $(2-\\sqrt{2})(2+\\sqrt{2})$ and need to determine whether it is a rational or irrational number.",
+   "ur": "ہمیں جملہ $(2-\\sqrt{2})(2+\\sqrt{2})$ دیا گیا ہے اور ہمیں یہ معلوم کرنا ہے کہ یہ ناطق عدد ہے یا غیر ناطق۔"
+  },
+  {
+   "math": "(a-b)(a+b) = a^2 - b^2",
+   "en": "First, we simplify the expression using the algebraic identity $(a-b)(a+b) = a^2 - b^2$, where $a = 2$ and $b = \\sqrt{2}$.",
+   "ur": "سب سے پہلے، ہم الجبری کلیہ $(a-b)(a+b) = a^2 - b^2$ استعمال کرتے ہوئے اس جملے کو مختصر کرتے ہیں، جہاں $a = 2$ اور $b = \\sqrt{2}$ ہے۔"
+  },
+  {
+   "math": "(2-\\sqrt{2})(2+\\sqrt{2}) = (2)^2 - (\\sqrt{2})^2",
+   "en": "Substitute the values of $a$ and $b$ into the formula.",
+   "ur": "کلیے میں $a$ اور $b$ کی قیمتیں درج کریں۔",
+   "check": [
+    "(2-sqrt(2))*(2+sqrt(2)) == 2**2 - (sqrt(2))**2"
+   ]
+  },
+  {
+   "math": "= 4 - 2",
+   "en": "Evaluate the squares: $(2)^2 = 4$ and $(\\sqrt{2})^2 = 2$.",
+   "ur": "مربع حل کریں: $(2)^2 = 4$ اور $(\\sqrt{2})^2 = 2$۔",
+   "check": [
+    "2**2 - (sqrt(2))**2 == 4 - 2"
+   ]
+  },
+  {
+   "math": "= 2",
+   "en": "Subtract the numbers to get the simplified result $2$.",
+   "ur": "اعداد کو تفریق کرنے سے مختصر جواب $2$ حاصل ہوتا ہے۔",
+   "check": [
+    "4 - 2 == 2"
+   ]
+  },
+  {
+   "math": "2 = \\frac{2}{1}",
+   "en": "Since $2$ can be written in the form $\\frac{p}{q}$ as $\\frac{2}{1}$ where $p, q \\in \\mathbb{Z}$ and $q \\neq 0$, the given expression is a rational number.",
+   "ur": "چونکہ $2$ کو $\\frac{p}{q}$ کی شکل میں $\\frac{2}{1}$ کے طور پر لکھا جا سکتا ہے جہاں $p, q \\in \\mathbb{Z}$ اور $q \\neq 0$ ہے، اس لیے دیا گیا جملہ ایک ناطق عدد (Rational number) ہے۔",
+   "check": [
+    "2 == R(2,1)",
+    "(2-sqrt(2))*(2+sqrt(2)) == 2",
+    "2**2 - sqrt(2)**2 == 2"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

@@ -16,20 +16,40 @@
      "prompt": "$3x-1=2x^2$",
      "steps": [
       {
-       "math": "3 x - 1 = 2 x^{2}",
-       "en": "Write the given equation.",
-       "ur": "دی گئی مساوات لکھیں۔"
+       "math": "3x - 1 = 2x^{2}",
+       "en": "Write down the given quadratic equation.",
+       "ur": "دی گئی دو درجی مساوات لکھیں۔",
+       "check": [
+        "3*x - 1 == 3*x - 1"
+       ]
+      },
+      {
+       "math": "ax^{2} + bx + c = 0",
+       "en": "Recall that the standard form of a quadratic equation is $ax^{2} + bx + c = 0$, where $a \\ne 0$.",
+       "ur": "یاد رکھیں کہ دو درجی مساوات کی معیاری شکل $ax^{2} + bx + c = 0$ ہوتی ہے، جہاں $a \\ne 0$۔",
+       "check": [
+        "a*x**2 + b*x + c == a*x**2 + b*x + c"
+       ]
+      },
+      {
+       "math": "0 = 2x^{2} - 3x + 1",
+       "en": "To make the coefficient of $x^{2}$ positive, shift the terms $3x$ and $-1$ from the left-hand side to the right-hand side by changing their signs.",
+       "ur": "$x^{2}$ کے عددی سر کو مثبت رکھنے کے لیے، بائیں طرف کے ارکان $3x$ اور $-1$ کو ان کی علامتیں تبدیل کر کے دائیں طرف لے جائیں۔",
+       "check": [
+        "(0) - (2*x**2 - 3*x + 1) == (3*x - 1) - (2*x**2)"
+       ]
       },
       {
        "math": "2 x^{2} - 3 x + 1 = 0",
-       "en": "Move all the terms to one side.",
-       "ur": "تمام ارکان کو ایک طرف لے جائیں۔",
+       "en": "Interchange the sides to write the equation in the standard quadratic form.",
+       "ur": "مساوات کو معیاری دو درجی شکل میں لکھنے کے لیے اطراف کو آپس میں بدل دیں۔",
        "check": [
         "(2*x**2 - 3*x + 1) - (0) == (-1)*((3*x - 1) - (2*x**2))"
        ]
       }
      ],
      "answer": "$2 x^{2} - 3 x + 1 = 0$",
+     "enriched": true,
      "book_key": "2x^2-3x+1=0"
     },
     {
@@ -74,20 +94,34 @@
      "prompt": "$2x^2-4x=4x+7$",
      "steps": [
       {
-       "math": "2 x^{2} - 4 x = 4 x + 7",
-       "en": "Write the given equation.",
-       "ur": "دی گئی مساوات لکھیں۔"
+       "math": "",
+       "en": "Write the given equation $2x^2 - 4x = 4x + 7$.",
+       "ur": "دی گئی مساوات $2x^2 - 4x = 4x + 7$ لکھیں۔"
+      },
+      {
+       "math": "",
+       "en": "Recall that the standard form of a quadratic equation is $ax^2 + bx + c = 0$, where $a \\ne 0$. To convert the given equation into standard form, we need to move all terms from the right-hand side to the left-hand side so that the right-hand side becomes $0$.",
+       "ur": "یاد رکھیں کہ دو درجی مساوات کی معیاری شکل $ax^2 + bx + c = 0$ ہوتی ہے، جہاں $a \\ne 0$۔ دی گئی مساوات کو معیاری شکل میں تبدیل کرنے کے لیے، ہمیں دائیں طرف کے تمام ارکان کو بائیں طرف منتقل کرنا ہوگا تاکہ دائیں طرف $0$ رہ جائے۔"
+      },
+      {
+       "math": "2 x^{2} - 4 x - 4 x - 7 = 0",
+       "en": "Subtract $4x$ and $7$ from both sides (or shift $4x + 7$ to the left-hand side by changing their signs).",
+       "ur": "دونوں طرف سے $4x$ اور $7$ کو تفریق کریں (یا $4x + 7$ کی علامتیں تبدیل کر کے بائیں طرف منتقل کریں)۔",
+       "check": [
+        "(2*x**2 - 4*x - 4*x - 7) - (0) == (2*x**2 - 4*x) - (4*x + 7)"
+       ]
       },
       {
        "math": "2 x^{2} - 8 x - 7 = 0",
-       "en": "Move all the terms to one side.",
-       "ur": "تمام ارکان کو ایک طرف لے جائیں۔",
+       "en": "Combine the like terms $-4x$ and $-4x$ to get $-8x$. This is the required standard form of the quadratic equation.",
+       "ur": "ایک جیسے ارکان $-4x$ اور $-4x$ کو ملا کر $-8x$ حاصل کریں۔ یہ دو درجی مساوات کی مطلوبہ معیاری شکل ہے۔",
        "check": [
         "(2*x**2 - 8*x - 7) - (0) == (2*x**2 - 4*x) - (4*x + 7)"
        ]
       }
      ],
      "answer": "$2 x^{2} - 8 x - 7 = 0$",
+     "enriched": true,
      "book_key": "2x^2-8x-7=0"
     },
     {
@@ -11580,20 +11614,44 @@
      "prompt": "",
      "steps": [
       {
-       "math": "\\alpha + \\beta = -\\frac{3}{2},\\quad \\alpha\\beta = \\frac{m}{2}",
-       "en": "Sum $= -\\frac{b}{a}$, product $= \\frac{c}{a}$ with $a = 2,\\ b = 3,\\ c = m$.",
-       "ur": "مجموعہ $= -\\frac{b}{a}$، حاصل ضرب $= \\frac{c}{a}$ جہاں $a = 2,\\ b = 3,\\ c = m$۔"
+       "math": "2x^2 + 3x + m = 0",
+       "en": "Write the given quadratic equation and compare it with the standard form $ax^2 + bx + c = 0$ to find the coefficients: $a = 2$, $b = 3$, and $c = m$.",
+       "ur": "دی گئی دو درجی مساوات لکھیں اور اس کا معیاری شکل $ax^2 + bx + c = 0$ سے موازنہ کر کے عددی سر معلوم کریں: $a = 2$، $b = 3$، اور $c = m$۔"
       },
       {
-       "math": "-\\frac{3}{2} = 2\\cdot\\frac{m}{2} \\Rightarrow m = -\\frac{3}{2}",
-       "en": "Sum = double the product.",
-       "ur": "مجموعہ = حاصل ضرب کا دگنا۔",
+       "math": "\\text{Sum of roots } (S) = \\alpha + \\beta = -\\frac{b}{a} = -\\frac{3}{2}",
+       "en": "Let $\\alpha$ and $\\beta$ be the roots of the equation. First, find the sum of the roots using the formula $-\\frac{b}{a}$.",
+       "ur": "فرض کریں کہ $\\alpha$ اور $\\beta$ مساوات کے روٹس ہیں۔ سب سے پہلے، فارمولا $-\\frac{b}{a}$ استعمال کرتے ہوئے روٹس کا مجموعہ معلوم کریں۔",
+       "check": [
+        "-3/2 == -R(3,2)"
+       ]
+      },
+      {
+       "math": "\\text{Product of roots } (P) = \\alpha\\beta = \\frac{c}{a} = \\frac{m}{2}",
+       "en": "Next, find the product of the roots using the formula $\\frac{c}{a}$.",
+       "ur": "اس کے بعد، فارمولا $\\frac{c}{a}$ استعمال کرتے ہوئے روٹس کا حاصل ضرب معلوم کریں۔"
+      },
+      {
+       "math": "\\alpha + \\beta = 2(\\alpha\\beta)",
+       "en": "According to the given condition, the sum of the roots is equal to double the product of the roots.",
+       "ur": "دی گئی شرط کے مطابق، روٹس کا مجموعہ روٹس کے حاصل ضرب کے دگنے کے برابر ہے۔"
+      },
+      {
+       "math": "-\\frac{3}{2} = 2 \\left(\\frac{m}{2}\\right)",
+       "en": "Substitute the values of the sum ($\\alpha + \\beta$) and the product ($\\alpha\\beta$) into the condition.",
+       "ur": "شرط میں مجموعہ ($\\alpha + \\beta$) اور حاصل ضرب ($\\alpha\\beta$) کی قیمتیں درج کریں۔"
+      },
+      {
+       "math": "m = -\\frac{3}{2}",
+       "en": "Simplify the right-hand side by cancelling out $2$ in the numerator and denominator to get the final value of $m$.",
+       "ur": "دائیں طرف شمار کنندہ اور مخرج میں سے $2$ کو منسوخ کر کے مختصر کریں تاکہ $m$ کی حتمی قیمت حاصل ہو سکے۔",
        "check": [
         "-R(3,2) == 2*(R(-3,2)/2)"
        ]
       }
      ],
      "answer": "$m = -\\frac{3}{2}$",
+     "enriched": true,
      "book_key": "m=-\\frac{3}{2}"
     }
    ],
@@ -11684,15 +11742,37 @@
      "prompt": "$\\alpha=\\frac{1}{\\beta}$",
      "steps": [
       {
-       "math": "\\alpha = \\frac{1}{\\beta} \\Rightarrow \\alpha\\beta = 1 \\Rightarrow q = 1",
-       "en": "Reciprocal roots multiply to 1, and $\\alpha\\beta = q$.",
-       "ur": "معکوس جذروں کا حاصل ضرب 1 ہے، اور $\\alpha\\beta = q$۔",
+       "math": "",
+       "en": "Consider the given quadratic equation $x^2 + px + q = 0$. Comparing it with the standard form $ax^2 + bx + c = 0$, we have $a = 1$, $b = p$, and $c = q$.",
+       "ur": "دی گئی دو درجی مساوات $x^2 + px + q = 0$ پر غور کریں۔ اس کا معیاری شکل $ax^2 + bx + c = 0$ سے موازنہ کرنے پر، ہمیں $a = 1$، $b = p$، اور $c = q$ حاصل ہوتا ہے۔"
+      },
+      {
+       "math": "\\alpha\\beta = \\frac{c}{a} = \\frac{q}{1} = q",
+       "en": "Using the formula for the product of the roots $\\alpha$ and $\\beta$ of a quadratic equation:",
+       "ur": "دو درجی مساوات کے روٹس $\\alpha$ اور $\\beta$ کے حاصل ضرب کا فارمولا استعمال کرتے ہوئے:",
+       "check": [
+        "q/1 == q"
+       ]
+      },
+      {
+       "math": "\\alpha\\beta = 1",
+       "en": "According to the given condition, the roots are reciprocals of each other, i.e., $\\alpha = \\frac{1}{\\beta}$. Multiplying both sides by $\\beta$ gives:",
+       "ur": "دی گئی شرط کے مطابق، روٹس ایک دوسرے کا معکوس ہیں، یعنی $\\alpha = \\frac{1}{\\beta}$۔ دونوں طرف $\\beta$ سے ضرب دینے پر:",
+       "check": [
+        "(1/be)*be == 1"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Substituting the value of the product of the roots $\\alpha\\beta = q$ into the above relation $\\alpha\\beta = 1$, we get the required condition $q = 1$.",
+       "ur": "روٹس کے حاصل ضرب کی قیمت $\\alpha\\beta = q$ کو مندرجہ بالا تعلق $\\alpha\\beta = 1$ میں درج کرنے سے، ہمیں مطلوبہ شرط $q = 1$ حاصل ہوتی ہے۔",
        "check": [
         "be*(1/be) == 1"
        ]
       }
      ],
      "answer": "$q = 1$",
+     "enriched": true,
      "book_key": "q=1"
     }
    ],
@@ -12755,20 +12835,34 @@
      "prompt": "Make $P$ the subject of the formula.",
      "steps": [
       {
-       "math": "I = PRT",
-       "en": "Write the formula.",
-       "ur": "کلیہ لکھیں۔"
+       "math": "I = P R T",
+       "en": "Write down the given formula for simple interest, where we need to make $P$ the subject of the formula.",
+       "ur": "سادہ سود کا دیا گیا کلیہ لکھیں، جہاں ہمیں $P$ کو کلیہ کا موضوع (subject) بنانا ہے۔"
+      },
+      {
+       "math": "P R T = I",
+       "en": "Swap the left-hand side and the right-hand side so that the term containing $P$ is on the left.",
+       "ur": "بائیں اور دائیں اطراف کو آپس میں بدلیں تاکہ $P$ والی رقم بائیں طرف آ جائے۔"
+      },
+      {
+       "math": "\\frac{P R T}{R T} = \\frac{I}{R T}",
+       "en": "Since $R$ and $T$ are multiplied with $P$, divide both sides of the equation by $RT$ to isolate $P$.",
+       "ur": "چونکہ $R$ اور $T$ متغیر $P$ کے ساتھ ضرب ہو رہے ہیں، اس لیے $P$ کو الگ کرنے کے لیے مساوات کے دونوں اطراف کو $RT$ سے تقسیم کریں۔",
+       "check": [
+        "(P*Rr*Tt)/(Rr*Tt) == P"
+       ]
       },
       {
        "math": "P = \\frac{I}{RT}",
-       "en": "Divide both sides by $RT$.",
-       "ur": "دونوں اطراف کو $RT$ سے تقسیم کریں۔",
+       "en": "Simplify the left-hand side by cancelling out $RT$. Thus, $P$ is now the subject of the formula.",
+       "ur": "بائیں طرف سے $RT$ کو کاٹ کر مختصر کریں۔ اس طرح، اب $P$ کلیہ کا موضوع بن گیا ہے۔",
        "check": [
         "(Ii/(Rr*Tt))*Rr*Tt == Ii"
        ]
       }
      ],
      "answer": "$P = \\frac{I}{RT}$",
+     "enriched": true,
      "book_key": "P=\\frac{I}{RT}"
     },
     {
@@ -12777,19 +12871,36 @@
      "steps": [
       {
        "math": "I = PRT",
-       "en": "Write the formula.",
-       "ur": "کلیہ لکھیں۔"
+       "en": "Write down the given formula for simple interest.",
+       "ur": "سادہ سود معلوم کرنے کا دیا گیا کلیہ لکھیں۔"
+      },
+      {
+       "math": "\\frac{I}{PR} = \\frac{PRT}{PR}",
+       "en": "To make $T$ the subject of the formula, we need to isolate $T$. Since $P$ and $R$ are multiplied with $T$, divide both sides of the equation by $PR$.",
+       "ur": "$T$ کو کلیہ کا موضوع بنانے کے لیے، ہمیں $T$ کو الگ کرنا ہوگا۔ چونکہ $P$ اور $R$ متغیر $T$ کے ساتھ ضرب ہو رہے ہیں، اس لیے مساوات کے دونوں اطراف کو $PR$ سے تقسیم کریں۔",
+       "check": [
+        "(Pp*Rr*Tt)/(Pp*Rr) == Tt"
+       ]
+      },
+      {
+       "math": "\\frac{I}{PR} = T",
+       "en": "Cancel out $PR$ from the numerator and denominator on the right-hand side.",
+       "ur": "دائیں جانب شمار کنندہ اور مخرج سے $PR$ کو کاٹ دیں۔",
+       "check": [
+        "Pp*Rr*(Ii/(Pp*Rr)) == Ii"
+       ]
       },
       {
        "math": "T = \\frac{I}{PR}",
-       "en": "Divide both sides by $PR$.",
-       "ur": "دونوں اطراف کو $PR$ سے تقسیم کریں۔",
+       "en": "Rewrite the equation with the subject $T$ on the left-hand side to get the final answer.",
+       "ur": "حتمی جواب حاصل کرنے کے لیے موضوع $T$ کو بائیں جانب رکھتے ہوئے مساوات کو دوبارہ لکھیں۔",
        "check": [
         "Pp*Rr*(Ii/(Pp*Rr)) == Ii"
        ]
       }
      ],
      "answer": "$T = \\frac{I}{PR}$",
+     "enriched": true,
      "book_key": "T=\\frac{I}{PR}"
     }
    ],
@@ -12843,20 +12954,45 @@
      "prompt": "",
      "steps": [
       {
+       "math": "",
+       "en": "We are given the formula for the volume of a cylinder, $V = \\pi r^2 h$. We need to make '$h$' the subject of the formula, which means isolating $h$ on one side of the equation.",
+       "ur": "ہمیں ایک اسطوانے (سلنڈر) کے حجم کا کلیہ $V = \\pi r^2 h$ دیا گیا ہے۔ ہمیں '$h$' کو کلیے کا موضوع بنانا ہے، جس کا مطلب ہے کہ مساوات کے ایک طرف $h$ کو اکیلا کرنا ہے۔"
+      },
+      {
        "math": "V = \\pi r^2 h",
-       "en": "Write the formula.",
-       "ur": "کلیہ لکھیں۔"
+       "en": "Write down the given formula.",
+       "ur": "دیا گیا کلیہ لکھیں۔",
+       "check": [
+        "pi*r**2*h == pi*r**2*h"
+       ]
+      },
+      {
+       "math": "\\frac{V}{\\pi r^2} = \\frac{\\pi r^2 h}{\\pi r^2}",
+       "en": "Since $\\pi r^2$ is multiplied with $h$, we divide both sides of the equation by $\\pi r^2$ to isolate $h$.",
+       "ur": "چونکہ $\\pi r^2$، $h$ کے ساتھ ضرب ہو رہا ہے، اس لیے $h$ کو الگ کرنے کے لیے ہم مساوات کے دونوں اطراف کو $\\pi r^2$ سے تقسیم کرتے ہیں۔",
+       "check": [
+        "(pi*r**2*h)/(pi*r**2) == h"
+       ]
+      },
+      {
+       "math": "\\frac{V}{\\pi r^2} = h",
+       "en": "Cancel out the common factor $\\pi r^2$ from the numerator and denominator on the right-hand side.",
+       "ur": "دائیں جانب شمار کنندہ اور مخرج سے مشترک جزو ضربی $\\pi r^2$ کو کاٹ دیں۔",
+       "check": [
+        "(pi*r**2*h)/(pi*r**2) == h"
+       ]
       },
       {
        "math": "h = \\frac{V}{\\pi r^2}",
-       "en": "Divide both sides by $\\pi r^2$.",
-       "ur": "دونوں اطراف کو $\\pi r^2$ سے تقسیم کریں۔",
+       "en": "Rewrite the equation with the subject $h$ on the left-hand side to state the final answer.",
+       "ur": "حتمی جواب لکھنے کے لیے موضوع $h$ کو بائیں جانب رکھتے ہوئے مساوات کو دوبارہ ترتیب دیں۔",
        "check": [
         "pi*r**2*(Vv/(pi*r**2)) == Vv"
        ]
       }
      ],
      "answer": "$h = \\frac{V}{\\pi r^2}$",
+     "enriched": true,
      "book_key": "h=\\frac{V}{\\pi r^2}"
     }
    ],
@@ -12984,19 +13120,39 @@
      "steps": [
       {
        "math": "y^2 = 4ax",
-       "en": "Write the equation.",
-       "ur": "مساوات لکھیں۔"
+       "en": "Write down the given equation of the parabola. We need to make $x$ the subject of this equation.",
+       "ur": "دی گئی مکافی (parabola) کی مساوات لکھیں۔ ہمیں اس مساوات میں $x$ کو موضوع (subject) بنانا ہے۔",
+       "check": [
+        "y**2 == y**2"
+       ]
+      },
+      {
+       "math": "4ax = y^2",
+       "en": "Interchange the left-hand side and the right-hand side so that the term containing $x$ is on the left.",
+       "ur": "بائیں اور دائیں اطراف کو آپس میں بدل دیں تاکہ $x$ والی رقم بائیں طرف آ جائے۔",
+       "check": [
+        "4*a*x == 4*a*x"
+       ]
+      },
+      {
+       "math": "\\frac{4ax}{4a} = \\frac{y^2}{4a}",
+       "en": "To isolate $x$, divide both sides of the equation by $4a$ (assuming $a \\neq 0$).",
+       "ur": "$x$ کو الگ کرنے کے لیے، مساوات کے دونوں اطراف کو $4a$ سے تقسیم کریں (بشرطیکہ $a \\neq 0$)۔",
+       "check": [
+        "(4*a*x)/(4*a) == x"
+       ]
       },
       {
        "math": "x = \\frac{y^2}{4a}",
-       "en": "Divide both sides by $4a$.",
-       "ur": "دونوں اطراف کو $4a$ سے تقسیم کریں۔",
+       "en": "Simplify the left-hand side by cancelling out $4a$. Thus, $x$ is now the subject of the equation.",
+       "ur": "بائیں طرف $4a$ کو منسوخ کر کے مختصر کریں۔ اس طرح، اب $x$ مساوات کا موضوع بن گیا ہے۔",
        "check": [
         "4*a*(y**2/(4*a)) == y**2"
        ]
       }
      ],
      "answer": "$x = \\frac{y^2}{4a}$",
+     "enriched": true,
      "book_key": "x=\\frac{y^2}{4a}"
     }
    ],
@@ -13015,19 +13171,36 @@
      "steps": [
       {
        "math": "P = S - C",
-       "en": "Write the equation.",
-       "ur": "مساوات لکھیں۔"
+       "en": "Write down the given equation relating profit $P$, selling price $S$, and cost price $C$.",
+       "ur": "دی گئی مساوات لکھیں جو منافع $P$، قیمت فروخت $S$، اور قیمت خرید $C$ کے درمیان تعلق ظاہر کرتی ہے۔"
+      },
+      {
+       "math": "P + C = S - C + C",
+       "en": "To make $S$ the subject of the equation, we need to isolate $S$. Add $C$ to both sides of the equation.",
+       "ur": "مساوات میں $S$ کو موضوع بنانے کے لیے، ہمیں $S$ کو الگ کرنا ہوگا۔ مساوات کے دونوں اطراف میں $C$ جمع کریں۔",
+       "check": [
+        "(Ss - Cc) + Cc == Ss"
+       ]
+      },
+      {
+       "math": "P + C = S",
+       "en": "Simplify the right-hand side since $-C + C = 0$.",
+       "ur": "دائیں طرف کو مختصر کریں کیونکہ $-C + C = 0$ ہوتا ہے۔",
+       "check": [
+        "-Cc + Cc == 0"
+       ]
       },
       {
        "math": "S = P + C",
-       "en": "Add $C$ to both sides.",
-       "ur": "دونوں اطراف میں $C$ جمع کریں۔",
+       "en": "Rewrite the equation with $S$ on the left-hand side to clearly show $S$ as the subject.",
+       "ur": "$S$ کو واضح طور پر موضوع دکھانے کے لیے مساوات کو بائیں طرف $S$ رکھ کر دوبارہ لکھیں۔",
        "check": [
         "(Pp + Cc) - Cc == Pp"
        ]
       }
      ],
      "answer": "$S = P + C$",
+     "enriched": true,
      "book_key": "S=P+C"
     }
    ],
@@ -13355,17 +13528,33 @@
      "prompt": "The type of the equation $2x^2-x+1=0$ is: (a) $\\text{quadratic}$ (b) $\\text{linear}$ (c) $\\text{third degree}$ (d) $\\text{pure quadratic}$",
      "steps": [
       {
-       "math": "",
-       "en": "The highest power of $x$ is 2 and there is an $x$ term, so it is a quadratic (not pure).",
-       "ur": "x کی سب سے بڑی طاقت 2 ہے اور $x$ والا رکن بھی ہے، اس لیے یہ دو درجی ہے۔"
+       "math": "2x^2 - x + 1 = 0",
+       "en": "Write down the given equation to identify its type.",
+       "ur": "دی گئی مساوات کو اس کی قسم معلوم کرنے کے لیے لکھیں۔"
+      },
+      {
+       "math": "ax^2 + bx + c = 0, \\quad a \\neq 0",
+       "en": "Recall the standard form of a quadratic equation, where the highest power (degree) of the variable $x$ is $2$.",
+       "ur": "دو درجی مساوات کی معیاری شکل کو یاد کریں، جہاں متغیر $x$ کی سب سے بڑی طاقت (درجہ) $2$ ہوتی ہے۔"
+      },
+      {
+       "math": "a = 2, \\quad b = -1, \\quad c = 1",
+       "en": "Comparing the given equation with the standard form, we get the coefficients.",
+       "ur": "دی گئی مساوات کا معیاری شکل سے موازنہ کرنے سے، ہمیں عددی سر ملتے ہیں۔"
+      },
+      {
+       "math": "a = 2 \\neq 0 \\quad \\text{and} \\quad b = -1 \\neq 0",
+       "en": "Since the highest power of $x$ is $2$ ($a \\neq 0$) and the linear term is also present ($b \\neq 0$), this is a standard quadratic equation and not a pure quadratic equation.",
+       "ur": "چونکہ $x$ کی سب سے بڑی طاقت $2$ ہے ($a \\neq 0$) اور یک درجی رکن بھی موجود ہے ($b \\neq 0$)، اس لیے یہ ایک معیاری دو درجی مساوات ہے، نہ کہ خالص دو درجی مساوات۔"
       },
       {
        "math": "\\text{Answer: (a) } \\text{quadratic}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Therefore, the correct option is (a).",
+       "ur": "لہذا، درست جواب (a) ہے۔"
       }
      ],
      "answer": "(a) $\\text{quadratic}$",
+     "enriched": true,
      "book_key": "(a) quadratic"
     },
     {
@@ -13373,20 +13562,54 @@
      "prompt": "What is the discriminant of $x^2+5x-5=0$? (a) $-20$ (b) $20$ (c) $25$ (d) $45$",
      "steps": [
       {
-       "math": "D = 5^2 - 4(1)(-5) = 25 + 20 = 45",
-       "en": "$D = b^2 - 4ac$.",
-       "ur": "$D = b^2 - 4ac$۔",
+       "math": "x^2 + 5x - 5 = 0",
+       "en": "Write the given quadratic equation and compare it with the standard form $ax^2 + bx + c = 0$.",
+       "ur": "دی گئی دو درجی مساوات لکھیں اور اس کا معیاری شکل $ax^2 + bx + c = 0$ سے موازنہ کریں۔"
+      },
+      {
+       "math": "a = 1, \\quad b = 5, \\quad c = -5",
+       "en": "Identify the values of the coefficients $a$, $b$, and the constant $c$ from the equation.",
+       "ur": "مساوات سے عددی سروں $a$، $b$ اور مستقل مقدار $c$ کی قیمتیں معلوم کریں۔",
+       "check": [
+        "1 == 1",
+        "5 == 5",
+        "-5 == -5"
+       ]
+      },
+      {
+       "math": "\\text{Discriminant } (D) = b^2 - 4ac",
+       "en": "Write the formula for the discriminant of a quadratic equation.",
+       "ur": "دو درجی مساوات کے فرق کنندہ (discriminant) کا فارمولا لکھیں۔"
+      },
+      {
+       "math": "D = (5)^2 - 4(1)(-5)",
+       "en": "Substitute the values of $a = 1$, $b = 5$, and $c = -5$ into the formula.",
+       "ur": "فارمولے میں $a = 1$، $b = 5$ اور $c = -5$ کی قیمتیں درج کریں۔",
        "check": [
         "5**2 - 4*1*(-5) == 45"
        ]
       },
       {
+       "math": "D = 25 + 20 = 45",
+       "en": "Simplify the expression by squaring $5$ and multiplying the remaining terms, then add them.",
+       "ur": "$5$ کا مربع لے کر اور باقی رقوم کو ضرب دے کر حل کریں، پھر انہیں جمع کریں۔",
+       "check": [
+        "5**2 == 25",
+        "-4*1*(-5) == 20",
+        "25 + 20 == 45"
+       ]
+      },
+      {
        "math": "\\text{Answer: (d) } 45",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Thus, the discriminant is $45$, which matches option (d).",
+       "ur": "پس فرق کنندہ $45$ ہے، جو کہ آپشن (d) کے مطابق ہے۔",
+       "check": [
+        "5**2 - 4*1*(-5) == 45"
+       ]
       }
      ],
      "answer": "(d) $45$",
+     "enriched": true,
      "book_key": "(d) 45"
     },
     {
@@ -13394,21 +13617,64 @@
      "prompt": "The solution set of $3x^2-9=0$ is: (a) $\\{3\\}$ (b) $\\{\\pm 3\\}$ (c) $\\{\\pm\\sqrt{3}\\}$ (d) $\\{\\sqrt{3}\\}$",
      "steps": [
       {
-       "math": "3x^2 = 9 \\Rightarrow x^2 = 3 \\Rightarrow x = \\pm\\sqrt{3}",
-       "en": "Solve for $x^2$ and take both roots.",
-       "ur": "$x^2$ معلوم کر کے دونوں جذر لیں۔",
+       "math": "3x^2 - 9 = 0",
+       "en": "Write down the given pure quadratic equation to find its solution set.",
+       "ur": "مطلوبہ حل سیٹ معلوم کرنے کے لیے دی گئی خالص دو درجی مساوات لکھیں۔"
+      },
+      {
+       "math": "3x^2 = 9",
+       "en": "Add $9$ to both sides of the equation to isolate the $x^2$ term.",
+       "ur": "$x^2$ والی رقم کو الگ کرنے کے لیے مساوات کے دونوں اطراف میں $9$ جمع کریں۔",
+       "check": [
+        "3*sqrt(3)**2 == 9",
+        "3*(-sqrt(3))**2 == 9"
+       ]
+      },
+      {
+       "math": "x^2 = \\frac{9}{3}",
+       "en": "Divide both sides of the equation by $3$.",
+       "ur": "مساوات کے دونوں اطراف کو $3$ پر تقسیم کریں۔",
+       "check": [
+        "sqrt(3)**2 == R(9, 3)",
+        "(-sqrt(3))**2 == R(9, 3)"
+       ]
+      },
+      {
+       "math": "x^2 = 3",
+       "en": "Simplify the fraction on the right-hand side.",
+       "ur": "دائیں طرف موجود کسر کو مختصر کریں۔",
+       "check": [
+        "R(9, 3) == 3",
+        "sqrt(3)**2 == 3",
+        "(-sqrt(3))**2 == 3"
+       ]
+      },
+      {
+       "math": "\\sqrt{x^2} = \\pm\\sqrt{3} \\implies x = \\pm\\sqrt{3}",
+       "en": "Take the square root on both sides, remembering to include both the positive and negative signs.",
+       "ur": "دونوں اطراف کا جزر المربع لیں اور مثبت و منفی دونوں علامات لگانا یاد رکھیں۔",
        "check": [
         "3*(sqrt(3))**2 - 9 == 0",
         "3*(-sqrt(3))**2 - 9 == 0"
        ]
       },
       {
+       "math": "\\text{Solution Set} = \\{\\pm\\sqrt{3}\\}",
+       "en": "Write the values of $x$ in the form of a solution set.",
+       "ur": "$x$ کی قیمتوں کو حل سیٹ کی صورت میں لکھیں۔"
+      },
+      {
        "math": "\\text{Answer: (c) } \\{\\pm\\sqrt{3}\\}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Compare the result with the given options. Option (c) is the correct answer.",
+       "ur": "نتیجے کا دیے گئے ممکنہ جوابات سے موازنہ کریں۔ آپشن (c) درست جواب ہے۔",
+       "check": [
+        "3*(sqrt(3))**2 - 9 == 0",
+        "3*(-sqrt(3))**2 - 9 == 0"
+       ]
       }
      ],
      "answer": "(c) $\\{\\pm\\sqrt{3}\\}$",
+     "enriched": true,
      "book_key": "(c) \\{\\pm\\sqrt{3}\\}"
     },
     {
@@ -13416,20 +13682,48 @@
      "prompt": "Sum of the roots of $3x^2+5x-12=0$ is: (a) $\\frac{5}{3}$ (b) $-\\frac{5}{3}$ (c) $\\frac{12}{3}$ (d) $\\frac{3}{5}$",
      "steps": [
       {
-       "math": "\\alpha + \\beta = -\\frac{b}{a} = -\\frac{5}{3}",
-       "en": "Sum of roots $= -\\frac{b}{a}$.",
-       "ur": "جذروں کا مجموعہ $= -\\frac{b}{a}$۔",
+       "math": "3x^2 + 5x - 12 = 0",
+       "en": "Write down the given quadratic equation.",
+       "ur": "دی گئی دو درجی مساوات لکھیں۔",
        "check": [
-        "-R(5,3) == -5/3"
+        "3 == 3"
+       ]
+      },
+      {
+       "math": "a = 3, \\quad b = 5, \\quad c = -12",
+       "en": "Compare the equation with the standard form $ax^2 + bx + c = 0$ to identify the coefficients.",
+       "ur": "عددی سروں کی شناخت کے لیے مساوات کا معیاری شکل $ax^2 + bx + c = 0$ سے موازنہ کریں۔",
+       "check": [
+        "3 == 3",
+        "5 == 5",
+        "-12 == -12"
+       ]
+      },
+      {
+       "math": "\\text{Sum of the roots } (S) = \\alpha + \\beta = -\\frac{b}{a}",
+       "en": "State the formula for the sum of the roots of a quadratic equation.",
+       "ur": "دو درجی مساوات کے روٹس کے مجموعے کا فارمولا لکھیں۔"
+      },
+      {
+       "math": "\\alpha + \\beta = -\\frac{5}{3}",
+       "en": "Substitute the values $a = 3$ and $b = 5$ into the formula.",
+       "ur": "فارمولے میں $a = 3$ اور $b = 5$ کی قیمتیں درج کریں۔",
+       "check": [
+        "-R(5, 3) == -5/3"
        ]
       },
       {
        "math": "\\text{Answer: (b) } -\\frac{5}{3}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "The calculated sum matches option (b).",
+       "ur": "معلوم کیا گیا مجموعہ آپشن (b) سے مطابقت رکھتا ہے۔",
+       "check": [
+        "-R(5, 3) == -5/3",
+        "-R(5,3) == -5/3"
+       ]
       }
      ],
      "answer": "(b) $-\\frac{5}{3}$",
+     "enriched": true,
      "book_key": "(b) -\\frac{5}{3}"
     },
     {
@@ -13437,20 +13731,45 @@
      "prompt": "Product of the roots of $3x^2+5x-12=0$ is: (a) $-4$ (b) $3$ (c) $4$ (d) $5$",
      "steps": [
       {
-       "math": "\\alpha\\beta = \\frac{c}{a} = \\frac{-12}{3} = -4",
-       "en": "Product of roots $= \\frac{c}{a}$.",
-       "ur": "جذروں کا حاصل ضرب $= \\frac{c}{a}$۔",
+       "math": "",
+       "en": "Compare the given quadratic equation $3x^2+5x-12=0$ with the standard form $ax^2+bx+c=0$ to identify the coefficients.",
+       "ur": "دی گئی دو درجی مساوات $3x^2+5x-12=0$ کا معیاری شکل $ax^2+bx+c=0$ سے موازنہ کر کے عددی سر معلوم کریں۔"
+      },
+      {
+       "math": "a = 3, \\quad b = 5, \\quad c = -12",
+       "en": "Write down the values of $a$, $b$, and $c$.",
+       "ur": "$a$، $b$ اور $c$ کی قیمتیں لکھیں۔",
+       "check": [
+        "3 == 3",
+        "5 == 5",
+        "-12 == -12"
+       ]
+      },
+      {
+       "math": "\\text{Product of roots} = \\alpha\\beta = \\frac{c}{a}",
+       "en": "Recall the formula for the product of the roots of a quadratic equation.",
+       "ur": "دو درجی مساوات کے روٹس کے حاصل ضرب کا فارمولا لکھیں۔"
+      },
+      {
+       "math": "\\alpha\\beta = \\frac{-12}{3} = -4",
+       "en": "Substitute the values of $c = -12$ and $a = 3$ into the formula and simplify.",
+       "ur": "فارمولے میں $c = -12$ اور $a = 3$ کی قیمتیں درج کریں اور مختصر کریں۔",
        "check": [
         "-12/3 == -4"
        ]
       },
       {
        "math": "\\text{Answer: (a) } -4",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "The product of the roots is $-4$, which matches option (a).",
+       "ur": "روٹس کا حاصل ضرب $-4$ ہے، جو آپشن (a) سے مطابقت رکھتا ہے۔",
+       "check": [
+        "-4 == -4",
+        "-12/3 == -4"
+       ]
       }
      ],
      "answer": "(a) $-4$",
+     "enriched": true,
      "book_key": "(a) -4"
     },
     {
@@ -13458,21 +13777,45 @@
      "prompt": "What are the roots of $(x-3)(x+3)=0$? (a) $3, -3$ (b) $3, 3$ (c) $-3, -3$ (d) $9, 0$",
      "steps": [
       {
-       "math": "x - 3 = 0 \\text{ or } x + 3 = 0 \\Rightarrow x = 3, -3",
-       "en": "Put each factor equal to 0.",
-       "ur": "ہر جزو کو 0 کے برابر رکھیں۔",
+       "math": "",
+       "en": "We are given the quadratic equation $(x - 3)(x + 3) = 0$ in factored form, and we need to find its roots (the values of $x$ that satisfy the equation).",
+       "ur": "ہمیں دو درجی مساوات $(x - 3)(x + 3) = 0$ اجزائے ضربی کی شکل میں دی گئی ہے، اور ہمیں اس کے روٹس (یعنی $x$ کی وہ قیمتیں جو مساوات کو درست ثابت کریں) معلوم کرنے ہیں۔"
+      },
+      {
+       "math": "",
+       "en": "According to the zero-product property, if the product of two factors is equal to $0$, then at least one of the factors must be equal to $0$. Therefore, we set both $(x - 3)$ and $(x + 3)$ equal to $0$.",
+       "ur": "ضربی خاصیتِ صفر کے مطابق، اگر دو اجزاء کا حاصل ضرب $0$ کے برابر ہو تو ان میں سے کم از کم ایک جزو لازمی $0$ کے برابر ہوتا ہے۔ اس لیے ہم $(x - 3)$ اور $(x + 3)$ دونوں کو الگ الگ $0$ کے برابر رکھتے ہیں۔"
+      },
+      {
+       "math": "x - 3 = 0 \\implies x = 3",
+       "en": "Put the first factor equal to $0$ and add $3$ to both sides to get the first root.",
+       "ur": "پہلے جزو کو $0$ کے برابر رکھیں اور پہلا روٹ حاصل کرنے کے لیے دونوں طرف $3$ جمع کریں۔",
        "check": [
-        "(3 - 3)*(3 + 3) == 0",
+        "3 - 3 == 0",
+        "(3 - 3)*(3 + 3) == 0"
+       ]
+      },
+      {
+       "math": "x + 3 = 0 \\implies x = -3",
+       "en": "Put the second factor equal to $0$ and subtract $3$ from both sides to get the second root.",
+       "ur": "دوسرے جزو کو $0$ کے برابر رکھیں اور دوسرا روٹ حاصل کرنے کے لیے دونوں طرف سے $3$ تفریق کریں۔",
+       "check": [
+        "-3 + 3 == 0",
         "(-3 - 3)*(-3 + 3) == 0"
        ]
       },
       {
        "math": "\\text{Answer: (a) } 3, -3",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Thus, the roots of the given equation are $3$ and $-3$, which matches option (a).",
+       "ur": "پس دی گئی مساوات کے روٹس $3$ اور $-3$ ہیں، جو کہ آپشن (a) سے مطابقت رکھتے ہیں۔",
+       "check": [
+        "(3 - 3)*(3 + 3) == 0",
+        "(-3 - 3)*(-3 + 3) == 0"
+       ]
       }
      ],
      "answer": "(a) $3, -3$",
+     "enriched": true,
      "book_key": "(a) 3, -3"
     },
     {
@@ -13480,20 +13823,50 @@
      "prompt": "3 and 2 are the roots of: (a) $x^2+5x+6=0$ (b) $x^2+6x+5=0$ (c) $x^2-5x+6=0$ (d) $x^2+6x-5=0$",
      "steps": [
       {
-       "math": "x^2 - (3 + 2)x + (3)(2) = x^2 - 5x + 6",
-       "en": "Use $x^2 - (\\text{sum})x + \\text{product}$.",
-       "ur": "$x^2 - (\\text{مجموعہ})x + \\text{حاصل ضرب}$ استعمال کریں۔",
+       "math": "\\alpha = 3, \\quad \\beta = 2",
+       "en": "Let the two given roots of the quadratic equation be $\\alpha$ and $\\beta$.",
+       "ur": "فرض کریں کہ دو درجی مساوات کے دیے گئے دو روٹس $\\alpha$ اور $\\beta$ ہیں۔"
+      },
+      {
+       "math": "S = \\alpha + \\beta = 3 + 2 = 5",
+       "en": "First, find the sum of the roots ($S$) by adding them together.",
+       "ur": "سب سے پہلے، روٹس کو جمع کر کے ان کا مجموعہ ($S$) معلوم کریں۔",
+       "check": [
+        "3 + 2 == 5"
+       ]
+      },
+      {
+       "math": "P = \\alpha \\cdot \\beta = (3)(2) = 6",
+       "en": "Next, find the product of the roots ($P$) by multiplying them.",
+       "ur": "اس کے بعد، روٹس کو ضرب دے کر ان کا حاصل ضرب ($P$) معلوم کریں۔",
+       "check": [
+        "3 * 2 == 6"
+       ]
+      },
+      {
+       "math": "x^2 - Sx + P = 0",
+       "en": "Recall the standard formula to form a quadratic equation when the sum ($S$) and product ($P$) of its roots are known.",
+       "ur": "جب روٹس کا مجموعہ ($S$) اور حاصل ضرب ($P$) معلوم ہو تو دو درجی مساوات بنانے کا معیاری فارمولا استعمال کریں۔"
+      },
+      {
+       "math": "x^2 - 5x + 6 = 0",
+       "en": "Substitute the values of $S = 5$ and $P = 6$ into the formula.",
+       "ur": "فارمولے میں $S = 5$ اور $P = 6$ کی قیمتیں درج کریں۔",
        "check": [
         "expand((x - 3)*(x - 2)) == x**2 - 5*x + 6"
        ]
       },
       {
        "math": "\\text{Answer: (c) } x^2-5x+6=0",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "This matches option (c), which is the correct answer.",
+       "ur": "یہ آپشن (c) سے مطابقت رکھتا ہے، جو کہ درست جواب ہے۔",
+       "check": [
+        "expand((x - 3)*(x - 2)) == x**2 - 5*x + 6"
+       ]
       }
      ],
      "answer": "(c) $x^2-5x+6=0$",
+     "enriched": true,
      "book_key": "(c) x^2-5x+6=0"
     },
     {
@@ -13501,17 +13874,28 @@
      "prompt": "If $b^2-4ac>0$ and is a perfect square, then the roots of $ax^2+bx+c=0$ are: (a) $\\text{equal}$ (b) $\\text{unequal}$ (c) $\\text{imaginary}$ (d) $\\text{irrational}$",
      "steps": [
       {
+       "math": "b^2 - 4ac > 0 \\text{ (perfect square)}",
+       "en": "We are given the standard quadratic equation $ax^2 + bx + c = 0$ where the discriminant $b^2 - 4ac$ is strictly greater than $0$ and is a perfect square.",
+       "ur": "ہمیں معیاری دو درجی مساوات $ax^2 + bx + c = 0$ دی گئی ہے جہاں فرق کندہ $b^2 - 4ac$ صفر سے بڑا اور ایک مکمل مربع ہے۔"
+      },
+      {
        "math": "",
-       "en": "A positive perfect-square discriminant gives two different rational roots.",
-       "ur": "مثبت مکمل مربع ممیز دو مختلف ناطق جذر دیتا ہے۔"
+       "en": "According to the properties of the discriminant, since $b^2 - 4ac > 0$ (positive), the roots are real and unequal (distinct). Furthermore, since $b^2 - 4ac$ is a perfect square, the square root $\\sqrt{b^2 - 4ac}$ evaluates to a rational number, making the roots rational.",
+       "ur": "فرق کندہ کی خصوصیات کے مطابق، چونکہ $b^2 - 4ac > 0$ (مثبت) ہے، اس لیے مساوات کے روٹس حقیقی اور نابرابر (مختلف) ہیں۔ مزید برآں، چونکہ $b^2 - 4ac$ ایک مکمل مربع ہے، اس لیے جزر $\\sqrt{b^2 - 4ac}$ ایک ناطق عدد بنتا ہے، جس سے روٹس ناطق ہوتے ہیں۔"
+      },
+      {
+       "math": "\\text{Nature of roots: Real, rational, and unequal}",
+       "en": "Therefore, the roots of the equation are real, rational, and unequal. Comparing this with the given options: (a) equal is false, (c) imaginary is false, and (d) irrational is false. The only correct description among the choices is (b) unequal.",
+       "ur": "لہٰذا، مساوات کے روٹس حقیقی، ناطق اور نابرابر ہیں۔ دیے گئے اختیارات سے موازنہ کرنے پر: (a) برابر غلط ہے، (c) خیالی غلط ہے، اور (d) غیر ناطق غلط ہے۔ اختیارات میں سے واحد درست وضاحت (b) نابرابر ہے۔"
       },
       {
        "math": "\\text{Answer: (b) } \\text{unequal}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Hence, option (b) is the correct answer.",
+       "ur": "چنانچہ، آپشن (b) درست جواب ہے۔"
       }
      ],
      "answer": "(b) $\\text{unequal}$",
+     "enriched": true,
      "book_key": "(b) unequal"
     },
     {
@@ -13520,16 +13904,36 @@
      "steps": [
       {
        "math": "",
-       "en": "When $D = 0$ both roots are $-\\frac{b}{2a}$.",
-       "ur": "جب $D = 0$ ہو تو دونوں جذر $-\\frac{b}{2a}$ ہیں۔"
+       "en": "We are given a standard quadratic equation $ax^2 + bx + c = 0$ and the condition that its discriminant is $b^2 - 4ac = 0$. We need to determine the nature of its roots.",
+       "ur": "ہمیں ایک معیاری دو درجی مساوات $ax^2 + bx + c = 0$ دی گئی ہے اور یہ شرط دی گئی ہے کہ اس کا فرق کنندہ $b^2 - 4ac = 0$ ہے۔ ہمیں اس کے جذور کی نوعیت معلوم کرنی ہے۔"
+      },
+      {
+       "math": "",
+       "en": "Recall the quadratic formula used to find the roots of $ax^2 + bx + c = 0$, which is $x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$.",
+       "ur": "دو درجی مساوات $ax^2 + bx + c = 0$ کے جذور معلوم کرنے کا دو درجی کلیہ یاد کریں، جو کہ $x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$ ہے۔"
+      },
+      {
+       "math": "x = \\frac{-b \\pm \\sqrt{0}}{2a} = -\\frac{b}{2a}",
+       "en": "Substitute the given condition $b^2 - 4ac = 0$ into the quadratic formula.",
+       "ur": "دی گئی شرط $b^2 - 4ac = 0$ کو دو درجی کلیہ میں درج کریں۔",
+       "check": [
+        "(-b + sqrt(0))/(2*a) == -b/(2*a)",
+        "(-b - sqrt(0))/(2*a) == -b/(2*a)"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Since the $\\pm 0$ term vanishes, both roots have the exact same value of $-\\frac{b}{2a}$. Therefore, the roots are real and equal.",
+       "ur": "چونکہ $\\pm 0$ ختم ہو جاتا ہے، اس لیے دونوں جذور کی قیمت ایک ہی یعنی $-\\frac{b}{2a}$ ہے۔ لہٰذا، جذور حقیقی اور برابر (equal) ہیں۔"
       },
       {
        "math": "\\text{Answer: (d) } \\text{equal}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Comparing our result with the given choices, option (d) is the correct answer.",
+       "ur": "ہمارے نتیجے کا دیے گئے انتخاب سے موازنہ کرنے پر، آپشن (d) درست جواب ہے۔"
       }
      ],
      "answer": "(d) $\\text{equal}$",
+     "enriched": true,
      "book_key": "(d) equal"
     },
     {
@@ -13537,20 +13941,45 @@
      "prompt": "Subject \\\"$c$\\\" of $x-2c=b$ is: (a) $x+b$ (b) $b-x$ (c) $\\frac{x-b}{2}$ (d) $\\frac{b-x}{2}$",
      "steps": [
       {
-       "math": "x - b = 2c \\Rightarrow c = \\frac{x - b}{2}",
-       "en": "Move $b$ and $2c$, then divide by 2.",
-       "ur": "$b$ اور $2c$ کی جگہ بدلیں، پھر 2 سے تقسیم کریں۔",
+       "math": "",
+       "en": "The given equation is $x - 2c = b$. We need to make $c$ the subject of the equation, which means isolating $c$ on one side.",
+       "ur": "دی گئی مساوات $x - 2c = b$ ہے۔ ہمیں $c$ کو مساوات کا موضوع (subject) بنانا ہے، جس کا مطلب ہے کہ $c$ کو ایک طرف تنہا کرنا ہے۔"
+      },
+      {
+       "math": "x = b + 2c",
+       "en": "First, add $2c$ to both sides of the equation to make the term containing $c$ positive.",
+       "ur": "سب سے پہلے، $c$ والی رقم کو مثبت بنانے کے لیے مساوات کے دونوں اطراف میں $2c$ جمع کریں۔",
+       "check": [
+        "(x - 2*c) + 2*c == x"
+       ]
+      },
+      {
+       "math": "x - b = 2c",
+       "en": "Next, subtract $b$ from both sides to isolate the term $2c$ on the right side.",
+       "ur": "اس کے بعد، دائیں طرف $2c$ کی رقم کو تنہا کرنے کے لیے دونوں اطراف سے $b$ تفریق کریں۔",
+       "check": [
+        "(b + 2*c) - b == 2*c"
+       ]
+      },
+      {
+       "math": "c = \\frac{x - b}{2}",
+       "en": "Finally, divide both sides by $2$ to get $c$ by itself.",
+       "ur": "آخر میں، $c$ کو اکیلا کرنے کے لیے دونوں اطراف کو $2$ سے تقسیم کریں۔",
        "check": [
         "x - 2*((x - b)/2) == b"
        ]
       },
       {
        "math": "\\text{Answer: (c) } \\frac{x-b}{2}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Comparing our result with the given options, we see that option (c) is the correct answer.",
+       "ur": "اپنے نتیجے کا دیے گئے آپشنز سے موازنہ کرنے پر، ہم دیکھتے ہیں کہ آپشن (c) درست جواب ہے۔",
+       "check": [
+        "x - 2*((x - b)/2) == b"
+       ]
       }
      ],
      "answer": "(c) $\\frac{x-b}{2}$",
+     "enriched": true,
      "book_key": "(c) \\frac{x-b}{2}"
     }
    ],

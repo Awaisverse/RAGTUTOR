@@ -1,0 +1,38 @@
+{
+ "item": "c10-ex4.3-q8",
+ "label": "",
+ "answer_ref": "$x < -0.1$ or $x > 0.1$",
+ "steps": [
+  {
+   "math": "|x| > 0.1",
+   "en": "The given absolute value inequality models the positions $x$ of the centre that cause the machine part to be rejected.",
+   "ur": "دی گئی مطلق قیمت کی غیر مساوات مرکز کی ان پوزیشنز $x$ کو ظاہر کرتی ہے جن کی وجہ سے مشین کا پرزہ مسترد ہو جاتا ہے۔"
+  },
+  {
+   "math": "|A| > k \\iff A < -k \\quad\\text{or}\\quad A > k",
+   "en": "Recall the property of absolute value inequalities: for any positive number $k$, $|A| > k$ is equivalent to $A < -k$ or $A > k$.",
+   "ur": "مطلق قیمت کی غیر مساوات کی خاصیت یاد رکھیں: کسی بھی مثبت عدد $k$ کے لیے، $|A| > k$ کا مطلب $A < -k$ یا $A > k$ ہوتا ہے۔"
+  },
+  {
+   "math": "x < -0.1 \\quad\\text{or}\\quad x > 0.1",
+   "en": "Substitute $A = x$ and $k = 0.1$ into the rule to remove the absolute value bars.",
+   "ur": "مطلق قیمت کی علامت کو ہٹانے کے لیے اصول میں $A = x$ اور $k = 0.1$ درج کریں۔",
+   "check": [
+    "Abs(-0.2) > 0.1",
+    "Abs(0.2) > 0.1",
+    "Abs(0.05) <= 0.1"
+   ]
+  },
+  {
+   "math": "",
+   "en": "Therefore, the part is rejected if the position of its centre is less than $-0.1\\text{ mm}$ or greater than $0.1\\text{ mm}$, which is written as $x < -0.1$ or $x > 0.1$.",
+   "ur": "لہٰذا، پرزہ مسترد کر دیا جاتا ہے اگر اس کے مرکز کی پوزیشن $-0.1\\text{ mm}$ سے کم یا $0.1\\text{ mm}$ سے زیادہ ہو، جسے $x < -0.1$ یا $x > 0.1$ لکھا جاتا ہے۔",
+   "check": [
+    "Abs(-0.2) > 0.1",
+    "Abs(0.05) <= 0.1"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

@@ -1,0 +1,40 @@
+{
+ "item": "c10-ex3.3-q2",
+ "label": "i",
+ "answer_ref": "$\\begin{bmatrix} 2 & 1 \\\\ 1 & 6 \\end{bmatrix}$",
+ "steps": [
+  {
+   "math": "X = \\begin{bmatrix} 1 & -1 \\\\ -2 & 2 \\end{bmatrix}, \\quad Y = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}",
+   "en": "Write down the given matrices $X$ and $Y$. We need to find the sum $X+Y$.",
+   "ur": "دیے گئے قالب $X$ اور $Y$ لکھیں۔ ہمیں ان کا مجموعہ $X+Y$ معلوم کرنا ہے۔"
+  },
+  {
+   "math": "X + Y = \\begin{bmatrix} 1 & -1 \\\\ -2 & 2 \\end{bmatrix} + \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}",
+   "en": "Substitute the matrices $X$ and $Y$ into the expression $X+Y$. Since both matrices have the same order ($2 \\times 2$), they are conformable for addition.",
+   "ur": "مقدار $X+Y$ میں قالب $X$ اور $Y$ کی قیمتیں درج کریں۔ چونکہ دونوں قالبوں کا درجہ یکساں ($2 \\times 2$) ہے، اس لیے ان کی جمع ممکن ہے۔"
+  },
+  {
+   "math": "X + Y = \\begin{bmatrix} 1 + 1 & -1 + 2 \\\\ -2 + 3 & 2 + 4 \\end{bmatrix}",
+   "en": "To add two matrices of the same order, we add their corresponding entries (entries in the same positions).",
+   "ur": "یکساں درجہ کے دو قالبوں کو جمع کرنے کے لیے، ہم ان کے متناظرہ ارکان (ایک ہی جگہ پر موجود ارکان) کو جمع کرتے ہیں۔",
+   "check": [
+    "Matrix([[1, -1], [-2, 2]]) + Matrix([[1, 2], [3, 4]]) == Matrix([[1 + 1, -1 + 2], [-2 + 3, 2 + 4]])"
+   ]
+  },
+  {
+   "math": "X + Y = \\begin{bmatrix} 2 & 1 \\\\ 1 & 6 \\end{bmatrix}",
+   "en": "Simplify each entry by performing the addition to get the final matrix.",
+   "ur": "حتمی قالب حاصل کرنے کے لیے جمع کا عمل مکمل کر کے ہر رکن کو مختصر کریں۔",
+   "check": [
+    "1 + 1 == 2",
+    "-1 + 2 == 1",
+    "-2 + 3 == 1",
+    "2 + 4 == 6",
+    "Matrix([[1 + 1, -1 + 2], [-2 + 3, 2 + 4]]) == Matrix([[2, 1], [1, 6]])",
+    "Eq(Matrix([[2, 1], [1, 6]]), Matrix([[2, 1], [1, 6]]))"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

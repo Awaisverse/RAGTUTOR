@@ -1,0 +1,52 @@
+{
+ "item": "c10-rev4-q9",
+ "label": "",
+ "answer_ref": "100 items",
+ "steps": [
+  {
+   "math": "",
+   "en": "We are given the profit function $P(x) = 100x - 10{,}000$, where $x$ represents the number of items sold.",
+   "ur": "ہمیں منافع کا تفاعل $P(x) = 100x - 10{,}000$ دیا گیا ہے، جہاں $x$ فروخت ہونے والی اشیاء کی تعداد کو ظاہر کرتا ہے۔"
+  },
+  {
+   "math": "",
+   "en": "To break even, the total profit must be zero, which means $P(x) = 0$.",
+   "ur": "نہ نفع نہ نقصان (برابر رہنے) کی صورت حال کے لیے، کل منافع صفر ہونا چاہیے، جس کا مطلب ہے کہ $P(x) = 0$ ہے۔"
+  },
+  {
+   "math": "100x - 10000 = 0",
+   "en": "Substitute $P(x) = 0$ into the given function to form a linear equation.",
+   "ur": "ایک یک درجی مساوات بنانے کے لیے دیے گئے تفاعل میں $P(x) = 0$ درج کریں۔",
+   "check": [
+    "100*100 - 10000 == 0"
+   ]
+  },
+  {
+   "math": "100x = 10000",
+   "en": "Add $10{,}000$ to both sides of the equation to isolate the term with $x$.",
+   "ur": "$x$ والی رقم کو الگ کرنے کے لیے مساوات کے دونوں اطراف میں $10{,}000$ جمع کریں۔",
+   "check": [
+    "100*100 == 10000"
+   ]
+  },
+  {
+   "math": "x = \\frac{10000}{100}",
+   "en": "Divide both sides by $100$ to solve for $x$.",
+   "ur": "$x$ کی قیمت معلوم کرنے کے لیے دونوں اطراف کو $100$ پر تقسیم کریں۔",
+   "check": [
+    "100 == R(10000, 100)"
+   ]
+  },
+  {
+   "math": "x = 100",
+   "en": "Simplify the fraction. Thus, the company must sell $100$ items to break even.",
+   "ur": "کسر کو مختصر کریں۔ اس طرح، کمپنی کو نہ نفع نہ نقصان کی سطح تک پہنچنے کے لیے $100$ اشیاء فروخت کرنی ہوں گی۔",
+   "check": [
+    "R(10000, 100) == 100",
+    "100*100 - 10000 == 0"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

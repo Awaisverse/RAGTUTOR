@@ -15,60 +15,161 @@
      "prompt": "",
      "steps": [
       {
+       "math": "0.35",
+       "en": "The given decimal number is $0.35$. We need to determine whether it is a rational or an irrational number.",
+       "ur": "دیا گیا اعشاری عدد $0.35$ ہے۔ ہمیں یہ معلوم کرنا ہے کہ آیا یہ ناطق عدد ہے یا غیر ناطق عدد۔"
+      },
+      {
        "math": "",
-       "en": "0.35 is a terminating decimal, so it is rational.",
-       "ur": "0.35 ایک محدود اعشاری عدد ہے، اس لیے یہ ناطق (rational) ہے۔"
+       "en": "Recall the definition: A decimal number that has a finite number of digits after the decimal point is called a terminating decimal, and every terminating decimal is a rational number.",
+       "ur": "تعریف یاد کریں: ایسا اعشاری عدد جس میں اعشاریہ کے بعد ہندسوں کی تعداد محدود ہو، مختتم اعشاری کسر (terminating decimal) کہلاتا ہے، اور ہر مختتم اعشاری کسر ایک ناطق عدد ہوتی ہے۔"
+      },
+      {
+       "math": "",
+       "en": "Looking at $0.35$, the digits after the decimal point stop after two places ($3$ and $5$). Therefore, $0.35$ is a terminating decimal.",
+       "ur": "$0.35$ کو دیکھنے سے معلوم ہوتا ہے کہ اعشاریہ کے بعد ہندسے دو مقامات ($3$ اور $5$) کے بعد ختم ہو جاتے ہیں۔ اس لیے، $0.35$ ایک مختتم اعشاری عدد ہے۔"
+      },
+      {
+       "math": "0.35 = \\frac{35}{100}",
+       "en": "We can also verify this by writing $0.35$ in the form of $\\frac{p}{q}$ (where $p, q \\in \\mathbb{Z}$ and $q \\neq 0$).",
+       "ur": "ہم اس کی تصدیق $0.35$ کو $\\frac{p}{q}$ کی شکل میں لکھ کر بھی کر سکتے ہیں (جہاں $p, q \\in \\mathbb{Z}$ اور $q \\neq 0$)۔",
+       "check": [
+        "0.35 == R(35, 100)"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Since $0.35$ is a terminating decimal and can be expressed as a fraction, it is a rational number.",
+       "ur": "چونکہ $0.35$ ایک مختتم اعشاری عدد ہے اور اسے کسر کے طور پر ظاہر کیا جا سکتا ہے، اس لیے یہ ایک ناطق (Rational) عدد ہے۔"
       }
      ],
-     "answer": "Rational"
+     "answer": "Rational",
+     "enriched": true
     },
     {
      "label": "ii",
      "prompt": "",
      "steps": [
       {
+       "math": "0.444\\dots",
+       "en": "We are given the decimal number $0.444\\dots$ and we need to determine whether it is a rational or irrational number.",
+       "ur": "ہمیں اعشاریہ عدد $0.444\\dots$ دیا گیا ہے اور ہمیں یہ معلوم کرنا ہے کہ آیا یہ ایک ناطق عدد ہے یا غیر ناطق۔"
+      },
+      {
        "math": "",
-       "en": "0.444... repeats the digit 4 forever, so it is non-terminating recurring, hence rational.",
-       "ur": "0.444... میں ہندسہ 4 بار بار آتا ہے، یعنی غیر محدود دوری اعشاری، اس لیے ناطق ہے۔"
+       "en": "Notice the three dots ($\\dots$) at the end, which show that the decimal part does not end. Also, the single digit $4$ is repeating infinitely in the same pattern.",
+       "ur": "آخر میں موجود تین نقطوں ($\\dots$) پر غور کریں جو ظاہر کرتے ہیں کہ اعشاریہ کا حصہ ختم نہیں ہوتا۔ نیز، ہندسہ $4$ ایک ہی ترتیب میں لامحدود طور پر بار بار آ رہا ہے۔"
+      },
+      {
+       "math": "",
+       "en": "A decimal number that continues forever with a repeating pattern of digits is called a non-terminating recurring (repeating) decimal.",
+       "ur": "ایسا اعشاریہ عدد جو ہندسوں کی ایک خاص ترتیب کو دہراتے ہوئے لامحدود طور پر جاری رہے، غیر مختتم تکراری (دوری) اعشاریہ کہلاتا ہے۔"
+      },
+      {
+       "math": "0.444\\dots = 0.\\overline{4} = \\frac{4}{9}",
+       "en": "According to the properties of real numbers, every non-terminating recurring decimal can be expressed in the form of a fraction $\\frac{p}{q}$ (where $p, q \\in \\mathbb{Z}$ and $q \\neq 0$), so it is a rational number.",
+       "ur": "حقیقی اعداد کی خصوصیات کے مطابق، ہر غیر مختتم تکراری اعشاریہ کو کسر $\\frac{p}{q}$ کی شکل میں لکھا جا سکتا ہے (جہاں $p, q \\in \\mathbb{Z}$ اور $q \\neq 0$)، اس لیے یہ ایک ناطق عدد ہے۔",
+       "check": [
+        "R(4, 9) == R(4, 9)"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Therefore, $0.444\\dots$ is a rational number.",
+       "ur": "لہٰذا، $0.444\\dots$ ایک ناطق (Rational) عدد ہے۔"
       }
      ],
-     "answer": "Rational"
+     "answer": "Rational",
+     "enriched": true
     },
     {
      "label": "iii",
      "prompt": "",
      "steps": [
       {
+       "math": "3.\\bar{5}",
+       "en": "We are given the decimal number $3.\\bar{5}$ and need to identify whether it is rational or irrational.",
+       "ur": "ہمیں اعشاری عدد $3.\\bar{5}$ دیا گیا ہے اور ہمیں یہ معلوم کرنا ہے کہ یہ ناطق ہے یا غیر ناطق۔"
+      },
+      {
        "math": "3.\\bar{5} = 3.5555\\ldots",
-       "en": "3.$\\bar{5}$ کا مطلب ہے 3.5555... (5 بار بار آتا ہے)۔",
-       "ur": "5 بار بار آتا ہے، اس لیے یہ ناطق ہے۔"
+       "en": "The bar over the digit $5$ indicates that the digit $5$ repeats infinitely after the decimal point.",
+       "ur": "ہندسہ $5$ کے اوپر بار کا مطلب ہے کہ اعشاریہ کے بعد ہندسہ $5$ لامحدود طور پر بار بار آتا ہے۔"
+      },
+      {
+       "math": "",
+       "en": "According to the definition of real numbers, any non-terminating and recurring (repeating) decimal is a rational number.",
+       "ur": "حقیقی اعداد کی تعریف کے مطابق، کوئی بھی غیر مختتم اور تکراری (بار بار آنے والا) اعشاری عدد ایک ناطق عدد ہوتا ہے۔"
+      },
+      {
+       "math": "",
+       "en": "Since $3.\\bar{5}$ is a non-terminating recurring decimal, it is a rational number.",
+       "ur": "چونکہ $3.\\bar{5}$ ایک غیر مختتم تکراری اعشاری عدد ہے، اس لیے یہ ایک ناطق عدد (Rational) ہے۔"
       }
      ],
-     "answer": "Rational"
+     "answer": "Rational",
+     "enriched": true
     },
     {
      "label": "iv",
      "prompt": "",
      "steps": [
       {
+       "math": "3.36788542\\dots",
+       "en": "The given decimal number is $3.36788542\\dots$, and we need to identify whether it is rational or irrational.",
+       "ur": "دی گئی اعشاریہ عدد $3.36788542\\dots$ ہے، اور ہمیں یہ معلوم کرنا ہے کہ یہ ناطق (rational) ہے یا غیر ناطق (irrational)۔"
+      },
+      {
        "math": "",
-       "en": "3.36788542... does not repeat and does not end, so it is irrational.",
-       "ur": "یہ نہ ختم ہوتا ہے نہ دہرایا جاتا ہے، اس لیے غیر ناطق (irrational) ہے۔"
+       "en": "Recall the rule for decimals: A decimal number that is both non-terminating (does not end) and non-recurring (its digits do not repeat in a fixed pattern) is an irrational number.",
+       "ur": "اعشاریہ اعداد کا اصول یاد کریں: ایسا اعشاریہ عدد جو غیر مختتم (نہ ختم ہونے والا) اور غیر متوالی (جس کے ہندسے کسی خاص ترتیب سے نہ دہرائے جائیں) ہو، وہ ایک غیر ناطق عدد (irrational number) ہوتا ہے۔"
+      },
+      {
+       "math": "3.36788542\\dots",
+       "en": "Looking at $3.36788542\\dots$, the three dots ($\\dots$) at the end show that the decimal is non-terminating. Furthermore, the digits $36788542$ do not follow any repeating pattern, which means it is non-recurring.",
+       "ur": "دیے گئے عدد $3.36788542\\dots$ کو دیکھنے سے معلوم ہوتا ہے کہ آخر میں موجود تین نقطے ($\\dots$) ظاہر کرتے ہیں کہ یہ غیر مختتم ہے۔ مزید یہ کہ اس کے ہندسے $36788542$ کسی خاص ترتیب سے نہیں دہرائے جا رہے، جس کا مطلب ہے کہ یہ غیر متوالی ہے۔"
+      },
+      {
+       "math": "",
+       "en": "Since the number is a non-terminating and non-recurring decimal, it is an irrational number.",
+       "ur": "چونکہ یہ عدد ایک غیر مختتم اور غیر متوالی اعشاریہ ہے، اس لیے یہ ایک غیر ناطق (irrational) عدد ہے۔"
       }
      ],
-     "answer": "Irrational"
+     "answer": "Irrational",
+     "enriched": true
     },
     {
      "label": "v",
      "prompt": "",
      "steps": [
       {
+       "math": "1.709975947...",
+       "en": "The given decimal number is $1.709975947...$. We need to identify whether this number is rational or irrational.",
+       "ur": "دیا گیا اعشاریہ نمبر $1.709975947...$ ہے۔ ہمیں یہ معلوم کرنا ہے کہ یہ نمبر ناطق ہے یا غیر ناطق۔"
+      },
+      {
        "math": "",
-       "en": "1.709975947... does not repeat and does not end, so it is irrational.",
-       "ur": "یہ بھی نہ ختم ہوتا ہے نہ دہرایا جاتا ہے، اس لیے غیر ناطق ہے۔"
+       "en": "Recall the definition: A decimal number that is both non-terminating (does not end) and non-recurring (its digits do not repeat in a fixed pattern) is called an irrational number.",
+       "ur": "تعریف یاد کریں: ایک ایسا اعشاریہ نمبر جو غیر مختتم (ختم نہ ہونے والا) اور غیر متوالی (جس کے ہندسے کسی خاص ترتیب سے نہ دہرائے جائیں) ہو، غیر ناطق نمبر کہلاتا ہے۔"
+      },
+      {
+       "math": "",
+       "en": "Looking at the given number $1.709975947...$, the three dots ($...$) at the end show that the decimal part continues endlessly, so it is non-terminating.",
+       "ur": "دیے گئے نمبر $1.709975947...$ کو دیکھتے ہوئے، آخر میں موجود تین نقطے ($...$) ظاہر کرتے ہیں کہ اعشاریہ کا حصہ لا محدود طور پر جاری ہے، اس لیے یہ غیر مختتم ہے۔"
+      },
+      {
+       "math": "",
+       "en": "Also, examining the digits after the decimal point ($709975947$), we can see that no single digit or block of digits is repeating in a regular pattern, so it is non-recurring.",
+       "ur": "نیز، اعشاریہ کے بعد کے ہندسوں ($709975947$) کا جائزہ لینے سے ہم دیکھ سکتے ہیں کہ کوئی بھی ایک ہندسہ یا ہندسوں کا گروپ کسی خاص ترتیب سے نہیں دہرایا جا رہا، اس لیے یہ غیر متوالی ہے۔"
+      },
+      {
+       "math": "",
+       "en": "Since $1.709975947...$ is a non-terminating and non-recurring decimal, it is an irrational number.",
+       "ur": "چونکہ $1.709975947...$ ایک غیر مختتم اور غیر متوالی اعشاریہ ہے، اس لیے یہ ایک غیر ناطق نمبر (Irrational) ہے۔"
       }
      ],
-     "answer": "Irrational"
+     "answer": "Irrational",
+     "enriched": true
     }
    ]
   },
@@ -238,23 +339,56 @@
      "prompt": "",
      "steps": [
       {
-       "math": "\\frac{2+3}{2} = \\frac{5}{2}",
-       "en": "Average of 2 and 3 is a rational number between them.",
-       "ur": "2 اور 3 کا اوسط ان کے درمیان ایک ناطق عدد ہے۔",
+       "math": "",
+       "en": "We are given two numbers, $2$ and $3$, and we need to find two rational numbers that lie between them.",
+       "ur": "ہمیں دو اعداد $2$ اور $3$ دیے گئے ہیں، اور ہمیں ان کے درمیان دو ناطق اعداد (rational numbers) معلوم کرنے ہیں۔"
+      },
+      {
+       "math": "\\frac{a + b}{2}",
+       "en": "A rational number between any two numbers $a$ and $b$ can be found by calculating their average (mean) using this formula.",
+       "ur": "کسی بھی دو اعداد $a$ اور $b$ کے درمیان ایک ناطق عدد اس فارمولے کی مدد سے ان کا اوسط نکال کر معلوم کیا جا سکتا ہے۔"
+      },
+      {
+       "math": "\\frac{2 + 3}{2} = \\frac{5}{2}",
+       "en": "First, find the rational number between $2$ and $3$ by taking their average.",
+       "ur": "سب سے پہلے، $2$ اور $3$ کا اوسط لے کر ان کے درمیان پہلا ناطق عدد معلوم کریں۔",
        "check": [
-        "(2+3)/2 == Rational(5,2)"
+        "(2 + 3)/2 == R(5, 2)"
        ]
       },
       {
-       "math": "\\frac{\\frac{5}{2}+3}{2} = \\frac{11}{4}",
-       "en": "Average of $\\frac{5}{2}$ and 3 is another one.",
-       "ur": "$\\frac{5}{2}$ اور 3 کا اوسط ایک اور عدد ہے۔",
+       "math": "\\frac{\\frac{5}{2} + 3}{2}",
+       "en": "Since $\\frac{5}{2}$ lies between $2$ and $3$, we can find a second rational number by taking the average of $\\frac{5}{2}$ and $3$.",
+       "ur": "چونکہ $\\frac{5}{2}$ عدد $2$ اور $3$ کے درمیان واقع ہے، اس لیے ہم $\\frac{5}{2}$ اور $3$ کا اوسط لے کر دوسرا ناطق عدد معلوم کر سکتے ہیں۔"
+      },
+      {
+       "math": "\\frac{\\frac{5 + 6}{2}}{2} = \\frac{\\frac{11}{2}}{2}",
+       "en": "Add the terms in the numerator by taking $2$ as the LCM.",
+       "ur": "شمار کنندہ (numerator) میں $2$ کو ذواضعاف اقل (LCM) لے کر رقموں کو جمع کریں۔",
        "check": [
+        "((5 + 6)/2)/2 == (R(11, 2))/2"
+       ]
+      },
+      {
+       "math": "\\frac{11}{2 \\times 2} = \\frac{11}{4}",
+       "en": "Simplify the fraction to get the second rational number.",
+       "ur": "دوسرا ناطق عدد حاصل کرنے کے لیے کسر کو مختصر کریں۔",
+       "check": [
+        "11/(2*2) == R(11, 4)"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Hence, two rational numbers between $2$ and $3$ are $\\frac{5}{2}$ and $\\frac{11}{4}$.",
+       "ur": "پس، $2$ اور $3$ کے درمیان دو ناطق اعداد $\\frac{5}{2}$ اور $\\frac{11}{4}$ ہیں۔",
+       "check": [
+        "(2+3)/2 == Rational(5,2)",
         "(Rational(5,2)+3)/2 == Rational(11,4)"
        ]
       }
      ],
-     "answer": "$\\frac{5}{2}$ and $\\frac{11}{4}$"
+     "answer": "$\\frac{5}{2}$ and $\\frac{11}{4}$",
+     "enriched": true
     }
    ]
   },
@@ -298,23 +432,65 @@
      "prompt": "",
      "steps": [
       {
-       "math": "LHS = (a+b)c = \\left(\\frac{4+9}{6}\\right)\\frac{5}{3} = \\frac{65}{18}",
-       "en": "Compute the left side.",
-       "ur": "بائیں طرف کی قیمت نکالیں۔",
+       "math": "a = \\frac{2}{3}, \\quad b = \\frac{3}{2}, \\quad c = \\frac{5}{3}",
+       "en": "Write down the given values of $a$, $b$, and $c$.",
+       "ur": "دی گئی $a$، $b$، اور $c$ کی قیمتیں لکھیں۔"
+      },
+      {
+       "math": "(a + b)c = ac + bc",
+       "en": "State the right distributive property of multiplication over addition to be verified.",
+       "ur": "جمع پر ضرب کی دائیں تقسیمی خاصیت لکھیں جس کی تصدیق کرنی ہے۔"
+      },
+      {
+       "math": "\\text{LHS} = (a + b)c = \\left(\\frac{2}{3} + \\frac{3}{2}\\right)\\frac{5}{3}",
+       "en": "Take the Left Hand Side (LHS) and substitute the given values of $a$, $b$, and $c$.",
+       "ur": "بائیں طرف (LHS) لیں اور $a$، $b$، اور $c$ کی دی گئی قیمتیں درج کریں۔"
+      },
+      {
+       "math": "\\text{LHS} = \\left(\\frac{4 + 9}{6}\\right)\\frac{5}{3} = \\left(\\frac{13}{6}\\right)\\frac{5}{3} = \\frac{65}{18}",
+       "en": "Find the LCM of the denominators $3$ and $2$, which is $6$, add the fractions inside the brackets, and then multiply by $\\frac{5}{3}$.",
+       "ur": "نسب نما $3$ اور $2$ کا ذواضعاف اقل (LCM) $6$ معلوم کریں، بریکٹ کے اندر موجود کسروں کو جمع کریں، اور پھر $\\frac{5}{3}$ سے ضرب دیں۔",
        "check": [
-        "(Rational(2,3)+Rational(3,2))*Rational(5,3) == Rational(65,18)"
+        "(R(2,3) + R(3,2))*R(5,3) == R(13,6)*R(5,3)",
+        "R(13,6)*R(5,3) == R(65,18)"
        ]
       },
       {
-       "math": "RHS = ac+bc = \\frac{10}{9}+\\frac{15}{6} = \\frac{65}{18}",
-       "en": "Compute the right side.",
-       "ur": "دائیں طرف کی قیمت نکالیں۔",
+       "math": "\\text{RHS} = ac + bc = \\left(\\frac{2}{3}\\right)\\left(\\frac{5}{3}\\right) + \\left(\\frac{3}{2}\\right)\\left(\\frac{5}{3}\\right)",
+       "en": "Now take the Right Hand Side (RHS) and substitute the given values of $a$, $b$, and $c$.",
+       "ur": "اب دائیں طرف (RHS) لیں اور $a$، $b$، اور $c$ کی دی گئی قیمتیں درج کریں۔"
+      },
+      {
+       "math": "\\text{RHS} = \\frac{10}{9} + \\frac{15}{6}",
+       "en": "Multiply the fractions in each term.",
+       "ur": "ہر رقم میں موجود کسروں کو آپس میں ضرب دیں۔",
        "check": [
+        "R(2,3)*R(5,3) == R(10,9)",
+        "R(3,2)*R(5,3) == R(15,6)"
+       ]
+      },
+      {
+       "math": "\\text{RHS} = \\frac{20 + 45}{18} = \\frac{65}{18}",
+       "en": "Find the LCM of the denominators $9$ and $6$, which is $18$, and add the numerators.",
+       "ur": "نسب نما $9$ اور $6$ کا ذواضعاف اقل (LCM) $18$ معلوم کریں، اور شمار کنندگان کو جمع کریں۔",
+       "check": [
+        "R(10,9) + R(15,6) == R(20+45, 18)",
+        "R(20+45, 18) == R(65,18)"
+       ]
+      },
+      {
+       "math": "\\text{LHS} = \\text{RHS} = \\frac{65}{18}",
+       "en": "Since both sides are equal, the distributive property over addition is verified.",
+       "ur": "چونکہ دونوں اطراف برابر ہیں، اس لیے جمع پر تقسیمی خاصیت کی تصدیق ہو گئی ہے۔",
+       "check": [
+        "R(65,18) == R(65,18)",
+        "(Rational(2,3)+Rational(3,2))*Rational(5,3) == Rational(65,18)",
         "Rational(2,3)*Rational(5,3) + Rational(3,2)*Rational(5,3) == Rational(65,18)"
        ]
       }
      ],
-     "answer": "Verified: $\\frac{65}{18} = \\frac{65}{18}$"
+     "answer": "Verified: $\\frac{65}{18} = \\frac{65}{18}$",
+     "enriched": true
     }
    ]
   },
@@ -330,63 +506,162 @@
      "prompt": "",
      "steps": [
       {
-       "math": "a > 13 \\Rightarrow a+2 > 13+2 = 15",
-       "en": "Add 2 to both sides. This is the order property with respect to addition.",
-       "ur": "دونوں طرف 2 جمع کریں۔ یہ ترتیب کی خاصیت (جمع کے لحاظ سے) ہے۔",
+       "math": "a > 13 \\Rightarrow a + 2 > 15",
+       "en": "We are given the inequality $a > 13$ and asked to identify the property of real numbers that justifies $a + 2 > 15$.",
+       "ur": "ہمیں غیر مساوات $a > 13$ دی گئی ہے اور ہمیں حقیقی اعداد کی وہ خاصیت بتانی ہے جو $a + 2 > 15$ کی وضاحت کرتی ہے۔"
+      },
+      {
+       "math": "x > y \\Rightarrow x + z > y + z",
+       "en": "Recall the order property with respect to addition (additive property of inequality), which states that adding the same real number $z$ to both sides of an inequality does not change the direction of the inequality.",
+       "ur": "ترتیب کی جمع کی خاصیت (غیر مساوات کی جمعی خاصیت) کو یاد کریں، جس کے مطابق کسی غیر مساوات کے دونوں اطراف میں ایک ہی حقیقی عدد $z$ جمع کرنے سے غیر مساوات کی سمت نہیں بدلتی۔"
+      },
+      {
+       "math": "a + 2 > 13 + 2",
+       "en": "Starting with the given inequality $a > 13$, we add $2$ to both sides.",
+       "ur": "دی گئی غیر مساوات $a > 13$ سے شروع کرتے ہوئے، ہم دونوں اطراف میں $2$ جمع کرتے ہیں۔"
+      },
+      {
+       "math": "a + 2 > 15",
+       "en": "Simplifying the right-hand side ($13 + 2 = 15$), we get the required statement.",
+       "ur": "دائیں جانب کو حل کرنے سے ($13 + 2 = 15$)، ہمیں مطلوبہ بیان حاصل ہوتا ہے۔",
+       "check": [
+        "13 + 2 == 15"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Since a constant was added to both sides of the inequality, the property used is the order property w.r.t. addition.",
+       "ur": "چونکہ غیر مساوات کے دونوں اطراف میں ایک مستقل عدد جمع کیا گیا ہے، اس لیے استعمال ہونے والی خاصیت ترتیب کی خاصیت (جمع کے لحاظ سے) ہے۔",
        "check": [
         "13+2 == 15"
        ]
       }
      ],
-     "answer": "Order property w.r.t. addition"
+     "answer": "Order property w.r.t. addition",
+     "enriched": true
     },
     {
      "label": "ii",
      "prompt": "",
      "steps": [
       {
-       "math": "3+6 < 9+12 \\Rightarrow 9 < 21",
-       "en": "Add the two inequalities. Order property w.r.t. addition.",
-       "ur": "دونوں عدم مساوات کو جمع کریں۔ جمع کے لحاظ سے ترتیب کی خاصیت۔",
+       "math": "3 < 9 \\quad \\text{and} \\quad 6 < 12",
+       "en": "We are given two inequalities, $3 < 9$ and $6 < 12$, and we need to identify the property that gives $9 < 21$.",
+       "ur": "ہمیں دو عدم مساوات $3 < 9$ اور $6 < 12$ دی گئی ہیں، اور ہمیں اس خاصیت کی نشاندہی کرنی ہے جس سے $9 < 21$ حاصل ہوتا ہے۔"
+      },
+      {
+       "math": "a < b \\text{ and } c < d \\Rightarrow a + c < b + d",
+       "en": "Recall the order (or additive) property of inequalities: if two inequalities have the same direction, we can add their corresponding sides.",
+       "ur": "عدم مساوات کی ترتیب (یا جمع) کی خاصیت کو یاد کریں: اگر دو عدم مساوات کی سمت ایک جیسی ہو، تو ہم ان کی متعلقہ اطراف کو جمع کر سکتے ہیں۔"
+      },
+      {
+       "math": "3 + 6 < 9 + 12",
+       "en": "Add the left-hand sides together and the right-hand sides together.",
+       "ur": "بائیں اطراف کو ایک ساتھ اور دائیں اطراف کو ایک ساتھ جمع کریں۔"
+      },
+      {
+       "math": "3 + 6 = 9 \\quad \\text{and} \\quad 9 + 12 = 21",
+       "en": "Calculate the sum on both sides.",
+       "ur": "دونوں اطراف کے مجموعے کا حساب لگائیں۔",
+       "check": [
+        "3 + 6 == 9",
+        "9 + 12 == 21"
+       ]
+      },
+      {
+       "math": "9 < 21",
+       "en": "Since we added the two inequalities to get $9 < 21$, the property used is the order property w.r.t. addition.",
+       "ur": "چونکہ ہم نے $9 < 21$ حاصل کرنے کے لیے دونوں عدم مساوات کو جمع کیا ہے، اس لیے استعمال شدہ خاصیت جمع کے لحاظ سے ترتیب کی خاصیت (Order property w.r.t. addition) ہے۔",
        "check": [
         "3+6 == 9",
         "9+12 == 21"
        ]
       }
      ],
-     "answer": "Order property w.r.t. addition"
+     "answer": "Order property w.r.t. addition",
+     "enriched": true
     },
     {
      "label": "iii",
      "prompt": "",
      "steps": [
       {
-       "math": "7\\times 5 > 4\\times 3 \\Rightarrow 35 > 12",
-       "en": "Multiply the two inequalities. Order property w.r.t. multiplication.",
-       "ur": "دونوں عدم مساوات کو ضرب دیں۔ ضرب کے لحاظ سے ترتیب کی خاصیت۔",
+       "math": "7 > 4 \\quad \\text{and} \\quad 5 > 3",
+       "en": "Write down the two given inequalities of positive real numbers.",
+       "ur": "دی گئی مثبت حقیقی اعداد کی دونوں عدم مساواتیں لکھیں۔"
+      },
+      {
+       "math": "a > b \\quad \\text{and} \\quad c > d \\implies a \\times c > b \\times d",
+       "en": "According to the order property of inequalities with respect to multiplication, if two inequalities of positive numbers have the same direction, we can multiply their corresponding sides.",
+       "ur": "ضرب کے لحاظ سے عدم مساوات کی ترتیب کی خاصیت کے مطابق، اگر مثبت اعداد کی دو عدم مساواتوں کی سمت ایک جیسی ہو، تو ہم ان کی متعلقہ اطراف کو آپس میں ضرب دے سکتے ہیں۔"
+      },
+      {
+       "math": "7 \\times 5 > 4 \\times 3",
+       "en": "Multiply the left-hand sides ($7$ and $5$) together and the right-hand sides ($4$ and $3$) together.",
+       "ur": "بائیں اطراف ($7$ اور $5$) کو آپس میں اور دائیں اطراف ($4$ اور $3$) کو آپس میں ضرب دیں۔"
+      },
+      {
+       "math": "35 > 12",
+       "en": "Calculate the products on both sides ($7 \\times 5 = 35$ and $4 \\times 3 = 12$) to obtain the result.",
+       "ur": "نتیجہ حاصل کرنے کے لیے دونوں اطراف کا حاصلِ ضرب معلوم کریں ($7 \\times 5 = 35$ اور $4 \\times 3 = 12$)۔",
+       "check": [
+        "7*5 == 35",
+        "4*3 == 12"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Thus, the property that justifies the statement is the order property with respect to multiplication.",
+       "ur": "پس، وہ خاصیت جو اس بیان کی تصدیق کرتی ہے وہ ضرب کے لحاظ سے ترتیب کی خاصیت (Order property w.r.t. multiplication) ہے۔",
        "check": [
         "7*5 == 35",
         "4*3 == 12"
        ]
       }
      ],
-     "answer": "Order property w.r.t. multiplication"
+     "answer": "Order property w.r.t. multiplication",
+     "enriched": true
     },
     {
      "label": "iv",
      "prompt": "",
      "steps": [
       {
-       "math": "(-5)(-4) > (-4)(-4) \\Rightarrow 20 > 16",
-       "en": "Multiply both sides by -4. Multiplying by a negative number reverses the inequality sign, so -5 < -4 becomes 20 > 16.",
-       "ur": "دونوں طرف -4 سے ضرب دیں۔ منفی عدد سے ضرب کرنے پر عدم مساوات کی علامت الٹ جاتی ہے، یعنی 20 > 16۔",
+       "math": "-5 < -4 \\quad \\text{then} \\quad 20 > 16",
+       "en": "We are given the statement $-5 < -4 \\text{ then } 20 > 16$ and we need to identify the property of inequalities that justifies it.",
+       "ur": "ہمیں بیان دیا گیا ہے کہ اگر $-5 < -4$ ہو تو $20 > 16$۔ ہمیں عدم مساوات کی اس خاصیت کی نشاندہی کرنی ہے جو اس کی تصدیق کرتی ہے۔"
+      },
+      {
+       "math": "(-5)(-4) > (-4)(-4)",
+       "en": "Start with the first inequality $-5 < -4$. If we multiply both sides by a negative number, namely $-4$, the inequality sign reverses from $<$ to $>$.",
+       "ur": "پہلی عدم مساوات $-5 < -4$ سے شروع کریں۔ اگر ہم دونوں اطراف کو ایک منفی عدد، یعنی $-4$ سے ضرب دیں، تو عدم مساوات کی علامت $<$ سے بدل کر $>$ ہو جاتی ہے۔"
+      },
+      {
+       "math": "(-5)(-4) = 20 \\quad \\text{and} \\quad (-4)(-4) = 16",
+       "en": "Now, calculate the products on both sides: multiplying $-5$ by $-4$ gives $20$, and multiplying $-4$ by $-4$ gives $16$.",
+       "ur": "اب دونوں اطراف کے حاصل ضرب معلوم کریں: $-5$ کو $-4$ سے ضرب دینے سے $20$ آتا ہے، اور $-4$ کو $-4$ سے ضرب دینے سے $16$ آتا ہے۔",
+       "check": [
+        "(-5)*(-4) == 20",
+        "(-4)*(-4) == 16"
+       ]
+      },
+      {
+       "math": "20 > 16",
+       "en": "Substituting these results back gives $20 > 16$. The rule that multiplying both sides of an inequality by a negative number reverses the order is the multiplicative property of order (or order property w.r.t. multiplication).",
+       "ur": "ان نتائج کو واپس درج کرنے سے $20 > 16$ حاصل ہوتا ہے۔ یہ اصول کہ کسی عدم مساوات کے دونوں اطراف کو منفی عدد سے ضرب دینے سے ترتیب الٹ جاتی ہے، ضرب کے لحاظ سے ترتیب کی خاصیت کہلاتی ہے۔"
+      },
+      {
+       "math": "",
+       "en": "Therefore, the property that justifies the statement is the: Order property w.r.t. multiplication.",
+       "ur": "لہذا، جو خاصیت اس بیان کی تصدیق کرتی ہے وہ ہے: ضرب کے لحاظ سے ترتیب کی خاصیت (Order property w.r.t. multiplication)۔",
        "check": [
         "(-5)*(-4) == 20",
         "(-4)*(-4) == 16"
        ]
       }
      ],
-     "answer": "Order property w.r.t. multiplication"
+     "answer": "Order property w.r.t. multiplication",
+     "enriched": true
     }
    ]
   },
@@ -402,72 +677,182 @@
      "prompt": "",
      "steps": [
       {
-       "math": "\\sqrt[4]{16x^4y^8} = (16)^{1/4}(x^4)^{1/4}(y^8)^{1/4}",
-       "en": "Write the radical as a power 1/4 and use $(ab)^m = a^m b^m$.",
-       "ur": "جذر کو 1/4 کی طاقت میں لکھیں اور $(ab)^m = a^m b^m$ استعمال کریں۔",
+       "math": "\\sqrt[4]{16x^4y^8}",
+       "en": "We are given the radical expression and asked to simplify it.",
+       "ur": "ہمیں یہ جذری جملہ دیا گیا ہے اور اسے مختصر کرنے کو کہا گیا ہے۔"
+      },
+      {
+       "math": "= (16x^4y^8)^{\\frac{1}{4}}",
+       "en": "First, convert the radical form into exponential form using the rule $\\sqrt[n]{a} = a^{\\frac{1}{n}}$. Here, the index $n = 4$.",
+       "ur": "سب سے پہلے، کلیہ $\\sqrt[n]{a} = a^{\\frac{1}{n}}$ کا استعمال کرتے ہوئے جذری شکل کو قوت نمائی شکل میں تبدیل کریں۔ یہاں اشاریہ $n = 4$ ہے۔",
        "check": [
-        "(16)**Rational(1,4) == 2"
+        "(16)**R(1,4) == 2"
        ]
       },
       {
-       "math": "= 2\\cdot x \\cdot y^2",
-       "en": "Use $(a^m)^n = a^{mn}$: $4\\cdot\\frac14 = 1$, $8\\cdot\\frac14 = 2$.",
-       "ur": "$(a^m)^n = a^{mn}$ استعمال کریں: $4\\cdot\\frac14 = 1$ اور $8\\cdot\\frac14 = 2$۔",
+       "math": "= (2^4 x^4 y^8)^{\\frac{1}{4}}",
+       "en": "Express the number $16$ in its prime factor exponential form as $2^4$, because $2 \\times 2 \\times 2 \\times 2 = 16$.",
+       "ur": "عدد $16$ کو اس کے مفرد اجزائے ضربی کی قوت نمائی شکل میں $2^4$ کے طور پر لکھیں، کیونکہ $2 \\times 2 \\times 2 \\times 2 = 16$ ہوتا ہے۔",
        "check": [
+        "2**4 == 16"
+       ]
+      },
+      {
+       "math": "= (2^4)^{\\frac{1}{4}} \\cdot (x^4)^{\\frac{1}{4}} \\cdot (y^8)^{\\frac{1}{4}}",
+       "en": "Apply the law of exponents $(abc)^m = a^m b^m c^m$ to distribute the outer power $\\frac{1}{4}$ to each factor inside the brackets.",
+       "ur": "قوت نما کے قانون $(abc)^m = a^m b^m c^m$ کا اطلاق کرتے ہوئے بریکٹ کے اندر موجود ہر جزو پر بیرونی طاقت $\\frac{1}{4}$ الگ الگ لگائیں۔",
+       "check": [
+        "(2**4)**R(1,4) == 2"
+       ]
+      },
+      {
+       "math": "= 2^{4 \\times \\frac{1}{4}} \\cdot x^{4 \\times \\frac{1}{4}} \\cdot y^{8 \\times \\frac{1}{4}}",
+       "en": "Now, use the power of a power rule $(a^m)^n = a^{m \\times n}$ to multiply the inner exponents by the outer exponent.",
+       "ur": "اب، قوت کی قوت کے اصول $(a^m)^n = a^{m \\times n}$ کا استعمال کرتے ہوئے اندرونی طاقتوں کو بیرونی طاقت سے ضرب دیں۔",
+       "check": [
+        "4 * R(1,4) == 1",
+        "8 * R(1,4) == 2"
+       ]
+      },
+      {
+       "math": "= 2^1 \\cdot x^1 \\cdot y^2",
+       "en": "Simplify the fractions in the exponents: $4 \\times \\frac{1}{4} = 1$ and $8 \\times \\frac{1}{4} = 2$.",
+       "ur": "قوت نماؤں میں موجود کسروں کو مختصر کریں: $4 \\times \\frac{1}{4} = 1$ اور $8 \\times \\frac{1}{4} = 2$۔",
+       "check": [
+        "2**1 == 2"
+       ]
+      },
+      {
+       "math": "= 2xy^2",
+       "en": "Write the final simplified expression (since $a^1 = a$).",
+       "ur": "آخری مختصر شکل لکھیں (کیونکہ $a^1 = a$ ہوتا ہے)۔",
+       "check": [
+        "2**1 == 2",
+        "(16)**Rational(1,4) == 2",
         "Rational(4,4)==1",
         "Rational(8,4)==2"
        ]
       }
      ],
-     "answer": "$2xy^2$"
+     "answer": "$2xy^2$",
+     "enriched": true
     },
     {
      "label": "ii",
      "prompt": "",
      "steps": [
       {
-       "math": "\\sqrt[3]{27x^6y^9z^3} = 3\\,x^{6/3}\\,y^{9/3}\\,z^{3/3}",
-       "en": "27 = 3^3, so its cube root is 3. Divide each exponent by 3.",
-       "ur": "27 = 3^3 ہے، اس کا مکعب جذر 3 ہے۔ ہر قوت کو 3 سے تقسیم کریں۔",
+       "math": "\\sqrt[3]{27x^6y^9z^3}",
+       "en": "We are given the radical expression $\\sqrt[3]{27x^6y^9z^3}$ and asked to simplify it.",
+       "ur": "ہمیں جذری جملہ $\\sqrt[3]{27x^6y^9z^3}$ دیا گیا ہے اور اسے مختصر کرنے کو کہا گیا ہے۔"
+      },
+      {
+       "math": "= (27x^6y^9z^3)^{\\frac{1}{3}}",
+       "en": "Rewrite the radical expression in exponential form using the rule $\\sqrt[n]{a} = a^{\\frac{1}{n}}$. Here, the index of the root is $n = 3$.",
+       "ur": "قاعدہ $\\sqrt[n]{a} = a^{\\frac{1}{n}}$ کا استعمال کرتے ہوئے جذری جملے کو قوت نمائی شکل میں لکھیں۔ یہاں جذر کا اشاریہ $n = 3$ ہے۔",
+       "check": [
+        "27**(1/3) == 3.0"
+       ]
+      },
+      {
+       "math": "= (3^3 x^6 y^9 z^3)^{\\frac{1}{3}}",
+       "en": "Express the number $27$ in its prime factorized exponential form as $3^3$, since $3 \\times 3 \\times 3 = 27$.",
+       "ur": "عدد $27$ کو اس کی مفرد تجزی کی قوت نمائی شکل میں $3^3$ کے طور پر لکھیں، کیونکہ $3 \\times 3 \\times 3 = 27$ ہوتا ہے۔",
        "check": [
         "3**3 == 27"
        ]
       },
       {
-       "math": "= 3x^2y^3z",
-       "en": "Simplify the exponents.",
-       "ur": "قوتیں سادہ کریں۔",
+       "math": "= (3^3)^{\\frac{1}{3}} (x^6)^{\\frac{1}{3}} (y^9)^{\\frac{1}{3}} (z^3)^{\\frac{1}{3}}",
+       "en": "Apply the power of a product rule, $(ab)^n = a^n b^n$, to distribute the outer exponent $\\frac{1}{3}$ to each factor inside the brackets.",
+       "ur": "حاصل ضرب کی قوت کا اصول $(ab)^n = a^n b^n$ لاگو کرتے ہوئے بیرونی قوت نما $\\frac{1}{3}$ کو بریکٹ کے اندر موجود ہر جزو ضربی پر الگ الگ لگائیں۔",
        "check": [
+        "(3**3)**(1/3) == 3.0"
+       ]
+      },
+      {
+       "math": "= 3^{\\frac{3}{3}} x^{\\frac{6}{3}} y^{\\frac{9}{3}} z^{\\frac{3}{3}}",
+       "en": "Apply the power of a power rule, $(a^m)^n = a^{m \\cdot n}$, by multiplying the inner exponents by $\\frac{1}{3}$ (which divides each exponent by $3$).",
+       "ur": "قوت کی قوت کا اصول $(a^m)^n = a^{m \\cdot n}$ لاگو کرتے ہوئے اندرونی قوت نماؤں کو $\\frac{1}{3}$ سے ضرب دیں (جس سے ہر قوت نما $3$ سے تقسیم ہو جائے گا)۔",
+       "check": [
+        "3*R(1,3) == R(3,3)",
+        "6*R(1,3) == R(6,3)",
+        "9*R(1,3) == R(9,3)"
+       ]
+      },
+      {
+       "math": "= 3^1 x^2 y^3 z^1 = 3x^2y^3z",
+       "en": "Simplify the fractions in the exponents to get the final answer: $3x^2y^3z$.",
+       "ur": "قوت نماؤں میں موجود کسور کو مختصر کریں، جس سے حتمی جواب $3x^2y^3z$ حاصل ہوتا ہے۔",
+       "check": [
+        "R(3,3) == 1",
+        "R(6,3) == 2",
+        "R(9,3) == 3",
+        "3**3 == 27",
         "Rational(6,3)==2",
         "Rational(9,3)==3"
        ]
       }
      ],
-     "answer": "$3x^2y^3z$"
+     "answer": "$3x^2y^3z$",
+     "enriched": true
     },
     {
      "label": "iii",
      "prompt": "",
      "steps": [
       {
+       "math": "(64)^{-4/3}",
+       "en": "We are given the exponential expression $(64)^{-4/3}$ and asked to simplify it.",
+       "ur": "ہمیں قوت نمائی جملہ $(64)^{-4/3}$ دیا گیا ہے اور اسے مختصر کرنے کو کہا گیا ہے۔"
+      },
+      {
        "math": "(64)^{-4/3} = \\frac{1}{(64)^{4/3}}",
-       "en": "A negative exponent gives the reciprocal.",
-       "ur": "منفی قوت کا مطلب معکوس ہے۔",
+       "en": "Using the law of negative exponents, $a^{-n} = \\frac{1}{a^n}$, we take the reciprocal to make the exponent positive.",
+       "ur": "منفی قوت نما کے قانون $a^{-n} = \\frac{1}{a^n}$ کو استعمال کرتے ہوئے، ہم قوت کو مثبت بنانے کے لیے معکوس لیتے ہیں۔",
        "check": [
-        "64**Rational(-4,3) == 1/64**Rational(4,3)"
+        "64**R(-4,3) == 1/(64**R(4,3))"
        ]
       },
       {
-       "math": "64 = 4^3 \\Rightarrow (64)^{4/3} = 4^4 = 256",
-       "en": "Write 64 = 4^3, then (4^3)^{4/3} = 4^4.",
-       "ur": "64 = 4^3 لکھیں، پھر $(4^3)^{4/3} = 4^4$۔",
+       "math": "64 = 4 \\times 4 \\times 4 = 4^3",
+       "en": "Since the denominator of the fractional exponent is $3$, we express the base $64$ as a cube of $4$.",
+       "ur": "چونکہ کسری قوت نما کا مخرج $3$ ہے، اس لیے ہم اساس $64$ کو $4$ کے مکعب کی شکل میں لکھتے ہیں۔",
        "check": [
+        "64 == 4**3"
+       ]
+      },
+      {
+       "math": "\\frac{1}{(64)^{4/3}} = \\frac{1}{(4^3)^{4/3}}",
+       "en": "Substitute $64 = 4^3$ into the denominator of our expression.",
+       "ur": "اپنے جملے کے مخرج میں $64 = 4^3$ درج کریں۔",
+       "check": [
+        "1/(64**R(4,3)) == 1/((4**3)**R(4,3))"
+       ]
+      },
+      {
+       "math": "\\frac{1}{(4^3)^{4/3}} = \\frac{1}{4^{3 \\times \\frac{4}{3}}} = \\frac{1}{4^4}",
+       "en": "Apply the power of a power law, $(a^m)^n = a^{m \\times n}$, and cancel out the $3$ in the exponent.",
+       "ur": "قوت کی قوت کا قانون $(a^m)^n = a^{m \\times n}$ لاگو کریں، اور قوت نما میں موجود $3$ کو کینسل کریں۔",
+       "check": [
+        "1/((4**3)**R(4,3)) == 1/(4**(3*R(4,3)))",
+        "1/(4**(3*R(4,3))) == 1/(4**4)"
+       ]
+      },
+      {
+       "math": "\\frac{1}{4^4} = \\frac{1}{256}",
+       "en": "Finally, calculate $4^4 = 4 \\times 4 \\times 4 \\times 4 = 256$ to get the simplified answer.",
+       "ur": "آخر میں، مختصر جواب حاصل کرنے کے لیے $4^4 = 4 \\times 4 \\times 4 \\times 4 = 256$ کا حساب لگائیں۔",
+       "check": [
+        "1/(4**4) == R(1,256)",
+        "64**Rational(-4,3) == 1/64**Rational(4,3)",
         "4**4 == 256",
         "64**Rational(4,3) == 256"
        ]
       }
      ],
-     "answer": "$\\frac{1}{256}$"
+     "answer": "$\\frac{1}{256}$",
+     "enriched": true
     }
    ]
   },
@@ -483,46 +868,109 @@
      "prompt": "",
      "steps": [
       {
-       "math": "\\frac{3}{\\sqrt5+\\sqrt2}\\times\\frac{\\sqrt5-\\sqrt2}{\\sqrt5-\\sqrt2}",
-       "en": "Multiply by the conjugate $\\sqrt5-\\sqrt2$.",
-       "ur": "مزدوج $\\sqrt5-\\sqrt2$ سے ضرب دیں۔",
+       "math": "\\frac{3}{\\sqrt{5}+\\sqrt{2}}",
+       "en": "Write down the given expression. We need to rationalize the denominator.",
+       "ur": "دی گئی عبارت لکھیں۔ ہمیں اس کے مخرج کو ناطق (rationalize) بنانا ہے۔"
+      },
+      {
+       "math": "= \\frac{3}{\\sqrt{5}+\\sqrt{2}} \\times \\frac{\\sqrt{5}-\\sqrt{2}}{\\sqrt{5}-\\sqrt{2}}",
+       "en": "The conjugate of the denominator $\\sqrt{5}+\\sqrt{2}$ is $\\sqrt{5}-\\sqrt{2}$. Multiply both the numerator and the denominator by this conjugate.",
+       "ur": "مخرج $\\sqrt{5}+\\sqrt{2}$ کا مزدوج (conjugate) $\\sqrt{5}-\\sqrt{2}$ ہے۔ شمار کنندہ اور مخرج دونوں کو اس مزدوج سے ضرب دیں۔",
        "check": [
-        "3/(sqrt(5)+sqrt(2)) == sqrt(5)-sqrt(2)"
+        "3/(sqrt(5)+sqrt(2)) == (3/(sqrt(5)+sqrt(2))) * ((sqrt(5)-sqrt(2))/(sqrt(5)-sqrt(2)))"
        ]
       },
       {
-       "math": "= \\frac{3(\\sqrt5-\\sqrt2)}{5-2} = \\sqrt5-\\sqrt2",
-       "en": "Denominator is $(\\sqrt5)^2-(\\sqrt2)^2 = 3$.",
-       "ur": "مخرج $(\\sqrt5)^2-(\\sqrt2)^2 = 3$ ہے۔",
+       "math": "= \\frac{3(\\sqrt{5}-\\sqrt{2})}{(\\sqrt{5})^2 - (\\sqrt{2})^2}",
+       "en": "Apply the algebraic identity $(a+b)(a-b) = a^2 - b^2$ in the denominator.",
+       "ur": "مخرج میں الجبری کلیہ $(a+b)(a-b) = a^2 - b^2$ کا اطلاق کریں۔",
        "check": [
+        "(sqrt(5)+sqrt(2))*(sqrt(5)-sqrt(2)) == (sqrt(5))**2 - (sqrt(2))**2"
+       ]
+      },
+      {
+       "math": "= \\frac{3(\\sqrt{5}-\\sqrt{2})}{5 - 2}",
+       "en": "Simplify the squares in the denominator: $(\\sqrt{5})^2 = 5$ and $(\\sqrt{2})^2 = 2$.",
+       "ur": "مخرج میں مربعات کو حل کریں: $(\\sqrt{5})^2 = 5$ اور $(\\sqrt{2})^2 = 2$۔",
+       "check": [
+        "(sqrt(5))**2 == 5",
+        "(sqrt(2))**2 == 2"
+       ]
+      },
+      {
+       "math": "= \\frac{3(\\sqrt{5}-\\sqrt{2})}{3}",
+       "en": "Subtract the numbers in the denominator: $5 - 2 = 3$.",
+       "ur": "مخرج میں اعداد کو تفریق کریں: $5 - 2 = 3$۔",
+       "check": [
+        "5 - 2 == 3"
+       ]
+      },
+      {
+       "math": "= \\sqrt{5}-\\sqrt{2}",
+       "en": "Cancel out the common factor $3$ from the numerator and the denominator to get the final answer.",
+       "ur": "آخری جواب حاصل کرنے کے لیے شمار کنندہ اور مخرج سے مشترک جزو ضربی $3$ کو منسوخ کریں۔",
+       "check": [
+        "3*(sqrt(5)-sqrt(2))/3 == sqrt(5)-sqrt(2)",
+        "3/(sqrt(5)+sqrt(2)) == sqrt(5)-sqrt(2)",
         "(sqrt(5))**2 - (sqrt(2))**2 == 3"
        ]
       }
      ],
-     "answer": "$\\sqrt5-\\sqrt2$"
+     "answer": "$\\sqrt5-\\sqrt2$",
+     "enriched": true
     },
     {
      "label": "ii",
      "prompt": "",
      "steps": [
       {
-       "math": "\\frac{3}{\\sqrt5-\\sqrt3}\\times\\frac{\\sqrt5+\\sqrt3}{\\sqrt5+\\sqrt3}",
-       "en": "Multiply by the conjugate $\\sqrt5+\\sqrt3$.",
-       "ur": "مزدوج $\\sqrt5+\\sqrt3$ سے ضرب دیں۔",
+       "math": "\\frac{3}{\\sqrt{5}-\\sqrt{3}}",
+       "en": "We are given the expression $\\frac{3}{\\sqrt{5}-\\sqrt{3}}$ and we need to rationalize its denominator.",
+       "ur": "ہمیں جملہ $\\frac{3}{\\sqrt{5}-\\sqrt{3}}$ دیا گیا ہے اور ہمیں اس کے مخرج کو ناطق بنانا ہے۔"
+      },
+      {
+       "math": "\\sqrt{5}+\\sqrt{3}",
+       "en": "To rationalize a binomial surd denominator of the form $\\sqrt{a}-\\sqrt{b}$, we multiply both the numerator and the denominator by its conjugate $\\sqrt{a}+\\sqrt{b}$. Here, the conjugate of $\\sqrt{5}-\\sqrt{3}$ is $\\sqrt{5}+\\sqrt{3}$.",
+       "ur": "$\\sqrt{a}-\\sqrt{b}$ کی شکل کے دو رقمی اصم مخرج کو ناطق بنانے کے لیے، ہم شمار کنندہ اور مخرج دونوں کو اس کے مزدوج (conjugate) $\\sqrt{a}+\\sqrt{b}$ سے ضرب دیتے ہیں۔ یہاں، $\\sqrt{5}-\\sqrt{3}$ کا مزدوج $\\sqrt{5}+\\sqrt{3}$ ہے۔"
+      },
+      {
+       "math": "= \\frac{3}{\\sqrt{5}-\\sqrt{3}} \\times \\frac{\\sqrt{5}+\\sqrt{3}}{\\sqrt{5}+\\sqrt{3}}",
+       "en": "Multiply the numerator and the denominator by $\\sqrt{5}+\\sqrt{3}$.",
+       "ur": "شمار کنندہ اور مخرج کو $\\sqrt{5}+\\sqrt{3}$ سے ضرب دیں۔",
        "check": [
-        "3/(sqrt(5)-sqrt(3)) == 3*(sqrt(5)+sqrt(3))/2"
+        "3/(sqrt(5)-sqrt(3)) == (3/(sqrt(5)-sqrt(3))) * ((sqrt(5)+sqrt(3))/(sqrt(5)+sqrt(3)))"
        ]
       },
       {
-       "math": "= \\frac{3(\\sqrt5+\\sqrt3)}{5-3} = \\frac{3(\\sqrt5+\\sqrt3)}{2}",
-       "en": "Denominator is $5-3 = 2$.",
-       "ur": "مخرج $5-3 = 2$ ہے۔",
+       "math": "= \\frac{3(\\sqrt{5}+\\sqrt{3})}{(\\sqrt{5})^2 - (\\sqrt{3})^2}",
+       "en": "Apply the algebraic identity $(a-b)(a+b) = a^2 - b^2$ in the denominator.",
+       "ur": "مخرج میں الجبری کلیہ $(a-b)(a+b) = a^2 - b^2$ کا اطلاق کریں۔",
        "check": [
+        "(sqrt(5)-sqrt(3))*(sqrt(5)+sqrt(3)) == (sqrt(5))**2 - (sqrt(3))**2"
+       ]
+      },
+      {
+       "math": "= \\frac{3(\\sqrt{5}+\\sqrt{3})}{5 - 3}",
+       "en": "Simplify the squares in the denominator since $(\\sqrt{5})^2 = 5$ and $(\\sqrt{3})^2 = 3$.",
+       "ur": "مخرج میں مربعات کو مختصر کریں کیونکہ $(\\sqrt{5})^2 = 5$ اور $(\\sqrt{3})^2 = 3$ ہے۔",
+       "check": [
+        "(sqrt(5))**2 == 5",
+        "(sqrt(3))**2 == 3"
+       ]
+      },
+      {
+       "math": "= \\frac{3(\\sqrt{5}+\\sqrt{3})}{2}",
+       "en": "Subtract the numbers in the denominator ($5 - 3 = 2$) to get the final answer.",
+       "ur": "حتمی جواب حاصل کرنے کے لیے مخرج میں اعداد کو تفریق کریں ($5 - 3 = 2$)۔",
+       "check": [
+        "5 - 3 == 2",
+        "3/(sqrt(5)-sqrt(3)) == 3*(sqrt(5)+sqrt(3))/2",
         "(sqrt(5))**2 - (sqrt(3))**2 == 2"
        ]
       }
      ],
-     "answer": "$\\frac{3(\\sqrt5+\\sqrt3)}{2}$"
+     "answer": "$\\frac{3(\\sqrt5+\\sqrt3)}{2}$",
+     "enriched": true
     }
    ]
   },
@@ -575,23 +1023,54 @@
      "prompt": "",
      "steps": [
       {
-       "math": "^\\circ C = \\frac{5}{9}(F-32)",
-       "en": "Use the Fahrenheit-to-Celsius formula.",
-       "ur": "فارن ہائیٹ سے سیلسیس کا فارمولا استعمال کریں۔",
+       "math": "F = 98.6\\text{ }^\\circ\\text{F}",
+       "en": "First, write down the given normal human body temperature in Fahrenheit ($F$). We need to convert this into Celsius ($C$) and Kelvin ($K$).",
+       "ur": "سب سے پہلے، فارن ہائیٹ ($F$) میں دیا گیا انسانی جسم کا نارمل درجہ حرارت لکھیں۔ ہمیں اسے سیلسیس ($C$) اور کیلون ($K$) میں تبدیل کرنا ہے۔"
+      },
+      {
+       "math": "C = \\frac{5}{9}(F - 32)",
+       "en": "To convert Fahrenheit into Celsius, we use the standard temperature conversion formula.",
+       "ur": "فارن ہائیٹ کو سیلسیس میں تبدیل کرنے کے لیے ہم درجہ حرارت کی تبدیلی کا معیاری فارمولا استعمال کرتے ہیں۔"
+      },
+      {
+       "math": "C = \\frac{5}{9}(98.6 - 32)",
+       "en": "Substitute the given value $F = 98.6$ into the formula.",
+       "ur": "فارمولے میں دی گئی قیمت $F = 98.6$ درج کریں۔"
+      },
+      {
+       "math": "C = \\frac{5}{9}(66.6)",
+       "en": "Subtract $32$ from $98.6$ inside the brackets.",
+       "ur": "بریکٹ کے اندر $98.6$ میں سے $32$ تفریق کریں۔",
        "check": [
-        "Rational(5,9)*(Rational(986,10)-32) == 37"
+        "R(986,10) - 32 == R(666,10)"
        ]
       },
       {
-       "math": "K = C + 273 = 37 + 273 = 310",
-       "en": "Convert Celsius to Kelvin.",
-       "ur": "سیلسیس کو کیلون میں بدلیں۔",
+       "math": "C = 37\\text{ }^\\circ\\text{C}",
+       "en": "Multiply $66.6$ by $5$ and divide by $9$ to get the temperature in Celsius.",
+       "ur": "سیلسیس میں درجہ حرارت حاصل کرنے کے لیے $66.6$ کو $5$ سے ضرب دیں اور $9$ پر تقسیم کریں۔",
        "check": [
+        "R(5,9) * R(666,10) == 37"
+       ]
+      },
+      {
+       "math": "K = C + 273",
+       "en": "Now, to convert the Celsius temperature into Kelvin, we use the Celsius-to-Kelvin formula.",
+       "ur": "اب سیلسیس درجہ حرارت کو کیلون میں تبدیل کرنے کے لیے، ہم سیلسیس سے کیلون کا فارمولا استعمال کرتے ہیں۔"
+      },
+      {
+       "math": "K = 37 + 273 = 310\\text{ K}",
+       "en": "Substitute $C = 37$ into the formula and add $273$ to get the temperature in Kelvin. Thus, the normal body temperature is $37\\text{ }^\\circ\\text{C}$ and $310\\text{ K}$.",
+       "ur": "فارمولے میں $C = 37$ درج کریں اور کیلون میں درجہ حرارت حاصل کرنے کے لیے $273$ جمع کریں۔ اس طرح، انسانی جسم کا نارمل درجہ حرارت $37\\text{ }^\\circ\\text{C}$ اور $310\\text{ K}$ ہے۔",
+       "check": [
+        "37 + 273 == 310",
+        "Rational(5,9)*(Rational(986,10)-32) == 37",
         "37+273 == 310"
        ]
       }
      ],
-     "answer": "37 °C and 310 K"
+     "answer": "37 °C and 310 K",
+     "enriched": true
     }
    ]
   },
@@ -639,23 +1118,57 @@
      "prompt": "",
      "steps": [
       {
-       "math": "\\text{Loss} = CP - SP = 850 - 720 = 130",
-       "en": "Loss is cost price minus selling price.",
-       "ur": "نقصان = خرید قیمت − فروخت قیمت۔",
+       "math": "\\text{CP} = \\text{Rs. } 850, \\quad \\text{SP} = \\text{Rs. } 720",
+       "en": "Write down the given Cost Price (CP) and Selling Price (SP) of the book.",
+       "ur": "کتاب کی دی گئی قیمتِ خرید (CP) اور قیمتِ فروخت (SP) لکھیں۔",
        "check": [
-        "850-720 == 130"
+        "850 == 850",
+        "720 == 720"
        ]
       },
       {
-       "math": "\\text{Loss\\%} = \\frac{130}{850}\\times 100 = 15.29\\%",
-       "en": "Loss % = loss / CP x 100.",
-       "ur": "نقصان فیصد = نقصان / خرید قیمت × 100۔",
+       "math": "\\text{Loss} = \\text{CP} - \\text{SP}",
+       "en": "Since the Selling Price is less than the Cost Price, Umair suffered a loss. We use the formula $\\text{Loss} = \\text{CP} - \\text{SP}$.",
+       "ur": "چونکہ قیمتِ فروخت، قیمتِ خرید سے کم ہے، اس لیے عمیر کو نقصان ہوا۔ ہم فارمولا $\\text{Loss} = \\text{CP} - \\text{SP}$ استعمال کرتے ہیں۔"
+      },
+      {
+       "math": "\\text{Loss} = 850 - 720 = \\text{Rs. } 130",
+       "en": "Substitute the values of CP and SP into the formula and subtract to find the total loss.",
+       "ur": "فارمولے میں قیمتِ خرید اور قیمتِ فروخت کی قدریں درج کریں اور کل نقصان معلوم کرنے کے لیے تفریق کریں۔",
        "check": [
+        "850 - 720 == 130"
+       ]
+      },
+      {
+       "math": "\\text{Loss \\%} = \\frac{130}{850} \\times 100\\%",
+       "en": "Now, use the loss percentage formula $\\text{Loss \\%} = \\frac{\\text{Loss}}{\\text{CP}} \\times 100\\%$ and substitute the values of Loss and CP.",
+       "ur": "اب، نقصان فیصد کا فارمولا $\\text{Loss \\%} = \\frac{\\text{Loss}}{\\text{CP}} \\times 100\\%$ استعمال کریں اور اس میں نقصان اور قیمتِ خرید کی قدریں درج کریں۔",
+       "check": [
+        "R(130, 850) * 100 == R(260, 17)"
+       ]
+      },
+      {
+       "math": "\\text{Loss \\%} = \\frac{13000}{850}\\% = \\frac{260}{17}\\%",
+       "en": "Multiply the numerator by $100$ and simplify the fraction by dividing both numerator and denominator by $50$.",
+       "ur": "شمار کنندہ کو $100$ سے ضرب دیں اور شمار کنندہ اور مخرج دونوں کو $50$ پر تقسیم کر کے کسر کو مختصر کریں۔",
+       "check": [
+        "130 * 100 == 13000",
+        "R(13000, 850) == R(260, 17)"
+       ]
+      },
+      {
+       "math": "\\text{Loss \\%} \\approx 15.29\\%",
+       "en": "Divide $260$ by $17$ and round off to two decimal places. Thus, Umair's loss percentage is $15.29\\%$.",
+       "ur": "$260$ کو $17$ پر تقسیم کریں اور اعشاریہ کے بعد دو درجوں تک محدود کریں۔ پس، عمیر کا نقصان فیصد $15.29\\%$ ہے۔",
+       "check": [
+        "Abs(260/17 - 15.29) < 0.01",
+        "850-720 == 130",
         "abs(130*100/850 - 15.29) < 0.01"
        ]
       }
      ],
-     "answer": "15.29%"
+     "answer": "15.29%",
+     "enriched": true
     }
    ]
   },

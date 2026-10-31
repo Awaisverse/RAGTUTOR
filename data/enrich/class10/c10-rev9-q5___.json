@@ -1,0 +1,62 @@
+{
+ "item": "c10-rev9-q5",
+ "label": "",
+ "answer_ref": "$a = 40^\\circ,\\ b = 40^\\circ$",
+ "steps": [
+  {
+   "math": "m\\angle SOR = 100^\\circ",
+   "en": "From the given figure, the central angle $\\angle SOR$ is $100^\\circ$, and we need to find the unknown angles $a$ and $b$.",
+   "ur": "دی گئی شکل کے مطابق، مرکزی زاویہ $\\angle SOR = 100^\\circ$ ہے، اور ہمیں نامعلوم زاویے $a$ اور $b$ معلوم کرنے ہیں۔",
+   "check": [
+    "100 == 100"
+   ]
+  },
+  {
+   "math": "m\\overline{OS} = m\\overline{OR}",
+   "en": "In $\\triangle SOR$, the sides $\\overline{OS}$ and $\\overline{OR}$ are both radii of the same circle, so they are equal in length.",
+   "ur": "مثلث $SOR$ میں، اضلاع $\\overline{OS}$ اور $\\overline{OR}$ ایک ہی دائرے کے رداس ہیں، اس لیے ان کی لمبائی برابر ہے۔"
+  },
+  {
+   "math": "a = b",
+   "en": "Since two sides of $\\triangle SOR$ are equal, it is an isosceles triangle. Therefore, the angles opposite to these equal sides are also equal.",
+   "ur": "چونکہ مثلث $SOR$ کے دو اضلاع برابر ہیں، اس لیے یہ ایک متساوی الساقین مثلث ہے۔ لہٰذا، ان برابر اضلاع کے بالمقابل زاویے بھی آپس میں برابر ہیں۔"
+  },
+  {
+   "math": "m\\angle SOR + a + b = 180^\\circ",
+   "en": "The sum of the interior angles of any triangle is always $180^\\circ$.",
+   "ur": "کسی بھی مثلث کے اندرونی زاویوں کا مجموعہ ہمیشہ $180^\\circ$ ہوتا ہے۔"
+  },
+  {
+   "math": "100^\\circ + a + a = 180^\\circ",
+   "en": "Substitute $m\\angle SOR = 100^\\circ$ and replace $b$ with $a$ (since $a = b$).",
+   "ur": "$m\\angle SOR = 100^\\circ$ درج کریں اور $b$ کی جگہ $a$ رکھیں (کیونکہ $a = b$ ہے)۔"
+  },
+  {
+   "math": "2a = 180^\\circ - 100^\\circ = 80^\\circ",
+   "en": "Combine like terms and subtract $100^\\circ$ from both sides.",
+   "ur": "ایک جیسی رقوم کو جمع کریں اور دونوں طرف سے $100^\\circ$ تفریق کریں۔",
+   "check": [
+    "180 - 100 == 80"
+   ]
+  },
+  {
+   "math": "a = \\frac{80^\\circ}{2} = 40^\\circ",
+   "en": "Divide both sides by $2$ to find the value of $a$.",
+   "ur": "$a$ کی قیمت معلوم کرنے کے لیے دونوں طرف $2$ سے تقسیم کریں۔",
+   "check": [
+    "80 / 2 == 40"
+   ]
+  },
+  {
+   "math": "a = 40^\\circ, \\quad b = 40^\\circ",
+   "en": "Since $a = b$, the value of $b$ is also $40^\\circ$.",
+   "ur": "چونکہ $a = b$ ہے، اس لیے $b$ کی قیمت بھی $40^\\circ$ ہے۔",
+   "check": [
+    "40 == 40",
+    "(180 - 100)/2 == 40"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

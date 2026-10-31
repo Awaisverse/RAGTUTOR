@@ -1,0 +1,49 @@
+{
+ "item": "c10-ex3.3-q2",
+ "label": "vi",
+ "answer_ref": "$\\begin{bmatrix} 0 & 0 \\\\ 0 & 0 \\end{bmatrix}$",
+ "steps": [
+  {
+   "math": "Z = \\begin{bmatrix} 3 & 0 \\\\ 0 & -2 \\end{bmatrix}",
+   "en": "First, write down the given matrix $Z$. We need to find the value of $Z - Z$.",
+   "ur": "سب سے پہلے، دیا گیا قالب $Z$ لکھیں۔ ہمیں $Z - Z$ کی قیمت معلوم کرنی ہے۔",
+   "check": [
+    "Eq(Matrix([[3, 0], [0, -2]]), Matrix([[3, 0], [0, -2]]))"
+   ]
+  },
+  {
+   "math": "Z - Z = \\begin{bmatrix} 3 & 0 \\\\ 0 & -2 \\end{bmatrix} - \\begin{bmatrix} 3 & 0 \\\\ 0 & -2 \\end{bmatrix}",
+   "en": "Substitute the matrix $Z$ into the expression $Z - Z$.",
+   "ur": "جملے $Z - Z$ میں قالب $Z$ کی قیمت درج کریں۔",
+   "check": [
+    "Eq(Matrix([[3, 0], [0, -2]]) - Matrix([[3, 0], [0, -2]]), Matrix([[0, 0], [0, 0]]))"
+   ]
+  },
+  {
+   "math": "Z - Z = \\begin{bmatrix} 3 - 3 & 0 - 0 \\\\ 0 - 0 & -2 - (-2) \\end{bmatrix}",
+   "en": "Since a matrix is being subtracted from itself (same order $2 \\times 2$), subtract the corresponding entries in the same positions.",
+   "ur": "چونکہ ایک قالب کو اپنے آپ سے تفریق کیا جا رہا ہے (یکساں درجہ $2 \\times 2$)، اس لیے ایک ہی مقام پر موجود متناظرہ ارکان کو آپس میں تفریق کریں۔",
+   "check": [
+    "Eq(Matrix([[3 - 3, 0 - 0], [0 - 0, -2 - (-2)]]), Matrix([[0, 0], [0, 0]]))"
+   ]
+  },
+  {
+   "math": "Z - Z = \\begin{bmatrix} 0 & 0 \\\\ 0 & -2 + 2 \\end{bmatrix}",
+   "en": "Simplify the signs in the bottom-right entry, as subtracting a negative number is the same as adding a positive number.",
+   "ur": "نچلے دائیں رکن میں علامتوں کو سادہ کریں، کیونکہ منفی عدد کو تفریق کرنا مثبت عدد کو جمع کرنے کے برابر ہے۔",
+   "check": [
+    "Eq(Matrix([[0, 0], [0, -2 + 2]]), Matrix([[0, 0], [0, 0]]))"
+   ]
+  },
+  {
+   "math": "Z - Z = \\begin{bmatrix} 0 & 0 \\\\ 0 & 0 \\end{bmatrix}",
+   "en": "Perform the final addition to get the required null (zero) matrix.",
+   "ur": "مطلوبہ صفری قالب حاصل کرنے کے لیے آخری جمع کا عمل مکمل کریں۔",
+   "check": [
+    "Eq(Matrix([[0, 0], [0, 0]]), Matrix([[0, 0], [0, 0]]))"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

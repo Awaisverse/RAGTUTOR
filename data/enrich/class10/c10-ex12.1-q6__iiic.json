@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex12.1-q6",
+ "label": "iiic",
+ "answer_ref": "$\\frac{1}{2}$",
+ "steps": [
+  {
+   "math": "n(S) = 6 \\times 6 = 36",
+   "en": "When two unbiased dice are rolled once, each die has $6$ faces, so the total number of possible outcomes in the sample space $S$ is $36$.",
+   "ur": "جب دو غیر جانبدار چھکے ایک بار پھینکے جاتے ہیں، تو ہر چھکے کے $6$ رخ ہوتے ہیں، اس لیے نمونہ فضا $S$ میں ممکنہ نتائج کی کل تعداد $36$ ہے۔",
+   "check": [
+    "6*6 == 36"
+   ]
+  },
+  {
+   "math": "",
+   "en": "Let $E$ be the event of getting an even sum (which can be $2, 4, 6, 8, 10,$ or $12$). The favourable outcomes are: $E = \\{(1,1), (1,3), (1,5), (2,2), (2,4), (2,6), (3,1), (3,3), (3,5), (4,2), (4,4), (4,6), (5,1), (5,3), (5,5), (6,2), (6,4), (6,6)\\}$.",
+   "ur": "فرض کریں کہ $E$ ایک جفت مجموعہ (جو کہ $2, 4, 6, 8, 10,$ یا $12$ ہو سکتا ہے) حاصل کرنے کا واقعہ ہے۔ موافق نتائج یہ ہیں: $E = \\{(1,1), (1,3), (1,5), (2,2), (2,4), (2,6), (3,1), (3,3), (3,5), (4,2), (4,4), (4,6), (5,1), (5,3), (5,5), (6,2), (6,4), (6,6)\\}$۔"
+  },
+  {
+   "math": "n(E) = 6 \\times 3 = 18",
+   "en": "For each of the $6$ numbers on the first die, there are $3$ numbers on the second die that give an even sum, so the number of favourable outcomes is $18$.",
+   "ur": "پہلے چھکے کے $6$ نمبروں میں سے ہر ایک کے لیے، دوسرے چھکے پر $3$ ایسے نمبر ہیں جو جفت مجموعہ دیتے ہیں، اس لیے موافق نتائج کی تعداد $18$ ہے۔",
+   "check": [
+    "6*3 == 18"
+   ]
+  },
+  {
+   "math": "P(E) = \\frac{n(E)}{n(S)}",
+   "en": "The formula for the probability of an event $E$ is the number of favourable outcomes divided by the total number of outcomes.",
+   "ur": "کسی واقعہ $E$ کے احتمال کا فارمولا موافق نتائج کی تعداد کو کل نتائج کی تعداد سے تقسیم کرنا ہے۔"
+  },
+  {
+   "math": "P(E) = \\frac{18}{36} = \\frac{1}{2}",
+   "en": "Substitute $n(E) = 18$ and $n(S) = 36$ into the formula and simplify the fraction to get the final answer $\\frac{1}{2}$.",
+   "ur": "فارمولے میں $n(E) = 18$ اور $n(S) = 36$ درج کریں اور کسر کو مختصر کر کے حتمی جواب $\\frac{1}{2}$ حاصل کریں۔",
+   "check": [
+    "R(18, 36) == R(1, 2)",
+    "36 == 36",
+    "R(18, 36) == 1/2"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

@@ -1,0 +1,55 @@
+{
+ "item": "c10-rev3-q2",
+ "label": "i",
+ "answer_ref": "$\\begin{bmatrix} -1 & -1 \\\\ -3 & -2 \\end{bmatrix}$",
+ "steps": [
+  {
+   "math": "",
+   "en": "We are given two matrices $A = \\begin{bmatrix} 4 & 2 \\\\ 7 & 6 \\end{bmatrix}$ and $B = \\begin{bmatrix} 5 & 5 \\\\ 8 & 8 \\end{bmatrix}$, and we need to find $(A - B)^t$.",
+   "ur": "ہمیں دو قالب $A = \\begin{bmatrix} 4 & 2 \\\\ 7 & 6 \\end{bmatrix}$ اور $B = \\begin{bmatrix} 5 & 5 \\\\ 8 & 8 \\end{bmatrix}$ دیے گئے ہیں، اور ہمیں $(A - B)^t$ معلوم کرنا ہے۔"
+  },
+  {
+   "math": "A - B = \\begin{bmatrix} 4 & 2 \\\\ 7 & 6 \\end{bmatrix} - \\begin{bmatrix} 5 & 5 \\\\ 8 & 8 \\end{bmatrix}",
+   "en": "First, we find the difference $A - B$ by substituting the given matrices.",
+   "ur": "سب سے پہلے، ہم دیے گئے قالبوں کی قیمتیں درج کر کے فرق $A - B$ معلوم کرتے ہیں۔",
+   "check": [
+    "Eq(Matrix([[4, 2], [7, 6]]) - Matrix([[5, 5], [8, 8]]), Matrix([[-1, -3], [-1, -2]]))"
+   ]
+  },
+  {
+   "math": "A - B = \\begin{bmatrix} 4 - 5 & 2 - 5 \\\\ 7 - 8 & 6 - 8 \\end{bmatrix}",
+   "en": "Since both matrices have the same order ($2 \\times 2$), we subtract the corresponding entries in the same positions.",
+   "ur": "چونکہ دونوں قالبوں کا درجہ ایک ہی ($2 \\times 2$) ہے، اس لیے ہم ایک ہی مقام پر موجود متناظرہ ارکان کو تفریق کرتے ہیں۔",
+   "check": [
+    "Eq(Matrix([[4 - 5, 2 - 5], [7 - 8, 6 - 8]]), Matrix([[-1, -3], [-1, -2]]))"
+   ]
+  },
+  {
+   "math": "A - B = \\begin{bmatrix} -1 & -3 \\\\ -1 & -2 \\end{bmatrix}",
+   "en": "Simplify each entry to get the matrix $A - B$.",
+   "ur": "قالب $A - B$ حاصل کرنے کے لیے ہر رکن کو مختصر کریں۔",
+   "check": [
+    "Eq(Matrix([[4 - 5, 2 - 5], [7 - 8, 6 - 8]]), Matrix([[-1, -3], [-1, -2]]))"
+   ]
+  },
+  {
+   "math": "(A - B)^t = \\begin{bmatrix} -1 & -3 \\\\ -1 & -2 \\end{bmatrix}^t",
+   "en": "Now, we apply the transpose operation to the matrix $A - B$.",
+   "ur": "اب، ہم قالب $A - B$ کا ٹرانسپوز (پلٹ) لیتے ہیں۔",
+   "check": [
+    "Eq(Matrix([[-1, -3], [-1, -2]]).T, Matrix([[-1, -1], [-3, -2]]))"
+   ]
+  },
+  {
+   "math": "(A - B)^t = \\begin{bmatrix} -1 & -1 \\\\ -3 & -2 \\end{bmatrix}",
+   "en": "The transpose is obtained by interchanging the rows into columns. The first row $\\begin{bmatrix} -1 & -3 \\end{bmatrix}$ becomes the first column, and the second row $\\begin{bmatrix} -1 & -2 \\end{bmatrix}$ becomes the second column.",
+   "ur": "قطاروں کو کالموں میں بدلنے سے ٹرانسپوز حاصل ہوتا ہے۔ پہلی قطار $\\begin{bmatrix} -1 & -3 \\end{bmatrix}$ پہلا کالم بن جاتی ہے، اور دوسری قطار $\\begin{bmatrix} -1 & -2 \\end{bmatrix}$ دوسرا کالم بن جاتی ہے۔",
+   "check": [
+    "Eq(Matrix([[-1, -3], [-1, -2]]).T, Matrix([[-1, -1], [-3, -2]]))",
+    "Eq(Matrix([[-1, -3], [-1, -2]]), Matrix([[-1, -3], [-1, -2]]))"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

@@ -1,0 +1,57 @@
+{
+ "item": "c10-rev5-q1",
+ "label": "ix",
+ "answer_ref": "(b) $8, 16$",
+ "steps": [
+  {
+   "math": "",
+   "en": "We are given the quadratic equation $y^2 - 24y + 128 = 0$ and need to find its roots by factorization.",
+   "ur": "ہمیں دو درجی مساوات $y^2 - 24y + 128 = 0$ دی گئی ہے اور ہمیں تجزی کے ذریعے اس کے جزر (روٹس) معلوم کرنے ہیں۔"
+  },
+  {
+   "math": "y^2 - 8y - 16y + 128 = 0",
+   "en": "Split the middle term $-24y$ into $-8y$ and $-16y$ because $(-8) + (-16) = -24$ and $(-8) \\times (-16) = 128$.",
+   "ur": "درمیانی رقم $-24y$ کو $-8y$ اور $-16y$ میں توڑیں کیونکہ $(-8) + (-16) = -24$ اور $(-8) \\times (-16) = 128$ بنتا ہے۔",
+   "check": [
+    "-8 + (-16) == -24",
+    "(-8)*(-16) == 128",
+    "y**2 - 8*y - 16*y + 128 == y**2 - 24*y + 128"
+   ]
+  },
+  {
+   "math": "y(y - 8) - 16(y - 8) = 0",
+   "en": "Take out the common factors from the first two terms and the last two terms.",
+   "ur": "پہلی دو رقوم اور آخری دو رقوم میں سے مشترک اجزاء باہر نکالیں۔",
+   "check": [
+    "expand(y*(y - 8) - 16*(y - 8)) == y**2 - 24*y + 128"
+   ]
+  },
+  {
+   "math": "(y - 8)(y - 16) = 0",
+   "en": "Factor out the common binomial $(y - 8)$.",
+   "ur": "مشترک دو رقمی جملہ $(y - 8)$ کو باہر نکال لیں۔",
+   "check": [
+    "expand((y - 8)*(y - 16)) == y**2 - 24*y + 128"
+   ]
+  },
+  {
+   "math": "y - 8 = 0 \\quad \\text{or} \\quad y - 16 = 0 \\implies y = 8, 16",
+   "en": "Set each factor equal to zero and solve for $y$ to get the roots.",
+   "ur": "ہر جزو ضربی کو صفر کے برابر رکھیں اور جزر حاصل کرنے کے لیے $y$ کی قیمت معلوم کریں۔",
+   "check": [
+    "8**2 - 24*8 + 128 == 0",
+    "16**2 - 24*16 + 128 == 0"
+   ]
+  },
+  {
+   "math": "\\text{Answer: (b) } 8, 16",
+   "en": "Thus, the roots of the equation are $8$ and $16$, which matches option (b).",
+   "ur": "پس مساوات کے جزر $8$ اور $16$ ہیں، جو کہ آپشن (b) سے مطابقت رکھتے ہیں۔",
+   "check": [
+    "expand((y - 8)*(y - 16)) == y**2 - 24*y + 128"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

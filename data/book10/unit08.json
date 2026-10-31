@@ -146,12 +146,31 @@
      "prompt": "",
      "steps": [
       {
+       "math": "\\text{Given points: } A, B, C \\text{ (non-collinear)}",
+       "en": "We are given three steel rods fixed at points $A$, $B$, and $C$, which are not in a straight line (meaning they are non-collinear points). We need to find how many circular hoops can pass through all three points.",
+       "ur": "ہمیں تین سٹیل کی سلاخیں دی گئی ہیں جو نقاط $A$، $B$ اور $C$ پر نصب ہیں اور ایک سیدھی لائن میں نہیں ہیں (یعنی یہ غیر ہم خط نقاط ہیں)۔ ہمیں معلوم کرنا ہے کہ ان تینوں نقاط سے کتنے گول چھلے گزر سکتے ہیں۔"
+      },
+      {
+       "math": "",
+       "en": "According to the fundamental theorem of circles (Unit 8), one and only one circle can pass through three non-collinear points.",
+       "ur": "دائرے کے بنیادی مسئلہ (یونٹ 8) کے مطابق، تین غیر ہم خط نقاط سے ایک اور صرف ایک ہی دائرہ گزر سکتا ہے۔"
+      },
+      {
+       "math": "",
+       "en": "This is because the perpendicular bisectors of the chords $AB$ and $BC$ intersect at a single unique point $O$, which serves as the only centre equidistant from $A$, $B$, and $C$.",
+       "ur": "اس کی وجہ یہ ہے کہ وتر $AB$ اور وتر $BC$ کے عمودی ناصف ایک ہی منفرد نقطہ $O$ پر قطع کرتے ہیں، جو کہ واحد مرکز ہے جو نقاط $A$، $B$ اور $C$ سے مساوی الفاصلہ ہے۔"
+      },
+      {
        "math": "\\text{Number of hoops} = 1",
-       "en": "Three non-collinear points determine exactly one circle (its centre is where the perpendicular bisectors meet).",
-       "ur": "تین غیر ہم خط نقاط سے صرف ایک دائرہ گزرتا ہے۔"
+       "en": "Since a circular hoop represents a circle, only $1$ hoop can be made to pass through all three steel rods.",
+       "ur": "چونکہ ایک گول چھلا دائرے کی نمائندگی کرتا ہے، اس لیے ان تینوں سٹیل کی سلاخوں سے گزرنے کے لیے صرف $1$ چھلا ہی استعمال کیا جا سکتا ہے۔",
+       "check": [
+        "1 == 1"
+       ]
       }
      ],
      "answer": "1 hoop",
+     "enriched": true,
      "book_key": "1 hoop"
     }
    ],
@@ -169,9 +188,9 @@
      "prompt": "",
      "steps": [
       {
-       "math": "",
-       "en": "Draw $OM$ perpendicular to the chord: it bisects the chord, and $OM$, half the chord and the radius form a right triangle.",
-       "ur": "$OM$ کو وتر پر عمود کھینچیں: یہ وتر کی تنصیف کرتا ہے؛ $OM$، آدھا وتر اور رداس قائمہ مثلث بناتے ہیں۔",
+       "math": "r = OA = 10\\ \\text{m}, \\quad AB = 14\\ \\text{m}",
+       "en": "Let $O$ be the centre of the circular park and $AB$ be the chord representing the distance between the two lamp posts. We are given the radius $r$ and the chord length $AB$, and we need to find the perpendicular distance $OM$ from the centre to the chord.",
+       "ur": "فرض کریں کہ $O$ دائروی پارک کا مرکز ہے اور $AB$ وہ وتر ہے جو دو لیمپ پوسٹوں کے درمیان فاصلے کو ظاہر کرتا ہے۔ ہمیں رداس $r$ اور وتر کی لمبائی $AB$ دی گئی ہے، اور ہمیں مرکز سے وتر تک کا عمودی فاصلہ $OM$ معلوم کرنا ہے۔",
        "draw": [
         {
          "t": "circle",
@@ -264,16 +283,46 @@
        ]
       },
       {
-       "math": "d = \\sqrt{r^2 - \\left(\\frac{\\text{chord}}{2}\\right)^2} = \\sqrt{10^2 - 7^2} = \\sqrt{51} \\approx 7.14\\ \\text{m}",
-       "en": "Pythagoras in the right triangle $OMA$: $r^2 = OM^2 + AM^2$.",
-       "ur": "قائمہ مثلث $OMA$ میں فیثا غورث: $r^2 = OM^2 + AM^2$۔",
+       "math": "AM = \\frac{AB}{2} = \\frac{14}{2} = 7\\ \\text{m}",
+       "en": "Draw a perpendicular $OM$ from the centre $O$ to the chord $AB$. By theorem, a perpendicular from the centre of a circle to a chord bisects the chord.",
+       "ur": "مرکز $O$ سے وتر $AB$ پر عمود $OM$ گرائیں۔ مسئلے کی رو سے، دائرے کے مرکز سے وتر پر گرایا گیا عمود وتر کی تنصیف کرتا ہے۔",
        "check": [
+        "R(14, 2) == 7"
+       ]
+      },
+      {
+       "math": "OA^2 = OM^2 + AM^2",
+       "en": "Now, $OMA$ is a right-angled triangle with hypotenuse $OA$. Applying the Pythagoras theorem:",
+       "ur": "اب، $OMA$ ایک قائمۃ الزاویہ مثلث ہے جس کا وتر $OA$ ہے۔ مسئلہ فیثاغورث لاگو کرنے سے:"
+      },
+      {
+       "math": "10^2 = OM^2 + 7^2",
+       "en": "Substitute the values of the radius $OA = 10\\ \\text{m}$ and half-chord $AM = 7\\ \\text{m}$ into the equation.",
+       "ur": "مساوات میں رداس $OA = 10\\ \\text{m}$ اور آدھے وتر $AM = 7\\ \\text{m}$ کی قیمتیں درج کریں۔"
+      },
+      {
+       "math": "100 = OM^2 + 49 \\implies OM^2 = 100 - 49 = 51",
+       "en": "Evaluate the squares and solve for $OM^2$.",
+       "ur": "مربع حل کریں اور $OM^2$ کی قیمت نکالیں۔",
+       "check": [
+        "10**2 == 100",
+        "7**2 == 49",
+        "100 - 49 == 51"
+       ]
+      },
+      {
+       "math": "OM = \\sqrt{51} \\approx 7.14\\ \\text{m}",
+       "en": "Taking the square root on both sides, we find the distance of the chord from the centre of the park.",
+       "ur": "دونوں طرف جزر لینے سے، ہمیں پارک کے مرکز سے وتر کا فاصلہ معلوم ہو جاتا ہے۔",
+       "check": [
+        "Abs(sqrt(51) - 7.14) <= 0.005",
         "10**2 - 7**2 == 51",
         "Abs((sqrt(51)) - 7.14) <= 0.0050000010000000004"
        ]
       }
      ],
      "answer": "$\\sqrt{51} \\approx 7.14$ m",
+     "enriched": true,
      "book_key": "\\sqrt{51}\\approx 7.14 m"
     }
    ],
@@ -292,12 +341,37 @@
      "prompt": "",
      "steps": [
       {
-       "math": "d_{CD} = d_{AB} = 6\\ \\text{cm}",
-       "en": "Equal chords of a circle are equidistant from the centre.",
-       "ur": "دائرے کے برابر وتر مرکز سے برابر فاصلے پر ہوتے ہیں۔"
+       "math": "m\\overline{AB} = 10\\ \\text{cm}, \\quad m\\overline{CD} = 10\\ \\text{cm}",
+       "en": "From the given question, we have a circle with two chords $\\overline{AB}$ and $\\overline{CD}$, both having a length of $10\\ \\text{cm}$.",
+       "ur": "دیے گئے سوال کے مطابق، ہمارے پاس ایک دائرہ ہے جس کے دو وتر $\\overline{AB}$ اور $\\overline{CD}$ ہیں، اور دونوں کی لمبائی $10\\ \\text{cm}$ ہے۔",
+       "check": [
+        "10 == 10"
+       ]
+      },
+      {
+       "math": "d_{AB} = 6\\ \\text{cm}",
+       "en": "The perpendicular distance from the centre of the circle to the chord $\\overline{AB}$ is given as $6\\ \\text{cm}$. We need to find the distance from the centre to the chord $\\overline{CD}$, which we denote as $d_{CD}$.",
+       "ur": "دائرے کے مرکز سے وتر $\\overline{AB}$ کا عمودی فاصلہ $6\\ \\text{cm}$ دیا گیا ہے۔ ہمیں مرکز سے وتر $\\overline{CD}$ کا فاصلہ معلوم کرنا ہے، جسے ہم $d_{CD}$ سے ظاہر کرتے ہیں۔",
+       "check": [
+        "6 == 6"
+       ]
+      },
+      {
+       "math": "m\\overline{AB} = m\\overline{CD} \\implies d_{CD} = d_{AB}",
+       "en": "According to the circle theorem, two chords of a circle which are congruent (equal in length) are equidistant from the centre.",
+       "ur": "دائرے کے مسئلے کے مطابق، دائرے کے دو وتر جو متماثل (لمبائی میں برابر) ہوں، مرکز سے مساوی الفاصلہ (برابر فاصلے پر) ہوتے ہیں۔"
+      },
+      {
+       "math": "d_{CD} = 6\\ \\text{cm}",
+       "en": "Substituting the given distance $d_{AB} = 6\\ \\text{cm}$, we find that the distance from the centre to the chord $\\overline{CD}$ is also $6\\ \\text{cm}$.",
+       "ur": "دی گئی قیمت $d_{AB} = 6\\ \\text{cm}$ درج کرنے سے، ہمیں معلوم ہوتا ہے کہ مرکز سے وتر $\\overline{CD}$ کا فاصلہ بھی $6\\ \\text{cm}$ ہے۔",
+       "check": [
+        "6 == 6"
+       ]
       }
      ],
      "answer": "$6$ cm",
+     "enriched": true,
      "book_key": "6 cm"
     }
    ],
@@ -315,9 +389,9 @@
      "prompt": "",
      "steps": [
       {
-       "math": "",
-       "en": "Draw $OM$ perpendicular to the chord: it bisects the chord, and $OM$, half the chord and the radius form a right triangle.",
-       "ur": "$OM$ کو وتر پر عمود کھینچیں: یہ وتر کی تنصیف کرتا ہے؛ $OM$، آدھا وتر اور رداس قائمہ مثلث بناتے ہیں۔",
+       "math": "r = OA = 10\\ \\text{cm}, \\quad AB = 12\\ \\text{cm}",
+       "en": "Let $O$ be the centre of the circular tabletop. The line segment $AB$ acts as a chord of the circle. We are given the radius $r = 10\\text{ cm}$ and the length of the chord $AB = 12\\text{ cm}$. We need to find the perpendicular distance $OM$ from the centre $O$ to the chord $AB$.",
+       "ur": "فرض کریں کہ $O$ گول میز کے تختے کا مرکز ہے۔ خط $AB$ دائرے کے وتر کے طور پر کام کرتا ہے۔ ہمیں رداس $r = 10\\text{ cm}$ اور وتر کی لمبائی $AB = 12\\text{ cm}$ دی گئی ہے۔ ہمیں مرکز $O$ سے وتر $AB$ تک کا عمودی فاصلہ $OM$ معلوم کرنا ہے۔",
        "draw": [
         {
          "t": "circle",
@@ -410,15 +484,45 @@
        ]
       },
       {
-       "math": "d = \\sqrt{10^2 - 6^2} = \\sqrt{100 - 36} = \\sqrt{64} = 8\\ \\text{cm}",
-       "en": "Pythagoras in the right triangle $OMA$: $r^2 = OM^2 + AM^2$.",
-       "ur": "قائمہ مثلث $OMA$ میں فیثا غورث: $r^2 = OM^2 + AM^2$۔",
+       "math": "AM = \\frac{AB}{2} = \\frac{12}{2} = 6\\ \\text{cm}",
+       "en": "Draw a perpendicular $OM$ from the centre $O$ to the chord $AB$. By the theorem of a circle, a perpendicular drawn from the centre of a circle to a chord bisects the chord.",
+       "ur": "مرکز $O$ سے وتر $AB$ پر عمود $OM$ کھینچیں۔ دائرے کے مسئلے کے مطابق، دائرے کے مرکز سے وتر پر گرایا گیا عمود وتر کی تنصیف کرتا ہے۔",
        "check": [
+        "12/2 == 6"
+       ]
+      },
+      {
+       "math": "OA^2 = OM^2 + AM^2",
+       "en": "Since $OM \\perp AB$, the triangle $OMA$ is a right-angled triangle with hypotenuse $OA$. By applying the Pythagoras theorem:",
+       "ur": "چونکہ $OM \\perp AB$ ہے، اس لیے مثلث $OMA$ ایک قائمہ الزاویہ مثلث ہے جس کا وتر $OA$ ہے۔ مسئلہ فیثا غورث لاگو کرنے سے:"
+      },
+      {
+       "math": "10^2 = OM^2 + 6^2",
+       "en": "Substitute the known values $OA = 10$ and $AM = 6$ into the equation.",
+       "ur": "مساوات میں معلوم قیمتیں $OA = 10$ اور $AM = 6$ درج کریں۔"
+      },
+      {
+       "math": "OM^2 = 100 - 36 = 64",
+       "en": "Calculate the squares and rearrange the equation to solve for $OM^2$.",
+       "ur": "مربع حل کریں اور $OM^2$ کی قیمت نکالنے کے لیے مساوات کو ترتیب دیں۔",
+       "check": [
+        "10**2 == 100",
+        "6**2 == 36",
+        "100 - 36 == 64"
+       ]
+      },
+      {
+       "math": "OM = \\sqrt{64} = 8\\ \\text{cm}",
+       "en": "Take the square root on both sides to find the perpendicular distance $OM$. Thus, the perpendicular distance from the centre to $AB$ is $8\\text{ cm}$.",
+       "ur": "عمودی فاصلہ $OM$ معلوم کرنے کے لیے دونوں طرف جزر المربع لیں۔ اس طرح مرکز سے $AB$ تک کا عمودی فاصلہ $8\\text{ cm}$ ہے۔",
+       "check": [
+        "sqrt(64) == 8",
         "sqrt(10**2 - 6**2) == 8"
        ]
       }
      ],
      "answer": "$8$ cm",
+     "enriched": true,
      "book_key": "8 cm"
     }
    ],
@@ -437,9 +541,9 @@
      "prompt": "",
      "steps": [
       {
-       "math": "",
-       "en": "Draw $OM$ perpendicular to the chord: it bisects the chord, and $OM$, half the chord and the radius form a right triangle.",
-       "ur": "$OM$ کو وتر پر عمود کھینچیں: یہ وتر کی تنصیف کرتا ہے؛ $OM$، آدھا وتر اور رداس قائمہ مثلث بناتے ہیں۔",
+       "math": "AB = 8\\text{ cm}, \\quad OM = 3\\text{ cm}",
+       "en": "Let the chord be $AB = 8\\text{ cm}$ and its perpendicular distance from the centre $O$ be $OM = 3\\text{ cm}$. We need to find the radius $r = OA$.",
+       "ur": "فرض کریں کہ وتر $AB = 8\\text{ cm}$ ہے اور مرکز $O$ سے اس کا عمودی فاصلہ $OM = 3\\text{ cm}$ ہے۔ ہمیں رداس $r = OA$ معلوم کرنا ہے۔",
        "draw": [
         {
          "t": "circle",
@@ -532,15 +636,45 @@
        ]
       },
       {
-       "math": "r = \\sqrt{d^2 + \\left(\\frac{\\text{chord}}{2}\\right)^2} = \\sqrt{3^2 + 4^2} = \\sqrt{25} = 5\\ \\text{cm}",
-       "en": "Pythagoras in the right triangle $OMA$: $r^2 = OM^2 + AM^2$.",
-       "ur": "قائمہ مثلث $OMA$ میں فیثا غورث: $r^2 = OM^2 + AM^2$۔",
+       "math": "AM = \\frac{AB}{2} = \\frac{8}{2} = 4\\text{ cm}",
+       "en": "By theorem, a perpendicular from the centre of a circle to a chord bisects the chord. Therefore, $AM$ is half of $AB$.",
+       "ur": "مسئلے کے مطابق، دائرے کے مرکز سے وتر پر گرایا گیا عمود وتر کی تنصیف کرتا ہے۔ اس لیے، $AM$ وتر $AB$ کا نصف ہے۔",
        "check": [
+        "8/2 == 4"
+       ]
+      },
+      {
+       "math": "OA^2 = OM^2 + AM^2",
+       "en": "Now, $\\triangle OMA$ is a right-angled triangle with $\\angle OMA = 90^\\circ$. Apply the Pythagoras theorem.",
+       "ur": "اب، $\\triangle OMA$ ایک قائمۃ الزاویہ مثلث ہے جس میں $\\angle OMA = 90^\\circ$ ہے۔ مسئلہ فیثاغورث لاگو کریں۔"
+      },
+      {
+       "math": "r^2 = 3^2 + 4^2",
+       "en": "Substitute $OA = r$, $OM = 3$, and $AM = 4$ into the equation.",
+       "ur": "مساوات میں $OA = r$، $OM = 3$ اور $AM = 4$ درج کریں۔"
+      },
+      {
+       "math": "r^2 = 9 + 16 = 25",
+       "en": "Calculate the squares and add them.",
+       "ur": "مربع معلوم کریں اور انہیں جمع کریں۔",
+       "check": [
+        "3**2 == 9",
+        "4**2 == 16",
+        "9 + 16 == 25"
+       ]
+      },
+      {
+       "math": "r = \\sqrt{25} = 5\\text{ cm}",
+       "en": "Take the positive square root on both sides to find the radius of the circle.",
+       "ur": "دائرے کا رداس معلوم کرنے کے لیے دونوں اطراف کا مثبت جذر المربع لیں۔",
+       "check": [
+        "sqrt(25) == 5",
         "sqrt(3**2 + 4**2) == 5"
        ]
       }
      ],
      "answer": "$5$ cm",
+     "enriched": true,
      "book_key": "5 cm"
     }
    ],
@@ -559,21 +693,49 @@
      "prompt": "",
      "steps": [
       {
-       "math": "m\\overline{BC} = \\frac{1}{2}m\\overline{CD} \\Rightarrow 3x = \\frac{1}{2}(121)",
-       "en": "In the figure $AB$ (through the centre) is perpendicular to the chord $CD$ at $B$, so $B$ is the midpoint of $CD$.",
-       "ur": "شکل میں مرکز سے گزرنے والا خط وتر $CD$ پر $B$ پر عمود ہے، اس لیے $B$ وتر کا وسطی نقطہ ہے۔"
+       "math": "m\\overline{CD} = 121\\ \\text{units}, \\quad m\\overline{BC} = 3x\\ \\text{units}",
+       "en": "First, write down the given lengths of the chord $\\overline{CD}$ and its segment $\\overline{BC}$.",
+       "ur": "سب سے پہلے، دیے گئے وتر $\\overline{CD}$ اور اس کے حصے $\\overline{BC}$ کی لمبائیاں لکھیں۔"
+      },
+      {
+       "math": "m\\overline{BC} = \\frac{1}{2}m\\overline{CD}",
+       "en": "In the figure, the line from the centre is perpendicular to the chord $\\overline{CD}$ at point $B$. By theorem, a perpendicular from the centre of a circle to a chord bisects the chord, so $B$ is the midpoint of $\\overline{CD}$.",
+       "ur": "شکل میں، مرکز سے آنے والا خط وتر $\\overline{CD}$ پر نقطہ $B$ پر عمود ہے۔ مسئلہ کے مطابق، دائرے کے مرکز سے وتر پر گرایا گیا عمود وتر کی تنصیف کرتا ہے، اس لیے $B$ وتر $\\overline{CD}$ کا وسطی نقطہ ہے۔"
+      },
+      {
+       "math": "3x = \\frac{1}{2}(121)",
+       "en": "Substitute the given values $m\\overline{BC} = 3x$ and $m\\overline{CD} = 121$ into the equation.",
+       "ur": "دی گئی قیمتیں $m\\overline{BC} = 3x$ اور $m\\overline{CD} = 121$ مساوات میں درج کریں۔"
+      },
+      {
+       "math": "3x = \\frac{121}{2}",
+       "en": "Simplify the right-hand side of the equation.",
+       "ur": "مساوات کی دائیں جانب کو مختصر کریں۔",
+       "check": [
+        "R(1,2)*121 == R(121,2)"
+       ]
+      },
+      {
+       "math": "x = \\frac{121}{2 \\times 3} = \\frac{121}{6}",
+       "en": "Divide both sides by $3$ to isolate $x$.",
+       "ur": "$x$ کی قیمت نکالنے کے لیے دونوں اطراف کو $3$ پر تقسیم کریں۔",
+       "check": [
+        "R(121,2)/3 == R(121,6)",
+        "3*R(121,6) == R(121,2)"
+       ]
       },
       {
        "math": "x = \\frac{121}{6} \\approx 20.17\\ \\text{units}",
-       "en": "Solve.",
-       "ur": "حل کریں۔",
+       "en": "Convert the fraction into a decimal rounded to two decimal places to get the final answer.",
+       "ur": "حتمی جواب حاصل کرنے کے لیے کسر کو اعشاریہ کے دو درجوں تک محدود کریں۔",
        "check": [
-        "3*R(121,6) == R(121,2)",
-        "Abs((R(121,6)) - 20.17) <= 0.0050000010000000004"
+        "Abs((R(121,6)) - 20.17) <= 0.0050000010000000004",
+        "3*R(121,6) == R(121,2)"
        ]
       }
      ],
      "answer": "$x = \\frac{121}{6} \\approx 20.17$",
+     "enriched": true,
      "book_key": "x=\\frac{121}{6}\\approx 20.17"
     }
    ],
@@ -721,9 +883,9 @@
      "prompt": "",
      "steps": [
       {
-       "math": "",
-       "en": "Draw $OM$ perpendicular to the chord: it bisects the chord, and $OM$, half the chord and the radius form a right triangle.",
-       "ur": "$OM$ کو وتر پر عمود کھینچیں: یہ وتر کی تنصیف کرتا ہے؛ $OM$، آدھا وتر اور رداس قائمہ مثلث بناتے ہیں۔",
+       "math": "AB = 10\\text{ cm}, \\quad r = OA = 6\\text{ cm}",
+       "en": "Let the chord be $AB$ and the centre of the circle be $O$. We are given the length of the chord $AB = 10\\text{ cm}$ and the radius $OA = 6\\text{ cm}$. We need to find the perpendicular distance $OM = d$ from the centre $O$ to the chord $AB$.",
+       "ur": "فرض کریں کہ وتر $AB$ ہے اور دائرے کا مرکز $O$ ہے۔ ہمیں وتر کی لمبائی $AB = 10\\text{ cm}$ اور رداس $OA = 6\\text{ cm}$ دیا گیا ہے۔ ہمیں مرکز $O$ سے وتر $AB$ تک کا عمودی فاصلہ $OM = d$ معلوم کرنا ہے۔",
        "draw": [
         {
          "t": "circle",
@@ -816,16 +978,46 @@
        ]
       },
       {
-       "math": "d = \\sqrt{6^2 - 5^2} = \\sqrt{36 - 25} = \\sqrt{11} \\approx 3.32\\ \\text{cm}",
-       "en": "Pythagoras in the right triangle $OMA$: $r^2 = OM^2 + AM^2$.",
-       "ur": "قائمہ مثلث $OMA$ میں فیثا غورث: $r^2 = OM^2 + AM^2$۔",
+       "math": "AM = \\frac{AB}{2} = \\frac{10}{2} = 5\\text{ cm}",
+       "en": "By theorem, a perpendicular from the centre of a circle to a chord bisects the chord. Since $OM \\perp AB$, point $M$ is the midpoint of $AB$.",
+       "ur": "مسئلہ کے مطابق، دائرے کے مرکز سے وتر پر گرایا گیا عمود وتر کی تنصیف کرتا ہے۔ چونکہ $OM \\perp AB$ ہے، اس لیے نقطہ $M$ وتر $AB$ کا وسطی نقطہ ہے۔",
        "check": [
+        "10/2 == 5"
+       ]
+      },
+      {
+       "math": "OA^2 = OM^2 + AM^2",
+       "en": "In the right-angled triangle $OMA$, where $\\angle OMA = 90^\\circ$, we apply the Pythagoras theorem.",
+       "ur": "قائمہ الزاویہ مثلث $OMA$ میں، جہاں $\\angle OMA = 90^\\circ$ ہے، ہم مسئلہ فیثاغورث کا اطلاق کرتے ہیں۔"
+      },
+      {
+       "math": "6^2 = d^2 + 5^2",
+       "en": "Substitute the known values $OA = 6$, $AM = 5$, and $OM = d$ into the equation.",
+       "ur": "مساوات میں معلوم قیمتیں $OA = 6$، $AM = 5$، اور $OM = d$ درج کریں۔"
+      },
+      {
+       "math": "d^2 = 6^2 - 5^2 = 36 - 25 = 11",
+       "en": "Simplify the squares and rearrange the equation to solve for $d^2$.",
+       "ur": "مربع کو حل کریں اور $d^2$ کی قیمت معلوم کرنے کے لیے مساوات کو ترتیب دیں۔",
+       "check": [
+        "6**2 == 36",
+        "5**2 == 25",
+        "36 - 25 == 11"
+       ]
+      },
+      {
+       "math": "d = \\sqrt{11} \\approx 3.32\\text{ cm}",
+       "en": "Take the square root on both sides to find the length from the centre to the chord.",
+       "ur": "مرکز سے وتر تک کی لمبائی معلوم کرنے کے لیے دونوں طرف جزر المربع لیں۔",
+       "check": [
+        "Abs(sqrt(11) - 3.32) <= 0.005",
         "6**2 - 5**2 == 11",
         "Abs((sqrt(11)) - 3.32) <= 0.0050000010000000004"
        ]
       }
      ],
      "answer": "$\\sqrt{11} \\approx 3.32$ cm",
+     "enriched": true,
      "book_key": "\\sqrt{11}\\approx 3.32 cm"
     }
    ],
@@ -844,15 +1036,37 @@
      "prompt": "",
      "steps": [
       {
-       "math": "\\frac{12}{2} = 6\\ \\text{cm}",
-       "en": "The perpendicular from the centre bisects the chord.",
-       "ur": "مرکز سے عمود وتر کی تنصیف کرتا ہے۔",
+       "math": "m\\overline{AB} = 12\\ \\text{cm}",
+       "en": "Write down the given length of the chord $\\overline{AB}$.",
+       "ur": "وتر $\\overline{AB}$ کی دی گئی لمبائی لکھیں۔",
+       "check": [
+        "12 == 12"
+       ]
+      },
+      {
+       "math": "\\text{Length of each segment} = \\frac{1}{2} \\cdot m\\overline{AB}",
+       "en": "According to the theorem, a perpendicular drawn from the centre of a circle to a chord bisects the chord into two equal segments.",
+       "ur": "مسئلے کے مطابق، دائرے کے مرکز سے کسی وتر پر گرایا گیا عمود اس وتر کی دو برابر حصوں میں تنصیف کرتا ہے۔"
+      },
+      {
+       "math": "\\text{Length of each segment} = \\frac{12}{2}\\ \\text{cm}",
+       "en": "Substitute $m\\overline{AB} = 12\\ \\text{cm}$ into the formula.",
+       "ur": "فارمولے میں $m\\overline{AB} = 12\\ \\text{cm}$ کی قیمت درج کریں۔",
+       "check": [
+        "R(1, 2) * 12 == 12/2"
+       ]
+      },
+      {
+       "math": "\\text{Length of each segment} = 6\\ \\text{cm}",
+       "en": "Divide $12$ by $2$ to find the final length of each segment.",
+       "ur": "ہر حصے کی لمبائی معلوم کرنے کے لیے $12$ کو $2$ پر تقسیم کریں۔",
        "check": [
         "12/2 == 6"
        ]
       }
      ],
      "answer": "$6$ cm",
+     "enriched": true,
      "book_key": "6 cm"
     }
    ],
@@ -992,12 +1206,37 @@
      "prompt": "",
      "steps": [
       {
-       "math": "\\text{Other chord} = 10\\ \\text{m}",
-       "en": "Congruent arcs (equal central angles) subtend equal chords.",
-       "ur": "متماثل قوسیں برابر وتر بناتی ہیں۔"
+       "math": "\\angle AOB = \\angle COD = 60^\\circ, \\quad m\\overline{AB} = 10\\text{ m}",
+       "en": "Let the two congruent arcs of the circular track be $\\overparen{AB}$ and $\\overparen{CD}$ with centre $O$. Both subtend equal central angles of $60^\\circ$, and the length of the first chord $\\overline{AB}$ is $10\\text{ m}$.",
+       "ur": "فرض کریں کہ دائروی ٹریک کی دو متماثل قوسیں $\\overparen{AB}$ اور $\\overparen{CD}$ ہیں جن کا مرکز $O$ ہے۔ دونوں مرکز پر $60^\\circ$ کے برابر زاویے بناتی ہیں، اور پہلے وتر $\\overline{AB}$ کی لمبائی $10\\text{ m}$ ہے۔",
+       "check": [
+        "60 == 60"
+       ]
+      },
+      {
+       "math": "m\\overparen{AB} = m\\overparen{CD} \\implies m\\overline{AB} = m\\overline{CD}",
+       "en": "According to the theorem of a circle, if two arcs of a circle are congruent, then their corresponding chords are equal in length.",
+       "ur": "دائرے کے مسئلے کے مطابق، اگر ایک دائرے کی دو قوسیں متماثل ہوں تو ان کے متنازعہ وتر لمبائی میں برابر ہوتے ہیں۔"
+      },
+      {
+       "math": "m\\overline{CD} = 10\\text{ m}",
+       "en": "Substituting the given length of the first chord $m\\overline{AB} = 10\\text{ m}$, we get the length of the second chord.",
+       "ur": "پہلے وتر کی دی گئی لمبائی $m\\overline{AB} = 10\\text{ m}$ درج کرنے سے ہمیں دوسرے وتر کی لمبائی حاصل ہوتی ہے۔",
+       "check": [
+        "10 == 10"
+       ]
+      },
+      {
+       "math": "\\text{Length of the other chord} = 10\\text{ m}",
+       "en": "Thus, the length of the other chord is $10\\text{ m}$.",
+       "ur": "پس، دوسرے وتر کی لمبائی $10\\text{ m}$ ہے۔",
+       "check": [
+        "10 == 10"
+       ]
       }
      ],
      "answer": "$10$ m",
+     "enriched": true,
      "book_key": "10 m"
     }
    ],
@@ -1015,12 +1254,34 @@
      "prompt": "",
      "steps": [
       {
-       "math": "\\widehat{RS} \\cong \\widehat{PQ} \\Rightarrow RS = PQ = 12\\ \\text{m}",
-       "en": "Equal arcs subtend equal chords.",
-       "ur": "برابر قوسیں برابر وتر بناتی ہیں۔"
+       "math": "m\\overline{PQ} = 12\\ \\text{m}, \\quad \\widehat{RS} \\cong \\widehat{PQ}",
+       "en": "First, let us write down the given information. In the circular fountain, the two arcs $\\widehat{PQ}$ and $\\widehat{RS}$ are congruent (equal in length), and the length of chord $PQ$ is $12$ m. We need to find the length of chord $RS$.",
+       "ur": "سب سے پہلے، دی گئی معلومات لکھتے ہیں۔ گول فوارے میں دو قوسیں $\\widehat{PQ}$ اور $\\widehat{RS}$ متماثل (لمبائی میں برابر) ہیں، اور وتر $PQ$ کی لمبائی $12$ میٹر ہے۔ ہمیں وتر $RS$ کی لمبائی معلوم کرنی ہے۔",
+       "check": [
+        "12 == 12"
+       ]
+      },
+      {
+       "math": "\\widehat{RS} \\cong \\widehat{PQ} \\Rightarrow \\overline{RS} \\cong \\overline{PQ}",
+       "en": "According to the theorem of a circle, if two arcs of a circle are congruent, then the corresponding chords are equal in length.",
+       "ur": "دائرے کے مسئلے کے مطابق، اگر کسی دائرے کی دو قوسیں متماثل ہوں تو ان کے متناظرہ وتر لمبائی میں برابر ہوتے ہیں۔"
+      },
+      {
+       "math": "m\\overline{RS} = m\\overline{PQ}",
+       "en": "Since the chords are congruent, their lengths are equal.",
+       "ur": "چونکہ وتر متماثل ہیں، اس لیے ان کی لمبائیاں برابر ہیں۔"
+      },
+      {
+       "math": "m\\overline{RS} = 12\\ \\text{m}",
+       "en": "Substitute the given value $m\\overline{PQ} = 12$ m into the equation. Thus, the length of chord $RS$ is $12$ m.",
+       "ur": "مساوات میں دی گئی قیمت $m\\overline{PQ} = 12$ میٹر درج کریں۔ اس طرح وتر $RS$ کی لمبائی $12$ میٹر ہے۔",
+       "check": [
+        "12 == 12"
+       ]
       }
      ],
      "answer": "$12$ m",
+     "enriched": true,
      "book_key": "12 m"
     }
    ],
@@ -1038,12 +1299,34 @@
      "prompt": "",
      "steps": [
       {
-       "math": "AB = CD \\Rightarrow \\widehat{AB} \\cong \\widehat{CD}",
-       "en": "Equal chords subtend equal (minor) arcs.",
-       "ur": "برابر وتر برابر (چھوٹی) قوسیں بناتے ہیں۔"
+       "math": "m\\overline{AB} = 14\\text{ m}, \\quad m\\overline{CD} = 14\\text{ m}",
+       "en": "We are given that in a circular park, the two straight walkways (chords) $\\overline{AB}$ and $\\overline{CD}$ each have a length of $14\\text{ metres}$.",
+       "ur": "ہمیں دیا گیا ہے کہ ایک گول پارک میں دو سیدھے راستوں (وتروں) $\\overline{AB}$ اور $\\overline{CD}$ میں سے ہر ایک کی لمبائی $14\\text{ میٹر}$ ہے۔",
+       "check": [
+        "14 == 14"
+       ]
+      },
+      {
+       "math": "\\overline{AB} \\cong \\overline{CD}",
+       "en": "Since both chords have the exact same length ($14\\text{ m} = 14\\text{ m}$), the two chords are congruent to each other.",
+       "ur": "چونکہ دونوں وتروں کی لمبائی بالکل برابر ہے ($14\\text{ m} = 14\\text{ m}$)، اس لیے دونوں وتر آپس میں متماثل (برابر) ہیں۔",
+       "check": [
+        "14 == 14"
+       ]
+      },
+      {
+       "math": "\\overline{AB} \\cong \\overline{CD} \\implies \\widehat{AB} \\cong \\widehat{CD}",
+       "en": "According to the theorem of circles, if two chords of a circle are congruent, then their corresponding minor arcs are also congruent.",
+       "ur": "دائرے کے مسئلے کے مطابق، اگر کسی دائرے کے دو وتر متماثل ہوں تو ان کی متعلقہ چھوٹی قوسیں بھی متماثل ہوتی ہیں۔"
+      },
+      {
+       "math": "m\\widehat{AB} = m\\widehat{CD}",
+       "en": "Therefore, the minor arcs subtended by the two walkways are equal in measure, meaning the minor arcs are congruent.",
+       "ur": "لہٰذا، دونوں راستوں سے بننے والی چھوٹی قوسیں پیمائش میں برابر ہیں، جس کا مطلب ہے کہ چھوٹی قوسیں متماثل ہیں۔"
       }
      ],
      "answer": "the minor arcs are congruent",
+     "enriched": true,
      "book_key": "the minor arcs are congruent"
     }
    ],
@@ -1061,12 +1344,33 @@
      "prompt": "",
      "steps": [
       {
-       "math": "\\text{Yes}",
-       "en": "Both clocks are congruent circles and 3, 9 are in corresponding positions (each arc is half the circle).",
-       "ur": "دونوں گھڑیاں متماثل دائرے ہیں اور 3 اور 9 ایک جیسی جگہوں پر ہیں۔"
+       "math": "",
+       "en": "Given: Two circular clocks are congruent circles. On both clocks, a decorative string connects the numbers $3$ and $9$, and we need to determine if the arcs from $3$ to $9$ on both clocks are congruent.",
+       "ur": "معلوم ہے: دو گول گھڑیاں متماثل دائرے ہیں۔ دونوں گھڑیوں پر ایک آرائشی ڈوری ہندسہ $3$ اور $9$ کو ملاتی ہے، اور ہمیں یہ معلوم کرنا ہے کہ کیا دونوں گھڑیوں پر $3$ سے $9$ تک کی قوسیں متماثل ہیں۔"
+      },
+      {
+       "math": "",
+       "en": "On a standard clock face, the numbers $3$ and $9$ are directly opposite to each other. Therefore, the string connecting $3$ to $9$ passes through the centre and acts as a diameter (the longest chord) in both circles.",
+       "ur": "ایک معیاری گھڑی کے ڈائل پر، ہندسہ $3$ اور $9$ ایک دوسرے کے بالکل آمنے سامنے ہوتے ہیں۔ لہٰذا، $3$ کو $9$ سے ملانے والی ڈوری مرکز سے گزرتی ہے اور دونوں دائروں میں قطر (سب سے لمبے وتر) کا کام کرتی ہے۔"
+      },
+      {
+       "math": "",
+       "en": "Since both clocks are congruent circles, their radii and diameters have equal lengths. This means the chords from $3$ to $9$ on both clocks are congruent.",
+       "ur": "چونکہ دونوں گھڑیاں متماثل دائرے ہیں، اس لیے ان کے رداس اور قطر کی لمبائی برابر ہے۔ اس کا مطلب ہے کہ دونوں گھڑیوں پر $3$ سے $9$ تک کے وتر متماثل ہیں۔"
+      },
+      {
+       "math": "",
+       "en": "According to the theorem of circles: \"If two chords of congruent circles are equal, then their corresponding arcs (each being a semi-circle here) are congruent.\"",
+       "ur": "دائرے کے مسئلہ کے مطابق: \"اگر متماثل دائروں کے دو وتر برابر ہوں، تو ان کی متناظرہ قوسیں (یہاں ہر ایک نصف دائرہ ہے) متماثل ہوتی ہیں۔\""
+      },
+      {
+       "math": "\\text{Yes, the arcs are congruent.}",
+       "en": "Therefore, the arcs from $3$ to $9$ on both clocks are congruent.",
+       "ur": "لہٰذا، دونوں گھڑیوں پر $3$ سے $9$ تک کی قوسیں متماثل ہیں۔"
       }
      ],
      "answer": "yes, the arcs are congruent",
+     "enriched": true,
      "book_key": "yes, the arcs are congruent"
     }
    ],
@@ -1085,16 +1389,27 @@
      "steps": [
       {
        "math": "",
-       "en": "Centre to circumference is a radius.",
-       "ur": "مرکز سے محیط تک کا فاصلہ رداس ہے۔"
+       "en": "We are asked to identify the geometric term for the distance from the centre of a circle to any point on its circumference.",
+       "ur": "ہمیں دائرے کے مرکز سے اس کے محیط پر واقع کسی بھی نقطے تک کے فاصلے کی ہندسی اصطلاح بتانی ہے۔"
+      },
+      {
+       "math": "",
+       "en": "By the basic definitions of a circle, an $\\text{arc}$ is a curved part of the circumference, a $\\text{chord}$ joins two points on the circumference, and a $\\text{tangent}$ is a line that touches the circle at only one point.",
+       "ur": "دائرے کی بنیادی تعریفوں کے مطابق، قوس ($\\text{arc}$) محیط کا ایک خم دار حصہ ہے، وتر ($\\text{chord}$) محیط کے دو نقاط کو ملاتا ہے، اور مماس ($\\text{tangent}$) وہ خط ہے جو دائرے کو صرف ایک نقطے پر مس کرتا ہے۔"
+      },
+      {
+       "math": "",
+       "en": "The constant distance from the centre of a circle to any point on its circumference (boundary) is defined as the $\\text{radius}$ of the circle.",
+       "ur": "دائرے کے مرکز سے اس کے محیط (سرحد) پر واقع کسی بھی نقطے تک کا مستقل فاصلہ دائرے کا رداس ($\\text{radius}$) کہلاتا ہے۔"
       },
       {
        "math": "\\text{Answer: (a) } \\text{radius}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Therefore, the correct option is (a) $\\text{radius}$.",
+       "ur": "لہٰذا، درست جواب (a) $\\text{radius}$ (رداس) ہے۔"
       }
      ],
      "answer": "(a) $\\text{radius}$",
+     "enriched": true,
      "book_key": "(a) radius"
     },
     {
@@ -1103,16 +1418,27 @@
      "steps": [
       {
        "math": "",
-       "en": "Every radius of a circle has the same length.",
-       "ur": "دائرے کے سب رداس برابر ہوتے ہیں۔"
+       "en": "A circle is defined as the set of all points in a plane that are at a fixed distance from a central point.",
+       "ur": "دائرہ مستوی میں موجود ان تمام نقاط کا سیٹ ہے جو ایک مرکزی نقطے سے یکساں فاصلے پر ہوتے ہیں۔"
+      },
+      {
+       "math": "",
+       "en": "The line segment joining the centre of the circle to any point on the circle is called its radius.",
+       "ur": "دائرے کے مرکز کو دائرے کے کسی بھی نقطے سے ملانے والا قطعہ خط اس کا رداس کہلاتا ہے۔"
+      },
+      {
+       "math": "",
+       "en": "Since all points on the circle are equidistant from the centre, all radii of the same circle have the exact same length.",
+       "ur": "چونکہ دائرے کے تمام نقاط مرکز سے ہم فاصلہ ہوتے ہیں، اس لیے ایک ہی دائرے کے تمام رداس لمبائی میں بالکل برابر ہوتے ہیں۔"
       },
       {
        "math": "\\text{Answer: (b) } \\text{all equal}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Therefore, the correct option is (b).",
+       "ur": "لہٰذا، درست آپشن (b) ہے۔"
       }
      ],
      "answer": "(b) $\\text{all equal}$",
+     "enriched": true,
      "book_key": "(b) all equal"
     },
     {
@@ -1121,16 +1447,27 @@
      "steps": [
       {
        "math": "",
-       "en": "The boundary is the circumference.",
-       "ur": "حد محیط کہلاتی ہے۔"
+       "en": "We need to identify the correct geometric term for the outer boundary of a circle from the given options.",
+       "ur": "ہمیں دیے گئے اختیارات میں سے دائرے کی بیرونی حد کے لیے درست ہندسی اصطلاح کی نشاندہی کرنی ہے۔"
+      },
+      {
+       "math": "",
+       "en": "Let us review the incorrect options first: a $\\text{chord}$ is a line segment joining any two points on the circle, a $\\text{diameter}$ is a chord passing through the centre, and a $\\text{segment}$ is the region bounded by a chord and an arc.",
+       "ur": "آئیے پہلے غلط اختیارات کا جائزہ لیتے ہیں: وتر ($\\text{chord}$) دائرے کے کسی بھی دو نقاط کو ملانے والا قطعہ خط ہے، قطر ($\\text{diameter}$) مرکز سے گزرنے والا وتر ہے، اور قطعہ دائرہ ($\\text{segment}$) وتر اور قوس سے گھرا ہوا علاقہ ہے۔"
+      },
+      {
+       "math": "\\text{Boundary of a circle} = \\text{circumference}",
+       "en": "By definition in geometry, the complete outer boundary or the perimeter of a circle is called its $\\text{circumference}$.",
+       "ur": "جیومیٹری کی تعریف کے مطابق، دائرے کی مکمل بیرونی حد یا احاطے کو اس کا محیط ($\\text{circumference}$) کہا جاتا ہے۔"
       },
       {
        "math": "\\text{Answer: (c) } \\text{circumference}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Therefore, the correct option is (c) $\\text{circumference}$.",
+       "ur": "لہذا، درست جواب (c) $\\text{circumference}$ ہے۔"
       }
      ],
      "answer": "(c) $\\text{circumference}$",
+     "enriched": true,
      "book_key": "(c) circumference"
     },
     {
@@ -1139,16 +1476,27 @@
      "steps": [
       {
        "math": "",
-       "en": "Part of the circumference is an arc.",
-       "ur": "محیط کا حصہ قوس ہے۔"
+       "en": "We are asked to identify the geometric term for any part of the circumference of a circle.",
+       "ur": "ہمیں دائرے کے محیط کے کسی بھی حصے کے لیے جیومیٹری کی اصطلاح کی نشاندہی کرنے کا کہا گیا ہے۔"
+      },
+      {
+       "math": "",
+       "en": "Let us recall the definitions of the given options: a $\\text{chord}$ is a line segment joining two points on a circle, a $\\text{diameter}$ is a chord passing through the center, and a $\\text{radius}$ is the distance from the center to the boundary.",
+       "ur": "آئیے دیے گئے اختیارات کی تعریفیں یاد کرتے ہیں: وتر ($\\text{chord}$) دائرے کے دو نقاط کو ملانے والا قطعہ خط ہے، قطر ($\\text{diameter}$) مرکز سے گزرنے والا وتر ہے، اور رداس ($\\text{radius}$) مرکز سے بیرونی حد تک کا فاصلہ ہے۔"
+      },
+      {
+       "math": "\\text{Part of circumference} = \\text{arc}",
+       "en": "By definition, any continuous part of the circumference (boundary) of a circle is called an $\\text{arc}$.",
+       "ur": "تعریف کے مطابق، دائرے کے محیط (بیرونی حد) کے کسی بھی مسلسل حصے کو قوس ($\\text{arc}$) کہتے ہیں۔"
       },
       {
        "math": "\\text{Answer: (d) } \\text{arc}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Comparing this with the given choices, option (d) is the correct answer.",
+       "ur": "دیے گئے اختیارات سے موازنہ کرنے پر، آپشن (d) درست جواب ہے۔"
       }
      ],
      "answer": "(d) $\\text{arc}$",
+     "enriched": true,
      "book_key": "(d) arc"
     },
     {
@@ -1157,16 +1505,27 @@
      "steps": [
       {
        "math": "",
-       "en": "The longest chord, through the centre, is a diameter.",
-       "ur": "مرکز سے گزرنے والا وتر قطر ہے۔"
+       "en": "First, recall the definition of a chord: a line segment joining any two points on the boundary of a circle is called a chord.",
+       "ur": "سب سے پہلے، وتر (chord) کی تعریف یاد کریں: دائرے کی باؤنڈری پر موجود کسی بھی دو نقاط کو ملانے والا قطۂ خط وتر کہلاتا ہے۔"
+      },
+      {
+       "math": "",
+       "en": "When this chord passes directly through the centre of the circle, it becomes the longest chord of the circle, which is defined as the $\\text{diameter}$.",
+       "ur": "جب یہ وتر دائرے کے عین مرکز سے گزرتا ہے، تو یہ دائرے کا سب سے لمبا وتر بن جاتا ہے، جسے قطر ($\\text{diameter}$) کہتے ہیں۔"
+      },
+      {
+       "math": "",
+       "en": "Let us briefly check the other options: a $\\text{radius}$ connects the centre to only one point on the circle, a $\\text{secant}$ is an infinite line that cuts the circle, and the $\\text{circumference}$ is the total boundary length of the circle.",
+       "ur": "آئیے دوسرے آپشنز کو مختصراً دیکھیں: رداس ($\\text{radius}$) مرکز کو دائرے کے صرف ایک نقطے سے ملاتا ہے، قاطع خط ($\\text{secant}$) ایک لامحدود خط ہے جو دائرے کو قطع کرتا ہے، اور محیط ($\\text{circumference}$) دائرے کی کل بیرونی لمبائی ہے۔"
       },
       {
        "math": "\\text{Answer: (b) } \\text{diameter}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Therefore, a chord passing through the centre of the circle is called a $\\text{diameter}$, which corresponds to option (b).",
+       "ur": "لہٰذا، دائرے کے مرکز سے گزرنے والا وتر قطر ($\\text{diameter}$) کہلاتا ہے، جو کہ آپشن (b) کے مطابق ہے۔"
       }
      ],
      "answer": "(b) $\\text{diameter}$",
+     "enriched": true,
      "book_key": "(b) diameter"
     },
     {
@@ -1175,16 +1534,27 @@
      "steps": [
       {
        "math": "",
-       "en": "As marked in the book's figure.",
-       "ur": "کتاب کی شکل کے مطابق۔"
+       "en": "First, let us observe the given figure in the textbook carefully. We need to identify the geometrical term for the highlighted curved portion between the two points $A$ and $B$ on the boundary (circumference) of the circle.",
+       "ur": "سب سے پہلے، آئیے نصابی کتاب میں دی گئی شکل کا بغور مشاہدہ کریں۔ ہمیں دائرے کی باؤنڈری (محیط) پر موجود دو نقاط $A$ اور $B$ کے درمیان نمایاں کردہ خم دار (گول) حصے کے لیے جیومیٹری کی اصطلاح کی پہچان کرنی ہے۔"
+      },
+      {
+       "math": "",
+       "en": "Let us recall the definitions of the given options to find the correct match:\n1. **Diameter:** A straight line segment passing through the center of the circle and joining two points on the circumference.\n2. **Tangent:** A straight line that touches the circle externally at only one point.\n3. **Chord:** A straight line segment joining any two points on the circumference of a circle.\n4. **Arc:** Any continuous part or curved portion of the circumference of a circle between two points.",
+       "ur": "درست جواب تلاش کرنے کے لیے آئیے دیے گئے اختیارات کی تعریفیں یاد کرتے ہیں:\n1. **قطر ($\\text{Diameter}$):** ایک سیدھا خط جو دائرے کے مرکز سے گزرتا ہے اور محیط پر دو نقاط کو ملاتا ہے۔\n2. **مماس ($\\text{Tangent}$):** ایک سیدھی لائن جو دائرے کو بیرونی طور پر صرف ایک نقطے پر چھوتی ہے۔\n3. **وتر ($\\text{Chord}$):** ایک سیدھا خط جو دائرے کے محیط پر کسی بھی دو نقاط کو آپس میں ملاتا ہے۔\n4. **قوس ($\\text{Arc}$):** دو نقاط کے درمیان دائرے کے محیط کا کوئی بھی مسلسل یا خم دار حصہ۔"
+      },
+      {
+       "math": "\\widehat{AB} = \\text{Arc of the circle}",
+       "en": "In the textbook's figure, the path marked from $A$ to $B$ goes along the curved boundary (circumference) of the circle rather than being a straight line. Therefore, $AB$ represents an $\\text{arc}$ of the circle.",
+       "ur": "نصابی کتاب کی شکل میں، نقطہ $A$ سے $B$ تک نشان زدہ راستہ سیدھی لکیر ہونے کے بجائے دائرے کی خم دار باؤنڈری (محیط) کے ساتھ جاتا ہے۔ اس لیے، $AB$ دائرے کی ایک قوس ($\\text{arc}$) کو ظاہر کرتا ہے۔"
       },
       {
        "math": "\\text{Answer: (d) } \\text{arc}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Comparing our conclusion with the given choices, option (d) is the correct answer.",
+       "ur": "ہمارے نتیجے کا دیے گئے اختیارات سے موازنہ کرنے پر، آپشن (d) درست جواب ہے۔"
       }
      ],
      "answer": "(d) $\\text{arc}$",
+     "enriched": true,
      "book_key": "(d) arc"
     },
     {
@@ -1193,16 +1563,32 @@
      "steps": [
       {
        "math": "",
-       "en": "The major arc goes the long way round, through a third point.",
-       "ur": "بڑی قوس لمبے راستے سے تیسرے نقطے سے گزرتی ہے۔"
+       "en": "We need to identify which of the given options represents a major arc in the circle.",
+       "ur": "ہمیں یہ معلوم کرنا ہے کہ دیے گئے آپشنز میں سے کون سا آپشن دائرے کی کبیرہ قوس (بڑی قوس) کو ظاہر کرتا ہے۔"
+      },
+      {
+       "math": "",
+       "en": "Recall the definition of arcs: A minor arc is the shorter arc connecting two points on a circle and is usually named using two points (like $\\widehat{AB}$, $\\widehat{BC}$, or $\\widehat{AD}$).",
+       "ur": "قوس کی تعریف یاد کریں: صغیرہ قوس (چھوٹی قوس) دائرے پر دو نقاط کو ملانے والا چھوٹا راستہ ہوتی ہے اور اسے عام طور پر دو نقاط سے ظاہر کیا جاتا ہے (جیسے $\\widehat{AB}$، $\\widehat{BC}$، یا $\\widehat{AD}$)۔"
+      },
+      {
+       "math": "",
+       "en": "A major arc is the longer arc connecting two points on a circle (greater than a semicircle). To avoid confusion with the minor arc, a major arc is always named using three points: the two endpoints and one point in between.",
+       "ur": "کبیرہ قوس (بڑی قوس) دائرے پر دو نقاط کو ملانے والا لمبا راستہ ہوتی ہے (جو نصف دائرے سے بڑی ہوتی ہے)۔ صغیرہ قوس سے فرق واضح کرنے کے لیے، کبیرہ قوس کو ہمیشہ تین نقاط سے ظاہر کیا جاتا ہے: دو سرے کے نقاط اور ایک درمیانی نقطہ۔"
+      },
+      {
+       "math": "\\text{Major arc} = m\\widehat{BDC}",
+       "en": "Looking at the given options, $m\\widehat{BDC}$ goes the long way around from $B$ to $C$ passing through the third point $D$, so it represents the major arc.",
+       "ur": "دیے گئے آپشنز کو دیکھتے ہوئے، $m\\widehat{BDC}$ نقطہ $B$ سے $C$ تک تیسرے نقطے $D$ سے گزرتے ہوئے لمبے راستے کو ظاہر کرتی ہے، اس لیے یہ کبیرہ قوس ہے۔"
       },
       {
        "math": "\\text{Answer: (c) } m\\widehat{BDC}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Therefore, the correct option is (c).",
+       "ur": "لہذا، درست جواب (c) ہے۔"
       }
      ],
      "answer": "(c) $m\\widehat{BDC}$",
+     "enriched": true,
      "book_key": "(c) m\\widehat{BDC}"
     },
     {
@@ -1211,16 +1597,27 @@
      "steps": [
       {
        "math": "",
-       "en": "Exactly one circle.",
-       "ur": "صرف ایک دائرہ۔"
+       "en": "We are given three non-collinear points (points that do not lie on the same straight line) and asked how many circles can pass through all three of them.",
+       "ur": "ہمیں تین غیر ہم خط نقاط (ایسے نقاط جو ایک ہی خطِ مستقیم پر واقع نہ ہوں) دیے گئے ہیں اور پوچھا گیا ہے کہ ان تینوں نقاط سے کتنے دائرے گزر سکتے ہیں۔"
+      },
+      {
+       "math": "\\text{Theorem 1: One and only one circle can pass through three non-collinear points.}",
+       "en": "Recall the fundamental theorem from Unit 8 of the textbook, which states that one and only one circle can pass through three non-collinear points.",
+       "ur": "درسی کتاب کے یونٹ 8 کا بنیادی مسئلہ یاد کریں، جس کے مطابق تین غیر ہم خط نقاط میں سے ایک اور صرف ایک دائرہ گزر سکتا ہے۔"
+      },
+      {
+       "math": "",
+       "en": "This is because the perpendicular bisectors of the line segments joining these three points intersect at a single unique point, which serves as the centre of the unique circle.",
+       "ur": "اس کی وجہ یہ ہے کہ ان تینوں نقاط کو ملانے والے قطعاتِ خط کے عمودی ناصف ایک ہی منفرد نقطے پر قطع کرتے ہیں، جو کہ اس منفرد دائرے کا مرکز بنتا ہے۔"
       },
       {
        "math": "\\text{Answer: (a) } \\text{one}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Therefore, the correct option is (a) $\\text{one}$.",
+       "ur": "لہٰذا، درست انتخاب (a) $\\text{one}$ (ایک) ہے۔"
       }
      ],
      "answer": "(a) $\\text{one}$",
+     "enriched": true,
      "book_key": "(a) one"
     },
     {
@@ -1229,16 +1626,27 @@
      "steps": [
       {
        "math": "",
-       "en": "It passes through the centre.",
-       "ur": "یہ مرکز سے گزرتا ہے۔"
+       "en": "We need to determine which part of the circle the perpendicular bisector of a chord always passes through.",
+       "ur": "ہمیں یہ معلوم کرنا ہے کہ دائرے کے کسی وتر کا عمودی ناصف ہمیشہ دائرے کے کس حصے سے گزرتا ہے۔"
+      },
+      {
+       "math": "\\text{Centre } O \\text{ is equidistant from the endpoints of chord } AB: \\quad OA = OB",
+       "en": "Recall the fundamental property of a circle: the centre of the circle is at an equal distance (equal to the radius) from both endpoints of any chord.",
+       "ur": "دائرے کی بنیادی خصوصیت یاد رکھیں: دائرے کا مرکز کسی بھی وتر کے دونوں سروں سے مساوی فاصلے (رداس کے برابر) پر ہوتا ہے۔"
+      },
+      {
+       "math": "",
+       "en": "By the geometric theorem of circles, any point equidistant from the endpoints of a line segment lies on its perpendicular bisector. Therefore, the perpendicular bisector of a chord always passes through the centre of the circle.",
+       "ur": "دائرے کے جیومیٹری کے مسئلے کے مطابق، کسی قطعہ خط کے دونوں سروں سے مساوی فاصلے پر واقع نقطہ اس کے عمودی ناصف پر ہوتا ہے۔ اس لیے، وتر کا عمودی ناصف ہمیشہ دائرے کے مرکز سے گزرتا ہے۔"
       },
       {
        "math": "\\text{Answer: (c) } \\text{centre}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Comparing this theorem with the given options, the correct choice is (c) $\\text{centre}$.",
+       "ur": "اس مسئلے کا دیے گئے آپشنز سے موازنہ کرنے پر، درست انتخاب (c) $\\text{centre}$ (مرکز) ہے۔"
       }
      ],
      "answer": "(c) $\\text{centre}$",
+     "enriched": true,
      "book_key": "(c) centre"
     },
     {
@@ -1247,16 +1655,35 @@
      "steps": [
       {
        "math": "",
-       "en": "A full turn.",
-       "ur": "پورا چکر۔"
+       "en": "We need to find the total sum of the measures of all central angles around the center of a circle.",
+       "ur": "ہمیں دائرے کے مرکز کے گرد تمام مرکزی زاویوں کی پیمائش کا کل مجموعہ معلوم کرنا ہے۔"
+      },
+      {
+       "math": "",
+       "en": "A central angle is formed by two radii at the center of the circle. All non-overlapping central angles together form a complete rotation (a full turn) around the center point.",
+       "ur": "مرکزی زاویہ دائرے کے مرکز پر دو رداسوں سے بنتا ہے۔ تمام غیر متجاوز مرکزی زاویے مل کر مرکز کے گرد ایک مکمل چکر (پورا گھماؤ) بناتے ہیں۔"
+      },
+      {
+       "math": "360^\\circ",
+       "en": "By geometric definition, a complete rotation around a point in a circle measures $360^\\circ$.",
+       "ur": "جیومیٹری کی تعریف کے مطابق، دائرے میں ایک نقطے کے گرد مکمل چکر کی پیمائش $360^\\circ$ ہوتی ہے۔"
+      },
+      {
+       "math": "\\text{Sum of central angles} = 360^\\circ",
+       "en": "Therefore, the sum of the measures of the central angles of a circle is $360^\\circ$.",
+       "ur": "لہٰذا، دائرے کے مرکزی زاویوں کی پیمائشوں کا مجموعہ $360^\\circ$ ہے۔",
+       "check": [
+        "360 == 360"
+       ]
       },
       {
        "math": "\\text{Answer: (d) } 360^\\circ",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Comparing this result with the given options, option (d) is the correct answer.",
+       "ur": "اس نتیجے کا دیے گئے آپشنز سے موازنہ کرنے پر، آپشن (d) درست جواب ہے۔"
       }
      ],
      "answer": "(d) $360^\\circ$",
+     "enriched": true,
      "book_key": "(d) 360^\\circ"
     }
    ],
@@ -1274,9 +1701,9 @@
      "prompt": "",
      "steps": [
       {
-       "math": "",
-       "en": "Draw $OM$ perpendicular to the chord: it bisects the chord, and $OM$, half the chord and the radius form a right triangle.",
-       "ur": "$OM$ کو وتر پر عمود کھینچیں: یہ وتر کی تنصیف کرتا ہے؛ $OM$، آدھا وتر اور رداس قائمہ مثلث بناتے ہیں۔",
+       "math": "OP = 6\\text{ cm}, \\quad PQ = 10\\text{ cm}",
+       "en": "Let $O$ be the centre of the circular clock and $PQ$ be the chord of length $10\\text{ cm}$. The radius of the clock is $OP = 6\\text{ cm}$. We need to find the perpendicular distance $OM$ from the centre $O$ to the chord $PQ$.",
+       "ur": "فرض کریں کہ $O$ گول گھڑی کا مرکز ہے اور $PQ$ ایک وتر ہے جس کی لمبائی $10\\text{ cm}$ ہے۔ گھڑی کا رداس $OP = 6\\text{ cm}$ ہے۔ ہمیں مرکز $O$ سے وتر $PQ$ تک کا عمودی فاصلہ $OM$ معلوم کرنا ہے۔",
        "draw": [
         {
          "t": "circle",
@@ -1369,15 +1796,45 @@
        ]
       },
       {
-       "math": "OM^2 = OP^2 - PM^2 = 6^2 - 5^2 = 11 \\Rightarrow OM = \\sqrt{11}\\ \\text{cm}",
-       "en": "Pythagoras in the right triangle $OMA$: $r^2 = OM^2 + AM^2$.",
-       "ur": "قائمہ مثلث $OMA$ میں فیثا غورث: $r^2 = OM^2 + AM^2$۔",
+       "math": "PM = \\frac{PQ}{2} = \\frac{10}{2} = 5\\text{ cm}",
+       "en": "By the theorem that a perpendicular drawn from the centre of a circle to a chord bisects the chord, $OM \\perp PQ$ divides $PQ$ into two equal parts at point $M$.",
+       "ur": "اس مسئلے کے مطابق کہ دائرے کے مرکز سے وتر پر گرایا گیا عمود وتر کی تنصیف کرتا ہے، $OM \\perp PQ$ وتر $PQ$ کو نقطہ $M$ پر دو برابر حصوں میں تقسیم کرتا ہے۔",
        "check": [
+        "10/2 == 5"
+       ]
+      },
+      {
+       "math": "OP^2 = OM^2 + PM^2",
+       "en": "Now, in the right-angled triangle $\\triangle OMP$, we apply the Pythagoras theorem.",
+       "ur": "اب، قائمہ الزاویہ مثلث $\\triangle OMP$ میں ہم مسئلہ فیثاغورث لاگو کرتے ہیں۔"
+      },
+      {
+       "math": "6^2 = OM^2 + 5^2",
+       "en": "Substitute the known values $OP = 6$ and $PM = 5$ into the equation.",
+       "ur": "مساوات میں معلوم قیمتیں $OP = 6$ اور $PM = 5$ درج کریں۔"
+      },
+      {
+       "math": "OM^2 = 36 - 25 = 11",
+       "en": "Simplify the squares and solve for $OM^2$.",
+       "ur": "مربعوں کو حل کریں اور $OM^2$ کی قیمت نکالیں۔",
+       "check": [
+        "6**2 == 36",
+        "5**2 == 25",
+        "36 - 25 == 11"
+       ]
+      },
+      {
+       "math": "OM = \\sqrt{11}\\text{ cm}",
+       "en": "Taking the square root on both sides gives the required perpendicular distance from the centre to the chord.",
+       "ur": "دونوں طرف جزر المربع لینے سے مرکز سے وتر تک کا مطلوبہ عمودی فاصلہ حاصل ہوتا ہے۔",
+       "check": [
+        "sqrt(11) == sqrt(11)",
         "6**2 - 5**2 == 11"
        ]
       }
      ],
      "answer": "$\\sqrt{11}$ cm",
+     "enriched": true,
      "book_key": "\\sqrt{11} cm"
     }
    ],
@@ -1396,9 +1853,9 @@
      "prompt": "",
      "steps": [
       {
-       "math": "",
-       "en": "Draw $OM$ perpendicular to the chord: it bisects the chord, and $OM$, half the chord and the radius form a right triangle.",
-       "ur": "$OM$ کو وتر پر عمود کھینچیں: یہ وتر کی تنصیف کرتا ہے؛ $OM$، آدھا وتر اور رداس قائمہ مثلث بناتے ہیں۔",
+       "math": "AB = 6\\ \\text{cm}, \\quad OM = 4\\ \\text{cm}, \\quad OA = r = \\text{?}",
+       "en": "Let $O$ be the centre of the circle and $AB$ be the given chord of length $6\\text{ cm}$. Let $OM$ be the perpendicular drawn from the centre $O$ to the chord $AB$, so the distance $OM = 4\\text{ cm}$. We need to find the radius $OA = r$.",
+       "ur": "فرص کریں کہ $O$ دائرے کا مرکز ہے اور $AB$ دیا گیا وتر ہے جس کی لمبائی $6\\text{ cm}$ ہے۔ مرکز $O$ سے وتر $AB$ پر عمود $OM$ گرائیں، پس فاصلہ $OM = 4\\text{ cm}$ ہے۔ ہمیں رداس $OA = r$ معلوم کرنا ہے۔",
        "draw": [
         {
          "t": "circle",
@@ -1491,15 +1948,45 @@
        ]
       },
       {
-       "math": "r^2 = 4^2 + 3^2 = 25 \\Rightarrow r = 5\\ \\text{cm}",
-       "en": "Pythagoras in the right triangle $OMA$: $r^2 = OM^2 + AM^2$.",
-       "ur": "قائمہ مثلث $OMA$ میں فیثا غورث: $r^2 = OM^2 + AM^2$۔",
+       "math": "AM = \\frac{AB}{2} = \\frac{6}{2} = 3\\ \\text{cm}",
+       "en": "By the theorem that a perpendicular from the centre of a circle to a chord bisects the chord, the point $M$ is the midpoint of $AB$.",
+       "ur": "مسئلہ کی رو سے دائرے کے مرکز سے وتر پر گرایا گیا عمود وتر کی تنصیف کرتا ہے، اس لیے نقطہ $M$ وتر $AB$ کا وسطی نقطہ ہے۔",
        "check": [
+        "R(6, 2) == 3"
+       ]
+      },
+      {
+       "math": "OA^2 = OM^2 + AM^2",
+       "en": "Since $\\overline{OM} \\perp \\overline{AB}$, $\\triangle OMA$ is a right-angled triangle with hypotenuse $OA = r$. Applying the Pythagoras theorem:",
+       "ur": "چونکہ $\\overline{OM} \\perp \\overline{AB}$ ہے، اس لیے $\\triangle OMA$ ایک قائمۃ الزاویہ مثلث ہے جس کا وتر $OA = r$ ہے۔ مسئلہ فیثا غورث کا اطلاق کرنے سے:"
+      },
+      {
+       "math": "r^2 = 4^2 + 3^2",
+       "en": "Substitute the known values $OA = r$, $OM = 4\\text{ cm}$, and $AM = 3\\text{ cm}$ into the equation.",
+       "ur": "مساوات میں معلوم قیمتیں $OA = r$، $OM = 4\\text{ cm}$ اور $AM = 3\\text{ cm}$ درج کریں۔"
+      },
+      {
+       "math": "r^2 = 16 + 9 = 25",
+       "en": "Calculate the squares and add them together.",
+       "ur": "مربع لیں اور انہیں آپس میں جمع کریں۔",
+       "check": [
+        "4**2 == 16",
+        "3**2 == 9",
+        "16 + 9 == 25"
+       ]
+      },
+      {
+       "math": "r = \\sqrt{25} = 5\\ \\text{cm}",
+       "en": "Take the positive square root on both sides (since radius is a length and cannot be negative). Thus, the radius of the circle is $5$ cm.",
+       "ur": "دونوں طرف مثبت جذر المربع لیں (کیونکہ رداس ایک لمبائی ہے اور منفی نہیں ہو سکتی)۔ پس، دائرے کا رداس $5$ cm ہے۔",
+       "check": [
+        "sqrt(25) == 5",
         "sqrt(4**2 + 3**2) == 5"
        ]
       }
      ],
      "answer": "$5$ cm",
+     "enriched": true,
      "book_key": "5 cm"
     }
    ],
@@ -1518,12 +2005,31 @@
      "prompt": "",
      "steps": [
       {
-       "math": "\\text{equal chords} \\Rightarrow \\text{equal central angles}",
-       "en": "Equal chords subtend equal angles at the centre.",
-       "ur": "برابر وتر مرکز پر برابر زاویے بناتے ہیں۔"
+       "math": "m\\overline{AB} = 10\\text{ m}, \\quad m\\overline{CD} = 10\\text{ m}",
+       "en": "Let the two benches form chords $AB$ and $CD$ in the circular park with centre $O$. We are given that both chords have a length of $10\\text{ m}$.",
+       "ur": "فرض کریں کہ گول پارک جس کا مرکز $O$ ہے، میں دو بینچز وتر $AB$ اور $CD$ بناتے ہیں۔ ہمیں دیا گیا ہے کہ دونوں وتروں کی لمبائی $10\\text{ m}$ ہے۔",
+       "check": [
+        "10 == 10"
+       ]
+      },
+      {
+       "math": "m\\overline{AB} = m\\overline{CD}",
+       "en": "Since both chords have the same length of $10\\text{ m}$, the two chords are equal to each other.",
+       "ur": "چونکہ دونوں وتروں کی لمبائی $10\\text{ m}$ ہے، اس لیے دونوں وتر آپس میں برابر ہیں۔"
+      },
+      {
+       "math": "\\text{Equal chords} \\Rightarrow \\text{Equal central angles}",
+       "en": "According to the circle theorem, equal chords of a circle subtend equal angles at the centre.",
+       "ur": "دائرے کے مسئلے کے مطابق، کسی دائرے کے برابر وتر مرکز پر برابر زاویے بناتے ہیں۔"
+      },
+      {
+       "math": "m\\angle AOB = m\\angle COD",
+       "en": "Therefore, the central angles $\\angle AOB$ and $\\angle COD$ subtended by the two benches at the centre $O$ are equal. Hence, the angles at the centre are equal.",
+       "ur": "لہٰذا، دونوں بینچز سے مرکز $O$ پر بننے والے مرکزی زاویے $\\angle AOB$ اور $\\angle COD$ آپس میں برابر ہیں۔ پس، مرکز پر بننے والے زاویے برابر ہیں۔"
       }
      ],
      "answer": "the angles at the centre are equal",
+     "enriched": true,
      "book_key": "the angles at the centre are equal"
     }
    ],
@@ -1541,20 +2047,51 @@
      "prompt": "",
      "steps": [
       {
-       "math": "\\text{slope } AB = \\frac{3}{2},\\ \\text{slope } AC = -4 \\Rightarrow A, B, C \\text{ are not collinear}",
-       "en": "Different slopes, so the three points are not on one line.",
-       "ur": "ڈھلوانیں مختلف ہیں، اس لیے تینوں نقاط ایک خط پر نہیں۔",
+       "math": "A(2,1),\\quad B(4,4),\\quad C(1,5)",
+       "en": "The coordinates of the three corners of the triangular garden are given.",
+       "ur": "مثلثی باغ کے تینوں کونوں کے نقاط دیے گئے ہیں۔"
+      },
+      {
+       "math": "",
+       "en": "By the theorem of a circle, one and only one circle can pass through three non-collinear points. To check if the points are non-collinear, we use the slope formula $m = \\frac{y_2 - y_1}{x_2 - x_1}$ to find the slopes of segments $AB$ and $AC$.",
+       "ur": "دائرے کے مسئلے کے مطابق، تین غیر ہم خط نقاط سے ایک اور صرف ایک دائرہ گزر سکتا ہے۔ یہ جانچنے کے لیے کہ آیا یہ نقاط غیر ہم خط ہیں، ہم ڈھلوان کا فارمولا $m = \\frac{y_2 - y_1}{x_2 - x_1}$ استعمال کرتے ہوئے قطعات خط $AB$ اور $AC$ کی ڈھلوانیں معلوم کرتے ہیں۔"
+      },
+      {
+       "math": "m_{AB} = \\frac{4 - 1}{4 - 2} = \\frac{3}{2}",
+       "en": "Substitute the coordinates of $A(2,1)$ and $B(4,4)$ to find the slope of line segment $AB$.",
+       "ur": "قطعہ خط $AB$ کی ڈھلوان معلوم کرنے کے لیے نقاط $A(2,1)$ اور $B(4,4)$ کی قیمتیں درج کریں۔",
        "check": [
-        "Ne(R(3,2), -4)"
+        "(4 - 1)/(4 - 2) == R(3, 2)"
        ]
       },
       {
-       "math": "\\text{Yes: the perpendicular bisectors meet at the circumcentre}",
-       "en": "Three non-collinear points always lie on exactly one circle.",
-       "ur": "تین غیر ہم خط نقاط ہمیشہ ایک دائرے پر ہوتے ہیں۔"
+       "math": "m_{AC} = \\frac{5 - 1}{1 - 2} = \\frac{4}{-1} = -4",
+       "en": "Substitute the coordinates of $A(2,1)$ and $C(1,5)$ to find the slope of line segment $AC$.",
+       "ur": "قطعہ خط $AC$ کی ڈھلوان معلوم کرنے کے لیے نقاط $A(2,1)$ اور $C(1,5)$ کی قیمتیں درج کریں۔",
+       "check": [
+        "(5 - 1)/(1 - 2) == -4",
+        "4/(-1) == -4"
+       ]
+      },
+      {
+       "math": "m_{AB} \\neq m_{AC} \\quad \\left(\\frac{3}{2} \\neq -4\\right)",
+       "en": "Since the slopes are not equal, the points $A$, $B$, and $C$ do not lie on the same straight line (they are non-collinear).",
+       "ur": "چونکہ ڈھلوانیں برابر نہیں ہیں، اس لیے نقاط $A$، $B$ اور $C$ ایک ہی خط مستقیم پر واقع نہیں ہیں (یہ غیر ہم خط ہیں)۔",
+       "check": [
+        "Ne(R(3, 2), -4)"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Because the three corners are non-collinear, the perpendicular bisectors of the sides meet at a unique circumcentre. Therefore, yes, she can install the fountain that touches all three corners.",
+       "ur": "چونکہ تینوں کونے غیر ہم خط ہیں، اس لیے اضلاع کے عمودی ناصف ایک منفرد محاصرہ مرکز (circumcentre) پر ملتے ہیں۔ لہٰذا، ہاں، وہ ایسا فوارہ لگا سکتی ہے جو تینوں کونوں کو چھوئے۔",
+       "check": [
+        "Ne(R(3,2), -4)"
+       ]
       }
      ],
      "answer": "yes, she can install the fountain",
+     "enriched": true,
      "book_key": "yes, she can install the fountain"
     }
    ],
@@ -1572,12 +2109,37 @@
      "prompt": "",
      "steps": [
       {
-       "math": "d = 7\\ \\text{cm}",
-       "en": "Equal chords are equidistant from the centre.",
-       "ur": "برابر وتر مرکز سے برابر فاصلے پر ہوتے ہیں۔"
+       "math": "m\\overline{PQ} = 18\\text{ cm}, \\quad m\\overline{RS} = 18\\text{ cm}",
+       "en": "First, write down the given lengths of the two chords $PQ$ and $RS$.",
+       "ur": "سب سے پہلے، دیے گئے دونوں وتروں $PQ$ اور $RS$ کی لمبائیاں لکھیں۔",
+       "check": [
+        "18 == 18"
+       ]
+      },
+      {
+       "math": "d_{PQ} = 7\\text{ cm}",
+       "en": "The distance of the chord $PQ$ from the centre of the circle is given as $7\\text{ cm}$, and we need to find the distance of the chord $RS$ from the centre ($d_{RS}$).",
+       "ur": "دائرے کے مرکز سے وتر $PQ$ کا فاصلہ $7\\text{ cm}$ دیا گیا ہے، اور ہمیں مرکز سے وتر $RS$ کا فاصلہ ($d_{RS}$) معلوم کرنا ہے۔",
+       "check": [
+        "7 == 7"
+       ]
+      },
+      {
+       "math": "m\\overline{PQ} = m\\overline{RS} \\implies d_{RS} = d_{PQ}",
+       "en": "According to the theorem of circles, if two chords of a circle are congruent (equal in length), then they are equidistant from the centre.",
+       "ur": "دائرے کے مسئلے کے مطابق، اگر کسی دائرے کے دو وتر متماثل (لمبائی میں برابر) ہوں، تو وہ مرکز سے مساوی الفاصلہ (برابر فاصلے پر) ہوتے ہیں۔"
+      },
+      {
+       "math": "d_{RS} = 7\\text{ cm}",
+       "en": "Substitute the value of $d_{PQ} = 7\\text{ cm}$. Thus, the distance of the chord $RS$ from the centre is also $7\\text{ cm}$.",
+       "ur": "$d_{PQ} = 7\\text{ cm}$ کی قیمت درج کریں۔ اس طرح، مرکز سے وتر $RS$ کا فاصلہ بھی $7\\text{ cm}$ ہے۔",
+       "check": [
+        "7 == 7"
+       ]
       }
      ],
      "answer": "$7$ cm",
+     "enriched": true,
      "book_key": "7 cm"
     }
    ],
@@ -1595,9 +2157,9 @@
      "prompt": "",
      "steps": [
       {
-       "math": "",
-       "en": "Draw $OM$ perpendicular to the chord: it bisects the chord, and $OM$, half the chord and the radius form a right triangle.",
-       "ur": "$OM$ کو وتر پر عمود کھینچیں: یہ وتر کی تنصیف کرتا ہے؛ $OM$، آدھا وتر اور رداس قائمہ مثلث بناتے ہیں۔",
+       "math": "AB = 20\\text{ m}, \\quad OM = 10\\text{ m}",
+       "en": "Let the centre of the circular pond be $O$, the chord formed by the tree branch be $AB = 20\\text{ m}$, and the perpendicular measuring rod from the centre to the chord be $OM = 10\\text{ m}$. We need to find the radius $r = OA$.",
+       "ur": "فرض کریں کہ دائروی تالاب کا مرکز $O$ ہے، درخت کی شاخ سے بننے والا وتر $AB = 20\\text{ m}$ ہے، اور مرکز سے وتر پر عمودی پیمائشی راڈ $OM = 10\\text{ m}$ ہے۔ ہمیں رداس $r = OA$ معلوم کرنا ہے۔",
        "draw": [
         {
          "t": "circle",
@@ -1690,15 +2252,39 @@
        ]
       },
       {
-       "math": "r^2 = OM^2 + AM^2 = 10^2 + 10^2 = 200 \\Rightarrow r = 10\\sqrt{2}\\ \\text{m}",
-       "en": "Pythagoras in the right triangle $OMA$: $r^2 = OM^2 + AM^2$.",
-       "ur": "قائمہ مثلث $OMA$ میں فیثا غورث: $r^2 = OM^2 + AM^2$۔",
+       "math": "AM = \\frac{AB}{2} = \\frac{20}{2} = 10\\text{ m}",
+       "en": "By theorem, a perpendicular drawn from the centre of a circle to a chord bisects the chord. Since $OM \\perp AB$, $M$ is the midpoint of $AB$.",
+       "ur": "مسئلہ کے مطابق، دائرے کے مرکز سے وتر پر گرایا گیا عمود وتر کی تنصیف کرتا ہے۔ چونکہ $OM \\perp AB$ ہے، اس لیے $M$ وتر $AB$ کا وسطی نقطہ ہے۔",
        "check": [
+        "20/2 == 10"
+       ]
+      },
+      {
+       "math": "OA^2 = OM^2 + AM^2",
+       "en": "Join $O$ to $A$ to form a right-angled triangle $OMA$ with $\\angle OMA = 90^\\circ$. Applying the Pythagorean theorem to $\\triangle OMA$:",
+       "ur": "$O$ کو $A$ سے ملائیں تاکہ ایک قائمہ الزاویہ مثلث $OMA$ بن جائے جس میں $\\angle OMA = 90^\\circ$ ہے۔ مثلث $OMA$ پر مسئلہ فیثا غورث لاگو کرنے سے:"
+      },
+      {
+       "math": "r^2 = 10^2 + 10^2 = 100 + 100 = 200",
+       "en": "Substitute $OA = r$, $OM = 10$, and $AM = 10$ into the equation and simplify.",
+       "ur": "مساوات میں $OA = r$، $OM = 10$ اور $AM = 10$ کی قیمتیں درج کریں اور مختصر کریں۔",
+       "check": [
+        "10**2 == 100",
+        "100 + 100 == 200"
+       ]
+      },
+      {
+       "math": "r = \\sqrt{200} = \\sqrt{100 \\times 2} = 10\\sqrt{2}\\text{ m}",
+       "en": "Take the square root on both sides to find the radius $r$ of the pond.",
+       "ur": "تالاب کا رداس $r$ معلوم کرنے کے لیے دونوں طرف جذر لیں۔",
+       "check": [
+        "sqrt(200) == 10*sqrt(2)",
         "sqrt(10**2 + 10**2) == 10*sqrt(2)"
        ]
       }
      ],
      "answer": "$10\\sqrt{2}$ m",
+     "enriched": true,
      "book_key": "10\\sqrt{2} m"
     }
    ],
@@ -1717,9 +2303,9 @@
      "prompt": "",
      "steps": [
       {
-       "math": "",
-       "en": "Draw $OM$ perpendicular to the chord: it bisects the chord, and $OM$, half the chord and the radius form a right triangle.",
-       "ur": "$OM$ کو وتر پر عمود کھینچیں: یہ وتر کی تنصیف کرتا ہے؛ $OM$، آدھا وتر اور رداس قائمہ مثلث بناتے ہیں۔",
+       "math": "AB = 6\\ \\text{m}, \\quad OM = 4\\ \\text{m}",
+       "en": "Let the steel bar be a chord $AB$ of the circle with centre $O$. We are given the length of the chord $AB = 6\\ \\text{m}$ and the perpendicular distance from the centre to the chord $OM = 4\\ \\text{m}$. We need to find the radius $r$ of the circle.",
+       "ur": "فرض کریں کہ اسٹیل کی سلاخ مرکز $O$ والے دائرے کا ایک وتر $AB$ ہے۔ ہمیں وتر کی لمبائی $AB = 6\\ \\text{m}$ اور مرکز سے وتر تک عمودی فاصلہ $OM = 4\\ \\text{m}$ دیا گیا ہے۔ ہمیں دائرے کا رداس $r$ معلوم کرنا ہے۔",
        "draw": [
         {
          "t": "circle",
@@ -1812,15 +2398,40 @@
        ]
       },
       {
-       "math": "r^2 = 4^2 + 3^2 = 25 \\Rightarrow r = 5\\ \\text{m}",
-       "en": "Pythagoras in the right triangle $OMA$: $r^2 = OM^2 + AM^2$.",
-       "ur": "قائمہ مثلث $OMA$ میں فیثا غورث: $r^2 = OM^2 + AM^2$۔",
+       "math": "AM = \\frac{AB}{2} = \\frac{6}{2} = 3\\ \\text{m}",
+       "en": "By theorem, a perpendicular from the centre of a circle to a chord bisects the chord. Since $OM \\perp AB$, $M$ is the midpoint of $AB$.",
+       "ur": "مسئلہ کے مطابق، دائرے کے مرکز سے وتر پر گرایا گیا عمود وتر کی تنصیف کرتا ہے۔ چونکہ $OM \\perp AB$، اس لیے $M$ وتر $AB$ کا وسطی نقطہ ہے۔",
        "check": [
+        "6/2 == 3"
+       ]
+      },
+      {
+       "math": "OA^2 = OM^2 + AM^2",
+       "en": "Join the centre $O$ to the end $A$ of the chord to form a right-angled triangle $OMA$, where the hypotenuse $OA = r$ is the radius. Apply the Pythagoras theorem:",
+       "ur": "مرکز $O$ کو وتر کے سرے $A$ سے ملائیں تاکہ ایک قائمہ الزاویہ مثلث $OMA$ بن جائے، جہاں وتر $OA = r$ دائرے کا رداس ہے۔ مسئلہ فیثا غورث کا اطلاق کریں:"
+      },
+      {
+       "math": "r^2 = 4^2 + 3^2 = 16 + 9 = 25",
+       "en": "Substitute $OM = 4$ and $AM = 3$ into the equation and simplify:",
+       "ur": "مساوات میں $OM = 4$ اور $AM = 3$ درج کریں اور مختصر کریں:",
+       "check": [
+        "4**2 == 16",
+        "3**2 == 9",
+        "16 + 9 == 25"
+       ]
+      },
+      {
+       "math": "r = \\sqrt{25} = 5\\ \\text{m}",
+       "en": "Take the positive square root on both sides (since radius cannot be negative). Thus, the radius of the circular structure is $5$ m.",
+       "ur": "دونوں طرف مثبت جذر لیں (کیونکہ رداس منفی نہیں ہو سکتا)۔ پس، گول ڈھانچے کا رداس $5$ میٹر ہے۔",
+       "check": [
+        "sqrt(25) == 5",
         "sqrt(4**2 + 3**2) == 5"
        ]
       }
      ],
      "answer": "$5$ m",
+     "enriched": true,
      "book_key": "5 m"
     }
    ],

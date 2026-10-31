@@ -1,0 +1,49 @@
+{
+ "item": "c10-ex1.2-q1",
+ "label": "iii",
+ "answer_ref": "$2 + i$",
+ "steps": [
+  {
+   "math": "(9 - 2i) - (7 - 3i)",
+   "en": "Write down the given expression of complex numbers to be simplified into the standard form $a + bi$.",
+   "ur": "معیاری شکل $a + bi$ میں مختصر کرنے کے لیے دی گئی مخلوط اعداد کی عبارت لکھیں۔"
+  },
+  {
+   "math": "= 9 - 2i - 7 + 3i",
+   "en": "Remove the brackets. Since there is a minus sign before the second bracket, change the signs of the terms inside it.",
+   "ur": "بریکٹ ہٹائیں۔ چونکہ دوسری بریکٹ سے پہلے منفی کی علامت ہے، اس لیے اس کے اندر موجود رقموں کی علامتیں تبدیل کریں۔",
+   "check": [
+    "(9 - 2*I) - (7 - 3*I) == 9 - 2*I - 7 + 3*I"
+   ]
+  },
+  {
+   "math": "= (9 - 7) + (-2 + 3)i",
+   "en": "Group the real parts together and the imaginary parts together.",
+   "ur": "حقیقی حصوں کو ایک ساتھ اور خیالی حصوں کو ایک ساتھ ملا کر لکھیں۔",
+   "check": [
+    "9 - 2*I - 7 + 3*I == (9 - 7) + (-2 + 3)*I"
+   ]
+  },
+  {
+   "math": "= 2 + 1i",
+   "en": "Perform the subtraction in both the real and imaginary parts.",
+   "ur": "حقیقی اور خیالی دونوں حصوں میں تفریق کا عمل کریں۔",
+   "check": [
+    "9 - 7 == 2",
+    "-2 + 3 == 1"
+   ]
+  },
+  {
+   "math": "= 2 + i",
+   "en": "Since $1i$ is simply written as $i$, write the final answer in the standard form $a + bi$.",
+   "ur": "چونکہ $1i$ کو صرف $i$ لکھا جاتا ہے، اس لیے حتمی جواب کو معیاری شکل $a + bi$ میں لکھیں۔",
+   "check": [
+    "2 + 1*I == 2 + I",
+    "(9 - 2*I) - (7 - 3*I) == (2 + I)",
+    "(9) - (7) == (2)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

@@ -1,0 +1,51 @@
+{
+ "item": "c10-rev2-q1",
+ "label": "vii",
+ "answer_ref": "(c) $x^2-5x+6=0$",
+ "steps": [
+  {
+   "math": "\\alpha = 3, \\quad \\beta = 2",
+   "en": "Let the two given roots of the quadratic equation be $\\alpha$ and $\\beta$.",
+   "ur": "فرض کریں کہ دو درجی مساوات کے دیے گئے دو روٹس $\\alpha$ اور $\\beta$ ہیں۔"
+  },
+  {
+   "math": "S = \\alpha + \\beta = 3 + 2 = 5",
+   "en": "First, find the sum of the roots ($S$) by adding them together.",
+   "ur": "سب سے پہلے، روٹس کو جمع کر کے ان کا مجموعہ ($S$) معلوم کریں۔",
+   "check": [
+    "3 + 2 == 5"
+   ]
+  },
+  {
+   "math": "P = \\alpha \\cdot \\beta = (3)(2) = 6",
+   "en": "Next, find the product of the roots ($P$) by multiplying them.",
+   "ur": "اس کے بعد، روٹس کو ضرب دے کر ان کا حاصل ضرب ($P$) معلوم کریں۔",
+   "check": [
+    "3 * 2 == 6"
+   ]
+  },
+  {
+   "math": "x^2 - Sx + P = 0",
+   "en": "Recall the standard formula to form a quadratic equation when the sum ($S$) and product ($P$) of its roots are known.",
+   "ur": "جب روٹس کا مجموعہ ($S$) اور حاصل ضرب ($P$) معلوم ہو تو دو درجی مساوات بنانے کا معیاری فارمولا استعمال کریں۔"
+  },
+  {
+   "math": "x^2 - 5x + 6 = 0",
+   "en": "Substitute the values of $S = 5$ and $P = 6$ into the formula.",
+   "ur": "فارمولے میں $S = 5$ اور $P = 6$ کی قیمتیں درج کریں۔",
+   "check": [
+    "expand((x - 3)*(x - 2)) == x**2 - 5*x + 6"
+   ]
+  },
+  {
+   "math": "\\text{Answer: (c) } x^2-5x+6=0",
+   "en": "This matches option (c), which is the correct answer.",
+   "ur": "یہ آپشن (c) سے مطابقت رکھتا ہے، جو کہ درست جواب ہے۔",
+   "check": [
+    "expand((x - 3)*(x - 2)) == x**2 - 5*x + 6"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

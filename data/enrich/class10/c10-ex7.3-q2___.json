@@ -1,0 +1,63 @@
+{
+ "item": "c10-ex7.3-q2",
+ "label": "",
+ "answer_ref": "$57.8^\\circ$",
+ "steps": [
+  {
+   "math": "m\\overline{PQ} = 16\\ \\text{cm},\\quad m\\overline{QR} = 10\\ \\text{cm},\\quad m\\overline{MT} = 15\\ \\text{cm}",
+   "en": "Write down the given dimensions of the rectangular base $PQRS$ and the vertical height $MT$ of the pyramid.",
+   "ur": "مستطیل قاعدے $PQRS$ کی دی گئی پیمائشیں اور اہرام کی عمودی اونچائی $MT$ لکھیں۔",
+   "check": [
+    "16 == 16",
+    "10 == 10",
+    "15 == 15"
+   ]
+  },
+  {
+   "math": "(PR)^2 = (PQ)^2 + (QR)^2",
+   "en": "Since the base $PQRS$ is a rectangle, $\\angle PQR = 90^\\circ$. Apply the Pythagoras theorem in the right-angled triangle $PQR$ to find the length of the diagonal $PR$.",
+   "ur": "چونکہ قاعدہ $PQRS$ ایک مستطیل ہے، اس لیے $\\angle PQR = 90^\\circ$ ہے۔ وتر $PR$ کی لمبائی معلوم کرنے کے لیے قائمہ الزاویہ مثلث $PQR$ میں مسئلہ فیثاغورث کا اطلاق کریں۔"
+  },
+  {
+   "math": "PR = \\sqrt{16^2 + 10^2} = \\sqrt{256 + 100} = \\sqrt{356} \\approx 18.87\\ \\text{cm}",
+   "en": "Substitute $PQ = 16$ and $QR = 10$, then simplify to find $PR$.",
+   "ur": "$PQ = 16$ اور $QR = 10$ کی قیمتیں درج کریں، اور پھر $PR$ معلوم کرنے کے لیے مختصر کریں۔",
+   "check": [
+    "16**2 == 256",
+    "10**2 == 100",
+    "256 + 100 == 356",
+    "Abs(sqrt(356) - 18.87) <= 0.005"
+   ]
+  },
+  {
+   "math": "PM = \\frac{PR}{2} = \\frac{\\sqrt{356}}{2} \\approx 9.43\\ \\text{cm}",
+   "en": "Since $M$ is the midpoint of the diagonal $PR$, divide the length of $PR$ by $2$ to find $PM$.",
+   "ur": "چونکہ $M$ وتر $PR$ کا وسطی نقطہ ہے، اس لیے $PM$ معلوم کرنے کے لیے $PR$ کی لمبائی کو $2$ پر تقسیم کریں۔",
+   "check": [
+    "Abs((sqrt(356)/2) - 9.43) <= 0.005"
+   ]
+  },
+  {
+   "math": "\\tan\\theta = \\frac{MT}{PM} = \\frac{15}{9.43} \\approx 1.590",
+   "en": "The vertex $T$ is vertically above $M$, so $\\triangle TPM$ is a right-angled triangle with $\\angle TMP = 90^\\circ$. Let $\\theta$ be the angle between $TP$ and the base $PQRS$ (which is $\\angle TPM$). Use the tangent ratio.",
+   "ur": "راس $T$ نقطہ $M$ کے بالکل اوپر عموداً واقع ہے، اس لیے $\\triangle TPM$ ایک قائمہ الزاویہ مثلث ہے جس میں $\\angle TMP = 90^\\circ$ ہے۔ فرض کریں کہ $TP$ اور قاعدہ $PQRS$ کے درمیان زاویہ $\\theta$ ہے (جو کہ $\\angle TPM$ ہے)۔ ٹینجنٹ کی نسبت استعمال کریں۔",
+   "check": [
+    "Abs(15/9.43 - 1.590) <= 0.001"
+   ]
+  },
+  {
+   "math": "\\theta = \\tan^{-1}(1.590) \\approx 57.8^\\circ",
+   "en": "Take the inverse tangent to find the angle $\\theta$, rounded to 1 decimal place.",
+   "ur": "زاویہ $\\theta$ معلوم کرنے کے لیے معکوس ٹینجنٹ لیں اور جواب کو اعشاریہ کے بعد ایک درجہ تک محدود کریں۔",
+   "check": [
+    "Abs((atan(15/(sqrt(356)/2))*180/pi) - 57.8) <= 0.05",
+    "Abs((atan(1.590)*180/pi) - 57.8) <= 0.05",
+    "16**2 + 10**2 == 356",
+    "Abs((sqrt(356)/2) - 9.43) <= 0.0050000010000000004",
+    "Abs((atan(15/(sqrt(356)/2))*180/pi) - 57.8) <= 0.050000001"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

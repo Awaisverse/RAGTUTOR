@@ -1,0 +1,51 @@
+{
+ "item": "c10-rev3-q1",
+ "label": "x",
+ "answer_ref": "(b) $12$",
+ "steps": [
+  {
+   "math": "\\begin{vmatrix} 3 & 1 \\\\ 0 & 4 \\end{vmatrix}",
+   "en": "We need to evaluate the determinant of the given $2 \\times 2$ matrix.",
+   "ur": "ہمیں دیے گئے $2 \\times 2$ کالب کے مقطع (determinant) کی قیمت معلوم کرنی ہے۔"
+  },
+  {
+   "math": "\\begin{vmatrix} a & b \\\\ c & d \\end{vmatrix} = ad - bc",
+   "en": "Recall the formula for the determinant of a $2 \\times 2$ matrix: multiply the main diagonal elements and subtract the product of the other diagonal elements.",
+   "ur": "کسی $2 \\times 2$ کالب کے مقطع کا فارمولا یاد کریں: وتر کے ارکان کو ضرب دیں اور اس میں سے دوسرے وتر کے ارکان کے حاصلِ ضرب کو تفریق کریں۔"
+  },
+  {
+   "math": "\\begin{vmatrix} 3 & 1 \\\\ 0 & 4 \\end{vmatrix} = (3)(4) - (1)(0)",
+   "en": "Substitute the values $a = 3$, $b = 1$, $c = 0$, and $d = 4$ into the formula.",
+   "ur": "فارمولے میں $a = 3$، $b = 1$، $c = 0$ اور $d = 4$ کی قیمتیں درج کریں۔",
+   "check": [
+    "Matrix([[3, 1], [0, 4]]).det() == (3)*(4) - (1)*(0)"
+   ]
+  },
+  {
+   "math": "= 12 - 0",
+   "en": "Multiply the numbers in the brackets: $3 \\times 4 = 12$ and $1 \\times 0 = 0$.",
+   "ur": "بریکٹ میں موجود اعداد کو ضرب دیں: $3 \\times 4 = 12$ اور $1 \\times 0 = 0$۔",
+   "check": [
+    "(3)*(4) - (1)*(0) == 12 - 0"
+   ]
+  },
+  {
+   "math": "= 12",
+   "en": "Subtract $0$ from $12$ to get $12$.",
+   "ur": "$12$ میں سے $0$ تفریق کرنے سے $12$ حاصل ہوتا ہے۔",
+   "check": [
+    "12 - 0 == 12"
+   ]
+  },
+  {
+   "math": "\\text{Answer: (b) } 12",
+   "en": "The calculated value matches option (b).",
+   "ur": "معلوم کی گئی قیمت آپشن (b) سے مطابقت رکھتی ہے۔",
+   "check": [
+    "Matrix([[3, 1], [0, 4]]).det() == 12"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

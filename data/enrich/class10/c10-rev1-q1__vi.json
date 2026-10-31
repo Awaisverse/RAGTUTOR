@@ -1,0 +1,63 @@
+{
+ "item": "c10-rev1-q1",
+ "label": "vi",
+ "answer_ref": "(c) $\\frac{1}{2}-\\frac{1}{2}i$",
+ "steps": [
+  {
+   "math": "z = 1+i",
+   "en": "We are given the complex number $z = 1+i$, and we need to find its multiplicative inverse.",
+   "ur": "ہمیں مختلط عدد $z = 1+i$ دیا گیا ہے، اور ہمیں اس کا ضربی معکوس معلوم کرنا ہے۔"
+  },
+  {
+   "math": "z^{-1} = \\frac{1}{z} = \\frac{1}{1+i}",
+   "en": "The multiplicative inverse of a complex number $z$ is given by $\\frac{1}{z}$. Substitute $z = 1+i$ into the formula.",
+   "ur": "کسی مختلط عدد $z$ کا ضربی معکوس $\\frac{1}{z}$ ہوتا ہے۔ فارمولے میں $z = 1+i$ درج کریں۔",
+   "check": [
+    "(1+I)**(-1) == 1/(1+I)"
+   ]
+  },
+  {
+   "math": "z^{-1} = \\frac{1}{1+i} \\times \\frac{1-i}{1-i}",
+   "en": "To write the complex number in the standard form $a+bi$, multiply the numerator and the denominator by the conjugate of the denominator, which is $1-i$.",
+   "ur": "مختلط عدد کو معیاری شکل $a+bi$ میں لکھنے کے لیے، شمار کنندہ اور مخرج کو مخرج کے مزدوج یعنی $1-i$ سے ضرب دیں۔",
+   "check": [
+    "1/(1+I) == (1/(1+I))*((1-I)/(1-I))"
+   ]
+  },
+  {
+   "math": "z^{-1} = \\frac{1-i}{(1)^2 - (i)^2}",
+   "en": "Apply the difference of squares formula $(a+b)(a-b) = a^2 - b^2$ to the denominator.",
+   "ur": "مخرج پر فرق المربعین کا فارمولا $(a+b)(a-b) = a^2 - b^2$ لاگو کریں۔",
+   "check": [
+    "(1-I)/((1+I)*(1-I)) == (1-I)/(1**2 - I**2)"
+   ]
+  },
+  {
+   "math": "z^{-1} = \\frac{1-i}{1 - (-1)} = \\frac{1-i}{1 + 1} = \\frac{1-i}{2}",
+   "en": "Since $i^2 = -1$, substitute this value into the denominator and simplify.",
+   "ur": "چونکہ $i^2 = -1$ ہوتا ہے، یہ قیمت مخرج میں درج کریں اور مختصر کریں۔",
+   "check": [
+    "(1-I)/(1 - (-1)) == (1-I)/(1 + 1)",
+    "(1-I)/(1 + 1) == (1-I)/2"
+   ]
+  },
+  {
+   "math": "z^{-1} = \\frac{1}{2} - \\frac{1}{2}i",
+   "en": "Separate the real and imaginary parts by dividing each term in the numerator by $2$.",
+   "ur": "شمار کنندہ کی ہر رقم کو $2$ پر تقسیم کر کے حقیقی اور خیالی حصوں کو الگ کریں۔",
+   "check": [
+    "(1-I)/2 == R(1,2) - R(1,2)*I"
+   ]
+  },
+  {
+   "math": "\\text{Answer: (c) } \\frac{1}{2}-\\frac{1}{2}i",
+   "en": "This matches option (c), which is the correct answer.",
+   "ur": "یہ آپشن (c) سے مطابقت رکھتا ہے، جو کہ درست جواب ہے۔",
+   "check": [
+    "1/(1+I) == R(1,2) - R(1,2)*I"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

@@ -1,0 +1,50 @@
+{
+ "item": "c10-rev11-q4",
+ "label": "ii",
+ "answer_ref": "strong negative correlation",
+ "steps": [
+  {
+   "math": "n = 10, \\quad x = 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, \\quad y = 90, 85, 83, 80, 76, 74, 72, 70, 68, 65",
+   "en": "Let $x$ represent the weekly exercise hours and $y$ represent the resting heart rate for the $n = 10$ individuals. We need to find the type of correlation between $x$ and $y$.",
+   "ur": "فرض کریں کہ $x$ ہفتہ وار ورزش کے گھنٹوں کو اور $y$ آرام کی حالت میں دل کی دھڑکن کو ظاہر کرتا ہے، جہاں کل افراد کی تعداد $n = 10$ ہے۔ ہمیں $x$ اور $y$ کے درمیان ارتباط (correlation) کی قسم معلوم کرنی ہے۔"
+  },
+  {
+   "math": "r = \\frac{n\\sum xy - \\sum x\\sum y}{\\sqrt{[n\\sum x^2 - (\\sum x)^2][n\\sum y^2 - (\\sum y)^2]}}",
+   "en": "To determine the exact strength and direction of the correlation, we can use Pearson's correlation coefficient formula.",
+   "ur": "ارتباط کی درست مضبوطی اور سمت معلوم کرنے کے لیے ہم پیئرسن کے ارتباطی سر (correlation coefficient) کا فارمولا استعمال کر سکتے ہیں۔"
+  },
+  {
+   "math": "\\sum x = 45, \\quad \\sum y = 763, \\quad \\sum x^2 = 285, \\quad \\sum y^2 = 58799, \\quad \\sum xy = 3216",
+   "en": "First, we calculate the required sums from the given data values.",
+   "ur": "سب سے پہلے، ہم دیے گئے اعداد و شمار سے مطلوبہ مجموعے معلوم کرتے ہیں۔",
+   "check": [
+    "0+1+2+3+4+5+6+7+8+9 == 45",
+    "90+85+83+80+76+74+72+70+68+65 == 763",
+    "0**2+1**2+2**2+3**2+4**2+5**2+6**2+7**2+8**2+9**2 == 285",
+    "90**2+85**2+83**2+80**2+76**2+74**2+72**2+70**2+68**2+65**2 == 58799",
+    "0*90+1*85+2*83+3*80+4*76+5*74+6*72+7*70+8*68+9*65 == 3216"
+   ]
+  },
+  {
+   "math": "r = \\frac{10(3216) - (45)(763)}{\\sqrt{[10(285) - (45)^2][10(58799) - (763)^2]}} = \\frac{-2175}{\\sqrt{825 \\times 5821}} \\approx -0.993",
+   "en": "Substitute these sums into the formula and simplify to find the value of $r$.",
+   "ur": "ان مجموعوں کو فارمولے میں درج کریں اور $r$ کی قیمت معلوم کرنے کے لیے مختصر کریں۔",
+   "check": [
+    "10*3216 - 45*763 == -2175",
+    "10*285 - 45**2 == 825",
+    "10*58799 - 763**2 == 5821",
+    "Abs(((10*(3216) - (45)*(763))/sqrt((10*(285) - (45)**2)*(10*(58799) - (763)**2))) - -0.993) <= 0.000500001"
+   ]
+  },
+  {
+   "math": "\\text{strong negative correlation}",
+   "en": "Since $r \\approx -0.993$ is very close to $-1$, and the heart rate decreases steadily as exercise hours increase, the data shows a strong negative correlation.",
+   "ur": "چونکہ $r \\approx -0.993$ کی قیمت $-1$ کے بہت قریب ہے، اور ورزش کے گھنٹے بڑھنے سے دل کی دھڑکن مسلسل کم ہوتی ہے، اس لیے یہ مواد مضبوط منفی ارتباط (strong negative correlation) کو ظاہر کرتا ہے۔",
+   "check": [
+    "Abs(((10*(3216) - (45)*(763))/sqrt((10*(285) - (45)**2)*(10*(58799) - (763)**2))) - -0.993) <= 0.000500001"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

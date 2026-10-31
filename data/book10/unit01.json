@@ -16,23 +16,55 @@
      "prompt": "$i^{5}$",
      "steps": [
       {
-       "math": "i^{5} = i^{5}\\cdot (i^4)^{-1} = i^{1}",
-       "en": "Since $i^4 = 1$, adding or removing multiples of 4 in the power does not change the value.",
-       "ur": "چونکہ $i^4 = 1$، طاقت میں 4 کے مضرب جمع یا تفریق کرنے سے قیمت نہیں بدلتی۔",
+       "math": "i^5",
+       "en": "We are given the complex expression $i^5$ and asked to simplify it.",
+       "ur": "ہمیں مختلط جملہ $i^5$ دیا گیا ہے اور اسے مختصر کرنے کو کہا گیا ہے۔"
+      },
+      {
+       "math": "i^5 = i^4 \\cdot i^1",
+       "en": "To simplify an odd power of $i$, we first split it into an even power (which is a multiple of $2$) and $i^1$ using the law of exponents $a^{m+n} = a^m \\cdot a^n$.",
+       "ur": "$i$ کی طاق طاقت کو مختصر کرنے کے لیے، ہم پہلے قوت نما کے قانون $a^{m+n} = a^m \\cdot a^n$ کو استعمال کرتے ہوئے اسے ایک جفت طاقت (جو $2$ کا مضرب ہو) اور $i^1$ میں توڑتے ہیں۔",
        "check": [
-        "1*I**(5) == 1*I**1"
+        "I**5 == I**4 * I**1"
+       ]
+      },
+      {
+       "math": "= (i^2)^2 \\cdot i",
+       "en": "Next, we rewrite the even power $i^4$ in terms of $i^2$ using the power of a power rule $(a^m)^n = a^{mn}$, and write $i^1$ simply as $i$.",
+       "ur": "اس کے بعد، ہم قوت کے قانون $(a^m)^n = a^{mn}$ کو استعمال کرتے ہوئے جفت طاقت $i^4$ کو $i^2$ کی شکل میں لکھتے ہیں، اور $i^1$ کو صرف $i$ لکھتے ہیں۔",
+       "check": [
+        "I**4 * I**1 == (I**2)**2 * I"
+       ]
+      },
+      {
+       "math": "= (-1)^2 \\cdot i",
+       "en": "By the definition of the imaginary unit, we know that $i^2 = -1$. Substituting this value into the expression:",
+       "ur": "خیالی اکائی کی تعریف کے مطابق، ہم جانتے ہیں کہ $i^2 = -1$ ہوتا ہے۔ اس قیمت کو جملے میں درج کرنے سے:",
+       "check": [
+        "(I**2)**2 * I == (-1)**2 * I"
+       ]
+      },
+      {
+       "math": "= 1 \\cdot i",
+       "en": "Since the square of $-1$ is $+1$, we replace $(-1)^2$ with $1$.",
+       "ur": "چونکہ $-1$ کا مربع $+1$ ہوتا ہے، اس لیے ہم $(-1)^2$ کی جگہ $1$ لکھتے ہیں۔",
+       "check": [
+        "(-1)**2 * I == 1 * I"
        ]
       },
       {
        "math": "= i",
-       "en": "Use $i^1 = i,\\ i^2 = -1,\\ i^3 = -i,\\ i^4 = 1$.",
-       "ur": "$i^1 = i,\\ i^2 = -1,\\ i^3 = -i,\\ i^4 = 1$ استعمال کریں۔",
+       "en": "Multiplying $1$ by $i$ gives the final simplified answer $i$.",
+       "ur": "$1$ کو $i$ سے ضرب دینے سے ہمیں حتمی مختصر جواب $i$ حاصل ہوتا ہے۔",
        "check": [
+        "1 * I == I",
+        "1*I**(5) == 1*I**1",
         "1*I**(5) == (I)"
        ]
       }
      ],
      "answer": "$i$",
+     "enriched": true,
      "book_key": "i"
     },
     {
@@ -40,23 +72,40 @@
      "prompt": "$i^{16}$",
      "steps": [
       {
-       "math": "i^{16} = i^{16}\\cdot (i^4)^{-4} = i^{0}",
-       "en": "Since $i^4 = 1$, adding or removing multiples of 4 in the power does not change the value.",
-       "ur": "چونکہ $i^4 = 1$، طاقت میں 4 کے مضرب جمع یا تفریق کرنے سے قیمت نہیں بدلتی۔",
+       "math": "i^{16}",
+       "en": "We are given the imaginary number $i^{16}$ and need to simplify it.",
+       "ur": "ہمیں خیالی عدد $i^{16}$ دیا گیا ہے اور ہمیں اسے مختصر کرنا ہے۔"
+      },
+      {
+       "math": "i^{16} = (i^2)^8",
+       "en": "To simplify a high power of $i$, we rewrite the exponent 16 as a multiple of 2, using the power of a power rule $(a^m)^n = a^{m \\cdot n}$.",
+       "ur": "$i$ کی بڑی طاقت کو مختصر کرنے کے لیے، ہم قوت نما کے اصول $(a^m)^n = a^{m \\cdot n}$ کا استعمال کرتے ہوئے طاقت 16 کو 2 کے مضرب کے طور پر لکھتے ہیں۔",
        "check": [
-        "1*I**(16) == 1*I**0"
+        "I**16 == (I**2)**8"
+       ]
+      },
+      {
+       "math": "= (-1)^8",
+       "en": "From the definition of the imaginary unit $i$, we know that $i^2 = -1$. Substitute this value into the expression.",
+       "ur": "خیالی اکائی $i$ کی تعریف سے، ہم جانتے ہیں کہ $i^2 = -1$ ہوتا ہے۔ یہ قیمت جملے میں درج کریں۔",
+       "check": [
+        "(I**2)**8 == (-1)**8"
        ]
       },
       {
        "math": "= 1",
-       "en": "Use $i^1 = i,\\ i^2 = -1,\\ i^3 = -i,\\ i^4 = 1$.",
-       "ur": "$i^1 = i,\\ i^2 = -1,\\ i^3 = -i,\\ i^4 = 1$ استعمال کریں۔",
+       "en": "Since $-1$ is raised to an even power (8), the result is positive 1. Thus, the simplified form of $i^{16}$ is $1$.",
+       "ur": "چونکہ $-1$ کی طاقت ایک جفت عدد (8) ہے، اس لیے نتیجہ مثبت 1 ہوگا۔ لہٰذا، $i^{16}$ کی مختصر شکل $1$ ہے۔",
        "check": [
+        "(-1)**8 == 1",
+        "I**16 == 1",
+        "1*I**(16) == 1*I**0",
         "1*I**(16) == (1)"
        ]
       }
      ],
      "answer": "$1$",
+     "enriched": true,
      "book_key": "1"
     },
     {
@@ -64,23 +113,77 @@
      "prompt": "$(-i)^{-19}$",
      "steps": [
       {
-       "math": "(-i)^{-19} = (-1)^{-19}\\, i^{-19} = -\\,i^{-19}",
-       "en": "Split the power over the product: $(-1)^{-19} = -1$ because the power is odd.",
-       "ur": "حاصل ضرب پر طاقت تقسیم کریں: $(-1)^{-19} = -1$ کیونکہ طاقت طاق ہے۔",
+       "math": "(-i)^{-19} = (-1 \\cdot i)^{-19}",
+       "en": "Write $-i$ as the product of $-1$ and $i$.",
+       "ur": "$-i$ کو $-1$ اور $i$ کے حاصل ضرب کے طور پر لکھیں۔",
        "check": [
-        "(-I)**(-19) == -I**(-19)"
+        "(-I)**(-19) == (-1 * I)**(-19)"
        ]
       },
       {
-       "math": "= -\\,i^{-19+20} = -\\,i^{1} = -i",
-       "en": "Since $i^4 = 1$, adding or removing multiples of 4 in the power does not change the value.",
-       "ur": "چونکہ $i^4 = 1$، طاقت میں 4 کے مضرب جمع یا تفریق کرنے سے قیمت نہیں بدلتی۔",
+       "math": "= (-1)^{-19} \\cdot i^{-19}",
+       "en": "Apply the law of exponents $(ab)^n = a^n b^n$ to distribute the power $-19$.",
+       "ur": "طاقت $-19$ کو تقسیم کرنے کے لیے قوت نما کا قانون $(ab)^n = a^n b^n$ استعمال کریں۔",
        "check": [
+        "(-1 * I)**(-19) == (-1)**(-19) * I**(-19)"
+       ]
+      },
+      {
+       "math": "= -1 \\cdot i^{-19} = -i^{-19}",
+       "en": "Since $-19$ is an odd integer, $(-1)^{-19} = -1$.",
+       "ur": "چونکہ $-19$ ایک طاق عدد ہے، اس لیے $(-1)^{-19} = -1$ ہوتا ہے۔",
+       "check": [
+        "(-1)**(-19) * I**(-19) == -I**(-19)"
+       ]
+      },
+      {
+       "math": "= -\\frac{1}{i^{19}}",
+       "en": "Use the negative exponent rule $a^{-n} = \\frac{1}{a^n}$ to make the power of $i$ positive.",
+       "ur": "$i$ کی طاقت کو مثبت بنانے کے لیے منفی قوت نما کا اصول $a^{-n} = \\frac{1}{a^n}$ استعمال کریں۔",
+       "check": [
+        "-I**(-19) == -1 / (I**19)"
+       ]
+      },
+      {
+       "math": "= -\\frac{1}{i^{18} \\cdot i} = -\\frac{1}{(i^2)^9 \\cdot i}",
+       "en": "Split the odd power $19$ into an even power $18$ and $1$, then write $i^{18}$ in terms of $i^2$.",
+       "ur": "طاق طاقت $19$ کو جفت طاقت $18$ اور $1$ میں توڑیں، پھر $i^{18}$ کو $i^2$ کی شکل میں لکھیں۔",
+       "check": [
+        "-1 / (I**19) == -1 / (I**18 * I)",
+        "-1 / (I**18 * I) == -1 / ((I**2)**9 * I)"
+       ]
+      },
+      {
+       "math": "= -\\frac{1}{(-1)^9 \\cdot i} = -\\frac{1}{-1 \\cdot i} = \\frac{1}{i}",
+       "en": "Substitute $i^2 = -1$. Since $9$ is odd, $(-1)^9 = -1$, and the two negative signs cancel out.",
+       "ur": "$i^2 = -1$ درج کریں۔ چونکہ $9$ طاق ہے، اس لیے $(-1)^9 = -1$، اور دونوں منفی علامتیں ایک دوسرے کو ختم کر دیتی ہیں۔",
+       "check": [
+        "-1 / ((I**2)**9 * I) == -1 / ((-1)**9 * I)",
+        "-1 / ((-1)**9 * I) == 1 / I"
+       ]
+      },
+      {
+       "math": "= \\frac{1}{i} \\times \\frac{i}{i} = \\frac{i}{i^2}",
+       "en": "Multiply the numerator and denominator by $i$ to rationalize the denominator.",
+       "ur": "مخرج سے $i$ ختم کرنے کے لیے شمار کنندہ اور مخرج دونوں کو $i$ سے ضرب دیں۔",
+       "check": [
+        "1 / I == I / (I**2)"
+       ]
+      },
+      {
+       "math": "= \\frac{i}{-1} = -i",
+       "en": "Substitute $i^2 = -1$ and simplify to get the final answer.",
+       "ur": "$i^2 = -1$ درج کریں اور حتمی جواب حاصل کرنے کے لیے مختصر کریں۔",
+       "check": [
+        "I / (I**2) == I / (-1)",
+        "I / (-1) == -I",
+        "(-I)**(-19) == -I**(-19)",
         "-I**(-19) == -I"
        ]
       }
      ],
      "answer": "$-i$",
+     "enriched": true,
      "book_key": "-i"
     },
     {
@@ -88,23 +191,55 @@
      "prompt": "$27i^{-26}$",
      "steps": [
       {
-       "math": "27i^{-26} = 27i^{-26}\\cdot (i^4)^{7} = 27i^{2}",
-       "en": "Since $i^4 = 1$, adding or removing multiples of 4 in the power does not change the value.",
-       "ur": "چونکہ $i^4 = 1$، طاقت میں 4 کے مضرب جمع یا تفریق کرنے سے قیمت نہیں بدلتی۔",
+       "math": "27i^{-26}",
+       "en": "We are given the complex expression $27i^{-26}$ and we need to simplify it.",
+       "ur": "ہمیں مختلط جملہ $27i^{-26}$ دیا گیا ہے اور ہمیں اسے مختصر کرنا ہے۔"
+      },
+      {
+       "math": "= \\frac{27}{i^{26}}",
+       "en": "First, make the negative exponent positive by moving $i^{-26}$ to the denominator using the law of exponents $a^{-n} = \\frac{1}{a^n}$.",
+       "ur": "سب سے پہلے، قوت نما کے قانون $a^{-n} = \\frac{1}{a^n}$ کو استعمال کرتے ہوئے $i^{-26}$ کو مخرج میں لے جا کر منفی قوت نما کو مثبت بنائیں۔",
        "check": [
-        "27*I**(-26) == 27*I**2"
+        "27*I**(-26) == 27/(I**26)"
+       ]
+      },
+      {
+       "math": "= \\frac{27}{(i^2)^{13}}",
+       "en": "Rewrite the even power $i^{26}$ in terms of $i^2$ using the power rule $(a^m)^n = a^{m \\times n}$, since $2 \\times 13 = 26$.",
+       "ur": "جفت طاقت $i^{26}$ کو طاقت کے اصول $(a^m)^n = a^{m \\times n}$ کی مدد سے $i^2$ کی شکل میں لکھیں، کیونکہ $2 \\times 13 = 26$ ہوتا ہے۔",
+       "check": [
+        "27/(I**26) == 27/((I**2)**13)"
+       ]
+      },
+      {
+       "math": "= \\frac{27}{(-1)^{13}}",
+       "en": "Substitute the fundamental value of the imaginary unit, $i^2 = -1$.",
+       "ur": "خیالی اکائی کی بنیادی قیمت $i^2 = -1$ درج کریں۔",
+       "check": [
+        "27/((I**2)**13) == 27/((-1)**13)"
+       ]
+      },
+      {
+       "math": "= \\frac{27}{-1}",
+       "en": "Since $-1$ raised to an odd power ($13$) is always $-1$, we get $(-1)^{13} = -1$.",
+       "ur": "چونکہ $-1$ کی طاقت ایک طاق عدد ($13$) ہے، اس لیے جواب ہمیشہ $-1$ آتا ہے، یعنی $(-1)^{13} = -1$۔",
+       "check": [
+        "27/((-1)**13) == 27/(-1)"
        ]
       },
       {
        "math": "= -27",
-       "en": "Use $i^1 = i,\\ i^2 = -1,\\ i^3 = -i,\\ i^4 = 1$.",
-       "ur": "$i^1 = i,\\ i^2 = -1,\\ i^3 = -i,\\ i^4 = 1$ استعمال کریں۔",
+       "en": "Dividing $27$ by $-1$ gives the final simplified answer $-27$.",
+       "ur": "$27$ کو $-1$ پر تقسیم کرنے سے حتمی مختصر جواب $-27$ حاصل ہوتا ہے۔",
        "check": [
+        "27/(-1) == -27",
+        "27*I**(-26) == 27*I**2",
         "27*I**(-26) == (-27)"
        ]
       }
      ],
      "answer": "$-27$",
+     "enriched": true,
      "book_key": "-27"
     },
     {
@@ -112,23 +247,64 @@
      "prompt": "$i^{11} + i^{5}$",
      "steps": [
       {
-       "math": "i^{11} + i^{5} = i^{3} + i^{1}",
-       "en": "Since $i^4 = 1$, adding or removing multiples of 4 in the power does not change the value.",
-       "ur": "چونکہ $i^4 = 1$، طاقت میں 4 کے مضرب جمع یا تفریق کرنے سے قیمت نہیں بدلتی۔",
+       "math": "i^{11} + i^{5}",
+       "en": "We are given the complex expression $i^{11} + i^5$ and we need to simplify it.",
+       "ur": "ہمیں مختلط جملہ $i^{11} + i^5$ دیا گیا ہے اور ہمیں اسے مختصر کرنا ہے۔"
+      },
+      {
+       "math": "i^{11} + i^{5} = i^{8 + 3} + i^{4 + 1}",
+       "en": "To simplify powers of $i$, we split each exponent into a multiple of $4$ plus a remainder, because $i^4 = 1$.",
+       "ur": "$i$ کی طاقتوں کو مختصر کرنے کے لیے، ہم ہر قوت نما کو $4$ کے مضرب اور باقی ماندہ کے مجموعے کے طور پر لکھتے ہیں، کیونکہ $i^4 = 1$ ہوتا ہے۔",
        "check": [
-        "I**11 + I**5 == I**3 + I"
+        "I**11 + I**5 == I**(8 + 3) + I**(4 + 1)"
        ]
       },
       {
-       "math": "= -i + i = 0",
-       "en": "Use $i^1 = i,\\ i^2 = -1,\\ i^3 = -i,\\ i^4 = 1$.",
-       "ur": "$i^1 = i,\\ i^2 = -1,\\ i^3 = -i,\\ i^4 = 1$ استعمال کریں۔",
+       "math": "= i^{8} \\cdot i^{3} + i^{4} \\cdot i^{1}",
+       "en": "Apply the law of exponents $a^{m+n} = a^m \\cdot a^n$ to separate the powers.",
+       "ur": "طاقتوں کو الگ کرنے کے لیے قوت نما کا قانون $a^{m+n} = a^m \\cdot a^n$ لاگو کریں۔",
        "check": [
+        "I**(8 + 3) + I**(4 + 1) == I**8 * I**3 + I**4 * I**1"
+       ]
+      },
+      {
+       "math": "= (i^{4})^{2} \\cdot i^{3} + i^{4} \\cdot i",
+       "en": "Rewrite $i^8$ as $(i^4)^2$ and $i^1$ as $i$.",
+       "ur": "$i^8$ کو $(i^4)^2$ اور $i^1$ کو $i$ کے طور پر دوبارہ لکھیں۔",
+       "check": [
+        "I**8 * I**3 + I**4 * I**1 == (I**4)**2 * I**3 + I**4 * I"
+       ]
+      },
+      {
+       "math": "= (1)^{2} \\cdot i^{3} + (1) \\cdot i = i^{3} + i",
+       "en": "Substitute $i^4 = 1$ into the expression and simplify.",
+       "ur": "جملے میں $i^4 = 1$ درج کریں اور مختصر کریں۔",
+       "check": [
+        "(I**4)**2 * I**3 + I**4 * I == (1)**2 * I**3 + (1) * I",
+        "(1)**2 * I**3 + (1) * I == I**3 + I"
+       ]
+      },
+      {
+       "math": "= -i + i",
+       "en": "Since $i^3 = i^2 \\cdot i = (-1)i = -i$, substitute $i^3 = -i$.",
+       "ur": "چونکہ $i^3 = i^2 \\cdot i = (-1)i = -i$ ہوتا ہے، اس لیے $i^3 = -i$ درج کریں۔",
+       "check": [
+        "I**3 + I == -I + I"
+       ]
+      },
+      {
+       "math": "= 0",
+       "en": "Adding $-i$ and $i$ cancels them out, giving the final answer $0$.",
+       "ur": "$-i$ اور $i$ کو جمع کرنے سے وہ ایک دوسرے کو زائل کر دیتے ہیں، جس سے حتمی جواب $0$ حاصل ہوتا ہے۔",
+       "check": [
+        "-I + I == 0",
+        "I**11 + I**5 == I**3 + I",
         "I**3 + I == 0"
        ]
       }
      ],
      "answer": "$0$",
+     "enriched": true,
      "book_key": "0"
     },
     {
@@ -136,23 +312,58 @@
      "prompt": "$(i^4 + i^3 + i^2 + i)^2$",
      "steps": [
       {
-       "math": "(i^4 + i^3 + i^2 + i)^2 = (1 - i - 1 + i)^2",
-       "en": "Use $i^1 = i,\\ i^2 = -1,\\ i^3 = -i,\\ i^4 = 1$.",
-       "ur": "$i^1 = i,\\ i^2 = -1,\\ i^3 = -i,\\ i^4 = 1$ استعمال کریں۔",
+       "math": "(i^4 + i^3 + i^2 + i)^2",
+       "en": "Write down the given expression to simplify.",
+       "ur": "مختصر کرنے کے لیے دی گئی عبارت لکھیں۔"
+      },
+      {
+       "math": "i^2 = -1, \\quad i^3 = i^2 \\cdot i = (-1)i = -i, \\quad i^4 = (i^2)^2 = (-1)^2 = 1",
+       "en": "Recall the fundamental property of iota ($i^2 = -1$) and find the values of the higher powers $i^3$ and $i^4$.",
+       "ur": "ایوٹا کی بنیادی خاصیت ($i^2 = -1$) کو یاد کریں اور بڑی طاقتوں $i^3$ اور $i^4$ کی قیمتیں معلوم کریں۔",
        "check": [
-        "I**4 + I**3 + I**2 + I == 0"
+        "I**2 == -1",
+        "I**3 == -I",
+        "I**4 == 1"
        ]
       },
       {
-       "math": "= (0)^2 = 0",
-       "en": "The terms cancel in pairs, so the bracket is 0.",
-       "ur": "ارکان جوڑوں میں ختم ہو جاتے ہیں، اس لیے قوسین 0 ہے۔",
+       "math": "(i^4 + i^3 + i^2 + i)^2 = (1 + (-i) + (-1) + i)^2",
+       "en": "Substitute the values $i^4 = 1$, $i^3 = -i$, and $i^2 = -1$ into the given expression.",
+       "ur": "دی گئی عبارت میں $i^4 = 1$، $i^3 = -i$، اور $i^2 = -1$ کی قیمتیں درج کریں۔",
        "check": [
-        "(I**4 + I**3 + I**2 + I)**2 == 0"
+        "(I**4 + I**3 + I**2 + I)**2 == (1 + (-I) + (-1) + I)**2"
+       ]
+      },
+      {
+       "math": "= (1 - i - 1 + i)^2",
+       "en": "Remove the inner brackets by applying the sign rules.",
+       "ur": "علامتوں کے اصول استعمال کرتے ہوئے اندرونی قوسین کو ختم کریں۔",
+       "check": [
+        "(1 + (-I) + (-1) + I)**2 == (1 - I - 1 + I)**2"
+       ]
+      },
+      {
+       "math": "= (1 - 1 - i + i)^2 = (0)^2",
+       "en": "Group the real and imaginary parts together. Since $1 - 1 = 0$ and $-i + i = 0$, the terms cancel out in pairs.",
+       "ur": "حقیقی اور خیالی حصوں کو اکٹھا کریں۔ چونکہ $1 - 1 = 0$ اور $-i + i = 0$ ہے، اس لیے ارکان جوڑوں میں ایک دوسرے کو ختم کر دیتے ہیں۔",
+       "check": [
+        "1 - 1 - I + I == 0",
+        "(1 - I - 1 + I)**2 == 0**2"
+       ]
+      },
+      {
+       "math": "= 0",
+       "en": "The square of $0$ is $0$. Thus, the simplified answer is $0$.",
+       "ur": "$0$ کا مربع $0$ ہوتا ہے۔ لہٰذا، مختصر کرنے کے بعد جواب $0$ ہے۔",
+       "check": [
+        "0**2 == 0",
+        "(I**4 + I**3 + I**2 + I)**2 == 0",
+        "I**4 + I**3 + I**2 + I == 0"
        ]
       }
      ],
      "answer": "$0$",
+     "enriched": true,
      "book_key": "0"
     },
     {
@@ -160,23 +371,48 @@
      "prompt": "$\\left(\\frac{i^8}{i^5}\\right)^{-5}$",
      "steps": [
       {
-       "math": "\\left(\\frac{i^8}{i^5}\\right)^{-5} = (i^{3})^{-5} = i^{-15}",
-       "en": "Divide powers by subtracting them, then multiply the powers.",
-       "ur": "طاقتوں کی تقسیم میں طاقتیں تفریق کریں، پھر طاقتوں کو ضرب دیں۔",
+       "math": "\\left(\\frac{i^8}{i^5}\\right)^{-5}",
+       "en": "Write down the given complex expression to be simplified.",
+       "ur": "مختصر کرنے کے لیے دی گئی مخلوط عبارت لکھیں۔"
+      },
+      {
+       "math": "= \\left(i^{8-5}\\right)^{-5} = \\left(i^3\\right)^{-5}",
+       "en": "First, simplify the fraction inside the brackets by using the quotient rule of exponents $\\frac{a^m}{a^n} = a^{m-n}$. Subtract the powers of $i$.",
+       "ur": "پہلے، قوت نما کے تقسیم کے اصول $\\frac{a^m}{a^n} = a^{m-n}$ کا استعمال کرتے ہوئے بریکٹ کے اندر موجود کسر کو مختصر کریں۔ $i$ کی طاقتوں کو تفریق کریں۔",
        "check": [
-        "(I**8/I**5)**(-5) == I**(-15)"
+        "(I**8/I**5)**(-5) == (I**3)**(-5)"
        ]
       },
       {
-       "math": "= i^{-15+16} = i^{1} = i",
-       "en": "Since $i^4 = 1$, adding or removing multiples of 4 in the power does not change the value.",
-       "ur": "چونکہ $i^4 = 1$، طاقت میں 4 کے مضرب جمع یا تفریق کرنے سے قیمت نہیں بدلتی۔",
+       "math": "= i^{3 \\times (-5)} = i^{-15}",
+       "en": "Next, apply the power of a power rule $(a^m)^n = a^{m \\times n}$ and multiply the exponents.",
+       "ur": "اس کے بعد، طاقت کی طاقت کا اصول $(a^m)^n = a^{m \\times n}$ لاگو کریں اور طاقتوں کو ضرب دیں۔",
        "check": [
+        "(I**3)**(-5) == I**(-15)"
+       ]
+      },
+      {
+       "math": "= i^{-15} \\times 1 = i^{-15} \\times i^{16}",
+       "en": "To make the negative exponent positive, we use the property $i^4 = 1$. Since any multiple of $4$ in the power of $i$ equals $1$, we multiply by $i^{16} = (i^4)^4 = 1$.",
+       "ur": "منفی طاقت کو مثبت بنانے کے لیے، ہم خاصیت $i^4 = 1$ استعمال کرتے ہیں۔ چونکہ $i$ کی طاقت میں $4$ کا کوئی بھی مضرب $1$ کے برابر ہوتا ہے، اس لیے ہم $i^{16} = (i^4)^4 = 1$ سے ضرب دیتے ہیں۔",
+       "check": [
+        "I**(-15) == I**(-15) * I**16"
+       ]
+      },
+      {
+       "math": "= i^{-15+16} = i^1 = i",
+       "en": "Add the exponents using the product rule $a^m \\times a^n = a^{m+n}$ to get the final simplified answer.",
+       "ur": "حتمی مختصر جواب حاصل کرنے کے لیے ضرب کے اصول $a^m \\times a^n = a^{m+n}$ کا استعمال کرتے ہوئے طاقتوں کو جمع کریں۔",
+       "check": [
+        "I**(-15) * I**16 == I**1",
+        "I**1 == I",
+        "(I**8/I**5)**(-5) == I**(-15)",
         "I**(-15) == I"
        ]
       }
      ],
      "answer": "$i$",
+     "enriched": true,
      "book_key": "i"
     },
     {
@@ -184,23 +420,50 @@
      "prompt": "$i^{13} \\times i^{29}$",
      "steps": [
       {
-       "math": "i^{13} \\times i^{29} = i^{42} = i^{42-40} = i^{2}",
-       "en": "Add the powers, then remove multiples of 4.",
-       "ur": "طاقتیں جمع کریں، پھر 4 کے مضرب نکال دیں۔",
+       "math": "i^{13} \\times i^{29}",
+       "en": "We are given the product of two powers of the imaginary unit $i$ and asked to simplify it.",
+       "ur": "ہمیں خیالی اکائی $i$ کی دو طاقتوں کا حاصلِ ضرب دیا گیا ہے اور اسے مختصر کرنے کو کہا گیا ہے۔"
+      },
+      {
+       "math": "i^{13} \\times i^{29} = i^{13 + 29} = i^{42}",
+       "en": "According to the product law of exponents ($a^m \\times a^n = a^{m+n}$), when the bases are the same, we add the exponents.",
+       "ur": "قوت نما کے ضرب کے قانون ($a^m \\times a^n = a^{m+n}$) کے مطابق، جب اساس یکساں ہوں تو ہم طاقتوں کو جمع کرتے ہیں۔",
        "check": [
-        "I**13 * I**29 == I**2"
+        "13 + 29 == 42",
+        "I**13 * I**29 == I**42"
+       ]
+      },
+      {
+       "math": "i^{42} = (i^2)^{21}",
+       "en": "Since we know the value of $i^2$, we rewrite the even power $42$ as a multiple of $2$, because $2 \\times 21 = 42$.",
+       "ur": "چونکہ ہم $i^2$ کی قیمت جانتے ہیں، اس لیے ہم جفت طاقت $42$ کو $2$ کے مضرب کے طور پر دوبارہ لکھتے ہیں، کیونکہ $2 \\times 21 = 42$ ہوتا ہے۔",
+       "check": [
+        "2 * 21 == 42",
+        "I**42 == (I**2)**21"
+       ]
+      },
+      {
+       "math": "= (-1)^{21}",
+       "en": "By the definition of the imaginary unit, substitute $i^2 = -1$.",
+       "ur": "خیالی اکائی کی تعریف کے مطابق، $i^2 = -1$ درج کریں۔",
+       "check": [
+        "I**2 == -1",
+        "(I**2)**21 == (-1)**21"
        ]
       },
       {
        "math": "= -1",
-       "en": "Use $i^1 = i,\\ i^2 = -1,\\ i^3 = -i,\\ i^4 = 1$.",
-       "ur": "$i^1 = i,\\ i^2 = -1,\\ i^3 = -i,\\ i^4 = 1$ استعمال کریں۔",
+       "en": "Since $-1$ is raised to an odd power ($21$), the result remains $-1$. Thus, the final simplified answer is $-1$.",
+       "ur": "چونکہ $-1$ کی طاقت ایک طاق عدد ($21$) ہے، اس لیے نتیجہ $-1$ ہی رہتا ہے۔ لہٰذا، آخری مختصر جواب $-1$ ہے۔",
        "check": [
+        "(-1)**21 == -1",
+        "I**13 * I**29 == I**2",
         "I**2 == -1"
        ]
       }
      ],
      "answer": "$-1$",
+     "enriched": true,
      "book_key": "-1"
     }
    ],
@@ -218,15 +481,38 @@
      "prompt": "$2+\\sqrt{-4}$",
      "steps": [
       {
-       "math": "2 + \\sqrt{-4} = 2 + \\sqrt{4}\\sqrt{-1} = 2 + 2i",
-       "en": "For a positive number $a$, $\\sqrt{-a} = \\sqrt{a}\\sqrt{-1} = i\\sqrt{a}$.",
-       "ur": "مثبت عدد $a$ کے لیے $\\sqrt{-a} = \\sqrt{a}\\sqrt{-1} = i\\sqrt{a}$۔",
+       "math": "2 + \\sqrt{-4}",
+       "en": "We are given the expression $2 + \\sqrt{-4}$ and asked to write it in terms of the imaginary unit $i$.",
+       "ur": "ہمیں جملہ $2 + \\sqrt{-4}$ دیا گیا ہے اور ہمیں اسے خیالی اکائی $i$ کے لحاظ سے لکھنا ہے۔"
+      },
+      {
+       "math": "\\sqrt{-4} = \\sqrt{4 \\times (-1)} = \\sqrt{4}\\sqrt{-1}",
+       "en": "First, separate the negative sign inside the square root using the property $\\sqrt{-a} = \\sqrt{a}\\sqrt{-1}$ for a positive number $a$.",
+       "ur": "سب سے پہلے، مثبت عدد $a$ کے لیے خاصیت $\\sqrt{-a} = \\sqrt{a}\\sqrt{-1}$ کا استعمال کرتے ہوئے جزر کے اندر موجود منفی علامت کو الگ کریں۔",
        "check": [
+        "sqrt(-4) == sqrt(4)*sqrt(-1)"
+       ]
+      },
+      {
+       "math": "2 + \\sqrt{-4} = 2 + \\sqrt{4}\\sqrt{-1}",
+       "en": "Substitute this back into the original expression.",
+       "ur": "اسے واپس اصل جملے میں درج کریں۔",
+       "check": [
+        "2 + sqrt(-4) == 2 + sqrt(4)*sqrt(-1)"
+       ]
+      },
+      {
+       "math": "2 + \\sqrt{4}\\sqrt{-1} = 2 + 2i",
+       "en": "Since $\\sqrt{4} = 2$ and the imaginary unit is defined as $i = \\sqrt{-1}$, replace them to get the final form.",
+       "ur": "چونکہ $\\sqrt{4} = 2$ ہے اور خیالی اکائی کی تعریف $i = \\sqrt{-1}$ ہے، اس لیے حتمی شکل حاصل کرنے کے لیے ان کی قیمتیں درج کریں۔",
+       "check": [
+        "2 + sqrt(4)*sqrt(-1) == 2 + 2*I",
         "2 + sqrt(-4) == 2 + 2*I"
        ]
       }
      ],
      "answer": "$2 + 2i$",
+     "enriched": true,
      "book_key": "2+2i"
     },
     {
@@ -234,15 +520,38 @@
      "prompt": "$3-\\sqrt{-7}$",
      "steps": [
       {
-       "math": "3 - \\sqrt{-7} = 3 - \\sqrt{7}\\sqrt{-1} = 3 - i\\sqrt{7}",
-       "en": "For a positive number $a$, $\\sqrt{-a} = \\sqrt{a}\\sqrt{-1} = i\\sqrt{a}$.",
-       "ur": "مثبت عدد $a$ کے لیے $\\sqrt{-a} = \\sqrt{a}\\sqrt{-1} = i\\sqrt{a}$۔",
+       "math": "3 - \\sqrt{-7}",
+       "en": "We are given the expression $3 - \\sqrt{-7}$ and we need to write it in terms of the imaginary unit $i$.",
+       "ur": "ہمیں جملہ $3 - \\sqrt{-7}$ دیا گیا ہے اور ہمیں اسے خیالی اکائی $i$ کی شکل میں لکھنا ہے۔"
+      },
+      {
+       "math": "3 - \\sqrt{-7} = 3 - \\sqrt{7 \\times (-1)}",
+       "en": "First, rewrite the negative number inside the square root as a product of a positive number and $-1$.",
+       "ur": "سب سے پہلے، جزر کے اندر موجود منفی عدد کو ایک مثبت عدد اور $-1$ کے حاصل ضرب کے طور پر لکھیں۔",
        "check": [
+        "3 - sqrt(-7) == 3 - sqrt(7 * (-1))"
+       ]
+      },
+      {
+       "math": "= 3 - \\sqrt{7}\\sqrt{-1}",
+       "en": "Using the radical property $\\sqrt{a \\times b} = \\sqrt{a}\\sqrt{b}$ for a positive number $a$, separate the square roots.",
+       "ur": "مثبت عدد $a$ کے لیے جزر کی خصوصیت $\\sqrt{a \\times b} = \\sqrt{a}\\sqrt{b}$ کا استعمال کرتے ہوئے، جزر کو الگ کریں۔",
+       "check": [
+        "3 - sqrt(7 * (-1)) == 3 - sqrt(7)*sqrt(-1)"
+       ]
+      },
+      {
+       "math": "= 3 - i\\sqrt{7}",
+       "en": "By the definition of the imaginary unit, substitute $i = \\sqrt{-1}$ to get the final answer.",
+       "ur": "خیالی اکائی کی تعریف کے مطابق، حتمی جواب حاصل کرنے کے لیے $i = \\sqrt{-1}$ درج کریں۔",
+       "check": [
+        "3 - sqrt(7)*sqrt(-1) == 3 - I*sqrt(7)",
         "3 - sqrt(-7) == 3 - I*sqrt(7)"
        ]
       }
      ],
      "answer": "$3 - i\\sqrt{7}$",
+     "enriched": true,
      "book_key": "3-i\\sqrt{7}"
     },
     {
@@ -250,15 +559,46 @@
      "prompt": "$\\frac{2}{5}+\\frac{\\sqrt{-16}}{5}$",
      "steps": [
       {
-       "math": "\\frac{2}{5} + \\frac{\\sqrt{-16}}{5} = \\frac{2}{5} + \\frac{\\sqrt{16}\\sqrt{-1}}{5} = \\frac{2}{5} + \\frac{4}{5}i",
-       "en": "For a positive number $a$, $\\sqrt{-a} = \\sqrt{a}\\sqrt{-1} = i\\sqrt{a}$.",
-       "ur": "مثبت عدد $a$ کے لیے $\\sqrt{-a} = \\sqrt{a}\\sqrt{-1} = i\\sqrt{a}$۔",
+       "math": "\\frac{2}{5} + \\frac{\\sqrt{-16}}{5}",
+       "en": "Write down the given expression that needs to be written in terms of $i$.",
+       "ur": "دی گئی عبارت لکھیں جسے $i$ کی شکل میں لکھنا ہے۔"
+      },
+      {
+       "math": "\\frac{2}{5} + \\frac{\\sqrt{-16}}{5} = \\frac{2}{5} + \\frac{\\sqrt{16 \\times (-1)}}{5}",
+       "en": "Rewrite the negative number $-16$ inside the square root as a product of $16$ and $-1$.",
+       "ur": "جذر کے اندر موجود منفی عدد $-16$ کو $16$ اور $-1$ کے حاصل ضرب کے طور پر لکھیں۔",
        "check": [
+        "R(2,5) + sqrt(-16)/5 == R(2,5) + sqrt(16*(-1))/5"
+       ]
+      },
+      {
+       "math": "= \\frac{2}{5} + \\frac{\\sqrt{16}\\sqrt{-1}}{5}",
+       "en": "Separate the square roots using the property $\\sqrt{a \\times (-1)} = \\sqrt{a}\\sqrt{-1}$ for a positive number $a$.",
+       "ur": "مثبت عدد $a$ کے لیے جذر کی خاصیت $\\sqrt{a \\times (-1)} = \\sqrt{a}\\sqrt{-1}$ استعمال کرتے ہوئے جذر کو الگ کریں۔",
+       "check": [
+        "R(2,5) + sqrt(16*(-1))/5 == R(2,5) + sqrt(16)*sqrt(-1)/5"
+       ]
+      },
+      {
+       "math": "= \\frac{2}{5} + \\frac{4i}{5}",
+       "en": "Substitute the values $\\sqrt{16} = 4$ and the imaginary unit $\\sqrt{-1} = i$.",
+       "ur": "قیمتیں $\\sqrt{16} = 4$ اور خیالی اکائی $\\sqrt{-1} = i$ درج کریں۔",
+       "check": [
+        "R(2,5) + sqrt(16)*sqrt(-1)/5 == R(2,5) + 4*I/5"
+       ]
+      },
+      {
+       "math": "= \\frac{2}{5} + \\frac{4}{5}i",
+       "en": "Write the expression in the standard complex form $a + bi$.",
+       "ur": "عبارت کو معیاری مخلوط شکل $a + bi$ میں لکھیں۔",
+       "check": [
+        "R(2,5) + 4*I/5 == R(2,5) + R(4,5)*I",
         "R(2,5) + sqrt(-16)/5 == R(2,5) + R(4,5)*I"
        ]
       }
      ],
      "answer": "$\\frac{2}{5} + \\frac{4}{5}i$",
+     "enriched": true,
      "book_key": "\\frac{2}{5}+\\frac{4}{5}i"
     },
     {
@@ -266,15 +606,38 @@
      "prompt": "$\\sqrt{2}-\\sqrt{-3}$",
      "steps": [
       {
-       "math": "\\sqrt{2} - \\sqrt{-3} = \\sqrt{2} - \\sqrt{3}\\sqrt{-1} = \\sqrt{2} - i\\sqrt{3}",
-       "en": "For a positive number $a$, $\\sqrt{-a} = \\sqrt{a}\\sqrt{-1} = i\\sqrt{a}$.",
-       "ur": "مثبت عدد $a$ کے لیے $\\sqrt{-a} = \\sqrt{a}\\sqrt{-1} = i\\sqrt{a}$۔",
+       "math": "\\sqrt{2} - \\sqrt{-3}",
+       "en": "The given expression to be written in terms of the imaginary unit $i$ is:",
+       "ur": "دی گئی عبارت جسے خیالی اکائی $i$ کے لحاظ سے لکھنا ہے، یہ ہے:"
+      },
+      {
+       "math": "\\sqrt{2} - \\sqrt{-3} = \\sqrt{2} - \\sqrt{3 \\times (-1)}",
+       "en": "Factor out $-1$ inside the second square root so we can separate the negative sign.",
+       "ur": "دوسرے جذر کے اندر سے $-1$ کو بطور جزو ضربی الگ کریں تاکہ ہم منفی علامت کو علیحدہ کر سکیں۔",
        "check": [
+        "sqrt(2) - sqrt(-3) == sqrt(2) - sqrt(3 * (-1))"
+       ]
+      },
+      {
+       "math": "= \\sqrt{2} - \\sqrt{3}\\sqrt{-1}",
+       "en": "For a positive number $a$, we can split the radical as $\\sqrt{-a} = \\sqrt{a}\\sqrt{-1}$. Here, $a = 3$.",
+       "ur": "کسی بھی مثبت عدد $a$ کے لیے، ہم جذر کو $\\sqrt{-a} = \\sqrt{a}\\sqrt{-1}$ کے طور پر الگ کر سکتے ہیں۔ یہاں $a = 3$ ہے۔",
+       "check": [
+        "sqrt(2) - sqrt(3 * (-1)) == sqrt(2) - sqrt(3)*sqrt(-1)"
+       ]
+      },
+      {
+       "math": "= \\sqrt{2} - i\\sqrt{3}",
+       "en": "By the definition of the imaginary unit, substitute $\\sqrt{-1} = i$ to get the final answer.",
+       "ur": "خیالی اکائی کی تعریف کے مطابق، حتمی جواب حاصل کرنے کے لیے $\\sqrt{-1} = i$ درج کریں۔",
+       "check": [
+        "sqrt(2) - sqrt(3)*sqrt(-1) == sqrt(2) - I*sqrt(3)",
         "sqrt(2) - sqrt(-3) == sqrt(2) - I*sqrt(3)"
        ]
       }
      ],
      "answer": "$\\sqrt{2} - i\\sqrt{3}$",
+     "enriched": true,
      "book_key": "\\sqrt{2}-i\\sqrt{3}"
     }
    ],
@@ -492,18 +855,40 @@
      "prompt": "$\\left(2 + 5i\\right) + \\left(3 - 2i\\right)$",
      "steps": [
       {
-       "math": "\\left(2 + 5i\\right) + \\left(3 - 2i\\right) = (2 + 3) + (5 + \\left(-2\\right))i",
-       "en": "Add (or subtract) the real parts together and the imaginary parts together.",
-       "ur": "حقیقی حصوں کو آپس میں اور خیالی حصوں کو آپس میں جمع (یا تفریق) کریں۔",
+       "math": "\\left(2 + 5i\\right) + \\left(3 - 2i\\right)",
+       "en": "Write down the given expression of two complex numbers that need to be added and expressed in the standard form $a + bi$.",
+       "ur": "دی گئی دو مخلوط اعداد کی عبارت لکھیں جنہیں جمع کر کے معیاری شکل $a + bi$ میں لکھنا ہے۔"
+      },
+      {
+       "math": "(a + bi) + (c + di) = (a + c) + (b + d)i",
+       "en": "Recall the rule for adding complex numbers: add the real parts together and the imaginary parts together.",
+       "ur": "مخلوط اعداد کو جمع کرنے کا اصول یاد کریں: حقیقی حصوں کو آپس میں اور خیالی حصوں کو آپس میں جمع کریں۔"
+      },
+      {
+       "math": "= (2 + 3) + (5 + (-2))i",
+       "en": "Group the real parts $2$ and $3$, and the imaginary coefficients $5$ and $-2$.",
+       "ur": "حقیقی حصوں $2$ اور $3$ کو، اور خیالی عددی سروں $5$ اور $-2$ کو الگ الگ یکجا کریں۔",
        "check": [
-        "(2 + 5*I) + (3 - 2*I) == (5 + 3*I)"
+        "(2 + 5*I) + (3 - 2*I) == (2 + 3) + (5 - 2)*I"
+       ]
+      },
+      {
+       "math": "= (2 + 3) + (5 - 2)i",
+       "en": "Remove the inner bracket in the imaginary part using the sign rule $+(-) = -$.",
+       "ur": "علامت کے اصول $+(-) = -$ کا استعمال کرتے ہوئے خیالی حصے سے اندرونی بریکٹ ہٹائیں۔",
+       "check": [
+        "(2 + 3) + (5 + (-2))*I == (2 + 3) + (5 - 2)*I"
        ]
       },
       {
        "math": "= 5 + 3i",
-       "en": "Simplify each part.",
-       "ur": "ہر حصے کو سادہ کریں۔",
+       "en": "Perform the addition $2 + 3 = 5$ for the real part and the subtraction $5 - 2 = 3$ for the imaginary part to get the final answer in the form $a + bi$.",
+       "ur": "حقیقی حصے کے لیے جمع $2 + 3 = 5$ اور خیالی حصے کے لیے تفریق $5 - 2 = 3$ حل کریں تاکہ معیاری شکل $a + bi$ میں حتمی جواب حاصل ہو سکے۔",
        "check": [
+        "2 + 3 == 5",
+        "5 - 2 == 3",
+        "(2 + 3) + (5 - 2)*I == 5 + 3*I",
+        "(2 + 5*I) + (3 - 2*I) == (5 + 3*I)",
         "(2) + (3) == (5)"
        ]
       }
@@ -513,6 +898,7 @@
       "en": "The reference prints the second number as (3 - zi), a misprint of (3 - 2i); its answer 5 + (5 - z)i follows the misprint.",
       "ur": "حوالہ میں دوسرا عدد (3 - zi) چھپا ہے جو (3 - 2i) کی غلطی ہے؛ اس کا جواب 5 + (5 - z)i اسی غلطی سے آیا ہے۔"
      },
+     "enriched": true,
      "book_key": "5+(5-z)i"
     },
     {
@@ -520,23 +906,48 @@
      "prompt": "$\\left(16 - 3i\\right) + \\left(9 + 2i\\right)$",
      "steps": [
       {
-       "math": "\\left(16 - 3i\\right) + \\left(9 + 2i\\right) = (16 + 9) + (-3 + 2)i",
-       "en": "Add (or subtract) the real parts together and the imaginary parts together.",
-       "ur": "حقیقی حصوں کو آپس میں اور خیالی حصوں کو آپس میں جمع (یا تفریق) کریں۔",
+       "math": "\\left(16 - 3i\\right) + \\left(9 + 2i\\right)",
+       "en": "We are given the sum of two complex numbers and need to simplify it into the standard form $a + bi$.",
+       "ur": "ہمیں دو مختلط اعداد کا مجموعہ دیا گیا ہے اور ہمیں اسے معیاری شکل $a + bi$ میں سادہ کرنا ہے۔"
+      },
+      {
+       "math": "= 16 - 3i + 9 + 2i",
+       "en": "First, remove the brackets. Since there is a plus sign between the brackets, the signs of the terms inside the second bracket do not change.",
+       "ur": "سب سے پہلے، بریکٹ ہٹائیں۔ چونکہ بریکٹوں کے درمیان جمع کی علامت ہے، اس لیے دوسری بریکٹ کے اندر موجود رقموں کی علامتیں تبدیل نہیں ہوتیں۔",
        "check": [
-        "(16 - 3*I) + (9 + 2*I) == (25 - I)"
+        "(16 - 3*I) + (9 + 2*I) == 16 - 3*I + 9 + 2*I"
+       ]
+      },
+      {
+       "math": "= (16 + 9) + (-3 + 2)i",
+       "en": "To add two complex numbers, we group the real parts together and the imaginary parts together using the rule $(a + bi) + (c + di) = (a + c) + (b + d)i$.",
+       "ur": "دو مختلط اعداد کو جمع کرنے کے لیے، ہم اصول $(a + bi) + (c + di) = (a + c) + (b + d)i$ کا استعمال کرتے ہوئے حقیقی حصوں کو ایک ساتھ اور خیالی حصوں کو ایک ساتھ ملا لیتے ہیں۔",
+       "check": [
+        "16 - 3*I + 9 + 2*I == (16 + 9) + (-3 + 2)*I"
+       ]
+      },
+      {
+       "math": "= 25 + (-1)i",
+       "en": "Now, add the real numbers ($16 + 9 = 25$) and the coefficients of the imaginary part ($-3 + 2 = -1$).",
+       "ur": "اب، حقیقی اعداد ($16 + 9 = 25$) اور خیالی حصے کے عددی سروں ($-3 + 2 = -1$) کو جمع کریں۔",
+       "check": [
+        "16 + 9 == 25",
+        "-3 + 2 == -1"
        ]
       },
       {
        "math": "= 25 - i",
-       "en": "Simplify each part.",
-       "ur": "ہر حصے کو سادہ کریں۔",
+       "en": "Simplify $+(-1)i$ as $-i$. Thus, the expression in the standard form $a + bi$ is $25 - i$.",
+       "ur": "$+(-1)i$ کو سادہ کر کے $-i$ لکھیں۔ اس طرح، معیاری شکل $a + bi$ میں مطلوبہ جواب $25 - i$ ہے۔",
        "check": [
+        "25 + (-1)*I == 25 - I",
+        "(16 - 3*I) + (9 + 2*I) == (25 - I)",
         "(16) + (9) == (25)"
        ]
       }
      ],
      "answer": "$25 - i$",
+     "enriched": true,
      "book_key": "25-i"
     },
     {
@@ -544,23 +955,48 @@
      "prompt": "$\\left(9 - 2i\\right) - \\left(7 - 3i\\right)$",
      "steps": [
       {
-       "math": "\\left(9 - 2i\\right) - \\left(7 - 3i\\right) = (9 - 7) + (-2 - \\left(-3\\right))i",
-       "en": "Add (or subtract) the real parts together and the imaginary parts together.",
-       "ur": "حقیقی حصوں کو آپس میں اور خیالی حصوں کو آپس میں جمع (یا تفریق) کریں۔",
+       "math": "(9 - 2i) - (7 - 3i)",
+       "en": "Write down the given expression of complex numbers to be simplified into the standard form $a + bi$.",
+       "ur": "معیاری شکل $a + bi$ میں مختصر کرنے کے لیے دی گئی مخلوط اعداد کی عبارت لکھیں۔"
+      },
+      {
+       "math": "= 9 - 2i - 7 + 3i",
+       "en": "Remove the brackets. Since there is a minus sign before the second bracket, change the signs of the terms inside it.",
+       "ur": "بریکٹ ہٹائیں۔ چونکہ دوسری بریکٹ سے پہلے منفی کی علامت ہے، اس لیے اس کے اندر موجود رقموں کی علامتیں تبدیل کریں۔",
        "check": [
-        "(9 - 2*I) - (7 - 3*I) == (2 + I)"
+        "(9 - 2*I) - (7 - 3*I) == 9 - 2*I - 7 + 3*I"
+       ]
+      },
+      {
+       "math": "= (9 - 7) + (-2 + 3)i",
+       "en": "Group the real parts together and the imaginary parts together.",
+       "ur": "حقیقی حصوں کو ایک ساتھ اور خیالی حصوں کو ایک ساتھ ملا کر لکھیں۔",
+       "check": [
+        "9 - 2*I - 7 + 3*I == (9 - 7) + (-2 + 3)*I"
+       ]
+      },
+      {
+       "math": "= 2 + 1i",
+       "en": "Perform the subtraction in both the real and imaginary parts.",
+       "ur": "حقیقی اور خیالی دونوں حصوں میں تفریق کا عمل کریں۔",
+       "check": [
+        "9 - 7 == 2",
+        "-2 + 3 == 1"
        ]
       },
       {
        "math": "= 2 + i",
-       "en": "Simplify each part.",
-       "ur": "ہر حصے کو سادہ کریں۔",
+       "en": "Since $1i$ is simply written as $i$, write the final answer in the standard form $a + bi$.",
+       "ur": "چونکہ $1i$ کو صرف $i$ لکھا جاتا ہے، اس لیے حتمی جواب کو معیاری شکل $a + bi$ میں لکھیں۔",
        "check": [
+        "2 + 1*I == 2 + I",
+        "(9 - 2*I) - (7 - 3*I) == (2 + I)",
         "(9) - (7) == (2)"
        ]
       }
      ],
      "answer": "$2 + i$",
+     "enriched": true,
      "book_key": "2+i"
     },
     {
@@ -568,23 +1004,41 @@
      "prompt": "$\\left(11 + 9i\\right) - \\left(9 - 7i\\right)$",
      "steps": [
       {
-       "math": "\\left(11 + 9i\\right) - \\left(9 - 7i\\right) = (11 - 9) + (9 - \\left(-7\\right))i",
-       "en": "Add (or subtract) the real parts together and the imaginary parts together.",
-       "ur": "حقیقی حصوں کو آپس میں اور خیالی حصوں کو آپس میں جمع (یا تفریق) کریں۔",
+       "math": "\\left(11 + 9i\\right) - \\left(9 - 7i\\right)",
+       "en": "Write down the given expression of complex numbers to be simplified.",
+       "ur": "مختصر کرنے کے لیے دی گئی مخلوط اعداد کی عبارت لکھیں۔"
+      },
+      {
+       "math": "= 11 + 9i - 9 + 7i",
+       "en": "Remove the brackets. Since there is a minus sign before the second bracket, the signs of the terms inside it will change (so $-(-7i)$ becomes $+7i$).",
+       "ur": "بریکٹ ہٹائیں۔ چونکہ دوسری بریکٹ سے پہلے منفی کی علامت ہے، اس لیے اس کے اندر کی رقموں کی علامتیں بدل جائیں گی (چنانچہ $-(-7i)$، $+7i$ بن جائے گا)۔",
        "check": [
-        "(11 + 9*I) - (9 - 7*I) == (2 + 16*I)"
+        "(11 + 9*I) - (9 - 7*I) == 11 + 9*I - 9 + 7*I"
+       ]
+      },
+      {
+       "math": "= (11 - 9) + (9 + 7)i",
+       "en": "Group the real parts together and the imaginary parts together.",
+       "ur": "حقیقی حصوں کو ایک ساتھ اور خیالی حصوں کو ایک ساتھ ترتیب دیں۔",
+       "check": [
+        "11 + 9*I - 9 + 7*I == (11 - 9) + (9 + 7)*I"
        ]
       },
       {
        "math": "= 2 + 16i",
-       "en": "Simplify each part.",
-       "ur": "ہر حصے کو سادہ کریں۔",
+       "en": "Perform the subtraction of the real parts ($11 - 9 = 2$) and the addition of the imaginary parts ($9 + 7 = 16$). This is the required standard form $a + bi$.",
+       "ur": "حقیقی حصوں کی تفریق ($11 - 9 = 2$) اور خیالی حصوں کی جمع ($9 + 7 = 16$) کریں۔ یہ مطلوبہ معیاری شکل $a + bi$ ہے۔",
        "check": [
+        "11 - 9 == 2",
+        "9 + 7 == 16",
+        "(11 - 9) + (9 + 7)*I == 2 + 16*I",
+        "(11 + 9*I) - (9 - 7*I) == (2 + 16*I)",
         "(11) - (9) == (2)"
        ]
       }
      ],
      "answer": "$2 + 16i$",
+     "enriched": true,
      "book_key": "2+16i"
     },
     {
@@ -592,24 +1046,60 @@
      "prompt": "$\\left(3 + 4i\\right)\\left(2 - 3i\\right)$",
      "steps": [
       {
-       "math": "\\left(3 + 4i\\right)\\left(2 - 3i\\right) = 6 - 9i + 8i - 12i^2",
-       "en": "Multiply each term of the first bracket by each term of the second.",
-       "ur": "پہلی قوسین کے ہر رکن کو دوسری قوسین کے ہر رکن سے ضرب دیں۔",
+       "math": "\\left(3 + 4i\\right)\\left(2 - 3i\\right)",
+       "en": "We are given the product of two complex numbers and need to simplify it into the standard form $a+bi$.",
+       "ur": "ہمیں دو مخلوط اعداد کا حاصلِ ضرب دیا گیا ہے اور ہمیں اسے معیاری شکل $a+bi$ میں مختصر کرنا ہے۔"
+      },
+      {
+       "math": "= 3\\left(2 - 3i\\right) + 4i\\left(2 - 3i\\right)",
+       "en": "Apply the distributive property by multiplying each term of the first complex number by the entire second complex number.",
+       "ur": "پہلے مخلوط عدد کے ہر رکن کو دوسرے پورے مخلوط عدد سے ضرب دے کر تقسیمی خاصیت کا اطلاق کریں۔",
        "check": [
-        "(3 + 4*I)*(2 - 3*I) == (6) + (-1)*I + (-12)*I**2"
+        "(3 + 4*I)*(2 - 3*I) == 3*(2 - 3*I) + 4*I*(2 - 3*I)"
        ]
       },
       {
-       "math": "= 6 - 1i + 12 = 18 - i",
-       "en": "Put $i^2 = -1$ and collect the real and imaginary parts.",
-       "ur": "$i^2 = -1$ رکھیں اور حقیقی اور خیالی حصے اکٹھے کریں۔",
+       "math": "= 6 - 9i + 8i - 12i^2",
+       "en": "Multiply the terms inside the brackets.",
+       "ur": "قوسین کے اندر موجود ارکان کو ضرب دیں۔",
        "check": [
+        "3*(2 - 3*I) + 4*I*(2 - 3*I) == 6 - 9*I + 8*I - 12*I**2"
+       ]
+      },
+      {
+       "math": "= 6 - i - 12(-1)",
+       "en": "Combine the like imaginary terms ($-9i + 8i = -i$) and substitute the fundamental property of the imaginary unit, $i^2 = -1$.",
+       "ur": "یکساں خیالی ارکان کو یکجا کریں ($-9i + 8i = -i$) اور خیالی اکائی کی بنیادی خاصیت $i^2 = -1$ درج کریں۔",
+       "check": [
+        "-9*I + 8*I == -I",
+        "I**2 == -1",
+        "6 - 9*I + 8*I - 12*I**2 == 6 - I - 12*(-1)"
+       ]
+      },
+      {
+       "math": "= 6 - i + 12",
+       "en": "Simplify the product $-12(-1)$ to $+12$.",
+       "ur": "حاصلِ ضرب $-12(-1)$ کو مختصر کر کے $+12$ لکھیں۔",
+       "check": [
+        "-12*(-1) == 12",
+        "6 - I - 12*(-1) == 6 - I + 12"
+       ]
+      },
+      {
+       "math": "= (6 + 12) - i = 18 - i",
+       "en": "Add the real parts together to write the final answer in the standard form $a+bi$.",
+       "ur": "حقیقی حصوں کو آپس میں جمع کر کے حتمی جواب کو معیاری شکل $a+bi$ میں لکھیں۔",
+       "check": [
+        "(6 + 12) - I == 18 - I",
+        "(3 + 4*I)*(2 - 3*I) == 18 - I",
+        "(3 + 4*I)*(2 - 3*I) == (6) + (-1)*I + (-12)*I**2",
         "I**2 == -1",
         "(3 + 4*I)*(2 - 3*I) == (18 - I)"
        ]
       }
      ],
      "answer": "$18 - i$",
+     "enriched": true,
      "book_key": "18-i"
     },
     {
@@ -617,24 +1107,67 @@
      "prompt": "$\\left(5 - 2i\\right)\\left(3 - 4i\\right)$",
      "steps": [
       {
-       "math": "\\left(5 - 2i\\right)\\left(3 - 4i\\right) = 15 - 20i - 6i + 8i^2",
-       "en": "Multiply each term of the first bracket by each term of the second.",
-       "ur": "پہلی قوسین کے ہر رکن کو دوسری قوسین کے ہر رکن سے ضرب دیں۔",
+       "math": "(5 - 2i)(3 - 4i)",
+       "en": "We are given the product of two complex numbers and need to simplify it into the standard form $a + bi$.",
+       "ur": "ہمیں دو مخلوط اعداد کا حاصلِ ضرب دیا گیا ہے اور ہمیں اسے مختصر کر کے معیاری شکل $a + bi$ میں لکھنا ہے۔"
+      },
+      {
+       "math": "(5 - 2i)(3 - 4i) = 5(3 - 4i) - 2i(3 - 4i)",
+       "en": "Apply the distributive property by multiplying each term of the first complex number with the entire second bracket.",
+       "ur": "تقسیمی خاصیت کا استعمال کرتے ہوئے پہلے مخلوط عدد کے ہر رکن کو دوسری پوری قوس کے ساتھ ضرب دیں۔",
        "check": [
-        "(5 - 2*I)*(3 - 4*I) == (15) + (-26)*I + (8)*I**2"
+        "(5 - 2*I)*(3 - 4*I) == 5*(3 - 4*I) - 2*I*(3 - 4*I)"
        ]
       },
       {
-       "math": "= 15 - 26i - 8 = 7 - 26i",
-       "en": "Put $i^2 = -1$ and collect the real and imaginary parts.",
-       "ur": "$i^2 = -1$ رکھیں اور حقیقی اور خیالی حصے اکٹھے کریں۔",
+       "math": "= 15 - 20i - 6i + 8i^2",
+       "en": "Expand the brackets by multiplying the terms inside. Note that $(-2i)(-4i) = +8i^2$.",
+       "ur": "اندرونی ارکان کو ضرب دے کر قوسین کھولیں۔ نوٹ کریں کہ $(-2i)(-4i) = +8i^2$ ہوتا ہے۔",
        "check": [
+        "5*(3 - 4*I) - 2*I*(3 - 4*I) == 15 - 20*I - 6*I + 8*I**2"
+       ]
+      },
+      {
+       "math": "= 15 - 26i + 8i^2",
+       "en": "Combine the like imaginary terms: $-20i - 6i = -26i$.",
+       "ur": "یکساں خیالی ارکان کو یکجا کریں: $-20i - 6i = -26i$۔",
+       "check": [
+        "-20*I - 6*I == -26*I"
+       ]
+      },
+      {
+       "math": "= 15 - 26i + 8(-1)",
+       "en": "Since $i = \\sqrt{-1}$, we know that $i^2 = -1$. Substitute $i^2 = -1$ into the expression.",
+       "ur": "چونکہ $i = \\sqrt{-1}$ ہے، ہم جانتے ہیں کہ $i^2 = -1$ ہوتا ہے۔ عبارت میں $i^2 = -1$ درج کریں۔",
+       "check": [
+        "I**2 == -1",
+        "15 - 26*I + 8*(-1) == 15 - 26*I - 8"
+       ]
+      },
+      {
+       "math": "= 15 - 8 - 26i",
+       "en": "Simplify $+8(-1)$ to $-8$ and group the real numbers together.",
+       "ur": "$+8(-1)$ کو مختصر کر کے $-8$ لکھیں اور حقیقی اعداد کو اکٹھا کریں۔",
+       "check": [
+        "8*(-1) == -8",
+        "15 - 26*I - 8 == 15 - 8 - 26*I"
+       ]
+      },
+      {
+       "math": "= 7 - 26i",
+       "en": "Subtract the real parts ($15 - 8 = 7$) to get the final answer in the form $a + bi$.",
+       "ur": "حقیقی حصوں کو تفریق کریں ($15 - 8 = 7$) تاکہ $a + bi$ کی شکل میں حتمی جواب حاصل ہو سکے۔",
+       "check": [
+        "15 - 8 == 7",
+        "(5 - 2*I)*(3 - 4*I) == 7 - 26*I",
+        "(5 - 2*I)*(3 - 4*I) == (15) + (-26)*I + (8)*I**2",
         "I**2 == -1",
         "(5 - 2*I)*(3 - 4*I) == (7 - 26*I)"
        ]
       }
      ],
      "answer": "$7 - 26i$",
+     "enriched": true,
      "book_key": "7-26i"
     },
     {
@@ -718,15 +1251,35 @@
      "prompt": "$3 + 2i$",
      "steps": [
       {
-       "math": "z = 3 + 2i \\Rightarrow -z = -\\left(3 + 2i\\right) = -3 - 2i",
-       "en": "The additive inverse of $z$ is $-z$: change the sign of both parts.",
-       "ur": "$z$ کا جمعی معکوس $-z$ ہے: دونوں حصوں کی علامت بدل دیں۔",
+       "math": "",
+       "en": "Let the given complex number be represented by $z$, so $z = 3 + 2i$.",
+       "ur": "فرض کریں کہ دیا گیا مخلوط عدد $z$ ہے، لہٰذا $z = 3 + 2i$۔"
+      },
+      {
+       "math": "-z = -(a + bi) = -a - bi",
+       "en": "The additive inverse of a complex number $z = a + bi$ is $-z$, which is found by changing the signs of both the real and imaginary parts.",
+       "ur": "کسی مخلوط عدد $z = a + bi$ کا جمعی معکوس $-z$ ہوتا ہے، جو حقیقی اور خیالی دونوں حصوں کی علامتیں تبدیل کرنے سے حاصل ہوتا ہے۔"
+      },
+      {
+       "math": "-z = -(3 + 2i)",
+       "en": "Substitute the given complex number $z = 3 + 2i$ into the formula for the additive inverse.",
+       "ur": "جمعی معکوس کے فارمولے میں دیے گئے مخلوط عدد $z = 3 + 2i$ کی قیمت درج کریں۔",
        "check": [
+        "-(3 + 2*I) == -3 - 2*I"
+       ]
+      },
+      {
+       "math": "-z = -3 - 2i",
+       "en": "Multiply the negative sign inside the brackets to change the sign of both parts. Thus, the additive inverse of $3 + 2i$ is $-3 - 2i$.",
+       "ur": "دونوں حصوں کی علامت تبدیل کرنے کے لیے منفی علامت کو بریکٹ کے اندر ضرب دیں۔ پس $3 + 2i$ کا جمعی معکوس $-3 - 2i$ ہے۔",
+       "check": [
+        "-(3 + 2*I) == -3 - 2*I",
         "(3 + 2*I) + (-3 - 2*I) == 0"
        ]
       }
      ],
      "answer": "$-3 - 2i$",
+     "enriched": true,
      "book_key": "-3-2i"
     },
     {
@@ -734,15 +1287,38 @@
      "prompt": "$4 - 3i$",
      "steps": [
       {
-       "math": "z = 4 - 3i \\Rightarrow -z = -\\left(4 - 3i\\right) = -4 + 3i",
-       "en": "The additive inverse of $z$ is $-z$: change the sign of both parts.",
-       "ur": "$z$ کا جمعی معکوس $-z$ ہے: دونوں حصوں کی علامت بدل دیں۔",
+       "math": "z = 4 - 3i",
+       "en": "Let the given complex number be denoted by $z$.",
+       "ur": "فرض کریں کہ دیے گئے مخلوط عدد کو $z$ سے ظاہر کیا گیا ہے۔",
        "check": [
+        "4 - 3*I == 4 - 3*I"
+       ]
+      },
+      {
+       "math": "-z = -a - bi",
+       "en": "The additive inverse of a complex number $z = a + bi$ is $-z$, which is found by changing the signs of both the real and imaginary parts.",
+       "ur": "کسی مخلوط عدد $z = a + bi$ کا جمعی معکوس $-z$ ہوتا ہے، جو حقیقی اور خیالی دونوں حصوں کی علامتیں بدل کر معلوم کیا جاتا ہے۔"
+      },
+      {
+       "math": "-z = -\\left(4 - 3i\\right)",
+       "en": "Substitute $z = 4 - 3i$ to find its additive inverse.",
+       "ur": "جمعی معکوس معلوم کرنے کے لیے $z = 4 - 3i$ درج کریں۔",
+       "check": [
+        "-(4 - 3*I) == -4 + 3*I"
+       ]
+      },
+      {
+       "math": "-z = -4 + 3i",
+       "en": "Multiply the negative sign inside the bracket to change the signs of both terms.",
+       "ur": "دونوں رقموں کی علامتیں تبدیل کرنے کے لیے منفی علامت کو بریکٹ کے اندر ضرب دیں۔",
+       "check": [
+        "-(4 - 3*I) == -4 + 3*I",
         "(4 - 3*I) + (-4 + 3*I) == 0"
        ]
       }
      ],
      "answer": "$-4 + 3i$",
+     "enriched": true,
      "book_key": "-4+3i"
     },
     {
@@ -750,15 +1326,38 @@
      "prompt": "$5 - 7i$",
      "steps": [
       {
-       "math": "z = 5 - 7i \\Rightarrow -z = -\\left(5 - 7i\\right) = -5 + 7i",
-       "en": "The additive inverse of $z$ is $-z$: change the sign of both parts.",
-       "ur": "$z$ کا جمعی معکوس $-z$ ہے: دونوں حصوں کی علامت بدل دیں۔",
+       "math": "z = 5 - 7i",
+       "en": "Let the given complex number be $z$. We need to find its additive inverse.",
+       "ur": "فرض کریں کہ دیا گیا مخلوط عدد $z$ ہے۔ ہمیں اس کا جمعی معکوس معلوم کرنا ہے۔",
        "check": [
+        "5 - 7*I == 5 - 7*I"
+       ]
+      },
+      {
+       "math": "\\text{Additive inverse of } z = -z",
+       "en": "By definition, the additive inverse of a complex number $z = a + bi$ is $-z = -(a + bi) = -a - bi$, which means we change the signs of both the real and imaginary parts.",
+       "ur": "تعریف کے مطابق، کسی مخلوط عدد $z = a + bi$ کا جمعی معکوس $-z = -(a + bi) = -a - bi$ ہوتا ہے، جس کا مطلب ہے کہ ہم حقیقی اور خیالی دونوں حصوں کی علامتیں بدل دیتے ہیں۔"
+      },
+      {
+       "math": "-z = -(5 - 7i)",
+       "en": "Substitute the given complex number $z = 5 - 7i$ into the formula.",
+       "ur": "دیے گئے مخلوط عدد $z = 5 - 7i$ کی قیمت فارمولے میں درج کریں۔",
+       "check": [
+        "-(5 - 7*I) == -5 + 7*I"
+       ]
+      },
+      {
+       "math": "-z = -5 + 7i",
+       "en": "Multiply the negative sign inside the brackets to change the signs of both parts. Thus, the additive inverse is $-5 + 7i$.",
+       "ur": "بریکٹ کے اندر منفی علامت کو ضرب دیں تاکہ دونوں حصوں کی علامتیں تبدیل ہو جائیں۔ اس طرح، جمعی معکوس $-5 + 7i$ ہے۔",
+       "check": [
+        "-(5 - 7*I) == -5 + 7*I",
         "(5 - 7*I) + (-5 + 7*I) == 0"
        ]
       }
      ],
      "answer": "$-5 + 7i$",
+     "enriched": true,
      "book_key": "-5+7i"
     },
     {
@@ -766,15 +1365,46 @@
      "prompt": "$- \\frac{2}{3} + \\frac{5}{4}i$",
      "steps": [
       {
-       "math": "z = - \\frac{2}{3} + \\frac{5}{4}i \\Rightarrow -z = -\\left(- \\frac{2}{3} + \\frac{5}{4}i\\right) = \\frac{2}{3} - \\frac{5}{4}i",
-       "en": "The additive inverse of $z$ is $-z$: change the sign of both parts.",
-       "ur": "$z$ کا جمعی معکوس $-z$ ہے: دونوں حصوں کی علامت بدل دیں۔",
+       "math": "z = -\\frac{2}{3} + \\frac{5}{4}i",
+       "en": "Let the given complex number be represented by $z$. We need to find its additive inverse.",
+       "ur": "فرض کریں کہ دیے گئے مخلوط عدد کو $z$ سے ظاہر کیا گیا ہے۔ ہمیں اس کا جمعی معکوس معلوم کرنا ہے۔",
+       "check": [
+        "R(-2,3) + R(5,4)*I == R(-2,3) + R(5,4)*I"
+       ]
+      },
+      {
+       "math": "-z = -(a + bi) = -a - bi",
+       "en": "Recall the rule that the additive inverse of any complex number $z = a + bi$ is $-z$, which is found by multiplying the entire complex number by $-1$.",
+       "ur": "یاد رکھیں کہ کسی بھی مخلوط عدد $z = a + bi$ کا جمعی معکوس $-z$ ہوتا ہے، جو پورے مخلوط عدد کو $-1$ سے ضرب دے کر حاصل کیا جاتا ہے۔"
+      },
+      {
+       "math": "-z = -\\left(-\\frac{2}{3} + \\frac{5}{4}i\\right)",
+       "en": "Substitute the given value of $z$ into the formula for the additive inverse.",
+       "ur": "جمعی معکوس کے فارمولے میں $z$ کی دی گئی قیمت درج کریں۔",
+       "check": [
+        "-(R(-2,3) + R(5,4)*I) == -(R(-2,3) + R(5,4)*I)"
+       ]
+      },
+      {
+       "math": "-z = \\frac{2}{3} - \\frac{5}{4}i",
+       "en": "Distribute the negative sign inside the brackets to change the signs of both the real and imaginary parts.",
+       "ur": "حقیقی اور خیالی دونوں حصوں کی علامتیں تبدیل کرنے کے لیے بریکٹ کے اندر منفی علامت سے ضرب دیں۔",
+       "check": [
+        "-(R(-2,3) + R(5,4)*I) == R(2,3) - R(5,4)*I",
+        "(R(-2,3) + R(5,4)*I) + (R(2,3) - R(5,4)*I) == 0"
+       ]
+      },
+      {
+       "math": "\\frac{2}{3} - \\frac{5}{4}i",
+       "en": "Thus, the additive inverse of $-\\frac{2}{3} + \\frac{5}{4}i$ is $\\frac{2}{3} - \\frac{5}{4}i$.",
+       "ur": "پس، $-\\frac{2}{3} + \\frac{5}{4}i$ کا جمعی معکوس $\\frac{2}{3} - \\frac{5}{4}i$ ہے۔",
        "check": [
         "(-2/3 + 5*I/4) + (2/3 - 5*I/4) == 0"
        ]
       }
      ],
      "answer": "$\\frac{2}{3} - \\frac{5}{4}i$",
+     "enriched": true,
      "book_key": "\\frac{2}{3}-\\frac{5}{4}i"
     }
    ],
@@ -1451,21 +2081,48 @@
      "prompt": "$4 + 3i$",
      "steps": [
       {
-       "math": "|z| = \\sqrt{a^2+b^2} = \\sqrt{(4)^2 + (3)^2}",
-       "en": "The modulus of $a+bi$ is $\\sqrt{a^2+b^2}$.",
-       "ur": "$a+bi$ کا مقیاس $\\sqrt{a^2+b^2}$ ہے۔"
+       "math": "z = 4 + 3i",
+       "en": "Let the given complex number be denoted by $z$. Comparing it with the standard form $a + bi$, we have $a = 4$ and $b = 3$.",
+       "ur": "فرض کریں کہ دیا گیا مختلط عدد $z$ ہے۔ اس کا معیاری شکل $a + bi$ سے موازنہ کرنے پر، ہمارے پاس $a = 4$ اور $b = 3$ ہے۔"
       },
       {
-       "math": "= \\sqrt{25} = 5",
-       "en": "Add the squares and take the square root.",
-       "ur": "مربعوں کو جمع کر کے جذر لیں۔",
+       "math": "|z| = \\sqrt{a^2 + b^2}",
+       "en": "Write the formula for the modulus of a complex number $z = a + bi$.",
+       "ur": "مختلط عدد $z = a + bi$ کے مقیاس (modulus) کا فارمولا لکھیں۔"
+      },
+      {
+       "math": "|z| = \\sqrt{(4)^2 + (3)^2}",
+       "en": "Substitute the values $a = 4$ and $b = 3$ into the formula.",
+       "ur": "فارمولے میں $a = 4$ اور $b = 3$ کی قیمتیں درج کریں۔",
        "check": [
+        "Abs(4 + 3*I) == sqrt((4)**2 + (3)**2)"
+       ]
+      },
+      {
+       "math": "|z| = \\sqrt{16 + 9}",
+       "en": "Calculate the squares of $4$ and $3$.",
+       "ur": "$4$ اور $3$ کے مربع معلوم کریں۔",
+       "check": [
+        "(4)**2 == 16",
+        "(3)**2 == 9",
+        "sqrt((4)**2 + (3)**2) == sqrt(16 + 9)"
+       ]
+      },
+      {
+       "math": "|z| = \\sqrt{25} = 5",
+       "en": "Add the numbers inside the square root and take the square root to get the final answer.",
+       "ur": "جذر کے اندر موجود اعداد کو جمع کریں اور حتمی جواب حاصل کرنے کے لیے جذر لیں۔",
+       "check": [
+        "16 + 9 == 25",
+        "sqrt(25) == 5",
+        "Abs(4 + 3*I) == 5",
         "sqrt((4)**2 + (3)**2) == (5)",
         "Abs((4 + 3*I)) == (5)"
        ]
       }
      ],
      "answer": "$5$",
+     "enriched": true,
      "book_key": "5"
     },
     {
@@ -1473,21 +2130,47 @@
      "prompt": "$-5 - 4i$",
      "steps": [
       {
-       "math": "|z| = \\sqrt{a^2+b^2} = \\sqrt{(-5)^2 + (-4)^2}",
-       "en": "The modulus of $a+bi$ is $\\sqrt{a^2+b^2}$.",
-       "ur": "$a+bi$ کا مقیاس $\\sqrt{a^2+b^2}$ ہے۔"
+       "math": "z = -5 - 4i",
+       "en": "Let the given complex number be $z = -5 - 4i$. Comparing it with the standard form $z = a + bi$, we have the real part $a = -5$ and the imaginary part $b = -4$.",
+       "ur": "فرض کریں کہ دیا گیا مخلوط عدد $z = -5 - 4i$ ہے۔ اس کا معیاری شکل $z = a + bi$ سے موازنہ کرنے پر، حقیقی حصہ $a = -5$ اور خیالی حصہ $b = -4$ ہے۔"
       },
       {
-       "math": "= \\sqrt{41} = \\sqrt{41}",
-       "en": "Add the squares and take the square root.",
-       "ur": "مربعوں کو جمع کر کے جذر لیں۔",
+       "math": "|z| = \\sqrt{a^2 + b^2}",
+       "en": "The formula to find the modulus of a complex number $z = a + bi$ is $|z| = \\sqrt{a^2 + b^2}$.",
+       "ur": "کسی مخلوط عدد $z = a + bi$ کا مقیاس (modulus) معلوم کرنے کا فارمولا $|z| = \\sqrt{a^2 + b^2}$ ہے۔"
+      },
+      {
+       "math": "|z| = \\sqrt{(-5)^2 + (-4)^2}",
+       "en": "Substitute the values $a = -5$ and $b = -4$ into the modulus formula.",
+       "ur": "مقیاس کے فارمولے میں $a = -5$ اور $b = -4$ کی قیمتیں درج کریں۔",
        "check": [
+        "Abs(-5 - 4*I) == sqrt((-5)**2 + (-4)**2)"
+       ]
+      },
+      {
+       "math": "|z| = \\sqrt{25 + 16}",
+       "en": "Calculate the squares of both numbers: $(-5)^2 = 25$ and $(-4)^2 = 16$.",
+       "ur": "دونوں اعداد کا مربع لیں: $(-5)^2 = 25$ اور $(-4)^2 = 16$۔",
+       "check": [
+        "(-5)**2 == 25",
+        "(-4)**2 == 16",
+        "sqrt((-5)**2 + (-4)**2) == sqrt(25 + 16)"
+       ]
+      },
+      {
+       "math": "|z| = \\sqrt{41}",
+       "en": "Add the numbers inside the square root ($25 + 16 = 41$). Since $41$ is not a perfect square, the final answer is $\\sqrt{41}$.",
+       "ur": "جذر کے اندر موجود اعداد کو جمع کریں ($25 + 16 = 41$)۔ چونکہ $41$ ایک مکمل مربع نہیں ہے، اس لیے حتمی جواب $\\sqrt{41}$ ہے۔",
+       "check": [
+        "25 + 16 == 41",
+        "sqrt(25 + 16) == sqrt(41)",
         "sqrt((-5)**2 + (-4)**2) == (sqrt(41))",
         "Abs((-5 - 4*I)) == (sqrt(41))"
        ]
       }
      ],
      "answer": "$\\sqrt{41}$",
+     "enriched": true,
      "book_key": "\\sqrt{41}"
     },
     {
@@ -1495,21 +2178,58 @@
      "prompt": "$\\frac{3}{5} - \\frac{4}{5}i$",
      "steps": [
       {
-       "math": "|z| = \\sqrt{a^2+b^2} = \\sqrt{(\\frac{3}{5})^2 + (- \\frac{4}{5})^2}",
-       "en": "The modulus of $a+bi$ is $\\sqrt{a^2+b^2}$.",
-       "ur": "$a+bi$ کا مقیاس $\\sqrt{a^2+b^2}$ ہے۔"
+       "math": "z = \\frac{3}{5} - \\frac{4}{5}i",
+       "en": "Let the given complex number be $z$. Comparing it with the standard form $a+bi$, we have the real part $a = \\frac{3}{5}$ and the imaginary part $b = -\\frac{4}{5}$.",
+       "ur": "فرض کریں کہ دیا گیا مخلوط عدد $z$ ہے۔ اس کا معیاری شکل $a+bi$ سے موازنہ کرنے پر، حقیقی حصہ $a = \\frac{3}{5}$ اور خیالی حصہ $b = -\\frac{4}{5}$ ہے۔",
+       "check": [
+        "R(3,5) - R(4,5)*I == (3/5 - 4*I/5)"
+       ]
       },
       {
-       "math": "= \\sqrt{1} = 1",
-       "en": "Add the squares and take the square root.",
-       "ur": "مربعوں کو جمع کر کے جذر لیں۔",
+       "math": "|z| = \\sqrt{a^2 + b^2}",
+       "en": "Recall the formula for the modulus of a complex number $z = a+bi$.",
+       "ur": "ایک مخلوط عدد $z = a+bi$ کے مقیاس (modulus) کا فارمولا لکھیں۔"
+      },
+      {
+       "math": "|z| = \\sqrt{\\left(\\frac{3}{5}\\right)^2 + \\left(-\\frac{4}{5}\\right)^2}",
+       "en": "Substitute the values of $a = \\frac{3}{5}$ and $b = -\\frac{4}{5}$ into the formula.",
+       "ur": "فارمولے میں $a = \\frac{3}{5}$ اور $b = -\\frac{4}{5}$ کی قیمتیں درج کریں۔",
        "check": [
+        "Abs(R(3,5) - R(4,5)*I) == sqrt(R(3,5)**2 + (-R(4,5))**2)"
+       ]
+      },
+      {
+       "math": "|z| = \\sqrt{\\frac{9}{25} + \\frac{16}{25}}",
+       "en": "Evaluate the squares of both fractions. Note that the square of a negative number is positive.",
+       "ur": "دونوں کسروں کا مربع معلوم کریں۔ یاد رہے کہ منفی عدد کا مربع مثبت ہوتا ہے۔",
+       "check": [
+        "R(3,5)**2 == R(9,25)",
+        "(-R(4,5))**2 == R(16,25)"
+       ]
+      },
+      {
+       "math": "|z| = \\sqrt{\\frac{9 + 16}{25}} = \\sqrt{\\frac{25}{25}}",
+       "en": "Since the denominators are the same, add the numerators together.",
+       "ur": "چونکہ مخرج (denominators) ایک جیسے ہیں، اس لیے شمار کنندگان (numerators) کو آپس میں جمع کریں۔",
+       "check": [
+        "R(9,25) + R(16,25) == R(25,25)"
+       ]
+      },
+      {
+       "math": "|z| = \\sqrt{1} = 1",
+       "en": "Divide $25$ by $25$ to get $1$, and then take its square root. Thus, the modulus of the given complex number is $1$.",
+       "ur": "$25$ کو $25$ پر تقسیم کرنے سے $1$ حاصل ہوتا ہے، اور پھر اس کا جذر لیں۔ پس دیے گئے مخلوط عدد کا مقیاس $1$ ہے۔",
+       "check": [
+        "sqrt(R(25,25)) == 1",
+        "sqrt(1) == 1",
+        "Abs(R(3,5) - R(4,5)*I) == 1",
         "sqrt((3/5)**2 + (-4/5)**2) == (1)",
         "Abs((3/5 - 4*I/5)) == (1)"
        ]
       }
      ],
      "answer": "$1$",
+     "enriched": true,
      "book_key": "1"
     },
     {
@@ -1517,21 +2237,47 @@
      "prompt": "$- \\sqrt{2} - i\\sqrt{3}$",
      "steps": [
       {
-       "math": "|z| = \\sqrt{a^2+b^2} = \\sqrt{(- \\sqrt{2})^2 + (- \\sqrt{3})^2}",
-       "en": "The modulus of $a+bi$ is $\\sqrt{a^2+b^2}$.",
-       "ur": "$a+bi$ کا مقیاس $\\sqrt{a^2+b^2}$ ہے۔"
+       "math": "z = -\\sqrt{2} - \\sqrt{3}i",
+       "en": "Let the given complex number be $z$. Comparing it with the standard form $a + bi$, the real part is $a = -\\sqrt{2}$ and the imaginary part is $b = -\\sqrt{3}$.",
+       "ur": "فرض کریں کہ دیا گیا مخلوط عدد $z$ ہے۔ اس کا معیاری شکل $a + bi$ سے موازنہ کرنے پر، حقیقی حصہ $a = -\\sqrt{2}$ اور خیالی حصہ $b = -\\sqrt{3}$ ہے۔"
       },
       {
-       "math": "= \\sqrt{5} = \\sqrt{5}",
-       "en": "Add the squares and take the square root.",
-       "ur": "مربعوں کو جمع کر کے جذر لیں۔",
+       "math": "|z| = \\sqrt{a^2 + b^2}",
+       "en": "Write down the formula for the modulus of a complex number $z = a + bi$.",
+       "ur": "مخلوط عدد $z = a + bi$ کے مقیاس (ماڈولس) کا فارمولا لکھیں۔"
+      },
+      {
+       "math": "|z| = \\sqrt{(-\\sqrt{2})^2 + (-\\sqrt{3})^2}",
+       "en": "Substitute the values $a = -\\sqrt{2}$ and $b = -\\sqrt{3}$ into the formula.",
+       "ur": "فارمولے میں $a = -\\sqrt{2}$ اور $b = -\\sqrt{3}$ کی قیمتیں درج کریں۔",
        "check": [
+        "Abs(-sqrt(2) - sqrt(3)*I) == sqrt((-sqrt(2))**2 + (-sqrt(3))**2)"
+       ]
+      },
+      {
+       "math": "|z| = \\sqrt{2 + 3}",
+       "en": "Square both terms inside the square root. Since the square of a negative number is positive, $(-\\sqrt{2})^2 = 2$ and $(-\\sqrt{3})^2 = 3$.",
+       "ur": "جذر کے اندر موجود دونوں رقموں کا مربع لیں۔ چونکہ منفی عدد کا مربع مثبت ہوتا ہے، اس لیے $(-\\sqrt{2})^2 = 2$ اور $(-\\sqrt{3})^2 = 3$ بنتا ہے۔",
+       "check": [
+        "(-sqrt(2))**2 == 2",
+        "(-sqrt(3))**2 == 3",
+        "sqrt((-sqrt(2))**2 + (-sqrt(3))**2) == sqrt(2 + 3)"
+       ]
+      },
+      {
+       "math": "|z| = \\sqrt{5}",
+       "en": "Add the numbers inside the square root to get the final answer.",
+       "ur": "حتمی جواب حاصل کرنے کے لیے جذر کے اندر موجود اعداد کو جمع کریں۔",
+       "check": [
+        "sqrt(2 + 3) == sqrt(5)",
+        "Abs(-sqrt(2) - sqrt(3)*I) == sqrt(5)",
         "sqrt((-sqrt(2))**2 + (-sqrt(3))**2) == (sqrt(5))",
         "Abs((-sqrt(2) - sqrt(3)*I)) == (sqrt(5))"
        ]
       }
      ],
      "answer": "$\\sqrt{5}$",
+     "enriched": true,
      "book_key": "\\sqrt{5}"
     }
    ],
@@ -1822,15 +2568,46 @@
      "prompt": "$\\overline{\\overline{z}}=z$",
      "steps": [
       {
-       "math": "z = 5 - 2i \\Rightarrow \\overline{z} = 5 + 2i \\Rightarrow \\overline{\\overline{z}} = 5 - 2i = z",
-       "en": "Taking the conjugate twice changes the sign of the imaginary part twice.",
-       "ur": "دو بار مزدوج لینے سے خیالی حصے کی علامت دو بار بدلتی ہے۔",
+       "math": "z = 5 - 2i",
+       "en": "Write down the given complex number $z$. We need to verify that $\\overline{\\overline{z}} = z$.",
+       "ur": "دیے گئے مخلوط عدد $z$ کو لکھیں۔ ہمیں تصدیق کرنی ہے کہ $\\overline{\\overline{z}} = z$۔",
        "check": [
+        "5 - 2*I == 5 - 2*I"
+       ]
+      },
+      {
+       "math": "\\overline{a + bi} = a - bi",
+       "en": "Recall the definition of the conjugate of a complex number: we change the sign of the imaginary part (the term with $i$).",
+       "ur": "مخلوط عدد کے مزدوج (conjugate) کی تعریف یاد کریں: ہم خیالی حصے ($i$ والی رقم) کی علامت بدل دیتے ہیں۔"
+      },
+      {
+       "math": "\\overline{z} = \\overline{5 - 2i} = 5 + 2i",
+       "en": "First, take the conjugate of $z$ by changing $-2i$ to $+2i$.",
+       "ur": "سب سے پہلے، $-2i$ کو $+2i$ میں بدل کر $z$ کا مزدوج لیں۔",
+       "check": [
+        "conjugate(5 - 2*I) == 5 + 2*I"
+       ]
+      },
+      {
+       "math": "\\overline{\\overline{z}} = \\overline{5 + 2i} = 5 - 2i",
+       "en": "Now, take the conjugate of $\\overline{z}$ again by changing $+2i$ back to $-2i$.",
+       "ur": "اب، $+2i$ کو واپس $-2i$ میں بدل کر دوبارہ $\\overline{z}$ کا مزدوج لیں۔",
+       "check": [
+        "conjugate(5 + 2*I) == 5 - 2*I"
+       ]
+      },
+      {
+       "math": "\\overline{\\overline{z}} = z",
+       "en": "Since $5 - 2i$ is equal to the original complex number $z$, the property $\\overline{\\overline{z}} = z$ is verified.",
+       "ur": "چونکہ $5 - 2i$ اصل مخلوط عدد $z$ کے برابر ہے، اس لیے خاصیت $\\overline{\\overline{z}} = z$ کی تصدیق ہو گئی ہے۔",
+       "check": [
+        "conjugate(conjugate(5 - 2*I)) == 5 - 2*I",
         "conjugate(conjugate((5 - 2*I))) == (5 - 2*I)"
        ]
       }
      ],
-     "answer": "verified: $\\overline{\\overline{z}} = z$"
+     "answer": "verified: $\\overline{\\overline{z}} = z$",
+     "enriched": true
     },
     {
      "label": "ii",
@@ -2770,20 +3547,56 @@
      "prompt": "$i^2+i^4=$ (a) $-1$ (b) $0$ (c) $1$ (d) $2$",
      "steps": [
       {
-       "math": "i^2 + i^4 = -1 + 1 = 0",
-       "en": "Use $i^1 = i,\\ i^2 = -1,\\ i^3 = -i,\\ i^4 = 1$.",
-       "ur": "$i^1 = i,\\ i^2 = -1,\\ i^3 = -i,\\ i^4 = 1$ استعمال کریں۔",
+       "math": "i^2 + i^4",
+       "en": "Write down the given expression containing powers of the imaginary unit $i$.",
+       "ur": "دی گئی عبارت لکھیں جس میں ایوٹا ($i$) کی طاقتیں شامل ہیں۔"
+      },
+      {
+       "math": "i^2 = -1",
+       "en": "By the fundamental definition of the imaginary unit, the square of $i$ is $-1$.",
+       "ur": "ایوٹا کی بنیادی تعریف کے مطابق، $i$ کا مربع $-1$ کے برابر ہوتا ہے۔",
        "check": [
+        "I**2 == -1"
+       ]
+      },
+      {
+       "math": "i^4 = (i^2)^2 = (-1)^2 = 1",
+       "en": "Express $i^4$ in terms of $i^2$ and substitute $i^2 = -1$ to find its value.",
+       "ur": "$i^4$ کو $i^2$ کی شکل میں لکھیں اور اس کی قیمت معلوم کرنے کے لیے $i^2 = -1$ درج کریں۔",
+       "check": [
+        "I**4 == (I**2)**2",
+        "(I**2)**2 == (-1)**2",
+        "(-1)**2 == 1"
+       ]
+      },
+      {
+       "math": "i^2 + i^4 = -1 + 1",
+       "en": "Substitute the values of $i^2 = -1$ and $i^4 = 1$ back into the given expression.",
+       "ur": "اب $i^2 = -1$ اور $i^4 = 1$ کی قیمتیں دی گئی عبارت میں درج کریں۔",
+       "check": [
+        "I**2 + I**4 == -1 + 1"
+       ]
+      },
+      {
+       "math": "i^2 + i^4 = 0",
+       "en": "Simplify by adding the numbers together.",
+       "ur": "ان اعداد کو آپس میں جمع کر کے مختصر کریں۔",
+       "check": [
+        "-1 + 1 == 0",
         "I**2 + I**4 == 0"
        ]
       },
       {
        "math": "\\text{Answer: (b) } 0",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "The result matches option (b), so the correct answer is (b) $0$.",
+       "ur": "یہ نتیجہ آپشن (b) سے مطابقت رکھتا ہے، اس لیے درست جواب (b) $0$ ہے۔",
+       "check": [
+        "I**2 + I**4 == 0"
+       ]
       }
      ],
      "answer": "(b) $0$",
+     "enriched": true,
      "book_key": "(b) 0"
     },
     {
@@ -2791,20 +3604,63 @@
      "prompt": "Real part of $(2-3i)(2+3i)$ is: (a) $-3$ (b) $1$ (c) $4$ (d) $13$",
      "steps": [
       {
-       "math": "(2-3i)(2+3i) = 4 - 9i^2 = 4 + 9 = 13",
-       "en": "Use $(a-b)(a+b)=a^2-b^2$.",
-       "ur": "$(a-b)(a+b)=a^2-b^2$ استعمال کریں۔",
+       "math": "(2-3i)(2+3i)",
+       "en": "We are given the product of two complex numbers $(2-3i)$ and $(2+3i)$, and we need to find the real part of the result.",
+       "ur": "ہمیں دو مختلط اعداد $(2-3i)$ اور $(2+3i)$ کا حاصل ضرب دیا گیا ہے، اور ہمیں اس کے نتیجے کا حقیقی حصہ معلوم کرنا ہے۔"
+      },
+      {
+       "math": "(2-3i)(2+3i) = (2)^2 - (3i)^2",
+       "en": "Apply the algebraic identity $(a-b)(a+b) = a^2 - b^2$, where $a = 2$ and $b = 3i$.",
+       "ur": "الجبرئی کلیہ $(a-b)(a+b) = a^2 - b^2$ استعمال کریں، جہاں $a = 2$ اور $b = 3i$ ہے۔",
        "check": [
+        "(2-3*I)*(2+3*I) == 2**2 - (3*I)**2"
+       ]
+      },
+      {
+       "math": "(2-3i)(2+3i) = 4 - 9i^2",
+       "en": "Evaluate the squares: $(2)^2 = 4$ and $(3i)^2 = 9i^2$.",
+       "ur": "مربع حل کریں: $(2)^2 = 4$ اور $(3i)^2 = 9i^2$۔",
+       "check": [
+        "(2-3*I)*(2+3*I) == 4 - 9*I**2"
+       ]
+      },
+      {
+       "math": "(2-3i)(2+3i) = 4 - 9(-1)",
+       "en": "Substitute the value of $i^2 = -1$.",
+       "ur": "$i^2 = -1$ کی قیمت درج کریں۔",
+       "check": [
+        "(2-3*I)*(2+3*I) == 4 - 9*(-1)"
+       ]
+      },
+      {
+       "math": "(2-3i)(2+3i) = 4 + 9 = 13",
+       "en": "Multiply $-9$ by $-1$ to get $+9$, and then add $4$ and $9$ to get $13$.",
+       "ur": "$-9$ کو $-1$ سے ضرب دے کر $+9$ حاصل کریں، اور پھر $4$ اور $9$ کو جمع کر کے $13$ حاصل کریں۔",
+       "check": [
+        "(2-3*I)*(2+3*I) == 4 + 9",
+        "4 + 9 == 13"
+       ]
+      },
+      {
+       "math": "13 = 13 + 0i",
+       "en": "Write the result in the standard complex form $a + bi$. Here, the real part is $13$ and the imaginary part is $0$.",
+       "ur": "نتیجے کو معیاری مختلط شکل $a + bi$ میں لکھیں۔ یہاں حقیقی حصہ $13$ ہے اور خیالی حصہ $0$ ہے۔",
+       "check": [
+        "13 == 13 + 0*I",
         "re((2-3*I)*(2+3*I)) == 13"
        ]
       },
       {
        "math": "\\text{Answer: (d) } 13",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Therefore, the real part is $13$, which matches option (d).",
+       "ur": "لہٰذا، حقیقی حصہ $13$ ہے، جو آپشن (d) سے مطابقت رکھتا ہے۔",
+       "check": [
+        "re((2-3*I)*(2+3*I)) == 13"
+       ]
       }
      ],
      "answer": "(d) $13$",
+     "enriched": true,
      "book_key": "(d) 13"
     },
     {
@@ -2812,20 +3668,37 @@
      "prompt": "Imaginary part of $(2-i)(2+i)$ is: (a) $0$ (b) $1$ (c) $7$ (d) $9$",
      "steps": [
       {
-       "math": "(2-i)(2+i) = 4 - i^2 = 5 = 5 + 0i",
-       "en": "Use $(a-b)(a+b)=a^2-b^2$.",
-       "ur": "$(a-b)(a+b)=a^2-b^2$ استعمال کریں۔",
+       "math": "(2-i)(2+i)",
+       "en": "Consider the given complex expression.",
+       "ur": "دی گئی مختلط عبارت پر غور کریں۔"
+      },
+      {
+       "math": "(2-i)(2+i) = (2)^2 - (i)^2",
+       "en": "Initial algebraic identity $(a-b)(a+b)=a^2-b^2$ is applied.",
+       "ur": "الجبری کلیہ $(a-b)(a+b)=a^2-b^2$ استعمال کیا گیا ہے۔",
        "check": [
-        "im((2-I)*(2+I)) == 0"
+        "(2-I)*(2+I) == 2**2 - I**2"
+       ]
+      },
+      {
+       "math": "(2)^2 - (i)^2 = 5 + 0i",
+       "en": "Standard simplification using $i^2 = -1$ yields the standard form.",
+       "ur": "معیاری مختصر کاری اور $i^2 = -1$ کے استعمال سے معیاری شکل حاصل ہوتی ہے۔",
+       "check": [
+        "2**2 - I**2 == 5 + 0*I"
        ]
       },
       {
        "math": "\\text{Answer: (a) } 0",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "The imaginary part is $0$, which corresponds to option (a).",
+       "ur": "خیالی حصہ $0$ ہے، جو آپشن (a) کے مطابق ہے۔",
+       "check": [
+        "im((2-I)*(2+I)) == 0"
+       ]
       }
      ],
      "answer": "(a) $0$",
+     "enriched": true,
      "book_key": "(a) 0"
     },
     {
@@ -2833,17 +3706,36 @@
      "prompt": "$x+iy$ will be pure imaginary number, when: (a) $y=0$ (b) $x=0$ (c) $i=0$ (d) $x=0,\\ y=0$",
      "steps": [
       {
-       "math": "",
-       "en": "A pure imaginary number has no real part, so $x = 0$ (and $y \\ne 0$).",
-       "ur": "خالص خیالی عدد کا حقیقی حصہ نہیں ہوتا، اس لیے $x = 0$ (اور $y \\ne 0$)۔"
+       "math": "z = x + iy",
+       "en": "Consider the given complex number in standard form, where $x$ and $y$ are real numbers.",
+       "ur": "دیے گئے مخلوط عدد کو معیاری شکل میں فرض کریں، جہاں $x$ اور $y$ حقیقی اعداد ہیں۔"
+      },
+      {
+       "math": "\\text{Re}(z) = x, \\quad \\text{Im}(z) = y",
+       "en": "Here, $x$ represents the real part of the complex number, and $y$ represents the imaginary part.",
+       "ur": "یہاں، $x$ مخلوط عدد کے حقیقی حصے کو اور $y$ خیالی حصے کو ظاہر کرتا ہے۔"
+      },
+      {
+       "math": "\\text{Re}(z) = 0",
+       "en": "By definition, a complex number is called a pure imaginary number if its real part is equal to zero (while its imaginary part is non-zero, $y \\ne 0$).",
+       "ur": "تعریف کے مطابق، ایک مخلوط عدد کو خالص خیالی عدد کہا جاتا ہے اگر اس کا حقیقی حصہ صفر کے برابر ہو (جبکہ اس کا خیالی حصہ غیر صفر ہو، یعنی $y \\ne 0$)۔"
+      },
+      {
+       "math": "x = 0",
+       "en": "Substituting $\\text{Re}(z) = x$ into the condition gives $x = 0$, which reduces $x + iy$ to $0 + iy = iy$.",
+       "ur": "شرط میں $\\text{Re}(z) = x$ درج کرنے سے $x = 0$ حاصل ہوتا ہے، جس سے $x + iy$ کم ہو کر $0 + iy = iy$ رہ جاتا ہے۔",
+       "check": [
+        "0 + I*1 == I"
+       ]
       },
       {
        "math": "\\text{Answer: (b) } x=0",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Comparing this result with the given choices, option (b) is the correct answer.",
+       "ur": "اس نتیجے کا دیے گئے ممکنہ جوابات سے موازنہ کرنے پر، آپشن (b) درست جواب ہے۔"
       }
      ],
      "answer": "(b) $x=0$",
+     "enriched": true,
      "book_key": "(b) x=0"
     },
     {
@@ -2851,20 +3743,39 @@
      "prompt": "What is additive inverse of $5-2i$? (a) $5+2i$ (b) $-5-2i$ (c) $5-2i$ (d) $-5+2i$",
      "steps": [
       {
-       "math": "-(5-2i) = -5+2i",
-       "en": "Change the sign of both parts.",
-       "ur": "دونوں حصوں کی علامت بدلیں۔",
+       "math": "5 - 2i",
+       "en": "The given complex number is $5 - 2i$. We need to find its additive inverse.",
+       "ur": "دیا گیا مختلط عدد $5 - 2i$ ہے۔ ہمیں اس کا جمعی معکوس معلوم کرنا ہے۔"
+      },
+      {
+       "math": "-z = -(a + bi) = -a - bi",
+       "en": "To find the additive inverse of a complex number, we multiply it by $-1$, which changes the sign of both the real and imaginary parts.",
+       "ur": "کسی مختلط عدد کا جمعی معکوس معلوم کرنے کے لیے ہم اسے $-1$ سے ضرب دیتے ہیں، جس سے حقیقی اور خیالی دونوں حصوں کی علامت بدل جاتی ہے۔"
+      },
+      {
+       "math": "-(5 - 2i)",
+       "en": "Apply the negative sign to the given complex number $5 - 2i$.",
+       "ur": "دیے گئے مختلط عدد $5 - 2i$ کے باہر منفی کی علامت لگائیں۔"
+      },
+      {
+       "math": "-(5 - 2i) = -5 + 2i",
+       "en": "Multiply the negative sign inside the bracket to change the signs of both terms.",
+       "ur": "بریکٹ کے اندر منفی کی علامت کو ضرب دیں تاکہ دونوں رقموں کی علامتیں بدل جائیں۔",
        "check": [
-        "-(5-2*I) == -5+2*I"
+        "-(5 - 2*I) == -5 + 2*I"
        ]
       },
       {
        "math": "\\text{Answer: (d) } -5+2i",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Comparing our result with the given options, option (d) is the correct answer.",
+       "ur": "ہمارے نتیجے کا دیے گئے آپشنز سے موازنہ کرنے پر، آپشن (d) درست جواب ہے۔",
+       "check": [
+        "-(5-2*I) == -5+2*I"
+       ]
       }
      ],
      "answer": "(d) $-5+2i$",
+     "enriched": true,
      "book_key": "(d) -5+2i"
     },
     {
@@ -2872,20 +3783,62 @@
      "prompt": "What is multiplicative inverse of $z=1+i$? (a) $1-i$ (b) $i$ (c) $\\frac{1}{2}-\\frac{1}{2}i$ (d) $-\\frac{1}{\\sqrt{2}}+\\frac{1}{\\sqrt{2}}i$",
      "steps": [
       {
-       "math": "\\frac{1}{1+i} = \\frac{1-i}{(1+i)(1-i)} = \\frac{1-i}{2}",
-       "en": "Multiply by the conjugate.",
-       "ur": "مزدوج سے ضرب دیں۔",
+       "math": "z = 1+i",
+       "en": "We are given the complex number $z = 1+i$, and we need to find its multiplicative inverse.",
+       "ur": "ہمیں مختلط عدد $z = 1+i$ دیا گیا ہے، اور ہمیں اس کا ضربی معکوس معلوم کرنا ہے۔"
+      },
+      {
+       "math": "z^{-1} = \\frac{1}{z} = \\frac{1}{1+i}",
+       "en": "The multiplicative inverse of a complex number $z$ is given by $\\frac{1}{z}$. Substitute $z = 1+i$ into the formula.",
+       "ur": "کسی مختلط عدد $z$ کا ضربی معکوس $\\frac{1}{z}$ ہوتا ہے۔ فارمولے میں $z = 1+i$ درج کریں۔",
        "check": [
-        "1/(1+I) == R(1,2) - R(1,2)*I"
+        "(1+I)**(-1) == 1/(1+I)"
+       ]
+      },
+      {
+       "math": "z^{-1} = \\frac{1}{1+i} \\times \\frac{1-i}{1-i}",
+       "en": "To write the complex number in the standard form $a+bi$, multiply the numerator and the denominator by the conjugate of the denominator, which is $1-i$.",
+       "ur": "مختلط عدد کو معیاری شکل $a+bi$ میں لکھنے کے لیے، شمار کنندہ اور مخرج کو مخرج کے مزدوج یعنی $1-i$ سے ضرب دیں۔",
+       "check": [
+        "1/(1+I) == (1/(1+I))*((1-I)/(1-I))"
+       ]
+      },
+      {
+       "math": "z^{-1} = \\frac{1-i}{(1)^2 - (i)^2}",
+       "en": "Apply the difference of squares formula $(a+b)(a-b) = a^2 - b^2$ to the denominator.",
+       "ur": "مخرج پر فرق المربعین کا فارمولا $(a+b)(a-b) = a^2 - b^2$ لاگو کریں۔",
+       "check": [
+        "(1-I)/((1+I)*(1-I)) == (1-I)/(1**2 - I**2)"
+       ]
+      },
+      {
+       "math": "z^{-1} = \\frac{1-i}{1 - (-1)} = \\frac{1-i}{1 + 1} = \\frac{1-i}{2}",
+       "en": "Since $i^2 = -1$, substitute this value into the denominator and simplify.",
+       "ur": "چونکہ $i^2 = -1$ ہوتا ہے، یہ قیمت مخرج میں درج کریں اور مختصر کریں۔",
+       "check": [
+        "(1-I)/(1 - (-1)) == (1-I)/(1 + 1)",
+        "(1-I)/(1 + 1) == (1-I)/2"
+       ]
+      },
+      {
+       "math": "z^{-1} = \\frac{1}{2} - \\frac{1}{2}i",
+       "en": "Separate the real and imaginary parts by dividing each term in the numerator by $2$.",
+       "ur": "شمار کنندہ کی ہر رقم کو $2$ پر تقسیم کر کے حقیقی اور خیالی حصوں کو الگ کریں۔",
+       "check": [
+        "(1-I)/2 == R(1,2) - R(1,2)*I"
        ]
       },
       {
        "math": "\\text{Answer: (c) } \\frac{1}{2}-\\frac{1}{2}i",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "This matches option (c), which is the correct answer.",
+       "ur": "یہ آپشن (c) سے مطابقت رکھتا ہے، جو کہ درست جواب ہے۔",
+       "check": [
+        "1/(1+I) == R(1,2) - R(1,2)*I"
+       ]
       }
      ],
      "answer": "(c) $\\frac{1}{2}-\\frac{1}{2}i$",
+     "enriched": true,
      "book_key": "(c) \\frac{1}{2}-\\frac{1}{2}i"
     },
     {
@@ -2893,20 +3846,70 @@
      "prompt": "If $z=4-3i$, then $z\\overline{z}=$ (a) $3$ (b) $9$ (c) $16$ (d) $25$",
      "steps": [
       {
-       "math": "z\\overline{z} = 4^2 + 3^2 = 25",
-       "en": "$z\\overline{z} = a^2+b^2$.",
-       "ur": "$z\\overline{z} = a^2+b^2$۔",
+       "math": "",
+       "en": "We are given the complex number $z = 4 - 3i$, and we need to find the product $z\\overline{z}$.",
+       "ur": "ہمیں کمپلیکس نمبر $z = 4 - 3i$ دیا گیا ہے، اور ہمیں حاصل ضرب $z\\overline{z}$ معلوم کرنا ہے۔"
+      },
+      {
+       "math": "\\overline{z} = 4 + 3i",
+       "en": "First, find the conjugate of $z$, denoted by $\\overline{z}$, by changing the sign of the imaginary part.",
+       "ur": "سب سے پہلے، امیجنری حصے کی علامت بدل کر $z$ کا کونجوگیٹ ($\\overline{z}$) معلوم کریں۔",
        "check": [
-        "(4-3*I)*(4+3*I) == 25"
+        "conjugate(4 - 3*I) == 4 + 3*I"
+       ]
+      },
+      {
+       "math": "z\\overline{z} = (4 - 3i)(4 + 3i)",
+       "en": "Multiply the complex number $z$ with its conjugate $\\overline{z}$.",
+       "ur": "کمپلیکس نمبر $z$ کو اس کے کونجوگیٹ $\\overline{z}$ سے ضرب دیں۔",
+       "check": [
+        "(4 - 3*I)*conjugate(4 - 3*I) == (4 - 3*I)*(4 + 3*I)"
+       ]
+      },
+      {
+       "math": "z\\overline{z} = (4)^2 - (3i)^2",
+       "en": "Apply the algebraic identity $(a - b)(a + b) = a^2 - b^2$.",
+       "ur": "الجبری کلیہ $(a - b)(a + b) = a^2 - b^2$ استعمال کریں۔",
+       "check": [
+        "(4 - 3*I)*(4 + 3*I) == 4**2 - (3*I)**2"
+       ]
+      },
+      {
+       "math": "z\\overline{z} = 16 - 9i^2",
+       "en": "Calculate the squares of both terms.",
+       "ur": "دونوں رقموں کا مربع لیں۔",
+       "check": [
+        "4**2 - (3*I)**2 == 16 - 9*I**2"
+       ]
+      },
+      {
+       "math": "z\\overline{z} = 16 - 9(-1)",
+       "en": "Substitute the value $i^2 = -1$.",
+       "ur": "$i^2 = -1$ کی قیمت درج کریں۔",
+       "check": [
+        "16 - 9*I**2 == 16 - 9*(-1)"
+       ]
+      },
+      {
+       "math": "z\\overline{z} = 16 + 9 = 25",
+       "en": "Simplify and add the numbers to get the result.",
+       "ur": "مختصر کریں اور نتیجہ حاصل کرنے کے لیے نمبروں کو جمع کریں۔",
+       "check": [
+        "16 - 9*(-1) == 16 + 9",
+        "16 + 9 == 25"
        ]
       },
       {
        "math": "\\text{Answer: (d) } 25",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Thus, the correct option is (d).",
+       "ur": "اس طرح، درست آپشن (d) ہے۔",
+       "check": [
+        "(4-3*I)*(4+3*I) == 25"
+       ]
       }
      ],
      "answer": "(d) $25$",
+     "enriched": true,
      "book_key": "(d) 25"
     },
     {
@@ -2914,20 +3917,45 @@
      "prompt": "Conjugate of $9-4i$ is: (a) $-9-4i$ (b) $9+4i$ (c) $9+9i$ (d) $4-9i$",
      "steps": [
       {
-       "math": "\\overline{9-4i} = 9+4i",
-       "en": "Change the sign of the imaginary part.",
-       "ur": "خیالی حصے کی علامت بدلیں۔",
+       "math": "z = 9 - 4i",
+       "en": "Let the given complex number be $z = 9 - 4i$. Here, the real part is $9$ and the imaginary part is $-4$.",
+       "ur": "فرض کریں کہ دیا گیا مختلط عدد $z = 9 - 4i$ ہے۔ یہاں حقیقی حصہ $9$ اور خیالی حصہ $-4$ ہے۔",
        "check": [
-        "conjugate(9-4*I) == 9+4*I"
+        "9 - 4*I == 9 - 4*I"
+       ]
+      },
+      {
+       "math": "\\text{If } z = a + bi, \\text{ then } \\bar{z} = a - bi",
+       "en": "To find the conjugate of a complex number, we change the sign of its imaginary part.",
+       "ur": "کسی مختلط عدد کا زوج (conjugate) معلوم کرنے کے لیے ہم اس کے خیالی حصے کی علامت تبدیل کرتے ہیں۔"
+      },
+      {
+       "math": "\\bar{z} = \\overline{9 - 4i}",
+       "en": "Apply the conjugate notation to the given complex number.",
+       "ur": "دیے گئے مختلط عدد پر زوج (conjugate) کی علامت لگائیں۔",
+       "check": [
+        "conjugate(9 - 4*I) == 9 + 4*I"
+       ]
+      },
+      {
+       "math": "\\bar{z} = 9 + 4i",
+       "en": "Change the sign of the imaginary part from $-4i$ to $+4i$.",
+       "ur": "خیالی حصے کی علامت کو $-4i$ سے بدل کر $+4i$ کر دیں۔",
+       "check": [
+        "conjugate(9 - 4*I) == 9 + 4*I"
        ]
       },
       {
        "math": "\\text{Answer: (b) } 9+4i",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Comparing our result with the given options, option (b) is the correct answer.",
+       "ur": "ہمارے نتیجے کا دیے گئے آپشنز سے موازنہ کرنے پر، آپشن (b) درست جواب ہے۔",
+       "check": [
+        "conjugate(9-4*I) == 9+4*I"
+       ]
       }
      ],
      "answer": "(b) $9+4i$",
+     "enriched": true,
      "book_key": "(b) 9+4i"
     },
     {
@@ -2935,20 +3963,56 @@
      "prompt": "If $z=4+4i$, then $z+\\overline{z}=$ (a) $8$ (b) $8+8i$ (c) $8i$ (d) $0$",
      "steps": [
       {
-       "math": "z + \\overline{z} = (4+4i) + (4-4i) = 8",
-       "en": "The imaginary parts cancel.",
-       "ur": "خیالی حصے ختم ہو جاتے ہیں۔",
+       "math": "z = 4 + 4i",
+       "en": "Write down the given complex number $z$. We need to find the value of $z + \\overline{z}$.",
+       "ur": "دیے گئے کمپلیکس نمبر $z$ کو لکھیں۔ ہمیں $z + \\overline{z}$ کی قیمت معلوم کرنی ہے۔",
        "check": [
-        "(4+4*I) + (4-4*I) == 8"
+        "4 + 4*I == 4 + 4*I"
+       ]
+      },
+      {
+       "math": "\\overline{z} = 4 - 4i",
+       "en": "To find the conjugate $\\overline{z}$, we change the sign of the imaginary part from $+4i$ to $-4i$.",
+       "ur": "کونجوگیٹ $\\overline{z}$ معلوم کرنے کے لیے ہم خیالی حصے کی علامت کو $+4i$ سے بدل کر $-4i$ کر دیتے ہیں۔",
+       "check": [
+        "conjugate(4 + 4*I) == 4 - 4*I"
+       ]
+      },
+      {
+       "math": "z + \\overline{z} = (4 + 4i) + (4 - 4i)",
+       "en": "Now, substitute the values of $z$ and $\\overline{z}$ into the expression $z + \\overline{z}$.",
+       "ur": "اب، $z$ اور $\\overline{z}$ کی قیمتیں جملے $z + \\overline{z}$ میں درج کریں۔",
+       "check": [
+        "(4 + 4*I) + conjugate(4 + 4*I) == (4 + 4*I) + (4 - 4*I)"
+       ]
+      },
+      {
+       "math": "z + \\overline{z} = (4 + 4) + (4i - 4i)",
+       "en": "Group the real parts together and the imaginary parts together.",
+       "ur": "حقیقی حصوں کو ایک ساتھ اور خیالی حصوں کو ایک ساتھ جمع کریں۔",
+       "check": [
+        "(4 + 4*I) + (4 - 4*I) == (4 + 4) + (4*I - 4*I)"
+       ]
+      },
+      {
+       "math": "z + \\overline{z} = 8 + 0i = 8",
+       "en": "Add the real parts to get $8$, while the imaginary parts $+4i$ and $-4i$ cancel each other out.",
+       "ur": "حقیقی حصوں کو جمع کرنے سے $8$ حاصل ہوتا ہے، جبکہ خیالی حصے $+4i$ اور $-4i$ ایک دوسرے کو ختم کر دیتے ہیں۔",
+       "check": [
+        "(4 + 4) + (4*I - 4*I) == 8"
        ]
       },
       {
        "math": "\\text{Answer: (a) } 8",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Compare the result with the given options. Option (a) is the correct answer.",
+       "ur": "نتیجے کا دیے گئے آپشنز سے موازنہ کریں۔ آپشن (a) درست جواب ہے۔",
+       "check": [
+        "(4+4*I) + (4-4*I) == 8"
+       ]
       }
      ],
      "answer": "(a) $8$",
+     "enriched": true,
      "book_key": "(a) 8"
     },
     {
@@ -2956,20 +4020,54 @@
      "prompt": "If $z=5+4i$, then $|z|=$ (a) $9$ (b) $25$ (c) $41$ (d) $\\sqrt{41}$",
      "steps": [
       {
-       "math": "|z| = \\sqrt{25 + 16} = \\sqrt{41}",
-       "en": "$|a+bi| = \\sqrt{a^2+b^2}$.",
-       "ur": "$|a+bi| = \\sqrt{a^2+b^2}$۔",
+       "math": "z = 5 + 4i",
+       "en": "Write the given complex number. Comparing it with the standard form $z = a + bi$, we have the real part $a = 5$ and the imaginary part $b = 4$.",
+       "ur": "دیے گئے مخلوط عدد کو لکھیں۔ اس کا معیاری شکل $z = a + bi$ سے موازنہ کرنے پر، حقیقی حصہ $a = 5$ اور خیالی حصہ $b = 4$ ہے۔",
        "check": [
-        "Abs(5+4*I) == sqrt(41)"
+        "5 + 4*I == 5 + 4*I"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Recall the formula for the modulus (absolute value) of a complex number $z = a + bi$, which is $|z| = \\sqrt{a^2 + b^2}$.",
+       "ur": "کسی مخلوط عدد $z = a + bi$ کے ماڈیولس (مطلق قیمت) کا فارمولا یاد کریں، جو کہ $|z| = \\sqrt{a^2 + b^2}$ ہے۔"
+      },
+      {
+       "math": "|z| = \\sqrt{5^2 + 4^2}",
+       "en": "Substitute the values $a = 5$ and $b = 4$ into the modulus formula.",
+       "ur": "ماڈیولس کے فارمولے میں $a = 5$ اور $b = 4$ کی قیمتیں درج کریں۔",
+       "check": [
+        "Abs(5 + 4*I) == sqrt(5**2 + 4**2)"
+       ]
+      },
+      {
+       "math": "|z| = \\sqrt{25 + 16}",
+       "en": "Evaluate the squares of $5$ and $4$.",
+       "ur": "$5$ اور $4$ کے مربع حل کریں۔",
+       "check": [
+        "sqrt(5**2 + 4**2) == sqrt(25 + 16)"
+       ]
+      },
+      {
+       "math": "|z| = \\sqrt{41}",
+       "en": "Add the numbers inside the square root to get the modulus.",
+       "ur": "ماڈیولس حاصل کرنے کے لیے جزر کے اندر موجود اعداد کو جمع کریں۔",
+       "check": [
+        "sqrt(25 + 16) == sqrt(41)",
+        "Abs(5 + 4*I) == sqrt(41)"
        ]
       },
       {
        "math": "\\text{Answer: (d) } \\sqrt{41}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Thus, the correct option is (d).",
+       "ur": "چنانچہ، درست جواب (d) ہے۔",
+       "check": [
+        "Abs(5+4*I) == sqrt(41)"
+       ]
       }
      ],
      "answer": "(d) $\\sqrt{41}$",
+     "enriched": true,
      "book_key": "(d) \\sqrt{41}"
     }
    ],
@@ -2988,26 +4086,78 @@
      "steps": [
       {
        "math": "",
-       "en": "Every real number $a$ is the complex number $a + 0i$, so $0 = 0 + 0i$ is a complex number: $0 \\in \\mathbb{R} \\subseteq \\mathbb{C}$.",
-       "ur": "ہر حقیقی عدد $a$ مختلط عدد $a + 0i$ ہے، اس لیے $0 = 0 + 0i$ ایک مختلط عدد ہے: $0 \\in \\mathbb{R} \\subseteq \\mathbb{C}$۔"
+       "en": "We need to determine whether the number $0$ is a complex number and explain the reason.",
+       "ur": "ہمیں یہ معلوم کرنا ہے کہ آیا عدد $0$ ایک مختلط عدد (complex number) ہے اور اس کی وجہ بیان کرنی ہے۔"
+      },
+      {
+       "math": "z = a + bi",
+       "en": "By definition, any number that can be written in the form $a + bi$, where $a$ and $b$ are real numbers ($a, b \\in \\mathbb{R}$) and $i = \\sqrt{-1}$, is a complex number.",
+       "ur": "تعریف کے مطابق، کوئی بھی عدد جسے $a + bi$ کی شکل میں لکھا جا سکے، جہاں $a$ اور $b$ حقیقی اعداد ہیں ($a, b \\in \\mathbb{R}$) اور $i = \\sqrt{-1}$ ہے، ایک مختلط عدد کہلاتا ہے۔"
+      },
+      {
+       "math": "\\mathbb{R} \\subseteq \\mathbb{C}",
+       "en": "Every real number $a$ can be written as a complex number $a + 0i$ by taking its imaginary part as $b = 0$. Therefore, the set of real numbers is a subset of the set of complex numbers.",
+       "ur": "ہر حقیقی عدد $a$ کو اس کا خیالی حصہ $b = 0$ لے کر مختلط عدد $a + 0i$ کے طور پر لکھا جا سکتا ہے۔ اس لیے، حقیقی اعداد کا سیٹ مختلط اعداد کے سیٹ کا ایک ذیلی سیٹ (subset) ہے۔"
+      },
+      {
+       "math": "0 = 0 + 0i",
+       "en": "Since $0$ is a real number ($0 \\in \\mathbb{R}$), we can substitute $a = 0$ and $b = 0$ into the standard form $a + bi$.",
+       "ur": "چونکہ $0$ ایک حقیقی عدد ہے ($0 \\in \\mathbb{R}$)، اس لیے ہم معیاری شکل $a + bi$ میں $a = 0$ اور $b = 0$ درج کر سکتے ہیں۔",
+       "check": [
+        "0 == 0 + 0*I"
+       ]
+      },
+      {
+       "math": "0 \\in \\mathbb{C}",
+       "en": "Yes, $0$ is a complex number because it can be expressed in the standard form $a + bi$ as $0 + 0i$.",
+       "ur": "جی ہاں، $0$ ایک مختلط عدد ہے کیونکہ اسے معیاری شکل $a + bi$ میں $0 + 0i$ کے طور پر لکھا جا سکتا ہے۔"
       }
      ],
-     "answer": "Yes: $0 = 0 + 0i$"
+     "answer": "Yes: $0 = 0 + 0i$",
+     "enriched": true
     },
     {
      "label": "ii",
      "prompt": "What is the result of multiplying a complex number by its conjugate?",
      "steps": [
       {
-       "math": "(a+bi)(a-bi) = a^2 - b^2i^2 = a^2 + b^2 = |z|^2",
-       "en": "The product of a complex number and its conjugate is a real number, $|z|^2$.",
-       "ur": "مختلط عدد اور اس کے مزدوج کا حاصل ضرب حقیقی عدد $|z|^2$ ہوتا ہے۔",
+       "math": "z = a + bi, \\quad \\overline{z} = a - bi",
+       "en": "Let $z = a + bi$ be a complex number, where $a$ and $b$ are real numbers. Its conjugate is $\\overline{z} = a - bi$.",
+       "ur": "فرض کریں کہ $z = a + bi$ ایک مختلط عدد ہے، جہاں $a$ اور $b$ حقیقی اعداد ہیں۔ اس کا مزدوج (conjugate) $\\overline{z} = a - bi$ ہے۔"
+      },
+      {
+       "math": "z\\overline{z} = (a + bi)(a - bi)",
+       "en": "Multiply the complex number $z$ by its conjugate $\\overline{z}$.",
+       "ur": "مختلط عدد $z$ کو اس کے مزدوج $\\overline{z}$ سے ضرب دیں۔"
+      },
+      {
+       "math": "z\\overline{z} = a^2 - (bi)^2 = a^2 - b^2i^2",
+       "en": "Apply the algebraic identity $(x + y)(x - y) = x^2 - y^2$.",
+       "ur": "الجبری کلیہ $(x + y)(x - y) = x^2 - y^2$ کا اطلاق کریں۔",
        "check": [
+        "expand((a+b*I)*(a-b*I)) == a**2 - b**2*I**2"
+       ]
+      },
+      {
+       "math": "z\\overline{z} = a^2 - b^2(-1) = a^2 + b^2",
+       "en": "Since $i^2 = -1$, substitute this value and simplify.",
+       "ur": "چونکہ $i^2 = -1$ ہوتا ہے، اس لیے یہ قیمت درج کریں اور مختصر کریں۔",
+       "check": [
+        "a**2 - b**2*(-1) == a**2 + b**2"
+       ]
+      },
+      {
+       "math": "z\\overline{z} = a^2 + b^2 = |z|^2",
+       "en": "Since $a$ and $b$ are real numbers, $a^2 + b^2$ is a non-negative real number, which is equal to the square of the modulus of $z$, denoted as $|z|^2$.",
+       "ur": "چونکہ $a$ اور $b$ حقیقی اعداد ہیں، اس لیے $a^2 + b^2$ ایک غیر منفی حقیقی عدد ہے، جو $z$ کے ماڈولس (modulus) کے مربع یعنی $|z|^2$ کے برابر ہے۔",
+       "check": [
+        "sqrt(a**2 + b**2)**2 == a**2 + b**2",
         "expand((a+b*I)*(a-b*I)) == a**2 + b**2"
        ]
       }
      ],
-     "answer": "a real number: $z\\overline{z} = |z|^2$"
+     "answer": "a real number: $z\\overline{z} = |z|^2$",
+     "enriched": true
     },
     {
      "label": "iii",
@@ -3015,11 +4165,32 @@
      "steps": [
       {
        "math": "",
-       "en": "$a + bi = c + di$ exactly when $a = c$ and $b = d$: the real parts are equal and the imaginary parts are equal.",
-       "ur": "$a + bi = c + di$ صرف تب جب $a = c$ اور $b = d$: حقیقی حصے برابر اور خیالی حصے برابر ہوں۔"
+       "en": "We need to state the condition under which two complex numbers are considered equal.",
+       "ur": "ہمیں وہ شرط بیان کرنی ہے جس کے تحت دو مخلوط اعداد آپس میں برابر ہوتے ہیں۔"
+      },
+      {
+       "math": "",
+       "en": "Let us consider two general complex numbers in standard form, $z_1 = a + bi$ and $z_2 = c + di$, where $a, b, c,$ and $d$ are real numbers.",
+       "ur": "آئیے معیاری شکل میں دو عمومی مخلوط اعداد $z_1 = a + bi$ اور $z_2 = c + di$ فرض کرتے ہیں، جہاں $a, b, c,$ اور $d$ حقیقی اعداد ہیں۔"
+      },
+      {
+       "math": "",
+       "en": "Here, $a$ and $c$ are the real parts of the two complex numbers, while $b$ and $d$ are their respective imaginary parts.",
+       "ur": "یہاں، $a$ اور $c$ دونوں مخلوط اعداد کے حقیقی حصے ہیں، جبکہ $b$ اور $d$ ان کے متعلقہ خیالی حصے ہیں۔"
+      },
+      {
+       "math": "",
+       "en": "By the definition of equality of complex numbers, $a + bi = c + di$ holds true if and only if $a = c$ and $b = d$.",
+       "ur": "مخلوط اعداد کی برابری کی تعریف کے مطابق، $a + bi = c + di$ صرف اور صرف تب درست ہوتا ہے جب $a = c$ اور $b = d$ ہو۔"
+      },
+      {
+       "math": "",
+       "en": "Therefore, two complex numbers are equal when their real parts are equal and their imaginary parts are equal.",
+       "ur": "لہٰذا، دو مخلوط اعداد تب برابر ہوتے ہیں جب ان کے حقیقی حصے برابر ہوں اور ان کے خیالی حصے برابر ہوں۔"
       }
      ],
-     "answer": "real parts equal and imaginary parts equal"
+     "answer": "real parts equal and imaginary parts equal",
+     "enriched": true
     }
    ],
    "exercise": "Review 1"
@@ -3036,23 +4207,49 @@
      "prompt": "$i^{37}$",
      "steps": [
       {
-       "math": "i^{37} = i^{37}\\cdot (i^4)^{-9} = i^{1}",
-       "en": "Since $i^4 = 1$, adding or removing multiples of 4 in the power does not change the value.",
-       "ur": "چونکہ $i^4 = 1$، طاقت میں 4 کے مضرب جمع یا تفریق کرنے سے قیمت نہیں بدلتی۔",
+       "math": "i^{37}",
+       "en": "We need to simplify the given power of the imaginary unit $i$, where $i = \\sqrt{-1}$ and $i^2 = -1$.",
+       "ur": "ہمیں دی گئی خیالی اکائی $i$ کی طاقت کو مختصر کرنا ہے، جہاں $i = \\sqrt{-1}$ اور $i^2 = -1$ ہے۔"
+      },
+      {
+       "math": "i^{37} = i^{36 + 1} = i^{36} \\cdot i^1",
+       "en": "To simplify a high power of $i$, we break the odd exponent $37$ into the nearest even number $36$ plus $1$, using the law of exponents $a^{m+n} = a^m \\cdot a^n$.",
+       "ur": "$i$ کی بڑی طاقت کو مختصر کرنے کے لیے، ہم قوت نما کے قانون $a^{m+n} = a^m \\cdot a^n$ کا استعمال کرتے ہوئے طاق قوت نما $37$ کو قریب ترین جفت عدد $36$ جمع $1$ میں توڑتے ہیں۔",
        "check": [
-        "1*I**(37) == 1*I**1"
+        "I**37 == I**(36 + 1)",
+        "I**(36 + 1) == I**36 * I**1"
        ]
       },
       {
-       "math": "= i",
-       "en": "Use $i^1 = i,\\ i^2 = -1,\\ i^3 = -i,\\ i^4 = 1$.",
-       "ur": "$i^1 = i,\\ i^2 = -1,\\ i^3 = -i,\\ i^4 = 1$ استعمال کریں۔",
+       "math": "= (i^2)^{18} \\cdot i",
+       "en": "Write $i^{36}$ as a power of $i^2$ because we know the value of $i^2$. Since $36 = 2 \\times 18$, we have $i^{36} = (i^2)^{18}$.",
+       "ur": "$i^{36}$ کو $i^2$ کی طاقت کے طور پر لکھیں کیونکہ ہم $i^2$ کی قیمت جانتے ہیں۔ چونکہ $36 = 2 \\times 18$ ہے، اس لیے $i^{36} = (i^2)^{18}$ بنتا ہے۔",
        "check": [
+        "I**37 == (I**2)**18 * I"
+       ]
+      },
+      {
+       "math": "= (-1)^{18} \\cdot i",
+       "en": "Substitute the fundamental value $i^2 = -1$ into the expression.",
+       "ur": "جملے میں بنیادی قیمت $i^2 = -1$ درج کریں۔",
+       "check": [
+        "I**37 == (-1)**18 * I"
+       ]
+      },
+      {
+       "math": "= (1) \\cdot i = i",
+       "en": "Since $-1$ raised to an even power ($18$) is $+1$, we multiply $1$ by $i$ to get the final answer $i$.",
+       "ur": "چونکہ $-1$ کی طاقت ایک جفت عدد ($18$) ہے اس لیے یہ $+1$ بن جاتا ہے، ہم $1$ کو $i$ سے ضرب دے کر حتمی جواب $i$ حاصل کرتے ہیں۔",
+       "check": [
+        "(-1)**18 * I == 1 * I",
+        "1 * I == I",
+        "1*I**(37) == 1*I**1",
         "1*I**(37) == (I)"
        ]
       }
      ],
      "answer": "$i$",
+     "enriched": true,
      "book_key": "i"
     },
     {
@@ -3060,15 +4257,49 @@
      "prompt": "$i^{13}\\times i^{11}$",
      "steps": [
       {
-       "math": "i^{13} \\times i^{11} = i^{24} = (i^4)^{6} = 1",
-       "en": "Add the powers; 24 is a multiple of 4.",
-       "ur": "طاقتیں جمع کریں؛ 24، 4 کا مضرب ہے۔",
+       "math": "i^{13} \\times i^{11}",
+       "en": "We are asked to simplify the product of two powers of the imaginary unit $i$.",
+       "ur": "ہمیں خیالی اکائی $i$ کی دو طاقتوں کے حاصل ضرب کو مختصر کرنے کے لیے کہا گیا ہے۔"
+      },
+      {
+       "math": "i^{13} \\times i^{11} = i^{13+11} = i^{24}",
+       "en": "By the law of exponents ($a^m \\times a^n = a^{m+n}$), when the bases are the same, we add the powers.",
+       "ur": "قوت نما کے قانون ($a^m \\times a^n = a^{m+n}$) کے مطابق، جب اساس ایک جیسے ہوں تو ہم طاقتوں کو جمع کرتے ہیں۔",
        "check": [
+        "I**13 * I**11 == I**24",
+        "13 + 11 == 24"
+       ]
+      },
+      {
+       "math": "i^{24} = (i^2)^{12}",
+       "en": "Rewrite the even power $24$ as a multiple of $2$, because we know the fundamental value of $i^2$.",
+       "ur": "جفت طاقت $24$ کو $2$ کے مضرب کے طور پر دوبارہ لکھیں، کیونکہ ہم $i^2$ کی بنیادی قیمت جانتے ہیں۔",
+       "check": [
+        "I**24 == (I**2)**12",
+        "2 * 12 == 24"
+       ]
+      },
+      {
+       "math": "(i^2)^{12} = (-1)^{12}",
+       "en": "Substitute the value $i^2 = -1$ into the expression.",
+       "ur": "عبارت میں $i^2 = -1$ کی قیمت درج کریں۔",
+       "check": [
+        "(I**2)**12 == (-1)**12",
+        "I**2 == -1"
+       ]
+      },
+      {
+       "math": "(-1)^{12} = 1",
+       "en": "Since $-1$ is raised to an even power ($12$), the result is $+1$. Thus, the final answer is $1$.",
+       "ur": "چونکہ $-1$ کی طاقت ایک جفت عدد ($12$) ہے، اس لیے نتیجہ $+1$ ہے۔ اس طرح، حتمی جواب $1$ ہے۔",
+       "check": [
+        "(-1)**12 == 1",
         "I**13 * I**11 == 1"
        ]
       }
      ],
      "answer": "$1$",
+     "enriched": true,
      "book_key": "1"
     },
     {
@@ -3076,23 +4307,56 @@
      "prompt": "$(-i)^{-9}$",
      "steps": [
       {
-       "math": "(-i)^{-9} = (-1)^{-9}\\, i^{-9} = -\\,i^{-9}",
-       "en": "$(-1)^{-9} = -1$ because the power is odd.",
-       "ur": "$(-1)^{-9} = -1$ کیونکہ طاقت طاق ہے۔",
+       "math": "(-i)^{-9}",
+       "en": "We are given the complex expression $(-i)^{-9}$ and asked to simplify it.",
+       "ur": "ہمیں مختلط جملہ $(-i)^{-9}$ دیا گیا ہے اور اسے مختصر کرنے کو کہا گیا ہے۔"
+      },
+      {
+       "math": "(-i)^{-9} = (-1 \\cdot i)^{-9} = (-1)^{-9} \\cdot i^{-9}",
+       "en": "First, separate the negative sign from $i$ and apply the power $-9$ to both factors using the law of exponents $(ab)^n = a^n b^n$.",
+       "ur": "سب سے پہلے، منفی علامت کو $i$ سے الگ کریں اور قوت نما کے قانون $(ab)^n = a^n b^n$ کا استعمال کرتے ہوئے دونوں اجزاء پر طاقت $-9$ لاگو کریں۔",
        "check": [
-        "(-I)**(-9) == -I**(-9)"
+        "(-I)**(-9) == (-1)**(-9) * I**(-9)"
        ]
       },
       {
-       "math": "= -\\,i^{-9+12} = -\\,i^{3} = -(-i) = i",
-       "en": "Since $i^4 = 1$, adding or removing multiples of 4 in the power does not change the value.",
-       "ur": "چونکہ $i^4 = 1$، طاقت میں 4 کے مضرب جمع یا تفریق کرنے سے قیمت نہیں بدلتی۔",
+       "math": "= -1 \\cdot i^{-9} = -i^{-9}",
+       "en": "Since $-9$ is an odd integer, $(-1)^{-9} = -1$.",
+       "ur": "چونکہ $-9$ ایک طاق عدد ہے، اس لیے $(-1)^{-9} = -1$ ہوتا ہے۔",
        "check": [
+        "(-1)**(-9) * I**(-9) == -I**(-9)"
+       ]
+      },
+      {
+       "math": "= -i^{-9} \\cdot 1 = -i^{-9} \\cdot i^{12}",
+       "en": "To make the exponent positive, multiply by $i^{12}$. Since $i^4 = 1$, any power of $i$ that is a multiple of $4$ equals $1$ (here $i^{12} = (i^4)^3 = 1^3 = 1$), so the value does not change.",
+       "ur": "طاقت کو مثبت بنانے کے لیے $i^{12}$ سے ضرب دیں۔ چونکہ $i^4 = 1$ ہوتا ہے، اس لیے $i$ کی کوئی بھی طاقت جو $4$ کا مضرب ہو $1$ کے برابر ہوتی ہے (یہاں $i^{12} = (i^4)^3 = 1^3 = 1$)، لہٰذا قیمت نہیں بدلتی۔",
+       "check": [
+        "-I**(-9) == -I**(-9) * I**12"
+       ]
+      },
+      {
+       "math": "= -i^{-9+12} = -i^{3}",
+       "en": "Add the exponents of $i$ using the product rule $a^m \\cdot a^n = a^{m+n}$.",
+       "ur": "ضرب کے اصول $a^m \\cdot a^n = a^{m+n}$ کا استعمال کرتے ہوئے $i$ کے قوت نماؤں کو جمع کریں۔",
+       "check": [
+        "-I**(-9) * I**12 == -I**3"
+       ]
+      },
+      {
+       "math": "= -(i^2 \\cdot i) = -(-1 \\cdot i) = -(-i) = i",
+       "en": "Write $i^3$ as $i^2 \\cdot i$ and substitute $i^2 = -1$ to get the final simplified form.",
+       "ur": "$i^3$ کو $i^2 \\cdot i$ کے طور پر لکھیں اور حتمی مختصر شکل حاصل کرنے کے لیے $i^2 = -1$ درج کریں۔",
+       "check": [
+        "-I**3 == -(-I)",
+        "-(-I) == I",
+        "(-I)**(-9) == -I**(-9)",
         "-I**(-9) == I"
        ]
       }
      ],
      "answer": "$i$",
+     "enriched": true,
      "book_key": "i"
     },
     {
@@ -3100,24 +4364,60 @@
      "prompt": "$\\left(3 - 4i\\right)\\left(5 - 6i\\right)$",
      "steps": [
       {
-       "math": "\\left(3 - 4i\\right)\\left(5 - 6i\\right) = 15 - 18i - 20i + 24i^2",
-       "en": "Multiply each term of the first bracket by each term of the second.",
-       "ur": "پہلی قوسین کے ہر رکن کو دوسری قوسین کے ہر رکن سے ضرب دیں۔",
+       "math": "\\left(3 - 4i\\right)\\left(5 - 6i\\right)",
+       "en": "Write down the given product of the two complex numbers that we need to simplify.",
+       "ur": "دیے گئے دو مخلوط اعداد کا حاصل ضرب لکھیں جسے ہمیں مختصر کرنا ہے۔"
+      },
+      {
+       "math": "= 3\\left(5 - 6i\\right) - 4i\\left(5 - 6i\\right)",
+       "en": "Apply the distributive property by multiplying each term of the first bracket with the entire second bracket.",
+       "ur": "تقسیمی خاصیت کا استعمال کرتے ہوئے پہلی قوسین کے ہر رکن کو دوسری مکمل قوسین سے ضرب دیں۔",
        "check": [
-        "(3 - 4*I)*(5 - 6*I) == (15) + (-38)*I + (24)*I**2"
+        "(3 - 4*I)*(5 - 6*I) == 3*(5 - 6*I) - 4*I*(5 - 6*I)"
        ]
       },
       {
-       "math": "= 15 - 38i - 24 = -9 - 38i",
-       "en": "Put $i^2 = -1$ and collect the real and imaginary parts.",
-       "ur": "$i^2 = -1$ رکھیں اور حقیقی اور خیالی حصے اکٹھے کریں۔",
+       "math": "= 15 - 18i - 20i + 24i^2",
+       "en": "Expand the brackets by performing the multiplications.",
+       "ur": "ضرب کا عمل مکمل کر کے قوسین کو کھولیں۔",
        "check": [
+        "3*(5 - 6*I) - 4*I*(5 - 6*I) == 15 - 18*I - 20*I + 24*I**2"
+       ]
+      },
+      {
+       "math": "= 15 - 38i + 24(-1)",
+       "en": "Combine the like imaginary terms ($-18i - 20i = -38i$) and substitute the fundamental property $i^2 = -1$.",
+       "ur": "یکساں خیالی ارکان کو یکجا کریں ($-18i - 20i = -38i$) اور بنیادی کلیہ $i^2 = -1$ درج کریں۔",
+       "check": [
+        "-18*I - 20*I == -38*I",
+        "I**2 == -1",
+        "15 - 38*I + 24*(-1) == (3 - 4*I)*(5 - 6*I)"
+       ]
+      },
+      {
+       "math": "= 15 - 24 - 38i",
+       "en": "Simplify the product $24(-1) = -24$ and group the real parts together.",
+       "ur": "حاصل ضرب $24(-1) = -24$ کو مختصر کریں اور حقیقی حصوں کو ایک ساتھ لکھیں۔",
+       "check": [
+        "24*(-1) == -24",
+        "15 - 38*I + 24*(-1) == 15 - 24 - 38*I"
+       ]
+      },
+      {
+       "math": "= -9 - 38i",
+       "en": "Subtract the real numbers ($15 - 24 = -9$) to obtain the final answer in the standard form $a + bi$.",
+       "ur": "معیاری شکل $a + bi$ میں حتمی جواب حاصل کرنے کے لیے حقیقی اعداد کو تفریق کریں ($15 - 24 = -9$)۔",
+       "check": [
+        "15 - 24 == -9",
+        "(3 - 4*I)*(5 - 6*I) == -9 - 38*I",
+        "(3 - 4*I)*(5 - 6*I) == (15) + (-38)*I + (24)*I**2",
         "I**2 == -1",
         "(3 - 4*I)*(5 - 6*I) == (-9 - 38*I)"
        ]
       }
      ],
      "answer": "$-9 - 38i$",
+     "enriched": true,
      "book_key": "-9-38i"
     },
     {
@@ -3168,15 +4468,43 @@
      "prompt": "additive inverse of $8+9i$",
      "steps": [
       {
-       "math": "z = 8 + 9i \\Rightarrow -z = -\\left(8 + 9i\\right) = -8 - 9i",
-       "en": "The additive inverse of $z$ is $-z$: change the sign of both parts.",
-       "ur": "$z$ کا جمعی معکوس $-z$ ہے: دونوں حصوں کی علامت بدل دیں۔",
+       "math": "",
+       "en": "We are given the complex number $z = 8 + 9i$ and we need to find its additive inverse.",
+       "ur": "ہمیں ایک مختلط عدد $z = 8 + 9i$ دیا گیا ہے اور ہمیں اس کا جمعی معکوس معلوم کرنا ہے۔"
+      },
+      {
+       "math": "",
+       "en": "The additive inverse of a complex number $z = a + bi$ is denoted by $-z$ and is found by changing the signs of both its real and imaginary parts, so $-z = -a - bi$.",
+       "ur": "کسی مختلط عدد $z = a + bi$ کے جمعی معکوس کو $-z$ سے ظاہر کیا جاتا ہے اور اسے اس کے حقیقی اور خیالی دونوں حصوں کی علامتیں تبدیل کر کے معلوم کیا جاتا ہے، یعنی $-z = -a - bi$۔"
+      },
+      {
+       "math": "-z = -(8 + 9i)",
+       "en": "Multiply the given complex number $z$ by a negative sign.",
+       "ur": "دیے گئے مختلط عدد $z$ کو منفی کی علامت سے ضرب دیں۔",
+       "check": [
+        "-(8 + 9*I) == -(8 + 9*I)"
+       ]
+      },
+      {
+       "math": "-z = -8 - 9i",
+       "en": "Distribute the negative sign inside the brackets to change the sign of both parts.",
+       "ur": "دونوں حصوں کی علامت تبدیل کرنے کے لیے منفی کی علامت کو بریکٹ کے اندر ضرب دیں۔",
+       "check": [
+        "-(8 + 9*I) == -8 - 9*I",
+        "(8 + 9*I) + (-8 - 9*I) == 0"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Hence, the additive inverse of $8 + 9i$ is $-8 - 9i$.",
+       "ur": "پس، $8 + 9i$ کا جمعی معکوس $-8 - 9i$ ہے۔",
        "check": [
         "(8 + 9*I) + (-8 - 9*I) == 0"
        ]
       }
      ],
      "answer": "$-8 - 9i$",
+     "enriched": true,
      "book_key": "-8-9i"
     },
     {
@@ -3528,38 +4856,116 @@
      "prompt": "$\\overline{\\overline{z_2}}=z_2$",
      "steps": [
       {
-       "math": "z_2 = 2+3i \\Rightarrow \\overline{z_2} = 2-3i \\Rightarrow \\overline{\\overline{z_2}} = 2+3i = z_2",
-       "en": "Taking the conjugate twice gives the number back.",
-       "ur": "دو بار مزدوج لینے سے وہی عدد واپس ملتا ہے۔",
+       "math": "z_2 = 2 + 3i",
+       "en": "First, write down the given complex number $z_2$. We need to verify that $\\overline{\\overline{z_2}} = z_2$.",
+       "ur": "سب سے پہلے، دی گئی مختلط عدد $z_2$ لکھیں۔ ہمیں یہ تصدیق کرنی ہے کہ $\\overline{\\overline{z_2}} = z_2$ ہے۔",
        "check": [
+        "2 + 3*I == 2 + 3*I"
+       ]
+      },
+      {
+       "math": "\\overline{z} = a - bi",
+       "en": "Recall that to find the conjugate of a complex number $z = a + bi$, we change the sign of its imaginary part.",
+       "ur": "یاد رکھیں کہ کسی مختلط عدد $z = a + bi$ کا مزدوج (conjugate) معلوم کرنے کے لیے، ہم اس کے خیالی حصے کی علامت تبدیل کرتے ہیں۔"
+      },
+      {
+       "math": "\\overline{z_2} = \\overline{2 + 3i} = 2 - 3i",
+       "en": "Take the conjugate of $z_2$ for the first time by changing $+3i$ to $-3i$.",
+       "ur": "$+3i$ کو $-3i$ میں تبدیل کر کے پہلی بار $z_2$ کا مزدوج لیں۔",
+       "check": [
+        "conjugate(2 + 3*I) == 2 - 3*I"
+       ]
+      },
+      {
+       "math": "\\overline{\\overline{z_2}} = \\overline{2 - 3i} = 2 + 3i",
+       "en": "Now, take the conjugate again to find the Left Hand Side ($\\text{L.H.S} = \\overline{\\overline{z_2}}$) by changing $-3i$ back to $+3i$.",
+       "ur": "اب، بائیں طرف ($\\text{L.H.S} = \\overline{\\overline{z_2}}$) معلوم کرنے کے لیے $-3i$ کو واپس $+3i$ میں تبدیل کر کے دوبارہ مزدوج لیں۔",
+       "check": [
+        "conjugate(2 - 3*I) == 2 + 3*I",
+        "conjugate(conjugate(2 + 3*I)) == 2 + 3*I"
+       ]
+      },
+      {
+       "math": "\\overline{\\overline{z_2}} = z_2",
+       "en": "Since $2 + 3i$ is equal to the original complex number $z_2$ (which is the $\\text{R.H.S}$), it is verified that $\\text{L.H.S} = \\text{R.H.S}$.",
+       "ur": "چونکہ $2 + 3i$ اصل مختلط عدد $z_2$ (جو کہ $\\text{R.H.S}$ ہے) کے برابر ہے، اس لیے یہ تصدیق ہو گئی ہے کہ $\\text{L.H.S} = \\text{R.H.S}$۔",
+       "check": [
+        "conjugate(conjugate(2 + 3*I)) == 2 + 3*I",
         "conjugate(conjugate(2+3*I)) == 2+3*I"
        ]
       }
      ],
-     "answer": "verified: $\\overline{\\overline{z_2}} = z_2$"
+     "answer": "verified: $\\overline{\\overline{z_2}} = z_2$",
+     "enriched": true
     },
     {
      "label": "vi",
      "prompt": "$z_1\\overline{z_1}=|z_1|^2$",
      "steps": [
       {
-       "math": "z_1\\overline{z_1} = (3+4i)(3-4i) = 9 + 16 = 25",
-       "en": "Use $(a+bi)(a-bi) = a^2+b^2$.",
-       "ur": "$(a+bi)(a-bi) = a^2+b^2$ استعمال کریں۔",
+       "math": "z_1 = 3+4i",
+       "en": "Write down the given complex number $z_1$. We need to verify that $z_1\\overline{z_1} = |z_1|^2$.",
+       "ur": "دیے گئے مختلط عدد $z_1$ کو لکھیں۔ ہمیں تصدیق کرنی ہے کہ $z_1\\overline{z_1} = |z_1|^2$۔",
        "check": [
-        "(3+4*I)*(3-4*I) == 25"
+        "3+4*I == 3+4*I"
        ]
       },
       {
-       "math": "|z_1|^2 = \\left(\\sqrt{3^2+4^2}\\right)^2 = 25",
-       "en": "Square the modulus.",
-       "ur": "مقیاس کا مربع لیں۔",
+       "math": "\\overline{z_1} = \\overline{3+4i} = 3-4i",
+       "en": "First, find the conjugate $\\overline{z_1}$ by changing the sign of the imaginary part.",
+       "ur": "پہلے، خیالی حصے کی علامت تبدیل کر کے زوج (conjugate) $\\overline{z_1}$ معلوم کریں۔",
        "check": [
-        "Abs(3+4*I)**2 == 25"
+        "conjugate(3+4*I) == 3-4*I"
+       ]
+      },
+      {
+       "math": "z_1\\overline{z_1} = (3+4i)(3-4i)",
+       "en": "Take the Left-Hand Side (L.H.S.) and substitute the values of $z_1$ and $\\overline{z_1}$.",
+       "ur": "بائیں طرف (L.H.S.) لیں اور $z_1$ اور $\\overline{z_1}$ کی قیمتیں درج کریں۔",
+       "check": [
+        "(3+4*I)*conjugate(3+4*I) == (3+4*I)*(3-4*I)"
+       ]
+      },
+      {
+       "math": "z_1\\overline{z_1} = 3^2 - (4i)^2 = 9 - 16i^2 = 9 - 16(-1) = 9 + 16 = 25",
+       "en": "Use the algebraic identity $(a+b)(a-b) = a^2 - b^2$ and substitute $i^2 = -1$ to simplify the L.H.S.",
+       "ur": "کلیہ $(a+b)(a-b) = a^2 - b^2$ استعمال کریں اور بائیں طرف (L.H.S.) کو مختصر کرنے کے لیے $i^2 = -1$ درج کریں۔",
+       "check": [
+        "(3+4*I)*(3-4*I) == 9+16",
+        "9+16 == 25"
+       ]
+      },
+      {
+       "math": "|z_1| = |3+4i| = \\sqrt{3^2 + 4^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5",
+       "en": "Now, for the Right-Hand Side (R.H.S.), first find the modulus $|z_1|$ using the formula $|a+bi| = \\sqrt{a^2+b^2}$.",
+       "ur": "اب، دائیں طرف (R.H.S.) کے لیے، پہلے کلیہ $|a+bi| = \\sqrt{a^2+b^2}$ استعمال کرتے ہوئے مقیاس (modulus) $|z_1|$ معلوم کریں۔",
+       "check": [
+        "Abs(3+4*I) == sqrt(3**2 + 4**2)",
+        "sqrt(9+16) == 5"
+       ]
+      },
+      {
+       "math": "|z_1|^2 = (5)^2 = 25",
+       "en": "Take the square of the modulus to find the value of the R.H.S.",
+       "ur": "دائیں طرف (R.H.S.) کی قیمت معلوم کرنے کے لیے مقیاس کا مربع لیں۔",
+       "check": [
+        "Abs(3+4*I)**2 == 25",
+        "5**2 == 25"
+       ]
+      },
+      {
+       "math": "z_1\\overline{z_1} = |z_1|^2 = 25",
+       "en": "Since L.H.S. = R.H.S. = $25$, the given property is verified.",
+       "ur": "چونکہ بائیں طرف = دائیں طرف = $25$، اس لیے دی گئی خاصیت کی تصدیق ہو گئی ہے۔",
+       "check": [
+        "(3+4*I)*(3-4*I) == Abs(3+4*I)**2",
+        "Abs(3+4*I)**2 == 25",
+        "(3+4*I)*(3-4*I) == 25"
        ]
       }
      ],
-     "answer": "verified: both sides $= 25$"
+     "answer": "verified: both sides $= 25$",
+     "enriched": true
     }
    ],
    "exercise": "Review 1"
@@ -3576,24 +4982,51 @@
      "prompt": "$z_1z_2$",
      "steps": [
       {
-       "math": "\\left(5 + 4i\\right)\\left(3 + 2i\\right) = 15 + 10i + 12i + 8i^2",
-       "en": "Multiply each term of the first bracket by each term of the second.",
-       "ur": "پہلی قوسین کے ہر رکن کو دوسری قوسین کے ہر رکن سے ضرب دیں۔",
+       "math": "",
+       "en": "We are given two complex numbers $z_1 = 5 + 4i$ and $z_2 = 3 + 2i$, and we need to find their product $z_1 z_2$.",
+       "ur": "ہمیں دو مختلط اعداد $z_1 = 5 + 4i$ اور $z_2 = 3 + 2i$ دیے گئے ہیں، اور ہمیں ان کا حاصلِ ضرب $z_1 z_2$ معلوم کرنا ہے۔"
+      },
+      {
+       "math": "z_1 z_2 = (5 + 4i)(3 + 2i) = 5(3 + 2i) + 4i(3 + 2i)",
+       "en": "Substitute the values of $z_1$ and $z_2$, and apply the distributive property to multiply the first bracket with the second.",
+       "ur": "$z_1$ اور $z_2$ کی قیمتیں درج کریں، اور پہلی قوسین کو دوسری قوسین سے ضرب دینے کے لیے تقسیمی خاصیت کا استعمال کریں۔",
        "check": [
-        "(5 + 4*I)*(3 + 2*I) == (15) + (22)*I + (8)*I**2"
+        "(5 + 4*I)*(3 + 2*I) == 5*(3 + 2*I) + 4*I*(3 + 2*I)"
        ]
       },
       {
-       "math": "= 15 + 22i - 8 = 7 + 22i",
-       "en": "Put $i^2 = -1$ and collect the real and imaginary parts.",
-       "ur": "$i^2 = -1$ رکھیں اور حقیقی اور خیالی حصے اکٹھے کریں۔",
+       "math": "z_1 z_2 = 15 + 10i + 12i + 8i^2",
+       "en": "Multiply the terms inside the brackets.",
+       "ur": "قوسین کے اندر موجود ارکان کو ضرب دیں۔",
        "check": [
+        "5*(3 + 2*I) + 4*I*(3 + 2*I) == 15 + 10*I + 12*I + 8*I**2"
+       ]
+      },
+      {
+       "math": "z_1 z_2 = 15 + 22i + 8(-1)",
+       "en": "Combine the like imaginary terms ($10i + 12i = 22i$) and substitute $i^2 = -1$.",
+       "ur": "ایک جیسے خیالی ارکان کو جمع کریں ($10i + 12i = 22i$) اور $i^2 = -1$ درج کریں۔",
+       "check": [
+        "10*I + 12*I == 22*I",
+        "I**2 == -1",
+        "15 + 10*I + 12*I + 8*I**2 == 15 + 22*I + 8*(-1)"
+       ]
+      },
+      {
+       "math": "z_1 z_2 = 15 - 8 + 22i = 7 + 22i",
+       "en": "Simplify the real parts ($15 - 8 = 7$) to write the final answer in the standard form $a + bi$.",
+       "ur": "معیاری شکل $a + bi$ میں حتمی جواب لکھنے کے لیے حقیقی حصوں کو مختصر کریں ($15 - 8 = 7$)۔",
+       "check": [
+        "15 + 22*I + 8*(-1) == 15 - 8 + 22*I",
+        "15 - 8 + 22*I == 7 + 22*I",
+        "(5 + 4*I)*(3 + 2*I) == (15) + (22)*I + (8)*I**2",
         "I**2 == -1",
         "(5 + 4*I)*(3 + 2*I) == (7 + 22*I)"
        ]
       }
      ],
      "answer": "$7 + 22i$",
+     "enriched": true,
      "book_key": "7+22i"
     },
     {

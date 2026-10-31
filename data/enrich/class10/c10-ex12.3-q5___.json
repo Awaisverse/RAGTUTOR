@@ -1,0 +1,55 @@
+{
+ "item": "c10-ex12.3-q5",
+ "label": "",
+ "answer_ref": "$\\frac{1}{52}$",
+ "steps": [
+  {
+   "math": "n(S) = 52",
+   "en": "A standard pack of playing cards has a total of $52$ cards, so the total number of possible outcomes is $52$.",
+   "ur": "تاش کے ایک معیاری پیک میں کل $52$ پتے ہوتے ہیں، اس لیے ممکنہ نتائج کی کل تعداد $52$ ہے۔",
+   "check": [
+    "52 == 52"
+   ]
+  },
+  {
+   "math": "P(A) = \\frac{13}{52} = \\frac{1}{4}",
+   "en": "Let $A$ be the event that the first card drawn is a heart. Since there are $13$ hearts in a pack of $52$ cards, the probability of $A$ is $\\frac{13}{52}$.",
+   "ur": "فرض کریں کہ $A$ وہ وقوعہ ہے جس میں پہلا نکالا گیا پتہ پان (heart) کا ہے۔ چونکہ $52$ پتوں میں پان کے $13$ پتے ہوتے ہیں، اس لیے $A$ کا احتمال $\\frac{13}{52}$ ہے۔",
+   "check": [
+    "R(13, 52) == R(1, 4)"
+   ]
+  },
+  {
+   "math": "P(B) = \\frac{4}{52} = \\frac{1}{13}",
+   "en": "Let $B$ be the event that the second card drawn is a king. Because the first card is replaced, the total number of cards remains $52$. Since there are $4$ kings in the pack, the probability of $B$ is $\\frac{4}{52}$.",
+   "ur": "فرض کریں کہ $B$ وہ وقوعہ ہے جس میں دوسرا نکالا گیا پتہ بادشاہ (king) ہے۔ چونکہ پہلا پتہ واپس رکھ دیا گیا ہے، اس لیے کل پتوں کی تعداد $52$ ہی رہتی ہے۔ پیک میں $4$ بادشاہ ہوتے ہیں، اس لیے $B$ کا احتمال $\\frac{4}{52}$ ہے۔",
+   "check": [
+    "R(4, 52) == R(1, 13)"
+   ]
+  },
+  {
+   "math": "P(A \\cap B) = P(A) \\times P(B)",
+   "en": "Since the cards are drawn with replacement, the two events $A$ and $B$ are independent. By the multiplication law of probability for independent events, we multiply their individual probabilities.",
+   "ur": "چونکہ پتے واپسی کی شرط کے ساتھ نکالے گئے ہیں، اس لیے دونوں واقعات $A$ اور $B$ آزاد (independent) ہیں۔ آزاد واقعات کے لیے احتمال کے ضربی قانون کے مطابق ہم ان کے انفرادی احتمالات کو ضرب دیتے ہیں۔"
+  },
+  {
+   "math": "P(A \\cap B) = \\frac{13}{52} \\times \\frac{4}{52}",
+   "en": "Substitute the values of $P(A)$ and $P(B)$ into the formula.",
+   "ur": "فارمولے میں $P(A)$ اور $P(B)$ کی قیمتیں درج کریں۔",
+   "check": [
+    "R(13, 52) * R(4, 52) == R(1, 52)"
+   ]
+  },
+  {
+   "math": "P(A \\cap B) = \\frac{1}{4} \\times \\frac{1}{13} = \\frac{1}{52}",
+   "en": "Simplify the fractions and multiply them to get the final probability $\\frac{1}{52}$.",
+   "ur": "کسروں کو مختصر کریں اور انہیں ضرب دے کر حتمی احتمال $\\frac{1}{52}$ حاصل کریں۔",
+   "check": [
+    "R(1, 4) * R(1, 13) == R(1, 52)",
+    "R(13,52)*R(4,52) == 1/52"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

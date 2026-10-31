@@ -1,0 +1,53 @@
+{
+ "item": "c10-rev11-q1",
+ "label": "ix",
+ "answer_ref": "(a) $0$",
+ "steps": [
+  {
+   "math": "x = 8, 8, 8, 8, 8, 8, \\quad n = 6",
+   "en": "The given data has $n = 6$ values, and all of them are equal to $8$.",
+   "ur": "دیے گئے ڈیٹا میں $n = 6$ قیمتیں ہیں، اور یہ سب $8$ کے برابر ہیں۔",
+   "check": [
+    "1 + 1 + 1 + 1 + 1 + 1 == 6"
+   ]
+  },
+  {
+   "math": "\\bar{x} = \\frac{8 + 8 + 8 + 8 + 8 + 8}{6} = \\frac{48}{6} = 8",
+   "en": "First, find the mean $\\bar{x}$ by dividing the sum of the values by $n$.",
+   "ur": "سب سے پہلے، تمام قیمتوں کے مجموعے کو $n$ پر تقسیم کر کے اوسط $\\bar{x}$ معلوم کریں۔",
+   "check": [
+    "(8 + 8 + 8 + 8 + 8 + 8)/6 == 48/6",
+    "48/6 == 8"
+   ]
+  },
+  {
+   "math": "S^2 = \\frac{\\sum (x - \\bar{x})^2}{n}",
+   "en": "Write down the formula for the variance of ungrouped data.",
+   "ur": "غیر گروہی ڈیٹا کے تغیر (variance) کا فارمولا لکھیں۔"
+  },
+  {
+   "math": "S^2 = \\frac{(8 - 8)^2 + (8 - 8)^2 + (8 - 8)^2 + (8 - 8)^2 + (8 - 8)^2 + (8 - 8)^2}{6}",
+   "en": "Substitute each value $x = 8$, the mean $\\bar{x} = 8$, and $n = 6$ into the formula.",
+   "ur": "فارمولے میں ہر قیمت $x = 8$، اوسط $\\bar{x} = 8$، اور $n = 6$ درج کریں۔"
+  },
+  {
+   "math": "S^2 = \\frac{0 + 0 + 0 + 0 + 0 + 0}{6} = \\frac{0}{6} = 0",
+   "en": "Since all values are equal to the mean, each difference is $0$, so the variance is $0$.",
+   "ur": "چونکہ تمام قیمتیں اوسط کے برابر ہیں، اس لیے ہر فرق $0$ ہے، چنانچہ تغیر (variance) $0$ ہے۔",
+   "check": [
+    "((8 - 8)**2 + (8 - 8)**2 + (8 - 8)**2 + (8 - 8)**2 + (8 - 8)**2 + (8 - 8)**2)/6 == 0/6",
+    "0/6 == 0"
+   ]
+  },
+  {
+   "math": "\\text{Answer: (a) } 0",
+   "en": "Choose the option that matches the working.",
+   "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔",
+   "check": [
+    "6*(8 - 8)**2/6 == 0"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

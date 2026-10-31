@@ -1,0 +1,75 @@
+{
+ "item": "c10-ex3.1-q3",
+ "label": "",
+ "answer_ref": "A = F, B = D, C = E",
+ "steps": [
+  {
+   "math": "",
+   "en": "Two matrices are said to be equal if and only if they have the same order (number of rows and columns) and their corresponding entries are equal.",
+   "ur": "دو قالب مساوی کہلاتے ہیں اگر اور صرف اگر ان کا مرتبہ (قطاروں اور کالموں کی تعداد) ایک جیسا ہو اور ان کے متناظرہ ارکان آپس میں برابر ہوں۔"
+  },
+  {
+   "math": "C = \\begin{bmatrix} 2\\times3 & 2-1 \\\\ 2\\times2 & 4-2 \\\\ 4+4 & 3+0 \\end{bmatrix} = \\begin{bmatrix} 6 & 1 \\\\ 4 & 2 \\\\ 8 & 3 \\end{bmatrix}",
+   "en": "First, let us simplify the entries of matrix $C$ by performing the given arithmetic operations.",
+   "ur": "سب سے پہلے، ہم دیے گئے حسابی عوامل کو حل کر کے قالب $C$ کے ارکان کو سادہ کرتے ہیں۔",
+   "check": [
+    "Eq(Matrix([[2*3, 2-1], [2*2, 4-2], [4+4, 3+0]]), Matrix([[6, 1], [4, 2], [8, 3]]))"
+   ]
+  },
+  {
+   "math": "D = \\begin{bmatrix} 5+4 \\\\ -8+1 \\end{bmatrix} = \\begin{bmatrix} 9 \\\\ -7 \\end{bmatrix}",
+   "en": "Next, simplify the entries of matrix $D$.",
+   "ur": "اس کے بعد، قالب $D$ کے ارکان کو سادہ کریں۔",
+   "check": [
+    "Eq(Matrix([[5+4], [-8+1]]), Matrix([[9], [-7]]))"
+   ]
+  },
+  {
+   "math": "F = \\begin{bmatrix} 3-3 & 3 \\\\ 3+1 & 1 \\end{bmatrix} = \\begin{bmatrix} 0 & 3 \\\\ 4 & 1 \\end{bmatrix}",
+   "en": "Now, simplify the entries of matrix $F$.",
+   "ur": "اب، قالب $F$ کے ارکان کو سادہ کریں۔",
+   "check": [
+    "Eq(Matrix([[3-3, 3], [3+1, 1]]), Matrix([[0, 3], [4, 1]]))"
+   ]
+  },
+  {
+   "math": "A = \\begin{bmatrix} 0 & 3 \\\\ 4 & 1 \\end{bmatrix} = F",
+   "en": "Comparing the matrices, we see that $A$ and $F$ both have the order $2 \\times 2$ and their corresponding entries are identical. Thus, $A = F$.",
+   "ur": "قالبوں کا موازنہ کرنے سے معلوم ہوتا ہے کہ $A$ اور $F$ دونوں کا مرتبہ $2 \\times 2$ ہے اور ان کے متناظرہ ارکان بالکل ایک جیسے ہیں۔ اس لیے $A = F$ ہے۔",
+   "check": [
+    "Eq(Matrix([[0, 3], [4, 1]]), Matrix([[0, 3], [4, 1]]))"
+   ]
+  },
+  {
+   "math": "B = \\begin{bmatrix} 9 \\\\ -7 \\end{bmatrix} = D",
+   "en": "Similarly, matrices $B$ and $D$ both have the order $2 \\times 1$ and identical corresponding entries. Thus, $B = D$.",
+   "ur": "اسی طرح، قالب $B$ اور $D$ دونوں کا مرتبہ $2 \\times 1$ ہے اور متناظرہ ارکان ایک جیسے ہیں۔ اس لیے $B = D$ ہے۔",
+   "check": [
+    "Eq(Matrix([[9], [-7]]), Matrix([[9], [-7]]))"
+   ]
+  },
+  {
+   "math": "C = \\begin{bmatrix} 6 & 1 \\\\ 4 & 2 \\\\ 8 & 3 \\end{bmatrix} = E",
+   "en": "Finally, matrices $C$ and $E$ both have the order $3 \\times 2$ and identical corresponding entries. Thus, $C = E$.",
+   "ur": "آخر میں، قالب $C$ اور $E$ دونوں کا مرتبہ $3 \\times 2$ ہے اور متناظرہ ارکان ایک جیسے ہیں۔ اس لیے $C = E$ ہے۔",
+   "check": [
+    "Eq(Matrix([[6, 1], [4, 2], [8, 3]]), Matrix([[6, 1], [4, 2], [8, 3]]))"
+   ]
+  },
+  {
+   "math": "A = F,\\quad B = D,\\quad C = E",
+   "en": "Conclusion: The pairs of equal matrices are $A = F$, $B = D$, and $C = E$.",
+   "ur": "نتیجہ: مساوی قالبوں کے جوڑے $A = F$، $B = D$، اور $C = E$ ہیں۔",
+   "check": [
+    "Eq(Matrix([[6, 1], [4, 2], [8, 3]]), Matrix([[6, 1], [4, 2], [8, 3]]))",
+    "Eq(Matrix([[9], [-7]]), Matrix([[9], [-7]]))",
+    "Eq(Matrix([[0, 3], [4, 1]]), Matrix([[0, 3], [4, 1]]))",
+    "Eq(Matrix([[0, 3], [4, 1]]), Matrix([[0, 3], [4, 1]]))",
+    "Eq(Matrix([[9], [-7]]), Matrix([[9], [-7]]))",
+    "Eq(Matrix([[6, 1], [4, 2], [8, 3]]), Matrix([[6, 1], [4, 2], [8, 3]]))"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

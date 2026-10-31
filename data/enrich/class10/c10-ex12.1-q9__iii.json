@@ -1,0 +1,63 @@
+{
+ "item": "c10-ex12.1-q9",
+ "label": "iii",
+ "answer_ref": "$\\frac{1}{15}$",
+ "steps": [
+  {
+   "math": "S = \\{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15\\}",
+   "en": "First, write the sample space $S$ containing all whole numbers from $1$ to $15$.",
+   "ur": "سب سے پہلے، نمونہ فضا $S$ لکھیں جس میں $1$ سے $15$ تک تمام مکمل اعداد شامل ہیں۔",
+   "check": [
+    "15 == 15"
+   ]
+  },
+  {
+   "math": "n(S) = 15",
+   "en": "Count the total number of possible outcomes in the sample space $S$.",
+   "ur": "نمونہ فضا $S$ میں کل ممکنہ نتائج کی تعداد گنیں۔",
+   "check": [
+    "15 == 15"
+   ]
+  },
+  {
+   "math": "2^2 = 4",
+   "en": "We need to find the probability of selecting the square of $2$. First, calculate the square of $2$.",
+   "ur": "ہمیں $2$ کا مربع منتخب ہونے کا احتمال معلوم کرنا ہے۔ پہلے $2$ کا مربع معلوم کریں۔",
+   "check": [
+    "2**2 == 4"
+   ]
+  },
+  {
+   "math": "E = \\{4\\}",
+   "en": "Let $E$ be the event of selecting the square of $2$. From the sample space $S$, only the number $4$ satisfies this condition.",
+   "ur": "فرض کریں کہ $E$، $2$ کا مربع منتخب ہونے کا واقعہ ہے۔ نمونہ فضا $S$ میں سے صرف عدد $4$ اس شرط کو پورا کرتا ہے۔",
+   "check": [
+    "4 == 4"
+   ]
+  },
+  {
+   "math": "n(E) = 1",
+   "en": "Count the number of favourable outcomes in event $E$.",
+   "ur": "واقعہ $E$ میں موافق نتائج کی تعداد گنیں۔",
+   "check": [
+    "1 == 1"
+   ]
+  },
+  {
+   "math": "P(E) = \\frac{n(E)}{n(S)}",
+   "en": "Write the formula for the probability of an event, which is the number of favourable outcomes divided by the total number of outcomes.",
+   "ur": "کسی واقعہ کے احتمال کا فارمولا لکھیں، جو کہ موافق نتائج کی تعداد تقسیم کل نتائج کی تعداد ہے۔"
+  },
+  {
+   "math": "P(E) = \\frac{1}{15}",
+   "en": "Substitute $n(E) = 1$ and $n(S) = 15$ into the formula. Thus, the probability that the selected number is the square of $2$ is $\\frac{1}{15}$.",
+   "ur": "فارمولے میں $n(E) = 1$ اور $n(S) = 15$ درج کریں۔ اس طرح، منتخب کردہ عدد کے $2$ کا مربع ہونے کا احتمال $\\frac{1}{15}$ ہے۔",
+   "check": [
+    "R(1, 15) == 1/15",
+    "15 == 15"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

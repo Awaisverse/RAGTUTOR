@@ -1,0 +1,44 @@
+{
+ "item": "c10-rev7-q5",
+ "label": "i",
+ "answer_ref": "$16.1$ cm",
+ "steps": [
+  {
+   "math": "m\\overline{AB} = 8\\ \\text{cm},\\quad m\\overline{BF} = 14\\ \\text{cm}",
+   "en": "Write down the given lengths from the diagram for the right-angled triangle $ABF$ (where the right angle is at $B$). We need to find the distance $m\\overline{AF}$.",
+   "ur": "دی گئی شکل سے قائمہ الزاویہ مثلث $ABF$ (جہاں زاویہ قائمہ $B$ پر ہے) کے لیے دی گئی لمبائیاں لکھیں۔ ہمیں فاصلہ $m\\overline{AF}$ معلوم کرنا ہے۔"
+  },
+  {
+   "math": "(m\\overline{AF})^2 = (m\\overline{AB})^2 + (m\\overline{BF})^2",
+   "en": "Since $\\triangle ABF$ is a right-angled triangle, we apply the Pythagoras theorem, where $\\overline{AF}$ is the hypotenuse.",
+   "ur": "چونکہ $\\triangle ABF$ ایک قائمہ الزاویہ مثلث ہے، اس لیے ہم مسئلہ فیثاغورث کا اطلاق کرتے ہیں، جہاں $\\overline{AF}$ وتر ہے۔"
+  },
+  {
+   "math": "(m\\overline{AF})^2 = 8^2 + 14^2",
+   "en": "Substitute the given values $m\\overline{AB} = 8$ and $m\\overline{BF} = 14$ into the formula.",
+   "ur": "فارمولے میں دی گئی قیمتیں $m\\overline{AB} = 8$ اور $m\\overline{BF} = 14$ درج کریں۔"
+  },
+  {
+   "math": "(m\\overline{AF})^2 = 64 + 196 = 260",
+   "en": "Calculate the squares of both numbers and add them together.",
+   "ur": "دونوں اعداد کا مربع معلوم کریں اور انہیں آپس میں جمع کریں۔",
+   "check": [
+    "8**2 == 64",
+    "14**2 == 196",
+    "64 + 196 == 260"
+   ]
+  },
+  {
+   "math": "m\\overline{AF} = \\sqrt{260} \\approx 16.1\\ \\text{cm}",
+   "en": "Take the square root on both sides to find the distance between $A$ and $F$, rounded to one decimal place.",
+   "ur": "$A$ اور $F$ کے درمیان فاصلہ معلوم کرنے کے لیے دونوں طرف جزر لیں، اور جواب کو اشاریہ کے ایک درجہ تک محدود کریں۔",
+   "check": [
+    "Abs(sqrt(260) - 16.1) <= 0.05",
+    "8**2 + 14**2 == 260",
+    "Abs((sqrt(260)) - 16.1) <= 0.050000001"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

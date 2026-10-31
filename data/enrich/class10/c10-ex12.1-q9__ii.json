@@ -1,0 +1,48 @@
+{
+ "item": "c10-ex12.1-q9",
+ "label": "ii",
+ "answer_ref": "$\\frac{1}{5}$",
+ "steps": [
+  {
+   "math": "n(S) = 15",
+   "en": "First, we identify the sample space $S = \\{1, 2, 3, \\dots, 15\\}$ for whole numbers from $1$ to $15$. The total number of possible outcomes is $n(S) = 15$.",
+   "ur": "سب سے پہلے، ہم $1$ سے $15$ تک کے مکمل اعداد کے لیے نمونہ فضا $S = \\{1, 2, 3, \\dots, 15\\}$ لکھتے ہیں۔ کل ممکنہ نتائج کی تعداد $n(S) = 15$ ہے۔",
+   "check": [
+    "15 == 15"
+   ]
+  },
+  {
+   "math": "n(E) = 3",
+   "en": "Let $E$ be the event of selecting a multiple of $5$. From $1$ to $15$, the multiples of $5$ are $E = \\{5, 10, 15\\}$. Thus, the number of favourable outcomes is $n(E) = 3$.",
+   "ur": "فرض کریں کہ $E$، $5$ کا اضاف منتخب کرنے کا واقعہ ہے۔ $1$ سے $15$ کے درمیان $5$ کے اضعاف $E = \\{5, 10, 15\\}$ ہیں۔ اس طرح موافق نتائج کی تعداد $n(E) = 3$ ہے۔",
+   "check": [
+    "3 == 3"
+   ]
+  },
+  {
+   "math": "P(E) = \\frac{n(E)}{n(S)}",
+   "en": "Now, we apply the formula for the probability of an event, which is the number of favourable outcomes divided by the total number of possible outcomes.",
+   "ur": "اب، ہم کسی واقعے کے احتمال کا فارمولا استعمال کرتے ہیں، جو کہ موافق نتائج کی تعداد کو کل ممکنہ نتائج کی تعداد سے تقسیم کرنے کے برابر ہے۔"
+  },
+  {
+   "math": "P(E) = \\frac{3}{15}",
+   "en": "Substitute the values $n(E) = 3$ and $n(S) = 15$ into the probability formula.",
+   "ur": "احتمال کے فارمولے میں $n(E) = 3$ اور $n(S) = 15$ کی قیمتیں درج کریں۔",
+   "check": [
+    "R(3, 15) == R(3, 15)"
+   ]
+  },
+  {
+   "math": "P(E) = \\frac{1}{5}",
+   "en": "Simplify the fraction by dividing both the numerator and the denominator by $3$. Therefore, the probability of selecting a multiple of $5$ is $\\frac{1}{5}$.",
+   "ur": "شمار کنندہ اور مخرج دونوں کو $3$ سے تقسیم کر کے کسر کو مختصر کریں۔ لہٰذا، $5$ کا اضاف منتخب ہونے کا احتمال $\\frac{1}{5}$ ہے۔",
+   "check": [
+    "R(3, 15) == R(1, 5)",
+    "15 == 15",
+    "R(3, 15) == 1/5"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

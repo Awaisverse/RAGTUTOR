@@ -1,0 +1,51 @@
+{
+ "item": "ex1.3-q8",
+ "label": "",
+ "answer_ref": "Rs. 6225",
+ "steps": [
+  {
+   "math": "",
+   "en": "First, write down the given values: the annual income is Rs. $9,60,000$, the exempted amount is Rs. $1,30,000$, and the rate of income tax is $0.75\\%$.",
+   "ur": "سب سے پہلے دی گئی معلومات لکھیں: سالانہ آمدنی $9,60,000$ روپے ہے، مستثنیٰ رقم $1,30,000$ روپے ہے، اور انکم ٹیکس کی شرح $0.75\\%$ ہے۔"
+  },
+  {
+   "math": "\\text{Taxable Income} = \\text{Annual Income} - \\text{Exempted Amount}",
+   "en": "Income tax is paid only on the taxable income, which is found by subtracting the exempted amount from the total annual income.",
+   "ur": "انکم ٹیکس صرف قابلِ ٹیکس آمدنی پر ادا کیا جاتا ہے، جو کل سالانہ آمدنی سے مستثنیٰ رقم کو تفریق کر کے معلوم کی جاتی ہے۔"
+  },
+  {
+   "math": "\\text{Taxable Income} = 960000 - 130000 = 830000",
+   "en": "Substitute the given values and subtract to find the taxable income, which is Rs. $8,30,000$.",
+   "ur": "دی گئی قیمتیں درج کریں اور تفریق کر کے قابلِ ٹیکس آمدنی معلوم کریں، جو کہ $8,30,000$ روپے ہے۔",
+   "check": [
+    "960000 - 130000 == 830000"
+   ]
+  },
+  {
+   "math": "\\text{Income Tax} = \\text{Taxable Income} \\times \\text{Rate of Tax}",
+   "en": "Now, use the formula to calculate the total income tax.",
+   "ur": "اب کل انکم ٹیکس معلوم کرنے کے لیے فارمولا استعمال کریں۔"
+  },
+  {
+   "math": "\\text{Income Tax} = 830000 \\times \\frac{0.75}{100}",
+   "en": "Substitute the taxable income of $8,30,000$ and the tax rate of $0.75\\%$ (written as $\\frac{0.75}{100}$) into the formula.",
+   "ur": "فارمولے میں قابلِ ٹیکس آمدنی $8,30,000$ اور ٹیکس کی شرح $0.75\\%$ (جسے $\\frac{0.75}{100}$ لکھا جاتا ہے) درج کریں۔",
+   "check": [
+    "830000 * R(75, 10000) == 6225"
+   ]
+  },
+  {
+   "math": "\\text{Income Tax} = 8300 \\times 0.75 = 6225",
+   "en": "Simplify by dividing $8,30,000$ by $100$ to get $8300$, and then multiply by $0.75$. Thus, Tayyab has to pay Rs. $6225$ in tax.",
+   "ur": "$8,30,000$ کو $100$ پر تقسیم کر کے $8300$ حاصل کریں، اور پھر اسے $0.75$ سے ضرب دیں۔ اس طرح طیب کو $6225$ روپے ٹیکس ادا کرنا ہو گا۔",
+   "check": [
+    "830000 / 100 == 8300",
+    "8300 * R(75, 100) == 6225",
+    "960000 - 130000 == 830000",
+    "830000*Rational(75,10000) == 6225"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

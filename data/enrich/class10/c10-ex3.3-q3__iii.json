@@ -1,0 +1,54 @@
+{
+ "item": "c10-ex3.3-q3",
+ "label": "iii",
+ "answer_ref": "$\\begin{bmatrix} -2 & 1 \\\\ 2 & -3 \\end{bmatrix}$",
+ "steps": [
+  {
+   "math": "R = \\begin{bmatrix} 2 & -1 \\\\ -2 & 3 \\end{bmatrix}",
+   "en": "Write down the given matrix $R$. We need to find its additive inverse.",
+   "ur": "دیے گئے قالب $R$ کو لکھیں۔ ہمیں اس کا جمعی معکوس معلوم کرنا ہے۔",
+   "check": [
+    "2 == 2",
+    "-1 == -1",
+    "-2 == -2",
+    "3 == 3"
+   ]
+  },
+  {
+   "math": "-R = -\\begin{bmatrix} 2 & -1 \\\\ -2 & 3 \\end{bmatrix}",
+   "en": "The additive inverse of a matrix $R$ is denoted by $-R$. It is obtained by multiplying the matrix by a negative sign.",
+   "ur": "کسی قالب $R$ کے جمعی معکوس کو $-R$ سے ظاہر کیا جاتا ہے۔ یہ قالب کو منفی علامت سے ضرب دینے سے حاصل ہوتا ہے۔",
+   "check": [
+    "-2 == -2",
+    "-(-1) == 1",
+    "-(-2) == 2",
+    "-3 == -3"
+   ]
+  },
+  {
+   "math": "-R = \\begin{bmatrix} -(2) & -(-1) \\\\ -(-2) & -(3) \\end{bmatrix}",
+   "en": "Multiply each entry inside the matrix by the negative sign to change its sign.",
+   "ur": "قالب کے اندر موجود ہر رکن کی علامت بدلنے کے لیے اسے منفی علامت سے ضرب دیں۔",
+   "check": [
+    "-(2) == -2",
+    "-(-1) == 1",
+    "-(-2) == 2",
+    "-(3) == -3"
+   ]
+  },
+  {
+   "math": "-R = \\begin{bmatrix} -2 & 1 \\\\ 2 & -3 \\end{bmatrix}",
+   "en": "Simplify the signs of all entries to get the final additive inverse of matrix $R$.",
+   "ur": "قالب $R$ کا حتمی جمعی معکوس حاصل کرنے کے لیے تمام ارکان کی علامتوں کو مختصر کریں۔",
+   "check": [
+    "-(2) == -2",
+    "-(-1) == 1",
+    "-(-2) == 2",
+    "-(3) == -3",
+    "Eq(Matrix([[0, 0], [0, 0]]), Matrix([[0, 0], [0, 0]]))"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

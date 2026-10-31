@@ -1,0 +1,51 @@
+{
+ "item": "ex1.3-q7",
+ "label": "",
+ "answer_ref": "$1.33\\%$",
+ "steps": [
+  {
+   "math": "",
+   "en": "From the question, the Cost Price ($CP$) of the toy is Rs. $1500$ and the Selling Price ($SP$) is Rs. $1520$. We need to find the profit percentage.",
+   "ur": "سوال کے مطابق، کھلونے کی قیمتِ خرید ($CP$) $1500$ روپے اور قیمتِ فروخت ($SP$) $1520$ روپے ہے۔ ہمیں منافع کا فیصد معلوم کرنا ہے۔"
+  },
+  {
+   "math": "\\text{Profit} = SP - CP",
+   "en": "Since the selling price is greater than the cost price ($SP > CP$), Mirha made a profit. The formula to calculate profit is selling price minus cost price.",
+   "ur": "چونکہ قیمتِ فروخت قیمتِ خرید سے زیادہ ہے ($SP > CP$)، اس لیے مرحا کو منافع ہوا۔ منافع معلوم کرنے کا فارمولا قیمتِ فروخت منفی قیمتِ خرید ہے۔"
+  },
+  {
+   "math": "\\text{Profit} = 1520 - 1500 = \\text{Rs. } 20",
+   "en": "Substitute the given values of $SP$ and $CP$ into the formula and subtract to find the profit amount.",
+   "ur": "فارمولے میں $SP$ اور $CP$ کی دی گئی قیمتیں درج کریں اور منافع کی رقم معلوم کرنے کے لیے تفریق کریں۔",
+   "check": [
+    "1520 - 1500 == 20"
+   ]
+  },
+  {
+   "math": "\\text{Profit\\%} = \\left( \\frac{\\text{Profit}}{CP} \\times 100 \\right)\\%",
+   "en": "Now, to find the profit percentage, we divide the profit by the cost price ($CP$) and multiply by $100$.",
+   "ur": "اب، منافع فیصد معلوم کرنے کے لیے، ہم منافع کو قیمتِ خرید ($CP$) پر تقسیم کرتے ہیں اور $100$ سے ضرب دیتے ہیں۔"
+  },
+  {
+   "math": "\\text{Profit\\%} = \\left( \\frac{20}{1500} \\times 100 \\right)\\% = \\frac{2000}{1500}\\% = \\frac{4}{3}\\%",
+   "en": "Substitute $\\text{Profit} = 20$ and $CP = 1500$ into the formula and simplify the fraction.",
+   "ur": "فارمولے میں $\\text{Profit} = 20$ اور $CP = 1500$ درج کریں اور کسر کو مختصر کریں۔",
+   "check": [
+    "R(20, 1500) * 100 == R(2000, 1500)",
+    "R(2000, 1500) == R(4, 3)"
+   ]
+  },
+  {
+   "math": "\\text{Profit\\%} = 1.33\\%",
+   "en": "Divide $4$ by $3$ and round to two decimal places. Thus, Mirha's profit percentage is $1.33\\%$.",
+   "ur": "$4$ کو $3$ پر تقسیم کریں اور اعشاریہ کے بعد دو درجوں تک محدود کریں۔ اس طرح، مرحا کا منافع فیصد $1.33\\%$ ہے۔",
+   "check": [
+    "Abs(R(4, 3) - R(133, 100)) < R(1, 100)",
+    "1520 - 1500 == 20",
+    "abs(Rational(20*100,1500) - Rational('1.33')) < Rational(1,100)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

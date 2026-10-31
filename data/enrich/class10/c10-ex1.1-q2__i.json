@@ -1,0 +1,39 @@
+{
+ "item": "c10-ex1.1-q2",
+ "label": "i",
+ "answer_ref": "$2 + 2i$",
+ "steps": [
+  {
+   "math": "2 + \\sqrt{-4}",
+   "en": "We are given the expression $2 + \\sqrt{-4}$ and asked to write it in terms of the imaginary unit $i$.",
+   "ur": "ہمیں جملہ $2 + \\sqrt{-4}$ دیا گیا ہے اور ہمیں اسے خیالی اکائی $i$ کے لحاظ سے لکھنا ہے۔"
+  },
+  {
+   "math": "\\sqrt{-4} = \\sqrt{4 \\times (-1)} = \\sqrt{4}\\sqrt{-1}",
+   "en": "First, separate the negative sign inside the square root using the property $\\sqrt{-a} = \\sqrt{a}\\sqrt{-1}$ for a positive number $a$.",
+   "ur": "سب سے پہلے، مثبت عدد $a$ کے لیے خاصیت $\\sqrt{-a} = \\sqrt{a}\\sqrt{-1}$ کا استعمال کرتے ہوئے جزر کے اندر موجود منفی علامت کو الگ کریں۔",
+   "check": [
+    "sqrt(-4) == sqrt(4)*sqrt(-1)"
+   ]
+  },
+  {
+   "math": "2 + \\sqrt{-4} = 2 + \\sqrt{4}\\sqrt{-1}",
+   "en": "Substitute this back into the original expression.",
+   "ur": "اسے واپس اصل جملے میں درج کریں۔",
+   "check": [
+    "2 + sqrt(-4) == 2 + sqrt(4)*sqrt(-1)"
+   ]
+  },
+  {
+   "math": "2 + \\sqrt{4}\\sqrt{-1} = 2 + 2i",
+   "en": "Since $\\sqrt{4} = 2$ and the imaginary unit is defined as $i = \\sqrt{-1}$, replace them to get the final form.",
+   "ur": "چونکہ $\\sqrt{4} = 2$ ہے اور خیالی اکائی کی تعریف $i = \\sqrt{-1}$ ہے، اس لیے حتمی شکل حاصل کرنے کے لیے ان کی قیمتیں درج کریں۔",
+   "check": [
+    "2 + sqrt(4)*sqrt(-1) == 2 + 2*I",
+    "2 + sqrt(-4) == 2 + 2*I"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

@@ -1,0 +1,48 @@
+{
+ "item": "rev1-q1",
+ "label": "iv",
+ "answer_ref": "d",
+ "steps": [
+  {
+   "math": "x = \\sqrt{3} + \\sqrt{5}",
+   "en": "Let the given number be $x$. We need to determine whether it is a whole number, an integer, a rational number, or an irrational number.",
+   "ur": "فرض کریں کہ دیا گیا عدد $x$ ہے۔ ہمیں یہ معلوم کرنا ہے کہ آیا یہ مکمل عدد، صحیح عدد، ناطق عدد، یا غیر ناطق عدد ہے۔"
+  },
+  {
+   "math": "x^2 = (\\sqrt{3} + \\sqrt{5})^2",
+   "en": "To check the nature of the number, we take the square of both sides using the algebraic identity $(a+b)^2 = a^2 + b^2 + 2ab$.",
+   "ur": "عدد کی نوعیت جانچنے کے لیے، ہم الجبری کلیہ $(a+b)^2 = a^2 + b^2 + 2ab$ کا استعمال کرتے ہوئے دونوں طرف مربع لیتے ہیں۔"
+  },
+  {
+   "math": "x^2 = (\\sqrt{3})^2 + (\\sqrt{5})^2 + 2(\\sqrt{3})(\\sqrt{5})",
+   "en": "Substitute $a = \\sqrt{3}$ and $b = \\sqrt{5}$ into the formula.",
+   "ur": "کلیہ میں $a = \\sqrt{3}$ اور $b = \\sqrt{5}$ درج کریں۔",
+   "check": [
+    "(sqrt(3) + sqrt(5))**2 == (sqrt(3))**2 + (sqrt(5))**2 + 2*sqrt(3)*sqrt(5)"
+   ]
+  },
+  {
+   "math": "x^2 = 3 + 5 + 2\\sqrt{15} = 8 + 2\\sqrt{15}",
+   "en": "Simplify the terms. Since $15$ is not a perfect square (it lies between $9$ and $16$), $\\sqrt{15}$ is an irrational number.",
+   "ur": "رقوم کو مختصر کریں۔ چونکہ $15$ ایک مکمل مربع نہیں ہے (یہ $9$ اور $16$ کے درمیان ہے)، اس لیے $\\sqrt{15}$ ایک غیر ناطق عدد ہے۔",
+   "check": [
+    "(sqrt(3))**2 + (sqrt(5))**2 + 2*sqrt(3)*sqrt(5) == 3 + 5 + 2*sqrt(15)",
+    "3 + 5 + 2*sqrt(15) == 8 + 2*sqrt(15)",
+    "floor(sqrt(15))**2 < 15",
+    "(floor(sqrt(15))+1)**2 > 15"
+   ]
+  },
+  {
+   "math": "",
+   "en": "Because $8 + 2\\sqrt{15}$ is irrational, the square of our number is irrational. Since the square of any rational number is always rational, $\\sqrt{3}+\\sqrt{5}$ cannot be rational. Therefore, the correct option is (d) irrational number.",
+   "ur": "چونکہ $8 + 2\\sqrt{15}$ غیر ناطق ہے، اس لیے ہمارے عدد کا مربع غیر ناطق ہے۔ چونکہ کسی بھی ناطق عدد کا مربع ہمیشہ ناطق ہوتا ہے، اس لیے $\\sqrt{3}+\\sqrt{5}$ ناطق نہیں ہو سکتا۔ لہٰذا، درست آپشن (d) irrational number (غیر ناطق عدد) ہے۔",
+   "check": [
+    "(sqrt(3)+sqrt(5))**2 == 8 + 2*sqrt(15)",
+    "floor(sqrt(15))**2 < 15",
+    "(floor(sqrt(15))+1)**2 > 15"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

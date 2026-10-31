@@ -1,0 +1,50 @@
+{
+ "item": "ex1.3-q9",
+ "label": "",
+ "answer_ref": "Rs. 52500",
+ "steps": [
+  {
+   "math": "P = 375000, \\quad r = 14\\%, \\quad t = 1 \\text{ year}",
+   "en": "Write down the given values: Principal ($P$), rate of markup ($r$), and time period ($t$).",
+   "ur": "دی گئی قیمتیں لکھیں: اصل زر ($P$)، شرح منافع ($r$)، اور مدت ($t$)۔"
+  },
+  {
+   "math": "A = P\\left(1 + \\frac{r}{100}\\right)^t",
+   "en": "To find the total amount ($A$) when markup is compounded annually, we use the compound amount formula.",
+   "ur": "جب منافع سالانہ بنیادوں پر مرکب ہو تو کل رقم ($A$) معلوم کرنے کے لیے ہم مرکب رقم کا فارمولا استعمال کرتے ہیں۔"
+  },
+  {
+   "math": "A = 375000\\left(1 + \\frac{14}{100}\\right)^1",
+   "en": "Substitute the given values $P = 375000$, $r = 14$, and $t = 1$ into the formula.",
+   "ur": "فارمولے میں دی گئی قیمتیں $P = 375000$، $r = 14$ اور $t = 1$ درج کریں۔"
+  },
+  {
+   "math": "A = 375000 \\times (1 + 0.14) = 375000 \\times 1.14",
+   "en": "Simplify the fraction $\\frac{14}{100} = 0.14$ and add it to $1$.",
+   "ur": "کسر $\\frac{14}{100} = 0.14$ کو مختصر کریں اور اسے $1$ میں جمع کریں۔",
+   "check": [
+    "1 + R(14, 100) == R(114, 100)",
+    "375000 * (1 + R(14, 100)) == 375000 * R(114, 100)"
+   ]
+  },
+  {
+   "math": "A = 427500",
+   "en": "Multiply $375000$ by $1.14$ to get the total amount after one year.",
+   "ur": "ایک سال بعد کی کل رقم حاصل کرنے کے لیے $375000$ کو $1.14$ سے ضرب دیں۔",
+   "check": [
+    "375000 * R(114, 100) == 427500"
+   ]
+  },
+  {
+   "math": "\\text{Compound Markup} = A - P = 427500 - 375000 = 52500",
+   "en": "Subtract the principal ($P$) from the total amount ($A$) to find the compound markup. Thus, the compound markup is Rs. $52500$.",
+   "ur": "مرکب منافع معلوم کرنے کے لیے کل رقم ($A$) میں سے اصل زر ($P$) کو تفریق کریں۔ اس طرح، مرکب منافع $52500$ روپے ہے۔",
+   "check": [
+    "427500 - 375000 == 52500",
+    "375000*Rational(114,100) == 427500"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

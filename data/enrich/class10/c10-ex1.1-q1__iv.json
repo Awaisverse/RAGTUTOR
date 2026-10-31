@@ -1,0 +1,56 @@
+{
+ "item": "c10-ex1.1-q1",
+ "label": "iv",
+ "answer_ref": "$-27$",
+ "steps": [
+  {
+   "math": "27i^{-26}",
+   "en": "We are given the complex expression $27i^{-26}$ and we need to simplify it.",
+   "ur": "ہمیں مختلط جملہ $27i^{-26}$ دیا گیا ہے اور ہمیں اسے مختصر کرنا ہے۔"
+  },
+  {
+   "math": "= \\frac{27}{i^{26}}",
+   "en": "First, make the negative exponent positive by moving $i^{-26}$ to the denominator using the law of exponents $a^{-n} = \\frac{1}{a^n}$.",
+   "ur": "سب سے پہلے، قوت نما کے قانون $a^{-n} = \\frac{1}{a^n}$ کو استعمال کرتے ہوئے $i^{-26}$ کو مخرج میں لے جا کر منفی قوت نما کو مثبت بنائیں۔",
+   "check": [
+    "27*I**(-26) == 27/(I**26)"
+   ]
+  },
+  {
+   "math": "= \\frac{27}{(i^2)^{13}}",
+   "en": "Rewrite the even power $i^{26}$ in terms of $i^2$ using the power rule $(a^m)^n = a^{m \\times n}$, since $2 \\times 13 = 26$.",
+   "ur": "جفت طاقت $i^{26}$ کو طاقت کے اصول $(a^m)^n = a^{m \\times n}$ کی مدد سے $i^2$ کی شکل میں لکھیں، کیونکہ $2 \\times 13 = 26$ ہوتا ہے۔",
+   "check": [
+    "27/(I**26) == 27/((I**2)**13)"
+   ]
+  },
+  {
+   "math": "= \\frac{27}{(-1)^{13}}",
+   "en": "Substitute the fundamental value of the imaginary unit, $i^2 = -1$.",
+   "ur": "خیالی اکائی کی بنیادی قیمت $i^2 = -1$ درج کریں۔",
+   "check": [
+    "27/((I**2)**13) == 27/((-1)**13)"
+   ]
+  },
+  {
+   "math": "= \\frac{27}{-1}",
+   "en": "Since $-1$ raised to an odd power ($13$) is always $-1$, we get $(-1)^{13} = -1$.",
+   "ur": "چونکہ $-1$ کی طاقت ایک طاق عدد ($13$) ہے، اس لیے جواب ہمیشہ $-1$ آتا ہے، یعنی $(-1)^{13} = -1$۔",
+   "check": [
+    "27/((-1)**13) == 27/(-1)"
+   ]
+  },
+  {
+   "math": "= -27",
+   "en": "Dividing $27$ by $-1$ gives the final simplified answer $-27$.",
+   "ur": "$27$ کو $-1$ پر تقسیم کرنے سے حتمی مختصر جواب $-27$ حاصل ہوتا ہے۔",
+   "check": [
+    "27/(-1) == -27",
+    "27*I**(-26) == 27*I**2",
+    "27*I**(-26) == (-27)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

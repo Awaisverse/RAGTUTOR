@@ -1,0 +1,50 @@
+{
+ "item": "c10-ex8.1-q7",
+ "label": "",
+ "answer_ref": "$x = \\frac{121}{6} \\approx 20.17$",
+ "steps": [
+  {
+   "math": "m\\overline{CD} = 121\\ \\text{units}, \\quad m\\overline{BC} = 3x\\ \\text{units}",
+   "en": "First, write down the given lengths of the chord $\\overline{CD}$ and its segment $\\overline{BC}$.",
+   "ur": "سب سے پہلے، دیے گئے وتر $\\overline{CD}$ اور اس کے حصے $\\overline{BC}$ کی لمبائیاں لکھیں۔"
+  },
+  {
+   "math": "m\\overline{BC} = \\frac{1}{2}m\\overline{CD}",
+   "en": "In the figure, the line from the centre is perpendicular to the chord $\\overline{CD}$ at point $B$. By theorem, a perpendicular from the centre of a circle to a chord bisects the chord, so $B$ is the midpoint of $\\overline{CD}$.",
+   "ur": "شکل میں، مرکز سے آنے والا خط وتر $\\overline{CD}$ پر نقطہ $B$ پر عمود ہے۔ مسئلہ کے مطابق، دائرے کے مرکز سے وتر پر گرایا گیا عمود وتر کی تنصیف کرتا ہے، اس لیے $B$ وتر $\\overline{CD}$ کا وسطی نقطہ ہے۔"
+  },
+  {
+   "math": "3x = \\frac{1}{2}(121)",
+   "en": "Substitute the given values $m\\overline{BC} = 3x$ and $m\\overline{CD} = 121$ into the equation.",
+   "ur": "دی گئی قیمتیں $m\\overline{BC} = 3x$ اور $m\\overline{CD} = 121$ مساوات میں درج کریں۔"
+  },
+  {
+   "math": "3x = \\frac{121}{2}",
+   "en": "Simplify the right-hand side of the equation.",
+   "ur": "مساوات کی دائیں جانب کو مختصر کریں۔",
+   "check": [
+    "R(1,2)*121 == R(121,2)"
+   ]
+  },
+  {
+   "math": "x = \\frac{121}{2 \\times 3} = \\frac{121}{6}",
+   "en": "Divide both sides by $3$ to isolate $x$.",
+   "ur": "$x$ کی قیمت نکالنے کے لیے دونوں اطراف کو $3$ پر تقسیم کریں۔",
+   "check": [
+    "R(121,2)/3 == R(121,6)",
+    "3*R(121,6) == R(121,2)"
+   ]
+  },
+  {
+   "math": "x = \\frac{121}{6} \\approx 20.17\\ \\text{units}",
+   "en": "Convert the fraction into a decimal rounded to two decimal places to get the final answer.",
+   "ur": "حتمی جواب حاصل کرنے کے لیے کسر کو اعشاریہ کے دو درجوں تک محدود کریں۔",
+   "check": [
+    "Abs((R(121,6)) - 20.17) <= 0.0050000010000000004",
+    "3*R(121,6) == R(121,2)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

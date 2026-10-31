@@ -1,0 +1,56 @@
+{
+ "item": "c10-ex9.1-q3",
+ "label": "i",
+ "answer_ref": "$28^\\circ$",
+ "steps": [
+  {
+   "math": "",
+   "en": "We are given that $\\overline{AC}$ is the diameter of the circle, $\\overleftrightarrow{DE}$ is the tangent to the circle at point $C$, and $m\\angle BCD = 62^\\circ$. We need to find $m\\angle BCA$.",
+   "ur": "ہمیں دیا گیا ہے کہ $\\overline{AC}$ دائرے کا قطر ہے، $\\overleftrightarrow{DE}$ نقطہ $C$ پر دائرے کا مماس ہے، اور $m\\angle BCD = 62^\\circ$ ہے۔ ہمیں $m\\angle BCA$ معلوم کرنا ہے۔"
+  },
+  {
+   "math": "\\overline{AC} \\perp \\overleftrightarrow{DE}",
+   "en": "By theorem, the tangent to a circle is perpendicular to the radial segment (and hence the diameter) at the point of contact $C$.",
+   "ur": "مسئلہ کے مطابق، دائرے کا مماس نقطہ تماس $C$ پر رداسی قطعہ خط (اور اس طرح قطر) کے عمود ہوتا ہے۔"
+  },
+  {
+   "math": "m\\angle ACD = 90^\\circ",
+   "en": "Since the diameter $\\overline{AC}$ is perpendicular to the tangent $\\overleftrightarrow{DE}$ at $C$, the angle between them is a right angle.",
+   "ur": "چونکہ قطر $\\overline{AC}$ نقطہ $C$ پر مماس $\\overleftrightarrow{DE}$ کے عمود ہے، اس لیے ان کے درمیان زاویہ قائمہ ہے۔",
+   "check": [
+    "90 == 90"
+   ]
+  },
+  {
+   "math": "m\\angle ACD = m\\angle BCA + m\\angle BCD",
+   "en": "From the geometry of the figure, $\\angle ACD$ is the sum of the two adjacent angles $\\angle BCA$ and $\\angle BCD$.",
+   "ur": "شکل کی جیومیٹری کے مطابق، زاویہ $\\angle ACD$ دو متصلہ زاویوں $\\angle BCA$ اور $\\angle BCD$ کا مجموعہ ہے۔"
+  },
+  {
+   "math": "90^\\circ = m\\angle BCA + 62^\\circ",
+   "en": "Substitute the known values $m\\angle ACD = 90^\\circ$ and $m\\angle BCD = 62^\\circ$ into the equation.",
+   "ur": "مساوات میں معلوم قیمتیں $m\\angle ACD = 90^\\circ$ اور $m\\angle BCD = 62^\\circ$ درج کریں۔",
+   "check": [
+    "90 == 28 + 62"
+   ]
+  },
+  {
+   "math": "m\\angle BCA = 90^\\circ - 62^\\circ",
+   "en": "Rearrange the equation to isolate $m\\angle BCA$ by subtracting $62^\\circ$ from $90^\\circ$.",
+   "ur": "$90^\\circ$ میں سے $62^\\circ$ تفریق کر کے $m\\angle BCA$ کو الگ کرنے کے لیے مساوات کو ترتیب دیں۔",
+   "check": [
+    "28 == 90 - 62"
+   ]
+  },
+  {
+   "math": "m\\angle BCA = 28^\\circ",
+   "en": "Perform the subtraction to get the final value of $m\\angle BCA$.",
+   "ur": "$m\\angle BCA$ کی حتمی قیمت حاصل کرنے کے لیے تفریق کا عمل مکمل کریں۔",
+   "check": [
+    "90 - 62 == 28"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

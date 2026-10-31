@@ -1,0 +1,52 @@
+{
+ "item": "c10-rev4-q3",
+ "label": "iv",
+ "answer_ref": "$4 x + 42$",
+ "steps": [
+  {
+   "math": "g(x) = 14 + 2x",
+   "en": "First, write down the given function $g(x)$ to find $(g\\circ g)(x)$.",
+   "ur": "سب سے پہلے، $(g\\circ g)(x)$ معلوم کرنے کے لیے دیے گئے تفاعل $g(x)$ کو لکھیں۔",
+   "check": [
+    "14 + 2*x == 2*x + 14"
+   ]
+  },
+  {
+   "math": "(g\\circ g)(x) = g(g(x))",
+   "en": "By the definition of composition of functions, $(g\\circ g)(x)$ means applying the function $g$ to $g(x)$ itself.",
+   "ur": "تفاعلات کی ترکیب کی تعریف کے مطابق، $(g\\circ g)(x)$ کا مطلب تفاعل $g$ کو خود $g(x)$ پر لاگو کرنا ہے۔"
+  },
+  {
+   "math": "",
+   "en": "Substitute the value of the inner function $g(x) = 14 + 2x$ into $g(g(x))$ to get $g(14 + 2x)$.",
+   "ur": "اندرونی تفاعل $g(x) = 14 + 2x$ کی قیمت کو $g(g(x))$ میں درج کرنے سے ہمیں $g(14 + 2x)$ حاصل ہوتا ہے۔"
+  },
+  {
+   "math": "(g\\circ g)(x) = 14 + 2(14 + 2x)",
+   "en": "Now, replace $x$ with $(14 + 2x)$ in the original function $g(x) = 14 + 2x$.",
+   "ur": "اب، اصل تفاعل $g(x) = 14 + 2x$ میں $x$ کی جگہ $(14 + 2x)$ درج کریں۔",
+   "check": [
+    "(14 + 2*x).subs(x, 14 + 2*x) == 14 + 2*(14 + 2*x)"
+   ]
+  },
+  {
+   "math": "(g\\circ g)(x) = 14 + 28 + 4x",
+   "en": "Multiply $2$ with the terms inside the brackets.",
+   "ur": "بریکٹ کے اندر موجود رقموں کو $2$ سے ضرب دیں۔",
+   "check": [
+    "14 + 2*(14 + 2*x) == 14 + 28 + 4*x"
+   ]
+  },
+  {
+   "math": "(g\\circ g)(x) = 4 x + 42",
+   "en": "Add the constant terms $14$ and $28$ together and rearrange to get the final answer.",
+   "ur": "حتمی جواب حاصل کرنے کے لیے مستقل رقموں $14$ اور $28$ کو آپس میں جمع کریں اور ترتیب دیں۔",
+   "check": [
+    "14 + 28 + 4*x == 4*x + 42",
+    "(2*x + 14).subs(x, (2*x + 14)) == (4*x + 42)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

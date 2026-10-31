@@ -1,0 +1,49 @@
+{
+ "item": "c10-ex1.2-q1",
+ "label": "ii",
+ "answer_ref": "$25 - i$",
+ "steps": [
+  {
+   "math": "\\left(16 - 3i\\right) + \\left(9 + 2i\\right)",
+   "en": "We are given the sum of two complex numbers and need to simplify it into the standard form $a + bi$.",
+   "ur": "ہمیں دو مختلط اعداد کا مجموعہ دیا گیا ہے اور ہمیں اسے معیاری شکل $a + bi$ میں سادہ کرنا ہے۔"
+  },
+  {
+   "math": "= 16 - 3i + 9 + 2i",
+   "en": "First, remove the brackets. Since there is a plus sign between the brackets, the signs of the terms inside the second bracket do not change.",
+   "ur": "سب سے پہلے، بریکٹ ہٹائیں۔ چونکہ بریکٹوں کے درمیان جمع کی علامت ہے، اس لیے دوسری بریکٹ کے اندر موجود رقموں کی علامتیں تبدیل نہیں ہوتیں۔",
+   "check": [
+    "(16 - 3*I) + (9 + 2*I) == 16 - 3*I + 9 + 2*I"
+   ]
+  },
+  {
+   "math": "= (16 + 9) + (-3 + 2)i",
+   "en": "To add two complex numbers, we group the real parts together and the imaginary parts together using the rule $(a + bi) + (c + di) = (a + c) + (b + d)i$.",
+   "ur": "دو مختلط اعداد کو جمع کرنے کے لیے، ہم اصول $(a + bi) + (c + di) = (a + c) + (b + d)i$ کا استعمال کرتے ہوئے حقیقی حصوں کو ایک ساتھ اور خیالی حصوں کو ایک ساتھ ملا لیتے ہیں۔",
+   "check": [
+    "16 - 3*I + 9 + 2*I == (16 + 9) + (-3 + 2)*I"
+   ]
+  },
+  {
+   "math": "= 25 + (-1)i",
+   "en": "Now, add the real numbers ($16 + 9 = 25$) and the coefficients of the imaginary part ($-3 + 2 = -1$).",
+   "ur": "اب، حقیقی اعداد ($16 + 9 = 25$) اور خیالی حصے کے عددی سروں ($-3 + 2 = -1$) کو جمع کریں۔",
+   "check": [
+    "16 + 9 == 25",
+    "-3 + 2 == -1"
+   ]
+  },
+  {
+   "math": "= 25 - i",
+   "en": "Simplify $+(-1)i$ as $-i$. Thus, the expression in the standard form $a + bi$ is $25 - i$.",
+   "ur": "$+(-1)i$ کو سادہ کر کے $-i$ لکھیں۔ اس طرح، معیاری شکل $a + bi$ میں مطلوبہ جواب $25 - i$ ہے۔",
+   "check": [
+    "25 + (-1)*I == 25 - I",
+    "(16 - 3*I) + (9 + 2*I) == (25 - I)",
+    "(16) + (9) == (25)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

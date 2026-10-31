@@ -1,0 +1,50 @@
+{
+ "item": "c10-ex12.1-q5",
+ "label": "i",
+ "answer_ref": "$n(S) = 12$",
+ "steps": [
+  {
+   "math": "\\text{Outcomes of a die} = \\{1, 2, 3, 4, 5, 6\\}",
+   "en": "A standard 6-sided die has $6$ possible outcomes when rolled.",
+   "ur": "ایک معیاری 6 رخ والے پانسے کو پھینکنے پر $6$ ممکنہ نتائج حاصل ہوتے ہیں۔",
+   "check": [
+    "len([1, 2, 3, 4, 5, 6]) == 6"
+   ]
+  },
+  {
+   "math": "\\text{Outcomes of a coin} = \\{H, T\\}",
+   "en": "A fair coin has $2$ possible outcomes when tossed: Head ($H$) and Tail ($T$).",
+   "ur": "ایک سکے کو اچھالنے پر $2$ ممکنہ نتائج حاصل ہوتے ہیں: ہیڈ ($H$) اور ٹیل ($T$)۔",
+   "check": [
+    "1 + 1 == 2"
+   ]
+  },
+  {
+   "math": "\\begin{array}{c|cc} & H & T \\\\ \\hline 1 & (1, H) & (1, T) \\\\ 2 & (2, H) & (2, T) \\\\ 3 & (3, H) & (3, T) \\\\ 4 & (4, H) & (4, T) \\\\ 5 & (5, H) & (5, T) \\\\ 6 & (6, H) & (6, T) \\end{array}",
+   "en": "To draw the possibility diagram, we place the outcomes of the die in the rows and the outcomes of the coin in the columns, then pair each row with each column.",
+   "ur": "امکانی ڈایاگرام بنانے کے لیے ہم پانسے کے نتائج کو قطاروں میں اور سکے کے نتائج کو کالموں میں رکھتے ہیں، پھر ہر قطار کا ہر کالم کے ساتھ جوڑا بناتے ہیں۔",
+   "check": [
+    "6 * 2 == 12"
+   ]
+  },
+  {
+   "math": "S = \\{(1, H), (1, T), (2, H), (2, T), (3, H), (3, T), (4, H), (4, T), (5, H), (5, T), (6, H), (6, T)\\}",
+   "en": "From the possibility diagram, we write the complete sample space $S$ containing all the possible ordered pairs.",
+   "ur": "امکانی ڈایاگرام سے، ہم تمام ممکنہ مترتب جوڑوں پر مشتمل مکمل نمونہ فضا $S$ لکھتے ہیں۔",
+   "check": [
+    "6 * 2 == 12"
+   ]
+  },
+  {
+   "math": "n(S) = 6 \\times 2 = 12",
+   "en": "Counting the total number of elements in the sample space $S$, we get $n(S) = 12$.",
+   "ur": "نمونہ فضا $S$ میں ارکان کی کل تعداد گننے سے ہمیں $n(S) = 12$ حاصل ہوتا ہے۔",
+   "check": [
+    "6 * 2 == 12",
+    "6*2 == 12"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

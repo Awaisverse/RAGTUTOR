@@ -1,0 +1,155 @@
+{
+ "item": "c10-ex11.1-q6",
+ "label": "",
+ "answer_ref": "box from 14 to 24, median 19, whiskers to 12 and 26",
+ "steps": [
+  {
+   "math": "\\text{Min} = 12, \\quad Q_1 = 14, \\quad \\text{Median} = 19, \\quad Q_3 = 24, \\quad \\text{Max} = 26",
+   "en": "First, write down the given five-number summary required to draw the box-and-whisker plot.",
+   "ur": "سب سے پہلے، باکس اینڈ وسکر پلاٹ بنانے کے لیے دیے گئے پانچ نمبروں کا خلاصہ لکھیں۔",
+   "check": [
+    "12 == 12",
+    "14 == 14",
+    "19 == 19",
+    "24 == 24",
+    "26 == 26"
+   ],
+   "draw": [
+    {
+     "t": "numberline",
+     "from": 10,
+     "to": 30,
+     "y": 45,
+     "marks": []
+    },
+    {
+     "t": "line",
+     "p": [
+      14.8,
+      22,
+      23.6,
+      22
+     ]
+    },
+    {
+     "t": "line",
+     "p": [
+      67.6,
+      22,
+      76.4,
+      22
+     ]
+    },
+    {
+     "t": "line",
+     "p": [
+      14.8,
+      19,
+      14.8,
+      25
+     ]
+    },
+    {
+     "t": "line",
+     "p": [
+      76.4,
+      19,
+      76.4,
+      25
+     ]
+    },
+    {
+     "t": "poly",
+     "p": [
+      23.6,
+      16,
+      67.6,
+      16,
+      67.6,
+      28,
+      23.6,
+      28
+     ],
+     "close": true
+    },
+    {
+     "t": "line",
+     "p": [
+      45.6,
+      16,
+      45.6,
+      28
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      21.6,
+      13
+     ],
+     "s": "Q1"
+    },
+    {
+     "t": "text",
+     "p": [
+      42.6,
+      13
+     ],
+     "s": "Med"
+    },
+    {
+     "t": "text",
+     "p": [
+      65.6,
+      13
+     ],
+     "s": "Q3"
+    }
+   ]
+  },
+  {
+   "math": "12 < 14 < 19 < 24 < 26",
+   "en": "Draw a horizontal number line with a suitable scale that covers all values from the minimum ($12$) to the maximum ($26$), and mark the five given values above it.",
+   "ur": "ایک مناسب پیمانے کے ساتھ افقی عددی خط کھینچیں جو کم سے کم قیمت ($12$) سے لے کر زیادہ سے زیادہ قیمت ($26$) تک تمام قیمتوں کو ظاہر کرے، اور اس کے اوپر دی گئی پانچ قیمتوں پر نشان لگائیں۔",
+   "check": [
+    "12 < 14",
+    "14 < 19",
+    "19 < 24",
+    "24 < 26"
+   ]
+  },
+  {
+   "math": "Q_1 = 14, \\quad Q_3 = 24, \\quad \\text{Median} = 19",
+   "en": "Draw a rectangular box above the number line starting from the first quartile ($Q_1 = 14$) to the third quartile ($Q_3 = 24$). Then, draw a vertical line inside the box at the median value ($19$).",
+   "ur": "عددی خط کے اوپر پہلے چوتھائی ($Q_1 = 14$) سے لے کر تیسرے چوتھائی ($Q_3 = 24$) تک ایک مستطیل باکس بنائیں۔ پھر، باکس کے اندر وسطانیہ کی قیمت ($19$) پر ایک عمودی لکیر کھینچیں۔",
+   "check": [
+    "14 == 14",
+    "24 == 24",
+    "19 == 19"
+   ]
+  },
+  {
+   "math": "\\text{Min} = 12, \\quad \\text{Max} = 26",
+   "en": "Finally, draw horizontal line segments (whiskers) extending from the left edge of the box ($14$) to the minimum value ($12$), and from the right edge of the box ($24$) to the maximum value ($26$).",
+   "ur": "آخر میں، باکس کے بائیں کنارے ($14$) سے کم سے کم قیمت ($12$) تک، اور باکس کے دائیں کنارے ($24$) سے زیادہ سے زیادہ قیمت ($26$) تک افقی لکیریں (وسکرز) کھینچیں۔",
+   "check": [
+    "12 == 12",
+    "26 == 26"
+   ]
+  },
+  {
+   "math": "(12, 14, 19, 24, 26)",
+   "en": "Thus, the box-and-whisker plot has a box from $14$ to $24$, a median line at $19$, and whiskers extending to $12$ and $26$.",
+   "ur": "اس طرح، باکس اینڈ وسکر پلاٹ میں باکس $14$ سے $24$ تک ہے، وسطانیہ کی لکیر $19$ پر ہے، اور اطراف کی لکیریں (وسکرز) $12$ اور $26$ تک پھیلی ہوئی ہیں۔",
+   "check": [
+    "12 < 14",
+    "14 < 19",
+    "19 < 24",
+    "24 < 26"
+   ]
+  }
+ ],
+ "keeps_drawing": true,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

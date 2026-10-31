@@ -1,0 +1,66 @@
+{
+ "item": "c10-rev12-q3",
+ "label": "",
+ "answer_ref": "$\\frac{4}{13}$",
+ "steps": [
+  {
+   "math": "n(S) = 52",
+   "en": "A standard deck of playing cards contains a total of 52 cards, which forms our sample space $S$.",
+   "ur": "تاش کے پتوں کی ایک معیاری گڈی میں کل 52 پتے ہوتے ہیں، جو کہ ہماری نمونہ کی جگہ (sample space) $S$ ہے۔",
+   "check": [
+    "52 == 52"
+   ]
+  },
+  {
+   "math": "n(A) = 4,\\quad n(B) = 13",
+   "en": "Let event $A$ be getting an ace card and event $B$ be getting a spade card. There are 4 aces and 13 spades in the deck.",
+   "ur": "فرض کریں کہ واقعہ $A$ یکے (ace) کا پتہ نکلنا ہے اور واقعہ $B$ حکم (spade) کا پتہ نکلنا ہے۔ گڈی میں 4 یکے اور 13 حکم کے پتے ہوتے ہیں۔",
+   "check": [
+    "4 == 4",
+    "13 == 13"
+   ]
+  },
+  {
+   "math": "n(A \\cap B) = 1",
+   "en": "Events $A$ and $B$ are not mutually exclusive because there is 1 card that is both an ace and a spade (the ace of spades).",
+   "ur": "واقعات $A$ اور $B$ باہمی طور پر غیر مشترک نہیں ہیں کیونکہ 1 پتہ ایسا ہے جو یکہ بھی ہے اور حکم بھی (حکم کا یکہ)۔",
+   "check": [
+    "1 == 1"
+   ]
+  },
+  {
+   "math": "P(A) = \\frac{4}{52},\\quad P(B) = \\frac{13}{52},\\quad P(A \\cap B) = \\frac{1}{52}",
+   "en": "Now, we write the individual probabilities for each event using the formula $P(E) = \\frac{n(E)}{n(S)}$.",
+   "ur": "اب، ہم فارمولا $P(E) = \\frac{n(E)}{n(S)}$ کا استعمال کرتے ہوئے ہر واقعے کا انفرادی احتمال لکھتے ہیں۔",
+   "check": [
+    "R(4, 52) == R(1, 13)",
+    "R(13, 52) == R(1, 4)",
+    "R(1, 52) == R(1, 52)"
+   ]
+  },
+  {
+   "math": "P(A \\cup B) = P(A) + P(B) - P(A \\cap B)",
+   "en": "Since the events are overlapping (non-mutually exclusive), we apply the addition law of probability.",
+   "ur": "چونکہ یہ واقعات متداخل (overlapping) ہیں، اس لیے ہم احتمال کے جمع کا قانون لاگو کرتے ہیں۔"
+  },
+  {
+   "math": "P(A \\cup B) = \\frac{4}{52} + \\frac{13}{52} - \\frac{1}{52} = \\frac{16}{52}",
+   "en": "Substitute the probability values into the formula and combine the numerators over the common denominator 52.",
+   "ur": "فارمولے میں احتمال کی قیمتیں درج کریں اور مشترک مخرج 52 کے اوپر شمار کنندگان کو حل کریں۔",
+   "check": [
+    "R(4, 52) + R(13, 52) - R(1, 52) == R(16, 52)"
+   ]
+  },
+  {
+   "math": "P(A \\cup B) = \\frac{4}{13}",
+   "en": "Simplify the fraction by dividing both the numerator and the denominator by 4. Thus, the probability of getting an ace or a spade is $\\frac{4}{13}$.",
+   "ur": "شمار کنندہ اور مخرج دونوں کو 4 پر تقسیم کر کے کسر کو مختصر کریں۔ پس، یکہ یا حکم کا پتہ نکلنے کا احتمال $\\frac{4}{13}$ ہے۔",
+   "check": [
+    "R(16, 52) == R(4, 13)",
+    "R(4, 52) + R(13, 52) - R(1, 52) == 4/13"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

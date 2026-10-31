@@ -1,0 +1,60 @@
+{
+ "item": "c10-ex6.1-q6",
+ "label": "ii",
+ "answer_ref": "$\\frac{3}{5}\\underline{i} + \\frac{4}{5}\\underline{j}$",
+ "steps": [
+  {
+   "math": "\\underline{a} = 6\\underline{i} + 8\\underline{j}",
+   "en": "Write down the given vector $\\underline{a}$. Here, the components are $x = 6$ and $y = 8$.",
+   "ur": "دیا گیا سمتیہ $\\underline{a}$ لکھیں۔ یہاں اجزاء $x = 6$ اور $y = 8$ ہیں۔",
+   "check": [
+    "6 == 6",
+    "8 == 8"
+   ]
+  },
+  {
+   "math": "|\\underline{a}| = \\sqrt{(6)^2 + (8)^2}",
+   "en": "Substitute $x = 6$ and $y = 8$ into the magnitude formula $|\\underline{a}| = \\sqrt{x^2 + y^2}$.",
+   "ur": "مقدار کے فارمولے $|\\underline{a}| = \\sqrt{x^2 + y^2}$ میں $x = 6$ اور $y = 8$ درج کریں۔",
+   "check": [
+    "sqrt((6)**2 + (8)**2) == 10"
+   ]
+  },
+  {
+   "math": "|\\underline{a}| = \\sqrt{36 + 64} = \\sqrt{100} = 10",
+   "en": "Calculate the squares, add them together, and take the square root to find the magnitude.",
+   "ur": "مربع معلوم کریں، انہیں جمع کریں، اور مقدار معلوم کرنے کے لیے جذر المربع لیں۔",
+   "check": [
+    "6**2 == 36",
+    "8**2 == 64",
+    "36 + 64 == 100",
+    "sqrt(100) == 10"
+   ]
+  },
+  {
+   "math": "\\hat{a} = \\frac{6\\underline{i} + 8\\underline{j}}{10}",
+   "en": "A unit vector $\\hat{a}$ in the direction of $\\underline{a}$ is given by the formula $\\hat{a} = \\frac{\\underline{a}}{|\\underline{a}|}$. Substitute the vector and its magnitude.",
+   "ur": "$\\underline{a}$ کی سمت میں اکائی سمتیہ $\\hat{a}$ کا فارمولا $\\hat{a} = \\frac{\\underline{a}}{|\\underline{a}|}$ ہے۔ اس میں سمتیہ اور اس کی مقدار درج کریں۔",
+   "check": [
+    "R(6, 10) == R(3, 5)",
+    "R(8, 10) == R(4, 5)"
+   ]
+  },
+  {
+   "math": "\\hat{a} = \\frac{6}{10}\\underline{i} + \\frac{8}{10}\\underline{j} = \\frac{3}{5}\\underline{i} + \\frac{4}{5}\\underline{j}",
+   "en": "Separate the terms and simplify the fractions to get the final unit vector.",
+   "ur": "ارکان کو الگ کریں اور کسر کو مختصر کر کے مطلوبہ اکائی سمتیہ حاصل کریں۔",
+   "check": [
+    "R(6, 10) == R(3, 5)",
+    "R(8, 10) == R(4, 5)",
+    "(R(3, 5))**2 + (R(4, 5))**2 == 1",
+    "sqrt((6)**2 + (8)**2) == (10)",
+    "(3/5)**2 + (4/5)**2 == 1",
+    "(3/5)*(10) == (6)",
+    "(4/5)*(10) == (8)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

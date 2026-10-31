@@ -1,0 +1,57 @@
+{
+ "item": "c10-rev1-q3",
+ "label": "iii",
+ "answer_ref": "$i$",
+ "steps": [
+  {
+   "math": "(-i)^{-9}",
+   "en": "We are given the complex expression $(-i)^{-9}$ and asked to simplify it.",
+   "ur": "ہمیں مختلط جملہ $(-i)^{-9}$ دیا گیا ہے اور اسے مختصر کرنے کو کہا گیا ہے۔"
+  },
+  {
+   "math": "(-i)^{-9} = (-1 \\cdot i)^{-9} = (-1)^{-9} \\cdot i^{-9}",
+   "en": "First, separate the negative sign from $i$ and apply the power $-9$ to both factors using the law of exponents $(ab)^n = a^n b^n$.",
+   "ur": "سب سے پہلے، منفی علامت کو $i$ سے الگ کریں اور قوت نما کے قانون $(ab)^n = a^n b^n$ کا استعمال کرتے ہوئے دونوں اجزاء پر طاقت $-9$ لاگو کریں۔",
+   "check": [
+    "(-I)**(-9) == (-1)**(-9) * I**(-9)"
+   ]
+  },
+  {
+   "math": "= -1 \\cdot i^{-9} = -i^{-9}",
+   "en": "Since $-9$ is an odd integer, $(-1)^{-9} = -1$.",
+   "ur": "چونکہ $-9$ ایک طاق عدد ہے، اس لیے $(-1)^{-9} = -1$ ہوتا ہے۔",
+   "check": [
+    "(-1)**(-9) * I**(-9) == -I**(-9)"
+   ]
+  },
+  {
+   "math": "= -i^{-9} \\cdot 1 = -i^{-9} \\cdot i^{12}",
+   "en": "To make the exponent positive, multiply by $i^{12}$. Since $i^4 = 1$, any power of $i$ that is a multiple of $4$ equals $1$ (here $i^{12} = (i^4)^3 = 1^3 = 1$), so the value does not change.",
+   "ur": "طاقت کو مثبت بنانے کے لیے $i^{12}$ سے ضرب دیں۔ چونکہ $i^4 = 1$ ہوتا ہے، اس لیے $i$ کی کوئی بھی طاقت جو $4$ کا مضرب ہو $1$ کے برابر ہوتی ہے (یہاں $i^{12} = (i^4)^3 = 1^3 = 1$)، لہٰذا قیمت نہیں بدلتی۔",
+   "check": [
+    "-I**(-9) == -I**(-9) * I**12"
+   ]
+  },
+  {
+   "math": "= -i^{-9+12} = -i^{3}",
+   "en": "Add the exponents of $i$ using the product rule $a^m \\cdot a^n = a^{m+n}$.",
+   "ur": "ضرب کے اصول $a^m \\cdot a^n = a^{m+n}$ کا استعمال کرتے ہوئے $i$ کے قوت نماؤں کو جمع کریں۔",
+   "check": [
+    "-I**(-9) * I**12 == -I**3"
+   ]
+  },
+  {
+   "math": "= -(i^2 \\cdot i) = -(-1 \\cdot i) = -(-i) = i",
+   "en": "Write $i^3$ as $i^2 \\cdot i$ and substitute $i^2 = -1$ to get the final simplified form.",
+   "ur": "$i^3$ کو $i^2 \\cdot i$ کے طور پر لکھیں اور حتمی مختصر شکل حاصل کرنے کے لیے $i^2 = -1$ درج کریں۔",
+   "check": [
+    "-I**3 == -(-I)",
+    "-(-I) == I",
+    "(-I)**(-9) == -I**(-9)",
+    "-I**(-9) == I"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

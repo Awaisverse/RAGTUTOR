@@ -1,0 +1,43 @@
+{
+ "item": "c10-rev7-q1",
+ "label": "v",
+ "answer_ref": "(d) $-\\tan\\theta$",
+ "steps": [
+  {
+   "math": "\\tan(180^\\circ - \\theta)",
+   "en": "We need to simplify the given trigonometric expression $\\tan(180^\\circ - \\theta)$ using the rules of allied angles.",
+   "ur": "ہمیں دیے گئے مثلثیاتی جملے $\\tan(180^\\circ - \\theta)$ کو متعلقہ زاویوں (allied angles) کے اصولوں کی مدد سے مختصر کرنا ہے۔"
+  },
+  {
+   "math": "180^\\circ = 2 \\times 90^\\circ",
+   "en": "First, notice that $180^\\circ$ is an even multiple of $90^\\circ$. According to the allied angles rule, when the angle is an even multiple of $90^\\circ$, the trigonometric ratio remains the same (so $\\tan$ stays $\\tan$).",
+   "ur": "سب سے پہلے، غور کریں کہ $180^\\circ$ دراصل $90^\\circ$ کا جفت مضاعف (even multiple) ہے۔ متعلقہ زاویوں کے اصول کے مطابق، جب زاویہ $90^\\circ$ کا جفت مضاعف ہو تو مثلثیاتی نسبت تبدیل نہیں ہوتی (یعنی $\\tan$ ہی رہتا ہے)۔",
+   "check": [
+    "180 == 2 * 90"
+   ]
+  },
+  {
+   "math": "90^\\circ < 180^\\circ - \\theta < 180^\\circ",
+   "en": "Assuming $\\theta$ is an acute angle, the angle $(180^\\circ - \\theta)$ lies in the second quadrant (Quadrant II). In Quadrant II, only $\\sin$ and $\\csc$ are positive, while $\\tan$ is negative.",
+   "ur": "فرض کریں کہ $\\theta$ ایک حادہ زاویہ ہے، تو زاویہ $(180^\\circ - \\theta)$ دوسرے ربع (Quadrant II) میں واقع ہوتا ہے۔ دوسرے ربع میں صرف $\\sin$ اور $\\csc$ مثبت ہوتے ہیں، جبکہ $\\tan$ منفی ہوتا ہے۔"
+  },
+  {
+   "math": "\\tan(180^\\circ - \\theta) = -\\tan\\theta",
+   "en": "Combining the unchanged trigonometric ratio with the negative sign from the second quadrant gives $-\\tan\\theta$.",
+   "ur": "تبدیل نہ ہونے والی مثلثیاتی نسبت کو دوسرے ربع کی منفی علامت کے ساتھ ملانے سے ہمیں $-\\tan\\theta$ حاصل ہوتا ہے۔",
+   "check": [
+    "tan(pi - t) == -tan(t)"
+   ]
+  },
+  {
+   "math": "\\text{Answer: (d) } -\\tan\\theta",
+   "en": "Comparing our result with the given choices, option (d) is the correct answer.",
+   "ur": "ہمارے نتیجے کا دیے گئے اختیارات سے موازنہ کرنے پر، آپشن (d) درست جواب ہے۔",
+   "check": [
+    "tan(pi - t) == -tan(t)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

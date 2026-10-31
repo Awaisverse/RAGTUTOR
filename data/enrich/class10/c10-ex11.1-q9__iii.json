@@ -1,0 +1,55 @@
+{
+ "item": "c10-ex11.1-q9",
+ "label": "iii",
+ "answer_ref": "$\\approx 2.9$",
+ "steps": [
+  {
+   "math": "x = 6.5, \\quad \\hat{y} = ?",
+   "en": "Let $x$ represent the daily hours spent on social media and $\\hat{y}$ represent the estimated GPA. We are given $x = 6.5$ hours and need to estimate the GPA.",
+   "ur": "فرض کریں کہ $x$ سوشل میڈیا پر گزارے گئے روزانہ گھنٹوں کو اور $\\hat{y}$ متوقع GPA کو ظاہر کرتا ہے۔ ہمیں $x = 6.5$ گھنٹے دیے گئے ہیں اور ہمیں GPA کا تخمینہ لگانا ہے۔"
+  },
+  {
+   "math": "\\hat{y} = a + bx",
+   "en": "To estimate the GPA, we use the equation of the line of best fit (least squares regression line) obtained from the given data.",
+   "ur": "GPA کا تخمینہ لگانے کے لیے، ہم دیے گئے ڈیٹا سے حاصل کردہ بہترین خط (خطِ رجعت) کی مساوات استعمال کرتے ہیں۔"
+  },
+  {
+   "math": "\\hat{y} = 4.0539 + (-0.1811)x",
+   "en": "For this dataset, the calculated $y$-intercept is $a \\approx 4.0539$ and the slope is $b \\approx -0.1811$.",
+   "ur": "اس ڈیٹا کے لیے، معلوم کردہ $y$-مقطوعہ $a \\approx 4.0539$ ہے اور ڈھلوان $b \\approx -0.1811$ ہے۔"
+  },
+  {
+   "math": "\\hat{y} = 4.0539 + (-0.1811)(6.5)",
+   "en": "Substitute $x = 6.5$ into the equation of the line of best fit.",
+   "ur": "بہترین خط کی مساوات میں $x = 6.5$ درج کریں۔"
+  },
+  {
+   "math": "\\hat{y} = 4.0539 - 1.17715",
+   "en": "Multiply $-0.1811$ by $6.5$.",
+   "ur": "$-0.1811$ کو $6.5$ سے ضرب دیں۔",
+   "check": [
+    "(-R(1811, 10000)) * R(65, 10) == -R(117715, 100000)"
+   ]
+  },
+  {
+   "math": "\\hat{y} = 2.87675 \\approx 2.88 \\approx 2.9",
+   "en": "Subtract the values and round off the result to one decimal place to match the given GPA values.",
+   "ur": "قدر کو تفریق کریں اور دی گئی GPA کی قدروں کے مطابق نتیجے کو اشعاریہ کے بعد ایک درجہ تک محدود کریں۔",
+   "check": [
+    "R(40539, 10000) - R(117715, 100000) == R(287675, 100000)",
+    "Abs(R(287675, 100000) - R(288, 100)) <= R(5, 1000)",
+    "Abs(R(288, 100) - R(29, 10)) <= R(5, 100)"
+   ]
+  },
+  {
+   "math": "\\text{Estimated GPA} \\approx 2.9",
+   "en": "Thus, a student who spends $6.5$ hours daily on social media is estimated to have a GPA of approximately $2.9$.",
+   "ur": "لہٰذا، ایک طالب علم جو روزانہ $6.5$ گھنٹے سوشل میڈیا پر گزارتا ہے، اس کا متوقع GPA تقریباً $2.9$ ہے۔",
+   "check": [
+    "Abs(((18121/4470) + ((-2833/15645))*R(13,2)) - 2.88) <= 0.0050000010000000004"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

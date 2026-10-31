@@ -1,0 +1,56 @@
+{
+ "item": "c10-ex7.1-q3",
+ "label": "iii",
+ "answer_ref": "$-\\frac{2}{\\sqrt{3}}$",
+ "steps": [
+  {
+   "math": "\\sec 150^\\circ",
+   "en": "We need to find the exact value of $\\sec 150^\\circ$ without using a calculator.",
+   "ur": "ہمیں کیلکولیٹر کا استعمال کیے بغیر $\\sec 150^\\circ$ کی اصل قیمت معلوم کرنی ہے۔"
+  },
+  {
+   "math": "150^\\circ = 90^\\circ + 60^\\circ = 1 \\times 90^\\circ + 60^\\circ",
+   "en": "First, express the angle $150^\\circ$ as a multiple of $90^\\circ$ plus an acute angle $\\theta$.",
+   "ur": "سب سے پہلے، زاویہ $150^\\circ$ کو $90^\\circ$ کے مضرب اور ایک حادہ زاویہ $\\theta$ کے مجموعے کے طور پر لکھیں۔",
+   "check": [
+    "150 == 90 + 60",
+    "150 == 1*90 + 60"
+   ]
+  },
+  {
+   "math": "\\sec 150^\\circ = \\sec(1 \\times 90^\\circ + 60^\\circ)",
+   "en": "Substitute this expression into the given trigonometric function.",
+   "ur": "اس قیمت کو دیے گئے مثلثیاتی تفاعل میں درج کریں۔",
+   "check": [
+    "sec(150*pi/180) == sec((1*90 + 60)*pi/180)"
+   ]
+  },
+  {
+   "math": "\\sec(1 \\times 90^\\circ + 60^\\circ) = -\\operatorname{cosec} 60^\\circ",
+   "en": "Since $1$ is an odd multiple of $90^\\circ$, $\\sec$ changes to its co-ratio $\\operatorname{cosec}$. Also, the angle $150^\\circ$ lies in Quadrant II where $\\sec$ is negative, so we put a negative sign.",
+   "ur": "چونکہ $1$ زاویہ $90^\\circ$ کا ایک طاق مضرب ہے، اس لیے $\\sec$ اپنی ہم ریشو $\\operatorname{cosec}$ میں تبدیل ہو جاتا ہے۔ نیز، زاویہ $150^\\circ$ دوسرے ربع (Quadrant II) میں واقع ہے جہاں $\\sec$ منفی ہوتا ہے، اس لیے ہم منفی علامت لگاتے ہیں۔",
+   "check": [
+    "sec((1*90 + 60)*pi/180) == -csc(60*pi/180)"
+   ]
+  },
+  {
+   "math": "-\\operatorname{cosec} 60^\\circ = -\\frac{2}{\\sqrt{3}}",
+   "en": "Recall the standard value $\\operatorname{cosec} 60^\\circ = \\frac{2}{\\sqrt{3}}$ and substitute it to get the final answer.",
+   "ur": "معیاری قیمت $\\operatorname{cosec} 60^\\circ = \\frac{2}{\\sqrt{3}}$ کو یاد کریں اور حتمی جواب حاصل کرنے کے لیے اسے درج کریں۔",
+   "check": [
+    "-csc(60*pi/180) == -2/sqrt(3)"
+   ]
+  },
+  {
+   "math": "\\sec 150^\\circ = -\\frac{2}{\\sqrt{3}}",
+   "en": "Thus, the exact value of $\\sec 150^\\circ$ is $-\\frac{2}{\\sqrt{3}}$.",
+   "ur": "پس، $\\sec 150^\\circ$ کی اصل قیمت $-\\frac{2}{\\sqrt{3}}$ ہے۔",
+   "check": [
+    "sec(150*pi/180) == -2/sqrt(3)",
+    "sec((150)*pi/180) == -2*sqrt(3)/3"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

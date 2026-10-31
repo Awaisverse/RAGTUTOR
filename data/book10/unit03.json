@@ -151,20 +151,66 @@
      "prompt": "",
      "steps": [
       {
-       "math": "C = \\begin{bmatrix} 2\\times3 & 2-1 \\\\ 2\\times2 & 4-2 \\\\ 4+4 & 3+0 \\end{bmatrix} = \\begin{bmatrix} 6 & 1 \\\\ 4 & 2 \\\\ 8 & 3 \\end{bmatrix},\\quad D = \\begin{bmatrix} 9 \\\\ -7 \\end{bmatrix},\\quad F = \\begin{bmatrix} 0 & 3 \\\\ 4 & 1 \\end{bmatrix}",
-       "en": "Simplify the entries first.",
-       "ur": "پہلے ارکان کو سادہ کریں۔",
+       "math": "",
+       "en": "Two matrices are said to be equal if and only if they have the same order (number of rows and columns) and their corresponding entries are equal.",
+       "ur": "دو قالب مساوی کہلاتے ہیں اگر اور صرف اگر ان کا مرتبہ (قطاروں اور کالموں کی تعداد) ایک جیسا ہو اور ان کے متناظرہ ارکان آپس میں برابر ہوں۔"
+      },
+      {
+       "math": "C = \\begin{bmatrix} 2\\times3 & 2-1 \\\\ 2\\times2 & 4-2 \\\\ 4+4 & 3+0 \\end{bmatrix} = \\begin{bmatrix} 6 & 1 \\\\ 4 & 2 \\\\ 8 & 3 \\end{bmatrix}",
+       "en": "First, let us simplify the entries of matrix $C$ by performing the given arithmetic operations.",
+       "ur": "سب سے پہلے، ہم دیے گئے حسابی عوامل کو حل کر کے قالب $C$ کے ارکان کو سادہ کرتے ہیں۔",
        "check": [
-        "Eq(Matrix([[6, 1], [4, 2], [8, 3]]), Matrix([[6, 1], [4, 2], [8, 3]]))",
-        "Eq(Matrix([[9], [-7]]), Matrix([[9], [-7]]))",
+        "Eq(Matrix([[2*3, 2-1], [2*2, 4-2], [4+4, 3+0]]), Matrix([[6, 1], [4, 2], [8, 3]]))"
+       ]
+      },
+      {
+       "math": "D = \\begin{bmatrix} 5+4 \\\\ -8+1 \\end{bmatrix} = \\begin{bmatrix} 9 \\\\ -7 \\end{bmatrix}",
+       "en": "Next, simplify the entries of matrix $D$.",
+       "ur": "اس کے بعد، قالب $D$ کے ارکان کو سادہ کریں۔",
+       "check": [
+        "Eq(Matrix([[5+4], [-8+1]]), Matrix([[9], [-7]]))"
+       ]
+      },
+      {
+       "math": "F = \\begin{bmatrix} 3-3 & 3 \\\\ 3+1 & 1 \\end{bmatrix} = \\begin{bmatrix} 0 & 3 \\\\ 4 & 1 \\end{bmatrix}",
+       "en": "Now, simplify the entries of matrix $F$.",
+       "ur": "اب، قالب $F$ کے ارکان کو سادہ کریں۔",
+       "check": [
+        "Eq(Matrix([[3-3, 3], [3+1, 1]]), Matrix([[0, 3], [4, 1]]))"
+       ]
+      },
+      {
+       "math": "A = \\begin{bmatrix} 0 & 3 \\\\ 4 & 1 \\end{bmatrix} = F",
+       "en": "Comparing the matrices, we see that $A$ and $F$ both have the order $2 \\times 2$ and their corresponding entries are identical. Thus, $A = F$.",
+       "ur": "قالبوں کا موازنہ کرنے سے معلوم ہوتا ہے کہ $A$ اور $F$ دونوں کا مرتبہ $2 \\times 2$ ہے اور ان کے متناظرہ ارکان بالکل ایک جیسے ہیں۔ اس لیے $A = F$ ہے۔",
+       "check": [
         "Eq(Matrix([[0, 3], [4, 1]]), Matrix([[0, 3], [4, 1]]))"
        ]
       },
       {
-       "math": "A = F,\\quad B = D,\\quad C = E",
-       "en": "Equal matrices have the same order and equal entries in the same positions.",
-       "ur": "مساوی قالبوں کا درجہ ایک ہوتا ہے اور ایک ہی مقام کے ارکان برابر ہوتے ہیں۔",
+       "math": "B = \\begin{bmatrix} 9 \\\\ -7 \\end{bmatrix} = D",
+       "en": "Similarly, matrices $B$ and $D$ both have the order $2 \\times 1$ and identical corresponding entries. Thus, $B = D$.",
+       "ur": "اسی طرح، قالب $B$ اور $D$ دونوں کا مرتبہ $2 \\times 1$ ہے اور متناظرہ ارکان ایک جیسے ہیں۔ اس لیے $B = D$ ہے۔",
        "check": [
+        "Eq(Matrix([[9], [-7]]), Matrix([[9], [-7]]))"
+       ]
+      },
+      {
+       "math": "C = \\begin{bmatrix} 6 & 1 \\\\ 4 & 2 \\\\ 8 & 3 \\end{bmatrix} = E",
+       "en": "Finally, matrices $C$ and $E$ both have the order $3 \\times 2$ and identical corresponding entries. Thus, $C = E$.",
+       "ur": "آخر میں، قالب $C$ اور $E$ دونوں کا مرتبہ $3 \\times 2$ ہے اور متناظرہ ارکان ایک جیسے ہیں۔ اس لیے $C = E$ ہے۔",
+       "check": [
+        "Eq(Matrix([[6, 1], [4, 2], [8, 3]]), Matrix([[6, 1], [4, 2], [8, 3]]))"
+       ]
+      },
+      {
+       "math": "A = F,\\quad B = D,\\quad C = E",
+       "en": "Conclusion: The pairs of equal matrices are $A = F$, $B = D$, and $C = E$.",
+       "ur": "نتیجہ: مساوی قالبوں کے جوڑے $A = F$، $B = D$، اور $C = E$ ہیں۔",
+       "check": [
+        "Eq(Matrix([[6, 1], [4, 2], [8, 3]]), Matrix([[6, 1], [4, 2], [8, 3]]))",
+        "Eq(Matrix([[9], [-7]]), Matrix([[9], [-7]]))",
+        "Eq(Matrix([[0, 3], [4, 1]]), Matrix([[0, 3], [4, 1]]))",
         "Eq(Matrix([[0, 3], [4, 1]]), Matrix([[0, 3], [4, 1]]))",
         "Eq(Matrix([[9], [-7]]), Matrix([[9], [-7]]))",
         "Eq(Matrix([[6, 1], [4, 2], [8, 3]]), Matrix([[6, 1], [4, 2], [8, 3]]))"
@@ -172,6 +218,7 @@
       }
      ],
      "answer": "A = F, B = D, C = E",
+     "enriched": true,
      "book_key": "A=F, B=D, C=E"
     }
    ],
@@ -749,23 +796,46 @@
      "prompt": "",
      "steps": [
       {
-       "math": "L^t = \\begin{bmatrix} 2 & 3 & 4 \\\\ 3 & -2 & 5 \\\\ 4 & 5 & 0 \\end{bmatrix}^t = \\begin{bmatrix} 2 & 3 & 4 \\\\ 3 & -2 & 5 \\\\ 4 & 5 & 0 \\end{bmatrix}",
-       "en": "The transpose turns rows into columns.",
-       "ur": "پلٹ (ٹرانسپوز) میں قطاریں کالم بن جاتی ہیں۔",
+       "math": "L = \\begin{bmatrix} 2 & 3 & 4 \\\\ 3 & -2 & 5 \\\\ 4 & 5 & 0 \\end{bmatrix}",
+       "en": "Write down the given matrix $L$. We need to show that it is a symmetric matrix.",
+       "ur": "دیا گیا قالب $L$ لکھیں۔ ہمیں ثابت کرنا ہے کہ یہ ایک سڈول (متشاکل) قالب ہے۔",
+       "check": [
+        "Eq(Matrix([[2, 3, 4], [3, -2, 5], [4, 5, 0]]), Matrix([[2, 3, 4], [3, -2, 5], [4, 5, 0]]))"
+       ]
+      },
+      {
+       "math": "L^t = L",
+       "en": "By definition, a square matrix $L$ is called a symmetric matrix if its transpose $L^t$ is equal to the original matrix $L$.",
+       "ur": "تعریف کے مطابق، ایک مربی قالب $L$ کو سڈول قالب کہا جاتا ہے اگر اس کا ٹرانسپوز (پلٹ) $L^t$ اصل قالب $L$ کے برابر ہو۔"
+      },
+      {
+       "math": "L^t = \\begin{bmatrix} 2 & 3 & 4 \\\\ 3 & -2 & 5 \\\\ 4 & 5 & 0 \\end{bmatrix}^t",
+       "en": "Take the transpose of both sides.",
+       "ur": "دونوں اطراف کا ٹرانسپوز (پلٹ) لیں۔",
+       "check": [
+        "Eq(Matrix([[2, 3, 4], [3, -2, 5], [4, 5, 0]]).T, Matrix([[2, 3, 4], [3, -2, 5], [4, 5, 0]]).T)"
+       ]
+      },
+      {
+       "math": "L^t = \\begin{bmatrix} 2 & 3 & 4 \\\\ 3 & -2 & 5 \\\\ 4 & 5 & 0 \\end{bmatrix}",
+       "en": "To find the transpose, interchange the rows and columns: the first row becomes the first column, the second row becomes the second column, and the third row becomes the third column.",
+       "ur": "ٹرانسپوز معلوم کرنے کے لیے قطاروں کو کالموں میں بدل دیں: پہلی قطار پہلا کالم، دوسری قطار دوسرا کالم، اور تیسری قطار تیسرا کالم بن جاتی ہے۔",
        "check": [
         "Eq(Matrix([[2, 3, 4], [3, -2, 5], [4, 5, 0]]).T, Matrix([[2, 3, 4], [3, -2, 5], [4, 5, 0]]))"
        ]
       },
       {
        "math": "L^t = L",
-       "en": "A matrix equal to its own transpose is symmetric.",
-       "ur": "جو قالب اپنے پلٹ کے برابر ہو وہ متشاکل ہے۔",
+       "en": "We observe that the resulting matrix $L^t$ is identical to the original matrix $L$. Hence, $L$ is a symmetric matrix.",
+       "ur": "ہم دیکھتے ہیں کہ حاصل ہونے والا قالب $L^t$ بالکل اصل قالب $L$ جیسا ہے۔ لہٰذا، $L$ ایک سڈول (متشاکل) قالب ہے۔",
        "check": [
+        "Eq(Matrix([[2, 3, 4], [3, -2, 5], [4, 5, 0]]).T, Matrix([[2, 3, 4], [3, -2, 5], [4, 5, 0]]))",
         "Eq(Matrix([[2, 3, 4], [3, -2, 5], [4, 5, 0]]), Matrix([[2, 3, 4], [3, -2, 5], [4, 5, 0]]))"
        ]
       }
      ],
      "answer": "$L^t = L$, so $L$ is symmetric",
+     "enriched": true,
      "book_key": "L^t = L, so L is symmetric"
     }
    ],
@@ -783,9 +853,60 @@
      "prompt": "",
      "steps": [
       {
-       "math": "A: 2\\text{-by-}2,\\quad B: 2\\text{-by-}1,\\quad C: 1\\text{-by-}2,\\quad D: 2\\text{-by-}2,\\quad E: 1\\text{-by-}1,\\quad F: 1\\text{-by-}2,\\quad G: 2\\text{-by-}1,\\quad H: 1\\text{-by-}1,\\quad M: 2\\text{-by-}1",
-       "en": "Write the order of each matrix.",
-       "ur": "ہر قالب کا درجہ لکھیں۔",
+       "math": "\\text{Order of a matrix} = m\\text{-by-}n = (\\text{number of rows})\\text{-by-}(\\text{number of columns})",
+       "en": "Two or more matrices are conformable for addition and subtraction if and only if they have the same order (same number of rows and same number of columns).",
+       "ur": "دو یا دو سے زیادہ قالب جمع اور تفریق کے لیے ہم آہنگ (conformable) ہوتے ہیں اگر اور صرف اگر ان کا درجہ (قطاروں کی تعداد اور کالموں کی تعداد) یکساں ہو۔"
+      },
+      {
+       "math": "\\text{Order of } A = 2\\text{-by-}2, \\quad \\text{Order of } D = 2\\text{-by-}2",
+       "en": "Find the matrices that have $2$ rows and $2$ columns. Both $A = \\begin{bmatrix} 3 & 4 \\\\ -2 & 1 \\end{bmatrix}$ and $D = \\begin{bmatrix} 1 & 7 \\\\ 2 & 5 \\end{bmatrix}$ have order $2\\text{-by-}2$.",
+       "ur": "ایسے قالب تلاش کریں جن میں $2$ قطاریں اور $2$ کالم ہوں۔ $A = \\begin{bmatrix} 3 & 4 \\\\ -2 & 1 \\end{bmatrix}$ اور $D = \\begin{bmatrix} 1 & 7 \\\\ 2 & 5 \\end{bmatrix}$ دونوں کا درجہ $2\\text{-by-}2$ ہے۔",
+       "check": [
+        "Matrix([[3, 4], [-2, 1]]).rows == 2",
+        "Matrix([[3, 4], [-2, 1]]).cols == 2",
+        "Matrix([[1, 7], [2, 5]]).rows == 2",
+        "Matrix([[1, 7], [2, 5]]).cols == 2"
+       ]
+      },
+      {
+       "math": "\\text{Order of } B = 2\\text{-by-}1, \\quad \\text{Order of } G = 2\\text{-by-}1, \\quad \\text{Order of } M = 2\\text{-by-}1",
+       "en": "Find the matrices that have $2$ rows and $1$ column. The matrices $B = \\begin{bmatrix} 3 \\\\ 4 \\end{bmatrix}$, $G = \\begin{bmatrix} a \\\\ b \\end{bmatrix}$, and $M = \\begin{bmatrix} l \\\\ m \\end{bmatrix}$ all have order $2\\text{-by-}1$.",
+       "ur": "ایسے قالب تلاش کریں جن میں $2$ قطاریں اور $1$ کالم ہو۔ قالب $B = \\begin{bmatrix} 3 \\\\ 4 \\end{bmatrix}$، $G = \\begin{bmatrix} a \\\\ b \\end{bmatrix}$ اور $M = \\begin{bmatrix} l \\\\ m \\end{bmatrix}$ سب کا درجہ $2\\text{-by-}1$ ہے۔",
+       "check": [
+        "Matrix([[3], [4]]).rows == 2",
+        "Matrix([[3], [4]]).cols == 1",
+        "Matrix([[a], [b]]).rows == 2",
+        "Matrix([[a], [b]]).cols == 1",
+        "Matrix([[l], [m]]).rows == 2",
+        "Matrix([[l], [m]]).cols == 1"
+       ]
+      },
+      {
+       "math": "\\text{Order of } C = 1\\text{-by-}2, \\quad \\text{Order of } F = 1\\text{-by-}2",
+       "en": "Find the matrices that have $1$ row and $2$ columns. Both $C = \\begin{bmatrix} 5 & 2 \\end{bmatrix}$ and $F = \\begin{bmatrix} 7 & 11 \\end{bmatrix}$ have order $1\\text{-by-}2$.",
+       "ur": "ایسے قالب تلاش کریں جن میں $1$ قطار اور $2$ کالم ہوں۔ $C = \\begin{bmatrix} 5 & 2 \\end{bmatrix}$ اور $F = \\begin{bmatrix} 7 & 11 \\end{bmatrix}$ دونوں کا درجہ $1\\text{-by-}2$ ہے۔",
+       "check": [
+        "Matrix([[5, 2]]).rows == 1",
+        "Matrix([[5, 2]]).cols == 2",
+        "Matrix([[7, 11]]).rows == 1",
+        "Matrix([[7, 11]]).cols == 2"
+       ]
+      },
+      {
+       "math": "\\text{Order of } E = 1\\text{-by-}1, \\quad \\text{Order of } H = 1\\text{-by-}1",
+       "en": "Find the matrices that have $1$ row and $1$ column. Both $E = \\begin{bmatrix} 2 \\end{bmatrix}$ and $H = \\begin{bmatrix} 3 \\end{bmatrix}$ have order $1\\text{-by-}1$.",
+       "ur": "ایسے قالب تلاش کریں جن میں $1$ قطار اور $1$ کالم ہو۔ $E = \\begin{bmatrix} 2 \\end{bmatrix}$ اور $H = \\begin{bmatrix} 3 \\end{bmatrix}$ دونوں کا درجہ $1\\text{-by-}1$ ہے۔",
+       "check": [
+        "Matrix([[2]]).rows == 1",
+        "Matrix([[2]]).cols == 1",
+        "Matrix([[3]]).rows == 1",
+        "Matrix([[3]]).cols == 1"
+       ]
+      },
+      {
+       "math": "\\text{Conformable groups: } (A, D),\\ (B, G, M),\\ (C, F),\\ (E, H)",
+       "en": "Group the matrices that have the same order. These groups are conformable for addition and subtraction.",
+       "ur": "یکساں درجہ رکھنے والے قالبوں کے گروپ بنائیں۔ یہ گروپ جمع اور تفریق کے لیے ہم آہنگ ہیں۔",
        "check": [
         "Matrix([[3, 4], [-2, 1]]).rows == 2",
         "Matrix([[3, 4], [-2, 1]]).cols == 2",
@@ -806,14 +927,10 @@
         "Matrix([[l], [m]]).rows == 2",
         "Matrix([[l], [m]]).cols == 1"
        ]
-      },
-      {
-       "math": "\\text{Same order: } A, D;\\ B, G, M;\\ C, F;\\ E, H",
-       "en": "Only matrices of the same order can be added or subtracted.",
-       "ur": "صرف ایک ہی درجہ کے قالب جمع یا تفریق ہو سکتے ہیں۔"
       }
      ],
      "answer": "A and D; B and G and M; C and F; E and H",
+     "enriched": true,
      "book_key": "A and D; B and G and M; C and F; E and H"
     }
    ],
@@ -831,15 +948,39 @@
      "prompt": "$X+Y$",
      "steps": [
       {
-       "math": "X + Y = \\begin{bmatrix} 1 & -1 \\\\ -2 & 2 \\end{bmatrix} + \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix} = \\begin{bmatrix} 1 + 1 & -1 + 2 \\\\ -2 + 3 & 2 + 4 \\end{bmatrix} = \\begin{bmatrix} 2 & 1 \\\\ 1 & 6 \\end{bmatrix}",
-       "en": "Matrices of the same order: add the entries in the same positions.",
-       "ur": "ایک ہی درجہ کے قالب: ایک ہی مقام کے ارکان جمع کریں۔",
+       "math": "X = \\begin{bmatrix} 1 & -1 \\\\ -2 & 2 \\end{bmatrix}, \\quad Y = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}",
+       "en": "Write down the given matrices $X$ and $Y$. We need to find the sum $X+Y$.",
+       "ur": "دیے گئے قالب $X$ اور $Y$ لکھیں۔ ہمیں ان کا مجموعہ $X+Y$ معلوم کرنا ہے۔"
+      },
+      {
+       "math": "X + Y = \\begin{bmatrix} 1 & -1 \\\\ -2 & 2 \\end{bmatrix} + \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}",
+       "en": "Substitute the matrices $X$ and $Y$ into the expression $X+Y$. Since both matrices have the same order ($2 \\times 2$), they are conformable for addition.",
+       "ur": "مقدار $X+Y$ میں قالب $X$ اور $Y$ کی قیمتیں درج کریں۔ چونکہ دونوں قالبوں کا درجہ یکساں ($2 \\times 2$) ہے، اس لیے ان کی جمع ممکن ہے۔"
+      },
+      {
+       "math": "X + Y = \\begin{bmatrix} 1 + 1 & -1 + 2 \\\\ -2 + 3 & 2 + 4 \\end{bmatrix}",
+       "en": "To add two matrices of the same order, we add their corresponding entries (entries in the same positions).",
+       "ur": "یکساں درجہ کے دو قالبوں کو جمع کرنے کے لیے، ہم ان کے متناظرہ ارکان (ایک ہی جگہ پر موجود ارکان) کو جمع کرتے ہیں۔",
        "check": [
+        "Matrix([[1, -1], [-2, 2]]) + Matrix([[1, 2], [3, 4]]) == Matrix([[1 + 1, -1 + 2], [-2 + 3, 2 + 4]])"
+       ]
+      },
+      {
+       "math": "X + Y = \\begin{bmatrix} 2 & 1 \\\\ 1 & 6 \\end{bmatrix}",
+       "en": "Simplify each entry by performing the addition to get the final matrix.",
+       "ur": "حتمی قالب حاصل کرنے کے لیے جمع کا عمل مکمل کر کے ہر رکن کو مختصر کریں۔",
+       "check": [
+        "1 + 1 == 2",
+        "-1 + 2 == 1",
+        "-2 + 3 == 1",
+        "2 + 4 == 6",
+        "Matrix([[1 + 1, -1 + 2], [-2 + 3, 2 + 4]]) == Matrix([[2, 1], [1, 6]])",
         "Eq(Matrix([[2, 1], [1, 6]]), Matrix([[2, 1], [1, 6]]))"
        ]
       }
      ],
      "answer": "$\\begin{bmatrix} 2 & 1 \\\\ 1 & 6 \\end{bmatrix}$",
+     "enriched": true,
      "book_key": "[[2,1],[1,6]]"
     },
     {
@@ -847,23 +988,58 @@
      "prompt": "$Y+7Z$",
      "steps": [
       {
-       "math": "7Z = 7\\begin{bmatrix} 3 & 0 \\\\ 0 & -2 \\end{bmatrix} = \\begin{bmatrix} 21 & 0 \\\\ 0 & -14 \\end{bmatrix}",
-       "en": "Multiply every entry by 7.",
-       "ur": "ہر رکن کو 7 سے ضرب دیں۔",
+       "math": "Y = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}, \\quad Z = \\begin{bmatrix} 3 & 0 \\\\ 0 & -2 \\end{bmatrix}",
+       "en": "Write down the given matrices $Y$ and $Z$. We need to find the value of $Y + 7Z$.",
+       "ur": "دیے گئے قالب $Y$ اور $Z$ لکھیں۔ ہمیں $Y + 7Z$ کی قیمت معلوم کرنی ہے۔",
        "check": [
-        "Eq(Matrix([[21, 0], [0, -14]]), Matrix([[21, 0], [0, -14]]))"
+        "Eq(Matrix([[1, 2], [3, 4]]), Matrix([[1, 2], [3, 4]]))",
+        "Eq(Matrix([[3, 0], [0, -2]]), Matrix([[3, 0], [0, -2]]))"
        ]
       },
       {
-       "math": "Y + 7Z = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix} + \\begin{bmatrix} 21 & 0 \\\\ 0 & -14 \\end{bmatrix} = \\begin{bmatrix} 1 + 21 & 2 + 0 \\\\ 3 + 0 & 4 - 14 \\end{bmatrix} = \\begin{bmatrix} 22 & 2 \\\\ 3 & -10 \\end{bmatrix}",
-       "en": "Matrices of the same order: add the entries in the same positions.",
-       "ur": "ایک ہی درجہ کے قالب: ایک ہی مقام کے ارکان جمع کریں۔",
+       "math": "Y + 7Z = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix} + 7\\begin{bmatrix} 3 & 0 \\\\ 0 & -2 \\end{bmatrix}",
+       "en": "Substitute the matrices $Y$ and $Z$ into the expression $Y + 7Z$.",
+       "ur": "جملے $Y + 7Z$ میں قالب $Y$ اور $Z$ کی قیمتیں درج کریں۔",
        "check": [
-        "Eq(Matrix([[22, 2], [3, -10]]), Matrix([[22, 2], [3, -10]]))"
+        "Eq(Matrix([[1, 2], [3, 4]]) + 7*Matrix([[3, 0], [0, -2]]), Matrix([[22, 2], [3, -10]]))"
+       ]
+      },
+      {
+       "math": "Y + 7Z = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix} + \\begin{bmatrix} 7(3) & 7(0) \\\\ 7(0) & 7(-2) \\end{bmatrix}",
+       "en": "For scalar multiplication, multiply every entry of matrix $Z$ by $7$.",
+       "ur": "عددی ضرب کے لیے، قالب $Z$ کے ہر رکن کو $7$ سے ضرب دیں۔",
+       "check": [
+        "Eq(Matrix([[1, 2], [3, 4]]) + Matrix([[7*3, 7*0], [7*0, 7*(-2)]]), Matrix([[22, 2], [3, -10]]))"
+       ]
+      },
+      {
+       "math": "Y + 7Z = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix} + \\begin{bmatrix} 21 & 0 \\\\ 0 & -14 \\end{bmatrix}",
+       "en": "Simplify the products inside the second matrix.",
+       "ur": "دوسرے قالب کے اندر موجود حاصل ضرب کو مختصر کریں۔",
+       "check": [
+        "Eq(Matrix([[1, 2], [3, 4]]) + Matrix([[21, 0], [0, -14]]), Matrix([[22, 2], [3, -10]]))"
+       ]
+      },
+      {
+       "math": "Y + 7Z = \\begin{bmatrix} 1 + 21 & 2 + 0 \\\\ 3 + 0 & 4 + (-14) \\end{bmatrix}",
+       "en": "Since both matrices have the same order ($2 \\times 2$), add their corresponding entries.",
+       "ur": "چونکہ دونوں قالبوں کا درجہ یکساں ($2 \\times 2$) ہے، اس لیے ان کے متناظرہ ارکان کو جمع کریں۔",
+       "check": [
+        "Eq(Matrix([[1 + 21, 2 + 0], [3 + 0, 4 - 14]]), Matrix([[22, 2], [3, -10]]))"
+       ]
+      },
+      {
+       "math": "Y + 7Z = \\begin{bmatrix} 22 & 2 \\\\ 3 & -10 \\end{bmatrix}",
+       "en": "Perform the addition to get the final answer.",
+       "ur": "حتمی جواب حاصل کرنے کے لیے جمع کا عمل مکمل کریں۔",
+       "check": [
+        "Eq(Matrix([[22, 2], [3, -10]]), Matrix([[22, 2], [3, -10]]))",
+        "Eq(Matrix([[21, 0], [0, -14]]), Matrix([[21, 0], [0, -14]]))"
        ]
       }
      ],
      "answer": "$\\begin{bmatrix} 22 & 2 \\\\ 3 & -10 \\end{bmatrix}$",
+     "enriched": true,
      "book_key": "[[22,2],[3,-10]]"
     },
     {
@@ -871,23 +1047,60 @@
      "prompt": "$4X-Z$",
      "steps": [
       {
-       "math": "4X = 4\\begin{bmatrix} 1 & -1 \\\\ -2 & 2 \\end{bmatrix} = \\begin{bmatrix} 4 & -4 \\\\ -8 & 8 \\end{bmatrix}",
-       "en": "Multiply every entry by 4.",
-       "ur": "ہر رکن کو 4 سے ضرب دیں۔",
+       "math": "X = \\begin{bmatrix} 1 & -1 \\\\ -2 & 2 \\end{bmatrix}, \\quad Z = \\begin{bmatrix} 3 & 0 \\\\ 0 & -2 \\end{bmatrix}",
+       "en": "Write down the given matrices $X$ and $Z$ required to find $4X - Z$.",
+       "ur": "$4X - Z$ معلوم کرنے کے لیے دیے گئے کالب $X$ اور $Z$ لکھیں۔",
        "check": [
-        "Eq(Matrix([[4, -4], [-8, 8]]), Matrix([[4, -4], [-8, 8]]))"
+        "Matrix([[1, -1], [-2, 2]]) == Matrix([[1, -1], [-2, 2]])",
+        "Matrix([[3, 0], [0, -2]]) == Matrix([[3, 0], [0, -2]])"
        ]
       },
       {
-       "math": "4X - Z = \\begin{bmatrix} 4 & -4 \\\\ -8 & 8 \\end{bmatrix} - \\begin{bmatrix} 3 & 0 \\\\ 0 & -2 \\end{bmatrix} = \\begin{bmatrix} 4 - 3 & -4 - 0 \\\\ -8 - 0 & 8 - (-2) \\end{bmatrix} = \\begin{bmatrix} 1 & -4 \\\\ -8 & 10 \\end{bmatrix}",
-       "en": "Matrices of the same order: subtract the entries in the same positions.",
-       "ur": "ایک ہی درجہ کے قالب: ایک ہی مقام کے ارکان تفریق کریں۔",
+       "math": "4X = 4\\begin{bmatrix} 1 & -1 \\\\ -2 & 2 \\end{bmatrix} = \\begin{bmatrix} 4(1) & 4(-1) \\\\ 4(-2) & 4(2) \\end{bmatrix}",
+       "en": "First, find $4X$ by multiplying each entry of matrix $X$ by the scalar $4$.",
+       "ur": "سب سے پہلے، کالب $X$ کے ہر رکن کو عددی قیمت $4$ سے ضرب دے کر $4X$ معلوم کریں۔",
        "check": [
+        "4 * Matrix([[1, -1], [-2, 2]]) == Matrix([[4*1, 4*(-1)], [4*(-2), 4*2]])"
+       ]
+      },
+      {
+       "math": "4X = \\begin{bmatrix} 4 & -4 \\\\ -8 & 8 \\end{bmatrix}",
+       "en": "Simplify the products to get the matrix $4X$.",
+       "ur": "ضرب کے عمل کو مختصر کر کے کالب $4X$ حاصل کریں۔",
+       "check": [
+        "Matrix([[4*1, 4*(-1)], [4*(-2), 4*2]]) == Matrix([[4, -4], [-8, 8]])"
+       ]
+      },
+      {
+       "math": "4X - Z = \\begin{bmatrix} 4 & -4 \\\\ -8 & 8 \\end{bmatrix} - \\begin{bmatrix} 3 & 0 \\\\ 0 & -2 \\end{bmatrix}",
+       "en": "Now, substitute the matrices $4X$ and $Z$ into the expression $4X - Z$.",
+       "ur": "اب، عبارت $4X - Z$ میں کالب $4X$ اور $Z$ کی قیمتیں درج کریں۔",
+       "check": [
+        "Matrix([[4, -4], [-8, 8]]) - Matrix([[3, 0], [0, -2]]) == Matrix([[1, -4], [-8, 10]])"
+       ]
+      },
+      {
+       "math": "4X - Z = \\begin{bmatrix} 4 - 3 & -4 - 0 \\\\ -8 - 0 & 8 - (-2) \\end{bmatrix}",
+       "en": "Since both matrices have the same order ($2 \\times 2$), subtract the corresponding entries of matrix $Z$ from matrix $4X$.",
+       "ur": "چونکہ دونوں کالبوں کا مرتبہ یکساں ($2 \\times 2$) ہے، اس لیے کالب $4X$ کے ارکان میں سے کالب $Z$ کے متناظرہ ارکان کو تفریق کریں۔",
+       "check": [
+        "Matrix([[4, -4], [-8, 8]]) - Matrix([[3, 0], [0, -2]]) == Matrix([[4 - 3, -4 - 0], [-8 - 0, 8 - (-2)]])"
+       ]
+      },
+      {
+       "math": "4X - Z = \\begin{bmatrix} 1 & -4 \\\\ -8 & 8 + 2 \\end{bmatrix} = \\begin{bmatrix} 1 & -4 \\\\ -8 & 10 \\end{bmatrix}",
+       "en": "Simplify each entry to obtain the final answer.",
+       "ur": "حتمی جواب حاصل کرنے کے لیے ہر رکن کو مختصر کریں۔",
+       "check": [
+        "Matrix([[4 - 3, -4 - 0], [-8 - 0, 8 - (-2)]]) == Matrix([[1, -4], [-8, 8 + 2]])",
+        "Matrix([[1, -4], [-8, 8 + 2]]) == Matrix([[1, -4], [-8, 10]])",
+        "Eq(Matrix([[4, -4], [-8, 8]]), Matrix([[4, -4], [-8, 8]]))",
         "Eq(Matrix([[1, -4], [-8, 10]]), Matrix([[1, -4], [-8, 10]]))"
        ]
       }
      ],
      "answer": "$\\begin{bmatrix} 1 & -4 \\\\ -8 & 10 \\end{bmatrix}$",
+     "enriched": true,
      "book_key": "[[1,-4],[-8,10]]"
     },
     {
@@ -967,15 +1180,48 @@
      "prompt": "$Z-Z$",
      "steps": [
       {
-       "math": "Z - Z = \\begin{bmatrix} 3 & 0 \\\\ 0 & -2 \\end{bmatrix} - \\begin{bmatrix} 3 & 0 \\\\ 0 & -2 \\end{bmatrix} = \\begin{bmatrix} 3 - 3 & 0 - 0 \\\\ 0 - 0 & -2 - (-2) \\end{bmatrix} = \\begin{bmatrix} 0 & 0 \\\\ 0 & 0 \\end{bmatrix}",
-       "en": "Matrices of the same order: subtract the entries in the same positions.",
-       "ur": "ایک ہی درجہ کے قالب: ایک ہی مقام کے ارکان تفریق کریں۔",
+       "math": "Z = \\begin{bmatrix} 3 & 0 \\\\ 0 & -2 \\end{bmatrix}",
+       "en": "First, write down the given matrix $Z$. We need to find the value of $Z - Z$.",
+       "ur": "سب سے پہلے، دیا گیا قالب $Z$ لکھیں۔ ہمیں $Z - Z$ کی قیمت معلوم کرنی ہے۔",
+       "check": [
+        "Eq(Matrix([[3, 0], [0, -2]]), Matrix([[3, 0], [0, -2]]))"
+       ]
+      },
+      {
+       "math": "Z - Z = \\begin{bmatrix} 3 & 0 \\\\ 0 & -2 \\end{bmatrix} - \\begin{bmatrix} 3 & 0 \\\\ 0 & -2 \\end{bmatrix}",
+       "en": "Substitute the matrix $Z$ into the expression $Z - Z$.",
+       "ur": "جملے $Z - Z$ میں قالب $Z$ کی قیمت درج کریں۔",
+       "check": [
+        "Eq(Matrix([[3, 0], [0, -2]]) - Matrix([[3, 0], [0, -2]]), Matrix([[0, 0], [0, 0]]))"
+       ]
+      },
+      {
+       "math": "Z - Z = \\begin{bmatrix} 3 - 3 & 0 - 0 \\\\ 0 - 0 & -2 - (-2) \\end{bmatrix}",
+       "en": "Since a matrix is being subtracted from itself (same order $2 \\times 2$), subtract the corresponding entries in the same positions.",
+       "ur": "چونکہ ایک قالب کو اپنے آپ سے تفریق کیا جا رہا ہے (یکساں درجہ $2 \\times 2$)، اس لیے ایک ہی مقام پر موجود متناظرہ ارکان کو آپس میں تفریق کریں۔",
+       "check": [
+        "Eq(Matrix([[3 - 3, 0 - 0], [0 - 0, -2 - (-2)]]), Matrix([[0, 0], [0, 0]]))"
+       ]
+      },
+      {
+       "math": "Z - Z = \\begin{bmatrix} 0 & 0 \\\\ 0 & -2 + 2 \\end{bmatrix}",
+       "en": "Simplify the signs in the bottom-right entry, as subtracting a negative number is the same as adding a positive number.",
+       "ur": "نچلے دائیں رکن میں علامتوں کو سادہ کریں، کیونکہ منفی عدد کو تفریق کرنا مثبت عدد کو جمع کرنے کے برابر ہے۔",
+       "check": [
+        "Eq(Matrix([[0, 0], [0, -2 + 2]]), Matrix([[0, 0], [0, 0]]))"
+       ]
+      },
+      {
+       "math": "Z - Z = \\begin{bmatrix} 0 & 0 \\\\ 0 & 0 \\end{bmatrix}",
+       "en": "Perform the final addition to get the required null (zero) matrix.",
+       "ur": "مطلوبہ صفری قالب حاصل کرنے کے لیے آخری جمع کا عمل مکمل کریں۔",
        "check": [
         "Eq(Matrix([[0, 0], [0, 0]]), Matrix([[0, 0], [0, 0]]))"
        ]
       }
      ],
      "answer": "$\\begin{bmatrix} 0 & 0 \\\\ 0 & 0 \\end{bmatrix}$",
+     "enriched": true,
      "book_key": "[[0,0],[0,0]]"
     }
    ],
@@ -993,15 +1239,43 @@
      "prompt": "$P=\\begin{bmatrix} 5 \\\\ -7 \\end{bmatrix}$",
      "steps": [
       {
-       "math": "-P = -\\begin{bmatrix} 5 \\\\ -7 \\end{bmatrix} = \\begin{bmatrix} -5 \\\\ 7 \\end{bmatrix}",
-       "en": "The additive inverse changes the sign of every entry.",
-       "ur": "جمعی معکوس میں ہر رکن کی علامت بدل جاتی ہے۔",
+       "math": "P = \\begin{bmatrix} 5 \\\\ -7 \\end{bmatrix}",
+       "en": "Write down the given matrix $P$. We need to find its additive inverse.",
+       "ur": "دیا گیا کالب $P$ لکھیں۔ ہمیں اس کا جمعی معکوس معلوم کرنا ہے۔"
+      },
+      {
+       "math": "",
+       "en": "By definition, the additive inverse of a matrix $P$ is the negative of the matrix, denoted by $-P$. It is obtained by changing the sign of every non-zero entry of $P$.",
+       "ur": "تعریف کے مطابق، کسی کالب $P$ کا جمعی معکوس اس کالب کا منفی کالب ہوتا ہے، جسے $-P$ سے ظاہر کیا جاتا ہے۔ یہ کالب $P$ کے ہر غیر صفر رکن کی علامت تبدیل کرنے سے حاصل ہوتا ہے۔"
+      },
+      {
+       "math": "-P = -\\begin{bmatrix} 5 \\\\ -7 \\end{bmatrix}",
+       "en": "Multiply the matrix $P$ by a negative sign.",
+       "ur": "کالب $P$ کو منفی علامت سے ضرب دیں۔",
        "check": [
+        "Eq(-Matrix([[5], [-7]]), -Matrix([[5], [-7]]))"
+       ]
+      },
+      {
+       "math": "-P = \\begin{bmatrix} -(5) \\\\ -(-7) \\end{bmatrix} = \\begin{bmatrix} -5 \\\\ 7 \\end{bmatrix}",
+       "en": "Change the sign of each entry inside the matrix: $+5$ becomes $-5$ and $-7$ becomes $+7$.",
+       "ur": "کالب کے اندر موجود ہر رکن کی علامت تبدیل کریں: $+5$ بدل کر $-5$ ہو جائے گا اور $-7$ بدل کر $+7$ ہو جائے گا۔",
+       "check": [
+        "Eq(Matrix([[-(5)], [-(-7)]]), Matrix([[-5], [7]]))"
+       ]
+      },
+      {
+       "math": "\\text{Additive inverse of } P = \\begin{bmatrix} -5 \\\\ 7 \\end{bmatrix}",
+       "en": "Thus, the additive inverse of the matrix $P$ is $\\begin{bmatrix} -5 \\\\ 7 \\end{bmatrix}$.",
+       "ur": "پس، کالب $P$ کا جمعی معکوس $\\begin{bmatrix} -5 \\\\ 7 \\end{bmatrix}$ ہے۔",
+       "check": [
+        "Eq(Matrix([[5], [-7]]) + Matrix([[-5], [7]]), Matrix([[0], [0]]))",
         "Eq(Matrix([[0], [0]]), Matrix([[0], [0]]))"
        ]
       }
      ],
      "answer": "$\\begin{bmatrix} -5 \\\\ 7 \\end{bmatrix}$",
+     "enriched": true,
      "book_key": "[[-5],[7]]"
     },
     {
@@ -1009,15 +1283,39 @@
      "prompt": "$Q=\\begin{bmatrix} 9 & -3 \\end{bmatrix}$",
      "steps": [
       {
-       "math": "-Q = -\\begin{bmatrix} 9 & -3 \\end{bmatrix} = \\begin{bmatrix} -9 & 3 \\end{bmatrix}",
-       "en": "The additive inverse changes the sign of every entry.",
-       "ur": "جمعی معکوس میں ہر رکن کی علامت بدل جاتی ہے۔",
+       "math": "Q = \\begin{bmatrix} 9 & -3 \\end{bmatrix}",
+       "en": "Write down the given matrix $Q$.",
+       "ur": "دیا گیا کالب $Q$ لکھیں۔",
        "check": [
+        "Matrix([[9, -3]]) == Matrix([[9, -3]])"
+       ]
+      },
+      {
+       "math": "-Q = (-1)Q",
+       "en": "The additive inverse of a matrix $Q$ is denoted by $-Q$. It is obtained by changing the sign of each entry of the matrix (multiplying each entry by $-1$).",
+       "ur": "کسی کالب $Q$ کے جمعی معکوس کو $-Q$ سے ظاہر کیا جاتا ہے۔ یہ کالب کے ہر رکن کی علامت تبدیل کرنے (ہر رکن کو $-1$ سے ضرب دینے) سے حاصل ہوتا ہے۔"
+      },
+      {
+       "math": "-Q = -\\begin{bmatrix} 9 & -3 \\end{bmatrix} = \\begin{bmatrix} -(9) & -(-3) \\end{bmatrix}",
+       "en": "Multiply each entry of matrix $Q$ by the negative sign.",
+       "ur": "کالب $Q$ کے ہر رکن کو منفی علامت سے ضرب دیں۔",
+       "check": [
+        "-Matrix([[9, -3]]) == Matrix([[-9, -(-3)]])"
+       ]
+      },
+      {
+       "math": "-Q = \\begin{bmatrix} -9 & 3 \\end{bmatrix}",
+       "en": "Simplify the signs to get the final additive inverse of matrix $Q$.",
+       "ur": "علامات کو مختصر کر کے کالب $Q$ کا مطلوبہ جمعی معکوس حاصل کریں۔",
+       "check": [
+        "Matrix([[-9, -(-3)]]) == Matrix([[-9, 3]])",
+        "Matrix([[9, -3]]) + Matrix([[-9, 3]]) == Matrix([[0, 0]])",
         "Eq(Matrix([[0, 0]]), Matrix([[0, 0]]))"
        ]
       }
      ],
      "answer": "$\\begin{bmatrix} -9 & 3 \\end{bmatrix}$",
+     "enriched": true,
      "book_key": "[[-9,3]]"
     },
     {
@@ -1025,15 +1323,53 @@
      "prompt": "$R=\\begin{bmatrix} 2 & -1 \\\\ -2 & 3 \\end{bmatrix}$",
      "steps": [
       {
-       "math": "-R = -\\begin{bmatrix} 2 & -1 \\\\ -2 & 3 \\end{bmatrix} = \\begin{bmatrix} -2 & 1 \\\\ 2 & -3 \\end{bmatrix}",
-       "en": "The additive inverse changes the sign of every entry.",
-       "ur": "جمعی معکوس میں ہر رکن کی علامت بدل جاتی ہے۔",
+       "math": "R = \\begin{bmatrix} 2 & -1 \\\\ -2 & 3 \\end{bmatrix}",
+       "en": "Write down the given matrix $R$. We need to find its additive inverse.",
+       "ur": "دیے گئے قالب $R$ کو لکھیں۔ ہمیں اس کا جمعی معکوس معلوم کرنا ہے۔",
        "check": [
+        "2 == 2",
+        "-1 == -1",
+        "-2 == -2",
+        "3 == 3"
+       ]
+      },
+      {
+       "math": "-R = -\\begin{bmatrix} 2 & -1 \\\\ -2 & 3 \\end{bmatrix}",
+       "en": "The additive inverse of a matrix $R$ is denoted by $-R$. It is obtained by multiplying the matrix by a negative sign.",
+       "ur": "کسی قالب $R$ کے جمعی معکوس کو $-R$ سے ظاہر کیا جاتا ہے۔ یہ قالب کو منفی علامت سے ضرب دینے سے حاصل ہوتا ہے۔",
+       "check": [
+        "-2 == -2",
+        "-(-1) == 1",
+        "-(-2) == 2",
+        "-3 == -3"
+       ]
+      },
+      {
+       "math": "-R = \\begin{bmatrix} -(2) & -(-1) \\\\ -(-2) & -(3) \\end{bmatrix}",
+       "en": "Multiply each entry inside the matrix by the negative sign to change its sign.",
+       "ur": "قالب کے اندر موجود ہر رکن کی علامت بدلنے کے لیے اسے منفی علامت سے ضرب دیں۔",
+       "check": [
+        "-(2) == -2",
+        "-(-1) == 1",
+        "-(-2) == 2",
+        "-(3) == -3"
+       ]
+      },
+      {
+       "math": "-R = \\begin{bmatrix} -2 & 1 \\\\ 2 & -3 \\end{bmatrix}",
+       "en": "Simplify the signs of all entries to get the final additive inverse of matrix $R$.",
+       "ur": "قالب $R$ کا حتمی جمعی معکوس حاصل کرنے کے لیے تمام ارکان کی علامتوں کو مختصر کریں۔",
+       "check": [
+        "-(2) == -2",
+        "-(-1) == 1",
+        "-(-2) == 2",
+        "-(3) == -3",
         "Eq(Matrix([[0, 0], [0, 0]]), Matrix([[0, 0], [0, 0]]))"
        ]
       }
      ],
      "answer": "$\\begin{bmatrix} -2 & 1 \\\\ 2 & -3 \\end{bmatrix}$",
+     "enriched": true,
      "book_key": "[[-2,1],[2,-3]]"
     },
     {
@@ -1041,15 +1377,35 @@
      "prompt": "$S=\\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}$",
      "steps": [
       {
-       "math": "-S = -\\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix} = \\begin{bmatrix} -1 & 0 \\\\ 0 & -1 \\end{bmatrix}",
-       "en": "The additive inverse changes the sign of every entry.",
-       "ur": "جمعی معکوس میں ہر رکن کی علامت بدل جاتی ہے۔",
+       "math": "S = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}",
+       "en": "We are given the matrix $S$ and we need to find its additive inverse.",
+       "ur": "ہمیں کالب $S$ دیا گیا ہے اور ہمیں اس کا جمعی معکوس معلوم کرنا ہے۔"
+      },
+      {
+       "math": "-S = (-1)S",
+       "en": "The additive inverse of a matrix $S$ is denoted by $-S$. It is obtained by changing the sign of every non-zero entry of the matrix (or multiplying each entry by $-1$).",
+       "ur": "کالب $S$ کے جمعی معکوس کو $-S$ سے ظاہر کیا جاتا ہے۔ یہ کالب کے ہر غیر صفر رکن کی علامت بدل کر (یا ہر رکن کو $-1$ سے ضرب دے کر) حاصل کیا جاتا ہے۔"
+      },
+      {
+       "math": "-S = -\\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix} = \\begin{bmatrix} -(1) & -(0) \\\\ -(0) & -(1) \\end{bmatrix}",
+       "en": "Substitute the matrix $S$ and apply the negative sign to each entry inside the matrix.",
+       "ur": "کالب $S$ کی قیمت درج کریں اور کالب کے اندر موجود ہر رکن کے ساتھ منفی علامت لگائیں۔",
        "check": [
+        "-Matrix([[1, 0], [0, 1]]) == Matrix([[-(1), -(0)], [-(0), -(1)]])"
+       ]
+      },
+      {
+       "math": "-S = \\begin{bmatrix} -1 & 0 \\\\ 0 & -1 \\end{bmatrix}",
+       "en": "Simplify each entry. Note that $0$ is neither positive nor negative, so $-0 = 0$. Thus, the additive inverse of matrix $S$ is $\\begin{bmatrix} -1 & 0 \\\\ 0 & -1 \\end{bmatrix}$.",
+       "ur": "ہر رکن کو مختصر کریں۔ یاد رہے کہ $0$ نہ مثبت ہوتا ہے اور نہ منفی، اس لیے $-0 = 0$ ہوتا ہے۔ پس کالب $S$ کا جمعی معکوس $\\begin{bmatrix} -1 & 0 \\\\ 0 & -1 \\end{bmatrix}$ ہے۔",
+       "check": [
+        "Matrix([[-(1), -(0)], [-(0), -(1)]]) == Matrix([[-1, 0], [0, -1]])",
         "Eq(Matrix([[0, 0], [0, 0]]), Matrix([[0, 0], [0, 0]]))"
        ]
       }
      ],
      "answer": "$\\begin{bmatrix} -1 & 0 \\\\ 0 & -1 \\end{bmatrix}$",
+     "enriched": true,
      "book_key": "[[-1,0],[0,-1]]"
     }
    ],
@@ -2083,23 +2439,61 @@
      "prompt": "",
      "steps": [
       {
-       "math": "\\begin{bmatrix} x + 3 & 0 - 1 \\\\ y + 6 & 0 - 2 \\end{bmatrix} = \\begin{bmatrix} 7 & -1 \\\\ 4 & -2 \\end{bmatrix}",
-       "en": "Multiply the matrices (row by column).",
-       "ur": "قالبوں کو ضرب دیں (قطار ضرب کالم)۔",
+       "math": "\\begin{bmatrix} x & 1 \\\\ y & 2 \\end{bmatrix}\\begin{bmatrix} 1 & 0 \\\\ 3 & -1 \\end{bmatrix} = \\begin{bmatrix} 7 & -1 \\\\ 4 & -2 \\end{bmatrix}",
+       "en": "We are given the following matrix equation and need to find the values of $x$ and $y$.",
+       "ur": "ہمیں درج ذیل قالب مساوات دی گئی ہے اور ہمیں $x$ اور $y$ کی قیمتیں معلوم کرنی ہیں۔"
+      },
+      {
+       "math": "\\begin{bmatrix} x(1) + 1(3) & x(0) + 1(-1) \\\\ y(1) + 2(3) & y(0) + 2(-1) \\end{bmatrix} = \\begin{bmatrix} 7 & -1 \\\\ 4 & -2 \\end{bmatrix}",
+       "en": "Multiply the two matrices on the left-hand side by applying the row-by-column multiplication rule.",
+       "ur": "بائیں طرف موجود دونوں قالبوں کو قطار ضرب کالم کے اصول کے مطابق ضرب دیں۔",
        "check": [
-        "Eq(Matrix([[x, 1], [y, 2]])*Matrix([[1, 0], [3, -1]]), Matrix([[x + 3, -1], [y + 6, -2]]))"
+        "Matrix([[x, 1], [y, 2]]) * Matrix([[1, 0], [3, -1]]) == Matrix([[x*1 + 1*3, x*0 + 1*(-1)], [y*1 + 2*3, y*0 + 2*(-1)]])"
        ]
       },
       {
-       "math": "x + 3 = 7 \\Rightarrow x = 4,\\quad y + 6 = 4 \\Rightarrow y = -2",
-       "en": "Equate the matching entries.",
-       "ur": "متعلقہ ارکان برابر کریں۔",
+       "math": "\\begin{bmatrix} x + 3 & 0 - 1 \\\\ y + 6 & 0 - 2 \\end{bmatrix} = \\begin{bmatrix} 7 & -1 \\\\ 4 & -2 \\end{bmatrix}",
+       "en": "Perform the multiplications inside the matrix on the left-hand side.",
+       "ur": "بائیں طرف کے قالب کے اندر ضرب کا عمل مکمل کریں۔",
        "check": [
+        "Matrix([[x*1 + 1*3, x*0 + 1*(-1)], [y*1 + 2*3, y*0 + 2*(-1)]]) == Matrix([[x + 3, 0 - 1], [y + 6, 0 - 2]])"
+       ]
+      },
+      {
+       "math": "\\begin{bmatrix} x + 3 & -1 \\\\ y + 6 & -2 \\end{bmatrix} = \\begin{bmatrix} 7 & -1 \\\\ 4 & -2 \\end{bmatrix}",
+       "en": "Simplify the entries of the resulting matrix.",
+       "ur": "حاصل ہونے والے قالب کے ارکان کو مختصر کریں۔",
+       "check": [
+        "Matrix([[x + 3, 0 - 1], [y + 6, 0 - 2]]) == Matrix([[x + 3, -1], [y + 6, -2]])"
+       ]
+      },
+      {
+       "math": "x + 3 = 7, \\quad y + 6 = 4",
+       "en": "Since the two matrices are equal, their corresponding entries must also be equal. Equate the matching entries to form linear equations.",
+       "ur": "چونکہ دونوں قالب برابر ہیں، اس لیے ان کے متناظرہ ارکان بھی برابر ہوں گے۔ متعلقہ ارکان کو برابر رکھ کر یک درجی مساواتیں بنائیں۔"
+      },
+      {
+       "math": "x = 7 - 3 \\Rightarrow x = 4",
+       "en": "Solve the first equation for $x$ by subtracting $3$ from both sides.",
+       "ur": "پہلی مساوات کو $x$ کے لیے حل کرنے کے لیے دونوں طرف سے $3$ تفریق کریں۔",
+       "check": [
+        "7 - 3 == 4"
+       ]
+      },
+      {
+       "math": "y = 4 - 6 \\Rightarrow y = -2",
+       "en": "Solve the second equation for $y$ by subtracting $6$ from both sides. Thus, the required values are $x = 4$ and $y = -2$.",
+       "ur": "دوسری مساوات کو $y$ کے لیے حل کرنے کے لیے دونوں طرف سے $6$ تفریق کریں۔ اس طرح مطلوبہ قیمتیں $x = 4$ اور $y = -2$ ہیں۔",
+       "check": [
+        "4 - 6 == -2",
+        "Matrix([[4, 1], [-2, 2]]) * Matrix([[1, 0], [3, -1]]) == Matrix([[7, -1], [4, -2]])",
+        "Eq(Matrix([[x, 1], [y, 2]])*Matrix([[1, 0], [3, -1]]), Matrix([[x + 3, -1], [y + 6, -2]]))",
         "Eq(Matrix([[4, 1], [-2, 2]])*Matrix([[1, 0], [3, -1]]), Matrix([[7, -1], [4, -2]]))"
        ]
       }
      ],
      "answer": "$x = 4,\\ y = -2$",
+     "enriched": true,
      "book_key": "x=4, y=-2"
     }
    ],
@@ -2117,15 +2511,44 @@
      "prompt": "$\\begin{vmatrix} 10 & 5 \\\\ 4 & 6 \\end{vmatrix}$",
      "steps": [
       {
-       "math": "|A| = \\begin{vmatrix} 10 & 5 \\\\ 4 & 6 \\end{vmatrix} = (10)(6) - (5)(4) = 60 - 20 = 40",
-       "en": "For a 2-by-2 matrix, $|A| = ad - bc$.",
-       "ur": "2-by-2 قالب کے لیے $|A| = ad - bc$۔",
+       "math": "|A| = \\begin{vmatrix} 10 & 5 \\\\ 4 & 6 \\end{vmatrix}",
+       "en": "Let the given $2 \\times 2$ determinant be denoted by $|A|$. We need to find its numerical value.",
+       "ur": "فرض کریں کہ دیے گئے $2 \\times 2$ مقطع (determinant) کو $|A|$ سے ظاہر کیا گیا ہے۔ ہمیں اس کی عددی قیمت معلوم کرنی ہے۔"
+      },
+      {
+       "math": "\\begin{vmatrix} a & b \\\\ c & d \\end{vmatrix} = ad - bc",
+       "en": "Recall the formula for evaluating the determinant of a $2 \\times 2$ matrix: multiply the main diagonal elements ($a$ and $d$) and subtract the product of the secondary diagonal elements ($b$ and $c$).",
+       "ur": "ایک $2 \\times 2$ قالب کے مقطع کی قیمت معلوم کرنے کا فارمولا یاد کریں: وتر کے ارکان ($a$ اور $d$) کو ضرب دیں اور اس میں سے دوسرے وتر کے ارکان ($b$ اور $c$) کا حاصلِ ضرب تفریق کریں۔"
+      },
+      {
+       "math": "|A| = (10)(6) - (5)(4)",
+       "en": "Substitute the values from the given determinant where $a = 10$, $b = 5$, $c = 4$, and $d = 6$.",
+       "ur": "دیے گئے مقطع سے قیمتیں درج کریں جہاں $a = 10$، $b = 5$، $c = 4$ اور $d = 6$ ہیں۔",
        "check": [
+        "Matrix([[10, 5], [4, 6]]).det() == (10)*(6) - (5)*(4)"
+       ]
+      },
+      {
+       "math": "|A| = 60 - 20",
+       "en": "Perform the multiplications: $10 \\times 6 = 60$ and $5 \\times 4 = 20$.",
+       "ur": "ضرب کا عمل مکمل کریں: $10 \\times 6 = 60$ اور $5 \\times 4 = 20$۔",
+       "check": [
+        "10 * 6 == 60",
+        "5 * 4 == 20"
+       ]
+      },
+      {
+       "math": "|A| = 40",
+       "en": "Subtract $20$ from $60$ to get the final value of the determinant.",
+       "ur": "مقطع کی حتمی قیمت حاصل کرنے کے لیے $60$ میں سے $20$ کو تفریق کریں۔",
+       "check": [
+        "60 - 20 == 40",
         "Matrix([[10, 5], [4, 6]]).det() == 40"
        ]
       }
      ],
      "answer": "$40$",
+     "enriched": true,
      "book_key": "40"
     },
     {
@@ -2133,15 +2556,52 @@
      "prompt": "$\\begin{vmatrix} -5 & 8 \\\\ -3 & -7 \\end{vmatrix}$",
      "steps": [
       {
-       "math": "|A| = \\begin{vmatrix} -5 & 8 \\\\ -3 & -7 \\end{vmatrix} = (-5)(-7) - (8)(-3) = 35 + 24 = 59",
-       "en": "For a 2-by-2 matrix, $|A| = ad - bc$.",
-       "ur": "2-by-2 قالب کے لیے $|A| = ad - bc$۔",
+       "math": "\\begin{vmatrix} -5 & 8 \\\\ -3 & -7 \\end{vmatrix}",
+       "en": "We are given a $2 \\times 2$ determinant and asked to find its value. Let us represent this determinant by $|A|$.",
+       "ur": "ہمیں ایک $2 \\times 2$ مقطع دیا گیا ہے اور اس کی قیمت معلوم کرنے کو کہا گیا ہے۔ آئیں اس مقطع کو $|A|$ سے ظاہر کرتے ہیں۔"
+      },
+      {
+       "math": "|A| = \\begin{vmatrix} a & b \\\\ c & d \\end{vmatrix} = ad - bc",
+       "en": "For any $2 \\times 2$ matrix, the determinant is found by multiplying the main diagonal entries ($a$ and $d$) and subtracting the product of the other diagonal entries ($b$ and $c$).",
+       "ur": "کسی بھی $2 \\times 2$ قالب کے لیے، مقطع معلوم کرنے کے لیے وتر کے ارکان ($a$ اور $d$) کو ضرب دے کر اس میں سے دوسرے وتر کے ارکان ($b$ اور $c$) کا حاصل ضرب تفریق کیا جاتا ہے۔"
+      },
+      {
+       "math": "|A| = (-5)(-7) - (8)(-3)",
+       "en": "Substitute the given entries $a = -5$, $b = 8$, $c = -3$, and $d = -7$ into the formula.",
+       "ur": "دیے گئے ارکان $a = -5$، $b = 8$، $c = -3$، اور $d = -7$ کو فارمولے میں درج کریں۔",
        "check": [
+        "Matrix([[-5, 8], [-3, -7]]).det() == (-5)*(-7) - (8)*(-3)"
+       ]
+      },
+      {
+       "math": "|A| = 35 - (-24)",
+       "en": "Multiply the numbers in each pair. Note that the product of two negative numbers $(-5)(-7)$ is positive $35$, and $(8)(-3)$ is $-24$.",
+       "ur": "ہر جوڑے میں موجود اعداد کو ضرب دیں۔ یاد رہے کہ دو منفی اعداد $(-5)(-7)$ کا حاصل ضرب مثبت $35$ ہے، اور $(8)(-3)$ کا حاصل ضرب $-24$ ہے۔",
+       "check": [
+        "(-5)*(-7) == 35",
+        "(8)*(-3) == -24"
+       ]
+      },
+      {
+       "math": "|A| = 35 + 24",
+       "en": "Simplify the signs. Subtracting a negative number is the same as adding a positive number.",
+       "ur": "علامات کو مختصر کریں۔ منفی عدد کو تفریق کرنا مثبت عدد کو جمع کرنے کے برابر ہے۔",
+       "check": [
+        "35 - (-24) == 35 + 24"
+       ]
+      },
+      {
+       "math": "|A| = 59",
+       "en": "Add the two numbers to get the final value of the determinant.",
+       "ur": "مقطع کی حتمی قیمت حاصل کرنے کے لیے دونوں اعداد کو جمع کریں۔",
+       "check": [
+        "35 + 24 == 59",
         "Matrix([[-5, 8], [-3, -7]]).det() == 59"
        ]
       }
      ],
      "answer": "$59$",
+     "enriched": true,
      "book_key": "59"
     },
     {
@@ -2149,15 +2609,44 @@
      "prompt": "$\\begin{vmatrix} 3 & 8 \\\\ 0 & 2 \\end{vmatrix}$",
      "steps": [
       {
-       "math": "|A| = \\begin{vmatrix} 3 & 8 \\\\ 0 & 2 \\end{vmatrix} = (3)(2) - (8)(0) = 6 - 0 = 6",
-       "en": "For a 2-by-2 matrix, $|A| = ad - bc$.",
-       "ur": "2-by-2 قالب کے لیے $|A| = ad - bc$۔",
+       "math": "\\begin{vmatrix} 3 & 8 \\\\ 0 & 2 \\end{vmatrix}",
+       "en": "We are given a $2 \\times 2$ determinant and asked to find its value.",
+       "ur": "ہمیں ایک $2 \\times 2$ مقطع (determinant) دیا گیا ہے اور ہمیں اس کی قیمت معلوم کرنی ہے۔"
+      },
+      {
+       "math": "\\begin{vmatrix} a & b \\\\ c & d \\end{vmatrix} = ad - bc",
+       "en": "Recall the formula for the determinant of a $2 \\times 2$ matrix: multiply the main diagonal elements and subtract the product of the other diagonal elements.",
+       "ur": "ایک $2 \\times 2$ قالب کے مقطع کا فارمولا یاد کریں: وتر کے ارکان کو آپس میں ضرب دیں اور دوسرے وتر کے ارکان کے حاصل ضرب کو اس میں سے تفریق کریں۔"
+      },
+      {
+       "math": "\\begin{vmatrix} 3 & 8 \\\\ 0 & 2 \\end{vmatrix} = (3)(2) - (8)(0)",
+       "en": "Substitute the given values $a = 3$, $b = 8$, $c = 0$, and $d = 2$ into the formula.",
+       "ur": "فارمولے میں دی گئی قیمتیں $a = 3$، $b = 8$، $c = 0$ اور $d = 2$ درج کریں۔",
        "check": [
+        "Matrix([[3, 8], [0, 2]]).det() == 3*2 - 8*0"
+       ]
+      },
+      {
+       "math": "= 6 - 0",
+       "en": "Multiply the numbers in the brackets: $(3)(2) = 6$ and $(8)(0) = 0$.",
+       "ur": "بریکٹ میں موجود اعداد کو ضرب دیں: $(3)(2) = 6$ اور $(8)(0) = 0$۔",
+       "check": [
+        "3*2 == 6",
+        "8*0 == 0"
+       ]
+      },
+      {
+       "math": "= 6",
+       "en": "Subtract $0$ from $6$ to get the final answer.",
+       "ur": "حتمی جواب حاصل کرنے کے لیے $6$ میں سے $0$ کو تفریق کریں۔",
+       "check": [
+        "6 - 0 == 6",
         "Matrix([[3, 8], [0, 2]]).det() == 6"
        ]
       }
      ],
      "answer": "$6$",
+     "enriched": true,
      "book_key": "6"
     }
    ],
@@ -2245,23 +2734,48 @@
      "prompt": "",
      "steps": [
       {
+       "math": "",
+       "en": "We are given the matrix $A = \\begin{bmatrix} x & 6 \\\\ 5 & 15 \\end{bmatrix}$ and told that it is a singular matrix. We need to find the value of $x$.",
+       "ur": "ہمیں قالب $A = \\begin{bmatrix} x & 6 \\\\ 5 & 15 \\end{bmatrix}$ دیا گیا ہے اور بتایا گیا ہے کہ یہ ایک نادر قالب ہے۔ ہمیں $x$ کی قیمت معلوم کرنی ہے۔"
+      },
+      {
        "math": "|A| = (x)(15) - (6)(5) = 15x - 30",
-       "en": "Find the determinant.",
-       "ur": "مقطع معلوم کریں۔",
+       "en": "First, find the determinant of the matrix $A$ by multiplying the diagonal elements and subtracting the product of the off-diagonal elements.",
+       "ur": "سب سے پہلے، وتر کے ارکان کو ضرب دے کر اور غیر وتری ارکان کے حاصل ضرب کو تفریق کر کے قالب $A$ کا مقطع معلوم کریں۔",
        "check": [
-        "Matrix([[x, 6], [5, 15]]).det() == 15*x - 30"
+        "Matrix([[x, 6], [5, 15]]).det() == 15*x - 30",
+        "x*15 - 6*5 == 15*x - 30"
        ]
       },
       {
-       "math": "15x - 30 = 0 \\Rightarrow x = 2",
-       "en": "A singular matrix has determinant 0.",
-       "ur": "نادر قالب کا مقطع 0 ہوتا ہے۔",
+       "math": "15x - 30 = 0",
+       "en": "By definition, a singular matrix has a determinant equal to $0$, meaning $|A| = 0$. Substitute the expression for $|A|$ into this equation.",
+       "ur": "تعریف کے مطابق، نادر قالب کا مقطع $0$ کے برابر ہوتا ہے، یعنی $|A| = 0$۔ اس مساوات میں $|A|$ کی قیمت درج کریں۔",
        "check": [
-        "Matrix([[2, 6], [5, 15]]).det() == 0"
+        "15*(2) - 30 == 0"
+       ]
+      },
+      {
+       "math": "15x = 30",
+       "en": "Add $30$ to both sides of the equation to isolate the term with $x$.",
+       "ur": "$x$ والی رقم کو الگ کرنے کے لیے مساوات کے دونوں طرف $30$ جمع کریں۔",
+       "check": [
+        "15*(2) == 30"
+       ]
+      },
+      {
+       "math": "x = \\frac{30}{15} = 2",
+       "en": "Divide both sides by $15$ to find the value of $x$.",
+       "ur": "$x$ کی قیمت معلوم کرنے کے لیے دونوں طرف $15$ سے تقسیم کریں۔",
+       "check": [
+        "R(30, 15) == 2",
+        "Matrix([[2, 6], [5, 15]]).det() == 0",
+        "Matrix([[x, 6], [5, 15]]).det() == 15*x - 30"
        ]
       }
      ],
      "answer": "$x = 2$",
+     "enriched": true,
      "book_key": "x=2"
     }
    ],
@@ -3697,20 +4211,45 @@
      "prompt": "If $\\begin{bmatrix}a+2\\\\3\\end{bmatrix}=\\begin{bmatrix}7\\\\3\\end{bmatrix}$, then $a=$ (a) $3$ (b) $5$ (c) $6$ (d) $7$",
      "steps": [
       {
-       "math": "a + 2 = 7 \\Rightarrow a = 5",
-       "en": "Equate the matching entries.",
-       "ur": "متعلقہ ارکان برابر کریں۔",
+       "math": "",
+       "en": "We are given the matrix equation $\\begin{bmatrix}a+2\\\\3\\end{bmatrix} = \\begin{bmatrix}7\\\\3\\end{bmatrix}$ and we need to find the value of $a$.",
+       "ur": "ہمیں کالبوں کی مساوات $\\begin{bmatrix}a+2\\\\3\\end{bmatrix} = \\begin{bmatrix}7\\\\3\\end{bmatrix}$ دی گئی ہے اور ہمیں $a$ کی قیمت معلوم کرنی ہے۔"
+      },
+      {
+       "math": "a + 2 = 7",
+       "en": "Two matrices are equal if and only if their corresponding entries are equal. Equating the first entries of both matrices gives:",
+       "ur": "دو کالب اس وقت مساوی ہوتے ہیں جب ان کے متناظرہ ارکان آپس میں برابر ہوں۔ دونوں کالبوں کے پہلے ارکان کو برابر رکھنے سے:",
        "check": [
         "5 + 2 == 7"
        ]
       },
       {
+       "math": "a = 7 - 2",
+       "en": "Subtract $2$ from both sides of the equation to isolate $a$.",
+       "ur": "$a$ کو الگ کرنے کے لیے مساوات کے دونوں اطراف سے $2$ تفریق کریں۔",
+       "check": [
+        "5 == 7 - 2"
+       ]
+      },
+      {
+       "math": "a = 5",
+       "en": "Simplify the right-hand side to get the value of $a$.",
+       "ur": "$a$ کی قیمت حاصل کرنے کے لیے دائیں جانب کو مختصر کریں۔",
+       "check": [
+        "7 - 2 == 5"
+       ]
+      },
+      {
        "math": "\\text{Answer: (b) } 5",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "This value matches option (b). Therefore, the correct answer is (b) $5$.",
+       "ur": "یہ قیمت آپشن (b) سے مطابقت رکھتی ہے۔ لہٰذا، درست جواب (b) $5$ ہے۔",
+       "check": [
+        "5 + 2 == 7"
+       ]
       }
      ],
      "answer": "(b) $5$",
+     "enriched": true,
      "book_key": "(b) 5"
     },
     {
@@ -3718,17 +4257,32 @@
      "prompt": "$A=\\begin{bmatrix}3&5&0\\end{bmatrix}$ is a ______ matrix. (a) $\\text{row}$ (b) $\\text{square}$ (c) $\\text{column}$ (d) $\\text{null}$",
      "steps": [
       {
+       "math": "\\begin{bmatrix} 3 & 5 & 0 \\end{bmatrix}",
+       "en": "Consider the given matrix $A$. We need to identify its type from the given options.",
+       "ur": "دیے گئے کالب $A$ پر غور کریں۔ ہمیں دیے گئے اختیارات میں سے اس کی قسم کی شناخت کرنی ہے۔"
+      },
+      {
        "math": "",
-       "en": "It has only one row.",
-       "ur": "اس کی صرف ایک قطار ہے۔"
+       "en": "A matrix is called a row matrix if it has only one row. By looking at matrix $A$, we can see that all its entries ($3$, $5$, and $0$) are arranged horizontally in a single row.",
+       "ur": "ایک کالب کو قطاری کالب (row matrix) کہا جاتا ہے اگر اس میں صرف ایک قطار ہو۔ کالب $A$ کو دیکھ کر ہم جان سکتے ہیں کہ اس کے تمام ارکان ($3$، $5$، اور $0$) افقی طور پر ایک ہی قطار میں ترتیب دیے گئے ہیں۔"
+      },
+      {
+       "math": "\\text{Order of } A = 1 \\text{-by-} 3",
+       "en": "Since matrix $A$ has $1$ row and $3$ columns, its order is $1\\text{-by-}3$. Because the number of rows is $1$, it is a row matrix.",
+       "ur": "چونکہ کالب $A$ میں $1$ قطار اور $3$ کالم ہیں، اس کا مرتبہ $1\\text{-by-}3$ ہے۔ چونکہ قطاروں کی تعداد $1$ ہے، اس لیے یہ ایک قطاری کالب (row matrix) ہے۔",
+       "check": [
+        "1 == 1",
+        "3 == 3"
+       ]
       },
       {
        "math": "\\text{Answer: (a) } \\text{row}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Therefore, the correct option is (a).",
+       "ur": "لہذا، درست جواب (a) ہے۔"
       }
      ],
      "answer": "(a) $\\text{row}$",
+     "enriched": true,
      "book_key": "(a) row"
     },
     {
@@ -3737,16 +4291,32 @@
      "steps": [
       {
        "math": "",
-       "en": "It has only one column.",
-       "ur": "اس کا صرف ایک کالم ہے۔"
+       "en": "Consider the given matrix $B = \\begin{bmatrix} 2 \\\\ 3 \\end{bmatrix}$.",
+       "ur": "دیے گئے قالب $B = \\begin{bmatrix} 2 \\\\ 3 \\end{bmatrix}$ پر غور کریں۔"
+      },
+      {
+       "math": "",
+       "en": "In a matrix, the horizontal lines of entries are called rows and the vertical lines of entries are called columns.",
+       "ur": "کسی قالب میں ارکان کی افقی قطاروں کو قطاریں اور عمودی قطاروں کو کالم کہتے ہیں۔"
+      },
+      {
+       "math": "",
+       "en": "By observing the matrix $B$, we can see that it has $2$ horizontal rows and only $1$ vertical column.",
+       "ur": "قالب $B$ کا مشاہدہ کرنے سے ہم دیکھ سکتے ہیں کہ اس میں $2$ افقی قطاریں اور صرف $1$ عمودی کالم ہے۔"
+      },
+      {
+       "math": "",
+       "en": "According to the definition, a matrix that has only one column is called a column matrix.",
+       "ur": "تعریف کے مطابق، ایسا قالب جس کا صرف ایک کالم ہو، کالمی قالب (column matrix) کہلاتا ہے۔"
       },
       {
        "math": "\\text{Answer: (d) } \\text{column}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Therefore, the given matrix is a column matrix, which matches option (d).",
+       "ur": "لہٰذا، دیا گیا قالب ایک کالمی قالب ہے، جو کہ آپشن (d) سے مطابقت رکھتا ہے۔"
       }
      ],
      "answer": "(d) $\\text{column}$",
+     "enriched": true,
      "book_key": "(d) column"
     },
     {
@@ -3754,17 +4324,39 @@
      "prompt": "$M=\\begin{bmatrix}1&0&0\\\\0&1&0\\\\0&0&1\\end{bmatrix}$ is a/an ______ matrix. (a) $\\text{rectangular}$ (b) $\\text{identity}$ (c) $\\text{column}$ (d) $\\text{row}$",
      "steps": [
       {
-       "math": "",
-       "en": "1s on the leading diagonal and 0s elsewhere.",
-       "ur": "مرکزی وتر پر 1 اور باقی جگہ 0۔"
+       "math": "M = \\begin{bmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{bmatrix}",
+       "en": "Consider the given matrix $M$. We need to identify its type from the given options.",
+       "ur": "دیے گئے قالب $M$ پر غور کریں۔ ہمیں دیے گئے اختیارات میں سے اس کی قسم کی شناخت کرنی ہے۔"
+      },
+      {
+       "math": "\\text{Order of } M = 3 \\times 3",
+       "en": "Since the matrix $M$ has $3$ rows and $3$ columns, the number of rows is equal to the number of columns, which means it is a square matrix.",
+       "ur": "چونکہ قالب $M$ میں $3$ قطاریں اور $3$ کالم ہیں، اس لیے قطاروں کی تعداد کالموں کی تعداد کے برابر ہے، جس کا مطلب ہے کہ یہ ایک مربی قالب ہے۔",
+       "check": [
+        "3 == 3"
+       ]
+      },
+      {
+       "math": "m_{11} = 1, \\quad m_{22} = 1, \\quad m_{33} = 1",
+       "en": "Look at the entries on the main (leading) diagonal. All the diagonal elements are equal to $1$, and all the non-diagonal elements are equal to $0$.",
+       "ur": "مرکزی وتر کے ارکان کو دیکھیں۔ وتر کے تمام ارکان $1$ کے برابر ہیں، اور وتر کے علاوہ باقی تمام ارکان $0$ کے برابر ہیں۔",
+       "check": [
+        "1 == 1"
+       ]
+      },
+      {
+       "math": "M = I_3",
+       "en": "By definition, a square matrix in which all the elements on the main diagonal are $1$ and all other elements are $0$ is called an identity (or unit) matrix.",
+       "ur": "تعریف کے مطابق، ایک ایسا مربی قالب جس میں مرکزی وتر کے تمام ارکان $1$ ہوں اور باقی تمام ارکان $0$ ہوں، وحدانی قالب (identity matrix) کہلاتا ہے۔"
       },
       {
        "math": "\\text{Answer: (b) } \\text{identity}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Therefore, $M$ is an identity matrix, which corresponds to option (b).",
+       "ur": "لہذا، $M$ ایک وحدانی (identity) قالب ہے، جو کہ آپشن (b) سے مطابقت رکھتا ہے۔"
       }
      ],
      "answer": "(b) $\\text{identity}$",
+     "enriched": true,
      "book_key": "(b) identity"
     },
     {
@@ -3772,17 +4364,28 @@
      "prompt": "If $A^t=-A$, then $A$ is ______ matrix. (a) $\\text{symmetric}$ (b) $\\text{row}$ (c) $\\text{rectangular}$ (d) $\\text{skew-symmetric}$",
      "steps": [
       {
+       "math": "A^t = -A",
+       "en": "We are given a matrix $A$ such that its transpose $A^t$ is equal to the negative of the matrix itself, $-A$.",
+       "ur": "ہمیں ایک قالب $A$ دیا گیا ہے جس کا ٹرانسپوز (پلٹ) $A^t$ اس قالب کے منفی یعنی $-A$ کے برابر ہے۔"
+      },
+      {
        "math": "",
-       "en": "A matrix equal to the negative of its transpose is skew-symmetric.",
-       "ur": "جو قالب اپنے پلٹ کے منفی کے برابر ہو وہ skew-symmetric ہے۔"
+       "en": "Recall the definitions of special matrices: if $A^t = A$, the matrix is called a $\\text{symmetric}$ matrix.",
+       "ur": "خاص قالبوں کی تعریفیں یاد کریں: اگر $A^t = A$ ہو، تو قالب کو سیمیٹرک ($\\text{symmetric}$) قالب کہا جاتا ہے۔"
+      },
+      {
+       "math": "",
+       "en": "On the other hand, a square matrix $A$ is defined as a $\\text{skew-symmetric}$ matrix if its transpose is equal to the negative of the original matrix, that is, $A^t = -A$.",
+       "ur": "دوسری طرف، ایک مربی قالب $A$ کو سکیو-سیمیٹرک ($\\text{skew-symmetric}$) قالب کہا جاتا ہے اگر اس کا ٹرانسپوز اصل قالب کے منفی کے برابر ہو، یعنی $A^t = -A$۔"
       },
       {
        "math": "\\text{Answer: (d) } \\text{skew-symmetric}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Comparing this definition with the given options, we conclude that option (d) is the correct answer.",
+       "ur": "اس تعریف کا دیے گئے اختیارات سے موازنہ کرتے ہوئے، ہم نتیجہ اخذ کرتے ہیں کہ آپشن (d) درست جواب ہے۔"
       }
      ],
      "answer": "(d) $\\text{skew-symmetric}$",
+     "enriched": true,
      "book_key": "(d) skew-symmetric"
     },
     {
@@ -3790,20 +4393,44 @@
      "prompt": "If $A=[3\\ \\ 4]$, $B=[7\\ \\ 8]$, then $A+B=$ (a) $[21\\ \\ 32]$ (b) $[24\\ \\ 28]$ (c) $[10\\ \\ 12]$ (d) $[11\\ \\ 11]$",
      "steps": [
       {
-       "math": "[3 + 7\\ \\ 4 + 8] = [10\\ \\ 12]",
-       "en": "Add the entries.",
-       "ur": "ارکان جمع کریں۔",
+       "math": "A = \\begin{bmatrix} 3 & 4 \\end{bmatrix}, \\quad B = \\begin{bmatrix} 7 & 8 \\end{bmatrix}",
+       "en": "Write down the given row matrices $A$ and $B$. We need to find the sum $A + B$.",
+       "ur": "دیے گئے قطاری کالب $A$ اور $B$ لکھیں۔ ہمیں ان کا مجموعہ $A + B$ معلوم کرنا ہے۔"
+      },
+      {
+       "math": "A + B = \\begin{bmatrix} 3 & 4 \\end{bmatrix} + \\begin{bmatrix} 7 & 8 \\end{bmatrix}",
+       "en": "Since both matrices have the same order ($1 \\times 2$), they are conformable for addition. Substitute the matrices into $A + B$.",
+       "ur": "چونکہ دونوں کالبوں کا مرتبہ یکساں ($1 \\times 2$) ہے، اس لیے ان کو جمع کیا جا سکتا ہے۔ $A + B$ میں کالبوں کی قیمتیں درج کریں۔"
+      },
+      {
+       "math": "A + B = \\begin{bmatrix} 3 + 7 & 4 + 8 \\end{bmatrix}",
+       "en": "To add two matrices, we add their corresponding entries.",
+       "ur": "دو کالبوں کو جمع کرنے کے لیے، ہم ان کے متناظرہ ارکان کو آپس میں جمع کرتے ہیں۔",
        "check": [
-        "Eq(Matrix([[3, 4]]) + Matrix([[7, 8]]), Matrix([[10, 12]]))"
+        "Matrix([[3, 4]]) + Matrix([[7, 8]]) == Matrix([[3 + 7, 4 + 8]])"
+       ]
+      },
+      {
+       "math": "A + B = \\begin{bmatrix} 10 & 12 \\end{bmatrix}",
+       "en": "Perform the addition for each entry: $3 + 7 = 10$ and $4 + 8 = 12$.",
+       "ur": "ہر رکن کے لیے جمع کا عمل مکمل کریں: $3 + 7 = 10$ اور $4 + 8 = 12$۔",
+       "check": [
+        "3 + 7 == 10",
+        "4 + 8 == 12",
+        "Matrix([[3 + 7, 4 + 8]]) == Matrix([[10, 12]])"
        ]
       },
       {
        "math": "\\text{Answer: (c) } [10\\ \\ 12]",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Comparing our result with the given choices, option (c) is the correct answer.",
+       "ur": "ہمارے نتیجے کا دیے گئے ممکنہ جوابات سے موازنہ کرنے پر، آپشن (c) درست جواب ہے۔",
+       "check": [
+        "Eq(Matrix([[3, 4]]) + Matrix([[7, 8]]), Matrix([[10, 12]]))"
+       ]
       }
      ],
      "answer": "(c) $[10\\ \\ 12]$",
+     "enriched": true,
      "book_key": "(c) [10 12]"
     },
     {
@@ -3811,20 +4438,47 @@
      "prompt": "If $A=[3\\ \\ 4]$, $B=[7\\ \\ 8]$, then $B-A=$ (a) $[10\\ \\ 12]$ (b) $[11\\ \\ 11]$ (c) $[4\\ \\ 4]$ (d) $[-4\\ \\ -4]$",
      "steps": [
       {
-       "math": "[7 - 3\\ \\ 8 - 4] = [4\\ \\ 4]",
-       "en": "Subtract the entries.",
-       "ur": "ارکان تفریق کریں۔",
+       "math": "A = [3\\ \\ 4], \\quad B = [7\\ \\ 8]",
+       "en": "Write down the given row matrices $A$ and $B$. We need to find the matrix difference $B - A$.",
+       "ur": "دیے گئے قطاری قالب $A$ اور $B$ لکھیں۔ ہمیں ان کا فرق $B - A$ معلوم کرنا ہے۔"
+      },
+      {
+       "math": "B - A = [7\\ \\ 8] - [3\\ \\ 4]",
+       "en": "Substitute the given matrices into the expression $B - A$. Since both matrices have the same order ($1 \\times 2$), they are conformable for subtraction.",
+       "ur": "قیمتیں $B - A$ میں درج کریں۔ چونکہ دونوں قالبوں کا مرتبہ یکساں ($1 \\times 2$) ہے، اس لیے ان کی تفریق ممکن ہے۔",
        "check": [
         "Eq(Matrix([[7, 8]]) - Matrix([[3, 4]]), Matrix([[4, 4]]))"
        ]
       },
       {
+       "math": "B - A = [7 - 3\\ \\ 8 - 4]",
+       "en": "To subtract matrix $A$ from matrix $B$, subtract the corresponding entries of $A$ from the entries of $B$.",
+       "ur": "قالب $B$ میں سے قالب $A$ کو تفریق کرنے کے لیے، $B$ کے ارکان میں سے $A$ کے متناظرہ ارکان کو تفریق کریں۔",
+       "check": [
+        "Eq(Matrix([[7 - 3, 8 - 4]]), Matrix([[4, 4]]))"
+       ]
+      },
+      {
+       "math": "B - A = [4\\ \\ 4]",
+       "en": "Simplify the arithmetic operations ($7 - 3 = 4$ and $8 - 4 = 4$) to get the resultant matrix.",
+       "ur": "حسابی عمل کو مختصر کریں ($7 - 3 = 4$ اور $8 - 4 = 4$) تاکہ مطلوبہ قالب حاصل ہو سکے۔",
+       "check": [
+        "7 - 3 == 4",
+        "8 - 4 == 4",
+        "Eq(Matrix([[7, 8]]) - Matrix([[3, 4]]), Matrix([[4, 4]]))"
+       ]
+      },
+      {
        "math": "\\text{Answer: (c) } [4\\ \\ 4]",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Comparing our result with the given choices, option (c) is the correct answer.",
+       "ur": "اپنے نتیجے کا دیے گئے ممکنہ جوابات سے موازنہ کرنے پر، آپشن (c) درست جواب ہے۔",
+       "check": [
+        "Eq(Matrix([[7, 8]]) - Matrix([[3, 4]]), Matrix([[4, 4]]))"
+       ]
       }
      ],
      "answer": "(c) $[4\\ \\ 4]$",
+     "enriched": true,
      "book_key": "(c) [4 4]"
     },
     {
@@ -3832,20 +4486,42 @@
      "prompt": "What is the additive inverse of $\\begin{bmatrix}3\\\\4\\end{bmatrix}$? (a) $\\begin{bmatrix}-3\\\\4\\end{bmatrix}$ (b) $\\begin{bmatrix}-3\\\\-4\\end{bmatrix}$ (c) $\\begin{bmatrix}3\\\\4\\end{bmatrix}$ (d) $\\begin{bmatrix}-1\\\\1\\end{bmatrix}$",
      "steps": [
       {
+       "math": "\\begin{bmatrix} 3 \\\\ 4 \\end{bmatrix}",
+       "en": "We are given a column matrix and asked to find its additive inverse.",
+       "ur": "ہمیں ایک کالمی کالب دیا گیا ہے اور اس کا جمعی معکوس معلوم کرنے کو کہا گیا ہے۔"
+      },
+      {
+       "math": "",
+       "en": "The additive inverse of a matrix is obtained by multiplying the matrix by $-1$, which means changing the sign of each entry.",
+       "ur": "کسی کالب کا جمعی معکوس اس کالب کو $-1$ سے ضرب دے کر حاصل کیا جاتا ہے، جس کا مطلب ہے کہ ہر رکن کی علامت تبدیل کر دی جائے۔"
+      },
+      {
+       "math": "-\\begin{bmatrix} 3 \\\\ 4 \\end{bmatrix} = \\begin{bmatrix} -(3) \\\\ -(4) \\end{bmatrix}",
+       "en": "Multiply each entry of the given matrix by a negative sign.",
+       "ur": "دیے گئے کالب کے ہر رکن کو منفی علامت سے ضرب دیں۔",
+       "check": [
+        "Eq(-Matrix([[3], [4]]), Matrix([[-3], [-4]]))"
+       ]
+      },
+      {
        "math": "-\\begin{bmatrix} 3 \\\\ 4 \\end{bmatrix} = \\begin{bmatrix} -3 \\\\ -4 \\end{bmatrix}",
-       "en": "Change the sign of each entry.",
-       "ur": "ہر رکن کی علامت بدلیں۔",
+       "en": "Simplify the entries to get the additive inverse.",
+       "ur": "جمعی معکوس حاصل کرنے کے لیے ارکان کو مختصر کریں۔",
        "check": [
         "Eq(Matrix([[3], [4]]) + Matrix([[-3], [-4]]), Matrix([[0], [0]]))"
        ]
       },
       {
        "math": "\\text{Answer: (b) } \\begin{bmatrix}-3\\\\-4\\end{bmatrix}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Therefore, the correct option is (b).",
+       "ur": "لہٰذا، درست آپشن (b) ہے۔",
+       "check": [
+        "Eq(Matrix([[3], [4]]) + Matrix([[-3], [-4]]), Matrix([[0], [0]]))"
+       ]
       }
      ],
      "answer": "(b) $\\begin{bmatrix}-3\\\\-4\\end{bmatrix}$",
+     "enriched": true,
      "book_key": "(b) [[-3],[-4]]"
     },
     {
@@ -3853,9 +4529,31 @@
      "prompt": "If $A=\\begin{bmatrix}3&1&3\\\\2&0&2\\end{bmatrix}$, then order of $A^t$ is: (a) $3\\text{-by-}2$ (b) $2\\text{-by-}3$ (c) $3\\text{-by-}3$ (d) $2\\text{-by-}2$",
      "steps": [
       {
-       "math": "A: 2\\text{-by-}3 \\Rightarrow A^t: 3\\text{-by-}2",
-       "en": "Transposing swaps rows and columns.",
-       "ur": "پلٹنے سے قطاریں اور کالم بدل جاتے ہیں۔",
+       "math": "A = \\begin{bmatrix} 3 & 1 & 3 \\\\ 2 & 0 & 2 \\end{bmatrix}",
+       "en": "First, write down the given matrix $A$. We need to find the order of its transpose, $A^t$.",
+       "ur": "سب سے پہلے، دیے گئے قالب $A$ کو لکھیں۔ ہمیں اس کے ٹرانسپوز، یعنی $A^t$ کا مرتبہ معلوم کرنا ہے۔"
+      },
+      {
+       "math": "\\text{Order of } A = m\\text{-by-}n = 2\\text{-by-}3",
+       "en": "Count the number of rows ($m$) and columns ($n$) in matrix $A$. Since it has $2$ rows and $3$ columns, the order of $A$ is $2\\text{-by-}3$.",
+       "ur": "قالب $A$ میں قطاروں ($m$) اور کالموں ($n$) کی تعداد گنیں۔ چونکہ اس میں $2$ قطاریں اور $3$ کالم ہیں، اس لیے $A$ کا مرتبہ $2\\text{-by-}3$ ہے۔",
+       "check": [
+        "Matrix([[3, 1, 3], [2, 0, 2]]).rows == 2",
+        "Matrix([[3, 1, 3], [2, 0, 2]]).cols == 3"
+       ]
+      },
+      {
+       "math": "A^t = \\begin{bmatrix} 3 & 2 \\\\ 1 & 0 \\\\ 3 & 2 \\end{bmatrix}",
+       "en": "To find the transpose $A^t$, we interchange the rows and columns of matrix $A$.",
+       "ur": "ٹرانسپوز $A^t$ معلوم کرنے کے لیے، ہم قالب $A$ کی قطاروں کو کالموں میں تبدیل کر دیتے ہیں۔",
+       "check": [
+        "Matrix([[3, 1, 3], [2, 0, 2]]).T == Matrix([[3, 2], [1, 0], [3, 2]])"
+       ]
+      },
+      {
+       "math": "\\text{Order of } A^t = 3\\text{-by-}2",
+       "en": "Now, count the rows and columns of $A^t$. It has $3$ rows and $2$ columns, so the order of $A^t$ is $3\\text{-by-}2$.",
+       "ur": "اب، $A^t$ کی قطاروں اور کالموں کو گنیں۔ اس میں $3$ قطاریں اور $2$ کالم ہیں، اس لیے $A^t$ کا مرتبہ $3\\text{-by-}2$ ہے۔",
        "check": [
         "Matrix([[3, 1, 3], [2, 0, 2]]).T.rows == 3",
         "Matrix([[3, 1, 3], [2, 0, 2]]).T.cols == 2"
@@ -3863,11 +4561,16 @@
       },
       {
        "math": "\\text{Answer: (a) } 3\\text{-by-}2",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "This matches option (a), which is the correct answer.",
+       "ur": "یہ آپشن (a) سے مطابقت رکھتا ہے، جو کہ درست جواب ہے۔",
+       "check": [
+        "Matrix([[3, 1, 3], [2, 0, 2]]).T.rows == 3",
+        "Matrix([[3, 1, 3], [2, 0, 2]]).T.cols == 2"
+       ]
       }
      ],
      "answer": "(a) $3\\text{-by-}2$",
+     "enriched": true,
      "book_key": "(a) 3-by-2"
     },
     {
@@ -3875,20 +4578,50 @@
      "prompt": "$\\begin{vmatrix}3&1\\\\0&4\\end{vmatrix}=$ (a) $11$ (b) $12$ (c) $13$ (d) $-11$",
      "steps": [
       {
-       "math": "(3)(4) - (1)(0) = 12",
-       "en": "$ad - bc$.",
-       "ur": "$ad - bc$۔",
+       "math": "\\begin{vmatrix} 3 & 1 \\\\ 0 & 4 \\end{vmatrix}",
+       "en": "We need to evaluate the determinant of the given $2 \\times 2$ matrix.",
+       "ur": "ہمیں دیے گئے $2 \\times 2$ کالب کے مقطع (determinant) کی قیمت معلوم کرنی ہے۔"
+      },
+      {
+       "math": "\\begin{vmatrix} a & b \\\\ c & d \\end{vmatrix} = ad - bc",
+       "en": "Recall the formula for the determinant of a $2 \\times 2$ matrix: multiply the main diagonal elements and subtract the product of the other diagonal elements.",
+       "ur": "کسی $2 \\times 2$ کالب کے مقطع کا فارمولا یاد کریں: وتر کے ارکان کو ضرب دیں اور اس میں سے دوسرے وتر کے ارکان کے حاصلِ ضرب کو تفریق کریں۔"
+      },
+      {
+       "math": "\\begin{vmatrix} 3 & 1 \\\\ 0 & 4 \\end{vmatrix} = (3)(4) - (1)(0)",
+       "en": "Substitute the values $a = 3$, $b = 1$, $c = 0$, and $d = 4$ into the formula.",
+       "ur": "فارمولے میں $a = 3$، $b = 1$، $c = 0$ اور $d = 4$ کی قیمتیں درج کریں۔",
        "check": [
-        "Matrix([[3, 1], [0, 4]]).det() == 12"
+        "Matrix([[3, 1], [0, 4]]).det() == (3)*(4) - (1)*(0)"
+       ]
+      },
+      {
+       "math": "= 12 - 0",
+       "en": "Multiply the numbers in the brackets: $3 \\times 4 = 12$ and $1 \\times 0 = 0$.",
+       "ur": "بریکٹ میں موجود اعداد کو ضرب دیں: $3 \\times 4 = 12$ اور $1 \\times 0 = 0$۔",
+       "check": [
+        "(3)*(4) - (1)*(0) == 12 - 0"
+       ]
+      },
+      {
+       "math": "= 12",
+       "en": "Subtract $0$ from $12$ to get $12$.",
+       "ur": "$12$ میں سے $0$ تفریق کرنے سے $12$ حاصل ہوتا ہے۔",
+       "check": [
+        "12 - 0 == 12"
        ]
       },
       {
        "math": "\\text{Answer: (b) } 12",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "The calculated value matches option (b).",
+       "ur": "معلوم کی گئی قیمت آپشن (b) سے مطابقت رکھتی ہے۔",
+       "check": [
+        "Matrix([[3, 1], [0, 4]]).det() == 12"
+       ]
       }
      ],
      "answer": "(b) $12$",
+     "enriched": true,
      "book_key": "(b) 12"
     }
    ],
@@ -3906,23 +4639,54 @@
      "prompt": "$(A-B)^t$",
      "steps": [
       {
-       "math": "A - B = \\begin{bmatrix} 4 & 2 \\\\ 7 & 6 \\end{bmatrix} - \\begin{bmatrix} 5 & 5 \\\\ 8 & 8 \\end{bmatrix} = \\begin{bmatrix} 4 - 5 & 2 - 5 \\\\ 7 - 8 & 6 - 8 \\end{bmatrix} = \\begin{bmatrix} -1 & -3 \\\\ -1 & -2 \\end{bmatrix}",
-       "en": "Matrices of the same order: subtract the entries in the same positions.",
-       "ur": "ایک ہی درجہ کے قالب: ایک ہی مقام کے ارکان تفریق کریں۔",
+       "math": "",
+       "en": "We are given two matrices $A = \\begin{bmatrix} 4 & 2 \\\\ 7 & 6 \\end{bmatrix}$ and $B = \\begin{bmatrix} 5 & 5 \\\\ 8 & 8 \\end{bmatrix}$, and we need to find $(A - B)^t$.",
+       "ur": "ہمیں دو قالب $A = \\begin{bmatrix} 4 & 2 \\\\ 7 & 6 \\end{bmatrix}$ اور $B = \\begin{bmatrix} 5 & 5 \\\\ 8 & 8 \\end{bmatrix}$ دیے گئے ہیں، اور ہمیں $(A - B)^t$ معلوم کرنا ہے۔"
+      },
+      {
+       "math": "A - B = \\begin{bmatrix} 4 & 2 \\\\ 7 & 6 \\end{bmatrix} - \\begin{bmatrix} 5 & 5 \\\\ 8 & 8 \\end{bmatrix}",
+       "en": "First, we find the difference $A - B$ by substituting the given matrices.",
+       "ur": "سب سے پہلے، ہم دیے گئے قالبوں کی قیمتیں درج کر کے فرق $A - B$ معلوم کرتے ہیں۔",
        "check": [
-        "Eq(Matrix([[-1, -3], [-1, -2]]), Matrix([[-1, -3], [-1, -2]]))"
+        "Eq(Matrix([[4, 2], [7, 6]]) - Matrix([[5, 5], [8, 8]]), Matrix([[-1, -3], [-1, -2]]))"
        ]
       },
       {
-       "math": "(A-B)^t = \\begin{bmatrix} -1 & -3 \\\\ -1 & -2 \\end{bmatrix}^t = \\begin{bmatrix} -1 & -1 \\\\ -3 & -2 \\end{bmatrix}",
-       "en": "The transpose turns rows into columns.",
-       "ur": "پلٹ (ٹرانسپوز) میں قطاریں کالم بن جاتی ہیں۔",
+       "math": "A - B = \\begin{bmatrix} 4 - 5 & 2 - 5 \\\\ 7 - 8 & 6 - 8 \\end{bmatrix}",
+       "en": "Since both matrices have the same order ($2 \\times 2$), we subtract the corresponding entries in the same positions.",
+       "ur": "چونکہ دونوں قالبوں کا درجہ ایک ہی ($2 \\times 2$) ہے، اس لیے ہم ایک ہی مقام پر موجود متناظرہ ارکان کو تفریق کرتے ہیں۔",
+       "check": [
+        "Eq(Matrix([[4 - 5, 2 - 5], [7 - 8, 6 - 8]]), Matrix([[-1, -3], [-1, -2]]))"
+       ]
+      },
+      {
+       "math": "A - B = \\begin{bmatrix} -1 & -3 \\\\ -1 & -2 \\end{bmatrix}",
+       "en": "Simplify each entry to get the matrix $A - B$.",
+       "ur": "قالب $A - B$ حاصل کرنے کے لیے ہر رکن کو مختصر کریں۔",
+       "check": [
+        "Eq(Matrix([[4 - 5, 2 - 5], [7 - 8, 6 - 8]]), Matrix([[-1, -3], [-1, -2]]))"
+       ]
+      },
+      {
+       "math": "(A - B)^t = \\begin{bmatrix} -1 & -3 \\\\ -1 & -2 \\end{bmatrix}^t",
+       "en": "Now, we apply the transpose operation to the matrix $A - B$.",
+       "ur": "اب، ہم قالب $A - B$ کا ٹرانسپوز (پلٹ) لیتے ہیں۔",
        "check": [
         "Eq(Matrix([[-1, -3], [-1, -2]]).T, Matrix([[-1, -1], [-3, -2]]))"
+       ]
+      },
+      {
+       "math": "(A - B)^t = \\begin{bmatrix} -1 & -1 \\\\ -3 & -2 \\end{bmatrix}",
+       "en": "The transpose is obtained by interchanging the rows into columns. The first row $\\begin{bmatrix} -1 & -3 \\end{bmatrix}$ becomes the first column, and the second row $\\begin{bmatrix} -1 & -2 \\end{bmatrix}$ becomes the second column.",
+       "ur": "قطاروں کو کالموں میں بدلنے سے ٹرانسپوز حاصل ہوتا ہے۔ پہلی قطار $\\begin{bmatrix} -1 & -3 \\end{bmatrix}$ پہلا کالم بن جاتی ہے، اور دوسری قطار $\\begin{bmatrix} -1 & -2 \\end{bmatrix}$ دوسرا کالم بن جاتی ہے۔",
+       "check": [
+        "Eq(Matrix([[-1, -3], [-1, -2]]).T, Matrix([[-1, -1], [-3, -2]]))",
+        "Eq(Matrix([[-1, -3], [-1, -2]]), Matrix([[-1, -3], [-1, -2]]))"
        ]
       }
      ],
      "answer": "$\\begin{bmatrix} -1 & -1 \\\\ -3 & -2 \\end{bmatrix}$",
+     "enriched": true,
      "book_key": "[[-1,-1],[-3,-2]]"
     },
     {
@@ -4658,15 +5422,44 @@
      "prompt": "$|B|$",
      "steps": [
       {
-       "math": "|B| = \\begin{vmatrix} 5 & 3 \\\\ 2 & 4 \\end{vmatrix} = (5)(4) - (3)(2) = 20 - 6 = 14",
-       "en": "For a 2-by-2 matrix, $|A| = ad - bc$.",
-       "ur": "2-by-2 قالب کے لیے $|A| = ad - bc$۔",
+       "math": "B = \\begin{bmatrix} 5 & 3 \\\\ 2 & 4 \\end{bmatrix}",
+       "en": "First, write down the given matrix $B$ for which we need to find the determinant $|B|$.",
+       "ur": "سب سے پہلے، دیا گیا قالب $B$ لکھیں جس کا ہمیں مقطع $|B|$ معلوم کرنا ہے۔"
+      },
+      {
+       "math": "|B| = \\begin{vmatrix} 5 & 3 \\\\ 2 & 4 \\end{vmatrix}",
+       "en": "Express the matrix in determinant form using vertical bars.",
+       "ur": "قالب کو عمودی لائنوں کا استعمال کرتے ہوئے مقطع کی شکل میں لکھیں۔"
+      },
+      {
+       "math": "|B| = (5)(4) - (3)(2)",
+       "en": "For a $2 \\times 2$ matrix $\\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix}$, the determinant is calculated as $ad - bc$. Multiply the main diagonal elements and subtract the product of the other diagonal elements.",
+       "ur": "ایک $2 \\times 2$ قالب $\\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix}$ کے لیے، مقطع کا فارمولا $ad - bc$ ہے۔ وتر کے ارکان کو ضرب دیں اور دوسرے وتر کے ارکان کے حاصل ضرب کو اس میں سے تفریق کریں۔",
        "check": [
+        "Matrix([[5, 3], [2, 4]]).det() == 5*4 - 3*2"
+       ]
+      },
+      {
+       "math": "|B| = 20 - 6",
+       "en": "Perform the multiplications: $5 \\times 4 = 20$ and $3 \\times 2 = 6$.",
+       "ur": "ضرب کا عمل مکمل کریں: $5 \\times 4 = 20$ اور $3 \\times 2 = 6$۔",
+       "check": [
+        "5*4 == 20",
+        "3*2 == 6"
+       ]
+      },
+      {
+       "math": "|B| = 14",
+       "en": "Subtract $6$ from $20$ to get the final answer.",
+       "ur": "حتمی جواب حاصل کرنے کے لیے $20$ میں سے $6$ کو تفریق کریں۔",
+       "check": [
+        "20 - 6 == 14",
         "Matrix([[5, 3], [2, 4]]).det() == 14"
        ]
       }
      ],
      "answer": "$14$",
+     "enriched": true,
      "book_key": "14"
     },
     {
@@ -4674,15 +5467,39 @@
      "prompt": "$\\operatorname{Adj}B$",
      "steps": [
       {
+       "math": "B = \\begin{bmatrix} 5 & 3 \\\\ 2 & 4 \\end{bmatrix}",
+       "en": "First, write down the given matrix $B$. We need to find its adjoint, denoted as $\\operatorname{Adj}B$.",
+       "ur": "سب سے پہلے، دیا گیا کالب $B$ لکھیں۔ ہمیں اس کا ایڈجوائنٹ یعنی $\\operatorname{Adj}B$ معلوم کرنا ہے۔",
+       "check": [
+        "Eq(Matrix([[5, 3], [2, 4]]), Matrix([[5, 3], [2, 4]]))"
+       ]
+      },
+      {
+       "math": "\\operatorname{Adj}\\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix} = \\begin{bmatrix} d & -b \\\\ -c & a \\end{bmatrix}",
+       "en": "To find the adjoint of a $2 \\times 2$ matrix, we interchange the entries on the main (leading) diagonal and change the signs of the entries on the other (secondary) diagonal.",
+       "ur": "کسی $2 \\times 2$ کالب کا ایڈجوائنٹ معلوم کرنے کے لیے، ہم وِتر کے ارکان کی جگہ آپس میں بدل دیتے ہیں اور دوسرے وِتر کے ارکان کی علامتیں تبدیل کر دیتے ہیں۔"
+      },
+      {
+       "math": "",
+       "en": "In matrix $B$, the main diagonal entries are $5$ and $4$. Swapping their positions puts $4$ at the top-left and $5$ at the bottom-right.",
+       "ur": "کالب $B$ میں وِتر کے ارکان $5$ اور $4$ ہیں۔ ان کی جگہ آپس میں بدلنے سے $4$ اوپر بائیں طرف اور $5$ نیچے دائیں طرف آ جائے گا۔"
+      },
+      {
+       "math": "",
+       "en": "The remaining entries are $3$ and $2$. Changing their signs gives $-3$ and $-2$.",
+       "ur": "باقی ماندہ ارکان $3$ اور $2$ ہیں۔ ان کی علامتیں تبدیل کرنے سے ہمیں $-3$ اور $-2$ حاصل ہوتے ہیں۔"
+      },
+      {
        "math": "\\operatorname{Adj}B = \\begin{bmatrix} 4 & -3 \\\\ -2 & 5 \\end{bmatrix}",
-       "en": "Swap the entries on the leading diagonal and change the signs of the other two.",
-       "ur": "مرکزی وتر کے ارکان کی جگہ بدلیں اور باقی دو کی علامت بدلیں۔",
+       "en": "Combining these changes, we get the final adjoint of matrix $B$.",
+       "ur": "ان تبدیلیوں کو یکجا کرنے سے، ہمیں کالب $B$ کا مطلوبہ ایڈجوائنٹ حاصل ہو جاتا ہے۔",
        "check": [
         "Eq(Matrix([[5, 3], [2, 4]]).adjugate(), Matrix([[4, -3], [-2, 5]]))"
        ]
       }
      ],
      "answer": "$\\begin{bmatrix} 4 & -3 \\\\ -2 & 5 \\end{bmatrix}$",
+     "enriched": true,
      "book_key": "[[4,-3],[-2,5]]"
     },
     {
@@ -4798,23 +5615,49 @@
      "prompt": "$(B^t)^t$",
      "steps": [
       {
-       "math": "B^t = \\begin{bmatrix} 5 & 3 \\\\ 2 & 4 \\end{bmatrix}^t = \\begin{bmatrix} 5 & 2 \\\\ 3 & 4 \\end{bmatrix}",
-       "en": "The transpose turns rows into columns.",
-       "ur": "پلٹ (ٹرانسپوز) میں قطاریں کالم بن جاتی ہیں۔",
+       "math": "B = \\begin{bmatrix} 5 & 3 \\\\ 2 & 4 \\end{bmatrix}",
+       "en": "Write down the given matrix $B$. We need to find $(B^t)^t$, which is the transpose of the transpose of matrix $B$.",
+       "ur": "دیا گیا کالب $B$ لکھیں۔ ہمیں $(B^t)^t$ معلوم کرنا ہے، جو کہ کالب $B$ کے ٹرانسپوز کا ٹرانسپوز ہے۔",
+       "check": [
+        "Eq(Matrix([[5, 3], [2, 4]]), Matrix([[5, 3], [2, 4]]))"
+       ]
+      },
+      {
+       "math": "B^t = \\begin{bmatrix} 5 & 3 \\\\ 2 & 4 \\end{bmatrix}^t",
+       "en": "First, take the transpose of matrix $B$. The transpose of a matrix is obtained by interchanging its rows into columns.",
+       "ur": "سب سے پہلے، کالب $B$ کا ٹرانسپوز لیں۔ کسی کالب کا ٹرانسپوز اس کی قطاروں کو کالموں میں تبدیل کرنے سے حاصل ہوتا ہے۔",
+       "check": [
+        "Eq(Matrix([[5, 3], [2, 4]]).T, Matrix([[5, 3], [2, 4]]).T)"
+       ]
+      },
+      {
+       "math": "B^t = \\begin{bmatrix} 5 & 2 \\\\ 3 & 4 \\end{bmatrix}",
+       "en": "Change the first row $\\begin{bmatrix} 5 & 3 \\end{bmatrix}$ into the first column, and the second row $\\begin{bmatrix} 2 & 4 \\end{bmatrix}$ into the second column.",
+       "ur": "پہلی قطار $\\begin{bmatrix} 5 & 3 \\end{bmatrix}$ کو پہلے کالم میں اور دوسری قطار $\\begin{bmatrix} 2 & 4 \\end{bmatrix}$ کو دوسرے کالم میں تبدیل کریں۔",
        "check": [
         "Eq(Matrix([[5, 3], [2, 4]]).T, Matrix([[5, 2], [3, 4]]))"
        ]
       },
       {
-       "math": "(B^t)^t = \\begin{bmatrix} 5 & 2 \\\\ 3 & 4 \\end{bmatrix}^t = \\begin{bmatrix} 5 & 3 \\\\ 2 & 4 \\end{bmatrix}",
-       "en": "The transpose turns rows into columns.",
-       "ur": "پلٹ (ٹرانسپوز) میں قطاریں کالم بن جاتی ہیں۔",
+       "math": "(B^t)^t = \\begin{bmatrix} 5 & 2 \\\\ 3 & 4 \\end{bmatrix}^t",
+       "en": "Now, take the transpose of the matrix $B^t$ again to find $(B^t)^t$.",
+       "ur": "اب، $(B^t)^t$ معلوم کرنے کے لیے کالب $B^t$ کا دوبارہ ٹرانسپوز لیں۔",
        "check": [
-        "Eq(Matrix([[5, 2], [3, 4]]).T, Matrix([[5, 3], [2, 4]]))"
+        "Eq(Matrix([[5, 2], [3, 4]]).T, Matrix([[5, 2], [3, 4]]).T)"
+       ]
+      },
+      {
+       "math": "(B^t)^t = \\begin{bmatrix} 5 & 3 \\\\ 2 & 4 \\end{bmatrix}",
+       "en": "Interchange the rows of $B^t$ into columns. This gives us the final answer, which is equal to the original matrix $B$.",
+       "ur": "$B^t$ کی قطاروں کو کالموں میں تبدیل کریں۔ اس سے ہمیں حتمی جواب ملتا ہے، جو کہ اصل کالب $B$ کے برابر ہے۔",
+       "check": [
+        "Eq(Matrix([[5, 2], [3, 4]]).T, Matrix([[5, 3], [2, 4]]))",
+        "Eq(Matrix([[5, 3], [2, 4]]).T, Matrix([[5, 2], [3, 4]]))"
        ]
       }
      ],
      "answer": "$\\begin{bmatrix} 5 & 3 \\\\ 2 & 4 \\end{bmatrix}$",
+     "enriched": true,
      "book_key": "[[5,3],[2,4]]"
     }
    ],

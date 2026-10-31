@@ -1,0 +1,42 @@
+{
+ "item": "c10-ex4.1-q3",
+ "label": "id",
+ "answer_ref": "$x^{9}$",
+ "steps": [
+  {
+   "math": "g(x) = x^{3}",
+   "en": "Write the given function $g(x)$. We need to find the composite function $(g\\circ g)(x)$.",
+   "ur": "دیا گیا فنکشن $g(x)$ لکھیں۔ ہمیں مرکب فنکشن $(g\\circ g)(x)$ معلوم کرنا ہے۔"
+  },
+  {
+   "math": "(g\\circ g)(x) = g(g(x))",
+   "en": "By the definition of composition of a function with itself, $(g\\circ g)(x)$ is written as $g(g(x))$.",
+   "ur": "فنکشن کی اپنے آپ کے ساتھ ترکیب (composition) کی تعریف کے مطابق، $(g\\circ g)(x)$ کو $g(g(x))$ لکھا جاتا ہے۔"
+  },
+  {
+   "math": "(g\\circ g)(x) = g\\left(x^{3}\\right)",
+   "en": "Substitute the value of the inner function $g(x) = x^{3}$ inside the outer function $g$.",
+   "ur": "بیرونی فنکشن $g$ کے اندر اندرونی فنکشن $g(x) = x^{3}$ کی قیمت درج کریں۔"
+  },
+  {
+   "math": "(g\\circ g)(x) = \\left(x^{3}\\right)^{3}",
+   "en": "Now, replace $x$ with $x^{3}$ in the given function $g(x) = x^{3}$.",
+   "ur": "اب دیے گئے فنکشن $g(x) = x^{3}$ میں $x$ کی جگہ $x^{3}$ رکھیں۔",
+   "check": [
+    "(x**3).subs(x, x**3) == (x**3)**3"
+   ]
+  },
+  {
+   "math": "(g\\circ g)(x) = x^{3 \\times 3} = x^{9}",
+   "en": "Apply the power of a power rule of exponents, $(a^{m})^{n} = a^{m \\times n}$, to get the final answer.",
+   "ur": "قوت نما کے اصول $(a^{m})^{n} = a^{m \\times n}$ کا اطلاق کرتے ہوئے طاقتوں کو ضرب دیں تاکہ حتمی جواب حاصل ہو سکے۔",
+   "check": [
+    "(x**3)**3 == x**9",
+    "3*3 == 9",
+    "(x**3).subs(x, (x**3)) == (x**9)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

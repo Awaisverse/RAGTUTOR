@@ -1,0 +1,42 @@
+{
+ "item": "c10-ex7.2-q2",
+ "label": "iii",
+ "answer_ref": "$13.20$ cm$^2$",
+ "steps": [
+  {
+   "math": "b = 3\\text{ cm}, \\quad c = 9\\text{ cm}, \\quad \\alpha = 78^\\circ",
+   "en": "Write down the given lengths of the two sides $b$ and $c$, and the included angle $\\alpha$.",
+   "ur": "دیے گئے دو اضلاع $b$ اور $c$ کی لمبائیاں اور ان کا درمیانی زاویہ $\\alpha$ لکھیں۔"
+  },
+  {
+   "math": "\\Delta = \\frac{1}{2}bc\\sin\\alpha",
+   "en": "Use the formula for the area of a triangle ($\\Delta$) when two sides and the included angle are known.",
+   "ur": "جب دو اضلاع اور ان کا درمیانی زاویہ معلوم ہوں تو مثلث کا رقبہ ($\\Delta$) معلوم کرنے کا فارمولا استعمال کریں۔"
+  },
+  {
+   "math": "\\Delta = \\frac{1}{2}(3)(9)\\sin 78^\\circ",
+   "en": "Substitute the given values $b = 3$, $c = 9$, and $\\alpha = 78^\\circ$ into the formula.",
+   "ur": "فارمولے میں دی گئی قیمتیں $b = 3$، $c = 9$ اور $\\alpha = 78^\\circ$ درج کریں۔"
+  },
+  {
+   "math": "\\Delta = 13.5 \\times \\sin 78^\\circ",
+   "en": "Multiply the numerical values $\\frac{1}{2} \\times 3 \\times 9$ to get $13.5$.",
+   "ur": "عددی قیمتوں $\\frac{1}{2} \\times 3 \\times 9$ کو ضرب دیں جس سے $13.5$ حاصل ہوتا ہے۔",
+   "check": [
+    "R(1,2)*3*9 == 13.5"
+   ]
+  },
+  {
+   "math": "\\Delta \\approx 13.5 \\times 0.9781 = 13.20\\text{ cm}^2",
+   "en": "Substitute $\\sin 78^\\circ \\approx 0.9781$ and multiply to find the area rounded to two decimal places.",
+   "ur": "$\\sin 78^\\circ \\approx 0.9781$ کی قیمت درج کریں اور ضرب دے کر اعشاریہ کے بعد دو درجوں تک رقبہ معلوم کریں۔",
+   "check": [
+    "Abs(sin(78*pi/180) - 0.9781) <= 0.0001",
+    "Abs(13.5 * sin(78*pi/180) - 13.20) <= 0.005",
+    "Abs((R(1,2)*3*9*sin((78)*pi/180)) - 13.20) <= 0.0050000010000000004"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

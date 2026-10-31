@@ -1,0 +1,51 @@
+{
+ "item": "c10-ex7.3-q6",
+ "label": "",
+ "answer_ref": "$10\\sqrt{2} \\approx 14.14$ units",
+ "steps": [
+  {
+   "math": "x = 10\\ \\text{units},\\quad y = 10\\ \\text{units}",
+   "en": "Identify the given horizontal distance ($x$) in front of the player and the vertical distance ($y$) above the player. We need to find the direct line of sight distance ($d$).",
+   "ur": "دیے گئے افقی فاصلے ($x$) اور عمودی فاصلے ($y$) کی نشاندہی کریں۔ ہمیں براہِ راست خطِ نظر کا فاصلہ ($d$) معلوم کرنا ہے۔"
+  },
+  {
+   "math": "d = \\sqrt{x^2 + y^2}",
+   "en": "Since the horizontal and vertical distances are perpendicular to each other, they form a right-angled triangle with the direct line of sight as the hypotenuse. Therefore, we apply the Pythagoras theorem.",
+   "ur": "چونکہ افقی اور عمودی فاصلے ایک دوسرے پر عمود ہیں، اس لیے یہ ایک قائمۃ الزاویہ مثلث بناتے ہیں جس میں خطِ نظر وتر ہے۔ لہٰذا، ہم مسئلہ فیثا غورث استعمال کرتے ہیں۔"
+  },
+  {
+   "math": "d = \\sqrt{10^2 + 10^2}",
+   "en": "Substitute the given values $x = 10$ and $y = 10$ into the formula.",
+   "ur": "فارمولے میں دی گئی قیمتیں $x = 10$ اور $y = 10$ درج کریں۔"
+  },
+  {
+   "math": "d = \\sqrt{100 + 100} = \\sqrt{200}",
+   "en": "Calculate the squares of $10$ and add them together.",
+   "ur": "$10$ کا مربع معلوم کریں اور انہیں آپس میں جمع کریں۔",
+   "check": [
+    "sqrt(10**2 + 10**2) == sqrt(100 + 100)",
+    "sqrt(100 + 100) == sqrt(200)"
+   ]
+  },
+  {
+   "math": "d = \\sqrt{100 \\times 2} = 10\\sqrt{2}",
+   "en": "Simplify the square root by factoring $200$ as $100 \\times 2$ and taking the square root of $100$.",
+   "ur": "$200$ کی تجزی $100 \\times 2$ کے طور پر کر کے اور $100$ کا جزر لے کر مختصر کریں۔",
+   "check": [
+    "sqrt(200) == sqrt(100 * 2)",
+    "sqrt(100 * 2) == 10*sqrt(2)"
+   ]
+  },
+  {
+   "math": "d \\approx 14.14\\ \\text{units}",
+   "en": "Evaluate the decimal approximation of $10\\sqrt{2}$. Thus, the direct line of sight distance is $10\\sqrt{2} \\approx 14.14$ units.",
+   "ur": "$10\\sqrt{2}$ کی اعشاریہ میں تقریبی قیمت معلوم کریں۔ پس، براہِ راست خطِ نظر کا فاصلہ $10\\sqrt{2} \\approx 14.14$ اکائیاں ہے۔",
+   "check": [
+    "Abs((10*sqrt(2)) - 14.14) <= 0.0050000010000000004",
+    "sqrt(200) == 10*sqrt(2)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

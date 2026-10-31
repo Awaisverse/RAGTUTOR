@@ -1,0 +1,40 @@
+{
+ "item": "c10-ex9.2-q7",
+ "label": "",
+ "answer_ref": "$1.5$ radian",
+ "steps": [
+  {
+   "math": "r = 12\\ \\text{m}, \\quad \\ell = 18\\ \\text{m}",
+   "en": "First, write down the given radius $r$ of the ferris wheel and the arc length $\\ell$ traveled by the passenger.",
+   "ur": "سب سے پہلے، جھولے کا دیا گیا رداس $r$ اور مسافر کا طے کردہ قوسی فاصلہ $\\ell$ لکھیں۔",
+   "check": [
+    "12 == 12",
+    "18 == 18"
+   ]
+  },
+  {
+   "math": "\\ell = r\\theta \\implies \\theta = \\frac{\\ell}{r}",
+   "en": "We know that the relation between arc length $\\ell$, radius $r$, and central angle $\\theta$ (in radians) is $\\ell = r\\theta$. Rearranging the formula to find the angle $\\theta$:",
+   "ur": "ہم جانتے ہیں کہ قوس کی لمبائی $\\ell$، رداس $r$ اور مرکزی زاویہ $\\theta$ (ریڈین میں) کے درمیان تعلق $\\ell = r\\theta$ ہے۔ زاویہ $\\theta$ معلوم کرنے کے لیے فارمولے کو ترتیب دیں:"
+  },
+  {
+   "math": "\\theta = \\frac{18}{12}",
+   "en": "Substitute the given values of $\\ell = 18$ and $r = 12$ into the formula.",
+   "ur": "فارمولے میں دی گئی قیمتیں $\\ell = 18$ اور $r = 12$ درج کریں۔",
+   "check": [
+    "R(18, 12) == R(3, 2)"
+   ]
+  },
+  {
+   "math": "\\theta = 1.5\\ \\text{radian}",
+   "en": "Divide $18$ by $12$ to get the final angle in radians.",
+   "ur": "زاویہ ریڈین میں حاصل کرنے کے لیے $18$ کو $12$ پر تقسیم کریں۔",
+   "check": [
+    "R(18, 12) == 1.5",
+    "R(18,12) == R(3,2)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

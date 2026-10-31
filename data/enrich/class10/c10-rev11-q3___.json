@@ -1,0 +1,153 @@
+{
+ "item": "c10-rev11-q3",
+ "label": "",
+ "answer_ref": "box from 12.6 to 55.6, median 43, whiskers to 5 and 70",
+ "steps": [
+  {
+   "math": "\\text{Min} = 5, \\quad Q_1 = 12.6, \\quad \\text{Median } (Q_2) = 43, \\quad Q_3 = 55.6, \\quad \\text{Max} = 70",
+   "en": "First, write down the given five-number summary statistics for the data set.",
+   "ur": "سب سے پہلے، دیے گئے ڈیٹا سیٹ کے پانچ نکاتی خلاصہ شماریات (five-number summary) لکھیں۔",
+   "check": [
+    "5 < R(126,10)",
+    "R(126,10) < 43",
+    "43 < R(556,10)",
+    "R(556,10) < 70"
+   ],
+   "draw": [
+    {
+     "t": "numberline",
+     "from": 0,
+     "to": 80,
+     "y": 45,
+     "marks": []
+    },
+    {
+     "t": "line",
+     "p": [
+      11.5,
+      22,
+      19.86,
+      22
+     ]
+    },
+    {
+     "t": "line",
+     "p": [
+      67.16,
+      22,
+      83.0,
+      22
+     ]
+    },
+    {
+     "t": "line",
+     "p": [
+      11.5,
+      19,
+      11.5,
+      25
+     ]
+    },
+    {
+     "t": "line",
+     "p": [
+      83.0,
+      19,
+      83.0,
+      25
+     ]
+    },
+    {
+     "t": "poly",
+     "p": [
+      19.86,
+      16,
+      67.16,
+      16,
+      67.16,
+      28,
+      19.86,
+      28
+     ],
+     "close": true
+    },
+    {
+     "t": "line",
+     "p": [
+      53.3,
+      16,
+      53.3,
+      28
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      17.86,
+      13
+     ],
+     "s": "Q1"
+    },
+    {
+     "t": "text",
+     "p": [
+      50.3,
+      13
+     ],
+     "s": "Med"
+    },
+    {
+     "t": "text",
+     "p": [
+      65.16,
+      13
+     ],
+     "s": "Q3"
+    }
+   ]
+  },
+  {
+   "math": "5 < 12.6 < 43 < 55.6 < 70",
+   "en": "To draw a box-and-whisker plot, first draw a horizontal number line with a suitable scale that covers all values from the minimum ($5$) to the maximum ($70$).",
+   "ur": "باکس اینڈ وسکر پلاٹ (box-and-whisker plot) بنانے کے لیے، سب سے پہلے ایک مناسب پیمانے کے ساتھ ایک افقی عددی خط کھینچیں جو کم از کم قیمت ($5$) سے لے کر زیادہ سے زیادہ قیمت ($70$) تک کی تمام اقدار کو ظاہر کرے۔",
+   "check": [
+    "5 < R(126,10)",
+    "R(126,10) < 43",
+    "43 < R(556,10)",
+    "R(556,10) < 70"
+   ]
+  },
+  {
+   "math": "\\text{Box}: [Q_1, Q_3] = [12.6, 55.6], \\quad \\text{Median} = 43",
+   "en": "Draw a rectangular box above the number line starting from the first quartile ($Q_1 = 12.6$) to the third quartile ($Q_3 = 55.6$). Then, draw a vertical line inside the box at the median value ($43$).",
+   "ur": "عددی خط کے اوپر پہلے چوتھائی ($Q_1 = 12.6$) سے تیسرے چوتھائی ($Q_3 = 55.6$) تک ایک مستطیل باکس بنائیں۔ پھر، باکس کے اندر وسطانیہ (median) کی قیمت ($43$) پر ایک عمودی لکیر کھینچیں۔",
+   "check": [
+    "R(126,10) < 43",
+    "43 < R(556,10)"
+   ]
+  },
+  {
+   "math": "\\text{Left whisker}: 5 \\text{ to } 12.6, \\quad \\text{Right whisker}: 55.6 \\text{ to } 70",
+   "en": "Mark the minimum value ($5$) and maximum value ($70$). Draw horizontal lines (whiskers) connecting the left side of the box ($12.6$) to the minimum ($5$), and the right side of the box ($55.6$) to the maximum ($70$).",
+   "ur": "کم از کم قیمت ($5$) اور زیادہ سے زیادہ قیمت ($70$) کو نشان زد کریں۔ باکس کے بائیں سرے ($12.6$) کو کم از کم قیمت ($5$) سے اور باکس کے دائیں سرے ($55.6$) کو زیادہ سے زیادہ قیمت ($70$) سے ملانے والی افقی لکیریں (whiskers) کھینچیں۔",
+   "check": [
+    "5 < R(126,10)",
+    "R(556,10) < 70"
+   ]
+  },
+  {
+   "math": "(5, 12.6, 43, 55.6, 70)",
+   "en": "Conclusion: The completed box-and-whisker plot has a box from $12.6$ to $55.6$ with the median line at $43$, and whiskers extending to $5$ and $70$.",
+   "ur": "نتیجہ: مکمل شدہ باکس اینڈ وسکر پلاٹ میں باکس $12.6$ سے $55.6$ تک ہے، جس میں وسطانیہ کی لکیر $43$ پر ہے، اور اطراف کی لکیریں (whiskers) $5$ اور $70$ تک پھیلی ہوئی ہیں۔",
+   "check": [
+    "5 < R(126,10)",
+    "R(126,10) < 43",
+    "43 < R(556,10)",
+    "R(556,10) < 70"
+   ]
+  }
+ ],
+ "keeps_drawing": true,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

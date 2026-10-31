@@ -1,0 +1,51 @@
+{
+ "item": "rev1-q1",
+ "label": "i",
+ "answer_ref": "c",
+ "steps": [
+  {
+   "math": "\\sqrt{7}",
+   "en": "We are given the number $\\sqrt{7}$ and asked to identify whether it is an integer, a rational number, an irrational number, or a natural number.",
+   "ur": "ہمیں عدد $\\sqrt{7}$ دیا گیا ہے اور یہ پہچاننے کو کہا گیا ہے کہ آیا یہ ایک صحیح عدد، ناطق عدد، غیر ناطق عدد، یا قدرتی عدد ہے۔"
+  },
+  {
+   "math": "",
+   "en": "Recall the rule: The square root of any positive integer $n$ (that is, $\\sqrt{n}$) is a rational number if and only if $n$ is a perfect square. If $n$ is not a perfect square, then $\\sqrt{n}$ is an irrational number.",
+   "ur": "اصول یاد کریں: کسی بھی مثبت صحیح عدد $n$ کا جذر المربع (یعنی $\\sqrt{n}$) صرف اس صورت میں ناطق عدد ہوتا ہے جب $n$ ایک مکمل مربع ہو۔ اگر $n$ مکمل مربع نہ ہو، تو $\\sqrt{n}$ ایک غیر ناطق عدد ہوتا ہے۔"
+  },
+  {
+   "math": "2^2 = 4, \\quad 3^2 = 9",
+   "en": "Let us check the perfect squares of consecutive integers around the number $7$.",
+   "ur": "آئیے عدد $7$ کے آس پاس کے متواتر صحیح اعداد کے مکمل مربعات کو چیک کرتے ہیں۔",
+   "check": [
+    "2**2 == 4",
+    "3**2 == 9"
+   ]
+  },
+  {
+   "math": "4 < 7 < 9",
+   "en": "Since $7$ lies strictly between the two consecutive perfect squares $4$ and $9$, there is no integer whose square is $7$. Also, $7$ is a prime number, so it is not a perfect square.",
+   "ur": "چونکہ $7$ دو متواتر مکمل مربعات $4$ اور $9$ کے درمیان واقع ہے، اس لیے کوئی ایسا صحیح عدد نہیں جس کا مربع $7$ ہو۔ مزید یہ کہ $7$ ایک مفرد عدد ہے، اس لیے یہ مکمل مربع نہیں ہے۔",
+   "check": [
+    "floor(sqrt(7))**2 == 4",
+    "(floor(sqrt(7))+1)**2 == 9"
+   ]
+  },
+  {
+   "math": "\\sqrt{7} \\notin \\mathbb{Q}",
+   "en": "Because $7$ is not a perfect square, $\\sqrt{7}$ cannot be written in the form $\\frac{p}{q}$ (where $p, q \\in \\mathbb{Z}$ and $q \\neq 0$). Therefore, $\\sqrt{7}$ is an irrational number.",
+   "ur": "چونکہ $7$ ایک مکمل مربع نہیں ہے، اس لیے $\\sqrt{7}$ کو $\\frac{p}{q}$ کی شکل میں نہیں لکھا جا سکتا (جہاں $p, q \\in \\mathbb{Z}$ اور $q \\neq 0$)۔ لہذا، $\\sqrt{7}$ ایک غیر ناطق عدد ہے۔"
+  },
+  {
+   "math": "",
+   "en": "Thus, $\\sqrt{7}$ is not a natural number, not an integer, and not a rational number. The correct option is (c) irrational number.",
+   "ur": "اس طرح، $\\sqrt{7}$ نہ تو قدرتی عدد ہے، نہ صحیح عدد، اور نہ ہی ناطق عدد۔ درست آپشن (c) غیر ناطق عدد (irrational number) ہے۔",
+   "check": [
+    "floor(sqrt(7))**2 < 7",
+    "(floor(sqrt(7))+1)**2 > 7"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

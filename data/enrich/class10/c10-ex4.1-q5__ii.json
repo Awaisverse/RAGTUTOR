@@ -1,0 +1,58 @@
+{
+ "item": "c10-ex4.1-q5",
+ "label": "ii",
+ "answer_ref": "$35$",
+ "steps": [
+  {
+   "math": "",
+   "en": "We are given the function $f(x) = 3x + 2$ and we need to find the value of the composite function $f(f(3))$.",
+   "ur": "ہمیں فنکشن $f(x) = 3x + 2$ دیا گیا ہے اور ہمیں مرکب فنکشن $f(f(3))$ کی قیمت معلوم کرنی ہے۔"
+  },
+  {
+   "math": "f(3) = 3(3) + 2",
+   "en": "To evaluate $f(f(3))$, we first find the inner value $f(3)$ by substituting $x = 3$ into $f(x)$.",
+   "ur": "$f(f(3))$ کی قیمت معلوم کرنے کے لیے، ہم پہلے $f(x)$ میں $x = 3$ درج کر کے اندرونی قیمت $f(3)$ معلوم کرتے ہیں۔",
+   "check": [
+    "3*3 + 2 == 11"
+   ]
+  },
+  {
+   "math": "f(3) = 9 + 2 = 11",
+   "en": "Multiply and add to get the value of $f(3)$.",
+   "ur": "$f(3)$ کی قیمت حاصل کرنے کے لیے ضرب دیں اور جمع کریں۔",
+   "check": [
+    "3*3 == 9",
+    "9 + 2 == 11"
+   ]
+  },
+  {
+   "math": "f(f(3)) = f(11)",
+   "en": "Now, substitute $f(3) = 11$ into the expression $f(f(3))$.",
+   "ur": "اب، عبارت $f(f(3))$ میں $f(3) = 11$ درج کریں۔",
+   "check": [
+    "11 == 11"
+   ]
+  },
+  {
+   "math": "f(11) = 3(11) + 2",
+   "en": "Next, evaluate $f(11)$ by substituting $x = 11$ into the function $f(x) = 3x + 2$.",
+   "ur": "اس کے بعد، فنکشن $f(x) = 3x + 2$ میں $x = 11$ درج کر کے $f(11)$ کی قیمت معلوم کریں۔",
+   "check": [
+    "3*11 + 2 == 35"
+   ]
+  },
+  {
+   "math": "f(f(3)) = 33 + 2 = 35",
+   "en": "Simplify to get the final answer.",
+   "ur": "حتمی جواب حاصل کرنے کے لیے مختصر کریں۔",
+   "check": [
+    "3*11 == 33",
+    "33 + 2 == 35",
+    "3*3 + 2 == 11",
+    "3*11 + 2 == 35"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

@@ -1,0 +1,59 @@
+{
+ "item": "c10-ex1.3-q1",
+ "label": "iii",
+ "answer_ref": "$1$",
+ "steps": [
+  {
+   "math": "z = \\frac{3}{5} - \\frac{4}{5}i",
+   "en": "Let the given complex number be $z$. Comparing it with the standard form $a+bi$, we have the real part $a = \\frac{3}{5}$ and the imaginary part $b = -\\frac{4}{5}$.",
+   "ur": "فرض کریں کہ دیا گیا مخلوط عدد $z$ ہے۔ اس کا معیاری شکل $a+bi$ سے موازنہ کرنے پر، حقیقی حصہ $a = \\frac{3}{5}$ اور خیالی حصہ $b = -\\frac{4}{5}$ ہے۔",
+   "check": [
+    "R(3,5) - R(4,5)*I == (3/5 - 4*I/5)"
+   ]
+  },
+  {
+   "math": "|z| = \\sqrt{a^2 + b^2}",
+   "en": "Recall the formula for the modulus of a complex number $z = a+bi$.",
+   "ur": "ایک مخلوط عدد $z = a+bi$ کے مقیاس (modulus) کا فارمولا لکھیں۔"
+  },
+  {
+   "math": "|z| = \\sqrt{\\left(\\frac{3}{5}\\right)^2 + \\left(-\\frac{4}{5}\\right)^2}",
+   "en": "Substitute the values of $a = \\frac{3}{5}$ and $b = -\\frac{4}{5}$ into the formula.",
+   "ur": "فارمولے میں $a = \\frac{3}{5}$ اور $b = -\\frac{4}{5}$ کی قیمتیں درج کریں۔",
+   "check": [
+    "Abs(R(3,5) - R(4,5)*I) == sqrt(R(3,5)**2 + (-R(4,5))**2)"
+   ]
+  },
+  {
+   "math": "|z| = \\sqrt{\\frac{9}{25} + \\frac{16}{25}}",
+   "en": "Evaluate the squares of both fractions. Note that the square of a negative number is positive.",
+   "ur": "دونوں کسروں کا مربع معلوم کریں۔ یاد رہے کہ منفی عدد کا مربع مثبت ہوتا ہے۔",
+   "check": [
+    "R(3,5)**2 == R(9,25)",
+    "(-R(4,5))**2 == R(16,25)"
+   ]
+  },
+  {
+   "math": "|z| = \\sqrt{\\frac{9 + 16}{25}} = \\sqrt{\\frac{25}{25}}",
+   "en": "Since the denominators are the same, add the numerators together.",
+   "ur": "چونکہ مخرج (denominators) ایک جیسے ہیں، اس لیے شمار کنندگان (numerators) کو آپس میں جمع کریں۔",
+   "check": [
+    "R(9,25) + R(16,25) == R(25,25)"
+   ]
+  },
+  {
+   "math": "|z| = \\sqrt{1} = 1",
+   "en": "Divide $25$ by $25$ to get $1$, and then take its square root. Thus, the modulus of the given complex number is $1$.",
+   "ur": "$25$ کو $25$ پر تقسیم کرنے سے $1$ حاصل ہوتا ہے، اور پھر اس کا جذر لیں۔ پس دیے گئے مخلوط عدد کا مقیاس $1$ ہے۔",
+   "check": [
+    "sqrt(R(25,25)) == 1",
+    "sqrt(1) == 1",
+    "Abs(R(3,5) - R(4,5)*I) == 1",
+    "sqrt((3/5)**2 + (-4/5)**2) == (1)",
+    "Abs((3/5 - 4*I/5)) == (1)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

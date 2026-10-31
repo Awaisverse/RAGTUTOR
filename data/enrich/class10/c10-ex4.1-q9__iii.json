@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex4.1-q9",
+ "label": "iii",
+ "answer_ref": "Domain $= (-\\infty, 1) \\cup (1, \\infty)$; Range $= (-\\infty, -1) \\cup (-1, \\infty)$",
+ "steps": [
+  {
+   "math": "f(x) = \\frac{x}{1+x}, \\quad x \\ne -1",
+   "en": "First, write down the given function.",
+   "ur": "سب سے پہلے، دیے گئے تفاعل کو لکھیں۔"
+  },
+  {
+   "math": "\\text{Domain of } f^{-1} = \\text{Range of } f, \\quad \\text{Range of } f^{-1} = \\text{Domain of } f",
+   "en": "To find the domain and range of $f^{-1}(x)$ without finding the inverse itself, we use the property that the inverse function swaps the domain and range of the original function.",
+   "ur": "معکوس معلوم کیے بغیر $f^{-1}(x)$ کی ڈومین اور رینج معلوم کرنے کے لیے، ہم یہ خاصیت استعمال کرتے ہیں کہ معکوس تفاعل اصل تفاعل کی ڈومین اور رینج کو آپس میں بدل دیتا ہے۔"
+  },
+  {
+   "math": "\\text{Domain of } f = (-\\infty, -1) \\cup (-1, \\infty)",
+   "en": "The denominator $1+x$ cannot be zero, so $x \\ne -1$. Thus, the domain of $f$ is all real numbers except $-1$.",
+   "ur": "مخرج $1+x$ صفر نہیں ہو سکتا، اس لیے $x \\ne -1$۔ چنانچہ، $f$ کی ڈومین $-1$ کے علاوہ تمام حقیقی اعداد ہیں۔"
+  },
+  {
+   "math": "f(x) = \\frac{(1+x) - 1}{1+x} = 1 - \\frac{1}{1+x}",
+   "en": "To find the range of $f$, rewrite the expression by adding and subtracting $1$ in the numerator.",
+   "ur": "$f$ کی رینج معلوم کرنے کے لیے، شمار کنندہ میں $1$ جمع اور تفریق کر کے عبارت کو دوبارہ لکھیں۔",
+   "check": [
+    "x/(1 + x) == 1 - 1/(1 + x)"
+   ]
+  },
+  {
+   "math": "\\text{Range of } f = (-\\infty, 1) \\cup (1, \\infty)",
+   "en": "Since $\\frac{1}{1+x}$ can never be $0$, $f(x)$ can take any real value except $1$.",
+   "ur": "چونکہ $\\frac{1}{1+x}$ کبھی بھی $0$ نہیں ہو سکتا، اس لیے $f(x)$ سوائے $1$ کے کوئی بھی حقیقی قیمت لے سکتا ہے۔"
+  },
+  {
+   "math": "\\text{Domain of } f^{-1} = (-\\infty, 1) \\cup (1, \\infty), \\quad \\text{Range of } f^{-1} = (-\\infty, -1) \\cup (-1, \\infty)",
+   "en": "Now, swap the domain and range of $f$ to state the final domain and range of $f^{-1}(x)$.",
+   "ur": "اب، $f^{-1}(x)$ کی حتمی ڈومین اور رینج لکھنے کے لیے $f$ کی ڈومین اور رینج کو آپس میں بدل دیں۔",
+   "check": [
+    "x/(1 + x) - 1 == -1/(1 + x)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

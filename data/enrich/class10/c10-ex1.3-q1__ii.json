@@ -1,0 +1,48 @@
+{
+ "item": "c10-ex1.3-q1",
+ "label": "ii",
+ "answer_ref": "$\\sqrt{41}$",
+ "steps": [
+  {
+   "math": "z = -5 - 4i",
+   "en": "Let the given complex number be $z = -5 - 4i$. Comparing it with the standard form $z = a + bi$, we have the real part $a = -5$ and the imaginary part $b = -4$.",
+   "ur": "فرض کریں کہ دیا گیا مخلوط عدد $z = -5 - 4i$ ہے۔ اس کا معیاری شکل $z = a + bi$ سے موازنہ کرنے پر، حقیقی حصہ $a = -5$ اور خیالی حصہ $b = -4$ ہے۔"
+  },
+  {
+   "math": "|z| = \\sqrt{a^2 + b^2}",
+   "en": "The formula to find the modulus of a complex number $z = a + bi$ is $|z| = \\sqrt{a^2 + b^2}$.",
+   "ur": "کسی مخلوط عدد $z = a + bi$ کا مقیاس (modulus) معلوم کرنے کا فارمولا $|z| = \\sqrt{a^2 + b^2}$ ہے۔"
+  },
+  {
+   "math": "|z| = \\sqrt{(-5)^2 + (-4)^2}",
+   "en": "Substitute the values $a = -5$ and $b = -4$ into the modulus formula.",
+   "ur": "مقیاس کے فارمولے میں $a = -5$ اور $b = -4$ کی قیمتیں درج کریں۔",
+   "check": [
+    "Abs(-5 - 4*I) == sqrt((-5)**2 + (-4)**2)"
+   ]
+  },
+  {
+   "math": "|z| = \\sqrt{25 + 16}",
+   "en": "Calculate the squares of both numbers: $(-5)^2 = 25$ and $(-4)^2 = 16$.",
+   "ur": "دونوں اعداد کا مربع لیں: $(-5)^2 = 25$ اور $(-4)^2 = 16$۔",
+   "check": [
+    "(-5)**2 == 25",
+    "(-4)**2 == 16",
+    "sqrt((-5)**2 + (-4)**2) == sqrt(25 + 16)"
+   ]
+  },
+  {
+   "math": "|z| = \\sqrt{41}",
+   "en": "Add the numbers inside the square root ($25 + 16 = 41$). Since $41$ is not a perfect square, the final answer is $\\sqrt{41}$.",
+   "ur": "جذر کے اندر موجود اعداد کو جمع کریں ($25 + 16 = 41$)۔ چونکہ $41$ ایک مکمل مربع نہیں ہے، اس لیے حتمی جواب $\\sqrt{41}$ ہے۔",
+   "check": [
+    "25 + 16 == 41",
+    "sqrt(25 + 16) == sqrt(41)",
+    "sqrt((-5)**2 + (-4)**2) == (sqrt(41))",
+    "Abs((-5 - 4*I)) == (sqrt(41))"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

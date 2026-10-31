@@ -1,0 +1,49 @@
+{
+ "item": "c10-ex4.1-q3",
+ "label": "iiia",
+ "answer_ref": "$x$",
+ "steps": [
+  {
+   "math": "f(x) = 2x - 1, \\quad g(x) = \\frac{x+1}{2}",
+   "en": "Write down the given functions $f(x)$ and $g(x)$.",
+   "ur": "دیے گئے تفاعل $f(x)$ اور $g(x)$ لکھیں۔"
+  },
+  {
+   "math": "(f \\circ g)(x) = f(g(x))",
+   "en": "By the definition of composition of functions, $(f \\circ g)(x)$ means applying function $f$ to $g(x)$.",
+   "ur": "تفاعلات کی ترکیب کی تعریف کے مطابق، $(f \\circ g)(x)$ کا مطلب $g(x)$ پر تفاعل $f$ کا اطلاق کرنا ہے۔"
+  },
+  {
+   "math": "(f \\circ g)(x) = f\\left(\\frac{x+1}{2}\\right)",
+   "en": "Substitute the given value of $g(x) = \\frac{x+1}{2}$ inside the bracket.",
+   "ur": "بریکٹ کے اندر $g(x) = \\frac{x+1}{2}$ کی دی گئی قیمت درج کریں۔"
+  },
+  {
+   "math": "(f \\circ g)(x) = 2\\left(\\frac{x+1}{2}\\right) - 1",
+   "en": "Now, replace $x$ with $\\frac{x+1}{2}$ in the function $f(x) = 2x - 1$.",
+   "ur": "اب، تفاعل $f(x) = 2x - 1$ میں $x$ کی جگہ $\\frac{x+1}{2}$ درج کریں۔",
+   "check": [
+    "(2*x - 1).subs(x, (x + 1)/2) == 2*((x + 1)/2) - 1"
+   ]
+  },
+  {
+   "math": "(f \\circ g)(x) = (x + 1) - 1",
+   "en": "Cancel out $2$ from the numerator and the denominator.",
+   "ur": "شمار کنندہ اور مخرج سے $2$ کو کاٹ دیں۔",
+   "check": [
+    "2*((x + 1)/2) - 1 == (x + 1) - 1"
+   ]
+  },
+  {
+   "math": "(f \\circ g)(x) = x",
+   "en": "Simplify the expression by subtracting $1$ from $1$ to get the final answer.",
+   "ur": "حتمی جواب حاصل کرنے کے لیے $1$ میں سے $1$ تفریق کر کے عبارت کو مختصر کریں۔",
+   "check": [
+    "(x + 1) - 1 == x",
+    "(2*x - 1).subs(x, (x/2 + 1/2)) == (x)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

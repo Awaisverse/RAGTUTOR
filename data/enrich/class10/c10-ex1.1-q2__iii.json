@@ -1,0 +1,47 @@
+{
+ "item": "c10-ex1.1-q2",
+ "label": "iii",
+ "answer_ref": "$\\frac{2}{5} + \\frac{4}{5}i$",
+ "steps": [
+  {
+   "math": "\\frac{2}{5} + \\frac{\\sqrt{-16}}{5}",
+   "en": "Write down the given expression that needs to be written in terms of $i$.",
+   "ur": "دی گئی عبارت لکھیں جسے $i$ کی شکل میں لکھنا ہے۔"
+  },
+  {
+   "math": "\\frac{2}{5} + \\frac{\\sqrt{-16}}{5} = \\frac{2}{5} + \\frac{\\sqrt{16 \\times (-1)}}{5}",
+   "en": "Rewrite the negative number $-16$ inside the square root as a product of $16$ and $-1$.",
+   "ur": "جذر کے اندر موجود منفی عدد $-16$ کو $16$ اور $-1$ کے حاصل ضرب کے طور پر لکھیں۔",
+   "check": [
+    "R(2,5) + sqrt(-16)/5 == R(2,5) + sqrt(16*(-1))/5"
+   ]
+  },
+  {
+   "math": "= \\frac{2}{5} + \\frac{\\sqrt{16}\\sqrt{-1}}{5}",
+   "en": "Separate the square roots using the property $\\sqrt{a \\times (-1)} = \\sqrt{a}\\sqrt{-1}$ for a positive number $a$.",
+   "ur": "مثبت عدد $a$ کے لیے جذر کی خاصیت $\\sqrt{a \\times (-1)} = \\sqrt{a}\\sqrt{-1}$ استعمال کرتے ہوئے جذر کو الگ کریں۔",
+   "check": [
+    "R(2,5) + sqrt(16*(-1))/5 == R(2,5) + sqrt(16)*sqrt(-1)/5"
+   ]
+  },
+  {
+   "math": "= \\frac{2}{5} + \\frac{4i}{5}",
+   "en": "Substitute the values $\\sqrt{16} = 4$ and the imaginary unit $\\sqrt{-1} = i$.",
+   "ur": "قیمتیں $\\sqrt{16} = 4$ اور خیالی اکائی $\\sqrt{-1} = i$ درج کریں۔",
+   "check": [
+    "R(2,5) + sqrt(16)*sqrt(-1)/5 == R(2,5) + 4*I/5"
+   ]
+  },
+  {
+   "math": "= \\frac{2}{5} + \\frac{4}{5}i",
+   "en": "Write the expression in the standard complex form $a + bi$.",
+   "ur": "عبارت کو معیاری مخلوط شکل $a + bi$ میں لکھیں۔",
+   "check": [
+    "R(2,5) + 4*I/5 == R(2,5) + R(4,5)*I",
+    "R(2,5) + sqrt(-16)/5 == R(2,5) + R(4,5)*I"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

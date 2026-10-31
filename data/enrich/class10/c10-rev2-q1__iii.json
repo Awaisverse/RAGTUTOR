@@ -1,0 +1,65 @@
+{
+ "item": "c10-rev2-q1",
+ "label": "iii",
+ "answer_ref": "(c) $\\{\\pm\\sqrt{3}\\}$",
+ "steps": [
+  {
+   "math": "3x^2 - 9 = 0",
+   "en": "Write down the given pure quadratic equation to find its solution set.",
+   "ur": "مطلوبہ حل سیٹ معلوم کرنے کے لیے دی گئی خالص دو درجی مساوات لکھیں۔"
+  },
+  {
+   "math": "3x^2 = 9",
+   "en": "Add $9$ to both sides of the equation to isolate the $x^2$ term.",
+   "ur": "$x^2$ والی رقم کو الگ کرنے کے لیے مساوات کے دونوں اطراف میں $9$ جمع کریں۔",
+   "check": [
+    "3*sqrt(3)**2 == 9",
+    "3*(-sqrt(3))**2 == 9"
+   ]
+  },
+  {
+   "math": "x^2 = \\frac{9}{3}",
+   "en": "Divide both sides of the equation by $3$.",
+   "ur": "مساوات کے دونوں اطراف کو $3$ پر تقسیم کریں۔",
+   "check": [
+    "sqrt(3)**2 == R(9, 3)",
+    "(-sqrt(3))**2 == R(9, 3)"
+   ]
+  },
+  {
+   "math": "x^2 = 3",
+   "en": "Simplify the fraction on the right-hand side.",
+   "ur": "دائیں طرف موجود کسر کو مختصر کریں۔",
+   "check": [
+    "R(9, 3) == 3",
+    "sqrt(3)**2 == 3",
+    "(-sqrt(3))**2 == 3"
+   ]
+  },
+  {
+   "math": "\\sqrt{x^2} = \\pm\\sqrt{3} \\implies x = \\pm\\sqrt{3}",
+   "en": "Take the square root on both sides, remembering to include both the positive and negative signs.",
+   "ur": "دونوں اطراف کا جزر المربع لیں اور مثبت و منفی دونوں علامات لگانا یاد رکھیں۔",
+   "check": [
+    "3*(sqrt(3))**2 - 9 == 0",
+    "3*(-sqrt(3))**2 - 9 == 0"
+   ]
+  },
+  {
+   "math": "\\text{Solution Set} = \\{\\pm\\sqrt{3}\\}",
+   "en": "Write the values of $x$ in the form of a solution set.",
+   "ur": "$x$ کی قیمتوں کو حل سیٹ کی صورت میں لکھیں۔"
+  },
+  {
+   "math": "\\text{Answer: (c) } \\{\\pm\\sqrt{3}\\}",
+   "en": "Compare the result with the given options. Option (c) is the correct answer.",
+   "ur": "نتیجے کا دیے گئے ممکنہ جوابات سے موازنہ کریں۔ آپشن (c) درست جواب ہے۔",
+   "check": [
+    "3*(sqrt(3))**2 - 9 == 0",
+    "3*(-sqrt(3))**2 - 9 == 0"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

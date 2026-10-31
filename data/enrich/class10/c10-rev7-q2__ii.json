@@ -1,0 +1,44 @@
+{
+ "item": "c10-rev7-q2",
+ "label": "ii",
+ "answer_ref": "$3.71$ cm$^2$",
+ "steps": [
+  {
+   "math": "",
+   "en": "We are given two sides of $\\triangle ABC$, $b = 2.1\\text{ cm}$ and $c = 5\\text{ cm}$, and the angle $\\gamma = 45^\\circ$.",
+   "ur": "ہمیں مثلث $\\triangle ABC$ کے دو اضلاع $b = 2.1\\text{ cm}$ اور $c = 5\\text{ cm}$، اور زاویہ $\\gamma = 45^\\circ$ دیے گئے ہیں۔"
+  },
+  {
+   "math": "",
+   "en": "As in the reference textbook, the given angle is used as the included angle between the two sides. Therefore, we use the formula $\\text{Area} = \\frac{1}{2} \\times b \\times c \\times \\sin \\gamma$.",
+   "ur": "حوالہ درسی کتاب کی طرح، دیے گئے زاویے کو دونوں اضلاع کے درمیانی زاویے کے طور پر لیا گیا ہے۔ اس لیے ہم فارمولا $\\text{Area} = \\frac{1}{2} \\times b \\times c \\times \\sin \\gamma$ استعمال کریں گے۔"
+  },
+  {
+   "math": "\\text{Area} = \\frac{1}{2} \\times 2.1 \\times 5 \\times \\sin 45^\\circ",
+   "en": "Substitute the given values $b = 2.1$, $c = 5$, and $\\gamma = 45^\\circ$ into the formula.",
+   "ur": "فارمولے میں دی گئی قیمتیں $b = 2.1$، $c = 5$ اور $\\gamma = 45^\\circ$ درج کریں۔",
+   "check": [
+    "R(1,2) * R(21,10) * 5 * sin(45*pi/180) == R(21,4) * sin(45*pi/180)"
+   ]
+  },
+  {
+   "math": "\\text{Area} = 5.25 \\times \\sin 45^\\circ",
+   "en": "Multiply the numerical values $\\frac{1}{2} \\times 2.1 \\times 5$ to get $5.25$.",
+   "ur": "عددی قیمتوں $\\frac{1}{2} \\times 2.1 \\times 5$ کو ضرب دیں جس سے $5.25$ حاصل ہوتا ہے۔",
+   "check": [
+    "R(1,2) * R(21,10) * 5 == R(525,100)"
+   ]
+  },
+  {
+   "math": "\\text{Area} \\approx 3.71\\text{ cm}^2",
+   "en": "Multiply $5.25$ by the value of $\\sin 45^\\circ \\approx 0.7071$ and round to two decimal places to get the final area.",
+   "ur": "$5.25$ کو $\\sin 45^\\circ \\approx 0.7071$ کی قیمت سے ضرب دیں اور حتمی رقبہ حاصل کرنے کے لیے اعشاریہ کے دو درجوں تک محدود کریں۔",
+   "check": [
+    "Abs((R(525,100)*sin(45*pi/180)) - R(371,100)) <= 0.005",
+    "Abs((R(1,2)*R(21,10)*5*sin((45)*pi/180)) - 3.71) <= 0.0050000010000000004"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

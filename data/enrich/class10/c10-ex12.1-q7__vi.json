@@ -1,0 +1,49 @@
+{
+ "item": "c10-ex12.1-q7",
+ "label": "vi",
+ "answer_ref": "$\\frac{1}{8}$",
+ "steps": [
+  {
+   "math": "S = \\{HHH, HHT, HTH, THH, HTT, THT, TTH, TTT\\}",
+   "en": "When three fair coins are tossed together, we write all possible outcomes to form the sample space $S$.",
+   "ur": "جب تین سکے ایک ساتھ اچھالے جاتے ہیں، تو ہم نمونہ فضا $S$ بنانے کے لیے تمام ممکنہ نتائج لکھتے ہیں۔"
+  },
+  {
+   "math": "n(S) = 2^3 = 8",
+   "en": "Count the total number of possible outcomes in the sample space $S$.",
+   "ur": "نمونہ فضا $S$ میں ممکنہ نتائج کی کل تعداد گنیں۔",
+   "check": [
+    "2**3 == 8"
+   ]
+  },
+  {
+   "math": "E = \\{TTT\\}",
+   "en": "Let $E$ be the event of getting 'no head'. Getting no head means all three coins show tails ($TTT$).",
+   "ur": "فرض کریں کہ $E$ 'کوئی چت نہ آنے' (no head) کا وقوعہ ہے۔ کوئی چت نہ آنے کا مطلب ہے کہ تینوں سکوں پر پٹ ($TTT$) آئے۔"
+  },
+  {
+   "math": "n(E) = 1",
+   "en": "Count the number of favourable outcomes in the event $E$.",
+   "ur": "وقوعہ $E$ میں موافق نتائج کی تعداد گنیں۔",
+   "check": [
+    "1 == 1"
+   ]
+  },
+  {
+   "math": "P(E) = \\frac{n(E)}{n(S)}",
+   "en": "Use the probability formula, which is the number of favourable outcomes divided by the total number of outcomes.",
+   "ur": "احتمال کا فارمولا استعمال کریں، جو کہ موافق نتائج کی تعداد تقسیم کل نتائج کی تعداد ہے۔"
+  },
+  {
+   "math": "P(E) = \\frac{1}{8}",
+   "en": "Substitute $n(E) = 1$ and $n(S) = 8$ into the formula. Thus, the probability of getting no head is $\\frac{1}{8}$.",
+   "ur": "فارمولے میں $n(E) = 1$ اور $n(S) = 8$ درج کریں۔ اس طرح، کوئی چت نہ آنے کا احتمال $\\frac{1}{8}$ ہے۔",
+   "check": [
+    "R(1, 8) == 1/8",
+    "8 == 8"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

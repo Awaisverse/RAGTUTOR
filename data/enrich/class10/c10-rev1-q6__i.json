@@ -1,0 +1,52 @@
+{
+ "item": "c10-rev1-q6",
+ "label": "i",
+ "answer_ref": "$7 + 22i$",
+ "steps": [
+  {
+   "math": "",
+   "en": "We are given two complex numbers $z_1 = 5 + 4i$ and $z_2 = 3 + 2i$, and we need to find their product $z_1 z_2$.",
+   "ur": "ہمیں دو مختلط اعداد $z_1 = 5 + 4i$ اور $z_2 = 3 + 2i$ دیے گئے ہیں، اور ہمیں ان کا حاصلِ ضرب $z_1 z_2$ معلوم کرنا ہے۔"
+  },
+  {
+   "math": "z_1 z_2 = (5 + 4i)(3 + 2i) = 5(3 + 2i) + 4i(3 + 2i)",
+   "en": "Substitute the values of $z_1$ and $z_2$, and apply the distributive property to multiply the first bracket with the second.",
+   "ur": "$z_1$ اور $z_2$ کی قیمتیں درج کریں، اور پہلی قوسین کو دوسری قوسین سے ضرب دینے کے لیے تقسیمی خاصیت کا استعمال کریں۔",
+   "check": [
+    "(5 + 4*I)*(3 + 2*I) == 5*(3 + 2*I) + 4*I*(3 + 2*I)"
+   ]
+  },
+  {
+   "math": "z_1 z_2 = 15 + 10i + 12i + 8i^2",
+   "en": "Multiply the terms inside the brackets.",
+   "ur": "قوسین کے اندر موجود ارکان کو ضرب دیں۔",
+   "check": [
+    "5*(3 + 2*I) + 4*I*(3 + 2*I) == 15 + 10*I + 12*I + 8*I**2"
+   ]
+  },
+  {
+   "math": "z_1 z_2 = 15 + 22i + 8(-1)",
+   "en": "Combine the like imaginary terms ($10i + 12i = 22i$) and substitute $i^2 = -1$.",
+   "ur": "ایک جیسے خیالی ارکان کو جمع کریں ($10i + 12i = 22i$) اور $i^2 = -1$ درج کریں۔",
+   "check": [
+    "10*I + 12*I == 22*I",
+    "I**2 == -1",
+    "15 + 10*I + 12*I + 8*I**2 == 15 + 22*I + 8*(-1)"
+   ]
+  },
+  {
+   "math": "z_1 z_2 = 15 - 8 + 22i = 7 + 22i",
+   "en": "Simplify the real parts ($15 - 8 = 7$) to write the final answer in the standard form $a + bi$.",
+   "ur": "معیاری شکل $a + bi$ میں حتمی جواب لکھنے کے لیے حقیقی حصوں کو مختصر کریں ($15 - 8 = 7$)۔",
+   "check": [
+    "15 + 22*I + 8*(-1) == 15 - 8 + 22*I",
+    "15 - 8 + 22*I == 7 + 22*I",
+    "(5 + 4*I)*(3 + 2*I) == (15) + (22)*I + (8)*I**2",
+    "I**2 == -1",
+    "(5 + 4*I)*(3 + 2*I) == (7 + 22*I)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

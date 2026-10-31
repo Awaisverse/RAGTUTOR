@@ -1,0 +1,66 @@
+{
+ "item": "c10-ex12.2-q2",
+ "label": "",
+ "answer_ref": "$\\frac{29}{50}$",
+ "steps": [
+  {
+   "math": "S = \\{1, 2, 3, \\dots, 50\\} \\implies n(S) = 50",
+   "en": "First, identify the sample space $S$ which contains all the door numbers from $1$ to $50$. Thus, the total number of possible outcomes is $50$.",
+   "ur": "سب سے پہلے، نمونہ فضا $S$ کی نشاندہی کریں جس میں $1$ سے $50$ تک تمام دروازوں کے نمبر شامل ہیں۔ اس طرح، ممکنہ نتائج کی کل تعداد $50$ ہے۔",
+   "check": [
+    "50 == 50"
+   ]
+  },
+  {
+   "math": "A = \\{2, 4, 6, \\dots, 50\\} \\implies n(A) = 25",
+   "en": "Let $A$ be the event of getting an even door number. Half of the numbers from $1$ to $50$ are even, so $n(A) = 25$.",
+   "ur": "فرض کریں کہ $A$ ایک جفت (even) دروازہ نمبر حاصل کرنے کا واقعہ ہے۔ $1$ سے $50$ تک کے آدھے اعداد جفت ہیں، اس لیے $n(A) = 25$ ہے۔",
+   "check": [
+    "50/2 == 25"
+   ]
+  },
+  {
+   "math": "B = \\{1, 4, 9, 16, 25, 36, 49\\} \\implies n(B) = 7",
+   "en": "Let $B$ be the event of getting a perfect square number. Listing all the perfect squares up to $50$ gives $7$ outcomes.",
+   "ur": "فرض کریں کہ $B$ ایک مکمل مربع عدد حاصل کرنے کا واقعہ ہے۔ $50$ تک کے تمام مکمل مربع اعداد کی فہرست بنانے سے $7$ نتائج حاصل ہوتے ہیں۔",
+   "check": [
+    "7 == 7"
+   ]
+  },
+  {
+   "math": "A \\cap B = \\{4, 16, 36\\} \\implies n(A \\cap B) = 3",
+   "en": "Since some numbers are both even and perfect squares, the events $A$ and $B$ are overlapping (not mutually exclusive). Find the common elements in both sets.",
+   "ur": "چونکہ کچھ اعداد جفت اور مکمل مربع دونوں ہیں، اس لیے واقعات $A$ اور $B$ متداخل (غير متنافی) ہیں۔ دونوں سیٹوں میں مشترک ارکان معلوم کریں۔",
+   "check": [
+    "3 == 3"
+   ]
+  },
+  {
+   "math": "P(A) = \\frac{25}{50}, \\quad P(B) = \\frac{7}{50}, \\quad P(A \\cap B) = \\frac{3}{50}",
+   "en": "Write the individual probabilities for each event using the formula $P(E) = \\frac{n(E)}{n(S)}$.",
+   "ur": "فارمولا $P(E) = \\frac{n(E)}{n(S)}$ کا استعمال کرتے ہوئے ہر واقعے کے لیے انفرادی احتمالات لکھیں۔",
+   "check": [
+    "R(25, 50) == R(1, 2)",
+    "R(7, 50) == R(7, 50)",
+    "R(3, 50) == R(3, 50)"
+   ]
+  },
+  {
+   "math": "P(A \\cup B) = P(A) + P(B) - P(A \\cap B)",
+   "en": "To find the probability of getting an even number or a perfect square number, apply the addition law of probability for overlapping events.",
+   "ur": "جفت عدد یا مکمل مربع عدد حاصل کرنے کا احتمال معلوم کرنے کے لیے، متداخل واقعات کے لیے احتمال کے جمع کا قانون لاگو کریں۔"
+  },
+  {
+   "math": "P(A \\cup B) = \\frac{25}{50} + \\frac{7}{50} - \\frac{3}{50} = \\frac{25 + 7 - 3}{50} = \\frac{29}{50}",
+   "en": "Substitute the values into the formula and simplify to get the final answer.",
+   "ur": "فارمولے میں قیمتیں درج کریں اور حتمی جواب حاصل کرنے کے لیے مختصر کریں۔",
+   "check": [
+    "R(25, 50) + R(7, 50) - R(3, 50) == R(29, 50)",
+    "R(25 + 7 - 3, 50) == R(29, 50)",
+    "R(25, 50) + R(7, 50) - R(3, 50) == 29/50"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

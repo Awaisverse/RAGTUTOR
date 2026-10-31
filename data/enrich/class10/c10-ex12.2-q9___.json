@@ -1,0 +1,55 @@
+{
+ "item": "c10-ex12.2-q9",
+ "label": "",
+ "answer_ref": "$\\frac{3}{4}$",
+ "steps": [
+  {
+   "math": "S = \\{HH, HT, TH, TT\\}, \\quad n(S) = 4",
+   "en": "When two fair coins are tossed once, the sample space $S$ has $4$ possible outcomes.",
+   "ur": "جب دو سکے ایک بار اچھالے جاتے ہیں، تو نمونہ فضا $S$ میں $4$ ممکنہ نتائج ہوتے ہیں۔",
+   "check": [
+    "2**2 == 4"
+   ]
+  },
+  {
+   "math": "A = \\{HH, HT, TH\\}, \\quad n(A) = 3, \\quad P(A) = \\frac{n(A)}{n(S)} = \\frac{3}{4}",
+   "en": "Let $A$ be the event of getting at least one head. There are $3$ such outcomes, so the probability of $A$ is $\\frac{3}{4}$.",
+   "ur": "فرض کریں $A$ کم از کم ایک ہیڈ (head) آنے کا واقعہ ہے۔ ایسے $3$ نتائج ہیں، اس لیے $A$ کا احتمال $\\frac{3}{4}$ ہے۔",
+   "check": [
+    "R(3, 4) == 3/4"
+   ]
+  },
+  {
+   "math": "B = \\{HH\\}, \\quad n(B) = 1, \\quad P(B) = \\frac{n(B)}{n(S)} = \\frac{1}{4}",
+   "en": "Let $B$ be the event of getting two heads. There is $1$ such outcome, so the probability of $B$ is $\\frac{1}{4}$.",
+   "ur": "فرض کریں $B$ دو ہیڈز آنے کا واقعہ ہے۔ ایسا $1$ نتیجہ ہے، اس لیے $B$ کا احتمال $\\frac{1}{4}$ ہے۔",
+   "check": [
+    "R(1, 4) == 1/4"
+   ]
+  },
+  {
+   "math": "A \\cap B = \\{HH\\}, \\quad n(A \\cap B) = 1, \\quad P(A \\cap B) = \\frac{n(A \\cap B)}{n(S)} = \\frac{1}{4}",
+   "en": "Since the outcome $HH$ is common to both events, $A$ and $B$ are overlapping (not mutually exclusive) events.",
+   "ur": "چونکہ نتیجہ $HH$ دونوں واقعات میں مشترک ہے، اس لیے $A$ اور $B$ غیر متنافی (متداخل) واقعات ہیں۔",
+   "check": [
+    "R(1, 4) == 1/4"
+   ]
+  },
+  {
+   "math": "P(A \\cup B) = P(A) + P(B) - P(A \\cap B)",
+   "en": "To find the probability of getting at least one head or two heads, we apply the addition law of probability for overlapping events.",
+   "ur": "کم از کم ایک ہیڈ یا دو ہیڈز آنے کا احتمال معلوم کرنے کے لیے، ہم غیر متنافی واقعات کے لیے احتمال کے جمع کا قانون لاگو کرتے ہیں۔"
+  },
+  {
+   "math": "P(A \\cup B) = \\frac{3}{4} + \\frac{1}{4} - \\frac{1}{4} = \\frac{3}{4}",
+   "en": "Substitute the values and simplify to get the final answer $\\frac{3}{4}$.",
+   "ur": "قیمتیں درج کریں اور مختصر کر کے حتمی جواب $\\frac{3}{4}$ حاصل کریں۔",
+   "check": [
+    "R(3, 4) + R(1, 4) - R(1, 4) == R(3, 4)",
+    "R(3, 4) + R(1, 4) - R(1, 4) == 3/4"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

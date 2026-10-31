@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex7.4-q4",
+ "label": "ii",
+ "answer_ref": "$252^\\circ$ (S $71.57^\\circ$ W)",
+ "steps": [
+  {
+   "math": "",
+   "en": "Let the starting point be $O$, the point $100\\text{ m}$ North be $A$, and the final point $300\\text{ m}$ East be $B$. This forms a right-angled triangle $OAB$ with a right angle at $A$.",
+   "ur": "فرض کریں کہ ابتدائی نقطہ $O$ ہے، $100\\text{ m}$ شمال کا نقطہ $A$ ہے، اور $300\\text{ m}$ مشرق کا آخری نقطہ $B$ ہے۔ یہ ایک قائمۃ الزاویہ مثلث $OAB$ بناتی ہے جس میں نقطہ $A$ پر زاویہ قائمہ ہے۔"
+  },
+  {
+   "math": "\\tan\\theta = \\frac{\\text{Opposite}}{\\text{Adjacent}} = \\frac{300}{100} = 3",
+   "en": "Let $\\theta$ be the angle $\\angle AOB$ between the North line and his path $OB$. Using the tangent ratio in $\\triangle OAB$, we substitute the given distances.",
+   "ur": "فرض کریں کہ $\\theta$ شمال کی سمت اور اس کے راستے $OB$ کے درمیان زاویہ $\\angle AOB$ ہے۔ مثلث $OAB$ میں ٹینجنٹ کی نسبت استعمال کرتے ہوئے ہم دیے گئے فاصلوں کی قیمتیں درج کرتے ہیں۔",
+   "check": [
+    "300 / 100 == 3"
+   ]
+  },
+  {
+   "math": "\\theta = \\tan^{-1}(3) \\approx 71.57^\\circ",
+   "en": "Take the inverse tangent to find the angle $\\theta$.",
+   "ur": "زاویہ $\\theta$ معلوم کرنے کے لیے معکوس ٹینجنٹ لیں۔",
+   "check": [
+    "Abs((atan(3)*180/pi) - 71.57) <= 0.0050000010000000004"
+   ]
+  },
+  {
+   "math": "",
+   "en": "Since the North-South lines at $O$ and $B$ are parallel, by alternate interior angles, the angle between the South line at $B$ and the return path $BO$ is also $\\theta = 71.57^\\circ$ towards the West (i.e., S $71.57^\\circ$ W).",
+   "ur": "چونکہ نقاط $O$ اور $B$ پر شمال-جنوب کے خطوط متوازی ہیں، اس لیے متبادلہ داخلہ زاویوں کی رو سے نقطہ $B$ پر جنوب کی سمت اور واپسی کے راستے $BO$ کے درمیان زاویہ بھی مغرب کی طرف $\\theta = 71.57^\\circ$ ہے (یعنی S $71.57^\\circ$ W)۔"
+  },
+  {
+   "math": "\\text{Bearing back} = 180^\\circ + 71.57^\\circ = 251.57^\\circ \\approx 252^\\circ",
+   "en": "A three-figure bearing is measured clockwise from the North. Since South is at $180^\\circ$, we add $71.57^\\circ$ to $180^\\circ$ to get the bearing back to the starting position.",
+   "ur": "تین ہندسوں کی بیئرنگ شمال سے گھڑی کی سمت میں ماپی جاتی ہے۔ چونکہ جنوب $180^\\circ$ پر ہوتا ہے، اس لیے ابتدائی مقام پر واپسی کی بیئرنگ حاصل کرنے کے لیے ہم $180^\\circ$ میں $71.57^\\circ$ جمع کرتے ہیں۔",
+   "check": [
+    "180 + 71.57 == 251.57",
+    "Abs((180 + atan(3)*180/pi) - 252) <= 0.500000001",
+    "Abs((atan(3)*180/pi) - 71.57) <= 0.0050000010000000004"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

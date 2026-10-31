@@ -1,0 +1,40 @@
+{
+ "item": "c10-ex7.1-q2",
+ "label": "iii",
+ "answer_ref": "$-\\cot\\theta$",
+ "steps": [
+  {
+   "math": "\\tan(90^\\circ + \\theta)",
+   "en": "We are given the trigonometric expression $\\tan(90^\\circ + \\theta)$ and need to simplify it.",
+   "ur": "ہمیں مثلثیاتی جملہ $\\tan(90^\\circ + \\theta)$ دیا گیا ہے اور ہمیں اسے مختصر کرنا ہے۔"
+  },
+  {
+   "math": "90^\\circ + \\theta \\in \\text{Quadrant II}",
+   "en": "Assuming $\\theta$ is an acute angle, adding $\\theta$ to $90^\\circ$ places the terminal arm of the angle in the second quadrant (Quadrant II).",
+   "ur": "فرض کریں کہ $\\theta$ ایک حادہ زاویہ ہے، تو $90^\\circ$ میں $\\theta$ جمع کرنے سے زاویے کا اختتامی بازو دوسرے ربع (Quadrant II) میں آتا ہے۔"
+  },
+  {
+   "math": "",
+   "en": "In the second quadrant, only $\\sin$ and $\\operatorname{cosec}$ are positive, so the $\\tan$ function is negative.",
+   "ur": "دوسرے ربع میں صرف $\\sin$ اور $\\operatorname{cosec}$ مثبت ہوتے ہیں، اس لیے $\\tan$ تفاعل منفی ہوتا ہے۔"
+  },
+  {
+   "math": "90^\\circ = 1 \\times 90^\\circ",
+   "en": "Since the angle involves $90^\\circ$ (which is an odd multiple of $90^\\circ$), the trigonometric ratio $\\tan$ changes to its co-ratio $\\cot$.",
+   "ur": "چونکہ زاویے میں $90^\\circ$ شامل ہے (جو کہ $90^\\circ$ کا طاق ضعف ہے)، اس لیے مثلثیاتی نسبت $\\tan$ اپنی معاون نسبت (co-ratio) یعنی $\\cot$ میں تبدیل ہو جاتی ہے۔",
+   "check": [
+    "90 == 1*90"
+   ]
+  },
+  {
+   "math": "\\tan(90^\\circ + \\theta) = -\\cot\\theta",
+   "en": "Combining the negative sign from Quadrant II and the co-ratio $\\cot\\theta$, we get the final result.",
+   "ur": "دوسرے ربع کی منفی علامت اور معاون نسبت $\\cot\\theta$ کو ملانے سے ہمیں حتمی نتیجہ حاصل ہوتا ہے۔",
+   "check": [
+    "tan(pi/2 + t) == -cot(t)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

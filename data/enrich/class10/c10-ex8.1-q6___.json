@@ -1,0 +1,142 @@
+{
+ "item": "c10-ex8.1-q6",
+ "label": "",
+ "answer_ref": "$5$ cm",
+ "steps": [
+  {
+   "math": "AB = 8\\text{ cm}, \\quad OM = 3\\text{ cm}",
+   "en": "Let the chord be $AB = 8\\text{ cm}$ and its perpendicular distance from the centre $O$ be $OM = 3\\text{ cm}$. We need to find the radius $r = OA$.",
+   "ur": "فرض کریں کہ وتر $AB = 8\\text{ cm}$ ہے اور مرکز $O$ سے اس کا عمودی فاصلہ $OM = 3\\text{ cm}$ ہے۔ ہمیں رداس $r = OA$ معلوم کرنا ہے۔",
+   "draw": [
+    {
+     "t": "circle",
+     "c": [
+      50,
+      30
+     ],
+     "r": 25
+    },
+    {
+     "t": "dot",
+     "p": [
+      50,
+      30
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      51.5,
+      28
+     ],
+     "s": "O"
+    },
+    {
+     "t": "line",
+     "p": [
+      30.0,
+      45.0,
+      70.0,
+      45.0
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      26.0,
+      46.0
+     ],
+     "s": "A"
+    },
+    {
+     "t": "text",
+     "p": [
+      71.5,
+      46.0
+     ],
+     "s": "B"
+    },
+    {
+     "t": "line",
+     "p": [
+      50,
+      30,
+      50,
+      45.0
+     ],
+     "dash": true
+    },
+    {
+     "t": "right",
+     "p": [
+      50,
+      45.0
+     ],
+     "d": [
+      1,
+      0,
+      0,
+      -1
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      51.5,
+      49.0
+     ],
+     "s": "M"
+    },
+    {
+     "t": "line",
+     "p": [
+      50,
+      30,
+      70.0,
+      45.0
+     ]
+    }
+   ]
+  },
+  {
+   "math": "AM = \\frac{AB}{2} = \\frac{8}{2} = 4\\text{ cm}",
+   "en": "By theorem, a perpendicular from the centre of a circle to a chord bisects the chord. Therefore, $AM$ is half of $AB$.",
+   "ur": "مسئلے کے مطابق، دائرے کے مرکز سے وتر پر گرایا گیا عمود وتر کی تنصیف کرتا ہے۔ اس لیے، $AM$ وتر $AB$ کا نصف ہے۔",
+   "check": [
+    "8/2 == 4"
+   ]
+  },
+  {
+   "math": "OA^2 = OM^2 + AM^2",
+   "en": "Now, $\\triangle OMA$ is a right-angled triangle with $\\angle OMA = 90^\\circ$. Apply the Pythagoras theorem.",
+   "ur": "اب، $\\triangle OMA$ ایک قائمۃ الزاویہ مثلث ہے جس میں $\\angle OMA = 90^\\circ$ ہے۔ مسئلہ فیثاغورث لاگو کریں۔"
+  },
+  {
+   "math": "r^2 = 3^2 + 4^2",
+   "en": "Substitute $OA = r$, $OM = 3$, and $AM = 4$ into the equation.",
+   "ur": "مساوات میں $OA = r$، $OM = 3$ اور $AM = 4$ درج کریں۔"
+  },
+  {
+   "math": "r^2 = 9 + 16 = 25",
+   "en": "Calculate the squares and add them.",
+   "ur": "مربع معلوم کریں اور انہیں جمع کریں۔",
+   "check": [
+    "3**2 == 9",
+    "4**2 == 16",
+    "9 + 16 == 25"
+   ]
+  },
+  {
+   "math": "r = \\sqrt{25} = 5\\text{ cm}",
+   "en": "Take the positive square root on both sides to find the radius of the circle.",
+   "ur": "دائرے کا رداس معلوم کرنے کے لیے دونوں اطراف کا مثبت جذر المربع لیں۔",
+   "check": [
+    "sqrt(25) == 5",
+    "sqrt(3**2 + 4**2) == 5"
+   ]
+  }
+ ],
+ "keeps_drawing": true,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

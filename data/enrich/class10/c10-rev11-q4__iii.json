@@ -1,0 +1,68 @@
+{
+ "item": "c10-rev11-q4",
+ "label": "iii",
+ "answer_ref": "71.03",
+ "steps": [
+  {
+   "math": "n = 10, \\quad \\sum x = 45, \\quad \\sum y = 763",
+   "en": "First, we find the totals of the exercise hours ($x$) and the resting heart rates ($y$) for the $10$ individuals from the given table.",
+   "ur": "سب سے پہلے، ہم دیے گئے جدول سے $10$ افراد کے لیے ورزش کے گھنٹوں ($x$) اور دل کی دھڑکن کی شرح ($y$) کا مجموعہ معلوم کرتے ہیں۔",
+   "check": [
+    "0 + 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 == 45",
+    "90 + 85 + 83 + 80 + 76 + 74 + 72 + 70 + 68 + 65 == 763"
+   ]
+  },
+  {
+   "math": "\\sum x^2 = 285, \\quad \\sum xy = 3216",
+   "en": "Next, we calculate the sum of the squares of $x$ and the sum of the products of $x$ and $y$ to find the regression line.",
+   "ur": "اس کے بعد، ہم ریگریشن لائن معلوم کرنے کے لیے $x$ کے مربوں کا مجموعہ اور $x$ اور $y$ کے حاصل ضرب کا مجموعہ نکالتے ہیں۔",
+   "check": [
+    "0**2 + 1**2 + 2**2 + 3**2 + 4**2 + 5**2 + 6**2 + 7**2 + 8**2 + 9**2 == 285",
+    "0*90 + 1*85 + 2*83 + 3*80 + 4*76 + 5*74 + 6*72 + 7*70 + 8*68 + 9*65 == 3216"
+   ]
+  },
+  {
+   "math": "b = \\frac{n\\sum xy - (\\sum x)(\\sum y)}{n\\sum x^2 - (\\sum x)^2} = \\frac{10(3216) - (45)(763)}{10(285) - (45)^2} = \\frac{-2175}{825} = -\\frac{29}{11} \\approx -2.64",
+   "en": "Substitute these values into the formula to find the slope $b$ of the line of best fit.",
+   "ur": "بہترین فٹ لائن کی ڈھلوان $b$ معلوم کرنے کے لیے ان قیمتوں کو فارمولے میں درج کریں۔",
+   "check": [
+    "(10*3216 - 45*763) == -2175",
+    "(10*285 - 45**2) == 825",
+    "R(-2175, 825) == R(-29, 11)",
+    "Abs(R(-29, 11) - (-2.64)) <= 0.005"
+   ]
+  },
+  {
+   "math": "a = \\frac{\\sum y - b\\sum x}{n} = \\frac{763 - (-\\frac{29}{11})(45)}{10} = \\frac{4849}{55} \\approx 88.16",
+   "en": "Now calculate the $y$-intercept $a$ using the formula $a = \\bar{y} - b\\bar{x}$.",
+   "ur": "اب فارمولا $a = \\bar{y} - b\\bar{x}$ استعمال کرتے ہوئے $y$-انٹرسیپٹ $a$ کا حساب لگائیں۔",
+   "check": [
+    "R(763 - R(-29, 11)*45, 10) == R(4849, 55)",
+    "Abs(R(4849, 55) - 88.16) <= 0.005"
+   ]
+  },
+  {
+   "math": "",
+   "en": "Using the values of $a$ and $b$, the equation of the line of best fit $\\hat{y} = a + bx$ becomes $\\hat{y} = 88.16 - 2.64x$.",
+   "ur": "$a$ اور $b$ کی قیمتوں کو استعمال کرتے ہوئے، بہترین فٹ لائن کی مساوات $\\hat{y} = a + bx$، $\\hat{y} = 88.16 - 2.64x$ بن جاتی ہے۔"
+  },
+  {
+   "math": "\\hat{y} = 88.16 - 2.64(6.5) \\approx 71.03",
+   "en": "To predict Sakeena's heart rate, substitute $x = 6.5$ hours into the equation.",
+   "ur": "سکینہ کے دل کی دھڑکن کی پیش گوئی کرنے کے لیے، مساوات میں $x = 6.5$ گھنٹے درج کریں۔",
+   "check": [
+    "Abs(((R(4849,55)) + ((R(-29,11)))*R(13,2)) - 71.03) <= 0.0050000010000000004"
+   ]
+  },
+  {
+   "math": "",
+   "en": "Thus, the predicted resting heart rate for Sakeena is $71.03$ beats per minute.",
+   "ur": "اس طرح، سکینہ کے لیے آرام کی حالت میں دل کی متوقع دھڑکن $71.03$ دھڑکن فی منٹ ہے۔",
+   "check": [
+    "Abs(((4849/55) + ((-29/11))*R(13,2)) - 71.03) <= 0.0050000010000000004"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

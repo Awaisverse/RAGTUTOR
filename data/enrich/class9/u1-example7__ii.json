@@ -1,0 +1,61 @@
+{
+ "item": "u1-example7",
+ "label": "ii",
+ "answer_ref": "$3x^2y^3z$",
+ "steps": [
+  {
+   "math": "\\sqrt[3]{27x^6y^9z^3}",
+   "en": "We are given the radical expression $\\sqrt[3]{27x^6y^9z^3}$ and asked to simplify it.",
+   "ur": "ہمیں جذری جملہ $\\sqrt[3]{27x^6y^9z^3}$ دیا گیا ہے اور اسے مختصر کرنے کو کہا گیا ہے۔"
+  },
+  {
+   "math": "= (27x^6y^9z^3)^{\\frac{1}{3}}",
+   "en": "Rewrite the radical expression in exponential form using the rule $\\sqrt[n]{a} = a^{\\frac{1}{n}}$. Here, the index of the root is $n = 3$.",
+   "ur": "قاعدہ $\\sqrt[n]{a} = a^{\\frac{1}{n}}$ کا استعمال کرتے ہوئے جذری جملے کو قوت نمائی شکل میں لکھیں۔ یہاں جذر کا اشاریہ $n = 3$ ہے۔",
+   "check": [
+    "27**(1/3) == 3.0"
+   ]
+  },
+  {
+   "math": "= (3^3 x^6 y^9 z^3)^{\\frac{1}{3}}",
+   "en": "Express the number $27$ in its prime factorized exponential form as $3^3$, since $3 \\times 3 \\times 3 = 27$.",
+   "ur": "عدد $27$ کو اس کی مفرد تجزی کی قوت نمائی شکل میں $3^3$ کے طور پر لکھیں، کیونکہ $3 \\times 3 \\times 3 = 27$ ہوتا ہے۔",
+   "check": [
+    "3**3 == 27"
+   ]
+  },
+  {
+   "math": "= (3^3)^{\\frac{1}{3}} (x^6)^{\\frac{1}{3}} (y^9)^{\\frac{1}{3}} (z^3)^{\\frac{1}{3}}",
+   "en": "Apply the power of a product rule, $(ab)^n = a^n b^n$, to distribute the outer exponent $\\frac{1}{3}$ to each factor inside the brackets.",
+   "ur": "حاصل ضرب کی قوت کا اصول $(ab)^n = a^n b^n$ لاگو کرتے ہوئے بیرونی قوت نما $\\frac{1}{3}$ کو بریکٹ کے اندر موجود ہر جزو ضربی پر الگ الگ لگائیں۔",
+   "check": [
+    "(3**3)**(1/3) == 3.0"
+   ]
+  },
+  {
+   "math": "= 3^{\\frac{3}{3}} x^{\\frac{6}{3}} y^{\\frac{9}{3}} z^{\\frac{3}{3}}",
+   "en": "Apply the power of a power rule, $(a^m)^n = a^{m \\cdot n}$, by multiplying the inner exponents by $\\frac{1}{3}$ (which divides each exponent by $3$).",
+   "ur": "قوت کی قوت کا اصول $(a^m)^n = a^{m \\cdot n}$ لاگو کرتے ہوئے اندرونی قوت نماؤں کو $\\frac{1}{3}$ سے ضرب دیں (جس سے ہر قوت نما $3$ سے تقسیم ہو جائے گا)۔",
+   "check": [
+    "3*R(1,3) == R(3,3)",
+    "6*R(1,3) == R(6,3)",
+    "9*R(1,3) == R(9,3)"
+   ]
+  },
+  {
+   "math": "= 3^1 x^2 y^3 z^1 = 3x^2y^3z",
+   "en": "Simplify the fractions in the exponents to get the final answer: $3x^2y^3z$.",
+   "ur": "قوت نماؤں میں موجود کسور کو مختصر کریں، جس سے حتمی جواب $3x^2y^3z$ حاصل ہوتا ہے۔",
+   "check": [
+    "R(3,3) == 1",
+    "R(6,3) == 2",
+    "R(9,3) == 3",
+    "3**3 == 27",
+    "Rational(6,3)==2",
+    "Rational(9,3)==3"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

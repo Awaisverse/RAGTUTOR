@@ -1,0 +1,52 @@
+{
+ "item": "c10-rev8-q5",
+ "label": "",
+ "answer_ref": "yes, she can install the fountain",
+ "steps": [
+  {
+   "math": "A(2,1),\\quad B(4,4),\\quad C(1,5)",
+   "en": "The coordinates of the three corners of the triangular garden are given.",
+   "ur": "مثلثی باغ کے تینوں کونوں کے نقاط دیے گئے ہیں۔"
+  },
+  {
+   "math": "",
+   "en": "By the theorem of a circle, one and only one circle can pass through three non-collinear points. To check if the points are non-collinear, we use the slope formula $m = \\frac{y_2 - y_1}{x_2 - x_1}$ to find the slopes of segments $AB$ and $AC$.",
+   "ur": "دائرے کے مسئلے کے مطابق، تین غیر ہم خط نقاط سے ایک اور صرف ایک دائرہ گزر سکتا ہے۔ یہ جانچنے کے لیے کہ آیا یہ نقاط غیر ہم خط ہیں، ہم ڈھلوان کا فارمولا $m = \\frac{y_2 - y_1}{x_2 - x_1}$ استعمال کرتے ہوئے قطعات خط $AB$ اور $AC$ کی ڈھلوانیں معلوم کرتے ہیں۔"
+  },
+  {
+   "math": "m_{AB} = \\frac{4 - 1}{4 - 2} = \\frac{3}{2}",
+   "en": "Substitute the coordinates of $A(2,1)$ and $B(4,4)$ to find the slope of line segment $AB$.",
+   "ur": "قطعہ خط $AB$ کی ڈھلوان معلوم کرنے کے لیے نقاط $A(2,1)$ اور $B(4,4)$ کی قیمتیں درج کریں۔",
+   "check": [
+    "(4 - 1)/(4 - 2) == R(3, 2)"
+   ]
+  },
+  {
+   "math": "m_{AC} = \\frac{5 - 1}{1 - 2} = \\frac{4}{-1} = -4",
+   "en": "Substitute the coordinates of $A(2,1)$ and $C(1,5)$ to find the slope of line segment $AC$.",
+   "ur": "قطعہ خط $AC$ کی ڈھلوان معلوم کرنے کے لیے نقاط $A(2,1)$ اور $C(1,5)$ کی قیمتیں درج کریں۔",
+   "check": [
+    "(5 - 1)/(1 - 2) == -4",
+    "4/(-1) == -4"
+   ]
+  },
+  {
+   "math": "m_{AB} \\neq m_{AC} \\quad \\left(\\frac{3}{2} \\neq -4\\right)",
+   "en": "Since the slopes are not equal, the points $A$, $B$, and $C$ do not lie on the same straight line (they are non-collinear).",
+   "ur": "چونکہ ڈھلوانیں برابر نہیں ہیں، اس لیے نقاط $A$، $B$ اور $C$ ایک ہی خط مستقیم پر واقع نہیں ہیں (یہ غیر ہم خط ہیں)۔",
+   "check": [
+    "Ne(R(3, 2), -4)"
+   ]
+  },
+  {
+   "math": "",
+   "en": "Because the three corners are non-collinear, the perpendicular bisectors of the sides meet at a unique circumcentre. Therefore, yes, she can install the fountain that touches all three corners.",
+   "ur": "چونکہ تینوں کونے غیر ہم خط ہیں، اس لیے اضلاع کے عمودی ناصف ایک منفرد محاصرہ مرکز (circumcentre) پر ملتے ہیں۔ لہٰذا، ہاں، وہ ایسا فوارہ لگا سکتی ہے جو تینوں کونوں کو چھوئے۔",
+   "check": [
+    "Ne(R(3,2), -4)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

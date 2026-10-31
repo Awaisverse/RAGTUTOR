@@ -1,0 +1,51 @@
+{
+ "item": "c10-ex12.3-q1",
+ "label": "ii",
+ "answer_ref": "$\\frac{3}{4}$",
+ "steps": [
+  {
+   "math": "n(S) = 10 \\times 10 = 100",
+   "en": "Two numbers are chosen from $1$ to $10$ with replacement. Since there are $10$ choices for each number, the total number of possible pairs in the sample space $S$ is $100$.",
+   "ur": "$1$ سے $10$ تک کے اعداد میں سے واپسی کے ساتھ دو اعداد چنے گئے ہیں۔ چونکہ ہر عدد کے لیے $10$ امکانات ہیں، اس لیے نمونہ فضا $S$ میں کل ممکنہ جوڑوں کی تعداد $100$ ہے۔",
+   "check": [
+    "10 * 10 == 100"
+   ]
+  },
+  {
+   "math": "n(\\text{both odd}) = 5 \\times 5 = 25",
+   "en": "The product of two numbers is odd only when both numbers are odd. There are $5$ odd numbers from $1$ to $10$ ($1, 3, 5, 7, 9$), so the number of pairs with an odd product is $25$.",
+   "ur": "دو اعداد کا حاصل ضرب صرف اس صورت میں طاق ہوتا ہے جب دونوں اعداد طاق ہوں۔ $1$ سے $10$ تک $5$ طاق اعداد ہیں ($1, 3, 5, 7, 9$)، لہٰذا طاق حاصل ضرب والے جوڑوں کی تعداد $25$ ہے۔",
+   "check": [
+    "5 * 5 == 25"
+   ]
+  },
+  {
+   "math": "n(E) = 100 - 25 = 75",
+   "en": "Let $E$ be the event that the product of the two numbers is even. We find the favourable outcomes $n(E)$ by subtracting the pairs with an odd product from the total outcomes.",
+   "ur": "فرض کریں کہ $E$ وہ واقعہ ہے جس میں دونوں اعداد کا حاصل ضرب جفت ہے۔ ہم کل نتائج میں سے طاق حاصل ضرب والے جوڑوں کو تفریق کر کے موافق نتائج $n(E)$ معلوم کرتے ہیں۔",
+   "check": [
+    "100 - 25 == 75"
+   ]
+  },
+  {
+   "math": "P(E) = \\frac{n(E)}{n(S)} = \\frac{75}{100}",
+   "en": "Apply the probability formula by dividing the number of favourable outcomes by the total number of outcomes.",
+   "ur": "موافق نتائج کی تعداد کو کل نتائج کی تعداد پر تقسیم کر کے احتمال کا فارمولا استعمال کریں۔",
+   "check": [
+    "R(75, 100) == R(75, 100)"
+   ]
+  },
+  {
+   "math": "P(E) = \\frac{3}{4}",
+   "en": "Simplify the fraction by dividing both the numerator and the denominator by $25$ to get the final answer.",
+   "ur": "حتمی جواب حاصل کرنے کے لیے شمار کنندہ اور مخرج دونوں کو $25$ پر تقسیم کر کے کسر کو مختصر کریں۔",
+   "check": [
+    "R(75, 100) == R(3, 4)",
+    "100 == 100",
+    "R(75, 100) == 3/4"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

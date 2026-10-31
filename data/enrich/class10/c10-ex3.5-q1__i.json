@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex3.5-q1",
+ "label": "i",
+ "answer_ref": "$40$",
+ "steps": [
+  {
+   "math": "|A| = \\begin{vmatrix} 10 & 5 \\\\ 4 & 6 \\end{vmatrix}",
+   "en": "Let the given $2 \\times 2$ determinant be denoted by $|A|$. We need to find its numerical value.",
+   "ur": "فرض کریں کہ دیے گئے $2 \\times 2$ مقطع (determinant) کو $|A|$ سے ظاہر کیا گیا ہے۔ ہمیں اس کی عددی قیمت معلوم کرنی ہے۔"
+  },
+  {
+   "math": "\\begin{vmatrix} a & b \\\\ c & d \\end{vmatrix} = ad - bc",
+   "en": "Recall the formula for evaluating the determinant of a $2 \\times 2$ matrix: multiply the main diagonal elements ($a$ and $d$) and subtract the product of the secondary diagonal elements ($b$ and $c$).",
+   "ur": "ایک $2 \\times 2$ قالب کے مقطع کی قیمت معلوم کرنے کا فارمولا یاد کریں: وتر کے ارکان ($a$ اور $d$) کو ضرب دیں اور اس میں سے دوسرے وتر کے ارکان ($b$ اور $c$) کا حاصلِ ضرب تفریق کریں۔"
+  },
+  {
+   "math": "|A| = (10)(6) - (5)(4)",
+   "en": "Substitute the values from the given determinant where $a = 10$, $b = 5$, $c = 4$, and $d = 6$.",
+   "ur": "دیے گئے مقطع سے قیمتیں درج کریں جہاں $a = 10$، $b = 5$، $c = 4$ اور $d = 6$ ہیں۔",
+   "check": [
+    "Matrix([[10, 5], [4, 6]]).det() == (10)*(6) - (5)*(4)"
+   ]
+  },
+  {
+   "math": "|A| = 60 - 20",
+   "en": "Perform the multiplications: $10 \\times 6 = 60$ and $5 \\times 4 = 20$.",
+   "ur": "ضرب کا عمل مکمل کریں: $10 \\times 6 = 60$ اور $5 \\times 4 = 20$۔",
+   "check": [
+    "10 * 6 == 60",
+    "5 * 4 == 20"
+   ]
+  },
+  {
+   "math": "|A| = 40",
+   "en": "Subtract $20$ from $60$ to get the final value of the determinant.",
+   "ur": "مقطع کی حتمی قیمت حاصل کرنے کے لیے $60$ میں سے $20$ کو تفریق کریں۔",
+   "check": [
+    "60 - 20 == 40",
+    "Matrix([[10, 5], [4, 6]]).det() == 40"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

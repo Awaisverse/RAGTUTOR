@@ -1,0 +1,52 @@
+{
+ "item": "c10-ex7.3-q5",
+ "label": "",
+ "answer_ref": "$29.5^\\circ$",
+ "steps": [
+  {
+   "math": "m\\overline{AB} = 10\\text{ cm},\\quad m\\overline{AD} = m\\overline{BC} = 7\\text{ cm},\\quad m\\overline{MT} = 6\\text{ cm}",
+   "en": "Write down the given lengths. Since $ABCD$ is a rectangle, opposite sides $AD$ and $BC$ are equal.",
+   "ur": "دی گئی لمبائیاں لکھیں۔ چونکہ $ABCD$ ایک مستطیل ہے، اس کے بالمقابل اضلاع $AD$ اور $BC$ برابر ہیں۔",
+   "check": [
+    "7 == 7"
+   ]
+  },
+  {
+   "math": "m\\overline{AM} = \\frac{m\\overline{AD}}{2} = \\frac{7}{2} = 3.5\\text{ cm}",
+   "en": "Since $M$ is the midpoint of $AD$, divide the length of $AD$ by $2$ to find $m\\overline{AM}$.",
+   "ur": "چونکہ $M$ ضلع $AD$ کا وسطی نقطہ ہے، اس لیے $m\\overline{AM}$ معلوم کرنے کے لیے $AD$ کی لمبائی کو $2$ پر تقسیم کریں۔",
+   "check": [
+    "R(7, 2) == 3.5"
+   ]
+  },
+  {
+   "math": "m\\overline{MB} = \\sqrt{m\\overline{AM}^2 + m\\overline{AB}^2} = \\sqrt{3.5^2 + 10^2} = \\sqrt{112.25} \\approx 10.59\\text{ cm}",
+   "en": "In the base rectangle, $\\angle MAB = 90^\\circ$. Apply the Pythagoras theorem to the right-angled triangle $MAB$ to find the length of $MB$.",
+   "ur": "قاعدہ کی مستطیل میں $\\angle MAB = 90^\\circ$ ہے۔ $MB$ کی لمبائی معلوم کرنے کے لیے قائمۃ الزاویہ مثلث $MAB$ پر مسئلہ فیثاغورث لاگو کریں۔",
+   "check": [
+    "R(7,2)**2 + 10**2 == R(449,4)",
+    "Abs(sqrt(R(449,4)) - 10.59) <= 0.005"
+   ]
+  },
+  {
+   "math": "\\tan\\theta = \\frac{m\\overline{MT}}{m\\overline{MB}} = \\frac{6}{10.59} \\approx 0.5663",
+   "en": "Since $T$ is vertically above $M$, $\\triangle TMB$ is a right-angled triangle with $\\angle TMB = 90^\\circ$. Let $\\theta$ be the angle $\\angle TBM$ between $\\overline{TB}$ and the base.",
+   "ur": "چونکہ نقطہ $T$ عمودی طور پر $M$ کے اوپر ہے، اس لیے $\\triangle TMB$ ایک قائمۃ الزاویہ مثلث ہے جس میں $\\angle TMB = 90^\\circ$ ہے۔ فرض کریں کہ $\\overline{TB}$ اور قاعدہ کے درمیان زاویہ $\\angle TBM = \\theta$ ہے۔",
+   "check": [
+    "Abs(6/sqrt(R(449,4)) - 0.5663) <= 0.0005"
+   ]
+  },
+  {
+   "math": "\\theta = \\tan^{-1}(0.5663) \\approx 29.5^\\circ",
+   "en": "Take the inverse tangent to find the size of the angle $\\theta$ between $\\overline{TB}$ and the base.",
+   "ur": "$\\overline{TB}$ اور قاعدہ کے درمیان زاویہ $\\theta$ کی مقدار معلوم کرنے کے لیے معکوس ٹینجنٹ ($\\tan^{-1}$) لیں۔",
+   "check": [
+    "Abs((atan(6/sqrt(R(7,2)**2 + 10**2))*180/pi) - 29.5) <= 0.05",
+    "Abs((sqrt(R(7,2)**2 + 10**2)) - 10.59) <= 0.0050000010000000004",
+    "Abs((atan(6/sqrt(R(7,2)**2 + 10**2))*180/pi) - 29.5) <= 0.050000001"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

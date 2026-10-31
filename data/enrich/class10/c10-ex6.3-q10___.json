@@ -1,0 +1,62 @@
+{
+ "item": "c10-ex6.3-q10",
+ "label": "",
+ "answer_ref": "$30\\underline{i} - 30\\underline{j}$, magnitude $30\\sqrt{2}$",
+ "steps": [
+  {
+   "math": "",
+   "en": "Given the initial velocity vector $\\underline{v} = 30\\underline{j}$ and the final velocity vector $\\underline{v}' = 30\\underline{i}$. We need to find the change in velocity vector $\\Delta\\underline{v}$ and its magnitude.",
+   "ur": "ابتدائی ولاسٹی ویکٹر $\\underline{v} = 30\\underline{j}$ اور آخری ولاسٹی ویکٹر $\\underline{v}' = 30\\underline{i}$ دیے گئے ہیں۔ ہمیں ولاسٹی ویکٹر میں تبدیلی $\\Delta\\underline{v}$ اور اس کی مقدار معلوم کرنی ہے۔"
+  },
+  {
+   "math": "\\Delta\\underline{v} = \\underline{v}' - \\underline{v}",
+   "en": "The change in a vector is defined as the final vector minus the initial vector.",
+   "ur": "کسی ویکٹر میں تبدیلی آخری ویکٹر میں سے ابتدائی ویکٹر کو تفریق کرنے سے حاصل ہوتی ہے۔"
+  },
+  {
+   "math": "\\Delta\\underline{v} = 30\\underline{i} - 30\\underline{j}",
+   "en": "Substitute the given velocity vectors $\\underline{v}'$ and $\\underline{v}$ into the formula.",
+   "ur": "فارمولے میں دیے گئے ولاسٹی ویکٹرز $\\underline{v}'$ اور $\\underline{v}$ کی قیمتیں درج کریں۔",
+   "check": [
+    "30 == 30",
+    "-30 == -30"
+   ]
+  },
+  {
+   "math": "|\\Delta\\underline{v}| = \\sqrt{(30)^2 + (-30)^2}",
+   "en": "Now, use the magnitude formula $|a\\underline{i} + b\\underline{j}| = \\sqrt{a^2 + b^2}$ with $a = 30$ and $b = -30$.",
+   "ur": "اب، مقدار کا فارمولا $|a\\underline{i} + b\\underline{j}| = \\sqrt{a^2 + b^2}$ استعمال کریں جہاں $a = 30$ اور $b = -30$ ہے۔",
+   "check": [
+    "sqrt(30**2 + (-30)**2) == sqrt(1800)"
+   ]
+  },
+  {
+   "math": "|\\Delta\\underline{v}| = \\sqrt{900 + 900} = \\sqrt{1800}",
+   "en": "Evaluate the squares and add them together.",
+   "ur": "مربع لیں اور انہیں آپس میں جمع کریں۔",
+   "check": [
+    "30**2 == 900",
+    "(-30)**2 == 900",
+    "900 + 900 == 1800"
+   ]
+  },
+  {
+   "math": "|\\Delta\\underline{v}| = \\sqrt{900 \\times 2} = 30\\sqrt{2}",
+   "en": "Simplify the square root to get the exact magnitude.",
+   "ur": "مکمل مقدار حاصل کرنے کے لیے جزر کو مختصر کریں۔",
+   "check": [
+    "sqrt(1800) == 30*sqrt(2)"
+   ]
+  },
+  {
+   "math": "",
+   "en": "Thus, the change in velocity vector is $30\\underline{i} - 30\\underline{j}$ and its magnitude is $30\\sqrt{2}$.",
+   "ur": "پس، ولاسٹی ویکٹر میں تبدیلی $30\\underline{i} - 30\\underline{j}$ ہے اور اس کی مقدار $30\\sqrt{2}$ ہے۔",
+   "check": [
+    "sqrt(30**2 + (-30)**2) == 30*sqrt(2)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

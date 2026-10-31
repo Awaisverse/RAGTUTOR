@@ -1,0 +1,59 @@
+{
+ "item": "c10-ex3.3-q2",
+ "label": "ii",
+ "answer_ref": "$\\begin{bmatrix} 22 & 2 \\\\ 3 & -10 \\end{bmatrix}$",
+ "steps": [
+  {
+   "math": "Y = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}, \\quad Z = \\begin{bmatrix} 3 & 0 \\\\ 0 & -2 \\end{bmatrix}",
+   "en": "Write down the given matrices $Y$ and $Z$. We need to find the value of $Y + 7Z$.",
+   "ur": "دیے گئے قالب $Y$ اور $Z$ لکھیں۔ ہمیں $Y + 7Z$ کی قیمت معلوم کرنی ہے۔",
+   "check": [
+    "Eq(Matrix([[1, 2], [3, 4]]), Matrix([[1, 2], [3, 4]]))",
+    "Eq(Matrix([[3, 0], [0, -2]]), Matrix([[3, 0], [0, -2]]))"
+   ]
+  },
+  {
+   "math": "Y + 7Z = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix} + 7\\begin{bmatrix} 3 & 0 \\\\ 0 & -2 \\end{bmatrix}",
+   "en": "Substitute the matrices $Y$ and $Z$ into the expression $Y + 7Z$.",
+   "ur": "جملے $Y + 7Z$ میں قالب $Y$ اور $Z$ کی قیمتیں درج کریں۔",
+   "check": [
+    "Eq(Matrix([[1, 2], [3, 4]]) + 7*Matrix([[3, 0], [0, -2]]), Matrix([[22, 2], [3, -10]]))"
+   ]
+  },
+  {
+   "math": "Y + 7Z = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix} + \\begin{bmatrix} 7(3) & 7(0) \\\\ 7(0) & 7(-2) \\end{bmatrix}",
+   "en": "For scalar multiplication, multiply every entry of matrix $Z$ by $7$.",
+   "ur": "عددی ضرب کے لیے، قالب $Z$ کے ہر رکن کو $7$ سے ضرب دیں۔",
+   "check": [
+    "Eq(Matrix([[1, 2], [3, 4]]) + Matrix([[7*3, 7*0], [7*0, 7*(-2)]]), Matrix([[22, 2], [3, -10]]))"
+   ]
+  },
+  {
+   "math": "Y + 7Z = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix} + \\begin{bmatrix} 21 & 0 \\\\ 0 & -14 \\end{bmatrix}",
+   "en": "Simplify the products inside the second matrix.",
+   "ur": "دوسرے قالب کے اندر موجود حاصل ضرب کو مختصر کریں۔",
+   "check": [
+    "Eq(Matrix([[1, 2], [3, 4]]) + Matrix([[21, 0], [0, -14]]), Matrix([[22, 2], [3, -10]]))"
+   ]
+  },
+  {
+   "math": "Y + 7Z = \\begin{bmatrix} 1 + 21 & 2 + 0 \\\\ 3 + 0 & 4 + (-14) \\end{bmatrix}",
+   "en": "Since both matrices have the same order ($2 \\times 2$), add their corresponding entries.",
+   "ur": "چونکہ دونوں قالبوں کا درجہ یکساں ($2 \\times 2$) ہے، اس لیے ان کے متناظرہ ارکان کو جمع کریں۔",
+   "check": [
+    "Eq(Matrix([[1 + 21, 2 + 0], [3 + 0, 4 - 14]]), Matrix([[22, 2], [3, -10]]))"
+   ]
+  },
+  {
+   "math": "Y + 7Z = \\begin{bmatrix} 22 & 2 \\\\ 3 & -10 \\end{bmatrix}",
+   "en": "Perform the addition to get the final answer.",
+   "ur": "حتمی جواب حاصل کرنے کے لیے جمع کا عمل مکمل کریں۔",
+   "check": [
+    "Eq(Matrix([[22, 2], [3, -10]]), Matrix([[22, 2], [3, -10]]))",
+    "Eq(Matrix([[21, 0], [0, -14]]), Matrix([[21, 0], [0, -14]]))"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

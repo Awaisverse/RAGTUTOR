@@ -1,0 +1,46 @@
+{
+ "item": "c10-ex7.3-q7",
+ "label": "",
+ "answer_ref": "$31.90$ m",
+ "steps": [
+  {
+   "math": "\\theta = 28^\\circ, \\quad \\text{Base} = 60\\ \\text{m}",
+   "en": "Let the height of the tower be $h$ metres. The angle of elevation is $\\theta = 28^\\circ$, and the distance from the base of the tower (adjacent side) is $60\\ \\text{m}$.",
+   "ur": "فرض کریں کہ مینار کی بلندی $h$ میٹر ہے۔ زاویہ فراز $\\theta = 28^\\circ$ ہے، اور مینار کے پیندے سے فاصلہ (متصل ضلع) $60\\ \\text{m}$ ہے۔"
+  },
+  {
+   "math": "\\tan \\theta = \\frac{\\text{Opposite}}{\\text{Adjacent}}",
+   "en": "In a right-angled triangle, the tangent trigonometric ratio relates the opposite side (height) to the adjacent side (base).",
+   "ur": "قائمہ الزاویہ مثلث میں، ٹینجنٹ کی مثلثیاتی نسبت مقابل ضلع (بلندی) کو متصل ضلع (قاعدہ) سے جوڑتی ہے۔"
+  },
+  {
+   "math": "\\tan 28^\\circ = \\frac{h}{60}",
+   "en": "Substitute the given values $\\theta = 28^\\circ$, $\\text{Opposite} = h$, and $\\text{Adjacent} = 60$ into the formula.",
+   "ur": "فارمولے میں دی گئی قیمتیں $\\theta = 28^\\circ$، $\\text{Opposite} = h$، اور $\\text{Adjacent} = 60$ درج کریں۔"
+  },
+  {
+   "math": "h = 60 \\times \\tan 28^\\circ",
+   "en": "Multiply both sides by $60$ to isolate $h$.",
+   "ur": "$h$ کی قیمت نکالنے کے لیے دونوں اطراف کو $60$ سے ضرب دیں۔"
+  },
+  {
+   "math": "h \\approx 60 \\times 0.5317",
+   "en": "From a scientific calculator, the value of $\\tan 28^\\circ$ is approximately $0.5317$.",
+   "ur": "سائنٹیفک کیلکولیٹر کی مدد سے، $\\tan 28^\\circ$ کی قیمت تقریباً $0.5317$ ہے۔",
+   "check": [
+    "Abs(tan(28*pi/180) - 0.5317) <= 0.0001"
+   ]
+  },
+  {
+   "math": "h \\approx 31.90\\ \\text{m}",
+   "en": "Multiply the numbers and round to two decimal places to find the final height of the tower.",
+   "ur": "مینار کی حتمی بلندی معلوم کرنے کے لیے اعداد کو ضرب دیں اور اعشاریہ کے بعد دو درجوں تک محدود کریں۔",
+   "check": [
+    "Abs((60*tan(28*pi/180)) - 31.90) <= 0.005",
+    "Abs((60*tan((28)*pi/180)) - 31.90) <= 0.0050000010000000004"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

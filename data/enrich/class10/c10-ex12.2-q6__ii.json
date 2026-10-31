@@ -1,0 +1,55 @@
+{
+ "item": "c10-ex12.2-q6",
+ "label": "ii",
+ "answer_ref": "$\\frac{11}{13}$",
+ "steps": [
+  {
+   "math": "n(S) = 52",
+   "en": "A standard pack has $52$ cards, so the total number of possible outcomes is $n(S) = 52$.",
+   "ur": "تاش کے ایک معیاری پیکٹ میں $52$ پتے ہوتے ہیں، اس لیے ممکنہ نتائج کی کل تعداد $n(S) = 52$ ہے۔",
+   "check": [
+    "52 == 52"
+   ]
+  },
+  {
+   "math": "n(E) = 4 + 4 = 8",
+   "en": "Let $E$ be the event of drawing a King or a Jack. Since there are $4$ Kings and $4$ Jacks, the number of outcomes for $E$ is $8$.",
+   "ur": "فرض کریں $E$ بادشاہ یا غلام نکلنے کا واقعہ ہے۔ چونکہ پیکٹ میں $4$ بادشاہ اور $4$ غلام ہوتے ہیں، اس لیے $E$ کے نتائج کی تعداد $8$ ہے۔",
+   "check": [
+    "4 + 4 == 8"
+   ]
+  },
+  {
+   "math": "P(E) = \\frac{8}{52} = \\frac{2}{13}",
+   "en": "The probability of drawing a King or a Jack is $P(E) = \\frac{n(E)}{n(S)}$.",
+   "ur": "بادشاہ یا غلام نکلنے کا احتمال $P(E) = \\frac{n(E)}{n(S)}$ ہے۔",
+   "check": [
+    "R(8,52) == R(2,13)"
+   ]
+  },
+  {
+   "math": "",
+   "en": "The event of drawing neither a King nor a Jack is the complement of $E$, denoted by $E'$. By the complement rule, $P(E') = 1 - P(E)$.",
+   "ur": "نہ بادشاہ اور نہ ہی غلام نکلنے کا واقعہ، $E$ کا متمم (complement) ہے، جسے $E'$ سے ظاہر کیا جاتا ہے۔ متمم کے اصول کے تحت، $P(E') = 1 - P(E)$ ہوتا ہے۔"
+  },
+  {
+   "math": "P(E') = 1 - \\frac{2}{13}",
+   "en": "Substitute $P(E) = \\frac{2}{13}$ into the complement formula.",
+   "ur": "متمم کے فارمولے میں $P(E) = \\frac{2}{13}$ کی قیمت درج کریں۔",
+   "check": [
+    "1 - R(2,13) == R(11,13)"
+   ]
+  },
+  {
+   "math": "P(E') = \\frac{13 - 2}{13} = \\frac{11}{13}",
+   "en": "Simplify the fraction by taking the LCM. Thus, the probability of taking out neither a King nor a Jack is $\\frac{11}{13}$.",
+   "ur": "ذواضعاف اقل (LCM) لے کر کسر کو مختصر کریں۔ اس طرح، نہ بادشاہ اور نہ ہی غلام نکلنے کا احتمال $\\frac{11}{13}$ ہے۔",
+   "check": [
+    "R(13 - 2, 13) == R(11,13)",
+    "1 - R(2,13) == R(11,13)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

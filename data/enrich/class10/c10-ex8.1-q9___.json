@@ -1,0 +1,143 @@
+{
+ "item": "c10-ex8.1-q9",
+ "label": "",
+ "answer_ref": "$\\sqrt{11} \\approx 3.32$ cm",
+ "steps": [
+  {
+   "math": "AB = 10\\text{ cm}, \\quad r = OA = 6\\text{ cm}",
+   "en": "Let the chord be $AB$ and the centre of the circle be $O$. We are given the length of the chord $AB = 10\\text{ cm}$ and the radius $OA = 6\\text{ cm}$. We need to find the perpendicular distance $OM = d$ from the centre $O$ to the chord $AB$.",
+   "ur": "فرض کریں کہ وتر $AB$ ہے اور دائرے کا مرکز $O$ ہے۔ ہمیں وتر کی لمبائی $AB = 10\\text{ cm}$ اور رداس $OA = 6\\text{ cm}$ دیا گیا ہے۔ ہمیں مرکز $O$ سے وتر $AB$ تک کا عمودی فاصلہ $OM = d$ معلوم کرنا ہے۔",
+   "draw": [
+    {
+     "t": "circle",
+     "c": [
+      50,
+      30
+     ],
+     "r": 25
+    },
+    {
+     "t": "dot",
+     "p": [
+      50,
+      30
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      51.5,
+      28
+     ],
+     "s": "O"
+    },
+    {
+     "t": "line",
+     "p": [
+      29.166666666666664,
+      43.819269959814164,
+      70.83333333333334,
+      43.819269959814164
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      25.166666666666664,
+      44.819269959814164
+     ],
+     "s": "A"
+    },
+    {
+     "t": "text",
+     "p": [
+      72.33333333333334,
+      44.819269959814164
+     ],
+     "s": "B"
+    },
+    {
+     "t": "line",
+     "p": [
+      50,
+      30,
+      50,
+      43.819269959814164
+     ],
+     "dash": true
+    },
+    {
+     "t": "right",
+     "p": [
+      50,
+      43.819269959814164
+     ],
+     "d": [
+      1,
+      0,
+      0,
+      -1
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      51.5,
+      47.819269959814164
+     ],
+     "s": "M"
+    },
+    {
+     "t": "line",
+     "p": [
+      50,
+      30,
+      70.83333333333334,
+      43.819269959814164
+     ]
+    }
+   ]
+  },
+  {
+   "math": "AM = \\frac{AB}{2} = \\frac{10}{2} = 5\\text{ cm}",
+   "en": "By theorem, a perpendicular from the centre of a circle to a chord bisects the chord. Since $OM \\perp AB$, point $M$ is the midpoint of $AB$.",
+   "ur": "مسئلہ کے مطابق، دائرے کے مرکز سے وتر پر گرایا گیا عمود وتر کی تنصیف کرتا ہے۔ چونکہ $OM \\perp AB$ ہے، اس لیے نقطہ $M$ وتر $AB$ کا وسطی نقطہ ہے۔",
+   "check": [
+    "10/2 == 5"
+   ]
+  },
+  {
+   "math": "OA^2 = OM^2 + AM^2",
+   "en": "In the right-angled triangle $OMA$, where $\\angle OMA = 90^\\circ$, we apply the Pythagoras theorem.",
+   "ur": "قائمہ الزاویہ مثلث $OMA$ میں، جہاں $\\angle OMA = 90^\\circ$ ہے، ہم مسئلہ فیثاغورث کا اطلاق کرتے ہیں۔"
+  },
+  {
+   "math": "6^2 = d^2 + 5^2",
+   "en": "Substitute the known values $OA = 6$, $AM = 5$, and $OM = d$ into the equation.",
+   "ur": "مساوات میں معلوم قیمتیں $OA = 6$، $AM = 5$، اور $OM = d$ درج کریں۔"
+  },
+  {
+   "math": "d^2 = 6^2 - 5^2 = 36 - 25 = 11",
+   "en": "Simplify the squares and rearrange the equation to solve for $d^2$.",
+   "ur": "مربع کو حل کریں اور $d^2$ کی قیمت معلوم کرنے کے لیے مساوات کو ترتیب دیں۔",
+   "check": [
+    "6**2 == 36",
+    "5**2 == 25",
+    "36 - 25 == 11"
+   ]
+  },
+  {
+   "math": "d = \\sqrt{11} \\approx 3.32\\text{ cm}",
+   "en": "Take the square root on both sides to find the length from the centre to the chord.",
+   "ur": "مرکز سے وتر تک کی لمبائی معلوم کرنے کے لیے دونوں طرف جزر المربع لیں۔",
+   "check": [
+    "Abs(sqrt(11) - 3.32) <= 0.005",
+    "6**2 - 5**2 == 11",
+    "Abs((sqrt(11)) - 3.32) <= 0.0050000010000000004"
+   ]
+  }
+ ],
+ "keeps_drawing": true,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

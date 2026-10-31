@@ -1,0 +1,46 @@
+{
+ "item": "ex1.1-q1",
+ "label": "iv",
+ "answer_ref": "Irrational",
+ "steps": [
+  {
+   "math": "\\sqrt{7}",
+   "en": "We are given the number $\\sqrt{7}$ and asked to identify whether it is a rational or irrational number.",
+   "ur": "ہمیں عدد $\\sqrt{7}$ دیا گیا ہے اور یہ بتانا ہے کہ آیا یہ ناطق عدد ہے یا غیر ناطق۔"
+  },
+  {
+   "math": "",
+   "en": "Recall the rule: The square root of any positive integer that is not a perfect square is always an irrational number. Also, the square root of any prime number is irrational.",
+   "ur": "اصول یاد رکھیں: کسی بھی ایسے مثبت صحیح عدد کا جذر جو مکمل مربع نہ ہو، ہمیشہ ایک غیر ناطق عدد ہوتا ہے۔ نیز، کسی بھی مفرد عدد کا جذر غیر ناطق ہوتا ہے۔"
+  },
+  {
+   "math": "2^2 = 4, \\quad 3^2 = 9",
+   "en": "Let us check the nearest perfect squares around $7$. The square of $2$ is $4$, and the square of $3$ is $9$.",
+   "ur": "آئیے $7$ کے ارد گرد قریب ترین مکمل مربع اعداد کو چیک کرتے ہیں۔ $2$ کا مربع $4$ ہے، اور $3$ کا مربع $9$ ہے۔",
+   "check": [
+    "2**2 == 4",
+    "3**2 == 9"
+   ]
+  },
+  {
+   "math": "4 < 7 < 9",
+   "en": "Since $7$ lies strictly between the consecutive perfect squares $4$ and $9$ (and $7$ is also a prime number), $7$ is not a perfect square.",
+   "ur": "چونکہ $7$ دو مسلسل مکمل مربع اعداد $4$ اور $9$ کے درمیان آتا ہے (اور $7$ ایک مفرد عدد بھی ہے)، اس لیے $7$ مکمل مربع نہیں ہے۔",
+   "check": [
+    "floor(sqrt(7))**2 < 7",
+    "(floor(sqrt(7))+1)**2 > 7"
+   ]
+  },
+  {
+   "math": "\\sqrt{7} \\text{ is an irrational number}",
+   "en": "Because $7$ is not a perfect square, $\\sqrt{7}$ cannot be written in the form $\\frac{p}{q}$ (where $p, q \\in \\mathbb{Z}$ and $q \\neq 0$). Therefore, $\\sqrt{7}$ is an irrational number.",
+   "ur": "چونکہ $7$ ایک مکمل مربع نہیں ہے، اس لیے $\\sqrt{7}$ کو $\\frac{p}{q}$ کی شکل میں نہیں لکھا جا سکتا (جہاں $p, q \\in \\mathbb{Z}$ اور $q \\neq 0$)۔ لہٰذا، $\\sqrt{7}$ ایک غیر ناطق عدد (Irrational) ہے۔",
+   "check": [
+    "floor(sqrt(7))**2 < 7",
+    "(floor(sqrt(7))+1)**2 > 7"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

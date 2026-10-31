@@ -1,0 +1,41 @@
+{
+ "item": "c10-ex2.1-q1",
+ "label": "i",
+ "answer_ref": "$2 x^{2} - 3 x + 1 = 0$",
+ "steps": [
+  {
+   "math": "3x - 1 = 2x^{2}",
+   "en": "Write down the given quadratic equation.",
+   "ur": "دی گئی دو درجی مساوات لکھیں۔",
+   "check": [
+    "3*x - 1 == 3*x - 1"
+   ]
+  },
+  {
+   "math": "ax^{2} + bx + c = 0",
+   "en": "Recall that the standard form of a quadratic equation is $ax^{2} + bx + c = 0$, where $a \\ne 0$.",
+   "ur": "یاد رکھیں کہ دو درجی مساوات کی معیاری شکل $ax^{2} + bx + c = 0$ ہوتی ہے، جہاں $a \\ne 0$۔",
+   "check": [
+    "a*x**2 + b*x + c == a*x**2 + b*x + c"
+   ]
+  },
+  {
+   "math": "0 = 2x^{2} - 3x + 1",
+   "en": "To make the coefficient of $x^{2}$ positive, shift the terms $3x$ and $-1$ from the left-hand side to the right-hand side by changing their signs.",
+   "ur": "$x^{2}$ کے عددی سر کو مثبت رکھنے کے لیے، بائیں طرف کے ارکان $3x$ اور $-1$ کو ان کی علامتیں تبدیل کر کے دائیں طرف لے جائیں۔",
+   "check": [
+    "(0) - (2*x**2 - 3*x + 1) == (3*x - 1) - (2*x**2)"
+   ]
+  },
+  {
+   "math": "2 x^{2} - 3 x + 1 = 0",
+   "en": "Interchange the sides to write the equation in the standard quadratic form.",
+   "ur": "مساوات کو معیاری دو درجی شکل میں لکھنے کے لیے اطراف کو آپس میں بدل دیں۔",
+   "check": [
+    "(2*x**2 - 3*x + 1) - (0) == (-1)*((3*x - 1) - (2*x**2))"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

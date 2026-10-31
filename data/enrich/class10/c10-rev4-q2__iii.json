@@ -1,0 +1,47 @@
+{
+ "item": "c10-rev4-q2",
+ "label": "iii",
+ "answer_ref": "$- x^{3} - 5 x^{2} + 25 x + 125$",
+ "steps": [
+  {
+   "math": "",
+   "en": "We are given the two functions $f(x) = 25 - x^{2}$ and $g(x) = 5 + x$, and we need to find their product $f(x) \\cdot g(x)$.",
+   "ur": "ہمیں دو تفاعلات $f(x) = 25 - x^{2}$ اور $g(x) = 5 + x$ دیے گئے ہیں، اور ہمیں ان کا حاصلِ ضرب $f(x) \\cdot g(x)$ معلوم کرنا ہے۔"
+  },
+  {
+   "math": "f(x) \\cdot g(x) = (25 - x^{2})(5 + x)",
+   "en": "Substitute the expressions of $f(x)$ and $g(x)$ into the product.",
+   "ur": "حاصلِ ضرب میں $f(x)$ اور $g(x)$ کی قیمتیں درج کریں۔",
+   "check": [
+    "(25 - x**2)*(5 + x) == (25 - x**2)*(5 + x)"
+   ]
+  },
+  {
+   "math": "= 25(5 + x) - x^{2}(5 + x)",
+   "en": "Apply the distributive property to multiply each term of the first polynomial by the second polynomial.",
+   "ur": "تقسیمی خاصیت کا استعمال کرتے ہوئے پہلے کثیر رقمی کے ہر رکن کو دوسرے کثیر رقمی سے ضرب دیں۔",
+   "check": [
+    "(25 - x**2)*(5 + x) == 25*(5 + x) - x**2*(5 + x)"
+   ]
+  },
+  {
+   "math": "= 125 + 25x - 5x^{2} - x^{3}",
+   "en": "Multiply the terms inside the parentheses.",
+   "ur": "قوسین کے اندر موجود ارکان کو ضرب دیں۔",
+   "check": [
+    "25*(5 + x) - x**2*(5 + x) == 125 + 25*x - 5*x**2 - x**3"
+   ]
+  },
+  {
+   "math": "f(x) \\cdot g(x) = - x^{3} - 5 x^{2} + 25 x + 125",
+   "en": "Arrange the terms in descending order of powers of $x$ to get the final answer.",
+   "ur": "حتمی جواب حاصل کرنے کے لیے ارکان کو $x$ کی قوتوں کی نزولی ترتیب میں لکھیں۔",
+   "check": [
+    "125 + 25*x - 5*x**2 - x**3 == -x**3 - 5*x**2 + 25*x + 125",
+    "((25 - x**2)*(x + 5)) == (-x**3 - 5*x**2 + 25*x + 125)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

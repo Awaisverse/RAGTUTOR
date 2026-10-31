@@ -1,0 +1,40 @@
+{
+ "item": "ex1.1-q1",
+ "label": "ii",
+ "answer_ref": "Rational",
+ "steps": [
+  {
+   "math": "0.\\bar{6}",
+   "en": "We are given the decimal number $0.\\bar{6}$ and need to identify whether it is a rational or irrational number.",
+   "ur": "ہمیں اعشاری عدد $0.\\bar{6}$ دیا گیا ہے اور ہمیں یہ بتانا ہے کہ یہ ناطق عدد ہے یا غیر ناطق عدد۔"
+  },
+  {
+   "math": "0.\\bar{6} = 0.666\\ldots",
+   "en": "The bar over the digit $6$ indicates that $6$ repeats endlessly. Therefore, this is a non-terminating recurring (repeating) decimal.",
+   "ur": "ہندسہ $6$ کے اوپر بار کا نشان یہ ظاہر کرتا ہے کہ $6$ لامحدود طور پر بار بار آ رہا ہے۔ اس لیے یہ ایک غیر مختتم تکرار والا (دوری) اعشاری عدد ہے۔"
+  },
+  {
+   "math": "\\text{Rule: Non-terminating recurring decimals are rational numbers.}",
+   "en": "According to the properties of real numbers, every non-terminating recurring decimal can be converted into a fraction of the form $\\frac{p}{q}$, where $p, q \\in \\mathbb{Z}$ and $q \\neq 0$.",
+   "ur": "حقیقی اعداد کی خصوصیات کے مطابق، ہر غیر مختتم تکرار والے اعشاری عدد کو $\\frac{p}{q}$ کی کسر کی شکل میں تبدیل کیا جا سکتا ہے، جہاں $p, q \\in \\mathbb{Z}$ اور $q \\neq 0$ ہو۔"
+  },
+  {
+   "math": "0.\\bar{6} = \\frac{6}{9} = \\frac{2}{3}",
+   "en": "Converting the recurring decimal into a fraction and simplifying it by dividing the numerator and denominator by $3$, we get $\\frac{2}{3}$.",
+   "ur": "اس تکرار والے اعشاری عدد کو کسر میں تبدیل کرنے اور شمار کنندہ اور مخرج کو $3$ پر تقسیم کر کے مختصر کرنے سے ہمیں $\\frac{2}{3}$ حاصل ہوتا ہے۔",
+   "check": [
+    "R(6,9) == R(2,3)"
+   ]
+  },
+  {
+   "math": "\\text{Rational}",
+   "en": "Since $0.\\bar{6}$ can be expressed in the form $\\frac{p}{q}$ as $\\frac{2}{3}$, it is a rational number.",
+   "ur": "چونکہ $0.\\bar{6}$ کو $\\frac{p}{q}$ کی شکل میں بطور $\\frac{2}{3}$ لکھا جا سکتا ہے، اس لیے یہ ایک ناطق عدد (Rational number) ہے۔",
+   "check": [
+    "9*Rational(2,3) == 6"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

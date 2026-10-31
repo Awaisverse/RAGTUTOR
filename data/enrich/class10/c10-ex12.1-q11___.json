@@ -1,0 +1,51 @@
+{
+ "item": "c10-ex12.1-q11",
+ "label": "",
+ "answer_ref": "$\\frac{1}{9}$",
+ "steps": [
+  {
+   "math": "n(S) = 6 \\times 6 = 36",
+   "en": "When a fair six-sided dice is rolled twice, the total number of possible outcomes in the sample space $S$ is $6 \\times 6$.",
+   "ur": "جب ایک چھ رخ والے پانسے کو دو بار پھینکا جاتا ہے، تو نمونہ فضا $S$ میں کل ممکنہ نتائج کی تعداد $6 \\times 6$ ہوتی ہے۔",
+   "check": [
+    "6 * 6 == 36"
+   ]
+  },
+  {
+   "math": "E = \\{(5, 5), (5, 6), (6, 5), (6, 6)\\}",
+   "en": "Let $E$ be the event of getting a number greater than $4$ (which are $5$ and $6$) on each roll.",
+   "ur": "فرض کریں کہ $E$ ہر باری پر $4$ سے بڑا عدد (جو کہ $5$ اور $6$ ہیں) آنے کا واقعہ ہے۔",
+   "check": [
+    "2 * 2 == 4"
+   ]
+  },
+  {
+   "math": "n(E) = 4",
+   "en": "Counting the pairs in $E$, the number of favourable outcomes is $4$.",
+   "ur": "واقعہ $E$ میں جوڑوں کو گننے سے، موافق نتائج کی تعداد $4$ ہے۔",
+   "check": [
+    "4 == 4"
+   ]
+  },
+  {
+   "math": "P(E) = \\frac{n(E)}{n(S)} = \\frac{4}{36}",
+   "en": "Apply the probability formula $P(E) = \\frac{n(E)}{n(S)}$ and substitute the values.",
+   "ur": "احتمال کا فارمولا $P(E) = \\frac{n(E)}{n(S)}$ استعمال کریں اور قیمتیں درج کریں۔",
+   "check": [
+    "R(4, 36) == R(4, 36)"
+   ]
+  },
+  {
+   "math": "P(E) = \\frac{1}{9}",
+   "en": "Simplify the fraction by dividing the numerator and the denominator by $4$ to get the final answer.",
+   "ur": "حتمی جواب حاصل کرنے کے لیے شمار کنندہ اور مخرج کو $4$ سے تقسیم کر کے کسر کو مختصر کریں۔",
+   "check": [
+    "R(4, 36) == R(1, 9)",
+    "36 == 36",
+    "R(4, 36) == 1/9"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

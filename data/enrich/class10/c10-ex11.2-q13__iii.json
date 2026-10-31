@@ -1,0 +1,44 @@
+{
+ "item": "c10-ex11.2-q13",
+ "label": "iii",
+ "answer_ref": "Variance = 10, SD = 3.16",
+ "steps": [
+  {
+   "math": "\\bar{x} = 18, \\quad \\sum fx^2 = 1670, \\quad \\sum f = 5",
+   "en": "First, write down the given values for the mean $\\bar{x}$, the sum of $fx^2$, and the total frequency $\\sum f$.",
+   "ur": "سب سے پہلے، دی گئی قیمتیں یعنی اوسط $\\bar{x}$، $fx^2$ کا مجموعہ، اور کل تعدد $\\sum f$ لکھیں۔"
+  },
+  {
+   "math": "\\sigma^2 = \\frac{\\sum fx^2}{\\sum f} - (\\bar{x})^2",
+   "en": "Recall the computational formula for the variance ($\\sigma^2$) of grouped data when the mean $\\bar{x}$ is already known.",
+   "ur": "گروہی مواد کے تغیر ($\\sigma^2$) کا حسابی کلیہ لکھیں جب اوسط $\\bar{x}$ پہلے سے معلوم ہو۔"
+  },
+  {
+   "math": "\\sigma^2 = \\frac{1670}{5} - (18)^2",
+   "en": "Substitute the given values into the variance formula.",
+   "ur": "تغیر کے کلیے میں دی گئی قیمتیں درج کریں۔"
+  },
+  {
+   "math": "\\sigma^2 = 334 - 324 = 10",
+   "en": "Divide $1670$ by $5$ to get $334$, and square $18$ to get $324$. Then subtract to find the variance.",
+   "ur": "$1670$ کو $5$ پر تقسیم کرنے سے $334$ اور $18$ کا مربع لینے سے $324$ حاصل ہوتا ہے۔ پھر تفریق کر کے تغیر معلوم کریں۔",
+   "check": [
+    "R(1670, 5) == 334",
+    "18**2 == 324",
+    "334 - 324 == 10"
+   ]
+  },
+  {
+   "math": "\\sigma = \\sqrt{\\sigma^2} = \\sqrt{10} \\approx 3.16",
+   "en": "Take the positive square root of the variance to find the standard deviation ($\\sigma$), rounded to two decimal places.",
+   "ur": "معیاری انحراف ($\\sigma$) معلوم کرنے کے لیے تغیر کا مثبت جزر المربع لیں اور جواب کو اعشاریہ کے بعد دو درجوں تک محدود کریں۔",
+   "check": [
+    "Abs(sqrt(10) - 3.16) <= 0.005",
+    "1670/5 - 18**2 == 10",
+    "Abs((sqrt(10)) - 3.16) <= 0.0050000010000000004"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

@@ -1,0 +1,49 @@
+{
+ "item": "c10-ex3.5-q3",
+ "label": "",
+ "answer_ref": "$x = 2$",
+ "steps": [
+  {
+   "math": "",
+   "en": "We are given the matrix $A = \\begin{bmatrix} x & 6 \\\\ 5 & 15 \\end{bmatrix}$ and told that it is a singular matrix. We need to find the value of $x$.",
+   "ur": "ہمیں قالب $A = \\begin{bmatrix} x & 6 \\\\ 5 & 15 \\end{bmatrix}$ دیا گیا ہے اور بتایا گیا ہے کہ یہ ایک نادر قالب ہے۔ ہمیں $x$ کی قیمت معلوم کرنی ہے۔"
+  },
+  {
+   "math": "|A| = (x)(15) - (6)(5) = 15x - 30",
+   "en": "First, find the determinant of the matrix $A$ by multiplying the diagonal elements and subtracting the product of the off-diagonal elements.",
+   "ur": "سب سے پہلے، وتر کے ارکان کو ضرب دے کر اور غیر وتری ارکان کے حاصل ضرب کو تفریق کر کے قالب $A$ کا مقطع معلوم کریں۔",
+   "check": [
+    "Matrix([[x, 6], [5, 15]]).det() == 15*x - 30",
+    "x*15 - 6*5 == 15*x - 30"
+   ]
+  },
+  {
+   "math": "15x - 30 = 0",
+   "en": "By definition, a singular matrix has a determinant equal to $0$, meaning $|A| = 0$. Substitute the expression for $|A|$ into this equation.",
+   "ur": "تعریف کے مطابق، نادر قالب کا مقطع $0$ کے برابر ہوتا ہے، یعنی $|A| = 0$۔ اس مساوات میں $|A|$ کی قیمت درج کریں۔",
+   "check": [
+    "15*(2) - 30 == 0"
+   ]
+  },
+  {
+   "math": "15x = 30",
+   "en": "Add $30$ to both sides of the equation to isolate the term with $x$.",
+   "ur": "$x$ والی رقم کو الگ کرنے کے لیے مساوات کے دونوں طرف $30$ جمع کریں۔",
+   "check": [
+    "15*(2) == 30"
+   ]
+  },
+  {
+   "math": "x = \\frac{30}{15} = 2",
+   "en": "Divide both sides by $15$ to find the value of $x$.",
+   "ur": "$x$ کی قیمت معلوم کرنے کے لیے دونوں طرف $15$ سے تقسیم کریں۔",
+   "check": [
+    "R(30, 15) == 2",
+    "Matrix([[2, 6], [5, 15]]).det() == 0",
+    "Matrix([[x, 6], [5, 15]]).det() == 15*x - 30"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

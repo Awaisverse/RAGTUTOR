@@ -1,0 +1,61 @@
+{
+ "item": "c10-ex12.2-q5",
+ "label": "",
+ "answer_ref": "$\\frac{5}{18}$",
+ "steps": [
+  {
+   "math": "n(S) = 6 \\times 6 = 36",
+   "en": "When two fair dice are thrown simultaneously, the total number of possible outcomes in the sample space $S$ is $36$.",
+   "ur": "جب دو پانسے ایک ساتھ پھینکے جاتے ہیں، تو نمونہ کی جگہ $S$ میں ممکنہ نتائج کی کل تعداد $36$ ہوتی ہے۔",
+   "check": [
+    "6 * 6 == 36"
+   ]
+  },
+  {
+   "math": "n(A) = 4, \\quad P(A) = \\frac{n(A)}{n(S)} = \\frac{4}{36}",
+   "en": "Let $A$ be the event of getting a sum of $5$. The favorable outcomes are $A = \\{(1,4), (2,3), (3,2), (4,1)\\}$, so there are $4$ ways.",
+   "ur": "فرض کریں $A$ مجموعہ $5$ آنے کا واقعہ ہے۔ موافق نتائج $A = \\{(1,4), (2,3), (3,2), (4,1)\\}$ ہیں، اس لیے اس کے $4$ طریقے ہیں۔",
+   "check": [
+    "1 + 4 == 5",
+    "2 + 3 == 5",
+    "R(4, 36) == 1/9"
+   ]
+  },
+  {
+   "math": "n(B) = 6, \\quad P(B) = \\frac{n(B)}{n(S)} = \\frac{6}{36}",
+   "en": "Let $B$ be the event of getting a sum of $7$. The favorable outcomes are $B = \\{(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)\\}$, so there are $6$ ways.",
+   "ur": "فرض کریں $B$ مجموعہ $7$ آنے کا واقعہ ہے۔ موافق نتائج $B = \\{(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)\\}$ ہیں، اس لیے اس کے $6$ طریقے ہیں۔",
+   "check": [
+    "1 + 6 == 7",
+    "2 + 5 == 7",
+    "3 + 4 == 7",
+    "R(6, 36) == 1/6"
+   ]
+  },
+  {
+   "math": "n(A \\cap B) = 0, \\quad P(A \\cap B) = \\frac{0}{36}",
+   "en": "Since the sum on the two dice cannot be both $5$ and $7$ at the same time, the events $A$ and $B$ are mutually exclusive ($A \\cap B = \\emptyset$).",
+   "ur": "چونکہ دو پانسوں کا مجموعہ بیک وقت $5$ اور $7$ دونوں نہیں ہو سکتا، اس لیے واقعات $A$ اور $B$ باہمی طور پر غیر مشترک ہیں ($A \\cap B = \\emptyset$)۔",
+   "check": [
+    "R(0, 36) == 0"
+   ]
+  },
+  {
+   "math": "P(A \\cup B) = P(A) + P(B) - P(A \\cap B)",
+   "en": "To find the probability of getting a sum of $5$ or $7$, we apply the addition law of probability.",
+   "ur": "مجموعہ $5$ یا $7$ آنے کا احتمال معلوم کرنے کے لیے، ہم احتمال کے جمع کا قانون استعمال کرتے ہیں۔"
+  },
+  {
+   "math": "P(A \\cup B) = \\frac{4}{36} + \\frac{6}{36} - \\frac{0}{36} = \\frac{10}{36} = \\frac{5}{18}",
+   "en": "Substitute the values and simplify the fraction to get the final answer.",
+   "ur": "قیمتیں درج کریں اور حتمی جواب حاصل کرنے کے لیے کسر کو مختصر کریں۔",
+   "check": [
+    "R(4, 36) + R(6, 36) - R(0, 36) == R(10, 36)",
+    "R(10, 36) == R(5, 18)",
+    "R(4, 36) + R(6, 36) - R(0, 36) == 5/18"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

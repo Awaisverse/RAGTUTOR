@@ -1,0 +1,53 @@
+{
+ "item": "c10-rev6-q2",
+ "label": "ii",
+ "answer_ref": "$\\sqrt{113}$",
+ "steps": [
+  {
+   "math": "A(x_1, y_1) = A(9, 3), \\quad B(x_2, y_2) = B(2, 11)",
+   "en": "Identify the coordinates of the given points $A$ and $B$. We need to find the magnitude of the vector $\\overrightarrow{AB}$.",
+   "ur": "دیے گئے نقاط $A$ اور $B$ کے محددات لکھیں۔ ہمیں ویکٹر $\\overrightarrow{AB}$ کی مقدار معلوم کرنی ہے۔"
+  },
+  {
+   "math": "\\overrightarrow{AB} = (x_2 - x_1)\\underline{i} + (y_2 - y_1)\\underline{j}",
+   "en": "Write the formula to find the vector $\\overrightarrow{AB}$ by subtracting the coordinates of the initial point $A$ from the terminal point $B$.",
+   "ur": "آخری نقطہ $B$ کے محددات میں سے ابتدائی نقطہ $A$ کے محددات کو تفریق کر کے ویکٹر $\\overrightarrow{AB}$ معلوم کرنے کا فارمولا لکھیں۔"
+  },
+  {
+   "math": "\\overrightarrow{AB} = (2 - 9)\\underline{i} + (11 - 3)\\underline{j} = -7\\underline{i} + 8\\underline{j}",
+   "en": "Substitute the coordinates of points $A$ and $B$ into the formula and simplify to get the components of $\\overrightarrow{AB}$.",
+   "ur": "فارمولے میں نقاط $A$ اور $B$ کے محددات درج کریں اور مختصر کر کے $\\overrightarrow{AB}$ کے اجزاء حاصل کریں۔",
+   "check": [
+    "2 - 9 == -7",
+    "11 - 3 == 8"
+   ]
+  },
+  {
+   "math": "|\\overrightarrow{AB}| = \\sqrt{x^2 + y^2}",
+   "en": "Recall the formula for the magnitude of a vector $x\\underline{i} + y\\underline{j}$.",
+   "ur": "ایک ویکٹر $x\\underline{i} + y\\underline{j}$ کی مقدار معلوم کرنے کا فارمولا لکھیں۔"
+  },
+  {
+   "math": "|\\overrightarrow{AB}| = \\sqrt{(-7)^2 + (8)^2} = \\sqrt{49 + 64}",
+   "en": "Substitute $x = -7$ and $y = 8$ into the magnitude formula and take the squares of both values.",
+   "ur": "مقدار کے فارمولے میں $x = -7$ اور $y = 8$ درج کریں اور دونوں قیمتوں کا مربع لیں۔",
+   "check": [
+    "(-7)**2 == 49",
+    "8**2 == 64"
+   ]
+  },
+  {
+   "math": "|\\overrightarrow{AB}| = \\sqrt{113}",
+   "en": "Add the numbers inside the square root to get the final magnitude of $\\overrightarrow{AB}$.",
+   "ur": "جذر کے اندر موجود اعداد کو جمع کریں تاکہ $\\overrightarrow{AB}$ کی حتمی مقدار حاصل ہو سکے۔",
+   "check": [
+    "sqrt(49 + 64) == sqrt(113)",
+    "(2) - (9) == (-7)",
+    "(11) - (3) == (8)",
+    "sqrt((-7)**2 + (8)**2) == (sqrt(113))"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

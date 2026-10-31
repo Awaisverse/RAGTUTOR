@@ -1,0 +1,42 @@
+{
+ "item": "c10-rev6-q9",
+ "label": "",
+ "answer_ref": "$10$",
+ "steps": [
+  {
+   "math": "\\underline{v} = 6\\underline{i} + 8\\underline{j}",
+   "en": "The given velocity vector is $\\underline{v} = 6\\underline{i} + 8\\underline{j}$, where the horizontal component is $x = 6$ and the vertical component is $y = 8$.",
+   "ur": "دیا گیا ویلاسٹی ویکٹر $\\underline{v} = 6\\underline{i} + 8\\underline{j}$ ہے، جہاں افقی جزو $x = 6$ اور عمودی جزو $y = 8$ ہے۔"
+  },
+  {
+   "math": "|\\underline{v}| = \\sqrt{x^2 + y^2}",
+   "en": "The magnitude of a vector $\\underline{v} = x\\underline{i} + y\\underline{j}$ in a plane is given by the formula $|\\underline{v}| = \\sqrt{x^2 + y^2}$.",
+   "ur": "مستوی میں کسی ویکٹر $\\underline{v} = x\\underline{i} + y\\underline{j}$ کی مقدار معلوم کرنے کا فارمولا $|\\underline{v}| = \\sqrt{x^2 + y^2}$ ہے۔"
+  },
+  {
+   "math": "|\\underline{v}| = \\sqrt{(6)^2 + (8)^2}",
+   "en": "Substitute the values $x = 6$ and $y = 8$ into the magnitude formula.",
+   "ur": "مقدار کے فارمولے میں $x = 6$ اور $y = 8$ کی قیمتیں درج کریں۔"
+  },
+  {
+   "math": "|\\underline{v}| = \\sqrt{36 + 64}",
+   "en": "Calculate the squares of $6$ and $8$, which are $36$ and $64$ respectively.",
+   "ur": "$6$ اور $8$ کا مربع لیں، جو کہ بالترتیب $36$ اور $64$ ہیں۔",
+   "check": [
+    "sqrt(6**2 + 8**2) == sqrt(36 + 64)"
+   ]
+  },
+  {
+   "math": "|\\underline{v}| = \\sqrt{100} = 10",
+   "en": "Add the numbers under the square root to get $100$, and then take its square root to find the final magnitude.",
+   "ur": "جذر کے نیچے موجود اعداد کو جمع کرنے سے $100$ حاصل ہوتا ہے، اور پھر اس کا جذر لینے سے مطلوبہ مقدار معلوم ہوتی ہے۔",
+   "check": [
+    "sqrt(36 + 64) == sqrt(100)",
+    "sqrt(100) == 10",
+    "sqrt((6)**2 + (8)**2) == (10)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

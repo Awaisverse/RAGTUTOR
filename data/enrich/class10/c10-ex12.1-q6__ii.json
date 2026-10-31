@@ -1,0 +1,38 @@
+{
+ "item": "c10-ex12.1-q6",
+ "label": "ii",
+ "answer_ref": "$n(S) = 36$",
+ "steps": [
+  {
+   "math": "\\{1, 2, 3, 4, 5, 6\\}",
+   "en": "When two unbiased dice are rolled once, each die has $6$ possible outcomes.",
+   "ur": "جب دو غیر جانبدار پانسے ایک بار پھینکے جاتے ہیں، تو ہر پانسے کے $6$ ممکنہ نتائج ہوتے ہیں۔",
+   "check": [
+    "6 == 6"
+   ]
+  },
+  {
+   "math": "",
+   "en": "To draw a possibility diagram, we make a grid where the rows represent the outcomes of the first die and the columns represent the outcomes of the second die.",
+   "ur": "امکانی خاکہ (possibility diagram) بنانے کے لیے، ہم ایک جدول بناتے ہیں جہاں قطاریں پہلے پانسے کے نتائج اور کالم دوسرے پانسے کے نتائج کو ظاہر کرتے ہیں۔"
+  },
+  {
+   "math": "\\begin{array}{c|cccccc} \\text{Die 1 \\textbackslash\\ Die 2} & 1 & 2 & 3 & 4 & 5 & 6 \\\\ \\hline 1 & (1,1) & (1,2) & (1,3) & (1,4) & (1,5) & (1,6) \\\\ 2 & (2,1) & (2,2) & (2,3) & (2,4) & (2,5) & (2,6) \\\\ 3 & (3,1) & (3,2) & (3,3) & (3,4) & (3,5) & (3,6) \\\\ 4 & (4,1) & (4,2) & (4,3) & (4,4) & (4,5) & (4,6) \\\\ 5 & (5,1) & (5,2) & (5,3) & (5,4) & (5,5) & (5,6) \\\\ 6 & (6,1) & (6,2) & (6,3) & (6,4) & (6,5) & (6,6) \\end{array}",
+   "en": "Each cell in the possibility diagram shows an ordered pair $(x, y)$, where $x$ is the number on the first die and $y$ is the number on the second die.",
+   "ur": "امکانی خاکے کا ہر خانہ ایک مترتب جوڑا $(x, y)$ دکھاتا ہے، جہاں $x$ پہلے پانسے کا نمبر ہے اور $y$ دوسرے پانسے کا نمبر ہے۔",
+   "check": [
+    "6*6 == 36"
+   ]
+  },
+  {
+   "math": "n(S) = 6 \\times 6 = 36",
+   "en": "Counting all the ordered pairs in the sample space $S$, the total number of possible outcomes is $36$.",
+   "ur": "سیمپل سپیس $S$ میں تمام مترتب جوڑوں کو گننے سے، ممکنہ نتائج کی کل تعداد $36$ ہے۔",
+   "check": [
+    "6*6 == 36"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

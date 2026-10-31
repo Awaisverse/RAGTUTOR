@@ -1,0 +1,45 @@
+{
+ "item": "c10-rev3-q1",
+ "label": "vi",
+ "answer_ref": "(c) $[10\\ \\ 12]$",
+ "steps": [
+  {
+   "math": "A = \\begin{bmatrix} 3 & 4 \\end{bmatrix}, \\quad B = \\begin{bmatrix} 7 & 8 \\end{bmatrix}",
+   "en": "Write down the given row matrices $A$ and $B$. We need to find the sum $A + B$.",
+   "ur": "دیے گئے قطاری کالب $A$ اور $B$ لکھیں۔ ہمیں ان کا مجموعہ $A + B$ معلوم کرنا ہے۔"
+  },
+  {
+   "math": "A + B = \\begin{bmatrix} 3 & 4 \\end{bmatrix} + \\begin{bmatrix} 7 & 8 \\end{bmatrix}",
+   "en": "Since both matrices have the same order ($1 \\times 2$), they are conformable for addition. Substitute the matrices into $A + B$.",
+   "ur": "چونکہ دونوں کالبوں کا مرتبہ یکساں ($1 \\times 2$) ہے، اس لیے ان کو جمع کیا جا سکتا ہے۔ $A + B$ میں کالبوں کی قیمتیں درج کریں۔"
+  },
+  {
+   "math": "A + B = \\begin{bmatrix} 3 + 7 & 4 + 8 \\end{bmatrix}",
+   "en": "To add two matrices, we add their corresponding entries.",
+   "ur": "دو کالبوں کو جمع کرنے کے لیے، ہم ان کے متناظرہ ارکان کو آپس میں جمع کرتے ہیں۔",
+   "check": [
+    "Matrix([[3, 4]]) + Matrix([[7, 8]]) == Matrix([[3 + 7, 4 + 8]])"
+   ]
+  },
+  {
+   "math": "A + B = \\begin{bmatrix} 10 & 12 \\end{bmatrix}",
+   "en": "Perform the addition for each entry: $3 + 7 = 10$ and $4 + 8 = 12$.",
+   "ur": "ہر رکن کے لیے جمع کا عمل مکمل کریں: $3 + 7 = 10$ اور $4 + 8 = 12$۔",
+   "check": [
+    "3 + 7 == 10",
+    "4 + 8 == 12",
+    "Matrix([[3 + 7, 4 + 8]]) == Matrix([[10, 12]])"
+   ]
+  },
+  {
+   "math": "\\text{Answer: (c) } [10\\ \\ 12]",
+   "en": "Comparing our result with the given choices, option (c) is the correct answer.",
+   "ur": "ہمارے نتیجے کا دیے گئے ممکنہ جوابات سے موازنہ کرنے پر، آپشن (c) درست جواب ہے۔",
+   "check": [
+    "Eq(Matrix([[3, 4]]) + Matrix([[7, 8]]), Matrix([[10, 12]]))"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

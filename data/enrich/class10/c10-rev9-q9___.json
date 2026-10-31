@@ -1,0 +1,34 @@
+{
+ "item": "c10-rev9-q9",
+ "label": "",
+ "answer_ref": "$75$ cm$^2$",
+ "steps": [
+  {
+   "math": "r = 15\\ \\text{cm}, \\quad \\ell = 10\\ \\text{cm}",
+   "en": "First, write down the given radius $r$ of the circular cake and the arc length $\\ell$ of the slice. We need to find the area $A$ of this slice (sector).",
+   "ur": "سب سے پہلے، گول کیک کا دیا گیا رداس $r$ اور ٹکڑے کی قوس کی لمبائی $\\ell$ لکھیں۔ ہمیں اس ٹکڑے (قطاع) کا رقبہ $A$ معلوم کرنا ہے۔"
+  },
+  {
+   "math": "A = \\frac{1}{2} r \\ell",
+   "en": "Recall the formula for the area of a sector when the radius $r$ and arc length $\\ell$ are known (derived from $A = \\frac{1}{2}r^2\\theta$ and $\\ell = r\\theta$).",
+   "ur": "قطاع کے رقبے کا فارمولا یاد کریں جب رداس $r$ اور قوس کی لمبائی $\\ell$ معلوم ہوں (جو کہ $A = \\frac{1}{2}r^2\\theta$ اور $\\ell = r\\theta$ سے اخذ کیا گیا ہے)۔"
+  },
+  {
+   "math": "A = \\frac{1}{2} \\times 15 \\times 10",
+   "en": "Substitute the given values $r = 15$ and $\\ell = 10$ into the formula.",
+   "ur": "فارمولے میں دی گئی قیمتیں $r = 15$ اور $\\ell = 10$ درج کریں۔"
+  },
+  {
+   "math": "A = 15 \\times 5 = 75\\ \\text{cm}^2",
+   "en": "Simplify and multiply the numbers to get the final area of the cake slice.",
+   "ur": "کیک کے ٹکڑے کا حتمی رقبہ حاصل کرنے کے لیے مختصر کریں اور اعداد کو ضرب دیں۔",
+   "check": [
+    "R(1,2)*15*10 == 15*5",
+    "15*5 == 75",
+    "R(1,2)*10*15 == 75"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

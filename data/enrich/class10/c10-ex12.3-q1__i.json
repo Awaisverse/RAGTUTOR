@@ -1,0 +1,52 @@
+{
+ "item": "c10-ex12.3-q1",
+ "label": "i",
+ "answer_ref": "$\\frac{4}{25}$",
+ "steps": [
+  {
+   "math": "n(S) = 10 \\times 10 = 100",
+   "en": "Two numbers are chosen from the set $\\{1, 2, 3, \\dots, 10\\}$ with replacement. Therefore, the total number of possible pairs in the sample space $S$ is:",
+   "ur": "سیٹ $\\{1, 2, 3, \\dots, 10\\}$ میں سے دو اعداد واپسی (replacement) کے ساتھ منتخب کیے گئے ہیں۔ اس لیے نمونہ فضا $S$ میں کل ممکنہ جوڑوں کی تعداد یہ ہے:",
+   "check": [
+    "10*10 == 100"
+   ]
+  },
+  {
+   "math": "",
+   "en": "Let $E$ be the event that both chosen numbers are prime. The prime numbers between $1$ and $10$ are $2, 3, 5,$ and $7$, which means there are $4$ prime numbers.",
+   "ur": "فرض کریں کہ $E$ وہ واقعہ ہے جس میں دونوں منتخب کردہ اعداد مفرد (prime) ہیں۔ $1$ سے $10$ کے درمیان مفرد اعداد $2, 3, 5,$ اور $7$ ہیں، جس کا مطلب ہے کہ کل $4$ مفرد اعداد ہیں۔"
+  },
+  {
+   "math": "n(E) = 4 \\times 4 = 16",
+   "en": "Since the selection is done with replacement, both the first and the second number can be chosen from these $4$ prime numbers in $4 \\times 4$ ways. Thus, the number of favourable outcomes is:",
+   "ur": "چونکہ انتخاب واپسی کے ساتھ کیا گیا ہے، اس لیے پہلا اور دوسرا دونوں اعداد ان $4$ مفرد اعداد میں سے $4 \\times 4$ طریقوں سے منتخب کیے جا سکتے ہیں۔ اس طرح موافق نتائج کی تعداد یہ ہے:",
+   "check": [
+    "4*4 == 16"
+   ]
+  },
+  {
+   "math": "P(E) = \\frac{n(E)}{n(S)}",
+   "en": "The formula for the probability of an event $E$ is the number of favourable outcomes divided by the total number of outcomes:",
+   "ur": "کسی واقعہ $E$ کے احتمال کا فارمولا موافق نتائج کی تعداد کو کل نتائج کی تعداد پر تقسیم کرنا ہے:"
+  },
+  {
+   "math": "P(E) = \\frac{16}{100} = \\frac{4}{25}",
+   "en": "Substitute the values of $n(E) = 16$ and $n(S) = 100$ into the formula and simplify the fraction to its lowest form:",
+   "ur": "فارمولے میں $n(E) = 16$ اور $n(S) = 100$ کی قیمتیں درج کریں اور کسر کو مختصر ترین شکل میں لائیں:",
+   "check": [
+    "R(16, 100) == R(4, 25)"
+   ]
+  },
+  {
+   "math": "",
+   "en": "Hence, the probability that both numbers are prime is $\\frac{4}{25}$.",
+   "ur": "لہذا، دونوں اعداد کے مفرد ہونے کا احتمال $\\frac{4}{25}$ ہے۔",
+   "check": [
+    "100 == 100",
+    "R(16, 100) == 4/25"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

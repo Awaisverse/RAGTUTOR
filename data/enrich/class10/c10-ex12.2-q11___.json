@@ -1,0 +1,50 @@
+{
+ "item": "c10-ex12.2-q11",
+ "label": "",
+ "answer_ref": "$\\frac{1}{2}$",
+ "steps": [
+  {
+   "math": "S = \\{HH, HT, TH, TT\\}",
+   "en": "When two fair coins are tossed, the sample space $S$ consists of all possible outcomes.",
+   "ur": "جب دو منصفانہ سکے اچھالے جاتے ہیں، تو نمونہ فضا $S$ تمام ممکنہ نتائج پر مشتمل ہوتی ہے۔"
+  },
+  {
+   "math": "n(S) = 2 \\times 2 = 4",
+   "en": "Therefore, the total number of possible outcomes is $4$.",
+   "ur": "لہذا، ممکنہ نتائج کی کل تعداد $4$ ہے۔",
+   "check": [
+    "2 * 2 == 4"
+   ]
+  },
+  {
+   "math": "E = \\{HH, TT\\}",
+   "en": "Let $E$ be the event of getting either two heads ($HH$) or two tails ($TT$).",
+   "ur": "فرض کریں کہ $E$ دو ہیڈز ($HH$) یا دو ٹیلز ($TT$) آنے کا واقعہ ہے۔"
+  },
+  {
+   "math": "n(E) = 2",
+   "en": "The number of favourable outcomes for event $E$ is $2$.",
+   "ur": "واقعہ $E$ کے لیے موافق نتائج کی تعداد $2$ ہے۔",
+   "check": [
+    "2 == 2"
+   ]
+  },
+  {
+   "math": "P(E) = \\frac{n(E)}{n(S)}",
+   "en": "By the formula of probability, the probability of an event is the ratio of favourable outcomes to total outcomes.",
+   "ur": "احتمال کے فارمولے کے مطابق، کسی واقعے کا احتمال موافق نتائج اور کل نتائج کی نسبت ہوتا ہے۔"
+  },
+  {
+   "math": "P(E) = \\frac{2}{4} = \\frac{1}{2}",
+   "en": "Substitute the values $n(E) = 2$ and $n(S) = 4$ into the formula and simplify to get the final answer.",
+   "ur": "فارمولے میں $n(E) = 2$ اور $n(S) = 4$ کی قیمتیں درج کریں اور حتمی جواب حاصل کرنے کے لیے مختصر کریں۔",
+   "check": [
+    "R(2, 4) == R(1, 2)",
+    "4 == 4",
+    "R(2, 4) == 1/2"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

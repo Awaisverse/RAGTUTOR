@@ -1,0 +1,47 @@
+{
+ "item": "c10-ex7.3-q10",
+ "label": "",
+ "answer_ref": "$9.66$ m",
+ "steps": [
+  {
+   "math": "l = 10\\text{ m}, \\quad \\theta = 75^\\circ, \\quad h = ?",
+   "en": "The ladder, the wall, and the ground form a right-angled triangle. We are given the length of the ladder (hypotenuse) $l = 10\\text{ m}$ and the angle with the ground $\\theta = 75^\\circ$. We need to find the height of the wall (opposite side) $h$.",
+   "ur": "سیڑھی، دیوار اور زمین مل کر ایک قائمہ الزاویہ مثلث بناتے ہیں۔ ہمیں سیڑھی کی لمبائی (وتر) $l = 10\\text{ m}$ اور زمین کے ساتھ بننے والا زاویہ $\\theta = 75^\\circ$ دیا گیا ہے۔ ہمیں دیوار کی بلندی (عمود یا مقابل ضلع) $h$ معلوم کرنی ہے۔"
+  },
+  {
+   "math": "\\sin \\theta = \\frac{\\text{Opposite}}{\\text{Hypotenuse}} = \\frac{h}{l}",
+   "en": "Since we know the hypotenuse and want to find the opposite side relative to the given angle, we use the sine trigonometric ratio.",
+   "ur": "چونکہ ہمیں وتر معلوم ہے اور دیے گئے زاویے کے مقابل ضلع (عمود) کی لمبائی معلوم کرنی ہے، اس لیے ہم سائن ($\\sin$) کی تکونیاتی نسبت استعمال کریں گے۔"
+  },
+  {
+   "math": "\\sin 75^\\circ = \\frac{h}{10}",
+   "en": "Substitute the given values $l = 10$ and $\\theta = 75^\\circ$ into the formula.",
+   "ur": "فارمولے میں دی گئی قیمتیں $l = 10$ اور $\\theta = 75^\\circ$ درج کریں۔"
+  },
+  {
+   "math": "h = 10 \\times \\sin 75^\\circ",
+   "en": "Multiply both sides by $10$ to isolate $h$.",
+   "ur": "$h$ کی قیمت نکالنے کے لیے دونوں اطراف کو $10$ سے ضرب دیں۔"
+  },
+  {
+   "math": "h \\approx 10 \\times 0.9659",
+   "en": "From the calculator or trigonometric table, substitute the value $\\sin 75^\\circ \\approx 0.9659$.",
+   "ur": "کیلکولیٹر یا ٹرگنومیٹرک ٹیبل سے $\\sin 75^\\circ \\approx 0.9659$ کی قیمت درج کریں۔",
+   "check": [
+    "Abs(sin(75*pi/180) - 0.9659) <= 0.0001"
+   ]
+  },
+  {
+   "math": "h \\approx 9.659\\text{ m} \\approx 9.66\\text{ m}",
+   "en": "Multiply the numbers and round the result to two decimal places. Thus, the ladder reaches $9.66\\text{ m}$ high up the wall.",
+   "ur": "ان اعداد کو ضرب دیں اور جواب کو اعشاریہ کے بعد دو درجوں تک محدود کریں۔ اس طرح، سیڑھی دیوار پر $9.66\\text{ m}$ کی بلندی تک پہنچتی ہے۔",
+   "check": [
+    "10 * 0.9659 == 9.659",
+    "Abs(10*sin(75*pi/180) - 9.66) <= 0.005",
+    "Abs((10*sin((75)*pi/180)) - 9.66) <= 0.0050000010000000004"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

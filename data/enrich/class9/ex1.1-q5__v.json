@@ -1,0 +1,53 @@
+{
+ "item": "ex1.1-q5",
+ "label": "v",
+ "answer_ref": "Multiplicative property",
+ "steps": [
+  {
+   "math": "ac < bc \\quad \\text{and} \\quad c < 0 \\;\\Rightarrow\\; a > b",
+   "en": "We are given the inequality $ac < bc$ where $c$ is a negative real number ($c < 0$), which implies $a > b$. We need to identify the property of real numbers used here.",
+   "ur": "ہمیں عدم مساوات $ac < bc$ دی گئی ہے جہاں $c$ ایک منفی حقیقی عدد ہے ($c < 0$)، جس سے نتیجہ نکلتا ہے کہ $a > b$۔ ہمیں یہاں استعمال ہونے والی حقیقی اعداد کی خاصیت کا نام بتانا ہے۔"
+  },
+  {
+   "math": "c < 0 \\;\\Rightarrow\\; \\frac{1}{c} < 0",
+   "en": "Since $c$ is a negative number ($c < 0$), its multiplicative inverse (reciprocal) $\\frac{1}{c}$ is also a negative number.",
+   "ur": "چونکہ $c$ ایک منفی عدد ہے ($c < 0$)، اس لیے اس کا ضربی معکوس $\\frac{1}{c}$ بھی ایک منفی عدد ہے۔"
+  },
+  {
+   "math": "(ac) \\cdot \\frac{1}{c} > (bc) \\cdot \\frac{1}{c} \\;\\Rightarrow\\; a > b",
+   "en": "To isolate $a$ and $b$, we multiply both sides of $ac < bc$ by the negative number $\\frac{1}{c}$ (which is the same as dividing by $c$). According to the rules of inequalities, multiplying or dividing both sides by a negative number reverses the inequality sign from $<$ to $>$.",
+   "ur": "$a$ اور $b$ کو الگ کرنے کے لیے، ہم $ac < bc$ کے دونوں اطراف کو منفی عدد $\\frac{1}{c}$ سے ضرب دیتے ہیں (جو کہ $c$ سے تقسیم کرنے کے برابر ہے)۔ عدم مساوات کے اصولوں کے مطابق، دونوں اطراف کو منفی عدد سے ضرب یا تقسیم کرنے سے عدم مساوات کی علامت $<$ سے الٹ کر $>$ ہو جاتی ہے۔"
+  },
+  {
+   "math": "5(-2) < 2(-2) \\;\\Rightarrow\\; -10 < -4",
+   "en": "For example, let $a = 5$, $b = 2$, and $c = -2$. Then $ac < bc$ gives $-10 < -4$, which is true.",
+   "ur": "مثال کے طور پر، فرض کریں $a = 5$، $b = 2$، اور $c = -2$۔ تب $ac < bc$ سے ہمیں $-10 < -4$ ملتا ہے، جو کہ درست ہے۔",
+   "check": [
+    "5*(-2) == -10",
+    "2*(-2) == -4",
+    "-10 < -4"
+   ]
+  },
+  {
+   "math": "(-10)\\left(-\\frac{1}{2}\\right) > (-4)\\left(-\\frac{1}{2}\\right) \\;\\Rightarrow\\; 5 > 2",
+   "en": "Multiplying both sides by $\\frac{1}{c} = -\\frac{1}{2}$ reverses the inequality and gives $5 > 2$, which is also true.",
+   "ur": "دونوں اطراف کو $\\frac{1}{c} = -\\frac{1}{2}$ سے ضرب دینے سے عدم مساوات الٹ جاتی ہے اور $5 > 2$ حاصل ہوتا ہے، جو کہ درست ہے۔",
+   "check": [
+    "(-10)*(-R(1,2)) == 5",
+    "(-4)*(-R(1,2)) == 2",
+    "5 > 2"
+   ]
+  },
+  {
+   "math": "",
+   "en": "Therefore, the property used in this statement is the **Multiplicative property** (of inequality).",
+   "ur": "لہٰذا، اس بیان میں استعمال ہونے والی خاصیت (عدم مساوات کی) **ضربی خاصیت** (Multiplicative property) ہے۔",
+   "check": [
+    "5*(-2) < 2*(-2)",
+    "5 > 2"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

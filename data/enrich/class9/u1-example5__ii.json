@@ -1,0 +1,66 @@
+{
+ "item": "u1-example5",
+ "label": "ii",
+ "answer_ref": "Verified: $\\frac{65}{18} = \\frac{65}{18}$",
+ "steps": [
+  {
+   "math": "a = \\frac{2}{3}, \\quad b = \\frac{3}{2}, \\quad c = \\frac{5}{3}",
+   "en": "Write down the given values of $a$, $b$, and $c$.",
+   "ur": "دی گئی $a$، $b$، اور $c$ کی قیمتیں لکھیں۔"
+  },
+  {
+   "math": "(a + b)c = ac + bc",
+   "en": "State the right distributive property of multiplication over addition to be verified.",
+   "ur": "جمع پر ضرب کی دائیں تقسیمی خاصیت لکھیں جس کی تصدیق کرنی ہے۔"
+  },
+  {
+   "math": "\\text{LHS} = (a + b)c = \\left(\\frac{2}{3} + \\frac{3}{2}\\right)\\frac{5}{3}",
+   "en": "Take the Left Hand Side (LHS) and substitute the given values of $a$, $b$, and $c$.",
+   "ur": "بائیں طرف (LHS) لیں اور $a$، $b$، اور $c$ کی دی گئی قیمتیں درج کریں۔"
+  },
+  {
+   "math": "\\text{LHS} = \\left(\\frac{4 + 9}{6}\\right)\\frac{5}{3} = \\left(\\frac{13}{6}\\right)\\frac{5}{3} = \\frac{65}{18}",
+   "en": "Find the LCM of the denominators $3$ and $2$, which is $6$, add the fractions inside the brackets, and then multiply by $\\frac{5}{3}$.",
+   "ur": "نسب نما $3$ اور $2$ کا ذواضعاف اقل (LCM) $6$ معلوم کریں، بریکٹ کے اندر موجود کسروں کو جمع کریں، اور پھر $\\frac{5}{3}$ سے ضرب دیں۔",
+   "check": [
+    "(R(2,3) + R(3,2))*R(5,3) == R(13,6)*R(5,3)",
+    "R(13,6)*R(5,3) == R(65,18)"
+   ]
+  },
+  {
+   "math": "\\text{RHS} = ac + bc = \\left(\\frac{2}{3}\\right)\\left(\\frac{5}{3}\\right) + \\left(\\frac{3}{2}\\right)\\left(\\frac{5}{3}\\right)",
+   "en": "Now take the Right Hand Side (RHS) and substitute the given values of $a$, $b$, and $c$.",
+   "ur": "اب دائیں طرف (RHS) لیں اور $a$، $b$، اور $c$ کی دی گئی قیمتیں درج کریں۔"
+  },
+  {
+   "math": "\\text{RHS} = \\frac{10}{9} + \\frac{15}{6}",
+   "en": "Multiply the fractions in each term.",
+   "ur": "ہر رقم میں موجود کسروں کو آپس میں ضرب دیں۔",
+   "check": [
+    "R(2,3)*R(5,3) == R(10,9)",
+    "R(3,2)*R(5,3) == R(15,6)"
+   ]
+  },
+  {
+   "math": "\\text{RHS} = \\frac{20 + 45}{18} = \\frac{65}{18}",
+   "en": "Find the LCM of the denominators $9$ and $6$, which is $18$, and add the numerators.",
+   "ur": "نسب نما $9$ اور $6$ کا ذواضعاف اقل (LCM) $18$ معلوم کریں، اور شمار کنندگان کو جمع کریں۔",
+   "check": [
+    "R(10,9) + R(15,6) == R(20+45, 18)",
+    "R(20+45, 18) == R(65,18)"
+   ]
+  },
+  {
+   "math": "\\text{LHS} = \\text{RHS} = \\frac{65}{18}",
+   "en": "Since both sides are equal, the distributive property over addition is verified.",
+   "ur": "چونکہ دونوں اطراف برابر ہیں، اس لیے جمع پر تقسیمی خاصیت کی تصدیق ہو گئی ہے۔",
+   "check": [
+    "R(65,18) == R(65,18)",
+    "(Rational(2,3)+Rational(3,2))*Rational(5,3) == Rational(65,18)",
+    "Rational(2,3)*Rational(5,3) + Rational(3,2)*Rational(5,3) == Rational(65,18)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

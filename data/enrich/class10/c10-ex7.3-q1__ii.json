@@ -1,0 +1,56 @@
+{
+ "item": "c10-ex7.3-q1",
+ "label": "ii",
+ "answer_ref": "$7.1$ cm",
+ "steps": [
+  {
+   "math": "FE = 5\\text{ cm}, \\quad EC = 4\\text{ cm}, \\quad BC = 3\\text{ cm}",
+   "en": "Write down the given lengths from the figure. We need to find the length of $\\overline{BF}$.",
+   "ur": "شکل میں دی گئی لمبائیاں لکھیں۔ ہمیں $\\overline{BF}$ کی لمبائی معلوم کرنی ہے۔"
+  },
+  {
+   "math": "CF^2 = FE^2 + EC^2 = 5^2 + 4^2 = 25 + 16 = 41",
+   "en": "First, using Pythagoras theorem in the right-angled triangle $CEF$ (from part i), we have the value of $CF^2$.",
+   "ur": "سب سے پہلے، قائمہ الزاویہ مثلث $CEF$ میں مسئلہ فیثا غورث استعمال کرتے ہوئے (حصہ اول سے)، ہمارے پاس $CF^2$ کی قیمت موجود ہے۔",
+   "check": [
+    "5**2 + 4**2 == 25 + 16",
+    "25 + 16 == 41"
+   ]
+  },
+  {
+   "math": "BF^2 = BC^2 + CF^2",
+   "en": "Since there is a right angle at $C$, triangle $BCF$ is a right-angled triangle. Apply the Pythagoras theorem to $\\triangle BCF$.",
+   "ur": "چونکہ نکتہ $C$ پر قائمہ زاویہ ہے، اس لیے مثلث $BCF$ ایک قائمہ الزاویہ مثلث ہے۔ $\\triangle BCF$ پر مسئلہ فیثا غورث لاگو کریں۔"
+  },
+  {
+   "math": "BF^2 = 3^2 + 41 = 9 + 41 = 50",
+   "en": "Substitute $BC = 3$ and $CF^2 = 41$ into the equation and simplify.",
+   "ur": "مساوات میں $BC = 3$ اور $CF^2 = 41$ درج کریں اور حل کریں۔",
+   "check": [
+    "3**2 + 41 == 9 + 41",
+    "9 + 41 == 50"
+   ]
+  },
+  {
+   "math": "BF = \\sqrt{50} = 5\\sqrt{2}",
+   "en": "Take the square root on both sides to find $BF$.",
+   "ur": "$BF$ معلوم کرنے کے لیے دونوں طرف جزر لیں۔",
+   "check": [
+    "sqrt(50) == 5*sqrt(2)"
+   ]
+  },
+  {
+   "math": "BF \\approx 7.1\\text{ cm}",
+   "en": "Calculate the numerical value and round it to one decimal place. Thus, the length $\\overline{BF}$ is $7.1$ cm.",
+   "ur": "عددی قیمت معلوم کریں اور اسے اعشاریہ کے ایک درجہ تک محدود کریں۔ پس، $\\overline{BF}$ کی لمبائی $7.1$ سینٹی میٹر ہے۔",
+   "check": [
+    "Abs(sqrt(50) - 7.1) <= 0.050000001",
+    "3**2 + 41 == 50",
+    "sqrt(50) == 5*sqrt(2)",
+    "Abs((sqrt(50)) - 7.1) <= 0.050000001"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

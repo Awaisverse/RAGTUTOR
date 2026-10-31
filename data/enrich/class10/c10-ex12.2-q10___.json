@@ -1,0 +1,47 @@
+{
+ "item": "c10-ex12.2-q10",
+ "label": "",
+ "answer_ref": "$\\frac{4}{5}$",
+ "steps": [
+  {
+   "math": "P(L) = 30\\% = \\frac{30}{100} = 0.3",
+   "en": "Let $L$ be the event that a vehicle turns left. We convert the given percentage into a decimal.",
+   "ur": "فرض کریں کہ $L$ گاڑی کے بائیں مڑنے کا وقوعہ ہے۔ ہم دیے گئے فیصد کو اعشاریہ میں تبدیل کرتے ہیں۔",
+   "check": [
+    "R(30, 100) == R(3, 10)"
+   ]
+  },
+  {
+   "math": "P(R) = 50\\% = \\frac{50}{100} = 0.5",
+   "en": "Let $R$ be the event that a vehicle turns right. We convert this percentage into a decimal as well.",
+   "ur": "فرض کریں کہ $R$ گاڑی کے دائیں مڑنے کا وقوعہ ہے۔ ہم اس فیصد کو بھی اعشاریہ میں تبدیل کرتے ہیں۔",
+   "check": [
+    "R(50, 100) == R(5, 10)"
+   ]
+  },
+  {
+   "math": "P(L \\cup R) = P(L) + P(R)",
+   "en": "Since a vehicle cannot turn both left and right at the same time, the events $L$ and $R$ are mutually exclusive. Therefore, we use the addition law of probability for mutually exclusive events.",
+   "ur": "چونکہ ایک گاڑی بیک وقت بائیں اور دائیں دونوں طرف نہیں مڑ سکتی، اس لیے وقوعات $L$ اور $R$ باہمی غیر مشترک (mutually exclusive) ہیں۔ لہٰذا، ہم باہمی غیر مشترک وقوعات کے لیے احتمال کے جمع کا قانون استعمال کرتے ہیں۔"
+  },
+  {
+   "math": "P(L \\cup R) = 0.3 + 0.5 = 0.8",
+   "en": "Substitute the values of $P(L)$ and $P(R)$ into the formula and add them.",
+   "ur": "فارمولے میں $P(L)$ اور $P(R)$ کی قیمتیں درج کریں اور انہیں جمع کریں۔",
+   "check": [
+    "R(3, 10) + R(5, 10) == R(8, 10)"
+   ]
+  },
+  {
+   "math": "P(L \\cup R) = \\frac{8}{10} = \\frac{4}{5}",
+   "en": "Convert the decimal into a simplified fraction. Thus, the probability that a randomly selected vehicle turns left or right is $\\frac{4}{5}$.",
+   "ur": "اعشاریہ کو مختصر کسر میں تبدیل کریں۔ اس طرح، بے ترتیب منتخب کی گئی گاڑی کے بائیں یا دائیں مڑنے کا احتمال $\\frac{4}{5}$ ہے۔",
+   "check": [
+    "R(8, 10) == R(4, 5)",
+    "R(3,10) + R(5,10) == R(4,5)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

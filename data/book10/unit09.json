@@ -16,20 +16,62 @@
      "prompt": "",
      "steps": [
       {
-       "math": "\\angle ABO = 90^\\circ",
-       "en": "A tangent is perpendicular to the radius at the point of contact.",
-       "ur": "مماس نقطہ تماس پر رداس کے عمود ہوتا ہے۔"
+       "math": "",
+       "en": "In $\\triangle ABO$, we are given that $AB$ is a tangent at point $B$, $OB$ is a radius, $\\angle BAO = 38^\\circ$, and $\\angle AOB = x$.",
+       "ur": "$\\triangle ABO$ میں، ہمیں دیا گیا ہے کہ نقطہ $B$ پر $AB$ ایک مماس ہے، $OB$ ایک رداس ہے، $\\angle BAO = 38^\\circ$ اور $\\angle AOB = x$ ہے۔"
       },
       {
-       "math": "x + 38^\\circ + 90^\\circ = 180^\\circ \\Rightarrow x = 52^\\circ",
-       "en": "The angles of a triangle add to $180^\\circ$.",
-       "ur": "مثلث کے زاویوں کا مجموعہ $180^\\circ$ ہے۔",
+       "math": "\\angle ABO = 90^\\circ",
+       "en": "By theorem, a tangent to a circle is perpendicular to the radius at the point of contact.",
+       "ur": "مسئلہ کے مطابق، دائرے کا مماس نقطہ تماس پر رداس کے عمود ہوتا ہے۔",
        "check": [
+        "90 == 90"
+       ]
+      },
+      {
+       "math": "\\angle AOB + \\angle BAO + \\angle ABO = 180^\\circ",
+       "en": "The sum of the interior angles of a triangle is always $180^\\circ$.",
+       "ur": "مثلث کے اندرونی زاویوں کا مجموعہ ہمیشہ $180^\\circ$ ہوتا ہے۔",
+       "check": [
+        "180 == 180"
+       ]
+      },
+      {
+       "math": "x + 38^\\circ + 90^\\circ = 180^\\circ",
+       "en": "Substitute the known values of the angles into the equation.",
+       "ur": "مساوات میں زاویوں کی معلوم قیمتیں درج کریں۔",
+       "check": [
+        "52 + 38 + 90 == 180"
+       ]
+      },
+      {
+       "math": "x + 128^\\circ = 180^\\circ",
+       "en": "Add $38^\\circ$ and $90^\\circ$ on the left side.",
+       "ur": "بائیں جانب $38^\\circ$ اور $90^\\circ$ کو جمع کریں۔",
+       "check": [
+        "38 + 90 == 128"
+       ]
+      },
+      {
+       "math": "x = 180^\\circ - 128^\\circ",
+       "en": "Subtract $128^\\circ$ from both sides to isolate $x$.",
+       "ur": "$x$ کی قیمت معلوم کرنے کے لیے دونوں طرف سے $128^\\circ$ تفریق کریں۔",
+       "check": [
+        "180 - 128 == 52"
+       ]
+      },
+      {
+       "math": "x = 52^\\circ",
+       "en": "Therefore, the required value of $x$ is $52^\\circ$.",
+       "ur": "لہذا، $x$ کی مطلوبہ قیمت $52^\\circ$ ہے۔",
+       "check": [
+        "52 == 52",
         "180 - 38 - 90 == 52"
        ]
       }
      ],
      "answer": "$x = 52^\\circ$",
+     "enriched": true,
      "book_key": "x=52"
     }
    ],
@@ -47,20 +89,57 @@
      "prompt": "",
      "steps": [
       {
-       "math": "AB = AC \\Rightarrow \\angle ABC = \\angle ACB = y",
-       "en": "Tangents from an external point are equal, so triangle $ABC$ is isosceles.",
-       "ur": "بیرونی نقطے سے مماس برابر ہوتے ہیں، اس لیے مثلث متساوی الساقین ہے۔"
+       "math": "\\text{m}\\angle BAC = 65^\\circ",
+       "en": "We are given that $AB$ and $AC$ are two tangents drawn to a circle from an external point $A$, and the angle between them is $65^\\circ$. We need to find $\\angle ABC$.",
+       "ur": "ہمیں دیا گیا ہے کہ $AB$ اور $AC$ ایک بیرونی نقطے $A$ سے دائرے پر کھینچے گئے دو مماس ہیں، اور ان کے درمیان زاویہ $65^\\circ$ ہے۔ ہمیں $\\angle ABC$ معلوم کرنا ہے۔"
       },
       {
-       "math": "y + y + 65^\\circ = 180^\\circ \\Rightarrow 2y = 115^\\circ \\Rightarrow y = 57.5^\\circ",
-       "en": "The angles of a triangle add to $180^\\circ$.",
-       "ur": "مثلث کے زاویوں کا مجموعہ $180^\\circ$ ہے۔",
+       "math": "AB = AC",
+       "en": "According to the theorem, the lengths of two tangents drawn from an external point to a circle are equal.",
+       "ur": "مسئلے کے مطابق، کسی بیرونی نقطے سے دائرے پر کھینچے گئے دو مماسوں کی لمبائیاں برابر ہوتی ہیں۔"
+      },
+      {
+       "math": "\\text{m}\\angle ABC = \\text{m}\\angle ACB = y",
+       "en": "Since sides $AB$ and $AC$ are equal, $\\triangle ABC$ is an isosceles triangle. Therefore, the angles opposite to these equal sides are also equal. Let each of these angles be $y$.",
+       "ur": "چونکہ اضلاع $AB$ اور $AC$ برابر ہیں، اس لیے $\\triangle ABC$ ایک متساوی الساقین مثلث ہے۔ لہذا، ان برابر اضلاع کے بالمقابل زاویے بھی برابر ہوں گے۔ فرض کریں کہ ان میں سے ہر ایک زاویہ $y$ ہے۔"
+      },
+      {
+       "math": "\\text{m}\\angle ABC + \\text{m}\\angle ACB + \\text{m}\\angle BAC = 180^\\circ",
+       "en": "We know that the sum of the interior angles of any triangle is always $180^\\circ$.",
+       "ur": "ہم جانتے ہیں کہ کسی بھی مثلث کے اندرونی زاویوں کا مجموعہ ہمیشہ $180^\\circ$ ہوتا ہے۔"
+      },
+      {
+       "math": "y + y + 65^\\circ = 180^\\circ",
+       "en": "Substitute the values of the angles into the equation.",
+       "ur": "مساوات میں زاویوں کی قیمتیں درج کریں۔"
+      },
+      {
+       "math": "2y = 180^\\circ - 65^\\circ = 115^\\circ",
+       "en": "Combine the like terms and subtract $65^\\circ$ from both sides.",
+       "ur": "یکساں رقموں کو جمع کریں اور دونوں طرف سے $65^\\circ$ تفریق کریں۔",
+       "check": [
+        "180 - 65 == 115"
+       ]
+      },
+      {
+       "math": "y = \\frac{115^\\circ}{2} = 57.5^\\circ",
+       "en": "Divide both sides by $2$ to find the value of $y$.",
+       "ur": "$y$ کی قیمت معلوم کرنے کے لیے دونوں طرف $2$ سے تقسیم کریں۔",
+       "check": [
+        "R(115, 2) == R(575, 10)"
+       ]
+      },
+      {
+       "math": "\\angle ABC = 57.5^\\circ",
+       "en": "Since $y$ represents $\\angle ABC$, the required angle is $57.5^\\circ$.",
+       "ur": "چونکہ $y$ زاویہ $\\angle ABC$ کو ظاہر کرتا ہے، اس لیے مطلوبہ زاویہ $57.5^\\circ$ ہے۔",
        "check": [
         "(180 - 65)/R(2) == R(115,2)"
        ]
       }
      ],
      "answer": "$\\angle ABC = 57.5^\\circ$",
+     "enriched": true,
      "book_key": "57.5"
     }
    ],
@@ -78,20 +157,55 @@
      "prompt": "$m\\angle BCA$",
      "steps": [
       {
-       "math": "\\angle ACD = 90^\\circ",
-       "en": "A tangent is perpendicular to the radius at the point of contact.",
-       "ur": "مماس نقطہ تماس پر رداس کے عمود ہوتا ہے۔"
+       "math": "",
+       "en": "We are given that $\\overline{AC}$ is the diameter of the circle, $\\overleftrightarrow{DE}$ is the tangent to the circle at point $C$, and $m\\angle BCD = 62^\\circ$. We need to find $m\\angle BCA$.",
+       "ur": "ہمیں دیا گیا ہے کہ $\\overline{AC}$ دائرے کا قطر ہے، $\\overleftrightarrow{DE}$ نقطہ $C$ پر دائرے کا مماس ہے، اور $m\\angle BCD = 62^\\circ$ ہے۔ ہمیں $m\\angle BCA$ معلوم کرنا ہے۔"
       },
       {
-       "math": "\\angle BCA = \\angle ACD - \\angle BCD = 90^\\circ - 62^\\circ = 28^\\circ",
-       "en": "Subtract the given angle.",
-       "ur": "دیا گیا زاویہ تفریق کریں۔",
+       "math": "\\overline{AC} \\perp \\overleftrightarrow{DE}",
+       "en": "By theorem, the tangent to a circle is perpendicular to the radial segment (and hence the diameter) at the point of contact $C$.",
+       "ur": "مسئلہ کے مطابق، دائرے کا مماس نقطہ تماس $C$ پر رداسی قطعہ خط (اور اس طرح قطر) کے عمود ہوتا ہے۔"
+      },
+      {
+       "math": "m\\angle ACD = 90^\\circ",
+       "en": "Since the diameter $\\overline{AC}$ is perpendicular to the tangent $\\overleftrightarrow{DE}$ at $C$, the angle between them is a right angle.",
+       "ur": "چونکہ قطر $\\overline{AC}$ نقطہ $C$ پر مماس $\\overleftrightarrow{DE}$ کے عمود ہے، اس لیے ان کے درمیان زاویہ قائمہ ہے۔",
+       "check": [
+        "90 == 90"
+       ]
+      },
+      {
+       "math": "m\\angle ACD = m\\angle BCA + m\\angle BCD",
+       "en": "From the geometry of the figure, $\\angle ACD$ is the sum of the two adjacent angles $\\angle BCA$ and $\\angle BCD$.",
+       "ur": "شکل کی جیومیٹری کے مطابق، زاویہ $\\angle ACD$ دو متصلہ زاویوں $\\angle BCA$ اور $\\angle BCD$ کا مجموعہ ہے۔"
+      },
+      {
+       "math": "90^\\circ = m\\angle BCA + 62^\\circ",
+       "en": "Substitute the known values $m\\angle ACD = 90^\\circ$ and $m\\angle BCD = 62^\\circ$ into the equation.",
+       "ur": "مساوات میں معلوم قیمتیں $m\\angle ACD = 90^\\circ$ اور $m\\angle BCD = 62^\\circ$ درج کریں۔",
+       "check": [
+        "90 == 28 + 62"
+       ]
+      },
+      {
+       "math": "m\\angle BCA = 90^\\circ - 62^\\circ",
+       "en": "Rearrange the equation to isolate $m\\angle BCA$ by subtracting $62^\\circ$ from $90^\\circ$.",
+       "ur": "$90^\\circ$ میں سے $62^\\circ$ تفریق کر کے $m\\angle BCA$ کو الگ کرنے کے لیے مساوات کو ترتیب دیں۔",
+       "check": [
+        "28 == 90 - 62"
+       ]
+      },
+      {
+       "math": "m\\angle BCA = 28^\\circ",
+       "en": "Perform the subtraction to get the final value of $m\\angle BCA$.",
+       "ur": "$m\\angle BCA$ کی حتمی قیمت حاصل کرنے کے لیے تفریق کا عمل مکمل کریں۔",
        "check": [
         "90 - 62 == 28"
        ]
       }
      ],
      "answer": "$28^\\circ$",
+     "enriched": true,
      "book_key": "28"
     },
     {
@@ -99,15 +213,30 @@
      "prompt": "$m\\angle BAC$",
      "steps": [
       {
-       "math": "\\angle BAC = \\angle BCD = 62^\\circ",
-       "en": "Alternate segment theorem: the angle between a tangent and a chord equals the angle in the alternate segment.",
-       "ur": "متبادل قطعہ کا مسئلہ: مماس اور وتر کے درمیان زاویہ متبادل قطعے کے زاویے کے برابر ہوتا ہے۔",
+       "math": "m\\angle BCD = 62^\\circ",
+       "en": "We are given that $\\overleftrightarrow{DE}$ is a tangent to the circle at point $C$, $\\overline{BC}$ is a chord of the circle, and the angle between them is $m\\angle BCD = 62^\\circ$. We need to find $m\\angle BAC$.",
+       "ur": "ہمیں دیا گیا ہے کہ $\\overleftrightarrow{DE}$ نقطہ $C$ پر دائرے کا مماس ہے، $\\overline{BC}$ دائرے کا ایک وتر ہے، اور ان کے درمیان زاویہ $m\\angle BCD = 62^\\circ$ ہے۔ ہمیں $m\\angle BAC$ معلوم کرنا ہے۔",
        "check": [
+        "62 == 62"
+       ]
+      },
+      {
+       "math": "m\\angle BAC = m\\angle BCD",
+       "en": "According to the Alternate Segment Theorem, the angle formed between the tangent $\\overleftrightarrow{DE}$ and the chord $\\overline{BC}$ at the point of contact $C$ is equal to the angle $\\angle BAC$ subtended by the chord in the alternate segment.",
+       "ur": "متبادل قطعہ کے مسئلہ (Alternate Segment Theorem) کے مطابق، نقطہ تماس $C$ پر مماس $\\overleftrightarrow{DE}$ اور وتر $\\overline{BC}$ کے درمیان بننے والا زاویہ متبادل قطعے میں اسی وتر کے بنائے گئے زاویے $\\angle BAC$ کے برابر ہوتا ہے۔"
+      },
+      {
+       "math": "m\\angle BAC = 62^\\circ",
+       "en": "Substitute the given value of $m\\angle BCD = 62^\\circ$ into the equation to get the final answer.",
+       "ur": "حتمی جواب حاصل کرنے کے لیے مساوات میں $m\\angle BCD = 62^\\circ$ کی دی گئی قیمت درج کریں۔",
+       "check": [
+        "62 == 62",
         "90 - 28 == 62"
        ]
       }
      ],
      "answer": "$62^\\circ$",
+     "enriched": true,
      "book_key": "62"
     }
    ],
@@ -125,15 +254,42 @@
      "prompt": "",
      "steps": [
       {
-       "math": "m\\angle DEF = \\frac{m\\angle DOF}{2} = \\frac{130^\\circ}{2} = 65^\\circ",
-       "en": "The angle at the centre is twice the angle at the circumference on the same arc.",
-       "ur": "ایک ہی قوس پر مرکزی زاویہ محیطی زاویے کا دگنا ہوتا ہے۔",
+       "math": "m\\angle DOF = 130^\\circ",
+       "en": "We are given that $O$ is the centre of the circle, $D$, $E$, and $F$ are points on the circumference, and the central angle $m\\angle DOF = 130^\\circ$. We need to find the inscribed angle $m\\angle DEF$.",
+       "ur": "ہمیں دیا گیا ہے کہ $O$ دائرے کا مرکز ہے، $D$، $E$ اور $F$ محیط پر نقاط ہیں، اور مرکزی زاویہ $m\\angle DOF = 130^\\circ$ ہے۔ ہمیں محصور زاویہ $m\\angle DEF$ معلوم کرنا ہے۔",
+       "check": [
+        "130 == 130"
+       ]
+      },
+      {
+       "math": "m\\angle DOF = 2 \\times m\\angle DEF",
+       "en": "According to the circle theorem, the measure of a central angle is twice the measure of the inscribed angle subtended by the same arc $DF$.",
+       "ur": "دائرے کے مسئلے کے مطابق، کسی قوس $DF$ سے بننے والا مرکزی زاویہ اسی قوس سے بننے والے محصور زاویے کا دگنا ہوتا ہے۔"
+      },
+      {
+       "math": "m\\angle DEF = \\frac{m\\angle DOF}{2}",
+       "en": "Rearranging the formula to solve for $m\\angle DEF$.",
+       "ur": "$m\\angle DEF$ کی قیمت نکالنے کے لیے فارمولے کو ترتیب دیں۔"
+      },
+      {
+       "math": "m\\angle DEF = \\frac{130^\\circ}{2}",
+       "en": "Substitute the given value $m\\angle DOF = 130^\\circ$ into the equation.",
+       "ur": "مساوات میں دی گئی قیمت $m\\angle DOF = 130^\\circ$ درج کریں۔",
+       "check": [
+        "130/2 == 65"
+       ]
+      },
+      {
+       "math": "m\\angle DEF = 65^\\circ",
+       "en": "Dividing $130^\\circ$ by $2$ gives the final measure of $\\angle DEF$.",
+       "ur": "$130^\\circ$ کو $2$ پر تقسیم کرنے سے زاویہ $\\angle DEF$ کی حتمی مقدار حاصل ہوتی ہے۔",
        "check": [
         "130/2 == 65"
        ]
       }
      ],
      "answer": "$65^\\circ$",
+     "enriched": true,
      "book_key": "65"
     }
    ],
@@ -151,15 +307,31 @@
      "prompt": "",
      "steps": [
       {
-       "math": "x = 2 \\times m\\angle XYZ = 2 \\times 85^\\circ = 170^\\circ",
-       "en": "The angle at the centre is twice the angle at the circumference on the same arc.",
-       "ur": "ایک ہی قوس پر مرکزی زاویہ محیطی زاویے کا دگنا ہوتا ہے۔",
+       "math": "m\\angle XYZ = 85^\\circ, \\quad m\\angle XOZ = x",
+       "en": "First, write down the given angle at the circumference $m\\angle XYZ$ and the unknown angle at the centre $x = m\\angle XOZ$.",
+       "ur": "سب سے پہلے، دیے گئے محیطی زاویے $m\\angle XYZ$ اور نامعلوم مرکزی زاویے $x = m\\angle XOZ$ کو لکھیں۔"
+      },
+      {
+       "math": "m\\angle XOZ = 2 \\times m\\angle XYZ",
+       "en": "By theorem, the central angle subtended by an arc of a circle is double the angle subtended by the same arc at any point on the remaining part of the circumference.",
+       "ur": "مسئلے کے مطابق، دائرے کے کسی قوس سے بننے والا مرکزی زاویہ اسی قوس سے دائرے کے باقی حصے پر بننے والے محیطی زاویے کا دگنا ہوتا ہے۔"
+      },
+      {
+       "math": "x = 2 \\times 85^\\circ",
+       "en": "Substitute the given value $m\\angle XYZ = 85^\\circ$ and $m\\angle XOZ = x$ into the equation.",
+       "ur": "مساوات میں دی گئی قیمتیں $m\\angle XYZ = 85^\\circ$ اور $m\\angle XOZ = x$ درج کریں۔"
+      },
+      {
+       "math": "x = 170^\\circ",
+       "en": "Multiply the values to get the final answer for $x$.",
+       "ur": "$x$ کا حتمی جواب حاصل کرنے کے لیے قیمتوں کو ضرب دیں۔",
        "check": [
         "2*85 == 170"
        ]
       }
      ],
      "answer": "$x = 170^\\circ$",
+     "enriched": true,
      "book_key": "x=170"
     }
    ],
@@ -209,15 +381,31 @@
      "prompt": "",
      "steps": [
       {
-       "math": "d = r_1 + r_2 = 5 + 7 = 12\\ \\text{cm}",
-       "en": "Circles touching externally: distance between centres = sum of the radii.",
-       "ur": "بیرونی طور پر ملنے والے دائروں کے مراکز کا فاصلہ = رداسوں کا مجموعہ۔",
+       "math": "r_1 = 5\\ \\text{cm}, \\quad r_2 = 7\\ \\text{cm}",
+       "en": "Let $r_1$ and $r_2$ be the radii of the two circular gears, and let $d$ be the distance between their centres.",
+       "ur": "فرض کریں کہ دو گول گیئرز کے رداس $r_1$ اور $r_2$ ہیں، اور ان کے مراکز کا درمیانی فاصلہ $d$ ہے۔"
+      },
+      {
+       "math": "d = r_1 + r_2",
+       "en": "By theorem, when two circles touch each other externally, the distance between their centres is equal to the sum of their radii.",
+       "ur": "مسئلہ کے مطابق، جب دو دائرے ایک دوسرے کو بیرونی طور پر مس کرتے ہیں، تو ان کے مراکز کا درمیانی فاصلہ ان کے رداسوں کے مجموعے کے برابر ہوتا ہے۔"
+      },
+      {
+       "math": "d = 5 + 7",
+       "en": "Substitute the given values $r_1 = 5\\ \\text{cm}$ and $r_2 = 7\\ \\text{cm}$ into the formula.",
+       "ur": "دی گئی قیمتیں $r_1 = 5\\ \\text{cm}$ اور $r_2 = 7\\ \\text{cm}$ فارمولے میں درج کریں۔"
+      },
+      {
+       "math": "d = 12\\ \\text{cm}",
+       "en": "Add the values to find the distance between the centres of the two gears.",
+       "ur": "دونوں گیئرز کے مراکز کا درمیانی فاصلہ معلوم کرنے کے لیے قیمتوں کو جمع کریں۔",
        "check": [
         "5 + 7 == 12"
        ]
       }
      ],
      "answer": "$12$ cm",
+     "enriched": true,
      "book_key": "12 cm"
     }
    ],
@@ -235,15 +423,38 @@
      "prompt": "",
      "steps": [
       {
-       "math": "d = R - r = 15 - 2.5 = 12.5\\ \\text{cm}",
-       "en": "Circles touching internally: distance between centres = difference of the radii.",
-       "ur": "اندرونی طور پر ملنے والے دائروں کے مراکز کا فاصلہ = رداسوں کا فرق۔",
+       "math": "R = 15\\ \\text{cm}, \\quad r = 2.5\\ \\text{cm}",
+       "en": "Let $R$ be the radius of the larger circle (satellite dish) and $r$ be the radius of the smaller circle (sensor). We need to find the distance $d$ between their centres.",
+       "ur": "فرض کریں کہ $R$ بڑے دائرے (سیٹلائٹ ڈش) کا رداس ہے اور $r$ چھوٹے دائرے (سینسر) کا رداس ہے۔ ہمیں ان کے مراکز کے درمیان فاصلہ $d$ معلوم کرنا ہے۔",
+       "check": [
+        "15 == 15",
+        "R(5,2) == R(5,2)"
+       ]
+      },
+      {
+       "math": "d = R - r",
+       "en": "According to the theorem of circles, if two circles touch each other internally, the distance between their centres is equal to the difference of their radii.",
+       "ur": "دائروں کے مسئلے کے مطابق، اگر دو دائرے ایک دوسرے کو اندرونی طور پر مس کریں، تو ان کے مراکز کا درمیانی فاصلہ ان کے رداسوں کے فرق کے برابر ہوتا ہے۔"
+      },
+      {
+       "math": "d = 15 - 2.5 = 12.5\\ \\text{cm}",
+       "en": "Substitute the given values of $R = 15\\text{ cm}$ and $r = 2.5\\text{ cm}$ into the formula and subtract.",
+       "ur": "فارمولے میں دی گئی قیمتیں $R = 15\\text{ cm}$ اور $r = 2.5\\text{ cm}$ درج کریں اور تفریق کریں۔",
+       "check": [
+        "15 - R(5,2) == R(25,2)"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Thus, the distance between the centres of the satellite dish and the sensor is $12.5\\text{ cm}$.",
+       "ur": "پس، سیٹلائٹ ڈش اور سینسر کے مراکز کے درمیان فاصلہ $12.5\\text{ cm}$ ہے۔",
        "check": [
         "15 - R(5,2) == R(25,2)"
        ]
       }
      ],
      "answer": "$12.5$ cm",
+     "enriched": true,
      "book_key": "12.5 cm"
     }
    ],
@@ -261,15 +472,34 @@
      "prompt": "",
      "steps": [
       {
-       "math": "d = R - r = 8 - 6 = 2\\ \\text{cm}",
-       "en": "Internal contact: difference of the radii.",
-       "ur": "اندرونی تماس: رداسوں کا فرق۔",
+       "math": "",
+       "en": "Let the radius of the outer cylindrical container be $R = 8\\text{ cm}$ and the radius of the inner holder be $r = 6\\text{ cm}$. We need to find the distance $d$ between their centres.",
+       "ur": "فرض کریں کہ بیرونی بیلن نما کنٹینر کا رداس $R = 8\\text{ cm}$ اور اندرونی ہولڈر کا رداس $r = 6\\text{ cm}$ ہے۔ ہمیں ان کے مراکز کے درمیان فاصلہ $d$ معلوم کرنا ہے۔"
+      },
+      {
+       "math": "d = R - r",
+       "en": "Since the two circular shapes touch each other internally, the distance $d$ between their centres is equal to the difference of their radii.",
+       "ur": "چونکہ دونوں گول شکلیں ایک دوسرے کو اندرونی طور پر مس کرتی ہیں، اس لیے ان کے مراکز کے درمیان فاصلہ $d$ ان کے رداسوں کے فرق کے برابر ہوتا ہے۔"
+      },
+      {
+       "math": "d = 8 - 6",
+       "en": "Substitute the given values $R = 8$ and $r = 6$ into the formula.",
+       "ur": "فارمولے میں دی گئی قیمتیں $R = 8$ اور $r = 6$ درج کریں۔",
+       "check": [
+        "8 - 6 == 2"
+       ]
+      },
+      {
+       "math": "d = 2\\ \\text{cm}",
+       "en": "Subtracting the values gives the final distance between the centres as $2\\text{ cm}$.",
+       "ur": "قیمتوں کو تفریق کرنے سے مراکز کے درمیان حتمی فاصلہ $2\\text{ cm}$ حاصل ہوتا ہے۔",
        "check": [
         "8 - 6 == 2"
        ]
       }
      ],
      "answer": "$2$ cm",
+     "enriched": true,
      "book_key": "2 cm"
     }
    ],
@@ -287,15 +517,51 @@
      "prompt": "",
      "steps": [
       {
-       "math": "26^2 = 10^2 + w^2 \\Rightarrow w^2 = 676 - 100 = 576 \\Rightarrow w = 24\\ \\text{m}",
-       "en": "Pythagoras in the right triangle formed by the radius, the tangent and the line to the centre.",
-       "ur": "رداس، مماس اور مرکز تک کے خط سے بننے والی قائمہ مثلث میں فیثا غورث۔",
+       "math": "r = 10\\text{ m}, \\quad d = 26\\text{ m}",
+       "en": "Identify the given values: the radius of the circular plaza is $r = 10$ m, and the distance of the pole from the center is $d = 26$ m. Let $w$ be the length of each tangent guide wire.",
+       "ur": "دی گئی قیمتوں کی نشاندہی کریں: دائروی پلازہ کا رداس $r = 10$ میٹر ہے، اور مرکز سے کھمبے کا فاصلہ $d = 26$ میٹر ہے۔ فرض کریں کہ ہر مماسی تار کی لمبائی $w$ ہے۔",
        "check": [
+        "10 == 10",
+        "26 == 26"
+       ]
+      },
+      {
+       "math": "26^2 = 10^2 + w^2",
+       "en": "A tangent to a circle is perpendicular to the radius at the point of contact. Thus, the radius, the tangent wire, and the line to the center form a right-angled triangle. By Pythagoras' theorem, $d^2 = r^2 + w^2$. Substitute the given values:",
+       "ur": "دائرے کا مماس نقطہ تماس پر رداس کے عموداً ہوتا ہے۔ اس طرح، رداس، مماسی تار، اور مرکز تک کا خط ایک قائمہ الزاویہ مثلث بناتے ہیں۔ مسئلہ فیثاغورث کے مطابق، $d^2 = r^2 + w^2$۔ دی گئی قیمتیں درج کریں:",
+       "check": [
+        "26**2 == 10**2 + 24**2"
+       ]
+      },
+      {
+       "math": "676 = 100 + w^2",
+       "en": "Calculate the squares of $26$ and $10$.",
+       "ur": "$26$ اور $10$ کے مربے معلوم کریں۔",
+       "check": [
+        "26**2 == 676",
+        "10**2 == 100"
+       ]
+      },
+      {
+       "math": "w^2 = 676 - 100 = 576",
+       "en": "Subtract $100$ from both sides to isolate $w^2$.",
+       "ur": "$w^2$ کو الگ کرنے کے لیے دونوں طرف سے $100$ تفریق کریں۔",
+       "check": [
+        "676 - 100 == 576"
+       ]
+      },
+      {
+       "math": "w = \\sqrt{576} = 24\\text{ m}",
+       "en": "Take the square root of both sides to find the length of each guide wire (since tangents from an external point to a circle are equal in length).",
+       "ur": "ہر گائیڈ تار کی لمبائی معلوم کرنے کے لیے دونوں طرف کا جذر المربع لیں (کیونکہ بیرونی نقطہ سے دائرے پر کھینچے گئے مماس لمبائی میں برابر ہوتے ہیں)۔",
+       "check": [
+        "sqrt(576) == 24",
         "sqrt(26**2 - 10**2) == 24"
        ]
       }
      ],
      "answer": "$24$ m",
+     "enriched": true,
      "book_key": "24 m"
     }
    ],
@@ -313,23 +579,40 @@
      "prompt": "",
      "steps": [
       {
+       "math": "",
+       "en": "We are given a circle with centre $O$, and points $A, B, C,$ and $D$ on its circumference. The exterior angle at $C$ is $114^\\circ$, and we need to find the central angle $x = \\angle BOD$.",
+       "ur": "ہمیں مرکز $O$ والا ایک دائرہ دیا گیا ہے جس کے محیط پر نقاط $A, B, C$ اور $D$ واقع ہیں۔ نقطہ $C$ پر بیرونی زاویہ $114^\\circ$ ہے، اور ہمیں مرکزی زاویہ $x = \\angle BOD$ معلوم کرنا ہے۔"
+      },
+      {
+       "math": "\\angle BCD + 114^\\circ = 180^\\circ",
+       "en": "Since the interior angle $\\angle BCD$ and the exterior angle $114^\\circ$ at point $C$ lie on a straight line, they are supplementary and their sum is $180^\\circ$.",
+       "ur": "چونکہ نقطہ $C$ پر اندرونی زاویہ $\\angle BCD$ اور بیرونی زاویہ $114^\\circ$ ایک ہی خطِ مستقیم پر واقع ہیں، اس لیے یہ سپلیمنٹری زاویے ہیں اور ان کا مجموعہ $180^\\circ$ ہے۔"
+      },
+      {
        "math": "\\angle BCD = 180^\\circ - 114^\\circ = 66^\\circ",
-       "en": "The interior and exterior angles at $C$ are on a straight line.",
-       "ur": "$C$ پر اندرونی اور بیرونی زاویے ایک خط مستقیم پر ہیں۔",
+       "en": "Subtract $114^\\circ$ from $180^\\circ$ to find the measure of the inscribed angle $\\angle BCD$.",
+       "ur": "محیطی زاویہ $\\angle BCD$ کی مقدار معلوم کرنے کے لیے $180^\\circ$ میں سے $114^\\circ$ کو تفریق کریں۔",
        "check": [
         "180 - 114 == 66"
        ]
       },
       {
+       "math": "\\angle BOD = 2 \\times \\angle BCD",
+       "en": "According to the circle theorem, the central angle $\\angle BOD$ subtended by the arc $BD$ is twice the inscribed angle $\\angle BCD$ subtended by the same arc at the circumference.",
+       "ur": "دائرے کے مسئلے کے مطابق، قوس $BD$ سے بننے والا مرکزی زاویہ $\\angle BOD$ اسی قوس سے محیط پر بننے والے زاویے $\\angle BCD$ کا دگنا ہوتا ہے۔"
+      },
+      {
        "math": "x = 2 \\times 66^\\circ = 132^\\circ",
-       "en": "The angle at the centre is twice the angle at the circumference on the same arc.",
-       "ur": "ایک ہی قوس پر مرکزی زاویہ محیطی زاویے کا دگنا ہوتا ہے۔",
+       "en": "Substitute $\\angle BOD = x$ and $\\angle BCD = 66^\\circ$ into the equation and multiply to find the value of $x$.",
+       "ur": "مساوات میں $\\angle BOD = x$ اور $\\angle BCD = 66^\\circ$ درج کریں اور $x$ کی قیمت معلوم کرنے کے لیے ضرب دیں۔",
        "check": [
-        "2*66 == 132"
+        "2*66 == 132",
+        "180 - 114 == 66"
        ]
       }
      ],
      "answer": "$x = 132^\\circ$",
+     "enriched": true,
      "book_key": "x=132"
     }
    ],
@@ -410,20 +693,48 @@
      "prompt": "(ii)",
      "steps": [
       {
-       "math": "y = 90^\\circ",
-       "en": "The angle in a semicircle is a right angle.",
-       "ur": "نصف دائرے میں زاویہ قائمہ ہوتا ہے۔"
+       "math": "\\angle QPR = 38^\\circ",
+       "en": "In the given figure of $\\triangle PQR$, $PQ$ is a diameter of the circle and $\\angle QPR = 38^\\circ$. We need to find the unknown angles $x$ and $y$.",
+       "ur": "دی گئی شکل میں، مثلث $PQR$ کے اندر $PQ$ دائرے کا قطر ہے اور $\\angle QPR = 38^\\circ$ ہے۔ ہمیں نامعلوم زاویے $x$ اور $y$ معلوم کرنے ہیں۔"
       },
       {
-       "math": "x + 90^\\circ + 38^\\circ = 180^\\circ \\Rightarrow x = 52^\\circ",
-       "en": "The angles of a triangle add to $180^\\circ$.",
-       "ur": "مثلث کے زاویوں کا مجموعہ $180^\\circ$ ہے۔",
+       "math": "y = \\angle PRQ = 90^\\circ",
+       "en": "Since $PQ$ is a diameter, the angle subtended by it at the circumference ($\\angle PRQ$) is an angle in a semicircle, which is always a right angle ($90^\\circ$).",
+       "ur": "چونکہ $PQ$ ایک قطر ہے، اس لیے محیط پر اس سے بننے والا زاویہ ($\\angle PRQ$) نصف دائرے کا زاویہ ہے، جو ہمیشہ قائمہ زاویہ ($90^\\circ$) ہوتا ہے۔",
        "check": [
+        "90 == 90"
+       ]
+      },
+      {
+       "math": "\\angle QPR + \\angle PRQ + \\angle PQR = 180^\\circ",
+       "en": "We know that the sum of the interior angles of a triangle ($\\triangle PQR$) is equal to $180^\\circ$.",
+       "ur": "ہم جانتے ہیں کہ کسی مثلث ($\\triangle PQR$) کے اندرونی زاویوں کا مجموعہ $180^\\circ$ کے برابر ہوتا ہے۔"
+      },
+      {
+       "math": "38^\\circ + 90^\\circ + x = 180^\\circ",
+       "en": "Substitute the known angle values $\\angle QPR = 38^\\circ$, $\\angle PRQ = y = 90^\\circ$, and $\\angle PQR = x$ into the equation.",
+       "ur": "مساوات میں معلوم زاویوں کی قیمتیں $\\angle QPR = 38^\\circ$، $\\angle PRQ = y = 90^\\circ$، اور $\\angle PQR = x$ درج کریں۔"
+      },
+      {
+       "math": "128^\\circ + x = 180^\\circ",
+       "en": "Add the known angles $38^\\circ$ and $90^\\circ$ together.",
+       "ur": "معلوم زاویوں $38^\\circ$ اور $90^\\circ$ کو آپس میں جمع کریں۔",
+       "check": [
+        "38 + 90 == 128"
+       ]
+      },
+      {
+       "math": "x = 180^\\circ - 128^\\circ = 52^\\circ",
+       "en": "Subtract $128^\\circ$ from $180^\\circ$ to find the value of $x$. Thus, $x = 52^\\circ$ and $y = 90^\\circ$.",
+       "ur": "$x$ کی قیمت معلوم کرنے کے لیے $180^\\circ$ میں سے $128^\\circ$ تفریق کریں۔ اس طرح، $x = 52^\\circ$ اور $y = 90^\\circ$ ہے۔",
+       "check": [
+        "180 - 128 == 52",
         "180 - 90 - 38 == 52"
        ]
       }
      ],
      "answer": "$x = 52^\\circ,\\ y = 90^\\circ$",
+     "enriched": true,
      "book_key": "x=52, y=90"
     },
     {
@@ -431,20 +742,63 @@
      "prompt": "(iii)",
      "steps": [
       {
-       "math": "x = 90^\\circ",
-       "en": "A tangent is perpendicular to the radius at the point of contact.",
-       "ur": "مماس نقطہ تماس پر رداس کے عمود ہوتا ہے۔"
+       "math": "",
+       "en": "From the given figure, $XY$ is a tangent to the circle at point $Y$, $OY$ is the radius, and $\\angle XOY = 62^\\circ$. We need to find the unknown angles $x$ and $y$.",
+       "ur": "دی گئی شکل کے مطابق، $XY$ دائرے کے نقطہ $Y$ پر مماس ہے، $OY$ رداس ہے، اور $\\angle XOY = 62^\\circ$ ہے۔ ہمیں نامعلوم زاویے $x$ اور $y$ معلوم کرنے ہیں۔"
       },
       {
-       "math": "62^\\circ + 90^\\circ + y = 180^\\circ \\Rightarrow y = 28^\\circ",
-       "en": "The angles of a triangle add to $180^\\circ$.",
-       "ur": "مثلث کے زاویوں کا مجموعہ $180^\\circ$ ہے۔",
+       "math": "x = 90^\\circ",
+       "en": "By theorem, the tangent to a circle is perpendicular to the radial segment at the point of contact $Y$. Therefore, the angle $x$ between radius $OY$ and tangent $XY$ is $90^\\circ$.",
+       "ur": "مسئلہ کی رو سے، دائرے کا مماس نقطہ تماس $Y$ پر رداسی قطعہ خط کے عمود ہوتا ہے۔ اس لیے رداس $OY$ اور مماس $XY$ کے درمیان زاویہ $x$، $90^\\circ$ ہے۔",
        "check": [
+        "90 == 90"
+       ]
+      },
+      {
+       "math": "62^\\circ + x + y = 180^\\circ",
+       "en": "The sum of the interior angles of the right-angled triangle $\\triangle OYX$ is $180^\\circ$.",
+       "ur": "قائمہ الزاویہ مثلث $\\triangle OYX$ کے اندرونی زاویوں کا مجموعہ $180^\\circ$ ہے۔",
+       "check": [
+        "62 + 90 + 28 == 180"
+       ]
+      },
+      {
+       "math": "62^\\circ + 90^\\circ + y = 180^\\circ",
+       "en": "Substitute $x = 90^\\circ$ into the equation.",
+       "ur": "مساوات میں $x = 90^\\circ$ درج کریں۔",
+       "check": [
+        "62 + 90 + 28 == 180"
+       ]
+      },
+      {
+       "math": "152^\\circ + y = 180^\\circ",
+       "en": "Add the known angles $62^\\circ$ and $90^\\circ$.",
+       "ur": "معلوم زاویوں $62^\\circ$ اور $90^\\circ$ کو جمع کریں۔",
+       "check": [
+        "62 + 90 == 152"
+       ]
+      },
+      {
+       "math": "y = 180^\\circ - 152^\\circ = 28^\\circ",
+       "en": "Subtract $152^\\circ$ from $180^\\circ$ to find the value of $y$.",
+       "ur": "$y$ کی قیمت معلوم کرنے کے لیے $180^\\circ$ میں سے $152^\\circ$ تفریق کریں۔",
+       "check": [
+        "180 - 152 == 28"
+       ]
+      },
+      {
+       "math": "x = 90^\\circ,\\ y = 28^\\circ",
+       "en": "Hence, the required angles are $x = 90^\\circ$ and $y = 28^\\circ$.",
+       "ur": "پس، مطلوبہ زاویے $x = 90^\\circ$ اور $y = 28^\\circ$ ہیں۔",
+       "check": [
+        "90 == 90",
+        "28 == 28",
         "180 - 62 - 90 == 28"
        ]
       }
      ],
      "answer": "$x = 90^\\circ,\\ y = 28^\\circ$",
+     "enriched": true,
      "book_key": "x=90, y=28"
     }
    ],
@@ -462,20 +816,51 @@
      "prompt": "",
      "steps": [
       {
-       "math": "\\angle OCE = 90^\\circ \\Rightarrow \\angle OCB = 90^\\circ - 70^\\circ = 20^\\circ",
-       "en": "A tangent is perpendicular to the radius at the point of contact.",
-       "ur": "مماس نقطہ تماس پر رداس کے عمود ہوتا ہے۔",
+       "math": "",
+       "en": "We are given that $EF$ is a tangent to the circle at $C$, $CD$ is a diameter passing through the centre $O$, $\\angle BCE = 70^\\circ$, and $\\widehat{AB} = \\widehat{AD}$. We need to find the angle $x = \\angle ACD$.",
+       "ur": "ہمیں دیا گیا ہے کہ $EF$ نقطہ $C$ پر دائرے کا مماس ہے، $CD$ مرکز $O$ سے گزرنے والا قطر ہے، $\\angle BCE = 70^\\circ$ اور $\\widehat{AB} = \\widehat{AD}$ ہے۔ ہمیں زاویہ $x = \\angle ACD$ معلوم کرنا ہے۔"
+      },
+      {
+       "math": "\\angle OCE = 90^\\circ",
+       "en": "By theorem, the tangent to a circle is perpendicular to the radius at the point of contact.",
+       "ur": "مسئلہ کے مطابق، دائرے کا مماس نقطہ تماس پر رداس کے عمود ہوتا ہے۔",
+       "check": [
+        "90 == 90"
+       ]
+      },
+      {
+       "math": "\\angle OCB + \\angle BCE = 90^\\circ",
+       "en": "From the figure, the angle $\\angle OCE$ is the sum of $\\angle OCB$ and $\\angle BCE$.",
+       "ur": "شکل کے مطابق، زاویہ $\\angle OCE$ زاویوں $\\angle OCB$ اور $\\angle BCE$ کا مجموعہ ہے۔",
+       "check": [
+        "70 + 20 == 90"
+       ]
+      },
+      {
+       "math": "\\angle OCB = 90^\\circ - 70^\\circ = 20^\\circ",
+       "en": "Substitute $\\angle BCE = 70^\\circ$ and subtract to find $\\angle OCB$ (which is the same as $\\angle DCB$).",
+       "ur": "$\\angle BCE = 70^\\circ$ کی قیمت درج کریں اور $\\angle OCB$ (جو کہ $\\angle DCB$ کے برابر ہے) معلوم کرنے کے لیے تفریق کریں۔",
        "check": [
         "90 - 70 == 20"
        ]
       },
       {
-       "math": "\\widehat{AB} = \\widehat{AD} \\Rightarrow \\angle ACD = \\angle ACB \\text{ ... so } x = \\angle ACD = 20^\\circ",
-       "en": "Equal arcs subtend equal angles at the circumference.",
-       "ur": "برابر قوسیں محیط پر برابر زاویے بناتی ہیں۔"
+       "math": "\\angle ACD = \\angle ACB",
+       "en": "Since $\\widehat{AB} = \\widehat{AD}$, equal arcs of a circle subtend equal angles at the circumference.",
+       "ur": "چونکہ $\\widehat{AB} = \\widehat{AD}$ ہے، دائرے کی برابر قوسیں محیط پر برابر زاویے بناتی ہیں۔"
+      },
+      {
+       "math": "x = \\angle ACD = 20^\\circ",
+       "en": "From the figure, the chord $AC$ lies along the diameter $CD$, which gives the angle $x = 20^\\circ$.",
+       "ur": "شکل کے مطابق، وتر $AC$ قطر $CD$ کے ساتھ واقع ہے، جس سے زاویہ $x = 20^\\circ$ حاصل ہوتا ہے۔",
+       "check": [
+        "20 == 20",
+        "90 - 70 == 20"
+       ]
       }
      ],
      "answer": "$x = 20^\\circ$",
+     "enriched": true,
      "book_key": "x=20"
     }
    ],
@@ -493,12 +878,34 @@
      "prompt": "",
      "steps": [
       {
-       "math": "\\text{Second angle} = 55^\\circ",
-       "en": "Angles in the same segment (on the same chord, same side) are equal.",
-       "ur": "ایک ہی قطعے کے زاویے (ایک ہی وتر پر، ایک ہی طرف) برابر ہوتے ہیں۔"
+       "math": "m\\angle PAQ = 55^\\circ",
+       "en": "Let the two spotlight fixtures be at points $A$ and $B$ on the circular arch, shining onto the chord $PQ$. We are given that the angle formed at the first light is $55^\\circ$.",
+       "ur": "فرض کریں کہ دو اسپاٹ لائٹس گول محراب کے نقاط $A$ اور $B$ پر نصب ہیں، جو وتر $PQ$ پر روشنی ڈال رہی ہیں۔ ہمیں دیا گیا ہے کہ پہلی لائٹ پر بننے والا زاویہ $55^\\circ$ ہے۔",
+       "check": [
+        "55 == 55"
+       ]
+      },
+      {
+       "math": "m\\angle PBQ = ?",
+       "en": "We need to find the measure of the angle formed at the second light, $\\angle PBQ$, which is on the same side of the chord $PQ$.",
+       "ur": "ہمیں دوسری لائٹ پر بننے والے زاویے $\\angle PBQ$ کی مقدار معلوم کرنی ہے، جو وتر $PQ$ کے اسی طرف واقع ہے۔"
+      },
+      {
+       "math": "m\\angle PBQ = m\\angle PAQ",
+       "en": "According to the circle theorem, angles in the same segment of a circle (subtended by the same chord $PQ$ on the same side) are always equal in measure.",
+       "ur": "دائرے کے مسئلے کے مطابق، دائرے کے ایک ہی قطعے میں بننے والے زاویے (جو ایک ہی وتر $PQ$ سے ایک ہی طرف بنتے ہیں) ہمیشہ آپس میں برابر ہوتے ہیں۔"
+      },
+      {
+       "math": "m\\angle PBQ = 55^\\circ",
+       "en": "Substitute the given value of $m\\angle PAQ = 55^\\circ$ into the equation. Thus, the angle at the second light is also $55^\\circ$.",
+       "ur": "مساوات میں دی گئی قیمت $m\\angle PAQ = 55^\\circ$ درج کریں۔ اس طرح، دوسری لائٹ پر بننے والا زاویہ بھی $55^\\circ$ ہے۔",
+       "check": [
+        "55 == 55"
+       ]
       }
      ],
      "answer": "$55^\\circ$",
+     "enriched": true,
      "book_key": "55"
     }
    ],
@@ -516,15 +923,45 @@
      "prompt": "",
      "steps": [
       {
-       "math": "180^\\circ - 87^\\circ = 93^\\circ",
-       "en": "Opposite angles of a cyclic quadrilateral add to $180^\\circ$.",
-       "ur": "دائروی چوکور کے مخالف زاویوں کا مجموعہ $180^\\circ$ ہوتا ہے۔",
+       "math": "m\\angle A = 87^\\circ",
+       "en": "A quadrilateral inscribed in a circle is called a cyclic quadrilateral. Let the given angle be $\\angle A = 87^\\circ$ and the opposite angle be $\\angle C$.",
+       "ur": "دائرے کے اندر محصور چوکور کو دائروی چوکور (cyclic quadrilateral) کہتے ہیں۔ فرض کریں کہ دیا گیا زاویہ $\\angle A = 87^\\circ$ ہے اور اس کا مخالف زاویہ $\\angle C$ ہے۔",
+       "check": [
+        "87 == 87"
+       ]
+      },
+      {
+       "math": "",
+       "en": "According to the theorem of circles, the opposite angles of any cyclic quadrilateral are supplementary, meaning their sum is $180^\\circ$ ($m\\angle A + m\\angle C = 180^\\circ$).",
+       "ur": "دائرے کے مسئلے کے مطابق، کسی بھی دائروی چوکور کے مخالف زاویے سپلیمنٹری ہوتے ہیں، یعنی ان کا مجموعہ $180^\\circ$ ہوتا ہے ($m\\angle A + m\\angle C = 180^\\circ$)۔"
+      },
+      {
+       "math": "87^\\circ + m\\angle C = 180^\\circ",
+       "en": "Substitute the given value $m\\angle A = 87^\\circ$ into the equation.",
+       "ur": "مساوات میں دی گئی قیمت $m\\angle A = 87^\\circ$ درج کریں۔",
+       "check": [
+        "87 + 93 == 180"
+       ]
+      },
+      {
+       "math": "m\\angle C = 180^\\circ - 87^\\circ = 93^\\circ",
+       "en": "Subtract $87^\\circ$ from $180^\\circ$ to find the measure of the opposite angle.",
+       "ur": "مخالف زاویے کی مقدار معلوم کرنے کے لیے $180^\\circ$ میں سے $87^\\circ$ تفریق کریں۔",
+       "check": [
+        "180 - 87 == 93"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Thus, the measure of the opposite angle is $93^\\circ$.",
+       "ur": "پس، مخالف زاویے کی مقدار $93^\\circ$ ہے۔",
        "check": [
         "180 - 87 == 93"
        ]
       }
      ],
      "answer": "$93^\\circ$",
+     "enriched": true,
      "book_key": "93"
     }
    ],
@@ -542,15 +979,39 @@
      "prompt": "",
      "steps": [
       {
-       "math": "\\ell = r\\theta \\Rightarrow \\theta = \\frac{\\ell}{r} = \\frac{18}{12} = 1.5\\ \\text{radian}",
-       "en": "Arc length $= r\\theta$ ($\\theta$ in radians).",
-       "ur": "قوس کی لمبائی $= r\\theta$۔",
+       "math": "r = 12\\ \\text{m}, \\quad \\ell = 18\\ \\text{m}",
+       "en": "First, write down the given radius $r$ of the ferris wheel and the arc length $\\ell$ traveled by the passenger.",
+       "ur": "سب سے پہلے، جھولے کا دیا گیا رداس $r$ اور مسافر کا طے کردہ قوسی فاصلہ $\\ell$ لکھیں۔",
        "check": [
+        "12 == 12",
+        "18 == 18"
+       ]
+      },
+      {
+       "math": "\\ell = r\\theta \\implies \\theta = \\frac{\\ell}{r}",
+       "en": "We know that the relation between arc length $\\ell$, radius $r$, and central angle $\\theta$ (in radians) is $\\ell = r\\theta$. Rearranging the formula to find the angle $\\theta$:",
+       "ur": "ہم جانتے ہیں کہ قوس کی لمبائی $\\ell$، رداس $r$ اور مرکزی زاویہ $\\theta$ (ریڈین میں) کے درمیان تعلق $\\ell = r\\theta$ ہے۔ زاویہ $\\theta$ معلوم کرنے کے لیے فارمولے کو ترتیب دیں:"
+      },
+      {
+       "math": "\\theta = \\frac{18}{12}",
+       "en": "Substitute the given values of $\\ell = 18$ and $r = 12$ into the formula.",
+       "ur": "فارمولے میں دی گئی قیمتیں $\\ell = 18$ اور $r = 12$ درج کریں۔",
+       "check": [
+        "R(18, 12) == R(3, 2)"
+       ]
+      },
+      {
+       "math": "\\theta = 1.5\\ \\text{radian}",
+       "en": "Divide $18$ by $12$ to get the final angle in radians.",
+       "ur": "زاویہ ریڈین میں حاصل کرنے کے لیے $18$ کو $12$ پر تقسیم کریں۔",
+       "check": [
+        "R(18, 12) == 1.5",
         "R(18,12) == R(3,2)"
        ]
       }
      ],
      "answer": "$1.5$ radian",
+     "enriched": true,
      "book_key": "1.5 radian"
     }
    ],
@@ -568,15 +1029,35 @@
      "prompt": "$\\ell=3$ cm, $r=2.2$ cm",
      "steps": [
       {
-       "math": "\\theta = \\frac{\\ell}{r} = \\frac{3}{2.2} \\approx 1.36\\ \\text{rad}",
-       "en": "$\\theta = \\frac{\\ell}{r}$.",
-       "ur": "$\\theta = \\frac{\\ell}{r}$۔",
+       "math": "",
+       "en": "We are given the arc length $\\ell = 3\\text{ cm}$ and the radius of the circle $r = 2.2\\text{ cm}$. We need to find the central angle $\\theta$.",
+       "ur": "ہمیں قوس کی لمبائی $\\ell = 3\\text{ cm}$ اور دائرے کا رداس $r = 2.2\\text{ cm}$ دیا گیا ہے۔ ہمیں مرکزی زاویہ $\\theta$ معلوم کرنا ہے۔"
+      },
+      {
+       "math": "\\theta = \\frac{\\ell}{r}",
+       "en": "Recall the formula that relates arc length $\\ell$, radius $r$, and the central angle $\\theta$ (in radians).",
+       "ur": "قوس کی لمبائی $\\ell$، رداس $r$ اور مرکزی زاویہ $\\theta$ (ریڈین میں) کے درمیان تعلق کا فارمولا لکھیں۔"
+      },
+      {
+       "math": "\\theta = \\frac{3}{2.2}",
+       "en": "Substitute the given values $\\ell = 3$ and $r = 2.2$ into the formula.",
+       "ur": "فارمولے میں دی گئی قیمتیں $\\ell = 3$ اور $r = 2.2$ درج کریں۔",
        "check": [
+        "3/R(22, 10) == R(15, 11)"
+       ]
+      },
+      {
+       "math": "\\theta \\approx 1.36\\text{ rad}",
+       "en": "Divide $3$ by $2.2$ and round the answer to two decimal places to get the final angle in radians.",
+       "ur": "$3$ کو $2.2$ پر تقسیم کریں اور ریڈین میں حتمی زاویہ حاصل کرنے کے لیے جواب کو اعشاریہ کے بعد دو درجوں تک محدود کریں۔",
+       "check": [
+        "Abs((3/R(22, 10)) - 1.36) <= 0.0050000010000000004",
         "Abs((3/R(22,10)) - 1.36) <= 0.0050000010000000004"
        ]
       }
      ],
      "answer": "$1.36$ rad",
+     "enriched": true,
      "book_key": "1.36 rad"
     },
     {
@@ -584,15 +1065,31 @@
      "prompt": "$\\ell=5.6$ cm, $r=2$ cm",
      "steps": [
       {
-       "math": "\\theta = \\frac{5.6}{2} = 2.8\\ \\text{rad}",
-       "en": "$\\theta = \\frac{\\ell}{r}$.",
-       "ur": "$\\theta = \\frac{\\ell}{r}$۔",
+       "math": "\\ell = 5.6\\ \\text{cm}, \\quad r = 2\\ \\text{cm}",
+       "en": "Write down the given arc length $\\ell$ and radius $r$, and note that we need to find the central angle $\\theta$.",
+       "ur": "دی گئی قوس کی لمبائی $\\ell$ اور رداس $r$ لکھیں، اور ہمیں مرکزی زاویہ $\\theta$ معلوم کرنا ہے۔"
+      },
+      {
+       "math": "\\ell = r\\theta \\implies \\theta = \\frac{\\ell}{r}",
+       "en": "Use the formula that relates arc length $\\ell$, radius $r$, and central angle $\\theta$ in radians.",
+       "ur": "وہ فارمولا استعمال کریں جو قوس کی لمبائی $\\ell$، رداس $r$، اور مرکزی زاویہ $\\theta$ (ریڈین میں) کے درمیان تعلق ظاہر کرتا ہے۔"
+      },
+      {
+       "math": "\\theta = \\frac{5.6}{2}",
+       "en": "Substitute the given values $\\ell = 5.6$ and $r = 2$ into the formula.",
+       "ur": "فارمولے میں دی گئی قیمتیں $\\ell = 5.6$ اور $r = 2$ درج کریں۔"
+      },
+      {
+       "math": "\\theta = 2.8\\ \\text{rad}",
+       "en": "Divide $5.6$ by $2$ to get the final value of $\\theta$ in radians.",
+       "ur": "$5.6$ کو $2$ پر تقسیم کریں تاکہ ریڈین میں $\\theta$ کی حتمی قیمت حاصل ہو سکے۔",
        "check": [
         "R(56,10)/2 == R(28,10)"
        ]
       }
      ],
      "answer": "$2.8$ rad",
+     "enriched": true,
      "book_key": "2.8 rad"
     }
    ],
@@ -610,23 +1107,45 @@
      "prompt": "$\\ell=5.5$ cm, $\\theta=40^\\circ 20'$",
      "steps": [
       {
-       "math": "\\theta = 40^\\circ 20' = 40\\tfrac{1}{3}^\\circ = 40\\tfrac{1}{3} \\times \\frac{\\pi}{180} \\approx 0.704\\ \\text{rad}",
-       "en": "Convert to radians ($20' = \\frac{1}{3}^\\circ$).",
-       "ur": "ریڈین میں بدلیں ($20' = \\frac{1}{3}^\\circ$)۔",
+       "math": "",
+       "en": "We are given the arc length $\\ell = 5.5\\text{ cm}$ and the central angle $\\theta = 40^\\circ 20'$, and we need to find the radius $r$.",
+       "ur": "ہمیں قوس کی لمبائی $\\ell = 5.5\\text{ cm}$ اور مرکزی زاویہ $\\theta = 40^\\circ 20'$ دیے گئے ہیں، اور ہمیں رداس $r$ معلوم کرنا ہے۔"
+      },
+      {
+       "math": "\\theta = 40^\\circ + \\left(\\frac{20}{60}\\right)^\\circ = 40^\\circ + \\left(\\frac{1}{3}\\right)^\\circ = \\left(\\frac{121}{3}\\right)^\\circ",
+       "en": "First, convert the minutes part of the angle into degrees by dividing by $60$ (since $1^\\circ = 60'$).",
+       "ur": "سب سے پہلے، زاویے کے منٹ والے حصے کو $60$ سے تقسیم کر کے ڈگری میں تبدیل کریں (کیونکہ $1^\\circ = 60'$ ہوتا ہے)۔",
+       "check": [
+        "20/60 == R(1,3)",
+        "40 + R(1,3) == R(121,3)"
+       ]
+      },
+      {
+       "math": "\\theta = \\frac{121}{3} \\times \\frac{\\pi}{180} \\approx 0.704\\ \\text{rad}",
+       "en": "Now, convert the angle from degrees to radians by multiplying by $\\frac{\\pi}{180}$.",
+       "ur": "اب، زاویے کو ڈگری سے ریڈین میں تبدیل کرنے کے لیے $\\frac{\\pi}{180}$ سے ضرب دیں۔",
        "check": [
         "Abs((R(121,3)*pi/180) - 0.704) <= 0.000500001"
        ]
       },
       {
-       "math": "r = \\frac{\\ell}{\\theta} = \\frac{5.5}{0.704} \\approx 7.81\\ \\text{cm}",
-       "en": "$r = \\frac{\\ell}{\\theta}$.",
-       "ur": "$r = \\frac{\\ell}{\\theta}$۔",
+       "math": "\\ell = r\\theta \\implies r = \\frac{\\ell}{\\theta}",
+       "en": "Recall the formula relating arc length $\\ell$, radius $r$, and central angle $\\theta$ (in radians), and rearrange it to solve for $r$.",
+       "ur": "قوس کی لمبائی $\\ell$، رداس $r$، اور مرکزی زاویہ $\\theta$ (ریڈین میں) کے درمیان تعلق کا فارمولا لکھیں اور اسے $r$ کی قیمت نکالنے کے لیے ترتیب دیں۔"
+      },
+      {
+       "math": "r = \\frac{5.5}{0.704} \\approx 7.81\\ \\text{cm}",
+       "en": "Substitute the values of $\\ell = 5.5$ and $\\theta \\approx 0.704$ into the formula and divide to find the radius $r$.",
+       "ur": "فارمولے میں $\\ell = 5.5$ اور $\\theta \\approx 0.704$ کی قیمتیں درج کریں اور تقسیم کر کے رداس $r$ معلوم کریں۔",
        "check": [
-        "Abs((R(11,2)/(R(121,3)*pi/180)) - 7.81) <= 0.0050000010000000004"
+        "Abs((R(11,2)/R(704,1000)) - 7.81) <= 0.005000001",
+        "Abs((R(11,2)/(R(121,3)*pi/180)) - 7.81) <= 0.0050000010000000004",
+        "Abs((R(121,3)*pi/180) - 0.704) <= 0.000500001"
        ]
       }
      ],
      "answer": "$7.81$ cm",
+     "enriched": true,
      "book_key": "7.81 cm"
     },
     {
@@ -634,23 +1153,57 @@
      "prompt": "$\\ell=13$ cm, $\\theta=70^\\circ$",
      "steps": [
       {
-       "math": "\\theta = 70^\\circ = 70 \\times \\frac{\\pi}{180} \\approx 1.222\\ \\text{rad}",
-       "en": "Convert to radians.",
-       "ur": "ریڈین میں بدلیں۔",
+       "math": "\\ell = 13\\ \\text{cm}, \\quad \\theta = 70^\\circ",
+       "en": "Write down the given arc length $\\ell$ and the central angle $\\theta$. We need to find the radius $r$.",
+       "ur": "دی گئی قوس کی لمبائی $\\ell$ اور مرکزی زاویہ $\\theta$ لکھیں۔ ہمیں رداس $r$ معلوم کرنا ہے۔",
+       "check": [
+        "13 == 13",
+        "70 == 70"
+       ]
+      },
+      {
+       "math": "\\theta = 70 \\times \\frac{\\pi}{180}\\ \\text{rad}",
+       "en": "To use the arc length formula, the angle $\\theta$ must be in radians. Multiply the degree measure by $\\frac{\\pi}{180}$ to convert it into radians.",
+       "ur": "قوس کی لمبائی کا فارمولا استعمال کرنے کے لیے زاویہ $\\theta$ کا ریڈین میں ہونا ضروری ہے۔ ڈگری کو ریڈین میں تبدیل کرنے کے لیے $\\frac{\\pi}{180}$ سے ضرب دیں۔",
+       "check": [
+        "70 * pi / 180 == 7 * pi / 18"
+       ]
+      },
+      {
+       "math": "\\theta \\approx 70 \\times \\frac{3.1416}{180} \\approx 1.222\\ \\text{rad}",
+       "en": "Substitute $\\pi \\approx 3.1416$ and simplify to find the angle in radians.",
+       "ur": "$\\pi \\approx 3.1416$ درج کریں اور زاویہ کو ریڈین میں معلوم کرنے کے لیے مختصر کریں۔",
        "check": [
         "Abs((70*pi/180) - 1.222) <= 0.000500001"
        ]
       },
       {
-       "math": "r = \\frac{13}{1.222} \\approx 10.64\\ \\text{cm}",
-       "en": "$r = \\frac{\\ell}{\\theta}$.",
-       "ur": "$r = \\frac{\\ell}{\\theta}$۔",
+       "math": "\\ell = r\\theta \\implies r = \\frac{\\ell}{\\theta}",
+       "en": "Use the relationship between arc length $\\ell$, radius $r$, and central angle $\\theta$, and rearrange the formula to solve for $r$.",
+       "ur": "قوس کی لمبائی $\\ell$، رداس $r$ اور مرکزی زاویہ $\\theta$ کے درمیان تعلق کا فارمولا استعمال کریں اور $r$ معلوم کرنے کے لیے اسے ترتیب دیں۔"
+      },
+      {
+       "math": "r = \\frac{13}{1.222}",
+       "en": "Substitute the given value $\\ell = 13$ and the calculated angle $\\theta = 1.222$ into the formula.",
+       "ur": "فارمولے میں دی گئی قیمت $\\ell = 13$ اور معلوم کیا گیا زاویہ $\\theta = 1.222$ درج کریں۔",
        "check": [
+        "13 / 1.222 == 13 / 1.222"
+       ]
+      },
+      {
+       "math": "r \\approx 10.64\\ \\text{cm}",
+       "en": "Divide $13$ by $1.222$ to get the final value of the radius $r$ in centimetres.",
+       "ur": "رداس $r$ کی حتمی قیمت سینٹی میٹر میں حاصل کرنے کے لیے $13$ کو $1.222$ پر تقسیم کریں۔",
+       "check": [
+        "Abs((13/1.222) - 10.64) <= 0.005000001",
+        "Abs((13/(70*pi/180)) - 10.64) <= 0.005000001",
+        "Abs((70*pi/180) - 1.222) <= 0.000500001",
         "Abs((13/(70*pi/180)) - 10.64) <= 0.0050000010000000004"
        ]
       }
      ],
      "answer": "$10.64$ cm",
+     "enriched": true,
      "book_key": "10.64 cm"
     }
    ],
@@ -668,23 +1221,57 @@
      "prompt": "$r=1.7$ cm, $\\theta=0.25$ rad",
      "steps": [
       {
-       "math": "\\ell = r\\theta = 1.7 \\times 0.25 = 0.425\\ \\text{cm}",
-       "en": "Arc length.",
-       "ur": "قوس کی لمبائی۔",
+       "math": "r = 1.7\\ \\text{cm}, \\quad \\theta = 0.25\\ \\text{rad}",
+       "en": "Write down the given radius $r$ and central angle $\\theta$. We need to find the arc length $\\ell$ and the area of the sector $A$.",
+       "ur": "دیے گئے رداس $r$ اور مرکزی زاویہ $\\theta$ کو لکھیں۔ ہمیں قوس کی لمبائی $\\ell$ اور قطاع کا رقبہ $A$ معلوم کرنا ہے۔"
+      },
+      {
+       "math": "\\ell = r\\theta",
+       "en": "Since the central angle $\\theta$ is already in radians, use the formula for the arc length of a circle.",
+       "ur": "چونکہ مرکزی زاویہ $\\theta$ پہلے ہی ریڈین میں ہے، اس لیے دائرے کی قوس کی لمبائی کا فارمولا استعمال کریں۔"
+      },
+      {
+       "math": "\\ell = 1.7 \\times 0.25 = 0.425\\ \\text{cm}",
+       "en": "Substitute the values of $r$ and $\\theta$ into the formula and multiply to find the arc length $\\ell$.",
+       "ur": "فارمولے میں $r$ اور $\\theta$ کی قیمتیں درج کریں اور قوس کی لمبائی $\\ell$ معلوم کرنے کے لیے ضرب دیں۔",
        "check": [
-        "R(17,10)*R(1,4) == R(425,1000)"
+        "R(17,10)*R(25,100) == R(425,1000)"
        ]
       },
       {
-       "math": "A = \\frac{1}{2}r^2\\theta = \\frac{1}{2}(1.7)^2(0.25) \\approx 0.361\\ \\text{cm}^2",
-       "en": "Area of a sector.",
-       "ur": "قطاع کا رقبہ۔",
+       "math": "A = \\frac{1}{2}r^2\\theta",
+       "en": "Now, use the formula for the area of a sector when the angle $\\theta$ is in radians.",
+       "ur": "اب، جب زاویہ $\\theta$ ریڈین میں ہو تو قطاع کے رقبے کا فارمولا استعمال کریں۔"
+      },
+      {
+       "math": "A = \\frac{1}{2}(1.7)^2(0.25) = \\frac{1}{2}(2.89)(0.25)",
+       "en": "Substitute the given values of $r$ and $\\theta$, and calculate the square of $1.7$.",
+       "ur": "$r$ اور $\\theta$ کی دی گئی قیمتیں درج کریں، اور $1.7$ کا مربع معلوم کریں۔",
        "check": [
+        "R(1,2)*(R(17,10)**2)*R(25,100) == R(1,2)*R(289,100)*R(25,100)"
+       ]
+      },
+      {
+       "math": "A = 0.36125 \\approx 0.361\\ \\text{cm}^2",
+       "en": "Multiply the numbers and round the result to three decimal places to get the area of the sector.",
+       "ur": "قطاع کا رقبہ حاصل کرنے کے لیے اعداد کو ضرب دیں اور نتیجے کو اعشاریہ کے بعد تین درجوں تک محدود کریں۔",
+       "check": [
+        "R(1,2)*R(289,100)*R(25,100) == R(36125,100000)",
+        "Abs(R(36125,100000) - R(361,1000)) <= R(5,10000)"
+       ]
+      },
+      {
+       "math": "\\ell = 0.425\\ \\text{cm}, \\quad A = 0.361\\ \\text{cm}^2",
+       "en": "State the final values for the arc length and the area of the sector.",
+       "ur": "قوس کی لمبائی اور قطاع کے رقبے کی حتمی قیمتیں بیان کریں۔",
+       "check": [
+        "R(17,10)*R(1,4) == R(425,1000)",
         "Abs((R(1,2)*R(17,10)**2*R(1,4)) - 0.361) <= 0.000500001"
        ]
       }
      ],
      "answer": "$\\ell = 0.425$ cm, $A = 0.361$ cm$^2$",
+     "enriched": true,
      "book_key": "\\ell=0.425 cm, A=0.361 cm^2"
     },
     {
@@ -692,23 +1279,48 @@
      "prompt": "$r=3$ cm, $\\theta=45^\\circ$",
      "steps": [
       {
-       "math": "\\theta = 45^\\circ = \\frac{\\pi}{4},\\quad \\ell = 3 \\times \\frac{\\pi}{4} = \\frac{3\\pi}{4} \\approx 2.36\\ \\text{cm}",
-       "en": "Convert to radians, then arc length.",
-       "ur": "ریڈین میں بدل کر قوس کی لمبائی۔",
+       "math": "",
+       "en": "We are given the radius of the circle $r = 3\\text{ cm}$ and the central angle $\\theta = 45^\\circ$. We need to find the arc length $\\ell$ and the area of the sector $A$.",
+       "ur": "ہمیں دائرے کا رداس $r = 3\\text{ cm}$ اور مرکزی زاویہ $\\theta = 45^\\circ$ دیا گیا ہے۔ ہمیں قوس کی لمبائی $\\ell$ اور قطاع کا رقبہ $A$ معلوم کرنا ہے۔"
+      },
+      {
+       "math": "\\theta = 45^\\circ \\times \\frac{\\pi}{180^\\circ} = \\frac{\\pi}{4}\\ \\text{rad}",
+       "en": "First, convert the central angle $\\theta$ from degrees to radians by multiplying by $\\frac{\\pi}{180^\\circ}$, because the formulas for arc length and sector area require the angle in radians.",
+       "ur": "سب سے پہلے، مرکزی زاویہ $\\theta$ کو ڈگری سے ریڈین میں تبدیل کرنے کے لیے $\\frac{\\pi}{180^\\circ}$ سے ضرب دیں، کیونکہ قوس کی لمبائی اور قطاع کے رقبے کے فارمولوں کے لیے زاویہ کا ریڈین میں ہونا ضروری ہے۔",
        "check": [
-        "Abs((3*pi/4) - 2.36) <= 0.0050000010000000004"
+        "45 * pi / 180 == pi / 4"
        ]
       },
       {
-       "math": "A = \\frac{1}{2}(3)^2\\frac{\\pi}{4} = \\frac{9\\pi}{8} \\approx 3.53\\ \\text{cm}^2",
-       "en": "Area of a sector.",
-       "ur": "قطاع کا رقبہ۔",
+       "math": "\\ell = r\\theta = 3 \\times \\frac{\\pi}{4} = \\frac{3\\pi}{4} \\approx 2.36\\ \\text{cm}",
+       "en": "Now, use the formula $\\ell = r\\theta$ and substitute the values of $r$ and $\\theta$ to find the arc length $\\ell$.",
+       "ur": "اب، قوس کی لمبائی $\\ell$ معلوم کرنے کے لیے فارمولا $\\ell = r\\theta$ استعمال کریں اور اس میں $r$ اور $\\theta$ کی قیمتیں درج کریں۔",
        "check": [
+        "3 * (pi / 4) == 3 * pi / 4",
+        "Abs((3*pi/4) - 2.36) <= 0.005000001"
+       ]
+      },
+      {
+       "math": "A = \\frac{1}{2}r^2\\theta = \\frac{1}{2}(3)^2\\left(\\frac{\\pi}{4}\\right) = \\frac{1}{2}(9)\\left(\\frac{\\pi}{4}\\right) = \\frac{9\\pi}{8} \\approx 3.53\\ \\text{cm}^2",
+       "en": "Next, use the formula $A = \\frac{1}{2}r^2\\theta$ and substitute the values of $r$ and $\\theta$ to calculate the area of the sector.",
+       "ur": "اس کے بعد، قطاع کا رقبہ معلوم کرنے کے لیے فارمولا $A = \\frac{1}{2}r^2\\theta$ استعمال کریں اور اس میں $r$ اور $\\theta$ کی قیمتیں درج کریں۔",
+       "check": [
+        "R(1, 2) * (3**2) * (pi / 4) == 9 * pi / 8",
+        "Abs((9*pi/8) - 3.53) <= 0.005000001"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Thus, the arc length is $\\ell = \\frac{3\\pi}{4} \\approx 2.36\\text{ cm}$ and the area of the sector is $A = \\frac{9\\pi}{8} \\approx 3.53\\text{ cm}^2$.",
+       "ur": "پس، قوس کی لمبائی $\\ell = \\frac{3\\pi}{4} \\approx 2.36\\text{ cm}$ ہے اور قطاع کا رقبہ $A = \\frac{9\\pi}{8} \\approx 3.53\\text{ cm}^2$ ہے۔",
+       "check": [
+        "Abs((3*pi/4) - 2.36) <= 0.0050000010000000004",
         "Abs((9*pi/8) - 3.53) <= 0.0050000010000000004"
        ]
       }
      ],
      "answer": "$\\ell = \\frac{3\\pi}{4} \\approx 2.36$ cm, $A = \\frac{9\\pi}{8} \\approx 3.53$ cm$^2$",
+     "enriched": true,
      "book_key": "\\ell=\\frac{3\\pi}{4}\\approx 2.36 cm, A=\\frac{9\\pi}{8}\\approx 3.53 cm^2"
     }
    ],
@@ -726,23 +1338,41 @@
      "prompt": "",
      "steps": [
       {
-       "math": "\\pi r^2 = \\frac{22}{7} \\times 14^2 = 616\\ \\text{cm}^2",
-       "en": "Area of the whole pizza (using $\\pi = \\frac{22}{7}$).",
-       "ur": "پورے پیزا کا رقبہ ($\\pi = \\frac{22}{7}$)۔",
+       "math": "r = 14\\text{ cm}",
+       "en": "First, write down the given radius ($r$) of the circular pizza.",
+       "ur": "سب سے پہلے، گول پیزا کا دیا گیا رداس ($r$) لکھیں۔"
+      },
+      {
+       "math": "\\text{Area of a circle} = \\pi r^2",
+       "en": "To find the total area of the whole pizza, we use the formula for the area of a circle.",
+       "ur": "پورے پیزا کا کل رقبہ معلوم کرنے کے لیے، ہم دائرے کے رقبے کا فارمولا استعمال کرتے ہیں۔"
+      },
+      {
+       "math": "\\text{Total Area} = \\frac{22}{7} \\times (14)^2 = \\frac{22}{7} \\times 196 = 616\\text{ cm}^2",
+       "en": "Substitute $r = 14\\text{ cm}$ and $\\pi = \\frac{22}{7}$ into the formula to calculate the total area.",
+       "ur": "کل رقبہ معلوم کرنے کے لیے فارمولے میں $r = 14\\text{ cm}$ اور $\\pi = \\frac{22}{7}$ درج کریں۔",
        "check": [
-        "R(22,7)*14**2 == 616"
+        "14**2 == 196",
+        "R(22,7)*196 == 616"
        ]
       },
       {
-       "math": "\\frac{616}{8} = 77\\ \\text{cm}^2",
-       "en": "Eight equal slices.",
-       "ur": "آٹھ برابر ٹکڑے۔",
+       "math": "\\text{Area of 1 slice} = \\frac{\\text{Total Area}}{n}",
+       "en": "Since the pizza is cut into $n = 8$ equal slices (sectors), the area of one slice is the total area divided by $n$.",
+       "ur": "چونکہ پیزا کو $n = 8$ برابر ٹکڑوں (سیکٹرز) میں کاٹا گیا ہے، اس لیے ایک ٹکڑے کا رقبہ کل رقبے کو $n$ پر تقسیم کرنے سے حاصل ہوگا۔"
+      },
+      {
+       "math": "\\text{Area of 1 slice} = \\frac{616}{8} = 77\\text{ cm}^2",
+       "en": "Divide the total area $616\\text{ cm}^2$ by $8$ to find the area of a single slice.",
+       "ur": "ایک ٹکڑے کا رقبہ معلوم کرنے کے لیے کل رقبہ $616\\text{ cm}^2$ کو $8$ پر تقسیم کریں۔",
        "check": [
-        "616/8 == 77"
+        "616/8 == 77",
+        "R(22,7)*14**2 == 616"
        ]
       }
      ],
      "answer": "$77$ cm$^2$",
+     "enriched": true,
      "book_key": "77 cm^2"
     }
    ],
@@ -811,16 +1441,27 @@
      "steps": [
       {
        "math": "",
-       "en": "A tangent touches at exactly one point.",
-       "ur": "مماس صرف ایک نقطے پر چھوتا ہے۔"
+       "en": "We need to determine how many points on the circumference of a circle a tangent line touches.",
+       "ur": "ہمیں یہ معلوم کرنا ہے کہ ایک مماس دائرے کے محیط کو کتنے نقاط پر چھوتا ہے۔"
+      },
+      {
+       "math": "",
+       "en": "By the geometric definition of a tangent to a circle, it is a straight line that touches the outer boundary (circumference) of the circle at one and only one point, known as the point of contact or point of tangency.",
+       "ur": "دائرے کے مماس کی ہندسی تعریف کے مطابق، یہ ایک ایسا خطِ مستقیم ہے جو دائرے کی بیرونی حد (محیط) کو صرف اور صرف ایک نقطے پر چھوتا ہے، جسے نقطہ تماس کہا جاتا ہے۔"
+      },
+      {
+       "math": "",
+       "en": "Notice that a line intersecting a circle at two distinct points is called a secant line, not a tangent.",
+       "ur": "غور کریں کہ جو خط دائرے کو دو مختلف نقاط پر قطع کرتا ہے اسے قاطع خط کہتے ہیں، مماس نہیں۔"
       },
       {
        "math": "\\text{Answer: (d) } \\text{one point}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Comparing this definition with the given options, option (d) is the correct answer.",
+       "ur": "اس تعریف کا دیے گئے آپشنز سے موازنہ کرنے پر، آپشن (d) درست جواب ہے۔"
       }
      ],
      "answer": "(d) $\\text{one point}$",
+     "enriched": true,
      "book_key": "(d) one point"
     },
     {
@@ -829,16 +1470,35 @@
      "steps": [
       {
        "math": "",
-       "en": "Exactly two tangents from an external point.",
-       "ur": "بیرونی نقطے سے دو مماس۔"
+       "en": "We need to find the number of tangents that can be drawn to a circle from a given point located outside the circle.",
+       "ur": "ہمیں یہ معلوم کرنا ہے کہ دائرے کے باہر واقع کسی نقطے سے دائرے پر کتنے مماس کھینچے جا سکتے ہیں۔"
+      },
+      {
+       "math": "",
+       "en": "First, recall that a tangent to a circle is a straight line that touches the circle at exactly one point.",
+       "ur": "سب سے پہلے، یاد رکھیں کہ دائرے کا مماس ایک ایسی سیدھی لائن ہوتی ہے جو دائرے کو صرف ایک نقطے پر چھوتی ہے۔"
+      },
+      {
+       "math": "",
+       "en": "According to the properties of a circle: (1) No tangent can be drawn from a point inside the circle. (2) Only one tangent can be drawn from a point on the circle. (3) Exactly two tangents can be drawn from a point outside the circle.",
+       "ur": "دائرے کی خصوصیات کے مطابق: (1) دائرے کے اندرونی نقطے سے کوئی مماس نہیں کھینچا جا سکتا۔ (2) دائرے کے اوپر واقع نقطے سے صرف ایک مماس کھینچا جا سکتا ہے۔ (3) دائرے کے بیرونی نقطے سے بالکل دو مماس کھینچے جا سکتے ہیں۔"
+      },
+      {
+       "math": "\\text{Number of tangents} = 2",
+       "en": "Since the given point is outside the circle, the number of tangents that can be drawn from it is $2$.",
+       "ur": "چونکہ دیا گیا نقطہ دائرے کے باہر ہے، اس لیے اس سے کھینچے جا سکنے والے مماس کی تعداد $2$ ہے۔",
+       "check": [
+        "2 == 2"
+       ]
       },
       {
        "math": "\\text{Answer: (b) } \\text{two}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Therefore, the correct option is (b) $\\text{two}$.",
+       "ur": "لہذا، درست جواب (b) $\\text{two}$ (دو) ہے۔"
       }
      ],
      "answer": "(b) $\\text{two}$",
+     "enriched": true,
      "book_key": "(b) two"
     },
     {
@@ -847,16 +1507,35 @@
      "steps": [
       {
        "math": "",
-       "en": "The centre is inside the circle: no tangent.",
-       "ur": "مرکز دائرے کے اندر ہے: کوئی مماس نہیں۔"
+       "en": "We are asked to find the number of tangents that can be drawn to a circle from its centre.",
+       "ur": "ہمیں یہ معلوم کرنا ہے کہ دائرے کے مرکز سے دائرے پر کتنے مماس کھینچے جا سکتے ہیں۔"
+      },
+      {
+       "math": "",
+       "en": "By definition, a tangent is a straight line that touches the circumference of a circle at exactly one point and lies entirely outside the interior of the circle.",
+       "ur": "تعریف کے مطابق، مماس ایک ایسی سیدھی لائن ہے جو دائرے کے محیط کو صرف ایک نقطہ پر چھوتی ہے اور دائرے کے اندرونی حصے سے مکمل طور پر باہر ہوتی ہے۔"
+      },
+      {
+       "math": "",
+       "en": "Since the centre lies strictly inside the circle, any straight line passing through the centre will intersect the circle at two distinct points (forming a secant line or diameter), rather than touching it at a single point.",
+       "ur": "چونکہ مرکز دائرے کے بالکل اندر واقع ہوتا ہے، اس لیے مرکز سے گزرنے والی کوئی بھی سیدھی لائن دائرے کو ایک نقطہ پر چھونے کے بجائے دو مختلف نقاط پر قطع کرے گی (جو کہ خط قاطع یا قطر بناتی ہے)۔"
+      },
+      {
+       "math": "\\text{Number of tangents} = 0",
+       "en": "Therefore, no tangent can be drawn to a circle from any point inside it, including its centre.",
+       "ur": "لہٰذا، دائرے کے اندر واقع کسی بھی نقطہ (بشمول اس کے مرکز) سے دائرے پر کوئی مماس نہیں کھینچا جا سکتا۔",
+       "check": [
+        "0 == 0"
+       ]
       },
       {
        "math": "\\text{Answer: (a) } \\text{zero}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Comparing this conclusion with the given options, option (a) is the correct answer.",
+       "ur": "اس نتیجے کا دیے گئے ممکنہ جوابات سے موازنہ کرنے پر، آپشن (a) درست جواب ہے۔"
       }
      ],
      "answer": "(a) $\\text{zero}$",
+     "enriched": true,
      "book_key": "(a) zero"
     },
     {
@@ -865,16 +1544,27 @@
      "steps": [
       {
        "math": "",
-       "en": "A tangent is perpendicular to the radius at the point of contact.",
-       "ur": "مماس نقطہ تماس پر رداس کے عمود ہوتا ہے۔"
+       "en": "We are asked to identify the geometric relationship between the radius of a circle and a tangent line drawn to that circle.",
+       "ur": "ہمیں ایک دائرے کے رداس اور اس دائرے پر کھینچے گئے مماس کے درمیان جیومیٹریکل تعلق کی نشاندہی کرنے کا کہا گیا ہے۔"
+      },
+      {
+       "math": "",
+       "en": "Recall the definitions: A radius is a line segment from the centre of the circle to any point on its circumference, while a tangent is a straight line that touches the circle at exactly one point (called the point of contact).",
+       "ur": "تعریفیں یاد کریں: رداس دائرے کے مرکز سے اس کے محیط کے کسی بھی نقطے تک کا قطعہ خط ہوتا ہے، جبکہ مماس ایک ایسی سیدھی لائن ہے جو دائرے کو صرف ایک نقطے (جسے نقطہ تماس کہتے ہیں) پر چھوتی ہے۔"
+      },
+      {
+       "math": "\\text{Radius } \\perp \\text{ Tangent}",
+       "en": "According to the fundamental theorem of circles (Theorem 10.1 in the textbook), the radial segment of a circle and the tangent line are always perpendicular to each other at the point of contact.",
+       "ur": "دائرے کے بنیادی مسئلے (درسی کتاب میں مسئلہ 10.1) کے مطابق، دائرے کا رداسی قطعہ اور مماس نقطہ تماس پر ہمیشہ ایک دوسرے کے عمود ہوتے ہیں۔"
       },
       {
        "math": "\\text{Answer: (c) } \\text{perpendicular}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Comparing this geometric property with the given choices, option (c) is the correct answer.",
+       "ur": "اس جیومیٹریکل خصوصیت کا دیے گئے آپشنز سے موازنہ کرنے پر، آپشن (c) درست جواب ہے۔"
       }
      ],
      "answer": "(c) $\\text{perpendicular}$",
+     "enriched": true,
      "book_key": "(c) perpendicular"
     },
     {
@@ -883,16 +1573,45 @@
      "steps": [
       {
        "math": "",
-       "en": "In the major segment the angle is acute.",
-       "ur": "بڑے قطعے میں زاویہ حادہ ہوتا ہے۔"
+       "en": "We need to determine the type of angle formed in a segment of a circle that is greater than a semicircle.",
+       "ur": "ہمیں یہ معلوم کرنا ہے کہ دائرے کے ایسے قطعے میں جو نیم دائرے سے بڑا ہو، کس قسم کا زاویہ بنتا ہے۔"
+      },
+      {
+       "math": "",
+       "en": "A segment of a circle that is greater than a semicircle is called a major segment.",
+       "ur": "دائرے کا وہ قطعہ جو نیم دائرے سے بڑا ہوتا ہے، کبیرہ قطعہ (بڑا قطعہ) کہلاتا ہے۔"
+      },
+      {
+       "math": "",
+       "en": "In a major segment, the arc opposite to the inscribed angle is a minor arc, which subtends a central angle of less than $180^\\circ$ at the centre of the circle.",
+       "ur": "بڑے قطعے میں، محصور زاویے کے سامنے والی قوس ایک صغیرہ قوس (چھوٹی قوس) ہوتی ہے، جو دائرے کے مرکز پر $180^\\circ$ سے کم کا مرکزی زاویہ بناتی ہے۔"
+      },
+      {
+       "math": "",
+       "en": "According to the circle theorem, the inscribed angle is half of the central angle subtended by the same arc.",
+       "ur": "دائرے کے مسئلے کے مطابق، محصور زاویہ اسی قوس سے بننے والے مرکزی زاویے کا نصف ہوتا ہے۔"
+      },
+      {
+       "math": "\\frac{180^\\circ}{2} = 90^\\circ",
+       "en": "Since the central angle is less than $180^\\circ$, half of it will be less than $90^\\circ$.",
+       "ur": "چونکہ مرکزی زاویہ $180^\\circ$ سے کم ہے، اس لیے اس کا نصف $90^\\circ$ سے کم ہوگا۔",
+       "check": [
+        "180/2 == 90"
+       ]
+      },
+      {
+       "math": "",
+       "en": "An angle that measures less than $90^\\circ$ is called an acute angle. Therefore, an angle in a major segment is always an acute angle.",
+       "ur": "ایسا زاویہ جس کی مقدار $90^\\circ$ سے کم ہو، حادہ زاویہ کہلاتا ہے۔ لہٰذا بڑے قطعے میں بننے والا زاویہ ہمیشہ حادہ زاویہ ہوتا ہے۔"
       },
       {
        "math": "\\text{Answer: (a) } \\text{an acute}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Choose the option that matches our conclusion.",
+       "ur": "وہ جواب منتخب کریں جو ہمارے نتیجے سے مطابقت رکھتا ہو۔"
       }
      ],
      "answer": "(a) $\\text{an acute}$",
+     "enriched": true,
      "book_key": "(a) an acute"
     },
     {
@@ -901,16 +1620,27 @@
      "steps": [
       {
        "math": "",
-       "en": "It is the central angle.",
-       "ur": "یہ مرکزی زاویہ ہے۔"
+       "en": "We need to identify the correct name for the angle that is subtended (formed) by an arc at the centre of a circle.",
+       "ur": "ہمیں اس زاویے کا صحیح نام بتانا ہے جو کسی قوس (arc) کی وجہ سے دائرے کے مرکز پر بنتا ہے۔"
+      },
+      {
+       "math": "",
+       "en": "According to the geometry of a circle, when the endpoints of an arc are joined to the centre of the circle by two radii, the angle formed between these two radii has its vertex at the centre.",
+       "ur": "دائرے کی جیومیٹری کے مطابق، جب کسی قوس کے دونوں سروں کو دو رداسوں (radii) کے ذریعے دائرے کے مرکز سے ملایا جاتا ہے، تو ان دو رداسوں کے درمیان بننے والے زاویے کا راس (vertex) مرکز پر ہوتا ہے۔"
+      },
+      {
+       "math": "\\text{Angle at the centre} = \\text{Central angle}",
+       "en": "By definition, an angle whose vertex is at the centre of the circle and whose arms are the radii of the circle is called a $\\text{central angle}$.",
+       "ur": "تعریف کے مطابق، وہ زاویہ جس کا راس دائرے کے مرکز پر ہو اور جس کے بازو دائرے کے رداس ہوں، $\\text{central angle}$ (مرکزی زاویہ) کہلاتا ہے۔"
       },
       {
        "math": "\\text{Answer: (b) } \\text{central angle}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Therefore, the correct option is (b).",
+       "ur": "لہٰذا، درست جواب (b) ہے۔"
       }
      ],
      "answer": "(b) $\\text{central angle}$",
+     "enriched": true,
      "book_key": "(b) central angle"
     },
     {
@@ -919,16 +1649,38 @@
      "steps": [
       {
        "math": "",
-       "en": "The angle in a semicircle is a right angle.",
-       "ur": "نصف دائرے میں زاویہ قائمہ ہوتا ہے۔"
+       "en": "We need to find the measure of an angle that is inscribed in a semi-circle.",
+       "ur": "ہمیں نصف دائرے میں محصور زاویے کی مقدار معلوم کرنی ہے۔"
+      },
+      {
+       "math": "\\theta_{\\text{central}} = 180^\\circ",
+       "en": "The diameter of a circle divides it into two semi-circles. The central angle subtended by the diameter at the centre is a straight angle, which is $180^\\circ$.",
+       "ur": "دائرے کا قطر اسے دو نصف دائروں میں تقسیم کرتا ہے۔ مرکز پر قطر سے بننے والا مرکزی زاویہ زاویہ مستقیم ہوتا ہے، جو کہ $180^\\circ$ ہے۔",
+       "check": [
+        "180 == 180"
+       ]
+      },
+      {
+       "math": "",
+       "en": "According to the circle theorem, the measure of a central angle is double the measure of the inscribed angle subtended by the same arc (or the inscribed angle is half of the central angle).",
+       "ur": "دائرے کے مسئلے کے مطابق، کسی قوس سے بننے والا مرکزی زاویہ اسی قوس کے محصور زاویے کا دوگنا ہوتا ہے (یا محصور زاویہ مرکزی زاویے کا نصف ہوتا ہے)۔"
+      },
+      {
+       "math": "\\theta_{\\text{inscribed}} = \\frac{180^\\circ}{2} = 90^\\circ",
+       "en": "Substitute the central angle of $180^\\circ$ and divide by $2$ to find the inscribed angle. An angle of $90^\\circ$ is called a right angle.",
+       "ur": "محصور زاویہ معلوم کرنے کے لیے مرکزی زاویہ $180^\\circ$ درج کریں اور اسے $2$ پر تقسیم کریں۔ $90^\\circ$ کے زاویے کو زاویہ قائمہ کہتے ہیں۔",
+       "check": [
+        "R(180, 2) == 90"
+       ]
       },
       {
        "math": "\\text{Answer: (c) } 90^\\circ",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Therefore, the angle in a semi-circle is $90^\\circ$, which matches option (c).",
+       "ur": "لہٰذا، نصف دائرے میں محصور زاویہ $90^\\circ$ ہوتا ہے، جو کہ آپشن (c) سے مطابقت رکھتا ہے۔"
       }
      ],
      "answer": "(c) $90^\\circ$",
+     "enriched": true,
      "book_key": "(c) 90^\\circ"
     },
     {
@@ -937,16 +1689,27 @@
      "steps": [
       {
        "math": "",
-       "en": "Angles in the same segment (on the same chord, same side) are equal.",
-       "ur": "ایک ہی قطعے کے زاویے (ایک ہی وتر پر، ایک ہی طرف) برابر ہوتے ہیں۔"
+       "en": "We need to determine the relationship between any two angles formed in the same segment of a circle.",
+       "ur": "ہمیں دائرے کے ایک ہی قطعہ (segment) میں بننے والے کسی بھی دو زاویوں کے درمیان تعلق معلوم کرنا ہے۔"
+      },
+      {
+       "math": "",
+       "en": "We know that the central angle subtended by an arc at the centre of a circle is double the angle subtended by it at any point in the corresponding segment.",
+       "ur": "ہم جانتے ہیں کہ کسی قوس سے دائرے کے مرکز پر بننے والا مرکزی زاویہ، اسی قوس سے متعلقہ قطعہ میں کسی بھی نقطہ پر بننے والے زاویے کا دگنا ہوتا ہے۔"
+      },
+      {
+       "math": "",
+       "en": "Since any two angles in the same segment are both half of the same central angle, they must be equal in measure to each other (Theorem 2 of Unit 12).",
+       "ur": "چونکہ ایک ہی قطعہ میں بننے والے کوئی بھی دو زاویے ایک ہی مرکزی زاویے کا نصف ہوتے ہیں، اس لیے وہ مقدار میں ایک دوسرے کے برابر ہوتے ہیں (یونٹ 12 کا مسئلہ 2)۔"
       },
       {
        "math": "\\text{Answer: (c) } \\text{equal}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Therefore, the correct option is (c).",
+       "ur": "لہذا، درست جواب (c) ہے۔"
       }
      ],
      "answer": "(c) $\\text{equal}$",
+     "enriched": true,
      "book_key": "(c) equal"
     },
     {
@@ -955,16 +1718,35 @@
      "steps": [
       {
        "math": "",
-       "en": "$A = \\frac{1}{2}r^2\\theta$ with $\\theta$ in radians.",
-       "ur": "$A = \\frac{1}{2}r^2\\theta$ (ریڈین میں)۔"
+       "en": "We need to find the standard formula for the area of a sector of a circle when the radius is $r$ and the central angle is $\\theta$ (in radians).",
+       "ur": "ہمیں دائرے کے سیکٹر (sector) کا رقبہ معلوم کرنے کا معیاری فارمولا بتانا ہے جب رداس $r$ ہو اور مرکزی زاویہ $\\theta$ (ریڈین میں) ہو۔"
+      },
+      {
+       "math": "",
+       "en": "A full circle has a total central angle of $2\\pi$ radians and its total area is $\\pi r^2$.",
+       "ur": "ایک مکمل دائرے کا کل مرکزی زاویہ $2\\pi$ ریڈین ہوتا ہے اور اس کا کل رقبہ $\\pi r^2$ ہوتا ہے۔"
+      },
+      {
+       "math": "",
+       "en": "The area of a sector $A$ is proportional to its central angle $\\theta$. Therefore, the ratio of the sector's area to the circle's area is equal to the ratio of $\\theta$ to $2\\pi$, which gives $\\frac{A}{\\pi r^2} = \\frac{\\theta}{2\\pi}$.",
+       "ur": "سیکٹر کا رقبہ $A$ اس کے مرکزی زاویے $\\theta$ کے متناسب ہوتا ہے۔ اس لیے سیکٹر کے رقبے اور دائرے کے کل رقبے کی نسبت، زاویہ $\\theta$ اور کل زاویہ $2\\pi$ کی نسبت کے برابر ہوتی ہے، یعنی $\\frac{A}{\\pi r^2} = \\frac{\\theta}{2\\pi}$۔"
+      },
+      {
+       "math": "A = \\frac{\\theta}{2\\pi} \\times \\pi r^2 = \\frac{1}{2}r^2\\theta",
+       "en": "Multiplying both sides by $\\pi r^2$ and canceling $\\pi$, we get the formula for the area of a sector.",
+       "ur": "دونوں طرف $\\pi r^2$ سے ضرب دینے اور $\\pi$ کو کینسل کرنے سے ہمیں سیکٹر کے رقبے کا فارمولا حاصل ہوتا ہے۔",
+       "check": [
+        "(1/(2*pi))*pi == R(1,2)"
+       ]
       },
       {
        "math": "\\text{Answer: (c) } \\frac{1}{2}r^2\\theta",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Comparing this result with the given options, option (c) is the correct answer.",
+       "ur": "اس نتیجے کا دیے گئے آپشنز سے موازنہ کرنے پر، آپشن (c) درست جواب ہے۔"
       }
      ],
      "answer": "(c) $\\frac{1}{2}r^2\\theta$",
+     "enriched": true,
      "book_key": "(c) \\frac{1}{2}r^2\\theta"
     },
     {
@@ -972,20 +1754,46 @@
      "prompt": "If $r = 6$ cm and $\\theta = 2$ radians, then arc length is: (a) $12\\text{ cm}$ (b) $8\\text{ cm}$ (c) $6\\text{ cm}$ (d) $3\\text{ cm}$",
      "steps": [
       {
-       "math": "\\ell = r\\theta = 6 \\times 2 = 12",
-       "en": "Arc length.",
-       "ur": "قوس کی لمبائی۔",
+       "math": "r = 6\\text{ cm}, \\quad \\theta = 2\\text{ radians}",
+       "en": "Identify the given values for the radius $r$ and the central angle $\\theta$.",
+       "ur": "رداس $r$ اور مرکزی زاویہ $\\theta$ کی دی گئی قیمتیں لکھیں۔",
+       "check": [
+        "6 == 6",
+        "2 == 2"
+       ]
+      },
+      {
+       "math": "\\ell = r\\theta",
+       "en": "Write down the formula that relates arc length $\\ell$, radius $r$, and central angle $\\theta$ (in radians).",
+       "ur": "قوس کی لمبائی $\\ell$، رداس $r$، اور مرکزی زاویہ $\\theta$ (ریڈین میں) کے درمیان تعلق کا فارمولا لکھیں۔"
+      },
+      {
+       "math": "\\ell = 6 \\times 2",
+       "en": "Substitute the given values $r = 6$ and $\\theta = 2$ into the formula.",
+       "ur": "فارمولے میں دی گئی قیمتیں $r = 6$ اور $\\theta = 2$ درج کریں۔",
+       "check": [
+        "6*2 == 12"
+       ]
+      },
+      {
+       "math": "\\ell = 12\\text{ cm}",
+       "en": "Multiply the numbers to find the arc length $\\ell$.",
+       "ur": "قوس کی لمبائی $\\ell$ معلوم کرنے کے لیے اعداد کو ضرب دیں۔",
        "check": [
         "6*2 == 12"
        ]
       },
       {
        "math": "\\text{Answer: (a) } 12\\text{ cm}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Compare the result with the given choices and select the correct option.",
+       "ur": "نتیجے کا دیے گئے ممکنہ جوابات سے موازنہ کریں اور درست جواب منتخب کریں۔",
+       "check": [
+        "6*2 == 12"
+       ]
       }
      ],
      "answer": "(a) $12\\text{ cm}$",
+     "enriched": true,
      "book_key": "(a) 12 cm"
     }
    ],
@@ -1003,24 +1811,56 @@
      "prompt": "",
      "steps": [
       {
-       "math": "OQ^2 = OP^2 + PQ^2 \\Rightarrow 625 = OP^2 + 576",
-       "en": "Pythagoras in the right triangle formed by the radius, the tangent and the line to the centre.",
-       "ur": "رداس، مماس اور مرکز تک کے خط سے بننے والی قائمہ مثلث میں فیثا غورث۔",
+       "math": "PQ = 24\\ \\text{cm}, \\quad OQ = 25\\ \\text{cm}, \\quad OP = r = ?",
+       "en": "Write down the given lengths from the figure. We need to find the radius $OP$ of the circle.",
+       "ur": "شکل سے دی گئی لمبائیاں لکھیں۔ ہمیں دائرے کا رداس $OP$ معلوم کرنا ہے۔"
+      },
+      {
+       "math": "OP \\perp PQ \\implies m\\angle OPQ = 90^\\circ",
+       "en": "By theorem, the tangent to a circle is perpendicular to the radial segment at the point of contact $P$. Thus, $\\triangle OPQ$ is a right-angled triangle.",
+       "ur": "مسئلے کے مطابق، دائرے کا مماس نقطہ تماس $P$ پر رداسی قطعہ خط پر عمود ہوتا ہے۔ اس لیے، $\\triangle OPQ$ ایک قائمۃ الزاویہ مثلث ہے۔"
+      },
+      {
+       "math": "(OQ)^2 = (OP)^2 + (PQ)^2",
+       "en": "Apply the Pythagoras theorem to the right-angled triangle $\\triangle OPQ$, where $OQ$ is the hypotenuse.",
+       "ur": "قائمۃ الزاویہ مثلث $\\triangle OPQ$ پر مسئلہ فیثاغورث لاگو کریں، جہاں $OQ$ وتر ہے۔"
+      },
+      {
+       "math": "(25)^2 = (OP)^2 + (24)^2",
+       "en": "Substitute the given values $OQ = 25$ and $PQ = 24$ into the equation.",
+       "ur": "مساوات میں دی گئی قیمتیں $OQ = 25$ اور $PQ = 24$ درج کریں۔"
+      },
+      {
+       "math": "625 = (OP)^2 + 576",
+       "en": "Calculate the squares of $25$ and $24$.",
+       "ur": "$25$ اور $24$ کا مربع معلوم کریں۔",
        "check": [
         "25**2 == 625",
         "24**2 == 576"
        ]
       },
       {
-       "math": "OP^2 = 49 \\Rightarrow OP = 7\\ \\text{cm}",
-       "en": "Solve.",
-       "ur": "حل کریں۔",
+       "math": "(OP)^2 = 625 - 576 = 49",
+       "en": "Subtract $576$ from both sides to isolate $(OP)^2$.",
+       "ur": "$(OP)^2$ کو الگ کرنے کے لیے دونوں طرف سے $576$ تفریق کریں۔",
        "check": [
+        "625 - 576 == 49"
+       ]
+      },
+      {
+       "math": "OP = \\sqrt{49} = 7\\ \\text{cm}",
+       "en": "Take the positive square root on both sides (since length cannot be negative). Hence, the radius of the circle is $7$ cm.",
+       "ur": "دونوں طرف مثبت جذر لیں (کیونکہ لمبائی منفی نہیں ہو سکتی)۔ لہٰذا، دائرے کا رداس $7$ سینٹی میٹر ہے۔",
+       "check": [
+        "sqrt(49) == 7",
+        "25**2 == 625",
+        "24**2 == 576",
         "sqrt(625 - 576) == 7"
        ]
       }
      ],
      "answer": "$7$ cm",
+     "enriched": true,
      "book_key": "7 cm"
     }
    ],
@@ -1077,23 +1917,67 @@
      "prompt": "",
      "steps": [
       {
-       "math": "\\angle OLM = 90^\\circ \\Rightarrow a = \\angle LOM = 180^\\circ - 90^\\circ - 22^\\circ = 68^\\circ",
-       "en": "A tangent is perpendicular to the radius at the point of contact.",
-       "ur": "مماس نقطہ تماس پر رداس کے عمود ہوتا ہے۔",
+       "math": "\\angle LMO = 22^\\circ",
+       "en": "From the given figure, $O$ is the centre of the circle, $\\overrightarrow{ML}$ is a tangent line at point $L$, and the angle $\\angle LMO$ is $22^\\circ$.",
+       "ur": "دی گئی شکل کے مطابق، $O$ دائرے کا مرکز ہے، $\\overrightarrow{ML}$ نقطہ $L$ پر ایک مماس ہے، اور زاویہ $\\angle LMO = 22^\\circ$ ہے۔",
+       "check": [
+        "22 == 22"
+       ]
+      },
+      {
+       "math": "\\angle OLM = 90^\\circ",
+       "en": "By the tangent-radius theorem, the tangent line $\\overrightarrow{ML}$ is perpendicular to the radial segment $OL$ at the point of contact $L$.",
+       "ur": "مماس اور رداس کے مسئلے کے مطابق، مماس $\\overrightarrow{ML}$ نقطہ تماس $L$ پر رداسی قطعہ خط $OL$ کے عمود ہوتا ہے۔",
+       "check": [
+        "90 == 90"
+       ]
+      },
+      {
+       "math": "a + \\angle OLM + \\angle LMO = 180^\\circ",
+       "en": "In the right-angled triangle $\\triangle OLM$, the sum of all interior angles is $180^\\circ$, where $a = \\angle LOM$.",
+       "ur": "قائمہ الزاویہ مثلث $\\triangle OLM$ میں، تمام اندرونی زاویوں کا مجموعہ $180^\\circ$ ہوتا ہے، جہاں $a = \\angle LOM$ ہے۔"
+      },
+      {
+       "math": "a = 180^\\circ - 90^\\circ - 22^\\circ = 68^\\circ",
+       "en": "Substitute the known angle values and solve to find the angle $a$.",
+       "ur": "معلوم زاویوں کی قیمتیں درج کریں اور زاویہ $a$ معلوم کرنے کے لیے حل کریں۔",
        "check": [
         "180 - 90 - 22 == 68"
        ]
       },
       {
-       "math": "OL = OC \\Rightarrow b = c = \\frac{180^\\circ - 68^\\circ}{2} = 56^\\circ",
-       "en": "Triangle $OLC$ is isosceles (two radii).",
-       "ur": "مثلث $OLC$ متساوی الساقین ہے۔",
+       "math": "OL = OC \\implies b = c",
+       "en": "Now consider $\\triangle OLC$. Since $OL$ and $OC$ are both radii of the same circle, they are equal in length. Thus, $\\triangle OLC$ is an isosceles triangle and the angles opposite to these sides are equal ($b = c$).",
+       "ur": "اب مثلث $\\triangle OLC$ پر غور کریں۔ چونکہ $OL$ اور $OC$ دونوں ایک ہی دائرے کے رداس ہیں، اس لیے ان کی لمبائی برابر ہے۔ لہٰذا، $\\triangle OLC$ ایک متساوی الساقین مثلث ہے اور ان اضلاع کے بالمقابل زاویے برابر ہیں ($b = c$)۔"
+      },
+      {
+       "math": "a + b + c = 180^\\circ \\implies 68^\\circ + b + b = 180^\\circ",
+       "en": "The sum of the interior angles in $\\triangle OLC$ is $180^\\circ$. Substitute $a = 68^\\circ$ and $c = b$.",
+       "ur": "مثلث $\\triangle OLC$ کے اندرونی زاویوں کا مجموعہ $180^\\circ$ ہے۔ $a = 68^\\circ$ اور $c = b$ درج کریں۔"
+      },
+      {
+       "math": "b = \\frac{180^\\circ - 68^\\circ}{2} = \\frac{112^\\circ}{2} = 56^\\circ",
+       "en": "Solve the equation for $b$. Since $c = b$, the angle $c$ is also $56^\\circ$.",
+       "ur": "مساوات کو $b$ کے لیے حل کریں۔ چونکہ $c = b$ ہے، اس لیے زاویہ $c$ بھی $56^\\circ$ ہے۔",
        "check": [
+        "180 - 68 == 112",
+        "R(112, 2) == 56"
+       ]
+      },
+      {
+       "math": "a = 68^\\circ,\\quad b = 56^\\circ,\\quad c = 56^\\circ",
+       "en": "State the final values of the required angles $a$, $b$, and $c$.",
+       "ur": "مطلوبہ زاویوں $a$، $b$ اور $c$ کی حتمی قیمتیں بیان کریں۔",
+       "check": [
+        "68 == 68",
+        "56 == 56",
+        "180 - 90 - 22 == 68",
         "(180 - 68)/2 == 56"
        ]
       }
      ],
      "answer": "$a = 68^\\circ,\\ b = 56^\\circ,\\ c = 56^\\circ$",
+     "enriched": true,
      "book_key": "a=68, b=56, c=56"
     }
    ],
@@ -1111,20 +1995,61 @@
      "prompt": "",
      "steps": [
       {
-       "math": "OS = OR \\Rightarrow a = b",
-       "en": "Two radii: triangle $SOR$ is isosceles.",
-       "ur": "دو رداس: مثلث $SOR$ متساوی الساقین ہے۔"
+       "math": "m\\angle SOR = 100^\\circ",
+       "en": "From the given figure, the central angle $\\angle SOR$ is $100^\\circ$, and we need to find the unknown angles $a$ and $b$.",
+       "ur": "دی گئی شکل کے مطابق، مرکزی زاویہ $\\angle SOR = 100^\\circ$ ہے، اور ہمیں نامعلوم زاویے $a$ اور $b$ معلوم کرنے ہیں۔",
+       "check": [
+        "100 == 100"
+       ]
       },
       {
-       "math": "100^\\circ + 2a = 180^\\circ \\Rightarrow a = b = 40^\\circ",
-       "en": "The angles of a triangle add to $180^\\circ$.",
-       "ur": "مثلث کے زاویوں کا مجموعہ $180^\\circ$ ہے۔",
+       "math": "m\\overline{OS} = m\\overline{OR}",
+       "en": "In $\\triangle SOR$, the sides $\\overline{OS}$ and $\\overline{OR}$ are both radii of the same circle, so they are equal in length.",
+       "ur": "مثلث $SOR$ میں، اضلاع $\\overline{OS}$ اور $\\overline{OR}$ ایک ہی دائرے کے رداس ہیں، اس لیے ان کی لمبائی برابر ہے۔"
+      },
+      {
+       "math": "a = b",
+       "en": "Since two sides of $\\triangle SOR$ are equal, it is an isosceles triangle. Therefore, the angles opposite to these equal sides are also equal.",
+       "ur": "چونکہ مثلث $SOR$ کے دو اضلاع برابر ہیں، اس لیے یہ ایک متساوی الساقین مثلث ہے۔ لہٰذا، ان برابر اضلاع کے بالمقابل زاویے بھی آپس میں برابر ہیں۔"
+      },
+      {
+       "math": "m\\angle SOR + a + b = 180^\\circ",
+       "en": "The sum of the interior angles of any triangle is always $180^\\circ$.",
+       "ur": "کسی بھی مثلث کے اندرونی زاویوں کا مجموعہ ہمیشہ $180^\\circ$ ہوتا ہے۔"
+      },
+      {
+       "math": "100^\\circ + a + a = 180^\\circ",
+       "en": "Substitute $m\\angle SOR = 100^\\circ$ and replace $b$ with $a$ (since $a = b$).",
+       "ur": "$m\\angle SOR = 100^\\circ$ درج کریں اور $b$ کی جگہ $a$ رکھیں (کیونکہ $a = b$ ہے)۔"
+      },
+      {
+       "math": "2a = 180^\\circ - 100^\\circ = 80^\\circ",
+       "en": "Combine like terms and subtract $100^\\circ$ from both sides.",
+       "ur": "ایک جیسی رقوم کو جمع کریں اور دونوں طرف سے $100^\\circ$ تفریق کریں۔",
        "check": [
+        "180 - 100 == 80"
+       ]
+      },
+      {
+       "math": "a = \\frac{80^\\circ}{2} = 40^\\circ",
+       "en": "Divide both sides by $2$ to find the value of $a$.",
+       "ur": "$a$ کی قیمت معلوم کرنے کے لیے دونوں طرف $2$ سے تقسیم کریں۔",
+       "check": [
+        "80 / 2 == 40"
+       ]
+      },
+      {
+       "math": "a = 40^\\circ, \\quad b = 40^\\circ",
+       "en": "Since $a = b$, the value of $b$ is also $40^\\circ$.",
+       "ur": "چونکہ $a = b$ ہے، اس لیے $b$ کی قیمت بھی $40^\\circ$ ہے۔",
+       "check": [
+        "40 == 40",
         "(180 - 100)/2 == 40"
        ]
       }
      ],
      "answer": "$a = 40^\\circ,\\ b = 40^\\circ$",
+     "enriched": true,
      "book_key": "a=40, b=40"
     }
    ],
@@ -1142,15 +2067,31 @@
      "prompt": "",
      "steps": [
       {
-       "math": "d = r_1 + r_2 = 10 + 12 = 22\\ \\text{cm}",
-       "en": "External contact: sum of the radii.",
-       "ur": "بیرونی تماس: رداسوں کا مجموعہ۔",
+       "math": "r_1 = 10\\ \\text{cm}, \\quad r_2 = 12\\ \\text{cm}",
+       "en": "Identify the given radii of the two circular dining tables as $r_1 = 10$ cm and $r_2 = 12$ cm.",
+       "ur": "دونوں گول میزوں کے دیے گئے رداس لکھیں جو کہ $r_1 = 10$ سینٹی میٹر اور $r_2 = 12$ سینٹی میٹر ہیں۔"
+      },
+      {
+       "math": "d = r_1 + r_2",
+       "en": "According to the theorem, if two circles touch each other externally, the distance $d$ between their centres is equal to the sum of their radii.",
+       "ur": "مسئلے کے مطابق، اگر دو دائرے ایک دوسرے کو بیرونی طور پر مس کریں تو ان کے مراکز کے درمیان فاصلہ $d$ ان کے رداسوں کے مجموعے کے برابر ہوتا ہے۔"
+      },
+      {
+       "math": "d = 10 + 12",
+       "en": "Substitute the given values of $r_1$ and $r_2$ into the formula.",
+       "ur": "فارمولے میں $r_1$ اور $r_2$ کی دی گئی قیمتیں درج کریں۔"
+      },
+      {
+       "math": "d = 22\\ \\text{cm}",
+       "en": "Add the two values to find the distance between their centres. Thus, the distance is $22$ cm.",
+       "ur": "مراکز کے درمیان فاصلہ معلوم کرنے کے لیے دونوں قیمتوں کو جمع کریں۔ اس طرح، مطلوبہ فاصلہ $22$ سینٹی میٹر ہے۔",
        "check": [
         "10 + 12 == 22"
        ]
       }
      ],
      "answer": "$22$ cm",
+     "enriched": true,
      "book_key": "22 cm"
     }
    ],
@@ -1168,12 +2109,29 @@
      "prompt": "",
      "steps": [
       {
-       "math": "m\\angle EHF = m\\angle EGF = 65^\\circ",
-       "en": "Angles in the same segment (on the same chord, same side) are equal.",
-       "ur": "ایک ہی قطعے کے زاویے (ایک ہی وتر پر، ایک ہی طرف) برابر ہوتے ہیں۔"
+       "math": "m\\angle EGF = 65^\\circ",
+       "en": "We are given a circular mosaic where points $G$ and $H$ lie on the same arc above the chord $EF$, and the measure of $\\angle EGF$ is $65^\\circ$. We need to find the measure of $\\angle EHF$.",
+       "ur": "ہمیں ایک گول پچی کاری (موزیک) کا نمونہ دیا گیا ہے جہاں نقاط $G$ اور $H$ وتر $EF$ کے اوپر ایک ہی قوس پر واقع ہیں، اور زاویہ $\\angle EGF$ کی مقدار $65^\\circ$ ہے۔ ہمیں زاویہ $\\angle EHF$ کی مقدار معلوم کرنی ہے۔",
+       "check": [
+        "65 == 65"
+       ]
+      },
+      {
+       "math": "m\\angle EHF = m\\angle EGF",
+       "en": "According to the circle theorem, angles in the same segment of a circle (subtended by the same chord $EF$ on the same side) are equal in measure.",
+       "ur": "دائرے کے مسئلے کے مطابق، دائرے کے ایک ہی قطعے میں بننے والے زاویے (جو ایک ہی وتر $EF$ سے ایک ہی طرف بنتے ہیں) مقدار میں برابر ہوتے ہیں۔"
+      },
+      {
+       "math": "m\\angle EHF = 65^\\circ",
+       "en": "Substitute the given value $m\\angle EGF = 65^\\circ$ into the equation to get the final answer.",
+       "ur": "آخری جواب حاصل کرنے کے لیے مساوات میں دی گئی قیمت $m\\angle EGF = 65^\\circ$ درج کریں۔",
+       "check": [
+        "65 == 65"
+       ]
       }
      ],
      "answer": "$65^\\circ$",
+     "enriched": true,
      "book_key": "65"
     }
    ],
@@ -1191,12 +2149,34 @@
      "prompt": "",
      "steps": [
       {
+       "math": "",
+       "en": "A triangular frame is placed inside a semicircular gate such that its base is the diameter of the semicircle, and its peak (vertex) lies on the semicircular arc. We need to find the angle formed at the peak.",
+       "ur": "ایک مثلث نما فریم نصف دائرے کے دروازے کے اندر اس طرح نصب ہے کہ اس کا قاعدہ نصف دائرے کا قطر ہے، اور اس کی چوٹی (راس) نصف دائرے کی قوس پر واقع ہے۔ ہمیں چوٹی پر بننے والا زاویہ معلوم کرنا ہے۔"
+      },
+      {
+       "math": "\\text{Angle at the centre} = 180^\\circ",
+       "en": "Since the base of the triangle is the diameter of the circle, it is a straight line passing through the centre. Therefore, the central angle subtended by the diameter is $180^\\circ$.",
+       "ur": "چونکہ مثلث کا قاعدہ دائرے کا قطر ہے، یہ مرکز سے گزرنے والا ایک خطِ مستقیم ہے۔ اس لیے، قطر سے مرکز پر بننے والا زاویہ $180^\\circ$ ہے۔",
+       "check": [
+        "180 == 180"
+       ]
+      },
+      {
+       "math": "\\text{Angle at the peak} = \\frac{180^\\circ}{2} = 90^\\circ",
+       "en": "According to the circle theorem, the angle subtended by an arc at the circumference is half of the angle subtended by it at the centre. This is also known as the theorem that the angle in a semicircle is a right angle.",
+       "ur": "دائرے کے مسئلے کے مطابق، کسی قوس سے محیط پر بننے والا زاویہ اسی قوس سے مرکز پر بننے والے زاویے کا نصف ہوتا ہے۔ اسے اس مسئلے کے طور پر بھی جانا جاتا ہے کہ نصف دائرے میں بننے والا محصور زاویہ قائمہ ($90^\\circ$) ہوتا ہے۔",
+       "check": [
+        "180/2 == 90"
+       ]
+      },
+      {
        "math": "90^\\circ",
-       "en": "The angle in a semicircle is a right angle.",
-       "ur": "نصف دائرے میں زاویہ قائمہ ہوتا ہے۔"
+       "en": "Thus, the angle formed at the peak of the triangular frame is $90^\\circ$.",
+       "ur": "پس، مثلث نما فریم کی چوٹی پر بننے والا زاویہ $90^\\circ$ ہے۔"
       }
      ],
      "answer": "$90^\\circ$",
+     "enriched": true,
      "book_key": "90"
     }
    ],
@@ -1214,15 +2194,33 @@
      "prompt": "",
      "steps": [
       {
-       "math": "A = \\frac{1}{2}\\ell r = \\frac{1}{2} \\times 10 \\times 15 = 75\\ \\text{cm}^2",
-       "en": "$A = \\frac{1}{2}r^2\\theta = \\frac{1}{2}r\\ell$.",
-       "ur": "$A = \\frac{1}{2}r\\ell$۔",
+       "math": "r = 15\\ \\text{cm}, \\quad \\ell = 10\\ \\text{cm}",
+       "en": "First, write down the given radius $r$ of the circular cake and the arc length $\\ell$ of the slice. We need to find the area $A$ of this slice (sector).",
+       "ur": "سب سے پہلے، گول کیک کا دیا گیا رداس $r$ اور ٹکڑے کی قوس کی لمبائی $\\ell$ لکھیں۔ ہمیں اس ٹکڑے (قطاع) کا رقبہ $A$ معلوم کرنا ہے۔"
+      },
+      {
+       "math": "A = \\frac{1}{2} r \\ell",
+       "en": "Recall the formula for the area of a sector when the radius $r$ and arc length $\\ell$ are known (derived from $A = \\frac{1}{2}r^2\\theta$ and $\\ell = r\\theta$).",
+       "ur": "قطاع کے رقبے کا فارمولا یاد کریں جب رداس $r$ اور قوس کی لمبائی $\\ell$ معلوم ہوں (جو کہ $A = \\frac{1}{2}r^2\\theta$ اور $\\ell = r\\theta$ سے اخذ کیا گیا ہے)۔"
+      },
+      {
+       "math": "A = \\frac{1}{2} \\times 15 \\times 10",
+       "en": "Substitute the given values $r = 15$ and $\\ell = 10$ into the formula.",
+       "ur": "فارمولے میں دی گئی قیمتیں $r = 15$ اور $\\ell = 10$ درج کریں۔"
+      },
+      {
+       "math": "A = 15 \\times 5 = 75\\ \\text{cm}^2",
+       "en": "Simplify and multiply the numbers to get the final area of the cake slice.",
+       "ur": "کیک کے ٹکڑے کا حتمی رقبہ حاصل کرنے کے لیے مختصر کریں اور اعداد کو ضرب دیں۔",
        "check": [
+        "R(1,2)*15*10 == 15*5",
+        "15*5 == 75",
         "R(1,2)*10*15 == 75"
        ]
       }
      ],
      "answer": "$75$ cm$^2$",
+     "enriched": true,
      "book_key": "75 cm^2"
     }
    ],
@@ -1240,23 +2238,52 @@
      "prompt": "",
      "steps": [
       {
-       "math": "16 = 2(5) + \\ell \\Rightarrow \\ell = 6\\ \\text{cm}",
-       "en": "Perimeter = two radii + arc.",
-       "ur": "احاطہ = دو رداس + قوس۔",
+       "math": "r = 5\\ \\text{cm}, \\quad P = 16\\ \\text{cm}",
+       "en": "First, write down the given radius $r$ and the perimeter $P$ of the sector. We need to find the area $A$ of this sector.",
+       "ur": "سب سے پہلے، دیے گئے رداس $r$ اور قطاع کے احاطے $P$ کو لکھیں۔ ہمیں اس قطاع کا رقبہ $A$ معلوم کرنا ہے۔",
+       "check": [
+        "5 == 5",
+        "16 == 16"
+       ]
+      },
+      {
+       "math": "P = 2r + \\ell",
+       "en": "The perimeter of a sector is the sum of the lengths of its two radii and the arc length $\\ell$.",
+       "ur": "کسی قطاع کا احاطہ اس کے دو رداسوں اور قوس کی لمبائی $\\ell$ کے مجموعے کے برابر ہوتا ہے۔"
+      },
+      {
+       "math": "16 = 2(5) + \\ell \\Rightarrow 16 = 10 + \\ell",
+       "en": "Substitute the given values of $P = 16$ and $r = 5$ into the perimeter formula.",
+       "ur": "احاطے کے فارمولے میں دی گئی قیمتیں $P = 16$ اور $r = 5$ درج کریں۔",
+       "check": [
+        "2*5 == 10"
+       ]
+      },
+      {
+       "math": "\\ell = 16 - 10 = 6\\ \\text{cm}",
+       "en": "Solve the equation to find the arc length $\\ell$.",
+       "ur": "قوس کی لمبائی $\\ell$ معلوم کرنے کے لیے مساوات کو حل کریں۔",
        "check": [
         "16 - 10 == 6"
        ]
       },
       {
-       "math": "A = \\frac{1}{2}\\ell r = \\frac{1}{2} \\times 6 \\times 5 = 15\\ \\text{cm}^2",
-       "en": "Area of the sector.",
-       "ur": "قطاع کا رقبہ۔",
+       "math": "A = \\frac{1}{2}\\ell r",
+       "en": "Recall the formula for the area of a sector when the arc length $\\ell$ and radius $r$ are known.",
+       "ur": "جب قوس کی لمبائی $\\ell$ اور رداس $r$ معلوم ہوں تو قطاع کے رقبے کا فارمولا استعمال کریں۔"
+      },
+      {
+       "math": "A = \\frac{1}{2} \\times 6 \\times 5 = 15\\ \\text{cm}^2",
+       "en": "Substitute $\\ell = 6$ and $r = 5$ into the formula and calculate the area. Thus, the area of the sector is $15$ cm$^2$.",
+       "ur": "فارمولے میں $\\ell = 6$ اور $r = 5$ درج کریں اور رقبہ معلوم کریں۔ اس طرح، قطاع کا رقبہ $15$ cm$^2$ ہے۔",
        "check": [
-        "R(1,2)*6*5 == 15"
+        "R(1,2)*6*5 == 15",
+        "16 - 10 == 6"
        ]
       }
      ],
      "answer": "$15$ cm$^2$",
+     "enriched": true,
      "book_key": "15 cm^2"
     }
    ],

@@ -1,0 +1,50 @@
+{
+ "item": "c10-rev1-q3",
+ "label": "i",
+ "answer_ref": "$i$",
+ "steps": [
+  {
+   "math": "i^{37}",
+   "en": "We need to simplify the given power of the imaginary unit $i$, where $i = \\sqrt{-1}$ and $i^2 = -1$.",
+   "ur": "ہمیں دی گئی خیالی اکائی $i$ کی طاقت کو مختصر کرنا ہے، جہاں $i = \\sqrt{-1}$ اور $i^2 = -1$ ہے۔"
+  },
+  {
+   "math": "i^{37} = i^{36 + 1} = i^{36} \\cdot i^1",
+   "en": "To simplify a high power of $i$, we break the odd exponent $37$ into the nearest even number $36$ plus $1$, using the law of exponents $a^{m+n} = a^m \\cdot a^n$.",
+   "ur": "$i$ کی بڑی طاقت کو مختصر کرنے کے لیے، ہم قوت نما کے قانون $a^{m+n} = a^m \\cdot a^n$ کا استعمال کرتے ہوئے طاق قوت نما $37$ کو قریب ترین جفت عدد $36$ جمع $1$ میں توڑتے ہیں۔",
+   "check": [
+    "I**37 == I**(36 + 1)",
+    "I**(36 + 1) == I**36 * I**1"
+   ]
+  },
+  {
+   "math": "= (i^2)^{18} \\cdot i",
+   "en": "Write $i^{36}$ as a power of $i^2$ because we know the value of $i^2$. Since $36 = 2 \\times 18$, we have $i^{36} = (i^2)^{18}$.",
+   "ur": "$i^{36}$ کو $i^2$ کی طاقت کے طور پر لکھیں کیونکہ ہم $i^2$ کی قیمت جانتے ہیں۔ چونکہ $36 = 2 \\times 18$ ہے، اس لیے $i^{36} = (i^2)^{18}$ بنتا ہے۔",
+   "check": [
+    "I**37 == (I**2)**18 * I"
+   ]
+  },
+  {
+   "math": "= (-1)^{18} \\cdot i",
+   "en": "Substitute the fundamental value $i^2 = -1$ into the expression.",
+   "ur": "جملے میں بنیادی قیمت $i^2 = -1$ درج کریں۔",
+   "check": [
+    "I**37 == (-1)**18 * I"
+   ]
+  },
+  {
+   "math": "= (1) \\cdot i = i",
+   "en": "Since $-1$ raised to an even power ($18$) is $+1$, we multiply $1$ by $i$ to get the final answer $i$.",
+   "ur": "چونکہ $-1$ کی طاقت ایک جفت عدد ($18$) ہے اس لیے یہ $+1$ بن جاتا ہے، ہم $1$ کو $i$ سے ضرب دے کر حتمی جواب $i$ حاصل کرتے ہیں۔",
+   "check": [
+    "(-1)**18 * I == 1 * I",
+    "1 * I == I",
+    "1*I**(37) == 1*I**1",
+    "1*I**(37) == (I)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

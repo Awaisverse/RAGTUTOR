@@ -1,0 +1,52 @@
+{
+ "item": "c10-rev4-q2",
+ "label": "ii",
+ "answer_ref": "$- x^{2} - x + 20$",
+ "steps": [
+  {
+   "math": "f(x) = 25 - x^{2}, \\quad g(x) = 5 + x",
+   "en": "First, write down the two given functions $f(x)$ and $g(x)$ from the question.",
+   "ur": "سب سے پہلے، سوال میں دیے گئے دونوں تفاعل $f(x)$ اور $g(x)$ لکھیں۔",
+   "check": [
+    "(25 - x**2) == (25 - x**2)",
+    "(5 + x) == (5 + x)"
+   ]
+  },
+  {
+   "math": "f(x) - g(x) = (25 - x^{2}) - (5 + x)",
+   "en": "To find $f(x) - g(x)$, substitute the algebraic expressions for both functions inside brackets.",
+   "ur": "$f(x) - g(x)$ معلوم کرنے کے لیے، دونوں تفاعل کے الجبری جملے قوسین میں درج کریں۔",
+   "check": [
+    "((25 - x**2) - (5 + x)) == ((25 - x**2) - (5 + x))"
+   ]
+  },
+  {
+   "math": "f(x) - g(x) = 25 - x^{2} - 5 - x",
+   "en": "Remove the brackets. Because there is a minus sign before the second bracket, the signs of both terms inside it will change.",
+   "ur": "قوسین ہٹائیں۔ چونکہ دوسری قوس کے باہر نفی کی علامت ہے، اس لیے اس کے اندر موجود دونوں ارکان کی علامتیں بدل جائیں گی۔",
+   "check": [
+    "((25 - x**2) - (5 + x)) == (25 - x**2 - 5 - x)"
+   ]
+  },
+  {
+   "math": "f(x) - g(x) = - x^{2} - x + 25 - 5",
+   "en": "Rearrange the terms in descending powers of $x$ and group the constant numbers together.",
+   "ur": "ارکان کو $x$ کی قوتوں کی نزولی ترتیب میں لکھیں اور مستقل اعداد کو اکٹھا کریں۔",
+   "check": [
+    "(25 - x**2 - 5 - x) == (-x**2 - x + 25 - 5)"
+   ]
+  },
+  {
+   "math": "f(x) - g(x) = - x^{2} - x + 20",
+   "en": "Subtract $5$ from $25$ to get the final simplified expression.",
+   "ur": "آخری مختصر جملہ حاصل کرنے کے لیے $25$ میں سے $5$ تفریق کریں۔",
+   "check": [
+    "(25 - 5) == 20",
+    "(-x**2 - x + 25 - 5) == (-x**2 - x + 20)",
+    "(-x**2 - x + 20) == (-x**2 - x + 20)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

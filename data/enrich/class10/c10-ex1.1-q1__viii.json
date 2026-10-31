@@ -1,0 +1,51 @@
+{
+ "item": "c10-ex1.1-q1",
+ "label": "viii",
+ "answer_ref": "$-1$",
+ "steps": [
+  {
+   "math": "i^{13} \\times i^{29}",
+   "en": "We are given the product of two powers of the imaginary unit $i$ and asked to simplify it.",
+   "ur": "ہمیں خیالی اکائی $i$ کی دو طاقتوں کا حاصلِ ضرب دیا گیا ہے اور اسے مختصر کرنے کو کہا گیا ہے۔"
+  },
+  {
+   "math": "i^{13} \\times i^{29} = i^{13 + 29} = i^{42}",
+   "en": "According to the product law of exponents ($a^m \\times a^n = a^{m+n}$), when the bases are the same, we add the exponents.",
+   "ur": "قوت نما کے ضرب کے قانون ($a^m \\times a^n = a^{m+n}$) کے مطابق، جب اساس یکساں ہوں تو ہم طاقتوں کو جمع کرتے ہیں۔",
+   "check": [
+    "13 + 29 == 42",
+    "I**13 * I**29 == I**42"
+   ]
+  },
+  {
+   "math": "i^{42} = (i^2)^{21}",
+   "en": "Since we know the value of $i^2$, we rewrite the even power $42$ as a multiple of $2$, because $2 \\times 21 = 42$.",
+   "ur": "چونکہ ہم $i^2$ کی قیمت جانتے ہیں، اس لیے ہم جفت طاقت $42$ کو $2$ کے مضرب کے طور پر دوبارہ لکھتے ہیں، کیونکہ $2 \\times 21 = 42$ ہوتا ہے۔",
+   "check": [
+    "2 * 21 == 42",
+    "I**42 == (I**2)**21"
+   ]
+  },
+  {
+   "math": "= (-1)^{21}",
+   "en": "By the definition of the imaginary unit, substitute $i^2 = -1$.",
+   "ur": "خیالی اکائی کی تعریف کے مطابق، $i^2 = -1$ درج کریں۔",
+   "check": [
+    "I**2 == -1",
+    "(I**2)**21 == (-1)**21"
+   ]
+  },
+  {
+   "math": "= -1",
+   "en": "Since $-1$ is raised to an odd power ($21$), the result remains $-1$. Thus, the final simplified answer is $-1$.",
+   "ur": "چونکہ $-1$ کی طاقت ایک طاق عدد ($21$) ہے، اس لیے نتیجہ $-1$ ہی رہتا ہے۔ لہٰذا، آخری مختصر جواب $-1$ ہے۔",
+   "check": [
+    "(-1)**21 == -1",
+    "I**13 * I**29 == I**2",
+    "I**2 == -1"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

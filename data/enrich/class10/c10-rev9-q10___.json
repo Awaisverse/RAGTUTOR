@@ -1,0 +1,53 @@
+{
+ "item": "c10-rev9-q10",
+ "label": "",
+ "answer_ref": "$15$ cm$^2$",
+ "steps": [
+  {
+   "math": "r = 5\\ \\text{cm}, \\quad P = 16\\ \\text{cm}",
+   "en": "First, write down the given radius $r$ and the perimeter $P$ of the sector. We need to find the area $A$ of this sector.",
+   "ur": "سب سے پہلے، دیے گئے رداس $r$ اور قطاع کے احاطے $P$ کو لکھیں۔ ہمیں اس قطاع کا رقبہ $A$ معلوم کرنا ہے۔",
+   "check": [
+    "5 == 5",
+    "16 == 16"
+   ]
+  },
+  {
+   "math": "P = 2r + \\ell",
+   "en": "The perimeter of a sector is the sum of the lengths of its two radii and the arc length $\\ell$.",
+   "ur": "کسی قطاع کا احاطہ اس کے دو رداسوں اور قوس کی لمبائی $\\ell$ کے مجموعے کے برابر ہوتا ہے۔"
+  },
+  {
+   "math": "16 = 2(5) + \\ell \\Rightarrow 16 = 10 + \\ell",
+   "en": "Substitute the given values of $P = 16$ and $r = 5$ into the perimeter formula.",
+   "ur": "احاطے کے فارمولے میں دی گئی قیمتیں $P = 16$ اور $r = 5$ درج کریں۔",
+   "check": [
+    "2*5 == 10"
+   ]
+  },
+  {
+   "math": "\\ell = 16 - 10 = 6\\ \\text{cm}",
+   "en": "Solve the equation to find the arc length $\\ell$.",
+   "ur": "قوس کی لمبائی $\\ell$ معلوم کرنے کے لیے مساوات کو حل کریں۔",
+   "check": [
+    "16 - 10 == 6"
+   ]
+  },
+  {
+   "math": "A = \\frac{1}{2}\\ell r",
+   "en": "Recall the formula for the area of a sector when the arc length $\\ell$ and radius $r$ are known.",
+   "ur": "جب قوس کی لمبائی $\\ell$ اور رداس $r$ معلوم ہوں تو قطاع کے رقبے کا فارمولا استعمال کریں۔"
+  },
+  {
+   "math": "A = \\frac{1}{2} \\times 6 \\times 5 = 15\\ \\text{cm}^2",
+   "en": "Substitute $\\ell = 6$ and $r = 5$ into the formula and calculate the area. Thus, the area of the sector is $15$ cm$^2$.",
+   "ur": "فارمولے میں $\\ell = 6$ اور $r = 5$ درج کریں اور رقبہ معلوم کریں۔ اس طرح، قطاع کا رقبہ $15$ cm$^2$ ہے۔",
+   "check": [
+    "R(1,2)*6*5 == 15",
+    "16 - 10 == 6"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

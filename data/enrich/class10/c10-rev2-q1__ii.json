@@ -1,0 +1,55 @@
+{
+ "item": "c10-rev2-q1",
+ "label": "ii",
+ "answer_ref": "(d) $45$",
+ "steps": [
+  {
+   "math": "x^2 + 5x - 5 = 0",
+   "en": "Write the given quadratic equation and compare it with the standard form $ax^2 + bx + c = 0$.",
+   "ur": "دی گئی دو درجی مساوات لکھیں اور اس کا معیاری شکل $ax^2 + bx + c = 0$ سے موازنہ کریں۔"
+  },
+  {
+   "math": "a = 1, \\quad b = 5, \\quad c = -5",
+   "en": "Identify the values of the coefficients $a$, $b$, and the constant $c$ from the equation.",
+   "ur": "مساوات سے عددی سروں $a$، $b$ اور مستقل مقدار $c$ کی قیمتیں معلوم کریں۔",
+   "check": [
+    "1 == 1",
+    "5 == 5",
+    "-5 == -5"
+   ]
+  },
+  {
+   "math": "\\text{Discriminant } (D) = b^2 - 4ac",
+   "en": "Write the formula for the discriminant of a quadratic equation.",
+   "ur": "دو درجی مساوات کے فرق کنندہ (discriminant) کا فارمولا لکھیں۔"
+  },
+  {
+   "math": "D = (5)^2 - 4(1)(-5)",
+   "en": "Substitute the values of $a = 1$, $b = 5$, and $c = -5$ into the formula.",
+   "ur": "فارمولے میں $a = 1$، $b = 5$ اور $c = -5$ کی قیمتیں درج کریں۔",
+   "check": [
+    "5**2 - 4*1*(-5) == 45"
+   ]
+  },
+  {
+   "math": "D = 25 + 20 = 45",
+   "en": "Simplify the expression by squaring $5$ and multiplying the remaining terms, then add them.",
+   "ur": "$5$ کا مربع لے کر اور باقی رقوم کو ضرب دے کر حل کریں، پھر انہیں جمع کریں۔",
+   "check": [
+    "5**2 == 25",
+    "-4*1*(-5) == 20",
+    "25 + 20 == 45"
+   ]
+  },
+  {
+   "math": "\\text{Answer: (d) } 45",
+   "en": "Thus, the discriminant is $45$, which matches option (d).",
+   "ur": "پس فرق کنندہ $45$ ہے، جو کہ آپشن (d) کے مطابق ہے۔",
+   "check": [
+    "5**2 - 4*1*(-5) == 45"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

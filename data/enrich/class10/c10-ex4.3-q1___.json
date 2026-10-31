@@ -1,0 +1,54 @@
+{
+ "item": "c10-ex4.3-q1",
+ "label": "",
+ "answer_ref": "6200 rupees",
+ "steps": [
+  {
+   "math": "B(t) = 5000 + 200t",
+   "en": "Write down the given function that represents the total balance (in rupees) after $t$ months.",
+   "ur": "دیا گیا فنکشن لکھیں جو $t$ مہینوں کے بعد کل بیلنس (روپوں میں) کو ظاہر کرتا ہے۔",
+   "check": [
+    "5000 + 200*t == 200*t + 5000"
+   ]
+  },
+  {
+   "math": "",
+   "en": "We need to find the balance after $6$ months, so we will substitute $t = 6$ into the given function.",
+   "ur": "ہمیں $6$ مہینوں کے بعد بیلنس معلوم کرنا ہے، اس لیے ہم دیے گئے فنکشن میں $t = 6$ درج کریں گے۔"
+  },
+  {
+   "math": "B(6) = 5000 + 200(6)",
+   "en": "Substitute $t = 6$ into the function $B(t)$.",
+   "ur": "فنکشن $B(t)$ میں $t = 6$ درج کریں۔",
+   "check": [
+    "(5000 + 200*t).subs(t, 6) == 5000 + 200*6"
+   ]
+  },
+  {
+   "math": "B(6) = 5000 + 1200",
+   "en": "Multiply $200$ by $6$.",
+   "ur": "$200$ کو $6$ سے ضرب دیں۔",
+   "check": [
+    "200 * 6 == 1200"
+   ]
+  },
+  {
+   "math": "B(6) = 6200",
+   "en": "Add $5000$ and $1200$ to get the final balance.",
+   "ur": "حتمی بیلنس حاصل کرنے کے لیے $5000$ اور $1200$ کو جمع کریں۔",
+   "check": [
+    "5000 + 1200 == 6200"
+   ]
+  },
+  {
+   "math": "",
+   "en": "Hence, the total balance after $6$ months will be $6200$ rupees.",
+   "ur": "لہذا، $6$ مہینوں کے بعد کل بیلنس $6200$ روپے ہوگا۔",
+   "check": [
+    "(5000 + 200*t).subs(t, (6)) == (6200)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

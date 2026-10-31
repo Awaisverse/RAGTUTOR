@@ -1,0 +1,55 @@
+{
+ "item": "u1-example10",
+ "label": "",
+ "answer_ref": "37 °C and 310 K",
+ "steps": [
+  {
+   "math": "F = 98.6\\text{ }^\\circ\\text{F}",
+   "en": "First, write down the given normal human body temperature in Fahrenheit ($F$). We need to convert this into Celsius ($C$) and Kelvin ($K$).",
+   "ur": "سب سے پہلے، فارن ہائیٹ ($F$) میں دیا گیا انسانی جسم کا نارمل درجہ حرارت لکھیں۔ ہمیں اسے سیلسیس ($C$) اور کیلون ($K$) میں تبدیل کرنا ہے۔"
+  },
+  {
+   "math": "C = \\frac{5}{9}(F - 32)",
+   "en": "To convert Fahrenheit into Celsius, we use the standard temperature conversion formula.",
+   "ur": "فارن ہائیٹ کو سیلسیس میں تبدیل کرنے کے لیے ہم درجہ حرارت کی تبدیلی کا معیاری فارمولا استعمال کرتے ہیں۔"
+  },
+  {
+   "math": "C = \\frac{5}{9}(98.6 - 32)",
+   "en": "Substitute the given value $F = 98.6$ into the formula.",
+   "ur": "فارمولے میں دی گئی قیمت $F = 98.6$ درج کریں۔"
+  },
+  {
+   "math": "C = \\frac{5}{9}(66.6)",
+   "en": "Subtract $32$ from $98.6$ inside the brackets.",
+   "ur": "بریکٹ کے اندر $98.6$ میں سے $32$ تفریق کریں۔",
+   "check": [
+    "R(986,10) - 32 == R(666,10)"
+   ]
+  },
+  {
+   "math": "C = 37\\text{ }^\\circ\\text{C}",
+   "en": "Multiply $66.6$ by $5$ and divide by $9$ to get the temperature in Celsius.",
+   "ur": "سیلسیس میں درجہ حرارت حاصل کرنے کے لیے $66.6$ کو $5$ سے ضرب دیں اور $9$ پر تقسیم کریں۔",
+   "check": [
+    "R(5,9) * R(666,10) == 37"
+   ]
+  },
+  {
+   "math": "K = C + 273",
+   "en": "Now, to convert the Celsius temperature into Kelvin, we use the Celsius-to-Kelvin formula.",
+   "ur": "اب سیلسیس درجہ حرارت کو کیلون میں تبدیل کرنے کے لیے، ہم سیلسیس سے کیلون کا فارمولا استعمال کرتے ہیں۔"
+  },
+  {
+   "math": "K = 37 + 273 = 310\\text{ K}",
+   "en": "Substitute $C = 37$ into the formula and add $273$ to get the temperature in Kelvin. Thus, the normal body temperature is $37\\text{ }^\\circ\\text{C}$ and $310\\text{ K}$.",
+   "ur": "فارمولے میں $C = 37$ درج کریں اور کیلون میں درجہ حرارت حاصل کرنے کے لیے $273$ جمع کریں۔ اس طرح، انسانی جسم کا نارمل درجہ حرارت $37\\text{ }^\\circ\\text{C}$ اور $310\\text{ K}$ ہے۔",
+   "check": [
+    "37 + 273 == 310",
+    "Rational(5,9)*(Rational(986,10)-32) == 37",
+    "37+273 == 310"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

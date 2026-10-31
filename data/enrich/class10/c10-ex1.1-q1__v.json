@@ -1,0 +1,65 @@
+{
+ "item": "c10-ex1.1-q1",
+ "label": "v",
+ "answer_ref": "$0$",
+ "steps": [
+  {
+   "math": "i^{11} + i^{5}",
+   "en": "We are given the complex expression $i^{11} + i^5$ and we need to simplify it.",
+   "ur": "ہمیں مختلط جملہ $i^{11} + i^5$ دیا گیا ہے اور ہمیں اسے مختصر کرنا ہے۔"
+  },
+  {
+   "math": "i^{11} + i^{5} = i^{8 + 3} + i^{4 + 1}",
+   "en": "To simplify powers of $i$, we split each exponent into a multiple of $4$ plus a remainder, because $i^4 = 1$.",
+   "ur": "$i$ کی طاقتوں کو مختصر کرنے کے لیے، ہم ہر قوت نما کو $4$ کے مضرب اور باقی ماندہ کے مجموعے کے طور پر لکھتے ہیں، کیونکہ $i^4 = 1$ ہوتا ہے۔",
+   "check": [
+    "I**11 + I**5 == I**(8 + 3) + I**(4 + 1)"
+   ]
+  },
+  {
+   "math": "= i^{8} \\cdot i^{3} + i^{4} \\cdot i^{1}",
+   "en": "Apply the law of exponents $a^{m+n} = a^m \\cdot a^n$ to separate the powers.",
+   "ur": "طاقتوں کو الگ کرنے کے لیے قوت نما کا قانون $a^{m+n} = a^m \\cdot a^n$ لاگو کریں۔",
+   "check": [
+    "I**(8 + 3) + I**(4 + 1) == I**8 * I**3 + I**4 * I**1"
+   ]
+  },
+  {
+   "math": "= (i^{4})^{2} \\cdot i^{3} + i^{4} \\cdot i",
+   "en": "Rewrite $i^8$ as $(i^4)^2$ and $i^1$ as $i$.",
+   "ur": "$i^8$ کو $(i^4)^2$ اور $i^1$ کو $i$ کے طور پر دوبارہ لکھیں۔",
+   "check": [
+    "I**8 * I**3 + I**4 * I**1 == (I**4)**2 * I**3 + I**4 * I"
+   ]
+  },
+  {
+   "math": "= (1)^{2} \\cdot i^{3} + (1) \\cdot i = i^{3} + i",
+   "en": "Substitute $i^4 = 1$ into the expression and simplify.",
+   "ur": "جملے میں $i^4 = 1$ درج کریں اور مختصر کریں۔",
+   "check": [
+    "(I**4)**2 * I**3 + I**4 * I == (1)**2 * I**3 + (1) * I",
+    "(1)**2 * I**3 + (1) * I == I**3 + I"
+   ]
+  },
+  {
+   "math": "= -i + i",
+   "en": "Since $i^3 = i^2 \\cdot i = (-1)i = -i$, substitute $i^3 = -i$.",
+   "ur": "چونکہ $i^3 = i^2 \\cdot i = (-1)i = -i$ ہوتا ہے، اس لیے $i^3 = -i$ درج کریں۔",
+   "check": [
+    "I**3 + I == -I + I"
+   ]
+  },
+  {
+   "math": "= 0",
+   "en": "Adding $-i$ and $i$ cancels them out, giving the final answer $0$.",
+   "ur": "$-i$ اور $i$ کو جمع کرنے سے وہ ایک دوسرے کو زائل کر دیتے ہیں، جس سے حتمی جواب $0$ حاصل ہوتا ہے۔",
+   "check": [
+    "-I + I == 0",
+    "I**11 + I**5 == I**3 + I",
+    "I**3 + I == 0"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

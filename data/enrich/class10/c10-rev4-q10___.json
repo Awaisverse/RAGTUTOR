@@ -1,0 +1,55 @@
+{
+ "item": "c10-rev4-q10",
+ "label": "",
+ "answer_ref": "1700 rupees",
+ "steps": [
+  {
+   "math": "",
+   "en": "First, write down the given function $D(p) = 0.85p$, which represents the selling price after the $15\\%$ discount on an original price $p$.",
+   "ur": "سب سے پہلے دیا گیا تفاعل $D(p) = 0.85p$ لکھیں، جو اصل قیمت $p$ پر $15\\%$ رعایت کے بعد فروخت کی قیمت کو ظاہر کرتا ہے۔"
+  },
+  {
+   "math": "D(p) = \\frac{85}{100}p = \\frac{17}{20}p",
+   "en": "Convert the decimal $0.85$ into a simplified fraction to make the calculation easier.",
+   "ur": "حساب کو آسان بنانے کے لیے اعشاریہ $0.85$ کو ایک مختصر کسر میں تبدیل کریں۔",
+   "check": [
+    "R(85,100)*p == R(17,20)*p"
+   ]
+  },
+  {
+   "math": "p = 2000",
+   "en": "The given original price of the item is Rs. $2,000$.",
+   "ur": "دی گئی چیز کی اصل قیمت $2,000$ روپے ہے۔",
+   "check": [
+    "2000 == 2000"
+   ]
+  },
+  {
+   "math": "D(2000) = \\frac{17}{20}(2000)",
+   "en": "Substitute $p = 2000$ into the function to find the discounted selling price.",
+   "ur": "رعایتی فروخت کی قیمت معلوم کرنے کے لیے تفاعل میں $p = 2000$ درج کریں۔",
+   "check": [
+    "(R(17,20)*p).subs(p, 2000) == R(17,20)*2000"
+   ]
+  },
+  {
+   "math": "D(2000) = 17 \\times 100 = 1700",
+   "en": "Divide $2000$ by $20$ to get $100$, and then multiply by $17$.",
+   "ur": "$2000$ کو $20$ سے تقسیم کریں جس سے $100$ حاصل ہوگا، اور پھر اسے $17$ سے ضرب دیں۔",
+   "check": [
+    "R(17,20)*2000 == 17*100",
+    "17*100 == 1700"
+   ]
+  },
+  {
+   "math": "",
+   "en": "Therefore, the selling price of the item after the discount is $1700$ rupees.",
+   "ur": "لہٰذا، رعایت کے بعد اس چیز کی فروخت کی قیمت $1700$ روپے ہے۔",
+   "check": [
+    "(R(85,100)*p).subs(p, (2000)) == (1700)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

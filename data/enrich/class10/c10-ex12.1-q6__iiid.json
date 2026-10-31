@@ -1,0 +1,47 @@
+{
+ "item": "c10-ex12.1-q6",
+ "label": "iiid",
+ "answer_ref": "$0$",
+ "steps": [
+  {
+   "math": "n(S) = 6 \\times 6 = 36",
+   "en": "When two unbiased dice are rolled once, each die has $6$ faces, so the total number of possible outcomes in the sample space $S$ is $36$.",
+   "ur": "جب دو غیر جانبدار پانسے ایک بار پھینکے جاتے ہیں، تو ہر پانسے کے $6$ رخ ہوتے ہیں، اس لیے نمونہ فضا $S$ میں ممکنہ نتائج کی کل تعداد $36$ ہے۔",
+   "check": [
+    "6 * 6 == 36"
+   ]
+  },
+  {
+   "math": "\\text{Maximum sum} = 6 + 6 = 12",
+   "en": "Let $E$ be the event of getting a sum of $13$. Since the highest number on a die is $6$, the maximum possible sum on two dice is $12$.",
+   "ur": "فرض کریں $E$ دونوں پانسوں پر نمبروں کا مجموعہ $13$ آنے کا واقعہ ہے۔ چونکہ ایک پانسے پر سب سے بڑا نمبر $6$ ہوتا ہے، اس لیے دو پانسوں پر زیادہ سے زیادہ ممکنہ مجموعہ $12$ ہو سکتا ہے۔",
+   "check": [
+    "6 + 6 == 12"
+   ]
+  },
+  {
+   "math": "E = \\{\\} \\implies n(E) = 0",
+   "en": "Therefore, getting a sum of $13$ is an impossible event, which means there are $0$ favourable outcomes.",
+   "ur": "لہٰذا، مجموعہ $13$ آنا ایک ناممکن واقعہ ہے، جس کا مطلب ہے کہ موافق نتائج کی تعداد $0$ ہے۔",
+   "check": [
+    "0 == 0"
+   ]
+  },
+  {
+   "math": "P(E) = \\frac{n(E)}{n(S)}",
+   "en": "Now, we apply the probability formula, which is the number of favourable outcomes divided by the total number of outcomes.",
+   "ur": "اب، ہم احتمال کا فارمولا استعمال کرتے ہیں، جو کہ موافق نتائج کی تعداد کو کل نتائج کی تعداد پر تقسیم کرنے سے حاصل ہوتا ہے۔"
+  },
+  {
+   "math": "P(E) = \\frac{0}{36} = 0",
+   "en": "Substitute $n(E) = 0$ and $n(S) = 36$ into the formula. Thus, the probability of getting the sum as $13$ is $0$.",
+   "ur": "فارمولے میں $n(E) = 0$ اور $n(S) = 36$ درج کریں۔ اس طرح، مجموعہ $13$ حاصل کرنے کا احتمال $0$ ہے۔",
+   "check": [
+    "R(0, 36) == 0",
+    "36 == 36"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

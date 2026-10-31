@@ -16,9 +16,28 @@
      "prompt": "$(4, 3)$",
      "steps": [
       {
-       "math": "x = 4 > 0,\\ y = 3 > 0 \\Rightarrow \\text{Quadrant I}",
-       "en": "Quadrant I: $(+, +)$, II: $(-, +)$, III: $(-, -)$, IV: $(+, -)$.",
-       "ur": "ربع I: $(+, +)$، II: $(-, +)$، III: $(-, -)$، IV: $(+, -)$۔",
+       "math": "",
+       "en": "We are given the point $(4, 3)$ in the Cartesian plane and we need to identify the quadrant in which it lies.",
+       "ur": "ہمیں کارٹیزین مستوی میں نقطہ $(4, 3)$ دیا گیا ہے اور ہمیں یہ معلوم کرنا ہے کہ یہ کس ربع (quadrant) میں واقع ہے۔"
+      },
+      {
+       "math": "",
+       "en": "Recall the signs of the coordinates $(x, y)$ in the four quadrants: Quadrant I has $(+, +)$, Quadrant II has $(-, +)$, Quadrant III has $(-, -)$, and Quadrant IV has $(+, -)$.",
+       "ur": "چاروں ربعوں میں نقاط $(x, y)$ کی علامات یاد کریں: ربع I میں $(+, +)$، ربع II میں $(-, +)$، ربع III میں $(-, -)$، اور ربع IV میں $(+, -)$ ہوتی ہیں۔"
+      },
+      {
+       "math": "x = 4 > 0,\\quad y = 3 > 0",
+       "en": "For the given point $(4, 3)$, the x-coordinate is $4$, which is positive, and the y-coordinate is $3$, which is also positive.",
+       "ur": "دیے گئے نقطہ $(4, 3)$ کے لیے، x-محدد $4$ ہے جو کہ مثبت ہے، اور y-محدد $3$ ہے جو کہ مثبت ہے۔",
+       "check": [
+        "4 > 0",
+        "3 > 0"
+       ]
+      },
+      {
+       "math": "\\text{Quadrant I}",
+       "en": "Since both the x-coordinate and y-coordinate are positive $(+, +)$, the point $(4, 3)$ lies in Quadrant I.",
+       "ur": "چونکہ x-محدد اور y-محدد دونوں مثبت $(+, +)$ ہیں، اس لیے نقطہ $(4, 3)$ ربع I میں واقع ہے۔",
        "check": [
         "4 > 0",
         "3 > 0"
@@ -26,6 +45,7 @@
       }
      ],
      "answer": "Quadrant I",
+     "enriched": true,
      "book_key": "Quadrant I"
     },
     {
@@ -33,9 +53,35 @@
      "prompt": "$(5, -4)$",
      "steps": [
       {
-       "math": "x = 5 > 0,\\ y = -4 < 0 \\Rightarrow \\text{Quadrant IV}",
-       "en": "Quadrant I: $(+, +)$, II: $(-, +)$, III: $(-, -)$, IV: $(+, -)$.",
-       "ur": "ربع I: $(+, +)$، II: $(-, +)$، III: $(-, -)$، IV: $(+, -)$۔",
+       "math": "",
+       "en": "We are given the point $(5, -4)$ and we need to determine the quadrant in which it lies.",
+       "ur": "ہمیں نقطہ $(5, -4)$ دیا گیا ہے اور ہمیں یہ معلوم کرنا ہے کہ یہ کس ربع (quadrant) میں واقع ہے۔"
+      },
+      {
+       "math": "",
+       "en": "Recall the signs of the coordinates $(x, y)$ in the four quadrants: Quadrant I is $(+, +)$, Quadrant II is $(-, +)$, Quadrant III is $(-, -)$, and Quadrant IV is $(+, -)$.",
+       "ur": "چاروں ربعوں میں نقاط $(x, y)$ کی علامات یاد کریں: ربع I میں $(+, +)$، ربع II میں $(-, +)$، ربع III میں $(-, -)$، اور ربع IV میں $(+, -)$ ہوتی ہیں۔"
+      },
+      {
+       "math": "x = 5 > 0",
+       "en": "For the given point $(5, -4)$, the x-coordinate (abscissa) is $5$, which is positive.",
+       "ur": "دیے گئے نقطہ $(5, -4)$ کے لیے، x-محور کا فاصلہ (abscissa) $5$ ہے، جو کہ مثبت ہے۔",
+       "check": [
+        "5 > 0"
+       ]
+      },
+      {
+       "math": "y = -4 < 0",
+       "en": "The y-coordinate (ordinate) is $-4$, which is negative.",
+       "ur": "اور y-محور کا فاصلہ (ordinate) $-4$ ہے، جو کہ منفی ہے۔",
+       "check": [
+        "-4 < 0"
+       ]
+      },
+      {
+       "math": "(x, y) \\Rightarrow (+, -) \\Rightarrow \\text{Quadrant IV}",
+       "en": "Since the x-coordinate is positive and the y-coordinate is negative, the point $(5, -4)$ lies in Quadrant IV.",
+       "ur": "چونکہ x-محدد مثبت ہے اور y-محدد منفی ہے، اس لیے نقطہ $(5, -4)$ چوتھے ربع (Quadrant IV) میں واقع ہے۔",
        "check": [
         "5 > 0",
         "-4 < 0"
@@ -43,6 +89,7 @@
       }
      ],
      "answer": "Quadrant IV",
+     "enriched": true,
      "book_key": "Quadrant IV"
     },
     {
@@ -50,9 +97,37 @@
      "prompt": "$(-6, 2)$",
      "steps": [
       {
-       "math": "x = -6 < 0,\\ y = 2 > 0 \\Rightarrow \\text{Quadrant II}",
-       "en": "Quadrant I: $(+, +)$, II: $(-, +)$, III: $(-, -)$, IV: $(+, -)$.",
-       "ur": "ربع I: $(+, +)$، II: $(-, +)$، III: $(-, -)$، IV: $(+, -)$۔",
+       "math": "(-6, 2)",
+       "en": "We are given the point $(-6, 2)$ and we need to determine the quadrant in which it lies.",
+       "ur": "ہمیں نقطہ $(-6, 2)$ دیا گیا ہے اور ہمیں معلوم کرنا ہے کہ یہ کس ربع (quadrant) میں واقع ہے۔"
+      },
+      {
+       "math": "(x, y) = (-6, 2) \\implies x = -6,\\ y = 2",
+       "en": "Comparing the given point with the general coordinates $(x, y)$, we identify the $x$-coordinate (abscissa) and the $y$-coordinate (ordinate).",
+       "ur": "دیے گئے نقطے کا عمومی محددات $(x, y)$ سے موازنہ کرتے ہوئے، ہم $x$-محدد اور $y$-محدد کی شناخت کرتے ہیں۔",
+       "check": [
+        "-6 == -6",
+        "2 == 2"
+       ]
+      },
+      {
+       "math": "\\text{Quadrant I: } (+, +),\\quad \\text{Quadrant II: } (-, +),\\quad \\text{Quadrant III: } (-, -),\\quad \\text{Quadrant IV: } (+, -)",
+       "en": "Recall the rules for the signs of coordinates $(x, y)$ in the four quadrants of the Cartesian plane.",
+       "ur": "کارتیسی مستوی کے چاروں ربعوں میں محددات $(x, y)$ کی علامات کے اصولوں کو یاد کریں۔"
+      },
+      {
+       "math": "x = -6 < 0,\\quad y = 2 > 0",
+       "en": "Here, the $x$-coordinate is negative ($-6 < 0$) and the $y$-coordinate is positive ($2 > 0$). Thus, the sign pattern is $(-, +)$.",
+       "ur": "یہاں، $x$-محدد منفی ہے ($-6 < 0$) اور $y$-محدد مثبت ہے ($2 > 0$)۔ اس طرح، علامات کی ترتیب $(-, +)$ ہے۔",
+       "check": [
+        "-6 < 0",
+        "2 > 0"
+       ]
+      },
+      {
+       "math": "\\text{Quadrant II}",
+       "en": "Since a point with a negative $x$-coordinate and a positive $y$-coordinate lies in the second quadrant, the point $(-6, 2)$ lies in Quadrant II.",
+       "ur": "چونکہ منفی $x$-محدد اور مثبت $y$-محدد والا نقطہ دوسرے ربع میں ہوتا ہے، اس لیے نقطہ $(-6, 2)$ ربع II (Quadrant II) میں واقع ہے۔",
        "check": [
         "-6 < 0",
         "2 > 0"
@@ -60,6 +135,7 @@
       }
      ],
      "answer": "Quadrant II",
+     "enriched": true,
      "book_key": "Quadrant II"
     },
     {
@@ -67,9 +143,39 @@
      "prompt": "$(-4, -4)$",
      "steps": [
       {
-       "math": "x = -4 < 0,\\ y = -4 < 0 \\Rightarrow \\text{Quadrant III}",
-       "en": "Quadrant I: $(+, +)$, II: $(-, +)$, III: $(-, -)$, IV: $(+, -)$.",
-       "ur": "ربع I: $(+, +)$، II: $(-, +)$، III: $(-, -)$، IV: $(+, -)$۔",
+       "math": "P(x, y) = (-4, -4)",
+       "en": "The given point is $(-4, -4)$. We need to find the quadrant in which this point lies.",
+       "ur": "دیا گیا نقطہ $(-4, -4)$ ہے۔ ہمیں یہ معلوم کرنا ہے کہ یہ نقطہ کس ربع (quadrant) میں واقع ہے۔",
+       "check": [
+        "-4 == -4"
+       ]
+      },
+      {
+       "math": "x = -4,\\quad y = -4",
+       "en": "Comparing the given point with $(x, y)$, we identify the $x$-coordinate (abscissa) and $y$-coordinate (ordinate).",
+       "ur": "دیے گئے نقطے کا $(x, y)$ سے موازنہ کرنے پر، ہم $x$-محدد اور $y$-محدد کی شناخت کرتے ہیں۔",
+       "check": [
+        "-4 == -4"
+       ]
+      },
+      {
+       "math": "\\text{Quadrant I: } (+, +),\\; \\text{II: } (-, +),\\; \\text{III: } (-, -),\\; \\text{IV: } (+, -)",
+       "en": "Recall the signs of the coordinates $(x, y)$ in each of the four quadrants of the Cartesian plane.",
+       "ur": "کارٹیزین مستوی کے چاروں ربعوں میں محددات $(x, y)$ کی علامات کو یاد کریں۔"
+      },
+      {
+       "math": "x = -4 < 0,\\quad y = -4 < 0",
+       "en": "Here, both the $x$-coordinate and the $y$-coordinate are negative, which gives the sign pattern $(-, -)$.",
+       "ur": "یہاں، $x$-محدد اور $y$-محدد دونوں منفی ہیں، جو علامات کی ترتیب $(-, -)$ دیتے ہیں۔",
+       "check": [
+        "-4 < 0",
+        "-4 < 0"
+       ]
+      },
+      {
+       "math": "(-4, -4) \\text{ lies in Quadrant III}",
+       "en": "Since both coordinates are negative $(-, -)$, the point $(-4, -4)$ lies in Quadrant III.",
+       "ur": "چونکہ دونوں محددات منفی $(-, -)$ ہیں، اس لیے نقطہ $(-4, -4)$ ربع III میں واقع ہے۔",
        "check": [
         "-4 < 0",
         "-4 < 0"
@@ -77,6 +183,7 @@
       }
      ],
      "answer": "Quadrant III",
+     "enriched": true,
      "book_key": "Quadrant III"
     }
    ],
@@ -494,9 +601,9 @@
      "prompt": "vector from $B$ to $A$",
      "steps": [
       {
-       "math": "\\text{Tail} = B,\\quad \\text{Tip} = A",
-       "en": "The tail is the starting point; the tip is where the arrowhead is.",
-       "ur": "دم ابتدائی نقطہ ہے؛ سرا وہ ہے جہاں تیر کا نشان ہے۔",
+       "math": "\\overrightarrow{BA}",
+       "en": "The given vector is directed from point $B$ to point $A$, which is represented as $\\overrightarrow{BA}$. We need to identify its tail and tip.",
+       "ur": "دیا گیا ویکٹر نقطہ $B$ سے نقطہ $A$ کی طرف ہے، جسے $\\overrightarrow{BA}$ سے ظاہر کیا جاتا ہے۔ ہمیں اس کی دم (tail) اور سرے (tip) کی شناخت کرنی ہے۔",
        "draw": [
         {
          "t": "line",
@@ -525,9 +632,30 @@
          "s": "A"
         }
        ]
+      },
+      {
+       "math": "",
+       "en": "In a directed line segment (vector), the starting point (initial point) is called the tail, and the ending point where the arrowhead is placed (terminal point) is called the tip or head.",
+       "ur": "ایک سمتی خط (ویکٹر) میں، نقطہ آغاز (ابتدائی نقطہ) کو دم (tail) کہا جاتا ہے، اور اختتامی نقطہ جہاں تیر کا نشان ہوتا ہے اسے سرا (tip) کہا جاتا ہے۔"
+      },
+      {
+       "math": "\\text{Tail} = B",
+       "en": "Since the vector starts at point $B$, the tail of the vector is $B$.",
+       "ur": "چونکہ ویکٹر نقطہ $B$ سے شروع ہوتا ہے، اس لیے ویکٹر کی دم $B$ ہے۔"
+      },
+      {
+       "math": "\\text{Tip} = A",
+       "en": "Since the vector ends at point $A$ (where the arrowhead points), the tip of the vector is $A$.",
+       "ur": "چونکہ ویکٹر نقطہ $A$ پر ختم ہوتا ہے (جہاں تیر کا نشان ہے)، اس لیے ویکٹر کا سرا $A$ ہے۔"
+      },
+      {
+       "math": "\\text{Tail} = B,\\quad \\text{Tip} = A",
+       "en": "Therefore, for the vector from $B$ to $A$, the tail is $B$ and the tip is $A$.",
+       "ur": "لہٰذا، $B$ سے $A$ تک کے ویکٹر کے لیے، دم $B$ ہے اور سرا $A$ ہے۔"
       }
      ],
      "answer": "Tail = B, Tip = A",
+     "enriched": true,
      "book_key": "Tail = B, Tip = A"
     },
     {
@@ -535,9 +663,9 @@
      "prompt": "vector from $P$ to $Q$",
      "steps": [
       {
-       "math": "\\text{Tail} = P,\\quad \\text{Tip} = Q",
-       "en": "The tail is the starting point; the tip is where the arrowhead is.",
-       "ur": "دم ابتدائی نقطہ ہے؛ سرا وہ ہے جہاں تیر کا نشان ہے۔",
+       "math": "\\overrightarrow{PQ}",
+       "en": "We are given a directed line segment (vector) directed from point $P$ to point $Q$. We need to identify its tail and its tip.",
+       "ur": "ہمیں نقطہ $P$ سے نقطہ $Q$ کی طرف ایک سمتی خط (ویکٹر) دیا گیا ہے۔ ہمیں اس کی دم (tail) اور سرے (tip) کی نشاندہی کرنی ہے۔",
        "draw": [
         {
          "t": "line",
@@ -566,9 +694,30 @@
          "s": "Q"
         }
        ]
+      },
+      {
+       "math": "",
+       "en": "By definition, the starting (initial) point of a vector is called its tail, and the ending (terminal) point where the arrowhead is drawn is called its tip.",
+       "ur": "تعریف کے مطابق، کسی ویکٹر کے ابتدائی نقطہ کو اس کی دم (tail) کہتے ہیں، اور اختتامی نقطہ جہاں تیر کا نشان بنا ہوتا ہے اسے سرا (tip) کہتے ہیں۔"
+      },
+      {
+       "math": "\\text{Tail} = P",
+       "en": "Since the vector starts at point $P$, the tail of the vector is $P$.",
+       "ur": "چونکہ ویکٹر نقطہ $P$ سے شروع ہوتا ہے، اس لیے ویکٹر کی دم $P$ ہے۔"
+      },
+      {
+       "math": "\\text{Tip} = Q",
+       "en": "Since the vector ends at point $Q$ (where the arrowhead points), the tip of the vector is $Q$.",
+       "ur": "چونکہ ویکٹر نقطہ $Q$ پر ختم ہوتا ہے (جہاں تیر کا نشان ہے)، اس لیے ویکٹر کا سرا $Q$ ہے۔"
+      },
+      {
+       "math": "\\text{Tail} = P,\\quad \\text{Tip} = Q",
+       "en": "Thus, for the vector from $P$ to $Q$, the tail is $P$ and the tip is $Q$.",
+       "ur": "اس طرح، $P$ سے $Q$ تک کے ویکٹر کے لیے، دم $P$ ہے اور سرا $Q$ ہے۔"
       }
      ],
      "answer": "Tail = P, Tip = Q",
+     "enriched": true,
      "book_key": "Tail = P, Tip = Q"
     },
     {
@@ -576,9 +725,9 @@
      "prompt": "vector from $S$ to $R$",
      "steps": [
       {
-       "math": "\\text{Tail} = S,\\quad \\text{Tip} = R",
-       "en": "The tail is the starting point; the tip is where the arrowhead is.",
-       "ur": "دم ابتدائی نقطہ ہے؛ سرا وہ ہے جہاں تیر کا نشان ہے۔",
+       "math": "\\overrightarrow{SR}",
+       "en": "We are given a vector that goes from point $S$ to point $R$, which is denoted as $\\overrightarrow{SR}$. We need to identify its tail and tip.",
+       "ur": "ہمیں ایک ویکٹر دیا گیا ہے جو نقطہ $S$ سے نقطہ $R$ کی طرف جاتا ہے، جسے $\\overrightarrow{SR}$ سے ظاہر کیا جاتا ہے۔ ہمیں اس کی دم (tail) اور سرے (tip) کی نشاندہی کرنی ہے۔",
        "draw": [
         {
          "t": "line",
@@ -607,9 +756,30 @@
          "s": "R"
         }
        ]
+      },
+      {
+       "math": "",
+       "en": "By definition, the starting (initial) point of a vector is called its tail, and the ending (terminal) point where the arrowhead is drawn is called its tip.",
+       "ur": "تعریف کے مطابق، کسی ویکٹر کے ابتدائی نقطے کو اس کی دم (tail) کہتے ہیں، اور اختتامی نقطے کو جہاں تیر کا نشان بنا ہوتا ہے اس کا سرا (tip) کہتے ہیں۔"
+      },
+      {
+       "math": "\\text{Tail} = S",
+       "en": "Since the vector starts from point $S$, the tail of the vector is $S$.",
+       "ur": "چونکہ ویکٹر نقطہ $S$ سے شروع ہوتا ہے، اس لیے ویکٹر کی دم $S$ ہے۔"
+      },
+      {
+       "math": "\\text{Tip} = R",
+       "en": "Since the vector ends at point $R$ (where the arrowhead points), the tip of the vector is $R$.",
+       "ur": "چونکہ ویکٹر نقطہ $R$ پر ختم ہوتا ہے (جہاں تیر کا نشان ہے)، اس لیے ویکٹر کا سرا $R$ ہے۔"
+      },
+      {
+       "math": "\\text{Tail} = S,\\quad \\text{Tip} = R",
+       "en": "Thus, for the vector from $S$ to $R$, the tail is $S$ and the tip is $R$.",
+       "ur": "پس، $S$ سے $R$ تک کے ویکٹر کے لیے، دم $S$ ہے اور سرا $R$ ہے۔"
       }
      ],
      "answer": "Tail = S, Tip = R",
+     "enriched": true,
      "book_key": "Tail = S, Tip = R"
     },
     {
@@ -617,9 +787,9 @@
      "prompt": "vector from $M$ to $N$",
      "steps": [
       {
-       "math": "\\text{Tail} = M,\\quad \\text{Tip} = N",
-       "en": "The tail is the starting point; the tip is where the arrowhead is.",
-       "ur": "دم ابتدائی نقطہ ہے؛ سرا وہ ہے جہاں تیر کا نشان ہے۔",
+       "math": "\\overrightarrow{MN}",
+       "en": "We are given a vector that is directed from point $M$ to point $N$, and we need to identify its tail and tip.",
+       "ur": "ہمیں ایک ویکٹر دیا گیا ہے جس کی سمت نقطہ $M$ سے نقطہ $N$ کی طرف ہے، اور ہمیں اس کی دم (tail) اور سرے (tip) کی نشاندہی کرنی ہے۔",
        "draw": [
         {
          "t": "line",
@@ -648,9 +818,30 @@
          "s": "N"
         }
        ]
+      },
+      {
+       "math": "",
+       "en": "By definition, the starting (initial) point of a vector is called its tail, and the ending (terminal) point where the arrowhead is drawn is called its tip.",
+       "ur": "تعریف کے مطابق، کسی ویکٹر کے ابتدائی نقطے کو اس کی دم (tail) کہتے ہیں، اور اختتامی نقطے کو جہاں تیر کا نشان بنایا جاتا ہے اس کا سرا (tip) کہتے ہیں۔"
+      },
+      {
+       "math": "\\text{Tail} = M",
+       "en": "Since the vector starts at point $M$, the tail of the vector is $M$.",
+       "ur": "چونکہ ویکٹر نقطہ $M$ سے شروع ہوتا ہے، اس لیے ویکٹر کی دم (tail) نقطہ $M$ ہے۔"
+      },
+      {
+       "math": "\\text{Tip} = N",
+       "en": "Since the vector ends at point $N$ (where the arrowhead points), the tip of the vector is $N$.",
+       "ur": "چونکہ ویکٹر نقطہ $N$ پر ختم ہوتا ہے (جہاں تیر کا نشان ہے)، اس لیے ویکٹر کا سرا (tip) نقطہ $N$ ہے۔"
+      },
+      {
+       "math": "\\text{Tail} = M,\\quad \\text{Tip} = N",
+       "en": "Therefore, for the vector $\\overrightarrow{MN}$, the tail is $M$ and the tip is $N$.",
+       "ur": "لہٰذا، ویکٹر $\\overrightarrow{MN}$ کے لیے، دم $M$ ہے اور سرا $N$ ہے۔"
       }
      ],
      "answer": "Tail = M, Tip = N",
+     "enriched": true,
      "book_key": "Tail = M, Tip = N"
     },
     {
@@ -658,9 +849,9 @@
      "prompt": "vector from $A$ to $B$",
      "steps": [
       {
-       "math": "\\text{Tail} = A,\\quad \\text{Tip} = B",
-       "en": "The tail is the starting point; the tip is where the arrowhead is.",
-       "ur": "دم ابتدائی نقطہ ہے؛ سرا وہ ہے جہاں تیر کا نشان ہے۔",
+       "math": "\\overrightarrow{AB}",
+       "en": "We are given a vector that goes from point $A$ to point $B$, which is represented as $\\overrightarrow{AB}$. We need to identify its tail and tip.",
+       "ur": "ہمیں ایک ویکٹر دیا گیا ہے جو نقطہ $A$ سے نقطہ $B$ کی طرف جاتا ہے، جسے $\\overrightarrow{AB}$ سے ظاہر کیا جاتا ہے۔ ہمیں اس کی دم (tail) اور سرے (tip) کی نشاندہی کرنی ہے۔",
        "draw": [
         {
          "t": "line",
@@ -689,9 +880,30 @@
          "s": "B"
         }
        ]
+      },
+      {
+       "math": "",
+       "en": "By definition, the starting (initial) point of a vector is called its tail, and the ending (terminal) point where the arrowhead is drawn is called its tip (or head).",
+       "ur": "تعریف کے مطابق، کسی ویکٹر کے ابتدائی نقطے کو اس کی دم (tail) کہا جاتا ہے، اور اختتامی نقطے کو جہاں تیر کا نشان بنایا جاتا ہے، اس کا سرا (tip یا head) کہا جاتا ہے۔"
+      },
+      {
+       "math": "\\text{Tail} = A",
+       "en": "Since the vector starts at point $A$, the tail of the vector is $A$.",
+       "ur": "چونکہ ویکٹر نقطہ $A$ سے شروع ہوتا ہے، اس لیے ویکٹر کی دم $A$ ہے۔"
+      },
+      {
+       "math": "\\text{Tip} = B",
+       "en": "Since the vector ends at point $B$ (where the arrowhead points), the tip of the vector is $B$.",
+       "ur": "چونکہ ویکٹر نقطہ $B$ پر ختم ہوتا ہے (جہاں تیر کا نشان ہے)، اس لیے ویکٹر کا سرا $B$ ہے۔"
+      },
+      {
+       "math": "\\text{Tail} = A,\\quad \\text{Tip} = B",
+       "en": "Therefore, for the vector from $A$ to $B$, the tail is $A$ and the tip is $B$.",
+       "ur": "لہٰذا، $A$ سے $B$ تک کے ویکٹر کے لیے، دم $A$ ہے اور سرا $B$ ہے۔"
       }
      ],
      "answer": "Tail = A, Tip = B",
+     "enriched": true,
      "book_key": "Tail = A, Tip = B"
     },
     {
@@ -699,9 +911,9 @@
      "prompt": "vector from $D$ to $C$",
      "steps": [
       {
-       "math": "\\text{Tail} = D,\\quad \\text{Tip} = C",
-       "en": "The tail is the starting point; the tip is where the arrowhead is.",
-       "ur": "دم ابتدائی نقطہ ہے؛ سرا وہ ہے جہاں تیر کا نشان ہے۔",
+       "math": "\\overrightarrow{DC}",
+       "en": "We are given a vector that is directed from point $D$ to point $C$. We need to identify its tail and its tip.",
+       "ur": "ہمیں ایک ویکٹر دیا گیا ہے جس کی سمت نقطہ $D$ سے نقطہ $C$ کی طرف ہے۔ ہمیں اس کی دم (tail) اور سرے (tip) کی نشاندہی کرنی ہے۔",
        "draw": [
         {
          "t": "line",
@@ -730,9 +942,30 @@
          "s": "C"
         }
        ]
+      },
+      {
+       "math": "",
+       "en": "By definition of a directed line segment (vector), the starting (initial) point is called the tail, and the ending (terminal) point where the arrowhead is placed is called the tip.",
+       "ur": "ویکٹر کی تعریف کے مطابق، نقطہ آغاز کو دم (tail) کہا جاتا ہے، اور اختتامی نقطہ جہاں تیر کا نشان ہوتا ہے اسے سرا (tip) کہا جاتا ہے۔"
+      },
+      {
+       "math": "\\text{Tail} = D",
+       "en": "Since the vector starts at point $D$, the tail of the vector is $D$.",
+       "ur": "چونکہ ویکٹر نقطہ $D$ سے شروع ہوتا ہے، اس لیے ویکٹر کی دم $D$ ہے۔"
+      },
+      {
+       "math": "\\text{Tip} = C",
+       "en": "Since the vector ends at point $C$ (where the arrowhead points), the tip of the vector is $C$.",
+       "ur": "چونکہ ویکٹر نقطہ $C$ پر ختم ہوتا ہے (جہاں تیر کا نشان ہے)، اس لیے ویکٹر کا سرا $C$ ہے۔"
+      },
+      {
+       "math": "\\text{Tail} = D,\\quad \\text{Tip} = C",
+       "en": "Combining both results, we state the final answer.",
+       "ur": "دونوں نتائج کو ملا کر، ہم حتمی جواب لکھتے ہیں۔"
       }
      ],
      "answer": "Tail = D, Tip = C",
+     "enriched": true,
      "book_key": "Tail = D, Tip = C"
     }
    ],
@@ -750,16 +983,42 @@
      "prompt": "$A(1,-7), B(-2,4)$",
      "steps": [
       {
-       "math": "\\overrightarrow{AB} = (x_2 - x_1)\\underline{i} + (y_2 - y_1)\\underline{j} = (-2 - (1))\\underline{i} + (4 - (-7))\\underline{j} = -3\\underline{i} + 11\\underline{j}",
-       "en": "Tip minus tail: subtract the coordinates of the first point from the second.",
-       "ur": "دوسرے نقطے کے محدد سے پہلے نقطے کے محدد تفریق کریں۔",
+       "math": "A(x_1, y_1) = A(1, -7), \\quad B(x_2, y_2) = B(-2, 4)",
+       "en": "Identify the coordinates of the given initial point $A$ and terminal point $B$.",
+       "ur": "دیے گئے ابتدائی نقطہ $A$ اور اختتامی نقطہ $B$ کے محددات (coordinates) لکھیں۔"
+      },
+      {
+       "math": "\\overrightarrow{AB} = (x_2 - x_1)\\underline{i} + (y_2 - y_1)\\underline{j}",
+       "en": "Use the formula for a vector from point $A$ to point $B$, which is found by subtracting the coordinates of the initial point from the terminal point.",
+       "ur": "نقطہ $A$ سے نقطہ $B$ تک ویکٹر معلوم کرنے کا فارمولا استعمال کریں، جس میں اختتامی نقطہ کے محددات سے ابتدائی نقطہ کے محددات کو تفریق کیا جاتا ہے۔"
+      },
+      {
+       "math": "\\overrightarrow{AB} = (-2 - 1)\\underline{i} + (4 - (-7))\\underline{j}",
+       "en": "Substitute $x_1 = 1$, $y_1 = -7$, $x_2 = -2$, and $y_2 = 4$ into the formula.",
+       "ur": "فارمولے میں $x_1 = 1$، $y_1 = -7$، $x_2 = -2$، اور $y_2 = 4$ کی قیمتیں درج کریں۔"
+      },
+      {
+       "math": "\\overrightarrow{AB} = (-2 - 1)\\underline{i} + (4 + 7)\\underline{j}",
+       "en": "Simplify the signs inside the second bracket, as subtracting a negative number is the same as adding a positive number.",
+       "ur": "دوسری بریکٹ کے اندر علامتوں کو سادہ کریں، کیونکہ منفی عدد کو تفریق کرنا مثبت عدد کو جمع کرنے کے برابر ہے۔",
        "check": [
+        "4 - (-7) == 4 + 7"
+       ]
+      },
+      {
+       "math": "\\overrightarrow{AB} = -3\\underline{i} + 11\\underline{j}",
+       "en": "Perform the addition and subtraction to get the required vector in the form $x\\underline{i} + y\\underline{j}$.",
+       "ur": "مطلوبہ ویکٹر کو $x\\underline{i} + y\\underline{j}$ کی شکل میں حاصل کرنے کے لیے جمع اور تفریق کا عمل مکمل کریں۔",
+       "check": [
+        "-2 - 1 == -3",
+        "4 + 7 == 11",
         "(-2) - (1) == (-3)",
         "(4) - (-7) == (11)"
        ]
       }
      ],
      "answer": "$-3\\underline{i} + 11\\underline{j}$",
+     "enriched": true,
      "book_key": "-3i+11j"
     },
     {
@@ -767,9 +1026,33 @@
      "prompt": "$A(8,9), B(12,3)$",
      "steps": [
       {
-       "math": "\\overrightarrow{AB} = (x_2 - x_1)\\underline{i} + (y_2 - y_1)\\underline{j} = (12 - (8))\\underline{i} + (3 - (9))\\underline{j} = 4\\underline{i} - 6\\underline{j}",
-       "en": "Tip minus tail: subtract the coordinates of the first point from the second.",
-       "ur": "دوسرے نقطے کے محدد سے پہلے نقطے کے محدد تفریق کریں۔",
+       "math": "A(x_1, y_1) = A(8, 9), \\quad B(x_2, y_2) = B(12, 3)",
+       "en": "Identify the coordinates of the initial point $A$ and the terminal point $B$ from the given data.",
+       "ur": "دی گئی معلومات سے ابتدائی نقطے $A$ اور اختتامی نقطے $B$ کے محددات کی نشاندہی کریں۔"
+      },
+      {
+       "math": "\\overrightarrow{AB} = (x_2 - x_1)\\underline{i} + (y_2 - y_1)\\underline{j}",
+       "en": "Write the standard formula to find the vector $\\overrightarrow{AB}$ in component form by subtracting the coordinates of the initial point from the terminal point.",
+       "ur": "اختتامی نقطے کے محددات سے ابتدائی نقطے کے محددات تفریق کر کے ویکٹر $\\overrightarrow{AB}$ کو اجزائی شکل میں معلوم کرنے کا معیاری کلیہ لکھیں۔"
+      },
+      {
+       "math": "\\overrightarrow{AB} = (12 - 8)\\underline{i} + (3 - 9)\\underline{j}",
+       "en": "Substitute $x_1 = 8$, $y_1 = 9$, $x_2 = 12$, and $y_2 = 3$ into the formula.",
+       "ur": "کلیے میں $x_1 = 8$، $y_1 = 9$، $x_2 = 12$ اور $y_2 = 3$ کی قیمتیں درج کریں۔"
+      },
+      {
+       "math": "\\overrightarrow{AB} = 4\\underline{i} + (-6)\\underline{j}",
+       "en": "Perform the subtraction inside the brackets to find the $x$ and $y$ components.",
+       "ur": "$x$ اور $y$ اجزاء معلوم کرنے کے لیے خطوطِ وحدانی کے اندر تفریق کا عمل کریں۔",
+       "check": [
+        "12 - 8 == 4",
+        "3 - 9 == -6"
+       ]
+      },
+      {
+       "math": "\\overrightarrow{AB} = 4\\underline{i} - 6\\underline{j}",
+       "en": "Simplify the signs to write the final vector in the required form $x\\underline{i} + y\\underline{j}$.",
+       "ur": "مطلوبہ شکل $x\\underline{i} + y\\underline{j}$ میں حتمی ویکٹر لکھنے کے لیے علامات کو مختصر کریں۔",
        "check": [
         "(12) - (8) == (4)",
         "(3) - (9) == (-6)"
@@ -777,6 +1060,7 @@
       }
      ],
      "answer": "$4\\underline{i} - 6\\underline{j}$",
+     "enriched": true,
      "book_key": "4i-6j"
     }
    ],
@@ -794,15 +1078,43 @@
      "prompt": "$\\underline{a} = -3\\underline{i} + 2\\underline{j}$",
      "steps": [
       {
-       "math": "|a| = \\sqrt{(-3)^2 + (2)^2} = \\sqrt{9 + 4} = \\sqrt{13}",
-       "en": "Magnitude $= \\sqrt{x^2 + y^2}$.",
-       "ur": "مقدار $= \\sqrt{x^2 + y^2}$۔",
+       "math": "\\underline{a} = -3\\underline{i} + 2\\underline{j}",
+       "en": "The given vector is $\\underline{a} = -3\\underline{i} + 2\\underline{j}$. Here, the components are $x = -3$ and $y = 2$.",
+       "ur": "دی گئی ویکٹر $\\underline{a} = -3\\underline{i} + 2\\underline{j}$ ہے۔ یہاں اجزاء $x = -3$ اور $y = 2$ ہیں۔"
+      },
+      {
+       "math": "|\\underline{a}| = \\sqrt{x^2 + y^2}",
+       "en": "The magnitude of a vector $\\underline{a} = x\\underline{i} + y\\underline{j}$ in a plane is calculated using the formula $|\\underline{a}| = \\sqrt{x^2 + y^2}$.",
+       "ur": "مستوی میں کسی ویکٹر $\\underline{a} = x\\underline{i} + y\\underline{j}$ کی مقدار معلوم کرنے کا فارمولا $|\\underline{a}| = \\sqrt{x^2 + y^2}$ ہے۔"
+      },
+      {
+       "math": "|\\underline{a}| = \\sqrt{(-3)^2 + (2)^2}",
+       "en": "Substitute the values $x = -3$ and $y = 2$ into the magnitude formula.",
+       "ur": "مقدار کے فارمولے میں $x = -3$ اور $y = 2$ کی قیمتیں درج کریں۔"
+      },
+      {
+       "math": "|\\underline{a}| = \\sqrt{9 + 4}",
+       "en": "Calculate the squares of the numbers: $(-3)^2 = 9$ and $(2)^2 = 4$.",
+       "ur": "اعداد کے مربع معلوم کریں: $(-3)^2 = 9$ اور $(2)^2 = 4$۔",
        "check": [
+        "sqrt((-3)**2 + (2)**2) == sqrt(9 + 4)",
+        "(-3)**2 == 9",
+        "(2)**2 == 4"
+       ]
+      },
+      {
+       "math": "|\\underline{a}| = \\sqrt{13}",
+       "en": "Add the values inside the square root to get the final magnitude.",
+       "ur": "حتمی مقدار حاصل کرنے کے لیے جزر کے اندر موجود قیمتوں کو جمع کریں۔",
+       "check": [
+        "sqrt(9 + 4) == sqrt(13)",
+        "9 + 4 == 13",
         "sqrt((-3)**2 + (2)**2) == (sqrt(13))"
        ]
       }
      ],
      "answer": "$\\sqrt{13}$",
+     "enriched": true,
      "book_key": "\\sqrt{13}"
     },
     {
@@ -810,15 +1122,51 @@
      "prompt": "$\\underline{a} = 4\\underline{i} - 3\\underline{j}$",
      "steps": [
       {
-       "math": "|a| = \\sqrt{(4)^2 + (-3)^2} = \\sqrt{16 + 9} = 5",
-       "en": "Magnitude $= \\sqrt{x^2 + y^2}$.",
-       "ur": "مقدار $= \\sqrt{x^2 + y^2}$۔",
+       "math": "\\underline{a} = 4\\underline{i} - 3\\underline{j}",
+       "en": "First, write down the given vector $\\underline{a}$. Here, the components are $x = 4$ and $y = -3$.",
+       "ur": "سب سے پہلے، دیے گئے ویکٹر $\\underline{a}$ کو لکھیں۔ یہاں، اجزاء $x = 4$ اور $y = -3$ ہیں۔"
+      },
+      {
+       "math": "|\\underline{a}| = \\sqrt{x^2 + y^2}",
+       "en": "Recall the formula for the magnitude of a vector in the plane.",
+       "ur": "مستوی میں ویکٹر کی مقدار معلوم کرنے کا فارمولا لکھیں۔"
+      },
+      {
+       "math": "|\\underline{a}| = \\sqrt{(4)^2 + (-3)^2}",
+       "en": "Substitute the values $x = 4$ and $y = -3$ into the formula.",
+       "ur": "فارمولے میں $x = 4$ اور $y = -3$ کی قیمتیں درج کریں۔"
+      },
+      {
+       "math": "|\\underline{a}| = \\sqrt{16 + 9}",
+       "en": "Calculate the squares of both numbers: $(4)^2 = 16$ and $(-3)^2 = 9$.",
+       "ur": "دونوں نمبروں کا مربع لیں: $(4)^2 = 16$ اور $(-3)^2 = 9$۔",
        "check": [
+        "(4)**2 == 16",
+        "(-3)**2 == 9",
+        "sqrt((4)**2 + (-3)**2) == sqrt(16 + 9)"
+       ]
+      },
+      {
+       "math": "|\\underline{a}| = \\sqrt{25}",
+       "en": "Add the values inside the square root.",
+       "ur": "جذر کے اندر موجود قیمتوں کو جمع کریں۔",
+       "check": [
+        "16 + 9 == 25",
+        "sqrt(16 + 9) == sqrt(25)"
+       ]
+      },
+      {
+       "math": "|\\underline{a}| = 5",
+       "en": "Take the square root of $25$ to get the final answer.",
+       "ur": "حتمی جواب حاصل کرنے کے لیے $25$ کا جذر لیں۔",
+       "check": [
+        "sqrt(25) == 5",
         "sqrt((4)**2 + (-3)**2) == (5)"
        ]
       }
      ],
      "answer": "$5$",
+     "enriched": true,
      "book_key": "5"
     },
     {
@@ -826,15 +1174,49 @@
      "prompt": "$\\underline{a} = \\frac{1}{2}\\underline{i} + \\frac{3}{2}\\underline{j}$",
      "steps": [
       {
-       "math": "|a| = \\sqrt{(\\frac{1}{2})^2 + (\\frac{3}{2})^2} = \\sqrt{\\frac{1}{4} + \\frac{9}{4}} = \\frac{\\sqrt{10}}{2}",
-       "en": "Magnitude $= \\sqrt{x^2 + y^2}$.",
-       "ur": "مقدار $= \\sqrt{x^2 + y^2}$۔",
+       "math": "\\underline{a} = \\frac{1}{2}\\underline{i} + \\frac{3}{2}\\underline{j}",
+       "en": "Write down the given vector $\\underline{a}$. Here, the components are $x = \\frac{1}{2}$ and $y = \\frac{3}{2}$.",
+       "ur": "دیے گئے ویکٹر $\\underline{a}$ کو لکھیں۔ یہاں اجزاء $x = \\frac{1}{2}$ اور $y = \\frac{3}{2}$ ہیں۔"
+      },
+      {
+       "math": "|\\underline{a}| = \\sqrt{x^2 + y^2}",
+       "en": "Recall the formula for the magnitude of a vector $\\underline{a} = x\\underline{i} + y\\underline{j}$.",
+       "ur": "ویکٹر $\\underline{a} = x\\underline{i} + y\\underline{j}$ کی مقدار معلوم کرنے کا فارمولا لکھیں۔"
+      },
+      {
+       "math": "|\\underline{a}| = \\sqrt{\\left(\\frac{1}{2}\\right)^2 + \\left(\\frac{3}{2}\\right)^2}",
+       "en": "Substitute the values $x = \\frac{1}{2}$ and $y = \\frac{3}{2}$ into the magnitude formula.",
+       "ur": "مقدار کے فارمولے میں $x = \\frac{1}{2}$ اور $y = \\frac{3}{2}$ کی قیمتیں درج کریں۔"
+      },
+      {
+       "math": "|\\underline{a}| = \\sqrt{\\frac{1}{4} + \\frac{9}{4}}",
+       "en": "Evaluate the squares of the fractions inside the square root.",
+       "ur": "جذر کے اندر موجود کسروں کا مربع لیں۔",
        "check": [
+        "(R(1,2))**2 == R(1,4)",
+        "(R(3,2))**2 == R(9,4)"
+       ]
+      },
+      {
+       "math": "|\\underline{a}| = \\sqrt{\\frac{1 + 9}{4}} = \\sqrt{\\frac{10}{4}}",
+       "en": "Since the denominators are the same, add the numerators.",
+       "ur": "چونکہ مخرج ایک جیسے ہیں، اس لیے شمار کنندگان کو جمع کریں۔",
+       "check": [
+        "R(1,4) + R(9,4) == R(10,4)"
+       ]
+      },
+      {
+       "math": "|\\underline{a}| = \\frac{\\sqrt{10}}{\\sqrt{4}} = \\frac{\\sqrt{10}}{2}",
+       "en": "Take the square root of the numerator and the denominator separately to get the final answer.",
+       "ur": "حتمی جواب حاصل کرنے کے لیے شمار کنندہ اور مخرج کا الگ الگ جذر لیں۔",
+       "check": [
+        "sqrt(R(10,4)) == sqrt(10)/2",
         "sqrt((1/2)**2 + (3/2)**2) == (sqrt(10)/2)"
        ]
       }
      ],
      "answer": "$\\frac{\\sqrt{10}}{2}$",
+     "enriched": true,
      "book_key": "\\frac{\\sqrt{10}}{2}"
     }
    ],
@@ -852,18 +1234,53 @@
      "prompt": "$\\underline{a} = -4\\underline{i} + 5\\underline{j}$",
      "steps": [
       {
-       "math": "|a| = \\sqrt{(-4)^2 + (5)^2} = \\sqrt{16 + 25} = \\sqrt{41}",
-       "en": "Magnitude $= \\sqrt{x^2 + y^2}$.",
-       "ur": "مقدار $= \\sqrt{x^2 + y^2}$۔",
+       "math": "\\underline{a} = -4\\underline{i} + 5\\underline{j}",
+       "en": "Write down the given vector $\\underline{a}$. Here, the components are $x = -4$ and $y = 5$.",
+       "ur": "دیے گئے ویکٹر $\\underline{a}$ کو لکھیں۔ یہاں اس کے اجزاء $x = -4$ اور $y = 5$ ہیں۔"
+      },
+      {
+       "math": "|\\underline{a}| = \\sqrt{x^2 + y^2}",
+       "en": "Recall the formula to find the magnitude of a vector in a plane.",
+       "ur": "مستوی میں ویکٹر کی مقدار (magnitude) معلوم کرنے کا فارمولا لکھیں۔"
+      },
+      {
+       "math": "|\\underline{a}| = \\sqrt{(-4)^2 + (5)^2}",
+       "en": "Substitute $x = -4$ and $y = 5$ into the magnitude formula.",
+       "ur": "مقدار کے فارمولے میں $x = -4$ اور $y = 5$ کی قیمتیں درج کریں۔",
        "check": [
-        "sqrt((-4)**2 + (5)**2) == (sqrt(41))"
+        "sqrt((-4)**2 + (5)**2) == sqrt(41)"
        ]
       },
       {
-       "math": "\\hat{a} = \\frac{a}{|a|} = \\frac{-4\\underline{i} + 5\\underline{j}}{\\sqrt{41}} = -\\frac{4}{\\sqrt{41}}\\underline{i} + \\frac{5}{\\sqrt{41}}\\underline{j}",
-       "en": "Divide the vector by its magnitude.",
-       "ur": "سمتیہ کو اس کی مقدار سے تقسیم کریں۔",
+       "math": "|\\underline{a}| = \\sqrt{16 + 25} = \\sqrt{41}",
+       "en": "Calculate the squares and add them together to get the magnitude $|\\underline{a}|$.",
+       "ur": "مربع لیں اور انہیں جمع کر کے مقدار $|\\underline{a}|$ حاصل کریں۔",
        "check": [
+        "(-4)**2 == 16",
+        "5**2 == 25",
+        "16 + 25 == 41",
+        "sqrt(16 + 25) == sqrt(41)"
+       ]
+      },
+      {
+       "math": "\\hat{a} = \\frac{\\underline{a}}{|\\underline{a}|}",
+       "en": "A unit vector $\\hat{a}$ in the direction of $\\underline{a}$ is obtained by dividing the vector by its magnitude.",
+       "ur": "ویکٹر $\\underline{a}$ کی سمت میں اکائی ویکٹر (unit vector) $\\hat{a}$ معلوم کرنے کے لیے ویکٹر کو اس کی مقدار سے تقسیم کیا جاتا ہے۔"
+      },
+      {
+       "math": "\\hat{a} = \\frac{-4\\underline{i} + 5\\underline{j}}{\\sqrt{41}}",
+       "en": "Substitute the vector $\\underline{a}$ and its magnitude $|\\underline{a}| = \\sqrt{41}$ into the unit vector formula.",
+       "ur": "اکائی ویکٹر کے فارمولے میں ویکٹر $\\underline{a}$ اور اس کی مقدار $|\\underline{a}| = \\sqrt{41}$ درج کریں۔"
+      },
+      {
+       "math": "\\hat{a} = -\\frac{4}{\\sqrt{41}}\\underline{i} + \\frac{5}{\\sqrt{41}}\\underline{j}",
+       "en": "Separate the $\\underline{i}$ and $\\underline{j}$ components to write the final unit vector.",
+       "ur": "مطلوبہ اکائی ویکٹر کو مکمل کرنے کے لیے $\\underline{i}$ اور $\\underline{j}$ کے اجزاء کو الگ الگ کر کے لکھیں۔",
+       "check": [
+        "(-4/sqrt(41))**2 + (5/sqrt(41))**2 == 1",
+        "(-4/sqrt(41))*sqrt(41) == -4",
+        "(5/sqrt(41))*sqrt(41) == 5",
+        "sqrt((-4)**2 + (5)**2) == (sqrt(41))",
         "(-4*sqrt(41)/41)**2 + (5*sqrt(41)/41)**2 == 1",
         "(-4*sqrt(41)/41)*(sqrt(41)) == (-4)",
         "(5*sqrt(41)/41)*(sqrt(41)) == (5)"
@@ -871,6 +1288,7 @@
       }
      ],
      "answer": "$-\\frac{4}{\\sqrt{41}}\\underline{i} + \\frac{5}{\\sqrt{41}}\\underline{j}$",
+     "enriched": true,
      "book_key": "-\\frac{4}{\\sqrt{41}}i+\\frac{5}{\\sqrt{41}}j"
     },
     {
@@ -878,18 +1296,51 @@
      "prompt": "$\\underline{a} = 6\\underline{i} + 8\\underline{j}$",
      "steps": [
       {
-       "math": "|a| = \\sqrt{(6)^2 + (8)^2} = \\sqrt{36 + 64} = 10",
-       "en": "Magnitude $= \\sqrt{x^2 + y^2}$.",
-       "ur": "مقدار $= \\sqrt{x^2 + y^2}$۔",
+       "math": "\\underline{a} = 6\\underline{i} + 8\\underline{j}",
+       "en": "Write down the given vector $\\underline{a}$. Here, the components are $x = 6$ and $y = 8$.",
+       "ur": "دیا گیا سمتیہ $\\underline{a}$ لکھیں۔ یہاں اجزاء $x = 6$ اور $y = 8$ ہیں۔",
        "check": [
-        "sqrt((6)**2 + (8)**2) == (10)"
+        "6 == 6",
+        "8 == 8"
        ]
       },
       {
-       "math": "\\hat{a} = \\frac{a}{|a|} = \\frac{6\\underline{i} + 8\\underline{j}}{10} = \\frac{3}{5}\\underline{i} + \\frac{4}{5}\\underline{j}",
-       "en": "Divide the vector by its magnitude.",
-       "ur": "سمتیہ کو اس کی مقدار سے تقسیم کریں۔",
+       "math": "|\\underline{a}| = \\sqrt{(6)^2 + (8)^2}",
+       "en": "Substitute $x = 6$ and $y = 8$ into the magnitude formula $|\\underline{a}| = \\sqrt{x^2 + y^2}$.",
+       "ur": "مقدار کے فارمولے $|\\underline{a}| = \\sqrt{x^2 + y^2}$ میں $x = 6$ اور $y = 8$ درج کریں۔",
        "check": [
+        "sqrt((6)**2 + (8)**2) == 10"
+       ]
+      },
+      {
+       "math": "|\\underline{a}| = \\sqrt{36 + 64} = \\sqrt{100} = 10",
+       "en": "Calculate the squares, add them together, and take the square root to find the magnitude.",
+       "ur": "مربع معلوم کریں، انہیں جمع کریں، اور مقدار معلوم کرنے کے لیے جذر المربع لیں۔",
+       "check": [
+        "6**2 == 36",
+        "8**2 == 64",
+        "36 + 64 == 100",
+        "sqrt(100) == 10"
+       ]
+      },
+      {
+       "math": "\\hat{a} = \\frac{6\\underline{i} + 8\\underline{j}}{10}",
+       "en": "A unit vector $\\hat{a}$ in the direction of $\\underline{a}$ is given by the formula $\\hat{a} = \\frac{\\underline{a}}{|\\underline{a}|}$. Substitute the vector and its magnitude.",
+       "ur": "$\\underline{a}$ کی سمت میں اکائی سمتیہ $\\hat{a}$ کا فارمولا $\\hat{a} = \\frac{\\underline{a}}{|\\underline{a}|}$ ہے۔ اس میں سمتیہ اور اس کی مقدار درج کریں۔",
+       "check": [
+        "R(6, 10) == R(3, 5)",
+        "R(8, 10) == R(4, 5)"
+       ]
+      },
+      {
+       "math": "\\hat{a} = \\frac{6}{10}\\underline{i} + \\frac{8}{10}\\underline{j} = \\frac{3}{5}\\underline{i} + \\frac{4}{5}\\underline{j}",
+       "en": "Separate the terms and simplify the fractions to get the final unit vector.",
+       "ur": "ارکان کو الگ کریں اور کسر کو مختصر کر کے مطلوبہ اکائی سمتیہ حاصل کریں۔",
+       "check": [
+        "R(6, 10) == R(3, 5)",
+        "R(8, 10) == R(4, 5)",
+        "(R(3, 5))**2 + (R(4, 5))**2 == 1",
+        "sqrt((6)**2 + (8)**2) == (10)",
         "(3/5)**2 + (4/5)**2 == 1",
         "(3/5)*(10) == (6)",
         "(4/5)*(10) == (8)"
@@ -897,6 +1348,7 @@
       }
      ],
      "answer": "$\\frac{3}{5}\\underline{i} + \\frac{4}{5}\\underline{j}$",
+     "enriched": true,
      "book_key": "\\frac{3}{5}i+\\frac{4}{5}j"
     },
     {
@@ -904,18 +1356,56 @@
      "prompt": "$\\underline{a} = \\frac{1}{\\sqrt{6}}\\underline{i} + \\frac{1}{\\sqrt{6}}\\underline{j}$",
      "steps": [
       {
-       "math": "|a| = \\sqrt{(\\frac{\\sqrt{6}}{6})^2 + (\\frac{\\sqrt{6}}{6})^2} = \\sqrt{\\frac{1}{6} + \\frac{1}{6}} = \\frac{\\sqrt{3}}{3}",
-       "en": "Magnitude $= \\sqrt{x^2 + y^2}$.",
-       "ur": "مقدار $= \\sqrt{x^2 + y^2}$۔",
+       "math": "\\underline{a} = \\frac{1}{\\sqrt{6}}\\underline{i} + \\frac{1}{\\sqrt{6}}\\underline{j}",
+       "en": "First, write down the given vector $\\underline{a}$. Here, the components are $x = \\frac{1}{\\sqrt{6}}$ and $y = \\frac{1}{\\sqrt{6}}$.",
+       "ur": "سب سے پہلے، دیا گیا سمتیہ $\\underline{a}$ لکھیں۔ یہاں اجزاء $x = \\frac{1}{\\sqrt{6}}$ اور $y = \\frac{1}{\\sqrt{6}}$ ہیں۔",
        "check": [
-        "sqrt((sqrt(6)/6)**2 + (sqrt(6)/6)**2) == (sqrt(3)/3)"
+        "1/sqrt(6) == sqrt(6)/6"
        ]
       },
       {
-       "math": "\\hat{a} = \\frac{a}{|a|} = \\frac{\\frac{1}{\\sqrt{6}}\\underline{i} + \\frac{1}{\\sqrt{6}}\\underline{j}}{\\frac{\\sqrt{3}}{3}} = \\frac{1}{\\sqrt{2}}\\underline{i} + \\frac{1}{\\sqrt{2}}\\underline{j}",
-       "en": "Divide the vector by its magnitude.",
-       "ur": "سمتیہ کو اس کی مقدار سے تقسیم کریں۔",
+       "math": "|\\underline{a}| = \\sqrt{x^2 + y^2} = \\sqrt{\\left(\\frac{1}{\\sqrt{6}}\\right)^2 + \\left(\\frac{1}{\\sqrt{6}}\\right)^2}",
+       "en": "To find the magnitude $|\\underline{a}|$ of the vector, use the formula $\\sqrt{x^2 + y^2}$ and substitute the values of $x$ and $y$.",
+       "ur": "سمتیہ کی مقدار $|\\underline{a}|$ معلوم کرنے کے لیے فارمولا $\\sqrt{x^2 + y^2}$ استعمال کریں اور $x$ اور $y$ کی قیمتیں درج کریں۔",
        "check": [
+        "sqrt((1/sqrt(6))**2 + (1/sqrt(6))**2) == sqrt(3)/3"
+       ]
+      },
+      {
+       "math": "|\\underline{a}| = \\sqrt{\\frac{1}{6} + \\frac{1}{6}} = \\sqrt{\\frac{2}{6}} = \\sqrt{\\frac{1}{3}} = \\frac{1}{\\sqrt{3}}",
+       "en": "Square both terms, add the fractions, and simplify to get the magnitude $|\\underline{a}|$.",
+       "ur": "دونوں رقموں کا مربع لیں، کسروں کو جمع کریں، اور مختصر کر کے مقدار $|\\underline{a}|$ حاصل کریں۔",
+       "check": [
+        "(1/sqrt(6))**2 == R(1,6)",
+        "R(1,6) + R(1,6) == R(2,6)",
+        "R(2,6) == R(1,3)",
+        "sqrt(R(1,3)) == 1/sqrt(3)"
+       ]
+      },
+      {
+       "math": "\\hat{a} = \\frac{\\underline{a}}{|\\underline{a}|} = \\frac{\\frac{1}{\\sqrt{6}}\\underline{i} + \\frac{1}{\\sqrt{6}}\\underline{j}}{\\frac{1}{\\sqrt{3}}}",
+       "en": "A unit vector $\\hat{a}$ in the direction of $\\underline{a}$ is found by dividing the vector $\\underline{a}$ by its magnitude $|\\underline{a}|$.",
+       "ur": "سمتیہ $\\underline{a}$ کی سمت میں اکائی سمتیہ $\\hat{a}$ معلوم کرنے کے لیے سمتیہ $\\underline{a}$ کو اس کی مقدار $|\\underline{a}|$ سے تقسیم کریں۔",
+       "check": [
+        "(1/sqrt(6))/(1/sqrt(3)) == 1/sqrt(2)"
+       ]
+      },
+      {
+       "math": "\\hat{a} = \\frac{\\sqrt{3}}{\\sqrt{6}}\\underline{i} + \\frac{\\sqrt{3}}{\\sqrt{6}}\\underline{j} = \\sqrt{\\frac{3}{6}}\\underline{i} + \\sqrt{\\frac{3}{6}}\\underline{j}",
+       "en": "Multiply each component by $\\sqrt{3}$ and combine the square roots.",
+       "ur": "ہر جزو کو $\\sqrt{3}$ سے ضرب دیں اور جذر کو اکٹھا کریں۔",
+       "check": [
+        "sqrt(3)/sqrt(6) == sqrt(R(3,6))"
+       ]
+      },
+      {
+       "math": "\\hat{a} = \\frac{1}{\\sqrt{2}}\\underline{i} + \\frac{1}{\\sqrt{2}}\\underline{j}",
+       "en": "Simplify the fraction inside the square root to get the required unit vector.",
+       "ur": "مطلوبہ اکائی سمتیہ حاصل کرنے کے لیے جذر کے اندر موجود کسر کو مختصر کریں۔",
+       "check": [
+        "sqrt(R(3,6)) == 1/sqrt(2)",
+        "(1/sqrt(2))**2 + (1/sqrt(2))**2 == 1",
+        "sqrt((sqrt(6)/6)**2 + (sqrt(6)/6)**2) == (sqrt(3)/3)",
         "(sqrt(2)/2)**2 + (sqrt(2)/2)**2 == 1",
         "(sqrt(2)/2)*(sqrt(3)/3) == (sqrt(6)/6)",
         "(sqrt(2)/2)*(sqrt(3)/3) == (sqrt(6)/6)"
@@ -923,6 +1413,7 @@
       }
      ],
      "answer": "$\\frac{1}{\\sqrt{2}}\\underline{i} + \\frac{1}{\\sqrt{2}}\\underline{j}$",
+     "enriched": true,
      "book_key": "\\frac{1}{\\sqrt{2}}i+\\frac{1}{\\sqrt{2}}j"
     },
     {
@@ -930,18 +1421,62 @@
      "prompt": "$\\underline{a} = \\frac{1}{2}\\underline{i} -  \\frac{3}{4}\\underline{j}$",
      "steps": [
       {
-       "math": "|a| = \\sqrt{(\\frac{1}{2})^2 + (- \\frac{3}{4})^2} = \\sqrt{\\frac{1}{4} + \\frac{9}{16}} = \\frac{\\sqrt{13}}{4}",
-       "en": "Magnitude $= \\sqrt{x^2 + y^2}$.",
-       "ur": "مقدار $= \\sqrt{x^2 + y^2}$۔",
+       "math": "",
+       "en": "We are given the vector $\\underline{a} = \\frac{1}{2}\\underline{i} - \\frac{3}{4}\\underline{j}$. Here, the components are $x = \\frac{1}{2}$ and $y = -\\frac{3}{4}$. We need to find a unit vector $\\hat{a}$ in its direction.",
+       "ur": "ہمیں سمتیہ $\\underline{a} = \\frac{1}{2}\\underline{i} - \\frac{3}{4}\\underline{j}$ دیا گیا ہے۔ یہاں اجزاء $x = \\frac{1}{2}$ اور $y = -\\frac{3}{4}$ ہیں۔ ہمیں اس کی سمت میں اکائی سمتیہ $\\hat{a}$ معلوم کرنا ہے۔"
+      },
+      {
+       "math": "|\\underline{a}| = \\sqrt{x^2 + y^2} = \\sqrt{\\left(\\frac{1}{2}\\right)^2 + \\left(-\\frac{3}{4}\\right)^2}",
+       "en": "First, substitute the components into the magnitude formula $|\\underline{a}| = \\sqrt{x^2 + y^2}$.",
+       "ur": "سب سے پہلے، مقدار کے کلیے $|\\underline{a}| = \\sqrt{x^2 + y^2}$ میں اجزاء کی قیمتیں درج کریں۔",
        "check": [
-        "sqrt((1/2)**2 + (-3/4)**2) == (sqrt(13)/4)"
+        "sqrt(R(1,2)**2 + (-R(3,4))**2) == sqrt(13)/4"
        ]
       },
       {
-       "math": "\\hat{a} = \\frac{a}{|a|} = \\frac{\\frac{1}{2}\\underline{i} -  \\frac{3}{4}\\underline{j}}{\\frac{\\sqrt{13}}{4}} = \\frac{2}{\\sqrt{13}}\\underline{i} - \\frac{3}{\\sqrt{13}}\\underline{j}",
-       "en": "Divide the vector by its magnitude.",
-       "ur": "سمتیہ کو اس کی مقدار سے تقسیم کریں۔",
+       "math": "|\\underline{a}| = \\sqrt{\\frac{1}{4} + \\frac{9}{16}}",
+       "en": "Square both fraction terms inside the square root.",
+       "ur": "جذر کے اندر دونوں کسروں کا مربع لیں۔",
        "check": [
+        "R(1,2)**2 == R(1,4)",
+        "(-R(3,4))**2 == R(9,16)"
+       ]
+      },
+      {
+       "math": "|\\underline{a}| = \\sqrt{\\frac{4 + 9}{16}} = \\sqrt{\\frac{13}{16}} = \\frac{\\sqrt{13}}{4}",
+       "en": "Take the LCM of the denominators ($16$), add the numerators, and simplify the square root.",
+       "ur": "نصب نماؤں کا ذواضعاف اقل ($16$) لیں، شمار کنندگان کو جمع کریں اور جذر کو مختصر کریں۔",
+       "check": [
+        "R(1,4) + R(9,16) == R(13,16)",
+        "sqrt(R(13,16)) == sqrt(13)/4"
+       ]
+      },
+      {
+       "math": "\\hat{a} = \\frac{\\underline{a}}{|\\underline{a}|} = \\frac{\\frac{1}{2}\\underline{i} - \\frac{3}{4}\\underline{j}}{\\frac{\\sqrt{13}}{4}}",
+       "en": "The formula for a unit vector is $\\hat{a} = \\frac{\\underline{a}}{|\\underline{a}|}$. Substitute the vector $\\underline{a}$ and its magnitude $|\\underline{a}|$.",
+       "ur": "اکائی سمتیہ کا کلیہ $\\hat{a} = \\frac{\\underline{a}}{|\\underline{a}|}$ ہے۔ اس میں سمتیہ $\\underline{a}$ اور اس کی مقدار $|\\underline{a}|$ درج کریں۔",
+       "check": [
+        "R(1,2)/(sqrt(13)/4) == 2/sqrt(13)",
+        "(-R(3,4))/(sqrt(13)/4) == -3/sqrt(13)"
+       ]
+      },
+      {
+       "math": "\\hat{a} = \\frac{4}{\\sqrt{13}} \\left( \\frac{1}{2}\\underline{i} - \\frac{3}{4}\\underline{j} \\right)",
+       "en": "Rewrite the division by $\\frac{\\sqrt{13}}{4}$ as multiplication by its reciprocal $\\frac{4}{\\sqrt{13}}$.",
+       "ur": "کسر $\\frac{\\sqrt{13}}{4}$ سے تقسیم کو اس کے معکوس $\\frac{4}{\\sqrt{13}}$ سے ضرب کی صورت میں لکھیں۔",
+       "check": [
+        "1/(sqrt(13)/4) == 4/sqrt(13)"
+       ]
+      },
+      {
+       "math": "\\hat{a} = \\frac{2}{\\sqrt{13}}\\underline{i} - \\frac{3}{\\sqrt{13}}\\underline{j}",
+       "en": "Multiply $\\frac{4}{\\sqrt{13}}$ with each component and simplify to get the required unit vector.",
+       "ur": "$\\frac{4}{\\sqrt{13}}$ کو ہر جزو سے ضرب دیں اور مطلوبہ اکائی سمتیہ حاصل کرنے کے لیے مختصر کریں۔",
+       "check": [
+        "(4/sqrt(13))*R(1,2) == 2/sqrt(13)",
+        "(4/sqrt(13))*(-R(3,4)) == -3/sqrt(13)",
+        "(2/sqrt(13))**2 + (-3/sqrt(13))**2 == 1",
+        "sqrt((1/2)**2 + (-3/4)**2) == (sqrt(13)/4)",
         "(2*sqrt(13)/13)**2 + (-3*sqrt(13)/13)**2 == 1",
         "(2*sqrt(13)/13)*(sqrt(13)/4) == (1/2)",
         "(-3*sqrt(13)/13)*(sqrt(13)/4) == (-3/4)"
@@ -949,6 +1484,7 @@
       }
      ],
      "answer": "$\\frac{2}{\\sqrt{13}}\\underline{i} - \\frac{3}{\\sqrt{13}}\\underline{j}$",
+     "enriched": true,
      "book_key": "\\frac{2}{\\sqrt{13}}i-\\frac{3}{\\sqrt{13}}j"
     }
    ],
@@ -1096,21 +1632,48 @@
      "prompt": "$\\underline{a}=6\\underline{i} + \\underline{j},\\ \\underline{b}=12\\underline{i} + 2\\underline{j}$",
      "steps": [
       {
-       "math": "\\underline{b} = 12\\underline{i} + 2\\underline{j} = 2\\left(6\\underline{i} + \\underline{j}\\right) = 2\\underline{a}",
-       "en": "One vector is a number times the other.",
-       "ur": "ایک سمتیہ دوسرے کا عددی مضرب ہے۔",
+       "math": "\\underline{a} = 6\\underline{i} + \\underline{j}, \\quad \\underline{b} = 12\\underline{i} + 2\\underline{j}",
+       "en": "First, write down the two given vectors $\\underline{a}$ and $\\underline{b}$. We need to check if they are parallel.",
+       "ur": "سب سے پہلے، دیے گئے دونوں سمتیوں $\\underline{a}$ اور $\\underline{b}$ کو لکھیں۔ ہمیں معلوم کرنا ہے کہ آیا یہ متوازی ہیں۔",
+       "check": [
+        "6 == 6",
+        "12 == 12"
+       ]
+      },
+      {
+       "math": "\\underline{b} = k\\underline{a}",
+       "en": "Recall the rule that two vectors $\\underline{a}$ and $\\underline{b}$ are parallel if one can be written as a non-zero scalar multiple of the other, where $k$ is a real number.",
+       "ur": "یاد رکھیں کہ دو سمتیے $\\underline{a}$ اور $\\underline{b}$ متوازی ہوتے ہیں اگر ایک کو دوسرے کے غیر صفری عددی مضرب کے طور پر لکھا جا سکے، جہاں $k$ ایک حقیقی عدد ہے۔"
+      },
+      {
+       "math": "\\underline{b} = 12\\underline{i} + 2\\underline{j} = 2\\left(6\\underline{i} + \\underline{j}\\right)",
+       "en": "Take the vector $\\underline{b}$ and factor out the common number $2$ from both components.",
+       "ur": "سمتیہ $\\underline{b}$ لیں اور اس کے دونوں اجزاء میں سے مشترک عدد $2$ کو باہر نکالیں۔",
        "check": [
         "2*6 == 12",
         "2*1 == 2"
        ]
       },
       {
+       "math": "\\underline{b} = 2\\underline{a}",
+       "en": "Since $\\underline{a} = 6\\underline{i} + \\underline{j}$, substitute $\\underline{a}$ in place of $\\left(6\\underline{i} + \\underline{j}\\right)$.",
+       "ur": "چونکہ $\\underline{a} = 6\\underline{i} + \\underline{j}$ ہے، اس لیے $\\left(6\\underline{i} + \\underline{j}\\right)$ کی جگہ $\\underline{a}$ درج کریں۔",
+       "check": [
+        "2 == 2"
+       ]
+      },
+      {
        "math": "\\text{parallel}",
-       "en": "Vectors that are multiples of each other are parallel.",
-       "ur": "ایک دوسرے کے مضرب سمتیے متوازی ہوتے ہیں۔"
+       "en": "Since vector $\\underline{b}$ is a scalar multiple of vector $\\underline{a}$ (with $k = 2$), the two vectors are parallel.",
+       "ur": "چونکہ سمتیہ $\\underline{b}$ سمتیہ $\\underline{a}$ کا عددی مضرب ہے (جہاں $k = 2$ ہے)، اس لیے دونوں سمتیے متوازی ہیں۔",
+       "check": [
+        "2*6 == 12",
+        "2*1 == 2"
+       ]
       }
      ],
      "answer": "parallel ($\\underline{b} = 2\\underline{a}$)",
+     "enriched": true,
      "book_key": "parallel (b=2a)"
     },
     {
@@ -1118,21 +1681,44 @@
      "prompt": "$\\underline{a}=-2\\underline{i} + 3\\underline{j},\\ \\underline{b}=6\\underline{i} - 9\\underline{j}$",
      "steps": [
       {
-       "math": "\\underline{b} = 6\\underline{i} - 9\\underline{j} = -3\\left(-2\\underline{i} + 3\\underline{j}\\right) = -3\\underline{a}",
-       "en": "One vector is a number times the other.",
-       "ur": "ایک سمتیہ دوسرے کا عددی مضرب ہے۔",
+       "math": "",
+       "en": "We are given two vectors $\\underline{a} = -2\\underline{i} + 3\\underline{j}$ and $\\underline{b} = 6\\underline{i} - 9\\underline{j}$, and we need to determine if they are parallel.",
+       "ur": "ہمیں دو سمتیے $\\underline{a} = -2\\underline{i} + 3\\underline{j}$ اور $\\underline{b} = 6\\underline{i} - 9\\underline{j}$ دیے گئے ہیں، اور ہمیں معلوم کرنا ہے کہ آیا یہ متوازی ہیں۔"
+      },
+      {
+       "math": "\\underline{b} = k\\underline{a}",
+       "en": "Two non-zero vectors $\\underline{a}$ and $\\underline{b}$ are parallel if one can be written as a scalar multiple of the other, where $k$ is a non-zero real number.",
+       "ur": "دو غیر صفری سمتیے $\\underline{a}$ اور $\\underline{b}$ متوازی ہوتے ہیں اگر ایک کو دوسرے کے عددی مضرب کے طور پر لکھا جا سکے، جہاں $k$ ایک غیر صفری حقیقی عدد ہے۔"
+      },
+      {
+       "math": "\\underline{b} = 6\\underline{i} - 9\\underline{j} = -3(-2\\underline{i} + 3\\underline{j})",
+       "en": "Consider the vector $\\underline{b}$ and factor out $-3$ from both components.",
+       "ur": "سمتیہ $\\underline{b}$ پر غور کریں اور دونوں اجزاء میں سے $-3$ کو مشترک لیں۔",
        "check": [
         "-3*-2 == 6",
         "-3*3 == -9"
        ]
       },
       {
+       "math": "\\underline{b} = -3\\underline{a}",
+       "en": "Since $\\underline{a} = -2\\underline{i} + 3\\underline{j}$, substitute $\\underline{a}$ into the equation. This shows $\\underline{b}$ is a scalar multiple of $\\underline{a}$ with $k = -3$.",
+       "ur": "چونکہ $\\underline{a} = -2\\underline{i} + 3\\underline{j}$ ہے، اس لیے مساوات میں $\\underline{a}$ درج کریں۔ اس سے ظاہر ہوتا ہے کہ $\\underline{b}$ سمتیہ $\\underline{a}$ کا عددی مضرب ہے جہاں $k = -3$ ہے۔",
+       "check": [
+        "-3 == -3"
+       ]
+      },
+      {
        "math": "\\text{parallel}",
-       "en": "Vectors that are multiples of each other are parallel.",
-       "ur": "ایک دوسرے کے مضرب سمتیے متوازی ہوتے ہیں۔"
+       "en": "Since one vector is a scalar multiple of the other, the given vectors $\\underline{a}$ and $\\underline{b}$ are parallel.",
+       "ur": "چونکہ ایک سمتیہ دوسرے کا عددی مضرب ہے، اس لیے دیے گئے سمتیے $\\underline{a}$ اور $\\underline{b}$ متوازی ہیں۔",
+       "check": [
+        "-3*-2 == 6",
+        "-3*3 == -9"
+       ]
       }
      ],
      "answer": "parallel ($\\underline{b} = -3\\underline{a}$)",
+     "enriched": true,
      "book_key": "parallel (b=-3a)"
     },
     {
@@ -1140,20 +1726,47 @@
      "prompt": "$\\underline{a}=5\\underline{i} - 4\\underline{j},\\ \\underline{b}=6\\underline{i} - 3\\underline{j}$",
      "steps": [
       {
-       "math": "\\frac{6}{5} = \\frac{6}{5},\\quad \\frac{-3}{-4} = \\frac{3}{4}",
-       "en": "Compare the ratios of the components.",
-       "ur": "اجزاء کی نسبتوں کا موازنہ کریں۔",
+       "math": "\\underline{a} = 5\\underline{i} - 4\\underline{j}, \\quad \\underline{b} = 6\\underline{i} - 3\\underline{j}",
+       "en": "Write down the given vectors $\\underline{a}$ and $\\underline{b}$. We need to check whether they are parallel.",
+       "ur": "دیے گئے ویکٹرز $\\underline{a}$ اور $\\underline{b}$ لکھیں۔ ہمیں یہ معلوم کرنا ہے کہ آیا یہ آپس میں متوازی ہیں۔"
+      },
+      {
+       "math": "\\frac{b_x}{a_x} = \\frac{b_y}{a_y}",
+       "en": "Recall the rule: two non-zero vectors $\\underline{a} = a_x\\underline{i} + a_y\\underline{j}$ and $\\underline{b} = b_x\\underline{i} + b_y\\underline{j}$ are parallel if the ratios of their corresponding components are equal.",
+       "ur": "قاعدہ یاد کریں: دو غیر صفری ویکٹرز $\\underline{a} = a_x\\underline{i} + a_y\\underline{j}$ اور $\\underline{b} = b_x\\underline{i} + b_y\\underline{j}$ متوازی ہوتے ہیں اگر ان کے متناظرہ اجزاء کی نسبتیں برابر ہوں۔"
+      },
+      {
+       "math": "a_x = 5, \\quad a_y = -4, \\quad b_x = 6, \\quad b_y = -3",
+       "en": "Identify the $\\underline{i}$ and $\\underline{j}$ components of both vectors.",
+       "ur": "دونوں ویکٹرز کے $\\underline{i}$ اور $\\underline{j}$ اجزاء کی شناخت کریں۔"
+      },
+      {
+       "math": "\\frac{b_x}{a_x} = \\frac{6}{5}",
+       "en": "Find the ratio of the $\\underline{i}$-components.",
+       "ur": "$\\underline{i}$ اجزاء کی نسبت معلوم کریں۔",
        "check": [
-        "Ne(6/5, 3/4)"
+        "R(6, 5) == R(6, 5)"
        ]
       },
       {
-       "math": "\\text{not parallel}",
-       "en": "The ratios are different, so $\\underline{b}$ is not a multiple of $\\underline{a}$.",
-       "ur": "نسبتیں مختلف ہیں، اس لیے متوازی نہیں۔"
+       "math": "\\frac{b_y}{a_y} = \\frac{-3}{-4} = \\frac{3}{4}",
+       "en": "Find the ratio of the $\\underline{j}$-components and simplify.",
+       "ur": "$\\underline{j}$ اجزاء کی نسبت معلوم کریں اور اسے مختصر کریں۔",
+       "check": [
+        "R(-3, -4) == R(3, 4)"
+       ]
+      },
+      {
+       "math": "\\frac{6}{5} \\neq \\frac{3}{4} \\implies \\text{not parallel}",
+       "en": "Since the ratios of the corresponding components are not equal, vector $\\underline{b}$ is not a scalar multiple of vector $\\underline{a}$. Therefore, the given vectors are not parallel.",
+       "ur": "چونکہ متناظرہ اجزاء کی نسبتیں برابر نہیں ہیں، اس لیے ویکٹر $\\underline{b}$ ویکٹر $\\underline{a}$ کا سکیلر حاصل ضرب نہیں ہے۔ لہٰذا، دیے گئے ویکٹرز متوازی نہیں ہیں۔",
+       "check": [
+        "Ne(6/5, 3/4)"
+       ]
       }
      ],
      "answer": "not parallel",
+     "enriched": true,
      "book_key": "not parallel"
     },
     {
@@ -1161,21 +1774,41 @@
      "prompt": "$\\underline{a}=3\\underline{i} - 7\\underline{j},\\ \\underline{b}=6\\underline{i} - 14\\underline{j}$",
      "steps": [
       {
-       "math": "\\underline{b} = 6\\underline{i} - 14\\underline{j} = 2\\left(3\\underline{i} - 7\\underline{j}\\right) = 2\\underline{a}",
-       "en": "One vector is a number times the other.",
-       "ur": "ایک سمتیہ دوسرے کا عددی مضرب ہے۔",
+       "math": "\\underline{a} = 3\\underline{i} - 7\\underline{j}, \\quad \\underline{b} = 6\\underline{i} - 14\\underline{j}",
+       "en": "Write down the two given vectors $\\underline{a}$ and $\\underline{b}$. We need to check whether they are parallel.",
+       "ur": "دیے گئے دو سمتیے $\\underline{a}$ اور $\\underline{b}$ لکھیں۔ ہمیں معلوم کرنا ہے کہ آیا یہ متوازی ہیں۔"
+      },
+      {
+       "math": "\\underline{b} = k\\underline{a}",
+       "en": "Two non-zero vectors $\\underline{a}$ and $\\underline{b}$ are parallel if one can be written as a scalar multiple of the other, where $k$ is a non-zero real number.",
+       "ur": "دو غیر صفری سمتیے $\\underline{a}$ اور $\\underline{b}$ متوازی ہوتے ہیں اگر ایک کو دوسرے کے عددی مضرب کے طور پر لکھا جا سکے، جہاں $k$ ایک غیر صفری حقیقی عدد ہے۔"
+      },
+      {
+       "math": "\\underline{b} = 6\\underline{i} - 14\\underline{j} = 2\\left(3\\underline{i} - 7\\underline{j}\\right)",
+       "en": "Take $2$ as a common factor from both components of vector $\\underline{b}$.",
+       "ur": "سمتیہ $\\underline{b}$ کے دونوں اجزاء میں سے $2$ مشترک لیں۔",
        "check": [
         "2*3 == 6",
         "2*-7 == -14"
        ]
       },
       {
-       "math": "\\text{parallel}",
-       "en": "Vectors that are multiples of each other are parallel.",
-       "ur": "ایک دوسرے کے مضرب سمتیے متوازی ہوتے ہیں۔"
+       "math": "\\underline{b} = 2\\underline{a}",
+       "en": "Substitute $\\underline{a} = 3\\underline{i} - 7\\underline{j}$ into the equation. This shows that vector $\\underline{b}$ is a scalar multiple of vector $\\underline{a}$ (with $k = 2$).",
+       "ur": "مساوات میں $\\underline{a} = 3\\underline{i} - 7\\underline{j}$ درج کریں۔ اس سے ظاہر ہوتا ہے کہ سمتیہ $\\underline{b}$ سمتیہ $\\underline{a}$ کا عددی مضرب ہے (جہاں $k = 2$ ہے)۔"
+      },
+      {
+       "math": "\\text{parallel} \\quad (\\underline{b} = 2\\underline{a})",
+       "en": "Since one vector is a scalar multiple of the other, the given vectors $\\underline{a}$ and $\\underline{b}$ are parallel.",
+       "ur": "چونکہ ایک سمتیہ دوسرے کا عددی مضرب ہے، اس لیے دیے گئے سمتیے $\\underline{a}$ اور $\\underline{b}$ متوازی ہیں۔",
+       "check": [
+        "2*3 == 6",
+        "2*-7 == -14"
+       ]
       }
      ],
      "answer": "parallel ($\\underline{b} = 2\\underline{a}$)",
+     "enriched": true,
      "book_key": "parallel (b=2a)"
     }
    ],
@@ -1193,25 +1826,48 @@
      "prompt": "",
      "steps": [
       {
+       "math": "",
+       "en": "Let the given vector be $\\underline{v} = 3\\underline{i} - 2\\underline{j}$. We need to find a vector that is thrice (3 times) in length of $\\underline{v}$, but in the opposite direction.",
+       "ur": "فرض کریں کہ دیا گیا ویکٹر $\\underline{v} = 3\\underline{i} - 2\\underline{j}$ ہے۔ ہمیں ایک ایسا ویکٹر معلوم کرنا ہے جو لمبائی میں $\\underline{v}$ سے تین گنا ہو، لیکن سمت میں مخالف ہو۔"
+      },
+      {
+       "math": "",
+       "en": "To make a vector thrice in length, we multiply it by the scalar $3$. To reverse its direction, we change its sign (multiply by $-1$). Therefore, the required vector is $-3\\underline{v}$.",
+       "ur": "کسی ویکٹر کی لمبائی کو تین گنا کرنے کے لیے ہم اسے سکیلر $3$ سے ضرب دیتے ہیں۔ اس کی سمت الٹنے کے لیے ہم اس کی علامت بدلتے ہیں ($-1$ سے ضرب دیتے ہیں)۔ اس لیے مطلوبہ ویکٹر $-3\\underline{v}$ ہے۔"
+      },
+      {
        "math": "3\\left(3\\underline{i} - 2\\underline{j}\\right) = 9\\underline{i} - 6\\underline{j}",
-       "en": "Three times the length: multiply by 3.",
-       "ur": "تین گنا لمبائی: 3 سے ضرب دیں۔",
+       "en": "First, find the vector that is three times the length of the given vector by multiplying by $3$.",
+       "ur": "سب سے پہلے، دیے گئے ویکٹر کو $3$ سے ضرب دے کر تین گنا لمبائی والا ویکٹر معلوم کریں۔",
        "check": [
         "3*3 == 9",
         "3*(-2) == -6"
        ]
       },
       {
-       "math": "-3\\left(3\\underline{i} - 2\\underline{j}\\right) = -9\\underline{i} + 6\\underline{j}",
-       "en": "Opposite direction: change the sign.",
-       "ur": "مخالف سمت: علامت بدلیں۔",
+       "math": "-3\\left(3\\underline{i} - 2\\underline{j}\\right) = -\\left(9\\underline{i} - 6\\underline{j}\\right)",
+       "en": "Now, apply the negative sign to make its direction opposite.",
+       "ur": "اب اس کی سمت مخالف کرنے کے لیے منفی علامت لگائیں۔",
        "check": [
+        "-1*3 == -3"
+       ]
+      },
+      {
+       "math": "-\\left(9\\underline{i} - 6\\underline{j}\\right) = -9\\underline{i} + 6\\underline{j}",
+       "en": "Simplify the expression by multiplying the negative sign inside the bracket. Thus, the required vector is $-9\\underline{i} + 6\\underline{j}$.",
+       "ur": "منفی علامت کو بریکٹ کے اندر ضرب دے کر عبارت کو مختصر کریں۔ پس مطلوبہ ویکٹر $-9\\underline{i} + 6\\underline{j}$ ہے۔",
+       "check": [
+        "-1*9 == -9",
+        "-1*(-6) == 6",
+        "3*3 == 9",
+        "3*(-2) == -6",
         "-3*3 == -9",
         "-3*(-2) == 6"
        ]
       }
      ],
      "answer": "$-9\\underline{i} + 6\\underline{j}$",
+     "enriched": true,
      "book_key": "-9i+6j"
     }
    ],
@@ -1229,25 +1885,47 @@
      "prompt": "",
      "steps": [
       {
-       "math": "2\\left(3\\underline{i} - 5\\underline{j}\\right) = 6\\underline{i} - 10\\underline{j}",
-       "en": "Same direction, double magnitude.",
-       "ur": "اسی سمت، دگنی مقدار۔",
+       "math": "",
+       "en": "Let the given vector be $\\underline{v} = 3\\underline{i} - 5\\underline{j}$. We need to find two vectors with double the magnitude of $\\underline{v}$: one in the same direction and the other in the opposite direction.",
+       "ur": "فرض کریں کہ دیا گیا ویکٹر $\\underline{v} = 3\\underline{i} - 5\\underline{j}$ ہے۔ ہمیں ایسے دو ویکٹرز معلوم کرنے ہیں جن کی مقدار $\\underline{v}$ سے دگنی ہو: ایک اسی سمت میں اور دوسرا مخالف سمت میں۔"
+      },
+      {
+       "math": "",
+       "en": "By the rule of scalar multiplication, multiplying a vector by $+2$ doubles its magnitude while keeping the same direction, whereas multiplying by $-2$ doubles its magnitude and reverses its direction.",
+       "ur": "اسکیلر ضرب کے اصول کے مطابق، کسی ویکٹر کو $+2$ سے ضرب دینے سے اس کی سمت تبدیل کیے بغیر اس کی مقدار دگنی ہو جاتی ہے، جبکہ $-2$ سے ضرب دینے سے اس کی مقدار دگنی ہو جاتی ہے اور سمت الٹ جاتی ہے۔"
+      },
+      {
+       "math": "2\\underline{v} = 2\\left(3\\underline{i} - 5\\underline{j}\\right) = 6\\underline{i} - 10\\underline{j}",
+       "en": "First, multiply the given vector $\\underline{v}$ by $2$ to get the vector with double magnitude in the same direction.",
+       "ur": "سب سے پہلے، دیے گئے ویکٹر $\\underline{v}$ کو $2$ سے ضرب دیں تاکہ اسی سمت میں دگنی مقدار والا ویکٹر حاصل ہو سکے۔",
        "check": [
         "2*3 == 6",
         "2*(-5) == -10"
        ]
       },
       {
-       "math": "-2\\left(3\\underline{i} - 5\\underline{j}\\right) = -6\\underline{i} + 10\\underline{j}",
-       "en": "Opposite direction, double magnitude.",
-       "ur": "مخالف سمت، دگنی مقدار۔",
+       "math": "-2\\underline{v} = -2\\left(3\\underline{i} - 5\\underline{j}\\right) = -6\\underline{i} + 10\\underline{j}",
+       "en": "Next, multiply the given vector $\\underline{v}$ by $-2$ to get the vector with double magnitude in the opposite direction.",
+       "ur": "اس کے بعد، دیے گئے ویکٹر $\\underline{v}$ کو $-2$ سے ضرب دیں تاکہ مخالف سمت میں دگنی مقدار والا ویکٹر حاصل ہو سکے۔",
        "check": [
+        "-2*3 == -6",
+        "-2*(-5) == 10"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Thus, the required two vectors are $6\\underline{i} - 10\\underline{j}$ and $-6\\underline{i} + 10\\underline{j}$.",
+       "ur": "پس، مطلوبہ دو ویکٹرز $6\\underline{i} - 10\\underline{j}$ اور $-6\\underline{i} + 10\\underline{j}$ ہیں۔",
+       "check": [
+        "2*3 == 6",
+        "2*(-5) == -10",
         "-2*3 == -6",
         "-2*(-5) == 10"
        ]
       }
      ],
      "answer": "$6\\underline{i} - 10\\underline{j}$ and $-6\\underline{i} + 10\\underline{j}$",
+     "enriched": true,
      "book_key": "6i-10j and -6i+10j"
     }
    ],
@@ -3353,25 +4031,56 @@
      "prompt": "",
      "steps": [
       {
-       "math": "|\\overrightarrow{AB}| = \\sqrt{6^2 + 2^2} = \\sqrt{40},\\quad |\\overrightarrow{DC}| = \\sqrt{(-6)^2 + (-2)^2} = \\sqrt{40}",
-       "en": "Equal magnitudes.",
-       "ur": "مقداریں برابر ہیں۔",
+       "math": "\\overrightarrow{AB} = 6\\underline{i} + 2\\underline{j}, \\quad \\overrightarrow{DC} = -6\\underline{i} - 2\\underline{j}",
+       "en": "First, write down the given vectors representing the two opposite sides of the parallelogram $ABCD$.",
+       "ur": "سب سے پہلے، متوازی الاضلاع $ABCD$ کے دو بالمقابل اضلاع کو ظاہر کرنے والے دیے گئے ویکٹرز لکھیں۔"
+      },
+      {
+       "math": "|\\overrightarrow{v}| = \\sqrt{x^2 + y^2}",
+       "en": "To show that the sides are equal in magnitude, we use the magnitude formula for a vector $\\overrightarrow{v} = x\\underline{i} + y\\underline{j}$.",
+       "ur": "یہ ثابت کرنے کے لیے کہ اضلاع مقدار میں برابر ہیں، ہم ویکٹر $\\overrightarrow{v} = x\\underline{i} + y\\underline{j}$ کی مقدار کا فارمولا استعمال کرتے ہیں۔"
+      },
+      {
+       "math": "|\\overrightarrow{AB}| = \\sqrt{6^2 + 2^2} = \\sqrt{36 + 4} = \\sqrt{40}",
+       "en": "Substitute the components of $\\overrightarrow{AB}$ into the formula to find its magnitude.",
+       "ur": "$\\overrightarrow{AB}$ کی مقدار معلوم کرنے کے لیے اس کے اجزاء کو فارمولے میں درج کریں۔",
        "check": [
-        "sqrt(6**2 + 2**2) == sqrt(40)",
-        "sqrt((-6)**2 + (-2)**2) == sqrt(40)"
+        "sqrt(6**2 + 2**2) == sqrt(36 + 4)",
+        "sqrt(36 + 4) == sqrt(40)"
        ]
       },
       {
-       "math": "\\overrightarrow{AB} = -\\overrightarrow{DC}",
-       "en": "One is $-1$ times the other, so they are parallel.",
-       "ur": "ایک دوسرے کا $-1$ گنا ہے، اس لیے متوازی ہیں۔",
+       "math": "|\\overrightarrow{DC}| = \\sqrt{(-6)^2 + (-2)^2} = \\sqrt{36 + 4} = \\sqrt{40}",
+       "en": "Similarly, substitute the components of $\\overrightarrow{DC}$ to find its magnitude. Since $|\\overrightarrow{AB}| = |\\overrightarrow{DC}| = \\sqrt{40}$, the opposite sides are equal in magnitude.",
+       "ur": "اسی طرح، $\\overrightarrow{DC}$ کی مقدار معلوم کرنے کے لیے اس کے اجزاء درج کریں۔ چونکہ $|\\overrightarrow{AB}| = |\\overrightarrow{DC}| = \\sqrt{40}$ ہے، اس لیے بالمقابل اضلاع مقدار میں برابر ہیں۔",
        "check": [
+        "sqrt((-6)**2 + (-2)**2) == sqrt(36 + 4)",
+        "sqrt(36 + 4) == sqrt(40)"
+       ]
+      },
+      {
+       "math": "\\overrightarrow{DC} = -6\\underline{i} - 2\\underline{j} = -1(6\\underline{i} + 2\\underline{j}) = -\\overrightarrow{AB}",
+       "en": "Now, factor out $-1$ from the vector $\\overrightarrow{DC}$. We see that $\\overrightarrow{AB} = -\\overrightarrow{DC}$.",
+       "ur": "اب، ویکٹر $\\overrightarrow{DC}$ میں سے $-1$ مشترک لیں۔ ہم دیکھتے ہیں کہ $\\overrightarrow{AB} = -\\overrightarrow{DC}$ ہے۔",
+       "check": [
+        "-1*6 == -6",
+        "-1*2 == -2"
+       ]
+      },
+      {
+       "math": "|\\overrightarrow{AB}| = |\\overrightarrow{DC}| = \\sqrt{40} \\quad \\text{and} \\quad \\overrightarrow{AB} = -\\overrightarrow{DC}",
+       "en": "Two vectors are parallel if one is a non-zero scalar multiple of the other. Since $\\overrightarrow{AB}$ is $-1$ times $\\overrightarrow{DC}$, the opposite sides are parallel.",
+       "ur": "دو ویکٹرز متوازی ہوتے ہیں اگر ایک دوسرے کا غیر صفری عددی حاصل ضرب ہو۔ چونکہ $\\overrightarrow{AB}$، ویکٹر $\\overrightarrow{DC}$ کا $-1$ گنا ہے، اس لیے بالمقابل اضلاع متوازی ہیں۔",
+       "check": [
+        "sqrt(6**2 + 2**2) == sqrt(40)",
+        "sqrt((-6)**2 + (-2)**2) == sqrt(40)",
         "-(-6) == 6",
         "-(-2) == 2"
        ]
       }
      ],
      "answer": "$|\\overrightarrow{AB}| = |\\overrightarrow{DC}| = \\sqrt{40}$ and $\\overrightarrow{AB} = -\\overrightarrow{DC}$ (parallel)",
+     "enriched": true,
      "book_key": "|AB|=|DC|=\\sqrt{40} and AB=-DC (parallel)"
     }
    ],
@@ -3641,20 +4350,61 @@
      "prompt": "",
      "steps": [
       {
-       "math": "\\Delta\\underline{v} = \\underline{v}' - \\underline{v} = 30\\underline{i} - 30\\underline{j}",
-       "en": "Change = final $-$ initial.",
-       "ur": "تبدیلی = آخری $-$ ابتدائی۔"
+       "math": "",
+       "en": "Given the initial velocity vector $\\underline{v} = 30\\underline{j}$ and the final velocity vector $\\underline{v}' = 30\\underline{i}$. We need to find the change in velocity vector $\\Delta\\underline{v}$ and its magnitude.",
+       "ur": "ابتدائی ولاسٹی ویکٹر $\\underline{v} = 30\\underline{j}$ اور آخری ولاسٹی ویکٹر $\\underline{v}' = 30\\underline{i}$ دیے گئے ہیں۔ ہمیں ولاسٹی ویکٹر میں تبدیلی $\\Delta\\underline{v}$ اور اس کی مقدار معلوم کرنی ہے۔"
       },
       {
-       "math": "|\\Delta\\underline{v}| = \\sqrt{30^2 + (-30)^2} = 30\\sqrt{2}",
-       "en": "Its magnitude.",
-       "ur": "اس کی مقدار۔",
+       "math": "\\Delta\\underline{v} = \\underline{v}' - \\underline{v}",
+       "en": "The change in a vector is defined as the final vector minus the initial vector.",
+       "ur": "کسی ویکٹر میں تبدیلی آخری ویکٹر میں سے ابتدائی ویکٹر کو تفریق کرنے سے حاصل ہوتی ہے۔"
+      },
+      {
+       "math": "\\Delta\\underline{v} = 30\\underline{i} - 30\\underline{j}",
+       "en": "Substitute the given velocity vectors $\\underline{v}'$ and $\\underline{v}$ into the formula.",
+       "ur": "فارمولے میں دیے گئے ولاسٹی ویکٹرز $\\underline{v}'$ اور $\\underline{v}$ کی قیمتیں درج کریں۔",
+       "check": [
+        "30 == 30",
+        "-30 == -30"
+       ]
+      },
+      {
+       "math": "|\\Delta\\underline{v}| = \\sqrt{(30)^2 + (-30)^2}",
+       "en": "Now, use the magnitude formula $|a\\underline{i} + b\\underline{j}| = \\sqrt{a^2 + b^2}$ with $a = 30$ and $b = -30$.",
+       "ur": "اب، مقدار کا فارمولا $|a\\underline{i} + b\\underline{j}| = \\sqrt{a^2 + b^2}$ استعمال کریں جہاں $a = 30$ اور $b = -30$ ہے۔",
+       "check": [
+        "sqrt(30**2 + (-30)**2) == sqrt(1800)"
+       ]
+      },
+      {
+       "math": "|\\Delta\\underline{v}| = \\sqrt{900 + 900} = \\sqrt{1800}",
+       "en": "Evaluate the squares and add them together.",
+       "ur": "مربع لیں اور انہیں آپس میں جمع کریں۔",
+       "check": [
+        "30**2 == 900",
+        "(-30)**2 == 900",
+        "900 + 900 == 1800"
+       ]
+      },
+      {
+       "math": "|\\Delta\\underline{v}| = \\sqrt{900 \\times 2} = 30\\sqrt{2}",
+       "en": "Simplify the square root to get the exact magnitude.",
+       "ur": "مکمل مقدار حاصل کرنے کے لیے جزر کو مختصر کریں۔",
+       "check": [
+        "sqrt(1800) == 30*sqrt(2)"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Thus, the change in velocity vector is $30\\underline{i} - 30\\underline{j}$ and its magnitude is $30\\sqrt{2}$.",
+       "ur": "پس، ولاسٹی ویکٹر میں تبدیلی $30\\underline{i} - 30\\underline{j}$ ہے اور اس کی مقدار $30\\sqrt{2}$ ہے۔",
        "check": [
         "sqrt(30**2 + (-30)**2) == 30*sqrt(2)"
        ]
       }
      ],
      "answer": "$30\\underline{i} - 30\\underline{j}$, magnitude $30\\sqrt{2}$",
+     "enriched": true,
      "book_key": "30i-30j, magnitude 30\\sqrt{2}"
     }
    ],
@@ -3672,21 +4422,52 @@
      "prompt": "",
      "steps": [
       {
-       "math": "\\underline{v}_r = \\underline{v}_p + \\underline{v}_w = 20\\underline{i} + 50\\underline{j}",
-       "en": "Add the two velocities.",
-       "ur": "دونوں رفتاریں جمع کریں۔"
+       "math": "\\underline{v}_p = 20\\underline{i}, \\quad \\underline{v}_w = 50\\underline{j}",
+       "en": "Write down the given airspeed of the aeroplane $\\underline{v}_p$ and the velocity of the crosswind $\\underline{v}_w$.",
+       "ur": "ہوائی جہاز کی دی گئی رفتار $\\underline{v}_p$ اور ہوا کی رفتار $\\underline{v}_w$ لکھیں۔"
       },
       {
-       "math": "|\\underline{v}_r| = \\sqrt{20^2 + 50^2} = \\sqrt{2900} \\approx 53.85",
-       "en": "Its magnitude.",
-       "ur": "اس کی مقدار۔",
+       "math": "\\underline{v}_r = \\underline{v}_p + \\underline{v}_w",
+       "en": "By the vector addition law, the resultant velocity $\\underline{v}_r$ is the vector sum of the aeroplane's airspeed and the crosswind velocity.",
+       "ur": "ویکٹرز کی جمع کے اصول کے مطابق، محصلہ رفتار $\\underline{v}_r$ ہوائی جہاز کی رفتار اور ہوا کی رفتار کے ویکٹر مجموعے کے برابر ہے۔"
+      },
+      {
+       "math": "\\underline{v}_r = 20\\underline{i} + 50\\underline{j}",
+       "en": "Substitute the given vector values into the formula to get the resultant velocity.",
+       "ur": "محصلہ رفتار معلوم کرنے کے لیے فارمولے میں دی گئی ویکٹر قیمتیں درج کریں۔"
+      },
+      {
+       "math": "|\\underline{v}_r| = \\sqrt{x^2 + y^2}",
+       "en": "Recall the formula for the magnitude of a vector $x\\underline{i} + y\\underline{j}$ in a plane.",
+       "ur": "مستوی میں ویکٹر $x\\underline{i} + y\\underline{j}$ کی مقدار معلوم کرنے کا فارمولا لکھیں۔"
+      },
+      {
+       "math": "|\\underline{v}_r| = \\sqrt{(20)^2 + (50)^2}",
+       "en": "Substitute the components $x = 20$ and $y = 50$ of the resultant velocity into the magnitude formula.",
+       "ur": "مقدار کے فارمولے میں محصلہ رفتار کے اجزاء $x = 20$ اور $y = 50$ درج کریں۔"
+      },
+      {
+       "math": "|\\underline{v}_r| = \\sqrt{400 + 2500} = \\sqrt{2900}",
+       "en": "Calculate the squares of $20$ and $50$, and then add them together.",
+       "ur": "$20$ اور $50$ کے مربع لیں اور پھر انہیں آپس میں جمع کریں۔",
        "check": [
-        "20**2 + 50**2 == 2900",
-        "Abs(sqrt(2900) - 53.85) < 0.01"
+        "20**2 == 400",
+        "50**2 == 2500",
+        "400 + 2500 == 2900"
+       ]
+      },
+      {
+       "math": "|\\underline{v}_r| \\approx 53.85",
+       "en": "Take the square root of $2900$ to find the magnitude of the resultant velocity. Thus, the resultant velocity is $20\\underline{i} + 50\\underline{j}$ and its magnitude is approximately $53.85$.",
+       "ur": "محصلہ رفتار کی مقدار معلوم کرنے کے لیے $2900$ کا جزر لیں۔ لہٰذا، محصلہ رفتار $20\\underline{i} + 50\\underline{j}$ ہے اور اس کی مقدار تقریباً $53.85$ ہے۔",
+       "check": [
+        "Abs(sqrt(2900) - 53.85) < 0.01",
+        "20**2 + 50**2 == 2900"
        ]
       }
      ],
      "answer": "$20\\underline{i} + 50\\underline{j}$, magnitude $\\approx 53.85$",
+     "enriched": true,
      "book_key": "20i+50j, magnitude 53.85"
     }
    ],
@@ -3705,16 +4486,30 @@
      "steps": [
       {
        "math": "",
-       "en": "The two axes make four quadrants.",
-       "ur": "دونوں محور چار ربع بناتے ہیں۔"
+       "en": "We need to find the number of parts into which the $x$-axis and $y$-axis divide a coordinate plane.",
+       "ur": "ہمیں یہ معلوم کرنا ہے کہ $x$-محور اور $y$-محور ایک مستوی (coordinate plane) کو کتنے حصوں میں تقسیم کرتے ہیں۔"
+      },
+      {
+       "math": "",
+       "en": "A coordinate plane is formed by two mutually perpendicular lines: the horizontal line called the $x$-axis and the vertical line called the $y$-axis, intersecting at the origin $O(0,0)$.",
+       "ur": "ایک کوآرڈینیٹ مستوی دو باہمی عمودی خطوط سے بنتی ہے: افقی خط جسے $x$-محور کہتے ہیں اور عمودی خط جسے $y$-محور کہتے ہیں، جو مبدا $O(0,0)$ پر ایک دوسرے کو قطع کرتے ہیں۔"
+      },
+      {
+       "math": "2 \\times 2 = 4",
+       "en": "When two perpendicular lines intersect in a plane, they divide the plane into $4$ regions, called quadrants (I, II, III, and IV).",
+       "ur": "جب دو عمودی خطوط ایک مستوی میں ایک دوسرے کو قطع کرتے ہیں، تو وہ مستوی کو $4$ حصوں میں تقسیم کرتے ہیں، جنہیں ربع (I، II، III، اور IV) کہا جاتا ہے۔",
+       "check": [
+        "2*2 == 4"
+       ]
       },
       {
        "math": "\\text{Answer: (d) } \\text{four}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Comparing this with the given options, option (d) is the correct answer.",
+       "ur": "دیے گئے ممکنہ جوابات سے موازنہ کرنے پر، آپشن (d) درست جواب ہے۔"
       }
      ],
      "answer": "(d) $\\text{four}$",
+     "enriched": true,
      "book_key": "(d) four"
     },
     {
@@ -3722,21 +4517,40 @@
      "prompt": "$P(4,-4)$ lies in ______ quadrant. (a) $\\text{first}$ (b) $\\text{second}$ (c) $\\text{third}$ (d) $\\text{fourth}$",
      "steps": [
       {
-       "math": "x > 0,\\ y < 0 \\Rightarrow \\text{fourth}",
-       "en": "$(+, -)$ is the fourth quadrant.",
-       "ur": "$(+, -)$ چوتھا ربع ہے۔",
+       "math": "P(x, y) = P(4, -4) \\implies x = 4,\\ y = -4",
+       "en": "Identify the $x$-coordinate (abscissa) and $y$-coordinate (ordinate) of the given point $P(4, -4)$.",
+       "ur": "دیے گئے نقطے $P(4, -4)$ کا $x$-محدد اور $y$-محدد معلوم کریں۔",
+       "check": [
+        "4 == 4",
+        "-4 == -4"
+       ]
+      },
+      {
+       "math": "x = 4 > 0,\\quad y = -4 < 0",
+       "en": "Notice that the $x$-coordinate is positive ($+$) and the $y$-coordinate is negative ($-$).",
+       "ur": "غور کریں کہ $x$-محدد مثبت ($+$) ہے اور $y$-محدد منفی ($-$) ہے۔",
+       "check": [
+        "4 == 4",
+        "-4 == -4"
+       ]
+      },
+      {
+       "math": "x > 0,\\ y < 0 \\implies \\text{Fourth Quadrant}",
+       "en": "In a Cartesian coordinate plane, any point with coordinates of the form $(+, -)$ lies in the fourth quadrant.",
+       "ur": "کارتیسی مستوی میں، $(+, -)$ کی شکل کے محددات والا کوئی بھی نقطہ چوتھے ربع (fourth quadrant) میں واقع ہوتا ہے۔"
+      },
+      {
+       "math": "\\text{Answer: (d) } \\text{fourth}",
+       "en": "Therefore, the point $P(4, -4)$ lies in the fourth quadrant, which corresponds to option (d).",
+       "ur": "لہذا، نقطہ $P(4, -4)$ چوتھے ربع میں واقع ہے، جو کہ آپشن (d) کے مطابق ہے۔",
        "check": [
         "4 > 0",
         "-4 < 0"
        ]
-      },
-      {
-       "math": "\\text{Answer: (d) } \\text{fourth}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
       }
      ],
      "answer": "(d) $\\text{fourth}$",
+     "enriched": true,
      "book_key": "(d) fourth"
     },
     {
@@ -3745,16 +4559,30 @@
      "steps": [
       {
        "math": "",
-       "en": "A unit vector has length 1.",
-       "ur": "اکائی سمتیے کی لمبائی 1 ہوتی ہے۔"
+       "en": "We need to identify the correct name for a vector that has a magnitude (or length) equal to $1$.",
+       "ur": "ہمیں اس ویکٹر (سمتیے) کا درست نام بتانا ہے جس کی مقدار (یا لمبائی) $1$ کے برابر ہو۔"
+      },
+      {
+       "math": "|\\hat{v}| = 1",
+       "en": "By definition in vector algebra, a vector whose magnitude is exactly $1$ is called a unit vector. It is usually denoted with a cap, such as $\\hat{v}$.",
+       "ur": "ویکٹر الجبرا میں تعریف کے مطابق، ایسا ویکٹر جس کی مقدار ٹھیک $1$ ہو، اکائی ویکٹر (unit vector) کہلاتا ہے۔ اسے عام طور پر کیپ کے نشان سے ظاہر کیا جاتا ہے، جیسے $\\hat{v}$۔",
+       "check": [
+        "1 == 1"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Let us briefly look at the other options: equal vectors have the same magnitude and direction, parallel vectors have the same or opposite direction, and a zero vector has a magnitude of $0$.",
+       "ur": "آئیے مختصراً دیگر آپشنز کو دیکھتے ہیں: مساوی ویکٹرز کی مقدار اور سمت ایک جیسی ہوتی ہے، متوازی ویکٹرز کی سمت ایک جیسی یا مخالف ہوتی ہے، اور صفری ویکٹر کی مقدار $0$ ہوتی ہے۔"
       },
       {
        "math": "\\text{Answer: (c) } \\text{unit vector}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Therefore, the correct option is (c).",
+       "ur": "لہٰذا، درست آپشن (c) ہے۔"
       }
      ],
      "answer": "(c) $\\text{unit vector}$",
+     "enriched": true,
      "book_key": "(c) unit vector"
     },
     {
@@ -3762,20 +4590,50 @@
      "prompt": "What is the value of $|3\\underline{i}+4\\underline{j}|$? (a) $3$ (b) $4$ (c) $5$ (d) $7$",
      "steps": [
       {
-       "math": "\\sqrt{3^2 + 4^2} = 5",
-       "en": "Magnitude.",
-       "ur": "مقدار۔",
+       "math": "\\vec{v} = 3\\underline{i} + 4\\underline{j}",
+       "en": "Let the given vector be $\\vec{v}$. Here, the components are $x = 3$ and $y = 4$. We need to find its magnitude $|3\\underline{i} + 4\\underline{j}|$.",
+       "ur": "فرض کریں کہ دیا گیا ویکٹر $\\vec{v}$ ہے۔ یہاں، اجزاء $x = 3$ اور $y = 4$ ہیں۔ ہمیں اس کی مقدار $|3\\underline{i} + 4\\underline{j}|$ معلوم کرنی ہے۔"
+      },
+      {
+       "math": "|x\\underline{i} + y\\underline{j}| = \\sqrt{x^2 + y^2}",
+       "en": "Recall the formula for the magnitude of a vector in a plane.",
+       "ur": "مستوی میں ویکٹر کی مقدار معلوم کرنے کا فارمولا یاد کریں۔"
+      },
+      {
+       "math": "|3\\underline{i} + 4\\underline{j}| = \\sqrt{3^2 + 4^2}",
+       "en": "Substitute the values $x = 3$ and $y = 4$ into the magnitude formula.",
+       "ur": "مقدار کے فارمولے میں $x = 3$ اور $y = 4$ کی قیمتیں درج کریں۔"
+      },
+      {
+       "math": "|3\\underline{i} + 4\\underline{j}| = \\sqrt{9 + 16}",
+       "en": "Calculate the squares of $3$ and $4$.",
+       "ur": "$3$ اور $4$ کے مربع کا حساب لگائیں۔",
        "check": [
-        "sqrt(3**2 + 4**2) == 5"
+        "3**2 == 9",
+        "4**2 == 16",
+        "sqrt(3**2 + 4**2) == sqrt(9 + 16)"
+       ]
+      },
+      {
+       "math": "|3\\underline{i} + 4\\underline{j}| = \\sqrt{25} = 5",
+       "en": "Add the numbers inside the square root and take the positive square root to get the magnitude.",
+       "ur": "جذر کے اندر موجود اعداد کو جمع کریں اور مقدار حاصل کرنے کے لیے مثبت جذر لیں۔",
+       "check": [
+        "9 + 16 == 25",
+        "sqrt(25) == 5"
        ]
       },
       {
        "math": "\\text{Answer: (c) } 5",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "The calculated magnitude is $5$, which matches option (c).",
+       "ur": "حساب کی گئی مقدار $5$ ہے، جو آپشن (c) سے مطابقت رکھتی ہے۔",
+       "check": [
+        "sqrt(3**2 + 4**2) == 5"
+       ]
       }
      ],
      "answer": "(c) $5$",
+     "enriched": true,
      "book_key": "(c) 5"
     },
     {
@@ -3783,17 +4641,28 @@
      "prompt": "If $\\underline{a}=\\lambda\\underline{b}$, then $\\underline{a}$ and $\\underline{b}$ are: (a) $\\text{equal}$ (b) $\\text{parallel}$ (c) $\\text{perpendicular}$ (d) $\\text{non-parallel}$",
      "steps": [
       {
+       "math": "\\underline{a} = \\lambda \\underline{b}",
+       "en": "We are given the vector equation $\\underline{a} = \\lambda \\underline{b}$, where $\\lambda$ is a non-zero scalar (real number).",
+       "ur": "ہمیں سمتی مساوات $\\underline{a} = \\lambda \\underline{b}$ دی گئی ہے، جہاں $\\lambda$ ایک غیر صفر عدد (حقیقی نمبر) ہے۔"
+      },
+      {
        "math": "",
-       "en": "A number times a vector is parallel to it.",
-       "ur": "سمتیے کا عددی مضرب اس کے متوازی ہوتا ہے۔"
+       "en": "By the definition of scalar multiplication of vectors, if one vector is a scalar multiple of another vector, then the two vectors have either the same direction (if $\\lambda > 0$) or opposite directions (if $\\lambda < 0$).",
+       "ur": "سمتیوں کی عددی ضرب کی تعریف کے مطابق، اگر ایک سمتیہ دوسرے سمتیے کا عددی مضرب ہو، تو دونوں سمتیوں کی سمت یا تو ایک جیسی ہوتی ہے (اگر $\\lambda > 0$) یا مخالف ہوتی ہے (اگر $\\lambda < 0$)۔"
+      },
+      {
+       "math": "\\underline{a} \\parallel \\underline{b}",
+       "en": "In both cases, the vectors lie along parallel lines. Therefore, $\\underline{a}$ and $\\underline{b}$ are parallel vectors.",
+       "ur": "دونوں صورتوں میں، سمتیے متوازی خطوط پر واقع ہوتے ہیں۔ لہٰذا، $\\underline{a}$ اور $\\underline{b}$ متوازی سمتیے ہیں۔"
       },
       {
        "math": "\\text{Answer: (b) } \\text{parallel}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Comparing this conclusion with the given options, option (b) is the correct choice.",
+       "ur": "اس نتیجے کا دیے گئے آپشنز سے موازنہ کرنے پر، آپشن (b) درست انتخاب ہے۔"
       }
      ],
      "answer": "(b) $\\text{parallel}$",
+     "enriched": true,
      "book_key": "(b) parallel"
     },
     {
@@ -3801,17 +4670,33 @@
      "prompt": "If $\\overrightarrow{OA}=\\underline{a}$, $\\overrightarrow{OB}=\\underline{b}$, then $\\overrightarrow{AB}$ is: (a) $\\underline{b}-\\underline{a}$ (b) $\\underline{a}-\\underline{b}$ (c) $\\underline{a}+\\underline{b}$ (d) $\\underline{b}+\\underline{a}$",
      "steps": [
       {
-       "math": "",
-       "en": "$\\overrightarrow{AB} = \\overrightarrow{OB} - \\overrightarrow{OA}$ (tip minus tail).",
-       "ur": "$\\overrightarrow{AB} = \\overrightarrow{OB} - \\overrightarrow{OA}$۔"
+       "math": "\\overrightarrow{OA} = \\underline{a}, \\quad \\overrightarrow{OB} = \\underline{b}",
+       "en": "First, write down the given position vectors of the points $A$ and $B$ with respect to the origin $O$. We need to find the vector $\\overrightarrow{AB}$.",
+       "ur": "سب سے پہلے، مبدا $O$ کے لحاظ سے نقاط $A$ اور $B$ کے دیے گئے پوزیشن ویکٹرز لکھیں۔ ہمیں ویکٹر $\\overrightarrow{AB}$ معلوم کرنا ہے۔"
+      },
+      {
+       "math": "\\overrightarrow{OA} + \\overrightarrow{AB} = \\overrightarrow{OB}",
+       "en": "By the triangle law of vector addition, the sum of $\\overrightarrow{OA}$ and $\\overrightarrow{AB}$ is equal to $\\overrightarrow{OB}$.",
+       "ur": "ویکٹرز کی جمع کے مثلثی قانون کے مطابق، $\\overrightarrow{OA}$ اور $\\overrightarrow{AB}$ کا مجموعہ $\\overrightarrow{OB}$ کے برابر ہوتا ہے۔"
+      },
+      {
+       "math": "\\overrightarrow{AB} = \\overrightarrow{OB} - \\overrightarrow{OA}",
+       "en": "Rearrange the equation to solve for $\\overrightarrow{AB}$. This gives the standard rule: position vector of the terminal point (tip) minus the position vector of the initial point (tail).",
+       "ur": "$\\overrightarrow{AB}$ معلوم کرنے کے لیے مساوات کو ترتیب دیں۔ اس سے ہمیں عام کلیہ ملتا ہے: اختتامی نقطے کا پوزیشن ویکٹر منفی ابتدائی نقطے کا پوزیشن ویکٹر۔"
+      },
+      {
+       "math": "\\overrightarrow{AB} = \\underline{b} - \\underline{a}",
+       "en": "Substitute the given values $\\overrightarrow{OA} = \\underline{a}$ and $\\overrightarrow{OB} = \\underline{b}$ into the formula.",
+       "ur": "کلیے میں دی گئی قیمتیں $\\overrightarrow{OA} = \\underline{a}$ اور $\\overrightarrow{OB} = \\underline{b}$ درج کریں۔"
       },
       {
        "math": "\\text{Answer: (a) } \\underline{b}-\\underline{a}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Comparing our result with the given choices, option (a) is the correct answer.",
+       "ur": "ہمارے نتیجے کا دیے گئے ممکنہ جوابات سے موازنہ کرنے پر، آپشن (a) درست جواب ہے۔"
       }
      ],
      "answer": "(a) $\\underline{b}-\\underline{a}$",
+     "enriched": true,
      "book_key": "(a) \\underline{b}-\\underline{a}"
     },
     {
@@ -3820,16 +4705,27 @@
      "steps": [
       {
        "math": "",
-       "en": "A translation moves every point by the same vector.",
-       "ur": "انتقال ہر نقطے کو ایک ہی سمتیے سے منتقل کرتا ہے۔"
+       "en": "We need to identify the geometric transformation represented by a translation vector.",
+       "ur": "ہمیں یہ بتانا ہے کہ منتقلی کا سمتیہ (translation vector) کس ہندسی تبدیلی کو ظاہر کرتا ہے۔"
+      },
+      {
+       "math": "\\vec{P'} = \\vec{P} + \\vec{T}",
+       "en": "In geometry, a translation shifts every point $\\vec{P}$ of a figure by the same translation vector $\\vec{T}$ in a given direction.",
+       "ur": "جیومیٹری میں، انتقال (translation) کسی شکل کے ہر نقطے $\\vec{P}$ کو ایک مقررہ سمت میں ایک ہی سمتیے $\\vec{T}$ کے ذریعے منتقل کرتا ہے۔"
+      },
+      {
+       "math": "",
+       "en": "During this process, the size, shape, and orientation of the figure remain unchanged; it only undergoes a change in position, which is called movement.",
+       "ur": "اس عمل کے دوران شکل کا سائز، بناوٹ اور رخ تبدیل نہیں ہوتا؛ صرف اس کی جگہ تبدیل ہوتی ہے، جسے حرکت (movement) کہتے ہیں۔"
       },
       {
        "math": "\\text{Answer: (c) } \\text{movement}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Therefore, the correct option is (c).",
+       "ur": "لہٰذا، درست جواب (c) ہے۔"
       }
      ],
      "answer": "(c) $\\text{movement}$",
+     "enriched": true,
      "book_key": "(c) movement"
     },
     {
@@ -3838,16 +4734,27 @@
      "steps": [
       {
        "math": "",
-       "en": "Adding vectors gives a vector.",
-       "ur": "سمتیوں کا مجموعہ سمتیہ ہوتا ہے۔"
+       "en": "We need to determine what quantity is obtained when two vectors are added together.",
+       "ur": "ہمیں یہ معلوم کرنا ہے کہ جب دو سمتیوں (vectors) کو آپس میں جمع کیا جائے تو حاصل ہونے والی مقدار کیا ہوتی ہے۔"
+      },
+      {
+       "math": "\\vec{u} + \\vec{v} = \\vec{w}",
+       "en": "According to the closure property of vector addition, when we add two vectors $\\vec{u}$ and $\\vec{v}$, the resultant $\\vec{w}$ always has both magnitude and direction.",
+       "ur": "سمتیوں کی جمع کی بندش کی خاصیت (closure property) کے مطابق، جب ہم دو سمتیوں $\\vec{u}$ اور $\\vec{v}$ کو جمع کرتے ہیں، تو حاصل جمع $\\vec{w}$ کی ہمیشہ ایک مقدار اور سمت ہوتی ہے۔"
+      },
+      {
+       "math": "",
+       "en": "Since the resultant quantity has both magnitude and direction, the sum of two vectors is always a vector.",
+       "ur": "چونکہ حاصل ہونے والی مقدار میں مقدار اور سمت دونوں شامل ہیں، اس لیے دو سمتیوں کا مجموعہ ہمیشہ ایک سمتیہ (vector) ہوتا ہے۔"
       },
       {
        "math": "\\text{Answer: (b) } \\text{a vector}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Therefore, the correct option is (b).",
+       "ur": "لہٰذا، درست جواب (b) ہے۔"
       }
      ],
      "answer": "(b) $\\text{a vector}$",
+     "enriched": true,
      "book_key": "(b) a vector"
     },
     {
@@ -3855,17 +4762,45 @@
      "prompt": "The position vector of point $P(3,-2)$ with respect to $O$ is: (a) $3\\underline{i}+2\\underline{j}$ (b) $3\\underline{i}-2\\underline{j}$ (c) $-3\\underline{i}+2\\underline{j}$ (d) $2\\underline{i}-3\\underline{j}$",
      "steps": [
       {
-       "math": "",
-       "en": "Position vector $= x\\underline{i} + y\\underline{j}$.",
-       "ur": "مقامی سمتیہ $= x\\underline{i} + y\\underline{j}$۔"
+       "math": "P(x, y) = P(3, -2)",
+       "en": "Identify the coordinates of the given point $P$ in the plane, where $x = 3$ and $y = -2$.",
+       "ur": "مستوی میں دیے گئے نقطہ $P$ کے محددات کی شناخت کریں، جہاں $x = 3$ اور $y = -2$ ہے۔",
+       "check": [
+        "3 == 3",
+        "-2 == -2"
+       ]
+      },
+      {
+       "math": "\\overrightarrow{OP} = x\\underline{i} + y\\underline{j}",
+       "en": "Recall the formula for the position vector of a point $P(x, y)$ with respect to the origin $O(0, 0)$.",
+       "ur": "مبدا $O(0, 0)$ کے لحاظ سے کسی نقطہ $P(x, y)$ کے مقامی سمتیہ (position vector) کا فارمولا یاد کریں۔"
+      },
+      {
+       "math": "\\overrightarrow{OP} = (3)\\underline{i} + (-2)\\underline{j}",
+       "en": "Substitute the given values $x = 3$ and $y = -2$ into the position vector formula.",
+       "ur": "مقامی سمتیہ کے فارمولے میں دی گئی قیمتیں $x = 3$ اور $y = -2$ درج کریں۔",
+       "check": [
+        "3 == 3",
+        "-2 == -2"
+       ]
+      },
+      {
+       "math": "\\overrightarrow{OP} = 3\\underline{i} - 2\\underline{j}",
+       "en": "Simplify the expression to get the required position vector.",
+       "ur": "مطلوبہ مقامی سمتیہ حاصل کرنے کے لیے جملے کو مختصر کریں۔",
+       "check": [
+        "3 == 3",
+        "+(-2) == -2"
+       ]
       },
       {
        "math": "\\text{Answer: (b) } 3\\underline{i}-2\\underline{j}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Comparing our result with the given choices, option (b) is the correct answer.",
+       "ur": "ہمارے نتیجے کا دیے گئے ممکنہ جوابات سے موازنہ کرنے پر، آپشن (b) درست جواب ہے۔"
       }
      ],
      "answer": "(b) $3\\underline{i}-2\\underline{j}$",
+     "enriched": true,
      "book_key": "(b) 3i-2j"
     },
     {
@@ -3873,9 +4808,24 @@
      "prompt": "Vector from point $P(3,4)$ to origin is: (a) $3\\underline{i}+4\\underline{j}$ (b) $-3\\underline{i}+4\\underline{j}$ (c) $-3\\underline{i}-4\\underline{j}$ (d) $3\\underline{i}-4\\underline{j}$",
      "steps": [
       {
+       "math": "P(x_1, y_1) = (3, 4), \\quad O(x_2, y_2) = (0, 0)",
+       "en": "Identify the coordinates of the initial point $P$ and the terminal point (the origin $O$).",
+       "ur": "ابتدائی نقطہ $P$ اور اختتامی نقطہ (مبداء $O$) کے محددات لکھیں۔"
+      },
+      {
+       "math": "\\overrightarrow{PO} = (x_2 - x_1)\\underline{i} + (y_2 - y_1)\\underline{j}",
+       "en": "A vector from an initial point to a terminal point is found by subtracting the initial coordinates from the terminal coordinates (tip minus tail).",
+       "ur": "ابتدائی نقطے سے اختتامی نقطے تک ویکٹر معلوم کرنے کے لیے اختتامی محددات میں سے ابتدائی محددات کو تفریق کیا جاتا ہے (سرا منفی دم)۔"
+      },
+      {
        "math": "\\overrightarrow{PO} = (0 - 3)\\underline{i} + (0 - 4)\\underline{j}",
-       "en": "Tip minus tail.",
-       "ur": "سرا منفی دم۔",
+       "en": "Substitute the coordinates of $P(3, 4)$ and $O(0, 0)$ into the formula.",
+       "ur": "فارمولے میں $P(3, 4)$ اور $O(0, 0)$ کے محددات درج کریں۔"
+      },
+      {
+       "math": "\\overrightarrow{PO} = -3\\underline{i} - 4\\underline{j}",
+       "en": "Simplify the components to find the required vector.",
+       "ur": "مطلوبہ ویکٹر معلوم کرنے کے لیے اجزاء کو مختصر کریں۔",
        "check": [
         "0 - 3 == -3",
         "0 - 4 == -4"
@@ -3883,11 +4833,16 @@
       },
       {
        "math": "\\text{Answer: (c) } -3\\underline{i}-4\\underline{j}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "The result matches option (c), which is the correct answer.",
+       "ur": "یہ نتیجہ آپشن (c) سے مطابقت رکھتا ہے، جو کہ درست جواب ہے۔",
+       "check": [
+        "0 - 3 == -3",
+        "0 - 4 == -4"
+       ]
       }
      ],
      "answer": "(c) $-3\\underline{i}-4\\underline{j}$",
+     "enriched": true,
      "book_key": "(c) -3i-4j"
     }
    ],
@@ -3905,24 +4860,53 @@
      "prompt": "$A(7,7),\\ B(-12,0)$",
      "steps": [
       {
-       "math": "\\overrightarrow{AB} = (x_2 - x_1)\\underline{i} + (y_2 - y_1)\\underline{j} = (-12 - (7))\\underline{i} + (0 - (7))\\underline{j} = -19\\underline{i} - 7\\underline{j}",
-       "en": "Tip minus tail: subtract the coordinates of the first point from the second.",
-       "ur": "دوسرے نقطے کے محدد سے پہلے نقطے کے محدد تفریق کریں۔",
+       "math": "A(x_1, y_1) = A(7, 7), \\quad B(x_2, y_2) = B(-12, 0)",
+       "en": "Identify the coordinates of the initial point $A$ and the terminal point $B$ from the given question.",
+       "ur": "دیے گئے سوال سے ابتدائی نقطہ $A$ اور اختتامی نقطہ $B$ کے محددات لکھیں۔"
+      },
+      {
+       "math": "\\overrightarrow{AB} = (x_2 - x_1)\\underline{i} + (y_2 - y_1)\\underline{j}",
+       "en": "Write the formula to find the vector $\\overrightarrow{AB}$ by subtracting the coordinates of the initial point $A$ from the terminal point $B$.",
+       "ur": "اختتامی نقطہ $B$ کے محددات میں سے ابتدائی نقطہ $A$ کے محددات کو تفریق کر کے ویکٹر $\\overrightarrow{AB}$ معلوم کرنے کا فارمولا لکھیں۔"
+      },
+      {
+       "math": "\\overrightarrow{AB} = (-12 - 7)\\underline{i} + (0 - 7)\\underline{j} = -19\\underline{i} - 7\\underline{j}",
+       "en": "Substitute the coordinates of $A(7, 7)$ and $B(-12, 0)$ into the formula and simplify to get the components of $\\overrightarrow{AB}$.",
+       "ur": "فارمولے میں $A(7, 7)$ اور $B(-12, 0)$ کے محددات درج کریں اور مختصر کر کے $\\overrightarrow{AB}$ کے اجزاء حاصل کریں۔",
        "check": [
-        "(-12) - (7) == (-19)",
-        "(0) - (7) == (-7)"
+        "(-12) - (7) == -19",
+        "(0) - (7) == -7"
        ]
       },
       {
-       "math": "|\\overrightarrow{AB}| = \\sqrt{(-19)^2 + (-7)^2} = \\sqrt{361 + 49} = \\sqrt{410}",
-       "en": "Magnitude $= \\sqrt{x^2 + y^2}$.",
-       "ur": "مقدار $= \\sqrt{x^2 + y^2}$۔",
+       "math": "|\\overrightarrow{AB}| = \\sqrt{x^2 + y^2}",
+       "en": "Now, use the magnitude formula for a vector $x\\underline{i} + y\\underline{j}$ in the plane.",
+       "ur": "اب، مستوی میں ویکٹر $x\\underline{i} + y\\underline{j}$ کی مقدار معلوم کرنے کا فارمولا استعمال کریں۔"
+      },
+      {
+       "math": "|\\overrightarrow{AB}| = \\sqrt{(-19)^2 + (-7)^2}",
+       "en": "Substitute the components $x = -19$ and $y = -7$ into the magnitude formula.",
+       "ur": "مقدار کے فارمولے میں اجزاء $x = -19$ اور $y = -7$ کی قیمتیں درج کریں۔",
        "check": [
+        "(-19)**2 == 361",
+        "(-7)**2 == 49"
+       ]
+      },
+      {
+       "math": "|\\overrightarrow{AB}| = \\sqrt{361 + 49} = \\sqrt{410}",
+       "en": "Evaluate the squares and add them together. Thus, the magnitude of $\\overrightarrow{AB}$ is $\\sqrt{410}$.",
+       "ur": "مربع لیں اور انہیں آپس میں جمع کریں۔ اس طرح، ویکٹر $\\overrightarrow{AB}$ کی مقدار $\\sqrt{410}$ ہے۔",
+       "check": [
+        "361 + 49 == 410",
+        "sqrt((-19)**2 + (-7)**2) == sqrt(410)",
+        "(-12) - (7) == (-19)",
+        "(0) - (7) == (-7)",
         "sqrt((-19)**2 + (-7)**2) == (sqrt(410))"
        ]
       }
      ],
      "answer": "$\\sqrt{410}$",
+     "enriched": true,
      "book_key": "\\sqrt{410}"
     },
     {
@@ -3930,24 +4914,52 @@
      "prompt": "$A(9,3),\\ B(2,11)$",
      "steps": [
       {
-       "math": "\\overrightarrow{AB} = (x_2 - x_1)\\underline{i} + (y_2 - y_1)\\underline{j} = (2 - (9))\\underline{i} + (11 - (3))\\underline{j} = -7\\underline{i} + 8\\underline{j}",
-       "en": "Tip minus tail: subtract the coordinates of the first point from the second.",
-       "ur": "دوسرے نقطے کے محدد سے پہلے نقطے کے محدد تفریق کریں۔",
+       "math": "A(x_1, y_1) = A(9, 3), \\quad B(x_2, y_2) = B(2, 11)",
+       "en": "Identify the coordinates of the given points $A$ and $B$. We need to find the magnitude of the vector $\\overrightarrow{AB}$.",
+       "ur": "دیے گئے نقاط $A$ اور $B$ کے محددات لکھیں۔ ہمیں ویکٹر $\\overrightarrow{AB}$ کی مقدار معلوم کرنی ہے۔"
+      },
+      {
+       "math": "\\overrightarrow{AB} = (x_2 - x_1)\\underline{i} + (y_2 - y_1)\\underline{j}",
+       "en": "Write the formula to find the vector $\\overrightarrow{AB}$ by subtracting the coordinates of the initial point $A$ from the terminal point $B$.",
+       "ur": "آخری نقطہ $B$ کے محددات میں سے ابتدائی نقطہ $A$ کے محددات کو تفریق کر کے ویکٹر $\\overrightarrow{AB}$ معلوم کرنے کا فارمولا لکھیں۔"
+      },
+      {
+       "math": "\\overrightarrow{AB} = (2 - 9)\\underline{i} + (11 - 3)\\underline{j} = -7\\underline{i} + 8\\underline{j}",
+       "en": "Substitute the coordinates of points $A$ and $B$ into the formula and simplify to get the components of $\\overrightarrow{AB}$.",
+       "ur": "فارمولے میں نقاط $A$ اور $B$ کے محددات درج کریں اور مختصر کر کے $\\overrightarrow{AB}$ کے اجزاء حاصل کریں۔",
        "check": [
-        "(2) - (9) == (-7)",
-        "(11) - (3) == (8)"
+        "2 - 9 == -7",
+        "11 - 3 == 8"
        ]
       },
       {
-       "math": "|\\overrightarrow{AB}| = \\sqrt{(-7)^2 + (8)^2} = \\sqrt{49 + 64} = \\sqrt{113}",
-       "en": "Magnitude $= \\sqrt{x^2 + y^2}$.",
-       "ur": "مقدار $= \\sqrt{x^2 + y^2}$۔",
+       "math": "|\\overrightarrow{AB}| = \\sqrt{x^2 + y^2}",
+       "en": "Recall the formula for the magnitude of a vector $x\\underline{i} + y\\underline{j}$.",
+       "ur": "ایک ویکٹر $x\\underline{i} + y\\underline{j}$ کی مقدار معلوم کرنے کا فارمولا لکھیں۔"
+      },
+      {
+       "math": "|\\overrightarrow{AB}| = \\sqrt{(-7)^2 + (8)^2} = \\sqrt{49 + 64}",
+       "en": "Substitute $x = -7$ and $y = 8$ into the magnitude formula and take the squares of both values.",
+       "ur": "مقدار کے فارمولے میں $x = -7$ اور $y = 8$ درج کریں اور دونوں قیمتوں کا مربع لیں۔",
        "check": [
+        "(-7)**2 == 49",
+        "8**2 == 64"
+       ]
+      },
+      {
+       "math": "|\\overrightarrow{AB}| = \\sqrt{113}",
+       "en": "Add the numbers inside the square root to get the final magnitude of $\\overrightarrow{AB}$.",
+       "ur": "جذر کے اندر موجود اعداد کو جمع کریں تاکہ $\\overrightarrow{AB}$ کی حتمی مقدار حاصل ہو سکے۔",
+       "check": [
+        "sqrt(49 + 64) == sqrt(113)",
+        "(2) - (9) == (-7)",
+        "(11) - (3) == (8)",
         "sqrt((-7)**2 + (8)**2) == (sqrt(113))"
        ]
       }
      ],
      "answer": "$\\sqrt{113}$",
+     "enriched": true,
      "book_key": "\\sqrt{113}"
     }
    ],
@@ -3965,18 +4977,47 @@
      "prompt": "",
      "steps": [
       {
-       "math": "|a| = \\sqrt{(\\frac{5}{3})^2 + (\\frac{1}{3})^2} = \\sqrt{\\frac{25}{9} + \\frac{1}{9}} = \\frac{\\sqrt{26}}{3}",
-       "en": "Magnitude $= \\sqrt{x^2 + y^2}$.",
-       "ur": "مقدار $= \\sqrt{x^2 + y^2}$۔",
+       "math": "\\underline{a} = \\frac{5}{3}\\underline{i} + \\frac{1}{3}\\underline{j}",
+       "en": "Write down the given vector $\\underline{a}$. Here, the components are $x = \\frac{5}{3}$ and $y = \\frac{1}{3}$. We need to find the unit vector $\\hat{a}$ in the direction of $\\underline{a}$.",
+       "ur": "دیا گیا سمتیہ $\\underline{a}$ لکھیں۔ یہاں، اجزاء $x = \\frac{5}{3}$ اور $y = \\frac{1}{3}$ ہیں۔ ہمیں $\\underline{a}$ کی سمت میں اکائی سمتیہ $\\hat{a}$ معلوم کرنا ہے۔"
+      },
+      {
+       "math": "|\\underline{a}| = \\sqrt{\\left(\\frac{5}{3}\\right)^2 + \\left(\\frac{1}{3}\\right)^2}",
+       "en": "First, find the magnitude of vector $\\underline{a}$ using the formula $|\\underline{a}| = \\sqrt{x^2 + y^2}$.",
+       "ur": "سب سے پہلے، فارمولا $|\\underline{a}| = \\sqrt{x^2 + y^2}$ کا استعمال کرتے ہوئے سمتیہ $\\underline{a}$ کی مقدار معلوم کریں۔"
+      },
+      {
+       "math": "|\\underline{a}| = \\sqrt{\\frac{25}{9} + \\frac{1}{9}}",
+       "en": "Square both fractions inside the square root.",
+       "ur": "جذر کے اندر دونوں کسروں کا مربع لیں۔",
        "check": [
-        "sqrt((5/3)**2 + (1/3)**2) == (sqrt(26)/3)"
+        "(R(5,3))**2 == R(25,9)",
+        "(R(1,3))**2 == R(1,9)"
        ]
       },
       {
-       "math": "\\hat{a} = \\frac{a}{|a|} = \\frac{\\frac{5}{3}\\underline{i} + \\frac{1}{3}\\underline{j}}{\\frac{\\sqrt{26}}{3}} = \\frac{5}{\\sqrt{26}}\\underline{i} + \\frac{1}{\\sqrt{26}}\\underline{j}",
-       "en": "Divide the vector by its magnitude.",
-       "ur": "سمتیہ کو اس کی مقدار سے تقسیم کریں۔",
+       "math": "|\\underline{a}| = \\sqrt{\\frac{26}{9}} = \\frac{\\sqrt{26}}{3}",
+       "en": "Add the fractions with the common denominator $9$ and take the square root of the denominator.",
+       "ur": "مشترک مخرج $9$ کے ساتھ کسروں کو جمع کریں اور مخرج کا جذر لیں۔",
        "check": [
+        "R(25,9) + R(1,9) == R(26,9)",
+        "sqrt(R(26,9)) == sqrt(26)/3"
+       ]
+      },
+      {
+       "math": "\\hat{a} = \\frac{\\underline{a}}{|\\underline{a}|} = \\frac{\\frac{5}{3}\\underline{i} + \\frac{1}{3}\\underline{j}}{\\frac{\\sqrt{26}}{3}}",
+       "en": "The unit vector $\\hat{a}$ is found by dividing the vector $\\underline{a}$ by its magnitude $|\\underline{a}|$. Substitute the values into the formula.",
+       "ur": "اکائی سمتیہ $\\hat{a}$ معلوم کرنے کے لیے سمتیہ $\\underline{a}$ کو اس کی مقدار $|\\underline{a}|$ سے تقسیم کیا جاتا ہے۔ فارمولے میں قیمتیں درج کریں۔"
+      },
+      {
+       "math": "\\hat{a} = \\frac{\\frac{1}{3}(5\\underline{i} + 1\\underline{j})}{\\frac{\\sqrt{26}}{3}} = \\frac{5}{\\sqrt{26}}\\underline{i} + \\frac{1}{\\sqrt{26}}\\underline{j}",
+       "en": "Cancel out the common denominator $3$ and write the separate $\\underline{i}$ and $\\underline{j}$ components to get the required unit vector.",
+       "ur": "مشترک مخرج $3$ کو منسوخ کریں اور مطلوبہ اکائی سمتیہ حاصل کرنے کے لیے $\\underline{i}$ اور $\\underline{j}$ کے اجزاء کو الگ الگ لکھیں۔",
+       "check": [
+        "R(5,3) / (sqrt(26)/3) == 5/sqrt(26)",
+        "R(1,3) / (sqrt(26)/3) == 1/sqrt(26)",
+        "(5/sqrt(26))**2 + (1/sqrt(26))**2 == 1",
+        "sqrt((5/3)**2 + (1/3)**2) == (sqrt(26)/3)",
         "(5*sqrt(26)/26)**2 + (sqrt(26)/26)**2 == 1",
         "(5*sqrt(26)/26)*(sqrt(26)/3) == (5/3)",
         "(sqrt(26)/26)*(sqrt(26)/3) == (1/3)"
@@ -3984,6 +5025,7 @@
       }
      ],
      "answer": "$\\frac{5}{\\sqrt{26}}\\underline{i} + \\frac{1}{\\sqrt{26}}\\underline{j}$",
+     "enriched": true,
      "book_key": "\\frac{5}{\\sqrt{26}}i+\\frac{1}{\\sqrt{26}}j"
     }
    ],
@@ -4752,15 +5794,41 @@
      "prompt": "",
      "steps": [
       {
-       "math": "|\\underline{v}| = \\sqrt{(6)^2 + (8)^2} = \\sqrt{36 + 64} = 10",
-       "en": "Magnitude $= \\sqrt{x^2 + y^2}$.",
-       "ur": "مقدار $= \\sqrt{x^2 + y^2}$۔",
+       "math": "\\underline{v} = 6\\underline{i} + 8\\underline{j}",
+       "en": "The given velocity vector is $\\underline{v} = 6\\underline{i} + 8\\underline{j}$, where the horizontal component is $x = 6$ and the vertical component is $y = 8$.",
+       "ur": "دیا گیا ویلاسٹی ویکٹر $\\underline{v} = 6\\underline{i} + 8\\underline{j}$ ہے، جہاں افقی جزو $x = 6$ اور عمودی جزو $y = 8$ ہے۔"
+      },
+      {
+       "math": "|\\underline{v}| = \\sqrt{x^2 + y^2}",
+       "en": "The magnitude of a vector $\\underline{v} = x\\underline{i} + y\\underline{j}$ in a plane is given by the formula $|\\underline{v}| = \\sqrt{x^2 + y^2}$.",
+       "ur": "مستوی میں کسی ویکٹر $\\underline{v} = x\\underline{i} + y\\underline{j}$ کی مقدار معلوم کرنے کا فارمولا $|\\underline{v}| = \\sqrt{x^2 + y^2}$ ہے۔"
+      },
+      {
+       "math": "|\\underline{v}| = \\sqrt{(6)^2 + (8)^2}",
+       "en": "Substitute the values $x = 6$ and $y = 8$ into the magnitude formula.",
+       "ur": "مقدار کے فارمولے میں $x = 6$ اور $y = 8$ کی قیمتیں درج کریں۔"
+      },
+      {
+       "math": "|\\underline{v}| = \\sqrt{36 + 64}",
+       "en": "Calculate the squares of $6$ and $8$, which are $36$ and $64$ respectively.",
+       "ur": "$6$ اور $8$ کا مربع لیں، جو کہ بالترتیب $36$ اور $64$ ہیں۔",
        "check": [
+        "sqrt(6**2 + 8**2) == sqrt(36 + 64)"
+       ]
+      },
+      {
+       "math": "|\\underline{v}| = \\sqrt{100} = 10",
+       "en": "Add the numbers under the square root to get $100$, and then take its square root to find the final magnitude.",
+       "ur": "جذر کے نیچے موجود اعداد کو جمع کرنے سے $100$ حاصل ہوتا ہے، اور پھر اس کا جذر لینے سے مطلوبہ مقدار معلوم ہوتی ہے۔",
+       "check": [
+        "sqrt(36 + 64) == sqrt(100)",
+        "sqrt(100) == 10",
         "sqrt((6)**2 + (8)**2) == (10)"
        ]
       }
      ],
      "answer": "$10$",
+     "enriched": true,
      "book_key": "10"
     }
    ],
@@ -4778,21 +5846,42 @@
      "prompt": "",
      "steps": [
       {
-       "math": "\\underline{v} = 200\\underline{i} + 60\\underline{j}",
-       "en": "East is $\\underline{i}$, north is $\\underline{j}$; add the velocities.",
-       "ur": "مشرق $\\underline{i}$ اور شمال $\\underline{j}$ ہے؛ رفتاریں جمع کریں۔"
+       "math": "\\underline{v}_a = 200\\underline{i}, \\quad \\underline{v}_w = 60\\underline{j}",
+       "en": "Let the unit vector due east be $\\underline{i}$ and due north be $\\underline{j}$. Express the given velocity of the aircraft $\\underline{v}_a$ and the velocity of the wind $\\underline{v}_w$ in vector form.",
+       "ur": "فرض کریں کہ مشرق کی طرف اکائی ویکٹر $\\underline{i}$ اور شمال کی طرف اکائی ویکٹر $\\underline{j}$ ہے۔ جہاز کی دی گئی رفتار $\\underline{v}_a$ اور ہوا کی رفتار $\\underline{v}_w$ کو ویکٹر کی شکل میں لکھیں۔"
       },
       {
-       "math": "|\\underline{v}| = \\sqrt{200^2 + 60^2} = \\sqrt{43600} \\approx 208.8 \\text{ km/h}",
-       "en": "Its magnitude.",
-       "ur": "اس کی مقدار۔",
+       "math": "\\underline{v} = \\underline{v}_a + \\underline{v}_w = 200\\underline{i} + 60\\underline{j}",
+       "en": "The resultant velocity $\\underline{v}$ is the vector sum of the aircraft's velocity and the wind's velocity.",
+       "ur": "محصلہ رفتار $\\underline{v}$ جہاز کی رفتار اور ہوا کی رفتار کا ویکٹر مجموعہ ہے۔"
+      },
+      {
+       "math": "|\\underline{v}| = \\sqrt{x^2 + y^2} = \\sqrt{200^2 + 60^2}",
+       "en": "Now, use the magnitude formula for a vector $x\\underline{i} + y\\underline{j}$ and substitute $x = 200$ and $y = 60$.",
+       "ur": "اب، ویکٹر $x\\underline{i} + y\\underline{j}$ کی مقدار کا فارمولا استعمال کریں اور $x = 200$ اور $y = 60$ درج کریں۔"
+      },
+      {
+       "math": "|\\underline{v}| = \\sqrt{40000 + 3600} = \\sqrt{43600}",
+       "en": "Evaluate the squares and add them together.",
+       "ur": "مربع حل کریں اور انہیں آپس میں جمع کریں۔",
        "check": [
-        "200**2 + 60**2 == 43600",
-        "Abs(sqrt(43600) - 208.8) < 0.01"
+        "200**2 == 40000",
+        "60**2 == 3600",
+        "40000 + 3600 == 43600"
+       ]
+      },
+      {
+       "math": "|\\underline{v}| \\approx 208.8 \\text{ km/h}",
+       "en": "Take the square root to find the magnitude of the resultant velocity.",
+       "ur": "محصلہ رفتار کی مقدار معلوم کرنے کے لیے جذر لیں۔",
+       "check": [
+        "Abs(sqrt(43600) - 208.8) < 0.01",
+        "200**2 + 60**2 == 43600"
        ]
       }
      ],
      "answer": "$200\\underline{i} + 60\\underline{j}$, magnitude $\\approx 208.8$ km/h",
+     "enriched": true,
      "book_key": "200i+60j, magnitude 208.8 km/h"
     }
    ],

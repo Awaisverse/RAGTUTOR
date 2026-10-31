@@ -1,0 +1,136 @@
+{
+ "item": "c10-rev8-q7",
+ "label": "",
+ "answer_ref": "$10\\sqrt{2}$ m",
+ "steps": [
+  {
+   "math": "AB = 20\\text{ m}, \\quad OM = 10\\text{ m}",
+   "en": "Let the centre of the circular pond be $O$, the chord formed by the tree branch be $AB = 20\\text{ m}$, and the perpendicular measuring rod from the centre to the chord be $OM = 10\\text{ m}$. We need to find the radius $r = OA$.",
+   "ur": "فرض کریں کہ دائروی تالاب کا مرکز $O$ ہے، درخت کی شاخ سے بننے والا وتر $AB = 20\\text{ m}$ ہے، اور مرکز سے وتر پر عمودی پیمائشی راڈ $OM = 10\\text{ m}$ ہے۔ ہمیں رداس $r = OA$ معلوم کرنا ہے۔",
+   "draw": [
+    {
+     "t": "circle",
+     "c": [
+      50,
+      30
+     ],
+     "r": 25
+    },
+    {
+     "t": "dot",
+     "p": [
+      50,
+      30
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      51.5,
+      28
+     ],
+     "s": "O"
+    },
+    {
+     "t": "line",
+     "p": [
+      32.25,
+      47.60504189145826,
+      67.75,
+      47.60504189145826
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      28.25,
+      48.60504189145826
+     ],
+     "s": "A"
+    },
+    {
+     "t": "text",
+     "p": [
+      69.25,
+      48.60504189145826
+     ],
+     "s": "B"
+    },
+    {
+     "t": "line",
+     "p": [
+      50,
+      30,
+      50,
+      47.60504189145826
+     ],
+     "dash": true
+    },
+    {
+     "t": "right",
+     "p": [
+      50,
+      47.60504189145826
+     ],
+     "d": [
+      1,
+      0,
+      0,
+      -1
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      51.5,
+      51.60504189145826
+     ],
+     "s": "M"
+    },
+    {
+     "t": "line",
+     "p": [
+      50,
+      30,
+      67.75,
+      47.60504189145826
+     ]
+    }
+   ]
+  },
+  {
+   "math": "AM = \\frac{AB}{2} = \\frac{20}{2} = 10\\text{ m}",
+   "en": "By theorem, a perpendicular drawn from the centre of a circle to a chord bisects the chord. Since $OM \\perp AB$, $M$ is the midpoint of $AB$.",
+   "ur": "مسئلہ کے مطابق، دائرے کے مرکز سے وتر پر گرایا گیا عمود وتر کی تنصیف کرتا ہے۔ چونکہ $OM \\perp AB$ ہے، اس لیے $M$ وتر $AB$ کا وسطی نقطہ ہے۔",
+   "check": [
+    "20/2 == 10"
+   ]
+  },
+  {
+   "math": "OA^2 = OM^2 + AM^2",
+   "en": "Join $O$ to $A$ to form a right-angled triangle $OMA$ with $\\angle OMA = 90^\\circ$. Applying the Pythagorean theorem to $\\triangle OMA$:",
+   "ur": "$O$ کو $A$ سے ملائیں تاکہ ایک قائمہ الزاویہ مثلث $OMA$ بن جائے جس میں $\\angle OMA = 90^\\circ$ ہے۔ مثلث $OMA$ پر مسئلہ فیثا غورث لاگو کرنے سے:"
+  },
+  {
+   "math": "r^2 = 10^2 + 10^2 = 100 + 100 = 200",
+   "en": "Substitute $OA = r$, $OM = 10$, and $AM = 10$ into the equation and simplify.",
+   "ur": "مساوات میں $OA = r$، $OM = 10$ اور $AM = 10$ کی قیمتیں درج کریں اور مختصر کریں۔",
+   "check": [
+    "10**2 == 100",
+    "100 + 100 == 200"
+   ]
+  },
+  {
+   "math": "r = \\sqrt{200} = \\sqrt{100 \\times 2} = 10\\sqrt{2}\\text{ m}",
+   "en": "Take the square root on both sides to find the radius $r$ of the pond.",
+   "ur": "تالاب کا رداس $r$ معلوم کرنے کے لیے دونوں طرف جذر لیں۔",
+   "check": [
+    "sqrt(200) == 10*sqrt(2)",
+    "sqrt(10**2 + 10**2) == 10*sqrt(2)"
+   ]
+  }
+ ],
+ "keeps_drawing": true,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

@@ -1,0 +1,50 @@
+{
+ "item": "c10-ex12.1-q9",
+ "label": "iv",
+ "answer_ref": "$\\frac{2}{5}$",
+ "steps": [
+  {
+   "math": "",
+   "en": "Let $S$ be the sample space of selecting a whole number from $1$ to $15$ inclusive, so $S = \\{1, 2, 3, \\dots, 15\\}$.",
+   "ur": "فرض کریں کہ $S$، $1$ سے $15$ تک مکمل اعداد میں سے ایک عدد منتخب کرنے کی نمونہ فضا ہے، لہذا $S = \\{1, 2, 3, \\dots, 15\\}$ ہے۔"
+  },
+  {
+   "math": "n(S) = 15",
+   "en": "The total number of possible outcomes in the sample space is $15$.",
+   "ur": "نمونہ فضا میں ممکنہ نتائج کی کل تعداد $15$ ہے۔",
+   "check": [
+    "15 == 15"
+   ]
+  },
+  {
+   "math": "",
+   "en": "Let $E$ be the event that the selected number is a prime number. The prime numbers between $1$ and $15$ are $2, 3, 5, 7, 11,$ and $13$, so $E = \\{2, 3, 5, 7, 11, 13\\}$.",
+   "ur": "فرض کریں کہ $E$ وہ وقوعہ ہے کہ منتخب کردہ عدد ایک مفرد عدد ہے۔ $1$ اور $15$ کے درمیان مفرد اعداد $2, 3, 5, 7, 11,$ اور $13$ ہیں، اس لیے $E = \\{2, 3, 5, 7, 11, 13\\}$ ہے۔"
+  },
+  {
+   "math": "n(E) = 6",
+   "en": "Counting the elements in set $E$, the number of favourable outcomes is $6$.",
+   "ur": "سیٹ $E$ میں ارکان کو گننے سے، موافق نتائج کی تعداد $6$ ہے۔",
+   "check": [
+    "6 == 6"
+   ]
+  },
+  {
+   "math": "P(E) = \\frac{n(E)}{n(S)}",
+   "en": "By the formula of probability, the probability of event $E$ is the ratio of favourable outcomes to total outcomes.",
+   "ur": "احتمال کے فارمولے کے مطابق، وقوعہ $E$ کا احتمال موافق نتائج اور کل نتائج کی نسبت ہے۔"
+  },
+  {
+   "math": "P(E) = \\frac{6}{15} = \\frac{2}{5}",
+   "en": "Substitute $n(E) = 6$ and $n(S) = 15$ into the formula and simplify the fraction by dividing the numerator and denominator by $3$. Thus, the required probability is $\\frac{2}{5}$.",
+   "ur": "فارمولے میں $n(E) = 6$ اور $n(S) = 15$ درج کریں اور شمار کنندہ اور مخرج کو $3$ پر تقسیم کر کے کسر کو مختصر کریں۔ اس طرح، مطلوبہ احتمال $\\frac{2}{5}$ ہے۔",
+   "check": [
+    "R(6, 15) == R(2, 5)",
+    "15 == 15",
+    "R(6, 15) == 2/5"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

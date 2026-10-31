@@ -1,0 +1,70 @@
+{
+ "item": "ex1.2-q3",
+ "label": "ii",
+ "answer_ref": "$2\\sqrt{8}$",
+ "steps": [
+  {
+   "math": "x = 3+\\sqrt{8}",
+   "en": "Write down the given value of $x$. We need to find the value of $x - \\frac{1}{x}$.",
+   "ur": "دی گئی $x$ کی قیمت لکھیں۔ ہمیں $x - \\frac{1}{x}$ کی قیمت معلوم کرنی ہے۔"
+  },
+  {
+   "math": "\\frac{1}{x} = \\frac{1}{3+\\sqrt{8}}",
+   "en": "First, take the reciprocal of $x$ to find $\\frac{1}{x}$.",
+   "ur": "سب سے پہلے، $\\frac{1}{x}$ معلوم کرنے کے لیے $x$ کا معکوس لیں۔"
+  },
+  {
+   "math": "\\frac{1}{x} = \\frac{1}{3+\\sqrt{8}} \\times \\frac{3-\\sqrt{8}}{3-\\sqrt{8}}",
+   "en": "Rationalize the denominator by multiplying and dividing by its conjugate, $3-\\sqrt{8}$.",
+   "ur": "نسب نما کو ناطق بنانے کے لیے اس کے مزدوج $3-\\sqrt{8}$ سے ضرب اور تقسیم کریں۔",
+   "check": [
+    "1/(3+sqrt(8)) == (1/(3+sqrt(8))) * ((3-sqrt(8))/(3-sqrt(8)))"
+   ]
+  },
+  {
+   "math": "\\frac{1}{x} = \\frac{3-\\sqrt{8}}{(3)^2 - (\\sqrt{8})^2}",
+   "en": "Apply the algebraic identity $(a+b)(a-b) = a^2 - b^2$ in the denominator.",
+   "ur": "نسب نما میں الجبری کلیہ $(a+b)(a-b) = a^2 - b^2$ استعمال کریں۔",
+   "check": [
+    "(3+sqrt(8))*(3-sqrt(8)) == 3**2 - sqrt(8)**2"
+   ]
+  },
+  {
+   "math": "\\frac{1}{x} = \\frac{3-\\sqrt{8}}{9-8} = \\frac{3-\\sqrt{8}}{1} = 3-\\sqrt{8}",
+   "en": "Simplify the squares in the denominator: $3^2 = 9$ and $(\\sqrt{8})^2 = 8$.",
+   "ur": "نسب نما میں مربعات کو مختصر کریں: $3^2 = 9$ اور $(\\sqrt{8})^2 = 8$۔",
+   "check": [
+    "3**2 == 9",
+    "sqrt(8)**2 == 8",
+    "9 - 8 == 1",
+    "(3-sqrt(8))/(9-8) == 3-sqrt(8)"
+   ]
+  },
+  {
+   "math": "x - \\frac{1}{x} = (3+\\sqrt{8}) - (3-\\sqrt{8})",
+   "en": "Now, substitute the values of $x$ and $\\frac{1}{x}$ into the expression $x - \\frac{1}{x}$.",
+   "ur": "اب، عبارت $x - \\frac{1}{x}$ میں $x$ اور $\\frac{1}{x}$ کی قیمتیں درج کریں۔"
+  },
+  {
+   "math": "x - \\frac{1}{x} = 3+\\sqrt{8} - 3 + \\sqrt{8}",
+   "en": "Remove the brackets. The minus sign changes the signs inside the second bracket.",
+   "ur": "بریکٹ ختم کریں۔ منفی کی علامت دوسری بریکٹ کے اندر موجود علامتوں کو بدل دیتی ہے۔",
+   "check": [
+    "(3+sqrt(8)) - (3-sqrt(8)) == 3 + sqrt(8) - 3 + sqrt(8)"
+   ]
+  },
+  {
+   "math": "x - \\frac{1}{x} = 2\\sqrt{8}",
+   "en": "Combine the like terms. $3$ and $-3$ cancel out, leaving $\\sqrt{8} + \\sqrt{8} = 2\\sqrt{8}$.",
+   "ur": "ہم جنس رقموں کو یکجا کریں۔ $3$ اور $-3$ آپس میں کٹ جاتے ہیں، اور $\\sqrt{8} + \\sqrt{8} = 2\\sqrt{8}$ بچتا ہے۔",
+   "check": [
+    "3 + sqrt(8) - 3 + sqrt(8) == 2*sqrt(8)",
+    "1/(3+sqrt(8)) == 3 - sqrt(8)",
+    "3**2 - sqrt(8)**2 == 1",
+    "(3+sqrt(8)) - (3-sqrt(8)) == 2*sqrt(8)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

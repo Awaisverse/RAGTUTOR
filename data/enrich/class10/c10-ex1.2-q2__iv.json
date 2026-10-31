@@ -1,0 +1,47 @@
+{
+ "item": "c10-ex1.2-q2",
+ "label": "iv",
+ "answer_ref": "$\\frac{2}{3} - \\frac{5}{4}i$",
+ "steps": [
+  {
+   "math": "z = -\\frac{2}{3} + \\frac{5}{4}i",
+   "en": "Let the given complex number be represented by $z$. We need to find its additive inverse.",
+   "ur": "فرض کریں کہ دیے گئے مخلوط عدد کو $z$ سے ظاہر کیا گیا ہے۔ ہمیں اس کا جمعی معکوس معلوم کرنا ہے۔",
+   "check": [
+    "R(-2,3) + R(5,4)*I == R(-2,3) + R(5,4)*I"
+   ]
+  },
+  {
+   "math": "-z = -(a + bi) = -a - bi",
+   "en": "Recall the rule that the additive inverse of any complex number $z = a + bi$ is $-z$, which is found by multiplying the entire complex number by $-1$.",
+   "ur": "یاد رکھیں کہ کسی بھی مخلوط عدد $z = a + bi$ کا جمعی معکوس $-z$ ہوتا ہے، جو پورے مخلوط عدد کو $-1$ سے ضرب دے کر حاصل کیا جاتا ہے۔"
+  },
+  {
+   "math": "-z = -\\left(-\\frac{2}{3} + \\frac{5}{4}i\\right)",
+   "en": "Substitute the given value of $z$ into the formula for the additive inverse.",
+   "ur": "جمعی معکوس کے فارمولے میں $z$ کی دی گئی قیمت درج کریں۔",
+   "check": [
+    "-(R(-2,3) + R(5,4)*I) == -(R(-2,3) + R(5,4)*I)"
+   ]
+  },
+  {
+   "math": "-z = \\frac{2}{3} - \\frac{5}{4}i",
+   "en": "Distribute the negative sign inside the brackets to change the signs of both the real and imaginary parts.",
+   "ur": "حقیقی اور خیالی دونوں حصوں کی علامتیں تبدیل کرنے کے لیے بریکٹ کے اندر منفی علامت سے ضرب دیں۔",
+   "check": [
+    "-(R(-2,3) + R(5,4)*I) == R(2,3) - R(5,4)*I",
+    "(R(-2,3) + R(5,4)*I) + (R(2,3) - R(5,4)*I) == 0"
+   ]
+  },
+  {
+   "math": "\\frac{2}{3} - \\frac{5}{4}i",
+   "en": "Thus, the additive inverse of $-\\frac{2}{3} + \\frac{5}{4}i$ is $\\frac{2}{3} - \\frac{5}{4}i$.",
+   "ur": "پس، $-\\frac{2}{3} + \\frac{5}{4}i$ کا جمعی معکوس $\\frac{2}{3} - \\frac{5}{4}i$ ہے۔",
+   "check": [
+    "(-2/3 + 5*I/4) + (2/3 - 5*I/4) == 0"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

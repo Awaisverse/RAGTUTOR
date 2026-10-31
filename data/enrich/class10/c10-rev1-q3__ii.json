@@ -1,0 +1,50 @@
+{
+ "item": "c10-rev1-q3",
+ "label": "ii",
+ "answer_ref": "$1$",
+ "steps": [
+  {
+   "math": "i^{13} \\times i^{11}",
+   "en": "We are asked to simplify the product of two powers of the imaginary unit $i$.",
+   "ur": "ہمیں خیالی اکائی $i$ کی دو طاقتوں کے حاصل ضرب کو مختصر کرنے کے لیے کہا گیا ہے۔"
+  },
+  {
+   "math": "i^{13} \\times i^{11} = i^{13+11} = i^{24}",
+   "en": "By the law of exponents ($a^m \\times a^n = a^{m+n}$), when the bases are the same, we add the powers.",
+   "ur": "قوت نما کے قانون ($a^m \\times a^n = a^{m+n}$) کے مطابق، جب اساس ایک جیسے ہوں تو ہم طاقتوں کو جمع کرتے ہیں۔",
+   "check": [
+    "I**13 * I**11 == I**24",
+    "13 + 11 == 24"
+   ]
+  },
+  {
+   "math": "i^{24} = (i^2)^{12}",
+   "en": "Rewrite the even power $24$ as a multiple of $2$, because we know the fundamental value of $i^2$.",
+   "ur": "جفت طاقت $24$ کو $2$ کے مضرب کے طور پر دوبارہ لکھیں، کیونکہ ہم $i^2$ کی بنیادی قیمت جانتے ہیں۔",
+   "check": [
+    "I**24 == (I**2)**12",
+    "2 * 12 == 24"
+   ]
+  },
+  {
+   "math": "(i^2)^{12} = (-1)^{12}",
+   "en": "Substitute the value $i^2 = -1$ into the expression.",
+   "ur": "عبارت میں $i^2 = -1$ کی قیمت درج کریں۔",
+   "check": [
+    "(I**2)**12 == (-1)**12",
+    "I**2 == -1"
+   ]
+  },
+  {
+   "math": "(-1)^{12} = 1",
+   "en": "Since $-1$ is raised to an even power ($12$), the result is $+1$. Thus, the final answer is $1$.",
+   "ur": "چونکہ $-1$ کی طاقت ایک جفت عدد ($12$) ہے، اس لیے نتیجہ $+1$ ہے۔ اس طرح، حتمی جواب $1$ ہے۔",
+   "check": [
+    "(-1)**12 == 1",
+    "I**13 * I**11 == 1"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

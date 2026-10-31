@@ -1,0 +1,61 @@
+{
+ "item": "ex1.2-q2",
+ "label": "iv",
+ "answer_ref": "$x^2 y z^4$",
+ "steps": [
+  {
+   "math": "\\sqrt[7]{\\frac{x^{14} \\times y^{21} \\times z^{35}}{y^{14} z^{7}}}",
+   "en": "We are given the radical expression and asked to simplify it using the laws of exponents.",
+   "ur": "ہمیں یہ جذری جملہ دیا گیا ہے اور ہمیں قوت نما کے قوانین استعمال کرتے ہوئے اسے مختصر کرنا ہے۔"
+  },
+  {
+   "math": "= \\sqrt[7]{x^{14} \\cdot y^{21-14} \\cdot z^{35-7}}",
+   "en": "First, simplify the fraction inside the radical. By the quotient law of exponents, $\\frac{a^m}{a^n} = a^{m-n}$, we subtract the exponents of like bases $y$ and $z$.",
+   "ur": "سب سے پہلے، جذر کے اندر موجود کسر کو مختصر کریں۔ قوت نما کے تقسیم کے قانون $\\frac{a^m}{a^n} = a^{m-n}$ کے مطابق، ہم یکساں اساس $y$ اور $z$ کے قوت نماؤں کو منفی کرتے ہیں۔",
+   "check": [
+    "x**14 * y**21 * z**35 / (y**14 * z**7) == x**14 * y**(21-14) * z**(35-7)"
+   ]
+  },
+  {
+   "math": "= \\sqrt[7]{x^{14} y^{7} z^{28}}",
+   "en": "Perform the subtraction in the exponents: $21 - 14 = 7$ and $35 - 7 = 28$.",
+   "ur": "قوت نماؤں میں تفریق کا عمل مکمل کریں: $21 - 14 = 7$ اور $35 - 7 = 28$۔",
+   "check": [
+    "21 - 14 == 7",
+    "35 - 7 == 28"
+   ]
+  },
+  {
+   "math": "= \\left(x^{14} y^{7} z^{28}\\right)^{\\frac{1}{7}}",
+   "en": "Rewrite the radical in exponential form using the rule $\\sqrt[n]{a} = a^{\\frac{1}{n}}$. Here, the index of the root is $7$.",
+   "ur": "اصول $\\sqrt[n]{a} = a^{\\frac{1}{n}}$ کا استعمال کرتے ہوئے جذری شکل کو قوت نمائی شکل میں لکھیں۔ یہاں جذر کا درجہ $7$ ہے۔"
+  },
+  {
+   "math": "= \\left(x^{14}\\right)^{\\frac{1}{7}} \\cdot \\left(y^{7}\\right)^{\\frac{1}{7}} \\cdot \\left(z^{28}\\right)^{\\frac{1}{7}}",
+   "en": "Apply the power of a product rule, $(abc)^n = a^n b^n c^n$, to distribute the outer exponent $\\frac{1}{7}$ to each factor inside the brackets.",
+   "ur": "ضرب کے قوت نما کا قانون $(abc)^n = a^n b^n c^n$ لاگو کرتے ہوئے بیرونی قوت نما $\\frac{1}{7}$ کو بریکٹ کے اندر موجود ہر جزو پر الگ الگ لگائیں۔"
+  },
+  {
+   "math": "= x^{14 \\times \\frac{1}{7}} \\cdot y^{7 \\times \\frac{1}{7}} \\cdot z^{28 \\times \\frac{1}{7}}",
+   "en": "Use the power of a power rule, $(a^m)^n = a^{m \\times n}$, and multiply the exponents.",
+   "ur": "قوت القوت کا قانون $(a^m)^n = a^{m \\times n}$ استعمال کریں اور قوت نماؤں کو آپس میں ضرب دیں۔",
+   "check": [
+    "14 * R(1, 7) == 2",
+    "7 * R(1, 7) == 1",
+    "28 * R(1, 7) == 4"
+   ]
+  },
+  {
+   "math": "= x^2 y z^4",
+   "en": "Simplify the exponents ($\\frac{14}{7} = 2$, $\\frac{7}{7} = 1$, and $\\frac{28}{7} = 4$) to get the final answer.",
+   "ur": "آخری جواب حاصل کرنے کے لیے قوت نماؤں کو مختصر کریں ($\\frac{14}{7} = 2$، $\\frac{7}{7} = 1$، اور $\\frac{28}{7} = 4$)۔",
+   "check": [
+    "x**(14*R(1,7)) * y**(7*R(1,7)) * z**(28*R(1,7)) == x**2 * y * z**4",
+    "x**14*y**21*z**35/(y**14*z**7) == x**14*y**7*z**28",
+    "(x**14*y**7*z**28)**Rational(1,7) == x**2*y*z**4"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

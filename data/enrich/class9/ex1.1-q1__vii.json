@@ -1,0 +1,45 @@
+{
+ "item": "ex1.1-q1",
+ "label": "vii",
+ "answer_ref": "Irrational",
+ "steps": [
+  {
+   "math": "5 + \\sqrt{11}",
+   "en": "We are given the expression $5 + \\sqrt{11}$ and asked to identify whether it is a rational or irrational number.",
+   "ur": "ہمیں $5 + \\sqrt{11}$ دیا گیا ہے اور یہ بتانا ہے کہ یہ ناطق عدد ہے یا غیر ناطق عدد۔"
+  },
+  {
+   "math": "5 = \\frac{5}{1}",
+   "en": "First, consider the first term, $5$. Since $5$ can be written in the form $\\frac{p}{q}$ as $\\frac{5}{1}$ (where $p, q \\in \\mathbb{Z}$ and $q \\neq 0$), $5$ is a rational number.",
+   "ur": "سب سے پہلے پہلی رقم $5$ کو دیکھیں۔ چونکہ $5$ کو $\\frac{p}{q}$ کی شکل میں $\\frac{5}{1}$ لکھا جا سکتا ہے (جہاں $p, q \\in \\mathbb{Z}$ اور $q \\neq 0$)، اس لیے $5$ ایک ناطق عدد ہے۔",
+   "check": [
+    "5 == R(5, 1)"
+   ]
+  },
+  {
+   "math": "\\sqrt{11} \\text{ is irrational}",
+   "en": "Next, consider the second term, $\\sqrt{11}$. Since $11$ is a prime number and not a perfect square ($9 < 11 < 16$), its square root $\\sqrt{11}$ is an irrational number.",
+   "ur": "اب دوسری رقم $\\sqrt{11}$ کو دیکھیں۔ چونکہ $11$ ایک مفرد عدد ہے اور مکمل مربع نہیں ہے ($9 < 11 < 16$)، اس لیے اس کا جذر $\\sqrt{11}$ ایک غیر ناطق عدد ہے۔",
+   "check": [
+    "floor(sqrt(11))**2 == 9",
+    "(floor(sqrt(11))+1)**2 == 16"
+   ]
+  },
+  {
+   "math": "\\text{Rational} + \\text{Irrational} = \\text{Irrational}",
+   "en": "According to the properties of real numbers, the sum of a rational number and an irrational number is always an irrational number.",
+   "ur": "حقیقی اعداد کی خصوصیات کے مطابق، ایک ناطق عدد اور ایک غیر ناطق عدد کا مجموعہ ہمیشہ ایک غیر ناطق عدد ہوتا ہے۔"
+  },
+  {
+   "math": "5 + \\sqrt{11} \\text{ is irrational}",
+   "en": "Therefore, adding the rational number $5$ and the irrational number $\\sqrt{11}$ gives $5 + \\sqrt{11}$, which is an irrational number.",
+   "ur": "لہٰذا، ناطق عدد $5$ اور غیر ناطق عدد $\\sqrt{11}$ کو جمع کرنے سے حاصل ہونے والا عدد $5 + \\sqrt{11}$ ایک غیر ناطق عدد ہے۔",
+   "check": [
+    "floor(sqrt(11))**2 < 11",
+    "(floor(sqrt(11))+1)**2 > 11"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

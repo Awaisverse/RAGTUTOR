@@ -1,0 +1,40 @@
+{
+ "item": "ex1.1-q1",
+ "label": "ix",
+ "answer_ref": "Rational",
+ "steps": [
+  {
+   "math": "\\frac{15}{4}",
+   "en": "We are given the number $\\frac{15}{4}$ and asked to identify whether it is a rational or an irrational number.",
+   "ur": "ہمیں عدد $\\frac{15}{4}$ دیا گیا ہے اور یہ معلوم کرنا ہے کہ آیا یہ ناطق عدد ہے یا غیر ناطق۔"
+  },
+  {
+   "math": "\\frac{p}{q}, \\quad p, q \\in \\mathbb{Z}, \\quad q \\neq 0",
+   "en": "By definition, a rational number is any number that can be expressed in the form $\\frac{p}{q}$, where $p$ and $q$ are integers ($\\mathbb{Z}$) and the denominator $q$ is not equal to $0$.",
+   "ur": "تعریف کے مطابق، ناطق عدد ہر وہ عدد ہے جسے $\\frac{p}{q}$ کی شکل میں لکھا جا سکے، جہاں $p$ اور $q$ صحیح اعداد ($\\mathbb{Z}$) ہیں اور مخرج $q$ صفر ($0$) کے برابر نہیں ہے۔"
+  },
+  {
+   "math": "p = 15, \\quad q = 4 \\neq 0",
+   "en": "Comparing $\\frac{15}{4}$ with $\\frac{p}{q}$, we see that the numerator $p = 15$ and the denominator $q = 4$ are both integers, and $q \\neq 0$.",
+   "ur": "عدد $\\frac{15}{4}$ کا $\\frac{p}{q}$ سے موازنہ کرنے پر، ہم دیکھتے ہیں کہ شمار کنندہ $p = 15$ اور مخرج $q = 4$ دونوں صحیح اعداد ہیں، اور $q \\neq 0$۔"
+  },
+  {
+   "math": "\\frac{15}{4} = 3.75",
+   "en": "Furthermore, if we divide $15$ by $4$, we get $3.75$, which is a terminating decimal fraction. Every terminating decimal is a rational number.",
+   "ur": "مزید برآں، اگر ہم $15$ کو $4$ پر تقسیم کریں تو ہمیں $3.75$ حاصل ہوتا ہے، جو کہ ایک مختتم اعشاری کسر ہے۔ ہر مختتم اعشاری کسر ایک ناطق عدد ہوتی ہے۔",
+   "check": [
+    "R(15, 4) == R(375, 100)"
+   ]
+  },
+  {
+   "math": "",
+   "en": "Therefore, $\\frac{15}{4}$ is a rational number.",
+   "ur": "لہٰذا، $\\frac{15}{4}$ ایک ناطق عدد (Rational number) ہے۔",
+   "check": [
+    "Rational(15,4) == Rational('3.75')"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

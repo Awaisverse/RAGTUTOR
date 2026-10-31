@@ -1,0 +1,56 @@
+{
+ "item": "c10-ex7.1-q3",
+ "label": "vi",
+ "answer_ref": "$-\\frac{1}{\\sqrt{3}}$",
+ "steps": [
+  {
+   "math": "\\cot 120^\\circ",
+   "en": "We need to find the exact value of the given trigonometric ratio without using a calculator.",
+   "ur": "ہمیں کیلکولیٹر کا استعمال کیے بغیر دی گئی مثلثیاتی نسبت کی اصل قیمت معلوم کرنی ہے۔"
+  },
+  {
+   "math": "120^\\circ = 90^\\circ + 30^\\circ = 1(90^\\circ) + 30^\\circ",
+   "en": "First, express the angle $120^\\circ$ in terms of a multiple of $90^\\circ$ and an acute angle $\\theta$.",
+   "ur": "سب سے پہلے، زاویہ $120^\\circ$ کو $90^\\circ$ کے مضرب اور ایک حادہ زاویہ $\\theta$ کی صورت میں لکھیں۔",
+   "check": [
+    "120 == 90 + 30",
+    "120 == 1*90 + 30"
+   ]
+  },
+  {
+   "math": "\\cot 120^\\circ = \\cot(1 \\times 90^\\circ + 30^\\circ)",
+   "en": "Substitute this expression for the angle into the trigonometric function.",
+   "ur": "زاویہ کے اس اظہار کو مثلثیاتی تفاعل میں درج کریں۔",
+   "check": [
+    "cot(120*pi/180) == cot((1*90 + 30)*pi/180)"
+   ]
+  },
+  {
+   "math": "\\cot(1 \\times 90^\\circ + 30^\\circ) = -\\tan 30^\\circ",
+   "en": "Since $1$ is an odd multiple of $90^\\circ$, the ratio $\\cot$ changes to its co-ratio $\\tan$. Also, the angle $120^\\circ$ lies in Quadrant II where $\\cot$ is negative, so we place a minus sign.",
+   "ur": "چونکہ $1$، $90^\\circ$ کا ایک طاق مضرب ہے، اس لیے نسبت $\\cot$ اپنی ہم نسبت $\\tan$ میں بدل جاتی ہے۔ نیز، زاویہ $120^\\circ$ دوسرے ربع (Quadrant II) میں واقع ہے جہاں $\\cot$ منفی ہوتا ہے، اس لیے ہم منفی کی علامت لگاتے ہیں۔",
+   "check": [
+    "cot((1*90 + 30)*pi/180) == -tan(30*pi/180)"
+   ]
+  },
+  {
+   "math": "-\\tan 30^\\circ = -\\frac{1}{\\sqrt{3}}",
+   "en": "We know from the table of standard trigonometric values that $\\tan 30^\\circ = \\frac{1}{\\sqrt{3}}$. Substitute this value.",
+   "ur": "ہم معیاری مثلثیاتی قیمتوں کے جدول سے جانتے ہیں کہ $\\tan 30^\\circ = \\frac{1}{\\sqrt{3}}$ ہے۔ یہ قیمت درج کریں۔",
+   "check": [
+    "-tan(30*pi/180) == -1/sqrt(3)"
+   ]
+  },
+  {
+   "math": "\\cot 120^\\circ = -\\frac{1}{\\sqrt{3}}",
+   "en": "Thus, the exact value of $\\cot 120^\\circ$ is $-\\frac{1}{\\sqrt{3}}$.",
+   "ur": "پس، $\\cot 120^\\circ$ کی اصل قیمت $-\\frac{1}{\\sqrt{3}}$ ہے۔",
+   "check": [
+    "cot(120*pi/180) == -1/sqrt(3)",
+    "cot((120)*pi/180) == -sqrt(3)/3"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

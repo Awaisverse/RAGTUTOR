@@ -1,0 +1,50 @@
+{
+ "item": "c10-ex4.1-q5",
+ "label": "i",
+ "answer_ref": "$31$",
+ "steps": [
+  {
+   "math": "",
+   "en": "We are given the functions $f(x) = 3x + 2$ and $g(x) = 2x + 3$. We need to find the composite value $g(f(4))$.",
+   "ur": "ہمیں دو تفاعل $f(x) = 3x + 2$ اور $g(x) = 2x + 3$ دیے گئے ہیں۔ ہمیں مرکب تفاعل $g(f(4))$ کی قیمت معلوم کرنی ہے۔"
+  },
+  {
+   "math": "f(4) = 3(4) + 2",
+   "en": "First, evaluate the inner function $f(4)$ by substituting $x = 4$ into $f(x) = 3x + 2$.",
+   "ur": "سب سے پہلے، $f(x) = 3x + 2$ میں $x = 4$ درج کر کے اندرونی تفاعل $f(4)$ کی قیمت معلوم کریں۔",
+   "check": [
+    "3*4 + 2 == 14"
+   ]
+  },
+  {
+   "math": "f(4) = 12 + 2 = 14",
+   "en": "Multiply and add the numbers to get the value of $f(4)$.",
+   "ur": "اعداد کو ضرب اور جمع کر کے $f(4)$ کی قیمت حاصل کریں۔",
+   "check": [
+    "3*4 == 12",
+    "12 + 2 == 14"
+   ]
+  },
+  {
+   "math": "g(f(4)) = g(14) = 2(14) + 3",
+   "en": "Now, substitute $f(4) = 14$ into the outer function $g(x) = 2x + 3$.",
+   "ur": "اب، بیرونی تفاعل $g(x) = 2x + 3$ میں $f(4) = 14$ درج کریں۔",
+   "check": [
+    "2*14 + 3 == 31"
+   ]
+  },
+  {
+   "math": "g(f(4)) = 28 + 3 = 31",
+   "en": "Simplify the expression to get the final answer.",
+   "ur": "جملے کو مختصر کر کے حتمی جواب حاصل کریں۔",
+   "check": [
+    "2*14 == 28",
+    "28 + 3 == 31",
+    "3*4 + 2 == 14",
+    "2*14 + 3 == 31"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

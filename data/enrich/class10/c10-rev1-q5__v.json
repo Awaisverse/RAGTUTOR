@@ -1,0 +1,48 @@
+{
+ "item": "c10-rev1-q5",
+ "label": "v",
+ "answer_ref": "verified: $\\overline{\\overline{z_2}} = z_2$",
+ "steps": [
+  {
+   "math": "z_2 = 2 + 3i",
+   "en": "First, write down the given complex number $z_2$. We need to verify that $\\overline{\\overline{z_2}} = z_2$.",
+   "ur": "سب سے پہلے، دی گئی مختلط عدد $z_2$ لکھیں۔ ہمیں یہ تصدیق کرنی ہے کہ $\\overline{\\overline{z_2}} = z_2$ ہے۔",
+   "check": [
+    "2 + 3*I == 2 + 3*I"
+   ]
+  },
+  {
+   "math": "\\overline{z} = a - bi",
+   "en": "Recall that to find the conjugate of a complex number $z = a + bi$, we change the sign of its imaginary part.",
+   "ur": "یاد رکھیں کہ کسی مختلط عدد $z = a + bi$ کا مزدوج (conjugate) معلوم کرنے کے لیے، ہم اس کے خیالی حصے کی علامت تبدیل کرتے ہیں۔"
+  },
+  {
+   "math": "\\overline{z_2} = \\overline{2 + 3i} = 2 - 3i",
+   "en": "Take the conjugate of $z_2$ for the first time by changing $+3i$ to $-3i$.",
+   "ur": "$+3i$ کو $-3i$ میں تبدیل کر کے پہلی بار $z_2$ کا مزدوج لیں۔",
+   "check": [
+    "conjugate(2 + 3*I) == 2 - 3*I"
+   ]
+  },
+  {
+   "math": "\\overline{\\overline{z_2}} = \\overline{2 - 3i} = 2 + 3i",
+   "en": "Now, take the conjugate again to find the Left Hand Side ($\\text{L.H.S} = \\overline{\\overline{z_2}}$) by changing $-3i$ back to $+3i$.",
+   "ur": "اب، بائیں طرف ($\\text{L.H.S} = \\overline{\\overline{z_2}}$) معلوم کرنے کے لیے $-3i$ کو واپس $+3i$ میں تبدیل کر کے دوبارہ مزدوج لیں۔",
+   "check": [
+    "conjugate(2 - 3*I) == 2 + 3*I",
+    "conjugate(conjugate(2 + 3*I)) == 2 + 3*I"
+   ]
+  },
+  {
+   "math": "\\overline{\\overline{z_2}} = z_2",
+   "en": "Since $2 + 3i$ is equal to the original complex number $z_2$ (which is the $\\text{R.H.S}$), it is verified that $\\text{L.H.S} = \\text{R.H.S}$.",
+   "ur": "چونکہ $2 + 3i$ اصل مختلط عدد $z_2$ (جو کہ $\\text{R.H.S}$ ہے) کے برابر ہے، اس لیے یہ تصدیق ہو گئی ہے کہ $\\text{L.H.S} = \\text{R.H.S}$۔",
+   "check": [
+    "conjugate(conjugate(2 + 3*I)) == 2 + 3*I",
+    "conjugate(conjugate(2+3*I)) == 2+3*I"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

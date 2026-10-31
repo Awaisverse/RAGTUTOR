@@ -1,0 +1,142 @@
+{
+ "item": "c10-ex8.1-q5",
+ "label": "",
+ "answer_ref": "$8$ cm",
+ "steps": [
+  {
+   "math": "r = OA = 10\\ \\text{cm}, \\quad AB = 12\\ \\text{cm}",
+   "en": "Let $O$ be the centre of the circular tabletop. The line segment $AB$ acts as a chord of the circle. We are given the radius $r = 10\\text{ cm}$ and the length of the chord $AB = 12\\text{ cm}$. We need to find the perpendicular distance $OM$ from the centre $O$ to the chord $AB$.",
+   "ur": "فرض کریں کہ $O$ گول میز کے تختے کا مرکز ہے۔ خط $AB$ دائرے کے وتر کے طور پر کام کرتا ہے۔ ہمیں رداس $r = 10\\text{ cm}$ اور وتر کی لمبائی $AB = 12\\text{ cm}$ دی گئی ہے۔ ہمیں مرکز $O$ سے وتر $AB$ تک کا عمودی فاصلہ $OM$ معلوم کرنا ہے۔",
+   "draw": [
+    {
+     "t": "circle",
+     "c": [
+      50,
+      30
+     ],
+     "r": 25
+    },
+    {
+     "t": "dot",
+     "p": [
+      50,
+      30
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      51.5,
+      28
+     ],
+     "s": "O"
+    },
+    {
+     "t": "line",
+     "p": [
+      35.0,
+      50.0,
+      65.0,
+      50.0
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      31.0,
+      51.0
+     ],
+     "s": "A"
+    },
+    {
+     "t": "text",
+     "p": [
+      66.5,
+      51.0
+     ],
+     "s": "B"
+    },
+    {
+     "t": "line",
+     "p": [
+      50,
+      30,
+      50,
+      50.0
+     ],
+     "dash": true
+    },
+    {
+     "t": "right",
+     "p": [
+      50,
+      50.0
+     ],
+     "d": [
+      1,
+      0,
+      0,
+      -1
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      51.5,
+      54.0
+     ],
+     "s": "M"
+    },
+    {
+     "t": "line",
+     "p": [
+      50,
+      30,
+      65.0,
+      50.0
+     ]
+    }
+   ]
+  },
+  {
+   "math": "AM = \\frac{AB}{2} = \\frac{12}{2} = 6\\ \\text{cm}",
+   "en": "Draw a perpendicular $OM$ from the centre $O$ to the chord $AB$. By the theorem of a circle, a perpendicular drawn from the centre of a circle to a chord bisects the chord.",
+   "ur": "مرکز $O$ سے وتر $AB$ پر عمود $OM$ کھینچیں۔ دائرے کے مسئلے کے مطابق، دائرے کے مرکز سے وتر پر گرایا گیا عمود وتر کی تنصیف کرتا ہے۔",
+   "check": [
+    "12/2 == 6"
+   ]
+  },
+  {
+   "math": "OA^2 = OM^2 + AM^2",
+   "en": "Since $OM \\perp AB$, the triangle $OMA$ is a right-angled triangle with hypotenuse $OA$. By applying the Pythagoras theorem:",
+   "ur": "چونکہ $OM \\perp AB$ ہے، اس لیے مثلث $OMA$ ایک قائمہ الزاویہ مثلث ہے جس کا وتر $OA$ ہے۔ مسئلہ فیثا غورث لاگو کرنے سے:"
+  },
+  {
+   "math": "10^2 = OM^2 + 6^2",
+   "en": "Substitute the known values $OA = 10$ and $AM = 6$ into the equation.",
+   "ur": "مساوات میں معلوم قیمتیں $OA = 10$ اور $AM = 6$ درج کریں۔"
+  },
+  {
+   "math": "OM^2 = 100 - 36 = 64",
+   "en": "Calculate the squares and rearrange the equation to solve for $OM^2$.",
+   "ur": "مربع حل کریں اور $OM^2$ کی قیمت نکالنے کے لیے مساوات کو ترتیب دیں۔",
+   "check": [
+    "10**2 == 100",
+    "6**2 == 36",
+    "100 - 36 == 64"
+   ]
+  },
+  {
+   "math": "OM = \\sqrt{64} = 8\\ \\text{cm}",
+   "en": "Take the square root on both sides to find the perpendicular distance $OM$. Thus, the perpendicular distance from the centre to $AB$ is $8\\text{ cm}$.",
+   "ur": "عمودی فاصلہ $OM$ معلوم کرنے کے لیے دونوں طرف جزر المربع لیں۔ اس طرح مرکز سے $AB$ تک کا عمودی فاصلہ $8\\text{ cm}$ ہے۔",
+   "check": [
+    "sqrt(64) == 8",
+    "sqrt(10**2 - 6**2) == 8"
+   ]
+  }
+ ],
+ "keeps_drawing": true,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

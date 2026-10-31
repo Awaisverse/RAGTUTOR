@@ -1,0 +1,55 @@
+{
+ "item": "c10-ex12.2-q6",
+ "label": "i",
+ "answer_ref": "$\\frac{2}{13}$",
+ "steps": [
+  {
+   "math": "n(S) = 52",
+   "en": "Total number of cards in a standard pack is $52$.",
+   "ur": "تاش کی ایک معیاری گڈی میں پتوں کی کل تعداد $52$ ہے۔",
+   "check": [
+    "52 == 52"
+   ]
+  },
+  {
+   "math": "n(K) = 4, \\quad n(J) = 4",
+   "en": "Let $K$ be the event of drawing a King and $J$ be the event of drawing a Jack. There are $4$ kings and $4$ jacks in the pack.",
+   "ur": "فرض کریں کہ $K$ بادشاہ نکلنے کا واقعہ ہے اور $J$ غلام (Jack) نکلنے کا واقعہ ہے۔ گڈی میں $4$ بادشاہ اور $4$ غلام ہوتے ہیں۔",
+   "check": [
+    "4 == 4"
+   ]
+  },
+  {
+   "math": "P(K) = \\frac{n(K)}{n(S)} = \\frac{4}{52}, \\quad P(J) = \\frac{n(J)}{n(S)} = \\frac{4}{52}",
+   "en": "Find the individual probabilities of drawing a king and a jack.",
+   "ur": "بادشاہ اور غلام نکلنے کے انفرادی احتمالات معلوم کریں۔",
+   "check": [
+    "R(4,52) == R(1,13)"
+   ]
+  },
+  {
+   "math": "P(K \\cup J) = P(K) + P(J)",
+   "en": "Since no card can be both a king and a jack at the same time, the events $K$ and $J$ are mutually exclusive. We apply the addition law of probability for mutually exclusive events.",
+   "ur": "چونکہ کوئی بھی پتہ بیک وقت بادشاہ اور غلام دونوں نہیں ہو سکتا، اس لیے واقعات $K$ اور $J$ باہمی غیر مشترک (mutually exclusive) ہیں۔ ہم باہمی غیر مشترک واقعات کے لیے احتمال کا جمع کا قانون استعمال کرتے ہیں۔"
+  },
+  {
+   "math": "P(K \\cup J) = \\frac{4}{52} + \\frac{4}{52} = \\frac{8}{52}",
+   "en": "Substitute the values of $P(K)$ and $P(J)$ and add the fractions.",
+   "ur": "$P(K)$ اور $P(J)$ کی قیمتیں درج کریں اور کسروں کو جمع کریں۔",
+   "check": [
+    "R(4,52) + R(4,52) == R(8,52)"
+   ]
+  },
+  {
+   "math": "P(K \\cup J) = \\frac{2}{13}",
+   "en": "Simplify the fraction by dividing the numerator and the denominator by $4$. Thus, the probability of taking out a king or a jack is $\\frac{2}{13}$.",
+   "ur": "شمار کنندہ اور مخرج کو $4$ پر تقسیم کر کے کسر کو مختصر کریں۔ اس طرح، بادشاہ یا غلام نکلنے کا احتمال $\\frac{2}{13}$ ہے۔",
+   "check": [
+    "R(8,52) == R(2,13)",
+    "R(4,52) + R(4,52) == R(2,13)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

@@ -1,0 +1,42 @@
+{
+ "item": "c10-ex7.2-q2",
+ "label": "i",
+ "answer_ref": "$17.24$ cm$^2$",
+ "steps": [
+  {
+   "math": "a = 7\\ \\text{cm}, \\quad b = 8\\ \\text{cm}, \\quad \\gamma = 38^\\circ",
+   "en": "Write down the given lengths of the two sides $a$ and $b$, and the measure of the included angle $\\gamma$. We need to find the area of triangle $ABC$.",
+   "ur": "دی گئی دو اضلاع $a$ اور $b$ کی لمبائیاں اور ان کے درمیانی زاویے $\\gamma$ کی مقدار لکھیں۔ ہمیں مثلث $ABC$ کا رقبہ معلوم کرنا ہے۔"
+  },
+  {
+   "math": "\\Delta = \\frac{1}{2}ab\\sin\\gamma",
+   "en": "When two sides and the included angle are given, the area of the triangle ($\\Delta$) is equal to half the product of the two sides and the sine of the angle between them.",
+   "ur": "جب دو اضلاع اور ان کا درمیانی زاویہ دیا گیا ہو، تو مثلث کا رقبہ ($\\Delta$) دونوں اضلاع کے حاصل ضرب کے آدھے اور ان کے درمیانی زاویے کے سائن ($\\sin$) کے حاصل ضرب کے برابر ہوتا ہے۔"
+  },
+  {
+   "math": "\\Delta = \\frac{1}{2}(7)(8)\\sin 38^\\circ",
+   "en": "Substitute the given values $a = 7$, $b = 8$, and $\\gamma = 38^\\circ$ into the formula.",
+   "ur": "فارمولے میں دی گئی قیمتیں $a = 7$، $b = 8$ اور $\\gamma = 38^\\circ$ درج کریں۔"
+  },
+  {
+   "math": "\\Delta = 28 \\times \\sin 38^\\circ",
+   "en": "Multiply the numbers $\\frac{1}{2}$, $7$, and $8$ to get $28$.",
+   "ur": "اعداد $\\frac{1}{2}$، $7$ اور $8$ کو ضرب دیں جس سے $28$ حاصل ہوتا ہے۔",
+   "check": [
+    "R(1,2)*7*8 == 28"
+   ]
+  },
+  {
+   "math": "\\Delta = 28 \\times 0.6157 = 17.24\\ \\text{cm}^2",
+   "en": "Find the value of $\\sin 38^\\circ \\approx 0.6157$ using a scientific calculator and multiply it by $28$ to get the final area, rounded to two decimal places.",
+   "ur": "سائنٹیفک کیلکولیٹر کی مدد سے $\\sin 38^\\circ \\approx 0.6157$ کی قیمت معلوم کریں اور اسے $28$ سے ضرب دے کر اشعاریہ کے بعد دو درجوں تک حتمی رقبہ حاصل کریں۔",
+   "check": [
+    "Abs(sin(38*pi/180) - 0.6157) <= 0.0001",
+    "Abs(28*sin(38*pi/180) - 17.24) <= 0.005",
+    "Abs((R(1,2)*7*8*sin((38)*pi/180)) - 17.24) <= 0.0050000010000000004"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

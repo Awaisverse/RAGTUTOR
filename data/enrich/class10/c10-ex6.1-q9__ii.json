@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex6.1-q9",
+ "label": "ii",
+ "answer_ref": "parallel ($\\underline{b} = -3\\underline{a}$)",
+ "steps": [
+  {
+   "math": "",
+   "en": "We are given two vectors $\\underline{a} = -2\\underline{i} + 3\\underline{j}$ and $\\underline{b} = 6\\underline{i} - 9\\underline{j}$, and we need to determine if they are parallel.",
+   "ur": "ہمیں دو سمتیے $\\underline{a} = -2\\underline{i} + 3\\underline{j}$ اور $\\underline{b} = 6\\underline{i} - 9\\underline{j}$ دیے گئے ہیں، اور ہمیں معلوم کرنا ہے کہ آیا یہ متوازی ہیں۔"
+  },
+  {
+   "math": "\\underline{b} = k\\underline{a}",
+   "en": "Two non-zero vectors $\\underline{a}$ and $\\underline{b}$ are parallel if one can be written as a scalar multiple of the other, where $k$ is a non-zero real number.",
+   "ur": "دو غیر صفری سمتیے $\\underline{a}$ اور $\\underline{b}$ متوازی ہوتے ہیں اگر ایک کو دوسرے کے عددی مضرب کے طور پر لکھا جا سکے، جہاں $k$ ایک غیر صفری حقیقی عدد ہے۔"
+  },
+  {
+   "math": "\\underline{b} = 6\\underline{i} - 9\\underline{j} = -3(-2\\underline{i} + 3\\underline{j})",
+   "en": "Consider the vector $\\underline{b}$ and factor out $-3$ from both components.",
+   "ur": "سمتیہ $\\underline{b}$ پر غور کریں اور دونوں اجزاء میں سے $-3$ کو مشترک لیں۔",
+   "check": [
+    "-3*-2 == 6",
+    "-3*3 == -9"
+   ]
+  },
+  {
+   "math": "\\underline{b} = -3\\underline{a}",
+   "en": "Since $\\underline{a} = -2\\underline{i} + 3\\underline{j}$, substitute $\\underline{a}$ into the equation. This shows $\\underline{b}$ is a scalar multiple of $\\underline{a}$ with $k = -3$.",
+   "ur": "چونکہ $\\underline{a} = -2\\underline{i} + 3\\underline{j}$ ہے، اس لیے مساوات میں $\\underline{a}$ درج کریں۔ اس سے ظاہر ہوتا ہے کہ $\\underline{b}$ سمتیہ $\\underline{a}$ کا عددی مضرب ہے جہاں $k = -3$ ہے۔",
+   "check": [
+    "-3 == -3"
+   ]
+  },
+  {
+   "math": "\\text{parallel}",
+   "en": "Since one vector is a scalar multiple of the other, the given vectors $\\underline{a}$ and $\\underline{b}$ are parallel.",
+   "ur": "چونکہ ایک سمتیہ دوسرے کا عددی مضرب ہے، اس لیے دیے گئے سمتیے $\\underline{a}$ اور $\\underline{b}$ متوازی ہیں۔",
+   "check": [
+    "-3*-2 == 6",
+    "-3*3 == -9"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

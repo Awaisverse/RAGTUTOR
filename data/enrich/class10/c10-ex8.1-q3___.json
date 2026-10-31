@@ -1,0 +1,143 @@
+{
+ "item": "c10-ex8.1-q3",
+ "label": "",
+ "answer_ref": "$\\sqrt{51} \\approx 7.14$ m",
+ "steps": [
+  {
+   "math": "r = OA = 10\\ \\text{m}, \\quad AB = 14\\ \\text{m}",
+   "en": "Let $O$ be the centre of the circular park and $AB$ be the chord representing the distance between the two lamp posts. We are given the radius $r$ and the chord length $AB$, and we need to find the perpendicular distance $OM$ from the centre to the chord.",
+   "ur": "فرض کریں کہ $O$ دائروی پارک کا مرکز ہے اور $AB$ وہ وتر ہے جو دو لیمپ پوسٹوں کے درمیان فاصلے کو ظاہر کرتا ہے۔ ہمیں رداس $r$ اور وتر کی لمبائی $AB$ دی گئی ہے، اور ہمیں مرکز سے وتر تک کا عمودی فاصلہ $OM$ معلوم کرنا ہے۔",
+   "draw": [
+    {
+     "t": "circle",
+     "c": [
+      50,
+      30
+     ],
+     "r": 25
+    },
+    {
+     "t": "dot",
+     "p": [
+      50,
+      30
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      51.5,
+      28
+     ],
+     "s": "O"
+    },
+    {
+     "t": "line",
+     "p": [
+      32.5,
+      47.85357107135712,
+      67.5,
+      47.85357107135712
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      28.5,
+      48.85357107135712
+     ],
+     "s": "A"
+    },
+    {
+     "t": "text",
+     "p": [
+      69.0,
+      48.85357107135712
+     ],
+     "s": "B"
+    },
+    {
+     "t": "line",
+     "p": [
+      50,
+      30,
+      50,
+      47.85357107135712
+     ],
+     "dash": true
+    },
+    {
+     "t": "right",
+     "p": [
+      50,
+      47.85357107135712
+     ],
+     "d": [
+      1,
+      0,
+      0,
+      -1
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      51.5,
+      51.85357107135712
+     ],
+     "s": "M"
+    },
+    {
+     "t": "line",
+     "p": [
+      50,
+      30,
+      67.5,
+      47.85357107135712
+     ]
+    }
+   ]
+  },
+  {
+   "math": "AM = \\frac{AB}{2} = \\frac{14}{2} = 7\\ \\text{m}",
+   "en": "Draw a perpendicular $OM$ from the centre $O$ to the chord $AB$. By theorem, a perpendicular from the centre of a circle to a chord bisects the chord.",
+   "ur": "مرکز $O$ سے وتر $AB$ پر عمود $OM$ گرائیں۔ مسئلے کی رو سے، دائرے کے مرکز سے وتر پر گرایا گیا عمود وتر کی تنصیف کرتا ہے۔",
+   "check": [
+    "R(14, 2) == 7"
+   ]
+  },
+  {
+   "math": "OA^2 = OM^2 + AM^2",
+   "en": "Now, $OMA$ is a right-angled triangle with hypotenuse $OA$. Applying the Pythagoras theorem:",
+   "ur": "اب، $OMA$ ایک قائمۃ الزاویہ مثلث ہے جس کا وتر $OA$ ہے۔ مسئلہ فیثاغورث لاگو کرنے سے:"
+  },
+  {
+   "math": "10^2 = OM^2 + 7^2",
+   "en": "Substitute the values of the radius $OA = 10\\ \\text{m}$ and half-chord $AM = 7\\ \\text{m}$ into the equation.",
+   "ur": "مساوات میں رداس $OA = 10\\ \\text{m}$ اور آدھے وتر $AM = 7\\ \\text{m}$ کی قیمتیں درج کریں۔"
+  },
+  {
+   "math": "100 = OM^2 + 49 \\implies OM^2 = 100 - 49 = 51",
+   "en": "Evaluate the squares and solve for $OM^2$.",
+   "ur": "مربع حل کریں اور $OM^2$ کی قیمت نکالیں۔",
+   "check": [
+    "10**2 == 100",
+    "7**2 == 49",
+    "100 - 49 == 51"
+   ]
+  },
+  {
+   "math": "OM = \\sqrt{51} \\approx 7.14\\ \\text{m}",
+   "en": "Taking the square root on both sides, we find the distance of the chord from the centre of the park.",
+   "ur": "دونوں طرف جزر لینے سے، ہمیں پارک کے مرکز سے وتر کا فاصلہ معلوم ہو جاتا ہے۔",
+   "check": [
+    "Abs(sqrt(51) - 7.14) <= 0.005",
+    "10**2 - 7**2 == 51",
+    "Abs((sqrt(51)) - 7.14) <= 0.0050000010000000004"
+   ]
+  }
+ ],
+ "keeps_drawing": true,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

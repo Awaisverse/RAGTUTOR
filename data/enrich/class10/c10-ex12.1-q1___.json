@@ -1,0 +1,287 @@
+{
+ "item": "c10-ex12.1-q1",
+ "label": "",
+ "answer_ref": "$S = \\{HHH, HHT, HTH, HTT, THH, THT, TTH, TTT\\}$, $n(S) = 8$",
+ "steps": [
+  {
+   "math": "\\text{Outcomes for 1 coin} = \\{H, T\\}",
+   "en": "When a single fair coin is tossed, there are 2 possible outcomes: Head ($H$) or Tail ($T$).",
+   "ur": "جب ایک سکہ اچھالا جاتا ہے تو اس کے 2 ممکنہ نتائج ہوتے ہیں: ہیڈ ($H$) یا ٹیل ($T$)۔",
+   "draw": [
+    {
+     "t": "line",
+     "p": [
+      8.0,
+      30.0,
+      36.0,
+      17.5
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      37.0,
+      18.5
+     ],
+     "s": "H"
+    },
+    {
+     "t": "line",
+     "p": [
+      8.0,
+      30.0,
+      36.0,
+      42.5
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      37.0,
+      43.5
+     ],
+     "s": "T"
+    },
+    {
+     "t": "line",
+     "p": [
+      40.0,
+      17.5,
+      64.0,
+      11.25
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      65.0,
+      12.25
+     ],
+     "s": "H"
+    },
+    {
+     "t": "line",
+     "p": [
+      40.0,
+      17.5,
+      64.0,
+      23.75
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      65.0,
+      24.75
+     ],
+     "s": "T"
+    },
+    {
+     "t": "line",
+     "p": [
+      40.0,
+      42.5,
+      64.0,
+      36.25
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      65.0,
+      37.25
+     ],
+     "s": "H"
+    },
+    {
+     "t": "line",
+     "p": [
+      40.0,
+      42.5,
+      64.0,
+      48.75
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      65.0,
+      49.75
+     ],
+     "s": "T"
+    },
+    {
+     "t": "line",
+     "p": [
+      68.0,
+      11.25,
+      92.0,
+      8.12
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      93.0,
+      9.12
+     ],
+     "s": "H"
+    },
+    {
+     "t": "line",
+     "p": [
+      68.0,
+      11.25,
+      92.0,
+      14.38
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      93.0,
+      15.38
+     ],
+     "s": "T"
+    },
+    {
+     "t": "line",
+     "p": [
+      68.0,
+      23.75,
+      92.0,
+      20.62
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      93.0,
+      21.62
+     ],
+     "s": "H"
+    },
+    {
+     "t": "line",
+     "p": [
+      68.0,
+      23.75,
+      92.0,
+      26.88
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      93.0,
+      27.88
+     ],
+     "s": "T"
+    },
+    {
+     "t": "line",
+     "p": [
+      68.0,
+      36.25,
+      92.0,
+      33.12
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      93.0,
+      34.12
+     ],
+     "s": "H"
+    },
+    {
+     "t": "line",
+     "p": [
+      68.0,
+      36.25,
+      92.0,
+      39.38
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      93.0,
+      40.38
+     ],
+     "s": "T"
+    },
+    {
+     "t": "line",
+     "p": [
+      68.0,
+      48.75,
+      92.0,
+      45.62
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      93.0,
+      46.62
+     ],
+     "s": "H"
+    },
+    {
+     "t": "line",
+     "p": [
+      68.0,
+      48.75,
+      92.0,
+      51.88
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      93.0,
+      52.88
+     ],
+     "s": "T"
+    }
+   ]
+  },
+  {
+   "math": "\\text{Coin 1}: H,\\quad T",
+   "en": "To make a tree diagram for tossing three coins, start the first stage with two main branches for Coin 1: $H$ and $T$.",
+   "ur": "تین سکوں کو اچھالنے کی ٹری ڈایاگرام بنانے کے لیے، پہلے مرحلے میں سکہ 1 کے لیے دو شاخیں بنائیں: $H$ اور $T$۔"
+  },
+  {
+   "math": "\\text{Coin 1 } (H) \\to \\begin{cases} H \\to H, T \\\\ T \\to H, T \\end{cases}",
+   "en": "From the $H$ branch of Coin 1, draw two branches ($H$ and $T$) for Coin 2, and from each of those, draw two branches ($H$ and $T$) for Coin 3. Reading along the branches gives the outcomes: $HHH, HHT, HTH, HTT$.",
+   "ur": "سکہ 1 کی $H$ شاخ سے سکہ 2 کے لیے دو شاخیں ($H$ اور $T$) نکالیں، اور ان میں سے ہر ایک سے سکہ 3 کے لیے مزید دو شاخیں ($H$ اور $T$) نکالیں۔ ان شاخوں کو ترتیب سے پڑھنے سے یہ نتائج ملتے ہیں: $HHH, HHT, HTH, HTT$۔"
+  },
+  {
+   "math": "\\text{Coin 1 } (T) \\to \\begin{cases} H \\to H, T \\\\ T \\to H, T \\end{cases}",
+   "en": "Similarly, from the $T$ branch of Coin 1, split into $H$ and $T$ for Coin 2, and then again into $H$ and $T$ for Coin 3. Reading along these branches gives the outcomes: $THH, THT, TTH, TTT$.",
+   "ur": "اسی طرح، سکہ 1 کی $T$ شاخ سے سکہ 2 کے لیے $H$ اور $T$ کی شاخیں نکالیں، اور پھر سکہ 3 کے لیے دوبارہ $H$ اور $T$ کی شاخیں نکالیں۔ ان شاخوں کو پڑھنے سے یہ نتائج ملتے ہیں: $THH, THT, TTH, TTT$۔"
+  },
+  {
+   "math": "n(S) = 2 \\times 2 \\times 2 = 2^3 = 8",
+   "en": "By the fundamental principle of counting, the total number of outcomes in the sample space $n(S)$ is the product of the outcomes of all three coins.",
+   "ur": "گنتی کے بنیادی اصول کے مطابق، سیمپل اسپیس میں کل نتائج کی تعداد $n(S)$ تینوں سکوں کے نتائج کے حاصل ضرب کے برابر ہے۔",
+   "check": [
+    "2*2*2 == 8",
+    "2**3 == 8"
+   ]
+  },
+  {
+   "math": "S = \\{HHH, HHT, HTH, HTT, THH, THT, TTH, TTT\\},\\quad n(S) = 8",
+   "en": "Combine all the 8 outcomes read from the tree branches to write the complete sample space $S$.",
+   "ur": "مکمل سیمپل اسپیس $S$ لکھنے کے لیے ٹری کی شاخوں سے حاصل ہونے والے تمام 8 نتائج کو ایک سیٹ میں یکجا کریں۔",
+   "check": [
+    "2*2*2 == 8"
+   ]
+  }
+ ],
+ "keeps_drawing": true,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

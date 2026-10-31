@@ -1,0 +1,47 @@
+{
+ "item": "c10-ex11.2-q2",
+ "label": "",
+ "answer_ref": "60.1",
+ "steps": [
+  {
+   "math": "\\text{Range } (R) = 46.7, \\quad \\text{Lowest value } (X_{\\min}) = 13.4",
+   "en": "First, write down the given values from the question. We need to find the highest value ($X_{\\max}$).",
+   "ur": "سب سے پہلے، سوال میں دی گئی قیمتیں لکھیں۔ ہمیں سب سے بڑی قیمت ($X_{\\max}$) معلوم کرنی ہے۔",
+   "check": [
+    "R(467,10) == R(467,10)",
+    "R(134,10) == R(134,10)"
+   ]
+  },
+  {
+   "math": "\\text{Range} = X_{\\max} - X_{\\min}",
+   "en": "Recall the formula for the range of a data set, which is the difference between the highest value and the lowest value.",
+   "ur": "مواد کی وسعت (Range) کا فارمولا یاد کریں، جو کہ سب سے بڑی قیمت اور سب سے چھوٹی قیمت کے درمیان فرق ہوتا ہے۔"
+  },
+  {
+   "math": "46.7 = X_{\\max} - 13.4",
+   "en": "Substitute the given values of the range and the lowest value into the formula.",
+   "ur": "فارمولے میں وسعت اور سب سے چھوٹی قیمت کی دی گئی قدریں درج کریں۔",
+   "check": [
+    "R(467,10) == R(601,10) - R(134,10)"
+   ]
+  },
+  {
+   "math": "X_{\\max} = 46.7 + 13.4",
+   "en": "Rearrange the equation to isolate the highest value ($X_{\\max}$) by adding $13.4$ to both sides.",
+   "ur": "مساوات کے دونوں اطراف میں $13.4$ جمع کر کے سب سے بڑی قیمت ($X_{\\max}$) کو الگ کریں۔",
+   "check": [
+    "R(601,10) == R(467,10) + R(134,10)"
+   ]
+  },
+  {
+   "math": "X_{\\max} = 60.1",
+   "en": "Add the two numbers to get the final answer. Thus, the highest value of the data set is $60.1$.",
+   "ur": "حتمی جواب حاصل کرنے کے لیے دونوں اعداد کو جمع کریں۔ اس طرح، مواد کی سب سے بڑی قیمت $60.1$ ہے۔",
+   "check": [
+    "R(467,10) + R(134,10) == R(601,10)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

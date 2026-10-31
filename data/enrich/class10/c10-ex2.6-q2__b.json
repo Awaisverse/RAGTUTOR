@@ -1,0 +1,38 @@
+{
+ "item": "c10-ex2.6-q2",
+ "label": "b",
+ "answer_ref": "$T = \\frac{I}{PR}$",
+ "steps": [
+  {
+   "math": "I = PRT",
+   "en": "Write down the given formula for simple interest.",
+   "ur": "سادہ سود معلوم کرنے کا دیا گیا کلیہ لکھیں۔"
+  },
+  {
+   "math": "\\frac{I}{PR} = \\frac{PRT}{PR}",
+   "en": "To make $T$ the subject of the formula, we need to isolate $T$. Since $P$ and $R$ are multiplied with $T$, divide both sides of the equation by $PR$.",
+   "ur": "$T$ کو کلیہ کا موضوع بنانے کے لیے، ہمیں $T$ کو الگ کرنا ہوگا۔ چونکہ $P$ اور $R$ متغیر $T$ کے ساتھ ضرب ہو رہے ہیں، اس لیے مساوات کے دونوں اطراف کو $PR$ سے تقسیم کریں۔",
+   "check": [
+    "(Pp*Rr*Tt)/(Pp*Rr) == Tt"
+   ]
+  },
+  {
+   "math": "\\frac{I}{PR} = T",
+   "en": "Cancel out $PR$ from the numerator and denominator on the right-hand side.",
+   "ur": "دائیں جانب شمار کنندہ اور مخرج سے $PR$ کو کاٹ دیں۔",
+   "check": [
+    "Pp*Rr*(Ii/(Pp*Rr)) == Ii"
+   ]
+  },
+  {
+   "math": "T = \\frac{I}{PR}",
+   "en": "Rewrite the equation with the subject $T$ on the left-hand side to get the final answer.",
+   "ur": "حتمی جواب حاصل کرنے کے لیے موضوع $T$ کو بائیں جانب رکھتے ہوئے مساوات کو دوبارہ لکھیں۔",
+   "check": [
+    "Pp*Rr*(Ii/(Pp*Rr)) == Ii"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

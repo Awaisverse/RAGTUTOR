@@ -1,0 +1,49 @@
+{
+ "item": "c10-ex12.1-q7",
+ "label": "iii",
+ "answer_ref": "$\\frac{7}{8}$",
+ "steps": [
+  {
+   "math": "S = \\{HHH, HHT, HTH, HTT, THH, THT, TTH, TTT\\}",
+   "en": "When three fair coins are tossed together, we write all possible outcomes to form the sample space $S$.",
+   "ur": "جب تین سکے ایک ساتھ اچھالے جاتے ہیں، تو ہم نمونہ فضا $S$ بنانے کے لیے تمام ممکنہ نتائج لکھتے ہیں۔"
+  },
+  {
+   "math": "n(S) = 2^3 = 8",
+   "en": "Count the total number of possible outcomes in the sample space $S$.",
+   "ur": "نمونہ فضا $S$ میں ممکنہ نتائج کی کل تعداد گنیں۔",
+   "check": [
+    "2**3 == 8"
+   ]
+  },
+  {
+   "math": "E = \\{HHH, HHT, HTH, HTT, THH, THT, TTH\\}",
+   "en": "Let $E$ be the event of getting at most two tails. This means getting $0$, $1$, or $2$ tails (all outcomes except $TTT$).",
+   "ur": "فرض کریں کہ $E$ زیادہ سے زیادہ دو بار ٹیل (T) آنے کا واقعہ ہے۔ اس کا مطلب ہے $0$، $1$، یا $2$ بار ٹیل آنا ($TTT$ کے علاوہ تمام نتائج)۔"
+  },
+  {
+   "math": "n(E) = 7",
+   "en": "Count the number of favourable outcomes in event $E$.",
+   "ur": "واقعہ $E$ میں موافق نتائج کی تعداد گنیں۔",
+   "check": [
+    "7 == 7"
+   ]
+  },
+  {
+   "math": "P(E) = \\frac{n(E)}{n(S)}",
+   "en": "The formula for the probability of an event $E$ is the number of favourable outcomes divided by the total number of outcomes.",
+   "ur": "کسی واقعہ $E$ کے احتمال کا فارمولا موافق نتائج کی تعداد کو کل نتائج کی تعداد پر تقسیم کرنا ہے۔"
+  },
+  {
+   "math": "P(E) = \\frac{7}{8}",
+   "en": "Substitute $n(E) = 7$ and $n(S) = 8$ into the formula. Thus, the probability of getting at most two tails is $\\frac{7}{8}$.",
+   "ur": "فارمولے میں $n(E) = 7$ اور $n(S) = 8$ درج کریں۔ اس طرح، زیادہ سے زیادہ دو ٹیل آنے کا احتمال $\\frac{7}{8}$ ہے۔",
+   "check": [
+    "R(7, 8) == 7/8",
+    "8 == 8"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

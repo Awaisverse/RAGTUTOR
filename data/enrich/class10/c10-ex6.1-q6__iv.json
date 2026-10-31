@@ -1,0 +1,71 @@
+{
+ "item": "c10-ex6.1-q6",
+ "label": "iv",
+ "answer_ref": "$\\frac{2}{\\sqrt{13}}\\underline{i} - \\frac{3}{\\sqrt{13}}\\underline{j}$",
+ "steps": [
+  {
+   "math": "",
+   "en": "We are given the vector $\\underline{a} = \\frac{1}{2}\\underline{i} - \\frac{3}{4}\\underline{j}$. Here, the components are $x = \\frac{1}{2}$ and $y = -\\frac{3}{4}$. We need to find a unit vector $\\hat{a}$ in its direction.",
+   "ur": "ہمیں سمتیہ $\\underline{a} = \\frac{1}{2}\\underline{i} - \\frac{3}{4}\\underline{j}$ دیا گیا ہے۔ یہاں اجزاء $x = \\frac{1}{2}$ اور $y = -\\frac{3}{4}$ ہیں۔ ہمیں اس کی سمت میں اکائی سمتیہ $\\hat{a}$ معلوم کرنا ہے۔"
+  },
+  {
+   "math": "|\\underline{a}| = \\sqrt{x^2 + y^2} = \\sqrt{\\left(\\frac{1}{2}\\right)^2 + \\left(-\\frac{3}{4}\\right)^2}",
+   "en": "First, substitute the components into the magnitude formula $|\\underline{a}| = \\sqrt{x^2 + y^2}$.",
+   "ur": "سب سے پہلے، مقدار کے کلیے $|\\underline{a}| = \\sqrt{x^2 + y^2}$ میں اجزاء کی قیمتیں درج کریں۔",
+   "check": [
+    "sqrt(R(1,2)**2 + (-R(3,4))**2) == sqrt(13)/4"
+   ]
+  },
+  {
+   "math": "|\\underline{a}| = \\sqrt{\\frac{1}{4} + \\frac{9}{16}}",
+   "en": "Square both fraction terms inside the square root.",
+   "ur": "جذر کے اندر دونوں کسروں کا مربع لیں۔",
+   "check": [
+    "R(1,2)**2 == R(1,4)",
+    "(-R(3,4))**2 == R(9,16)"
+   ]
+  },
+  {
+   "math": "|\\underline{a}| = \\sqrt{\\frac{4 + 9}{16}} = \\sqrt{\\frac{13}{16}} = \\frac{\\sqrt{13}}{4}",
+   "en": "Take the LCM of the denominators ($16$), add the numerators, and simplify the square root.",
+   "ur": "نصب نماؤں کا ذواضعاف اقل ($16$) لیں، شمار کنندگان کو جمع کریں اور جذر کو مختصر کریں۔",
+   "check": [
+    "R(1,4) + R(9,16) == R(13,16)",
+    "sqrt(R(13,16)) == sqrt(13)/4"
+   ]
+  },
+  {
+   "math": "\\hat{a} = \\frac{\\underline{a}}{|\\underline{a}|} = \\frac{\\frac{1}{2}\\underline{i} - \\frac{3}{4}\\underline{j}}{\\frac{\\sqrt{13}}{4}}",
+   "en": "The formula for a unit vector is $\\hat{a} = \\frac{\\underline{a}}{|\\underline{a}|}$. Substitute the vector $\\underline{a}$ and its magnitude $|\\underline{a}|$.",
+   "ur": "اکائی سمتیہ کا کلیہ $\\hat{a} = \\frac{\\underline{a}}{|\\underline{a}|}$ ہے۔ اس میں سمتیہ $\\underline{a}$ اور اس کی مقدار $|\\underline{a}|$ درج کریں۔",
+   "check": [
+    "R(1,2)/(sqrt(13)/4) == 2/sqrt(13)",
+    "(-R(3,4))/(sqrt(13)/4) == -3/sqrt(13)"
+   ]
+  },
+  {
+   "math": "\\hat{a} = \\frac{4}{\\sqrt{13}} \\left( \\frac{1}{2}\\underline{i} - \\frac{3}{4}\\underline{j} \\right)",
+   "en": "Rewrite the division by $\\frac{\\sqrt{13}}{4}$ as multiplication by its reciprocal $\\frac{4}{\\sqrt{13}}$.",
+   "ur": "کسر $\\frac{\\sqrt{13}}{4}$ سے تقسیم کو اس کے معکوس $\\frac{4}{\\sqrt{13}}$ سے ضرب کی صورت میں لکھیں۔",
+   "check": [
+    "1/(sqrt(13)/4) == 4/sqrt(13)"
+   ]
+  },
+  {
+   "math": "\\hat{a} = \\frac{2}{\\sqrt{13}}\\underline{i} - \\frac{3}{\\sqrt{13}}\\underline{j}",
+   "en": "Multiply $\\frac{4}{\\sqrt{13}}$ with each component and simplify to get the required unit vector.",
+   "ur": "$\\frac{4}{\\sqrt{13}}$ کو ہر جزو سے ضرب دیں اور مطلوبہ اکائی سمتیہ حاصل کرنے کے لیے مختصر کریں۔",
+   "check": [
+    "(4/sqrt(13))*R(1,2) == 2/sqrt(13)",
+    "(4/sqrt(13))*(-R(3,4)) == -3/sqrt(13)",
+    "(2/sqrt(13))**2 + (-3/sqrt(13))**2 == 1",
+    "sqrt((1/2)**2 + (-3/4)**2) == (sqrt(13)/4)",
+    "(2*sqrt(13)/13)**2 + (-3*sqrt(13)/13)**2 == 1",
+    "(2*sqrt(13)/13)*(sqrt(13)/4) == (1/2)",
+    "(-3*sqrt(13)/13)*(sqrt(13)/4) == (-3/4)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

@@ -1,0 +1,58 @@
+{
+ "item": "u1-example12",
+ "label": "",
+ "answer_ref": "15.29%",
+ "steps": [
+  {
+   "math": "\\text{CP} = \\text{Rs. } 850, \\quad \\text{SP} = \\text{Rs. } 720",
+   "en": "Write down the given Cost Price (CP) and Selling Price (SP) of the book.",
+   "ur": "کتاب کی دی گئی قیمتِ خرید (CP) اور قیمتِ فروخت (SP) لکھیں۔",
+   "check": [
+    "850 == 850",
+    "720 == 720"
+   ]
+  },
+  {
+   "math": "\\text{Loss} = \\text{CP} - \\text{SP}",
+   "en": "Since the Selling Price is less than the Cost Price, Umair suffered a loss. We use the formula $\\text{Loss} = \\text{CP} - \\text{SP}$.",
+   "ur": "چونکہ قیمتِ فروخت، قیمتِ خرید سے کم ہے، اس لیے عمیر کو نقصان ہوا۔ ہم فارمولا $\\text{Loss} = \\text{CP} - \\text{SP}$ استعمال کرتے ہیں۔"
+  },
+  {
+   "math": "\\text{Loss} = 850 - 720 = \\text{Rs. } 130",
+   "en": "Substitute the values of CP and SP into the formula and subtract to find the total loss.",
+   "ur": "فارمولے میں قیمتِ خرید اور قیمتِ فروخت کی قدریں درج کریں اور کل نقصان معلوم کرنے کے لیے تفریق کریں۔",
+   "check": [
+    "850 - 720 == 130"
+   ]
+  },
+  {
+   "math": "\\text{Loss \\%} = \\frac{130}{850} \\times 100\\%",
+   "en": "Now, use the loss percentage formula $\\text{Loss \\%} = \\frac{\\text{Loss}}{\\text{CP}} \\times 100\\%$ and substitute the values of Loss and CP.",
+   "ur": "اب، نقصان فیصد کا فارمولا $\\text{Loss \\%} = \\frac{\\text{Loss}}{\\text{CP}} \\times 100\\%$ استعمال کریں اور اس میں نقصان اور قیمتِ خرید کی قدریں درج کریں۔",
+   "check": [
+    "R(130, 850) * 100 == R(260, 17)"
+   ]
+  },
+  {
+   "math": "\\text{Loss \\%} = \\frac{13000}{850}\\% = \\frac{260}{17}\\%",
+   "en": "Multiply the numerator by $100$ and simplify the fraction by dividing both numerator and denominator by $50$.",
+   "ur": "شمار کنندہ کو $100$ سے ضرب دیں اور شمار کنندہ اور مخرج دونوں کو $50$ پر تقسیم کر کے کسر کو مختصر کریں۔",
+   "check": [
+    "130 * 100 == 13000",
+    "R(13000, 850) == R(260, 17)"
+   ]
+  },
+  {
+   "math": "\\text{Loss \\%} \\approx 15.29\\%",
+   "en": "Divide $260$ by $17$ and round off to two decimal places. Thus, Umair's loss percentage is $15.29\\%$.",
+   "ur": "$260$ کو $17$ پر تقسیم کریں اور اعشاریہ کے بعد دو درجوں تک محدود کریں۔ پس، عمیر کا نقصان فیصد $15.29\\%$ ہے۔",
+   "check": [
+    "Abs(260/17 - 15.29) < 0.01",
+    "850-720 == 130",
+    "abs(130*100/850 - 15.29) < 0.01"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

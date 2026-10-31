@@ -1,0 +1,53 @@
+{
+ "item": "c10-ex3.5-q1",
+ "label": "ii",
+ "answer_ref": "$59$",
+ "steps": [
+  {
+   "math": "\\begin{vmatrix} -5 & 8 \\\\ -3 & -7 \\end{vmatrix}",
+   "en": "We are given a $2 \\times 2$ determinant and asked to find its value. Let us represent this determinant by $|A|$.",
+   "ur": "ہمیں ایک $2 \\times 2$ مقطع دیا گیا ہے اور اس کی قیمت معلوم کرنے کو کہا گیا ہے۔ آئیں اس مقطع کو $|A|$ سے ظاہر کرتے ہیں۔"
+  },
+  {
+   "math": "|A| = \\begin{vmatrix} a & b \\\\ c & d \\end{vmatrix} = ad - bc",
+   "en": "For any $2 \\times 2$ matrix, the determinant is found by multiplying the main diagonal entries ($a$ and $d$) and subtracting the product of the other diagonal entries ($b$ and $c$).",
+   "ur": "کسی بھی $2 \\times 2$ قالب کے لیے، مقطع معلوم کرنے کے لیے وتر کے ارکان ($a$ اور $d$) کو ضرب دے کر اس میں سے دوسرے وتر کے ارکان ($b$ اور $c$) کا حاصل ضرب تفریق کیا جاتا ہے۔"
+  },
+  {
+   "math": "|A| = (-5)(-7) - (8)(-3)",
+   "en": "Substitute the given entries $a = -5$, $b = 8$, $c = -3$, and $d = -7$ into the formula.",
+   "ur": "دیے گئے ارکان $a = -5$، $b = 8$، $c = -3$، اور $d = -7$ کو فارمولے میں درج کریں۔",
+   "check": [
+    "Matrix([[-5, 8], [-3, -7]]).det() == (-5)*(-7) - (8)*(-3)"
+   ]
+  },
+  {
+   "math": "|A| = 35 - (-24)",
+   "en": "Multiply the numbers in each pair. Note that the product of two negative numbers $(-5)(-7)$ is positive $35$, and $(8)(-3)$ is $-24$.",
+   "ur": "ہر جوڑے میں موجود اعداد کو ضرب دیں۔ یاد رہے کہ دو منفی اعداد $(-5)(-7)$ کا حاصل ضرب مثبت $35$ ہے، اور $(8)(-3)$ کا حاصل ضرب $-24$ ہے۔",
+   "check": [
+    "(-5)*(-7) == 35",
+    "(8)*(-3) == -24"
+   ]
+  },
+  {
+   "math": "|A| = 35 + 24",
+   "en": "Simplify the signs. Subtracting a negative number is the same as adding a positive number.",
+   "ur": "علامات کو مختصر کریں۔ منفی عدد کو تفریق کرنا مثبت عدد کو جمع کرنے کے برابر ہے۔",
+   "check": [
+    "35 - (-24) == 35 + 24"
+   ]
+  },
+  {
+   "math": "|A| = 59",
+   "en": "Add the two numbers to get the final value of the determinant.",
+   "ur": "مقطع کی حتمی قیمت حاصل کرنے کے لیے دونوں اعداد کو جمع کریں۔",
+   "check": [
+    "35 + 24 == 59",
+    "Matrix([[-5, 8], [-3, -7]]).det() == 59"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

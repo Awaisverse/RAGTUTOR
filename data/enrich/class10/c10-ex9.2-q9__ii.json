@@ -1,0 +1,58 @@
+{
+ "item": "c10-ex9.2-q9",
+ "label": "ii",
+ "answer_ref": "$10.64$ cm",
+ "steps": [
+  {
+   "math": "\\ell = 13\\ \\text{cm}, \\quad \\theta = 70^\\circ",
+   "en": "Write down the given arc length $\\ell$ and the central angle $\\theta$. We need to find the radius $r$.",
+   "ur": "دی گئی قوس کی لمبائی $\\ell$ اور مرکزی زاویہ $\\theta$ لکھیں۔ ہمیں رداس $r$ معلوم کرنا ہے۔",
+   "check": [
+    "13 == 13",
+    "70 == 70"
+   ]
+  },
+  {
+   "math": "\\theta = 70 \\times \\frac{\\pi}{180}\\ \\text{rad}",
+   "en": "To use the arc length formula, the angle $\\theta$ must be in radians. Multiply the degree measure by $\\frac{\\pi}{180}$ to convert it into radians.",
+   "ur": "قوس کی لمبائی کا فارمولا استعمال کرنے کے لیے زاویہ $\\theta$ کا ریڈین میں ہونا ضروری ہے۔ ڈگری کو ریڈین میں تبدیل کرنے کے لیے $\\frac{\\pi}{180}$ سے ضرب دیں۔",
+   "check": [
+    "70 * pi / 180 == 7 * pi / 18"
+   ]
+  },
+  {
+   "math": "\\theta \\approx 70 \\times \\frac{3.1416}{180} \\approx 1.222\\ \\text{rad}",
+   "en": "Substitute $\\pi \\approx 3.1416$ and simplify to find the angle in radians.",
+   "ur": "$\\pi \\approx 3.1416$ درج کریں اور زاویہ کو ریڈین میں معلوم کرنے کے لیے مختصر کریں۔",
+   "check": [
+    "Abs((70*pi/180) - 1.222) <= 0.000500001"
+   ]
+  },
+  {
+   "math": "\\ell = r\\theta \\implies r = \\frac{\\ell}{\\theta}",
+   "en": "Use the relationship between arc length $\\ell$, radius $r$, and central angle $\\theta$, and rearrange the formula to solve for $r$.",
+   "ur": "قوس کی لمبائی $\\ell$، رداس $r$ اور مرکزی زاویہ $\\theta$ کے درمیان تعلق کا فارمولا استعمال کریں اور $r$ معلوم کرنے کے لیے اسے ترتیب دیں۔"
+  },
+  {
+   "math": "r = \\frac{13}{1.222}",
+   "en": "Substitute the given value $\\ell = 13$ and the calculated angle $\\theta = 1.222$ into the formula.",
+   "ur": "فارمولے میں دی گئی قیمت $\\ell = 13$ اور معلوم کیا گیا زاویہ $\\theta = 1.222$ درج کریں۔",
+   "check": [
+    "13 / 1.222 == 13 / 1.222"
+   ]
+  },
+  {
+   "math": "r \\approx 10.64\\ \\text{cm}",
+   "en": "Divide $13$ by $1.222$ to get the final value of the radius $r$ in centimetres.",
+   "ur": "رداس $r$ کی حتمی قیمت سینٹی میٹر میں حاصل کرنے کے لیے $13$ کو $1.222$ پر تقسیم کریں۔",
+   "check": [
+    "Abs((13/1.222) - 10.64) <= 0.005000001",
+    "Abs((13/(70*pi/180)) - 10.64) <= 0.005000001",
+    "Abs((70*pi/180) - 1.222) <= 0.000500001",
+    "Abs((13/(70*pi/180)) - 10.64) <= 0.0050000010000000004"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

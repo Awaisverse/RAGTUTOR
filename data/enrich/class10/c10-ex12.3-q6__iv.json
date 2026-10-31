@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex12.3-q6",
+ "label": "iv",
+ "answer_ref": "$\\frac{1}{17}$",
+ "steps": [
+  {
+   "math": "",
+   "en": "A standard deck has a total of $52$ playing cards, out of which there are $13$ diamond cards.",
+   "ur": "تاش کی ایک معیاری گڈی میں کل $52$ پتے ہوتے ہیں، جن میں سے $13$ اینٹ (diamonds) کے پتے ہوتے ہیں۔"
+  },
+  {
+   "math": "P(A) = \\frac{13}{52} = \\frac{1}{4}",
+   "en": "Let $A$ be the event that the first card drawn is a diamond. Its probability is:",
+   "ur": "فرض کریں $A$ اس واقعے کو ظاہر کرتا ہے کہ نکالا گیا پہلا پتہ اینٹ کا ہے۔ اس کا احتمال یہ ہے:",
+   "check": [
+    "R(13, 52) == R(1, 4)"
+   ]
+  },
+  {
+   "math": "P(B|A) = \\frac{12}{51} = \\frac{4}{17}",
+   "en": "Since the drawing is without replacement, $51$ cards remain in the deck and $12$ of them are diamonds. Let $B$ be the event that the second card is also a diamond.",
+   "ur": "چونکہ پہلا پتہ واپس نہیں رکھا گیا (without replacement)، اس لیے گڈی میں $51$ پتے باقی رہ جاتے ہیں جن میں سے $12$ اینٹ کے پتے ہیں۔ فرض کریں $B$ دوسرے پتے کے بھی اینٹ ہونے کا واقعہ ہے۔",
+   "check": [
+    "R(12, 51) == R(4, 17)"
+   ]
+  },
+  {
+   "math": "P(A \\cap B) = P(A) \\times P(B|A)",
+   "en": "Because the two events are dependent, we use the multiplication law of probability for dependent events.",
+   "ur": "چونکہ دونوں واقعات ایک دوسرے پر منحصر (dependent) ہیں، اس لیے ہم احتمال کا ضربی قانون استعمال کرتے ہیں۔"
+  },
+  {
+   "math": "P(\\text{both diamonds}) = \\frac{13}{52} \\times \\frac{12}{51} = \\frac{1}{4} \\times \\frac{4}{17} = \\frac{1}{17}",
+   "en": "Substitute the probabilities and simplify to find the final answer.",
+   "ur": "قیمتیں درج کریں اور حتمی جواب معلوم کرنے کے لیے مختصر کریں۔",
+   "check": [
+    "R(13, 52) * R(12, 51) == R(1, 17)",
+    "R(1, 4) * R(4, 17) == R(1, 17)",
+    "R(13,52)*R(12,51) == 1/17"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

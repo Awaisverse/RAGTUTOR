@@ -1,0 +1,33 @@
+{
+ "item": "c10-ex4.1-q3",
+ "label": "ib",
+ "answer_ref": "$\\left(2 x + 3\\right)^{3}$",
+ "steps": [
+  {
+   "math": "f(x) = 2x + 3, \\quad g(x) = x^3",
+   "en": "First, write down the given functions $f(x)$ and $g(x)$.",
+   "ur": "سب سے پہلے دیے گئے تفاعل $f(x)$ اور $g(x)$ لکھیں۔"
+  },
+  {
+   "math": "(g \\circ f)(x) = g(f(x))",
+   "en": "By the definition of composition of functions, $(g \\circ f)(x)$ means applying function $f$ first and then applying function $g$ to the result.",
+   "ur": "تفاعل کی ترکیب کی تعریف کے مطابق، $(g \\circ f)(x)$ کا مطلب ہے پہلے تفاعل $f$ لاگو کرنا اور پھر اس کے نتیجے پر تفاعل $g$ لاگو کرنا۔"
+  },
+  {
+   "math": "(g \\circ f)(x) = g(2x + 3)",
+   "en": "Substitute the value of $f(x) = 2x + 3$ inside the function $g$.",
+   "ur": "تفاعل $g$ کے اندر $f(x) = 2x + 3$ کی قیمت درج کریں۔"
+  },
+  {
+   "math": "(g \\circ f)(x) = \\left(2 x + 3\\right)^{3}",
+   "en": "Since $g(x) = x^3$, replace $x$ with $2x + 3$ in the function $g(x)$ to get the final answer.",
+   "ur": "چونکہ $g(x) = x^3$ ہے، اس لیے حتمی جواب حاصل کرنے کے لیے تفاعل $g(x)$ میں $x$ کی جگہ $2x + 3$ رکھیں۔",
+   "check": [
+    "(x**3).subs(x, 2*x + 3) == (2*x + 3)**3",
+    "(x**3).subs(x, (2*x + 3)) == ((2*x + 3)**3)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

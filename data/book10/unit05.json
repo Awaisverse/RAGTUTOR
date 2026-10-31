@@ -2904,17 +2904,28 @@
      "prompt": "The expression $\\frac{2x-1}{x^2+4}$ is: (a) $\\text{a polynomial}$ (b) $\\text{an algebraic fraction}$ (c) $\\text{a numerical fraction}$ (d) $\\text{an equation}$",
      "steps": [
       {
+       "math": "\\frac{2x-1}{x^2+4}",
+       "en": "We are given the mathematical expression $\\frac{2x-1}{x^2+4}$ and asked to identify its correct type.",
+       "ur": "ہمیں ریاضیاتی جملہ $\\frac{2x-1}{x^2+4}$ دیا گیا ہے اور اس کی صحیح قسم کی شناخت کرنے کو کہا گیا ہے۔"
+      },
+      {
        "math": "",
-       "en": "A quotient of two polynomials (with $x$ in the denominator) is an algebraic fraction.",
-       "ur": "دو کثیر رقمیوں کا حاصل تقسیم الجبری کسر ہے۔"
+       "en": "The numerator $2x-1$ and the denominator $x^2+4$ are both polynomials in the variable $x$, where the denominator is not zero.",
+       "ur": "شمار کنندہ $2x-1$ اور مخرج $x^2+4$ دونوں متغیر $x$ میں کثیر رقمیاں ہیں، جہاں مخرج صفر نہیں ہے۔"
+      },
+      {
+       "math": "",
+       "en": "By definition, the quotient of two polynomials $\\frac{P(x)}{Q(x)}$ with $Q(x) \\neq 0$ (having a variable in the denominator) is called a rational expression or an algebraic fraction.",
+       "ur": "تعریف کے مطابق، دو کثیر رقمیوں کا حاصل تقسیم $\\frac{P(x)}{Q(x)}$ جہاں $Q(x) \\neq 0$ ہو (اور مخرج میں متغیر موجود ہو)، ایک ناطق جملہ یا الجبری کسر کہلاتا ہے۔"
       },
       {
        "math": "\\text{Answer: (b) } \\text{an algebraic fraction}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Therefore, the given expression is an algebraic fraction, which matches option (b).",
+       "ur": "لہذا، دیا گیا جملہ ایک الجبری کسر ہے، جو کہ آپشن (b) سے مطابقت رکھتا ہے۔"
       }
      ],
      "answer": "(b) $\\text{an algebraic fraction}$",
+     "enriched": true,
      "book_key": "(b) an algebraic fraction"
     },
     {
@@ -2922,20 +2933,46 @@
      "prompt": "Lowest form of $\\frac{18a^2bc^2}{12ac}$ is: (a) $\\frac{9abc}{6}$ (b) $\\frac{3abc}{2}$ (c) $\\frac{18b}{12}$ (d) $\\frac{3}{2}$",
      "steps": [
       {
-       "math": "\\frac{18a^2bc^2}{12ac} = \\frac{3abc}{2}",
-       "en": "Cancel $6ac$.",
-       "ur": "$6ac$ کاٹ دیں۔",
+       "math": "\\frac{18a^2bc^2}{12ac}",
+       "en": "Write down the given algebraic fraction to reduce it to its lowest form.",
+       "ur": "دی گئی الجبری کسر کو اس کی مختصر ترین شکل میں لانے کے لیے لکھیں۔"
+      },
+      {
+       "math": "\\frac{18a^2bc^2}{12ac} = \\frac{18}{12} \\cdot \\frac{a^2}{a} \\cdot b \\cdot \\frac{c^2}{c}",
+       "en": "Group the numerical coefficients and the like variables together.",
+       "ur": "عددی سر اور ایک جیسے متغیرات کو الگ الگ گروپ کریں۔",
        "check": [
-        "18*a**2*b*c**2/(12*a*c) == 3*a*b*c/2"
+        "18*a**2*b*c**2/(12*a*c) == R(18, 12)*(a**2/a)*b*(c**2/c)"
+       ]
+      },
+      {
+       "math": "= \\frac{3}{2} \\cdot a^{2-1} \\cdot b \\cdot c^{2-1}",
+       "en": "Divide the numbers $18$ and $12$ by their highest common factor $6$, and apply the quotient law of exponents $\\frac{x^m}{x^n} = x^{m-n}$ to the variables.",
+       "ur": "اعداد $18$ اور $12$ کو ان کے عادِ اعظم $6$ سے تقسیم کریں، اور متغیرات پر قوت نماؤں کا قانون $\\frac{x^m}{x^n} = x^{m-n}$ لاگو کریں۔",
+       "check": [
+        "R(18, 12) == R(3, 2)",
+        "18*a**2*b*c**2/(12*a*c) == R(3, 2)*a**(2-1)*b*c**(2-1)"
+       ]
+      },
+      {
+       "math": "= \\frac{3abc}{2}",
+       "en": "Simplify the exponents and combine the remaining terms into a single fraction.",
+       "ur": "قوت نماؤں کو مختصر کریں اور باقی ماندہ رقوم کو ایک کسر میں یکجا کریں۔",
+       "check": [
+        "R(3, 2)*a**(2-1)*b*c**(2-1) == 3*a*b*c/2"
        ]
       },
       {
        "math": "\\text{Answer: (b) } \\frac{3abc}{2}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "This matches option (b), so (b) is the correct answer.",
+       "ur": "یہ آپشن (b) سے مطابقت رکھتا ہے، اس لیے (b) درست جواب ہے۔",
+       "check": [
+        "18*a**2*b*c**2/(12*a*c) == 3*a*b*c/2"
+       ]
       }
      ],
      "answer": "(b) $\\frac{3abc}{2}$",
+     "enriched": true,
      "book_key": "(b) \\frac{3abc}{2}"
     },
     {
@@ -2943,20 +2980,44 @@
      "prompt": "Lowest form of $\\frac{15xyz}{10}$ is: (a) $\\frac{3xyz}{2}$ (b) $\\frac{3}{2}$ (c) $xyz$ (d) $\\frac{xyz}{2}$",
      "steps": [
       {
-       "math": "\\frac{15xyz}{10} = \\frac{3xyz}{2}",
-       "en": "Cancel 5.",
-       "ur": "5 کاٹ دیں۔",
+       "math": "\\frac{15xyz}{10}",
+       "en": "We are given the algebraic fraction $\\frac{15xyz}{10}$ and we need to reduce it to its lowest form.",
+       "ur": "ہمیں الجبری کسر $\\frac{15xyz}{10}$ دی گئی ہے اور ہمیں اسے اس کی مختصر ترین شکل میں لانا ہے۔"
+      },
+      {
+       "math": "",
+       "en": "To reduce a fraction to its lowest form, we divide both the numerator and the denominator by their highest common factor (HCF). Here, the HCF of $15$ and $10$ is $5$.",
+       "ur": "کسی کسر کو مختصر ترین شکل میں لانے کے لیے، ہم شمار کنندہ اور مخرج دونوں کو ان کے عادِ اعظم (HCF) سے تقسیم کرتے ہیں۔ یہاں $15$ اور $10$ کا عادِ اعظم $5$ ہے۔"
+      },
+      {
+       "math": "\\frac{15xyz}{10} = \\frac{5 \\times 3xyz}{5 \\times 2}",
+       "en": "Factor out $5$ from both the numerator $15xyz$ and the denominator $10$.",
+       "ur": "شمار کنندہ $15xyz$ اور مخرج $10$ دونوں میں سے $5$ کو بطور جزوِ ضربی الگ کریں۔",
        "check": [
-        "15*x*y*z/10 == 3*x*y*z/2"
+        "15*x*y*z/10 == (5*3*x*y*z)/(5*2)",
+        "15 == 5*3",
+        "10 == 5*2"
+       ]
+      },
+      {
+       "math": "\\frac{5 \\times 3xyz}{5 \\times 2} = \\frac{3xyz}{2}",
+       "en": "Cancel out the common factor $5$ from the numerator and the denominator.",
+       "ur": "شمار کنندہ اور مخرج میں سے مشترک جزوِ ضربی $5$ کو کاٹ دیں۔",
+       "check": [
+        "(5*3*x*y*z)/(5*2) == 3*x*y*z/2"
        ]
       },
       {
        "math": "\\text{Answer: (a) } \\frac{3xyz}{2}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "The lowest form of the fraction is $\\frac{3xyz}{2}$, which matches option (a).",
+       "ur": "کسر کی مختصر ترین شکل $\\frac{3xyz}{2}$ ہے، جو کہ آپشن (a) سے مطابقت رکھتی ہے۔",
+       "check": [
+        "15*x*y*z/10 == 3*x*y*z/2"
+       ]
       }
      ],
      "answer": "(a) $\\frac{3xyz}{2}$",
+     "enriched": true,
      "book_key": "(a) \\frac{3xyz}{2}"
     },
     {
@@ -2964,20 +3025,50 @@
      "prompt": "Simplified form of $\\frac{3x+1}{5}+\\frac{2x+3}{5}$ is: (a) $\\frac{5x+4}{10}$ (b) $\\frac{5x+4}{5}$ (c) $\\frac{5x+4}{25}$ (d) $5x+4$",
      "steps": [
       {
-       "math": "\\frac{3x + 1 + 2x + 3}{5} = \\frac{5x + 4}{5}",
-       "en": "Same denominator: add the numerators.",
-       "ur": "ایک ہی نسب نما: شمار کنندے جمع کریں۔",
+       "math": "\\frac{3x+1}{5} + \\frac{2x+3}{5}",
+       "en": "Write down the given algebraic expression to be simplified.",
+       "ur": "دیے گئے الجبری جملے کو مختصر کرنے کے لیے لکھیں۔"
+      },
+      {
+       "math": "",
+       "en": "Both fractions have the same denominator, which is $5$. So, their L.C.M. is $5$.",
+       "ur": "دونوں کسروں کا مخرج (نسب نما) ایک جیسا ہے جو کہ $5$ ہے۔ اس لیے ان کا ذو اضعاف اقل (L.C.M.) $5$ ہے۔"
+      },
+      {
+       "math": "\\frac{3x+1}{5} + \\frac{2x+3}{5} = \\frac{(3x+1) + (2x+3)}{5}",
+       "en": "When denominators are the same, we keep the common denominator and add the numerators.",
+       "ur": "جب مخرج ایک جیسے ہوں تو ہم مشترک مخرج کو برقرار رکھتے ہیں اور شمار کنندگان کو جمع کر لیتے ہیں۔",
        "check": [
-        "(3*x+1)/5 + (2*x+3)/5 == (5*x+4)/5"
+        "(3*x+1)/5 + (2*x+3)/5 == ((3*x+1) + (2*x+3))/5"
+       ]
+      },
+      {
+       "math": "\\frac{(3x+1) + (2x+3)}{5} = \\frac{3x + 2x + 1 + 3}{5}",
+       "en": "Remove the brackets and group the like terms together in the numerator.",
+       "ur": "بریکٹ ہٹائیں اور شمار کنندہ میں یکساں رقموں کو اکٹھا لکھیں۔",
+       "check": [
+        "((3*x+1) + (2*x+3))/5 == (3*x + 2*x + 1 + 3)/5"
+       ]
+      },
+      {
+       "math": "\\frac{3x + 2x + 1 + 3}{5} = \\frac{5x + 4}{5}",
+       "en": "Add the like terms ($3x + 2x = 5x$ and $1 + 3 = 4$) to get the simplified form.",
+       "ur": "مختصر شکل حاصل کرنے کے لیے یکساں رقموں کو جمع کریں ($3x + 2x = 5x$ اور $1 + 3 = 4$)۔",
+       "check": [
+        "(3*x + 2*x + 1 + 3)/5 == (5*x + 4)/5"
        ]
       },
       {
        "math": "\\text{Answer: (b) } \\frac{5x+4}{5}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "This result matches option (b), so (b) is the correct answer.",
+       "ur": "یہ نتیجہ آپشن (b) سے مطابقت رکھتا ہے، اس لیے (b) درست جواب ہے۔",
+       "check": [
+        "(3*x+1)/5 + (2*x+3)/5 == (5*x+4)/5"
+       ]
       }
      ],
      "answer": "(b) $\\frac{5x+4}{5}$",
+     "enriched": true,
      "book_key": "(b) \\frac{5x+4}{5}"
     },
     {
@@ -2985,20 +3076,53 @@
      "prompt": "Simplified form of $\\left(\\frac{x^2-y^2}{x+y}\\right)(x-y)$ is: (a) $(x+y)^2$ (b) $x^2+y^2$ (c) $x-y$ (d) $(x-y)^2$",
      "steps": [
       {
-       "math": "\\frac{(x - y)(x + y)}{x + y}(x - y) = (x - y)^2",
-       "en": "Factorize and cancel.",
-       "ur": "تجزی کر کے کاٹ دیں۔",
+       "math": "\\left(\\frac{x^2-y^2}{x+y}\\right)(x-y)",
+       "en": "Write down the given algebraic expression that needs to be simplified.",
+       "ur": "دی گئی الجبری عبارت لکھیں جسے مختصر کرنا ہے۔"
+      },
+      {
+       "math": "x^2 - y^2 = (x-y)(x+y)",
+       "en": "Apply the difference of two squares formula $a^2 - b^2 = (a-b)(a+b)$ to factorize the numerator $x^2 - y^2$.",
+       "ur": "شمار کنندہ $x^2 - y^2$ کی تجزی کرنے کے لیے دو مربعات کے فرق کا کلیہ $a^2 - b^2 = (a-b)(a+b)$ استعمال کریں۔",
        "check": [
-        "(x**2 - y**2)/(x + y)*(x - y) == (x - y)**2"
+        "x**2 - y**2 == (x - y)*(x + y)"
+       ]
+      },
+      {
+       "math": "= \\left(\\frac{(x-y)(x+y)}{x+y}\\right)(x-y)",
+       "en": "Substitute the factorized form of $x^2 - y^2$ into the original expression.",
+       "ur": "اصل عبارت میں $x^2 - y^2$ کی تجزی شدہ شکل درج کریں۔",
+       "check": [
+        "(x**2 - y**2)/(x + y)*(x - y) == ((x - y)*(x + y))/(x + y)*(x - y)"
+       ]
+      },
+      {
+       "math": "= (x-y)(x-y)",
+       "en": "Cancel out the common factor $(x+y)$ from the numerator and the denominator.",
+       "ur": "شمار کنندہ اور مخرج سے مشترک جزو ضربی $(x+y)$ کو کاٹ دیں۔",
+       "check": [
+        "((x - y)*(x + y))/(x + y)*(x - y) == (x - y)*(x - y)"
+       ]
+      },
+      {
+       "math": "= (x-y)^2",
+       "en": "Multiply the remaining identical factors $(x-y)$ and $(x-y)$ by adding their exponents.",
+       "ur": "باقی ماندہ یکساں اجزائے ضربی $(x-y)$ اور $(x-y)$ کے قوت نماؤں کو جمع کر کے ضرب دیں۔",
+       "check": [
+        "(x - y)*(x - y) == (x - y)**2"
        ]
       },
       {
        "math": "\\text{Answer: (d) } (x-y)^2",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "The simplified form matches option (d), which is the correct answer.",
+       "ur": "مختصر ترین شکل آپشن (d) سے مطابقت رکھتی ہے، جو کہ درست جواب ہے۔",
+       "check": [
+        "(x**2 - y**2)/(x + y)*(x - y) == (x - y)**2"
+       ]
       }
      ],
      "answer": "(d) $(x-y)^2$",
+     "enriched": true,
      "book_key": "(d) (x-y)^2"
     },
     {
@@ -3006,20 +3130,56 @@
      "prompt": "$(x^3-y^3)\\div(x-y)$ in simplified form is: (a) $x^2-xy+y^2$ (b) $x^2+xy+y^2$ (c) $x^2-y^2$ (d) $x^2+y^2$",
      "steps": [
       {
-       "math": "\\frac{(x - y)(x^2 + xy + y^2)}{x - y} = x^2 + xy + y^2",
-       "en": "Difference of cubes.",
-       "ur": "مکعبوں کا فرق۔",
+       "math": "(x^3 - y^3) \\div (x - y) = \\frac{x^3 - y^3}{x - y}",
+       "en": "First, write the given division expression in the form of an algebraic fraction.",
+       "ur": "سب سے پہلے، دی گئی تقسیم کی عبارت کو الجبری کسر کی شکل میں لکھیں۔",
        "check": [
-        "(x**3 - y**3)/(x - y) == x**2 + x*y + y**2"
+        "(x**3 - y**3) / (x - y) == (x**3 - y**3) / (x - y)"
+       ]
+      },
+      {
+       "math": "a^3 - b^3 = (a - b)(a^2 + ab + b^2)",
+       "en": "Recall the algebraic identity for the difference of two cubes.",
+       "ur": "دو مکعبوں کے فرق کا الجبری کلیہ یاد کریں۔",
+       "check": [
+        "a**3 - b**3 == (a - b) * (a**2 + a*b + b**2)"
+       ]
+      },
+      {
+       "math": "x^3 - y^3 = (x - y)(x^2 + xy + y^2)",
+       "en": "Apply this formula to factorize the numerator $x^3 - y^3$.",
+       "ur": "شمار کنندہ $x^3 - y^3$ کی تجزی کرنے کے لیے اس کلیے کا اطلاق کریں۔",
+       "check": [
+        "x**3 - y**3 == (x - y) * (x**2 + x*y + y**2)"
+       ]
+      },
+      {
+       "math": "\\frac{x^3 - y^3}{x - y} = \\frac{(x - y)(x^2 + xy + y^2)}{x - y}",
+       "en": "Substitute the factorized form of the numerator back into the fraction.",
+       "ur": "شمار کنندہ کی تجزی شدہ شکل کو واپس کسر میں درج کریں۔",
+       "check": [
+        "(x**3 - y**3) / (x - y) == (x - y) * (x**2 + x*y + y**2) / (x - y)"
+       ]
+      },
+      {
+       "math": "\\frac{(x - y)(x^2 + xy + y^2)}{x - y} = x^2 + xy + y^2",
+       "en": "Cancel out the common factor $(x - y)$ from both the numerator and the denominator.",
+       "ur": "شمار کنندہ اور مخرج دونوں میں سے مشترک جزو ضربی $(x - y)$ کو کاٹ دیں۔",
+       "check": [
+        "(x - y) * (x**2 + x*y + y**2) / (x - y) == x**2 + x*y + y**2"
        ]
       },
       {
        "math": "\\text{Answer: (b) } x^2+xy+y^2",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "The simplified form matches option (b).",
+       "ur": "مختصر ترین شکل آپشن (b) سے مطابقت رکھتی ہے۔",
+       "check": [
+        "(x**3 - y**3)/(x - y) == x**2 + x*y + y**2"
+       ]
       }
      ],
      "answer": "(b) $x^2+xy+y^2$",
+     "enriched": true,
      "book_key": "(b) x^2+xy+y^2"
     },
     {
@@ -3028,16 +3188,27 @@
      "steps": [
       {
        "math": "",
-       "en": "The unknown appears in denominators of fractions.",
-       "ur": "نامعلوم کسور کے نسب نما میں ہے۔"
+       "en": "Consider the given equation $\\frac{5}{x} + \\frac{1-x}{3} = \\frac{1}{6x}$. We need to identify its type from the given options.",
+       "ur": "دی گئی مساوات $\\frac{5}{x} + \\frac{1-x}{3} = \\frac{1}{6x}$ پر غور کریں۔ ہمیں دیے گئے اختیارات میں سے اس کی قسم کی شناخت کرنی ہے۔"
+      },
+      {
+       "math": "\\text{Denominators: } x, 3, 6x",
+       "en": "Notice the denominators of the fractions in the equation. The unknown variable $x$ appears in the denominators $x$ and $6x$.",
+       "ur": "مساوات میں کسور کے مخرج (نسب نما) کو دیکھیں۔ نامعلوم متغیر $x$ مخرج $x$ اور $6x$ میں موجود ہے۔"
+      },
+      {
+       "math": "",
+       "en": "By definition, an equation in which the unknown variable appears in the denominator of one or more fractions is called a fractional equation.",
+       "ur": "تعریف کے مطابق، ایسی مساوات جس میں نامعلوم متغیر ایک یا زیادہ کسور کے مخرج (نسب نما) میں آتا ہو، کسری مساوات (fractional equation) کہلاتی ہے۔"
       },
       {
        "math": "\\text{Answer: (c) } \\text{fractional equation}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Therefore, the given equation is a fractional equation, which corresponds to option (c).",
+       "ur": "لہٰذا، دی گئی مساوات ایک کسری مساوات ہے، جو کہ آپشن (c) سے مطابقت رکھتی ہے۔"
       }
      ],
      "answer": "(c) $\\text{fractional equation}$",
+     "enriched": true,
      "book_key": "(c) fractional equation"
     },
     {
@@ -3046,16 +3217,27 @@
      "steps": [
       {
        "math": "",
-       "en": "The unknown is in the exponent.",
-       "ur": "نامعلوم طاقت میں ہے۔"
+       "en": "Consider the given equation $5^x + 64 \\cdot 5^{-x} - 20 = 0$. We need to identify its correct type from the given options.",
+       "ur": "دی گئی مساوات $5^x + 64 \\cdot 5^{-x} - 20 = 0$ پر غور کریں۔ ہمیں دیے گئے آپشنز میں سے اس کی درست قسم کی شناخت کرنی ہے۔"
+      },
+      {
+       "math": "",
+       "en": "By definition, an equation in which the unknown variable occurs in the exponent (power) is called an exponential equation.",
+       "ur": "تعریف کے مطابق، ایسی مساوات جس میں نامعلوم متغیر قوت نما (طاقت) میں ہو، قوت نمائی مساوات (exponential equation) کہلاتی ہے۔"
+      },
+      {
+       "math": "5^x, \\quad 5^{-x}",
+       "en": "In the given equation, the variable $x$ appears in the exponents of the base $5$.",
+       "ur": "دی گئی مساوات میں، متغیر $x$ اساس $5$ کے قوت نماؤں (طاقتوں) میں موجود ہے۔"
       },
       {
        "math": "\\text{Answer: (b) } \\text{exponential equation}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Therefore, the given equation is an exponential equation, which corresponds to option (b).",
+       "ur": "لہذا، دی گئی مساوات ایک قوت نمائی مساوات ہے، جو کہ آپشن (b) سے مطابقت رکھتی ہے۔"
       }
      ],
      "answer": "(b) $\\text{exponential equation}$",
+     "enriched": true,
      "book_key": "(b) exponential equation"
     },
     {
@@ -3063,20 +3245,56 @@
      "prompt": "Roots of $y^2-24y+128=0$ are: (a) $8, -16$ (b) $8, 16$ (c) $-8, 16$ (d) $-8, -16$",
      "steps": [
       {
-       "math": "(y - 8)(y - 16) = 0 \\Rightarrow y = 8, 16",
-       "en": "Factorize.",
-       "ur": "تجزی کریں۔",
+       "math": "",
+       "en": "We are given the quadratic equation $y^2 - 24y + 128 = 0$ and need to find its roots by factorization.",
+       "ur": "ہمیں دو درجی مساوات $y^2 - 24y + 128 = 0$ دی گئی ہے اور ہمیں تجزی کے ذریعے اس کے جزر (روٹس) معلوم کرنے ہیں۔"
+      },
+      {
+       "math": "y^2 - 8y - 16y + 128 = 0",
+       "en": "Split the middle term $-24y$ into $-8y$ and $-16y$ because $(-8) + (-16) = -24$ and $(-8) \\times (-16) = 128$.",
+       "ur": "درمیانی رقم $-24y$ کو $-8y$ اور $-16y$ میں توڑیں کیونکہ $(-8) + (-16) = -24$ اور $(-8) \\times (-16) = 128$ بنتا ہے۔",
+       "check": [
+        "-8 + (-16) == -24",
+        "(-8)*(-16) == 128",
+        "y**2 - 8*y - 16*y + 128 == y**2 - 24*y + 128"
+       ]
+      },
+      {
+       "math": "y(y - 8) - 16(y - 8) = 0",
+       "en": "Take out the common factors from the first two terms and the last two terms.",
+       "ur": "پہلی دو رقوم اور آخری دو رقوم میں سے مشترک اجزاء باہر نکالیں۔",
+       "check": [
+        "expand(y*(y - 8) - 16*(y - 8)) == y**2 - 24*y + 128"
+       ]
+      },
+      {
+       "math": "(y - 8)(y - 16) = 0",
+       "en": "Factor out the common binomial $(y - 8)$.",
+       "ur": "مشترک دو رقمی جملہ $(y - 8)$ کو باہر نکال لیں۔",
        "check": [
         "expand((y - 8)*(y - 16)) == y**2 - 24*y + 128"
        ]
       },
       {
+       "math": "y - 8 = 0 \\quad \\text{or} \\quad y - 16 = 0 \\implies y = 8, 16",
+       "en": "Set each factor equal to zero and solve for $y$ to get the roots.",
+       "ur": "ہر جزو ضربی کو صفر کے برابر رکھیں اور جزر حاصل کرنے کے لیے $y$ کی قیمت معلوم کریں۔",
+       "check": [
+        "8**2 - 24*8 + 128 == 0",
+        "16**2 - 24*16 + 128 == 0"
+       ]
+      },
+      {
        "math": "\\text{Answer: (b) } 8, 16",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Thus, the roots of the equation are $8$ and $16$, which matches option (b).",
+       "ur": "پس مساوات کے جزر $8$ اور $16$ ہیں، جو کہ آپشن (b) سے مطابقت رکھتے ہیں۔",
+       "check": [
+        "expand((y - 8)*(y - 16)) == y**2 - 24*y + 128"
+       ]
       }
      ],
      "answer": "(b) $8, 16$",
+     "enriched": true,
      "book_key": "(b) 8, 16"
     },
     {
@@ -3084,20 +3302,54 @@
      "prompt": "Linear factors of $3x^2+10x+3=0$ are: (a) $(x+3),\\ (3x+1)$ (b) $(x+3),\\ (3x-1)$ (c) $(x-3),\\ (3x+1)$ (d) $(x-3),\\ (3x-1)$",
      "steps": [
       {
-       "math": "3x^2 + 10x + 3 = (x + 3)(3x + 1)",
-       "en": "Factorize.",
-       "ur": "تجزی کریں۔",
+       "math": "3x^2 + 10x + 3",
+       "en": "Consider the quadratic expression on the left-hand side of the given equation $3x^2 + 10x + 3 = 0$.",
+       "ur": "دی گئی مساوات $3x^2 + 10x + 3 = 0$ کی بائیں جانب موجود دو درجی جملے پر غور کریں۔"
+      },
+      {
+       "math": "3 \\times 3 = 9,\\quad 9 + 1 = 10",
+       "en": "To factorize by splitting the middle term, we find two numbers whose product is $3 \\times 3 = 9$ and whose sum is the middle coefficient $10$. These numbers are $9$ and $1$.",
+       "ur": "درمیانی رقم کو توڑ کر تجزی کرنے کے لیے، ہم ایسے دو اعداد تلاش کرتے ہیں جن کا حاصلِ ضرب $3 \\times 3 = 9$ ہو اور جن کا مجموعہ درمیانی عددی سر $10$ ہو۔ یہ اعداد $9$ اور $1$ ہیں۔",
+       "check": [
+        "3 * 3 == 9",
+        "9 + 1 == 10"
+       ]
+      },
+      {
+       "math": "3x^2 + 10x + 3 = 3x^2 + 9x + x + 3",
+       "en": "Rewrite the middle term $10x$ as $9x + x$.",
+       "ur": "درمیانی رقم $10x$ کو $9x + x$ کے طور پر دوبارہ لکھیں۔",
+       "check": [
+        "3*x**2 + 10*x + 3 == 3*x**2 + 9*x + x + 3"
+       ]
+      },
+      {
+       "math": "3x^2 + 9x + x + 3 = 3x(x + 3) + 1(x + 3)",
+       "en": "Take $3x$ common from the first two terms and $1$ common from the last two terms.",
+       "ur": "پہلی دو رقوم میں سے $3x$ اور آخری دو رقوم میں سے $1$ مشترک لیں۔",
+       "check": [
+        "expand(3*x*(x + 3) + 1*(x + 3)) == 3*x**2 + 9*x + x + 3"
+       ]
+      },
+      {
+       "math": "3x(x + 3) + 1(x + 3) = (x + 3)(3x + 1)",
+       "en": "Factor out the common binomial $(x + 3)$. Thus, the linear factors are $(x + 3)$ and $(3x + 1)$.",
+       "ur": "مشترک دو رقمی جملہ $(x + 3)$ باہر نکالیں۔ اس طرح، یک درجی اجزائے ضربی $(x + 3)$ اور $(3x + 1)$ ہیں۔",
        "check": [
         "expand((x + 3)*(3*x + 1)) == 3*x**2 + 10*x + 3"
        ]
       },
       {
        "math": "\\text{Answer: (a) } (x+3),\\ (3x+1)",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Comparing with the given options, the correct choice is (a).",
+       "ur": "دیے گئے ممکنہ جوابات سے موازنہ کرنے پر، درست انتخاب (a) ہے۔",
+       "check": [
+        "expand((x + 3)*(3*x + 1)) == 3*x**2 + 10*x + 3"
+       ]
       }
      ],
      "answer": "(a) $(x+3),\\ (3x+1)$",
+     "enriched": true,
      "book_key": "(a) (x+3), (3x+1)"
     }
    ],

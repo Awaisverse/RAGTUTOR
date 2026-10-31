@@ -1,0 +1,51 @@
+{
+ "item": "c10-ex4.1-q1",
+ "label": "i",
+ "answer_ref": "$5 x + 3$",
+ "steps": [
+  {
+   "math": "f(x) = 2x + 5, \\quad g(x) = 3x - 2",
+   "en": "Write down the given functions $f(x)$ and $g(x)$.",
+   "ur": "دیے گئے تفاعل $f(x)$ اور $g(x)$ لکھیں۔",
+   "check": [
+    "(2*x + 5) == (2*x + 5)",
+    "(3*x - 2) == (3*x - 2)"
+   ]
+  },
+  {
+   "math": "f(x) + g(x) = (2x + 5) + (3x - 2)",
+   "en": "To find $f(x) + g(x)$, substitute the given expressions for both functions.",
+   "ur": "$f(x) + g(x)$ معلوم کرنے کے لیے دونوں تفاعل کی قیمتیں درج کریں۔",
+   "check": [
+    "(2*x + 5) + (3*x - 2) == 5*x + 3"
+   ]
+  },
+  {
+   "math": "= 2x + 5 + 3x - 2",
+   "en": "Remove the brackets.",
+   "ur": "بریکٹ ہٹائیں۔",
+   "check": [
+    "(2*x + 5) + (3*x - 2) == 2*x + 5 + 3*x - 2"
+   ]
+  },
+  {
+   "math": "= (2x + 3x) + (5 - 2)",
+   "en": "Group the like terms ($x$-terms together and constant terms together).",
+   "ur": "متشابہ ارکان کو اکٹھا کریں ($x$ والی رقوم ایک ساتھ اور مستقل رقوم ایک ساتھ)۔",
+   "check": [
+    "2*x + 5 + 3*x - 2 == (2*x + 3*x) + (5 - 2)"
+   ]
+  },
+  {
+   "math": "f(x) + g(x) = 5 x + 3",
+   "en": "Add the like terms to get the final answer.",
+   "ur": "حتمی جواب حاصل کرنے کے لیے متشابہ ارکان کو جمع کریں۔",
+   "check": [
+    "(2*x + 3*x) + (5 - 2) == 5*x + 3",
+    "(5*x + 3) == (5*x + 3)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

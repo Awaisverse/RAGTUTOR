@@ -1,0 +1,58 @@
+{
+ "item": "c10-ex9.2-q10",
+ "label": "i",
+ "answer_ref": "$\\ell = 0.425$ cm, $A = 0.361$ cm$^2$",
+ "steps": [
+  {
+   "math": "r = 1.7\\ \\text{cm}, \\quad \\theta = 0.25\\ \\text{rad}",
+   "en": "Write down the given radius $r$ and central angle $\\theta$. We need to find the arc length $\\ell$ and the area of the sector $A$.",
+   "ur": "دیے گئے رداس $r$ اور مرکزی زاویہ $\\theta$ کو لکھیں۔ ہمیں قوس کی لمبائی $\\ell$ اور قطاع کا رقبہ $A$ معلوم کرنا ہے۔"
+  },
+  {
+   "math": "\\ell = r\\theta",
+   "en": "Since the central angle $\\theta$ is already in radians, use the formula for the arc length of a circle.",
+   "ur": "چونکہ مرکزی زاویہ $\\theta$ پہلے ہی ریڈین میں ہے، اس لیے دائرے کی قوس کی لمبائی کا فارمولا استعمال کریں۔"
+  },
+  {
+   "math": "\\ell = 1.7 \\times 0.25 = 0.425\\ \\text{cm}",
+   "en": "Substitute the values of $r$ and $\\theta$ into the formula and multiply to find the arc length $\\ell$.",
+   "ur": "فارمولے میں $r$ اور $\\theta$ کی قیمتیں درج کریں اور قوس کی لمبائی $\\ell$ معلوم کرنے کے لیے ضرب دیں۔",
+   "check": [
+    "R(17,10)*R(25,100) == R(425,1000)"
+   ]
+  },
+  {
+   "math": "A = \\frac{1}{2}r^2\\theta",
+   "en": "Now, use the formula for the area of a sector when the angle $\\theta$ is in radians.",
+   "ur": "اب، جب زاویہ $\\theta$ ریڈین میں ہو تو قطاع کے رقبے کا فارمولا استعمال کریں۔"
+  },
+  {
+   "math": "A = \\frac{1}{2}(1.7)^2(0.25) = \\frac{1}{2}(2.89)(0.25)",
+   "en": "Substitute the given values of $r$ and $\\theta$, and calculate the square of $1.7$.",
+   "ur": "$r$ اور $\\theta$ کی دی گئی قیمتیں درج کریں، اور $1.7$ کا مربع معلوم کریں۔",
+   "check": [
+    "R(1,2)*(R(17,10)**2)*R(25,100) == R(1,2)*R(289,100)*R(25,100)"
+   ]
+  },
+  {
+   "math": "A = 0.36125 \\approx 0.361\\ \\text{cm}^2",
+   "en": "Multiply the numbers and round the result to three decimal places to get the area of the sector.",
+   "ur": "قطاع کا رقبہ حاصل کرنے کے لیے اعداد کو ضرب دیں اور نتیجے کو اعشاریہ کے بعد تین درجوں تک محدود کریں۔",
+   "check": [
+    "R(1,2)*R(289,100)*R(25,100) == R(36125,100000)",
+    "Abs(R(36125,100000) - R(361,1000)) <= R(5,10000)"
+   ]
+  },
+  {
+   "math": "\\ell = 0.425\\ \\text{cm}, \\quad A = 0.361\\ \\text{cm}^2",
+   "en": "State the final values for the arc length and the area of the sector.",
+   "ur": "قوس کی لمبائی اور قطاع کے رقبے کی حتمی قیمتیں بیان کریں۔",
+   "check": [
+    "R(17,10)*R(1,4) == R(425,1000)",
+    "Abs((R(1,2)*R(17,10)**2*R(1,4)) - 0.361) <= 0.000500001"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

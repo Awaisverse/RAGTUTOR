@@ -1,0 +1,50 @@
+{
+ "item": "c10-rev7-q4",
+ "label": "ii",
+ "answer_ref": "$19.2^\\circ$",
+ "steps": [
+  {
+   "math": "m\\overline{AB} = 5\\text{ cm}, \\quad m\\overline{BC} = 7\\text{ cm}, \\quad m\\overline{CG} = m\\overline{AE} = 3\\text{ cm}",
+   "en": "Write down the given dimensions of the cuboid. Since it is a cuboid, the vertical edge $m\\overline{CG}$ is equal to $m\\overline{AE}$.",
+   "ur": "مکعب نما کی دی گئی پیمائشیں لکھیں۔ چونکہ یہ ایک مکعب نما ہے، اس لیے عمودی کنارہ $m\\overline{CG}$ کنارے $m\\overline{AE}$ کے برابر ہے۔",
+   "check": [
+    "3 == 3"
+   ]
+  },
+  {
+   "math": "m\\overline{AC} = \\sqrt{(m\\overline{AB})^2 + (m\\overline{BC})^2} = \\sqrt{5^2 + 7^2}",
+   "en": "To find the angle between $\\overline{AG}$ and the base plane $ABCD$, we first find the length of the base diagonal $\\overline{AC}$ using Pythagoras' theorem in the right-angled triangle $ABC$.",
+   "ur": "وتر $\\overline{AG}$ اور قاعدے کی سطح $ABCD$ کے درمیان زاویہ معلوم کرنے کے لیے، ہم پہلے قائمۃ الزاویہ مثلث $ABC$ میں مسئلہ فیثاغورث کی مدد سے قاعدے کے وتر $\\overline{AC}$ کی لمبائی معلوم کرتے ہیں۔",
+   "check": [
+    "sqrt(5**2 + 7**2) == sqrt(74)"
+   ]
+  },
+  {
+   "math": "m\\overline{AC} = \\sqrt{25 + 49} = \\sqrt{74}\\text{ cm}",
+   "en": "Simplify the expression to get the exact length of the base diagonal $\\overline{AC}$.",
+   "ur": "قاعدے کے وتر $\\overline{AC}$ کی لمبائی حاصل کرنے کے لیے عبارت کو مختصر کریں۔",
+   "check": [
+    "25 + 49 == 74",
+    "sqrt(25 + 49) == sqrt(74)"
+   ]
+  },
+  {
+   "math": "\\tan\\theta = \\frac{m\\overline{CG}}{m\\overline{AC}} = \\frac{3}{\\sqrt{74}}",
+   "en": "Let $\\theta$ be the angle $\\angle GAC$ between $\\overline{AG}$ and the plane $ABCD$. In the right-angled triangle $ACG$, apply the tangent ratio (opposite side divided by adjacent side).",
+   "ur": "فرض کریں کہ $\\overline{AG}$ اور سطح $ABCD$ کے درمیان زاویہ $\\angle GAC = \\theta$ ہے۔ قائمۃ الزاویہ مثلث $ACG$ میں ٹینجنٹ کی نسبت (عمود تقسیم قاعدہ) کا استعمال کریں۔",
+   "check": [
+    "3/sqrt(74) == 3/sqrt(74)"
+   ]
+  },
+  {
+   "math": "\\theta = \\tan^{-1}\\left(\\frac{3}{\\sqrt{74}}\\right) \\approx 19.2^\\circ",
+   "en": "Take the inverse tangent to find the angle $\\theta$ and round the final answer to $1$ decimal place.",
+   "ur": "زاویہ $\\theta$ معلوم کرنے کے لیے معکوس ٹینجنٹ لیں اور حتمی جواب کو اعشاریہ کے بعد ایک درجے تک محدود کریں۔",
+   "check": [
+    "Abs((atan(3/sqrt(74))*180/pi) - 19.2) <= 0.050000001"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

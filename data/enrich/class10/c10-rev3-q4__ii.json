@@ -1,0 +1,40 @@
+{
+ "item": "c10-rev3-q4",
+ "label": "ii",
+ "answer_ref": "$\\begin{bmatrix} 4 & -3 \\\\ -2 & 5 \\end{bmatrix}$",
+ "steps": [
+  {
+   "math": "B = \\begin{bmatrix} 5 & 3 \\\\ 2 & 4 \\end{bmatrix}",
+   "en": "First, write down the given matrix $B$. We need to find its adjoint, denoted as $\\operatorname{Adj}B$.",
+   "ur": "سب سے پہلے، دیا گیا کالب $B$ لکھیں۔ ہمیں اس کا ایڈجوائنٹ یعنی $\\operatorname{Adj}B$ معلوم کرنا ہے۔",
+   "check": [
+    "Eq(Matrix([[5, 3], [2, 4]]), Matrix([[5, 3], [2, 4]]))"
+   ]
+  },
+  {
+   "math": "\\operatorname{Adj}\\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix} = \\begin{bmatrix} d & -b \\\\ -c & a \\end{bmatrix}",
+   "en": "To find the adjoint of a $2 \\times 2$ matrix, we interchange the entries on the main (leading) diagonal and change the signs of the entries on the other (secondary) diagonal.",
+   "ur": "کسی $2 \\times 2$ کالب کا ایڈجوائنٹ معلوم کرنے کے لیے، ہم وِتر کے ارکان کی جگہ آپس میں بدل دیتے ہیں اور دوسرے وِتر کے ارکان کی علامتیں تبدیل کر دیتے ہیں۔"
+  },
+  {
+   "math": "",
+   "en": "In matrix $B$, the main diagonal entries are $5$ and $4$. Swapping their positions puts $4$ at the top-left and $5$ at the bottom-right.",
+   "ur": "کالب $B$ میں وِتر کے ارکان $5$ اور $4$ ہیں۔ ان کی جگہ آپس میں بدلنے سے $4$ اوپر بائیں طرف اور $5$ نیچے دائیں طرف آ جائے گا۔"
+  },
+  {
+   "math": "",
+   "en": "The remaining entries are $3$ and $2$. Changing their signs gives $-3$ and $-2$.",
+   "ur": "باقی ماندہ ارکان $3$ اور $2$ ہیں۔ ان کی علامتیں تبدیل کرنے سے ہمیں $-3$ اور $-2$ حاصل ہوتے ہیں۔"
+  },
+  {
+   "math": "\\operatorname{Adj}B = \\begin{bmatrix} 4 & -3 \\\\ -2 & 5 \\end{bmatrix}",
+   "en": "Combining these changes, we get the final adjoint of matrix $B$.",
+   "ur": "ان تبدیلیوں کو یکجا کرنے سے، ہمیں کالب $B$ کا مطلوبہ ایڈجوائنٹ حاصل ہو جاتا ہے۔",
+   "check": [
+    "Eq(Matrix([[5, 3], [2, 4]]).adjugate(), Matrix([[4, -3], [-2, 5]]))"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

@@ -1,0 +1,51 @@
+{
+ "item": "c10-rev7-q1",
+ "label": "i",
+ "answer_ref": "(d) $\\frac{1}{\\sqrt{3}}$",
+ "steps": [
+  {
+   "math": "\\cot 60^\\circ",
+   "en": "We need to find the exact value of the trigonometric ratio $\\cot 60^\\circ$.",
+   "ur": "ہمیں مثلثیاتی نسبت $\\cot 60^\\circ$ کی صحیح قیمت معلوم کرنی ہے۔"
+  },
+  {
+   "math": "\\cot \\theta = \\frac{1}{\\tan \\theta}",
+   "en": "We know that the cotangent function is the reciprocal of the tangent function.",
+   "ur": "ہم جانتے ہیں کہ کوٹینجنٹ (cotangent) فنکشن، ٹینجنٹ (tangent) فنکشن کا معکوس (reciprocal) ہوتا ہے۔"
+  },
+  {
+   "math": "\\cot 60^\\circ = \\frac{1}{\\tan 60^\\circ}",
+   "en": "Substitute $\\theta = 60^\\circ$ into the reciprocal identity.",
+   "ur": "معکوس کلیے میں $\\theta = 60^\\circ$ درج کریں۔",
+   "check": [
+    "cot(60*pi/180) == 1/tan(60*pi/180)"
+   ]
+  },
+  {
+   "math": "\\tan 60^\\circ = \\sqrt{3}",
+   "en": "From the table of trigonometric values for standard angles, the value of $\\tan 60^\\circ$ is $\\sqrt{3}$.",
+   "ur": "معیاری زاویوں کی مثلثیاتی قیمتوں کے جدول کے مطابق، $\\tan 60^\\circ$ کی قیمت $\\sqrt{3}$ ہوتی ہے۔",
+   "check": [
+    "tan(60*pi/180) == sqrt(3)"
+   ]
+  },
+  {
+   "math": "\\cot 60^\\circ = \\frac{1}{\\sqrt{3}}",
+   "en": "Substitute $\\tan 60^\\circ = \\sqrt{3}$ into the equation to get the value of $\\cot 60^\\circ$.",
+   "ur": "$\\cot 60^\\circ$ کی قیمت حاصل کرنے کے لیے مساوات میں $\\tan 60^\\circ = \\sqrt{3}$ درج کریں۔",
+   "check": [
+    "cot(60*pi/180) == 1/sqrt(3)"
+   ]
+  },
+  {
+   "math": "\\text{Answer: (d) } \\frac{1}{\\sqrt{3}}",
+   "en": "Compare the result with the given choices; option (d) is the correct answer.",
+   "ur": "نتیجے کا دیے گئے ممکنہ جوابات سے موازنہ کریں؛ آپشن (d) درست جواب ہے۔",
+   "check": [
+    "cot((60)*pi/180) == 1/sqrt(3)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

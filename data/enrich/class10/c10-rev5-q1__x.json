@@ -1,0 +1,55 @@
+{
+ "item": "c10-rev5-q1",
+ "label": "x",
+ "answer_ref": "(a) $(x+3),\\ (3x+1)$",
+ "steps": [
+  {
+   "math": "3x^2 + 10x + 3",
+   "en": "Consider the quadratic expression on the left-hand side of the given equation $3x^2 + 10x + 3 = 0$.",
+   "ur": "دی گئی مساوات $3x^2 + 10x + 3 = 0$ کی بائیں جانب موجود دو درجی جملے پر غور کریں۔"
+  },
+  {
+   "math": "3 \\times 3 = 9,\\quad 9 + 1 = 10",
+   "en": "To factorize by splitting the middle term, we find two numbers whose product is $3 \\times 3 = 9$ and whose sum is the middle coefficient $10$. These numbers are $9$ and $1$.",
+   "ur": "درمیانی رقم کو توڑ کر تجزی کرنے کے لیے، ہم ایسے دو اعداد تلاش کرتے ہیں جن کا حاصلِ ضرب $3 \\times 3 = 9$ ہو اور جن کا مجموعہ درمیانی عددی سر $10$ ہو۔ یہ اعداد $9$ اور $1$ ہیں۔",
+   "check": [
+    "3 * 3 == 9",
+    "9 + 1 == 10"
+   ]
+  },
+  {
+   "math": "3x^2 + 10x + 3 = 3x^2 + 9x + x + 3",
+   "en": "Rewrite the middle term $10x$ as $9x + x$.",
+   "ur": "درمیانی رقم $10x$ کو $9x + x$ کے طور پر دوبارہ لکھیں۔",
+   "check": [
+    "3*x**2 + 10*x + 3 == 3*x**2 + 9*x + x + 3"
+   ]
+  },
+  {
+   "math": "3x^2 + 9x + x + 3 = 3x(x + 3) + 1(x + 3)",
+   "en": "Take $3x$ common from the first two terms and $1$ common from the last two terms.",
+   "ur": "پہلی دو رقوم میں سے $3x$ اور آخری دو رقوم میں سے $1$ مشترک لیں۔",
+   "check": [
+    "expand(3*x*(x + 3) + 1*(x + 3)) == 3*x**2 + 9*x + x + 3"
+   ]
+  },
+  {
+   "math": "3x(x + 3) + 1(x + 3) = (x + 3)(3x + 1)",
+   "en": "Factor out the common binomial $(x + 3)$. Thus, the linear factors are $(x + 3)$ and $(3x + 1)$.",
+   "ur": "مشترک دو رقمی جملہ $(x + 3)$ باہر نکالیں۔ اس طرح، یک درجی اجزائے ضربی $(x + 3)$ اور $(3x + 1)$ ہیں۔",
+   "check": [
+    "expand((x + 3)*(3*x + 1)) == 3*x**2 + 10*x + 3"
+   ]
+  },
+  {
+   "math": "\\text{Answer: (a) } (x+3),\\ (3x+1)",
+   "en": "Comparing with the given options, the correct choice is (a).",
+   "ur": "دیے گئے ممکنہ جوابات سے موازنہ کرنے پر، درست انتخاب (a) ہے۔",
+   "check": [
+    "expand((x + 3)*(3*x + 1)) == 3*x**2 + 10*x + 3"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

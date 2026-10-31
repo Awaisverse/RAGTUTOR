@@ -1,0 +1,49 @@
+{
+ "item": "c10-ex12.1-q7",
+ "label": "i",
+ "answer_ref": "$\\frac{1}{8}$",
+ "steps": [
+  {
+   "math": "S = \\{HHH, HHT, HTH, THH, HTT, THT, TTH, TTT\\}",
+   "en": "When three fair coins are tossed together, the sample space $S$ consists of all possible combinations of Heads ($H$) and Tails ($T$).",
+   "ur": "جب تین سکے ایک ساتھ اچھالے جاتے ہیں، تو نمونہ فضا $S$ چت ($H$) اور پٹ ($T$) کے تمام ممکنہ نتائج پر مشتمل ہوتی ہے۔"
+  },
+  {
+   "math": "n(S) = 2^3 = 8",
+   "en": "Count the total number of possible outcomes in the sample space $S$. Since each of the $3$ coins has $2$ faces, there are $8$ total outcomes.",
+   "ur": "نمونہ فضا $S$ میں ممکنہ نتائج کی کل تعداد معلوم کریں۔ چونکہ $3$ سکوں میں سے ہر ایک کے $2$ رخ ہیں، اس لیے کل نتائج $8$ ہیں۔",
+   "check": [
+    "2**3 == 8"
+   ]
+  },
+  {
+   "math": "E = \\{TTT\\}",
+   "en": "Let $E$ be the event of getting all tails. Looking at the sample space $S$, there is only one outcome where all three coins show tails.",
+   "ur": "فرض کریں کہ $E$ تمام پٹ آنے کا واقعہ ہے۔ نمونہ فضا $S$ کو دیکھتے ہوئے، صرف ایک ہی نتیجہ ایسا ہے جس میں تینوں سکوں پر پٹ آتا ہے۔"
+  },
+  {
+   "math": "n(E) = 1",
+   "en": "Therefore, the number of favourable outcomes for event $E$ is $1$.",
+   "ur": "لہٰذا، واقعہ $E$ کے لیے موافق نتائج کی تعداد $1$ ہے۔",
+   "check": [
+    "1 == 1"
+   ]
+  },
+  {
+   "math": "P(E) = \\frac{n(E)}{n(S)}",
+   "en": "Use the probability formula, which is the ratio of the number of favourable outcomes $n(E)$ to the total number of possible outcomes $n(S)$.",
+   "ur": "احتمال کا فارمولا استعمال کریں، جو موافق نتائج کی تعداد $n(E)$ اور کل ممکنہ نتائج کی تعداد $n(S)$ کی نسبت ہے۔"
+  },
+  {
+   "math": "P(E) = \\frac{1}{8}",
+   "en": "Substitute $n(E) = 1$ and $n(S) = 8$ into the formula. Thus, the probability of getting all tails is $\\frac{1}{8}$.",
+   "ur": "فارمولے میں $n(E) = 1$ اور $n(S) = 8$ درج کریں۔ اس طرح، تمام پٹ حاصل کرنے کا احتمال $\\frac{1}{8}$ ہے۔",
+   "check": [
+    "R(1, 8) == 1/8",
+    "8 == 8"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

@@ -1,0 +1,57 @@
+{
+ "item": "c10-rev5-q1",
+ "label": "vi",
+ "answer_ref": "(b) $x^2+xy+y^2$",
+ "steps": [
+  {
+   "math": "(x^3 - y^3) \\div (x - y) = \\frac{x^3 - y^3}{x - y}",
+   "en": "First, write the given division expression in the form of an algebraic fraction.",
+   "ur": "سب سے پہلے، دی گئی تقسیم کی عبارت کو الجبری کسر کی شکل میں لکھیں۔",
+   "check": [
+    "(x**3 - y**3) / (x - y) == (x**3 - y**3) / (x - y)"
+   ]
+  },
+  {
+   "math": "a^3 - b^3 = (a - b)(a^2 + ab + b^2)",
+   "en": "Recall the algebraic identity for the difference of two cubes.",
+   "ur": "دو مکعبوں کے فرق کا الجبری کلیہ یاد کریں۔",
+   "check": [
+    "a**3 - b**3 == (a - b) * (a**2 + a*b + b**2)"
+   ]
+  },
+  {
+   "math": "x^3 - y^3 = (x - y)(x^2 + xy + y^2)",
+   "en": "Apply this formula to factorize the numerator $x^3 - y^3$.",
+   "ur": "شمار کنندہ $x^3 - y^3$ کی تجزی کرنے کے لیے اس کلیے کا اطلاق کریں۔",
+   "check": [
+    "x**3 - y**3 == (x - y) * (x**2 + x*y + y**2)"
+   ]
+  },
+  {
+   "math": "\\frac{x^3 - y^3}{x - y} = \\frac{(x - y)(x^2 + xy + y^2)}{x - y}",
+   "en": "Substitute the factorized form of the numerator back into the fraction.",
+   "ur": "شمار کنندہ کی تجزی شدہ شکل کو واپس کسر میں درج کریں۔",
+   "check": [
+    "(x**3 - y**3) / (x - y) == (x - y) * (x**2 + x*y + y**2) / (x - y)"
+   ]
+  },
+  {
+   "math": "\\frac{(x - y)(x^2 + xy + y^2)}{x - y} = x^2 + xy + y^2",
+   "en": "Cancel out the common factor $(x - y)$ from both the numerator and the denominator.",
+   "ur": "شمار کنندہ اور مخرج دونوں میں سے مشترک جزو ضربی $(x - y)$ کو کاٹ دیں۔",
+   "check": [
+    "(x - y) * (x**2 + x*y + y**2) / (x - y) == x**2 + x*y + y**2"
+   ]
+  },
+  {
+   "math": "\\text{Answer: (b) } x^2+xy+y^2",
+   "en": "The simplified form matches option (b).",
+   "ur": "مختصر ترین شکل آپشن (b) سے مطابقت رکھتی ہے۔",
+   "check": [
+    "(x**3 - y**3)/(x - y) == x**2 + x*y + y**2"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

@@ -1,0 +1,42 @@
+{
+ "item": "c10-rev4-q3",
+ "label": "iii",
+ "answer_ref": "$x^{9}$",
+ "steps": [
+  {
+   "math": "f(x) = x^{3}",
+   "en": "Write the given function $f(x)$ from the question.",
+   "ur": "سوال میں دیا گیا فنکشن $f(x)$ لکھیں۔"
+  },
+  {
+   "math": "(f\\circ f)(x) = f(f(x))",
+   "en": "By the definition of composition of functions, $(f\\circ f)(x)$ means applying the function $f$ to $f(x)$.",
+   "ur": "تفاعل کی ترکیب (composition of functions) کی تعریف کے مطابق، $(f\\circ f)(x)$ کا مطلب فنکشن $f$ کو $f(x)$ پر لاگو کرنا ہے۔"
+  },
+  {
+   "math": "(f\\circ f)(x) = f(x^{3})",
+   "en": "Substitute the value of the inner function $f(x) = x^{3}$.",
+   "ur": "اندرونی فنکشن $f(x) = x^{3}$ کی قیمت درج کریں۔"
+  },
+  {
+   "math": "(f\\circ f)(x) = (x^{3})^{3}",
+   "en": "Now, replace $x$ with $x^{3}$ in the given function $f(x) = x^{3}$.",
+   "ur": "اب دیے گئے فنکشن $f(x) = x^{3}$ میں $x$ کی جگہ $x^{3}$ رکھیں۔",
+   "check": [
+    "(x**3).subs(x, x**3) == (x**3)**3"
+   ]
+  },
+  {
+   "math": "(f\\circ f)(x) = x^{3 \\times 3} = x^{9}",
+   "en": "Using the power law of exponents $(a^{m})^{n} = a^{m \\times n}$, multiply the powers to get the final answer.",
+   "ur": "قوت نما کے قانون $(a^{m})^{n} = a^{m \\times n}$ کا استعمال کرتے ہوئے، حتمی جواب حاصل کرنے کے لیے طاقتوں کو ضرب دیں۔",
+   "check": [
+    "(x**3)**3 == x**(3*3)",
+    "x**(3*3) == x**9",
+    "(x**3).subs(x, (x**3)) == (x**9)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

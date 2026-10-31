@@ -1,0 +1,46 @@
+{
+ "item": "c10-rev1-q1",
+ "label": "viii",
+ "answer_ref": "(b) $9+4i$",
+ "steps": [
+  {
+   "math": "z = 9 - 4i",
+   "en": "Let the given complex number be $z = 9 - 4i$. Here, the real part is $9$ and the imaginary part is $-4$.",
+   "ur": "فرض کریں کہ دیا گیا مختلط عدد $z = 9 - 4i$ ہے۔ یہاں حقیقی حصہ $9$ اور خیالی حصہ $-4$ ہے۔",
+   "check": [
+    "9 - 4*I == 9 - 4*I"
+   ]
+  },
+  {
+   "math": "\\text{If } z = a + bi, \\text{ then } \\bar{z} = a - bi",
+   "en": "To find the conjugate of a complex number, we change the sign of its imaginary part.",
+   "ur": "کسی مختلط عدد کا زوج (conjugate) معلوم کرنے کے لیے ہم اس کے خیالی حصے کی علامت تبدیل کرتے ہیں۔"
+  },
+  {
+   "math": "\\bar{z} = \\overline{9 - 4i}",
+   "en": "Apply the conjugate notation to the given complex number.",
+   "ur": "دیے گئے مختلط عدد پر زوج (conjugate) کی علامت لگائیں۔",
+   "check": [
+    "conjugate(9 - 4*I) == 9 + 4*I"
+   ]
+  },
+  {
+   "math": "\\bar{z} = 9 + 4i",
+   "en": "Change the sign of the imaginary part from $-4i$ to $+4i$.",
+   "ur": "خیالی حصے کی علامت کو $-4i$ سے بدل کر $+4i$ کر دیں۔",
+   "check": [
+    "conjugate(9 - 4*I) == 9 + 4*I"
+   ]
+  },
+  {
+   "math": "\\text{Answer: (b) } 9+4i",
+   "en": "Comparing our result with the given options, option (b) is the correct answer.",
+   "ur": "ہمارے نتیجے کا دیے گئے آپشنز سے موازنہ کرنے پر، آپشن (b) درست جواب ہے۔",
+   "check": [
+    "conjugate(9-4*I) == 9+4*I"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

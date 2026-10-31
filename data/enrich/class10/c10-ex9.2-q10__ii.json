@@ -1,0 +1,49 @@
+{
+ "item": "c10-ex9.2-q10",
+ "label": "ii",
+ "answer_ref": "$\\ell = \\frac{3\\pi}{4} \\approx 2.36$ cm, $A = \\frac{9\\pi}{8} \\approx 3.53$ cm$^2$",
+ "steps": [
+  {
+   "math": "",
+   "en": "We are given the radius of the circle $r = 3\\text{ cm}$ and the central angle $\\theta = 45^\\circ$. We need to find the arc length $\\ell$ and the area of the sector $A$.",
+   "ur": "ہمیں دائرے کا رداس $r = 3\\text{ cm}$ اور مرکزی زاویہ $\\theta = 45^\\circ$ دیا گیا ہے۔ ہمیں قوس کی لمبائی $\\ell$ اور قطاع کا رقبہ $A$ معلوم کرنا ہے۔"
+  },
+  {
+   "math": "\\theta = 45^\\circ \\times \\frac{\\pi}{180^\\circ} = \\frac{\\pi}{4}\\ \\text{rad}",
+   "en": "First, convert the central angle $\\theta$ from degrees to radians by multiplying by $\\frac{\\pi}{180^\\circ}$, because the formulas for arc length and sector area require the angle in radians.",
+   "ur": "سب سے پہلے، مرکزی زاویہ $\\theta$ کو ڈگری سے ریڈین میں تبدیل کرنے کے لیے $\\frac{\\pi}{180^\\circ}$ سے ضرب دیں، کیونکہ قوس کی لمبائی اور قطاع کے رقبے کے فارمولوں کے لیے زاویہ کا ریڈین میں ہونا ضروری ہے۔",
+   "check": [
+    "45 * pi / 180 == pi / 4"
+   ]
+  },
+  {
+   "math": "\\ell = r\\theta = 3 \\times \\frac{\\pi}{4} = \\frac{3\\pi}{4} \\approx 2.36\\ \\text{cm}",
+   "en": "Now, use the formula $\\ell = r\\theta$ and substitute the values of $r$ and $\\theta$ to find the arc length $\\ell$.",
+   "ur": "اب، قوس کی لمبائی $\\ell$ معلوم کرنے کے لیے فارمولا $\\ell = r\\theta$ استعمال کریں اور اس میں $r$ اور $\\theta$ کی قیمتیں درج کریں۔",
+   "check": [
+    "3 * (pi / 4) == 3 * pi / 4",
+    "Abs((3*pi/4) - 2.36) <= 0.005000001"
+   ]
+  },
+  {
+   "math": "A = \\frac{1}{2}r^2\\theta = \\frac{1}{2}(3)^2\\left(\\frac{\\pi}{4}\\right) = \\frac{1}{2}(9)\\left(\\frac{\\pi}{4}\\right) = \\frac{9\\pi}{8} \\approx 3.53\\ \\text{cm}^2",
+   "en": "Next, use the formula $A = \\frac{1}{2}r^2\\theta$ and substitute the values of $r$ and $\\theta$ to calculate the area of the sector.",
+   "ur": "اس کے بعد، قطاع کا رقبہ معلوم کرنے کے لیے فارمولا $A = \\frac{1}{2}r^2\\theta$ استعمال کریں اور اس میں $r$ اور $\\theta$ کی قیمتیں درج کریں۔",
+   "check": [
+    "R(1, 2) * (3**2) * (pi / 4) == 9 * pi / 8",
+    "Abs((9*pi/8) - 3.53) <= 0.005000001"
+   ]
+  },
+  {
+   "math": "",
+   "en": "Thus, the arc length is $\\ell = \\frac{3\\pi}{4} \\approx 2.36\\text{ cm}$ and the area of the sector is $A = \\frac{9\\pi}{8} \\approx 3.53\\text{ cm}^2$.",
+   "ur": "پس، قوس کی لمبائی $\\ell = \\frac{3\\pi}{4} \\approx 2.36\\text{ cm}$ ہے اور قطاع کا رقبہ $A = \\frac{9\\pi}{8} \\approx 3.53\\text{ cm}^2$ ہے۔",
+   "check": [
+    "Abs((3*pi/4) - 2.36) <= 0.0050000010000000004",
+    "Abs((9*pi/8) - 3.53) <= 0.0050000010000000004"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

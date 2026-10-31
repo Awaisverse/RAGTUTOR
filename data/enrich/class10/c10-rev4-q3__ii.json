@@ -1,0 +1,41 @@
+{
+ "item": "c10-rev4-q3",
+ "label": "ii",
+ "answer_ref": "$2 x^{3} + 14$",
+ "steps": [
+  {
+   "math": "f(x) = x^3, \\quad g(x) = 14 + 2x",
+   "en": "Write down the given functions $f(x)$ and $g(x)$.",
+   "ur": "دیے گئے تفاعل $f(x)$ اور $g(x)$ لکھیں۔"
+  },
+  {
+   "math": "(g \\circ f)(x) = g(f(x))",
+   "en": "By definition of composite functions, $(g \\circ f)(x)$ means applying function $g$ to $f(x)$.",
+   "ur": "مرکب تفاعل کی تعریف کے مطابق، $(g \\circ f)(x)$ کا مطلب تفاعل $g$ کو $f(x)$ پر لاگو کرنا ہے۔"
+  },
+  {
+   "math": "(g \\circ f)(x) = g\\left(x^3\\right)",
+   "en": "Substitute the given value of $f(x) = x^3$ inside the function $g$.",
+   "ur": "تفاعل $g$ کے اندر $f(x) = x^3$ کی دی گئی قیمت درج کریں۔"
+  },
+  {
+   "math": "(g \\circ f)(x) = 14 + 2\\left(x^3\\right)",
+   "en": "Now, replace $x$ with $x^3$ in the function $g(x) = 14 + 2x$.",
+   "ur": "اب، تفاعل $g(x) = 14 + 2x$ میں $x$ کی جگہ $x^3$ رکھیں۔",
+   "check": [
+    "(14 + 2*x).subs(x, x**3) == 14 + 2*(x**3)"
+   ]
+  },
+  {
+   "math": "(g \\circ f)(x) = 2 x^{3} + 14",
+   "en": "Simplify and write the final answer in standard form.",
+   "ur": "مختصر کریں اور حتمی جواب کو معیاری شکل میں لکھیں۔",
+   "check": [
+    "14 + 2*(x**3) == 2*x**3 + 14",
+    "(2*x + 14).subs(x, (x**3)) == (2*x**3 + 14)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

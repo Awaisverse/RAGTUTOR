@@ -16,9 +16,9 @@
      "prompt": "",
      "steps": [
       {
-       "math": "\\text{Coin 1} \\to \\text{Coin 2} \\to \\text{Coin 3}",
-       "en": "Each coin has 2 outcomes; branch H and T at every stage.",
-       "ur": "ہر سکے کے 2 نتائج؛ ہر مرحلے پر H اور T کی شاخیں۔",
+       "math": "\\text{Outcomes for 1 coin} = \\{H, T\\}",
+       "en": "When a single fair coin is tossed, there are 2 possible outcomes: Head ($H$) or Tail ($T$).",
+       "ur": "جب ایک سکہ اچھالا جاتا ہے تو اس کے 2 ممکنہ نتائج ہوتے ہیں: ہیڈ ($H$) یا ٹیل ($T$)۔",
        "draw": [
         {
          "t": "line",
@@ -261,15 +261,40 @@
        ]
       },
       {
-       "math": "S = \\{HHH, HHT, HTH, HTT, THH, THT, TTH, TTT\\},\\quad n(S) = 2 \\times 2 \\times 2 = 8",
-       "en": "Read the outcomes along the branches.",
-       "ur": "شاخوں کے ساتھ نتائج پڑھیں۔",
+       "math": "\\text{Coin 1}: H,\\quad T",
+       "en": "To make a tree diagram for tossing three coins, start the first stage with two main branches for Coin 1: $H$ and $T$.",
+       "ur": "تین سکوں کو اچھالنے کی ٹری ڈایاگرام بنانے کے لیے، پہلے مرحلے میں سکہ 1 کے لیے دو شاخیں بنائیں: $H$ اور $T$۔"
+      },
+      {
+       "math": "\\text{Coin 1 } (H) \\to \\begin{cases} H \\to H, T \\\\ T \\to H, T \\end{cases}",
+       "en": "From the $H$ branch of Coin 1, draw two branches ($H$ and $T$) for Coin 2, and from each of those, draw two branches ($H$ and $T$) for Coin 3. Reading along the branches gives the outcomes: $HHH, HHT, HTH, HTT$.",
+       "ur": "سکہ 1 کی $H$ شاخ سے سکہ 2 کے لیے دو شاخیں ($H$ اور $T$) نکالیں، اور ان میں سے ہر ایک سے سکہ 3 کے لیے مزید دو شاخیں ($H$ اور $T$) نکالیں۔ ان شاخوں کو ترتیب سے پڑھنے سے یہ نتائج ملتے ہیں: $HHH, HHT, HTH, HTT$۔"
+      },
+      {
+       "math": "\\text{Coin 1 } (T) \\to \\begin{cases} H \\to H, T \\\\ T \\to H, T \\end{cases}",
+       "en": "Similarly, from the $T$ branch of Coin 1, split into $H$ and $T$ for Coin 2, and then again into $H$ and $T$ for Coin 3. Reading along these branches gives the outcomes: $THH, THT, TTH, TTT$.",
+       "ur": "اسی طرح، سکہ 1 کی $T$ شاخ سے سکہ 2 کے لیے $H$ اور $T$ کی شاخیں نکالیں، اور پھر سکہ 3 کے لیے دوبارہ $H$ اور $T$ کی شاخیں نکالیں۔ ان شاخوں کو پڑھنے سے یہ نتائج ملتے ہیں: $THH, THT, TTH, TTT$۔"
+      },
+      {
+       "math": "n(S) = 2 \\times 2 \\times 2 = 2^3 = 8",
+       "en": "By the fundamental principle of counting, the total number of outcomes in the sample space $n(S)$ is the product of the outcomes of all three coins.",
+       "ur": "گنتی کے بنیادی اصول کے مطابق، سیمپل اسپیس میں کل نتائج کی تعداد $n(S)$ تینوں سکوں کے نتائج کے حاصل ضرب کے برابر ہے۔",
+       "check": [
+        "2*2*2 == 8",
+        "2**3 == 8"
+       ]
+      },
+      {
+       "math": "S = \\{HHH, HHT, HTH, HTT, THH, THT, TTH, TTT\\},\\quad n(S) = 8",
+       "en": "Combine all the 8 outcomes read from the tree branches to write the complete sample space $S$.",
+       "ur": "مکمل سیمپل اسپیس $S$ لکھنے کے لیے ٹری کی شاخوں سے حاصل ہونے والے تمام 8 نتائج کو ایک سیٹ میں یکجا کریں۔",
        "check": [
         "2*2*2 == 8"
        ]
       }
      ],
      "answer": "$S = \\{HHH, HHT, HTH, HTT, THH, THT, TTH, TTT\\}$, $n(S) = 8$",
+     "enriched": true,
      "book_key": "S = {HHH, HHT, HTH, HTT, THH, THT, TTH, TTT}, n(S) = 8"
     }
    ],
@@ -288,9 +313,9 @@
      "prompt": "",
      "steps": [
       {
-       "math": "\\text{Boy} \\to \\text{Girl}",
-       "en": "First choose the boy, then the girl.",
-       "ur": "پہلے لڑکا، پھر لڑکی چنیں۔",
+       "math": "B = \\{\\text{Hamid}, \\text{Ahmad}\\}, \\quad G = \\{\\text{Zainab}, \\text{Samia}\\}",
+       "en": "Identify the given groups of $2$ boys and $2$ girls.",
+       "ur": "دیے گئے $2$ لڑکوں اور $2$ لڑکیوں کے گروپس کی نشاندہی کریں۔",
        "draw": [
         {
          "t": "line",
@@ -397,15 +422,36 @@
        ]
       },
       {
-       "math": "S = \\{(\\text{Hamid}, \\text{Zainab}), (\\text{Hamid}, \\text{Samia}), (\\text{Ahmad}, \\text{Zainab}), (\\text{Ahmad}, \\text{Samia})\\},\\quad n(S) = 4",
-       "en": "List every pair.",
-       "ur": "ہر جوڑا لکھیں۔",
+       "math": "\\text{Boy} \\to \\text{Girl}",
+       "en": "To select one boy and one girl, we first choose a boy and then pair him with each girl.",
+       "ur": "ایک لڑکا اور ایک لڑکی منتخب کرنے کے لیے، ہم پہلے ایک لڑکا چنتے ہیں اور پھر ہر لڑکی کے ساتھ اس کا جوڑا بناتے ہیں۔"
+      },
+      {
+       "math": "\\text{Hamid} \\to \\begin{cases} \\text{Zainab} \\implies (\\text{Hamid}, \\text{Zainab}) \\\\ \\text{Samia} \\implies (\\text{Hamid}, \\text{Samia}) \\end{cases}",
+       "en": "Draw the first main branch of the tree diagram for Hamid.",
+       "ur": "حامد کے لیے ٹری ڈایاگرام کی پہلی شاخ بنائیں۔"
+      },
+      {
+       "math": "\\text{Ahmad} \\to \\begin{cases} \\text{Zainab} \\implies (\\text{Ahmad}, \\text{Zainab}) \\\\ \\text{Samia} \\implies (\\text{Ahmad}, \\text{Samia}) \\end{cases}",
+       "en": "Draw the second main branch of the tree diagram for Ahmad.",
+       "ur": "احمد کے لیے ٹری ڈایاگرام کی دوسری شاخ بنائیں۔"
+      },
+      {
+       "math": "S = \\{(\\text{Hamid}, \\text{Zainab}), (\\text{Hamid}, \\text{Samia}), (\\text{Ahmad}, \\text{Zainab}), (\\text{Ahmad}, \\text{Samia})\\}",
+       "en": "Collect all the possible pairs from the tree diagram to write the sample space $S$.",
+       "ur": "سیمپل سپیس $S$ لکھنے کے لیے ٹری ڈایاگرام سے تمام ممکنہ جوڑوں کو اکٹھا کریں۔"
+      },
+      {
+       "math": "n(S) = 2 \\times 2 = 4",
+       "en": "Count the total number of possible outcomes in the sample space.",
+       "ur": "سیمپل سپیس میں ممکنہ نتائج کی کل تعداد گنیں۔",
        "check": [
         "2*2 == 4"
        ]
       }
      ],
      "answer": "$n(S) = 4$: (Hamid, Zainab), (Hamid, Samia), (Ahmad, Zainab), (Ahmad, Samia)",
+     "enriched": true,
      "book_key": "n(S) = 4"
     }
    ],
@@ -424,23 +470,58 @@
      "prompt": "$P(\\overline{A})$",
      "steps": [
       {
-       "math": "P(A) = 17x,\\ P(\\overline{A}) = 15x,\\quad 17x + 15x = 1 \\Rightarrow x = \\frac{1}{32}",
-       "en": "$P(A) + P(\\overline{A}) = 1$.",
-       "ur": "$P(A) + P(\\overline{A}) = 1$۔",
+       "math": "P(A) : P(\\overline{A}) = 17 : 15",
+       "en": "Write down the given ratio between the probability of event $A$ and its complement $\\overline{A}$.",
+       "ur": "واقعہ $A$ اور اس کے کمپلیمنٹ $\\overline{A}$ کے احتمال کے درمیان دی گئی نسبت لکھیں۔",
+       "check": [
+        "R(17,15) == R(17,15)"
+       ]
+      },
+      {
+       "math": "P(A) = 17x,\\quad P(\\overline{A}) = 15x",
+       "en": "Let $x$ be the common multiplier for the ratio, so we can express the probabilities in terms of $x$.",
+       "ur": "فرض کریں کہ نسبت کا مشترک ضرب $x$ ہے، تاکہ ہم احتمالات کو $x$ کی شکل میں لکھ سکیں۔",
+       "check": [
+        "17*x / (15*x) == R(17,15)"
+       ]
+      },
+      {
+       "math": "P(A) + P(\\overline{A}) = 1",
+       "en": "We know that the sum of the probabilities of an event and its complement is always equal to $1$.",
+       "ur": "ہم جانتے ہیں کہ کسی واقعہ اور اس کے کمپلیمنٹ کے احتمالات کا مجموعہ ہمیشہ $1$ کے برابر ہوتا ہے۔",
+       "check": [
+        "1 == 1"
+       ]
+      },
+      {
+       "math": "17x + 15x = 1",
+       "en": "Substitute the values of $P(A)$ and $P(\\overline{A})$ into the formula.",
+       "ur": "فارمولے میں $P(A)$ اور $P(\\overline{A})$ کی قیمتیں درج کریں۔",
        "check": [
         "17*R(1,32) + 15*R(1,32) == 1"
        ]
       },
       {
-       "math": "P(\\overline{A}) = \\frac{15}{32}",
-       "en": "Put $x$.",
-       "ur": "$x$ رکھیں۔",
+       "math": "32x = 1 \\implies x = \\frac{1}{32}",
+       "en": "Add the like terms and divide both sides by $32$ to find the value of $x$.",
+       "ur": "ہم جنس رقوم کو جمع کریں اور $x$ کی قیمت معلوم کرنے کے لیے دونوں طرف $32$ سے تقسیم کریں۔",
        "check": [
-        "15*R(1,32) == R(15,32)"
+        "17 + 15 == 32",
+        "32*R(1,32) == 1"
+       ]
+      },
+      {
+       "math": "P(\\overline{A}) = 15 \\left(\\frac{1}{32}\\right) = \\frac{15}{32}",
+       "en": "Now, substitute $x = \\frac{1}{32}$ into $P(\\overline{A}) = 15x$ to get the final answer.",
+       "ur": "اب، حتمی جواب حاصل کرنے کے لیے $P(\\overline{A}) = 15x$ میں $x = \\frac{1}{32}$ درج کریں۔",
+       "check": [
+        "15*R(1,32) == R(15,32)",
+        "17*R(1,32) + 15*R(1,32) == 1"
        ]
       }
      ],
      "answer": "$\\frac{15}{32}$",
+     "enriched": true,
      "book_key": "\\frac{15}{32}"
     },
     {
@@ -448,15 +529,52 @@
      "prompt": "$n(A)$",
      "steps": [
       {
-       "math": "n(A) = P(A) \\times n(S) = \\frac{17}{32} \\times 640 = 340",
-       "en": "$n(A) = P(A)\\,n(S)$.",
-       "ur": "$n(A) = P(A)\\,n(S)$۔",
+       "math": "",
+       "en": "We are given that $P(A):P(\\overline{A}) = 17:15$ and the total number of sample points is $n(S) = 640$. We need to find the number of elements in event $A$, denoted as $n(A)$.",
+       "ur": "ہمیں دیا گیا ہے کہ $P(A):P(\\overline{A}) = 17:15$ اور نمونہ کی فضاء میں کل ارکان کی تعداد $n(S) = 640$ ہے۔ ہمیں وقوعہ $A$ کے ارکان کی تعداد، یعنی $n(A)$ معلوم کرنی ہے۔"
+      },
+      {
+       "math": "\\text{Sum of ratios} = 17 + 15 = 32",
+       "en": "Since the sum of the probabilities of an event and its complement is $1$, we first find the sum of the parts of the given ratio.",
+       "ur": "چونکہ کسی وقوعہ اور اس کے کمپلیمنٹ کے احتمالات کا مجموعہ $1$ ہوتا ہے، اس لیے ہم پہلے دی گئی نسبت کے حصوں کا مجموعہ معلوم کرتے ہیں۔",
        "check": [
+        "17 + 15 == 32"
+       ]
+      },
+      {
+       "math": "P(A) = \\frac{17}{32}",
+       "en": "Using the ratio part for event $A$ and the total sum of ratios, we write the probability of event $A$.",
+       "ur": "وقوعہ $A$ کے نسبتی حصے اور نسبتوں کے کل مجموعے کو استعمال کرتے ہوئے، ہم وقوعہ $A$ کا احتمال لکھتے ہیں۔",
+       "check": [
+        "R(17, 32) == R(17, 32)"
+       ]
+      },
+      {
+       "math": "P(A) = \\frac{n(A)}{n(S)} \\implies n(A) = P(A) \\times n(S)",
+       "en": "Now, we use the basic formula of probability and rearrange it to find $n(A)$.",
+       "ur": "اب، ہم احتمال کا بنیادی فارمولا استعمال کرتے ہیں اور $n(A)$ معلوم کرنے کے لیے اسے ترتیب دیتے ہیں۔"
+      },
+      {
+       "math": "n(A) = \\frac{17}{32} \\times 640",
+       "en": "Substitute the values of $P(A) = \\frac{17}{32}$ and $n(S) = 640$ into the formula.",
+       "ur": "فارمولے میں $P(A) = \\frac{17}{32}$ اور $n(S) = 640$ کی قیمتیں درج کریں۔",
+       "check": [
+        "R(17, 32) * 640 == 340"
+       ]
+      },
+      {
+       "math": "n(A) = 17 \\times 20 = 340",
+       "en": "Simplify by dividing $640$ by $32$ to get $20$, and then multiply by $17$. Thus, the number of outcomes favourable to event $A$ is $340$.",
+       "ur": "$640$ کو $32$ پر تقسیم کر کے مختصر کریں جس سے $20$ حاصل ہوتا ہے، اور پھر اسے $17$ سے ضرب دیں۔ اس طرح، وقوعہ $A$ کے موافق نتائج کی تعداد $340$ ہے۔",
+       "check": [
+        "640 / 32 == 20",
+        "17 * 20 == 340",
         "R(17,32)*640 == 340"
        ]
       }
      ],
      "answer": "$340$",
+     "enriched": true,
      "book_key": "340"
     }
    ],
@@ -474,23 +592,48 @@
      "prompt": "",
      "steps": [
       {
-       "math": "n(S) = 8",
-       "en": "The sample space: three coins, 8 outcomes.",
-       "ur": "نمونہ فضا۔",
+       "math": "S = \\{HHH, HHT, HTH, THH, HTT, THT, TTH, TTT\\}",
+       "en": "When a fair coin is tossed three times, the sample space $S$ consists of all possible combinations of Heads ($H$) and Tails ($T$).",
+       "ur": "جب ایک سکے کو تین بار اچھالا جاتا ہے، تو نمونہ فضا $S$ چت ($H$) اور پٹ ($T$) کے تمام ممکنہ نتائج پر مشتمل ہوتی ہے۔"
+      },
+      {
+       "math": "n(S) = 2^3 = 8",
+       "en": "Count the total number of possible outcomes in the sample space $S$.",
+       "ur": "نمونہ فضا $S$ میں کل ممکنہ نتائج کی تعداد گنیں۔",
        "check": [
-        "8 == 8"
+        "2**3 == 8"
        ]
       },
       {
-       "math": "E = \\{HTT, TTH, TTT\\} \\Rightarrow n(E) = 3,\\quad P(E) = \\frac{3}{8} = \\frac{3}{8}",
-       "en": "Probability = favourable outcomes / total outcomes.",
-       "ur": "احتمال = موافق نتائج / کل نتائج۔",
+       "math": "E = \\{HTT, TTH, TTT\\}",
+       "en": "Let $E$ be the event of getting at least two consecutive tails (two $T$'s together, which also includes three $T$'s).",
+       "ur": "فرض کریں کہ $E$ کم از کم دو لگاتار پٹ (دو $T$ ایک ساتھ، جس میں تین $T$ بھی شامل ہیں) آنے کا واقعہ ہے۔"
+      },
+      {
+       "math": "n(E) = 3",
+       "en": "Count the number of favourable outcomes in the event $E$.",
+       "ur": "واقعہ $E$ میں موافق نتائج کی تعداد گنیں۔",
        "check": [
-        "R(3, 8) == 3/8"
+        "3 == 3"
+       ]
+      },
+      {
+       "math": "P(E) = \\frac{n(E)}{n(S)}",
+       "en": "Write the formula for the probability of an event, which is the ratio of favourable outcomes to the total number of outcomes.",
+       "ur": "کسی واقعہ کے احتمال کا فارمولا لکھیں، جو کہ موافق نتائج اور کل نتائج کی تعداد کی نسبت ہے۔"
+      },
+      {
+       "math": "P(E) = \\frac{3}{8}",
+       "en": "Substitute $n(E) = 3$ and $n(S) = 8$ into the formula. Thus, the probability of getting two consecutive tails is $\\frac{3}{8}$.",
+       "ur": "فارمولے میں $n(E) = 3$ اور $n(S) = 8$ درج کریں۔ اس طرح، دو لگاتار پٹ آنے کا احتمال $\\frac{3}{8}$ ہے۔",
+       "check": [
+        "R(3, 8) == 3/8",
+        "8 == 8"
        ]
       }
      ],
      "answer": "$\\frac{3}{8}$",
+     "enriched": true,
      "book_key": "\\frac{3}{8}"
     }
    ],
@@ -508,15 +651,49 @@
      "prompt": "possibility diagram",
      "steps": [
       {
-       "math": "\\begin{array}{c|cc} & H & T \\\\ \\hline 1 & (1, H) & (1, T) \\\\ 2 & (2, H) & (2, T) \\\\ 3 & (3, H) & (3, T) \\\\ 4 & (4, H) & (4, T) \\\\ 5 & (5, H) & (5, T) \\\\ 6 & (6, H) & (6, T) \\end{array}",
-       "en": "Rows: the die; columns: the coin.",
-       "ur": "قطاریں: پانسہ؛ کالم: سکہ۔",
+       "math": "\\text{Outcomes of a die} = \\{1, 2, 3, 4, 5, 6\\}",
+       "en": "A standard 6-sided die has $6$ possible outcomes when rolled.",
+       "ur": "ایک معیاری 6 رخ والے پانسے کو پھینکنے پر $6$ ممکنہ نتائج حاصل ہوتے ہیں۔",
        "check": [
+        "len([1, 2, 3, 4, 5, 6]) == 6"
+       ]
+      },
+      {
+       "math": "\\text{Outcomes of a coin} = \\{H, T\\}",
+       "en": "A fair coin has $2$ possible outcomes when tossed: Head ($H$) and Tail ($T$).",
+       "ur": "ایک سکے کو اچھالنے پر $2$ ممکنہ نتائج حاصل ہوتے ہیں: ہیڈ ($H$) اور ٹیل ($T$)۔",
+       "check": [
+        "1 + 1 == 2"
+       ]
+      },
+      {
+       "math": "\\begin{array}{c|cc} & H & T \\\\ \\hline 1 & (1, H) & (1, T) \\\\ 2 & (2, H) & (2, T) \\\\ 3 & (3, H) & (3, T) \\\\ 4 & (4, H) & (4, T) \\\\ 5 & (5, H) & (5, T) \\\\ 6 & (6, H) & (6, T) \\end{array}",
+       "en": "To draw the possibility diagram, we place the outcomes of the die in the rows and the outcomes of the coin in the columns, then pair each row with each column.",
+       "ur": "امکانی ڈایاگرام بنانے کے لیے ہم پانسے کے نتائج کو قطاروں میں اور سکے کے نتائج کو کالموں میں رکھتے ہیں، پھر ہر قطار کا ہر کالم کے ساتھ جوڑا بناتے ہیں۔",
+       "check": [
+        "6 * 2 == 12"
+       ]
+      },
+      {
+       "math": "S = \\{(1, H), (1, T), (2, H), (2, T), (3, H), (3, T), (4, H), (4, T), (5, H), (5, T), (6, H), (6, T)\\}",
+       "en": "From the possibility diagram, we write the complete sample space $S$ containing all the possible ordered pairs.",
+       "ur": "امکانی ڈایاگرام سے، ہم تمام ممکنہ مترتب جوڑوں پر مشتمل مکمل نمونہ فضا $S$ لکھتے ہیں۔",
+       "check": [
+        "6 * 2 == 12"
+       ]
+      },
+      {
+       "math": "n(S) = 6 \\times 2 = 12",
+       "en": "Counting the total number of elements in the sample space $S$, we get $n(S) = 12$.",
+       "ur": "نمونہ فضا $S$ میں ارکان کی کل تعداد گننے سے ہمیں $n(S) = 12$ حاصل ہوتا ہے۔",
+       "check": [
+        "6 * 2 == 12",
         "6*2 == 12"
        ]
       }
      ],
      "answer": "$n(S) = 12$",
+     "enriched": true,
      "book_key": "n(S) = 12"
     },
     {
@@ -524,11 +701,11 @@
      "prompt": "tree diagram",
      "steps": [
       {
-       "math": "\\text{Die} \\to \\text{Coin}",
-       "en": "Each die face branches into H and T.",
-       "ur": "پانسے کا ہر رخ H اور T میں تقسیم ہوتا ہے۔",
+       "math": "\\text{Die outcomes} = \\{1, 2, 3, 4, 5, 6\\}",
+       "en": "When a fair die is rolled, there are $6$ possible outcomes, which form the main branches of the tree diagram.",
+       "ur": "جب ایک پانسہ پھینکا جاتا ہے تو $6$ ممکنہ نتائج حاصل ہوتے ہیں، جو ٹری ڈایاگرام کی بنیادی شاخیں بناتے ہیں۔",
        "check": [
-        "6*2 == 12"
+        "6 == 6"
        ],
        "draw": [
         {
@@ -838,9 +1015,42 @@
          "s": "T"
         }
        ]
+      },
+      {
+       "math": "\\text{Coin outcomes} = \\{\\text{H}, \\text{T}\\}",
+       "en": "When a coin is tossed, there are $2$ possible outcomes: Head ($\\text{H}$) and Tail ($\\text{T}$).",
+       "ur": "جب ایک سکہ اچھالا جاتا ہے تو $2$ ممکنہ نتائج ہوتے ہیں: ہیڈ ($\\text{H}$) اور ٹیل ($\\text{T}$)۔",
+       "check": [
+        "2 == 2"
+       ]
+      },
+      {
+       "math": "\\text{Die} \\to \\text{Coin}: \\quad k \\to \\begin{cases} \\text{H} \\to (k, \\text{H}) \\\\ \\text{T} \\to (k, \\text{T}) \\end{cases} \\quad \\text{for } k \\in \\{1, 2, 3, 4, 5, 6\\}",
+       "en": "To sketch the tree diagram, each of the $6$ die faces branches out into $2$ sub-branches ($\\text{H}$ and $\\text{T}$) for the coin.",
+       "ur": "ٹری ڈایاگرام بنانے کے لیے، پانسے کے $6$ رخوں میں سے ہر ایک سکے کے لیے $2$ ذیلی شاخوں ($\\text{H}$ اور $\\text{T}$) میں تقسیم ہوتا ہے۔",
+       "check": [
+        "6*2 == 12"
+       ]
+      },
+      {
+       "math": "S = \\{(1,\\text{H}), (1,\\text{T}), (2,\\text{H}), (2,\\text{T}), (3,\\text{H}), (3,\\text{T}), (4,\\text{H}), (4,\\text{T}), (5,\\text{H}), (5,\\text{T}), (6,\\text{H}), (6,\\text{T})\\}",
+       "en": "By following each path from the die outcome to the coin outcome, we list all the combined outcomes to form the sample space $S$.",
+       "ur": "پانسے کے نتیجے سے سکے کے نتیجے تک ہر راستے کی پیروی کرتے ہوئے، ہم نمونہ کی فضا (سیمپل اسپیس) $S$ بنانے کے لیے تمام مشترکہ نتائج کی فہرست بناتے ہیں۔",
+       "check": [
+        "12 == 12"
+       ]
+      },
+      {
+       "math": "n(S) = 6 \\times 2 = 12",
+       "en": "Counting the total number of final branches gives the total number of elements in the sample space, which is $n(S) = 12$.",
+       "ur": "آخری شاخوں کی کل تعداد کو گننے سے نمونہ کی فضا میں ارکان کی کل تعداد حاصل ہوتی ہے، جو کہ $n(S) = 12$ ہے۔",
+       "check": [
+        "6*2 == 12"
+       ]
       }
      ],
      "answer": "$n(S) = 12$",
+     "enriched": true,
      "book_key": "n(S) = 12"
     },
     {
@@ -848,23 +1058,47 @@
      "prompt": "a tail and an even number",
      "steps": [
       {
-       "math": "n(S) = 12",
-       "en": "The sample space: die and coin, 12 outcomes.",
-       "ur": "نمونہ فضا۔",
+       "math": "n(S) = 6 \\times 2 = 12",
+       "en": "When a die (6 outcomes: $1, 2, 3, 4, 5, 6$) is rolled and a coin (2 outcomes: $H, T$) is tossed together, the total number of possible outcomes in the sample space $S$ is 12.",
+       "ur": "جب ایک پانسہ (6 نتائج: $1, 2, 3, 4, 5, 6$) پھینکا جائے اور ایک سکہ (2 نتائج: $H, T$) ایک ساتھ اچھالا جائے، تو نمونہ فضا $S$ میں کل ممکنہ نتائج کی تعداد 12 ہوتی ہے۔",
        "check": [
-        "12 == 12"
+        "6 * 2 == 12"
        ]
       },
       {
-       "math": "E = \\{(2, T), (4, T), (6, T)\\} \\Rightarrow n(E) = 3,\\quad P(E) = \\frac{3}{12} = \\frac{1}{4}",
-       "en": "Probability = favourable outcomes / total outcomes.",
-       "ur": "احتمال = موافق نتائج / کل نتائج۔",
+       "math": "n(E) = 3",
+       "en": "Let $E$ be the event of getting a tail ($T$) and an even number ($2, 4,$ or $6$). The favourable outcomes are $(2, T), (4, T),$ and $(6, T)$, so there are 3 favourable outcomes.",
+       "ur": "فرض کریں $E$ ٹیل ($T$) اور جفت عدد ($2, 4,$ یا $6$) آنے کا واقعہ ہے۔ موافق نتائج $(2, T), (4, T),$ اور $(6, T)$ ہیں، اس لیے موافق نتائج کی تعداد 3 ہے۔",
        "check": [
+        "3 == 3"
+       ]
+      },
+      {
+       "math": "P(E) = \\frac{n(E)}{n(S)}",
+       "en": "The probability of an event $E$ is calculated by dividing the number of favourable outcomes $n(E)$ by the total number of outcomes $n(S)$.",
+       "ur": "کسی واقعہ $E$ کا احتمال معلوم کرنے کے لیے موافق نتائج کی تعداد $n(E)$ کو کل نتائج کی تعداد $n(S)$ پر تقسیم کیا جاتا ہے۔"
+      },
+      {
+       "math": "P(E) = \\frac{3}{12}",
+       "en": "Substitute $n(E) = 3$ and $n(S) = 12$ into the probability formula.",
+       "ur": "احتمال کے کلیے میں $n(E) = 3$ اور $n(S) = 12$ کی قیمتیں درج کریں۔",
+       "check": [
+        "R(3, 12) == R(3, 12)"
+       ]
+      },
+      {
+       "math": "P(E) = \\frac{1}{4}",
+       "en": "Simplify the fraction by dividing both the numerator and the denominator by 3. Thus, the required probability is $\\frac{1}{4}$.",
+       "ur": "شمار کنندہ اور مخرج دونوں کو 3 پر تقسیم کر کے کسر کو مختصر کریں۔ پس، مطلوبہ احتمال $\\frac{1}{4}$ ہے۔",
+       "check": [
+        "R(3, 12) == R(1, 4)",
+        "12 == 12",
         "R(3, 12) == 1/4"
        ]
       }
      ],
      "answer": "$\\frac{1}{4}$",
+     "enriched": true,
      "book_key": "\\frac{1}{4}"
     }
    ],
@@ -883,12 +1117,9 @@
      "prompt": "tree diagram",
      "steps": [
       {
-       "math": "\\text{Die 1} \\to \\text{Die 2}",
-       "en": "Each of the 6 faces branches into 6.",
-       "ur": "6 میں سے ہر رخ 6 شاخوں میں۔",
-       "check": [
-        "6*6 == 36"
-       ],
+       "math": "",
+       "en": "We are given that two unbiased dice are rolled once. We need to find the sample space by sketching a tree diagram.",
+       "ur": "ہمیں دیا گیا ہے کہ دو غیر جانبدار پانسے ایک بار پھینکے جاتے ہیں۔ ہمیں شجری خاکہ (ٹری ڈایاگرام) بنا کر سیمپل سپیس معلوم کرنی ہے۔",
        "draw": [
         {
          "t": "line",
@@ -1317,9 +1548,33 @@
          ]
         }
        ]
+      },
+      {
+       "math": "\\text{Die 1} \\to \\{1, 2, 3, 4, 5, 6\\}",
+       "en": "In a tree diagram, the first stage has $6$ main branches representing the $6$ faces of the first die.",
+       "ur": "شجری خاکے میں، پہلے مرحلے میں $6$ مرکزی شاخیں ہوتی ہیں جو پہلے پانسے کے $6$ رخوں کو ظاہر کرتی ہیں۔"
+      },
+      {
+       "math": "\\text{Die 1} \\to \\text{Die 2} \\to \\{1, 2, 3, 4, 5, 6\\}",
+       "en": "From the end of each of the $6$ main branches, $6$ secondary branches emerge representing the $6$ faces of the second die.",
+       "ur": "$6$ مرکزی شاخوں میں سے ہر ایک کے سرے سے مزید $6$ ذیلی شاخیں نکلتی ہیں جو دوسرے پانسے کے $6$ رخوں کو ظاہر کرتی ہیں۔"
+      },
+      {
+       "math": "\\begin{aligned} 1 &\\to (1,1), (1,2), (1,3), (1,4), (1,5), (1,6) \\\\ 2 &\\to (2,1), (2,2), (2,3), (2,4), (2,5), (2,6) \\\\ 3 &\\to (3,1), (3,2), (3,3), (3,4), (3,5), (3,6) \\\\ 4 &\\to (4,1), (4,2), (4,3), (4,4), (4,5), (4,6) \\\\ 5 &\\to (5,1), (5,2), (5,3), (5,4), (5,5), (5,6) \\\\ 6 &\\to (6,1), (6,2), (6,3), (6,4), (6,5), (6,6) \\end{aligned}",
+       "en": "Tracing each path from the first die to the second die gives all the possible ordered pairs in the sample space $S$.",
+       "ur": "پہلے پانسے سے دوسرے پانسے تک ہر راستے کا تعاقب کرنے سے سیمپل سپیس $S$ میں تمام ممکنہ مترتب جوڑے حاصل ہوتے ہیں۔"
+      },
+      {
+       "math": "n(S) = 6 \\times 6 = 36",
+       "en": "By the fundamental counting principle, since each of the $6$ faces of the first die branches into $6$ outcomes of the second die, the total number of sample points is $36$.",
+       "ur": "گنتی کے بنیادی اصول کے مطابق، چونکہ پہلے پانسے کے $6$ رخوں میں سے ہر ایک دوسرے پانسے کے $6$ نتائج میں تقسیم ہوتا ہے، اس لیے سیمپل پوائنٹس کی کل تعداد $36$ ہے۔",
+       "check": [
+        "6*6 == 36"
+       ]
       }
      ],
      "answer": "$n(S) = 36$",
+     "enriched": true,
      "book_key": "n(S) = 36"
     },
     {
@@ -1327,15 +1582,37 @@
      "prompt": "possibility diagram",
      "steps": [
       {
-       "math": "\\begin{array}{c|cccccc} & 1 & 2 & 3 & 4 & 5 & 6 \\\\ \\hline 1 & (1,1) & (1,2) & (1,3) & (1,4) & (1,5) & (1,6) \\\\ 2 & (2,1) & (2,2) & (2,3) & (2,4) & (2,5) & (2,6) \\\\ 3 & (3,1) & (3,2) & (3,3) & (3,4) & (3,5) & (3,6) \\\\ 4 & (4,1) & (4,2) & (4,3) & (4,4) & (4,5) & (4,6) \\\\ 5 & (5,1) & (5,2) & (5,3) & (5,4) & (5,5) & (5,6) \\\\ 6 & (6,1) & (6,2) & (6,3) & (6,4) & (6,5) & (6,6) \\end{array}",
-       "en": "Rows: first die; columns: second die.",
-       "ur": "قطاریں: پہلا پانسہ؛ کالم: دوسرا۔",
+       "math": "\\{1, 2, 3, 4, 5, 6\\}",
+       "en": "When two unbiased dice are rolled once, each die has $6$ possible outcomes.",
+       "ur": "جب دو غیر جانبدار پانسے ایک بار پھینکے جاتے ہیں، تو ہر پانسے کے $6$ ممکنہ نتائج ہوتے ہیں۔",
+       "check": [
+        "6 == 6"
+       ]
+      },
+      {
+       "math": "",
+       "en": "To draw a possibility diagram, we make a grid where the rows represent the outcomes of the first die and the columns represent the outcomes of the second die.",
+       "ur": "امکانی خاکہ (possibility diagram) بنانے کے لیے، ہم ایک جدول بناتے ہیں جہاں قطاریں پہلے پانسے کے نتائج اور کالم دوسرے پانسے کے نتائج کو ظاہر کرتے ہیں۔"
+      },
+      {
+       "math": "\\begin{array}{c|cccccc} \\text{Die 1 \\textbackslash\\ Die 2} & 1 & 2 & 3 & 4 & 5 & 6 \\\\ \\hline 1 & (1,1) & (1,2) & (1,3) & (1,4) & (1,5) & (1,6) \\\\ 2 & (2,1) & (2,2) & (2,3) & (2,4) & (2,5) & (2,6) \\\\ 3 & (3,1) & (3,2) & (3,3) & (3,4) & (3,5) & (3,6) \\\\ 4 & (4,1) & (4,2) & (4,3) & (4,4) & (4,5) & (4,6) \\\\ 5 & (5,1) & (5,2) & (5,3) & (5,4) & (5,5) & (5,6) \\\\ 6 & (6,1) & (6,2) & (6,3) & (6,4) & (6,5) & (6,6) \\end{array}",
+       "en": "Each cell in the possibility diagram shows an ordered pair $(x, y)$, where $x$ is the number on the first die and $y$ is the number on the second die.",
+       "ur": "امکانی خاکے کا ہر خانہ ایک مترتب جوڑا $(x, y)$ دکھاتا ہے، جہاں $x$ پہلے پانسے کا نمبر ہے اور $y$ دوسرے پانسے کا نمبر ہے۔",
+       "check": [
+        "6*6 == 36"
+       ]
+      },
+      {
+       "math": "n(S) = 6 \\times 6 = 36",
+       "en": "Counting all the ordered pairs in the sample space $S$, the total number of possible outcomes is $36$.",
+       "ur": "سیمپل سپیس $S$ میں تمام مترتب جوڑوں کو گننے سے، ممکنہ نتائج کی کل تعداد $36$ ہے۔",
        "check": [
         "6*6 == 36"
        ]
       }
      ],
      "answer": "$n(S) = 36$",
+     "enriched": true,
      "book_key": "n(S) = 36"
     },
     {
@@ -1343,23 +1620,47 @@
      "prompt": "same number on both dice",
      "steps": [
       {
-       "math": "n(S) = 36",
-       "en": "The sample space: two dice, 36 outcomes.",
-       "ur": "نمونہ فضا۔",
+       "math": "n(S) = 6 \\times 6 = 36",
+       "en": "When two unbiased dice are rolled once, each die has $6$ faces, so the total number of possible outcomes in the sample space $S$ is $36$.",
+       "ur": "جب دو غیر جانبدار پانسے ایک بار پھینکے جاتے ہیں تو ہر پانسے کے $6$ رخ ہوتے ہیں، اس لیے نمونہ فضا $S$ میں ممکنہ نتائج کی کل تعداد $36$ ہے۔",
        "check": [
-        "36 == 36"
+        "6 * 6 == 36"
        ]
       },
       {
-       "math": "E = \\{(1, 1), (2, 2), (3, 3), (4, 4), (5, 5), (6, 6)\\} \\Rightarrow n(E) = 6,\\quad P(E) = \\frac{6}{36} = \\frac{1}{6}",
-       "en": "Probability = favourable outcomes / total outcomes.",
-       "ur": "احتمال = موافق نتائج / کل نتائج۔",
+       "math": "E = \\{(1, 1), (2, 2), (3, 3), (4, 4), (5, 5), (6, 6)\\}",
+       "en": "Let $E$ be the event of getting the same number on both dice (called doublets). We list all such favourable outcomes from the sample space.",
+       "ur": "فرض کریں کہ $E$ دونوں پانسوں پر ایک جیسا عدد آنے کا واقعہ ہے۔ ہم نمونہ فضا میں سے تمام موافق نتائج کی فہرست بناتے ہیں۔",
        "check": [
+        "1 + 1 + 1 + 1 + 1 + 1 == 6"
+       ]
+      },
+      {
+       "math": "n(E) = 6",
+       "en": "Counting the elements in set $E$, the number of favourable outcomes is $6$.",
+       "ur": "سیٹ $E$ کے ارکان کو گننے سے موافق نتائج کی تعداد $6$ ہے۔",
+       "check": [
+        "6 == 6"
+       ]
+      },
+      {
+       "math": "P(E) = \\frac{n(E)}{n(S)}",
+       "en": "We apply the formula for the probability of an event $E$, which is the number of favourable outcomes divided by the total number of outcomes.",
+       "ur": "ہم کسی واقعہ $E$ کے احتمال کا فارمولا استعمال کرتے ہیں، جو موافق نتائج کی تعداد کو کل ممکنہ نتائج کی تعداد پر تقسیم کرنے سے حاصل ہوتا ہے۔"
+      },
+      {
+       "math": "P(E) = \\frac{6}{36} = \\frac{1}{6}",
+       "en": "Substitute $n(E) = 6$ and $n(S) = 36$ into the formula and simplify the fraction by dividing the numerator and denominator by $6$. Thus, the required probability is $\\frac{1}{6}$.",
+       "ur": "فارمولے میں $n(E) = 6$ اور $n(S) = 36$ درج کریں اور شمار کنندہ اور مخرج کو $6$ پر تقسیم کر کے کسر کو مختصر کریں۔ اس طرح مطلوبہ احتمال $\\frac{1}{6}$ ہے۔",
+       "check": [
+        "R(6, 36) == R(1, 6)",
+        "36 == 36",
         "R(6, 36) == 1/6"
        ]
       }
      ],
      "answer": "$\\frac{1}{6}$",
+     "enriched": true,
      "book_key": "\\frac{1}{6}"
     },
     {
@@ -1367,23 +1668,52 @@
      "prompt": "the product as a prime number",
      "steps": [
       {
-       "math": "n(S) = 36",
-       "en": "The sample space: two dice, 36 outcomes.",
-       "ur": "نمونہ فضا۔",
+       "math": "n(S) = 6 \\times 6 = 36",
+       "en": "When two unbiased dice are rolled once, the total number of possible outcomes in the sample space $S$ is $36$.",
+       "ur": "جب دو غیر جانبدار پانسے ایک بار پھینکے جاتے ہیں، تو نمونہ فضا $S$ میں کل ممکنہ نتائج کی تعداد $36$ ہوتی ہے۔",
        "check": [
-        "36 == 36"
+        "6 * 6 == 36"
        ]
       },
       {
-       "math": "E = \\{(1, 2), (1, 3), (1, 5), (2, 1), (3, 1), (5, 1)\\} \\Rightarrow n(E) = 6,\\quad P(E) = \\frac{6}{36} = \\frac{1}{6}",
-       "en": "Probability = favourable outcomes / total outcomes.",
-       "ur": "احتمال = موافق نتائج / کل نتائج۔",
+       "math": "E = \\{(1, 2), (1, 3), (1, 5), (2, 1), (3, 1), (5, 1)\\}",
+       "en": "Let $E$ be the event of getting a prime number as the product of the two dice. A prime number only has two factors: $1$ and itself. So, one die must show $1$ and the other must show a prime number ($2, 3,$ or $5$).",
+       "ur": "فرض کریں کہ $E$ دونوں پانسوں کے حاصل ضرب کے طور پر ایک مفرد عدد حاصل کرنے کا واقعہ ہے۔ مفرد عدد کے صرف دو اجزائے ضربی ہوتے ہیں: $1$ اور وہ عدد خود۔ اس لیے ایک پانسے پر $1$ اور دوسرے پر مفرد عدد ($2, 3,$ یا $5$) آنا چاہیے۔",
        "check": [
+        "1*2 == 2",
+        "1*3 == 3",
+        "1*5 == 5",
+        "2*1 == 2",
+        "3*1 == 3",
+        "5*1 == 5"
+       ]
+      },
+      {
+       "math": "n(E) = 6",
+       "en": "Count the number of favourable outcomes in event $E$.",
+       "ur": "واقعہ $E$ میں موافق نتائج کی تعداد گنیں۔",
+       "check": [
+        "1 + 1 + 1 + 1 + 1 + 1 == 6"
+       ]
+      },
+      {
+       "math": "P(E) = \\frac{n(E)}{n(S)}",
+       "en": "Use the probability formula: divide the number of favourable outcomes by the total number of outcomes.",
+       "ur": "احتمال کا فارمولا استعمال کریں: موافق نتائج کی تعداد کو کل ممکنہ نتائج کی تعداد پر تقسیم کریں۔"
+      },
+      {
+       "math": "P(E) = \\frac{6}{36} = \\frac{1}{6}",
+       "en": "Substitute $n(E) = 6$ and $n(S) = 36$ into the formula and simplify the fraction to get the final answer.",
+       "ur": "فارمولے میں $n(E) = 6$ اور $n(S) = 36$ درج کریں اور حتمی جواب حاصل کرنے کے لیے کسر کو مختصر کریں۔",
+       "check": [
+        "R(6, 36) == R(1, 6)",
+        "36 == 36",
         "R(6, 36) == 1/6"
        ]
       }
      ],
      "answer": "$\\frac{1}{6}$",
+     "enriched": true,
      "book_key": "\\frac{1}{6}"
     },
     {
@@ -1391,23 +1721,44 @@
      "prompt": "the sum as an even number",
      "steps": [
       {
-       "math": "n(S) = 36",
-       "en": "The sample space: two dice, 36 outcomes.",
-       "ur": "نمونہ فضا۔",
+       "math": "n(S) = 6 \\times 6 = 36",
+       "en": "When two unbiased dice are rolled once, each die has $6$ faces, so the total number of possible outcomes in the sample space $S$ is $36$.",
+       "ur": "جب دو غیر جانبدار چھکے ایک بار پھینکے جاتے ہیں، تو ہر چھکے کے $6$ رخ ہوتے ہیں، اس لیے نمونہ فضا $S$ میں ممکنہ نتائج کی کل تعداد $36$ ہے۔",
        "check": [
-        "36 == 36"
+        "6*6 == 36"
        ]
       },
       {
-       "math": "n(E) = 18,\\quad P(E) = \\frac{18}{36} = \\frac{1}{2}",
-       "en": "Probability = favourable outcomes / total outcomes.",
-       "ur": "احتمال = موافق نتائج / کل نتائج۔",
+       "math": "",
+       "en": "Let $E$ be the event of getting an even sum (which can be $2, 4, 6, 8, 10,$ or $12$). The favourable outcomes are: $E = \\{(1,1), (1,3), (1,5), (2,2), (2,4), (2,6), (3,1), (3,3), (3,5), (4,2), (4,4), (4,6), (5,1), (5,3), (5,5), (6,2), (6,4), (6,6)\\}$.",
+       "ur": "فرض کریں کہ $E$ ایک جفت مجموعہ (جو کہ $2, 4, 6, 8, 10,$ یا $12$ ہو سکتا ہے) حاصل کرنے کا واقعہ ہے۔ موافق نتائج یہ ہیں: $E = \\{(1,1), (1,3), (1,5), (2,2), (2,4), (2,6), (3,1), (3,3), (3,5), (4,2), (4,4), (4,6), (5,1), (5,3), (5,5), (6,2), (6,4), (6,6)\\}$۔"
+      },
+      {
+       "math": "n(E) = 6 \\times 3 = 18",
+       "en": "For each of the $6$ numbers on the first die, there are $3$ numbers on the second die that give an even sum, so the number of favourable outcomes is $18$.",
+       "ur": "پہلے چھکے کے $6$ نمبروں میں سے ہر ایک کے لیے، دوسرے چھکے پر $3$ ایسے نمبر ہیں جو جفت مجموعہ دیتے ہیں، اس لیے موافق نتائج کی تعداد $18$ ہے۔",
        "check": [
+        "6*3 == 18"
+       ]
+      },
+      {
+       "math": "P(E) = \\frac{n(E)}{n(S)}",
+       "en": "The formula for the probability of an event $E$ is the number of favourable outcomes divided by the total number of outcomes.",
+       "ur": "کسی واقعہ $E$ کے احتمال کا فارمولا موافق نتائج کی تعداد کو کل نتائج کی تعداد سے تقسیم کرنا ہے۔"
+      },
+      {
+       "math": "P(E) = \\frac{18}{36} = \\frac{1}{2}",
+       "en": "Substitute $n(E) = 18$ and $n(S) = 36$ into the formula and simplify the fraction to get the final answer $\\frac{1}{2}$.",
+       "ur": "فارمولے میں $n(E) = 18$ اور $n(S) = 36$ درج کریں اور کسر کو مختصر کر کے حتمی جواب $\\frac{1}{2}$ حاصل کریں۔",
+       "check": [
+        "R(18, 36) == R(1, 2)",
+        "36 == 36",
         "R(18, 36) == 1/2"
        ]
       }
      ],
      "answer": "$\\frac{1}{2}$",
+     "enriched": true,
      "book_key": "\\frac{1}{2}"
     },
     {
@@ -1415,23 +1766,46 @@
      "prompt": "the sum as 13",
      "steps": [
       {
-       "math": "n(S) = 36",
-       "en": "The sample space: two dice, 36 outcomes.",
-       "ur": "نمونہ فضا۔",
+       "math": "n(S) = 6 \\times 6 = 36",
+       "en": "When two unbiased dice are rolled once, each die has $6$ faces, so the total number of possible outcomes in the sample space $S$ is $36$.",
+       "ur": "جب دو غیر جانبدار پانسے ایک بار پھینکے جاتے ہیں، تو ہر پانسے کے $6$ رخ ہوتے ہیں، اس لیے نمونہ فضا $S$ میں ممکنہ نتائج کی کل تعداد $36$ ہے۔",
        "check": [
-        "36 == 36"
+        "6 * 6 == 36"
        ]
       },
       {
-       "math": "E = \\{\\} \\Rightarrow n(E) = 0,\\quad P(E) = \\frac{0}{36} = 0",
-       "en": "Probability = favourable outcomes / total outcomes.",
-       "ur": "احتمال = موافق نتائج / کل نتائج۔",
+       "math": "\\text{Maximum sum} = 6 + 6 = 12",
+       "en": "Let $E$ be the event of getting a sum of $13$. Since the highest number on a die is $6$, the maximum possible sum on two dice is $12$.",
+       "ur": "فرض کریں $E$ دونوں پانسوں پر نمبروں کا مجموعہ $13$ آنے کا واقعہ ہے۔ چونکہ ایک پانسے پر سب سے بڑا نمبر $6$ ہوتا ہے، اس لیے دو پانسوں پر زیادہ سے زیادہ ممکنہ مجموعہ $12$ ہو سکتا ہے۔",
        "check": [
-        "R(0, 36) == 0"
+        "6 + 6 == 12"
+       ]
+      },
+      {
+       "math": "E = \\{\\} \\implies n(E) = 0",
+       "en": "Therefore, getting a sum of $13$ is an impossible event, which means there are $0$ favourable outcomes.",
+       "ur": "لہٰذا، مجموعہ $13$ آنا ایک ناممکن واقعہ ہے، جس کا مطلب ہے کہ موافق نتائج کی تعداد $0$ ہے۔",
+       "check": [
+        "0 == 0"
+       ]
+      },
+      {
+       "math": "P(E) = \\frac{n(E)}{n(S)}",
+       "en": "Now, we apply the probability formula, which is the number of favourable outcomes divided by the total number of outcomes.",
+       "ur": "اب، ہم احتمال کا فارمولا استعمال کرتے ہیں، جو کہ موافق نتائج کی تعداد کو کل نتائج کی تعداد پر تقسیم کرنے سے حاصل ہوتا ہے۔"
+      },
+      {
+       "math": "P(E) = \\frac{0}{36} = 0",
+       "en": "Substitute $n(E) = 0$ and $n(S) = 36$ into the formula. Thus, the probability of getting the sum as $13$ is $0$.",
+       "ur": "فارمولے میں $n(E) = 0$ اور $n(S) = 36$ درج کریں۔ اس طرح، مجموعہ $13$ حاصل کرنے کا احتمال $0$ ہے۔",
+       "check": [
+        "R(0, 36) == 0",
+        "36 == 36"
        ]
       }
      ],
      "answer": "$0$",
+     "enriched": true,
      "book_key": "0"
     }
    ],
@@ -1450,23 +1824,48 @@
      "prompt": "all tails",
      "steps": [
       {
-       "math": "n(S) = 8",
-       "en": "The sample space: three coins, 8 outcomes.",
-       "ur": "نمونہ فضا۔",
+       "math": "S = \\{HHH, HHT, HTH, THH, HTT, THT, TTH, TTT\\}",
+       "en": "When three fair coins are tossed together, the sample space $S$ consists of all possible combinations of Heads ($H$) and Tails ($T$).",
+       "ur": "جب تین سکے ایک ساتھ اچھالے جاتے ہیں، تو نمونہ فضا $S$ چت ($H$) اور پٹ ($T$) کے تمام ممکنہ نتائج پر مشتمل ہوتی ہے۔"
+      },
+      {
+       "math": "n(S) = 2^3 = 8",
+       "en": "Count the total number of possible outcomes in the sample space $S$. Since each of the $3$ coins has $2$ faces, there are $8$ total outcomes.",
+       "ur": "نمونہ فضا $S$ میں ممکنہ نتائج کی کل تعداد معلوم کریں۔ چونکہ $3$ سکوں میں سے ہر ایک کے $2$ رخ ہیں، اس لیے کل نتائج $8$ ہیں۔",
        "check": [
-        "8 == 8"
+        "2**3 == 8"
        ]
       },
       {
-       "math": "E = \\{TTT\\} \\Rightarrow n(E) = 1,\\quad P(E) = \\frac{1}{8} = \\frac{1}{8}",
-       "en": "Probability = favourable outcomes / total outcomes.",
-       "ur": "احتمال = موافق نتائج / کل نتائج۔",
+       "math": "E = \\{TTT\\}",
+       "en": "Let $E$ be the event of getting all tails. Looking at the sample space $S$, there is only one outcome where all three coins show tails.",
+       "ur": "فرض کریں کہ $E$ تمام پٹ آنے کا واقعہ ہے۔ نمونہ فضا $S$ کو دیکھتے ہوئے، صرف ایک ہی نتیجہ ایسا ہے جس میں تینوں سکوں پر پٹ آتا ہے۔"
+      },
+      {
+       "math": "n(E) = 1",
+       "en": "Therefore, the number of favourable outcomes for event $E$ is $1$.",
+       "ur": "لہٰذا، واقعہ $E$ کے لیے موافق نتائج کی تعداد $1$ ہے۔",
        "check": [
-        "R(1, 8) == 1/8"
+        "1 == 1"
+       ]
+      },
+      {
+       "math": "P(E) = \\frac{n(E)}{n(S)}",
+       "en": "Use the probability formula, which is the ratio of the number of favourable outcomes $n(E)$ to the total number of possible outcomes $n(S)$.",
+       "ur": "احتمال کا فارمولا استعمال کریں، جو موافق نتائج کی تعداد $n(E)$ اور کل ممکنہ نتائج کی تعداد $n(S)$ کی نسبت ہے۔"
+      },
+      {
+       "math": "P(E) = \\frac{1}{8}",
+       "en": "Substitute $n(E) = 1$ and $n(S) = 8$ into the formula. Thus, the probability of getting all tails is $\\frac{1}{8}$.",
+       "ur": "فارمولے میں $n(E) = 1$ اور $n(S) = 8$ درج کریں۔ اس طرح، تمام پٹ حاصل کرنے کا احتمال $\\frac{1}{8}$ ہے۔",
+       "check": [
+        "R(1, 8) == 1/8",
+        "8 == 8"
        ]
       }
      ],
      "answer": "$\\frac{1}{8}$",
+     "enriched": true,
      "book_key": "\\frac{1}{8}"
     },
     {
@@ -1474,23 +1873,48 @@
      "prompt": "at least one head",
      "steps": [
       {
-       "math": "n(S) = 8",
-       "en": "The sample space: three coins, 8 outcomes.",
-       "ur": "نمونہ فضا۔",
+       "math": "S = \\{HHH, HHT, HTH, HTT, THH, THT, TTH, TTT\\}",
+       "en": "When three fair coins are tossed together, the sample space $S$ consists of all possible combinations of Heads ($H$) and Tails ($T$).",
+       "ur": "جب تین سکے ایک ساتھ اچھالے جاتے ہیں، تو نمونہ فضا $S$ چت ($H$) اور پٹ ($T$) کے تمام ممکنہ مجموعوں پر مشتمل ہوتی ہے۔"
+      },
+      {
+       "math": "n(S) = 2^3 = 8",
+       "en": "Count the total number of possible outcomes in the sample space $S$.",
+       "ur": "نمونہ فضا $S$ میں کل ممکنہ نتائج کی تعداد گنیں۔",
        "check": [
-        "8 == 8"
+        "2**3 == 8"
        ]
       },
       {
-       "math": "E = \\{HHH, HHT, HTH, HTT, THH, THT, TTH\\} \\Rightarrow n(E) = 7,\\quad P(E) = \\frac{7}{8} = \\frac{7}{8}",
-       "en": "Probability = favourable outcomes / total outcomes.",
-       "ur": "احتمال = موافق نتائج / کل نتائج۔",
+       "math": "E = \\{HHH, HHT, HTH, HTT, THH, THT, TTH\\}",
+       "en": "Let $E$ be the event of getting at least one head (meaning $1$, $2$, or $3$ heads). List all the favourable outcomes from $S$.",
+       "ur": "فرض کریں کہ $E$ کم از کم ایک چت (یعنی $1$، $2$، یا $3$ چت) آنے کا وقوعہ ہے۔ $S$ میں سے تمام موافق نتائج کی فہرست بنائیں۔"
+      },
+      {
+       "math": "n(E) = 7",
+       "en": "Count the number of favourable outcomes in event $E$.",
+       "ur": "وقوعہ $E$ میں موافق نتائج کی تعداد گنیں۔",
        "check": [
-        "R(7, 8) == 7/8"
+        "7 == 7"
+       ]
+      },
+      {
+       "math": "P(E) = \\frac{n(E)}{n(S)}",
+       "en": "Write down the formula for the probability of an event $E$, which is the ratio of favourable outcomes to total outcomes.",
+       "ur": "وقوعہ $E$ کے احتمال کا فارمولا لکھیں، جو کہ موافق نتائج اور کل نتائج کی نسبت ہے۔"
+      },
+      {
+       "math": "P(E) = \\frac{7}{8}",
+       "en": "Substitute the values $n(E) = 7$ and $n(S) = 8$ into the formula. Thus, the probability of getting at least one head is $\\frac{7}{8}$.",
+       "ur": "فارمولے میں $n(E) = 7$ اور $n(S) = 8$ کی قیمتیں درج کریں۔ اس طرح، کم از کم ایک چت آنے کا احتمال $\\frac{7}{8}$ ہے۔",
+       "check": [
+        "R(7, 8) == 7/8",
+        "8 == 8"
        ]
       }
      ],
      "answer": "$\\frac{7}{8}$",
+     "enriched": true,
      "book_key": "\\frac{7}{8}"
     },
     {
@@ -1498,23 +1922,48 @@
      "prompt": "at most two tails",
      "steps": [
       {
-       "math": "n(S) = 8",
-       "en": "The sample space: three coins, 8 outcomes.",
-       "ur": "نمونہ فضا۔",
+       "math": "S = \\{HHH, HHT, HTH, HTT, THH, THT, TTH, TTT\\}",
+       "en": "When three fair coins are tossed together, we write all possible outcomes to form the sample space $S$.",
+       "ur": "جب تین سکے ایک ساتھ اچھالے جاتے ہیں، تو ہم نمونہ فضا $S$ بنانے کے لیے تمام ممکنہ نتائج لکھتے ہیں۔"
+      },
+      {
+       "math": "n(S) = 2^3 = 8",
+       "en": "Count the total number of possible outcomes in the sample space $S$.",
+       "ur": "نمونہ فضا $S$ میں ممکنہ نتائج کی کل تعداد گنیں۔",
        "check": [
-        "8 == 8"
+        "2**3 == 8"
        ]
       },
       {
-       "math": "E = \\{HHH, HHT, HTH, HTT, THH, THT, TTH\\} \\Rightarrow n(E) = 7,\\quad P(E) = \\frac{7}{8} = \\frac{7}{8}",
-       "en": "Probability = favourable outcomes / total outcomes.",
-       "ur": "احتمال = موافق نتائج / کل نتائج۔",
+       "math": "E = \\{HHH, HHT, HTH, HTT, THH, THT, TTH\\}",
+       "en": "Let $E$ be the event of getting at most two tails. This means getting $0$, $1$, or $2$ tails (all outcomes except $TTT$).",
+       "ur": "فرض کریں کہ $E$ زیادہ سے زیادہ دو بار ٹیل (T) آنے کا واقعہ ہے۔ اس کا مطلب ہے $0$، $1$، یا $2$ بار ٹیل آنا ($TTT$ کے علاوہ تمام نتائج)۔"
+      },
+      {
+       "math": "n(E) = 7",
+       "en": "Count the number of favourable outcomes in event $E$.",
+       "ur": "واقعہ $E$ میں موافق نتائج کی تعداد گنیں۔",
        "check": [
-        "R(7, 8) == 7/8"
+        "7 == 7"
+       ]
+      },
+      {
+       "math": "P(E) = \\frac{n(E)}{n(S)}",
+       "en": "The formula for the probability of an event $E$ is the number of favourable outcomes divided by the total number of outcomes.",
+       "ur": "کسی واقعہ $E$ کے احتمال کا فارمولا موافق نتائج کی تعداد کو کل نتائج کی تعداد پر تقسیم کرنا ہے۔"
+      },
+      {
+       "math": "P(E) = \\frac{7}{8}",
+       "en": "Substitute $n(E) = 7$ and $n(S) = 8$ into the formula. Thus, the probability of getting at most two tails is $\\frac{7}{8}$.",
+       "ur": "فارمولے میں $n(E) = 7$ اور $n(S) = 8$ درج کریں۔ اس طرح، زیادہ سے زیادہ دو ٹیل آنے کا احتمال $\\frac{7}{8}$ ہے۔",
+       "check": [
+        "R(7, 8) == 7/8",
+        "8 == 8"
        ]
       }
      ],
      "answer": "$\\frac{7}{8}$",
+     "enriched": true,
      "book_key": "\\frac{7}{8}"
     },
     {
@@ -1522,23 +1971,48 @@
      "prompt": "2 heads",
      "steps": [
       {
-       "math": "n(S) = 8",
-       "en": "The sample space: three coins, 8 outcomes.",
-       "ur": "نمونہ فضا۔",
+       "math": "S = \\{HHH, HHT, HTH, THH, HTT, THT, TTH, TTT\\}",
+       "en": "When three fair coins are tossed together, we first list all the possible outcomes to form the sample space $S$, where $H$ represents Head and $T$ represents Tail.",
+       "ur": "جب تین سکے ایک ساتھ اچھالے جاتے ہیں، تو ہم سب سے پہلے تمام ممکنہ نتائج کی فہرست بنا کر نمونہ فضا $S$ بناتے ہیں، جہاں $H$ ہیڈ اور $T$ ٹیل کو ظاہر کرتا ہے۔"
+      },
+      {
+       "math": "n(S) = 2^3 = 8",
+       "en": "Count the total number of possible outcomes in the sample space $S$.",
+       "ur": "نمونہ فضا $S$ میں ممکنہ نتائج کی کل تعداد گنیں۔",
        "check": [
-        "8 == 8"
+        "2**3 == 8"
        ]
       },
       {
-       "math": "E = \\{HHT, HTH, THH\\} \\Rightarrow n(E) = 3,\\quad P(E) = \\frac{3}{8} = \\frac{3}{8}",
-       "en": "Probability = favourable outcomes / total outcomes.",
-       "ur": "احتمال = موافق نتائج / کل نتائج۔",
+       "math": "E = \\{HHT, HTH, THH\\}",
+       "en": "Let $E$ be the event of getting exactly $2$ heads. We select all the outcomes from the sample space $S$ that have exactly two $H$'s.",
+       "ur": "فرض کریں کہ $E$ ٹھیک $2$ ہیڈ آنے کا وقوعہ ہے۔ ہم نمونہ فضا $S$ سے وہ تمام نتائج منتخب کرتے ہیں جن میں ٹھیک دو بار $H$ آیا ہے۔"
+      },
+      {
+       "math": "n(E) = 3",
+       "en": "Count the number of favourable outcomes in the event $E$.",
+       "ur": "وقوعہ $E$ میں موافق نتائج کی تعداد گنیں۔",
        "check": [
-        "R(3, 8) == 3/8"
+        "3 == 3"
+       ]
+      },
+      {
+       "math": "P(E) = \\frac{n(E)}{n(S)}",
+       "en": "Write the formula for the probability of an event, which is the number of favourable outcomes divided by the total number of outcomes.",
+       "ur": "کسی وقوعہ کے احتمال کا فارمولا لکھیں، جو کہ موافق نتائج کی تعداد کو کل نتائج کی تعداد پر تقسیم کرنے سے حاصل ہوتا ہے۔"
+      },
+      {
+       "math": "P(E) = \\frac{3}{8}",
+       "en": "Substitute the values $n(E) = 3$ and $n(S) = 8$ into the formula. Thus, the probability of getting $2$ heads is $\\frac{3}{8}$.",
+       "ur": "فارمولے میں $n(E) = 3$ اور $n(S) = 8$ کی قیمتیں درج کریں۔ اس طرح، $2$ ہیڈ حاصل کرنے کا احتمال $\\frac{3}{8}$ ہے۔",
+       "check": [
+        "R(3, 8) == 3/8",
+        "8 == 8"
        ]
       }
      ],
      "answer": "$\\frac{3}{8}$",
+     "enriched": true,
      "book_key": "\\frac{3}{8}"
     },
     {
@@ -1546,23 +2020,48 @@
      "prompt": "at most 2 heads",
      "steps": [
       {
-       "math": "n(S) = 8",
-       "en": "The sample space: three coins, 8 outcomes.",
-       "ur": "نمونہ فضا۔",
+       "math": "S = \\{HHH, HHT, HTH, HTT, THH, THT, TTH, TTT\\}",
+       "en": "When three fair coins are tossed together, the sample space $S$ consists of all possible combinations of Heads ($H$) and Tails ($T$).",
+       "ur": "جب تین سکے ایک ساتھ اچھالے جاتے ہیں، تو نمونہ فضا $S$ چِت ($H$) اور پَٹ ($T$) کے تمام ممکنہ نتائج پر مشتمل ہوتی ہے۔"
+      },
+      {
+       "math": "n(S) = 2^3 = 8",
+       "en": "Count the total number of possible outcomes in the sample space $S$.",
+       "ur": "نمونہ فضا $S$ میں کل ممکنہ نتائج کی تعداد گنیں۔",
        "check": [
-        "8 == 8"
+        "2**3 == 8"
        ]
       },
       {
-       "math": "E = \\{HHT, HTH, HTT, THH, THT, TTH, TTT\\} \\Rightarrow n(E) = 7,\\quad P(E) = \\frac{7}{8} = \\frac{7}{8}",
-       "en": "Probability = favourable outcomes / total outcomes.",
-       "ur": "احتمال = موافق نتائج / کل نتائج۔",
+       "math": "E = \\{HHT, HTH, HTT, THH, THT, TTH, TTT\\}",
+       "en": "Let $E$ be the event of getting 'at most 2 heads'. This means getting 0, 1, or 2 heads (i.e., all outcomes except $HHH$).",
+       "ur": "فرض کریں کہ $E$ 'زیادہ سے زیادہ 2 چِت' آنے کا واقعہ ہے۔ اس کا مطلب ہے 0، 1، یا 2 چِت آنا (یعنی $HHH$ کے علاوہ تمام نتائج)۔"
+      },
+      {
+       "math": "n(E) = 7",
+       "en": "Count the number of favourable outcomes in event $E$.",
+       "ur": "واقعہ $E$ میں موافق نتائج کی تعداد گنیں۔",
        "check": [
-        "R(7, 8) == 7/8"
+        "8 - 1 == 7"
+       ]
+      },
+      {
+       "math": "P(E) = \\frac{n(E)}{n(S)}",
+       "en": "Write the formula for the probability of an event, which is the number of favourable outcomes divided by the total number of outcomes.",
+       "ur": "کسی واقعہ کے احتمال کا فارمولا لکھیں، جو کہ موافق نتائج کی تعداد تقسیم کل نتائج کی تعداد کے برابر ہوتا ہے۔"
+      },
+      {
+       "math": "P(E) = \\frac{7}{8}",
+       "en": "Substitute $n(E) = 7$ and $n(S) = 8$ into the formula to find the required probability.",
+       "ur": "مطلوبہ احتمال معلوم کرنے کے لیے فارمولے میں $n(E) = 7$ اور $n(S) = 8$ درج کریں۔",
+       "check": [
+        "R(7, 8) == 7/8",
+        "8 == 8"
        ]
       }
      ],
      "answer": "$\\frac{7}{8}$",
+     "enriched": true,
      "book_key": "\\frac{7}{8}"
     },
     {
@@ -1570,23 +2069,48 @@
      "prompt": "no head",
      "steps": [
       {
-       "math": "n(S) = 8",
-       "en": "The sample space: three coins, 8 outcomes.",
-       "ur": "نمونہ فضا۔",
+       "math": "S = \\{HHH, HHT, HTH, THH, HTT, THT, TTH, TTT\\}",
+       "en": "When three fair coins are tossed together, we write all possible outcomes to form the sample space $S$.",
+       "ur": "جب تین سکے ایک ساتھ اچھالے جاتے ہیں، تو ہم نمونہ فضا $S$ بنانے کے لیے تمام ممکنہ نتائج لکھتے ہیں۔"
+      },
+      {
+       "math": "n(S) = 2^3 = 8",
+       "en": "Count the total number of possible outcomes in the sample space $S$.",
+       "ur": "نمونہ فضا $S$ میں ممکنہ نتائج کی کل تعداد گنیں۔",
        "check": [
-        "8 == 8"
+        "2**3 == 8"
        ]
       },
       {
-       "math": "E = \\{TTT\\} \\Rightarrow n(E) = 1,\\quad P(E) = \\frac{1}{8} = \\frac{1}{8}",
-       "en": "Probability = favourable outcomes / total outcomes.",
-       "ur": "احتمال = موافق نتائج / کل نتائج۔",
+       "math": "E = \\{TTT\\}",
+       "en": "Let $E$ be the event of getting 'no head'. Getting no head means all three coins show tails ($TTT$).",
+       "ur": "فرض کریں کہ $E$ 'کوئی چت نہ آنے' (no head) کا وقوعہ ہے۔ کوئی چت نہ آنے کا مطلب ہے کہ تینوں سکوں پر پٹ ($TTT$) آئے۔"
+      },
+      {
+       "math": "n(E) = 1",
+       "en": "Count the number of favourable outcomes in the event $E$.",
+       "ur": "وقوعہ $E$ میں موافق نتائج کی تعداد گنیں۔",
        "check": [
-        "R(1, 8) == 1/8"
+        "1 == 1"
+       ]
+      },
+      {
+       "math": "P(E) = \\frac{n(E)}{n(S)}",
+       "en": "Use the probability formula, which is the number of favourable outcomes divided by the total number of outcomes.",
+       "ur": "احتمال کا فارمولا استعمال کریں، جو کہ موافق نتائج کی تعداد تقسیم کل نتائج کی تعداد ہے۔"
+      },
+      {
+       "math": "P(E) = \\frac{1}{8}",
+       "en": "Substitute $n(E) = 1$ and $n(S) = 8$ into the formula. Thus, the probability of getting no head is $\\frac{1}{8}$.",
+       "ur": "فارمولے میں $n(E) = 1$ اور $n(S) = 8$ درج کریں۔ اس طرح، کوئی چت نہ آنے کا احتمال $\\frac{1}{8}$ ہے۔",
+       "check": [
+        "R(1, 8) == 1/8",
+        "8 == 8"
        ]
       }
      ],
      "answer": "$\\frac{1}{8}$",
+     "enriched": true,
      "book_key": "\\frac{1}{8}"
     }
    ],
@@ -1604,15 +2128,42 @@
      "prompt": "white",
      "steps": [
       {
-       "math": "n(S) = 4 + 5 + 6 + 3 = 18,\\quad n(E) = 5,\\quad P = \\frac{5}{18} = \\frac{5}{18}",
-       "en": "5 white balls.",
-       "ur": "موافق گیندیں گنیں۔",
+       "math": "",
+       "en": "We are given that a bag contains $4$ red balls, $5$ white balls, $6$ green balls, and $3$ black balls. We need to find the probability of drawing a white ball.",
+       "ur": "ہمیں دیا گیا ہے کہ ایک تھیلے میں $4$ سرخ گیندیں، $5$ سفید گیندیں، $6$ سبز گیندیں اور $3$ کالی گیندیں ہیں۔ ہمیں سفید گیند نکلنے کا احتمال معلوم کرنا ہے۔"
+      },
+      {
+       "math": "n(S) = 4 + 5 + 6 + 3 = 18",
+       "en": "First, add the number of balls of all colours to find the total number of possible outcomes in the sample space $S$.",
+       "ur": "سب سے پہلے، نمونہ فضا $S$ میں ممکنہ نتائج کی کل تعداد معلوم کرنے کے لیے تمام رنگوں کی گیندوں کی تعداد کو جمع کریں۔",
+       "check": [
+        "4 + 5 + 6 + 3 == 18"
+       ]
+      },
+      {
+       "math": "n(E) = 5",
+       "en": "Let $E$ be the event that the ball drawn is white. Since there are $5$ white balls in the bag, the number of favourable outcomes is $5$.",
+       "ur": "فرض کریں کہ $E$ وہ واقعہ ہے جس میں نکالی گئی گیند سفید ہے۔ چونکہ تھیلے میں $5$ سفید گیندیں ہیں، اس لیے موافق نتائج کی تعداد $5$ ہے۔",
+       "check": [
+        "5 == 5"
+       ]
+      },
+      {
+       "math": "P(E) = \\frac{n(E)}{n(S)}",
+       "en": "Write the formula for the probability of an event $E$, which is the ratio of favourable outcomes to the total possible outcomes.",
+       "ur": "کسی واقعہ $E$ کے احتمال کا فارمولا لکھیں، جو موافق نتائج اور کل ممکنہ نتائج کی نسبت ہوتا ہے۔"
+      },
+      {
+       "math": "P(E) = \\frac{5}{18}",
+       "en": "Substitute $n(E) = 5$ and $n(S) = 18$ into the formula. Therefore, the probability of drawing a white ball is $\\frac{5}{18}$.",
+       "ur": "فارمولے میں $n(E) = 5$ اور $n(S) = 18$ درج کریں۔ لہٰذا، سفید گیند نکلنے کا احتمال $\\frac{5}{18}$ ہے۔",
        "check": [
         "R(5, 18) == 5/18"
        ]
       }
      ],
      "answer": "$\\frac{5}{18}$",
+     "enriched": true,
      "book_key": "\\frac{5}{18}"
     },
     {
@@ -1620,15 +2171,51 @@
      "prompt": "red",
      "steps": [
       {
-       "math": "n(S) = 4 + 5 + 6 + 3 = 18,\\quad n(E) = 4,\\quad P = \\frac{4}{18} = \\frac{2}{9}",
-       "en": "4 red balls.",
-       "ur": "موافق گیندیں گنیں۔",
+       "math": "",
+       "en": "Write down the given number of balls of each colour in the bag: 4 red, 5 white, 6 green, and 3 black.",
+       "ur": "تھیلے میں موجود ہر رنگ کی گیندوں کی دی گئی تعداد لکھیں: 4 سرخ، 5 سفید، 6 سبز اور 3 کالی۔"
+      },
+      {
+       "math": "n(S) = 4 + 5 + 6 + 3 = 18",
+       "en": "Find the total number of possible outcomes $n(S)$ by adding all the balls in the bag.",
+       "ur": "تھیلے کی تمام گیندوں کو جمع کر کے ممکنہ نتائج کی کل تعداد $n(S)$ معلوم کریں۔",
        "check": [
+        "4 + 5 + 6 + 3 == 18"
+       ]
+      },
+      {
+       "math": "n(E) = 4",
+       "en": "Let $E$ be the event that the ball drawn is red. Since there are 4 red balls, the number of favourable outcomes $n(E)$ is 4.",
+       "ur": "فرض کریں $E$ وہ واقعہ ہے کہ نکالی گئی گیند سرخ ہے۔ چونکہ سرخ گیندیں 4 ہیں، اس لیے موافق نتائج کی تعداد $n(E)$، 4 ہے۔",
+       "check": [
+        "4 == 4"
+       ]
+      },
+      {
+       "math": "P(E) = \\frac{n(E)}{n(S)}",
+       "en": "Recall the formula for the probability of an event $E$.",
+       "ur": "کسی واقعہ $E$ کے احتمال کا فارمولا لکھیں۔"
+      },
+      {
+       "math": "P(E) = \\frac{4}{18}",
+       "en": "Substitute $n(E) = 4$ and $n(S) = 18$ into the formula.",
+       "ur": "فارمولے میں $n(E) = 4$ اور $n(S) = 18$ درج کریں۔",
+       "check": [
+        "R(4, 18) == 4/18"
+       ]
+      },
+      {
+       "math": "P(E) = \\frac{2}{9}",
+       "en": "Simplify the fraction by dividing both the numerator and denominator by 2. Thus, the probability of drawing a red ball is $\\frac{2}{9}$.",
+       "ur": "شمار کنندہ اور مخرج دونوں کو 2 پر تقسیم کر کے کسر کو مختصر کریں۔ پس سرخ گیند نکلنے کا احتمال $\\frac{2}{9}$ ہے۔",
+       "check": [
+        "R(4, 18) == R(2, 9)",
         "R(4, 18) == 2/9"
        ]
       }
      ],
      "answer": "$\\frac{2}{9}$",
+     "enriched": true,
      "book_key": "\\frac{2}{9}"
     },
     {
@@ -1636,15 +2223,43 @@
      "prompt": "not white",
      "steps": [
       {
-       "math": "n(S) = 4 + 5 + 6 + 3 = 18,\\quad n(E) = 13,\\quad P = \\frac{13}{18} = \\frac{13}{18}",
-       "en": "$1 - P(\\text{white})$: 13 balls are not white.",
-       "ur": "موافق گیندیں گنیں۔",
+       "math": "",
+       "en": "First, write down the given number of balls of each colour in the bag: $4$ red, $5$ white, $6$ green, and $3$ black balls.",
+       "ur": "سب سے پہلے، تھیلے میں موجود ہر رنگ کی گیندوں کی دی گئی تعداد لکھیں: $4$ سرخ، $5$ سفید، $6$ سبز، اور $3$ سیاہ گیندیں۔"
+      },
+      {
+       "math": "n(S) = 4 + 5 + 6 + 3 = 18",
+       "en": "Find the total number of possible outcomes $n(S)$ by adding all the balls in the bag.",
+       "ur": "تھیلے میں موجود تمام گیندوں کو جمع کر کے ممکنہ نتائج کی کل تعداد $n(S)$ معلوم کریں۔",
+       "check": [
+        "4 + 5 + 6 + 3 == 18"
+       ]
+      },
+      {
+       "math": "n(E) = 4 + 6 + 3 = 13",
+       "en": "Let $E$ be the event that the drawn ball is not white. Count the favourable outcomes $n(E)$ by adding the red, green, and black balls (or subtracting the $5$ white balls from the total $18$).",
+       "ur": "فرض کریں کہ $E$ وہ وقوعہ ہے جس میں نکالی گئی گیند سفید نہیں ہے۔ سرخ، سبز اور سیاہ گیندوں کو جمع کر کے (یا کل $18$ میں سے $5$ سفید گیندیں تفریق کر کے) موافق نتائج کی تعداد $n(E)$ معلوم کریں۔",
+       "check": [
+        "4 + 6 + 3 == 13",
+        "18 - 5 == 13"
+       ]
+      },
+      {
+       "math": "P(E) = \\frac{n(E)}{n(S)}",
+       "en": "Write the formula for the probability of an event $E$.",
+       "ur": "کسی وقوعہ $E$ کے احتمال (probability) کا فارمولا لکھیں۔"
+      },
+      {
+       "math": "P(E) = \\frac{13}{18}",
+       "en": "Substitute the values of $n(E) = 13$ and $n(S) = 18$ into the formula. Thus, the probability that the ball drawn is not white is $\\frac{13}{18}$.",
+       "ur": "فارمولے میں $n(E) = 13$ اور $n(S) = 18$ کی قیمتیں درج کریں۔ اس طرح، نکالی گئی گیند کے سفید نہ ہونے کا احتمال $\\frac{13}{18}$ ہے۔",
        "check": [
         "R(13, 18) == 13/18"
        ]
       }
      ],
      "answer": "$\\frac{13}{18}$",
+     "enriched": true,
      "book_key": "\\frac{13}{18}"
     },
     {
@@ -1652,15 +2267,52 @@
      "prompt": "not black",
      "steps": [
       {
-       "math": "n(S) = 4 + 5 + 6 + 3 = 18,\\quad n(E) = 15,\\quad P = \\frac{15}{18} = \\frac{5}{6}",
-       "en": "15 balls are not black.",
-       "ur": "موافق گیندیں گنیں۔",
+       "math": "",
+       "en": "First, identify the given number of balls of each color in the bag: $4$ red, $5$ white, $6$ green, and $3$ black balls.",
+       "ur": "سب سے پہلے، تھیلے میں موجود ہر رنگ کی گیندوں کی دی گئی تعداد معلوم کریں: $4$ سرخ، $5$ سفید، $6$ سبز اور $3$ کالی گیندیں۔"
+      },
+      {
+       "math": "n(S) = 4 + 5 + 6 + 3 = 18",
+       "en": "Find the total number of possible outcomes $n(S)$ by adding all the balls together.",
+       "ur": "تمام گیندوں کو جمع کر کے کل ممکنہ نتائج کی تعداد $n(S)$ معلوم کریں۔",
        "check": [
+        "4 + 5 + 6 + 3 == 18"
+       ]
+      },
+      {
+       "math": "n(E) = 4 + 5 + 6 = 15",
+       "en": "Let $E$ be the event that the drawn ball is not black. Count all the balls that are not black (red, white, and green) to find $n(E)$.",
+       "ur": "فرض کریں کہ $E$ وہ وقوعہ ہے کہ نکالی گئی گیند کالی نہیں ہے۔ ان تمام گیندوں کو گنیں جو کالی نہیں ہیں (سرخ، سفید اور سبز) تاکہ $n(E)$ معلوم ہو سکے۔",
+       "check": [
+        "4 + 5 + 6 == 15",
+        "18 - 3 == 15"
+       ]
+      },
+      {
+       "math": "P(E) = \\frac{n(E)}{n(S)}",
+       "en": "Write the formula for the probability of event $E$.",
+       "ur": "وقوعہ $E$ کے احتمال کا فارمولا لکھیں۔"
+      },
+      {
+       "math": "P(E) = \\frac{15}{18}",
+       "en": "Substitute the values of $n(E) = 15$ and $n(S) = 18$ into the formula.",
+       "ur": "فارمولے میں $n(E) = 15$ اور $n(S) = 18$ کی قیمتیں درج کریں۔",
+       "check": [
+        "R(15, 18) == R(15, 18)"
+       ]
+      },
+      {
+       "math": "P(E) = \\frac{5}{6}",
+       "en": "Simplify the fraction by dividing both the numerator and the denominator by $3$. Thus, the probability that the ball drawn is not black is $\\frac{5}{6}$.",
+       "ur": "شمار کنندہ اور مخرج دونوں کو $3$ پر تقسیم کر کے کسر کو مختصر کریں۔ اس طرح، نکالی گئی گیند کے کالا نہ ہونے کا احتمال $\\frac{5}{6}$ ہے۔",
+       "check": [
+        "R(15, 18) == R(5, 6)",
         "R(15, 18) == 5/6"
        ]
       }
      ],
      "answer": "$\\frac{5}{6}$",
+     "enriched": true,
      "book_key": "\\frac{5}{6}"
     }
    ],
@@ -1678,23 +2330,54 @@
      "prompt": "odd",
      "steps": [
       {
-       "math": "n(S) = 15",
-       "en": "The sample space: 15 numbers.",
-       "ur": "نمونہ فضا۔",
+       "math": "S = \\{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15\\}",
+       "en": "First, write the sample space $S$ containing all the whole numbers from $1$ to $15$ inclusive.",
+       "ur": "سب سے پہلے، نمونہ فضا $S$ لکھیں جس میں $1$ سے $15$ تک تمام مکمل اعداد شامل ہیں۔",
        "check": [
         "15 == 15"
        ]
       },
       {
-       "math": "E = \\{1, 3, 5, 7, 9, 11, 13, 15\\} \\Rightarrow n(E) = 8,\\quad P(E) = \\frac{8}{15} = \\frac{8}{15}",
-       "en": "Probability = favourable outcomes / total outcomes.",
-       "ur": "احتمال = موافق نتائج / کل نتائج۔",
+       "math": "n(S) = 15",
+       "en": "Count the total number of possible outcomes in the sample space $S$.",
+       "ur": "نمونہ فضا $S$ میں ممکنہ نتائج کی کل تعداد گنیں۔",
        "check": [
-        "R(8, 15) == 8/15"
+        "15 == 15"
+       ]
+      },
+      {
+       "math": "E = \\{1, 3, 5, 7, 9, 11, 13, 15\\}",
+       "en": "Let $E$ be the event of selecting an odd number from the sample space $S$.",
+       "ur": "فرض کریں کہ $E$ نمونہ فضا $S$ میں سے ایک طاق عدد منتخب کرنے کا واقعہ ہے۔",
+       "check": [
+        "8 == 8"
+       ]
+      },
+      {
+       "math": "n(E) = 8",
+       "en": "Count the number of favourable outcomes in the event $E$.",
+       "ur": "واقعہ $E$ میں موافق نتائج کی تعداد گنیں۔",
+       "check": [
+        "8 == 8"
+       ]
+      },
+      {
+       "math": "P(E) = \\frac{n(E)}{n(S)}",
+       "en": "State the formula for the probability of an event $E$, which is the ratio of favourable outcomes to total outcomes.",
+       "ur": "کسی واقعہ $E$ کے احتمال کا فارمولا لکھیں، جو موافق نتائج اور کل نتائج کی نسبت ہے۔"
+      },
+      {
+       "math": "P(E) = \\frac{8}{15}",
+       "en": "Substitute $n(E) = 8$ and $n(S) = 15$ into the formula. Therefore, the probability of selecting an odd number is $\\frac{8}{15}$.",
+       "ur": "فارمولے میں $n(E) = 8$ اور $n(S) = 15$ درج کریں۔ لہذا، ایک طاق عدد منتخب کرنے کا احتمال $\\frac{8}{15}$ ہے۔",
+       "check": [
+        "R(8, 15) == 8/15",
+        "15 == 15"
        ]
       }
      ],
      "answer": "$\\frac{8}{15}$",
+     "enriched": true,
      "book_key": "\\frac{8}{15}"
     },
     {
@@ -1703,22 +2386,46 @@
      "steps": [
       {
        "math": "n(S) = 15",
-       "en": "The sample space: 15 numbers.",
-       "ur": "نمونہ فضا۔",
+       "en": "First, we identify the sample space $S = \\{1, 2, 3, \\dots, 15\\}$ for whole numbers from $1$ to $15$. The total number of possible outcomes is $n(S) = 15$.",
+       "ur": "سب سے پہلے، ہم $1$ سے $15$ تک کے مکمل اعداد کے لیے نمونہ فضا $S = \\{1, 2, 3, \\dots, 15\\}$ لکھتے ہیں۔ کل ممکنہ نتائج کی تعداد $n(S) = 15$ ہے۔",
        "check": [
         "15 == 15"
        ]
       },
       {
-       "math": "E = \\{5, 10, 15\\} \\Rightarrow n(E) = 3,\\quad P(E) = \\frac{3}{15} = \\frac{1}{5}",
-       "en": "Probability = favourable outcomes / total outcomes.",
-       "ur": "احتمال = موافق نتائج / کل نتائج۔",
+       "math": "n(E) = 3",
+       "en": "Let $E$ be the event of selecting a multiple of $5$. From $1$ to $15$, the multiples of $5$ are $E = \\{5, 10, 15\\}$. Thus, the number of favourable outcomes is $n(E) = 3$.",
+       "ur": "فرض کریں کہ $E$، $5$ کا اضاف منتخب کرنے کا واقعہ ہے۔ $1$ سے $15$ کے درمیان $5$ کے اضعاف $E = \\{5, 10, 15\\}$ ہیں۔ اس طرح موافق نتائج کی تعداد $n(E) = 3$ ہے۔",
        "check": [
+        "3 == 3"
+       ]
+      },
+      {
+       "math": "P(E) = \\frac{n(E)}{n(S)}",
+       "en": "Now, we apply the formula for the probability of an event, which is the number of favourable outcomes divided by the total number of possible outcomes.",
+       "ur": "اب، ہم کسی واقعے کے احتمال کا فارمولا استعمال کرتے ہیں، جو کہ موافق نتائج کی تعداد کو کل ممکنہ نتائج کی تعداد سے تقسیم کرنے کے برابر ہے۔"
+      },
+      {
+       "math": "P(E) = \\frac{3}{15}",
+       "en": "Substitute the values $n(E) = 3$ and $n(S) = 15$ into the probability formula.",
+       "ur": "احتمال کے فارمولے میں $n(E) = 3$ اور $n(S) = 15$ کی قیمتیں درج کریں۔",
+       "check": [
+        "R(3, 15) == R(3, 15)"
+       ]
+      },
+      {
+       "math": "P(E) = \\frac{1}{5}",
+       "en": "Simplify the fraction by dividing both the numerator and the denominator by $3$. Therefore, the probability of selecting a multiple of $5$ is $\\frac{1}{5}$.",
+       "ur": "شمار کنندہ اور مخرج دونوں کو $3$ سے تقسیم کر کے کسر کو مختصر کریں۔ لہٰذا، $5$ کا اضاف منتخب ہونے کا احتمال $\\frac{1}{5}$ ہے۔",
+       "check": [
+        "R(3, 15) == R(1, 5)",
+        "15 == 15",
         "R(3, 15) == 1/5"
        ]
       }
      ],
      "answer": "$\\frac{1}{5}$",
+     "enriched": true,
      "book_key": "\\frac{1}{5}"
     },
     {
@@ -1726,23 +2433,62 @@
      "prompt": "the square of 2",
      "steps": [
       {
-       "math": "n(S) = 15",
-       "en": "The sample space: 15 numbers.",
-       "ur": "نمونہ فضا۔",
+       "math": "S = \\{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15\\}",
+       "en": "First, write the sample space $S$ containing all whole numbers from $1$ to $15$.",
+       "ur": "سب سے پہلے، نمونہ فضا $S$ لکھیں جس میں $1$ سے $15$ تک تمام مکمل اعداد شامل ہیں۔",
        "check": [
         "15 == 15"
        ]
       },
       {
-       "math": "E = \\{4\\} \\Rightarrow n(E) = 1,\\quad P(E) = \\frac{1}{15} = \\frac{1}{15}",
-       "en": "Probability = favourable outcomes / total outcomes.",
-       "ur": "احتمال = موافق نتائج / کل نتائج۔",
+       "math": "n(S) = 15",
+       "en": "Count the total number of possible outcomes in the sample space $S$.",
+       "ur": "نمونہ فضا $S$ میں کل ممکنہ نتائج کی تعداد گنیں۔",
        "check": [
-        "R(1, 15) == 1/15"
+        "15 == 15"
+       ]
+      },
+      {
+       "math": "2^2 = 4",
+       "en": "We need to find the probability of selecting the square of $2$. First, calculate the square of $2$.",
+       "ur": "ہمیں $2$ کا مربع منتخب ہونے کا احتمال معلوم کرنا ہے۔ پہلے $2$ کا مربع معلوم کریں۔",
+       "check": [
+        "2**2 == 4"
+       ]
+      },
+      {
+       "math": "E = \\{4\\}",
+       "en": "Let $E$ be the event of selecting the square of $2$. From the sample space $S$, only the number $4$ satisfies this condition.",
+       "ur": "فرض کریں کہ $E$، $2$ کا مربع منتخب ہونے کا واقعہ ہے۔ نمونہ فضا $S$ میں سے صرف عدد $4$ اس شرط کو پورا کرتا ہے۔",
+       "check": [
+        "4 == 4"
+       ]
+      },
+      {
+       "math": "n(E) = 1",
+       "en": "Count the number of favourable outcomes in event $E$.",
+       "ur": "واقعہ $E$ میں موافق نتائج کی تعداد گنیں۔",
+       "check": [
+        "1 == 1"
+       ]
+      },
+      {
+       "math": "P(E) = \\frac{n(E)}{n(S)}",
+       "en": "Write the formula for the probability of an event, which is the number of favourable outcomes divided by the total number of outcomes.",
+       "ur": "کسی واقعہ کے احتمال کا فارمولا لکھیں، جو کہ موافق نتائج کی تعداد تقسیم کل نتائج کی تعداد ہے۔"
+      },
+      {
+       "math": "P(E) = \\frac{1}{15}",
+       "en": "Substitute $n(E) = 1$ and $n(S) = 15$ into the formula. Thus, the probability that the selected number is the square of $2$ is $\\frac{1}{15}$.",
+       "ur": "فارمولے میں $n(E) = 1$ اور $n(S) = 15$ درج کریں۔ اس طرح، منتخب کردہ عدد کے $2$ کا مربع ہونے کا احتمال $\\frac{1}{15}$ ہے۔",
+       "check": [
+        "R(1, 15) == 1/15",
+        "15 == 15"
        ]
       }
      ],
      "answer": "$\\frac{1}{15}$",
+     "enriched": true,
      "book_key": "\\frac{1}{15}"
     },
     {
@@ -1750,23 +2496,49 @@
      "prompt": "prime",
      "steps": [
       {
+       "math": "",
+       "en": "Let $S$ be the sample space of selecting a whole number from $1$ to $15$ inclusive, so $S = \\{1, 2, 3, \\dots, 15\\}$.",
+       "ur": "فرض کریں کہ $S$، $1$ سے $15$ تک مکمل اعداد میں سے ایک عدد منتخب کرنے کی نمونہ فضا ہے، لہذا $S = \\{1, 2, 3, \\dots, 15\\}$ ہے۔"
+      },
+      {
        "math": "n(S) = 15",
-       "en": "The sample space: 15 numbers.",
-       "ur": "نمونہ فضا۔",
+       "en": "The total number of possible outcomes in the sample space is $15$.",
+       "ur": "نمونہ فضا میں ممکنہ نتائج کی کل تعداد $15$ ہے۔",
        "check": [
         "15 == 15"
        ]
       },
       {
-       "math": "E = \\{2, 3, 5, 7, 11, 13\\} \\Rightarrow n(E) = 6,\\quad P(E) = \\frac{6}{15} = \\frac{2}{5}",
-       "en": "Probability = favourable outcomes / total outcomes.",
-       "ur": "احتمال = موافق نتائج / کل نتائج۔",
+       "math": "",
+       "en": "Let $E$ be the event that the selected number is a prime number. The prime numbers between $1$ and $15$ are $2, 3, 5, 7, 11,$ and $13$, so $E = \\{2, 3, 5, 7, 11, 13\\}$.",
+       "ur": "فرض کریں کہ $E$ وہ وقوعہ ہے کہ منتخب کردہ عدد ایک مفرد عدد ہے۔ $1$ اور $15$ کے درمیان مفرد اعداد $2, 3, 5, 7, 11,$ اور $13$ ہیں، اس لیے $E = \\{2, 3, 5, 7, 11, 13\\}$ ہے۔"
+      },
+      {
+       "math": "n(E) = 6",
+       "en": "Counting the elements in set $E$, the number of favourable outcomes is $6$.",
+       "ur": "سیٹ $E$ میں ارکان کو گننے سے، موافق نتائج کی تعداد $6$ ہے۔",
        "check": [
+        "6 == 6"
+       ]
+      },
+      {
+       "math": "P(E) = \\frac{n(E)}{n(S)}",
+       "en": "By the formula of probability, the probability of event $E$ is the ratio of favourable outcomes to total outcomes.",
+       "ur": "احتمال کے فارمولے کے مطابق، وقوعہ $E$ کا احتمال موافق نتائج اور کل نتائج کی نسبت ہے۔"
+      },
+      {
+       "math": "P(E) = \\frac{6}{15} = \\frac{2}{5}",
+       "en": "Substitute $n(E) = 6$ and $n(S) = 15$ into the formula and simplify the fraction by dividing the numerator and denominator by $3$. Thus, the required probability is $\\frac{2}{5}$.",
+       "ur": "فارمولے میں $n(E) = 6$ اور $n(S) = 15$ درج کریں اور شمار کنندہ اور مخرج کو $3$ پر تقسیم کر کے کسر کو مختصر کریں۔ اس طرح، مطلوبہ احتمال $\\frac{2}{5}$ ہے۔",
+       "check": [
+        "R(6, 15) == R(2, 5)",
+        "15 == 15",
         "R(6, 15) == 2/5"
        ]
       }
      ],
      "answer": "$\\frac{2}{5}$",
+     "enriched": true,
      "book_key": "\\frac{2}{5}"
     },
     {
@@ -1775,22 +2547,37 @@
      "steps": [
       {
        "math": "n(S) = 15",
-       "en": "The sample space: 15 numbers.",
-       "ur": "نمونہ فضا۔",
+       "en": "First, write down the sample space $S = \\{1, 2, 3, \\dots, 15\\}$ containing the whole numbers from 1 to 15. The total number of possible outcomes is 15.",
+       "ur": "سب سے پہلے، 1 سے 15 تک کے مکمل اعداد پر مشتمل نمونہ فضا $S = \\{1, 2, 3, \\dots, 15\\}$ لکھیں۔ ممکنہ نتائج کی کل تعداد 15 ہے۔",
        "check": [
         "15 == 15"
        ]
       },
       {
-       "math": "E = \\{\\} \\Rightarrow n(E) = 0,\\quad P(E) = \\frac{0}{15} = 0",
-       "en": "Probability = favourable outcomes / total outcomes.",
-       "ur": "احتمال = موافق نتائج / کل نتائج۔",
+       "math": "n(E) = 0",
+       "en": "Let $E$ be the event that the selected number is 20. Since 20 is not in the sample space $S$, $E = \\{\\}$ is an empty set (an impossible event), so there are 0 favourable outcomes.",
+       "ur": "فرض کریں کہ $E$ وہ واقعہ ہے جس میں منتخب کردہ عدد 20 ہے۔ چونکہ 20 نمونہ فضا $S$ میں موجود نہیں ہے، اس لیے $E = \\{\\}$ ایک خالی سیٹ (ناممکن واقعہ) ہے، لہٰذا موافق نتائج کی تعداد 0 ہے۔",
        "check": [
-        "R(0, 15) == 0"
+        "0 == 0"
+       ]
+      },
+      {
+       "math": "P(E) = \\frac{n(E)}{n(S)}",
+       "en": "Recall the formula for the probability of an event $E$, which is the ratio of favourable outcomes to total outcomes.",
+       "ur": "کسی واقعہ $E$ کے احتمال کا فارمولا یاد کریں، جو موافق نتائج اور کل نتائج کی نسبت ہے۔"
+      },
+      {
+       "math": "P(E) = \\frac{0}{15} = 0",
+       "en": "Substitute $n(E) = 0$ and $n(S) = 15$ into the formula and simplify to get the final answer.",
+       "ur": "فارمولے میں $n(E) = 0$ اور $n(S) = 15$ کی قیمتیں درج کریں اور حتمی جواب حاصل کرنے کے لیے مختصر کریں۔",
+       "check": [
+        "R(0, 15) == 0",
+        "15 == 15"
        ]
       }
      ],
      "answer": "$0$",
+     "enriched": true,
      "book_key": "0"
     }
    ],
@@ -1808,15 +2595,49 @@
      "prompt": "",
      "steps": [
       {
-       "math": "P(\\overline{A}) = 1 - P(A) = 1 - \\frac{7}{10} = \\frac{3}{10}",
-       "en": "Complementary events.",
-       "ur": "متمم واقعات۔",
+       "math": "P(A) = \\frac{7}{10}",
+       "en": "We are given that the probability of event $A$ is $\\frac{7}{10}$. We need to find the probability of the event \"not $A$\", denoted as $P(\\overline{A})$.",
+       "ur": "ہمیں دیا گیا ہے کہ واقعہ $A$ کا احتمال $\\frac{7}{10}$ ہے۔ ہمیں واقعہ \"$A$ نہیں\" کا احتمال، جسے $P(\\overline{A})$ سے ظاہر کیا جاتا ہے، معلوم کرنا ہے۔",
        "check": [
+        "R(7,10) == R(7,10)"
+       ]
+      },
+      {
+       "math": "P(\\overline{A}) = 1 - P(A)",
+       "en": "Since the sum of the probabilities of an event and its complement is always $1$, we use the complementary events formula.",
+       "ur": "چونکہ کسی واقعہ اور اس کے متمم (کمپلیمنٹ) کے احتمالات کا مجموعہ ہمیشہ $1$ ہوتا ہے، اس لیے ہم متمم واقعات کا فارمولا استعمال کرتے ہیں۔",
+       "check": [
+        "1 == 1"
+       ]
+      },
+      {
+       "math": "P(\\overline{A}) = 1 - \\frac{7}{10}",
+       "en": "Substitute the given value $P(A) = \\frac{7}{10}$ into the formula.",
+       "ur": "فارمولے میں دی گئی قیمت $P(A) = \\frac{7}{10}$ درج کریں۔",
+       "check": [
+        "1 - R(7,10) == R(3,10)"
+       ]
+      },
+      {
+       "math": "P(\\overline{A}) = \\frac{10 - 7}{10}",
+       "en": "Take the LCM of the denominators, which is $10$, to subtract the fraction from $1$.",
+       "ur": "$1$ میں سے کسر کو تفریق کرنے کے لیے نصب نما کا ذواضعاف اقل (LCM) لیں، جو کہ $10$ ہے۔",
+       "check": [
+        "1 - R(7,10) == R(10-7, 10)"
+       ]
+      },
+      {
+       "math": "P(\\overline{A}) = \\frac{3}{10}",
+       "en": "Subtract the numbers in the numerator. Thus, the probability of the event \"not $A$\" is $\\frac{3}{10}$.",
+       "ur": "شمار کنندہ میں موجود اعداد کو تفریق کریں۔ اس طرح، واقعہ \"$A$ نہیں\" کا احتمال $\\frac{3}{10}$ ہے۔",
+       "check": [
+        "R(10-7, 10) == R(3,10)",
         "1 - R(7,10) == R(3,10)"
        ]
       }
      ],
      "answer": "$\\frac{3}{10}$",
+     "enriched": true,
      "book_key": "\\frac{3}{10}"
     }
    ],
@@ -1834,23 +2655,50 @@
      "prompt": "",
      "steps": [
       {
-       "math": "n(S) = 36",
-       "en": "The sample space: two rolls, 36 outcomes.",
-       "ur": "نمونہ فضا۔",
+       "math": "n(S) = 6 \\times 6 = 36",
+       "en": "When a fair six-sided dice is rolled twice, the total number of possible outcomes in the sample space $S$ is $6 \\times 6$.",
+       "ur": "جب ایک چھ رخ والے پانسے کو دو بار پھینکا جاتا ہے، تو نمونہ فضا $S$ میں کل ممکنہ نتائج کی تعداد $6 \\times 6$ ہوتی ہے۔",
        "check": [
-        "36 == 36"
+        "6 * 6 == 36"
        ]
       },
       {
-       "math": "E = \\{(5, 5), (5, 6), (6, 5), (6, 6)\\} \\Rightarrow n(E) = 4,\\quad P(E) = \\frac{4}{36} = \\frac{1}{9}",
-       "en": "Probability = favourable outcomes / total outcomes.",
-       "ur": "احتمال = موافق نتائج / کل نتائج۔",
+       "math": "E = \\{(5, 5), (5, 6), (6, 5), (6, 6)\\}",
+       "en": "Let $E$ be the event of getting a number greater than $4$ (which are $5$ and $6$) on each roll.",
+       "ur": "فرض کریں کہ $E$ ہر باری پر $4$ سے بڑا عدد (جو کہ $5$ اور $6$ ہیں) آنے کا واقعہ ہے۔",
        "check": [
+        "2 * 2 == 4"
+       ]
+      },
+      {
+       "math": "n(E) = 4",
+       "en": "Counting the pairs in $E$, the number of favourable outcomes is $4$.",
+       "ur": "واقعہ $E$ میں جوڑوں کو گننے سے، موافق نتائج کی تعداد $4$ ہے۔",
+       "check": [
+        "4 == 4"
+       ]
+      },
+      {
+       "math": "P(E) = \\frac{n(E)}{n(S)} = \\frac{4}{36}",
+       "en": "Apply the probability formula $P(E) = \\frac{n(E)}{n(S)}$ and substitute the values.",
+       "ur": "احتمال کا فارمولا $P(E) = \\frac{n(E)}{n(S)}$ استعمال کریں اور قیمتیں درج کریں۔",
+       "check": [
+        "R(4, 36) == R(4, 36)"
+       ]
+      },
+      {
+       "math": "P(E) = \\frac{1}{9}",
+       "en": "Simplify the fraction by dividing the numerator and the denominator by $4$ to get the final answer.",
+       "ur": "حتمی جواب حاصل کرنے کے لیے شمار کنندہ اور مخرج کو $4$ سے تقسیم کر کے کسر کو مختصر کریں۔",
+       "check": [
+        "R(4, 36) == R(1, 9)",
+        "36 == 36",
         "R(4, 36) == 1/9"
        ]
       }
      ],
      "answer": "$\\frac{1}{9}$",
+     "enriched": true,
      "book_key": "\\frac{1}{9}"
     }
    ],
@@ -1868,15 +2716,43 @@
      "prompt": "",
      "steps": [
       {
-       "math": "P(A \\cup B) = \\frac{1}{4} + \\frac{1}{2} - \\frac{1}{8} = \\frac{5}{8}",
-       "en": "Addition law: $P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$.",
-       "ur": "جمع کا قانون: $P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$۔",
+       "math": "",
+       "en": "First, write down the given probabilities of events $A$, $B$, and their intersection $A \\cap B$. We are given $P(A) = \\frac{1}{4}$, $P(B) = \\frac{1}{2}$, and $P(A \\cap B) = \\frac{1}{8}$. We need to find the probability of their union, $P(A \\cup B)$.",
+       "ur": "سب سے پہلے، واقعات $A$، $B$ اور ان کے تقاطع $A \\cap B$ کے دیے گئے احتمالات لکھیں۔ ہمیں $P(A) = \\frac{1}{4}$، $P(B) = \\frac{1}{2}$، اور $P(A \\cap B) = \\frac{1}{8}$ دیے گئے ہیں۔ ہمیں ان کے یونین کا احتمال، $P(A \\cup B)$ معلوم کرنا ہے۔"
+      },
+      {
+       "math": "P(A \\cup B) = P(A) + P(B) - P(A \\cap B)",
+       "en": "Since $P(A \\cap B) \\neq 0$, the events $A$ and $B$ are overlapping (not mutually exclusive). Therefore, we apply the addition law of probability for overlapping events.",
+       "ur": "چونکہ $P(A \\cap B) \\neq 0$ ہے، اس لیے واقعات $A$ اور $B$ غیر متنافی (متداخل) واقعات ہیں۔ لہٰذا، ہم متداخل واقعات کے لیے احتمال کے جمع کا قانون استعمال کریں گے۔"
+      },
+      {
+       "math": "P(A \\cup B) = \\frac{1}{4} + \\frac{1}{2} - \\frac{1}{8}",
+       "en": "Substitute the given values of $P(A)$, $P(B)$, and $P(A \\cap B)$ into the formula.",
+       "ur": "فارمولے میں $P(A)$، $P(B)$ اور $P(A \\cap B)$ کی دی گئی قیمتیں درج کریں۔",
        "check": [
+        "R(1,4) + R(1,2) - R(1,8) == R(5,8)"
+       ]
+      },
+      {
+       "math": "P(A \\cup B) = \\frac{2 + 4 - 1}{8}",
+       "en": "Take the Least Common Multiple (LCM) of the denominators $4$, $2$, and $8$, which is $8$, to combine the fractions.",
+       "ur": "کسروں کو حل کرنے کے لیے مخرج $4$، $2$ اور $8$ کا ذواضعاف اقل (LCM) لیں، جو کہ $8$ ہے۔",
+       "check": [
+        "R(1,4) + R(1,2) - R(1,8) == R(2 + 4 - 1, 8)"
+       ]
+      },
+      {
+       "math": "P(A \\cup B) = \\frac{5}{8}",
+       "en": "Simplify the numerator ($2 + 4 - 1 = 5$) to get the final answer.",
+       "ur": "حتمی جواب حاصل کرنے کے لیے شمار کنندہ کو مختصر کریں ($2 + 4 - 1 = 5$)۔",
+       "check": [
+        "R(2 + 4 - 1, 8) == R(5, 8)",
         "R(1,4) + R(1,2) - R(1,8) == R(5,8)"
        ]
       }
      ],
      "answer": "$\\frac{5}{8}$",
+     "enriched": true,
      "book_key": "\\frac{5}{8}"
     }
    ],
@@ -1894,20 +2770,65 @@
      "prompt": "",
      "steps": [
       {
-       "math": "n(S) = 50,\\ n(A) = 25,\\ n(B) = 7,\\ n(A \\cap B) = 3",
-       "en": "A: even (25), B: perfect squares 1, 4, 9, 16, 25, 36, 49 (7), A and B: 4, 16, 36 (3).",
-       "ur": "ہر واقعہ گنیں۔"
+       "math": "S = \\{1, 2, 3, \\dots, 50\\} \\implies n(S) = 50",
+       "en": "First, identify the sample space $S$ which contains all the door numbers from $1$ to $50$. Thus, the total number of possible outcomes is $50$.",
+       "ur": "سب سے پہلے، نمونہ فضا $S$ کی نشاندہی کریں جس میں $1$ سے $50$ تک تمام دروازوں کے نمبر شامل ہیں۔ اس طرح، ممکنہ نتائج کی کل تعداد $50$ ہے۔",
+       "check": [
+        "50 == 50"
+       ]
       },
       {
-       "math": "P(A \\cup B) = \\frac{25}{50} + \\frac{7}{50} - \\frac{3}{50} = \\frac{29}{50} = \\frac{29}{50}",
-       "en": "Addition law: $P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$.",
-       "ur": "جمع کا قانون: $P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$۔",
+       "math": "A = \\{2, 4, 6, \\dots, 50\\} \\implies n(A) = 25",
+       "en": "Let $A$ be the event of getting an even door number. Half of the numbers from $1$ to $50$ are even, so $n(A) = 25$.",
+       "ur": "فرض کریں کہ $A$ ایک جفت (even) دروازہ نمبر حاصل کرنے کا واقعہ ہے۔ $1$ سے $50$ تک کے آدھے اعداد جفت ہیں، اس لیے $n(A) = 25$ ہے۔",
        "check": [
+        "50/2 == 25"
+       ]
+      },
+      {
+       "math": "B = \\{1, 4, 9, 16, 25, 36, 49\\} \\implies n(B) = 7",
+       "en": "Let $B$ be the event of getting a perfect square number. Listing all the perfect squares up to $50$ gives $7$ outcomes.",
+       "ur": "فرض کریں کہ $B$ ایک مکمل مربع عدد حاصل کرنے کا واقعہ ہے۔ $50$ تک کے تمام مکمل مربع اعداد کی فہرست بنانے سے $7$ نتائج حاصل ہوتے ہیں۔",
+       "check": [
+        "7 == 7"
+       ]
+      },
+      {
+       "math": "A \\cap B = \\{4, 16, 36\\} \\implies n(A \\cap B) = 3",
+       "en": "Since some numbers are both even and perfect squares, the events $A$ and $B$ are overlapping (not mutually exclusive). Find the common elements in both sets.",
+       "ur": "چونکہ کچھ اعداد جفت اور مکمل مربع دونوں ہیں، اس لیے واقعات $A$ اور $B$ متداخل (غير متنافی) ہیں۔ دونوں سیٹوں میں مشترک ارکان معلوم کریں۔",
+       "check": [
+        "3 == 3"
+       ]
+      },
+      {
+       "math": "P(A) = \\frac{25}{50}, \\quad P(B) = \\frac{7}{50}, \\quad P(A \\cap B) = \\frac{3}{50}",
+       "en": "Write the individual probabilities for each event using the formula $P(E) = \\frac{n(E)}{n(S)}$.",
+       "ur": "فارمولا $P(E) = \\frac{n(E)}{n(S)}$ کا استعمال کرتے ہوئے ہر واقعے کے لیے انفرادی احتمالات لکھیں۔",
+       "check": [
+        "R(25, 50) == R(1, 2)",
+        "R(7, 50) == R(7, 50)",
+        "R(3, 50) == R(3, 50)"
+       ]
+      },
+      {
+       "math": "P(A \\cup B) = P(A) + P(B) - P(A \\cap B)",
+       "en": "To find the probability of getting an even number or a perfect square number, apply the addition law of probability for overlapping events.",
+       "ur": "جفت عدد یا مکمل مربع عدد حاصل کرنے کا احتمال معلوم کرنے کے لیے، متداخل واقعات کے لیے احتمال کے جمع کا قانون لاگو کریں۔"
+      },
+      {
+       "math": "P(A \\cup B) = \\frac{25}{50} + \\frac{7}{50} - \\frac{3}{50} = \\frac{25 + 7 - 3}{50} = \\frac{29}{50}",
+       "en": "Substitute the values into the formula and simplify to get the final answer.",
+       "ur": "فارمولے میں قیمتیں درج کریں اور حتمی جواب حاصل کرنے کے لیے مختصر کریں۔",
+       "check": [
+        "R(25, 50) + R(7, 50) - R(3, 50) == R(29, 50)",
+        "R(25 + 7 - 3, 50) == R(29, 50)",
         "R(25, 50) + R(7, 50) - R(3, 50) == 29/50"
        ]
       }
      ],
      "answer": "$\\frac{29}{50}$",
+     "enriched": true,
      "book_key": "\\frac{29}{50}"
     }
    ],
@@ -1925,15 +2846,39 @@
      "prompt": "wins or loses",
      "steps": [
       {
-       "math": "P(W \\cup L) = \\frac{3}{10} + \\frac{2}{10} = \\frac{1}{2}",
-       "en": "Winning and losing cannot happen together (mutually exclusive).",
-       "ur": "جیتنا اور ہارنا اکٹھے نہیں ہو سکتے۔",
+       "math": "P(W) = \\frac{3}{10}, \\quad P(L) = \\frac{2}{10}",
+       "en": "Let $W$ be the event of winning a match and $L$ be the event of losing a match. Write down their given probabilities.",
+       "ur": "فرض کریں کہ $W$ میچ جیتنے کا واقعہ ہے اور $L$ میچ ہارنے کا واقعہ ہے۔ ان کی دی گئی احتمالات (probabilities) لکھیں۔",
        "check": [
+        "R(3,10) == R(3,10)",
+        "R(2,10) == R(2,10)"
+       ]
+      },
+      {
+       "math": "P(W \\cup L) = P(W) + P(L)",
+       "en": "Since a team cannot win and lose the same match at the same time, the events $W$ and $L$ are mutually exclusive. Therefore, we apply the addition law of probability for mutually exclusive events.",
+       "ur": "چونکہ ایک ٹیم ایک ہی وقت میں ایک ہی میچ جیت اور ہار نہیں سکتی، اس لیے واقعات $W$ اور $L$ باہمی طور پر غیر مشترک (mutually exclusive) ہیں۔ لہٰذا، ہم غیر مشترک واقعات کے لیے احتمال کا جمع کا قانون استعمال کرتے ہیں۔"
+      },
+      {
+       "math": "P(W \\cup L) = \\frac{3}{10} + \\frac{2}{10} = \\frac{5}{10}",
+       "en": "Substitute the given values of $P(W)$ and $P(L)$ into the formula and add the fractions since they have the same denominator.",
+       "ur": "فارمولے میں $P(W)$ اور $P(L)$ کی دی گئی قیمتیں درج کریں اور کسروں کو جمع کریں کیونکہ ان کا مخرج (denominator) ایک جیسا ہے۔",
+       "check": [
+        "R(3,10) + R(2,10) == R(5,10)"
+       ]
+      },
+      {
+       "math": "P(W \\cup L) = \\frac{1}{2}",
+       "en": "Simplify the fraction by dividing both the numerator and the denominator by $5$. Thus, the probability that the team wins or loses a particular match is $\\frac{1}{2}$.",
+       "ur": "شمار کنندہ اور مخرج دونوں کو $5$ پر تقسیم کر کے کسر کو مختصر کریں۔ اس طرح، کسی خاص میچ میں ٹیم کے جیتنے یا ہارنے کا احتمال $\\frac{1}{2}$ ہے۔",
+       "check": [
+        "R(5,10) == R(1,2)",
         "R(3,10) + R(2,10) == R(1,2)"
        ]
       }
      ],
      "answer": "$\\frac{1}{2}$",
+     "enriched": true,
      "book_key": "\\frac{1}{2}"
     },
     {
@@ -1941,15 +2886,49 @@
      "prompt": "neither wins nor loses",
      "steps": [
       {
-       "math": "P(\\text{draw}) = 1 - \\frac{1}{2} = \\frac{1}{2}",
-       "en": "Complement.",
-       "ur": "متمم۔",
+       "math": "P(W) = \\frac{3}{10}, \\quad P(L) = \\frac{2}{10}",
+       "en": "Let $W$ be the event of winning a match and $L$ be the event of losing a match. Write down their given probabilities.",
+       "ur": "فرض کریں کہ $W$ میچ جیتنے کا واقعہ ہے اور $L$ میچ ہارنے کا واقعہ ہے۔ ان کے دیے گئے احتمالات لکھیں۔",
        "check": [
+        "R(3,10) == R(3,10)",
+        "R(2,10) == R(2,10)"
+       ]
+      },
+      {
+       "math": "P(W \\cup L) = P(W) + P(L) = \\frac{3}{10} + \\frac{2}{10} = \\frac{5}{10} = \\frac{1}{2}",
+       "en": "Since winning and losing a match are mutually exclusive events, the probability that the team either wins or loses is the sum of their individual probabilities.",
+       "ur": "چونکہ میچ جیتنا اور ہارنا باہمی غیر مشترک واقعات ہیں، اس لیے ٹیم کے جیتنے یا ہارنے کا احتمال ان کے انفرادی احتمالات کا مجموعہ ہے۔",
+       "check": [
+        "R(3,10) + R(2,10) == R(5,10)",
+        "R(5,10) == R(1,2)"
+       ]
+      },
+      {
+       "math": "P(\\text{neither win nor lose}) = P((W \\cup L)') = 1 - P(W \\cup L)",
+       "en": "The event that the team neither wins nor loses (i.e., a draw) is the complement of the event that the team wins or loses. By the complement rule of probability:",
+       "ur": "ٹیم کے نہ جیتنے اور نہ ہارنے (یعنی میچ برابر ہونے) کا واقعہ، جیتنے یا ہارنے کے واقعے کا کمپلیمنٹ (متمم) ہے۔ احتمال کے متمم کے اصول کے مطابق:"
+      },
+      {
+       "math": "P(\\text{neither win nor lose}) = 1 - \\frac{1}{2}",
+       "en": "Substitute the value of $P(W \\cup L) = \\frac{1}{2}$ into the formula.",
+       "ur": "فارمولے میں $P(W \\cup L) = \\frac{1}{2}$ کی قیمت درج کریں۔",
+       "check": [
+        "1 - R(1,2) == 1 - R(1,2)"
+       ]
+      },
+      {
+       "math": "P(\\text{neither win nor lose}) = \\frac{2 - 1}{2} = \\frac{1}{2}",
+       "en": "Simplify the fraction to find the final probability. Thus, the probability that the team neither wins nor loses a match is $\\frac{1}{2}$.",
+       "ur": "حتمی احتمال معلوم کرنے کے لیے کسر کو مختصر کریں۔ پس، ٹیم کے میچ نہ جیتنے اور نہ ہارنے کا احتمال $\\frac{1}{2}$ ہے۔",
+       "check": [
+        "1 - R(1,2) == R(2-1,2)",
+        "R(2-1,2) == R(1,2)",
         "1 - R(1,2) == R(1,2)"
        ]
       }
      ],
      "answer": "$\\frac{1}{2}$",
+     "enriched": true,
      "book_key": "\\frac{1}{2}"
     }
    ],
@@ -1967,20 +2946,74 @@
      "prompt": "",
      "steps": [
       {
-       "math": "n(S) = 36,\\ n(A) = 6,\\ n(B) = 2,\\ n(A \\cap B) = 0",
-       "en": "A: sum 7 (6 ways), B: sum 11 (2 ways); mutually exclusive.",
-       "ur": "ہر واقعہ گنیں۔"
+       "math": "n(S) = 6 \\times 6 = 36",
+       "en": "When two fair dice are thrown once, the total number of possible outcomes in the sample space $S$ is $36$.",
+       "ur": "جب دو پانسے ایک بار پھینکے جاتے ہیں، تو نمونہ کی فضا $S$ میں ممکنہ نتائج کی کل تعداد $36$ ہوتی ہے۔",
+       "check": [
+        "6 * 6 == 36"
+       ]
+      },
+      {
+       "math": "A = \\{(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)\\}, \\quad n(A) = 6",
+       "en": "Let $A$ be the event of getting a sum of $7$. There are $6$ favourable outcomes for event $A$.",
+       "ur": "فرض کریں $A$ مجموعہ $7$ حاصل کرنے کا واقعہ ہے۔ واقعہ $A$ کے لیے موافق نتائج کی تعداد $6$ ہے۔",
+       "check": [
+        "1 + 6 == 7",
+        "2 + 5 == 7",
+        "3 + 4 == 7"
+       ]
+      },
+      {
+       "math": "P(A) = \\frac{n(A)}{n(S)} = \\frac{6}{36}",
+       "en": "Now, we find the probability of event $A$ by dividing $n(A)$ by $n(S)$.",
+       "ur": "اب، ہم $n(A)$ کو $n(S)$ سے تقسیم کر کے واقعہ $A$ کا احتمال معلوم کرتے ہیں۔",
+       "check": [
+        "R(6, 36) == R(1, 6)"
+       ]
+      },
+      {
+       "math": "B = \\{(5,6), (6,5)\\}, \\quad n(B) = 2",
+       "en": "Let $B$ be the event of getting a sum of $11$. There are $2$ favourable outcomes for event $B$.",
+       "ur": "فرض کریں $B$ مجموعہ $11$ حاصل کرنے کا واقعہ ہے۔ واقعہ $B$ کے لیے موافق نتائج کی تعداد $2$ ہے۔",
+       "check": [
+        "5 + 6 == 11",
+        "6 + 5 == 11"
+       ]
+      },
+      {
+       "math": "P(B) = \\frac{n(B)}{n(S)} = \\frac{2}{36}",
+       "en": "Similarly, the probability of event $B$ is found by dividing $n(B)$ by $n(S)$.",
+       "ur": "اسی طرح، واقعہ $B$ کا احتمال $n(B)$ کو $n(S)$ سے تقسیم کر کے معلوم کیا جاتا ہے۔",
+       "check": [
+        "R(2, 36) == R(1, 18)"
+       ]
+      },
+      {
+       "math": "n(A \\cap B) = 0 \\implies P(A \\cap B) = \\frac{0}{36}",
+       "en": "Since the sum cannot be both $7$ and $11$ at the same time, events $A$ and $B$ are mutually exclusive (disjoint).",
+       "ur": "چونکہ مجموعہ ایک ہی وقت میں $7$ اور $11$ دونوں نہیں ہو سکتا، اس لیے واقعات $A$ اور $B$ باہمی طور پر مانع (غیر مشترک) ہیں۔",
+       "check": [
+        "R(0, 36) == 0"
+       ]
+      },
+      {
+       "math": "P(A \\cup B) = P(A) + P(B) - P(A \\cap B)",
+       "en": "To find the probability of getting a sum of $7$ or $11$, we apply the addition law of probability.",
+       "ur": "$7$ یا $11$ کا مجموعہ حاصل کرنے کا احتمال معلوم کرنے کے لیے، ہم احتمال کے جمع کا قانون استعمال کرتے ہیں۔"
       },
       {
        "math": "P(A \\cup B) = \\frac{6}{36} + \\frac{2}{36} - \\frac{0}{36} = \\frac{8}{36} = \\frac{2}{9}",
-       "en": "Addition law: $P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$.",
-       "ur": "جمع کا قانون: $P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$۔",
+       "en": "Substitute the values and simplify the fraction to get the final answer $\\frac{2}{9}$.",
+       "ur": "قیمتیں درج کریں اور کسر کو مختصر کر کے حتمی جواب $\\frac{2}{9}$ حاصل کریں۔",
        "check": [
+        "R(6, 36) + R(2, 36) - R(0, 36) == R(8, 36)",
+        "R(8, 36) == R(2, 9)",
         "R(6, 36) + R(2, 36) - R(0, 36) == 2/9"
        ]
       }
      ],
      "answer": "$\\frac{2}{9}$",
+     "enriched": true,
      "book_key": "\\frac{2}{9}"
     }
    ],
@@ -1998,20 +3031,60 @@
      "prompt": "",
      "steps": [
       {
-       "math": "n(S) = 36,\\ n(A) = 4,\\ n(B) = 6,\\ n(A \\cap B) = 0",
-       "en": "A: sum 5 (4 ways), B: sum 7 (6 ways).",
-       "ur": "ہر واقعہ گنیں۔"
+       "math": "n(S) = 6 \\times 6 = 36",
+       "en": "When two fair dice are thrown simultaneously, the total number of possible outcomes in the sample space $S$ is $36$.",
+       "ur": "جب دو پانسے ایک ساتھ پھینکے جاتے ہیں، تو نمونہ کی جگہ $S$ میں ممکنہ نتائج کی کل تعداد $36$ ہوتی ہے۔",
+       "check": [
+        "6 * 6 == 36"
+       ]
+      },
+      {
+       "math": "n(A) = 4, \\quad P(A) = \\frac{n(A)}{n(S)} = \\frac{4}{36}",
+       "en": "Let $A$ be the event of getting a sum of $5$. The favorable outcomes are $A = \\{(1,4), (2,3), (3,2), (4,1)\\}$, so there are $4$ ways.",
+       "ur": "فرض کریں $A$ مجموعہ $5$ آنے کا واقعہ ہے۔ موافق نتائج $A = \\{(1,4), (2,3), (3,2), (4,1)\\}$ ہیں، اس لیے اس کے $4$ طریقے ہیں۔",
+       "check": [
+        "1 + 4 == 5",
+        "2 + 3 == 5",
+        "R(4, 36) == 1/9"
+       ]
+      },
+      {
+       "math": "n(B) = 6, \\quad P(B) = \\frac{n(B)}{n(S)} = \\frac{6}{36}",
+       "en": "Let $B$ be the event of getting a sum of $7$. The favorable outcomes are $B = \\{(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)\\}$, so there are $6$ ways.",
+       "ur": "فرض کریں $B$ مجموعہ $7$ آنے کا واقعہ ہے۔ موافق نتائج $B = \\{(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)\\}$ ہیں، اس لیے اس کے $6$ طریقے ہیں۔",
+       "check": [
+        "1 + 6 == 7",
+        "2 + 5 == 7",
+        "3 + 4 == 7",
+        "R(6, 36) == 1/6"
+       ]
+      },
+      {
+       "math": "n(A \\cap B) = 0, \\quad P(A \\cap B) = \\frac{0}{36}",
+       "en": "Since the sum on the two dice cannot be both $5$ and $7$ at the same time, the events $A$ and $B$ are mutually exclusive ($A \\cap B = \\emptyset$).",
+       "ur": "چونکہ دو پانسوں کا مجموعہ بیک وقت $5$ اور $7$ دونوں نہیں ہو سکتا، اس لیے واقعات $A$ اور $B$ باہمی طور پر غیر مشترک ہیں ($A \\cap B = \\emptyset$)۔",
+       "check": [
+        "R(0, 36) == 0"
+       ]
+      },
+      {
+       "math": "P(A \\cup B) = P(A) + P(B) - P(A \\cap B)",
+       "en": "To find the probability of getting a sum of $5$ or $7$, we apply the addition law of probability.",
+       "ur": "مجموعہ $5$ یا $7$ آنے کا احتمال معلوم کرنے کے لیے، ہم احتمال کے جمع کا قانون استعمال کرتے ہیں۔"
       },
       {
        "math": "P(A \\cup B) = \\frac{4}{36} + \\frac{6}{36} - \\frac{0}{36} = \\frac{10}{36} = \\frac{5}{18}",
-       "en": "Addition law: $P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$.",
-       "ur": "جمع کا قانون: $P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$۔",
+       "en": "Substitute the values and simplify the fraction to get the final answer.",
+       "ur": "قیمتیں درج کریں اور حتمی جواب حاصل کرنے کے لیے کسر کو مختصر کریں۔",
        "check": [
+        "R(4, 36) + R(6, 36) - R(0, 36) == R(10, 36)",
+        "R(10, 36) == R(5, 18)",
         "R(4, 36) + R(6, 36) - R(0, 36) == 5/18"
        ]
       }
      ],
      "answer": "$\\frac{5}{18}$",
+     "enriched": true,
      "book_key": "\\frac{5}{18}"
     }
    ],
@@ -2029,15 +3102,54 @@
      "prompt": "a king or a jack",
      "steps": [
       {
-       "math": "P(K \\cup J) = \\frac{4}{52} + \\frac{4}{52} = \\frac{8}{52} = \\frac{2}{13}",
-       "en": "4 kings and 4 jacks; no card is both.",
-       "ur": "4 بادشاہ اور 4 غلام؛ کوئی کارڈ دونوں نہیں۔",
+       "math": "n(S) = 52",
+       "en": "Total number of cards in a standard pack is $52$.",
+       "ur": "تاش کی ایک معیاری گڈی میں پتوں کی کل تعداد $52$ ہے۔",
        "check": [
+        "52 == 52"
+       ]
+      },
+      {
+       "math": "n(K) = 4, \\quad n(J) = 4",
+       "en": "Let $K$ be the event of drawing a King and $J$ be the event of drawing a Jack. There are $4$ kings and $4$ jacks in the pack.",
+       "ur": "فرض کریں کہ $K$ بادشاہ نکلنے کا واقعہ ہے اور $J$ غلام (Jack) نکلنے کا واقعہ ہے۔ گڈی میں $4$ بادشاہ اور $4$ غلام ہوتے ہیں۔",
+       "check": [
+        "4 == 4"
+       ]
+      },
+      {
+       "math": "P(K) = \\frac{n(K)}{n(S)} = \\frac{4}{52}, \\quad P(J) = \\frac{n(J)}{n(S)} = \\frac{4}{52}",
+       "en": "Find the individual probabilities of drawing a king and a jack.",
+       "ur": "بادشاہ اور غلام نکلنے کے انفرادی احتمالات معلوم کریں۔",
+       "check": [
+        "R(4,52) == R(1,13)"
+       ]
+      },
+      {
+       "math": "P(K \\cup J) = P(K) + P(J)",
+       "en": "Since no card can be both a king and a jack at the same time, the events $K$ and $J$ are mutually exclusive. We apply the addition law of probability for mutually exclusive events.",
+       "ur": "چونکہ کوئی بھی پتہ بیک وقت بادشاہ اور غلام دونوں نہیں ہو سکتا، اس لیے واقعات $K$ اور $J$ باہمی غیر مشترک (mutually exclusive) ہیں۔ ہم باہمی غیر مشترک واقعات کے لیے احتمال کا جمع کا قانون استعمال کرتے ہیں۔"
+      },
+      {
+       "math": "P(K \\cup J) = \\frac{4}{52} + \\frac{4}{52} = \\frac{8}{52}",
+       "en": "Substitute the values of $P(K)$ and $P(J)$ and add the fractions.",
+       "ur": "$P(K)$ اور $P(J)$ کی قیمتیں درج کریں اور کسروں کو جمع کریں۔",
+       "check": [
+        "R(4,52) + R(4,52) == R(8,52)"
+       ]
+      },
+      {
+       "math": "P(K \\cup J) = \\frac{2}{13}",
+       "en": "Simplify the fraction by dividing the numerator and the denominator by $4$. Thus, the probability of taking out a king or a jack is $\\frac{2}{13}$.",
+       "ur": "شمار کنندہ اور مخرج کو $4$ پر تقسیم کر کے کسر کو مختصر کریں۔ اس طرح، بادشاہ یا غلام نکلنے کا احتمال $\\frac{2}{13}$ ہے۔",
+       "check": [
+        "R(8,52) == R(2,13)",
         "R(4,52) + R(4,52) == R(2,13)"
        ]
       }
      ],
      "answer": "$\\frac{2}{13}$",
+     "enriched": true,
      "book_key": "\\frac{2}{13}"
     },
     {
@@ -2045,15 +3157,54 @@
      "prompt": "neither a king nor a jack",
      "steps": [
       {
-       "math": "1 - \\frac{2}{13} = \\frac{11}{13}",
-       "en": "Complement.",
-       "ur": "متمم۔",
+       "math": "n(S) = 52",
+       "en": "A standard pack has $52$ cards, so the total number of possible outcomes is $n(S) = 52$.",
+       "ur": "تاش کے ایک معیاری پیکٹ میں $52$ پتے ہوتے ہیں، اس لیے ممکنہ نتائج کی کل تعداد $n(S) = 52$ ہے۔",
        "check": [
+        "52 == 52"
+       ]
+      },
+      {
+       "math": "n(E) = 4 + 4 = 8",
+       "en": "Let $E$ be the event of drawing a King or a Jack. Since there are $4$ Kings and $4$ Jacks, the number of outcomes for $E$ is $8$.",
+       "ur": "فرض کریں $E$ بادشاہ یا غلام نکلنے کا واقعہ ہے۔ چونکہ پیکٹ میں $4$ بادشاہ اور $4$ غلام ہوتے ہیں، اس لیے $E$ کے نتائج کی تعداد $8$ ہے۔",
+       "check": [
+        "4 + 4 == 8"
+       ]
+      },
+      {
+       "math": "P(E) = \\frac{8}{52} = \\frac{2}{13}",
+       "en": "The probability of drawing a King or a Jack is $P(E) = \\frac{n(E)}{n(S)}$.",
+       "ur": "بادشاہ یا غلام نکلنے کا احتمال $P(E) = \\frac{n(E)}{n(S)}$ ہے۔",
+       "check": [
+        "R(8,52) == R(2,13)"
+       ]
+      },
+      {
+       "math": "",
+       "en": "The event of drawing neither a King nor a Jack is the complement of $E$, denoted by $E'$. By the complement rule, $P(E') = 1 - P(E)$.",
+       "ur": "نہ بادشاہ اور نہ ہی غلام نکلنے کا واقعہ، $E$ کا متمم (complement) ہے، جسے $E'$ سے ظاہر کیا جاتا ہے۔ متمم کے اصول کے تحت، $P(E') = 1 - P(E)$ ہوتا ہے۔"
+      },
+      {
+       "math": "P(E') = 1 - \\frac{2}{13}",
+       "en": "Substitute $P(E) = \\frac{2}{13}$ into the complement formula.",
+       "ur": "متمم کے فارمولے میں $P(E) = \\frac{2}{13}$ کی قیمت درج کریں۔",
+       "check": [
+        "1 - R(2,13) == R(11,13)"
+       ]
+      },
+      {
+       "math": "P(E') = \\frac{13 - 2}{13} = \\frac{11}{13}",
+       "en": "Simplify the fraction by taking the LCM. Thus, the probability of taking out neither a King nor a Jack is $\\frac{11}{13}$.",
+       "ur": "ذواضعاف اقل (LCM) لے کر کسر کو مختصر کریں۔ اس طرح، نہ بادشاہ اور نہ ہی غلام نکلنے کا احتمال $\\frac{11}{13}$ ہے۔",
+       "check": [
+        "R(13 - 2, 13) == R(11,13)",
         "1 - R(2,13) == R(11,13)"
        ]
       }
      ],
      "answer": "$\\frac{11}{13}$",
+     "enriched": true,
      "book_key": "\\frac{11}{13}"
     }
    ],
@@ -2071,23 +3222,46 @@
      "prompt": "",
      "steps": [
       {
-       "math": "n(S) = 36",
-       "en": "The sample space: two throws, 36 outcomes.",
-       "ur": "نمونہ فضا۔",
+       "math": "n(S) = 6 \\times 6 = 36",
+       "en": "When a fair six-sided dice is thrown twice, each throw has $6$ possible outcomes. Therefore, the total number of possible outcomes in the sample space $S$ is $36$.",
+       "ur": "جب ایک چھ رخے پانسے کو دو بار پھینکا جاتا ہے، تو ہر بار کے لیے $6$ ممکنہ نتائج ہوتے ہیں۔ لہٰذا، نمونہ فضا $S$ میں کل ممکنہ نتائج کی تعداد $36$ ہے۔",
        "check": [
-        "36 == 36"
+        "6 * 6 == 36"
        ]
       },
       {
-       "math": "E = \\{(1, 3), (2, 3), (3, 1), (3, 2), (3, 3), (3, 4), (3, 5), (3, 6), (4, 3), (5, 3), (6, 3)\\} \\Rightarrow n(E) = 11,\\quad P(E) = \\frac{11}{36} = \\frac{11}{36}",
-       "en": "Probability = favourable outcomes / total outcomes.",
-       "ur": "احتمال = موافق نتائج / کل نتائج۔",
+       "math": "E = \\{(1, 3), (2, 3), (3, 1), (3, 2), (3, 3), (3, 4), (3, 5), (3, 6), (4, 3), (5, 3), (6, 3)\\}",
+       "en": "Let $E$ be the event that at least one of the two throws comes up with the number $3$. We list all the pairs from the sample space that contain $3$ in the first throw, the second throw, or both.",
+       "ur": "فرض کریں کہ $E$ وہ وقوعہ ہے جس میں دونوں باریوں میں سے کم از کم ایک بار نمبر $3$ آتا ہے۔ ہم نمونہ فضا سے وہ تمام جوڑے لکھتے ہیں جن میں پہلی باری، دوسری باری، یا دونوں میں $3$ شامل ہو۔",
        "check": [
-        "R(11, 36) == 11/36"
+        "1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 == 11"
+       ]
+      },
+      {
+       "math": "n(E) = 11",
+       "en": "By counting the pairs in set $E$, we find that the number of favourable outcomes is $11$.",
+       "ur": "سیٹ $E$ میں جوڑوں کو گننے سے معلوم ہوتا ہے کہ موافق نتائج کی تعداد $11$ ہے۔",
+       "check": [
+        "11 == 11"
+       ]
+      },
+      {
+       "math": "P(E) = \\frac{n(E)}{n(S)}",
+       "en": "According to the formula of probability, the probability of an event $E$ is the ratio of the number of favourable outcomes $n(E)$ to the total number of possible outcomes $n(S)$.",
+       "ur": "احتمال کے فارمولے کے مطابق، کسی وقوعہ $E$ کا احتمال موافق نتائج کی تعداد $n(E)$ اور کل ممکنہ نتائج کی تعداد $n(S)$ کی نسبت کے برابر ہوتا ہے۔"
+      },
+      {
+       "math": "P(E) = \\frac{11}{36}",
+       "en": "Substitute $n(E) = 11$ and $n(S) = 36$ into the formula. Thus, the required probability is $\\frac{11}{36}$.",
+       "ur": "فارمولے میں $n(E) = 11$ اور $n(S) = 36$ درج کریں۔ پس، مطلوبہ احتمال $\\frac{11}{36}$ ہے۔",
+       "check": [
+        "R(11, 36) == 11/36",
+        "36 == 36"
        ]
       }
      ],
      "answer": "$\\frac{11}{36}$",
+     "enriched": true,
      "book_key": "\\frac{11}{36}"
     }
    ],
@@ -2105,20 +3279,52 @@
      "prompt": "",
      "steps": [
       {
-       "math": "n(S) = 15,\\ n(A) = 3,\\ n(B) = 2,\\ n(A \\cap B) = 0",
-       "en": "Multiples of 5: 5, 10, 15; multiples of 7: 7, 14.",
-       "ur": "ہر واقعہ گنیں۔"
+       "math": "",
+       "en": "Let $S$ be the sample space of all 15 cards marked from 1 to 15: $S = \\{1, 2, 3, \\dots, 15\\}$, so the total number of possible outcomes is $n(S) = 15$.",
+       "ur": "فرض کریں کہ $S$، 1 سے 15 تک نشان زد تمام 15 کارڈز کی نمونہ فضا (sample space) ہے: $S = \\{1, 2, 3, \\dots, 15\\}$، لہٰذا ممکنہ نتائج کی کل تعداد $n(S) = 15$ ہے۔"
       },
       {
-       "math": "P(A \\cup B) = \\frac{3}{15} + \\frac{2}{15} - \\frac{0}{15} = \\frac{5}{15} = \\frac{1}{3}",
-       "en": "Addition law: $P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$.",
-       "ur": "جمع کا قانون: $P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$۔",
+       "math": "P(A) = \\frac{n(A)}{n(S)} = \\frac{3}{15}",
+       "en": "Let $A$ be the event of picking a card with a multiple of 5. Since $A = \\{5, 10, 15\\}$, we have $n(A) = 3$, and the probability of event $A$ is:",
+       "ur": "فرض کریں کہ $A$ ایک ایسا کارڈ چننے کا واقعہ ہے جو 5 کا ضعف (multiple) ہو۔ چونکہ $A = \\{5, 10, 15\\}$ ہے، اس لیے $n(A) = 3$ ہے، اور واقعہ $A$ کا احتمال یہ ہے:",
        "check": [
+        "R(3, 15) == R(1, 5)"
+       ]
+      },
+      {
+       "math": "P(B) = \\frac{n(B)}{n(S)} = \\frac{2}{15}",
+       "en": "Let $B$ be the event of picking a card with a multiple of 7. Since $B = \\{7, 14\\}$, we have $n(B) = 2$, and the probability of event $B$ is:",
+       "ur": "فرض کریں کہ $B$ ایک ایسا کارڈ چننے کا واقعہ ہے جو 7 کا ضعف ہو۔ چونکہ $B = \\{7, 14\\}$ ہے، اس لیے $n(B) = 2$ ہے، اور واقعہ $B$ کا احتمال یہ ہے:",
+       "check": [
+        "R(2, 15) == R(2, 15)"
+       ]
+      },
+      {
+       "math": "P(A \\cap B) = \\frac{n(A \\cap B)}{n(S)} = \\frac{0}{15} = 0",
+       "en": "Since there is no common element in $A$ and $B$ ($A \\cap B = \\emptyset$), the events are mutually exclusive with $n(A \\cap B) = 0$.",
+       "ur": "چونکہ $A$ اور $B$ میں کوئی مشترک رکن نہیں ہے ($A \\cap B = \\emptyset$)، اس لیے یہ واقعات باہمی طور پر مانع (mutually exclusive) ہیں اور $n(A \\cap B) = 0$ ہے۔",
+       "check": [
+        "R(0, 15) == 0"
+       ]
+      },
+      {
+       "math": "P(A \\cup B) = P(A) + P(B) - P(A \\cap B)",
+       "en": "To find the probability that the card is a multiple of 5 or 7, we apply the addition law of probability.",
+       "ur": "یہ معلوم کرنے کے لیے کہ کارڈ 5 یا 7 کا ضعف ہے، ہم احتمال کے جمع کے قانون کا اطلاق کرتے ہیں۔"
+      },
+      {
+       "math": "P(A \\cup B) = \\frac{3}{15} + \\frac{2}{15} - 0 = \\frac{5}{15} = \\frac{1}{3}",
+       "en": "Substitute the values into the formula and simplify to get the final answer.",
+       "ur": "فارمولے میں قیمتیں درج کریں اور حتمی جواب حاصل کرنے کے لیے مختصر کریں۔",
+       "check": [
+        "R(3, 15) + R(2, 15) - 0 == R(5, 15)",
+        "R(5, 15) == R(1, 3)",
         "R(3, 15) + R(2, 15) - R(0, 15) == 1/3"
        ]
       }
      ],
      "answer": "$\\frac{1}{3}$",
+     "enriched": true,
      "book_key": "\\frac{1}{3}"
     }
    ],
@@ -2136,20 +3342,54 @@
      "prompt": "",
      "steps": [
       {
-       "math": "n(S) = 4,\\ n(A) = 3,\\ n(B) = 1,\\ n(A \\cap B) = 1",
-       "en": "B (two heads) is inside A (at least one head).",
-       "ur": "ہر واقعہ گنیں۔"
+       "math": "S = \\{HH, HT, TH, TT\\}, \\quad n(S) = 4",
+       "en": "When two fair coins are tossed once, the sample space $S$ has $4$ possible outcomes.",
+       "ur": "جب دو سکے ایک بار اچھالے جاتے ہیں، تو نمونہ فضا $S$ میں $4$ ممکنہ نتائج ہوتے ہیں۔",
+       "check": [
+        "2**2 == 4"
+       ]
       },
       {
-       "math": "P(A \\cup B) = \\frac{3}{4} + \\frac{1}{4} - \\frac{1}{4} = \\frac{3}{4} = \\frac{3}{4}",
-       "en": "Addition law: $P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$.",
-       "ur": "جمع کا قانون: $P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$۔",
+       "math": "A = \\{HH, HT, TH\\}, \\quad n(A) = 3, \\quad P(A) = \\frac{n(A)}{n(S)} = \\frac{3}{4}",
+       "en": "Let $A$ be the event of getting at least one head. There are $3$ such outcomes, so the probability of $A$ is $\\frac{3}{4}$.",
+       "ur": "فرض کریں $A$ کم از کم ایک ہیڈ (head) آنے کا واقعہ ہے۔ ایسے $3$ نتائج ہیں، اس لیے $A$ کا احتمال $\\frac{3}{4}$ ہے۔",
        "check": [
+        "R(3, 4) == 3/4"
+       ]
+      },
+      {
+       "math": "B = \\{HH\\}, \\quad n(B) = 1, \\quad P(B) = \\frac{n(B)}{n(S)} = \\frac{1}{4}",
+       "en": "Let $B$ be the event of getting two heads. There is $1$ such outcome, so the probability of $B$ is $\\frac{1}{4}$.",
+       "ur": "فرض کریں $B$ دو ہیڈز آنے کا واقعہ ہے۔ ایسا $1$ نتیجہ ہے، اس لیے $B$ کا احتمال $\\frac{1}{4}$ ہے۔",
+       "check": [
+        "R(1, 4) == 1/4"
+       ]
+      },
+      {
+       "math": "A \\cap B = \\{HH\\}, \\quad n(A \\cap B) = 1, \\quad P(A \\cap B) = \\frac{n(A \\cap B)}{n(S)} = \\frac{1}{4}",
+       "en": "Since the outcome $HH$ is common to both events, $A$ and $B$ are overlapping (not mutually exclusive) events.",
+       "ur": "چونکہ نتیجہ $HH$ دونوں واقعات میں مشترک ہے، اس لیے $A$ اور $B$ غیر متنافی (متداخل) واقعات ہیں۔",
+       "check": [
+        "R(1, 4) == 1/4"
+       ]
+      },
+      {
+       "math": "P(A \\cup B) = P(A) + P(B) - P(A \\cap B)",
+       "en": "To find the probability of getting at least one head or two heads, we apply the addition law of probability for overlapping events.",
+       "ur": "کم از کم ایک ہیڈ یا دو ہیڈز آنے کا احتمال معلوم کرنے کے لیے، ہم غیر متنافی واقعات کے لیے احتمال کے جمع کا قانون لاگو کرتے ہیں۔"
+      },
+      {
+       "math": "P(A \\cup B) = \\frac{3}{4} + \\frac{1}{4} - \\frac{1}{4} = \\frac{3}{4}",
+       "en": "Substitute the values and simplify to get the final answer $\\frac{3}{4}$.",
+       "ur": "قیمتیں درج کریں اور مختصر کر کے حتمی جواب $\\frac{3}{4}$ حاصل کریں۔",
+       "check": [
+        "R(3, 4) + R(1, 4) - R(1, 4) == R(3, 4)",
         "R(3, 4) + R(1, 4) - R(1, 4) == 3/4"
        ]
       }
      ],
      "answer": "$\\frac{3}{4}$",
+     "enriched": true,
      "book_key": "\\frac{3}{4}"
     }
    ],
@@ -2167,15 +3407,46 @@
      "prompt": "",
      "steps": [
       {
-       "math": "P(L \\cup R) = 0.3 + 0.5 = 0.8 = \\frac{4}{5}",
-       "en": "A vehicle cannot turn both ways (mutually exclusive).",
-       "ur": "گاڑی دونوں طرف نہیں مڑ سکتی۔",
+       "math": "P(L) = 30\\% = \\frac{30}{100} = 0.3",
+       "en": "Let $L$ be the event that a vehicle turns left. We convert the given percentage into a decimal.",
+       "ur": "فرض کریں کہ $L$ گاڑی کے بائیں مڑنے کا وقوعہ ہے۔ ہم دیے گئے فیصد کو اعشاریہ میں تبدیل کرتے ہیں۔",
        "check": [
+        "R(30, 100) == R(3, 10)"
+       ]
+      },
+      {
+       "math": "P(R) = 50\\% = \\frac{50}{100} = 0.5",
+       "en": "Let $R$ be the event that a vehicle turns right. We convert this percentage into a decimal as well.",
+       "ur": "فرض کریں کہ $R$ گاڑی کے دائیں مڑنے کا وقوعہ ہے۔ ہم اس فیصد کو بھی اعشاریہ میں تبدیل کرتے ہیں۔",
+       "check": [
+        "R(50, 100) == R(5, 10)"
+       ]
+      },
+      {
+       "math": "P(L \\cup R) = P(L) + P(R)",
+       "en": "Since a vehicle cannot turn both left and right at the same time, the events $L$ and $R$ are mutually exclusive. Therefore, we use the addition law of probability for mutually exclusive events.",
+       "ur": "چونکہ ایک گاڑی بیک وقت بائیں اور دائیں دونوں طرف نہیں مڑ سکتی، اس لیے وقوعات $L$ اور $R$ باہمی غیر مشترک (mutually exclusive) ہیں۔ لہٰذا، ہم باہمی غیر مشترک وقوعات کے لیے احتمال کے جمع کا قانون استعمال کرتے ہیں۔"
+      },
+      {
+       "math": "P(L \\cup R) = 0.3 + 0.5 = 0.8",
+       "en": "Substitute the values of $P(L)$ and $P(R)$ into the formula and add them.",
+       "ur": "فارمولے میں $P(L)$ اور $P(R)$ کی قیمتیں درج کریں اور انہیں جمع کریں۔",
+       "check": [
+        "R(3, 10) + R(5, 10) == R(8, 10)"
+       ]
+      },
+      {
+       "math": "P(L \\cup R) = \\frac{8}{10} = \\frac{4}{5}",
+       "en": "Convert the decimal into a simplified fraction. Thus, the probability that a randomly selected vehicle turns left or right is $\\frac{4}{5}$.",
+       "ur": "اعشاریہ کو مختصر کسر میں تبدیل کریں۔ اس طرح، بے ترتیب منتخب کی گئی گاڑی کے بائیں یا دائیں مڑنے کا احتمال $\\frac{4}{5}$ ہے۔",
+       "check": [
+        "R(8, 10) == R(4, 5)",
         "R(3,10) + R(5,10) == R(4,5)"
        ]
       }
      ],
      "answer": "$\\frac{4}{5}$",
+     "enriched": true,
      "book_key": "\\frac{4}{5}"
     }
    ],
@@ -2193,23 +3464,49 @@
      "prompt": "",
      "steps": [
       {
-       "math": "n(S) = 4",
-       "en": "The sample space: two coins, 4 outcomes.",
-       "ur": "نمونہ فضا۔",
+       "math": "S = \\{HH, HT, TH, TT\\}",
+       "en": "When two fair coins are tossed, the sample space $S$ consists of all possible outcomes.",
+       "ur": "جب دو منصفانہ سکے اچھالے جاتے ہیں، تو نمونہ فضا $S$ تمام ممکنہ نتائج پر مشتمل ہوتی ہے۔"
+      },
+      {
+       "math": "n(S) = 2 \\times 2 = 4",
+       "en": "Therefore, the total number of possible outcomes is $4$.",
+       "ur": "لہذا، ممکنہ نتائج کی کل تعداد $4$ ہے۔",
        "check": [
-        "4 == 4"
+        "2 * 2 == 4"
        ]
       },
       {
-       "math": "E = \\{HH, TT\\} \\Rightarrow n(E) = 2,\\quad P(E) = \\frac{2}{4} = \\frac{1}{2}",
-       "en": "Probability = favourable outcomes / total outcomes.",
-       "ur": "احتمال = موافق نتائج / کل نتائج۔",
+       "math": "E = \\{HH, TT\\}",
+       "en": "Let $E$ be the event of getting either two heads ($HH$) or two tails ($TT$).",
+       "ur": "فرض کریں کہ $E$ دو ہیڈز ($HH$) یا دو ٹیلز ($TT$) آنے کا واقعہ ہے۔"
+      },
+      {
+       "math": "n(E) = 2",
+       "en": "The number of favourable outcomes for event $E$ is $2$.",
+       "ur": "واقعہ $E$ کے لیے موافق نتائج کی تعداد $2$ ہے۔",
        "check": [
+        "2 == 2"
+       ]
+      },
+      {
+       "math": "P(E) = \\frac{n(E)}{n(S)}",
+       "en": "By the formula of probability, the probability of an event is the ratio of favourable outcomes to total outcomes.",
+       "ur": "احتمال کے فارمولے کے مطابق، کسی واقعے کا احتمال موافق نتائج اور کل نتائج کی نسبت ہوتا ہے۔"
+      },
+      {
+       "math": "P(E) = \\frac{2}{4} = \\frac{1}{2}",
+       "en": "Substitute the values $n(E) = 2$ and $n(S) = 4$ into the formula and simplify to get the final answer.",
+       "ur": "فارمولے میں $n(E) = 2$ اور $n(S) = 4$ کی قیمتیں درج کریں اور حتمی جواب حاصل کرنے کے لیے مختصر کریں۔",
+       "check": [
+        "R(2, 4) == R(1, 2)",
+        "4 == 4",
         "R(2, 4) == 1/2"
        ]
       }
      ],
      "answer": "$\\frac{1}{2}$",
+     "enriched": true,
      "book_key": "\\frac{1}{2}"
     }
    ],
@@ -2227,23 +3524,46 @@
      "prompt": "",
      "steps": [
       {
+       "math": "P(\\text{not } A) = P(A') = 0.45, \\quad P(A \\cup B) = 0.65",
+       "en": "Write down the given probabilities from the question. We need to find $P(B)$.",
+       "ur": "سوال میں دیے گئے احتمالات لکھیں۔ ہمیں $P(B)$ معلوم کرنا ہے۔"
+      },
+      {
+       "math": "P(A) + P(A') = 1 \\implies P(A) = 1 - P(A')",
+       "en": "By the complement rule of probability, the sum of the probabilities of an event and its complement is $1$.",
+       "ur": "احتمال کے تکمیلی اصول (متمم) کے مطابق، کسی وقوعہ اور اس کے متمم کے احتمالات کا مجموعہ $1$ ہوتا ہے۔"
+      },
+      {
        "math": "P(A) = 1 - 0.45 = 0.55",
-       "en": "Complement.",
-       "ur": "متمم۔",
+       "en": "Substitute $P(A') = 0.45$ to find $P(A)$.",
+       "ur": "$P(A)$ معلوم کرنے کے لیے $P(A') = 0.45$ درج کریں۔",
        "check": [
         "1 - R(45,100) == R(55,100)"
        ]
       },
       {
-       "math": "P(B) = P(A \\cup B) - P(A) = 0.65 - 0.55 = 0.10",
-       "en": "Mutually exclusive: $P(A \\cup B) = P(A) + P(B)$.",
-       "ur": "باہم خارج: $P(A \\cup B) = P(A) + P(B)$۔",
+       "math": "P(A \\cup B) = P(A) + P(B)",
+       "en": "Since $A$ and $B$ are mutually exclusive events, we apply the addition law of probability for mutually exclusive events.",
+       "ur": "چونکہ $A$ اور $B$ باہم متنافی (خارج) واقعات ہیں، اس لیے ہم باہم متنافی واقعات کے لیے احتمال کا قانونِ جمع استعمال کرتے ہیں۔"
+      },
+      {
+       "math": "0.65 = 0.55 + P(B)",
+       "en": "Substitute the known values $P(A \\cup B) = 0.65$ and $P(A) = 0.55$ into the formula.",
+       "ur": "فارمولے میں معلوم قیمتیں $P(A \\cup B) = 0.65$ اور $P(A) = 0.55$ درج کریں۔"
+      },
+      {
+       "math": "P(B) = 0.65 - 0.55 = 0.10",
+       "en": "Subtract $0.55$ from $0.65$ to get the final value of $P(B)$.",
+       "ur": "$P(B)$ کی حتمی قیمت حاصل کرنے کے لیے $0.65$ میں سے $0.55$ کو تفریق کریں۔",
        "check": [
+        "R(65,100) - R(55,100) == R(10,100)",
+        "1 - R(45,100) == R(55,100)",
         "R(65,100) - R(55,100) == R(1,10)"
        ]
       }
      ],
      "answer": "$0.10$",
+     "enriched": true,
      "book_key": "0.10"
     }
    ],
@@ -2261,15 +3581,48 @@
      "prompt": "",
      "steps": [
       {
-       "math": "P(A \\cap B) = P(A) + P(B) - P(A \\cup B) = \\frac{2}{3} + \\frac{2}{5} - \\frac{1}{3} = \\frac{11}{15}",
-       "en": "Rearrange the addition law.",
-       "ur": "جمع کے قانون کو ترتیب دیں۔",
+       "math": "",
+       "en": "From the question, we are given the probabilities $P(A) = \\frac{2}{3}$, $P(B) = \\frac{2}{5}$, and $P(A \\cup B) = \\frac{1}{3}$. We need to find $P(A \\cap B)$.",
+       "ur": "سوال کے مطابق ہمیں احتمالات $P(A) = \\frac{2}{3}$، $P(B) = \\frac{2}{5}$ اور $P(A \\cup B) = \\frac{1}{3}$ دیے گئے ہیں۔ ہمیں $P(A \\cap B)$ معلوم کرنا ہے۔"
+      },
+      {
+       "math": "P(A \\cup B) = P(A) + P(B) - P(A \\cap B)",
+       "en": "According to the addition law of probability for any two events $A$ and $B$:",
+       "ur": "کسی بھی دو واقعات $A$ اور $B$ کے لیے احتمال کے جمع کے قانون کے مطابق:"
+      },
+      {
+       "math": "P(A \\cap B) = P(A) + P(B) - P(A \\cup B)",
+       "en": "Rearrange the formula to make $P(A \\cap B)$ the subject.",
+       "ur": "$P(A \\cap B)$ کی قیمت نکالنے کے لیے فارمولے کو ترتیب دیں۔"
+      },
+      {
+       "math": "P(A \\cap B) = \\frac{2}{3} + \\frac{2}{5} - \\frac{1}{3}",
+       "en": "Substitute the given values of $P(A)$, $P(B)$, and $P(A \\cup B)$ into the equation.",
+       "ur": "مساوات میں $P(A)$، $P(B)$ اور $P(A \\cup B)$ کی دی گئی قیمتیں درج کریں۔",
        "check": [
+        "R(2,3) + R(2,5) - R(1,3) == R(11,15)"
+       ]
+      },
+      {
+       "math": "P(A \\cap B) = \\frac{10 + 6 - 5}{15}",
+       "en": "Take the LCM of the denominators $3$ and $5$, which is $15$, to combine the fractions.",
+       "ur": "کسروں کو حل کرنے کے لیے مخرج $3$ اور $5$ کا ذواضعاف اقل (LCM) لیں، جو کہ $15$ ہے۔",
+       "check": [
+        "R(2,3) + R(2,5) - R(1,3) == R(10 + 6 - 5, 15)"
+       ]
+      },
+      {
+       "math": "P(A \\cap B) = \\frac{11}{15}",
+       "en": "Simplify the numerator to get the final answer.",
+       "ur": "شمار کنندہ کو مختصر کر کے حتمی جواب حاصل کریں۔",
+       "check": [
+        "R(10 + 6 - 5, 15) == R(11,15)",
         "R(2,3) + R(2,5) - R(1,3) == R(11,15)"
        ]
       }
      ],
      "answer": "$\\frac{11}{15}$",
+     "enriched": true,
      "book_key": "\\frac{11}{15}"
     }
    ],
@@ -2287,15 +3640,34 @@
      "prompt": "$P(\\overline{A})$",
      "steps": [
       {
-       "math": "1 - 0.42 = 0.58",
-       "en": "Complement.",
-       "ur": "متمم۔",
+       "math": "P(A) = 0.42",
+       "en": "Write down the given probability of event $A$.",
+       "ur": "واقعہ $A$ کا دیا گیا احتمال لکھیں۔",
+       "check": [
+        "R(42,100) == R(42,100)"
+       ]
+      },
+      {
+       "math": "P(\\overline{A}) = 1 - P(A)",
+       "en": "According to the complement rule of probability, the probability of an event not occurring ($\\overline{A}$) is equal to $1$ minus the probability of the event occurring.",
+       "ur": "احتمال کے متمم کے اصول کے مطابق، کسی واقعہ کے رونما نہ ہونے ($\\overline{A}$) کا احتمال $1$ منفی اس واقعہ کے رونما ہونے کے احتمال کے برابر ہوتا ہے۔"
+      },
+      {
+       "math": "P(\\overline{A}) = 1 - 0.42",
+       "en": "Substitute the given value $P(A) = 0.42$ into the formula.",
+       "ur": "فارمولے میں دی گئی قیمت $P(A) = 0.42$ درج کریں۔"
+      },
+      {
+       "math": "P(\\overline{A}) = 0.58",
+       "en": "Subtract $0.42$ from $1$ to get the final answer.",
+       "ur": "حتمی جواب حاصل کرنے کے لیے $1$ میں سے $0.42$ تفریق کریں۔",
        "check": [
         "1 - R(42,100) == R(58,100)"
        ]
       }
      ],
      "answer": "$0.58$",
+     "enriched": true,
      "book_key": "0.58"
     },
     {
@@ -2303,15 +3675,34 @@
      "prompt": "$P(\\overline{B})$",
      "steps": [
       {
-       "math": "1 - 0.48 = 0.52",
-       "en": "Complement.",
-       "ur": "متمم۔",
+       "math": "P(B) = 0.48",
+       "en": "First, write down the given probability of event $B$.",
+       "ur": "سب سے پہلے، دیے گئے واقعہ $B$ کا احتمال لکھیں۔",
+       "check": [
+        "R(48,100) == R(48,100)"
+       ]
+      },
+      {
+       "math": "P(\\overline{B}) = 1 - P(B)",
+       "en": "Recall the rule for the probability of the complement of an event.",
+       "ur": "کسی واقعہ کے متمم (complement) کے احتمال کا کلیہ استعمال کریں۔"
+      },
+      {
+       "math": "P(\\overline{B}) = 1 - 0.48",
+       "en": "Substitute the given value $P(B) = 0.48$ into the formula.",
+       "ur": "کلیہ میں دی گئی قیمت $P(B) = 0.48$ درج کریں۔"
+      },
+      {
+       "math": "P(\\overline{B}) = 0.52",
+       "en": "Subtract $0.48$ from $1$ to get the final answer.",
+       "ur": "حتمی جواب حاصل کرنے کے لیے $1$ میں سے $0.48$ تفریق کریں۔",
        "check": [
         "1 - R(48,100) == R(52,100)"
        ]
       }
      ],
      "answer": "$0.52$",
+     "enriched": true,
      "book_key": "0.52"
     },
     {
@@ -2319,15 +3710,44 @@
      "prompt": "$P(A \\cup B)$",
      "steps": [
       {
-       "math": "0.42 + 0.48 - 0.16 = 0.74",
-       "en": "Addition law: $P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$.",
-       "ur": "جمع کا قانون: $P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$۔",
+       "math": "",
+       "en": "First, write down the given probabilities from the question: $P(A) = 0.42$, $P(B) = 0.48$, and $P(A \\cap B) = 0.16$. We need to find $P(A \\cup B)$.",
+       "ur": "سب سے پہلے سوال میں دیے گئے احتمالات لکھیں: $P(A) = 0.42$، $P(B) = 0.48$، اور $P(A \\cap B) = 0.16$۔ ہمیں $P(A \\cup B)$ معلوم کرنا ہے۔"
+      },
+      {
+       "math": "P(A \\cup B) = P(A) + P(B) - P(A \\cap B)",
+       "en": "Since $P(A \\cap B) \\neq 0$, the events $A$ and $B$ are overlapping (not mutually exclusive). Therefore, we apply the general addition law of probability.",
+       "ur": "چونکہ $P(A \\cap B) \\neq 0$ ہے، اس لیے واقعات $A$ اور $B$ متداخل (غير متنافی) ہیں۔ لہٰذا، ہم احتمال کے جمع کا عمومی قانون لاگو کرتے ہیں۔"
+      },
+      {
+       "math": "P(A \\cup B) = 0.42 + 0.48 - 0.16",
+       "en": "Substitute the given values into the formula.",
+       "ur": "دی گئی قیمتیں فارمولے میں درج کریں۔",
        "check": [
+        "R(42,100) + R(48,100) - R(16,100) == R(74,100)"
+       ]
+      },
+      {
+       "math": "P(A \\cup B) = 0.90 - 0.16",
+       "en": "First, add $0.42$ and $0.48$ to get $0.90$.",
+       "ur": "پہلے $0.42$ اور $0.48$ کو جمع کریں جس سے $0.90$ حاصل ہوتا ہے۔",
+       "check": [
+        "R(42,100) + R(48,100) == R(90,100)",
+        "R(90,100) - R(16,100) == R(74,100)"
+       ]
+      },
+      {
+       "math": "P(A \\cup B) = 0.74",
+       "en": "Subtract $0.16$ from $0.90$ to get the final answer.",
+       "ur": "حتمی جواب حاصل کرنے کے لیے $0.90$ میں سے $0.16$ کو تفریق کریں۔",
+       "check": [
+        "R(90,100) - R(16,100) == R(74,100)",
         "R(42,100) + R(48,100) - R(16,100) == R(74,100)"
        ]
       }
      ],
      "answer": "$0.74$",
+     "enriched": true,
      "book_key": "0.74"
     }
    ],
@@ -2345,23 +3765,51 @@
      "prompt": "both are prime",
      "steps": [
       {
-       "math": "n(S) = 100",
-       "en": "The sample space: 10 x 10 = 100 pairs.",
-       "ur": "نمونہ فضا۔",
+       "math": "n(S) = 10 \\times 10 = 100",
+       "en": "Two numbers are chosen from the set $\\{1, 2, 3, \\dots, 10\\}$ with replacement. Therefore, the total number of possible pairs in the sample space $S$ is:",
+       "ur": "سیٹ $\\{1, 2, 3, \\dots, 10\\}$ میں سے دو اعداد واپسی (replacement) کے ساتھ منتخب کیے گئے ہیں۔ اس لیے نمونہ فضا $S$ میں کل ممکنہ جوڑوں کی تعداد یہ ہے:",
        "check": [
-        "100 == 100"
+        "10*10 == 100"
        ]
       },
       {
-       "math": "n(E) = 16,\\quad P(E) = \\frac{16}{100} = \\frac{4}{25}",
-       "en": "Probability = favourable outcomes / total outcomes.",
-       "ur": "احتمال = موافق نتائج / کل نتائج۔",
+       "math": "",
+       "en": "Let $E$ be the event that both chosen numbers are prime. The prime numbers between $1$ and $10$ are $2, 3, 5,$ and $7$, which means there are $4$ prime numbers.",
+       "ur": "فرض کریں کہ $E$ وہ واقعہ ہے جس میں دونوں منتخب کردہ اعداد مفرد (prime) ہیں۔ $1$ سے $10$ کے درمیان مفرد اعداد $2, 3, 5,$ اور $7$ ہیں، جس کا مطلب ہے کہ کل $4$ مفرد اعداد ہیں۔"
+      },
+      {
+       "math": "n(E) = 4 \\times 4 = 16",
+       "en": "Since the selection is done with replacement, both the first and the second number can be chosen from these $4$ prime numbers in $4 \\times 4$ ways. Thus, the number of favourable outcomes is:",
+       "ur": "چونکہ انتخاب واپسی کے ساتھ کیا گیا ہے، اس لیے پہلا اور دوسرا دونوں اعداد ان $4$ مفرد اعداد میں سے $4 \\times 4$ طریقوں سے منتخب کیے جا سکتے ہیں۔ اس طرح موافق نتائج کی تعداد یہ ہے:",
        "check": [
+        "4*4 == 16"
+       ]
+      },
+      {
+       "math": "P(E) = \\frac{n(E)}{n(S)}",
+       "en": "The formula for the probability of an event $E$ is the number of favourable outcomes divided by the total number of outcomes:",
+       "ur": "کسی واقعہ $E$ کے احتمال کا فارمولا موافق نتائج کی تعداد کو کل نتائج کی تعداد پر تقسیم کرنا ہے:"
+      },
+      {
+       "math": "P(E) = \\frac{16}{100} = \\frac{4}{25}",
+       "en": "Substitute the values of $n(E) = 16$ and $n(S) = 100$ into the formula and simplify the fraction to its lowest form:",
+       "ur": "فارمولے میں $n(E) = 16$ اور $n(S) = 100$ کی قیمتیں درج کریں اور کسر کو مختصر ترین شکل میں لائیں:",
+       "check": [
+        "R(16, 100) == R(4, 25)"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Hence, the probability that both numbers are prime is $\\frac{4}{25}$.",
+       "ur": "لہذا، دونوں اعداد کے مفرد ہونے کا احتمال $\\frac{4}{25}$ ہے۔",
+       "check": [
+        "100 == 100",
         "R(16, 100) == 4/25"
        ]
       }
      ],
      "answer": "$\\frac{4}{25}$",
+     "enriched": true,
      "book_key": "\\frac{4}{25}"
     },
     {
@@ -2369,23 +3817,50 @@
      "prompt": "their product is even",
      "steps": [
       {
-       "math": "n(S) = 100",
-       "en": "The sample space: 10 x 10 = 100 pairs.",
-       "ur": "نمونہ فضا۔",
+       "math": "n(S) = 10 \\times 10 = 100",
+       "en": "Two numbers are chosen from $1$ to $10$ with replacement. Since there are $10$ choices for each number, the total number of possible pairs in the sample space $S$ is $100$.",
+       "ur": "$1$ سے $10$ تک کے اعداد میں سے واپسی کے ساتھ دو اعداد چنے گئے ہیں۔ چونکہ ہر عدد کے لیے $10$ امکانات ہیں، اس لیے نمونہ فضا $S$ میں کل ممکنہ جوڑوں کی تعداد $100$ ہے۔",
        "check": [
-        "100 == 100"
+        "10 * 10 == 100"
        ]
       },
       {
-       "math": "n(E) = 75,\\quad P(E) = \\frac{75}{100} = \\frac{3}{4}",
-       "en": "Probability = favourable outcomes / total outcomes.",
-       "ur": "احتمال = موافق نتائج / کل نتائج۔",
+       "math": "n(\\text{both odd}) = 5 \\times 5 = 25",
+       "en": "The product of two numbers is odd only when both numbers are odd. There are $5$ odd numbers from $1$ to $10$ ($1, 3, 5, 7, 9$), so the number of pairs with an odd product is $25$.",
+       "ur": "دو اعداد کا حاصل ضرب صرف اس صورت میں طاق ہوتا ہے جب دونوں اعداد طاق ہوں۔ $1$ سے $10$ تک $5$ طاق اعداد ہیں ($1, 3, 5, 7, 9$)، لہٰذا طاق حاصل ضرب والے جوڑوں کی تعداد $25$ ہے۔",
        "check": [
+        "5 * 5 == 25"
+       ]
+      },
+      {
+       "math": "n(E) = 100 - 25 = 75",
+       "en": "Let $E$ be the event that the product of the two numbers is even. We find the favourable outcomes $n(E)$ by subtracting the pairs with an odd product from the total outcomes.",
+       "ur": "فرض کریں کہ $E$ وہ واقعہ ہے جس میں دونوں اعداد کا حاصل ضرب جفت ہے۔ ہم کل نتائج میں سے طاق حاصل ضرب والے جوڑوں کو تفریق کر کے موافق نتائج $n(E)$ معلوم کرتے ہیں۔",
+       "check": [
+        "100 - 25 == 75"
+       ]
+      },
+      {
+       "math": "P(E) = \\frac{n(E)}{n(S)} = \\frac{75}{100}",
+       "en": "Apply the probability formula by dividing the number of favourable outcomes by the total number of outcomes.",
+       "ur": "موافق نتائج کی تعداد کو کل نتائج کی تعداد پر تقسیم کر کے احتمال کا فارمولا استعمال کریں۔",
+       "check": [
+        "R(75, 100) == R(75, 100)"
+       ]
+      },
+      {
+       "math": "P(E) = \\frac{3}{4}",
+       "en": "Simplify the fraction by dividing both the numerator and the denominator by $25$ to get the final answer.",
+       "ur": "حتمی جواب حاصل کرنے کے لیے شمار کنندہ اور مخرج دونوں کو $25$ پر تقسیم کر کے کسر کو مختصر کریں۔",
+       "check": [
+        "R(75, 100) == R(3, 4)",
+        "100 == 100",
         "R(75, 100) == 3/4"
        ]
       }
      ],
      "answer": "$\\frac{3}{4}$",
+     "enriched": true,
      "book_key": "\\frac{3}{4}"
     }
    ],
@@ -2403,23 +3878,48 @@
      "prompt": "both are vowels",
      "steps": [
       {
-       "math": "n(S) = 36",
-       "en": "The sample space: 6 x 6 = 36 pairs.",
-       "ur": "نمونہ فضا۔",
+       "math": "n(S) = 6 \\times 6 = 36",
+       "en": "The word PUNJAB has $6$ letters and LAHORE also has $6$ letters. Therefore, the total number of possible pairs of letters in the sample space $S$ is $36$.",
+       "ur": "لفظ PUNJAB میں $6$ حروف ہیں اور LAHORE میں بھی $6$ حروف ہیں۔ لہٰذا، نمونہ فضا $S$ میں حروف کے ممکنہ جوڑوں کی کل تعداد $36$ ہے۔",
        "check": [
-        "36 == 36"
+        "6 * 6 == 36"
        ]
       },
       {
-       "math": "n(E) = 6,\\quad P(E) = \\frac{6}{36} = \\frac{1}{6}",
-       "en": "Probability = favourable outcomes / total outcomes.",
-       "ur": "احتمال = موافق نتائج / کل نتائج۔",
+       "math": "V_1 = \\{\\text{U}, \\text{A}\\}, \\quad V_2 = \\{\\text{A}, \\text{O}, \\text{E}\\}",
+       "en": "Let $E$ be the event that both chosen letters are vowels. In PUNJAB, there are $2$ vowels ($\\text{U}, \\text{A}$). In LAHORE, there are $3$ vowels ($\\text{A}, \\text{O}, \\text{E}$).",
+       "ur": "فرض کریں $E$ وہ واقعہ ہے جس میں منتخب کردہ دونوں حروف واول (حروفِ علت) ہیں۔ PUNJAB میں $2$ واولز ($\\text{U}, \\text{A}$) ہیں اور LAHORE میں $3$ واولز ($\\text{A}, \\text{O}, \\text{E}$) ہیں۔",
        "check": [
+        "2 == 2",
+        "3 == 3"
+       ]
+      },
+      {
+       "math": "n(E) = 2 \\times 3 = 6",
+       "en": "The number of favourable outcomes $n(E)$ where both letters are vowels is found by multiplying the number of vowels in each word. The pairs are $(\\text{U},\\text{A}), (\\text{U},\\text{O}), (\\text{U},\\text{E}), (\\text{A},\\text{A}), (\\text{A},\\text{O}), (\\text{A},\\text{E})$.",
+       "ur": "موافق نتائج کی تعداد $n(E)$ جہاں دونوں حروف واول ہیں، دونوں الفاظ میں واولز کی تعداد کو ضرب دے کر معلوم کی جاتی ہے۔ یہ جوڑے $(\\text{U},\\text{A}), (\\text{U},\\text{O}), (\\text{U},\\text{E}), (\\text{A},\\text{A}), (\\text{A},\\text{O}), (\\text{A},\\text{E})$ ہیں۔",
+       "check": [
+        "2 * 3 == 6"
+       ]
+      },
+      {
+       "math": "P(E) = \\frac{n(E)}{n(S)}",
+       "en": "Recall the formula for the probability of an event $E$, which is the ratio of favourable outcomes to total outcomes.",
+       "ur": "کسی واقعہ $E$ کے احتمال کا فارمولا یاد کریں، جو موافق نتائج اور کل نتائج کی نسبت ہوتا ہے۔"
+      },
+      {
+       "math": "P(E) = \\frac{6}{36} = \\frac{1}{6}",
+       "en": "Substitute $n(E) = 6$ and $n(S) = 36$ into the formula and simplify the fraction to get the final answer.",
+       "ur": "فارمولے میں $n(E) = 6$ اور $n(S) = 36$ درج کریں اور حتمی جواب حاصل کرنے کے لیے کسر کو مختصر کریں۔",
+       "check": [
+        "R(6, 36) == R(1, 6)",
+        "36 == 36",
         "R(6, 36) == 1/6"
        ]
       }
      ],
      "answer": "$\\frac{1}{6}$",
+     "enriched": true,
      "book_key": "\\frac{1}{6}"
     },
     {
@@ -2427,23 +3927,56 @@
      "prompt": "one consonant and one vowel",
      "steps": [
       {
-       "math": "n(S) = 36",
-       "en": "The sample space: 6 x 6 = 36 pairs.",
-       "ur": "نمونہ فضا۔",
+       "math": "n(S) = 6 \\times 6 = 36",
+       "en": "The word PUNJAB has $6$ letters and the word LAHORE also has $6$ letters. Choosing one letter from each word gives a total of $36$ possible pairs in the sample space $S$.",
+       "ur": "لفظ PUNJAB میں $6$ حروف ہیں اور لفظ LAHORE میں بھی $6$ حروف ہیں۔ ہر لفظ میں سے ایک حرف منتخب کرنے سے نمونہ فضا $S$ میں کل $36$ ممکنہ جوڑے بنتے ہیں۔",
        "check": [
-        "36 == 36"
+        "6 * 6 == 36"
        ]
       },
       {
-       "math": "n(E) = 18,\\quad P(E) = \\frac{18}{36} = \\frac{1}{2}",
-       "en": "Probability = favourable outcomes / total outcomes.",
-       "ur": "احتمال = موافق نتائج / کل نتائج۔",
+       "math": "\\text{PUNJAB}: \\text{Vowels} = 2, \\quad \\text{Consonants} = 4",
+       "en": "In the word PUNJAB, the vowels are U and A ($2$ vowels), and the consonants are P, N, J, and B ($4$ consonants).",
+       "ur": "لفظ PUNJAB میں حروفِ علت U اور A ($2$ حروفِ علت) ہیں، اور حروفِ صحیح P, N, J اور B ($4$ حروفِ صحیح) ہیں۔",
        "check": [
+        "2 + 4 == 6"
+       ]
+      },
+      {
+       "math": "\\text{LAHORE}: \\text{Vowels} = 3, \\quad \\text{Consonants} = 3",
+       "en": "In the word LAHORE, the vowels are A, O, and E ($3$ vowels), and the consonants are L, H, and R ($3$ consonants).",
+       "ur": "لفظ LAHORE میں حروفِ علت A, O اور E ($3$ حروفِ علت) ہیں، اور حروفِ صحیح L, H اور R ($3$ حروفِ صحیح) ہیں۔",
+       "check": [
+        "3 + 3 == 6"
+       ]
+      },
+      {
+       "math": "n(E) = (4 \\times 3) + (2 \\times 3) = 12 + 6 = 18",
+       "en": "Let $E$ be the event of getting one consonant and one vowel. This happens in two ways: (consonant from PUNJAB and vowel from LAHORE) or (vowel from PUNJAB and consonant from LAHORE).",
+       "ur": "فرض کریں کہ $E$ ایک حرفِ صحیح اور ایک حرفِ علت حاصل کرنے کا واقعہ ہے۔ یہ دو طرح سے ہو سکتا ہے: (PUNJAB سے حرفِ صحیح اور LAHORE سے حرفِ علت) یا (PUNJAB سے حرفِ علت اور LAHORE سے حرفِ صحیح)۔",
+       "check": [
+        "4 * 3 + 2 * 3 == 18",
+        "12 + 6 == 18"
+       ]
+      },
+      {
+       "math": "P(E) = \\frac{n(E)}{n(S)}",
+       "en": "The probability of an event is given by the ratio of favourable outcomes to the total number of outcomes.",
+       "ur": "کسی واقعے کا احتمال موافق نتائج اور کل نتائج کی نسبت سے معلوم کیا جاتا ہے۔"
+      },
+      {
+       "math": "P(E) = \\frac{18}{36} = \\frac{1}{2}",
+       "en": "Substitute $n(E) = 18$ and $n(S) = 36$, then simplify the fraction to get the final answer.",
+       "ur": "$n(E) = 18$ اور $n(S) = 36$ کی قیمتیں درج کریں، پھر کسر کو مختصر کر کے حتمی جواب حاصل کریں۔",
+       "check": [
+        "R(18, 36) == R(1, 2)",
+        "36 == 36",
         "R(18, 36) == 1/2"
        ]
       }
      ],
      "answer": "$\\frac{1}{2}$",
+     "enriched": true,
      "book_key": "\\frac{1}{2}"
     }
    ],
@@ -2461,23 +3994,49 @@
      "prompt": "",
      "steps": [
       {
-       "math": "n(S) = 36",
-       "en": "The sample space: 36 outcomes.",
-       "ur": "نمونہ فضا۔",
+       "math": "n(S) = 6 \\times 6 = 36",
+       "en": "When a single six-sided dice is rolled twice, each roll has $6$ possible outcomes. Therefore, the total number of possible outcomes in the sample space $S$ is $36$.",
+       "ur": "جب ایک چھ رخے پانسے کو دو بار پھینکا جاتا ہے، تو ہر باری کے $6$ ممکنہ نتائج ہوتے ہیں۔ لہذا، نمونہ فضا $S$ میں کل ممکنہ نتائج کی تعداد $36$ ہے۔",
        "check": [
-        "36 == 36"
+        "6 * 6 == 36"
        ]
       },
       {
-       "math": "E = \\{(3, 5), (5, 3), (5, 6), (6, 5)\\} \\Rightarrow n(E) = 4,\\quad P(E) = \\frac{4}{36} = \\frac{1}{9}",
-       "en": "Probability = favourable outcomes / total outcomes.",
-       "ur": "احتمال = موافق نتائج / کل نتائج۔",
+       "math": "",
+       "en": "On a standard dice with faces $\\{1, 2, 3, 4, 5, 6\\}$, the multiples of $3$ are $3$ and $6$. We need one roll to be a multiple of $3$ (either $3$ or $6$) and the other roll to be $5$.",
+       "ur": "ایک معیاری پانسے کے رخوں $\\{1, 2, 3, 4, 5, 6\\}$ پر $3$ کے اضعاف $3$ اور $6$ ہیں۔ ہمیں چاہیے کہ ایک باری میں $3$ کا ضعف ($3$ یا $6$) آئے اور دوسری باری میں $5$ آئے۔"
+      },
+      {
+       "math": "E = \\{(3, 5), (5, 3), (6, 5), (5, 6)\\}",
+       "en": "Let $E$ be the event of getting a multiple of $3$ on one roll and a $5$ on the other roll. Listing all such ordered pairs gives the set $E$.",
+       "ur": "فرض کریں کہ $E$ ایک باری میں $3$ کا ضعف اور دوسری باری میں $5$ آنے کا واقعہ ہے۔ ایسے تمام مترتب جوڑوں کی فہرست بنانے سے سیٹ $E$ حاصل ہوتا ہے۔"
+      },
+      {
+       "math": "n(E) = 4",
+       "en": "Counting the pairs in set $E$, the number of favourable outcomes is $4$.",
+       "ur": "سیٹ $E$ میں جوڑوں کو گننے سے، موافق نتائج کی تعداد $4$ ہے۔",
        "check": [
+        "4 == 4"
+       ]
+      },
+      {
+       "math": "P(E) = \\frac{n(E)}{n(S)}",
+       "en": "The probability of an event is given by the ratio of the number of favourable outcomes to the total number of outcomes.",
+       "ur": "کسی واقعے کا احتمال موافق نتائج کی تعداد اور کل نتائج کی تعداد کی نسبت سے معلوم کیا جاتا ہے۔"
+      },
+      {
+       "math": "P(E) = \\frac{4}{36} = \\frac{1}{9}",
+       "en": "Substitute $n(E) = 4$ and $n(S) = 36$ into the formula and simplify the fraction by dividing the numerator and denominator by $4$. Thus, the required probability is $\\frac{1}{9}$.",
+       "ur": "فارمولے میں $n(E) = 4$ اور $n(S) = 36$ درج کریں اور شمار کنندہ اور مخرج کو $4$ پر تقسیم کر کے کسر کو مختصر کریں۔ پس، مطلوبہ احتمال $\\frac{1}{9}$ ہے۔",
+       "check": [
+        "R(4, 36) == R(1, 9)",
+        "36 == 36",
         "R(4, 36) == 1/9"
        ]
       }
      ],
      "answer": "$\\frac{1}{9}$",
+     "enriched": true,
      "book_key": "\\frac{1}{9}"
     }
    ],
@@ -2495,23 +4054,55 @@
      "prompt": "",
      "steps": [
       {
-       "math": "n(S) = 36",
-       "en": "The sample space: 36 outcomes.",
-       "ur": "نمونہ فضا۔",
+       "math": "n(S) = 6 \\times 6 = 36",
+       "en": "When two fair dice are rolled simultaneously, the total number of possible outcomes in the sample space $S$ is $36$.",
+       "ur": "جب دو پانسے ایک ساتھ پھینکے جاتے ہیں، تو نمونہ فضا $S$ میں ممکنہ نتائج کی کل تعداد $36$ ہوتی ہے۔",
        "check": [
-        "36 == 36"
+        "6 * 6 == 36"
        ]
       },
       {
-       "math": "n(E) = 18,\\quad P(E) = \\frac{18}{36} = \\frac{1}{2}",
-       "en": "Probability = favourable outcomes / total outcomes.",
-       "ur": "احتمال = موافق نتائج / کل نتائج۔",
+       "math": "",
+       "en": "Let $E$ be the event of getting an odd number from $\\{1, 3, 5\\}$ on one die and a multiple of $2$ from $\\{2, 4, 6\\}$ on the other die.",
+       "ur": "فرض کریں کہ $E$ ایک پانسے پر طاق عدد $\\{1, 3, 5\\}$ اور دوسرے پانسے پر $2$ کا ضعف $\\{2, 4, 6\\}$ آنے کا وقوعہ ہے۔"
+      },
+      {
+       "math": "E = \\{(1,2), (1,4), (1,6), (3,2), (3,4), (3,6), (5,2), (5,4), (5,6), (2,1), (2,3), (2,5), (4,1), (4,3), (4,5), (6,1), (6,3), (6,5)\\}",
+       "en": "List all the favourable outcomes where the first die is odd and the second is a multiple of $2$ ($9$ outcomes), or the first is a multiple of $2$ and the second is odd ($9$ outcomes).",
+       "ur": "تمام موافق نتائج کی فہرست بنائیں جہاں پہلے پانسے پر طاق عدد اور دوسرے پر $2$ کا ضعف ہو ($9$ نتائج)، یا پہلے پر $2$ کا ضعف اور دوسرے پر طاق عدد ہو ($9$ نتائج)۔",
        "check": [
+        "9 + 9 == 18"
+       ]
+      },
+      {
+       "math": "n(E) = 9 + 9 = 18",
+       "en": "Count the total number of favourable outcomes in event $E$.",
+       "ur": "وقوعہ $E$ میں موافق نتائج کی کل تعداد گنیں۔",
+       "check": [
+        "9 + 9 == 18"
+       ]
+      },
+      {
+       "math": "P(E) = \\frac{n(E)}{n(S)} = \\frac{18}{36}",
+       "en": "Apply the probability formula $P(E) = \\frac{n(E)}{n(S)}$ and substitute the values.",
+       "ur": "احتمال کا فارمولا $P(E) = \\frac{n(E)}{n(S)}$ لگائیں اور قیمتیں درج کریں۔",
+       "check": [
+        "R(18, 36) == R(18, 36)"
+       ]
+      },
+      {
+       "math": "P(E) = \\frac{1}{2}",
+       "en": "Simplify the fraction to get the final probability.",
+       "ur": "حتمی احتمال حاصل کرنے کے لیے کسر کو مختصر کریں۔",
+       "check": [
+        "R(18, 36) == R(1, 2)",
+        "36 == 36",
         "R(18, 36) == 1/2"
        ]
       }
      ],
      "answer": "$\\frac{1}{2}$",
+     "enriched": true,
      "book_key": "\\frac{1}{2}"
     }
    ],
@@ -2529,15 +4120,54 @@
      "prompt": "",
      "steps": [
       {
-       "math": "P = \\frac{13}{52} \\times \\frac{4}{52} = \\frac{1}{52}",
-       "en": "With replacement the two draws are independent: 13 hearts, then 4 kings out of 52.",
-       "ur": "دونوں مراحل کے احتمال ضرب کریں۔",
+       "math": "n(S) = 52",
+       "en": "A standard pack of playing cards has a total of $52$ cards, so the total number of possible outcomes is $52$.",
+       "ur": "تاش کے ایک معیاری پیک میں کل $52$ پتے ہوتے ہیں، اس لیے ممکنہ نتائج کی کل تعداد $52$ ہے۔",
        "check": [
+        "52 == 52"
+       ]
+      },
+      {
+       "math": "P(A) = \\frac{13}{52} = \\frac{1}{4}",
+       "en": "Let $A$ be the event that the first card drawn is a heart. Since there are $13$ hearts in a pack of $52$ cards, the probability of $A$ is $\\frac{13}{52}$.",
+       "ur": "فرض کریں کہ $A$ وہ وقوعہ ہے جس میں پہلا نکالا گیا پتہ پان (heart) کا ہے۔ چونکہ $52$ پتوں میں پان کے $13$ پتے ہوتے ہیں، اس لیے $A$ کا احتمال $\\frac{13}{52}$ ہے۔",
+       "check": [
+        "R(13, 52) == R(1, 4)"
+       ]
+      },
+      {
+       "math": "P(B) = \\frac{4}{52} = \\frac{1}{13}",
+       "en": "Let $B$ be the event that the second card drawn is a king. Because the first card is replaced, the total number of cards remains $52$. Since there are $4$ kings in the pack, the probability of $B$ is $\\frac{4}{52}$.",
+       "ur": "فرض کریں کہ $B$ وہ وقوعہ ہے جس میں دوسرا نکالا گیا پتہ بادشاہ (king) ہے۔ چونکہ پہلا پتہ واپس رکھ دیا گیا ہے، اس لیے کل پتوں کی تعداد $52$ ہی رہتی ہے۔ پیک میں $4$ بادشاہ ہوتے ہیں، اس لیے $B$ کا احتمال $\\frac{4}{52}$ ہے۔",
+       "check": [
+        "R(4, 52) == R(1, 13)"
+       ]
+      },
+      {
+       "math": "P(A \\cap B) = P(A) \\times P(B)",
+       "en": "Since the cards are drawn with replacement, the two events $A$ and $B$ are independent. By the multiplication law of probability for independent events, we multiply their individual probabilities.",
+       "ur": "چونکہ پتے واپسی کی شرط کے ساتھ نکالے گئے ہیں، اس لیے دونوں واقعات $A$ اور $B$ آزاد (independent) ہیں۔ آزاد واقعات کے لیے احتمال کے ضربی قانون کے مطابق ہم ان کے انفرادی احتمالات کو ضرب دیتے ہیں۔"
+      },
+      {
+       "math": "P(A \\cap B) = \\frac{13}{52} \\times \\frac{4}{52}",
+       "en": "Substitute the values of $P(A)$ and $P(B)$ into the formula.",
+       "ur": "فارمولے میں $P(A)$ اور $P(B)$ کی قیمتیں درج کریں۔",
+       "check": [
+        "R(13, 52) * R(4, 52) == R(1, 52)"
+       ]
+      },
+      {
+       "math": "P(A \\cap B) = \\frac{1}{4} \\times \\frac{1}{13} = \\frac{1}{52}",
+       "en": "Simplify the fractions and multiply them to get the final probability $\\frac{1}{52}$.",
+       "ur": "کسروں کو مختصر کریں اور انہیں ضرب دے کر حتمی احتمال $\\frac{1}{52}$ حاصل کریں۔",
+       "check": [
+        "R(1, 4) * R(1, 13) == R(1, 52)",
         "R(13,52)*R(4,52) == 1/52"
        ]
       }
      ],
      "answer": "$\\frac{1}{52}$",
+     "enriched": true,
      "book_key": "\\frac{1}{52}"
     }
    ],
@@ -2555,15 +4185,48 @@
      "prompt": "both black",
      "steps": [
       {
-       "math": "P = \\frac{26}{52} \\times \\frac{25}{51} = \\frac{25}{102}",
-       "en": "Without replacement the second draw has one card fewer.",
-       "ur": "دونوں مراحل کے احتمال ضرب کریں۔",
+       "math": "n(S) = 52,\\quad n(A) = 26",
+       "en": "A standard deck has a total of $52$ cards, out of which $26$ cards are black ($13$ spades and $13$ clubs).",
+       "ur": "تاش کی ایک معیاری گڈی میں کل $52$ پتے ہوتے ہیں، جن میں سے $26$ پتے کالے ہوتے ہیں ($13$ حکم اور $13$ چڑی)۔",
        "check": [
+        "13 + 13 == 26"
+       ]
+      },
+      {
+       "math": "P(A) = \\frac{26}{52} = \\frac{1}{2}",
+       "en": "Let $A$ be the event that the first card drawn is black. The probability of drawing the first black card is:",
+       "ur": "فرض کریں $A$ پہلے پتے کے کالا نکلنے کا واقعہ ہے۔ پہلے پتے کے کالا ہونے کا احتمال یہ ہے:",
+       "check": [
+        "R(26, 52) == R(1, 2)"
+       ]
+      },
+      {
+       "math": "P(B|A) = \\frac{25}{51}",
+       "en": "Since the first card is not replaced, there are now $51$ cards left in the deck, of which $25$ are black. Let $B$ be the event that the second card is also black.",
+       "ur": "چونکہ پہلا پتہ واپس نہیں رکھا گیا، اب گڈی میں $51$ پتے باقی ہیں جن میں سے $25$ کالے ہیں۔ فرض کریں $B$ دوسرے پتے کے بھی کالا ہونے کا واقعہ ہے۔",
+       "check": [
+        "52 - 1 == 51",
+        "26 - 1 == 25"
+       ]
+      },
+      {
+       "math": "P(A \\cap B) = P(A) \\times P(B|A)",
+       "en": "Because the two draws are dependent events (without replacement), we use the multiplication law of probability.",
+       "ur": "چونکہ دونوں مراحل تابع واقعات ہیں (بغیر واپسی کے)، ہم احتمال کے ضرب کا قانون استعمال کرتے ہیں۔"
+      },
+      {
+       "math": "P(A \\cap B) = \\frac{26}{52} \\times \\frac{25}{51} = \\frac{1}{2} \\times \\frac{25}{51} = \\frac{25}{102}",
+       "en": "Substitute the values and simplify to find the required probability that both cards are black.",
+       "ur": "قیمتیں درج کریں اور مختصر کر کے دونوں پتوں کے کالا ہونے کا مطلوبہ احتمال معلوم کریں۔",
+       "check": [
+        "R(26, 52) * R(25, 51) == R(25, 102)",
+        "R(1, 2) * R(25, 51) == R(25, 102)",
         "R(26,52)*R(25,51) == 25/102"
        ]
       }
      ],
      "answer": "$\\frac{25}{102}$",
+     "enriched": true,
      "book_key": "\\frac{25}{102}"
     },
     {
@@ -2571,15 +4234,47 @@
      "prompt": "both queens",
      "steps": [
       {
-       "math": "P = \\frac{4}{52} \\times \\frac{3}{51} = \\frac{1}{221}",
-       "en": "Without replacement.",
-       "ur": "دونوں مراحل کے احتمال ضرب کریں۔",
+       "math": "",
+       "en": "A standard deck of cards has $52$ cards in total, and there are $4$ queens in the deck.",
+       "ur": "تاش کی ایک معیاری گڈی میں کل $52$ پتے ہوتے ہیں، جن میں سے $4$ ملکہ (queens) کے پتے ہوتے ہیں۔"
+      },
+      {
+       "math": "P(Q_1) = \\frac{4}{52}",
+       "en": "First, we find the probability that the first card drawn is a queen.",
+       "ur": "سب سے پہلے، ہم پہلے پتے کے ملکہ ہونے کا احتمال معلوم کرتے ہیں۔",
        "check": [
+        "R(4,52) == R(1,13)"
+       ]
+      },
+      {
+       "math": "P(Q_2 | Q_1) = \\frac{3}{51}",
+       "en": "Since the first card is not replaced, $51$ cards remain in the deck and $3$ of them are queens. We find the probability that the second card is also a queen.",
+       "ur": "چونکہ پہلا پتہ واپس نہیں رکھا گیا، اس لیے گڈی میں $51$ پتے باقی رہ جاتے ہیں جن میں $3$ ملکہ ہیں۔ اب ہم دوسرے پتے کے بھی ملکہ ہونے کا احتمال معلوم کرتے ہیں۔",
+       "check": [
+        "R(3,51) == R(1,17)"
+       ]
+      },
+      {
+       "math": "P = \\frac{4}{52} \\times \\frac{3}{51}",
+       "en": "Using the multiplication law of probability for dependent events, we multiply both probabilities together.",
+       "ur": "منحصر واقعات کے لیے احتمال کے ضربی قانون کو استعمال کرتے ہوئے، ہم دونوں احتمالات کو آپس میں ضرب دیتے ہیں۔",
+       "check": [
+        "R(4,52)*R(3,51) == R(12,2652)"
+       ]
+      },
+      {
+       "math": "P = \\frac{12}{2652} = \\frac{1}{221}",
+       "en": "Simplifying the fraction gives the final probability that both cards are queens.",
+       "ur": "کسر کو مختصر کرنے سے دونوں پتوں کے ملکہ ہونے کا حتمی احتمال حاصل ہوتا ہے۔",
+       "check": [
+        "R(4,52)*R(3,51) == R(12,2652)",
+        "R(12,2652) == R(1,221)",
         "R(4,52)*R(3,51) == 1/221"
        ]
       }
      ],
      "answer": "$\\frac{1}{221}$",
+     "enriched": true,
      "book_key": "\\frac{1}{221}"
     },
     {
@@ -2587,15 +4282,48 @@
      "prompt": "both spades",
      "steps": [
       {
-       "math": "P = \\frac{13}{52} \\times \\frac{12}{51} = \\frac{1}{17}",
-       "en": "Without replacement.",
-       "ur": "دونوں مراحل کے احتمال ضرب کریں۔",
+       "math": "n(S) = 52",
+       "en": "A standard deck has $52$ cards, and $13$ of them are spades.",
+       "ur": "ایک معیاری تاش کی گڈی میں کل $52$ پتے ہوتے ہیں، جن میں سے $13$ حکم (spades) کے پتے ہوتے ہیں۔",
        "check": [
+        "52 == 52",
+        "13 == 13"
+       ]
+      },
+      {
+       "math": "P(A) = \\frac{13}{52} = \\frac{1}{4}",
+       "en": "Let $A$ be the event that the first card drawn is a spade. The probability of drawing the first spade is $\\frac{13}{52}$.",
+       "ur": "فرض کریں کہ $A$ پہلے پتے کے حکم (spade) ہونے کا واقعہ ہے۔ پہلا پتہ حکم کا نکلنے کا احتمال $\\frac{13}{52}$ ہے۔",
+       "check": [
+        "R(13, 52) == R(1, 4)"
+       ]
+      },
+      {
+       "math": "P(B|A) = \\frac{12}{51} = \\frac{4}{17}",
+       "en": "Since the cards are drawn without replacement, $51$ cards remain in the deck and $12$ of them are spades. Let $B$ be the event that the second card is also a spade.",
+       "ur": "چونکہ پتے واپس رکھے بغیر (without replacement) نکالے گئے ہیں، اس لیے گڈی میں $51$ پتے باقی رہ جاتے ہیں اور ان میں سے $12$ حکم کے پتے ہیں۔ فرض کریں کہ $B$ دوسرے پتے کے بھی حکم ہونے کا واقعہ ہے۔",
+       "check": [
+        "R(12, 51) == R(4, 17)"
+       ]
+      },
+      {
+       "math": "P(A \\cap B) = P(A) \\times P(B|A)",
+       "en": "For dependent events, the combined probability is found by multiplying the probabilities of both steps.",
+       "ur": "منحصر واقعات (dependent events) کے لیے، مشترکہ احتمال دونوں مراحل کے احتمالات کو ضرب دے کر معلوم کیا جاتا ہے۔"
+      },
+      {
+       "math": "P(A \\cap B) = \\frac{13}{52} \\times \\frac{12}{51} = \\frac{1}{4} \\times \\frac{4}{17} = \\frac{1}{17}",
+       "en": "Substitute the values and simplify to get the final answer.",
+       "ur": "قیمتیں درج کریں اور مختصر کر کے حتمی جواب حاصل کریں۔",
+       "check": [
+        "R(13, 52) * R(12, 51) == R(1, 17)",
+        "R(1, 4) * R(4, 17) == R(1, 17)",
         "R(13,52)*R(12,51) == 1/17"
        ]
       }
      ],
      "answer": "$\\frac{1}{17}$",
+     "enriched": true,
      "book_key": "\\frac{1}{17}"
     },
     {
@@ -2603,15 +4331,44 @@
      "prompt": "both diamonds",
      "steps": [
       {
-       "math": "P = \\frac{13}{52} \\times \\frac{12}{51} = \\frac{1}{17}",
-       "en": "Without replacement.",
-       "ur": "دونوں مراحل کے احتمال ضرب کریں۔",
+       "math": "",
+       "en": "A standard deck has a total of $52$ playing cards, out of which there are $13$ diamond cards.",
+       "ur": "تاش کی ایک معیاری گڈی میں کل $52$ پتے ہوتے ہیں، جن میں سے $13$ اینٹ (diamonds) کے پتے ہوتے ہیں۔"
+      },
+      {
+       "math": "P(A) = \\frac{13}{52} = \\frac{1}{4}",
+       "en": "Let $A$ be the event that the first card drawn is a diamond. Its probability is:",
+       "ur": "فرض کریں $A$ اس واقعے کو ظاہر کرتا ہے کہ نکالا گیا پہلا پتہ اینٹ کا ہے۔ اس کا احتمال یہ ہے:",
        "check": [
+        "R(13, 52) == R(1, 4)"
+       ]
+      },
+      {
+       "math": "P(B|A) = \\frac{12}{51} = \\frac{4}{17}",
+       "en": "Since the drawing is without replacement, $51$ cards remain in the deck and $12$ of them are diamonds. Let $B$ be the event that the second card is also a diamond.",
+       "ur": "چونکہ پہلا پتہ واپس نہیں رکھا گیا (without replacement)، اس لیے گڈی میں $51$ پتے باقی رہ جاتے ہیں جن میں سے $12$ اینٹ کے پتے ہیں۔ فرض کریں $B$ دوسرے پتے کے بھی اینٹ ہونے کا واقعہ ہے۔",
+       "check": [
+        "R(12, 51) == R(4, 17)"
+       ]
+      },
+      {
+       "math": "P(A \\cap B) = P(A) \\times P(B|A)",
+       "en": "Because the two events are dependent, we use the multiplication law of probability for dependent events.",
+       "ur": "چونکہ دونوں واقعات ایک دوسرے پر منحصر (dependent) ہیں، اس لیے ہم احتمال کا ضربی قانون استعمال کرتے ہیں۔"
+      },
+      {
+       "math": "P(\\text{both diamonds}) = \\frac{13}{52} \\times \\frac{12}{51} = \\frac{1}{4} \\times \\frac{4}{17} = \\frac{1}{17}",
+       "en": "Substitute the probabilities and simplify to find the final answer.",
+       "ur": "قیمتیں درج کریں اور حتمی جواب معلوم کرنے کے لیے مختصر کریں۔",
+       "check": [
+        "R(13, 52) * R(12, 51) == R(1, 17)",
+        "R(1, 4) * R(4, 17) == R(1, 17)",
         "R(13,52)*R(12,51) == 1/17"
        ]
       }
      ],
      "answer": "$\\frac{1}{17}$",
+     "enriched": true,
      "book_key": "\\frac{1}{17}"
     }
    ],
@@ -2629,15 +4386,47 @@
      "prompt": "",
      "steps": [
       {
-       "math": "P = \\frac{4}{52} \\times \\frac{4}{51} = \\frac{4}{663}",
-       "en": "4 jacks, then 4 queens out of the remaining 51.",
-       "ur": "دونوں مراحل کے احتمال ضرب کریں۔",
+       "math": "n(S) = 52",
+       "en": "A standard deck of playing cards contains a total of $52$ cards, which includes $4$ Jacks and $4$ Queens.",
+       "ur": "تاش کے پتوں کی ایک معیاری گڈی میں کل $52$ پتے ہوتے ہیں، جن میں $4$ غلام (Jacks) اور $4$ ملکہ (Queens) شامل ہیں۔",
        "check": [
+        "52 == 52"
+       ]
+      },
+      {
+       "math": "P(A) = \\frac{4}{52} = \\frac{1}{13}",
+       "en": "Let $A$ be the event that the first card drawn is a Jack. Since there are $4$ Jacks out of $52$ cards, the probability of event $A$ is:",
+       "ur": "فرض کریں کہ $A$ وہ واقعہ ہے جس میں پہلا نکالا گیا پتہ غلام (Jack) ہے۔ چونکہ $52$ پتوں میں $4$ غلام ہیں، اس لیے واقعہ $A$ کا احتمال یہ ہے:",
+       "check": [
+        "R(4, 52) == R(1, 13)"
+       ]
+      },
+      {
+       "math": "P(B|A) = \\frac{4}{51}",
+       "en": "Let $B$ be the event that the second card is a Queen. Since the first card is not replaced, $51$ cards remain in the deck, which still contain all $4$ Queens. The probability of drawing a Queen second is:",
+       "ur": "فرض کریں کہ $B$ وہ واقعہ ہے جس میں دوسرا پتہ ملکہ (Queen) ہے۔ چونکہ پہلا پتہ واپس نہیں رکھا گیا، اس لیے گڈی میں $51$ پتے باقی رہ جاتے ہیں، جن میں اب بھی تمام $4$ ملکائیں موجود ہیں۔ دوسرے پتے کے ملکہ ہونے کا احتمال یہ ہے:",
+       "check": [
+        "R(4, 51) == R(4, 51)"
+       ]
+      },
+      {
+       "math": "P(A \\cap B) = P(A) \\times P(B|A)",
+       "en": "Because the cards are drawn without replacement, these are dependent events. By the multiplication law of probability for dependent events:",
+       "ur": "چونکہ پتے واپس رکھے بغیر نکالے گئے ہیں، اس لیے یہ منحصر واقعات (dependent events) ہیں۔ منحصر واقعات کے لیے احتمال کے ضربی قانون کے مطابق:"
+      },
+      {
+       "math": "P(A \\cap B) = \\frac{4}{52} \\times \\frac{4}{51} = \\frac{1}{13} \\times \\frac{4}{51} = \\frac{4}{663}",
+       "en": "Substitute the values and multiply to find the required probability.",
+       "ur": "مطلوبہ احتمال معلوم کرنے کے لیے قیمتیں درج کریں اور ضرب دیں۔",
+       "check": [
+        "R(4, 52) * R(4, 51) == R(1, 13) * R(4, 51)",
+        "R(1, 13) * R(4, 51) == R(4, 663)",
         "R(4,52)*R(4,51) == 4/663"
        ]
       }
      ],
      "answer": "$\\frac{4}{663}$",
+     "enriched": true,
      "book_key": "\\frac{4}{663}"
     }
    ],
@@ -2655,17 +4444,31 @@
      "prompt": "The probability of impossible event is: (a) $0$ (b) $1$ (c) $2$ (d) $-1$",
      "steps": [
       {
+       "math": "P(E) = \\frac{n(E)}{n(S)}",
+       "en": "We need to find the probability of an impossible event $E$. Recall the basic formula for the probability of an event, where $n(E)$ is the number of favorable outcomes and $n(S)$ is the total number of possible outcomes.",
+       "ur": "ہمیں ایک ناممکن واقعہ $E$ کا احتمال معلوم کرنا ہے۔ کسی واقعہ کے احتمال کا بنیادی فارمولا یاد کریں، جہاں $n(E)$ موافق نتائج کی تعداد اور $n(S)$ ممکنہ نتائج کی کل تعداد ہے۔"
+      },
+      {
        "math": "",
-       "en": "An impossible event has probability 0.",
-       "ur": "ناممکن واقعہ کا احتمال 0 ہے۔"
+       "en": "An impossible event is an event that can never occur, which means it has $0$ favorable outcomes, so $n(E) = 0$.",
+       "ur": "ناممکن واقعہ ایک ایسا واقعہ ہے جو کبھی رونما نہیں ہو سکتا، جس کا مطلب ہے کہ اس کے موافق نتائج کی تعداد $0$ ہوتی ہے، یعنی $n(E) = 0$۔"
+      },
+      {
+       "math": "P(E) = \\frac{0}{n(S)} = 0",
+       "en": "Substitute $n(E) = 0$ into the probability formula. Dividing $0$ by any positive number of total outcomes gives $0$.",
+       "ur": "احتمال کے فارمولے میں $n(E) = 0$ درج کریں۔ $0$ کو کل نتائج کی کسی بھی مثبت تعداد سے تقسیم کرنے سے جواب $0$ آتا ہے۔",
+       "check": [
+        "0 / 1 == 0"
+       ]
       },
       {
        "math": "\\text{Answer: (a) } 0",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Therefore, the probability of an impossible event is $0$, which corresponds to option (a).",
+       "ur": "لہٰذا، ناممکن واقعہ کا احتمال $0$ ہے، جو کہ آپشن (a) سے مطابقت رکھتا ہے۔"
       }
      ],
      "answer": "(a) $0$",
+     "enriched": true,
      "book_key": "(a) 0"
     },
     {
@@ -2673,20 +4476,45 @@
      "prompt": "What is the probability of getting a head when a fair coin is tossed once? (a) $0$ (b) $0.25$ (c) $0.5$ (d) $1$",
      "steps": [
       {
-       "math": "\\frac{1}{2} = 0.5",
-       "en": "1 head out of 2 outcomes.",
-       "ur": "2 میں سے 1۔",
+       "math": "S = \\{H, T\\}, \\quad n(S) = 2",
+       "en": "When a fair coin is tossed once, there are two possible outcomes: Head ($H$) and Tail ($T$). Thus, the total number of outcomes in the sample space $S$ is $2$.",
+       "ur": "جب ایک سکے کو ایک بار اچھالا جاتا ہے تو دو ممکنہ نتائج آ سکتے ہیں: ہیڈ ($H$) اور ٹیل ($T$)۔ اس لیے نمونہ فضا $S$ میں کل نتائج کی تعداد $2$ ہے۔",
        "check": [
-        "R(1,2) == R(5,10)"
+        "2 == 2"
+       ]
+      },
+      {
+       "math": "A = \\{H\\}, \\quad n(A) = 1",
+       "en": "Let $A$ be the event of getting a head. There is only $1$ favourable outcome.",
+       "ur": "فرض کریں $A$ ہیڈ آنے کا وقوعہ ہے۔ اس میں صرف $1$ موافق نتیجہ ہے۔",
+       "check": [
+        "1 == 1"
+       ]
+      },
+      {
+       "math": "P(A) = \\frac{n(A)}{n(S)}",
+       "en": "According to the formula of probability, the probability of an event is the number of favourable outcomes divided by the total number of possible outcomes.",
+       "ur": "احتمال کے فارمولے کے مطابق، کسی وقوعہ کا احتمال موافق نتائج کی تعداد کو کل ممکنہ نتائج کی تعداد پر تقسیم کرنے سے حاصل ہوتا ہے۔"
+      },
+      {
+       "math": "P(A) = \\frac{1}{2} = 0.5",
+       "en": "Substitute $n(A) = 1$ and $n(S) = 2$ into the formula and convert the fraction to a decimal.",
+       "ur": "فارمولے میں $n(A) = 1$ اور $n(S) = 2$ درج کریں اور کسر کو اعشاریہ میں تبدیل کریں۔",
+       "check": [
+        "R(1, 2) == R(5, 10)"
        ]
       },
       {
        "math": "\\text{Answer: (c) } 0.5",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "The calculated probability is $0.5$, which matches option (c).",
+       "ur": "معلوم کیا گیا احتمال $0.5$ ہے، جو کہ آپشن (c) سے مطابقت رکھتا ہے۔",
+       "check": [
+        "R(1,2) == R(5,10)"
+       ]
       }
      ],
      "answer": "(c) $0.5$",
+     "enriched": true,
      "book_key": "(c) 0.5"
     },
     {
@@ -2695,16 +4523,33 @@
      "steps": [
       {
        "math": "",
-       "en": "Always 1.",
-       "ur": "ہمیشہ 1۔"
+       "en": "We are asked to find the sum of the probabilities of all possible outcomes of a random experiment.",
+       "ur": "ہمیں کسی اتفاقی تجربے کے تمام ممکنہ نتائج کے امکانات (پرابیبلیٹیز) کا مجموعہ معلوم کرنا ہے۔"
+      },
+      {
+       "math": "P(S) = 1",
+       "en": "Let $S$ be the sample space containing all possible outcomes of an experiment. By a fundamental axiom of probability, the probability of the sample space is always $1$.",
+       "ur": "فرض کریں کہ $S$ نمونہ فضا (سیمپل سپیس) ہے جس میں تجربے کے تمام ممکنہ نتائج شامل ہیں۔ امکان (پرابیبلیٹی) کے بنیادی اصول کے مطابق، نمونہ فضا کا امکان ہمیشہ $1$ ہوتا ہے۔",
+       "check": [
+        "1 == 1"
+       ]
+      },
+      {
+       "math": "P(E_1) + P(E_2) + \\dots + P(E_n) = 1",
+       "en": "Since all possible individual outcomes $E_1, E_2, \\dots, E_n$ are mutually exclusive and together form the sample space $S$, the sum of their probabilities is always equal to $1$.",
+       "ur": "چونکہ تمام ممکنہ انفرادی نتائج $E_1, E_2, \\dots, E_n$ باہمی طور پر غیر مشترک ہیں اور مل کر نمونہ فضا $S$ بناتے ہیں، اس لیے ان کے امکانات کا مجموعہ ہمیشہ $1$ کے برابر ہوتا ہے۔",
+       "check": [
+        "1 == 1"
+       ]
       },
       {
        "math": "\\text{Answer: (c) } 1",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Comparing this result with the given options, we see that option (c) is the correct answer.",
+       "ur": "اس نتیجے کا دیے گئے آپشنز سے موازنہ کرنے پر، ہم دیکھتے ہیں کہ آپشن (c) درست جواب ہے۔"
       }
      ],
      "answer": "(c) $1$",
+     "enriched": true,
      "book_key": "(c) 1"
     },
     {
@@ -2712,20 +4557,39 @@
      "prompt": "If $P(A) = 0.6$, then the probability of event $A$ not happening is: (a) $0.4$ (b) $0.6$ (c) $1$ (d) $1.6$",
      "steps": [
       {
-       "math": "1 - 0.6 = 0.4",
-       "en": "Complement.",
-       "ur": "متمم۔",
+       "math": "P(A) = 0.6",
+       "en": "Write down the given probability of event $A$ happening.",
+       "ur": "واقعہ $A$ کے وقوع پذیر ہونے کا دیا گیا احتمال لکھیں۔"
+      },
+      {
+       "math": "P(A') = 1 - P(A)",
+       "en": "The probability of event $A$ not happening is denoted by $P(A')$. By the complement rule of probability, the sum of $P(A)$ and $P(A')$ is $1$.",
+       "ur": "واقعہ $A$ کے وقوع پذیر نہ ہونے کے احتمال کو $P(A')$ سے ظاہر کیا جاتا ہے۔ احتمال کے تکمیلی اصول (متمم) کے مطابق، $P(A)$ اور $P(A')$ کا مجموعہ $1$ ہوتا ہے۔"
+      },
+      {
+       "math": "P(A') = 1 - 0.6",
+       "en": "Substitute the given value $P(A) = 0.6$ into the formula.",
+       "ur": "فارمولے میں دی گئی قیمت $P(A) = 0.6$ درج کریں۔"
+      },
+      {
+       "math": "P(A') = 0.4",
+       "en": "Subtract $0.6$ from $1$ to find the probability of event $A$ not happening.",
+       "ur": "واقعہ $A$ کے وقوع پذیر نہ ہونے کا احتمال معلوم کرنے کے لیے $1$ میں سے $0.6$ تفریق کریں۔",
        "check": [
         "1 - R(6,10) == R(4,10)"
        ]
       },
       {
        "math": "\\text{Answer: (a) } 0.4",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Therefore, the correct option is (a).",
+       "ur": "لہٰذا، درست جواب (a) ہے۔",
+       "check": [
+        "1 - R(6,10) == R(4,10)"
+       ]
       }
      ],
      "answer": "(a) $0.4$",
+     "enriched": true,
      "book_key": "(a) 0.4"
     },
     {
@@ -2734,16 +4598,27 @@
      "steps": [
       {
        "math": "",
-       "en": "Mutually exclusive: they cannot happen together.",
-       "ur": "باہم خارج: اکٹھے نہیں ہو سکتے۔"
+       "en": "We need to identify the correct definition of mutually exclusive events from the given options.",
+       "ur": "ہمیں دیے گئے آپشنز میں سے باہم خارج واقعات (mutually exclusive events) کی درست تعریف کی نشاندہی کرنی ہے۔"
+      },
+      {
+       "math": "A \\cap B = \\emptyset",
+       "en": "In probability, two events $A$ and $B$ are called mutually exclusive (or disjoint) if they have no common outcomes. This means the occurrence of one event prevents the occurrence of the other at the same time.",
+       "ur": "احتمال (probability) میں، دو واقعات $A$ اور $B$ کو باہم خارج کہا جاتا ہے اگر ان میں کوئی مشترک نتیجہ نہ ہو۔ اس کا مطلب ہے کہ ایک واقعے کا رونما ہونا اسی وقت دوسرے واقعے کے رونما ہونے کو روکتا ہے۔"
+      },
+      {
+       "math": "",
+       "en": "In simple words, mutually exclusive events cannot happen together (for example, getting both Heads and Tails on a single toss of a coin).",
+       "ur": "آسان الفاظ میں، باہم خارج واقعات ایک ساتھ (اکٹھے) رونما نہیں ہو سکتے (مثال کے طور پر، سکے کو ایک بار اچھالنے پر بیک وقت چت اور پٹ دونوں کا آنا)۔"
       },
       {
        "math": "\\text{Answer: (c) } \\text{they cannot happen together}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Comparing this definition with the given choices, option (c) is the correct answer.",
+       "ur": "اس تعریف کا دیے گئے انتخاب سے موازنہ کرنے پر، آپشن (c) درست جواب ہے۔"
       }
      ],
      "answer": "(c) $\\text{they cannot happen together}$",
+     "enriched": true,
      "book_key": "(c) they cannot happen together"
     },
     {
@@ -2751,20 +4626,45 @@
      "prompt": "If one coin is tossed and one dice is rolled, then the number of sample point are: (a) $3$ (b) $6$ (c) $2$ (d) $12$",
      "steps": [
       {
-       "math": "2 \\times 6 = 12",
-       "en": "Multiply the outcomes.",
-       "ur": "نتائج ضرب کریں۔",
+       "math": "n(S_1) = 2",
+       "en": "When one coin is tossed, the possible outcomes are Head $(H)$ and Tail $(T)$. So, the number of outcomes for the coin is $2$.",
+       "ur": "جب ایک سکہ اچھالا جاتا ہے تو ممکنہ نتائج چت $(H)$ اور پٹ $(T)$ ہوتے ہیں۔ لہذا، سکے کے ممکنہ نتائج کی تعداد $2$ ہے۔",
+       "check": [
+        "2 == 2"
+       ]
+      },
+      {
+       "math": "n(S_2) = 6",
+       "en": "When one die is rolled, the possible outcomes are $1, 2, 3, 4, 5, 6$. So, the number of outcomes for the die is $6$.",
+       "ur": "جب ایک چھکا (ڈائس) پھینکا جاتا ہے تو ممکنہ نتائج $1, 2, 3, 4, 5, 6$ ہوتے ہیں۔ لہذا، چھکے کے ممکنہ نتائج کی تعداد $6$ ہے۔",
+       "check": [
+        "6 == 6"
+       ]
+      },
+      {
+       "math": "",
+       "en": "By the fundamental principle of counting, to find the total number of sample points $n(S)$ when both events occur together, we multiply the individual outcomes: $n(S) = n(S_1) \\times n(S_2)$.",
+       "ur": "گنتی کے بنیادی اصول کے مطابق، جب دونوں واقعات ایک ساتھ رونما ہوں تو کل نمونہ نقاط $n(S)$ معلوم کرنے کے لیے ہم انفرادی نتائج کو ضرب دیتے ہیں: $n(S) = n(S_1) \\times n(S_2)$۔"
+      },
+      {
+       "math": "n(S) = 2 \\times 6 = 12",
+       "en": "Substitute the values and multiply to get the total number of sample points.",
+       "ur": "قیمتیں درج کریں اور کل نمونہ نقاط حاصل کرنے کے لیے ضرب دیں۔",
        "check": [
         "2*6 == 12"
        ]
       },
       {
        "math": "\\text{Answer: (d) } 12",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Thus, the total number of sample points is $12$, which corresponds to option (d).",
+       "ur": "پس، نمونہ نقاط کی کل تعداد $12$ ہے، جو کہ آپشن (d) سے مطابقت رکھتی ہے۔",
+       "check": [
+        "2*6 == 12"
+       ]
       }
      ],
      "answer": "(d) $12$",
+     "enriched": true,
      "book_key": "(d) 12"
     },
     {
@@ -2773,16 +4673,35 @@
      "steps": [
       {
        "math": "",
-       "en": "A sure event has probability 1.",
-       "ur": "یقینی واقعہ کا احتمال 1 ہے۔"
+       "en": "We are asked to find the probability of a sure (or certain) event.",
+       "ur": "ہمیں ایک یقینی واقعہ کا احتمال معلوم کرنے کے لیے کہا گیا ہے۔"
+      },
+      {
+       "math": "E = S \\implies n(E) = n(S)",
+       "en": "A sure event $E$ is an event that is certain to happen, meaning it contains all possible outcomes of the sample space $S$. Thus, the number of outcomes in $E$ equals the number of outcomes in $S$.",
+       "ur": "یقینی واقعہ $E$ ایک ایسا واقعہ ہے جس کا رونما ہونا یقینی ہو، یعنی اس میں نمونہ کی فضا $S$ کے تمام ممکنہ نتائج شامل ہوتے ہیں۔ اس لیے، $E$ کے ارکان کی تعداد $S$ کے ارکان کی تعداد کے برابر ہوتی ہے۔"
+      },
+      {
+       "math": "P(E) = \\frac{n(E)}{n(S)}",
+       "en": "Recall the basic formula for the probability of an event $E$.",
+       "ur": "کسی واقعہ $E$ کے احتمال کا بنیادی فارمولا یاد کریں۔"
+      },
+      {
+       "math": "P(E) = \\frac{n(S)}{n(S)} = 1",
+       "en": "Substitute $n(E) = n(S)$ into the formula and simplify. Since a non-zero number divided by itself is $1$, the probability of a sure event is $1$.",
+       "ur": "فارمولے میں $n(E) = n(S)$ درج کریں اور مختصر کریں۔ چونکہ کسی غیر صفر عدد کو اسی عدد سے تقسیم کرنے پر $1$ حاصل ہوتا ہے، اس لیے یقینی واقعہ کا احتمال $1$ ہے۔",
+       "check": [
+        "1 == 1"
+       ]
       },
       {
        "math": "\\text{Answer: (a) } 1",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Comparing our result with the given options, we see that option (a) is the correct choice.",
+       "ur": "اپنے نتیجے کا دیے گئے آپشنز سے موازنہ کرنے پر، ہم دیکھتے ہیں کہ آپشن (a) درست انتخاب ہے۔"
       }
      ],
      "answer": "(a) $1$",
+     "enriched": true,
      "book_key": "(a) 1"
     },
     {
@@ -2791,16 +4710,46 @@
      "steps": [
       {
        "math": "",
-       "en": "No face is greater than 6.",
-       "ur": "کوئی رخ 6 سے بڑا نہیں۔"
+       "en": "When a standard six-sided die is rolled, the sample space of all possible outcomes is $S = \\{1, 2, 3, 4, 5, 6\\}$.",
+       "ur": "جب ایک معیاری چھ رخوں والا پانسہ پھینکا جاتا ہے، تو تمام ممکنہ نتائج کی سیمپل سپیس $S = \\{1, 2, 3, 4, 5, 6\\}$ ہوتی ہے۔"
+      },
+      {
+       "math": "n(S) = 6",
+       "en": "The total number of possible outcomes is $6$.",
+       "ur": "ممکنہ نتائج کی کل تعداد $6$ ہے۔",
+       "check": [
+        "6 == 6"
+       ]
+      },
+      {
+       "math": "n(E) = 0",
+       "en": "Let $E$ be the event of getting a number greater than $6$. Since no face on the die has a number greater than $6$, this is an impossible event ($E = \\emptyset$), so the number of favorable outcomes is $0$.",
+       "ur": "فرض کریں کہ $E$ ایک ایسا وقوعہ ہے جس میں $6$ سے بڑا عدد آتا ہے۔ چونکہ پانسے کے کسی بھی رخ پر $6$ سے بڑا عدد نہیں ہوتا، اس لیے یہ ایک ناممکن وقوعہ ہے ($E = \\emptyset$)، لہٰذا موافق نتائج کی تعداد $0$ ہے۔",
+       "check": [
+        "0 == 0"
+       ]
+      },
+      {
+       "math": "P(E) = \\frac{n(E)}{n(S)}",
+       "en": "Apply the probability formula, which is the ratio of favorable outcomes to the total number of outcomes.",
+       "ur": "احتمال (probability) کا فارمولا استعمال کریں، جو موافق نتائج اور کل نتائج کی نسبت ہے۔"
+      },
+      {
+       "math": "P(E) = \\frac{0}{6} = 0",
+       "en": "Substitute $n(E) = 0$ and $n(S) = 6$ into the formula and simplify.",
+       "ur": "فارمولے میں $n(E) = 0$ اور $n(S) = 6$ درج کریں اور مختصر کریں۔",
+       "check": [
+        "R(0, 6) == 0"
+       ]
       },
       {
        "math": "\\text{Answer: (c) } 0",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "The probability of getting a number greater than $6$ is $0$, which matches option (c).",
+       "ur": "$6$ سے بڑا عدد آنے کا احتمال $0$ ہے، جو کہ آپشن (c) سے مطابقت رکھتا ہے۔"
       }
      ],
      "answer": "(c) $0$",
+     "enriched": true,
      "book_key": "(c) 0"
     },
     {
@@ -2809,16 +4758,33 @@
      "steps": [
       {
        "math": "",
-       "en": "A deck has 52 cards.",
-       "ur": "تاش میں 52 کارڈ ہوتے ہیں۔"
+       "en": "We need to find the total number of possible outcomes when a single card is drawn at random from a standard deck of playing cards.",
+       "ur": "ہمیں یہ معلوم کرنا ہے کہ تاش کی ایک معیاری گڈی سے ایک پتہ نکالنے پر کل کتنے ممکنہ نتائج ہو سکتے ہیں۔"
+      },
+      {
+       "math": "4 \\times 13 = 52",
+       "en": "A standard deck of playing cards consists of $4$ suits (spades, hearts, diamonds, and clubs), and each suit has $13$ cards, making a total of $52$ cards.",
+       "ur": "تاش کی ایک معیاری گڈی میں $4$ رنگ (حکم، پان، اینٹ اور چڑی) ہوتے ہیں، اور ہر رنگ کے $13$ پتے ہوتے ہیں، جس سے کل $52$ پتے بنتے ہیں۔",
+       "check": [
+        "4 * 13 == 52"
+       ]
+      },
+      {
+       "math": "n(S) = 52",
+       "en": "When we draw one card from the deck, any of the $52$ cards can be chosen. Therefore, the total number of possible outcomes in the sample space $S$ is $52$.",
+       "ur": "جب ہم گڈی میں سے ایک پتہ نکالتے ہیں، تو ان $52$ پتوں میں سے کوئی بھی پتہ نکل سکتا ہے۔ اس لیے نمونہ فضا $S$ میں ممکنہ نتائج کی کل تعداد $52$ ہے۔",
+       "check": [
+        "52 == 52"
+       ]
       },
       {
        "math": "\\text{Answer: (c) } 52",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Comparing our result with the given choices, option (c) is the correct answer.",
+       "ur": "اپنے نتیجے کا دیے گئے آپشنز سے موازنہ کرنے پر، آپشن (c) درست جواب ہے۔"
       }
      ],
      "answer": "(c) $52$",
+     "enriched": true,
      "book_key": "(c) 52"
     },
     {
@@ -2826,20 +4792,42 @@
      "prompt": "If $P(E) = 0.07$, then the probability of 'not $E$' is: (a) $0.95$ (b) $0.89$ (c) $0.93$ (d) $0.90$",
      "steps": [
       {
-       "math": "1 - 0.07 = 0.93",
-       "en": "Complement.",
-       "ur": "متمم۔",
+       "math": "P(E) = 0.07",
+       "en": "Write down the given probability of event $E$. We need to find the probability of 'not $E$', which is the complement of $E$, denoted as $P(E')$.",
+       "ur": "دیے گئے وقوعہ $E$ کا احتمال لکھیں۔ ہمیں '$E$ نہ ہونے' کا احتمال معلوم کرنا ہے، جو کہ $E$ کا متمم (complement) ہے اور اسے $P(E')$ سے ظاہر کیا جاتا ہے۔",
+       "check": [
+        "R(7,100) == R(7,100)"
+       ]
+      },
+      {
+       "math": "P(E) + P(E') = 1 \\implies P(E') = 1 - P(E)",
+       "en": "According to the complement rule of probability, the sum of the probabilities of an event and its complement is always equal to $1$.",
+       "ur": "احتمال کے قانونِ متمم (complement rule) کے مطابق، کسی وقوعہ اور اس کے متمم کے احتمالات کا مجموعہ ہمیشہ $1$ کے برابر ہوتا ہے۔"
+      },
+      {
+       "math": "P(E') = 1 - 0.07",
+       "en": "Substitute the given value $P(E) = 0.07$ into the formula.",
+       "ur": "فارمولے میں دی گئی قیمت $P(E) = 0.07$ درج کریں۔"
+      },
+      {
+       "math": "P(E') = 0.93",
+       "en": "Subtract $0.07$ from $1$ to get the probability of 'not $E$'.",
+       "ur": "'$E$ نہ ہونے' کا احتمال حاصل کرنے کے لیے $1$ میں سے $0.07$ کو تفریق کریں۔",
        "check": [
         "1 - R(7,100) == R(93,100)"
        ]
       },
       {
        "math": "\\text{Answer: (c) } 0.93",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Comparing our result with the given options, option (c) is the correct answer.",
+       "ur": "ہمارے نتیجے کا دیے گئے آپشنز سے موازنہ کرنے پر، آپشن (c) درست جواب ہے۔",
+       "check": [
+        "1 - R(7,100) == R(93,100)"
+       ]
       }
      ],
      "answer": "(c) $0.93$",
+     "enriched": true,
      "book_key": "(c) 0.93"
     }
    ],
@@ -2857,17 +4845,9 @@
      "prompt": "",
      "steps": [
       {
-       "math": "\\begin{array}{c|cc} & Tuesday & Wednesday \\\\ \\hline Morning & (M, T) & (M, W) \\\\ Evening & (E, T) & (E, W) \\end{array}",
-       "en": "Possibility diagram: rows are the times, columns the days.",
-       "ur": "امکانی خاکہ: قطاریں وقت، کالم دن۔",
-       "check": [
-        "2*2 == 4"
-       ]
-      },
-      {
-       "math": "\\text{Time} \\to \\text{Day}",
-       "en": "Tree diagram with the same 4 outcomes.",
-       "ur": "انہی 4 نتائج کا درختی خاکہ۔",
+       "math": "\\text{Days} = \\{T, W\\}, \\quad \\text{Times} = \\{M, E\\}",
+       "en": "Let us denote the days Tuesday and Wednesday by $T$ and $W$, and the times Morning and Evening by $M$ and $E$ respectively.",
+       "ur": "آئیے منگل اور بدھ کے دنوں کو بالترتیب $T$ اور $W$ سے، اور صبح اور شام کے اوقات کو بالترتیب $M$ اور $E$ سے ظاہر کرتے ہیں۔",
        "draw": [
         {
          "t": "line",
@@ -2972,9 +4952,36 @@
          "s": "W"
         }
        ]
+      },
+      {
+       "math": "\\text{Total outcomes} = 2 \\times 2 = 4",
+       "en": "Since there are $2$ choices for the time and $2$ choices for the day, the total number of possible outcomes is $4$.",
+       "ur": "چونکہ وقت کے لیے $2$ اور دن کے لیے بھی $2$ انتخاب ہیں، اس لیے ممکنہ نتائج کی کل تعداد $4$ ہے۔",
+       "check": [
+        "2*2 == 4"
+       ]
+      },
+      {
+       "math": "\\begin{array}{c|cc} \\text{Time / Day} & \\text{Tuesday } (T) & \\text{Wednesday } (W) \\\\ \\hline \\text{Morning } (M) & (M, T) & (M, W) \\\\ \\text{Evening } (E) & (E, T) & (E, W) \\end{array}",
+       "en": "To draw the possibility diagram, we place the times in the rows and the days in the columns. Each cell represents a pair of (Time, Day).",
+       "ur": "امکانی خاکہ (possibility diagram) بنانے کے لیے ہم اوقات کو قطاروں میں اور دنوں کو کالموں میں رکھتے ہیں۔ ہر خانہ (وقت، دن) کے ایک جوڑے کو ظاہر کرتا ہے۔"
+      },
+      {
+       "math": "\\text{Start} \\begin{cases} M \\begin{cases} T \\longrightarrow (M, T) \\\\ W \\longrightarrow (M, W) \\end{cases} \\\\ E \\begin{cases} T \\longrightarrow (E, T) \\\\ W \\longrightarrow (E, W) \\end{cases} \\end{cases}",
+       "en": "Next, we sketch the tree diagram. The first set of branches represents the selection of Time ($M$ or $E$), and the second set of branches represents the selection of Day ($T$ or $W$).",
+       "ur": "اب ہم درختی خاکہ (tree diagram) بناتے ہیں۔ شاخوں کا پہلا حصہ وقت ($M$ یا $E$) کے انتخاب کو ظاہر کرتا ہے، اور شاخوں کا دوسرا حصہ دن ($T$ یا $W$) کے انتخاب کو ظاہر کرتا ہے۔"
+      },
+      {
+       "math": "S = \\{(M, T), (M, W), (E, T), (E, W)\\}",
+       "en": "Both the possibility diagram and the tree diagram give the same $4$ possible outcomes.",
+       "ur": "امکانی خاکہ اور درختی خاکہ دونوں ہی ایک جیسے $4$ ممکنہ نتائج دیتے ہیں۔",
+       "check": [
+        "2*2 == 4"
+       ]
       }
      ],
      "answer": "4 outcomes: (M, T), (M, W), (E, T), (E, W)",
+     "enriched": true,
      "book_key": "4 outcomes: (M, T), (M, W), (E, T), (E, W)"
     }
    ],
@@ -2993,20 +5000,65 @@
      "prompt": "",
      "steps": [
       {
-       "math": "n(S) = 52,\\ n(A) = 4,\\ n(B) = 13,\\ n(A \\cap B) = 1",
-       "en": "4 aces, 13 spades, 1 ace of spades.",
-       "ur": "ہر واقعہ گنیں۔"
+       "math": "n(S) = 52",
+       "en": "A standard deck of playing cards contains a total of 52 cards, which forms our sample space $S$.",
+       "ur": "تاش کے پتوں کی ایک معیاری گڈی میں کل 52 پتے ہوتے ہیں، جو کہ ہماری نمونہ کی جگہ (sample space) $S$ ہے۔",
+       "check": [
+        "52 == 52"
+       ]
       },
       {
-       "math": "P(A \\cup B) = \\frac{4}{52} + \\frac{13}{52} - \\frac{1}{52} = \\frac{16}{52} = \\frac{4}{13}",
-       "en": "Addition law: $P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$.",
-       "ur": "جمع کا قانون: $P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$۔",
+       "math": "n(A) = 4,\\quad n(B) = 13",
+       "en": "Let event $A$ be getting an ace card and event $B$ be getting a spade card. There are 4 aces and 13 spades in the deck.",
+       "ur": "فرض کریں کہ واقعہ $A$ یکے (ace) کا پتہ نکلنا ہے اور واقعہ $B$ حکم (spade) کا پتہ نکلنا ہے۔ گڈی میں 4 یکے اور 13 حکم کے پتے ہوتے ہیں۔",
        "check": [
+        "4 == 4",
+        "13 == 13"
+       ]
+      },
+      {
+       "math": "n(A \\cap B) = 1",
+       "en": "Events $A$ and $B$ are not mutually exclusive because there is 1 card that is both an ace and a spade (the ace of spades).",
+       "ur": "واقعات $A$ اور $B$ باہمی طور پر غیر مشترک نہیں ہیں کیونکہ 1 پتہ ایسا ہے جو یکہ بھی ہے اور حکم بھی (حکم کا یکہ)۔",
+       "check": [
+        "1 == 1"
+       ]
+      },
+      {
+       "math": "P(A) = \\frac{4}{52},\\quad P(B) = \\frac{13}{52},\\quad P(A \\cap B) = \\frac{1}{52}",
+       "en": "Now, we write the individual probabilities for each event using the formula $P(E) = \\frac{n(E)}{n(S)}$.",
+       "ur": "اب، ہم فارمولا $P(E) = \\frac{n(E)}{n(S)}$ کا استعمال کرتے ہوئے ہر واقعے کا انفرادی احتمال لکھتے ہیں۔",
+       "check": [
+        "R(4, 52) == R(1, 13)",
+        "R(13, 52) == R(1, 4)",
+        "R(1, 52) == R(1, 52)"
+       ]
+      },
+      {
+       "math": "P(A \\cup B) = P(A) + P(B) - P(A \\cap B)",
+       "en": "Since the events are overlapping (non-mutually exclusive), we apply the addition law of probability.",
+       "ur": "چونکہ یہ واقعات متداخل (overlapping) ہیں، اس لیے ہم احتمال کے جمع کا قانون لاگو کرتے ہیں۔"
+      },
+      {
+       "math": "P(A \\cup B) = \\frac{4}{52} + \\frac{13}{52} - \\frac{1}{52} = \\frac{16}{52}",
+       "en": "Substitute the probability values into the formula and combine the numerators over the common denominator 52.",
+       "ur": "فارمولے میں احتمال کی قیمتیں درج کریں اور مشترک مخرج 52 کے اوپر شمار کنندگان کو حل کریں۔",
+       "check": [
+        "R(4, 52) + R(13, 52) - R(1, 52) == R(16, 52)"
+       ]
+      },
+      {
+       "math": "P(A \\cup B) = \\frac{4}{13}",
+       "en": "Simplify the fraction by dividing both the numerator and the denominator by 4. Thus, the probability of getting an ace or a spade is $\\frac{4}{13}$.",
+       "ur": "شمار کنندہ اور مخرج دونوں کو 4 پر تقسیم کر کے کسر کو مختصر کریں۔ پس، یکہ یا حکم کا پتہ نکلنے کا احتمال $\\frac{4}{13}$ ہے۔",
+       "check": [
+        "R(16, 52) == R(4, 13)",
         "R(4, 52) + R(13, 52) - R(1, 52) == 4/13"
        ]
       }
      ],
      "answer": "$\\frac{4}{13}$",
+     "enriched": true,
      "book_key": "\\frac{4}{13}"
     }
    ],
@@ -3024,15 +5076,44 @@
      "prompt": "",
      "steps": [
       {
-       "math": "P = \\frac{26}{52} \\times \\frac{25}{51} = \\frac{25}{102}",
-       "en": "26 red cards, then 25 of the remaining 51.",
-       "ur": "دونوں مراحل کے احتمال ضرب کریں۔",
+       "math": "",
+       "en": "A standard deck of playing cards contains $52$ cards in total, out of which $26$ cards are red (13 hearts and 13 diamonds).",
+       "ur": "تاش کی ایک عام گڈی میں کل $52$ پتے ہوتے ہیں، جن میں سے $26$ پتے سرخ (13 پان اور 13 اینٹ) ہوتے ہیں۔"
+      },
+      {
+       "math": "P(A) = \\frac{26}{52} = \\frac{1}{2}",
+       "en": "Let $A$ be the event that the first card dealt is red. The probability of drawing the first red card is:",
+       "ur": "فرض کریں $A$ پہلے پتے کے سرخ ہونے کا وقوعہ ہے۔ پہلا سرخ پتہ نکلنے کا احتمال یہ ہے:",
        "check": [
+        "R(26,52) == R(1,2)"
+       ]
+      },
+      {
+       "math": "P(B|A) = \\frac{25}{51}",
+       "en": "Since the cards are dealt without replacement, $51$ cards remain in the deck and $25$ of them are red. Let $B$ be the event that the second card is red:",
+       "ur": "چونکہ پتے واپس رکھے بغیر نکالے گئے ہیں، اس لیے گڈی میں $51$ پتے باقی رہ جاتے ہیں اور ان میں سے $25$ سرخ ہیں۔ فرض کریں $B$ دوسرے پتے کے سرخ ہونے کا وقوعہ ہے:",
+       "check": [
+        "R(26-1, 52-1) == R(25,51)"
+       ]
+      },
+      {
+       "math": "P(A \\cap B) = P(A) \\times P(B|A)",
+       "en": "By the multiplication law of probability for dependent events, the probability that both cards are red is:",
+       "ur": "منحصر واقعات کے لیے احتمال کے ضربی قانون کے مطابق، دونوں پتوں کے سرخ ہونے کا احتمال یہ ہے:"
+      },
+      {
+       "math": "P(A \\cap B) = \\frac{26}{52} \\times \\frac{25}{51} = \\frac{1}{2} \\times \\frac{25}{51} = \\frac{25}{102}",
+       "en": "Substitute the values and simplify to find the final probability.",
+       "ur": "قیمتیں درج کریں اور حتمی احتمال معلوم کرنے کے لیے مختصر کریں۔",
+       "check": [
+        "R(26,52)*R(25,51) == R(25,102)",
+        "R(1,2)*R(25,51) == R(25,102)",
         "R(26,52)*R(25,51) == 25/102"
        ]
       }
      ],
      "answer": "$\\frac{25}{102}$",
+     "enriched": true,
      "book_key": "\\frac{25}{102}"
     }
    ],
@@ -3050,20 +5131,59 @@
      "prompt": "",
      "steps": [
       {
-       "math": "n(S) = 36,\\ n(A) = 4,\\ n(B) = 2,\\ n(A \\cap B) = 2",
-       "en": "Product 6: (1,6), (2,3), (3,2), (6,1); difference 5: (1,6), (6,1).",
-       "ur": "ہر واقعہ گنیں۔"
+       "math": "n(S) = 6 \\times 6 = 36",
+       "en": "When two fair dice are rolled simultaneously, each die has $6$ faces, so the total number of possible outcomes in the sample space $S$ is $36$.",
+       "ur": "جب دو چھکوں کو ایک ساتھ پھینکا جاتا ہے، تو ہر چھکے کے $6$ رخ ہوتے ہیں، اس لیے نمونہ فضا $S$ میں ممکنہ نتائج کی کل تعداد $36$ ہے۔",
+       "check": [
+        "6 * 6 == 36"
+       ]
+      },
+      {
+       "math": "A = \\{(1,6), (2,3), (3,2), (6,1)\\}, \\quad n(A) = 4, \\quad P(A) = \\frac{4}{36}",
+       "en": "Let $A$ be the event of getting a product of face values equal to $6$. There are $4$ such outcomes.",
+       "ur": "فرض کریں کہ $A$ وہ واقعہ ہے جس میں رخوں کی قدروں کا حاصل ضرب $6$ آتا ہے۔ ایسے ممکنہ نتائج کی تعداد $4$ ہے۔",
+       "check": [
+        "1 * 6 == 6",
+        "2 * 3 == 6",
+        "3 * 2 == 6",
+        "6 * 1 == 6"
+       ]
+      },
+      {
+       "math": "B = \\{(1,6), (6,1)\\}, \\quad n(B) = 2, \\quad P(B) = \\frac{2}{36}",
+       "en": "Let $B$ be the event of getting a difference of face values equal to $5$. There are $2$ such outcomes.",
+       "ur": "فرض کریں کہ $B$ وہ واقعہ ہے جس میں رخوں کی قدروں کا فرق $5$ آتا ہے۔ ایسے ممکنہ نتائج کی تعداد $2$ ہے۔",
+       "check": [
+        "Abs(1 - 6) == 5",
+        "Abs(6 - 1) == 5"
+       ]
+      },
+      {
+       "math": "A \\cap B = \\{(1,6), (6,1)\\}, \\quad n(A \\cap B) = 2, \\quad P(A \\cap B) = \\frac{2}{36}",
+       "en": "Since outcomes $(1,6)$ and $(6,1)$ are common to both events, $A$ and $B$ are overlapping (non-mutually exclusive) events.",
+       "ur": "چونکہ نتائج $(1,6)$ اور $(6,1)$ دونوں واقعات میں مشترک ہیں، اس لیے $A$ اور $B$ غیر باہمی مانع (متداخل) واقعات ہیں۔",
+       "check": [
+        "1 + 1 == 2"
+       ]
+      },
+      {
+       "math": "P(A \\cup B) = P(A) + P(B) - P(A \\cap B)",
+       "en": "Apply the addition law of probability for overlapping events to find the probability of $A$ or $B$.",
+       "ur": "$A$ یا $B$ کا احتمال معلوم کرنے کے لیے متداخل واقعات کے احتمال کے جمع کا قانون لاگو کریں۔"
       },
       {
        "math": "P(A \\cup B) = \\frac{4}{36} + \\frac{2}{36} - \\frac{2}{36} = \\frac{4}{36} = \\frac{1}{9}",
-       "en": "Addition law: $P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$.",
-       "ur": "جمع کا قانون: $P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$۔",
+       "en": "Substitute the values and simplify the fraction to get the final answer $\\frac{1}{9}$.",
+       "ur": "قدریں درج کریں اور کسر کو مختصر کر کے حتمی جواب $\\frac{1}{9}$ حاصل کریں۔",
        "check": [
+        "R(4, 36) + R(2, 36) - R(2, 36) == R(4, 36)",
+        "R(4, 36) == R(1, 9)",
         "R(4, 36) + R(2, 36) - R(2, 36) == 1/9"
        ]
       }
      ],
      "answer": "$\\frac{1}{9}$",
+     "enriched": true,
      "book_key": "\\frac{1}{9}"
     }
    ],
@@ -3081,15 +5201,55 @@
      "prompt": "",
      "steps": [
       {
-       "math": "P = \\frac{7}{12} \\times \\frac{6}{11} = \\frac{7}{22}",
-       "en": "7 orange out of 12, then 6 out of the remaining 11.",
-       "ur": "دونوں مراحل کے احتمال ضرب کریں۔",
+       "math": "n(S) = 7 + 5 = 12",
+       "en": "First, find the total number of marbles in the bag by adding the $7$ orange and $5$ purple marbles.",
+       "ur": "سب سے پہلے، $7$ نارنجی اور $5$ جامنی بنٹوں کو جمع کر کے تھیلے میں کل بنٹوں کی تعداد معلوم کریں۔",
        "check": [
+        "7 + 5 == 12"
+       ]
+      },
+      {
+       "math": "P(O_1) = \\frac{7}{12}",
+       "en": "Let $O_1$ be the event that the first marble drawn is orange. Since there are $7$ orange marbles out of $12$, the probability of $O_1$ is $\\frac{7}{12}$.",
+       "ur": "فرض کریں کہ پہلا بنٹا نارنجی نکلنے کا واقعہ $O_1$ ہے۔ چونکہ کل $12$ میں سے $7$ بنٹے نارنجی ہیں، اس لیے $O_1$ کا احتمال $\\frac{7}{12}$ ہے۔",
+       "check": [
+        "R(7, 12) == 7/12"
+       ]
+      },
+      {
+       "math": "\\text{Remaining total} = 12 - 1 = 11, \\quad \\text{Remaining orange} = 7 - 1 = 6",
+       "en": "Since the first marble is not replaced, $6$ orange marbles and a total of $11$ marbles remain in the bag.",
+       "ur": "چونکہ پہلا بنٹا واپس نہیں رکھا گیا، اس لیے تھیلے میں $6$ نارنجی بنٹے اور کل $11$ بنٹے باقی رہ جاتے ہیں۔",
+       "check": [
+        "12 - 1 == 11",
+        "7 - 1 == 6"
+       ]
+      },
+      {
+       "math": "P(O_2 | O_1) = \\frac{6}{11}",
+       "en": "Let $O_2$ be the event that the second marble is also orange. The probability of drawing a second orange marble given the first was orange is $\\frac{6}{11}$.",
+       "ur": "فرض کریں کہ دوسرا بنٹا بھی نارنجی نکلنے کا واقعہ $O_2$ ہے۔ پہلے بنٹے کے نارنجی نکلنے کے بعد دوسرے نارنجی بنٹے کے نکلنے کا احتمال $\\frac{6}{11}$ ہے۔",
+       "check": [
+        "R(6, 11) == 6/11"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Since the two draws are dependent events, we use the multiplication law of probability: $P(O_1 \\cap O_2) = P(O_1) \\times P(O_2 | O_1)$.",
+       "ur": "چونکہ دونوں بنٹوں کا نکلنا منحصر واقعات ہیں، اس لیے ہم احتمال کے ضربی قانون $P(O_1 \\cap O_2) = P(O_1) \\times P(O_2 | O_1)$ کا استعمال کرتے ہیں۔"
+      },
+      {
+       "math": "P(O_1 \\cap O_2) = \\frac{7}{12} \\times \\frac{6}{11} = \\frac{7}{22}",
+       "en": "Substitute the values and simplify to get the final probability $\\frac{7}{22}$.",
+       "ur": "قیمتیں درج کریں اور مختصر کریں، جس سے حتمی احتمال $\\frac{7}{22}$ حاصل ہوتا ہے۔",
+       "check": [
+        "R(7, 12) * R(6, 11) == 7/22",
         "R(7,12)*R(6,11) == 7/22"
        ]
       }
      ],
      "answer": "$\\frac{7}{22}$",
+     "enriched": true,
      "book_key": "\\frac{7}{22}"
     }
    ],

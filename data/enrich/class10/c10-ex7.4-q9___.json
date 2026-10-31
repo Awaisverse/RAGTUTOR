@@ -1,0 +1,55 @@
+{
+ "item": "c10-ex7.4-q9",
+ "label": "",
+ "answer_ref": "$156.2$ km",
+ "steps": [
+  {
+   "math": "a = 100\\text{ km}, \\quad b = 120\\text{ km}",
+   "en": "Let the starting point be $A$, the turning point be $B$, and the final position be $C$. The distances of the two legs of the journey are $a = 100\\text{ km}$ and $b = 120\\text{ km}$. We need to find the distance $d$ from $A$ to $C$.",
+   "ur": "فرض کریں کہ نقطہ آغاز $A$ ہے، مڑنے کا مقام $B$ ہے، اور آخری مقام $C$ ہے۔ سفر کے دونوں حصوں کا فاصلہ $a = 100\\text{ km}$ اور $b = 120\\text{ km}$ ہے۔ ہمیں $A$ سے $C$ تک کا فاصلہ $d$ معلوم کرنا ہے۔"
+  },
+  {
+   "math": "\\theta = 135^\\circ - 45^\\circ = 90^\\circ",
+   "en": "First, we find the angle $\\theta$ between the two courses. Since the bearings are $045^\\circ$ and $135^\\circ$, the change in direction is $90^\\circ$, which means the two legs are at right angles to each other.",
+   "ur": "سب سے پہلے ہم دونوں راستوں کے درمیان زاویہ $\\theta$ معلوم کرتے ہیں۔ چونکہ سمتیں (bearings) $045^\\circ$ اور $135^\\circ$ ہیں، اس لیے سمت میں تبدیلی $90^\\circ$ ہے، جس کا مطلب ہے کہ دونوں راستے ایک دوسرے کے ساتھ قائمہ زاویہ بناتے ہیں۔",
+   "check": [
+    "135 - 45 == 90"
+   ]
+  },
+  {
+   "math": "d^2 = a^2 + b^2 - 2ab\\cos\\theta",
+   "en": "To find the distance $d$ between the starting point and the final position, we apply the Law of Cosines.",
+   "ur": "نقطہ آغاز اور آخری مقام کے درمیان فاصلہ $d$ معلوم کرنے کے لیے ہم قانونِ جیب التمام (Law of Cosines) استعمال کرتے ہیں۔"
+  },
+  {
+   "math": "d^2 = 100^2 + 120^2 - 2(100)(120)\\cos 90^\\circ",
+   "en": "Substitute the given values $a = 100$, $b = 120$, and $\\theta = 90^\\circ$ into the formula.",
+   "ur": "فارمولے میں دی گئی قیمتیں $a = 100$، $b = 120$ اور $\\theta = 90^\\circ$ درج کریں۔"
+  },
+  {
+   "math": "d^2 = 10000 + 14400 - 24000(0) = 24400",
+   "en": "Since $\\cos 90^\\circ = 0$, the last term becomes zero. Simplifying the squares gives $24400$.",
+   "ur": "چونکہ $\\cos 90^\\circ = 0$ ہوتا ہے، اس لیے آخری رقم صفر ہو جاتی ہے۔ مربعوں کو حل کرنے سے $24400$ حاصل ہوتا ہے۔",
+   "check": [
+    "100**2 == 10000",
+    "120**2 == 14400",
+    "2*100*120 == 24000",
+    "cos(90*pi/180) == 0",
+    "10000 + 14400 - 24000*0 == 24400"
+   ]
+  },
+  {
+   "math": "d = \\sqrt{24400} \\approx 156.2\\text{ km}",
+   "en": "Take the square root on both sides to find $d$. Thus, the distance between the starting point and the final position is approximately $156.2\\text{ km}$.",
+   "ur": "$d$ معلوم کرنے کے لیے دونوں طرف جزر لیں۔ اس طرح نقطہ آغاز اور آخری مقام کے درمیان فاصلہ تقریباً $156.2\\text{ km}$ ہے۔",
+   "check": [
+    "Abs(sqrt(24400) - 156.2) <= 0.05",
+    "135 - 45 == 90",
+    "100**2 + 120**2 - 2*100*120*cos((90)*pi/180) == 24400",
+    "Abs((sqrt(24400)) - 156.2) <= 0.050000001"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

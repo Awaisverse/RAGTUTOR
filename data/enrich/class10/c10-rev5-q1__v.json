@@ -1,0 +1,54 @@
+{
+ "item": "c10-rev5-q1",
+ "label": "v",
+ "answer_ref": "(d) $(x-y)^2$",
+ "steps": [
+  {
+   "math": "\\left(\\frac{x^2-y^2}{x+y}\\right)(x-y)",
+   "en": "Write down the given algebraic expression that needs to be simplified.",
+   "ur": "دی گئی الجبری عبارت لکھیں جسے مختصر کرنا ہے۔"
+  },
+  {
+   "math": "x^2 - y^2 = (x-y)(x+y)",
+   "en": "Apply the difference of two squares formula $a^2 - b^2 = (a-b)(a+b)$ to factorize the numerator $x^2 - y^2$.",
+   "ur": "شمار کنندہ $x^2 - y^2$ کی تجزی کرنے کے لیے دو مربعات کے فرق کا کلیہ $a^2 - b^2 = (a-b)(a+b)$ استعمال کریں۔",
+   "check": [
+    "x**2 - y**2 == (x - y)*(x + y)"
+   ]
+  },
+  {
+   "math": "= \\left(\\frac{(x-y)(x+y)}{x+y}\\right)(x-y)",
+   "en": "Substitute the factorized form of $x^2 - y^2$ into the original expression.",
+   "ur": "اصل عبارت میں $x^2 - y^2$ کی تجزی شدہ شکل درج کریں۔",
+   "check": [
+    "(x**2 - y**2)/(x + y)*(x - y) == ((x - y)*(x + y))/(x + y)*(x - y)"
+   ]
+  },
+  {
+   "math": "= (x-y)(x-y)",
+   "en": "Cancel out the common factor $(x+y)$ from the numerator and the denominator.",
+   "ur": "شمار کنندہ اور مخرج سے مشترک جزو ضربی $(x+y)$ کو کاٹ دیں۔",
+   "check": [
+    "((x - y)*(x + y))/(x + y)*(x - y) == (x - y)*(x - y)"
+   ]
+  },
+  {
+   "math": "= (x-y)^2",
+   "en": "Multiply the remaining identical factors $(x-y)$ and $(x-y)$ by adding their exponents.",
+   "ur": "باقی ماندہ یکساں اجزائے ضربی $(x-y)$ اور $(x-y)$ کے قوت نماؤں کو جمع کر کے ضرب دیں۔",
+   "check": [
+    "(x - y)*(x - y) == (x - y)**2"
+   ]
+  },
+  {
+   "math": "\\text{Answer: (d) } (x-y)^2",
+   "en": "The simplified form matches option (d), which is the correct answer.",
+   "ur": "مختصر ترین شکل آپشن (d) سے مطابقت رکھتی ہے، جو کہ درست جواب ہے۔",
+   "check": [
+    "(x**2 - y**2)/(x + y)*(x - y) == (x - y)**2"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

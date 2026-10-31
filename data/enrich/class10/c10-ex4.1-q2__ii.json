@@ -1,0 +1,47 @@
+{
+ "item": "c10-ex4.1-q2",
+ "label": "ii",
+ "answer_ref": "$2 x^{2} + 8 x + 8$",
+ "steps": [
+  {
+   "math": "",
+   "en": "We are given the two functions $f(x) = x + 2$ and $g(x) = 2x + 4$, and we need to find the product $g(x) \\cdot f(x)$.",
+   "ur": "ہمیں دو تفاعل $f(x) = x + 2$ اور $g(x) = 2x + 4$ دیے گئے ہیں، اور ہمیں ان کا حاصلِ ضرب $g(x) \\cdot f(x)$ معلوم کرنا ہے۔"
+  },
+  {
+   "math": "g(x) \\cdot f(x) = (2 x + 4) \\cdot (x + 2)",
+   "en": "Substitute the given expressions for $g(x)$ and $f(x)$ into the product.",
+   "ur": "حاصلِ ضرب میں $g(x)$ اور $f(x)$ کی دی گئی قیمتیں درج کریں۔",
+   "check": [
+    "(2*x + 4)*(x + 2) == (2*x + 4)*(x + 2)"
+   ]
+  },
+  {
+   "math": "= 2x(x + 2) + 4(x + 2)",
+   "en": "Apply the distributive property to multiply each term of the first expression by the second expression.",
+   "ur": "پہلے جملے کے ہر رکن کو دوسرے جملے سے ضرب دینے کے لیے تقسیمی خاصیت کا استعمال کریں۔",
+   "check": [
+    "(2*x + 4)*(x + 2) == 2*x*(x + 2) + 4*(x + 2)"
+   ]
+  },
+  {
+   "math": "= 2 x^{2} + 4 x + 4 x + 8",
+   "en": "Expand the brackets by multiplying the terms inside.",
+   "ur": "اندرونی ارکان کو ضرب دے کر بریکٹ کھولیں۔",
+   "check": [
+    "2*x*(x + 2) + 4*(x + 2) == 2*x**2 + 4*x + 4*x + 8"
+   ]
+  },
+  {
+   "math": "g(x) \\cdot f(x) = 2 x^{2} + 8 x + 8",
+   "en": "Combine the like terms $4x$ and $4x$ to get the final answer.",
+   "ur": "حتمی جواب حاصل کرنے کے لیے متشابہ ارکان $4x$ اور $4x$ کو آپس میں جمع کریں۔",
+   "check": [
+    "2*x**2 + 4*x + 4*x + 8 == 2*x**2 + 8*x + 8",
+    "((x + 2)*(2*x + 4)) == (2*x**2 + 8*x + 8)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

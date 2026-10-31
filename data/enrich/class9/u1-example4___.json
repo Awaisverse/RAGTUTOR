@@ -1,0 +1,57 @@
+{
+ "item": "u1-example4",
+ "label": "",
+ "answer_ref": "$\\frac{5}{2}$ and $\\frac{11}{4}$",
+ "steps": [
+  {
+   "math": "",
+   "en": "We are given two numbers, $2$ and $3$, and we need to find two rational numbers that lie between them.",
+   "ur": "ہمیں دو اعداد $2$ اور $3$ دیے گئے ہیں، اور ہمیں ان کے درمیان دو ناطق اعداد (rational numbers) معلوم کرنے ہیں۔"
+  },
+  {
+   "math": "\\frac{a + b}{2}",
+   "en": "A rational number between any two numbers $a$ and $b$ can be found by calculating their average (mean) using this formula.",
+   "ur": "کسی بھی دو اعداد $a$ اور $b$ کے درمیان ایک ناطق عدد اس فارمولے کی مدد سے ان کا اوسط نکال کر معلوم کیا جا سکتا ہے۔"
+  },
+  {
+   "math": "\\frac{2 + 3}{2} = \\frac{5}{2}",
+   "en": "First, find the rational number between $2$ and $3$ by taking their average.",
+   "ur": "سب سے پہلے، $2$ اور $3$ کا اوسط لے کر ان کے درمیان پہلا ناطق عدد معلوم کریں۔",
+   "check": [
+    "(2 + 3)/2 == R(5, 2)"
+   ]
+  },
+  {
+   "math": "\\frac{\\frac{5}{2} + 3}{2}",
+   "en": "Since $\\frac{5}{2}$ lies between $2$ and $3$, we can find a second rational number by taking the average of $\\frac{5}{2}$ and $3$.",
+   "ur": "چونکہ $\\frac{5}{2}$ عدد $2$ اور $3$ کے درمیان واقع ہے، اس لیے ہم $\\frac{5}{2}$ اور $3$ کا اوسط لے کر دوسرا ناطق عدد معلوم کر سکتے ہیں۔"
+  },
+  {
+   "math": "\\frac{\\frac{5 + 6}{2}}{2} = \\frac{\\frac{11}{2}}{2}",
+   "en": "Add the terms in the numerator by taking $2$ as the LCM.",
+   "ur": "شمار کنندہ (numerator) میں $2$ کو ذواضعاف اقل (LCM) لے کر رقموں کو جمع کریں۔",
+   "check": [
+    "((5 + 6)/2)/2 == (R(11, 2))/2"
+   ]
+  },
+  {
+   "math": "\\frac{11}{2 \\times 2} = \\frac{11}{4}",
+   "en": "Simplify the fraction to get the second rational number.",
+   "ur": "دوسرا ناطق عدد حاصل کرنے کے لیے کسر کو مختصر کریں۔",
+   "check": [
+    "11/(2*2) == R(11, 4)"
+   ]
+  },
+  {
+   "math": "",
+   "en": "Hence, two rational numbers between $2$ and $3$ are $\\frac{5}{2}$ and $\\frac{11}{4}$.",
+   "ur": "پس، $2$ اور $3$ کے درمیان دو ناطق اعداد $\\frac{5}{2}$ اور $\\frac{11}{4}$ ہیں۔",
+   "check": [
+    "(2+3)/2 == Rational(5,2)",
+    "(Rational(5,2)+3)/2 == Rational(11,4)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

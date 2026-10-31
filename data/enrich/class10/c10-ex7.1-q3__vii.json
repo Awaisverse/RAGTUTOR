@@ -1,0 +1,56 @@
+{
+ "item": "c10-ex7.1-q3",
+ "label": "vii",
+ "answer_ref": "$\\frac{1}{\\sqrt{2}}$",
+ "steps": [
+  {
+   "math": "\\sin 135^\\circ",
+   "en": "We need to find the exact value of $\\sin 135^\\circ$ without using a calculator.",
+   "ur": "ہمیں کیلکولیٹر کے بغیر $\\sin 135^\\circ$ کی اصل قیمت معلوم کرنی ہے۔"
+  },
+  {
+   "math": "135^\\circ = 90^\\circ + 45^\\circ = 1 \\times 90^\\circ + 45^\\circ",
+   "en": "Express the given angle $135^\\circ$ in the form of $n \\times 90^\\circ + \\theta$, where $\\theta$ is an acute angle.",
+   "ur": "دیے گئے زاویے $135^\\circ$ کو $n \\times 90^\\circ + \\theta$ کی شکل میں لکھیں، جہاں $\\theta$ ایک حادہ زاویہ ہے۔",
+   "check": [
+    "135 == 90 + 45",
+    "135 == 1*90 + 45"
+   ]
+  },
+  {
+   "math": "\\sin 135^\\circ = \\sin(1 \\times 90^\\circ + 45^\\circ)",
+   "en": "Substitute this split angle back into the sine function.",
+   "ur": "اس تقسیم شدہ زاویے کو واپس سائن فنکشن میں درج کریں۔",
+   "check": [
+    "sin(135*pi/180) == sin((1*90 + 45)*pi/180)"
+   ]
+  },
+  {
+   "math": "\\sin(1 \\times 90^\\circ + 45^\\circ) = +\\cos 45^\\circ",
+   "en": "Since $135^\\circ$ lies in Quadrant II where the sine function is positive, and we have an odd multiple of $90^\\circ$ ($n=1$), the trigonometric ratio $\\sin$ changes to its co-ratio $\\cos$.",
+   "ur": "چونکہ $135^\\circ$ دوسرے ربع (Quadrant II) میں واقع ہے جہاں سائن فنکشن مثبت ہوتا ہے، اور ہمارے پاس $90^\\circ$ کا طاق مضرب ($n=1$) ہے، اس لیے مثلثیاتی نسبت $\\sin$ اپنی ہم ریشو (co-ratio) یعنی $\\cos$ میں تبدیل ہو جاتی ہے۔",
+   "check": [
+    "sin((1*90 + 45)*pi/180) == cos(45*pi/180)"
+   ]
+  },
+  {
+   "math": "\\cos 45^\\circ = \\frac{1}{\\sqrt{2}}",
+   "en": "Recall the standard exact value for $\\cos 45^\\circ$ from the trigonometric table.",
+   "ur": "مثلثیاتی جدول سے $\\cos 45^\\circ$ کی معیاری قیمت لکھیں۔",
+   "check": [
+    "cos(45*pi/180) == 1/sqrt(2)"
+   ]
+  },
+  {
+   "math": "\\sin 135^\\circ = \\frac{1}{\\sqrt{2}}",
+   "en": "Therefore, the exact value of $\\sin 135^\\circ$ is $\\frac{1}{\\sqrt{2}}$.",
+   "ur": "لہٰذا، $\\sin 135^\\circ$ کی اصل قیمت $\\frac{1}{\\sqrt{2}}$ ہے۔",
+   "check": [
+    "sin(135*pi/180) == 1/sqrt(2)",
+    "sin((135)*pi/180) == sqrt(2)/2"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

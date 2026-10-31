@@ -1,0 +1,43 @@
+{
+ "item": "c10-ex4.3-q4",
+ "label": "",
+ "answer_ref": "3 hours",
+ "steps": [
+  {
+   "math": "",
+   "en": "The given function representing the time $T$ in hours to travel a distance $d$ in kilometres is $T(d) = \\frac{d}{60}$.",
+   "ur": "فاصلہ $d$ (کلومیٹر میں) طے کرنے کے لیے وقت $T$ (گھنٹوں میں) کو ظاہر کرنے والا دیا گیا فنکشن $T(d) = \\frac{d}{60}$ ہے۔"
+  },
+  {
+   "math": "",
+   "en": "We need to find the time required to travel a distance of $180$ km, which means we are given $d = 180$.",
+   "ur": "ہمیں $180$ کلومیٹر کا فاصلہ طے کرنے کے لیے درکار وقت معلوم کرنا ہے، جس کا مطلب ہے کہ ہمیں $d = 180$ دیا گیا ہے۔"
+  },
+  {
+   "math": "T(180) = \\frac{180}{60}",
+   "en": "Substitute $d = 180$ into the given function $T(d) = \\frac{d}{60}$.",
+   "ur": "دیے گئے فنکشن $T(d) = \\frac{d}{60}$ میں $d = 180$ درج کریں۔",
+   "check": [
+    "(d/60).subs(d, 180) == R(180, 60)"
+   ]
+  },
+  {
+   "math": "T(180) = 3",
+   "en": "Divide $180$ by $60$ to find the time.",
+   "ur": "وقت معلوم کرنے کے لیے $180$ کو $60$ پر تقسیم کریں۔",
+   "check": [
+    "R(180, 60) == 3"
+   ]
+  },
+  {
+   "math": "",
+   "en": "Therefore, it will take $3$ hours to travel $180$ km.",
+   "ur": "لہٰذا، $180$ کلومیٹر کا سفر طے کرنے میں $3$ گھنٹے لگیں گے۔",
+   "check": [
+    "(d/60).subs(d, (180)) == (3)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

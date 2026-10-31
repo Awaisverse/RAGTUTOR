@@ -1,0 +1,48 @@
+{
+ "item": "c10-ex7.1-q3",
+ "label": "ix",
+ "answer_ref": "$-1$",
+ "steps": [
+  {
+   "math": "\\cot 135^\\circ",
+   "en": "We need to find the exact value of the given trigonometric expression $\\cot 135^\\circ$ without using a calculator.",
+   "ur": "ہمیں کیلکولیٹر کا استعمال کیے بغیر دیے گئے مثلثیاتی جملے $\\cot 135^\\circ$ کی اصل قیمت معلوم کرنی ہے۔"
+  },
+  {
+   "math": "135^\\circ = 1 \\times 90^\\circ + 45^\\circ",
+   "en": "First, express the angle $135^\\circ$ as a multiple of $90^\\circ$ plus an acute angle $\\theta$.",
+   "ur": "سب سے پہلے، زاویہ $135^\\circ$ کو $90^\\circ$ کے مضرب اور ایک حادہ زاویے $\\theta$ کے مجموعے کے طور پر لکھیں۔",
+   "check": [
+    "135 == 1*90 + 45"
+   ]
+  },
+  {
+   "math": "\\cot 135^\\circ = \\cot(1 \\times 90^\\circ + 45^\\circ)",
+   "en": "Substitute this angle form into the given trigonometric function.",
+   "ur": "زاویے کی اس شکل کو دیے گئے مثلثیاتی فنکشن میں درج کریں۔",
+   "check": [
+    "cot(135*pi/180) == cot((1*90 + 45)*pi/180)"
+   ]
+  },
+  {
+   "math": "\\cot(1 \\times 90^\\circ + 45^\\circ) = -\\tan 45^\\circ",
+   "en": "Since we have an odd multiple ($1$) of $90^\\circ$, the ratio $\\cot$ changes to its co-ratio $\\tan$. Also, the angle $135^\\circ$ lies in Quadrant II where $\\cot$ is negative, so we put a negative sign.",
+   "ur": "چونکہ ہمارے پاس $90^\\circ$ کا طاق مضرب ($1$) ہے، اس لیے نسبت $\\cot$ اپنی ہم نسبت (co-ratio) یعنی $\\tan$ میں تبدیل ہو جائے گی۔ نیز، زاویہ $135^\\circ$ دوسرے ربع (Quadrant II) میں واقع ہے جہاں $\\cot$ منفی ہوتا ہے، اس لیے ہم منفی علامت لگائیں گے۔",
+   "check": [
+    "cot(135*pi/180) == -tan(45*pi/180)"
+   ]
+  },
+  {
+   "math": "-\\tan 45^\\circ = -1",
+   "en": "Substitute the known exact value $\\tan 45^\\circ = 1$ to get the final answer.",
+   "ur": "حتمی جواب حاصل کرنے کے لیے معلوم قیمت $\\tan 45^\\circ = 1$ درج کریں۔",
+   "check": [
+    "-tan(45*pi/180) == -1",
+    "cot(135*pi/180) == -1",
+    "cot((135)*pi/180) == -1"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

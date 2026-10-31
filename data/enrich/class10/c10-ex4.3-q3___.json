@@ -1,0 +1,46 @@
+{
+ "item": "c10-ex4.3-q3",
+ "label": "",
+ "answer_ref": "275000 rupees",
+ "steps": [
+  {
+   "math": "",
+   "en": "The given cost function for manufacturing $n$ fancy sofa sets is $f(n) = 5500n$.",
+   "ur": "$n$ فینسی صوفہ سیٹ بنانے کے لیے دیا گیا لاگت کا فنکشن $f(n) = 5500n$ ہے۔"
+  },
+  {
+   "math": "n = 50",
+   "en": "We need to find the cost of manufacturing $50$ sofa sets, so the number of sofa sets is $n = 50$.",
+   "ur": "ہمیں $50$ صوفہ سیٹس بنانے کی لاگت معلوم کرنی ہے، اس لیے صوفہ سیٹس کی تعداد $n = 50$ ہے۔",
+   "check": [
+    "50 == 50"
+   ]
+  },
+  {
+   "math": "f(50) = 5500(50)",
+   "en": "Substitute $n = 50$ into the cost function $f(n) = 5500n$.",
+   "ur": "لاگت کے فنکشن $f(n) = 5500n$ میں $n = 50$ درج کریں۔",
+   "check": [
+    "(5500*n).subs(n, 50) == 5500*50"
+   ]
+  },
+  {
+   "math": "f(50) = 275000",
+   "en": "Multiply $5500$ by $50$ to find the total cost.",
+   "ur": "کل لاگت معلوم کرنے کے لیے $5500$ کو $50$ سے ضرب دیں۔",
+   "check": [
+    "5500*50 == 275000"
+   ]
+  },
+  {
+   "math": "",
+   "en": "Thus, the cost of manufacturing $50$ sofa sets is $275000$ rupees.",
+   "ur": "پس، $50$ صوفہ سیٹ بنانے کی لاگت $275000$ روپے ہے۔",
+   "check": [
+    "(5500*n).subs(n, (50)) == (275000)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

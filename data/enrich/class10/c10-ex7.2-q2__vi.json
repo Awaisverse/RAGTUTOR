@@ -1,0 +1,48 @@
+{
+ "item": "c10-ex7.2-q2",
+ "label": "vi",
+ "answer_ref": "$7.89$ cm$^2$",
+ "steps": [
+  {
+   "math": "c = 6.6\\text{ cm}, \\quad \\alpha = 23^\\circ, \\quad \\gamma = 89^\\circ",
+   "en": "Write down the given side and angles of the triangle $ABC$.",
+   "ur": "مثلث $ABC$ کا دیا گیا ضلع اور زاویے لکھیں۔"
+  },
+  {
+   "math": "\\alpha + \\beta + \\gamma = 180^\\circ",
+   "en": "The sum of the interior angles of a triangle is always $180^\\circ$.",
+   "ur": "مثلث کے اندرونی زاویوں کا مجموعہ ہمیشہ $180^\\circ$ ہوتا ہے۔"
+  },
+  {
+   "math": "\\beta = 180^\\circ - \\alpha - \\gamma = 180^\\circ - 23^\\circ - 89^\\circ = 68^\\circ",
+   "en": "Substitute the values of $\\alpha$ and $\\gamma$ to find the third angle $\\beta$.",
+   "ur": "تیسرا زاویہ $\\beta$ معلوم کرنے کے لیے $\\alpha$ اور $\\gamma$ کی قیمتیں درج کریں۔",
+   "check": [
+    "180 - 23 - 89 == 68"
+   ]
+  },
+  {
+   "math": "\\Delta = \\frac{1}{2} \\frac{c^2 \\sin\\alpha \\sin\\beta}{\\sin\\gamma}",
+   "en": "Since one side $c$ and the angles are known, use the formula for the area of a triangle given one side and two angles.",
+   "ur": "چونکہ ایک ضلع $c$ اور زاویے معلوم ہیں، اس لیے ایک ضلع اور دو زاویوں کی مدد سے مثلث کا رقبہ معلوم کرنے کا فارمولا استعمال کریں۔"
+  },
+  {
+   "math": "\\Delta = \\frac{1}{2} \\frac{(6.6)^2 \\sin 23^\\circ \\sin 68^\\circ}{\\sin 89^\\circ}",
+   "en": "Substitute the values of $c$, $\\alpha$, $\\beta$, and $\\gamma$ into the formula.",
+   "ur": "فارمولے میں $c$، $\\alpha$، $\\beta$ اور $\\gamma$ کی قیمتیں درج کریں۔"
+  },
+  {
+   "math": "\\Delta = \\frac{43.56 \\times 0.39073 \\times 0.92718}{2 \\times 0.99985} \\approx 7.89\\text{ cm}^2",
+   "en": "Evaluate the trigonometric ratios and simplify to get the area of the triangle.",
+   "ur": "تکونیاتی نسبتوں کی قیمتیں نکالیں اور مثلث کا رقبہ حاصل کرنے کے لیے مختصر کریں۔",
+   "check": [
+    "Abs((6.6**2) - 43.56) <= 1e-9",
+    "Abs((6.6**2*sin(23*pi/180)*sin(68*pi/180)/(2*sin(89*pi/180))) - 7.89) <= 0.005",
+    "180 - 112 == 68",
+    "Abs((6.6**2*sin((23)*pi/180)*sin((68)*pi/180)/(2*sin((89)*pi/180))) - 7.89) <= 0.0050000010000000004"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

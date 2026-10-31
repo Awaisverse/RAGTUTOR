@@ -1,0 +1,39 @@
+{
+ "item": "c10-ex1.1-q2",
+ "label": "ii",
+ "answer_ref": "$3 - i\\sqrt{7}$",
+ "steps": [
+  {
+   "math": "3 - \\sqrt{-7}",
+   "en": "We are given the expression $3 - \\sqrt{-7}$ and we need to write it in terms of the imaginary unit $i$.",
+   "ur": "ہمیں جملہ $3 - \\sqrt{-7}$ دیا گیا ہے اور ہمیں اسے خیالی اکائی $i$ کی شکل میں لکھنا ہے۔"
+  },
+  {
+   "math": "3 - \\sqrt{-7} = 3 - \\sqrt{7 \\times (-1)}",
+   "en": "First, rewrite the negative number inside the square root as a product of a positive number and $-1$.",
+   "ur": "سب سے پہلے، جزر کے اندر موجود منفی عدد کو ایک مثبت عدد اور $-1$ کے حاصل ضرب کے طور پر لکھیں۔",
+   "check": [
+    "3 - sqrt(-7) == 3 - sqrt(7 * (-1))"
+   ]
+  },
+  {
+   "math": "= 3 - \\sqrt{7}\\sqrt{-1}",
+   "en": "Using the radical property $\\sqrt{a \\times b} = \\sqrt{a}\\sqrt{b}$ for a positive number $a$, separate the square roots.",
+   "ur": "مثبت عدد $a$ کے لیے جزر کی خصوصیت $\\sqrt{a \\times b} = \\sqrt{a}\\sqrt{b}$ کا استعمال کرتے ہوئے، جزر کو الگ کریں۔",
+   "check": [
+    "3 - sqrt(7 * (-1)) == 3 - sqrt(7)*sqrt(-1)"
+   ]
+  },
+  {
+   "math": "= 3 - i\\sqrt{7}",
+   "en": "By the definition of the imaginary unit, substitute $i = \\sqrt{-1}$ to get the final answer.",
+   "ur": "خیالی اکائی کی تعریف کے مطابق، حتمی جواب حاصل کرنے کے لیے $i = \\sqrt{-1}$ درج کریں۔",
+   "check": [
+    "3 - sqrt(7)*sqrt(-1) == 3 - I*sqrt(7)",
+    "3 - sqrt(-7) == 3 - I*sqrt(7)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

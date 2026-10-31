@@ -1,0 +1,53 @@
+{
+ "item": "c10-ex12.1-q6",
+ "label": "iiib",
+ "answer_ref": "$\\frac{1}{6}$",
+ "steps": [
+  {
+   "math": "n(S) = 6 \\times 6 = 36",
+   "en": "When two unbiased dice are rolled once, the total number of possible outcomes in the sample space $S$ is $36$.",
+   "ur": "جب دو غیر جانبدار پانسے ایک بار پھینکے جاتے ہیں، تو نمونہ فضا $S$ میں کل ممکنہ نتائج کی تعداد $36$ ہوتی ہے۔",
+   "check": [
+    "6 * 6 == 36"
+   ]
+  },
+  {
+   "math": "E = \\{(1, 2), (1, 3), (1, 5), (2, 1), (3, 1), (5, 1)\\}",
+   "en": "Let $E$ be the event of getting a prime number as the product of the two dice. A prime number only has two factors: $1$ and itself. So, one die must show $1$ and the other must show a prime number ($2, 3,$ or $5$).",
+   "ur": "فرض کریں کہ $E$ دونوں پانسوں کے حاصل ضرب کے طور پر ایک مفرد عدد حاصل کرنے کا واقعہ ہے۔ مفرد عدد کے صرف دو اجزائے ضربی ہوتے ہیں: $1$ اور وہ عدد خود۔ اس لیے ایک پانسے پر $1$ اور دوسرے پر مفرد عدد ($2, 3,$ یا $5$) آنا چاہیے۔",
+   "check": [
+    "1*2 == 2",
+    "1*3 == 3",
+    "1*5 == 5",
+    "2*1 == 2",
+    "3*1 == 3",
+    "5*1 == 5"
+   ]
+  },
+  {
+   "math": "n(E) = 6",
+   "en": "Count the number of favourable outcomes in event $E$.",
+   "ur": "واقعہ $E$ میں موافق نتائج کی تعداد گنیں۔",
+   "check": [
+    "1 + 1 + 1 + 1 + 1 + 1 == 6"
+   ]
+  },
+  {
+   "math": "P(E) = \\frac{n(E)}{n(S)}",
+   "en": "Use the probability formula: divide the number of favourable outcomes by the total number of outcomes.",
+   "ur": "احتمال کا فارمولا استعمال کریں: موافق نتائج کی تعداد کو کل ممکنہ نتائج کی تعداد پر تقسیم کریں۔"
+  },
+  {
+   "math": "P(E) = \\frac{6}{36} = \\frac{1}{6}",
+   "en": "Substitute $n(E) = 6$ and $n(S) = 36$ into the formula and simplify the fraction to get the final answer.",
+   "ur": "فارمولے میں $n(E) = 6$ اور $n(S) = 36$ درج کریں اور حتمی جواب حاصل کرنے کے لیے کسر کو مختصر کریں۔",
+   "check": [
+    "R(6, 36) == R(1, 6)",
+    "36 == 36",
+    "R(6, 36) == 1/6"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

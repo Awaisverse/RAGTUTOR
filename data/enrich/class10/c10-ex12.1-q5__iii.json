@@ -1,0 +1,48 @@
+{
+ "item": "c10-ex12.1-q5",
+ "label": "iii",
+ "answer_ref": "$\\frac{1}{4}$",
+ "steps": [
+  {
+   "math": "n(S) = 6 \\times 2 = 12",
+   "en": "When a die (6 outcomes: $1, 2, 3, 4, 5, 6$) is rolled and a coin (2 outcomes: $H, T$) is tossed together, the total number of possible outcomes in the sample space $S$ is 12.",
+   "ur": "جب ایک پانسہ (6 نتائج: $1, 2, 3, 4, 5, 6$) پھینکا جائے اور ایک سکہ (2 نتائج: $H, T$) ایک ساتھ اچھالا جائے، تو نمونہ فضا $S$ میں کل ممکنہ نتائج کی تعداد 12 ہوتی ہے۔",
+   "check": [
+    "6 * 2 == 12"
+   ]
+  },
+  {
+   "math": "n(E) = 3",
+   "en": "Let $E$ be the event of getting a tail ($T$) and an even number ($2, 4,$ or $6$). The favourable outcomes are $(2, T), (4, T),$ and $(6, T)$, so there are 3 favourable outcomes.",
+   "ur": "فرض کریں $E$ ٹیل ($T$) اور جفت عدد ($2, 4,$ یا $6$) آنے کا واقعہ ہے۔ موافق نتائج $(2, T), (4, T),$ اور $(6, T)$ ہیں، اس لیے موافق نتائج کی تعداد 3 ہے۔",
+   "check": [
+    "3 == 3"
+   ]
+  },
+  {
+   "math": "P(E) = \\frac{n(E)}{n(S)}",
+   "en": "The probability of an event $E$ is calculated by dividing the number of favourable outcomes $n(E)$ by the total number of outcomes $n(S)$.",
+   "ur": "کسی واقعہ $E$ کا احتمال معلوم کرنے کے لیے موافق نتائج کی تعداد $n(E)$ کو کل نتائج کی تعداد $n(S)$ پر تقسیم کیا جاتا ہے۔"
+  },
+  {
+   "math": "P(E) = \\frac{3}{12}",
+   "en": "Substitute $n(E) = 3$ and $n(S) = 12$ into the probability formula.",
+   "ur": "احتمال کے کلیے میں $n(E) = 3$ اور $n(S) = 12$ کی قیمتیں درج کریں۔",
+   "check": [
+    "R(3, 12) == R(3, 12)"
+   ]
+  },
+  {
+   "math": "P(E) = \\frac{1}{4}",
+   "en": "Simplify the fraction by dividing both the numerator and the denominator by 3. Thus, the required probability is $\\frac{1}{4}$.",
+   "ur": "شمار کنندہ اور مخرج دونوں کو 3 پر تقسیم کر کے کسر کو مختصر کریں۔ پس، مطلوبہ احتمال $\\frac{1}{4}$ ہے۔",
+   "check": [
+    "R(3, 12) == R(1, 4)",
+    "12 == 12",
+    "R(3, 12) == 1/4"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

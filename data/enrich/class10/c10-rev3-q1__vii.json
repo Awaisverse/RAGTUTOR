@@ -1,0 +1,48 @@
+{
+ "item": "c10-rev3-q1",
+ "label": "vii",
+ "answer_ref": "(c) $[4\\ \\ 4]$",
+ "steps": [
+  {
+   "math": "A = [3\\ \\ 4], \\quad B = [7\\ \\ 8]",
+   "en": "Write down the given row matrices $A$ and $B$. We need to find the matrix difference $B - A$.",
+   "ur": "دیے گئے قطاری قالب $A$ اور $B$ لکھیں۔ ہمیں ان کا فرق $B - A$ معلوم کرنا ہے۔"
+  },
+  {
+   "math": "B - A = [7\\ \\ 8] - [3\\ \\ 4]",
+   "en": "Substitute the given matrices into the expression $B - A$. Since both matrices have the same order ($1 \\times 2$), they are conformable for subtraction.",
+   "ur": "قیمتیں $B - A$ میں درج کریں۔ چونکہ دونوں قالبوں کا مرتبہ یکساں ($1 \\times 2$) ہے، اس لیے ان کی تفریق ممکن ہے۔",
+   "check": [
+    "Eq(Matrix([[7, 8]]) - Matrix([[3, 4]]), Matrix([[4, 4]]))"
+   ]
+  },
+  {
+   "math": "B - A = [7 - 3\\ \\ 8 - 4]",
+   "en": "To subtract matrix $A$ from matrix $B$, subtract the corresponding entries of $A$ from the entries of $B$.",
+   "ur": "قالب $B$ میں سے قالب $A$ کو تفریق کرنے کے لیے، $B$ کے ارکان میں سے $A$ کے متناظرہ ارکان کو تفریق کریں۔",
+   "check": [
+    "Eq(Matrix([[7 - 3, 8 - 4]]), Matrix([[4, 4]]))"
+   ]
+  },
+  {
+   "math": "B - A = [4\\ \\ 4]",
+   "en": "Simplify the arithmetic operations ($7 - 3 = 4$ and $8 - 4 = 4$) to get the resultant matrix.",
+   "ur": "حسابی عمل کو مختصر کریں ($7 - 3 = 4$ اور $8 - 4 = 4$) تاکہ مطلوبہ قالب حاصل ہو سکے۔",
+   "check": [
+    "7 - 3 == 4",
+    "8 - 4 == 4",
+    "Eq(Matrix([[7, 8]]) - Matrix([[3, 4]]), Matrix([[4, 4]]))"
+   ]
+  },
+  {
+   "math": "\\text{Answer: (c) } [4\\ \\ 4]",
+   "en": "Comparing our result with the given choices, option (c) is the correct answer.",
+   "ur": "اپنے نتیجے کا دیے گئے ممکنہ جوابات سے موازنہ کرنے پر، آپشن (c) درست جواب ہے۔",
+   "check": [
+    "Eq(Matrix([[7, 8]]) - Matrix([[3, 4]]), Matrix([[4, 4]]))"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

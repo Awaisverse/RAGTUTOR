@@ -1,0 +1,49 @@
+{
+ "item": "c10-ex12.1-q7",
+ "label": "v",
+ "answer_ref": "$\\frac{7}{8}$",
+ "steps": [
+  {
+   "math": "S = \\{HHH, HHT, HTH, HTT, THH, THT, TTH, TTT\\}",
+   "en": "When three fair coins are tossed together, the sample space $S$ consists of all possible combinations of Heads ($H$) and Tails ($T$).",
+   "ur": "جب تین سکے ایک ساتھ اچھالے جاتے ہیں، تو نمونہ فضا $S$ چِت ($H$) اور پَٹ ($T$) کے تمام ممکنہ نتائج پر مشتمل ہوتی ہے۔"
+  },
+  {
+   "math": "n(S) = 2^3 = 8",
+   "en": "Count the total number of possible outcomes in the sample space $S$.",
+   "ur": "نمونہ فضا $S$ میں کل ممکنہ نتائج کی تعداد گنیں۔",
+   "check": [
+    "2**3 == 8"
+   ]
+  },
+  {
+   "math": "E = \\{HHT, HTH, HTT, THH, THT, TTH, TTT\\}",
+   "en": "Let $E$ be the event of getting 'at most 2 heads'. This means getting 0, 1, or 2 heads (i.e., all outcomes except $HHH$).",
+   "ur": "فرض کریں کہ $E$ 'زیادہ سے زیادہ 2 چِت' آنے کا واقعہ ہے۔ اس کا مطلب ہے 0، 1، یا 2 چِت آنا (یعنی $HHH$ کے علاوہ تمام نتائج)۔"
+  },
+  {
+   "math": "n(E) = 7",
+   "en": "Count the number of favourable outcomes in event $E$.",
+   "ur": "واقعہ $E$ میں موافق نتائج کی تعداد گنیں۔",
+   "check": [
+    "8 - 1 == 7"
+   ]
+  },
+  {
+   "math": "P(E) = \\frac{n(E)}{n(S)}",
+   "en": "Write the formula for the probability of an event, which is the number of favourable outcomes divided by the total number of outcomes.",
+   "ur": "کسی واقعہ کے احتمال کا فارمولا لکھیں، جو کہ موافق نتائج کی تعداد تقسیم کل نتائج کی تعداد کے برابر ہوتا ہے۔"
+  },
+  {
+   "math": "P(E) = \\frac{7}{8}",
+   "en": "Substitute $n(E) = 7$ and $n(S) = 8$ into the formula to find the required probability.",
+   "ur": "مطلوبہ احتمال معلوم کرنے کے لیے فارمولے میں $n(E) = 7$ اور $n(S) = 8$ درج کریں۔",
+   "check": [
+    "R(7, 8) == 7/8",
+    "8 == 8"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

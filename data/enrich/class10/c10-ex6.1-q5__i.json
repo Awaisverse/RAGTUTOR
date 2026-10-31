@@ -1,0 +1,44 @@
+{
+ "item": "c10-ex6.1-q5",
+ "label": "i",
+ "answer_ref": "$\\sqrt{13}$",
+ "steps": [
+  {
+   "math": "\\underline{a} = -3\\underline{i} + 2\\underline{j}",
+   "en": "The given vector is $\\underline{a} = -3\\underline{i} + 2\\underline{j}$. Here, the components are $x = -3$ and $y = 2$.",
+   "ur": "دی گئی ویکٹر $\\underline{a} = -3\\underline{i} + 2\\underline{j}$ ہے۔ یہاں اجزاء $x = -3$ اور $y = 2$ ہیں۔"
+  },
+  {
+   "math": "|\\underline{a}| = \\sqrt{x^2 + y^2}",
+   "en": "The magnitude of a vector $\\underline{a} = x\\underline{i} + y\\underline{j}$ in a plane is calculated using the formula $|\\underline{a}| = \\sqrt{x^2 + y^2}$.",
+   "ur": "مستوی میں کسی ویکٹر $\\underline{a} = x\\underline{i} + y\\underline{j}$ کی مقدار معلوم کرنے کا فارمولا $|\\underline{a}| = \\sqrt{x^2 + y^2}$ ہے۔"
+  },
+  {
+   "math": "|\\underline{a}| = \\sqrt{(-3)^2 + (2)^2}",
+   "en": "Substitute the values $x = -3$ and $y = 2$ into the magnitude formula.",
+   "ur": "مقدار کے فارمولے میں $x = -3$ اور $y = 2$ کی قیمتیں درج کریں۔"
+  },
+  {
+   "math": "|\\underline{a}| = \\sqrt{9 + 4}",
+   "en": "Calculate the squares of the numbers: $(-3)^2 = 9$ and $(2)^2 = 4$.",
+   "ur": "اعداد کے مربع معلوم کریں: $(-3)^2 = 9$ اور $(2)^2 = 4$۔",
+   "check": [
+    "sqrt((-3)**2 + (2)**2) == sqrt(9 + 4)",
+    "(-3)**2 == 9",
+    "(2)**2 == 4"
+   ]
+  },
+  {
+   "math": "|\\underline{a}| = \\sqrt{13}",
+   "en": "Add the values inside the square root to get the final magnitude.",
+   "ur": "حتمی مقدار حاصل کرنے کے لیے جزر کے اندر موجود قیمتوں کو جمع کریں۔",
+   "check": [
+    "sqrt(9 + 4) == sqrt(13)",
+    "9 + 4 == 13",
+    "sqrt((-3)**2 + (2)**2) == (sqrt(13))"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

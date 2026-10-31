@@ -1,0 +1,35 @@
+{
+ "item": "c10-rev4-q3",
+ "label": "i",
+ "answer_ref": "$(14 + 2x)^3$",
+ "steps": [
+  {
+   "math": "",
+   "en": "We are given two functions $f(x) = x^3$ and $g(x) = 14 + 2x$, and we need to find the composite function $(f\\circ g)(x)$.",
+   "ur": "ہمیں دو فنکشنز $f(x) = x^3$ اور $g(x) = 14 + 2x$ دیے گئے ہیں، اور ہمیں مرکب فنکشن $(f\\circ g)(x)$ معلوم کرنا ہے۔"
+  },
+  {
+   "math": "(f\\circ g)(x) = f(g(x))",
+   "en": "By the definition of the composition of functions, $(f\\circ g)(x)$ means applying the function $f$ to $g(x)$.",
+   "ur": "فنکشنز کی ترکیب کی تعریف کے مطابق، $(f\\circ g)(x)$ کا مطلب $g(x)$ پر فنکشن $f$ کا اطلاق کرنا ہے۔"
+  },
+  {
+   "math": "(f\\circ g)(x) = f(14 + 2x)",
+   "en": "Substitute the given value of $g(x) = 14 + 2x$ inside the function $f$.",
+   "ur": "فنکشن $f$ کے اندر دی گئی قیمت $g(x) = 14 + 2x$ درج کریں۔",
+   "check": [
+    "14 + 2*x == 14 + 2*x"
+   ]
+  },
+  {
+   "math": "(f\\circ g)(x) = (14 + 2x)^3",
+   "en": "Now, replace $x$ with $(14 + 2x)$ in the function $f(x) = x^3$ to get the final answer.",
+   "ur": "اب، حتمی جواب حاصل کرنے کے لیے فنکشن $f(x) = x^3$ میں $x$ کی جگہ $(14 + 2x)$ رکھیں۔",
+   "check": [
+    "(x**3).subs(x, 14 + 2*x) == (14 + 2*x)**3"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

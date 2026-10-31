@@ -1,0 +1,50 @@
+{
+ "item": "c10-rev7-q7",
+ "label": "",
+ "answer_ref": "$250$ km",
+ "steps": [
+  {
+   "math": "",
+   "en": "Let the starting point be $A$, the turning point be $B$, and the final position be $C$. We are given the distances $AB = 200\\ \\text{km}$ on a bearing of $045^\\circ$ and $BC = 150\\ \\text{km}$ on a bearing of $135^\\circ$. We need to find the distance $d = AC$ from the original position.",
+   "ur": "فرض کریں کہ ابتدائی نقطہ $A$ ہے، مڑنے کا نقطہ $B$ ہے، اور آخری مقام $C$ ہے۔ ہمیں فاصلہ $AB = 200\\ \\text{km}$ سمتیہ $045^\\circ$ پر اور فاصلہ $BC = 150\\ \\text{km}$ سمتیہ $135^\\circ$ پر دیا گیا ہے۔ ہمیں ابتدائی مقام سے فاصلہ $d = AC$ معلوم کرنا ہے۔"
+  },
+  {
+   "math": "\\theta = 135^\\circ - 45^\\circ = 90^\\circ",
+   "en": "First, we find the angle between the two flight paths by subtracting the two bearings. Since the difference is $90^\\circ$, the two legs of the journey are at right angles to each other, forming a right-angled triangle $ABC$ at $B$.",
+   "ur": "سب سے پہلے، ہم دونوں سمتیوں کی تفریق کر کے پرواز کے دونوں راستوں کے درمیان زاویہ معلوم کرتے ہیں۔ چونکہ فرق $90^\\circ$ ہے، اس لیے سفر کے دونوں حصے ایک دوسرے کے ساتھ قائمہ زاویہ بناتے ہیں، جس سے نقطہ $B$ پر ایک قائمہ الزاویہ مثلث $ABC$ بنتی ہے۔",
+   "check": [
+    "135 - 45 == 90"
+   ]
+  },
+  {
+   "math": "d^2 = 200^2 + 150^2 - 2(200)(150)\\cos 90^\\circ = 40000 + 22500 - 0",
+   "en": "Using the Law of Cosines (or Pythagoras theorem since the angle is $90^\\circ$), we substitute the lengths of the two legs and the included angle.",
+   "ur": "قانونِ جیب التمام (یا مسئلہ فیثاغورث کیونکہ زاویہ $90^\\circ$ ہے) کا استعمال کرتے ہوئے، ہم دونوں اطراف کی لمبائی اور درمیانی زاویہ کی قیمتیں درج کرتے ہیں۔",
+   "check": [
+    "200**2 + 150**2 - 2*200*150*cos(90*pi/180) == 40000 + 22500 - 0",
+    "200**2 == 40000",
+    "150**2 == 22500"
+   ]
+  },
+  {
+   "math": "d^2 = 40000 + 22500 = 62500",
+   "en": "Now, we add the values to find $d^2$.",
+   "ur": "اب، ہم $d^2$ معلوم کرنے کے لیے ان قیمتوں کو جمع کرتے ہیں۔",
+   "check": [
+    "40000 + 22500 == 62500"
+   ]
+  },
+  {
+   "math": "d = \\sqrt{62500} = 250\\ \\text{km}",
+   "en": "Taking the square root on both sides gives the final distance of the plane from its original position.",
+   "ur": "دونوں طرف جزر المربع لینے سے جہاز کا اس کے ابتدائی مقام سے حتمی فاصلہ حاصل ہوتا ہے۔",
+   "check": [
+    "sqrt(62500) == 250",
+    "135 - 45 == 90",
+    "200**2 + 150**2 - 2*200*150*cos((90)*pi/180) == 62500"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

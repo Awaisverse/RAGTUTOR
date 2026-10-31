@@ -1,0 +1,71 @@
+{
+ "item": "c10-rev1-q1",
+ "label": "vii",
+ "answer_ref": "(d) $25$",
+ "steps": [
+  {
+   "math": "",
+   "en": "We are given the complex number $z = 4 - 3i$, and we need to find the product $z\\overline{z}$.",
+   "ur": "ہمیں کمپلیکس نمبر $z = 4 - 3i$ دیا گیا ہے، اور ہمیں حاصل ضرب $z\\overline{z}$ معلوم کرنا ہے۔"
+  },
+  {
+   "math": "\\overline{z} = 4 + 3i",
+   "en": "First, find the conjugate of $z$, denoted by $\\overline{z}$, by changing the sign of the imaginary part.",
+   "ur": "سب سے پہلے، امیجنری حصے کی علامت بدل کر $z$ کا کونجوگیٹ ($\\overline{z}$) معلوم کریں۔",
+   "check": [
+    "conjugate(4 - 3*I) == 4 + 3*I"
+   ]
+  },
+  {
+   "math": "z\\overline{z} = (4 - 3i)(4 + 3i)",
+   "en": "Multiply the complex number $z$ with its conjugate $\\overline{z}$.",
+   "ur": "کمپلیکس نمبر $z$ کو اس کے کونجوگیٹ $\\overline{z}$ سے ضرب دیں۔",
+   "check": [
+    "(4 - 3*I)*conjugate(4 - 3*I) == (4 - 3*I)*(4 + 3*I)"
+   ]
+  },
+  {
+   "math": "z\\overline{z} = (4)^2 - (3i)^2",
+   "en": "Apply the algebraic identity $(a - b)(a + b) = a^2 - b^2$.",
+   "ur": "الجبری کلیہ $(a - b)(a + b) = a^2 - b^2$ استعمال کریں۔",
+   "check": [
+    "(4 - 3*I)*(4 + 3*I) == 4**2 - (3*I)**2"
+   ]
+  },
+  {
+   "math": "z\\overline{z} = 16 - 9i^2",
+   "en": "Calculate the squares of both terms.",
+   "ur": "دونوں رقموں کا مربع لیں۔",
+   "check": [
+    "4**2 - (3*I)**2 == 16 - 9*I**2"
+   ]
+  },
+  {
+   "math": "z\\overline{z} = 16 - 9(-1)",
+   "en": "Substitute the value $i^2 = -1$.",
+   "ur": "$i^2 = -1$ کی قیمت درج کریں۔",
+   "check": [
+    "16 - 9*I**2 == 16 - 9*(-1)"
+   ]
+  },
+  {
+   "math": "z\\overline{z} = 16 + 9 = 25",
+   "en": "Simplify and add the numbers to get the result.",
+   "ur": "مختصر کریں اور نتیجہ حاصل کرنے کے لیے نمبروں کو جمع کریں۔",
+   "check": [
+    "16 - 9*(-1) == 16 + 9",
+    "16 + 9 == 25"
+   ]
+  },
+  {
+   "math": "\\text{Answer: (d) } 25",
+   "en": "Thus, the correct option is (d).",
+   "ur": "اس طرح، درست آپشن (d) ہے۔",
+   "check": [
+    "(4-3*I)*(4+3*I) == 25"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

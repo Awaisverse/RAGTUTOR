@@ -1,0 +1,49 @@
+{
+ "item": "c10-ex4.1-q3",
+ "label": "iic",
+ "answer_ref": "$x$",
+ "steps": [
+  {
+   "math": "f(x) = \\frac{2}{x}, \\quad x \\ne 0",
+   "en": "Write down the given function $f(x)$ needed to find $(f\\circ f)(x)$.",
+   "ur": "$(f\\circ f)(x)$ معلوم کرنے کے لیے دیے گئے تفاعل $f(x)$ کو لکھیں۔"
+  },
+  {
+   "math": "(f\\circ f)(x) = f(f(x))",
+   "en": "By the definition of composition of a function with itself, $(f\\circ f)(x)$ means applying the function $f$ to $f(x)$.",
+   "ur": "تفاعل کی اپنے آپ کے ساتھ ترکیب کی تعریف کے مطابق، $(f\\circ f)(x)$ کا مطلب تفاعل $f$ کو $f(x)$ پر لاگو کرنا ہے۔"
+  },
+  {
+   "math": "(f\\circ f)(x) = f\\left(\\frac{2}{x}\\right)",
+   "en": "Substitute the given value $f(x) = \\frac{2}{x}$ inside the outer function $f$.",
+   "ur": "بیرونی تفاعل $f$ کے اندر دی گئی قیمت $f(x) = \\frac{2}{x}$ درج کریں۔"
+  },
+  {
+   "math": "(f\\circ f)(x) = \\frac{2}{\\frac{2}{x}}",
+   "en": "Now, replace $x$ with $\\frac{2}{x}$ in the formula $f(x) = \\frac{2}{x}$.",
+   "ur": "اب کلیہ $f(x) = \\frac{2}{x}$ میں $x$ کی جگہ $\\frac{2}{x}$ رکھیں۔",
+   "check": [
+    "(2/x).subs(x, 2/x) == 2/(2/x)"
+   ]
+  },
+  {
+   "math": "(f\\circ f)(x) = 2 \\times \\frac{x}{2}",
+   "en": "To divide by the fraction $\\frac{2}{x}$, multiply $2$ by its reciprocal $\\frac{x}{2}$.",
+   "ur": "کسر $\\frac{2}{x}$ سے تقسیم کرنے کے لیے، $2$ کو اس کے معکوس $\\frac{x}{2}$ سے ضرب دیں۔",
+   "check": [
+    "2/(2/x) == 2*(x/2)"
+   ]
+  },
+  {
+   "math": "(f\\circ f)(x) = x",
+   "en": "Cancel out $2$ from the numerator and the denominator to get the final answer.",
+   "ur": "حتمی جواب حاصل کرنے کے لیے شمار کنندہ اور مخرج سے $2$ کو کاٹ دیں۔",
+   "check": [
+    "2*(x/2) == x",
+    "(2/x).subs(x, (2/x)) == (x)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

@@ -1,0 +1,49 @@
+{
+ "item": "c10-ex12.1-q4",
+ "label": "",
+ "answer_ref": "$\\frac{3}{8}$",
+ "steps": [
+  {
+   "math": "S = \\{HHH, HHT, HTH, THH, HTT, THT, TTH, TTT\\}",
+   "en": "When a fair coin is tossed three times, the sample space $S$ consists of all possible combinations of Heads ($H$) and Tails ($T$).",
+   "ur": "جب ایک سکے کو تین بار اچھالا جاتا ہے، تو نمونہ فضا $S$ چت ($H$) اور پٹ ($T$) کے تمام ممکنہ نتائج پر مشتمل ہوتی ہے۔"
+  },
+  {
+   "math": "n(S) = 2^3 = 8",
+   "en": "Count the total number of possible outcomes in the sample space $S$.",
+   "ur": "نمونہ فضا $S$ میں کل ممکنہ نتائج کی تعداد گنیں۔",
+   "check": [
+    "2**3 == 8"
+   ]
+  },
+  {
+   "math": "E = \\{HTT, TTH, TTT\\}",
+   "en": "Let $E$ be the event of getting at least two consecutive tails (two $T$'s together, which also includes three $T$'s).",
+   "ur": "فرض کریں کہ $E$ کم از کم دو لگاتار پٹ (دو $T$ ایک ساتھ، جس میں تین $T$ بھی شامل ہیں) آنے کا واقعہ ہے۔"
+  },
+  {
+   "math": "n(E) = 3",
+   "en": "Count the number of favourable outcomes in the event $E$.",
+   "ur": "واقعہ $E$ میں موافق نتائج کی تعداد گنیں۔",
+   "check": [
+    "3 == 3"
+   ]
+  },
+  {
+   "math": "P(E) = \\frac{n(E)}{n(S)}",
+   "en": "Write the formula for the probability of an event, which is the ratio of favourable outcomes to the total number of outcomes.",
+   "ur": "کسی واقعہ کے احتمال کا فارمولا لکھیں، جو کہ موافق نتائج اور کل نتائج کی تعداد کی نسبت ہے۔"
+  },
+  {
+   "math": "P(E) = \\frac{3}{8}",
+   "en": "Substitute $n(E) = 3$ and $n(S) = 8$ into the formula. Thus, the probability of getting two consecutive tails is $\\frac{3}{8}$.",
+   "ur": "فارمولے میں $n(E) = 3$ اور $n(S) = 8$ درج کریں۔ اس طرح، دو لگاتار پٹ آنے کا احتمال $\\frac{3}{8}$ ہے۔",
+   "check": [
+    "R(3, 8) == 3/8",
+    "8 == 8"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

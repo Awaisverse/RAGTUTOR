@@ -1,0 +1,51 @@
+{
+ "item": "rev1-q1",
+ "label": "x",
+ "answer_ref": "d",
+ "steps": [
+  {
+   "math": "(3+\\sqrt{5})(3-\\sqrt{5})",
+   "en": "Write down the given algebraic expression to find its product.",
+   "ur": "حاصلِ ضرب معلوم کرنے کے لیے دی گئی الجبری عبارت لکھیں۔"
+  },
+  {
+   "math": "(a+b)(a-b) = a^2 - b^2",
+   "en": "Notice that the expression is in the form of $(a+b)(a-b)$, where $a=3$ and $b=\\sqrt{5}$. We can apply the difference of two squares formula.",
+   "ur": "غور کریں کہ یہ عبارت $(a+b)(a-b)$ کی شکل میں ہے، جہاں $a=3$ اور $b=\\sqrt{5}$ ہے۔ ہم یہاں دو مربعات کے فرق کا فارمولا استعمال کر سکتے ہیں۔"
+  },
+  {
+   "math": "(3+\\sqrt{5})(3-\\sqrt{5}) = (3)^2 - (\\sqrt{5})^2",
+   "en": "Substitute $a=3$ and $b=\\sqrt{5}$ into the formula.",
+   "ur": "فارمولے میں $a=3$ اور $b=\\sqrt{5}$ درج کریں۔",
+   "check": [
+    "(3+sqrt(5))*(3-sqrt(5)) == 3**2 - sqrt(5)**2"
+   ]
+  },
+  {
+   "math": "= 9 - 5",
+   "en": "Calculate the squares: $3^2 = 9$ and $(\\sqrt{5})^2 = 5$.",
+   "ur": "مربع حل کریں: $3^2 = 9$ اور $(\\sqrt{5})^2 = 5$ ہوتا ہے۔",
+   "check": [
+    "3**2 - sqrt(5)**2 == 9 - 5"
+   ]
+  },
+  {
+   "math": "= 4",
+   "en": "Subtract $5$ from $9$ to get $4$.",
+   "ur": "$9$ میں سے $5$ تفریق کرنے سے $4$ حاصل ہوتا ہے۔",
+   "check": [
+    "9 - 5 == 4"
+   ]
+  },
+  {
+   "math": "",
+   "en": "Since $4$ can be written in the form $\\frac{p}{q}$ as $\\frac{4}{1}$, it is a rational number (note that $4$ is an even composite number, so it is neither prime nor odd). Therefore, the correct option is (d) rational number.",
+   "ur": "چونکہ $4$ کو $\\frac{p}{q}$ کی شکل میں $\\frac{4}{1}$ کے طور پر لکھا جا سکتا ہے، اس لیے یہ ایک ناطق عدد (rational number) ہے (یاد رہے کہ $4$ ایک جفت اور مرکب عدد ہے، اس لیے یہ نہ تو مفرد ہے اور نہ ہی طاق)۔ لہذا، درست آپشن (d) rational number ہے۔",
+   "check": [
+    "(3+sqrt(5))*(3-sqrt(5)) == 4"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

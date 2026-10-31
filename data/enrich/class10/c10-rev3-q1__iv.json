@@ -1,0 +1,40 @@
+{
+ "item": "c10-rev3-q1",
+ "label": "iv",
+ "answer_ref": "(b) $\\text{identity}$",
+ "steps": [
+  {
+   "math": "M = \\begin{bmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{bmatrix}",
+   "en": "Consider the given matrix $M$. We need to identify its type from the given options.",
+   "ur": "دیے گئے قالب $M$ پر غور کریں۔ ہمیں دیے گئے اختیارات میں سے اس کی قسم کی شناخت کرنی ہے۔"
+  },
+  {
+   "math": "\\text{Order of } M = 3 \\times 3",
+   "en": "Since the matrix $M$ has $3$ rows and $3$ columns, the number of rows is equal to the number of columns, which means it is a square matrix.",
+   "ur": "چونکہ قالب $M$ میں $3$ قطاریں اور $3$ کالم ہیں، اس لیے قطاروں کی تعداد کالموں کی تعداد کے برابر ہے، جس کا مطلب ہے کہ یہ ایک مربی قالب ہے۔",
+   "check": [
+    "3 == 3"
+   ]
+  },
+  {
+   "math": "m_{11} = 1, \\quad m_{22} = 1, \\quad m_{33} = 1",
+   "en": "Look at the entries on the main (leading) diagonal. All the diagonal elements are equal to $1$, and all the non-diagonal elements are equal to $0$.",
+   "ur": "مرکزی وتر کے ارکان کو دیکھیں۔ وتر کے تمام ارکان $1$ کے برابر ہیں، اور وتر کے علاوہ باقی تمام ارکان $0$ کے برابر ہیں۔",
+   "check": [
+    "1 == 1"
+   ]
+  },
+  {
+   "math": "M = I_3",
+   "en": "By definition, a square matrix in which all the elements on the main diagonal are $1$ and all other elements are $0$ is called an identity (or unit) matrix.",
+   "ur": "تعریف کے مطابق، ایک ایسا مربی قالب جس میں مرکزی وتر کے تمام ارکان $1$ ہوں اور باقی تمام ارکان $0$ ہوں، وحدانی قالب (identity matrix) کہلاتا ہے۔"
+  },
+  {
+   "math": "\\text{Answer: (b) } \\text{identity}",
+   "en": "Therefore, $M$ is an identity matrix, which corresponds to option (b).",
+   "ur": "لہذا، $M$ ایک وحدانی (identity) قالب ہے، جو کہ آپشن (b) سے مطابقت رکھتا ہے۔"
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

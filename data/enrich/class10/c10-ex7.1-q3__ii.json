@@ -1,0 +1,49 @@
+{
+ "item": "c10-ex7.1-q3",
+ "label": "ii",
+ "answer_ref": "$-\\frac{1}{\\sqrt{3}}$",
+ "steps": [
+  {
+   "math": "\\tan 150^\\circ",
+   "en": "We need to find the exact value of $\\tan 150^\\circ$ without using a calculator.",
+   "ur": "ہمیں کیلکولیٹر کے بغیر $\\tan 150^\\circ$ کی اصل قیمت معلوم کرنی ہے۔"
+  },
+  {
+   "math": "150^\\circ = 90^\\circ + 60^\\circ = 1 \\times 90^\\circ + 60^\\circ",
+   "en": "First, express the angle $150^\\circ$ as a multiple of $90^\\circ$ plus an acute angle.",
+   "ur": "سب سے پہلے، زاویہ $150^\\circ$ کو $90^\\circ$ کے مضرب اور ایک حادہ زاویہ کے مجموعے کے طور پر لکھیں۔",
+   "check": [
+    "150 == 90 + 60",
+    "150 == 1*90 + 60"
+   ]
+  },
+  {
+   "math": "\\tan 150^\\circ = \\tan(1 \\times 90^\\circ + 60^\\circ)",
+   "en": "Substitute this expression into the given trigonometric function.",
+   "ur": "اس قیمت کو دیے گئے تکونیاتی تفاعل میں درج کریں۔",
+   "check": [
+    "tan(150*pi/180) == tan((1*90 + 60)*pi/180)"
+   ]
+  },
+  {
+   "math": "\\tan(1 \\times 90^\\circ + 60^\\circ) = -\\cot 60^\\circ",
+   "en": "Since $1$ is an odd multiple of $90^\\circ$, the ratio $\\tan$ changes to its co-ratio $\\cot$. Also, $150^\\circ$ lies in Quadrant II where $\\tan$ is negative, so we put a minus sign.",
+   "ur": "چونکہ $1$، $90^\\circ$ کا ایک طاق مضرب ہے، اس لیے نسبت $\\tan$ اپنی ہم نسبت $\\cot$ میں تبدیل ہو جاتی ہے۔ نیز، $150^\\circ$ دوسرے ربع (Quadrant II) میں واقع ہے جہاں $\\tan$ منفی ہوتا ہے، اس لیے ہم منفی کی علامت لگاتے ہیں۔",
+   "check": [
+    "tan((1*90 + 60)*pi/180) == -cot(60*pi/180)"
+   ]
+  },
+  {
+   "math": "\\tan 150^\\circ = -\\frac{1}{\\sqrt{3}}",
+   "en": "Finally, substitute the known standard value of $\\cot 60^\\circ = \\frac{1}{\\sqrt{3}}$ to get the final answer.",
+   "ur": "آخر میں، حتمی جواب حاصل کرنے کے لیے $\\cot 60^\\circ = \\frac{1}{\\sqrt{3}}$ کی معلوم معیاری قیمت درج کریں۔",
+   "check": [
+    "tan(150*pi/180) == -1/sqrt(3)",
+    "cot(60*pi/180) == 1/sqrt(3)",
+    "tan((150)*pi/180) == -sqrt(3)/3"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

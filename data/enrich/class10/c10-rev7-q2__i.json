@@ -1,0 +1,56 @@
+{
+ "item": "c10-rev7-q2",
+ "label": "i",
+ "answer_ref": "$11.62$ cm$^2$",
+ "steps": [
+  {
+   "math": "",
+   "en": "The lengths of the three sides of $\\triangle ABC$ are given as $a = 4$ cm, $b = 6$ cm, and $c = 8$ cm. We need to find the area of the triangle.",
+   "ur": "مثلث $\\triangle ABC$ کے تینوں اضلاع کی لمبائیاں $a = 4$ سینٹی میٹر، $b = 6$ سینٹی میٹر اور $c = 8$ سینٹی میٹر دی گئی ہیں۔ ہمیں مثلث کا رقبہ معلوم کرنا ہے۔"
+  },
+  {
+   "math": "s = \\frac{a + b + c}{2} = \\frac{4 + 6 + 8}{2} = \\frac{18}{2} = 9\\ \\text{cm}",
+   "en": "Since all three sides are given, we will use Hero's formula. First, calculate the semi-perimeter $s$.",
+   "ur": "چونکہ تینوں اضلاع دیے گئے ہیں، اس لیے ہم ہیرو کا کلیہ استعمال کریں گے۔ سب سے پہلے نصف احاطہ $s$ معلوم کریں۔",
+   "check": [
+    "4 + 6 + 8 == 18",
+    "18/2 == 9"
+   ]
+  },
+  {
+   "math": "s - a = 9 - 4 = 5\\ \\text{cm}, \\quad s - b = 9 - 6 = 3\\ \\text{cm}, \\quad s - c = 9 - 8 = 1\\ \\text{cm}",
+   "en": "Now, subtract each side length from the semi-perimeter $s$.",
+   "ur": "اب نصف احاطہ $s$ میں سے ہر ضلع کی لمبائی کو تفریق کریں۔",
+   "check": [
+    "9 - 4 == 5",
+    "9 - 6 == 3",
+    "9 - 8 == 1"
+   ]
+  },
+  {
+   "math": "\\Delta = \\sqrt{s(s - a)(s - b)(s - c)}",
+   "en": "Write down Hero's formula for the area of a triangle $\\Delta$.",
+   "ur": "مثلث کے رقبہ $\\Delta$ کے لیے ہیرو کا کلیہ لکھیں۔"
+  },
+  {
+   "math": "\\Delta = \\sqrt{9(5)(3)(1)} = \\sqrt{135}",
+   "en": "Substitute the values of $s$, $s - a$, $s - b$, and $s - c$ into the formula and multiply them.",
+   "ur": "کلیہ میں $s$، $s - a$، $s - b$ اور $s - c$ کی قیمتیں درج کریں اور انہیں ضرب دیں۔",
+   "check": [
+    "9*5*3*1 == 135"
+   ]
+  },
+  {
+   "math": "\\Delta = 11.62\\ \\text{cm}^2",
+   "en": "Take the square root of $135$ and round to two decimal places to get the final area.",
+   "ur": "$135$ کا جزر لیں اور حتمی رقبہ حاصل کرنے کے لیے اشاریہ کے بعد دو درجوں تک محدود کریں۔",
+   "check": [
+    "Abs(sqrt(135) - 11.62) <= 0.005",
+    "(4 + 6 + 8)/2 == 9.0",
+    "Abs((sqrt(9.0*(9.0 - 4)*(9.0 - 6)*(9.0 - 8))) - 11.62) <= 0.0050000010000000004"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

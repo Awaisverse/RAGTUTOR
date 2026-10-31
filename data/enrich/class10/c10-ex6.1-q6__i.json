@@ -1,0 +1,62 @@
+{
+ "item": "c10-ex6.1-q6",
+ "label": "i",
+ "answer_ref": "$-\\frac{4}{\\sqrt{41}}\\underline{i} + \\frac{5}{\\sqrt{41}}\\underline{j}$",
+ "steps": [
+  {
+   "math": "\\underline{a} = -4\\underline{i} + 5\\underline{j}",
+   "en": "Write down the given vector $\\underline{a}$. Here, the components are $x = -4$ and $y = 5$.",
+   "ur": "دیے گئے ویکٹر $\\underline{a}$ کو لکھیں۔ یہاں اس کے اجزاء $x = -4$ اور $y = 5$ ہیں۔"
+  },
+  {
+   "math": "|\\underline{a}| = \\sqrt{x^2 + y^2}",
+   "en": "Recall the formula to find the magnitude of a vector in a plane.",
+   "ur": "مستوی میں ویکٹر کی مقدار (magnitude) معلوم کرنے کا فارمولا لکھیں۔"
+  },
+  {
+   "math": "|\\underline{a}| = \\sqrt{(-4)^2 + (5)^2}",
+   "en": "Substitute $x = -4$ and $y = 5$ into the magnitude formula.",
+   "ur": "مقدار کے فارمولے میں $x = -4$ اور $y = 5$ کی قیمتیں درج کریں۔",
+   "check": [
+    "sqrt((-4)**2 + (5)**2) == sqrt(41)"
+   ]
+  },
+  {
+   "math": "|\\underline{a}| = \\sqrt{16 + 25} = \\sqrt{41}",
+   "en": "Calculate the squares and add them together to get the magnitude $|\\underline{a}|$.",
+   "ur": "مربع لیں اور انہیں جمع کر کے مقدار $|\\underline{a}|$ حاصل کریں۔",
+   "check": [
+    "(-4)**2 == 16",
+    "5**2 == 25",
+    "16 + 25 == 41",
+    "sqrt(16 + 25) == sqrt(41)"
+   ]
+  },
+  {
+   "math": "\\hat{a} = \\frac{\\underline{a}}{|\\underline{a}|}",
+   "en": "A unit vector $\\hat{a}$ in the direction of $\\underline{a}$ is obtained by dividing the vector by its magnitude.",
+   "ur": "ویکٹر $\\underline{a}$ کی سمت میں اکائی ویکٹر (unit vector) $\\hat{a}$ معلوم کرنے کے لیے ویکٹر کو اس کی مقدار سے تقسیم کیا جاتا ہے۔"
+  },
+  {
+   "math": "\\hat{a} = \\frac{-4\\underline{i} + 5\\underline{j}}{\\sqrt{41}}",
+   "en": "Substitute the vector $\\underline{a}$ and its magnitude $|\\underline{a}| = \\sqrt{41}$ into the unit vector formula.",
+   "ur": "اکائی ویکٹر کے فارمولے میں ویکٹر $\\underline{a}$ اور اس کی مقدار $|\\underline{a}| = \\sqrt{41}$ درج کریں۔"
+  },
+  {
+   "math": "\\hat{a} = -\\frac{4}{\\sqrt{41}}\\underline{i} + \\frac{5}{\\sqrt{41}}\\underline{j}",
+   "en": "Separate the $\\underline{i}$ and $\\underline{j}$ components to write the final unit vector.",
+   "ur": "مطلوبہ اکائی ویکٹر کو مکمل کرنے کے لیے $\\underline{i}$ اور $\\underline{j}$ کے اجزاء کو الگ الگ کر کے لکھیں۔",
+   "check": [
+    "(-4/sqrt(41))**2 + (5/sqrt(41))**2 == 1",
+    "(-4/sqrt(41))*sqrt(41) == -4",
+    "(5/sqrt(41))*sqrt(41) == 5",
+    "sqrt((-4)**2 + (5)**2) == (sqrt(41))",
+    "(-4*sqrt(41)/41)**2 + (5*sqrt(41)/41)**2 == 1",
+    "(-4*sqrt(41)/41)*(sqrt(41)) == (-4)",
+    "(5*sqrt(41)/41)*(sqrt(41)) == (5)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

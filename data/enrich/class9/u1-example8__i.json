@@ -1,0 +1,57 @@
+{
+ "item": "u1-example8",
+ "label": "i",
+ "answer_ref": "$\\sqrt5-\\sqrt2$",
+ "steps": [
+  {
+   "math": "\\frac{3}{\\sqrt{5}+\\sqrt{2}}",
+   "en": "Write down the given expression. We need to rationalize the denominator.",
+   "ur": "دی گئی عبارت لکھیں۔ ہمیں اس کے مخرج کو ناطق (rationalize) بنانا ہے۔"
+  },
+  {
+   "math": "= \\frac{3}{\\sqrt{5}+\\sqrt{2}} \\times \\frac{\\sqrt{5}-\\sqrt{2}}{\\sqrt{5}-\\sqrt{2}}",
+   "en": "The conjugate of the denominator $\\sqrt{5}+\\sqrt{2}$ is $\\sqrt{5}-\\sqrt{2}$. Multiply both the numerator and the denominator by this conjugate.",
+   "ur": "مخرج $\\sqrt{5}+\\sqrt{2}$ کا مزدوج (conjugate) $\\sqrt{5}-\\sqrt{2}$ ہے۔ شمار کنندہ اور مخرج دونوں کو اس مزدوج سے ضرب دیں۔",
+   "check": [
+    "3/(sqrt(5)+sqrt(2)) == (3/(sqrt(5)+sqrt(2))) * ((sqrt(5)-sqrt(2))/(sqrt(5)-sqrt(2)))"
+   ]
+  },
+  {
+   "math": "= \\frac{3(\\sqrt{5}-\\sqrt{2})}{(\\sqrt{5})^2 - (\\sqrt{2})^2}",
+   "en": "Apply the algebraic identity $(a+b)(a-b) = a^2 - b^2$ in the denominator.",
+   "ur": "مخرج میں الجبری کلیہ $(a+b)(a-b) = a^2 - b^2$ کا اطلاق کریں۔",
+   "check": [
+    "(sqrt(5)+sqrt(2))*(sqrt(5)-sqrt(2)) == (sqrt(5))**2 - (sqrt(2))**2"
+   ]
+  },
+  {
+   "math": "= \\frac{3(\\sqrt{5}-\\sqrt{2})}{5 - 2}",
+   "en": "Simplify the squares in the denominator: $(\\sqrt{5})^2 = 5$ and $(\\sqrt{2})^2 = 2$.",
+   "ur": "مخرج میں مربعات کو حل کریں: $(\\sqrt{5})^2 = 5$ اور $(\\sqrt{2})^2 = 2$۔",
+   "check": [
+    "(sqrt(5))**2 == 5",
+    "(sqrt(2))**2 == 2"
+   ]
+  },
+  {
+   "math": "= \\frac{3(\\sqrt{5}-\\sqrt{2})}{3}",
+   "en": "Subtract the numbers in the denominator: $5 - 2 = 3$.",
+   "ur": "مخرج میں اعداد کو تفریق کریں: $5 - 2 = 3$۔",
+   "check": [
+    "5 - 2 == 3"
+   ]
+  },
+  {
+   "math": "= \\sqrt{5}-\\sqrt{2}",
+   "en": "Cancel out the common factor $3$ from the numerator and the denominator to get the final answer.",
+   "ur": "آخری جواب حاصل کرنے کے لیے شمار کنندہ اور مخرج سے مشترک جزو ضربی $3$ کو منسوخ کریں۔",
+   "check": [
+    "3*(sqrt(5)-sqrt(2))/3 == sqrt(5)-sqrt(2)",
+    "3/(sqrt(5)+sqrt(2)) == sqrt(5)-sqrt(2)",
+    "(sqrt(5))**2 - (sqrt(2))**2 == 3"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

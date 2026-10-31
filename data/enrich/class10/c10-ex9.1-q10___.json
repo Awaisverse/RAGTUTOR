@@ -1,0 +1,52 @@
+{
+ "item": "c10-ex9.1-q10",
+ "label": "",
+ "answer_ref": "$24$ m",
+ "steps": [
+  {
+   "math": "r = 10\\text{ m}, \\quad d = 26\\text{ m}",
+   "en": "Identify the given values: the radius of the circular plaza is $r = 10$ m, and the distance of the pole from the center is $d = 26$ m. Let $w$ be the length of each tangent guide wire.",
+   "ur": "دی گئی قیمتوں کی نشاندہی کریں: دائروی پلازہ کا رداس $r = 10$ میٹر ہے، اور مرکز سے کھمبے کا فاصلہ $d = 26$ میٹر ہے۔ فرض کریں کہ ہر مماسی تار کی لمبائی $w$ ہے۔",
+   "check": [
+    "10 == 10",
+    "26 == 26"
+   ]
+  },
+  {
+   "math": "26^2 = 10^2 + w^2",
+   "en": "A tangent to a circle is perpendicular to the radius at the point of contact. Thus, the radius, the tangent wire, and the line to the center form a right-angled triangle. By Pythagoras' theorem, $d^2 = r^2 + w^2$. Substitute the given values:",
+   "ur": "دائرے کا مماس نقطہ تماس پر رداس کے عموداً ہوتا ہے۔ اس طرح، رداس، مماسی تار، اور مرکز تک کا خط ایک قائمہ الزاویہ مثلث بناتے ہیں۔ مسئلہ فیثاغورث کے مطابق، $d^2 = r^2 + w^2$۔ دی گئی قیمتیں درج کریں:",
+   "check": [
+    "26**2 == 10**2 + 24**2"
+   ]
+  },
+  {
+   "math": "676 = 100 + w^2",
+   "en": "Calculate the squares of $26$ and $10$.",
+   "ur": "$26$ اور $10$ کے مربے معلوم کریں۔",
+   "check": [
+    "26**2 == 676",
+    "10**2 == 100"
+   ]
+  },
+  {
+   "math": "w^2 = 676 - 100 = 576",
+   "en": "Subtract $100$ from both sides to isolate $w^2$.",
+   "ur": "$w^2$ کو الگ کرنے کے لیے دونوں طرف سے $100$ تفریق کریں۔",
+   "check": [
+    "676 - 100 == 576"
+   ]
+  },
+  {
+   "math": "w = \\sqrt{576} = 24\\text{ m}",
+   "en": "Take the square root of both sides to find the length of each guide wire (since tangents from an external point to a circle are equal in length).",
+   "ur": "ہر گائیڈ تار کی لمبائی معلوم کرنے کے لیے دونوں طرف کا جذر المربع لیں (کیونکہ بیرونی نقطہ سے دائرے پر کھینچے گئے مماس لمبائی میں برابر ہوتے ہیں)۔",
+   "check": [
+    "sqrt(576) == 24",
+    "sqrt(26**2 - 10**2) == 24"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

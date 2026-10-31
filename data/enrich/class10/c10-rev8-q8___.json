@@ -1,0 +1,137 @@
+{
+ "item": "c10-rev8-q8",
+ "label": "",
+ "answer_ref": "$5$ m",
+ "steps": [
+  {
+   "math": "AB = 6\\ \\text{m}, \\quad OM = 4\\ \\text{m}",
+   "en": "Let the steel bar be a chord $AB$ of the circle with centre $O$. We are given the length of the chord $AB = 6\\ \\text{m}$ and the perpendicular distance from the centre to the chord $OM = 4\\ \\text{m}$. We need to find the radius $r$ of the circle.",
+   "ur": "فرض کریں کہ اسٹیل کی سلاخ مرکز $O$ والے دائرے کا ایک وتر $AB$ ہے۔ ہمیں وتر کی لمبائی $AB = 6\\ \\text{m}$ اور مرکز سے وتر تک عمودی فاصلہ $OM = 4\\ \\text{m}$ دیا گیا ہے۔ ہمیں دائرے کا رداس $r$ معلوم کرنا ہے۔",
+   "draw": [
+    {
+     "t": "circle",
+     "c": [
+      50,
+      30
+     ],
+     "r": 25
+    },
+    {
+     "t": "dot",
+     "p": [
+      50,
+      30
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      51.5,
+      28
+     ],
+     "s": "O"
+    },
+    {
+     "t": "line",
+     "p": [
+      35.0,
+      50.0,
+      65.0,
+      50.0
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      31.0,
+      51.0
+     ],
+     "s": "A"
+    },
+    {
+     "t": "text",
+     "p": [
+      66.5,
+      51.0
+     ],
+     "s": "B"
+    },
+    {
+     "t": "line",
+     "p": [
+      50,
+      30,
+      50,
+      50.0
+     ],
+     "dash": true
+    },
+    {
+     "t": "right",
+     "p": [
+      50,
+      50.0
+     ],
+     "d": [
+      1,
+      0,
+      0,
+      -1
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      51.5,
+      54.0
+     ],
+     "s": "M"
+    },
+    {
+     "t": "line",
+     "p": [
+      50,
+      30,
+      65.0,
+      50.0
+     ]
+    }
+   ]
+  },
+  {
+   "math": "AM = \\frac{AB}{2} = \\frac{6}{2} = 3\\ \\text{m}",
+   "en": "By theorem, a perpendicular from the centre of a circle to a chord bisects the chord. Since $OM \\perp AB$, $M$ is the midpoint of $AB$.",
+   "ur": "مسئلہ کے مطابق، دائرے کے مرکز سے وتر پر گرایا گیا عمود وتر کی تنصیف کرتا ہے۔ چونکہ $OM \\perp AB$، اس لیے $M$ وتر $AB$ کا وسطی نقطہ ہے۔",
+   "check": [
+    "6/2 == 3"
+   ]
+  },
+  {
+   "math": "OA^2 = OM^2 + AM^2",
+   "en": "Join the centre $O$ to the end $A$ of the chord to form a right-angled triangle $OMA$, where the hypotenuse $OA = r$ is the radius. Apply the Pythagoras theorem:",
+   "ur": "مرکز $O$ کو وتر کے سرے $A$ سے ملائیں تاکہ ایک قائمہ الزاویہ مثلث $OMA$ بن جائے، جہاں وتر $OA = r$ دائرے کا رداس ہے۔ مسئلہ فیثا غورث کا اطلاق کریں:"
+  },
+  {
+   "math": "r^2 = 4^2 + 3^2 = 16 + 9 = 25",
+   "en": "Substitute $OM = 4$ and $AM = 3$ into the equation and simplify:",
+   "ur": "مساوات میں $OM = 4$ اور $AM = 3$ درج کریں اور مختصر کریں:",
+   "check": [
+    "4**2 == 16",
+    "3**2 == 9",
+    "16 + 9 == 25"
+   ]
+  },
+  {
+   "math": "r = \\sqrt{25} = 5\\ \\text{m}",
+   "en": "Take the positive square root on both sides (since radius cannot be negative). Thus, the radius of the circular structure is $5$ m.",
+   "ur": "دونوں طرف مثبت جذر لیں (کیونکہ رداس منفی نہیں ہو سکتا)۔ پس، گول ڈھانچے کا رداس $5$ میٹر ہے۔",
+   "check": [
+    "sqrt(25) == 5",
+    "sqrt(4**2 + 3**2) == 5"
+   ]
+  }
+ ],
+ "keeps_drawing": true,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

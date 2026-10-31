@@ -1,0 +1,66 @@
+{
+ "item": "u1-example7",
+ "label": "i",
+ "answer_ref": "$2xy^2$",
+ "steps": [
+  {
+   "math": "\\sqrt[4]{16x^4y^8}",
+   "en": "We are given the radical expression and asked to simplify it.",
+   "ur": "ہمیں یہ جذری جملہ دیا گیا ہے اور اسے مختصر کرنے کو کہا گیا ہے۔"
+  },
+  {
+   "math": "= (16x^4y^8)^{\\frac{1}{4}}",
+   "en": "First, convert the radical form into exponential form using the rule $\\sqrt[n]{a} = a^{\\frac{1}{n}}$. Here, the index $n = 4$.",
+   "ur": "سب سے پہلے، کلیہ $\\sqrt[n]{a} = a^{\\frac{1}{n}}$ کا استعمال کرتے ہوئے جذری شکل کو قوت نمائی شکل میں تبدیل کریں۔ یہاں اشاریہ $n = 4$ ہے۔",
+   "check": [
+    "(16)**R(1,4) == 2"
+   ]
+  },
+  {
+   "math": "= (2^4 x^4 y^8)^{\\frac{1}{4}}",
+   "en": "Express the number $16$ in its prime factor exponential form as $2^4$, because $2 \\times 2 \\times 2 \\times 2 = 16$.",
+   "ur": "عدد $16$ کو اس کے مفرد اجزائے ضربی کی قوت نمائی شکل میں $2^4$ کے طور پر لکھیں، کیونکہ $2 \\times 2 \\times 2 \\times 2 = 16$ ہوتا ہے۔",
+   "check": [
+    "2**4 == 16"
+   ]
+  },
+  {
+   "math": "= (2^4)^{\\frac{1}{4}} \\cdot (x^4)^{\\frac{1}{4}} \\cdot (y^8)^{\\frac{1}{4}}",
+   "en": "Apply the law of exponents $(abc)^m = a^m b^m c^m$ to distribute the outer power $\\frac{1}{4}$ to each factor inside the brackets.",
+   "ur": "قوت نما کے قانون $(abc)^m = a^m b^m c^m$ کا اطلاق کرتے ہوئے بریکٹ کے اندر موجود ہر جزو پر بیرونی طاقت $\\frac{1}{4}$ الگ الگ لگائیں۔",
+   "check": [
+    "(2**4)**R(1,4) == 2"
+   ]
+  },
+  {
+   "math": "= 2^{4 \\times \\frac{1}{4}} \\cdot x^{4 \\times \\frac{1}{4}} \\cdot y^{8 \\times \\frac{1}{4}}",
+   "en": "Now, use the power of a power rule $(a^m)^n = a^{m \\times n}$ to multiply the inner exponents by the outer exponent.",
+   "ur": "اب، قوت کی قوت کے اصول $(a^m)^n = a^{m \\times n}$ کا استعمال کرتے ہوئے اندرونی طاقتوں کو بیرونی طاقت سے ضرب دیں۔",
+   "check": [
+    "4 * R(1,4) == 1",
+    "8 * R(1,4) == 2"
+   ]
+  },
+  {
+   "math": "= 2^1 \\cdot x^1 \\cdot y^2",
+   "en": "Simplify the fractions in the exponents: $4 \\times \\frac{1}{4} = 1$ and $8 \\times \\frac{1}{4} = 2$.",
+   "ur": "قوت نماؤں میں موجود کسروں کو مختصر کریں: $4 \\times \\frac{1}{4} = 1$ اور $8 \\times \\frac{1}{4} = 2$۔",
+   "check": [
+    "2**1 == 2"
+   ]
+  },
+  {
+   "math": "= 2xy^2",
+   "en": "Write the final simplified expression (since $a^1 = a$).",
+   "ur": "آخری مختصر شکل لکھیں (کیونکہ $a^1 = a$ ہوتا ہے)۔",
+   "check": [
+    "2**1 == 2",
+    "(16)**Rational(1,4) == 2",
+    "Rational(4,4)==1",
+    "Rational(8,4)==2"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

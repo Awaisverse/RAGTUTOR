@@ -1,0 +1,53 @@
+{
+ "item": "c10-rev7-q4",
+ "label": "i",
+ "answer_ref": "$9.11$ cm",
+ "steps": [
+  {
+   "math": "m\\overline{AB} = 5\\text{ cm},\\quad m\\overline{BC} = 7\\text{ cm},\\quad m\\overline{AE} = 3\\text{ cm}",
+   "en": "Given the dimensions of the cuboid $ABCDEFGH$: length $m\\overline{AB}$, width $m\\overline{BC}$, and height $m\\overline{AE}$. We need to find the length of the space diagonal $\\overline{AG}$.",
+   "ur": "مکعب نما $ABCDEFGH$ کی دی گئی پیمائشیں: لمبائی $m\\overline{AB}$، چوڑائی $m\\overline{BC}$، اور اونچائی $m\\overline{AE}$ ہیں۔ ہمیں فضائی وتر $\\overline{AG}$ کی لمبائی معلوم کرنی ہے۔"
+  },
+  {
+   "math": "m\\overline{AC}^2 = m\\overline{AB}^2 + m\\overline{BC}^2",
+   "en": "First, consider the right-angled triangle $ABC$ on the base $ABCD$, where $\\angle B = 90^\\circ$. By Pythagoras' theorem, the square of the base diagonal $\\overline{AC}$ is equal to the sum of the squares of $\\overline{AB}$ and $\\overline{BC}$.",
+   "ur": "سب سے پہلے، قاعدہ $ABCD$ پر قائم الزاویہ مثلث $ABC$ پر غور کریں، جہاں $\\angle B = 90^\\circ$ ہے۔ مسئلہ فیثاغورث کے مطابق، قاعدے کے وتر $\\overline{AC}$ کا مربع $\\overline{AB}$ اور $\\overline{BC}$ کے مربعات کے مجموعے کے برابر ہے۔"
+  },
+  {
+   "math": "m\\overline{AC}^2 = 5^2 + 7^2 = 25 + 49 = 74",
+   "en": "Substitute the given values $m\\overline{AB} = 5$ and $m\\overline{BC} = 7$ to find $m\\overline{AC}^2$.",
+   "ur": "$m\\overline{AC}^2$ معلوم کرنے کے لیے دی گئی قیمتیں $m\\overline{AB} = 5$ اور $m\\overline{BC} = 7$ درج کریں۔",
+   "check": [
+    "5**2 == 25",
+    "7**2 == 49",
+    "25 + 49 == 74"
+   ]
+  },
+  {
+   "math": "m\\overline{AG}^2 = m\\overline{AC}^2 + m\\overline{CG}^2",
+   "en": "Now, consider the vertical right-angled triangle $ACG$, where $\\angle C = 90^\\circ$. Since $\\overline{CG}$ is the vertical height of the cuboid, $m\\overline{CG} = m\\overline{AE} = 3\\text{ cm}$. Apply Pythagoras' theorem again.",
+   "ur": "اب، عمودی قائم الزاویہ مثلث $ACG$ پر غور کریں، جہاں $\\angle C = 90^\\circ$ ہے۔ چونکہ $\\overline{CG}$ مکعب نما کی عمودی اونچائی ہے، اس لیے $m\\overline{CG} = m\\overline{AE} = 3\\text{ cm}$ ہے۔ دوبارہ مسئلہ فیثاغورث لاگو کریں۔"
+  },
+  {
+   "math": "m\\overline{AG}^2 = 74 + 3^2 = 74 + 9 = 83",
+   "en": "Substitute $m\\overline{AC}^2 = 74$ and $m\\overline{CG} = 3$ into the equation.",
+   "ur": "مساوات میں $m\\overline{AC}^2 = 74$ اور $m\\overline{CG} = 3$ درج کریں۔",
+   "check": [
+    "3**2 == 9",
+    "74 + 9 == 83"
+   ]
+  },
+  {
+   "math": "m\\overline{AG} = \\sqrt{83} \\approx 9.11\\text{ cm}",
+   "en": "Take the square root on both sides to find the length of $\\overline{AG}$, rounded to $3$ significant figures.",
+   "ur": "$\\overline{AG}$ کی لمبائی معلوم کرنے کے لیے دونوں طرف جذر لیں اور جواب کو $3$ نمایاں ہندسوں تک محدود کریں۔",
+   "check": [
+    "Abs(sqrt(83) - 9.11) <= 0.005",
+    "5**2 + 7**2 + 3**2 == 83",
+    "Abs((sqrt(83)) - 9.11) <= 0.0050000010000000004"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

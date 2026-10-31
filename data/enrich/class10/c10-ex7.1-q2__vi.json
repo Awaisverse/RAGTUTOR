@@ -1,0 +1,40 @@
+{
+ "item": "c10-ex7.1-q2",
+ "label": "vi",
+ "answer_ref": "$+\\operatorname{cosec}\\theta$",
+ "steps": [
+  {
+   "math": "\\sec(90^\\circ - \\theta)",
+   "en": "We are given the trigonometric expression $\\sec(90^\\circ - \\theta)$ and need to find the correct sign in front of $\\operatorname{cosec}\\theta$.",
+   "ur": "ہمیں مثلثیاتی جملہ $\\sec(90^\\circ - \\theta)$ دیا گیا ہے اور ہمیں $\\operatorname{cosec}\\theta$ کے سامنے درست علامت معلوم کرنی ہے۔"
+  },
+  {
+   "math": "90^\\circ - \\theta \\in \\text{Quadrant I}",
+   "en": "Assuming $\\theta$ is an acute angle, the angle $(90^\\circ - \\theta)$ lies in the first quadrant (Quadrant I).",
+   "ur": "فرض کریں کہ $\\theta$ ایک حادہ زاویہ ہے، تو زاویہ $(90^\\circ - \\theta)$ پہلے ربع (Quadrant I) میں واقع ہوتا ہے۔"
+  },
+  {
+   "math": "",
+   "en": "In Quadrant I, all trigonometric ratios are positive, so $\\sec(90^\\circ - \\theta)$ will have a positive ($+$) sign.",
+   "ur": "پہلے ربع میں تمام مثلثیاتی نسبتیں مثبت ہوتی ہیں، اس لیے $\\sec(90^\\circ - \\theta)$ کے ساتھ مثبت ($+$) کی علامت آئے گی۔"
+  },
+  {
+   "math": "90^\\circ = 1 \\times 90^\\circ",
+   "en": "Since the angle involves $90^\\circ$ (an odd multiple of $90^\\circ$), the trigonometric ratio $\\sec$ changes to its co-ratio $\\operatorname{cosec}$.",
+   "ur": "چونکہ زاویہ میں $90^\\circ$ شامل ہے ($90^\\circ$ کا طاق ضعف)، اس لیے مثلثیاتی نسبت $\\sec$ اپنی معاون نسبت (co-ratio) یعنی $\\operatorname{cosec}$ میں تبدیل ہو جاتی ہے۔",
+   "check": [
+    "90 == 1*90"
+   ]
+  },
+  {
+   "math": "\\sec(90^\\circ - \\theta) = +\\operatorname{cosec}\\theta",
+   "en": "Combining the positive sign and the co-ratio gives the final result.",
+   "ur": "مثبت علامت اور معاون نسبت کو ملانے سے حتمی نتیجہ حاصل ہوتا ہے۔",
+   "check": [
+    "sec(pi/2 - t) == csc(t)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

@@ -1,0 +1,43 @@
+{
+ "item": "rev1-q7",
+ "label": "i",
+ "answer_ref": "$\\frac{x^3 y^7}{z^4}$",
+ "steps": [
+  {
+   "math": "\\sqrt[5]{\\frac{x^{15} y^{35}}{z^{20}}}",
+   "en": "We are given the radical expression and asked to simplify it.",
+   "ur": "ہمیں یہ جذری جملہ دیا گیا ہے اور اسے مختصر کرنے کو کہا گیا ہے۔"
+  },
+  {
+   "math": "= \\left( \\frac{x^{15} y^{35}}{z^{20}} \\right)^{\\frac{1}{5}}",
+   "en": "First, convert the radical form into exponential form using the rule $\\sqrt[n]{a} = a^{\\frac{1}{n}}$. Here, the index is $5$, so the power becomes $\\frac{1}{5}$.",
+   "ur": "سب سے پہلے، اصول $\\sqrt[n]{a} = a^{\\frac{1}{n}}$ کا استعمال کرتے ہوئے جذری شکل کو قوت نمائی شکل میں تبدیل کریں۔ یہاں اشاریہ $5$ ہے، اس لیے طاقت $\\frac{1}{5}$ بن جائے گی۔"
+  },
+  {
+   "math": "= \\frac{(x^{15})^{\\frac{1}{5}} \\cdot (y^{35})^{\\frac{1}{5}}}{(z^{20})^{\\frac{1}{5}}}",
+   "en": "Apply the power of a quotient and power of a product laws of exponents: $\\left(\\frac{a \\cdot b}{c}\\right)^m = \\frac{a^m \\cdot b^m}{c^m}$.",
+   "ur": "قوت نما کے حاصلِ ضرب اور حاصلِ تقسیم کے قوانین لاگو کریں: $\\left(\\frac{a \\cdot b}{c}\\right)^m = \\frac{a^m \\cdot b^m}{c^m}$۔"
+  },
+  {
+   "math": "= \\frac{x^{15 \\times \\frac{1}{5}} \\, y^{35 \\times \\frac{1}{5}}}{z^{20 \\times \\frac{1}{5}}}",
+   "en": "Use the power of a power rule $(a^m)^n = a^{m \\times n}$ and multiply each inner exponent by the outer exponent $\\frac{1}{5}$.",
+   "ur": "قوت کی قوت کا اصول $(a^m)^n = a^{m \\times n}$ استعمال کریں اور ہر اندرونی قوت نما کو بیرونی قوت نما $\\frac{1}{5}$ سے ضرب دیں۔"
+  },
+  {
+   "math": "= \\frac{x^3 y^7}{z^4}",
+   "en": "Simplify the fractions in the exponents ($15 \\div 5 = 3$, $35 \\div 5 = 7$, and $20 \\div 5 = 4$) to get the final answer.",
+   "ur": "حتمی جواب حاصل کرنے کے لیے قوت نماؤں میں موجود کسور کو مختصر کریں ($15 \\div 5 = 3$، $35 \\div 5 = 7$، اور $20 \\div 5 = 4$)۔",
+   "check": [
+    "15 * R(1, 5) == 3",
+    "35 * R(1, 5) == 7",
+    "20 * R(1, 5) == 4",
+    "(x**15*y**35/z**20)**Rational(1,5) == x**3*y**7/z**4",
+    "Rational(15,5) == 3",
+    "Rational(35,5) == 7",
+    "Rational(20,5) == 4"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

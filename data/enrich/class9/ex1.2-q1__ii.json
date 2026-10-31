@@ -1,0 +1,59 @@
+{
+ "item": "ex1.2-q1",
+ "label": "ii",
+ "answer_ref": "$\\frac{\\sqrt{6}+\\sqrt{15}}{3}$",
+ "steps": [
+  {
+   "math": "\\frac{\\sqrt{2}+\\sqrt{5}}{\\sqrt{3}}",
+   "en": "We are given the expression and asked to rationalize its denominator.",
+   "ur": "ہمیں یہ عبارت دی گئی ہے اور اس کے نسب نما کو ناطق بنانے کے لیے کہا گیا ہے۔"
+  },
+  {
+   "math": "= \\frac{\\sqrt{2}+\\sqrt{5}}{\\sqrt{3}} \\times \\frac{\\sqrt{3}}{\\sqrt{3}}",
+   "en": "Since the denominator is a single square root, $\\sqrt{3}$, we multiply both the numerator and the denominator by $\\sqrt{3}$ to eliminate the radical from the denominator.",
+   "ur": "چونکہ نسب نما ایک ہی جذر $\\sqrt{3}$ ہے، اس لیے نسب نما سے جذر کو ختم کرنے کے لیے ہم شمار کنندہ اور نسب نما دونوں کو $\\sqrt{3}$ سے ضرب دیتے ہیں۔",
+   "check": [
+    "(sqrt(2)+sqrt(5))/sqrt(3) == ((sqrt(2)+sqrt(5))/sqrt(3)) * (sqrt(3)/sqrt(3))"
+   ]
+  },
+  {
+   "math": "= \\frac{(\\sqrt{2}+\\sqrt{5})\\sqrt{3}}{(\\sqrt{3})^2}",
+   "en": "Combine the numerators and denominators into a single fraction.",
+   "ur": "شمار کنندگان اور نسب نماؤں کو ایک ہی کسر میں ملا کر لکھیں۔",
+   "check": [
+    "((sqrt(2)+sqrt(5))/sqrt(3)) * (sqrt(3)/sqrt(3)) == ((sqrt(2)+sqrt(5))*sqrt(3)) / (sqrt(3)**2)"
+   ]
+  },
+  {
+   "math": "= \\frac{\\sqrt{2}\\sqrt{3}+\\sqrt{5}\\sqrt{3}}{3}",
+   "en": "Distribute $\\sqrt{3}$ across the terms in the numerator, and simplify the denominator using $(\\sqrt{a})^2 = a$.",
+   "ur": "شمار کنندہ کی رقوم کو $\\sqrt{3}$ سے ضرب دیں، اور کلیہ $(\\sqrt{a})^2 = a$ کا استعمال کرتے ہوئے نسب نما کو مختصر کریں۔",
+   "check": [
+    "(sqrt(2)+sqrt(5))*sqrt(3) == sqrt(2)*sqrt(3) + sqrt(5)*sqrt(3)",
+    "sqrt(3)**2 == 3"
+   ]
+  },
+  {
+   "math": "= \\frac{\\sqrt{2 \\times 3}+\\sqrt{5 \\times 3}}{3}",
+   "en": "Apply the product rule of radicals, $\\sqrt{a}\\sqrt{b} = \\sqrt{a \\times b}$, in the numerator.",
+   "ur": "شمار کنندہ میں جذروں کی ضرب کا اصول $\\sqrt{a}\\sqrt{b} = \\sqrt{a \\times b}$ لاگو کریں۔",
+   "check": [
+    "sqrt(2)*sqrt(3) == sqrt(2*3)",
+    "sqrt(5)*sqrt(3) == sqrt(5*3)"
+   ]
+  },
+  {
+   "math": "= \\frac{\\sqrt{6}+\\sqrt{15}}{3}",
+   "en": "Multiply the numbers inside the square roots to get the final answer with a rational denominator.",
+   "ur": "جذروں کے اندر موجود اعداد کو ضرب دے کر ناطق نسب نما کے ساتھ حتمی جواب حاصل کریں۔",
+   "check": [
+    "(sqrt(2*3) + sqrt(5*3))/3 == (sqrt(6) + sqrt(15))/3",
+    "(sqrt(2)+sqrt(5))/sqrt(3) == (sqrt(2)+sqrt(5))*sqrt(3)/3",
+    "sqrt(2)*sqrt(3) == sqrt(6)",
+    "sqrt(5)*sqrt(3) == sqrt(15)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

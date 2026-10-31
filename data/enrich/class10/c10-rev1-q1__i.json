@@ -1,0 +1,57 @@
+{
+ "item": "c10-rev1-q1",
+ "label": "i",
+ "answer_ref": "(b) $0$",
+ "steps": [
+  {
+   "math": "i^2 + i^4",
+   "en": "Write down the given expression containing powers of the imaginary unit $i$.",
+   "ur": "دی گئی عبارت لکھیں جس میں ایوٹا ($i$) کی طاقتیں شامل ہیں۔"
+  },
+  {
+   "math": "i^2 = -1",
+   "en": "By the fundamental definition of the imaginary unit, the square of $i$ is $-1$.",
+   "ur": "ایوٹا کی بنیادی تعریف کے مطابق، $i$ کا مربع $-1$ کے برابر ہوتا ہے۔",
+   "check": [
+    "I**2 == -1"
+   ]
+  },
+  {
+   "math": "i^4 = (i^2)^2 = (-1)^2 = 1",
+   "en": "Express $i^4$ in terms of $i^2$ and substitute $i^2 = -1$ to find its value.",
+   "ur": "$i^4$ کو $i^2$ کی شکل میں لکھیں اور اس کی قیمت معلوم کرنے کے لیے $i^2 = -1$ درج کریں۔",
+   "check": [
+    "I**4 == (I**2)**2",
+    "(I**2)**2 == (-1)**2",
+    "(-1)**2 == 1"
+   ]
+  },
+  {
+   "math": "i^2 + i^4 = -1 + 1",
+   "en": "Substitute the values of $i^2 = -1$ and $i^4 = 1$ back into the given expression.",
+   "ur": "اب $i^2 = -1$ اور $i^4 = 1$ کی قیمتیں دی گئی عبارت میں درج کریں۔",
+   "check": [
+    "I**2 + I**4 == -1 + 1"
+   ]
+  },
+  {
+   "math": "i^2 + i^4 = 0",
+   "en": "Simplify by adding the numbers together.",
+   "ur": "ان اعداد کو آپس میں جمع کر کے مختصر کریں۔",
+   "check": [
+    "-1 + 1 == 0",
+    "I**2 + I**4 == 0"
+   ]
+  },
+  {
+   "math": "\\text{Answer: (b) } 0",
+   "en": "The result matches option (b), so the correct answer is (b) $0$.",
+   "ur": "یہ نتیجہ آپشن (b) سے مطابقت رکھتا ہے، اس لیے درست جواب (b) $0$ ہے۔",
+   "check": [
+    "I**2 + I**4 == 0"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

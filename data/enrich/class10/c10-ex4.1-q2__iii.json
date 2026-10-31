@@ -1,0 +1,40 @@
+{
+ "item": "c10-ex4.1-q2",
+ "label": "iii",
+ "answer_ref": "$\\frac{1}{2}$",
+ "steps": [
+  {
+   "math": "f(x) = x + 2, \\quad g(x) = 2x + 4",
+   "en": "Write down the given functions $f(x)$ and $g(x)$.",
+   "ur": "دیے گئے تفاعل $f(x)$ اور $g(x)$ لکھیں۔"
+  },
+  {
+   "math": "\\frac{f(x)}{g(x)} = \\frac{x + 2}{2x + 4}",
+   "en": "Substitute the given expressions for $f(x)$ in the numerator and $g(x)$ in the denominator.",
+   "ur": "شمار کنندہ میں $f(x)$ اور مخرج میں $g(x)$ کی دی گئی قیمتیں درج کریں۔",
+   "check": [
+    "(x + 2)/(2*x + 4) == (x + 2)/(2*x + 4)"
+   ]
+  },
+  {
+   "math": "\\frac{f(x)}{g(x)} = \\frac{x + 2}{2(x + 2)}",
+   "en": "Factorize the denominator by taking $2$ as a common factor from $2x + 4$.",
+   "ur": "مخرج $2x + 4$ میں سے $2$ مشترک لے کر اس کی تجزی کریں۔",
+   "check": [
+    "2*x + 4 == 2*(x + 2)",
+    "(x + 2)/(2*x + 4) == (x + 2)/(2*(x + 2))"
+   ]
+  },
+  {
+   "math": "\\frac{f(x)}{g(x)} = \\frac{1}{2}",
+   "en": "Cancel out the common factor $(x + 2)$ from the numerator and the denominator to get the final answer.",
+   "ur": "آخری جواب حاصل کرنے کے لیے شمار کنندہ اور مخرج میں سے مشترک جزو ضربی $(x + 2)$ کو کاٹ دیں۔",
+   "check": [
+    "(x + 2)/(2*(x + 2)) == R(1, 2)",
+    "((x + 2)/(2*x + 4)) == (1/2)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

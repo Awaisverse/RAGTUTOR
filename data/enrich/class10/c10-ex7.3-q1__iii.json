@@ -1,0 +1,42 @@
+{
+ "item": "c10-ex7.3-q1",
+ "label": "iii",
+ "answer_ref": "$25.1^\\circ$",
+ "steps": [
+  {
+   "math": "BC = 3\\text{ cm}, \\quad CF = \\sqrt{41}\\text{ cm}",
+   "en": "Consider the right-angled triangle $BCF$ with the right angle at $C$. From the given figure, $BC = 3$ cm, and from part (i), we know that $CF = \\sqrt{41}$ cm.",
+   "ur": "قائمہ الزاویہ مثلث $BCF$ پر غور کریں جس میں زاویہ $C$ قائمہ ہے۔ دی گئی شکل سے $BC = 3$ سینٹی میٹر ہے، اور جزو (i) سے ہم جانتے ہیں کہ $CF = \\sqrt{41}$ سینٹی میٹر ہے۔"
+  },
+  {
+   "math": "\\tan\\angle BFC = \\frac{\\text{Opposite}}{\\text{Adjacent}} = \\frac{BC}{CF}",
+   "en": "To find the angle $BFC$, we use the tangent trigonometric ratio, which is the ratio of the opposite side ($BC$) to the adjacent side ($CF$).",
+   "ur": "زاویہ $BFC$ معلوم کرنے کے لیے ہم ٹینجنٹ کی مثلثیاتی نسبت استعمال کرتے ہیں، جو کہ عمود ($BC$) اور قاعدہ ($CF$) کی نسبت ہے۔"
+  },
+  {
+   "math": "\\tan\\angle BFC = \\frac{3}{\\sqrt{41}} \\approx 0.4685",
+   "en": "Substitute the values of $BC$ and $CF$ into the formula and calculate the decimal value.",
+   "ur": "فارمولے میں $BC$ اور $CF$ کی قیمتیں درج کریں اور اعشاریہ میں قیمت معلوم کریں۔",
+   "check": [
+    "Abs((3/sqrt(41)) - 0.4685) <= 0.00005"
+   ]
+  },
+  {
+   "math": "\\angle BFC = \\tan^{-1}(0.4685)",
+   "en": "Take the inverse tangent ($\\tan^{-1}$) on both sides to isolate the angle $BFC$.",
+   "ur": "زاویہ $BFC$ کی قیمت نکالنے کے لیے دونوں طرف معکوس ٹینجنٹ ($\\tan^{-1}$) لیں۔"
+  },
+  {
+   "math": "\\angle BFC \\approx 25.1^\\circ",
+   "en": "Using a calculator, we find the angle $BFC$ correct to one decimal place.",
+   "ur": "کیلکولیٹر کا استعمال کرتے ہوئے، ہم اعشاریہ کے ایک درجہ تک درست زاویہ $BFC$ معلوم کرتے ہیں۔",
+   "check": [
+    "Abs((atan(3/sqrt(41))*180/pi) - 25.1) <= 0.05",
+    "Abs((3/sqrt(41)) - 0.4685) <= 5.0001000000000005e-05",
+    "Abs((atan(3/sqrt(41))*180/pi) - 25.1) <= 0.050000001"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

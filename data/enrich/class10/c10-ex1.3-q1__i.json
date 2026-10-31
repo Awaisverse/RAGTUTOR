@@ -1,0 +1,49 @@
+{
+ "item": "c10-ex1.3-q1",
+ "label": "i",
+ "answer_ref": "$5$",
+ "steps": [
+  {
+   "math": "z = 4 + 3i",
+   "en": "Let the given complex number be denoted by $z$. Comparing it with the standard form $a + bi$, we have $a = 4$ and $b = 3$.",
+   "ur": "فرض کریں کہ دیا گیا مختلط عدد $z$ ہے۔ اس کا معیاری شکل $a + bi$ سے موازنہ کرنے پر، ہمارے پاس $a = 4$ اور $b = 3$ ہے۔"
+  },
+  {
+   "math": "|z| = \\sqrt{a^2 + b^2}",
+   "en": "Write the formula for the modulus of a complex number $z = a + bi$.",
+   "ur": "مختلط عدد $z = a + bi$ کے مقیاس (modulus) کا فارمولا لکھیں۔"
+  },
+  {
+   "math": "|z| = \\sqrt{(4)^2 + (3)^2}",
+   "en": "Substitute the values $a = 4$ and $b = 3$ into the formula.",
+   "ur": "فارمولے میں $a = 4$ اور $b = 3$ کی قیمتیں درج کریں۔",
+   "check": [
+    "Abs(4 + 3*I) == sqrt((4)**2 + (3)**2)"
+   ]
+  },
+  {
+   "math": "|z| = \\sqrt{16 + 9}",
+   "en": "Calculate the squares of $4$ and $3$.",
+   "ur": "$4$ اور $3$ کے مربع معلوم کریں۔",
+   "check": [
+    "(4)**2 == 16",
+    "(3)**2 == 9",
+    "sqrt((4)**2 + (3)**2) == sqrt(16 + 9)"
+   ]
+  },
+  {
+   "math": "|z| = \\sqrt{25} = 5",
+   "en": "Add the numbers inside the square root and take the square root to get the final answer.",
+   "ur": "جذر کے اندر موجود اعداد کو جمع کریں اور حتمی جواب حاصل کرنے کے لیے جذر لیں۔",
+   "check": [
+    "16 + 9 == 25",
+    "sqrt(25) == 5",
+    "Abs(4 + 3*I) == 5",
+    "sqrt((4)**2 + (3)**2) == (5)",
+    "Abs((4 + 3*I)) == (5)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

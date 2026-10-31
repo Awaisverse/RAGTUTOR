@@ -1,0 +1,48 @@
+{
+ "item": "c10-ex12.3-q7",
+ "label": "",
+ "answer_ref": "$\\frac{4}{663}$",
+ "steps": [
+  {
+   "math": "n(S) = 52",
+   "en": "A standard deck of playing cards contains a total of $52$ cards, which includes $4$ Jacks and $4$ Queens.",
+   "ur": "تاش کے پتوں کی ایک معیاری گڈی میں کل $52$ پتے ہوتے ہیں، جن میں $4$ غلام (Jacks) اور $4$ ملکہ (Queens) شامل ہیں۔",
+   "check": [
+    "52 == 52"
+   ]
+  },
+  {
+   "math": "P(A) = \\frac{4}{52} = \\frac{1}{13}",
+   "en": "Let $A$ be the event that the first card drawn is a Jack. Since there are $4$ Jacks out of $52$ cards, the probability of event $A$ is:",
+   "ur": "فرض کریں کہ $A$ وہ واقعہ ہے جس میں پہلا نکالا گیا پتہ غلام (Jack) ہے۔ چونکہ $52$ پتوں میں $4$ غلام ہیں، اس لیے واقعہ $A$ کا احتمال یہ ہے:",
+   "check": [
+    "R(4, 52) == R(1, 13)"
+   ]
+  },
+  {
+   "math": "P(B|A) = \\frac{4}{51}",
+   "en": "Let $B$ be the event that the second card is a Queen. Since the first card is not replaced, $51$ cards remain in the deck, which still contain all $4$ Queens. The probability of drawing a Queen second is:",
+   "ur": "فرض کریں کہ $B$ وہ واقعہ ہے جس میں دوسرا پتہ ملکہ (Queen) ہے۔ چونکہ پہلا پتہ واپس نہیں رکھا گیا، اس لیے گڈی میں $51$ پتے باقی رہ جاتے ہیں، جن میں اب بھی تمام $4$ ملکائیں موجود ہیں۔ دوسرے پتے کے ملکہ ہونے کا احتمال یہ ہے:",
+   "check": [
+    "R(4, 51) == R(4, 51)"
+   ]
+  },
+  {
+   "math": "P(A \\cap B) = P(A) \\times P(B|A)",
+   "en": "Because the cards are drawn without replacement, these are dependent events. By the multiplication law of probability for dependent events:",
+   "ur": "چونکہ پتے واپس رکھے بغیر نکالے گئے ہیں، اس لیے یہ منحصر واقعات (dependent events) ہیں۔ منحصر واقعات کے لیے احتمال کے ضربی قانون کے مطابق:"
+  },
+  {
+   "math": "P(A \\cap B) = \\frac{4}{52} \\times \\frac{4}{51} = \\frac{1}{13} \\times \\frac{4}{51} = \\frac{4}{663}",
+   "en": "Substitute the values and multiply to find the required probability.",
+   "ur": "مطلوبہ احتمال معلوم کرنے کے لیے قیمتیں درج کریں اور ضرب دیں۔",
+   "check": [
+    "R(4, 52) * R(4, 51) == R(1, 13) * R(4, 51)",
+    "R(1, 13) * R(4, 51) == R(4, 663)",
+    "R(4,52)*R(4,51) == 4/663"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

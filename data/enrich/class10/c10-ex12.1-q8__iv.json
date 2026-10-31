@@ -1,0 +1,53 @@
+{
+ "item": "c10-ex12.1-q8",
+ "label": "iv",
+ "answer_ref": "$\\frac{5}{6}$",
+ "steps": [
+  {
+   "math": "",
+   "en": "First, identify the given number of balls of each color in the bag: $4$ red, $5$ white, $6$ green, and $3$ black balls.",
+   "ur": "سب سے پہلے، تھیلے میں موجود ہر رنگ کی گیندوں کی دی گئی تعداد معلوم کریں: $4$ سرخ، $5$ سفید، $6$ سبز اور $3$ کالی گیندیں۔"
+  },
+  {
+   "math": "n(S) = 4 + 5 + 6 + 3 = 18",
+   "en": "Find the total number of possible outcomes $n(S)$ by adding all the balls together.",
+   "ur": "تمام گیندوں کو جمع کر کے کل ممکنہ نتائج کی تعداد $n(S)$ معلوم کریں۔",
+   "check": [
+    "4 + 5 + 6 + 3 == 18"
+   ]
+  },
+  {
+   "math": "n(E) = 4 + 5 + 6 = 15",
+   "en": "Let $E$ be the event that the drawn ball is not black. Count all the balls that are not black (red, white, and green) to find $n(E)$.",
+   "ur": "فرض کریں کہ $E$ وہ وقوعہ ہے کہ نکالی گئی گیند کالی نہیں ہے۔ ان تمام گیندوں کو گنیں جو کالی نہیں ہیں (سرخ، سفید اور سبز) تاکہ $n(E)$ معلوم ہو سکے۔",
+   "check": [
+    "4 + 5 + 6 == 15",
+    "18 - 3 == 15"
+   ]
+  },
+  {
+   "math": "P(E) = \\frac{n(E)}{n(S)}",
+   "en": "Write the formula for the probability of event $E$.",
+   "ur": "وقوعہ $E$ کے احتمال کا فارمولا لکھیں۔"
+  },
+  {
+   "math": "P(E) = \\frac{15}{18}",
+   "en": "Substitute the values of $n(E) = 15$ and $n(S) = 18$ into the formula.",
+   "ur": "فارمولے میں $n(E) = 15$ اور $n(S) = 18$ کی قیمتیں درج کریں۔",
+   "check": [
+    "R(15, 18) == R(15, 18)"
+   ]
+  },
+  {
+   "math": "P(E) = \\frac{5}{6}",
+   "en": "Simplify the fraction by dividing both the numerator and the denominator by $3$. Thus, the probability that the ball drawn is not black is $\\frac{5}{6}$.",
+   "ur": "شمار کنندہ اور مخرج دونوں کو $3$ پر تقسیم کر کے کسر کو مختصر کریں۔ اس طرح، نکالی گئی گیند کے کالا نہ ہونے کا احتمال $\\frac{5}{6}$ ہے۔",
+   "check": [
+    "R(15, 18) == R(5, 6)",
+    "R(15, 18) == 5/6"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

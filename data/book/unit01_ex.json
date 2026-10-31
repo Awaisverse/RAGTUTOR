@@ -15,15 +15,34 @@
      "prompt": "$2.353535$",
      "steps": [
       {
+       "math": "2.353535",
+       "en": "We are given the decimal number $2.353535$ and asked to identify whether it is a rational or an irrational number.",
+       "ur": "ہمیں اعشاری عدد $2.353535$ دیا گیا ہے اور یہ بتانا ہے کہ آیا یہ ناطق عدد ہے یا غیر ناطق عدد۔"
+      },
+      {
        "math": "",
-       "en": "2.353535 has a finite number of digits after the decimal point, so it is a terminating decimal and therefore rational.",
-       "ur": "2.353535 میں اعشاریہ کے بعد ہندسے محدود ہیں، یہ محدود اعشاری عدد ہے، اس لیے ناطق ہے۔",
+       "en": "Look at the digits after the decimal point. There are no dots ($\\ldots$) at the end, and there are exactly $6$ digits ($353535$) after the decimal point. Since the number of digits is finite, it is a terminating decimal fraction.",
+       "ur": "اعشاریہ کے بعد والے ہندسوں کو دیکھیں۔ آخر میں کوئی نقطے ($\\ldots$) نہیں ہیں، اور اعشاریہ کے بعد ٹھیک $6$ ہندسے ($353535$) موجود ہیں۔ چونکہ ہندسوں کی تعداد محدود ہے، اس لیے یہ ایک مختتم اعشاری کسر (terminating decimal fraction) ہے۔"
+      },
+      {
+       "math": "2.353535 = \\frac{2353535}{1000000}",
+       "en": "By rule, every terminating decimal can be expressed in the form $\\frac{p}{q}$ where $p, q \\in \\mathbb{Z}$ and $q \\neq 0$. Removing the decimal point gives:",
+       "ur": "اصول کے مطابق، ہر مختتم اعشاری کسر کو $\\frac{p}{q}$ کی شکل میں لکھا جا سکتا ہے جہاں $p, q \\in \\mathbb{Z}$ اور $q \\neq 0$ ہو۔ اعشاریہ ہٹانے سے ہمیں ملتا ہے:",
+       "check": [
+        "Rational('2.353535') == R(2353535, 1000000)"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Since $2.353535$ is a terminating decimal and can be written in the form $\\frac{p}{q}$, it is a rational number.",
+       "ur": "چونکہ $2.353535$ ایک مختتم اعشاری عدد ہے اور اسے $\\frac{p}{q}$ کی شکل میں لکھا جا سکتا ہے، اس لیے یہ ایک ناطق عدد (Rational number) ہے۔",
        "check": [
         "Rational('2.353535') == Rational(2353535, 1000000)"
        ]
       }
      ],
      "answer": "Rational",
+     "enriched": true,
      "book_key": "Rational"
     },
     {
@@ -31,15 +50,39 @@
      "prompt": "$0.\\bar{6}$",
      "steps": [
       {
-       "math": "0.\\bar{6} = 0.666\\ldots = \\frac{6}{9} = \\frac{2}{3}",
-       "en": "The digit 6 repeats forever, so this is a non-terminating recurring decimal. It can be written as p/q, so it is rational.",
-       "ur": "ہندسہ 6 بار بار آتا ہے، یہ غیر محدود دوری اعشاری عدد ہے۔ اسے p/q کی شکل میں لکھا جا سکتا ہے، اس لیے ناطق ہے۔",
+       "math": "0.\\bar{6}",
+       "en": "We are given the decimal number $0.\\bar{6}$ and need to identify whether it is a rational or irrational number.",
+       "ur": "ہمیں اعشاری عدد $0.\\bar{6}$ دیا گیا ہے اور ہمیں یہ بتانا ہے کہ یہ ناطق عدد ہے یا غیر ناطق عدد۔"
+      },
+      {
+       "math": "0.\\bar{6} = 0.666\\ldots",
+       "en": "The bar over the digit $6$ indicates that $6$ repeats endlessly. Therefore, this is a non-terminating recurring (repeating) decimal.",
+       "ur": "ہندسہ $6$ کے اوپر بار کا نشان یہ ظاہر کرتا ہے کہ $6$ لامحدود طور پر بار بار آ رہا ہے۔ اس لیے یہ ایک غیر مختتم تکرار والا (دوری) اعشاری عدد ہے۔"
+      },
+      {
+       "math": "\\text{Rule: Non-terminating recurring decimals are rational numbers.}",
+       "en": "According to the properties of real numbers, every non-terminating recurring decimal can be converted into a fraction of the form $\\frac{p}{q}$, where $p, q \\in \\mathbb{Z}$ and $q \\neq 0$.",
+       "ur": "حقیقی اعداد کی خصوصیات کے مطابق، ہر غیر مختتم تکرار والے اعشاری عدد کو $\\frac{p}{q}$ کی کسر کی شکل میں تبدیل کیا جا سکتا ہے، جہاں $p, q \\in \\mathbb{Z}$ اور $q \\neq 0$ ہو۔"
+      },
+      {
+       "math": "0.\\bar{6} = \\frac{6}{9} = \\frac{2}{3}",
+       "en": "Converting the recurring decimal into a fraction and simplifying it by dividing the numerator and denominator by $3$, we get $\\frac{2}{3}$.",
+       "ur": "اس تکرار والے اعشاری عدد کو کسر میں تبدیل کرنے اور شمار کنندہ اور مخرج کو $3$ پر تقسیم کر کے مختصر کرنے سے ہمیں $\\frac{2}{3}$ حاصل ہوتا ہے۔",
+       "check": [
+        "R(6,9) == R(2,3)"
+       ]
+      },
+      {
+       "math": "\\text{Rational}",
+       "en": "Since $0.\\bar{6}$ can be expressed in the form $\\frac{p}{q}$ as $\\frac{2}{3}$, it is a rational number.",
+       "ur": "چونکہ $0.\\bar{6}$ کو $\\frac{p}{q}$ کی شکل میں بطور $\\frac{2}{3}$ لکھا جا سکتا ہے، اس لیے یہ ایک ناطق عدد (Rational number) ہے۔",
        "check": [
         "9*Rational(2,3) == 6"
        ]
       }
      ],
      "answer": "Rational",
+     "enriched": true,
      "book_key": "Rational"
     },
     {
@@ -47,12 +90,28 @@
      "prompt": "$2.236067\\ldots$",
      "steps": [
       {
+       "math": "2.236067\\ldots",
+       "en": "We are given the decimal number $2.236067\\ldots$ and we need to determine whether it is a rational or an irrational number.",
+       "ur": "ہمیں اعشاری عدد $2.236067\\ldots$ دیا گیا ہے اور ہمیں یہ معلوم کرنا ہے کہ یہ ناطق عدد ہے یا غیر ناطق عدد۔"
+      },
+      {
        "math": "",
-       "en": "2.236067... goes on without ending and no group of digits repeats, so it is a non-terminating, non-recurring decimal and therefore irrational.",
-       "ur": "2.236067... ختم نہیں ہوتا اور ہندسوں کا کوئی گروہ دہرایا نہیں جاتا، اس لیے یہ غیر ناطق ہے۔"
+       "en": "By definition, a decimal representation that is non-terminating (does not end) and non-recurring (no block of digits repeats endlessly) represents an irrational number.",
+       "ur": "تعریف کے مطابق، ایک ایسا اعشاریہ جو غیر مختتم (ختم نہ ہونے والا) اور غیر متوالی (جس میں ہندسوں کا کوئی گروہ بار بار نہ دہرایا جائے) ہو، ایک غیر ناطق عدد کو ظاہر کرتا ہے۔"
+      },
+      {
+       "math": "",
+       "en": "Observing $2.236067\\ldots$: the three dots ($\\ldots$) at the end show that the digits continue infinitely without terminating. Also, the digits $2, 3, 6, 0, 6, 7$ do not follow any repeating pattern.",
+       "ur": "عدد $2.236067\\ldots$ کا مشاہدہ کرنے سے معلوم ہوتا ہے کہ آخر میں موجود تین نقطے ($\\ldots$) ظاہر کرتے ہیں کہ ہندسے ختم ہوئے بغیر لامحدود طور پر جاری رہتے ہیں۔ نیز، ہندسے $2, 3, 6, 0, 6, 7$ کسی خاص ترتیب سے دہرائے نہیں جا رہے۔"
+      },
+      {
+       "math": "",
+       "en": "Since $2.236067\\ldots$ is a non-terminating and non-recurring decimal, it cannot be written in the form $\\frac{p}{q}$. Therefore, it is an irrational number.",
+       "ur": "چونکہ $2.236067\\ldots$ ایک غیر مختتم اور غیر متوالی اعشاریہ ہے، اس لیے اسے $\\frac{p}{q}$ کی شکل میں نہیں لکھا جا سکتا۔ لہٰذا، یہ ایک غیر ناطق عدد (Irrational number) ہے۔"
       }
      ],
      "answer": "Irrational",
+     "enriched": true,
      "book_key": "Irrational"
     },
     {
@@ -61,8 +120,36 @@
      "steps": [
       {
        "math": "\\sqrt{7}",
-       "en": "4 < 7 < 9, so 7 is not a perfect square and $\\sqrt{7}$ is irrational.",
-       "ur": "4 < 7 < 9، اس لیے 7 مکمل مربع نہیں اور $\\sqrt{7}$ غیر ناطق ہے۔",
+       "en": "We are given the number $\\sqrt{7}$ and asked to identify whether it is a rational or irrational number.",
+       "ur": "ہمیں عدد $\\sqrt{7}$ دیا گیا ہے اور یہ بتانا ہے کہ آیا یہ ناطق عدد ہے یا غیر ناطق۔"
+      },
+      {
+       "math": "",
+       "en": "Recall the rule: The square root of any positive integer that is not a perfect square is always an irrational number. Also, the square root of any prime number is irrational.",
+       "ur": "اصول یاد رکھیں: کسی بھی ایسے مثبت صحیح عدد کا جذر جو مکمل مربع نہ ہو، ہمیشہ ایک غیر ناطق عدد ہوتا ہے۔ نیز، کسی بھی مفرد عدد کا جذر غیر ناطق ہوتا ہے۔"
+      },
+      {
+       "math": "2^2 = 4, \\quad 3^2 = 9",
+       "en": "Let us check the nearest perfect squares around $7$. The square of $2$ is $4$, and the square of $3$ is $9$.",
+       "ur": "آئیے $7$ کے ارد گرد قریب ترین مکمل مربع اعداد کو چیک کرتے ہیں۔ $2$ کا مربع $4$ ہے، اور $3$ کا مربع $9$ ہے۔",
+       "check": [
+        "2**2 == 4",
+        "3**2 == 9"
+       ]
+      },
+      {
+       "math": "4 < 7 < 9",
+       "en": "Since $7$ lies strictly between the consecutive perfect squares $4$ and $9$ (and $7$ is also a prime number), $7$ is not a perfect square.",
+       "ur": "چونکہ $7$ دو مسلسل مکمل مربع اعداد $4$ اور $9$ کے درمیان آتا ہے (اور $7$ ایک مفرد عدد بھی ہے)، اس لیے $7$ مکمل مربع نہیں ہے۔",
+       "check": [
+        "floor(sqrt(7))**2 < 7",
+        "(floor(sqrt(7))+1)**2 > 7"
+       ]
+      },
+      {
+       "math": "\\sqrt{7} \\text{ is an irrational number}",
+       "en": "Because $7$ is not a perfect square, $\\sqrt{7}$ cannot be written in the form $\\frac{p}{q}$ (where $p, q \\in \\mathbb{Z}$ and $q \\neq 0$). Therefore, $\\sqrt{7}$ is an irrational number.",
+       "ur": "چونکہ $7$ ایک مکمل مربع نہیں ہے، اس لیے $\\sqrt{7}$ کو $\\frac{p}{q}$ کی شکل میں نہیں لکھا جا سکتا (جہاں $p, q \\in \\mathbb{Z}$ اور $q \\neq 0$)۔ لہٰذا، $\\sqrt{7}$ ایک غیر ناطق عدد (Irrational) ہے۔",
        "check": [
         "floor(sqrt(7))**2 < 7",
         "(floor(sqrt(7))+1)**2 > 7"
@@ -70,6 +157,7 @@
       }
      ],
      "answer": "Irrational",
+     "enriched": true,
      "book_key": "Irrational"
     },
     {
@@ -77,12 +165,28 @@
      "prompt": "$e$",
      "steps": [
       {
+       "math": "e",
+       "en": "We are given the mathematical constant $e$ (Euler's number) and asked to identify whether it is a rational or an irrational number.",
+       "ur": "ہمیں ریاضیاتی مستقل $e$ (یولر کا عدد) دیا گیا ہے اور یہ بتانا ہے کہ آیا یہ ناطق عدد ہے یا غیر ناطق۔"
+      },
+      {
        "math": "",
-       "en": "$e = 2.71828\\ldots$ (Euler's number) is a non-terminating, non-recurring decimal, so it is irrational.",
-       "ur": "$e = 2.71828\\ldots$ (یولر کا عدد) غیر محدود غیر دوری اعشاری عدد ہے، اس لیے غیر ناطق ہے۔"
+       "en": "Recall the rule for decimal numbers: a number whose decimal expansion is non-terminating (goes on forever) and non-recurring (does not have a repeating block of digits) cannot be written in the form $\\frac{p}{q}$ (where $p, q \\in \\mathbb{Z}$ and $q \\neq 0$), so it is an irrational number.",
+       "ur": "اعشاری اعداد کا اصول یاد کریں: ایسا عدد جس کی اعشاری شکل غیر مختتم (ہمیشہ جاری رہنے والی) اور غیر متوالی (جس میں ہندسوں کا کوئی خاص بلاک بار بار نہ دہرایا جائے) ہو، اسے $\\frac{p}{q}$ کی شکل میں نہیں لکھا جا سکتا (جہاں $p, q \\in \\mathbb{Z}$ اور $q \\neq 0$)، اس لیے وہ غیر ناطق عدد ہوتا ہے۔"
+      },
+      {
+       "math": "e = 2.7182818284\\ldots",
+       "en": "The decimal value of Euler's number $e$ is $2.71828\\ldots$. Observe that the digits after the decimal point continue endlessly without any repeating pattern.",
+       "ur": "یولر کے عدد $e$ کی اعشاری قیمت $2.71828\\ldots$ ہے۔ غور کریں کہ اعشاریہ کے بعد کے ہندسے بغیر کسی تکرار کے لامحدود طور پر جاری رہتے ہیں۔"
+      },
+      {
+       "math": "",
+       "en": "Since the decimal representation of $e$ is non-terminating and non-recurring, $e$ is an irrational number.",
+       "ur": "چونکہ $e$ کی اعشاری شکل غیر مختتم اور غیر متوالی (غیر دوری) ہے، اس لیے $e$ ایک غیر ناطق (Irrational) عدد ہے۔"
       }
      ],
      "answer": "Irrational",
+     "enriched": true,
      "book_key": "Irrational"
     },
     {
@@ -90,12 +194,33 @@
      "prompt": "$\\pi$",
      "steps": [
       {
+       "math": "\\pi",
+       "en": "We are given the mathematical constant $\\pi$ (pi) and asked to identify whether it is a rational or an irrational number.",
+       "ur": "ہمیں ریاضی کا مستقل عدد $\\pi$ (پائی) دیا گیا ہے اور ہمیں یہ بتانا ہے کہ یہ ناطق عدد ہے یا غیر ناطق عدد۔"
+      },
+      {
        "math": "",
-       "en": "$\\pi = 3.14159\\ldots$ is a non-terminating, non-recurring decimal, so it is irrational.",
-       "ur": "$\\pi = 3.14159\\ldots$ غیر محدود غیر دوری اعشاری عدد ہے، اس لیے غیر ناطق ہے۔"
+       "en": "Recall that an irrational number is a number whose decimal representation is non-terminating (goes on forever) and non-recurring (does not have a repeating pattern of digits). It cannot be written exactly in the form $\\frac{p}{q}$ where $p, q \\in \\mathbb{Z}$ and $q \\neq 0$.",
+       "ur": "یاد رکھیں کہ غیر ناطق عدد وہ ہوتا ہے جس کی اعشاری شکل غیر مختتم (ہمیشہ جاری رہنے والی) اور غیر تکراری (جس میں ہندسوں کی تکرار نہ ہو) ہوتی ہے۔ اسے $\\frac{p}{q}$ کی شکل میں نہیں لکھا جا سکتا جہاں $p, q \\in \\mathbb{Z}$ اور $q \\neq 0$ ہو۔"
+      },
+      {
+       "math": "\\pi = 3.14159\\ldots",
+       "en": "When we write the decimal expansion of $\\pi$, we get $3.14159\\ldots$ (note that $\\frac{22}{7}$ is only an approximate value, not the exact value of $\\pi$).",
+       "ur": "جب ہم $\\pi$ کو اعشاری شکل میں لکھتے ہیں تو ہمیں $3.14159\\ldots$ حاصل ہوتا ہے (واضح رہے کہ $\\frac{22}{7}$ صرف ایک تقریبی قیمت ہے، $\\pi$ کی اصل قیمت نہیں)۔"
+      },
+      {
+       "math": "",
+       "en": "Since the digits after the decimal point in $3.14159\\ldots$ continue infinitely without any repeating block of digits, it is a non-terminating and non-recurring decimal.",
+       "ur": "چونکہ $3.14159\\ldots$ میں اعشاریہ کے بعد ہندسے بغیر کسی خاص تکرار کے لامحدود طور پر چلتے رہتے ہیں، اس لیے یہ ایک غیر مختتم اور غیر تکراری اعشاری عدد ہے۔"
+      },
+      {
+       "math": "",
+       "en": "Therefore, $\\pi$ is an irrational number.",
+       "ur": "لہٰذا، $\\pi$ ایک غیر ناطق عدد (irrational number) ہے۔"
       }
      ],
      "answer": "Irrational",
+     "enriched": true,
      "book_key": "Irrational"
     },
     {
@@ -103,21 +228,44 @@
      "prompt": "$5+\\sqrt{11}$",
      "steps": [
       {
-       "math": "\\sqrt{11}\\ \\text{is irrational}",
-       "en": "9 < 11 < 16, so 11 is not a perfect square and $\\sqrt{11}$ is irrational.",
-       "ur": "9 < 11 < 16، اس لیے 11 مکمل مربع نہیں اور $\\sqrt{11}$ غیر ناطق ہے۔",
+       "math": "5 + \\sqrt{11}",
+       "en": "We are given the expression $5 + \\sqrt{11}$ and asked to identify whether it is a rational or irrational number.",
+       "ur": "ہمیں $5 + \\sqrt{11}$ دیا گیا ہے اور یہ بتانا ہے کہ یہ ناطق عدد ہے یا غیر ناطق عدد۔"
+      },
+      {
+       "math": "5 = \\frac{5}{1}",
+       "en": "First, consider the first term, $5$. Since $5$ can be written in the form $\\frac{p}{q}$ as $\\frac{5}{1}$ (where $p, q \\in \\mathbb{Z}$ and $q \\neq 0$), $5$ is a rational number.",
+       "ur": "سب سے پہلے پہلی رقم $5$ کو دیکھیں۔ چونکہ $5$ کو $\\frac{p}{q}$ کی شکل میں $\\frac{5}{1}$ لکھا جا سکتا ہے (جہاں $p, q \\in \\mathbb{Z}$ اور $q \\neq 0$)، اس لیے $5$ ایک ناطق عدد ہے۔",
+       "check": [
+        "5 == R(5, 1)"
+       ]
+      },
+      {
+       "math": "\\sqrt{11} \\text{ is irrational}",
+       "en": "Next, consider the second term, $\\sqrt{11}$. Since $11$ is a prime number and not a perfect square ($9 < 11 < 16$), its square root $\\sqrt{11}$ is an irrational number.",
+       "ur": "اب دوسری رقم $\\sqrt{11}$ کو دیکھیں۔ چونکہ $11$ ایک مفرد عدد ہے اور مکمل مربع نہیں ہے ($9 < 11 < 16$)، اس لیے اس کا جذر $\\sqrt{11}$ ایک غیر ناطق عدد ہے۔",
+       "check": [
+        "floor(sqrt(11))**2 == 9",
+        "(floor(sqrt(11))+1)**2 == 16"
+       ]
+      },
+      {
+       "math": "\\text{Rational} + \\text{Irrational} = \\text{Irrational}",
+       "en": "According to the properties of real numbers, the sum of a rational number and an irrational number is always an irrational number.",
+       "ur": "حقیقی اعداد کی خصوصیات کے مطابق، ایک ناطق عدد اور ایک غیر ناطق عدد کا مجموعہ ہمیشہ ایک غیر ناطق عدد ہوتا ہے۔"
+      },
+      {
+       "math": "5 + \\sqrt{11} \\text{ is irrational}",
+       "en": "Therefore, adding the rational number $5$ and the irrational number $\\sqrt{11}$ gives $5 + \\sqrt{11}$, which is an irrational number.",
+       "ur": "لہٰذا، ناطق عدد $5$ اور غیر ناطق عدد $\\sqrt{11}$ کو جمع کرنے سے حاصل ہونے والا عدد $5 + \\sqrt{11}$ ایک غیر ناطق عدد ہے۔",
        "check": [
         "floor(sqrt(11))**2 < 11",
         "(floor(sqrt(11))+1)**2 > 11"
        ]
-      },
-      {
-       "math": "",
-       "en": "5 is rational and $\\sqrt{11}$ is irrational. A rational number plus an irrational number is irrational, so $5+\\sqrt{11}$ is irrational.",
-       "ur": "5 ناطق ہے اور $\\sqrt{11}$ غیر ناطق ہے۔ ناطق اور غیر ناطق عدد کا مجموعہ غیر ناطق ہوتا ہے، اس لیے $5+\\sqrt{11}$ غیر ناطق ہے۔"
       }
      ],
      "answer": "Irrational",
+     "enriched": true,
      "book_key": "Irrational"
     },
     {
@@ -155,15 +303,39 @@
      "prompt": "$\\frac{15}{4}$",
      "steps": [
       {
+       "math": "\\frac{15}{4}",
+       "en": "We are given the number $\\frac{15}{4}$ and asked to identify whether it is a rational or an irrational number.",
+       "ur": "ہمیں عدد $\\frac{15}{4}$ دیا گیا ہے اور یہ معلوم کرنا ہے کہ آیا یہ ناطق عدد ہے یا غیر ناطق۔"
+      },
+      {
+       "math": "\\frac{p}{q}, \\quad p, q \\in \\mathbb{Z}, \\quad q \\neq 0",
+       "en": "By definition, a rational number is any number that can be expressed in the form $\\frac{p}{q}$, where $p$ and $q$ are integers ($\\mathbb{Z}$) and the denominator $q$ is not equal to $0$.",
+       "ur": "تعریف کے مطابق، ناطق عدد ہر وہ عدد ہے جسے $\\frac{p}{q}$ کی شکل میں لکھا جا سکے، جہاں $p$ اور $q$ صحیح اعداد ($\\mathbb{Z}$) ہیں اور مخرج $q$ صفر ($0$) کے برابر نہیں ہے۔"
+      },
+      {
+       "math": "p = 15, \\quad q = 4 \\neq 0",
+       "en": "Comparing $\\frac{15}{4}$ with $\\frac{p}{q}$, we see that the numerator $p = 15$ and the denominator $q = 4$ are both integers, and $q \\neq 0$.",
+       "ur": "عدد $\\frac{15}{4}$ کا $\\frac{p}{q}$ سے موازنہ کرنے پر، ہم دیکھتے ہیں کہ شمار کنندہ $p = 15$ اور مخرج $q = 4$ دونوں صحیح اعداد ہیں، اور $q \\neq 0$۔"
+      },
+      {
        "math": "\\frac{15}{4} = 3.75",
-       "en": "15/4 is a quotient of two integers, so it is rational. Its decimal 3.75 terminates.",
-       "ur": "15/4 دو صحیح اعداد کی نسبت ہے، اس لیے ناطق ہے۔ اس کا اعشاری روپ 3.75 محدود ہے۔",
+       "en": "Furthermore, if we divide $15$ by $4$, we get $3.75$, which is a terminating decimal fraction. Every terminating decimal is a rational number.",
+       "ur": "مزید برآں، اگر ہم $15$ کو $4$ پر تقسیم کریں تو ہمیں $3.75$ حاصل ہوتا ہے، جو کہ ایک مختتم اعشاری کسر ہے۔ ہر مختتم اعشاری کسر ایک ناطق عدد ہوتی ہے۔",
+       "check": [
+        "R(15, 4) == R(375, 100)"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Therefore, $\\frac{15}{4}$ is a rational number.",
+       "ur": "لہٰذا، $\\frac{15}{4}$ ایک ناطق عدد (Rational number) ہے۔",
        "check": [
         "Rational(15,4) == Rational('3.75')"
        ]
       }
      ],
      "answer": "Rational",
+     "enriched": true,
      "book_key": "Rational"
     },
     {
@@ -171,10 +343,45 @@
      "prompt": "$(2-\\sqrt{2})(2+\\sqrt{2})$",
      "steps": [
       {
-       "math": "(2-\\sqrt{2})(2+\\sqrt{2}) = 2^2-(\\sqrt{2})^2 = 4-2 = 2",
-       "en": "Use $(a-b)(a+b) = a^2-b^2$. The product is 2, which is a rational number.",
-       "ur": "$(a-b)(a+b) = a^2-b^2$ استعمال کریں۔ حاصل ضرب 2 ہے جو ناطق عدد ہے۔",
+       "math": "(2-\\sqrt{2})(2+\\sqrt{2})",
+       "en": "We are given the expression $(2-\\sqrt{2})(2+\\sqrt{2})$ and need to determine whether it is a rational or irrational number.",
+       "ur": "ہمیں جملہ $(2-\\sqrt{2})(2+\\sqrt{2})$ دیا گیا ہے اور ہمیں یہ معلوم کرنا ہے کہ یہ ناطق عدد ہے یا غیر ناطق۔"
+      },
+      {
+       "math": "(a-b)(a+b) = a^2 - b^2",
+       "en": "First, we simplify the expression using the algebraic identity $(a-b)(a+b) = a^2 - b^2$, where $a = 2$ and $b = \\sqrt{2}$.",
+       "ur": "سب سے پہلے، ہم الجبری کلیہ $(a-b)(a+b) = a^2 - b^2$ استعمال کرتے ہوئے اس جملے کو مختصر کرتے ہیں، جہاں $a = 2$ اور $b = \\sqrt{2}$ ہے۔"
+      },
+      {
+       "math": "(2-\\sqrt{2})(2+\\sqrt{2}) = (2)^2 - (\\sqrt{2})^2",
+       "en": "Substitute the values of $a$ and $b$ into the formula.",
+       "ur": "کلیے میں $a$ اور $b$ کی قیمتیں درج کریں۔",
        "check": [
+        "(2-sqrt(2))*(2+sqrt(2)) == 2**2 - (sqrt(2))**2"
+       ]
+      },
+      {
+       "math": "= 4 - 2",
+       "en": "Evaluate the squares: $(2)^2 = 4$ and $(\\sqrt{2})^2 = 2$.",
+       "ur": "مربع حل کریں: $(2)^2 = 4$ اور $(\\sqrt{2})^2 = 2$۔",
+       "check": [
+        "2**2 - (sqrt(2))**2 == 4 - 2"
+       ]
+      },
+      {
+       "math": "= 2",
+       "en": "Subtract the numbers to get the simplified result $2$.",
+       "ur": "اعداد کو تفریق کرنے سے مختصر جواب $2$ حاصل ہوتا ہے۔",
+       "check": [
+        "4 - 2 == 2"
+       ]
+      },
+      {
+       "math": "2 = \\frac{2}{1}",
+       "en": "Since $2$ can be written in the form $\\frac{p}{q}$ as $\\frac{2}{1}$ where $p, q \\in \\mathbb{Z}$ and $q \\neq 0$, the given expression is a rational number.",
+       "ur": "چونکہ $2$ کو $\\frac{p}{q}$ کی شکل میں $\\frac{2}{1}$ کے طور پر لکھا جا سکتا ہے جہاں $p, q \\in \\mathbb{Z}$ اور $q \\neq 0$ ہے، اس لیے دیا گیا جملہ ایک ناطق عدد (Rational number) ہے۔",
+       "check": [
+        "2 == R(2,1)",
         "(2-sqrt(2))*(2+sqrt(2)) == 2",
         "2**2 - sqrt(2)**2 == 2"
        ]
@@ -186,6 +393,7 @@
       "en": "The book's printed answer key says \"Irrational\" for this part. That is a misprint: the product equals 2, a rational number.",
       "ur": "کتاب کے آخر میں دیے گئے جوابات میں اس حصے کے لیے \"غیر ناطق\" لکھا ہے۔ یہ غلطی ہے: حاصل ضرب 2 ہے جو ناطق عدد ہے۔"
      },
+     "enriched": true,
      "book_key": "Irrational"
     }
    ],
@@ -921,14 +1129,39 @@
      "steps": [
       {
        "math": "(a+4)+b = a+(4+b)",
-       "en": "The grouping of the numbers changes but the sum stays the same.",
-       "ur": "اعداد کی گروہ بندی بدلی مگر مجموعہ وہی رہا۔",
+       "en": "We are given the equation $(a+4)+b = a+(4+b)$ and we need to identify the property of real numbers used here.",
+       "ur": "ہمیں مساوات $(a+4)+b = a+(4+b)$ دی گئی ہے اور ہمیں یہاں استعمال ہونے والی حقیقی اعداد کی خاصیت کی نشاندہی کرنی ہے۔",
+       "check": [
+        "(a+4)+b == a+(4+b)"
+       ]
+      },
+      {
+       "math": "(x+y)+z = x+(y+z)",
+       "en": "According to the associative property of addition, for any three real numbers $x$, $y$, and $z$, changing the grouping of the numbers does not change their sum.",
+       "ur": "جمع کی تلازمی خاصیت (associative property of addition) کے مطابق، کسی بھی تین حقیقی اعداد $x$، $y$ اور $z$ کے لیے، اعداد کی گروہ بندی تبدیل کرنے سے ان کے مجموعے پر کوئی فرق نہیں پڑتا۔",
+       "check": [
+        "(x+y)+z == x+(y+z)"
+       ]
+      },
+      {
+       "math": "(a+4)+b = a+(4+b)",
+       "en": "Comparing the given equation with the general rule by taking $x = a$, $y = 4$, and $z = b$, we see that on the left-hand side $a$ and $4$ are grouped together, while on the right-hand side $4$ and $b$ are grouped together.",
+       "ur": "دی گئی مساوات کا عمومی اصول سے موازنہ کرتے ہوئے، اگر ہم $x = a$، $y = 4$ اور $z = b$ لیں، تو ہم دیکھتے ہیں کہ بائیں جانب $a$ اور $4$ کا گروپ بنایا گیا ہے، جبکہ دائیں جانب $4$ اور $b$ کا گروپ بنایا گیا ہے۔",
+       "check": [
+        "(a+4)+b == a+(4+b)"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Therefore, the property used in the given statement is the associative property over addition.",
+       "ur": "لہٰذا، دیے گئے بیان میں استعمال ہونے والی خاصیت جمع کے لحاظ سے تلازمی خاصیت (Associative property over addition) ہے۔",
        "check": [
         "(a+4)+b == a+(4+b)"
        ]
       }
      ],
      "answer": "Associative property over addition",
+     "enriched": true,
      "book_key": "Associative property over addition"
     },
     {
@@ -937,14 +1170,41 @@
      "steps": [
       {
        "math": "\\sqrt{2}+\\sqrt{3} = \\sqrt{3}+\\sqrt{2}",
-       "en": "The order of the numbers changes but the sum stays the same.",
-       "ur": "اعداد کی ترتیب بدلی مگر مجموعہ وہی رہا۔",
+       "en": "We are given the following mathematical statement and asked to identify the property of real numbers used in it.",
+       "ur": "ہمیں مندرجہ ذیل ریاضیاتی بیان دیا گیا ہے اور اس میں استعمال ہونے والی حقیقی اعداد کی خاصیت کی نشاندہی کرنے کو کہا گیا ہے۔",
+       "check": [
+        "sqrt(2)+sqrt(3) == sqrt(3)+sqrt(2)"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Observe the two real numbers $\\sqrt{2}$ and $\\sqrt{3}$. On the left-hand side, $\\sqrt{2}$ is added to $\\sqrt{3}$. On the right-hand side, their order is reversed, so $\\sqrt{3}$ is added to $\\sqrt{2}$.",
+       "ur": "دو حقیقی اعداد $\\sqrt{2}$ اور $\\sqrt{3}$ کا مشاہدہ کریں۔ بائیں جانب $\\sqrt{2}$ کو $\\sqrt{3}$ میں جمع کیا گیا ہے۔ دائیں جانب ان کی ترتیب الٹ دی گئی ہے، یعنی $\\sqrt{3}$ کو $\\sqrt{2}$ میں جمع کیا گیا ہے۔"
+      },
+      {
+       "math": "a + b = b + a",
+       "en": "According to the properties of real numbers, changing the order of two numbers when adding them does not change their sum. For any two real numbers $a$ and $b$, this rule is written as $a + b = b + a$.",
+       "ur": "حقیقی اعداد کی خصوصیات کے مطابق، دو اعداد کو جمع کرتے وقت ان کی ترتیب بدلنے سے ان کے مجموعے پر کوئی فرق نہیں پڑتا۔ کسی بھی دو حقیقی اعداد $a$ اور $b$ کے لیے، اس اصول کو $a + b = b + a$ کے طور پر لکھا جاتا ہے۔"
+      },
+      {
+       "math": "\\sqrt{2}+\\sqrt{3} = \\sqrt{3}+\\sqrt{2}",
+       "en": "By substituting $a = \\sqrt{2}$ and $b = \\sqrt{3}$ into the general rule $a + b = b + a$, we get the exact given statement.",
+       "ur": "عمومی اصول $a + b = b + a$ میں $a = \\sqrt{2}$ اور $b = \\sqrt{3}$ درج کرنے سے ہمیں بالکل دیا گیا بیان حاصل ہوتا ہے۔",
+       "check": [
+        "sqrt(2)+sqrt(3) == sqrt(3)+sqrt(2)"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Therefore, the property used in the given equation is the **Commutative property over addition**.",
+       "ur": "لہٰذا، دی گئی مساوات میں استعمال ہونے والی خاصیت **خاصیت مبادلہ بلحاظ جمع** (Commutative property over addition) ہے۔",
        "check": [
         "sqrt(2)+sqrt(3) == sqrt(3)+sqrt(2)"
        ]
       }
      ],
      "answer": "Commutative property over addition",
+     "enriched": true,
      "book_key": "Commutative property over addition"
     },
     {
@@ -952,15 +1212,48 @@
      "prompt": "$x-x = 0$",
      "steps": [
       {
-       "math": "x-x = x+(-x) = 0",
-       "en": "A number plus its negative is 0, so -x is the additive inverse of x.",
-       "ur": "عدد اور اس کے منفی کا مجموعہ 0 ہوتا ہے، اس لیے -x عدد x کا جمعی معکوس ہے۔",
+       "math": "x - x = 0",
+       "en": "We are given the equation $x - x = 0$ and asked to name the property of real numbers used in it.",
+       "ur": "ہمیں مساوات $x - x = 0$ دی گئی ہے اور اس میں استعمال ہونے والی حقیقی اعداد کی خاصیت کا نام بتانا ہے۔",
+       "check": [
+        "x - x == 0"
+       ]
+      },
+      {
+       "math": "x - x = x + (-x)",
+       "en": "Subtraction of a number is the same as adding its negative, so we can rewrite $x - x$ as $x + (-x)$.",
+       "ur": "کسی عدد کو تفریق کرنا اس کے منفی کو جمع کرنے کے برابر ہوتا ہے، اس لیے ہم $x - x$ کو $x + (-x)$ لکھ سکتے ہیں۔",
+       "check": [
+        "x - x == x + (-x)"
+       ]
+      },
+      {
+       "math": "a + (-a) = 0",
+       "en": "Recall the Additive Inverse Property of real numbers: for any real number $a$, there exists a unique real number $-a$ (called the additive inverse of $a$) such that their sum is equal to zero (the additive identity).",
+       "ur": "حقیقی اعداد کی جمعی معکوس کی خاصیت کو یاد کریں: کسی بھی حقیقی عدد $a$ کے لیے ایک منفرد حقیقی عدد $-a$ (جسے $a$ کا جمعی معکوس کہتے ہیں) موجود ہوتا ہے، جس کو جمع کرنے سے جواب صفر (جمعی ذاتی عنصر) آتا ہے۔",
+       "check": [
+        "a + (-a) == 0"
+       ]
+      },
+      {
+       "math": "x + (-x) = 0",
+       "en": "Comparing our expression $x + (-x) = 0$ with the general rule $a + (-a) = 0$, we see that $-x$ is the additive inverse of $x$, and their sum is $0$.",
+       "ur": "اپنی مساوات $x + (-x) = 0$ کا عمومی اصول $a + (-a) = 0$ سے موازنہ کرنے پر، ہم دیکھتے ہیں کہ $-x$ عدد $x$ کا جمعی معکوس ہے، اور ان کا مجموعہ $0$ ہے۔",
+       "check": [
+        "x + (-x) == 0"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Therefore, the property used in the given statement is the Additive inverse property.",
+       "ur": "لہٰذا، دیے گئے بیان میں استعمال ہونے والی خاصیت جمعی معکوس (Additive inverse) ہے۔",
        "check": [
         "x - x == 0"
        ]
       }
      ],
      "answer": "Additive inverse",
+     "enriched": true,
      "book_key": "Additive inverse"
     },
     {
@@ -969,14 +1262,36 @@
      "steps": [
       {
        "math": "a(b+c) = ab+ac",
-       "en": "Multiplication is spread over addition from the left.",
-       "ur": "ضرب بائیں طرف سے جمع پر تقسیم ہو رہی ہے۔",
+       "en": "We are given the algebraic equation $a(b+c) = ab+ac$ and need to identify the property of real numbers used here.",
+       "ur": "ہمیں الجبری مساوات $a(b+c) = ab+ac$ دی گئی ہے اور ہمیں یہاں استعمال ہونے والی حقیقی اعداد کی خاصیت کی پہچان کرنی ہے۔",
+       "check": [
+        "a*(b+c) == a*b + a*c"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Look at the left-hand side, $a(b+c)$. Here, the real number $a$ is outside the bracket on the left and is being multiplied by the sum $(b+c)$.",
+       "ur": "بائیں طرف یعنی $a(b+c)$ کو دیکھیں۔ یہاں حقیقی عدد $a$ بریکٹ کے باہر بائیں جانب ہے اور مجموعہ $(b+c)$ سے ضرب کھا رہا ہے۔"
+      },
+      {
+       "math": "a \\times (b+c) = (a \\times b) + (a \\times c)",
+       "en": "On the right-hand side, the multiplication by $a$ is distributed over the addition of $b$ and $c$ from the left side, giving $ab + ac$.",
+       "ur": "دائیں طرف، $a$ کی ضرب کو بائیں جانب سے $b$ اور $c$ کی جمع پر تقسیم کیا گیا ہے، جس سے $ab + ac$ حاصل ہوتا ہے۔",
+       "check": [
+        "a*(b+c) == a*b + a*c"
+       ]
+      },
+      {
+       "math": "",
+       "en": "According to the properties of real numbers, when multiplication is distributed over addition from the left, it is called the Left distributive property (of multiplication over addition). Therefore, the final answer is Left distributive property.",
+       "ur": "حقیقی اعداد کی خصوصیات کے مطابق، جب ضرب کو بائیں طرف سے جمع پر تقسیم کیا جائے تو اسے بائیں تقسیمی خاصیت (Left distributive property) کہتے ہیں۔ لہٰذا، حتمی جواب Left distributive property ہے۔",
        "check": [
         "a*(b+c) == a*b + a*c"
        ]
       }
      ],
      "answer": "Left distributive property",
+     "enriched": true,
      "book_key": "Left distributive property"
     },
     {
@@ -984,15 +1299,37 @@
      "prompt": "$16+0 = 16$",
      "steps": [
       {
-       "math": "16+0 = 16",
-       "en": "Adding 0 does not change the number, so 0 is the additive identity.",
-       "ur": "0 جمع کرنے سے عدد نہیں بدلتا، اس لیے 0 جمعی محائدہ ہے۔",
+       "math": "16 + 0 = 16",
+       "en": "We are given the mathematical statement $16 + 0 = 16$ and asked to identify the property of real numbers used here.",
+       "ur": "ہمیں حسابی مساوات $16 + 0 = 16$ دی گئی ہے اور ہمیں یہاں استعمال ہونے والی حقیقی اعداد کی خاصیت کی نشاندہی کرنی ہے۔",
+       "check": [
+        "16 + 0 == 16"
+       ]
+      },
+      {
+       "math": "a + 0 = a",
+       "en": "Recall the Additive Identity property of real numbers: for any real number $a$, adding $0$ to it leaves the number unchanged, which is written as $a + 0 = a$. Here, $0$ is called the additive identity.",
+       "ur": "حقیقی اعداد کی جمعی محائدہ (Additive Identity) کی خاصیت کو یاد کریں: کسی بھی حقیقی عدد $a$ کے لیے، اس میں $0$ جمع کرنے سے وہ عدد تبدیل نہیں ہوتا، جسے $a + 0 = a$ لکھا جاتا ہے۔ یہاں $0$ کو جمعی محائدہ کہتے ہیں۔"
+      },
+      {
+       "math": "16 + 0 = 16",
+       "en": "If we substitute $a = 16$ into the general property $a + 0 = a$, we get the exact given equation $16 + 0 = 16$.",
+       "ur": "اگر ہم عمومی خاصیت $a + 0 = a$ میں $a = 16$ درج کریں، تو ہمیں عین دی گئی مساوات $16 + 0 = 16$ حاصل ہوتی ہے۔",
+       "check": [
+        "16 + 0 == 16"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Since adding $0$ to $16$ does not change its value, the property used in this statement is the Additive identity.",
+       "ur": "چونکہ $16$ میں $0$ جمع کرنے سے اس کی قیمت تبدیل نہیں ہوتی، اس لیے اس بیان میں استعمال ہونے والی خاصیت جمعی محائدہ (Additive identity) ہے۔",
        "check": [
         "16 + 0 == 16"
        ]
       }
      ],
      "answer": "Additive identity",
+     "enriched": true,
      "book_key": "Additive identity"
     },
     {
@@ -1001,14 +1338,36 @@
      "steps": [
       {
        "math": "100 \\times 1 = 100",
-       "en": "Multiplying by 1 does not change the number, so 1 is the multiplicative identity.",
-       "ur": "1 سے ضرب دینے سے عدد نہیں بدلتا، اس لیے 1 ضربی محائدہ ہے۔",
+       "en": "We are given the mathematical statement $100 \\times 1 = 100$ and asked to name the property of real numbers used here.",
+       "ur": "ہمیں حسابی بیان $100 \\times 1 = 100$ دیا گیا ہے اور پوچھا گیا ہے کہ یہاں حقیقی اعداد کی کون سی خاصیت استعمال ہوئی ہے۔",
+       "check": [
+        "100*1 == 100"
+       ]
+      },
+      {
+       "math": "a \\times 1 = a",
+       "en": "Recall the Multiplicative Identity property of real numbers, which states that for any real number $a$, multiplying it by $1$ leaves the number unchanged ($a \\times 1 = 1 \\times a = a$). Here, $1$ is called the multiplicative identity.",
+       "ur": "حقیقی اعداد کی ضربی ذاتی خاصیت (Multiplicative Identity property) کو یاد کریں، جس کے مطابق کسی بھی حقیقی عدد $a$ کو $1$ سے ضرب دینے سے اس عدد کی قیمت میں کوئی تبدیلی نہیں آتی ($a \\times 1 = 1 \\times a = a$)۔ یہاں $1$ کو ضربی ذاتی عنصر (multiplicative identity) کہا جاتا ہے۔"
+      },
+      {
+       "math": "100 \\times 1 = 100",
+       "en": "Comparing the given equation with the general rule, we see that $a = 100$ is multiplied by $1$, and the result remains $100$.",
+       "ur": "دی گئی مساوات کا عمومی اصول سے موازنہ کرنے پر، ہم دیکھتے ہیں کہ $a = 100$ کو $1$ سے ضرب دی گئی ہے، اور نتیجہ $100$ ہی رہتا ہے۔",
+       "check": [
+        "100*1 == 100"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Therefore, the property used in the given statement is the Multiplicative identity.",
+       "ur": "لہٰذا، دیے گئے بیان میں استعمال ہونے والی خاصیت ضربی ذاتی عنصر (Multiplicative identity) ہے۔",
        "check": [
         "100*1 == 100"
        ]
       }
      ],
      "answer": "Multiplicative identity",
+     "enriched": true,
      "book_key": "Multiplicative identity"
     },
     {
@@ -1017,14 +1376,39 @@
      "steps": [
       {
        "math": "4\\times(5\\times 8) = (4\\times 5)\\times 8",
-       "en": "The grouping of the numbers changes but the product stays the same.",
-       "ur": "اعداد کی گروہ بندی بدلی مگر حاصل ضرب وہی رہا۔",
+       "en": "Consider the given mathematical equation.",
+       "ur": "دی گئی ریاضی کی مساوات پر غور کریں۔",
        "check": [
+        "4*(5*8) == (4*5)*8"
+       ]
+      },
+      {
+       "math": "a\\times(b\\times c) = (a\\times b)\\times c",
+       "en": "According to the associative property under multiplication, for any real numbers $a$, $b$, and $c$, changing the grouping of the numbers does not change their product.",
+       "ur": "ضرب کی تلازمی خاصیت کے مطابق، کسی بھی حقیقی اعداد $a$، $b$ اور $c$ کے لیے، اعداد کی گروہ بندی بدلنے سے ان کا حاصل ضرب تبدیل نہیں ہوتا۔"
+      },
+      {
+       "math": "4\\times(5\\times 8) = (4\\times 5)\\times 8",
+       "en": "Comparing the given equation with the standard form, we have $a=4$, $b=5$, and $c=8$. On the left-hand side, $5$ and $8$ are grouped together, whereas on the right-hand side, $4$ and $5$ are grouped together.",
+       "ur": "دی گئی مساوات کا معیاری شکل سے موازنہ کرنے پر، ہمارے پاس $a=4$، $b=5$ اور $c=8$ ہیں۔ بائیں طرف $5$ اور $8$ کا گروپ ہے، جبکہ دائیں طرف $4$ اور $5$ کا گروپ ہے۔",
+       "check": [
+        "4*(5*8) == (4*5)*8"
+       ]
+      },
+      {
+       "math": "4\\times 40 = 20\\times 8 \\implies 160 = 160",
+       "en": "Even though the grouping of the numbers is changed, the product remains the same on both sides. Therefore, the property used here is the associative property under multiplication.",
+       "ur": "اگرچہ اعداد کی گروہ بندی بدل گئی ہے، لیکن دونوں طرف حاصل ضرب ایک جیسا رہتا ہے۔ لہٰذا، یہاں استعمال ہونے والی خاصیت ضرب کی تلازمی خاصیت ہے۔",
+       "check": [
+        "4*40 == 20*8",
+        "4*40 == 160",
+        "20*8 == 160",
         "4*(5*8) == (4*5)*8"
        ]
       }
      ],
      "answer": "Associative property under multiplication",
+     "enriched": true,
      "book_key": "Associative property under multiplication"
     },
     {
@@ -1033,14 +1417,36 @@
      "steps": [
       {
        "math": "ab = ba",
-       "en": "The order of the numbers changes but the product stays the same.",
-       "ur": "اعداد کی ترتیب بدلی مگر حاصل ضرب وہی رہا۔",
+       "en": "We are given the mathematical statement $ab = ba$ and asked to identify the property of real numbers used here.",
+       "ur": "ہمیں ریاضیاتی مساوات $ab = ba$ دی گئی ہے اور ہم سے پوچھا گیا ہے کہ یہاں حقیقی اعداد کی کون سی خاصیت استعمال ہوئی ہے۔",
+       "check": [
+        "a*b == b*a"
+       ]
+      },
+      {
+       "math": "a \\times b = b \\times a",
+       "en": "Notice that on the left side, $a$ is multiplied by $b$, while on the right side, the order is reversed so that $b$ is multiplied by $a$.",
+       "ur": "غور کریں کہ بائیں جانب $a$ کو $b$ سے ضرب دی گئی ہے، جبکہ دائیں جانب ترتیب الٹ دی گئی ہے یعنی $b$ کو $a$ سے ضرب دی گئی ہے۔",
+       "check": [
+        "a*b == b*a"
+       ]
+      },
+      {
+       "math": "",
+       "en": "According to the properties of real numbers, when the order of two numbers being multiplied is changed, the product remains the same.",
+       "ur": "حقیقی اعداد کی خصوصیات کے مطابق، جب ضرب ہونے والے دو اعداد کی ترتیب بدل دی جائے تو ان کا حاصل ضرب وہی رہتا ہے۔"
+      },
+      {
+       "math": "",
+       "en": "Therefore, the property used in the given statement is the Commutative property under multiplication.",
+       "ur": "لہٰذا، دی گئی مساوات میں استعمال ہونے والی خاصیت 'باللحاظ ضرب خاصیت مبادلہ' (Commutative property under multiplication) ہے۔",
        "check": [
         "a*b == b*a"
        ]
       }
      ],
      "answer": "Commutative property under multiplication",
+     "enriched": true,
      "book_key": "Commutative property under multiplication"
     }
    ],
@@ -1058,9 +1464,33 @@
      "prompt": "$-3 < -1 \\Rightarrow 0 < 2$",
      "steps": [
       {
-       "math": "-3 < -1 \\;\\Rightarrow\\; -3+3 < -1+3 \\;\\Rightarrow\\; 0 < 2",
-       "en": "The same number (3) is added to both sides and the direction of the inequality stays the same.",
-       "ur": "دونوں طرف ایک ہی عدد (3) جمع کیا گیا اور عدم مساوات کی سمت وہی رہی۔",
+       "math": "-3 < -1 \\;\\Rightarrow\\; 0 < 2",
+       "en": "We are given the inequality statement $-3 < -1 \\Rightarrow 0 < 2$ and asked to name the property of real numbers used here.",
+       "ur": "ہمیں عدم مساوات کا بیان $-3 < -1 \\Rightarrow 0 < 2$ دیا گیا ہے اور ہمیں یہاں استعمال ہونے والی حقیقی اعداد کی خاصیت کا نام بتانا ہے۔"
+      },
+      {
+       "math": "-3 + 3 < -1 + 3",
+       "en": "Observe the first inequality $-3 < -1$. If we add the same real number $3$ to both sides of the inequality, we get $-3 + 3 < -1 + 3$.",
+       "ur": "پہلی عدم مساوات $-3 < -1$ کا مشاہدہ کریں۔ اگر ہم اس کے دونوں اطراف میں ایک ہی حقیقی عدد $3$ جمع کریں تو ہمیں $-3 + 3 < -1 + 3$ حاصل ہوتا ہے۔"
+      },
+      {
+       "math": "-3 + 3 = 0, \\quad -1 + 3 = 2",
+       "en": "Simplifying both sides of the inequality gives $0$ on the left-hand side and $2$ on the right-hand side, which results in $0 < 2$.",
+       "ur": "عدم مساوات کے دونوں اطراف کو حل کرنے سے بائیں طرف $0$ اور دائیں طرف $2$ آتا ہے، جس سے $0 < 2$ بنتا ہے۔",
+       "check": [
+        "-3 + 3 == 0",
+        "-1 + 3 == 2"
+       ]
+      },
+      {
+       "math": "\\forall a, b, c \\in \\mathbb{R}, \\quad a < b \\;\\Rightarrow\\; a + c < b + c",
+       "en": "According to the additive property of inequalities, adding the same number to both sides of an inequality does not change its direction.",
+       "ur": "عدم مساوات کی جمعی خاصیت کے مطابق، کسی عدم مساوات کے دونوں اطراف میں ایک ہی عدد جمع کرنے سے اس کی سمت نہیں بدلتی۔"
+      },
+      {
+       "math": "",
+       "en": "Here $a = -3$, $b = -1$, and $c = 3$. Therefore, the property used is the Additive property.",
+       "ur": "یہاں $a = -3$، $b = -1$، اور $c = 3$ ہے۔ لہٰذا، یہاں استعمال ہونے والی خاصیت جمعی خاصیت (Additive property) ہے۔",
        "check": [
         "-3+3 == 0",
         "-1+3 == 2"
@@ -1068,6 +1498,7 @@
       }
      ],
      "answer": "Additive property",
+     "enriched": true,
      "book_key": "Additive property"
     },
     {
@@ -1076,14 +1507,38 @@
      "steps": [
       {
        "math": "a < b \\;\\Rightarrow\\; \\frac{1}{a} > \\frac{1}{b}",
-       "en": "Taking reciprocals of two numbers with the same sign reverses the inequality. For example 2 < 3 but 1/2 > 1/3.",
-       "ur": "ایک ہی علامت والے دو اعداد کے مقلوب لینے سے عدم مساوات الٹ جاتی ہے۔ مثلاً 2 < 3 مگر 1/2 > 1/3۔",
+       "en": "We are given a conditional statement about an inequality and need to identify the mathematical property being used.",
+       "ur": "ہمیں عدم مساوات کے بارے میں ایک مشروط بیان دیا گیا ہے اور ہمیں استعمال ہونے والی ریاضیاتی خاصیت کی نشاندہی کرنی ہے۔"
+      },
+      {
+       "math": "a \\text{ and } \\frac{1}{a}, \\quad b \\text{ and } \\frac{1}{b}",
+       "en": "Observe the two sides of the statement. In the first part, we have the numbers $a$ and $b$. In the second part, these numbers are inverted to their multiplicative inverses (reciprocals), $\\frac{1}{a}$ and $\\frac{1}{b}$.",
+       "ur": "بیان کے دونوں حصوں کا مشاہدہ کریں۔ پہلے حصے میں ہمارے پاس اعداد $a$ اور $b$ ہیں۔ دوسرے حصے میں، ان اعداد کو ان کے ضربی معکوس (مقلوب) یعنی $\\frac{1}{a}$ اور $\\frac{1}{b}$ میں بدل دیا گیا ہے۔"
+      },
+      {
+       "math": "< \\;\\text{ changes to }\\; >",
+       "en": "Notice that when we take the reciprocals of both sides (assuming $a$ and $b$ have the same sign), the direction of the inequality sign reverses from less than ($<$) to greater than ($>$).",
+       "ur": "غور کریں کہ جب ہم دونوں اطراف کا مقلوب لیتے ہیں (فرض کریں کہ $a$ اور $b$ کی علامت ایک جیسی ہے)، تو عدم مساوات کی علامت کی سمت چھوٹے ($<$) سے بڑے ($>$) میں الٹ جاتی ہے۔"
+      },
+      {
+       "math": "2 < 3 \\;\\Rightarrow\\; \\frac{1}{2} > \\frac{1}{3}",
+       "en": "For example, let $a = 2$ and $b = 3$. We know that $2 < 3$, and taking their reciprocals gives $\\frac{1}{2} > \\frac{1}{3}$ (since $0.5 > 0.333...$).",
+       "ur": "مثال کے طور پر، فرض کریں $a = 2$ اور $b = 3$ ہے۔ ہم جانتے ہیں کہ $2 < 3$ ہے، اور ان کا مقلوب لینے سے $\\frac{1}{2} > \\frac{1}{3}$ حاصل ہوتا ہے (کیونکہ $0.5 > 0.333...$ ہے)۔",
+       "check": [
+        "R(1,2) > R(1,3)"
+       ]
+      },
+      {
+       "math": "",
+       "en": "This rule of inequalities, where taking the reciprocal reverses the inequality symbol, is called the Reciprocal property.",
+       "ur": "عدم مساوات کا یہ اصول، جہاں مقلوب لینے سے عدم مساوات کی علامت الٹ جاتی ہے، معکوس خاصیت (Reciprocal property) کہلاتا ہے۔",
        "check": [
         "Rational(1,2) > Rational(1,3)"
        ]
       }
      ],
      "answer": "Reciprocal property",
+     "enriched": true,
      "book_key": "Reciprocal property"
     },
     {
@@ -1091,15 +1546,31 @@
      "prompt": "If $a < b$ then $a+c < b+c$",
      "steps": [
       {
-       "math": "a < b \\;\\Rightarrow\\; a+c < b+c",
-       "en": "The same number c is added to both sides, so the inequality keeps its direction. For example 1 < 2 gives 1+5 < 2+5.",
-       "ur": "دونوں طرف ایک ہی عدد c جمع کیا گیا، اس لیے عدم مساوات کی سمت وہی رہتی ہے۔ مثلاً 1 < 2 سے 1+5 < 2+5۔",
+       "math": "a < b \\Rightarrow a+c < b+c",
+       "en": "We are given the inequality statement: if $a < b$, then $a+c < b+c$, and we need to name the property of real numbers used here.",
+       "ur": "ہمیں عدم مساوات کا یہ بیان دیا گیا ہے: اگر $a < b$ ہو، تو $a+c < b+c$ ہوتا ہے، اور ہمیں یہاں استعمال ہونے والی حقیقی اعداد کی خاصیت کا نام بتانا ہے۔"
+      },
+      {
+       "math": "a+c < b+c",
+       "en": "Observe that the same real number $c$ is added to both sides of the original inequality $a < b$, and the direction of the inequality sign ($<$) remains unchanged.",
+       "ur": "غور کریں کہ اصل عدم مساوات $a < b$ کے دونوں اطراف میں ایک ہی حقیقی عدد $c$ جمع کیا گیا ہے، اور عدم مساوات کی علامت ($<$) کی سمت تبدیل نہیں ہوئی۔"
+      },
+      {
+       "math": "\\forall a, b, c \\in \\mathbb{R}, \\quad a < b \\Rightarrow a+c < b+c",
+       "en": "According to the properties of inequalities of real numbers, adding the same number to both sides of an inequality preserves the inequality. This rule is called the Additive property.",
+       "ur": "حقیقی اعداد کی عدم مساوات کی خصوصیات کے مطابق، کسی عدم مساوات کے دونوں اطراف میں ایک ہی عدد جمع کرنے سے عدم مساوات برقرار رہتی ہے۔ اس اصول کو جمعی خاصیت (Additive property) کہتے ہیں۔"
+      },
+      {
+       "math": "",
+       "en": "Therefore, the property used in the given statement is the Additive property.",
+       "ur": "لہٰذا، دیے گئے بیان میں استعمال ہونے والی خاصیت جمعی خاصیت (Additive property) ہے۔",
        "check": [
         "1+5 < 2+5"
        ]
       }
      ],
      "answer": "Additive property",
+     "enriched": true,
      "book_key": "Additive property"
     },
     {
@@ -1107,9 +1578,33 @@
      "prompt": "If $ac < bc$ and $c > 0$ then $a < b$",
      "steps": [
       {
-       "math": "ac < bc,\\ c > 0 \\;\\Rightarrow\\; a < b",
-       "en": "Both sides are multiplied by 1/c, which is positive, so the direction does not change. For example 2·3 < 5·3 gives 2 < 5.",
-       "ur": "دونوں طرف 1/c سے ضرب دی گئی جو مثبت ہے، اس لیے سمت نہیں بدلتی۔ مثلاً 2·3 < 5·3 سے 2 < 5۔",
+       "math": "ac < bc, \\quad c > 0",
+       "en": "We are given the inequality $ac < bc$ where $c$ is a positive real number ($c > 0$), and we need to name the property that leads to $a < b$.",
+       "ur": "ہمیں غیر مساوات $ac < bc$ دی گئی ہے جہاں $c$ ایک مثبت حقیقی عدد ہے ($c > 0$)، اور ہمیں اس خاصیت کا نام بتانا ہے جس سے $a < b$ حاصل ہوتا ہے۔"
+      },
+      {
+       "math": "c > 0 \\;\\Rightarrow\\; \\frac{1}{c} > 0",
+       "en": "Since $c$ is positive, its multiplicative inverse $\\frac{1}{c}$ is also a positive real number.",
+       "ur": "چونکہ $c$ مثبت ہے، اس لیے اس کا ضربی معکوس $\\frac{1}{c}$ بھی ایک مثبت حقیقی عدد ہے۔"
+      },
+      {
+       "math": "(ac) \\cdot \\frac{1}{c} < (bc) \\cdot \\frac{1}{c}",
+       "en": "According to the multiplicative property of inequality, when we multiply both sides of an inequality by a positive number ($\\frac{1}{c} > 0$), the direction of the inequality sign does not change.",
+       "ur": "غیر مساوات کی ضربی خاصیت کے مطابق، جب ہم کسی غیر مساوات کے دونوں اطراف کو ایک مثبت عدد ($\\frac{1}{c} > 0$) سے ضرب دیتے ہیں، تو غیر مساوات کی علامت کا رخ تبدیل نہیں ہوتا۔"
+      },
+      {
+       "math": "a < b",
+       "en": "Cancelling $c$ with $\\frac{1}{c}$ on both sides simplifies the inequality to $a < b$. For example, if $2 \\cdot 3 < 5 \\cdot 3$ (where $c = 3 > 0$), multiplying both sides by $\\frac{1}{3}$ gives $2 < 5$.",
+       "ur": "دونوں اطراف میں $c$ کو $\\frac{1}{c}$ سے منسوخ کرنے پر غیر مساوات مختصر ہو کر $a < b$ رہ جاتی ہے۔ مثال کے طور پر، اگر $2 \\cdot 3 < 5 \\cdot 3$ ہو (جہاں $c = 3 > 0$)، تو دونوں اطراف کو $\\frac{1}{3}$ سے ضرب دینے سے $2 < 5$ حاصل ہوتا ہے۔",
+       "check": [
+        "2*3 < 5*3",
+        "2 < 5"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Therefore, the property used in this statement is the Multiplicative property.",
+       "ur": "لہٰذا، اس بیان میں استعمال ہونے والی خاصیت ضربی خاصیت (Multiplicative property) ہے۔",
        "check": [
         "2*3 < 5*3",
         "2 < 5"
@@ -1117,6 +1612,7 @@
       }
      ],
      "answer": "Multiplicative property",
+     "enriched": true,
      "book_key": "Multiplicative property"
     },
     {
@@ -1124,9 +1620,44 @@
      "prompt": "If $ac < bc$ and $c < 0$ then $a > b$",
      "steps": [
       {
-       "math": "ac < bc,\\ c < 0 \\;\\Rightarrow\\; a > b",
-       "en": "Both sides are multiplied by 1/c, which is negative, so the inequality is reversed. For example 5(-2) < 2(-2) gives 5 > 2.",
-       "ur": "دونوں طرف 1/c سے ضرب دی گئی جو منفی ہے، اس لیے عدم مساوات الٹ جاتی ہے۔ مثلاً 5(-2) < 2(-2) سے 5 > 2۔",
+       "math": "ac < bc \\quad \\text{and} \\quad c < 0 \\;\\Rightarrow\\; a > b",
+       "en": "We are given the inequality $ac < bc$ where $c$ is a negative real number ($c < 0$), which implies $a > b$. We need to identify the property of real numbers used here.",
+       "ur": "ہمیں عدم مساوات $ac < bc$ دی گئی ہے جہاں $c$ ایک منفی حقیقی عدد ہے ($c < 0$)، جس سے نتیجہ نکلتا ہے کہ $a > b$۔ ہمیں یہاں استعمال ہونے والی حقیقی اعداد کی خاصیت کا نام بتانا ہے۔"
+      },
+      {
+       "math": "c < 0 \\;\\Rightarrow\\; \\frac{1}{c} < 0",
+       "en": "Since $c$ is a negative number ($c < 0$), its multiplicative inverse (reciprocal) $\\frac{1}{c}$ is also a negative number.",
+       "ur": "چونکہ $c$ ایک منفی عدد ہے ($c < 0$)، اس لیے اس کا ضربی معکوس $\\frac{1}{c}$ بھی ایک منفی عدد ہے۔"
+      },
+      {
+       "math": "(ac) \\cdot \\frac{1}{c} > (bc) \\cdot \\frac{1}{c} \\;\\Rightarrow\\; a > b",
+       "en": "To isolate $a$ and $b$, we multiply both sides of $ac < bc$ by the negative number $\\frac{1}{c}$ (which is the same as dividing by $c$). According to the rules of inequalities, multiplying or dividing both sides by a negative number reverses the inequality sign from $<$ to $>$.",
+       "ur": "$a$ اور $b$ کو الگ کرنے کے لیے، ہم $ac < bc$ کے دونوں اطراف کو منفی عدد $\\frac{1}{c}$ سے ضرب دیتے ہیں (جو کہ $c$ سے تقسیم کرنے کے برابر ہے)۔ عدم مساوات کے اصولوں کے مطابق، دونوں اطراف کو منفی عدد سے ضرب یا تقسیم کرنے سے عدم مساوات کی علامت $<$ سے الٹ کر $>$ ہو جاتی ہے۔"
+      },
+      {
+       "math": "5(-2) < 2(-2) \\;\\Rightarrow\\; -10 < -4",
+       "en": "For example, let $a = 5$, $b = 2$, and $c = -2$. Then $ac < bc$ gives $-10 < -4$, which is true.",
+       "ur": "مثال کے طور پر، فرض کریں $a = 5$، $b = 2$، اور $c = -2$۔ تب $ac < bc$ سے ہمیں $-10 < -4$ ملتا ہے، جو کہ درست ہے۔",
+       "check": [
+        "5*(-2) == -10",
+        "2*(-2) == -4",
+        "-10 < -4"
+       ]
+      },
+      {
+       "math": "(-10)\\left(-\\frac{1}{2}\\right) > (-4)\\left(-\\frac{1}{2}\\right) \\;\\Rightarrow\\; 5 > 2",
+       "en": "Multiplying both sides by $\\frac{1}{c} = -\\frac{1}{2}$ reverses the inequality and gives $5 > 2$, which is also true.",
+       "ur": "دونوں اطراف کو $\\frac{1}{c} = -\\frac{1}{2}$ سے ضرب دینے سے عدم مساوات الٹ جاتی ہے اور $5 > 2$ حاصل ہوتا ہے، جو کہ درست ہے۔",
+       "check": [
+        "(-10)*(-R(1,2)) == 5",
+        "(-4)*(-R(1,2)) == 2",
+        "5 > 2"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Therefore, the property used in this statement is the **Multiplicative property** (of inequality).",
+       "ur": "لہٰذا، اس بیان میں استعمال ہونے والی خاصیت (عدم مساوات کی) **ضربی خاصیت** (Multiplicative property) ہے۔",
        "check": [
         "5*(-2) < 2*(-2)",
         "5 > 2"
@@ -1134,6 +1665,7 @@
       }
      ],
      "answer": "Multiplicative property",
+     "enriched": true,
      "book_key": "Multiplicative property"
     },
     {
@@ -1142,14 +1674,33 @@
      "steps": [
       {
        "math": "a > b \\ \\text{or} \\ a = b \\ \\text{or} \\ a < b",
-       "en": "For any two real numbers exactly one of the three relations is true. For example, for 1/3 and 1/2 it is 1/3 < 1/2.",
-       "ur": "کسی بھی دو حقیقی اعداد کے لیے تین رشتوں میں سے ایک اور صرف ایک درست ہوتا ہے۔ مثلاً 1/3 اور 1/2 کے لیے 1/3 < 1/2۔",
+       "en": "We are given the statement that for any two real numbers $a$ and $b$, either $a > b$, or $a = b$, or $a < b$. We need to name the property of real numbers used here.",
+       "ur": "ہمیں یہ بیان دیا گیا ہے کہ کسی بھی دو حقیقی اعداد $a$ اور $b$ کے لیے، یا تو $a > b$ ہے، یا $a = b$ ہے، یا $a < b$ ہے۔ ہمیں یہاں استعمال ہونے والی حقیقی اعداد کی خاصیت کا نام بتانا ہے۔"
+      },
+      {
+       "math": "",
+       "en": "According to the properties of inequalities of real numbers, when we compare any two real numbers $a$ and $b$, there are only three possibilities: the first number is greater than the second, they are equal, or the first number is less than the second. Exactly one of these three relations holds true at a time.",
+       "ur": "حقیقی اعداد کی عدم مساوات کی خصوصیات کے مطابق، جب ہم کسی بھی دو حقیقی اعداد $a$ اور $b$ کا موازنہ کرتے ہیں، تو صرف تین امکانات ہوتے ہیں: پہلا عدد دوسرے سے بڑا ہے، وہ برابر ہیں، یا پہلا عدد دوسرے سے چھوٹا ہے۔ ایک وقت میں ان تین رشتوں میں سے صرف ایک ہی درست ہوتا ہے۔"
+      },
+      {
+       "math": "\\frac{1}{3} < \\frac{1}{2}",
+       "en": "For example, if we take two real numbers $\\frac{1}{3}$ and $\\frac{1}{2}$, only the third relation $\\frac{1}{3} < \\frac{1}{2}$ is true, while $\\frac{1}{3} > \\frac{1}{2}$ and $\\frac{1}{3} = \\frac{1}{2}$ are false.",
+       "ur": "مثال کے طور پر، اگر ہم دو حقیقی اعداد $\\frac{1}{3}$ اور $\\frac{1}{2}$ لیں، تو صرف تیسرا رشتہ $\\frac{1}{3} < \\frac{1}{2}$ درست ہے، جبکہ $\\frac{1}{3} > \\frac{1}{2}$ اور $\\frac{1}{3} = \\frac{1}{2}$ غلط ہیں۔",
+       "check": [
+        "R(1,3) < R(1,2)"
+       ]
+      },
+      {
+       "math": "\\text{Trichotomy property}",
+       "en": "This fundamental rule of dividing the comparison of two real numbers into three mutually exclusive possibilities is called the Trichotomy property.",
+       "ur": "دو حقیقی اعداد کے موازنے کو تین باہمی طور پر مختلف امکانات میں تقسیم کرنے کے اس بنیادی اصول کو خاصیتِ تثلیث (Trichotomy property) کہتے ہیں۔",
        "check": [
         "Rational(1,3) < Rational(1,2)"
        ]
       }
      ],
      "answer": "Trichotomy property",
+     "enriched": true,
      "book_key": "Trichotomy property"
     }
    ],

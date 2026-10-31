@@ -1,0 +1,57 @@
+{
+ "item": "c10-ex7.3-q11",
+ "label": "",
+ "answer_ref": "$376.4$ m",
+ "steps": [
+  {
+   "math": "",
+   "en": "Let the height of the cliff be $h = 80$ m and the distance of the ship from the base of the cliff be $d$. The angle of depression is $12^\\circ$.",
+   "ur": "فرض کریں کہ چٹان کی بلندی $h = 80$ میٹر ہے اور چٹان کی بنیاد سے بحری جہاز کا فاصلہ $d$ ہے۔ زاویہ نشیب $12^\\circ$ ہے۔"
+  },
+  {
+   "math": "",
+   "en": "Since the horizontal line of sight is parallel to the sea level, the angle of elevation $\\theta$ from the ship to the lighthouse is equal to the angle of depression (alternate interior angles), so $\\theta = 12^\\circ$.",
+   "ur": "چونکہ نظر کی افقی لائن سطح سمندر کے متوازی ہے، اس لیے جہاز سے لائٹ ہاؤس کا زاویہ ارتفاع $\\theta$ زاویہ نشیب کے برابر ہے (متبادل اندرونی زاویے)، لہذا $\\theta = 12^\\circ$ ہے۔"
+  },
+  {
+   "math": "\\tan \\theta = \\frac{\\text{Opposite}}{\\text{Adjacent}}",
+   "en": "In the right-angled triangle formed by the cliff, the sea level, and the line of sight, we apply the tangent ratio.",
+   "ur": "چٹان، سطح سمندر اور نظر کی لائن سے بننے والیقائم الزاویہ مثلث میں، ہم ٹینجنٹ (tangent) کی نسبت استعمال کرتے ہیں۔"
+  },
+  {
+   "math": "\\tan 12^\\circ = \\frac{80}{d}",
+   "en": "Substitute the given height $80$ m as the opposite side, $d$ as the adjacent side, and the angle $\\theta = 12^\\circ$.",
+   "ur": "دی گئی بلندی $80$ میٹر کو عمود، $d$ کو قاعدہ، اور زاویہ $\\theta = 12^\\circ$ درج کریں۔",
+   "check": [
+    "tan(12*pi/180) == 80 / (80/tan(12*pi/180))"
+   ]
+  },
+  {
+   "math": "d = \\frac{80}{\\tan 12^\\circ}",
+   "en": "Rearrange the equation to solve for the distance $d$.",
+   "ur": "فاصلہ $d$ معلوم کرنے کے لیے مساوات کو ترتیب دیں۔",
+   "check": [
+    "80/tan(12*pi/180) == 80/tan(12*pi/180)"
+   ]
+  },
+  {
+   "math": "d \\approx \\frac{80}{0.2126}",
+   "en": "Substitute the value $\\tan 12^\\circ \\approx 0.2126$ using a scientific calculator.",
+   "ur": "سائنسی کیلکولیٹر کا استعمال کرتے ہوئے $\\tan 12^\\circ \\approx 0.2126$ کی قیمت درج کریں۔",
+   "check": [
+    "Abs(tan(12*pi/180) - 0.2126) <= 0.0001"
+   ]
+  },
+  {
+   "math": "d \\approx 376.4\\ \\text{m}",
+   "en": "Divide $80$ by $0.2126$ to get the final distance. Thus, the ship is $376.4$ m away from the base of the cliff.",
+   "ur": "حتمی فاصلہ حاصل کرنے کے لیے $80$ کو $0.2126$ پر تقسیم کریں۔ اس طرح، جہاز چٹان کی بنیاد سے $376.4$ میٹر دور ہے۔",
+   "check": [
+    "Abs((80/tan(12*pi/180)) - 376.4) <= 0.050000001",
+    "Abs((80/tan((12)*pi/180)) - 376.4) <= 0.050000001"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

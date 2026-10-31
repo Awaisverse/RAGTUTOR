@@ -1,0 +1,39 @@
+{
+ "item": "c10-ex9.1-q8",
+ "label": "",
+ "answer_ref": "$12.5$ cm",
+ "steps": [
+  {
+   "math": "R = 15\\ \\text{cm}, \\quad r = 2.5\\ \\text{cm}",
+   "en": "Let $R$ be the radius of the larger circle (satellite dish) and $r$ be the radius of the smaller circle (sensor). We need to find the distance $d$ between their centres.",
+   "ur": "فرض کریں کہ $R$ بڑے دائرے (سیٹلائٹ ڈش) کا رداس ہے اور $r$ چھوٹے دائرے (سینسر) کا رداس ہے۔ ہمیں ان کے مراکز کے درمیان فاصلہ $d$ معلوم کرنا ہے۔",
+   "check": [
+    "15 == 15",
+    "R(5,2) == R(5,2)"
+   ]
+  },
+  {
+   "math": "d = R - r",
+   "en": "According to the theorem of circles, if two circles touch each other internally, the distance between their centres is equal to the difference of their radii.",
+   "ur": "دائروں کے مسئلے کے مطابق، اگر دو دائرے ایک دوسرے کو اندرونی طور پر مس کریں، تو ان کے مراکز کا درمیانی فاصلہ ان کے رداسوں کے فرق کے برابر ہوتا ہے۔"
+  },
+  {
+   "math": "d = 15 - 2.5 = 12.5\\ \\text{cm}",
+   "en": "Substitute the given values of $R = 15\\text{ cm}$ and $r = 2.5\\text{ cm}$ into the formula and subtract.",
+   "ur": "فارمولے میں دی گئی قیمتیں $R = 15\\text{ cm}$ اور $r = 2.5\\text{ cm}$ درج کریں اور تفریق کریں۔",
+   "check": [
+    "15 - R(5,2) == R(25,2)"
+   ]
+  },
+  {
+   "math": "",
+   "en": "Thus, the distance between the centres of the satellite dish and the sensor is $12.5\\text{ cm}$.",
+   "ur": "پس، سیٹلائٹ ڈش اور سینسر کے مراکز کے درمیان فاصلہ $12.5\\text{ cm}$ ہے۔",
+   "check": [
+    "15 - R(5,2) == R(25,2)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

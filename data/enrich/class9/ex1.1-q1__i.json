@@ -1,0 +1,35 @@
+{
+ "item": "ex1.1-q1",
+ "label": "i",
+ "answer_ref": "Rational",
+ "steps": [
+  {
+   "math": "2.353535",
+   "en": "We are given the decimal number $2.353535$ and asked to identify whether it is a rational or an irrational number.",
+   "ur": "ہمیں اعشاری عدد $2.353535$ دیا گیا ہے اور یہ بتانا ہے کہ آیا یہ ناطق عدد ہے یا غیر ناطق عدد۔"
+  },
+  {
+   "math": "",
+   "en": "Look at the digits after the decimal point. There are no dots ($\\ldots$) at the end, and there are exactly $6$ digits ($353535$) after the decimal point. Since the number of digits is finite, it is a terminating decimal fraction.",
+   "ur": "اعشاریہ کے بعد والے ہندسوں کو دیکھیں۔ آخر میں کوئی نقطے ($\\ldots$) نہیں ہیں، اور اعشاریہ کے بعد ٹھیک $6$ ہندسے ($353535$) موجود ہیں۔ چونکہ ہندسوں کی تعداد محدود ہے، اس لیے یہ ایک مختتم اعشاری کسر (terminating decimal fraction) ہے۔"
+  },
+  {
+   "math": "2.353535 = \\frac{2353535}{1000000}",
+   "en": "By rule, every terminating decimal can be expressed in the form $\\frac{p}{q}$ where $p, q \\in \\mathbb{Z}$ and $q \\neq 0$. Removing the decimal point gives:",
+   "ur": "اصول کے مطابق، ہر مختتم اعشاری کسر کو $\\frac{p}{q}$ کی شکل میں لکھا جا سکتا ہے جہاں $p, q \\in \\mathbb{Z}$ اور $q \\neq 0$ ہو۔ اعشاریہ ہٹانے سے ہمیں ملتا ہے:",
+   "check": [
+    "Rational('2.353535') == R(2353535, 1000000)"
+   ]
+  },
+  {
+   "math": "",
+   "en": "Since $2.353535$ is a terminating decimal and can be written in the form $\\frac{p}{q}$, it is a rational number.",
+   "ur": "چونکہ $2.353535$ ایک مختتم اعشاری عدد ہے اور اسے $\\frac{p}{q}$ کی شکل میں لکھا جا سکتا ہے، اس لیے یہ ایک ناطق عدد (Rational number) ہے۔",
+   "check": [
+    "Rational('2.353535') == Rational(2353535, 1000000)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

@@ -1,0 +1,43 @@
+{
+ "item": "c10-rev6-q10",
+ "label": "",
+ "answer_ref": "$200\\underline{i} + 60\\underline{j}$, magnitude $\\approx 208.8$ km/h",
+ "steps": [
+  {
+   "math": "\\underline{v}_a = 200\\underline{i}, \\quad \\underline{v}_w = 60\\underline{j}",
+   "en": "Let the unit vector due east be $\\underline{i}$ and due north be $\\underline{j}$. Express the given velocity of the aircraft $\\underline{v}_a$ and the velocity of the wind $\\underline{v}_w$ in vector form.",
+   "ur": "فرض کریں کہ مشرق کی طرف اکائی ویکٹر $\\underline{i}$ اور شمال کی طرف اکائی ویکٹر $\\underline{j}$ ہے۔ جہاز کی دی گئی رفتار $\\underline{v}_a$ اور ہوا کی رفتار $\\underline{v}_w$ کو ویکٹر کی شکل میں لکھیں۔"
+  },
+  {
+   "math": "\\underline{v} = \\underline{v}_a + \\underline{v}_w = 200\\underline{i} + 60\\underline{j}",
+   "en": "The resultant velocity $\\underline{v}$ is the vector sum of the aircraft's velocity and the wind's velocity.",
+   "ur": "محصلہ رفتار $\\underline{v}$ جہاز کی رفتار اور ہوا کی رفتار کا ویکٹر مجموعہ ہے۔"
+  },
+  {
+   "math": "|\\underline{v}| = \\sqrt{x^2 + y^2} = \\sqrt{200^2 + 60^2}",
+   "en": "Now, use the magnitude formula for a vector $x\\underline{i} + y\\underline{j}$ and substitute $x = 200$ and $y = 60$.",
+   "ur": "اب، ویکٹر $x\\underline{i} + y\\underline{j}$ کی مقدار کا فارمولا استعمال کریں اور $x = 200$ اور $y = 60$ درج کریں۔"
+  },
+  {
+   "math": "|\\underline{v}| = \\sqrt{40000 + 3600} = \\sqrt{43600}",
+   "en": "Evaluate the squares and add them together.",
+   "ur": "مربع حل کریں اور انہیں آپس میں جمع کریں۔",
+   "check": [
+    "200**2 == 40000",
+    "60**2 == 3600",
+    "40000 + 3600 == 43600"
+   ]
+  },
+  {
+   "math": "|\\underline{v}| \\approx 208.8 \\text{ km/h}",
+   "en": "Take the square root to find the magnitude of the resultant velocity.",
+   "ur": "محصلہ رفتار کی مقدار معلوم کرنے کے لیے جذر لیں۔",
+   "check": [
+    "Abs(sqrt(43600) - 208.8) < 0.01",
+    "200**2 + 60**2 == 43600"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

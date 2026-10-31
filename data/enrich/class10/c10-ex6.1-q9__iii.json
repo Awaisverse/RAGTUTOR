@@ -1,0 +1,48 @@
+{
+ "item": "c10-ex6.1-q9",
+ "label": "iii",
+ "answer_ref": "not parallel",
+ "steps": [
+  {
+   "math": "\\underline{a} = 5\\underline{i} - 4\\underline{j}, \\quad \\underline{b} = 6\\underline{i} - 3\\underline{j}",
+   "en": "Write down the given vectors $\\underline{a}$ and $\\underline{b}$. We need to check whether they are parallel.",
+   "ur": "دیے گئے ویکٹرز $\\underline{a}$ اور $\\underline{b}$ لکھیں۔ ہمیں یہ معلوم کرنا ہے کہ آیا یہ آپس میں متوازی ہیں۔"
+  },
+  {
+   "math": "\\frac{b_x}{a_x} = \\frac{b_y}{a_y}",
+   "en": "Recall the rule: two non-zero vectors $\\underline{a} = a_x\\underline{i} + a_y\\underline{j}$ and $\\underline{b} = b_x\\underline{i} + b_y\\underline{j}$ are parallel if the ratios of their corresponding components are equal.",
+   "ur": "قاعدہ یاد کریں: دو غیر صفری ویکٹرز $\\underline{a} = a_x\\underline{i} + a_y\\underline{j}$ اور $\\underline{b} = b_x\\underline{i} + b_y\\underline{j}$ متوازی ہوتے ہیں اگر ان کے متناظرہ اجزاء کی نسبتیں برابر ہوں۔"
+  },
+  {
+   "math": "a_x = 5, \\quad a_y = -4, \\quad b_x = 6, \\quad b_y = -3",
+   "en": "Identify the $\\underline{i}$ and $\\underline{j}$ components of both vectors.",
+   "ur": "دونوں ویکٹرز کے $\\underline{i}$ اور $\\underline{j}$ اجزاء کی شناخت کریں۔"
+  },
+  {
+   "math": "\\frac{b_x}{a_x} = \\frac{6}{5}",
+   "en": "Find the ratio of the $\\underline{i}$-components.",
+   "ur": "$\\underline{i}$ اجزاء کی نسبت معلوم کریں۔",
+   "check": [
+    "R(6, 5) == R(6, 5)"
+   ]
+  },
+  {
+   "math": "\\frac{b_y}{a_y} = \\frac{-3}{-4} = \\frac{3}{4}",
+   "en": "Find the ratio of the $\\underline{j}$-components and simplify.",
+   "ur": "$\\underline{j}$ اجزاء کی نسبت معلوم کریں اور اسے مختصر کریں۔",
+   "check": [
+    "R(-3, -4) == R(3, 4)"
+   ]
+  },
+  {
+   "math": "\\frac{6}{5} \\neq \\frac{3}{4} \\implies \\text{not parallel}",
+   "en": "Since the ratios of the corresponding components are not equal, vector $\\underline{b}$ is not a scalar multiple of vector $\\underline{a}$. Therefore, the given vectors are not parallel.",
+   "ur": "چونکہ متناظرہ اجزاء کی نسبتیں برابر نہیں ہیں، اس لیے ویکٹر $\\underline{b}$ ویکٹر $\\underline{a}$ کا سکیلر حاصل ضرب نہیں ہے۔ لہٰذا، دیے گئے ویکٹرز متوازی نہیں ہیں۔",
+   "check": [
+    "Ne(6/5, 3/4)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

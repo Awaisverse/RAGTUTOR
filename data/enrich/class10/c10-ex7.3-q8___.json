@@ -1,0 +1,53 @@
+{
+ "item": "c10-ex7.3-q8",
+ "label": "",
+ "answer_ref": "$160$ m",
+ "steps": [
+  {
+   "math": "",
+   "en": "Consider a right-angled triangle formed by the river's width and the boat's path. As drawn in the diagram, the width of the river is the side adjacent (base) to the angle $\\theta = 60^\\circ$, which is $80\\text{ m}$. Let the actual distance travelled by the boat (the hypotenuse) be $x$.",
+   "ur": "دریا کی چوڑائی اور کشتی کے راستے سے بننے والی ایک قائمۃ الزاویہ مثلث پر غور کریں۔ شکل کے مطابق، دریا کی چوڑائی زاویہ $\\theta = 60^\\circ$ کا متصل ضلع (قاعدہ) ہے جو کہ $80\\text{ m}$ ہے۔ فرض کریں کہ کشتی کا طے کردہ اصل فاصلہ (وتر) $x$ ہے۔"
+  },
+  {
+   "math": "\\cos \\theta = \\frac{\\text{Base}}{\\text{Hypotenuse}}",
+   "en": "Recall the trigonometric ratio for cosine, which relates the adjacent side (base) and the hypotenuse.",
+   "ur": "کوسائن (cosine) کی مثلثیاتی نسبت کو یاد کریں، جو متصل ضلع (قاعدہ) اور وتر کے درمیان تعلق کو ظاہر کرتی ہے۔"
+  },
+  {
+   "math": "\\cos 60^\\circ = \\frac{80}{x}",
+   "en": "Substitute the given values $\\theta = 60^\\circ$, $\\text{Base} = 80$, and $\\text{Hypotenuse} = x$ into the formula.",
+   "ur": "فارمولے میں دی گئی قیمتیں $\\theta = 60^\\circ$، قاعدہ $= 80$، اور وتر $= x$ درج کریں۔",
+   "check": [
+    "cos(60*pi/180) == R(1,2)"
+   ]
+  },
+  {
+   "math": "x = \\frac{80}{\\cos 60^\\circ}",
+   "en": "Rearrange the equation to solve for the unknown distance $x$.",
+   "ur": "نامعلوم فاصلے $x$ کی قیمت معلوم کرنے کے لیے مساوات کو ترتیب دیں۔",
+   "check": [
+    "80 / cos(60*pi/180) == 160"
+   ]
+  },
+  {
+   "math": "x = \\frac{80}{\\frac{1}{2}}",
+   "en": "Substitute the standard trigonometric value $\\cos 60^\\circ = \\frac{1}{2}$.",
+   "ur": "معیاری مثلثیاتی قیمت $\\cos 60^\\circ = \\frac{1}{2}$ درج کریں۔",
+   "check": [
+    "cos(60*pi/180) == R(1,2)",
+    "80 / R(1,2) == 160"
+   ]
+  },
+  {
+   "math": "x = 80 \\times 2 = 160\\ \\text{m}",
+   "en": "Simplify the fraction to find the value of $x$. Thus, the boat actually travels a distance of $160\\text{ m}$.",
+   "ur": "$x$ کی قیمت معلوم کرنے کے لیے کسر کو مختصر کریں۔ اس طرح، کشتی درحقیقت $160\\text{ m}$ کا فاصلہ طے کرتی ہے۔",
+   "check": [
+    "80 * 2 == 160",
+    "80/cos((60)*pi/180) == 160"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

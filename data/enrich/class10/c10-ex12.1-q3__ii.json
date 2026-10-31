@@ -1,0 +1,53 @@
+{
+ "item": "c10-ex12.1-q3",
+ "label": "ii",
+ "answer_ref": "$340$",
+ "steps": [
+  {
+   "math": "",
+   "en": "We are given that $P(A):P(\\overline{A}) = 17:15$ and the total number of sample points is $n(S) = 640$. We need to find the number of elements in event $A$, denoted as $n(A)$.",
+   "ur": "ہمیں دیا گیا ہے کہ $P(A):P(\\overline{A}) = 17:15$ اور نمونہ کی فضاء میں کل ارکان کی تعداد $n(S) = 640$ ہے۔ ہمیں وقوعہ $A$ کے ارکان کی تعداد، یعنی $n(A)$ معلوم کرنی ہے۔"
+  },
+  {
+   "math": "\\text{Sum of ratios} = 17 + 15 = 32",
+   "en": "Since the sum of the probabilities of an event and its complement is $1$, we first find the sum of the parts of the given ratio.",
+   "ur": "چونکہ کسی وقوعہ اور اس کے کمپلیمنٹ کے احتمالات کا مجموعہ $1$ ہوتا ہے، اس لیے ہم پہلے دی گئی نسبت کے حصوں کا مجموعہ معلوم کرتے ہیں۔",
+   "check": [
+    "17 + 15 == 32"
+   ]
+  },
+  {
+   "math": "P(A) = \\frac{17}{32}",
+   "en": "Using the ratio part for event $A$ and the total sum of ratios, we write the probability of event $A$.",
+   "ur": "وقوعہ $A$ کے نسبتی حصے اور نسبتوں کے کل مجموعے کو استعمال کرتے ہوئے، ہم وقوعہ $A$ کا احتمال لکھتے ہیں۔",
+   "check": [
+    "R(17, 32) == R(17, 32)"
+   ]
+  },
+  {
+   "math": "P(A) = \\frac{n(A)}{n(S)} \\implies n(A) = P(A) \\times n(S)",
+   "en": "Now, we use the basic formula of probability and rearrange it to find $n(A)$.",
+   "ur": "اب، ہم احتمال کا بنیادی فارمولا استعمال کرتے ہیں اور $n(A)$ معلوم کرنے کے لیے اسے ترتیب دیتے ہیں۔"
+  },
+  {
+   "math": "n(A) = \\frac{17}{32} \\times 640",
+   "en": "Substitute the values of $P(A) = \\frac{17}{32}$ and $n(S) = 640$ into the formula.",
+   "ur": "فارمولے میں $P(A) = \\frac{17}{32}$ اور $n(S) = 640$ کی قیمتیں درج کریں۔",
+   "check": [
+    "R(17, 32) * 640 == 340"
+   ]
+  },
+  {
+   "math": "n(A) = 17 \\times 20 = 340",
+   "en": "Simplify by dividing $640$ by $32$ to get $20$, and then multiply by $17$. Thus, the number of outcomes favourable to event $A$ is $340$.",
+   "ur": "$640$ کو $32$ پر تقسیم کر کے مختصر کریں جس سے $20$ حاصل ہوتا ہے، اور پھر اسے $17$ سے ضرب دیں۔ اس طرح، وقوعہ $A$ کے موافق نتائج کی تعداد $340$ ہے۔",
+   "check": [
+    "640 / 32 == 20",
+    "17 * 20 == 340",
+    "R(17,32)*640 == 340"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

@@ -1,0 +1,49 @@
+{
+ "item": "c10-ex1.1-q1",
+ "label": "vii",
+ "answer_ref": "$i$",
+ "steps": [
+  {
+   "math": "\\left(\\frac{i^8}{i^5}\\right)^{-5}",
+   "en": "Write down the given complex expression to be simplified.",
+   "ur": "مختصر کرنے کے لیے دی گئی مخلوط عبارت لکھیں۔"
+  },
+  {
+   "math": "= \\left(i^{8-5}\\right)^{-5} = \\left(i^3\\right)^{-5}",
+   "en": "First, simplify the fraction inside the brackets by using the quotient rule of exponents $\\frac{a^m}{a^n} = a^{m-n}$. Subtract the powers of $i$.",
+   "ur": "پہلے، قوت نما کے تقسیم کے اصول $\\frac{a^m}{a^n} = a^{m-n}$ کا استعمال کرتے ہوئے بریکٹ کے اندر موجود کسر کو مختصر کریں۔ $i$ کی طاقتوں کو تفریق کریں۔",
+   "check": [
+    "(I**8/I**5)**(-5) == (I**3)**(-5)"
+   ]
+  },
+  {
+   "math": "= i^{3 \\times (-5)} = i^{-15}",
+   "en": "Next, apply the power of a power rule $(a^m)^n = a^{m \\times n}$ and multiply the exponents.",
+   "ur": "اس کے بعد، طاقت کی طاقت کا اصول $(a^m)^n = a^{m \\times n}$ لاگو کریں اور طاقتوں کو ضرب دیں۔",
+   "check": [
+    "(I**3)**(-5) == I**(-15)"
+   ]
+  },
+  {
+   "math": "= i^{-15} \\times 1 = i^{-15} \\times i^{16}",
+   "en": "To make the negative exponent positive, we use the property $i^4 = 1$. Since any multiple of $4$ in the power of $i$ equals $1$, we multiply by $i^{16} = (i^4)^4 = 1$.",
+   "ur": "منفی طاقت کو مثبت بنانے کے لیے، ہم خاصیت $i^4 = 1$ استعمال کرتے ہیں۔ چونکہ $i$ کی طاقت میں $4$ کا کوئی بھی مضرب $1$ کے برابر ہوتا ہے، اس لیے ہم $i^{16} = (i^4)^4 = 1$ سے ضرب دیتے ہیں۔",
+   "check": [
+    "I**(-15) == I**(-15) * I**16"
+   ]
+  },
+  {
+   "math": "= i^{-15+16} = i^1 = i",
+   "en": "Add the exponents using the product rule $a^m \\times a^n = a^{m+n}$ to get the final simplified answer.",
+   "ur": "حتمی مختصر جواب حاصل کرنے کے لیے ضرب کے اصول $a^m \\times a^n = a^{m+n}$ کا استعمال کرتے ہوئے طاقتوں کو جمع کریں۔",
+   "check": [
+    "I**(-15) * I**16 == I**1",
+    "I**1 == I",
+    "(I**8/I**5)**(-5) == I**(-15)",
+    "I**(-15) == I"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

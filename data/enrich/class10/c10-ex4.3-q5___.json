@@ -1,0 +1,51 @@
+{
+ "item": "c10-ex4.3-q5",
+ "label": "",
+ "answer_ref": "375 rupees",
+ "steps": [
+  {
+   "math": "f(x) = 100 + 5x",
+   "en": "Write down the given function that models the total charges, where $x$ represents the number of printed pages.",
+   "ur": "دی گئی فنکشن لکھیں جو کل اخراجات کو ظاہر کرتی ہے، جہاں $x$ پرنٹ شدہ صفحات کی تعداد ہے۔",
+   "check": [
+    "100 + 5*x == 5*x + 100"
+   ]
+  },
+  {
+   "math": "x = 55",
+   "en": "We need to find the total charges for $55$ pages, so the given number of pages is $x = 55$.",
+   "ur": "ہمیں $55$ صفحات کے لیے کل چارجز معلوم کرنے ہیں، اس لیے دیے گئے صفحات کی تعداد $x = 55$ ہے۔",
+   "check": [
+    "55 == 55"
+   ]
+  },
+  {
+   "math": "f(55) = 100 + 5(55)",
+   "en": "Substitute $x = 55$ into the function $f(x)$.",
+   "ur": "فنکشن $f(x)$ میں $x = 55$ درج کریں۔",
+   "check": [
+    "(100 + 5*x).subs(x, 55) == 100 + 5*55"
+   ]
+  },
+  {
+   "math": "f(55) = 100 + 275",
+   "en": "Multiply $5$ by $55$ to find the printing cost for $55$ pages.",
+   "ur": "$55$ صفحات کی پرنٹنگ لاگت معلوم کرنے کے لیے $5$ کو $55$ سے ضرب دیں۔",
+   "check": [
+    "5 * 55 == 275",
+    "100 + 5*55 == 100 + 275"
+   ]
+  },
+  {
+   "math": "f(55) = 375",
+   "en": "Add $100$ and $275$ to get the total charges. Thus, the company will charge $375$ rupees.",
+   "ur": "کل چارجز حاصل کرنے کے لیے $100$ اور $275$ کو جمع کریں۔ اس طرح کمپنی $375$ روپے چارج کرے گی۔",
+   "check": [
+    "100 + 275 == 375",
+    "(100 + 5*x).subs(x, (55)) == (375)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

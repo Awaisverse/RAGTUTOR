@@ -1,0 +1,61 @@
+{
+ "item": "c10-rev1-q3",
+ "label": "iv",
+ "answer_ref": "$-9 - 38i$",
+ "steps": [
+  {
+   "math": "\\left(3 - 4i\\right)\\left(5 - 6i\\right)",
+   "en": "Write down the given product of the two complex numbers that we need to simplify.",
+   "ur": "دیے گئے دو مخلوط اعداد کا حاصل ضرب لکھیں جسے ہمیں مختصر کرنا ہے۔"
+  },
+  {
+   "math": "= 3\\left(5 - 6i\\right) - 4i\\left(5 - 6i\\right)",
+   "en": "Apply the distributive property by multiplying each term of the first bracket with the entire second bracket.",
+   "ur": "تقسیمی خاصیت کا استعمال کرتے ہوئے پہلی قوسین کے ہر رکن کو دوسری مکمل قوسین سے ضرب دیں۔",
+   "check": [
+    "(3 - 4*I)*(5 - 6*I) == 3*(5 - 6*I) - 4*I*(5 - 6*I)"
+   ]
+  },
+  {
+   "math": "= 15 - 18i - 20i + 24i^2",
+   "en": "Expand the brackets by performing the multiplications.",
+   "ur": "ضرب کا عمل مکمل کر کے قوسین کو کھولیں۔",
+   "check": [
+    "3*(5 - 6*I) - 4*I*(5 - 6*I) == 15 - 18*I - 20*I + 24*I**2"
+   ]
+  },
+  {
+   "math": "= 15 - 38i + 24(-1)",
+   "en": "Combine the like imaginary terms ($-18i - 20i = -38i$) and substitute the fundamental property $i^2 = -1$.",
+   "ur": "یکساں خیالی ارکان کو یکجا کریں ($-18i - 20i = -38i$) اور بنیادی کلیہ $i^2 = -1$ درج کریں۔",
+   "check": [
+    "-18*I - 20*I == -38*I",
+    "I**2 == -1",
+    "15 - 38*I + 24*(-1) == (3 - 4*I)*(5 - 6*I)"
+   ]
+  },
+  {
+   "math": "= 15 - 24 - 38i",
+   "en": "Simplify the product $24(-1) = -24$ and group the real parts together.",
+   "ur": "حاصل ضرب $24(-1) = -24$ کو مختصر کریں اور حقیقی حصوں کو ایک ساتھ لکھیں۔",
+   "check": [
+    "24*(-1) == -24",
+    "15 - 38*I + 24*(-1) == 15 - 24 - 38*I"
+   ]
+  },
+  {
+   "math": "= -9 - 38i",
+   "en": "Subtract the real numbers ($15 - 24 = -9$) to obtain the final answer in the standard form $a + bi$.",
+   "ur": "معیاری شکل $a + bi$ میں حتمی جواب حاصل کرنے کے لیے حقیقی اعداد کو تفریق کریں ($15 - 24 = -9$)۔",
+   "check": [
+    "15 - 24 == -9",
+    "(3 - 4*I)*(5 - 6*I) == -9 - 38*I",
+    "(3 - 4*I)*(5 - 6*I) == (15) + (-38)*I + (24)*I**2",
+    "I**2 == -1",
+    "(3 - 4*I)*(5 - 6*I) == (-9 - 38*I)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

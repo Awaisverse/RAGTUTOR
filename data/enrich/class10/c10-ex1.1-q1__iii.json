@@ -1,0 +1,78 @@
+{
+ "item": "c10-ex1.1-q1",
+ "label": "iii",
+ "answer_ref": "$-i$",
+ "steps": [
+  {
+   "math": "(-i)^{-19} = (-1 \\cdot i)^{-19}",
+   "en": "Write $-i$ as the product of $-1$ and $i$.",
+   "ur": "$-i$ کو $-1$ اور $i$ کے حاصل ضرب کے طور پر لکھیں۔",
+   "check": [
+    "(-I)**(-19) == (-1 * I)**(-19)"
+   ]
+  },
+  {
+   "math": "= (-1)^{-19} \\cdot i^{-19}",
+   "en": "Apply the law of exponents $(ab)^n = a^n b^n$ to distribute the power $-19$.",
+   "ur": "طاقت $-19$ کو تقسیم کرنے کے لیے قوت نما کا قانون $(ab)^n = a^n b^n$ استعمال کریں۔",
+   "check": [
+    "(-1 * I)**(-19) == (-1)**(-19) * I**(-19)"
+   ]
+  },
+  {
+   "math": "= -1 \\cdot i^{-19} = -i^{-19}",
+   "en": "Since $-19$ is an odd integer, $(-1)^{-19} = -1$.",
+   "ur": "چونکہ $-19$ ایک طاق عدد ہے، اس لیے $(-1)^{-19} = -1$ ہوتا ہے۔",
+   "check": [
+    "(-1)**(-19) * I**(-19) == -I**(-19)"
+   ]
+  },
+  {
+   "math": "= -\\frac{1}{i^{19}}",
+   "en": "Use the negative exponent rule $a^{-n} = \\frac{1}{a^n}$ to make the power of $i$ positive.",
+   "ur": "$i$ کی طاقت کو مثبت بنانے کے لیے منفی قوت نما کا اصول $a^{-n} = \\frac{1}{a^n}$ استعمال کریں۔",
+   "check": [
+    "-I**(-19) == -1 / (I**19)"
+   ]
+  },
+  {
+   "math": "= -\\frac{1}{i^{18} \\cdot i} = -\\frac{1}{(i^2)^9 \\cdot i}",
+   "en": "Split the odd power $19$ into an even power $18$ and $1$, then write $i^{18}$ in terms of $i^2$.",
+   "ur": "طاق طاقت $19$ کو جفت طاقت $18$ اور $1$ میں توڑیں، پھر $i^{18}$ کو $i^2$ کی شکل میں لکھیں۔",
+   "check": [
+    "-1 / (I**19) == -1 / (I**18 * I)",
+    "-1 / (I**18 * I) == -1 / ((I**2)**9 * I)"
+   ]
+  },
+  {
+   "math": "= -\\frac{1}{(-1)^9 \\cdot i} = -\\frac{1}{-1 \\cdot i} = \\frac{1}{i}",
+   "en": "Substitute $i^2 = -1$. Since $9$ is odd, $(-1)^9 = -1$, and the two negative signs cancel out.",
+   "ur": "$i^2 = -1$ درج کریں۔ چونکہ $9$ طاق ہے، اس لیے $(-1)^9 = -1$، اور دونوں منفی علامتیں ایک دوسرے کو ختم کر دیتی ہیں۔",
+   "check": [
+    "-1 / ((I**2)**9 * I) == -1 / ((-1)**9 * I)",
+    "-1 / ((-1)**9 * I) == 1 / I"
+   ]
+  },
+  {
+   "math": "= \\frac{1}{i} \\times \\frac{i}{i} = \\frac{i}{i^2}",
+   "en": "Multiply the numerator and denominator by $i$ to rationalize the denominator.",
+   "ur": "مخرج سے $i$ ختم کرنے کے لیے شمار کنندہ اور مخرج دونوں کو $i$ سے ضرب دیں۔",
+   "check": [
+    "1 / I == I / (I**2)"
+   ]
+  },
+  {
+   "math": "= \\frac{i}{-1} = -i",
+   "en": "Substitute $i^2 = -1$ and simplify to get the final answer.",
+   "ur": "$i^2 = -1$ درج کریں اور حتمی جواب حاصل کرنے کے لیے مختصر کریں۔",
+   "check": [
+    "I / (I**2) == I / (-1)",
+    "I / (-1) == -I",
+    "(-I)**(-19) == -I**(-19)",
+    "-I**(-19) == -I"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

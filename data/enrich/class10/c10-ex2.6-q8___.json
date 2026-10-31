@@ -1,0 +1,41 @@
+{
+ "item": "c10-ex2.6-q8",
+ "label": "",
+ "answer_ref": "$x = \\frac{y^2}{4a}$",
+ "steps": [
+  {
+   "math": "y^2 = 4ax",
+   "en": "Write down the given equation of the parabola. We need to make $x$ the subject of this equation.",
+   "ur": "دی گئی مکافی (parabola) کی مساوات لکھیں۔ ہمیں اس مساوات میں $x$ کو موضوع (subject) بنانا ہے۔",
+   "check": [
+    "y**2 == y**2"
+   ]
+  },
+  {
+   "math": "4ax = y^2",
+   "en": "Interchange the left-hand side and the right-hand side so that the term containing $x$ is on the left.",
+   "ur": "بائیں اور دائیں اطراف کو آپس میں بدل دیں تاکہ $x$ والی رقم بائیں طرف آ جائے۔",
+   "check": [
+    "4*a*x == 4*a*x"
+   ]
+  },
+  {
+   "math": "\\frac{4ax}{4a} = \\frac{y^2}{4a}",
+   "en": "To isolate $x$, divide both sides of the equation by $4a$ (assuming $a \\neq 0$).",
+   "ur": "$x$ کو الگ کرنے کے لیے، مساوات کے دونوں اطراف کو $4a$ سے تقسیم کریں (بشرطیکہ $a \\neq 0$)۔",
+   "check": [
+    "(4*a*x)/(4*a) == x"
+   ]
+  },
+  {
+   "math": "x = \\frac{y^2}{4a}",
+   "en": "Simplify the left-hand side by cancelling out $4a$. Thus, $x$ is now the subject of the equation.",
+   "ur": "بائیں طرف $4a$ کو منسوخ کر کے مختصر کریں۔ اس طرح، اب $x$ مساوات کا موضوع بن گیا ہے۔",
+   "check": [
+    "4*a*(y**2/(4*a)) == y**2"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

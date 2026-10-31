@@ -1,0 +1,65 @@
+{
+ "item": "c10-ex6.1-q6",
+ "label": "iii",
+ "answer_ref": "$\\frac{1}{\\sqrt{2}}\\underline{i} + \\frac{1}{\\sqrt{2}}\\underline{j}$",
+ "steps": [
+  {
+   "math": "\\underline{a} = \\frac{1}{\\sqrt{6}}\\underline{i} + \\frac{1}{\\sqrt{6}}\\underline{j}",
+   "en": "First, write down the given vector $\\underline{a}$. Here, the components are $x = \\frac{1}{\\sqrt{6}}$ and $y = \\frac{1}{\\sqrt{6}}$.",
+   "ur": "سب سے پہلے، دیا گیا سمتیہ $\\underline{a}$ لکھیں۔ یہاں اجزاء $x = \\frac{1}{\\sqrt{6}}$ اور $y = \\frac{1}{\\sqrt{6}}$ ہیں۔",
+   "check": [
+    "1/sqrt(6) == sqrt(6)/6"
+   ]
+  },
+  {
+   "math": "|\\underline{a}| = \\sqrt{x^2 + y^2} = \\sqrt{\\left(\\frac{1}{\\sqrt{6}}\\right)^2 + \\left(\\frac{1}{\\sqrt{6}}\\right)^2}",
+   "en": "To find the magnitude $|\\underline{a}|$ of the vector, use the formula $\\sqrt{x^2 + y^2}$ and substitute the values of $x$ and $y$.",
+   "ur": "سمتیہ کی مقدار $|\\underline{a}|$ معلوم کرنے کے لیے فارمولا $\\sqrt{x^2 + y^2}$ استعمال کریں اور $x$ اور $y$ کی قیمتیں درج کریں۔",
+   "check": [
+    "sqrt((1/sqrt(6))**2 + (1/sqrt(6))**2) == sqrt(3)/3"
+   ]
+  },
+  {
+   "math": "|\\underline{a}| = \\sqrt{\\frac{1}{6} + \\frac{1}{6}} = \\sqrt{\\frac{2}{6}} = \\sqrt{\\frac{1}{3}} = \\frac{1}{\\sqrt{3}}",
+   "en": "Square both terms, add the fractions, and simplify to get the magnitude $|\\underline{a}|$.",
+   "ur": "دونوں رقموں کا مربع لیں، کسروں کو جمع کریں، اور مختصر کر کے مقدار $|\\underline{a}|$ حاصل کریں۔",
+   "check": [
+    "(1/sqrt(6))**2 == R(1,6)",
+    "R(1,6) + R(1,6) == R(2,6)",
+    "R(2,6) == R(1,3)",
+    "sqrt(R(1,3)) == 1/sqrt(3)"
+   ]
+  },
+  {
+   "math": "\\hat{a} = \\frac{\\underline{a}}{|\\underline{a}|} = \\frac{\\frac{1}{\\sqrt{6}}\\underline{i} + \\frac{1}{\\sqrt{6}}\\underline{j}}{\\frac{1}{\\sqrt{3}}}",
+   "en": "A unit vector $\\hat{a}$ in the direction of $\\underline{a}$ is found by dividing the vector $\\underline{a}$ by its magnitude $|\\underline{a}|$.",
+   "ur": "سمتیہ $\\underline{a}$ کی سمت میں اکائی سمتیہ $\\hat{a}$ معلوم کرنے کے لیے سمتیہ $\\underline{a}$ کو اس کی مقدار $|\\underline{a}|$ سے تقسیم کریں۔",
+   "check": [
+    "(1/sqrt(6))/(1/sqrt(3)) == 1/sqrt(2)"
+   ]
+  },
+  {
+   "math": "\\hat{a} = \\frac{\\sqrt{3}}{\\sqrt{6}}\\underline{i} + \\frac{\\sqrt{3}}{\\sqrt{6}}\\underline{j} = \\sqrt{\\frac{3}{6}}\\underline{i} + \\sqrt{\\frac{3}{6}}\\underline{j}",
+   "en": "Multiply each component by $\\sqrt{3}$ and combine the square roots.",
+   "ur": "ہر جزو کو $\\sqrt{3}$ سے ضرب دیں اور جذر کو اکٹھا کریں۔",
+   "check": [
+    "sqrt(3)/sqrt(6) == sqrt(R(3,6))"
+   ]
+  },
+  {
+   "math": "\\hat{a} = \\frac{1}{\\sqrt{2}}\\underline{i} + \\frac{1}{\\sqrt{2}}\\underline{j}",
+   "en": "Simplify the fraction inside the square root to get the required unit vector.",
+   "ur": "مطلوبہ اکائی سمتیہ حاصل کرنے کے لیے جذر کے اندر موجود کسر کو مختصر کریں۔",
+   "check": [
+    "sqrt(R(3,6)) == 1/sqrt(2)",
+    "(1/sqrt(2))**2 + (1/sqrt(2))**2 == 1",
+    "sqrt((sqrt(6)/6)**2 + (sqrt(6)/6)**2) == (sqrt(3)/3)",
+    "(sqrt(2)/2)**2 + (sqrt(2)/2)**2 == 1",
+    "(sqrt(2)/2)*(sqrt(3)/3) == (sqrt(6)/6)",
+    "(sqrt(2)/2)*(sqrt(3)/3) == (sqrt(6)/6)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

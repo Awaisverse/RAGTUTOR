@@ -1,0 +1,53 @@
+{
+ "item": "c10-ex7.2-q2",
+ "label": "iv",
+ "answer_ref": "$39.90$ cm$^2$",
+ "steps": [
+  {
+   "math": "a = 10\\text{ cm}, \\quad \\alpha = 62^\\circ, \\quad \\beta = 69^\\circ",
+   "en": "First, write down the given values for the side and two angles of triangle $ABC$. We need to find the area of the triangle.",
+   "ur": "سب سے پہلے، مثلث $ABC$ کے دیے گئے ایک ضلع اور دو زاویوں کی قیمتیں لکھیں۔ ہمیں اس مثلث کا رقبہ معلوم کرنا ہے۔"
+  },
+  {
+   "math": "\\gamma = 180^\\circ - (\\alpha + \\beta) = 180^\\circ - (62^\\circ + 69^\\circ) = 180^\\circ - 131^\\circ = 49^\\circ",
+   "en": "Since the sum of interior angles of a triangle is always $180^\\circ$, we subtract $\\alpha$ and $\\beta$ from $180^\\circ$ to find the third angle $\\gamma$.",
+   "ur": "چونکہ کسی بھی مثلث کے اندرونی زاویوں کا مجموعہ ہمیشہ $180^\\circ$ ہوتا ہے، اس لیے ہم تیسرا زاویہ $\\gamma$ معلوم کرنے کے لیے $\\alpha$ اور $\\beta$ کو $180^\\circ$ میں سے تفریق کرتے ہیں۔",
+   "check": [
+    "62 + 69 == 131",
+    "180 - 131 == 49"
+   ]
+  },
+  {
+   "math": "\\text{Area of } \\triangle ABC = \\frac{a^2 \\sin\\beta \\sin\\gamma}{2 \\sin\\alpha}",
+   "en": "When one side $a$ and the angles are known, we use this trigonometric formula to calculate the area of the triangle.",
+   "ur": "جب ایک ضلع $a$ اور زاویے معلوم ہوں، تو ہم مثلث کا رقبہ معلوم کرنے کے لیے یہ تکونیاتی فارمولا استعمال کرتے ہیں۔"
+  },
+  {
+   "math": "\\text{Area} = \\frac{(10)^2 \\sin 69^\\circ \\sin 49^\\circ}{2 \\sin 62^\\circ} = \\frac{100 \\sin 69^\\circ \\sin 49^\\circ}{2 \\sin 62^\\circ}",
+   "en": "Substitute $a = 10$, $\\alpha = 62^\\circ$, $\\beta = 69^\\circ$, and $\\gamma = 49^\\circ$ into the formula and square $10$.",
+   "ur": "فارمولے میں $a = 10$، $\\alpha = 62^\\circ$، $\\beta = 69^\\circ$، اور $\\gamma = 49^\\circ$ کی قیمتیں درج کریں اور $10$ کا مربع لیں۔",
+   "check": [
+    "10**2 == 100"
+   ]
+  },
+  {
+   "math": "\\text{Area} \\approx \\frac{100 \\times 0.9336 \\times 0.7547}{2 \\times 0.8829} \\approx \\frac{70.4588}{1.7658} \\approx 39.90\\text{ cm}^2",
+   "en": "Evaluate the trigonometric functions using a calculator, then multiply and divide to get the area rounded to two decimal places.",
+   "ur": "کیلکولیٹر کی مدد سے تکونیاتی تفاعل کی قیمتیں نکالیں، پھر ضرب اور تقسیم کر کے دو اعشاریہ تک رقبہ معلوم کریں۔",
+   "check": [
+    "Abs((100*sin(69*pi/180)*sin(49*pi/180)/(2*sin(62*pi/180))) - 39.90) <= 0.005"
+   ]
+  },
+  {
+   "math": "\\text{Area of } \\triangle ABC = 39.90\\text{ cm}^2",
+   "en": "Thus, the area of triangle $ABC$ is $39.90\\text{ cm}^2$.",
+   "ur": "پس، مثلث $ABC$ کا رقبہ $39.90\\text{ cm}^2$ ہے۔",
+   "check": [
+    "180 - 131 == 49",
+    "Abs((10**2*sin((69)*pi/180)*sin((49)*pi/180)/(2*sin((62)*pi/180))) - 39.90) <= 0.0050000010000000004"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

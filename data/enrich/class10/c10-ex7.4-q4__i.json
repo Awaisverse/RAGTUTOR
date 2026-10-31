@@ -1,0 +1,43 @@
+{
+ "item": "c10-ex7.4-q4",
+ "label": "i",
+ "answer_ref": "$316.2$ m",
+ "steps": [
+  {
+   "math": "AB = 100\\ \\text{m}, \\quad BC = 300\\ \\text{m}",
+   "en": "Let the starting point be $A$. Abdul Hadi walks $100\\ \\text{m}$ North to point $B$, and then $300\\ \\text{m}$ East to point $C$. We need to find the distance $AC$ from his starting position.",
+   "ur": "فرض کریں کہ ابتدائی نقطہ $A$ ہے۔ عبدالہادی $100\\ \\text{m}$ شمال کی طرف نقطہ $B$ تک چلتا ہے، اور پھر $300\\ \\text{m}$ مشرق کی طرف نقطہ $C$ تک چلتا ہے۔ ہمیں اس کے ابتدائی مقام سے فاصلہ $AC$ معلوم کرنا ہے۔"
+  },
+  {
+   "math": "AC^2 = AB^2 + BC^2",
+   "en": "Since the directions North and East are perpendicular to each other, the path forms a right-angled triangle $ABC$ with $\\angle B = 90^\\circ$. Therefore, we can apply the Pythagoras theorem.",
+   "ur": "چونکہ شمال اور مشرق کی سمتیں ایک دوسرے پر عمود ہیں، اس لیے یہ راستہ ایک قائمۃ الزاویہ مثلث $ABC$ بناتا ہے جس میں $\\angle B = 90^\\circ$ ہے۔ لہذا، ہم مسئلہ فیثا غورث استعمال کر سکتے ہیں۔"
+  },
+  {
+   "math": "AC = \\sqrt{100^2 + 300^2}",
+   "en": "Substitute the given distances $AB = 100$ and $BC = 300$ into the formula and take the square root.",
+   "ur": "فارمولے میں دیے گئے فاصلے $AB = 100$ اور $BC = 300$ درج کریں اور جزر لیں۔"
+  },
+  {
+   "math": "AC = \\sqrt{10000 + 90000} = \\sqrt{100000}",
+   "en": "Calculate the squares of the numbers and add them together.",
+   "ur": "اعداد کے مربع معلوم کریں اور انہیں آپس میں جمع کریں۔",
+   "check": [
+    "100**2 == 10000",
+    "300**2 == 90000",
+    "10000 + 90000 == 100000"
+   ]
+  },
+  {
+   "math": "AC \\approx 316.2\\ \\text{m}",
+   "en": "Evaluating the square root gives the final distance from the starting position, rounded to one decimal place.",
+   "ur": "جزر معلوم کرنے پر ابتدائی مقام سے حتمی فاصلہ، اعشاریہ کے ایک درجے تک، حاصل ہوتا ہے۔",
+   "check": [
+    "Abs((sqrt(100000)) - 316.2) <= 0.050000001",
+    "100**2 + 300**2 == 100000"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

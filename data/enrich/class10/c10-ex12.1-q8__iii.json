@@ -1,0 +1,44 @@
+{
+ "item": "c10-ex12.1-q8",
+ "label": "iii",
+ "answer_ref": "$\\frac{13}{18}$",
+ "steps": [
+  {
+   "math": "",
+   "en": "First, write down the given number of balls of each colour in the bag: $4$ red, $5$ white, $6$ green, and $3$ black balls.",
+   "ur": "سب سے پہلے، تھیلے میں موجود ہر رنگ کی گیندوں کی دی گئی تعداد لکھیں: $4$ سرخ، $5$ سفید، $6$ سبز، اور $3$ سیاہ گیندیں۔"
+  },
+  {
+   "math": "n(S) = 4 + 5 + 6 + 3 = 18",
+   "en": "Find the total number of possible outcomes $n(S)$ by adding all the balls in the bag.",
+   "ur": "تھیلے میں موجود تمام گیندوں کو جمع کر کے ممکنہ نتائج کی کل تعداد $n(S)$ معلوم کریں۔",
+   "check": [
+    "4 + 5 + 6 + 3 == 18"
+   ]
+  },
+  {
+   "math": "n(E) = 4 + 6 + 3 = 13",
+   "en": "Let $E$ be the event that the drawn ball is not white. Count the favourable outcomes $n(E)$ by adding the red, green, and black balls (or subtracting the $5$ white balls from the total $18$).",
+   "ur": "فرض کریں کہ $E$ وہ وقوعہ ہے جس میں نکالی گئی گیند سفید نہیں ہے۔ سرخ، سبز اور سیاہ گیندوں کو جمع کر کے (یا کل $18$ میں سے $5$ سفید گیندیں تفریق کر کے) موافق نتائج کی تعداد $n(E)$ معلوم کریں۔",
+   "check": [
+    "4 + 6 + 3 == 13",
+    "18 - 5 == 13"
+   ]
+  },
+  {
+   "math": "P(E) = \\frac{n(E)}{n(S)}",
+   "en": "Write the formula for the probability of an event $E$.",
+   "ur": "کسی وقوعہ $E$ کے احتمال (probability) کا فارمولا لکھیں۔"
+  },
+  {
+   "math": "P(E) = \\frac{13}{18}",
+   "en": "Substitute the values of $n(E) = 13$ and $n(S) = 18$ into the formula. Thus, the probability that the ball drawn is not white is $\\frac{13}{18}$.",
+   "ur": "فارمولے میں $n(E) = 13$ اور $n(S) = 18$ کی قیمتیں درج کریں۔ اس طرح، نکالی گئی گیند کے سفید نہ ہونے کا احتمال $\\frac{13}{18}$ ہے۔",
+   "check": [
+    "R(13, 18) == 13/18"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

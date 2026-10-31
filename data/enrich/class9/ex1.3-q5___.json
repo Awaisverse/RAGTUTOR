@@ -1,0 +1,50 @@
+{
+ "item": "ex1.3-q5",
+ "label": "",
+ "answer_ref": "$118.4^{\\circ}F$",
+ "steps": [
+  {
+   "math": "{}^\\circ C = 48",
+   "en": "First, write down the given temperature in Celsius from the question.",
+   "ur": "سب سے پہلے، سوال میں دیے گئے سیلسیس درجہ حرارت کو لکھیں۔"
+  },
+  {
+   "math": "{}^\\circ F = \\frac{9}{5}\\,{}^\\circ C + 32",
+   "en": "We need to find the temperature on the Fahrenheit scale. Write down the given formula for converting Celsius to Fahrenheit.",
+   "ur": "ہمیں فارن ہائیٹ سکیل پر درجہ حرارت معلوم کرنا ہے۔ سیلسیس کو فارن ہائیٹ میں تبدیل کرنے کا دیا گیا فارمولا لکھیں۔"
+  },
+  {
+   "math": "{}^\\circ F = \\frac{9}{5} (48) + 32",
+   "en": "Substitute the given value ${}^\\circ C = 48$ into the formula.",
+   "ur": "فارمولے میں دی گئی قیمت ${}^\\circ C = 48$ درج کریں۔"
+  },
+  {
+   "math": "{}^\\circ F = \\frac{432}{5} + 32",
+   "en": "Multiply $9$ by $48$ in the numerator.",
+   "ur": "شمار کنندہ (numerator) میں $9$ کو $48$ سے ضرب دیں۔",
+   "check": [
+    "9 * 48 == 432"
+   ]
+  },
+  {
+   "math": "{}^\\circ F = 86.4 + 32",
+   "en": "Divide $432$ by $5$ to convert the fraction into a decimal.",
+   "ur": "کسر کو اعشاریہ میں تبدیل کرنے کے لیے $432$ کو $5$ پر تقسیم کریں۔",
+   "check": [
+    "R(432, 5) == R('86.4')"
+   ]
+  },
+  {
+   "math": "{}^\\circ F = 118.4",
+   "en": "Add $86.4$ and $32$ to get the final temperature in Fahrenheit. Thus, the temperature is $118.4^{\\circ}F$.",
+   "ur": "فارن ہائیٹ میں حتمی درجہ حرارت حاصل کرنے کے لیے $86.4$ اور $32$ کو جمع کریں۔ اس طرح، درجہ حرارت $118.4^{\\circ}F$ ہے۔",
+   "check": [
+    "R('86.4') + 32 == R('118.4')",
+    "Rational(9,5)*48 == Rational('86.4')",
+    "Rational('86.4') + 32 == Rational('118.4')"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

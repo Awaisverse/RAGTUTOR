@@ -1,0 +1,44 @@
+{
+ "item": "c10-ex3.3-q3",
+ "label": "i",
+ "answer_ref": "$\\begin{bmatrix} -5 \\\\ 7 \\end{bmatrix}$",
+ "steps": [
+  {
+   "math": "P = \\begin{bmatrix} 5 \\\\ -7 \\end{bmatrix}",
+   "en": "Write down the given matrix $P$. We need to find its additive inverse.",
+   "ur": "دیا گیا کالب $P$ لکھیں۔ ہمیں اس کا جمعی معکوس معلوم کرنا ہے۔"
+  },
+  {
+   "math": "",
+   "en": "By definition, the additive inverse of a matrix $P$ is the negative of the matrix, denoted by $-P$. It is obtained by changing the sign of every non-zero entry of $P$.",
+   "ur": "تعریف کے مطابق، کسی کالب $P$ کا جمعی معکوس اس کالب کا منفی کالب ہوتا ہے، جسے $-P$ سے ظاہر کیا جاتا ہے۔ یہ کالب $P$ کے ہر غیر صفر رکن کی علامت تبدیل کرنے سے حاصل ہوتا ہے۔"
+  },
+  {
+   "math": "-P = -\\begin{bmatrix} 5 \\\\ -7 \\end{bmatrix}",
+   "en": "Multiply the matrix $P$ by a negative sign.",
+   "ur": "کالب $P$ کو منفی علامت سے ضرب دیں۔",
+   "check": [
+    "Eq(-Matrix([[5], [-7]]), -Matrix([[5], [-7]]))"
+   ]
+  },
+  {
+   "math": "-P = \\begin{bmatrix} -(5) \\\\ -(-7) \\end{bmatrix} = \\begin{bmatrix} -5 \\\\ 7 \\end{bmatrix}",
+   "en": "Change the sign of each entry inside the matrix: $+5$ becomes $-5$ and $-7$ becomes $+7$.",
+   "ur": "کالب کے اندر موجود ہر رکن کی علامت تبدیل کریں: $+5$ بدل کر $-5$ ہو جائے گا اور $-7$ بدل کر $+7$ ہو جائے گا۔",
+   "check": [
+    "Eq(Matrix([[-(5)], [-(-7)]]), Matrix([[-5], [7]]))"
+   ]
+  },
+  {
+   "math": "\\text{Additive inverse of } P = \\begin{bmatrix} -5 \\\\ 7 \\end{bmatrix}",
+   "en": "Thus, the additive inverse of the matrix $P$ is $\\begin{bmatrix} -5 \\\\ 7 \\end{bmatrix}$.",
+   "ur": "پس، کالب $P$ کا جمعی معکوس $\\begin{bmatrix} -5 \\\\ 7 \\end{bmatrix}$ ہے۔",
+   "check": [
+    "Eq(Matrix([[5], [-7]]) + Matrix([[-5], [7]]), Matrix([[0], [0]]))",
+    "Eq(Matrix([[0], [0]]), Matrix([[0], [0]]))"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

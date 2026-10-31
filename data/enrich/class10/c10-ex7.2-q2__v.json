@@ -1,0 +1,56 @@
+{
+ "item": "c10-ex7.2-q2",
+ "label": "v",
+ "answer_ref": "$4.29$ cm$^2$",
+ "steps": [
+  {
+   "math": "c = 4\\text{ cm},\\quad \\beta = 36^\\circ,\\quad \\gamma = 80^\\circ",
+   "en": "Write down the given side and two angles of triangle $ABC$.",
+   "ur": "مثلث $ABC$ کا دیا گیا ضلع اور دو زاویے لکھیں۔",
+   "check": [
+    "4 == 4",
+    "36 == 36",
+    "80 == 80"
+   ]
+  },
+  {
+   "math": "\\alpha + \\beta + \\gamma = 180^\\circ",
+   "en": "The sum of the interior angles of a triangle is always $180^\\circ$.",
+   "ur": "مثلث کے اندرونی زاویوں کا مجموعہ ہمیشہ $180^\\circ$ ہوتا ہے۔"
+  },
+  {
+   "math": "\\alpha = 180^\\circ - 36^\\circ - 80^\\circ = 64^\\circ",
+   "en": "Substitute the values of $\\beta$ and $\\gamma$ to find the third angle $\\alpha$.",
+   "ur": "تیسرا زاویہ $\\alpha$ معلوم کرنے کے لیے $\\beta$ اور $\\gamma$ کی قیمتیں درج کریں۔",
+   "check": [
+    "180 - 36 - 80 == 64"
+   ]
+  },
+  {
+   "math": "\\text{Area of } \\triangle ABC = \\frac{c^2 \\sin\\alpha \\sin\\beta}{2 \\sin\\gamma}",
+   "en": "Use the formula for the area of a triangle when one side $c$ and the angles are known.",
+   "ur": "مثلث کے رقبے کا فارمولا استعمال کریں جب ایک ضلع $c$ اور زاویے معلوم ہوں۔"
+  },
+  {
+   "math": "\\text{Area of } \\triangle ABC = \\frac{4^2 \\sin 64^\\circ \\sin 36^\\circ}{2 \\sin 80^\\circ} = \\frac{16 \\sin 64^\\circ \\sin 36^\\circ}{2 \\sin 80^\\circ}",
+   "en": "Substitute $c = 4$, $\\alpha = 64^\\circ$, $\\beta = 36^\\circ$, and $\\gamma = 80^\\circ$ into the formula and evaluate $4^2 = 16$.",
+   "ur": "فارمولے میں $c = 4$، $\\alpha = 64^\\circ$، $\\beta = 36^\\circ$ اور $\\gamma = 80^\\circ$ درج کریں اور $4^2 = 16$ حل کریں۔",
+   "check": [
+    "4**2 == 16",
+    "(4**2*sin(64*pi/180)*sin(36*pi/180))/(2*sin(80*pi/180)) == (16*sin(64*pi/180)*sin(36*pi/180))/(2*sin(80*pi/180))"
+   ]
+  },
+  {
+   "math": "\\text{Area of } \\triangle ABC \\approx \\frac{16 (0.8988) (0.5878)}{2 (0.9848)} \\approx \\frac{8.4528}{1.9696} \\approx 4.29\\text{ cm}^2",
+   "en": "Substitute the trigonometric values and simplify to find the area rounded to two decimal places.",
+   "ur": "تکونیاتی قیمتیں درج کریں اور دو اعشاریہ تک رقبہ معلوم کرنے کے لیے مختصر کریں۔",
+   "check": [
+    "Abs((16*sin(64*pi/180)*sin(36*pi/180))/(2*sin(80*pi/180)) - 4.29) <= 0.005",
+    "180 - 116 == 64",
+    "Abs((4**2*sin((64)*pi/180)*sin((36)*pi/180)/(2*sin((80)*pi/180))) - 4.29) <= 0.0050000010000000004"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

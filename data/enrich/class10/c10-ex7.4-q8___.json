@@ -1,0 +1,68 @@
+{
+ "item": "c10-ex7.4-q8",
+ "label": "",
+ "answer_ref": "$231.76$ km",
+ "steps": [
+  {
+   "math": "d_1 = 150\\text{ km (East)}, \\quad d_2 = 100\\text{ km at } \\theta = 45^\\circ \\text{ (North of East)}",
+   "en": "Identify the given distances and the angle of the second part of the flight.",
+   "ur": "دیے گئے فاصلوں اور پرواز کے دوسرے حصے کے زاویے کی نشاندہی کریں۔",
+   "check": [
+    "150 == 150",
+    "100 == 100",
+    "45 == 45"
+   ]
+  },
+  {
+   "math": "d_{2x} = 100\\cos 45^\\circ \\approx 70.71\\text{ km}, \\quad d_{2y} = 100\\sin 45^\\circ \\approx 70.71\\text{ km}",
+   "en": "Resolve the second displacement $d_2$ into its East ($x$) and North ($y$) components using trigonometric ratios.",
+   "ur": "مثلثیاتی نسبتوں کا استعمال کرتے ہوئے دوسرے ہٹاؤ $d_2$ کو اس کے مشرقی ($x$) اور شمالی ($y$) اجزاء میں تحلیل کریں۔",
+   "check": [
+    "Abs((100*cos(45*pi/180)) - 70.71) <= 0.005",
+    "Abs((100*sin(45*pi/180)) - 70.71) <= 0.005"
+   ]
+  },
+  {
+   "math": "\\text{Total East } (X) = 150 + 100\\cos 45^\\circ \\approx 150 + 70.71 = 220.71\\text{ km}",
+   "en": "Find the total displacement towards the East by adding the Eastward distances.",
+   "ur": "مشرق کی طرف فاصلوں کو جمع کر کے مشرق کی طرف کل ہٹاؤ معلوم کریں۔",
+   "check": [
+    "150 + 70.71 == 220.71",
+    "Abs((150 + 100*cos(45*pi/180)) - 220.71) <= 0.005"
+   ]
+  },
+  {
+   "math": "\\text{Total North } (Y) = 0 + 100\\sin 45^\\circ \\approx 70.71\\text{ km}",
+   "en": "Find the total displacement towards the North. Since the first part of the flight is purely East, its North component is $0$.",
+   "ur": "شمال کی طرف کل ہٹاؤ معلوم کریں۔ چونکہ پرواز کا پہلا حصہ خالصتاً مشرق کی طرف ہے، اس لیے اس کا شمالی جزو $0$ ہے۔",
+   "check": [
+    "0 + 70.71 == 70.71",
+    "Abs((100*sin(45*pi/180)) - 70.71) <= 0.005"
+   ]
+  },
+  {
+   "math": "D = \\sqrt{X^2 + Y^2} = \\sqrt{(220.71)^2 + (70.71)^2}",
+   "en": "Since East and North are perpendicular to each other, apply the Pythagoras theorem to find the magnitude of the total displacement $D$.",
+   "ur": "چونکہ مشرق اور شمال ایک دوسرے پر عمود ہیں، اس لیے کل ہٹاؤ $D$ کی مقدار معلوم کرنے کے لیے مسئلہ فیثا غورث کا اطلاق کریں۔",
+   "check": [
+    "sqrt(220.71**2 + 70.71**2) == sqrt(220.71**2 + 70.71**2)"
+   ]
+  },
+  {
+   "math": "D = \\sqrt{48712.9041 + 4999.9041} = \\sqrt{53712.8082} \\approx 231.76\\text{ km}",
+   "en": "Calculate the squares, add them together, and take the square root to get the final displacement.",
+   "ur": "مربع معلوم کریں، انہیں آپس میں جمع کریں، اور حتمی ہٹاؤ حاصل کرنے کے لیے جزر لیں۔",
+   "check": [
+    "Abs(220.71**2 - 48712.9041) <= 1e-6",
+    "Abs(70.71**2 - 4999.9041) <= 1e-6",
+    "Abs((48712.9041 + 4999.9041) - 53712.8082) <= 1e-6",
+    "Abs(sqrt(53712.8082) - 231.76) <= 0.005",
+    "Abs((150 + 100*cos((45)*pi/180)) - 220.71) <= 0.0050000010000000004",
+    "Abs((100*sin((45)*pi/180)) - 70.71) <= 0.0050000010000000004",
+    "Abs((sqrt((150 + 100*cos((45)*pi/180))**2 + (100*sin((45)*pi/180))**2)) - 231.76) <= 0.0050000010000000004"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

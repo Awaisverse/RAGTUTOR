@@ -1,0 +1,46 @@
+{
+ "item": "c10-rev12-q1",
+ "label": "ii",
+ "answer_ref": "(c) $0.5$",
+ "steps": [
+  {
+   "math": "S = \\{H, T\\}, \\quad n(S) = 2",
+   "en": "When a fair coin is tossed once, there are two possible outcomes: Head ($H$) and Tail ($T$). Thus, the total number of outcomes in the sample space $S$ is $2$.",
+   "ur": "جب ایک سکے کو ایک بار اچھالا جاتا ہے تو دو ممکنہ نتائج آ سکتے ہیں: ہیڈ ($H$) اور ٹیل ($T$)۔ اس لیے نمونہ فضا $S$ میں کل نتائج کی تعداد $2$ ہے۔",
+   "check": [
+    "2 == 2"
+   ]
+  },
+  {
+   "math": "A = \\{H\\}, \\quad n(A) = 1",
+   "en": "Let $A$ be the event of getting a head. There is only $1$ favourable outcome.",
+   "ur": "فرض کریں $A$ ہیڈ آنے کا وقوعہ ہے۔ اس میں صرف $1$ موافق نتیجہ ہے۔",
+   "check": [
+    "1 == 1"
+   ]
+  },
+  {
+   "math": "P(A) = \\frac{n(A)}{n(S)}",
+   "en": "According to the formula of probability, the probability of an event is the number of favourable outcomes divided by the total number of possible outcomes.",
+   "ur": "احتمال کے فارمولے کے مطابق، کسی وقوعہ کا احتمال موافق نتائج کی تعداد کو کل ممکنہ نتائج کی تعداد پر تقسیم کرنے سے حاصل ہوتا ہے۔"
+  },
+  {
+   "math": "P(A) = \\frac{1}{2} = 0.5",
+   "en": "Substitute $n(A) = 1$ and $n(S) = 2$ into the formula and convert the fraction to a decimal.",
+   "ur": "فارمولے میں $n(A) = 1$ اور $n(S) = 2$ درج کریں اور کسر کو اعشاریہ میں تبدیل کریں۔",
+   "check": [
+    "R(1, 2) == R(5, 10)"
+   ]
+  },
+  {
+   "math": "\\text{Answer: (c) } 0.5",
+   "en": "The calculated probability is $0.5$, which matches option (c).",
+   "ur": "معلوم کیا گیا احتمال $0.5$ ہے، جو کہ آپشن (c) سے مطابقت رکھتا ہے۔",
+   "check": [
+    "R(1,2) == R(5,10)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

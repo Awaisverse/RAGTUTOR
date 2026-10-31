@@ -1,0 +1,43 @@
+{
+ "item": "c10-rev7-q1",
+ "label": "iv",
+ "answer_ref": "(c) $\\cos\\theta$",
+ "steps": [
+  {
+   "math": "\\sin(90^\\circ + \\theta)",
+   "en": "We need to find the simplified form of the trigonometric expression $\\sin(90^\\circ + \\theta)$ using allied angles.",
+   "ur": "ہمیں مثلثیاتی جملے $\\sin(90^\\circ + \\theta)$ کی مختصر شکل معلوم کرنی ہے۔"
+  },
+  {
+   "math": "90^\\circ + \\theta \\in \\text{Quadrant II}",
+   "en": "Assuming $\\theta$ is an acute angle, adding it to $90^\\circ$ places the angle $(90^\\circ + \\theta)$ in the second quadrant, where the sine function is positive.",
+   "ur": "فرض کریں کہ $\\theta$ ایک حادہ زاویہ ہے، تو اسے $90^\\circ$ میں جمع کرنے سے زاویہ $(90^\\circ + \\theta)$ دوسرے ربع (Quadrant II) میں آتا ہے، جہاں $\\sin$ مثبت ہوتا ہے۔"
+  },
+  {
+   "math": "90^\\circ = 1 \\times 90^\\circ",
+   "en": "Since the angle is associated with $90^\\circ$ (which is an odd multiple of $90^\\circ$), the trigonometric ratio changes to its co-ratio, so $\\sin$ changes to $\\cos$.",
+   "ur": "چونکہ زاویہ $90^\\circ$ کے ساتھ منسلک ہے (جو کہ $90^\\circ$ کا طاق ضعف ہے)، اس لیے مثلثیاتی نسبت अपनी شریک نسبت (co-ratio) میں تبدیل ہو جاتی ہے، یعنی $\\sin$ تبدیل ہو کر $\\cos$ بن جاتا ہے۔",
+   "check": [
+    "90 == 1*90"
+   ]
+  },
+  {
+   "math": "\\sin(90^\\circ + \\theta) = +\\cos\\theta = \\cos\\theta",
+   "en": "Combining the positive sign from Quadrant II and the co-ratio $\\cos\\theta$, we get the simplified expression.",
+   "ur": "دوسرے ربع کی مثبت علامت اور شریک نسبت $\\cos\\theta$ کو ملا کر ہمیں مختصر شکل حاصل ہوتی ہے۔",
+   "check": [
+    "sin(pi/2 + t) == cos(t)"
+   ]
+  },
+  {
+   "math": "\\text{Answer: (c) } \\cos\\theta",
+   "en": "Comparing our result with the given options, option (c) is the correct answer.",
+   "ur": "اپنے نتیجے کا دیے گئے آپشنز سے موازنہ کرنے پر، آپشن (c) درست جواب ہے۔",
+   "check": [
+    "sin(pi/2 + t) == cos(t)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

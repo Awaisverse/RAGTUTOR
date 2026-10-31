@@ -1,0 +1,43 @@
+{
+ "item": "c10-ex7.3-q1",
+ "label": "i",
+ "answer_ref": "$6.4$ cm",
+ "steps": [
+  {
+   "math": "FE = 5\\ \\text{cm}, \\quad EC = 4\\ \\text{cm}, \\quad m\\angle FEC = 90^\\circ",
+   "en": "Identify the given lengths and the right angle in the triangle $FEC$ to find the length of the hypotenuse $\\overline{CF}$.",
+   "ur": "وتر $\\overline{CF}$ کی لمبائی معلوم کرنے کے لیے مثلث $FEC$ میں دی گئی لمبائیاں اور قائمہ زاویہ لکھیں۔"
+  },
+  {
+   "math": "CF^2 = FE^2 + EC^2",
+   "en": "Since $\\triangle FEC$ is a right-angled triangle with the right angle at $E$, we apply the Pythagoras theorem.",
+   "ur": "چونکہ $\\triangle FEC$ ایک قائمہ الزاویہ مثلث ہے جس میں زاویہ $E$ قائمہ ہے، اس لیے ہم مسئلہ فیثا غورث کا اطلاق کرتے ہیں۔"
+  },
+  {
+   "math": "CF^2 = 5^2 + 4^2",
+   "en": "Substitute the given values $FE = 5$ and $EC = 4$ into the formula.",
+   "ur": "فارمولے میں دی گئی قیمتیں $FE = 5$ اور $EC = 4$ درج کریں۔"
+  },
+  {
+   "math": "CF^2 = 25 + 16 = 41",
+   "en": "Evaluate the squares and add them together.",
+   "ur": "مربع لیں اور انہیں آپس میں جمع کریں۔",
+   "check": [
+    "5**2 == 25",
+    "4**2 == 16",
+    "25 + 16 == 41"
+   ]
+  },
+  {
+   "math": "CF = \\sqrt{41} \\approx 6.4\\ \\text{cm}",
+   "en": "Take the square root on both sides and round the result to one decimal place. Thus, the length of $\\overline{CF}$ is $6.4$ cm.",
+   "ur": "دونوں طرف جزر المربع لیں اور جواب کو اعشاریہ کے ایک درجہ تک محدود کریں۔ اس طرح $\\overline{CF}$ کی لمبائی $6.4$ سینٹی میٹر ہے۔",
+   "check": [
+    "Abs((sqrt(41)) - 6.4) <= 0.050000001",
+    "5**2 + 4**2 == 41"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

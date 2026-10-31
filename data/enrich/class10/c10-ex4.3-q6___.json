@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex4.3-q6",
+ "label": "",
+ "answer_ref": "$T < 34.5^\\circ$ or $T > 39.5^\\circ$",
+ "steps": [
+  {
+   "math": "|T - 37^\\circ| > 2.5^\\circ",
+   "en": "Write down the given absolute value inequality representing the temperature condition.",
+   "ur": "درجہ حرارت کی شرط کو ظاہر کرنے والی دی گئی مطلق قیمت کی ناہمواری لکھیں۔"
+  },
+  {
+   "math": "T - 37 < -2.5 \\quad \\text{or} \\quad T - 37 > 2.5",
+   "en": "By the property of absolute value inequalities, $|A| > k$ is equivalent to $A < -k$ or $A > k$.",
+   "ur": "مطلق قیمت کی ناہمواریوں کی خاصیت کے مطابق، $|A| > k$ کا مطلب $A < -k$ یا $A > k$ ہوتا ہے۔"
+  },
+  {
+   "math": "T < 37 - 2.5 \\quad \\text{or} \\quad T > 37 + 2.5",
+   "en": "Add $37$ to both sides of each inequality to isolate $T$.",
+   "ur": "$T$ کو الگ کرنے کے لیے ہر ناہمواری کے دونوں اطراف میں $37$ جمع کریں۔"
+  },
+  {
+   "math": "T < 34.5 \\quad \\text{or} \\quad T > 39.5",
+   "en": "Simplify both inequalities by performing the subtraction and addition.",
+   "ur": "تفریق اور جمع کا عمل کر کے دونوں ناہمواریوں کو مختصر کریں۔",
+   "check": [
+    "37 - 2.5 == 34.5",
+    "37 + 2.5 == 39.5",
+    "Abs(34.4 - 37) > 2.5",
+    "Abs(39.6 - 37) > 2.5"
+   ]
+  },
+  {
+   "math": "T < 34.5^\\circ \\quad \\text{or} \\quad T > 39.5^\\circ",
+   "en": "Thus, the process must be stopped if the temperature is below $34.5^\\circ C$ or above $39.5^\\circ C$.",
+   "ur": "اس طرح، اگر درجہ حرارت $34.5^\\circ C$ سے کم یا $39.5^\\circ C$ سے زیادہ ہو جائے تو عمل کو روک دینا چاہیے۔",
+   "check": [
+    "Abs(34.4 - 37) > 2.5",
+    "Abs(39.6 - 37) > 2.5",
+    "Abs(37 - 37) <= 2.5"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

@@ -1,0 +1,41 @@
+{
+ "item": "c10-ex1.1-q1",
+ "label": "ii",
+ "answer_ref": "$1$",
+ "steps": [
+  {
+   "math": "i^{16}",
+   "en": "We are given the imaginary number $i^{16}$ and need to simplify it.",
+   "ur": "ہمیں خیالی عدد $i^{16}$ دیا گیا ہے اور ہمیں اسے مختصر کرنا ہے۔"
+  },
+  {
+   "math": "i^{16} = (i^2)^8",
+   "en": "To simplify a high power of $i$, we rewrite the exponent 16 as a multiple of 2, using the power of a power rule $(a^m)^n = a^{m \\cdot n}$.",
+   "ur": "$i$ کی بڑی طاقت کو مختصر کرنے کے لیے، ہم قوت نما کے اصول $(a^m)^n = a^{m \\cdot n}$ کا استعمال کرتے ہوئے طاقت 16 کو 2 کے مضرب کے طور پر لکھتے ہیں۔",
+   "check": [
+    "I**16 == (I**2)**8"
+   ]
+  },
+  {
+   "math": "= (-1)^8",
+   "en": "From the definition of the imaginary unit $i$, we know that $i^2 = -1$. Substitute this value into the expression.",
+   "ur": "خیالی اکائی $i$ کی تعریف سے، ہم جانتے ہیں کہ $i^2 = -1$ ہوتا ہے۔ یہ قیمت جملے میں درج کریں۔",
+   "check": [
+    "(I**2)**8 == (-1)**8"
+   ]
+  },
+  {
+   "math": "= 1",
+   "en": "Since $-1$ is raised to an even power (8), the result is positive 1. Thus, the simplified form of $i^{16}$ is $1$.",
+   "ur": "چونکہ $-1$ کی طاقت ایک جفت عدد (8) ہے، اس لیے نتیجہ مثبت 1 ہوگا۔ لہٰذا، $i^{16}$ کی مختصر شکل $1$ ہے۔",
+   "check": [
+    "(-1)**8 == 1",
+    "I**16 == 1",
+    "1*I**(16) == 1*I**0",
+    "1*I**(16) == (1)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

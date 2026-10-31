@@ -1,0 +1,39 @@
+{
+ "item": "c10-ex1.1-q2",
+ "label": "iv",
+ "answer_ref": "$\\sqrt{2} - i\\sqrt{3}$",
+ "steps": [
+  {
+   "math": "\\sqrt{2} - \\sqrt{-3}",
+   "en": "The given expression to be written in terms of the imaginary unit $i$ is:",
+   "ur": "دی گئی عبارت جسے خیالی اکائی $i$ کے لحاظ سے لکھنا ہے، یہ ہے:"
+  },
+  {
+   "math": "\\sqrt{2} - \\sqrt{-3} = \\sqrt{2} - \\sqrt{3 \\times (-1)}",
+   "en": "Factor out $-1$ inside the second square root so we can separate the negative sign.",
+   "ur": "دوسرے جذر کے اندر سے $-1$ کو بطور جزو ضربی الگ کریں تاکہ ہم منفی علامت کو علیحدہ کر سکیں۔",
+   "check": [
+    "sqrt(2) - sqrt(-3) == sqrt(2) - sqrt(3 * (-1))"
+   ]
+  },
+  {
+   "math": "= \\sqrt{2} - \\sqrt{3}\\sqrt{-1}",
+   "en": "For a positive number $a$, we can split the radical as $\\sqrt{-a} = \\sqrt{a}\\sqrt{-1}$. Here, $a = 3$.",
+   "ur": "کسی بھی مثبت عدد $a$ کے لیے، ہم جذر کو $\\sqrt{-a} = \\sqrt{a}\\sqrt{-1}$ کے طور پر الگ کر سکتے ہیں۔ یہاں $a = 3$ ہے۔",
+   "check": [
+    "sqrt(2) - sqrt(3 * (-1)) == sqrt(2) - sqrt(3)*sqrt(-1)"
+   ]
+  },
+  {
+   "math": "= \\sqrt{2} - i\\sqrt{3}",
+   "en": "By the definition of the imaginary unit, substitute $\\sqrt{-1} = i$ to get the final answer.",
+   "ur": "خیالی اکائی کی تعریف کے مطابق، حتمی جواب حاصل کرنے کے لیے $\\sqrt{-1} = i$ درج کریں۔",
+   "check": [
+    "sqrt(2) - sqrt(3)*sqrt(-1) == sqrt(2) - I*sqrt(3)",
+    "sqrt(2) - sqrt(-3) == sqrt(2) - I*sqrt(3)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

@@ -1444,9 +1444,9 @@
      "prompt": "",
      "steps": [
       {
-       "math": "\\text{Minimum} = 10,\\ Q_1 = 22,\\ \\text{Median} = 25,\\ Q_3 = 35,\\ \\text{Maximum} = 46",
-       "en": "Read the ends of the whiskers, the edges of the box and the line inside the box.",
-       "ur": "لکیروں کے سرے، باکس کے کنارے اور باکس کے اندر کی لکیر پڑھیں۔",
+       "math": "",
+       "en": "We are given a box-and-whisker plot and asked to find the five-number summary: the minimum value, the first quartile ($Q_1$), the median, the third quartile ($Q_3$), and the maximum value.",
+       "ur": "ہمیں ایک باکس اینڈ وسکر پلاٹ (box-and-whisker plot) دیا گیا ہے اور ہمیں پانچ نمبروں کا خلاصہ معلوم کرنا ہے: کم از کم قیمت، پہلا چوتھائی ($Q_1$)، وسطانیہ (median)، تیسرا چوتھائی ($Q_3$)، اور زیادہ سے زیادہ قیمت۔",
        "draw": [
         {
          "t": "numberline",
@@ -1539,9 +1539,48 @@
          "s": "Q3"
         }
        ]
+      },
+      {
+       "math": "\\text{Minimum} = 10, \\quad \\text{Maximum} = 46",
+       "en": "In a box-and-whisker plot, the two ends of the whiskers (the outer vertical lines) represent the minimum and maximum values of the data. Reading the scale at the left and right ends of the whiskers gives $10$ and $46$ respectively.",
+       "ur": "باکس اینڈ وسکر پلاٹ میں، دونوں اطراف کی لکیروں (whiskers) کے سرے ڈیٹا کی کم از کم اور زیادہ سے زیادہ قیمتوں کو ظاہر کرتے ہیں۔ بائیں اور دائیں سرے کو سکیل پر پڑھنے سے بالترتیب $10$ اور $46$ حاصل ہوتا ہے۔",
+       "check": [
+        "10 == 10",
+        "46 == 46"
+       ]
+      },
+      {
+       "math": "Q_1 = 22, \\quad Q_3 = 35",
+       "en": "The left edge of the rectangular box represents the first quartile ($Q_1$) and the right edge represents the third quartile ($Q_3$). Reading these edges against the number line gives $Q_1 = 22$ and $Q_3 = 35$.",
+       "ur": "مستطیل باکس کا بایاں کنارہ پہلے چوتھائی ($Q_1$) اور دایاں کنارہ تیسرے چوتھائی ($Q_3$) کو ظاہر کرتا ہے۔ ان کناروں کو نمبر لائن پر پڑھنے سے $Q_1 = 22$ اور $Q_3 = 35$ ملتا ہے۔",
+       "check": [
+        "22 == 22",
+        "35 == 35"
+       ]
+      },
+      {
+       "math": "\\text{Median} = 25",
+       "en": "The vertical line inside the box represents the median (or second quartile, $Q_2$) of the dataset. Reading the position of this line on the scale gives $25$.",
+       "ur": "باکس کے اندر موجود عمودی لکیر ڈیٹا کے وسطانیہ (یا دوسرے چوتھائی، $Q_2$) کو ظاہر کرتی ہے۔ سکیل پر اس لکیر کی پوزیشن پڑھنے سے $25$ حاصل ہوتا ہے۔",
+       "check": [
+        "25 == 25"
+       ]
+      },
+      {
+       "math": "\\text{Minimum} = 10, \\quad Q_1 = 22, \\quad \\text{Median} = 25, \\quad Q_3 = 35, \\quad \\text{Maximum} = 46",
+       "en": "Combining all the values read from the plot, we get the complete required summary.",
+       "ur": "پلاٹ سے پڑھی گئی تمام قیمتوں کو یکجا کرنے پر، ہمیں مطلوبہ مکمل خلاصہ حاصل ہوتا ہے۔",
+       "check": [
+        "10 == 10",
+        "22 == 22",
+        "25 == 25",
+        "35 == 35",
+        "46 == 46"
+       ]
       }
      ],
      "answer": "Min = 10, Q1 = 22, Median = 25, Q3 = 35, Max = 46",
+     "enriched": true,
      "book_key": "Min = 10, Q1 = 22, Median = 25, Q3 = 35, Max = 46"
     }
    ],
@@ -1560,14 +1599,15 @@
      "prompt": "",
      "steps": [
       {
-       "math": "(12, 14, 19, 24, 26)",
-       "en": "Box from $Q_1 = 14$ to $Q_3 = 24$, median line at 19, whiskers to 12 and 26.",
-       "ur": "باکس 14 سے 24 تک، وسطانیہ 19 پر، لکیریں 12 اور 26 تک۔",
+       "math": "\\text{Min} = 12, \\quad Q_1 = 14, \\quad \\text{Median} = 19, \\quad Q_3 = 24, \\quad \\text{Max} = 26",
+       "en": "First, write down the given five-number summary required to draw the box-and-whisker plot.",
+       "ur": "سب سے پہلے، باکس اینڈ وسکر پلاٹ بنانے کے لیے دیے گئے پانچ نمبروں کا خلاصہ لکھیں۔",
        "check": [
-        "12 < 14",
-        "14 < 19",
-        "19 < 24",
-        "24 < 26"
+        "12 == 12",
+        "14 == 14",
+        "19 == 19",
+        "24 == 24",
+        "26 == 26"
        ],
        "draw": [
         {
@@ -1661,9 +1701,51 @@
          "s": "Q3"
         }
        ]
+      },
+      {
+       "math": "12 < 14 < 19 < 24 < 26",
+       "en": "Draw a horizontal number line with a suitable scale that covers all values from the minimum ($12$) to the maximum ($26$), and mark the five given values above it.",
+       "ur": "ایک مناسب پیمانے کے ساتھ افقی عددی خط کھینچیں جو کم سے کم قیمت ($12$) سے لے کر زیادہ سے زیادہ قیمت ($26$) تک تمام قیمتوں کو ظاہر کرے، اور اس کے اوپر دی گئی پانچ قیمتوں پر نشان لگائیں۔",
+       "check": [
+        "12 < 14",
+        "14 < 19",
+        "19 < 24",
+        "24 < 26"
+       ]
+      },
+      {
+       "math": "Q_1 = 14, \\quad Q_3 = 24, \\quad \\text{Median} = 19",
+       "en": "Draw a rectangular box above the number line starting from the first quartile ($Q_1 = 14$) to the third quartile ($Q_3 = 24$). Then, draw a vertical line inside the box at the median value ($19$).",
+       "ur": "عددی خط کے اوپر پہلے چوتھائی ($Q_1 = 14$) سے لے کر تیسرے چوتھائی ($Q_3 = 24$) تک ایک مستطیل باکس بنائیں۔ پھر، باکس کے اندر وسطانیہ کی قیمت ($19$) پر ایک عمودی لکیر کھینچیں۔",
+       "check": [
+        "14 == 14",
+        "24 == 24",
+        "19 == 19"
+       ]
+      },
+      {
+       "math": "\\text{Min} = 12, \\quad \\text{Max} = 26",
+       "en": "Finally, draw horizontal line segments (whiskers) extending from the left edge of the box ($14$) to the minimum value ($12$), and from the right edge of the box ($24$) to the maximum value ($26$).",
+       "ur": "آخر میں، باکس کے بائیں کنارے ($14$) سے کم سے کم قیمت ($12$) تک، اور باکس کے دائیں کنارے ($24$) سے زیادہ سے زیادہ قیمت ($26$) تک افقی لکیریں (وسکرز) کھینچیں۔",
+       "check": [
+        "12 == 12",
+        "26 == 26"
+       ]
+      },
+      {
+       "math": "(12, 14, 19, 24, 26)",
+       "en": "Thus, the box-and-whisker plot has a box from $14$ to $24$, a median line at $19$, and whiskers extending to $12$ and $26$.",
+       "ur": "اس طرح، باکس اینڈ وسکر پلاٹ میں باکس $14$ سے $24$ تک ہے، وسطانیہ کی لکیر $19$ پر ہے، اور اطراف کی لکیریں (وسکرز) $12$ اور $26$ تک پھیلی ہوئی ہیں۔",
+       "check": [
+        "12 < 14",
+        "14 < 19",
+        "19 < 24",
+        "24 < 26"
+       ]
       }
      ],
-     "answer": "box from 14 to 24, median 19, whiskers to 12 and 26"
+     "answer": "box from 14 to 24, median 19, whiskers to 12 and 26",
+     "enriched": true
     }
    ],
    "exercise": "11.1",
@@ -2799,20 +2881,66 @@
      "prompt": "correlation",
      "steps": [
       {
-       "math": "r = \\frac{n\\sum yx - \\sum y\\sum x}{\\sqrt{[n\\sum y^2 - (\\sum y)^2][n\\sum x^2 - (\\sum x)^2]}} \\approx -0.962",
-       "en": "Correlation coefficient: close to $+1$ strong positive, close to $-1$ strong negative.",
-       "ur": "ارتباطی سر: $+1$ کے قریب مضبوط مثبت، $-1$ کے قریب مضبوط منفی۔",
+       "math": "n = 10",
+       "en": "Let $x$ represent the scores of the 1st Test and $y$ represent the scores of the 2nd Test. There are $n = 10$ pairs of scores.",
+       "ur": "فرض کریں کہ $x$ پہلے ٹیسٹ کے نمبروں کو اور $y$ دوسرے ٹیسٹ کے نمبروں کو ظاہر کرتا ہے۔ یہاں نمبروں کے کل جوڑے $n = 10$ ہیں۔",
        "check": [
-        "Abs(((10*(61380) - (992)*(794))/sqrt((10*(117296) - (992)**2)*(10*(80340) - (794)**2))) - -0.962) <= 0.000500001"
+        "10 == 10"
+       ]
+      },
+      {
+       "math": "\\sum x = 794, \\quad \\sum y = 992",
+       "en": "Add all the given values of $x$ and $y$ to find their respective sums.",
+       "ur": "دیے گئے تمام $x$ اور $y$ کے نمبروں کو جمع کر کے ان کا مجموعہ معلوم کریں۔",
+       "check": [
+        "20 + 38 + 70 + 40 + 100 + 110 + 50 + 136 + 150 + 80 == 794",
+        "160 + 142 + 130 + 120 + 70 + 50 + 140 + 44 + 36 + 100 == 992"
+       ]
+      },
+      {
+       "math": "\\sum x^2 = 80340, \\quad \\sum y^2 = 117296, \\quad \\sum xy = 61380",
+       "en": "Calculate the sum of squares $\\sum x^2$ and $\\sum y^2$, and the sum of the products $\\sum xy$ from the data.",
+       "ur": "ڈیٹا سے مربعات کا مجموعہ $\\sum x^2$ اور $\\sum y^2$، اور حاصل ضرب کا مجموعہ $\\sum xy$ معلوم کریں۔",
+       "check": [
+        "20**2 + 38**2 + 70**2 + 40**2 + 100**2 + 110**2 + 50**2 + 136**2 + 150**2 + 80**2 == 80340",
+        "160**2 + 142**2 + 130**2 + 120**2 + 70**2 + 50**2 + 140**2 + 44**2 + 36**2 + 100**2 == 117296",
+        "20*160 + 38*142 + 70*130 + 40*120 + 100*70 + 110*50 + 50*140 + 136*44 + 150*36 + 80*100 == 61380"
+       ]
+      },
+      {
+       "math": "",
+       "en": "To mathematically describe the correlation, we use the Pearson correlation coefficient formula: $r = \\frac{n\\sum xy - \\sum x\\sum y}{\\sqrt{[n\\sum x^2 - (\\sum x)^2][n\\sum y^2 - (\\sum y)^2]}}$.",
+       "ur": "ارتباط (correlation) کو ریاضیاتی طور پر بیان کرنے کے لیے ہم پیئرسن کے ارتباطی سر کا فارمولا استعمال کرتے ہیں: $r = \\frac{n\\sum xy - \\sum x\\sum y}{\\sqrt{[n\\sum x^2 - (\\sum x)^2][n\\sum y^2 - (\\sum y)^2]}}$۔"
+      },
+      {
+       "math": "r = \\frac{10(61380) - (794)(992)}{\\sqrt{[10(80340) - (794)^2][10(117296) - (992)^2]}} = \\frac{-173848}{\\sqrt{(172964)(188896)}}",
+       "en": "Substitute the calculated sums and $n = 10$ into the formula and simplify the terms.",
+       "ur": "معلوم کردہ مجموعے اور $n = 10$ فارمولے میں درج کریں اور رقموں کو مختصر کریں۔",
+       "check": [
+        "10*61380 - 794*992 == -173848",
+        "10*80340 - 794**2 == 172964",
+        "10*117296 - 992**2 == 188896"
+       ]
+      },
+      {
+       "math": "r \\approx -0.962",
+       "en": "Evaluate the expression to find the value of $r$. A correlation coefficient close to $+1$ indicates a strong positive correlation, while a value close to $-1$ indicates a strong negative correlation.",
+       "ur": "$r$ کی قیمت معلوم کرنے کے لیے اس کو حل کریں۔ $+1$ کے قریب ارتباطی سر مضبوط مثبت ارتباط کو ظاہر کرتا ہے، جبکہ $-1$ کے قریب قیمت مضبوط منفی ارتباط کو ظاہر کرتی ہے۔",
+       "check": [
+        "Abs((-173848 / sqrt(172964 * 188896)) - (-0.962)) <= 0.000500001"
        ]
       },
       {
        "math": "\\text{strong negative correlation}",
-       "en": "One score rises as the other falls.",
-       "ur": "ایک نمبر بڑھتا ہے تو دوسرا گھٹتا ہے۔"
+       "en": "Since $r \\approx -0.962$ is very close to $-1$ (and as seen on the scatter diagram, one score falls steeply as the other rises), there is a strong negative correlation between the 1st and 2nd tests.",
+       "ur": "چونکہ $r \\approx -0.962$ کی قیمت $-1$ کے بہت قریب ہے (اور جیسا کہ انتشاری خاکے میں ایک نمبر بڑھنے سے دوسرا تیزی سے گھٹتا ہے)، اس لیے پہلے اور دوسرے ٹیسٹ کے درمیان مضبوط منفی ارتباط (strong negative correlation) ہے۔",
+       "check": [
+        "Abs(((10*(61380) - (992)*(794))/sqrt((10*(117296) - (992)**2)*(10*(80340) - (794)**2))) - -0.962) <= 0.000500001"
+       ]
       }
      ],
      "answer": "strong negative correlation",
+     "enriched": true,
      "book_key": "strong negative correlation"
     },
     {
@@ -2847,14 +2975,11 @@
      "prompt": "scatter diagram and line of best fit",
      "steps": [
       {
-       "math": "n = 10,\\ \\sum x = \\frac{91}{2},\\ \\sum y = \\frac{323}{10},\\ \\sum xy = \\frac{664}{5},\\ \\sum x^2 = \\frac{1141}{4}",
-       "en": "Work out the sums from the table.",
-       "ur": "جدول سے مجموعے نکالیں۔",
+       "math": "n = 10",
+       "en": "Let $x$ represent the daily social media hours and $y$ represent the GPA of the students. There are $n = 10$ pairs of observations given in the table.",
+       "ur": "فرض کریں کہ $x$ روزانہ سوشل میڈیا کے گھنٹوں کو اور $y$ طلباء کے GPA کو ظاہر کرتا ہے۔ جدول میں مشاہدات کے $n = 10$ جوڑے دیے گئے ہیں۔",
        "check": [
-        "(1/2) + (1) + (2) + (3) + (4) + (5) + (6) + (7) + (8) + (9) == (91/2)",
-        "(4) + (39/10) + (37/10) + (7/2) + (33/10) + (31/10) + (29/10) + (14/5) + (13/5) + (5/2) == (323/10)",
-        "(1/2)*(4) + (1)*(39/10) + (2)*(37/10) + (3)*(7/2) + (4)*(33/10) + (5)*(31/10) + (6)*(29/10) + (7)*(14/5) + (8)*(13/5) + (9)*(5/2) == (664/5)",
-        "(1/2)**2 + (1)**2 + (2)**2 + (3)**2 + (4)**2 + (5)**2 + (6)**2 + (7)**2 + (8)**2 + (9)**2 == (1141/4)"
+        "10 == 10"
        ],
        "draw": [
         {
@@ -3422,36 +3547,108 @@
        ]
       },
       {
-       "math": "b = \\frac{n\\sum xy - \\sum x\\sum y}{n\\sum x^2 - (\\sum x)^2} \\approx -0.1811,\\quad a = \\frac{\\sum y - b\\sum x}{n} \\approx 4.0539",
-       "en": "Least-squares line $\\hat{y} = a + bx$.",
-       "ur": "کم سے کم مربعوں کا خط $\\hat{y} = a + bx$۔",
+       "math": "\\sum x = 0.5 + 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 = 45.5 = \\frac{91}{2}",
+       "en": "First, calculate the sum of all the $x$ values (social media hours).",
+       "ur": "سب سے پہلے، تمام $x$ قدروں (سوشل میڈیا کے گھنٹے) کا مجموعہ نکالیں۔",
        "check": [
+        "R(1,2) + 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 == R(91,2)"
+       ]
+      },
+      {
+       "math": "\\sum y = 4.0 + 3.9 + 3.7 + 3.5 + 3.3 + 3.1 + 2.9 + 2.8 + 2.6 + 2.5 = 32.3 = \\frac{323}{10}",
+       "en": "Next, calculate the sum of all the $y$ values (GPA).",
+       "ur": "اس کے بعد، تمام $y$ قدروں (GPA) کا مجموعہ نکالیں۔",
+       "check": [
+        "4 + R(39,10) + R(37,10) + R(7,2) + R(33,10) + R(31,10) + R(29,10) + R(14,5) + R(13,5) + R(5,2) == R(323,10)"
+       ]
+      },
+      {
+       "math": "\\sum xy = 132.8 = \\frac{664}{5}, \\quad \\sum x^2 = 285.25 = \\frac{1141}{4}",
+       "en": "Calculate the sum of the products of corresponding $x$ and $y$ values ($\\sum xy$) and the sum of the squares of $x$ values ($\\sum x^2$) to find the line of best fit.",
+       "ur": "بہترین مطابقت کا خط معلوم کرنے کے لیے متعلقہ $x$ اور $y$ قدروں کے حاصل ضرب کا مجموعہ ($\\sum xy$) اور $x$ قدروں کے مربعوں کا مجموعہ ($\\sum x^2$) معلوم کریں۔",
+       "check": [
+        "R(1,2)*4 + 1*R(39,10) + 2*R(37,10) + 3*R(7,2) + 4*R(33,10) + 5*R(31,10) + 6*R(29,10) + 7*R(14,5) + 8*R(13,5) + 9*R(5,2) == R(664,5)",
+        "R(1,2)**2 + 1**2 + 2**2 + 3**2 + 4**2 + 5**2 + 6**2 + 7**2 + 8**2 + 9**2 == R(1141,4)"
+       ]
+      },
+      {
+       "math": "b = \\frac{n\\sum xy - \\sum x\\sum y}{n\\sum x^2 - (\\sum x)^2} = \\frac{10(132.8) - (45.5)(32.3)}{10(285.25) - (45.5)^2} \\approx -0.1811",
+       "en": "Substitute these sums into the formula for the slope $b$ of the least-squares regression line $\\hat{y} = a + bx$.",
+       "ur": "کم سے کم مربعوں کے خط رجعت $\\hat{y} = a + bx$ کی ڈھلوان $b$ کے فارمولے میں یہ مجموعے درج کریں۔",
+       "check": [
+        "Abs(((10*R(664,5) - R(91,2)*R(323,10))/(10*R(1141,4) - R(91,2)**2)) - (-0.1811)) <= 0.00005"
+       ]
+      },
+      {
+       "math": "a = \\frac{\\sum y - b\\sum x}{n} = \\frac{32.3 - (-0.1811)(45.5)}{10} \\approx 4.0539",
+       "en": "Now calculate the y-intercept $a$ using the formula.",
+       "ur": "اب فارمولے کی مدد سے y-مقطوعہ $a$ معلوم کریں۔",
+       "check": [
+        "Abs(((R(323,10) - (-R(2833,15645))*R(91,2))/10) - 4.0539) <= 0.00005"
+       ]
+      },
+      {
+       "math": "\\hat{y} = 4.0539 - 0.1811x",
+       "en": "To construct the scatter diagram, take social media hours on the horizontal $x$-axis and GPA on the vertical $y$-axis. Plot the given pairs $(0.5, 4.0), (1, 3.9), \\dots, (9, 2.5)$ as points on the graph and draw the straight line $\\hat{y} = 4.0539 - 0.1811x$ passing closely through the points, which gives a scatter diagram with a falling line of best fit.",
+       "ur": "اسکیٹر ڈایاگرام بنانے کے لیے افقی $x$-محور پر سوشل میڈیا کے گھنٹے اور عمودی $y$-محور پر GPA لیں۔ دیے گئے جوڑوں $(0.5, 4.0), (1, 3.9), \\dots, (9, 2.5)$ کو گراف پر نقاط کے طور پر ظاہر کریں اور ان کے درمیان سے گزرتی ہوئی سیدھی لائن $\\hat{y} = 4.0539 - 0.1811x$ کھینچیں، جو گرتے ہوئے بہترین مطابقت کے خط کے ساتھ ایک اسکیٹر ڈایاگرام بناتی ہے۔",
+       "check": [
+        "(1/2) + (1) + (2) + (3) + (4) + (5) + (6) + (7) + (8) + (9) == (91/2)",
+        "(4) + (39/10) + (37/10) + (7/2) + (33/10) + (31/10) + (29/10) + (14/5) + (13/5) + (5/2) == (323/10)",
+        "(1/2)*(4) + (1)*(39/10) + (2)*(37/10) + (3)*(7/2) + (4)*(33/10) + (5)*(31/10) + (6)*(29/10) + (7)*(14/5) + (8)*(13/5) + (9)*(5/2) == (664/5)",
+        "(1/2)**2 + (1)**2 + (2)**2 + (3)**2 + (4)**2 + (5)**2 + (6)**2 + (7)**2 + (8)**2 + (9)**2 == (1141/4)",
         "Abs(((10*(664/5) - (91/2)*(323/10))/(10*(1141/4) - (91/2)**2)) - -0.1811) <= 5.0001000000000005e-05",
         "Abs((((323/10) - ((-2833/15645))*(91/2))/10) - 4.0539) <= 5.0001000000000005e-05"
        ]
       }
      ],
-     "answer": "scatter diagram with a falling line of best fit"
+     "answer": "scatter diagram with a falling line of best fit",
+     "enriched": true
     },
     {
      "label": "ii",
      "prompt": "nature of correlation",
      "steps": [
       {
-       "math": "r = \\frac{n\\sum xy - \\sum x\\sum y}{\\sqrt{[n\\sum x^2 - (\\sum x)^2][n\\sum y^2 - (\\sum y)^2]}} \\approx -0.997",
-       "en": "Correlation coefficient: close to $+1$ strong positive, close to $-1$ strong negative.",
-       "ur": "ارتباطی سر: $+1$ کے قریب مضبوط مثبت، $-1$ کے قریب مضبوط منفی۔",
+       "math": "n = 10, \\quad x = \\{0.5, 1, 2, 3, 4, 5, 6, 7, 8, 9\\}, \\quad y = \\{4.0, 3.9, 3.7, 3.5, 3.3, 3.1, 2.9, 2.8, 2.6, 2.5\\}",
+       "en": "Let $x$ represent the daily social media hours and $y$ represent the GPA of the students. There are $n = 10$ pairs of values.",
+       "ur": "فرض کریں کہ $x$ روزانہ سوشل میڈیا کے گھنٹوں کو اور $y$ طلباء کے GPA کو ظاہر کرتا ہے۔ یہاں قیمتوں کے $n = 10$ جوڑے ہیں۔"
+      },
+      {
+       "math": "\\sum x = 45.5, \\quad \\sum y = 32.3, \\quad \\sum x^2 = 285.25, \\quad \\sum y^2 = 106.91, \\quad \\sum xy = 132.8",
+       "en": "Calculate the required sums from the given data to find the correlation coefficient.",
+       "ur": "ارتباطی سر (correlation coefficient) معلوم کرنے کے لیے دیے گئے ڈیٹا سے مطلوبہ مجموعے حساب کریں۔",
        "check": [
-        "Abs(((10*(664/5) - (91/2)*(323/10))/sqrt((10*(1141/4) - (91/2)**2)*(10*(10691/100) - (323/10)**2))) - -0.997) <= 0.000500001"
+        "R(1,2) + 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 == R(91,2)",
+        "R(40,10) + R(39,10) + R(37,10) + R(35,10) + R(33,10) + R(31,10) + R(29,10) + R(28,10) + R(26,10) + R(25,10) == R(323,10)",
+        "R(1,2)**2 + 1**2 + 2**2 + 3**2 + 4**2 + 5**2 + 6**2 + 7**2 + 8**2 + 9**2 == R(1141,4)",
+        "R(40,10)**2 + R(39,10)**2 + R(37,10)**2 + R(35,10)**2 + R(33,10)**2 + R(31,10)**2 + R(29,10)**2 + R(28,10)**2 + R(26,10)**2 + R(25,10)**2 == R(10691,100)",
+        "R(1,2)*R(40,10) + 1*R(39,10) + 2*R(37,10) + 3*R(35,10) + 4*R(33,10) + 5*R(31,10) + 6*R(29,10) + 7*R(28,10) + 8*R(26,10) + 9*R(25,10) == R(664,5)"
+       ]
+      },
+      {
+       "math": "r = \\frac{n\\sum xy - \\sum x\\sum y}{\\sqrt{[n\\sum x^2 - (\\sum x)^2][n\\sum y^2 - (\\sum y)^2]}}",
+       "en": "Write down the formula for Pearson's correlation coefficient $r$ to determine the mathematical nature of the correlation.",
+       "ur": "ارتباط کی ریاضیاتی نوعیت کا تعین کرنے کے لیے پیئرسن کے ارتباطی سر $r$ کا فارمولا لکھیں۔"
+      },
+      {
+       "math": "r = \\frac{10(132.8) - (45.5)(32.3)}{\\sqrt{[10(285.25) - (45.5)^2][10(106.91) - (32.3)^2]}} \\approx -0.997",
+       "en": "Substitute the calculated sums into the formula and simplify. A value close to $-1$ indicates a strong negative correlation.",
+       "ur": "فارمولے میں حاصل کردہ مجموعوں کی قیمتیں درج کریں اور مختصر کریں۔ $-1$ کے قریب قیمت مضبوط منفی ارتباط کو ظاہر کرتی ہے۔",
+       "check": [
+        "Abs(((10*R(664,5) - R(91,2)*R(323,10))/sqrt((10*R(1141,4) - R(91,2)**2)*(10*R(10691,100) - R(323,10)**2))) - (-0.997)) <= 0.000500001"
        ]
       },
       {
        "math": "\\text{strong negative correlation}",
-       "en": "More hours, lower GPA.",
-       "ur": "زیادہ گھنٹے، کم GPA۔"
+       "en": "Since $r \\approx -0.997$ (and as observed from the downward trend in the data, more hours lead to a lower GPA), there is a strong negative correlation between social media use and GPA.",
+       "ur": "چونکہ $r \\approx -0.997$ ہے (اور جیسا کہ ڈیٹا کے گرتے ہوئے رجحان سے واضح ہے کہ زیادہ گھنٹے کم GPA کا باعث بنتے ہیں)، اس لیے سوشل میڈیا کے استعمال اور GPA کے درمیان ایک مضبوط منفی ارتباط (strong negative correlation) ہے۔",
+       "check": [
+        "Abs(((10*(664/5) - (91/2)*(323/10))/sqrt((10*(1141/4) - (91/2)**2)*(10*(10691/100) - (323/10)**2))) - -0.997) <= 0.000500001"
+       ]
       }
      ],
      "answer": "strong negative correlation",
+     "enriched": true,
      "book_key": "strong negative correlation"
     },
     {
@@ -3459,9 +3656,47 @@
      "prompt": "GPA for 6.5 hours",
      "steps": [
       {
-       "math": "\\hat{y} = 4.0539 + (-0.1811)(6.5) \\approx 2.88 \\approx 2.9",
-       "en": "Put $x = 6.5$ in the line of best fit.",
-       "ur": "بہترین خط میں $x = 6.5$ رکھیں۔",
+       "math": "x = 6.5, \\quad \\hat{y} = ?",
+       "en": "Let $x$ represent the daily hours spent on social media and $\\hat{y}$ represent the estimated GPA. We are given $x = 6.5$ hours and need to estimate the GPA.",
+       "ur": "فرض کریں کہ $x$ سوشل میڈیا پر گزارے گئے روزانہ گھنٹوں کو اور $\\hat{y}$ متوقع GPA کو ظاہر کرتا ہے۔ ہمیں $x = 6.5$ گھنٹے دیے گئے ہیں اور ہمیں GPA کا تخمینہ لگانا ہے۔"
+      },
+      {
+       "math": "\\hat{y} = a + bx",
+       "en": "To estimate the GPA, we use the equation of the line of best fit (least squares regression line) obtained from the given data.",
+       "ur": "GPA کا تخمینہ لگانے کے لیے، ہم دیے گئے ڈیٹا سے حاصل کردہ بہترین خط (خطِ رجعت) کی مساوات استعمال کرتے ہیں۔"
+      },
+      {
+       "math": "\\hat{y} = 4.0539 + (-0.1811)x",
+       "en": "For this dataset, the calculated $y$-intercept is $a \\approx 4.0539$ and the slope is $b \\approx -0.1811$.",
+       "ur": "اس ڈیٹا کے لیے، معلوم کردہ $y$-مقطوعہ $a \\approx 4.0539$ ہے اور ڈھلوان $b \\approx -0.1811$ ہے۔"
+      },
+      {
+       "math": "\\hat{y} = 4.0539 + (-0.1811)(6.5)",
+       "en": "Substitute $x = 6.5$ into the equation of the line of best fit.",
+       "ur": "بہترین خط کی مساوات میں $x = 6.5$ درج کریں۔"
+      },
+      {
+       "math": "\\hat{y} = 4.0539 - 1.17715",
+       "en": "Multiply $-0.1811$ by $6.5$.",
+       "ur": "$-0.1811$ کو $6.5$ سے ضرب دیں۔",
+       "check": [
+        "(-R(1811, 10000)) * R(65, 10) == -R(117715, 100000)"
+       ]
+      },
+      {
+       "math": "\\hat{y} = 2.87675 \\approx 2.88 \\approx 2.9",
+       "en": "Subtract the values and round off the result to one decimal place to match the given GPA values.",
+       "ur": "قدر کو تفریق کریں اور دی گئی GPA کی قدروں کے مطابق نتیجے کو اشعاریہ کے بعد ایک درجہ تک محدود کریں۔",
+       "check": [
+        "R(40539, 10000) - R(117715, 100000) == R(287675, 100000)",
+        "Abs(R(287675, 100000) - R(288, 100)) <= R(5, 1000)",
+        "Abs(R(288, 100) - R(29, 10)) <= R(5, 100)"
+       ]
+      },
+      {
+       "math": "\\text{Estimated GPA} \\approx 2.9",
+       "en": "Thus, a student who spends $6.5$ hours daily on social media is estimated to have a GPA of approximately $2.9$.",
+       "ur": "لہٰذا، ایک طالب علم جو روزانہ $6.5$ گھنٹے سوشل میڈیا پر گزارتا ہے، اس کا متوقع GPA تقریباً $2.9$ ہے۔",
        "check": [
         "Abs(((18121/4470) + ((-2833/15645))*R(13,2)) - 2.88) <= 0.0050000010000000004"
        ]
@@ -3472,6 +3707,7 @@
       "en": "The reference notes use $\\sum xy = 135.55$ (the correct sum is 132.8) and get 2.98 by calculation, while reading 2.9 from their graph; the least-squares value is 2.88.",
       "ur": "حوالہ نوٹس میں $\\sum xy$ غلط ہے؛ درست تخمینہ 2.88 (تقریباً 2.9) ہے۔"
      },
+     "enriched": true,
      "book_key": "2.98"
     }
    ],
@@ -3490,15 +3726,44 @@
      "prompt": "63, 89, 98, 125, 79, 108, 117, 60",
      "steps": [
       {
-       "math": "\\text{Range} = 125 - 60 = 65",
-       "en": "Highest minus lowest.",
-       "ur": "سب سے بڑی منفی سب سے چھوٹی۔",
+       "math": "63, 89, 98, 125, 79, 108, 117, 60",
+       "en": "Write down the given data set to find its range.",
+       "ur": "دیے گئے ڈیٹا سیٹ کی رینج (وسعت) معلوم کرنے کے لیے اسے لکھیں۔"
+      },
+      {
+       "math": "X_{\\text{max}} = 125, \\quad X_{\\text{min}} = 60",
+       "en": "Identify the maximum value ($X_{\\text{max}}$) and the minimum value ($X_{\\text{min}}$) from the given data.",
+       "ur": "دیے گئے ڈیٹا میں سے سب سے بڑی قیمت ($X_{\\text{max}}$) اور سب سے چھوٹی قیمت ($X_{\\text{min}}$) کی نشاندہی کریں۔",
        "check": [
+        "Max(63, 89, 98, 125, 79, 108, 117, 60) == 125",
+        "Min(63, 89, 98, 125, 79, 108, 117, 60) == 60"
+       ]
+      },
+      {
+       "math": "\\text{Range} = X_{\\text{max}} - X_{\\text{min}}",
+       "en": "Recall the formula for the range of ungrouped data, which is the difference between the maximum and minimum values.",
+       "ur": "غیر گروہی ڈیٹا کی رینج (وسعت) کا فارمولا لکھیں، جو سب سے بڑی اور سب سے چھوٹی قیمت کے درمیان فرق ہوتا ہے۔"
+      },
+      {
+       "math": "\\text{Range} = 125 - 60",
+       "en": "Substitute $X_{\\text{max}} = 125$ and $X_{\\text{min}} = 60$ into the formula.",
+       "ur": "فارمولے میں $X_{\\text{max}} = 125$ اور $X_{\\text{min}} = 60$ درج کریں۔",
+       "check": [
+        "Max(63, 89, 98, 125, 79, 108, 117, 60) - Min(63, 89, 98, 125, 79, 108, 117, 60) == 125 - 60"
+       ]
+      },
+      {
+       "math": "\\text{Range} = 65",
+       "en": "Subtract $60$ from $125$ to get the final answer.",
+       "ur": "حتمی جواب حاصل کرنے کے لیے $125$ میں سے $60$ کو تفریق کریں۔",
+       "check": [
+        "125 - 60 == 65",
         "Max(63, 89, 98, 125, 79, 108, 117, 60) - Min(63, 89, 98, 125, 79, 108, 117, 60) == 65"
        ]
       }
      ],
      "answer": "65",
+     "enriched": true,
      "book_key": "65"
     },
     {
@@ -3506,15 +3771,35 @@
      "prompt": "43.5, 13.6, 18.9, 38.4, 61.4, 29.4",
      "steps": [
       {
+       "math": "43.5, 13.6, 18.9, 38.4, 61.4, 29.4",
+       "en": "Write down the given data set.",
+       "ur": "دیے گئے ڈیٹا سیٹ کو لکھیں۔"
+      },
+      {
+       "math": "X_{\\text{max}} = 61.4, \\quad X_{\\text{min}} = 13.6",
+       "en": "Identify the maximum value ($X_{\\text{max}}$) and the minimum value ($X_{\\text{min}}$) from the given observations.",
+       "ur": "دیے گئے مشاہدات میں سے سب سے بڑی قیمت ($X_{\\text{max}}$) اور سب سے چھوٹی قیمت ($X_{\\text{min}}$) کی نشاندہی کریں۔",
+       "check": [
+        "Max(R(435,10), R(136,10), R(189,10), R(384,10), R(614,10), R(294,10)) == R(614,10)",
+        "Min(R(435,10), R(136,10), R(189,10), R(384,10), R(614,10), R(294,10)) == R(136,10)"
+       ]
+      },
+      {
+       "math": "\\text{Range} = X_{\\text{max}} - X_{\\text{min}}",
+       "en": "State the formula for finding the range of an ungrouped data set.",
+       "ur": "غیر گروہی ڈیٹا سیٹ کی رینج (وسعت) معلوم کرنے کا فارمولا لکھیں۔"
+      },
+      {
        "math": "\\text{Range} = 61.4 - 13.6 = 47.8",
-       "en": "Highest minus lowest.",
-       "ur": "سب سے بڑی منفی سب سے چھوٹی۔",
+       "en": "Substitute the maximum and minimum values into the formula and subtract to get the final answer.",
+       "ur": "فارمولے میں سب سے بڑی اور سب سے چھوٹی قیمتیں درج کریں اور حتمی جواب حاصل کرنے کے لیے تفریق کریں۔",
        "check": [
         "R(614,10) - R(136,10) == R(478,10)"
        ]
       }
      ],
      "answer": "47.8",
+     "enriched": true,
      "book_key": "47.8"
     }
    ],
@@ -3532,15 +3817,46 @@
      "prompt": "",
      "steps": [
       {
-       "math": "46.7 = \\text{Highest} - 13.4 \\Rightarrow \\text{Highest} = 46.7 + 13.4 = 60.1",
-       "en": "Range = highest - lowest.",
-       "ur": "وسعت = بڑی - چھوٹی۔",
+       "math": "\\text{Range } (R) = 46.7, \\quad \\text{Lowest value } (X_{\\min}) = 13.4",
+       "en": "First, write down the given values from the question. We need to find the highest value ($X_{\\max}$).",
+       "ur": "سب سے پہلے، سوال میں دی گئی قیمتیں لکھیں۔ ہمیں سب سے بڑی قیمت ($X_{\\max}$) معلوم کرنی ہے۔",
+       "check": [
+        "R(467,10) == R(467,10)",
+        "R(134,10) == R(134,10)"
+       ]
+      },
+      {
+       "math": "\\text{Range} = X_{\\max} - X_{\\min}",
+       "en": "Recall the formula for the range of a data set, which is the difference between the highest value and the lowest value.",
+       "ur": "مواد کی وسعت (Range) کا فارمولا یاد کریں، جو کہ سب سے بڑی قیمت اور سب سے چھوٹی قیمت کے درمیان فرق ہوتا ہے۔"
+      },
+      {
+       "math": "46.7 = X_{\\max} - 13.4",
+       "en": "Substitute the given values of the range and the lowest value into the formula.",
+       "ur": "فارمولے میں وسعت اور سب سے چھوٹی قیمت کی دی گئی قدریں درج کریں۔",
+       "check": [
+        "R(467,10) == R(601,10) - R(134,10)"
+       ]
+      },
+      {
+       "math": "X_{\\max} = 46.7 + 13.4",
+       "en": "Rearrange the equation to isolate the highest value ($X_{\\max}$) by adding $13.4$ to both sides.",
+       "ur": "مساوات کے دونوں اطراف میں $13.4$ جمع کر کے سب سے بڑی قیمت ($X_{\\max}$) کو الگ کریں۔",
+       "check": [
+        "R(601,10) == R(467,10) + R(134,10)"
+       ]
+      },
+      {
+       "math": "X_{\\max} = 60.1",
+       "en": "Add the two numbers to get the final answer. Thus, the highest value of the data set is $60.1$.",
+       "ur": "حتمی جواب حاصل کرنے کے لیے دونوں اعداد کو جمع کریں۔ اس طرح، مواد کی سب سے بڑی قیمت $60.1$ ہے۔",
        "check": [
         "R(467,10) + R(134,10) == R(601,10)"
        ]
       }
      ],
      "answer": "60.1",
+     "enriched": true,
      "book_key": "60.1"
     }
    ],
@@ -3558,15 +3874,44 @@
      "prompt": "",
      "steps": [
       {
-       "math": "\\text{Range} = 6500 - 4000 = 2500",
-       "en": "Upper limit of the last class minus lower limit of the first class.",
-       "ur": "آخری جماعت کی اوپری حد منفی پہلی جماعت کی نچلی حد۔",
+       "math": "",
+       "en": "The given data is a continuous grouped frequency distribution of income (in Rs.) because the upper limit of each class is equal to the lower limit of the next class.",
+       "ur": "دیے گئے اعداد و شمار آمدنی (روپے میں) کی ایک مسلسل گروہی تعدادی تقسیم ہے کیونکہ ہر جماعت کی بالائی حد اگلی جماعت کی زیریں حد کے برابر ہے۔"
+      },
+      {
+       "math": "\\text{Range} = X_m - X_0",
+       "en": "For a continuous grouped frequency distribution, the range is the difference between the upper limit of the last class ($X_m$) and the lower limit of the first class ($X_0$).",
+       "ur": "مسلسل گروہی تعدادی تقسیم کے لیے، حیطہ (Range) آخری جماعت کی بالائی حد ($X_m$) اور پہلی جماعت کی زیریں حد ($X_0$) کے درمیان فرق ہوتا ہے۔"
+      },
+      {
+       "math": "X_0 = 4000, \\quad X_m = 6500",
+       "en": "From the given table, the first class is $4000-4500$, so its lower limit is $X_0 = 4000$. The last class is $6000-6500$, so its upper limit is $X_m = 6500$.",
+       "ur": "دیے گئے جدول کے مطابق، پہلی جماعت $4000-4500$ ہے، اس لیے اس کی زیریں حد $X_0 = 4000$ ہے۔ آخری جماعت $6000-6500$ ہے، اس لیے اس کی بالائی حد $X_m = 6500$ ہے۔",
        "check": [
+        "4000 == 4000",
+        "6500 == 6500"
+       ]
+      },
+      {
+       "math": "\\text{Range} = 6500 - 4000 = 2500",
+       "en": "Substitute these values into the formula and subtract to find the range.",
+       "ur": "حیطہ معلوم کرنے کے لیے ان قیمتوں کو فارمولے میں درج کریں اور تفریق کریں۔",
+       "check": [
+        "6500 - 4000 == 2500"
+       ]
+      },
+      {
+       "math": "\\text{Range} = \\text{Rs. } 2500",
+       "en": "Thus, the range of the given income data is Rs. $2500$.",
+       "ur": "پس، دیے گئے آمدنی کے اعداد و شمار کا حیطہ $2500$ روپے ہے۔",
+       "check": [
+        "2500 == 2500",
         "6500 - 4000 == 2500"
        ]
       }
      ],
      "answer": "Rs. 2500",
+     "enriched": true,
      "book_key": "Rs. 2500"
     }
    ],
@@ -4068,9 +4413,51 @@
      "prompt": "(i)",
      "steps": [
       {
-       "math": "\\sigma^2 = \\frac{421}{5} - \\left(\\frac{45}{5}\\right)^2 = 84.2 - 81 = 3.2,\\quad \\sigma = \\sqrt{3.2} \\approx 1.79",
-       "en": "$\\sigma^2 = \\frac{\\sum x^2}{n} - \\bar{x}^2$.",
-       "ur": "$\\sigma^2 = \\frac{\\sum x^2}{n} - \\bar{x}^2$۔",
+       "math": "\\sum x = 45,\\quad \\sum x^2 = 421,\\quad n = 5",
+       "en": "First, write down the given values from the question. We need to find the variance ($\\sigma^2$) and standard deviation ($\\sigma$).",
+       "ur": "سب سے پہلے، سوال میں دی گئی قیمتیں لکھیں۔ ہمیں تغیر ($\\sigma^2$) اور معیاری انحراف ($\\sigma$) معلوم کرنا ہے۔",
+       "check": [
+        "45 == 45",
+        "421 == 421",
+        "5 == 5"
+       ]
+      },
+      {
+       "math": "\\sigma^2 = \\frac{\\sum x^2}{n} - \\left(\\frac{\\sum x}{n}\\right)^2",
+       "en": "Use the direct formula for variance of ungrouped data.",
+       "ur": "غیر گروہی ڈیٹا کے تغیر (variance) کا براہِ راست فارمولا استعمال کریں۔"
+      },
+      {
+       "math": "\\sigma^2 = \\frac{421}{5} - \\left(\\frac{45}{5}\\right)^2",
+       "en": "Substitute the given values into the variance formula.",
+       "ur": "دی گئی قیمتیں تغیر کے فارمولے میں درج کریں۔",
+       "check": [
+        "R(421,5) - (R(45,5))**2 == R(16,5)"
+       ]
+      },
+      {
+       "math": "\\sigma^2 = 84.2 - (9)^2 = 84.2 - 81 = 3.2",
+       "en": "Divide the fractions, calculate the square of $9$, and subtract to find the variance.",
+       "ur": "کسروں کو تقسیم کریں، $9$ کا مربع لیں، اور تغیر معلوم کرنے کے لیے تفریق کریں۔",
+       "check": [
+        "R(421,5) == R(842,10)",
+        "R(45,5) == 9",
+        "9**2 == 81",
+        "R(842,10) - 81 == R(16,5)"
+       ]
+      },
+      {
+       "math": "\\sigma = \\sqrt{\\sigma^2} = \\sqrt{3.2} \\approx 1.79",
+       "en": "Take the positive square root of the variance to find the standard deviation.",
+       "ur": "معیاری انحراف معلوم کرنے کے لیے تغیر کا مثبت جزر المربع لیں۔",
+       "check": [
+        "Abs(sqrt(R(16,5)) - R(179,100)) <= R(5,1000)"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Therefore, the final values are Variance = $3.2$ and SD = $1.79$.",
+       "ur": "لہذا، آخری قیمتیں تغیر (Variance) = $3.2$ اور معیاری انحراف (SD) = $1.79$ ہیں۔",
        "check": [
         "R(421,5) - 9**2 == R(16,5)",
         "Abs((sqrt(R(16,5))) - 1.79) <= 0.0050000010000000004"
@@ -4078,6 +4465,7 @@
       }
      ],
      "answer": "Variance = 3.2, SD = 1.79",
+     "enriched": true,
      "book_key": "Variance = 3.2, SD = 1.79"
     },
     {
@@ -4085,16 +4473,51 @@
      "prompt": "(ii)",
      "steps": [
       {
-       "math": "\\sigma^2 = \\frac{7560}{6} - \\left(\\frac{210}{6}\\right)^2 = 1260 - 1225 = 35,\\quad \\sigma = \\sqrt{35} \\approx 5.92",
-       "en": "$\\sigma^2 = \\frac{\\sum fx^2}{\\sum f} - \\bar{x}^2$.",
-       "ur": "$\\sigma^2 = \\frac{\\sum fx^2}{\\sum f} - \\bar{x}^2$۔",
+       "math": "\\sum fx = 210,\\quad \\sum fx^2 = 7560,\\quad \\sum f = 6",
+       "en": "First, write down the given values for the grouped data.",
+       "ur": "سب سے پہلے، گروہی مواد کے لیے دی گئی قیمتیں لکھیں۔"
+      },
+      {
+       "math": "S^2 = \\frac{\\sum fx^2}{\\sum f} - \\left(\\frac{\\sum fx}{\\sum f}\\right)^2",
+       "en": "Recall the computational formula for the variance ($S^2$) of grouped data.",
+       "ur": "گروہی مواد کے تغیر ($S^2$) کا فارمولا یاد کریں۔"
+      },
+      {
+       "math": "S^2 = \\frac{7560}{6} - \\left(\\frac{210}{6}\\right)^2",
+       "en": "Substitute the given values of $\\sum fx^2$, $\\sum fx$, and $\\sum f$ into the variance formula.",
+       "ur": "تغیر کے فارمولے میں $\\sum fx^2$، $\\sum fx$ اور $\\sum f$ کی دی گئی قیمتیں درج کریں۔"
+      },
+      {
+       "math": "S^2 = 1260 - (35)^2",
+       "en": "Divide $7560$ by $6$ to get $1260$, and divide $210$ by $6$ to get the mean $\\bar{x} = 35$.",
+       "ur": "$7560$ کو $6$ پر تقسیم کرنے سے $1260$، اور $210$ کو $6$ پر تقسیم کرنے سے اوسط $\\bar{x} = 35$ حاصل ہوتا ہے۔",
        "check": [
+        "7560/6 == 1260",
+        "210/6 == 35"
+       ]
+      },
+      {
+       "math": "S^2 = 1260 - 1225 = 35",
+       "en": "Square $35$ to get $1225$, then subtract it from $1260$ to find the variance.",
+       "ur": "$35$ کا مربع لیں جو کہ $1225$ ہے، پھر تغیر معلوم کرنے کے لیے اسے $1260$ میں سے تفریق کریں۔",
+       "check": [
+        "35**2 == 1225",
+        "1260 - 1225 == 35"
+       ]
+      },
+      {
+       "math": "\\text{S.D.} = \\sqrt{S^2} = \\sqrt{35} \\approx 5.92",
+       "en": "Take the positive square root of the variance to find the standard deviation (S.D.), rounded to two decimal places.",
+       "ur": "معیاری انحراف (S.D.) معلوم کرنے کے لیے تغیر کا مثبت جزر المربع لیں اور اشاریہ کے دو درجوں تک محدود کریں۔",
+       "check": [
+        "Abs(sqrt(35) - 5.92) <= 0.005",
         "7560/6 - 35**2 == 35",
         "Abs((sqrt(35)) - 5.92) <= 0.0050000010000000004"
        ]
       }
      ],
      "answer": "Variance = 35, SD = 5.92",
+     "enriched": true,
      "book_key": "Variance = 35, SD = 5.92"
     },
     {
@@ -4102,16 +4525,43 @@
      "prompt": "(iii)",
      "steps": [
       {
-       "math": "\\sigma^2 = \\frac{1670}{5} - 18^2 = 334 - 324 = 10,\\quad \\sigma = \\sqrt{10} \\approx 3.16",
-       "en": "Same formula with the given mean.",
-       "ur": "دیے گئے اوسط کے ساتھ وہی کلیہ۔",
+       "math": "\\bar{x} = 18, \\quad \\sum fx^2 = 1670, \\quad \\sum f = 5",
+       "en": "First, write down the given values for the mean $\\bar{x}$, the sum of $fx^2$, and the total frequency $\\sum f$.",
+       "ur": "سب سے پہلے، دی گئی قیمتیں یعنی اوسط $\\bar{x}$، $fx^2$ کا مجموعہ، اور کل تعدد $\\sum f$ لکھیں۔"
+      },
+      {
+       "math": "\\sigma^2 = \\frac{\\sum fx^2}{\\sum f} - (\\bar{x})^2",
+       "en": "Recall the computational formula for the variance ($\\sigma^2$) of grouped data when the mean $\\bar{x}$ is already known.",
+       "ur": "گروہی مواد کے تغیر ($\\sigma^2$) کا حسابی کلیہ لکھیں جب اوسط $\\bar{x}$ پہلے سے معلوم ہو۔"
+      },
+      {
+       "math": "\\sigma^2 = \\frac{1670}{5} - (18)^2",
+       "en": "Substitute the given values into the variance formula.",
+       "ur": "تغیر کے کلیے میں دی گئی قیمتیں درج کریں۔"
+      },
+      {
+       "math": "\\sigma^2 = 334 - 324 = 10",
+       "en": "Divide $1670$ by $5$ to get $334$, and square $18$ to get $324$. Then subtract to find the variance.",
+       "ur": "$1670$ کو $5$ پر تقسیم کرنے سے $334$ اور $18$ کا مربع لینے سے $324$ حاصل ہوتا ہے۔ پھر تفریق کر کے تغیر معلوم کریں۔",
        "check": [
+        "R(1670, 5) == 334",
+        "18**2 == 324",
+        "334 - 324 == 10"
+       ]
+      },
+      {
+       "math": "\\sigma = \\sqrt{\\sigma^2} = \\sqrt{10} \\approx 3.16",
+       "en": "Take the positive square root of the variance to find the standard deviation ($\\sigma$), rounded to two decimal places.",
+       "ur": "معیاری انحراف ($\\sigma$) معلوم کرنے کے لیے تغیر کا مثبت جزر المربع لیں اور جواب کو اعشاریہ کے بعد دو درجوں تک محدود کریں۔",
+       "check": [
+        "Abs(sqrt(10) - 3.16) <= 0.005",
         "1670/5 - 18**2 == 10",
         "Abs((sqrt(10)) - 3.16) <= 0.0050000010000000004"
        ]
       }
      ],
      "answer": "Variance = 10, SD = 3.16",
+     "enriched": true,
      "book_key": "Variance = 10, SD = 3.16"
     }
    ],
@@ -4130,16 +4580,27 @@
      "steps": [
       {
        "math": "",
-       "en": "Cumulative frequencies are running totals.",
-       "ur": "مجموعی تعدد جمع کر کے بنتے ہیں۔"
+       "en": "We need to identify the mathematical operation used to find cumulative frequencies.",
+       "ur": "ہمیں وہ حسابی عمل معلوم کرنا ہے جو مجموعی تعدد (cumulative frequencies) معلوم کرنے کے لیے استعمال ہوتا ہے۔"
+      },
+      {
+       "math": "",
+       "en": "By definition, the cumulative frequency of a class is the running total of the frequencies up to that class.",
+       "ur": "تعریف کے مطابق، کسی جماعت کا مجموعی تعدد اس جماعت تک کے تمام تعدد کا مجموعہ ہوتا ہے۔"
+      },
+      {
+       "math": "",
+       "en": "To calculate a running total, we successively add the frequencies of each class using the process of addition.",
+       "ur": "مجموعہ معلوم کرنے کے لیے، ہم جمع کے عمل کو استعمال کرتے ہوئے ہر جماعت کے تعدد کو یکے بعد دیگرے جمع کرتے ہیں۔"
       },
       {
        "math": "\\text{Answer: (a) } \\text{Addition}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Therefore, addition is used to get the cumulative frequencies, which matches option (a).",
+       "ur": "لہذا، مجموعی تعدد حاصل کرنے کے لیے جمع کا عمل استعمال ہوتا ہے، جو کہ آپشن (a) سے مطابقت رکھتا ہے۔"
       }
      ],
      "answer": "(a) $\\text{Addition}$",
+     "enriched": true,
      "book_key": "(a) Addition"
     },
     {
@@ -4148,16 +4609,33 @@
      "steps": [
       {
        "math": "",
-       "en": "$Q_2$ is the median.",
-       "ur": "$Q_2$ وسطانیہ ہے۔"
+       "en": "We need to identify which statistical measure the second quartile ($Q_2$) represents.",
+       "ur": "ہمیں یہ شناخت کرنا ہے کہ دوسرا چوتھائی ($Q_2$) کس شماریاتی پیمانے کی نمائندگی کرتا ہے۔"
+      },
+      {
+       "math": "\\frac{2}{4} = \\frac{1}{2}",
+       "en": "Quartiles divide a sorted dataset into four equal parts. The second quartile ($Q_2$) represents two-fourths, or one-half, of the data.",
+       "ur": "چوتھائی (Quartiles) ترتیب شدہ ڈیٹا کو چار برابر حصوں میں تقسیم کرتے ہیں۔ دوسرا چوتھائی ($Q_2$) ڈیٹا کے دو چوتھائی یعنی آدھے حصے کی نمائندگی کرتا ہے۔",
+       "check": [
+        "R(2, 4) == R(1, 2)"
+       ]
+      },
+      {
+       "math": "\\frac{1}{2} \\times 100 = 50",
+       "en": "One-half corresponds to $50\\%$ of the observations. By definition, the value that divides a dataset into two equal halves ($50\\%$ below and $50\\%$ above) is the median.",
+       "ur": "نصف حصہ $50\\%$ مشاہدات کے برابر ہے۔ تعریف کے مطابق، وہ قدر جو ڈیٹا کو دو برابر حصوں ($50\\%$ نیچے اور $50\\%$ اوپر) میں تقسیم کرتی ہے، وسطانیہ (median) کہلاتی ہے۔",
+       "check": [
+        "R(1, 2)*100 == 50"
+       ]
       },
       {
        "math": "\\text{Answer: (c) } \\text{median}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Therefore, the second quartile ($Q_2$) represents the median, which matches option (c).",
+       "ur": "لہٰذا، دوسرا چوتھائی ($Q_2$) وسطانیہ (median) کی نمائندگی کرتا ہے، جو کہ آپشن (c) سے مطابقت رکھتا ہے۔"
       }
      ],
      "answer": "(c) $\\text{median}$",
+     "enriched": true,
      "book_key": "(c) median"
     },
     {
@@ -4166,16 +4644,30 @@
      "steps": [
       {
        "math": "",
-       "en": "Quartiles split the data into four equal parts.",
-       "ur": "ربعیے مواد کو چار برابر حصوں میں تقسیم کرتے ہیں۔"
+       "en": "We need to determine into how many equal parts quartiles (including the first quartile) divide a given set of data.",
+       "ur": "ہمیں یہ معلوم کرنا ہے کہ ربعیے (بشمول پہلا ربعیہ) دیے گئے مواد کو کتنے برابر حصوں میں تقسیم کرتے ہیں۔"
+      },
+      {
+       "math": "Q_1, Q_2, Q_3",
+       "en": "By definition in statistics, quartiles ($Q_1, Q_2, Q_3$) are three points that divide an ordered data set into four equal parts, with each part containing $25\\%$ of the data.",
+       "ur": "شماریات کی تعریف کے مطابق، ربعیے ($Q_1, Q_2, Q_3$) وہ تین نکات ہیں جو ترتیب دیے گئے مواد کو چار برابر حصوں میں تقسیم کرتے ہیں، جس کے ہر حصے میں $25\\%$ مواد شامل ہوتا ہے۔"
+      },
+      {
+       "math": "100\\% \\div 25\\% = 4",
+       "en": "Specifically, the first quartile ($Q_1$) marks the boundary of the first quarter ($25\\%$) of the data, which is based on dividing the entire data set into four equal parts.",
+       "ur": "خاص طور پر، پہلا ربعیہ ($Q_1$) مواد کے پہلے چوتھائی حصے ($25\\%$) کی نشاندہی کرتا ہے، جس کی بنیاد پورے مواد کو چار برابر حصوں میں تقسیم کرنے پر ہے۔",
+       "check": [
+        "100 / 25 == 4"
+       ]
       },
       {
        "math": "\\text{Answer: (c) } \\text{four}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Comparing this with the given options, we see that option (c) is the correct answer.",
+       "ur": "دیے گئے ممکنہ جوابات سے موازنہ کرنے پر، ہمیں معلوم ہوتا ہے کہ آپشن (c) درست جواب ہے۔"
       }
      ],
      "answer": "(c) $\\text{four}$",
+     "enriched": true,
      "book_key": "(c) four"
     },
     {
@@ -4184,16 +4676,27 @@
      "steps": [
       {
        "math": "",
-       "en": "That is the range.",
-       "ur": "یہ وسعت ہے۔"
+       "en": "We need to identify the statistical term that represents the difference between the highest (maximum) and the lowest (minimum) values in a given dataset.",
+       "ur": "ہمیں اس شماریاتی اصطلاح کی نشاندہی کرنی ہے جو دیے گئے مواد میں سب سے بڑی (زیادہ سے زیادہ) اور سب سے چھوٹی (کم سے کم) قیمتوں کے درمیان فرق کو ظاہر کرتی ہے۔"
+      },
+      {
+       "math": "\\text{Range} = X_{\\max} - X_{\\min}",
+       "en": "According to the definition of measures of dispersion in statistics, the difference between the largest value $X_{\\max}$ and the smallest value $X_{\\min}$ is defined as the $\\text{range}$.",
+       "ur": "شماریات میں انتشاری پیمانوں کی تعریف کے مطابق، سب سے بڑی قیمت $X_{\\max}$ اور سب سے چھوٹی قیمت $X_{\\min}$ کے درمیان فرق کو وسعت ($\\text{range}$) کہا جاتا ہے۔"
+      },
+      {
+       "math": "",
+       "en": "Looking at the other options: $\\text{mean}$ is the average of all values, while $\\text{variance}$ and $\\text{standard deviation}$ measure the spread of data around the mean.",
+       "ur": "دیگر آپشنز کو دیکھتے ہوئے: حسابی اوسط ($\\text{mean}$) تمام قیمتوں کی اوسط ہے، جبکہ تغیر ($\\text{variance}$) اور معیاری انحراف ($\\text{standard deviation}$) حسابی اوسط کے گرد مواد کے پھیلاؤ کی پیمائش کرتے ہیں۔"
       },
       {
        "math": "\\text{Answer: (c) } \\text{range}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Therefore, the correct option is (c) $\\text{range}$.",
+       "ur": "لہذا، درست جواب آپشن (c) وسعت ($\\text{range}$) ہے۔"
       }
      ],
      "answer": "(c) $\\text{range}$",
+     "enriched": true,
      "book_key": "(c) range"
     },
     {
@@ -4202,16 +4705,27 @@
      "steps": [
       {
        "math": "",
-       "en": "Two variables.",
-       "ur": "دو متغیر۔"
+       "en": "We need to determine how many variables are represented in a scatter diagram to show a relationship.",
+       "ur": "ہمیں یہ معلوم کرنا ہے کہ ایک اسکیٹر ڈایاگرام (scatter diagram) میں باہمی تعلق ظاہر کرنے کے لیے کتنے متغیرات (variables) کی نمائندگی کی جاتی ہے۔"
+      },
+      {
+       "math": "(x, y)",
+       "en": "By definition in statistics, a scatter diagram (or scatter plot) is a graphical representation of bivariate data, where pairs of numerical values $(x, y)$ are plotted on a two-dimensional plane.",
+       "ur": "شماریات کی تعریف کے مطابق، اسکیٹر ڈایاگرام دو متغیرات والے ڈیٹا (bivariate data) کی گرافیکل نمائندگی ہے، جہاں عددی قیمتوں کے جوڑوں $(x, y)$ کو دو جہتی مستوی پر ظاہر کیا جاتا ہے۔"
+      },
+      {
+       "math": "\\text{Number of variables} = \\text{two}",
+       "en": "Here, one variable is plotted along the horizontal $x$-axis and the second variable is plotted along the vertical $y$-axis. Thus, a scatter diagram represents the relationship between two variables.",
+       "ur": "یہاں ایک متغیر کو افقی محور ($x$-axis) پر اور دوسرے متغیر کو عمودی محور ($y$-axis) پر ظاہر کیا جاتا ہے۔ لہٰذا، اسکیٹر ڈایاگرام دو متغیرات کے درمیان تعلق کو ظاہر کرتا ہے۔"
       },
       {
        "math": "\\text{Answer: (b) } \\text{two}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Comparing this with the given options, option (b) is the correct answer.",
+       "ur": "دیے گئے اختیارات سے موازنہ کرنے پر، آپشن (b) درست جواب ہے۔"
       }
      ],
      "answer": "(b) $\\text{two}$",
+     "enriched": true,
      "book_key": "(b) two"
     },
     {
@@ -4220,16 +4734,32 @@
      "steps": [
       {
        "math": "",
-       "en": "Variance measures spread.",
-       "ur": "تغیر پھیلاؤ ناپتا ہے۔"
+       "en": "We need to identify which of the given options is a measure of dispersion.",
+       "ur": "ہمیں یہ معلوم کرنا ہے کہ دیے گئے آپشنز میں سے کون سا انتشار کا پیمانہ (measure of dispersion) ہے۔"
+      },
+      {
+       "math": "",
+       "en": "A measure of dispersion tells us how spread out the data values are from the central value.",
+       "ur": "انتشار کا پیمانہ ہمیں یہ بتاتا ہے کہ ڈیٹا کی قدریں مرکزی قدر سے کس حد تک پھیلی ہوئی ہیں۔"
+      },
+      {
+       "math": "\\text{Measures of Central Tendency: } \\text{mean, median, mode}",
+       "en": "Options (a) $\\text{mean}$, (b) $\\text{median}$, and (c) $\\text{mode}$ are all measures of central tendency (averages), not dispersion.",
+       "ur": "آپشنز (a) $\\text{mean}$ (حسابی اوسط)، (b) $\\text{median}$ (وسطانیہ)، اور (c) $\\text{mode}$ (عادہ) تمام مرکزی رجحان کے پیمانے (اوسط) ہیں، انتشار کے نہیں۔"
+      },
+      {
+       "math": "\\text{Measure of Dispersion: } \\text{variance}",
+       "en": "Option (d) $\\text{variance}$ measures the spread of data values around the mean, making it a measure of dispersion.",
+       "ur": "آپشن (d) $\\text{variance}$ (تغیر) حسابی اوسط کے گرد ڈیٹا کی قدروں کے پھیلاؤ کو ناپتا ہے، اس لیے یہ انتشار کا پیمانہ ہے۔"
       },
       {
        "math": "\\text{Answer: (d) } \\text{variance}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Therefore, the correct option is (d).",
+       "ur": "لہٰذا، درست آپشن (d) ہے۔"
       }
      ],
      "answer": "(d) $\\text{variance}$",
+     "enriched": true,
      "book_key": "(d) variance"
     },
     {
@@ -4238,16 +4768,27 @@
      "steps": [
       {
        "math": "",
-       "en": "$\\sigma = \\sqrt{\\sigma^2}$.",
-       "ur": "$\\sigma = \\sqrt{\\sigma^2}$۔"
+       "en": "First, recall the definition of variance in statistics. Variance (denoted by $S^2$ or $\\sigma^2$) is defined as the arithmetic mean of the squared deviations of values from their mean: $S^2 = \\frac{\\sum (X - \\bar{X})^2}{n}$.",
+       "ur": "سب سے پہلے، شماریات میں تغیر (variance) کی تعریف یاد کریں۔ تغیر (جسے $S^2$ یا $\\sigma^2$ سے ظاہر کیا جاتا ہے) کو حسابی اوسط سے قدروں کے انحراف کے مربوں کے اوسط کے طور پر بیان کیا جاتا ہے: $S^2 = \\frac{\\sum (X - \\bar{X})^2}{n}$۔"
+      },
+      {
+       "math": "",
+       "en": "When we take the positive square root of the variance, we get a measure of dispersion known as the standard deviation (denoted by $S$ or $\\sigma$), given by the formula $\\sigma = +\\sqrt{\\sigma^2}$ or $S = \\sqrt{\\frac{\\sum (X - \\bar{X})^2}{n}}$.",
+       "ur": "جب ہم تغیر کا مثبت جذر المربع لیتے ہیں، تو ہمیں انتشار کا ایک پیمانہ ملتا ہے جسے معیاری انحراف (standard deviation) کہا جاتا ہے (اسے $S$ یا $\\sigma$ سے ظاہر کیا جاتا ہے)، جس کا فارمولا $\\sigma = +\\sqrt{\\sigma^2}$ یا $S = \\sqrt{\\frac{\\sum (X - \\bar{X})^2}{n}}$ ہے۔"
+      },
+      {
+       "math": "",
+       "en": "Let us briefly check the other options: Mean and Median are measures of central tendency, and Range is the difference between the largest and smallest values ($X_{\\max} - X_{\\min}$). None of these is the square root of variance.",
+       "ur": "آئیے مختصراً دوسرے آپشنز کو دیکھتے ہیں: حسابی اوسط (Mean) اور وسطانیہ (Median) مرکزی رجحان کے پیمانے ہیں، اور حیطہ (Range) سب سے بڑی اور سب سے چھوٹی قدر کا فرق ($X_{\\max} - X_{\\min}$) ہے۔ ان میں سے کوئی بھی تغیر کا جذر المربع نہیں ہے۔"
       },
       {
        "math": "\\text{Answer: (c) } \\text{standard deviation}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Therefore, the positive square root of variance is called the standard deviation, which corresponds to option (c).",
+       "ur": "لہٰذا، تغیر کے مثبت جذر المربع کو معیاری انحراف (standard deviation) کہا جاتا ہے، جو کہ آپشن (c) کے مطابق ہے۔"
       }
      ],
      "answer": "(c) $\\text{standard deviation}$",
+     "enriched": true,
      "book_key": "(c) standard deviation"
     },
     {
@@ -4256,16 +4797,27 @@
      "steps": [
       {
        "math": "",
-       "en": "The mean is an average, not a spread.",
-       "ur": "اوسط پھیلاؤ نہیں ناپتا۔"
+       "en": "We need to identify which of the given options is not a measure of dispersion.",
+       "ur": "ہمیں یہ معلوم کرنا ہے کہ دیے گئے آپشنز میں سے کون سا پھیلاؤ کا پیمانہ (measure of dispersion) نہیں ہے۔"
+      },
+      {
+       "math": "\\text{Measures of Dispersion} = \\{\\text{Range, Variance, Standard Deviation}\\}",
+       "en": "Measures of dispersion tell us how spread out the data values are. $\\text{Range}$, $\\text{variance}$, and $\\text{standard deviation}$ are all standard measures of dispersion.",
+       "ur": "پھیلاؤ کے پیمانے ہمیں بتاتے ہیں کہ ڈیٹا کی قدریں کتنی پھیلی ہوئی ہیں۔ حیطہ ($\\text{range}$)، تغیر ($\\text{variance}$)، اور معیاری انحراف ($\\text{standard deviation}$) تمام پھیلاؤ کے پیمانے ہیں۔"
+      },
+      {
+       "math": "\\text{Measure of Central Tendency} = \\text{Arithmetic Mean}",
+       "en": "On the other hand, the $\\text{arithmetic mean}$ is an average (a measure of central tendency), which describes the center of the data rather than its spread.",
+       "ur": "دوسری طرف، حسابی اوسط ($\\text{arithmetic mean}$) مرکزی رجحان کا پیمانہ ہے، جو ڈیٹا کے پھیلاؤ کے بجائے اس کے مرکز کو ظاہر کرتا ہے۔"
       },
       {
        "math": "\\text{Answer: (b) } \\text{arithmetic mean}",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Therefore, $\\text{arithmetic mean}$ is not a measure of dispersion, which matches option (b).",
+       "ur": "لہٰذا، حسابی اوسط ($\\text{arithmetic mean}$) پھیلاؤ کا پیمانہ نہیں ہے، جو کہ آپشن (b) سے مطابقت رکھتا ہے۔"
       }
      ],
      "answer": "(b) $\\text{arithmetic mean}$",
+     "enriched": true,
      "book_key": "(b) arithmetic mean"
     },
     {
@@ -4273,20 +4825,52 @@
      "prompt": "Variance of the data 8, 8, 8, 8, 8, 8 is: (a) $0$ (b) $16$ (c) $8$ (d) $48$",
      "steps": [
       {
-       "math": "\\sigma^2 = 0",
-       "en": "All values equal the mean.",
-       "ur": "سب قیمتیں اوسط کے برابر ہیں۔",
+       "math": "x = 8, 8, 8, 8, 8, 8, \\quad n = 6",
+       "en": "The given data has $n = 6$ values, and all of them are equal to $8$.",
+       "ur": "دیے گئے ڈیٹا میں $n = 6$ قیمتیں ہیں، اور یہ سب $8$ کے برابر ہیں۔",
        "check": [
-        "6*(8 - 8)**2/6 == 0"
+        "1 + 1 + 1 + 1 + 1 + 1 == 6"
+       ]
+      },
+      {
+       "math": "\\bar{x} = \\frac{8 + 8 + 8 + 8 + 8 + 8}{6} = \\frac{48}{6} = 8",
+       "en": "First, find the mean $\\bar{x}$ by dividing the sum of the values by $n$.",
+       "ur": "سب سے پہلے، تمام قیمتوں کے مجموعے کو $n$ پر تقسیم کر کے اوسط $\\bar{x}$ معلوم کریں۔",
+       "check": [
+        "(8 + 8 + 8 + 8 + 8 + 8)/6 == 48/6",
+        "48/6 == 8"
+       ]
+      },
+      {
+       "math": "S^2 = \\frac{\\sum (x - \\bar{x})^2}{n}",
+       "en": "Write down the formula for the variance of ungrouped data.",
+       "ur": "غیر گروہی ڈیٹا کے تغیر (variance) کا فارمولا لکھیں۔"
+      },
+      {
+       "math": "S^2 = \\frac{(8 - 8)^2 + (8 - 8)^2 + (8 - 8)^2 + (8 - 8)^2 + (8 - 8)^2 + (8 - 8)^2}{6}",
+       "en": "Substitute each value $x = 8$, the mean $\\bar{x} = 8$, and $n = 6$ into the formula.",
+       "ur": "فارمولے میں ہر قیمت $x = 8$، اوسط $\\bar{x} = 8$، اور $n = 6$ درج کریں۔"
+      },
+      {
+       "math": "S^2 = \\frac{0 + 0 + 0 + 0 + 0 + 0}{6} = \\frac{0}{6} = 0",
+       "en": "Since all values are equal to the mean, each difference is $0$, so the variance is $0$.",
+       "ur": "چونکہ تمام قیمتیں اوسط کے برابر ہیں، اس لیے ہر فرق $0$ ہے، چنانچہ تغیر (variance) $0$ ہے۔",
+       "check": [
+        "((8 - 8)**2 + (8 - 8)**2 + (8 - 8)**2 + (8 - 8)**2 + (8 - 8)**2 + (8 - 8)**2)/6 == 0/6",
+        "0/6 == 0"
        ]
       },
       {
        "math": "\\text{Answer: (a) } 0",
        "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔",
+       "check": [
+        "6*(8 - 8)**2/6 == 0"
+       ]
       }
      ],
      "answer": "(a) $0$",
+     "enriched": true,
      "book_key": "(a) 0"
     },
     {
@@ -4294,20 +4878,43 @@
      "prompt": "Range of first 20 natural numbers is: (a) $20$ (b) $10$ (c) $19$ (d) $30$",
      "steps": [
       {
-       "math": "20 - 1 = 19",
-       "en": "Highest minus lowest.",
-       "ur": "بڑی منفی چھوٹی۔",
+       "math": "\\{1, 2, 3, \\dots, 20\\}",
+       "en": "First, write the set of the first $20$ natural numbers.",
+       "ur": "سب سے پہلے، پہلے $20$ قدرتی اعداد کا سیٹ لکھیں۔"
+      },
+      {
+       "math": "X_{\\max} = 20, \\quad X_{\\min} = 1",
+       "en": "Identify the maximum value ($X_{\\max}$) and the minimum value ($X_{\\min}$) from the set.",
+       "ur": "سیٹ میں سے سب سے بڑی قیمت ($X_{\\max}$) اور سب سے چھوٹی قیمت ($X_{\\min}$) کی نشاندہی کریں۔",
+       "check": [
+        "20 == 20",
+        "1 == 1"
+       ]
+      },
+      {
+       "math": "\\text{Range} = X_{\\max} - X_{\\min}",
+       "en": "Recall the formula for the range of ungrouped data, which is the difference between the maximum and minimum values.",
+       "ur": "غیر گروہی مواد کی رینج (وسعت) کا فارمولا یاد کریں، جو سب سے بڑی اور سب سے چھوٹی قیمت کے درمیان فرق ہوتا ہے۔"
+      },
+      {
+       "math": "\\text{Range} = 20 - 1 = 19",
+       "en": "Substitute the values into the formula and subtract.",
+       "ur": "فارمولے میں قیمتیں درج کریں اور تفریق کریں۔",
        "check": [
         "20 - 1 == 19"
        ]
       },
       {
        "math": "\\text{Answer: (c) } 19",
-       "en": "Choose the option that matches the working.",
-       "ur": "وہ جواب چنیں جو حل سے مطابقت رکھتا ہو۔"
+       "en": "Therefore, the correct option is (c).",
+       "ur": "لہذا، درست جواب (c) ہے۔",
+       "check": [
+        "20 - 1 == 19"
+       ]
       }
      ],
      "answer": "(c) $19$",
+     "enriched": true,
      "book_key": "(c) 19"
     }
    ],
@@ -4897,9 +5504,9 @@
      "prompt": "",
      "steps": [
       {
-       "math": "(5, 12.6, 43, 55.6, 70)",
-       "en": "Box from 12.6 to 55.6 with the median line at 43; whiskers to 5 and 70.",
-       "ur": "باکس 12.6 سے 55.6 تک، وسطانیہ 43 پر، لکیریں 5 اور 70 تک۔",
+       "math": "\\text{Min} = 5, \\quad Q_1 = 12.6, \\quad \\text{Median } (Q_2) = 43, \\quad Q_3 = 55.6, \\quad \\text{Max} = 70",
+       "en": "First, write down the given five-number summary statistics for the data set.",
+       "ur": "سب سے پہلے، دیے گئے ڈیٹا سیٹ کے پانچ نکاتی خلاصہ شماریات (five-number summary) لکھیں۔",
        "check": [
         "5 < R(126,10)",
         "R(126,10) < 43",
@@ -4998,9 +5605,50 @@
          "s": "Q3"
         }
        ]
+      },
+      {
+       "math": "5 < 12.6 < 43 < 55.6 < 70",
+       "en": "To draw a box-and-whisker plot, first draw a horizontal number line with a suitable scale that covers all values from the minimum ($5$) to the maximum ($70$).",
+       "ur": "باکس اینڈ وسکر پلاٹ (box-and-whisker plot) بنانے کے لیے، سب سے پہلے ایک مناسب پیمانے کے ساتھ ایک افقی عددی خط کھینچیں جو کم از کم قیمت ($5$) سے لے کر زیادہ سے زیادہ قیمت ($70$) تک کی تمام اقدار کو ظاہر کرے۔",
+       "check": [
+        "5 < R(126,10)",
+        "R(126,10) < 43",
+        "43 < R(556,10)",
+        "R(556,10) < 70"
+       ]
+      },
+      {
+       "math": "\\text{Box}: [Q_1, Q_3] = [12.6, 55.6], \\quad \\text{Median} = 43",
+       "en": "Draw a rectangular box above the number line starting from the first quartile ($Q_1 = 12.6$) to the third quartile ($Q_3 = 55.6$). Then, draw a vertical line inside the box at the median value ($43$).",
+       "ur": "عددی خط کے اوپر پہلے چوتھائی ($Q_1 = 12.6$) سے تیسرے چوتھائی ($Q_3 = 55.6$) تک ایک مستطیل باکس بنائیں۔ پھر، باکس کے اندر وسطانیہ (median) کی قیمت ($43$) پر ایک عمودی لکیر کھینچیں۔",
+       "check": [
+        "R(126,10) < 43",
+        "43 < R(556,10)"
+       ]
+      },
+      {
+       "math": "\\text{Left whisker}: 5 \\text{ to } 12.6, \\quad \\text{Right whisker}: 55.6 \\text{ to } 70",
+       "en": "Mark the minimum value ($5$) and maximum value ($70$). Draw horizontal lines (whiskers) connecting the left side of the box ($12.6$) to the minimum ($5$), and the right side of the box ($55.6$) to the maximum ($70$).",
+       "ur": "کم از کم قیمت ($5$) اور زیادہ سے زیادہ قیمت ($70$) کو نشان زد کریں۔ باکس کے بائیں سرے ($12.6$) کو کم از کم قیمت ($5$) سے اور باکس کے دائیں سرے ($55.6$) کو زیادہ سے زیادہ قیمت ($70$) سے ملانے والی افقی لکیریں (whiskers) کھینچیں۔",
+       "check": [
+        "5 < R(126,10)",
+        "R(556,10) < 70"
+       ]
+      },
+      {
+       "math": "(5, 12.6, 43, 55.6, 70)",
+       "en": "Conclusion: The completed box-and-whisker plot has a box from $12.6$ to $55.6$ with the median line at $43$, and whiskers extending to $5$ and $70$.",
+       "ur": "نتیجہ: مکمل شدہ باکس اینڈ وسکر پلاٹ میں باکس $12.6$ سے $55.6$ تک ہے، جس میں وسطانیہ کی لکیر $43$ پر ہے، اور اطراف کی لکیریں (whiskers) $5$ اور $70$ تک پھیلی ہوئی ہیں۔",
+       "check": [
+        "5 < R(126,10)",
+        "R(126,10) < 43",
+        "43 < R(556,10)",
+        "R(556,10) < 70"
+       ]
       }
      ],
-     "answer": "box from 12.6 to 55.6, median 43, whiskers to 5 and 70"
+     "answer": "box from 12.6 to 55.6, median 43, whiskers to 5 and 70",
+     "enriched": true
     }
    ],
    "exercise": "Review 11",
@@ -5018,15 +5666,9 @@
      "prompt": "scatter diagram and line of best fit",
      "steps": [
       {
-       "math": "n = 10,\\ \\sum x = 45,\\ \\sum y = 763,\\ \\sum xy = 3216,\\ \\sum x^2 = 285",
-       "en": "Work out the sums from the table.",
-       "ur": "جدول سے مجموعے نکالیں۔",
-       "check": [
-        "(0) + (1) + (2) + (3) + (4) + (5) + (6) + (7) + (8) + (9) == (45)",
-        "(90) + (85) + (83) + (80) + (76) + (74) + (72) + (70) + (68) + (65) == (763)",
-        "(0)*(90) + (1)*(85) + (2)*(83) + (3)*(80) + (4)*(76) + (5)*(74) + (6)*(72) + (7)*(70) + (8)*(68) + (9)*(65) == (3216)",
-        "(0)**2 + (1)**2 + (2)**2 + (3)**2 + (4)**2 + (5)**2 + (6)**2 + (7)**2 + (8)**2 + (9)**2 == (285)"
-       ],
+       "math": "x = \\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\\},\\quad y = \\{90, 85, 83, 80, 76, 74, 72, 70, 68, 65\\}",
+       "en": "Let $x$ represent the weekly exercise hours and $y$ represent the resting heart rate (beats per minute) for the $n = 10$ individuals. To draw the scatter diagram, plot the ordered pairs $(x, y)$ as points on a coordinate plane with $x$ on the horizontal axis and $y$ on the vertical axis.",
+       "ur": "فرض کریں کہ $n = 10$ افراد کے لیے $x$ ہفتہ وار ورزش کے گھنٹوں اور $y$ آرام کی حالت میں دل کی دھڑکن (فی منٹ) کو ظاہر کرتا ہے۔ اسکیٹر ڈایاگرام بنانے کے لیے، $x$ کو افقی محور پر اور $y$ کو عمودی محور پر رکھتے ہوئے نقاط $(x, y)$ کو گراف پر نشان زد کریں۔",
        "draw": [
         {
          "t": "line",
@@ -5610,16 +6252,61 @@
        ]
       },
       {
-       "math": "b = \\frac{n\\sum xy - \\sum x\\sum y}{n\\sum x^2 - (\\sum x)^2} \\approx -2.6364,\\quad a = \\frac{\\sum y - b\\sum x}{n} \\approx 88.1636",
-       "en": "Least-squares line $\\hat{y} = a + bx$.",
-       "ur": "کم سے کم مربعوں کا خط $\\hat{y} = a + bx$۔",
+       "math": "n = 10,\\quad \\sum x = 45,\\quad \\sum y = 763,\\quad \\sum xy = 3216,\\quad \\sum x^2 = 285",
+       "en": "To find the precise equation for the line of best fit $\\hat{y} = a + bx$ using the method of least squares, we first calculate the required sums from the given data.",
+       "ur": "کم سے کم مربعات کے طریقے (method of least squares) کو استعمال کرتے ہوئے بہترین فٹ ہونے والی لائن کی مساوات $\\hat{y} = a + bx$ معلوم کرنے کے لیے، ہم سب سے پہلے دیے گئے ڈیٹا سے مطلوبہ مجموعے نکالتے ہیں۔",
        "check": [
+        "(0) + (1) + (2) + (3) + (4) + (5) + (6) + (7) + (8) + (9) == 45",
+        "(90) + (85) + (83) + (80) + (76) + (74) + (72) + (70) + (68) + (65) == 763",
+        "(0)*(90) + (1)*(85) + (2)*(83) + (3)*(80) + (4)*(76) + (5)*(74) + (6)*(72) + (7)*(70) + (8)*(68) + (9)*(65) == 3216",
+        "(0)**2 + (1)**2 + (2)**2 + (3)**2 + (4)**2 + (5)**2 + (6)**2 + (7)**2 + (8)**2 + (9)**2 == 285"
+       ]
+      },
+      {
+       "math": "b = \\frac{n\\sum xy - \\sum x\\sum y}{n\\sum x^2 - (\\sum x)^2} = \\frac{10(3216) - (45)(763)}{10(285) - (45)^2}",
+       "en": "Substitute the calculated sums into the formula for the slope $b$ of the line of best fit.",
+       "ur": "بہترین فٹ ہونے والی لائن کی ڈھلوان $b$ کے فارمولے میں حاصل کردہ مجموعوں کی قیمتیں درج کریں۔"
+      },
+      {
+       "math": "b = \\frac{32160 - 34335}{2850 - 2025} = \\frac{-2175}{825} = -\\frac{29}{11} \\approx -2.6364",
+       "en": "Simplify the numerator and the denominator to find the value of $b$.",
+       "ur": "$b$ کی قیمت معلوم کرنے کے لیے شمار کنندہ اور مخرج کو حل کریں۔",
+       "check": [
+        "10*3216 == 32160",
+        "45*763 == 34335",
+        "10*285 == 2850",
+        "45**2 == 2025",
+        "32160 - 34335 == -2175",
+        "2850 - 2025 == 825",
+        "R(-2175, 825) == R(-29, 11)",
+        "Abs(R(-29, 11) - (-2.6364)) <= 5e-5"
+       ]
+      },
+      {
+       "math": "a = \\frac{\\sum y - b\\sum x}{n} = \\frac{763 - \\left(-\\frac{29}{11}\\right)(45)}{10} = \\frac{9698}{110} \\approx 88.1636",
+       "en": "Now, substitute $\\sum y$, $\\sum x$, $n$, and $b$ into the formula for the y-intercept $a$ and simplify.",
+       "ur": "اب، y-انٹرسیپٹ $a$ کے فارمولے میں $\\sum y$، $\\sum x$، $n$، اور $b$ کی قیمتیں درج کریں اور حل کریں۔",
+       "check": [
+        "(763 - R(-29, 11)*45)/10 == R(9698, 110)",
+        "Abs(R(9698, 110) - 88.1636) <= 5e-5"
+       ]
+      },
+      {
+       "math": "\\hat{y} = 88.16 - 2.64x",
+       "en": "Rounding $a$ and $b$ to two decimal places gives $a \\approx 88.16$ and $b \\approx -2.64$. Substitute these into $\\hat{y} = a + bx$ to get the equation of the line of best fit, and draw this straight line through the plotted points on the scatter diagram.",
+       "ur": "$a$ اور $b$ کو اعشاریہ کے بعد دو درجوں تک محدود کرنے سے $a \\approx 88.16$ اور $b \\approx -2.64$ حاصل ہوتا ہے۔ بہترین فٹ ہونے والی لائن کی مساوات حاصل کرنے کے لیے انہیں $\\hat{y} = a + bx$ میں درج کریں، اور اسکیٹر ڈایاگرام پر لگائے گئے نقاط کے درمیان سے گزرتی ہوئی یہ سیدھی لائن کھینچیں۔",
+       "check": [
+        "(0) + (1) + (2) + (3) + (4) + (5) + (6) + (7) + (8) + (9) == (45)",
+        "(90) + (85) + (83) + (80) + (76) + (74) + (72) + (70) + (68) + (65) == (763)",
+        "(0)*(90) + (1)*(85) + (2)*(83) + (3)*(80) + (4)*(76) + (5)*(74) + (6)*(72) + (7)*(70) + (8)*(68) + (9)*(65) == (3216)",
+        "(0)**2 + (1)**2 + (2)**2 + (3)**2 + (4)**2 + (5)**2 + (6)**2 + (7)**2 + (8)**2 + (9)**2 == (285)",
         "Abs(((10*(3216) - (45)*(763))/(10*(285) - (45)**2)) - -2.6364) <= 5.0001000000000005e-05",
         "Abs((((763) - ((-29/11))*(45))/10) - 88.1636) <= 5.0001000000000005e-05"
        ]
       }
      ],
      "answer": "$\\hat{y} = 88.16 - 2.64x$",
+     "enriched": true,
      "book_key": "\\hat{y} = 88.16 - 2.64x"
     },
     {
@@ -5627,20 +6314,49 @@
      "prompt": "type of correlation",
      "steps": [
       {
-       "math": "r = \\frac{n\\sum xy - \\sum x\\sum y}{\\sqrt{[n\\sum x^2 - (\\sum x)^2][n\\sum y^2 - (\\sum y)^2]}} \\approx -0.993",
-       "en": "Correlation coefficient: close to $+1$ strong positive, close to $-1$ strong negative.",
-       "ur": "ارتباطی سر: $+1$ کے قریب مضبوط مثبت، $-1$ کے قریب مضبوط منفی۔",
+       "math": "n = 10, \\quad x = 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, \\quad y = 90, 85, 83, 80, 76, 74, 72, 70, 68, 65",
+       "en": "Let $x$ represent the weekly exercise hours and $y$ represent the resting heart rate for the $n = 10$ individuals. We need to find the type of correlation between $x$ and $y$.",
+       "ur": "فرض کریں کہ $x$ ہفتہ وار ورزش کے گھنٹوں کو اور $y$ آرام کی حالت میں دل کی دھڑکن کو ظاہر کرتا ہے، جہاں کل افراد کی تعداد $n = 10$ ہے۔ ہمیں $x$ اور $y$ کے درمیان ارتباط (correlation) کی قسم معلوم کرنی ہے۔"
+      },
+      {
+       "math": "r = \\frac{n\\sum xy - \\sum x\\sum y}{\\sqrt{[n\\sum x^2 - (\\sum x)^2][n\\sum y^2 - (\\sum y)^2]}}",
+       "en": "To determine the exact strength and direction of the correlation, we can use Pearson's correlation coefficient formula.",
+       "ur": "ارتباط کی درست مضبوطی اور سمت معلوم کرنے کے لیے ہم پیئرسن کے ارتباطی سر (correlation coefficient) کا فارمولا استعمال کر سکتے ہیں۔"
+      },
+      {
+       "math": "\\sum x = 45, \\quad \\sum y = 763, \\quad \\sum x^2 = 285, \\quad \\sum y^2 = 58799, \\quad \\sum xy = 3216",
+       "en": "First, we calculate the required sums from the given data values.",
+       "ur": "سب سے پہلے، ہم دیے گئے اعداد و شمار سے مطلوبہ مجموعے معلوم کرتے ہیں۔",
        "check": [
+        "0+1+2+3+4+5+6+7+8+9 == 45",
+        "90+85+83+80+76+74+72+70+68+65 == 763",
+        "0**2+1**2+2**2+3**2+4**2+5**2+6**2+7**2+8**2+9**2 == 285",
+        "90**2+85**2+83**2+80**2+76**2+74**2+72**2+70**2+68**2+65**2 == 58799",
+        "0*90+1*85+2*83+3*80+4*76+5*74+6*72+7*70+8*68+9*65 == 3216"
+       ]
+      },
+      {
+       "math": "r = \\frac{10(3216) - (45)(763)}{\\sqrt{[10(285) - (45)^2][10(58799) - (763)^2]}} = \\frac{-2175}{\\sqrt{825 \\times 5821}} \\approx -0.993",
+       "en": "Substitute these sums into the formula and simplify to find the value of $r$.",
+       "ur": "ان مجموعوں کو فارمولے میں درج کریں اور $r$ کی قیمت معلوم کرنے کے لیے مختصر کریں۔",
+       "check": [
+        "10*3216 - 45*763 == -2175",
+        "10*285 - 45**2 == 825",
+        "10*58799 - 763**2 == 5821",
         "Abs(((10*(3216) - (45)*(763))/sqrt((10*(285) - (45)**2)*(10*(58799) - (763)**2))) - -0.993) <= 0.000500001"
        ]
       },
       {
        "math": "\\text{strong negative correlation}",
-       "en": "More exercise, lower resting heart rate.",
-       "ur": "زیادہ ورزش، کم دل کی دھڑکن۔"
+       "en": "Since $r \\approx -0.993$ is very close to $-1$, and the heart rate decreases steadily as exercise hours increase, the data shows a strong negative correlation.",
+       "ur": "چونکہ $r \\approx -0.993$ کی قیمت $-1$ کے بہت قریب ہے، اور ورزش کے گھنٹے بڑھنے سے دل کی دھڑکن مسلسل کم ہوتی ہے، اس لیے یہ مواد مضبوط منفی ارتباط (strong negative correlation) کو ظاہر کرتا ہے۔",
+       "check": [
+        "Abs(((10*(3216) - (45)*(763))/sqrt((10*(285) - (45)**2)*(10*(58799) - (763)**2))) - -0.993) <= 0.000500001"
+       ]
       }
      ],
      "answer": "strong negative correlation",
+     "enriched": true,
      "book_key": "strong negative correlation"
     },
     {
@@ -5648,15 +6364,67 @@
      "prompt": "heart rate for 6.5 hours",
      "steps": [
       {
+       "math": "n = 10, \\quad \\sum x = 45, \\quad \\sum y = 763",
+       "en": "First, we find the totals of the exercise hours ($x$) and the resting heart rates ($y$) for the $10$ individuals from the given table.",
+       "ur": "سب سے پہلے، ہم دیے گئے جدول سے $10$ افراد کے لیے ورزش کے گھنٹوں ($x$) اور دل کی دھڑکن کی شرح ($y$) کا مجموعہ معلوم کرتے ہیں۔",
+       "check": [
+        "0 + 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 == 45",
+        "90 + 85 + 83 + 80 + 76 + 74 + 72 + 70 + 68 + 65 == 763"
+       ]
+      },
+      {
+       "math": "\\sum x^2 = 285, \\quad \\sum xy = 3216",
+       "en": "Next, we calculate the sum of the squares of $x$ and the sum of the products of $x$ and $y$ to find the regression line.",
+       "ur": "اس کے بعد، ہم ریگریشن لائن معلوم کرنے کے لیے $x$ کے مربوں کا مجموعہ اور $x$ اور $y$ کے حاصل ضرب کا مجموعہ نکالتے ہیں۔",
+       "check": [
+        "0**2 + 1**2 + 2**2 + 3**2 + 4**2 + 5**2 + 6**2 + 7**2 + 8**2 + 9**2 == 285",
+        "0*90 + 1*85 + 2*83 + 3*80 + 4*76 + 5*74 + 6*72 + 7*70 + 8*68 + 9*65 == 3216"
+       ]
+      },
+      {
+       "math": "b = \\frac{n\\sum xy - (\\sum x)(\\sum y)}{n\\sum x^2 - (\\sum x)^2} = \\frac{10(3216) - (45)(763)}{10(285) - (45)^2} = \\frac{-2175}{825} = -\\frac{29}{11} \\approx -2.64",
+       "en": "Substitute these values into the formula to find the slope $b$ of the line of best fit.",
+       "ur": "بہترین فٹ لائن کی ڈھلوان $b$ معلوم کرنے کے لیے ان قیمتوں کو فارمولے میں درج کریں۔",
+       "check": [
+        "(10*3216 - 45*763) == -2175",
+        "(10*285 - 45**2) == 825",
+        "R(-2175, 825) == R(-29, 11)",
+        "Abs(R(-29, 11) - (-2.64)) <= 0.005"
+       ]
+      },
+      {
+       "math": "a = \\frac{\\sum y - b\\sum x}{n} = \\frac{763 - (-\\frac{29}{11})(45)}{10} = \\frac{4849}{55} \\approx 88.16",
+       "en": "Now calculate the $y$-intercept $a$ using the formula $a = \\bar{y} - b\\bar{x}$.",
+       "ur": "اب فارمولا $a = \\bar{y} - b\\bar{x}$ استعمال کرتے ہوئے $y$-انٹرسیپٹ $a$ کا حساب لگائیں۔",
+       "check": [
+        "R(763 - R(-29, 11)*45, 10) == R(4849, 55)",
+        "Abs(R(4849, 55) - 88.16) <= 0.005"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Using the values of $a$ and $b$, the equation of the line of best fit $\\hat{y} = a + bx$ becomes $\\hat{y} = 88.16 - 2.64x$.",
+       "ur": "$a$ اور $b$ کی قیمتوں کو استعمال کرتے ہوئے، بہترین فٹ لائن کی مساوات $\\hat{y} = a + bx$، $\\hat{y} = 88.16 - 2.64x$ بن جاتی ہے۔"
+      },
+      {
        "math": "\\hat{y} = 88.16 - 2.64(6.5) \\approx 71.03",
-       "en": "Put $x = 6.5$.",
-       "ur": "$x = 6.5$ رکھیں۔",
+       "en": "To predict Sakeena's heart rate, substitute $x = 6.5$ hours into the equation.",
+       "ur": "سکینہ کے دل کی دھڑکن کی پیش گوئی کرنے کے لیے، مساوات میں $x = 6.5$ گھنٹے درج کریں۔",
+       "check": [
+        "Abs(((R(4849,55)) + ((R(-29,11)))*R(13,2)) - 71.03) <= 0.0050000010000000004"
+       ]
+      },
+      {
+       "math": "",
+       "en": "Thus, the predicted resting heart rate for Sakeena is $71.03$ beats per minute.",
+       "ur": "اس طرح، سکینہ کے لیے آرام کی حالت میں دل کی متوقع دھڑکن $71.03$ دھڑکن فی منٹ ہے۔",
        "check": [
         "Abs(((4849/55) + ((-29/11))*R(13,2)) - 71.03) <= 0.0050000010000000004"
        ]
       }
      ],
      "answer": "71.03",
+     "enriched": true,
      "book_key": "71.03"
     }
    ],
@@ -5675,15 +6443,35 @@
      "prompt": "",
      "steps": [
       {
+       "math": "25, 30, 35, 40, 50, 60, 65, 75",
+       "en": "We are given a set of ungrouped data values and asked to find the range.",
+       "ur": "ہمیں غیر گروہی مواد (ungrouped data) کی قدریں دی گئی ہیں اور ہمیں ان کا حیطہ (range) معلوم کرنا ہے۔"
+      },
+      {
+       "math": "X_m = 75, \\quad X_0 = 25",
+       "en": "From the given data, we identify the maximum value ($X_m$) as $75$ and the minimum value ($X_0$) as $25$.",
+       "ur": "دیے گئے مواد میں سے، ہم سب سے بڑی قدر ($X_m$) جو کہ $75$ ہے اور سب سے چھوٹی قدر ($X_0$) جو کہ $25$ ہے، کی نشاندہی کرتے ہیں۔",
+       "check": [
+        "Max(25, 30, 35, 40, 50, 60, 65, 75) == 75",
+        "Min(25, 30, 35, 40, 50, 60, 65, 75) == 25"
+       ]
+      },
+      {
+       "math": "",
+       "en": "The formula for the range of ungrouped data is $\\text{Range} = X_m - X_0$, which is the difference between the maximum and minimum values.",
+       "ur": "غیر گروہی مواد کا حیطہ (range) معلوم کرنے کا فارمولا $\\text{Range} = X_m - X_0$ ہے، جو کہ سب سے بڑی اور سب سے چھوٹی قدر کا فرق ہوتا ہے۔"
+      },
+      {
        "math": "\\text{Range} = 75 - 25 = 50",
-       "en": "Highest minus lowest.",
-       "ur": "بڑی منفی چھوٹی۔",
+       "en": "Substitute $X_m = 75$ and $X_0 = 25$ into the formula and subtract to get the final answer.",
+       "ur": "فارمولے میں $X_m = 75$ اور $X_0 = 25$ درج کریں اور حتمی جواب حاصل کرنے کے لیے تفریق کریں۔",
        "check": [
         "75 - 25 == 50"
        ]
       }
      ],
      "answer": "50",
+     "enriched": true,
      "book_key": "50"
     }
    ],
@@ -5759,10 +6547,40 @@
      "prompt": "",
      "steps": [
       {
-       "math": "\\bar{x} = \\frac{45}{5} = 9,\\quad \\sigma^2 = \\frac{421}{5} - 9^2 = 3.2,\\quad \\sigma = \\sqrt{3.2} \\approx 1.789",
-       "en": "Use $\\sigma^2 = \\frac{\\sum x^2}{n} - \\bar{x}^2$.",
-       "ur": "$\\sigma^2 = \\frac{\\sum x^2}{n} - \\bar{x}^2$ استعمال کریں۔",
+       "math": "n = 5,\\quad \\sum x = 45,\\quad \\sum x^2 = 421",
+       "en": "First, write down the given values: the number of observations $n$, the sum of the numbers $\\sum x$, and the sum of their squares $\\sum x^2$.",
+       "ur": "سب سے پہلے دی گئی قیمتیں لکھیں: مشاہدات کی تعداد $n$، اعداد کا مجموعہ $\\sum x$، اور ان کے مربعات کا مجموعہ $\\sum x^2$۔"
+      },
+      {
+       "math": "\\bar{x} = \\frac{\\sum x}{n} = \\frac{45}{5} = 9",
+       "en": "Use the formula for the arithmetic mean $\\bar{x} = \\frac{\\sum x}{n}$ and substitute the given values.",
+       "ur": "حسابی اوسط کا فارمولا $\\bar{x} = \\frac{\\sum x}{n}$ استعمال کریں اور دی گئی قیمتیں درج کریں۔",
        "check": [
+        "45/5 == 9"
+       ]
+      },
+      {
+       "math": "\\sigma^2 = \\frac{\\sum x^2}{n} - (\\bar{x})^2",
+       "en": "Next, write the computational formula for the variance $\\sigma^2$ of ungrouped data.",
+       "ur": "اس کے بعد، غیر گروہی ڈیٹا کے تغیر (variance) $\\sigma^2$ کا فارمولا لکھیں۔"
+      },
+      {
+       "math": "\\sigma^2 = \\frac{421}{5} - (9)^2 = 84.2 - 81 = 3.2",
+       "en": "Substitute $\\sum x^2 = 421$, $n = 5$, and $\\bar{x} = 9$ into the variance formula and simplify.",
+       "ur": "تغیر کے فارمولے میں $\\sum x^2 = 421$، $n = 5$، اور $\\bar{x} = 9$ درج کریں اور مختصر کریں۔",
+       "check": [
+        "R(421,5) == 84.2",
+        "9**2 == 81",
+        "R(421,5) - 81 == R(16,5)",
+        "R(16,5) == 3.2"
+       ]
+      },
+      {
+       "math": "\\sigma = \\sqrt{3.2} \\approx 1.789",
+       "en": "Take the positive square root of the variance $\\sigma^2$ to find the standard deviation $\\sigma$. Thus, the mean is $9$ and the standard deviation is $1.789$.",
+       "ur": "معیاری انحراف $\\sigma$ معلوم کرنے کے لیے تغیر $\\sigma^2$ کا مثبت جذر المربع لیں۔ پس، اوسط $9$ ہے اور معیاری انحراف $1.789$ ہے۔",
+       "check": [
+        "Abs(sqrt(R(16,5)) - 1.789) <= 0.000500001",
         "45/5 == 9",
         "R(421,5) - 81 == R(16,5)",
         "Abs((sqrt(R(16,5))) - 1.789) <= 0.000500001"
@@ -5770,6 +6588,7 @@
       }
      ],
      "answer": "Mean = 9, SD = 1.789",
+     "enriched": true,
      "book_key": "Mean = 9, SD = 1.789"
     }
    ],

@@ -1,0 +1,56 @@
+{
+ "item": "c10-rev12-q6",
+ "label": "",
+ "answer_ref": "$\\frac{7}{22}$",
+ "steps": [
+  {
+   "math": "n(S) = 7 + 5 = 12",
+   "en": "First, find the total number of marbles in the bag by adding the $7$ orange and $5$ purple marbles.",
+   "ur": "سب سے پہلے، $7$ نارنجی اور $5$ جامنی بنٹوں کو جمع کر کے تھیلے میں کل بنٹوں کی تعداد معلوم کریں۔",
+   "check": [
+    "7 + 5 == 12"
+   ]
+  },
+  {
+   "math": "P(O_1) = \\frac{7}{12}",
+   "en": "Let $O_1$ be the event that the first marble drawn is orange. Since there are $7$ orange marbles out of $12$, the probability of $O_1$ is $\\frac{7}{12}$.",
+   "ur": "فرض کریں کہ پہلا بنٹا نارنجی نکلنے کا واقعہ $O_1$ ہے۔ چونکہ کل $12$ میں سے $7$ بنٹے نارنجی ہیں، اس لیے $O_1$ کا احتمال $\\frac{7}{12}$ ہے۔",
+   "check": [
+    "R(7, 12) == 7/12"
+   ]
+  },
+  {
+   "math": "\\text{Remaining total} = 12 - 1 = 11, \\quad \\text{Remaining orange} = 7 - 1 = 6",
+   "en": "Since the first marble is not replaced, $6$ orange marbles and a total of $11$ marbles remain in the bag.",
+   "ur": "چونکہ پہلا بنٹا واپس نہیں رکھا گیا، اس لیے تھیلے میں $6$ نارنجی بنٹے اور کل $11$ بنٹے باقی رہ جاتے ہیں۔",
+   "check": [
+    "12 - 1 == 11",
+    "7 - 1 == 6"
+   ]
+  },
+  {
+   "math": "P(O_2 | O_1) = \\frac{6}{11}",
+   "en": "Let $O_2$ be the event that the second marble is also orange. The probability of drawing a second orange marble given the first was orange is $\\frac{6}{11}$.",
+   "ur": "فرض کریں کہ دوسرا بنٹا بھی نارنجی نکلنے کا واقعہ $O_2$ ہے۔ پہلے بنٹے کے نارنجی نکلنے کے بعد دوسرے نارنجی بنٹے کے نکلنے کا احتمال $\\frac{6}{11}$ ہے۔",
+   "check": [
+    "R(6, 11) == 6/11"
+   ]
+  },
+  {
+   "math": "",
+   "en": "Since the two draws are dependent events, we use the multiplication law of probability: $P(O_1 \\cap O_2) = P(O_1) \\times P(O_2 | O_1)$.",
+   "ur": "چونکہ دونوں بنٹوں کا نکلنا منحصر واقعات ہیں، اس لیے ہم احتمال کے ضربی قانون $P(O_1 \\cap O_2) = P(O_1) \\times P(O_2 | O_1)$ کا استعمال کرتے ہیں۔"
+  },
+  {
+   "math": "P(O_1 \\cap O_2) = \\frac{7}{12} \\times \\frac{6}{11} = \\frac{7}{22}",
+   "en": "Substitute the values and simplify to get the final probability $\\frac{7}{22}$.",
+   "ur": "قیمتیں درج کریں اور مختصر کریں، جس سے حتمی احتمال $\\frac{7}{22}$ حاصل ہوتا ہے۔",
+   "check": [
+    "R(7, 12) * R(6, 11) == 7/22",
+    "R(7,12)*R(6,11) == 7/22"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

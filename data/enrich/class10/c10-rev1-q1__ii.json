@@ -1,0 +1,64 @@
+{
+ "item": "c10-rev1-q1",
+ "label": "ii",
+ "answer_ref": "(d) $13$",
+ "steps": [
+  {
+   "math": "(2-3i)(2+3i)",
+   "en": "We are given the product of two complex numbers $(2-3i)$ and $(2+3i)$, and we need to find the real part of the result.",
+   "ur": "ہمیں دو مختلط اعداد $(2-3i)$ اور $(2+3i)$ کا حاصل ضرب دیا گیا ہے، اور ہمیں اس کے نتیجے کا حقیقی حصہ معلوم کرنا ہے۔"
+  },
+  {
+   "math": "(2-3i)(2+3i) = (2)^2 - (3i)^2",
+   "en": "Apply the algebraic identity $(a-b)(a+b) = a^2 - b^2$, where $a = 2$ and $b = 3i$.",
+   "ur": "الجبرئی کلیہ $(a-b)(a+b) = a^2 - b^2$ استعمال کریں، جہاں $a = 2$ اور $b = 3i$ ہے۔",
+   "check": [
+    "(2-3*I)*(2+3*I) == 2**2 - (3*I)**2"
+   ]
+  },
+  {
+   "math": "(2-3i)(2+3i) = 4 - 9i^2",
+   "en": "Evaluate the squares: $(2)^2 = 4$ and $(3i)^2 = 9i^2$.",
+   "ur": "مربع حل کریں: $(2)^2 = 4$ اور $(3i)^2 = 9i^2$۔",
+   "check": [
+    "(2-3*I)*(2+3*I) == 4 - 9*I**2"
+   ]
+  },
+  {
+   "math": "(2-3i)(2+3i) = 4 - 9(-1)",
+   "en": "Substitute the value of $i^2 = -1$.",
+   "ur": "$i^2 = -1$ کی قیمت درج کریں۔",
+   "check": [
+    "(2-3*I)*(2+3*I) == 4 - 9*(-1)"
+   ]
+  },
+  {
+   "math": "(2-3i)(2+3i) = 4 + 9 = 13",
+   "en": "Multiply $-9$ by $-1$ to get $+9$, and then add $4$ and $9$ to get $13$.",
+   "ur": "$-9$ کو $-1$ سے ضرب دے کر $+9$ حاصل کریں، اور پھر $4$ اور $9$ کو جمع کر کے $13$ حاصل کریں۔",
+   "check": [
+    "(2-3*I)*(2+3*I) == 4 + 9",
+    "4 + 9 == 13"
+   ]
+  },
+  {
+   "math": "13 = 13 + 0i",
+   "en": "Write the result in the standard complex form $a + bi$. Here, the real part is $13$ and the imaginary part is $0$.",
+   "ur": "نتیجے کو معیاری مختلط شکل $a + bi$ میں لکھیں۔ یہاں حقیقی حصہ $13$ ہے اور خیالی حصہ $0$ ہے۔",
+   "check": [
+    "13 == 13 + 0*I",
+    "re((2-3*I)*(2+3*I)) == 13"
+   ]
+  },
+  {
+   "math": "\\text{Answer: (d) } 13",
+   "en": "Therefore, the real part is $13$, which matches option (d).",
+   "ur": "لہٰذا، حقیقی حصہ $13$ ہے، جو آپشن (d) سے مطابقت رکھتا ہے۔",
+   "check": [
+    "re((2-3*I)*(2+3*I)) == 13"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

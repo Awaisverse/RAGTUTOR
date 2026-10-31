@@ -1,0 +1,52 @@
+{
+ "item": "c10-ex11.2-q13",
+ "label": "ii",
+ "answer_ref": "Variance = 35, SD = 5.92",
+ "steps": [
+  {
+   "math": "\\sum fx = 210,\\quad \\sum fx^2 = 7560,\\quad \\sum f = 6",
+   "en": "First, write down the given values for the grouped data.",
+   "ur": "سب سے پہلے، گروہی مواد کے لیے دی گئی قیمتیں لکھیں۔"
+  },
+  {
+   "math": "S^2 = \\frac{\\sum fx^2}{\\sum f} - \\left(\\frac{\\sum fx}{\\sum f}\\right)^2",
+   "en": "Recall the computational formula for the variance ($S^2$) of grouped data.",
+   "ur": "گروہی مواد کے تغیر ($S^2$) کا فارمولا یاد کریں۔"
+  },
+  {
+   "math": "S^2 = \\frac{7560}{6} - \\left(\\frac{210}{6}\\right)^2",
+   "en": "Substitute the given values of $\\sum fx^2$, $\\sum fx$, and $\\sum f$ into the variance formula.",
+   "ur": "تغیر کے فارمولے میں $\\sum fx^2$، $\\sum fx$ اور $\\sum f$ کی دی گئی قیمتیں درج کریں۔"
+  },
+  {
+   "math": "S^2 = 1260 - (35)^2",
+   "en": "Divide $7560$ by $6$ to get $1260$, and divide $210$ by $6$ to get the mean $\\bar{x} = 35$.",
+   "ur": "$7560$ کو $6$ پر تقسیم کرنے سے $1260$، اور $210$ کو $6$ پر تقسیم کرنے سے اوسط $\\bar{x} = 35$ حاصل ہوتا ہے۔",
+   "check": [
+    "7560/6 == 1260",
+    "210/6 == 35"
+   ]
+  },
+  {
+   "math": "S^2 = 1260 - 1225 = 35",
+   "en": "Square $35$ to get $1225$, then subtract it from $1260$ to find the variance.",
+   "ur": "$35$ کا مربع لیں جو کہ $1225$ ہے، پھر تغیر معلوم کرنے کے لیے اسے $1260$ میں سے تفریق کریں۔",
+   "check": [
+    "35**2 == 1225",
+    "1260 - 1225 == 35"
+   ]
+  },
+  {
+   "math": "\\text{S.D.} = \\sqrt{S^2} = \\sqrt{35} \\approx 5.92",
+   "en": "Take the positive square root of the variance to find the standard deviation (S.D.), rounded to two decimal places.",
+   "ur": "معیاری انحراف (S.D.) معلوم کرنے کے لیے تغیر کا مثبت جزر المربع لیں اور اشاریہ کے دو درجوں تک محدود کریں۔",
+   "check": [
+    "Abs(sqrt(35) - 5.92) <= 0.005",
+    "7560/6 - 35**2 == 35",
+    "Abs((sqrt(35)) - 5.92) <= 0.0050000010000000004"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

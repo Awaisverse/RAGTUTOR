@@ -1,0 +1,46 @@
+{
+ "item": "c10-rev4-q11",
+ "label": "",
+ "answer_ref": "$94 \\le r \\le 106$",
+ "steps": [
+  {
+   "math": "|x - r| \\le 6",
+   "en": "We are given the inequality for the allowed range of the GPS, where the actual location is $x = 100$ and $r$ is the reported location.",
+   "ur": "ہمیں جی پی ایس کی قابل قبول حد کے لیے نابرابری دی گئی ہے، جہاں اصل مقام $x = 100$ ہے اور $r$ رپورٹ شدہ مقام ہے۔"
+  },
+  {
+   "math": "|100 - r| \\le 6",
+   "en": "Substitute the given actual location $x = 100$ into the inequality.",
+   "ur": "دیے گئے اصل مقام $x = 100$ کی قیمت نابرابری میں درج کریں۔"
+  },
+  {
+   "math": "|r - 100| \\le 6",
+   "en": "Since $|a - b| = |b - a|$, we can rewrite $|100 - r|$ as $|r - 100|$ to make solving for $r$ easier.",
+   "ur": "چونکہ $|a - b| = |b - a|$ ہوتا ہے، ہم $r$ کے لیے حل کو آسان بنانے کی خاطر $|100 - r|$ کو $|r - 100|$ لکھ سکتے ہیں۔"
+  },
+  {
+   "math": "-6 \\le r - 100 \\le 6",
+   "en": "By the property of absolute value inequalities, $|A| \\le k$ is equivalent to $-k \\le A \\le k$.",
+   "ur": "مطلق قیمت کی نابرابریوں کی خاصیت کے مطابق، $|A| \\le k$ برابر ہوتا ہے $-k \\le A \\le k$ کے۔"
+  },
+  {
+   "math": "-6 + 100 \\le r - 100 + 100 \\le 6 + 100",
+   "en": "Add $100$ to all parts of the inequality to isolate $r$ in the middle.",
+   "ur": "درمیان میں $r$ کو اکیلا کرنے کے لیے نابرابری کے تمام حصوں میں $100$ جمع کریں۔"
+  },
+  {
+   "math": "94 \\le r \\le 106",
+   "en": "Simplify the numbers. Therefore, the range of acceptable reported locations is from $94$ metres to $106$ metres.",
+   "ur": "اعداد کو مختصر کریں۔ لہٰذا، قابل قبول رپورٹ شدہ مقامات کی حد $94$ میٹر سے $106$ میٹر تک ہے۔",
+   "check": [
+    "-6 + 100 == 94",
+    "6 + 100 == 106",
+    "Abs(94 - 100) <= 6",
+    "Abs(106 - 100) <= 6",
+    "Abs(107 - 100) > 6"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

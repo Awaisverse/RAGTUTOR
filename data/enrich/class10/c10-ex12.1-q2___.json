@@ -1,0 +1,147 @@
+{
+ "item": "c10-ex12.1-q2",
+ "label": "",
+ "answer_ref": "$n(S) = 4$: (Hamid, Zainab), (Hamid, Samia), (Ahmad, Zainab), (Ahmad, Samia)",
+ "steps": [
+  {
+   "math": "B = \\{\\text{Hamid}, \\text{Ahmad}\\}, \\quad G = \\{\\text{Zainab}, \\text{Samia}\\}",
+   "en": "Identify the given groups of $2$ boys and $2$ girls.",
+   "ur": "دیے گئے $2$ لڑکوں اور $2$ لڑکیوں کے گروپس کی نشاندہی کریں۔",
+   "draw": [
+    {
+     "t": "line",
+     "p": [
+      8.0,
+      30.0,
+      50.0,
+      17.5
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      51.0,
+      18.5
+     ],
+     "s": "Hamid"
+    },
+    {
+     "t": "line",
+     "p": [
+      8.0,
+      30.0,
+      50.0,
+      42.5
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      51.0,
+      43.5
+     ],
+     "s": "Ahmad"
+    },
+    {
+     "t": "line",
+     "p": [
+      54.0,
+      17.5,
+      92.0,
+      11.25
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      93.0,
+      12.25
+     ],
+     "s": "Zainab"
+    },
+    {
+     "t": "line",
+     "p": [
+      54.0,
+      17.5,
+      92.0,
+      23.75
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      93.0,
+      24.75
+     ],
+     "s": "Samia"
+    },
+    {
+     "t": "line",
+     "p": [
+      54.0,
+      42.5,
+      92.0,
+      36.25
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      93.0,
+      37.25
+     ],
+     "s": "Zainab"
+    },
+    {
+     "t": "line",
+     "p": [
+      54.0,
+      42.5,
+      92.0,
+      48.75
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      93.0,
+      49.75
+     ],
+     "s": "Samia"
+    }
+   ]
+  },
+  {
+   "math": "\\text{Boy} \\to \\text{Girl}",
+   "en": "To select one boy and one girl, we first choose a boy and then pair him with each girl.",
+   "ur": "ایک لڑکا اور ایک لڑکی منتخب کرنے کے لیے، ہم پہلے ایک لڑکا چنتے ہیں اور پھر ہر لڑکی کے ساتھ اس کا جوڑا بناتے ہیں۔"
+  },
+  {
+   "math": "\\text{Hamid} \\to \\begin{cases} \\text{Zainab} \\implies (\\text{Hamid}, \\text{Zainab}) \\\\ \\text{Samia} \\implies (\\text{Hamid}, \\text{Samia}) \\end{cases}",
+   "en": "Draw the first main branch of the tree diagram for Hamid.",
+   "ur": "حامد کے لیے ٹری ڈایاگرام کی پہلی شاخ بنائیں۔"
+  },
+  {
+   "math": "\\text{Ahmad} \\to \\begin{cases} \\text{Zainab} \\implies (\\text{Ahmad}, \\text{Zainab}) \\\\ \\text{Samia} \\implies (\\text{Ahmad}, \\text{Samia}) \\end{cases}",
+   "en": "Draw the second main branch of the tree diagram for Ahmad.",
+   "ur": "احمد کے لیے ٹری ڈایاگرام کی دوسری شاخ بنائیں۔"
+  },
+  {
+   "math": "S = \\{(\\text{Hamid}, \\text{Zainab}), (\\text{Hamid}, \\text{Samia}), (\\text{Ahmad}, \\text{Zainab}), (\\text{Ahmad}, \\text{Samia})\\}",
+   "en": "Collect all the possible pairs from the tree diagram to write the sample space $S$.",
+   "ur": "سیمپل سپیس $S$ لکھنے کے لیے ٹری ڈایاگرام سے تمام ممکنہ جوڑوں کو اکٹھا کریں۔"
+  },
+  {
+   "math": "n(S) = 2 \\times 2 = 4",
+   "en": "Count the total number of possible outcomes in the sample space.",
+   "ur": "سیمپل سپیس میں ممکنہ نتائج کی کل تعداد گنیں۔",
+   "check": [
+    "2*2 == 4"
+   ]
+  }
+ ],
+ "keeps_drawing": true,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

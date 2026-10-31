@@ -47,24 +47,58 @@
      "prompt": "$\\frac{\\sqrt{2}+\\sqrt{5}}{\\sqrt{3}}$",
      "steps": [
       {
-       "math": "\\frac{\\sqrt{2}+\\sqrt{5}}{\\sqrt{3}} \\times \\frac{\\sqrt{3}}{\\sqrt{3}}",
-       "en": "The denominator is a single root, so multiply the numerator and the denominator by $\\sqrt{3}$.",
-       "ur": "نسب نما ایک ہی جذر ہے، اس لیے شمار کنندہ اور نسب نما کو $\\sqrt{3}$ سے ضرب دیں۔",
+       "math": "\\frac{\\sqrt{2}+\\sqrt{5}}{\\sqrt{3}}",
+       "en": "We are given the expression and asked to rationalize its denominator.",
+       "ur": "ہمیں یہ عبارت دی گئی ہے اور اس کے نسب نما کو ناطق بنانے کے لیے کہا گیا ہے۔"
+      },
+      {
+       "math": "= \\frac{\\sqrt{2}+\\sqrt{5}}{\\sqrt{3}} \\times \\frac{\\sqrt{3}}{\\sqrt{3}}",
+       "en": "Since the denominator is a single square root, $\\sqrt{3}$, we multiply both the numerator and the denominator by $\\sqrt{3}$ to eliminate the radical from the denominator.",
+       "ur": "چونکہ نسب نما ایک ہی جذر $\\sqrt{3}$ ہے، اس لیے نسب نما سے جذر کو ختم کرنے کے لیے ہم شمار کنندہ اور نسب نما دونوں کو $\\sqrt{3}$ سے ضرب دیتے ہیں۔",
        "check": [
-        "(sqrt(2)+sqrt(5))/sqrt(3) == (sqrt(2)+sqrt(5))*sqrt(3)/3"
+        "(sqrt(2)+sqrt(5))/sqrt(3) == ((sqrt(2)+sqrt(5))/sqrt(3)) * (sqrt(3)/sqrt(3))"
        ]
       },
       {
-       "math": "= \\frac{\\sqrt{2}\\sqrt{3}+\\sqrt{5}\\sqrt{3}}{3} = \\frac{\\sqrt{6}+\\sqrt{15}}{3}",
-       "en": "Multiply the roots: $\\sqrt{a}\\sqrt{b} = \\sqrt{ab}$.",
-       "ur": "جذروں کو ضرب دیں: $\\sqrt{a}\\sqrt{b} = \\sqrt{ab}$۔",
+       "math": "= \\frac{(\\sqrt{2}+\\sqrt{5})\\sqrt{3}}{(\\sqrt{3})^2}",
+       "en": "Combine the numerators and denominators into a single fraction.",
+       "ur": "شمار کنندگان اور نسب نماؤں کو ایک ہی کسر میں ملا کر لکھیں۔",
        "check": [
+        "((sqrt(2)+sqrt(5))/sqrt(3)) * (sqrt(3)/sqrt(3)) == ((sqrt(2)+sqrt(5))*sqrt(3)) / (sqrt(3)**2)"
+       ]
+      },
+      {
+       "math": "= \\frac{\\sqrt{2}\\sqrt{3}+\\sqrt{5}\\sqrt{3}}{3}",
+       "en": "Distribute $\\sqrt{3}$ across the terms in the numerator, and simplify the denominator using $(\\sqrt{a})^2 = a$.",
+       "ur": "شمار کنندہ کی رقوم کو $\\sqrt{3}$ سے ضرب دیں، اور کلیہ $(\\sqrt{a})^2 = a$ کا استعمال کرتے ہوئے نسب نما کو مختصر کریں۔",
+       "check": [
+        "(sqrt(2)+sqrt(5))*sqrt(3) == sqrt(2)*sqrt(3) + sqrt(5)*sqrt(3)",
+        "sqrt(3)**2 == 3"
+       ]
+      },
+      {
+       "math": "= \\frac{\\sqrt{2 \\times 3}+\\sqrt{5 \\times 3}}{3}",
+       "en": "Apply the product rule of radicals, $\\sqrt{a}\\sqrt{b} = \\sqrt{a \\times b}$, in the numerator.",
+       "ur": "شمار کنندہ میں جذروں کی ضرب کا اصول $\\sqrt{a}\\sqrt{b} = \\sqrt{a \\times b}$ لاگو کریں۔",
+       "check": [
+        "sqrt(2)*sqrt(3) == sqrt(2*3)",
+        "sqrt(5)*sqrt(3) == sqrt(5*3)"
+       ]
+      },
+      {
+       "math": "= \\frac{\\sqrt{6}+\\sqrt{15}}{3}",
+       "en": "Multiply the numbers inside the square roots to get the final answer with a rational denominator.",
+       "ur": "جذروں کے اندر موجود اعداد کو ضرب دے کر ناطق نسب نما کے ساتھ حتمی جواب حاصل کریں۔",
+       "check": [
+        "(sqrt(2*3) + sqrt(5*3))/3 == (sqrt(6) + sqrt(15))/3",
+        "(sqrt(2)+sqrt(5))/sqrt(3) == (sqrt(2)+sqrt(5))*sqrt(3)/3",
         "sqrt(2)*sqrt(3) == sqrt(6)",
         "sqrt(5)*sqrt(3) == sqrt(15)"
        ]
       }
      ],
      "answer": "$\\frac{\\sqrt{6}+\\sqrt{15}}{3}$",
+     "enriched": true,
      "book_key": "\\frac{\\sqrt{6}+\\sqrt{15}}{3}"
     },
     {
@@ -72,23 +106,58 @@
      "prompt": "$\\frac{\\sqrt{2}-1}{\\sqrt{5}}$",
      "steps": [
       {
-       "math": "\\frac{\\sqrt{2}-1}{\\sqrt{5}} \\times \\frac{\\sqrt{5}}{\\sqrt{5}}",
-       "en": "Multiply the numerator and the denominator by $\\sqrt{5}$.",
-       "ur": "شمار کنندہ اور نسب نما کو $\\sqrt{5}$ سے ضرب دیں۔",
+       "math": "\\frac{\\sqrt{2}-1}{\\sqrt{5}}",
+       "en": "We are given the fraction $\\frac{\\sqrt{2}-1}{\\sqrt{5}}$ and we need to rationalize its denominator.",
+       "ur": "ہمیں کسر $\\frac{\\sqrt{2}-1}{\\sqrt{5}}$ دی گئی ہے اور ہمیں اس کے مخرج (نسب نما) کو ناطق بنانا ہے۔"
+      },
+      {
+       "math": "= \\frac{\\sqrt{2}-1}{\\sqrt{5}} \\times \\frac{\\sqrt{5}}{\\sqrt{5}}",
+       "en": "To remove the radical from the denominator, multiply both the numerator and the denominator by $\\sqrt{5}$.",
+       "ur": "مخرج سے جذر کو ختم کرنے کے لیے، شمار کنندہ اور مخرج دونوں کو $\\sqrt{5}$ سے ضرب دیں۔",
        "check": [
-        "(sqrt(2)-1)/sqrt(5) == (sqrt(2)-1)*sqrt(5)/5"
+        "(sqrt(2)-1)/sqrt(5) == ((sqrt(2)-1)/sqrt(5)) * (sqrt(5)/sqrt(5))"
        ]
       },
       {
-       "math": "= \\frac{\\sqrt{2}\\sqrt{5}-\\sqrt{5}}{5} = \\frac{\\sqrt{10}-\\sqrt{5}}{5}",
-       "en": "Multiply the roots: $\\sqrt{2}\\sqrt{5} = \\sqrt{10}$.",
-       "ur": "جذروں کو ضرب دیں: $\\sqrt{2}\\sqrt{5} = \\sqrt{10}$۔",
+       "math": "= \\frac{(\\sqrt{2}-1)\\sqrt{5}}{(\\sqrt{5})^2}",
+       "en": "Combine the terms in the numerator and write the denominator as a square.",
+       "ur": "شمار کنندہ میں رقموں کو ملا کر لکھیں اور مخرج کو مربع کی صورت میں لکھیں۔",
        "check": [
+        "((sqrt(2)-1)/sqrt(5)) * (sqrt(5)/sqrt(5)) == ((sqrt(2)-1)*sqrt(5))/(sqrt(5)**2)"
+       ]
+      },
+      {
+       "math": "= \\frac{\\sqrt{2}\\cdot\\sqrt{5} - 1\\cdot\\sqrt{5}}{5}",
+       "en": "Multiply each term inside the brackets by $\\sqrt{5}$ in the numerator, and use $(\\sqrt{5})^2 = 5$ in the denominator.",
+       "ur": "شمار کنندہ میں بریکٹ کے اندر موجود ہر رقم کو $\\sqrt{5}$ سے ضرب دیں، اور مخرج میں $(\\sqrt{5})^2 = 5$ استعمال کریں۔",
+       "check": [
+        "((sqrt(2)-1)*sqrt(5))/(sqrt(5)**2) == (sqrt(2)*sqrt(5) - 1*sqrt(5))/5",
+        "sqrt(5)**2 == 5"
+       ]
+      },
+      {
+       "math": "= \\frac{\\sqrt{2 \\times 5} - \\sqrt{5}}{5}",
+       "en": "Use the product rule of radicals $\\sqrt{a}\\cdot\\sqrt{b} = \\sqrt{a \\times b}$ to combine $\\sqrt{2}$ and $\\sqrt{5}$.",
+       "ur": "جذر کے ضرب کے اصول $\\sqrt{a}\\cdot\\sqrt{b} = \\sqrt{a \\times b}$ کو استعمال کرتے ہوئے $\\sqrt{2}$ اور $\\sqrt{5}$ کو یکجا کریں۔",
+       "check": [
+        "sqrt(2)*sqrt(5) == sqrt(2*5)",
+        "(sqrt(2)*sqrt(5) - 1*sqrt(5))/5 == (sqrt(2*5) - sqrt(5))/5"
+       ]
+      },
+      {
+       "math": "= \\frac{\\sqrt{10}-\\sqrt{5}}{5}",
+       "en": "Simplify $2 \\times 5 = 10$ under the radical sign. The denominator is now a rational number, which gives our final answer.",
+       "ur": "جذر کے نیچے $2 \\times 5 = 10$ کو مختصر کریں۔ اب مخرج ایک ناطق عدد ہے، جو کہ ہمارا حتمی جواب ہے۔",
+       "check": [
+        "sqrt(2*5) == sqrt(10)",
+        "(sqrt(2*5) - sqrt(5))/5 == (sqrt(10) - sqrt(5))/5",
+        "(sqrt(2)-1)/sqrt(5) == (sqrt(2)-1)*sqrt(5)/5",
         "sqrt(2)*sqrt(5) == sqrt(10)"
        ]
       }
      ],
      "answer": "$\\frac{\\sqrt{10}-\\sqrt{5}}{5}$",
+     "enriched": true,
      "book_key": "\\frac{\\sqrt{10}-\\sqrt{5}}{5}"
     },
     {
@@ -302,23 +371,60 @@
      "prompt": "$\\sqrt[7]{\\frac{x^{14} \\times y^{21} \\times z^{35}}{y^{14} z^{7}}}$",
      "steps": [
       {
-       "math": "\\frac{x^{14} y^{21} z^{35}}{y^{14} z^{7}} = x^{14} y^{21-14} z^{35-7} = x^{14} y^{7} z^{28}",
-       "en": "Inside the root, divide powers of the same base by subtracting the exponents: $\\frac{a^m}{a^n} = a^{m-n}$.",
-       "ur": "جذر کے اندر ایک ہی اساس کی طاقتوں کی تقسیم میں قوتیں منفی کریں: $\\frac{a^m}{a^n} = a^{m-n}$۔",
+       "math": "\\sqrt[7]{\\frac{x^{14} \\times y^{21} \\times z^{35}}{y^{14} z^{7}}}",
+       "en": "We are given the radical expression and asked to simplify it using the laws of exponents.",
+       "ur": "ہمیں یہ جذری جملہ دیا گیا ہے اور ہمیں قوت نما کے قوانین استعمال کرتے ہوئے اسے مختصر کرنا ہے۔"
+      },
+      {
+       "math": "= \\sqrt[7]{x^{14} \\cdot y^{21-14} \\cdot z^{35-7}}",
+       "en": "First, simplify the fraction inside the radical. By the quotient law of exponents, $\\frac{a^m}{a^n} = a^{m-n}$, we subtract the exponents of like bases $y$ and $z$.",
+       "ur": "سب سے پہلے، جذر کے اندر موجود کسر کو مختصر کریں۔ قوت نما کے تقسیم کے قانون $\\frac{a^m}{a^n} = a^{m-n}$ کے مطابق، ہم یکساں اساس $y$ اور $z$ کے قوت نماؤں کو منفی کرتے ہیں۔",
        "check": [
-        "x**14*y**21*z**35/(y**14*z**7) == x**14*y**7*z**28"
+        "x**14 * y**21 * z**35 / (y**14 * z**7) == x**14 * y**(21-14) * z**(35-7)"
        ]
       },
       {
-       "math": "\\sqrt[7]{x^{14} y^{7} z^{28}} = \\left(x^{14} y^{7} z^{28}\\right)^{\\frac{1}{7}} = x^{2} y\\, z^{4}",
-       "en": "Write the 7th root as the power $\\frac{1}{7}$ and multiply each exponent by $\\frac{1}{7}$.",
-       "ur": "ساتویں جذر کو طاقت $\\frac{1}{7}$ کی شکل میں لکھیں اور ہر قوت کو $\\frac{1}{7}$ سے ضرب دیں۔",
+       "math": "= \\sqrt[7]{x^{14} y^{7} z^{28}}",
+       "en": "Perform the subtraction in the exponents: $21 - 14 = 7$ and $35 - 7 = 28$.",
+       "ur": "قوت نماؤں میں تفریق کا عمل مکمل کریں: $21 - 14 = 7$ اور $35 - 7 = 28$۔",
        "check": [
+        "21 - 14 == 7",
+        "35 - 7 == 28"
+       ]
+      },
+      {
+       "math": "= \\left(x^{14} y^{7} z^{28}\\right)^{\\frac{1}{7}}",
+       "en": "Rewrite the radical in exponential form using the rule $\\sqrt[n]{a} = a^{\\frac{1}{n}}$. Here, the index of the root is $7$.",
+       "ur": "اصول $\\sqrt[n]{a} = a^{\\frac{1}{n}}$ کا استعمال کرتے ہوئے جذری شکل کو قوت نمائی شکل میں لکھیں۔ یہاں جذر کا درجہ $7$ ہے۔"
+      },
+      {
+       "math": "= \\left(x^{14}\\right)^{\\frac{1}{7}} \\cdot \\left(y^{7}\\right)^{\\frac{1}{7}} \\cdot \\left(z^{28}\\right)^{\\frac{1}{7}}",
+       "en": "Apply the power of a product rule, $(abc)^n = a^n b^n c^n$, to distribute the outer exponent $\\frac{1}{7}$ to each factor inside the brackets.",
+       "ur": "ضرب کے قوت نما کا قانون $(abc)^n = a^n b^n c^n$ لاگو کرتے ہوئے بیرونی قوت نما $\\frac{1}{7}$ کو بریکٹ کے اندر موجود ہر جزو پر الگ الگ لگائیں۔"
+      },
+      {
+       "math": "= x^{14 \\times \\frac{1}{7}} \\cdot y^{7 \\times \\frac{1}{7}} \\cdot z^{28 \\times \\frac{1}{7}}",
+       "en": "Use the power of a power rule, $(a^m)^n = a^{m \\times n}$, and multiply the exponents.",
+       "ur": "قوت القوت کا قانون $(a^m)^n = a^{m \\times n}$ استعمال کریں اور قوت نماؤں کو آپس میں ضرب دیں۔",
+       "check": [
+        "14 * R(1, 7) == 2",
+        "7 * R(1, 7) == 1",
+        "28 * R(1, 7) == 4"
+       ]
+      },
+      {
+       "math": "= x^2 y z^4",
+       "en": "Simplify the exponents ($\\frac{14}{7} = 2$, $\\frac{7}{7} = 1$, and $\\frac{28}{7} = 4$) to get the final answer.",
+       "ur": "آخری جواب حاصل کرنے کے لیے قوت نماؤں کو مختصر کریں ($\\frac{14}{7} = 2$، $\\frac{7}{7} = 1$، اور $\\frac{28}{7} = 4$)۔",
+       "check": [
+        "x**(14*R(1,7)) * y**(7*R(1,7)) * z**(28*R(1,7)) == x**2 * y * z**4",
+        "x**14*y**21*z**35/(y**14*z**7) == x**14*y**7*z**28",
         "(x**14*y**7*z**28)**Rational(1,7) == x**2*y*z**4"
        ]
       }
      ],
      "answer": "$x^2 y z^4$",
+     "enriched": true,
      "book_key": "x^2yz^4"
     },
     {
@@ -522,24 +628,66 @@
      "prompt": "$x+\\frac{1}{x}$",
      "steps": [
       {
-       "math": "\\frac{1}{x} = \\frac{1}{3+\\sqrt{8}} \\times \\frac{3-\\sqrt{8}}{3-\\sqrt{8}} = \\frac{3-\\sqrt{8}}{9-8} = 3-\\sqrt{8}",
-       "en": "First find $\\frac{1}{x}$ by rationalizing: multiply by the conjugate $3-\\sqrt{8}$.",
-       "ur": "پہلے $\\frac{1}{x}$ نکالیں: مزدوج $3-\\sqrt{8}$ سے ضرب دے کر نسب نما کو ناطق بنائیں۔",
+       "math": "x = 3+\\sqrt{8}",
+       "en": "Write down the given value of $x$. We need to find the value of $x+\\frac{1}{x}$.",
+       "ur": "$x$ کی دی گئی قیمت لکھیں۔ ہمیں $x+\\frac{1}{x}$ کی قیمت معلوم کرنی ہے۔"
+      },
+      {
+       "math": "\\frac{1}{x} = \\frac{1}{3+\\sqrt{8}}",
+       "en": "First, take the reciprocal of $x$ to find $\\frac{1}{x}$.",
+       "ur": "سب سے پہلے، $\\frac{1}{x}$ معلوم کرنے کے لیے $x$ کا معکوس لیں۔",
        "check": [
-        "1/(3+sqrt(8)) == 3 - sqrt(8)",
-        "3**2 - sqrt(8)**2 == 1"
+        "1/(3+sqrt(8)) == 1/(3+sqrt(8))"
        ]
       },
       {
-       "math": "x+\\frac{1}{x} = (3+\\sqrt{8}) + (3-\\sqrt{8}) = 6",
-       "en": "Add. The $\\sqrt{8}$ terms cancel.",
-       "ur": "جمع کریں۔ $\\sqrt{8}$ والے رکن ختم ہو جاتے ہیں۔",
+       "math": "\\frac{1}{x} = \\frac{1}{3+\\sqrt{8}} \\times \\frac{3-\\sqrt{8}}{3-\\sqrt{8}}",
+       "en": "Rationalize the denominator by multiplying and dividing by its conjugate, $3-\\sqrt{8}$.",
+       "ur": "مخرج کے مزدوج $3-\\sqrt{8}$ سے ضرب اور تقسیم کر کے مخرج کو ناطق بنائیں۔",
        "check": [
+        "1/(3+sqrt(8)) == (1/(3+sqrt(8))) * ((3-sqrt(8))/(3-sqrt(8)))"
+       ]
+      },
+      {
+       "math": "\\frac{1}{x} = \\frac{3-\\sqrt{8}}{(3)^2 - (\\sqrt{8})^2}",
+       "en": "Apply the algebraic identity $(a+b)(a-b) = a^2-b^2$ in the denominator.",
+       "ur": "مخرج میں الجبری کلیہ $(a+b)(a-b) = a^2-b^2$ کا اطلاق کریں۔",
+       "check": [
+        "(3+sqrt(8))*(3-sqrt(8)) == 3**2 - sqrt(8)**2"
+       ]
+      },
+      {
+       "math": "\\frac{1}{x} = \\frac{3-\\sqrt{8}}{9-8} = \\frac{3-\\sqrt{8}}{1} = 3-\\sqrt{8}",
+       "en": "Simplify the squares in the denominator: $3^2 = 9$ and $(\\sqrt{8})^2 = 8$.",
+       "ur": "مخرج میں مربعات کو حل کریں: $3^2 = 9$ اور $(\\sqrt{8})^2 = 8$۔",
+       "check": [
+        "3**2 == 9",
+        "sqrt(8)**2 == 8",
+        "(3-sqrt(8))/(9-8) == 3-sqrt(8)"
+       ]
+      },
+      {
+       "math": "x+\\frac{1}{x} = (3+\\sqrt{8}) + (3-\\sqrt{8})",
+       "en": "Now, substitute the values of $x$ and $\\frac{1}{x}$ into the expression $x+\\frac{1}{x}$.",
+       "ur": "اب $x+\\frac{1}{x}$ میں $x$ اور $\\frac{1}{x}$ کی قیمتیں درج کریں۔",
+       "check": [
+        "(3+sqrt(8)) + 1/(3+sqrt(8)) == (3+sqrt(8)) + (3-sqrt(8))"
+       ]
+      },
+      {
+       "math": "x+\\frac{1}{x} = 3 + \\sqrt{8} + 3 - \\sqrt{8} = 6",
+       "en": "Remove the brackets and add the terms. The $+\\sqrt{8}$ and $-\\sqrt{8}$ cancel each other out, leaving the final answer $6$.",
+       "ur": "بریکٹ ہٹائیں اور رقموں کو جمع کریں۔ $+\\sqrt{8}$ اور $-\\sqrt{8}$ ایک دوسرے سے کٹ جاتے ہیں، اور حتمی جواب $6$ آتا ہے۔",
+       "check": [
+        "3 + sqrt(8) + 3 - sqrt(8) == 6",
+        "1/(3+sqrt(8)) == 3 - sqrt(8)",
+        "3**2 - sqrt(8)**2 == 1",
         "(3+sqrt(8)) + (3-sqrt(8)) == 6"
        ]
       }
      ],
      "answer": "$6$",
+     "enriched": true,
      "book_key": "6"
     },
     {
@@ -547,24 +695,69 @@
      "prompt": "$x-\\frac{1}{x}$",
      "steps": [
       {
-       "math": "\\frac{1}{x} = \\frac{1}{3+\\sqrt{8}} \\times \\frac{3-\\sqrt{8}}{3-\\sqrt{8}} = \\frac{3-\\sqrt{8}}{9-8} = 3-\\sqrt{8}",
-       "en": "First find $\\frac{1}{x}$ by rationalizing: multiply by the conjugate $3-\\sqrt{8}$.",
-       "ur": "پہلے $\\frac{1}{x}$ نکالیں: مزدوج $3-\\sqrt{8}$ سے ضرب دے کر نسب نما کو ناطق بنائیں۔",
+       "math": "x = 3+\\sqrt{8}",
+       "en": "Write down the given value of $x$. We need to find the value of $x - \\frac{1}{x}$.",
+       "ur": "دی گئی $x$ کی قیمت لکھیں۔ ہمیں $x - \\frac{1}{x}$ کی قیمت معلوم کرنی ہے۔"
+      },
+      {
+       "math": "\\frac{1}{x} = \\frac{1}{3+\\sqrt{8}}",
+       "en": "First, take the reciprocal of $x$ to find $\\frac{1}{x}$.",
+       "ur": "سب سے پہلے، $\\frac{1}{x}$ معلوم کرنے کے لیے $x$ کا معکوس لیں۔"
+      },
+      {
+       "math": "\\frac{1}{x} = \\frac{1}{3+\\sqrt{8}} \\times \\frac{3-\\sqrt{8}}{3-\\sqrt{8}}",
+       "en": "Rationalize the denominator by multiplying and dividing by its conjugate, $3-\\sqrt{8}$.",
+       "ur": "نسب نما کو ناطق بنانے کے لیے اس کے مزدوج $3-\\sqrt{8}$ سے ضرب اور تقسیم کریں۔",
        "check": [
-        "1/(3+sqrt(8)) == 3 - sqrt(8)",
-        "3**2 - sqrt(8)**2 == 1"
+        "1/(3+sqrt(8)) == (1/(3+sqrt(8))) * ((3-sqrt(8))/(3-sqrt(8)))"
        ]
       },
       {
-       "math": "x-\\frac{1}{x} = (3+\\sqrt{8}) - (3-\\sqrt{8}) = 2\\sqrt{8}",
-       "en": "Subtract. The 3s cancel.",
-       "ur": "منفی کریں۔ 3 ختم ہو جاتے ہیں۔",
+       "math": "\\frac{1}{x} = \\frac{3-\\sqrt{8}}{(3)^2 - (\\sqrt{8})^2}",
+       "en": "Apply the algebraic identity $(a+b)(a-b) = a^2 - b^2$ in the denominator.",
+       "ur": "نسب نما میں الجبری کلیہ $(a+b)(a-b) = a^2 - b^2$ استعمال کریں۔",
        "check": [
+        "(3+sqrt(8))*(3-sqrt(8)) == 3**2 - sqrt(8)**2"
+       ]
+      },
+      {
+       "math": "\\frac{1}{x} = \\frac{3-\\sqrt{8}}{9-8} = \\frac{3-\\sqrt{8}}{1} = 3-\\sqrt{8}",
+       "en": "Simplify the squares in the denominator: $3^2 = 9$ and $(\\sqrt{8})^2 = 8$.",
+       "ur": "نسب نما میں مربعات کو مختصر کریں: $3^2 = 9$ اور $(\\sqrt{8})^2 = 8$۔",
+       "check": [
+        "3**2 == 9",
+        "sqrt(8)**2 == 8",
+        "9 - 8 == 1",
+        "(3-sqrt(8))/(9-8) == 3-sqrt(8)"
+       ]
+      },
+      {
+       "math": "x - \\frac{1}{x} = (3+\\sqrt{8}) - (3-\\sqrt{8})",
+       "en": "Now, substitute the values of $x$ and $\\frac{1}{x}$ into the expression $x - \\frac{1}{x}$.",
+       "ur": "اب، عبارت $x - \\frac{1}{x}$ میں $x$ اور $\\frac{1}{x}$ کی قیمتیں درج کریں۔"
+      },
+      {
+       "math": "x - \\frac{1}{x} = 3+\\sqrt{8} - 3 + \\sqrt{8}",
+       "en": "Remove the brackets. The minus sign changes the signs inside the second bracket.",
+       "ur": "بریکٹ ختم کریں۔ منفی کی علامت دوسری بریکٹ کے اندر موجود علامتوں کو بدل دیتی ہے۔",
+       "check": [
+        "(3+sqrt(8)) - (3-sqrt(8)) == 3 + sqrt(8) - 3 + sqrt(8)"
+       ]
+      },
+      {
+       "math": "x - \\frac{1}{x} = 2\\sqrt{8}",
+       "en": "Combine the like terms. $3$ and $-3$ cancel out, leaving $\\sqrt{8} + \\sqrt{8} = 2\\sqrt{8}$.",
+       "ur": "ہم جنس رقموں کو یکجا کریں۔ $3$ اور $-3$ آپس میں کٹ جاتے ہیں، اور $\\sqrt{8} + \\sqrt{8} = 2\\sqrt{8}$ بچتا ہے۔",
+       "check": [
+        "3 + sqrt(8) - 3 + sqrt(8) == 2*sqrt(8)",
+        "1/(3+sqrt(8)) == 3 - sqrt(8)",
+        "3**2 - sqrt(8)**2 == 1",
         "(3+sqrt(8)) - (3-sqrt(8)) == 2*sqrt(8)"
        ]
       }
      ],
      "answer": "$2\\sqrt{8}$",
+     "enriched": true,
      "book_key": "2\\sqrt{8}"
     },
     {

@@ -1,0 +1,40 @@
+{
+ "item": "c10-rev7-q5",
+ "label": "ii",
+ "answer_ref": "$29.7^\\circ$",
+ "steps": [
+  {
+   "math": "",
+   "en": "The line segment $\\overline{AB}$ is perpendicular to the plane $BCEF$. Therefore, $\\triangle ABF$ is a right-angled triangle at $B$, and the angle between $\\overline{AF}$ and the plane $BCEF$ is $\\angle AFB = \\theta$.",
+   "ur": "قطعہ خط $\\overline{AB}$ مستوی $BCEF$ پر عمود ہے۔ اس لیے $\\triangle ABF$ نقطہ $B$ پر ایک قائمۃ الزاویہ مثلث ہے، اور $\\overline{AF}$ اور مستوی $BCEF$ کے درمیان زاویہ $\\angle AFB = \\theta$ ہے۔"
+  },
+  {
+   "math": "",
+   "en": "From the given data and part (i), we have the side opposite to $\\theta$ as $m\\overline{AB} = 8$ cm and the hypotenuse as $m\\overline{AF} = \\sqrt{260}$ cm.",
+   "ur": "دی گئی معلومات اور جزو (i) سے، ہمارے پاس زاویہ $\\theta$ کے مقابل ضلع $m\\overline{AB} = 8$ سینٹی میٹر اور وتر $m\\overline{AF} = \\sqrt{260}$ سینٹی میٹر ہے۔"
+  },
+  {
+   "math": "\\sin\\theta = \\frac{m\\overline{AB}}{m\\overline{AF}}",
+   "en": "In the right-angled $\\triangle ABF$, we apply the sine trigonometric ratio, which is the ratio of the opposite side to the hypotenuse.",
+   "ur": "قائمۃ الزاویہ مثلث $ABF$ میں، ہم سائن (sine) کی مثلثیاتی نسبت استعمال کرتے ہیں، جو کہ عمود اور وتر کی نسبت ہے۔"
+  },
+  {
+   "math": "\\sin\\theta = \\frac{8}{\\sqrt{260}}",
+   "en": "Substitute the values of $m\\overline{AB} = 8$ and $m\\overline{AF} = \\sqrt{260}$ into the formula.",
+   "ur": "فارمولے میں $m\\overline{AB} = 8$ اور $m\\overline{AF} = \\sqrt{260}$ کی قیمتیں درج کریں۔",
+   "check": [
+    "8/sqrt(260) == 4/sqrt(65)"
+   ]
+  },
+  {
+   "math": "\\theta = \\sin^{-1}\\left(\\frac{8}{\\sqrt{260}}\\right) \\approx 29.7^\\circ",
+   "en": "Take the inverse sine ($\\sin^{-1}$) on both sides to find the angle $\\theta$, which rounds to $29.7^\\circ$.",
+   "ur": "زاویہ $\\theta$ معلوم کرنے کے لیے دونوں طرف معکوس سائن ($\\sin^{-1}$) لیں، جو کہ تقریباً $29.7^\\circ$ بنتا ہے۔",
+   "check": [
+    "Abs((asin(8/sqrt(260))*180/pi) - 29.7) <= 0.050000001"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

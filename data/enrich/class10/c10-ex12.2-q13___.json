@@ -1,0 +1,49 @@
+{
+ "item": "c10-ex12.2-q13",
+ "label": "",
+ "answer_ref": "$\\frac{11}{15}$",
+ "steps": [
+  {
+   "math": "",
+   "en": "From the question, we are given the probabilities $P(A) = \\frac{2}{3}$, $P(B) = \\frac{2}{5}$, and $P(A \\cup B) = \\frac{1}{3}$. We need to find $P(A \\cap B)$.",
+   "ur": "سوال کے مطابق ہمیں احتمالات $P(A) = \\frac{2}{3}$، $P(B) = \\frac{2}{5}$ اور $P(A \\cup B) = \\frac{1}{3}$ دیے گئے ہیں۔ ہمیں $P(A \\cap B)$ معلوم کرنا ہے۔"
+  },
+  {
+   "math": "P(A \\cup B) = P(A) + P(B) - P(A \\cap B)",
+   "en": "According to the addition law of probability for any two events $A$ and $B$:",
+   "ur": "کسی بھی دو واقعات $A$ اور $B$ کے لیے احتمال کے جمع کے قانون کے مطابق:"
+  },
+  {
+   "math": "P(A \\cap B) = P(A) + P(B) - P(A \\cup B)",
+   "en": "Rearrange the formula to make $P(A \\cap B)$ the subject.",
+   "ur": "$P(A \\cap B)$ کی قیمت نکالنے کے لیے فارمولے کو ترتیب دیں۔"
+  },
+  {
+   "math": "P(A \\cap B) = \\frac{2}{3} + \\frac{2}{5} - \\frac{1}{3}",
+   "en": "Substitute the given values of $P(A)$, $P(B)$, and $P(A \\cup B)$ into the equation.",
+   "ur": "مساوات میں $P(A)$، $P(B)$ اور $P(A \\cup B)$ کی دی گئی قیمتیں درج کریں۔",
+   "check": [
+    "R(2,3) + R(2,5) - R(1,3) == R(11,15)"
+   ]
+  },
+  {
+   "math": "P(A \\cap B) = \\frac{10 + 6 - 5}{15}",
+   "en": "Take the LCM of the denominators $3$ and $5$, which is $15$, to combine the fractions.",
+   "ur": "کسروں کو حل کرنے کے لیے مخرج $3$ اور $5$ کا ذواضعاف اقل (LCM) لیں، جو کہ $15$ ہے۔",
+   "check": [
+    "R(2,3) + R(2,5) - R(1,3) == R(10 + 6 - 5, 15)"
+   ]
+  },
+  {
+   "math": "P(A \\cap B) = \\frac{11}{15}",
+   "en": "Simplify the numerator to get the final answer.",
+   "ur": "شمار کنندہ کو مختصر کر کے حتمی جواب حاصل کریں۔",
+   "check": [
+    "R(10 + 6 - 5, 15) == R(11,15)",
+    "R(2,3) + R(2,5) - R(1,3) == R(11,15)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

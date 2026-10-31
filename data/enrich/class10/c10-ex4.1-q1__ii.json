@@ -1,0 +1,47 @@
+{
+ "item": "c10-ex4.1-q1",
+ "label": "ii",
+ "answer_ref": "$7 - x$",
+ "steps": [
+  {
+   "math": "",
+   "en": "We are given the two functions $f(x) = 2x + 5$ and $g(x) = 3x - 2$. We need to find their difference, $f(x) - g(x)$.",
+   "ur": "ہمیں دو تفاعل $f(x) = 2x + 5$ اور $g(x) = 3x - 2$ دیے گئے ہیں۔ ہمیں ان کا فرق $f(x) - g(x)$ معلوم کرنا ہے۔"
+  },
+  {
+   "math": "f(x) - g(x) = (2x + 5) - (3x - 2)",
+   "en": "Substitute the given expressions for $f(x)$ and $g(x)$ using brackets to avoid sign errors.",
+   "ur": "علامتوں کی غلطی سے بچنے کے لیے قوسین کا استعمال کرتے ہوئے $f(x)$ اور $g(x)$ کی دی گئی قیمتیں درج کریں۔",
+   "check": [
+    "(2*x + 5) - (3*x - 2) == 7 - x"
+   ]
+  },
+  {
+   "math": "= 2x + 5 - 3x + 2",
+   "en": "Remove the brackets. Because there is a minus sign before the second bracket, the signs of the terms inside it change.",
+   "ur": "قوسین کو ہٹائیں۔ چونکہ دوسری قوس سے پہلے منفی کی علامت ہے، اس لیے اس کے اندر موجود ارکان کی علامتیں بدل جائیں گی۔",
+   "check": [
+    "(2*x + 5) - (3*x - 2) == 2*x + 5 - 3*x + 2"
+   ]
+  },
+  {
+   "math": "= (5 + 2) + (2x - 3x)",
+   "en": "Group the constant terms and the like terms in $x$ together.",
+   "ur": "مستقل ارکان اور $x$ والے متشابہ ارکان کو اکٹھا کریں۔",
+   "check": [
+    "2*x + 5 - 3*x + 2 == (5 + 2) + (2*x - 3*x)"
+   ]
+  },
+  {
+   "math": "= 7 - x",
+   "en": "Simplify the grouped terms to get the final answer: $5 + 2 = 7$ and $2x - 3x = -x$.",
+   "ur": "حتمی جواب حاصل کرنے کے لیے اکٹھے کیے گئے ارکان کو مختصر کریں: $5 + 2 = 7$ اور $2x - 3x = -x$۔",
+   "check": [
+    "(5 + 2) + (2*x - 3*x) == 7 - x",
+    "(7 - x) == (7 - x)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

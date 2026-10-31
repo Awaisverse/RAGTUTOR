@@ -1,0 +1,49 @@
+{
+ "item": "c10-ex12.1-q7",
+ "label": "ii",
+ "answer_ref": "$\\frac{7}{8}$",
+ "steps": [
+  {
+   "math": "S = \\{HHH, HHT, HTH, HTT, THH, THT, TTH, TTT\\}",
+   "en": "When three fair coins are tossed together, the sample space $S$ consists of all possible combinations of Heads ($H$) and Tails ($T$).",
+   "ur": "جب تین سکے ایک ساتھ اچھالے جاتے ہیں، تو نمونہ فضا $S$ چت ($H$) اور پٹ ($T$) کے تمام ممکنہ مجموعوں پر مشتمل ہوتی ہے۔"
+  },
+  {
+   "math": "n(S) = 2^3 = 8",
+   "en": "Count the total number of possible outcomes in the sample space $S$.",
+   "ur": "نمونہ فضا $S$ میں کل ممکنہ نتائج کی تعداد گنیں۔",
+   "check": [
+    "2**3 == 8"
+   ]
+  },
+  {
+   "math": "E = \\{HHH, HHT, HTH, HTT, THH, THT, TTH\\}",
+   "en": "Let $E$ be the event of getting at least one head (meaning $1$, $2$, or $3$ heads). List all the favourable outcomes from $S$.",
+   "ur": "فرض کریں کہ $E$ کم از کم ایک چت (یعنی $1$، $2$، یا $3$ چت) آنے کا وقوعہ ہے۔ $S$ میں سے تمام موافق نتائج کی فہرست بنائیں۔"
+  },
+  {
+   "math": "n(E) = 7",
+   "en": "Count the number of favourable outcomes in event $E$.",
+   "ur": "وقوعہ $E$ میں موافق نتائج کی تعداد گنیں۔",
+   "check": [
+    "7 == 7"
+   ]
+  },
+  {
+   "math": "P(E) = \\frac{n(E)}{n(S)}",
+   "en": "Write down the formula for the probability of an event $E$, which is the ratio of favourable outcomes to total outcomes.",
+   "ur": "وقوعہ $E$ کے احتمال کا فارمولا لکھیں، جو کہ موافق نتائج اور کل نتائج کی نسبت ہے۔"
+  },
+  {
+   "math": "P(E) = \\frac{7}{8}",
+   "en": "Substitute the values $n(E) = 7$ and $n(S) = 8$ into the formula. Thus, the probability of getting at least one head is $\\frac{7}{8}$.",
+   "ur": "فارمولے میں $n(E) = 7$ اور $n(S) = 8$ کی قیمتیں درج کریں۔ اس طرح، کم از کم ایک چت آنے کا احتمال $\\frac{7}{8}$ ہے۔",
+   "check": [
+    "R(7, 8) == 7/8",
+    "8 == 8"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

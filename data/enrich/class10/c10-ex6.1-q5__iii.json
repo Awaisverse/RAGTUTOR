@@ -1,0 +1,50 @@
+{
+ "item": "c10-ex6.1-q5",
+ "label": "iii",
+ "answer_ref": "$\\frac{\\sqrt{10}}{2}$",
+ "steps": [
+  {
+   "math": "\\underline{a} = \\frac{1}{2}\\underline{i} + \\frac{3}{2}\\underline{j}",
+   "en": "Write down the given vector $\\underline{a}$. Here, the components are $x = \\frac{1}{2}$ and $y = \\frac{3}{2}$.",
+   "ur": "دیے گئے ویکٹر $\\underline{a}$ کو لکھیں۔ یہاں اجزاء $x = \\frac{1}{2}$ اور $y = \\frac{3}{2}$ ہیں۔"
+  },
+  {
+   "math": "|\\underline{a}| = \\sqrt{x^2 + y^2}",
+   "en": "Recall the formula for the magnitude of a vector $\\underline{a} = x\\underline{i} + y\\underline{j}$.",
+   "ur": "ویکٹر $\\underline{a} = x\\underline{i} + y\\underline{j}$ کی مقدار معلوم کرنے کا فارمولا لکھیں۔"
+  },
+  {
+   "math": "|\\underline{a}| = \\sqrt{\\left(\\frac{1}{2}\\right)^2 + \\left(\\frac{3}{2}\\right)^2}",
+   "en": "Substitute the values $x = \\frac{1}{2}$ and $y = \\frac{3}{2}$ into the magnitude formula.",
+   "ur": "مقدار کے فارمولے میں $x = \\frac{1}{2}$ اور $y = \\frac{3}{2}$ کی قیمتیں درج کریں۔"
+  },
+  {
+   "math": "|\\underline{a}| = \\sqrt{\\frac{1}{4} + \\frac{9}{4}}",
+   "en": "Evaluate the squares of the fractions inside the square root.",
+   "ur": "جذر کے اندر موجود کسروں کا مربع لیں۔",
+   "check": [
+    "(R(1,2))**2 == R(1,4)",
+    "(R(3,2))**2 == R(9,4)"
+   ]
+  },
+  {
+   "math": "|\\underline{a}| = \\sqrt{\\frac{1 + 9}{4}} = \\sqrt{\\frac{10}{4}}",
+   "en": "Since the denominators are the same, add the numerators.",
+   "ur": "چونکہ مخرج ایک جیسے ہیں، اس لیے شمار کنندگان کو جمع کریں۔",
+   "check": [
+    "R(1,4) + R(9,4) == R(10,4)"
+   ]
+  },
+  {
+   "math": "|\\underline{a}| = \\frac{\\sqrt{10}}{\\sqrt{4}} = \\frac{\\sqrt{10}}{2}",
+   "en": "Take the square root of the numerator and the denominator separately to get the final answer.",
+   "ur": "حتمی جواب حاصل کرنے کے لیے شمار کنندہ اور مخرج کا الگ الگ جذر لیں۔",
+   "check": [
+    "sqrt(R(10,4)) == sqrt(10)/2",
+    "sqrt((1/2)**2 + (3/2)**2) == (sqrt(10)/2)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

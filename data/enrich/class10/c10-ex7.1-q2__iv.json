@@ -1,0 +1,35 @@
+{
+ "item": "c10-ex7.1-q2",
+ "label": "iv",
+ "answer_ref": "$-\\sin\\theta$",
+ "steps": [
+  {
+   "math": "\\cos(90^\\circ + \\theta)",
+   "en": "We need to simplify the trigonometric expression $\\cos(90^\\circ + \\theta)$ to fill in the blank.",
+   "ur": "ہمیں خالی جگہ پر کرنے کے لیے مثلثیاتی جملے $\\cos(90^\\circ + \\theta)$ کو مختصر کرنا ہے۔"
+  },
+  {
+   "math": "\\text{Angle } (90^\\circ + \\theta) \\text{ lies in Quadrant II}",
+   "en": "Assuming $\\theta$ is an acute angle, adding $\\theta$ to $90^\\circ$ places the terminal arm of the angle in the second quadrant. In Quadrant II, the cosine function is negative.",
+   "ur": "فرض کریں کہ $\\theta$ ایک حادہ زاویہ ہے، تو $90^\\circ$ میں $\\theta$ جمع کرنے سے زاویہ دوسرے ربع (Quadrant II) میں چلا جاتا ہے۔ دوسرے ربع میں کوسائن (cosine) منفی ہوتا ہے۔"
+  },
+  {
+   "math": "90^\\circ = 1 \\times 90^\\circ",
+   "en": "Since the angle involves $90^\\circ$ (which is an odd multiple of $90^\\circ$), the trigonometric ratio changes to its co-ratio. Therefore, $\\cos$ changes to $\\sin$.",
+   "ur": "چونکہ زاویے میں $90^\\circ$ شامل ہے (جو کہ $90^\\circ$ کا طاق ضعف ہے)، اس لیے مثلثیاتی نسبت اپنی معاون نسبت (co-ratio) میں تبدیل ہو جاتی ہے۔ اس طرح $\\cos$ تبدیل ہو کر $\\sin$ بن جاتا ہے۔",
+   "check": [
+    "90 == 1 * 90"
+   ]
+  },
+  {
+   "math": "\\cos(90^\\circ + \\theta) = -\\sin\\theta",
+   "en": "Combining the negative sign from the second quadrant and the co-ratio $\\sin\\theta$, we get the final result $-\\sin\\theta$. Thus, the blank is filled with a negative sign ($-$).",
+   "ur": "دوسرے ربع کی منفی علامت اور معاون نسبت $\\sin\\theta$ کو ملانے سے ہمیں حتمی نتیجہ $-\\sin\\theta$ حاصل ہوتا ہے۔ اس طرح خالی جگہ میں منفی علامت ($-$) آئے گی۔",
+   "check": [
+    "cos(pi/2 + t) == -sin(t)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

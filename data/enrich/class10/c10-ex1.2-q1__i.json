@@ -1,0 +1,47 @@
+{
+ "item": "c10-ex1.2-q1",
+ "label": "i",
+ "answer_ref": "$5 + 3i$",
+ "steps": [
+  {
+   "math": "\\left(2 + 5i\\right) + \\left(3 - 2i\\right)",
+   "en": "Write down the given expression of two complex numbers that need to be added and expressed in the standard form $a + bi$.",
+   "ur": "دی گئی دو مخلوط اعداد کی عبارت لکھیں جنہیں جمع کر کے معیاری شکل $a + bi$ میں لکھنا ہے۔"
+  },
+  {
+   "math": "(a + bi) + (c + di) = (a + c) + (b + d)i",
+   "en": "Recall the rule for adding complex numbers: add the real parts together and the imaginary parts together.",
+   "ur": "مخلوط اعداد کو جمع کرنے کا اصول یاد کریں: حقیقی حصوں کو آپس میں اور خیالی حصوں کو آپس میں جمع کریں۔"
+  },
+  {
+   "math": "= (2 + 3) + (5 + (-2))i",
+   "en": "Group the real parts $2$ and $3$, and the imaginary coefficients $5$ and $-2$.",
+   "ur": "حقیقی حصوں $2$ اور $3$ کو، اور خیالی عددی سروں $5$ اور $-2$ کو الگ الگ یکجا کریں۔",
+   "check": [
+    "(2 + 5*I) + (3 - 2*I) == (2 + 3) + (5 - 2)*I"
+   ]
+  },
+  {
+   "math": "= (2 + 3) + (5 - 2)i",
+   "en": "Remove the inner bracket in the imaginary part using the sign rule $+(-) = -$.",
+   "ur": "علامت کے اصول $+(-) = -$ کا استعمال کرتے ہوئے خیالی حصے سے اندرونی بریکٹ ہٹائیں۔",
+   "check": [
+    "(2 + 3) + (5 + (-2))*I == (2 + 3) + (5 - 2)*I"
+   ]
+  },
+  {
+   "math": "= 5 + 3i",
+   "en": "Perform the addition $2 + 3 = 5$ for the real part and the subtraction $5 - 2 = 3$ for the imaginary part to get the final answer in the form $a + bi$.",
+   "ur": "حقیقی حصے کے لیے جمع $2 + 3 = 5$ اور خیالی حصے کے لیے تفریق $5 - 2 = 3$ حل کریں تاکہ معیاری شکل $a + bi$ میں حتمی جواب حاصل ہو سکے۔",
+   "check": [
+    "2 + 3 == 5",
+    "5 - 2 == 3",
+    "(2 + 3) + (5 - 2)*I == 5 + 3*I",
+    "(2 + 5*I) + (3 - 2*I) == (5 + 3*I)",
+    "(2) + (3) == (5)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

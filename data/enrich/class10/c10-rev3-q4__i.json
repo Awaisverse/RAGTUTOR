@@ -1,0 +1,45 @@
+{
+ "item": "c10-rev3-q4",
+ "label": "i",
+ "answer_ref": "$14$",
+ "steps": [
+  {
+   "math": "B = \\begin{bmatrix} 5 & 3 \\\\ 2 & 4 \\end{bmatrix}",
+   "en": "First, write down the given matrix $B$ for which we need to find the determinant $|B|$.",
+   "ur": "سب سے پہلے، دیا گیا قالب $B$ لکھیں جس کا ہمیں مقطع $|B|$ معلوم کرنا ہے۔"
+  },
+  {
+   "math": "|B| = \\begin{vmatrix} 5 & 3 \\\\ 2 & 4 \\end{vmatrix}",
+   "en": "Express the matrix in determinant form using vertical bars.",
+   "ur": "قالب کو عمودی لائنوں کا استعمال کرتے ہوئے مقطع کی شکل میں لکھیں۔"
+  },
+  {
+   "math": "|B| = (5)(4) - (3)(2)",
+   "en": "For a $2 \\times 2$ matrix $\\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix}$, the determinant is calculated as $ad - bc$. Multiply the main diagonal elements and subtract the product of the other diagonal elements.",
+   "ur": "ایک $2 \\times 2$ قالب $\\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix}$ کے لیے، مقطع کا فارمولا $ad - bc$ ہے۔ وتر کے ارکان کو ضرب دیں اور دوسرے وتر کے ارکان کے حاصل ضرب کو اس میں سے تفریق کریں۔",
+   "check": [
+    "Matrix([[5, 3], [2, 4]]).det() == 5*4 - 3*2"
+   ]
+  },
+  {
+   "math": "|B| = 20 - 6",
+   "en": "Perform the multiplications: $5 \\times 4 = 20$ and $3 \\times 2 = 6$.",
+   "ur": "ضرب کا عمل مکمل کریں: $5 \\times 4 = 20$ اور $3 \\times 2 = 6$۔",
+   "check": [
+    "5*4 == 20",
+    "3*2 == 6"
+   ]
+  },
+  {
+   "math": "|B| = 14",
+   "en": "Subtract $6$ from $20$ to get the final answer.",
+   "ur": "حتمی جواب حاصل کرنے کے لیے $20$ میں سے $6$ کو تفریق کریں۔",
+   "check": [
+    "20 - 6 == 14",
+    "Matrix([[5, 3], [2, 4]]).det() == 14"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

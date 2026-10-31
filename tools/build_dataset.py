@@ -59,6 +59,11 @@ def verify(expr):
         return bool(val)
     a = sp.sympify(lhs, locals=NS)
     b = sp.sympify(rhs, locals=NS)
+    if op == "==" and (isinstance(a, sp.MatrixBase) or isinstance(b, sp.MatrixBase)):
+        # matrices: same shape and every entry equal (a matrix minus a matrix is a zero MATRIX, never the number 0)
+        if not (isinstance(a, sp.MatrixBase) and isinstance(b, sp.MatrixBase)) or a.shape != b.shape:
+            return False
+        return all(sp.simplify(x - y) == 0 or _num_equal(x, y) for x, y in zip(a, b))
     if op == "==":
         try:
             if sp.simplify(a - b) == 0:
@@ -97,8 +102,29 @@ def key_for(keys, item, label):
     return None
 
 
+ENRICH = ROOT / "data" / "enrich" / f"class{KLASS}"
+
+
+def apply_overlay(item, part):
+    """Replace a terse solution with its detailed overlay (tools/enrich_steps.py) when the overlay was made for this exact
+    answer and the part has no drawing. Its checks are verified with all the others. -> 1 if applied, else 0."""
+    safe = re.sub(r"[^A-Za-z0-9._-]+", "_", item["id"])
+    path = ENRICH / f"{safe}__{part.get('label') or '_'}.json"
+    if not path.exists():
+        return 0
+    data = json.loads(path.read_text(encoding="utf-8"))
+    if (any(s.get("draw") for s in part["steps"]) or part.get("figure")) and not data.get("keeps_drawing"):
+        return 0                                  # a part with a figure takes only an overlay that carries its drawing
+    if data.get("answer_ref") != part["answer"]:
+        return 0                                  # the source answer changed since the overlay was made: keep the source
+    part["steps"] = data["steps"]
+    part["enriched"] = True
+    return 1
+
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
+    enriched = 0
     report = "--report" in sys.argv
     failures, total_checks, total_items = [], 0, 0
     key_ok = key_known_errors = 0
@@ -111,6 +137,7 @@ def main():
                 failures.append(f"{path.name}: duplicate id {item['id']}")
             ids.add(item["id"])
             for part in item["parts"]:
+                enriched += apply_overlay(item, part)       # detailed working from tools/enrich_steps.py, re-verified below
                 if item["kind"] in ("exercise", "review"):
                     printed = key_for(keys, item, part.get("label", ""))
                     if printed is not None:
@@ -142,7 +169,7 @@ def main():
                 kinds[it["kind"]] = kinds.get(it["kind"], 0) + 1
             print(f"{path.stem}: {unit['title']:<35} {kinds}")
     print(f"items: {total_items}   math checks: {total_checks}   answers agreeing with the book's key: {key_ok}   "
-          f"known key errors: {key_known_errors}   failed: {len(failures)}")
+          f"known key errors: {key_known_errors}   detailed (enriched) parts: {enriched}   failed: {len(failures)}")
     for f in failures:
         print("  FAIL", f)
     sys.exit(1 if failures else 0)

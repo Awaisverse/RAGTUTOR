@@ -1,0 +1,35 @@
+{
+ "item": "c10-ex7.1-q2",
+ "label": "i",
+ "answer_ref": "$-\\tan\\theta$",
+ "steps": [
+  {
+   "math": "\\tan(180^\\circ - \\theta)",
+   "en": "We need to simplify the given trigonometric expression $\\tan(180^\\circ - \\theta)$ using the rules of allied angles.",
+   "ur": "ہمیں دیے گئے مثلثیاتی جملے $\\tan(180^\\circ - \\theta)$ کو متعلقہ زاویوں (allied angles) کے اصولوں کا استعمال کرتے ہوئے مختصر کرنا ہے۔"
+  },
+  {
+   "math": "180^\\circ = 2 \\times 90^\\circ",
+   "en": "First, observe the angle $180^\\circ$. Since $180^\\circ$ is an even multiple of $90^\\circ$, the trigonometric ratio remains unchanged (so $\\tan$ stays $\\tan$).",
+   "ur": "سب سے پہلے، زاویہ $180^\\circ$ کا مشاہدہ کریں۔ چونکہ $180^\\circ$ زاویہ $90^\\circ$ کا جفت حاصل ضرب ہے، اس لیے مثلثیاتی نسبت تبدیل نہیں ہوتی (لہٰذا $\\tan$ ہی رہے گا)۔",
+   "check": [
+    "180 == 2 * 90"
+   ]
+  },
+  {
+   "math": "",
+   "en": "Next, determine the sign. Assuming $\\theta$ is an acute angle, the angle $(180^\\circ - \\theta)$ lies in the second quadrant (Quadrant II). In Quadrant II, the tangent function is negative.",
+   "ur": "اس کے بعد، علامت کا تعین کریں۔ فرض کریں کہ $\\theta$ ایک حادہ زاویہ ہے، تو زاویہ $(180^\\circ - \\theta)$ دوسرے ربع (Quadrant II) میں واقع ہوتا ہے۔ دوسرے ربع میں، $\\tan$ منفی ہوتا ہے۔"
+  },
+  {
+   "math": "\\tan(180^\\circ - \\theta) = -\\tan\\theta",
+   "en": "Combining the negative sign and the unchanged ratio, we get $-\\tan\\theta$. Therefore, the blank is filled with a minus sign ($-$).",
+   "ur": "منفی علامت اور غیر تبدیل شدہ نسبت کو ملا کر، ہمیں $-\\tan\\theta$ حاصل ہوتا ہے۔ لہٰذا، خالی جگہ میں منفی کی علامت ($-$) آئے گی۔",
+   "check": [
+    "tan(pi - t) == -tan(t)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

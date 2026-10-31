@@ -1,0 +1,47 @@
+{
+ "item": "c10-rev4-q2",
+ "label": "iv",
+ "answer_ref": "$5 - x$",
+ "steps": [
+  {
+   "math": "",
+   "en": "We are given the two functions $f(x) = 25 - x^2$ and $g(x) = 5 + x$, and we need to find the quotient $\\frac{f(x)}{g(x)}$.",
+   "ur": "ہمیں دو تفاعل $f(x) = 25 - x^2$ اور $g(x) = 5 + x$ دیے گئے ہیں، اور ہمیں ان کی تقسیم $\\frac{f(x)}{g(x)}$ معلوم کرنی ہے۔"
+  },
+  {
+   "math": "\\frac{f(x)}{g(x)} = \\frac{25 - x^{2}}{5 + x}",
+   "en": "Substitute the given expressions for $f(x)$ and $g(x)$ into the fraction.",
+   "ur": "کسر میں $f(x)$ اور $g(x)$ کی دی گئی قیمتیں درج کریں۔",
+   "check": [
+    "(25 - x**2)/(5 + x) == (25 - x**2)/(x + 5)"
+   ]
+  },
+  {
+   "math": "\\frac{f(x)}{g(x)} = \\frac{5^{2} - x^{2}}{5 + x}",
+   "en": "Rewrite $25$ as $5^2$ in the numerator so that we can apply the difference of two squares formula, $a^2 - b^2 = (a - b)(a + b)$.",
+   "ur": "شمار کنندہ میں $25$ کو $5^2$ کے طور پر لکھیں تاکہ ہم دو مربّعوں کے فرق کا فارمولا $a^2 - b^2 = (a - b)(a + b)$ استعمال کر سکیں۔",
+   "check": [
+    "(25 - x**2)/(5 + x) == (5**2 - x**2)/(5 + x)"
+   ]
+  },
+  {
+   "math": "\\frac{f(x)}{g(x)} = \\frac{(5 - x)(5 + x)}{5 + x}",
+   "en": "Factorize the numerator using the formula.",
+   "ur": "فارمولے کی مدد سے شمار کنندہ کی تجزی کریں۔",
+   "check": [
+    "(5**2 - x**2)/(5 + x) == ((5 - x)*(5 + x))/(5 + x)"
+   ]
+  },
+  {
+   "math": "\\frac{f(x)}{g(x)} = 5 - x",
+   "en": "Cancel out the common factor $(5 + x)$ from the numerator and the denominator to get the final answer.",
+   "ur": "حتمی جواب حاصل کرنے کے لیے شمار کنندہ اور مخرج سے مشترک جزو $(5 + x)$ کو کاٹ دیں۔",
+   "check": [
+    "((5 - x)*(5 + x))/(5 + x) == 5 - x",
+    "((25 - x**2)/(x + 5)) == (5 - x)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

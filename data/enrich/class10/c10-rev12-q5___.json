@@ -1,0 +1,60 @@
+{
+ "item": "c10-rev12-q5",
+ "label": "",
+ "answer_ref": "$\\frac{1}{9}$",
+ "steps": [
+  {
+   "math": "n(S) = 6 \\times 6 = 36",
+   "en": "When two fair dice are rolled simultaneously, each die has $6$ faces, so the total number of possible outcomes in the sample space $S$ is $36$.",
+   "ur": "جب دو چھکوں کو ایک ساتھ پھینکا جاتا ہے، تو ہر چھکے کے $6$ رخ ہوتے ہیں، اس لیے نمونہ فضا $S$ میں ممکنہ نتائج کی کل تعداد $36$ ہے۔",
+   "check": [
+    "6 * 6 == 36"
+   ]
+  },
+  {
+   "math": "A = \\{(1,6), (2,3), (3,2), (6,1)\\}, \\quad n(A) = 4, \\quad P(A) = \\frac{4}{36}",
+   "en": "Let $A$ be the event of getting a product of face values equal to $6$. There are $4$ such outcomes.",
+   "ur": "فرض کریں کہ $A$ وہ واقعہ ہے جس میں رخوں کی قدروں کا حاصل ضرب $6$ آتا ہے۔ ایسے ممکنہ نتائج کی تعداد $4$ ہے۔",
+   "check": [
+    "1 * 6 == 6",
+    "2 * 3 == 6",
+    "3 * 2 == 6",
+    "6 * 1 == 6"
+   ]
+  },
+  {
+   "math": "B = \\{(1,6), (6,1)\\}, \\quad n(B) = 2, \\quad P(B) = \\frac{2}{36}",
+   "en": "Let $B$ be the event of getting a difference of face values equal to $5$. There are $2$ such outcomes.",
+   "ur": "فرض کریں کہ $B$ وہ واقعہ ہے جس میں رخوں کی قدروں کا فرق $5$ آتا ہے۔ ایسے ممکنہ نتائج کی تعداد $2$ ہے۔",
+   "check": [
+    "Abs(1 - 6) == 5",
+    "Abs(6 - 1) == 5"
+   ]
+  },
+  {
+   "math": "A \\cap B = \\{(1,6), (6,1)\\}, \\quad n(A \\cap B) = 2, \\quad P(A \\cap B) = \\frac{2}{36}",
+   "en": "Since outcomes $(1,6)$ and $(6,1)$ are common to both events, $A$ and $B$ are overlapping (non-mutually exclusive) events.",
+   "ur": "چونکہ نتائج $(1,6)$ اور $(6,1)$ دونوں واقعات میں مشترک ہیں، اس لیے $A$ اور $B$ غیر باہمی مانع (متداخل) واقعات ہیں۔",
+   "check": [
+    "1 + 1 == 2"
+   ]
+  },
+  {
+   "math": "P(A \\cup B) = P(A) + P(B) - P(A \\cap B)",
+   "en": "Apply the addition law of probability for overlapping events to find the probability of $A$ or $B$.",
+   "ur": "$A$ یا $B$ کا احتمال معلوم کرنے کے لیے متداخل واقعات کے احتمال کے جمع کا قانون لاگو کریں۔"
+  },
+  {
+   "math": "P(A \\cup B) = \\frac{4}{36} + \\frac{2}{36} - \\frac{2}{36} = \\frac{4}{36} = \\frac{1}{9}",
+   "en": "Substitute the values and simplify the fraction to get the final answer $\\frac{1}{9}$.",
+   "ur": "قدریں درج کریں اور کسر کو مختصر کر کے حتمی جواب $\\frac{1}{9}$ حاصل کریں۔",
+   "check": [
+    "R(4, 36) + R(2, 36) - R(2, 36) == R(4, 36)",
+    "R(4, 36) == R(1, 9)",
+    "R(4, 36) + R(2, 36) - R(2, 36) == 1/9"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

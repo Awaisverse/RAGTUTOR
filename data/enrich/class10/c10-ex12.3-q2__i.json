@@ -1,0 +1,49 @@
+{
+ "item": "c10-ex12.3-q2",
+ "label": "i",
+ "answer_ref": "$\\frac{1}{6}$",
+ "steps": [
+  {
+   "math": "n(S) = 6 \\times 6 = 36",
+   "en": "The word PUNJAB has $6$ letters and LAHORE also has $6$ letters. Therefore, the total number of possible pairs of letters in the sample space $S$ is $36$.",
+   "ur": "لفظ PUNJAB میں $6$ حروف ہیں اور LAHORE میں بھی $6$ حروف ہیں۔ لہٰذا، نمونہ فضا $S$ میں حروف کے ممکنہ جوڑوں کی کل تعداد $36$ ہے۔",
+   "check": [
+    "6 * 6 == 36"
+   ]
+  },
+  {
+   "math": "V_1 = \\{\\text{U}, \\text{A}\\}, \\quad V_2 = \\{\\text{A}, \\text{O}, \\text{E}\\}",
+   "en": "Let $E$ be the event that both chosen letters are vowels. In PUNJAB, there are $2$ vowels ($\\text{U}, \\text{A}$). In LAHORE, there are $3$ vowels ($\\text{A}, \\text{O}, \\text{E}$).",
+   "ur": "فرض کریں $E$ وہ واقعہ ہے جس میں منتخب کردہ دونوں حروف واول (حروفِ علت) ہیں۔ PUNJAB میں $2$ واولز ($\\text{U}, \\text{A}$) ہیں اور LAHORE میں $3$ واولز ($\\text{A}, \\text{O}, \\text{E}$) ہیں۔",
+   "check": [
+    "2 == 2",
+    "3 == 3"
+   ]
+  },
+  {
+   "math": "n(E) = 2 \\times 3 = 6",
+   "en": "The number of favourable outcomes $n(E)$ where both letters are vowels is found by multiplying the number of vowels in each word. The pairs are $(\\text{U},\\text{A}), (\\text{U},\\text{O}), (\\text{U},\\text{E}), (\\text{A},\\text{A}), (\\text{A},\\text{O}), (\\text{A},\\text{E})$.",
+   "ur": "موافق نتائج کی تعداد $n(E)$ جہاں دونوں حروف واول ہیں، دونوں الفاظ میں واولز کی تعداد کو ضرب دے کر معلوم کی جاتی ہے۔ یہ جوڑے $(\\text{U},\\text{A}), (\\text{U},\\text{O}), (\\text{U},\\text{E}), (\\text{A},\\text{A}), (\\text{A},\\text{O}), (\\text{A},\\text{E})$ ہیں۔",
+   "check": [
+    "2 * 3 == 6"
+   ]
+  },
+  {
+   "math": "P(E) = \\frac{n(E)}{n(S)}",
+   "en": "Recall the formula for the probability of an event $E$, which is the ratio of favourable outcomes to total outcomes.",
+   "ur": "کسی واقعہ $E$ کے احتمال کا فارمولا یاد کریں، جو موافق نتائج اور کل نتائج کی نسبت ہوتا ہے۔"
+  },
+  {
+   "math": "P(E) = \\frac{6}{36} = \\frac{1}{6}",
+   "en": "Substitute $n(E) = 6$ and $n(S) = 36$ into the formula and simplify the fraction to get the final answer.",
+   "ur": "فارمولے میں $n(E) = 6$ اور $n(S) = 36$ درج کریں اور حتمی جواب حاصل کرنے کے لیے کسر کو مختصر کریں۔",
+   "check": [
+    "R(6, 36) == R(1, 6)",
+    "36 == 36",
+    "R(6, 36) == 1/6"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

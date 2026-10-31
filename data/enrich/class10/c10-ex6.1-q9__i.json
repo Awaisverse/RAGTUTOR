@@ -1,0 +1,49 @@
+{
+ "item": "c10-ex6.1-q9",
+ "label": "i",
+ "answer_ref": "parallel ($\\underline{b} = 2\\underline{a}$)",
+ "steps": [
+  {
+   "math": "\\underline{a} = 6\\underline{i} + \\underline{j}, \\quad \\underline{b} = 12\\underline{i} + 2\\underline{j}",
+   "en": "First, write down the two given vectors $\\underline{a}$ and $\\underline{b}$. We need to check if they are parallel.",
+   "ur": "سب سے پہلے، دیے گئے دونوں سمتیوں $\\underline{a}$ اور $\\underline{b}$ کو لکھیں۔ ہمیں معلوم کرنا ہے کہ آیا یہ متوازی ہیں۔",
+   "check": [
+    "6 == 6",
+    "12 == 12"
+   ]
+  },
+  {
+   "math": "\\underline{b} = k\\underline{a}",
+   "en": "Recall the rule that two vectors $\\underline{a}$ and $\\underline{b}$ are parallel if one can be written as a non-zero scalar multiple of the other, where $k$ is a real number.",
+   "ur": "یاد رکھیں کہ دو سمتیے $\\underline{a}$ اور $\\underline{b}$ متوازی ہوتے ہیں اگر ایک کو دوسرے کے غیر صفری عددی مضرب کے طور پر لکھا جا سکے، جہاں $k$ ایک حقیقی عدد ہے۔"
+  },
+  {
+   "math": "\\underline{b} = 12\\underline{i} + 2\\underline{j} = 2\\left(6\\underline{i} + \\underline{j}\\right)",
+   "en": "Take the vector $\\underline{b}$ and factor out the common number $2$ from both components.",
+   "ur": "سمتیہ $\\underline{b}$ لیں اور اس کے دونوں اجزاء میں سے مشترک عدد $2$ کو باہر نکالیں۔",
+   "check": [
+    "2*6 == 12",
+    "2*1 == 2"
+   ]
+  },
+  {
+   "math": "\\underline{b} = 2\\underline{a}",
+   "en": "Since $\\underline{a} = 6\\underline{i} + \\underline{j}$, substitute $\\underline{a}$ in place of $\\left(6\\underline{i} + \\underline{j}\\right)$.",
+   "ur": "چونکہ $\\underline{a} = 6\\underline{i} + \\underline{j}$ ہے، اس لیے $\\left(6\\underline{i} + \\underline{j}\\right)$ کی جگہ $\\underline{a}$ درج کریں۔",
+   "check": [
+    "2 == 2"
+   ]
+  },
+  {
+   "math": "\\text{parallel}",
+   "en": "Since vector $\\underline{b}$ is a scalar multiple of vector $\\underline{a}$ (with $k = 2$), the two vectors are parallel.",
+   "ur": "چونکہ سمتیہ $\\underline{b}$ سمتیہ $\\underline{a}$ کا عددی مضرب ہے (جہاں $k = 2$ ہے)، اس لیے دونوں سمتیے متوازی ہیں۔",
+   "check": [
+    "2*6 == 12",
+    "2*1 == 2"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

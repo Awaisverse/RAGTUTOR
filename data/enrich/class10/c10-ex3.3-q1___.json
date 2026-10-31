@@ -1,0 +1,85 @@
+{
+ "item": "c10-ex3.3-q1",
+ "label": "",
+ "answer_ref": "A and D; B and G and M; C and F; E and H",
+ "steps": [
+  {
+   "math": "\\text{Order of a matrix} = m\\text{-by-}n = (\\text{number of rows})\\text{-by-}(\\text{number of columns})",
+   "en": "Two or more matrices are conformable for addition and subtraction if and only if they have the same order (same number of rows and same number of columns).",
+   "ur": "دو یا دو سے زیادہ قالب جمع اور تفریق کے لیے ہم آہنگ (conformable) ہوتے ہیں اگر اور صرف اگر ان کا درجہ (قطاروں کی تعداد اور کالموں کی تعداد) یکساں ہو۔"
+  },
+  {
+   "math": "\\text{Order of } A = 2\\text{-by-}2, \\quad \\text{Order of } D = 2\\text{-by-}2",
+   "en": "Find the matrices that have $2$ rows and $2$ columns. Both $A = \\begin{bmatrix} 3 & 4 \\\\ -2 & 1 \\end{bmatrix}$ and $D = \\begin{bmatrix} 1 & 7 \\\\ 2 & 5 \\end{bmatrix}$ have order $2\\text{-by-}2$.",
+   "ur": "ایسے قالب تلاش کریں جن میں $2$ قطاریں اور $2$ کالم ہوں۔ $A = \\begin{bmatrix} 3 & 4 \\\\ -2 & 1 \\end{bmatrix}$ اور $D = \\begin{bmatrix} 1 & 7 \\\\ 2 & 5 \\end{bmatrix}$ دونوں کا درجہ $2\\text{-by-}2$ ہے۔",
+   "check": [
+    "Matrix([[3, 4], [-2, 1]]).rows == 2",
+    "Matrix([[3, 4], [-2, 1]]).cols == 2",
+    "Matrix([[1, 7], [2, 5]]).rows == 2",
+    "Matrix([[1, 7], [2, 5]]).cols == 2"
+   ]
+  },
+  {
+   "math": "\\text{Order of } B = 2\\text{-by-}1, \\quad \\text{Order of } G = 2\\text{-by-}1, \\quad \\text{Order of } M = 2\\text{-by-}1",
+   "en": "Find the matrices that have $2$ rows and $1$ column. The matrices $B = \\begin{bmatrix} 3 \\\\ 4 \\end{bmatrix}$, $G = \\begin{bmatrix} a \\\\ b \\end{bmatrix}$, and $M = \\begin{bmatrix} l \\\\ m \\end{bmatrix}$ all have order $2\\text{-by-}1$.",
+   "ur": "ایسے قالب تلاش کریں جن میں $2$ قطاریں اور $1$ کالم ہو۔ قالب $B = \\begin{bmatrix} 3 \\\\ 4 \\end{bmatrix}$، $G = \\begin{bmatrix} a \\\\ b \\end{bmatrix}$ اور $M = \\begin{bmatrix} l \\\\ m \\end{bmatrix}$ سب کا درجہ $2\\text{-by-}1$ ہے۔",
+   "check": [
+    "Matrix([[3], [4]]).rows == 2",
+    "Matrix([[3], [4]]).cols == 1",
+    "Matrix([[a], [b]]).rows == 2",
+    "Matrix([[a], [b]]).cols == 1",
+    "Matrix([[l], [m]]).rows == 2",
+    "Matrix([[l], [m]]).cols == 1"
+   ]
+  },
+  {
+   "math": "\\text{Order of } C = 1\\text{-by-}2, \\quad \\text{Order of } F = 1\\text{-by-}2",
+   "en": "Find the matrices that have $1$ row and $2$ columns. Both $C = \\begin{bmatrix} 5 & 2 \\end{bmatrix}$ and $F = \\begin{bmatrix} 7 & 11 \\end{bmatrix}$ have order $1\\text{-by-}2$.",
+   "ur": "ایسے قالب تلاش کریں جن میں $1$ قطار اور $2$ کالم ہوں۔ $C = \\begin{bmatrix} 5 & 2 \\end{bmatrix}$ اور $F = \\begin{bmatrix} 7 & 11 \\end{bmatrix}$ دونوں کا درجہ $1\\text{-by-}2$ ہے۔",
+   "check": [
+    "Matrix([[5, 2]]).rows == 1",
+    "Matrix([[5, 2]]).cols == 2",
+    "Matrix([[7, 11]]).rows == 1",
+    "Matrix([[7, 11]]).cols == 2"
+   ]
+  },
+  {
+   "math": "\\text{Order of } E = 1\\text{-by-}1, \\quad \\text{Order of } H = 1\\text{-by-}1",
+   "en": "Find the matrices that have $1$ row and $1$ column. Both $E = \\begin{bmatrix} 2 \\end{bmatrix}$ and $H = \\begin{bmatrix} 3 \\end{bmatrix}$ have order $1\\text{-by-}1$.",
+   "ur": "ایسے قالب تلاش کریں جن میں $1$ قطار اور $1$ کالم ہو۔ $E = \\begin{bmatrix} 2 \\end{bmatrix}$ اور $H = \\begin{bmatrix} 3 \\end{bmatrix}$ دونوں کا درجہ $1\\text{-by-}1$ ہے۔",
+   "check": [
+    "Matrix([[2]]).rows == 1",
+    "Matrix([[2]]).cols == 1",
+    "Matrix([[3]]).rows == 1",
+    "Matrix([[3]]).cols == 1"
+   ]
+  },
+  {
+   "math": "\\text{Conformable groups: } (A, D),\\ (B, G, M),\\ (C, F),\\ (E, H)",
+   "en": "Group the matrices that have the same order. These groups are conformable for addition and subtraction.",
+   "ur": "یکساں درجہ رکھنے والے قالبوں کے گروپ بنائیں۔ یہ گروپ جمع اور تفریق کے لیے ہم آہنگ ہیں۔",
+   "check": [
+    "Matrix([[3, 4], [-2, 1]]).rows == 2",
+    "Matrix([[3, 4], [-2, 1]]).cols == 2",
+    "Matrix([[3], [4]]).rows == 2",
+    "Matrix([[3], [4]]).cols == 1",
+    "Matrix([[5, 2]]).rows == 1",
+    "Matrix([[5, 2]]).cols == 2",
+    "Matrix([[1, 7], [2, 5]]).rows == 2",
+    "Matrix([[1, 7], [2, 5]]).cols == 2",
+    "Matrix([[2]]).rows == 1",
+    "Matrix([[2]]).cols == 1",
+    "Matrix([[7, 11]]).rows == 1",
+    "Matrix([[7, 11]]).cols == 2",
+    "Matrix([[a], [b]]).rows == 2",
+    "Matrix([[a], [b]]).cols == 1",
+    "Matrix([[3]]).rows == 1",
+    "Matrix([[3]]).cols == 1",
+    "Matrix([[l], [m]]).rows == 2",
+    "Matrix([[l], [m]]).cols == 1"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

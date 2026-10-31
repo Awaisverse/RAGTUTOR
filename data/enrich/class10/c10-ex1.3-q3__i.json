@@ -1,0 +1,47 @@
+{
+ "item": "c10-ex1.3-q3",
+ "label": "i",
+ "answer_ref": "verified: $\\overline{\\overline{z}} = z$",
+ "steps": [
+  {
+   "math": "z = 5 - 2i",
+   "en": "Write down the given complex number $z$. We need to verify that $\\overline{\\overline{z}} = z$.",
+   "ur": "دیے گئے مخلوط عدد $z$ کو لکھیں۔ ہمیں تصدیق کرنی ہے کہ $\\overline{\\overline{z}} = z$۔",
+   "check": [
+    "5 - 2*I == 5 - 2*I"
+   ]
+  },
+  {
+   "math": "\\overline{a + bi} = a - bi",
+   "en": "Recall the definition of the conjugate of a complex number: we change the sign of the imaginary part (the term with $i$).",
+   "ur": "مخلوط عدد کے مزدوج (conjugate) کی تعریف یاد کریں: ہم خیالی حصے ($i$ والی رقم) کی علامت بدل دیتے ہیں۔"
+  },
+  {
+   "math": "\\overline{z} = \\overline{5 - 2i} = 5 + 2i",
+   "en": "First, take the conjugate of $z$ by changing $-2i$ to $+2i$.",
+   "ur": "سب سے پہلے، $-2i$ کو $+2i$ میں بدل کر $z$ کا مزدوج لیں۔",
+   "check": [
+    "conjugate(5 - 2*I) == 5 + 2*I"
+   ]
+  },
+  {
+   "math": "\\overline{\\overline{z}} = \\overline{5 + 2i} = 5 - 2i",
+   "en": "Now, take the conjugate of $\\overline{z}$ again by changing $+2i$ back to $-2i$.",
+   "ur": "اب، $+2i$ کو واپس $-2i$ میں بدل کر دوبارہ $\\overline{z}$ کا مزدوج لیں۔",
+   "check": [
+    "conjugate(5 + 2*I) == 5 - 2*I"
+   ]
+  },
+  {
+   "math": "\\overline{\\overline{z}} = z",
+   "en": "Since $5 - 2i$ is equal to the original complex number $z$, the property $\\overline{\\overline{z}} = z$ is verified.",
+   "ur": "چونکہ $5 - 2i$ اصل مخلوط عدد $z$ کے برابر ہے، اس لیے خاصیت $\\overline{\\overline{z}} = z$ کی تصدیق ہو گئی ہے۔",
+   "check": [
+    "conjugate(conjugate(5 - 2*I)) == 5 - 2*I",
+    "conjugate(conjugate((5 - 2*I))) == (5 - 2*I)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

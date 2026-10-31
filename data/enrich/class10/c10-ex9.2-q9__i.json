@@ -1,0 +1,46 @@
+{
+ "item": "c10-ex9.2-q9",
+ "label": "i",
+ "answer_ref": "$7.81$ cm",
+ "steps": [
+  {
+   "math": "",
+   "en": "We are given the arc length $\\ell = 5.5\\text{ cm}$ and the central angle $\\theta = 40^\\circ 20'$, and we need to find the radius $r$.",
+   "ur": "ہمیں قوس کی لمبائی $\\ell = 5.5\\text{ cm}$ اور مرکزی زاویہ $\\theta = 40^\\circ 20'$ دیے گئے ہیں، اور ہمیں رداس $r$ معلوم کرنا ہے۔"
+  },
+  {
+   "math": "\\theta = 40^\\circ + \\left(\\frac{20}{60}\\right)^\\circ = 40^\\circ + \\left(\\frac{1}{3}\\right)^\\circ = \\left(\\frac{121}{3}\\right)^\\circ",
+   "en": "First, convert the minutes part of the angle into degrees by dividing by $60$ (since $1^\\circ = 60'$).",
+   "ur": "سب سے پہلے، زاویے کے منٹ والے حصے کو $60$ سے تقسیم کر کے ڈگری میں تبدیل کریں (کیونکہ $1^\\circ = 60'$ ہوتا ہے)۔",
+   "check": [
+    "20/60 == R(1,3)",
+    "40 + R(1,3) == R(121,3)"
+   ]
+  },
+  {
+   "math": "\\theta = \\frac{121}{3} \\times \\frac{\\pi}{180} \\approx 0.704\\ \\text{rad}",
+   "en": "Now, convert the angle from degrees to radians by multiplying by $\\frac{\\pi}{180}$.",
+   "ur": "اب، زاویے کو ڈگری سے ریڈین میں تبدیل کرنے کے لیے $\\frac{\\pi}{180}$ سے ضرب دیں۔",
+   "check": [
+    "Abs((R(121,3)*pi/180) - 0.704) <= 0.000500001"
+   ]
+  },
+  {
+   "math": "\\ell = r\\theta \\implies r = \\frac{\\ell}{\\theta}",
+   "en": "Recall the formula relating arc length $\\ell$, radius $r$, and central angle $\\theta$ (in radians), and rearrange it to solve for $r$.",
+   "ur": "قوس کی لمبائی $\\ell$، رداس $r$، اور مرکزی زاویہ $\\theta$ (ریڈین میں) کے درمیان تعلق کا فارمولا لکھیں اور اسے $r$ کی قیمت نکالنے کے لیے ترتیب دیں۔"
+  },
+  {
+   "math": "r = \\frac{5.5}{0.704} \\approx 7.81\\ \\text{cm}",
+   "en": "Substitute the values of $\\ell = 5.5$ and $\\theta \\approx 0.704$ into the formula and divide to find the radius $r$.",
+   "ur": "فارمولے میں $\\ell = 5.5$ اور $\\theta \\approx 0.704$ کی قیمتیں درج کریں اور تقسیم کر کے رداس $r$ معلوم کریں۔",
+   "check": [
+    "Abs((R(11,2)/R(704,1000)) - 7.81) <= 0.005000001",
+    "Abs((R(11,2)/(R(121,3)*pi/180)) - 7.81) <= 0.0050000010000000004",
+    "Abs((R(121,3)*pi/180) - 0.704) <= 0.000500001"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

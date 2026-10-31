@@ -1,0 +1,56 @@
+{
+ "item": "c10-rev6-q3",
+ "label": "",
+ "answer_ref": "$\\frac{5}{\\sqrt{26}}\\underline{i} + \\frac{1}{\\sqrt{26}}\\underline{j}$",
+ "steps": [
+  {
+   "math": "\\underline{a} = \\frac{5}{3}\\underline{i} + \\frac{1}{3}\\underline{j}",
+   "en": "Write down the given vector $\\underline{a}$. Here, the components are $x = \\frac{5}{3}$ and $y = \\frac{1}{3}$. We need to find the unit vector $\\hat{a}$ in the direction of $\\underline{a}$.",
+   "ur": "دیا گیا سمتیہ $\\underline{a}$ لکھیں۔ یہاں، اجزاء $x = \\frac{5}{3}$ اور $y = \\frac{1}{3}$ ہیں۔ ہمیں $\\underline{a}$ کی سمت میں اکائی سمتیہ $\\hat{a}$ معلوم کرنا ہے۔"
+  },
+  {
+   "math": "|\\underline{a}| = \\sqrt{\\left(\\frac{5}{3}\\right)^2 + \\left(\\frac{1}{3}\\right)^2}",
+   "en": "First, find the magnitude of vector $\\underline{a}$ using the formula $|\\underline{a}| = \\sqrt{x^2 + y^2}$.",
+   "ur": "سب سے پہلے، فارمولا $|\\underline{a}| = \\sqrt{x^2 + y^2}$ کا استعمال کرتے ہوئے سمتیہ $\\underline{a}$ کی مقدار معلوم کریں۔"
+  },
+  {
+   "math": "|\\underline{a}| = \\sqrt{\\frac{25}{9} + \\frac{1}{9}}",
+   "en": "Square both fractions inside the square root.",
+   "ur": "جذر کے اندر دونوں کسروں کا مربع لیں۔",
+   "check": [
+    "(R(5,3))**2 == R(25,9)",
+    "(R(1,3))**2 == R(1,9)"
+   ]
+  },
+  {
+   "math": "|\\underline{a}| = \\sqrt{\\frac{26}{9}} = \\frac{\\sqrt{26}}{3}",
+   "en": "Add the fractions with the common denominator $9$ and take the square root of the denominator.",
+   "ur": "مشترک مخرج $9$ کے ساتھ کسروں کو جمع کریں اور مخرج کا جذر لیں۔",
+   "check": [
+    "R(25,9) + R(1,9) == R(26,9)",
+    "sqrt(R(26,9)) == sqrt(26)/3"
+   ]
+  },
+  {
+   "math": "\\hat{a} = \\frac{\\underline{a}}{|\\underline{a}|} = \\frac{\\frac{5}{3}\\underline{i} + \\frac{1}{3}\\underline{j}}{\\frac{\\sqrt{26}}{3}}",
+   "en": "The unit vector $\\hat{a}$ is found by dividing the vector $\\underline{a}$ by its magnitude $|\\underline{a}|$. Substitute the values into the formula.",
+   "ur": "اکائی سمتیہ $\\hat{a}$ معلوم کرنے کے لیے سمتیہ $\\underline{a}$ کو اس کی مقدار $|\\underline{a}|$ سے تقسیم کیا جاتا ہے۔ فارمولے میں قیمتیں درج کریں۔"
+  },
+  {
+   "math": "\\hat{a} = \\frac{\\frac{1}{3}(5\\underline{i} + 1\\underline{j})}{\\frac{\\sqrt{26}}{3}} = \\frac{5}{\\sqrt{26}}\\underline{i} + \\frac{1}{\\sqrt{26}}\\underline{j}",
+   "en": "Cancel out the common denominator $3$ and write the separate $\\underline{i}$ and $\\underline{j}$ components to get the required unit vector.",
+   "ur": "مشترک مخرج $3$ کو منسوخ کریں اور مطلوبہ اکائی سمتیہ حاصل کرنے کے لیے $\\underline{i}$ اور $\\underline{j}$ کے اجزاء کو الگ الگ لکھیں۔",
+   "check": [
+    "R(5,3) / (sqrt(26)/3) == 5/sqrt(26)",
+    "R(1,3) / (sqrt(26)/3) == 1/sqrt(26)",
+    "(5/sqrt(26))**2 + (1/sqrt(26))**2 == 1",
+    "sqrt((5/3)**2 + (1/3)**2) == (sqrt(26)/3)",
+    "(5*sqrt(26)/26)**2 + (sqrt(26)/26)**2 == 1",
+    "(5*sqrt(26)/26)*(sqrt(26)/3) == (5/3)",
+    "(sqrt(26)/26)*(sqrt(26)/3) == (1/3)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

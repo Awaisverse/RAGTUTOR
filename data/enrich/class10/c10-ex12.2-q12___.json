@@ -1,0 +1,47 @@
+{
+ "item": "c10-ex12.2-q12",
+ "label": "",
+ "answer_ref": "$0.10$",
+ "steps": [
+  {
+   "math": "P(\\text{not } A) = P(A') = 0.45, \\quad P(A \\cup B) = 0.65",
+   "en": "Write down the given probabilities from the question. We need to find $P(B)$.",
+   "ur": "سوال میں دیے گئے احتمالات لکھیں۔ ہمیں $P(B)$ معلوم کرنا ہے۔"
+  },
+  {
+   "math": "P(A) + P(A') = 1 \\implies P(A) = 1 - P(A')",
+   "en": "By the complement rule of probability, the sum of the probabilities of an event and its complement is $1$.",
+   "ur": "احتمال کے تکمیلی اصول (متمم) کے مطابق، کسی وقوعہ اور اس کے متمم کے احتمالات کا مجموعہ $1$ ہوتا ہے۔"
+  },
+  {
+   "math": "P(A) = 1 - 0.45 = 0.55",
+   "en": "Substitute $P(A') = 0.45$ to find $P(A)$.",
+   "ur": "$P(A)$ معلوم کرنے کے لیے $P(A') = 0.45$ درج کریں۔",
+   "check": [
+    "1 - R(45,100) == R(55,100)"
+   ]
+  },
+  {
+   "math": "P(A \\cup B) = P(A) + P(B)",
+   "en": "Since $A$ and $B$ are mutually exclusive events, we apply the addition law of probability for mutually exclusive events.",
+   "ur": "چونکہ $A$ اور $B$ باہم متنافی (خارج) واقعات ہیں، اس لیے ہم باہم متنافی واقعات کے لیے احتمال کا قانونِ جمع استعمال کرتے ہیں۔"
+  },
+  {
+   "math": "0.65 = 0.55 + P(B)",
+   "en": "Substitute the known values $P(A \\cup B) = 0.65$ and $P(A) = 0.55$ into the formula.",
+   "ur": "فارمولے میں معلوم قیمتیں $P(A \\cup B) = 0.65$ اور $P(A) = 0.55$ درج کریں۔"
+  },
+  {
+   "math": "P(B) = 0.65 - 0.55 = 0.10",
+   "en": "Subtract $0.55$ from $0.65$ to get the final value of $P(B)$.",
+   "ur": "$P(B)$ کی حتمی قیمت حاصل کرنے کے لیے $0.65$ میں سے $0.55$ کو تفریق کریں۔",
+   "check": [
+    "R(65,100) - R(55,100) == R(10,100)",
+    "1 - R(45,100) == R(55,100)",
+    "R(65,100) - R(55,100) == R(1,10)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

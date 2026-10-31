@@ -1,0 +1,51 @@
+{
+ "item": "c10-rev5-q1",
+ "label": "iv",
+ "answer_ref": "(b) $\\frac{5x+4}{5}$",
+ "steps": [
+  {
+   "math": "\\frac{3x+1}{5} + \\frac{2x+3}{5}",
+   "en": "Write down the given algebraic expression to be simplified.",
+   "ur": "دیے گئے الجبری جملے کو مختصر کرنے کے لیے لکھیں۔"
+  },
+  {
+   "math": "",
+   "en": "Both fractions have the same denominator, which is $5$. So, their L.C.M. is $5$.",
+   "ur": "دونوں کسروں کا مخرج (نسب نما) ایک جیسا ہے جو کہ $5$ ہے۔ اس لیے ان کا ذو اضعاف اقل (L.C.M.) $5$ ہے۔"
+  },
+  {
+   "math": "\\frac{3x+1}{5} + \\frac{2x+3}{5} = \\frac{(3x+1) + (2x+3)}{5}",
+   "en": "When denominators are the same, we keep the common denominator and add the numerators.",
+   "ur": "جب مخرج ایک جیسے ہوں تو ہم مشترک مخرج کو برقرار رکھتے ہیں اور شمار کنندگان کو جمع کر لیتے ہیں۔",
+   "check": [
+    "(3*x+1)/5 + (2*x+3)/5 == ((3*x+1) + (2*x+3))/5"
+   ]
+  },
+  {
+   "math": "\\frac{(3x+1) + (2x+3)}{5} = \\frac{3x + 2x + 1 + 3}{5}",
+   "en": "Remove the brackets and group the like terms together in the numerator.",
+   "ur": "بریکٹ ہٹائیں اور شمار کنندہ میں یکساں رقموں کو اکٹھا لکھیں۔",
+   "check": [
+    "((3*x+1) + (2*x+3))/5 == (3*x + 2*x + 1 + 3)/5"
+   ]
+  },
+  {
+   "math": "\\frac{3x + 2x + 1 + 3}{5} = \\frac{5x + 4}{5}",
+   "en": "Add the like terms ($3x + 2x = 5x$ and $1 + 3 = 4$) to get the simplified form.",
+   "ur": "مختصر شکل حاصل کرنے کے لیے یکساں رقموں کو جمع کریں ($3x + 2x = 5x$ اور $1 + 3 = 4$)۔",
+   "check": [
+    "(3*x + 2*x + 1 + 3)/5 == (5*x + 4)/5"
+   ]
+  },
+  {
+   "math": "\\text{Answer: (b) } \\frac{5x+4}{5}",
+   "en": "This result matches option (b), so (b) is the correct answer.",
+   "ur": "یہ نتیجہ آپشن (b) سے مطابقت رکھتا ہے، اس لیے (b) درست جواب ہے۔",
+   "check": [
+    "(3*x+1)/5 + (2*x+3)/5 == (5*x+4)/5"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

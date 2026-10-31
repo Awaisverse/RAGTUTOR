@@ -1,0 +1,68 @@
+{
+ "item": "c10-ex1.2-q1",
+ "label": "vi",
+ "answer_ref": "$7 - 26i$",
+ "steps": [
+  {
+   "math": "(5 - 2i)(3 - 4i)",
+   "en": "We are given the product of two complex numbers and need to simplify it into the standard form $a + bi$.",
+   "ur": "ہمیں دو مخلوط اعداد کا حاصلِ ضرب دیا گیا ہے اور ہمیں اسے مختصر کر کے معیاری شکل $a + bi$ میں لکھنا ہے۔"
+  },
+  {
+   "math": "(5 - 2i)(3 - 4i) = 5(3 - 4i) - 2i(3 - 4i)",
+   "en": "Apply the distributive property by multiplying each term of the first complex number with the entire second bracket.",
+   "ur": "تقسیمی خاصیت کا استعمال کرتے ہوئے پہلے مخلوط عدد کے ہر رکن کو دوسری پوری قوس کے ساتھ ضرب دیں۔",
+   "check": [
+    "(5 - 2*I)*(3 - 4*I) == 5*(3 - 4*I) - 2*I*(3 - 4*I)"
+   ]
+  },
+  {
+   "math": "= 15 - 20i - 6i + 8i^2",
+   "en": "Expand the brackets by multiplying the terms inside. Note that $(-2i)(-4i) = +8i^2$.",
+   "ur": "اندرونی ارکان کو ضرب دے کر قوسین کھولیں۔ نوٹ کریں کہ $(-2i)(-4i) = +8i^2$ ہوتا ہے۔",
+   "check": [
+    "5*(3 - 4*I) - 2*I*(3 - 4*I) == 15 - 20*I - 6*I + 8*I**2"
+   ]
+  },
+  {
+   "math": "= 15 - 26i + 8i^2",
+   "en": "Combine the like imaginary terms: $-20i - 6i = -26i$.",
+   "ur": "یکساں خیالی ارکان کو یکجا کریں: $-20i - 6i = -26i$۔",
+   "check": [
+    "-20*I - 6*I == -26*I"
+   ]
+  },
+  {
+   "math": "= 15 - 26i + 8(-1)",
+   "en": "Since $i = \\sqrt{-1}$, we know that $i^2 = -1$. Substitute $i^2 = -1$ into the expression.",
+   "ur": "چونکہ $i = \\sqrt{-1}$ ہے، ہم جانتے ہیں کہ $i^2 = -1$ ہوتا ہے۔ عبارت میں $i^2 = -1$ درج کریں۔",
+   "check": [
+    "I**2 == -1",
+    "15 - 26*I + 8*(-1) == 15 - 26*I - 8"
+   ]
+  },
+  {
+   "math": "= 15 - 8 - 26i",
+   "en": "Simplify $+8(-1)$ to $-8$ and group the real numbers together.",
+   "ur": "$+8(-1)$ کو مختصر کر کے $-8$ لکھیں اور حقیقی اعداد کو اکٹھا کریں۔",
+   "check": [
+    "8*(-1) == -8",
+    "15 - 26*I - 8 == 15 - 8 - 26*I"
+   ]
+  },
+  {
+   "math": "= 7 - 26i",
+   "en": "Subtract the real parts ($15 - 8 = 7$) to get the final answer in the form $a + bi$.",
+   "ur": "حقیقی حصوں کو تفریق کریں ($15 - 8 = 7$) تاکہ $a + bi$ کی شکل میں حتمی جواب حاصل ہو سکے۔",
+   "check": [
+    "15 - 8 == 7",
+    "(5 - 2*I)*(3 - 4*I) == 7 - 26*I",
+    "(5 - 2*I)*(3 - 4*I) == (15) + (-26)*I + (8)*I**2",
+    "I**2 == -1",
+    "(5 - 2*I)*(3 - 4*I) == (7 - 26*I)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

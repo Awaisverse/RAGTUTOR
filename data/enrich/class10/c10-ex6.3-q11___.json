@@ -1,0 +1,53 @@
+{
+ "item": "c10-ex6.3-q11",
+ "label": "",
+ "answer_ref": "$20\\underline{i} + 50\\underline{j}$, magnitude $\\approx 53.85$",
+ "steps": [
+  {
+   "math": "\\underline{v}_p = 20\\underline{i}, \\quad \\underline{v}_w = 50\\underline{j}",
+   "en": "Write down the given airspeed of the aeroplane $\\underline{v}_p$ and the velocity of the crosswind $\\underline{v}_w$.",
+   "ur": "ہوائی جہاز کی دی گئی رفتار $\\underline{v}_p$ اور ہوا کی رفتار $\\underline{v}_w$ لکھیں۔"
+  },
+  {
+   "math": "\\underline{v}_r = \\underline{v}_p + \\underline{v}_w",
+   "en": "By the vector addition law, the resultant velocity $\\underline{v}_r$ is the vector sum of the aeroplane's airspeed and the crosswind velocity.",
+   "ur": "ویکٹرز کی جمع کے اصول کے مطابق، محصلہ رفتار $\\underline{v}_r$ ہوائی جہاز کی رفتار اور ہوا کی رفتار کے ویکٹر مجموعے کے برابر ہے۔"
+  },
+  {
+   "math": "\\underline{v}_r = 20\\underline{i} + 50\\underline{j}",
+   "en": "Substitute the given vector values into the formula to get the resultant velocity.",
+   "ur": "محصلہ رفتار معلوم کرنے کے لیے فارمولے میں دی گئی ویکٹر قیمتیں درج کریں۔"
+  },
+  {
+   "math": "|\\underline{v}_r| = \\sqrt{x^2 + y^2}",
+   "en": "Recall the formula for the magnitude of a vector $x\\underline{i} + y\\underline{j}$ in a plane.",
+   "ur": "مستوی میں ویکٹر $x\\underline{i} + y\\underline{j}$ کی مقدار معلوم کرنے کا فارمولا لکھیں۔"
+  },
+  {
+   "math": "|\\underline{v}_r| = \\sqrt{(20)^2 + (50)^2}",
+   "en": "Substitute the components $x = 20$ and $y = 50$ of the resultant velocity into the magnitude formula.",
+   "ur": "مقدار کے فارمولے میں محصلہ رفتار کے اجزاء $x = 20$ اور $y = 50$ درج کریں۔"
+  },
+  {
+   "math": "|\\underline{v}_r| = \\sqrt{400 + 2500} = \\sqrt{2900}",
+   "en": "Calculate the squares of $20$ and $50$, and then add them together.",
+   "ur": "$20$ اور $50$ کے مربع لیں اور پھر انہیں آپس میں جمع کریں۔",
+   "check": [
+    "20**2 == 400",
+    "50**2 == 2500",
+    "400 + 2500 == 2900"
+   ]
+  },
+  {
+   "math": "|\\underline{v}_r| \\approx 53.85",
+   "en": "Take the square root of $2900$ to find the magnitude of the resultant velocity. Thus, the resultant velocity is $20\\underline{i} + 50\\underline{j}$ and its magnitude is approximately $53.85$.",
+   "ur": "محصلہ رفتار کی مقدار معلوم کرنے کے لیے $2900$ کا جزر لیں۔ لہٰذا، محصلہ رفتار $20\\underline{i} + 50\\underline{j}$ ہے اور اس کی مقدار تقریباً $53.85$ ہے۔",
+   "check": [
+    "Abs(sqrt(2900) - 53.85) < 0.01",
+    "20**2 + 50**2 == 2900"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

@@ -1,0 +1,54 @@
+{
+ "item": "u1-example8",
+ "label": "ii",
+ "answer_ref": "$\\frac{3(\\sqrt5+\\sqrt3)}{2}$",
+ "steps": [
+  {
+   "math": "\\frac{3}{\\sqrt{5}-\\sqrt{3}}",
+   "en": "We are given the expression $\\frac{3}{\\sqrt{5}-\\sqrt{3}}$ and we need to rationalize its denominator.",
+   "ur": "ہمیں جملہ $\\frac{3}{\\sqrt{5}-\\sqrt{3}}$ دیا گیا ہے اور ہمیں اس کے مخرج کو ناطق بنانا ہے۔"
+  },
+  {
+   "math": "\\sqrt{5}+\\sqrt{3}",
+   "en": "To rationalize a binomial surd denominator of the form $\\sqrt{a}-\\sqrt{b}$, we multiply both the numerator and the denominator by its conjugate $\\sqrt{a}+\\sqrt{b}$. Here, the conjugate of $\\sqrt{5}-\\sqrt{3}$ is $\\sqrt{5}+\\sqrt{3}$.",
+   "ur": "$\\sqrt{a}-\\sqrt{b}$ کی شکل کے دو رقمی اصم مخرج کو ناطق بنانے کے لیے، ہم شمار کنندہ اور مخرج دونوں کو اس کے مزدوج (conjugate) $\\sqrt{a}+\\sqrt{b}$ سے ضرب دیتے ہیں۔ یہاں، $\\sqrt{5}-\\sqrt{3}$ کا مزدوج $\\sqrt{5}+\\sqrt{3}$ ہے۔"
+  },
+  {
+   "math": "= \\frac{3}{\\sqrt{5}-\\sqrt{3}} \\times \\frac{\\sqrt{5}+\\sqrt{3}}{\\sqrt{5}+\\sqrt{3}}",
+   "en": "Multiply the numerator and the denominator by $\\sqrt{5}+\\sqrt{3}$.",
+   "ur": "شمار کنندہ اور مخرج کو $\\sqrt{5}+\\sqrt{3}$ سے ضرب دیں۔",
+   "check": [
+    "3/(sqrt(5)-sqrt(3)) == (3/(sqrt(5)-sqrt(3))) * ((sqrt(5)+sqrt(3))/(sqrt(5)+sqrt(3)))"
+   ]
+  },
+  {
+   "math": "= \\frac{3(\\sqrt{5}+\\sqrt{3})}{(\\sqrt{5})^2 - (\\sqrt{3})^2}",
+   "en": "Apply the algebraic identity $(a-b)(a+b) = a^2 - b^2$ in the denominator.",
+   "ur": "مخرج میں الجبری کلیہ $(a-b)(a+b) = a^2 - b^2$ کا اطلاق کریں۔",
+   "check": [
+    "(sqrt(5)-sqrt(3))*(sqrt(5)+sqrt(3)) == (sqrt(5))**2 - (sqrt(3))**2"
+   ]
+  },
+  {
+   "math": "= \\frac{3(\\sqrt{5}+\\sqrt{3})}{5 - 3}",
+   "en": "Simplify the squares in the denominator since $(\\sqrt{5})^2 = 5$ and $(\\sqrt{3})^2 = 3$.",
+   "ur": "مخرج میں مربعات کو مختصر کریں کیونکہ $(\\sqrt{5})^2 = 5$ اور $(\\sqrt{3})^2 = 3$ ہے۔",
+   "check": [
+    "(sqrt(5))**2 == 5",
+    "(sqrt(3))**2 == 3"
+   ]
+  },
+  {
+   "math": "= \\frac{3(\\sqrt{5}+\\sqrt{3})}{2}",
+   "en": "Subtract the numbers in the denominator ($5 - 3 = 2$) to get the final answer.",
+   "ur": "حتمی جواب حاصل کرنے کے لیے مخرج میں اعداد کو تفریق کریں ($5 - 3 = 2$)۔",
+   "check": [
+    "5 - 3 == 2",
+    "3/(sqrt(5)-sqrt(3)) == 3*(sqrt(5)+sqrt(3))/2",
+    "(sqrt(5))**2 - (sqrt(3))**2 == 2"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

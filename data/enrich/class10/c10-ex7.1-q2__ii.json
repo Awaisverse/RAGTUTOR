@@ -1,0 +1,35 @@
+{
+ "item": "c10-ex7.1-q2",
+ "label": "ii",
+ "answer_ref": "$+\\sin\\theta$",
+ "steps": [
+  {
+   "math": "\\sin(180^\\circ - \\theta)",
+   "en": "We are given the trigonometric expression $\\sin(180^\\circ - \\theta)$ and need to find the correct sign for the blank in $\\sin(180^\\circ - \\theta) = \\ldots \\sin\\theta$.",
+   "ur": "ہمیں مثلثیاتی جملہ $\\sin(180^\\circ - \\theta)$ دیا گیا ہے اور ہمیں $\\sin(180^\\circ - \\theta) = \\ldots \\sin\\theta$ میں خالی جگہ کے لیے درست علامت معلوم کرنی ہے۔"
+  },
+  {
+   "math": "180^\\circ = 2 \\times 90^\\circ",
+   "en": "First, we express $180^\\circ$ as a multiple of $90^\\circ$. Since $2$ is an even multiple of $90^\\circ$, the trigonometric ratio $\\sin$ does not change to its co-ratio and remains $\\sin\\theta$.",
+   "ur": "سب سے پہلے، ہم $180^\\circ$ کو $90^\\circ$ کے حاصل ضرب کے طور پر لکھتے ہیں۔ چونکہ $2$ ایک جفت عدد ہے، اس لیے مثلثیاتی نسبت $\\sin$ تبدیل نہیں ہوگی اور $\\sin\\theta$ ہی رہے گی۔",
+   "check": [
+    "180 == 2 * 90"
+   ]
+  },
+  {
+   "math": "90^\\circ < 180^\\circ - \\theta < 180^\\circ",
+   "en": "Assuming $\\theta$ is an acute angle, the angle $(180^\\circ - \\theta)$ lies in the second quadrant (Quadrant II). In the second quadrant, the sine function is positive ($+$).",
+   "ur": "فرض کریں کہ $\\theta$ ایک حادہ زاویہ ہے، تو زاویہ $(180^\\circ - \\theta)$ دوسرے ربع (Quadrant II) میں واقع ہوگا۔ دوسرے ربع میں $\\sin$ کی قیمت مثبت ($+$) ہوتی ہے۔"
+  },
+  {
+   "math": "\\sin(180^\\circ - \\theta) = +\\sin\\theta",
+   "en": "Combining the positive sign from the second quadrant with the unchanged ratio gives $+\\sin\\theta$. Thus, the blank is filled with a $+$ sign.",
+   "ur": "دوسرے ربع کی مثبت علامت اور بغیر تبدیلی کے مثلثیاتی نسبت کو ملانے سے $+\\sin\\theta$ حاصل ہوتا ہے۔ لہٰذا، خالی جگہ میں $+$ کی علامت آئے گی۔",
+   "check": [
+    "sin(pi - t) == sin(t)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

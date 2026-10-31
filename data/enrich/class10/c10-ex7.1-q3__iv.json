@@ -1,0 +1,47 @@
+{
+ "item": "c10-ex7.1-q3",
+ "label": "iv",
+ "answer_ref": "$\\frac{2}{\\sqrt{3}}$",
+ "steps": [
+  {
+   "math": "\\operatorname{cosec}\\ 120^\\circ",
+   "en": "We need to find the exact value of $\\operatorname{cosec} 120^\\circ$ without using a calculator.",
+   "ur": "ہمیں کیلکولیٹر کے استعمال کے بغیر $\\operatorname{cosec} 120^\\circ$ کی اصل قیمت معلوم کرنی ہے۔"
+  },
+  {
+   "math": "120^\\circ = 90^\\circ + 30^\\circ = 1 \\times 90^\\circ + 30^\\circ",
+   "en": "First, express the angle $120^\\circ$ as a sum of a multiple of $90^\\circ$ and an acute angle $\\theta$.",
+   "ur": "سب سے پہلے، زاویہ $120^\\circ$ کو $90^\\circ$ کے مضرب اور ایک حادہ زاویہ $\\theta$ کے مجموعے کے طور پر لکھیں۔",
+   "check": [
+    "120 == 1*90 + 30"
+   ]
+  },
+  {
+   "math": "\\operatorname{cosec}\\ 120^\\circ = \\operatorname{cosec}(1 \\times 90^\\circ + 30^\\circ)",
+   "en": "Substitute this expression for the angle into the given trigonometric function.",
+   "ur": "دیے گئے تکونیاتی تفاعل میں زاویہ کی اس قیمت کو درج کریں۔",
+   "check": [
+    "csc(120*pi/180) == csc((1*90 + 30)*pi/180)"
+   ]
+  },
+  {
+   "math": "\\operatorname{cosec}(1 \\times 90^\\circ + 30^\\circ) = +\\sec 30^\\circ",
+   "en": "Since $120^\\circ$ is an odd multiple of $90^\\circ$ plus $30^\\circ$, the trigonometric ratio $\\operatorname{cosec}$ changes to its co-ratio $\\sec$. Also, $120^\\circ$ lies in Quadrant II where $\\operatorname{cosec}$ is positive, so the sign remains positive.",
+   "ur": "چونکہ یہاں $90^\\circ$ کا طاق مضرب ($1$) ہے، اس لیے تکونیاتی نسبت $\\operatorname{cosec}$ اپنی ہم نسبت (co-ratio) یعنی $\\sec$ میں تبدیل ہو جائے گی۔ نیز، زاویہ $120^\\circ$ دوسرے ربع (Quadrant II) میں واقع ہے جہاں $\\operatorname{cosec}$ مثبت ہوتا ہے، اس لیے علامت مثبت رہے گی۔",
+   "check": [
+    "csc((1*90 + 30)*pi/180) == sec(30*pi/180)"
+   ]
+  },
+  {
+   "math": "\\operatorname{cosec}\\ 120^\\circ = \\frac{2}{\\sqrt{3}}",
+   "en": "From the table of standard trigonometric values, we know that $\\sec 30^\\circ = \\frac{2}{\\sqrt{3}}$. Thus, the exact value of $\\operatorname{cosec} 120^\\circ$ is $\\frac{2}{\\sqrt{3}}$.",
+   "ur": "معیاری تکونیاتی قیمتوں کے جدول سے ہم جانتے ہیں کہ $\\sec 30^\\circ = \\frac{2}{\\sqrt{3}}$ ہے۔ پس، $\\operatorname{cosec} 120^\\circ$ کی اصل قیمت $\\frac{2}{\\sqrt{3}}$ ہے۔",
+   "check": [
+    "csc(120*pi/180) == 2/sqrt(3)",
+    "csc((120)*pi/180) == 2*sqrt(3)/3"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

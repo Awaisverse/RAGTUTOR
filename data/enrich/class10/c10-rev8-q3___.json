@@ -1,0 +1,142 @@
+{
+ "item": "c10-rev8-q3",
+ "label": "",
+ "answer_ref": "$5$ cm",
+ "steps": [
+  {
+   "math": "AB = 6\\ \\text{cm}, \\quad OM = 4\\ \\text{cm}, \\quad OA = r = \\text{?}",
+   "en": "Let $O$ be the centre of the circle and $AB$ be the given chord of length $6\\text{ cm}$. Let $OM$ be the perpendicular drawn from the centre $O$ to the chord $AB$, so the distance $OM = 4\\text{ cm}$. We need to find the radius $OA = r$.",
+   "ur": "فرص کریں کہ $O$ دائرے کا مرکز ہے اور $AB$ دیا گیا وتر ہے جس کی لمبائی $6\\text{ cm}$ ہے۔ مرکز $O$ سے وتر $AB$ پر عمود $OM$ گرائیں، پس فاصلہ $OM = 4\\text{ cm}$ ہے۔ ہمیں رداس $OA = r$ معلوم کرنا ہے۔",
+   "draw": [
+    {
+     "t": "circle",
+     "c": [
+      50,
+      30
+     ],
+     "r": 25
+    },
+    {
+     "t": "dot",
+     "p": [
+      50,
+      30
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      51.5,
+      28
+     ],
+     "s": "O"
+    },
+    {
+     "t": "line",
+     "p": [
+      35.0,
+      50.0,
+      65.0,
+      50.0
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      31.0,
+      51.0
+     ],
+     "s": "A"
+    },
+    {
+     "t": "text",
+     "p": [
+      66.5,
+      51.0
+     ],
+     "s": "B"
+    },
+    {
+     "t": "line",
+     "p": [
+      50,
+      30,
+      50,
+      50.0
+     ],
+     "dash": true
+    },
+    {
+     "t": "right",
+     "p": [
+      50,
+      50.0
+     ],
+     "d": [
+      1,
+      0,
+      0,
+      -1
+     ]
+    },
+    {
+     "t": "text",
+     "p": [
+      51.5,
+      54.0
+     ],
+     "s": "M"
+    },
+    {
+     "t": "line",
+     "p": [
+      50,
+      30,
+      65.0,
+      50.0
+     ]
+    }
+   ]
+  },
+  {
+   "math": "AM = \\frac{AB}{2} = \\frac{6}{2} = 3\\ \\text{cm}",
+   "en": "By the theorem that a perpendicular from the centre of a circle to a chord bisects the chord, the point $M$ is the midpoint of $AB$.",
+   "ur": "مسئلہ کی رو سے دائرے کے مرکز سے وتر پر گرایا گیا عمود وتر کی تنصیف کرتا ہے، اس لیے نقطہ $M$ وتر $AB$ کا وسطی نقطہ ہے۔",
+   "check": [
+    "R(6, 2) == 3"
+   ]
+  },
+  {
+   "math": "OA^2 = OM^2 + AM^2",
+   "en": "Since $\\overline{OM} \\perp \\overline{AB}$, $\\triangle OMA$ is a right-angled triangle with hypotenuse $OA = r$. Applying the Pythagoras theorem:",
+   "ur": "چونکہ $\\overline{OM} \\perp \\overline{AB}$ ہے، اس لیے $\\triangle OMA$ ایک قائمۃ الزاویہ مثلث ہے جس کا وتر $OA = r$ ہے۔ مسئلہ فیثا غورث کا اطلاق کرنے سے:"
+  },
+  {
+   "math": "r^2 = 4^2 + 3^2",
+   "en": "Substitute the known values $OA = r$, $OM = 4\\text{ cm}$, and $AM = 3\\text{ cm}$ into the equation.",
+   "ur": "مساوات میں معلوم قیمتیں $OA = r$، $OM = 4\\text{ cm}$ اور $AM = 3\\text{ cm}$ درج کریں۔"
+  },
+  {
+   "math": "r^2 = 16 + 9 = 25",
+   "en": "Calculate the squares and add them together.",
+   "ur": "مربع لیں اور انہیں آپس میں جمع کریں۔",
+   "check": [
+    "4**2 == 16",
+    "3**2 == 9",
+    "16 + 9 == 25"
+   ]
+  },
+  {
+   "math": "r = \\sqrt{25} = 5\\ \\text{cm}",
+   "en": "Take the positive square root on both sides (since radius is a length and cannot be negative). Thus, the radius of the circle is $5$ cm.",
+   "ur": "دونوں طرف مثبت جذر المربع لیں (کیونکہ رداس ایک لمبائی ہے اور منفی نہیں ہو سکتی)۔ پس، دائرے کا رداس $5$ cm ہے۔",
+   "check": [
+    "sqrt(25) == 5",
+    "sqrt(4**2 + 3**2) == 5"
+   ]
+  }
+ ],
+ "keeps_drawing": true,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

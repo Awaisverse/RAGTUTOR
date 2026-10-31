@@ -1,0 +1,75 @@
+{
+ "item": "c10-ex12.2-q4",
+ "label": "",
+ "answer_ref": "$\\frac{2}{9}$",
+ "steps": [
+  {
+   "math": "n(S) = 6 \\times 6 = 36",
+   "en": "When two fair dice are thrown once, the total number of possible outcomes in the sample space $S$ is $36$.",
+   "ur": "جب دو پانسے ایک بار پھینکے جاتے ہیں، تو نمونہ کی فضا $S$ میں ممکنہ نتائج کی کل تعداد $36$ ہوتی ہے۔",
+   "check": [
+    "6 * 6 == 36"
+   ]
+  },
+  {
+   "math": "A = \\{(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)\\}, \\quad n(A) = 6",
+   "en": "Let $A$ be the event of getting a sum of $7$. There are $6$ favourable outcomes for event $A$.",
+   "ur": "فرض کریں $A$ مجموعہ $7$ حاصل کرنے کا واقعہ ہے۔ واقعہ $A$ کے لیے موافق نتائج کی تعداد $6$ ہے۔",
+   "check": [
+    "1 + 6 == 7",
+    "2 + 5 == 7",
+    "3 + 4 == 7"
+   ]
+  },
+  {
+   "math": "P(A) = \\frac{n(A)}{n(S)} = \\frac{6}{36}",
+   "en": "Now, we find the probability of event $A$ by dividing $n(A)$ by $n(S)$.",
+   "ur": "اب، ہم $n(A)$ کو $n(S)$ سے تقسیم کر کے واقعہ $A$ کا احتمال معلوم کرتے ہیں۔",
+   "check": [
+    "R(6, 36) == R(1, 6)"
+   ]
+  },
+  {
+   "math": "B = \\{(5,6), (6,5)\\}, \\quad n(B) = 2",
+   "en": "Let $B$ be the event of getting a sum of $11$. There are $2$ favourable outcomes for event $B$.",
+   "ur": "فرض کریں $B$ مجموعہ $11$ حاصل کرنے کا واقعہ ہے۔ واقعہ $B$ کے لیے موافق نتائج کی تعداد $2$ ہے۔",
+   "check": [
+    "5 + 6 == 11",
+    "6 + 5 == 11"
+   ]
+  },
+  {
+   "math": "P(B) = \\frac{n(B)}{n(S)} = \\frac{2}{36}",
+   "en": "Similarly, the probability of event $B$ is found by dividing $n(B)$ by $n(S)$.",
+   "ur": "اسی طرح، واقعہ $B$ کا احتمال $n(B)$ کو $n(S)$ سے تقسیم کر کے معلوم کیا جاتا ہے۔",
+   "check": [
+    "R(2, 36) == R(1, 18)"
+   ]
+  },
+  {
+   "math": "n(A \\cap B) = 0 \\implies P(A \\cap B) = \\frac{0}{36}",
+   "en": "Since the sum cannot be both $7$ and $11$ at the same time, events $A$ and $B$ are mutually exclusive (disjoint).",
+   "ur": "چونکہ مجموعہ ایک ہی وقت میں $7$ اور $11$ دونوں نہیں ہو سکتا، اس لیے واقعات $A$ اور $B$ باہمی طور پر مانع (غیر مشترک) ہیں۔",
+   "check": [
+    "R(0, 36) == 0"
+   ]
+  },
+  {
+   "math": "P(A \\cup B) = P(A) + P(B) - P(A \\cap B)",
+   "en": "To find the probability of getting a sum of $7$ or $11$, we apply the addition law of probability.",
+   "ur": "$7$ یا $11$ کا مجموعہ حاصل کرنے کا احتمال معلوم کرنے کے لیے، ہم احتمال کے جمع کا قانون استعمال کرتے ہیں۔"
+  },
+  {
+   "math": "P(A \\cup B) = \\frac{6}{36} + \\frac{2}{36} - \\frac{0}{36} = \\frac{8}{36} = \\frac{2}{9}",
+   "en": "Substitute the values and simplify the fraction to get the final answer $\\frac{2}{9}$.",
+   "ur": "قیمتیں درج کریں اور کسر کو مختصر کر کے حتمی جواب $\\frac{2}{9}$ حاصل کریں۔",
+   "check": [
+    "R(6, 36) + R(2, 36) - R(0, 36) == R(8, 36)",
+    "R(8, 36) == R(2, 9)",
+    "R(6, 36) + R(2, 36) - R(0, 36) == 2/9"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

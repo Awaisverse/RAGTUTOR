@@ -1,0 +1,43 @@
+{
+ "item": "c10-rev3-q1",
+ "label": "viii",
+ "answer_ref": "(b) $\\begin{bmatrix}-3\\\\-4\\end{bmatrix}$",
+ "steps": [
+  {
+   "math": "\\begin{bmatrix} 3 \\\\ 4 \\end{bmatrix}",
+   "en": "We are given a column matrix and asked to find its additive inverse.",
+   "ur": "ہمیں ایک کالمی کالب دیا گیا ہے اور اس کا جمعی معکوس معلوم کرنے کو کہا گیا ہے۔"
+  },
+  {
+   "math": "",
+   "en": "The additive inverse of a matrix is obtained by multiplying the matrix by $-1$, which means changing the sign of each entry.",
+   "ur": "کسی کالب کا جمعی معکوس اس کالب کو $-1$ سے ضرب دے کر حاصل کیا جاتا ہے، جس کا مطلب ہے کہ ہر رکن کی علامت تبدیل کر دی جائے۔"
+  },
+  {
+   "math": "-\\begin{bmatrix} 3 \\\\ 4 \\end{bmatrix} = \\begin{bmatrix} -(3) \\\\ -(4) \\end{bmatrix}",
+   "en": "Multiply each entry of the given matrix by a negative sign.",
+   "ur": "دیے گئے کالب کے ہر رکن کو منفی علامت سے ضرب دیں۔",
+   "check": [
+    "Eq(-Matrix([[3], [4]]), Matrix([[-3], [-4]]))"
+   ]
+  },
+  {
+   "math": "-\\begin{bmatrix} 3 \\\\ 4 \\end{bmatrix} = \\begin{bmatrix} -3 \\\\ -4 \\end{bmatrix}",
+   "en": "Simplify the entries to get the additive inverse.",
+   "ur": "جمعی معکوس حاصل کرنے کے لیے ارکان کو مختصر کریں۔",
+   "check": [
+    "Eq(Matrix([[3], [4]]) + Matrix([[-3], [-4]]), Matrix([[0], [0]]))"
+   ]
+  },
+  {
+   "math": "\\text{Answer: (b) } \\begin{bmatrix}-3\\\\-4\\end{bmatrix}",
+   "en": "Therefore, the correct option is (b).",
+   "ur": "لہٰذا، درست آپشن (b) ہے۔",
+   "check": [
+    "Eq(Matrix([[3], [4]]) + Matrix([[-3], [-4]]), Matrix([[0], [0]]))"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

@@ -1,0 +1,38 @@
+{
+ "item": "c10-rev1-q1",
+ "label": "iii",
+ "answer_ref": "(a) $0$",
+ "steps": [
+  {
+   "math": "(2-i)(2+i)",
+   "en": "Consider the given complex expression.",
+   "ur": "دی گئی مختلط عبارت پر غور کریں۔"
+  },
+  {
+   "math": "(2-i)(2+i) = (2)^2 - (i)^2",
+   "en": "Initial algebraic identity $(a-b)(a+b)=a^2-b^2$ is applied.",
+   "ur": "الجبری کلیہ $(a-b)(a+b)=a^2-b^2$ استعمال کیا گیا ہے۔",
+   "check": [
+    "(2-I)*(2+I) == 2**2 - I**2"
+   ]
+  },
+  {
+   "math": "(2)^2 - (i)^2 = 5 + 0i",
+   "en": "Standard simplification using $i^2 = -1$ yields the standard form.",
+   "ur": "معیاری مختصر کاری اور $i^2 = -1$ کے استعمال سے معیاری شکل حاصل ہوتی ہے۔",
+   "check": [
+    "2**2 - I**2 == 5 + 0*I"
+   ]
+  },
+  {
+   "math": "\\text{Answer: (a) } 0",
+   "en": "The imaginary part is $0$, which corresponds to option (a).",
+   "ur": "خیالی حصہ $0$ ہے، جو آپشن (a) کے مطابق ہے۔",
+   "check": [
+    "im((2-I)*(2+I)) == 0"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

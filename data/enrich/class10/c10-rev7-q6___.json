@@ -1,0 +1,50 @@
+{
+ "item": "c10-rev7-q6",
+ "label": "",
+ "answer_ref": "$037^\\circ$",
+ "steps": [
+  {
+   "math": "",
+   "en": "Hashim walks $4\\text{ km}$ due North and then turns $90^\\circ$ to walk $3\\text{ km}$ due East. This forms a right-angled triangle. Let $\\theta$ be the angle from the North line towards the East, so the adjacent side is $4\\text{ km}$ and the opposite side is $3\\text{ km}$.",
+   "ur": "ہاشم شمال کی طرف $4\\text{ km}$ چلتا ہے اور پھر $90^\\circ$ مڑ کر مشرق کی طرف $3\\text{ km}$ چلتا ہے۔ اس سے ایک قائمۃ الزاویہ مثلث بنتی ہے۔ فرض کریں کہ شمال کی سمت سے مشرق کی طرف زاویہ $\\theta$ ہے، تو متصل ضلع $4\\text{ km}$ اور مقابل ضلع $3\\text{ km}$ ہے۔"
+  },
+  {
+   "math": "OP = \\sqrt{4^2 + 3^2} = \\sqrt{16 + 9} = \\sqrt{25} = 5\\ \\text{km}",
+   "en": "By using the Pythagorean theorem, we can find the direct distance $OP$ from the starting point to his final position.",
+   "ur": "مسئلہ فیثاغورث کا استعمال کرتے ہوئے، ہم نقطہ آغاز سے اس کی آخری پوزیشن تک براہ راست فاصلہ $OP$ معلوم کر سکتے ہیں۔",
+   "check": [
+    "sqrt(4**2 + 3**2) == 5",
+    "16 + 9 == 25",
+    "sqrt(25) == 5"
+   ]
+  },
+  {
+   "math": "\\tan\\theta = \\frac{\\text{Opposite}}{\\text{Adjacent}} = \\frac{3}{4} = 0.75",
+   "en": "To find the angle $\\theta$ east of North, we use the tangent trigonometric ratio.",
+   "ur": "شمال سے مشرق کی طرف زاویہ $\\theta$ معلوم کرنے کے لیے، ہم ٹینجنٹ کی مثلثیاتی نسبت استعمال کرتے ہیں۔",
+   "check": [
+    "R(3,4) == 0.75"
+   ]
+  },
+  {
+   "math": "\\theta = \\tan^{-1}\\left(\\frac{3}{4}\\right) \\approx 36.9^\\circ",
+   "en": "Taking the inverse tangent on both sides gives the angle $\\theta$.",
+   "ur": "دونوں طرف معکوس ٹینجنٹ لینے سے زاویہ $\\theta$ حاصل ہوتا ہے۔",
+   "check": [
+    "Abs((atan(R(3,4))*180/pi) - 36.9) <= 0.050000001"
+   ]
+  },
+  {
+   "math": "\\text{Bearing} \\approx 037^\\circ",
+   "en": "A bearing is measured clockwise from North and written as a three-digit angle rounded to the nearest degree. Thus, the bearing is $037^\\circ$.",
+   "ur": "بیئرنگ (سمت) کو شمال سے گھڑی کی سمت میں ناپا جاتا ہے اور قریب ترین درجہ تک راؤنڈ کر کے تین ہندسوں کے زاویے کے طور پر لکھا جاتا ہے۔ اس طرح، بیئرنگ $037^\\circ$ ہے۔",
+   "check": [
+    "Abs((atan(R(3,4))*180/pi) - 37) <= 0.500000001",
+    "sqrt(4**2 + 3**2) == 5",
+    "Abs((atan(R(3,4))*180/pi) - 36.9) <= 0.050000001"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

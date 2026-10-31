@@ -1,0 +1,49 @@
+{
+ "item": "c10-ex12.3-q6",
+ "label": "i",
+ "answer_ref": "$\\frac{25}{102}$",
+ "steps": [
+  {
+   "math": "n(S) = 52,\\quad n(A) = 26",
+   "en": "A standard deck has a total of $52$ cards, out of which $26$ cards are black ($13$ spades and $13$ clubs).",
+   "ur": "تاش کی ایک معیاری گڈی میں کل $52$ پتے ہوتے ہیں، جن میں سے $26$ پتے کالے ہوتے ہیں ($13$ حکم اور $13$ چڑی)۔",
+   "check": [
+    "13 + 13 == 26"
+   ]
+  },
+  {
+   "math": "P(A) = \\frac{26}{52} = \\frac{1}{2}",
+   "en": "Let $A$ be the event that the first card drawn is black. The probability of drawing the first black card is:",
+   "ur": "فرض کریں $A$ پہلے پتے کے کالا نکلنے کا واقعہ ہے۔ پہلے پتے کے کالا ہونے کا احتمال یہ ہے:",
+   "check": [
+    "R(26, 52) == R(1, 2)"
+   ]
+  },
+  {
+   "math": "P(B|A) = \\frac{25}{51}",
+   "en": "Since the first card is not replaced, there are now $51$ cards left in the deck, of which $25$ are black. Let $B$ be the event that the second card is also black.",
+   "ur": "چونکہ پہلا پتہ واپس نہیں رکھا گیا، اب گڈی میں $51$ پتے باقی ہیں جن میں سے $25$ کالے ہیں۔ فرض کریں $B$ دوسرے پتے کے بھی کالا ہونے کا واقعہ ہے۔",
+   "check": [
+    "52 - 1 == 51",
+    "26 - 1 == 25"
+   ]
+  },
+  {
+   "math": "P(A \\cap B) = P(A) \\times P(B|A)",
+   "en": "Because the two draws are dependent events (without replacement), we use the multiplication law of probability.",
+   "ur": "چونکہ دونوں مراحل تابع واقعات ہیں (بغیر واپسی کے)، ہم احتمال کے ضرب کا قانون استعمال کرتے ہیں۔"
+  },
+  {
+   "math": "P(A \\cap B) = \\frac{26}{52} \\times \\frac{25}{51} = \\frac{1}{2} \\times \\frac{25}{51} = \\frac{25}{102}",
+   "en": "Substitute the values and simplify to find the required probability that both cards are black.",
+   "ur": "قیمتیں درج کریں اور مختصر کر کے دونوں پتوں کے کالا ہونے کا مطلوبہ احتمال معلوم کریں۔",
+   "check": [
+    "R(26, 52) * R(25, 51) == R(25, 102)",
+    "R(1, 2) * R(25, 51) == R(25, 102)",
+    "R(26,52)*R(25,51) == 25/102"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

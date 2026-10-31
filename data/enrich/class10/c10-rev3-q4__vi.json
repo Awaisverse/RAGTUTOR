@@ -1,0 +1,50 @@
+{
+ "item": "c10-rev3-q4",
+ "label": "vi",
+ "answer_ref": "$\\begin{bmatrix} 5 & 3 \\\\ 2 & 4 \\end{bmatrix}$",
+ "steps": [
+  {
+   "math": "B = \\begin{bmatrix} 5 & 3 \\\\ 2 & 4 \\end{bmatrix}",
+   "en": "Write down the given matrix $B$. We need to find $(B^t)^t$, which is the transpose of the transpose of matrix $B$.",
+   "ur": "دیا گیا کالب $B$ لکھیں۔ ہمیں $(B^t)^t$ معلوم کرنا ہے، جو کہ کالب $B$ کے ٹرانسپوز کا ٹرانسپوز ہے۔",
+   "check": [
+    "Eq(Matrix([[5, 3], [2, 4]]), Matrix([[5, 3], [2, 4]]))"
+   ]
+  },
+  {
+   "math": "B^t = \\begin{bmatrix} 5 & 3 \\\\ 2 & 4 \\end{bmatrix}^t",
+   "en": "First, take the transpose of matrix $B$. The transpose of a matrix is obtained by interchanging its rows into columns.",
+   "ur": "سب سے پہلے، کالب $B$ کا ٹرانسپوز لیں۔ کسی کالب کا ٹرانسپوز اس کی قطاروں کو کالموں میں تبدیل کرنے سے حاصل ہوتا ہے۔",
+   "check": [
+    "Eq(Matrix([[5, 3], [2, 4]]).T, Matrix([[5, 3], [2, 4]]).T)"
+   ]
+  },
+  {
+   "math": "B^t = \\begin{bmatrix} 5 & 2 \\\\ 3 & 4 \\end{bmatrix}",
+   "en": "Change the first row $\\begin{bmatrix} 5 & 3 \\end{bmatrix}$ into the first column, and the second row $\\begin{bmatrix} 2 & 4 \\end{bmatrix}$ into the second column.",
+   "ur": "پہلی قطار $\\begin{bmatrix} 5 & 3 \\end{bmatrix}$ کو پہلے کالم میں اور دوسری قطار $\\begin{bmatrix} 2 & 4 \\end{bmatrix}$ کو دوسرے کالم میں تبدیل کریں۔",
+   "check": [
+    "Eq(Matrix([[5, 3], [2, 4]]).T, Matrix([[5, 2], [3, 4]]))"
+   ]
+  },
+  {
+   "math": "(B^t)^t = \\begin{bmatrix} 5 & 2 \\\\ 3 & 4 \\end{bmatrix}^t",
+   "en": "Now, take the transpose of the matrix $B^t$ again to find $(B^t)^t$.",
+   "ur": "اب، $(B^t)^t$ معلوم کرنے کے لیے کالب $B^t$ کا دوبارہ ٹرانسپوز لیں۔",
+   "check": [
+    "Eq(Matrix([[5, 2], [3, 4]]).T, Matrix([[5, 2], [3, 4]]).T)"
+   ]
+  },
+  {
+   "math": "(B^t)^t = \\begin{bmatrix} 5 & 3 \\\\ 2 & 4 \\end{bmatrix}",
+   "en": "Interchange the rows of $B^t$ into columns. This gives us the final answer, which is equal to the original matrix $B$.",
+   "ur": "$B^t$ کی قطاروں کو کالموں میں تبدیل کریں۔ اس سے ہمیں حتمی جواب ملتا ہے، جو کہ اصل کالب $B$ کے برابر ہے۔",
+   "check": [
+    "Eq(Matrix([[5, 2], [3, 4]]).T, Matrix([[5, 3], [2, 4]]))",
+    "Eq(Matrix([[5, 3], [2, 4]]).T, Matrix([[5, 2], [3, 4]]))"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

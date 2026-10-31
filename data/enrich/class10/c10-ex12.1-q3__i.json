@@ -1,0 +1,59 @@
+{
+ "item": "c10-ex12.1-q3",
+ "label": "i",
+ "answer_ref": "$\\frac{15}{32}$",
+ "steps": [
+  {
+   "math": "P(A) : P(\\overline{A}) = 17 : 15",
+   "en": "Write down the given ratio between the probability of event $A$ and its complement $\\overline{A}$.",
+   "ur": "واقعہ $A$ اور اس کے کمپلیمنٹ $\\overline{A}$ کے احتمال کے درمیان دی گئی نسبت لکھیں۔",
+   "check": [
+    "R(17,15) == R(17,15)"
+   ]
+  },
+  {
+   "math": "P(A) = 17x,\\quad P(\\overline{A}) = 15x",
+   "en": "Let $x$ be the common multiplier for the ratio, so we can express the probabilities in terms of $x$.",
+   "ur": "فرض کریں کہ نسبت کا مشترک ضرب $x$ ہے، تاکہ ہم احتمالات کو $x$ کی شکل میں لکھ سکیں۔",
+   "check": [
+    "17*x / (15*x) == R(17,15)"
+   ]
+  },
+  {
+   "math": "P(A) + P(\\overline{A}) = 1",
+   "en": "We know that the sum of the probabilities of an event and its complement is always equal to $1$.",
+   "ur": "ہم جانتے ہیں کہ کسی واقعہ اور اس کے کمپلیمنٹ کے احتمالات کا مجموعہ ہمیشہ $1$ کے برابر ہوتا ہے۔",
+   "check": [
+    "1 == 1"
+   ]
+  },
+  {
+   "math": "17x + 15x = 1",
+   "en": "Substitute the values of $P(A)$ and $P(\\overline{A})$ into the formula.",
+   "ur": "فارمولے میں $P(A)$ اور $P(\\overline{A})$ کی قیمتیں درج کریں۔",
+   "check": [
+    "17*R(1,32) + 15*R(1,32) == 1"
+   ]
+  },
+  {
+   "math": "32x = 1 \\implies x = \\frac{1}{32}",
+   "en": "Add the like terms and divide both sides by $32$ to find the value of $x$.",
+   "ur": "ہم جنس رقوم کو جمع کریں اور $x$ کی قیمت معلوم کرنے کے لیے دونوں طرف $32$ سے تقسیم کریں۔",
+   "check": [
+    "17 + 15 == 32",
+    "32*R(1,32) == 1"
+   ]
+  },
+  {
+   "math": "P(\\overline{A}) = 15 \\left(\\frac{1}{32}\\right) = \\frac{15}{32}",
+   "en": "Now, substitute $x = \\frac{1}{32}$ into $P(\\overline{A}) = 15x$ to get the final answer.",
+   "ur": "اب، حتمی جواب حاصل کرنے کے لیے $P(\\overline{A}) = 15x$ میں $x = \\frac{1}{32}$ درج کریں۔",
+   "check": [
+    "15*R(1,32) == R(15,32)",
+    "17*R(1,32) + 15*R(1,32) == 1"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

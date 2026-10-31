@@ -1,0 +1,48 @@
+{
+ "item": "c10-ex7.4-q7",
+ "label": "",
+ "answer_ref": "$193.3^\\circ$",
+ "steps": [
+  {
+   "math": "AB = 5.5\\text{ km}, \\quad BC = 1.3\\text{ km}",
+   "en": "Let $A$ be the starting point. Fatima walks $5.5\\text{ km}$ South to point $B$, and then turns $90^\\circ$ West and walks $1.3\\text{ km}$ to point $C$. This forms a right-angled triangle $ABC$ with $\\angle B = 90^\\circ$.",
+   "ur": "فرض کریں $A$ ابتدائی نقطہ ہے۔ فاطمہ $5.5\\text{ km}$ جنوب کی طرف نقطہ $B$ تک چلتی ہے، اور پھر $90^\\circ$ مغرب کی طرف مڑ کر $1.3\\text{ km}$ نقطہ $C$ تک چلتی ہے۔ اس سے ایک قائمۃ الزاویہ مثلث $ABC$ بنتی ہے جس میں $\\angle B = 90^\\circ$ ہے۔",
+   "check": [
+    "5.5 == R(11, 2)",
+    "1.3 == R(13, 10)"
+   ]
+  },
+  {
+   "math": "\\tan\\alpha = \\frac{\\text{Opposite}}{\\text{Adjacent}} = \\frac{BC}{AB}",
+   "en": "Let $\\alpha$ be the angle $\\angle BAC$ (the angle West of South). In the right-angled triangle $ABC$, we use the tangent ratio.",
+   "ur": "فرض کریں کہ زاویہ $\\angle BAC$ (جنوب سے مغرب کی طرف زاویہ) $\\alpha$ ہے۔ قائمۃ الزاویہ مثلث $ABC$ میں، ہم ٹینجنٹ نسبت کا استعمال کرتے ہیں۔"
+  },
+  {
+   "math": "\\tan\\alpha = \\frac{1.3}{5.5} \\approx 0.236",
+   "en": "Substitute the given distances $BC = 1.3$ and $AB = 5.5$ into the formula and divide.",
+   "ur": "فارمولے میں دیے گئے فاصلے $BC = 1.3$ اور $AB = 5.5$ درج کریں اور تقسیم کریں۔",
+   "check": [
+    "Abs(R(13, 55) - 0.236) <= 0.0005"
+   ]
+  },
+  {
+   "math": "\\alpha = \\tan^{-1}\\left(\\frac{1.3}{5.5}\\right) \\approx 13.30^\\circ",
+   "en": "Take the inverse tangent ($\\tan^{-1}$) to find the angle $\\alpha$ in degrees.",
+   "ur": "زاویہ $\\alpha$ کو ڈگری میں معلوم کرنے کے لیے معکوس ٹینجنٹ ($\\tan^{-1}$) لیں۔",
+   "check": [
+    "Abs((atan(R(13,55))*180/pi) - 13.30) <= 0.0050000010000000004"
+   ]
+  },
+  {
+   "math": "\\text{Bearing} = 180^\\circ + \\alpha = 180^\\circ + 13.30^\\circ \\approx 193.3^\\circ",
+   "en": "A bearing is measured clockwise from North ($0^\\circ$). Since South is at $180^\\circ$ and point $C$ is West of South, we add $\\alpha$ to $180^\\circ$ to get the final bearing.",
+   "ur": "بیئرنگ (سمت) شمال ($0^\\circ$) سے گھڑی کی سوئی کی سمت میں ناپی جاتی ہے۔ چونکہ جنوب $180^\\circ$ پر ہے اور نقطہ $C$ جنوب کے مغرب میں ہے، اس لیے ہم حتمی بیئرنگ حاصل کرنے کے لیے $180^\\circ$ میں $\\alpha$ جمع کرتے ہیں۔",
+   "check": [
+    "Abs((180 + atan(R(13,55))*180/pi) - 193.3) <= 0.050000001",
+    "Abs((atan(R(13,55))*180/pi) - 13.30) <= 0.0050000010000000004"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

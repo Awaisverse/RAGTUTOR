@@ -1,0 +1,37 @@
+{
+ "item": "c10-rev1-q2",
+ "label": "i",
+ "answer_ref": "Yes: $0 = 0 + 0i$",
+ "steps": [
+  {
+   "math": "",
+   "en": "We need to determine whether the number $0$ is a complex number and explain the reason.",
+   "ur": "ہمیں یہ معلوم کرنا ہے کہ آیا عدد $0$ ایک مختلط عدد (complex number) ہے اور اس کی وجہ بیان کرنی ہے۔"
+  },
+  {
+   "math": "z = a + bi",
+   "en": "By definition, any number that can be written in the form $a + bi$, where $a$ and $b$ are real numbers ($a, b \\in \\mathbb{R}$) and $i = \\sqrt{-1}$, is a complex number.",
+   "ur": "تعریف کے مطابق، کوئی بھی عدد جسے $a + bi$ کی شکل میں لکھا جا سکے، جہاں $a$ اور $b$ حقیقی اعداد ہیں ($a, b \\in \\mathbb{R}$) اور $i = \\sqrt{-1}$ ہے، ایک مختلط عدد کہلاتا ہے۔"
+  },
+  {
+   "math": "\\mathbb{R} \\subseteq \\mathbb{C}",
+   "en": "Every real number $a$ can be written as a complex number $a + 0i$ by taking its imaginary part as $b = 0$. Therefore, the set of real numbers is a subset of the set of complex numbers.",
+   "ur": "ہر حقیقی عدد $a$ کو اس کا خیالی حصہ $b = 0$ لے کر مختلط عدد $a + 0i$ کے طور پر لکھا جا سکتا ہے۔ اس لیے، حقیقی اعداد کا سیٹ مختلط اعداد کے سیٹ کا ایک ذیلی سیٹ (subset) ہے۔"
+  },
+  {
+   "math": "0 = 0 + 0i",
+   "en": "Since $0$ is a real number ($0 \\in \\mathbb{R}$), we can substitute $a = 0$ and $b = 0$ into the standard form $a + bi$.",
+   "ur": "چونکہ $0$ ایک حقیقی عدد ہے ($0 \\in \\mathbb{R}$)، اس لیے ہم معیاری شکل $a + bi$ میں $a = 0$ اور $b = 0$ درج کر سکتے ہیں۔",
+   "check": [
+    "0 == 0 + 0*I"
+   ]
+  },
+  {
+   "math": "0 \\in \\mathbb{C}",
+   "en": "Yes, $0$ is a complex number because it can be expressed in the standard form $a + bi$ as $0 + 0i$.",
+   "ur": "جی ہاں، $0$ ایک مختلط عدد ہے کیونکہ اسے معیاری شکل $a + bi$ میں $0 + 0i$ کے طور پر لکھا جا سکتا ہے۔"
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

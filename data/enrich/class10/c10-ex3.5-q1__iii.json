@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex3.5-q1",
+ "label": "iii",
+ "answer_ref": "$6$",
+ "steps": [
+  {
+   "math": "\\begin{vmatrix} 3 & 8 \\\\ 0 & 2 \\end{vmatrix}",
+   "en": "We are given a $2 \\times 2$ determinant and asked to find its value.",
+   "ur": "ہمیں ایک $2 \\times 2$ مقطع (determinant) دیا گیا ہے اور ہمیں اس کی قیمت معلوم کرنی ہے۔"
+  },
+  {
+   "math": "\\begin{vmatrix} a & b \\\\ c & d \\end{vmatrix} = ad - bc",
+   "en": "Recall the formula for the determinant of a $2 \\times 2$ matrix: multiply the main diagonal elements and subtract the product of the other diagonal elements.",
+   "ur": "ایک $2 \\times 2$ قالب کے مقطع کا فارمولا یاد کریں: وتر کے ارکان کو آپس میں ضرب دیں اور دوسرے وتر کے ارکان کے حاصل ضرب کو اس میں سے تفریق کریں۔"
+  },
+  {
+   "math": "\\begin{vmatrix} 3 & 8 \\\\ 0 & 2 \\end{vmatrix} = (3)(2) - (8)(0)",
+   "en": "Substitute the given values $a = 3$, $b = 8$, $c = 0$, and $d = 2$ into the formula.",
+   "ur": "فارمولے میں دی گئی قیمتیں $a = 3$، $b = 8$، $c = 0$ اور $d = 2$ درج کریں۔",
+   "check": [
+    "Matrix([[3, 8], [0, 2]]).det() == 3*2 - 8*0"
+   ]
+  },
+  {
+   "math": "= 6 - 0",
+   "en": "Multiply the numbers in the brackets: $(3)(2) = 6$ and $(8)(0) = 0$.",
+   "ur": "بریکٹ میں موجود اعداد کو ضرب دیں: $(3)(2) = 6$ اور $(8)(0) = 0$۔",
+   "check": [
+    "3*2 == 6",
+    "8*0 == 0"
+   ]
+  },
+  {
+   "math": "= 6",
+   "en": "Subtract $0$ from $6$ to get the final answer.",
+   "ur": "حتمی جواب حاصل کرنے کے لیے $6$ میں سے $0$ کو تفریق کریں۔",
+   "check": [
+    "6 - 0 == 6",
+    "Matrix([[3, 8], [0, 2]]).det() == 6"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

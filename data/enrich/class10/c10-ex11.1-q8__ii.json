@@ -1,0 +1,67 @@
+{
+ "item": "c10-ex11.1-q8",
+ "label": "ii",
+ "answer_ref": "strong negative correlation",
+ "steps": [
+  {
+   "math": "n = 10",
+   "en": "Let $x$ represent the scores of the 1st Test and $y$ represent the scores of the 2nd Test. There are $n = 10$ pairs of scores.",
+   "ur": "فرض کریں کہ $x$ پہلے ٹیسٹ کے نمبروں کو اور $y$ دوسرے ٹیسٹ کے نمبروں کو ظاہر کرتا ہے۔ یہاں نمبروں کے کل جوڑے $n = 10$ ہیں۔",
+   "check": [
+    "10 == 10"
+   ]
+  },
+  {
+   "math": "\\sum x = 794, \\quad \\sum y = 992",
+   "en": "Add all the given values of $x$ and $y$ to find their respective sums.",
+   "ur": "دیے گئے تمام $x$ اور $y$ کے نمبروں کو جمع کر کے ان کا مجموعہ معلوم کریں۔",
+   "check": [
+    "20 + 38 + 70 + 40 + 100 + 110 + 50 + 136 + 150 + 80 == 794",
+    "160 + 142 + 130 + 120 + 70 + 50 + 140 + 44 + 36 + 100 == 992"
+   ]
+  },
+  {
+   "math": "\\sum x^2 = 80340, \\quad \\sum y^2 = 117296, \\quad \\sum xy = 61380",
+   "en": "Calculate the sum of squares $\\sum x^2$ and $\\sum y^2$, and the sum of the products $\\sum xy$ from the data.",
+   "ur": "ڈیٹا سے مربعات کا مجموعہ $\\sum x^2$ اور $\\sum y^2$، اور حاصل ضرب کا مجموعہ $\\sum xy$ معلوم کریں۔",
+   "check": [
+    "20**2 + 38**2 + 70**2 + 40**2 + 100**2 + 110**2 + 50**2 + 136**2 + 150**2 + 80**2 == 80340",
+    "160**2 + 142**2 + 130**2 + 120**2 + 70**2 + 50**2 + 140**2 + 44**2 + 36**2 + 100**2 == 117296",
+    "20*160 + 38*142 + 70*130 + 40*120 + 100*70 + 110*50 + 50*140 + 136*44 + 150*36 + 80*100 == 61380"
+   ]
+  },
+  {
+   "math": "",
+   "en": "To mathematically describe the correlation, we use the Pearson correlation coefficient formula: $r = \\frac{n\\sum xy - \\sum x\\sum y}{\\sqrt{[n\\sum x^2 - (\\sum x)^2][n\\sum y^2 - (\\sum y)^2]}}$.",
+   "ur": "ارتباط (correlation) کو ریاضیاتی طور پر بیان کرنے کے لیے ہم پیئرسن کے ارتباطی سر کا فارمولا استعمال کرتے ہیں: $r = \\frac{n\\sum xy - \\sum x\\sum y}{\\sqrt{[n\\sum x^2 - (\\sum x)^2][n\\sum y^2 - (\\sum y)^2]}}$۔"
+  },
+  {
+   "math": "r = \\frac{10(61380) - (794)(992)}{\\sqrt{[10(80340) - (794)^2][10(117296) - (992)^2]}} = \\frac{-173848}{\\sqrt{(172964)(188896)}}",
+   "en": "Substitute the calculated sums and $n = 10$ into the formula and simplify the terms.",
+   "ur": "معلوم کردہ مجموعے اور $n = 10$ فارمولے میں درج کریں اور رقموں کو مختصر کریں۔",
+   "check": [
+    "10*61380 - 794*992 == -173848",
+    "10*80340 - 794**2 == 172964",
+    "10*117296 - 992**2 == 188896"
+   ]
+  },
+  {
+   "math": "r \\approx -0.962",
+   "en": "Evaluate the expression to find the value of $r$. A correlation coefficient close to $+1$ indicates a strong positive correlation, while a value close to $-1$ indicates a strong negative correlation.",
+   "ur": "$r$ کی قیمت معلوم کرنے کے لیے اس کو حل کریں۔ $+1$ کے قریب ارتباطی سر مضبوط مثبت ارتباط کو ظاہر کرتا ہے، جبکہ $-1$ کے قریب قیمت مضبوط منفی ارتباط کو ظاہر کرتی ہے۔",
+   "check": [
+    "Abs((-173848 / sqrt(172964 * 188896)) - (-0.962)) <= 0.000500001"
+   ]
+  },
+  {
+   "math": "\\text{strong negative correlation}",
+   "en": "Since $r \\approx -0.962$ is very close to $-1$ (and as seen on the scatter diagram, one score falls steeply as the other rises), there is a strong negative correlation between the 1st and 2nd tests.",
+   "ur": "چونکہ $r \\approx -0.962$ کی قیمت $-1$ کے بہت قریب ہے (اور جیسا کہ انتشاری خاکے میں ایک نمبر بڑھنے سے دوسرا تیزی سے گھٹتا ہے)، اس لیے پہلے اور دوسرے ٹیسٹ کے درمیان مضبوط منفی ارتباط (strong negative correlation) ہے۔",
+   "check": [
+    "Abs(((10*(61380) - (992)*(794))/sqrt((10*(117296) - (992)**2)*(10*(80340) - (794)**2))) - -0.962) <= 0.000500001"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

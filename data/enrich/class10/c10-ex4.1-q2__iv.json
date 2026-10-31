@@ -1,0 +1,39 @@
+{
+ "item": "c10-ex4.1-q2",
+ "label": "iv",
+ "answer_ref": "$2$",
+ "steps": [
+  {
+   "math": "",
+   "en": "We are given the two functions $f(x) = x + 2$ and $g(x) = 2x + 4$, and we need to find the quotient $\\frac{g(x)}{f(x)}$.",
+   "ur": "ہمیں دو تفاعل $f(x) = x + 2$ اور $g(x) = 2x + 4$ دیے گئے ہیں، اور ہمیں ان کا حاصلِ تقسیم $\\frac{g(x)}{f(x)}$ معلوم کرنا ہے۔"
+  },
+  {
+   "math": "\\frac{g(x)}{f(x)} = \\frac{2x + 4}{x + 2}",
+   "en": "Substitute the given expressions for $g(x)$ in the numerator and $f(x)$ in the denominator.",
+   "ur": "شمار کنندہ میں $g(x)$ اور مخرج میں $f(x)$ کی دی گئی قیمتیں درج کریں۔",
+   "check": [
+    "(2*x + 4)/(x + 2) == (2*x + 4)/(x + 2)"
+   ]
+  },
+  {
+   "math": "= \\frac{2(x + 2)}{x + 2}",
+   "en": "Factor out the common number $2$ from the numerator $2x + 4$.",
+   "ur": "شمار کنندہ $2x + 4$ میں سے مشترک عدد $2$ کو باہر نکالیں (تجزی کریں)۔",
+   "check": [
+    "(2*x + 4)/(x + 2) == 2*(x + 2)/(x + 2)"
+   ]
+  },
+  {
+   "math": "= 2",
+   "en": "Cancel out the common factor $(x + 2)$ from the numerator and denominator (where $x \\neq -2$) to get the final answer.",
+   "ur": "شمار کنندہ اور مخرج سے مشترک جزو $(x + 2)$ کو کاٹ دیں (جہاں $x \\neq -2$) تاکہ حتمی جواب حاصل ہو سکے۔",
+   "check": [
+    "2*(x + 2)/(x + 2) == 2",
+    "((2*x + 4)/(x + 2)) == (2)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

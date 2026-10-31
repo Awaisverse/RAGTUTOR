@@ -1,0 +1,57 @@
+{
+ "item": "c10-rev1-q1",
+ "label": "ix",
+ "answer_ref": "(a) $8$",
+ "steps": [
+  {
+   "math": "z = 4 + 4i",
+   "en": "Write down the given complex number $z$. We need to find the value of $z + \\overline{z}$.",
+   "ur": "دیے گئے کمپلیکس نمبر $z$ کو لکھیں۔ ہمیں $z + \\overline{z}$ کی قیمت معلوم کرنی ہے۔",
+   "check": [
+    "4 + 4*I == 4 + 4*I"
+   ]
+  },
+  {
+   "math": "\\overline{z} = 4 - 4i",
+   "en": "To find the conjugate $\\overline{z}$, we change the sign of the imaginary part from $+4i$ to $-4i$.",
+   "ur": "کونجوگیٹ $\\overline{z}$ معلوم کرنے کے لیے ہم خیالی حصے کی علامت کو $+4i$ سے بدل کر $-4i$ کر دیتے ہیں۔",
+   "check": [
+    "conjugate(4 + 4*I) == 4 - 4*I"
+   ]
+  },
+  {
+   "math": "z + \\overline{z} = (4 + 4i) + (4 - 4i)",
+   "en": "Now, substitute the values of $z$ and $\\overline{z}$ into the expression $z + \\overline{z}$.",
+   "ur": "اب، $z$ اور $\\overline{z}$ کی قیمتیں جملے $z + \\overline{z}$ میں درج کریں۔",
+   "check": [
+    "(4 + 4*I) + conjugate(4 + 4*I) == (4 + 4*I) + (4 - 4*I)"
+   ]
+  },
+  {
+   "math": "z + \\overline{z} = (4 + 4) + (4i - 4i)",
+   "en": "Group the real parts together and the imaginary parts together.",
+   "ur": "حقیقی حصوں کو ایک ساتھ اور خیالی حصوں کو ایک ساتھ جمع کریں۔",
+   "check": [
+    "(4 + 4*I) + (4 - 4*I) == (4 + 4) + (4*I - 4*I)"
+   ]
+  },
+  {
+   "math": "z + \\overline{z} = 8 + 0i = 8",
+   "en": "Add the real parts to get $8$, while the imaginary parts $+4i$ and $-4i$ cancel each other out.",
+   "ur": "حقیقی حصوں کو جمع کرنے سے $8$ حاصل ہوتا ہے، جبکہ خیالی حصے $+4i$ اور $-4i$ ایک دوسرے کو ختم کر دیتے ہیں۔",
+   "check": [
+    "(4 + 4) + (4*I - 4*I) == 8"
+   ]
+  },
+  {
+   "math": "\\text{Answer: (a) } 8",
+   "en": "Compare the result with the given options. Option (a) is the correct answer.",
+   "ur": "نتیجے کا دیے گئے آپشنز سے موازنہ کریں۔ آپشن (a) درست جواب ہے۔",
+   "check": [
+    "(4+4*I) + (4-4*I) == 8"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

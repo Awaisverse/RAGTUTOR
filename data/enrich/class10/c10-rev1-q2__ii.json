@@ -1,0 +1,44 @@
+{
+ "item": "c10-rev1-q2",
+ "label": "ii",
+ "answer_ref": "a real number: $z\\overline{z} = |z|^2$",
+ "steps": [
+  {
+   "math": "z = a + bi, \\quad \\overline{z} = a - bi",
+   "en": "Let $z = a + bi$ be a complex number, where $a$ and $b$ are real numbers. Its conjugate is $\\overline{z} = a - bi$.",
+   "ur": "فرض کریں کہ $z = a + bi$ ایک مختلط عدد ہے، جہاں $a$ اور $b$ حقیقی اعداد ہیں۔ اس کا مزدوج (conjugate) $\\overline{z} = a - bi$ ہے۔"
+  },
+  {
+   "math": "z\\overline{z} = (a + bi)(a - bi)",
+   "en": "Multiply the complex number $z$ by its conjugate $\\overline{z}$.",
+   "ur": "مختلط عدد $z$ کو اس کے مزدوج $\\overline{z}$ سے ضرب دیں۔"
+  },
+  {
+   "math": "z\\overline{z} = a^2 - (bi)^2 = a^2 - b^2i^2",
+   "en": "Apply the algebraic identity $(x + y)(x - y) = x^2 - y^2$.",
+   "ur": "الجبری کلیہ $(x + y)(x - y) = x^2 - y^2$ کا اطلاق کریں۔",
+   "check": [
+    "expand((a+b*I)*(a-b*I)) == a**2 - b**2*I**2"
+   ]
+  },
+  {
+   "math": "z\\overline{z} = a^2 - b^2(-1) = a^2 + b^2",
+   "en": "Since $i^2 = -1$, substitute this value and simplify.",
+   "ur": "چونکہ $i^2 = -1$ ہوتا ہے، اس لیے یہ قیمت درج کریں اور مختصر کریں۔",
+   "check": [
+    "a**2 - b**2*(-1) == a**2 + b**2"
+   ]
+  },
+  {
+   "math": "z\\overline{z} = a^2 + b^2 = |z|^2",
+   "en": "Since $a$ and $b$ are real numbers, $a^2 + b^2$ is a non-negative real number, which is equal to the square of the modulus of $z$, denoted as $|z|^2$.",
+   "ur": "چونکہ $a$ اور $b$ حقیقی اعداد ہیں، اس لیے $a^2 + b^2$ ایک غیر منفی حقیقی عدد ہے، جو $z$ کے ماڈولس (modulus) کے مربع یعنی $|z|^2$ کے برابر ہے۔",
+   "check": [
+    "sqrt(a**2 + b**2)**2 == a**2 + b**2",
+    "expand((a+b*I)*(a-b*I)) == a**2 + b**2"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

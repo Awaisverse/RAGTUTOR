@@ -1,0 +1,50 @@
+{
+ "item": "c10-ex12.1-q10",
+ "label": "",
+ "answer_ref": "$\\frac{3}{10}$",
+ "steps": [
+  {
+   "math": "P(A) = \\frac{7}{10}",
+   "en": "We are given that the probability of event $A$ is $\\frac{7}{10}$. We need to find the probability of the event \"not $A$\", denoted as $P(\\overline{A})$.",
+   "ur": "ہمیں دیا گیا ہے کہ واقعہ $A$ کا احتمال $\\frac{7}{10}$ ہے۔ ہمیں واقعہ \"$A$ نہیں\" کا احتمال، جسے $P(\\overline{A})$ سے ظاہر کیا جاتا ہے، معلوم کرنا ہے۔",
+   "check": [
+    "R(7,10) == R(7,10)"
+   ]
+  },
+  {
+   "math": "P(\\overline{A}) = 1 - P(A)",
+   "en": "Since the sum of the probabilities of an event and its complement is always $1$, we use the complementary events formula.",
+   "ur": "چونکہ کسی واقعہ اور اس کے متمم (کمپلیمنٹ) کے احتمالات کا مجموعہ ہمیشہ $1$ ہوتا ہے، اس لیے ہم متمم واقعات کا فارمولا استعمال کرتے ہیں۔",
+   "check": [
+    "1 == 1"
+   ]
+  },
+  {
+   "math": "P(\\overline{A}) = 1 - \\frac{7}{10}",
+   "en": "Substitute the given value $P(A) = \\frac{7}{10}$ into the formula.",
+   "ur": "فارمولے میں دی گئی قیمت $P(A) = \\frac{7}{10}$ درج کریں۔",
+   "check": [
+    "1 - R(7,10) == R(3,10)"
+   ]
+  },
+  {
+   "math": "P(\\overline{A}) = \\frac{10 - 7}{10}",
+   "en": "Take the LCM of the denominators, which is $10$, to subtract the fraction from $1$.",
+   "ur": "$1$ میں سے کسر کو تفریق کرنے کے لیے نصب نما کا ذواضعاف اقل (LCM) لیں، جو کہ $10$ ہے۔",
+   "check": [
+    "1 - R(7,10) == R(10-7, 10)"
+   ]
+  },
+  {
+   "math": "P(\\overline{A}) = \\frac{3}{10}",
+   "en": "Subtract the numbers in the numerator. Thus, the probability of the event \"not $A$\" is $\\frac{3}{10}$.",
+   "ur": "شمار کنندہ میں موجود اعداد کو تفریق کریں۔ اس طرح، واقعہ \"$A$ نہیں\" کا احتمال $\\frac{3}{10}$ ہے۔",
+   "check": [
+    "R(10-7, 10) == R(3,10)",
+    "1 - R(7,10) == R(3,10)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

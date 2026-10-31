@@ -1,0 +1,45 @@
+{
+ "item": "c10-ex4.3-q2",
+ "label": "",
+ "answer_ref": "390 rupees",
+ "steps": [
+  {
+   "math": "",
+   "en": "The given function representing the total fare in rupees for $k$ kilometres is $f(k) = 150 + 20k$.",
+   "ur": "$k$ کلومیٹر کے لیے کل کرایہ (روپے میں) ظاہر کرنے والا دیا گیا فنکشن $f(k) = 150 + 20k$ ہے۔"
+  },
+  {
+   "math": "",
+   "en": "To find the total fare for a 12 kilometres ride, we need to evaluate the function at $k = 12$.",
+   "ur": "12 کلومیٹر کے سفر کا کل کرایہ معلوم کرنے کے لیے، ہمیں $k = 12$ پر فنکشن کی قیمت معلوم کرنی ہوگی۔"
+  },
+  {
+   "math": "f(12) = 150 + 20(12)",
+   "en": "Substitute $k = 12$ into the given function.",
+   "ur": "دیے گئے فنکشن میں $k = 12$ درج کریں۔",
+   "check": [
+    "(150 + 20*k).subs(k, 12) == 150 + 20*12"
+   ]
+  },
+  {
+   "math": "f(12) = 150 + 240",
+   "en": "Multiply 20 by 12.",
+   "ur": "20 کو 12 سے ضرب دیں۔",
+   "check": [
+    "20 * 12 == 240",
+    "150 + 20 * 12 == 150 + 240"
+   ]
+  },
+  {
+   "math": "f(12) = 390",
+   "en": "Add the numbers to get the final value. Thus, the total fare for a 12 kilometres ride is 390 rupees.",
+   "ur": "حتمی قیمت حاصل کرنے کے لیے نمبروں کو جمع کریں۔ اس طرح، 12 کلومیٹر کے سفر کا کل کرایہ 390 روپے ہے۔",
+   "check": [
+    "150 + 240 == 390",
+    "(150 + 20*k).subs(k, (12)) == (390)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

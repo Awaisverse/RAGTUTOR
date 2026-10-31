@@ -1,0 +1,49 @@
+{
+ "item": "c10-ex12.1-q7",
+ "label": "iv",
+ "answer_ref": "$\\frac{3}{8}$",
+ "steps": [
+  {
+   "math": "S = \\{HHH, HHT, HTH, THH, HTT, THT, TTH, TTT\\}",
+   "en": "When three fair coins are tossed together, we first list all the possible outcomes to form the sample space $S$, where $H$ represents Head and $T$ represents Tail.",
+   "ur": "جب تین سکے ایک ساتھ اچھالے جاتے ہیں، تو ہم سب سے پہلے تمام ممکنہ نتائج کی فہرست بنا کر نمونہ فضا $S$ بناتے ہیں، جہاں $H$ ہیڈ اور $T$ ٹیل کو ظاہر کرتا ہے۔"
+  },
+  {
+   "math": "n(S) = 2^3 = 8",
+   "en": "Count the total number of possible outcomes in the sample space $S$.",
+   "ur": "نمونہ فضا $S$ میں ممکنہ نتائج کی کل تعداد گنیں۔",
+   "check": [
+    "2**3 == 8"
+   ]
+  },
+  {
+   "math": "E = \\{HHT, HTH, THH\\}",
+   "en": "Let $E$ be the event of getting exactly $2$ heads. We select all the outcomes from the sample space $S$ that have exactly two $H$'s.",
+   "ur": "فرض کریں کہ $E$ ٹھیک $2$ ہیڈ آنے کا وقوعہ ہے۔ ہم نمونہ فضا $S$ سے وہ تمام نتائج منتخب کرتے ہیں جن میں ٹھیک دو بار $H$ آیا ہے۔"
+  },
+  {
+   "math": "n(E) = 3",
+   "en": "Count the number of favourable outcomes in the event $E$.",
+   "ur": "وقوعہ $E$ میں موافق نتائج کی تعداد گنیں۔",
+   "check": [
+    "3 == 3"
+   ]
+  },
+  {
+   "math": "P(E) = \\frac{n(E)}{n(S)}",
+   "en": "Write the formula for the probability of an event, which is the number of favourable outcomes divided by the total number of outcomes.",
+   "ur": "کسی وقوعہ کے احتمال کا فارمولا لکھیں، جو کہ موافق نتائج کی تعداد کو کل نتائج کی تعداد پر تقسیم کرنے سے حاصل ہوتا ہے۔"
+  },
+  {
+   "math": "P(E) = \\frac{3}{8}",
+   "en": "Substitute the values $n(E) = 3$ and $n(S) = 8$ into the formula. Thus, the probability of getting $2$ heads is $\\frac{3}{8}$.",
+   "ur": "فارمولے میں $n(E) = 3$ اور $n(S) = 8$ کی قیمتیں درج کریں۔ اس طرح، $2$ ہیڈ حاصل کرنے کا احتمال $\\frac{3}{8}$ ہے۔",
+   "check": [
+    "R(3, 8) == 3/8",
+    "8 == 8"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

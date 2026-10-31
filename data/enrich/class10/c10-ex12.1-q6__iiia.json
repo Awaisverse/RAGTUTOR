@@ -1,0 +1,48 @@
+{
+ "item": "c10-ex12.1-q6",
+ "label": "iiia",
+ "answer_ref": "$\\frac{1}{6}$",
+ "steps": [
+  {
+   "math": "n(S) = 6 \\times 6 = 36",
+   "en": "When two unbiased dice are rolled once, each die has $6$ faces, so the total number of possible outcomes in the sample space $S$ is $36$.",
+   "ur": "جب دو غیر جانبدار پانسے ایک بار پھینکے جاتے ہیں تو ہر پانسے کے $6$ رخ ہوتے ہیں، اس لیے نمونہ فضا $S$ میں ممکنہ نتائج کی کل تعداد $36$ ہے۔",
+   "check": [
+    "6 * 6 == 36"
+   ]
+  },
+  {
+   "math": "E = \\{(1, 1), (2, 2), (3, 3), (4, 4), (5, 5), (6, 6)\\}",
+   "en": "Let $E$ be the event of getting the same number on both dice (called doublets). We list all such favourable outcomes from the sample space.",
+   "ur": "فرض کریں کہ $E$ دونوں پانسوں پر ایک جیسا عدد آنے کا واقعہ ہے۔ ہم نمونہ فضا میں سے تمام موافق نتائج کی فہرست بناتے ہیں۔",
+   "check": [
+    "1 + 1 + 1 + 1 + 1 + 1 == 6"
+   ]
+  },
+  {
+   "math": "n(E) = 6",
+   "en": "Counting the elements in set $E$, the number of favourable outcomes is $6$.",
+   "ur": "سیٹ $E$ کے ارکان کو گننے سے موافق نتائج کی تعداد $6$ ہے۔",
+   "check": [
+    "6 == 6"
+   ]
+  },
+  {
+   "math": "P(E) = \\frac{n(E)}{n(S)}",
+   "en": "We apply the formula for the probability of an event $E$, which is the number of favourable outcomes divided by the total number of outcomes.",
+   "ur": "ہم کسی واقعہ $E$ کے احتمال کا فارمولا استعمال کرتے ہیں، جو موافق نتائج کی تعداد کو کل ممکنہ نتائج کی تعداد پر تقسیم کرنے سے حاصل ہوتا ہے۔"
+  },
+  {
+   "math": "P(E) = \\frac{6}{36} = \\frac{1}{6}",
+   "en": "Substitute $n(E) = 6$ and $n(S) = 36$ into the formula and simplify the fraction by dividing the numerator and denominator by $6$. Thus, the required probability is $\\frac{1}{6}$.",
+   "ur": "فارمولے میں $n(E) = 6$ اور $n(S) = 36$ درج کریں اور شمار کنندہ اور مخرج کو $6$ پر تقسیم کر کے کسر کو مختصر کریں۔ اس طرح مطلوبہ احتمال $\\frac{1}{6}$ ہے۔",
+   "check": [
+    "R(6, 36) == R(1, 6)",
+    "36 == 36",
+    "R(6, 36) == 1/6"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}

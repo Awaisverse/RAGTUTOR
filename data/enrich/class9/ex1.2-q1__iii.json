@@ -1,0 +1,59 @@
+{
+ "item": "ex1.2-q1",
+ "label": "iii",
+ "answer_ref": "$\\frac{\\sqrt{10}-\\sqrt{5}}{5}$",
+ "steps": [
+  {
+   "math": "\\frac{\\sqrt{2}-1}{\\sqrt{5}}",
+   "en": "We are given the fraction $\\frac{\\sqrt{2}-1}{\\sqrt{5}}$ and we need to rationalize its denominator.",
+   "ur": "ہمیں کسر $\\frac{\\sqrt{2}-1}{\\sqrt{5}}$ دی گئی ہے اور ہمیں اس کے مخرج (نسب نما) کو ناطق بنانا ہے۔"
+  },
+  {
+   "math": "= \\frac{\\sqrt{2}-1}{\\sqrt{5}} \\times \\frac{\\sqrt{5}}{\\sqrt{5}}",
+   "en": "To remove the radical from the denominator, multiply both the numerator and the denominator by $\\sqrt{5}$.",
+   "ur": "مخرج سے جذر کو ختم کرنے کے لیے، شمار کنندہ اور مخرج دونوں کو $\\sqrt{5}$ سے ضرب دیں۔",
+   "check": [
+    "(sqrt(2)-1)/sqrt(5) == ((sqrt(2)-1)/sqrt(5)) * (sqrt(5)/sqrt(5))"
+   ]
+  },
+  {
+   "math": "= \\frac{(\\sqrt{2}-1)\\sqrt{5}}{(\\sqrt{5})^2}",
+   "en": "Combine the terms in the numerator and write the denominator as a square.",
+   "ur": "شمار کنندہ میں رقموں کو ملا کر لکھیں اور مخرج کو مربع کی صورت میں لکھیں۔",
+   "check": [
+    "((sqrt(2)-1)/sqrt(5)) * (sqrt(5)/sqrt(5)) == ((sqrt(2)-1)*sqrt(5))/(sqrt(5)**2)"
+   ]
+  },
+  {
+   "math": "= \\frac{\\sqrt{2}\\cdot\\sqrt{5} - 1\\cdot\\sqrt{5}}{5}",
+   "en": "Multiply each term inside the brackets by $\\sqrt{5}$ in the numerator, and use $(\\sqrt{5})^2 = 5$ in the denominator.",
+   "ur": "شمار کنندہ میں بریکٹ کے اندر موجود ہر رقم کو $\\sqrt{5}$ سے ضرب دیں، اور مخرج میں $(\\sqrt{5})^2 = 5$ استعمال کریں۔",
+   "check": [
+    "((sqrt(2)-1)*sqrt(5))/(sqrt(5)**2) == (sqrt(2)*sqrt(5) - 1*sqrt(5))/5",
+    "sqrt(5)**2 == 5"
+   ]
+  },
+  {
+   "math": "= \\frac{\\sqrt{2 \\times 5} - \\sqrt{5}}{5}",
+   "en": "Use the product rule of radicals $\\sqrt{a}\\cdot\\sqrt{b} = \\sqrt{a \\times b}$ to combine $\\sqrt{2}$ and $\\sqrt{5}$.",
+   "ur": "جذر کے ضرب کے اصول $\\sqrt{a}\\cdot\\sqrt{b} = \\sqrt{a \\times b}$ کو استعمال کرتے ہوئے $\\sqrt{2}$ اور $\\sqrt{5}$ کو یکجا کریں۔",
+   "check": [
+    "sqrt(2)*sqrt(5) == sqrt(2*5)",
+    "(sqrt(2)*sqrt(5) - 1*sqrt(5))/5 == (sqrt(2*5) - sqrt(5))/5"
+   ]
+  },
+  {
+   "math": "= \\frac{\\sqrt{10}-\\sqrt{5}}{5}",
+   "en": "Simplify $2 \\times 5 = 10$ under the radical sign. The denominator is now a rational number, which gives our final answer.",
+   "ur": "جذر کے نیچے $2 \\times 5 = 10$ کو مختصر کریں۔ اب مخرج ایک ناطق عدد ہے، جو کہ ہمارا حتمی جواب ہے۔",
+   "check": [
+    "sqrt(2*5) == sqrt(10)",
+    "(sqrt(2*5) - sqrt(5))/5 == (sqrt(10) - sqrt(5))/5",
+    "(sqrt(2)-1)/sqrt(5) == (sqrt(2)-1)*sqrt(5)/5",
+    "sqrt(2)*sqrt(5) == sqrt(10)"
+   ]
+  }
+ ],
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-10-31"
+}
