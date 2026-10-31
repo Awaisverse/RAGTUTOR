@@ -308,20 +308,48 @@
   @keyframes vtIn { from { opacity: 0; transform: translateY(10px); filter: blur(3px); } }
 
   /* ============ responsive ============ */
-  @media (max-width: 1100px) {
-    main { grid-template-columns: minmax(0, 1fr); height: auto; }
-    #board-wrap { order: -1; min-height: 78dvh; }
-    #math { min-height: 360px; }
-    .scroll { max-height: 420px; }
-  }
-  @media (max-width: 800px) {
+  /* fluid type: the whole page scales smoothly between a small phone and a large monitor */
+  html { font-size: clamp(14px, .85rem + .25vw, 17px); }
+  body { font-size: 1rem; }
+  /* the steps lay themselves out by the width of the BOARD, not the screen (side panel open, split screen, foldables) */
+  #math { container: steps / inline-size; }
+  @container steps (max-width: 640px) {
     .step { grid-template-columns: minmax(0, 1fr); gap: 10px; }
     .bubble::before { display: none; }
-    #math { padding-left: 52px; padding-right: 12px; }
-    .step::before { left: -40px; width: 26px; height: 26px; } .step::after { left: -28px; }
-    .partq, #math > .note:only-child { margin-left: -40px; }
+  }
+  @media (min-width: 1600px) {
+    main { grid-template-columns: 400px minmax(0, 1fr); gap: 24px; padding-inline: 40px; }
+    .qtext { font-size: 17px; } .step .work { font-size: 1.12em; }
+  }
+  @media (max-width: 1100px) and (min-width: 901px) {
+    main { grid-template-columns: 290px minmax(0, 1fr); gap: 14px; }
     .controls .lbl, .vsep { display: none; }
   }
+  /* stacked: phones and portrait tablets. The working is part of the page (no box scrolling inside the page), the page
+     follows the current step, the figure stays pinned under the header and the controls stay at the bottom edge. */
+  @media (max-width: 900px) {
+    main { grid-template-columns: minmax(0, 1fr); height: auto; }
+    #board-wrap { order: -1; min-height: 0; height: auto; scroll-margin-top: calc(var(--hdr, 64px) + 8px); }
+    #math { overflow: visible; min-height: 240px; flex: none; padding-left: 52px; padding-right: 12px; }
+    .step { scroll-margin-top: calc(var(--hdr, 64px) + var(--fig, 0px) + 12px); scroll-margin-bottom: calc(var(--dock, 0px) + 16px); }
+    #cvwrap { position: sticky; top: calc(var(--hdr, 64px) + 6px); z-index: 6; padding: 6px; margin: -6px; border-radius: 20px;
+              background: color-mix(in srgb, var(--panel-solid) 90%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+    .dock { position: sticky; bottom: calc(10px + env(safe-area-inset-bottom)); z-index: 7; }
+    .step::before { left: -40px; width: 26px; height: 26px; top: 12px; translate: 0 0; } .step::after { left: -28px; top: 40px; height: calc(100% - 30px); }
+    .partq, #math > .note:only-child { margin-left: -40px; }
+    .controls .lbl, .vsep { display: none; }
+    .scroll { max-height: none; }
+  }
+  /* landscape phones: little height, so the header scrolls away and the controls sit under the board instead of over it */
+  @media (max-height: 520px) and (orientation: landscape) {
+    header { position: static; }
+    #board-wrap { scroll-margin-top: 8px; }
+    .step { scroll-margin-top: calc(var(--fig, 0px) + 12px); }
+    #cvwrap { top: 6px; }
+  }
+  /* the on-screen keyboard is open: hide the bottom bar so it never covers the question being typed */
+  body.kbd-open .dock { display: none; }
+  .loading-board { gap: 10px; color: var(--ink); font-weight: 600; } .loading-board .spinner { width: 28px; height: 28px; border-width: 3px; }
   /* ============ phones: the board first, the controls in a bottom bar under the thumb ============ */
   @media (max-width: 640px) {
     body { font-size: 15px; padding-bottom: calc(132px + env(safe-area-inset-bottom)); }
@@ -740,9 +768,42 @@
   }
 
   // Scroll so the newest row and the arrow under it are visible.
+  const stacked = () => matchMedia("(max-width: 900px)").matches;
+  const smooth = () => (matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth");
+  // the space the page leaves for the working: below the sticky header (and the pinned figure), above the bottom bar
+  function workWindow() {
+    const hdr = document.querySelector("header");
+    const fixedHdr = getComputedStyle(hdr).position !== "static";
+    const fig = $("cvwrap").style.display !== "none" && getComputedStyle($("cvwrap")).position === "sticky" ? $("cvwrap").offsetHeight + 6 : 0;
+    const dock = document.querySelector(".dock");
+    const dockPos = getComputedStyle(dock).position;
+    const top = (fixedHdr ? hdr.offsetHeight : 0) + fig + 10;
+    const bottom = innerHeight - (dockPos === "fixed" || dockPos === "sticky" ? dock.offsetHeight + 18 : 0);
+    return { top, bottom };
+  }
+  // Bring the board to the top of the screen, where the steps are about to be written (stacked layouts only: on a wide
+  // screen the board is always in view).
+  function scrollToWork(el) {
+    if (!stacked()) return;
+    const hdr = document.querySelector("header");
+    const top = getComputedStyle(hdr).position !== "static" ? hdr.offsetHeight + 8 : 8;
+    const y = el.getBoundingClientRect().top + scrollY - top;
+    window.scrollTo({ top: Math.max(0, y), behavior: smooth() });
+  }
+  window.__scrollToWork = scrollToWork;
+
   function keepInView() {
     const box = $("math"), row = box.querySelector(".step.current");
     if (!row) return;
+    if (stacked()) {                                 // the page scrolls: keep the current step between header and bottom bar
+      const r = row.getBoundingClientRect(), { top, bottom } = workWindow();
+      const room = bottom - top;
+      let dy = 0;
+      if (r.height + 40 > room || r.top < top) dy = r.top - top;                 // tall step, or above: align its top
+      else if (r.bottom + 34 > bottom) dy = r.bottom + 34 - bottom;              // below: just enough to show it (and the arrow)
+      if (Math.abs(dy) > 2) window.scrollBy({ top: dy, behavior: smooth() });
+      return;
+    }
     const bottom = row.offsetTop + row.offsetHeight + 54;
     if (bottom > box.scrollTop + box.clientHeight) box.scrollTop = bottom - box.clientHeight;
     if (row.offsetTop < box.scrollTop) box.scrollTop = Math.max(0, row.offsetTop - 12);
@@ -786,7 +847,9 @@
   function resizeCanvas() {
     const w = cv.clientWidth;
     if (!w) return { w: 0, h: 0 };                       // the drawing area is hidden for questions with no figure
-    const h = Math.min(Math.round(w * 0.62), Math.round(window.innerHeight * 0.36));
+    // stacked layouts pin the figure above the steps, so it takes less of the screen there
+    const frac = matchMedia("(max-width: 900px)").matches ? (matchMedia("(orientation: landscape)").matches ? 0.34 : 0.28) : 0.36;
+    const h = Math.max(140, Math.min(Math.round(w * 0.62), Math.round(window.innerHeight * frac)));
     cv.style.height = h + "px";
     if (cv.width !== w * devicePixelRatio || cv.height !== h * devicePixelRatio) {
       cv.width = w * devicePixelRatio;
@@ -946,10 +1009,15 @@
         if (t > 0.6) {
           const k = Math.ceil(from), lim = Math.floor(to);
           ctx.textAlign = "center";
+          // label every 1, 2, 5, 10, ... units: whichever keeps the numbers apart at this screen width
+          const px = Math.abs(M.X(nx(from + 1)) - M.X(nx(from))) || 1;
+          const widest = ctx.measureText(String(Math.max(Math.abs(k), Math.abs(lim)) * (k < 0 ? -1 : 1))).width + 8;
+          const every = [1, 2, 5, 10, 20, 25, 50, 100].find((e) => e * px >= widest) || 100;
           for (let v = k; v <= lim; v++) {
-            const x = nx(v);
-            ctx.beginPath(); ctx.moveTo(M.X(x), M.Y(y - 2)); ctx.lineTo(M.X(x), M.Y(y + 2)); ctx.stroke();
-            ctx.fillText(String(v), M.X(x), M.Y(y + 7));
+            const x = nx(v), major = v % every === 0;
+            const tk = major ? 2.4 : 1.2;
+            ctx.beginPath(); ctx.moveTo(M.X(x), M.Y(y - tk)); ctx.lineTo(M.X(x), M.Y(y + tk)); ctx.stroke();
+            if (major) ctx.fillText(String(v), M.X(x), M.Y(y + 7));
           }
           (c.marks || []).forEach((m) => {
             const x = nx(m.v);
@@ -1126,6 +1194,7 @@
       $("math").innerHTML = "";
       $("math").appendChild(card);
       note(box, "Check the question on the board, then choose Yes or No.");
+      requestAnimationFrame(() => scrollToWork($("board-wrap")));
       return;
     }
     if (data.mode === "ref_error") { note(box, data.message); return; }
@@ -1139,7 +1208,13 @@
       const ok = data.item.verified;
       note(box, ok ? "Written by the trained model. All of its maths checks passed." : "Written by the trained model, but some of its maths checks FAILED. Do not rely on it.");
       showItem(data.item, 0, ok ? "Model-written · checks passed" : "Model-written · UNVERIFIED", "gen");
-    } else {
+    }
+    if (["book", "solved", "model"].includes(data.mode)) {   // the working is the answer: go to the board and write it out
+      requestAnimationFrame(() => { scrollToWork($("board-wrap")); play(false); });
+      return;
+    }
+    {                                              // nothing solved it: related examples, labelled as such, in the results
+      requestAnimationFrame(() => scrollToWork($("results").closest(".card")));
       note(box, data.message || "I could not recognise this question.");
       (data.similar || []).forEach((r) => {
         const b = document.createElement("button");
@@ -1239,8 +1314,15 @@
     const q = $("q").value.trim();
     if (!q) return;
     $("results").innerHTML = '<div class="note">Working on your question…</div>';
+    if (stacked()) {                                 // on a phone, go to the board at once: the working will appear there
+      stopPlay();
+      $("math").innerHTML = '<div class="note loading-board"><span class="spinner"></span> Solving your question step by step…</div>';
+      scrollToWork($("board-wrap"));
+    }
     try { showAnswer(await api("/api/answer", { question: q })); }
     catch (e) { $("results").innerHTML = `<div class="note">${escapeHTML(netMessage(e))}</div>`; }
+    if ($("math").querySelector(".loading-board"))  // nothing was written on the board: say where to look
+      $("math").innerHTML = '<div class="note">This question was not solved on the board. See the results for what was found.</div>';
   };
   $("q").addEventListener("keydown", (e) => { if (e.key === "Enter" && (e.ctrlKey || e.metaKey)) $("ask").click(); });
   $("clear").onclick = () => { $("q").value = ""; };
@@ -1439,12 +1521,36 @@
     }
   }).observe(results, { childList: true });
 
-  // on a phone the board is above the panels: after asking, bring the board into view
-  let asked = false;
-  $("ask").addEventListener("click", () => { asked = true; });
-  new MutationObserver(() => {
-    if (asked && innerWidth <= 1100) { asked = false; $("board-wrap").scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" }); }
-  }).observe($("title"), { childList: true, characterData: true, subtree: true });
+  // the page's live measurements, so the sticky figure, the scroll targets and the bottom bar always fit the screen
+  const root = document.documentElement.style;
+  const measure = () => {
+    root.setProperty("--hdr", document.querySelector("header").offsetHeight + "px");
+    root.setProperty("--dock", document.querySelector(".dock").offsetHeight + "px");
+    root.setProperty("--fig", ($("cvwrap").style.display === "none" ? 0 : $("cvwrap").offsetHeight) + "px");
+  };
+  // any size change (rotation, split screen, a font arriving, the side panel growing) redraws the board to fit
+  let rafId = 0;
+  const relayout = () => { cancelAnimationFrame(rafId); rafId = requestAnimationFrame(() => { measure(); window.dispatchEvent(new Event("resize")); }); };
+  if (window.ResizeObserver) {
+    let lastW = 0;
+    const ro = new ResizeObserver((entries) => {
+      const w = Math.round(entries[0].contentRect.width);
+      if (w !== lastW) { lastW = w; relayout(); } else measure();
+    });
+    ro.observe($("board-wrap"));
+    new ResizeObserver(measure).observe(document.querySelector("header"));
+  }
+  addEventListener("orientationchange", () => setTimeout(relayout, 250));
+  measure();
+  // the on-screen keyboard: when it covers much of the screen while typing, the bottom bar steps aside
+  if (window.visualViewport) {
+    const kb = () => {
+      const typing = /^(TEXTAREA|INPUT)$/.test((document.activeElement || {}).tagName || "");
+      document.body.classList.toggle("kbd-open", typing && visualViewport.height < innerHeight * 0.78);
+    };
+    visualViewport.addEventListener("resize", kb);
+    document.addEventListener("focusin", kb); document.addEventListener("focusout", () => setTimeout(kb, 100));
+  }
 
   // swipe left / right on the board for the next / previous step
   let sx = 0, sy = 0, st = 0;
