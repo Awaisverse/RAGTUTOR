@@ -1347,6 +1347,9 @@
       $("src").style.display = "none";
       $("qtext").textContent = ""; $("parts").innerHTML = ""; $("cvwrap").style.display = "none"; $("counter").textContent = "";
       $("math").innerHTML = `<div class="note">${escapeHTML(data.message)}</div>`;
+      $("progress").firstElementChild.style.width = "0";
+      item = null; steps = []; cur = -1;              // nothing to play or step through
+      $("prev").disabled = true; $("next").disabled = true;
     } else if ($("math").querySelector(".loading-board"))  // nothing was written on the board: say where to look
       $("math").innerHTML = '<div class="note">This question was not solved on the board. See the results for what was found.</div>';
   };
