@@ -116,6 +116,21 @@ def index():
     return send_from_directory(ROOT / "public", "index.html")
 
 
+BRAND_FILES = {"favicon.ico", "icon.svg", "apple-touch-icon.png", "icon-192.png", "icon-512.png", "icon-maskable-512.png",
+               "manifest.webmanifest", "og-image.png"}
+
+
+@app.get("/<path:name>")
+def brand_file(name):
+    """The icons, manifest and social card (on Vercel the CDN serves public/ directly; this is for local runs)."""
+    if name in BRAND_FILES or (name.startswith("brand/") and name.endswith(".svg") and "/" not in name[6:]):
+        resp = send_from_directory(ROOT / "public", name)
+        if name.endswith(".webmanifest"):
+            resp.mimetype = "application/manifest+json"
+        return resp
+    return jsonify({"error": "not found"}), 404
+
+
 @app.get("/api/items")
 def items():
     return jsonify([summary(it) for it in data(_klass())["items"]])

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="m-g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4F46E5"/><stop offset=".62" stop-color="#4338CA"/><stop offset="1" stop-color="#0E7490"/>
+    </linearGradient>
+    <linearGradient id="m-gd" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#A5B4FC"/><stop offset="1" stop-color="#67E8F9"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .tile{fill:url(#m-g)}
+    @media (prefers-color-scheme: dark){ .tile{fill:url(#m-gd)} .ink{stroke:#1E1B4B} .dot{fill:#1E1B4B} }
+  </style>
+  <rect class="tile" width="64" height="64" rx="15" fill="url(#m-g)"/>
+  <g transform="translate(32 32.4) scale(2.1) translate(-12 -12.4)">
+  <defs>
+    <mask id="m-legs" maskUnits="userSpaceOnUse" x="-4" y="-4" width="32" height="32">
+      <rect x="-4" y="-4" width="32" height="32" fill="#fff"/>
+      <path d="M21.5,13 A9.5,3 0 0 1 2.5,13" transform="rotate(-14 12 13)" fill="none" stroke="#000" stroke-width="3.8" stroke-linecap="round"/>
+    </mask>
+    <mask id="m-back" maskUnits="userSpaceOnUse" x="-4" y="-4" width="32" height="32">
+      <rect x="-4" y="-4" width="32" height="32" fill="#fff"/>
+      <path d="M5,20 L12,4 L19,20" fill="none" stroke="#000" stroke-width="4.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </mask>
+  </defs>
+  <path class="ink" d="M2.5,13 A9.5,3 0 0 1 21.5,13" transform="rotate(-14 12 13)" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" mask="url(#m-back)"/>
+  <path class="ink" d="M5,20 L12,4 L19,20" fill="none" stroke="#ffffff" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round" mask="url(#m-legs)"/>
+  <path class="ink" d="M21.5,13 A9.5,3 0 0 1 2.5,13" transform="rotate(-14 12 13)" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round"/>
+  <circle class="dot" cx="20.4" cy="9.85" r="1.75" fill="#F5B301"/></g>
+</svg>
