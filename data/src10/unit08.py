@@ -73,6 +73,7 @@ FIG_8_1_7 = [{"t": "circle", "c": [50, 28], "r": 22}, {"t": "dot", "p": [50, 28]
 
 
 PY = ("Pythagoras in the right triangle $OMA$: $r^2 = OM^2 + AM^2$.", "قائمہ مثلث $OMA$ میں فیثا غورث: $r^2 = OM^2 + AM^2$۔")
+PYP = ("Pythagoras in the right triangle $OMP$: $r^2 = OM^2 + PM^2$.", "قائمہ مثلث $OMP$ میں فیثا غورث: $r^2 = OM^2 + PM^2$۔")   # chord PQ
 
 # ------------------------------------------------------------------------------------------ Exercise 8.1
 
@@ -97,7 +98,7 @@ simple("ex8.1", 7, r"In the given figure, $m\overline{CD} = 121$ units and $m\ov
      "so $B$ is the midpoint of $CD$.", "شکل میں مرکز سے گزرنے والا خط وتر $CD$ پر $B$ پر عمود ہے، اس لیے $B$ وتر کا وسطی نقطہ ہے۔", []),
     (r"x = \frac{121}{6} \approx 20.17\ \text{units}", "Solve.", "حل کریں۔", ["3*R(121,6) == R(121,2)", near("R(121,6)", "20.17", 2)])], r"$x = \frac{121}{6} \approx 20.17$", "8.1", draw=FIG_8_1_7)
 chord_q("ex8.1", 8, "In a circle with centre at $O$, the perpendicular distance of the each chord $PQ$ and $RS$ from the centre is 6 cm. If the length of chord $PQ$ is 18 cm, find the length of the other chord.", [
-    (r"r^2 = d^2 + \left(\frac{PQ}{2}\right)^2 = 6^2 + 9^2 = 117", *PY, ["6**2 + 9**2 == 117"]),
+    (r"r^2 = d^2 + \left(\frac{PQ}{2}\right)^2 = 6^2 + 9^2 = 117", *PYP, ["6**2 + 9**2 == 117"]),
     (r"RS = 2\sqrt{r^2 - d^2} = 2\sqrt{117 - 36} = 2\sqrt{81} = 18\ \text{cm}", "Chords at the same distance from the centre are equal.", "مرکز سے برابر فاصلے پر وتر برابر ہوتے ہیں۔",
      ["2*sqrt(117 - 36) == 18"])], "$18$ cm", 0.83, "8.1", labels=("P", "Q"), second=("R", "S"))
 chord_q("ex8.1", 9, "A line from the centre of a circle cuts a 10 cm chord at right angle where radius of the circle is 6 cm. What is the length from the centre to the chord?", [
@@ -131,7 +132,9 @@ FIG_8_2_3 = [{"t": "circle", "c": [50, 30], "r": 22}, {"t": "dot", "p": [50, 30]
              {"t": "arc", "c": [50, 30], "r": 5, "a": [253, 330]}, {"t": "text", "p": [52.5, 21.5], "s": "x"},
              {"t": "arc", "c": [50, 30], "r": 7, "a": [-30, 124]}, {"t": "text", "p": [55.5, 39], "s": "154°"},
              {"t": "text", "p": [41, 7], "s": "D"}, {"t": "text", "p": [70.5, 18], "s": "C"}, {"t": "text", "p": [66, 51], "s": "B"},
-             {"t": "text", "p": [34, 53], "s": "A"}, {"t": "text", "p": [47, 57], "s": "arc AB = 3 cm"}, {"t": "text", "p": [75, 33], "s": "arc BD = y cm"}]
+             {"t": "text", "p": [34, 53], "s": "A"}, {"t": "text", "p": [47, 57], "s": "arc AB = 3 cm"},
+             {"t": "line", "p": [51.23, 45.57, 51.47, 48.76]}, {"t": "line", "p": [65.45, 32.31, 68.61, 32.79]},
+             {"t": "line", "p": [55.72, 15.47, 56.9, 12.49]}, {"t": "text", "p": [75, 33], "s": "arc BD = y cm"}]
 simple("ex8.2", 3, r"Find the values of $x$ and $y$ in the given figure, such that $m\widehat{AB} = m\widehat{BD}$ (arc $AB = 3$ cm, arc $BD = y$ cm; the figure marks chords $AB$, $BC$, $CD$ equal, $154^\circ$ at $O$ across $OB$ and $x$ between $OD$ and $OC$).", [
     (r"AB = BC = CD \Rightarrow \angle AOB = \angle BOC = \angle COD", "The figure marks the chords $AB$, $BC$ and $CD$ equal; equal chords subtend equal angles at the centre.",
      "شکل میں وتر $AB$، $BC$ اور $CD$ برابر نشان زد ہیں؛ برابر وتر مرکز پر برابر زاویے بناتے ہیں۔", []),
@@ -180,7 +183,7 @@ q1 = [mcq("i", "Distance of a point on the circumference to the centre of the ci
       mcq("x", "The sum of the measures of central angles of a circle is:", [r"90^\circ", r"180^\circ", r"270^\circ", r"360^\circ"], 3, [T("A full turn.", "پورا چکر۔")])]
 ex("rev8", 1, "Four possible answers are given for the following questions. Choose the correct answer.", q1, "Review 8")
 chord_q("rev8", 2, "On a circular clock with a radius of 6 cm, the points from 2 to 10 form a chord that is 10 cm long. Find the perpendicular distance from the centre of clock to the chord.", [
-    (r"OM^2 = OP^2 - PM^2 = 6^2 - 5^2 = 11 \Rightarrow OM = \sqrt{11}\ \text{cm}", *PY, ["6**2 - 5**2 == 11"])], r"$\sqrt{11}$ cm", 5 / 6, "Review 8", labels=("P", "Q"))
+    (r"OM^2 = OP^2 - PM^2 = 6^2 - 5^2 = 11 \Rightarrow OM = \sqrt{11}\ \text{cm}", *PYP, ["6**2 - 5**2 == 11"])], r"$\sqrt{11}$ cm", 5 / 6, "Review 8", labels=("P", "Q"))
 chord_q("rev8", 3, "A chord 6 cm long is at a distance of 4 cm from the centre. Calculate the radius of the circle.", [
     (r"r^2 = 4^2 + 3^2 = 25 \Rightarrow r = 5\ \text{cm}", *PY, ["sqrt(4**2 + 3**2) == 5"])], "$5$ cm", 0.6, "Review 8")
 simple("rev8", 4, "In a circular park, two benches are placed so that the chords formed by their positions are both 10 m long. What can you say about the angles subtended at the centre by each bench?", [

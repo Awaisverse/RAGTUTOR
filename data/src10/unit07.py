@@ -248,11 +248,37 @@ ex("ex7.3", 1, "In the triangular prism, find (i) the length $\\overline{CF}$. (
          r"$25.1^\circ$", prompt="the angle $BFC$")], "7.3")
 
 
-def single(eid, n, question, rows, answer, exercise="7.3", note=None):
+def single(eid, n, question, rows, answer, exercise="7.3", note=None, draw=None):
     p = P("", steps_of(rows), answer)
     if note:
         p["key_note"] = note
-    ex(eid, n, question, [p], exercise)
+    if draw:                                      # a figure drawn with the first step
+        p["steps"][0]["draw"] = draw
+        ex(eid, n, question, [p], exercise, figure_h=60)
+    else:
+        ex(eid, n, question, [p], exercise)
+
+
+def bearing_fig(l1, l2, unit="km"):
+    """Start A, first leg on a bearing of 045 to B, second leg on 135 to C; North lines at A and B, South at B."""
+    import math as _m
+    s_ = 72 / ((l1 + l2) * _m.sqrt(0.5))
+    ax, ay = 14, 50
+    bx, by = ax + s_ * l1 * _m.sqrt(0.5), ay - s_ * l1 * _m.sqrt(0.5)
+    cx, cy = bx + s_ * l2 * _m.sqrt(0.5), by + s_ * l2 * _m.sqrt(0.5)
+    r2 = lambda v: round(v, 2)
+    return [{"t": "line", "p": [ax, ay, ax, ay - 16], "arrow": True, "dash": True}, {"t": "text", "p": [ax - 1, ay - 18], "s": "N"},
+            {"t": "line", "p": [r2(bx), r2(by + 12), r2(bx), r2(max(by - 10, 2))], "arrow": True, "dash": True},
+            {"t": "text", "p": [r2(bx - 1), r2(max(by - 11, 1.5))], "s": "N"}, {"t": "text", "p": [r2(bx - 1), r2(by + 16)], "s": "S"},
+            {"t": "line", "p": [ax, ay, r2(bx), r2(by)]}, {"t": "line", "p": [r2(bx), r2(by), r2(cx), r2(cy)]},
+            {"t": "line", "p": [ax, ay, r2(cx), r2(cy)], "dash": True},
+            {"t": "right", "p": [r2(bx), r2(by)], "d": [-0.71, 0.71, 0.71, 0.71]},
+            {"t": "text", "p": [ax - 4, ay + 3], "s": "A"}, {"t": "text", "p": [r2(bx - 2), r2(by - 2)], "s": "B"},
+            {"t": "text", "p": [r2(cx + 1.5), r2(cy + 2)], "s": "C"},
+            {"t": "text", "p": [ax + 2, ay - 9], "s": "45°"},
+            {"t": "text", "p": [r2((ax + bx) / 2 - 12), r2((ay + by) / 2 - 1)], "s": f"{l1} {unit}"},
+            {"t": "text", "p": [r2((bx + cx) / 2 + 2), r2((by + cy) / 2 - 1)], "s": f"{l2} {unit}"},
+            {"t": "text", "p": [r2((ax + cx) / 2), r2((ay + cy) / 2 + 4)], "s": "d"}]
 
 
 single("ex7.3", 2, "The diagram shows a triangular pyramid with a horizontal rectangular base $PQRS$, in which $m\\overline{PQ} = 16$ cm, $m\\overline{QR} = 10$ cm. $M$ is the "
@@ -366,7 +392,7 @@ single("ex7.4", 9, "A ship sails 100 km on a bearing of $045^\\circ$, then chang
     (r"\angle ABC = 45^\circ + 45^\circ = 90^\circ", "The angle of the triangle at $B$ is the sum of the two angles on either side of the South line.",
      "مثلث کا $B$ پر زاویہ جنوبی لکیر کی دونوں طرف کے زاویوں کا مجموعہ ہے۔", ["45 + (180 - 135) == 90"]),
     (r"d^2 = 100^2 + 120^2 - 2(100)(120)\cos 90^\circ = 24400 \Rightarrow d \approx 156.2\ \text{km}", "Use the law of cosines in triangle $ABC$ with the angle $90^\\circ$ at $B$ ($\\cos 90^\\circ = 0$).", "مثلث $ABC$ میں قانونِ جیب التمام لگائیں، $B$ پر زاویہ $90^\\circ$ ہے ($\\cos 90^\\circ = 0$)۔",
-     [f"100**2 + 120**2 - 2*100*120*cos({dg(90)}) == 24400", near("sqrt(24400)", "156.2", 1)])], "$156.2$ km", exercise="7.4")
+     [f"100**2 + 120**2 - 2*100*120*cos({dg(90)}) == 24400", near("sqrt(24400)", "156.2", 1)])], "$156.2$ km", exercise="7.4", draw=bearing_fig(100, 120))
 
 # ------------------------------------------------------------------------------------------ Review Exercise 7
 
@@ -448,7 +474,7 @@ single("rev7", 7, "A pilot flies 200 km on a bearing of $045^\\circ$, then turns
     (r"\angle ABC = 45^\circ + 45^\circ = 90^\circ", "The angle of the triangle at $B$ is the sum of the two angles on either side of the South line.",
      "مثلث کا $B$ پر زاویہ جنوبی لکیر کی دونوں طرف کے زاویوں کا مجموعہ ہے۔", ["45 + (180 - 135) == 90"]),
     (r"d^2 = 200^2 + 150^2 - 2(200)(150)\cos 90^\circ = 62500 \Rightarrow d = 250\ \text{km}", "Use the law of cosines in triangle $ABC$ with the angle $90^\\circ$ at $B$ ($\\cos 90^\\circ = 0$).", "مثلث $ABC$ میں قانونِ جیب التمام لگائیں، $B$ پر زاویہ $90^\\circ$ ہے ($\\cos 90^\\circ = 0$)۔",
-     [f"200**2 + 150**2 - 2*200*150*cos({dg(90)}) == 62500", "sqrt(62500) == 250"])], "$250$ km", exercise="Review 7")
+     [f"200**2 + 150**2 - 2*200*150*cos({dg(90)}) == 62500", "sqrt(62500) == 250"])], "$250$ km", exercise="Review 7", draw=bearing_fig(200, 150))
 
 
 # ------------------------------------------------------------------------------------------ differences from the reference notes

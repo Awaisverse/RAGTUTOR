@@ -30,6 +30,11 @@ def draw_cmd(d, c):
     if t == "line":
         x1, y1, x2, y2 = c["p"]
         d.line([X(x1), Y(y1), X(x2), Y(y2)], fill=ink, width=2)
+        if c.get("arrow"):                                 # arrowhead at the end, as the board draws it
+            a = math.atan2(Y(y2) - Y(y1), X(x2) - X(x1))
+            k = 12
+            d.polygon([(X(x2), Y(y2)), (X(x2) - k * math.cos(a - 0.42), Y(y2) - k * math.sin(a - 0.42)),
+                       (X(x2) - k * math.cos(a + 0.42), Y(y2) - k * math.sin(a + 0.42))], fill=ink)
     elif t == "poly":
         p = c["p"]
         pts = [(X(p[i]), Y(p[i + 1])) for i in range(0, len(p), 2)]
@@ -59,13 +64,28 @@ def draw_cmd(d, c):
                 d.line([X(x), Y(y - 1.6), X(x), Y(y + 1.6)], fill=ink, width=2)
             return
         d.line([X(nx(lo_)), Y(y), X(nx(hi_)), Y(y)], fill=ink, width=2)
+        span = hi_ - lo_                                   # label every 1, 2, 5 or 10 units, like the board on a narrow screen
+        every = 1 if span <= 16 else 2 if span <= 32 else 5 if span <= 80 else 10
         for v in range(math.ceil(lo_), math.floor(hi_) + 1):
             d.line([X(nx(v)), Y(y - 2), X(nx(v)), Y(y + 2)], fill=ink, width=2)
-            d.text((X(nx(v)) - 4, Y(y + 7) - 6), str(v), fill=ink)
+            if v % every == 0:
+                d.text((X(nx(v)) - 4, Y(y + 7) - 6), str(v), fill=ink)
+        acc = (79, 70, 229)
+        for a, b in c.get("shade", []):                    # the solution set, thick, with arrows where it runs to infinity
+            xa, xb = X(nx(lo_ if a is None else a)), X(nx(hi_ if b is None else b))
+            d.line([xa, Y(y), xb, Y(y)], fill=acc, width=7)
+            if a is None:
+                d.polygon([(xa - 6, Y(y)), (xa + 6, Y(y) - 7), (xa + 6, Y(y) + 7)], fill=acc)
+            if b is None:
+                d.polygon([(xb + 6, Y(y)), (xb - 6, Y(y) - 7), (xb - 6, Y(y) + 7)], fill=acc)
         for m in c.get("marks", []):
             x = X(nx(m["v"]))
-            d.ellipse([x - 5, Y(y) - 5, x + 5, Y(y) + 5], fill=(200, 40, 40))
-            d.text((x - 12, Y(y - 8) - 6), m["s"], fill=(200, 40, 40))
+            col = acc if c.get("shade") is not None else (200, 40, 40)
+            if m.get("open"):                              # left out of the solution: an open circle
+                d.ellipse([x - 6, Y(y) - 6, x + 6, Y(y) + 6], fill="white", outline=col, width=3)
+            else:
+                d.ellipse([x - 6, Y(y) - 6, x + 6, Y(y) + 6], fill=col)
+            d.text((x - 12, Y(y - 8) - 6), m["s"], fill=col)
 
 
 def main():
