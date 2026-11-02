@@ -130,6 +130,37 @@ def apply_overlay(item, part):
 EXPLAIN = ROOT / "data" / "explain" / f"class{KLASS}"
 
 
+
+_DOLLAR = re.compile(r"\$([^$]+)\$")
+_SIDE = re.compile(r"^(Left|Right)-hand side:\s*\$([^$]+)\$\s*$")
+
+
+def tidy_math(part):
+    r"""A step whose maths line is empty but whose sentence states the maths gets that maths on its line (the board shows it
+    large); "... \Rightarrow x = 1 \Rightarrow x = 1" loses the repeat. Runs after the overlays, so it changes no checks."""
+    for s in part["steps"]:
+        m = s.get("math", "")
+        s.pop("math_was", None)
+        if not m.strip():
+            en = s.get("en", "")
+            side = _SIDE.match(en)
+            if side:
+                s["math_was"] = m
+                s["math"] = (r"\text{L.H.S.} = " if side.group(1) == "Left" else r"\text{R.H.S.} = ") + side.group(2)
+                continue
+            bits = [b.strip() for b in _DOLLAR.findall(en) if b.strip()]
+            # only maths with substance: an equation, a list of values or a formula, not a lone symbol
+            bits = [b for b in bits if any(t in b for t in ("=", "<", ">", r"\le", r"\ge", r"\in")) or len(b) > 12]
+            if bits:
+                s["math_was"] = m
+                s["math"] = r",\quad ".join(dict.fromkeys(bits))
+        else:
+            parts = [x.strip() for x in m.split(r"\Rightarrow")]
+            if len(parts) > 2 and parts[-1] == parts[-2]:
+                s["math_was"] = m
+                s["math"] = r" \Rightarrow ".join(parts[:-1])
+
+
 def apply_explain(item, part):
     """Add the teacher's interpretation (tools/explain_steps.py) to each step: why the step is done and what its result
     means. Applied only when the overlay was written for exactly these math lines, so it never describes other working."""
@@ -165,6 +196,7 @@ def main():
             for part in item["parts"]:
                 enriched += apply_overlay(item, part)       # detailed working from tools/enrich_steps.py, re-verified below
                 explained += apply_explain(item, part)      # why each step is done and what it means
+                tidy_math(part)                             # show the maths a step states; no repeated results
                 if item["kind"] in ("exercise", "review"):
                     printed = key_for(keys, item, part.get("label", ""))
                     if printed is not None:

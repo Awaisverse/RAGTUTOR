@@ -13,11 +13,11 @@
  "why": [
   {
    "en": "First, we translate the word problem into algebra by subtracting $2$ for the past and adding $6$ for the future to both ages. Simplifying these gives us two neat linear equations in standard form, which we need before we can use matrices.",
-   "ur": "سب سے پہلے ہم سوال کی عبارت کو الجبرا میں بدلتے ہیں، جس کے لیے ماضی کی عمر کے لیے $2$ تفریق کیا اور مستقبل کی عمر کے لیے دونوں میں $6$ جمع کیا۔ انہیں مختصر کرنے سے ہمیں معیاری شکل میں دو مساواتیں مل جاتی ہیں، جو کالب (matrices) کا طریقہ استعمال کرنے کے لیے ضروری ہیں۔"
+   "ur": "سب سے پہلے ہم سوال کی عبارت کو الجبرا میں بدلتے ہیں، جس کے لیے ماضی کی عمر کے لیے $2$ تفریق کیا اور مستقبل کی عمر کے لیے دونوں میں $6$ جمع کیا۔ انہیں مختصر کرنے سے ہمیں معیاری شکل میں دو مساواتیں مل جاتی ہیں، جو قالب (matrices) کا طریقہ استعمال کرنے کے لیے ضروری ہیں۔"
   },
   {
    "en": "To solve the system using matrices, we separate the coefficients, variables, and constants into three matrices to form the equation $AX = B$. This organizes our numbers into columns so we can easily apply matrix rules.",
-   "ur": "مساواتوں کو کالب کی مدد سے حل کرنے کے لیے ہم عددی سروں، متغیرات اور مستقل مقداروں کو الگ الگ کر کے $AX = B$ کی شکل میں لکھتے ہیں۔ اس سے ہمارے اعداد کالموں میں ترتیب پا جاتے ہیں اور کالب کے اصول لگانا آسان ہو جاتا ہے۔"
+   "ur": "مساواتوں کو قالب کی مدد سے حل کرنے کے لیے ہم عددی سروں، متغیرات اور مستقل مقداروں کو الگ الگ کر کے $AX = B$ کی شکل میں لکھتے ہیں۔ اس سے ہمارے اعداد کالموں میں ترتیب پا جاتے ہیں اور قالب کے اصول لگانا آسان ہو جاتا ہے۔"
   },
   {
    "en": "We calculate the determinant $|A|$ by cross-multiplying the main diagonal and subtracting the other diagonal. Since $|A| = 2$ (which is not zero), it confirms that a unique solution exists and we can safely divide by $|A|$ later.",
@@ -25,11 +25,11 @@
   },
   {
    "en": "Following Cramer's rule, we form matrix $A_x$ by putting the constant column $\\begin{bmatrix} -8 \\\\ 12 \\end{bmatrix}$ in place of the $x$-coefficients. Its determinant $|A_x| = 84$ gives us the numerator needed to find $x$.",
-   "ur": "کریمر کے قانون کے مطابق، ہم $x$ کے عددی سروں کی جگہ مستقل مقداروں کا کالم $\\begin{bmatrix} -8 \\\\ 12 \\end{bmatrix}$ رکھ کر کالب $A_x$ بناتے ہیں۔ اس کا مقطع $|A_x| = 84$ ہمیں وہ شمار کنندہ (numerator) دیتا ہے جو $x$ معلوم کرنے کے لیے درکار ہے۔"
+   "ur": "کریمر کے قانون کے مطابق، ہم $x$ کے عددی سروں کی جگہ مستقل مقداروں کا کالم $\\begin{bmatrix} -8 \\\\ 12 \\end{bmatrix}$ رکھ کر قالب $A_x$ بناتے ہیں۔ اس کا مقطع $|A_x| = 84$ ہمیں وہ شمار کنندہ (numerator) دیتا ہے جو $x$ معلوم کرنے کے لیے درکار ہے۔"
   },
   {
    "en": "Similarly, we form matrix $A_y$ by replacing the $y$-coefficients with the constants $\\begin{bmatrix} -8 \\\\ 12 \\end{bmatrix}$. Finding its determinant $|A_y| = 20$ gives us the numerator needed to calculate $y$.",
-   "ur": "اسی طرح، ہم $y$ کے عددی سروں کی جگہ مستقل مقداریں $\\begin{bmatrix} -8 \\\\ 12 \\end{bmatrix}$ رکھ کر کالب $A_y$ بناتے ہیں۔ اس کا مقطع $|A_y| = 20$ معلوم کرنے سے ہمیں $y$ کی قیمت نکالنے کے لیے شمار کنندہ مل جاتا ہے۔"
+   "ur": "اسی طرح، ہم $y$ کے عددی سروں کی جگہ مستقل مقداریں $\\begin{bmatrix} -8 \\\\ 12 \\end{bmatrix}$ رکھ کر قالب $A_y$ بناتے ہیں۔ اس کا مقطع $|A_y| = 20$ معلوم کرنے سے ہمیں $y$ کی قیمت نکالنے کے لیے شمار کنندہ مل جاتا ہے۔"
   },
   {
    "en": "Finally, we apply Cramer's rule formulas by dividing $|A_x|$ and $|A_y|$ by the main determinant $|A| = 2$. This directly gives us the values of our unknowns, $x = 42$ and $y = 10$.",

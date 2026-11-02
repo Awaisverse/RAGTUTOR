@@ -1606,7 +1606,7 @@
       {
        "math": "x = \\frac{80 \\times 2}{6} = \\frac{160}{6} \\approx 26.67^\\circ",
        "en": "By cross-multiplying and simplifying, we calculate the value of angle $x$.",
-       "ur": "چلپائی ضرب دینے اور مختصر کرنے سے، ہم زاویہ $x$ کی قیمت معلوم کرتے ہیں۔",
+       "ur": "چلیپائی ضرب دینے اور مختصر کرنے سے، ہم زاویہ $x$ کی قیمت معلوم کرتے ہیں۔",
        "check": [
         "R(80*2, 6) == R(160, 6)",
         "Abs(R(160, 6) - 26.67) <= 0.005"
@@ -1628,7 +1628,7 @@
       {
        "math": "y = \\frac{6 \\times 52}{80} = \\frac{312}{80} = 3.9\\ \\text{cm}",
        "en": "By cross-multiplying and simplifying, we calculate the length of arc $y$.",
-       "ur": "چلپائی ضرب دینے اور مختصر کرنے سے، ہم قوس $y$ کی لمبائی معلوم کرتے ہیں۔",
+       "ur": "چلیپائی ضرب دینے اور مختصر کرنے سے، ہم قوس $y$ کی لمبائی معلوم کرتے ہیں۔",
        "check": [
         "6*52 == 312",
         "R(312, 80) == R(39, 10)"
@@ -1929,7 +1929,7 @@
       {
        "math": "m\\overparen{AB} = m\\overparen{CD} \\implies m\\overline{AB} = m\\overline{CD}",
        "en": "According to the theorem of a circle, if two arcs of a circle are congruent, then their corresponding chords are equal in length.",
-       "ur": "دائرے کے مسئلے کے مطابق، اگر ایک دائرے کی دو قوسیں متماثل ہوں تو ان کے متنازعہ وتر لمبائی میں برابر ہوتے ہیں۔",
+       "ur": "دائرے کے مسئلے کے مطابق، اگر ایک دائرے کی دو قوسیں متماثل ہوں تو ان کے متناظرہ وتر لمبائی میں برابر ہوتے ہیں۔",
        "why": {
         "en": "Here we use a fundamental theorem of circles which states that congruent arcs of the same circle always have chords of equal length. Since our two arcs $\\overparen{AB}$ and $\\overparen{CD}$ are congruent (and subtend the same $60^\\circ$ angle at the centre), this rule directly tells us that their corresponding chords $\\overline{AB}$ and $\\overline{CD}$ must also be equal.",
         "ur": "یہاں ہم دائرے کا ایک بنیادی مسئلہ (theorem) استعمال کر رہے ہیں جو بتاتا ہے کہ ایک ہی دائرے کے متماثل قوسوں (congruent arcs) کے متعلقہ وتروں کی لمبائی ہمیشہ برابر ہوتی ہے۔ چونکہ ہمارے دونوں قوس $\\overparen{AB}$ اور $\\overparen{CD}$ متماثل ہیں (اور مرکز پر برابر $60^\\circ$ کا زاویہ بناتے ہیں)، اس اصول سے ہمیں فوراً پتہ چلتا ہے کہ ان کے وتر $\\overline{AB}$ اور $\\overline{CD}$ بھی لمبائی میں برابر ہوں گے۔"
@@ -2190,22 +2190,24 @@
        }
       },
       {
-       "math": "",
+       "math": "\\text{tangent}",
        "en": "By the basic definitions of a circle, an $\\text{arc}$ is a curved part of the circumference, a $\\text{chord}$ joins two points on the circumference, and a $\\text{tangent}$ is a line that touches the circle at only one point.",
        "ur": "دائرے کی بنیادی تعریفوں کے مطابق، قوس ($\\text{arc}$) محیط کا ایک خم دار حصہ ہے، وتر ($\\text{chord}$) محیط کے دو نقاط کو ملاتا ہے، اور مماس ($\\text{tangent}$) وہ خط ہے جو دائرے کو صرف ایک نقطے پر مس کرتا ہے۔",
        "why": {
         "en": "We review the definitions of the other options to rule them out. Knowing that an $\\text{arc}$, a $\\text{chord}$, and a $\\text{tangent}$ only deal with the boundary and do not connect to the centre helps us eliminate options (b), (c), and (d).",
         "ur": "ہم دوسرے آپشنز کو خارج کرنے کے لیے ان کی تعریفوں کا جائزہ لیتے ہیں۔ یہ جاننا کہ $\\text{arc}$ (قوس)، $\\text{chord}$ (وتر)، اور $\\text{tangent}$ (مماس) صرف باؤنڈری سے تعلق رکھتے ہیں اور مرکز سے نہیں جڑتے، ہمیں آپشنز (b)، (c) اور (d) کو ختم کرنے میں مدد دیتا ہے۔"
-       }
+       },
+       "math_was": ""
       },
       {
-       "math": "",
+       "math": "\\text{radius}",
        "en": "The constant distance from the centre of a circle to any point on its circumference (boundary) is defined as the $\\text{radius}$ of the circle.",
        "ur": "دائرے کے مرکز سے اس کے محیط (سرحد) پر واقع کسی بھی نقطے تک کا مستقل فاصلہ دائرے کا رداس ($\\text{radius}$) کہلاتا ہے۔",
        "why": {
         "en": "Now, we apply the fundamental definition of a circle's $\\text{radius}$. By definition, the fixed distance from the centre to any point on the circumference is always the $\\text{radius}$, which directly gives us our term.",
         "ur": "اب، ہم دائرے کے $\\text{radius}$ (رداس) کی بنیادی تعریف لاگو کرتے ہیں۔ تعریف کے مطابق، مرکز سے محیط کے کسی بھی نقطے تک کا مقررہ فاصلہ ہمیشہ $\\text{radius}$ کہلاتا ہے، جس سے ہمیں براہِ راست ہمارا مطلوبہ نام مل جاتا ہے۔"
-       }
+       },
+       "math_was": ""
       },
       {
        "math": "\\text{Answer: (a) } \\text{radius}",
@@ -2220,7 +2222,7 @@
      "answer": "(a) $\\text{radius}$",
      "enriched": true,
      "meaning": {
-      "en": "The final answer (a) $\\text{radius}$ means that if you draw a straight line segment from the exact centre of a circle to any point on its outer edge, the length of that segment is the $\\text{radius}$. You can verify this by remembering that when you open a compass to draw a circle, the distance between the針 (needle at the centre) and the pencil (on the circumference) sets the $\\text{radius}$.",
+      "en": "The final answer (a) $\\text{radius}$ means that if you draw a straight line segment from the exact centre of a circle to any point on its outer edge, the length of that segment is the $\\text{radius}$. You can verify this by remembering that when you open a compass to draw a circle, the distance between the needle (at the centre) and the pencil (on the circumference) sets the $\\text{radius}$.",
       "ur": "حتمی جواب (a) $\\text{radius}$ (رداس) کا مطلب یہ ہے کہ اگر آپ دائرے کے بالکل مرکز سے اس کے بیرونی کنارے پر موجود کسی بھی نقطے تک ایک سیدھی لکیر کھینچیں، تو اس لکیر کی لمبائی $\\text{radius}$ کہلاتی ہے۔ آپ اس کی تصدیق یہ یاد کر کے کر سکتے ہیں کہ جب آپ دائرہ بنانے کے لیے پرکار کھولتے ہیں، تو سوئی (مرکز) اور پنسل (محیط) کے درمیان کا فاصلہ ہی $\\text{radius}$ کو متعین کرتا ہے۔"
      },
      "book_key": "(a) radius"
@@ -2288,13 +2290,14 @@
        }
       },
       {
-       "math": "",
+       "math": "\\text{diameter},\\quad \\text{segment}",
        "en": "Let us review the incorrect options first: a $\\text{chord}$ is a line segment joining any two points on the circle, a $\\text{diameter}$ is a chord passing through the centre, and a $\\text{segment}$ is the region bounded by a chord and an arc.",
        "ur": "آئیے پہلے غلط اختیارات کا جائزہ لیتے ہیں: وتر ($\\text{chord}$) دائرے کے کسی بھی دو نقاط کو ملانے والا قطعہ خط ہے، قطر ($\\text{diameter}$) مرکز سے گزرنے والا وتر ہے، اور قطعہ دائرہ ($\\text{segment}$) وتر اور قوس سے گھرا ہوا علاقہ ہے۔",
        "why": {
         "en": "By recalling the basic definitions of a circle's parts, we can eliminate the choices that do not match. Since $\\text{chord}$ and $\\text{diameter}$ are straight lines inside the circle and a $\\text{segment}$ is an inner region, none of these can be the outer boundary.",
         "ur": "دائرے کے حصوں کی بنیادی تعریفوں کو یاد کر کے، ہم ان آپشنز کو نکال سکتے ہیں جو اس سے مطابقت نہیں رکھتے۔ چونکہ $\\text{chord}$ (وتر) اور $\\text{diameter}$ (قطر) دائرے کے اندر سیدھی لائنیں ہیں اور $\\text{segment}$ (قطعہ) ایک اندرونی علاقہ ہے، اس لیے ان میں سے کوئی بھی بیرونی سرحد نہیں ہو سکتا۔"
-       }
+       },
+       "math_was": ""
       },
       {
        "math": "\\text{Boundary of a circle} = \\text{circumference}",
@@ -2337,13 +2340,14 @@
        }
       },
       {
-       "math": "",
+       "math": "\\text{diameter},\\quad \\text{radius}",
        "en": "Let us recall the definitions of the given options: a $\\text{chord}$ is a line segment joining two points on a circle, a $\\text{diameter}$ is a chord passing through the center, and a $\\text{radius}$ is the distance from the center to the boundary.",
        "ur": "آئیے دیے گئے اختیارات کی تعریفیں یاد کرتے ہیں: وتر ($\\text{chord}$) دائرے کے دو نقاط کو ملانے والا قطعہ خط ہے، قطر ($\\text{diameter}$) مرکز سے گزرنے والا وتر ہے، اور رداس ($\\text{radius}$) مرکز سے بیرونی حد تک کا فاصلہ ہے۔",
        "why": {
         "en": "We review the definitions of the first three choices to rule them out. Since $\\text{chord}$, $\\text{diameter}$, and $\\text{radius}$ are all straight line segments inside the circle, they cannot be a curved part of the boundary.",
         "ur": "ہم پہلے تین آپشنز کو خارج کرنے کے لیے ان کی تعریفوں کو دہراتے ہیں۔ چونکہ $\\text{chord}$ (وتر)، $\\text{diameter}$ (قطر)، اور $\\text{radius}$ (رداس) سب دائرے کے اندر سیدھے خط (لائن سیگمنٹس) ہوتے ہیں، اس لیے وہ بیرونی گول کنارے کا حصہ نہیں ہو سکتے۔"
-       }
+       },
+       "math_was": ""
       },
       {
        "math": "\\text{Part of circumference} = \\text{arc}",
@@ -2386,22 +2390,24 @@
        }
       },
       {
-       "math": "",
+       "math": "\\text{diameter}",
        "en": "When this chord passes directly through the centre of the circle, it becomes the longest chord of the circle, which is defined as the $\\text{diameter}$.",
        "ur": "جب یہ وتر دائرے کے عین مرکز سے گزرتا ہے، تو یہ دائرے کا سب سے لمبا وتر بن جاتا ہے، جسے قطر ($\\text{diameter}$) کہتے ہیں۔",
        "why": {
         "en": "Now we apply the specific condition given in the question—that the chord passes through the centre. By the definition of circle parts, this special, longest chord has its own name: the $\\text{diameter}$.",
         "ur": "اب ہم سوال میں دی گئی خاص شرط لاگو کرتے ہیں کہ یہ وتر دائرے کے مرکز سے گزرتا ہے۔ دائرے کے حصوں کی تعریف کے مطابق، اس خاص اور سب سے لمبے وتر کا اپنا ایک نام ہے جسے قطر ($\\text{diameter}$) کہتے ہیں۔"
-       }
+       },
+       "math_was": ""
       },
       {
-       "math": "",
+       "math": "\\text{radius},\\quad \\text{secant},\\quad \\text{circumference}",
        "en": "Let us briefly check the other options: a $\\text{radius}$ connects the centre to only one point on the circle, a $\\text{secant}$ is an infinite line that cuts the circle, and the $\\text{circumference}$ is the total boundary length of the circle.",
        "ur": "آئیے دوسرے آپشنز کو مختصراً دیکھیں: رداس ($\\text{radius}$) مرکز کو دائرے کے صرف ایک نقطے سے ملاتا ہے، قاطع خط ($\\text{secant}$) ایک لامحدود خط ہے جو دائرے کو قطع کرتا ہے، اور محیط ($\\text{circumference}$) دائرے کی کل بیرونی لمبائی ہے۔",
        "why": {
         "en": "In multiple-choice questions, it is always a good habit to rule out the other options using their definitions so we are completely sure. Seeing why $\\text{radius}$, $\\text{secant}$, and $\\text{circumference}$ do not fit confirms that we haven't made a mistake.",
         "ur": "کثیر الانتخابی سوالات (MCQs) میں، دیگر آپشنز کو ان کی تعریفوں کی مدد سے رد کرنا ہمیشہ ایک اچھی عادت ہوتی ہے تاکہ ہمیں پورا یقین ہو جائے۔ یہ دیکھنا کہ رداس ($\\text{radius}$)، قاطع خط ($\\text{secant}$)، اور محیط ($\\text{circumference}$) اس تعریف پر کیوں پورا نہیں اترتے، اس بات کی تصدیق کرتا ہے کہ ہم نے کوئی غلطی نہیں کی۔"
-       }
+       },
+       "math_was": ""
       },
       {
        "math": "\\text{Answer: (b) } \\text{diameter}",
@@ -2884,7 +2890,7 @@
       {
        "math": "AB = 6\\ \\text{cm}, \\quad OM = 4\\ \\text{cm}, \\quad OA = r = \\text{?}",
        "en": "Let $O$ be the centre of the circle and $AB$ be the given chord of length $6\\text{ cm}$. Let $OM$ be the perpendicular drawn from the centre $O$ to the chord $AB$, so the distance $OM = 4\\text{ cm}$. We need to find the radius $OA = r$.",
-       "ur": "فرص کریں کہ $O$ دائرے کا مرکز ہے اور $AB$ دیا گیا وتر ہے جس کی لمبائی $6\\text{ cm}$ ہے۔ مرکز $O$ سے وتر $AB$ پر عمود $OM$ گرائیں، پس فاصلہ $OM = 4\\text{ cm}$ ہے۔ ہمیں رداس $OA = r$ معلوم کرنا ہے۔",
+       "ur": "فرض کریں کہ $O$ دائرے کا مرکز ہے اور $AB$ دیا گیا وتر ہے جس کی لمبائی $6\\text{ cm}$ ہے۔ مرکز $O$ سے وتر $AB$ پر عمود $OM$ گرائیں، پس فاصلہ $OM = 4\\text{ cm}$ ہے۔ ہمیں رداس $OA = r$ معلوم کرنا ہے۔",
        "draw": [
         {
          "t": "circle",
@@ -3105,7 +3111,7 @@
      "enriched": true,
      "meaning": {
       "en": "This means that if you stand at the exact centre of the circular park, both $10\\text{ m}$ benches will span the exact same angle of view for you. You can check this by noticing that the triangles formed by the centre and each bench have equal corresponding sides (radii and the $10\\text{ m}$ chords), making the triangles congruent and their central angles equal.",
-      "ur": "اس کا مطلب یہ ہے کہ اگر آپ گول پارک کے بالکل مرکز میں کھڑے ہوں، تو دونوں $10\\text{ m}$ لمبے بینچ آپ کی نظر کے سامنے بالکل برابر زاویہ بنائیں گے۔ آپ اس کی تصدیق ایسے کر سکتے ہیں کہ مرکز اور ہر بینچ سے بننے والی مثلثوں کے متنازعہ اضلاع (رداس اور $10\\text{ m}$ کے وتر) برابر ہیں، جو دونوں مثلثوں کو متماثل اور ان کے مرکزی زاویوں کو برابر بناتے ہیں۔"
+      "ur": "اس کا مطلب یہ ہے کہ اگر آپ گول پارک کے بالکل مرکز میں کھڑے ہوں، تو دونوں $10\\text{ m}$ لمبے بینچ آپ کی نظر کے سامنے بالکل برابر زاویہ بنائیں گے۔ آپ اس کی تصدیق ایسے کر سکتے ہیں کہ مرکز اور ہر بینچ سے بننے والی مثلثوں کے متناظرہ اضلاع (رداس اور $10\\text{ m}$ کے وتر) برابر ہیں، جو دونوں مثلثوں کو متماثل اور ان کے مرکزی زاویوں کو برابر بناتے ہیں۔"
      },
      "book_key": "the angles at the centre are equal"
     }
@@ -3133,13 +3139,14 @@
        }
       },
       {
-       "math": "",
+       "math": "m = \\frac{y_2 - y_1}{x_2 - x_1}",
        "en": "By the theorem of a circle, one and only one circle can pass through three non-collinear points. To check if the points are non-collinear, we use the slope formula $m = \\frac{y_2 - y_1}{x_2 - x_1}$ to find the slopes of segments $AB$ and $AC$.",
        "ur": "دائرے کے مسئلے کے مطابق، تین غیر ہم خط نقاط سے ایک اور صرف ایک دائرہ گزر سکتا ہے۔ یہ جانچنے کے لیے کہ آیا یہ نقاط غیر ہم خط ہیں، ہم ڈھلوان کا فارمولا $m = \\frac{y_2 - y_1}{x_2 - x_1}$ استعمال کرتے ہوئے قطعات خط $AB$ اور $AC$ کی ڈھلوانیں معلوم کرتے ہیں۔",
        "why": {
         "en": "From our circle theorems, we know that a unique circle can pass through three points only if they do not lie on the same straight line (non-collinear). Using the slope formula $m = \\frac{y_2 - y_1}{x_2 - x_1}$ is the easiest way in coordinate geometry to check if the paths between these points bend or stay straight.",
         "ur": "دائرے کے مسئلے (theorem) سے ہم جانتے ہیں کہ تین نقاط سے ایک منفرد دائرہ صرف اسی صورت میں گزر سکتا ہے جب وہ ایک ہی سیدھی لائن پر نہ ہوں (یعنی غیر ہم خط ہوں)۔ کوآرڈینیٹ جیومیٹری میں ڈھلوان کا فارمولا $m = \\frac{y_2 - y_1}{x_2 - x_1}$ استعمال کرنا یہ جانچنے کا سب سے آسان طریقہ ہے کہ آیا ان نقاط کے درمیان راستہ مڑتا ہے یا سیدھا رہتا ہے۔"
-       }
+       },
+       "math_was": ""
       },
       {
        "math": "m_{AB} = \\frac{4 - 1}{4 - 2} = \\frac{3}{2}",

@@ -6,7 +6,7 @@
   {
    "math": "X = \\begin{bmatrix} 1 & -1 \\\\ -2 & 2 \\end{bmatrix}, \\quad Z = \\begin{bmatrix} 3 & 0 \\\\ 0 & -2 \\end{bmatrix}",
    "en": "Write down the given matrices $X$ and $Z$ required to find $4X - Z$.",
-   "ur": "$4X - Z$ معلوم کرنے کے لیے دیے گئے کالب $X$ اور $Z$ لکھیں۔",
+   "ur": "$4X - Z$ معلوم کرنے کے لیے دیے گئے قالب $X$ اور $Z$ لکھیں۔",
    "check": [
     "Matrix([[1, -1], [-2, 2]]) == Matrix([[1, -1], [-2, 2]])",
     "Matrix([[3, 0], [0, -2]]) == Matrix([[3, 0], [0, -2]])"
@@ -15,7 +15,7 @@
   {
    "math": "4X = 4\\begin{bmatrix} 1 & -1 \\\\ -2 & 2 \\end{bmatrix} = \\begin{bmatrix} 4(1) & 4(-1) \\\\ 4(-2) & 4(2) \\end{bmatrix}",
    "en": "First, find $4X$ by multiplying each entry of matrix $X$ by the scalar $4$.",
-   "ur": "سب سے پہلے، کالب $X$ کے ہر رکن کو عددی قیمت $4$ سے ضرب دے کر $4X$ معلوم کریں۔",
+   "ur": "سب سے پہلے، قالب $X$ کے ہر رکن کو عددی قیمت $4$ سے ضرب دے کر $4X$ معلوم کریں۔",
    "check": [
     "4 * Matrix([[1, -1], [-2, 2]]) == Matrix([[4*1, 4*(-1)], [4*(-2), 4*2]])"
    ]
@@ -23,7 +23,7 @@
   {
    "math": "4X = \\begin{bmatrix} 4 & -4 \\\\ -8 & 8 \\end{bmatrix}",
    "en": "Simplify the products to get the matrix $4X$.",
-   "ur": "ضرب کے عمل کو مختصر کر کے کالب $4X$ حاصل کریں۔",
+   "ur": "ضرب کے عمل کو مختصر کر کے قالب $4X$ حاصل کریں۔",
    "check": [
     "Matrix([[4*1, 4*(-1)], [4*(-2), 4*2]]) == Matrix([[4, -4], [-8, 8]])"
    ]
@@ -31,7 +31,7 @@
   {
    "math": "4X - Z = \\begin{bmatrix} 4 & -4 \\\\ -8 & 8 \\end{bmatrix} - \\begin{bmatrix} 3 & 0 \\\\ 0 & -2 \\end{bmatrix}",
    "en": "Now, substitute the matrices $4X$ and $Z$ into the expression $4X - Z$.",
-   "ur": "اب، عبارت $4X - Z$ میں کالب $4X$ اور $Z$ کی قیمتیں درج کریں۔",
+   "ur": "اب، عبارت $4X - Z$ میں قالب $4X$ اور $Z$ کی قیمتیں درج کریں۔",
    "check": [
     "Matrix([[4, -4], [-8, 8]]) - Matrix([[3, 0], [0, -2]]) == Matrix([[1, -4], [-8, 10]])"
    ]
@@ -39,7 +39,7 @@
   {
    "math": "4X - Z = \\begin{bmatrix} 4 - 3 & -4 - 0 \\\\ -8 - 0 & 8 - (-2) \\end{bmatrix}",
    "en": "Since both matrices have the same order ($2 \\times 2$), subtract the corresponding entries of matrix $Z$ from matrix $4X$.",
-   "ur": "چونکہ دونوں کالبوں کا مرتبہ یکساں ($2 \\times 2$) ہے، اس لیے کالب $4X$ کے ارکان میں سے کالب $Z$ کے متناظرہ ارکان کو تفریق کریں۔",
+   "ur": "چونکہ دونوں قالبوں کا مرتبہ یکساں ($2 \\times 2$) ہے، اس لیے قالب $4X$ کے ارکان میں سے قالب $Z$ کے متناظرہ ارکان کو تفریق کریں۔",
    "check": [
     "Matrix([[4, -4], [-8, 8]]) - Matrix([[3, 0], [0, -2]]) == Matrix([[4 - 3, -4 - 0], [-8 - 0, 8 - (-2)]])"
    ]

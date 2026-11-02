@@ -12,23 +12,23 @@
  "why": [
   {
    "en": "To apply Cramer's rule, we first separate the coefficients of $x$ and $y$, the variables, and the constants on the right side into distinct matrices. This gives us our main coefficient matrix $A$ and the constant matrix $B$, which we will use to build our determinants.",
-   "ur": "کمر کے اصول (Cramer's rule) کو استعمال کرنے کے لیے، ہم سب سے پہلے $x$ اور $y$ کے عددی سروں، متغیرات، اور برابر کے دوسری طرف موجود مستقل نمبروں کو الگ الگ کالبوں (matrices) میں لکھتے ہیں۔ اس سے ہمیں بنیادی کالب $A$ اور مستقل کالب $B$ مل جاتے ہیں، جن کی مدد سے ہم اپنے مقطعات (determinants) بنائیں گے۔"
+   "ur": "کریمر کے اصول (Cramer's rule) کو استعمال کرنے کے لیے، ہم سب سے پہلے $x$ اور $y$ کے عددی سروں، متغیرات، اور برابر کے دوسری طرف موجود مستقل نمبروں کو الگ الگ قالبوں (matrices) میں لکھتے ہیں۔ اس سے ہمیں بنیادی قالب $A$ اور مستقل قالب $B$ مل جاتے ہیں، جن کی مدد سے ہم اپنے مقطعات (determinants) بنائیں گے۔"
   },
   {
    "en": "We always calculate the determinant of the coefficient matrix, $|A|$, first to see if a solution is even possible. Because $|A| = 14$ is not zero, the matrix is non-singular, confirming that a unique solution exists and giving us the denominator for our final formulas.",
-   "ur": "ہم ہمیشہ سب سے پہلے عددی سروں کے کالب کا مقطع $|A|$ معلوم کرتے ہیں تاکہ یہ دیکھا جا سکے کہ کیا اس کا حل ممکن بھی ہے یا نہیں۔ چونکہ $|A| = 14$ صفر نہیں ہے، اس لیے یہ ایک غیر نادر کالب ہے، جس سے یہ ثابت ہوتا ہے کہ ایک منفرد حل موجود ہے اور ہمیں اپنے آخری فارمولوں کے لیے مخرج (denominator) بھی مل جاتا ہے۔"
+   "ur": "ہم ہمیشہ سب سے پہلے عددی سروں کے قالب کا مقطع $|A|$ معلوم کرتے ہیں تاکہ یہ دیکھا جا سکے کہ کیا اس کا حل ممکن بھی ہے یا نہیں۔ چونکہ $|A| = 14$ صفر نہیں ہے، اس لیے یہ ایک غیر نادر قالب ہے، جس سے یہ ثابت ہوتا ہے کہ ایک منفرد حل موجود ہے اور ہمیں اپنے آخری فارمولوں کے لیے مخرج (denominator) بھی مل جاتا ہے۔"
   },
   {
    "en": "According to Cramer's rule, to prepare for finding $x$, we form a new matrix $A_x$ by putting the constants $-6$ and $-12$ in place of the $x$-coefficients. Its determinant gives us $-42$, which is the numerator needed to calculate $x$.",
-   "ur": "کمر کے اصول کے مطابق، $x$ کی قیمت معلوم کرنے کی تیاری کے لیے ہم $x$ کے عددی سروں کی جگہ مستقل نمبر $-6$ اور $-12$ رکھ کر ایک نیا کالب $A_x$ بناتے ہیں۔ اس کا مقطع ہمیں $-42$ دیتا ہے، جو $x$ معلوم کرنے کے فارمولے کا شمار کنندہ (numerator) ہے۔"
+   "ur": "کریمر کے اصول کے مطابق، $x$ کی قیمت معلوم کرنے کی تیاری کے لیے ہم $x$ کے عددی سروں کی جگہ مستقل نمبر $-6$ اور $-12$ رکھ کر ایک نیا قالب $A_x$ بناتے ہیں۔ اس کا مقطع ہمیں $-42$ دیتا ہے، جو $x$ معلوم کرنے کے فارمولے کا شمار کنندہ (numerator) ہے۔"
   },
   {
    "en": "Similarly, to prepare for finding $y$, we create the matrix $A_y$ by putting the constants $-6$ and $-12$ in the second column where the $y$-coefficients were. Evaluating this determinant gives $0$, which will serve as the numerator for $y$.",
-   "ur": "اسی طرح، $y$ کی قیمت معلوم کرنے کے لیے ہم دوسرے کالم میں $y$ کے عددی سروں کی جگہ مستقل نمبر $-6$ اور $-12$ رکھ کر کالب $A_y$ بناتے ہیں۔ اس مقطع کو حل کرنے سے ہمیں $0$ ملتا ہے، جو $y$ معلوم کرنے کے لیے شمار کنندہ کا کام کرے گا۔"
+   "ur": "اسی طرح، $y$ کی قیمت معلوم کرنے کے لیے ہم دوسرے کالم میں $y$ کے عددی سروں کی جگہ مستقل نمبر $-6$ اور $-12$ رکھ کر قالب $A_y$ بناتے ہیں۔ اس مقطع کو حل کرنے سے ہمیں $0$ ملتا ہے، جو $y$ معلوم کرنے کے لیے شمار کنندہ کا کام کرے گا۔"
   },
   {
    "en": "Finally, we apply the Cramer's rule formulas by dividing $|A_x|$ and $|A_y|$ by our main determinant $|A| = 14$. This simple division directly gives us the exact values of our unknowns, $x = -3$ and $y = 0$.",
-   "ur": "آخر میں، ہم کمر کے اصول کے فارمولے لگاتے ہوئے $|A_x|$ اور $|A_y|$ کو اپنے بنیادی مقطع $|A| = 14$ پر تقسیم کرتے ہیں۔ یہ سادہ سی تقسیم ہمیں براہِ راست ہمارے نامعلوم متغیرات کی درست قیمتیں $x = -3$ اور $y = 0$ دے دیتی ہے۔"
+   "ur": "آخر میں، ہم کریمر کے اصول کے فارمولے لگاتے ہوئے $|A_x|$ اور $|A_y|$ کو اپنے بنیادی مقطع $|A| = 14$ پر تقسیم کرتے ہیں۔ یہ سادہ سی تقسیم ہمیں براہِ راست ہمارے نامعلوم متغیرات کی درست قیمتیں $x = -3$ اور $y = 0$ دے دیتی ہے۔"
   }
  ],
  "meaning": {

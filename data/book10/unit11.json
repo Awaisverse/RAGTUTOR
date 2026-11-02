@@ -1973,7 +1973,7 @@
        ],
        "why": {
         "en": "The 'whiskers' show the full range of the data outside the middle box by connecting the quartiles to the extreme values. Extending lines to the minimum ($12$) and maximum ($26$) completes the picture by showing how far the lowest and highest values reach.",
-        "ur": "'وِسکرز' (مچھلیاں/شاخیں) کوارٹائلز کو انتہائی قیمتوں سے ملا کر درمیانی باکس کے باہر ڈیٹا کی مکمل رینج کو ظاہر کرتے ہیں۔ کم سے کم ($12$) اور زیادہ سے زیادہ ($26$) قیمتوں تک لکیریں بڑھانے سے یہ تصویر مکمل ہو جاتی ہے کہ سب سے چھوٹی اور سب سے بڑی قیمتیں کہاں تک پھیلی ہوئی ہیں۔"
+        "ur": "'وِسکرز' (مونچھیں/شاخیں) کوارٹائلز کو انتہائی قیمتوں سے ملا کر درمیانی باکس کے باہر ڈیٹا کی مکمل رینج کو ظاہر کرتے ہیں۔ کم سے کم ($12$) اور زیادہ سے زیادہ ($26$) قیمتوں تک لکیریں بڑھانے سے یہ تصویر مکمل ہو جاتی ہے کہ سب سے چھوٹی اور سب سے بڑی قیمتیں کہاں تک پھیلی ہوئی ہیں۔"
        }
       },
       {
@@ -2590,13 +2590,14 @@
      "prompt": "scatter diagram and line of best fit",
      "steps": [
       {
-       "math": "",
+       "math": "\\hat{x} = a + by",
        "en": "Let $x$ = 1st test and $y$ = 2nd test. Plot $(x, y)$ for each player and draw the line of best fit; here it is the line of $x$ on $y$, $\\hat{x} = a + by$, because part (iii) estimates the 1st test from the 2nd.",
        "ur": "ہر کھلاڑی کے لیے نقطہ لگائیں اور بہترین خط کھینچیں۔",
        "why": {
         "en": "To make a scatter diagram, we represent each player's pair of scores as a point on a coordinate graph. This visual plot shows how the 1st and 2nd test scores relate to each other and guides us in placing our line of best fit.",
         "ur": "اسکیٹر ڈایاگرام بنانے کے لیے ہم ہر کھلاڑی کے دونوں ٹیسٹوں کے نمبروں کو گراف پر ایک نقطے کی صورت میں ظاہر کرتے ہیں۔ اس سے ہمیں دونوں ٹیسٹوں کے نمبروں کے درمیان تعلق نظر آتا ہے اور بہترین فٹ ہونے والی لائن کھینچنے میں مدد ملتی ہے۔"
-       }
+       },
+       "math_was": ""
       },
       {
        "math": "n = 10,\\ \\sum y = 992,\\ \\sum x = 794,\\ \\sum yx = 61380,\\ \\sum y^2 = 117296",
@@ -3214,13 +3215,14 @@
        }
       },
       {
-       "math": "",
+       "math": "r = \\frac{n\\sum xy - \\sum x\\sum y}{\\sqrt{[n\\sum x^2 - (\\sum x)^2][n\\sum y^2 - (\\sum y)^2]}}",
        "en": "To mathematically describe the correlation, we use the Pearson correlation coefficient formula: $r = \\frac{n\\sum xy - \\sum x\\sum y}{\\sqrt{[n\\sum x^2 - (\\sum x)^2][n\\sum y^2 - (\\sum y)^2]}}$.",
        "ur": "ارتباط (correlation) کو ریاضیاتی طور پر بیان کرنے کے لیے ہم پیئرسن کے ارتباطی سر کا فارمولا استعمال کرتے ہیں: $r = \\frac{n\\sum xy - \\sum x\\sum y}{\\sqrt{[n\\sum x^2 - (\\sum x)^2][n\\sum y^2 - (\\sum y)^2]}}$۔",
        "why": {
         "en": "We write down the Pearson correlation coefficient formula ($r$) because it is the standard mathematical rule to measure the exact strength and direction of a linear relationship between two tests. This formula will combine all our sums into a single number between $-1$ and $+1$.",
         "ur": "ہم پیئرسن کوریلیشن کوفیشنٹ کا فارمولا ($r$) اس لیے لکھتے ہیں کیونکہ دو ٹیسٹوں کے درمیان خطی تعلق کی مضبوطی اور سمت ماپنے کا یہ معیاری ریاضیاتی اصول ہے۔ یہ فارمولا ہمارے تمام مجموعوں کو ملا کر $-1$ اور $+1$ کے درمیان ایک واحد نمبر دے گا۔"
-       }
+       },
+       "math_was": ""
       },
       {
        "math": "r = \\frac{10(61380) - (794)(992)}{\\sqrt{[10(80340) - (794)^2][10(117296) - (992)^2]}} = \\frac{-173848}{\\sqrt{(172964)(188896)}}",
@@ -5419,7 +5421,7 @@
        }
       },
       {
-       "math": "",
+       "math": "\\text{SD} = 0.51",
        "en": "Since the standard deviation ($0.51$) is very small compared to the mean ($5.54$), the unemployment rates across the provinces are close to each other and hence fairly balanced. Thus, $\\text{SD} = 0.51$; fairly balanced.",
        "ur": "چونکہ معیاری انحراف ($0.51$) اوسط ($5.54$) کے مقابلے میں بہت کم ہے، اس لیے صوبوں میں بے روزگاری کی شرحیں ایک دوسرے کے قریب ہیں اور کافی حد تک متوازن ہیں۔ چنانچہ، $\\text{SD} = 0.51$؛ کافی متوازن۔",
        "check": [
@@ -5430,7 +5432,8 @@
        "why": {
         "en": "In statistics, a small standard deviation means the data values are clustered closely around the mean. Because $0.51$ is quite small compared to the average of $5.54$, we conclude that the unemployment rates do not vary wildly and are fairly balanced.",
         "ur": "شماریات میں، چھوٹے معیاری انحراف کا مطلب ہوتا ہے کہ ڈیٹا کی قیمتیں اوسط کے بالکل قریب جمع ہیں۔ چونکہ $0.51$ اوسط $5.54$ کے مقابلے میں کافی چھوٹا ہے، اس لیے ہم یہ نتیجہ اخذ کرتے ہیں کہ بے روزگاری کی شرحوں میں زیادہ فرق نہیں ہے اور یہ کافی متوازن ہیں۔"
-       }
+       },
+       "math_was": ""
       }
      ],
      "answer": "SD = 0.51; fairly balanced",
@@ -5876,13 +5879,14 @@
        }
       },
       {
-       "math": "",
+       "math": "\\text{variance},\\quad \\text{standard deviation}",
        "en": "Looking at the other options: $\\text{mean}$ is the average of all values, while $\\text{variance}$ and $\\text{standard deviation}$ measure the spread of data around the mean.",
        "ur": "دیگر آپشنز کو دیکھتے ہوئے: حسابی اوسط ($\\text{mean}$) تمام قیمتوں کی اوسط ہے، جبکہ تغیر ($\\text{variance}$) اور معیاری انحراف ($\\text{standard deviation}$) حسابی اوسط کے گرد مواد کے پھیلاؤ کی پیمائش کرتے ہیں۔",
        "why": {
         "en": "Good students always check the other choices to be completely sure why they are incorrect. Since $\\text{mean}$ finds the center of data, and $\\text{variance}$ and $\\text{standard deviation}$ use all values to find the spread around the $\\text{mean}$, none of them simply subtract the extreme values.",
         "ur": "اچھے طالب علم ہمیشہ دیگر آپشنز کو بھی چیک کرتے ہیں تاکہ پورا یقین ہو سکے کہ وہ کیوں غلط ہیں۔ چونکہ حسابی اوسط ($\\text{mean}$) ڈیٹا کا مرکز بتاتی ہے، اور تغیر ($\\text{variance}$) اور معیاری انحراف ($\\text{standard deviation}$) تمام قیمتوں کو استعمال کرتے ہیں، اس لیے ان میں سے کوئی بھی صرف انتہائی قیمتوں کا فرق نہیں ہے۔"
-       }
+       },
+       "math_was": ""
       },
       {
        "math": "\\text{Answer: (c) } \\text{range}",
@@ -6014,31 +6018,34 @@
      "prompt": "Positive square root of variance is called: (a) $\\text{mean}$ (b) $\\text{median}$ (c) $\\text{standard deviation}$ (d) $\\text{range}$",
      "steps": [
       {
-       "math": "",
+       "math": "S^2 = \\frac{\\sum (X - \\bar{X})^2}{n}",
        "en": "First, recall the definition of variance in statistics. Variance (denoted by $S^2$ or $\\sigma^2$) is defined as the arithmetic mean of the squared deviations of values from their mean: $S^2 = \\frac{\\sum (X - \\bar{X})^2}{n}$.",
        "ur": "سب سے پہلے، شماریات میں تغیر (variance) کی تعریف یاد کریں۔ تغیر (جسے $S^2$ یا $\\sigma^2$ سے ظاہر کیا جاتا ہے) کو حسابی اوسط سے قدروں کے انحراف کے مربوں کے اوسط کے طور پر بیان کیا جاتا ہے: $S^2 = \\frac{\\sum (X - \\bar{X})^2}{n}$۔",
        "why": {
         "en": "To identify the correct term, we start by writing down the formula and symbol for variance ($S^2$ or $\\sigma^2$). Notice the square in the symbol—this gives us a clear hint about what happens when we take its square root.",
         "ur": "درست اصطلاح کی پہچان کے لیے ہم سب سے پہلے تغیر (variance) کا فارمولا اور علامت ($S^2$ یا $\\sigma^2$) یاد کرتے ہیں۔ علامت میں موجود مربع (square) ہمیں واضح اشارہ دیتا ہے کہ اس کا جذر (square root) لینے سے کیا حاصل ہو گا۔"
-       }
+       },
+       "math_was": ""
       },
       {
-       "math": "",
+       "math": "\\sigma = +\\sqrt{\\sigma^2},\\quad S = \\sqrt{\\frac{\\sum (X - \\bar{X})^2}{n}}",
        "en": "When we take the positive square root of the variance, we get a measure of dispersion known as the standard deviation (denoted by $S$ or $\\sigma$), given by the formula $\\sigma = +\\sqrt{\\sigma^2}$ or $S = \\sqrt{\\frac{\\sum (X - \\bar{X})^2}{n}}$.",
        "ur": "جب ہم تغیر کا مثبت جذر المربع لیتے ہیں، تو ہمیں انتشار کا ایک پیمانہ ملتا ہے جسے معیاری انحراف (standard deviation) کہا جاتا ہے (اسے $S$ یا $\\sigma$ سے ظاہر کیا جاتا ہے)، جس کا فارمولا $\\sigma = +\\sqrt{\\sigma^2}$ یا $S = \\sqrt{\\frac{\\sum (X - \\bar{X})^2}{n}}$ ہے۔",
        "why": {
         "en": "By the basic definition of measures of dispersion in our textbook, taking the positive square root of variance ($S^2$ or $\\sigma^2$) removes the square and gives $S$ or $\\sigma$. This directly names the required quantity as the standard deviation.",
         "ur": "ہماری کتاب میں پھیلاؤ کے پیمانوں (measures of dispersion) کی بنیادی تعریف کے مطابق، تغیر ($S^2$ یا $\\sigma^2$) کا مثبت جذر لینے سے مربع ختم ہو جاتا ہے اور ہمیں $S$ یا $\\sigma$ ملتا ہے۔ یہ براہِ راست بتاتا ہے کہ مطلوبہ مقدار معیاری انحراف (standard deviation) ہے۔"
-       }
+       },
+       "math_was": ""
       },
       {
-       "math": "",
+       "math": "X_{\\max} - X_{\\min}",
        "en": "Let us briefly check the other options: Mean and Median are measures of central tendency, and Range is the difference between the largest and smallest values ($X_{\\max} - X_{\\min}$). None of these is the square root of variance.",
        "ur": "آئیے مختصراً دوسرے آپشنز کو دیکھتے ہیں: حسابی اوسط (Mean) اور وسطانیہ (Median) مرکزی رجحان کے پیمانے ہیں، اور حیطہ (Range) سب سے بڑی اور سب سے چھوٹی قدر کا فرق ($X_{\\max} - X_{\\min}$) ہے۔ ان میں سے کوئی بھی تغیر کا جذر المربع نہیں ہے۔",
        "why": {
         "en": "Good students always verify by ruling out the incorrect choices using their definitions. Since mean and median find the center of data, and range only uses the extreme values ($X_{\\max} - X_{\\min}$), none of them are related to the square root of variance.",
         "ur": "اچھے طلباء ہمیشہ دیگر انتخاب کی تعریفوں کو استعمال کرتے ہوئے غلط جوابات کو خارج کر کے تصدیق کرتے ہیں۔ چونکہ اوسط (mean) اور وسطانیہ (median) ڈیٹا کا مرکز بتاتے ہیں، اور حیطہ (range) صرف انتہائی قیمتوں کا فرق ($X_{\\max} - X_{\\min}$) ہے، اس لیے ان میں سے کوئی بھی تغیر کے جذر سے متعلق نہیں ہے۔"
-       }
+       },
+       "math_was": ""
       },
       {
        "math": "\\text{Answer: (c) } \\text{standard deviation}",
@@ -7810,7 +7817,7 @@
         "0*90+1*85+2*83+3*80+4*76+5*74+6*72+7*70+8*68+9*65 == 3216"
        ],
        "why": {
-        "en": "To use Pearson's formula without making calculation errors, we first compute the individual building blocks: the sums of $x$, $y$, their squares ($x^2$, $y^2$), and their products ($xy$). Having these পাঁচ totals ready makes substituting into the main formula much simpler and cleaner.",
+        "en": "To use Pearson's formula without making calculation errors, we first compute the individual building blocks: the sums of $x$, $y$, their squares ($x^2$, $y^2$), and their products ($xy$). Having these five totals ready makes substituting into the main formula much simpler and cleaner.",
         "ur": "پیئرسن کے فارمولے کو بغیر کسی غلطی کے استعمال کرنے کے لیے، ہم پہلے بنیادی حصے حل کرتے ہیں: یعنی $x$، $y$، ان کے مربوں ($x^2$، $y^2$)، اور ان کے حاصل ضرب ($xy$) کے مجموعے۔ ان پانچ مجموعوں کو پہلے سے تیار رکھنے سے اصل فارمولے میں قیمتیں درج کرنا بہت آسان اور صاف ہو جاتا ہے۔"
        }
       },
@@ -7909,13 +7916,14 @@
        }
       },
       {
-       "math": "",
+       "math": "\\hat{y} = a + bx,\\quad \\hat{y} = 88.16 - 2.64x",
        "en": "Using the values of $a$ and $b$, the equation of the line of best fit $\\hat{y} = a + bx$ becomes $\\hat{y} = 88.16 - 2.64x$.",
        "ur": "$a$ اور $b$ کی قیمتوں کو استعمال کرتے ہوئے، بہترین فٹ لائن کی مساوات $\\hat{y} = a + bx$، $\\hat{y} = 88.16 - 2.64x$ بن جاتی ہے۔",
        "why": {
         "en": "By putting the intercept $a$ and slope $b$ into the general linear equation $\\hat{y} = a + bx$, we create our mathematical model. This formula now allows us to estimate the resting heart rate ($\\hat{y}$) for any given number of exercise hours ($x$).",
         "ur": "عمومی خطی مساوات $\\hat{y} = a + bx$ میں $a$ اور $b$ کی قیمتیں درج کر کے، ہم اپنا ریاضیاتی ماڈل بناتے ہیں۔ یہ فارمولا اب ہمیں ورزش کے کسی بھی دیے گئے گھنٹوں ($x$) کے لیے دل کی دھڑکن کی متوقع رفتار ($\\hat{y}$) کا اندازہ لگانے کے قابل بناتا ہے۔"
-       }
+       },
+       "math_was": ""
       },
       {
        "math": "\\hat{y} = 88.16 - 2.64(6.5) \\approx 71.03",
@@ -7988,13 +7996,14 @@
        }
       },
       {
-       "math": "",
+       "math": "\\text{Range} = X_m - X_0",
        "en": "The formula for the range of ungrouped data is $\\text{Range} = X_m - X_0$, which is the difference between the maximum and minimum values.",
        "ur": "غیر گروہی مواد کا حیطہ (range) معلوم کرنے کا فارمولا $\\text{Range} = X_m - X_0$ ہے، جو کہ سب سے بڑی اور سب سے چھوٹی قدر کا فرق ہوتا ہے۔",
        "why": {
         "en": "Now we write down the formula for the range of ungrouped data, which is $\\text{Range} = X_m - X_0$. This formula tells us that to find the total spread of the data, we must subtract the minimum value from the maximum value.",
         "ur": "اب ہم غیر گروہی ڈیٹا کی رینج معلوم کرنے کا فارمولا لکھتے ہیں، جو کہ $\\text{Range} = X_m - X_0$ ہے۔ یہ فارمولا ہمیں بتاتا ہے کہ ڈیٹا کا کل پھیلاؤ معلوم کرنے کے لیے ہمیں سب سے بڑی قیمت میں سے سب سے چھوٹی قیمت کو تفریق کرنا ہوگا۔"
-       }
+       },
+       "math_was": ""
       },
       {
        "math": "\\text{Range} = 75 - 25 = 50",

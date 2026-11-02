@@ -17,19 +17,19 @@
   },
   {
    "en": "To solve the system using matrices as required, we separate the coefficients ($4, 6, 6, 5$), variables ($x, y$), and total costs ($136, 164$) into matrices $A$, $X$, and $B$. This standard form $AX = B$ sets us up to apply Cramer's rule.",
-   "ur": "سوال کی شرط کے مطابق کالبوں کی مدد سے حل کرنے کے لیے، ہم عددی سروں ($4, 6, 6, 5$)، متغیروں ($x, y$) اور کل قیمتوں ($136, 164$) کو الگ کر کے کالب $A$، $X$ اور $B$ بناتے ہیں۔ یہ معیاری شکل $AX = B$ ہمیں کریمر کے قانون کے استعمال کے قابل بناتی ہے۔"
+   "ur": "سوال کی شرط کے مطابق قالبوں کی مدد سے حل کرنے کے لیے، ہم عددی سروں ($4, 6, 6, 5$)، متغیروں ($x, y$) اور کل قیمتوں ($136, 164$) کو الگ کر کے قالب $A$، $X$ اور $B$ بناتے ہیں۔ یہ معیاری شکل $AX = B$ ہمیں کریمر کے قانون کے استعمال کے قابل بناتی ہے۔"
   },
   {
    "en": "We calculate the determinant $|A|$ by cross-multiplying the main diagonal and subtracting the other diagonal. Since $|A| = -16$ is not zero, the matrix is non-singular, which confirms that a unique solution exists and we can divide by $|A|$ later.",
-   "ur": "ہم وتر کے ارکان کو ضرب دے کر اور دوسرے ارکان کی ضرب کو تفریق کر کے مقطع $|A|$ معلوم کرتے ہیں۔ چونکہ $|A| = -16$ صفر نہیں ہے، اس لیے کالب غیر نادر ہے، جو اس بات کی تصدیق کرتا ہے کہ حل ممکن ہے اور ہم آگے چل کر $|A|$ سے تقسیم کر سکتے ہیں۔"
+   "ur": "ہم وتر کے ارکان کو ضرب دے کر اور دوسرے ارکان کی ضرب کو تفریق کر کے مقطع $|A|$ معلوم کرتے ہیں۔ چونکہ $|A| = -16$ صفر نہیں ہے، اس لیے قالب غیر نادر ہے، جو اس بات کی تصدیق کرتا ہے کہ حل ممکن ہے اور ہم آگے چل کر $|A|$ سے تقسیم کر سکتے ہیں۔"
   },
   {
    "en": "According to Cramer's rule, to find the numerator for $x$, we form matrix $A_x$ by putting the constant costs ($136, 164$) in place of the $x$-coefficients. Its determinant $|A_x| = -304$ gives us the exact value needed to calculate $x$.",
-   "ur": "کریمر کے قانون کے مطابق، $x$ معلوم کرنے کے لیے ہم مستقل قیمتوں ($136, 164$) کو $x$ کے عددی سروں کی جگہ رکھ کر کالب $A_x$ بناتے ہیں۔ اس کا مقطع $|A_x| = -304$ ہمیں وہ قیمت دیتا ہے جو $x$ نکالنے کے لیے درکار ہے۔"
+   "ur": "کریمر کے قانون کے مطابق، $x$ معلوم کرنے کے لیے ہم مستقل قیمتوں ($136, 164$) کو $x$ کے عددی سروں کی جگہ رکھ کر قالب $A_x$ بناتے ہیں۔ اس کا مقطع $|A_x| = -304$ ہمیں وہ قیمت دیتا ہے جو $x$ نکالنے کے لیے درکار ہے۔"
   },
   {
    "en": "Similarly, to find the numerator for $y$, we form $A_y$ by replacing the $y$-coefficients ($6, 5$) with the constant costs ($136, 164$). Evaluating this determinant gives $|A_y| = -160$, which is the value needed to find $y$.",
-   "ur": "اسی طرح، $y$ معلوم کرنے کے لیے ہم $y$ کے عددی سروں ($6, 5$) کی جگہ مستقل قیمتیں ($136, 164$) رکھ کر کالب $A_y$ بناتے ہیں۔ اس مقطع کو حل کرنے سے ہمیں $|A_y| = -160$ ملتا ہے، جو $y$ کی قیمت نکالنے کے لیے ضروری ہے۔"
+   "ur": "اسی طرح، $y$ معلوم کرنے کے لیے ہم $y$ کے عددی سروں ($6, 5$) کی جگہ مستقل قیمتیں ($136, 164$) رکھ کر قالب $A_y$ بناتے ہیں۔ اس مقطع کو حل کرنے سے ہمیں $|A_y| = -160$ ملتا ہے، جو $y$ کی قیمت نکالنے کے لیے ضروری ہے۔"
   },
   {
    "en": "Finally, we apply Cramer's rule formulas by dividing $|A_x|$ and $|A_y|$ by the main determinant $|A| = -16$. This final division directly gives us the values of our unknowns, $x = 19$ and $y = 10$.",

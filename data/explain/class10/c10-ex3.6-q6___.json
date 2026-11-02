@@ -17,19 +17,19 @@
   },
   {
    "en": "To solve the system using matrices, we separate the coefficients, variables, and constants into matrices $A$, $X$, and $B$. This organizes our equations into the standard matrix equation $AX = B$, setting us up to apply matrix rules.",
-   "ur": "کالبوں (matrices) کے ذریعے مساواتوں کو حل کرنے کے لیے، ہم عددی سروں، متغیرات اور مستقل مقداروں کو الگ الگ کالب $A$، $X$ اور $B$ میں لکھتے ہیں۔ اس سے ہماری مساواتیں معیاری کالب مساوات $AX = B$ کی شکل اختیار کر لیتی ہیں، جس پر ہم کالب کے اصول لاگو کر سکتے ہیں۔"
+   "ur": "قالبوں (matrices) کے ذریعے مساواتوں کو حل کرنے کے لیے، ہم عددی سروں، متغیرات اور مستقل مقداروں کو الگ الگ قالب $A$، $X$ اور $B$ میں لکھتے ہیں۔ اس سے ہماری مساواتیں معیاری قالب مساوات $AX = B$ کی شکل اختیار کر لیتی ہیں، جس پر ہم قالب کے اصول لاگو کر سکتے ہیں۔"
   },
   {
    "en": "We calculate the determinant of the coefficient matrix $A$ by multiplying the main diagonal entries and subtracting the product of the other diagonal. Since $|A| = -3$ is not zero, this confirms that the two lines actually intersect at a unique point and we can proceed with Cramer's rule.",
-   "ur": "ہم عددی سروں کے کالب $A$ کا مقطع (determinant) معلوم کرنے کے لیے وتر کے ارکان کو ضرب دے کر دوسرے وتر کے حاصل ضرب کو تفریق کرتے ہیں۔ چونکہ $|A| = -3$ صفر نہیں ہے، اس سے تصدیق ہوتی ہے کہ دونوں خطوط واقعی ایک منفرد نقطے پر قطع کرتے ہیں اور ہم کریمر کا قانون استعمال کر سکتے ہیں۔"
+   "ur": "ہم عددی سروں کے قالب $A$ کا مقطع (determinant) معلوم کرنے کے لیے وتر کے ارکان کو ضرب دے کر دوسرے وتر کے حاصل ضرب کو تفریق کرتے ہیں۔ چونکہ $|A| = -3$ صفر نہیں ہے، اس سے تصدیق ہوتی ہے کہ دونوں خطوط واقعی ایک منفرد نقطے پر قطع کرتے ہیں اور ہم کریمر کا قانون استعمال کر سکتے ہیں۔"
   },
   {
    "en": "According to Cramer's rule, to prepare for finding $x$, we form a new matrix $A_x$ by replacing the first column ($x$-coefficients) with the constants from matrix $B$. Finding its determinant gives us $|A_x| = -6$, which is the numerator needed to calculate $x$.",
-   "ur": "کریمر کے قانون کے مطابق، $x$ کی قیمت معلوم کرنے کی تیاری کے لیے ہم پہلے کالم ($x$ کے عددی سر) کو کالب $B$ کی مستقل مقداروں سے بدل کر نیا کالب $A_x$ بناتے ہیں۔ اس کا مقطع حل کرنے سے ہمیں $|A_x| = -6$ ملتا ہے، جو $x$ معلوم کرنے کے لیے شمار کنندہ (numerator) کا کام کرے گا۔"
+   "ur": "کریمر کے قانون کے مطابق، $x$ کی قیمت معلوم کرنے کی تیاری کے لیے ہم پہلے کالم ($x$ کے عددی سر) کو قالب $B$ کی مستقل مقداروں سے بدل کر نیا قالب $A_x$ بناتے ہیں۔ اس کا مقطع حل کرنے سے ہمیں $|A_x| = -6$ ملتا ہے، جو $x$ معلوم کرنے کے لیے شمار کنندہ (numerator) کا کام کرے گا۔"
   },
   {
    "en": "Similarly, to prepare for finding $y$, we form matrix $A_y$ by replacing the second column ($y$-coefficients) of matrix $A$ with the constants. Evaluating this determinant gives $|A_y| = -3$, providing the numerator needed to calculate $y$.",
-   "ur": "اسی طرح، $y$ معلوم کرنے کے لیے ہم کالب $A$ کے دوسرے کالم ($y$ کے عددی سر) کو مستقل مقداروں سے بدل کر کالب $A_y$ بناتے ہیں۔ اس مقطع کو حل کرنے سے $|A_y| = -3$ حاصل ہوتا ہے، جو $y$ کی قیمت نکالنے کے لیے شمار کنندہ فراہم کرتا ہے۔"
+   "ur": "اسی طرح، $y$ معلوم کرنے کے لیے ہم قالب $A$ کے دوسرے کالم ($y$ کے عددی سر) کو مستقل مقداروں سے بدل کر قالب $A_y$ بناتے ہیں۔ اس مقطع کو حل کرنے سے $|A_y| = -3$ حاصل ہوتا ہے، جو $y$ کی قیمت نکالنے کے لیے شمار کنندہ فراہم کرتا ہے۔"
   },
   {
    "en": "Finally, we apply Cramer's rule formulas by dividing $|A_x|$ and $|A_y|$ by the main determinant $|A|$. This directly gives us the exact horizontal position $x = 2$ and vertical position $y = 1$ where the two paths cross.",

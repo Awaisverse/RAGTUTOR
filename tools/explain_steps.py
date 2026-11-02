@@ -101,14 +101,14 @@ def parts(klass):
 def explain_one(klass, unit, it, p, generate):
     path = overlay_path(klass, it["id"], p.get("label", ""))
     rejected = path.with_suffix(".rejected.json")
-    math = [s.get("math", "") for s in p["steps"]]
+    math = [s.get("math_was", s.get("math", "")) for s in p["steps"]]   # the line as written, before the build tidied it
     if rejected.exists():
         return "skip"
     if path.exists():
         old = json.loads(path.read_text(encoding="utf-8"))
         if old.get("math") == math and old.get("answer_ref") == p["answer"]:
             return "skip"                             # explained already, for these very steps
-    steps = [{"n": k, "math": s.get("math", ""), "instruction": s.get("en", "")} for k, s in enumerate(p["steps"], 1)]
+    steps = [{"n": k, "math": s.get("math_was", s.get("math", "")), "instruction": s.get("en", "")} for k, s in enumerate(p["steps"], 1)]
     prompt = PROMPT.format(klass=klass, unit=f"{unit['unit']} - {unit['title']}", question=it["question"],
                            part=f"({p.get('label')}) {p.get('prompt', '')}" if p.get("label") else "(whole question)",
                            steps=json.dumps(steps, ensure_ascii=False), answer=p["answer"], n=len(steps))

@@ -12,19 +12,19 @@
  "why": [
   {
    "en": "To apply Cramer's rule, we first organize our system of equations into the matrix form $AX = B$. This neatly separates the coefficients of $x$ and $y$ into matrix $A$ and the constant terms on the right side into matrix $B$.",
-   "ur": "کریمر کا اصول (Cramer's rule) استعمال کرنے کے لیے ہم سب سے پہلے دی گئی مساواتوں کو کالب کی شکل $AX = B$ میں لکھتے ہیں۔ اس سے $x$ اور $y$ کے عددی سر کالب $A$ میں اور مستقل مقداریں (constants) کالب $B$ میں الگ ہو جاتی ہیں۔"
+   "ur": "کریمر کا اصول (Cramer's rule) استعمال کرنے کے لیے ہم سب سے پہلے دی گئی مساواتوں کو قالب کی شکل $AX = B$ میں لکھتے ہیں۔ اس سے $x$ اور $y$ کے عددی سر قالب $A$ میں اور مستقل مقداریں (constants) قالب $B$ میں الگ ہو جاتی ہیں۔"
   },
   {
    "en": "We calculate the determinant $|A|$ first to check if a unique solution exists. Since $|A| = 8$ is not zero, the matrix is non-singular, meaning we can safely proceed with Cramer's rule and use $8$ as our denominator.",
-   "ur": "ہم سب سے پہلے مقطع $|A|$ معلوم کرتے ہیں تاکہ دیکھا جا سکے کہ کیا اس کا حل ممکن ہے۔ چونکہ $|A| = 8$ صفر کے برابر نہیں ہے، اس لیے یہ ایک غیر نادر کالب ہے اور ہم کریمر کا اصول جاری رکھ سکتے ہیں جہاں $8$ بٹے کے نیچے (نسب نما کے طور پر) استعمال ہو گا۔"
+   "ur": "ہم سب سے پہلے مقطع $|A|$ معلوم کرتے ہیں تاکہ دیکھا جا سکے کہ کیا اس کا حل ممکن ہے۔ چونکہ $|A| = 8$ صفر کے برابر نہیں ہے، اس لیے یہ ایک غیر نادر قالب ہے اور ہم کریمر کا اصول جاری رکھ سکتے ہیں جہاں $8$ بٹے کے نیچے (نسب نما کے طور پر) استعمال ہو گا۔"
   },
   {
    "en": "According to Cramer's rule, to prepare for finding $x$, we form a new matrix $A_x$ by replacing the $x$-coefficients ($3$ and $5$) with the constants ($-1$ and $5$). Its determinant, $|A_x| = -16$, gives us the numerator needed to calculate $x$.",
-   "ur": "کریمر کے اصول کے مطابق، $x$ کی قیمت معلوم کرنے کی تیاری کے لیے ہم $x$ کے عددی سروں ($3$ اور $5$) کی جگہ مستقل مقداریں ($-1$ اور $5$) رکھ کر نیا کالب $A_x$ بناتے ہیں۔ اس کا مقطع $|A_x| = -16$ ہمیں وہ عدد دیتا ہے جسے $x$ معلوم کرنے کے لیے بٹے کے اوپر رکھا جائے گا۔"
+   "ur": "کریمر کے اصول کے مطابق، $x$ کی قیمت معلوم کرنے کی تیاری کے لیے ہم $x$ کے عددی سروں ($3$ اور $5$) کی جگہ مستقل مقداریں ($-1$ اور $5$) رکھ کر نیا قالب $A_x$ بناتے ہیں۔ اس کا مقطع $|A_x| = -16$ ہمیں وہ عدد دیتا ہے جسے $x$ معلوم کرنے کے لیے بٹے کے اوپر رکھا جائے گا۔"
   },
   {
    "en": "Similarly, to prepare for finding $y$, we form matrix $A_y$ by replacing the $y$-coefficients ($2$ and $6$) with the constants ($-1$ and $5$). Calculating its determinant gives $|A_y| = 20$, which is the numerator for $y$.",
-   "ur": "اسی طرح $y$ معلوم کرنے کے لیے ہم کالب $A$ میں $y$ کے عددی سروں ($2$ اور $6$) کی جگہ مستقل مقداریں ($-1$ اور $5$) رکھ کر کالب $A_y$ بناتے ہیں۔ اس کا مقطع حل کرنے سے $|A_y| = 20$ ملتا ہے، جو $y$ کے فارمولے میں بٹے کے اوپر آئے گا۔"
+   "ur": "اسی طرح $y$ معلوم کرنے کے لیے ہم قالب $A$ میں $y$ کے عددی سروں ($2$ اور $6$) کی جگہ مستقل مقداریں ($-1$ اور $5$) رکھ کر قالب $A_y$ بناتے ہیں۔ اس کا مقطع حل کرنے سے $|A_y| = 20$ ملتا ہے، جو $y$ کے فارمولے میں بٹے کے اوپر آئے گا۔"
   },
   {
    "en": "Finally, we apply the Cramer's rule formulas by dividing $|A_x|$ and $|A_y|$ by the main determinant $|A|$. Simplifying these fractions gives the exact values of our unknowns, $x = -2$ and $y = \\frac{5}{2}$.",

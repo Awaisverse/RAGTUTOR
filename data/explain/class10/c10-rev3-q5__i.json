@@ -20,31 +20,31 @@
  "why": [
   {
    "en": "We begin with the matrix inversion method, which uses the inverse of the coefficient matrix to isolate the variables.",
-   "ur": "ہم کالب کے معکوس کے طریقے سے شروعات کرتے ہیں، جس میں متغیرات کی قیمت معلوم کرنے کے لیے عددی سروں کے کالب کا معکوس استعمال کیا جاتا ہے۔"
+   "ur": "ہم قالب کے معکوس کے طریقے سے شروعات کرتے ہیں، جس میں متغیرات کی قیمت معلوم کرنے کے لیے عددی سروں کے قالب کا معکوس استعمال کیا جاتا ہے۔"
   },
   {
    "en": "We separate the coefficients, variables, and constants into matrices $A$, $X$, and $B$ so we can solve the single matrix equation $AX = B$.",
-   "ur": "ہم عددی سروں، متغیرات اور مستقل مقداروں کو الگ الگ کالبوں $A$، $X$ اور $B$ کی شکل میں لکھتے ہیں تاکہ ہم ایک ہی کالب مساوات $AX = B$ کو حل کر سکیں۔"
+   "ur": "ہم عددی سروں، متغیرات اور مستقل مقداروں کو الگ الگ قالبوں $A$، $X$ اور $B$ کی شکل میں لکھتے ہیں تاکہ ہم ایک ہی قالب مساوات $AX = B$ کو حل کر سکیں۔"
   },
   {
    "en": "We calculate the determinant $|A|$ first to check if a unique solution exists. Since $|A| = -23$ (which is not zero), the matrix is non-singular and we can find its inverse.",
-   "ur": "ہم سب سے پہلے مقطع $|A|$ معلوم کرتے ہیں تاکہ دیکھا جا سکے کہ حل ممکن ہے یا نہیں۔ چونکہ $|A| = -23$ ہے جو صفر نہیں ہے، اس لیے یہ ایک غیر نادر کالب ہے اور اس کا معکوس معلوم کیا جا سکتا ہے۔"
+   "ur": "ہم سب سے پہلے مقطع $|A|$ معلوم کرتے ہیں تاکہ دیکھا جا سکے کہ حل ممکن ہے یا نہیں۔ چونکہ $|A| = -23$ ہے جو صفر نہیں ہے، اس لیے یہ ایک غیر نادر قالب ہے اور اس کا معکوس معلوم کیا جا سکتا ہے۔"
   },
   {
    "en": "We find the adjoint of matrix $A$ because it is a required part of the formula for the multiplicative inverse of a $2 \\times 2$ matrix.",
-   "ur": "ہم کالب $A$ کا ایڈجوائنٹ معلوم کرتے ہیں کیونکہ یہ $2 \\times 2$ کالب کے ضربی معکوس کے کلیے کا ایک لازمی حصہ ہے۔"
+   "ur": "ہم قالب $A$ کا ایڈجوائنٹ معلوم کرتے ہیں کیونکہ یہ $2 \\times 2$ قالب کے ضربی معکوس کے کلیے کا ایک لازمی حصہ ہے۔"
   },
   {
    "en": "Using the inverse formula $A^{-1} = \\frac{1}{|A|}\\operatorname{Adj}A$, we combine the determinant and adjoint to get the inverse matrix $A^{-1}$.",
-   "ur": "معکوس کے کلیے $A^{-1} = \\frac{1}{|A|}\\operatorname{Adj}A$ کا استعمال کرتے ہوئے، ہم مقطع اور ایڈجوائنٹ کی قیمتیں درج کر کے معکوس کالب $A^{-1}$ حاصل کرتے ہیں۔"
+   "ur": "معکوس کے کلیے $A^{-1} = \\frac{1}{|A|}\\operatorname{Adj}A$ کا استعمال کرتے ہوئے، ہم مقطع اور ایڈجوائنٹ کی قیمتیں درج کر کے معکوس قالب $A^{-1}$ حاصل کرتے ہیں۔"
   },
   {
    "en": "Since $AX = B$ gives $X = A^{-1}B$, we multiply $A^{-1}$ with the constant matrix $B$ to calculate the exact numerical values for the variable matrix $X$.",
-   "ur": "چونکہ $AX = B$ سے $X = A^{-1}B$ بنتا ہے، اس لیے ہم متغیرات کے کالب $X$ کی قیمتیں نکالنے کے لیے $A^{-1}$ کو مستقل مقداروں کے کالب $B$ سے ضرب دیتے ہیں۔"
+   "ur": "چونکہ $AX = B$ سے $X = A^{-1}B$ بنتا ہے، اس لیے ہم متغیرات کے قالب $X$ کی قیمتیں نکالنے کے لیے $A^{-1}$ کو مستقل مقداروں کے قالب $B$ سے ضرب دیتے ہیں۔"
   },
   {
    "en": "By comparing the corresponding entries of equal matrices, the top value gives $x$ and the bottom value gives $y$, completing the first method.",
-   "ur": "مساوی کالبوں کے متناظرہ ارکان کا موازنہ کرنے سے اوپر والی قیمت $x$ اور نیچے والی قیمت $y$ کی آتی ہے، جس سے پہلا طریقہ مکمل ہو جاتا ہے۔"
+   "ur": "مساوی قالبوں کے متناظرہ ارکان کا موازنہ کرنے سے اوپر والی قیمت $x$ اور نیچے والی قیمت $y$ کی آتی ہے، جس سے پہلا طریقہ مکمل ہو جاتا ہے۔"
   },
   {
    "en": "Now we solve the same pair of equations using the second required method, Cramer's rule, which relies directly on determinants.",
@@ -52,7 +52,7 @@
   },
   {
    "en": "Setting up the matrix form again helps us clearly see the columns of coefficients that we will replace with constants in the upcoming steps.",
-   "ur": "دوبارہ کالب کی شکل لکھنے سے ہمیں عددی سروں کے وہ کالم واضح نظر آتے ہیں جن کی جگہ ہم اگلے مراحل میں مستقل مقداریں رکھیں گے۔"
+   "ur": "دوبارہ قالب کی شکل لکھنے سے ہمیں عددی سروں کے وہ کالم واضح نظر آتے ہیں جن کی جگہ ہم اگلے مراحل میں مستقل مقداریں رکھیں گے۔"
   },
   {
    "en": "We find the determinant $|A|$ because it serves as the denominator in Cramer's rule formulas for both $x$ and $y$.",
@@ -60,7 +60,7 @@
   },
   {
    "en": "Forming $A_x$ by putting the constants $7$ and $2$ in place of the $x$-coefficients gives us $|A_x| = -15$, which is the numerator needed to find $x$.",
-   "ur": "$x$ کے عددی سروں کی جگہ مستقل مقداریں $7$ اور $2$ رکھنے سے کالب $A_x$ بنتا ہے جس کا مقطع $|A_x| = -15$ آتا ہے، جو $x$ معلوم کرنے کے لیے شمار کنندہ (بٹے کے اوپر) کا کام دیتا ہے۔"
+   "ur": "$x$ کے عددی سروں کی جگہ مستقل مقداریں $7$ اور $2$ رکھنے سے قالب $A_x$ بنتا ہے جس کا مقطع $|A_x| = -15$ آتا ہے، جو $x$ معلوم کرنے کے لیے شمار کنندہ (بٹے کے اوپر) کا کام دیتا ہے۔"
   },
   {
    "en": "Similarly, putting the constants in place of the $y$-coefficients gives $|A_y| = -29$, which is the numerator needed to find $y$.",
@@ -68,7 +68,7 @@
   },
   {
    "en": "Dividing $|A_x|$ and $|A_y|$ by $|A|$ gives the values of $x$ and $y$, which match the answers from the matrix inversion method.",
-   "ur": "مقاطع $|A_x|$ اور $|A_y|$ کو $|A|$ پر تقسیم کرنے سے ہمیں $x$ اور $y$ کی قیمتیں مل جاتی ہیں، جو بالکل کالب کے معکوس کے طریقے والے جواب کے برابر ہیں۔"
+   "ur": "مقاطع $|A_x|$ اور $|A_y|$ کو $|A|$ پر تقسیم کرنے سے ہمیں $x$ اور $y$ کی قیمتیں مل جاتی ہیں، جو بالکل قالب کے معکوس کے طریقے والے جواب کے برابر ہیں۔"
   }
  ],
  "meaning": {

@@ -6,7 +6,7 @@
   {
    "math": "B = \\begin{bmatrix} 5 & 3 \\\\ 2 & 4 \\end{bmatrix}",
    "en": "Write down the given matrix $B$. We need to find $(B^t)^t$, which is the transpose of the transpose of matrix $B$.",
-   "ur": "دیا گیا کالب $B$ لکھیں۔ ہمیں $(B^t)^t$ معلوم کرنا ہے، جو کہ کالب $B$ کے ٹرانسپوز کا ٹرانسپوز ہے۔",
+   "ur": "دیا گیا قالب $B$ لکھیں۔ ہمیں $(B^t)^t$ معلوم کرنا ہے، جو کہ قالب $B$ کے ٹرانسپوز کا ٹرانسپوز ہے۔",
    "check": [
     "Eq(Matrix([[5, 3], [2, 4]]), Matrix([[5, 3], [2, 4]]))"
    ]
@@ -14,7 +14,7 @@
   {
    "math": "B^t = \\begin{bmatrix} 5 & 3 \\\\ 2 & 4 \\end{bmatrix}^t",
    "en": "First, take the transpose of matrix $B$. The transpose of a matrix is obtained by interchanging its rows into columns.",
-   "ur": "سب سے پہلے، کالب $B$ کا ٹرانسپوز لیں۔ کسی کالب کا ٹرانسپوز اس کی قطاروں کو کالموں میں تبدیل کرنے سے حاصل ہوتا ہے۔",
+   "ur": "سب سے پہلے، قالب $B$ کا ٹرانسپوز لیں۔ کسی قالب کا ٹرانسپوز اس کی قطاروں کو کالموں میں تبدیل کرنے سے حاصل ہوتا ہے۔",
    "check": [
     "Eq(Matrix([[5, 3], [2, 4]]).T, Matrix([[5, 3], [2, 4]]).T)"
    ]
@@ -30,7 +30,7 @@
   {
    "math": "(B^t)^t = \\begin{bmatrix} 5 & 2 \\\\ 3 & 4 \\end{bmatrix}^t",
    "en": "Now, take the transpose of the matrix $B^t$ again to find $(B^t)^t$.",
-   "ur": "اب، $(B^t)^t$ معلوم کرنے کے لیے کالب $B^t$ کا دوبارہ ٹرانسپوز لیں۔",
+   "ur": "اب، $(B^t)^t$ معلوم کرنے کے لیے قالب $B^t$ کا دوبارہ ٹرانسپوز لیں۔",
    "check": [
     "Eq(Matrix([[5, 2], [3, 4]]).T, Matrix([[5, 2], [3, 4]]).T)"
    ]
@@ -38,7 +38,7 @@
   {
    "math": "(B^t)^t = \\begin{bmatrix} 5 & 3 \\\\ 2 & 4 \\end{bmatrix}",
    "en": "Interchange the rows of $B^t$ into columns. This gives us the final answer, which is equal to the original matrix $B$.",
-   "ur": "$B^t$ کی قطاروں کو کالموں میں تبدیل کریں۔ اس سے ہمیں حتمی جواب ملتا ہے، جو کہ اصل کالب $B$ کے برابر ہے۔",
+   "ur": "$B^t$ کی قطاروں کو کالموں میں تبدیل کریں۔ اس سے ہمیں حتمی جواب ملتا ہے، جو کہ اصل قالب $B$ کے برابر ہے۔",
    "check": [
     "Eq(Matrix([[5, 2], [3, 4]]).T, Matrix([[5, 3], [2, 4]]))",
     "Eq(Matrix([[5, 3], [2, 4]]).T, Matrix([[5, 2], [3, 4]]))"

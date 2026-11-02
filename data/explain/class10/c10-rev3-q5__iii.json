@@ -20,39 +20,39 @@
  "why": [
   {
    "en": "We begin with the first required method, the Matrix Inversion Method, which uses the multiplicative inverse of the coefficient matrix to find the unknowns.",
-   "ur": "ہم پہلے مطلوبہ طریقے، یعنی کالب کے معکوس کے طریقے (Matrix Inversion Method) سے آغاز کرتے ہیں، جو نامعلوم مقداروں کو معلوم کرنے کے لیے عددی سروں کے کالب کا ضربی معکوس استعمال کرتا ہے۔"
+   "ur": "ہم پہلے مطلوبہ طریقے، یعنی قالب کے معکوس کے طریقے (Matrix Inversion Method) سے آغاز کرتے ہیں، جو نامعلوم مقداروں کو معلوم کرنے کے لیے عددی سروں کے قالب کا ضربی معکوس استعمال کرتا ہے۔"
   },
   {
    "en": "We separate the coefficients ($2, 1$ and $1, 3$), variables ($x, y$), and constants ($5, 3$) into matrices $A$, $X$, and $B$ so we can apply matrix algebra to the system $AX = B$.",
-   "ur": "ہم عددی سروں ($2, 1$ اور $1, 3$)، متغیرات ($x, y$) اور مستقل مقداروں ($5, 3$) کو کالب $A$، $X$ اور $B$ کی شکل میں الگ کرتے ہیں تاکہ ہم مساوات $AX = B$ پر کالبوں کا الجبرا استعمال کر سکیں۔"
+   "ur": "ہم عددی سروں ($2, 1$ اور $1, 3$)، متغیرات ($x, y$) اور مستقل مقداروں ($5, 3$) کو قالب $A$، $X$ اور $B$ کی شکل میں الگ کرتے ہیں تاکہ ہم مساوات $AX = B$ پر قالبوں کا الجبرا استعمال کر سکیں۔"
   },
   {
    "en": "We calculate the determinant $|A|$ first to check if a solution exists. Since $|A| = 5$ is not zero, $A$ is a non-singular matrix, meaning its inverse $A^{-1}$ exists and we can proceed.",
-   "ur": "ہم سب سے پہلے مقطع $|A|$ معلوم کرتے ہیں تاکہ دیکھا جا سکے کہ حل ممکن ہے یا نہیں۔ چونکہ $|A| = 5$ صفر نہیں ہے، اس لیے $A$ ایک غیر نادر کالب ہے، جس کا مطلب ہے کہ اس کا معکوس $A^{-1}$ موجود ہے اور ہم آگے بڑھ سکتے ہیں۔"
+   "ur": "ہم سب سے پہلے مقطع $|A|$ معلوم کرتے ہیں تاکہ دیکھا جا سکے کہ حل ممکن ہے یا نہیں۔ چونکہ $|A| = 5$ صفر نہیں ہے، اس لیے $A$ ایک غیر نادر قالب ہے، جس کا مطلب ہے کہ اس کا معکوس $A^{-1}$ موجود ہے اور ہم آگے بڑھ سکتے ہیں۔"
   },
   {
    "en": "Finding the adjoint matrix $\\operatorname{Adj}A$ is a required step in the formula for the inverse of a $2 \\times 2$ matrix. This rearranges the matrix elements into the position needed to undo the effect of $A$.",
-   "ur": "ایک $2 \\times 2$ کالب کے معکوس کے فارمولے کے لیے ایڈجائنٹ کالب $\\operatorname{Adj}A$ معلوم کرنا ایک ضروری مرحلہ ہے۔ یہ کالب کے ارکان کو اس ترتیب میں لاتا ہے جو $A$ کے اثر کو ختم کرنے کے لیے ضروری ہے۔"
+   "ur": "ایک $2 \\times 2$ قالب کے معکوس کے فارمولے کے لیے ایڈجائنٹ قالب $\\operatorname{Adj}A$ معلوم کرنا ایک ضروری مرحلہ ہے۔ یہ قالب کے ارکان کو اس ترتیب میں لاتا ہے جو $A$ کے اثر کو ختم کرنے کے لیے ضروری ہے۔"
   },
   {
    "en": "By combining our determinant $|A| = 5$ and $\\operatorname{Adj}A$ using the inverse formula, we get the exact matrix $A^{-1}$ that will isolate $X$ when multiplied with $B$.",
-   "ur": "معکوس کے فارمولے میں اپنے مقطع $|A| = 5$ اور $\\operatorname{Adj}A$ کو ملا کر ہمیں وہ کالب $A^{-1}$ مل جاتا ہے جو $B$ سے ضرب کھانے پر $X$ کو الگ کر دے گا۔"
+   "ur": "معکوس کے فارمولے میں اپنے مقطع $|A| = 5$ اور $\\operatorname{Adj}A$ کو ملا کر ہمیں وہ قالب $A^{-1}$ مل جاتا ہے جو $B$ سے ضرب کھانے پر $X$ کو الگ کر دے گا۔"
   },
   {
    "en": "Since $AX = B$ gives $X = A^{-1}B$, we perform row-by-column matrix multiplication and divide by $5$ to directly compute the values of our unknown matrix $X$.",
-   "ur": "چونکہ $AX = B$ سے $X = A^{-1}B$ بنتا ہے، اس لیے ہم قطار کو کالم سے ضرب دے کر اور $5$ پر تقسیم کر کے براہِ راست اپنے نامعلوم کالب $X$ کی قیمتیں معلوم کرتے ہیں۔"
+   "ur": "چونکہ $AX = B$ سے $X = A^{-1}B$ بنتا ہے، اس لیے ہم قطار کو کالم سے ضرب دے کر اور $5$ پر تقسیم کر کے براہِ راست اپنے نامعلوم قالب $X$ کی قیمتیں معلوم کرتے ہیں۔"
   },
   {
    "en": "By the definition of equal matrices, corresponding entries of $X = \\begin{bmatrix} x \\\\ y \\end{bmatrix}$ and $\\begin{bmatrix} \\frac{12}{5} \\\\ \\frac{1}{5} \\end{bmatrix}$ must be equal, giving us the values of $x$ and $y$ from the first method.",
-   "ur": "مساوی کالبوں کی تعریف کے مطابق، $X = \\begin{bmatrix} x \\\\ y \\end{bmatrix}$ اور $\\begin{bmatrix} \\frac{12}{5} \\\\ \\frac{1}{5} \\end{bmatrix}$ کے متناظرہ ارکان برابر ہوتے ہیں، جس سے ہمیں پہلے طریقے سے $x$ اور $y$ کی قیمتیں مل جاتی ہیں۔"
+   "ur": "مساوی قالبوں کی تعریف کے مطابق، $X = \\begin{bmatrix} x \\\\ y \\end{bmatrix}$ اور $\\begin{bmatrix} \\frac{12}{5} \\\\ \\frac{1}{5} \\end{bmatrix}$ کے متناظرہ ارکان برابر ہوتے ہیں، جس سے ہمیں پہلے طریقے سے $x$ اور $y$ کی قیمتیں مل جاتی ہیں۔"
   },
   {
    "en": "Now we start the second required method, Cramer's Rule, which finds the same unknowns using only determinants instead of matrix inverses.",
-   "ur": "اب ہم دوسرے مطلوبہ طریقے، یعنی کریمر کے قانون (Cramer's Rule) کا آغاز کرتے ہیں، جو کالب کے معکوس کے بجائے صرف مقاطع (determinants) کو استعمال کرتے ہوئے وہی نامعلوم قیمتیں معلوم کرتا ہے۔"
+   "ur": "اب ہم دوسرے مطلوبہ طریقے، یعنی کریمر کے قانون (Cramer's Rule) کا آغاز کرتے ہیں، جو قالب کے معکوس کے بجائے صرف مقاطع (determinants) کو استعمال کرتے ہوئے وہی نامعلوم قیمتیں معلوم کرتا ہے۔"
   },
   {
    "en": "Setting up the matrix form again clearly shows the $x$-column, the $y$-column, and the constant column $B$ that we will substitute to form our new determinants.",
-   "ur": "مساواتوں کو دوبارہ کالب کی شکل میں لکھنے سے $x$ کا کالم، $y$ کا کالم اور مستقل مقداروں کا کالم $B$ واضح ہو جاتا ہے جن کو بدل کر ہم نئے مقاطع بنائیں گے۔"
+   "ur": "مساواتوں کو دوبارہ قالب کی شکل میں لکھنے سے $x$ کا کالم، $y$ کا کالم اور مستقل مقداروں کا کالم $B$ واضح ہو جاتا ہے جن کو بدل کر ہم نئے مقاطع بنائیں گے۔"
   },
   {
    "en": "The main determinant $|A| = 5$ serves as the common denominator in Cramer's Rule formulas, and being non-zero confirms a unique solution.",
@@ -73,7 +73,7 @@
  ],
  "meaning": {
   "en": "The final answer $x = \\frac{12}{5}$ and $y = \\frac{1}{5}$ is the unique pair of numbers that satisfies both equations $2x+y=5$ and $x+3y=3$ at the same time. Both the Matrix Inversion Method and Cramer's Rule gave the exact same result, and you can easily verify it by substituting $x = \\frac{12}{5}$ and $y = \\frac{1}{5}$ into the second equation: $\\frac{12}{5} + 3(\\frac{1}{5}) = \\frac{12}{5} + \\frac{3}{5} = \\frac{15}{5} = 3$, which is true.",
-  "ur": "آخری جواب $x = \\frac{12}{5}$ اور $y = \\frac{1}{5}$ اعداد کا وہ واحد جوڑا ہے جو دونوں مساواتوں $2x+y=5$ اور $x+3y=3$ کو بیک وقت درست ثابت کرتا ہے۔ کالب کے معکوس کے طریقے اور کریمر کے قانون دونوں نے بالکل ایک جیسا نتیجہ دیا ہے، اور آپ دوسری مساوات میں $x = \\frac{12}{5}$ اور $y = \\frac{1}{5}$ درج کر کے اس کی باآسانی تصدیق کر سکتے ہیں: $\\frac{12}{5} + 3(\\frac{1}{5}) = \\frac{12}{5} + \\frac{3}{5} = \\frac{15}{5} = 3$، جو کہ بالکل درست ہے۔"
+  "ur": "آخری جواب $x = \\frac{12}{5}$ اور $y = \\frac{1}{5}$ اعداد کا وہ واحد جوڑا ہے جو دونوں مساواتوں $2x+y=5$ اور $x+3y=3$ کو بیک وقت درست ثابت کرتا ہے۔ قالب کے معکوس کے طریقے اور کریمر کے قانون دونوں نے بالکل ایک جیسا نتیجہ دیا ہے، اور آپ دوسری مساوات میں $x = \\frac{12}{5}$ اور $y = \\frac{1}{5}$ درج کر کے اس کی باآسانی تصدیق کر سکتے ہیں: $\\frac{12}{5} + 3(\\frac{1}{5}) = \\frac{12}{5} + \\frac{3}{5} = \\frac{15}{5} = 3$، جو کہ بالکل درست ہے۔"
  },
  "source": "gemini-4-argon via Vertex AI",
  "made": "2026-11-01"

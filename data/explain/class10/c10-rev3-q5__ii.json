@@ -20,23 +20,23 @@
  "why": [
   {
    "en": "We begin with the matrix inversion method, which uses the inverse of the coefficient matrix to isolate the unknowns $x$ and $y$.",
-   "ur": "ہم کالب کے معکوس کے طریقے سے شروعات کرتے ہیں، جو نامعلوم متغیرات $x$ اور $y$ کی قیمتیں معلوم کرنے کے لیے عددی سروں کے کالب کا ضربی معکوس استعمال کرتا ہے۔"
+   "ur": "ہم قالب کے معکوس کے طریقے سے شروعات کرتے ہیں، جو نامعلوم متغیرات $x$ اور $y$ کی قیمتیں معلوم کرنے کے لیے عددی سروں کے قالب کا ضربی معکوس استعمال کرتا ہے۔"
   },
   {
    "en": "We organize the coefficients, variables, and constants into matrices to form the single matrix equation $AX = B$. This lets us solve for the entire variable matrix $X$ at once.",
-   "ur": "ہم عددی سروں، متغیرات اور مستقل مقداروں کو کالبوں کی شکل دے کر ایک مساوات $AX = B$ بناتے ہیں۔ اس سے ہمیں پورے متغیر کالب $X$ کو ایک ساتھ حل کرنے میں مدد ملتی ہے۔"
+   "ur": "ہم عددی سروں، متغیرات اور مستقل مقداروں کو قالبوں کی شکل دے کر ایک مساوات $AX = B$ بناتے ہیں۔ اس سے ہمیں پورے متغیر قالب $X$ کو ایک ساتھ حل کرنے میں مدد ملتی ہے۔"
   },
   {
    "en": "Before finding the inverse, we must calculate the determinant $|A|$ to check if a solution is possible. Since $|A| = 18$ is not zero, the matrix is non-singular and a unique solution exists.",
-   "ur": "معکوس معلوم کرنے سے پہلے، ہمیں مقطع $|A|$ نکالنا ہوگا تاکہ پتہ چل سکے کہ حل ممکن ہے یا نہیں۔ چونکہ $|A| = 18$ صفر نہیں ہے، اس لیے کالب غیر نادر ہے اور اس کا حل ممکن ہے۔"
+   "ur": "معکوس معلوم کرنے سے پہلے، ہمیں مقطع $|A|$ نکالنا ہوگا تاکہ پتہ چل سکے کہ حل ممکن ہے یا نہیں۔ چونکہ $|A| = 18$ صفر نہیں ہے، اس لیے قالب غیر نادر ہے اور اس کا حل ممکن ہے۔"
   },
   {
    "en": "We find the adjoint of matrix $A$ because it is a required part of the formula for the matrix inverse. Swapping the main diagonal entries and changing the other signs prepares the matrix for division by the determinant.",
-   "ur": "ہم کالب $A$ کا ایڈجوائنٹ معلوم کرتے ہیں کیونکہ یہ کالب کے معکوس کے کلیے کا لازمی حصہ ہے۔ وتر کے ارکان کی جگہ بدلنے اور باقی دو کی علامتیں تبدیل کرنے سے کالب مقطع سے تقسیم ہونے کے لیے تیار ہو جاتا ہے۔"
+   "ur": "ہم قالب $A$ کا ایڈجوائنٹ معلوم کرتے ہیں کیونکہ یہ قالب کے معکوس کے کلیے کا لازمی حصہ ہے۔ وتر کے ارکان کی جگہ بدلنے اور باقی دو کی علامتیں تبدیل کرنے سے قالب مقطع سے تقسیم ہونے کے لیے تیار ہو جاتا ہے۔"
   },
   {
    "en": "Using the definition of the multiplicative inverse, $A^{-1} = \\frac{1}{|A|}\\operatorname{Adj}A$, we combine our determinant and adjoint. This gives us the exact inverse matrix needed to isolate $X$.",
-   "ur": "ضربی معکوس کی تعریف $A^{-1} = \\frac{1}{|A|}\\operatorname{Adj}A$ استعمال کرتے ہوئے ہم مقطع اور ایڈجوائنٹ کو یکجا کرتے ہیں۔ اس سے ہمیں وہ معکوس کالب مل جاتا ہے جو $X$ کو الگ کرنے کے لیے ضروری ہے۔"
+   "ur": "ضربی معکوس کی تعریف $A^{-1} = \\frac{1}{|A|}\\operatorname{Adj}A$ استعمال کرتے ہوئے ہم مقطع اور ایڈجوائنٹ کو یکجا کرتے ہیں۔ اس سے ہمیں وہ معکوس قالب مل جاتا ہے جو $X$ کو الگ کرنے کے لیے ضروری ہے۔"
   },
   {
    "en": "From $AX = B$, multiplying both sides by $A^{-1}$ gives the working formula $X = A^{-1}B$. Performing this row-by-column multiplication directly calculates the numerical values for our variables.",
@@ -44,27 +44,27 @@
   },
   {
    "en": "Since two equal matrices have equal corresponding entries, the top value in $X$ is $x$ and the bottom value is $y$. This completes the matrix inversion method.",
-   "ur": "چونکہ دو مساوی کالبوں کے متناظرہ ارکان برابر ہوتے ہیں، اس لیے کالب $X$ کی اوپر والی قیمت $x$ اور نیچے والی قیمت $y$ ہے۔ یہاں کالب کے معکوس کا طریقہ مکمل ہوتا ہے۔"
+   "ur": "چونکہ دو مساوی قالبوں کے متناظرہ ارکان برابر ہوتے ہیں، اس لیے قالب $X$ کی اوپر والی قیمت $x$ اور نیچے والی قیمت $y$ ہے۔ یہاں قالب کے معکوس کا طریقہ مکمل ہوتا ہے۔"
   },
   {
    "en": "Now we solve the same system using Cramer's rule, which finds the unknowns directly using determinants without needing the matrix inverse.",
-   "ur": "اب ہم اسی نظام کو کریمر کے قانون سے حل کرتے ہیں، جو کالب کے معکوس کے بغیر صرف مقاطع کی مدد سے براہِ راست نامعلوم قیمتیں نکالتا ہے۔"
+   "ur": "اب ہم اسی نظام کو کریمر کے قانون سے حل کرتے ہیں، جو قالب کے معکوس کے بغیر صرف مقاطع کی مدد سے براہِ راست نامعلوم قیمتیں نکالتا ہے۔"
   },
   {
    "en": "Just as before, we write the system in matrix form so we can clearly see the columns of coefficients for $x$ and $y$, as well as the constants.",
-   "ur": "پہلے کی طرح، ہم مساواتوں کو کالب کی شکل میں لکھتے ہیں تاکہ $x$ اور $y$ کے عددی سروں کے کالم اور مستقل مقداریں واضح طور پر نظر آئیں۔"
+   "ur": "پہلے کی طرح، ہم مساواتوں کو قالب کی شکل میں لکھتے ہیں تاکہ $x$ اور $y$ کے عددی سروں کے کالم اور مستقل مقداریں واضح طور پر نظر آئیں۔"
   },
   {
    "en": "We find the determinant of the main coefficient matrix $A$, which will serve as the denominator in Cramer's rule. Getting $18$ again confirms the system can be solved.",
-   "ur": "ہم بنیادی عددی سروں کے کالب $A$ کا مقطع معلوم کرتے ہیں، جو کریمر کے قانون میں مخرج (بٹے کے نیچے) کے طور پر استعمال ہوگا۔ دوبارہ $18$ آنا اس بات کی تصدیق کرتا ہے کہ حل ممکن ہے۔"
+   "ur": "ہم بنیادی عددی سروں کے قالب $A$ کا مقطع معلوم کرتے ہیں، جو کریمر کے قانون میں مخرج (بٹے کے نیچے) کے طور پر استعمال ہوگا۔ دوبارہ $18$ آنا اس بات کی تصدیق کرتا ہے کہ حل ممکن ہے۔"
   },
   {
    "en": "By Cramer's rule, we form matrix $A_x$ by replacing the $x$-coefficients with the constant matrix $B$. Its determinant, $-108$, gives us the numerator needed to find $x$.",
-   "ur": "کریمر کے قانون کے مطابق، ہم $x$ کے عددی سروں کی جگہ مستقل کالب $B$ لکھ کر نیا کالب $A_x$ بناتے ہیں۔ اس کا مقطع $-108$ ہمیں $x$ معلوم کرنے کے لیے شمار کنندہ (بٹے کے اوپر والی رقم) دیتا ہے۔"
+   "ur": "کریمر کے قانون کے مطابق، ہم $x$ کے عددی سروں کی جگہ مستقل قالب $B$ لکھ کر نیا قالب $A_x$ بناتے ہیں۔ اس کا مقطع $-108$ ہمیں $x$ معلوم کرنے کے لیے شمار کنندہ (بٹے کے اوپر والی رقم) دیتا ہے۔"
   },
   {
    "en": "Similarly, we form matrix $A_y$ by replacing the $y$-coefficients with the constants from $B$. Its determinant, $27$, gives us the numerator needed to find $y$.",
-   "ur": "اسی طرح، ہم $y$ کے عددی سروں کی جگہ کالب $B$ کی مستقل مقداریں رکھ کر کالب $A_y$ بناتے ہیں۔ اس کا مقطع $27$ ہمیں $y$ معلوم کرنے کے لیے شمار کنندہ دیتا ہے۔"
+   "ur": "اسی طرح، ہم $y$ کے عددی سروں کی جگہ قالب $B$ کی مستقل مقداریں رکھ کر قالب $A_y$ بناتے ہیں۔ اس کا مقطع $27$ ہمیں $y$ معلوم کرنے کے لیے شمار کنندہ دیتا ہے۔"
   },
   {
    "en": "Finally, dividing $|A_x|$ and $|A_y|$ by the main determinant $|A|$ gives the values of $x$ and $y$. Getting the exact same answers by both methods confirms our work is correct.",
