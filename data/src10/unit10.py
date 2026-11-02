@@ -115,17 +115,36 @@ def circle_through(label, pts, names, prompt, intro=None):
 
 
 def arc_without_centre(label, prompt):
+    """The book's construction: equal chords on the arc, then the same exterior angle and the same chord length at every new
+    point, so the points are the corners of a regular polygon inscribed in the circle; joining them smoothly gives the circle."""
     O, r = (50, 32), 22
-    arc = {"t": "arc", "c": [50, 32], "r": 22, "a": [200, 340]}
-    marks = [on(O, r, a) for a in range(160, -200, -30)]
-    steps = [step(r"\text{Given arc } " + ("PQR" if "PQR" in prompt else "ABC"), r"Start from the given arc.", r"دی گئی قوس سے شروع کریں۔", draw=[arc]),
-             step(r"\text{Mark equal chords along the arc}", r"Keep the compasses at a fixed small opening; from one end step along the arc marking equal chords.",
-                  r"پرکار کو ایک ہی چھوٹے فاصلے پر رکھیں؛ قوس پر برابر وتر لگاتے جائیں۔", draw=[dot(p) for p in marks[:6]]),
-             step(r"\text{Continue the equal steps beyond the arc}", r"Equal chords subtend equal angles, so the steps keep to the same circle; carry on until you come back to the start.",
-                  r"برابر وتر برابر زاویے بناتے ہیں، اس لیے یہ قدم اسی دائرے پر رہتے ہیں؛ شروع تک واپس آنے تک جاری رکھیں۔", draw=[dot(p) for p in marks[6:]]),
-             step(r"\text{Join the points smoothly}", r"Join all the marked points with a smooth curve: the circle is complete without finding its centre.",
-                  r"تمام نقاط کو ہموار خم سے ملائیں: مرکز معلوم کیے بغیر دائرہ مکمل ہو گیا۔", draw=[circ(O, r)])]
-    return P(label, steps, "circle completed by stepping equal chords (no centre needed)", prompt=prompt)
+    pqr = "PQR" in prompt
+    V = list("PQRSTU") if pqr else list("ABCDEF")              # corners on the circle
+    X = list("ABCDE") if pqr else list("PQRST")                # points on the produced chords
+    pts = [on(O, r, 240 + 60 * k) for k in range(6)]           # three on the given arc, three found by the construction
+    out = [((pts[k][0] + 0.55 * (pts[k][0] - pts[k - 1][0])), (pts[k][1] + 0.55 * (pts[k][1] - pts[k - 1][1]))) for k in range(1, 6)]
+    arc = {"t": "arc", "c": [50, 32], "r": 22, "a": [-10, 130]}
+    a, b, c = V[0], V[1], V[2]
+    steps = [step(rf"\text{{Given arc }} {a}{b}{c},\quad {a}{b} = {b}{c}",
+                  rf"Mark three points ${a}$, ${b}$, ${c}$ on the given arc with the compasses at one fixed opening, so the chords ${a}{b}$ and ${b}{c}$ are equal.",
+                  rf"دی گئی قوس پر پرکار کے ایک ہی فاصلے سے تین نقاط ${a}$، ${b}$، ${c}$ لگائیں تاکہ وتر ${a}{b}$ اور ${b}{c}$ برابر ہوں۔",
+                  draw=[arc] + [dot(p) for p in pts[:3]] + [lab(pts[0], a, -4, 3), lab(pts[1], b, 1, 3), lab(pts[2], c, 1.5, 1)]),
+             step(rf"\text{{Produce }} {a}{b} \text{{ to }} {X[0]};\ \angle {X[0]}{b}{c} = \alpha",
+                  rf"Join ${a}{b}$ and ${b}{c}$. Produce ${a}{b}$ beyond ${b}$ to ${X[0]}$ and mark the exterior angle $\alpha = \angle {X[0]}{b}{c}$.",
+                  rf"${a}{b}$ اور ${b}{c}$ ملائیں۔ ${a}{b}$ کو ${b}$ سے آگے ${X[0]}$ تک بڑھائیں اور بیرونی زاویہ $\alpha = \angle {X[0]}{b}{c}$ لگائیں۔",
+                  draw=[line(pts[0], pts[1]), line(pts[1], pts[2]), line(pts[1], out[0], True), lab(out[0], X[0]), lab(pts[1], "α", 3, -2)]),
+             step(rf"\text{{Produce }} {b}{c} \text{{ to }} {X[1]};\ \angle {X[1]}{c}{V[3]} = \alpha,\ {c}{V[3]} = {a}{b}",
+                  rf"Produce ${b}{c}$ to ${X[1]}$. At ${c}$ copy the same angle $\alpha$ and cut off ${c}{V[3]}$ equal to ${a}{b}$. Equal chords turning through equal angles stay on the same circle, so ${V[3]}$ lies on it.",
+                  rf"${b}{c}$ کو ${X[1]}$ تک بڑھائیں۔ ${c}$ پر وہی زاویہ $\alpha$ بنائیں اور ${c}{V[3]}$ کو ${a}{b}$ کے برابر کاٹیں۔ برابر زاویوں سے مڑنے والے برابر وتر اسی دائرے پر رہتے ہیں، اس لیے ${V[3]}$ دائرے پر ہے۔",
+                  draw=[line(pts[2], out[1], True), lab(out[1], X[1]), line(pts[2], pts[3]), dot(pts[3]), lab(pts[3], V[3], 1.5, -1), lab(pts[2], "α", 2.5, -3)]),
+             step(rf"\text{{Repeat: }} {V[4]},\ {V[5]},\ \dots \text{{ until back at }} {a}",
+                  rf"Repeat at each new point: produce the last chord, copy the angle $\alpha$, cut off the same length. This gives ${V[4]}$, ${V[5]}$, and the last chord closes at ${a}$.",
+                  rf"ہر نئے نقطے پر یہی دہرائیں: آخری وتر بڑھائیں، زاویہ $\alpha$ بنائیں، وہی لمبائی کاٹیں۔ اس سے ${V[4]}$، ${V[5]}$ ملتے ہیں اور آخری وتر ${a}$ پر بند ہوتا ہے۔",
+                  draw=[line(pts[3], out[2], True), line(pts[3], pts[4]), line(pts[4], out[3], True), line(pts[4], pts[5]), line(pts[5], pts[0]),
+                        dot(pts[4]), dot(pts[5]), lab(pts[4], V[4], -2, -2), lab(pts[5], V[5], -5, 1)]),
+             step(r"\text{Join all the points with a smooth curve}", r"Join the points with a smooth curve through every corner: the circle is complete, and its centre was never needed.",
+                  r"تمام نقاط کو ایک ہموار خم سے ملائیں: دائرہ مکمل ہو گیا اور مرکز کی ضرورت نہیں پڑی۔", draw=[circ(O, r)])]
+    return P(label, steps, "circle completed by equal chords and equal exterior angles (no centre needed)", prompt=prompt)
 
 
 def tangent_at_point(label, r_cm, prompt):
@@ -192,13 +211,28 @@ def tangent_at_endpoint(label, prompt):
     O, r = (50, 30), 22
     Pp = on(O, r, 120)
     t = (math.sin(math.radians(120)), math.cos(math.radians(120)))
-    steps = [step(r"\text{Given arc } PQR \text{ with } P \text{ an endpoint}", r"Find the centre $O$ (perpendicular bisectors of two chords) if it is not given.",
-                  r"اگر مرکز نہ دیا ہو تو دو وتروں کے عمودی ناصف سے $O$ معلوم کریں۔", draw=[{"t": "arc", "c": [50, 30], "r": 22, "a": [-60, 240]}, dot(Pp), lab(Pp, "P"), dot(O), lab(O, "O")]),
-             step(r"\text{Join } OP", r"Draw the radius to $P$.", r"$P$ تک رداس کھینچیں۔", draw=[line(O, Pp)]),
-             step(r"\text{At } P \text{ draw a line } \perp OP", r"The perpendicular to the radius at $P$ is the tangent.", r"$P$ پر رداس کا عمود ہی مماس ہے۔",
+    Q, R = on(O, r, 30), on(O, r, -60)
+    u = ((Pp[0] - O[0]) / r, (Pp[1] - O[1]) / r)                  # unit vector along OP
+    C, D = (Pp[0] - 8 * u[0], Pp[1] - 8 * u[1]), (Pp[0] + 8 * u[0], Pp[1] + 8 * u[1])
+    T = (Pp[0] + 14 * t[0], Pp[1] + 14 * t[1])
+    steps = [step(r"\text{Given arc } PQR \text{ with } P \text{ an endpoint}", r"Draw the arc $PQR$; $P$ is one end of it.",
+                  r"قوس $PQR$ کھینچیں؛ $P$ اس کا ایک سرا ہے۔",
+                  draw=[{"t": "arc", "c": [50, 30], "r": 22, "a": [-120, 60]}, dot(Pp), lab(Pp, "P", 2, 4), dot(Q), lab(Q, "Q"), dot(R), lab(R, "R", 1.5, 3)]),
+             step(r"\text{Perpendicular bisectors of } PQ \text{ and } QR \text{ meet at } O",
+                  r"Join $PQ$ and $QR$ and construct the perpendicular bisector of each (arcs from both ends of the chord). They meet at the centre $O$.",
+                  r"$PQ$ اور $QR$ ملائیں اور ہر ایک کا عمودی ناصف بنائیں (وتر کے دونوں سروں سے قوسیں)۔ یہ مرکز $O$ پر ملتے ہیں۔",
+                  draw=[line(Pp, Q), line(Q, R), bisector(Pp, Q, 14), bisector(Q, R, 14), dot(O), lab(O, "O")]),
+             step(r"\text{Join } OP \text{ and produce it beyond } P", r"Draw the radius $OP$ and extend it a little beyond $P$.",
+                  r"رداس $OP$ کھینچیں اور اسے $P$ سے تھوڑا آگے بڑھائیں۔", draw=[line(O, D)]),
+             step(r"\text{With centre } P \text{ cut } OP \text{ at } C \text{ and } D;\ \text{arcs from } C, D \text{ meet at } T",
+                  r"With $P$ as centre draw an arc cutting the line $OP$ at $C$ and $D$ on either side of $P$. With $C$ and $D$ as centres and equal radius (more than $\frac{1}{2}CD$) draw arcs meeting at $T$.",
+                  r"$P$ کو مرکز بنا کر قوس کھینچیں جو خط $OP$ کو $P$ کے دونوں طرف $C$ اور $D$ پر کاٹے۔ $C$ اور $D$ کو مرکز بنا کر برابر رداس (آدھے $CD$ سے زیادہ) سے قوسیں کھینچیں جو $T$ پر ملیں۔",
+                  draw=[dot(C), dot(D), lab(C, "C", -5, 2), lab(D, "D", -5, -1), dot(T), lab(T, "T")]),
+             step(r"PT \perp OP \Rightarrow PT \text{ is the tangent at } P", r"Join $PT$. It is perpendicular to the radius $OP$ at its end, so it touches the arc only at $P$: it is the tangent.",
+                  r"$PT$ ملائیں۔ یہ رداس $OP$ کے سرے پر عمود ہے، اس لیے قوس کو صرف $P$ پر چھوتا ہے: یہی مماس ہے۔",
                   f"Abs(({Pp[0]}-{O[0]})*({t[0]:.12f}) + ({Pp[1]}-{O[1]})*({t[1]:.12f})) < 1e-6",
-                  draw=[line((Pp[0] - 18 * t[0], Pp[1] - 18 * t[1]), (Pp[0] + 18 * t[0], Pp[1] + 18 * t[1]))])]
-    return P(label, steps, "tangent at $P$ perpendicular to $OP$", prompt=prompt)
+                  draw=[line((Pp[0] - 16 * t[0], Pp[1] - 16 * t[1]), (Pp[0] + 16 * t[0], Pp[1] + 16 * t[1]))])]
+    return P(label, steps, "tangent $PT$ at $P$, perpendicular to $OP$", prompt=prompt)
 
 
 def tangent_at_midpoint(label, prompt):

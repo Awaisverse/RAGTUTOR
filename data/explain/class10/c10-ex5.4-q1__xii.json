@@ -5,6 +5,7 @@
  "math": [
   "[(x+3)(x+6)][(x+4)(x+5)] = (x^2 + 9x + 18)(x^2 + 9x + 20) = -1",
   "\\text{Let } y = x^2 + 9x",
+  "\\left(y + 18\\right) \\left(y + 20\\right) + 1 = 0 \\Rightarrow y^{2} + 38 y + 361 = 0",
   "y^{2} + 19 y + 19 y + 361 = 0",
   "y \\left(y + 19\\right) + 19 \\left(y + 19\\right) = 0",
   "\\left(y + 19\\right) \\left(y + 19\\right) = 0",
@@ -19,62 +20,66 @@
  ],
  "why": [
   {
-   "en": "In this type of four-factor equation, we pair the factors whose constant terms add up to the same number: $3+6=9$ and $4+5=9$. Multiplying these pairs gives us the exact same $x^2 + 9x$ part in both brackets, which will allow us to use substitution instead of expanding a messy degree-4 polynomial.",
-   "ur": "اس قسم کی چار اجزائے ضربی والی مساوات میں، ہم ان اجزاء کے جوڑے بناتے ہیں جن کے مستقل ارکان کا مجموعہ برابر ہو: $3+6=9$ اور $4+5=9$۔ ان جوڑوں کو ضرب دینے سے دونوں بریکٹوں میں بالکل ایک جیسا حصہ $x^2 + 9x$ آ جاتا ہے، جس سے ہم ایک پیچیدہ درجہ چہارم کی مساوات بنانے کے بجائے آسانی سے متبادل کا طریقہ استعمال کر سکتے ہیں۔"
+   "en": "In equations with four linear factors, we pair them so the sum of their constants is equal: $3 + 6 = 9$ and $4 + 5 = 9$. Multiplying these pairs gives us an identical expression, $x^2 + 9x$, in both brackets instead of a complicated degree-4 polynomial.",
+   "ur": "چار یک درجی اجزائے ضربی والی مساواتوں میں، ہم جوڑے اس طرح بناتے ہیں کہ ان کے مستقل نمبروں کا مجموعہ برابر ہو: $3 + 6 = 9$ اور $4 + 5 = 9$۔ ان جوڑوں کو ضرب دینے سے ایک پیچیدہ چار درجی کثیر رقمی کے بجائے دونوں بریکٹوں میں ایک جیسا جملہ $x^2 + 9x$ مل جاتا ہے۔"
   },
   {
-   "en": "We use the substitution method by replacing the repeated expression $x^2 + 9x$ with a single variable $y$. This reduces our complicated equation into a simple quadratic equation in terms of $y$: $(y+18)(y+20) = -1$.",
-   "ur": "ہم متبادل کا طریقہ استعمال کرتے ہوئے بار بار آنے والے جملے $x^2 + 9x$ کی جگہ ایک نیا متغیر $y$ رکھتے ہیں۔ اس سے ہماری پیچیدہ مساوات $y$ کی شکل میں ایک سادہ دو درجی مساوات $(y+18)(y+20) = -1$ میں بدل جاتی ہے۔"
+   "en": "We use the method of substitution to replace the repeated part $x^2 + 9x$ with a single variable $y$. This temporarily turns our hard fourth-degree equation into a much simpler quadratic equation.",
+   "ur": "ہم عملِ تبدیلی (substitution) کا استعمال کرتے ہوئے بار بار آنے والے حصے $x^2 + 9x$ کی جگہ ایک نیا متغیر $y$ فرض کرتے ہیں۔ اس سے ہماری مشکل چار درجی مساوات عارضی طور پر ایک بہت آسان دو درجی مساوات میں بدل جاتی ہے۔"
   },
   {
-   "en": "After expanding $(y+18)(y+20) = -1$ into standard form $y^2 + 38y + 361 = 0$, we apply mid-term breaking. This splits the middle term $38y$ into $19y + 19y$ so that we can factorize the equation by grouping.",
-   "ur": "بریکٹوں $(y+18)(y+20) = -1$ کو ضرب دے کر معیاری شکل $y^2 + 38y + 361 = 0$ بنانے کے بعد، ہم درمیانی رقم کو توڑنے کا طریقہ لگاتے ہیں۔ اس سے درمیانی رقم $38y$ دو حصوں $19y + 19y$ میں تقسیم ہو جاتی ہے تاکہ ہم گروپ بنا کر تجزی کر سکیں۔"
+   "en": "Substituting $y$, expanding the brackets, and shifting $-1$ to the left side gives us a quadratic equation in standard form ($ay^2 + by + c = 0$). Now we can easily factorize it to find the value of $y$.",
+   "ur": "$y$ کی قیمت درج کرنے، بریکٹوں کو ضرب دینے اور $-1$ کو بائیں طرف منتقل کرنے سے ہمیں معیاری شکل ($ay^2 + by + c = 0$) میں ایک دو درجی مساوات مل جاتی ہے۔ اب ہم $y$ کی قیمت معلوم کرنے کے لیے اس کی آسانی سے تجزی کر سکتے ہیں۔"
   },
   {
-   "en": "We factor by grouping, taking out the highest common factor from the first two terms and the last two terms separately. Seeing the identical bracket $(y + 19)$ appear twice confirms our mid-term breaking is correct.",
-   "ur": "ہم گروپ بنا کر تجزی کرتے ہیں، یعنی پہلی دو رقوم اور آخری دو رقوم میں سے الگ الگ مشترک جزو کو باہر نکالتے ہیں۔ ایک جیسی بریکٹ $(y + 19)$ کا دو بار آنا اس بات کی تصدیق کرتا ہے کہ ہم نے درمیانی رقم کو بالکل ٹھیک توڑا ہے۔"
+   "en": "To factorize by mid-term breaking, we need two numbers that multiply to $361$ and add up to $38$. Since $19 \\times 19 = 361$ and $19 + 19 = 38$, we split $38y$ into $19y + 19y$ to prepare for grouping.",
+   "ur": "درمیانی رقم کو توڑ کر تجزی کرنے کے لیے ہمیں ایسے دو اعداد چاہئیں جن کو ضرب دیں تو $361$ آئے اور جمع کریں تو $38$ بنے۔ چونکہ $19 \\times 19 = 361$ اور $19 + 19 = 38$ ہے، اس لیے ہم گروپ بنانے کی تیاری کے لیے $38y$ کو $19y + 19y$ میں توڑ لیتے ہیں۔"
   },
   {
-   "en": "By factoring out the common binomial $(y + 19)$, we turn the whole expression into a product of two linear factors. This completes the factorization of the quadratic in $y$.",
-   "ur": "مشترک دو رقمی جملے $(y + 19)$ کو باہر نکال کر، ہم پوری مساوات کو دو یک درجی اجزائے ضربی کے حاصل ضرب میں بدل دیتے ہیں۔ اس سے $y$ والی دو درجی مساوات کی تجزی مکمل ہو جاتی ہے۔"
+   "en": "We factor by grouping, taking $y$ common from the first two terms and $19$ from the last two. Seeing the exact same bracket $(y + 19)$ appear twice confirms our mid-term breaking is correct.",
+   "ur": "ہم گروپ بنا کر تجزی کرتے ہیں، پہلی دو رقموں سے $y$ اور آخری دو سے $19$ مشترک (common) لیتے ہیں۔ ایک جیسی بریکٹ $(y + 19)$ کا دو بار آنا اس بات کی تصدیق کرتا ہے کہ ہم نے درمیانی رقم بالکل ٹھیک توڑی ہے۔"
   },
   {
-   "en": "Using the zero-product property, if the product of two factors is zero, then at least one of the factors must be zero. This lets us break the quadratic equation into simple linear equations.",
-   "ur": "ضرب کے صفر ہونے کی خاصیت کے مطابق، اگر دو اجزاء کا حاصل ضرب صفر ہو تو ان میں سے کم از کم ایک جزو لازمی صفر ہوتا ہے۔ اس اصول کی مدد سے ہم دو درجی مساوات کو سادہ یک درجی مساواتوں میں توڑ لیتے ہیں۔"
+   "en": "By factoring out the common binomial $(y + 19)$, we rewrite the whole expression as a product of two linear factors. This is actually a perfect square, $(y + 19)^2 = 0$.",
+   "ur": "مشترک دو رقمی جملے $(y + 19)$ کو باہر نکال کر ہم پورے جملے کو دو یک درجی اجزائے ضربی کے حاصلِ ضرب کے طور پر لکھ لیتے ہیں۔ یہ دراصل ایک مکمل مربع $(y + 19)^2 = 0$ ہے۔"
   },
   {
-   "en": "Solving the linear equation gives us the value of our temporary variable $y$. Since both factors were identical, we get a single repeated value, $y = -19$.",
-   "ur": "یک درجی مساوات کو حل کرنے سے ہمیں اپنے عارضی متغیر $y$ کی قیمت مل جاتی ہے۔ چونکہ دونوں اجزائے ضربی ایک جیسے تھے، اس لیے ہمیں ایک ہی قیمت $y = -19$ حاصل ہوتی ہے۔"
+   "en": "According to the zero-product property, if the product of two factors is zero, at least one of them must be zero. Setting each factor to zero gives us simple linear equations.",
+   "ur": "ضربی صفر کی خاصیت (zero-product property) کے مطابق، اگر دو اجزائے ضربی کا حاصلِ ضرب صفر ہو تو ان میں سے کم از کم ایک لازمی صفر ہوتا ہے۔ ہر جزو کو صفر کے برابر رکھنے سے ہمیں سادہ یک درجی مساواتیں ملتی ہیں۔"
   },
   {
-   "en": "Our original question was about $x$, not $y$, so we now substitute $x^2 + 9x$ back in place of $y$. This gives us the actual quadratic equation in $x$ that we need to solve.",
-   "ur": "ہمارا اصل سوال $x$ کے بارے میں تھا نہ کہ $y$ کے بارے میں، اس لیے اب ہم $y$ کی جگہ واپس $x^2 + 9x$ درج کرتے ہیں۔ اس سے ہمیں $x$ میں وہ اصل دو درجی مساوات مل جاتی ہے جسے ہم نے حل کرنا ہے۔"
+   "en": "Since both factors are identical, solving them gives a single repeated root, $y = -19$. However, our original question is in $x$, so we are only halfway done.",
+   "ur": "چونکہ دونوں اجزائے ضربی ایک جیسے ہیں، اس لیے انہیں حل کرنے سے ہمیں ایک ہی مکرر روٹ $y = -19$ ملتا ہے۔ لیکن ہمارا اصل سوال $x$ میں ہے، اس لیے ابھی ہمارا آدھا کام مکمل ہوا ہے۔"
   },
   {
-   "en": "Moving $-19$ to the left side gives $x^2 + 9x + 19 = 0$, which cannot be easily factored by mid-term breaking. So, we compare it with the standard form $ax^2 + bx + c = 0$ to identify the coefficients for the quadratic formula.",
-   "ur": "$-19$ کو بائیں طرف لے جانے سے $x^2 + 9x + 19 = 0$ بنتا ہے، جس کی درمیانی رقم توڑ کر تجزی کرنا آسان نہیں ہے۔ اس لیے، ہم دو درجی کلیہ لگانے کی تیاری کے طور پر اس کا معیاری شکل $ax^2 + bx + c = 0$ سے موازنہ کر کے عددی سروں کی قیمتیں نکالتے ہیں۔"
+   "en": "Now we reverse our substitution and replace $y$ back with $x^2 + 9x$. This brings back the original variable $x$ and gives us a quadratic equation to solve.",
+   "ur": "اب ہم اپنی تبدیلی کو واپس پلٹتے ہیں اور $y$ کی جگہ دوبارہ $x^2 + 9x$ رکھتے ہیں۔ اس سے اصل متغیر $x$ واپس آ جاتا ہے اور ہمیں حل کرنے کے لیے ایک دو درجی مساوات مل جاتی ہے۔"
   },
   {
-   "en": "We substitute the values of $a$, $b$, and $c$ directly into the quadratic formula. This formula is a reliable rule that finds the roots of any quadratic equation, even when the roots involve surds.",
-   "ur": "ہم $a$، $b$ اور $c$ کی قیمتیں براہِ راست دو درجی کلیہ میں درج کرتے ہیں۔ یہ کلیہ ایک ایسا قابلِ اعتماد اصول ہے جو کسی بھی دو درجی مساوات کے جزر معلوم کر لیتا ہے، چاہے جواب میں جزر ہی کیوں نہ آ رہے ہوں۔"
+   "en": "Moving $-19$ to the left side gives $x^2 + 9x + 19 = 0$, which cannot be easily factorized by mid-term breaking. So, we compare it with $ax^2 + bx + c = 0$ to extract the coefficients $a = 1$, $b = 9$, and $c = 19$ for the quadratic formula.",
+   "ur": "$-19$ کو بائیں طرف لانے سے $x^2 + 9x + 19 = 0$ بنتا ہے، جس کی درمیانی رقم توڑ کر تجزی کرنا آسان نہیں ہے۔ اس لیے، دو درجی کلیہ لگانے کی خاطر ہم اس کا موازنہ $ax^2 + bx + c = 0$ سے کر کے عددی سر $a = 1$، $b = 9$ اور $c = 19$ نکالتے ہیں۔"
   },
   {
-   "en": "We simplify the expression under the square root (the discriminant) and the denominator using basic arithmetic. Getting a positive number $5$ under the root tells us that there are two real, irrational roots.",
-   "ur": "ہم عام حساب کتاب کی مدد سے جزر کے نیچے موجود رقم (فرق کنندہ) اور مخرج کو مختصر کرتے ہیں۔ جزر کے نیچے مثبت عدد $5$ کا آنا ہمیں بتاتا ہے کہ اس مساوات کے دو حقیقی اور غیر ناطق جزر ہیں۔"
+   "en": "We substitute the values of $a$, $b$, and $c$ directly into the quadratic formula. This formula is a reliable method that finds the roots of any quadratic equation, even when factors aren't whole numbers.",
+   "ur": "ہم $a$، $b$ اور $c$ کی قیمتیں براہِ راست دو درجی کلیے (quadratic formula) میں درج کرتے ہیں۔ یہ کلیہ ایک قابلِ اعتماد طریقہ ہے جو کسی بھی دو درجی مساوات کے روٹس معلوم کر لیتا ہے، چاہے اس کے اجزائے ضربی مکمل اعداد نہ بھی ہوں۔"
   },
   {
-   "en": "Since $\\sqrt{5}$ cannot be simplified into a whole number, we separate the plus and minus signs to clearly show the two distinct values of $x$.",
-   "ur": "چونکہ $\\sqrt{5}$ کو حل کر کے کوئی مکمل عدد نہیں بنایا جا سکتا، اس لیے ہم جمع اور تفریق کی علامتوں کو الگ الگ کر کے $x$ کی دونوں مختلف قیمتوں کو واضح طور پر لکھ دیتے ہیں۔"
+   "en": "We simplify the discriminant ($b^2 - 4ac$) under the square root, getting $81 - 76 = 5$. Since $5$ is positive but not a perfect square, our roots will be real, irrational numbers.",
+   "ur": "ہم جزر کے نیچے موجود فرق کنندہ ($b^2 - 4ac$) کو حل کرتے ہیں، جس سے $81 - 76 = 5$ ملتا ہے۔ چونکہ $5$ مثبت ہے لیکن مکمل مربع نہیں ہے، اس لیے ہمارے روٹس حقیقی اور غیر ناطق اعداد ہوں گے۔"
   },
   {
-   "en": "Finally, we write both values inside curly brackets to present the formal Solution Set (S.S.) of the given equation.",
-   "ur": "آخر میں، ہم دی گئی مساوات کے باقاعدہ حل سیٹ (S.S.) کو ظاہر کرنے کے لیے دونوں قیمتوں کو درمیانی بریکٹوں کے اندر لکھ دیتے ہیں۔"
+   "en": "We split the $\\pm$ sign to clearly write out the two distinct values of $x$. Because $\\sqrt{5}$ cannot be simplified further, we leave the answers in exact radical (surd) form.",
+   "ur": "ہم $\\pm$ کی علامت کو الگ الگ کر کے $x$ کی دو مختلف قیمتیں واضح طور پر لکھ لیتے ہیں۔ چونکہ $\\sqrt{5}$ کو مزید مختصر نہیں کیا جا سکتا، اس لیے ہم جوابات کو جزر کی شکل (اصم شکل) میں ہی رہنے دیتے ہیں۔"
+  },
+  {
+   "en": "Finally, we write both values inside curly brackets to present the Solution Set (S.S). Notice that normally a degree-4 equation has four roots, but because $y = -19$ was a repeated root, we get two repeated roots for $x$ here.",
+   "ur": "آخر میں، ہم حل سیٹ (S.S) کو ظاہر کرنے کے لیے دونوں قیمتوں کو درمیانی بریکٹ کے اندر لکھتے ہیں۔ غور کریں کہ عام طور پر چار درجی مساوات کے چار روٹس ہوتے ہیں، لیکن چونکہ $y = -19$ ایک مکرر روٹ تھا، اس لیے یہاں ہمیں $x$ کے بھی دو ہی روٹس ملے ہیں جو اصل میں دوہرائے جا رہے ہیں۔"
   }
  ],
  "meaning": {
-  "en": "The final answer means that $x = \\frac{-9 + \\sqrt{5}}{2}$ and $x = \\frac{-9 - \\sqrt{5}}{2}$ are the exact real numbers that make the original equation $(x+3)(x+4)(x+5)(x+6) = -1$ true. You can check this easily by noticing that for both of these $x$ values, the expression $x^2 + 9x$ equals $-19$; putting this into the paired form $(-19+18)(-19+20)$ gives $(-1)(1) = -1$, which matches the right-hand side.",
-  "ur": "آخری جواب کا مطلب یہ ہے کہ $x = \\frac{-9 + \\sqrt{5}}{2}$ اور $x = \\frac{-9 - \\sqrt{5}}{2}$ وہی اصل حقیقی اعداد ہیں جو دی گئی مساوات $(x+3)(x+4)(x+5)(x+6) = -1$ کو درست ثابت کرتے ہیں۔ آپ اس کی پڑتال باآسانی ایسے کر سکتے ہیں کہ $x$ کی ان دونوں قیمتوں کے لیے جملہ $x^2 + 9x$ برابر ہوتا ہے $-19$ کے؛ اسے جوڑوں والی شکل $(-19+18)(-19+20)$ میں رکھنے سے $(-1)(1) = -1$ ملتا ہے، جو کہ مساوات کی دائیں جانب کے بالکل برابر ہے۔"
+  "en": "The final answer means that $x = \\frac{-9 + \\sqrt{5}}{2}$ and $x = \\frac{-9 - \\sqrt{5}}{2}$ are the exact values that make the original equation $(x+3)(x+4)(x+5)(x+6) = -1$ true. If you plug either of these values into $x^2 + 9x$, it evaluates to $-19$, and putting that into the paired form $(-19 + 18)(-19 + 20)$ gives $(-1)(1) = -1$, which matches the right-hand side and verifies our solution.",
+  "ur": "حتمی جواب کا مطلب یہ ہے کہ $x = \\frac{-9 + \\sqrt{5}}{2}$ اور $x = \\frac{-9 - \\sqrt{5}}{2}$ وہ درست قیمتیں ہیں جو اصل مساوات $(x+3)(x+4)(x+5)(x+6) = -1$ کو درست ثابت کرتی ہیں۔ پڑتال کے لیے اگر آپ ان دونوں میں سے کوئی بھی قیمت $x^2 + 9x$ میں درج کریں تو جواب $-19$ آتا ہے، اور اسے جوڑوں والی شکل $(-19 + 18)(-19 + 20)$ میں رکھنے سے $(-1)(1) = -1$ ملتا ہے، جو دائیں طرف کے برابر ہے اور ہمارے حل کے درست ہونے کی تصدیق کرتا ہے۔"
  },
  "source": "gemini-4-argon via Vertex AI",
- "made": "2026-11-01"
+ "made": "2026-11-02"
 }

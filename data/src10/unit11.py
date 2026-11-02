@@ -99,8 +99,16 @@ def ogive(label, classes, f, asks, prompt, k_ans=0):
     for name, pt, pos in asks:
         s, v = quantile(name, pt, pos, classes, f, cf, 2)
         y = float(pos)
-        s["draw"] = [{"t": "line", "p": [g.X(xs[0]), g.Y(y), g.X(float(v)), g.Y(y)], "dash": True},
-                     {"t": "line", "p": [g.X(float(v)), g.Y(y), g.X(float(v)), g.Y(0)], "dash": True}]
+        short = name.replace("_", "").replace("{", "").replace("}", "")
+        # read graphically: across from the c.f. axis to the ogive, then down to the scores axis; between two plotted points
+        # the ogive is a straight line, so the reading is the interpolation L + (position - c.f.)/f x h
+        s["en"] = (f"Graphically: go across from {sp.latex(Q(pos))} on the c.f. axis to the ogive, then straight down to the scores axis. "
+                   f"The ogive is a straight line between the plotted points, so the reading is exactly $L + \\frac{{\\text{{position}} - c.f.}}{{f}} \\times h$.")
+        s["ur"] = (f"گراف سے: مجموعی تعدد کے محور پر {sp.latex(Q(pos))} سے افقی چل کر اوجائیو تک جائیں، پھر سیدھا نیچے نمبروں کے محور تک۔ "
+                   f"نقاط کے درمیان اوجائیو سیدھی لکیر ہے، اس لیے یہ پڑھائی بالکل $L + \\frac{{\\text{{position}} - c.f.}}{{f}} \\times h$ ہے۔")
+        s["draw"] = [{"t": "line", "p": [6, g.Y(y), g.X(float(v)), g.Y(y)], "dash": True},
+                     {"t": "line", "p": [g.X(float(v)), g.Y(y), g.X(float(v)), g.Y(0)], "dash": True},
+                     {"t": "text", "p": [g.X(float(v)) - 2, g.Y(0) + 8], "s": short}]
         steps.append(s)
         vals[name] = v
     iqr = vals["Q_3"] - vals["Q_1"]
@@ -135,7 +143,7 @@ def box_draw(mn, q1, md, q3, mx, lo, hi):
             {"t": "text", "p": [X(q1) - 2, y - 9], "s": "Q1"}, {"t": "text", "p": [X(md) - 3, y - 9], "s": "Med"}, {"t": "text", "p": [X(q3) - 2, y - 9], "s": "Q3"}]
 
 
-def five_number(label, data, prompt, extra=True):
+def five_number(label, data, prompt, extra=True, extremes=False):
     d = sorted(data, key=lambda v: Q(v))
     n = len(d)
     md, q1, q3 = item(d, R(n + 1, 2)), item(d, R(n + 1, 4)), item(d, R(3 * (n + 1), 4))
@@ -156,6 +164,8 @@ def five_number(label, data, prompt, extra=True):
     ans = f"Median = {sp.latex(md)}, Q1 = {sp.latex(q1)}, Q3 = {sp.latex(q3)}"
     if extra:
         ans += f", Range = {sp.latex(mx - mn)}, IQR = {sp.latex(q3 - q1)}"
+    if extremes:                                  # the question asks for the extreme values too
+        ans += f", Min = {sp.latex(mn)}, Max = {sp.latex(mx)}"
     return P(label, steps, ans, prompt=prompt)
 
 
@@ -214,7 +224,7 @@ def regression(xs, ys, x_name="x", y_name="y", k=4):
                f"{' + '.join(py(v) for v in xs)} == {py(sx)}", f"{' + '.join(py(v) for v in ys)} == {py(sy)}",
                f"{' + '.join(f'{py(p)}*{py(q)}' for p, q in zip(xs, ys))} == {py(sxy)}", f"{' + '.join(f'{py(p)}**2' for p in xs)} == {py(sx2)}"),
              S(rf"b = \frac{{n\sum {x_name}{y_name} - \sum {x_name}\sum {y_name}}}{{n\sum {x_name}^2 - (\sum {x_name})^2}} \approx {fmt(b, k)},\quad a = \frac{{\sum {y_name} - b\sum {x_name}}}{{n}} \approx {fmt(a, k)}",
-               "Least-squares line $\\hat{y} = a + bx$.", "کم سے کم مربعوں کا خط $\\hat{y} = a + bx$۔",
+               f"Least-squares line $\\hat{{{y_name}}} = a + b{x_name}$.", f"کم سے کم مربعوں کا خط $\\hat{{{y_name}}} = a + b{x_name}$۔",
                near(f"({n}*{py(sxy)} - {py(sx)}*{py(sy)})/({n}*{py(sx2)} - {py(sx)}**2)", fmt(b, k), k), near(f"({py(sy)} - ({py(b)})*{py(sx)})/{n}", fmt(a, k), k)),
              S(rf"r = \frac{{n\sum {x_name}{y_name} - \sum {x_name}\sum {y_name}}}{{\sqrt{{[n\sum {x_name}^2 - (\sum {x_name})^2][n\sum {y_name}^2 - (\sum {y_name})^2]}}}} \approx {fmt(r, 3)}",
                "Correlation coefficient: close to $+1$ strong positive, close to $-1$ strong negative.", "ارتباطی سر: $+1$ کے قریب مضبوط مثبت، $-1$ کے قریب مضبوط منفی۔",
@@ -253,7 +263,8 @@ ex("ex11.1", 2, "Construct an ogive for the following distribution of scores: 69
 ex("ex11.1", 3, r"Find $Q_1$, $Q_3$, median, range and $IQR$ for the dataset given below: 3, 6, 8, 4, 7, 5, 10, 11, 13, 9, 14, 12, 15, 16, 17. Also draw a box-and-whisker plot.",
    [five_number("", [3, 6, 8, 4, 7, 5, 10, 11, 13, 9, 14, 12, 15, 16, 17], "")], "11.1", figure_h=55)
 ex("ex11.1", 4, r"Find $Q_1$, $Q_3$, median, range, $IQR$ and extreme values plot for the following data: 102, 98, 95, 100, 93, 110, 108, 104, 97, 96, 92, 101, 99, 105, 107. "
-   "Also draw a box-and-whisker plot.", [five_number("", [102, 98, 95, 100, 93, 110, 108, 104, 97, 96, 92, 101, 99, 105, 107], "")], "11.1", figure_h=55)
+   "Also draw a box-and-whisker plot.", [five_number("", [102, 98, 95, 100, 93, 110, 108, 104, 97, 96, 92, 101, 99, 105, 107], "", extremes=True)], "11.1", figure_h=55)
+UNIT["items"][-1]["parts"][0]["key_note"] = {"en": "The question also asks for the extreme values (minimum and maximum); the book's answer box leaves them out.", "ur": "سوال میں انتہائی قیمتیں (کم سے کم اور زیادہ سے زیادہ) بھی پوچھی گئی ہیں؛ کتاب کے جواب میں یہ شامل نہیں۔"}
 one("ex11.1", 5, r"Find $Q_1$, $Q_3$, median, minimum and maximum values for the following box-and-whisker plot (as drawn in the book).", [
     (r"\text{Minimum} = 10,\ Q_1 = 22,\ \text{Median} = 25,\ Q_3 = 35,\ \text{Maximum} = 46", "Read the ends of the whiskers, the edges of the box and the line inside the box.",
      "لکیروں کے سرے، باکس کے کنارے اور باکس کے اندر کی لکیر پڑھیں۔", [], )], "Min = 10, Q1 = 22, Median = 25, Q3 = 35, Max = 46", "11.1")
@@ -269,7 +280,11 @@ st7, a7, b7, r7 = regression(X7, Y7)
 st7[0]["draw"] = scatter_draw(X7, Y7, a7, b7)
 ex("ex11.1", 7, "Construct a scatter diagram and draw a line of best fit for the following quiz scores for 8 students in a class: 1st quiz 14, 28, 34, 36, 43, 45, 46, 49; "
    "2nd quiz 16, 20, 33, 35, 38, 39, 42, 43. Describe correlation between 1st and 2nd quiz scores also.",
-   [P("", st7 + [S(r"\text{" + kind(r7) + "}", "As the first score increases the second score also increases; the points lie close to a rising line.",
+   [P("", [T("Plot each student as a point (1st quiz, 2nd quiz): (14, 16), (28, 20), (34, 33), (36, 35), (43, 38), (45, 39), (46, 42), (49, 43).",
+             "ہر طالب علم کو ایک نقطہ (پہلا کوئز، دوسرا کوئز) کے طور پر لگائیں۔")] + st7[:2] + [
+       T("The line of best fit passes through the middle of the points with about as many points above it as below. The least-squares line above places it exactly; "
+         "a line drawn by eye in the same place is also accepted.", "بہترین خط نقاط کے درمیان سے گزرتا ہے، اوپر اور نیچے تقریباً برابر نقاط۔ اوپر کا خط اسے بالکل درست جگہ رکھتا ہے؛ آنکھ سے اسی جگہ کھینچا گیا خط بھی درست ہے۔"),
+       S(r"\text{" + kind(r7) + "}", "As the first score increases the second score also increases; the points lie close to a rising line.",
                    "پہلے نمبر بڑھنے سے دوسرے نمبر بھی بڑھتے ہیں؛ نقاط ایک چڑھتی لکیر کے قریب ہیں۔")], "strong positive correlation")], "11.1", figure_h=70)
 
 X8, Y8 = [20, 38, 70, 40, 100, 110, 50, 136, 150, 80], [160, 142, 130, 120, 70, 50, 140, 44, 36, 100]
@@ -279,7 +294,7 @@ est8 = a8 + b8 * 60
 ex("ex11.1", 8, "The following table shows the test scores (one measuring speed and the other measuring strength) of football players out of 200: 1st Test 20, 38, 70, 40, 100, 110, 50, "
    "136, 150, 80; 2nd Test 160, 142, 130, 120, 70, 50, 140, 44, 36, 100. (i) Construct a scatter diagram and draw a line of best fit. (ii) Describe correlation between the 1st and 2nd "
    "tests. (iii) Abdullah scores 60 in the 2nd test. Estimate his score in the 1st test.", [
-       P("i", [T("Plot (1st test, 2nd test) for each player and draw the line of best fit (here the regression of the 1st test on the 2nd).",
+       P("i", [T("Let $x$ = 1st test and $y$ = 2nd test. Plot $(x, y)$ for each player and draw the line of best fit; here it is the line of $x$ on $y$, $\\hat{x} = a + by$, because part (iii) estimates the 1st test from the 2nd.",
                  "ہر کھلاڑی کے لیے نقطہ لگائیں اور بہترین خط کھینچیں۔")] + st8[:2], "scatter diagram with a falling line of best fit", prompt="scatter diagram and line of best fit"),
        P("ii", [st8[2], S(r"\text{" + kind(r8) + "}", "One score rises as the other falls.", "ایک نمبر بڑھتا ہے تو دوسرا گھٹتا ہے۔")], "strong negative correlation", prompt="correlation"),
        P("iii", [S(rf"x = a + by = {fmt(a8, 2)} + ({fmt(b8, 4)})(60) \approx {fmt(est8, 1)}", "Put $y = 60$ in the line of the 1st test on the 2nd test.",

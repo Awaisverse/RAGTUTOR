@@ -130,13 +130,16 @@ ex("ex6.1", 2, "Plot the following points on the coordinate plane: " + " ".join(
       f"{p[0]}*{p[1]} == {p[0] * p[1]}", draw=g.point(p[0], p[1], f"{n}({p[0]}, {p[1]})")) for l, n, p in PL],
     "plotted: " + ", ".join(f"{n}({p[0]}, {p[1]}) in quadrant {quadrant(p)}" for _, n, p in PL))], "6.1", figure_h=70)
 
-TT = [("i", "B", "A"), ("ii", "P", "Q"), ("iii", "S", "R"), ("iv", "M", "N"), ("v", "A", "B"), ("vi", "D", "C")]
+# each vector drawn the way the book draws it: (tail point, tip point) on the 100 x 60 figure
+TT = [("i", "B", "A", (70, 45), (30, 15)), ("ii", "P", "Q", (50, 10), (50, 50)), ("iii", "S", "R", (70, 45), (30, 15)),
+      ("iv", "M", "N", (30, 15), (70, 45)), ("v", "A", "B", (30, 45), (70, 15)), ("vi", "D", "C", (30, 15), (70, 45))]
 ex("ex6.1", 3, "Name the tail and tip of the following vectors (as drawn in the book: (i) from $B$ to $A$, (ii) from $P$ to $Q$, (iii) from $S$ to $R$, "
    "(iv) from $M$ to $N$, (v) from $A$ to $B$, (vi) from $D$ to $C$).", [
        P(l, [S(rf"\text{{Tail}} = {t},\quad \text{{Tip}} = {h}", "The tail is the starting point; the tip is where the arrowhead is.",
-               "دم ابتدائی نقطہ ہے؛ سرا وہ ہے جہاں تیر کا نشان ہے۔", draw=[{"t": "line", "p": [30, 45, 70, 15], "arrow": True},
-                                                                         {"t": "text", "p": [24, 50], "s": t}, {"t": "text", "p": [72, 12], "s": h}])],
-         f"Tail = {t}, Tip = {h}", prompt=f"vector from ${t}$ to ${h}$") for l, t, h in TT], "6.1")
+               "دم ابتدائی نقطہ ہے؛ سرا وہ ہے جہاں تیر کا نشان ہے۔", draw=[{"t": "line", "p": [*a, *b], "arrow": True},
+                                                                         {"t": "text", "p": [a[0] + (3 if a[0] >= b[0] else -6), a[1] + (5 if a[1] >= b[1] else -2)], "s": t},
+                                                                         {"t": "text", "p": [b[0] + (3 if b[0] > a[0] else -6), b[1] + (5 if b[1] > a[1] else -2)], "s": h}])],
+         f"Tail = {t}, Tip = {h}", prompt=f"vector from ${t}$ to ${h}$") for l, t, h, a, b in TT], "6.1")
 
 AB4 = [("i", (1, -7), (-2, 4)), ("ii", (8, 9), (12, 3))]
 ex("ex6.1", 4, r"Write the vector $\overrightarrow{AB}$ in the form of $x\underline{i}+y\underline{j}$: (i) $A(1,-7), B(-2,4)$ (ii) $A(8,9), B(12,3)$", [

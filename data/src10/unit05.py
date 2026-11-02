@@ -214,7 +214,10 @@ Q54.append(reducible("x", r"$2x^4-5x^3-14x^2-5x+2=0$", "2*x**4-5*x**3-14*x**2-5*
 def prod_sub(label, prompt, original_py, pairing_tex, pair_check, ydef, poly_y, backs):
     pre = [(pairing_tex, "Pair the factors so that both products have the same $x^2$ and $x$ terms.",
             "اجزاء کی جوڑی ایسے بنائیں کہ دونوں حاصل ضرب میں $x^2$ اور $x$ کے ارکان ایک جیسے ہوں۔", [pair_check]),
-           (rf"\text{{Let }} y = {ydef}", "Put $y$ for the common part.", "مشترک حصے کی جگہ $y$ رکھیں۔", [])]
+           (rf"\text{{Let }} y = {ydef}", "Put $y$ for the common part.", "مشترک حصے کی جگہ $y$ رکھیں۔", []),
+           (rf"{sp.latex(sp.sympify(poly_y, evaluate=False))} = 0 \Rightarrow {sp.latex(sp.expand(sp.sympify(poly_y)))} = 0",
+            "Write the equation in $y$ and multiply out to get a quadratic in standard form.", "مساوات کو $y$ میں لکھیں اور ضرب دے کر معیاری دو درجی مساوات بنائیں۔",
+            [f"expand({poly_y}) == {sp.sstr(sp.expand(sp.sympify(poly_y)))}"])]
     return reducible(label, prompt, original_py, pre, poly_y, f"y = {ydef}", backs)
 
 

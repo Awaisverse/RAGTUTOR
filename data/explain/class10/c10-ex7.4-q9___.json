@@ -3,43 +3,33 @@
  "label": "",
  "answer_ref": "$156.2$ km",
  "math": [
-  "a = 100\\text{ km}, \\quad b = 120\\text{ km}",
-  "\\theta = 135^\\circ - 45^\\circ = 90^\\circ",
-  "d^2 = a^2 + b^2 - 2ab\\cos\\theta",
-  "d^2 = 100^2 + 120^2 - 2(100)(120)\\cos 90^\\circ",
-  "d^2 = 10000 + 14400 - 24000(0) = 24400",
-  "d = \\sqrt{24400} \\approx 156.2\\text{ km}"
+  "\\text{At } B:\\ \\angle(\\text{South}, BA) = 45^\\circ",
+  "\\angle(\\text{South}, BC) = 180^\\circ - 135^\\circ = 45^\\circ",
+  "\\angle ABC = 45^\\circ + 45^\\circ = 90^\\circ",
+  "d^2 = 100^2 + 120^2 - 2(100)(120)\\cos 90^\\circ = 24400 \\Rightarrow d \\approx 156.2\\ \\text{km}"
  ],
  "why": [
   {
-   "en": "In geometry problems, we start by clearly naming the points and sides so we can turn the ship's journey into a triangle. This tells us that we know two sides, $a = 100\\text{ km}$ and $b = 120\\text{ km}$, and we are looking for the third side, $d$.",
-   "ur": "جیومیٹری کے سوالات میں، ہم سب سے پہلے نقاط اور اضلاع کو واضح نام دیتے ہیں تاکہ جہاز کے سفر کو ایک مثلث کی شکل دے سکیں۔ اس سے ہمیں معلوم ہوتا ہے کہ ہمیں دو اضلاع $a = 100\\text{ km}$ اور $b = 120\\text{ km}$ دیے گئے ہیں، اور ہمیں تیسرا ضلع $d$ معلوم کرنا ہے۔"
+   "en": "To find the total distance, we first need the interior angle at the turning point $B$. Since all North-South lines are parallel, the rule of alternate angles tells us that the angle looking back from $B$ to $A$ is also $45^\\circ$ from the South line.",
+   "ur": "کل فاصلہ معلوم کرنے کے لیے، ہمیں پہلے مڑنے کے مقام $B$ پر اندرونی زاویہ معلوم کرنا ہوگا۔ چونکہ تمام شمال-جنوب لائنیں متوازی ہوتی ہیں، اس لیے متبادل زاویوں کا اصول ہمیں بتاتا ہے کہ $B$ سے واپس $A$ کی طرف بننے والا زاویہ بھی جنوب کی لائن کے ساتھ $45^\\circ$ ہی ہے۔"
   },
   {
-   "en": "Bearings are always measured clockwise from North, so we subtract the first bearing from the second to find the exact angle of the turn. Getting $90^\\circ$ tells us the very helpful fact that the ship's path forms a right-angled triangle at the turning point.",
-   "ur": "بیرنگ (سمت) ہمیشہ شمال سے گھڑی کی سمت میں ناپی جاتی ہے، اس لیے ہم موڑ کا صحیح زاویہ معلوم کرنے کے لیے دوسرے زاویے میں سے پہلا زاویہ تفریق کرتے ہیں۔ $90^\\circ$ کا جواب ہمیں یہ نہایت مفید بات بتاتا ہے کہ جہاز کا راستہ مڑنے کے مقام پر ایک قائمہ الزاویہ مثلث بناتا ہے۔"
+   "en": "A straight North-South line forms an angle of $180^\\circ$. Since the new bearing from North is $135^\\circ$, subtracting this from $180^\\circ$ gives us the remaining $45^\\circ$ angle between the new path $BC$ and the South line.",
+   "ur": "ایک سیدھی شمال-جنوب لائن $180^\\circ$ کا زاویہ بناتی ہے۔ چونکہ شمال سے نئی سمت $135^\\circ$ ہے، اس لیے اسے $180^\\circ$ میں سے تفریق کرنے سے ہمیں نئے راستے $BC$ اور جنوب کی لائن کے درمیان باقی ماندہ $45^\\circ$ کا زاویہ مل جاتا ہے۔"
   },
   {
-   "en": "When we know two sides of a triangle and the included angle between them, the Law of Cosines is the general rule to find the opposite side. Setting up this formula connects our known distances and angle directly to the unknown distance $d$.",
-   "ur": "جب ہمیں کسی مثلث کے دو اضلاع اور ان کے درمیان والا زاویہ معلوم ہو، تو سامنے والا ضلع معلوم کرنے کے لیے لا آف کوسائنز (Law of Cosines) کا اصول استعمال کیا جاتا ہے۔ یہ فارمولا لکھنے سے ہمارے معلوم فاصلوں اور زاویے کا براہِ راست تعلق نامعلوم فاصلے $d$ سے جڑ جاتا ہے۔"
+   "en": "Now we can find the complete interior angle of our triangle at corner $B$ by using the angle addition postulate. Adding the two $45^\\circ$ angles on either side of the South line reveals that the ship actually made a $90^\\circ$ right-angled turn.",
+   "ur": "اب ہم زاویوں کی جمع کے اصول کو استعمال کرتے ہوئے کونے $B$ پر اپنی مثلث کا مکمل اندرونی زاویہ معلوم کر سکتے ہیں۔ جنوب کی لائن کے دونوں طرف موجود دو $45^\\circ$ کے زاویوں کو جمع کرنے سے پتہ چلتا ہے کہ جہاز نے اصل میں $90^\\circ$ کا قائمہ زاویہ مڑا تھا۔"
   },
   {
-   "en": "Now we replace the letters in the formula with the actual numbers from our problem so we can calculate the value. This turns the general trigonometry rule into a specific arithmetic equation for $d^2$.",
-   "ur": "اب ہم قیمت معلوم کرنے کے لیے فارمولے میں موجود حروف کی جگہ سوال میں دیے گئے اصل اعداد درج کرتے ہیں۔ اس سے ٹرگنومیٹری کا یہ عمومی اصول $d^2$ کے لیے ایک مخصوص حسابی مساوات میں بدل جاتا ہے۔"
-  },
-  {
-   "en": "Using the trigonometric value $\\cos 90^\\circ = 0$, the last part of the formula disappears, which actually reduces the Law of Cosines to the simple Pythagoras theorem! Adding the squares gives us the exact value of $d^2 = 24400$.",
-   "ur": "ٹرگنومیٹری کی قیمت $\\cos 90^\\circ = 0$ استعمال کرنے سے فارمولے کا آخری حصہ ختم ہو جاتا ہے، جس سے لا آف کوسائنز دراصل سادہ مسئلہ فیثاغورث بن جاتا ہے! مربعات کو جمع کرنے سے ہمیں $d^2 = 24400$ کی قیمت مل جاتی ہے۔"
-  },
-  {
-   "en": "Since $24400$ is the square of the distance ($d^2$), we must take the square root to undo the square and find the actual length $d$. This final step gives us the straight-line distance in kilometers.",
-   "ur": "چونکہ $24400$ فاصلے کا مربع ($d^2$) ہے، اس لیے مربع ختم کرنے اور اصل لمبائی $d$ معلوم کرنے کے لیے ہم دونوں طرف جذر لیتے ہیں۔ یہ آخری قدم ہمیں کلومیٹر میں سیدھا فاصلہ بتا دیتا ہے۔"
+   "en": "With two sides ($100\\text{ km}$ and $120\\text{ km}$) and the included angle of $90^\\circ$ known, we apply the law of cosines (which simplifies to the Pythagorean theorem here since $\\cos 90^\\circ = 0$). Taking the square root of $24400$ gives the direct distance from the start to the end.",
+   "ur": "دو اضلاع ($100\\text{ km}$ اور $120\\text{ km}$) اور ان کے درمیانی زاویہ $90^\\circ$ کے معلوم ہونے پر، ہم قانونِ کوسائن لاگو کرتے ہیں (جو یہاں مسئلہ فیثاغورث بن جاتا ہے کیونکہ $\\cos 90^\\circ = 0$ ہوتا ہے)۔ $24400$ کا جزر لینے سے ہمیں نقطہ آغاز سے انجام تک کا سیدھا فاصلہ مل جاتا ہے۔"
   }
  ],
  "meaning": {
-  "en": "The final answer of $156.2\\text{ km}$ means that if the ship had sailed directly in a straight line from its starting point to its final destination, it would have traveled $156.2\\text{ km}$. This makes good sense to check because the hypotenuse ($156.2\\text{ km}$) must be longer than both individual legs ($100\\text{ km}$ and $120\\text{ km}$) of the right-angled triangle.",
-  "ur": "$156.2\\text{ km}$ کے حتمی جواب کا مطلب یہ ہے کہ اگر جہاز اپنے نقطہ آغاز سے آخری مقام تک بالکل سیدھی لائن میں سفر کرتا، تو اسے $156.2\\text{ km}$ کا فاصلہ طے کرنا پڑتا۔ اس جواب کی درستی کو یوں بھی پرکھا جا سکتا ہے کہ قائمہ الزاویہ مثلث کا وتر ($156.2\\text{ km}$) ہمیشہ باقی دونوں اضلاع ($100\\text{ km}$ اور $120\\text{ km}$) سے لمبا ہونا چاہیے۔"
+  "en": "The final answer means that the ship is now approximately $156.2\\text{ km}$ away in a straight line from its starting point $A$. This makes good sense because in a right-angled triangle, the hypotenuse ($156.2\\text{ km}$) must be longer than either of the two individual legs ($100\\text{ km}$ and $120\\text{ km}$).",
+  "ur": "حتمی جواب کا مطلب یہ ہے کہ جہاز اب اپنے نقطہ آغاز $A$ سے سیدھی لائن میں تقریباً $156.2\\text{ km}$ کے فاصلے پر ہے۔ یہ جواب بالکل درست لگتا ہے کیونکہ ایک قائمہ الزاویہ مثلث میں، وتر ($156.2\\text{ km}$) کو باقی دونوں اضلاع ($100\\text{ km}$ اور $120\\text{ km}$) سے لمبا ہونا چاہیے۔"
  },
  "source": "gemini-4-argon via Vertex AI",
- "made": "2026-11-01"
+ "made": "2026-11-02"
 }

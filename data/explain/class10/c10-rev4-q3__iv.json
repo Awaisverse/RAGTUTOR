@@ -5,41 +5,41 @@
  "math": [
   "g(x) = 14 + 2x",
   "(g\\circ g)(x) = g(g(x))",
-  "",
+  "(g\\circ g)(x) = g(14 + 2x)",
   "(g\\circ g)(x) = 14 + 2(14 + 2x)",
   "(g\\circ g)(x) = 14 + 28 + 4x",
   "(g\\circ g)(x) = 4 x + 42"
  ],
  "why": [
   {
-   "en": "Since we only need to find $(g\\circ g)(x)$ in this part, we focus purely on the rule for function $g(x)$ and can ignore $f(x)$. Having $g(x) = 14 + 2x$ clearly in front of us makes the upcoming substitution much easier.",
-   "ur": "چونکہ اس حصے میں ہمیں صرف $(g\\circ g)(x)$ معلوم کرنا ہے، اس لیے ہم صرف فنکشن $g(x)$ کے اصول پر توجہ دیں گے اور $f(x)$ کو نظر انداز کر دیں گے۔ $g(x) = 14 + 2x$ کو سامنے لکھنے سے اگلے مراحل میں قیمتیں درج کرنا بہت آسان ہو جاتا ہے۔"
+   "en": "Since we are asked to find the composition $(g\\circ g)(x)$, we only need the rule for the function $g(x)$. Writing it down first keeps our main formula clearly in front of us so we do not confuse it with $f(x)$.",
+   "ur": "چونکہ ہمیں $(g\\circ g)(x)$ معلوم کرنا ہے، اس لیے ہمیں صرف تفاعل $g(x)$ کی ضرورت ہے۔ اسے سب سے پہلے لکھ لینے سے اصل فارمولا ہمارے سامنے رہتا ہے اور $f(x)$ کے ساتھ کوئی الجھن نہیں ہوتی۔"
   },
   {
-   "en": "We use the definition of composition of functions to rewrite the circle notation as nested brackets, $g(g(x))$. This tells us that the output of the function $g(x)$ will become the new input for the same function $g$.",
-   "ur": "ہم تفاعل کی ترکیب (composition of functions) کی تعریف استعمال کرتے ہوئے اس علامت کو بریکٹ کی شکل میں یعنی $g(g(x))$ لکھتے ہیں۔ اس سے ہمیں پتہ چلتا ہے کہ فنکشن $g(x)$ کا جواب خود اسی فنکشن $g$ کے لیے نئے اِن پٹ (input) کا کام کرے گا۔"
+   "en": "We use the definition of composition of functions here. The circle symbol means that the output of the inner function $g(x)$ becomes the input for the outer function $g$.",
+   "ur": "یہاں ہم تفاعلات کی ترکیب (composition of functions) کی تعریف استعمال کر رہے ہیں۔ دائرے کی علامت کا مطلب ہے کہ اندرونی تفاعل $g(x)$ کا جواب بیرونی تفاعل $g$ کے لیے اِن پٹ (input) بن جائے گا۔"
   },
   {
-   "en": "In composite functions, we always work from the inside out. By replacing the inner $g(x)$ with its actual expression $14 + 2x$, we can clearly see the exact quantity that needs to be fed into the outer function $g$.",
-   "ur": "مرکب تفاعلات میں ہم ہمیشہ اندر سے باہر کی طرف حل کرتے ہیں۔ اندرونی $g(x)$ کی جگہ اس کی اصل قیمت $14 + 2x$ رکھنے سے ہمیں واضح طور پر نظر آتا ہے کہ بیرونی فنکشن $g$ میں کون سی رقم درج کرنی ہے۔"
+   "en": "In composition, we always work from the inside out. By replacing the inner $g(x)$ with its actual expression $14 + 2x$, we can clearly see what new input needs to be fed into the outer function $g$.",
+   "ur": "تفاعلات کی ترکیب میں ہم ہمیشہ اندر سے باہر کی طرف حل کرتے ہیں۔ اندرونی $g(x)$ کی جگہ اس کی قیمت $14 + 2x$ درج کرنے سے ہمیں واضح ہو جاتا ہے کہ بیرونی تفاعل $g$ میں کیا نیا اِن پٹ ڈالنا ہے۔"
   },
   {
-   "en": "The rule for $g$ says to take the input, multiply it by $2$, and add $14$. Applying this rule to our new input $(14 + 2x)$ removes the function notation $g$ and gives us a standard algebraic expression to simplify.",
-   "ur": "فنکشن $g$ کا اصول یہ ہے کہ اِن پٹ کو $2$ سے ضرب دیں اور اس میں $14$ جمع کریں۔ اس اصول کو ہمارے نئے اِن پٹ $(14 + 2x)$ پر لاگو کرنے سے فنکشن کی علامت $g$ ختم ہو جاتی ہے اور ہمیں حل کرنے کے لیے ایک سادہ الجبری جملہ مل جاتا ہے۔"
+   "en": "Now we apply the rule of function $g$, which tells us to take $14$ plus $2$ times the input. Replacing the original input $x$ with our new input $(14 + 2x)$ removes the function notation and gives us a simple algebraic expression.",
+   "ur": "اب ہم تفاعل $g$ کا اصول لاگو کرتے ہیں، جو کہتا ہے کہ $14$ میں اِن پٹ کا $2$ گنا جمع کریں۔ اصل اِن پٹ $x$ کی جگہ نیا اِن پٹ $(14 + 2x)$ رکھنے سے تفاعل کی علامت ختم ہو جاتی ہے اور ہمیں ایک سادہ الجبری جملہ مل جاتا ہے۔"
   },
   {
-   "en": "We apply the distributive property to expand the brackets by multiplying $2$ with both $14$ and $2x$. This clears the parentheses so that all the terms are free to be combined.",
-   "ur": "ہم تقسیمی خاصیت (distributive property) کا استعمال کرتے ہوئے بریکٹ کھولتے ہیں اور $2$ کو اندر موجود دونوں رقوم $14$ اور $2x$ سے ضرب دیتے ہیں۔ اس سے بریکٹ ختم ہو جاتی ہے تاکہ تمام رقوم کو آپس میں ملایا جا سکے۔"
+   "en": "Using the distributive property of multiplication over addition, we multiply $2$ with both $14$ and $2x$ inside the brackets. This opens up the brackets so that all terms are free to be combined.",
+   "ur": "جمع پر ضرب کی تقسیمی خاصیت کا استعمال کرتے ہوئے، ہم بریکٹ کے اندر موجود $14$ اور $2x$ دونوں کو $2$ سے ضرب دیتے ہیں۔ اس سے بریکٹ کھل جاتی ہے تاکہ تمام رقموں کو آپس میں ملایا جا سکے۔"
   },
   {
-   "en": "Finally, we combine the like terms by adding the constants $14$ and $28$ together to get $42$. Writing the $4x$ term first gives us the neatest, standard polynomial form of our composite function.",
-   "ur": "آخر میں، ہم ایک جیسی رقوم کو اکٹھا کرتے ہوئے مستقل اعداد $14$ اور $28$ کو جمع کر کے $42$ حاصل کرتے ہیں۔ $4x$ والی رقم کو پہلے لکھنے سے ہمیں اپنے مرکب فنکشن کی سب سے صاف اور معیاری شکل مل جاتی ہے۔"
+   "en": "Finally, we combine the like terms by adding the constant numbers $14$ and $28$ to get $42$. Writing the $4x$ term first gives us the neatest standard polynomial form for our answer.",
+   "ur": "آخر میں، ہم یکساں رقموں کو ملاتے ہوئے مستقل اعداد $14$ اور $28$ کو جمع کرتے ہیں جس سے $42$ حاصل ہوتا ہے۔ $4x$ والی رقم کو پہلے لکھنے سے ہمیں معیاری اور سادہ ترین شکل میں حتمی جواب مل جاتا ہے۔"
   }
  ],
  "meaning": {
-  "en": "The final answer $(g\\circ g)(x) = 4x + 42$ is a single direct formula that shows the result of applying the function $g$ to an input $x$ two times in a row, rather than doing it in two separate steps.",
-  "ur": "آخری جواب $(g\\circ g)(x) = 4x + 42$ ایک ایسا واحد اور براہِ راست فارمولا ہے جو کسی اِن پٹ $x$ پر فنکشن $g$ کو دو الگ الگ مراحل میں لاگو کرنے کے بجائے، لگاتار دو بار لاگو کرنے کا نتیجہ دکھاتا ہے۔"
+  "en": "The final answer $(g\\circ g)(x) = 4x + 42$ gives us a single direct formula that does the work of applying the function $g$ twice in a row. Instead of putting a number into $g(x) = 14 + 2x$, getting an answer, and putting that answer back into $g$ again, this new expression $4x + 42$ takes us straight from the starting value $x$ to the final result in one step.",
+  "ur": "حتمی جواب $(g\\circ g)(x) = 4x + 42$ ہمیں ایک ایسا براہِ راست فارمولا دیتا ہے جو تفاعل $g$ کو لگاتار دو بار لاگو کرنے کا کام اکیلے کر دیتا ہے۔ اس کے بجائے کہ ہم کسی عدد کو پہلے $g(x) = 14 + 2x$ میں درج کریں اور پھر حاصل ہونے والے جواب کو دوبارہ $g$ میں ڈالیں، یہ نیا جملہ $4x + 42$ ہمیں ابتدائی قیمت $x$ سے سیدھا ایک ہی مرحلے میں حتمی نتیجے تک پہنچا دیتا ہے۔"
  },
  "source": "gemini-4-argon via Vertex AI",
- "made": "2026-11-01"
+ "made": "2026-11-02"
 }

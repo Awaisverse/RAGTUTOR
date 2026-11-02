@@ -1,35 +1,40 @@
 {
  "item": "c10-ex10.1-q7",
  "label": "",
- "answer_ref": "circle completed by stepping equal chords (no centre needed)",
+ "answer_ref": "circle completed by equal chords and equal exterior angles (no centre needed)",
  "math": [
-  "\\text{Given arc } ABC",
-  "\\text{Mark equal chords along the arc}",
-  "\\text{Continue the equal steps beyond the arc}",
-  "\\text{Join the points smoothly}"
+  "\\text{Given arc } ABC,\\quad AB = BC",
+  "\\text{Produce } AB \\text{ to } P;\\ \\angle PBC = \\alpha",
+  "\\text{Produce } BC \\text{ to } Q;\\ \\angle QCD = \\alpha,\\ CD = AB",
+  "\\text{Repeat: } E,\\ F,\\ \\dots \\text{ until back at } A",
+  "\\text{Join all the points with a smooth curve}"
  ],
  "why": [
   {
-   "en": "Every geometric construction begins by drawing what is already known, which here is the arc $ABC$ of the fountain. Having this partial curve on paper gives us the exact curvature we need to follow to complete the rest of the circle.",
-   "ur": "ہر جیومیٹریکل عمل کا آغاز دی گئی معلومات کو بنانے سے ہوتا ہے، جو یہاں فوارے کی قوس $ABC$ ہے۔ کاغذ پر یہ ابتدائی قوس بنانے سے ہمیں وہ اصل گولائی مل جاتی ہے جس کی پیروی کرتے ہوئے ہم دائرہ مکمل کریں گے۔"
+   "en": "Since we cannot find the centre, we must rely on the symmetry of the circle itself. By marking equal chords $AB$ and $BC$, we set a fixed step size that will travel evenly along the circle's boundary.",
+   "ur": "چونکہ ہم مرکز تلاش نہیں کر سکتے، اس لیے ہمیں دائرے کی اپنی ہم آہنگی (symmetry) پر انحصار کرنا ہوگا۔ برابر وتر $AB$ اور $BC$ کا نشان لگا کر، ہم ایک مقررہ فاصلہ طے کر لیتے ہیں جو دائرے کی باؤنڈری کے ساتھ یکساں طور پر آگے بڑھے گا۔"
   },
   {
-   "en": "Since we cannot use the centre, we use the geometric property that equal chords of a circle are identically spaced along its boundary. Marking these equal steps on the given arc $ABC$ sets a fixed pattern of length and angle that defines this specific circle.",
-   "ur": "چونکہ ہم مرکز استعمال نہیں کر سکتے، اس لیے ہم دائرے کی یہ خصوصیت استعمال کرتے ہیں کہ برابر وتروں کا دائرے کے محیط پر فاصلہ اور جھکاؤ یکساں ہوتا ہے۔ دی گئی قوس $ABC$ پر پرکار سے برابر فاصلے کے نشان لگانے سے ہمیں ایک خاص ترتیب مل جاتی ہے جو اسی دائرے کی پہچان ہے۔"
+   "en": "In a circle, equal chords always turn by the same angle. By extending $AB$ to $P$, we find the exact turning angle $\\alpha = \\angle PBC$ that the circle makes between two equal steps.",
+   "ur": "ایک دائرے میں، برابر وتر ہمیشہ ایک ہی زاویے پر مڑتے ہیں۔ $AB$ کو $P$ تک بڑھا کر، ہم وہی درست مڑنے والا زاویہ $\\alpha = \\angle PBC$ معلوم کرتے ہیں جو دائرہ دو برابر قدموں کے درمیان بناتا ہے۔"
   },
   {
-   "en": "Because equal chords subtend equal angles, repeating our fixed chord length and angle naturally forces the new points to stay on the exact same circular path. This allows us to extend the boundary step-by-step into the empty space until we loop all the way back to point $A$.",
-   "ur": "کیونکہ برابر وتر برابر زاویے بناتے ہیں، اس لیے اسی مقررہ لمبائی اور زاویے کو آگے بڑھانے سے نئے نقاط خود بخود اسی دائرے کے راستے پر آتے جاتے ہیں۔ اس طرح ہم خالی جگہ میں قدم بہ قدم دائرے کی حد کو آگے بڑھاتے ہیں یہاں تک کہ ہم گھوم کر واپس ابتدائی نقطہ $A$ تک پہنچ جائیں۔"
+   "en": "Using the geometric rule that equal chords turning at equal exterior angles stay on the same circular path, we copy angle $\\alpha$ and length $AB$ to find point $D$. This gives us our first new point on the missing part of the circle.",
+   "ur": "اس جیومیٹریکل اصول کا استعمال کرتے ہوئے کہ برابر بیرونی زاویوں پر مڑنے والے برابر وتر ایک ہی دائروی راستے پر رہتے ہیں، ہم نقطہ $D$ حاصل کرنے کے لیے زاویہ $\\alpha$ اور لمبائی $AB$ کی نقل بناتے ہیں۔ اس سے ہمیں دائرے کے نامکمل حصے پر پہلا نیا نقطہ مل جاتا ہے۔"
   },
   {
-   "en": "The marked points act as closely spaced guideposts lying precisely on the hidden circumference. Drawing a smooth hand-drawn curve through all of them connects our steps and reveals the full circular shape of the fountain.",
-   "ur": "یہ لگائے گئے نشانات ایسے رہنما نقاط کا کام کرتے ہیں جو بالکل دائرے کے اصل محیط پر واقع ہیں۔ ان تمام نقاط کو ایک ہموار گولائی دار لکیر سے ملانے سے فوارے کی مکمل گول شکل واضح ہو جاتی ہے۔"
+   "en": "By repeating this exact step—turning by angle $\\alpha$ and stepping forward by length $AB$—we keep generating more points ($E$, $F$, etc.) that are guaranteed to lie on the same circle until the path naturally closes back at $A$.",
+   "ur": "اسی عمل کو دہراتے ہوئے—زاویہ $\\alpha$ پر مڑنا اور لمبائی $AB$ کے برابر آگے بڑھنا—ہم مزید نقاط ($E$، $F$ وغیرہ) بناتے رہتے ہیں جو یقینی طور پر اسی دائرے پر واقع ہوتے ہیں، یہاں تک کہ راستہ قدرتی طور پر واپس $A$ پر آ کر بند ہو جاتا ہے۔"
+  },
+  {
+   "en": "The points $A, B, C, D, E, F, \\dots$ form the corners of a regular-like polygon inscribed in our circle. Joining them smoothly with a freehand curve reconstructs the full boundary of the fountain.",
+   "ur": "نقاط $A, B, C, D, E, F, \\dots$ ہمارے دائرے کے اندر بنی ہوئی ایک باقاعدہ کثیر الاضلاع (polygon) کے کونے بناتے ہیں۔ انہیں ہاتھ سے ایک ہموار گولائی کے ذریعے ملانے سے فوارے کا پورا دائرہ مکمل ہو جاتا ہے۔"
   }
  ],
  "meaning": {
-  "en": "This completed figure shows the full circular boundary of the fountain, constructed purely from the curvature of the arc $ABC$ without ever needing its centre. You can check your accuracy by verifying that the final step meets the starting point smoothly and the curve looks evenly round from all sides.",
-  "ur": "یہ مکمل شدہ شکل فوارے کے پورے دائرے کو ظاہر کرتی ہے، جسے مرکز معلوم کیے بغیر صرف قوس $ABC$ کے جھکاؤ کی مدد سے بنایا گیا ہے۔ آپ اپنے عمل کی درستگی کو یوں جانچ سکتے ہیں کہ آخری قدم ہموار طریقے سے ابتدائی نقطے سے جا ملے اور دائرہ ہر طرف سے یکساں گول نظر آئے۔"
+  "en": "This construction shows that we can complete the circular arc $ABC$ of the fountain purely by using its local curvature—equal chords $AB$ and equal exterior angles $\\alpha$—without ever needing to locate the centre. You can check your work by seeing if the final step meets smoothly back at the starting point $A$ and the curve looks evenly round.",
+  "ur": "یہ عمل دکھاتا ہے کہ ہم فوارے کی دائروی قوس $ABC$ کو مرکز تلاش کیے بغیر، صرف اس کے مقامی خم—یعنی برابر وتروں $AB$ اور برابر بیرونی زاویوں $\\alpha$—کو استعمال کرتے ہوئے مکمل کر سکتے ہیں۔ آپ اپنے کام کی جانچ یہ دیکھ کر کر سکتے ہیں کہ آیا آخری قدم ابتدائی نقطہ $A$ سے ہموار طریقے سے ملتا ہے اور گولائی ہر طرف سے یکساں نظر آتی ہے۔"
  },
  "source": "gemini-4-argon via Vertex AI",
- "made": "2026-11-01"
+ "made": "2026-11-02"
 }

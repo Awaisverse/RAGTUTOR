@@ -134,13 +134,41 @@ def abs_inequality(label, lhs, op, rhs, steps_tex, prompt):
                 checks.append(f"({_xr(sp.sstr(L - Rr))}).subs(xr, {ps(v)}) {op} 0")
     pts = [float(v) for pc in pieces for v in ([pc.left, pc.right] if isinstance(pc, sp.Interval) else list(pc) if isinstance(pc, sp.FiniteSet) else [])
            if v not in (sp.oo, -sp.oo)]
+    if isinstance(sol, sp.Complement):                # all reals except some points
+        pts += [float(v) for v in sol.args[1]]
     lo, hi = (min(pts) - 2, max(pts) + 2) if pts else (-3, 3)
-    marks = [{"v": v, "s": _plain(v)} for v in sorted(set(pts))]
+    # a filled circle for an end point in the solution, an open circle for one left out; the solution is shaded
+    marks = [{"v": v, "s": _plain(v), "open": not _in_set(sol, v)} for v in sorted(set(pts))]
+    shade = solution_shade(sol)
     ans = interval_tex(sol) if not (isinstance(sol, sp.Complement) or (isinstance(sol, sp.Union) and len(pieces) == 2 and pieces[0].right == pieces[1].left)) else interval_tex(sol)
     steps.append(S(rf"x \in {ans}", "Write the solution set and show it on the number line (each part is checked with a test value).",
                    "حل سیٹ لکھیں اور عددی خط پر دکھائیں (ہر حصہ ایک جانچ قیمت سے پرکھا گیا ہے)۔", *checks,
-                   draw=[{"t": "numberline", "from": float(sp.floor(lo)), "to": float(sp.ceiling(hi)), "y": 30, "marks": marks}]))
+                   draw=[{"t": "numberline", "from": float(sp.floor(lo)), "to": float(sp.ceiling(hi)), "y": 30, "marks": marks, "shade": shade}]))
     return P(label, steps, f"$x \\in {ans}$", prompt=prompt), sol
+
+
+def _in_set(sol, v):
+    try:
+        return bool(sol.contains(sp.nsimplify(v)))
+    except Exception:
+        return False
+
+
+def solution_shade(sol):
+    """The pieces of a solution set as [from, to] for the number line (None: the line runs on to infinity)."""
+    out = []
+    for pc in (sol.args if isinstance(sol, sp.Union) else [sol]):
+        if isinstance(pc, sp.Interval):
+            out.append([None if pc.left == -sp.oo else float(pc.left), None if pc.right == sp.oo else float(pc.right)])
+        elif isinstance(pc, sp.FiniteSet):
+            out += [[float(v), float(v)] for v in pc]
+        elif isinstance(pc, sp.Complement):
+            cut = sorted(float(v) for v in pc.args[1])
+            edges = [None] + cut + [None]
+            out += [[edges[k], edges[k + 1]] for k in range(len(edges) - 1)]
+        elif pc == sp.S.Reals:
+            out.append([None, None])
+    return out
 
 
 def abs_graph(label, f, prompt):

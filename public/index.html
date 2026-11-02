@@ -1002,6 +1002,19 @@
   }
   function stopPointerLoop() { cancelAnimationFrame(pointerRaf); }
 
+  // A filled arrowhead at (x2, y2) pointing away from (x1, y1), in canvas pixels.
+  function arrowHead(x1, y1, x2, y2) {
+    const a = Math.atan2(y2 - y1, x2 - x1), k = 9;
+    ctx.save();
+    ctx.fillStyle = ctx.strokeStyle;
+    ctx.beginPath();
+    ctx.moveTo(x2, y2);
+    ctx.lineTo(x2 - k * Math.cos(a - 0.42), y2 - k * Math.sin(a - 0.42));
+    ctx.lineTo(x2 - k * Math.cos(a + 0.42), y2 - k * Math.sin(a + 0.42));
+    ctx.closePath(); ctx.fill();
+    ctx.restore();
+  }
+
   function drawCmd(c, t, M) {
     const e = (k) => (k === undefined ? 0 : k);
     ctx.save();
@@ -1013,6 +1026,7 @@
         ctx.beginPath(); ctx.moveTo(M.X(x1), M.Y(y1));
         ctx.lineTo(M.X(x1 + (x2 - x1) * t), M.Y(y1 + (y2 - y1) * t));
         ctx.stroke(); ctx.setLineDash([]);
+        if (c.arrow && t > 0.98) arrowHead(M.X(x1), M.Y(y1), M.X(x2), M.Y(y2));   // a vector's tip, an axis's direction
         break;
       }
       case "poly": {
@@ -1083,9 +1097,28 @@
             ctx.beginPath(); ctx.moveTo(M.X(x), M.Y(y - tk)); ctx.lineTo(M.X(x), M.Y(y + tk)); ctx.stroke();
             if (major) ctx.fillText(String(v), M.X(x), M.Y(y + 7));
           }
+          // the solution set: a thick band over each piece, running off with an arrow where it goes on to infinity
+          const css = getComputedStyle(document.body);
+          const acc = css.getPropertyValue("--accent").trim() || "#4F46E5";
+          (c.shade || []).forEach(([a, b]) => {
+            const xa = a === null ? nx(from) : nx(a), xb = b === null ? nx(to) : nx(b);
+            ctx.save();
+            ctx.strokeStyle = acc; ctx.fillStyle = acc; ctx.lineWidth = 5; ctx.lineCap = "round"; ctx.globalAlpha *= 0.85;
+            ctx.beginPath(); ctx.moveTo(M.X(xa), M.Y(y)); ctx.lineTo(M.X(xb), M.Y(y)); ctx.stroke();
+            ctx.lineWidth = 2;
+            if (a === null) arrowHead(M.X(xa) + 10, M.Y(y), M.X(xa) - 4, M.Y(y));
+            if (b === null) arrowHead(M.X(xb) - 10, M.Y(y), M.X(xb) + 4, M.Y(y));
+            ctx.restore();
+          });
           (c.marks || []).forEach((m) => {
             const x = nx(m.v);
-            ctx.beginPath(); ctx.arc(M.X(x), M.Y(y), 3.5, 0, 2 * Math.PI); ctx.fill();
+            ctx.beginPath(); ctx.arc(M.X(x), M.Y(y), 4, 0, 2 * Math.PI);
+            if (m.open) {                                // left out of the solution: an open circle
+              ctx.save(); ctx.fillStyle = css.getPropertyValue("--bg").trim() || "#fff"; ctx.fill();
+              ctx.lineWidth = 2; ctx.strokeStyle = c.shade ? acc : ctx.strokeStyle; ctx.stroke(); ctx.restore();
+            } else {
+              if (c.shade) { ctx.save(); ctx.fillStyle = acc; ctx.fill(); ctx.restore(); } else ctx.fill();
+            }
             ctx.fillText(m.s, M.X(x), M.Y(y - 8));
           });
           ctx.textAlign = "start";

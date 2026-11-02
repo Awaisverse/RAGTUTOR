@@ -200,7 +200,7 @@
        ],
        "why": {
         "en": "To simplify the expression, we combine like terms—here, the two $x$ terms, $-4x$ and $-4x$, add up to $-8x$. This gives us a neat equation with a single $x^2$ term, a single $x$ term, and a constant, completing the standard form.",
-        "ur": "عبارت کو مختصر کرنے کے لیے، ہم ایک جیسی رقوم کو ملاتے ہیں—یہاں، $x$ والی دو رقوم، $-4x$ اور $-4x$، جمع ہو کر $-8x$ بن جاتی ہیں۔ اس سے ہمیں ایک $x^2$ والی رقم، ایک $x$ والی رقم، اور ایک مستقل مزاج (constant) کے ساتھ ایک صاف ستھری مساوات مل جاتی ہے، جو معیاری شکل کو مکمل کرتی ہے۔"
+        "ur": "عبارت کو مختصر کرنے کے لیے، ہم ایک جیسی رقوم کو ملاتے ہیں—یہاں، $x$ والی دو رقوم، $-4x$ اور $-4x$، جمع ہو کر $-8x$ بن جاتی ہیں۔ اس سے ہمیں ایک $x^2$ والی رقم، ایک $x$ والی رقم، اور ایک مستقل مقدار (constant) کے ساتھ ایک صاف ستھری مساوات مل جاتی ہے، جو معیاری شکل کو مکمل کرتی ہے۔"
        }
       }
      ],
@@ -2778,24 +2778,43 @@
         }
        ],
        "why": {
-        "en": "To solve this equation graphically, we first turn the quadratic expression into a function by setting it equal to $y$. Since our original equation has $0$ on the right side, the solutions will simply be the $x$-values where $y = 0$, which is right on the $x$-axis.",
-        "ur": "اس مساوات کو گراف کی مدد سے حل کرنے کے لیے، ہم سب سے پہلے دو درجی جملے کو $y$ کے برابر رکھ کر ایک تفاعل (function) بناتے ہیں۔ چونکہ اصل مساوات میں دائیں طرف $0$ ہے، اس لیے ہمارا حل $x$ کی وہ قیمتیں ہوں گی جہاں $y = 0$ ہو، یعنی جہاں گراف $x$-محور کو قطع کرے گا۔"
+        "en": "To solve the equation graphically, we first write the quadratic expression as a function $y = x^2 - 3x - 18$. Because the original equation equals $0$, the solutions will simply be the $x$-values where $y = 0$, which is right on the $x$-axis.",
+        "ur": "مساوات کو گراف کے ذریعے حل کرنے کے لیے، ہم پہلے دو درجی جملے کو تفاعل $y = x^2 - 3x - 18$ کے طور پر لکھتے ہیں۔ چونکہ اصل مساوات $0$ کے برابر ہے، اس لیے اس کے حل وہ $x$ کی قیمتیں ہوں گی جہاں $y = 0$ ہوتا ہے، یعنی جہاں گراف $x$-محور کو قطع کرتا ہے۔"
        }
       },
       {
-       "math": "\\begin{array}{c|ccccccc} x & -2 & -1 & 0 & 1 & 2 & 3 & 4 \\\\ \\hline y & -8 & -14 & -18 & -20 & -20 & -18 & -14 \\end{array}",
+       "math": "\\begin{array}{c|cccccccccccc} x & -4 & -3 & -2 & -1 & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\\\ \\hline y & 10 & 0 & -8 & -14 & -18 & -20 & -20 & -18 & -14 & -8 & 0 & 10 \\end{array}",
        "en": "Make a table of values: put each $x$ in $y = x^{2} - 3 x - 18$.",
        "ur": "قیمتوں کا جدول بنائیں: ہر $x$ کو $y = x^{2} - 3 x - 18$ میں رکھیں۔",
        "check": [
+        "(x**2 - 3*x - 18).subs(x, (-4)) == (10)",
+        "(x**2 - 3*x - 18).subs(x, (-3)) == (0)",
         "(x**2 - 3*x - 18).subs(x, (-2)) == (-8)",
         "(x**2 - 3*x - 18).subs(x, (-1)) == (-14)",
         "(x**2 - 3*x - 18).subs(x, (0)) == (-18)",
         "(x**2 - 3*x - 18).subs(x, (1)) == (-20)",
         "(x**2 - 3*x - 18).subs(x, (2)) == (-20)",
         "(x**2 - 3*x - 18).subs(x, (3)) == (-18)",
-        "(x**2 - 3*x - 18).subs(x, (4)) == (-14)"
+        "(x**2 - 3*x - 18).subs(x, (4)) == (-14)",
+        "(x**2 - 3*x - 18).subs(x, (5)) == (-8)",
+        "(x**2 - 3*x - 18).subs(x, (6)) == (0)",
+        "(x**2 - 3*x - 18).subs(x, (7)) == (10)"
        ],
        "draw": [
+        {
+         "t": "dot",
+         "p": [
+          12.77,
+          21.35
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          19.54,
+          30.96
+         ]
+        },
         {
          "t": "dot",
          "p": [
@@ -2844,11 +2863,32 @@
           66.92,
           44.42
          ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          73.69,
+          38.65
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          80.46,
+          30.96
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          87.23,
+          21.35
+         ]
         }
        ],
        "why": {
-        "en": "We cannot draw a graph without points, so we choose a few simple values for $x$ from $-2$ to $4$ and calculate the matching $y$ values. Each $(x, y)$ pair in this table gives us the exact coordinates of a point to plot on our graph paper.",
-        "ur": "ہم نقاط کے بغیر گراف نہیں بنا سکتے، اس لیے ہم $x$ کے لیے $-2$ سے $4$ تک کچھ سادہ قیمتیں چنتے ہیں اور ان کے مطابق $y$ کی قیمتیں معلوم کرتے ہیں۔ اس جدول میں موجود ہر $(x, y)$ جوڑا ہمیں گراف پیپر پر لگانے کے لیے ایک نقطے کا صحیح مقام بتاتا ہے۔"
+        "en": "We need specific coordinates to plot the graph, so we substitute integers from $x = -4$ to $x = 7$ into the function to find the corresponding $y$-values. Notice that at $x = -3$ and $x = 6$, the value of $y$ becomes $0$, already hinting at where our graph will cross the $x$-axis.",
+        "ur": "گراف بنانے کے لیے ہمیں نقاط کی ضرورت ہوتی ہے، اس لیے ہم $x = -4$ سے $x = 7$ تک کی قیمتیں تفاعل میں درج کر کے $y$ کی متعلقہ قیمتیں معلوم کرتے ہیں۔ غور کریں کہ $x = -3$ اور $x = 6$ پر $y$ کی قیمت $0$ ہو جاتی ہے، جو پہلے ہی اشارہ دے رہی ہے کہ ہمارا گراف $x$-محور کو کہاں قطع کرے گا۔"
        }
       },
       {
@@ -3025,8 +3065,8 @@
         }
        ],
        "why": {
-        "en": "A quadratic function always forms a U-shaped curve called a parabola, not a series of straight lines. Connecting our plotted points smoothly shows the true path of the equation and helps us see where it heads toward the $x$-axis.",
-        "ur": "ایک دو درجی تفاعل ہمیشہ سیدھی لکیروں کے بجائے U-شکل کی ایک گول لکیر بناتا ہے جسے پیرابولا (parabola) کہتے ہیں۔ ان نقاط کو ہموار طریقے سے ملانے سے مساوات کا اصل راستہ ظاہر ہوتا ہے اور ہمیں پتہ چلتا ہے کہ یہ $x$-محور کی طرف کہاں جا رہی ہے۔"
+        "en": "A quadratic function always forms a U-shaped curve called a parabola, not a series of straight lines. Connecting our plotted points smoothly gives us the complete visual picture of the equation so we can read its roots.",
+        "ur": "ایک دو درجی تفاعل ہمیشہ U-شکل کا خم بناتا ہے جسے پیرابولا کہتے ہیں، نہ کہ سیدھی لکیریں۔ نقاط کو ایک ہموار خم کے ساتھ ملانے سے ہمیں مساوات کی مکمل تصویری شکل مل جاتی ہے جس سے ہم اس کے روٹس پڑھ سکتے ہیں۔"
        }
       },
       {
@@ -3037,8 +3077,8 @@
         "(x**2 + 3*x - 6*x - 18) - (0) == (x**2 - 3*x - 18) - (0)"
        ],
        "why": {
-        "en": "To be completely sure of the exact crossing points, we also use algebra by applying the mid-term breaking rule. We rewrite $-3x$ as $+3x - 6x$ because $3$ and $-6$ multiply to give $-18$ and add up to $-3$, preparing the equation for factoring by grouping.",
-        "ur": "قطع کرنے والے نقاط کی بالکل درست قیمتوں کا یقین کرنے کے لیے، ہم الجبرا کا طریقہ یعنی درمیانی رقم کو توڑنے کا اصول بھی استعمال کرتے ہیں۔ ہم $-3x$ کو $+3x - 6x$ لکھتے ہیں کیونکہ $3$ اور $-6$ کو ضرب دینے سے $-18$ اور جمع کرنے سے $-3$ آتا ہے، جس سے جوڑے بنا کر تجزی کرنا آسان ہو جاتا ہے۔"
+        "en": "To verify our graphical reading with exact algebra, we use mid-term breaking on $x^2 - 3x - 18 = 0$. We rewrite $-3x$ as $+3x - 6x$ because $3$ and $-6$ multiply to give $-18$ and add up to $-3$, setting up the four terms for factoring by grouping.",
+        "ur": "اپنے گراف کے جواب کی الجبرا سے تصدیق کرنے کے لیے، ہم $x^2 - 3x - 18 = 0$ کی درمیانی رقم کی تجزی کرتے ہیں۔ ہم $-3x$ کو $+3x - 6x$ لکھتے ہیں کیونکہ $3$ اور $-6$ کو ضرب دینے سے $-18$ اور جمع کرنے سے $-3$ آتا ہے، جس سے جوڑے بنا کر مشترک لینا آسان ہو جاتا ہے۔"
        }
       },
       {
@@ -3049,8 +3089,8 @@
         "(x*(x + 3) - 6*(x + 3)) - (0) == (x**2 + 3*x - 6*x - 18) - (0)"
        ],
        "why": {
-        "en": "Using the distributive property in reverse, we factor out $x$ from the first two terms and $-6$ from the last two terms. Seeing the identical $(x + 3)$ bracket appear twice confirms that our mid-term split was successful.",
-        "ur": "تقسیمی خاصیت کو الٹ استعمال کرتے ہوئے، ہم پہلی دو رقموں سے $x$ اور آخری دو رقموں سے $-6$ کو مشترک نکالتے ہیں۔ ایک جیسی بریکٹ $(x + 3)$ کا دو بار آنا اس بات کی تصدیق کرتا ہے کہ ہم نے درمیانی رقم کو بالکل ٹھیک توڑا تھا۔"
+        "en": "By grouping the first two terms and the last two terms, we factor out $x$ from the first pair and $-6$ from the second pair. Seeing the identical bracket $(x + 3)$ appear twice confirms that our mid-term split was successful.",
+        "ur": "پہلی دو اور آخری دو رقموں کے جوڑے بنا کر، ہم پہلے جوڑے سے $x$ اور دوسرے جوڑے سے $-6$ مشترک لیتے ہیں۔ دونوں جگہ ایک جیسی بریکٹ $(x + 3)$ کا آنا اس بات کی تصدیق کرتا ہے کہ ہماری درمیانی رقم کی تقسیم بالکل درست تھی۔"
        }
       },
       {
@@ -3061,8 +3101,8 @@
         "((x - 6)*(x + 3)) - (0) == (x*(x + 3) - 6*(x + 3)) - (0)"
        ],
        "why": {
-        "en": "Since $(x + 3)$ is common to both parts of the expression, we factor it out to the front. This transforms our four-term addition problem into a simple multiplication of two linear factors, $(x - 6)$ and $(x + 3)$, equal to $0$.",
-        "ur": "چونکہ $(x + 3)$ دونوں حصوں میں مشترک ہے، اس لیے ہم اسے باہر نکال لیتے ہیں۔ اس سے ہمارا چار رقموں والا سوال دو یک درجی اجزائے ضربی، $(x - 6)$ اور $(x + 3)$ کے حاصل ضرب میں تبدیل ہو جاتا ہے جو $0$ کے برابر ہے۔"
+        "en": "Since $(x + 3)$ is common to both parts, we factor it out to leave $(x - 6)$ in the other bracket. This converts our quadratic sum into a simple product of two linear factors equal to $0$.",
+        "ur": "چونکہ $(x + 3)$ دونوں حصوں میں مشترک ہے، اس لیے ہم اسے باہر نکال لیتے ہیں جس سے دوسری بریکٹ میں $(x - 6)$ بچ جاتا ہے۔ اس طرح ہماری دو درجی مساوات دو یک درجی اجزائے ضربی کے حاصلِ ضرب میں بدل جاتی ہے جو $0$ کے برابر ہے۔"
        }
       },
       {
@@ -3070,8 +3110,8 @@
        "en": "A product is zero only when one of its factors is zero.",
        "ur": "حاصل ضرب صفر تب ہوتا ہے جب کوئی ایک جزو صفر ہو۔",
        "why": {
-        "en": "By the zero-product property, if the multiplication of two brackets gives $0$, at least one of those brackets must be equal to $0$. This powerful rule allows us to break one tough quadratic equation into two easy linear equations.",
-        "ur": "ضربی صفر کی خاصیت (zero-product property) کے مطابق، اگر دو بریکٹوں کو ضرب دینے سے $0$ آتا ہے، تو ان میں سے کم از کم ایک بریکٹ لازمی $0$ کے برابر ہوگی۔ یہ اصول ہمیں ایک مشکل دو درجی مساوات کو دو آسان یک درجی مساواتوں میں توڑنے میں مدد دیتا ہے۔"
+        "en": "According to the zero-product property, if the product of two brackets is $0$, at least one of them must be $0$. This allows us to split one quadratic equation into two simple linear equations: $x - 6 = 0$ and $x + 3 = 0$.",
+        "ur": "صفر کے ضربی اصول کے مطابق، اگر دو بریکٹوں کا حاصلِ ضرب $0$ ہے تو ان میں سے کم از کم ایک بریکٹ لازمی $0$ کے برابر ہوگی۔ اس اصول کی مدد سے ہم ایک دو درجی مساوات کو دو آسان یک درجی مساواتوں $x - 6 = 0$ اور $x + 3 = 0$ میں تقسیم کر لیتے ہیں۔"
        }
       },
       {
@@ -3083,8 +3123,8 @@
         "(x**2 - 3*x - 18).subs(x, (6)) == 0"
        ],
        "why": {
-        "en": "We isolate $x$ in both small equations by moving the numbers to the other side, changing their signs. This gives us the exact algebraic roots, $x = -3$ and $x = 6$.",
-        "ur": "ہم دونوں چھوٹی مساواتوں میں نمبروں کو دوسری طرف لے جا کر اور ان کی علامتیں بدل کر $x$ کو الگ کر لیتے ہیں۔ اس سے ہمیں الجبرا کے طریقے سے بالکل درست اصل (roots) یعنی $x = -3$ اور $x = 6$ مل جاتے ہیں۔"
+        "en": "Solving each small linear equation gives us the exact algebraic roots, $x = -3$ and $x = 6$. These are the only two numbers that will make the original expression equal to $0$.",
+        "ur": "ہر چھوٹی یک درجی مساوات کو حل کرنے سے ہمیں الجبرا کے طریقے سے درست روٹس $x = -3$ اور $x = 6$ مل جاتے ہیں۔ یہی وہ دو اعداد ہیں جو اصل مساوات کو $0$ کے برابر بناتے ہیں۔"
        }
       },
       {
@@ -3128,15 +3168,15 @@
         }
        ],
        "why": {
-        "en": "Now we connect our algebra back to our graph: the $x$-intercepts of the parabola are the exact same values as the roots of the equation. When we extend our smooth curve until it crosses the $x$-axis, it cuts right through $x = -3$ and $x = 6$.",
-        "ur": "اب ہم اپنے الجبرا کو واپس گراف سے جوڑتے ہیں: پیرابولا جہاں $x$-محور کو قطع کرتا ہے وہ قیمتیں مساوات کے اصل (roots) کے بالکل برابر ہوتی ہیں۔ جب ہم اپنی ہموار لکیر کو آگے بڑھاتے ہیں یہاں تک کہ وہ $x$-محور کو کاٹے، تو وہ بالکل $x = -3$ اور $x = 6$ سے گزرتی ہے۔"
+        "en": "Finally, we look back at our plotted parabola and see where it crosses the horizontal $x$-axis. It cuts the axis at $x = -3$ and $x = 6$, which matches our algebraic roots and completes the graphical solution.",
+        "ur": "آخر میں، ہم اپنے بنائے ہوئے پیرابولا کو دیکھتے ہیں کہ یہ افقی $x$-محور کو کہاں قطع کرتا ہے۔ یہ محور کو $x = -3$ اور $x = 6$ پر کاٹتا ہے، جو ہمارے الجبرا کے جوابات کے عین مطابق ہے اور یوں گراف کے ذریعے حل مکمل ہوتا ہے۔"
        }
       }
      ],
      "answer": "$x = -3,\\ x = 6$",
      "meaning": {
-      "en": "The final answer $x = -3, x = 6$ means these are the two exact $x$-coordinates where the parabola crosses the $x$-axis, making the height $y$ equal to $0$. You can easily check this by putting $x = 6$ or $x = -3$ back into $x^2 - 3x - 18$ to see that both give $0$.",
-      "ur": "آخری جواب $x = -3, x = 6$ کا مطلب یہ ہے کہ یہ $x$ کے وہ دو مقامات ہیں جہاں پیرابولا کا گراف $x$-محور کو قطع کرتا ہے، اور جہاں بلندی یعنی $y$ کی قیمت $0$ ہو جاتی ہے۔ آپ اس کی پڑتال آسانی سے کر سکتے ہیں: $x = 6$ یا $x = -3$ کو واپس $x^2 - 3x - 18$ میں درج کریں تو دونوں صورتوں میں جواب $0$ آئے گا۔"
+      "en": "The final answer $x = -3, x = 6$ means that the parabola $y = x^2 - 3x - 18$ crosses the $x$-axis at the points $(-3, 0)$ and $(6, 0)$, so $-3$ and $6$ are the two roots of the equation $x^2 - 3x - 18 = 0$. You can easily check this from our table of values, where both $x = -3$ and $x = 6$ give $y = 0$, or by substituting them into the factored form $(x - 6)(x + 3) = 0$.",
+      "ur": "حتمی جواب $x = -3, x = 6$ کا مطلب یہ ہے کہ پیرابولا $y = x^2 - 3x - 18$ افقی $x$-محور کو نقاط $(-3, 0)$ اور $(6, 0)$ پر قطع کرتا ہے، لہٰذا $-3$ اور $6$ مساوات $x^2 - 3x - 18 = 0$ کے دو روٹس (حل) ہیں۔ آپ اس کی پڑتال اپنے بنائے ہوئے جدول سے بھی کر سکتے ہیں جہاں $x = -3$ اور $x = 6$ دونوں پر $y = 0$ ہے، یا انہیں اجزائے ضربی والی شکل $(x - 6)(x + 3) = 0$ میں درج کر کے بھی دیکھ سکتے ہیں۔"
      },
      "book_key": "x=-3, x=6"
     },
@@ -3357,24 +3397,43 @@
         }
        ],
        "why": {
-        "en": "To solve a quadratic equation graphically, we first turn the expression into a two-variable function by setting it equal to $y$. Since our original equation equals $0$, the solutions we want are simply the $x$-values where $y = 0$, which is the definition of the $x$-axis.",
-        "ur": "دو درجی مساوات کو گراف کے ذریعے حل کرنے کے لیے ہم پہلے دیے گئے جملے کو $y$ کے برابر رکھ کر ایک فنکشن بناتے ہیں۔ چونکہ اصل مساوات $0$ کے برابر ہے، اس لیے ہمارا حل وہی $x$ کی قیمتیں ہوں گی جہاں $y = 0$ ہو، یعنی جہاں گراف $x$-محور کو قطع کرے گا۔"
+        "en": "To solve this quadratic equation using a graph, we first write the left-hand side as a function of $y$, giving us $y = x^2 - 5x - 14$. Since our original equation has $0$ on the right side, the solutions will simply be the $x$-values where $y = 0$, which is exactly where the graph crosses the $x$-axis.",
+        "ur": "اس دو درجی مساوات کو گراف کی مدد سے حل کرنے کے لیے ہم بائیں طرف والی رقم کو $y$ کے برابر رکھتے ہیں، جس سے ہمیں $y = x^2 - 5x - 14$ ملتا ہے۔ چونکہ اصل مساوات میں دائیں طرف $0$ ہے، اس لیے ہمارا جواب $x$ کی وہ قیمتیں ہوں گی جہاں $y = 0$ ہو، یعنی جہاں گراف $x$-محور ($x$-axis) کو قطع کرتا ہے۔"
        }
       },
       {
-       "math": "\\begin{array}{c|ccccccc} x & -1 & 0 & 1 & 2 & 3 & 4 & 5 \\\\ \\hline y & -8 & -14 & -18 & -20 & -20 & -18 & -14 \\end{array}",
+       "math": "\\begin{array}{c|cccccccccccc} x & -3 & -2 & -1 & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\\\ \\hline y & 10 & 0 & -8 & -14 & -18 & -20 & -20 & -18 & -14 & -8 & 0 & 10 \\end{array}",
        "en": "Make a table of values: put each $x$ in $y = x^{2} - 5 x - 14$.",
        "ur": "قیمتوں کا جدول بنائیں: ہر $x$ کو $y = x^{2} - 5 x - 14$ میں رکھیں۔",
        "check": [
+        "(x**2 - 5*x - 14).subs(x, (-3)) == (10)",
+        "(x**2 - 5*x - 14).subs(x, (-2)) == (0)",
         "(x**2 - 5*x - 14).subs(x, (-1)) == (-8)",
         "(x**2 - 5*x - 14).subs(x, (0)) == (-14)",
         "(x**2 - 5*x - 14).subs(x, (1)) == (-18)",
         "(x**2 - 5*x - 14).subs(x, (2)) == (-20)",
         "(x**2 - 5*x - 14).subs(x, (3)) == (-20)",
         "(x**2 - 5*x - 14).subs(x, (4)) == (-18)",
-        "(x**2 - 5*x - 14).subs(x, (5)) == (-14)"
+        "(x**2 - 5*x - 14).subs(x, (5)) == (-14)",
+        "(x**2 - 5*x - 14).subs(x, (6)) == (-8)",
+        "(x**2 - 5*x - 14).subs(x, (7)) == (0)",
+        "(x**2 - 5*x - 14).subs(x, (8)) == (10)"
        ],
        "draw": [
+        {
+         "t": "dot",
+         "p": [
+          12.77,
+          21.35
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          19.54,
+          30.96
+         ]
+        },
         {
          "t": "dot",
          "p": [
@@ -3423,11 +3482,32 @@
           66.92,
           44.42
          ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          73.69,
+          38.65
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          80.46,
+          30.96
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          87.23,
+          21.35
+         ]
         }
        ],
        "why": {
-        "en": "A graph is made of coordinate points $(x, y)$, so we choose simple values for $x$ from $-1$ to $5$ and calculate their matching $y$ values. This gives us exact points like $(-1, -8)$ and $(0, -14)$ to plot on the graph paper so we can see the shape of the equation.",
-        "ur": "گراف نقاط $(x, y)$ سے مل کر بنتا ہے، اس لیے ہم $-1$ سے $5$ تک $x$ کی سادہ قیمتیں چن کر ان کے مطابق $y$ کی قیمتیں نکالتے ہیں۔ اس سے ہمیں گراف پیپر پر لگانے کے لیے $(-1, -8)$ اور $(0, -14)$ جیسے درست نقاط مل جاتے ہیں تاکہ مساوات کی شکل واضح ہو سکے۔"
+        "en": "To draw any graph, we need points with $(x, y)$ coordinates, so we choose a range of $x$-values from $-3$ to $8$ and calculate the matching $y$ for each. Looking closely at the table, we can already spot that $y$ becomes $0$ when $x = -2$ and $x = 7$, which gives us a clear hint of where our graph will cross the $x$-axis.",
+        "ur": "کوئی بھی گراف بنانے کے لیے ہمیں $(x, y)$ نقاط کی ضرورت ہوتی ہے، اس لیے ہم $-3$ سے $8$ تک $x$ کی مختلف قیمتیں لے کر ان کے لیے $y$ کی قیمتیں معلوم کرتے ہیں۔ جدول کو غور سے دیکھنے پر ہمیں ابھی سے نظر آ رہا ہے کہ $x = -2$ اور $x = 7$ پر $y$ کی قیمت $0$ ہو جاتی ہے، جس سے ہمیں واضح اشارہ ملتا ہے کہ گراف کہاں $x$-محور کو کاٹے گا۔"
        }
       },
       {
@@ -3604,8 +3684,8 @@
         }
        ],
        "why": {
-        "en": "A quadratic equation always forms a smooth U-shaped curve called a parabola, not sharp straight lines. Connecting our plotted points smoothly extends the curve in both directions until it crosses the $x$-axis, showing us visually where the roots lie.",
-        "ur": "دو درجی مساوات ہمیشہ ایک ہموار U-شکل کی قوس بناتی ہے جسے پیرابولا (parabola) کہتے ہیں، نہ کہ سیدھی لکیریں۔ ان نقاط کو ہموار طریقے سے ملانے سے قوس دونوں طرف بڑھتی ہے یہاں تک کہ وہ $x$-محور کو کاٹتی ہے، جس سے ہمیں بصری طور پر مساوات کے روٹس (roots) نظر آ جاتے ہیں۔"
+        "en": "A quadratic equation always forms a U-shaped curve called a parabola, not a straight line. Plotting our table points on graph paper and connecting them smoothly with a free hand gives us the complete visual picture of the equation.",
+        "ur": "دو درجی مساوات کا گراف ہمیشہ ایک سیدھی لائن کے بجائے U-شکل کی گولائی دار لکیر (پیرابولا) بناتا ہے۔ جدول کے نقاط کو گراف پیپر پر لگا کر نرمی سے ملانے پر ہمیں مساوات کی مکمل تصویری شکل مل جاتی ہے۔"
        }
       },
       {
@@ -3616,8 +3696,8 @@
         "(x**2 + 2*x - 7*x - 14) - (0) == (x**2 - 5*x - 14) - (0)"
        ],
        "why": {
-        "en": "To find the exact roots algebraically and confirm our graph, we use the mid-term breaking method. We replace $-5x$ with $+2x - 7x$ because $2$ and $-7$ multiply to give $-14$ and add up to $-5$, which prepares the four terms for grouping.",
-        "ur": "اپنے گراف کی تصدیق اور درست روٹس معلوم کرنے کے لیے ہم درمیانی رقم کو توڑنے کا الجبری طریقہ استعمال کرتے ہیں۔ ہم $-5x$ کو $+2x - 7x$ سے بدلتے ہیں کیونکہ $2$ اور $-7$ کو ضرب دینے سے $-14$ اور جمع کرنے سے $-5$ آتا ہے، جس سے چار رقمیں بن جاتی ہیں جن کے جوڑے بنائے جا سکتے ہیں۔"
+        "en": "To be 100% sure our graph reading is accurate, we also solve the equation by factorization using the mid-term break method. We rewrite $-5x$ as $+2x - 7x$ because $2$ and $-7$ multiply to give $-14$ and add up to $-5$, preparing the expression for grouping.",
+        "ur": "اپنے گراف کے جواب کی سو فیصد تصدیق کرنے کے لیے ہم تجزی (مڈ ٹرم بریک) کے طریقے سے بھی مساوات کو حل کرتے ہیں۔ ہم درمیانی رقم $-5x$ کو $+2x - 7x$ لکھتے ہیں کیونکہ $2$ اور $-7$ کو ضرب دینے سے $-14$ اور جمع کرنے سے $-5$ آتا ہے، جس سے اگلے مرحلے میں مشترک لینا آسان ہو جائے گا۔"
        }
       },
       {
@@ -3628,8 +3708,8 @@
         "(x*(x + 2) - 7*(x + 2)) - (0) == (x**2 + 2*x - 7*x - 14) - (0)"
        ],
        "why": {
-        "en": "Now we factor by grouping, taking $x$ common from the first two terms and $-7$ from the last two terms. Because the bracket $(x + 2)$ appears in both parts, we know our factoring is on the right track.",
-        "ur": "اب ہم جوڑے بنا کر مشترک (common) لیتے ہیں؛ پہلی دو رقموں سے $x$ اور آخری دو سے $-7$ مشترک نکالتے ہیں۔ چونکہ بریکٹ $(x + 2)$ دونوں حصوں میں ایک جیسی آ گئی ہے، اس سے پتہ چلتا ہے کہ ہماری تجزی (factorization) بالکل درست جا رہی ہے۔"
+        "en": "By grouping the four terms into two pairs, we can factor out $x$ from the first pair and $-7$ from the second pair. Seeing the exact same bracket $(x + 2)$ appear twice tells us that our mid-term break is completely correct.",
+        "ur": "چاروں رقوم کو دو جوڑوں میں تقسیم کر کے ہم پہلے جوڑے سے $x$ اور دوسرے سے $-7$ مشترک (کامن) لیتے ہیں۔ دونوں جگہ ایک جیسی بریکٹ $(x + 2)$ کا آنا اس بات کی نشانی ہے کہ ہماری تجزی بالکل درست جا رہی ہے۔"
        }
       },
       {
@@ -3640,8 +3720,8 @@
         "((x - 7)*(x + 2)) - (0) == (x*(x + 2) - 7*(x + 2)) - (0)"
        ],
        "why": {
-        "en": "Since $(x + 2)$ is common to both terms, we factor it out to the front, leaving $(x - 7)$ in the other bracket. This converts the quadratic sum into a simple product of two linear factors equal to $0$.",
-        "ur": "چونکہ $(x + 2)$ دونوں حصوں میں مشترک ہے، ہم اسے باہر نکال لیتے ہیں اور دوسری بریکٹ میں $(x - 7)$ بچ جاتا ہے۔ اس طرح دو درجی جملہ دو یک درجی اجزائے ضربی کے حاصلِ ضرب میں بدل جاتا ہے جو $0$ کے برابر ہے۔"
+        "en": "Now we take the repeated bracket $(x + 2)$ out as a common factor, leaving $(x - 7)$ in the second bracket. This successfully turns our quadratic sum into a simple product of two linear factors equal to $0$.",
+        "ur": "اب ہم ایک جیسی بریکٹ $(x + 2)$ کو مشترک لے لیتے ہیں، جس سے دوسری بریکٹ میں $(x - 7)$ بچ جاتا ہے۔ اس طرح ہماری دو درجی مساوات دو یک درجی اجزائے ضربی کے حاصل ضرب میں بدل جاتی ہے جو $0$ کے برابر ہے۔"
        }
       },
       {
@@ -3649,8 +3729,8 @@
        "en": "A product is zero only when one of its factors is zero.",
        "ur": "حاصل ضرب صفر تب ہوتا ہے جب کوئی ایک جزو صفر ہو۔",
        "why": {
-        "en": "By the zero-product property, if two brackets multiply to give $0$, at least one of them must be $0$. This rule allows us to split one hard quadratic equation into two easy linear equations: $x - 7 = 0$ and $x + 2 = 0$.",
-        "ur": "ضربی خاصیت کے مطابق اگر دو بریکٹوں کا حاصلِ ضرب $0$ ہو، تو ان میں سے کم از کم ایک بریکٹ ضرور $0$ کے برابر ہوتی ہے۔ یہ اصول ہمیں ایک مشکل دو درجی مساوات کو دو آسان یک درجی مساواتوں $x - 7 = 0$ اور $x + 2 = 0$ میں تقسیم کرنے میں مدد دیتا ہے۔"
+        "en": "Here we use the zero-product property, which states that if two brackets multiply to give $0$, at least one of them must be $0$. This important rule allows us to split the quadratic equation into two very simple linear equations.",
+        "ur": "یہاں ہم زیرو پراڈکٹ کا اصول استعمال کرتے ہیں کہ اگر دو بریکٹس کا حاصل ضرب $0$ ہے تو ان میں سے کم از کم ایک بریکٹ لازمی $0$ کے برابر ہوگی۔ یہ اصول ہمیں ایک بڑی مساوات کو دو آسان یک درجی مساواتوں میں توڑنے میں مدد دیتا ہے۔"
        }
       },
       {
@@ -3662,8 +3742,8 @@
         "(x**2 - 5*x - 14).subs(x, (7)) == 0"
        ],
        "why": {
-        "en": "We isolate $x$ in both small equations by moving the numbers to the other side, which changes their signs. This gives us the exact algebraic roots, $x = -2$ and $x = 7$.",
-        "ur": "ہم دونوں چھوٹی مساواتوں میں اعداد کو دوسری طرف لے جا کر $x$ کو اکیلا کر لیتے ہیں، جس سے ان کی علامتیں بدل جاتی ہیں۔ اس سے ہمیں الجبری طور پر درست روٹس $x = -2$ اور $x = 7$ حاصل ہو جاتے ہیں۔"
+        "en": "Solving each small equation by moving the numbers to the other side gives us the two exact algebraic roots, $x = -2$ and $x = 7$. These are the exact values of $x$ that make the original equation true.",
+        "ur": "نمبروں کو دوسری طرف لے جا کر ان دونوں چھوٹی مساواتوں کو حل کرنے سے ہمیں الجبرا کے طریقے سے دو درست قیمتیں $x = -2$ اور $x = 7$ مل جاتی ہیں۔ یہ $x$ کی وہی قیمتیں ہیں جو دی گئی مساوات کو درست ثابت کرتی ہیں۔"
        }
       },
       {
@@ -3707,15 +3787,15 @@
         }
        ],
        "why": {
-        "en": "Finally, we connect the algebra back to our graph: the values $x = -2$ and $x = 7$ are the exact points where our extended parabola crosses the $x$-axis. Both the visual graph and the algebraic factoring give the same solution.",
-        "ur": "آخر میں ہم الجبرا کو اپنے گراف سے جوڑتے ہیں: $x = -2$ اور $x = 7$ بالکل وہی نقاط ہیں جہاں ہمارا بڑھایا گیا پیرابولا $x$-محور کو قطع کرتا ہے۔ یوں گراف اور الجبری تجزی دونوں ایک ہی جواب کی تصدیق کرتے ہیں۔"
+        "en": "Looking back at our drawn parabola, we see that it cuts the $x$-axis precisely at $x = -2$ and $x = 7$. Because the graphical intersections match our algebraic roots, our graphical solution is fully verified and complete.",
+        "ur": "اپنے بنائے ہوئے گراف (پیرابولا) کو دیکھنے پر معلوم ہوتا ہے کہ یہ واقعی $x = -2$ اور $x = 7$ پر ہی $x$-محور کو قطع کرتا ہے۔ چونکہ گراف کے نقاط اور الجبرا کے جوابات بالکل ایک جیسے ہیں، اس لیے ہمارا گرافیکل حل مکمل اور تصدیق شدہ ہے۔"
        }
       }
      ],
      "answer": "$x = -2,\\ x = 7$",
      "meaning": {
-      "en": "The final answer $x = -2, x = 7$ means that these are the only two values that make the equation $x^2 - 5x - 14 = 0$ true, and geometrically, the parabola crosses the $x$-axis at $(-2, 0)$ and $(7, 0)$. You can easily check this by putting $x = 7$ or $x = -2$ back into $x^2 - 5x - 14$ to see that the result is indeed $0$.",
-      "ur": "حتمی جواب $x = -2, x = 7$ کا مطلب یہ ہے کہ صرف یہی دو قیمتیں مساوات $x^2 - 5x - 14 = 0$ کو درست ثابت کرتی ہیں، اور جیومیٹری کے لحاظ سے پیرابولا $x$-محور کو نقاط $(-2, 0)$ اور $(7, 0)$ پر قطع کرتا ہے۔ آپ اس کی پڑتال کے لیے $x = 7$ یا $x = -2$ کو واپس $x^2 - 5x - 14$ میں درج کر کے دیکھ سکتے ہیں کہ جواب واقعی $0$ آتا ہے۔"
+      "en": "The final answer $x = -2, x = 7$ means that these are the exact $x$-coordinates where the parabola of $y = x^2 - 5x - 14$ crosses the $x$-axis, making $y = 0$. You can easily check this by putting $x = -2$ or $x = 7$ back into $x^2 - 5x - 14$ (as seen in the table where both give $y = 0$), which confirms that both values satisfy the equation.",
+      "ur": "آخری جواب $x = -2, x = 7$ کا مطلب یہ ہے کہ یہ $x$-محور پر وہ نقاط ہیں جہاں $y = x^2 - 5x - 14$ کا گراف (پیرابولا) محور کو کاٹتا ہے اور جہاں $y = 0$ ہو جاتا ہے۔ آپ اس کی پڑتال $x = -2$ یا $x = 7$ کو واپس $x^2 - 5x - 14$ میں درج کر کے باآسانی کر سکتے ہیں (جیسا کہ جدول میں بھی دونوں قیمتوں پر $y = 0$ آ رہا ہے)، جس سے ثابت ہوتا ہے کہ دونوں جوابات مساوات کو درست ثابت کرتے ہیں۔"
      },
      "book_key": "x=-2, x=7"
     },
@@ -4038,12 +4118,12 @@
         }
        ],
        "why": {
-        "en": "To solve the equation graphically, we first set the quadratic expression equal to $y$ to turn it into a two-variable function. Since our original equation is set to $0$, the solutions will simply be the $x$-values where $y = 0$, which is exactly where the graph crosses the $x$-axis.",
-        "ur": "مساوات کو گراف کی مدد سے حل کرنے کے لیے، ہم پہلے دو درجی جملے کو $y$ کے برابر رکھتے ہیں تاکہ یہ دو متغیرات والا فنکشن بن جائے۔ چونکہ ہماری اصل مساوات $0$ کے برابر ہے، اس لیے اس کا حل وہ $x$ کی قیمتیں ہوں گی جہاں $y = 0$ ہو، یعنی جہاں گراف $x$-محور کو قطع کرتا ہے۔"
+        "en": "To solve a quadratic equation graphically, we first turn the expression into a two-variable function by setting it equal to $y$. This allows us to plot a curve on the coordinate plane, and since our original equation has $0$ on the right side, our answers will simply be the $x$-values where $y = 0$ (the $x$-axis).",
+        "ur": "دو درجی مساوات کو گراف کے ذریعے حل کرنے کے لیے، ہم پہلے اس جملے کو $y$ کے برابر رکھ کر دو متغیرات والا تفاعل (function) بناتے ہیں۔ اس سے ہم گراف پیپر پر ایک خط کھینچ سکتے ہیں، اور چونکہ ہماری اصل مساوات میں دائیں طرف $0$ ہے، اس لیے ہمارے جوابات بس وہی $x$ کی قیمتیں ہوں گی جہاں $y = 0$ ہوتا ہے (یعنی $x$-محور پر)۔"
        }
       },
       {
-       "math": "\\begin{array}{c|ccccccc} x & -7 & -6 & -5 & -4 & -3 & -2 & -1 \\\\ \\hline y & 13 & 0 & -9 & -14 & -15 & -12 & -5 \\end{array}",
+       "math": "\\begin{array}{c|ccccccccc} x & -7 & -6 & -5 & -4 & -3 & -2 & -1 & 0 & 1 \\\\ \\hline y & 13 & 0 & -9 & -14 & -15 & -12 & -5 & 6 & 21 \\end{array}",
        "en": "Make a table of values: put each $x$ in $y = 2 x^{2} + 13 x + 6$.",
        "ur": "قیمتوں کا جدول بنائیں: ہر $x$ کو $y = 2 x^{2} + 13 x + 6$ میں رکھیں۔",
        "check": [
@@ -4053,7 +4133,9 @@
         "(2*x**2 + 13*x + 6).subs(x, (-4)) == (-14)",
         "(2*x**2 + 13*x + 6).subs(x, (-3)) == (-15)",
         "(2*x**2 + 13*x + 6).subs(x, (-2)) == (-12)",
-        "(2*x**2 + 13*x + 6).subs(x, (-1)) == (-5)"
+        "(2*x**2 + 13*x + 6).subs(x, (-1)) == (-5)",
+        "(2*x**2 + 13*x + 6).subs(x, (0)) == (6)",
+        "(2*x**2 + 13*x + 6).subs(x, (1)) == (21)"
        ],
        "draw": [
         {
@@ -4104,11 +4186,25 @@
           67.6,
           43.06
          ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          76.4,
+          34.85
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          85.2,
+          23.66
+         ]
         }
        ],
        "why": {
-        "en": "We need specific coordinates to draw the graph on paper, so we substitute chosen values of $x$ from $-7$ to $-1$ into our equation to find the corresponding $y$-values. Notice that at $x = -6$, $y$ becomes $0$, which immediately gives us one of our $x$-intercepts right from the table!",
-        "ur": "کاغذ پر گراف بنانے کے لیے ہمیں مخصوص نقاط کی ضرورت ہوتی ہے، اس لیے ہم مساوات میں $-7$ سے لے کر $-1$ تک $x$ کی قیمتیں درج کر کے $y$ کی متعلقہ قیمتیں معلوم کرتے ہیں۔ غور کریں کہ $x = -6$ پر $y$ کی قیمت $0$ ہو جاتی ہے، جس سے ہمیں جدول ہی میں پہلا حل مل جاتا ہے!"
+        "en": "We cannot draw a curve without knowing where it passes, so we substitute integers from $-7$ to $1$ into the function to find exact $(x, y)$ coordinate pairs. Notice how $y$ already becomes $0$ at $x = -6$, and changes sign from $-5$ to $6$ between $x = -1$ and $x = 0$, showing us exactly where the curve crosses the $x$-axis.",
+        "ur": "ہم یہ جانے بغیر خط نہیں کھینچ سکتے کہ وہ کہاں سے گزرتا ہے، اس لیے ہم $-7$ سے $1$ تک کی قیمتیں درج کر کے $(x, y)$ نقاط کے جوڑے معلوم کرتے ہیں۔ غور کریں کہ $x = -6$ پر $y$ پہلے ہی $0$ ہو گیا ہے، اور $x = -1$ اور $x = 0$ کے درمیان $y$ کی علامت $-5$ سے بدل کر $6$ ہو جاتی ہے، جو ہمیں بتاتی ہے کہ خط $x$-محور کو کہاں قطع کر رہا ہے۔"
        }
       },
       {
@@ -4285,8 +4381,8 @@
         }
        ],
        "why": {
-        "en": "A quadratic function always forms a U-shaped curve called a parabola, not a series of straight line segments. Connecting our plotted points smoothly shows the continuous path of the equation, allowing us to see all the places it crosses the $x$-axis, even between whole numbers.",
-        "ur": "دو درجی فنکشن ہمیشہ U-شکل کا ایک خم بناتا ہے جسے پیرابولا کہتے ہیں، نہ کہ سیدھی لکیروں کے ٹکڑے۔ ہمارے لگائے گئے نقاط کو ہموار طریقے سے ملانے سے مساوات کا مسلسل راستہ ظاہر ہوتا ہے، جس سے ہم دیکھ سکتے ہیں کہ یہ کہاں کہاں $x$-محور کو قطع کرتا ہے، چاہے وہ مکمل اعداد کے درمیان ہی کیوں نہ ہو۔"
+        "en": "A quadratic function always forms a U-shaped curve called a parabola, not a series of sharp straight lines. Connecting our plotted points smoothly gives us the continuous visual path of the equation, allowing us to see the exact points where it intersects the $x$-axis.",
+        "ur": "ایک دو درجی تفاعل ہمیشہ U کی شکل کا خط بناتا ہے جسے پیرابولا (parabola) کہتے ہیں، نہ کہ سیدھی لکیروں کے ٹکڑے۔ نقاط کو ہموار طریقے سے ملانے سے ہمیں مساوات کا مکمل راستہ نظر آتا ہے، جس سے ہم وہ درست مقامات دیکھ سکتے ہیں جہاں یہ $x$-محور کو کاٹتا ہے۔"
        }
       },
       {
@@ -4297,8 +4393,8 @@
         "(2*x**2 + x + 12*x + 6) - (0) == (2*x**2 + 13*x + 6) - (0)"
        ],
        "why": {
-        "en": "Because the second root lies between whole numbers on the graph, we use algebraic factorization (mid-term breaking) to find its exact value. We split $13x$ into $x + 12x$ because $1$ and $12$ multiply to give $12$ (which is $2 \\times 6$) and add up to $13$, setting up the four terms for grouping.",
-        "ur": "چونکہ گراف پر دوسرا روٹ مکمل اعداد کے درمیان آتا ہے، اس لیے اس کی درست قیمت معلوم کرنے کے لیے ہم الجبرائی تجزی (درمیانی رقم کو توڑنے کا طریقہ) استعمال کرتے ہیں۔ ہم $13x$ کو $x + 12x$ میں توڑتے ہیں کیونکہ $1$ اور $12$ کو ضرب دینے سے $12$ (جو کہ $2 \\times 6$ ہے) بنتا ہے اور جمع کرنے سے $13$ آتا ہے، جس سے گروپنگ کے لیے چار رقمیں بن جاتی ہیں۔"
+        "en": "Because reading a fraction from a hand-drawn graph can be tricky, we also use the algebraic method of mid-term breaking to be $100\\%$ sure of our exact roots. We look for two numbers that multiply to $2 \\times 6 = 12$ and add up to $13$, which gives us $1x$ and $12x$, preparing the four-term expression for factoring by grouping.",
+        "ur": "چونکہ ہاتھ سے بنے گراف سے کسر (fraction) کو پڑھنا تھوڑا مشکل ہو سکتا ہے، اس لیے ہم درمیانی رقم کو توڑنے کا الجبری طریقہ بھی استعمال کرتے ہیں تاکہ ہمیں اپنے اصل روٹس (roots) کا سو فیصد یقین ہو جائے۔ ہم ایسے دو اعداد تلاش کرتے ہیں جن کو ضرب دینے سے $2 \\times 6 = 12$ آئے اور جمع کرنے سے $13$ آئے، جس سے ہمیں $1x$ اور $12x$ ملتے ہیں، اور یوں چار رقمیں بن جاتی ہیں جن کی تجزی کرنا آسان ہے۔"
        }
       },
       {
@@ -4309,8 +4405,8 @@
         "(x*(2*x + 1) + 6*(2*x + 1)) - (0) == (2*x**2 + x + 12*x + 6) - (0)"
        ],
        "why": {
-        "en": "We factor by grouping the four terms into two pairs and extracting the highest common factor from each pair. Seeing the identical bracket $(2x + 1)$ appear in both parts confirms that our mid-term breaking in the previous step was successful.",
-        "ur": "ہم چار رقموں کے دو جوڑے بنا کر ہر جوڑے میں سے سب سے بڑا مشترک جزو ضربی باہر نکالتے ہیں۔ دونوں حصوں میں ایک جیسی بریکٹ $(2x + 1)$ کا آنا اس بات کی تصدیق کرتا ہے کہ پچھلے مرحلے میں درمیانی رقم کو توڑنے کا ہمارا عمل بالکل درست تھا۔"
+        "en": "Using the distributive law in reverse, we factor out the greatest common factor from the first pair of terms and the second pair of terms separately. Seeing the exact same binomial $(2x + 1)$ appear in both parts confirms that our mid-term split was successful.",
+        "ur": "تقسیمی قانون کو الٹا استعمال کرتے ہوئے، ہم پہلی دو رقموں اور آخری دو رقموں میں سے الگ الگ مشترک جزو ضربی (common factor) باہر نکالتے ہیں۔ دونوں حصوں میں بالکل ایک جیسی بریکٹ $(2x + 1)$ کا آنا اس بات کی تصدیق کرتا ہے کہ ہم نے درمیانی رقم کو بالکل صحیح توڑا تھا۔"
        }
       },
       {
@@ -4321,8 +4417,8 @@
         "((x + 6)*(2*x + 1)) - (0) == (x*(2*x + 1) + 6*(2*x + 1)) - (0)"
        ],
        "why": {
-        "en": "Since $(2x + 1)$ is common to both terms, we factor it out using the distributive property in reverse. This transforms our quadratic sum into a simple product of two linear factors equal to $0$.",
-        "ur": "چونکہ $(2x + 1)$ دونوں رقموں میں مشترک ہے، اس لیے ہم تقسیمی خاصیت کو الٹ استعمال کرتے ہوئے اسے باہر نکال لیتے ہیں۔ اس سے ہماری دو درجی مساوات دو یک درجی اجزائے ضربی کے حاصل ضرب میں تبدیل ہو جاتی ہے جو $0$ کے برابر ہے۔"
+        "en": "Now that $(2x + 1)$ is common to both parts of the expression, we factor it out to the front. This transforms our original sum of terms into a clean product of two linear factors, $(x + 6)$ and $(2x + 1)$, set equal to $0$.",
+        "ur": "اب جبکہ $(2x + 1)$ دونوں حصوں میں مشترک ہے، ہم اسے باہر نکال لیتے ہیں۔ اس سے ہماری جمع شدہ رقمیں دو یک درجی اجزائے ضربی، $(x + 6)$ اور $(2x + 1)$ کے حاصلِ ضرب میں تبدیل ہو جاتی ہیں جو $0$ کے برابر ہے۔"
        }
       },
       {
@@ -4330,8 +4426,8 @@
        "en": "A product is zero only when one of its factors is zero.",
        "ur": "حاصل ضرب صفر تب ہوتا ہے جب کوئی ایک جزو صفر ہو۔",
        "why": {
-        "en": "By the zero-product property, if two things multiply to give $0$, at least one of them must be $0$. This fundamental rule lets us break one quadratic equation into two simple linear equations that we can easily solve.",
-        "ur": "ضربی صفر کی خاصیت کے مطابق، اگر دو چیزوں کو ضرب دینے سے جواب $0$ آئے تو ان میں سے کم از کم ایک لازمی طور پر $0$ کے برابر ہوتی ہے۔ یہ بنیادی اصول ہمیں ایک دو درجی مساوات کو دو سادہ یک درجی مساواتوں میں توڑنے کی اجازت دیتا ہے جنہیں ہم آسانی سے حل کر سکتے ہیں۔"
+        "en": "Here we apply the Zero-Product Property, which tells us that if two things multiply to give $0$, at least one of them must be $0$. This fundamental rule lets us break one complicated quadratic equation into two simple linear equations that we can solve easily.",
+        "ur": "یہاں ہم ضربی صفر کی خاصیت (Zero-Product Property) استعمال کرتے ہیں، جو بتاتی ہے کہ اگر دو چیزوں کو ضرب دینے سے $0$ آتا ہے، تو ان میں سے کم از کم ایک لازمی $0$ کے برابر ہوگی۔ یہ بنیادی اصول ہمیں ایک مشکل دو درجی مساوات کو دو آسان یک درجی مساواتوں میں توڑنے میں مدد دیتا ہے جنہیں ہم آسانی سے حل کر سکتے ہیں۔"
        }
       },
       {
@@ -4343,8 +4439,8 @@
         "(2*x**2 + 13*x + 6).subs(x, (-1/2)) == 0"
        ],
        "why": {
-        "en": "We isolate $x$ in both linear equations by shifting the constants and dividing, which gives us the exact roots of the quadratic equation. Finding $x = -\\frac{1}{2}$ explains why we did not see the second zero in our table of whole numbers!",
-        "ur": "ہم دونوں یک درجی مساواتوں میں مستقل اعداد کو دوسری طرف لے جا کر اور تقسیم کر کے $x$ کو الگ کر لیتے ہیں، جس سے ہمیں دو درجی مساوات کے درست روٹس مل جاتے ہیں۔ $x = -\\frac{1}{2}$ کا ملنا یہ واضح کرتا ہے کہ ہمیں مکمل اعداد والے جدول میں دوسرا صفر کیوں نظر نہیں آیا تھا!"
+        "en": "By isolating $x$ in both small equations, we uncover the exact numerical values that make the original equation true. Notice how the second root is a fraction, $x = -\\frac{1}{2}$, which lies right between $-1$ and $0$ just as our table of values hinted earlier.",
+        "ur": "دونوں چھوٹی مساواتوں میں $x$ کو اکیلا کر کے، ہم وہ درست عددی قیمتیں معلوم کر لیتے ہیں جو اصل مساوات کو درست ثابت کرتی ہیں۔ غور کریں کہ دوسرا روٹ ایک کسر $x = -\\frac{1}{2}$ ہے، جو بالکل $-1$ اور $0$ کے درمیان آتا ہے جیسا کہ ہمارے جدول (table) نے پہلے اشارہ کیا تھا۔"
        }
       },
       {
@@ -4388,15 +4484,15 @@
         }
        ],
        "why": {
-        "en": "Finally, we connect our algebraic work back to the graph: the values $x = -6$ and $x = -\\frac{1}{2}$ are the exact points where our parabola crosses the $x$-axis. Both the visual graph and the algebra agree completely, completing our graphical solution.",
-        "ur": "آخر میں، ہم اپنے الجبرائی کام کو واپس گراف سے جوڑتے ہیں: $x = -6$ اور $x = -\\frac{1}{2}$ کی قیمتیں بالکل وہی نقاط ہیں جہاں ہمارا پیرابولا $x$-محور کو قطع کرتا ہے۔ بصری گراف اور الجبرا دونوں مکمل طور پر متفق ہیں، جس سے ہمارا گرافیکل حل مکمل ہوتا ہے۔"
+        "en": "Finally, we connect our visual graph back to our algebraic work: the points where the parabola crosses the horizontal $x$-axis are the graphical solutions. Reading $x = -6$ and $x = -\\frac{1}{2}$ directly from the axis completes our graphical solution with full precision.",
+        "ur": "آخر میں، ہم اپنے گراف کو الجبری عمل کے ساتھ جوڑتے ہیں: وہ نقاط جہاں پیرابولا افقی $x$-محور کو کاٹتا ہے وہی گراف کے ذریعے نکلے ہوئے حل ہیں۔ محور پر سے براہِ راست $x = -6$ اور $x = -\\frac{1}{2}$ کو پڑھنا ہمارے گراف کے حل کو مکمل درستگی کے ساتھ پورا کرتا ہے۔"
        }
       }
      ],
      "answer": "$x = -6,\\ x = - \\frac{1}{2}$",
      "meaning": {
-      "en": "The final answer $x = -6, x = -\\frac{1}{2}$ gives the two roots of the quadratic equation $2x^2 + 13x + 6 = 0$. Geometrically, these are the exact $x$-intercepts where the parabola $y = 2x^2 + 13x + 6$ cuts the $x$-axis ($y = 0$). You can verify them by substituting $x = -6$ or $x = -\\frac{1}{2}$ back into $2x^2 + 13x + 6$ to see that both make the left side equal to $0$.",
-      "ur": "آخری جواب $x = -6, x = -\\frac{1}{2}$ ہمیں دو درجی مساوات $2x^2 + 13x + 6 = 0$ کے دو روٹس دیتا ہے۔ جیومیٹری کے لحاظ سے، یہ بالکل وہی $x$-مقطوعہ نقاط ہیں جہاں پیرابولا $y = 2x^2 + 13x + 6$ کا گراف $x$-محور ($y = 0$) کو قطع کرتا ہے۔ آپ ان کی تصدیق $x = -6$ یا $x = -\\frac{1}{2}$ کو واپس $2x^2 + 13x + 6$ میں درج کر کے کر سکتے ہیں، جس سے بائیں طرف کا حصہ $0$ کے برابر ہو جائے گا۔"
+      "en": "The final answer $x = -6, x = -\\frac{1}{2}$ means these are the exact $x$-intercepts where the parabola of $y = 2x^2 + 13x + 6$ cuts the $x$-axis, making the height $y$ equal to $0$. You can easily check this by looking at our table where $x = -6$ directly gave $y = 0$, or by substituting $x = -\\frac{1}{2}$ into $2x^2 + 13x + 6$ to see that it also simplifies to $0$.",
+      "ur": "آخری جواب $x = -6, x = -\\frac{1}{2}$ کا مطلب یہ ہے کہ یہ وہی درست نقاط ہیں جہاں $y = 2x^2 + 13x + 6$ کا پیرابولا (گراف) $x$-محور کو کاٹتا ہے، جس سے بلندی یعنی $y$ کی قیمت $0$ ہو جاتی ہے۔ آپ اس کی پڑتال اپنے جدول سے باآسانی کر سکتے ہیں جہاں $x = -6$ نے براہِ راست $y = 0$ دیا تھا، یا پھر $2x^2 + 13x + 6$ میں $x = -\\frac{1}{2}$ درج کر کے دیکھ سکتے ہیں کہ یہ بھی حل ہو کر $0$ ہی بنتا ہے۔"
      },
      "book_key": "x=-6, x=-\\frac{1}{2}"
     },
@@ -4634,24 +4730,34 @@
         }
        ],
        "why": {
-        "en": "To solve a quadratic equation graphically, we first turn the expression on the left into a function of $y$. This helps us visualize the equation as a curve, where the solutions will simply be the points where $y = 0$ (the $x$-axis).",
-        "ur": "دو درجی مساوات کو گراف کے ذریعے حل کرنے کے لیے ہم بائیں طرف والی رقم کو $y$ کے برابر فرض کر لیتے ہیں۔ اس سے ہمیں مساوات کو ایک خم (curve) کی شکل میں دیکھنے میں مدد ملتی ہے، جہاں ہمارا حل وہ نقاط ہوں گے جہاں $y = 0$ ہو (یعنی $x$-محور پر)۔"
+        "en": "To solve a quadratic equation graphically, we first turn the expression $4x^2 + 12x - 27$ into a function of $y$. This lets us plot a curve, where the solutions to the original equation will simply be the points where $y = 0$ (the $x$-axis).",
+        "ur": "مربع مساوات کو گراف کے ذریعے حل کرنے کے لیے ہم پہلے جملے $4x^2 + 12x - 27$ کو $y$ کے برابر رکھتے ہیں۔ اس سے ہم ایک گراف بنا سکیں گے، جہاں اصل مساوات کا حل وہ نقاط ہوں گے جہاں $y = 0$ ہو (یعنی $x$-محور پر)۔"
        }
       },
       {
-       "math": "\\begin{array}{c|ccccccc} x & -5 & -4 & -3 & -2 & -1 & 0 & 1 \\\\ \\hline y & 13 & -11 & -27 & -35 & -35 & -27 & -11 \\end{array}",
+       "math": "\\begin{array}{c|cccccccccc} x & -6 & -5 & -4 & -3 & -2 & -1 & 0 & 1 & 2 & 3 \\\\ \\hline y & 45 & 13 & -11 & -27 & -35 & -35 & -27 & -11 & 13 & 45 \\end{array}",
        "en": "Make a table of values: put each $x$ in $y = 4 x^{2} + 12 x - 27$.",
        "ur": "قیمتوں کا جدول بنائیں: ہر $x$ کو $y = 4 x^{2} + 12 x - 27$ میں رکھیں۔",
        "check": [
+        "(4*x**2 + 12*x - 27).subs(x, (-6)) == (45)",
         "(4*x**2 + 12*x - 27).subs(x, (-5)) == (13)",
         "(4*x**2 + 12*x - 27).subs(x, (-4)) == (-11)",
         "(4*x**2 + 12*x - 27).subs(x, (-3)) == (-27)",
         "(4*x**2 + 12*x - 27).subs(x, (-2)) == (-35)",
         "(4*x**2 + 12*x - 27).subs(x, (-1)) == (-35)",
         "(4*x**2 + 12*x - 27).subs(x, (0)) == (-27)",
-        "(4*x**2 + 12*x - 27).subs(x, (1)) == (-11)"
+        "(4*x**2 + 12*x - 27).subs(x, (1)) == (-11)",
+        "(4*x**2 + 12*x - 27).subs(x, (2)) == (13)",
+        "(4*x**2 + 12*x - 27).subs(x, (3)) == (45)"
        ],
        "draw": [
+        {
+         "t": "dot",
+         "p": [
+          14.0,
+          22.83
+         ]
+        },
         {
          "t": "dot",
          "p": [
@@ -4700,11 +4806,25 @@
           70.0,
           42.41
          ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          78.0,
+          34.02
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          86.0,
+          22.83
+         ]
         }
        ],
        "why": {
-        "en": "We cannot draw a graph without coordinates, so we choose a few values of $x$ and calculate their corresponding $y$ values. Notice where $y$ changes sign (like between $x = -5$ and $x = -4$ from $13$ to $-11$), as this tells us the curve is crossing the $x$-axis in that region.",
-        "ur": "نقاط کے بغیر ہم گراف نہیں بنا سکتے، اس لیے ہم $x$ کی کچھ قیمتیں چن کر ان کے مطابق $y$ کی قیمتیں نکالتے ہیں۔ غور کریں کہ جہاں $y$ کی علامت بدلتی ہے (جیسے $x = -5$ اور $x = -4$ کے درمیان $13$ سے $-11$ ہو رہی ہے)، اس سے ہمیں پتہ چلتا ہے کہ گراف اس حصے میں $x$-محور کو قطع کر رہا ہے۔"
+        "en": "We need specific coordinate points $(x, y)$ to draw our graph accurately on paper. Notice how $y$ changes sign from $13$ to $-11$ between $x = -5$ and $x = -4$, and from $-11$ to $13$ between $x = 1$ and $x = 2$, which tells us the roots lie inside these two intervals.",
+        "ur": "کاغذ پر درست گراف بنانے کے لیے ہمیں مخصوص نقاط $(x, y)$ کی ضرورت ہوتی ہے۔ غور کریں کہ $x = -5$ اور $x = -4$ کے درمیان $y$ کی علامت $13$ سے بدل کر $-11$ ہو جاتی ہے، اور $x = 1$ اور $x = 2$ کے درمیان $-11$ سے $13$ ہو جاتی ہے، جو ہمیں بتاتا ہے کہ مساوات کے روٹس ان وقفوں کے درمیان موجود ہیں۔"
        }
       },
       {
@@ -4881,8 +5001,8 @@
         }
        ],
        "why": {
-        "en": "A quadratic function always forms a U-shaped curve called a parabola, not a series of straight lines. Plotting our table points and connecting them smoothly shows us the exact path of the equation and where it crosses the horizontal axis.",
-        "ur": "ایک دو درجی مساوات ہمیشہ U-شکل کا خم بناتی ہے جسے پیرابولا (parabola) کہتے ہیں، نہ کہ سیدھی لکیریں۔ جدول کے نقاط کو گراف پر لگا کر ہموار طریقے سے ملانے سے ہمیں مساوات کا صحیح راستہ اور وہ جگہیں نظر آتی ہیں جہاں یہ افقی محور ($x$-axis) کو کاٹتی ہے۔"
+        "en": "A quadratic function always forms a U-shaped curve called a parabola, so we connect the plotted points smoothly rather than with straight ruler lines. This continuous curve visually shows all the intermediate values and reveals where the graph crosses the $x$-axis.",
+        "ur": "کواڈریٹک فنکشن ہمیشہ ایک U شکل کا خم بناتا ہے جسے پیرابولا کہتے ہیں، اس لیے ہم پوائنٹس کو فٹے سے سیدھی لکیروں کے بجائے ہموار ہاتھ سے ملاتے ہیں۔ یہ مسلسل خم درمیانی قیمتوں کو ظاہر کرتا ہے اور دکھاتا ہے کہ گراف $x$-محور کو کہاں قطع کرتا ہے۔"
        }
       },
       {
@@ -4893,8 +5013,8 @@
         "(4*x**2 - 6*x + 18*x - 27) - (0) == (4*x**2 + 12*x - 27) - (0)"
        ],
        "why": {
-        "en": "Since reading exact fractions from a hand-drawn graph can be tricky, we use mid-term breaking to find the exact roots algebraically. By rewriting $12x$ as $-6x + 18x$, we prepare the four terms for easy factoring by grouping.",
-        "ur": "چونکہ ہاتھ سے بنے گراف سے بٹے والی (کسر والی) درست قیمتیں پڑھنا تھوڑا مشکل ہو سکتا ہے، اس لیے ہم درمیانی رقم کو توڑنے کا طریقہ استعمال کر کے الجبرا کی مدد سے بالکل درست اصل (roots) نکالتے ہیں۔ $12x$ کو $-6x + 18x$ لکھنے سے چار رقمیں بن جاتی ہیں جن سے مشترک لینا آسان ہو جاتا ہے۔"
+        "en": "Since reading fractional values directly from a hand-drawn graph can be slightly imprecise, we use mid-term breaking to find the exact roots algebraically. We split $12x$ into $-6x + 18x$ because their product gives $-108$ (which is $4 \\times -27$), preparing the equation for factoring by grouping.",
+        "ur": "چونکہ ہاتھ سے بنے گراف سے کسری قیمتوں (fractions) کو بالکل درست پڑھنا تھوڑا مشکل ہو سکتا ہے، اس لیے ہم درمیانی رقم کو توڑنے کا طریقہ استعمال کرتے ہیں تاکہ الجبرا کی مدد سے بالکل درست روٹس مل سکیں۔ ہم نے $12x$ کو $-6x + 18x$ میں توڑا کیونکہ ان کا حاصل ضرب $-108$ ہے (جو $4 \\times -27$ کے برابر ہے)، جس سے بذریعہ گروپنگ تجزی کرنا آسان ہو جاتا ہے۔"
        }
       },
       {
@@ -4905,8 +5025,8 @@
         "(2*x*(2*x - 3) + 9*(2*x - 3)) - (0) == (4*x**2 - 6*x + 18*x - 27) - (0)"
        ],
        "why": {
-        "en": "We apply the distributive law in reverse to the first two terms and the last two terms separately. Seeing the identical bracket $(2x - 3)$ appear twice confirms that our middle term was split correctly.",
-        "ur": "ہم پہلی دو اور آخری دو رقموں میں سے الگ الگ مشترک (common) نکالتے ہیں۔ ایک جیسی بریکٹ $(2x - 3)$ کا دو بار آنا اس بات کی تصدیق کرتا ہے کہ ہم نے درمیانی رقم کو بالکل صحیح توڑا تھا۔"
+        "en": "By factoring out $2x$ from the first pair and $9$ from the second pair, we apply the distributive law in reverse. Seeing the identical bracket $(2x - 3)$ appear twice confirms that our middle-term split was successful.",
+        "ur": "پہلے جوڑے سے $2x$ اور دوسرے جوڑے سے $9$ کو مشترک (common) لے کر ہم تقسیمی قانون کو الٹ استعمال کرتے ہیں۔ ایک جیسی بریکٹ $(2x - 3)$ کا دو بار آنا اس بات کی تصدیق کرتا ہے کہ ہماری درمیانی رقم کی تقسیم بالکل درست تھی۔"
        }
       },
       {
@@ -4917,8 +5037,8 @@
         "((2*x + 9)*(2*x - 3)) - (0) == (2*x*(2*x - 3) + 9*(2*x - 3)) - (0)"
        ],
        "why": {
-        "en": "By factoring out the common binomial $(2x - 3)$, we turn the sum into a product of two linear factors. This is the key step that allows us to break one hard quadratic equation into two simple linear ones.",
-        "ur": "مشترک بریکٹ $(2x - 3)$ کو باہر نکال کر ہم اس جملے کو دو یک درجی اجزائے ضربی کے حاصلِ ضرب میں بدل دیتے ہیں۔ یہ وہ اہم قدم ہے جو ایک مشکل دو درجی مساوات کو دو آسان یک درجی مساواتوں میں تقسیم کر دیتا ہے۔"
+        "en": "We now factor out the common binomial $(2x - 3)$ from the entire expression. This converts the quadratic sum into a single product of two linear factors equal to $0$.",
+        "ur": "اب ہم پورے جملے میں سے مشترک بریکٹ $(2x - 3)$ کو باہر نکال لیتے ہیں۔ اس سے یہ دو درجی مساوات دو یک درجی اجزائے ضربی کے حاصل ضرب میں تبدیل ہو جاتی ہے جو $0$ کے برابر ہے۔"
        }
       },
       {
@@ -4926,8 +5046,8 @@
        "en": "A product is zero only when one of its factors is zero.",
        "ur": "حاصل ضرب صفر تب ہوتا ہے جب کوئی ایک جزو صفر ہو۔",
        "why": {
-        "en": "Here we use the Zero-Product Property, which says that if two things multiply to give $0$, at least one of them must be $0$. This gives us two straightforward equations to solve for $x$.",
-        "ur": "یہاں ہم ضرب کا صفری اصول (Zero-Product Property) استعمال کرتے ہیں، جو کہتا ہے کہ اگر دو چیزوں کا حاصلِ ضرب $0$ ہو تو ان میں سے کم از کم ایک لازمی $0$ کے برابر ہو گی۔ اس سے ہمیں $x$ کی قیمت نکالنے کے لیے دو سادہ مساواتیں مل جاتی ہیں۔"
+        "en": "According to the zero-product property, if two factors multiply to give $0$, at least one of them must be $0$. This fundamental rule allows us to break one quadratic equation into two simple linear equations.",
+        "ur": "ضربی صفر کی خاصیت (zero-product property) کے مطابق اگر دو اجزاء کا حاصل ضرب $0$ ہو، تو ان میں سے کم از کم ایک جزو لازمی $0$ کے برابر ہوتا ہے۔ یہ بنیادی اصول ہمیں ایک دو درجی مساوات کو دو آسان یک درجی مساواتوں میں بدلنے میں مدد دیتا ہے۔"
        }
       },
       {
@@ -4939,8 +5059,8 @@
         "(4*x**2 + 12*x - 27).subs(x, (3/2)) == 0"
        ],
        "why": {
-        "en": "Solving each small linear equation isolates $x$ and gives us the two exact roots of the quadratic equation. These fractions tell us the exact numbers that make the original expression equal to $0$.",
-        "ur": "ہر چھوٹی یک درجی مساوات کو حل کرنے سے $x$ الگ ہو جاتا ہے اور ہمیں دو درجی مساوات کے دو بالکل درست اصل (roots) مل جاتے ہیں۔ یہ کسر ہمیں وہ اصل اعداد بتاتے ہیں جو دی گئی مساوات کو $0$ کے برابر بناتے ہیں۔"
+        "en": "Solving each small linear equation isolates $x$, giving us the two exact roots of the equation. Notice that $-\\frac{9}{2}$ lies between $-5$ and $-4$, and $\\frac{3}{2}$ lies between $1$ and $2$, matching our table from Step 2.",
+        "ur": "ہر چھوٹی یک درجی مساوات کو حل کرنے سے $x$ کی قیمت نکل آتی ہے، جس سے ہمیں مساوات کے دو بالکل درست روٹس مل جاتے ہیں۔ غور کریں کہ $-\\frac{9}{2}$ کی قیمت $-5$ اور $-4$ کے درمیان ہے، اور $\\frac{3}{2}$ کی قیمت $1$ اور $2$ کے درمیان ہے، جو مرحلہ 2 کے ٹیبل سے بالکل مطابقت رکھتی ہے۔"
        }
       },
       {
@@ -4984,15 +5104,15 @@
         }
        ],
        "why": {
-        "en": "Finally, we connect our algebraic work back to the graph we drew earlier. The exact points where the parabola crosses the $x$-axis match our calculated fractions, completing the graphical solution with full confidence.",
-        "ur": "آخر میں، ہم اپنے الجبرا کے کام کو اس گراف سے جوڑتے ہیں جو ہم نے پہلے بنایا تھا۔ وہ نقاط جہاں پیرابولا $x$-محور کو کاٹتا ہے، ہماری نکالی گئی کسروں سے بالکل میل کھاتے ہیں، جس سے ہمارا گراف کے ذریعے حل مکمل اعتماد کے ساتھ پورا ہوتا ہے۔"
+        "en": "Finally, we connect our algebraic work back to the graph: the points where the parabola intersects the $x$-axis ($y = 0$) are indeed at $x = -\\frac{9}{2}$ and $x = \\frac{3}{2}$. This confirms that our graphical reading and algebraic calculation are in complete agreement.",
+        "ur": "آخر میں ہم اپنے الجبرا کے کام کو گراف سے جوڑتے ہیں: وہ نقاط جہاں پیرابولا $x$-محور کو قطع کرتا ہے ($y = 0$) واقعی $x = -\\frac{9}{2}$ اور $x = \\frac{3}{2}$ پر ہیں۔ اس سے تصدیق ہوتی ہے کہ ہمارا گراف کا مطالعہ اور الجبرا کا حساب مکمل طور پر متفق ہیں۔"
        }
       }
      ],
      "answer": "$x = - \\frac{9}{2},\\ x = \\frac{3}{2}$",
      "meaning": {
-      "en": "The final answer $x = -\\frac{9}{2}$ and $x = \\frac{3}{2}$ gives the two exact $x$-coordinates where the parabola of $y = 4x^2 + 12x - 27$ crosses the $x$-axis. This means these are the only two numbers that make the original equation equal to $0$, which you can verify by substituting either fraction back into $4x^2 + 12x - 27$ to see that it simplifies to $0$.",
-      "ur": "آخری جواب $x = -\\frac{9}{2}$ اور $x = \\frac{3}{2}$ ہمیں $x$ کے وہ دو بالکل درست نقاط بتاتا ہے جہاں $y = 4x^2 + 12x - 27$ کا گراف (پیرابولا) $x$-محور کو قطع کرتا ہے۔ اس کا مطلب ہے کہ صرف یہی دو اعداد ایسے ہیں جو اصل مساوات کو $0$ کے برابر بناتے ہیں، جس کی تصدیق آپ ان میں سے کسی بھی قیمت کو واپس $4x^2 + 12x - 27$ میں درج کر کے کر سکتے ہیں کہ جواب $0$ آتا ہے۔"
+      "en": "The final answer $x = -\\frac{9}{2}, \\frac{3}{2}$ gives the exact $x$-coordinates where the parabola $y = 4x^2 + 12x - 27$ crosses the $x$-axis. These are the only two values of $x$ that make the expression $4x^2 + 12x - 27$ equal to $0$, which you can verify by substituting either fraction back into the original equation.",
+      "ur": "حتمی جواب $x = -\\frac{9}{2}, \\frac{3}{2}$ ہمیں وہ درست $x$-محددات (coordinates) بتاتا ہے جہاں پیرابولا $y = 4x^2 + 12x - 27$، $x$-محور کو قطع کرتا ہے۔ یہ $x$ کی واحد دو قیمتیں ہیں جو جملے $4x^2 + 12x - 27$ کو $0$ کے برابر بناتی ہیں، اور آپ ان کسروں کو واپس اصل مساوات میں درج کر کے اس کی پڑتال بھی کر سکتے ہیں۔"
      },
      "book_key": "x=-\\frac{9}{2}, x=\\frac{3}{2}"
     }
@@ -15017,6 +15137,36 @@
        "math": "x \\in (-\\infty, -4) \\cup (1, \\infty)",
        "en": "Collect the intervals where the inequality holds.",
        "ur": "وہ وقفے لکھیں جہاں عدم مساوات درست ہے۔",
+       "draw": [
+        {
+         "t": "numberline",
+         "from": -7.0,
+         "to": 4.0,
+         "y": 30,
+         "marks": [
+          {
+           "v": -4.0,
+           "s": "-4",
+           "open": true
+          },
+          {
+           "v": 1.0,
+           "s": "1",
+           "open": true
+          }
+         ],
+         "shade": [
+          [
+           null,
+           -4.0
+          ],
+          [
+           1.0,
+           null
+          ]
+         ]
+        }
+       ],
        "why": {
         "en": "We combine the intervals that passed our test using the union symbol $\\cup$. Because the original inequality has a strict $>$ sign, we use round brackets to show that the boundary points $-4$ and $1$ themselves are not included.",
         "ur": "ہم ان حصوں کو جنہوں نے ہمارا ٹیسٹ پاس کیا ہے، یونین کی علامت $\\cup$ کے ذریعے ملا کر لکھتے ہیں۔ چونکہ اصل عدم مساوات میں صرف $>$ کی علامت ہے، اس لیے ہم چھوٹی بریکٹس استعمال کرتے ہیں تاکہ ظاہر ہو کہ سرحدی نقاط $-4$ اور $1$ خود حل میں شامل نہیں ہیں۔"
@@ -15186,6 +15336,36 @@
        "math": "x \\in (-\\infty, 1) \\cup (3, \\infty)",
        "en": "Collect the intervals where the inequality holds.",
        "ur": "وہ وقفے لکھیں جہاں عدم مساوات درست ہے۔",
+       "draw": [
+        {
+         "t": "numberline",
+         "from": -1.0,
+         "to": 5.0,
+         "y": 30,
+         "marks": [
+          {
+           "v": 1.0,
+           "s": "1",
+           "open": true
+          },
+          {
+           "v": 3.0,
+           "s": "3",
+           "open": true
+          }
+         ],
+         "shade": [
+          [
+           null,
+           1.0
+          ],
+          [
+           3.0,
+           null
+          ]
+         ]
+        }
+       ],
        "why": {
         "en": "We form our final solution set by taking the union $\\cup$ of the intervals that passed the test. Round brackets are used at $1$ and $3$ because the inequality is strictly greater than $(>)$, meaning the boundary points themselves are not included.",
         "ur": "ہم ان وقفوں کا یونین $\\cup$ لے کر اپنا حتمی حل سیٹ بناتے ہیں جنہوں نے ٹیسٹ پاس کیا۔ $1$ اور $3$ کے گرد چھوٹی بریکٹس اس لیے لگائی گئی ہیں کیونکہ ناہمواری میں صرف بڑے ہونے کی علامت $(>)$ ہے، جس کا مطلب ہے کہ یہ باؤنڈری نقاط خود حل میں شامل نہیں ہیں۔"
@@ -15355,6 +15535,32 @@
        "math": "x \\in (-3, 2)",
        "en": "Collect the intervals where the inequality holds.",
        "ur": "وہ وقفے لکھیں جہاں عدم مساوات درست ہے۔",
+       "draw": [
+        {
+         "t": "numberline",
+         "from": -6.0,
+         "to": 5.0,
+         "y": 30,
+         "marks": [
+          {
+           "v": -3.0,
+           "s": "-3",
+           "open": true
+          },
+          {
+           "v": 2.0,
+           "s": "2",
+           "open": true
+          }
+         ],
+         "shade": [
+          [
+           -3.0,
+           2.0
+          ]
+         ]
+        }
+       ],
        "why": {
         "en": "We write the final solution set using the interval that satisfied the inequality, which is between $-3$ and $2$. We use round brackets $(-3, 2)$ because the strict inequality sign $<$ means the boundary points $-3$ and $2$ themselves are not included.",
         "ur": "ہم اس وقفے کو استعمال کرتے ہوئے حتمی حل سیٹ لکھتے ہیں جس نے عدم مساوات کو درست ثابت کیا، جو کہ $-3$ اور $2$ کے درمیان ہے۔ ہم چھوٹی قوسین $(-3, 2)$ استعمال کرتے ہیں کیونکہ علامت $<$ کا مطلب ہے کہ سرحدی نقاط $-3$ اور $2$ خود اس حل میں شامل نہیں ہیں۔"
@@ -15679,6 +15885,32 @@
        "math": "x \\in [\\frac{3}{2}, \\frac{5}{2}]",
        "en": "Collect the intervals where the inequality holds (the critical points are included because of $=$).",
        "ur": "وہ وقفے لکھیں جہاں عدم مساوات درست ہے (= کی وجہ سے نازک نقاط شامل ہیں)۔",
+       "draw": [
+        {
+         "t": "numberline",
+         "from": -1.0,
+         "to": 5.0,
+         "y": 30,
+         "marks": [
+          {
+           "v": 1.5,
+           "s": "3/2",
+           "open": false
+          },
+          {
+           "v": 2.5,
+           "s": "5/2",
+           "open": false
+          }
+         ],
+         "shade": [
+          [
+           1.5,
+           2.5
+          ]
+         ]
+        }
+       ],
        "why": {
         "en": "We write our final solution by taking the successful middle interval from $\\frac{3}{2}$ to $\\frac{5}{2}$. We use square brackets $[\\ ]$ to show that the boundary points $\\frac{3}{2}$ and $\\frac{5}{2}$ are included in the solution because the inequality allows equality ($\\le 0$).",
         "ur": "ہم کامیاب ہونے والے درمیانی حصے $\\frac{3}{2}$ سے $\\frac{5}{2}$ کو ملا کر اپنا آخری حل لکھتے ہیں۔ ہم بڑی بریکٹوں $[\\ ]$ کا استعمال کرتے ہیں تاکہ یہ ظاہر ہو سکے کہ سرے کے پوائنٹس $\\frac{3}{2}$ اور $\\frac{5}{2}$ بھی حل میں شامل ہیں کیونکہ سوال میں برابر کی علامت ($\\le 0$) موجود ہے۔"
@@ -15860,6 +16092,32 @@
        "math": "x \\in [1, 2]",
        "en": "Collect the intervals where the inequality holds (the critical points are included because of $=$).",
        "ur": "وہ وقفے لکھیں جہاں عدم مساوات درست ہے (= کی وجہ سے نازک نقاط شامل ہیں)۔",
+       "draw": [
+        {
+         "t": "numberline",
+         "from": -1.0,
+         "to": 4.0,
+         "y": 30,
+         "marks": [
+          {
+           "v": 1.0,
+           "s": "1",
+           "open": false
+          },
+          {
+           "v": 2.0,
+           "s": "2",
+           "open": false
+          }
+         ],
+         "shade": [
+          [
+           1.0,
+           2.0
+          ]
+         ]
+        }
+       ],
        "why": {
         "en": "We write the final solution using the interval that worked, which is from $1$ to $2$. We use square brackets $[1, 2]$ to show that the boundary points $1$ and $2$ are included in the answer because the inequality has an 'or equal to' sign ($\\le$).",
         "ur": "ہم اپنا حتمی حل اس وقفے کو استعمال کرتے ہوئے لکھتے ہیں جس نے شرائط کو پورا کیا، جو کہ $1$ سے $2$ تک ہے۔ ہم بڑی بریکٹیں $[1, 2]$ استعمال کرتے ہیں تاکہ یہ ظاہر ہو سکے کہ سرحدی نقاط $1$ اور $2$ بھی جواب میں شامل ہیں، کیونکہ نا مساوات میں 'برابر' کی علامت ($\\le$) موجود ہے۔"

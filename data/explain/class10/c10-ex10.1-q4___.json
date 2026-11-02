@@ -1,35 +1,40 @@
 {
  "item": "c10-ex10.1-q4",
  "label": "",
- "answer_ref": "circle completed by stepping equal chords (no centre needed)",
+ "answer_ref": "circle completed by equal chords and equal exterior angles (no centre needed)",
  "math": [
-  "\\text{Given arc } PQR",
-  "\\text{Mark equal chords along the arc}",
-  "\\text{Continue the equal steps beyond the arc}",
-  "\\text{Join the points smoothly}"
+  "\\text{Given arc } PQR,\\quad PQ = QR",
+  "\\text{Produce } PQ \\text{ to } A;\\ \\angle AQR = \\alpha",
+  "\\text{Produce } QR \\text{ to } B;\\ \\angle BRS = \\alpha,\\ RS = PQ",
+  "\\text{Repeat: } T,\\ U,\\ \\dots \\text{ until back at } P",
+  "\\text{Join all the points with a smooth curve}"
  ],
  "why": [
   {
-   "en": "Every geometric construction must begin with a clear starting figure. Drawing the arc $PQR$ gives us a curved segment whose exact curvature we will copy to build the rest of the circle.",
-   "ur": "جیومیٹری کی ہر بناوٹ کا آغاز ایک واضح ابتدائی شکل سے ہوتا ہے۔ قوس $PQR$ بنانے سے ہمیں ایک خم دار حصہ مل جاتا ہے جس کے خم کو نقل کر کے ہم باقی دائرہ مکمل کریں گے۔"
+   "en": "A circle has uniform curvature everywhere, which means equal chords always make the same turn. By keeping our compass at one fixed opening, we create two equal chords $PQ$ and $QR$ to serve as our standard length.",
+   "ur": "دائرے کا جھکاؤ ہر جگہ یکساں ہوتا ہے، جس کا مطلب ہے کہ برابر وتر (chords) ہمیشہ ایک جتنا مڑتے ہیں۔ پرکار کو ایک مقررہ فاصلے پر رکھ کر، ہم دو برابر وتر $PQ$ اور $QR$ بناتے ہیں جو لمبائی کے لیے ہمارا معیار بنیں گے۔"
   },
   {
-   "en": "In a circle, chords of equal length cut off arcs of equal size. By marking equal chords along the given arc $PQR$, we capture the exact bend of this specific circle so we can repeat it.",
-   "ur": "ایک دائرے میں برابر لمبائی کے وتر برابر قوسیں کاٹتے ہیں۔ دی گئی قوس $PQR$ پر برابر وتر لگا کر ہم اس خاص دائرے کے خم اور زاویے کا درست اندازہ لگا لیتے ہیں تاکہ اسے آگے دہرا سکیں۔"
+   "en": "Since we cannot use the centre, we must measure how much the circle bends from the outside. Producing $PQ$ to $A$ gives us the exterior angle $\\alpha = \\angle AQR$, which tells us the exact angle of turn between one chord and the next.",
+   "ur": "چونکہ ہم مرکز استعمال نہیں کر سکتے، اس لیے ہمیں باہر سے ناپنا ہوگا کہ دائرہ کتنا مڑتا ہے۔ $PQ$ کو $A$ تک بڑھانے سے ہمیں بیرونی زاویہ $\\alpha = \\angle AQR$ ملتا ہے، جو ہمیں ایک وتر سے دوسرے وتر کے درمیان مڑنے کا بالکل درست زاویہ بتاتا ہے۔"
   },
   {
-   "en": "Because equal chords make equal angles with each other on the same circle, repeating both the chord length and the turning angle forces our new points to stay on the exact same circular path. This allows us to extend the curve all the way back to the starting point without ever needing the centre.",
-   "ur": "چونکہ ایک ہی دائرے میں برابر وتر ایک دوسرے کے ساتھ برابر زاویے بناتے ہیں، اس لیے وتر کی لمبائی اور زاویے کو دہرانے سے نئے نقاط بالکل اسی دائرے کے راستے پر رہتے ہیں۔ اس طرح ہم مرکز معلوم کیے بغیر خم کو بڑھا کر واپس ابتدائی نقطے تک لے آتے ہیں۔"
+   "en": "By the geometric symmetry of a circle, moving the same chord length $RS = PQ$ at the same turning angle $\\alpha$ forces us to stay on the circular path. This gives us a brand new point $S$ that is guaranteed to lie on the circle.",
+   "ur": "دائرے کی ہم آہنگی کے اصول کے مطابق، ایک ہی وتر کی لمبائی $RS = PQ$ کو اسی بیرونی زاویے $\\alpha$ پر موڑنے سے ہم دائرے کے راستے پر ہی رہتے ہیں۔ اس سے ہمیں ایک نیا نقطہ $S$ ملتا ہے جو یقینی طور پر اسی دائرے پر واقع ہے۔"
   },
   {
-   "en": "The marked points all lie on the boundary of the required circle. Connecting them with a smooth, freehand curve fills in the gaps between the chords and gives us the final continuous circle.",
-   "ur": "یہ تمام نشان زدہ نقاط مطلوبہ دائرے کے محیط پر واقع ہیں۔ انہیں ایک ہموار خط سے ملانے سے وتروں کے درمیان خلا پر ہو جاتا ہے اور ہمیں ایک مکمل دائرہ حاصل ہو جاتا ہے۔"
+   "en": "Continuing this regular pattern of equal chords and equal exterior angles builds a regular polygon whose vertices all touch the circle. Reaching back to $P$ gives us a complete ring of guide points all the way around.",
+   "ur": "برابر وتروں اور برابر بیرونی زاویوں کے اس سلسلے کو دہرانے سے ایک منظم کثیرالاضلاع (polygon) بنتی ہے جس کے تمام کونے دائرے کو چھوتے ہیں۔ نقطہ $P$ تک واپس پہنچنے سے ہمیں دائرے کے گرد رہنمائی کے لیے نقاط کا ایک مکمل حلقہ مل جاتا ہے۔"
+  },
+  {
+   "en": "The points $P, Q, R, S, T, U, \\dots$ act as stepping stones along the circumference. Sketching a smooth, round curve through all of them restores the full circle without ever needing to locate its centre.",
+   "ur": "نقاط $P, Q, R, S, T, U, \\dots$ دائرے کے محیط پر سنگِ میل کا کام کرتے ہیں۔ ان تمام نقاط میں سے ایک ہموار گول خط گزارنے سے پورا دائرہ مکمل ہو جاتا ہے اور اس کے مرکز کو تلاش کرنے کی ضرورت بھی نہیں پڑتی۔"
   }
  ],
  "meaning": {
-  "en": "We have successfully completed the full circle from the given arc $PQR$ by using the geometric property of equal chords and angles, completely avoiding the need to locate the centre. You can check your work visually by ensuring the completed figure looks completely round with no sharp corners where the points were joined.",
-  "ur": "ہم نے برابر وتروں اور زاویوں کی جیومیٹریائی خصوصیت کو استعمال کرتے ہوئے دی گئی قوس $PQR$ سے پورا دائرہ کامیابی سے مکمل کر لیا ہے، اور اس کے لیے مرکز معلوم کرنے کی بالکل ضرورت نہیں پڑی۔ آپ اپنے کام کی پڑتال دیکھ کر کر سکتے ہیں کہ مکمل شدہ شکل بالکل گول نظر آئے اور جہاں نقاط ملائے گئے ہیں وہاں کوئی نوک یا کونا نہ ہو۔"
+  "en": "This construction proves that a circle is completely determined by its local bending (equal chords turning through equal exterior angles $\\alpha$), allowing us to complete the arc $PQR$ without its centre. You can check your work by seeing if the path closes smoothly back at $P$ and looks perfectly round.",
+  "ur": "یہ عمل ثابت کرتا ہے کہ دائرے کو اس کے مقامی جھکاؤ (برابر وتروں کا برابر بیرونی زاویے $\\alpha$ پر مڑنا) کی مدد سے مکمل طور پر بنایا جا سکتا ہے، جس سے ہم مرکز کے بغیر ہی قوس $PQR$ کا دائرہ مکمل کر لیتے ہیں۔ آپ اپنے کام کی جانچ یہ دیکھ کر کر سکتے ہیں کہ آیا یہ راستہ نقطہ $P$ پر ہموار طریقے سے واپس ملتا ہے اور بالکل گول نظر آتا ہے۔"
  },
  "source": "gemini-4-argon via Vertex AI",
- "made": "2026-11-01"
+ "made": "2026-11-02"
 }

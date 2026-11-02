@@ -142,7 +142,7 @@ def solve_ssa(label, given, a_name, a, b_name, b, A_name, A, prompt, prec=(1, 2)
     steps = [S(rf"\frac{{{a_name}}}{{\sin\{A_name}}} = \frac{{{b_name}}}{{\sin\{Bn}}}", "Law of sines.", "قانون جیب (Law of sines)۔"),
              S(rf"\sin\{Bn} = \frac{{{b_name}\sin\{A_name}}}{{{a_name}}} = \frac{{{b}\sin {A}^\circ}}{{{a}}} = {r(sB, 3)}", f"Make $\\sin\\{Bn}$ the subject.",
                f"$\\sin\\{Bn}$ کو موضوع بنائیں۔", near(f"{b}*sin({dg(A)})/{a}", r(sB, 3), 3)),
-             S(rf"\{Bn} = \sin^{{-1}}({r(sB, 3)}) = {r(B, ka)}^\circ", "Take the inverse sine (the acute angle).", "معکوس جیب لیں (حادہ زاویہ)۔",
+             S(rf"\{Bn} = \sin^{{-1}}({r(sB, 3)}) = {r(B, ka)}^\circ", "Take the inverse sine. $\\sin^{-1}$ gives the acute angle, as the book does; when the side opposite the known angle is the shorter one, $180^\\circ$ minus this angle can give a second triangle too.", "معکوس جیب لیں۔ $\\sin^{-1}$ حادہ زاویہ دیتا ہے، جیسا کتاب میں ہے؛ جب معلوم زاویے کے سامنے والا ضلع چھوٹا ہو تو $180^\\circ$ منفی یہ زاویہ دوسری مثلث بھی دے سکتا ہے۔",
                near(f"asin({b}*sin({dg(A)})/{a})*180/pi", r(B, ka), ka)),
              S(rf"\{other} = 180^\circ - {A}^\circ - {r(B, ka)}^\circ = {r(C, ka)}^\circ", "The angles of a triangle add to $180^\\circ$.", "مثلث کے زاویوں کا مجموعہ $180^\\circ$ ہے۔",
                near(f"180 - {A} - asin({b}*sin({dg(A)})/{a})*180/pi", r(C, ka), ka)),
@@ -359,8 +359,13 @@ single("ex7.4", 8, "An aircraft flies 150 km east, then 100 km northeast ($45^\\
      [near(f"sqrt((150 + 100*cos({dg(45)}))**2 + (100*sin({dg(45)}))**2)", "231.76", 2)])], "$231.76$ km", exercise="7.4",
     note={"en": "The reference notes give 231.91 km; $\\sqrt{220.71^2 + 70.71^2} = 231.76$ km.", "ur": "حوالہ نوٹس میں 231.91 لکھا ہے؛ درست 231.76 کلومیٹر ہے۔"})
 single("ex7.4", 9, "A ship sails 100 km on a bearing of $045^\\circ$, then changes course and sails 120 km on a bearing of $135^\\circ$. Find the distance between the starting point and the final position.", [
-    (r"\text{Angle between the courses} = 135^\circ - 45^\circ = 90^\circ", "The two legs are at right angles.", "دونوں راستوں کے درمیان قائمہ زاویہ ہے۔", ["135 - 45 == 90"]),
-    (r"d^2 = 100^2 + 120^2 - 2(100)(120)\cos 90^\circ = 24400 \Rightarrow d \approx 156.2\ \text{km}", "Law of cosines ($\\cos 90^\\circ = 0$).", "قانون جیب التمام۔",
+    (r"\text{At } B:\ \angle(\text{South}, BA) = 45^\circ", "The North lines at $A$ and $B$ are parallel. The ship reached $B$ on a bearing of $045^\\circ$, so the line back to $A$ makes $45^\\circ$ with South at $B$ (alternate angles).",
+     "$A$ اور $B$ پر شمال کی لکیریں متوازی ہیں۔ جہاز $045^\\circ$ سمت پر $B$ پہنچا، اس لیے $B$ پر واپس $A$ کی لکیر جنوب کے ساتھ $45^\\circ$ بناتی ہے (متبادل زاویے)۔", ["180 - (180 - 45) == 45"]),
+    (r"\angle(\text{South}, BC) = 180^\circ - 135^\circ = 45^\circ", "The new course $BC$ has bearing $135^\\circ$ from North, so it is $180^\\circ - 135^\\circ = 45^\\circ$ from South, on the other side of the South line.",
+     "نیا راستہ $BC$ شمال سے $135^\\circ$ پر ہے، اس لیے جنوب سے $180^\\circ - 135^\\circ = 45^\\circ$ پر، جنوبی لکیر کی دوسری طرف۔", ["180 - 135 == 45"]),
+    (r"\angle ABC = 45^\circ + 45^\circ = 90^\circ", "The angle of the triangle at $B$ is the sum of the two angles on either side of the South line.",
+     "مثلث کا $B$ پر زاویہ جنوبی لکیر کی دونوں طرف کے زاویوں کا مجموعہ ہے۔", ["45 + (180 - 135) == 90"]),
+    (r"d^2 = 100^2 + 120^2 - 2(100)(120)\cos 90^\circ = 24400 \Rightarrow d \approx 156.2\ \text{km}", "Use the law of cosines in triangle $ABC$ with the angle $90^\\circ$ at $B$ ($\\cos 90^\\circ = 0$).", "مثلث $ABC$ میں قانونِ جیب التمام لگائیں، $B$ پر زاویہ $90^\\circ$ ہے ($\\cos 90^\\circ = 0$)۔",
      [f"100**2 + 120**2 - 2*100*120*cos({dg(90)}) == 24400", near("sqrt(24400)", "156.2", 1)])], "$156.2$ km", exercise="7.4")
 
 # ------------------------------------------------------------------------------------------ Review Exercise 7
@@ -436,8 +441,13 @@ single("rev7", 6, "Hashim walks 4 km due North, then turns and walks 3 km due Ea
     (r"\text{Bearing} \approx 037^\circ", "Measured clockwise from North, to the nearest degree.", "شمال سے گھڑی کی سمت، قریب ترین درجہ تک۔", [near("atan(R(3,4))*180/pi", "37", 0)])],
     r"$037^\circ$", exercise="Review 7")
 single("rev7", 7, "A pilot flies 200 km on a bearing of $045^\\circ$, then turns and flies 150 km on a bearing of $135^\\circ$. How far is the plane from its original position?", [
-    (r"\text{Angle} = 135^\circ - 45^\circ = 90^\circ", "The legs are at right angles.", "دونوں راستے قائمہ زاویے پر ہیں۔", ["135 - 45 == 90"]),
-    (r"d^2 = 200^2 + 150^2 - 2(200)(150)\cos 90^\circ = 62500 \Rightarrow d = 250\ \text{km}", "Law of cosines.", "قانون جیب التمام۔",
+    (r"\text{At } B:\ \angle(\text{South}, BA) = 45^\circ", "The North lines at $A$ and $B$ are parallel. The plane reached $B$ on a bearing of $045^\\circ$, so the line back to $A$ makes $45^\\circ$ with South at $B$ (alternate angles).",
+     "$A$ اور $B$ پر شمال کی لکیریں متوازی ہیں۔ طیارہ $045^\\circ$ سمت پر $B$ پہنچا، اس لیے $B$ پر واپس $A$ کی لکیر جنوب کے ساتھ $45^\\circ$ بناتی ہے (متبادل زاویے)۔", ["180 - (180 - 45) == 45"]),
+    (r"\angle(\text{South}, BC) = 180^\circ - 135^\circ = 45^\circ", "The new course $BC$ has bearing $135^\\circ$ from North, so it is $180^\\circ - 135^\\circ = 45^\\circ$ from South, on the other side of the South line.",
+     "نیا راستہ $BC$ شمال سے $135^\\circ$ پر ہے، اس لیے جنوب سے $180^\\circ - 135^\\circ = 45^\\circ$ پر، جنوبی لکیر کی دوسری طرف۔", ["180 - 135 == 45"]),
+    (r"\angle ABC = 45^\circ + 45^\circ = 90^\circ", "The angle of the triangle at $B$ is the sum of the two angles on either side of the South line.",
+     "مثلث کا $B$ پر زاویہ جنوبی لکیر کی دونوں طرف کے زاویوں کا مجموعہ ہے۔", ["45 + (180 - 135) == 90"]),
+    (r"d^2 = 200^2 + 150^2 - 2(200)(150)\cos 90^\circ = 62500 \Rightarrow d = 250\ \text{km}", "Use the law of cosines in triangle $ABC$ with the angle $90^\\circ$ at $B$ ($\\cos 90^\\circ = 0$).", "مثلث $ABC$ میں قانونِ جیب التمام لگائیں، $B$ پر زاویہ $90^\\circ$ ہے ($\\cos 90^\\circ = 0$)۔",
      [f"200**2 + 150**2 - 2*200*150*cos({dg(90)}) == 62500", "sqrt(62500) == 250"])], "$250$ km", exercise="Review 7")
 
 

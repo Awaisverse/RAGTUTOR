@@ -1397,7 +1397,7 @@
       {
        "math": "-3k + k = 12 - 2 \\implies -2k = 10",
        "en": "Cancel $18x$ from both sides, then collect the $k$ terms on the left side and constant terms on the right side.",
-       "ur": "دونوں طرف سے $18x$ کو کینسل کریں، پھر $k$ والی رقموں کو بائیں طرف اور مستقل مزاج (constants) کو دائیں طرف جمع کریں۔",
+       "ur": "دونوں طرف سے $18x$ کو کینسل کریں، پھر $k$ والی رقموں کو بائیں طرف اور مستقل مقدار (constants) کو دائیں طرف جمع کریں۔",
        "check": [
         "-3*k + k == -2*k",
         "12 - 2 == 10"
@@ -6862,12 +6862,20 @@
          "marks": [
           {
            "v": -2.2,
-           "s": "-11/5"
+           "s": "-11/5",
+           "open": false
           },
           {
            "v": -1.0,
-           "s": "-1"
+           "s": "-1",
+           "open": false
           }
+         ],
+         "shade": [
+          [
+           -2.2,
+           -1.0
+          ]
          ]
         }
        ],
@@ -6922,8 +6930,15 @@
          "marks": [
           {
            "v": 3.0,
-           "s": "3"
+           "s": "3",
+           "open": false
           }
+         ],
+         "shade": [
+          [
+           3.0,
+           3.0
+          ]
          ]
         }
        ],
@@ -6979,8 +6994,19 @@
          "marks": [
           {
            "v": 0.75,
-           "s": "3/4"
+           "s": "3/4",
+           "open": true
           }
+         ],
+         "shade": [
+          [
+           null,
+           0.75
+          ],
+          [
+           0.75,
+           null
+          ]
          ]
         }
        ],
@@ -7053,12 +7079,20 @@
          "marks": [
           {
            "v": 2.0,
-           "s": "2"
+           "s": "2",
+           "open": true
           },
           {
            "v": 4.666666666666667,
-           "s": "14/3"
+           "s": "14/3",
+           "open": true
           }
+         ],
+         "shade": [
+          [
+           2.0,
+           4.666666666666667
+          ]
          ]
         }
        ],
@@ -7126,12 +7160,20 @@
          "marks": [
           {
            "v": -3.3333333333333335,
-           "s": "-10/3"
+           "s": "-10/3",
+           "open": false
           },
           {
            "v": 4.666666666666667,
-           "s": "14/3"
+           "s": "14/3",
+           "open": false
           }
+         ],
+         "shade": [
+          [
+           -3.3333333333333335,
+           4.666666666666667
+          ]
          ]
         }
        ],
@@ -7196,12 +7238,24 @@
          "marks": [
           {
            "v": -2.0,
-           "s": "-2"
+           "s": "-2",
+           "open": true
           },
           {
            "v": 3.0,
-           "s": "3"
+           "s": "3",
+           "open": true
           }
+         ],
+         "shade": [
+          [
+           null,
+           -2.0
+          ],
+          [
+           3.0,
+           null
+          ]
          ]
         }
        ],
@@ -7902,7 +7956,7 @@
        ],
        "why": {
         "en": "Before we can divide by the denominator, we need a single number in the numerator. Subtracting $6$ from $15$ gives us $9$, completing the simplification of the top part of the fraction.",
-        "ur": "نصب نما (denominator) سے تقسیم کرنے سے پہلے، ہمیں شمار کنندہ میں ایک واحد عدد درکار ہے۔ $15$ میں سے $6$ تفریق کرنے پر ہمیں $9$ ملتا ہے، جس سے کسر کے اوپری حصے کو مختصر کرنے کا عمل مکمل ہو جاتا ہے۔"
+        "ur": "نسب نما (denominator) سے تقسیم کرنے سے پہلے، ہمیں شمار کنندہ میں ایک واحد عدد درکار ہے۔ $15$ میں سے $6$ تفریق کرنے پر ہمیں $9$ ملتا ہے، جس سے کسر کے اوپری حصے کو مختصر کرنے کا عمل مکمل ہو جاتا ہے۔"
        }
       },
       {
@@ -7914,7 +7968,7 @@
        ],
        "why": {
         "en": "A fraction bar represents division, so the final arithmetic step is to divide the numerator $9$ by the denominator $3$. This gives us the exact output value $3$ for the function.",
-        "ur": "کسر کی لکیر تقسیم کو ظاہر کرتی ہے، اس لیے آخری حسابی قدم شمار کنندہ $9$ کو نصب نما $3$ پر تقسیم کرنا ہے۔ اس سے ہمیں فنکشن کی حتمی قیمت $3$ حاصل ہوتی ہے۔"
+        "ur": "کسر کی لکیر تقسیم کو ظاہر کرتی ہے، اس لیے آخری حسابی قدم شمار کنندہ $9$ کو نسب نما $3$ پر تقسیم کرنا ہے۔ اس سے ہمیں فنکشن کی حتمی قیمت $3$ حاصل ہوتی ہے۔"
        }
       },
       {
@@ -7934,7 +7988,7 @@
      "enriched": true,
      "meaning": {
       "en": "The final answer (b) $3$ means that when we put the input $x = 3$ into the function $f(x) = \\frac{5x - 6}{3}$, the resulting output is $3$. You can quickly check this in reverse: multiply the output $3$ by the denominator $3$ to get $9$, add $6$ to get $15$, and divide by $5$ to get back our original input $3$.",
-      "ur": "حتمی جواب (b) $3$ کا مطلب یہ ہے کہ جب ہم فنکشن $f(x) = \\frac{5x - 6}{3}$ میں ان پٹ $x = 3$ رکھتے ہیں، تو نتیجے میں ملنے والا آؤٹ پٹ بھی $3$ ہوتا ہے۔ آپ اس کی الٹ پڑتال بھی کر سکتے ہیں: حاصل شدہ جواب $3$ کو نصب نما $3$ سے ضرب دیں تو $9$ آئے گا، اس میں $6$ جمع کریں تو $15$ بنے گا، اور اسے $5$ پر تقسیم کرنے سے ہمیں واپس اصل ان پٹ $3$ مل جائے گا۔"
+      "ur": "حتمی جواب (b) $3$ کا مطلب یہ ہے کہ جب ہم فنکشن $f(x) = \\frac{5x - 6}{3}$ میں ان پٹ $x = 3$ رکھتے ہیں، تو نتیجے میں ملنے والا آؤٹ پٹ بھی $3$ ہوتا ہے۔ آپ اس کی الٹ پڑتال بھی کر سکتے ہیں: حاصل شدہ جواب $3$ کو نسب نما $3$ سے ضرب دیں تو $9$ آئے گا، اس میں $6$ جمع کریں تو $15$ بنے گا، اور اسے $5$ پر تقسیم کرنے سے ہمیں واپس اصل ان پٹ $3$ مل جائے گا۔"
      },
      "book_key": "(b) 3"
     },
@@ -8962,12 +9016,12 @@
      "prompt": "$(f\\circ g)(x)$",
      "steps": [
       {
-       "math": "",
+       "math": "f(x) = x^3,\\quad g(x) = 14 + 2x",
        "en": "We are given two functions $f(x) = x^3$ and $g(x) = 14 + 2x$, and we need to find the composite function $(f\\circ g)(x)$.",
        "ur": "ہمیں دو فنکشنز $f(x) = x^3$ اور $g(x) = 14 + 2x$ دیے گئے ہیں، اور ہمیں مرکب فنکشن $(f\\circ g)(x)$ معلوم کرنا ہے۔",
        "why": {
-        "en": "First, we clearly write down our starting functions $f(x)$ and $g(x)$ so we can see the rules we are working with. Knowing the exact expressions for both functions is essential before we try to combine them.",
-        "ur": "سب سے پہلے، ہم دیے گئے دونوں فنکشنز $f(x)$ اور $g(x)$ کو واضح طور پر لکھ لیتے ہیں تاکہ ہمیں معلوم ہو کہ ہم کن اصولوں کے ساتھ کام کر رہے ہیں۔ دونوں فنکشنز کو ملانے سے پہلے ان کی اصل شکل کو سمجھنا بہت ضروری ہے۔"
+        "en": "Just like we always do in board exams, we start by clearly writing down the given functions so we know our exact rules for $f$ and $g$. This sets up our workspace and keeps us from making careless substitution mistakes later.",
+        "ur": "جیسا کہ ہم ہمیشہ بورڈ کے امتحانات میں کرتے ہیں، ہم سب سے پہلے دیے گئے تفاعل (functions) کو واضح طور پر لکھتے ہیں تاکہ ہمیں $f$ اور $g$ کے اصول بالکل صحیح معلوم ہوں۔ اس سے ہمارا سوال حل کرنے کا آغاز منظم ہوتا ہے اور بعد میں قیمتیں درج کرتے وقت غلطی کا امکان کم ہو جاتا ہے۔"
        }
       },
       {
@@ -8975,8 +9029,8 @@
        "en": "By the definition of the composition of functions, $(f\\circ g)(x)$ means applying the function $f$ to $g(x)$.",
        "ur": "فنکشنز کی ترکیب کی تعریف کے مطابق، $(f\\circ g)(x)$ کا مطلب $g(x)$ پر فنکشن $f$ کا اطلاق کرنا ہے۔",
        "why": {
-        "en": "We use the basic definition of composite functions, which turns the circle notation $(f\\circ g)(x)$ into a nested form $f(g(x))$. This tells us the correct order of operations: $g(x)$ is the inner function and must be handled first as the input for $f$.",
-        "ur": "یہاں ہم کمپوزٹ فنکشنز کی بنیادی تعریف استعمال کرتے ہیں، جو $(f\\circ g)(x)$ کو $f(g(x))$ کی شکل میں بدل دیتی ہے۔ اس سے ہمیں عمل کرنے کی صحیح ترتیب کا پتہ چلتا ہے کہ $g(x)$ اندرونی فنکشن ہے اور اسے فنکشن $f$ کے ان پٹ کے طور پر پہلے حل کیا جائے گا۔"
+        "en": "Here we use the fundamental definition of a composite function, which tells us to work from the inside out. Writing $(f\\circ g)(x)$ as $f(g(x))$ shows clearly that the entire function $g(x)$ will act as the input for the outer function $f$.",
+        "ur": "یہاں ہم مرکب تفاعل (composite function) کی بنیادی تعریف استعمال کرتے ہیں، جو ہمیں بتاتی ہے کہ ہمیں اندر سے باہر کی طرف حل کرنا ہے۔ $(f\\circ g)(x)$ کو $f(g(x))$ کے طور پر لکھنے سے یہ واضح ہو جاتا ہے کہ پورا تفاعل $g(x)$ بیرونی تفاعل $f$ کے لیے ان پٹ (input) کا کام کرے گا۔"
        }
       },
       {
@@ -8987,8 +9041,8 @@
         "14 + 2*x == 14 + 2*x"
        ],
        "why": {
-        "en": "Since we work from the inside out, we replace the inner part $g(x)$ with its actual algebraic expression, $14 + 2x$. Now we can clearly see the exact expression that needs to be fed into the outer function $f$.",
-        "ur": "چونکہ ہم اندر سے باہر کی طرف حل کرتے ہیں، اس لیے ہم اندرونی حصے $g(x)$ کی جگہ اس کی دی گئی قیمت $14 + 2x$ درج کرتے ہیں۔ اب ہمیں واضح طور پر نظر آ رہا ہے کہ بیرونی فنکشن $f$ میں کون سی قیمت بطور ان پٹ جائے گی۔"
+        "en": "Since we always simplify the inner bracket first, we replace $g(x)$ with its actual algebraic expression, $14 + 2x$. This tells us the exact value that we now need to feed into the function $f$.",
+        "ur": "چونکہ ہم ہمیشہ پہلے اندرونی بریکٹ کو حل کرتے ہیں، اس لیے ہم $g(x)$ کی جگہ اس کی اصل الجبری قیمت $14 + 2x$ درج کرتے ہیں۔ اس سے ہمیں وہ اصل قیمت مل جاتی ہے جسے اب ہم نے تفاعل $f$ میں بطور ان پٹ ڈالنا ہے۔"
        }
       },
       {
@@ -8999,16 +9053,16 @@
         "(x**3).subs(x, 14 + 2*x) == (14 + 2*x)**3"
        ],
        "why": {
-        "en": "The rule for function $f$ is to take the cube of whatever input is inside the brackets, just like $f(x) = x^3$. Applying this cubing rule to our new input $(14 + 2x)$ completes the composition and gives us the final expression.",
-        "ur": "فنکشن $f$ کا اصول یہ ہے کہ بریکٹ کے اندر جو بھی ان پٹ ہو اس کا مکعب (cube) لیا جائے، بالکل جیسے $f(x) = x^3$ میں ہے۔ اپنے نئے ان پٹ $(14 + 2x)$ پر یہ اصول لاگو کرنے سے فنکشنز کی ترکیب مکمل ہو جاتی ہے اور ہمیں آخری جواب مل جاتا ہے۔"
+        "en": "Look at the rule for $f(x) = x^3$: whatever input is inside the bracket gets raised to the power of $3$. By applying this rule to our new input $(14 + 2x)$, we complete the composition and reach the final expression.",
+        "ur": "تفاعل $f(x) = x^3$ کے اصول کو دیکھیں: بریکٹ کے اندر جو بھی ان پٹ ہو، اس کی قوت (power) $3$ ہو جاتی ہے۔ اس اصول کو اپنے نئے ان پٹ $(14 + 2x)$ پر لاگو کر کے ہم ترکیب (composition) کا عمل مکمل کرتے ہیں اور حتمی جواب تک پہنچ جاتے ہیں۔"
        }
       }
      ],
      "answer": "$(14 + 2x)^3$",
      "enriched": true,
      "meaning": {
-      "en": "The final answer $(14 + 2x)^3$ is a single combined rule that does the job of both $g$ and $f$ in one go. It shows that for any value of $x$, if you first apply the rule $14 + 2x$ and then take the cube of that result, you get the exact output of the composite function $(f\\circ g)(x)$.",
-      "ur": "آخری جواب $(14 + 2x)^3$ ایک ایسا نیا اور مشترکہ اصول ہے جو $g$ اور $f$ دونوں کا کام ایک ساتھ کر دیتا ہے۔ یہ بتاتا ہے کہ $x$ کی کسی بھی قیمت کے لیے، اگر آپ پہلے $14 + 2x$ کا اصول لاگو کریں اور پھر اس کے نتیجے کا مکعب (cube) لیں، تو آپ کو کمپوزٹ فنکشن $(f\\circ g)(x)$ کا بالکل درست جواب مل جائے گا۔"
+      "en": "The final answer $(14 + 2x)^3$ is a single new function that combines the actions of both $g$ and $f$ in order: for any number $x$, it first calculates $14 + 2x$ and then takes the cube of that result. You can easily check your work by making sure that every $x$ in the outer function $x^3$ has been completely replaced by the inner function $14 + 2x$.",
+      "ur": "حتمی جواب $(14 + 2x)^3$ ایک نیا واحد تفاعل ہے جو ترتیب وار $g$ اور $f$ دونوں کے عمل کو یکجا کرتا ہے: کسی بھی عدد $x$ کے لیے، یہ پہلے $14 + 2x$ معلوم کرتا ہے اور پھر اس نتیجے کا مکعب (cube) لیتا ہے۔ آپ اپنے کام کی پڑتال آسانی سے یہ دیکھ کر کر سکتے ہیں کہ آیا بیرونی تفاعل $x^3$ میں موجود ہر $x$ کی جگہ مکمل طور پر اندرونی تفاعل $14 + 2x$ نے لے لی ہے یا نہیں۔"
      },
      "book_key": "(14+2x)^3"
     },
@@ -9155,8 +9209,8 @@
         "14 + 2*x == 2*x + 14"
        ],
        "why": {
-        "en": "Since we only need to find $(g\\circ g)(x)$ in this part, we focus purely on the rule for function $g(x)$ and can ignore $f(x)$. Having $g(x) = 14 + 2x$ clearly in front of us makes the upcoming substitution much easier.",
-        "ur": "چونکہ اس حصے میں ہمیں صرف $(g\\circ g)(x)$ معلوم کرنا ہے، اس لیے ہم صرف فنکشن $g(x)$ کے اصول پر توجہ دیں گے اور $f(x)$ کو نظر انداز کر دیں گے۔ $g(x) = 14 + 2x$ کو سامنے لکھنے سے اگلے مراحل میں قیمتیں درج کرنا بہت آسان ہو جاتا ہے۔"
+        "en": "Since we are asked to find the composition $(g\\circ g)(x)$, we only need the rule for the function $g(x)$. Writing it down first keeps our main formula clearly in front of us so we do not confuse it with $f(x)$.",
+        "ur": "چونکہ ہمیں $(g\\circ g)(x)$ معلوم کرنا ہے، اس لیے ہمیں صرف تفاعل $g(x)$ کی ضرورت ہے۔ اسے سب سے پہلے لکھ لینے سے اصل فارمولا ہمارے سامنے رہتا ہے اور $f(x)$ کے ساتھ کوئی الجھن نہیں ہوتی۔"
        }
       },
       {
@@ -9164,17 +9218,17 @@
        "en": "By the definition of composition of functions, $(g\\circ g)(x)$ means applying the function $g$ to $g(x)$ itself.",
        "ur": "تفاعلات کی ترکیب کی تعریف کے مطابق، $(g\\circ g)(x)$ کا مطلب تفاعل $g$ کو خود $g(x)$ پر لاگو کرنا ہے۔",
        "why": {
-        "en": "We use the definition of composition of functions to rewrite the circle notation as nested brackets, $g(g(x))$. This tells us that the output of the function $g(x)$ will become the new input for the same function $g$.",
-        "ur": "ہم تفاعل کی ترکیب (composition of functions) کی تعریف استعمال کرتے ہوئے اس علامت کو بریکٹ کی شکل میں یعنی $g(g(x))$ لکھتے ہیں۔ اس سے ہمیں پتہ چلتا ہے کہ فنکشن $g(x)$ کا جواب خود اسی فنکشن $g$ کے لیے نئے اِن پٹ (input) کا کام کرے گا۔"
+        "en": "We use the definition of composition of functions here. The circle symbol means that the output of the inner function $g(x)$ becomes the input for the outer function $g$.",
+        "ur": "یہاں ہم تفاعلات کی ترکیب (composition of functions) کی تعریف استعمال کر رہے ہیں۔ دائرے کی علامت کا مطلب ہے کہ اندرونی تفاعل $g(x)$ کا جواب بیرونی تفاعل $g$ کے لیے اِن پٹ (input) بن جائے گا۔"
        }
       },
       {
-       "math": "",
+       "math": "(g\\circ g)(x) = g(14 + 2x)",
        "en": "Substitute the value of the inner function $g(x) = 14 + 2x$ into $g(g(x))$ to get $g(14 + 2x)$.",
        "ur": "اندرونی تفاعل $g(x) = 14 + 2x$ کی قیمت کو $g(g(x))$ میں درج کرنے سے ہمیں $g(14 + 2x)$ حاصل ہوتا ہے۔",
        "why": {
-        "en": "In composite functions, we always work from the inside out. By replacing the inner $g(x)$ with its actual expression $14 + 2x$, we can clearly see the exact quantity that needs to be fed into the outer function $g$.",
-        "ur": "مرکب تفاعلات میں ہم ہمیشہ اندر سے باہر کی طرف حل کرتے ہیں۔ اندرونی $g(x)$ کی جگہ اس کی اصل قیمت $14 + 2x$ رکھنے سے ہمیں واضح طور پر نظر آتا ہے کہ بیرونی فنکشن $g$ میں کون سی رقم درج کرنی ہے۔"
+        "en": "In composition, we always work from the inside out. By replacing the inner $g(x)$ with its actual expression $14 + 2x$, we can clearly see what new input needs to be fed into the outer function $g$.",
+        "ur": "تفاعلات کی ترکیب میں ہم ہمیشہ اندر سے باہر کی طرف حل کرتے ہیں۔ اندرونی $g(x)$ کی جگہ اس کی قیمت $14 + 2x$ درج کرنے سے ہمیں واضح ہو جاتا ہے کہ بیرونی تفاعل $g$ میں کیا نیا اِن پٹ ڈالنا ہے۔"
        }
       },
       {
@@ -9185,8 +9239,8 @@
         "(14 + 2*x).subs(x, 14 + 2*x) == 14 + 2*(14 + 2*x)"
        ],
        "why": {
-        "en": "The rule for $g$ says to take the input, multiply it by $2$, and add $14$. Applying this rule to our new input $(14 + 2x)$ removes the function notation $g$ and gives us a standard algebraic expression to simplify.",
-        "ur": "فنکشن $g$ کا اصول یہ ہے کہ اِن پٹ کو $2$ سے ضرب دیں اور اس میں $14$ جمع کریں۔ اس اصول کو ہمارے نئے اِن پٹ $(14 + 2x)$ پر لاگو کرنے سے فنکشن کی علامت $g$ ختم ہو جاتی ہے اور ہمیں حل کرنے کے لیے ایک سادہ الجبری جملہ مل جاتا ہے۔"
+        "en": "Now we apply the rule of function $g$, which tells us to take $14$ plus $2$ times the input. Replacing the original input $x$ with our new input $(14 + 2x)$ removes the function notation and gives us a simple algebraic expression.",
+        "ur": "اب ہم تفاعل $g$ کا اصول لاگو کرتے ہیں، جو کہتا ہے کہ $14$ میں اِن پٹ کا $2$ گنا جمع کریں۔ اصل اِن پٹ $x$ کی جگہ نیا اِن پٹ $(14 + 2x)$ رکھنے سے تفاعل کی علامت ختم ہو جاتی ہے اور ہمیں ایک سادہ الجبری جملہ مل جاتا ہے۔"
        }
       },
       {
@@ -9197,8 +9251,8 @@
         "14 + 2*(14 + 2*x) == 14 + 28 + 4*x"
        ],
        "why": {
-        "en": "We apply the distributive property to expand the brackets by multiplying $2$ with both $14$ and $2x$. This clears the parentheses so that all the terms are free to be combined.",
-        "ur": "ہم تقسیمی خاصیت (distributive property) کا استعمال کرتے ہوئے بریکٹ کھولتے ہیں اور $2$ کو اندر موجود دونوں رقوم $14$ اور $2x$ سے ضرب دیتے ہیں۔ اس سے بریکٹ ختم ہو جاتی ہے تاکہ تمام رقوم کو آپس میں ملایا جا سکے۔"
+        "en": "Using the distributive property of multiplication over addition, we multiply $2$ with both $14$ and $2x$ inside the brackets. This opens up the brackets so that all terms are free to be combined.",
+        "ur": "جمع پر ضرب کی تقسیمی خاصیت کا استعمال کرتے ہوئے، ہم بریکٹ کے اندر موجود $14$ اور $2x$ دونوں کو $2$ سے ضرب دیتے ہیں۔ اس سے بریکٹ کھل جاتی ہے تاکہ تمام رقموں کو آپس میں ملایا جا سکے۔"
        }
       },
       {
@@ -9210,16 +9264,16 @@
         "(2*x + 14).subs(x, (2*x + 14)) == (4*x + 42)"
        ],
        "why": {
-        "en": "Finally, we combine the like terms by adding the constants $14$ and $28$ together to get $42$. Writing the $4x$ term first gives us the neatest, standard polynomial form of our composite function.",
-        "ur": "آخر میں، ہم ایک جیسی رقوم کو اکٹھا کرتے ہوئے مستقل اعداد $14$ اور $28$ کو جمع کر کے $42$ حاصل کرتے ہیں۔ $4x$ والی رقم کو پہلے لکھنے سے ہمیں اپنے مرکب فنکشن کی سب سے صاف اور معیاری شکل مل جاتی ہے۔"
+        "en": "Finally, we combine the like terms by adding the constant numbers $14$ and $28$ to get $42$. Writing the $4x$ term first gives us the neatest standard polynomial form for our answer.",
+        "ur": "آخر میں، ہم یکساں رقموں کو ملاتے ہوئے مستقل اعداد $14$ اور $28$ کو جمع کرتے ہیں جس سے $42$ حاصل ہوتا ہے۔ $4x$ والی رقم کو پہلے لکھنے سے ہمیں معیاری اور سادہ ترین شکل میں حتمی جواب مل جاتا ہے۔"
        }
       }
      ],
      "answer": "$4 x + 42$",
      "enriched": true,
      "meaning": {
-      "en": "The final answer $(g\\circ g)(x) = 4x + 42$ is a single direct formula that shows the result of applying the function $g$ to an input $x$ two times in a row, rather than doing it in two separate steps.",
-      "ur": "آخری جواب $(g\\circ g)(x) = 4x + 42$ ایک ایسا واحد اور براہِ راست فارمولا ہے جو کسی اِن پٹ $x$ پر فنکشن $g$ کو دو الگ الگ مراحل میں لاگو کرنے کے بجائے، لگاتار دو بار لاگو کرنے کا نتیجہ دکھاتا ہے۔"
+      "en": "The final answer $(g\\circ g)(x) = 4x + 42$ gives us a single direct formula that does the work of applying the function $g$ twice in a row. Instead of putting a number into $g(x) = 14 + 2x$, getting an answer, and putting that answer back into $g$ again, this new expression $4x + 42$ takes us straight from the starting value $x$ to the final result in one step.",
+      "ur": "حتمی جواب $(g\\circ g)(x) = 4x + 42$ ہمیں ایک ایسا براہِ راست فارمولا دیتا ہے جو تفاعل $g$ کو لگاتار دو بار لاگو کرنے کا کام اکیلے کر دیتا ہے۔ اس کے بجائے کہ ہم کسی عدد کو پہلے $g(x) = 14 + 2x$ میں درج کریں اور پھر حاصل ہونے والے جواب کو دوبارہ $g$ میں ڈالیں، یہ نیا جملہ $4x + 42$ ہمیں ابتدائی قیمت $x$ سے سیدھا ایک ہی مرحلے میں حتمی نتیجے تک پہنچا دیتا ہے۔"
      },
      "book_key": "4x+42"
     }
@@ -10846,12 +10900,20 @@
          "marks": [
           {
            "v": 3.0,
-           "s": "3"
+           "s": "3",
+           "open": false
           },
           {
            "v": 4.0,
-           "s": "4"
+           "s": "4",
+           "open": false
           }
+         ],
+         "shade": [
+          [
+           3.0,
+           4.0
+          ]
          ]
         }
        ],
@@ -10915,12 +10977,20 @@
          "marks": [
           {
            "v": -7.0,
-           "s": "-7"
+           "s": "-7",
+           "open": false
           },
           {
            "v": 1.0,
-           "s": "1"
+           "s": "1",
+           "open": false
           }
+         ],
+         "shade": [
+          [
+           -7.0,
+           1.0
+          ]
          ]
         }
        ],

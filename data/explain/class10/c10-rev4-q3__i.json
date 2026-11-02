@@ -3,33 +3,33 @@
  "label": "i",
  "answer_ref": "$(14 + 2x)^3$",
  "math": [
-  "",
+  "f(x) = x^3,\\quad g(x) = 14 + 2x",
   "(f\\circ g)(x) = f(g(x))",
   "(f\\circ g)(x) = f(14 + 2x)",
   "(f\\circ g)(x) = (14 + 2x)^3"
  ],
  "why": [
   {
-   "en": "First, we clearly write down our starting functions $f(x)$ and $g(x)$ so we can see the rules we are working with. Knowing the exact expressions for both functions is essential before we try to combine them.",
-   "ur": "سب سے پہلے، ہم دیے گئے دونوں فنکشنز $f(x)$ اور $g(x)$ کو واضح طور پر لکھ لیتے ہیں تاکہ ہمیں معلوم ہو کہ ہم کن اصولوں کے ساتھ کام کر رہے ہیں۔ دونوں فنکشنز کو ملانے سے پہلے ان کی اصل شکل کو سمجھنا بہت ضروری ہے۔"
+   "en": "Just like we always do in board exams, we start by clearly writing down the given functions so we know our exact rules for $f$ and $g$. This sets up our workspace and keeps us from making careless substitution mistakes later.",
+   "ur": "جیسا کہ ہم ہمیشہ بورڈ کے امتحانات میں کرتے ہیں، ہم سب سے پہلے دیے گئے تفاعل (functions) کو واضح طور پر لکھتے ہیں تاکہ ہمیں $f$ اور $g$ کے اصول بالکل صحیح معلوم ہوں۔ اس سے ہمارا سوال حل کرنے کا آغاز منظم ہوتا ہے اور بعد میں قیمتیں درج کرتے وقت غلطی کا امکان کم ہو جاتا ہے۔"
   },
   {
-   "en": "We use the basic definition of composite functions, which turns the circle notation $(f\\circ g)(x)$ into a nested form $f(g(x))$. This tells us the correct order of operations: $g(x)$ is the inner function and must be handled first as the input for $f$.",
-   "ur": "یہاں ہم کمپوزٹ فنکشنز کی بنیادی تعریف استعمال کرتے ہیں، جو $(f\\circ g)(x)$ کو $f(g(x))$ کی شکل میں بدل دیتی ہے۔ اس سے ہمیں عمل کرنے کی صحیح ترتیب کا پتہ چلتا ہے کہ $g(x)$ اندرونی فنکشن ہے اور اسے فنکشن $f$ کے ان پٹ کے طور پر پہلے حل کیا جائے گا۔"
+   "en": "Here we use the fundamental definition of a composite function, which tells us to work from the inside out. Writing $(f\\circ g)(x)$ as $f(g(x))$ shows clearly that the entire function $g(x)$ will act as the input for the outer function $f$.",
+   "ur": "یہاں ہم مرکب تفاعل (composite function) کی بنیادی تعریف استعمال کرتے ہیں، جو ہمیں بتاتی ہے کہ ہمیں اندر سے باہر کی طرف حل کرنا ہے۔ $(f\\circ g)(x)$ کو $f(g(x))$ کے طور پر لکھنے سے یہ واضح ہو جاتا ہے کہ پورا تفاعل $g(x)$ بیرونی تفاعل $f$ کے لیے ان پٹ (input) کا کام کرے گا۔"
   },
   {
-   "en": "Since we work from the inside out, we replace the inner part $g(x)$ with its actual algebraic expression, $14 + 2x$. Now we can clearly see the exact expression that needs to be fed into the outer function $f$.",
-   "ur": "چونکہ ہم اندر سے باہر کی طرف حل کرتے ہیں، اس لیے ہم اندرونی حصے $g(x)$ کی جگہ اس کی دی گئی قیمت $14 + 2x$ درج کرتے ہیں۔ اب ہمیں واضح طور پر نظر آ رہا ہے کہ بیرونی فنکشن $f$ میں کون سی قیمت بطور ان پٹ جائے گی۔"
+   "en": "Since we always simplify the inner bracket first, we replace $g(x)$ with its actual algebraic expression, $14 + 2x$. This tells us the exact value that we now need to feed into the function $f$.",
+   "ur": "چونکہ ہم ہمیشہ پہلے اندرونی بریکٹ کو حل کرتے ہیں، اس لیے ہم $g(x)$ کی جگہ اس کی اصل الجبری قیمت $14 + 2x$ درج کرتے ہیں۔ اس سے ہمیں وہ اصل قیمت مل جاتی ہے جسے اب ہم نے تفاعل $f$ میں بطور ان پٹ ڈالنا ہے۔"
   },
   {
-   "en": "The rule for function $f$ is to take the cube of whatever input is inside the brackets, just like $f(x) = x^3$. Applying this cubing rule to our new input $(14 + 2x)$ completes the composition and gives us the final expression.",
-   "ur": "فنکشن $f$ کا اصول یہ ہے کہ بریکٹ کے اندر جو بھی ان پٹ ہو اس کا مکعب (cube) لیا جائے، بالکل جیسے $f(x) = x^3$ میں ہے۔ اپنے نئے ان پٹ $(14 + 2x)$ پر یہ اصول لاگو کرنے سے فنکشنز کی ترکیب مکمل ہو جاتی ہے اور ہمیں آخری جواب مل جاتا ہے۔"
+   "en": "Look at the rule for $f(x) = x^3$: whatever input is inside the bracket gets raised to the power of $3$. By applying this rule to our new input $(14 + 2x)$, we complete the composition and reach the final expression.",
+   "ur": "تفاعل $f(x) = x^3$ کے اصول کو دیکھیں: بریکٹ کے اندر جو بھی ان پٹ ہو، اس کی قوت (power) $3$ ہو جاتی ہے۔ اس اصول کو اپنے نئے ان پٹ $(14 + 2x)$ پر لاگو کر کے ہم ترکیب (composition) کا عمل مکمل کرتے ہیں اور حتمی جواب تک پہنچ جاتے ہیں۔"
   }
  ],
  "meaning": {
-  "en": "The final answer $(14 + 2x)^3$ is a single combined rule that does the job of both $g$ and $f$ in one go. It shows that for any value of $x$, if you first apply the rule $14 + 2x$ and then take the cube of that result, you get the exact output of the composite function $(f\\circ g)(x)$.",
-  "ur": "آخری جواب $(14 + 2x)^3$ ایک ایسا نیا اور مشترکہ اصول ہے جو $g$ اور $f$ دونوں کا کام ایک ساتھ کر دیتا ہے۔ یہ بتاتا ہے کہ $x$ کی کسی بھی قیمت کے لیے، اگر آپ پہلے $14 + 2x$ کا اصول لاگو کریں اور پھر اس کے نتیجے کا مکعب (cube) لیں، تو آپ کو کمپوزٹ فنکشن $(f\\circ g)(x)$ کا بالکل درست جواب مل جائے گا۔"
+  "en": "The final answer $(14 + 2x)^3$ is a single new function that combines the actions of both $g$ and $f$ in order: for any number $x$, it first calculates $14 + 2x$ and then takes the cube of that result. You can easily check your work by making sure that every $x$ in the outer function $x^3$ has been completely replaced by the inner function $14 + 2x$.",
+  "ur": "حتمی جواب $(14 + 2x)^3$ ایک نیا واحد تفاعل ہے جو ترتیب وار $g$ اور $f$ دونوں کے عمل کو یکجا کرتا ہے: کسی بھی عدد $x$ کے لیے، یہ پہلے $14 + 2x$ معلوم کرتا ہے اور پھر اس نتیجے کا مکعب (cube) لیتا ہے۔ آپ اپنے کام کی پڑتال آسانی سے یہ دیکھ کر کر سکتے ہیں کہ آیا بیرونی تفاعل $x^3$ میں موجود ہر $x$ کی جگہ مکمل طور پر اندرونی تفاعل $14 + 2x$ نے لے لی ہے یا نہیں۔"
  },
  "source": "gemini-4-argon via Vertex AI",
- "made": "2026-11-01"
+ "made": "2026-11-02"
 }

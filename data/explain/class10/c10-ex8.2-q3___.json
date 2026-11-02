@@ -1,50 +1,35 @@
 {
  "item": "c10-ex8.2-q3",
  "label": "",
- "answer_ref": "$x = 80^\\circ,\\ y = 3$ cm",
+ "answer_ref": "$x = 77^\\circ,\\ y = 6$ cm",
  "math": [
-  "m\\widehat{AB} = 3\\text{ cm}, \\quad m\\widehat{BD} = y\\text{ cm}, \\quad m\\angle AOB = 140^\\circ, \\quad m\\angle AOD = x",
-  "m\\widehat{AB} = m\\widehat{BD} \\implies y = 3\\text{ cm}",
-  "m\\angle BOD = m\\angle AOB = 140^\\circ",
-  "m\\angle AOD + m\\angle AOB + m\\angle BOD = 360^\\circ",
-  "x + 140^\\circ + 140^\\circ = 360^\\circ",
-  "x + 280^\\circ = 360^\\circ \\implies x = 360^\\circ - 280^\\circ = 80^\\circ",
-  "x = 80^\\circ, \\quad y = 3\\text{ cm}"
+  "AB = BC = CD \\Rightarrow \\angle AOB = \\angle BOC = \\angle COD",
+  "\\angle AOC = \\angle AOB + \\angle BOC = 154^\\circ \\Rightarrow \\angle AOB = \\angle BOC = 77^\\circ",
+  "x = \\angle COD = 77^\\circ",
+  "y = \\widehat{BC} + \\widehat{CD} = 3 + 3 = 6\\ \\text{cm}"
  ],
  "why": [
   {
-   "en": "In geometry problems, we always start by listing the given measurements of the arcs and central angles from the figure. This organizes our data clearly so we can see which circle theorems to apply.",
-   "ur": "جیومیٹری کے سوالات میں ہم ہمیشہ شکل سے قوسوں اور مرکزی زاویوں کی دی گئی پیمائشیں لکھ کر شروعات کرتے ہیں۔ اس سے ہماری معلومات واضح ہو جاتی ہیں تاکہ ہم دیکھ سکیں کہ دائرے کا کون سا مسئلہ استعمال کرنا ہے۔"
+   "en": "By the theorem of a circle, chords of equal length always make equal angles at the centre $O$. Since the three chords $AB$, $BC$, and $CD$ are marked equal, their central angles $\\angle AOB$, $\\angle BOC$, and $\\angle COD$ must also be equal to each other.",
+   "ur": "دائرے کے مسئلے کے مطابق، برابر لمبائی کے وتر مرکز $O$ پر ہمیشہ برابر زاویے بناتے ہیں۔ چونکہ تینوں وتر $AB$، $BC$ اور $CD$ برابر دیے گئے ہیں، اس لیے ان کے مرکزی زاویے $\\angle AOB$، $\\angle BOC$ اور $\\angle COD$ بھی آپس میں برابر ہوں گے۔"
   },
   {
-   "en": "The question directly tells us that the two arcs $AB$ and $BD$ are equal in length. By the simple definition of equal arcs, the unknown length $y$ must be the exact same as the given $3\\text{ cm}$, which immediately gives us one part of our answer.",
-   "ur": "سوال میں ہمیں واضح طور پر بتایا گیا ہے کہ دونوں قوسیں $AB$ اور $BD$ لمبائی میں برابر ہیں۔ برابر قوسوں کی تعریف کے مطابق، نامعلوم لمبائی $y$ بالکل دی گئی $3\\text{ cm}$ کے برابر ہونی چاہیے، جس سے ہمیں فوری طور پر اپنے جواب کا ایک حصہ مل جاتا ہے۔"
+   "en": "We use the angle addition property here because the total angle $\\angle AOC = 154^\\circ$ is made up of two equal parts, $\\angle AOB$ and $\\angle BOC$. Dividing $154^\\circ$ equally tells us that each of these smaller central angles is $77^\\circ$.",
+   "ur": "یہاں ہم زاویوں کی جمع کی خاصیت استعمال کرتے ہیں کیونکہ کل زاویہ $\\angle AOC = 154^\\circ$ دو برابر حصوں $\\angle AOB$ اور $\\angle BOC$ سے مل کر بنا ہے۔ $154^\\circ$ کو دو برابر حصوں میں تقسیم کرنے سے ہمیں معلوم ہوتا ہے کہ ان میں سے ہر چھوٹا مرکزی زاویہ $77^\\circ$ کا ہے۔"
   },
   {
-   "en": "Here we use a fundamental circle theorem: equal arcs subtend equal central angles at the centre of the circle. Because arc $AB$ and arc $BD$ are equal, the central angle $m\\angle BOD$ must also be $140^\\circ$, giving us the missing angle needed to find $x$.",
-   "ur": "یہاں ہم دائرے کا ایک بنیادی مسئلہ استعمال کرتے ہیں: مساوی قوسیں دائرے کے مرکز پر مساوی مرکزی زاویے بناتی ہیں۔ چونکہ قوس $AB$ اور قوس $BD$ برابر ہیں، اس لیے مرکزی زاویہ $m\\angle BOD$ بھی $140^\\circ$ ہی ہوگا، جس سے ہمیں $x$ معلوم کرنے کے لیے درکار زاویہ مل جاتا ہے۔"
+   "en": "From our first step, we already know that all three central angles are equal. Since the unknown angle $x$ is simply $\\angle COD$, it must have the exact same measure of $77^\\circ$ as the other two angles.",
+   "ur": "پہلے مرحلے سے ہم جانتے ہیں کہ تینوں مرکزی زاویے آپس میں برابر ہیں۔ چونکہ نامعلوم زاویہ $x$ دراصل $\\angle COD$ ہی ہے، اس لیے اس کی مقدار بھی باقی دو زاویوں کی طرح بالکل $77^\\circ$ ہو گی۔"
   },
   {
-   "en": "A complete rotation around a single point—in this case, the centre $O$ of the circle—always forms a full angle of $360^\\circ$. Writing this rule as an equation connects our unknown angle $m\\angle AOD$ with the two known central angles.",
-   "ur": "کسی ایک نقطے، یعنی دائرے کے مرکز $O$ کے گرد مکمل چکر ہمیشہ $360^\\circ$ کا زاویہ بناتا ہے۔ اس اصول کو مساوات کی صورت میں لکھنے سے ہمارا نامعلوم زاویہ $m\\angle AOD$ باقی دو معلوم مرکزی زاویوں کے ساتھ جڑ جاتا ہے۔"
-  },
-  {
-   "en": "By replacing the angle names with their actual values ($x$ and $140^\\circ$), we turn the geometric rule into a simple algebraic equation. Now we only have one unknown variable, $x$, left to solve for.",
-   "ur": "زاویوں کے ناموں کی جگہ ان کی اصل قیمتیں ($x$ اور $140^\\circ$) درج کرنے سے، ہم جیومیٹری کے اصول کو ایک سادہ الجبری مساوات میں بدل دیتے ہیں۔ اب ہمارے پاس حل کرنے کے لیے صرف ایک نامعلوم متغیر $x$ رہ گیا ہے۔"
-  },
-  {
-   "en": "We combine the two $140^\\circ$ angles to get $280^\\circ$ and then subtract this sum from the total $360^\\circ$ using basic algebra. This isolates $x$ and reveals the exact measure of the remaining central angle.",
-   "ur": "ہم دونوں $140^\\circ$ کے زاویوں کو جمع کر کے $280^\\circ$ حاصل کرتے ہیں اور پھر بنیادی الجبرا کی مدد سے اس مجموعے کو کل $360^\\circ$ میں سے تفریق کر دیتے ہیں۔ اس سے $x$ اکیلا رہ جاتا ہے اور ہمیں باقی ماندہ مرکزی زاویے کی درست پیمائش معلوم ہو جاتی ہے۔"
-  },
-  {
-   "en": "Finally, we state both calculated values together clearly along with their proper units (degrees for the angle and centimetres for the arc length). This completes our solution neatly as required by the question.",
-   "ur": "آخر میں، ہم دونوں معلوم کی گئی قیمتوں کو ان کی درست اکائیوں (زاویے کے لیے ڈگری اور قوس کی لمبائی کے لیے سینٹی میٹر) کے ساتھ واضح طور پر اکٹھا لکھ دیتے ہیں۔ اس سے سوال کے مطابق ہمارا حل مکمل ہو جاتا ہے۔"
+   "en": "Equal central angles (or equal chords) always cut off arcs of equal length, which means $\\widehat{BC}$ and $\\widehat{CD}$ are each $3$ cm just like $\\widehat{AB}$. Because the arc $BD$ (which is $y$) is made by joining $\\widehat{BC}$ and $\\widehat{CD}$ together, we add their lengths to get $6$ cm.",
+   "ur": "برابر مرکزی زاویے (یا برابر وتر) ہمیشہ برابر لمبائی کی قوسیں کاٹتے ہیں، جس کا مطلب ہے کہ قوس $\\widehat{BC}$ اور $\\widehat{CD}$ بھی قوس $\\widehat{AB}$ کی طرح ہر ایک $3$ سم ہیں۔ چونکہ قوس $BD$ (جو کہ $y$ ہے) قوس $\\widehat{BC}$ اور $\\widehat{CD}$ کے ملنے سے بنتی ہے، اس لیے ہم ان کی لمبائیوں کو جمع کر کے $6$ سم حاصل کرتے ہیں۔"
   }
  ],
  "meaning": {
-  "en": "The final answer means that the central angle $x$ is $80^\\circ$ and the length of arc $BD$ ($y$) is $3\\text{ cm}$. You can easily check this by adding the three central angles around the centre $O$: $80^\\circ + 140^\\circ + 140^\\circ = 360^\\circ$, which correctly makes a complete circle.",
-  "ur": "حتمی جواب کا مطلب یہ ہے کہ مرکزی زاویہ $x$ کی پیمائش $80^\\circ$ ہے اور قوس $BD$ کی لمبائی ($y$) $3\\text{ cm}$ ہے۔ آپ اس کی باآسانی پڑتال ایسے کر سکتے ہیں کہ مرکز $O$ کے گرد تینوں مرکزی زاویوں کو جمع کریں: $80^\\circ + 140^\\circ + 140^\\circ = 360^\\circ$، جو کہ بالکل درست طور پر ایک مکمل دائرہ بناتا ہے۔"
+  "en": "This final result tells us that the missing central angle $x$ is $77^\\circ$ and the total length of the arc $BD$, represented by $y$, is $6$ cm. You can easily check this: two angles of $77^\\circ$ add up to the given $154^\\circ$, and two equal arcs of $3$ cm combine to make the $6$ cm arc.",
+  "ur": "یہ حتمی جواب ہمیں بتاتا ہے کہ نامعلوم مرکزی زاویہ $x$ کی مقدار $77^\\circ$ ہے اور قوس $BD$ کی کل لمبائی، جسے $y$ سے ظاہر کیا گیا ہے، $6$ سم ہے۔ آپ اس کی باآسانی پڑتال کر سکتے ہیں: $77^\\circ$ کے دو زاویے مل کر دیا گیا زاویہ $154^\\circ$ بناتے ہیں، اور $3$ سم کی دو برابر قوسیں مل کر $6$ سم کی قوس بناتی ہیں۔"
  },
  "source": "gemini-4-argon via Vertex AI",
- "made": "2026-11-01"
+ "made": "2026-11-02"
 }

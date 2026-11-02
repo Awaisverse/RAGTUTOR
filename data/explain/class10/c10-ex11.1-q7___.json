@@ -3,33 +3,38 @@
  "label": "",
  "answer_ref": "strong positive correlation",
  "math": [
+  "",
   "n = 8,\\ \\sum x = 295,\\ \\sum y = 266,\\ \\sum xy = 10594,\\ \\sum x^2 = 11823",
   "b = \\frac{n\\sum xy - \\sum x\\sum y}{n\\sum x^2 - (\\sum x)^2} \\approx 0.8311,\\quad a = \\frac{\\sum y - b\\sum x}{n} \\approx 2.6046",
-  "r = \\frac{n\\sum xy - \\sum x\\sum y}{\\sqrt{[n\\sum x^2 - (\\sum x)^2][n\\sum y^2 - (\\sum y)^2]}} \\approx 0.963",
+  "",
   "\\text{strong positive correlation}"
  ],
  "why": [
   {
-   "en": "To find the equation for the line of best fit and measure correlation accurately, we first need the basic totals from our $n = 8$ students' scores, treating the 1st quiz as $x$ and the 2nd quiz as $y$. Calculating $\\sum x$, $\\sum y$, $\\sum xy$, and $\\sum x^2$ prepares all the building blocks required for the standard statistical formulas.",
-   "ur": "لائن آف بیسٹ فٹ (line of best fit) کی مساوات معلوم کرنے اور ارتباط (correlation) کو درست طریقے سے ناپنے کے لیے، ہمیں سب سے پہلے اپنے $n = 8$ طلباء کے نمبروں کے بنیادی مجموعے درکار ہیں، جہاں پہلے کوئز کو $x$ اور دوسرے کوئز کو $y$ مانا گیا ہے۔ $\\sum x$، $\\sum y$، $\\sum xy$، اور $\\sum x^2$ کا حساب لگانا ہمیں وہ تمام بنیادی قیمتیں فراہم کرتا ہے جو معیاری شماریاتی فارمولوں میں درج کرنے کے لیے ضروری ہیں۔"
+   "en": "To construct a scatter diagram, we treat each student's two quiz scores as an ordered pair $(x, y)$, putting the 1st quiz on the horizontal axis and the 2nd quiz on the vertical axis. Plotting these 8 points lets us visually see the pattern and relationship between the two quizzes.",
+   "ur": "سکیٹر ڈایاگرام (scatter diagram) بنانے کے لیے ہم ہر طالب علم کے دونوں کوئز کے نمبروں کو ایک مترتب جوڑے $(x, y)$ کے طور پر لیتے ہیں، جس میں پہلے کوئز کو افقی محور (x-axis) پر اور دوسرے کوئز کو عمودی محور (y-axis) پر رکھا جاتا ہے۔ ان 8 نقاط کو گراف پر لگانے سے ہمیں دونوں کوئز کے درمیان تعلق اور رجحان واضح طور پر نظر آتا ہے۔"
   },
   {
-   "en": "We use the method of least squares to find the exact slope $b \\approx 0.8311$ and y-intercept $a \\approx 2.6046$ for our line of best fit, $\\hat{y} = a + bx$. This gives us the precise straight line that passes as close as possible to all the plotted points on our scatter diagram.",
-   "ur": "ہم اپنی لائن آف بیسٹ فٹ $\\hat{y} = a + bx$ کے لیے درست ڈھلوان (slope) $b \\approx 0.8311$ اور y-مقطوعہ (y-intercept) $a \\approx 2.6046$ معلوم کرنے کے لیے تقلیلِ مربعات کا طریقہ (method of least squares) استعمال کرتے ہیں۔ اس سے ہمیں وہ بالکل سیدھی لائن مل جاتی ہے جو ہمارے اسکیٹر ڈایاگرام (scatter diagram) پر لگائے گئے تمام نقاط کے زیادہ سے زیادہ قریب سے گزرتی ہے۔"
+   "en": "To find the exact mathematical line of best fit, we first need the totals of our $x$ and $y$ values, their products $xy$, and the squares $x^2$. Calculating these sums for all $n = 8$ students prepares the exact numbers required for the least-squares formulas.",
+   "ur": "بہترین مطابقت والی خط (line of best fit) کو ریاضی کے فارمولے سے معلوم کرنے کے لیے ہمیں پہلے $x$ اور $y$ کی قیمتوں، ان کے حاصل ضرب $xy$، اور مربعات $x^2$ کے مجموعے درکار ہوتے ہیں۔ تمام $n = 8$ طلباء کے لیے یہ مجموعے نکالنے سے ہمیں فارمولے میں درج کرنے کے لیے درست قیمتیں مل جاتی ہیں۔"
   },
   {
-   "en": "To mathematically measure the strength and direction of the relationship between the two quizzes, we apply Pearson's correlation coefficient formula to find $r$. Getting $r \\approx 0.963$, which is very close to $+1$, mathematically proves that the two sets of scores move together very closely in the same direction.",
-   "ur": "دونوں کوئزز کے درمیان تعلق کی مضبوطی اور سمت کو ریاضیاتی طور پر ناپنے کے لیے، ہم $r$ کی قیمت معلوم کرنے کے لیے پیئرسن کے کواریلیشن کوایفیشینٹ (correlation coefficient) کا فارمولا لگاتے ہیں۔ $r \\approx 0.963$ کا حاصل ہونا، جو کہ $+1$ کے بہت قریب ہے، ریاضیاتی طور پر یہ ثابت کرتا ہے کہ نمبروں کے دونوں سیٹ ایک ہی سمت میں ایک دوسرے کے بہت قریب چلتے ہیں۔"
+   "en": "We apply the method of least squares to find the slope $b$ and y-intercept $a$ of our trend line $\\hat{y} = a + bx$. The positive slope $b \\approx 0.8311$ tells us that the line rises from left to right, and $a \\approx 2.6046$ gives its starting height.",
+   "ur": "ہم خطِ رجحان $\\hat{y} = a + bx$ کی ڈھلوان $b$ اور y-مقطع $a$ معلوم کرنے کے لیے اقل مربعات کا طریقہ (least-squares method) استعمال کرتے ہیں۔ مثبت ڈھلوان $b \\approx 0.8311$ ہمیں بتاتی ہے کہ خط بائیں سے دائیں اوپر کی طرف جا رہا ہے، جبکہ $a \\approx 2.6046$ اس کی ابتدائی اونچائی بتاتا ہے۔"
   },
   {
-   "en": "Finally, we interpret both our scatter diagram and the value $r \\approx 0.963$ into plain words as asked by the question. Because the line rises from left to right and the points cluster tightly around it, we conclude there is a strong positive correlation.",
-   "ur": "آخر میں، جیسا کہ سوال میں پوچھا گیا ہے، ہم اپنے اسکیٹر ڈایاگرام اور $r \\approx 0.963$ کی قیمت دونوں کا آسان الفاظ میں مطلب بیان کرتے ہیں۔ چونکہ لائن بائیں سے دائیں اوپر کی طرف اٹھتی ہے اور تمام نقاط اس کے بالکل قریب جمع ہیں، اس لیے ہم یہ نتیجہ اخذ کرتے ہیں کہ ان میں ایک مضبوط مثبت ارتباط (strong positive correlation) ہے۔"
+   "en": "Now we draw the line of best fit on our scatter diagram so that it balances the data, keeping roughly equal numbers of points above and below it. This single straight line summarizes the overall trend of the class's quiz scores.",
+   "ur": "اب ہم اپنے سکیٹر ڈایاگرام پر بہترین مطابقت والی خط (line of best fit) اس طرح کھینچتے ہیں کہ یہ نقاط کے درمیان توازن قائم رکھے، یعنی تقریباً برابر نقاط اس کے اوپر اور نیچے ہوں۔ یہ ایک سیدھی لکیر پوری کلاس کے کوئز کے نمبروں کے مجموعی رجحان کا خلاصہ پیش کرتی ہے۔"
+  },
+  {
+   "en": "We determine the type of correlation by looking at the direction and closeness of the plotted points around our line. Because the points lie very close to a line that goes upwards, we identify this relationship as a strong positive correlation.",
+   "ur": "ہم خط کے گرد لگائے گئے نقاط کی سمت اور ان کے خط سے فاصلے کو دیکھ کر ارتباط (correlation) کی قسم کا تعین کرتے ہیں۔ چونکہ تمام نقاط اوپر جاتی ہوئی لکیر کے بہت قریب واقع ہیں، اس لیے ہم اس تعلق کو ایک مضبوط مثبت ارتباط (strong positive correlation) کہتے ہیں۔"
   }
  ],
  "meaning": {
-  "en": "A strong positive correlation means that students who scored higher on the 1st quiz consistently scored higher on the 2nd quiz as well. You can easily check this in the data: as the 1st quiz scores rise from $14$ to $49$, the 2nd quiz scores steadily rise from $16$ to $43$, which visually forms a neat upward trend around the line $\\hat{y} = 2.6046 + 0.8311x$.",
-  "ur": "مضبوط مثبت ارتباط (strong positive correlation) کا مطلب یہ ہے کہ جن طلباء نے پہلے کوئز میں زیادہ نمبر حاصل کیے، انہوں نے تسلسل کے ساتھ دوسرے کوئز میں بھی زیادہ نمبر حاصل کیے۔ آپ اسے دیے گئے ڈیٹا میں باآسانی چیک کر سکتے ہیں: جیسے جیسے پہلے کوئز کے نمبر $14$ سے بڑھ کر $49$ تک جاتے ہیں، دوسرے کوئز کے نمبر بھی مسلسل $16$ سے بڑھ کر $43$ تک جاتے ہیں، جو کہ دیکھنے میں لائن $\\hat{y} = 2.6046 + 0.8311x$ کے گرد اوپر کی طرف جاتا ہوا ایک واضح رجحان بناتا ہے۔"
+  "en": "The final answer means that there is a strong positive correlation between the two quizzes: students who scored high on the 1st quiz (like $49$) also scored high on the 2nd quiz (like $43$). You can easily verify this on your graph by checking that the points form a tight, rising band from $(14, 16)$ up to $(49, 43)$.",
+  "ur": "آخری جواب کا مطلب یہ ہے کہ دونوں کوئز کے نمبروں کے درمیان ایک مضبوط مثبت ارتباط (strong positive correlation) ہے: جن طلباء نے پہلے کوئز میں زیادہ نمبر لیے (جیسے $49$) انہوں نے دوسرے کوئز میں بھی زیادہ نمبر حاصل کیے (جیسے $43$)۔ آپ اپنے گراف پر اس کی تصدیق آسانی سے کر سکتے ہیں کیونکہ تمام نقاط $(14, 16)$ سے لے کر $(49, 43)$ تک اوپر کی طرف جاتی ہوئی ایک قریبی پٹی بناتے ہیں۔"
  },
  "source": "gemini-4-argon via Vertex AI",
- "made": "2026-11-01"
+ "made": "2026-11-02"
 }

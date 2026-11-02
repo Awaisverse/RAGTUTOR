@@ -5,6 +5,7 @@
  "math": [
   "[(x+9)(x-7)][(x-3)(x+5)] = (x^2 + 2x - 63)(x^2 + 2x - 15) = 385",
   "\\text{Let } y = x^2 + 2x",
+  "\\left(y - 15\\right) \\left(y - 63\\right) - 385 = 0 \\Rightarrow y^{2} - 78 y + 560 = 0",
   "y^{2} - 8 y - 70 y + 560 = 0",
   "y \\left(y - 8\\right) - 70 \\left(y - 8\\right) = 0",
   "\\left(y - 70\\right) \\left(y - 8\\right) = 0",
@@ -26,90 +27,94 @@
  ],
  "why": [
   {
-   "en": "In equations of the form $(x+a)(x+b)(x+c)(x+d)=k$, we pair the brackets whose constants add up to the same number, since $9 + (-7) = 2$ and $-3 + 5 = 2$. Multiplying these pairs creates an identical $x^2 + 2x$ part in both brackets, which avoids a difficult degree-4 expansion.",
-   "ur": "$(x+a)(x+b)(x+c)(x+d)=k$ کی شکل والی مساواتوں میں، ہم ان بریکٹوں کے جوڑے بناتے ہیں جن کے مستقل نمبروں کا مجموعہ ایک جیسا ہو، کیونکہ $9 + (-7) = 2$ اور $-3 + 5 = 2$ ہوتا ہے۔ ان جوڑوں کو ضرب دینے سے دونوں بریکٹوں میں ایک جیسا $x^2 + 2x$ حصہ بن جاتا ہے، جس سے ہم درجہ 4 کی مشکل توسیع سے بچ جاتے ہیں۔"
+   "en": "Multiplying all four brackets directly would give a difficult degree-four equation, so we use the rule of smart pairing: we group the factors whose constant terms add up to the same number, $9 + (-7) = 2$ and $(-3) + 5 = 2$. This creates the identical expression $x^2 + 2x$ inside both new brackets, setting up an easy substitution.",
+   "ur": "چاروں بریکٹس کو براہِ راست ضرب دینے سے درجہ چہارم کی ایک مشکل مساوات بن جائے گی، اس لیے ہم مناسب جوڑے بنانے کا اصول استعمال کرتے ہیں: ہم ان اجزائے ضربی کو ملاتے ہیں جن کے مستقل ارکان کا مجموعہ ایک جیسا ہو، یعنی $9 + (-7) = 2$ اور $(-3) + 5 = 2$۔ اس سے دونوں نئی بریکٹس کے اندر ایک جیسا جملہ $x^2 + 2x$ بن جاتا ہے، جس سے متبادل رکھنا آسان ہو جاتا ہے۔"
   },
   {
-   "en": "We use the method of substitution by replacing the repeated expression $x^2 + 2x$ with a single variable $y$. This turns our complicated equation into a simple quadratic equation in $y$ that we already know how to solve.",
-   "ur": "ہم متبادل کے طریقے کا استعمال کرتے ہوئے بار بار آنے والے جملے $x^2 + 2x$ کی جگہ ایک نیا متغیر $y$ رکھتے ہیں۔ اس سے ہماری پیچیدہ مساوات $y$ میں ایک سادہ دو درجی مساوات بن جاتی ہے جسے حل کرنا ہم پہلے ہی جانتے ہیں۔"
+   "en": "We use the method of substitution by replacing the repeated expression $x^2 + 2x$ with a single variable $y$. This temporarily hides the $x^2$ term and turns our degree-four problem into a much simpler quadratic equation.",
+   "ur": "ہم بار بار آنے والے جملے $x^2 + 2x$ کی جگہ ایک نیا متغیر $y$ رکھ کر متبادل کا طریقہ استعمال کرتے ہیں۔ اس سے $x^2$ والی رقم عارضی طور پر چھپ جاتی ہے اور ہمارا سوال ایک آسان دو درجی مساوات میں تبدیل ہو جاتا ہے۔"
   },
   {
-   "en": "After expanding $(y - 63)(y - 15) = 385$ into standard form $y^2 - 78y + 560 = 0$, we use mid-term breaking to factorize it. Finding two numbers, $-8$ and $-70$, that add to $-78$ and multiply to $560$ allows us to split the middle term for grouping.",
-   "ur": "$(y - 63)(y - 15) = 385$ کو معیاری شکل $y^2 - 78y + 560 = 0$ میں کھولنے کے بعد، ہم اس کی تجزی کرنے کے لیے درمیانی رقم کو توڑنے کا طریقہ استعمال کرتے ہیں۔ ایسے دو نمبر، $-8$ اور $-70$، تلاش کرنا جنہیں جمع کرنے سے $-78$ اور ضرب دینے سے $560$ آئے، ہمیں گروپ بندی کے لیے درمیانی رقم کو توڑنے میں مدد دیتا ہے۔"
+   "en": "After substituting $y$, we expand the brackets and move $385$ to the left side so the equation equals zero. Putting the quadratic equation into its standard form $ay^2 + by + c = 0$ is necessary before we can factorize it.",
+   "ur": "$y$ درج کرنے کے بعد، ہم بریکٹس کو کھولتے ہیں اور $385$ کو بائیں طرف لے آتے ہیں تاکہ مساوات صفر کے برابر ہو جائے۔ تجزی کرنے سے پہلے دو درجی مساوات کو اس کی معیاری صورت $ay^2 + by + c = 0$ میں لانا ضروری ہوتا ہے۔"
   },
   {
-   "en": "We factor by grouping, pulling out the greatest common factor $y$ from the first two terms and $-70$ from the last two terms. Because the remaining bracket $(y - 8)$ is identical in both parts, we know our factorization is on the right track.",
-   "ur": "ہم گروپ بندی کے ذریعے تجزی کرتے ہیں، پہلی دو رقموں سے مشترک جزو ضربی $y$ اور آخری دو رقموں سے $-70$ باہر نکالتے ہیں۔ چونکہ باقی ماندہ بریکٹ $(y - 8)$ دونوں حصوں میں بالکل ایک جیسی ہے، اس سے پتہ چلتا ہے کہ ہماری تجزی بالکل درست سمت میں جا رہی ہے۔"
+   "en": "To factorize by mid-term breaking, we look for two numbers that multiply to $560$ and add up to $-78$. Rewriting $-78y$ as $-8y - 70y$ gives us four terms that can be grouped in pairs.",
+   "ur": "درمیانی رقم کو توڑ کر تجزی کرنے کے لیے، ہم ایسے دو اعداد تلاش کرتے ہیں جن کو ضرب دینے سے $560$ اور جمع کرنے سے $-78$ آئے۔ $-78y$ کو $-8y - 70y$ لکھنے سے ہمارے پاس چار رقوم بن جاتی ہیں جن کے دو دو کر کے جوڑے بنائے جا سکتے ہیں۔"
   },
   {
-   "en": "By the distributive law, we factor out the common binomial $(y - 8)$ from the expression. This changes the sum of terms into a product of two linear factors equal to $0$.",
-   "ur": "تقسیمی قانون کے مطابق، ہم اس جملے سے مشترک دو رقمی بریکٹ $(y - 8)$ کو باہر نکال لیتے ہیں۔ یہ رقموں کے مجموعے کو دو یک درجی اجزائے ضربی کے حاصل ضرب میں بدل دیتا ہے جو $0$ کے برابر ہے۔"
+   "en": "Using factorization by grouping, we take out the highest common factor from the first two terms and from the last two terms separately. Seeing the exact same bracket $(y - 8)$ appear twice confirms that our mid-term split is correct.",
+   "ur": "گروپ بندی کے ذریعے تجزی کرتے ہوئے، ہم پہلی دو رقوم اور آخری دو رقوم میں سے الگ الگ مشترک جزو باہر نکالتے ہیں۔ ایک جیسی بریکٹ $(y - 8)$ کا دو بار آنا اس بات کی تصدیق کرتا ہے کہ ہم نے درمیانی رقم کو بالکل صحیح توڑا ہے۔"
   },
   {
-   "en": "According to the zero-product property, if the product of two factors is $0$, then at least one of the factors must be $0$. This lets us break one quadratic equation into two simple linear equations.",
-   "ur": "ضربی صفر کی خاصیت کے مطابق، اگر دو اجزائے ضربی کا حاصل ضرب $0$ ہو، تو ان میں سے کم از کم ایک جزو لازمی طور پر $0$ ہونا چاہیے۔ اس اصول کی مدد سے ہم ایک دو درجی مساوات کو دو سادہ یک درجی مساواتوں میں توڑ لیتے ہیں۔"
+   "en": "Since $(y - 8)$ is common to both parts, we factor it out to the front. This completes the factorization, turning the quadratic sum into a product of two linear factors equal to zero.",
+   "ur": "چونکہ $(y - 8)$ دونوں حصوں میں مشترک ہے، اس لیے ہم اسے باہر نکال لیتے ہیں۔ اس سے تجزی مکمل ہو جاتی ہے، اور دو درجی جملہ دو یک درجی اجزائے ضربی کے حاصلِ ضرب میں بدل جاتا ہے جو صفر کے برابر ہے۔"
   },
   {
-   "en": "Solving each linear equation gives us the two intermediate values for our helper variable $y$. However, since the original question asks for $x$, we must now use these $y$ values to find $x$.",
-   "ur": "ہر یک درجی مساوات کو حل کرنے سے ہمیں اپنے مددگار متغیر $y$ کی دو درمیانی قیمتیں مل جاتی ہیں۔ لیکن چونکہ اصل سوال میں $x$ کی قیمت پوچھی گئی ہے، اس لیے اب ہمیں $x$ معلوم کرنے کے لیے $y$ کی ان قیمتوں کو استعمال کرنا ہوگا۔"
+   "en": "By the zero-product property, if the product of two factors is zero, then at least one of the factors must be zero. This allows us to split the quadratic equation into two simple linear equations.",
+   "ur": "ضربی خاصیتِ صفر کے مطابق، اگر دو اجزائے ضربی کا حاصلِ ضرب صفر ہو تو ان میں سے کم از کم ایک جزو لازمی صفر ہوتا ہے۔ اس اصول کی مدد سے ہم دو درجی مساوات کو دو سادہ یک درجی مساواتوں میں تقسیم کر لیتے ہیں۔"
   },
   {
-   "en": "We start the back-substitution process with the first value, $y = 8$, replacing $y$ with its original definition $x^2 + 2x$. This gives us our first quadratic equation in terms of the original variable $x$.",
-   "ur": "ہم پہلی قیمت $y = 8$ کے ساتھ واپسی متبادل کا عمل شروع کرتے ہیں، اور $y$ کی جگہ اس کی اصل تعریف $x^2 + 2x$ درج کرتے ہیں۔ اس سے ہمیں اصل متغیر $x$ کی شکل میں پہلی دو درجی مساوات مل جاتی ہے۔"
+   "en": "Solving each linear equation gives us the two values of our temporary variable $y$. However, the question asked for $x$, so these values are our stepping stones to find the actual roots.",
+   "ur": "ہر یک درجی مساوات کو حل کرنے سے ہمیں اپنے عارضی متغیر $y$ کی دو قیمتیں مل جاتی ہیں۔ لیکن سوال میں $x$ کی قیمت پوچھی گئی ہے، اس لیے یہ قیمتیں اصل روٹس معلوم کرنے کے لیے ہمارا اگلا زینہ ہیں۔"
   },
   {
-   "en": "To solve a quadratic equation, we first move all terms to one side so the other side is $0$, putting it in the standard form $ax^2 + bx + c = 0$. Now it is ready to be factorized.",
-   "ur": "کسی بھی دو درجی مساوات کو حل کرنے کے لیے، ہم سب سے پہلے تمام رقموں کو ایک طرف لے آتے ہیں تاکہ دوسری طرف $0$ رہ جائے، جس سے یہ معیاری شکل $ax^2 + bx + c = 0$ میں آ جاتی ہے۔ اب یہ مساوات تجزی کے لیے تیار ہے۔"
+   "en": "Now we undo our substitution by replacing $y$ with $x^2 + 2x$ for the first value, $y = 8$. This gives us our first true quadratic equation in $x$ to solve.",
+   "ur": "اب ہم پہلی قیمت $y = 8$ کے لیے $y$ کی جگہ واپس $x^2 + 2x$ رکھ کر اپنا متبادل ختم کرتے ہیں۔ اس سے ہمیں $x$ میں پہلی اصل دو درجی مساوات مل جاتی ہے جسے ہم نے حل کرنا ہے۔"
   },
   {
-   "en": "We apply mid-term breaking to the quadratic in $x$ by finding two numbers, $-2$ and $4$, whose product is $-8$ and sum is $2$. Rewriting $2x$ as $-2x + 4x$ prepares the four terms for factoring by grouping.",
-   "ur": "ہم $x$ والی دو درجی مساوات پر درمیانی رقم توڑنے کا طریقہ لگاتے ہیں اور ایسے دو نمبر، $-2$ اور $4$، ڈھونڈتے ہیں جن کا حاصل ضرب $-8$ اور مجموعہ $2$ ہو۔ $2x$ کو $-2x + 4x$ کے طور پر لکھنا ان چار رقموں کو گروپ بندی کے ذریعے تجزی کے لیے تیار کرتا ہے۔"
+   "en": "We subtract $8$ from both sides so that the right-hand side becomes zero. Writing the equation in standard form $ax^2 + bx + c = 0$ prepares it for mid-term breaking.",
+   "ur": "ہم دونوں اطراف سے $8$ تفریق کرتے ہیں تاکہ دائیں سائیڈ صفر ہو جائے۔ مساوات کو معیاری صورت $ax^2 + bx + c = 0$ میں لکھنا اسے درمیانی رقم توڑنے کے عمل کے لیے تیار کرتا ہے۔"
   },
   {
-   "en": "Grouping the terms in pairs, we factor out $x$ from the first pair and $4$ from the second pair. Seeing the identical factor $(x - 2)$ appear twice confirms that the expression can be factored cleanly.",
-   "ur": "رقموں کے جوڑے بنا کر، ہم پہلے جوڑے سے $x$ اور دوسرے جوڑے سے $4$ بطور مشترک نکالتے ہیں۔ ایک جیسے جزو ضربی $(x - 2)$ کا دو بار ظاہر ہونا اس بات کی تصدیق کرتا ہے کہ اس جملے کی صاف تجزی ہو سکتی ہے۔"
+   "en": "We apply mid-term breaking again by finding two numbers whose product is $-8$ and sum is $2$. Splitting $2x$ into $-2x + 4x$ prepares the expression for factoring by grouping.",
+   "ur": "ہم دوبارہ درمیانی رقم توڑنے کا طریقہ لگاتے ہیں اور ایسے دو اعداد ڈھونڈتے ہیں جن کا حاصلِ ضرب $-8$ اور مجموعہ $2$ ہو۔ $2x$ کو $-2x + 4x$ میں توڑنے سے جملہ گروپ بندی کے ذریعے تجزی کے لیے تیار ہو جاتا ہے۔"
   },
   {
-   "en": "We take out the common bracket $(x - 2)$ to complete the factorization of the quadratic expression. The equation is now written as a product of two linear factors in $x$ equal to $0$.",
-   "ur": "ہم دو درجی جملے کی تجزی مکمل کرنے کے لیے مشترک بریکٹ $(x - 2)$ کو باہر نکال لیتے ہیں۔ اب یہ مساوات $x$ کے دو یک درجی اجزائے ضربی کے حاصل ضرب کے طور پر لکھی گئی ہے جو $0$ کے برابر ہے۔"
+   "en": "We factor out $x$ from the first pair and $4$ from the second pair. Getting the repeated bracket $(x - 2)$ shows our grouping is successful.",
+   "ur": "ہم پہلے جوڑے میں سے $x$ اور دوسرے جوڑے میں سے $4$ مشترک نکالتے ہیں۔ یکساں بریکٹ $(x - 2)$ کا حاصل ہونا ظاہر کرتا ہے کہ ہماری گروپ بندی کامیاب رہی۔"
   },
   {
-   "en": "Applying the zero-product property again, we set each linear factor equal to $0$ separately. This reduces the problem to finding the roots of two basic linear equations.",
-   "ur": "ضربی صفر کی خاصیت کو دوبارہ استعمال کرتے ہوئے، ہم ہر یک درجی جزو کو الگ الگ $0$ کے برابر رکھتے ہیں۔ اس سے ہمارا مسئلہ دو بنیادی یک درجی مساواتوں کے روٹس معلوم کرنے تک محدود ہو جاتا ہے۔"
+   "en": "Factoring out the common bracket $(x - 2)$ turns the expression into a product of two linear factors. Now we can easily find the values of $x$ that make this product zero.",
+   "ur": "مشترک بریکٹ $(x - 2)$ کو باہر نکالنے سے جملہ دو یک درجی اجزائے ضربی کے حاصلِ ضرب میں بدل جاتا ہے۔ اب ہم آسانی سے $x$ کی وہ قیمتیں معلوم کر سکتے ہیں جو اس حاصلِ ضرب کو صفر بناتی ہیں۔"
   },
   {
-   "en": "By isolating $x$ in both equations, we obtain our first two real solutions for the original equation: $-4$ and $2$. Next, we must repeat this back-substitution for the second value of $y$ to find the remaining roots.",
-   "ur": "دونوں مساواتوں میں $x$ کو الگ کر کے، ہم اصل مساوات کے پہلے دو حقیقی حل حاصل کر لیتے ہیں: $-4$ اور $2$۔ اس کے بعد، باقی روٹس معلوم کرنے کے لیے ہمیں $y$ کی دوسری قیمت کے لیے بھی واپسی متبادل کا یہی عمل دہرانا ہوگا۔"
+   "en": "Applying the zero-product property again, we set each factor equal to zero separately. This breaks the problem down into two easy one-step equations.",
+   "ur": "ضربی خاصیتِ صفر کو دوبارہ استعمال کرتے ہوئے، ہم ہر جزوِ ضربی کو الگ الگ صفر کے برابر رکھتے ہیں۔ اس سے سوال دو انتہائی آسان مساواتوں میں بٹ جاتا ہے۔"
   },
   {
-   "en": "Now we take the second value, $y = 70$, and substitute $x^2 + 2x$ back in place of $y$. This sets up the second quadratic equation in $x$, which will yield the remaining two roots.",
-   "ur": "اب ہم دوسری قیمت $y = 70$ لیتے ہیں، اور $y$ کی جگہ واپس $x^2 + 2x$ درج کرتے ہیں۔ اس سے $x$ میں دوسری دو درجی مساوات بن جاتی ہے، جو ہمیں باقی دو روٹس دے گی۔"
+   "en": "Solving these gives us the first two actual roots of the original equation, $x = -4$ and $x = 2$. We are halfway to the complete solution set, with the second value of $y$ still left to use.",
+   "ur": "انہیں حل کرنے سے ہمیں اصل مساوات کے پہلے دو حقیقی روٹس، $x = -4$ اور $x = 2$ مل جاتے ہیں۔ ہم مکمل حل سیٹ کے آدھے راستے پر پہنچ چکے ہیں، جبکہ $y$ کی دوسری قیمت کا استعمال ابھی باقی ہے۔"
   },
   {
-   "en": "After moving $70$ to the left side to get $x^2 + 2x - 70 = 0$, we see that no integer factors of $-70$ add up to $2$, so we prepare to use the quadratic formula. Comparing with $ax^2 + bx + c = 0$ identifies the coefficients $a = 1$, $b = 2$, and $c = -70$.",
-   "ur": "$70$ کو بائیں طرف لے جا کر $x^2 + 2x - 70 = 0$ حاصل کرنے کے بعد، ہم دیکھتے ہیں کہ $-70$ کے کوئی ایسے صحیح عددی اجزاء نہیں ہیں جن کا مجموعہ $2$ بنے، اس لیے ہم دو درجی فارمولا استعمال کرنے کی تیاری کرتے ہیں۔ $ax^2 + bx + c = 0$ سے موازنہ کرنے پر ہمیں عددی سر $a = 1$، $b = 2$، اور $c = -70$ ملتے ہیں۔"
+   "en": "Next, we take the second value, $y = 70$, and substitute $x^2 + 2x$ back in place of $y$. This sets up the second quadratic equation in $x$, which will give us the remaining two roots.",
+   "ur": "اس کے بعد، ہم دوسری قیمت $y = 70$ لیتے ہیں اور $y$ کی جگہ واپس $x^2 + 2x$ درج کرتے ہیں۔ اس سے $x$ میں دوسری دو درجی مساوات بن جاتی ہے، جو ہمیں باقی دو روٹس دے گی۔"
   },
   {
-   "en": "We substitute the values of $a$, $b$, and $c$ directly into the quadratic formula, taking care with the negative sign on $c = -70$. This formula guarantees we will find the exact roots even when factorization by mid-term breaking is not possible.",
-   "ur": "ہم $a$، $b$، اور $c$ کی قیمتیں براہِ راست دو درجی فارمولے میں درج کرتے ہیں، اور $c = -70$ کے منفی نشان کا خاص خیال رکھتے ہیں۔ یہ فارمولا اس بات کی ضمانت دیتا ہے کہ جب درمیانی رقم توڑ کر تجزی ممکن نہ ہو تب بھی ہمیں درست روٹس مل جائیں گے۔"
+   "en": "After bringing $70$ to the left to make it $x^2 + 2x - 70 = 0$, we see that no simple integers multiply to $-70$ and add to $2$. So we list the coefficients $a, b,$ and $c$ from standard form to use the quadratic formula instead.",
+   "ur": "$70$ کو بائیں طرف لا کر $x^2 + 2x - 70 = 0$ بنانے کے بعد ہم دیکھتے ہیں کہ ایسے کوئی سادہ صحیح اعداد نہیں ہیں جنہیں ضرب دینے سے $-70$ اور جمع کرنے سے $2$ آئے۔ اس لیے ہم دو درجی کلیہ (فارمولا) استعمال کرنے کی خاطر معیاری صورت سے عددی سر $a, b,$ اور $c$ الگ لکھ لیتے ہیں۔"
   },
   {
-   "en": "We simplify the discriminant under the square root: multiplying $-4(1)(-70)$ gives $+280$, which adds to $4$ to make $284$. Because $284$ is positive, this tells us the remaining two roots are also real numbers.",
-   "ur": "ہم جزر کے نیچے موجود فرق کنندہ کو مختصر کرتے ہیں: $-4(1)(-70)$ کو ضرب دینے سے $+280$ آتا ہے، جو $4$ میں جمع ہو کر $284$ بناتا ہے۔ چونکہ $284$ ایک مثبت عدد ہے، اس سے ہمیں پتہ چلتا ہے کہ باقی دو روٹس بھی حقیقی اعداد ہیں۔"
+   "en": "We substitute the values of $a, b,$ and $c$ carefully into the quadratic formula. This formula is a reliable rule that finds the roots of any quadratic equation, even when factorization is not possible.",
+   "ur": "ہم $a, b,$ اور $c$ کی قیمتیں احتیاط کے ساتھ دو درجی کلیے میں درج کرتے ہیں۔ یہ کلیہ ایک قابلِ بھروسہ اصول ہے جو کسی بھی دو درجی مساوات کے روٹس معلوم کر دیتا ہے، چاہے اس کی تجزی ممکن نہ بھی ہو۔"
   },
   {
-   "en": "Since $284 = 4 \\times 71$, we simplify $\\sqrt{284}$ to $2\\sqrt{71}$ and then divide both terms in the numerator by the denominator $2$. This gives us the exact irrational roots $-1 + \\sqrt{71}$ and $-1 - \\sqrt{71}$ in their simplest radical form.",
-   "ur": "چونکہ $284 = 4 \\times 71$ ہوتا ہے، اس لیے ہم $\\sqrt{284}$ کو مختصر کر کے $2\\sqrt{71}$ لکھتے ہیں اور پھر شمار کنندہ کی دونوں رقموں کو مخرج $2$ پر تقسیم کر دیتے ہیں۔ اس سے ہمیں اپنی سادہ ترین جزری شکل میں بالکل درست غیر ناطق روٹس $-1 + \\sqrt{71}$ اور $-1 - \\sqrt{71}$ مل جاتے ہیں۔"
+   "en": "We simplify the expression inside the square root (the discriminant) and the denominator. Watching the minus-times-minus sign carefully gives us $+280$, which adds to $4$ to make $284$ under the root.",
+   "ur": "ہم جزر کے اندر والے حصے (فرق کنندہ) اور مخرج کو مختصر کرتے ہیں۔ منفی ضرب منفی کی علامت کا دھیان رکھنے سے ہمیں $+280$ ملتا ہے، جو $4$ میں جمع ہو کر جزر کے نیچے $284$ بنا دیتا ہے۔"
   },
   {
-   "en": "Finally, we gather all four values of $x$ from both cases and write them together inside curly brackets as the Solution Set (S.S). Having four roots makes complete sense because multiplying four linear brackets in $x$ gives a degree-4 equation.",
-   "ur": "آخر میں، ہم دونوں صورتوں سے حاصل ہونے والی $x$ کی چاروں قیمتوں کو اکٹھا کرتے ہیں اور انہیں حل سیٹ (S.S) کے طور پر درمیانی بریکٹ کے اندر لکھتے ہیں۔ چار روٹس کا آنا بالکل منطقی ہے کیونکہ $x$ کی چار یک درجی بریکٹوں کو ضرب دینے سے درجہ 4 کی مساوات بنتی ہے۔"
+   "en": "Since $284 = 4 \\times 71$, we take the square root of $4$ out of the radical and divide both terms in the numerator by the denominator $2$. This leaves the irrational roots in their simplest radical form.",
+   "ur": "چونکہ $284 = 4 \\times 71$ ہوتا ہے، اس لیے ہم $4$ کا جزر باہر نکال لیتے ہیں اور شمار کنندہ کی دونوں رقوم کو مخرج $2$ پر تقسیم کر دیتے ہیں۔ اس سے غیر ناطق روٹس اپنی سادہ ترین جذری صورت میں آ جاتے ہیں۔"
+  },
+  {
+   "en": "Finally, we gather all four values of $x$ from both cases into the solution set. Because the original equation has four factors of $x$ multiplied together (degree $4$), finding four roots makes our solution complete.",
+   "ur": "آخر میں، ہم دونوں صورتوں سے حاصل ہونے والی $x$ کی چاروں قیمتوں کو حل سیٹ میں اکٹھا کر کے لکھ دیتے ہیں۔ چونکہ اصل مساوات میں $x$ کے چار اجزائے ضربی آپس میں ضرب کھا رہے ہیں (درجہ $4$)، اس لیے چار روٹس کا نکل آنا ہمارے حل کو مکمل کرتا ہے۔"
   }
  ],
  "meaning": {
-  "en": "The final answer means that $x = -4$, $x = 2$, $x = -1 + \\sqrt{71}$, and $x = -1 - \\sqrt{71}$ are the exact four numbers that make the original equation $(x+9)(x-3)(x-7)(x+5) = 385$ true. You can easily check a rational root like $x = 2$ by substituting it into the expression $x^2 + 2x$ from our steps: $(2)^2 + 2(2) = 4 + 4 = 8$, which matches $y = 8$ and makes $(8 - 63)(8 - 15) = 385$, confirming our solution is completely correct.",
-  "ur": "آخری جواب کا مطلب یہ ہے کہ $x = -4$، $x = 2$، $x = -1 + \\sqrt{71}$، اور $x = -1 - \\sqrt{71}$ وہ چار درست اعداد ہیں جو اصل مساوات $(x+9)(x-3)(x-7)(x+5) = 385$ کو درست ثابت کرتے ہیں۔ آپ $x = 2$ جیسے ناطق روٹ کی باآسانی پڑتال کر سکتے ہیں؛ اسے ہمارے مراحل میں موجود جملے $x^2 + 2x$ میں درج کریں تو $(2)^2 + 2(2) = 4 + 4 = 8$ آتا ہے، جو $y = 8$ کے مطابق ہے اور $(8 - 63)(8 - 15) = 385$ بناتا ہے، جس سے تصدیق ہوتی ہے کہ ہمارا حل بالکل درست ہے۔"
+  "en": "The solution set $\\{-4, 2, -1 + \\sqrt{71}, -1 - \\sqrt{71}\\}$ gives the four exact values of $x$ for which the product of the four brackets $(x+9)(x-3)(x-7)(x+5)$ equals $385$. We can easily check a rational root like $x = 2$: substituting it into the intermediate expression $x^2 + 2x$ gives $(2)^2 + 2(2) = 4 + 4 = 8$, and then the grouped product $(y - 63)(y - 15)$ becomes $(8 - 63)(8 - 15) = 385$, which matches the right-hand side.",
+  "ur": "حل سیٹ $\\{-4, 2, -1 + \\sqrt{71}, -1 - \\sqrt{71}\\}$ ہمیں $x$ کی وہ چار درست قیمتیں دیتا ہے جن کے لیے چاروں بریکٹس $(x+9)(x-3)(x-7)(x+5)$ کا حاصلِ ضرب $385$ کے برابر ہوتا ہے۔ ہم $x = 2$ جیسے ناطق روٹ کی باآسانی پڑتال کر سکتے ہیں: اسے درمیانی جملے $x^2 + 2x$ میں درج کرنے سے $(2)^2 + 2(2) = 4 + 4 = 8$ ملتا ہے، اور پھر جوڑوں کا حاصلِ ضرب $(y - 63)(y - 15)$ قیمت رکھنے پر $(8 - 63)(8 - 15) = 385$ بن جاتا ہے، جو دائیں سائیڈ کے بالکل برابر ہے۔"
  },
  "source": "gemini-4-argon via Vertex AI",
- "made": "2026-11-01"
+ "made": "2026-11-02"
 }

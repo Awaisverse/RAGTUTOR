@@ -838,63 +838,51 @@
        "en": "Write the expression.",
        "ur": "عبارت لکھیں۔",
        "why": {
-        "en": "We start by rearranging the terms in the second denominator so that $x$ comes before $y$ in both fractions. By the commutative law of addition, $y-x$ is the same as $-x+y$, which helps us clearly see that the two denominators are exact negatives of each other.",
-        "ur": "ہم دوسری کسر کے مخرج (denominator) کی رقموں کو ترتیب دے کر شروع کرتے ہیں تاکہ دونوں کسروں میں $x$ پہلے اور $y$ بعد میں آئے۔ جمع کے قانونِ مبادلہ کے تحت، $y-x$ اور $-x+y$ ایک ہی چیز ہیں، جس سے ہمیں صاف نظر آتا ہے کہ دونوں مخرج ایک دوسرے کے منفی (الٹ) ہیں۔"
+        "en": "To add algebraic fractions, we first look at the denominators to see how they relate. By writing $y - x$ in standard alphabetical order as $-x + y$, we can clearly see that its signs are just the opposite of the first denominator, $x - y$.",
+        "ur": "الجبری کسور کو جمع کرنے کے لیے ہم سب سے پہلے مخرج (denominators) کو دیکھتے ہیں کہ ان کا آپس میں کیا تعلق ہے۔ $y - x$ کو حروفِ تہجی کی ترتیب کے مطابق $-x + y$ لکھنے سے ہمیں صاف نظر آتا ہے کہ اس کی علامتیں پہلے مخرج $x - y$ کے بالکل الٹ ہیں۔"
        }
       },
       {
-       "math": "= \\frac{3}{x - y} + \\frac{1}{- x + y}",
+       "math": "= \\frac{3}{x - y} + \\frac{1}{-\\left(x - y\\right)}",
        "en": "Factorize each denominator.",
        "ur": "ہر نسب نما کی تجزی کریں۔",
        "check": [
         "(3/(x - y) + 1/(-x + y)) == (3/(x - y) + 1/(-x + y))"
        ],
        "why": {
-        "en": "Before adding algebraic fractions, we always check if the denominators can be factorized into simpler parts. Since $x-y$ and $-x+y$ are already simple linear expressions, no further factorization is needed, and we are ready to find the Least Common Denominator (L.C.D.).",
-        "ur": "الجبری کسروں کو جمع کرنے سے پہلے، ہم ہمیشہ دیکھتے ہیں کہ کیا مخرج کی تجزی (factorization) ہو سکتی ہے۔ چونکہ $x-y$ اور $-x+y$ پہلے سے ہی سادہ یک درجی جملے ہیں، اس لیے مزید تجزی کی ضرورت نہیں ہے، اور اب ہم ذواضعاف اقل (L.C.D.) معلوم کرنے کے لیے تیار ہیں۔"
+        "en": "We take $-1$ common from the second denominator so that both fractions share the exact same expression, $x - y$. This is the key trick that prepares the fractions for finding a simple Least Common Denominator (L.C.D.).",
+        "ur": "ہم دوسرے مخرج میں سے منفی علامت مشترک (common) لیتے ہیں تاکہ دونوں کسور میں بالکل ایک جیسا جملہ $x - y$ بن جائے۔ یہ ایک اہم طریقہ ہے جو کسور کو ایک سادہ ذواضعاف اقل (L.C.D.) معلوم کرنے کے لیے تیار کرتا ہے۔"
        }
       },
       {
-       "math": "= \\frac{3-1 + 1}{- x + y}",
-       "en": "The L.C.D. is $- x + y$; write each numerator over it.",
-       "ur": "ل.م.م (L.C.D.) $- x + y$ ہے؛ ہر شمار کنندہ اس پر لکھیں۔",
+       "math": "= \\frac{3 - 1}{x - y}",
+       "en": "The L.C.D. is $x - y$; write each numerator over it.",
+       "ur": "ل.م.م (L.C.D.) $x - y$ ہے؛ ہر شمار کنندہ اس پر لکھیں۔",
        "check": [
-        "(-2)/(-x + y) == (3/(x - y) + 1/(-x + y))"
+        "(2)/(x - y) == (3/(x - y) + 1/(-x + y))"
        ],
        "why": {
-        "en": "To add two fractions, they must share a common denominator. Because $x-y$ and $-x+y$ differ only by a sign of $-1$, we take $-x+y$ as the L.C.D., multiply the first numerator $3$ by $-1$ to match this denominator, and combine both numerators over it.",
-        "ur": "دو کسروں کو جمع کرنے کے لیے ان کا مخرج ایک جیسا ہونا ضروری ہے۔ چونکہ $x-y$ اور $-x+y$ میں صرف $-1$ کی علامت کا فرق ہے، اس لیے ہم $-x+y$ کو ذواضعاف اقل (L.C.D.) لیتے ہیں، پہلے شمار کنندہ $3$ کو $-1$ سے ضرب دیتے ہیں، اور دونوں شمار کنندگان کو ایک ہی مخرج کے اوپر لکھ دیتے ہیں۔"
-       }
-      },
-      {
-       "math": "= \\frac{-2}{- x + y}",
-       "en": "Multiply out and collect like terms in the numerator.",
-       "ur": "شمار کنندہ میں ضرب دے کر متشابہ ارکان اکٹھے کریں۔",
-       "check": [
-        "(-2)/(-x + y) == (3/(x - y) + 1/(-x + y))"
-       ],
-       "why": {
-        "en": "Now we simplify the numerator by performing the basic multiplication and addition. Multiplying $3$ by $-1$ gives $-3$, and adding $1$ to it gives $-2$, reducing the top part to a single number.",
-        "ur": "اب ہم شمار کنندہ کو سادہ ضرب اور جمع کے عمل سے مختصر کرتے ہیں۔ $3$ کو $-1$ سے ضرب دینے سے $-3$ آتا ہے، اور اس میں $1$ جمع کرنے سے $-2$ بنتا ہے، جس سے اوپر والا حصہ ایک عدد میں تبدیل ہو جاتا ہے۔"
+        "en": "Moving the negative sign to the middle turns the addition into subtraction, giving both fractions the exact same denominator of $x - y$. By the rule of fractions, once the denominators are identical, we can write both numerators together as $3 - 1$ over the single common denominator.",
+        "ur": "منفی علامت کو درمیان میں لانے سے جمع کا عمل تفریق میں بدل جاتا ہے، اور دونوں کسور کا مخرج ایک جیسا یعنی $x - y$ ہو جاتا ہے۔ کسور کے اصول کے مطابق، جب مخرج ایک جیسے ہوں تو ہم دونوں شمار کنندگان (numerators) کو ایک ہی مشترک مخرج کے اوپر $3 - 1$ کے طور پر اکٹھا لکھ سکتے ہیں۔"
        }
       },
       {
        "math": "= \\frac{2}{x - y}",
-       "en": "Factorize the numerator and cancel any common factor.",
-       "ur": "شمار کنندہ کی تجزی کر کے مشترک جزو کاٹ دیں۔",
+       "en": "Multiply out and collect like terms in the numerator.",
+       "ur": "شمار کنندہ میں ضرب دے کر متشابہ ارکان اکٹھے کریں۔",
        "check": [
-        "(2/(x - y)) == (3/(x - y) + 1/(-x + y))"
+        "(2)/(x - y) == (3/(x - y) + 1/(-x + y))"
        ],
        "why": {
-        "en": "In mathematics, it is good practice to keep the leading term positive and cancel any common negative signs. By dividing both the numerator $-2$ and the denominator $-x+y$ by $-1$, the negative signs cancel out, leaving the cleanest form of the fraction.",
-        "ur": "ریاضی میں یہ ایک اچھا اصول ہے کہ پہلی رقم کو مثبت رکھا جائے اور مشترک منفی علامتوں کو کاٹ دیا جائے۔ شمار کنندہ $-2$ اور مخرج $-x+y$ دونوں کو $-1$ پر تقسیم کرنے سے منفی علامتیں ختم ہو جاتی ہیں اور کسر اپنی سب سے سادہ شکل میں آ جاتی ہے۔"
+        "en": "Finally, we perform the simple subtraction $3 - 1$ in the numerator to get $2$. Since the numerator and denominator have no common factors left, the fraction is now in its simplest form.",
+        "ur": "آخر میں، ہم شمار کنندہ میں موجود اعداد کی سادہ تفریق $3 - 1$ حل کرتے ہیں جس سے $2$ حاصل ہوتا ہے۔ چونکہ اب شمار کنندہ اور مخرج میں کوئی مشترک جزو (common factor) باقی نہیں رہا، اس لیے یہ کسر اب اپنی سادہ ترین شکل میں ہے۔"
        }
       }
      ],
      "answer": "$\\frac{2}{x - y}$",
      "meaning": {
-      "en": "The final answer $\\frac{2}{x-y}$ means that the sum of the two given algebraic fractions simplifies to a single, much simpler fraction. You can easily check this by putting values like $x=3$ and $y=1$ into both the original question and the final answer to see that both give $1$.",
-      "ur": "آخری جواب $\\frac{2}{x-y}$ کا مطلب ہے کہ دی گئی دو الجبری کسروں کا مجموعہ مختصر ہو کر ایک سادہ کسر بن گیا ہے۔ آپ اس کی پڑتال آسانی سے ایسے کر سکتے ہیں کہ اصل سوال اور آخری جواب دونوں میں $x=3$ اور $y=1$ درج کریں، آپ دیکھیں گے کہ دونوں صورتوں میں جواب $1$ ہی آتا ہے۔"
+      "en": "The final answer $\\frac{2}{x - y}$ means that the sum of the two given algebraic fractions can be expressed as a single, much simpler fraction. It is valid for all values where $x$ and $y$ are not equal.",
+      "ur": "آخری جواب $\\frac{2}{x - y}$ کا مطلب یہ ہے کہ دی گئی دو الجبری کسور کے مجموعے کو ایک واحد اور بہت سادہ کسر کے طور پر لکھا جا سکتا ہے۔ یہ جواب ان تمام قیمتوں کے لیے درست ہے جہاں $x$ اور $y$ آپس میں برابر نہ ہوں۔"
      },
      "book_key": "\\frac{2}{x-y}"
     },
@@ -1208,8 +1196,8 @@
        "en": "Write the expression.",
        "ur": "عبارت لکھیں۔",
        "why": {
-        "en": "We begin by clearly writing down the two algebraic fractions we need to subtract. Since their denominators are different quadratic expressions, we cannot subtract the numerators directly.",
-        "ur": "ہم سب سے پہلے ان دو الجبری کسروں کو واضح طور پر لکھتے ہیں جنہیں ہم نے تفریق کرنا ہے۔ چونکہ ان کے نسب نما (denominators) مختلف دو درجی جملے ہیں، اس لیے ہم شمار کنندگان (numerators) کو براہِ راست تفریق نہیں کر سکتے۔"
+        "en": "We begin by writing down the given algebraic expression clearly. Since we are subtracting two fractions with different quadratic denominators, our first goal is to find a way to combine them.",
+        "ur": "ہم سب سے پہلے دیے گئے الجبری جملے کو صاف طور پر لکھتے ہیں۔ چونکہ ہم مختلف دو درجی مخرج (quadratic denominators) والی دو کسروں کو تفریق کر رہے ہیں، اس لیے ہمارا پہلا مقصد انہیں یکجا کرنے کا طریقہ تلاش کرنا ہے۔"
        }
       },
       {
@@ -1220,8 +1208,8 @@
         "(-1/((x - 2)*(2*x - 3)) + 5/((x - 2)*(x + 3))) == (-1/(2*x**2 - 7*x + 6) + 5/(x**2 + x - 6))"
        ],
        "why": {
-        "en": "We use mid-term breaking to factorize both quadratic denominators into linear factors. This clearly reveals that $(x - 2)$ is a common factor in both denominators, which will make finding the Least Common Denominator (L.C.D.) much easier.",
-        "ur": "ہم درمیانی رقم کو توڑنے کے طریقے (mid-term breaking) سے دونوں دو درجی نسب نماؤں کی یک درجی اجزائے ضربی میں تجزی کرتے ہیں۔ اس سے واضح ہو جاتا ہے کہ $(x - 2)$ دونوں نسب نماؤں میں ایک مشترک جزو ہے، جس سے ذواضعاف اقل (L.C.D.) معلوم کرنا بہت آسان ہو جائے گا۔"
+        "en": "We use mid-term breaking to factorize both quadratic denominators into linear factors. This clearly reveals that $(x - 2)$ is a common factor, which makes finding the Least Common Denominator (L.C.D.) much easier.",
+        "ur": "ہم دونوں مخرجوں (denominators) کی تجزی (mid-term breaking) کر کے انہیں یک درجی اجزائے ضربی میں تبدیل کرتے ہیں۔ اس سے واضح ہو جاتا ہے کہ $(x - 2)$ ایک مشترک جزو ہے، جس سے ذواضعاف اقل (L.C.D.) معلوم کرنا بہت آسان ہو جاتا ہے۔"
        }
       },
       {
@@ -1232,8 +1220,8 @@
         "(9*x - 18)/((x - 2)*(x + 3)*(2*x - 3)) == (-1/(2*x**2 - 7*x + 6) + 5/(x**2 + x - 6))"
        ],
        "why": {
-        "en": "To subtract fractions, they must share a common denominator, so we take the L.C.D. by combining the common factor $(x - 2)$ with the non-common factors $(x + 3)$ and $(2x - 3)$. We then multiply each numerator by the factor missing from its original denominator to merge them into a single fraction.",
-        "ur": "کسروں کو تفریق کرنے کے لیے ان کا نسب نما یکساں ہونا ضروری ہے، اس لیے ہم مشترک جزو $(x - 2)$ اور غیر مشترک اجزاء $(x + 3)$ اور $(2x - 3)$ کو ملا کر ذواضعاف اقل (L.C.D.) لیتے ہیں۔ پھر ہم ہر شمار کنندہ کو اس کے اصل نسب نما میں غائب جزو سے ضرب دیتے ہیں تاکہ انہیں ایک واحد کسر میں ضم کیا جا سکے۔"
+        "en": "To subtract fractions, they must share the same denominator, so we combine them over the L.C.D. $(x - 2)(x + 3)(2x - 3)$. We multiply each numerator by the factor missing from its original denominator to keep the fractions equivalent.",
+        "ur": "کسروں کو تفریق کرنے کے لیے ان کا مخرج ایک جیسا ہونا ضروری ہے، اس لیے ہم انہیں ذواضعاف اقل $(x - 2)(x + 3)(2x - 3)$ کے اوپر یکجا کرتے ہیں۔ کسروں کی قیمت برقرار رکھنے کے لیے ہم ہر شمار کنندہ (numerator) کو اس جزو سے ضرب دیتے ہیں جو اس کے اصل مخرج میں موجود نہیں تھا۔"
        }
       },
       {
@@ -1244,27 +1232,39 @@
         "(9*x - 18)/((x - 2)*(x + 3)*(2*x - 3)) == (-1/(2*x**2 - 7*x + 6) + 5/(x**2 + x - 6))"
        ],
        "why": {
-        "en": "We expand the brackets in the numerator using the distributive property, being careful to change the signs inside the second bracket because of the outside minus sign. Collecting the like terms simplifies the numerator to $9x - 18$.",
-        "ur": "ہم تقسیمی خاصیت کا استعمال کرتے ہوئے شمار کنندہ میں موجود بریکٹوں کو کھولتے ہیں، اور باہر منفی علامت ہونے کی وجہ سے دوسری بریکٹ کے اندر کی علامتیں احتیاط سے تبدیل کرتے ہیں۔ ایک جیسی رقوم کو اکٹھا کرنے سے شمار کنندہ مختصر ہو کر $9x - 18$ بن جاتا ہے۔"
+        "en": "Now we expand the brackets in the numerator and combine the like terms. Be careful with the minus sign outside $(x + 3)$, which changes the signs inside and simplifies our numerator nicely to $9x - 18$.",
+        "ur": "اب ہم شمار کنندہ میں موجود بریکٹوں کو کھولتے ہیں اور ایک جیسی رقموں کو جمع/تفریق کرتے ہیں۔ $(x + 3)$ کے باہر موجود منفی علامت کا خاص خیال رکھیں، جو اندر کی علامت بدل دیتی ہے اور شمار کنندہ کو مختصر کر کے $9x - 18$ بنا دیتی ہے۔"
+       }
+      },
+      {
+       "math": "= \\frac{9 \\left(x - 2\\right)}{\\left(x - 2\\right) \\left(x + 3\\right) \\left(2 x - 3\\right)}",
+       "en": "Factorize the numerator.",
+       "ur": "شمار کنندہ کی تجزی کریں۔",
+       "check": [
+        "(9*(x - 2))/((x - 2)*(x + 3)*(2*x - 3)) == (-1/(2*x**2 - 7*x + 6) + 5/(x**2 + x - 6))"
+       ],
+       "why": {
+        "en": "We always check if the simplified numerator can be factorized further so we can reduce the fraction. Taking $9$ common from $9x - 18$ gives us $9(x - 2)$, which matches a factor waiting in the denominator.",
+        "ur": "ہم ہمیشہ یہ دیکھتے ہیں کہ کیا مختصر شدہ شمار کنندہ کی مزید تجزی ہو سکتی ہے تاکہ کسر کو چھوٹا کیا جا سکے۔ $9x - 18$ میں سے $9$ مشترک (common) لینے سے ہمیں $9(x - 2)$ ملتا ہے، جو مخرج میں موجود ایک جزو سے بالکل ملتا ہے۔"
        }
       },
       {
        "math": "= \\frac{9}{\\left(x + 3\\right) \\left(2 x - 3\\right)}",
-       "en": "Factorize the numerator and cancel any common factor.",
-       "ur": "شمار کنندہ کی تجزی کر کے مشترک جزو کاٹ دیں۔",
+       "en": "Cancel the common factor.",
+       "ur": "مشترک جزو کاٹ دیں۔",
        "check": [
         "(9/(2*x**2 + 3*x - 9)) == (-1/(2*x**2 - 7*x + 6) + 5/(x**2 + x - 6))"
        ],
        "why": {
-        "en": "To reduce the fraction to its lowest terms, we take $9$ common from the numerator $9x - 18$, which gives $9(x - 2)$. This allows us to cancel out the identical factor $(x - 2)$ from both the numerator and the denominator.",
-        "ur": "کسر کو اس کی مختصر ترین شکل میں لانے کے لیے ہم شمار کنندہ $9x - 18$ میں سے $9$ مشترک لیتے ہیں، جس سے ہمیں $9(x - 2)$ ملتا ہے۔ اس سے ہم شمار کنندہ اور نسب نما دونوں میں موجود یکساں جزو $(x - 2)$ کو آپس میں کاٹ دیتے ہیں۔"
+        "en": "Since $(x - 2)$ is present as a factor in both the numerator and the denominator, we divide them out to reduce the fraction to its lowest terms. This leaves us with the simplest form of the expression.",
+        "ur": "چونکہ $(x - 2)$ شمار کنندہ اور مخرج دونوں میں بطور جزو ضربی موجود ہے، اس لیے ہم انہیں آپس میں کاٹ دیتے ہیں تاکہ کسر اپنی مختصر ترین شکل میں آ جائے۔ اس طرح ہمیں اس جملے کی سب سے سادہ شکل حاصل ہو جاتی ہے۔"
        }
       }
      ],
      "answer": "$\\frac{9}{\\left(x + 3\\right) \\left(2 x - 3\\right)}$",
      "meaning": {
-      "en": "The final answer $\\frac{9}{(x + 3)(2x - 3)}$ is the simplest single-fraction form of the original subtraction problem. It shows that the two complex fractions are completely equivalent to this much neater expression for all valid values of $x$.",
-      "ur": "حتمی جواب $\\frac{9}{(x + 3)(2x - 3)}$ اصل تفریق کے سوال کی سب سے مختصر اور واحد کسر کی شکل ہے۔ یہ ظاہر کرتا ہے کہ دی گئی دو پیچیدہ کسریں $x$ کی تمام درست قیمتوں کے لیے اس سادہ ترین جملے کے بالکل برابر ہیں۔"
+      "en": "The final answer $\\frac{9}{(x + 3)(2x - 3)}$ is the single, fully simplified fraction that is completely equivalent to the original subtraction problem. Since no more common factors remain between the top and bottom, our simplification is complete.",
+      "ur": "آخری جواب $\\frac{9}{(x + 3)(2x - 3)}$ وہ واحد اور مکمل طور پر مختصر شدہ کسر ہے جو اصل تفریق والے سوال کے بالکل برابر ہے۔ چونکہ اب اوپر اور نیچے کوئی مزید مشترک جزو باقی نہیں رہا، اس لیے ہمارا اختصار کا عمل مکمل ہو گیا ہے۔"
      },
      "book_key": "\\frac{9}{(x+3)(2x-3)}"
     },
@@ -1350,8 +1350,8 @@
        "en": "Write the expression.",
        "ur": "عبارت لکھیں۔",
        "why": {
-        "en": "We start by writing down the given subtraction of two algebraic fractions. To subtract them, we first need to find a common denominator, which is why we look closely at the quadratic expressions at the bottom.",
-        "ur": "ہم دیے گئے دو الجبری کسر (algebraic fractions) کی تفریق کو لکھ کر شروعات کرتے ہیں۔ انہیں تفریق کرنے کے لیے ہمیں پہلے ایک مشترک مخرج (common denominator) کی ضرورت ہے، اسی لیے ہم نیچے دیے گئے دو درجی جملوں (quadratic expressions) کا جائزہ لیتے ہیں۔"
+        "en": "We begin by writing down the two algebraic fractions we need to subtract. Notice that both denominators are quadratic expressions, which we cannot subtract directly in this form.",
+        "ur": "ہم سب سے پہلے دیے گئے دو الجبری کسر (algebraic fractions) لکھتے ہیں جنہیں تفریق کرنا ہے۔ غور کریں کہ دونوں کے مخرج (denominators) دو درجی جملے ہیں، اس لیے ہم انہیں اس حالت میں براہِ راست تفریق نہیں کر سکتے۔"
        }
       },
       {
@@ -1362,8 +1362,8 @@
         "(-8/((x - 2)*(3*x + 2)) + 7/((x - 2)*(2*x + 3))) == (-8/(3*x**2 - 4*x - 4) + 7/(2*x**2 - x - 6))"
        ],
        "why": {
-        "en": "Using mid-term breaking, we factorize both quadratic denominators into linear factors. This clearly reveals that $(x - 2)$ is a common factor in both denominators, making it much easier to find the Least Common Denominator (L.C.D.).",
-        "ur": "درمیانی رقم کو توڑنے کے طریقے (mid-term breaking) کو استعمال کرتے ہوئے، ہم دونوں مخرجوں کی تجزی (factorize) کرتے ہیں۔ اس سے واضح ہوتا ہے کہ $(x - 2)$ دونوں مخرجوں میں ایک مشترک جزو ضربی (common factor) ہے، جس سے ذواضعاف اقل (L.C.D.) معلوم کرنا بہت آسان ہو جاتا ہے۔"
+        "en": "By using mid-term breaking on the quadratic denominators, we break them into simpler linear factors. This clearly reveals that $(x - 2)$ is a common factor in both denominators, which makes finding the Least Common Denominator (L.C.D.) much easier.",
+        "ur": "مخرج کے دو درجی جملوں کی درمیانی رقم توڑ کر (mid-term breaking) ہم ان کے یک درجی اجزائے ضربی بنا لیتے ہیں۔ اس سے واضح ہو جاتا ہے کہ $(x - 2)$ دونوں مخرجوں میں مشترک ہے، جس سے ذو اضعاف اقل (L.C.D.) نکالنا بہت آسان ہو جائے گا۔"
        }
       },
       {
@@ -1374,8 +1374,8 @@
         "(5*x - 10)/((x - 2)*(2*x + 3)*(3*x + 2)) == (-8/(3*x**2 - 4*x - 4) + 7/(2*x**2 - x - 6))"
        ],
        "why": {
-        "en": "To combine the two fractions into one, we use the L.C.D. rule by taking each factor once: $(x - 2)(2x + 3)(3x + 2)$. We then multiply each numerator by the missing factor from its denominator so both fractions share the same base.",
-        "ur": "دونوں کسروں کو ایک میں ملانے کے لیے، ہم ذواضعاف اقل (L.C.D.) کا اصول استعمال کرتے ہوئے تمام اجزائے ضربی کو ملا کر $(x - 2)(2x + 3)(3x + 2)$ لکھتے ہیں۔ پھر ہم ہر شمار کنندہ (numerator) کو اس کے مخرج میں نہ ہونے والے جزو سے ضرب دیتے ہیں تاکہ دونوں کسروں کی بنیاد ایک جیسی ہو جائے۔"
+        "en": "To subtract fractions, they must share the same denominator, so we combine the common factor $(x - 2)$ and the non-common factors $(2x + 3)$ and $(3x + 2)$ to form our L.C.D. Each numerator is then multiplied by the factor missing from its original denominator to merge them into a single fraction.",
+        "ur": "کسروں کو تفریق کرنے کے لیے ان کا مخرج یکساں ہونا ضروری ہے، اس لیے ہم مشترک جزو $(x - 2)$ اور غیر مشترک اجزاء $(2x + 3)$ اور $(3x + 2)$ کو ملا کر ذو اضعاف اقل (L.C.D.) بناتے ہیں۔ پھر ہر شمار کنندہ (numerator) کو اس جزو سے ضرب دی جاتی ہے جو اس کے اپنے مخرج میں موجود نہیں تھا تاکہ دونوں کسریں مل کر ایک کسر بن جائیں۔"
        }
       },
       {
@@ -1386,27 +1386,39 @@
         "(5*x - 10)/((x - 2)*(2*x + 3)*(3*x + 2)) == (-8/(3*x**2 - 4*x - 4) + 7/(2*x**2 - x - 6))"
        ],
        "why": {
-        "en": "By expanding the brackets in the numerator and combining the like terms, we simplify the top part of the fraction. This gives us $5x - 10$, which prepares the numerator for the final simplification.",
-        "ur": "شمار کنندہ میں بریکٹوں کو کھول کر اور ایک جیسی رقوم (like terms) کو حل کر کے، ہم کسر کے اوپری حصے کو مختصر کرتے ہیں۔ اس سے ہمیں $5x - 10$ ملتا ہے، جو شمار کنندہ کو آخری اختصار کے لیے تیار کرتا ہے۔"
+        "en": "We apply the distributive property to expand the brackets in the numerator and then combine the like terms. This simplifies the long numerator into a clean linear expression, $5x - 10$.",
+        "ur": "ہم شمار کنندہ میں موجود بریکٹوں کو کھولنے کے لیے تقسیمی خاصیت (distributive property) استعمال کرتے ہیں اور ہم جنس رقموں کو یکجا کرتے ہیں۔ اس سے اوپر والا لمبا جملہ مختصر ہو کر ایک سادہ یک درجی جملہ $5x - 10$ بن جاتا ہے۔"
+       }
+      },
+      {
+       "math": "= \\frac{5 \\left(x - 2\\right)}{\\left(x - 2\\right) \\left(2 x + 3\\right) \\left(3 x + 2\\right)}",
+       "en": "Factorize the numerator.",
+       "ur": "شمار کنندہ کی تجزی کریں۔",
+       "check": [
+        "(5*(x - 2))/((x - 2)*(2*x + 3)*(3*x + 2)) == (-8/(3*x**2 - 4*x - 4) + 7/(2*x**2 - x - 6))"
+       ],
+       "why": {
+        "en": "Before finishing, we always check if the new numerator can be factorized, so we take out $5$ as a common factor. Doing this exposes the factor $(x - 2)$ in the numerator, which matches the $(x - 2)$ waiting in the denominator.",
+        "ur": "سوال ختم کرنے سے پہلے ہم ہمیشہ دیکھتے ہیں کہ کیا نئے شمار کنندہ کی مزید تجزی ہو سکتی ہے، اس لیے ہم $5$ کو مشترک (common) لے لیتے ہیں۔ ایسا کرنے سے شمار کنندہ میں $(x - 2)$ ظاہر ہو جاتا ہے، جو بالکل مخرج میں موجود $(x - 2)$ جیسا ہے۔"
        }
       },
       {
        "math": "= \\frac{5}{\\left(2 x + 3\\right) \\left(3 x + 2\\right)}",
-       "en": "Factorize the numerator and cancel any common factor.",
-       "ur": "شمار کنندہ کی تجزی کر کے مشترک جزو کاٹ دیں۔",
+       "en": "Cancel the common factor.",
+       "ur": "مشترک جزو کاٹ دیں۔",
        "check": [
         "(5/(6*x**2 + 13*x + 6)) == (-8/(3*x**2 - 4*x - 4) + 7/(2*x**2 - x - 6))"
        ],
        "why": {
-        "en": "Taking $5$ common from $5x - 10$ gives $5(x - 2)$, which allows us to cancel out the common factor $(x - 2)$ from both the numerator and the denominator. This leaves the fraction in its simplest, fully reduced form.",
-        "ur": "شمار کنندہ $5x - 10$ میں سے $5$ مشترک (common) لینے سے یہ $5(x - 2)$ بن جاتا ہے، جس کی مدد سے ہم شمار کنندہ اور مخرج دونوں سے مشترک جزو $(x - 2)$ کو کاٹ دیتے ہیں۔ اس طرح کسر اپنی سب سے سادہ اور مختصر ترین شکل میں آ جاتی ہے۔"
+        "en": "By the cancellation law of fractions, we divide both the numerator and denominator by the common factor $(x - 2)$. This removes the extra clutter and leaves the fraction in its lowest, most simplified form.",
+        "ur": "کسروں کے اختصار (cancellation) کے اصول کے تحت، ہم شمار کنندہ اور مخرج دونوں میں سے مشترک جزو $(x - 2)$ کو کاٹ دیتے ہیں۔ اس سے فالتو اجزاء ختم ہو جاتے ہیں اور کسر اپنی مختصر ترین شکل میں آ جاتی ہے۔"
        }
       }
      ],
      "answer": "$\\frac{5}{\\left(2 x + 3\\right) \\left(3 x + 2\\right)}$",
      "meaning": {
-      "en": "The final answer $\\frac{5}{(2x + 3)(3x + 2)}$ means that the original complicated subtraction of two fractions is completely equivalent to this single, much simpler fraction. It tells us that the factor $(x - 2)$ cancels out completely during subtraction, making the expression much easier to evaluate for any allowed value of $x$.",
-      "ur": "حتمی جواب $\\frac{5}{(2x + 3)(3x + 2)}$ کا مطلب یہ ہے کہ دو کسروں کی اصل پیچیدہ تفریق اس ایک سادہ سی کسر کے بالکل برابر ہے۔ یہ ہمیں بتاتا ہے کہ تفریق کے عمل کے دوران جزو $(x - 2)$ مکمل طور پر کٹ جاتا ہے، جس سے $x$ کی کسی بھی قیمت کے لیے اس جملے کو حل کرنا بہت آسان ہو جاتا ہے۔"
+      "en": "The final answer $\\frac{5}{(2x + 3)(3x + 2)}$ means that the original difference of two complicated fractions is completely equivalent to this single, much simpler fraction. Since there are no more common factors between the numerator and the denominator, the expression is fully simplified.",
+      "ur": "آخری جواب $\\frac{5}{(2x + 3)(3x + 2)}$ کا مطلب ہے کہ دو پیچیدہ کسروں کی تفریق والا اصل سوال اس ایک سادہ سی کسر کے بالکل برابر ہے۔ چونکہ اب شمار کنندہ اور مخرج میں کوئی اور جزو مشترک نہیں ہے، اس لیے یہ جملہ اپنی مختصر ترین حالت میں آ چکا ہے۔"
      },
      "book_key": "\\frac{5}{(2x+3)(3x+2)}"
     },
@@ -1419,8 +1431,8 @@
        "en": "Write the expression.",
        "ur": "عبارت لکھیں۔",
        "why": {
-        "en": "We begin by clearly writing down the two algebraic fractions we need to subtract. Notice that their denominators are quadratic expressions, which must be made the same before we can combine the numerators.",
-        "ur": "ہم سب سے پہلے ان دو الجبری کسور کو واضح طور پر لکھتے ہیں جنہیں تفریق کرنا ہے۔ غور کریں کہ ان کے مخرج دو درجی جملے ہیں، جنہیں شمار کنندگان کو ملانے سے پہلے ایک جیسا بنانا ضروری ہے۔"
+        "en": "We begin by writing down the two algebraic fractions we need to subtract. Looking at their quadratic denominators, we can see that we must factorize them first to find a common denominator.",
+        "ur": "ہم سب سے پہلے ان دو الجبری کسور کو لکھتے ہیں جنہیں ہم نے تفریق کرنا ہے۔ ان کے دو درجی (quadratic) مخرج دیکھ کر ہمیں اندازہ ہوتا ہے کہ مشترک مخرج معلوم کرنے کے لیے پہلے ان کی تجزی کرنا ہوگی۔"
        }
       },
       {
@@ -1431,8 +1443,8 @@
         "(-x/(x + 3)**2 + (x + 2)/((x - 4)*(x + 3))) == (-x/(x**2 + 6*x + 9) + (x + 2)/(x**2 - x - 12))"
        ],
        "why": {
-        "en": "We factorize the denominators using mid-term breaking for $x^2 - x - 12$ and the perfect square formula for $x^2 + 6x + 9$. Seeing the building blocks $(x - 4)$ and $(x + 3)$ clearly helps us find the Least Common Denominator (L.C.D.) easily.",
-        "ur": "ہم $x^2 - x - 12$ کی درمیانی رقم توڑ کر اور $x^2 + 6x + 9$ پر مکمل مربع کا فارمولا لگا کر مخرجوں کی تجزی کرتے ہیں۔ $(x - 4)$ اور $(x + 3)$ کے اجزائے ضربی کو واضح طور پر دیکھنے سے ہمیں ذواضعاف اقل (L.C.D.) آسانی سے معلوم کرنے میں مدد ملتی ہے۔"
+        "en": "We use mid-term breaking on $x^{2} - x - 12$ and the perfect square formula on $x^{2} + 6x + 9$ to break them into simpler factors. This clearly reveals that $(x + 3)$ is shared between both denominators, which makes finding the Least Common Denominator (L.C.D.) much easier.",
+        "ur": "ہم $x^{2} - x - 12$ کی درمیانی رقم توڑ کر اور $x^{2} + 6x + 9$ پر کامل مربع کا فارمولا لگا کر ان کے سادہ اجزائے ضربی بناتے ہیں۔ اس سے صاف ظاہر ہوتا ہے کہ $(x + 3)$ دونوں مخرجوں میں مشترک ہے، جس سے ذواضعاف اقل (L.C.D.) معلوم کرنا بہت آسان ہو جاتا ہے۔"
        }
       },
       {
@@ -1443,8 +1455,8 @@
         "(-x*(x - 4) + (x + 2)*(x + 3))/((x - 4)*(x + 3)**2) == (-x/(x**2 + 6*x + 9) + (x + 2)/(x**2 - x - 12))"
        ],
        "why": {
-        "en": "To subtract fractions, they must share a common denominator, so we use the L.C.D. $(x - 4)(x + 3)^2$. We multiply each numerator by the factor missing from its original denominator so the value of each fraction stays unchanged.",
-        "ur": "کسور کو تفریق کرنے کے لیے ان کا مخرج ایک جیسا ہونا ضروری ہے، اس لیے ہم ذواضعاف اقل $(x - 4)(x + 3)^2$ استعمال کرتے ہیں۔ ہم ہر شمار کنندہ کو اس کے اصل مخرج میں غائب جزو ضربی سے ضرب دیتے ہیں تاکہ ہر کسر کی قیمت برقرار رہے۔"
+        "en": "To subtract fractions, they must have the same denominator, so we combine them over the L.C.D., which is $(x - 4)(x + 3)^{2}$. Each numerator is multiplied by the factor missing from its original denominator so the value of the fractions remains unchanged.",
+        "ur": "کسور کو تفریق کرنے کے لیے ان کا مخرج ایک جیسا ہونا ضروری ہے، اس لیے ہم انہیں ذواضعاف اقل $(x - 4)(x + 3)^{2}$ کے اوپر اکٹھا کر لیتے ہیں۔ ہر شمار کنندہ کو اس جزو سے ضرب دی جاتی ہے جو اس کے اصل مخرج میں موجود نہیں تھا تاکہ کسر کی قیمت تبدیل نہ ہو۔"
        }
       },
       {
@@ -1455,27 +1467,39 @@
         "(9*x + 6)/((x - 4)*(x + 3)**2) == (-x/(x**2 + 6*x + 9) + (x + 2)/(x**2 - x - 12))"
        ],
        "why": {
-        "en": "Now we expand the brackets in the numerator and combine like terms. The $x^2$ terms cancel each other out, simplifying the top part into a clean linear expression $9x + 6$.",
-        "ur": "اب ہم شمار کنندہ میں موجود بریکٹوں کو کھولتے ہیں اور ایک جیسی رقوم کو یکجا کرتے ہیں۔ $x^2$ والی رقوم ایک دوسرے سے کٹ جاتی ہیں، جس سے اوپر والا حصہ مختصر ہو کر ایک سادہ یک درجی جملہ $9x + 6$ بن جاتا ہے۔"
+        "en": "We expand the brackets in the numerator and combine the like terms. Notice how $+x^{2}$ and $-x^{2}$ cancel each other out, leaving us with a simple linear expression $9x + 6$ on top.",
+        "ur": "ہم شمار کنندہ میں بریکٹوں کو کھولتے ہیں اور ایک جیسی رقوم کو یکجا کرتے ہیں۔ غور کریں کہ کس طرح $+x^{2}$ اور $-x^{2}$ ایک دوسرے کو زائل کر دیتے ہیں، اور اوپر ہمارے پاس ایک سادہ یک درجی جملہ $9x + 6$ بچ جاتا ہے۔"
        }
       },
       {
        "math": "= \\frac{3 \\left(3 x + 2\\right)}{\\left(x - 4\\right) \\left(x + 3\\right)^{2}}",
-       "en": "Factorize the numerator and cancel any common factor.",
-       "ur": "شمار کنندہ کی تجزی کر کے مشترک جزو کاٹ دیں۔",
+       "en": "Factorize the numerator.",
+       "ur": "شمار کنندہ کی تجزی کریں۔",
+       "check": [
+        "(3*(3*x + 2))/((x - 4)*(x + 3)**2) == (-x/(x**2 + 6*x + 9) + (x + 2)/(x**2 - x - 12))"
+       ],
+       "why": {
+        "en": "We take out the common factor $3$ from $9x + 6$ to write the numerator in its fully factored form. We always do this at the end to check if any factor in the numerator can cancel with the denominator.",
+        "ur": "ہم $9x + 6$ میں سے مشترک جزو $3$ باہر نکالتے ہیں تاکہ شمار کنندہ کو اس کی مکمل تجزی شدہ شکل میں لکھ سکیں۔ ہم آخر میں ہمیشہ ایسا اس لیے کرتے ہیں تاکہ دیکھ سکیں کہ آیا شمار کنندہ کا کوئی جزو مخرج کے ساتھ کٹ سکتا ہے یا نہیں۔"
+       }
+      },
+      {
+       "math": "= \\frac{3 \\left(3 x + 2\\right)}{\\left(x - 4\\right) \\left(x + 3\\right)^{2}}",
+       "en": "Cancel the common factor.",
+       "ur": "مشترک جزو کاٹ دیں۔",
        "check": [
         "((9*x + 6)/(x**3 + 2*x**2 - 15*x - 36)) == (-x/(x**2 + 6*x + 9) + (x + 2)/(x**2 - x - 12))"
        ],
        "why": {
-        "en": "Finally, we take out the common factor $3$ from the numerator $9x + 6$ to see if anything cancels with the denominator. Since $(3x + 2)$ shares no common factors with $(x - 4)$ or $(x + 3)^2$, our fraction is now in its simplest form.",
-        "ur": "آخر میں، ہم شمار کنندہ $9x + 6$ میں سے مشترک جزو ضربی $3$ باہر نکالتے ہیں تاکہ دیکھ سکیں کہ آیا مخرج کے ساتھ کچھ کٹتا ہے یا نہیں۔ چونکہ $(3x + 2)$ کا $(x - 4)$ یا $(x + 3)^2$ کے ساتھ کوئی جزو ضربی مشترک نہیں ہے، اس لیے اب ہماری کسر اپنی سادہ ترین شکل میں ہے۔"
+        "en": "Comparing the numerator and the denominator, we see there are no common factors to cancel out. This confirms that our fraction is already reduced to its lowest, simplest form.",
+        "ur": "شمار کنندہ اور مخرج کا موازنہ کرنے سے ہمیں نظر آتا ہے کہ ان میں کٹنے کے لیے کوئی بھی مشترک جزو موجود نہیں ہے۔ اس سے تصدیق ہوتی ہے کہ ہماری کسر پہلے ہی اپنی مختصر ترین شکل میں آ چکی ہے۔"
        }
       }
      ],
      "answer": "$\\frac{3 \\left(3 x + 2\\right)}{\\left(x - 4\\right) \\left(x + 3\\right)^{2}}$",
      "meaning": {
-      "en": "The final answer $\\frac{3(3x + 2)}{(x - 4)(x + 3)^2}$ is the single, fully simplified fraction that is algebraically equal to the original subtraction problem for all values of $x$ (except $x = 4$ and $x = -3$, which would make the denominator zero).",
-      "ur": "حتمی جواب $\\frac{3(3x + 2)}{(x - 4)(x + 3)^2}$ وہ واحد اور مکمل طور پر مختصر کسر ہے جو $x$ کی تمام قیمتوں کے لیے اصل تفریق والے سوال کے الجبری طور پر برابر ہے (سوائے $x = 4$ اور $x = -3$ کے، کیونکہ ان سے مخرج صفر ہو جائے گا)۔"
+      "en": "The final answer $\\frac{3(3x + 2)}{(x - 4)(x + 3)^{2}}$ is the single, most simplified fraction that is algebraically equal to the original subtraction problem. You can check your work by substituting a simple value like $x = 1$ into both the original question and this final answer to see that both give the exact same result.",
+      "ur": "حتمی جواب $\\frac{3(3x + 2)}{(x - 4)(x + 3)^{2}}$ وہ واحد اور مختصر ترین کسر ہے جو الجبری طور پر اصل تفریق والے سوال کے بالکل برابر ہے۔ آپ اپنے کام کی پڑتال کرنے کے لیے اصل سوال اور اس حتمی جواب دونوں میں $x = 1$ جیسی کوئی سادہ قیمت درج کر کے دیکھ سکتے ہیں کہ دونوں بالکل ایک جیسا نتیجہ دیتے ہیں۔"
      },
      "book_key": "\\frac{3(3x+2)}{(x-4)(x+3)^2}"
     },
@@ -1585,44 +1609,32 @@
        "en": "Write the expression.",
        "ur": "عبارت لکھیں۔",
        "why": {
-        "en": "We start by rearranging the terms in the second denominator in alphabetical order of variables. Seeing $x - y$ and $- x + y$ clearly shows that the denominators are exact opposites of each other.",
-        "ur": "ہم دوسری کسر کے مخرج کی رقوم کو حروفِ تہجی کی ترتیب سے لکھ کر شروعات کرتے ہیں۔ $x - y$ اور $- x + y$ کو اس طرح دیکھنے سے واضح ہو جاتا ہے کہ دونوں مخرج ایک دوسرے کے بالکل الٹ (متضاد) ہیں۔"
+        "en": "To add two fractions, we need their denominators to look alike. By rearranging $y - x$ into $-x + y$, we can clearly see that the two denominators have the same terms, just with opposite signs.",
+        "ur": "دو کسروں کو جمع کرنے کے لیے ضروری ہے کہ ان کے مخرج ایک جیسے نظر آئیں۔ $y - x$ کو ترتیب دے کر $-x + y$ لکھنے سے ہمیں واضح نظر آتا ہے کہ دونوں مخرجوں میں رقوم ایک جیسی ہیں، بس علامتیں مختلف ہیں۔"
        }
       },
       {
-       "math": "= \\frac{x^{3}}{x - y} + \\frac{y^{3}}{- x + y}",
+       "math": "= \\frac{x^{3}}{x - y} + \\frac{y^{3}}{-\\left(x - y\\right)}",
        "en": "Factorize each denominator.",
        "ur": "ہر نسب نما کی تجزی کریں۔",
        "check": [
         "(x**3/(x - y) + y**3/(-x + y)) == (x**3/(x - y) + y**3/(-x + y))"
        ],
        "why": {
-        "en": "We check if the denominators can be factorized into simpler parts. Since $x - y$ and $- x + y$ are already linear factors, they remain as they are, except that one is $-1$ times the other.",
-        "ur": "ہم دیکھتے ہیں کہ کیا مخرج کی مزید تجزی ہو سکتی ہے۔ چونکہ $x - y$ اور $- x + y$ پہلے ہی یک درجی اجزائے ضربی ہیں، اس لیے یہ ایسے ہی رہتے ہیں، سوائے اس کے کہ ایک دوسرے کا منفی ($-1$ گنا) ہے۔"
+        "en": "We take out the negative sign as a common factor from $-x + y$ to get $-(x - y)$. This gives both fractions the exact same base factor $(x - y)$ in the denominator, making it easy to find the Least Common Denominator (L.C.D.).",
+        "ur": "ہم $-x + y$ میں سے منفی کی علامت کو مشترک نکال کر $-(x - y)$ بنا لیتے ہیں۔ اس سے دونوں کسروں کے مخرج میں بالکل ایک جیسا جزو ضربی $(x - y)$ بن جاتا ہے، جس سے ذواضعاف اقل (L.C.D.) لینا آسان ہو جاتا ہے۔"
        }
       },
       {
-       "math": "= \\frac{x^{3}-1 + y^{3}}{- x + y}",
-       "en": "The L.C.D. is $- x + y$; write each numerator over it.",
-       "ur": "ل.م.م (L.C.D.) $- x + y$ ہے؛ ہر شمار کنندہ اس پر لکھیں۔",
+       "math": "= \\frac{x^{3} - y^{3}}{x - y}",
+       "en": "The L.C.D. is $x - y$; write each numerator over it.",
+       "ur": "ل.م.م (L.C.D.) $x - y$ ہے؛ ہر شمار کنندہ اس پر لکھیں۔",
        "check": [
-        "(-x**3 + y**3)/(-x + y) == (x**3/(x - y) + y**3/(-x + y))"
+        "(x**3 - y**3)/(x - y) == (x**3/(x - y) + y**3/(-x + y))"
        ],
        "why": {
-        "en": "To add the fractions, we need a Least Common Denominator (L.C.D.). By choosing $- x + y$ as the common denominator, we multiply the first numerator $x^3$ by $-1$ because its denominator $x - y$ has the opposite sign.",
-        "ur": "کسروں کو جمع کرنے کے لیے ہمیں ذواضعاف اقل (L.C.D.) کی ضرورت ہے۔ $- x + y$ کو مشترک مخرج کے طور پر چننے کی وجہ سے ہم پہلے شمار کنندہ $x^3$ کو $-1$ سے ضرب دیتے ہیں کیونکہ اس کے مخرج $x - y$ کی علامت الٹ ہے۔"
-       }
-      },
-      {
-       "math": "= \\frac{- x^{3} + y^{3}}{- x + y}",
-       "en": "Multiply out and collect like terms in the numerator.",
-       "ur": "شمار کنندہ میں ضرب دے کر متشابہ ارکان اکٹھے کریں۔",
-       "check": [
-        "(-x**3 + y**3)/(-x + y) == (x**3/(x - y) + y**3/(-x + y))"
-       ],
-       "why": {
-        "en": "We perform the multiplication in the numerator to simplify the expression. This gives us $- x^3 + y^3$ (which is the same as $y^3 - x^3$), a difference of two cubes that we can easily factorize.",
-        "ur": "ہم جملے کو مختصر کرنے کے لیے شمار کنندہ میں ضرب کا عمل مکمل کرتے ہیں۔ اس سے ہمیں $- x^3 + y^3$ (یعنی $y^3 - x^3$) حاصل ہوتا ہے، جو کہ دو مکعبوں کا فرق ہے اور ہم اس کی آسانی سے تجزی کر سکتے ہیں۔"
+        "en": "The negative sign in the second denominator moves up to turn the addition into subtraction, giving both fractions the common denominator $x - y$. Now we can combine the numerators directly over this single L.C.D. to get $x^3 - y^3$.",
+        "ur": "دوسرے مخرج کی منفی علامت اوپر جا کر جمع کو تفریق میں بدل دیتی ہے، جس سے دونوں کسروں کا مشترک مخرج $x - y$ بن جاتا ہے۔ اب ہم شمار کنندگان کو براہِ راست اس ایک ذواضعاف اقل کے اوپر اکٹھا کر کے $x^3 - y^3$ حاصل کر سکتے ہیں۔"
        }
       },
       {
@@ -1633,15 +1645,15 @@
         "(x**2 + x*y + y**2) == (x**3/(x - y) + y**3/(-x + y))"
        ],
        "why": {
-        "en": "Using the difference of cubes formula on the numerator gives $(- x + y)(x^2 + xy + y^2)$, allowing us to cancel the common factor $- x + y$ from both top and bottom. This cancellation removes the fraction completely and leaves the simplest polynomial.",
-        "ur": "شمار کنندہ پر دو مکعبوں کے فرق کا فارمولا لگانے سے $(- x + y)(x^2 + xy + y^2)$ بنتا ہے، جس سے ہم اوپر اور نیچے سے مشترک جزو ضربی $- x + y$ کو کاٹ سکتے ہیں۔ اس کٹوتی سے کسر مکمل طور پر ختم ہو جاتی ہے اور سادہ ترین کثیر رقمی جملہ باقی رہ جاتا ہے۔"
+        "en": "Using the difference of cubes formula, $x^3 - y^3$ factors into $(x - y)(x^2 + xy + y^2)$. The $(x - y)$ in the numerator cancels out with the $(x - y)$ in the denominator, leaving us with a simple expression without any fractions.",
+        "ur": "مکعبوں کے فرق کے کلیے کے مطابق، $x^3 - y^3$ کے اجزائے ضربی $(x - y)(x^2 + xy + y^2)$ بنتے ہیں۔ شمار کنندہ میں موجود $(x - y)$ مخرج کے $(x - y)$ سے کٹ جاتا ہے، اور ہمارے پاس بغیر کسی کسر کے ایک سادہ سا جملہ بچ جاتا ہے۔"
        }
       }
      ],
      "answer": "$x^{2} + x y + y^{2}$",
      "meaning": {
-      "en": "The final answer $x^2 + xy + y^2$ means that the original sum of two algebraic fractions simplifies completely into a neat quadratic expression without any denominator (as long as $x \\neq y$). You can easily check this by substituting simple values like $x = 1$ and $y = -1$ into both the original question and this final answer to see that both give the exact same result.",
-      "ur": "حتمی جواب $x^2 + xy + y^2$ کا مطلب ہے کہ دو الجبری کسروں کا اصل مجموعہ مکمل طور پر مختصر ہو کر بغیر کسی مخرج کے ایک سادہ دو درجی جملہ بن جاتا ہے (بشرطیکہ $x \\neq y$)۔ آپ اس کی پڑتال کے لیے اصل سوال اور اس حتمی جواب دونوں میں $x = 1$ اور $y = -1$ جیسی سادہ قیمتیں درج کر کے دیکھ سکتے ہیں کہ دونوں بالکل ایک جیسا نتیجہ دیتے ہیں۔"
+      "en": "The final answer $x^2 + xy + y^2$ means that the original sum of two algebraic fractions simplifies completely into a standard polynomial expression (as long as $x$ and $y$ are not equal, which would make the original denominators zero). You can check this by multiplying the answer $x^2 + xy + y^2$ by the cancelled denominator $(x - y)$, which gives back the numerator $x^3 - y^3$.",
+      "ur": "آخری جواب $x^2 + xy + y^2$ کا مطلب ہے کہ دو الجبری کسروں کا اصل مجموعہ مکمل طور پر مختصر ہو کر ایک سادہ کثیر رقمی جملہ بن گیا ہے (بشرطیکہ $x$ اور $y$ برابر نہ ہوں، ورنہ اصل مخرج صفر ہو جائے گا)۔ آپ اس کی پڑتال اپنے جواب $x^2 + xy + y^2$ کو کٹ جانے والے مخرج $(x - y)$ سے ضرب دے کر کر سکتے ہیں، جس سے واپس شمار کنندہ $x^3 - y^3$ حاصل ہو جاتا ہے۔"
      },
      "book_key": "x^2+xy+y^2"
     }
@@ -2081,8 +2093,8 @@
      "answer": "$\\frac{\\left(a + b - c\\right)^{2}}{a \\left(a + 2 c\\right)}$",
      "enriched": true,
      "meaning": {
-      "en": "The final answer $\\frac{(a+b-c)^2}{a(a+2c)}$ means that the original complicated product of four differences of squares is completely equivalent to this much simpler single fraction for all allowed values of $a$, $b$, and $c$. You can verify this by substituting simple numbers like $a=1$, $b=2$, and $c=1$ into both the original question and this final result to see that both give the exact same value.",
-      "ur": "آخری جواب $\\frac{(a+b-c)^2}{a(a+2c)}$ کا مطلب یہ ہے کہ چار مربّعوں کے فرق پر مشتمل اصل پیچیدہ حاصل ضرب، $a$، $b$ اور $c$ کی تمام ممکنہ قیمتوں کے لیے اس انتہائی سادہ سی واحد کسر کے بالکل برابر ہے۔ آپ اس کی تصدیق کے لیے $a=1$، $b=2$ اور $c=1$ جیسی سادہ قیمتیں اصل سوال اور اس آخری جواب دونوں میں درج کر کے دیکھ سکتے ہیں کہ دونوں بالکل ایک جیسا جواب دیتے ہیں۔"
+      "en": "The final answer $\\frac{(a+b-c)^2}{a(a+2c)}$ means that the original complicated product of four differences of squares is completely equivalent to this much simpler single fraction for all allowed values of $a$, $b$, and $c$. You can verify this by substituting simple numbers like $a=2$, $b=1$, and $c=1$ (no denominator becomes zero) into both the original question and this final result to see that both give the exact same value, $\\frac{1}{2}$.",
+      "ur": "آخری جواب $\\frac{(a+b-c)^2}{a(a+2c)}$ کا مطلب یہ ہے کہ چار مربّعوں کے فرق پر مشتمل اصل پیچیدہ حاصل ضرب، $a$، $b$ اور $c$ کی تمام ممکنہ قیمتوں کے لیے اس انتہائی سادہ سی واحد کسر کے بالکل برابر ہے۔ آپ اس کی تصدیق کے لیے $a=2$، $b=1$ اور $c=1$ جیسی سادہ قیمتیں اصل سوال اور اس آخری جواب دونوں میں درج کر کے دیکھ سکتے ہیں کہ دونوں بالکل ایک جیسا جواب $\\frac{1}{2}$ دیتے ہیں۔"
      },
      "book_key": "\\frac{(a+b-c)^2}{a(a+2c)}"
     },
@@ -4278,8 +4290,8 @@
         "(x+1)*(x-4)*(x+2)*(x-5) == (x**2-3*x-4)*(x**2-3*x-10)"
        ],
        "why": {
-        "en": "In equations with four linear factors, we use the rule $a + b = c + d$ on the constant terms: here $1 + (-4) = -3$ and $2 + (-5) = -3$. Multiplying the pairs chosen this way creates an identical $x^2 - 3x$ part in both brackets, which saves us from a difficult degree-$4$ expansion.",
-        "ur": "چار یک درجی اجزائے ضربی والی مساوات میں، ہم مستقل نمبروں پر $a + b = c + d$ کا اصول استعمال کرتے ہیں: یہاں $1 + (-4) = -3$ اور $2 + (-5) = -3$ ہے۔ اس طرح جوڑے بنا کر ضرب دینے سے دونوں بریکٹس میں ایک جیسا حصہ $x^2 - 3x$ بن جاتا ہے، جو ہمیں ایک مشکل درجہ-$4$ کی مساوات کھولنے سے بچاتا ہے۔"
+        "en": "Multiplying all four brackets at once would give a difficult $x^4$ equation. Instead, we pair the factors whose constant terms add up to the same number ($1 + (-4) = -3$ and $2 + (-5) = -3$), which creates an identical $x^2 - 3x$ part in both brackets.",
+        "ur": "چاروں بریکٹس کو ایک ساتھ ضرب دینے سے $x^4$ کی ایک مشکل مساوات بن جائے گی۔ اس کے بجائے، ہم ان اجزائے ضربی کے جوڑے بناتے ہیں جن کے مستقل اعداد کا مجموعہ ایک جیسا ہو ($1 + (-4) = -3$ اور $2 + (-5) = -3$)، جس سے دونوں بریکٹس میں ایک جیسا حصہ $x^2 - 3x$ بن جاتا ہے۔"
        }
       },
       {
@@ -4287,8 +4299,20 @@
        "en": "Put $y$ for the common part.",
        "ur": "مشترک حصے کی جگہ $y$ رکھیں۔",
        "why": {
-        "en": "We use the substitution method by replacing the repeated expression $x^2 - 3x$ with a single variable $y$. This reduces the complicated equation into a simple quadratic equation in terms of $y$: $(y - 4)(y - 10) + 8 = 0$.",
-        "ur": "ہم متبادل کا طریقہ استعمال کرتے ہوئے بار بار آنے والے جملے $x^2 - 3x$ کی جگہ ایک نیا متغیر $y$ رکھتے ہیں۔ اس سے یہ پیچیدہ مساوات $y$ کی شکل میں ایک سادہ دو درجی مساوات $(y - 4)(y - 10) + 8 = 0$ میں بدل جاتی ہے۔"
+        "en": "We use the substitution method by replacing the repeated expression $x^2 - 3x$ with a single variable $y$. This turns a complicated fourth-degree equation into a much simpler quadratic equation.",
+        "ur": "ہم تبدیلی کے طریقے (substitution method) کو استعمال کرتے ہوئے بار بار آنے والے جملے $x^2 - 3x$ کی جگہ ایک متغیر $y$ رکھتے ہیں۔ اس سے چار درجے والی پیچیدہ مساوات ایک آسان دو درجی مساوات میں بدل جاتی ہے۔"
+       }
+      },
+      {
+       "math": "\\left(y - 10\\right) \\left(y - 4\\right) + 8 = 0 \\Rightarrow y^{2} - 14 y + 48 = 0",
+       "en": "Write the equation in $y$ and multiply out to get a quadratic in standard form.",
+       "ur": "مساوات کو $y$ میں لکھیں اور ضرب دے کر معیاری دو درجی مساوات بنائیں۔",
+       "check": [
+        "expand((y-4)*(y-10)+8) == y**2 - 14*y + 48"
+       ],
+       "why": {
+        "en": "Now we expand the brackets in terms of $y$ and add $8$ to bring the equation into the standard quadratic form, $ay^2 + by + c = 0$. Having it in standard form allows us to factorize it easily.",
+        "ur": "اب ہم $y$ کی شکل میں بریکٹس کو کھولتے ہیں اور $8$ جمع کرتے ہیں تاکہ مساوات معیاری دو درجی شکل $ay^2 + by + c = 0$ میں آ جائے۔ معیاری شکل میں لانے سے ہم اس کی آسانی سے تجزی کر سکتے ہیں۔"
        }
       },
       {
@@ -4299,8 +4323,8 @@
         "(y**2 - 6*y - 8*y + 48) - (0) == (y**2 - 14*y + 48) - (0)"
        ],
        "why": {
-        "en": "After expanding the brackets and adding $8$ to get $y^2 - 14y + 48 = 0$, we use middle-term breaking to factorize it. Finding two numbers, $-6$ and $-8$, that multiply to $48$ and add to $-14$ prepares the expression for grouping.",
-        "ur": "بریکٹس کو کھولنے اور $8$ جمع کرنے سے $y^2 - 14y + 48 = 0$ حاصل ہوتا ہے، جس کی تجزی کرنے کے لیے ہم درمیانی رقم کو توڑنے کا طریقہ اپناتے ہیں۔ دو ایسے اعداد $-6$ اور $-8$ تلاش کرنا جن کی ضرب $48$ اور جمع $-14$ ہو، اس جملے کو گروپ بندی کے لیے تیار کرتا ہے۔"
+        "en": "To factorize by mid-term breaking, we look for two numbers that multiply to $+48$ and add up to $-14$. The numbers $-6$ and $-8$ work, allowing us to rewrite the middle term $-14y$ as $-6y - 8y$.",
+        "ur": "درمیانی رقم کو توڑ کر تجزی کرنے کے لیے، ہم ایسے دو اعداد تلاش کرتے ہیں جنہیں ضرب دینے سے $+48$ اور جمع کرنے سے $-14$ آئے۔ اعداد $-6$ اور $-8$ یہ شرط پوری کرتے ہیں، جس سے ہم درمیانی رقم $-14y$ کو $-6y - 8y$ لکھ سکتے ہیں۔"
        }
       },
       {
@@ -4311,8 +4335,8 @@
         "(y*(y - 6) - 8*(y - 6)) - (0) == (y**2 - 6*y - 8*y + 48) - (0)"
        ],
        "why": {
-        "en": "We factor by grouping, pulling out the highest common factor from the first two terms and the last two terms separately. Seeing the exact same bracket $(y - 6)$ appear twice confirms our middle-term split was successful.",
-        "ur": "ہم گروپ بندی کے ذریعے تجزی کرتے ہیں اور پہلی دو رقوم اور آخری دو رقوم میں سے الگ الگ مشترک جزو باہر نکالتے ہیں۔ ایک جیسی بریکٹ $(y - 6)$ کا دو بار آنا اس بات کی تصدیق کرتا ہے کہ ہماری درمیانی رقم کی تقسیم بالکل درست تھی۔"
+        "en": "We factor by grouping the first two terms and the last two terms separately. Taking out $y$ and $-8$ reveals the common binomial factor $(y - 6)$ in both parts.",
+        "ur": "ہم پہلی دو رقموں اور آخری دو رقموں کے الگ الگ گروپ بنا کر مشترک لیتے ہیں۔ $y$ اور $-8$ کو مشترک لینے سے دونوں حصوں میں ایک جیسا جزو ضربی $(y - 6)$ ظاہر ہو جاتا ہے۔"
        }
       },
       {
@@ -4323,8 +4347,8 @@
         "((y - 8)*(y - 6)) - (0) == (y*(y - 6) - 8*(y - 6)) - (0)"
        ],
        "why": {
-        "en": "By the distributive property, we factor out the common binomial $(y - 6)$ from the entire expression. This changes our quadratic sum into a clean product of two linear factors set equal to $0$.",
-        "ur": "تعدی خاصیت کے تحت، ہم پورے جملے میں سے مشترک دو رقمی بریکٹ $(y - 6)$ کو باہر نکال لیتے ہیں۔ یہ عمل ہماری دو درجی مساوات کو دو یک درجی اجزائے ضربی کے حاصلِ ضرب میں بدل دیتا ہے جو $0$ کے برابر ہے۔"
+        "en": "Using the distributive property, we pull out the common bracket $(y - 6)$. This completely factorizes the quadratic expression into a product of two linear factors.",
+        "ur": "تقسیمی خاصیت کا استعمال کرتے ہوئے، ہم مشترک بریکٹ $(y - 6)$ کو باہر نکال لیتے ہیں۔ اس سے دو درجی جملے کی مکمل تجزی ہو جاتی ہے اور یہ دو یک درجی اجزائے ضربی کے حاصل ضرب میں بدل جاتا ہے۔"
        }
       },
       {
@@ -4332,8 +4356,8 @@
        "en": "A product is zero only when one of its factors is zero.",
        "ur": "حاصل ضرب صفر تب ہوتا ہے جب کوئی ایک جزو صفر ہو۔",
        "why": {
-        "en": "We apply the Zero-Product Property, which tells us that if two things multiply to give $0$, at least one of them must be $0$. This lets us split one quadratic equation into two easy linear equations.",
-        "ur": "ہم ضربِ صفر کی خاصیت (Zero-Product Property) استعمال کرتے ہیں، جو بتاتی ہے کہ اگر دو چیزوں کا حاصلِ ضرب $0$ ہو تو ان میں سے کم از کم ایک لازمی $0$ ہوگی۔ اس سے ہم ایک دو درجی مساوات کو دو آسان یک درجی مساواتوں میں توڑ لیتے ہیں۔"
+        "en": "By the zero-product property, if the product of two brackets is $0$, at least one of them must be $0$. This lets us split our equation into two simple linear equations.",
+        "ur": "ضربی صفر کی خاصیت کے مطابق، اگر دو بریکٹس کا حاصل ضرب $0$ ہو، تو ان میں سے کم از کم ایک کو لازمی $0$ ہونا چاہیے۔ اس اصول کی مدد سے ہم اپنی مساوات کو دو سادہ یک درجی مساواتوں میں تقسیم کر لیتے ہیں۔"
        }
       },
       {
@@ -4345,8 +4369,8 @@
         "(y**2 - 14*y + 48).subs(y, (8)) == 0"
        ],
        "why": {
-        "en": "We isolate $y$ by moving the constants to the other side of the equals sign. Now we have the two exact values of our temporary helper variable $y$, and we are ready to find $x$.",
-        "ur": "ہم مستقل اعداد کو برابر کے دوسری طرف لے جا کر $y$ کو الگ کر لیتے ہیں۔ اب ہمارے پاس اپنے عارضی متغیر $y$ کی دو قیمتیں آ گئی ہیں، اور ہم $x$ معلوم کرنے کے لیے تیار ہیں۔"
+        "en": "Solving each simple equation gives us the two values for our temporary variable $y$. However, our original question is in $x$, so we now need to use these values to find $x$.",
+        "ur": "ہر سادہ مساوات کو حل کرنے سے ہمیں اپنے عارضی متغیر $y$ کی دو قیمتیں مل جاتی ہیں۔ لیکن ہمارا اصل سوال $x$ میں ہے، اس لیے اب ہمیں ان قیمتوں کو استعمال کر کے $x$ کی قیمتیں معلوم کرنی ہیں۔"
        }
       },
       {
@@ -4354,8 +4378,8 @@
        "en": "Put back $y = x^2 - 3x$.",
        "ur": "$y = x^2 - 3x$ واپس رکھیں۔",
        "why": {
-        "en": "Remembering that our real goal is to find $x$, we replace $y$ with $x^2 - 3x$ for the first value, $y = 6$. This gives us the first actual quadratic equation in $x$ that we need to solve.",
-        "ur": "یہ یاد رکھتے ہوئے کہ ہمارا اصل مقصد $x$ معلوم کرنا ہے، ہم پہلی قیمت $y = 6$ کے لیے $y$ کی جگہ واپس $x^2 - 3x$ رکھتے ہیں۔ اس سے ہمیں $x$ میں پہلی اصل دو درجی مساوات مل جاتی ہے جسے ہم نے حل کرنا ہے۔"
+        "en": "We replace $y$ back with $x^2 - 3x$ for the first value, $y = 6$. Moving $6$ to the left side gives us our first quadratic equation in $x$, namely $x^2 - 3x - 6 = 0$.",
+        "ur": "ہم پہلی قیمت $y = 6$ کے لیے $y$ کی جگہ واپس $x^2 - 3x$ رکھتے ہیں۔ $6$ کو بائیں طرف لے جانے سے ہمیں $x$ میں پہلی دو درجی مساوات $x^2 - 3x - 6 = 0$ مل جاتی ہے۔"
        }
       },
       {
@@ -4363,8 +4387,8 @@
        "en": "Compare with $ax^2 + bx + c = 0$.",
        "ur": "$ax^2 + bx + c = 0$ سے موازنہ کریں۔",
        "why": {
-        "en": "Moving $6$ to the left gives the standard quadratic form $x^2 - 3x - 6 = 0$, allowing us to read off the coefficients $a$, $b$, and $c$. Since this cannot be factored easily with whole numbers, we prepare to use the quadratic formula.",
-        "ur": "$6$ کو بائیں طرف لانے سے معیاری دو درجی شکل $x^2 - 3x - 6 = 0$ بن جاتی ہے، جس سے ہم عددی سر $a$، $b$ اور $c$ الگ کر لیتے ہیں۔ چونکہ اس کی مکمل اعداد کے ساتھ آسانی سے تجزی نہیں ہو سکتی، اس لیے ہم دو درجی فارمولا استعمال کرنے کی تیاری کرتے ہیں۔"
+        "en": "Since $x^2 - 3x - 6 = 0$ cannot be factorized using whole numbers, we prepare to use the quadratic formula. Identifying the coefficients $a = 1, b = -3,$ and $c = -6$ prevents sign mistakes in the next step.",
+        "ur": "چونکہ $x^2 - 3x - 6 = 0$ کی مکمل اعداد کے ذریعے تجزی نہیں ہو سکتی، اس لیے ہم دو درجی فارمولا استعمال کرنے کی تیاری کرتے ہیں۔ عددی سروں $a = 1, b = -3,$ اور $c = -6$ کی شناخت کرنے سے اگلے مرحلے میں علامتوں کی غلطی سے بچا جا سکتا ہے۔"
        }
       },
       {
@@ -4372,8 +4396,8 @@
        "en": "Put $a$, $b$ and $c$ in the quadratic formula.",
        "ur": "دو درجی کلیہ میں $a$، $b$ اور $c$ کی قیمتیں رکھیں۔",
        "why": {
-        "en": "We substitute our coefficients carefully into the quadratic formula, keeping negative numbers inside brackets to avoid sign mistakes. This formula directly calculates the roots of any quadratic equation.",
-        "ur": "ہم علامتوں کی غلطی سے بچنے کے لیے منفی اعداد کو بریکٹ میں رکھتے ہوئے، عددی سروں کو احتیاط سے دو درجی فارمولے میں درج کرتے ہیں۔ یہ فارمولا کسی بھی دو درجی مساوات کے براہِ راست اصل (roots) نکال دیتا ہے۔"
+        "en": "We substitute the values of $a, b,$ and $c$ directly into the quadratic formula. This formula directly gives the roots of any quadratic equation.",
+        "ur": "ہم $a, b$ اور $c$ کی قیمتیں براہِ راست دو درجی فارمولے میں درج کرتے ہیں۔ یہ فارمولا کسی بھی دو درجی مساوات کے براہِ راست روٹس (جذور) فراہم کرتا ہے۔"
        }
       },
       {
@@ -4384,8 +4408,8 @@
         "(-3)**2 - 4*(1)*(-6) == 33"
        ],
        "why": {
-        "en": "We simplify the discriminant ($b^2 - 4ac$) under the square root first, where $(-3)^2 = 9$ and $-4(1)(-6) = +24$. Since $9 + 24 = 33$ is positive, this tells us we will get two real roots.",
-        "ur": "ہم پہلے جزر کے نیچے فرق کنندہ ($b^2 - 4ac$) کو مختصر کرتے ہیں، جہاں $(-3)^2 = 9$ اور $-4(1)(-6) = +24$ بنتا ہے۔ چونکہ $9 + 24 = 33$ ایک مثبت عدد ہے، یہ ہمیں بتاتا ہے کہ ہمیں دو حقیقی قیمتیں ملیں گی۔"
+        "en": "We simplify the arithmetic under the square root and in the denominator. Since $33$ is not a perfect square, the roots remain in radical form.",
+        "ur": "ہم جزر کے نیچے اور مخرج (نصب نما) میں موجود حساب کتاب کو مختصر کرتے ہیں۔ چونکہ $33$ ایک مکمل مربع نہیں ہے، اس لیے روٹس جزر کی شکل میں ہی رہتے ہیں۔"
        }
       },
       {
@@ -4397,8 +4421,8 @@
         "(x**2 - 3*x - 6).subs(x, (3/2 - sqrt(33)/2)) == 0"
        ],
        "why": {
-        "en": "Because $33$ is not a perfect square, we write the $\\pm$ sign as two separate answers in exact surd form. These are the first two solutions for $x$ out of the four we expect.",
-        "ur": "چونکہ $33$ ایک مکمل مربع نہیں ہے، اس لیے ہم $\\pm$ کی علامت کو الگ کر کے جزر کی شکل میں دو جوابات لکھتے ہیں۔ یہ $x$ کے ان چار ممکنہ جوابات میں سے پہلے دو جوابات ہیں جن کی ہمیں توقع ہے۔"
+        "en": "Writing the plus and minus cases separately gives us the first two exact solutions for $x$. Now we are halfway done with finding all four roots.",
+        "ur": "جمع اور منفی کی صورتوں کو الگ الگ لکھنے سے ہمیں $x$ کے پہلے دو درست حل مل جاتے ہیں۔ اب ہم تمام چار روٹس معلوم کرنے کا آدھا کام مکمل کر چکے ہیں۔"
        }
       },
       {
@@ -4406,8 +4430,8 @@
        "en": "Put back $y = x^2 - 3x$.",
        "ur": "$y = x^2 - 3x$ واپس رکھیں۔",
        "why": {
-        "en": "Now we take the second value, $y = 8$, and substitute $x^2 - 3x$ back in place of $y$. This sets up the second quadratic equation in $x$ to find the remaining roots.",
-        "ur": "اب ہم دوسری قیمت $y = 8$ لیتے ہیں اور $y$ کی جگہ واپس $x^2 - 3x$ درج کرتے ہیں۔ یہ باقی ماندہ اصل معلوم کرنے کے لیے $x$ میں دوسری دو درجی مساوات بناتا ہے۔"
+        "en": "Now we take the second value, $y = 8$, and substitute $x^2 - 3x$ back in for $y$. Rearranging this into standard form gives the second quadratic equation in $x$, which is $x^2 - 3x - 8 = 0$.",
+        "ur": "اب ہم دوسری قیمت $y = 8$ لیتے ہیں اور $y$ کی جگہ واپس $x^2 - 3x$ درج کرتے ہیں۔ اسے معیاری شکل میں ترتیب دینے سے $x$ میں دوسری دو درجی مساوات $x^2 - 3x - 8 = 0$ حاصل ہوتی ہے۔"
        }
       },
       {
@@ -4415,8 +4439,8 @@
        "en": "Compare with $ax^2 + bx + c = 0$.",
        "ur": "$ax^2 + bx + c = 0$ سے موازنہ کریں۔",
        "why": {
-        "en": "Bringing $8$ to the left side gives $x^2 - 3x - 8 = 0$ in standard form, so we can clearly identify $a$, $b$, and $c$. Just like the first branch, we need the quadratic formula because no simple factors of $-8$ add up to $-3$.",
-        "ur": "$8$ کو بائیں طرف لانے سے معیاری شکل $x^2 - 3x - 8 = 0$ بنتی ہے، جس سے ہم واضح طور پر $a$، $b$ اور $c$ کی شناخت کر سکتے ہیں۔ پہلے حصے کی طرح، یہاں بھی ہمیں دو درجی فارمولے کی ضرورت ہے کیونکہ $-8$ کے ایسے سادہ اجزاء نہیں ہیں جنہیں جمع کرنے سے $-3$ آئے۔"
+        "en": "Just like before, this quadratic does not factorize easily, so we list its coefficients $a = 1, b = -3,$ and $c = -8$ to apply the quadratic formula.",
+        "ur": "پہلے کی طرح، اس دو درجی مساوات کی بھی آسانی سے تجزی نہیں ہو سکتی، اس لیے ہم دو درجی فارمولا لگانے کے لیے اس کے عددی سر $a = 1, b = -3,$ اور $c = -8$ لکھتے ہیں۔"
        }
       },
       {
@@ -4424,8 +4448,8 @@
        "en": "Put $a$, $b$ and $c$ in the quadratic formula.",
        "ur": "دو درجی کلیہ میں $a$، $b$ اور $c$ کی قیمتیں رکھیں۔",
        "why": {
-        "en": "We plug the new values $a = 1$, $b = -3$, and $c = -8$ into the quadratic formula. This sets up the direct calculation for the remaining roots of the original equation.",
-        "ur": "ہم نئی قیمتیں $a = 1$، $b = -3$ اور $c = -8$ دو درجی فارمولے میں درج کرتے ہیں۔ اس سے اصل مساوات کے باقی ماندہ جوابات نکالنے کے لیے براہِ راست حساب تیار ہو جاتا ہے۔"
+        "en": "We plug these new coefficients into the quadratic formula to solve for the remaining values of $x$.",
+        "ur": "ہم $x$ کی باقی قیمتیں معلوم کرنے کے لیے ان نئے عددی سروں کو دو درجی فارمولے میں درج کرتے ہیں۔"
        }
       },
       {
@@ -4436,8 +4460,8 @@
         "(-3)**2 - 4*(1)*(-8) == 41"
        ],
        "why": {
-        "en": "Simplifying inside the square root gives $9 + 32 = 41$. A positive number under the root again confirms two more real roots.",
-        "ur": "جزر کے اندر مختصر کرنے سے $9 + 32 = 41$ حاصل ہوتا ہے۔ جزر کے نیچے مثبت عدد ایک بار پھر مزید دو حقیقی قیمتوں کی تصدیق کرتا ہے۔"
+        "en": "Simplifying inside the square root gives $9 + 32 = 41$. Because $41$ is a prime number, $\\sqrt{41}$ cannot be simplified any further.",
+        "ur": "جزر کے اندر مختصر کرنے سے $9 + 32 = 41$ ملتا ہے۔ چونکہ $41$ ایک مفرد عدد ہے، اس لیے $\\sqrt{41}$ کو مزید مختصر نہیں کیا جا سکتا۔"
        }
       },
       {
@@ -4449,8 +4473,8 @@
         "(x**2 - 3*x - 8).subs(x, (3/2 - sqrt(41)/2)) == 0"
        ],
        "why": {
-        "en": "Since $\\sqrt{41}$ cannot be simplified further, we split the $\\pm$ sign to write down the third and fourth exact roots. We have now found all the solutions from the second branch.",
-        "ur": "چونکہ $\\sqrt{41}$ کو مزید مختصر نہیں کیا جا سکتا، اس لیے ہم $\\pm$ کی علامت کو الگ کر کے تیسرا اور چوتھا درست جواب لکھ لیتے ہیں۔ اب ہم نے دوسرے حصے سے بھی تمام حل معلوم کر لیے ہیں۔"
+        "en": "Splitting the $\\pm$ sign gives us the other two exact real roots of the original equation.",
+        "ur": "علامت $\\pm$ کو الگ الگ کرنے سے ہمیں اصل مساوات کے دوسرے دو حقیقی روٹس مل جاتے ہیں۔"
        }
       },
       {
@@ -4464,15 +4488,15 @@
         "simplify(((x+1)*(x+2)*(x-4)*(x-5)+8).subs(x, (3/2 - sqrt(41)/2))) == 0"
        ],
        "why": {
-        "en": "Finally, we gather all four values of $x$ from both cases into the Solution Set (S.S.). Having four roots makes complete sense because multiplying four linear brackets gives a degree-$4$ equation.",
-        "ur": "آخر میں، ہم دونوں صورتوں سے حاصل ہونے والی $x$ کی چاروں قیمتوں کو حل سیٹ (S.S.) میں اکٹھا لکھ دیتے ہیں۔ چار جوابات کا آنا بالکل سمجھ میں آتا ہے کیونکہ چار یک درجی بریکٹس کو ضرب دینے سے درجہ-$4$ کی مساوات بنتی ہے۔"
+        "en": "Finally, we gather all four values of $x$ into a single solution set. Having four roots makes complete sense because the original equation has four factors of $x$, making it a degree-$4$ equation.",
+        "ur": "آخر میں، ہم $x$ کی تمام چاروں قیمتوں کو ایک حل سیٹ (Solution Set) میں اکٹھا کر کے لکھتے ہیں۔ چار روٹس کا آنا بالکل درست ہے کیونکہ اصل مساوات میں $x$ کے چار اجزائے ضربی ہیں، جو اسے درجہ $4$ کی مساوات بناتے ہیں۔"
        }
       }
      ],
      "answer": "$x = \\frac{3 + \\sqrt{33}}{2},\\ \\frac{3 - \\sqrt{33}}{2},\\ \\frac{3 + \\sqrt{41}}{2},\\ \\frac{3 - \\sqrt{41}}{2}$",
      "meaning": {
-      "en": "These four irrational numbers are the exact values of $x$ that make the original equation true. If you substitute any of them into $(x+1)(x+2)(x-4)(x-5) + 8$, the product of the four brackets will come out to $-8$ (because for these values, $x^2 - 3x$ equals either $6$ or $8$), and adding $8$ gives $0$, confirming our solution is correct.",
-      "ur": "یہ چار غیر ناطق اعداد $x$ کی وہ درست قیمتیں ہیں جو اصل مساوات کو درست ثابت کرتی ہیں۔ اگر آپ ان میں سے کوئی بھی قیمت $(x+1)(x+2)(x-4)(x-5) + 8$ میں درج کریں، تو چاروں بریکٹس کا حاصلِ ضرب $-8$ آئے گا (کیونکہ ان قیمتوں کے لیے $x^2 - 3x$ کا جواب $6$ یا $8$ بنتا ہے)، اور اس میں $8$ جمع کرنے سے $0$ حاصل ہوتا ہے، جو ہمارے حل کے درست ہونے کی تصدیق کرتا ہے۔"
+      "en": "These four values of $x$ are the exact numbers that make the original equation $(x+1)(x+2)(x-4)(x-5)+8=0$ true. If you substitute any of these four roots back into the expression $x^2 - 3x$, it will neatly evaluate to either $6$ or $8$, which makes the product of the four brackets equal to $-8$, and adding $8$ gives $0$.",
+      "ur": "$x$ کی یہ چاروں قیمتیں وہی درست اعداد ہیں جو اصل مساوات $(x+1)(x+2)(x-4)(x-5)+8=0$ کو درست ثابت کرتے ہیں۔ اگر آپ ان چاروں روٹس میں سے کسی ایک کو بھی جملے $x^2 - 3x$ میں درج کریں، تو اس کا جواب ٹھیک $6$ یا $8$ آئے گا، جس سے چاروں بریکٹس کا حاصل ضرب $-8$ بن جائے گا، اور اس میں $8$ جمع کرنے سے جواب $0$ آ جائے گا۔"
      },
      "book_key": "x=\\frac{3+\\sqrt{33}}{2}, \\frac{3-\\sqrt{33}}{2}, \\frac{3+\\sqrt{41}}{2}, \\frac{3-\\sqrt{41}}{2}"
     },
@@ -4488,8 +4512,8 @@
         "(x+3)*(x+6)*(x+4)*(x+5) == (x**2+9*x+18)*(x**2+9*x+20)"
        ],
        "why": {
-        "en": "In this type of four-factor equation, we pair the factors whose constant terms add up to the same number: $3+6=9$ and $4+5=9$. Multiplying these pairs gives us the exact same $x^2 + 9x$ part in both brackets, which will allow us to use substitution instead of expanding a messy degree-4 polynomial.",
-        "ur": "اس قسم کی چار اجزائے ضربی والی مساوات میں، ہم ان اجزاء کے جوڑے بناتے ہیں جن کے مستقل ارکان کا مجموعہ برابر ہو: $3+6=9$ اور $4+5=9$۔ ان جوڑوں کو ضرب دینے سے دونوں بریکٹوں میں بالکل ایک جیسا حصہ $x^2 + 9x$ آ جاتا ہے، جس سے ہم ایک پیچیدہ درجہ چہارم کی مساوات بنانے کے بجائے آسانی سے متبادل کا طریقہ استعمال کر سکتے ہیں۔"
+        "en": "In equations with four linear factors, we pair them so the sum of their constants is equal: $3 + 6 = 9$ and $4 + 5 = 9$. Multiplying these pairs gives us an identical expression, $x^2 + 9x$, in both brackets instead of a complicated degree-4 polynomial.",
+        "ur": "چار یک درجی اجزائے ضربی والی مساواتوں میں، ہم جوڑے اس طرح بناتے ہیں کہ ان کے مستقل نمبروں کا مجموعہ برابر ہو: $3 + 6 = 9$ اور $4 + 5 = 9$۔ ان جوڑوں کو ضرب دینے سے ایک پیچیدہ چار درجی کثیر رقمی کے بجائے دونوں بریکٹوں میں ایک جیسا جملہ $x^2 + 9x$ مل جاتا ہے۔"
        }
       },
       {
@@ -4497,8 +4521,20 @@
        "en": "Put $y$ for the common part.",
        "ur": "مشترک حصے کی جگہ $y$ رکھیں۔",
        "why": {
-        "en": "We use the substitution method by replacing the repeated expression $x^2 + 9x$ with a single variable $y$. This reduces our complicated equation into a simple quadratic equation in terms of $y$: $(y+18)(y+20) = -1$.",
-        "ur": "ہم متبادل کا طریقہ استعمال کرتے ہوئے بار بار آنے والے جملے $x^2 + 9x$ کی جگہ ایک نیا متغیر $y$ رکھتے ہیں۔ اس سے ہماری پیچیدہ مساوات $y$ کی شکل میں ایک سادہ دو درجی مساوات $(y+18)(y+20) = -1$ میں بدل جاتی ہے۔"
+        "en": "We use the method of substitution to replace the repeated part $x^2 + 9x$ with a single variable $y$. This temporarily turns our hard fourth-degree equation into a much simpler quadratic equation.",
+        "ur": "ہم عملِ تبدیلی (substitution) کا استعمال کرتے ہوئے بار بار آنے والے حصے $x^2 + 9x$ کی جگہ ایک نیا متغیر $y$ فرض کرتے ہیں۔ اس سے ہماری مشکل چار درجی مساوات عارضی طور پر ایک بہت آسان دو درجی مساوات میں بدل جاتی ہے۔"
+       }
+      },
+      {
+       "math": "\\left(y + 18\\right) \\left(y + 20\\right) + 1 = 0 \\Rightarrow y^{2} + 38 y + 361 = 0",
+       "en": "Write the equation in $y$ and multiply out to get a quadratic in standard form.",
+       "ur": "مساوات کو $y$ میں لکھیں اور ضرب دے کر معیاری دو درجی مساوات بنائیں۔",
+       "check": [
+        "expand((y+18)*(y+20)+1) == y**2 + 38*y + 361"
+       ],
+       "why": {
+        "en": "Substituting $y$, expanding the brackets, and shifting $-1$ to the left side gives us a quadratic equation in standard form ($ay^2 + by + c = 0$). Now we can easily factorize it to find the value of $y$.",
+        "ur": "$y$ کی قیمت درج کرنے، بریکٹوں کو ضرب دینے اور $-1$ کو بائیں طرف منتقل کرنے سے ہمیں معیاری شکل ($ay^2 + by + c = 0$) میں ایک دو درجی مساوات مل جاتی ہے۔ اب ہم $y$ کی قیمت معلوم کرنے کے لیے اس کی آسانی سے تجزی کر سکتے ہیں۔"
        }
       },
       {
@@ -4509,8 +4545,8 @@
         "(y**2 + 19*y + 19*y + 361) - (0) == (y**2 + 38*y + 361) - (0)"
        ],
        "why": {
-        "en": "After expanding $(y+18)(y+20) = -1$ into standard form $y^2 + 38y + 361 = 0$, we apply mid-term breaking. This splits the middle term $38y$ into $19y + 19y$ so that we can factorize the equation by grouping.",
-        "ur": "بریکٹوں $(y+18)(y+20) = -1$ کو ضرب دے کر معیاری شکل $y^2 + 38y + 361 = 0$ بنانے کے بعد، ہم درمیانی رقم کو توڑنے کا طریقہ لگاتے ہیں۔ اس سے درمیانی رقم $38y$ دو حصوں $19y + 19y$ میں تقسیم ہو جاتی ہے تاکہ ہم گروپ بنا کر تجزی کر سکیں۔"
+        "en": "To factorize by mid-term breaking, we need two numbers that multiply to $361$ and add up to $38$. Since $19 \\times 19 = 361$ and $19 + 19 = 38$, we split $38y$ into $19y + 19y$ to prepare for grouping.",
+        "ur": "درمیانی رقم کو توڑ کر تجزی کرنے کے لیے ہمیں ایسے دو اعداد چاہئیں جن کو ضرب دیں تو $361$ آئے اور جمع کریں تو $38$ بنے۔ چونکہ $19 \\times 19 = 361$ اور $19 + 19 = 38$ ہے، اس لیے ہم گروپ بنانے کی تیاری کے لیے $38y$ کو $19y + 19y$ میں توڑ لیتے ہیں۔"
        }
       },
       {
@@ -4521,8 +4557,8 @@
         "(y*(y + 19) + 19*(y + 19)) - (0) == (y**2 + 19*y + 19*y + 361) - (0)"
        ],
        "why": {
-        "en": "We factor by grouping, taking out the highest common factor from the first two terms and the last two terms separately. Seeing the identical bracket $(y + 19)$ appear twice confirms our mid-term breaking is correct.",
-        "ur": "ہم گروپ بنا کر تجزی کرتے ہیں، یعنی پہلی دو رقوم اور آخری دو رقوم میں سے الگ الگ مشترک جزو کو باہر نکالتے ہیں۔ ایک جیسی بریکٹ $(y + 19)$ کا دو بار آنا اس بات کی تصدیق کرتا ہے کہ ہم نے درمیانی رقم کو بالکل ٹھیک توڑا ہے۔"
+        "en": "We factor by grouping, taking $y$ common from the first two terms and $19$ from the last two. Seeing the exact same bracket $(y + 19)$ appear twice confirms our mid-term breaking is correct.",
+        "ur": "ہم گروپ بنا کر تجزی کرتے ہیں، پہلی دو رقموں سے $y$ اور آخری دو سے $19$ مشترک (common) لیتے ہیں۔ ایک جیسی بریکٹ $(y + 19)$ کا دو بار آنا اس بات کی تصدیق کرتا ہے کہ ہم نے درمیانی رقم بالکل ٹھیک توڑی ہے۔"
        }
       },
       {
@@ -4533,8 +4569,8 @@
         "((y + 19)*(y + 19)) - (0) == (y*(y + 19) + 19*(y + 19)) - (0)"
        ],
        "why": {
-        "en": "By factoring out the common binomial $(y + 19)$, we turn the whole expression into a product of two linear factors. This completes the factorization of the quadratic in $y$.",
-        "ur": "مشترک دو رقمی جملے $(y + 19)$ کو باہر نکال کر، ہم پوری مساوات کو دو یک درجی اجزائے ضربی کے حاصل ضرب میں بدل دیتے ہیں۔ اس سے $y$ والی دو درجی مساوات کی تجزی مکمل ہو جاتی ہے۔"
+        "en": "By factoring out the common binomial $(y + 19)$, we rewrite the whole expression as a product of two linear factors. This is actually a perfect square, $(y + 19)^2 = 0$.",
+        "ur": "مشترک دو رقمی جملے $(y + 19)$ کو باہر نکال کر ہم پورے جملے کو دو یک درجی اجزائے ضربی کے حاصلِ ضرب کے طور پر لکھ لیتے ہیں۔ یہ دراصل ایک مکمل مربع $(y + 19)^2 = 0$ ہے۔"
        }
       },
       {
@@ -4542,8 +4578,8 @@
        "en": "A product is zero only when one of its factors is zero.",
        "ur": "حاصل ضرب صفر تب ہوتا ہے جب کوئی ایک جزو صفر ہو۔",
        "why": {
-        "en": "Using the zero-product property, if the product of two factors is zero, then at least one of the factors must be zero. This lets us break the quadratic equation into simple linear equations.",
-        "ur": "ضرب کے صفر ہونے کی خاصیت کے مطابق، اگر دو اجزاء کا حاصل ضرب صفر ہو تو ان میں سے کم از کم ایک جزو لازمی صفر ہوتا ہے۔ اس اصول کی مدد سے ہم دو درجی مساوات کو سادہ یک درجی مساواتوں میں توڑ لیتے ہیں۔"
+        "en": "According to the zero-product property, if the product of two factors is zero, at least one of them must be zero. Setting each factor to zero gives us simple linear equations.",
+        "ur": "ضربی صفر کی خاصیت (zero-product property) کے مطابق، اگر دو اجزائے ضربی کا حاصلِ ضرب صفر ہو تو ان میں سے کم از کم ایک لازمی صفر ہوتا ہے۔ ہر جزو کو صفر کے برابر رکھنے سے ہمیں سادہ یک درجی مساواتیں ملتی ہیں۔"
        }
       },
       {
@@ -4554,8 +4590,8 @@
         "(y**2 + 38*y + 361).subs(y, (-19)) == 0"
        ],
        "why": {
-        "en": "Solving the linear equation gives us the value of our temporary variable $y$. Since both factors were identical, we get a single repeated value, $y = -19$.",
-        "ur": "یک درجی مساوات کو حل کرنے سے ہمیں اپنے عارضی متغیر $y$ کی قیمت مل جاتی ہے۔ چونکہ دونوں اجزائے ضربی ایک جیسے تھے، اس لیے ہمیں ایک ہی قیمت $y = -19$ حاصل ہوتی ہے۔"
+        "en": "Since both factors are identical, solving them gives a single repeated root, $y = -19$. However, our original question is in $x$, so we are only halfway done.",
+        "ur": "چونکہ دونوں اجزائے ضربی ایک جیسے ہیں، اس لیے انہیں حل کرنے سے ہمیں ایک ہی مکرر روٹ $y = -19$ ملتا ہے۔ لیکن ہمارا اصل سوال $x$ میں ہے، اس لیے ابھی ہمارا آدھا کام مکمل ہوا ہے۔"
        }
       },
       {
@@ -4563,8 +4599,8 @@
        "en": "Put back $y = x^2 + 9x$.",
        "ur": "$y = x^2 + 9x$ واپس رکھیں۔",
        "why": {
-        "en": "Our original question was about $x$, not $y$, so we now substitute $x^2 + 9x$ back in place of $y$. This gives us the actual quadratic equation in $x$ that we need to solve.",
-        "ur": "ہمارا اصل سوال $x$ کے بارے میں تھا نہ کہ $y$ کے بارے میں، اس لیے اب ہم $y$ کی جگہ واپس $x^2 + 9x$ درج کرتے ہیں۔ اس سے ہمیں $x$ میں وہ اصل دو درجی مساوات مل جاتی ہے جسے ہم نے حل کرنا ہے۔"
+        "en": "Now we reverse our substitution and replace $y$ back with $x^2 + 9x$. This brings back the original variable $x$ and gives us a quadratic equation to solve.",
+        "ur": "اب ہم اپنی تبدیلی کو واپس پلٹتے ہیں اور $y$ کی جگہ دوبارہ $x^2 + 9x$ رکھتے ہیں۔ اس سے اصل متغیر $x$ واپس آ جاتا ہے اور ہمیں حل کرنے کے لیے ایک دو درجی مساوات مل جاتی ہے۔"
        }
       },
       {
@@ -4572,8 +4608,8 @@
        "en": "Compare with $ax^2 + bx + c = 0$.",
        "ur": "$ax^2 + bx + c = 0$ سے موازنہ کریں۔",
        "why": {
-        "en": "Moving $-19$ to the left side gives $x^2 + 9x + 19 = 0$, which cannot be easily factored by mid-term breaking. So, we compare it with the standard form $ax^2 + bx + c = 0$ to identify the coefficients for the quadratic formula.",
-        "ur": "$-19$ کو بائیں طرف لے جانے سے $x^2 + 9x + 19 = 0$ بنتا ہے، جس کی درمیانی رقم توڑ کر تجزی کرنا آسان نہیں ہے۔ اس لیے، ہم دو درجی کلیہ لگانے کی تیاری کے طور پر اس کا معیاری شکل $ax^2 + bx + c = 0$ سے موازنہ کر کے عددی سروں کی قیمتیں نکالتے ہیں۔"
+        "en": "Moving $-19$ to the left side gives $x^2 + 9x + 19 = 0$, which cannot be easily factorized by mid-term breaking. So, we compare it with $ax^2 + bx + c = 0$ to extract the coefficients $a = 1$, $b = 9$, and $c = 19$ for the quadratic formula.",
+        "ur": "$-19$ کو بائیں طرف لانے سے $x^2 + 9x + 19 = 0$ بنتا ہے، جس کی درمیانی رقم توڑ کر تجزی کرنا آسان نہیں ہے۔ اس لیے، دو درجی کلیہ لگانے کی خاطر ہم اس کا موازنہ $ax^2 + bx + c = 0$ سے کر کے عددی سر $a = 1$، $b = 9$ اور $c = 19$ نکالتے ہیں۔"
        }
       },
       {
@@ -4581,8 +4617,8 @@
        "en": "Put $a$, $b$ and $c$ in the quadratic formula.",
        "ur": "دو درجی کلیہ میں $a$، $b$ اور $c$ کی قیمتیں رکھیں۔",
        "why": {
-        "en": "We substitute the values of $a$, $b$, and $c$ directly into the quadratic formula. This formula is a reliable rule that finds the roots of any quadratic equation, even when the roots involve surds.",
-        "ur": "ہم $a$، $b$ اور $c$ کی قیمتیں براہِ راست دو درجی کلیہ میں درج کرتے ہیں۔ یہ کلیہ ایک ایسا قابلِ اعتماد اصول ہے جو کسی بھی دو درجی مساوات کے جزر معلوم کر لیتا ہے، چاہے جواب میں جزر ہی کیوں نہ آ رہے ہوں۔"
+        "en": "We substitute the values of $a$, $b$, and $c$ directly into the quadratic formula. This formula is a reliable method that finds the roots of any quadratic equation, even when factors aren't whole numbers.",
+        "ur": "ہم $a$، $b$ اور $c$ کی قیمتیں براہِ راست دو درجی کلیے (quadratic formula) میں درج کرتے ہیں۔ یہ کلیہ ایک قابلِ اعتماد طریقہ ہے جو کسی بھی دو درجی مساوات کے روٹس معلوم کر لیتا ہے، چاہے اس کے اجزائے ضربی مکمل اعداد نہ بھی ہوں۔"
        }
       },
       {
@@ -4593,8 +4629,8 @@
         "(9)**2 - 4*(1)*(19) == 5"
        ],
        "why": {
-        "en": "We simplify the expression under the square root (the discriminant) and the denominator using basic arithmetic. Getting a positive number $5$ under the root tells us that there are two real, irrational roots.",
-        "ur": "ہم عام حساب کتاب کی مدد سے جزر کے نیچے موجود رقم (فرق کنندہ) اور مخرج کو مختصر کرتے ہیں۔ جزر کے نیچے مثبت عدد $5$ کا آنا ہمیں بتاتا ہے کہ اس مساوات کے دو حقیقی اور غیر ناطق جزر ہیں۔"
+        "en": "We simplify the discriminant ($b^2 - 4ac$) under the square root, getting $81 - 76 = 5$. Since $5$ is positive but not a perfect square, our roots will be real, irrational numbers.",
+        "ur": "ہم جزر کے نیچے موجود فرق کنندہ ($b^2 - 4ac$) کو حل کرتے ہیں، جس سے $81 - 76 = 5$ ملتا ہے۔ چونکہ $5$ مثبت ہے لیکن مکمل مربع نہیں ہے، اس لیے ہمارے روٹس حقیقی اور غیر ناطق اعداد ہوں گے۔"
        }
       },
       {
@@ -4606,8 +4642,8 @@
         "(x**2 + 9*x + 19).subs(x, (-9/2 - sqrt(5)/2)) == 0"
        ],
        "why": {
-        "en": "Since $\\sqrt{5}$ cannot be simplified into a whole number, we separate the plus and minus signs to clearly show the two distinct values of $x$.",
-        "ur": "چونکہ $\\sqrt{5}$ کو حل کر کے کوئی مکمل عدد نہیں بنایا جا سکتا، اس لیے ہم جمع اور تفریق کی علامتوں کو الگ الگ کر کے $x$ کی دونوں مختلف قیمتوں کو واضح طور پر لکھ دیتے ہیں۔"
+        "en": "We split the $\\pm$ sign to clearly write out the two distinct values of $x$. Because $\\sqrt{5}$ cannot be simplified further, we leave the answers in exact radical (surd) form.",
+        "ur": "ہم $\\pm$ کی علامت کو الگ الگ کر کے $x$ کی دو مختلف قیمتیں واضح طور پر لکھ لیتے ہیں۔ چونکہ $\\sqrt{5}$ کو مزید مختصر نہیں کیا جا سکتا، اس لیے ہم جوابات کو جزر کی شکل (اصم شکل) میں ہی رہنے دیتے ہیں۔"
        }
       },
       {
@@ -4619,15 +4655,15 @@
         "simplify(((x+3)*(x+4)*(x+5)*(x+6)+1).subs(x, (-9/2 - sqrt(5)/2))) == 0"
        ],
        "why": {
-        "en": "Finally, we write both values inside curly brackets to present the formal Solution Set (S.S.) of the given equation.",
-        "ur": "آخر میں، ہم دی گئی مساوات کے باقاعدہ حل سیٹ (S.S.) کو ظاہر کرنے کے لیے دونوں قیمتوں کو درمیانی بریکٹوں کے اندر لکھ دیتے ہیں۔"
+        "en": "Finally, we write both values inside curly brackets to present the Solution Set (S.S). Notice that normally a degree-4 equation has four roots, but because $y = -19$ was a repeated root, we get two repeated roots for $x$ here.",
+        "ur": "آخر میں، ہم حل سیٹ (S.S) کو ظاہر کرنے کے لیے دونوں قیمتوں کو درمیانی بریکٹ کے اندر لکھتے ہیں۔ غور کریں کہ عام طور پر چار درجی مساوات کے چار روٹس ہوتے ہیں، لیکن چونکہ $y = -19$ ایک مکرر روٹ تھا، اس لیے یہاں ہمیں $x$ کے بھی دو ہی روٹس ملے ہیں جو اصل میں دوہرائے جا رہے ہیں۔"
        }
       }
      ],
      "answer": "$x = \\frac{-9 + \\sqrt{5}}{2},\\ \\frac{-9 - \\sqrt{5}}{2}$",
      "meaning": {
-      "en": "The final answer means that $x = \\frac{-9 + \\sqrt{5}}{2}$ and $x = \\frac{-9 - \\sqrt{5}}{2}$ are the exact real numbers that make the original equation $(x+3)(x+4)(x+5)(x+6) = -1$ true. You can check this easily by noticing that for both of these $x$ values, the expression $x^2 + 9x$ equals $-19$; putting this into the paired form $(-19+18)(-19+20)$ gives $(-1)(1) = -1$, which matches the right-hand side.",
-      "ur": "آخری جواب کا مطلب یہ ہے کہ $x = \\frac{-9 + \\sqrt{5}}{2}$ اور $x = \\frac{-9 - \\sqrt{5}}{2}$ وہی اصل حقیقی اعداد ہیں جو دی گئی مساوات $(x+3)(x+4)(x+5)(x+6) = -1$ کو درست ثابت کرتے ہیں۔ آپ اس کی پڑتال باآسانی ایسے کر سکتے ہیں کہ $x$ کی ان دونوں قیمتوں کے لیے جملہ $x^2 + 9x$ برابر ہوتا ہے $-19$ کے؛ اسے جوڑوں والی شکل $(-19+18)(-19+20)$ میں رکھنے سے $(-1)(1) = -1$ ملتا ہے، جو کہ مساوات کی دائیں جانب کے بالکل برابر ہے۔"
+      "en": "The final answer means that $x = \\frac{-9 + \\sqrt{5}}{2}$ and $x = \\frac{-9 - \\sqrt{5}}{2}$ are the exact values that make the original equation $(x+3)(x+4)(x+5)(x+6) = -1$ true. If you plug either of these values into $x^2 + 9x$, it evaluates to $-19$, and putting that into the paired form $(-19 + 18)(-19 + 20)$ gives $(-1)(1) = -1$, which matches the right-hand side and verifies our solution.",
+      "ur": "حتمی جواب کا مطلب یہ ہے کہ $x = \\frac{-9 + \\sqrt{5}}{2}$ اور $x = \\frac{-9 - \\sqrt{5}}{2}$ وہ درست قیمتیں ہیں جو اصل مساوات $(x+3)(x+4)(x+5)(x+6) = -1$ کو درست ثابت کرتی ہیں۔ پڑتال کے لیے اگر آپ ان دونوں میں سے کوئی بھی قیمت $x^2 + 9x$ میں درج کریں تو جواب $-19$ آتا ہے، اور اسے جوڑوں والی شکل $(-19 + 18)(-19 + 20)$ میں رکھنے سے $(-1)(1) = -1$ ملتا ہے، جو دائیں طرف کے برابر ہے اور ہمارے حل کے درست ہونے کی تصدیق کرتا ہے۔"
      },
      "book_key": "x=\\frac{-9+\\sqrt{5}}{2}, \\frac{-9-\\sqrt{5}}{2}"
     }
@@ -5165,7 +5201,7 @@
       {
        "math": "\\frac{1}{x} = \\frac{3 - 2}{12} = \\frac{1}{12}",
        "en": "Take the LCM of the denominators $4$ and $6$, which is $12$, and simplify the algebraic fraction.",
-       "ur": "نصب نما $4$ اور $6$ کا ذواضعاف اقل (LCM) لیں جو کہ $12$ ہے، اور الجبری کسر کو مختصر کریں۔",
+       "ur": "نسب نما $4$ اور $6$ کا ذواضعاف اقل (LCM) لیں جو کہ $12$ ہے، اور الجبری کسر کو مختصر کریں۔",
        "check": [
         "R(1,4) - R(1,6) == R(3 - 2, 12)",
         "R(3 - 2, 12) == R(1,12)"
@@ -5253,7 +5289,7 @@
       {
        "math": "10(x + 4) = 16x",
        "en": "Multiply both sides of the equation by $(x + 4)$ to eliminate the denominator.",
-       "ur": "نصب نما کو ختم کرنے کے لیے مساوات کے دونوں اطراف کو $(x + 4)$ سے ضرب دیں۔",
+       "ur": "نسب نما کو ختم کرنے کے لیے مساوات کے دونوں اطراف کو $(x + 4)$ سے ضرب دیں۔",
        "why": {
         "en": "Solving an equation is much easier when there are no fractions, so we clear the denominator $(x + 4)$ by multiplying it on both sides (often called cross-multiplication). This transforms our fractional equation into a simple linear equation.",
         "ur": "مساوات کو حل کرنا اس وقت بہت آسان ہو جاتا ہے جب اس میں کوئی کسر نہ ہو، اس لیے ہم بٹے $(x + 4)$ کو ختم کرنے کے لیے اسے دونوں اطراف سے ضرب دیتے ہیں (جسے اکثر چلیپائی ضرب بھی کہتے ہیں)۔ یہ عمل ہماری کسری مساوات کو ایک سادہ یک درجی مساوات میں بدل دیتا ہے۔"
@@ -5286,7 +5322,7 @@
       {
        "math": "x = \\frac{40}{6} = \\frac{20}{3} \\approx 6.67",
        "en": "Divide both sides by $6$, simplify the fraction by dividing the numerator and denominator by $2$, and write the final answer rounded to two decimal places.",
-       "ur": "دونوں اطراف کو $6$ پر تقسیم کریں، شمار کنندہ اور نصب نما کو $2$ پر تقسیم کر کے کسر کو مختصر کریں، اور حتمی جواب اعشاریہ کے بعد دو درجوں تک لکھیں۔",
+       "ur": "دونوں اطراف کو $6$ پر تقسیم کریں، شمار کنندہ اور نسب نما کو $2$ پر تقسیم کر کے کسر کو مختصر کریں، اور حتمی جواب اعشاریہ کے بعد دو درجوں تک لکھیں۔",
        "check": [
         "R(40, 6) == R(20, 3)",
         "8*(2*R(20,3))/(R(20,3) + 4) == 10"
@@ -5727,7 +5763,7 @@
        "ur": "دیے گئے الجبری جملے کو مختصر کرنے کے لیے لکھیں۔",
        "why": {
         "en": "We begin by clearly writing down the two algebraic fractions we need to add. Looking closely at the expression helps us plan our first move by checking the denominators.",
-        "ur": "ہم سب سے پہلے ان دو الجبری کسر (فریکشنز) کو صاف کر کے لکھتے ہیں جنہیں ہمیں جمع کرنا ہے۔ عبارت کو غور سے دیکھنے سے ہمیں نصب نما (ڈینومینیٹر) کو چیک کر کے اپنا پہلا قدم طے کرنے میں مدد ملتی ہے۔"
+        "ur": "ہم سب سے پہلے ان دو الجبری کسر (فریکشنز) کو صاف کر کے لکھتے ہیں جنہیں ہمیں جمع کرنا ہے۔ عبارت کو غور سے دیکھنے سے ہمیں نسب نما (ڈینومینیٹر) کو چیک کر کے اپنا پہلا قدم طے کرنے میں مدد ملتی ہے۔"
        }
       },
       {
@@ -5736,7 +5772,7 @@
        "ur": "دونوں کسروں کا مخرج (نسب نما) ایک جیسا ہے جو کہ $5$ ہے۔ اس لیے ان کا ذو اضعاف اقل (L.C.M.) $5$ ہے۔",
        "why": {
         "en": "To add any two fractions, the rule is that they must have a common denominator (L.C.M.). Since both denominators are already $5$, our work is very easy because we do not need to change the fractions before adding.",
-        "ur": "کسی بھی دو کسر کو جمع کرنے کا اصول یہ ہے کہ ان کا نصب نما (ذو اضعاف اقل یا L.C.M.) ایک جیسا ہونا چاہیے۔ چونکہ دونوں کے نصب نما پہلے ہی $5$ ہیں، اس لیے ہمارا کام بہت آسان ہو گیا ہے کیونکہ جمع کرنے سے پہلے کسر کو تبدیل کرنے کی ضرورت نہیں ہے۔"
+        "ur": "کسی بھی دو کسر کو جمع کرنے کا اصول یہ ہے کہ ان کا نسب نما (ذو اضعاف اقل یا L.C.M.) ایک جیسا ہونا چاہیے۔ چونکہ دونوں کے نسب نما پہلے ہی $5$ ہیں، اس لیے ہمارا کام بہت آسان ہو گیا ہے کیونکہ جمع کرنے سے پہلے کسر کو تبدیل کرنے کی ضرورت نہیں ہے۔"
        }
       },
       {
@@ -5748,7 +5784,7 @@
        ],
        "why": {
         "en": "By the rule of fraction addition, we write the common denominator $5$ just once at the bottom and join the top parts (numerators) with a plus sign. Notice that we do not add the bottom numbers together, so the denominator stays $5$.",
-        "ur": "کسر کی جمع کے اصول کے مطابق، ہم مشترک نصب نما $5$ کو نیچے صرف ایک بار لکھتے ہیں اور اوپر والے حصوں (شمار کنندہ) کو جمع کے نشان کے ساتھ ملا دیتے ہیں۔ دھیان رہے کہ ہم نیچے والے نمبروں کو آپس میں جمع نہیں کرتے، اس لیے نصب نما $5$ ہی رہتا ہے۔"
+        "ur": "کسر کی جمع کے اصول کے مطابق، ہم مشترک نسب نما $5$ کو نیچے صرف ایک بار لکھتے ہیں اور اوپر والے حصوں (شمار کنندہ) کو جمع کے نشان کے ساتھ ملا دیتے ہیں۔ دھیان رہے کہ ہم نیچے والے نمبروں کو آپس میں جمع نہیں کرتے، اس لیے نسب نما $5$ ہی رہتا ہے۔"
        }
       },
       {
@@ -5784,7 +5820,7 @@
        ],
        "why": {
         "en": "Finally, we compare our simplified fraction with the four choices given in the question. It matches option (b) exactly, whereas options like (a) are traps for students who mistakenly add the denominators.",
-        "ur": "آخر میں، ہم اپنی مختصر کردہ کسر کا موازنہ سوال میں دیے گئے چار ممکنہ جوابات سے کرتے ہیں۔ یہ بالکل آپشن (b) سے ملتا ہے، جبکہ آپشن (a) ان طلباء کے لیے ایک دھوکہ ہے جو غلطی سے نصب نما کو بھی جمع کر دیتے ہیں۔"
+        "ur": "آخر میں، ہم اپنی مختصر کردہ کسر کا موازنہ سوال میں دیے گئے چار ممکنہ جوابات سے کرتے ہیں۔ یہ بالکل آپشن (b) سے ملتا ہے، جبکہ آپشن (a) ان طلباء کے لیے ایک دھوکہ ہے جو غلطی سے نسب نما کو بھی جمع کر دیتے ہیں۔"
        }
       }
      ],
@@ -5792,7 +5828,7 @@
      "enriched": true,
      "meaning": {
       "en": "The final answer (b) $\\frac{5x+4}{5}$ means that the sum of the two given algebraic fractions can be written as a single, neat fraction with the same denominator $5$. Remember the golden rule of fractions: when adding, only the numerators are combined while the common denominator $5$ remains unchanged.",
-      "ur": "حتمی جواب (b) $\\frac{5x+4}{5}$ کا مطلب یہ ہے کہ دی گئی دو الجبری کسر کا مجموعہ اسی نصب نما $5$ کے ساتھ ایک واحد اور سادہ کسر کے طور پر لکھا جا سکتا ہے۔ کسر کا سنہری اصول ہمیشہ یاد رکھیں: جمع کرتے وقت صرف شمار کنندہ کو ملایا جاتا ہے جبکہ مشترک نصب نما $5$ میں کوئی تبدیلی نہیں آتی۔"
+      "ur": "حتمی جواب (b) $\\frac{5x+4}{5}$ کا مطلب یہ ہے کہ دی گئی دو الجبری کسر کا مجموعہ اسی نسب نما $5$ کے ساتھ ایک واحد اور سادہ کسر کے طور پر لکھا جا سکتا ہے۔ کسر کا سنہری اصول ہمیشہ یاد رکھیں: جمع کرتے وقت صرف شمار کنندہ کو ملایا جاتا ہے جبکہ مشترک نسب نما $5$ میں کوئی تبدیلی نہیں آتی۔"
      },
      "book_key": "(b) \\frac{5x+4}{5}"
     },
@@ -6414,8 +6450,8 @@
        "en": "Write the expression.",
        "ur": "عبارت لکھیں۔",
        "why": {
-        "en": "We begin by clearly writing down the two algebraic fractions we need to subtract. Notice that their denominators are different quadratic expressions, which means we cannot subtract the numerators right away.",
-        "ur": "ہم سب سے پہلے ان دو الجبری کسور کو واضح طور پر لکھتے ہیں جنہیں ہم نے تفریق کرنا ہے۔ غور کریں کہ ان کے مخرج (denominators) مختلف دو درجی جملے ہیں، جس کا مطلب ہے کہ ہم ابھی شمار کنندگان (numerators) کو براہِ راست تفریق نہیں کر سکتے۔"
+        "en": "We begin by writing down the two algebraic fractions we need to subtract. Notice that the denominators are quadratic expressions, which we must simplify before we can combine the fractions.",
+        "ur": "ہم سب سے پہلے ان دو الجبری کسور کو لکھتے ہیں جنہیں ہم نے تفریق کرنا ہے۔ غور کریں کہ دونوں کے مخرج دو درجی جملے ہیں، جنہیں کسور کو یکجا کرنے سے پہلے ہمیں مختصر کرنا ہوگا۔"
        }
       },
       {
@@ -6426,8 +6462,8 @@
         "(-1/((x - 2)*(2*x - 3)) + 5/((x - 2)*(x + 3))) == (-1/(2*x**2 - 7*x + 6) + 5/(x**2 + x - 6))"
        ],
        "why": {
-        "en": "To subtract fractions, we need a Least Common Denominator (L.C.D.), and the easiest way to find it for quadratic expressions is by factorizing them using middle-term breaking. This reveals that both denominators share a common factor of $(x - 2)$, making our next step much simpler.",
-        "ur": "کسور کو تفریق کرنے کے لیے ہمیں ذو اضعاف اقل (L.C.D.) کی ضرورت ہوتی ہے، اور دو درجی جملوں کے لیے اسے معلوم کرنے کا سب سے آسان طریقہ درمیانی رقم کو توڑ کر تجزی کرنا ہے۔ اس سے ہمیں پتہ چلتا ہے کہ دونوں مخرجوں میں $(x - 2)$ ایک مشترک جزوِ ضربی ہے، جو ہمارے اگلے مرحلے کو بہت آسان بنا دیتا ہے۔"
+        "en": "To subtract fractions, we need a common denominator, so we use mid-term breaking to factorize both quadratic denominators. This reveals that both denominators share a common factor of $(x - 2)$, which makes finding the Least Common Denominator (L.C.D.) much easier.",
+        "ur": "کسور کو تفریق کرنے کے لیے ہمیں ایک مشترک مخرج کی ضرورت ہوتی ہے، اس لیے ہم درمیانی رقم کو توڑ کر دونوں مخرجوں کی تجزی کرتے ہیں۔ اس سے ہمیں پتہ چلتا ہے کہ دونوں مخرجوں میں $(x - 2)$ کا جزو ضربی مشترک ہے، جس سے ذواضعاف اقل (L.C.D.) معلوم کرنا بہت آسان ہو جاتا ہے۔"
        }
       },
       {
@@ -6438,8 +6474,8 @@
         "(9*x - 18)/((x - 2)*(x + 3)*(2*x - 3)) == (-1/(2*x**2 - 7*x + 6) + 5/(x**2 + x - 6))"
        ],
        "why": {
-        "en": "Just like with simple number fractions, we combine these two algebraic fractions over their L.C.D., which is $(x - 2)(x + 3)(2x - 3)$. We multiply each numerator by the factor missing from its original denominator so that the value of the expression stays the same.",
-        "ur": "بالکل سادہ عددی کسور کی طرح، ہم ان دو الجبری کسور کو ان کے ذو اضعاف اقل (L.C.D.) یعنی $(x - 2)(x + 3)(2x - 3)$ کے اوپر اکٹھا کرتے ہیں۔ ہم ہر شمار کنندہ کو اس جزوِ ضربی سے ضرب دیتے ہیں جو اس کے اصل مخرج میں موجود نہیں تھا تاکہ جملے کی قیمت برقرار رہے۔"
+        "en": "Using the rule for subtracting fractions, we combine them over their L.C.D., which is $(x - 2)(x + 3)(2x - 3)$. We multiply each numerator by the factor missing from its original denominator so the value of the fractions remains unchanged.",
+        "ur": "کسور کی تفریق کے اصول کو استعمال کرتے ہوئے، ہم انہیں ان کے ذواضعاف اقل $(x - 2)(x + 3)(2x - 3)$ کے اوپر یکجا کر لیتے ہیں۔ ہم ہر شمار کنندہ کو اس کے اصل مخرج میں سے غائب جزو ضربی سے ضرب دیتے ہیں تاکہ کسور کی قیمت تبدیل نہ ہو۔"
        }
       },
       {
@@ -6450,27 +6486,39 @@
         "(9*x - 18)/((x - 2)*(x + 3)*(2*x - 3)) == (-1/(2*x**2 - 7*x + 6) + 5/(x**2 + x - 6))"
        ],
        "why": {
-        "en": "Now we expand the brackets in the numerator and combine the like terms, remembering that the minus sign outside the second bracket changes the sign inside. This simplifies the top part into a single, neat linear expression, $9x - 18$.",
-        "ur": "اب ہم شمار کنندہ میں بریکٹوں کو کھولتے ہیں اور ایک جیسی رقوم کو یکجا کرتے ہیں، یہ یاد رکھتے ہوئے کہ دوسری بریکٹ کے باہر منفی کی علامت اندر کی علامت کو بدل دیتی ہے۔ یہ اوپر والے حصے کو مختصر کر کے ایک سادہ یک درجی جملہ، $9x - 18$ بنا دیتا ہے۔"
+        "en": "Now we apply the distributive law to expand the brackets in the numerator and then combine the like terms. This simplifies the entire numerator into a single, neat linear expression, $9x - 18$.",
+        "ur": "اب ہم شمار کنندہ میں بریکٹوں کو کھولنے کے لیے تقسیمی قانون لاگو کرتے ہیں اور پھر یکساں رقوم کو آپس میں ملا لیتے ہیں۔ یہ پورے شمار کنندہ کو ایک سادہ یک درجی جملے $9x - 18$ میں بدل دیتا ہے۔"
+       }
+      },
+      {
+       "math": "= \\frac{9 \\left(x - 2\\right)}{\\left(x - 2\\right) \\left(x + 3\\right) \\left(2 x - 3\\right)}",
+       "en": "Factorize the numerator.",
+       "ur": "شمار کنندہ کی تجزی کریں۔",
+       "check": [
+        "(9*(x - 2))/((x - 2)*(x + 3)*(2*x - 3)) == (-1/(2*x**2 - 7*x + 6) + 5/(x**2 + x - 6))"
+       ],
+       "why": {
+        "en": "We always check if our final fraction can be reduced, so we take out $9$ as a common factor from the numerator $9x - 18$. Doing this exposes the factor $(x - 2)$ in the numerator, which matches the one in the denominator.",
+        "ur": "ہم ہمیشہ یہ دیکھتے ہیں کہ کیا ہماری حاصل کردہ کسر مزید مختصر ہو سکتی ہے، اس لیے ہم شمار کنندہ $9x - 18$ میں سے $9$ کو مشترک لے لیتے ہیں۔ ایسا کرنے سے شمار کنندہ میں $(x - 2)$ کا جزو ضربی ظاہر ہو جاتا ہے، جو مخرج میں موجود جزو سے بالکل ملتا ہے۔"
        }
       },
       {
        "math": "= \\frac{9}{\\left(x + 3\\right) \\left(2 x - 3\\right)}",
-       "en": "Factorize the numerator and cancel any common factor.",
-       "ur": "شمار کنندہ کی تجزی کر کے مشترک جزو کاٹ دیں۔",
+       "en": "Cancel the common factor.",
+       "ur": "مشترک جزو کاٹ دیں۔",
        "check": [
         "(9/(2*x**2 + 3*x - 9)) == (-1/(2*x**2 - 7*x + 6) + 5/(x**2 + x - 6))"
        ],
        "why": {
-        "en": "We must always check if a fraction can be reduced to its lowest terms. By taking $9$ common from $9x - 18$, we get $9(x - 2)$, which allows us to cancel out the common factor $(x - 2)$ from both the numerator and the denominator.",
-        "ur": "ہمیں ہمیشہ یہ دیکھنا چاہیے کہ کیا کسر کو اس کی مختصر ترین شکل میں لایا جا سکتا ہے۔ $9x - 18$ میں سے $9$ کو مشترک (common) لینے سے ہمیں $9(x - 2)$ ملتا ہے، جس کی مدد سے ہم شمار کنندہ اور مخرج دونوں میں سے مشترک جزوِ ضربی $(x - 2)$ کو کاٹ سکتے ہیں۔"
+        "en": "Since $(x - 2)$ appears as a factor in both the numerator and the denominator, we divide both by $(x - 2)$ to cancel it out. This leaves the expression in its simplest, lowest terms.",
+        "ur": "چونکہ $(x - 2)$ شمار کنندہ اور مخرج دونوں میں بطور جزو ضربی موجود ہے، اس لیے ہم اسے کاٹنے کے لیے دونوں کو $(x - 2)$ پر تقسیم کر دیتے ہیں۔ اس طرح یہ جملہ اپنی مختصر ترین شکل میں آ جاتا ہے۔"
        }
       }
      ],
      "answer": "$\\frac{9}{\\left(x + 3\\right) \\left(2 x - 3\\right)}$",
      "meaning": {
-      "en": "The final answer $\\frac{9}{(x + 3)(2x - 3)}$ is the simplest form of the original subtraction problem. It tells us that instead of calculating two separate complex fractions, this single compact fraction will give the exact same result for any valid value of $x$.",
-      "ur": "آخری جواب $\\frac{9}{(x + 3)(2x - 3)}$ اصل تفریق کے سوال کی مختصر ترین شکل ہے۔ یہ ہمیں بتاتا ہے کہ دو الگ الگ پیچیدہ کسور کو حل کرنے کے بجائے، یہ ایک مختصر کسر $x$ کی کسی بھی درست قیمت کے لیے بالکل وہی نتیجہ دے گی۔"
+      "en": "The final answer $\\frac{9}{(x + 3)(2x - 3)}$ is the simplest form of the original subtraction problem. It means that instead of calculating two complex fractions and subtracting them, this single compact fraction gives the exact same result for any valid value of $x$.",
+      "ur": "آخری جواب $\\frac{9}{(x + 3)(2x - 3)}$ دیے گئے تفریق کے سوال کی مختصر ترین شکل ہے۔ اس کا مطلب یہ ہے کہ دو پیچیدہ کسور کو الگ الگ حل کر کے تفریق کرنے کے بجائے، یہ ایک سادہ سی کسر $x$ کی کسی بھی درست قیمت کے لیے بالکل وہی نتیجہ دیتی ہے۔"
      },
      "book_key": "\\frac{9}{(x+3)(2x-3)}"
     },
@@ -7469,8 +7517,8 @@
         "(x+9)*(x-7)*(x-3)*(x+5) == (x**2+2*x-63)*(x**2+2*x-15)"
        ],
        "why": {
-        "en": "In equations of the form $(x+a)(x+b)(x+c)(x+d)=k$, we pair the brackets whose constants add up to the same number, since $9 + (-7) = 2$ and $-3 + 5 = 2$. Multiplying these pairs creates an identical $x^2 + 2x$ part in both brackets, which avoids a difficult degree-4 expansion.",
-        "ur": "$(x+a)(x+b)(x+c)(x+d)=k$ کی شکل والی مساواتوں میں، ہم ان بریکٹوں کے جوڑے بناتے ہیں جن کے مستقل نمبروں کا مجموعہ ایک جیسا ہو، کیونکہ $9 + (-7) = 2$ اور $-3 + 5 = 2$ ہوتا ہے۔ ان جوڑوں کو ضرب دینے سے دونوں بریکٹوں میں ایک جیسا $x^2 + 2x$ حصہ بن جاتا ہے، جس سے ہم درجہ 4 کی مشکل توسیع سے بچ جاتے ہیں۔"
+        "en": "Multiplying all four brackets directly would give a difficult degree-four equation, so we use the rule of smart pairing: we group the factors whose constant terms add up to the same number, $9 + (-7) = 2$ and $(-3) + 5 = 2$. This creates the identical expression $x^2 + 2x$ inside both new brackets, setting up an easy substitution.",
+        "ur": "چاروں بریکٹس کو براہِ راست ضرب دینے سے درجہ چہارم کی ایک مشکل مساوات بن جائے گی، اس لیے ہم مناسب جوڑے بنانے کا اصول استعمال کرتے ہیں: ہم ان اجزائے ضربی کو ملاتے ہیں جن کے مستقل ارکان کا مجموعہ ایک جیسا ہو، یعنی $9 + (-7) = 2$ اور $(-3) + 5 = 2$۔ اس سے دونوں نئی بریکٹس کے اندر ایک جیسا جملہ $x^2 + 2x$ بن جاتا ہے، جس سے متبادل رکھنا آسان ہو جاتا ہے۔"
        }
       },
       {
@@ -7478,8 +7526,20 @@
        "en": "Put $y$ for the common part.",
        "ur": "مشترک حصے کی جگہ $y$ رکھیں۔",
        "why": {
-        "en": "We use the method of substitution by replacing the repeated expression $x^2 + 2x$ with a single variable $y$. This turns our complicated equation into a simple quadratic equation in $y$ that we already know how to solve.",
-        "ur": "ہم متبادل کے طریقے کا استعمال کرتے ہوئے بار بار آنے والے جملے $x^2 + 2x$ کی جگہ ایک نیا متغیر $y$ رکھتے ہیں۔ اس سے ہماری پیچیدہ مساوات $y$ میں ایک سادہ دو درجی مساوات بن جاتی ہے جسے حل کرنا ہم پہلے ہی جانتے ہیں۔"
+        "en": "We use the method of substitution by replacing the repeated expression $x^2 + 2x$ with a single variable $y$. This temporarily hides the $x^2$ term and turns our degree-four problem into a much simpler quadratic equation.",
+        "ur": "ہم بار بار آنے والے جملے $x^2 + 2x$ کی جگہ ایک نیا متغیر $y$ رکھ کر متبادل کا طریقہ استعمال کرتے ہیں۔ اس سے $x^2$ والی رقم عارضی طور پر چھپ جاتی ہے اور ہمارا سوال ایک آسان دو درجی مساوات میں تبدیل ہو جاتا ہے۔"
+       }
+      },
+      {
+       "math": "\\left(y - 15\\right) \\left(y - 63\\right) - 385 = 0 \\Rightarrow y^{2} - 78 y + 560 = 0",
+       "en": "Write the equation in $y$ and multiply out to get a quadratic in standard form.",
+       "ur": "مساوات کو $y$ میں لکھیں اور ضرب دے کر معیاری دو درجی مساوات بنائیں۔",
+       "check": [
+        "expand((y-63)*(y-15)-385) == y**2 - 78*y + 560"
+       ],
+       "why": {
+        "en": "After substituting $y$, we expand the brackets and move $385$ to the left side so the equation equals zero. Putting the quadratic equation into its standard form $ay^2 + by + c = 0$ is necessary before we can factorize it.",
+        "ur": "$y$ درج کرنے کے بعد، ہم بریکٹس کو کھولتے ہیں اور $385$ کو بائیں طرف لے آتے ہیں تاکہ مساوات صفر کے برابر ہو جائے۔ تجزی کرنے سے پہلے دو درجی مساوات کو اس کی معیاری صورت $ay^2 + by + c = 0$ میں لانا ضروری ہوتا ہے۔"
        }
       },
       {
@@ -7490,8 +7550,8 @@
         "(y**2 - 8*y - 70*y + 560) - (0) == (y**2 - 78*y + 560) - (0)"
        ],
        "why": {
-        "en": "After expanding $(y - 63)(y - 15) = 385$ into standard form $y^2 - 78y + 560 = 0$, we use mid-term breaking to factorize it. Finding two numbers, $-8$ and $-70$, that add to $-78$ and multiply to $560$ allows us to split the middle term for grouping.",
-        "ur": "$(y - 63)(y - 15) = 385$ کو معیاری شکل $y^2 - 78y + 560 = 0$ میں کھولنے کے بعد، ہم اس کی تجزی کرنے کے لیے درمیانی رقم کو توڑنے کا طریقہ استعمال کرتے ہیں۔ ایسے دو نمبر، $-8$ اور $-70$، تلاش کرنا جنہیں جمع کرنے سے $-78$ اور ضرب دینے سے $560$ آئے، ہمیں گروپ بندی کے لیے درمیانی رقم کو توڑنے میں مدد دیتا ہے۔"
+        "en": "To factorize by mid-term breaking, we look for two numbers that multiply to $560$ and add up to $-78$. Rewriting $-78y$ as $-8y - 70y$ gives us four terms that can be grouped in pairs.",
+        "ur": "درمیانی رقم کو توڑ کر تجزی کرنے کے لیے، ہم ایسے دو اعداد تلاش کرتے ہیں جن کو ضرب دینے سے $560$ اور جمع کرنے سے $-78$ آئے۔ $-78y$ کو $-8y - 70y$ لکھنے سے ہمارے پاس چار رقوم بن جاتی ہیں جن کے دو دو کر کے جوڑے بنائے جا سکتے ہیں۔"
        }
       },
       {
@@ -7502,8 +7562,8 @@
         "(y*(y - 8) - 70*(y - 8)) - (0) == (y**2 - 8*y - 70*y + 560) - (0)"
        ],
        "why": {
-        "en": "We factor by grouping, pulling out the greatest common factor $y$ from the first two terms and $-70$ from the last two terms. Because the remaining bracket $(y - 8)$ is identical in both parts, we know our factorization is on the right track.",
-        "ur": "ہم گروپ بندی کے ذریعے تجزی کرتے ہیں، پہلی دو رقموں سے مشترک جزو ضربی $y$ اور آخری دو رقموں سے $-70$ باہر نکالتے ہیں۔ چونکہ باقی ماندہ بریکٹ $(y - 8)$ دونوں حصوں میں بالکل ایک جیسی ہے، اس سے پتہ چلتا ہے کہ ہماری تجزی بالکل درست سمت میں جا رہی ہے۔"
+        "en": "Using factorization by grouping, we take out the highest common factor from the first two terms and from the last two terms separately. Seeing the exact same bracket $(y - 8)$ appear twice confirms that our mid-term split is correct.",
+        "ur": "گروپ بندی کے ذریعے تجزی کرتے ہوئے، ہم پہلی دو رقوم اور آخری دو رقوم میں سے الگ الگ مشترک جزو باہر نکالتے ہیں۔ ایک جیسی بریکٹ $(y - 8)$ کا دو بار آنا اس بات کی تصدیق کرتا ہے کہ ہم نے درمیانی رقم کو بالکل صحیح توڑا ہے۔"
        }
       },
       {
@@ -7514,8 +7574,8 @@
         "((y - 70)*(y - 8)) - (0) == (y*(y - 8) - 70*(y - 8)) - (0)"
        ],
        "why": {
-        "en": "By the distributive law, we factor out the common binomial $(y - 8)$ from the expression. This changes the sum of terms into a product of two linear factors equal to $0$.",
-        "ur": "تقسیمی قانون کے مطابق، ہم اس جملے سے مشترک دو رقمی بریکٹ $(y - 8)$ کو باہر نکال لیتے ہیں۔ یہ رقموں کے مجموعے کو دو یک درجی اجزائے ضربی کے حاصل ضرب میں بدل دیتا ہے جو $0$ کے برابر ہے۔"
+        "en": "Since $(y - 8)$ is common to both parts, we factor it out to the front. This completes the factorization, turning the quadratic sum into a product of two linear factors equal to zero.",
+        "ur": "چونکہ $(y - 8)$ دونوں حصوں میں مشترک ہے، اس لیے ہم اسے باہر نکال لیتے ہیں۔ اس سے تجزی مکمل ہو جاتی ہے، اور دو درجی جملہ دو یک درجی اجزائے ضربی کے حاصلِ ضرب میں بدل جاتا ہے جو صفر کے برابر ہے۔"
        }
       },
       {
@@ -7523,8 +7583,8 @@
        "en": "A product is zero only when one of its factors is zero.",
        "ur": "حاصل ضرب صفر تب ہوتا ہے جب کوئی ایک جزو صفر ہو۔",
        "why": {
-        "en": "According to the zero-product property, if the product of two factors is $0$, then at least one of the factors must be $0$. This lets us break one quadratic equation into two simple linear equations.",
-        "ur": "ضربی صفر کی خاصیت کے مطابق، اگر دو اجزائے ضربی کا حاصل ضرب $0$ ہو، تو ان میں سے کم از کم ایک جزو لازمی طور پر $0$ ہونا چاہیے۔ اس اصول کی مدد سے ہم ایک دو درجی مساوات کو دو سادہ یک درجی مساواتوں میں توڑ لیتے ہیں۔"
+        "en": "By the zero-product property, if the product of two factors is zero, then at least one of the factors must be zero. This allows us to split the quadratic equation into two simple linear equations.",
+        "ur": "ضربی خاصیتِ صفر کے مطابق، اگر دو اجزائے ضربی کا حاصلِ ضرب صفر ہو تو ان میں سے کم از کم ایک جزو لازمی صفر ہوتا ہے۔ اس اصول کی مدد سے ہم دو درجی مساوات کو دو سادہ یک درجی مساواتوں میں تقسیم کر لیتے ہیں۔"
        }
       },
       {
@@ -7536,8 +7596,8 @@
         "(y**2 - 78*y + 560).subs(y, (70)) == 0"
        ],
        "why": {
-        "en": "Solving each linear equation gives us the two intermediate values for our helper variable $y$. However, since the original question asks for $x$, we must now use these $y$ values to find $x$.",
-        "ur": "ہر یک درجی مساوات کو حل کرنے سے ہمیں اپنے مددگار متغیر $y$ کی دو درمیانی قیمتیں مل جاتی ہیں۔ لیکن چونکہ اصل سوال میں $x$ کی قیمت پوچھی گئی ہے، اس لیے اب ہمیں $x$ معلوم کرنے کے لیے $y$ کی ان قیمتوں کو استعمال کرنا ہوگا۔"
+        "en": "Solving each linear equation gives us the two values of our temporary variable $y$. However, the question asked for $x$, so these values are our stepping stones to find the actual roots.",
+        "ur": "ہر یک درجی مساوات کو حل کرنے سے ہمیں اپنے عارضی متغیر $y$ کی دو قیمتیں مل جاتی ہیں۔ لیکن سوال میں $x$ کی قیمت پوچھی گئی ہے، اس لیے یہ قیمتیں اصل روٹس معلوم کرنے کے لیے ہمارا اگلا زینہ ہیں۔"
        }
       },
       {
@@ -7545,8 +7605,8 @@
        "en": "Put back $y = x^2 + 2x$.",
        "ur": "$y = x^2 + 2x$ واپس رکھیں۔",
        "why": {
-        "en": "We start the back-substitution process with the first value, $y = 8$, replacing $y$ with its original definition $x^2 + 2x$. This gives us our first quadratic equation in terms of the original variable $x$.",
-        "ur": "ہم پہلی قیمت $y = 8$ کے ساتھ واپسی متبادل کا عمل شروع کرتے ہیں، اور $y$ کی جگہ اس کی اصل تعریف $x^2 + 2x$ درج کرتے ہیں۔ اس سے ہمیں اصل متغیر $x$ کی شکل میں پہلی دو درجی مساوات مل جاتی ہے۔"
+        "en": "Now we undo our substitution by replacing $y$ with $x^2 + 2x$ for the first value, $y = 8$. This gives us our first true quadratic equation in $x$ to solve.",
+        "ur": "اب ہم پہلی قیمت $y = 8$ کے لیے $y$ کی جگہ واپس $x^2 + 2x$ رکھ کر اپنا متبادل ختم کرتے ہیں۔ اس سے ہمیں $x$ میں پہلی اصل دو درجی مساوات مل جاتی ہے جسے ہم نے حل کرنا ہے۔"
        }
       },
       {
@@ -7554,8 +7614,8 @@
        "en": "Start from the standard form.",
        "ur": "معیاری شکل سے شروع کریں۔",
        "why": {
-        "en": "To solve a quadratic equation, we first move all terms to one side so the other side is $0$, putting it in the standard form $ax^2 + bx + c = 0$. Now it is ready to be factorized.",
-        "ur": "کسی بھی دو درجی مساوات کو حل کرنے کے لیے، ہم سب سے پہلے تمام رقموں کو ایک طرف لے آتے ہیں تاکہ دوسری طرف $0$ رہ جائے، جس سے یہ معیاری شکل $ax^2 + bx + c = 0$ میں آ جاتی ہے۔ اب یہ مساوات تجزی کے لیے تیار ہے۔"
+        "en": "We subtract $8$ from both sides so that the right-hand side becomes zero. Writing the equation in standard form $ax^2 + bx + c = 0$ prepares it for mid-term breaking.",
+        "ur": "ہم دونوں اطراف سے $8$ تفریق کرتے ہیں تاکہ دائیں سائیڈ صفر ہو جائے۔ مساوات کو معیاری صورت $ax^2 + bx + c = 0$ میں لکھنا اسے درمیانی رقم توڑنے کے عمل کے لیے تیار کرتا ہے۔"
        }
       },
       {
@@ -7566,8 +7626,8 @@
         "(x**2 - 2*x + 4*x - 8) - (0) == (x**2 + 2*x - 8) - (0)"
        ],
        "why": {
-        "en": "We apply mid-term breaking to the quadratic in $x$ by finding two numbers, $-2$ and $4$, whose product is $-8$ and sum is $2$. Rewriting $2x$ as $-2x + 4x$ prepares the four terms for factoring by grouping.",
-        "ur": "ہم $x$ والی دو درجی مساوات پر درمیانی رقم توڑنے کا طریقہ لگاتے ہیں اور ایسے دو نمبر، $-2$ اور $4$، ڈھونڈتے ہیں جن کا حاصل ضرب $-8$ اور مجموعہ $2$ ہو۔ $2x$ کو $-2x + 4x$ کے طور پر لکھنا ان چار رقموں کو گروپ بندی کے ذریعے تجزی کے لیے تیار کرتا ہے۔"
+        "en": "We apply mid-term breaking again by finding two numbers whose product is $-8$ and sum is $2$. Splitting $2x$ into $-2x + 4x$ prepares the expression for factoring by grouping.",
+        "ur": "ہم دوبارہ درمیانی رقم توڑنے کا طریقہ لگاتے ہیں اور ایسے دو اعداد ڈھونڈتے ہیں جن کا حاصلِ ضرب $-8$ اور مجموعہ $2$ ہو۔ $2x$ کو $-2x + 4x$ میں توڑنے سے جملہ گروپ بندی کے ذریعے تجزی کے لیے تیار ہو جاتا ہے۔"
        }
       },
       {
@@ -7578,8 +7638,8 @@
         "(x*(x - 2) + 4*(x - 2)) - (0) == (x**2 - 2*x + 4*x - 8) - (0)"
        ],
        "why": {
-        "en": "Grouping the terms in pairs, we factor out $x$ from the first pair and $4$ from the second pair. Seeing the identical factor $(x - 2)$ appear twice confirms that the expression can be factored cleanly.",
-        "ur": "رقموں کے جوڑے بنا کر، ہم پہلے جوڑے سے $x$ اور دوسرے جوڑے سے $4$ بطور مشترک نکالتے ہیں۔ ایک جیسے جزو ضربی $(x - 2)$ کا دو بار ظاہر ہونا اس بات کی تصدیق کرتا ہے کہ اس جملے کی صاف تجزی ہو سکتی ہے۔"
+        "en": "We factor out $x$ from the first pair and $4$ from the second pair. Getting the repeated bracket $(x - 2)$ shows our grouping is successful.",
+        "ur": "ہم پہلے جوڑے میں سے $x$ اور دوسرے جوڑے میں سے $4$ مشترک نکالتے ہیں۔ یکساں بریکٹ $(x - 2)$ کا حاصل ہونا ظاہر کرتا ہے کہ ہماری گروپ بندی کامیاب رہی۔"
        }
       },
       {
@@ -7590,8 +7650,8 @@
         "((x + 4)*(x - 2)) - (0) == (x*(x - 2) + 4*(x - 2)) - (0)"
        ],
        "why": {
-        "en": "We take out the common bracket $(x - 2)$ to complete the factorization of the quadratic expression. The equation is now written as a product of two linear factors in $x$ equal to $0$.",
-        "ur": "ہم دو درجی جملے کی تجزی مکمل کرنے کے لیے مشترک بریکٹ $(x - 2)$ کو باہر نکال لیتے ہیں۔ اب یہ مساوات $x$ کے دو یک درجی اجزائے ضربی کے حاصل ضرب کے طور پر لکھی گئی ہے جو $0$ کے برابر ہے۔"
+        "en": "Factoring out the common bracket $(x - 2)$ turns the expression into a product of two linear factors. Now we can easily find the values of $x$ that make this product zero.",
+        "ur": "مشترک بریکٹ $(x - 2)$ کو باہر نکالنے سے جملہ دو یک درجی اجزائے ضربی کے حاصلِ ضرب میں بدل جاتا ہے۔ اب ہم آسانی سے $x$ کی وہ قیمتیں معلوم کر سکتے ہیں جو اس حاصلِ ضرب کو صفر بناتی ہیں۔"
        }
       },
       {
@@ -7599,8 +7659,8 @@
        "en": "A product is zero only when one of its factors is zero.",
        "ur": "حاصل ضرب صفر تب ہوتا ہے جب کوئی ایک جزو صفر ہو۔",
        "why": {
-        "en": "Applying the zero-product property again, we set each linear factor equal to $0$ separately. This reduces the problem to finding the roots of two basic linear equations.",
-        "ur": "ضربی صفر کی خاصیت کو دوبارہ استعمال کرتے ہوئے، ہم ہر یک درجی جزو کو الگ الگ $0$ کے برابر رکھتے ہیں۔ اس سے ہمارا مسئلہ دو بنیادی یک درجی مساواتوں کے روٹس معلوم کرنے تک محدود ہو جاتا ہے۔"
+        "en": "Applying the zero-product property again, we set each factor equal to zero separately. This breaks the problem down into two easy one-step equations.",
+        "ur": "ضربی خاصیتِ صفر کو دوبارہ استعمال کرتے ہوئے، ہم ہر جزوِ ضربی کو الگ الگ صفر کے برابر رکھتے ہیں۔ اس سے سوال دو انتہائی آسان مساواتوں میں بٹ جاتا ہے۔"
        }
       },
       {
@@ -7612,8 +7672,8 @@
         "(x**2 + 2*x - 8).subs(x, (2)) == 0"
        ],
        "why": {
-        "en": "By isolating $x$ in both equations, we obtain our first two real solutions for the original equation: $-4$ and $2$. Next, we must repeat this back-substitution for the second value of $y$ to find the remaining roots.",
-        "ur": "دونوں مساواتوں میں $x$ کو الگ کر کے، ہم اصل مساوات کے پہلے دو حقیقی حل حاصل کر لیتے ہیں: $-4$ اور $2$۔ اس کے بعد، باقی روٹس معلوم کرنے کے لیے ہمیں $y$ کی دوسری قیمت کے لیے بھی واپسی متبادل کا یہی عمل دہرانا ہوگا۔"
+        "en": "Solving these gives us the first two actual roots of the original equation, $x = -4$ and $x = 2$. We are halfway to the complete solution set, with the second value of $y$ still left to use.",
+        "ur": "انہیں حل کرنے سے ہمیں اصل مساوات کے پہلے دو حقیقی روٹس، $x = -4$ اور $x = 2$ مل جاتے ہیں۔ ہم مکمل حل سیٹ کے آدھے راستے پر پہنچ چکے ہیں، جبکہ $y$ کی دوسری قیمت کا استعمال ابھی باقی ہے۔"
        }
       },
       {
@@ -7621,8 +7681,8 @@
        "en": "Put back $y = x^2 + 2x$.",
        "ur": "$y = x^2 + 2x$ واپس رکھیں۔",
        "why": {
-        "en": "Now we take the second value, $y = 70$, and substitute $x^2 + 2x$ back in place of $y$. This sets up the second quadratic equation in $x$, which will yield the remaining two roots.",
-        "ur": "اب ہم دوسری قیمت $y = 70$ لیتے ہیں، اور $y$ کی جگہ واپس $x^2 + 2x$ درج کرتے ہیں۔ اس سے $x$ میں دوسری دو درجی مساوات بن جاتی ہے، جو ہمیں باقی دو روٹس دے گی۔"
+        "en": "Next, we take the second value, $y = 70$, and substitute $x^2 + 2x$ back in place of $y$. This sets up the second quadratic equation in $x$, which will give us the remaining two roots.",
+        "ur": "اس کے بعد، ہم دوسری قیمت $y = 70$ لیتے ہیں اور $y$ کی جگہ واپس $x^2 + 2x$ درج کرتے ہیں۔ اس سے $x$ میں دوسری دو درجی مساوات بن جاتی ہے، جو ہمیں باقی دو روٹس دے گی۔"
        }
       },
       {
@@ -7630,8 +7690,8 @@
        "en": "Compare with $ax^2 + bx + c = 0$.",
        "ur": "$ax^2 + bx + c = 0$ سے موازنہ کریں۔",
        "why": {
-        "en": "After moving $70$ to the left side to get $x^2 + 2x - 70 = 0$, we see that no integer factors of $-70$ add up to $2$, so we prepare to use the quadratic formula. Comparing with $ax^2 + bx + c = 0$ identifies the coefficients $a = 1$, $b = 2$, and $c = -70$.",
-        "ur": "$70$ کو بائیں طرف لے جا کر $x^2 + 2x - 70 = 0$ حاصل کرنے کے بعد، ہم دیکھتے ہیں کہ $-70$ کے کوئی ایسے صحیح عددی اجزاء نہیں ہیں جن کا مجموعہ $2$ بنے، اس لیے ہم دو درجی فارمولا استعمال کرنے کی تیاری کرتے ہیں۔ $ax^2 + bx + c = 0$ سے موازنہ کرنے پر ہمیں عددی سر $a = 1$، $b = 2$، اور $c = -70$ ملتے ہیں۔"
+        "en": "After bringing $70$ to the left to make it $x^2 + 2x - 70 = 0$, we see that no simple integers multiply to $-70$ and add to $2$. So we list the coefficients $a, b,$ and $c$ from standard form to use the quadratic formula instead.",
+        "ur": "$70$ کو بائیں طرف لا کر $x^2 + 2x - 70 = 0$ بنانے کے بعد ہم دیکھتے ہیں کہ ایسے کوئی سادہ صحیح اعداد نہیں ہیں جنہیں ضرب دینے سے $-70$ اور جمع کرنے سے $2$ آئے۔ اس لیے ہم دو درجی کلیہ (فارمولا) استعمال کرنے کی خاطر معیاری صورت سے عددی سر $a, b,$ اور $c$ الگ لکھ لیتے ہیں۔"
        }
       },
       {
@@ -7639,8 +7699,8 @@
        "en": "Put $a$, $b$ and $c$ in the quadratic formula.",
        "ur": "دو درجی کلیہ میں $a$، $b$ اور $c$ کی قیمتیں رکھیں۔",
        "why": {
-        "en": "We substitute the values of $a$, $b$, and $c$ directly into the quadratic formula, taking care with the negative sign on $c = -70$. This formula guarantees we will find the exact roots even when factorization by mid-term breaking is not possible.",
-        "ur": "ہم $a$، $b$، اور $c$ کی قیمتیں براہِ راست دو درجی فارمولے میں درج کرتے ہیں، اور $c = -70$ کے منفی نشان کا خاص خیال رکھتے ہیں۔ یہ فارمولا اس بات کی ضمانت دیتا ہے کہ جب درمیانی رقم توڑ کر تجزی ممکن نہ ہو تب بھی ہمیں درست روٹس مل جائیں گے۔"
+        "en": "We substitute the values of $a, b,$ and $c$ carefully into the quadratic formula. This formula is a reliable rule that finds the roots of any quadratic equation, even when factorization is not possible.",
+        "ur": "ہم $a, b,$ اور $c$ کی قیمتیں احتیاط کے ساتھ دو درجی کلیے میں درج کرتے ہیں۔ یہ کلیہ ایک قابلِ بھروسہ اصول ہے جو کسی بھی دو درجی مساوات کے روٹس معلوم کر دیتا ہے، چاہے اس کی تجزی ممکن نہ بھی ہو۔"
        }
       },
       {
@@ -7651,8 +7711,8 @@
         "(2)**2 - 4*(1)*(-70) == 284"
        ],
        "why": {
-        "en": "We simplify the discriminant under the square root: multiplying $-4(1)(-70)$ gives $+280$, which adds to $4$ to make $284$. Because $284$ is positive, this tells us the remaining two roots are also real numbers.",
-        "ur": "ہم جزر کے نیچے موجود فرق کنندہ کو مختصر کرتے ہیں: $-4(1)(-70)$ کو ضرب دینے سے $+280$ آتا ہے، جو $4$ میں جمع ہو کر $284$ بناتا ہے۔ چونکہ $284$ ایک مثبت عدد ہے، اس سے ہمیں پتہ چلتا ہے کہ باقی دو روٹس بھی حقیقی اعداد ہیں۔"
+        "en": "We simplify the expression inside the square root (the discriminant) and the denominator. Watching the minus-times-minus sign carefully gives us $+280$, which adds to $4$ to make $284$ under the root.",
+        "ur": "ہم جزر کے اندر والے حصے (فرق کنندہ) اور مخرج کو مختصر کرتے ہیں۔ منفی ضرب منفی کی علامت کا دھیان رکھنے سے ہمیں $+280$ ملتا ہے، جو $4$ میں جمع ہو کر جزر کے نیچے $284$ بنا دیتا ہے۔"
        }
       },
       {
@@ -7664,8 +7724,8 @@
         "(x**2 + 2*x - 70).subs(x, (-sqrt(71) - 1)) == 0"
        ],
        "why": {
-        "en": "Since $284 = 4 \\times 71$, we simplify $\\sqrt{284}$ to $2\\sqrt{71}$ and then divide both terms in the numerator by the denominator $2$. This gives us the exact irrational roots $-1 + \\sqrt{71}$ and $-1 - \\sqrt{71}$ in their simplest radical form.",
-        "ur": "چونکہ $284 = 4 \\times 71$ ہوتا ہے، اس لیے ہم $\\sqrt{284}$ کو مختصر کر کے $2\\sqrt{71}$ لکھتے ہیں اور پھر شمار کنندہ کی دونوں رقموں کو مخرج $2$ پر تقسیم کر دیتے ہیں۔ اس سے ہمیں اپنی سادہ ترین جزری شکل میں بالکل درست غیر ناطق روٹس $-1 + \\sqrt{71}$ اور $-1 - \\sqrt{71}$ مل جاتے ہیں۔"
+        "en": "Since $284 = 4 \\times 71$, we take the square root of $4$ out of the radical and divide both terms in the numerator by the denominator $2$. This leaves the irrational roots in their simplest radical form.",
+        "ur": "چونکہ $284 = 4 \\times 71$ ہوتا ہے، اس لیے ہم $4$ کا جزر باہر نکال لیتے ہیں اور شمار کنندہ کی دونوں رقوم کو مخرج $2$ پر تقسیم کر دیتے ہیں۔ اس سے غیر ناطق روٹس اپنی سادہ ترین جذری صورت میں آ جاتے ہیں۔"
        }
       },
       {
@@ -7679,15 +7739,15 @@
         "simplify(((x+9)*(x-3)*(x-7)*(x+5)-385).subs(x, (-sqrt(71) - 1))) == 0"
        ],
        "why": {
-        "en": "Finally, we gather all four values of $x$ from both cases and write them together inside curly brackets as the Solution Set (S.S). Having four roots makes complete sense because multiplying four linear brackets in $x$ gives a degree-4 equation.",
-        "ur": "آخر میں، ہم دونوں صورتوں سے حاصل ہونے والی $x$ کی چاروں قیمتوں کو اکٹھا کرتے ہیں اور انہیں حل سیٹ (S.S) کے طور پر درمیانی بریکٹ کے اندر لکھتے ہیں۔ چار روٹس کا آنا بالکل منطقی ہے کیونکہ $x$ کی چار یک درجی بریکٹوں کو ضرب دینے سے درجہ 4 کی مساوات بنتی ہے۔"
+        "en": "Finally, we gather all four values of $x$ from both cases into the solution set. Because the original equation has four factors of $x$ multiplied together (degree $4$), finding four roots makes our solution complete.",
+        "ur": "آخر میں، ہم دونوں صورتوں سے حاصل ہونے والی $x$ کی چاروں قیمتوں کو حل سیٹ میں اکٹھا کر کے لکھ دیتے ہیں۔ چونکہ اصل مساوات میں $x$ کے چار اجزائے ضربی آپس میں ضرب کھا رہے ہیں (درجہ $4$)، اس لیے چار روٹس کا نکل آنا ہمارے حل کو مکمل کرتا ہے۔"
        }
       }
      ],
      "answer": "$x = -4,\\ 2,\\ -1 + \\sqrt{71},\\ -1 - \\sqrt{71}$",
      "meaning": {
-      "en": "The final answer means that $x = -4$, $x = 2$, $x = -1 + \\sqrt{71}$, and $x = -1 - \\sqrt{71}$ are the exact four numbers that make the original equation $(x+9)(x-3)(x-7)(x+5) = 385$ true. You can easily check a rational root like $x = 2$ by substituting it into the expression $x^2 + 2x$ from our steps: $(2)^2 + 2(2) = 4 + 4 = 8$, which matches $y = 8$ and makes $(8 - 63)(8 - 15) = 385$, confirming our solution is completely correct.",
-      "ur": "آخری جواب کا مطلب یہ ہے کہ $x = -4$، $x = 2$، $x = -1 + \\sqrt{71}$، اور $x = -1 - \\sqrt{71}$ وہ چار درست اعداد ہیں جو اصل مساوات $(x+9)(x-3)(x-7)(x+5) = 385$ کو درست ثابت کرتے ہیں۔ آپ $x = 2$ جیسے ناطق روٹ کی باآسانی پڑتال کر سکتے ہیں؛ اسے ہمارے مراحل میں موجود جملے $x^2 + 2x$ میں درج کریں تو $(2)^2 + 2(2) = 4 + 4 = 8$ آتا ہے، جو $y = 8$ کے مطابق ہے اور $(8 - 63)(8 - 15) = 385$ بناتا ہے، جس سے تصدیق ہوتی ہے کہ ہمارا حل بالکل درست ہے۔"
+      "en": "The solution set $\\{-4, 2, -1 + \\sqrt{71}, -1 - \\sqrt{71}\\}$ gives the four exact values of $x$ for which the product of the four brackets $(x+9)(x-3)(x-7)(x+5)$ equals $385$. We can easily check a rational root like $x = 2$: substituting it into the intermediate expression $x^2 + 2x$ gives $(2)^2 + 2(2) = 4 + 4 = 8$, and then the grouped product $(y - 63)(y - 15)$ becomes $(8 - 63)(8 - 15) = 385$, which matches the right-hand side.",
+      "ur": "حل سیٹ $\\{-4, 2, -1 + \\sqrt{71}, -1 - \\sqrt{71}\\}$ ہمیں $x$ کی وہ چار درست قیمتیں دیتا ہے جن کے لیے چاروں بریکٹس $(x+9)(x-3)(x-7)(x+5)$ کا حاصلِ ضرب $385$ کے برابر ہوتا ہے۔ ہم $x = 2$ جیسے ناطق روٹ کی باآسانی پڑتال کر سکتے ہیں: اسے درمیانی جملے $x^2 + 2x$ میں درج کرنے سے $(2)^2 + 2(2) = 4 + 4 = 8$ ملتا ہے، اور پھر جوڑوں کا حاصلِ ضرب $(y - 63)(y - 15)$ قیمت رکھنے پر $(8 - 63)(8 - 15) = 385$ بن جاتا ہے، جو دائیں سائیڈ کے بالکل برابر ہے۔"
      },
      "book_key": "x=-4, 2, -1+\\sqrt{71}, -1-\\sqrt{71}"
     },
@@ -7703,8 +7763,8 @@
         "(x-1)*(x-2)*(x+5)*(x-8) == (x**2-3*x+2)*(x**2-3*x-40)"
        ],
        "why": {
-        "en": "Instead of multiplying all four brackets blindly into a difficult degree-$4$ equation, we pair them using the rule $(-1) + (-2) = -3$ and $5 + (-8) = -3$. This clever pairing gives us the exact same $x^2 - 3x$ part in both brackets, making the equation much easier to handle.",
-        "ur": "چاروں بریکٹوں کو بغیر سوچے سمجھے ضرب دے کر ایک مشکل درجہ چہارم کی مساوات بنانے کے بجائے، ہم $(-1) + (-2) = -3$ اور $5 + (-8) = -3$ کے اصول سے ان کے جوڑے بناتے ہیں۔ اس سمجھداری سے دونوں بریکٹوں میں ایک جیسا حصہ $x^2 - 3x$ آ جاتا ہے، جس سے مساوات کو حل کرنا بہت آسان ہو جاتا ہے۔"
+        "en": "Notice that $(-1) + (-2) = -3$ and $5 + (-8) = -3$, so we pair these factors and multiply them. This clever grouping gives us the exact same $x^2 - 3x$ part in both brackets, avoiding a difficult fourth-degree equation.",
+        "ur": "غور کریں کہ $(-1) + (-2) = -3$ اور $5 + (-8) = -3$ بنتا ہے، اس لیے ہم ان کے جوڑے بنا کر ضرب دیتے ہیں۔ اس ترتیب سے دونوں بریکٹوں میں ایک جیسا حصہ $x^2 - 3x$ بن جاتا ہے، اور ہم درجہ چہارم کی مشکل مساوات سے بچ جاتے ہیں۔"
        }
       },
       {
@@ -7712,8 +7772,20 @@
        "en": "Put $y$ for the common part.",
        "ur": "مشترک حصے کی جگہ $y$ رکھیں۔",
        "why": {
-        "en": "We use the method of substitution to replace the repeated expression $x^2 - 3x$ with a single letter $y$. This reduces our complicated problem into a simple quadratic equation in $y$: $(y+2)(y-40) = -360$.",
-        "ur": "ہم عملِ تفویض (substitution) کا استعمال کرتے ہوئے بار بار آنے والے جملے $x^2 - 3x$ کی جگہ ایک حرف $y$ رکھتے ہیں۔ اس سے ہمارا پیچیدہ سوال $y$ میں ایک سادہ دو درجی مساوات $(y+2)(y-40) = -360$ میں بدل جاتا ہے۔"
+        "en": "We use the substitution method by replacing the repeated expression $x^2 - 3x$ with a single letter $y$. This turns our complicated equation into a much simpler form that we already know how to handle.",
+        "ur": "ہم طریقہ تبدیلیِ متغیر استعمال کرتے ہوئے بار بار آنے والے جملے $x^2 - 3x$ کی جگہ ایک حرف $y$ فرض کر لیتے ہیں۔ اس سے ہماری پیچیدہ مساوات ایک بہت ہی سادہ شکل میں بدل جاتی ہے جسے حل کرنا ہم پہلے سے جانتے ہیں۔"
+       }
+      },
+      {
+       "math": "\\left(y + 2\\right) \\left(y - 40\\right) + 360 = 0 \\Rightarrow y^{2} - 38 y + 280 = 0",
+       "en": "Write the equation in $y$ and multiply out to get a quadratic in standard form.",
+       "ur": "مساوات کو $y$ میں لکھیں اور ضرب دے کر معیاری دو درجی مساوات بنائیں۔",
+       "check": [
+        "expand((y+2)*(y-40)+360) == y**2 - 38*y + 280"
+       ],
+       "why": {
+        "en": "By putting $y$ into the equation, expanding the brackets, and shifting $-360$ to the left side, we get a standard quadratic equation $ay^2 + by + c = 0$. Having zero on the right side is necessary before we can factorize.",
+        "ur": "مساوات میں $y$ درج کر کے، بریکٹیں کھول کر اور $-360$ کو بائیں طرف لا کر ہمیں معیاری دو درجی مساوات $y^2 - 38y + 280 = 0$ ملتی ہے۔ تجزی کرنے سے پہلے دائیں طرف صفر لانا ضروری ہوتا ہے۔"
        }
       },
       {
@@ -7724,8 +7796,8 @@
         "(y**2 - 10*y - 28*y + 280) - (0) == (y**2 - 38*y + 280) - (0)"
        ],
        "why": {
-        "en": "After expanding the brackets and bringing $-360$ to the left side to get $y^2 - 38y + 280 = 0$, we apply mid-term breaking. This rewrites the middle term $-38y$ as $-10y - 28y$ so that we can factorize by grouping.",
-        "ur": "بریکٹوں کو کھولنے اور $-360$ کو بائیں طرف لا کر $y^2 - 38y + 280 = 0$ بنانے کے بعد، ہم درمیانی رقم کو توڑنے کا طریقہ لگاتے ہیں۔ اس سے درمیانی رقم $-38y$ کو $-10y - 28y$ لکھا جاتا ہے تاکہ ہم گروپ بنا کر تجزی کر سکیں۔"
+        "en": "To factorize by mid-term breaking, we need two numbers that multiply to $+280$ and add up to $-38$. The numbers $-10$ and $-28$ work, allowing us to rewrite the three terms as four terms for grouping.",
+        "ur": "درمیانی رقم کو توڑ کر تجزی کرنے کے لیے ہمیں ایسے دو اعداد چاہئیں جن کا حاصلِ ضرب $+280$ اور مجموعہ $-38$ ہو۔ وہ اعداد $-10$ اور $-28$ ہیں، جن کی مدد سے ہم تین رقوم کو چار رقوم میں بدل دیتے ہیں تاکہ جوڑے بنائے جا سکیں۔"
        }
       },
       {
@@ -7736,8 +7808,8 @@
         "(y*(y - 10) - 28*(y - 10)) - (0) == (y**2 - 10*y - 28*y + 280) - (0)"
        ],
        "why": {
-        "en": "We factor out $y$ from the first two terms and $-28$ from the last two terms. Because the bracket $(y - 10)$ is identical in both parts, we know our factorization is on the right track.",
-        "ur": "ہم پہلی دو رقموں میں سے $y$ اور آخری دو رقموں میں سے $-28$ مشترک (common) نکالتے ہیں۔ چونکہ دونوں حصوں میں بریکٹ $(y - 10)$ بالکل ایک جیسی ہے، اس سے پتہ چلتا ہے کہ ہماری تجزی بالکل ٹھیک جا رہی ہے۔"
+        "en": "We group the four terms into two pairs and factor out the highest common factor from each. Seeing the identical bracket $(y - 10)$ appear twice confirms that our mid-term breaking is on the right track.",
+        "ur": "ہم چار رقوم کے دو جوڑے بناتے ہیں اور ہر جوڑے میں سے مشترک رقم باہر نکال لیتے ہیں۔ دونوں جگہ ایک جیسی بریکٹ $(y - 10)$ کا آنا اس بات کی تصدیق کرتا ہے کہ ہماری تجزی بالکل درست جا رہی ہے۔"
        }
       },
       {
@@ -7748,8 +7820,8 @@
         "((y - 28)*(y - 10)) - (0) == (y*(y - 10) - 28*(y - 10)) - (0)"
        ],
        "why": {
-        "en": "By taking out the common bracket $(y - 10)$, we complete the factorization of the quadratic in $y$. Turning a sum of terms into a product of two linear factors equal to $0$ is the key to finding $y$.",
-        "ur": "مشترک بریکٹ $(y - 10)$ کو باہر نکال کر ہم $y$ میں دو درجی مساوات کی تجزی مکمل کرتے ہیں۔ رقموں کے مجموعے کو دو یک درجی اجزائے ضربی کے حاصلِ ضرب (جو $0$ کے برابر ہو) میں بدلنا ہی $y$ کی قیمت نکالنے کی کنجی ہے۔"
+        "en": "Since $(y - 10)$ is common to both parts, we factor it out to complete the factorization. This changes our quadratic expression from a sum of terms into a product of two linear factors.",
+        "ur": "چونکہ $(y - 10)$ دونوں حصوں میں مشترک ہے، اس لیے ہم اسے باہر نکال کر تجزی مکمل کر لیتے ہیں۔ اس سے ہماری دو درجی مساوات جمع کی شکل سے نکل کر دو یک درجی اجزائے ضربی کے حاصلِ ضرب میں بدل جاتی ہے۔"
        }
       },
       {
@@ -7757,8 +7829,8 @@
        "en": "A product is zero only when one of its factors is zero.",
        "ur": "حاصل ضرب صفر تب ہوتا ہے جب کوئی ایک جزو صفر ہو۔",
        "why": {
-        "en": "Using the zero-product property, if two factors multiply to give $0$, at least one of them must be $0$. This lets us split one quadratic equation into two simple linear equations.",
-        "ur": "ضربی خاصیتِ صفر کے مطابق، اگر دو اجزائے ضربی کا حاصلِ ضرب $0$ ہو، تو ان میں سے کم از کم ایک لازمی $0$ ہوتا ہے۔ اس سے ہم ایک دو درجی مساوات کو دو سادہ یک درجی مساواتوں میں توڑ لیتے ہیں۔"
+        "en": "Using the zero-product property, if the product of two brackets is $0$, at least one of them must be $0$. This lets us split the quadratic equation into two simple linear equations.",
+        "ur": "ضربی خاصیت کے مطابق، اگر دو بریکٹوں کا حاصلِ ضرب $0$ ہو تو ان میں سے کم از کم ایک بریکٹ ضرور $0$ کے برابر ہوتی ہے۔ اس اصول سے ہم دو درجی مساوات کو دو سادہ یک درجی مساواتوں میں تقسیم کر لیتے ہیں۔"
        }
       },
       {
@@ -7770,8 +7842,8 @@
         "(y**2 - 38*y + 280).subs(y, (28)) == 0"
        ],
        "why": {
-        "en": "Solving each small equation gives us the two values of our helper variable, $y = 10$ and $y = 28$. Remember, we are not done yet because the original question asks for $x$, not $y$.",
-        "ur": "ہر چھوٹی مساوات کو حل کرنے سے ہمیں اپنے مددگار متغیر کی دو قیمتیں $y = 10$ اور $y = 28$ مل جاتی ہیں۔ یاد رکھیں، سوال ابھی مکمل نہیں ہوا کیونکہ اصل سوال میں $x$ کی قیمت پوچھی گئی ہے، $y$ کی نہیں۔"
+        "en": "Solving each simple equation gives us the two values for our temporary variable, $y = 10$ and $y = 28$. Now we are ready to go back and find the actual values of $x$.",
+        "ur": "ہر سادہ مساوات کو حل کرنے سے ہمیں فرضی متغیر کی دو قیمتیں $y = 10$ اور $y = 28$ مل جاتی ہیں۔ اب ہم اصل متغیر $x$ کی قیمتیں معلوم کرنے کے لیے تیار ہیں۔"
        }
       },
       {
@@ -7779,8 +7851,8 @@
        "en": "Put back $y = x^2 - 3x$.",
        "ur": "$y = x^2 - 3x$ واپس رکھیں۔",
        "why": {
-        "en": "Now we undo our substitution for the first value, $y = 10$, by putting $x^2 - 3x$ back in place of $y$. This sets up our first quadratic equation in the original variable $x$.",
-        "ur": "اب ہم پہلی قیمت $y = 10$ کے لیے اپنی فرضی قیمت واپس لوٹاتے ہیں اور $y$ کی جگہ دوبارہ $x^2 - 3x$ رکھتے ہیں۔ اس سے اصل متغیر $x$ میں ہماری پہلی دو درجی مساوات بن جاتی ہے۔"
+        "en": "Remembering that $y$ was just a stand-in for $x^2 - 3x$, we substitute it back for the first value, $y = 10$. This gives us our first quadratic equation in terms of the original variable $x$.",
+        "ur": "چونکہ $y$ صرف $x^2 - 3x$ کی جگہ فرض کیا گیا تھا، اس لیے ہم پہلی قیمت $y = 10$ کے لیے اسے واپس درج کرتے ہیں۔ اس سے ہمیں اصل متغیر $x$ میں پہلی دو درجی مساوات مل جاتی ہے۔"
        }
       },
       {
@@ -7788,8 +7860,8 @@
        "en": "Start from the standard form.",
        "ur": "معیاری شکل سے شروع کریں۔",
        "why": {
-        "en": "We shift $10$ to the left-hand side so that the right-hand side becomes $0$. Every quadratic equation must be in standard form $ax^2 + bx + c = 0$ before we can factorize it.",
-        "ur": "ہم $10$ کو بائیں طرف منتقل کرتے ہیں تاکہ دائیں طرف $0$ رہ جائے۔ کسی بھی دو درجی مساوات کی تجزی کرنے سے پہلے اس کا معیاری شکل $ax^2 + bx + c = 0$ میں ہونا ضروری ہے۔"
+        "en": "We move $10$ to the left side so that the right side becomes $0$. Putting the quadratic equation into standard form $x^2 - 3x - 10 = 0$ prepares it for factorization.",
+        "ur": "ہم $10$ کو بائیں طرف لے آتے ہیں تاکہ دائیں طرف $0$ رہ جائے۔ دو درجی مساوات کو معیاری شکل $x^2 - 3x - 10 = 0$ میں لانے سے اس کی تجزی کرنا ممکن ہو جاتا ہے۔"
        }
       },
       {
@@ -7800,8 +7872,8 @@
         "(x**2 + 2*x - 5*x - 10) - (0) == (x**2 - 3*x - 10) - (0)"
        ],
        "why": {
-        "en": "We apply mid-term breaking to this quadratic in $x$ by finding two numbers that multiply to $-10$ and add to $-3$. Splitting $-3x$ into $+2x - 5x$ prepares the four terms for grouping.",
-        "ur": "ہم $x$ والی اس دو درجی مساوات پر درمیانی رقم توڑنے کا اصول لگاتے ہیں اور ایسے دو اعداد ڈھونڈتے ہیں جنہیں ضرب دیں تو $-10$ آئے اور جمع کریں تو $-3$ آئے۔ $-3x$ کو $+2x - 5x$ میں توڑنے سے چار رقمیں گروپ بنانے کے لیے تیار ہو جاتی ہیں۔"
+        "en": "We break the middle term $-3x$ using $+2$ and $-5$, because $(2) \\times (-5) = -10$ and $2 + (-5) = -3$. This creates four terms so we can factorize by grouping.",
+        "ur": "ہم درمیانی رقم $-3x$ کو $+2$ اور $-5$ کی مدد سے توڑتے ہیں کیونکہ $(2) \\times (-5) = -10$ اور $2 + (-5) = -3$ بنتا ہے۔ اس طرح چار رقوم بن جاتی ہیں جن کے ہم جوڑے بنا سکتے ہیں۔"
        }
       },
       {
@@ -7812,8 +7884,8 @@
         "(x*(x + 2) - 5*(x + 2)) - (0) == (x**2 + 2*x - 5*x - 10) - (0)"
        ],
        "why": {
-        "en": "Taking out the common factor from each pair reveals the repeated bracket $(x + 2)$. This confirms our middle-term split was correct and moves us one step away from full factorization.",
-        "ur": "ہر جوڑے میں سے مشترک جزو نکالنے پر ایک جیسی بریکٹ $(x + 2)$ سامنے آتی ہے۔ اس سے تصدیق ہوتی ہے کہ ہم نے درمیانی رقم بالکل ٹھیک توڑی تھی اور اب ہم مکمل تجزی سے بس ایک قدم دور ہیں۔"
+        "en": "We take out $x$ from the first pair and $-5$ from the second pair. Getting the same $(x + 2)$ bracket in both places shows we are ready for the next step.",
+        "ur": "ہم پہلے جوڑے میں سے $x$ اور دوسرے جوڑے میں سے $-5$ مشترک نکالتے ہیں۔ دونوں جگہ ایک جیسی بریکٹ $(x + 2)$ کا آنا بتاتا ہے کہ ہمارا عمل درست ہے۔"
        }
       },
       {
@@ -7824,8 +7896,8 @@
         "((x - 5)*(x + 2)) - (0) == (x*(x + 2) - 5*(x + 2)) - (0)"
        ],
        "why": {
-        "en": "Factoring out the common bracket $(x + 2)$ turns the quadratic expression into a product of two linear factors equal to $0$. Now we can easily isolate $x$.",
-        "ur": "مشترک بریکٹ $(x + 2)$ کو باہر نکالنے سے دو درجی جملہ دو یک درجی اجزائے ضربی کے حاصلِ ضرب (برابر $0$) میں بدل جاتا ہے۔ اب ہم آسانی سے $x$ کو الگ کر سکتے ہیں۔"
+        "en": "Factoring out the common bracket $(x + 2)$ turns the expression into a product of two linear factors, $(x - 5)(x + 2) = 0$.",
+        "ur": "مشترک بریکٹ $(x + 2)$ کو باہر نکالنے سے مساوات دو یک درجی اجزائے ضربی کے حاصلِ ضرب $(x - 5)(x + 2) = 0$ میں بدل جاتی ہے۔"
        }
       },
       {
@@ -7833,8 +7905,8 @@
        "en": "A product is zero only when one of its factors is zero.",
        "ur": "حاصل ضرب صفر تب ہوتا ہے جب کوئی ایک جزو صفر ہو۔",
        "why": {
-        "en": "By the zero-product property, we set each linear factor equal to $0$ separately. This breaks the problem down into two basic equations.",
-        "ur": "ضربی خاصیتِ صفر کی رو سے، ہم ہر یک درجی جزوِ ضربی کو الگ الگ $0$ کے برابر رکھتے ہیں۔ اس سے سوال دو بنیادی مساواتوں میں تقسیم ہو جاتا ہے۔"
+        "en": "By the zero-product rule, we set each factor equal to $0$ separately. This breaks the problem down into two easy equations.",
+        "ur": "صفر کی ضربی خاصیت کے تحت ہم ہر جزوِ ضربی کو الگ الگ $0$ کے برابر رکھتے ہیں۔ اس سے سوال دو آسان مساواتوں میں بٹ جاتا ہے۔"
        }
       },
       {
@@ -7846,8 +7918,8 @@
         "(x**2 - 3*x - 10).subs(x, (5)) == 0"
        ],
        "why": {
-        "en": "Solving these gives our first two actual solutions for the original equation: $x = -2$ and $x = 5$. Half of our roots are now found!",
-        "ur": "انہیں حل کرنے سے ہمیں اصل مساوات کے پہلے دو حقیقی حل مل جاتے ہیں: $x = -2$ اور $x = 5$۔ ہمارے آدھے جذور (roots) اب معلوم ہو چکے ہیں!"
+        "en": "Isolating $x$ gives us the first two roots of our original equation: $x = -2$ and $x = 5$. Half of our final answer is now complete.",
+        "ur": "$x$ کو اکیلا کرنے پر ہمیں اپنی اصل مساوات کے پہلے دو روٹس (جذور) $x = -2$ اور $x = 5$ مل جاتے ہیں۔ ہمارا آدھا جواب اب مکمل ہو چکا ہے۔"
        }
       },
       {
@@ -7855,8 +7927,8 @@
        "en": "Put back $y = x^2 - 3x$.",
        "ur": "$y = x^2 - 3x$ واپس رکھیں۔",
        "why": {
-        "en": "Next, we take the second value of our helper variable, $y = 28$, and replace $y$ with $x^2 - 3x$ again. This gives us the second branch of the problem to find the remaining roots.",
-        "ur": "اس کے بعد، ہم اپنے مددگار متغیر کی دوسری قیمت $y = 28$ لیتے ہیں اور $y$ کی جگہ دوبارہ $x^2 - 3x$ رکھتے ہیں۔ اس سے ہمیں باقی ماندہ جذور معلوم کرنے کے لیے سوال کا دوسرا حصہ مل جاتا ہے۔"
+        "en": "Now we take the second value, $y = 28$, and replace $y$ with $x^2 - 3x$ again. This sets up the second quadratic equation we need to solve to find the remaining roots.",
+        "ur": "اب ہم دوسری قیمت $y = 28$ لیتے ہیں اور دوبارہ $y$ کی جگہ $x^2 - 3x$ درج کرتے ہیں۔ اس سے دوسری دو درجی مساوات بن جاتی ہے جسے حل کر کے ہم باقی روٹس نکالیں گے۔"
        }
       },
       {
@@ -7864,8 +7936,8 @@
        "en": "Start from the standard form.",
        "ur": "معیاری شکل سے شروع کریں۔",
        "why": {
-        "en": "Bringing $28$ to the left side puts this second quadratic equation into standard form with $0$ on the right. Now it is ready for factorization just like the first one.",
-        "ur": "$28$ کو بائیں طرف لانے سے یہ دوسری دو درجی مساوات بھی معیاری شکل میں آ جاتی ہے جس کے دائیں طرف $0$ ہے۔ اب یہ بھی پہلی مساوات کی طرح تجزی کے لیے تیار ہے۔"
+        "en": "Shifting $28$ to the left side gives us $x^2 - 3x - 28 = 0$. Now this second quadratic is also in standard form with zero on the right.",
+        "ur": "$28$ کو بائیں طرف منتقل کرنے سے ہمیں $x^2 - 3x - 28 = 0$ ملتا ہے۔ اب یہ دوسری دو درجی مساوات بھی اپنی معیاری شکل میں آ گئی ہے۔"
        }
       },
       {
@@ -7876,8 +7948,8 @@
         "(x**2 + 4*x - 7*x - 28) - (0) == (x**2 - 3*x - 28) - (0)"
        ],
        "why": {
-        "en": "We use mid-term breaking again, choosing $+4$ and $-7$ because their product is $-28$ and their sum is $-3$. This splits $-3x$ into $+4x - 7x$ so we can factor by grouping.",
-        "ur": "ہم دوبارہ درمیانی رقم توڑنے کا طریقہ استعمال کرتے ہیں اور $+4$ اور $-7$ کو چنتے ہیں کیونکہ ان کا حاصلِ ضرب $-28$ اور مجموعہ $-3$ ہے۔ اس طرح $-3x$ کو $+4x - 7x$ میں توڑا جاتا ہے تاکہ ہم گروپ بنا کر تجزی کر سکیں۔"
+        "en": "We split $-3x$ into $+4x$ and $-7x$ since $(4) \\times (-7) = -28$ and $4 + (-7) = -3$. This prepares the equation for factoring by pairs.",
+        "ur": "ہم $-3x$ کو $+4x$ اور $-7x$ میں توڑتے ہیں کیونکہ $(4) \\times (-7) = -28$ اور $4 + (-7) = -3$ ہوتا ہے۔ اس سے مساوات جوڑے بنا کر تجزی کرنے کے لیے تیار ہو جاتی ہے۔"
        }
       },
       {
@@ -7888,8 +7960,8 @@
         "(x*(x + 4) - 7*(x + 4)) - (0) == (x**2 + 4*x - 7*x - 28) - (0)"
        ],
        "why": {
-        "en": "Factoring $x$ from the first pair and $-7$ from the second pair produces the matching bracket $(x + 4)$. Seeing this common bracket tells us our work is accurate.",
-        "ur": "پہلے جوڑے سے $x$ اور دوسرے جوڑے سے $-7$ مشترک نکالنے سے ایک جیسی بریکٹ $(x + 4)$ بنتی ہے۔ اس مشترک بریکٹ کو دیکھ کر ہمیں یقین ہو جاتا ہے کہ ہمارا کام درست ہے۔"
+        "en": "Pulling out the common factor $x$ from the first two terms and $-7$ from the last two reveals the shared bracket $(x + 4)$.",
+        "ur": "پہلی دو رقوم میں سے $x$ اور آخری دو میں سے $-7$ مشترک نکالنے سے یکساں بریکٹ $(x + 4)$ واضح ہو جاتی ہے۔"
        }
       },
       {
@@ -7900,8 +7972,8 @@
         "((x - 7)*(x + 4)) - (0) == (x*(x + 4) - 7*(x + 4)) - (0)"
        ],
        "why": {
-        "en": "Pulling out the common factor $(x + 4)$ expresses the second quadratic as a product of two linear brackets equal to $0$.",
-        "ur": "مشترک جزو $(x + 4)$ کو باہر نکالنے سے دوسری دو درجی مساوات بھی دو یک درجی بریکٹوں کے حاصلِ ضرب (برابر $0$) کی شکل میں آ جاتی ہے۔"
+        "en": "We pull out the common $(x + 4)$ bracket, successfully expressing the quadratic as the product $(x - 7)(x + 4) = 0$.",
+        "ur": "ہم مشترک بریکٹ $(x + 4)$ کو باہر نکال لیتے ہیں، جس سے دو درجی مساوات حاصلِ ضرب $(x - 7)(x + 4) = 0$ کی شکل میں آ جاتی ہے۔"
        }
       },
       {
@@ -7909,8 +7981,8 @@
        "en": "A product is zero only when one of its factors is zero.",
        "ur": "حاصل ضرب صفر تب ہوتا ہے جب کوئی ایک جزو صفر ہو۔",
        "why": {
-        "en": "Applying the zero-product property once more, we equate each bracket to $0$ to form two simple linear equations.",
-        "ur": "ایک بار پھر ضربی خاصیتِ صفر لاگو کرتے ہوئے، ہم دو سادہ یک درجی مساواتیں بنانے کے لیے ہر بریکٹ کو $0$ کے برابر رکھتے ہیں۔"
+        "en": "Applying the zero-product property again, we equate both $(x - 7)$ and $(x + 4)$ to $0$ to find the remaining values of $x$.",
+        "ur": "صفر کی ضربی خاصیت کو دوبارہ استعمال کرتے ہوئے، ہم $x$ کی باقی قیمتیں نکالنے کے لیے $(x - 7)$ اور $(x + 4)$ دونوں کو $0$ کے برابر رکھتے ہیں۔"
        }
       },
       {
@@ -7922,8 +7994,8 @@
         "(x**2 - 3*x - 28).subs(x, (7)) == 0"
        ],
        "why": {
-        "en": "From these linear equations, we get the other two roots of the given equation: $x = -4$ and $x = 7$.",
-        "ur": "ان یک درجی مساواتوں سے ہمیں دی گئی مساوات کے باقی دو جذور مل جاتے ہیں: $x = -4$ اور $x = 7$۔"
+        "en": "Solving these linear equations gives us the other two roots: $x = -4$ and $x = 7$. Now we have found all four possible values for $x$.",
+        "ur": "ان یک درجی مساواتوں کو حل کرنے سے ہمیں دوسرے دو روٹس $x = -4$ اور $x = 7$ مل جاتے ہیں۔ اب ہم نے $x$ کی تمام چار ممکنہ قیمتیں معلوم کر لی ہیں۔"
        }
       },
       {
@@ -7937,15 +8009,15 @@
         "simplify(((x-1)*(x-2)*(x+5)*(x-8)+360).subs(x, (7))) == 0"
        ],
        "why": {
-        "en": "Finally, we gather all four values of $x$ from both cases into the Solution Set. Because the original equation has four factors of $x$ (making it degree $4$), having four roots makes complete sense.",
-        "ur": "آخر میں، ہم دونوں صورتوں سے حاصل ہونے والی $x$ کی چاروں قیمتوں کو حل سیٹ (Solution Set) میں اکٹھا لکھ دیتے ہیں۔ چونکہ اصل مساوات میں $x$ کے چار اجزائے ضربی ہیں (جس سے اس کا درجہ $4$ بنتا ہے)، اس لیے چار جذور کا آنا بالکل درست ہے۔"
+        "en": "Finally, we gather all four roots into the Solution Set $\\{-2, 5, -4, 7\\}$. Writing the final answer in braces neatly presents all solutions together.",
+        "ur": "آخر میں، ہم چاروں روٹس کو ملا کر حل سیٹ $\\text{S.S} = \\{-2, 5, -4, 7\\}$ کی صورت میں لکھتے ہیں۔ حتمی جواب کو درمیانی بریکٹ میں لکھنے سے تمام حل ایک ساتھ واضح ہو جاتے ہیں۔"
        }
       }
      ],
      "answer": "$x = -2,\\ 5,\\ -4,\\ 7$",
      "meaning": {
-      "en": "The final answer $\\text{S.S} = \\{-2, 5, -4, 7\\}$ means that these four numbers are the only values of $x$ for which the product $(x-1)(x-2)(x+5)(x-8)$ equals $-360$. You can easily check any root by substituting it back into the original equation; for example, putting $x = 5$ gives $(5-1)(5-2)(5+5)(5-8) = (4)(3)(10)(-3) = -360$, which confirms the solution is correct.",
-      "ur": "آخری جواب $\\text{S.S} = \\{-2, 5, -4, 7\\}$ کا مطلب یہ ہے کہ یہ چار اعداد ہی $x$ کی وہ واحد قیمتیں ہیں جن کے لیے حاصلِ ضرب $(x-1)(x-2)(x+5)(x-8)$ برابر $-360$ آتا ہے۔ آپ کسی بھی قیمت کو اصل مساوات میں درج کر کے آسانی سے پڑتال کر سکتے ہیں؛ مثال کے طور پر، $x = 5$ رکھنے سے $(5-1)(5-2)(5+5)(5-8) = (4)(3)(10)(-3) = -360$ بنتا ہے، جو تصدیق کرتا ہے کہ ہمارا حل بالکل درست ہے۔"
+      "en": "The final answer means that $x = -2, 5, -4,$ and $7$ are the four exact numbers that make the original equation $(x-1)(x-2)(x+5)(x-8)=-360$ true; because multiplying four brackets of $x$ forms a degree-$4$ equation, getting four roots is completely natural. You can easily check any root, like $x = 5$, by putting it into the left side: $(5-1)(5-2)(5+5)(5-8) = (4)(3)(10)(-3) = -360$, which matches the right-hand side.",
+      "ur": "حتمی جواب کا مطلب یہ ہے کہ $x = -2, 5, -4,$ اور $7$ وہ چار اعداد ہیں جو دی گئی مساوات $(x-1)(x-2)(x+5)(x-8)=-360$ کو درست ثابت کرتے ہیں؛ چونکہ $x$ کی چار بریکٹوں کو ضرب دینے سے درجہ چہارم کی مساوات بنتی ہے، اس لیے اس کے چار روٹس (جذور) آنا بالکل فطری بات ہے۔ آپ کسی بھی قیمت مثلاً $x = 5$ کو بائیں طرف درج کر کے پڑتال کر سکتے ہیں: $(5-1)(5-2)(5+5)(5-8) = (4)(3)(10)(-3) = -360$، جو کہ دائیں طرف کے بالکل برابر ہے۔"
      },
      "book_key": "x=-2, 5, -4, 7"
     }

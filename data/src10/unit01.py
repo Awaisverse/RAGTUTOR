@@ -202,9 +202,14 @@ q1 = [p_real_imag("i", "$(8-3i)^2$", *square(C(8, -3))),
       p_real_imag("v", r"$\left(\frac{3+2i}{4+3i}\right)^{-1}$", *div(C(4, 3), C(3, 2))),
       p_real_imag("vi", r"$\left(\frac{2-i}{2+i}\right)^{-2}$", *chain(lambda _: div(C(2, 1), C(2, -1)), lambda v: square(v))),
       p_real_imag("vii", r"$\left(\frac{1-2i}{1+i}\right)^{2}$", *chain(lambda _: div(C(1, -2), C(1, 1)), lambda v: square(v)))]
-q1[4]["steps"].insert(0, T("A power $-1$ turns the fraction upside down: $\\left(\\frac{p}{q}\\right)^{-1} = \\frac{q}{p}$.",
+def Tm(math, en, ur):
+    """A step that states a rule and shows it for this question."""
+    return {**T(en, ur), "math": math}
+
+
+q1[4]["steps"].insert(0, Tm(r"\left(\frac{3+2i}{4+3i}\right)^{-1} = \frac{4+3i}{3+2i}", "A power $-1$ turns the fraction upside down: $\\left(\\frac{p}{q}\\right)^{-1} = \\frac{q}{p}$.",
                            "طاقت $-1$ کسر کو الٹ دیتی ہے: $\\left(\\frac{p}{q}\\right)^{-1} = \\frac{q}{p}$۔"))
-q1[5]["steps"].insert(0, T("A power $-2$ turns the fraction upside down and squares it: $\\left(\\frac{p}{q}\\right)^{-2} = \\left(\\frac{q}{p}\\right)^2$.",
+q1[5]["steps"].insert(0, Tm(r"\left(\frac{2-i}{2+i}\right)^{-2} = \left(\frac{2+i}{2-i}\right)^2", "A power $-2$ turns the fraction upside down and squares it: $\\left(\\frac{p}{q}\\right)^{-2} = \\left(\\frac{q}{p}\\right)^2$.",
                            "طاقت $-2$ کسر کو الٹ کر مربع کرتی ہے: $\\left(\\frac{p}{q}\\right)^{-2} = \\left(\\frac{q}{p}\\right)^2$۔"))
 ex("ex1.4", 1, r"Find the real and imaginary parts of the following complex numbers: (i) $(8-3i)^2$ (ii) $(5+3i)^{-1}$ (iii) $(4-5i)^{-1}$ "
    r"(iv) $(4-3i)^{-2}$ (v) $\left(\frac{3+2i}{4+3i}\right)^{-1}$ (vi) $\left(\frac{2-i}{2+i}\right)^{-2}$ (vii) $\left(\frac{1-2i}{1+i}\right)^{2}$", q1, "1.4")

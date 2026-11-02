@@ -1482,8 +1482,8 @@
       },
       {
        "math": "\\beta = \\sin^{-1}(0.921) = 67.1^\\circ",
-       "en": "Take the inverse sine (the acute angle).",
-       "ur": "معکوس جیب لیں (حادہ زاویہ)۔",
+       "en": "Take the inverse sine. $\\sin^{-1}$ gives the acute angle, as the book does; when the side opposite the known angle is the shorter one, $180^\\circ$ minus this angle can give a second triangle too.",
+       "ur": "معکوس جیب لیں۔ $\\sin^{-1}$ حادہ زاویہ دیتا ہے، جیسا کتاب میں ہے؛ جب معلوم زاویے کے سامنے والا ضلع چھوٹا ہو تو $180^\\circ$ منفی یہ زاویہ دوسری مثلث بھی دے سکتا ہے۔",
        "check": [
         "Abs((asin(8.4*sin((42)*pi/180)/6.1)*180/pi) - 67.1) <= 0.050000001"
        ],
@@ -1555,8 +1555,8 @@
       },
       {
        "math": "\\alpha = \\sin^{-1}(0.592) = 36.3^\\circ",
-       "en": "Take the inverse sine (the acute angle).",
-       "ur": "معکوس جیب لیں (حادہ زاویہ)۔",
+       "en": "Take the inverse sine. $\\sin^{-1}$ gives the acute angle, as the book does; when the side opposite the known angle is the shorter one, $180^\\circ$ minus this angle can give a second triangle too.",
+       "ur": "معکوس جیب لیں۔ $\\sin^{-1}$ حادہ زاویہ دیتا ہے، جیسا کتاب میں ہے؛ جب معلوم زاویے کے سامنے والا ضلع چھوٹا ہو تو $180^\\circ$ منفی یہ زاویہ دوسری مثلث بھی دے سکتا ہے۔",
        "check": [
         "Abs((asin(12.2*sin((50)*pi/180)/15.8)*180/pi) - 36.3) <= 0.050000001"
        ],
@@ -1628,8 +1628,8 @@
       },
       {
        "math": "\\beta = \\sin^{-1}(0.773) = 50.6^\\circ",
-       "en": "Take the inverse sine (the acute angle).",
-       "ur": "معکوس جیب لیں (حادہ زاویہ)۔",
+       "en": "Take the inverse sine. $\\sin^{-1}$ gives the acute angle, as the book does; when the side opposite the known angle is the shorter one, $180^\\circ$ minus this angle can give a second triangle too.",
+       "ur": "معکوس جیب لیں۔ $\\sin^{-1}$ حادہ زاویہ دیتا ہے، جیسا کتاب میں ہے؛ جب معلوم زاویے کے سامنے والا ضلع چھوٹا ہو تو $180^\\circ$ منفی یہ زاویہ دوسری مثلث بھی دے سکتا ہے۔",
        "check": [
         "Abs((asin(5.2*sin((48)*pi/180)/5)*180/pi) - 50.6) <= 0.050000001"
        ],
@@ -1701,8 +1701,8 @@
       },
       {
        "math": "\\alpha = \\sin^{-1}(0.788) = 52.0^\\circ",
-       "en": "Take the inverse sine (the acute angle).",
-       "ur": "معکوس جیب لیں (حادہ زاویہ)۔",
+       "en": "Take the inverse sine. $\\sin^{-1}$ gives the acute angle, as the book does; when the side opposite the known angle is the shorter one, $180^\\circ$ minus this angle can give a second triangle too.",
+       "ur": "معکوس جیب لیں۔ $\\sin^{-1}$ حادہ زاویہ دیتا ہے، جیسا کتاب میں ہے؛ جب معلوم زاویے کے سامنے والا ضلع چھوٹا ہو تو $180^\\circ$ منفی یہ زاویہ دوسری مثلث بھی دے سکتا ہے۔",
        "check": [
         "Abs((asin(4*sin((71)*pi/180)/4.8)*180/pi) - 52.0) <= 0.050000001"
        ],
@@ -4952,81 +4952,59 @@
      "prompt": "",
      "steps": [
       {
-       "math": "a = 100\\text{ km}, \\quad b = 120\\text{ km}",
-       "en": "Let the starting point be $A$, the turning point be $B$, and the final position be $C$. The distances of the two legs of the journey are $a = 100\\text{ km}$ and $b = 120\\text{ km}$. We need to find the distance $d$ from $A$ to $C$.",
-       "ur": "فرض کریں کہ نقطہ آغاز $A$ ہے، مڑنے کا مقام $B$ ہے، اور آخری مقام $C$ ہے۔ سفر کے دونوں حصوں کا فاصلہ $a = 100\\text{ km}$ اور $b = 120\\text{ km}$ ہے۔ ہمیں $A$ سے $C$ تک کا فاصلہ $d$ معلوم کرنا ہے۔",
-       "why": {
-        "en": "In geometry problems, we start by clearly naming the points and sides so we can turn the ship's journey into a triangle. This tells us that we know two sides, $a = 100\\text{ km}$ and $b = 120\\text{ km}$, and we are looking for the third side, $d$.",
-        "ur": "جیومیٹری کے سوالات میں، ہم سب سے پہلے نقاط اور اضلاع کو واضح نام دیتے ہیں تاکہ جہاز کے سفر کو ایک مثلث کی شکل دے سکیں۔ اس سے ہمیں معلوم ہوتا ہے کہ ہمیں دو اضلاع $a = 100\\text{ km}$ اور $b = 120\\text{ km}$ دیے گئے ہیں، اور ہمیں تیسرا ضلع $d$ معلوم کرنا ہے۔"
-       }
-      },
-      {
-       "math": "\\theta = 135^\\circ - 45^\\circ = 90^\\circ",
-       "en": "First, we find the angle $\\theta$ between the two courses. Since the bearings are $045^\\circ$ and $135^\\circ$, the change in direction is $90^\\circ$, which means the two legs are at right angles to each other.",
-       "ur": "سب سے پہلے ہم دونوں راستوں کے درمیان زاویہ $\\theta$ معلوم کرتے ہیں۔ چونکہ سمتیں (bearings) $045^\\circ$ اور $135^\\circ$ ہیں، اس لیے سمت میں تبدیلی $90^\\circ$ ہے، جس کا مطلب ہے کہ دونوں راستے ایک دوسرے کے ساتھ قائمہ زاویہ بناتے ہیں۔",
+       "math": "\\text{At } B:\\ \\angle(\\text{South}, BA) = 45^\\circ",
+       "en": "The North lines at $A$ and $B$ are parallel. The ship reached $B$ on a bearing of $045^\\circ$, so the line back to $A$ makes $45^\\circ$ with South at $B$ (alternate angles).",
+       "ur": "$A$ اور $B$ پر شمال کی لکیریں متوازی ہیں۔ جہاز $045^\\circ$ سمت پر $B$ پہنچا، اس لیے $B$ پر واپس $A$ کی لکیر جنوب کے ساتھ $45^\\circ$ بناتی ہے (متبادل زاویے)۔",
        "check": [
-        "135 - 45 == 90"
+        "180 - (180 - 45) == 45"
        ],
        "why": {
-        "en": "Bearings are always measured clockwise from North, so we subtract the first bearing from the second to find the exact angle of the turn. Getting $90^\\circ$ tells us the very helpful fact that the ship's path forms a right-angled triangle at the turning point.",
-        "ur": "بیرنگ (سمت) ہمیشہ شمال سے گھڑی کی سمت میں ناپی جاتی ہے، اس لیے ہم موڑ کا صحیح زاویہ معلوم کرنے کے لیے دوسرے زاویے میں سے پہلا زاویہ تفریق کرتے ہیں۔ $90^\\circ$ کا جواب ہمیں یہ نہایت مفید بات بتاتا ہے کہ جہاز کا راستہ مڑنے کے مقام پر ایک قائمہ الزاویہ مثلث بناتا ہے۔"
+        "en": "To find the total distance, we first need the interior angle at the turning point $B$. Since all North-South lines are parallel, the rule of alternate angles tells us that the angle looking back from $B$ to $A$ is also $45^\\circ$ from the South line.",
+        "ur": "کل فاصلہ معلوم کرنے کے لیے، ہمیں پہلے مڑنے کے مقام $B$ پر اندرونی زاویہ معلوم کرنا ہوگا۔ چونکہ تمام شمال-جنوب لائنیں متوازی ہوتی ہیں، اس لیے متبادل زاویوں کا اصول ہمیں بتاتا ہے کہ $B$ سے واپس $A$ کی طرف بننے والا زاویہ بھی جنوب کی لائن کے ساتھ $45^\\circ$ ہی ہے۔"
        }
       },
       {
-       "math": "d^2 = a^2 + b^2 - 2ab\\cos\\theta",
-       "en": "To find the distance $d$ between the starting point and the final position, we apply the Law of Cosines.",
-       "ur": "نقطہ آغاز اور آخری مقام کے درمیان فاصلہ $d$ معلوم کرنے کے لیے ہم قانونِ جیب التمام (Law of Cosines) استعمال کرتے ہیں۔",
-       "why": {
-        "en": "When we know two sides of a triangle and the included angle between them, the Law of Cosines is the general rule to find the opposite side. Setting up this formula connects our known distances and angle directly to the unknown distance $d$.",
-        "ur": "جب ہمیں کسی مثلث کے دو اضلاع اور ان کے درمیان والا زاویہ معلوم ہو، تو سامنے والا ضلع معلوم کرنے کے لیے لا آف کوسائنز (Law of Cosines) کا اصول استعمال کیا جاتا ہے۔ یہ فارمولا لکھنے سے ہمارے معلوم فاصلوں اور زاویے کا براہِ راست تعلق نامعلوم فاصلے $d$ سے جڑ جاتا ہے۔"
-       }
-      },
-      {
-       "math": "d^2 = 100^2 + 120^2 - 2(100)(120)\\cos 90^\\circ",
-       "en": "Substitute the given values $a = 100$, $b = 120$, and $\\theta = 90^\\circ$ into the formula.",
-       "ur": "فارمولے میں دی گئی قیمتیں $a = 100$، $b = 120$ اور $\\theta = 90^\\circ$ درج کریں۔",
-       "why": {
-        "en": "Now we replace the letters in the formula with the actual numbers from our problem so we can calculate the value. This turns the general trigonometry rule into a specific arithmetic equation for $d^2$.",
-        "ur": "اب ہم قیمت معلوم کرنے کے لیے فارمولے میں موجود حروف کی جگہ سوال میں دیے گئے اصل اعداد درج کرتے ہیں۔ اس سے ٹرگنومیٹری کا یہ عمومی اصول $d^2$ کے لیے ایک مخصوص حسابی مساوات میں بدل جاتا ہے۔"
-       }
-      },
-      {
-       "math": "d^2 = 10000 + 14400 - 24000(0) = 24400",
-       "en": "Since $\\cos 90^\\circ = 0$, the last term becomes zero. Simplifying the squares gives $24400$.",
-       "ur": "چونکہ $\\cos 90^\\circ = 0$ ہوتا ہے، اس لیے آخری رقم صفر ہو جاتی ہے۔ مربعوں کو حل کرنے سے $24400$ حاصل ہوتا ہے۔",
+       "math": "\\angle(\\text{South}, BC) = 180^\\circ - 135^\\circ = 45^\\circ",
+       "en": "The new course $BC$ has bearing $135^\\circ$ from North, so it is $180^\\circ - 135^\\circ = 45^\\circ$ from South, on the other side of the South line.",
+       "ur": "نیا راستہ $BC$ شمال سے $135^\\circ$ پر ہے، اس لیے جنوب سے $180^\\circ - 135^\\circ = 45^\\circ$ پر، جنوبی لکیر کی دوسری طرف۔",
        "check": [
-        "100**2 == 10000",
-        "120**2 == 14400",
-        "2*100*120 == 24000",
-        "cos(90*pi/180) == 0",
-        "10000 + 14400 - 24000*0 == 24400"
+        "180 - 135 == 45"
        ],
        "why": {
-        "en": "Using the trigonometric value $\\cos 90^\\circ = 0$, the last part of the formula disappears, which actually reduces the Law of Cosines to the simple Pythagoras theorem! Adding the squares gives us the exact value of $d^2 = 24400$.",
-        "ur": "ٹرگنومیٹری کی قیمت $\\cos 90^\\circ = 0$ استعمال کرنے سے فارمولے کا آخری حصہ ختم ہو جاتا ہے، جس سے لا آف کوسائنز دراصل سادہ مسئلہ فیثاغورث بن جاتا ہے! مربعات کو جمع کرنے سے ہمیں $d^2 = 24400$ کی قیمت مل جاتی ہے۔"
+        "en": "A straight North-South line forms an angle of $180^\\circ$. Since the new bearing from North is $135^\\circ$, subtracting this from $180^\\circ$ gives us the remaining $45^\\circ$ angle between the new path $BC$ and the South line.",
+        "ur": "ایک سیدھی شمال-جنوب لائن $180^\\circ$ کا زاویہ بناتی ہے۔ چونکہ شمال سے نئی سمت $135^\\circ$ ہے، اس لیے اسے $180^\\circ$ میں سے تفریق کرنے سے ہمیں نئے راستے $BC$ اور جنوب کی لائن کے درمیان باقی ماندہ $45^\\circ$ کا زاویہ مل جاتا ہے۔"
        }
       },
       {
-       "math": "d = \\sqrt{24400} \\approx 156.2\\text{ km}",
-       "en": "Take the square root on both sides to find $d$. Thus, the distance between the starting point and the final position is approximately $156.2\\text{ km}$.",
-       "ur": "$d$ معلوم کرنے کے لیے دونوں طرف جزر لیں۔ اس طرح نقطہ آغاز اور آخری مقام کے درمیان فاصلہ تقریباً $156.2\\text{ km}$ ہے۔",
+       "math": "\\angle ABC = 45^\\circ + 45^\\circ = 90^\\circ",
+       "en": "The angle of the triangle at $B$ is the sum of the two angles on either side of the South line.",
+       "ur": "مثلث کا $B$ پر زاویہ جنوبی لکیر کی دونوں طرف کے زاویوں کا مجموعہ ہے۔",
        "check": [
-        "Abs(sqrt(24400) - 156.2) <= 0.05",
-        "135 - 45 == 90",
+        "45 + (180 - 135) == 90"
+       ],
+       "why": {
+        "en": "Now we can find the complete interior angle of our triangle at corner $B$ by using the angle addition postulate. Adding the two $45^\\circ$ angles on either side of the South line reveals that the ship actually made a $90^\\circ$ right-angled turn.",
+        "ur": "اب ہم زاویوں کی جمع کے اصول کو استعمال کرتے ہوئے کونے $B$ پر اپنی مثلث کا مکمل اندرونی زاویہ معلوم کر سکتے ہیں۔ جنوب کی لائن کے دونوں طرف موجود دو $45^\\circ$ کے زاویوں کو جمع کرنے سے پتہ چلتا ہے کہ جہاز نے اصل میں $90^\\circ$ کا قائمہ زاویہ مڑا تھا۔"
+       }
+      },
+      {
+       "math": "d^2 = 100^2 + 120^2 - 2(100)(120)\\cos 90^\\circ = 24400 \\Rightarrow d \\approx 156.2\\ \\text{km}",
+       "en": "Use the law of cosines in triangle $ABC$ with the angle $90^\\circ$ at $B$ ($\\cos 90^\\circ = 0$).",
+       "ur": "مثلث $ABC$ میں قانونِ جیب التمام لگائیں، $B$ پر زاویہ $90^\\circ$ ہے ($\\cos 90^\\circ = 0$)۔",
+       "check": [
         "100**2 + 120**2 - 2*100*120*cos((90)*pi/180) == 24400",
         "Abs((sqrt(24400)) - 156.2) <= 0.050000001"
        ],
        "why": {
-        "en": "Since $24400$ is the square of the distance ($d^2$), we must take the square root to undo the square and find the actual length $d$. This final step gives us the straight-line distance in kilometers.",
-        "ur": "چونکہ $24400$ فاصلے کا مربع ($d^2$) ہے، اس لیے مربع ختم کرنے اور اصل لمبائی $d$ معلوم کرنے کے لیے ہم دونوں طرف جذر لیتے ہیں۔ یہ آخری قدم ہمیں کلومیٹر میں سیدھا فاصلہ بتا دیتا ہے۔"
+        "en": "With two sides ($100\\text{ km}$ and $120\\text{ km}$) and the included angle of $90^\\circ$ known, we apply the law of cosines (which simplifies to the Pythagorean theorem here since $\\cos 90^\\circ = 0$). Taking the square root of $24400$ gives the direct distance from the start to the end.",
+        "ur": "دو اضلاع ($100\\text{ km}$ اور $120\\text{ km}$) اور ان کے درمیانی زاویہ $90^\\circ$ کے معلوم ہونے پر، ہم قانونِ کوسائن لاگو کرتے ہیں (جو یہاں مسئلہ فیثاغورث بن جاتا ہے کیونکہ $\\cos 90^\\circ = 0$ ہوتا ہے)۔ $24400$ کا جزر لینے سے ہمیں نقطہ آغاز سے انجام تک کا سیدھا فاصلہ مل جاتا ہے۔"
        }
       }
      ],
      "answer": "$156.2$ km",
-     "enriched": true,
      "meaning": {
-      "en": "The final answer of $156.2\\text{ km}$ means that if the ship had sailed directly in a straight line from its starting point to its final destination, it would have traveled $156.2\\text{ km}$. This makes good sense to check because the hypotenuse ($156.2\\text{ km}$) must be longer than both individual legs ($100\\text{ km}$ and $120\\text{ km}$) of the right-angled triangle.",
-      "ur": "$156.2\\text{ km}$ کے حتمی جواب کا مطلب یہ ہے کہ اگر جہاز اپنے نقطہ آغاز سے آخری مقام تک بالکل سیدھی لائن میں سفر کرتا، تو اسے $156.2\\text{ km}$ کا فاصلہ طے کرنا پڑتا۔ اس جواب کی درستی کو یوں بھی پرکھا جا سکتا ہے کہ قائمہ الزاویہ مثلث کا وتر ($156.2\\text{ km}$) ہمیشہ باقی دونوں اضلاع ($100\\text{ km}$ اور $120\\text{ km}$) سے لمبا ہونا چاہیے۔"
+      "en": "The final answer means that the ship is now approximately $156.2\\text{ km}$ away in a straight line from its starting point $A$. This makes good sense because in a right-angled triangle, the hypotenuse ($156.2\\text{ km}$) must be longer than either of the two individual legs ($100\\text{ km}$ and $120\\text{ km}$).",
+      "ur": "حتمی جواب کا مطلب یہ ہے کہ جہاز اب اپنے نقطہ آغاز $A$ سے سیدھی لائن میں تقریباً $156.2\\text{ km}$ کے فاصلے پر ہے۔ یہ جواب بالکل درست لگتا ہے کیونکہ ایک قائمہ الزاویہ مثلث میں، وتر ($156.2\\text{ km}$) کو باقی دونوں اضلاع ($100\\text{ km}$ اور $120\\text{ km}$) سے لمبا ہونا چاہیے۔"
      },
      "book_key": "156.2 km"
     }
@@ -5095,7 +5073,7 @@
        ],
        "why": {
         "en": "Replacing $\\tan 60^\\circ$ with its value $\\sqrt{3}$ in the denominator gives us the exact numerical value of $\\cot 60^\\circ$, which is $\\frac{1}{\\sqrt{3}}$. This completes the mathematical calculation.",
-        "ur": "نصب نما (denominator) میں $\\tan 60^\\circ$ کی جگہ اس کی قیمت $\\sqrt{3}$ رکھنے سے ہمیں $\\cot 60^\\circ$ کی درست عددی قیمت $\\frac{1}{\\sqrt{3}}$ مل جاتی ہے۔ اس سے ہمارا حسابی عمل مکمل ہو جاتا ہے۔"
+        "ur": "نسب نما (denominator) میں $\\tan 60^\\circ$ کی جگہ اس کی قیمت $\\sqrt{3}$ رکھنے سے ہمیں $\\cot 60^\\circ$ کی درست عددی قیمت $\\frac{1}{\\sqrt{3}}$ مل جاتی ہے۔ اس سے ہمارا حسابی عمل مکمل ہو جاتا ہے۔"
        }
       },
       {
@@ -5915,8 +5893,8 @@
       },
       {
        "math": "\\beta = \\sin^{-1}(0.475) = 28.37^\\circ",
-       "en": "Take the inverse sine (the acute angle).",
-       "ur": "معکوس جیب لیں (حادہ زاویہ)۔",
+       "en": "Take the inverse sine. $\\sin^{-1}$ gives the acute angle, as the book does; when the side opposite the known angle is the shorter one, $180^\\circ$ minus this angle can give a second triangle too.",
+       "ur": "معکوس جیب لیں۔ $\\sin^{-1}$ حادہ زاویہ دیتا ہے، جیسا کتاب میں ہے؛ جب معلوم زاویے کے سامنے والا ضلع چھوٹا ہو تو $180^\\circ$ منفی یہ زاویہ دوسری مثلث بھی دے سکتا ہے۔",
        "check": [
         "Abs((asin(3.4*sin((49)*pi/180)/5.4)*180/pi) - 28.37) <= 0.0050000010000000004"
        ],
@@ -6453,72 +6431,59 @@
      "prompt": "",
      "steps": [
       {
-       "math": "",
-       "en": "Let the starting point be $A$, the turning point be $B$, and the final position be $C$. We are given the distances $AB = 200\\ \\text{km}$ on a bearing of $045^\\circ$ and $BC = 150\\ \\text{km}$ on a bearing of $135^\\circ$. We need to find the distance $d = AC$ from the original position.",
-       "ur": "فرض کریں کہ ابتدائی نقطہ $A$ ہے، مڑنے کا نقطہ $B$ ہے، اور آخری مقام $C$ ہے۔ ہمیں فاصلہ $AB = 200\\ \\text{km}$ سمتیہ $045^\\circ$ پر اور فاصلہ $BC = 150\\ \\text{km}$ سمتیہ $135^\\circ$ پر دیا گیا ہے۔ ہمیں ابتدائی مقام سے فاصلہ $d = AC$ معلوم کرنا ہے۔",
+       "math": "\\text{At } B:\\ \\angle(\\text{South}, BA) = 45^\\circ",
+       "en": "The North lines at $A$ and $B$ are parallel. The plane reached $B$ on a bearing of $045^\\circ$, so the line back to $A$ makes $45^\\circ$ with South at $B$ (alternate angles).",
+       "ur": "$A$ اور $B$ پر شمال کی لکیریں متوازی ہیں۔ طیارہ $045^\\circ$ سمت پر $B$ پہنچا، اس لیے $B$ پر واپس $A$ کی لکیر جنوب کے ساتھ $45^\\circ$ بناتی ہے (متبادل زاویے)۔",
+       "check": [
+        "180 - (180 - 45) == 45"
+       ],
        "why": {
-        "en": "In word problems, we first label the path with points $A$, $B$, and $C$ to turn the plane's journey into a clear geometric triangle. This helps us see which side lengths and angles we know and identifies $d = AC$ as the missing side we need to find.",
-        "ur": "عبارتی سوالات میں، ہم سب سے پہلے ہوائی جہاز کے راستے کو نقاط $A$، $B$ اور $C$ کا نام دیتے ہیں تاکہ اس سفر کو ایک واضح مثلث کی شکل دی جا سکے۔ اس سے ہمیں یہ دیکھنے میں مدد ملتی ہے کہ کون سے اضلاع اور زاویے معلوم ہیں، اور یہ واضح ہوتا ہے کہ $d = AC$ وہ نامعلوم ضلع ہے جسے ہم نے معلوم کرنا ہے۔"
+        "en": "In bearing problems, we first need to find the interior angles of the triangle formed by the flight path. Since all North-South lines are parallel, the rule of alternate interior angles tells us that the angle looking back at the starting point $A$ from the South line at $B$ is $45^\\circ$.",
+        "ur": "بیئرنگ (bearing) کے سوالات میں، ہمیں سب سے پہلے پرواز کے راستے سے بننے والی مثلث کے اندرونی زاویے معلوم کرنے ہوتے ہیں۔ چونکہ تمام شمال-جنوب لائنیں متوازی ہوتی ہیں، اس لیے متبادلہ اندرونی زاویوں کا اصول ہمیں بتاتا ہے کہ نقطہ $B$ پر جنوب کی لائن سے واپس ابتدائی نقطہ $A$ کی طرف بننے والا زاویہ $45^\\circ$ ہے۔"
        }
       },
       {
-       "math": "\\theta = 135^\\circ - 45^\\circ = 90^\\circ",
-       "en": "First, we find the angle between the two flight paths by subtracting the two bearings. Since the difference is $90^\\circ$, the two legs of the journey are at right angles to each other, forming a right-angled triangle $ABC$ at $B$.",
-       "ur": "سب سے پہلے، ہم دونوں سمتیوں کی تفریق کر کے پرواز کے دونوں راستوں کے درمیان زاویہ معلوم کرتے ہیں۔ چونکہ فرق $90^\\circ$ ہے، اس لیے سفر کے دونوں حصے ایک دوسرے کے ساتھ قائمہ زاویہ بناتے ہیں، جس سے نقطہ $B$ پر ایک قائمہ الزاویہ مثلث $ABC$ بنتی ہے۔",
+       "math": "\\angle(\\text{South}, BC) = 180^\\circ - 135^\\circ = 45^\\circ",
+       "en": "The new course $BC$ has bearing $135^\\circ$ from North, so it is $180^\\circ - 135^\\circ = 45^\\circ$ from South, on the other side of the South line.",
+       "ur": "نیا راستہ $BC$ شمال سے $135^\\circ$ پر ہے، اس لیے جنوب سے $180^\\circ - 135^\\circ = 45^\\circ$ پر، جنوبی لکیر کی دوسری طرف۔",
        "check": [
-        "135 - 45 == 90"
+        "180 - 135 == 45"
        ],
        "why": {
-        "en": "Bearings are always measured clockwise from North, so comparing the two bearings ($135^\\circ$ and $045^\\circ$) tells us the exact turn the pilot made at point $B$. Because the difference is $90^\\circ$, we discover that triangle $ABC$ is a right-angled triangle, which makes finding the third side much easier.",
-        "ur": "بیئرنگز (سمت کے زاویے) ہمیشہ شمال سے گھڑی کی سوئی کی سمت میں ماپے جاتے ہیں، اس لیے دونوں زاویوں ($135^\\circ$ اور $045^\\circ$) کا موازنہ ہمیں بتاتا ہے کہ پائلٹ نے نقطہ $B$ پر کتنا موڑ کاٹا۔ چونکہ ان کا فرق $90^\\circ$ ہے، اس سے ہمیں معلوم ہوتا ہے کہ مثلث $ABC$ ایک قائمۃ الزاویہ مثلث ہے، جس سے تیسرا ضلع معلوم کرنا بہت آسان ہو جاتا ہے۔"
+        "en": "Bearings are always measured clockwise from North, and a straight North-South line forms a $180^\\circ$ angle. Subtracting the new bearing of $135^\\circ$ from $180^\\circ$ gives us the remaining $45^\\circ$ angle between the South line and the second part of the flight $BC$.",
+        "ur": "بیئرنگ ہمیشہ شمال سے گھڑی کی سمت میں ماپی جاتی ہے، اور ایک سیدھی شمال-جنوب لائن $180^\\circ$ کا زاویہ بناتی ہے۔ $180^\\circ$ میں سے نئی بیئرنگ $135^\\circ$ کو تفریق کرنے سے ہمیں جنوب کی لائن اور پرواز کے دوسرے حصے $BC$ کے درمیان باقی ماندہ $45^\\circ$ کا زاویہ مل جاتا ہے۔"
        }
       },
       {
-       "math": "d^2 = 200^2 + 150^2 - 2(200)(150)\\cos 90^\\circ = 40000 + 22500 - 0",
-       "en": "Using the Law of Cosines (or Pythagoras theorem since the angle is $90^\\circ$), we substitute the lengths of the two legs and the included angle.",
-       "ur": "قانونِ جیب التمام (یا مسئلہ فیثاغورث کیونکہ زاویہ $90^\\circ$ ہے) کا استعمال کرتے ہوئے، ہم دونوں اطراف کی لمبائی اور درمیانی زاویہ کی قیمتیں درج کرتے ہیں۔",
+       "math": "\\angle ABC = 45^\\circ + 45^\\circ = 90^\\circ",
+       "en": "The angle of the triangle at $B$ is the sum of the two angles on either side of the South line.",
+       "ur": "مثلث کا $B$ پر زاویہ جنوبی لکیر کی دونوں طرف کے زاویوں کا مجموعہ ہے۔",
        "check": [
-        "200**2 + 150**2 - 2*200*150*cos(90*pi/180) == 40000 + 22500 - 0",
-        "200**2 == 40000",
-        "150**2 == 22500"
+        "45 + (180 - 135) == 90"
        ],
        "why": {
-        "en": "When we know two sides of a triangle ($200\\ \\text{km}$ and $150\\ \\text{km}$) and the angle between them ($90^\\circ$), we apply the Law of Cosines (or Pythagoras' theorem) to find the opposite side. Since $\\cos 90^\\circ = 0$, the last part of the formula becomes $0$, leaving us with just the squares of the two known distances.",
-        "ur": "جب ہمیں کسی مثلث کے دو اضلاع ($200\\ \\text{km}$ اور $150\\ \\text{km}$) اور ان کے درمیان کا زاویہ ($90^\\circ$) معلوم ہو، تو ہم سامنے والا ضلع معلوم کرنے کے لیے لا آف کوسائنز (یا مسئلہ فیثاغورث) استعمال کرتے ہیں۔ چونکہ $\\cos 90^\\circ = 0$ ہوتا ہے، اس لیے فارمولے کا آخری حصہ $0$ ہو جاتا ہے اور ہمارے پاس صرف دو معلوم فاصلوں کے مربع رہ جاتے ہیں۔"
+        "en": "To find the total corner angle of our triangle at turning point $B$, we combine the two smaller angles on either side of the South line. Finding that $\\angle ABC = 90^\\circ$ is a huge help because it proves our flight path forms a right-angled triangle.",
+        "ur": "مڑنے کے نقطہ $B$ پر اپنی مثلث کا کل کونے کا زاویہ معلوم کرنے کے لیے، ہم جنوب کی لائن کے دونوں طرف بننے والے دو چھوٹے زاویوں کو جمع کرتے ہیں۔ یہ معلوم ہونا کہ $\\angle ABC = 90^\\circ$ ہے بہت مددگار ہے کیونکہ اس سے ثابت ہوتا ہے کہ ہماری پرواز کا راستہ ایک قائمۃ الزاویہ مثلث بناتا ہے۔"
        }
       },
       {
-       "math": "d^2 = 40000 + 22500 = 62500",
-       "en": "Now, we add the values to find $d^2$.",
-       "ur": "اب، ہم $d^2$ معلوم کرنے کے لیے ان قیمتوں کو جمع کرتے ہیں۔",
+       "math": "d^2 = 200^2 + 150^2 - 2(200)(150)\\cos 90^\\circ = 62500 \\Rightarrow d = 250\\ \\text{km}",
+       "en": "Use the law of cosines in triangle $ABC$ with the angle $90^\\circ$ at $B$ ($\\cos 90^\\circ = 0$).",
+       "ur": "مثلث $ABC$ میں قانونِ جیب التمام لگائیں، $B$ پر زاویہ $90^\\circ$ ہے ($\\cos 90^\\circ = 0$)۔",
        "check": [
-        "40000 + 22500 == 62500"
+        "200**2 + 150**2 - 2*200*150*cos((90)*pi/180) == 62500",
+        "sqrt(62500) == 250"
        ],
        "why": {
-        "en": "By adding the squared distances ($40000$ and $22500$), we combine the two legs of the journey into a single value. This result, $62500$, gives us the square of the straight-line distance ($d^2$) from the starting point.",
-        "ur": "دونوں فاصلوں کے مربعوں ($40000$ اور $22500$) کو جمع کر کے، ہم سفر کے دونوں حصوں کو ایک قیمت میں یکجا کر لیتے ہیں۔ یہ نتیجہ، $62500$، ہمیں ابتدائی مقام سے سیدھے فاصلے کا مربع ($d^2$) دیتا ہے۔"
-       }
-      },
-      {
-       "math": "d = \\sqrt{62500} = 250\\ \\text{km}",
-       "en": "Taking the square root on both sides gives the final distance of the plane from its original position.",
-       "ur": "دونوں طرف جزر المربع لینے سے جہاز کا اس کے ابتدائی مقام سے حتمی فاصلہ حاصل ہوتا ہے۔",
-       "check": [
-        "sqrt(62500) == 250",
-        "135 - 45 == 90",
-        "200**2 + 150**2 - 2*200*150*cos((90)*pi/180) == 62500"
-       ],
-       "why": {
-        "en": "Since our previous step gave us $d^2$ instead of $d$, we take the square root on both sides to undo the square. This final calculation gives us the actual straight-line distance of $250\\ \\text{km}$.",
-        "ur": "چونکہ پچھلے مرحلے میں ہمیں $d$ کے بجائے $d^2$ ملا تھا، اس لیے مربع کو ختم کرنے کے لیے ہم دونوں طرف جذر (square root) لیتے ہیں۔ یہ آخری عمل ہمیں $250\\ \\text{km}$ کا اصل سیدھا فاصلہ دے دیتا ہے۔"
+        "en": "Now that we know two sides ($200\\text{ km}$ and $150\\text{ km}$) and the included angle ($90^\\circ$), we apply the law of cosines (which simplifies to the Pythagorean theorem here since $\\cos 90^\\circ = 0$) to find the third side. Taking the square root of $62500$ gives the direct distance $d$ from the start to the finish.",
+        "ur": "اب جب کہ ہمیں دو اضلاع ($200\\text{ km}$ اور $150\\text{ km}$) اور ان کے درمیان کا زاویہ ($90^\\circ$) معلوم ہے، تو ہم تیسرا ضلع معلوم کرنے کے لیے قانونِ کوسائن (جو یہاں مسئلہ فیثاغورث بن جاتا ہے کیونکہ $\\cos 90^\\circ = 0$ ہے) استعمال کرتے ہیں۔ $62500$ کا جذر لینے سے ہمیں آغاز سے انجام تک کا سیدھا فاصلہ $d$ مل جاتا ہے۔"
        }
       }
      ],
      "answer": "$250$ km",
-     "enriched": true,
      "meaning": {
-      "en": "The final answer means that after flying both legs of the journey, the plane is at a straight-line distance of $250\\ \\text{km}$ from its starting point $A$. We can see this makes sense because in a right-angled triangle, the longest side (hypotenuse) must be greater than each of the other two sides ($200\\ \\text{km}$ and $150\\ \\text{km}$), and $250^2 = 200^2 + 150^2$ holds true.",
-      "ur": "حتمی جواب کا مطلب یہ ہے کہ سفر کے دونوں حصے طے کرنے کے بعد، ہوائی جہاز اپنے ابتدائی مقام $A$ سے $250\\ \\text{km}$ کے سیدھے فاصلے پر ہے۔ ہم دیکھ سکتے ہیں کہ یہ جواب بالکل درست ہے کیونکہ قائمۃ الزاویہ مثلث میں سب سے لمبا ضلع (وتر) باقی دونوں اضلاع ($200\\ \\text{km}$ اور $150\\ \\text{km}$) سے بڑا ہونا چاہیے، اور $250^2 = 200^2 + 150^2$ سے اس کی تصدیق بھی ہوتی ہے۔"
+      "en": "The final answer means that after flying both legs of the journey, the plane is a straight-line distance of $250\\text{ km}$ away from its starting point. This makes complete sense because the $250\\text{ km}$ path is the hypotenuse of a right-angled triangle, which must be longer than both the $200\\text{ km}$ and $150\\text{ km}$ flights.",
+      "ur": "حتمی جواب کا مطلب یہ ہے کہ سفر کے دونوں حصے طے کرنے کے بعد، جہاز اپنے ابتدائی مقام سے سیدھی لائن میں $250\\text{ km}$ کے فاصلے پر ہے۔ یہ بالکل درست معلوم ہوتا ہے کیونکہ $250\\text{ km}$ کا راستہ ایک قائمۃ الزاویہ مثلث کا وتر (hypotenuse) ہے، جسے $200\\text{ km}$ اور $150\\text{ km}$ دونوں پروازوں سے لمبا ہونا چاہیے۔"
      },
      "book_key": "250 km"
     }

@@ -881,9 +881,9 @@
      "prompt": "arc PQR",
      "steps": [
       {
-       "math": "\\text{Given arc } PQR",
-       "en": "Start from the given arc.",
-       "ur": "دی گئی قوس سے شروع کریں۔",
+       "math": "\\text{Given arc } PQR,\\quad PQ = QR",
+       "en": "Mark three points $P$, $Q$, $R$ on the given arc with the compasses at one fixed opening, so the chords $PQ$ and $QR$ are equal.",
+       "ur": "دی گئی قوس پر پرکار کے ایک ہی فاصلے سے تین نقاط $P$، $Q$، $R$ لگائیں تاکہ وتر $PQ$ اور $QR$ برابر ہوں۔",
        "draw": [
         {
          "t": "arc",
@@ -893,126 +893,275 @@
          ],
          "r": 22,
          "a": [
-          200,
-          340
+          -10,
+          130
          ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          39.0,
+          51.05
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          61.0,
+          51.05
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          72.0,
+          32.0
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          35.0,
+          54.05
+         ],
+         "s": "P"
+        },
+        {
+         "t": "text",
+         "p": [
+          62.0,
+          54.05
+         ],
+         "s": "Q"
+        },
+        {
+         "t": "text",
+         "p": [
+          73.5,
+          33.0
+         ],
+         "s": "R"
         }
        ],
        "why": {
-        "en": "Every geometric construction must begin with a clear starting figure. Drawing the arc $PQR$ gives us a curved segment whose exact curvature we will copy to build the rest of the circle.",
-        "ur": "جیومیٹری کی ہر بناوٹ کا آغاز ایک واضح ابتدائی شکل سے ہوتا ہے۔ قوس $PQR$ بنانے سے ہمیں ایک خم دار حصہ مل جاتا ہے جس کے خم کو نقل کر کے ہم باقی دائرہ مکمل کریں گے۔"
+        "en": "A circle has uniform curvature everywhere, which means equal chords always make the same turn. By keeping our compass at one fixed opening, we create two equal chords $PQ$ and $QR$ to serve as our standard length.",
+        "ur": "دائرے کا جھکاؤ ہر جگہ یکساں ہوتا ہے، جس کا مطلب ہے کہ برابر وتر (chords) ہمیشہ ایک جتنا مڑتے ہیں۔ پرکار کو ایک مقررہ فاصلے پر رکھ کر، ہم دو برابر وتر $PQ$ اور $QR$ بناتے ہیں جو لمبائی کے لیے ہمارا معیار بنیں گے۔"
        }
       },
       {
-       "math": "\\text{Mark equal chords along the arc}",
-       "en": "Keep the compasses at a fixed small opening; from one end step along the arc marking equal chords.",
-       "ur": "پرکار کو ایک ہی چھوٹے فاصلے پر رکھیں؛ قوس پر برابر وتر لگاتے جائیں۔",
+       "math": "\\text{Produce } PQ \\text{ to } A;\\ \\angle AQR = \\alpha",
+       "en": "Join $PQ$ and $QR$. Produce $PQ$ beyond $Q$ to $A$ and mark the exterior angle $\\alpha = \\angle AQR$.",
+       "ur": "$PQ$ اور $QR$ ملائیں۔ $PQ$ کو $Q$ سے آگے $A$ تک بڑھائیں اور بیرونی زاویہ $\\alpha = \\angle AQR$ لگائیں۔",
        "draw": [
         {
-         "t": "dot",
+         "t": "line",
          "p": [
-          29.33,
-          24.48
-         ]
+          39.0,
+          51.05,
+          61.0,
+          51.05
+         ],
+         "dash": false
         },
         {
-         "t": "dot",
+         "t": "line",
          "p": [
-          35.86,
-          15.15
-         ]
+          61.0,
+          51.05,
+          72.0,
+          32.0
+         ],
+         "dash": false
         },
         {
-         "t": "dot",
+         "t": "line",
          "p": [
-          46.18,
-          10.33
-         ]
+          61.0,
+          51.05,
+          73.1,
+          51.05
+         ],
+         "dash": true
         },
         {
-         "t": "dot",
+         "t": "text",
          "p": [
-          57.52,
-          11.33
-         ]
+          74.6,
+          48.55
+         ],
+         "s": "A"
         },
         {
-         "t": "dot",
+         "t": "text",
          "p": [
-          66.85,
-          17.86
-         ]
-        },
-        {
-         "t": "dot",
-         "p": [
-          71.67,
-          28.18
-         ]
+          64.0,
+          49.05
+         ],
+         "s": "α"
         }
        ],
        "why": {
-        "en": "In a circle, chords of equal length cut off arcs of equal size. By marking equal chords along the given arc $PQR$, we capture the exact bend of this specific circle so we can repeat it.",
-        "ur": "ایک دائرے میں برابر لمبائی کے وتر برابر قوسیں کاٹتے ہیں۔ دی گئی قوس $PQR$ پر برابر وتر لگا کر ہم اس خاص دائرے کے خم اور زاویے کا درست اندازہ لگا لیتے ہیں تاکہ اسے آگے دہرا سکیں۔"
+        "en": "Since we cannot use the centre, we must measure how much the circle bends from the outside. Producing $PQ$ to $A$ gives us the exterior angle $\\alpha = \\angle AQR$, which tells us the exact angle of turn between one chord and the next.",
+        "ur": "چونکہ ہم مرکز استعمال نہیں کر سکتے، اس لیے ہمیں باہر سے ناپنا ہوگا کہ دائرہ کتنا مڑتا ہے۔ $PQ$ کو $A$ تک بڑھانے سے ہمیں بیرونی زاویہ $\\alpha = \\angle AQR$ ملتا ہے، جو ہمیں ایک وتر سے دوسرے وتر کے درمیان مڑنے کا بالکل درست زاویہ بتاتا ہے۔"
        }
       },
       {
-       "math": "\\text{Continue the equal steps beyond the arc}",
-       "en": "Equal chords subtend equal angles, so the steps keep to the same circle; carry on until you come back to the start.",
-       "ur": "برابر وتر برابر زاویے بناتے ہیں، اس لیے یہ قدم اسی دائرے پر رہتے ہیں؛ شروع تک واپس آنے تک جاری رکھیں۔",
+       "math": "\\text{Produce } QR \\text{ to } B;\\ \\angle BRS = \\alpha,\\ RS = PQ",
+       "en": "Produce $QR$ to $B$. At $R$ copy the same angle $\\alpha$ and cut off $RS$ equal to $PQ$. Equal chords turning through equal angles stay on the same circle, so $S$ lies on it.",
+       "ur": "$QR$ کو $B$ تک بڑھائیں۔ $R$ پر وہی زاویہ $\\alpha$ بنائیں اور $RS$ کو $PQ$ کے برابر کاٹیں۔ برابر زاویوں سے مڑنے والے برابر وتر اسی دائرے پر رہتے ہیں، اس لیے $S$ دائرے پر ہے۔",
        "draw": [
         {
-         "t": "dot",
+         "t": "line",
          "p": [
-          70.67,
-          39.52
-         ]
+          72.0,
+          32.0,
+          78.05,
+          21.52
+         ],
+         "dash": true
+        },
+        {
+         "t": "text",
+         "p": [
+          79.55,
+          19.02
+         ],
+         "s": "B"
+        },
+        {
+         "t": "line",
+         "p": [
+          72.0,
+          32.0,
+          61.0,
+          12.95
+         ],
+         "dash": false
         },
         {
          "t": "dot",
          "p": [
-          64.14,
-          48.85
+          61.0,
+          12.95
          ]
         },
         {
-         "t": "dot",
+         "t": "text",
          "p": [
-          53.82,
-          53.67
-         ]
+          62.5,
+          11.95
+         ],
+         "s": "S"
         },
         {
-         "t": "dot",
+         "t": "text",
          "p": [
-          42.48,
-          52.67
-         ]
-        },
-        {
-         "t": "dot",
-         "p": [
-          33.15,
-          46.14
-         ]
-        },
-        {
-         "t": "dot",
-         "p": [
-          28.33,
-          35.82
-         ]
+          74.5,
+          29.0
+         ],
+         "s": "α"
         }
        ],
        "why": {
-        "en": "Because equal chords make equal angles with each other on the same circle, repeating both the chord length and the turning angle forces our new points to stay on the exact same circular path. This allows us to extend the curve all the way back to the starting point without ever needing the centre.",
-        "ur": "چونکہ ایک ہی دائرے میں برابر وتر ایک دوسرے کے ساتھ برابر زاویے بناتے ہیں، اس لیے وتر کی لمبائی اور زاویے کو دہرانے سے نئے نقاط بالکل اسی دائرے کے راستے پر رہتے ہیں۔ اس طرح ہم مرکز معلوم کیے بغیر خم کو بڑھا کر واپس ابتدائی نقطے تک لے آتے ہیں۔"
+        "en": "By the geometric symmetry of a circle, moving the same chord length $RS = PQ$ at the same turning angle $\\alpha$ forces us to stay on the circular path. This gives us a brand new point $S$ that is guaranteed to lie on the circle.",
+        "ur": "دائرے کی ہم آہنگی کے اصول کے مطابق، ایک ہی وتر کی لمبائی $RS = PQ$ کو اسی بیرونی زاویے $\\alpha$ پر موڑنے سے ہم دائرے کے راستے پر ہی رہتے ہیں۔ اس سے ہمیں ایک نیا نقطہ $S$ ملتا ہے جو یقینی طور پر اسی دائرے پر واقع ہے۔"
        }
       },
       {
-       "math": "\\text{Join the points smoothly}",
-       "en": "Join all the marked points with a smooth curve: the circle is complete without finding its centre.",
-       "ur": "تمام نقاط کو ہموار خم سے ملائیں: مرکز معلوم کیے بغیر دائرہ مکمل ہو گیا۔",
+       "math": "\\text{Repeat: } T,\\ U,\\ \\dots \\text{ until back at } P",
+       "en": "Repeat at each new point: produce the last chord, copy the angle $\\alpha$, cut off the same length. This gives $T$, $U$, and the last chord closes at $P$.",
+       "ur": "ہر نئے نقطے پر یہی دہرائیں: آخری وتر بڑھائیں، زاویہ $\\alpha$ بنائیں، وہی لمبائی کاٹیں۔ اس سے $T$، $U$ ملتے ہیں اور آخری وتر $P$ پر بند ہوتا ہے۔",
+       "draw": [
+        {
+         "t": "line",
+         "p": [
+          61.0,
+          12.95,
+          54.95,
+          2.47
+         ],
+         "dash": true
+        },
+        {
+         "t": "line",
+         "p": [
+          61.0,
+          12.95,
+          39.0,
+          12.95
+         ],
+         "dash": false
+        },
+        {
+         "t": "line",
+         "p": [
+          39.0,
+          12.95,
+          26.9,
+          12.95
+         ],
+         "dash": true
+        },
+        {
+         "t": "line",
+         "p": [
+          39.0,
+          12.95,
+          28.0,
+          32.0
+         ],
+         "dash": false
+        },
+        {
+         "t": "line",
+         "p": [
+          28.0,
+          32.0,
+          39.0,
+          51.05
+         ],
+         "dash": false
+        },
+        {
+         "t": "dot",
+         "p": [
+          39.0,
+          12.95
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          28.0,
+          32.0
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          37.0,
+          10.95
+         ],
+         "s": "T"
+        },
+        {
+         "t": "text",
+         "p": [
+          23.0,
+          33.0
+         ],
+         "s": "U"
+        }
+       ],
+       "why": {
+        "en": "Continuing this regular pattern of equal chords and equal exterior angles builds a regular polygon whose vertices all touch the circle. Reaching back to $P$ gives us a complete ring of guide points all the way around.",
+        "ur": "برابر وتروں اور برابر بیرونی زاویوں کے اس سلسلے کو دہرانے سے ایک منظم کثیرالاضلاع (polygon) بنتی ہے جس کے تمام کونے دائرے کو چھوتے ہیں۔ نقطہ $P$ تک واپس پہنچنے سے ہمیں دائرے کے گرد رہنمائی کے لیے نقاط کا ایک مکمل حلقہ مل جاتا ہے۔"
+       }
+      },
+      {
+       "math": "\\text{Join all the points with a smooth curve}",
+       "en": "Join the points with a smooth curve through every corner: the circle is complete, and its centre was never needed.",
+       "ur": "تمام نقاط کو ایک ہموار خم سے ملائیں: دائرہ مکمل ہو گیا اور مرکز کی ضرورت نہیں پڑی۔",
        "draw": [
         {
          "t": "circle",
@@ -1024,15 +1173,15 @@
         }
        ],
        "why": {
-        "en": "The marked points all lie on the boundary of the required circle. Connecting them with a smooth, freehand curve fills in the gaps between the chords and gives us the final continuous circle.",
-        "ur": "یہ تمام نشان زدہ نقاط مطلوبہ دائرے کے محیط پر واقع ہیں۔ انہیں ایک ہموار خط سے ملانے سے وتروں کے درمیان خلا پر ہو جاتا ہے اور ہمیں ایک مکمل دائرہ حاصل ہو جاتا ہے۔"
+        "en": "The points $P, Q, R, S, T, U, \\dots$ act as stepping stones along the circumference. Sketching a smooth, round curve through all of them restores the full circle without ever needing to locate its centre.",
+        "ur": "نقاط $P, Q, R, S, T, U, \\dots$ دائرے کے محیط پر سنگِ میل کا کام کرتے ہیں۔ ان تمام نقاط میں سے ایک ہموار گول خط گزارنے سے پورا دائرہ مکمل ہو جاتا ہے اور اس کے مرکز کو تلاش کرنے کی ضرورت بھی نہیں پڑتی۔"
        }
       }
      ],
-     "answer": "circle completed by stepping equal chords (no centre needed)",
+     "answer": "circle completed by equal chords and equal exterior angles (no centre needed)",
      "meaning": {
-      "en": "We have successfully completed the full circle from the given arc $PQR$ by using the geometric property of equal chords and angles, completely avoiding the need to locate the centre. You can check your work visually by ensuring the completed figure looks completely round with no sharp corners where the points were joined.",
-      "ur": "ہم نے برابر وتروں اور زاویوں کی جیومیٹریائی خصوصیت کو استعمال کرتے ہوئے دی گئی قوس $PQR$ سے پورا دائرہ کامیابی سے مکمل کر لیا ہے، اور اس کے لیے مرکز معلوم کرنے کی بالکل ضرورت نہیں پڑی۔ آپ اپنے کام کی پڑتال دیکھ کر کر سکتے ہیں کہ مکمل شدہ شکل بالکل گول نظر آئے اور جہاں نقاط ملائے گئے ہیں وہاں کوئی نوک یا کونا نہ ہو۔"
+      "en": "This construction proves that a circle is completely determined by its local bending (equal chords turning through equal exterior angles $\\alpha$), allowing us to complete the arc $PQR$ without its centre. You can check your work by seeing if the path closes smoothly back at $P$ and looks perfectly round.",
+      "ur": "یہ عمل ثابت کرتا ہے کہ دائرے کو اس کے مقامی جھکاؤ (برابر وتروں کا برابر بیرونی زاویے $\\alpha$ پر مڑنا) کی مدد سے مکمل طور پر بنایا جا سکتا ہے، جس سے ہم مرکز کے بغیر ہی قوس $PQR$ کا دائرہ مکمل کر لیتے ہیں۔ آپ اپنے کام کی جانچ یہ دیکھ کر کر سکتے ہیں کہ آیا یہ راستہ نقطہ $P$ پر ہموار طریقے سے واپس ملتا ہے اور بالکل گول نظر آتا ہے۔"
      }
     }
    ],
@@ -1416,9 +1565,9 @@
      "prompt": "arc ABC",
      "steps": [
       {
-       "math": "\\text{Given arc } ABC",
-       "en": "Start from the given arc.",
-       "ur": "دی گئی قوس سے شروع کریں۔",
+       "math": "\\text{Given arc } ABC,\\quad AB = BC",
+       "en": "Mark three points $A$, $B$, $C$ on the given arc with the compasses at one fixed opening, so the chords $AB$ and $BC$ are equal.",
+       "ur": "دی گئی قوس پر پرکار کے ایک ہی فاصلے سے تین نقاط $A$، $B$، $C$ لگائیں تاکہ وتر $AB$ اور $BC$ برابر ہوں۔",
        "draw": [
         {
          "t": "arc",
@@ -1428,126 +1577,275 @@
          ],
          "r": 22,
          "a": [
-          200,
-          340
+          -10,
+          130
          ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          39.0,
+          51.05
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          61.0,
+          51.05
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          72.0,
+          32.0
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          35.0,
+          54.05
+         ],
+         "s": "A"
+        },
+        {
+         "t": "text",
+         "p": [
+          62.0,
+          54.05
+         ],
+         "s": "B"
+        },
+        {
+         "t": "text",
+         "p": [
+          73.5,
+          33.0
+         ],
+         "s": "C"
         }
        ],
        "why": {
-        "en": "Every geometric construction begins by drawing what is already known, which here is the arc $ABC$ of the fountain. Having this partial curve on paper gives us the exact curvature we need to follow to complete the rest of the circle.",
-        "ur": "ہر جیومیٹریکل عمل کا آغاز دی گئی معلومات کو بنانے سے ہوتا ہے، جو یہاں فوارے کی قوس $ABC$ ہے۔ کاغذ پر یہ ابتدائی قوس بنانے سے ہمیں وہ اصل گولائی مل جاتی ہے جس کی پیروی کرتے ہوئے ہم دائرہ مکمل کریں گے۔"
+        "en": "Since we cannot find the centre, we must rely on the symmetry of the circle itself. By marking equal chords $AB$ and $BC$, we set a fixed step size that will travel evenly along the circle's boundary.",
+        "ur": "چونکہ ہم مرکز تلاش نہیں کر سکتے، اس لیے ہمیں دائرے کی اپنی ہم آہنگی (symmetry) پر انحصار کرنا ہوگا۔ برابر وتر $AB$ اور $BC$ کا نشان لگا کر، ہم ایک مقررہ فاصلہ طے کر لیتے ہیں جو دائرے کی باؤنڈری کے ساتھ یکساں طور پر آگے بڑھے گا۔"
        }
       },
       {
-       "math": "\\text{Mark equal chords along the arc}",
-       "en": "Keep the compasses at a fixed small opening; from one end step along the arc marking equal chords.",
-       "ur": "پرکار کو ایک ہی چھوٹے فاصلے پر رکھیں؛ قوس پر برابر وتر لگاتے جائیں۔",
+       "math": "\\text{Produce } AB \\text{ to } P;\\ \\angle PBC = \\alpha",
+       "en": "Join $AB$ and $BC$. Produce $AB$ beyond $B$ to $P$ and mark the exterior angle $\\alpha = \\angle PBC$.",
+       "ur": "$AB$ اور $BC$ ملائیں۔ $AB$ کو $B$ سے آگے $P$ تک بڑھائیں اور بیرونی زاویہ $\\alpha = \\angle PBC$ لگائیں۔",
        "draw": [
         {
-         "t": "dot",
+         "t": "line",
          "p": [
-          29.33,
-          24.48
-         ]
+          39.0,
+          51.05,
+          61.0,
+          51.05
+         ],
+         "dash": false
         },
         {
-         "t": "dot",
+         "t": "line",
          "p": [
-          35.86,
-          15.15
-         ]
+          61.0,
+          51.05,
+          72.0,
+          32.0
+         ],
+         "dash": false
         },
         {
-         "t": "dot",
+         "t": "line",
          "p": [
-          46.18,
-          10.33
-         ]
+          61.0,
+          51.05,
+          73.1,
+          51.05
+         ],
+         "dash": true
         },
         {
-         "t": "dot",
+         "t": "text",
          "p": [
-          57.52,
-          11.33
-         ]
+          74.6,
+          48.55
+         ],
+         "s": "P"
         },
         {
-         "t": "dot",
+         "t": "text",
          "p": [
-          66.85,
-          17.86
-         ]
-        },
-        {
-         "t": "dot",
-         "p": [
-          71.67,
-          28.18
-         ]
+          64.0,
+          49.05
+         ],
+         "s": "α"
         }
        ],
        "why": {
-        "en": "Since we cannot use the centre, we use the geometric property that equal chords of a circle are identically spaced along its boundary. Marking these equal steps on the given arc $ABC$ sets a fixed pattern of length and angle that defines this specific circle.",
-        "ur": "چونکہ ہم مرکز استعمال نہیں کر سکتے، اس لیے ہم دائرے کی یہ خصوصیت استعمال کرتے ہیں کہ برابر وتروں کا دائرے کے محیط پر فاصلہ اور جھکاؤ یکساں ہوتا ہے۔ دی گئی قوس $ABC$ پر پرکار سے برابر فاصلے کے نشان لگانے سے ہمیں ایک خاص ترتیب مل جاتی ہے جو اسی دائرے کی پہچان ہے۔"
+        "en": "In a circle, equal chords always turn by the same angle. By extending $AB$ to $P$, we find the exact turning angle $\\alpha = \\angle PBC$ that the circle makes between two equal steps.",
+        "ur": "ایک دائرے میں، برابر وتر ہمیشہ ایک ہی زاویے پر مڑتے ہیں۔ $AB$ کو $P$ تک بڑھا کر، ہم وہی درست مڑنے والا زاویہ $\\alpha = \\angle PBC$ معلوم کرتے ہیں جو دائرہ دو برابر قدموں کے درمیان بناتا ہے۔"
        }
       },
       {
-       "math": "\\text{Continue the equal steps beyond the arc}",
-       "en": "Equal chords subtend equal angles, so the steps keep to the same circle; carry on until you come back to the start.",
-       "ur": "برابر وتر برابر زاویے بناتے ہیں، اس لیے یہ قدم اسی دائرے پر رہتے ہیں؛ شروع تک واپس آنے تک جاری رکھیں۔",
+       "math": "\\text{Produce } BC \\text{ to } Q;\\ \\angle QCD = \\alpha,\\ CD = AB",
+       "en": "Produce $BC$ to $Q$. At $C$ copy the same angle $\\alpha$ and cut off $CD$ equal to $AB$. Equal chords turning through equal angles stay on the same circle, so $D$ lies on it.",
+       "ur": "$BC$ کو $Q$ تک بڑھائیں۔ $C$ پر وہی زاویہ $\\alpha$ بنائیں اور $CD$ کو $AB$ کے برابر کاٹیں۔ برابر زاویوں سے مڑنے والے برابر وتر اسی دائرے پر رہتے ہیں، اس لیے $D$ دائرے پر ہے۔",
        "draw": [
         {
-         "t": "dot",
+         "t": "line",
          "p": [
-          70.67,
-          39.52
-         ]
+          72.0,
+          32.0,
+          78.05,
+          21.52
+         ],
+         "dash": true
+        },
+        {
+         "t": "text",
+         "p": [
+          79.55,
+          19.02
+         ],
+         "s": "Q"
+        },
+        {
+         "t": "line",
+         "p": [
+          72.0,
+          32.0,
+          61.0,
+          12.95
+         ],
+         "dash": false
         },
         {
          "t": "dot",
          "p": [
-          64.14,
-          48.85
+          61.0,
+          12.95
          ]
         },
         {
-         "t": "dot",
+         "t": "text",
          "p": [
-          53.82,
-          53.67
-         ]
+          62.5,
+          11.95
+         ],
+         "s": "D"
         },
         {
-         "t": "dot",
+         "t": "text",
          "p": [
-          42.48,
-          52.67
-         ]
-        },
-        {
-         "t": "dot",
-         "p": [
-          33.15,
-          46.14
-         ]
-        },
-        {
-         "t": "dot",
-         "p": [
-          28.33,
-          35.82
-         ]
+          74.5,
+          29.0
+         ],
+         "s": "α"
         }
        ],
        "why": {
-        "en": "Because equal chords subtend equal angles, repeating our fixed chord length and angle naturally forces the new points to stay on the exact same circular path. This allows us to extend the boundary step-by-step into the empty space until we loop all the way back to point $A$.",
-        "ur": "کیونکہ برابر وتر برابر زاویے بناتے ہیں، اس لیے اسی مقررہ لمبائی اور زاویے کو آگے بڑھانے سے نئے نقاط خود بخود اسی دائرے کے راستے پر آتے جاتے ہیں۔ اس طرح ہم خالی جگہ میں قدم بہ قدم دائرے کی حد کو آگے بڑھاتے ہیں یہاں تک کہ ہم گھوم کر واپس ابتدائی نقطہ $A$ تک پہنچ جائیں۔"
+        "en": "Using the geometric rule that equal chords turning at equal exterior angles stay on the same circular path, we copy angle $\\alpha$ and length $AB$ to find point $D$. This gives us our first new point on the missing part of the circle.",
+        "ur": "اس جیومیٹریکل اصول کا استعمال کرتے ہوئے کہ برابر بیرونی زاویوں پر مڑنے والے برابر وتر ایک ہی دائروی راستے پر رہتے ہیں، ہم نقطہ $D$ حاصل کرنے کے لیے زاویہ $\\alpha$ اور لمبائی $AB$ کی نقل بناتے ہیں۔ اس سے ہمیں دائرے کے نامکمل حصے پر پہلا نیا نقطہ مل جاتا ہے۔"
        }
       },
       {
-       "math": "\\text{Join the points smoothly}",
-       "en": "Join all the marked points with a smooth curve: the circle is complete without finding its centre.",
-       "ur": "تمام نقاط کو ہموار خم سے ملائیں: مرکز معلوم کیے بغیر دائرہ مکمل ہو گیا۔",
+       "math": "\\text{Repeat: } E,\\ F,\\ \\dots \\text{ until back at } A",
+       "en": "Repeat at each new point: produce the last chord, copy the angle $\\alpha$, cut off the same length. This gives $E$, $F$, and the last chord closes at $A$.",
+       "ur": "ہر نئے نقطے پر یہی دہرائیں: آخری وتر بڑھائیں، زاویہ $\\alpha$ بنائیں، وہی لمبائی کاٹیں۔ اس سے $E$، $F$ ملتے ہیں اور آخری وتر $A$ پر بند ہوتا ہے۔",
+       "draw": [
+        {
+         "t": "line",
+         "p": [
+          61.0,
+          12.95,
+          54.95,
+          2.47
+         ],
+         "dash": true
+        },
+        {
+         "t": "line",
+         "p": [
+          61.0,
+          12.95,
+          39.0,
+          12.95
+         ],
+         "dash": false
+        },
+        {
+         "t": "line",
+         "p": [
+          39.0,
+          12.95,
+          26.9,
+          12.95
+         ],
+         "dash": true
+        },
+        {
+         "t": "line",
+         "p": [
+          39.0,
+          12.95,
+          28.0,
+          32.0
+         ],
+         "dash": false
+        },
+        {
+         "t": "line",
+         "p": [
+          28.0,
+          32.0,
+          39.0,
+          51.05
+         ],
+         "dash": false
+        },
+        {
+         "t": "dot",
+         "p": [
+          39.0,
+          12.95
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          28.0,
+          32.0
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          37.0,
+          10.95
+         ],
+         "s": "E"
+        },
+        {
+         "t": "text",
+         "p": [
+          23.0,
+          33.0
+         ],
+         "s": "F"
+        }
+       ],
+       "why": {
+        "en": "By repeating this exact step—turning by angle $\\alpha$ and stepping forward by length $AB$—we keep generating more points ($E$, $F$, etc.) that are guaranteed to lie on the same circle until the path naturally closes back at $A$.",
+        "ur": "اسی عمل کو دہراتے ہوئے—زاویہ $\\alpha$ پر مڑنا اور لمبائی $AB$ کے برابر آگے بڑھنا—ہم مزید نقاط ($E$، $F$ وغیرہ) بناتے رہتے ہیں جو یقینی طور پر اسی دائرے پر واقع ہوتے ہیں، یہاں تک کہ راستہ قدرتی طور پر واپس $A$ پر آ کر بند ہو جاتا ہے۔"
+       }
+      },
+      {
+       "math": "\\text{Join all the points with a smooth curve}",
+       "en": "Join the points with a smooth curve through every corner: the circle is complete, and its centre was never needed.",
+       "ur": "تمام نقاط کو ایک ہموار خم سے ملائیں: دائرہ مکمل ہو گیا اور مرکز کی ضرورت نہیں پڑی۔",
        "draw": [
         {
          "t": "circle",
@@ -1559,15 +1857,15 @@
         }
        ],
        "why": {
-        "en": "The marked points act as closely spaced guideposts lying precisely on the hidden circumference. Drawing a smooth hand-drawn curve through all of them connects our steps and reveals the full circular shape of the fountain.",
-        "ur": "یہ لگائے گئے نشانات ایسے رہنما نقاط کا کام کرتے ہیں جو بالکل دائرے کے اصل محیط پر واقع ہیں۔ ان تمام نقاط کو ایک ہموار گولائی دار لکیر سے ملانے سے فوارے کی مکمل گول شکل واضح ہو جاتی ہے۔"
+        "en": "The points $A, B, C, D, E, F, \\dots$ form the corners of a regular-like polygon inscribed in our circle. Joining them smoothly with a freehand curve reconstructs the full boundary of the fountain.",
+        "ur": "نقاط $A, B, C, D, E, F, \\dots$ ہمارے دائرے کے اندر بنی ہوئی ایک باقاعدہ کثیر الاضلاع (polygon) کے کونے بناتے ہیں۔ انہیں ہاتھ سے ایک ہموار گولائی کے ذریعے ملانے سے فوارے کا پورا دائرہ مکمل ہو جاتا ہے۔"
        }
       }
      ],
-     "answer": "circle completed by stepping equal chords (no centre needed)",
+     "answer": "circle completed by equal chords and equal exterior angles (no centre needed)",
      "meaning": {
-      "en": "This completed figure shows the full circular boundary of the fountain, constructed purely from the curvature of the arc $ABC$ without ever needing its centre. You can check your accuracy by verifying that the final step meets the starting point smoothly and the curve looks evenly round from all sides.",
-      "ur": "یہ مکمل شدہ شکل فوارے کے پورے دائرے کو ظاہر کرتی ہے، جسے مرکز معلوم کیے بغیر صرف قوس $ABC$ کے جھکاؤ کی مدد سے بنایا گیا ہے۔ آپ اپنے عمل کی درستگی کو یوں جانچ سکتے ہیں کہ آخری قدم ہموار طریقے سے ابتدائی نقطے سے جا ملے اور دائرہ ہر طرف سے یکساں گول نظر آئے۔"
+      "en": "This construction shows that we can complete the circular arc $ABC$ of the fountain purely by using its local curvature—equal chords $AB$ and equal exterior angles $\\alpha$—without ever needing to locate the centre. You can check your work by seeing if the final step meets smoothly back at the starting point $A$ and the curve looks evenly round.",
+      "ur": "یہ عمل دکھاتا ہے کہ ہم فوارے کی دائروی قوس $ABC$ کو مرکز تلاش کیے بغیر، صرف اس کے مقامی خم—یعنی برابر وتروں $AB$ اور برابر بیرونی زاویوں $\\alpha$—کو استعمال کرتے ہوئے مکمل کر سکتے ہیں۔ آپ اپنے کام کی جانچ یہ دیکھ کر کر سکتے ہیں کہ آیا آخری قدم ابتدائی نقطہ $A$ سے ہموار طریقے سے ملتا ہے اور گولائی ہر طرف سے یکساں نظر آتی ہے۔"
      }
     }
    ],
@@ -1734,8 +2032,8 @@
      "steps": [
       {
        "math": "\\text{Given arc } PQR \\text{ with } P \\text{ an endpoint}",
-       "en": "Find the centre $O$ (perpendicular bisectors of two chords) if it is not given.",
-       "ur": "اگر مرکز نہ دیا ہو تو دو وتروں کے عمودی ناصف سے $O$ معلوم کریں۔",
+       "en": "Draw the arc $PQR$; $P$ is one end of it.",
+       "ur": "قوس $PQR$ کھینچیں؛ $P$ اس کا ایک سرا ہے۔",
        "draw": [
         {
          "t": "arc",
@@ -1745,8 +2043,8 @@
          ],
          "r": 22,
          "a": [
-          -60,
-          240
+          -120,
+          60
          ]
         },
         {
@@ -1759,10 +2057,91 @@
         {
          "t": "text",
          "p": [
-          40.5,
-          8.45
+          41.0,
+          14.95
          ],
          "s": "P"
+        },
+        {
+         "t": "dot",
+         "p": [
+          69.05,
+          19.0
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          70.55,
+          16.5
+         ],
+         "s": "Q"
+        },
+        {
+         "t": "dot",
+         "p": [
+          61.0,
+          49.05
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          62.5,
+          52.05
+         ],
+         "s": "R"
+        }
+       ],
+       "why": {
+        "en": "We start by drawing the given arc $\\widehat{PQR}$ clearly so that we can see its endpoint $P$, which is the exact spot where our tangent line must touch.",
+        "ur": "ہم سب سے پہلے دی گئی قوس $\\widehat{PQR}$ بناتے ہیں تاکہ اس کا سرے کا نقطہ $P$ واضح ہو جائے، کیونکہ ہمارا مماس اسی نقطے کو چھو کر گزرے گا۔"
+       }
+      },
+      {
+       "math": "\\text{Perpendicular bisectors of } PQ \\text{ and } QR \\text{ meet at } O",
+       "en": "Join $PQ$ and $QR$ and construct the perpendicular bisector of each (arcs from both ends of the chord). They meet at the centre $O$.",
+       "ur": "$PQ$ اور $QR$ ملائیں اور ہر ایک کا عمودی ناصف بنائیں (وتر کے دونوں سروں سے قوسیں)۔ یہ مرکز $O$ پر ملتے ہیں۔",
+       "draw": [
+        {
+         "t": "line",
+         "p": [
+          39.0,
+          10.95,
+          69.05,
+          19.0
+         ],
+         "dash": false
+        },
+        {
+         "t": "line",
+         "p": [
+          69.05,
+          19.0,
+          61.0,
+          49.05
+         ],
+         "dash": false
+        },
+        {
+         "t": "line",
+         "p": [
+          57.65,
+          1.45,
+          50.4,
+          28.5
+         ],
+         "dash": true
+        },
+        {
+         "t": "line",
+         "p": [
+          78.55,
+          37.65,
+          51.5,
+          30.4
+         ],
+         "dash": true
         },
         {
          "t": "dot",
@@ -1781,35 +2160,91 @@
         }
        ],
        "why": {
-        "en": "A tangent's direction is always controlled by the circle's radius, so we must know where the centre is first. By drawing the perpendicular bisectors of two chords on the arc $\\widehat{PQR}$, their intersection gives us the exact centre $O$.",
-        "ur": "مماس (tangent) کی سمت ہمیشہ دائرے کے رداس (radius) سے طے ہوتی ہے، اس لیے ہمیں سب سے پہلے مرکز کا پتہ لگانا ہوگا۔ قوس $\\widehat{PQR}$ پر دو وتروں (chords) کے عمودی ناصف کھینچنے سے ان کا نقطہ تقاطع ہمیں بالکل درست مرکز $O$ دے دیتا ہے۔"
+        "en": "Since the centre of the arc is unknown, we use the geometric rule that the perpendicular bisectors of any two chords always intersect at the centre of the circle. Finding this centre $O$ is necessary so we can draw the radius to point $P$.",
+        "ur": "چونکہ قوس کا مرکز معلوم نہیں ہے، اس لیے ہم یہ اصول استعمال کرتے ہیں کہ کسی بھی دو وتروں کے عمودی ناصف ہمیشہ دائرے کے مرکز پر ملتے ہیں۔ مرکز $O$ معلوم کرنا ضروری ہے تاکہ ہم نقطہ $P$ تک رداس کھینچ سکیں۔"
        }
       },
       {
-       "math": "\\text{Join } OP",
-       "en": "Draw the radius to $P$.",
-       "ur": "$P$ تک رداس کھینچیں۔",
+       "math": "\\text{Join } OP \\text{ and produce it beyond } P",
+       "en": "Draw the radius $OP$ and extend it a little beyond $P$.",
+       "ur": "رداس $OP$ کھینچیں اور اسے $P$ سے تھوڑا آگے بڑھائیں۔",
        "draw": [
         {
          "t": "line",
          "p": [
           50.0,
           30.0,
-          39.0,
-          10.95
+          35.0,
+          4.02
          ],
          "dash": false
         }
        ],
        "why": {
-        "en": "Now that we have the centre $O$, we need to connect it to the point of contact $P$ where the tangent will touch the arc. This line segment $OP$ gives us the exact radius at the endpoint $P$, which acts as our base line for the final step.",
-        "ur": "اب جب کہ ہمارے پاس مرکز $O$ موجود ہے، ہمیں اسے نقطہ تماس $P$ سے ملانا ہے جہاں مماس قوس کو چھوئے گا۔ یہ قطعہ خط $OP$ ہمیں سرے کے نقطہ $P$ پر درست رداس فراہم کرتا ہے، جو آخری مرحلے کے لیے ہماری بنیادی لائن کا کام کرے گا۔"
+        "en": "A tangent is always perpendicular to the radius at the point of contact, so we must first draw the radius $OP$. Extending the line beyond $P$ gives us working space on both sides of $P$ to easily construct a right angle.",
+        "ur": "مماس ہمیشہ نقطہ تماس پر رداس کے عموداً ہوتا ہے، اس لیے ہمیں پہلے رداس $OP$ کھینچنا ہوگا۔ اس خط کو $P$ سے آگے بڑھانے سے ہمیں زاویہ قائمہ بنانے کے لیے $P$ کے دونوں طرف مناسب جگہ مل جاتی ہے۔"
        }
       },
       {
-       "math": "\\text{At } P \\text{ draw a line } \\perp OP",
-       "en": "The perpendicular to the radius at $P$ is the tangent.",
-       "ur": "$P$ پر رداس کا عمود ہی مماس ہے۔",
+       "math": "\\text{With centre } P \\text{ cut } OP \\text{ at } C \\text{ and } D;\\ \\text{arcs from } C, D \\text{ meet at } T",
+       "en": "With $P$ as centre draw an arc cutting the line $OP$ at $C$ and $D$ on either side of $P$. With $C$ and $D$ as centres and equal radius (more than $\\frac{1}{2}CD$) draw arcs meeting at $T$.",
+       "ur": "$P$ کو مرکز بنا کر قوس کھینچیں جو خط $OP$ کو $P$ کے دونوں طرف $C$ اور $D$ پر کاٹے۔ $C$ اور $D$ کو مرکز بنا کر برابر رداس (آدھے $CD$ سے زیادہ) سے قوسیں کھینچیں جو $T$ پر ملیں۔",
+       "draw": [
+        {
+         "t": "dot",
+         "p": [
+          43.0,
+          17.88
+         ]
+        },
+        {
+         "t": "dot",
+         "p": [
+          35.0,
+          4.02
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          38.0,
+          19.88
+         ],
+         "s": "C"
+        },
+        {
+         "t": "text",
+         "p": [
+          30.0,
+          3.02
+         ],
+         "s": "D"
+        },
+        {
+         "t": "dot",
+         "p": [
+          51.12,
+          3.95
+         ]
+        },
+        {
+         "t": "text",
+         "p": [
+          52.62,
+          1.45
+         ],
+         "s": "T"
+        }
+       ],
+       "why": {
+        "en": "Here we use the standard compass method to construct a perpendicular line at point $P$ by making $P$ the exact midpoint of segment $CD$. The intersection point $T$ gives us the precise direction needed to form a right angle with the radius.",
+        "ur": "یہاں ہم نقطہ $P$ کو قطعہ خط $CD$ کا وسطی نقطہ بنا کر پرکار کی مدد سے عمود گرانے کا معیاری طریقہ استعمال کرتے ہیں۔ تقاطع کا نقطہ $T$ ہمیں رداس کے ساتھ قائمہ زاویہ بنانے کے لیے بالکل درست سمت فراہم کرتا ہے۔"
+       }
+      },
+      {
+       "math": "PT \\perp OP \\Rightarrow PT \\text{ is the tangent at } P",
+       "en": "Join $PT$. It is perpendicular to the radius $OP$ at its end, so it touches the arc only at $P$: it is the tangent.",
+       "ur": "$PT$ ملائیں۔ یہ رداس $OP$ کے سرے پر عمود ہے، اس لیے قوس کو صرف $P$ پر چھوتا ہے: یہی مماس ہے۔",
        "check": [
         "Abs((39.00000000000001-50)*(0.866025403784) + (10.947441116742347-30)*(-0.500000000000)) < 1e-6"
        ],
@@ -1817,24 +2252,24 @@
         {
          "t": "line",
          "p": [
-          23.41,
-          19.95,
-          54.59,
-          1.95
+          25.14,
+          18.95,
+          52.86,
+          2.95
          ],
          "dash": false
         }
        ],
        "why": {
-        "en": "By the fundamental circle theorem, a tangent at any point is always perpendicular to the radius at that point. Constructing a line perpendicular to $OP$ at point $P$ ensures the line touches the arc at $P$ without cutting through it.",
-        "ur": "دائرے کے بنیادی مسئلے کے مطابق، کسی بھی نقطے پر مماس ہمیشہ اس نقطے کے رداس پر عمود ہوتا ہے۔ نقطہ $P$ پر $OP$ کے عموداً ایک خط کھینچنا اس بات کو یقینی بناتا ہے کہ یہ خط قوس کو کاٹے بغیر صرف نقطہ $P$ پر چھوتا ہے۔"
+        "en": "By the fundamental theorem of circles, a line drawn perpendicular to the radius at its outer endpoint is a tangent to the circle. Therefore, joining $P$ and $T$ completes our required tangent line at the endpoint $P$.",
+        "ur": "دائرے کے بنیادی مسئلے کے مطابق، رداس کے بیرونی سرے پر اس کے عموداً کھینچا گیا خط دائرے کا مماس ہوتا ہے۔ لہٰذا، $P$ اور $T$ کو ملانے سے سرے کے نقطہ $P$ پر ہمارا مطلوبہ مماس مکمل ہو جاتا ہے۔"
        }
       }
      ],
-     "answer": "tangent at $P$ perpendicular to $OP$",
+     "answer": "tangent $PT$ at $P$, perpendicular to $OP$",
      "meaning": {
-      "en": "The line drawn perpendicular to the radius $OP$ at the endpoint $P$ is the required tangent to the arc $\\widehat{PQR}$. You can check your work with a protractor by confirming that the angle between your tangent line and the radius $OP$ is a right angle.",
-      "ur": "سرے کے نقطہ $P$ پر رداس $OP$ کے عموداً کھینچا گیا خط ہی قوس $\\widehat{PQR}$ کا مطلوبہ مماس ہے۔ آپ پروٹریکٹر (ڈی) کی مدد سے یہ تصدیق کر کے اپنا کام چیک کر سکتے ہیں کہ آپ کے مماس اور رداس $OP$ کے درمیان زاویہ قائمہ (right angle) ہے۔"
+      "en": "The final construction gives us the line $PT$, which is the required tangent to the arc $\\widehat{PQR}$ touching it solely at its endpoint $P$. You can verify your work using a protractor to check that the angle between the radius $OP$ and the tangent $PT$ is a right angle.",
+      "ur": "یہ عمل ہمیں خط $PT$ دیتا ہے، جو قوس $\\widehat{PQR}$ کا مطلوبہ مماس ہے اور اسے صرف اس کے سرے کے نقطہ $P$ پر چھوتا ہے۔ آپ ڈی (پروٹریکٹر) کی مدد سے یہ تصدیق کر سکتے ہیں کہ رداس $OP$ اور مماس $PT$ کے درمیان بننے والا زاویہ بالکل قائمہ ہے۔"
      }
     }
    ],

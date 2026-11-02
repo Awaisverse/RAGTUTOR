@@ -74,9 +74,29 @@ one("ex9.1", 10, "A pyramid-shaped sculpture is placed in the center of a circul
 
 # ------------------------------------------------------------------------------------------ Exercise 9.2
 
-one("ex9.2", 1, r"$A$, $B$, $C$ and $D$ are points on circumference of a circle with centre at $O$ as shown in figure (the exterior angle at $C$ is $114^\circ$, $x = \angle BOD$). Find the angle $x$.", [
-    (r"\angle BCD = 180^\circ - 114^\circ = 66^\circ", r"The interior and exterior angles at $C$ are on a straight line.", r"$C$ پر اندرونی اور بیرونی زاویے ایک خط مستقیم پر ہیں۔", ["180 - 114 == 66"]),
-    (r"x = 2 \times 66^\circ = 132^\circ", *CEN, ["2*66 == 132"])], r"$x = 132^\circ$", "9.2")
+# 9.2 Q1 as printed: B, C, D, A on the circle; the exterior angle 114 deg at C (BC produced); x is marked at O on the side
+# facing C, so x is the REFLEX angle BOD. The angle BOD on arc BAD (facing A) is 2 x angle BCD = 132 deg.
+FIG_9_2_1 = [{"t": "circle", "c": [50, 30], "r": 22}, {"t": "dot", "p": [50, 30]}, {"t": "text", "p": [47, 36], "s": "O"},
+             {"t": "poly", "p": [28.75, 24.3, 61, 10.95, 64.1, 46.85, 44.3, 51.25], "close": True},
+             {"t": "line", "p": [61, 10.95, 73.9, 5.6], "arrow": True},
+             {"t": "line", "p": [50, 30, 28.75, 24.3]}, {"t": "line", "p": [50, 30, 64.1, 46.85]},
+             {"t": "arc", "c": [50, 30], "r": 5, "a": [195, 410]}, {"t": "text", "p": [54, 22], "s": "x"},
+             {"t": "text", "p": [24, 24], "s": "B"}, {"t": "text", "p": [60, 8], "s": "C"}, {"t": "text", "p": [65.5, 51], "s": "D"},
+             {"t": "text", "p": [42, 56], "s": "A"}, {"t": "text", "p": [68, 13], "s": "114°"}]
+p91 = P("", rows([
+    (r"\angle BCD = 180^\circ - 114^\circ = 66^\circ", r"$BC$ is produced beyond $C$, so the interior angle $BCD$ and the exterior angle $114^\circ$ lie on a straight line and add to $180^\circ$.",
+     r"$BC$ کو $C$ سے آگے بڑھایا گیا ہے، اس لیے اندرونی زاویہ $BCD$ اور بیرونی زاویہ $114^\circ$ ایک خط مستقیم پر ہیں اور ان کا مجموعہ $180^\circ$ ہے۔", ["180 - 114 == 66"]),
+    (r"\angle BOD\ (\text{on arc } BAD) = 2 \times 66^\circ = 132^\circ", r"$\angle BCD$ stands on the arc $BAD$; the angle at the centre on the same arc is twice it. This is the angle at $O$ on the side facing $A$.",
+     r"$\angle BCD$ قوس $BAD$ پر ہے؛ اسی قوس پر مرکزی زاویہ اس کا دگنا ہے۔ یہ $O$ پر $A$ کی طرف والا زاویہ ہے۔", ["2*66 == 132"]),
+    (r"x = 360^\circ - 132^\circ = 228^\circ", r"In the figure $x$ is marked on the other side of $O$, facing $C$: it is the reflex angle $BOD$, so it is what is left of the full turn $360^\circ$.",
+     r"شکل میں $x$ مرکز $O$ کی دوسری طرف $C$ کی جانب لگا ہے: یہ منعکس زاویہ $BOD$ ہے، اس لیے یہ پورے چکر $360^\circ$ میں سے باقی بچا زاویہ ہے۔", ["360 - 132 == 228"])]),
+    r"$x = 228^\circ$ (the reflex angle marked; the other angle $BOD$ is $132^\circ$)")
+p91["key_note"] = {"en": "The solutions book gives $x = 132^\\circ$ or $228^\\circ$. In the printed figure $x$ is marked on the side of $O$ facing $C$, "
+                   "so $x$ is the reflex angle, $228^\\circ$; $132^\\circ$ is the angle $BOD$ facing $A$.",
+                   "ur": "حل کی کتاب میں $x = 132^\\circ$ یا $228^\\circ$ ہے۔ شکل میں $x$ مرکز کی $C$ والی طرف لگا ہے، اس لیے $x$ منعکس زاویہ $228^\\circ$ ہے؛ $132^\\circ$ زاویہ $BOD$ کی $A$ والی طرف ہے۔"}
+p91["steps"][0]["draw"] = FIG_9_2_1
+ex("ex9.2", 1, r"$A$, $B$, $C$ and $D$ are points on circumference of a circle with centre at $O$ as shown in figure (the exterior angle at $C$ is $114^\circ$, $x$ is the angle at $O$ marked on the side facing $C$). Find the angle $x$.",
+   [p91], "9.2", figure_h=60)
 ex("ex9.2", 2, r"In the adjoining figure $m\angle BDC = 74^\circ$, find $m\angle BAC$, $m\angle BOC$ and $m\angle OBC$.", [P("", rows([
     (r"\angle BAC = \angle BDC = 74^\circ", *SEG, []),
     (r"\angle BOC = 2 \times 74^\circ = 148^\circ", *CEN, ["2*74 == 148"]),

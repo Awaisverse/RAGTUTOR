@@ -61,7 +61,7 @@ def tree(levels, h=60):
             for o in opts:
                 y = ys[j]
                 out.append({"t": "line", "p": [round(px, 2), round(py, 2), round(xs[k + 1], 2), round(y, 2)]})
-                if n_total <= 18:
+                if n_total <= 40:
                     out.append({"t": "text", "p": [round(xs[k + 1] + 1, 2), round(y + 1, 2)], "s": str(o)})
                 cur.append((xs[k + 1] + (4 if n_total <= 18 else 0), y))
                 j += 1
@@ -102,14 +102,14 @@ ex("ex12.1", 5, "A dice is rolled and coin is tossed together. (i) Find sample s
        event_part("iii", DC, "die and coin, 12 outcomes", lambda s: s[0] % 2 == 0 and s[1] == "T", "a tail and an even number")[0]], "12.1", figure_h=60)
 ex("ex12.1", 6, "Two unbiased dice are rolled once. (i) Find sample space by sketching tree diagram. (ii) Find sample space by drawing possibility diagram. (iii) Find the probability of getting "
    "(a) same number on both dice. (b) the product as a prime number. (c) the sum as an even number. (d) the sum as 13.", [
-       P("i", [S(r"\text{Die 1} \to \text{Die 2}", "Each of the 6 faces branches into 6.", "6 میں سے ہر رخ 6 شاخوں میں۔", "6*6 == 36", draw=tree([list(range(1, 7)), list(range(1, 7))]))],
+       P("i", [S(r"\text{Die 1} \to \text{Die 2}", "Each of the 6 faces branches into 6.", "6 میں سے ہر رخ 6 شاخوں میں۔", "6*6 == 36", draw=tree([list(range(1, 7)), list(range(1, 7))], h=120))],
          "$n(S) = 36$", prompt="tree diagram"),
        P("ii", [S(grid_tex(range(1, 7), range(1, 7), lambda r, c: f"({r},{c})"), "Rows: first die; columns: second die.", "قطاریں: پہلا پانسہ؛ کالم: دوسرا۔", "6*6 == 36")],
          "$n(S) = 36$", prompt="possibility diagram"),
        event_part("iiia", DICE2, "two dice, 36 outcomes", lambda s: s[0] == s[1], "same number on both dice")[0],
        event_part("iiib", DICE2, "two dice, 36 outcomes", lambda s: s[0] * s[1] in PRIMES, "the product as a prime number")[0],
        event_part("iiic", DICE2, "two dice, 36 outcomes", lambda s: (s[0] + s[1]) % 2 == 0, "the sum as an even number", listed=False)[0],
-       event_part("iiid", DICE2, "two dice, 36 outcomes", lambda s: s[0] + s[1] == 13, "the sum as 13")[0]], "12.1", figure_h=60)
+       event_part("iiid", DICE2, "two dice, 36 outcomes", lambda s: s[0] + s[1] == 13, "the sum as 13")[0]], "12.1", figure_h=120)
 Q7 = [("i", lambda s: s == "TTT", "all tails"), ("ii", lambda s: "H" in s, "at least one head"), ("iii", lambda s: s.count("T") <= 2, "at most two tails"),
       ("iv", lambda s: s.count("H") == 2, "2 heads"), ("v", lambda s: s.count("H") <= 2, "at most 2 heads"), ("vi", lambda s: "H" not in s, "no head")]
 ex("ex12.1", 7, "Three fair coins are tossed together. Find the probability of getting (i) all tails (ii) at least one head (iii) at most two tails (iv) 2 heads (v) at most 2 heads (vi) no head",

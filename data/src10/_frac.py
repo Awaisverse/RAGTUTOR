@@ -64,6 +64,14 @@ def reduce(label, num, den, prompt):
     return P(label, steps, f"${nice(val)}$", prompt=prompt)
 
 
+def _neg_of(d, T):
+    """A denominator that is minus another one (y - x beside x - y) is written -(x - y), as the book does."""
+    for _, _, d0 in T:
+        if d0 is not d and sp.expand(d + d0) == 0 and not str(d0).startswith("-"):
+            return rf"-\left({F(d0)}\right)"
+    return F(d)
+
+
 def combine(label, terms, prompt):
     """terms: list of (sign, num, den) strings. Add/subtract over the L.C.D."""
     T = [(s, E(n), E(d)) for s, n, d in terms]
@@ -75,13 +83,22 @@ def combine(label, terms, prompt):
             out += ("" if k == 0 and s == "+" else f" {s} ") + rf"\frac{{{n}}}{{{d}}}"
         return out
     steps = [S(show([(s, L(n), L(d)) for s, n, d in T]), "Write the expression.", "عبارت لکھیں۔"),
-             S("= " + show([(s, F(n), F(d)) for s, n, d in T]), "Factorize each denominator.", "ہر نسب نما کی تجزی کریں۔",
+             S("= " + show([(s, F(n), _neg_of(d, T)) for s, n, d in T]), "Factorize each denominator.", "ہر نسب نما کی تجزی کریں۔",
                f"{py(sum((1 if s == '+' else -1) * sp.factor(n) / sp.factor(d) for s, n, d in T))} == {py(total)}")]
     lcd = sp.factor(sp.lcm_list([d for _, _, d in T]))
+    for _, _, d in T:                                 # y - x and x - y: use the denominator as the book writes it
+        if sp.expand(lcd + d) == 0:
+            lcd = d
+            break
     pieces = []
     num_total = 0
     for s, n, d in T:
         m = sp.factor(sp.cancel(lcd / d))
+        if m.is_Number and m < 0:                     # over -(x - y): flip the sign rather than write "3 - 1 + 1"
+            s, m = ("-" if s == "+" else "+"), -m
+            num_total += (1 if s == "+" else -1) * n * m
+            pieces.append((s, n, m))
+            continue
         pieces.append((s, n, m))
         num_total += (1 if s == "+" else -1) * n * m
     numtex = ""
@@ -95,12 +112,19 @@ def combine(label, terms, prompt):
     steps.append(S(rf"= \frac{{{numtex}}}{{{F(lcd)}}}", f"The L.C.D. is ${F(lcd)}$; write each numerator over it.",
                    f"ل.م.م (L.C.D.) ${F(lcd)}$ ہے؛ ہر شمار کنندہ اس پر لکھیں۔", f"{py(num_total)}/{py(lcd)} == {py(total)}"))
     expanded = sp.expand(num_total)
-    steps.append(S(rf"= \frac{{{L(expanded)}}}{{{F(lcd)}}}", "Multiply out and collect like terms in the numerator.", "شمار کنندہ میں ضرب دے کر متشابہ ارکان اکٹھے کریں۔",
-                   f"{py(expanded)}/{py(lcd)} == {py(total)}"))
+    if steps[-1]["math"].replace(" ", "") != rf"= \frac{{{L(expanded)}}}{{{F(lcd)}}}".replace(" ", ""):
+        steps.append(S(rf"= \frac{{{L(expanded)}}}{{{F(lcd)}}}", "Multiply out and collect like terms in the numerator.", "شمار کنندہ میں ضرب دے کر متشابہ ارکان اکٹھے کریں۔",
+                       f"{py(expanded)}/{py(lcd)} == {py(total)}"))
     final = nice(total)
+    fac = sp.factor(expanded)
     if final.replace(" ", "") != rf"\frac{{{L(expanded)}}}{{{F(lcd)}}}".replace(" ", ""):
-        steps.append(S(rf"= {final}", "Factorize the numerator and cancel any common factor.", "شمار کنندہ کی تجزی کر کے مشترک جزو کاٹ دیں۔",
-                       f"{py(sp.cancel(total))} == {py(total)}"))
+        if fac != expanded and not fac.is_Number and sp.cancel(fac / lcd) != fac / lcd:
+            steps.append(S(rf"= \frac{{{F(fac)}}}{{{F(lcd)}}}", "Factorize the numerator.", "شمار کنندہ کی تجزی کریں۔",
+                           f"{py(fac)}/{py(lcd)} == {py(total)}"))
+            steps.append(S(rf"= {final}", "Cancel the common factor.", "مشترک جزو کاٹ دیں۔", f"{py(sp.cancel(total))} == {py(total)}"))
+        else:
+            steps.append(S(rf"= {final}", "Factorize the numerator and cancel any common factor.", "شمار کنندہ کی تجزی کر کے مشترک جزو کاٹ دیں۔",
+                           f"{py(sp.cancel(total))} == {py(total)}"))
     return P(label, steps, f"${final}$", prompt=prompt)
 
 

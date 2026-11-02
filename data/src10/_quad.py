@@ -35,7 +35,11 @@ def q_graph(label, poly_str, prompt=None):
     xr, yr = _graph_ranges([poly], roots)
     g = Graph(xr, yr)
     vx = -coeffs(poly)[1] / (2 * coeffs(poly)[0])
-    xs = sorted({int(sp.floor(vx)) + d for d in range(-3, 4)})
+    # the table runs from one whole number left of the smaller root to one right of the larger, so the plotted points
+    # cross the x-axis on both sides (and always include the turning point)
+    rs = [float(r) for r in roots if sp.sympify(r).is_real] or [float(vx)]
+    lo_x, hi_x = int(sp.floor(min(rs + [float(vx)]))) - 1, int(sp.ceiling(max(rs + [float(vx)]))) + 1
+    xs = list(range(lo_x, hi_x + 1)) if hi_x - lo_x <= 12 else sorted({lo_x, hi_x, int(sp.floor(vx))} | set(range(lo_x, hi_x + 1, 2)))
     tab, ys = table_step(sp.sstr(poly), xs)
     steps = [S(rf"y = {sp.latex(poly)}", "Draw the graph of $y$ = the left side; the roots are where the graph cuts the $x$-axis ($y = 0$).",
                "بائیں جانب کے برابر $y$ کا گراف بنائیں؛ جذر وہاں ہیں جہاں گراف $x$-محور کو کاٹتا ہے ($y = 0$)۔", draw=g.axes()),
@@ -228,8 +232,14 @@ def inequality(label, poly_str, op, prompt=None):
         text = f"${ans}$"
     if inclusive and pieces and not holds[0] and not holds[-1]:
         pass
+    shade = [[None if edges[k] == -sp.oo else float(edges[k]), None if edges[k + 1] == sp.oo else float(edges[k + 1])]
+             for k, ok in enumerate(holds) if ok]
+    if not shade and inclusive and roots:
+        shade = [[float(r), float(r)] for r in roots]
+    sol_marks = [{"v": float(r), "s": tex_plain(r), "open": not inclusive} for r in roots]
     steps.append(S(ans, "Collect the intervals where the inequality holds" + (" (the critical points are included because of $=$)." if inclusive else "."),
-                   "وہ وقفے لکھیں جہاں عدم مساوات درست ہے" + (" (= کی وجہ سے نازک نقاط شامل ہیں)۔" if inclusive else "۔")))
+                   "وہ وقفے لکھیں جہاں عدم مساوات درست ہے" + (" (= کی وجہ سے نازک نقاط شامل ہیں)۔" if inclusive else "۔"),
+                   draw=[{"t": "numberline", "from": nl_from, "to": nl_to, "y": 30, "marks": sol_marks, "shade": shade}] if roots else None))
     if not pieces and not inclusive and len(roots) == 1:
         steps[-1] = S(ans, "A square is never negative, so no $x$ satisfies the inequality.", "مربع کبھی منفی نہیں ہوتا، اس لیے کوئی $x$ عدم مساوات کو پورا نہیں کرتا۔",
                       f"({sp.sstr(work)}) == {ps(sp.factor(work))}")

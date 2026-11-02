@@ -113,11 +113,16 @@ def apply_overlay(item, part):
     if not path.exists():
         return 0
     data = json.loads(path.read_text(encoding="utf-8"))
-    if (any(s.get("draw") for s in part["steps"]) or part.get("figure")) and not data.get("keeps_drawing"):
+    if part.get("figure") and not data.get("keeps_drawing"):
         return 0                                  # a part with a figure takes only an overlay that carries its drawing
     if data.get("answer_ref") != part["answer"]:
         return 0                                  # the source answer changed since the overlay was made: keep the source
+    draws = [d for s in part["steps"] for d in (s.get("draw") or [])]
     part["steps"] = data["steps"]
+    if draws:                                     # the figure always comes from the source, so a fixed or new figure reaches it too
+        for s in part["steps"]:
+            s.pop("draw", None)
+        part["steps"][0]["draw"] = draws
     part["enriched"] = True
     return 1
 
