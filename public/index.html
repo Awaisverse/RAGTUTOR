@@ -440,9 +440,139 @@
     *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
     .aurora { animation: none; }
   }
+
+  /* ================= CLEAN: one calm column, one accent, nothing that is not needed ================= */
+  body.clean { --c-bg: #ffffff; --c-soft: #f5f5f7; --c-ink: #1d1d1f; --c-mute: #6e6e73; --c-line: #e5e5ea; --c-acc: #4F46E5; --c-acc-ink: #fff;
+    background: var(--c-bg); color: var(--c-ink); padding-bottom: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Segoe UI", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) body.clean { --c-bg: #000; --c-soft: #1c1c1e; --c-ink: #f5f5f7; --c-mute: #98989d; --c-line: #2c2c2e; --c-acc: #A5B4FC; --c-acc-ink: #1E1B4B; } }
+  :root[data-theme="dark"] body.clean { --c-bg: #000; --c-soft: #1c1c1e; --c-ink: #f5f5f7; --c-mute: #98989d; --c-line: #2c2c2e; --c-acc: #A5B4FC; --c-acc-ink: #1E1B4B; }
+  html:has(body.clean) { background: var(--c-bg); }
+  .clean .aurora, .clean .grain, .clean #confetti, .clean .chip-stat, .clean header .sub, .clean .klass-chip, .clean .wordmark .desc,
+  .clean .row .note, .clean .panel[data-panel="ask"] > .note, .clean #first, .clean #speed, .clean .controls .lbl, .clean .vsep,
+  .clean .card::after, .clean .card::before { display: none !important; }
+
+  /* header: a thin translucent bar */
+  .clean header { position: sticky; top: 0; z-index: 40; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: nowrap;
+    max-width: none; margin: 0; padding: 10px max(16px, calc((100vw - 980px) / 2)); padding-top: calc(10px + env(safe-area-inset-top));
+    background: color-mix(in srgb, var(--c-bg) 82%, transparent); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 1px solid var(--c-line); box-shadow: none; }
+  .clean .brand { flex: 0 0 auto; gap: 8px; }
+  .clean .logo { width: 28px; height: 28px; border-radius: 8px; box-shadow: none; }
+  .clean .logo img { width: 28px; height: 28px; }
+  .clean .wordmark { font-size: 17px; font-weight: 600; letter-spacing: -.01em; }
+  .clean .wordmark .wm-name, .clean .wordmark b { color: var(--c-ink); background: none; -webkit-text-fill-color: currentColor; }
+  .clean #klass { order: 0; width: auto; flex: 0 1 auto; margin: 0; background: var(--c-soft); border: 0; padding: 3px; border-radius: 999px; box-shadow: none; }
+  .clean #klass > button { flex: none; padding: 6px 14px; border-radius: 999px; font-size: 13.5px; font-weight: 500; color: var(--c-mute); background: transparent; border: 0; min-height: 0; }
+  .clean #klass > button.on { background: var(--c-bg); color: var(--c-ink); box-shadow: 0 1px 3px rgba(0,0,0,.12); }
+  .clean .seg .pill { display: none; }
+  .clean .hdr-right { margin: 0; flex: 0 0 auto; }
+  .clean .icon-btn { width: 34px; height: 34px; border: 0; background: transparent; box-shadow: none; color: var(--c-mute); }
+
+  /* one centred column */
+  .clean main { display: flex; flex-direction: column; gap: 20px; max-width: 820px; height: auto; margin: 0 auto; padding: 28px 20px 140px; grid-template-columns: none; }
+  .clean section.col { display: flex; flex-direction: column; gap: 14px; min-height: 0; }
+  .clean .card { background: transparent; border: 0; box-shadow: none; padding: 0; backdrop-filter: none; -webkit-backdrop-filter: none; animation: none; border-radius: 0; }
+  .clean section.col > .card, .clean section.col > .card.scroll { flex: none; min-height: 0; max-height: none; overflow: visible; }
+
+  /* the start screen */
+  .clean .hero { display: none; text-align: center; padding: 6vh 0 4px; }
+  .clean.home .hero { display: block; }
+  .clean .hero h2 { margin: 0; font-size: clamp(32px, 6vw, 52px); font-weight: 700; letter-spacing: -.03em; line-height: 1.05; color: var(--c-ink); }
+  .clean .hero p { margin: 12px auto 0; max-width: 34em; font-size: clamp(16px, 2.2vw, 19px); color: var(--c-mute); line-height: 1.45; }
+  .clean.home #board-wrap { display: none; }
+  .clean:not(.home) #examples, .clean:not(.home) .hero { display: none; }
+
+  /* the ask box */
+  .clean .tabbar { align-self: center; background: transparent; border: 0; padding: 0; gap: 4px; box-shadow: none; }
+  .clean .tabbar > button { background: transparent; border: 0; box-shadow: none; color: var(--c-mute); font-size: 14px; font-weight: 500; padding: 6px 12px; border-radius: 999px; min-height: 0; }
+  .clean .tabbar > button svg { width: 15px; height: 15px; }
+  .clean .tabbar > button.on { color: var(--c-ink); background: var(--c-soft); }
+  .clean .panel { gap: 12px; }
+  .clean textarea#q { min-height: 64px; height: 64px; resize: none; font-size: 18px; line-height: 1.4; padding: 18px 20px; border-radius: 18px;
+    border: 1px solid var(--c-line); background: var(--c-soft); color: var(--c-ink); box-shadow: none; transition: border-color .2s, background .2s; }
+  .clean textarea#q:focus { outline: none; border-color: var(--c-acc); background: var(--c-bg); box-shadow: 0 0 0 4px color-mix(in srgb, var(--c-acc) 18%, transparent); }
+  .clean.home textarea#q { min-height: 96px; height: 96px; font-size: 19px; }
+  .clean .panel[data-panel="ask"] > .row { justify-content: center; gap: 10px; }
+  .clean button { box-shadow: none; }
+  .clean button.primary, .clean #ask, .clean #photo-go { background: var(--c-acc); color: var(--c-acc-ink); border: 0; border-radius: 999px; padding: 11px 28px; font-size: 16px; font-weight: 600; min-height: 44px; }
+  .clean button.primary:hover:not(:disabled) { filter: brightness(1.08); transform: none; }
+  .clean #clear { background: transparent; border: 0; color: var(--c-mute); font-weight: 500; }
+  .clean .examples { justify-content: center; gap: 8px; }
+  .clean .examples button { background: transparent; border: 1px solid var(--c-line); color: var(--c-mute); border-radius: 999px; font-size: 13.5px; padding: 6px 12px; min-height: 0; }
+  .clean .examples button:hover { color: var(--c-ink); border-color: var(--c-mute); }
+  .clean select { background: var(--c-soft); border: 1px solid var(--c-line); border-radius: 12px; color: var(--c-ink); padding: 10px 12px; font-size: 15px; }
+  .clean .drop { border: 1.5px dashed var(--c-line); background: var(--c-soft); border-radius: 18px; }
+
+  /* results: only when there is something to say, as quiet text */
+  .clean .card.scroll:has(#results:empty), .clean .card.scroll:has(#results > .empty:only-child) { display: none; }
+  .clean .card.scroll > h2 { display: none; }
+  .clean #results { font-size: 14.5px; color: var(--c-mute); text-align: center; }
+  .clean #results .hit { text-align: left; background: var(--c-soft); border: 0; border-radius: 14px; }
+  .clean #results .loading-board { justify-content: center; }
+
+  /* the board */
+  .clean #board-wrap { min-height: 0; height: auto; padding: 22px 0 0; border-top: 1px solid var(--c-line); order: 0; }
+  .clean .board-top { gap: 10px; }
+  .clean #title { font-size: 22px; font-weight: 700; letter-spacing: -.02em; color: var(--c-ink); }
+  .clean .badge#src { background: transparent; border: 0; color: var(--c-mute); font-weight: 500; padding: 0; font-size: 13px; }
+  .clean .qtext { font-size: 18px; color: var(--c-ink); }
+  .clean .tabs#parts > button { border-radius: 999px; border: 1px solid var(--c-line); background: transparent; box-shadow: none; }
+  .clean .tabs#parts > button.on { background: var(--c-ink); color: var(--c-bg); border-color: var(--c-ink); }
+  .clean #math { overflow: visible; min-height: 200px; flex: none; background: transparent; border: 0; box-shadow: none; padding-left: 48px; padding-right: 0; }
+  .clean .step { background: transparent; border: 0; box-shadow: none; }
+  .clean .step.current { background: var(--c-soft); border-radius: 18px; box-shadow: none; outline: none; }
+  .clean .bubble { background: transparent; border: 0; box-shadow: none; padding-left: 0; }
+  .clean #cvwrap { background: var(--c-bg); border: 1px solid var(--c-line); border-radius: 18px; box-shadow: none; }
+
+  /* controls: one floating capsule */
+  .clean .dock { position: fixed; left: 50%; right: auto; transform: translateX(-50%); bottom: calc(16px + env(safe-area-inset-bottom)); z-index: 30;
+    width: min(560px, calc(100vw - 24px)); padding: 8px 10px; border-radius: 999px; border: 1px solid var(--c-line);
+    background: color-mix(in srgb, var(--c-bg) 84%, transparent); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px);
+    box-shadow: 0 8px 30px rgba(0,0,0,.12); }
+  .clean.home .dock { display: none; }
+  .clean #progress { position: absolute; left: 22px; right: 22px; top: 0; height: 2px; background: transparent; margin: 0; }
+  .clean #progress > div { background: var(--c-acc); }
+  .clean .controls { display: flex; align-items: center; justify-content: center; gap: 6px; flex-wrap: nowrap; grid-template-columns: none; }
+  .clean .controls > button { background: transparent; border: 0; color: var(--c-ink); font-weight: 600; min-height: 40px; padding: 0 14px; border-radius: 999px; }
+  .clean .controls > button:hover:not(:disabled) { background: var(--c-soft); }
+  .clean .controls > button#play { background: var(--c-acc); color: var(--c-acc-ink); padding: 0 22px; white-space: nowrap; }
+  .clean .controls > button { white-space: nowrap; }
+  .clean .bubble .why { background: var(--c-soft); border: 0; }
+  .clean #langs { background: var(--c-soft); border: 0; border-radius: 999px; padding: 2px; margin-left: 4px; }
+  .clean #langs > button { border: 0; background: transparent; color: var(--c-mute); border-radius: 999px; padding: 6px 10px; font-size: 13px; min-height: 0; }
+  .clean #langs > button.on { background: var(--c-bg); color: var(--c-ink); box-shadow: 0 1px 3px rgba(0,0,0,.12); }
+  .clean .counter { display: none; }
+  .clean #toasts { bottom: calc(90px + env(safe-area-inset-bottom)); }
+
+  /* footer: one quiet line */
+  .clean footer.foot { max-width: 820px; margin: 0 auto; padding: 8px 20px 40px; text-align: center; color: var(--c-mute); font-size: 12px;
+    display: flex; flex-direction: column; align-items: center; gap: 4px; border: 0; }
+  .clean:not(.home) footer.foot { padding-bottom: 110px; }
+
+  @media (max-width: 640px) {
+    .clean header { padding: 8px 12px; padding-top: calc(8px + env(safe-area-inset-top)); }
+    .clean .wordmark { display: none; }
+    .clean #klass > button { padding: 6px 11px; font-size: 13px; }
+    .clean main { padding: 18px 16px 130px; gap: 16px; }
+    .clean .hero { padding-top: 3vh; }
+    .clean .dock { width: calc(100vw - 16px); border-radius: 22px; bottom: calc(8px + env(safe-area-inset-bottom)); left: 50%; right: auto; }
+    .clean .controls > button { padding: 0 10px; }
+    .clean .controls > button#play { padding: 0 16px; }
+    .clean #langs > button { padding: 6px 8px; font-size: 12px; }
+    .clean #math { padding-left: 42px; }
+  }
+  /* nothing above the bottom bar may become its frame (a transform, filter or containment would trap the fixed bar) */
+  .clean main, .clean #board-wrap, .clean section.col { transform: none !important; filter: none !important; contain: none !important; will-change: auto !important;
+    backdrop-filter: none !important; -webkit-backdrop-filter: none !important; animation: none !important; }
+  .clean .hero h2 { text-transform: none; font-family: inherit; display: block; text-align: center; }
+  .clean .tabbar { display: inline-flex; width: auto !important; margin: 0 auto; }
+  .clean .tabbar > button { flex: none; }
+  .clean .bubble::before, .clean .bubble::after { display: none; }
+  .clean .skeleton { background: linear-gradient(90deg, var(--c-soft) 25%, var(--c-line) 50%, var(--c-soft) 75%); background-size: 200% 100%; border-radius: 14px; }
 </style>
 </head>
-<body>
+<body class="home clean">
 <div class="aurora" aria-hidden="true"></div>
 <div class="grain" aria-hidden="true"></div>
 <header>
@@ -468,19 +598,23 @@
 </header>
 
 <main>
+  <div class="hero" id="hero">
+    <h2>Ask a maths question.</h2>
+    <p>Your exact question, solved step by step in English and Urdu. Every step checked.</p>
+  </div>
   <!-- LEFT: ask, browse, photo -->
   <section class="col">
     <div class="card col">
       <div class="seg tabbar" role="tablist" aria-label="How to find a question">
         <button class="on" data-tab="ask" role="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 1 1 3 3L7 19l-4 1 1-4z"/></svg>Ask</button>
-        <button data-tab="book" role="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4h6a4 4 0 0 1 4 4v13a3 3 0 0 0-3-3H2zM22 4h-6a4 4 0 0 0-4 4v13a3 3 0 0 1 3-3h7z"/></svg>Book</button>
+        <button data-tab="book" role="tab" title="Pick a question from your book"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4h6a4 4 0 0 1 4 4v13a3 3 0 0 0-3-3H2zM22 4h-6a4 4 0 0 0-4 4v13a3 3 0 0 1 3-3h7z"/></svg>Book</button>
         <button data-tab="photo" role="tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>Photo</button>
       </div>
 
       <div class="panel on" data-panel="ask">
         <textarea id="q" placeholder="e.g. Rationalize 3/(sqrt5 - sqrt3)" aria-label="Your question"></textarea>
         <div class="row">
-          <button class="primary" id="ask"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" style="vertical-align:-3px;margin-right:4px"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Solve it</button>
+          <button class="primary" id="ask">Solve</button>
           <button id="clear">Clear</button>
           <span class="note" style="margin-left:auto"><span class="kbd">Ctrl</span> + <span class="kbd">Enter</span></span>
         </div>
@@ -512,10 +646,6 @@
       <h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>Results</h2>
       <div id="results"><div class="empty">Ask something to see matches.</div></div>
     </div>
-    <footer class="foot">
-      <span class="foot-brand"><img src="/brand/mark.svg" alt="" width="18" height="18"> Awaisverse Maths</span>
-      <span>Independent study aid for the Punjab Curriculum &amp; Textbook Board Class 9–11 books. Not affiliated with PCTB.</span>
-    </footer>
   </section>
 
   <!-- CENTER: the animated board -->
@@ -552,6 +682,10 @@
     </div>
   </section>
 </main>
+<footer class="foot">
+      <span class="foot-brand"><img src="/brand/mark.svg" alt="" width="18" height="18"> Awaisverse Maths</span>
+      <span>Independent study aid for the Punjab Curriculum &amp; Textbook Board Class 9–11 books. Not affiliated with PCTB.</span>
+</footer>
 <div id="toasts" aria-live="polite"></div>
 <canvas id="confetti" aria-hidden="true"></canvas>
 
@@ -591,6 +725,7 @@
   let bookList = [];
 
   async function openItem(id, src, cls, autoplay) {
+    document.body.classList.remove("home");       // a book question is open: the board takes the page
     stopPlay();
     item = await api("/api/item/" + encodeURIComponent(id));
     $("src").style.display = "";
@@ -814,7 +949,7 @@
   }
 
   // Scroll so the newest row and the arrow under it are visible.
-  const stacked = () => matchMedia("(max-width: 900px)").matches;
+  const stacked = () => true;                    // one column on every screen: the page scrolls and follows the working
   const smooth = () => (matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth");
   // the space the page leaves for the working: below the sticky header (and the pinned figure), above the bottom bar
   function workWindow() {
@@ -1226,6 +1361,7 @@
   }
 
   function showItem(it, partIndex, label, cls) {
+    document.body.classList.remove("home");       // a question is open: the board takes the page
     stopPlay();
     item = it;
     it.parts.forEach((p) => p.steps.forEach((s) => { s.draw = s.draw || []; }));
@@ -1248,6 +1384,7 @@
   function showAnswer(data) {
     const box = $("results");
     box.innerHTML = "";
+    if (data.mode === "confirm") document.body.classList.remove("home");
     if (data.item) {                               // remembered for the board header, so the solved question is shown first
       data.item._asked = $("q").value.trim() || data.item.question;
       data.item._read_as = data.read_as || "";
@@ -1411,8 +1548,8 @@
   $("ask").onclick = async () => {
     const q = $("q").value.trim();
     if (!q) return;
-    $("results").innerHTML = '<div class="note">Working on your question…</div>';
-    if (stacked()) {                                 // on a phone, go to the board at once: the working will appear there
+    $("results").innerHTML = '<div class="note loading-board"><span class="spinner"></span> Solving your question…</div>';
+    if (!document.body.classList.contains("home")) {   // a question is already on the board: the new working will appear there
       stopPlay();
       $("math").innerHTML = '<div class="note loading-board"><span class="spinner"></span> Solving your question step by step…</div>';
       scrollToWork($("board-wrap"));
@@ -1429,11 +1566,19 @@
       $("progress").firstElementChild.style.width = "0";
       item = null; steps = []; cur = -1;              // nothing to play or step through
       $("prev").disabled = true; $("next").disabled = true;
+      document.body.classList.add("home");
+      $("results").innerHTML = `<div class="note">${escapeHTML(data.message)}</div>`;
     } else if ($("math").querySelector(".loading-board"))  // nothing was written on the board: say where to look
       $("math").innerHTML = '<div class="note">This question was not solved on the board. See the results for what was found.</div>';
+    if (data && !["book", "solved", "model", "confirm"].includes(data.mode)) {   // not solved: stay on the start screen with the message
+      document.body.classList.add("home");
+      requestAnimationFrame(() => $("results").scrollIntoView({ behavior: "smooth", block: "center" }));
+    }
   };
-  $("q").addEventListener("keydown", (e) => { if (e.key === "Enter" && (e.ctrlKey || e.metaKey)) $("ask").click(); });
-  $("clear").onclick = () => { $("q").value = ""; };
+  $("q").addEventListener("keydown", (e) => {     // Enter solves (like a search box); Shift+Enter starts a new line
+    if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); $("ask").click(); }
+  });
+  $("clear").onclick = () => { $("q").value = ""; $("results").innerHTML = ""; document.body.classList.add("home"); stopPlay(); $("q").focus(); };
 
   $("browse").onchange = (e) => { if (e.target.value) openItem(e.target.value, "✓ Matches textbook · " + groupOf(bookList.find((x) => x.id === e.target.value) || {}), "ok", true); };
   $("bunit").onchange = () => fillQuestions();
@@ -1442,9 +1587,9 @@
 
   // ---------- class ----------
   const PLACEHOLDER = {
-    "9": "e.g. Rationalize 3/(sqrt5 - sqrt3)   or   Exercise 1.2 Q3 (iv)   or   convert 6.6 x 10^-5",
-    "10": "e.g. (3-5i) ÷ (2-4i)   or   Exercise 1.4 Q2 (iii)   or   find x and y: (2+i)x + (1-2i)y = 3+4i",
-    "11": "e.g. square roots of 5 - 12i   or   Exercise 1.3 Q4 (ii)   or   express 1 + i in polar form",
+    "9": "Type a question, or a book reference like Exercise 1.2 Q3",
+    "10": "Type a question, or a book reference like Exercise 2.1 Q4",
+    "11": "Type a question, or a book reference like Exercise 1.3 Q4",
   };
 
   async function loadClass() {
@@ -1497,9 +1642,11 @@
     if (b.dataset.klass === klass) return;
     klass = b.dataset.klass;
     try { localStorage.setItem("klass", klass); } catch (e) {}
-    $("results").innerHTML = '<div class="empty">Ask something to see matches.</div>';
+    $("results").innerHTML = "";
+    stopPlay();
+    document.body.classList.add("home");           // a new class starts on the start screen
     const list = await loadClass().catch((e) => { $("results").innerHTML = `<div class="note">${escapeHTML(netMessage(e))}</div>`; return []; });
-    if (list.length) { fillQuestions(); $("browse").value = list[0].id; openItem(list[0].id, "✓ Matches textbook", "ok"); }
+    if (list.length) fillQuestions();
   });
 
   // ---------- boot ----------
@@ -1523,7 +1670,7 @@
       $("results").innerHTML = '<div class="note">Working on your question…</div>';
       showAnswer(await api("/api/answer", { question: qs.get("ask") }));
       if (qs.get("step")) goto(+qs.get("step") - 1, false);
-    } else if (list.length) { fillQuestions(); $("browse").value = list[0].id; openItem(list[0].id, "✓ Matches textbook", "ok"); }
+    } else if (list.length) fillQuestions();        // the start screen: nothing is opened until the student asks
   })().catch((e) => { $("results").innerHTML = `<div class="note">Could not load: ${escapeHTML(e.message)}</div>`; });
 })();
 </script>
