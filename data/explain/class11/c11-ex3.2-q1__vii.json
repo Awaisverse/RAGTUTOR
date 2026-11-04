@@ -1,0 +1,40 @@
+{
+ "item": "c11-ex3.2-q1",
+ "label": "vii",
+ "answer_ref": "$\\{4\\}$",
+ "math": [
+  "\\sqrt{2x + 8} = 7 - \\sqrt{x + 5}",
+  "2x + 8 = 49 - 14\\sqrt{x + 5} + x + 5 \\Rightarrow 14\\sqrt{x + 5} = 46 - x",
+  "196(x + 5) = (46 - x)^2 \\Rightarrow x^2 - 288x + 1136 = 0 \\Rightarrow (x - 4)(x - 284) = 0",
+  "x = 4:\\ \\sqrt{16} + \\sqrt{9} = 7 \\ \\checkmark;\\qquad x = 284:\\ \\sqrt{576} + \\sqrt{289} = 41 \\ne 7",
+  "\\text{S.S.} = \\{4\\}"
+ ],
+ "why": [
+  {
+   "en": "When an equation has two square roots, squaring directly keeps the middle term messy with both roots multiplied together. By shifting $\\sqrt{x + 5}$ to the right side, we isolate $\\sqrt{2x + 8}$ so that our first squaring step will cleanly eliminate at least one radical.",
+   "ur": "جب مساوات میں دو جذر (square roots) ہوں تو براہِ راست مربع لینے سے درمیانی رقم پیچیدہ ہو جاتی ہے۔ اس لیے ہم $\\sqrt{x + 5}$ کو دائیں طرف لے جا کر $\\sqrt{2x + 8}$ کو اکیلا کر لیتے ہیں تاکہ مربع لینے سے کم از کم ایک جذر آسانی سے ختم ہو جائے۔"
+  },
+  {
+   "en": "We square both sides and apply the $(a - b)^2$ identity on the right side to remove the left-hand radical. Then, we gather all non-radical terms on the right so the remaining root term $14\\sqrt{x + 5}$ stands alone, ready to be removed in the next step.",
+   "ur": "بائیں طرف کے جذر کو ختم کرنے کے لیے ہم دونوں اطراف کا مربع لیتے ہیں اور دائیں طرف $(a - b)^2$ کا کلیہ استعمال کرتے ہیں۔ پھر بغیر جذر والی رقوم کو ایک طرف اکٹھا کر لیتے ہیں تاکہ باقی ماندہ جذر والی رقم $14\\sqrt{x + 5}$ اکیلی رہ جائے اور اگلے مرحلے میں ختم کی جا سکے۔"
+  },
+  {
+   "en": "Squaring both sides a second time eliminates the last square root and gives us a standard quadratic equation, $x^2 - 288x + 1136 = 0$. Factoring this equation gives two candidate values for $x$, namely $4$ and $284$.",
+   "ur": "دوسری بار دونوں اطراف کا مربع لینے سے آخری جذر بھی ختم ہو جاتا ہے اور ہمیں ایک معیاری دو درجی مساوات $x^2 - 288x + 1136 = 0$ مل جاتی ہے۔ اس کی تجزی (factorization) کرنے سے ہمیں $x$ کی دو ممکنہ قیمتیں $4$ اور $284$ حاصل ہوتی ہیں۔"
+  },
+  {
+   "en": "Because squaring both sides of an equation can introduce false (extraneous) roots, it is mandatory to test our answers in the original question. Substituting $x = 4$ gives $7 = 7$ which is true, whereas $x = 284$ gives $41 \\ne 7$, proving that $284$ is an extraneous root.",
+   "ur": "چونکہ مساوات کا مربع لینے سے فالتو اصل (extraneous roots) شامل ہو سکتے ہیں، اس لیے حاصل شدہ قیمتوں کو اصل سوال میں درج کر کے پڑتال کرنا لازمی ہے۔ $x = 4$ رکھنے سے جواب $7$ آتا ہے جو درست ہے، جبکہ $x = 284$ سے $41 \\ne 7$ آتا ہے، جس سے ثابت ہوتا ہے کہ $284$ ایک فالتو اصل ہے۔"
+  },
+  {
+   "en": "We discard the extraneous root $284$ and write only the verified value in the solution set. This completes the solution by clearly stating that only $x = 4$ satisfies the original radical equation.",
+   "ur": "ہم فالتو اصل $284$ کو نظر انداز کر دیتے ہیں اور حل سیٹ میں صرف تصدیق شدہ قیمت لکھتے ہیں۔ اس سے ہمارا حل مکمل ہوتا ہے کہ صرف $x = 4$ ہی دی گئی جذری مساوات کو درست ثابت کرتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $\\text{S.S.} = \\{4\\}$ means that $x = 4$ is the only real number that makes the original equation $\\sqrt{2x+8} + \\sqrt{x+5} = 7$ true. You can easily verify this by plugging $4$ back in: $\\sqrt{16} + \\sqrt{9} = 4 + 3 = 7$, while $284$ must be rejected because it came only as a side effect of squaring.",
+  "ur": "آخری جواب $\\text{S.S.} = \\{4\\}$ کا مطلب یہ ہے کہ $x = 4$ ہی وہ واحد حقیقی عدد ہے جو اصل مساوات $\\sqrt{2x+8} + \\sqrt{x+5} = 7$ کو درست ثابت کرتا ہے۔ آپ اس کی تصدیق $4$ درج کر کے باآسانی کر سکتے ہیں: $\\sqrt{16} + \\sqrt{9} = 7$ بنتا ہے، جبکہ $284$ کو رد کر دیا گیا ہے کیونکہ یہ صرف مربع لینے کے عمل کی وجہ سے پیدا ہوا تھا۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-05"
+}

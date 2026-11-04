@@ -1,0 +1,40 @@
+{
+ "item": "c11-ex3.2-q1",
+ "label": "iv",
+ "answer_ref": "$\\left\\{\\frac{a + b}{ab},\\ \\frac{2}{a + b}\\right\\}$",
+ "math": [
+  "\\left(\\frac{a}{ax - 1} - b\\right) + \\left(\\frac{b}{bx - 1} - a\\right) = 0",
+  "\\frac{a + b - abx}{ax - 1} + \\frac{a + b - abx}{bx - 1} = 0",
+  "(a + b - abx)\\left[\\frac{1}{ax - 1} + \\frac{1}{bx - 1}\\right] = 0",
+  "a + b - abx = 0 \\Rightarrow x = \\frac{a + b}{ab};\\qquad \\frac{(a + b)x - 2}{(ax - 1)(bx - 1)} = 0 \\Rightarrow x = \\frac{2}{a + b}",
+  "\\text{S.S.} = \\left\\{\\frac{a + b}{ab},\\ \\frac{2}{a + b}\\right\\}"
+ ],
+ "why": [
+  {
+   "en": "Instead of taking the LCM of the whole equation right away, we move $a$ and $b$ to the left side and pair the fraction containing $a$ with $-b$, and the fraction containing $b$ with $-a$. We do this clever grouping so that when we simplify each bracket, both fractions will end up with the exact same numerator.",
+   "ur": "پوری مساوات کا ایک ساتھ ذواضعاف اقل (LCM) لینے کے بجائے، ہم $a$ اور $b$ کو بائیں طرف لے آتے ہیں اور $a$ والی کسر کا جوڑا $-b$ کے ساتھ، اور $b$ والی کسر کا جوڑا $-a$ کے ساتھ بناتے ہیں۔ یہ ترتیب اس لیے دی جاتی ہے تاکہ جب ہم ہر بریکٹ کو حل کریں تو دونوں کسروں کے شمار کنندہ (numerators) بالکل ایک جیسے بن جائیں۔"
+  },
+  {
+   "en": "We take the LCM inside each bracket separately to combine the terms into single fractions. As planned, this gives us the identical expression $a + b - abx$ in both numerators, which makes factoring the equation very easy.",
+   "ur": "ہم ہر بریکٹ کے اندر الگ الگ ذواضعاف اقل (LCM) لیتے ہیں تاکہ رقموں کو ملا کر واحد کسر بنایا جا سکے۔ ہماری ترتیب کے مطابق، اس سے دونوں شمار کنندگان میں بالکل ایک جیسا جملہ $a + b - abx$ آ جاتا ہے، جس سے مساوات کی تجزی کرنا بہت آسان ہو جاتا ہے۔"
+  },
+  {
+   "en": "Since $a + b - abx$ appears in the numerator of both terms, we factor it out as a common factor. This splits our complicated equation into a product of two simpler parts equal to $0$, avoiding a lengthy quadratic expansion.",
+   "ur": "چونکہ دونوں رقموں کے شمار کنندہ میں $a + b - abx$ موجود ہے، اس لیے ہم اسے مشترک جزو ضربی (common factor) کے طور پر باہر نکال لیتے ہیں۔ اس سے ہماری پیچیدہ مساوات دو سادہ حصوں کے حاصل ضرب میں تقسیم ہو کر $0$ کے برابر آ جاتی ہے، اور ہم ایک لمبی دو درجی مساوات کو کھولنے سے بچ جاتے ہیں۔"
+  },
+  {
+   "en": "By the zero-product property, if the product of two factors is $0$, at least one of them must be $0$. Setting the first factor to $0$ directly gives one value of $x$, and simplifying the second bracket by taking its LCM and setting the numerator to $0$ gives the second value of $x$.",
+   "ur": "ضربی خاصیتِ صفر (zero-product property) کے مطابق، اگر دو اجزائے ضربی کا حاصل ضرب $0$ ہو، تو ان میں سے کم از کم ایک لازمی $0$ کے برابر ہوتا ہے۔ پہلے جزو کو $0$ کے برابر رکھنے سے براہِ راست $x$ کی ایک قیمت مل جاتی ہے، اور دوسری بریکٹ کا ذواضعاف اقل لے کر اس کے شمار کنندہ کو $0$ کے برابر رکھنے سے $x$ کی دوسری قیمت حاصل ہو جاتی ہے۔"
+  },
+  {
+   "en": "We write both values inside curly brackets to formally present the solution set of the equation. Since neither value makes the original denominators $ax - 1$ or $bx - 1$ equal to $0$, both are valid roots.",
+   "ur": "ہم مساوات کا حل سیٹ باضابطہ طور پر ظاہر کرنے کے لیے دونوں قیمتوں کو درمیانی بریکٹ کے اندر لکھتے ہیں۔ چونکہ ان میں سے کوئی بھی قیمت اصل مساوات کے مخرج $ax - 1$ یا $bx - 1$ کو $0$ نہیں بناتی، اس لیے یہ دونوں درست اصل (roots) ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer means that $x = \\frac{a + b}{ab}$ and $x = \\frac{2}{a + b}$ are the two exact values of $x$ that make the left-hand side of the given equation equal to $a + b$. You can verify this by substituting either value of $x$ back into $\\frac{a}{ax-1} + \\frac{b}{bx-1}$ and simplifying to see that the result equals $a + b$.",
+  "ur": "حتمی جواب کا مطلب یہ ہے کہ $x = \\frac{a + b}{ab}$ اور $x = \\frac{2}{a + b}$ متغیر $x$ کی وہ دو درست قیمتیں ہیں جو دی گئی مساوات کی بائیں طرف کو دائیں طرف یعنی $a + b$ کے برابر بناتی ہیں۔ آپ اس کی تصدیق کے لیے $x$ کی ان دونوں میں سے کوئی بھی قیمت واپس $\\frac{a}{ax-1} + \\frac{b}{bx-1}$ میں درج کر کے مختصر کر سکتے ہیں، جس کا نتیجہ $a + b$ ہی آئے گا۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-05"
+}

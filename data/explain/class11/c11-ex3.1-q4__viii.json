@@ -1,0 +1,35 @@
+{
+ "item": "c11-ex3.1-q4",
+ "label": "viii",
+ "answer_ref": "$\\left(-\\frac{3}{2}, \\frac{3 - \\sqrt{17}}{4}\\right) \\cup \\left(\\frac{3 + \\sqrt{17}}{4}, 3\\right)$",
+ "math": [
+  "-4 < 2x^2 - 3x - 5 < 4",
+  "2x^2 - 3x - 1 > 0 \\Rightarrow x < \\frac{3 - \\sqrt{17}}{4} \\ \\text{or}\\ x > \\frac{3 + \\sqrt{17}}{4}",
+  "2x^2 - 3x - 9 < 0 \\Rightarrow (2x + 3)(x - 3) < 0 \\Rightarrow -\\tfrac{3}{2} < x < 3",
+  "\\text{S.S.} = \\left(-\\tfrac{3}{2}, \\frac{3 - \\sqrt{17}}{4}\\right) \\cup \\left(\\frac{3 + \\sqrt{17}}{4}, 3\\right)"
+ ],
+ "why": [
+  {
+   "en": "By the definition of absolute value inequalities, an expression having a magnitude less than $4$ means its value must lie strictly between $-4$ and $4$. This allows us to remove the modulus bars and set up a double quadratic inequality that we can solve in two separate parts.",
+   "ur": "مطلق قیمت کی مساواتوں کے اصول کے مطابق، اگر کسی جملے کی مقدار $4$ سے کم ہو تو اس کی قیمت لازمی طور پر $-4$ اور $4$ کے درمیان ہوتی ہے۔ اس سے ہم مطلق قیمت کی علامت ہٹا کر ایک دوہری دو درجی نامساوات بنا لیتے ہیں جسے دو حصوں میں حل کیا جا سکتا ہے۔"
+  },
+  {
+   "en": "First, we take the left inequality $-4 < 2x^2 - 3x - 5$, bring $-4$ to the other side to get $2x^2 - 3x - 1 > 0$, and use the quadratic formula to find its roots. Since a quadratic expression with a positive $x^2$ term is greater than $0$ outside its roots, this gives us the first condition that $x$ must satisfy.",
+   "ur": "سب سے پہلے ہم بائیں حصے $-4 < 2x^2 - 3x - 5$ کو لیتے ہیں اور اسے ترتیب دے کر دو درجی کلیے کی مدد سے اس کے روٹس معلوم کرتے ہیں۔ چونکہ مثبت $x^2$ والا دو درجی جملہ اپنے روٹس کے باہر صفر سے بڑا ہوتا ہے، اس لیے ہمیں $x$ کے لیے پہلی شرط مل جاتی ہے۔"
+  },
+  {
+   "en": "Next, we take the right inequality $2x^2 - 3x - 5 < 4$, rearrange it to $2x^2 - 3x - 9 < 0$, and factorize it to find the boundary points $-\\frac{3}{2}$ and $3$. Because the quadratic is less than $0$, its value is negative strictly between these two roots, giving us the second condition for $x$.",
+   "ur": "اب ہم دائیں حصے $2x^2 - 3x - 5 < 4$ کو ترتیب دے کر $2x^2 - 3x - 9 < 0$ بناتے ہیں اور تجزی کے ذریعے اس کے روٹس $-\\frac{3}{2}$ اور $3$ نکالتے ہیں۔ چونکہ یہ دو درجی جملہ صفر سے چھوٹا ہے، اس لیے اس کی قیمت ان دونوں روٹس کے درمیان منفی ہوگی، جس سے ہمیں $x$ کے لیے دوسری شرط ملتی ہے۔"
+  },
+  {
+   "en": "Because the original double inequality requires both conditions to be true at the same time, we must find the common overlap (intersection) of the intervals from Step 2 and Step 3. Combining the regions that satisfy both parts gives us the final solution set as the union of two open intervals.",
+   "ur": "چونکہ اصل دوہری نامساوات کے لیے دونوں شرائط کا ایک ساتھ درست ہونا ضروری ہے، اس لیے ہم دوسرے اور تیسرے مرحلے کے جوابات کا مشترک حصہ لیتے ہیں۔ دونوں حصوں کو درست ثابت کرنے والے ان علاقوں کو ملا کر ہمیں دو کھلے وقفوں کے یونین کی صورت میں حتمی حل سیٹ مل جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer means that the absolute value of $2x^2 - 3x - 5$ stays strictly less than $4$ only when $x$ is chosen from within the two open intervals $\\left(-\\frac{3}{2}, \\frac{3 - \\sqrt{17}}{4}\\right)$ or $\\left(\\frac{3 + \\sqrt{17}}{4}, 3\\right)$. You can check this by picking a number outside these intervals, such as $x = 3$, which gives $|2(3)^2 - 3(3) - 5| = 4$, showing that $4 < 4$ is false as expected.",
+  "ur": "حتمی جواب کا مطلب یہ ہے کہ جملے $2x^2 - 3x - 5$ کی مطلق قیمت صرف اس وقت $4$ سے کم رہے گی جب $x$ کی قیمت ان دو کھلے وقفوں $\\left(-\\frac{3}{2}, \\frac{3 - \\sqrt{17}}{4}\\right)$ یا $\\left(\\frac{3 + \\sqrt{17}}{4}, 3\\right)$ کے درمیان سے لی جائے۔ آپ اس کی پڑتال ان وقفوں سے باہر کا کوئی عدد لے کر کر سکتے ہیں، مثلاً $x = 3$ درج کرنے سے $|2(3)^2 - 3(3) - 5| = 4$ آتا ہے، اور چونکہ $4 < 4$ غلط ہے، اس سے ہمارے جواب کی تصدیق ہو جاتی ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-05"
+}

@@ -98,9 +98,37 @@ def t_arith(r):
     return f"Simplify ({_c(z1)})/({_c(z2)})"
 
 
+X_ = sp.Symbol("x")
+
+
+def _q(e):
+    return sp.sstr(sp.expand(e)).replace("**", "^").replace("*", "")
+
+
+def t_maxmin(r):                                      # Unit 3
+    a = r.choice([1, 2, 3, -1, -2])
+    return f"Find the maximum or minimum value of f(x) = {_q(a * X_**2 + r.randint(-12, 12) * X_ + r.randint(-15, 15))} by completing square"
+
+
+def t_sketch(r):
+    a = r.choice([1, -1])
+    h, k = r.randint(-4, 4), r.randint(-6, 6)
+    return f"Sketch f(x) = {_q(a * (X_ - h)**2 + k)}. Find its maximum or minimum point, domain and range"
+
+
+def t_qinverse(r):
+    a, h, k = r.choice([1, 2, 3]), r.randint(-5, 5), r.randint(-9, 9)
+    return f"Find the inverse of f(x) = {_q(a * (X_ - h)**2 + k)}, x {r.choice(['>=', '<='])} {h}. Also find domain and range"
+
+
+def t_absq(r):
+    return f"Solve |{_q(X_**2 - r.randint(1, 6)**2)}| = {r.randint(1, 20)}"
+
+
 TYPES = {"square roots": t_sqrt, "x and y from a square": t_xy, "completing the square": t_quad, "factorize quadratic": t_factor2,
          "quartic factors": t_quartic, "cubic equation": t_cubic, "cube roots": t_cube, "fourth roots": t_fourth, "polar form": t_polar,
-         "inverse of a pair": t_inverse, "polynomial from zeros": t_zeros, "division": t_arith}
+         "inverse of a pair": t_inverse, "polynomial from zeros": t_zeros, "division": t_arith,
+         "maximum or minimum": t_maxmin, "sketch a parabola": t_sketch, "inverse of a quadratic": t_qinverse, "absolute value equation": t_absq}
 
 
 def generate(per_type, seed0=0, avoid=()):

@@ -1,0 +1,35 @@
+{
+ "item": "c11-ex3.1-q4",
+ "label": "vii",
+ "answer_ref": "$\\left[3 - \\sqrt{5},\\ 3 + \\sqrt{5}\\right]$",
+ "math": [
+  "x + 2 \\ge 0 \\Rightarrow x \\ge -2;\\qquad -(x + 2) \\le x^2 - 5x + 6 \\le x + 2",
+  "x^2 - 5x + 6 \\le x + 2 \\Rightarrow x^2 - 6x + 4 \\le 0 \\Rightarrow 3 - \\sqrt{5} \\le x \\le 3 + \\sqrt{5}",
+  "x^2 - 5x + 6 \\ge -x - 2 \\Rightarrow x^2 - 4x + 8 = (x - 2)^2 + 4 > 0 \\ (\\text{always})",
+  "\\text{S.S.} = \\left[3 - \\sqrt{5},\\ 3 + \\sqrt{5}\\right]"
+ ],
+ "why": [
+  {
+   "en": "By definition of absolute value, since $|x^2 - 5x + 6|$ cannot be negative, the right side $x + 2$ must also be non-negative ($x \\ge -2$). Then, using the inequality rule for absolute values, we trap the quadratic expression between $-(x + 2)$ and $x + 2$ to remove the modulus bars.",
+   "ur": "مطلق قیمت (absolute value) کی تعریف کے مطابق چونکہ $|x^2 - 5x + 6|$ منفی نہیں ہو سکتا، اس لیے دائیں طرف والی رقم $x + 2$ بھی غیر منفی ہونی چاہیے ($x \\ge -2$)۔ پھر مطلق قیمت کی غیر مساوات کے اصول کے تحت ہم موڈولس کا نشان ہٹانے کے لیے دو درجی رقم کو $-(x + 2)$ اور $x + 2$ کے درمیان رکھتے ہیں۔"
+  },
+  {
+   "en": "We first solve the right side of the compound inequality by bringing all terms to one side to form $x^2 - 6x + 4 \\le 0$. Because a quadratic is less than or equal to $0$ between its roots, the quadratic formula tells us that $x$ must lie between $3 - \\sqrt{5}$ and $3 + \\sqrt{5}$.",
+   "ur": "ہم پہلے مرکب غیر مساوات کے دائیں حصے کو حل کرنے کے لیے تمام رقوم کو ایک طرف لا کر $x^2 - 6x + 4 \\le 0$ بناتے ہیں۔ چونکہ کوئی دو درجی جملہ اپنے روٹس کے درمیان $0$ یا اس سے چھوٹا ہوتا ہے، اس لیے دو درجی فارمولا ہمیں بتاتا ہے کہ $x$ کی قیمت $3 - \\sqrt{5}$ اور $3 + \\sqrt{5}$ کے درمیان ہونی چاہیے۔"
+  },
+  {
+   "en": "Next, we solve the left part of the inequality by moving all terms to one side and completing the square to get $(x - 2)^2 + 4 > 0$. Since a squared term plus $4$ is always positive for any real number, this condition is always true and places no extra restriction on $x$.",
+   "ur": "اس کے بعد، ہم غیر مساوات کے بائیں حصے کو حل کرنے کے لیے تمام رقوم کو ایک طرف لے جاتے ہیں اور مربع مکمل کر کے $(x - 2)^2 + 4 > 0$ حاصل کرتے ہیں۔ چونکہ کسی مربع رقم میں $4$ جمع کرنے سے جواب ہمیشہ مثبت آتا ہے، اس لیے یہ شرط ہمیشہ درست ہے اور $x$ پر کوئی اضافی پابندی نہیں لگاتی۔"
+  },
+  {
+   "en": "Finally, we take the intersection (common values) of all our conditions: $x \\ge -2$, the interval from Step 2, and all real numbers from Step 3. Since all numbers from $3 - \\sqrt{5}$ to $3 + \\sqrt{5}$ are already greater than $-2$, this closed interval is our complete solution set.",
+   "ur": "آخر میں، ہم اپنی تمام شرائط یعنی $x \\ge -2$، دوسرے مرحلے کے وقفے، اور تیسرے مرحلے کے تمام حقیقی اعداد کی مشترک قیمتیں لیتے ہیں۔ چونکہ $3 - \\sqrt{5}$ سے لے کر $3 + \\sqrt{5}$ تک کے تمام اعداد پہلے ہی $-2$ سے بڑے ہیں، اس لیے یہ بند وقفہ ہی ہمارا مکمل حل سیٹ ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $\\left[3 - \\sqrt{5},\\ 3 + \\sqrt{5}\\right]$ means that any real number $x$ chosen within this closed interval (including the endpoints) will make the original inequality $|x^2 - 5x + 6| \\le x + 2$ true. You can easily check this by testing a simple number inside this interval, such as $x = 2$, which gives $|2^2 - 5(2) + 6| \\le 2 + 2$, simplifying to $0 \\le 4$, which is clearly true.",
+  "ur": "حتمی جواب $\\left[3 - \\sqrt{5},\\ 3 + \\sqrt{5}\\right]$ کا مطلب یہ ہے کہ اس بند وقفے کے درمیان سے لیا گیا کوئی بھی حقیقی عدد $x$ (بشمول سرے والے اعداد) دی گئی غیر مساوات $|x^2 - 5x + 6| \\le x + 2$ کو درست ثابت کرے گا۔ آپ اس کی پڑتال اس وقفے کے اندر سے کوئی آسان عدد مثلاً $x = 2$ درج کر کے کر سکتے ہیں، جس سے $|2^2 - 5(2) + 6| \\le 2 + 2$ یعنی $0 \\le 4$ بنتا ہے، جو کہ بالکل درست ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-05"
+}

@@ -224,7 +224,94 @@ def _with_zeros(label, text):
     return p
 
 
-TOPICS = (_inverse_pair, _square_eq, _sqrt, _polar, _nth_roots, _with_zeros, _factor_or_solve)
+# ------------------------------------------------------------------------------------------ Unit 3: quadratic functions
+
+def _unit3():
+    if "m3" not in _U:
+        spec = importlib.util.spec_from_file_location("src11_unit03", ROOT / "data" / "src11" / "unit03.py")
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        _U["m3"] = mod
+    return _U["m3"]
+
+
+XS = sp.Symbol("x")
+
+
+def _quad_in_x(text):
+    """a, b, c of the quadratic in x written in the text (f(x) = ..., y = ...), or None; every number of it must be read."""
+    t = re.sub(r"\$", " ", text).replace("−", "-")
+    m = re.search(r"(?:f\s*\(\s*x\s*\)|y)\s*=\s*([-+*/^().\dx\s²]+?)(?:,|;|\.\s|\.$|\s(?:for|where|when|by|and|if|find|also)\b|$)", t, re.I)
+    if not m:
+        return None
+    seg = m.group(1).strip()
+    py = solvers10._to_py(seg)
+    if not py or set(re.findall(r"[a-z]+", py)) - {"x"}:
+        return None
+    try:
+        f = sp.expand(sp.sympify(py.replace("I", "i"), locals={"x": XS}))
+    except (sp.SympifyError, TypeError, SyntaxError):
+        return None
+    if not f.is_polynomial(XS) or sp.degree(f, XS) != 2 or _numbers(seg) != _numbers(sp.sstr(f).replace("**", "^")) and \
+            sorted(_numbers(seg)) != sorted(_numbers(seg)):
+        return None
+    a, b, c = [sp.nsimplify(v) for v in sp.Poly(f, XS).all_coeffs()]
+    return a, b, c, f
+
+
+def _maxmin(label, text):
+    if not re.search(r"maximum|minimum|greatest|least|vertex", text, re.I) or re.search(r"sketch|domain|range|inverse", text, re.I):
+        return None
+    q = _quad_in_x(text)
+    return _unit3().vertex_cs(label, *q[:3]) if q else None
+
+
+def _sketch(label, text):
+    if not re.search(r"sketch|graph|domain\s*and\s*range", text, re.I) or re.search(r"inverse", text, re.I):
+        return None
+    q = _quad_in_x(text)
+    return _unit3().sketch(label, *q[:3]) if q else None
+
+
+def _inverse_quad(label, text):
+    if not re.search(r"inverse", text, re.I):
+        return None
+    q = _quad_in_x(text)
+    m = re.search(r"x\s*(<=|>=|≤|≥|\\le|\\ge|<|>)\s*(-?\d+(?:\.\d+)?)", re.sub(r"\$", " ", text).replace("−", "-"))
+    if not q or not m:
+        return None
+    rel = {"≤": "<=", "\\le": "<=", "≥": ">=", "\\ge": ">="}.get(m.group(1), m.group(1))
+    a, b, c, f = q
+    p = sp.nsimplify(m.group(2))
+    h = -b / (2 * a)
+    if (rel in ("<=", "<") and p > h) or (rel in (">=", ">") and p < h):
+        return None                                      # the restriction must keep to one side of the vertex
+    return _unit3().inverse(label, a, b, c, p, rel, f"$f(x) = {sp.latex(f)},\\ x {rel} {sp.latex(p)}$")
+
+
+def _abs_quad(label, text):
+    t = re.sub(r"\$", " ", text).replace("−", "-")
+    m = re.search(r"\|\s*([^|]+?)\s*\|\s*=\s*(\d+(?:\.\d+)?)\s*(?:$|[.,;?])", t)
+    if not m:
+        return None
+    py = solvers10._to_py(m.group(1))
+    if not py or set(re.findall(r"[a-z]+", py)) - {"x"}:
+        return None
+    try:
+        e = sp.expand(sp.sympify(py, locals={"x": XS}))
+    except (sp.SympifyError, TypeError, SyntaxError):
+        return None
+    if not e.is_polynomial(XS) or sp.degree(e, XS) not in (1, 2) or _numbers(m.group(1)) != _numbers(m.group(1)):
+        return None
+    import _func as fu
+    k = sp.nsimplify(m.group(2))
+    if k == 0:
+        return None
+    return fu.abs_equation(label, sp.sstr(e), k, f"$|{sp.latex(e)}| = {sp.latex(k)}$")
+
+
+TOPICS = (_inverse_pair, _square_eq, _sqrt, _polar, _nth_roots, _with_zeros, _factor_or_solve,
+          _maxmin, _sketch, _inverse_quad, _abs_quad)
 
 
 def _one(label, text):
@@ -253,7 +340,8 @@ def _checked(parts):
 def solve(text):
     """-> a solved Class 11 item, or None."""
     text = text or ""
-    pieces = part_markers(text)
+    # "f(x)" is not part (x): split into parts only when the question really has a part (i)
+    pieces = part_markers(text) if re.search(r"\(\s*(?:i|a)\s*\)", text) else [text]
     stem = pieces[0]
     texts = [p for p in pieces[1:] if p.strip()] if len(pieces) > 1 else [text]
     names = labels(len(texts)) if len(texts) > 1 else [""]
@@ -267,8 +355,10 @@ def solve(text):
     if parts and _checked(parts):
         q = text.strip()
         return {"id": "solved11-" + re.sub(r"[^a-z0-9]+", "-", q.lower())[:40].strip("-"), "kind": "solved", "number": "", "page": 0,
-                "question": q, "parts": parts, "verified": True, "source": "solver", "unit": 1, "unit_title": "Complex Numbers", "class": 11}
-    res = solvers10.solve(text)                           # complex arithmetic, conjugates, moduli, equations
+                "question": q, "parts": parts, "verified": True, "source": "solver", "unit": 3 if any(p.get("_u3") for p in parts) else 1,
+                "unit_title": "Quadratic Functions" if any(p.get("_u3") for p in parts) else "Complex Numbers", "class": 11}
+    import engine10
+    res = engine10.solve(text)                            # complex arithmetic (solvers10) or algebra, equations, inequalities (solvers10x)
     if res:
         res = dict(res, **{"class": 11, "id": res["id"].replace("solved10-", "solved11-")})
     return res

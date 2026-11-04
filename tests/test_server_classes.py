@@ -27,7 +27,7 @@ def ask(q, klass=None):
 # each class lists its own book
 n9, n10 = len(c.get("/api/items").get_json()), len(c.get("/api/items?class=10").get_json())
 n11 = len(c.get("/api/items?class=11").get_json())
-assert n9 > 0 and n10 > 0 and n9 != n10 and n11 == 60, (n9, n10, n11)
+assert n9 > 0 and n10 > 0 and n9 != n10 and n11 == 71, (n9, n10, n11)
 assert c.get("/api/status").get_json()["classes"] == {"9": n9, "10": n10, "11": n11}
 
 # Class 11: a book question, and a new question of a Class 11 kind (solved by the Class 11 engine)

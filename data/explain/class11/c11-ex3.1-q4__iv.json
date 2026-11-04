@@ -1,0 +1,35 @@
+{
+ "item": "c11-ex3.1-q4",
+ "label": "iv",
+ "answer_ref": "$\\left\\{\\frac{3 - \\sqrt{7}}{2},\\ \\frac{1}{2},\\ \\frac{3}{2},\\ \\frac{3 + \\sqrt{7}}{2}\\right\\}$",
+ "math": [
+  "x^2 - x + 1 = \\left(x - \\tfrac{1}{2}\\right)^2 + \\tfrac{3}{4} > 0",
+  "3x^2 - 7x + 2 = x^2 - x + 1 \\Rightarrow 2x^2 - 6x + 1 = 0 \\Rightarrow x = \\frac{6 \\pm \\sqrt{28}}{4} = \\frac{3 \\pm \\sqrt{7}}{2}",
+  "3x^2 - 7x + 2 = -(x^2 - x + 1) \\Rightarrow 4x^2 - 8x + 3 = 0 \\Rightarrow (2x - 1)(2x - 3) = 0 \\Rightarrow x = \\tfrac{1}{2},\\ \\tfrac{3}{2}",
+  "\\text{S.S.} = \\left\\{\\frac{3 - \\sqrt{7}}{2},\\ \\frac{1}{2},\\ \\frac{3}{2},\\ \\frac{3 + \\sqrt{7}}{2}\\right\\}"
+ ],
+ "why": [
+  {
+   "en": "By definition, the absolute value of any expression can never be negative. By completing the square, we verify that the right-hand side $x^2 - x + 1$ is always strictly greater than $0$ for all real $x$, which guarantees we will not get any extraneous roots from a negative right-hand side.",
+   "ur": "مطلق قیمت (absolute value) کی تعریف کے مطابق اس کا جواب کبھی منفی نہیں ہو سکتا۔ مربع مکمل کرنے کے طریقے سے ہم یہ تصدیق کرتے ہیں کہ دائیں طرف والی عبارت $x^2 - x + 1$ ہر حقیقی عدد $x$ کے لیے ہمیشہ $0$ سے بڑی ہے، جس سے ہمیں یقین ہو جاتا ہے کہ ہمیں کوئی فالتو (extraneous) روٹس نہیں ملیں گے۔"
+  },
+  {
+   "en": "Using the definition of absolute value ($|A| = B \\Rightarrow A = \\pm B$), we first take the positive sign and rearrange it into a standard quadratic equation $2x^2 - 6x + 1 = 0$. Since this does not factor easily, applying the quadratic formula gives us our first two real roots, $\\frac{3 \\pm \\sqrt{7}}{2}$.",
+   "ur": "مطلق قیمت کے اصول ($|A| = B \\Rightarrow A = \\pm B$) کو استعمال کرتے ہوئے، ہم پہلے مثبت علامت لیتے ہیں اور اسے معیاری دو درجی مساوات $2x^2 - 6x + 1 = 0$ کی شکل دیتے ہیں۔ چونکہ اس کی تجزی آسانی سے نہیں ہوتی، اس لیے دو درجی کلیہ (quadratic formula) لگا کر ہمیں پہلے دو حقیقی روٹس $\\frac{3 \\pm \\sqrt{7}}{2}$ مل جاتے ہیں۔"
+  },
+  {
+   "en": "Now we apply the second part of the absolute value definition by setting the inside expression equal to the negative of the right-hand side, which simplifies to $4x^2 - 8x + 3 = 0$. By factoring this quadratic expression into $(2x - 1)(2x - 3) = 0$, we easily find the other two roots, $x = \\frac{1}{2}$ and $x = \\frac{3}{2}$.",
+   "ur": "اب ہم مطلق قیمت کی تعریف کا دوسرا حصہ لاگو کرتے ہوئے اندرونی عبارت کو دائیں جانب کے منفی کے برابر رکھتے ہیں، جو مختصر ہو کر $4x^2 - 8x + 3 = 0$ بن جاتی ہے۔ اس دو درجی مساوات کی تجزی $(2x - 1)(2x - 3) = 0$ کرنے سے ہمیں بآسانی دوسرے دو روٹس $x = \\frac{1}{2}$ اور $x = \\frac{3}{2}$ حاصل ہو جاتے ہیں۔"
+  },
+  {
+   "en": "Because we proved in the first step that the right-hand side is always positive, all four roots obtained from both cases are valid solutions. We write them together in curly brackets to present the complete Solution Set.",
+   "ur": "چونکہ ہم نے پہلے مرحلے میں ثابت کر دیا تھا کہ دائیں جانب والی عبارت ہمیشہ مثبت رہتی ہے، اس لیے دونوں صورتوں سے حاصل ہونے والے چاروں روٹس درست حل ہیں۔ مکمل حل سیٹ (Solution Set) ظاہر کرنے کے لیے ہم ان چاروں قیمتوں کو درمیانی بریکٹ میں اکٹھا لکھ دیتے ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer means that there are exactly four real values of $x$—namely $\\frac{3 - \\sqrt{7}}{2}$, $\\frac{1}{2}$, $\\frac{3}{2}$, and $\\frac{3 + \\sqrt{7}}{2}$—that make the left side $|3x^2 - 7x + 2|$ equal to the right side $x^2 - x + 1$. You can easily check a simpler root like $x = \\frac{1}{2}$ by substituting it into both sides of the original equation to see that both sides becomeequal.",
+  "ur": "حتمی جواب کا مطلب یہ ہے کہ $x$ کی بالکل چار ایسی حقیقی قیمتیں ہیں—یعنی $\\frac{3 - \\sqrt{7}}{2}$، $\\frac{1}{2}$، $\\frac{3}{2}$، اور $\\frac{3 + \\sqrt{7}}{2}$—جو بائیں طرف $|3x^2 - 7x + 2|$ کو دائیں طرف $x^2 - x + 1$ کے برابر بناتی ہیں۔ آپ پڑتال کے لیے کسی آسان روٹ جیسے $x = \\frac{1}{2}$ کو اصل مساوات کی دونوں اطراف میں درج کر کے دیکھ سکتے ہیں کہ دونوں اطراف برابر آتی ہیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-05"
+}

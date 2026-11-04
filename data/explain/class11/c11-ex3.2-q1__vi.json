@@ -1,0 +1,40 @@
+{
+ "item": "c11-ex3.2-q1",
+ "label": "vi",
+ "answer_ref": "$\\left\\{\\frac{1}{3},\\ -\\frac{16}{3}\\right\\}$",
+ "math": [
+  "3(x^2 + 5x + 1) - 3 - 2\\sqrt{x^2 + 5x + 1} = 2",
+  "\\text{Let } t = \\sqrt{x^2 + 5x + 1} \\ge 0:\\quad 3t^2 - 2t - 5 = 0",
+  "(3t - 5)(t + 1) = 0 \\Rightarrow t = \\tfrac{5}{3}\\ \\ (t = -1 \\text{ is rejected: } t \\ge 0)",
+  "x^2 + 5x + 1 = \\tfrac{25}{9} \\Rightarrow 9x^2 + 45x - 16 = 0 \\Rightarrow (3x - 1)(3x + 16) = 0",
+  "x = \\tfrac{1}{3},\\ -\\tfrac{16}{3}"
+ ],
+ "why": [
+  {
+   "en": "Notice that $3x^2 + 15x$ is $3(x^2 + 5x)$, which is very similar to the expression $x^2 + 5x + 1$ inside the square root. By adding and subtracting $3$, we create the exact same expression outside the root so we can easily simplify the equation.",
+   "ur": "غور کریں کہ $3x^2 + 15x$ دراصل $3(x^2 + 5x)$ ہے، جو جزر کے اندر موجود مقدار $x^2 + 5x + 1$ سے بہت ملتا جلتا ہے۔ $3$ کو جمع اور تفریق کرنے سے ہم جزر کے باہر بھی بالکل وہی مقدار بنا لیتے ہیں تاکہ مساوات کو آسانی سے حل کیا جا سکے۔"
+  },
+  {
+   "en": "To remove the complicated square root, we use the method of substitution by setting $t = \\sqrt{x^2 + 5x + 1}$. Since $t^2 = x^2 + 5x + 1$, this turns our difficult radical equation into a simple, standard quadratic equation in terms of $t$.",
+   "ur": "پیچیدہ جزر کو ختم کرنے کے لیے ہم متبادل کا طریقہ استعمال کرتے ہیں اور $t = \\sqrt{x^2 + 5x + 1}$ فرض کرتے ہیں۔ چونکہ $t^2 = x^2 + 5x + 1$ ہے، اس لیے یہ ہماری مشکل جذری مساوات کو $t$ کی شکل میں ایک سادہ معیاری دو درجی مساوات میں بدل دیتا ہے۔"
+  },
+  {
+   "en": "We factorize the quadratic equation to find the possible values of $t$. Because $t$ represents a principal square root, its value cannot be negative ($t \\ge 0$), so we reject $t = -1$ and keep only $t = \\frac{5}{3}$.",
+   "ur": "ہم $t$ کی ممکنہ قیمتیں معلوم کرنے کے لیے دو درجی مساوات کی تجزی کرتے ہیں۔ چونکہ $t$ ایک مثبت جزر کو ظاہر کرتا ہے، اس لیے اس کی قیمت منفی نہیں ہو سکتی ($t \\ge 0$)، لہٰذا ہم $t = -1$ کو نظر انداز کر دیتے ہیں اور صرف $t = \\frac{5}{3}$ کو برقرار رکھتے ہیں۔"
+  },
+  {
+   "en": "Now we put the original expression back in place of $t$ and square both sides to get $\\frac{25}{9}$, which removes the square root. Clearing the fraction and factorizing gives us a solvable equation directly in terms of $x$.",
+   "ur": "اب ہم $t$ کی جگہ اصل مقدار واپس رکھتے ہیں اور جزر ختم کرنے کے لیے دونوں طرف مربع لیتے ہیں جس سے $\\frac{25}{9}$ حاصل ہوتا ہے۔ کسر کو ختم کرنے اور تجزی کرنے سے ہمیں براہِ راست $x$ کی شکل میں ایک قابلِ حل مساوات مل جاتی ہے۔"
+  },
+  {
+   "en": "Setting each factor to zero gives us our two values for $x$. In radical equations, we must always check our answers in the original question to make sure neither is an extraneous root, and here both values work.",
+   "ur": "ہر جزوِ ضربی کو صفر کے برابر رکھنے سے ہمیں $x$ کی دو قیمتیں ملتی ہیں۔ جذری مساواتوں میں، ہمیں ہمیشہ اپنے جوابات کو اصل سوال میں درج کر کے پڑتال کرنی چاہیے تاکہ تسلی ہو جائے کہ کوئی فالتو روٹ نہیں ہے، اور یہاں دونوں قیمتیں درست ثابت ہوتی ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The solution set $\\left\\{\\frac{1}{3},\\ -\\frac{16}{3}\\right\\}$ gives the two real values of $x$ that make the original radical equation true. Because both values arose from the valid positive value $t = \\frac{5}{3}$, substituting either $x = \\frac{1}{3}$ or $x = -\\frac{16}{3}$ back into $3x^2 + 15x - 2\\sqrt{x^2 + 5x + 1}$ will correctly give $2$.",
+  "ur": "حل سیٹ $\\left\\{\\frac{1}{3},\\ -\\frac{16}{3}\\right\\}$ ہمیں $x$ کی وہ دو حقیقی قیمتیں دیتا ہے جو اصل جذری مساوات کو درست ثابت کرتی ہیں۔ چونکہ یہ دونوں قیمتیں $t = \\frac{5}{3}$ کی درست مثبت قیمت سے حاصل ہوئی ہیں، اس لیے $x = \\frac{1}{3}$ یا $x = -\\frac{16}{3}$ کو واپس $3x^2 + 15x - 2\\sqrt{x^2 + 5x + 1}$ میں درج کرنے سے جواب بالکل ٹھیک $2$ آئے گا۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-05"
+}

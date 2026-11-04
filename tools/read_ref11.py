@@ -20,7 +20,7 @@ REF = ROOT / "data" / "class11" / "ref"
 PDF = REF / "unit01_kanwal_hasan.pdf"
 NAME = "kanwal"
 
-PROMPT = """This is one page of a typed solutions book for Class 11 mathematics (Punjab/PECTAA), Chapter 1 Complex Numbers.
+PROMPT = """This is one page of a typed solutions book for Class 11 mathematics (Punjab/PECTAA), {chapter}.
 For every question that STARTS or is SOLVED on this page, give:
 * "exercise": e.g. "1.2" (from the heading in force; the page may continue an exercise from the previous page; null if not shown)
 * "number": the question number, "part": the part label (i, ii, ...) or "",
@@ -48,7 +48,7 @@ def read(png):
     if out.exists():
         return json.loads(out.read_text(encoding="utf-8"))
     body = {"contents": [{"role": "user", "parts": [
-        {"inlineData": {"mimeType": "image/png", "data": base64.b64encode(png.read_bytes()).decode("ascii")}}, {"text": PROMPT}]}],
+        {"inlineData": {"mimeType": "image/png", "data": base64.b64encode(png.read_bytes()).decode("ascii")}}, {"text": PROMPT.replace("{chapter}", os.environ.get("REF_CHAPTER", "Chapter 1 Complex Numbers"))}]}],
         "generationConfig": {"temperature": 0.0, "maxOutputTokens": 12000, "responseMimeType": "application/json"}}
     for _ in range(3):
         try:

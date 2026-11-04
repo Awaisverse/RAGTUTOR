@@ -1,0 +1,45 @@
+{
+ "item": "c11-ex3.1-q3",
+ "label": "vi",
+ "answer_ref": "$f^{-1}(x) = -4 - \\sqrt{-\\frac{x + 5}{3}}$; Dom$(f^{-1}) = \\left(-\\infty, -5\\right)$, Range$(f^{-1}) = \\left(-\\infty, -4\\right)$",
+ "math": [
+  "y = -3\\left(x + 4\\right)^2 - 5",
+  "\\left(x + 4\\right)^2 = \\frac{y + 5}{-3}",
+  "x + 4 = -\\sqrt{-\\frac{y + 5}{3}} \\;\\Rightarrow\\; x = -4 - \\sqrt{-\\frac{y + 5}{3}}",
+  "f^{-1}(x) = -4 - \\sqrt{-\\frac{x + 5}{3}}",
+  "\\text{Dom}(f) = \\left(-\\infty, -4\\right),\\quad \\text{Range}(f) = \\left(-\\infty, -5\\right)",
+  "\\text{Dom}(f^{-1}) = \\text{Range}(f) = \\left(-\\infty, -5\\right),\\quad \\text{Range}(f^{-1}) = \\text{Dom}(f) = \\left(-\\infty, -4\\right)"
+ ],
+ "why": [
+  {
+   "en": "To find the inverse of a function, we first replace $f(x)$ with $y$ so that we can solve the equation for $x$. Since the given expression is already in vertex form, $x$ appears only once, which makes isolating it much easier.",
+   "ur": "کسی فنکشن کا معکوس (inverse) معلوم کرنے کے لیے ہم سب سے پہلے $f(x)$ کی جگہ $y$ لکھتے ہیں تاکہ مساوات کو $x$ کے لیے حل کیا جا سکے۔ چونکہ دی گئی مساوات پہلے ہی مکمل مربع کی شکل میں ہے اور $x$ صرف ایک بار آیا ہے، اس لیے اسے الگ کرنا بہت آسان ہو گا۔"
+  },
+  {
+   "en": "Using basic algebraic operations, we shift $-5$ and divide by $-3$ to isolate the squared term $(x + 4)^2$ on one side. This prepares the equation so we can directly undo the square in the next step.",
+   "ur": "بنیادی الجبری اصولوں کے تحت، ہم $-5$ کو دوسری طرف لے جاتے ہیں اور $-3$ سے تقسیم کرتے ہیں تاکہ مربع والی رقم $(x + 4)^2$ ایک طرف اکیلی رہ جائے۔ اس سے مساوات اگلے مرحلے میں جزر (square root) لینے کے لیے تیار ہو جاتی ہے۔"
+  },
+  {
+   "en": "We take the square root on both sides to remove the square and finally isolate $x$. Because the given condition is $x < -4$, the quantity $x + 4$ must be negative, which tells us to select the negative square root instead of the positive one.",
+   "ur": "ہم مربع ختم کرنے اور $x$ کو الگ کرنے کے لیے دونوں طرف جزر لیتے ہیں۔ چونکہ سوال میں شرط $x < -4$ دی گئی ہے، اس لیے $x + 4$ کی قیمت منفی ہو گی، جس سے ہمیں معلوم ہوتا ہے کہ یہاں مثبت کے بجائے منفی جزر لینا ہے۔"
+  },
+  {
+   "en": "By the definition of an inverse function, the roles of input and output are reversed, so we swap $x$ and $y$ and write $y$ as $f^{-1}(x)$. This gives us the final algebraic formula for the inverse function in terms of $x$.",
+   "ur": "معکوس فنکشن کی تعریف کے مطابق ان پٹ اور آؤٹ پٹ آپس میں بدل جاتے ہیں، اس لیے ہم $x$ اور $y$ کی جگہ بدل کر $y$ کو $f^{-1}(x)$ لکھ دیتے ہیں۔ اس سے ہمیں $x$ کی شکل میں معکوس فنکشن کا حتمی فارمولا مل جاتا ہے۔"
+  },
+  {
+   "en": "The domain of $f$ is directly given by the condition $x < -4$, which in interval notation is $(-\\infty, -4)$. Since $-3(x + 4)^2$ is always negative for $x < -4$, subtracting $5$ makes the output always strictly less than $-5$, giving the range $(-\\infty, -5)$.",
+   "ur": "فنکشن $f$ کی ڈومین سوال میں دی گئی شرط $x < -4$ سے براہِ راست ملتی ہے، جسے وقفے (interval) کی شکل میں $(-\\infty, -4)$ لکھتے ہیں۔ چونکہ $x < -4$ کے لیے $-3(x + 4)^2$ ہمیشہ منفی ہوتا ہے، اس لیے اس میں سے $5$ تفریق کرنے سے جواب ہمیشہ $-5$ سے چھوٹا آئے گا، جس سے رینج $(-\\infty, -5)$ حاصل ہوتی ہے۔"
+  },
+  {
+   "en": "A fundamental property of inverse functions is that the inputs and outputs completely interchange. Therefore, the range of the original function $f$ becomes the domain of $f^{-1}$, and the domain of $f$ becomes the range of $f^{-1}$.",
+   "ur": "معکوس فنکشنز کی ایک بنیادی خصوصیت یہ ہے کہ ان کے ان پٹ اور آؤٹ پٹ مکمل طور پر آپس میں بدل جاتے ہیں۔ چنانچہ، اصل فنکشن $f$ کی رینج معکوس فنکشن $f^{-1}$ کی ڈومین بن جاتی ہے، اور $f$ کی ڈومین $f^{-1}$ کی رینج بن جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer gives the rule $f^{-1}(x) = -4 - \\sqrt{-\\frac{x + 5}{3}}$, which reverses the action of the original quadratic function on the restricted branch $x < -4$. You can verify that the domain $(-\\infty, -5)$ makes sense because plugging any $x < -5$ keeps the value inside the square root positive, and the subtracted square root ensures the output always stays below $-4$, matching the range $(-\\infty, -4)$.",
+  "ur": "حتمی جواب ہمیں کلیہ $f^{-1}(x) = -4 - \\sqrt{-\\frac{x + 5}{3}}$ دیتا ہے، جو دی گئی شرط $x < -4$ کے تحت اصل دو درجی فنکشن کے عمل کو الٹ دیتا ہے۔ آپ تصدیق کر سکتے ہیں کہ ڈومین $(-\\infty, -5)$ بالکل درست ہے کیونکہ $x < -5$ کی کوئی بھی قیمت رکھنے سے جزر کے اندر والی رقم مثبت رہتی ہے، اور$-4$ میں سے جزر تفریق ہونے کی وجہ سے جواب ہمیشہ $-4$ سے چھوٹا رہتا ہے، جو کہ رینج $(-\\infty, -4)$ کے عین مطابق ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-05"
+}

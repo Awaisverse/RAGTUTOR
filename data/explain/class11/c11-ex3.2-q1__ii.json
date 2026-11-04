@@ -1,0 +1,35 @@
+{
+ "item": "c11-ex3.2-q1",
+ "label": "ii",
+ "answer_ref": "$\\{-2, 1\\}$",
+ "math": [
+  "\\text{Let } y = \\frac{x}{x + 1}:\\quad y + \\frac{1}{y} = \\frac{5}{2}",
+  "2y^2 - 5y + 2 = 0 \\Rightarrow (2y - 1)(y - 2) = 0 \\Rightarrow y = \\tfrac{1}{2},\\ 2",
+  "\\frac{x}{x + 1} = \\frac{1}{2} \\Rightarrow x = 1;\\qquad \\frac{x}{x + 1} = 2 \\Rightarrow x = -2",
+  "\\text{S.S.} = \\{-2, 1\\}"
+ ],
+ "why": [
+  {
+   "en": "Notice that the second fraction $\\frac{x+1}{x}$ is just the upside-down (reciprocal) version of the first fraction $\\frac{x}{x+1}$. By naming the first fraction $y$, the second automatically becomes $\\frac{1}{y}$, which makes the equation much cleaner and easier to handle.",
+   "ur": "غور کریں کہ دوسری کسر $\\frac{x+1}{x}$ پہلی کسر $\\frac{x}{x+1}$ کا معکوس (الٹ) ہے۔ پہلی کسر کو $y$ فرض کرنے سے دوسری کسر خود بخود $\\frac{1}{y}$ بن جاتی ہے، جس سے مساوات بہت سادہ اور حل کرنے میں آسان ہو جاتی ہے۔"
+  },
+  {
+   "en": "To clear the denominators, we multiply the entire equation by $2y$ and rearrange it into standard quadratic form $2y^2 - 5y + 2 = 0$. Factoring this gives us the two temporary values for $y$, which are $\\frac{1}{2}$ and $2$.",
+   "ur": "بٹے کو ختم کرنے کے لیے ہم پوری مساوات کو $2y$ سے ضرب دیتے ہیں اور اسے معیاری دو درجی مساوات $2y^2 - 5y + 2 = 0$ کی شکل میں ترتیب دیتے ہیں۔ اس کی تجزی کرنے سے ہمیں $y$ کی دو عارضی قیمتیں $\\frac{1}{2}$ اور $2$ مل جاتی ہیں۔"
+  },
+  {
+   "en": "Since the original question asked for $x$ and not $y$, we must replace $y$ back with $\\frac{x}{x+1}$ for both values. Cross-multiplying and solving these two simple linear equations reveals our actual answers, $x = 1$ and $x = -2$.",
+   "ur": "چونکہ اصل سوال میں $x$ کی قیمت پوچھی گئی تھی نہ کہ $y$ کی، اس لیے ہم دونوں قیمتوں کے لیے $y$ کی جگہ واپس $\\frac{x}{x+1}$ درج کرتے ہیں۔ چلیپائی ضرب دے کر ان دو سادہ یک درجی مساواتوں کو حل کرنے سے ہمیں اصل جوابات $x = 1$ اور $x = -2$ مل جاتے ہیں۔"
+  },
+  {
+   "en": "Finally, we check that neither $-2$ nor $1$ violates the restriction $x \\ne -1, 0$ (which would cause division by zero), so we can safely write both into the final solution set.",
+   "ur": "آخر میں، ہم تصدیق کرتے ہیں کہ نہ تو $-2$ اور نہ ہی $1$ دی گئی شرط $x \\ne -1, 0$ کی خلاف ورزی کرتے ہیں (جس سے صفر سے تقسیم کا مسئلہ بنتا)، اس لیے ہم دونوں کو محفوظ طریقے سے حل سیٹ میں لکھ سکتے ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The solution set $\\{-2, 1\\}$ means that $x = -2$ and $x = 1$ are the only two real numbers that make the original equation true. You can easily check $x = 1$ by substituting it back into the left side: $\\frac{1}{1+1} + \\frac{1+1}{1} = \\frac{1}{2} + 2 = \\frac{5}{2}$, which matches the right side.",
+  "ur": "حل سیٹ $\\{-2, 1\\}$ کا مطلب یہ ہے کہ $x = -2$ اور $x = 1$ وہ واحد دو حقیقی اعداد ہیں جو اصل مساوات کو درست ثابت کرتے ہیں۔ آپ $x = 1$ کو بائیں طرف درج کر کے آسانی سے پڑتال کر سکتے ہیں: $\\frac{1}{1+1} + \\frac{1+1}{1} = \\frac{1}{2} + 2 = \\frac{5}{2}$، جو دائیں طرف کے بالکل برابر ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-05"
+}

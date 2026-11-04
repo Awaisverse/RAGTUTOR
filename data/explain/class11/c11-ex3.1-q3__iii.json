@@ -1,0 +1,45 @@
+{
+ "item": "c11-ex3.1-q3",
+ "label": "iii",
+ "answer_ref": "$f^{-1}(x) = 2 + \\sqrt{\\frac{x - 3}{2}}$; Dom$(f^{-1}) = \\left[3, \\infty\\right)$, Range$(f^{-1}) = \\left[2, \\infty\\right)$",
+ "math": [
+  "y = 2 x^{2} - 8 x + 11 = 2\\left(x - 2\\right)^2 + 3",
+  "\\left(x - 2\\right)^2 = \\frac{y - 3}{2}",
+  "x - 2 = +\\sqrt{\\frac{y - 3}{2}} \\;\\Rightarrow\\; x = 2 + \\sqrt{\\frac{y - 3}{2}}",
+  "f^{-1}(x) = 2 + \\sqrt{\\frac{x - 3}{2}}",
+  "\\text{Dom}(f) = \\left[2, \\infty\\right),\\quad \\text{Range}(f) = \\left[3, \\infty\\right)",
+  "\\text{Dom}(f^{-1}) = \\text{Range}(f) = \\left[3, \\infty\\right),\\quad \\text{Range}(f^{-1}) = \\text{Dom}(f) = \\left[2, \\infty\\right)"
+ ],
+ "why": [
+  {
+   "en": "In the original equation, $x$ appears in two different places ($2x^2$ and $-8x$), which makes it impossible to isolate directly. By using the method of completing the square, we bring $x$ into a single bracket $(x - 2)^2$, making it easy to solve for $x$.",
+   "ur": "دی گئی مساوات میں $x$ دو جگہوں ($2x^2$ اور $-8x$) پر آ رہا ہے، جس کی وجہ سے اسے براہِ راست الگ کرنا ناممکن ہے۔ تکمیلِ مربع (completing the square) کا طریقہ استعمال کر کے ہم $x$ کو ایک ہی بریکٹ $(x - 2)^2$ میں لے آتے ہیں، جس سے $x$ کی قیمت نکالنا آسان ہو جاتا ہے۔"
+  },
+  {
+   "en": "To eventually get $x$ by itself, we first need to strip away the numbers outside the squared bracket. Subtracting $3$ and dividing by $2$ leaves the squared term $(x - 2)^2$ completely alone on one side.",
+   "ur": "آخر کار $x$ کو تنہا کرنے کے لیے، ہمیں پہلے مربع والی بریکٹ کے باہر موجود نمبروں کو ہٹانا ہوگا۔ $3$ کو تفریق کرنے اور $2$ پر تقسیم کرنے سے مربع والی رقم $(x - 2)^2$ ایک طرف بالکل اکیلی رہ جاتی ہے۔"
+  },
+  {
+   "en": "We take the square root to undo the square, which normally gives both $+$ and $-$ signs, but the question restricts our domain to $x \\ge 2$. Since $x$ is $2$ or greater, $x - 2$ cannot be negative, so we choose the positive root and then add $2$ to fully isolate $x$.",
+   "ur": "مربع ختم کرنے کے لیے ہم جزر لیتے ہیں جو عام طور پر $+$ اور $-$ دونوں علامتیں دیتا ہے، لیکن سوال میں ہماری ڈومین $x \\ge 2$ تک محدود ہے۔ چونکہ $x$ کی قیمت $2$ یا اس سے بڑی ہے، اس لیے $x - 2$ منفی نہیں ہو سکتا؛ لہٰذا ہم مثبت جزر چنتے ہیں اور پھر $x$ کو مکمل طور پر الگ کرنے کے لیے $2$ جمع کر دیتے ہیں۔"
+  },
+  {
+   "en": "Since $y = f(x)$, we know by definition of an inverse function that $x = f^{-1}(y)$. Swapping the variables $x$ and $y$ lets us write the final inverse function in the standard form $f^{-1}(x)$.",
+   "ur": "چونکہ $y = f(x)$ ہے، ہم معکوس تفاعل (inverse function) کی تعریف سے جانتے ہیں کہ $x = f^{-1}(y)$ ہوتا ہے۔ متغیرات $x$ اور $y$ کی جگہ بدلنے سے ہم اپنے معکوس تفاعل کو معیاری شکل $f^{-1}(x)$ میں لکھ سکتے ہیں۔"
+  },
+  {
+   "en": "The domain of $f$ is already given in the question as $x \\ge 2$, which in interval notation is $[2, \\infty)$. Looking at the vertex form $2(x - 2)^2 + 3$, the smallest output occurs at $x = 2$ giving $y = 3$, and since the square is always positive, the outputs (range) go from $3$ up to $\\infty$.",
+   "ur": "تفاعل $f$ کی ڈومین سوال میں پہلے ہی $x \\ge 2$ دی گئی ہے، جسے وقفے (interval) کی شکل میں $[2, \\infty)$ لکھتے ہیں۔ تکمیلِ مربع والی شکل $2(x - 2)^2 + 3$ کو دیکھیں تو سب سے چھوٹی قیمت $x = 2$ پر $y = 3$ ملتی ہے، اور چونکہ مربع ہمیشہ مثبت ہوتا ہے، اس لیے حاصل ہونے والی قیمتیں (رینج) $3$ سے لے کر $\\infty$ تک جاتی ہیں۔"
+  },
+  {
+   "en": "An inverse function reverses the roles of inputs and outputs. Therefore, the outputs (range) of the original function $f$ become the allowed inputs (domain) of $f^{-1}$, and the inputs (domain) of $f$ become the outputs (range) of $f^{-1}$.",
+   "ur": "ایک معکوس تفاعل ان پٹ (inputs) اور آؤٹ پٹ (outputs) کے کردار کو الٹ دیتا ہے۔ اس لیے، اصل تفاعل $f$ کی رینج معکوس تفاعل $f^{-1}$ کی ڈومین بن جاتی ہے، اور $f$ کی ڈومین $f^{-1}$ کی رینج بن جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer gives the formula $f^{-1}(x) = 2 + \\sqrt{\\frac{x - 3}{2}}$, which reverses the action of the original quadratic function on the restricted branch $x \\ge 2$. Its domain $[3, \\infty)$ shows that we can only put numbers $3$ or greater into the inverse (which keeps the number inside the square root positive or zero), and its range $[2, \\infty)$ confirms that the results will always be $2$ or greater. You can check this by plugging the starting value $x = 2$ into $f(x)$ to get $3$, and then putting $3$ into $f^{-1}(x)$ to see that it brings you right back to $2$.",
+  "ur": "آخری جواب ہمیں فارمولا $f^{-1}(x) = 2 + \\sqrt{\\frac{x - 3}{2}}$ دیتا ہے، جو محدود حصے $x \\ge 2$ پر اصل دو درجی تفاعل کے عمل کو الٹ دیتا ہے۔ اس کی ڈومین $[3, \\infty)$ بتاتی ہے کہ ہم معکوس تفاعل میں صرف $3$ یا اس سے بڑے نمبر درج کر سکتے ہیں (جو جزر کے اندر والی رقم کو مثبت یا صفر رکھتا ہے)، اور اس کی رینج $[2, \\infty)$ تصدیق کرتی ہے کہ جوابات ہمیشہ $2$ یا اس سے بڑے آئیں گے۔ آپ اس کی پڑتال ایسے کر سکتے ہیں کہ ابتدائی قیمت $x = 2$ کو $f(x)$ میں درج کریں جس سے $3$ ملے گا، اور پھر $3$ کو $f^{-1}(x)$ میں درج کریں تو یہ آپ کو واپس $2$ پر لے آئے گا۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-05"
+}

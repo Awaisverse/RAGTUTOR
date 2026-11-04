@@ -39,15 +39,15 @@ check(out.returncode == 0 and last and "failed: 0" in last[-1], "build: " + (las
 print("build:", last[-1] if last else "?")
 
 # 2. structure -----------------------------------------------------------------------------------------------------------
-unit = json.loads((ROOT / "data" / "book11" / "unit01.json").read_text(encoding="utf-8"))
-items = unit["items"]
-check(len(items) == 60, f"60 questions expected, found {len(items)}")
+items = [it for f in sorted((ROOT / "data" / "book11").glob("unit*.json")) for it in json.loads(f.read_text(encoding="utf-8"))["items"]]
+N = 71                                                # Unit 1 (60) + Unit 3 (11)
+check(len(items) == N, f"{N} questions expected, found {len(items)}")
 ids = [it["id"] for it in items]
 check(len(ids) == len(set(ids)), "duplicate ids")
 per_ex = {}
 for it in items:
     per_ex[it["exercise"]] = per_ex.get(it["exercise"], 0) + 1
-    check(it["id"].startswith("c11-ex1."), f"id {it['id']}")
+    check(re.match(r"c11-ex[13]\.", it["id"]), f"id {it['id']}")
     for p in it["parts"]:
         check(p["answer"], f"{it['id']} ({p['label']}): no answer")
         check(p["steps"], f"{it['id']} ({p['label']}): no steps")
@@ -57,17 +57,17 @@ for it in items:
                 check(t.count("{") == t.count("}"), f"{it['id']} ({p['label']}) step {k}: braces")
             for d in s.get("draw", []) or []:
                 check(d.get("t") in ("line", "poly", "circle", "arc", "dot", "text", "right", "numberline", "subdiv"), f"{it['id']}: drawing {d.get('t')}")
-check(per_ex == {"1.1": 9, "1.2": 12, "1.3": 8, "1.4": 9, "1.5": 22}, f"questions per exercise {per_ex}")
+check(per_ex == {"1.1": 9, "1.2": 12, "1.3": 8, "1.4": 9, "1.5": 22, "3.1": 4, "3.2": 7}, f"questions per exercise {per_ex}")
 print("structure:", len(items), "items,", sum(len(it["parts"]) for it in items), "parts,", per_ex)
 
 # 3. server --------------------------------------------------------------------------------------------------------------
 import server  # noqa: E402
 
 d = server.data("11")
-check(len(d["items"]) == 60, "server lists 60 Class 11 items")
+check(len(d["items"]) == N, f"server lists {N} Class 11 items")
 client = server.app.test_client()
 r = client.get("/api/items?class=11")
-check(r.status_code == 200 and len(r.get_json()) == 60, "/api/items?class=11")
+check(r.status_code == 200 and len(r.get_json()) == N, "/api/items?class=11")
 found = 0
 for it in items:
     r = client.get(f"/api/item/{it['id']}?class=11")
@@ -80,7 +80,7 @@ for ref, want in (("Exercise 1.3 Q4 (ii)", "c11-ex1.3-q4"), ("Exercise 1.5 Q19",
     res = server.resolve(ref, klass="11")
     check((res.get("item") or {}).get("id") == want, f"{ref} -> {(res.get('item') or {}).get('id')}")
 check(server.resolve("hello", klass="11")["mode"] == "not_math", "hello is not maths")
-print(f"server: {found}/60 book questions found as themselves; references open")
+print(f"server: {found}/{N} book questions found as themselves; references open")
 
 # 4. engine on new questions ---------------------------------------------------------------------------------------------
 import engine11  # noqa: E402
@@ -146,6 +146,23 @@ for _ in range(15):                                   # multiplicative inverse o
         continue
     cases.append(("inv", f"Find the multiplicative inverse of ({a}, {b})", (a, b)))
 
+X_ = sp.Symbol("x")
+for _ in range(20):                                   # Unit 3: maximum or minimum value
+    a = rnd.choice([1, 2, 3, -1, -2])
+    b, c = rnd.randint(-12, 12), rnd.randint(-15, 15)
+    cases.append(("maxmin", f"Find the maximum or minimum value of f(x) = {sp.sstr(a*X_**2 + b*X_ + c).replace('**', '^').replace('*', '')} by completing square", (a, b, c)))
+for _ in range(15):                                   # Unit 3: inverse of a restricted quadratic
+    a = rnd.choice([1, 2, 3])
+    h, k = rnd.randint(-5, 5), rnd.randint(-9, 9)
+    side = rnd.choice([">=", "<="])
+    f = sp.expand(a * (X_ - h) ** 2 + k)
+    cases.append(("qinv", f"Find the inverse of f(x) = {sp.sstr(f).replace('**', '^').replace('*', '')}, x {side} {h}. Also find domain and range", (f, h, side)))
+for _ in range(15):                                   # Unit 3: |quadratic| = k
+    m, n = rnd.randint(1, 6), rnd.randint(1, 9)
+    k = rnd.randint(1, 20)
+    e = sp.expand(X_ ** 2 - m * m)
+    cases.append(("absq", f"Solve |{sp.sstr(e).replace('**', '^')}| = {k}", (e, k)))
+
 for kind, q, data in cases:
     res = engine11.solve(q)
     tested += 1
@@ -184,6 +201,24 @@ for kind, q, data in cases:
             ang = re.sub(r"^\\left\((.*)\\right\)$", r"\1", ang)
             rv, tv = cplx(rtex), cplx(ang)
             ok = sp.simplify(rv * (sp.cos(tv) + I * sp.sin(tv)) - data) == 0
+        elif kind == "maxmin":
+            a, b, c = data
+            h = sp.Rational(-b, 2 * a)
+            k = sp.Rational(a * h * h + b * h + c)
+            want = ("Minimum" if a > 0 else "Maximum") + f" value ${sp.latex(k)}$ at $x = {sp.latex(h)}$"
+            ok = ans.replace(" ", "") == want.replace(" ", "")
+        elif kind == "qinv":
+            f, h, side = data
+            body = re.search(r"f\^\{-1\}\(x\) = (.*?)\$;", ans).group(1)
+            g = cplx(body.replace("x", "XX")).subs(sp.Symbol("XX"), sp.Symbol("t"))
+            t = sp.Symbol("t")
+            pts = [h + 1, h + 2, h + 3] if side == ">=" else [h - 1, h - 2, h - 3]
+            ok = all(abs(complex(sp.N(g.subs(t, f.subs(X_, x0)))) - x0) < 1e-9 for x0 in pts)        # f^-1(f(x)) = x on the domain
+        elif kind == "absq":
+            e, k = data
+            want = sorted({float(r) for r in sp.solve(e - k, X_) + sp.solve(e + k, X_) if r.is_real})   # |e| = k: e = k or e = -k
+            got = sorted(float(cplx(v)) for v in re.findall(r"x = ([^,$]+?)(?:,\\|\$)", ans))
+            ok = len(want) == len(got) and all(abs(u - v) < 1e-9 for u, v in zip(want, got))
         elif kind == "inv":
             a, b = data
             nums = re.findall(r"-?\s*\\frac\{(\d+)\}\{(\d+)\}|(-?\d+)", ans)

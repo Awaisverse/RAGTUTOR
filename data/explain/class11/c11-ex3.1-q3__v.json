@@ -1,0 +1,45 @@
+{
+ "item": "c11-ex3.1-q3",
+ "label": "v",
+ "answer_ref": "$f^{-1}(x) = 3 + \\sqrt{\\frac{x - 1}{2}}$; Dom$(f^{-1}) = \\left[1, \\infty\\right)$, Range$(f^{-1}) = \\left[3, \\infty\\right)$",
+ "math": [
+  "y = 2\\left(x - 3\\right)^2 + 1",
+  "\\left(x - 3\\right)^2 = \\frac{y - 1}{2}",
+  "x - 3 = +\\sqrt{\\frac{y - 1}{2}} \\;\\Rightarrow\\; x = 3 + \\sqrt{\\frac{y - 1}{2}}",
+  "f^{-1}(x) = 3 + \\sqrt{\\frac{x - 1}{2}}",
+  "\\text{Dom}(f) = \\left[3, \\infty\\right),\\quad \\text{Range}(f) = \\left[1, \\infty\\right)",
+  "\\text{Dom}(f^{-1}) = \\text{Range}(f) = \\left[1, \\infty\\right),\\quad \\text{Range}(f^{-1}) = \\text{Dom}(f) = \\left[3, \\infty\\right)"
+ ],
+ "why": [
+  {
+   "en": "To find the inverse function, we start by setting $y = f(x)$ so we can work with a standard two-variable equation. Since the expression $2(x - 3)^2 + 1$ is already in vertex (completed-square) form, the variable $x$ appears only once, making it very easy to isolate.",
+   "ur": "مکوس تفاعل (inverse function) معلوم کرنے کے لیے ہم سب سے پہلے $y = f(x)$ فرض کرتے ہیں تاکہ دو متغیرات والی مساوات بن جائے۔ چونکہ جملہ $2(x - 3)^2 + 1$ پہلے سے ہی مکمل مربع کی شکل میں ہے اور اس میں $x$ صرف ایک بار آ رہا ہے، اس لیے اسے الگ کرنا بہت آسان ہو گا۔"
+  },
+  {
+   "en": "Our goal is to solve for $x$ in terms of $y$, so we use basic algebra to peel away the numbers outside the squared bracket. Subtracting $1$ and dividing by $2$ leaves the squared term $(x - 3)^2$ completely alone on one side, ready for the square root.",
+   "ur": "ہمارا مقصد $x$ کی قیمت $y$ کی شکل میں نکالنا ہے، اس لیے ہم بنیادی الجبرا استعمال کرتے ہوئے مربع والی بریکٹ کے باہر موجود اعداد کو دوسری طرف لے جاتے ہیں۔ $1$ کو تفریق کرنے اور $2$ پر تقسیم کرنے سے مربع والی رقم $(x - 3)^2$ ایک طرف اکیلی رہ جاتی ہے، جس پر اب ہم جزر لے سکتے ہیں۔"
+  },
+  {
+   "en": "We take the square root on both sides to undo the square, which normally gives both a plus and a minus sign. However, look at the given condition $x \\ge 3$: this tells us that $x - 3$ cannot be negative, so we must choose the positive root and then add $3$ to fully isolate $x$.",
+   "ur": "مربع ختم کرنے کے لیے ہم دونوں طرف جزر لیتے ہیں، جس سے عام طور پر جمع اور منفی دونوں علامتیں آتی ہیں۔ لیکن دی گئی شرط $x \\ge 3$ پر غور کریں: یہ بتاتی ہے کہ $x - 3$ منفی نہیں ہو سکتا، اس لیے ہم صرف مثبت جزر چنتے ہیں اور پھر $3$ جمع کر کے $x$ کو مکمل طور پر الگ کر لیتے ہیں۔"
+  },
+  {
+   "en": "By the definition of an inverse function, since $x = f^{-1}(y)$, we swap the roles of $x$ and $y$ so that our final formula is written in terms of the standard input variable $x$. This gives us the exact rule for the inverse function $f^{-1}(x)$.",
+   "ur": "مکوس تفاعل کی تعریف کے مطابق چونکہ $x = f^{-1}(y)$ ہوتا ہے، اس لیے ہم $x$ اور $y$ کی جگہ آپس میں بدل دیتے ہیں تاکہ ہمارا حتمی فارمولا معیاری متغیر $x$ کی شکل میں آ جائے۔ اس سے ہمیں مکوس تفاعل $f^{-1}(x)$ کا باقاعدہ فارمولا مل جاتا ہے۔"
+  },
+  {
+   "en": "Before stating the domain and range of the inverse, it is easiest to find them for the original function $f$ first. The domain is given in the question as $x \\ge 3$, which is $[3, \\infty)$, and since $(x - 3)^2$ has a minimum value of $0$ at $x = 3$, the minimum output is $f(3) = 1$, giving a range of $[1, \\infty)$.",
+   "ur": "مکوس تفاعل کی ڈومین اور رینج لکھنے سے پہلے اصل تفاعل $f$ کی ڈومین اور رینج معلوم کرنا سب سے آسان طریقہ ہے۔ سوال میں ڈومین $x \\ge 3$ یعنی $[3, \\infty)$ دی گئی ہے، اور چونکہ $x = 3$ پر $(x - 3)^2$ کی کم سے کم قیمت $0$ ہوتی ہے، اس لیے کم سے کم نتیجہ $f(3) = 1$ آتا ہے، جس سے رینج $[1, \\infty)$ بنتی ہے۔"
+  },
+  {
+   "en": "A fundamental property of inverse functions is that the inputs and outputs reverse their roles. Therefore, the range of the original function $f$ directly becomes the domain of $f^{-1}$, and the domain of $f$ becomes the range of $f^{-1}$.",
+   "ur": "مکوس تفاعل کی ایک بنیادی خاصیت یہ ہے کہ اس میں ان پٹ (ڈومین) اور آؤٹ پٹ (رینج) آپس میں بدل جاتے ہیں۔ چنانچہ اصل تفاعل $f$ کی رینج براہِ راست $f^{-1}$ کی ڈومین بن جاتی ہے، اور $f$ کی ڈومین $f^{-1}$ کی رینج بن جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer gives the formula $f^{-1}(x) = 3 + \\sqrt{\\frac{x - 1}{2}}$, which reverses the action of the original quadratic function on the restricted branch $x \\ge 3$. Its domain $[1, \\infty)$ and range $[3, \\infty)$ confirm that you can only plug in numbers $1$ or greater (keeping the value inside the square root non-negative), and the results will always be $3$ or greater. You can easily check this by testing the starting point: the original function takes $x = 3$ and gives $f(3) = 2(3 - 3)^2 + 1 = 1$, while the inverse takes $x = 1$ and gives $f^{-1}(1) = 3 + \\sqrt{\\frac{1 - 1}{2}} = 3$, taking us right back to where we started.",
+  "ur": "حتمی جواب ہمیں فارمولا $f^{-1}(x) = 3 + \\sqrt{\\frac{x - 1}{2}}$ دیتا ہے، جو کہ دی گئی شرط $x \\ge 3$ کے تحت اصل دو درجی تفاعل کے عمل کو الٹ دیتا ہے۔ اس کی ڈومین $[1, \\infty)$ اور رینج $[3, \\infty)$ اس بات کی تصدیق کرتی ہیں کہ آپ اس میں صرف $1$ یا اس سے بڑے اعداد درج کر سکتے ہیں (تاکہ جزر کے اندر منفی عدد نہ بنے)، اور جواب ہمیشہ $3$ یا اس سے بڑا آئے گا۔ آپ ابتدائی نقطہ درج کر کے اس کی باآسانی پڑتال کر سکتے ہیں: اصل تفاعل $x = 3$ لینے پر $f(3) = 2(3 - 3)^2 + 1 = 1$ دیتا ہے، جبکہ مکوس تفاعل $x = 1$ لینے پر $f^{-1}(1) = 3 + \\sqrt{\\frac{1 - 1}{2}} = 3$ دیتا ہے، جو ہمیں واپس اسی عدد پر لے آتا ہے جہاں سے ہم نے شروع کیا تھا۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-05"
+}

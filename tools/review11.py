@@ -23,11 +23,16 @@ REPORT = ROOT / "data" / "class11" / "review.json"
 _lock = threading.Lock()
 
 
+SOURCES = {"1": ("questions_kanwal.json", "kanwal"), "3": ("questions_u03.json", "u03")}   # per unit: question index, page folder
+
+
 def pages_for(it):
-    q = json.loads((REF / "questions_kanwal.json").read_text(encoding="utf-8"))
+    unit = it["exercise"].split(".")[0]
+    qfile, folder = SOURCES[unit]
+    q = json.loads((REF / qfile).read_text(encoding="utf-8"))
     pre = f"{it['exercise']}|{it['number']}|"
     pages = sorted({p for k, v in q.items() if k.startswith(pre) for p in v["pages"]})
-    return [REF / "pages" / "kanwal" / f"{p}.png" for p in pages][:5]
+    return [REF / "pages" / folder / f"{p}.png" for p in pages][:5]
 
 
 def review(it, parts, pngs):
@@ -41,7 +46,7 @@ def review(it, parts, pngs):
     note = " The LAST image is the figure OUR board draws." if fig else ""
     if len(parts) < len(it["parts"]):
         note += f" This check covers ONLY part(s) {', '.join(p.get('label') or '-' for p in parts)}; do not report the others as missing."
-    prompt = R.PROMPT.format(ref=ref, unit=1, fig_note=note, ours=ours).replace("Class 10", "Class 11").replace(
+    prompt = R.PROMPT.format(ref=ref, unit=it["exercise"].split(".")[0], fig_note=note, ours=ours).replace("Class 10", "Class 11").replace(
         "a solutions book that print", "a typed solutions book (Class 11, Punjab/PECTAA) that print")
     body = {"contents": [{"role": "user", "parts": imgs + [{"text": prompt}]}],
             "generationConfig": {"temperature": 0.0, "maxOutputTokens": 16000, "responseMimeType": "application/json"}}
@@ -65,7 +70,7 @@ def main():
     os.environ.setdefault("VERTEX_TIMEOUT", "180")
     only = set(x for x in a.only.split(",") if x)
     report = json.loads(REPORT.read_text(encoding="utf-8")) if REPORT.exists() else {}
-    items = json.loads((ROOT / "data" / "book11" / "unit01.json").read_text(encoding="utf-8"))["items"]
+    items = [it for f in sorted((ROOT / "data" / "book11").glob("unit*.json")) for it in json.loads(f.read_text(encoding="utf-8"))["items"]]
     jobs = [it for it in items if (not only or it["id"] in only) and (only or report.get(it["id"], {}).get("ok") is None)]
 
     def run(it):

@@ -1,0 +1,40 @@
+{
+ "item": "c11-ex3.1-q1",
+ "label": "v",
+ "answer_ref": "Minimum value $-16$ at $x = -1$",
+ "math": [
+  "f(x) = 3 x^{2} + 6 x - 13 = 3\\left(x^2 + 2x\\right) - 13",
+  "f(x) = 3\\left[\\left(x + 1\\right)^2 - \\left(1\\right)^2\\right] - 13",
+  "f(x) = 3\\left(x + 1\\right)^2 - 16",
+  "\\left(x + 1\\right)^2 \\ge 0 \\Rightarrow f(x) \\ge -16",
+  "\\text{Minimum value} = -16 \\text{ at } x = -1"
+ ],
+ "why": [
+  {
+   "en": "To apply the completing the square method easily, the coefficient of $x^2$ inside our working bracket must be $1$. By factoring out $3$ from the $x$ terms, we prepare the expression $x^2 + 2x$ to be turned into a perfect square.",
+   "ur": "مربع مکمل کرنے کا طریقہ آسانی سے لگانے کے لیے ضروری ہے کہ بریکٹ کے اندر $x^2$ کا عددی سر $1$ ہو۔ اس لیے ہم $x$ والی رقموں میں سے $3$ کو مشترک لے کر $x^2 + 2x$ کو مکمل مربع بنانے کے لیے تیار کرتے ہیں۔"
+  },
+  {
+   "en": "We use the algebraic identity $(a+b)^2 = a^2 + 2ab + b^2$ to rewrite the $x$ terms as a single squared bracket. By adding and subtracting $(1)^2$ inside the bracket, we form the perfect square $(x + 1)^2$ without changing the overall value of the function.",
+   "ur": "ہم الجبری کلیہ $(a+b)^2 = a^2 + 2ab + b^2$ استعمال کرتے ہوئے $x$ والی رقموں کو ایک مکمل مربع کی شکل دیتے ہیں۔ بریکٹ کے اندر $(1)^2$ جمع اور تفریق کرنے سے فنکشن کی قیمت بدلے بغیر ہمیں مکمل مربع $(x + 1)^2$ مل جاتا ہے۔"
+  },
+  {
+   "en": "Now we distribute the outer $3$ and combine the constant numbers to bring the function into standard vertex form, $a(x-h)^2 + k$. This clearly separates the variable part $3(x + 1)^2$ from the fixed constant $-16$.",
+   "ur": "اب ہم باہر والے $3$ کو اندر ضرب دیتے ہیں اور مستقل اعداد کو یکجا کر کے فنکشن کو معیاری شکل میں لے آتے ہیں۔ اس سے متغیر حصہ $3(x + 1)^2$ اور مستقل عدد $-16$ بالکل الگ ہو جاتے ہیں۔"
+  },
+  {
+   "en": "By the property of real numbers, the square of any real value is always zero or positive, meaning $(x + 1)^2 \\ge 0$. Since we are adding a non-negative quantity $3(x + 1)^2$ to $-16$, the total value of $f(x)$ can never drop below $-16$.",
+   "ur": "حقیقی اعداد کی خاصیت کے مطابق کسی بھی عدد کا مربع ہمیشہ صفر یا مثبت ہوتا ہے، یعنی $(x + 1)^2 \\ge 0$۔ چونکہ ہم $-16$ میں ایک غیر منفی رقم $3(x + 1)^2$ جمع کر رہے ہیں، اس لیے $f(x)$ کی کل قیمت کبھی بھی $-16$ سے کم نہیں ہو سکتی۔"
+  },
+  {
+   "en": "The function reaches its lowest possible value when the squared part becomes as small as possible, which is $0$. Setting $x + 1 = 0$ gives $x = -1$, which tells us the exact point where this minimum value of $-16$ occurs.",
+   "ur": "فنکشن اپنی کم سے کم قیمت تب حاصل کرتا ہے جب مربع والا حصہ اپنی سب سے چھوٹی ممکنہ قیمت یعنی $0$ پر ہو۔ $x + 1 = 0$ رکھنے سے ہمیں $x = -1$ ملتا ہے، جو بتاتا ہے کہ کس نقطے پر یہ کم سے کم قیمت $-16$ حاصل ہوتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This result tells us that the graph of the quadratic function $f(x) = 3x^2 + 6x - 13$ opens upwards and its lowest point (vertex) has a height of $-16$ when $x = -1$. You can easily check this by substituting $x = -1$ into the original function: $3(-1)^2 + 6(-1) - 13 = -16$.",
+  "ur": "یہ نتیجہ ہمیں بتاتا ہے کہ دو درجی فنکشن $f(x) = 3x^2 + 6x - 13$ کا گراف اوپر کی طرف کھلتا ہے اور اس کی کم سے کم قیمت $-16$ ہے جو $x = -1$ پر حاصل ہوتی ہے۔ آپ اصل فنکشن میں $x = -1$ درج کر کے اس کی باآسانی تصدیق کر سکتے ہیں: $3(-1)^2 + 6(-1) - 13 = -16$۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-05"
+}

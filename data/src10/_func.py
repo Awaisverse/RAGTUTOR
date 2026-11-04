@@ -75,14 +75,19 @@ def inverse(label, f, lines, result, prompt, domain_note=None):
 def abs_equation(label, inner, rhs, prompt):
     """|inner| = rhs (rhs > 0): inner = rhs or inner = -rhs, on a number line."""
     E = fx(inner)
-    s1 = sp.solve(sp.Eq(E, rhs), X)[0]
-    s2 = sp.solve(sp.Eq(E, -rhs), X)[0]
-    roots = sorted([s1, s2])
+    real = lambda eq: sorted((r for r in sp.solve(eq, X) if r.is_real), key=float)      # every real root, not only the first
+    r1, r2 = real(sp.Eq(E, rhs)), real(sp.Eq(E, -rhs))
+    roots = sorted(set(r1 + r2), key=float)
+    if not roots:
+        raise ValueError("no real solution")
     lo, hi = float(min(roots)) - 2, float(max(roots)) + 2
+
+    def side(rs):
+        return r"\text{no real } x" if not rs else r",\ ".join(f"x = {lt(r)}" for r in rs)
     steps = [S(rf"{lt(E)} = {rhs} \quad\text{{or}}\quad {lt(E)} = -{rhs}", "$|A| = k$ means $A = k$ or $A = -k$.", "$|A| = k$ کا مطلب $A = k$ یا $A = -k$۔"),
-             S(rf"x = {lt(s1)} \quad\text{{or}}\quad x = {lt(s2)}", "Solve each equation.", "ہر مساوات حل کریں۔",
-               f"Abs({_xr(sp.sstr(E))}).subs(xr, {ps(s1)}) == {rhs}", f"Abs({_xr(sp.sstr(E))}).subs(xr, {ps(s2)}) == {rhs}"),
-             S(r"\text{S.S} = \{" + ", ".join(lt(r) for r in roots) + r"\}", "Mark both solutions on the number line.", "دونوں حل عددی خط پر لگائیں۔",
+             S(rf"{side(r1)} \quad\text{{or}}\quad {side(r2)}", "Solve each equation.", "ہر مساوات حل کریں۔",
+               *[f"Abs({_xr(sp.sstr(E))}).subs(xr, {ps(r)}) == {rhs}" for r in roots]),
+             S(r"\text{S.S} = \{" + ", ".join(lt(r) for r in roots) + r"\}", "Mark the solutions on the number line.", "حل عددی خط پر لگائیں۔",
                draw=[{"t": "numberline", "from": float(sp.floor(lo)), "to": float(sp.ceiling(hi)), "y": 30,
                       "marks": [{"v": float(r), "s": _plain(r)} for r in roots]}])]
     return P(label, steps, "$x = " + r",\ x = ".join(lt(r) for r in roots) + "$", prompt=prompt)
