@@ -1,0 +1,30 @@
+{
+ "item": "c11-ex2.1-q3",
+ "label": "b",
+ "answer_ref": "$C(A) = 2\\sqrt{\\pi A}$, $A > 0$",
+ "math": [
+  "A = \\pi r^2 \\Rightarrow r = \\sqrt{\\frac{A}{\\pi}}",
+  "C = 2\\pi r = 2\\pi\\sqrt{\\frac{A}{\\pi}} = 2\\sqrt{\\frac{\\pi^2 A}{\\pi}} = 2\\sqrt{\\pi A}",
+  "C(A) = 2\\sqrt{\\pi A},\\quad A > 0"
+ ],
+ "why": [
+  {
+   "en": "Both circumference and area of a circle depend on the radius $r$, so we start with the standard area formula $A = \\pi r^2$. Isolating $r$ gives us a bridge to replace the radius with the area $A$, and we only keep the positive square root because a physical length like radius is always greater than zero.",
+   "ur": "دائرے کا محیط (circumference) اور رقبہ (area) دونوں رداس (radius) $r$ پر منحصر ہوتے ہیں، اس لیے ہم رقبے کے بنیادی فارمولے $A = \\pi r^2$ سے شروعات کرتے ہیں۔ یہاں سے $r$ کی قیمت نکالنے سے ہمیں رداس کو رقبے $A$ سے بدلنے کا راستہ مل جاتا ہے، اور ہم صرف مثبت جذر لیتے ہیں کیونکہ رداس ایک لمبائی ہے جو منفی نہیں ہو سکتی۔"
+  },
+  {
+   "en": "To express circumference $C$ directly in terms of area $A$, we substitute our new expression for $r$ into the circumference formula $C = 2\\pi r$. By bringing the outside $\\pi$ into the square root as $\\pi^2$ and canceling one $\\pi$, we get a clean, simplified formula without any $r$ left in it.",
+   "ur": "محیط $C$ کو براہِ راست رقبے $A$ کی شکل میں لکھنے کے لیے، ہم $r$ کی یہ قیمت محیط کے فارمولے $C = 2\\pi r$ میں درج کرتے ہیں۔ باہر والے $\\pi$ کو جذر کے اندر $\\pi^2$ بنا کر لے جانے اور ایک $\\pi$ کو کاٹنے سے ہمیں ایک سادہ فارمولا مل جاتا ہے جس میں اب $r$ شامل نہیں ہے۔"
+  },
+  {
+   "en": "Finally, we write the result in standard function notation $C(A)$ to clearly show that circumference is now a function of the input variable $A$. We also state the domain restriction $A > 0$ because a real circle must have a positive area.",
+   "ur": "آخر میں، ہم جواب کو فنکشن کی معیاری علامت $C(A)$ میں لکھتے ہیں جو یہ ظاہر کرتا ہے کہ اب محیط براہِ راست رقبے $A$ کا فنکشن ہے۔ ہم ساتھ میں $A > 0$ کی شرط بھی لکھتے ہیں کیونکہ کسی بھی حقیقی دائرے کا رقبہ ہمیشہ مثبت ہوتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $C(A) = 2\\sqrt{\\pi A}$ gives us a direct rule to calculate the circumference of any circle using only its area $A$, without needing to find the radius first. You can easily check this formula by plugging $A = \\pi r^2$ back into the square root, which simplifies back to the original circumference formula $2\\pi r$.",
+  "ur": "حتمی جواب $C(A) = 2\\sqrt{\\pi A}$ ہمیں ایک ایسا براہِ راست اصول دیتا ہے جس سے ہم کسی بھی دائرے کا محیط صرف اس کے رقبے $A$ کی مدد سے نکال سکتے ہیں، اور ہمیں پہلے رداس معلوم کرنے کی ضرورت نہیں پڑتی۔ آپ اس فارمولے کی درستی کو چیک کرنے کے لیے جذر کے اندر واپس $A = \\pi r^2$ درج کر سکتے ہیں، جو حل ہو کر دوبارہ محیط کا اصل فارمولا $2\\pi r$ بن جائے گا۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-05"
+}

@@ -23,6 +23,7 @@ for _p in (ROOT / "tools", ROOT / "data" / "src", ROOT / "data" / "src10", ROOT 
         sys.path.insert(0, str(_p))
 from build_dataset import verify  # noqa: E402
 from solvers.common import labels, part_markers  # noqa: E402
+from _helpers import P  # noqa: E402
 
 I = sp.I
 Z = sp.Symbol("z")
@@ -310,17 +311,153 @@ def _abs_quad(label, text):
     return fu.abs_equation(label, sp.sstr(e), k, f"$|{sp.latex(e)}| = {sp.latex(k)}$")
 
 
-TOPICS = (_inverse_pair, _square_eq, _sqrt, _polar, _nth_roots, _with_zeros, _factor_or_solve,
-          _maxmin, _sketch, _inverse_quad, _abs_quad)
+# ------------------------------------------------------------------------------------------ Unit 2: functions and graphs
+
+def _unit2():
+    if "m2" not in _U:
+        spec = importlib.util.spec_from_file_location("src11_unit02", ROOT / "data" / "src11" / "unit02.py")
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        _U["m2"] = mod
+    return _U["m2"]
+
+
+_STOP = r"(?=\s*(?:,|;|\.\s|\.$|$|\band\b|\bfind\b|\bwhere\b|\bfor\b|\bif\b|\bthen\b|\bdetermine\b|\bshow\b|\bgraphically\b|\bwith\b|\bintersect|\bmeets?\b|\bcut|\bon\b|\?|\b[fgh]\s*\(|\(\s*(?:i|ii|iii|iv|v|vi|vii|viii|a|b|c)\s*\)))"
+
+
+def _clean(text):
+    t = re.sub(r"\$", " ", text).replace("−", "-").replace("–", "-").replace("²", "^2").replace("³", "^3")
+    return re.sub(r"\\left|\\right|\\,|\\;|\\!", "", t)
+
+
+def _expr(seg):
+    """A rule in x read from a student's text (powers, fractions, square roots, |...|), or None. Nothing may be dropped."""
+    from sympy.parsing.sympy_parser import (convert_xor, implicit_multiplication_application, parse_expr,
+                                            standard_transformations)
+    s = seg.strip().rstrip(".?")
+    s = re.sub(r"\\[dt]?frac\s*\{([^{}]*)\}\s*\{([^{}]*)\}", r"((\1)/(\2))", s)
+    s = re.sub(r"\\sqrt\s*\{([^{}]*)\}", r"sqrt(\1)", s)
+    s = re.sub(r"√\s*\(", "sqrt(", s)
+    s = re.sub(r"√\s*([a-z]|\d+(?:\.\d+)?)", r"sqrt(\1)", s)
+    s = re.sub(r"\|([^|]+)\|", r"Abs(\1)", s)
+    s = s.replace("\\cdot", "*").replace("\\times", "*").replace("{", "(").replace("}", ")")
+    if re.search(r"\\|\[|\]", s) or set(re.findall(r"[A-Za-z]+", s)) - {"x", "sqrt", "Abs"}:
+        return None
+    try:
+        e = parse_expr(s, local_dict={"x": XS, "sqrt": sp.sqrt, "Abs": sp.Abs},
+                       transformations=standard_transformations + (implicit_multiplication_application, convert_xor))
+    except Exception:
+        return None
+    if not isinstance(e, sp.Expr) or e.free_symbols - {XS} or _numbers(seg) != _numbers(s):
+        return None
+    return e
+
+
+def _rules(text):
+    """{name: rule} for every 'f(x) = ...' / 'g(x) = ...' / 'y = ...' written in the text."""
+    t = _clean(text)
+    out = {}
+    for m in re.finditer(r"(?<![A-Za-z])(?:([fgh])\s*\(\s*x\s*\)|(y))\s*=\s*(.+?)" + _STOP, t):
+        e = _expr(m.group(3))
+        if e is None:
+            return None                                   # a rule we cannot read exactly: leave the question alone
+        name = m.group(1) or "y"
+        if name in out:
+            name = name + "2"
+        out[name] = e
+    return out
+
+
+def _tex(e, name="f"):
+    return f"${name}(x) = {sp.latex(e)}$" if name != "y" else f"$y = {sp.latex(e)}$"
+
+
+def _fvalue(label, text):
+    rules = _rules(text)
+    if not rules or len(rules) != 1:
+        return None
+    name, e = next(iter(rules.items()))
+    if name == "y":
+        return None
+    t = _clean(text)
+    calls = [m for m in re.finditer(rf"(?<![A-Za-z]){name}\s*\(\s*([^()]*(?:\([^()]*\)[^()]*)*)\)(?!\s*=)", t) if m.group(1).strip() != "x"]
+    args = list(dict.fromkeys(m.group(1).strip() for m in calls))
+    if not args or len(args) > 4 or any(re.search(r"\bh\b|\ba\b", a) for a in args):
+        return None
+    vals = [_expr(a) for a in args]
+    if any(v is None for v in vals):
+        return None
+    vals = [sp.nsimplify(v) if v.is_number else v for v in vals]
+    ps_ = [_unit2().fvalue("", e, v, "", name) for v in vals]
+    return P(label, [s for p in ps_ for s in p["steps"]], "; ".join(p["answer"] for p in ps_),
+             prompt=_tex(e, name) + ", find " + ", ".join(f"${name}\\left({sp.latex(v)}\\right)$" for v in vals))
+
+
+def _diffq(label, text):
+    if not re.search(r"f\s*\(\s*a\s*\+\s*h\s*\)|difference\s+quotient", _clean(text), re.I):
+        return None
+    rules = _rules(re.sub(r"f\s*\(\s*a\s*\+\s*h\s*\)", " ", _clean(text)))
+    if not rules or "f" not in rules or not rules["f"].is_polynomial(XS) or sp.degree(rules["f"], XS) < 1:
+        return None
+    return _unit2().diff_quotient(label, rules["f"], _tex(rules["f"]))
+
+
+def _domrange(label, text):
+    if not re.search(r"\bdomain\b", text, re.I) or re.search(r"inverse|sketch", text, re.I):
+        return None
+    rules = _rules(text)
+    if not rules or len(rules) != 1:
+        return None
+    name, e = next(iter(rules.items()))
+    return _unit2().dom_range(label, e, _tex(e, name), name if name != "y" else "f")
+
+
+def _meet(label, text):
+    if not re.search(r"intersect|meet", text, re.I) or re.search(r"\baxes\b|\baxis\b", text, re.I):
+        return None
+    rules = _rules(text)
+    if not rules or len(rules) != 2:
+        return None
+    (n1, f), (n2, g) = rules.items()
+    if not (f.is_polynomial(XS) and g.is_polynomial(XS)) or max(sp.degree(f, XS), sp.degree(g, XS)) > 2:
+        return None
+    d = sp.expand(f - g)
+    if not d.is_polynomial(XS) or sp.degree(d, XS) < 1 or not [r for r in sp.solve(d, XS) if r.is_real]:
+        return None
+    if any(not r.is_real for r in sp.solve(d, XS)):
+        return None
+    return _unit2().meet(label, sp.sstr(f), sp.sstr(g), _tex(f, n1.rstrip("2")) + ", " + _tex(g, n2.rstrip("2")))
+
+
+def _axes(label, text):
+    if not re.search(r"\baxes\b|\baxis\b|intercept", text, re.I):
+        return None
+    rules = _rules(text)
+    if not rules or len(rules) != 1:
+        return None
+    e = next(iter(rules.values()))
+    if not e.is_polynomial(XS) or sp.degree(e, XS) != 1:
+        return None
+    m, c = sp.Poly(e, XS).all_coeffs()
+    if c == 0:
+        return None
+    return _unit2().axes_meet(label, m, c, f"$y = {sp.latex(e)}$")
+
+
+TOPICS = ((_inverse_pair, 1), (_square_eq, 1), (_sqrt, 1), (_polar, 1), (_nth_roots, 1), (_with_zeros, 1), (_factor_or_solve, 1),
+          (_maxmin, 3), (_sketch, 3), (_inverse_quad, 3), (_abs_quad, 3),
+          (_diffq, 2), (_meet, 2), (_axes, 2), (_domrange, 2), (_fvalue, 2))
+UNIT_TITLES = {1: "Complex Numbers", 2: "Functions and Graphs", 3: "Theory of Quadratic Functions"}
 
 
 def _one(label, text):
-    for f in TOPICS:
+    for f, unit in TOPICS:
         try:
             p = f(label, text)
         except (sp.SympifyError, TypeError, ValueError, ZeroDivisionError, SyntaxError, AttributeError, KeyError, IndexError):
             p = None
         if p is not None:
+            p["_unit"] = unit
             return p
     return None
 
@@ -340,8 +477,10 @@ def _checked(parts):
 def solve(text):
     """-> a solved Class 11 item, or None."""
     text = text or ""
-    # "f(x)" is not part (x): split into parts only when the question really has a part (i)
-    pieces = part_markers(text) if re.search(r"\(\s*(?:i|a)\s*\)", text) else [text]
+    # "f(x)", "f(a)" are function values, not parts (x), (a): hide them while splitting into parts
+    hidden = re.sub(r"(?<=[A-Za-z])\(([a-z])\)", "⟨\\1⟩", text)
+    pieces = part_markers(hidden) if re.search(r"\(\s*(?:i|a)\s*\)", hidden) else [hidden]
+    pieces = [re.sub("⟨([a-z])⟩", r"(\1)", p) for p in pieces]
     stem = pieces[0]
     texts = [p for p in pieces[1:] if p.strip()] if len(pieces) > 1 else [text]
     names = labels(len(texts)) if len(texts) > 1 else [""]
@@ -354,9 +493,9 @@ def solve(text):
         parts.append(p)
     if parts and _checked(parts):
         q = text.strip()
+        unit = max(p.pop("_unit", 1) for p in parts)
         return {"id": "solved11-" + re.sub(r"[^a-z0-9]+", "-", q.lower())[:40].strip("-"), "kind": "solved", "number": "", "page": 0,
-                "question": q, "parts": parts, "verified": True, "source": "solver", "unit": 3 if any(p.get("_u3") for p in parts) else 1,
-                "unit_title": "Quadratic Functions" if any(p.get("_u3") for p in parts) else "Complex Numbers", "class": 11}
+                "question": q, "parts": parts, "verified": True, "source": "solver", "unit": unit, "unit_title": UNIT_TITLES[unit], "class": 11}
     import engine10
     res = engine10.solve(text)                            # complex arithmetic (solvers10) or algebra, equations, inequalities (solvers10x)
     if res:

@@ -1,0 +1,40 @@
+{
+ "item": "c11-ex2.1-q4",
+ "label": "v",
+ "answer_ref": "Domain $\\mathbb{R} \\setminus \\{3\\}$; range $\\mathbb{R} \\setminus \\{-1\\}$",
+ "math": [
+  "3 - x \\ne 0 \\Rightarrow x \\ne 3;\\quad \\text{Dom}(g) = \\mathbb{R} \\setminus \\{3\\}",
+  "y = \\frac{x + 2}{3 - x} \\Rightarrow 3y - xy = x + 2 \\Rightarrow x(1 + y) = 3y - 2",
+  "x = \\frac{3y - 2}{y + 1},\\quad y \\ne -1",
+  "y = -1:\\ \\frac{x + 2}{3 - x} = -1 \\Rightarrow x + 2 = x - 3 \\Rightarrow 2 = -3 \\ (\\text{impossible})",
+  "\\text{Range}(g) = \\mathbb{R} \\setminus \\{-1\\}"
+ ],
+ "why": [
+  {
+   "en": "To find the domain of a rational function, we must ensure we never divide by zero, as division by zero is undefined in mathematics. Setting the denominator $3 - x$ not equal to $0$ tells us that every real number is a valid input except $3$, giving us the complete domain.",
+   "ur": "کسی ناطق تفاعل (rational function) کی ڈومین معلوم کرنے کے لیے ہمیں یہ یقینی بنانا ہوتا ہے کہ مخرج (denominator) صفر نہ ہو، کیونکہ ریاضی میں صفر سے تقسیم غیر معین (undefined) ہے۔ مخرج $3 - x$ کو $0$ کے برابر نہ رکھنے سے ہمیں معلوم ہوتا ہے کہ $3$ کے علاوہ تمام حقیقی اعداد درست ان پٹ ہیں، جس سے ہمیں مکمل ڈومین مل جاتی ہے۔"
+  },
+  {
+   "en": "To find the range, we let $y = g(x)$ and rearrange the equation to express the input $x$ in terms of the output $y$. By cross-multiplying and grouping all the $x$ terms together, we prepare the equation to isolate $x$ on one side.",
+   "ur": "رینج معلوم کرنے کے لیے ہم $y = g(x)$ فرض کرتے ہیں اور مساوات کو اس طرح ترتیب دیتے ہیں کہ ان پٹ $x$ کو آؤٹ پٹ $y$ کی شکل میں لکھا جا سکے۔ چلیپائی ضرب (cross-multiplication) کرنے اور $x$ والی رقوم کو ایک طرف اکٹھا کرنے سے ہم مساوات کو $x$ کی قیمت نکالنے کے لیے تیار کرتے ہیں۔"
+  },
+  {
+   "en": "Now we isolate $x$ by dividing both sides by $y + 1$, which turns $x$ into a fraction involving $y$. Just like before, the new denominator $y + 1$ cannot be zero, which immediately reveals that the output $y$ cannot be $-1$.",
+   "ur": "اب ہم دونوں طرف $y + 1$ سے تقسیم کر کے $x$ کو الگ کر لیتے ہیں، جس سے $x$، $y$ کی شکل میں ایک کسر بن جاتا ہے۔ پہلے کی طرح، نیا مخرج $y + 1$ صفر نہیں ہو سکتا، جس سے فوراً واضح ہو جاتا ہے کہ آؤٹ پٹ $y$ کی قیمت $-1$ نہیں ہو سکتی۔"
+  },
+  {
+   "en": "We double-check if $y = -1$ is truly impossible by substituting it directly back into our original function equation. This leads to the false statement $2 = -3$, confirming with certainty that no real value of $x$ can ever produce $-1$ as an output.",
+   "ur": "ہم اس بات کی تصدیق کرنے کے لیے کہ کیا واقعی $y = -1$ ناممکن ہے، اسے براہِ راست اپنی اصل مساوات میں درج کرتے ہیں۔ اس سے ہمیں $2 = -3$ کا غلط بیان ملتا ہے، جو یقینی طور پر ثابت کرتا ہے کہ $x$ کی کوئی بھی حقیقی قیمت کبھی بھی $-1$ آؤٹ پٹ نہیں دے سکتی۔"
+  },
+  {
+   "en": "Since the Range is the set of all possible output values $y$ that the function can produce, we exclude $-1$ from the set of all real numbers $\\mathbb{R}$. This completes our solution by stating all valid outputs.",
+   "ur": "چونکہ رینج ان تمام ممکنہ آؤٹ پٹ قیمتوں $y$ کا سیٹ ہے جو تفاعل دے سکتا ہے، اس لیے ہم تمام حقیقی اعداد کے سیٹ $\\mathbb{R}$ میں سے $-1$ کو خارج کر دیتے ہیں۔ یہ تمام درست آؤٹ پٹس بیان کر کے ہمارے حل کو مکمل کرتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer means that you can plug any real number into the function $g(x)$ except $3$ (which would make the denominator $3 - 3 = 0$), and the function will produce every possible real number as a result except $-1$. You can check this by trying to solve $\\frac{x + 2}{3 - x} = -1$, which cancels out $x$ and leaves the impossible statement $2 = -3$.",
+  "ur": "حتمی جواب کا مطلب یہ ہے کہ آپ تفاعل $g(x)$ میں $3$ کے علاوہ کوئی بھی حقیقی عدد درج کر سکتے ہیں (کیونکہ $3$ درج کرنے سے مخرج $3 - 3 = 0$ ہو جائے گا)، اور نتیجے کے طور پر یہ تفاعل $-1$ کے سوا ہر ممکنہ حقیقی عدد دے گا۔ آپ اس کی پڑتال $\\frac{x + 2}{3 - x} = -1$ کو حل کر کے کر سکتے ہیں، جہاں $x$ کٹ جاتا ہے اور ہمارے پاس ایک ناممکن بیان $2 = -3$ بچتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-05"
+}

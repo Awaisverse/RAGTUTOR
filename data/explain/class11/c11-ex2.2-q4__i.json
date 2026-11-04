@@ -1,0 +1,45 @@
+{
+ "item": "c11-ex2.2-q4",
+ "label": "i",
+ "answer_ref": "$t = 5 + 5\\sqrt{3} \\approx 13.66$ months; after that the tree is taller than the building",
+ "math": [
+  "T(t) = H(t):\\ 50 + 10t + t^2 = 100 + 20t",
+  "t^2 - 10t - 50 = 0",
+  "t = \\frac{10 \\pm \\sqrt{100 + 200}}{2} = \\frac{10 \\pm 10\\sqrt{3}}{2} = 5 \\pm 5\\sqrt{3}",
+  "t = 5 + 5\\sqrt{3} \\approx 13.66 \\text{ months} \\quad (5 - 5\\sqrt{3} < 0 \\text{ rejected})",
+  "\\text{Draw } H(t) = 100 + 20t \\text{ and } T(t) = 50 + 10t + t^2",
+  "t > 5 + 5\\sqrt{3}:\\ T(t) - H(t) = t^2 - 10t - 50 > 0"
+ ],
+ "why": [
+  {
+   "en": "To find the moment when both the building and the tree have the exact same height, we must equate their height functions, $T(t)$ and $H(t)$. This gives us an equation in terms of $t$ that we can solve to find that specific time.",
+   "ur": "وہ وقت معلوم کرنے کے لیے جب عمارت اور درخت دونوں کی اونچائی بالکل برابر ہو، ہمیں ان کے اونچائی کے تفاعل (functions) یعنی $T(t)$ اور $H(t)$ کو آمنے سامنے رکھنا ہوگا۔ اس سے ہمیں $t$ کی شکل میں ایک مساوات مل جاتی ہے جسے حل کر کے ہم وہ خاص وقت نکال سکتے ہیں۔"
+  },
+  {
+   "en": "We rearrange the terms to put the equation into the standard quadratic form, $at^2 + bt + c = 0$. Doing this allows us to clearly identify the coefficients needed to solve for $t$.",
+   "ur": "ہم تمام رقوم کو ایک طرف لا کر مساوات کو معیاری دو درجی شکل (standard quadratic form) میں ترتیب دیتے ہیں تاکہ دوسری طرف $0$ رہ جائے۔ ایسا کرنے سے ہم آسانی سے فارمولا لگا کر $t$ کی قیمت معلوم کر سکیں گے۔"
+  },
+  {
+   "en": "Since this quadratic equation cannot be factored easily by inspection, we apply the quadratic formula. Simplifying the square root gives us the two exact mathematical solutions for $t$.",
+   "ur": "چونکہ اس دو درجی مساوات کی آسانی سے تجزی (factorization) نہیں ہو سکتی، اس لیے ہم یہاں دو درجی فارمولا (quadratic formula) استعمال کرتے ہیں۔ جذر کو مختصر کرنے سے ہمیں $t$ کی دو درست ریاضیاتی قیمتیں مل جاتی ہیں۔"
+  },
+  {
+   "en": "In real-life problems, time $t$ represents months passed and cannot be negative, so we discard the negative root $5 - 5\\sqrt{3}$. The remaining positive root gives us the actual time in months when their heights are equal.",
+   "ur": "حقیقی زندگی کے سوالات میں، وقت $t$ مہینوں کو ظاہر کرتا ہے اور یہ منفی نہیں ہو سکتا، اس لیے ہم منفی جواب $5 - 5\\sqrt{3}$ کو نظر انداز کر دیتے ہیں۔ باقی بچنے والی مثبت قیمت ہمیں مہینوں میں وہ اصل وقت بتاتی ہے جب دونوں کی اونچائی برابر ہوگی۔"
+  },
+  {
+   "en": "We plot the linear function $H(t)$ as a straight line and the quadratic function $T(t)$ as an upward-opening parabola to visualize their growth. The single intersection point for $t \\ge 0$ visually confirms the exact moment the tree catches up to the building.",
+   "ur": "ہم لکیری تفاعل $H(t)$ کو ایک سیدھی لکیر اور دو درجی تفاعل $T(t)$ کو اوپر کی طرف کھلنے والے پیرابولا (parabola) کے طور پر بناتے ہیں تاکہ ان کے بڑھنے کے عمل کو دیکھ سکیں۔ $t \\ge 0$ کے لیے ان کا ایک نقطہ پر آپس میں کٹنا اس بات کی تصدیق کرتا ہے کہ اس وقت درخت عمارت کے برابر پہنچ جاتا ہے۔"
+  },
+  {
+   "en": "Because the quadratic term $t^2$ grows faster than the linear term $20t$, the parabola rises above the straight line after their intersection point. Mathematically, $T(t) - H(t) > 0$ for $t > 5 + 5\\sqrt{3}$ proves that the tree stays taller than the building from this moment onward.",
+   "ur": "چونکہ دو درجی رقم $t^2$ لکیری رقم $20t$ کے مقابلے میں تیزی سے بڑھتی ہے، اس لیے نقطہ تقاطع کے بعد پیرابولا سیدھی لکیر سے اوپر نکل جاتا ہے۔ ریاضیاتی طور پر، $t > 5 + 5\\sqrt{3}$ کے لیے $T(t) - H(t) > 0$ یہ ثابت کرتا ہے کہ اس لمحے کے بعد درخت عمارت سے زیادہ اونچا ہو جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer means that at $t = 5 + 5\\sqrt{3}$ (approximately $13.66$) months, the tree and the building reach the exact same height, and immediately after this time, the tree overtakes the building and remains taller. You can check this by substituting $t \\approx 13.66$ into both $H(t) = 100 + 20t$ and $T(t) = 50 + 10t + t^2$ to see that both give the same height.",
+  "ur": "حتمی جواب کا مطلب یہ ہے کہ $t = 5 + 5\\sqrt{3}$ (تقریباً $13.66$) مہینوں میں درخت اور عمارت بالکل ایک جتنی اونچائی پر پہنچ جاتے ہیں، اور اس وقت کے فوراً بعد درخت عمارت سے آگے نکل جاتا ہے اور زیادہ اونچا رہتا ہے۔ آپ اس کی پڑتال $t \\approx 13.66$ کو دونوں مساواتوں $H(t) = 100 + 20t$ اور $T(t) = 50 + 10t + t^2$ میں درج کر کے کر سکتے ہیں، جس سے دونوں کی اونچائی برابر آئے گی۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-05"
+}

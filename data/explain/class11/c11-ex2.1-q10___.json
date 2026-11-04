@@ -1,0 +1,45 @@
+{
+ "item": "c11-ex2.1-q10",
+ "label": "",
+ "answer_ref": "surjective but not injective",
+ "math": [
+  "g(x) = x^3 - 3x = x(x^2 - 3) = x\\left(x - \\sqrt{3}\\right)\\left(x + \\sqrt{3}\\right)",
+  "g(0) = g\\left(\\sqrt{3}\\right) = g\\left(-\\sqrt{3}\\right) = 0",
+  "\\text{So } g \\text{ is not injective (not one-to-one)}",
+  "\\text{Take any } y \\in \\mathbb{R}:\\ x^3 - 3x - y = 0 \\text{ is a cubic with real coefficients}",
+  "x \\to -\\infty \\Rightarrow g(x) \\to -\\infty,\\quad x \\to \\infty \\Rightarrow g(x) \\to \\infty",
+  "\\text{So } g \\text{ is surjective (onto } \\mathbb{R}\\text{), but not injective}"
+ ],
+ "why": [
+  {
+   "en": "To check if the function is injective (one-to-one), a quick way is to find its roots by factoring $x^3 - 3x$ using the difference of squares. This reveals the exact $x$-values where the graph crosses the x-axis.",
+   "ur": "یہ چیک کرنے کے لیے کہ آیا فنکشن injective (ون ٹو ون) ہے یا نہیں، ایک آسان طریقہ یہ ہے کہ $x^3 - 3x$ کی تجزی (factorization) کر کے اس کے روٹس معلوم کیے جائیں۔ اس سے ہمیں وہ تمام $x$ کی قیمتیں مل جاتی ہیں جہاں فنکشن صفر ہوتا ہے۔"
+  },
+  {
+   "en": "We substitute the factors' roots into the function to see their outputs. This shows us that three distinct real numbers, $0$, $\\sqrt{3}$, and $-\\sqrt{3}$, all map to the exact same output of $0$.",
+   "ur": "ہم ان حاصل شدہ قیمتوں کو فنکشن میں درج کر کے ان کا نتیجہ دیکھتے ہیں۔ اس سے ہمیں معلوم ہوتا ہے کہ تین مختلف حقیقی اعداد $0$، $\\sqrt{3}$، اور $-\\sqrt{3}$ بالکل ایک ہی جواب یعنی $0$ دیتے ہیں۔"
+  },
+  {
+   "en": "By the definition of an injective function, every distinct input must give a distinct output. Since we found multiple inputs giving the same output $0$, we can immediately conclude that $g(x)$ is not injective.",
+   "ur": "ایک injective فنکشن کی تعریف کے مطابق، ہر مختلف ان پٹ کا آؤٹ پٹ بھی مختلف ہونا چاہیے۔ چونکہ یہاں ایک سے زیادہ ان پٹ ایک ہی جواب $0$ دے رہے ہیں، اس لیے ہم نتیجہ اخذ کرتے ہیں کہ $g(x)$ injective نہیں ہے۔"
+  },
+  {
+   "en": "Now, to test if the function is surjective (onto), we set $g(x) = y$ for any real number $y$ in the co-domain. Rearranging this gives a cubic equation, and we need to see if it always has at least one real solution $x$ for every $y$.",
+   "ur": "اب، یہ جانچنے کے لیے کہ آیا فنکشن surjective (آن ٹو) ہے، ہم شریک ڈومین کے کسی بھی حقیقی عدد $y$ کے لیے $g(x) = y$ رکھتے ہیں۔ اسے ترتیب دینے سے ایک درجہ سوم کی مساوات (cubic equation) بنتی ہے، اور ہمیں دیکھنا ہے کہ کیا ہر $y$ کے لیے کم از کم ایک حقیقی حل $x$ موجود ہے۔"
+  },
+  {
+   "en": "We look at the end behavior of this odd-degree polynomial as $x$ becomes very large positively and negatively. Because $g(x)$ is continuous and stretches from $-\\infty$ to $\\infty$, its range covers the entire set of real numbers $\\mathbb{R}$, guaranteeing at least one real root $x$ for any $y$.",
+   "ur": "ہم اس طاق درجہ (odd-degree) والے کثیر رقمی فنکشن کے رویے کو دیکھتے ہیں جب $x$ مثبت اور منفی لامحدودیت کی طرف جاتا ہے۔ چونکہ $g(x)$ ایک مسلسل (continuous) فنکشن ہے جو $-\\infty$ سے $\\infty$ تک پھیلا ہوا ہے، اس لیے اس کی رینج تمام حقیقی اعداد $\\mathbb{R}$ کو کور کرتی ہے، جو ہر $y$ کے لیے کم از کم ایک حقیقی روٹ $x$ کی ضمانت دیتا ہے۔"
+  },
+  {
+   "en": "Since the range of $g$ is equal to its co-domain $\\mathbb{R}$, the definition of a surjective function is satisfied. Combining both parts of our investigation gives the complete classification of the function.",
+   "ur": "چونکہ فنکشن $g$ کی رینج اس کے شریک ڈومین $\\mathbb{R}$ کے برابر ہے، اس لیے surjective فنکشن کی تعریف پوری ہوتی ہے۔ اپنی تحقیق کے دونوں حصوں کو ملا کر ہمیں فنکشن کی مکمل درجہ بندی مل جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer means that the function $g(x) = x^3 - 3x$ covers every possible real number as an output (surjective), so its range is all of $\\mathbb{R}$, but it repeats some outputs for different inputs (not injective). You can visualize and check this with the horizontal line test: any horizontal line $y = c$ will cross the curve at least once (proving it is surjective), and some lines, like $y = 0$, cross it three times at $x = -\\sqrt{3}, 0, \\sqrt{3}$ (proving it is not injective).",
+  "ur": "حتمی جواب کا مطلب یہ ہے کہ فنکشن $g(x) = x^3 - 3x$ آؤٹ پٹ کے طور پر ہر ممکنہ حقیقی عدد کو حاصل کرتا ہے (یعنی surjective ہے)، لیکن یہ مختلف ان پٹ کے لیے کچھ آؤٹ پٹ کو دہراتا ہے (یعنی injective نہیں ہے)۔ آپ اسے افقی لائن ٹیسٹ (horizontal line test) کے ذریعے چیک کر سکتے ہیں: کوئی بھی افقی لائن گراف کو کم از کم ایک بار ضرور قطع کرے گی (جو surjective ہونے کا ثبوت ہے)، جبکہ کچھ لائنیں جیسے $y = 0$ اسے تین مختلف مقامات $x = -\\sqrt{3}, 0, \\sqrt{3}$ پر قطع کرتی ہیں (جو ثابت کرتا ہے کہ یہ injective نہیں ہے)۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-05"
+}

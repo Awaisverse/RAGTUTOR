@@ -1,0 +1,35 @@
+{
+ "item": "c11-ex2.1-q8",
+ "label": "i",
+ "answer_ref": "Domain $\\mathbb{R} \\setminus \\{-1\\}$; range $\\mathbb{R} \\setminus \\{2\\}$",
+ "math": [
+  "x + 1 \\ne 0 \\Rightarrow \\text{Dom}(f) = \\mathbb{R} \\setminus \\{-1\\}",
+  "y = \\frac{2x - 3}{x + 1} \\Rightarrow xy + y = 2x - 3 \\Rightarrow x(y - 2) = -(y + 3)",
+  "x = \\frac{y + 3}{2 - y},\\quad y \\ne 2",
+  "y = 2:\\ 2x - 3 = 2x + 2 \\Rightarrow -3 = 2 \\ (\\text{impossible});\\quad \\text{Range}(f) = \\mathbb{R} \\setminus \\{2\\}"
+ ],
+ "why": [
+  {
+   "en": "To find the domain of a rational function, we must ensure we never divide by zero, because division by zero is undefined in real numbers. This tells us that every real number is a valid input for our function except $-1$.",
+   "ur": "کسی بھی ناطق تفاعل (rational function) کی ڈومین معلوم کرنے کے لیے ہم اس بات کو یقینی بناتے ہیں کہ بٹے کے نیچے والی رقم صفر نہ ہو، کیونکہ صفر سے تقسیم غیر معین (undefined) ہوتی ہے۔ اس سے ہمیں معلوم ہوتا ہے کہ $-1$ کے علاوہ تمام حقیقی اعداد اس تفاعل میں بطور اِن پُٹ دیے جا سکتے ہیں۔"
+  },
+  {
+   "en": "To find the range, we set $y = f(x)$ and rearrange the equation to bring all $x$ terms to one side. This prepares the equation so we can express the input $x$ in terms of the output $y$, which will clearly show what values $y$ is allowed to take.",
+   "ur": "رینج معلوم کرنے کے لیے ہم $y = f(x)$ رکھتے ہیں اور مساوات کو اس طرح ترتیب دیتے ہیں کہ $x$ والی تمام رقوم ایک طرف آ جائیں۔ اس سے ہم مساوات کو $x$ کی قیمت $y$ کی شکل میں نکالنے کے لیے تیار کرتے ہیں، جس سے واضح ہو جائے گا کہ $y$ کون سی قیمتیں لے سکتا ہے۔"
+  },
+  {
+   "en": "We isolate $x$ by dividing both sides by $y - 2$ (and simplifying the signs), creating a new fraction with $2 - y$ in the denominator. Since a denominator cannot be zero, this step reveals that $x$ is a valid real number for every output $y$ except $y = 2$.",
+   "ur": "ہم دونوں اطراف کو $y - 2$ سے تقسیم کر کے (اور علامتیں سادہ کر کے) $x$ کو الگ کرتے ہیں، جس سے بٹے کے نیچے $2 - y$ آ جاتا ہے۔ چونکہ مخرج صفر نہیں ہو سکتا، اس لیے یہ قدم بتاتا ہے کہ $y = 2$ کے علاوہ ہر آؤٹ پُٹ $y$ کے لیے $x$ ایک حقیقی عدد ہے۔"
+  },
+  {
+   "en": "We double-check the excluded value $y = 2$ by putting it directly into the original equation, which leads to a false statement ($-3 = 2$). This confirms that no real input $x$ can ever produce $2$ as an output, giving us the complete range.",
+   "ur": "ہم خارج کردہ قیمت $y = 2$ کو اصل مساوات میں درج کر کے تصدیق کرتے ہیں، جس سے ایک ناممکن نتیجہ ($-3 = 2$) نکلتا ہے۔ اس سے ثابت ہوتا ہے کہ کوئی بھی حقیقی عدد $x$ آؤٹ پُٹ کے طور پر $2$ نہیں دے سکتا، اور یوں ہمیں مکمل رینج مل جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer means that our function accepts any real number except $-1$ as an input, and it can produce any real number except $2$ as an output. You can verify this by noticing that plugging in $x = -1$ gives division by zero in $f(x) = \\frac{2x - 3}{x + 1}$, and setting the fraction equal to $2$ gives no solution.",
+  "ur": "حتمی جواب کا مطلب یہ ہے کہ ہمارا تفاعل $-1$ کے علاوہ ہر حقیقی عدد کو بطور اِن پُٹ قبول کرتا ہے، اور آؤٹ پُٹ کے طور پر $2$ کے علاوہ ہر حقیقی عدد دے سکتا ہے۔ آپ اس کی پڑتال ایسے کر سکتے ہیں کہ $f(x) = \\frac{2x - 3}{x + 1}$ میں $x = -1$ درج کرنے سے صفر سے تقسیم آتی ہے، اور کسر کو $2$ کے برابر رکھنے سے کوئی حل نہیں ملتا۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-05"
+}

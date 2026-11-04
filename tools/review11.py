@@ -23,7 +23,7 @@ REPORT = ROOT / "data" / "class11" / "review.json"
 _lock = threading.Lock()
 
 
-SOURCES = {"1": ("questions_kanwal.json", "kanwal"), "3": ("questions_u03.json", "u03")}   # per unit: question index, page folder
+SOURCES = {"1": ("questions_kanwal.json", "kanwal"), "2": ("questions_k02.json", "k02"), "3": ("questions_u03.json", "u03")}   # per unit: question index, page folder
 
 
 def pages_for(it):
@@ -32,6 +32,10 @@ def pages_for(it):
     q = json.loads((REF / qfile).read_text(encoding="utf-8"))
     pre = f"{it['exercise']}|{it['number']}|"
     pages = sorted({p for k, v in q.items() if k.startswith(pre) for p in v["pages"]})
+    if pages:                                          # a solution often runs on to the next page
+        nxt = f"p{int(pages[-1][1:]) + 1:02d}"
+        if (REF / "pages" / folder / f"{nxt}.png").exists():
+            pages.append(nxt)
     return [REF / "pages" / folder / f"{p}.png" for p in pages][:5]
 
 

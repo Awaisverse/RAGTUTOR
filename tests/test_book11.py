@@ -40,14 +40,14 @@ print("build:", last[-1] if last else "?")
 
 # 2. structure -----------------------------------------------------------------------------------------------------------
 items = [it for f in sorted((ROOT / "data" / "book11").glob("unit*.json")) for it in json.loads(f.read_text(encoding="utf-8"))["items"]]
-N = 71                                                # Unit 1 (60) + Unit 3 (11)
+N = 86                                                # Unit 1 (60) + Unit 2 (15) + Unit 3 (11)
 check(len(items) == N, f"{N} questions expected, found {len(items)}")
 ids = [it["id"] for it in items]
 check(len(ids) == len(set(ids)), "duplicate ids")
 per_ex = {}
 for it in items:
     per_ex[it["exercise"]] = per_ex.get(it["exercise"], 0) + 1
-    check(re.match(r"c11-ex[13]\.", it["id"]), f"id {it['id']}")
+    check(re.match(r"c11-ex[123]\.", it["id"]), f"id {it['id']}")
     for p in it["parts"]:
         check(p["answer"], f"{it['id']} ({p['label']}): no answer")
         check(p["steps"], f"{it['id']} ({p['label']}): no steps")
@@ -57,7 +57,9 @@ for it in items:
                 check(t.count("{") == t.count("}"), f"{it['id']} ({p['label']}) step {k}: braces")
             for d in s.get("draw", []) or []:
                 check(d.get("t") in ("line", "poly", "circle", "arc", "dot", "text", "right", "numberline", "subdiv"), f"{it['id']}: drawing {d.get('t')}")
-check(per_ex == {"1.1": 9, "1.2": 12, "1.3": 8, "1.4": 9, "1.5": 22, "3.1": 4, "3.2": 7}, f"questions per exercise {per_ex}")
+for it in items:                                     # Urdu in Urdu script and English in English: no Hindi (Devanagari) letters anywhere
+    check(not re.search("[ऀ-ॿ]", json.dumps(it, ensure_ascii=False)), f"{it['id']}: Devanagari letters in the text")
+check(per_ex == {"1.1": 9, "1.2": 12, "1.3": 8, "1.4": 9, "1.5": 22, "2.1": 10, "2.2": 5, "3.1": 4, "3.2": 7}, f"questions per exercise {per_ex}")
 print("structure:", len(items), "items,", sum(len(it["parts"]) for it in items), "parts,", per_ex)
 
 # 3. server --------------------------------------------------------------------------------------------------------------
@@ -163,6 +165,65 @@ for _ in range(15):                                   # Unit 3: |quadratic| = k
     e = sp.expand(X_ ** 2 - m * m)
     cases.append(("absq", f"Solve |{sp.sstr(e).replace('**', '^')}| = {k}", (e, k)))
 
+def q_(e):
+    return sp.sstr(sp.expand(e)).replace("**", "^").replace("*", "")
+
+
+for _ in range(15):                                   # Unit 2: a function value
+    f = rnd.choice([1, 2, -1, 3]) * X_ ** 2 + rnd.randint(-9, 9) * X_ + rnd.randint(-9, 9)
+    k = rnd.randint(-6, 6)
+    cases.append(("fval", f"Given f(x) = {q_(f)}, find f({k})", (f, k)))
+for _ in range(10):                                   # Unit 2: difference quotient of a polynomial
+    f = rnd.choice([0, 1, -1]) * X_ ** 3 + rnd.randint(-4, 4) * X_ ** 2 + rnd.randint(1, 9) * X_ + rnd.randint(-9, 9)
+    cases.append(("diffq", f"Find (f(a+h) - f(a))/h and simplify where f(x) = {q_(f)}", f))
+for _ in range(18):                                   # Unit 2: domain and range (root, absolute value, rational)
+    m, c, p, k = rnd.choice([1, 2, 3, -1, -2]), rnd.randint(-6, 6), rnd.choice([1, 2, -1, -3]), rnd.randint(-5, 5)
+    form = rnd.choice(["sqrt", "abs", "rat"])
+    if form == "sqrt":
+        e, txt = p * sp.sqrt(m * X_ + c) + k, f"{p}*sqrt({q_(m * X_ + c)}) + {k}".replace("+ -", "- ")
+    elif form == "abs":
+        e, txt = p * sp.Abs(m * X_ + c) + k, f"{p}|{q_(m * X_ + c)}| + {k}".replace("+ -", "- ")
+    else:
+        a, b, cc, d = rnd.randint(1, 5), rnd.randint(-6, 6), rnd.randint(1, 4), rnd.randint(-6, 6)
+        if a * d - b * cc == 0:
+            continue
+        e, txt = (a * X_ + b) / (cc * X_ + d), f"({q_(a * X_ + b)})/({q_(cc * X_ + d)})"
+    cases.append(("domr", f"Find the domain and range of f(x) = {txt}", e))
+for _ in range(12):                                   # Unit 2: intersection of a line and a parabola (whole-number meeting points)
+    r1, r2 = rnd.randint(-4, 4), rnd.randint(-4, 4)
+    mm, cc = rnd.randint(-3, 3), rnd.randint(-5, 5)
+    line = mm * X_ + cc
+    par = sp.expand(line + (X_ - r1) * (X_ - r2))
+    cases.append(("meet", f"Find the points of intersection of f(x) = {q_(line)} and g(x) = {q_(par)}", (line, par)))
+for _ in range(8):                                    # Unit 2: where a line meets the axes
+    m, c = rnd.choice([1, 2, 3, -1, -2, -5]), rnd.choice([-8, -6, -3, 2, 4, 9])
+    cases.append(("axes", f"Find the points where y = {q_(m * X_ + c)} meets the coordinate axes", (m, c)))
+
+
+def tex_py(s):
+    """A LaTeX answer in a, h, x (powers, fractions, roots) -> sympy."""
+    from sympy.parsing.sympy_parser import convert_xor, implicit_multiplication_application, parse_expr, standard_transformations
+    s = s.replace("\\left", "").replace("\\right", "").strip("$ ")
+    for _ in range(3):
+        s = re.sub(r"\\frac\{([^{}]*)\}\{([^{}]*)\}", r"((\1)/(\2))", s)
+        s = re.sub(r"\\sqrt\{([^{}]*)\}", r"sqrt(\1)", s)
+    s = s.replace("{", "(").replace("}", ")")
+    return parse_expr(s, local_dict={"a": sp.Symbol("a"), "h": sp.Symbol("h"), "x": X_},
+                      transformations=standard_transformations + (implicit_multiplication_application, convert_xor))
+
+
+def set_tex(st):
+    """An interval or R minus a point, written as the engine writes it (the oracle's own formatting)."""
+    if st == sp.S.Reals:
+        return r"\mathbb{R}"
+    if isinstance(st, sp.Union) or isinstance(st, sp.Complement):
+        hole = sp.S.Reals - st
+        return rf"\mathbb{{R}} \setminus \{{{sp.latex(list(hole)[0])}\}}"
+    lo = r"(-\infty" if st.inf == -sp.oo else ("(" if st.left_open else "[") + sp.latex(st.inf)
+    hi = r"\infty)" if st.sup == sp.oo else sp.latex(st.sup) + (")" if st.right_open else "]")
+    return rf"\left{lo[0]}{lo[1:]}, {hi[:-1]}\right{hi[-1]}"
+
+
 for kind, q, data in cases:
     res = engine11.solve(q)
     tested += 1
@@ -219,6 +280,29 @@ for kind, q, data in cases:
             want = sorted({float(r) for r in sp.solve(e - k, X_) + sp.solve(e + k, X_) if r.is_real})   # |e| = k: e = k or e = -k
             got = sorted(float(cplx(v)) for v in re.findall(r"x = ([^,$]+?)(?:,\\|\$)", ans))
             ok = len(want) == len(got) and all(abs(u - v) < 1e-9 for u, v in zip(want, got))
+        elif kind == "fval":
+            f, k = data
+            ok = sp.simplify(tex_py(ans.split("=", 1)[1]) - f.subs(X_, k)) == 0
+        elif kind == "diffq":
+            a_, h_ = sp.Symbol("a"), sp.Symbol("h")
+            want = sp.cancel((data.subs(X_, a_ + h_) - data.subs(X_, a_)) / h_)
+            ok = sp.expand(tex_py(ans) - want) == 0
+        elif kind == "domr":
+            from sympy.calculus.util import continuous_domain, function_range
+            xr = sp.Symbol("xr", real=True)
+            e_ = data.subs(X_, xr).replace(sp.Abs, lambda u: sp.sqrt(u ** 2))   # |u| = sqrt(u^2): function_range cannot work with Abs
+            dom = continuous_domain(e_, xr, sp.S.Reals)
+            rng = function_range(e_, xr, dom)
+            ok = ans.replace(" ", "") == f"Domain ${set_tex(dom)}$; range ${set_tex(rng)}$".replace(" ", "")
+        elif kind == "meet":
+            line, par = data
+            pts = [(cplx(a), cplx(b)) for a, b in re.findall(r"\\left\(([^,]+), ([^)]+?)\\right\)", ans)]
+            want = sorted(set(sp.solve(line - par, X_)))
+            ok = len(pts) == len(want) and all(line.subs(X_, a) == b and par.subs(X_, a) == b for a, b in pts) and sorted(a for a, _ in pts) == want
+        elif kind == "axes":
+            m, c = data
+            pts = [(cplx(a), cplx(b)) for a, b in re.findall(r"\\left\(([^,]+), ([^)]+?)\\right\)", ans)]
+            ok = pts == [(sp.Rational(-c, m), 0), (0, c)]
         elif kind == "inv":
             a, b = data
             nums = re.findall(r"-?\s*\\frac\{(\d+)\}\{(\d+)\}|(-?\d+)", ans)

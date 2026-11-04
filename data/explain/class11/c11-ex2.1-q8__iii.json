@@ -1,0 +1,35 @@
+{
+ "item": "c11-ex2.1-q8",
+ "label": "iii",
+ "answer_ref": "one-to-one",
+ "math": [
+  "f(x_1) = f(x_2) \\Rightarrow \\frac{2x_1 - 3}{x_1 + 1} = \\frac{2x_2 - 3}{x_2 + 1}",
+  "(2x_1 - 3)(x_2 + 1) = (2x_2 - 3)(x_1 + 1)",
+  "2x_1x_2 + 2x_1 - 3x_2 - 3 = 2x_1x_2 + 2x_2 - 3x_1 - 3 \\Rightarrow 5x_1 = 5x_2",
+  "x_1 = x_2 \\Rightarrow f \\text{ is one-to-one}"
+ ],
+ "why": [
+  {
+   "en": "By the algebraic definition of a one-to-one function, we begin by assuming that two inputs, $x_1$ and $x_2$, produce the exact same output, $f(x_1) = f(x_2)$. Substituting our function rule sets up the equation we need to simplify to see if $x_1$ and $x_2$ must be equal.",
+   "ur": "ون ٹو ون (one-to-one) فنکشن کی تعریف کے مطابق، ہم فرض کرتے ہیں کہ دو ان پٹس $x_1$ اور $x_2$ کا آؤٹ پٹ برابر ہے، یعنی $f(x_1) = f(x_2)$۔ فنکشن کی قیمتیں درج کرنے سے ہمیں وہ مساوات مل جاتی ہے جسے حل کر کے ہم دیکھیں گے کہ آیا $x_1$ اور $x_2$ برابر ہیں یا نہیں۔"
+  },
+  {
+   "en": "To eliminate the fractions and make the equation easier to work with, we cross-multiply the numerators and denominators. We are allowed to do this safely because neither $x_1$ nor $x_2$ can be $-1$, meaning the denominators are not zero.",
+   "ur": "بٹے (fractions) کو ختم کرنے اور مساوات کو آسان بنانے کے لیے ہم چلیپائی ضرب (cross-multiply) کرتے ہیں۔ ہم ایسا باآسانی کر سکتے ہیں کیونکہ $x_1$ اور $x_2$ دونوں $-1$ نہیں ہو سکتے، جس کا مطلب ہے کہ مخرج (denominators) صفر نہیں ہیں۔"
+  },
+  {
+   "en": "Next, we expand the brackets using basic multiplication so we can see all the individual terms clearly. Notice how the complicated $2x_1x_2$ terms and the $-3$ on both sides cancel each other out, leaving a very simple relation between $x_1$ and $x_2$.",
+   "ur": "اب ہم بریکٹوں کو ضرب دے کر کھولتے ہیں تاکہ تمام رقوم واضح ہو جائیں۔ غور کریں کہ دونوں طرف موجود $2x_1x_2$ اور $-3$ آپس میں کٹ جاتے ہیں، جس سے $x_1$ اور $x_2$ کے درمیان ایک بہت ہی سادہ تعلق باقی رہ جاتا ہے۔"
+  },
+  {
+   "en": "Finally, dividing both sides by $5$ isolates the inputs and shows that $x_1 = x_2$. Since starting with equal outputs forced the inputs to be identical, the definition of a one-to-one function is completely satisfied.",
+   "ur": "آخر میں، دونوں طرف $5$ سے تقسیم کرنے پر ہمیں $x_1 = x_2$ حاصل ہوتا ہے۔ چونکہ برابر آؤٹ پٹ فرض کرنے سے ان پٹس بھی لازمی طور پر برابر ثابت ہو گئے ہیں، اس لیے ون ٹو ون فنکشن کی شرط پوری ہو جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This proof confirms that $f(x) = \\frac{2x - 3}{x + 1}$ is a one-to-one (injective) function, meaning no two different inputs from the domain will ever give the same output. Geometrically, if you draw the graph of this function, any horizontal line will cut it at most once.",
+  "ur": "یہ ثبوت تصدیق کرتا ہے کہ $f(x) = \\frac{2x - 3}{x + 1}$ ایک ون ٹو ون (injective) فنکشن ہے، جس کا مطلب ہے کہ ڈومین کے کوئی بھی دو مختلف ان پٹس کبھی بھی ایک جیسا آؤٹ پٹ نہیں دیں گے۔ جیومیٹری کے لحاظ سے، اگر آپ اس فنکشن کا گراف بنائیں تو کوئی بھی افقی لکیر (horizontal line) اسے زیادہ سے زیادہ ایک ہی نقطے پر قطع کرے گی۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-05"
+}

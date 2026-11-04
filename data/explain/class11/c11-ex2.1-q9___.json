@@ -1,0 +1,45 @@
+{
+ "item": "c11-ex2.1-q9",
+ "label": "",
+ "answer_ref": "One-to-one; range $(0, 1)$, so $f$ is a bijection from $\\mathbb{R}^+$ onto $(0, 1)$ (it is not onto the whole of $\\mathbb{R}^+$)",
+ "math": [
+  "\\text{One-to-one: } e^{-x_1} = e^{-x_2} \\Rightarrow \\ln e^{-x_1} = \\ln e^{-x_2} \\Rightarrow -x_1 = -x_2 \\Rightarrow x_1 = x_2",
+  "\\text{So } f \\text{ is one-to-one}",
+  "\\text{Onto: } y = e^{-x} \\Rightarrow \\ln y = -x \\Rightarrow x = -\\ln y = \\ln\\frac{1}{y}",
+  "x > 0 \\Rightarrow -x < 0 \\Rightarrow 0 < e^{-x} < e^0 = 1",
+  "0 < y < 1 \\Rightarrow x = \\ln\\frac{1}{y} > 0 \\text{ and } f(x) = y;\\qquad y \\ge 1 \\Rightarrow x = -\\ln y \\le 0 \\notin \\mathbb{R}^+",
+  "\\text{Range}(f) = (0, 1):\\quad f: \\mathbb{R}^+ \\to (0, 1) \\text{ is one-to-one and onto (bijective)}"
+ ],
+ "why": [
+  {
+   "en": "To prove a function is bijective, we first test the definition of a one-to-one (injective) function by assuming two inputs $x_1$ and $x_2$ produce the same output. Applying the natural logarithm undoes the exponential function, showing that the inputs themselves must be identical.",
+   "ur": "فنکشن کو بائیجیکٹو (bijective) ثابت کرنے کے لیے ہم سب سے پہلے ون ٹو ون (injective) کی تعریف استعمال کرتے ہوئے فرض کرتے ہیں کہ دو ان پٹس $x_1$ اور $x_2$ کا آؤٹ پٹ ایک جیسا ہے۔ دونوں طرف قدرتی لوگارتھم ($\\ln$) لینے سے ایکسپونینشل فنکشن ختم ہو جاتا ہے، جس سے ثابت ہوتا ہے کہ دونوں ان پٹس آپس میں برابر ہیں۔"
+  },
+  {
+   "en": "Since equal outputs only come from equal inputs, we have satisfied the condition for injectivity. This completes the first half of our check for a bijective function.",
+   "ur": "چونکہ برابر آؤٹ پٹس صرف برابر ان پٹس سے ہی حاصل ہوتے ہیں، اس لیے ون ٹو ون ہونے کی شرط پوری ہو گئی ہے۔ اس طرح بائیجیکٹو فنکشن ثابت کرنے کا پہلا مرحلہ مکمل ہوتا ہے۔"
+  },
+  {
+   "en": "Next, we test the definition of an onto (surjective) function by setting $y = f(x)$ and solving for $x$ in terms of $y$. This gives us the rule to find the required input $x$ for any given output $y$.",
+   "ur": "اب ہم آن ٹو (surjective) فنکشن کی تعریف کو جانچنے کے لیے $y = f(x)$ رکھتے ہیں اور اسے $x$ کے لیے حل کرتے ہیں۔ اس سے ہمیں کسی بھی دیے گئے آؤٹ پٹ $y$ کے لیے مطلوبہ ان پٹ $x$ معلوم کرنے کا فارمولا مل جاتا ہے۔"
+  },
+  {
+   "en": "We must check what outputs are actually possible given the domain $\\mathbb{R}^+$, where $x > 0$. By applying the properties of inequalities and exponents, we discover that the outputs $e^{-x}$ are strictly trapped between $0$ and $1$.",
+   "ur": "ہمیں یہ دیکھنا ہے کہ ڈومین $\\mathbb{R}^+$ (جہاں $x > 0$ ہے) کے مطابق کون سے آؤٹ پٹس ممکن ہیں۔ نابرابری (inequalities) اور قوت نما کے اصول لاگو کرنے سے ہمیں پتہ چلتا ہے کہ تمام آؤٹ پٹس $e^{-x}$ صرف $0$ اور $1$ کے درمیان ہی آتے ہیں۔"
+  },
+  {
+   "en": "For the function to be onto, the calculated input $x = -\\ln y$ must belong to our domain $\\mathbb{R}^+$. This step shows that while any $y$ in $(0, 1)$ gives a valid positive $x$, any $y \\ge 1$ gives a negative or zero $x$, which is outside our allowed domain.",
+   "ur": "فنکشن کے آن ٹو ہونے کے لیے ضروری ہے کہ نکالا گیا ان پٹ $x = -\\ln y$ ہماری ڈومین $\\mathbb{R}^+$ میں موجود ہو۔ یہ مرحلہ واضح کرتا ہے کہ $(0, 1)$ کے درمیان ہر $y$ کے لیے تو مثبت $x$ ملتا ہے، لیکن $y \\ge 1$ کے لیے $x$ منفی یا صفر ہو جاتا ہے جو کہ ہماری ڈومین میں شامل نہیں ہے۔"
+  },
+  {
+   "en": "A function is only onto if its range matches its codomain. Since the actual range is $(0, 1)$, we conclude that $f$ is bijective only onto the interval $(0, 1)$, and not onto the entire given codomain $\\mathbb{R}^+$.",
+   "ur": "کوئی فنکشن تبھی آن ٹو ہوتا ہے جب اس کی رینج اس کے کوڈومین کے برابر ہو۔ چونکہ اصل رینج $(0, 1)$ ہے، اس لیے ہم یہ نتیجہ اخذ کرتے ہیں کہ فنکشن $f$ صرف وقفہ $(0, 1)$ پر بائیجیکٹو ہے، نہ کہ پورے دیے گئے کوڈومین $\\mathbb{R}^+$ پر۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer clarifies a subtle point in the question: while $f(x) = e^{-x}$ is strictly one-to-one for positive inputs, its outputs only cover the interval $(0, 1)$. Therefore, it is not bijective onto the whole of $\\mathbb{R}^+$, unless we restrict the target set (codomain) to its actual range $(0, 1)$. You can easily check this by trying an output like $y = 2$ from $\\mathbb{R}^+$, which requires the input $x = -\\ln 2 < 0$, a number not allowed in our domain $\\mathbb{R}^+$.",
+  "ur": "حتمی جواب سوال کے ایک باریک نقطے کو واضح کرتا ہے: اگرچہ مثبت ان پٹس کے لیے $f(x) = e^{-x}$ مکمل طور پر ون ٹو ون ہے، لیکن اس کے آؤٹ پٹس صرف وقفہ $(0, 1)$ تک محدود رہتے ہیں۔ اس لیے یہ پورے $\\mathbb{R}^+$ پر بائیجیکٹو نہیں ہے، سوائے اس کے کہ ہم کوڈومین کو اصل رینج $(0, 1)$ تک محدود کر دیں۔ آپ اس کی پڑتال $\\mathbb{R}^+$ میں سے $y = 2$ لے کر باآسانی کر سکتے ہیں، جس کے لیے ان پٹ $x = -\\ln 2 < 0$ درکار ہے، جو کہ ہماری ڈومین $\\mathbb{R}^+$ میں جائز نہیں ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-05"
+}

@@ -1,0 +1,35 @@
+{
+ "item": "c11-ex2.1-q2",
+ "label": "ii",
+ "answer_ref": "$\\frac{2\\cos\\left(a + \\frac{h}{2}\\right)\\sin\\frac{h}{2}}{h}$",
+ "math": [
+  "\\frac{f(a + h) - f(a)}{h} = \\frac{\\sin(a + h) - \\sin a}{h}",
+  "\\sin P - \\sin Q = 2\\cos\\frac{P + Q}{2}\\sin\\frac{P - Q}{2}",
+  "\\sin(a + h) - \\sin a = 2\\cos\\left(\\frac{2a + h}{2}\\right)\\sin\\frac{h}{2} = 2\\cos\\left(a + \\frac{h}{2}\\right)\\sin\\frac{h}{2}",
+  "\\frac{f(a + h) - f(a)}{h} = \\frac{2\\cos\\left(a + \\frac{h}{2}\\right)\\sin\\frac{h}{2}}{h},\\quad h \\ne 0"
+ ],
+ "why": [
+  {
+   "en": "Using the definition of function evaluation, we replace the input $x$ in $f(x) = \\sin x$ with $a + h$ and $a$. This sets up our required fraction in terms of sine functions so we can begin simplifying the numerator.",
+   "ur": "فنکشن کی تعریف کے مطابق، ہم دیے گئے فنکشن $f(x) = \\sin x$ میں $x$ کی جگہ $a + h$ اور $a$ درج کرتے ہیں۔ اس طرح مطلوبہ کسر سائن فنکشنز کی شکل میں آ جاتی ہے تاکہ ہم شمار کنندہ (numerator) کو مختصر کرنے کا آغاز کر سکیں۔"
+  },
+  {
+   "en": "Because we cannot directly subtract $\\sin a$ from $\\sin(a + h)$, we recall the trigonometric sum-to-product formula for the difference of two sines. Turning a subtraction into a product is the standard way to simplify trigonometric expressions in fractions.",
+   "ur": "چونکہ ہم $\\sin(a + h)$ میں سے براہِ راست $\\sin a$ کو تفریق نہیں کر سکتے، اس لیے ہم دو سائن کے فرق کو ضرب میں بدلنے والا مثلثی فارمولا (sum-to-product formula) لکھتے ہیں۔ تفریق کو ضرب میں تبدیل کرنا ایسی کسروں کو مختصر کرنے کا معیاری طریقہ ہے۔"
+  },
+  {
+   "en": "We apply this formula to our numerator by taking $P = a + h$ and $Q = a$, and then simplify the angles inside the cosine and sine. This transforms the difference in the numerator into a clean product: $2\\cos\\left(a + \\frac{h}{2}\\right)\\sin\\frac{h}{2}$.",
+   "ur": "ہم اس فارمولے میں $P = a + h$ اور $Q = a$ رکھ کر اسے اپنے شمار کنندہ پر لاگو کرتے ہیں اور زاویوں کو مختصر کرتے ہیں۔ اس عمل سے شمار کنندہ کا فرق ایک سادہ حاصلِ ضرب $2\\cos\\left(a + \\frac{h}{2}\\right)\\sin\\frac{h}{2}$ میں بدل جاتا ہے۔"
+  },
+  {
+   "en": "Finally, we place our simplified numerator back over the denominator $h$, while noting the restriction $h \\ne 0$ so that we never divide by zero. This gives us the complete, simplified form of the expression.",
+   "ur": "آخر میں، ہم مختصر کیے گئے شمار کنندہ کو واپس مخرج (denominator) $h$ کے اوپر رکھتے ہیں، اور ساتھ ہی $h \\ne 0$ کی شرط لکھتے ہیں کیونکہ صفر سے تقسیم ممکن نہیں۔ اس طرح ہمیں مطلوبہ جملے کی مکمل اور مختصر ترین شکل مل جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $\\frac{2\\cos\\left(a + \\frac{h}{2}\\right)\\sin\\frac{h}{2}}{h}$ is the simplified difference quotient for $f(x) = \\sin x$, which represents the average rate of change of the sine function over the interval from $a$ to $a + h$. Writing the numerator as a product makes this expression ready for calculus, where we later find the instantaneous rate of change (derivative).",
+  "ur": "آخری جواب $\\frac{2\\cos\\left(a + \\frac{h}{2}\\right)\\sin\\frac{h}{2}}{h}$ دراصل فنکشن $f(x) = \\sin x$ کے لیے مختصر شدہ فرق کا حاصلِ تقسیم (difference quotient) ہے، جو $a$ سے $a + h$ کے وقفے میں سائن فنکشن کی تبدیلی کی اوسط شرح کو ظاہر کرتا ہے۔ شمار کنندہ کو حاصلِ ضرب کی شکل میں لکھنے سے یہ جملہ کیلکولس کے اگلے مراحل (جیسے مشتق یا derivative معلوم کرنے) کے لیے بالکل تیار ہو جاتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-05"
+}

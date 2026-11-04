@@ -1,4 +1,4 @@
-"""Synthetic Class 11 (Unit 1, Complex Numbers) items with NEW numbers, solved by the Class 11 engine (engine11), whose
+"""Synthetic Class 11 (Units 1-3) items with NEW numbers, solved by the Class 11 engine (engine11), whose
 templates wrote the book. Every step of every item is checked with sympy before it is kept.
 
     generate(per_type, seed0=0, avoid=()) -> list of items like the book's
@@ -125,10 +125,38 @@ def t_absq(r):
     return f"Solve |{_q(X_**2 - r.randint(1, 6)**2)}| = {r.randint(1, 20)}"
 
 
+def t_fvalue(r):                                      # Unit 2
+    return f"Given f(x) = {_q(r.choice([1, 2, -1]) * X_**2 + r.randint(-9, 9) * X_ + r.randint(-9, 9))}, find f({r.randint(-6, 6)})"
+
+
+def t_diffq(r):
+    return f"Find (f(a+h) - f(a))/h and simplify where f(x) = {_q(r.choice([0, 1]) * X_**3 + r.randint(-4, 4) * X_**2 + r.randint(1, 9) * X_ + r.randint(-9, 9))}"
+
+
+def t_domrange(r):
+    m, c, k = r.choice([1, 2, 3, -1, -2]), r.randint(-6, 6), r.randint(-5, 5)
+    form = r.choice(["sqrt", "abs", "rat"])
+    if form == "sqrt":
+        return f"Find the domain and range of f(x) = sqrt({_q(m * X_ + c)}) + {k}"
+    if form == "abs":
+        return f"Find the domain and range of f(x) = |{_q(m * X_ + c)}| + {k}"
+    return f"Find the domain and range of f(x) = ({_q(r.randint(1, 5) * X_ + r.randint(-6, 6))})/({_q(r.randint(1, 4) * X_ + c)})"
+
+
+def t_meet(r):
+    r1, r2, m, c = r.randint(-4, 4), r.randint(-4, 4), r.randint(-3, 3), r.randint(-5, 5)
+    return f"Find the points of intersection of f(x) = {_q(m * X_ + c)} and g(x) = {_q(m * X_ + c + (X_ - r1) * (X_ - r2))}"
+
+
+def t_axes(r):
+    return f"Find the points where y = {_q(r.choice([1, 2, 3, -1, -2, -5]) * X_ + r.choice([-8, -6, -3, 2, 4, 9]))} meets the coordinate axes"
+
+
 TYPES = {"square roots": t_sqrt, "x and y from a square": t_xy, "completing the square": t_quad, "factorize quadratic": t_factor2,
          "quartic factors": t_quartic, "cubic equation": t_cubic, "cube roots": t_cube, "fourth roots": t_fourth, "polar form": t_polar,
          "inverse of a pair": t_inverse, "polynomial from zeros": t_zeros, "division": t_arith,
-         "maximum or minimum": t_maxmin, "sketch a parabola": t_sketch, "inverse of a quadratic": t_qinverse, "absolute value equation": t_absq}
+         "maximum or minimum": t_maxmin, "sketch a parabola": t_sketch, "inverse of a quadratic": t_qinverse, "absolute value equation": t_absq,
+         "function value": t_fvalue, "difference quotient": t_diffq, "domain and range": t_domrange, "intersection of graphs": t_meet, "meeting the axes": t_axes}
 
 
 def generate(per_type, seed0=0, avoid=()):
@@ -146,7 +174,7 @@ def generate(per_type, seed0=0, avoid=()):
             if not it or not all_checks_pass(it):
                 continue
             seen.add(q)
-            it = dict(it, id=f"syn11-{slug}-{seed0}-{made}", kind="synthetic", unit=1, unit_title="Complex Numbers")
+            it = dict(it, id=f"syn11-{slug}-{seed0}-{made}", kind="synthetic")      # unit and unit_title as the engine found them
             out.append(it)
             made += 1
     return out

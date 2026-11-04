@@ -1,0 +1,35 @@
+{
+ "item": "c11-ex2.1-q2",
+ "label": "iv",
+ "answer_ref": "$\\frac{\\sin h}{h\\cos(a + h)\\cos a}$",
+ "math": [
+  "\\frac{f(a + h) - f(a)}{h} = \\frac{\\tan(a + h) - \\tan a}{h}",
+  "\\tan(a + h) - \\tan a = \\frac{\\sin(a + h)}{\\cos(a + h)} - \\frac{\\sin a}{\\cos a} = \\frac{\\sin(a + h)\\cos a - \\cos(a + h)\\sin a}{\\cos(a + h)\\cos a}",
+  "\\sin(a + h)\\cos a - \\cos(a + h)\\sin a = \\sin\\big((a + h) - a\\big) = \\sin h",
+  "\\frac{f(a + h) - f(a)}{h} = \\frac{\\sin h}{h\\cos(a + h)\\cos a},\\quad h \\ne 0"
+ ],
+ "why": [
+  {
+   "en": "Using the definition of function evaluation, we replace $x$ in $f(x) = \\tan x$ with $a + h$ and $a$ respectively. This sets up the required difference quotient specifically for the tangent function so we can begin simplifying it.",
+   "ur": "فنکشن کی تعریف کے مطابق، ہم $f(x) = \\tan x$ میں $x$ کی جگہ بالترتیب $a + h$ اور $a$ درج کرتے ہیں۔ اس سے ٹینجنٹ فنکشن کے لیے مطلوبہ جملہ بن جاتا ہے جسے اب ہم مختصر کر سکتے ہیں۔"
+  },
+  {
+   "en": "To simplify the difference of two tangent terms, we apply the fundamental quotient identity $\\tan x = \\frac{\\sin x}{\\cos x}$ and combine the fractions using a common denominator. This transforms the numerator into a familiar pattern of sines and cosines that we can easily collapse.",
+   "ur": "دو ٹینجنٹ رقوم کے فرق کو حل کرنے کے لیے ہم بنیادی فارمولا $\\tan x = \\frac{\\sin x}{\\cos x}$ استعمال کرتے ہیں اور ذواضعاف اقل (L.C.M) لے کر کسور کو ملا دیتے ہیں۔ اس سے شمار کنندہ (numerator) سائن اور کوسائن کی ایک ایسی شکل میں آ جاتا ہے جسے مزید مختصر کرنا آسان ہے۔"
+  },
+  {
+   "en": "We recognize the numerator as the expansion of the trigonometric compound angle formula $\\sin(P - Q) = \\sin P\\cos Q - \\cos P\\sin Q$. Applying this identity in reverse neatly cancels out $a$, simplifying the entire numerator down to just $\\sin h$.",
+   "ur": "ہم دیکھ سکتے ہیں کہ شمار کنندہ دراصل مثلثیاتی فارمولے $\\sin(P - Q) = \\sin P\\cos Q - \\cos P\\sin Q$ کی کھلی ہوئی شکل ہے۔ اس کلیے کو الٹا استعمال کرنے سے $a$ کٹ جاتا ہے اور پورا شمار کنندہ مختصر ہو کر صرف $\\sin h$ رہ جاتا ہے۔"
+  },
+  {
+   "en": "Finally, we put our simplified numerator back into the main expression and include the division by $h$ from the original question. We also state the condition $h \\ne 0$ because dividing by zero is undefined in mathematics.",
+   "ur": "آخر میں، ہم اپنے مختصر کیے ہوئے شمار کنندہ کو واپس اصل جملے میں رکھتے ہیں اور سوال کے مطابق $h$ سے تقسیم کرتے ہیں۔ ہم ساتھ میں $h \\ne 0$ کی شرط بھی لکھتے ہیں کیونکہ ریاضی میں صفر سے تقسیم کرنا ممکن نہیں ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $\\frac{\\sin h}{h\\cos(a + h)\\cos a}$ is the most simplified form of the difference quotient for $f(x) = \\tan x$, representing the average rate of change of the tangent function over the interval from $a$ to $a+h$. In your next class on calculus, you will see how this exact form makes it very easy to find the derivative of $\\tan x$ when $h$ approaches zero.",
+  "ur": "حتمی جواب $\\frac{\\sin h}{h\\cos(a + h)\\cos a}$ فنکشن $f(x) = \\tan x$ کے لیے دیے گئے جملے کی سب سے مختصر شکل ہے، جو $a$ سے $a+h$ کے وقفے میں ٹینجنٹ فنکشن کی تبدیلی کی اوسط شرح کو ظاہر کرتی ہے۔ اگلی جماعت میں کیلکولس پڑھتے ہوئے آپ دیکھیں گے کہ یہ شکل $\\tan x$ کا ڈیریویٹو (derivative) معلوم کرنے میں کتنی مددگار ثابت ہوتی ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-05"
+}

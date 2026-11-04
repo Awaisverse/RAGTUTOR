@@ -1,0 +1,30 @@
+{
+ "item": "c11-ex2.1-q2",
+ "label": "iii",
+ "answer_ref": "$3a^2 + 3ah + h^2 + 2a + h$",
+ "math": [
+  "f(a + h) = (a + h)^3 + (a + h)^2 - 1 = a^3 + 3a^2h + 3ah^2 + h^3 + a^2 + 2ah + h^2 - 1",
+  "f(a + h) - f(a) = 3a^2h + 3ah^2 + h^3 + 2ah + h^2",
+  "\\frac{f(a + h) - f(a)}{h} = 3a^2 + 3ah + h^2 + 2a + h,\\quad h \\ne 0"
+ ],
+ "why": [
+  {
+   "en": "To build the first part of our target fraction, we replace $x$ with $a + h$ in the given function $f(x) = x^3 + x^2 - 1$. Expanding the cube $(a + h)^3$ and square $(a + h)^2$ separates the individual terms so that they can easily cancel out in the next step.",
+   "ur": "مطلوبہ کسر کا پہلا حصہ بنانے کے لیے ہم دیے گئے فنکشن $f(x) = x^3 + x^2 - 1$ میں $x$ کی جگہ $a + h$ رکھتے ہیں۔ مکعب $(a + h)^3$ اور مربع $(a + h)^2$ کو کھولنے سے تمام رقمیں الگ الگ ہو جاتی ہیں تاکہ اگلے مرحلے میں وہ آسانی سے کٹ سکیں۔"
+  },
+  {
+   "en": "Now we form the numerator $f(a + h) - f(a)$ by subtracting $f(a) = a^3 + a^2 - 1$ from our expanded result. Notice how all the terms without $h$—namely $a^3$, $a^2$, and $-1$—cancel out completely, leaving only terms that contain $h$.",
+   "ur": "اب ہم شمار کنندہ $f(a + h) - f(a)$ معلوم کرنے کے لیے اپنے پچھلے نتیجے میں سے $f(a) = a^3 + a^2 - 1$ کو تفریق کرتے ہیں۔ غور کریں کہ $h$ کے بغیر تمام رقمیں، یعنی $a^3$، $a^2$ اور $-1$ آپس میں کٹ جاتی ہیں، اور صرف وہی رقمیں بچتی ہیں جن میں $h$ موجود ہے۔"
+  },
+  {
+   "en": "Finally, we divide the entire numerator by the denominator $h$ (assuming $h \\ne 0$ so division is valid). Because every remaining term has a factor of $h$, it cancels out cleanly and gives us the fully simplified form.",
+   "ur": "آخر میں، ہم پورے شمار کنندہ کو مخرج $h$ سے تقسیم کرتے ہیں (بشرطیکہ $h \\ne 0$ ہو تاکہ تقسیم ممکن ہو)۔ چونکہ بچی ہوئی ہر رقم میں $h$ موجود ہے، اس لیے یہ بآسانی کٹ جاتا ہے اور ہمیں مختصر ترین شکل مل جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final expression $3a^2 + 3ah + h^2 + 2a + h$ is the simplified difference quotient for $f(x) = x^3 + x^2 - 1$, showing the average rate of change of the function between $a$ and $a+h$. As a quick check in algebra, whenever you simplify $\\frac{f(a+h)-f(a)}{h}$ for a polynomial, every term without $h$ must cancel before you divide.",
+  "ur": "حتمی جملہ $3a^2 + 3ah + h^2 + 2a + h$ دیے گئے فنکشن $f(x) = x^3 + x^2 - 1$ کے لیے $\\frac{f(a+h) - f(a)}{h}$ کی مختصر ترین شکل ہے، جو $a$ اور $a+h$ کے درمیان فنکشن کی تبدیلی کی اوسط شرح کو ظاہر کرتی ہے۔ پڑتال کے طور پر یاد رکھیں کہ جب بھی آپ کسی کثیر رقمی (polynomial) کے لیے اس کسر کو حل کرتے ہیں، تو $h$ سے تقسیم کرنے سے پہلے $h$ کے بغیر تمام رقمیں لازمی کٹ جانی چاہئیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-05"
+}
