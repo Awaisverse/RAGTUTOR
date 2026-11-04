@@ -1,0 +1,40 @@
+{
+ "item": "c11-ex1.4-q1",
+ "label": "iii",
+ "answer_ref": "$-3,\\ \\frac{3}{2} - \\frac{3 \\sqrt{3}}{2}i,\\ \\frac{3}{2} + \\frac{3 \\sqrt{3}}{2}i$",
+ "math": [
+  "x^3 = -27 \\Rightarrow x^3 + 27 = 0 \\Rightarrow x^3 + 3^3 = 0",
+  "(x + 3)\\left(x^2 - 3x + 9\\right) = 0",
+  "x = -3 \\quad\\text{or}\\quad x = \\frac{3 \\pm \\sqrt{9 - 36}}{2} = \\frac{3 \\pm \\sqrt{-27}}{2}",
+  "x = \\frac{3}{2} - \\frac{3 \\sqrt{3}}{2}i,\\quad \\frac{3}{2} + \\frac{3 \\sqrt{3}}{2}i",
+  "\\text{Cube roots: } -3,\\ \\frac{3}{2} - \\frac{3 \\sqrt{3}}{2}i,\\ \\frac{3}{2} + \\frac{3 \\sqrt{3}}{2}i"
+ ],
+ "why": [
+  {
+   "en": "By the definition of a cube root, any cube root $x$ of $-27$ must satisfy $x^3 = -27$. Moving $-27$ to the left side and writing it as $3^3$ sets up a sum of two cubes equal to $0$, which makes factoring easy.",
+   "ur": "کیوب روٹ کی تعریف کے مطابق، $-27$ کے کسی بھی کیوب روٹ $x$ کے لیے $x^3 = -27$ ہونا ضروری ہے۔ $-27$ کو بائیں طرف لے جا کر $3^3$ کی شکل میں لکھنے سے دو مکعبوں (cubes) کا مجموعہ $0$ کے برابر بن جاتا ہے، جس سے تجزی (factorization) آسان ہو جاتی ہے۔"
+  },
+  {
+   "en": "We apply the sum of cubes algebraic identity $a^3 + b^3 = (a + b)(a^2 - ab + b^2)$ to break the degree-$3$ equation into smaller parts. This splits our problem into a simple linear factor $(x + 3)$ and a quadratic factor $(x^2 - 3x + 9)$.",
+   "ur": "ہم تین درجی مساوات کو چھوٹے حصوں میں توڑنے کے لیے مکعبوں کے مجموعے کا فارمولا $a^3 + b^3 = (a + b)(a^2 - ab + b^2)$ استعمال کرتے ہیں۔ اس سے ہمارا سوال ایک سادہ یک درجی جزو ضربی $(x + 3)$ اور ایک دو درجی جزو ضربی $(x^2 - 3x + 9)$ میں تقسیم ہو جاتا ہے۔"
+  },
+  {
+   "en": "Using the zero-product property, we set each factor to $0$ to find all possible values of $x$. The linear factor immediately gives the real root $x = -3$, while the quadratic formula is needed for $x^2 - 3x + 9 = 0$ because it cannot be factored by simple middle-term breaking.",
+   "ur": "ضربی خاصیت (zero-product property) کا استعمال کرتے ہوئے، ہم $x$ کی تمام ممکنہ قیمتیں معلوم کرنے کے لیے ہر فیکٹر کو $0$ کے برابر رکھتے ہیں۔ یک درجی فیکٹر سے فوراً حقیقی روٹ $x = -3$ مل جاتا ہے، جبکہ $x^2 - 3x + 9 = 0$ کو حل کرنے کے لیے دو درجی فارمولا لگانا پڑتا ہے کیونکہ اس کی سادہ تجزی نہیں ہو سکتی۔"
+  },
+  {
+   "en": "Since we have a negative number inside the square root, we use the definition of the imaginary unit $i = \\sqrt{-1}$ to rewrite $\\sqrt{-27}$ as $3\\sqrt{3}i$. Separating the real and imaginary parts gives us the other two complex cube roots in standard form $a + bi$.",
+   "ur": "چونکہ جزر کے اندر منفی عدد آ گیا ہے، اس لیے ہم غیر حقیقی اکائی $i = \\sqrt{-1}$ کی تعریف استعمال کرتے ہوئے $\\sqrt{-27}$ کو $3\\sqrt{3}i$ لکھتے ہیں۔ حقیقی اور غیر حقیقی حصوں کو الگ کرنے سے ہمیں باقی دو مختلط (complex) کیوب روٹس معیاری شکل $a + bi$ میں مل جاتے ہیں۔"
+  },
+  {
+   "en": "Finally, we collect all three roots—one real and two complex conjugates—to complete the solution. Notice how the two complex roots are simply the real root $-3$ multiplied by the complex cube roots of unity, $\\omega$ and $\\omega^2$.",
+   "ur": "آخر میں، ہم اپنا حل مکمل کرنے کے لیے تینوں روٹس (ایک حقیقی اور دو مختلط) کو اکٹھا لکھ لیتے ہیں۔ غور کریں کہ دونوں مختلط روٹس دراصل حقیقی روٹ $-3$ کو اکائی کے مختلط کیوب روٹس $\\omega$ اور $\\omega^2$ سے ضرب دینے سے حاصل ہوتے ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "These three numbers are the exact values that, when raised to the power of $3$, equal $-27$. Every non-zero number has three cube roots in the complex number system: here we have one real root $-3$ and a pair of complex conjugate roots $\\frac{3}{2} - \\frac{3\\sqrt{3}}{2}i$ and $\\frac{3}{2} + \\frac{3\\sqrt{3}}{2}i$. You can easily check the real root by calculating $(-3)^3 = -27$.",
+  "ur": "یہ تینوں اعداد وہ درست قیمتیں ہیں جن کی طاقت $3$ لینے سے جواب $-27$ آتا ہے۔ مختلط اعداد کے نظام میں ہر غیر صفر عدد کے تین کیوب روٹس ہوتے ہیں: یہاں ہمارے پاس ایک حقیقی روٹ $-3$ ہے اور دو کاجوگیٹ مختلط روٹس $\\frac{3}{2} - \\frac{3\\sqrt{3}}{2}i$ اور $\\frac{3}{2} + \\frac{3\\sqrt{3}}{2}i$ ہیں۔ آپ $(-3)^3 = -27$ حل کر کے حقیقی روٹ کی باآسانی پڑتال کر سکتے ہیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

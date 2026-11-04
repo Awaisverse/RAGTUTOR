@@ -1,0 +1,45 @@
+{
+ "item": "c11-ex1.3-q4",
+ "label": "iii",
+ "answer_ref": "$z = 3 \\pm \\frac{\\sqrt{69}}{3}i$",
+ "math": [
+  "3 z^{2} - 18 z + 50 = 0 \\Rightarrow z^2 - 6z + \\frac{50}{3} = 0",
+  "z^2 - 6z = - \\frac{50}{3}",
+  "z^2 - 2\\left(3\\right)z + \\left(3\\right)^2 = - \\frac{50}{3} + \\left(3\\right)^2",
+  "\\left(z - 3\\right)^2 = - \\frac{23}{3}",
+  "z - 3 = \\pm\\sqrt{- \\frac{23}{3}} = \\pm \\frac{\\sqrt{69}}{3}i",
+  "z = 3 \\pm \\frac{\\sqrt{69}}{3}i"
+ ],
+ "why": [
+  {
+   "en": "In the completing the square method, the standard rule is that the leading term $z^2$ must have a coefficient of $1$. Dividing every term by $3$ puts the equation into the simpler form $z^2 - 6z + \\frac{50}{3} = 0$, making it ready for the next step.",
+   "ur": "تکمیلِ مربع (completing the square) کے طریقے کا پہلا اصول یہ ہے کہ $z^2$ کا عددی سر (coefficient) $1$ ہونا چاہیے۔ پوری مساوات کو $3$ پر تقسیم کرنے سے یہ سادہ شکل $z^2 - 6z + \\frac{50}{3} = 0$ میں آ جاتی ہے، جس سے اگلا مرحلہ آسان ہو جاتا ہے۔"
+  },
+  {
+   "en": "We isolate the variable terms $z^2 - 6z$ on the left side by shifting the constant $\\frac{50}{3}$ to the right. This clears the left side so we can build a perfect square trinomial without the original constant in the way.",
+   "ur": "ہم مستقل مقدار (constant) $\\frac{50}{3}$ کو دائیں طرف منتقل کر کے متغیر والی رقوم $z^2 - 6z$ کو بائیں طرف الگ کر لیتے ہیں۔ اس سے بائیں جانب جگہ صاف ہو جاتی ہے تاکہ ہم وہاں ایک مکمل مربع بنا سکیں۔"
+  },
+  {
+   "en": "To complete the algebraic identity $(a - b)^2 = a^2 - 2ab + b^2$, we take half of the coefficient of $z$ (which gives $3$) and add its square, $(3)^2$, to both sides. Adding the same value to both sides keeps the equation balanced while turning the left side into a complete square.",
+   "ur": "الجبری کلیہ $(a - b)^2 = a^2 - 2ab + b^2$ کو مکمل کرنے کے لیے، ہم $z$ کے عددی سر کا نصف (جو کہ $3$ ہے) لیتے ہیں اور اس کا مربع $(3)^2$ دونوں طرف جمع کرتے ہیں۔ دونوں اطراف میں ایک جیسی قیمت جمع کرنے سے مساوات متوازن رہتی ہے اور بائیں طرف مکمل مربع بن جاتا ہے۔"
+  },
+  {
+   "en": "Now we fold the left side into the compact binomial square $(z - 3)^2$ and simplify the fractions on the right side to get $-\\frac{23}{3}$. Because $z$ now appears only once inside the square, we can solve for it directly.",
+   "ur": "اب ہم بائیں طرف کو سمیٹ کر مکمل مربع $(z - 3)^2$ کی شکل میں لکھتے ہیں اور دائیں طرف کی کسر کو حل کر کے $-\\frac{23}{3}$ حاصل کرتے ہیں۔ چونکہ اب $z$ صرف ایک بار مربع کے اندر آ رہا ہے، اس لیے ہم اسے براہِ راست حل کر سکتے ہیں۔"
+  },
+  {
+   "en": "To undo the square, we take the square root on both sides, remembering to include the $\\pm$ sign so we don't lose a root. Since we have a negative number $-\\frac{23}{3}$ under the root, we use the imaginary unit $i = \\sqrt{-1}$ and rationalize the denominator to get $\\pm \\frac{\\sqrt{69}}{3}i$.",
+   "ur": "مربع ختم کرنے کے لیے ہم دونوں طرف جزر (square root) لیتے ہیں اور دونوں ممکنہ قیمتوں کے لیے $\\pm$ کی علامت لگاتے ہیں۔ چونکہ جزر کے اندر منفی عدد $-\\frac{23}{3}$ ہے، اس لیے ہم خیالی اکائی $i = \\sqrt{-1}$ استعمال کرتے ہیں اور مخرج کو ناطق بنا کر $\\pm \\frac{\\sqrt{69}}{3}i$ حاصل کرتے ہیں۔"
+  },
+  {
+   "en": "Finally, we isolate $z$ completely by moving $-3$ to the right side, where it becomes $+3$. This gives us the final roots in the standard complex form $a + bi$.",
+   "ur": "آخر میں، ہم $-3$ کو دائیں طرف لے جا کر $+3$ کر دیتے ہیں جس سے $z$ بالکل الگ ہو جاتا ہے۔ اس طرح ہمیں معیاری مخلوط شکل $a + bi$ میں مساوات کے حتمی جزر (roots) مل جاتے ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $z = 3 \\pm \\frac{\\sqrt{69}}{3}i$ gives us the two complex conjugate roots of the quadratic equation $3z^2 - 18z + 50 = 0$. The presence of $i$ tells us that this equation has no real solutions, and you can verify these roots by substituting either value back into $3z^2 - 18z + 50$ to see that it simplifies to $0$.",
+  "ur": "حتمی جواب $z = 3 \\pm \\frac{\\sqrt{69}}{3}i$ ہمیں دو درجی مساوات $3z^2 - 18z + 50 = 0$ کے دو مخلوط زوجی جزر (complex conjugate roots) دیتا ہے۔ $i$ کی موجودگی بتاتی ہے کہ اس مساوات کا کوئی حقیقی حل نہیں ہے، اور آپ ان میں سے کوئی بھی قیمت واپس $3z^2 - 18z + 50$ میں درج کر کے تصدیق کر سکتے ہیں کہ جواب $0$ آتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

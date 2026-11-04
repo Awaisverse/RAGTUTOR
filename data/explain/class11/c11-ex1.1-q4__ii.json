@@ -1,0 +1,45 @@
+{
+ "item": "c11-ex1.1-q4",
+ "label": "ii",
+ "answer_ref": "proved: $\\frac{z-\\bar z}{2i} = b = \\operatorname{Im}(z)$",
+ "math": [
+  "z = a + bi, \\quad a, b \\in \\mathbb{R}",
+  "\\bar{z} = a - bi",
+  "\\text{L.H.S.} = \\frac{z - \\bar{z}}{2i} = \\frac{(a + bi) - (a - bi)}{2i}",
+  "= \\frac{a + bi - a + bi}{2i} = \\frac{2bi}{2i}",
+  "= b",
+  "\\frac{z - \\bar{z}}{2i} = b = \\operatorname{Im}(z) = \\text{R.H.S.}"
+ ],
+ "why": [
+  {
+   "en": "To prove a general rule for any complex number $z$, we first write it in its standard rectangular form $a + bi$. This clearly separates the real part $a$ and the imaginary part $b$, giving us our target $\\operatorname{Im}(z) = b$ to aim for.",
+   "ur": "کسی بھی کمپلیکس نمبر $z$ کے لیے ایک عمومی اصول ثابت کرنے کے لیے، ہم پہلے اسے اس کی معیاری شکل $a + bi$ میں لکھتے ہیں۔ اس سے حقیقی حصہ $a$ اور خیالی حصہ $b$ واضح طور پر الگ ہو جاتے ہیں، اور ہمیں ہمارا ہدف $\\operatorname{Im}(z) = b$ مل جاتا ہے۔"
+  },
+  {
+   "en": "Since the formula we need to prove contains $\\bar{z}$, we apply the definition of a complex conjugate by flipping the sign of the imaginary part. Having both $z$ and $\\bar{z}$ written in terms of $a$ and $b$ prepares us to substitute them directly into the equation.",
+   "ur": "چونکہ جس فارمولے کو ہم نے ثابت کرنا ہے اس میں $\\bar{z}$ شامل ہے، اس لیے ہم خیالی حصے کی علامت بدل کر کمپلیکس کونجوگیٹ کی تعریف لاگو کرتے ہیں۔ $z$ اور $\\bar{z}$ دونوں کو $a$ اور $b$ کی شکل میں لکھنے سے ہم انہیں براہِ راست مساوات میں درج کرنے کے قابل ہو جاتے ہیں۔"
+  },
+  {
+   "en": "In proofs, we usually start with the more complicated side, the Left Hand Side (L.H.S.), and simplify it step by step. Replacing $z$ and $\\bar{z}$ with their algebraic forms turns the expression into simple algebra that we can easily solve.",
+   "ur": "سوال ثابت کرتے وقت، ہم عام طور پر زیادہ پیچیدہ سائیڈ یعنی بائیں طرف (L.H.S.) سے شروعات کرتے ہیں اور اسے مرحلہ وار آسان بناتے ہیں۔ $z$ اور $\\bar{z}$ کی جگہ ان کی الجبری قیمتیں لگانے سے یہ عبارت سادہ الجبرا میں بدل جاتی ہے جسے ہم آسانی سے حل کر سکتے ہیں۔"
+  },
+  {
+   "en": "We distribute the negative sign across the second bracket to combine like terms. Notice how the real parts $a$ and $-a$ completely eliminate each other, leaving only the imaginary terms $2bi$ in the numerator.",
+   "ur": "ہم ایک جیسی رقموں کو ملانے کے لیے منفی علامت کو دوسری بریکٹ کے اندر ضرب دیتے ہیں۔ غور کریں کہ کس طرح حقیقی حصے $a$ اور $-a$ ایک دوسرے کو مکمل طور پر ختم کر دیتے ہیں، اور شمار کنندہ (numerator) میں صرف خیالی رقم $2bi$ باقی رہ جاتی ہے۔"
+  },
+  {
+   "en": "By dividing the numerator by the denominator, the common factor $2i$ cancels out completely. This leaves us with just the real number $b$, free of any $i$.",
+   "ur": "شمار کنندہ کو مخرج (denominator) پر تقسیم کرنے سے، مشترک جزو $2i$ مکمل طور پر کٹ جاتا ہے۔ اس سے ہمارے پاس بغیر کسی $i$ کے، صرف حقیقی نمبر $b$ بچ جاتا ہے۔"
+  },
+  {
+   "en": "Looking back at our first step, we defined $b$ as the imaginary part of $z$, written as $\\operatorname{Im}(z)$. Since our simplified Left Hand Side matches the Right Hand Side, the identity is successfully proved.",
+   "ur": "اپنے پہلے مرحلے پر واپس نظر ڈالیں تو ہم نے $b$ کو $z$ کے خیالی حصے، یعنی $\\operatorname{Im}(z)$ کے طور پر فرض کیا تھا۔ چونکہ ہماری حل شدہ بائیں سائیڈ دائیں سائیڈ کے برابر آ گئی ہے، اس لیے یہ کلیہ کامیابی سے ثابت ہو گیا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This result gives us a neat algebraic formula to extract just the imaginary part $\\operatorname{Im}(z) = b$ of any complex number by subtracting its conjugate $\\bar{z}$ and dividing by $2i$. Remember that the imaginary part is just the real number $b$, not $bi$, which is why the $i$ had to cancel out in the end.",
+  "ur": "یہ نتیجہ ہمیں کسی بھی کمپلیکس نمبر سے صرف اس کا خیالی حصہ $\\operatorname{Im}(z) = b$ نکالنے کا ایک عمدہ الجبری فارمولا دیتا ہے، جس میں ہم نمبر سے اس کا کونجوگیٹ $\\bar{z}$ تفریق کر کے $2i$ پر تقسیم کرتے ہیں۔ یاد رکھیں کہ خیالی حصہ صرف حقیقی نمبر $b$ ہوتا ہے نہ کہ $bi$، اسی لیے آخر میں $i$ کا کٹ جانا ضروری تھا۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

@@ -1,0 +1,45 @@
+{
+ "item": "c11-ex1.2-q7",
+ "label": "ii",
+ "answer_ref": "$\\pm\\left(3 - i\\right)$",
+ "math": [
+  "z = 8 - 6i:\\quad x = 8,\\ y = -6",
+  "|z| = \\sqrt{x^2 + y^2} = \\sqrt{(8)^2 + (-6)^2} = \\sqrt{100} = 10",
+  "\\sqrt{z} = \\pm\\left(\\sqrt{\\frac{|z| + x}{2}} + i\\,\\frac{y}{|y|}\\sqrt{\\frac{|z| - x}{2}}\\right)",
+  "\\sqrt{8 - 6i} = \\pm\\left(\\sqrt{\\frac{10 + (8)}{2}} - i\\sqrt{\\frac{10 - (8)}{2}}\\right)",
+  "= \\pm\\left(\\sqrt{9} - i\\sqrt{1}\\right) = \\pm\\left(3 - i\\right)",
+  "\\text{The square roots are } 3 - i \\text{ and } -3 + i"
+ ],
+ "why": [
+  {
+   "en": "First, we compare our given number with the standard form $z = x + iy$ to separate the real part $x = 8$ and the imaginary part $y = -6$. Knowing these two values is essential because our square root formula depends directly on them.",
+   "ur": "سب سے پہلے ہم دیے گئے نمبر کا موازنہ معیاری شکل $z = x + iy$ سے کرتے ہیں تاکہ حقیقی حصہ $x = 8$ اور خیالی حصہ $y = -6$ الگ ہو جائیں۔ ان دونوں قیمتوں کو جاننا ضروری ہے کیونکہ ہمارا جزر المربع کا فارمولا براہِ راست انہی پر منحصر ہے۔"
+  },
+  {
+   "en": "Next, we apply the modulus definition $|z| = \\sqrt{x^2 + y^2}$ to find the magnitude of the complex number. Getting a clean whole number like $10$ tells us that our square roots will also be neat numbers.",
+   "ur": "اس کے بعد، ہم کمپلیکس نمبر کی مقدار معلوم کرنے کے لیے ماڈیولس کی تعریف $|z| = \\sqrt{x^2 + y^2}$ استعمال کرتے ہیں۔ $10$ جیسا پورا نمبر ملنا ہمیں بتاتا ہے کہ ہمارے جزر المربع بھی سادہ نمبرز ہوں گے۔"
+  },
+  {
+   "en": "Instead of assuming an unknown root and solving equations, we use this direct formula for the square root of a complex number. The term $\\frac{y}{|y|}$ simply decides the middle sign based on whether the imaginary part $y$ is positive or negative.",
+   "ur": "ایک نامعلوم جزر فرض کرنے اور مساواتیں حل کرنے کے بجائے، ہم کمپلیکس نمبر کے جزر المربع کے لیے یہ براہِ راست فارمولا استعمال کرتے ہیں۔ اس میں $\\frac{y}{|y|}$ کا حصہ صرف خیالی حصے $y$ کے مثبت یا منفی ہونے کی بنیاد پر درمیانی علامت کا فیصلہ کرتا ہے۔"
+  },
+  {
+   "en": "Now we plug in our modulus $|z| = 10$ and real part $x = 8$ into the formula. Because our imaginary part $y = -6$ is less than $0$, the middle sign between the real and imaginary parts becomes minus.",
+   "ur": "اب ہم فارمولے میں اپنا ماڈیولس $|z| = 10$ اور حقیقی حصہ $x = 8$ درج کرتے ہیں۔ چونکہ ہمارا خیالی حصہ $y = -6$ صفر سے چھوٹا ہے، اس لیے حقیقی اور خیالی حصوں کے درمیان علامت منفی ہو جاتی ہے۔"
+  },
+  {
+   "en": "We simplify the fractions inside the square roots to get $\\sqrt{9}$ and $\\sqrt{1}$, which easily evaluate to $3$ and $1$. This gives us the compact form $\\pm(3 - i)$ for our required square roots.",
+   "ur": "ہم جزر کے اندر موجود کسر کو مختصر کر کے $\\sqrt{9}$ اور $\\sqrt{1}$ حاصل کرتے ہیں، جو آسانی سے $3$ اور $1$ بن جاتے ہیں۔ اس سے ہمیں اپنے مطلوبہ جزر المربع کی مختصر شکل $\\pm(3 - i)$ مل جاتی ہے۔"
+  },
+  {
+   "en": "Just like positive real numbers, every non-zero complex number has two square roots that are exact negatives of each other. Expanding the $\\pm$ sign gives us both answers clearly as $3 - i$ and $-3 + i$.",
+   "ur": "مثبت حقیقی نمبروں کی طرح، ہر غیر صفر کمپلیکس نمبر کے دو جزر المربع ہوتے ہیں جو ایک دوسرے کے منفی ہوتے ہیں۔ $\\pm$ کی علامت کو کھولنے سے ہمیں دونوں جوابات واضح طور پر $3 - i$ اور $-3 + i$ کی صورت میں مل جاتے ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $\\pm(3 - i)$ means that if you take either $3 - i$ or $-3 + i$ and square it, you will get back our original complex number $8 - 6i$. You can easily check this by expanding $(3 - i)^2 = (3)^2 - 2(3)(i) + i^2 = 9 - 6i - 1 = 8 - 6i$.",
+  "ur": "حتمی جواب $\\pm(3 - i)$ کا مطلب یہ ہے کہ اگر آپ $3 - i$ یا $-3 + i$ میں سے کسی ایک کا بھی مربع لیں، تو آپ کو اصل کمپلیکس نمبر $8 - 6i$ واپس مل جائے گا۔ آپ $(3 - i)^2$ کو کھول کر باآسانی اس کی پڑتال کر سکتے ہیں، جو کہ $8 - 6i$ ہی بنتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

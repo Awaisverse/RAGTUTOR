@@ -1,0 +1,35 @@
+{
+ "item": "c11-ex1.5-q6",
+ "label": "i",
+ "answer_ref": "proved: $z_1 z_2 = r_1 r_2 \\operatorname{cis}(\\theta_1 + \\theta_2)$",
+ "math": [
+  "z_1 = r_1(\\cos\\theta_1 + i\\sin\\theta_1),\\quad z_2 = r_2(\\cos\\theta_2 + i\\sin\\theta_2)",
+  "z_1 z_2 = r_1 r_2\\left[(\\cos\\theta_1\\cos\\theta_2 - \\sin\\theta_1\\sin\\theta_2) + i(\\sin\\theta_1\\cos\\theta_2 + \\cos\\theta_1\\sin\\theta_2)\\right]",
+  "= r_1 r_2\\left[\\cos(\\theta_1 + \\theta_2) + i\\sin(\\theta_1 + \\theta_2)\\right]",
+  "\\therefore\\ \\operatorname{Arg}(z_1 z_2) = \\theta_1 + \\theta_2 = \\operatorname{Arg} z_1 + \\operatorname{Arg} z_2"
+ ],
+ "why": [
+  {
+   "en": "Since the question is about the arguments (angles) of complex numbers, we start by using the definition of polar form. This brings the arguments $\\theta_1$ and $\\theta_2$ directly into our equations so we can work with them.",
+   "ur": "چونکہ یہ سوال مخلوط اعداد کے آرگومنٹس (زاویوں) کے بارے میں ہے، اس لیے ہم قطبی شکل (polar form) کی تعریف سے شروعات کرتے ہیں۔ اس سے آرگومنٹس $\\theta_1$ اور $\\theta_2$ براہِ راست ہماری مساوات میں آ جاتے ہیں تاکہ ہم ان پر عمل کر سکیں۔"
+  },
+  {
+   "en": "To find the argument of the product $z_1 z_2$, we first need to actually multiply the two polar forms together using standard algebra and the rule $i^2 = -1$. Grouping the real and imaginary parts separately sets us up to recognize familiar trigonometric patterns.",
+   "ur": "حاصلِ ضرب $z_1 z_2$ کا آرگومنٹ معلوم کرنے کے لیے، ہمیں پہلے عام الجبرا اور $i^2 = -1$ کے اصول کا استعمال کرتے ہوئے دونوں قطبی شکلوں کو آپس میں ضرب دینا ہوگا۔ حقیقی اور خیالی حصوں کو الگ الگ کرنے سے ہمیں جانے پہچانے مثلثیاتی فارمولے پہچاننے میں مدد ملے گی۔"
+  },
+  {
+   "en": "Here we apply the fundamental trigonometric addition formulas for cosine and sine to simplify the brackets. This step is the heart of the proof because it combines the two separate angles into a single angle, $\\theta_1 + \\theta_2$, putting the product $z_1 z_2$ back into standard polar form.",
+   "ur": "یہاں ہم بریکٹوں کو مختصر کرنے کے لیے کوسائن اور سائن کے بنیادی مثلثیاتی جمع کے فارمولے استعمال کرتے ہیں۔ یہ قدم اس ثبوت کی جان ہے کیونکہ یہ دو الگ الگ زاویوں کو ملا کر ایک زاویہ $\\theta_1 + \\theta_2$ بنا دیتا ہے، جس سے حاصلِ ضرب $z_1 z_2$ واپس معیاری قطبی شکل میں آ جاتا ہے۔"
+  },
+  {
+   "en": "By looking at the new polar form from the previous step, we can read the angle of $z_1 z_2$ directly from the definition of argument. Replacing $\\theta_1$ and $\\theta_2$ with their original names completes the proof.",
+   "ur": "پچھلے قدم سے حاصل ہونے والی نئی قطبی شکل کو دیکھ کر، ہم آرگومنٹ کی تعریف کے مطابق $z_1 z_2$ کا زاویہ براہِ راست پڑھ سکتے ہیں۔ $\\theta_1$ اور $\\theta_2$ کی جگہ ان کی اصل قیمتیں واپس رکھنے سے ہمارا ثبوت مکمل ہو جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This result means that when you multiply two complex numbers, their angles (arguments) simply add together, much like how logarithms turn multiplication into addition. Geometrically, multiplying $z_1$ by $z_2$ rotates the position of $z_1$ by the angle of $z_2$ (up to a multiple of $2\\pi$).",
+  "ur": "اس نتیجے کا مطلب یہ ہے کہ جب آپ دو مخلوط اعداد کو ضرب دیتے ہیں، تو ان کے زاویے (آرگومنٹس) آپس میں جمع ہو جاتے ہیں، بالکل اسی طرح جیسے لوگارتھم ضرب کو جمع میں بدل دیتا ہے۔ جیومیٹری کے لحاظ سے، $z_1$ کو $z_2$ سے ضرب دینے سے $z_1$ کی پوزیشن $z_2$ کے زاویے کے برابر گھوم جاتی ہے ($2\\pi$ کے اضعاف کی حد تک)۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

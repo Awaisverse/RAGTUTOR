@@ -1,0 +1,50 @@
+{
+ "item": "c11-ex1.2-q3",
+ "label": "i",
+ "answer_ref": "$x = 3 \\sqrt{5},\\ y = 2 \\sqrt{5}$ or $x = - 3 \\sqrt{5},\\ y = - 2 \\sqrt{5}$",
+ "math": [
+  "(x + iy)^2 = 25 + 60i \\Rightarrow x + iy = \\pm\\sqrt{25 + 60i}",
+  "z = 25 + 60i:\\quad a = 25,\\ b = 60",
+  "|z| = \\sqrt{a^2 + b^2} = \\sqrt{(25)^2 + (60)^2} = \\sqrt{4225} = 65",
+  "\\sqrt{z} = \\pm\\left(\\sqrt{\\frac{|z| + a}{2}} + i\\,\\frac{b}{|b|}\\sqrt{\\frac{|z| - a}{2}}\\right)",
+  "\\sqrt{25 + 60i} = \\pm\\left(\\sqrt{\\frac{65 + (25)}{2}} + i\\sqrt{\\frac{65 - (25)}{2}}\\right)",
+  "= \\pm\\left(\\sqrt{45} + i\\sqrt{20}\\right) = \\pm\\left(3 \\sqrt{5} + 2 \\sqrt{5}i\\right)",
+  "x + iy = \\pm\\left(3 \\sqrt{5} + 2 \\sqrt{5}i\\right) \\Rightarrow x = \\pm 3 \\sqrt{5},\\ y = \\pm 2 \\sqrt{5}"
+ ],
+ "why": [
+  {
+   "en": "To isolate the unknown expression $x+iy$, we undo the square on the left side by taking the square root of both sides. This tells us that finding $x$ and $y$ comes down to finding the square roots of the complex number $25+60i$, keeping both the positive and negative roots.",
+   "ur": "مطلوبہ عبارت $x+iy$ کو الگ کرنے کے لیے، ہم بائیں طرف موجود مربع کو ختم کرنے کی خاطر دونوں طرف جذر (square root) لیتے ہیں۔ اس سے ہمیں پتہ چلتا ہے کہ $x$ اور $y$ معلوم کرنے کے لیے ہمیں کمپلیکس نمبر $25+60i$ کا جذر معلوم کرنا ہوگا، جس کے ساتھ مثبت اور منفی دونوں علامتیں آئیں گی۔"
+  },
+  {
+   "en": "We compare our complex number $z = 25+60i$ with the standard form $a+ib$ to clearly separate its real and imaginary parts. Identifying $a=25$ and $b=60$ gives us the exact numbers we need to plug into the square-root formula.",
+   "ur": "ہم اپنے کمپلیکس نمبر $z = 25+60i$ کا معیاری شکل $a+ib$ سے موازنہ کرتے ہیں تاکہ اس کے حقیقی اور خیالی حصوں کو واضح طور پر الگ کیا جا سکے۔ $a=25$ اور $b=60$ کی شناخت ہمیں وہی اعداد دیتی ہے جنہیں ہم نے جذر کے فارمولے میں درج کرنا ہے۔"
+  },
+  {
+   "en": "The formula for the square root of a complex number requires its modulus $|z|$, which represents its distance from the origin. Using the definition $|z| = \\sqrt{a^2+b^2}$, we find that the modulus is a neat whole number, $65$, which will make the next calculations very clean.",
+   "ur": "کمپلیکس نمبر کے جذر کے فارمولے کے لیے اس کا ماڈولس (modulus) $|z|$ درکار ہوتا ہے۔ تعریف $|z| = \\sqrt{a^2+b^2}$ کو استعمال کرتے ہوئے، ہمیں ماڈولس ایک مکمل عدد $65$ ملتا ہے، جو اگلے مراحل کے حساب کتاب کو بہت آسان بنا دے گا۔"
+  },
+  {
+   "en": "Instead of expanding $(x+iy)^2$ and solving simultaneous equations, we recall the direct textbook formula for the square root of a complex number $z$. The term $\\frac{b}{|b|}$ simply ensures that the sign between the real and imaginary parts of the root matches the sign of the imaginary part $b$.",
+   "ur": "$(x+iy)^2$ کو کھولنے اور مساواتوں کو حل کرنے کے بجائے، ہم کمپلیکس نمبر $z$ کے جذر کے لیے کتاب کا براہِ راست فارمولا لکھتے ہیں۔ اس میں $\\frac{b}{|b|}$ کا حصہ صرف یہ یقینی بناتا ہے کہ جذر کے حقیقی اور خیالی حصوں کے درمیان وہی علامت آئے جو خیالی حصے $b$ کی ہے۔"
+  },
+  {
+   "en": "Now we put our known values $|z|=65$ and $a=25$ into the formula, and since $b=60$ is positive, the middle sign becomes $+$. This turns the abstract formula into simple arithmetic expressions under the square roots.",
+   "ur": "اب ہم اپنی معلوم کردہ قیمتیں $|z|=65$ اور $a=25$ فارمولے میں درج کرتے ہیں، اور چونکہ $b=60$ مثبت ہے، اس لیے درمیان والی علامت $+$ ہو جاتی ہے۔ اس سے یہ فارمولا جذر کے نیچے سادہ حسابی عبارتوں میں بدل جاتا ہے۔"
+  },
+  {
+   "en": "We simplify the fractions inside the radicals to get $\\sqrt{45}$ and $\\sqrt{20}$, and then factor out perfect squares to write them in simplest surd form. This gives us the exact rectangular form of the square roots: $\\pm(3\\sqrt{5} + 2\\sqrt{5}i)$.",
+   "ur": "ہم جذر کے اندر موجود کسروں کو مختصر کر کے $\\sqrt{45}$ اور $\\sqrt{20}$ حاصل کرتے ہیں، اور پھر مکمل مربع اجزاء کو باہر نکال کر انہیں سادہ ترین شکل میں لکھتے ہیں۔ اس سے ہمیں جذر کی واضح معیاری شکل $\\pm(3\\sqrt{5} + 2\\sqrt{5}i)$ مل جاتی ہے۔"
+  },
+  {
+   "en": "By the definition of equality of complex numbers, two complex numbers are equal only if their real parts are equal and their imaginary parts are equal. Equating the real part $x$ and imaginary part $y$ on both sides directly gives us our required values.",
+   "ur": "کمپلیکس نمبروں کی برابری کی تعریف کے مطابق، دو کمپلیکس نمبر تبھی برابر ہوتے ہیں جب ان کے حقیقی حصے آپس میں اور خیالی حصے آپس میں برابر ہوں۔ دونوں طرف سے حقیقی حصے $x$ اور خیالی حصے $y$ کا موازنہ کرنے سے ہمیں براہِ راست مطلوبہ قیمتیں مل جاتی ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer gives two pairs of real values for $x$ and $y$: either both are positive ($x = 3\\sqrt{5}, y = 2\\sqrt{5}$) or both are negative ($x = -3\\sqrt{5}, y = -2\\sqrt{5}$). This means the complex number $25+60i$ has two square roots that are negatives of each other, and you can easily verify this by squaring $\\pm(3\\sqrt{5} + 2\\sqrt{5}i)$ to see that it gives back $45 - 20 + 60i = 25+60i$.",
+  "ur": "آخری جواب ہمیں $x$ اور $y$ کی حقیقی قیمتوں کے دو جوڑے دیتا ہے: یا تو دونوں مثبت ہیں ($x = 3\\sqrt{5}, y = 2\\sqrt{5}$) یا دونوں منفی ہیں ($x = -3\\sqrt{5}, y = -2\\sqrt{5}$)। اس کا مطلب ہے کہ کمپلیکس نمبر $25+60i$ کے دو جذر ہیں جو ایک دوسرے کے منفی ہیں، اور آپ $\\pm(3\\sqrt{5} + 2\\sqrt{5}i)$ کا مربع لے کر آسانی سے اس کی تصدیق کر سکتے ہیں کہ اس سے واپس $25+60i$ ہی حاصل ہوتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

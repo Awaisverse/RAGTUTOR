@@ -1,0 +1,40 @@
+{
+ "item": "c11-ex1.5-q21",
+ "label": "",
+ "answer_ref": "encrypted: $51 - 51i,\\ 63 - 63i,\\ 27 - 27i,\\ 78 - 78i$; decrypted: QUIZ",
+ "math": [
+  "A = 1,\\ B = 2,\\ \\dots,\\ Z = 26",
+  "\\begin{array}{ll}Q = 17: & 51 - 51i \\\\ U = 21: & 63 - 63i \\\\ I = 9: & 27 - 27i \\\\ Z = 26: & 78 - 78i\\end{array}",
+  "k^{-1} = \\frac{1}{3 - 3i} = \\frac{3 + 3i}{18} = \\frac{1}{6} + \\frac{1}{6}i",
+  "\\left(51 - 51i\\right) \\times \\frac{3 + 3i}{18} = \\frac{306}{18} = 17 \\to Q",
+  "\\begin{array}{ll}\\left(51 - 51i\\right) \\times k^{-1} = 17 & \\to Q \\\\ \\left(63 - 63i\\right) \\times k^{-1} = 21 & \\to U \\\\ \\left(27 - 27i\\right) \\times k^{-1} = 9 & \\to I \\\\ \\left(78 - 78i\\right) \\times k^{-1} = 26 & \\to Z\\end{array}"
+ ],
+ "why": [
+  {
+   "en": "In mathematics, we cannot multiply letters directly by a complex number, so we first use a standard substitution rule to convert the alphabet into numbers from $1$ to $26$. This gives us the numerical values $17, 21, 9,$ and $26$ for the letters of \"QUIZ\", making them ready for algebraic operations.",
+   "ur": "ریاضی میں ہم حروف کو براہِ راست کسی مختلط عدد (complex number) سے ضرب نہیں دے سکتے، اس لیے ہم پہلے ایک معیاری اصول کے تحت حروفِ تہجی کو $1$ سے $26$ تک کے اعداد میں بدلتے ہیں۔ اس سے ہمیں لفظ \"QUIZ\" کے حروف کے لیے $17, 21, 9,$ اور $26$ کی عددی قیمتیں مل جاتی ہیں، جن پر اب ہم حسابی عمل کر سکتے ہیں۔"
+  },
+  {
+   "en": "Encryption means hiding our original data using a mathematical rule—here, by scaling each letter's number with the complex key $k = 3 - 3i$. The resulting four complex numbers are the secret coded message that replaces the word \"QUIZ\".",
+   "ur": "انکرپشن (Encryption) کا مطلب اپنے اصل ڈیٹا کو کسی ریاضیاتی اصول کی مدد سے چھپانا ہے—یہاں ہم ہر حرف کے عدد کو دی گئی کلید (key) $k = 3 - 3i$ سے ضرب دے رہے ہیں۔ نتیجے میں ملنے والے چار مختلط اعداد وہ خفیہ کوڈ ہیں جو لفظ \"QUIZ\" کی جگہ لے لیتے ہیں۔"
+  },
+  {
+   "en": "To undo multiplication by $k$, we need its multiplicative inverse $k^{-1}$, which we find in standard $a + bi$ form by multiplying the numerator and denominator by the conjugate $3 + 3i$. This gives us the exact unlocking key, $\\frac{1}{6} + \\frac{1}{6}i$, needed to reverse the encryption.",
+   "ur": "$k$ کی ضرب کے اثر کو ختم کرنے کے لیے ہمیں اس کے ضربی معکوس (multiplicative inverse) $k^{-1}$ کی ضرورت ہے، جسے معیاری شکل $a + bi$ میں لانے کے لیے ہم شمار کنندہ اور مخرج کو زوج (conjugate) $3 + 3i$ سے ضرب دیتے ہیں۔ اس سے ہمیں وہی ان لاک کرنے والی کلید $\\frac{1}{6} + \\frac{1}{6}i$ مل جاتی ہے جو خفیہ کوڈ کو واپس اصل حالت میں لانے کے لیے ضروری ہے۔"
+  },
+  {
+   "en": "We test our unlocking key on the first coded number, $51 - 51i$, using the basic complex number property $i^2 = -1$. Because a number and its inverse cancel each other out, all imaginary parts vanish and we successfully recover the real number $17$, which corresponds to the first letter 'Q'.",
+   "ur": "ہم اپنی ان لاک کرنے والی کلید کو پہلے خفیہ عدد $51 - 51i$ پر آزماتے ہیں اور مختلط اعداد کی بنیادی خاصیت $i^2 = -1$ استعمال کرتے ہیں۔ چونکہ ایک عدد اور اس کا معکوس ایک دوسرے کے اثر کو زائل کر دیتے ہیں، اس لیے تمام خیالی حصے (imaginary parts) ختم ہو جاتے ہیں اور ہمیں کامیابی سے حقیقی عدد $17$ واپس مل جاتا ہے، جو پہلے حرف 'Q' کو ظاہر کرتا ہے۔"
+  },
+  {
+   "en": "Applying the same inverse multiplication to the remaining three coded complex numbers removes the effect of the key $k$ from the entire message. Translating the resulting plain numbers $17, 21, 9,$ and $26$ back into alphabet positions restores all the letters in order.",
+   "ur": "باقی تین خفیہ مختلط اعداد کو بھی اسی معکوس کلید سے ضرب دینے سے پورے پیغام سے کلید $k$ کا اثر ختم ہو جاتا ہے۔ حاصل ہونے والے سادہ اعداد $17, 21, 9,$ اور $26$ کو واپس حروفِ تہجی کی ترتیب میں بدلنے سے تمام اصل حروف اپنی جگہ پر بحال ہو جاتے ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer shows the two stages of secure communication: the word \"QUIZ\" is safely disguised as the sequence of complex numbers $51 - 51i,\\ 63 - 63i,\\ 27 - 27i,\\ 78 - 78i$, and then completely recovered using the inverse key. The fact that our decryption returned the exact original word \"QUIZ\" with no imaginary parts left over automatically verifies that both our encryption and inverse calculations are completely correct.",
+  "ur": "حتمی جواب محفوظ پیغام رسانی کے دو مراحل کو ظاہر کرتا ہے: لفظ \"QUIZ\" کو پہلے مختلط اعداد کے سلسلے $51 - 51i,\\ 63 - 63i,\\ 27 - 27i,\\ 78 - 78i$ کے طور پر خفیہ بنایا گیا، اور پھر معکوس کلید کی مدد سے اسے مکمل طور پر دوبارہ حاصل کر لیا گیا۔ یہ حقیقت کہ ہمارے ڈی کرپشن کے عمل سے بغیر کسی خیالی حصے (imaginary part) کے بالکل اصل لفظ \"QUIZ\" واپس مل گیا، خودبخود اس بات کی تصدیق کرتی ہے کہ ہماری انکرپشن اور معکوس (inverse) دونوں کے حساب بالکل درست ہیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

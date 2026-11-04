@@ -1,0 +1,40 @@
+{
+ "item": "c11-ex1.4-q1",
+ "label": "iv",
+ "answer_ref": "$4,\\ -2 + 2 \\sqrt{3}i,\\ -2 - 2 \\sqrt{3}i$",
+ "math": [
+  "x^3 = 64 \\Rightarrow x^3 - 64 = 0 \\Rightarrow x^3 - 4^3 = 0",
+  "(x - 4)\\left(x^2 + 4x + 16\\right) = 0",
+  "x = 4 \\quad\\text{or}\\quad x = \\frac{-4 \\pm \\sqrt{16 - 64}}{2} = \\frac{-4 \\pm \\sqrt{-48}}{2}",
+  "x = -2 + 2 \\sqrt{3}i,\\quad -2 - 2 \\sqrt{3}i",
+  "\\text{Cube roots: } 4,\\ -2 + 2 \\sqrt{3}i,\\ -2 - 2 \\sqrt{3}i"
+ ],
+ "why": [
+  {
+   "en": "By the definition of a cube root, if $x$ is the cube root of $64$, then its cube must equal $64$. We move $64$ to the left and write it as $4^3$ so we can apply the difference of cubes algebraic formula in the next step.",
+   "ur": "کیوب روٹ کی تعریف کے مطابق، اگر $x$ عدد $64$ کا کیوب روٹ ہے تو اس کا مکعب $64$ کے برابر ہونا چاہیے۔ ہم $64$ کو بائیں طرف لے جا کر $4^3$ لکھتے ہیں تاکہ اگلے مرحلے میں دو مکعبوں کے فرق والا الجبری فارمولا لگا سکیں۔"
+  },
+  {
+   "en": "Applying the difference of cubes identity breaks our cubic equation into a simple linear factor and a quadratic factor. This is very helpful because a degree-$3$ equation is now split into smaller parts that we already know how to solve.",
+   "ur": "مکعبوں کے فرق کا فارمولا لگانے سے ہماری درجہ سوم کی مساوات ایک یک درجی اور ایک دو درجی فیکٹر میں تقسیم ہو جاتی ہے۔ یہ بہت مددگار ہے کیونکہ اب یہ بڑی مساوات ایسے چھوٹے حصوں میں بٹ گئی ہے جنہیں حل کرنا ہم پہلے سے جانتے ہیں۔"
+  },
+  {
+   "en": "By the zero-product property, either the first factor or the second factor must be zero. Setting the first factor to zero immediately gives our real root $x = 4$, while the quadratic formula helps us find the remaining two roots which turn out to involve the square root of a negative number, $\\sqrt{-48}$.",
+   "ur": "ضربی خاصیت کے مطابق، پہلا یا دوسرا فیکٹر صفر کے برابر ہونا چاہیے۔ پہلے فیکٹر کو صفر رکھنے سے ہمیں فوراً حقیقی روٹ $x = 4$ مل جاتا ہے، جبکہ دو درجی فارمولا باقی دو روٹس نکالنے میں مدد دیتا ہے جن میں منفی عدد کا جزر $\\sqrt{-48}$ آتا ہے۔"
+  },
+  {
+   "en": "Using the definition of the imaginary unit $i = \\sqrt{-1}$, we rewrite $\\sqrt{-48}$ as $4\\sqrt{3}i$ and divide by $2$ to simplify the expression. This gives us the two complex cube roots in standard $a + bi$ form, which also correspond to $4\\omega$ and $4\\omega^2$.",
+   "ur": "خیالی اکائی $i = \\sqrt{-1}$ کی تعریف استعمال کرتے ہوئے ہم $\\sqrt{-48}$ کو $4\\sqrt{3}i$ لکھتے ہیں اور عبارت کو مختصر کرنے کے لیے $2$ پر تقسیم کرتے ہیں۔ اس سے ہمیں دو مختلط کیوب روٹس معیاری شکل $a + bi$ میں مل جاتے ہیں، جو کہ $4\\omega$ اور $4\\omega^2$ کے برابر بھی ہیں۔"
+  },
+  {
+   "en": "Finally, we collect all three solutions together in one list. A cubic equation always has three roots, so listing the one real root and two complex conjugate roots completes our solution.",
+   "ur": "آخر میں، ہم تینوں حل اکٹھے ایک فہرست میں لکھ لیتے ہیں۔ درجہ سوم کی مساوات کے ہمیشہ تین روٹس ہوتے ہیں، اس لیے ایک حقیقی اور دو مختلط روٹس کو ملا کر لکھنے سے ہمارا سوال مکمل ہو جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "These three numbers ($4$, $-2 + 2\\sqrt{3}i$, and $-2 - 2\\sqrt{3}i$) are the only values in the complex number system that, when multiplied by themselves three times (cubed), give $64$. You can check this by cubing any of them—for instance, $4^3 = 64$, and adding all three roots together gives $0$, which is a known property of cube roots.",
+  "ur": "یہ تینوں اعداد ($4$، $-2 + 2\\sqrt{3}i$، اور $-2 - 2\\sqrt{3}i$) مختلط اعداد کے نظام میں وہ واحد قیمتیں ہیں جن کا مکعب (تین بار آپس میں ضرب) لیا جائے تو جواب $64$ آتا ہے۔ آپ ان میں سے کسی کا بھی مکعب لے کر پڑتال کر سکتے ہیں، مثلاً $4^3 = 64$، اور ان تینوں روٹس کو جمع کرنے سے $0$ حاصل ہوتا ہے جو کہ کیوب روٹس کی ایک اہم خاصیت ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

@@ -1,0 +1,30 @@
+{
+ "item": "c11-ex1.1-q7",
+ "label": "",
+ "answer_ref": "proved: the sum is $i^n \\cdot 0 = 0$",
+ "math": [
+  "i^{n+1} + i^{n+2} + i^{n+3} + i^{n+4} = i^n\\left(i + i^2 + i^3 + i^4\\right)",
+  "= i^n\\left(i - 1 - i + 1\\right)",
+  "= i^n \\cdot 0 = 0"
+ ],
+ "why": [
+  {
+   "en": "Using the law of exponents ($i^{n+k} = i^n \\cdot i^k$), we pull $i^n$ out of all four terms as a common factor. This separates the unknown variable $n$ from the fixed powers of $i$, leaving a simple expression inside the bracket that we can easily evaluate.",
+   "ur": "قوت نما کے قانون ($i^{n+k} = i^n \\cdot i^k$) کو استعمال کرتے ہوئے، ہم تمام چاروں رقموں میں سے $i^n$ کو مشترک (کامن) نکال لیتے ہیں۔ اس سے نامعلوم متغیر $n$ الگ ہو جاتا ہے اور بریکٹ کے اندر $i$ کی سادہ طاقتیں رہ جاتی ہیں جنہیں ہم آسانی سے حل کر سکتے ہیں۔"
+  },
+  {
+   "en": "Here we apply the basic definition of the imaginary unit $i$, where $i^2 = -1$, which also gives $i^3 = -i$ and $i^4 = 1$. Substituting these known values removes the higher powers of $i$ and sets up the terms inside the bracket to cancel each other out.",
+   "ur": "یہاں ہم ایوٹا ($i$) کی بنیادی تعریف استعمال کرتے ہیں، جہاں $i^2 = -1$ ہے، جس سے ہمیں $i^3 = -i$ اور $i^4 = 1$ کی قیمتیں ملتی ہیں۔ یہ معلوم قیمتیں درج کرنے سے $i$ کی بڑی طاقتیں ختم ہو جاتی ہیں اور بریکٹ کے اندر موجود رقمیں ایک دوسرے کو کاٹنے کے لیے تیار ہو جاتی ہیں۔"
+  },
+  {
+   "en": "Inside the bracket, $+i$ cancels with $-i$ and $-1$ cancels with $+1$, leaving $0$, and by the multiplication property of zero, $i^n$ multiplied by $0$ is always $0$. This completes our proof, showing that the expression equals $0$ no matter what natural number $n$ is.",
+   "ur": "بریکٹ کے اندر، $+i$ اور $-i$ آپس میں کٹ جاتے ہیں، اور $-1$ اور $+1$ بھی کٹ کر $0$ بنا دیتے ہیں، اور صفر کی ضربی خاصیت کے مطابق $i^n$ جب $0$ سے ضرب کھاتا ہے تو جواب ہمیشہ $0$ آتا ہے۔ اس سے ہمارا ثبوت مکمل ہو جاتا ہے کہ $n$ کوئی بھی قدرتی عدد ہو، اس جملے کا جواب ہمیشہ $0$ ہی ہو گا۔"
+  }
+ ],
+ "meaning": {
+  "en": "This result proves an important periodic property of complex numbers: the sum of any four consecutive powers of $i$ is always $0$ for any natural number $n \\in N$. You can easily check this by taking $n = 1$, which gives $i^2 + i^3 + i^4 + i^5 = i(i + i^2 + i^3 + i^4) = 0$.",
+  "ur": "یہ نتیجہ مخلوط اعداد کی ایک اہم خاصیت کو ثابت کرتا ہے کہ کسی بھی قدرتی عدد $n \\in N$ کے لیے، $i$ کی کسی بھی چار لگاتار طاقتوں کا مجموعہ ہمیشہ $0$ ہوتا ہے۔ آپ $n = 1$ رکھ کر اس کی آسانی سے تصدیق کر سکتے ہیں، جس سے بریکٹ کے اندر وہی چار طاقتیں ($i + i^2 + i^3 + i^4$) بنتی ہیں جن کا مجموعہ $0$ ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

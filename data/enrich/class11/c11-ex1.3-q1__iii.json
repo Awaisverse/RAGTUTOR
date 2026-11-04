@@ -1,0 +1,55 @@
+{
+ "item": "c11-ex1.3-q1",
+ "label": "iii",
+ "answer_ref": "$3(x + iy)(x - iy)$",
+ "steps": [
+  {
+   "math": "3x^2 + 3y^2",
+   "en": "We are given the algebraic expression $3x^2 + 3y^2$ and asked to factorize it using complex numbers.",
+   "ur": "ہمیں الجبری جملہ $3x^2 + 3y^2$ دیا گیا ہے اور ہمیں اسے مخلوط اعداد (complex numbers) کی مدد سے اجزائے ضربی میں تحلیل کرنا ہے۔"
+  },
+  {
+   "math": "3x^2 + 3y^2 = 3(x^2 + y^2)",
+   "en": "First, take out the common factor $3$ from both terms.",
+   "ur": "سب سے پہلے، دونوں رقموں میں سے مشترک جزو ضربی $3$ کو باہر نکالیں۔",
+   "check": [
+    "expand(3*(x**2 + y**2)) == 3*x**2 + 3*y**2"
+   ]
+  },
+  {
+   "math": "= 3\\left(x^2 - (-1)y^2\\right)",
+   "en": "To apply the difference of squares formula, rewrite the plus sign $+$ as $-(-1)$.",
+   "ur": "مربعوں کے فرق کا کلیہ استعمال کرنے کے لیے، جمع کی علامت $+$ کو $-(-1)$ کے طور پر لکھیں۔",
+   "check": [
+    "expand(3*(x**2 - (-1)*y**2)) == 3*x**2 + 3*y**2"
+   ]
+  },
+  {
+   "math": "= 3\\left(x^2 - i^2 y^2\\right)",
+   "en": "Since we know from complex numbers that $i^2 = -1$, substitute $i^2$ in place of $-1$.",
+   "ur": "چونکہ ہم مخلوط اعداد سے جانتے ہیں کہ $i^2 = -1$ ہوتا ہے، اس لیے $-1$ کی جگہ $i^2$ درج کریں۔",
+   "check": [
+    "expand(3*(x**2 - I**2 * y**2)) == 3*x**2 + 3*y**2"
+   ]
+  },
+  {
+   "math": "= 3\\left[x^2 - (iy)^2\\right]",
+   "en": "Write the term $i^2 y^2$ as a single square $(iy)^2$ so that the expression inside the brackets becomes a difference of two squares.",
+   "ur": "رقم $i^2 y^2$ کو ایک مکمل مربع $(iy)^2$ کی صورت میں لکھیں تاکہ بریکٹ کے اندر والا جملہ دو مربعوں کے فرق کی شکل اختیار کر لے۔",
+   "check": [
+    "expand(3*(x**2 - (I*y)**2)) == 3*x**2 + 3*y**2"
+   ]
+  },
+  {
+   "math": "= 3(x + iy)(x - iy)",
+   "en": "Now, apply the algebraic identity $A^2 - B^2 = (A + B)(A - B)$ where $A = x$ and $B = iy$. Thus, the required factorization is $3(x + iy)(x - iy)$.",
+   "ur": "اب الجبری کلیہ $A^2 - B^2 = (A + B)(A - B)$ استعمال کریں، جہاں $A = x$ اور $B = iy$ ہے۔ پس مطلوبہ اجزائے ضربی $3(x + iy)(x - iy)$ ہیں۔",
+   "check": [
+    "expand(3*(x + I*y)*(x - I*y)) == 3*x**2 + 3*y**2"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-04"
+}

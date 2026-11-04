@@ -1,0 +1,50 @@
+{
+ "item": "c11-ex1.5-q5",
+ "label": "ii",
+ "answer_ref": "$\\frac{9}{2}\\left(\\sqrt{6} + \\sqrt{2}\\right) - \\frac{9}{2}\\left(\\sqrt{6} - \\sqrt{2}\\right)i \\approx 17.39 - 4.66i$",
+ "math": [
+  "z_1 = 7\\left(\\cos\\frac{23\\pi}{12} + i\\sin\\frac{23\\pi}{12}\\right),\\quad z_2 = 11\\left(\\cos\\frac{11\\pi}{12} + i\\sin\\frac{11\\pi}{12}\\right)",
+  "\\cos\\frac{23\\pi}{12} = \\cos\\left(2\\pi - \\frac{\\pi}{12}\\right) = \\cos\\frac{\\pi}{12},\\quad \\sin\\frac{23\\pi}{12} = \\sin\\left(2\\pi - \\frac{\\pi}{12}\\right) = -\\sin\\frac{\\pi}{12}",
+  "\\cos\\frac{11\\pi}{12} = \\cos\\left(\\pi - \\frac{\\pi}{12}\\right) = -\\cos\\frac{\\pi}{12},\\quad \\sin\\frac{11\\pi}{12} = \\sin\\left(\\pi - \\frac{\\pi}{12}\\right) = \\sin\\frac{\\pi}{12}",
+  "z_1 = 7\\left(\\cos\\frac{\\pi}{12} - i\\sin\\frac{\\pi}{12}\\right),\\quad z_2 = 11\\left(-\\cos\\frac{\\pi}{12} + i\\sin\\frac{\\pi}{12}\\right) = -11\\left(\\cos\\frac{\\pi}{12} - i\\sin\\frac{\\pi}{12}\\right)",
+  "z_1 - z_2 = 7\\left(\\cos\\frac{\\pi}{12} - i\\sin\\frac{\\pi}{12}\\right) - \\left[-11\\left(\\cos\\frac{\\pi}{12} - i\\sin\\frac{\\pi}{12}\\right)\\right] = 18\\left(\\cos\\frac{\\pi}{12} - i\\sin\\frac{\\pi}{12}\\right)",
+  "\\cos\\frac{\\pi}{12} = \\cos 15^\\circ = \\frac{\\sqrt{6} + \\sqrt{2}}{4},\\quad \\sin\\frac{\\pi}{12} = \\sin 15^\\circ = \\frac{\\sqrt{6} - \\sqrt{2}}{4}",
+  "z_1 - z_2 = 18\\left[\\frac{\\sqrt{6} + \\sqrt{2}}{4} - i\\frac{\\sqrt{6} - \\sqrt{2}}{4}\\right] = \\frac{9}{2}\\left(\\sqrt{6} + \\sqrt{2}\\right) - \\frac{9}{2}\\left(\\sqrt{6} - \\sqrt{2}\\right)i \\approx 17.39 - 4.66i"
+ ],
+ "why": [
+  {
+   "en": "We begin by clearly writing down the given complex numbers $z_1$ and $z_2$ in their polar forms so we can see their angles before subtracting them. Notice that the angles $\\frac{23\\pi}{12}$ and $\\frac{11\\pi}{12}$ are different, so we cannot subtract $z_2$ from $z_1$ directly without simplifying the angles first.",
+   "ur": "ہم سب سے پہلے دیے گئے مختلط اعداد $z_1$ اور $z_2$ کو ان کی قطبی شکل (polar form) میں لکھتے ہیں تاکہ تفریق کرنے سے پہلے ان کے زاویوں کو دیکھ سکیں۔ غور کریں کہ زاویے $\\frac{23\\pi}{12}$ اور $\\frac{11\\pi}{12}$ مختلف ہیں، اس لیے ہم زاویوں کو سادہ بنائے بغیر براہِ راست $z_1$ میں سے $z_2$ کو تفریق نہیں کر سکتے۔"
+  },
+  {
+   "en": "Using the allied angles rule for the fourth quadrant ($2\\pi - \\theta$), we rewrite the large angle $\\frac{23\\pi}{12}$ in terms of a much simpler acute angle, $\\frac{\\pi}{12}$. Since cosine is positive and sine is negative in the fourth quadrant, this reduces the trigonometric parts of $z_1$ to $\\cos\\frac{\\pi}{12}$ and $-\\sin\\frac{\\pi}{12}$.",
+   "ur": "چوتھے ربعی (quadrant) کے متعلقہ زاویوں کے اصول ($2\\pi - \\theta$) کو استعمال کرتے ہوئے، ہم بڑے زاویے $\\frac{23\\pi}{12}$ کو ایک سادہ حادہ زاویے $\\frac{\\pi}{12}$ کی شکل میں لکھتے ہیں۔ چونکہ چوتھے ربعی میں $\\cos$ مثبت اور $\\sin$ منفی ہوتا ہے، اس لیے یہ قدم $z_1$ کے مثلثی حصوں کو سادہ بنا کر $\\cos\\frac{\\pi}{12}$ اور $-\\sin\\frac{\\pi}{12}$ میں بدل دیتا ہے۔"
+  },
+  {
+   "en": "Similarly, we apply the second quadrant rule ($\\pi - \\theta$) to the angle $\\frac{11\\pi}{12}$ so that $z_2$ is also expressed using the exact same reference angle $\\frac{\\pi}{12}$. In the second quadrant, cosine is negative and sine is positive, which gives us $-\\cos\\frac{\\pi}{12}$ and $\\sin\\frac{\\pi}{12}$.",
+   "ur": "اسی طرح، ہم زاویہ $\\frac{11\\pi}{12}$ پر دوسرے ربعی کا اصول ($\\pi - \\theta$) لاگو کرتے ہیں تاکہ $z_2$ کو بھی بالکل اسی بنیادی زاویے $\\frac{\\pi}{12}$ کی شکل میں لکھا جا سکے۔ دوسرے ربعی میں $\\cos$ منفی اور $\\sin$ مثبت ہوتا ہے، جس سے ہمیں $-\\cos\\frac{\\pi}{12}$ اور $\\sin\\frac{\\pi}{12}$ ملتے ہیں۔"
+  },
+  {
+   "en": "By putting these simplified values back into $z_1$ and $z_2$ and factoring out $-1$ from $z_2$, both complex numbers now share the exact same bracketed term, $\\left(\\cos\\frac{\\pi}{12} - i\\sin\\frac{\\pi}{12}\\right)$. This clever step makes $z_1$ and $z_2$ like terms, allowing us to subtract them easily without evaluating the trigonometric functions twice.",
+   "ur": "ان سادہ قیمتوں کو واپس $z_1$ اور $z_2$ میں درج کرنے اور $z_2$ میں سے $-1$ مشترک (common) لینے سے، دونوں مختلط اعداد میں بریکٹ کے اندر بالکل ایک جیسی رقم $\\left(\\cos\\frac{\\pi}{12} - i\\sin\\frac{\\pi}{12}\\right)$ آ جاتی ہے۔ یہ ذہین قدم $z_1$ اور $z_2$ کو یکساں رقوم (like terms) بنا دیتا ہے، جس سے ہم مثلثی تفاعل کو دو بار حل کیے بغیر انہیں آسانی سے تفریق کر سکتے ہیں۔"
+  },
+  {
+   "en": "Now that both numbers have the common factor $\\left(\\cos\\frac{\\pi}{12} - i\\sin\\frac{\\pi}{12}\\right)$, we perform the subtraction $z_1 - z_2$ simply by combining their outside coefficients: $7 - (-11) = 18$. This combines the two complex numbers into a single expression before we convert to rectangular form.",
+   "ur": "اب جبکہ دونوں اعداد میں $\\left(\\cos\\frac{\\pi}{12} - i\\sin\\frac{\\pi}{12}\\right)$ مشترک ہے، ہم صرف ان کے باہر والے عددی سروں کو ملا کر تفریق $z_1 - z_2$ کا عمل مکمل کرتے ہیں: $7 - (-11) = 18$۔ یہ قدم معیاری شکل میں تبدیل کرنے سے پہلے دونوں مختلط اعداد کو ملا کر ایک واحد جملہ بنا دیتا ہے۔"
+  },
+  {
+   "en": "To convert our answer from polar form to the required $x + iy$ form, we must eliminate $\\cos\\frac{\\pi}{12}$ and $\\sin\\frac{\\pi}{12}$ by using their known exact algebraic values for $15^\\circ$. Having these surd values ready allows us to write the exact real and imaginary parts without trigonometric functions.",
+   "ur": "اپنے جواب کو قطبی شکل سے مطلوبہ $x + iy$ شکل میں تبدیل کرنے کے لیے، ہمیں $15^\\circ$ کے لیے ان کی معلوم شدہ درست الجبری قیمتیں استعمال کرتے ہوئے $\\cos\\frac{\\pi}{12}$ اور $\\sin\\frac{\\pi}{12}$ کو ختم کرنا ہوگا۔ ان جذری قیمتوں کی مدد سے ہم مثلثی تفاعل کے بغیر حقیقی اور خیالی حصے لکھ سکتے ہیں۔"
+  },
+  {
+   "en": "Finally, we substitute these exact values into our expression and multiply by $18$, reducing the fraction $\\frac{18}{4}$ to $\\frac{9}{2}$. This separates the expression clearly into its real part $x$ and imaginary part $y$, completing the required $x + iy$ form.",
+   "ur": "آخر میں، ہم ان درست قیمتوں کو اپنے جملے میں درج کرتے ہیں اور $18$ سے ضرب دے کر کسر $\\frac{18}{4}$ کو مختصر کر کے $\\frac{9}{2}$ بنا لیتے ہیں۔ اس سے یہ جملہ واضح طور پر اپنے حقیقی حصے $x$ اور خیالی حصے $y$ میں الگ ہو جاتا ہے، اور مطلوبہ $x + iy$ شکل مکمل ہو جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $\\frac{9}{2}\\left(\\sqrt{6} + \\sqrt{2}\\right) - \\frac{9}{2}\\left(\\sqrt{6} - \\sqrt{2}\\right)i$ is the exact rectangular ($x + iy$) representation of the difference $z_1 - z_2$, where the real part is $x = \\frac{9}{2}\\left(\\sqrt{6} + \\sqrt{2}\\right) \\approx 17.39$ and the imaginary part is $y = -\\frac{9}{2}\\left(\\sqrt{6} - \\sqrt{2}\\right) \\approx -4.66$. Because $z_1$ and $z_2$ point in exactly opposite directions in the complex plane, subtracting $z_2$ from $z_1$ adds their magnitudes ($7 + 11 = 18$) along the direction of $z_1$. You can check this by verifying that the magnitude $\\sqrt{x^2 + y^2}$ equals $18$.",
+  "ur": "حتمی جواب $\\frac{9}{2}\\left(\\sqrt{6} + \\sqrt{2}\\right) - \\frac{9}{2}\\left(\\sqrt{6} - \\sqrt{2}\\right)i$ دراصل فرق $z_1 - z_2$ کی درست معیاری شکل ($x + iy$) ہے، جہاں حقیقی حصہ $x = \\frac{9}{2}\\left(\\sqrt{6} + \\sqrt{2}\\right) \\approx 17.39$ اور خیالی حصہ $y = -\\frac{9}{2}\\left(\\sqrt{6} - \\sqrt{2}\\right) \\approx -4.66$ ہے۔ چونکہ مختلط مستوی (complex plane) میں $z_1$ اور $z_2$ بالکل مخالف سمتوں میں ہیں، اس لیے $z_1$ میں سے $z_2$ کو تفریق کرنے سے $z_1$ کی سمت میں ان کی مقداریں جمع ہو جاتی ہیں ($7 + 11 = 18$)۔ آپ اس کی پڑتال یہ تصدیق کر کے کر سکتے ہیں کہ مقدار $\\sqrt{x^2 + y^2}$ برابر $18$ کے آتی ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

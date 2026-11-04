@@ -1,0 +1,30 @@
+{
+ "item": "c11-ex1.4-q8",
+ "label": "",
+ "answer_ref": "proved: the fraction equals $\\omega$",
+ "math": [
+  "\\omega\\left(a\\omega^2 + b\\omega + c\\right) = a\\omega^3 + b\\omega^2 + c\\omega",
+  "= a + b\\omega^2 + c\\omega",
+  "\\therefore\\ \\frac{a + b\\omega^2 + c\\omega}{a\\omega^2 + b\\omega + c} = \\frac{\\omega\\left(a\\omega^2 + b\\omega + c\\right)}{a\\omega^2 + b\\omega + c} = \\omega"
+ ],
+ "why": [
+  {
+   "en": "Notice how the powers of $\\omega$ in the denominator are just one step below the numerator. By multiplying the denominator by $\\omega$ and expanding, we bring out $\\omega^3$ so we can simplify the powers.",
+   "ur": "غور کریں کہ مخرج (denominator) میں $\\omega$ کی طاقتیں شمار کنندہ (numerator) سے بس ایک درجہ کم ہیں۔ مخرج کو $\\omega$ سے ضرب دے کر کھولنے سے ہمیں $\\omega^3$ ملتا ہے جس سے ہم طاقتوں کو مختصر کر سکتے ہیں۔"
+  },
+  {
+   "en": "Since $\\omega$ is a cube root of unity, we apply the fundamental property $\\omega^3 = 1$. This turns our expanded expression into the exact same form as the given numerator.",
+   "ur": "چونکہ $\\omega$ اکائی کا جذر المکعب (cube root of unity) ہے، اس لیے ہم بنیادی خصوصیت $\\omega^3 = 1$ استعمال کرتے ہیں۔ اس سے ہماری یہ عبارت بالکل دیے گئے شمار کنندہ جیسی بن جاتی ہے۔"
+  },
+  {
+   "en": "Now we substitute this factored form back in place of the numerator in our original fraction. Cancelling the identical non-zero bracketed expression from the top and bottom leaves us directly with the required right-hand side, $\\omega$.",
+   "ur": "اب ہم اس اجزائے ضربی والی شکل کو اصل کسر کے شمار کنندہ کی جگہ درج کرتے ہیں۔ اوپر اور نیچے سے ایک جیسی غیر صفر بریکٹ والی رقم کو کاٹنے سے ہمیں براہِ راست مطلوبہ دائیں سائیڈ یعنی $\\omega$ حاصل ہو جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This proves that the given algebraic fraction simplifies purely to $\\omega$, regardless of the values of $a$, $b$, and $c$ (as long as the denominator is not zero). You can easily verify this by cross-multiplying: multiplying the denominator by $\\omega$ and using $\\omega^3 = 1$ immediately gives back the numerator.",
+  "ur": "اس سے ثابت ہوتا ہے کہ دی گئی الجبری کسر مختصر ہو کر صرف $\\omega$ کے برابر آتی ہے، چاہے $a$، $b$ اور $c$ کی قیمتیں کچھ بھی ہوں (بشرطیکہ مخرج صفر نہ ہو)۔ آپ چلیپائی ضرب (cross-multiplication) کے ذریعے اس کی باآسانی تصدیق کر سکتے ہیں: مخرج کو $\\omega$ سے ضرب دینے اور $\\omega^3 = 1$ استعمال کرنے سے فوراً شمار کنندہ واپس مل جاتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

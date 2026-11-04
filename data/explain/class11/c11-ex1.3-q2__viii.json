@@ -1,0 +1,30 @@
+{
+ "item": "c11-ex1.3-q2",
+ "label": "viii",
+ "answer_ref": "$\\left(z - 9\\right)\\left(z + 9\\right)\\left(z - 7i\\right)\\left(z + 7i\\right)$",
+ "math": [
+  "= z^4 - 81z^2 + 49z^2 - 3969 = (z^2 - 81)(z^2 + 49)",
+  "z^2 - 81 = (z - 9)(z + 9),\\quad z^2 + 49 = (z - 7i)(z + 7i)",
+  "z^4 - 32z^2 - 3969 = \\left(z - 9\\right)\\left(z + 9\\right)\\left(z - 7i\\right)\\left(z + 7i\\right)"
+ ],
+ "why": [
+  {
+   "en": "Even though the highest power is $4$, we can treat this expression like a quadratic in $z^2$ and use middle-term breaking. This splits the single fourth-degree polynomial into two simpler second-degree factors, $(z^2 - 81)$ and $(z^2 + 49)$, which are much easier to break down further.",
+   "ur": "اگرچہ یہاں سب سے بڑی طاقت $4$ ہے، لیکن ہم اس عبارت کو $z^2$ میں ایک دو درجی کثیر رقمی (quadratic) سمجھ کر درمیانی رقم کو توڑنے کا طریقہ استعمال کر سکتے ہیں۔ اس سے یہ چوتھے درجے کی کثیر رقمی دو سادہ دوسرے درجے کے اجزائے ضربی $(z^2 - 81)$ اور $(z^2 + 49)$ میں تقسیم ہو جاتی ہے، جنہیں مزید حل کرنا بہت آسان ہے۔"
+  },
+  {
+   "en": "Our goal is to get linear factors (where the power of $z$ is $1$), so we apply the difference of squares formula to each quadratic bracket. For $z^2 + 49$, we use the complex number rule $i^2 = -1$ to rewrite $+49$ as $-(7i)^2$, allowing us to factor it into $(z - 7i)(z + 7i)$.",
+   "ur": "ہمارا مقصد یک درجی اجزائے ضربی (linear factors) حاصل کرنا ہے جہاں $z$ کی طاقت $1$ ہو، اس لیے ہم ہر بریکٹ پر مربعوں کے فرق کا فارمولا لگاتے ہیں۔ $z^2 + 49$ کے لیے ہم مخلوط اعداد (complex numbers) کا اصول $i^2 = -1$ استعمال کرتے ہوئے $+49$ کو $-(7i)^2$ بناتے ہیں، جس سے اس کے اجزائے ضربی $(z - 7i)(z + 7i)$ بن جاتے ہیں۔"
+  },
+  {
+   "en": "Now we gather all four linear pieces together as a single product to complete the factorization. Since we started with a power of $4$ in $z^4$, having exactly four linear factors shows that the polynomial is completely factored.",
+   "ur": "اب ہم تجزی کو مکمل کرنے کے لیے ان چاروں یک درجی اجزاء کو ایک حاصل ضرب کی صورت میں اکٹھا لکھ دیتے ہیں۔ چونکہ سوال میں $z^4$ کی سب سے بڑی طاقت $4$ تھی، اس لیے چار یک درجی اجزائے ضربی کا ملنا یہ ظاہر کرتا ہے کہ کثیر رقمی کی مکمل تجزی ہو چکی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $\\left(z - 9\\right)\\left(z + 9\\right)\\left(z - 7i\\right)\\left(z + 7i\\right)$ shows the given fourth-degree polynomial broken down completely into four first-degree (linear) factors using complex numbers. You can easily check this result by multiplying the pairs $(z - 9)(z + 9)$ and $(z - 7i)(z + 7i)$ back together to see that they return the original polynomial $z^4 - 32z^2 - 3969$.",
+  "ur": "آخری جواب $\\left(z - 9\\right)\\left(z + 9\\right)\\left(z - 7i\\right)\\left(z + 7i\\right)$ دی گئی چوتھے درجے کی کثیر رقمی کو مخلوط اعداد کی مدد سے مکمل طور پر چار یک درجی اجزائے ضربی (linear factors) میں تحلیل کر کے دکھاتا ہے۔ آپ اس جواب کی پڑتال بہت آسانی سے کر سکتے ہیں: اگر آپ $(z - 9)(z + 9)$ اور $(z - 7i)(z + 7i)$ کے جوڑوں کو واپس آپس میں ضرب دیں، تو آپ کو اصل کثیر رقمی $z^4 - 32z^2 - 3969$ دوبارہ حاصل ہو جائے گی۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

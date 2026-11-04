@@ -1,0 +1,30 @@
+{
+ "item": "c11-ex1.4-q4",
+ "label": "i",
+ "answer_ref": "$-1$",
+ "math": [
+  "\\frac{-1 + \\sqrt{-3}}{2} = \\frac{-1 + \\sqrt{3}i}{2} = \\omega,\\quad \\frac{-1 - \\sqrt{-3}}{2} = \\omega^2",
+  "\\omega^7 + (\\omega^2)^7 = \\omega^7 + \\omega^{14} = \\omega^{6}\\omega + \\omega^{12}\\omega^2",
+  "= \\omega + \\omega^2 = -1"
+ ],
+ "why": [
+  {
+   "en": "Expanding a complicated fraction to the power of $7$ directly is very difficult, so we first recognize these fractions as the standard complex cube roots of unity, $\\omega$ and $\\omega^2$. This allows us to rewrite the whole question in a much simpler form using $\\omega$.",
+   "ur": "ایک پیچیدہ کسر کی طاقت $7$ کو براہِ راست کھولنا بہت مشکل ہے، اس لیے ہم پہلے ان کسروں کو اکائی کے معیاری پیچیدہ الجذر المکعب (complex cube roots of unity) یعنی $\\omega$ اور $\\omega^2$ کے طور پر پہچانتے ہیں۔ اس سے ہم پورے سوال کو $\\omega$ کے استعمال سے بہت آسان شکل میں لکھ سکتے ہیں۔"
+  },
+  {
+   "en": "We substitute $\\omega$ and $\\omega^2$ into our expression and break down the large powers $7$ and $14$ into $6$ and $12$, which are multiples of $3$. We do this because we know the fundamental property $\\omega^3 = 1$, which helps us easily eliminate these large exponents.",
+   "ur": "ہم اپنے جملے میں $\\omega$ اور $\\omega^2$ درج کرتے ہیں اور بڑی طاقتوں $7$ اور $14$ کو $6$ اور $12$ کے حصوں میں توڑتے ہیں جو کہ $3$ کے اضعاف (multiples) ہیں۔ ہم ایسا اس لیے کرتے ہیں کیونکہ ہم بنیادی خاصیت $\\omega^3 = 1$ کو جانتے ہیں، جو ان بڑی طاقتوں کو آسانی سے ختم کرنے میں ہماری مدد کرتی ہے۔"
+  },
+  {
+   "en": "Since $\\omega^6$ and $\\omega^{12}$ both become $1$, our expression simplifies to just $\\omega + \\omega^2$. Finally, we apply the property that the sum of the cube roots of unity is zero ($1 + \\omega + \\omega^2 = 0$), which directly gives us the final value of $-1$.",
+   "ur": "چونکہ $\\omega^6$ اور $\\omega^{12}$ دونوں $1$ بن جاتے ہیں، اس لیے ہمارا جملہ مختصر ہو کر صرف $\\omega + \\omega^2$ رہ جاتا ہے۔ آخر میں، ہم یہ خاصیت استعمال کرتے ہیں کہ اکائی کے الجذر المکعب کا مجموعہ صفر ہوتا ہے ($1 + \\omega + \\omega^2 = 0$)، جس سے ہمیں براہِ راست حتمی قیمت $-1$ مل جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This result tells us that the entire complex expression, despite having square roots of negative numbers and high powers of $7$, simplifies completely to a single real integer, $-1$. Whenever the power is not a multiple of $3$, the sum of the powers of $\\omega$ and $\\omega^2$ always neatly reduces to $-1$.",
+  "ur": "یہ نتیجہ ہمیں بتاتا ہے کہ پورا پیچیدہ جملہ، منفی عدد کے جزر اور $7$ جیسی بڑی طاقت ہونے کے باوجود، مکمل طور پر مختصر ہو کر ایک حقیقی عدد $-1$ بن جاتا ہے۔ جب بھی طاقت $3$ کا ضعف نہ ہو، تو $\\omega$ اور $\\omega^2$ کی طاقتوں کا مجموعہ ہمیشہ مختصر ہو کر $-1$ ہی آتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

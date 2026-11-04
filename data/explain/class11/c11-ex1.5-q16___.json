@@ -1,0 +1,40 @@
+{
+ "item": "c11-ex1.5-q16",
+ "label": "",
+ "answer_ref": "proved: $y = 0$, so $z$ is real",
+ "math": [
+  "|w| = 1 \\Rightarrow |1 - iz| = |z - i|",
+  "1 - iz = 1 - i(x + iy) = (1 + y) - ix,\\quad z - i = x + i(y - 1)",
+  "(1 + y)^2 + x^2 = x^2 + (y - 1)^2",
+  "1 + 2y + y^2 = y^2 - 2y + 1 \\Rightarrow 4y = 0 \\Rightarrow y = 0",
+  "z = x + 0i = x \\text{ is real}"
+ ],
+ "why": [
+  {
+   "en": "Using the modulus property of division, $\\left|\\frac{z_1}{z_2}\\right| = \\frac{|z_1|}{|z_2|}$, we separate the numerator and denominator and cross-multiply. This removes the fraction and gives us a neat equality between two moduli to work with.",
+   "ur": "تقسیم کی ماڈیولس خصوصیت $\\left|\\frac{z_1}{z_2}\\right| = \\frac{|z_1|}{|z_2|}$ استعمال کرتے ہوئے ہم شمار کنندہ اور مخرج کو الگ کرتے ہیں اور چلیپائی ضرب دیتے ہیں۔ اس سے کسر ختم ہو جاتی ہے اور ہمیں حل کرنے کے لیے دو ماڈیولس کی ایک سادہ مساوات مل جاتی ہے۔"
+  },
+  {
+   "en": "To apply the modulus formula, we first need each complex expression in the standard form $a + ib$. Substituting $z = x + iy$ and using $i^2 = -1$ allows us to clearly group the real and imaginary parts of both sides.",
+   "ur": "ماڈیولس کا فارمولا لگانے کے لیے ہمیں پہلے ہر کمپلیکس جملے کو معیاری شکل $a + ib$ میں لانا ہوگا۔ $z = x + iy$ درج کرنے اور $i^2 = -1$ استعمال کرنے سے ہم دونوں طرف کے حقیقی (real) اور خیالی (imaginary) حصوں کو واضح طور پر الگ کر سکتے ہیں۔"
+  },
+  {
+   "en": "By definition, the modulus squared is $|a + ib|^2 = a^2 + b^2$, so we apply this to both sides and square them to avoid square roots. This turns our complex number problem into a simple algebraic equation in $x$ and $y$.",
+   "ur": "تعریف کے مطابق ماڈیولس کا مربع $|a + ib|^2 = a^2 + b^2$ ہوتا ہے، اس لیے جزر سے بچنے کے لیے ہم دونوں طرف یہ فارمولا لگا کر مربع لیتے ہیں۔ اس سے ہمارا کمپلیکس نمبرز کا سوال $x$ اور $y$ کی ایک سادہ الجبری مساوات میں بدل جاتا ہے۔"
+  },
+  {
+   "en": "We expand the whole squares using $(a \\pm b)^2 = a^2 \\pm 2ab + b^2$ and cancel the identical terms $x^2$, $y^2$, and $1$ from both sides. This simplification directly reveals that the imaginary part $y$ must be $0$.",
+   "ur": "ہم فارمولا $(a \\pm b)^2 = a^2 \\pm 2ab + b^2$ کی مدد سے مربع کھولتے ہیں اور دونوں طرف سے یکساں رقوم $x^2$، $y^2$ اور $1$ کو کاٹ دیتے ہیں۔ اس مختصر عمل سے براہِ راست ثابت ہو جاتا ہے کہ خیالی حصہ $y$ لازمی طور پر $0$ ہے۔"
+  },
+  {
+   "en": "A complex number $z = x + iy$ is purely real if and only if its imaginary part $y$ is zero. Putting $y = 0$ back into $z$ leaves only the real number $x$, which completes our proof.",
+   "ur": "ایک کمپلیکس نمبر $z = x + iy$ خالصتاً حقیقی (real) تبھی ہوتا ہے جب اس کا خیالی حصہ $y$ صفر ہو۔ $z$ میں $y = 0$ واپس درج کرنے سے صرف حقیقی عدد $x$ بچتا ہے، جس سے ہمارا ثبوت مکمل ہو جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This result proves that whenever the complex fraction $w = \\frac{1 - iz}{z - i}$ has a magnitude (modulus) of $1$, the number $z$ cannot have an imaginary part ($y = 0$) and must lie entirely on the real axis. You can easily check this by putting any real number $x$ for $z$ in $w$: the numerator $1 - ix$ and denominator $x - i$ will both have the same modulus $\\sqrt{1 + x^2}$, making $|w| = 1$.",
+  "ur": "یہ نتیجہ ثابت کرتا ہے کہ جب بھی کمپلیکس کسر $w = \\frac{1 - iz}{z - i}$ کی مقدار (ماڈیولس) $1$ ہو، تو عدد $z$ کا کوئی خیالی حصہ نہیں ہو سکتا ($y = 0$) اور اسے لازمی طور پر ایک حقیقی عدد ہونا چاہیے۔ آپ $w$ میں $z$ کی جگہ کوئی بھی حقیقی عدد $x$ رکھ کر اس کی باآسانی پڑتال کر سکتے ہیں: شمار کنندہ $1 - ix$ اور مخرج $x - i$ دونوں کا ماڈیولس یکساں یعنی $\\sqrt{1 + x^2}$ آئے گا، جس سے $|w| = 1$ بنتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

@@ -1,0 +1,61 @@
+{
+ "item": "c11-ex1.1-q6",
+ "label": "ii",
+ "answer_ref": "$\\sqrt{149}$",
+ "steps": [
+  {
+   "math": "z_1 = 2 + 7i \\implies \\bar{z}_1 = 2 - 7i",
+   "en": "First, write down the given complex number $z_1$ and find its conjugate $\\bar{z}_1$ by changing the sign of the imaginary part.",
+   "ur": "سب سے پہلے، دیا گیا مخلوط عدد $z_1$ لکھیں اور خیالی حصے کی علامت تبدیل کر کے اس کا مزدوج $\\bar{z}_1$ معلوم کریں۔",
+   "check": [
+    "conjugate(2 + 7*I) == 2 - 7*I"
+   ]
+  },
+  {
+   "math": "3z_1 + 2\\bar{z}_1 = 3(2 + 7i) + 2(2 - 7i)",
+   "en": "Substitute $z_1$ and $\\bar{z}_1$ into the expression $3z_1 + 2\\bar{z}_1$.",
+   "ur": "جملے $3z_1 + 2\\bar{z}_1$ میں $z_1$ اور $\\bar{z}_1$ کی قیمتیں درج کریں۔",
+   "check": [
+    "3*(2 + 7*I) + 2*(2 - 7*I) == 10 + 7*I"
+   ]
+  },
+  {
+   "math": "3z_1 + 2\\bar{z}_1 = (6 + 21i) + (4 - 14i)",
+   "en": "Multiply the real numbers inside the brackets.",
+   "ur": "بریکٹ کے اندر موجود اعداد کو ضرب دیں۔",
+   "check": [
+    "3*(2 + 7*I) == 6 + 21*I",
+    "2*(2 - 7*I) == 4 - 14*I"
+   ]
+  },
+  {
+   "math": "3z_1 + 2\\bar{z}_1 = (6 + 4) + (21 - 14)i = 10 + 7i",
+   "en": "Group the real parts and the imaginary parts together and simplify.",
+   "ur": "حقیقی اور خیالی حصوں کو اکٹھا کریں اور مختصر کریں۔",
+   "check": [
+    "(6 + 21*I) + (4 - 14*I) == 10 + 7*I"
+   ]
+  },
+  {
+   "math": "|3z_1 + 2\\bar{z}_1| = |10 + 7i| = \\sqrt{(10)^2 + (7)^2}",
+   "en": "Now, apply the modulus formula $|a + bi| = \\sqrt{a^2 + b^2}$, where $a = 10$ and $b = 7$.",
+   "ur": "اب مقیاس کا فارمولا $|a + bi| = \\sqrt{a^2 + b^2}$ استعمال کریں، جہاں $a = 10$ اور $b = 7$ ہے۔",
+   "check": [
+    "Abs(10 + 7*I) == sqrt(10**2 + 7**2)"
+   ]
+  },
+  {
+   "math": "|3z_1 + 2\\bar{z}_1| = \\sqrt{100 + 49} = \\sqrt{149}",
+   "en": "Calculate the squares and add them to get the final answer.",
+   "ur": "مربع لیں اور انہیں جمع کر کے حتمی جواب حاصل کریں۔",
+   "check": [
+    "10**2 + 7**2 == 149",
+    "sqrt(100 + 49) == sqrt(149)",
+    "Abs((10 + 7*I)) == sqrt(149)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-04"
+}

@@ -21,6 +21,7 @@ import importlib.util
 import json
 import os
 import pathlib
+import difflib
 import re
 import sys
 
@@ -57,6 +58,7 @@ import rag  # noqa: E402
 import remote_models  # noqa: E402
 import solvers  # noqa: E402
 import engine10  # noqa: E402
+import engine11  # noqa: E402
 import solvers10  # noqa: E402
 import tutor_live  # noqa: E402
 import vertex_models  # noqa: E402
@@ -67,8 +69,8 @@ IMAGE_TYPES = {"image/jpeg", "image/png", "image/webp"}
 app = Flask(__name__, static_folder=str(ROOT / "public"), static_url_path="")
 
 
-CLASSES = ("9", "10")
-ENGINES = {"9": solvers.solve, "10": engine10.solve}       # each class has its own engine (Class 10: all 12 units); Class 9's would read i as an unknown
+CLASSES = ("9", "10", "11")
+ENGINES = {"9": solvers.solve, "10": engine10.solve, "11": engine11.solve}       # each class has its own engine (Class 10: all 12 units); Class 9's would read i as an unknown
 _DATA = {}
 
 
@@ -247,6 +249,11 @@ def _content_words(text):
     return {w for w in re.findall(r"[a-z]{3,}", t) if w not in _STOP}
 
 
+def _flat_words(s):
+    """Letters and digits only, lower case: 'Prove that $\\bar{z} = z$ iff z is real.' -> 'provethatbarzziffzisreal'."""
+    return re.sub(r"[^a-z0-9]", "", str(s).lower().replace("\\bar", "bar").replace("\\overline", "bar"))
+
+
 def really_same(question, item, part):
     """A stored question is offered as THE answer only when, beyond equal numbers (mathtext.same_question), the relation signs agree
     (x^2+x-6 >= 0 is not x^2+x-6 < 0) and the student's own words appear in the stored question (a dice question is never a matrix MCQ)."""
@@ -327,7 +334,7 @@ def resolve(question, focus_part=None, klass="9", _rewritten=False):
     if not looks_like_math(q):                         # "hello": nothing to solve, and no model is asked to invent a question
         return {"mode": "not_math", "similar": [],
                 "message": "That doesn't look like a maths question. Type a question from your book with its numbers, for example "
-                           + ("\"Solve 3x² − 7x + 2 = 0\" or \"Exercise 2.1 Q4 (ii)\"." if klass == "10" else "\"Rationalize 3/(√5 − √3)\" or \"Exercise 1.2 Q3 (iv)\".")}
+                           + {"10": "\"Solve 3x² − 7x + 2 = 0\" or \"Exercise 2.1 Q4 (ii)\".", "11": "\"Find the square roots of 5 − 12i\" or \"Exercise 1.3 Q4 (ii)\"."}.get(klass, "\"Rationalize 3/(√5 − √3)\" or \"Exercise 1.2 Q3 (iv)\".")}
     ref = parse_reference(q)
     if ref:
         return lookup_reference(ref, klass)
@@ -335,6 +342,11 @@ def resolve(question, focus_part=None, klass="9", _rewritten=False):
         same, part = mathtext.same_question(q, it)
         if same and really_same(q, it, part):          # a part asked alone is answered alone; the whole question shows every part
             return {"mode": "book", "item": only_part(it, part), "part_index": 0}
+    if len(mathtext.signature(q)) < 2:                 # 1b. a question with (almost) no numbers, e.g. a proof: the same words
+        flat = _flat_words(q)
+        best = max(data(klass)["items"], key=lambda it: difflib.SequenceMatcher(None, flat, _flat_words(it["question"])).ratio())
+        if len(flat) >= 15 and difflib.SequenceMatcher(None, flat, _flat_words(best["question"])).ratio() >= 0.92:
+            return {"mode": "book", "item": best, "part_index": 0}
     solved = ENGINES[klass](q)                         # 2. the solver engine: reads the numbers and solves this question
     if solved:
         return {"mode": "solved", "item": deepen(solved, klass), "part_index": 0}

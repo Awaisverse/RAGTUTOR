@@ -1,0 +1,50 @@
+{
+ "item": "c11-ex1.5-q2",
+ "label": "v",
+ "answer_ref": "$\\left(\\cos\\left(- \\frac{\\pi}{2}\\right) + i\\sin\\left(- \\frac{\\pi}{2}\\right)\\right)$",
+ "math": [
+  "z = \\frac{1 - i}{1 + i}",
+  "\\frac{1 - i}{1 + i} \\times \\frac{1 - i}{1 - i}",
+  "= \\frac{-2i}{1^2 + 1^2} = \\frac{-2i}{2}",
+  "= -i",
+  "x = 0,\\ y = -1:\\quad r = \\sqrt{x^2 + y^2} = \\sqrt{1} = 1",
+  "\\text{The point lies on the negative imaginary axis} \\Rightarrow \\theta = - \\frac{\\pi}{2}",
+  "-i = \\left(\\cos\\left(- \\frac{\\pi}{2}\\right) + i\\sin\\left(- \\frac{\\pi}{2}\\right)\\right) \\quad \\left(\\text{or } \\left(\\cos \\frac{3 \\pi}{2} + i\\sin \\frac{3 \\pi}{2}\\right)\\right)"
+ ],
+ "why": [
+  {
+   "en": "Before we can find the polar form, we must always write the complex number in the standard form $x + yi$. Naming the given fraction $z$ sets up our work to simplify it first.",
+   "ur": "قطبی شکل (polar form) معلوم کرنے سے پہلے، ہمیں ہمیشہ کمپلیکس نمبر کو معیاری شکل $x + yi$ میں لکھنا ہوتا ہے۔ دیے گئے کسر کو $z$ کا نام دینے سے اسے مختصر کرنے کے کام کا آغاز ہوتا ہے۔"
+  },
+  {
+   "en": "To remove the imaginary number $i$ from the denominator, we use the rule of rationalization by multiplying the top and bottom by the conjugate of the denominator, $1 - i$. This will turn the denominator into a simple real number without changing the value of our fraction.",
+   "ur": "مخرج (denominator) سے خیالی نمبر $i$ کو ختم کرنے کے لیے، ہم مخرج کے زوج (conjugate) یعنی $1 - i$ سے شمار کنندہ اور مخرج دونوں کو ضرب دیتے ہیں۔ اس سے کسر کی قیمت بدلے بغیر مخرج ایک سادہ حقیقی عدد بن جائے گا۔"
+  },
+  {
+   "en": "Using the algebraic identity $(a+bi)(a-bi) = a^2 + b^2$ on the bottom and expanding the top with $i^2 = -1$, we clear the brackets. This gives us a single complex term over a real number $2$, making it easy to divide.",
+   "ur": "نچلے حصے میں الجبری کلیہ $(a+bi)(a-bi) = a^2 + b^2$ استعمال کرتے ہوئے اور اوپر والے حصے کو $i^2 = -1$ کی مدد سے کھول کر ہم بریکٹ ختم کرتے ہیں۔ اس سے ہمیں حقیقی عدد $2$ کے اوپر ایک سادہ کمپلیکس رقم مل جاتی ہے، جسے تقسیم کرنا آسان ہے۔"
+  },
+  {
+   "en": "Canceling the $2$ in the numerator and denominator gives us the simplified standard form $0 - 1i$, or simply $-i$. Now we can clearly see the real part $x = 0$ and the imaginary part $y = -1$ needed for the polar form.",
+   "ur": "شمار کنندہ اور مخرج میں $2$ کو کاٹنے سے ہمیں سادہ معیاری شکل $0 - 1i$ یا صرف $-i$ مل جاتی ہے۔ اب ہم قطبی شکل کے لیے درکار حقیقی حصہ $x = 0$ اور خیالی حصہ $y = -1$ واضح طور پر دیکھ سکتے ہیں۔"
+  },
+  {
+   "en": "The modulus $r$ represents the distance of the point from the origin on the complex plane, found using the formula $r = \\sqrt{x^2 + y^2}$. Substituting $x = 0$ and $y = -1$ tells us that our complex number is at a distance of $1$ unit from the origin.",
+   "ur": "ماڈیولس $r$ کمپلیکس مستوی پر مبدأ (origin) سے نقطے کے فاصلے کو ظاہر کرتا ہے، جسے فارمولے $r = \\sqrt{x^2 + y^2}$ سے معلوم کیا جاتا ہے۔ $x = 0$ اور $y = -1$ درج کرنے سے ہمیں پتہ چلتا ہے کہ ہمارا کمپلیکس نمبر مبدأ سے $1$ اکائی کے فاصلے پر ہے۔"
+  },
+  {
+   "en": "To find the argument $\\theta$, we locate the point $(0, -1)$ on the Argand diagram instead of using $\\tan^{-1}\\left(\\frac{y}{x}\\right)$ because division by $x = 0$ is undefined. Since the point lies straight down on the negative imaginary axis, the angle from the positive real axis is $-\\frac{\\pi}{2}$ (or $\\frac{3\\pi}{2}$).",
+   "ur": "زاویہ (argument) $\\theta$ معلوم کرنے کے لیے، ہم $\\tan^{-1}\\left(\\frac{y}{x}\\right)$ استعمال کرنے کے بجائے آرگنڈ ڈایاگرام پر نقطہ $(0, -1)$ کو دیکھتے ہیں کیونکہ $x = 0$ سے تقسیم ممکن نہیں ہے۔ چونکہ یہ نقطہ منفی خیالی محور پر بالکل نیچے واقع ہے، اس لیے مثبت حقیقی محور سے اس کا زاویہ $-\\frac{\\pi}{2}$ (یا $\\frac{3\\pi}{2}$) بنتا ہے۔"
+  },
+  {
+   "en": "Finally, we substitute the modulus $r = 1$ and the angle $\\theta = -\\frac{\\pi}{2}$ into the polar form definition $z = r(\\cos\\theta + i\\sin\\theta)$. Since multiplying by $r = 1$ does not change the expression, this completes the conversion to polar form.",
+   "ur": "آخر میں، ہم ماڈیولس $r = 1$ اور زاویہ $\\theta = -\\frac{\\pi}{2}$ کو قطبی شکل کی تعریف $z = r(\\cos\\theta + i\\sin\\theta)$ میں درج کرتے ہیں۔ چونکہ $r = 1$ سے ضرب دینے سے رقم نہیں بدلتی، اس لیے یہاں قطبی شکل میں تبدیلی مکمل ہو جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer shows that the given fraction $\\frac{1-i}{1+i}$ is simply the point $-i$, which lies at a distance of $1$ unit from the origin at an angle of $-\\frac{\\pi}{2}$ radians. You can easily check this by putting $\\cos\\left(-\\frac{\\pi}{2}\\right) = 0$ and $\\sin\\left(-\\frac{\\pi}{2}\\right) = -1$ back into the answer, which gives $0 + i(-1) = -i$.",
+  "ur": "حتمی جواب یہ بتاتا ہے کہ دی گئی کسر $\\frac{1-i}{1+i}$ دراصل نقطہ $-i$ ہی ہے، جو مبدأ سے $1$ اکائی کے فاصلے پر اور $-\\frac{\\pi}{2}$ ریڈین کے زاویے پر واقع ہے۔ آپ اس کی باآسانی پڑتال کر سکتے ہیں: جواب میں $\\cos\\left(-\\frac{\\pi}{2}\\right) = 0$ اور $\\sin\\left(-\\frac{\\pi}{2}\\right) = -1$ کی قیمتیں واپس رکھیں تو $0 + i(-1) = -i$ حاصل ہوتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

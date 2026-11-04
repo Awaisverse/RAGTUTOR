@@ -1,0 +1,35 @@
+{
+ "item": "c11-ex1.5-q18",
+ "label": "",
+ "answer_ref": "$I = 120\\left[\\cos\\left(-\\frac{\\pi}{12}\\right) + i\\sin\\left(-\\frac{\\pi}{12}\\right)\\right]$ A",
+ "math": [
+  "V = IZ \\Rightarrow I = \\frac{V}{Z}",
+  "Z = \\frac{1}{2} + \\frac{\\sqrt{3}}{2}i:\\quad |Z| = \\sqrt{\\tfrac{1}{4} + \\tfrac{3}{4}} = 1,\\quad \\theta = \\tan^{-1}\\sqrt{3} = \\frac{\\pi}{3}",
+  "I = \\frac{120\\left(\\cos\\frac{\\pi}{4} + i\\sin\\frac{\\pi}{4}\\right)}{1\\left(\\cos\\frac{\\pi}{3} + i\\sin\\frac{\\pi}{3}\\right)} = 120\\left[\\cos\\left(\\frac{\\pi}{4} - \\frac{\\pi}{3}\\right) + i\\sin\\left(\\frac{\\pi}{4} - \\frac{\\pi}{3}\\right)\\right]",
+  "I = 120\\left[\\cos\\left(-\\frac{\\pi}{12}\\right) + i\\sin\\left(-\\frac{\\pi}{12}\\right)\\right] \\approx 115.91 - 31.06i \\ \\text{A}"
+ ],
+ "why": [
+  {
+   "en": "To find the unknown current $I$, we start with Ohm's Law for alternating current circuits, which connects voltage, current, and impedance. Rearranging $V = IZ$ into $I = \\frac{V}{Z}$ gives us a clear mathematical plan: we must divide the complex voltage $V$ by the complex impedance $Z$.",
+   "ur": "نامعلوم کرنٹ $I$ معلوم کرنے کے لیے ہم اے سی سرکٹس کے لیے اوہم کے قانون سے شروعات کرتے ہیں، جو وولٹیج، کرنٹ اور امپیڈنس کو آپس میں جوڑتا ہے۔ مساوات $V = IZ$ کو $I = \\frac{V}{Z}$ کی شکل میں ترتیب دینے سے ہمیں واضح لائحہ عمل مل جاتا ہے کہ ہمیں کمپلیکس وولٹیج $V$ کو کمپلیکس امپیڈنس $Z$ پر تقسیم کرنا ہوگا۔"
+  },
+  {
+   "en": "Since our voltage $V$ is already given in polar form and we need our final answer in polar form too, it is much easier to divide if $Z$ is also in polar form. By finding the modulus $|Z| = 1$ and the argument $\\theta = \\frac{\\pi}{3}$, we prepare $Z$ for simple polar division instead of doing lengthy rationalization.",
+   "ur": "چونکہ وولٹیج $V$ پہلے ہی پولر فارم میں دیا گیا ہے اور ہمیں حتمی جواب بھی پولر فارم میں چاہیے، اس لیے اگر $Z$ بھی پولر فارم میں ہو تو تقسیم کرنا بہت آسان ہو جاتا ہے۔ ماڈیولس $|Z| = 1$ اور آرگومنٹ $\\theta = \\frac{\\pi}{3}$ معلوم کر کے ہم لمبے ریشنلائزیشن کے طریقے سے بچ جاتے ہیں اور $Z$ کو آسان پولر تقسیم کے لیے تیار کر لیتے ہیں۔"
+  },
+  {
+   "en": "Here we apply the quotient rule for complex numbers in polar form, which states that when dividing two complex numbers, we divide their moduli and subtract their arguments. Dividing $120$ by $1$ gives the current's magnitude, and setting up the angle subtraction $\\frac{\\pi}{4} - \\frac{\\pi}{3}$ directly builds the polar form of $I$.",
+   "ur": "یہاں ہم پولر فارم میں کمپلیکس نمبرز کی تقسیم کا اصول استعمال کرتے ہیں، جس کے مطابق دو کمپلیکس نمبرز کو تقسیم کرتے وقت ان کے ماڈیولس کو تقسیم کیا جاتا ہے اور ان کے زاویوں (آرگومنٹس) کو تفریق کیا جاتا ہے۔ $120$ کو $1$ پر تقسیم کرنے سے کرنٹ کی مقدار مل جاتی ہے، اور زاویوں کی تفریق $\\frac{\\pi}{4} - \\frac{\\pi}{3}$ لکھنے سے براہِ راست $I$ کی پولر فارم بن جاتی ہے۔"
+  },
+  {
+   "en": "Finally, we simplify the angle by taking the common denominator to complete the polar expression. This gives us the exact phase angle of $-\\frac{\\pi}{12}$ radians for our final polar answer, along with its approximate rectangular value $115.91 - 31.06i \\ \\text{A}$.",
+   "ur": "آخر میں، ہم پولر فارم کو مکمل کرنے کے لیے مشترک مخرج (ایل سی ایم) لے کر زاویے کو مختصر کرتے ہیں۔ اس سے ہمیں اپنے حتمی پولر جواب کے لیے $-\\frac{\\pi}{12}$ ریڈینز کا درست فیز اینگل اور اس کے ساتھ ہی اس کی تقریباً کارٹیزین قیمت $115.91 - 31.06i \\ \\text{A}$ حاصل ہو جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $I = 120\\left[\\cos\\left(-\\frac{\\pi}{12}\\right) + i\\sin\\left(-\\frac{\\pi}{12}\\right)\\right]$ A tells us that the AC circuit carries a current with a magnitude of $120$ amperes and a phase angle of $-\\frac{\\pi}{12}$ radians. You can easily check this result by multiplying this current $I$ by the impedance $Z$: multiplying the moduli ($120 \\times 1 = 120$) and adding the angles ($-\\frac{\\pi}{12} + \\frac{\\pi}{3} = \\frac{\\pi}{4}$) brings us right back to the original voltage $V$.",
+  "ur": "حتمی جواب $I = 120\\left[\\cos\\left(-\\frac{\\pi}{12}\\right) + i\\sin\\left(-\\frac{\\pi}{12}\\right)\\right]$ A ہمیں بتاتا ہے کہ اس اے سی سرکٹ میں بہنے والے کرنٹ کی مقدار $120$ ایمپیئر ہے اور اس کا فیز اینگل $-\\frac{\\pi}{12}$ ریڈینز ہے۔ آپ اس جواب کی پڑتال کرنٹ $I$ کو امپیڈنس $Z$ سے ضرب دے کر باآسانی کر سکتے ہیں: ماڈیولس کو ضرب دینے ($120 \\times 1 = 120$) اور زاویوں کو جمع کرنے ($-\\frac{\\pi}{12} + \\frac{\\pi}{3} = \\frac{\\pi}{4}$) سے ہمیں واپس اصل وولٹیج $V$ حاصل ہو جاتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

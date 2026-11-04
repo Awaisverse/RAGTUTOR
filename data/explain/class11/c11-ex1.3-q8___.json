@@ -1,0 +1,35 @@
+{
+ "item": "c11-ex1.3-q8",
+ "label": "",
+ "answer_ref": "$P(z) = - 3 z^{4} + 6 z^{3} + 42 z^{2} - 96 z + 96$",
+ "math": [
+  "P(z) = k\\,(z - 4)(z + 4)\\left(z - (1 + i)\\right)\\left(z - (1 - i)\\right) = k(z^2 - 16)(z^2 - 2z + 2)",
+  "P(z) = k\\left(z^{4} - 2 z^{3} - 14 z^{2} + 32 z - 32\\right)",
+  "P(2) = k\\left(-24\\right) = 72 \\Rightarrow k = -3",
+  "P(z) = -3\\left(z^{4} - 2 z^{3} - 14 z^{2} + 32 z - 32\\right) = - 3 z^{4} + 6 z^{3} + 42 z^{2} - 96 z + 96"
+ ],
+ "why": [
+  {
+   "en": "By the Factor Theorem, every zero $r$ gives a factor $(z - r)$, and we include a leading constant $k$ because any non-zero multiple of this polynomial will share the exact same zeros. Multiplying the real conjugate pair $(z - 4)(z + 4)$ and the complex conjugate pair $(z - (1 + i))(z - (1 - i))$ separately neatly eliminates the imaginary $i$ and gives us two clean quadratic factors with real coefficients.",
+   "ur": "مسئلہ تجزی (Factor Theorem) کے مطابق ہر روٹ (zero) $r$ سے ایک جزوِ ضربی $(z - r)$ بنتا ہے، اور ہم ایک مستقل مقدار $k$ اس لیے لگاتے ہیں کیونکہ اس سے ضرب دینے سے روٹس تبدیل نہیں ہوتے۔ حقیقی جوڑے $(z - 4)(z + 4)$ اور مختلط جوڑے $(z - (1 + i))(z - (1 - i))$ کو الگ الگ ضرب دینے سے تخیلی عدد $i$ ختم ہو جاتا ہے اور ہمیں حقیقی عددی سر (real coefficients) والے دو سادہ دو درجی فیکٹرز مل جاتے ہیں۔"
+  },
+  {
+   "en": "We expand the product of the two quadratic factors to write the polynomial in standard form inside the bracket. This clearly shows the degree $4$ structure of $P(z)$, leaving only the single unknown constant $k$ to be found.",
+   "ur": "ہم ان دونوں دو درجی فیکٹرز کو آپس میں ضرب دے کر کثیر رقمی (polynomial) کو بریکٹ کے اندر معیاری شکل میں لکھتے ہیں۔ اس سے $P(z)$ کی درجہ $4$ کی شکل واضح ہو جاتی ہے اور اب ہمیں صرف ایک نامعلوم مستقل $k$ کی قیمت معلوم کرنی ہے۔"
+  },
+  {
+   "en": "To find the exact value of the unknown constant $k$, we apply the given condition $P(2) = 72$ by substituting $z = 2$ into our polynomial expression. This turns the polynomial into a simple linear equation in $k$, revealing that the required scaling factor is $k = -3$.",
+   "ur": "نامعلوم مستقل $k$ کی درست قیمت نکالنے کے لیے ہم دی گئی شرط $P(2) = 72$ کا استعمال کرتے ہوئے کثیر رقمی میں $z = 2$ درج کرتے ہیں۔ اس سے ہمیں ایک سادہ مساوات ملتی ہے جسے حل کرنے سے معلوم ہوتا ہے کہ مطلوبہ مستقل $k = -3$ ہے۔"
+  },
+  {
+   "en": "Now that we know $k = -3$, we substitute it back into our expression from Step 2 and distribute it across all the terms. This completes the construction and gives us the final polynomial in standard expanded form.",
+   "ur": "اب جب کہ ہمیں $k = -3$ معلوم ہو چکا ہے، ہم اسے دوسرے مرحلے والی مساوات میں واپس درج کر کے تمام رقموں سے ضرب دیتے ہیں۔ اس سے ہمارا کام مکمل ہو جاتا ہے اور مطلوبہ کثیر رقمی اپنی معیاری شکل میں حاصل ہو جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $P(z) = - 3 z^{4} + 6 z^{3} + 42 z^{2} - 96 z + 96$ is the unique polynomial of degree $4$ that becomes zero at $4, -4, 1+i,$ and $1-i$ while also taking the value $72$ at $z = 2$. You can easily check this result by substituting $z = 2$ or $z = 4$ into the final expression to verify that it yields $72$ and $0$ respectively.",
+  "ur": "آخری جواب $P(z) = - 3 z^{4} + 6 z^{3} + 42 z^{2} - 96 z + 96$ درجہ $4$ کی وہ واحد کثیر رقمی ہے جس کے روٹس $4, -4, 1+i,$ اور $1-i$ ہیں اور جو $z = 2$ پر $72$ جواب دیتی ہے۔ آپ اس جواب کی درستگی کو باآسانی چیک کر سکتے ہیں: اگر آپ اس میں $z = 2$ درج کریں تو جواب $72$ آئے گا، اور $z = 4$ درج کرنے پر جواب $0$ آئے گا۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

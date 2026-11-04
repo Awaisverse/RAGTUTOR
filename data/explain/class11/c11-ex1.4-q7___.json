@@ -1,0 +1,30 @@
+{
+ "item": "c11-ex1.4-q7",
+ "label": "",
+ "answer_ref": "$0$",
+ "math": [
+  "\\sum_{k=0}^{5}\\omega^{2k} = 1 + \\omega^2 + \\omega^4 + \\omega^6 + \\omega^8 + \\omega^{10}",
+  "= 1 + \\omega^2 + \\omega + 1 + \\omega^2 + \\omega",
+  "= 2\\left(1 + \\omega + \\omega^2\\right) = 2(0) = 0"
+ ],
+ "why": [
+  {
+   "en": "By using the definition of summation, we substitute the integer values of $k$ from $0$ to $5$ one by one into $\\omega^{2k}$ (remembering that $\\omega^0 = 1$). This expands the compact sigma notation into a clear sum of six powers of $\\omega$ so we can simplify each term individually.",
+   "ur": "سمیشن (جمع) کی تعریف استعمال کرتے ہوئے، ہم $\\omega^{2k}$ میں باری باری $k$ کی قیمتیں $0$ سے $5$ تک درج کرتے ہیں (یاد رہے کہ $\\omega^0 = 1$ ہوتا ہے)۔ اس سے مختصر سگما علامت کھل کر $\\omega$ کی چھ طاقتوں کے ایک واضح مجموعے میں بدل جاتی ہے تاکہ ہم ہر رقم کو الگ الگ مختصر کر سکیں۔"
+  },
+  {
+   "en": "We apply the fundamental property of cube roots of unity, $\\omega^3 = 1$, to divide each exponent higher than $2$ by $3$ and keep only the remainder. This reduces the large powers like $\\omega^4$, $\\omega^6$, $\\omega^8$, and $\\omega^{10}$ down to the basic cube roots $1$, $\\omega$, and $\\omega^2$.",
+   "ur": "ہم اکائی کے جذر المکعب کی بنیادی خاصیت $\\omega^3 = 1$ کا استعمال کرتے ہوئے $2$ سے بڑی ہر طاقت کو $3$ پر تقسیم کرتے ہیں اور صرف باقی بچنے والی طاقت لکھتے ہیں۔ اس عمل سے $\\omega^4$، $\\omega^6$، $\\omega^8$ اور $\\omega^{10}$ جیسی بڑی طاقتیں مختصر ہو کر بنیادی جذر المکعب $1$، $\\omega$ اور $\\omega^2$ میں تبدیل ہو جاتی ہیں۔"
+  },
+  {
+   "en": "Notice that each of the three cube roots of unity appears twice, so we group them and apply the rule that the sum of the three cube roots of unity is zero ($1 + \\omega + \\omega^2 = 0$). Multiplying $2$ by $0$ gives us our final simplified value without needing the complex values of $\\omega$.",
+   "ur": "غور کریں کہ اکائی کے تینوں جذر المکعب دو دو بار آ رہے ہیں، اس لیے ہم ان کا گروپ بناتے ہیں اور یہ اصول استعمال کرتے ہیں کہ اکائی کے تینوں جذر المکعب کا مجموعہ صفر ہوتا ہے ($1 + \\omega + \\omega^2 = 0$)۔ $2$ کو $0$ سے ضرب دینے سے ہمیں، $\\omega$ کی پیچیدہ قیمتیں درج کیے بغیر، حتمی مختصر جواب مل جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $0$ tells us that the sum of the six terms $\\sum_{k=0}^{5} \\omega^{2k}$ completely cancels out. This makes sense because the six terms form two complete sets of the three cube roots of unity ($1$, $\\omega$, and $\\omega^2$), and each complete set always adds up to $0$.",
+  "ur": "حتمی جواب $0$ ہمیں بتاتا ہے کہ چھ رقوم کا مجموعہ $\\sum_{k=0}^{5} \\omega^{2k}$ مکمل طور پر ایک دوسرے کو زائل کر دیتا ہے۔ یہ بات بالکل واضح ہے کیونکہ یہ چھ رقوم اکائی کے تینوں جذر المکعب ($1$، $\\omega$ اور $\\omega^2$) کے دو مکمل سیٹ بناتی ہیں، اور ہر مکمل سیٹ کا مجموعہ ہمیشہ $0$ ہوتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

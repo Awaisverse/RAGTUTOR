@@ -1,0 +1,40 @@
+{
+ "item": "c11-ex1.3-q1",
+ "label": "viii",
+ "answer_ref": "$2\\left(z - \\frac{11}{2} - \\frac{3}{2}i\\right)\\left(z - \\frac{11}{2} + \\frac{3}{2}i\\right)$",
+ "math": [
+  "2 z^{2} - 22 z + 65 = 2\\left(z^2 - 11z + \\frac{65}{2}\\right)",
+  "z^2 - 11z + \\frac{65}{2} = z^2 - 2\\left(\\frac{11}{2}\\right)z + \\left(\\frac{11}{2}\\right)^2 + \\frac{65}{2} - \\left(\\frac{11}{2}\\right)^2",
+  "= \\left(z - \\frac{11}{2}\\right)^2 + \\frac{9}{4}",
+  "= \\left(z - \\frac{11}{2}\\right)^2 - \\left(\\frac{3}{2}i\\right)^2",
+  "2 z^{2} - 22 z + 65 = 2\\left(z - \\frac{11}{2} - \\frac{3}{2}i\\right)\\left(z - \\frac{11}{2} + \\frac{3}{2}i\\right)"
+ ],
+ "why": [
+  {
+   "en": "To use the completing the square method easily, the coefficient of $z^2$ should be $1$. By factoring out $2$ from the entire expression, we get a simpler quadratic expression inside the brackets to work with.",
+   "ur": "مربع مکمل کرنے کے طریقے کو آسانی سے استعمال کرنے کے لیے $z^2$ کا عددی سر $1$ ہونا چاہیے۔ پوری رقم میں سے $2$ کو مشترک (common) لینے سے ہمیں بریکٹ کے اندر ایک سادہ دو درجی جملہ مل جاتا ہے جسے حل کرنا آسان ہے۔"
+  },
+  {
+   "en": "Since this quadratic cannot be factorized by simple mid-term breaking, we use the completing the square method. Adding and subtracting $\\left(\\frac{11}{2}\\right)^2$ keeps the value of the expression unchanged while setting up the first three terms to form a perfect square.",
+   "ur": "چونکہ اس دو درجی جملے کی سادہ طریقے سے تجزی نہیں ہو سکتی، اس لیے ہم مربع مکمل کرنے کا طریقہ استعمال کرتے ہیں۔ $\\left(\\frac{11}{2}\\right)^2$ کو جمع اور تفریق کرنے سے جملے کی قیمت تبدیل نہیں ہوتی، اور پہلی تین رقوم ایک مکمل مربع کی شکل اختیار کر لیتی ہیں۔"
+  },
+  {
+   "en": "We apply the algebraic identity $a^2 - 2ab + b^2 = (a - b)^2$ to pack the first three terms into $\\left(z - \\frac{11}{2}\\right)^2$, and combine the remaining fractions into $\\frac{9}{4}$. This reduces the expression into a sum of a square and a positive number.",
+   "ur": "ہم الجبری کلیہ $a^2 - 2ab + b^2 = (a - b)^2$ کا استعمال کرتے ہوئے پہلی تین رقوم کو $\\left(z - \\frac{11}{2}\\right)^2$ میں بند کر دیتے ہیں، اور باقی ماندہ کسروں کو حل کر کے $\\frac{9}{4}$ حاصل کرتے ہیں۔ اس سے یہ جملہ ایک مربع اور ایک مثبت عدد کے مجموعے میں تبدیل ہو جاتا ہے۔"
+  },
+  {
+   "en": "In real numbers, we cannot factorize a sum of two squares, so we use the complex number property $i^2 = -1$. Replacing the plus sign with $-i^2$ and writing $\\frac{9}{4}$ as $\\left(\\frac{3}{2}\\right)^2$ transforms the expression into a difference of two squares.",
+   "ur": "حقیقی اعداد میں ہم دو مربوں کے مجموعے کی تجزی نہیں کر سکتے، اس لیے ہم مخلوط اعداد کی خاصیت $i^2 = -1$ استعمال کرتے ہیں۔ جمع کی علامت کو $-i^2$ سے بدلنے اور $\\frac{9}{4}$ کو $\\left(\\frac{3}{2}\\right)^2$ لکھنے سے یہ جملہ دو مربوں کے فرق میں تبدیل ہو جاتا ہے۔"
+  },
+  {
+   "en": "Now that we have a difference of two squares, we apply the fundamental algebraic formula $A^2 - B^2 = (A - B)(A + B)$ and bring back the common factor $2$ from the first step. This breaks the quadratic expression completely into its linear factors.",
+   "ur": "اب جبکہ ہمارے پاس دو مربوں کا فرق موجود ہے، ہم بنیادی الجبری کلیہ $A^2 - B^2 = (A - B)(A + B)$ استعمال کرتے ہیں اور پہلے مرحلے والا مشترک عدد $2$ واپس ساتھ لکھ دیتے ہیں۔ اس طرح دو درجی جملہ مکمل طور پر اپنے یک درجی اجزائے ضربی میں تحلیل ہو جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer shows the given quadratic polynomial $2z^2 - 22z + 65$ completely factorized into two linear complex factors, along with the constant factor $2$. If you multiply these brackets back together and use $i^2 = -1$, you will get the original expression $2z^2 - 22z + 65$, which confirms our factorization is correct.",
+  "ur": "آخری جواب دیے گئے دو درجی کثیر رقمی جملے $2z^2 - 22z + 65$ کو دو یک درجی مخلوط اجزائے ضربی اور مستقل عدد $2$ کے حاصل ضرب کے طور پر ظاہر کرتا ہے۔ اگر آپ ان بریکٹوں کو واپس آپس میں ضرب دیں اور $i^2 = -1$ استعمال کریں، تو آپ کو اصل جملہ $2z^2 - 22z + 65$ دوبارہ حاصل ہو جائے گا، جو اس بات کی تصدیق کرتا ہے کہ ہماری تجزی بالکل درست ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

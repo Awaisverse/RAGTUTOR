@@ -1,0 +1,45 @@
+{
+ "item": "c11-ex1.3-q1",
+ "label": "v",
+ "answer_ref": "$(z - i)(z - i)$",
+ "math": [
+  "z^2 - 2iz - 1",
+  "i^2 = -1",
+  "z^2 - 2iz - 1 = z^2 - 2(z)(i) + i^2",
+  "a^2 - 2ab + b^2 = (a - b)^2",
+  "z^2 - 2(z)(i) + i^2 = (z - i)^2",
+  "(z - i)^2 = (z - i)(z - i)"
+ ],
+ "why": [
+  {
+   "en": "We start by looking closely at our quadratic expression $z^2 - 2iz - 1$. Our goal is to break it down into simpler linear factors using the rules of complex numbers.",
+   "ur": "ہم اپنی دو درجی الجبری عبارت $z^2 - 2iz - 1$ کو غور سے دیکھ کر شروعات کرتے ہیں۔ ہمارا مقصد کمپلیکس نمبرز کے اصولوں کو استعمال کرتے ہوئے اس کے یک درجی اجزائے ضربی بنانا ہے۔"
+  },
+  {
+   "en": "Because the middle term $-2iz$ has an $i$ in it, we recall the definition of the imaginary unit where $i^2 = -1$. This clever connection will allow us to turn the constant $-1$ at the end into a squared term.",
+   "ur": "چونکہ درمیانی رقم $-2iz$ میں $i$ موجود ہے، اس لیے ہم ایماجنری یونٹ کی بنیادی تعریف $i^2 = -1$ کو ذہن میں لاتے ہیں۔ یہ تعلق ہمیں آخر میں موجود مستقل مقدار $-1$ کو ایک مربع کی شکل دینے میں مدد دے گا۔"
+  },
+  {
+   "en": "By substituting $+i^2$ in place of $-1$, the expression transforms into $z^2 - 2(z)(i) + i^2$. Now, both the first and last terms are perfect squares, which sets up a familiar algebraic pattern.",
+   "ur": "مستقل مقدار $-1$ کی جگہ $+i^2$ درج کرنے سے ہماری عبارت $z^2 - 2(z)(i) + i^2$ بن جاتی ہے۔ اب پہلی اور آخری دونوں رقوم مکمل مربع ہیں، جس سے الجبرا کا ایک جانا پہچانا فارمولا بن رہا ہے۔"
+  },
+  {
+   "en": "We recall the standard perfect square formula, $a^2 - 2ab + b^2 = (a - b)^2$. Matching our expression to this rule shows us that $z$ plays the role of $a$ and $i$ plays the role of $b$.",
+   "ur": "یہاں ہم مکمل مربع کا معیاری فارمولا $a^2 - 2ab + b^2 = (a - b)^2$ یاد کرتے ہیں۔ اپنی عبارت کا اس اصول سے موازنہ کرنے سے پتہ چلتا ہے کہ یہاں $a$ کی جگہ $z$ اور $b$ کی جگہ $i$ موجود ہے۔"
+  },
+  {
+   "en": "Using the identity we just matched, we can fold the three separate terms into a single squared bracket, $(z - i)^2$. This completes the main factorization step.",
+   "ur": "اس فارمولے کا اطلاق کرتے ہوئے ہم تین مختلف رقوم کو سمیٹ کر ایک مکمل مربع $(z - i)^2$ کی صورت میں لکھ سکتے ہیں۔ اس سے تجزی کا بنیادی مرحلہ مکمل ہو جاتا ہے۔"
+  },
+  {
+   "en": "Since a square simply means multiplying a term by itself, we expand $(z - i)^2$ into $(z - i)(z - i)$. This clearly shows the two linear factors required by the question.",
+   "ur": "چونکہ کسی رقم کے مربع کا مطلب اسے اپنے آپ سے ضرب دینا ہوتا ہے، اس لیے ہم $(z - i)^2$ کو کھول کر $(z - i)(z - i)$ لکھتے ہیں۔ یہ سوال کے مطابق دو یک درجی اجزائے ضربی کو واضح طور پر ظاہر کرتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $(z - i)(z - i)$ tells us that the given complex quadratic expression is actually a perfect square of the linear factor $(z - i)$. You can easily check this by multiplying the two brackets back together and using $i^2 = -1$ to see that you return to the original question $z^2 - 2iz - 1$.",
+  "ur": "آخری جواب $(z - i)(z - i)$ ہمیں بتاتا ہے کہ دی گئی کمپلیکس دو درجی عبارت دراصل یک درجی جزو $(z - i)$ کا مکمل مربع ہے۔ آپ ان دونوں بریکٹوں کو واپس آپس میں ضرب دے کر اور $i^2 = -1$ استعمال کر کے باآسانی پڑتال کر سکتے ہیں کہ واپس اصل سوال $z^2 - 2iz - 1$ ہی حاصل ہوتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

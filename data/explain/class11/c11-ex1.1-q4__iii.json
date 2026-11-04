@@ -1,0 +1,30 @@
+{
+ "item": "c11-ex1.1-q4",
+ "label": "iii",
+ "answer_ref": "proved: $|z|^2 = a^2 + b^2 = z\\bar z$",
+ "math": [
+  "|z| = \\sqrt{a^2 + b^2} \\Rightarrow |z|^2 = a^2 + b^2",
+  "z\\bar{z} = (a + bi)(a - bi) = a^2 - b^2 i^2 = a^2 + b^2",
+  "\\therefore\\ |z|^2 = z\\bar{z}"
+ ],
+ "why": [
+  {
+   "en": "Let us take the complex number as $z = a + bi$. By the definition of modulus, $|z| = \\sqrt{a^2 + b^2}$, so squaring both sides removes the square root and simplifies the left-hand side of our identity to $a^2 + b^2$.",
+   "ur": "آئیے کمپلیکس نمبر کو $z = a + bi$ فرض کرتے ہیں۔ ماڈیولس (modulus) کی تعریف کے مطابق $|z| = \\sqrt{a^2 + b^2}$ ہوتا ہے، اس لیے دونوں اطراف کا مربع لینے سے جزر ختم ہو جاتا ہے اور مساوات کی بائیں طرف سادہ ہو کر $a^2 + b^2$ بن جاتی ہے۔"
+  },
+  {
+   "en": "Now we evaluate the right-hand side by multiplying $z$ with its conjugate $\\bar{z} = a - bi$ using the difference of two squares formula. Since $i^2 = -1$, the imaginary part disappears and the product becomes the purely real expression $a^2 + b^2$.",
+   "ur": "اب ہم مساوات کی دائیں طرف حل کرنے کے لیے $z$ کو اس کے کونجوگیٹ $\\bar{z} = a - bi$ کے ساتھ دو مربعوں کے فرق کے فارمولے سے ضرب دیتے ہیں۔ چونکہ $i^2 = -1$ ہوتا ہے، اس لیے خیالی حصہ ختم ہو جاتا ہے اور حاصل ضرب خالصتاً حقیقی مقدار $a^2 + b^2$ بن جاتا ہے۔"
+  },
+  {
+   "en": "Comparing the results of the first two steps, we see that both $|z|^2$ and $z\\bar{z}$ simplify to the exact same expression, $a^2 + b^2$. By the transitive property of equality, the left-hand side is equal to the right-hand side.",
+   "ur": "پہلے دو مراحل کے نتائج کا موازنہ کرنے سے ہم دیکھتے ہیں کہ $|z|^2$ اور $z\\bar{z}$ دونوں حل ہو کر بالکل ایک ہی مقدار $a^2 + b^2$ دیتے ہیں۔ مساوات کی خاصیت کے مطابق، بائیں طرف اور دائیں طرف آپس میں برابر ثابت ہو جاتی ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "This proves an important property of complex numbers: multiplying any complex number $z$ by its conjugate $\\bar{z}$ always gives a real number equal to the square of its modulus, $|z|^2 = a^2 + b^2$. This is the very rule we use to rationalize the denominator when dividing complex numbers.",
+  "ur": "اس سے کمپلیکس نمبرز کی ایک اہم خاصیت ثابت ہوتی ہے: کسی بھی کمپلیکس نمبر $z$ کو اس کے کونجوگیٹ $\\bar{z}$ سے ضرب دینے سے ہمیشہ ایک حقیقی نمبر حاصل ہوتا ہے جو اس کے ماڈیولس کے مربع یعنی $|z|^2 = a^2 + b^2$ کے برابر ہوتا ہے۔ یہی وہ اصول ہے جسے ہم کمپلیکس نمبرز کی تقسیم کے دوران مخرج (denominator) سے $i$ ختم کرنے کے لیے استعمال کرتے ہیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

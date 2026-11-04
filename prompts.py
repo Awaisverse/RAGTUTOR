@@ -33,7 +33,9 @@ SOLVE_RULES_10 = SOLVE_RULES.replace("Punjab Class 9 Mathematics", "Punjab Class
 
 
 def solve_rules(klass="9"):
-    """The solver rules for a class: Class 10 adds the check syntax for i, matrices, degrees and rounded decimals."""
+    """The solver rules for a class: Classes 10 and 11 add the check syntax for i, matrices, degrees and rounded decimals."""
+    if str(klass) == "11":                              # Class 11 Unit 1 is complex numbers: the same check syntax for i
+        return SOLVE_RULES_10.replace("Punjab Class 10 Mathematics", "Punjab Class 11 Mathematics").replace("- Class 10 check syntax", "- Check syntax")
     return SOLVE_RULES_10 if str(klass) == "10" else SOLVE_RULES
 
 

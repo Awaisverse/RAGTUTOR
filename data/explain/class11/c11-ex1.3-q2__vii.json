@@ -1,0 +1,30 @@
+{
+ "item": "c11-ex1.3-q2",
+ "label": "vii",
+ "answer_ref": "$\\left(z - i\\sqrt{2}\\right)\\left(z + i\\sqrt{2}\\right)\\left(z - i\\sqrt{3}\\right)\\left(z + i\\sqrt{3}\\right)$",
+ "math": [
+  "= z^4 + 2z^2 + 3z^2 + 6 = (z^2 + 2)(z^2 + 3)",
+  "z^2 + 2 = (z - \\sqrt{2}i)(z + \\sqrt{2}i),\\quad z^2 + 3 = (z - \\sqrt{3}i)(z + \\sqrt{3}i)",
+  "z^4 + 5z^2 + 6 = \\left(z - i\\sqrt{2}\\right)\\left(z + i\\sqrt{2}\\right)\\left(z - i\\sqrt{3}\\right)\\left(z + i\\sqrt{3}\\right)"
+ ],
+ "why": [
+  {
+   "en": "Notice that $z^4 + 5z^2 + 6$ acts like a quadratic expression in terms of $z^2$, so we use the standard middle-term breaking method. This simplifies the degree-4 polynomial into a product of two simpler quadratic factors, $(z^2 + 2)$ and $(z^2 + 3)$.",
+   "ur": "غور کریں کہ $z^4 + 5z^2 + 6$ دراصل $z^2$ کے لحاظ سے ایک دو درجی جملے (quadratic expression) کی طرح ہے، اس لیے ہم درمیانی رقم کو توڑنے کا طریقہ استعمال کرتے ہیں۔ اس سے درجہ 4 کا کثیر رقمی جملہ دو سادہ دو درجی اجزائے ضربی $(z^2 + 2)$ اور $(z^2 + 3)$ کے حاصلِ ضرب میں تبدیل ہو جاتا ہے۔"
+  },
+  {
+   "en": "To reach linear factors (where $z$ has power 1), we use the complex number property $i^2 = -1$ to turn each sum of squares into a difference of squares: $z^2 - (\\sqrt{2}i)^2$ and $z^2 - (\\sqrt{3}i)^2$. Applying the algebraic identity $a^2 - b^2 = (a - b)(a + b)$ breaks both quadratic parts completely into linear factors.",
+   "ur": "یک درجی اجزائے ضربی (linear factors) حاصل کرنے کے لیے، ہم مخلوط اعداد کی خاصیت $i^2 = -1$ استعمال کرتے ہوئے مربعوں کے مجموعے کو مربعوں کے فرق میں بدلتے ہیں، یعنی $z^2 - (\\sqrt{2}i)^2$ اور $z^2 - (\\sqrt{3}i)^2$۔ پھر کلیہ $a^2 - b^2 = (a - b)(a + b)$ لگانے سے دونوں دو درجی حصے مکمل طور پر یک درجی اجزاء میں ٹوٹ جاتے ہیں۔"
+  },
+  {
+   "en": "Finally, we replace the quadratic factors from Step 1 with their new linear forms from Step 2. This gives us the complete factorization of the original polynomial into four linear factors.",
+   "ur": "آخر میں، ہم پہلے مرحلے کے دو درجی اجزاء کی جگہ دوسرے مرحلے سے حاصل ہونے والے یک درجی اجزاء لکھتے ہیں۔ اس طرح ہمیں اصل کثیر رقمی جملے کی چار یک درجی اجزائے ضربی میں مکمل تجزی حاصل ہو جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer shows that the degree-4 polynomial $z^4 + 5z^2 + 6$ is completely broken down into four linear factors in the complex number system: $(z - i\\sqrt{2})(z + i\\sqrt{2})(z - i\\sqrt{3})(z + i\\sqrt{3})$. You can easily check this by multiplying the conjugate pairs first—which gives back $(z^2 + 2)(z^2 + 3)$—and then expanding to get the original expression.",
+  "ur": "حتمی جواب یہ ظاہر کرتا ہے کہ درجہ 4 کے کثیر رقمی جملے $z^4 + 5z^2 + 6$ کو مخلوط اعداد کے نظام میں مکمل طور پر چار یک درجی اجزائے ضربی $(z - i\\sqrt{2})(z + i\\sqrt{2})(z - i\\sqrt{3})(z + i\\sqrt{3})$ میں تحلیل کر دیا گیا ہے۔ آپ اس کی پڑتال آسانی سے کر سکتے ہیں: پہلے زوجی جوڑوں (conjugate pairs) کو ضرب دیں جس سے دوبارہ $(z^2 + 2)(z^2 + 3)$ ملے گا، اور پھر انہیں ضرب دے کر اصل جملہ حاصل ہو جائے گا۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

@@ -52,7 +52,7 @@ random.seed(0)
 
 
 def load_items(klass="9"):
-    """The real book of a class: Class 9 is data/book, Class 10 is data/book10."""
+    """The real book of a class: Class 9 is data/book, Class 10 data/book10, Class 11 data/book11."""
     items = []
     for path in sorted((ROOT / "data" / ("book" if str(klass) == "9" else f"book{klass}")).glob("unit*.json")):
         unit = json.loads(path.read_text(encoding="utf-8"))
@@ -144,7 +144,7 @@ def main():
     ap.add_argument("--engine-eval-per-type", type=int, default=2)
     ap.add_argument("--neighbours", type=int, default=2)
     ap.add_argument("--context-chars", type=int, default=3500, help="size limit for the retrieved examples in a prompt")
-    ap.add_argument("--class", dest="klass", default="9", help="9 (default) or 10: which book to train on")
+    ap.add_argument("--class", dest="klass", default="9", help="9 (default), 10 or 11: which book to train on")
     args = ap.parse_args()
     rules = solve_rules(args.klass)
 
@@ -155,7 +155,13 @@ def main():
     real_train_whole, real_eval_whole = split_real(real, args.eval_units, args.eval_every, args.eval_prefix)
     real_train, real_eval = explode_all(real_train_whole), explode_all(real_eval_whole)
 
-    if str(args.klass) == "10":
+    if str(args.klass) == "11":
+        # Class 11: new numbers for every Unit 1 question type, solved and checked by the Class 11 engine (train/synth11.py)
+        from synth11 import generate as generate11
+        syn_train = leak_free(generate11(args.synth_per_type, seed0=0), real)
+        syn_eval = leak_free(generate11(args.synth_eval_per_type, seed0=100000, avoid={s["question"] for s in syn_train}), real)
+        eng_train, eng_eval = [], []
+    elif str(args.klass) == "10":
         # Class 10: new numbers for every book question type, solved by the same checked templates (train/synth10.py)
         from synth10 import generate as generate10
         syn_train = leak_free(generate10(args.synth_per_type, seed0=0), real)

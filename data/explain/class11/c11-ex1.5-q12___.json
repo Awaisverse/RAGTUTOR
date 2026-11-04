@@ -1,0 +1,40 @@
+{
+ "item": "c11-ex1.5-q12",
+ "label": "",
+ "answer_ref": "proved: $2y = 3x$",
+ "math": [
+  "z - 2 - 3i = (x - 2) + i(y - 3),\\quad z + 2 + 3i = (x + 2) + i(y + 3)",
+  "\\arg(z - 2 - 3i) = \\arg(z + 2 + 3i) + 2\\pi \\Rightarrow \\tan\\left[\\arg(z - 2 - 3i)\\right] = \\tan\\left[\\arg(z + 2 + 3i)\\right]",
+  "\\frac{y - 3}{x - 2} = \\frac{y + 3}{x + 2}",
+  "(y - 3)(x + 2) = (y + 3)(x - 2) \\Rightarrow xy + 2y - 3x - 6 = xy - 2y + 3x - 6",
+  "4y = 6x \\Rightarrow 2y = 3x"
+ ],
+ "why": [
+  {
+   "en": "To use the formula for the argument of a complex number, we first substitute $z = x + iy$ and group the real parts together and the imaginary parts together. This clearly shows us the real part $x - 2$ and imaginary part $y - 3$ for the first number, and $x + 2$ and $y + 3$ for the second.",
+   "ur": "کسی مخلوط عدد کے آرگومنٹ کا فارمولا استعمال کرنے کے لیے، ہم پہلے $z = x + iy$ درج کرتے ہیں اور حقیقی حصوں کو ایک ساتھ اور خیالی حصوں کو ایک ساتھ ملا لیتے ہیں۔ اس سے ہمیں پہلے عدد کے لیے حقیقی حصہ $x - 2$ اور خیالی حصہ $y - 3$، اور دوسرے کے لیے $x + 2$ اور $y + 3$ واضح طور پر مل جاتے ہیں۔"
+  },
+  {
+   "en": "We rearrange the given equation and take the tangent on both sides because the tangent function repeats after a full rotation of $2\\pi$. This allows us to drop the $2\\pi$ and connect the two arguments directly through their tangents.",
+   "ur": "ہم دی گئی مساوات کو ترتیب دیتے ہیں اور دونوں طرف ٹینجنٹ لیتے ہیں کیونکہ ٹینجنٹ فنکشن $2\\pi$ کے مکمل چکر کے بعد اپنی قیمت دہراتا ہے۔ اس سے ہم $2\\pi$ کو ختم کر سکتے ہیں اور دونوں آرگومنٹس کو ان کے ٹینجنٹ کے ذریعے براہِ راست جوڑ سکتے ہیں۔"
+  },
+  {
+   "en": "By definition, the tangent of the argument of a complex number $X + iY$ is simply the ratio of its imaginary part to its real part, $\\frac{Y}{X}$. Applying this rule removes the complex terms and gives us a purely algebraic equation in $x$ and $y$.",
+   "ur": "تعریف کے مطابق، کسی مخلوط عدد $X + iY$ کے آرگومنٹ کا ٹینجنٹ اس کے خیالی حصے اور حقیقی حصے کی نسبت، یعنی $\\frac{Y}{X}$ ہوتا ہے۔ اس اصول کو لاگو کرنے سے مخلوط اعداد ختم ہو جاتے ہیں اور ہمیں $x$ اور $y$ میں ایک خالص الجبری مساوات مل جاتی ہے۔"
+  },
+  {
+   "en": "To get rid of the fractions, we cross-multiply the denominators and expand the brackets on both sides. This brings all the terms onto a single line so we can easily compare and combine them.",
+   "ur": "کسروں کو ختم کرنے کے لیے، ہم چلیپائی ضرب دیتے ہیں اور دونوں طرف بریکٹ کھولتے ہیں۔ اس سے تمام رقوم ایک ہی سطر میں آ جاتی ہیں تاکہ ہم ان کا آسانی سے موازنہ کر سکیں اور انہیں یکجا کر سکیں۔"
+  },
+  {
+   "en": "Since $xy$ and $-6$ appear on both sides of the equation, they cancel each other out, leaving only the linear terms in $x$ and $y$. Gathering like terms and dividing both sides by $2$ gives us the exact relation we were asked to prove.",
+   "ur": "چونکہ $xy$ اور $-6$ مساوات کے دونوں طرف موجود ہیں، اس لیے وہ ایک دوسرے سے کٹ جاتے ہیں، اور صرف $x$ اور $y$ کی یک درجی رقوم باقی رہ جاتی ہیں۔ ایک جیسی رقوم کو اکٹھا کرنے اور دونوں طرف $2$ سے تقسیم کرنے سے ہمیں بالکل وہی تعلق مل جاتا ہے جسے ثابت کرنے کے لیے کہا گیا تھا۔"
+  }
+ ],
+ "meaning": {
+  "en": "This result proves that for any complex number $z = x + iy$ satisfying the given angle condition, its coordinates must lie on the straight line $2y = 3x$. This shows how a geometric condition about angles in the complex plane translates into a simple straight-line equation.",
+  "ur": "یہ نتیجہ ثابت کرتا ہے کہ دی گئی زاویے کی شرط کو پورا کرنے والے کسی بھی مخلوط عدد $z = x + iy$ کے محددات کو خطِ مستقیم $2y = 3x$ پر واقع ہونا چاہیے۔ یہ بتاتا ہے کہ کمپلیکس مستوی میں زاویوں کے بارے میں ایک جیومیٹریکل شرط کس طرح ایک سادہ خطِ مستقیم کی مساوات میں تبدیل ہو جاتی ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

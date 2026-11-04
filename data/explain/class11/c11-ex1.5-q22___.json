@@ -1,0 +1,30 @@
+{
+ "item": "c11-ex1.5-q22",
+ "label": "",
+ "answer_ref": "encrypted: $4i,\\ 9 + 4i,\\ -2 + 4i,\\ 16 + 4i,\\ 16 + 4i$; decrypted: CLASS",
+ "math": [
+  "A = 1,\\ B = 2,\\ \\dots,\\ Z = 26",
+  "\\begin{array}{ll}C = 3: & 4i \\\\ L = 12: & 9 + 4i \\\\ A = 1: & -2 + 4i \\\\ S = 19: & 16 + 4i \\\\ S = 19: & 16 + 4i\\end{array}",
+  "\\begin{array}{ll}4i - (-3 + 4i) = 3 & \\to C \\\\ 9 + 4i - (-3 + 4i) = 12 & \\to L \\\\ -2 + 4i - (-3 + 4i) = 1 & \\to A \\\\ 16 + 4i - (-3 + 4i) = 19 & \\to S \\\\ 16 + 4i - (-3 + 4i) = 19 & \\to S\\end{array}"
+ ],
+ "why": [
+  {
+   "en": "Since mathematical operations like addition cannot be performed directly on English letters, we first assign each letter its standard alphabetical number from $1$ to $26$. This translates the word 'CLASS' into numeric values ($3, 12, 1, 19, 19$) that are ready to be combined with our complex key.",
+   "ur": "چونکہ انگریزی حروف پر براہِ راست ریاضی کے عمل (جیسے جمع کرنا) نہیں کیے جا سکتے، اس لیے ہم پہلے ہر حرف کو حروفِ تہجی میں اس کے مقام کے مطابق $1$ سے $26$ تک ایک نمبر دیتے ہیں۔ اس سے لفظ 'CLASS' عددی قیمتوں ($3, 12, 1, 19, 19$) میں بدل جاتا ہے جنہیں اب کمپلیکس کی (key) کے ساتھ ملایا جا سکتا ہے۔"
+  },
+  {
+   "en": "To hide the original numbers, we apply the rule of complex addition by adding each letter's number directly to the real part of the key $k = -3 + 4i$, while the imaginary part $4i$ stays unchanged. This gives us the secret encrypted list of complex numbers that represents our word.",
+   "ur": "اصل نمبروں کو چھپانے کے لیے، ہم کمپلیکس نمبروں کی جمع کا اصول استعمال کرتے ہوئے ہر حرف کے نمبر کو سیدھا کی (key) $k = -3 + 4i$ کے حقیقی حصے (real part) میں جمع کرتے ہیں، جبکہ خیالی حصہ $4i$ ویسا ہی رہتا ہے۔ اس سے ہمیں کمپلیکس نمبروں کی وہ خفیہ (encrypted) فہرست مل جاتی ہے جو ہمارے لفظ کی نمائندگی کرتی ہے۔"
+  },
+  {
+   "en": "Decryption is the inverse process of encryption, so we subtract the key $k = -3 + 4i$ from each encrypted complex number to undo the addition. This cancels out the imaginary part $4i$ and restores the original numbers ($3, 12, 1, 19, 19$), allowing us to read the word 'CLASS' again.",
+   "ur": "ڈی کرپشن (Decryption) انکرپشن کا الٹ عمل ہے، اس لیے جمع کے عمل کو ختم کرنے کے لیے ہم ہر خفیہ کمپلیکس نمبر میں سے کی (key) $k = -3 + 4i$ کو تفریق کرتے ہیں۔ اس سے خیالی حصہ $4i$ ختم ہو جاتا ہے اور اصل نمبر ($3, 12, 1, 19, 19$) واپس آ جاتے ہیں، جس سے ہم دوبارہ لفظ 'CLASS' پڑھ سکتے ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer shows the secret code ($4i, 9 + 4i, -2 + 4i, 16 + 4i, 16 + 4i$) that safely hides the word 'CLASS', and proves that reversing the process brings the exact word back. The decryption step itself serves as a complete check that our encryption arithmetic was accurate.",
+  "ur": "آخری جواب وہ خفیہ کوڈ ($4i, 9 + 4i, -2 + 4i, 16 + 4i, 16 + 4i$) دکھاتا ہے جو لفظ 'CLASS' کو محفوظ طریقے سے چھپاتا ہے، اور یہ ثابت کرتا ہے کہ عمل کو الٹنے سے بالکل وہی لفظ واپس مل جاتا ہے۔ ڈی کرپشن کا مرحلہ خود اس بات کی مکمل پڑتال (check) ہے کہ ہمارا انکرپشن کا حساب بالکل درست تھا۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

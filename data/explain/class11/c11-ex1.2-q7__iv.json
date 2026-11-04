@@ -1,0 +1,45 @@
+{
+ "item": "c11-ex1.2-q7",
+ "label": "iv",
+ "answer_ref": "$\\pm\\left(12 + 5i\\right)$",
+ "math": [
+  "z = 119 + 120i:\\quad x = 119,\\ y = 120",
+  "|z| = \\sqrt{x^2 + y^2} = \\sqrt{(119)^2 + (120)^2} = \\sqrt{28561} = 169",
+  "\\sqrt{z} = \\pm\\left(\\sqrt{\\frac{|z| + x}{2}} + i\\,\\frac{y}{|y|}\\sqrt{\\frac{|z| - x}{2}}\\right)",
+  "\\sqrt{119 + 120i} = \\pm\\left(\\sqrt{\\frac{169 + (119)}{2}} + i\\sqrt{\\frac{169 - (119)}{2}}\\right)",
+  "= \\pm\\left(\\sqrt{144} + i\\sqrt{25}\\right) = \\pm\\left(12 + 5i\\right)",
+  "\\text{The square roots are } 12 + 5i \\text{ and } -12 - 5i"
+ ],
+ "why": [
+  {
+   "en": "We start by comparing our given complex number with the standard form $z = x + iy$ to clearly separate the real part $x = 119$ and the imaginary part $y = 120$. Knowing these two values is essential because the square root formula directly depends on them.",
+   "ur": "ہم دیے گئے مختلط عدد کا معیاری شکل $z = x + iy$ سے موازنہ کرتے ہیں تاکہ حقیقی حصے $x = 119$ اور خیالی حصے $y = 120$ کو واضح طور پر الگ کیا جا سکے۔ ان دونوں قیمتوں کو جاننا ضروری ہے کیونکہ الجذر المربع کا فارمولا براہِ راست ان پر منحصر ہوتا ہے۔"
+  },
+  {
+   "en": "Next, we calculate the modulus $|z|$ using the definition $|z| = \\sqrt{x^2 + y^2}$, which represents the magnitude of the complex number. Getting a clean whole number like $169$ is a great sign that our final square roots will be simple integers.",
+   "ur": "اس کے بعد، ہم تعریف $|z| = \\sqrt{x^2 + y^2}$ کو استعمال کرتے ہوئے ماڈولس $|z|$ معلوم کرتے ہیں، جو مختلط عدد کی مقدار کو ظاہر کرتا ہے۔ $169$ جیسا پورا عدد حاصل ہونا اس بات کی اچھی علامت ہے کہ ہمارے حتمی الجذر المربع سادہ صحیح اعداد ہوں گے۔"
+  },
+  {
+   "en": "Instead of assuming $(a+ib)^2$ and solving lengthy simultaneous equations, we write down the direct formula for the square root of a complex number. The term $\\frac{y}{|y|}$ simply decides whether the middle sign will be plus or minus based on the sign of $y$.",
+   "ur": "طویل مساواتوں کو حل کرنے کے بجائے، ہم مختلط عدد کے الجذر المربع کا براہِ راست فارمولا لکھتے ہیں۔ رقم $\\frac{y}{|y|}$ محض $y$ کی علامت کی بنیاد پر یہ طے کرتی ہے کہ درمیان میں جمع کی علامت آئے گی یا منفی کی۔"
+  },
+  {
+   "en": "Now we plug $|z| = 169$ and $x = 119$ into the formula, and since $y = 120$ is positive ($y > 0$), the sign before $i$ stays positive. This sets up two simple arithmetic fractions inside the square roots.",
+   "ur": "اب ہم فارمولے میں $|z| = 169$ اور $x = 119$ درج کرتے ہیں، اور چونکہ $y = 120$ مثبت ہے ($y > 0$)، اس لیے $i$ سے پہلے کی علامت مثبت رہتی ہے۔ اس سے الجذر کے اندر دو سادہ کسر بن جاتی ہیں۔"
+  },
+  {
+   "en": "By adding and subtracting inside the fractions and dividing by $2$, we get the perfect squares $144$ and $25$. Taking their principal square roots gives us the exact real part $12$ and imaginary part $5$ of our answer.",
+   "ur": "کسروں کے اندر جمع اور تفریق کر کے $2$ پر تقسیم کرنے سے ہمیں کامل مربع $144$ اور $25$ ملتے ہیں۔ ان کا الجذر لینے سے ہمیں اپنے جواب کا حقیقی حصہ $12$ اور خیالی حصہ $5$ حاصل ہو جاتا ہے۔"
+  },
+  {
+   "en": "Just like any positive real number has two square roots (one positive, one negative), every non-zero complex number also has two square roots that are negatives of each other. Expanding the $\\pm$ sign gives us both individual complex roots clearly.",
+   "ur": "جس طرح ہر مثبت حقیقی عدد کے دو الجذر المربع ہوتے ہیں (ایک مثبت، ایک منفی)، اسی طرح ہر غیر صفر مختلط عدد کے بھی دو الجذر المربع ہوتے ہیں جو ایک دوسرے کے منفی ہوتے ہیں۔ علامت $\\pm$ کو کھول کر لکھنے سے ہمیں دونوں مختلط جذر واضح طور پر مل جاتے ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $\\pm(12 + 5i)$ means that both $12 + 5i$ and $-12 - 5i$ are the exact complex numbers which, when multiplied by themselves, produce the original number $119 + 120i$. You can easily check this in exams by expanding $(12 + 5i)^2 = 144 - 25 + 120i = 119 + 120i$.",
+  "ur": "حتمی جواب $\\pm(12 + 5i)$ کا مطلب یہ ہے کہ $12 + 5i$ اور $-12 - 5i$ دونوں ایسے مختلط اعداد ہیں جنہیں اگر خود سے ضرب دی جائے (یعنی ان کا مربع لیا جائے) تو اصل عدد $119 + 120i$ حاصل ہوتا ہے۔ آپ امتحان میں اس کی تصدیق $(12 + 5i)^2 = 144 - 25 + 120i = 119 + 120i$ کو حل کر کے باآسانی کر سکتے ہیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

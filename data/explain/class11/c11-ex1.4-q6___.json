@@ -1,0 +1,35 @@
+{
+ "item": "c11-ex1.4-q6",
+ "label": "",
+ "answer_ref": "proved: the sum is $\\omega^2 + \\omega = -1$",
+ "math": [
+  "\\frac{i + \\sqrt{3}}{2} = -i\\left(\\frac{-1 + \\sqrt{3}i}{2}\\right) = -i\\omega,\\quad \\frac{i - \\sqrt{3}}{2} = -i\\left(\\frac{-1 - \\sqrt{3}i}{2}\\right) = -i\\omega^2",
+  "(-i\\omega)^8 + (-i\\omega^2)^8 = (-i)^8\\left(\\omega^8 + \\omega^{16}\\right)",
+  "(-i)^8 = 1,\\quad \\omega^8 = \\omega^2,\\quad \\omega^{16} = \\omega",
+  "= \\omega^2 + \\omega = -1"
+ ],
+ "why": [
+  {
+   "en": "Directly expanding the power $8$ of these fractions is very lengthy, so we use the definition of the complex cube roots of unity, $\\omega = \\frac{-1 + \\sqrt{3}i}{2}$ and $\\omega^2 = \\frac{-1 - \\sqrt{3}i}{2}$. Factoring out $-i$ allows us to rewrite the given brackets neatly as $-i\\omega$ and $-i\\omega^2$, which are much easier to raise to high powers.",
+   "ur": "ان کسروں کی پاور $8$ کو براہِ راست کھولنا بہت لمبا عمل ہے، اس لیے ہم اکائی کے پیچیدہ الجذر المکعب (complex cube roots of unity) کی تعریف $\\omega = \\frac{-1 + \\sqrt{3}i}{2}$ اور $\\omega^2 = \\frac{-1 - \\sqrt{3}i}{2}$ استعمال کرتے ہیں۔ $-i$ کو مشترک نکالنے سے ہم دی گئی بریکٹوں کو باآسانی $-i\\omega$ اور $-i\\omega^2$ کی شکل میں لکھ سکتے ہیں، جن کی بڑی پاورز حل کرنا بہت آسان ہے۔"
+  },
+  {
+   "en": "We substitute these simpler forms into the left-hand side of our expression and apply the laws of exponents. Taking $(-i)^8$ common separates the powers of $i$ from the powers of $\\omega$, making the expression very clean to simplify.",
+   "ur": "ہم ان سادہ شکلوں کو اپنے سوال کی بائیں جانب (LHS) میں درج کرتے ہیں اور قوت نما (exponents) کے قوانین لاگو کرتے ہیں۔ $(-i)^8$ کو مشترک لینے سے $i$ کی پاورز اور $\\omega$ کی پاورز الگ ہو جاتی ہیں، جس سے عبارت کو مختصر کرنا بہت آسان ہو جاتا ہے۔"
+  },
+  {
+   "en": "Now we reduce the high powers using the fundamental cyclic properties $i^4 = 1$ and $\\omega^3 = 1$. This step eliminates the large exponents $8$ and $16$, leaving us with just simple terms $\\omega^2$ and $\\omega$.",
+   "ur": "اب ہم بنیادی خصوصیات $i^4 = 1$ اور $\\omega^3 = 1$ کو استعمال کرتے ہوئے بڑی پاورز کو چھوٹا کرتے ہیں۔ یہ مرحلہ $8$ اور $16$ جیسے بڑے قوت نماؤں کو ختم کر دیتا ہے، اور ہمارے پاس صرف سادہ رقوم $\\omega^2$ اور $\\omega$ بچ جاتی ہیں۔"
+  },
+  {
+   "en": "Finally, we apply the property that the sum of the three cube roots of unity is zero, which means $1 + \\omega + \\omega^2 = 0$. From this rule, $\\omega^2 + \\omega$ directly equals $-1$, which gives us our required right-hand side.",
+   "ur": "آخر میں، ہم یہ خصوصیت استعمال کرتے ہیں کہ اکائی کے تینوں الجذر المکعب کا مجموعہ صفر ہوتا ہے، یعنی $1 + \\omega + \\omega^2 = 0$۔ اس اصول کے مطابق، $\\omega^2 + \\omega$ براہِ راست $-1$ کے برابر آتا ہے، جو ہمیں ہماری مطلوبہ دائیں جانب (RHS) دے دیتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This proves that the complicated-looking sum of eighth powers simplifies to the exact real number $-1$, confirming the left-hand side equals the right-hand side. Recognising the hidden cube roots of unity ($\\omega$ and $\\omega^2$) saved us from a long binomial expansion.",
+  "ur": "یہ ثابت کرتا ہے کہ آٹھویں پاورز کا یہ پیچیدہ نظر آنے والا مجموعہ مختصر ہو کر حقیقی عدد $-1$ بن جاتا ہے، جس سے تصدیق ہوتی ہے کہ بائیں جانب دائیں جانب کے برابر ہے۔ اکائی کے چھپے ہوئے الجذر المکعب ($\\omega$ اور $\\omega^2$) کو پہچاننے نے ہمیں ایک لمبے بائنومیل پھیلاؤ (binomial expansion) سے بچا لیا۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

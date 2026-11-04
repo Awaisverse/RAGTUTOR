@@ -1,0 +1,30 @@
+{
+ "item": "c11-ex1.3-q2",
+ "label": "v",
+ "answer_ref": "$\\left(z - 2\\right)\\left(z + 2\\right)\\left(z - 2i\\right)\\left(z + 2i\\right)$",
+ "math": [
+  "z^4 - 16 = (z^2 - 4)(z^2 + 4)",
+  "z^2 - 4 = (z - 2)(z + 2),\\quad z^2 + 4 = (z - 2i)(z + 2i)",
+  "z^4 - 16 = \\left(z - 2\\right)\\left(z + 2\\right)\\left(z - 2i\\right)\\left(z + 2i\\right)"
+ ],
+ "why": [
+  {
+   "en": "We start by viewing $z^4 - 16$ as $(z^2)^2 - 4^2$ so we can apply the familiar difference of two squares formula. This breaks our degree-$4$ polynomial down into two simpler quadratic factors, $z^2 - 4$ and $z^2 + 4$, which are much easier to handle.",
+   "ur": "ہم سب سے پہلے $z^4 - 16$ کو $(z^2)^2 - 4^2$ کی شکل میں دیکھتے ہیں تاکہ اس پر دو مربّعوں کے فرق والا مشہور کلیہ (formula) لگایا جا سکے۔ اس سے ہمارا درجہ $4$ کا کثیر رقمی (polynomial) دو آسان دو درجی اجزائے ضربی $z^2 - 4$ اور $z^2 + 4$ میں تقسیم ہو جاتا ہے، جنہیں حل کرنا بہت آسان ہے۔"
+  },
+  {
+   "en": "Since the question asks for linear (degree $1$) factors, we must break down both quadratic parts further. For $z^2 - 4$, we use the standard difference of squares, and for $z^2 + 4$, we use the complex number property $i^2 = -1$ to rewrite $+4$ as $-(2i)^2$, turning a sum of squares into a difference of squares.",
+   "ur": "چونکہ سوال میں یک درجی (linear) اجزائے ضربی مانگے گئے ہیں، اس لیے ہمیں دونوں دو درجی حصوں کو مزید توڑنا ہوگا۔ $z^2 - 4$ کے لیے ہم سیدھا دو مربّعوں کے فرق والا کلیہ لگاتے ہیں، اور $z^2 + 4$ کے لیے ہم مخلوط اعداد (complex numbers) کی خاصیت $i^2 = -1$ استعمال کرتے ہوئے $+4$ کو $-(2i)^2$ لکھتے ہیں، جس سے یہ جمع بھی دو مربّعوں کے فرق میں بدل جاتی ہے۔"
+  },
+  {
+   "en": "Finally, we gather all the pieces together to write the original polynomial as a single product. Each factor now has $z$ raised only to the first power, which means our factorization into linear factors is complete.",
+   "ur": "آخر میں، ہم ان تمام حصوں کو یکجا کر کے اصل کثیر رقمی کو ایک حاصلِ ضرب کے طور پر لکھتے ہیں۔ اب ہر جزوِ ضربی میں $z$ کی طاقت صرف ایک ہے، جس کا مطلب ہے کہ یک درجی اجزائے ضربی بنانے کا ہمارا کام مکمل ہو گیا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This final expression shows that the degree-$4$ polynomial $z^4 - 16$ is completely broken down into four linear factors over the complex numbers: two real factors and two imaginary ones. You can easily check this result by multiplying the pairs $(z - 2)(z + 2)$ and $(z - 2i)(z + 2i)$ back together to see that they return $z^4 - 16$.",
+  "ur": "یہ حتمی جواب بتاتا ہے کہ درجہ $4$ کا کثیر رقمی $z^4 - 16$ مخلوط اعداد کی مدد سے مکمل طور پر چار یک درجی اجزائے ضربی میں تحلیل ہو چکا ہے: جن میں دو حقیقی اور دو خیالی ہیں۔ آپ اس جواب کی پڑتال بہت آسانی سے کر سکتے ہیں؛ بس $(z - 2)(z + 2)$ اور $(z - 2i)(z + 2i)$ کے جوڑوں کو واپس آپس میں ضرب دیں تو دوبارہ $z^4 - 16$ حاصل ہو جائے گا۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

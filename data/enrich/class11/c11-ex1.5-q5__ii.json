@@ -1,0 +1,70 @@
+{
+ "item": "c11-ex1.5-q5",
+ "label": "ii",
+ "answer_ref": "$\\frac{9}{2}\\left(\\sqrt{6} + \\sqrt{2}\\right) - \\frac{9}{2}\\left(\\sqrt{6} - \\sqrt{2}\\right)i \\approx 17.39 - 4.66i$",
+ "steps": [
+  {
+   "math": "z_1 = 7\\left(\\cos\\frac{23\\pi}{12} + i\\sin\\frac{23\\pi}{12}\\right),\\quad z_2 = 11\\left(\\cos\\frac{11\\pi}{12} + i\\sin\\frac{11\\pi}{12}\\right)",
+   "en": "Write down the given complex numbers $z_1$ and $z_2$ in polar form. We need to find $z_1 - z_2$ and express it in $x + iy$ form.",
+   "ur": "دیے گئے مختلط اعداد $z_1$ اور $z_2$ کو قطبی صورت میں لکھیں۔ ہمیں $z_1 - z_2$ معلوم کرنا ہے اور اسے $x + iy$ صورت میں ظاہر کرنا ہے۔"
+  },
+  {
+   "math": "\\cos\\frac{23\\pi}{12} = \\cos\\left(2\\pi - \\frac{\\pi}{12}\\right) = \\cos\\frac{\\pi}{12},\\quad \\sin\\frac{23\\pi}{12} = \\sin\\left(2\\pi - \\frac{\\pi}{12}\\right) = -\\sin\\frac{\\pi}{12}",
+   "en": "Simplify the trigonometric ratios for angle $\\frac{23\\pi}{12}$ using the quadrant rule $\\cos(2\\pi - \\theta) = \\cos\\theta$ and $\\sin(2\\pi - \\theta) = -\\sin\\theta$.",
+   "ur": "زاویہ $\\frac{23\\pi}{12}$ کی تکونیاتی نسبتوں کو ربع کے اصول $\\cos(2\\pi - \\theta) = \\cos\\theta$ اور $\\sin(2\\pi - \\theta) = -\\sin\\theta$ کی مدد سے سادہ بنائیں۔",
+   "check": [
+    "cos(23*pi/12) == cos(pi/12)",
+    "sin(23*pi/12) == -sin(pi/12)"
+   ]
+  },
+  {
+   "math": "\\cos\\frac{11\\pi}{12} = \\cos\\left(\\pi - \\frac{\\pi}{12}\\right) = -\\cos\\frac{\\pi}{12},\\quad \\sin\\frac{11\\pi}{12} = \\sin\\left(\\pi - \\frac{\\pi}{12}\\right) = \\sin\\frac{\\pi}{12}",
+   "en": "Similarly, simplify the trigonometric ratios for angle $\\frac{11\\pi}{12}$ using $\\cos(\\pi - \\theta) = -\\cos\\theta$ and $\\sin(\\pi - \\theta) = \\sin\\theta$.",
+   "ur": "اسی طرح، زاویہ $\\frac{11\\pi}{12}$ کی تکونیاتی نسبتوں کو $\\cos(\\pi - \\theta) = -\\cos\\theta$ اور $\\sin(\\pi - \\theta) = \\sin\\theta$ کی مدد سے سادہ بنائیں۔",
+   "check": [
+    "cos(11*pi/12) == -cos(pi/12)",
+    "sin(11*pi/12) == sin(pi/12)"
+   ]
+  },
+  {
+   "math": "z_1 = 7\\left(\\cos\\frac{\\pi}{12} - i\\sin\\frac{\\pi}{12}\\right),\\quad z_2 = 11\\left(-\\cos\\frac{\\pi}{12} + i\\sin\\frac{\\pi}{12}\\right) = -11\\left(\\cos\\frac{\\pi}{12} - i\\sin\\frac{\\pi}{12}\\right)",
+   "en": "Substitute these simplified ratios back into $z_1$ and $z_2$, and factor out $-1$ from $z_2$.",
+   "ur": "ان سادہ نسبتوں کو واپس $z_1$ اور $z_2$ میں درج کریں، اور $z_2$ میں سے $-1$ مشترک لیں۔",
+   "check": [
+    "7*(cos(23*pi/12) + I*sin(23*pi/12)) == 7*(cos(pi/12) - I*sin(pi/12))",
+    "11*(cos(11*pi/12) + I*sin(11*pi/12)) == -11*(cos(pi/12) - I*sin(pi/12))"
+   ]
+  },
+  {
+   "math": "z_1 - z_2 = 7\\left(\\cos\\frac{\\pi}{12} - i\\sin\\frac{\\pi}{12}\\right) - \\left[-11\\left(\\cos\\frac{\\pi}{12} - i\\sin\\frac{\\pi}{12}\\right)\\right] = 18\\left(\\cos\\frac{\\pi}{12} - i\\sin\\frac{\\pi}{12}\\right)",
+   "en": "Now subtract $z_2$ from $z_1$ by combining the like terms.",
+   "ur": "اب یکساں رقموں کو ملا کر $z_1$ میں سے $z_2$ کو تفریق کریں۔",
+   "check": [
+    "7*(cos(pi/12) - I*sin(pi/12)) - (-11*(cos(pi/12) - I*sin(pi/12))) == 18*(cos(pi/12) - I*sin(pi/12))"
+   ]
+  },
+  {
+   "math": "\\cos\\frac{\\pi}{12} = \\cos 15^\\circ = \\frac{\\sqrt{6} + \\sqrt{2}}{4},\\quad \\sin\\frac{\\pi}{12} = \\sin 15^\\circ = \\frac{\\sqrt{6} - \\sqrt{2}}{4}",
+   "en": "Recall the standard exact values for $\\cos\\frac{\\pi}{12}$ ($15^\\circ$) and $\\sin\\frac{\\pi}{12}$ ($15^\\circ$).",
+   "ur": "$\\cos\\frac{\\pi}{12}$ ($15^\\circ$) اور $\\sin\\frac{\\pi}{12}$ ($15^\\circ$) کی معیاری درست قیمتیں لکھیں۔",
+   "check": [
+    "cos(pi/12) == (sqrt(6) + sqrt(2))/4",
+    "sin(pi/12) == (sqrt(6) - sqrt(2))/4"
+   ]
+  },
+  {
+   "math": "z_1 - z_2 = 18\\left[\\frac{\\sqrt{6} + \\sqrt{2}}{4} - i\\frac{\\sqrt{6} - \\sqrt{2}}{4}\\right] = \\frac{9}{2}\\left(\\sqrt{6} + \\sqrt{2}\\right) - \\frac{9}{2}\\left(\\sqrt{6} - \\sqrt{2}\\right)i \\approx 17.39 - 4.66i",
+   "en": "Substitute these exact values and simplify the fractions to write the final answer in $x + iy$ form.",
+   "ur": "یہ قیمتیں درج کریں اور کسر کو مختصر کر کے حتمی جواب $x + iy$ کی صورت میں لکھیں۔",
+   "check": [
+    "18*((sqrt(6) + sqrt(2))/4 - I*(sqrt(6) - sqrt(2))/4) == R(9,2)*(sqrt(6) + sqrt(2)) - R(9,2)*(sqrt(6) - sqrt(2))*I",
+    "(7*sqrt(2)/4 + 7*sqrt(6)/4 - 7*sqrt(6)*I/4 + 7*sqrt(2)*I/4) == 7*(cos(23*pi/12) + I*sin(23*pi/12))",
+    "(-11*sqrt(6)/4 - 11*sqrt(2)/4 - 11*sqrt(2)*I/4 + 11*sqrt(6)*I/4) == 11*(cos(11*pi/12) + I*sin(11*pi/12))",
+    "(7*sqrt(2)/4 + 7*sqrt(6)/4 - 7*sqrt(6)*I/4 + 7*sqrt(2)*I/4) - (-11*sqrt(6)/4 - 11*sqrt(2)/4 - 11*sqrt(2)*I/4 + 11*sqrt(6)*I/4) == (9*sqrt(2)/2 + 9*sqrt(6)/2 - 9*sqrt(6)*I/2 + 9*sqrt(2)*I/2)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-04"
+}

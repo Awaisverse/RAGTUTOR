@@ -1,0 +1,60 @@
+{
+ "item": "c11-ex1.2-q1",
+ "label": "iii",
+ "answer_ref": "$x = -11,\\ y = 28$",
+ "math": [
+  "\\frac{x}{2 + i} + \\frac{y}{3 - i} = 4 + 5i \\;\\Rightarrow\\; x(3 - i) + y(2 + i) = (4 + 5i)(2 + i)(3 - i)",
+  "x(3 - i) + y(2 + i) = 3x - xi + 2y + yi = (3x + 2y) + (y - x)i",
+  "(2 + i)(3 - i) = 6 - 2i + 3i - i^2 = 7 + i \\quad (\\text{the common denominator})",
+  "(4 + 5i)(7 + i) = 28 + 4i + 35i + 5i^2 = 23 + 39i",
+  "3 x + 2 y = 23 \\quad (1),\\qquad - x + y = 39 \\quad (2)",
+  "3 x + 2 y = 23 \\quad (1) \\times 1,\\qquad 3 x - 3 y = -117 \\quad (2) \\times (-3)",
+  "5y = 140 \\Rightarrow y = 28",
+  "3x + (2)\\left(28\\right) = 23 \\Rightarrow x = -11",
+  "\\text{Check: } x = -11,\\ y = 28 \\Rightarrow \\text{both sides are equal}"
+ ],
+ "why": [
+  {
+   "en": "To get rid of the fractions and make the equation easier to handle, we multiply the entire equation by the common denominator $(2 + i)(3 - i)$. This clears the denominators and gives us a single-line equation without fractions.",
+   "ur": "کسروں (fractions) کو ختم کرنے اور مساوات کو آسان بنانے کے لیے، ہم پوری مساوات کو مشترک مخرج $(2 + i)(3 - i)$ سے ضرب دیتے ہیں۔ اس سے مخرج ختم ہو جاتے ہیں اور ہمیں بغیر کسر کے ایک سیدھی مساوات مل جاتی ہے۔"
+  },
+  {
+   "en": "We expand the brackets on the left-hand side and collect the terms without $i$ and the terms with $i$ separately. This puts the left side into the standard complex form $a + bi$, so we can clearly see its real part $(3x + 2y)$ and imaginary part $(y - x)$.",
+   "ur": "ہم بائیں طرف کی بریکٹوں کو کھولتے ہیں اور بغیر $i$ والی رقوم اور $i$ والی رقوم کو الگ الگ اکٹھا کرتے ہیں۔ اس سے بائیں سائیڈ معیاری مخلوط شکل $a + bi$ میں آ جاتی ہے، جس سے ہم اس کا حقیقی حصہ $(3x + 2y)$ اور خیالی حصہ $(y - x)$ واضح طور پر دیکھ سکتے ہیں۔"
+  },
+  {
+   "en": "Before multiplying all three brackets on the right side, we first multiply the two denominator factors $(2 + i)$ and $(3 - i)$ using the fundamental property $i^2 = -1$. This simplifies the product of those two brackets into a single complex number $7 + i$.",
+   "ur": "دائیں طرف کی تینوں بریکٹوں کو ایک ساتھ ضرب دینے سے پہلے، ہم بنیادی اصول $i^2 = -1$ کا استعمال کرتے ہوئے مخرج کے دو اجزاء $(2 + i)$ اور $(3 - i)$ کو آپس میں ضرب دیتے ہیں۔ اس سے ان دو بریکٹوں کا حاصلِ ضرب سمٹ کر ایک مخلوط عدد $7 + i$ بن جاتا ہے۔"
+  },
+  {
+   "en": "Now we multiply $(4 + 5i)$ with the result $7 + i$ from the previous step and again substitute $i^2 = -1$. This reduces the entire right-hand side into the standard complex form $23 + 39i$.",
+   "ur": "اب ہم $(4 + 5i)$ کو پچھلے مرحلے کے نتیجے $7 + i$ سے ضرب دیتے ہیں اور دوبارہ $i^2 = -1$ درج کرتے ہیں۔ اس سے پوری دائیں سائیڈ حل ہو کر معیاری مخلوط شکل $23 + 39i$ میں آ جاتی ہے۔"
+  },
+  {
+   "en": "By the definition of equality of complex numbers, two complex numbers are equal only if their real parts are equal and their imaginary parts are equal. Comparing both sides allows us to remove $i$ completely and form two simple linear equations in $x$ and $y$.",
+   "ur": "مخلوط اعداد کی مساوات کی تعریف کے مطابق، دو مخلوط اعداد تبھی برابر ہوتے ہیں جب ان کے حقیقی حصے آپس میں اور خیالی حصے آپس میں برابر ہوں۔ دونوں اطراف کا موازنہ کرنے سے $i$ مکمل طور پر ختم ہو جاتا ہے اور ہمیں $x$ اور $y$ میں دو سادہ یک درجی مساواتیں مل جاتی ہیں۔"
+  },
+  {
+   "en": "To solve these two simultaneous equations by the elimination method, we need the coefficient of $x$ to be the same in both equations. Multiplying equation (2) by $-3$ makes the $x$-term $3x$ in both equations, preparing it to be cancelled out.",
+   "ur": "ان دو ہمزاد مساواتوں کو اخراج کے طریقے (elimination method) سے حل کرنے کے لیے، ہمیں دونوں مساواتوں میں $x$ کا عددی سر (coefficient) ایک جیسا بنانا ہوگا۔ مساوات (2) کو $-3$ سے ضرب دینے سے دونوں مساواتوں میں $x$ والی رقم $3x$ بن جاتی ہے، جس سے اسے کاٹنا آسان ہو جائے گا۔"
+  },
+  {
+   "en": "We subtract the second modified equation from the first so that the $3x$ terms cancel out completely, leaving an equation with only $y$. Dividing $140$ by $5$ gives us the exact value of our first unknown, $y = 28$.",
+   "ur": "ہم پہلی مساوات میں سے دوسری تبدیل شدہ مساوات کو تفریق کرتے ہیں تاکہ $3x$ والی رقوم آپس میں کٹ جائیں اور صرف $y$ والی مساوات باقی رہ جائے۔ $140$ کو $5$ پر تقسیم کرنے سے ہمیں پہلے نامعلوم متغیر کی قیمت $y = 28$ مل جاتی ہے۔"
+  },
+  {
+   "en": "Now that we know $y = 28$, we substitute this value back into equation (1) to find the remaining unknown $x$. Simplifying the arithmetic gives us the value $x = -11$.",
+   "ur": "اب جب کہ ہمیں معلوم ہے کہ $y = 28$ ہے، ہم باقی ماندہ نامعلوم متغیر $x$ کی قیمت نکالنے کے لیے یہ قیمت واپس مساوات (1) میں درج کرتے ہیں۔ حسابی عمل کو مختصر کرنے سے ہمیں $x = -11$ کی قیمت حاصل ہوتی ہے۔"
+  },
+  {
+   "en": "To be sure our solution is error-free, we substitute $x = -11$ and $y = 28$ back into the original equation. Since both sides become equal, our calculated values are verified as correct.",
+   "ur": "اس بات کا یقین کرنے کے لیے کہ ہمارا حل غلطی سے پاک ہے، ہم $x = -11$ اور $y = 28$ کی قیمتیں واپس اصل مساوات میں درج کرتے ہیں۔ چونکہ دونوں اطراف برابر آتی ہیں، اس لیے ہماری نکالی گئی قیمتیں درست ثابت ہوتی ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $x = -11, y = 28$ gives the unique real numbers that make the given complex fraction equation true. You can verify this by putting $x = -11$ and $y = 28$ into the cleared equation $x(3 - i) + y(2 + i)$, which simplifies to $23 + 39i$, matching the right-hand side.",
+  "ur": "آخری جواب $x = -11, y = 28$ وہ منفرد حقیقی اعداد ہیں جو دی گئی مخلوط کسری مساوات کو درست ثابت کرتے ہیں۔ آپ اس کی تصدیق $x = -11$ اور $y = 28$ کو مساوات $x(3 - i) + y(2 + i)$ میں درج کر کے کر سکتے ہیں، جو حل ہونے پر $23 + 39i$ بنتی ہے اور دائیں سائیڈ کے بالکل برابر ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

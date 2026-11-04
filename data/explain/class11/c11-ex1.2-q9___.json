@@ -1,0 +1,60 @@
+{
+ "item": "c11-ex1.2-q9",
+ "label": "",
+ "answer_ref": "$x = \\frac{1}{25},\\ y = - \\frac{57}{25}$",
+ "math": [
+  "(-7 + i)(x + iy) + (-1 - 5i) = i(11 - i)",
+  "-7x - 7yi + xi + yi^2 - 1 - 5i = (-7x - y - 1) + (x - 7y - 5)i",
+  "i(11 - i) = 11i - i^2 = 1 + 11i",
+  "- 7 x - y - 1 = 1 \\quad (1),\\qquad x - 7 y - 5 = 11 \\quad (2)",
+  "- 7 x - y = 2 \\quad (1),\\qquad x - 7 y = 16 \\quad (2)",
+  "7 x + y = -2 \\quad (1) \\times (-1),\\qquad 7 x - 49 y = 112 \\quad (2) \\times 7",
+  "50y = -114 \\Rightarrow y = - \\frac{57}{25}",
+  "-7x + (-1)\\left(- \\frac{57}{25}\\right) = 2 \\Rightarrow x = \\frac{1}{25}",
+  "\\text{Check: } x = \\frac{1}{25},\\ y = - \\frac{57}{25} \\Rightarrow \\text{both sides are equal}"
+ ],
+ "why": [
+  {
+   "en": "We begin by writing down the given equation clearly. Our main goal is to simplify both sides into the standard complex form $a + bi$ so that we can compare them.",
+   "ur": "ہم سب سے پہلے دی گئی مساوات کو واضح طور پر لکھتے ہیں۔ ہمارا اصل مقصد دونوں اطراف کو معیاری کمپلیکس شکل $a + bi$ میں لانا ہے تاکہ ہم ان کا موازنہ کر سکیں۔"
+  },
+  {
+   "en": "We expand the brackets on the left side and use the fundamental property of complex numbers, $i^2 = -1$. Grouping the terms without $i$ and the terms with $i$ gives us the clear real part $(-7x - y - 1)$ and the imaginary part $(x - 7y - 5)$ of the left side.",
+   "ur": "ہم بائیں طرف کی بریکٹس کو کھولتے ہیں اور کمپلیکس نمبرز کی بنیادی خاصیت $i^2 = -1$ استعمال کرتے ہیں۔ $i$ کے بغیر اور $i$ والی رقموں کو الگ الگ اکٹھا کرنے سے ہمیں بائیں طرف کا واضح حقیقی حصہ $(-7x - y - 1)$ اور خیالی حصہ $(x - 7y - 5)$ مل جاتا ہے۔"
+  },
+  {
+   "en": "Now we simplify the right side in the same way using $i^2 = -1$. This puts the right side into the standard form $1 + 11i$, showing that its real part is $1$ and its imaginary part is $11$.",
+   "ur": "اب ہم دائیں طرف کو بھی اسی طرح $i^2 = -1$ استعمال کرتے ہوئے مختصر کرتے ہیں۔ اس سے دائیں سائیڈ معیاری شکل $1 + 11i$ میں آ جاتی ہے، جس سے پتہ چلتا ہے کہ اس کا حقیقی حصہ $1$ اور خیالی حصہ $11$ ہے۔"
+  },
+  {
+   "en": "By definition, two complex numbers are equal only if their real parts are equal and their imaginary parts are equal. This rule allows us to remove $i$ completely and turn one complex equation into two simple simultaneous equations in real numbers $x$ and $y$.",
+   "ur": "تعریف کے مطابق، دو کمپلیکس نمبرز تبھی برابر ہوتے ہیں جب ان کے حقیقی حصے آپس میں اور خیالی حصے آپس میں برابر ہوں۔ یہ اصول ہمیں $i$ کو مکمل طور پر ختم کرنے اور ایک کمپلیکس مساوات کو حقیقی نمبرز $x$ اور $y$ کی دو سادہ ہمزاد مساواتوں میں بدلنے میں مدد دیتا ہے۔"
+  },
+  {
+   "en": "We shift the pure numbers to the right-hand side to put both linear equations into standard form. This makes it much easier to apply the elimination method in the next step.",
+   "ur": "ہم دونوں لکیری مساواتوں کو معیاری شکل میں لانے کے لیے مستقل نمبروں (constants) کو دائیں طرف لے جاتے ہیں۔ اس سے اگلے مرحلے میں اخراج کا طریقہ (elimination method) لگانا بہت آسان ہو جاتا ہے۔"
+  },
+  {
+   "en": "To eliminate one variable, we make the coefficients of $x$ identical in both equations by multiplying the first by $-1$ and the second by $7$. Now both equations start with $7x$, so we are ready to cancel $x$ out.",
+   "ur": "ایک متغیر کو ختم کرنے کے لیے، ہم پہلی مساوات کو $-1$ سے اور دوسری کو $7$ سے ضرب دے کر دونوں مساواتوں میں $x$ کے عددی سر (coefficients) برابر کر لیتے ہیں۔ اب دونوں مساواتیں $7x$ سے شروع ہو رہی ہیں، اس لیے ہم $x$ کو کینسل کرنے کے لیے تیار ہیں۔"
+  },
+  {
+   "en": "Subtracting the second equation from the first eliminates $x$ completely, leaving an equation with only $y$. Dividing both sides by $50$ gives us the exact real value of $y = -\\frac{57}{25}$.",
+   "ur": "پہلی مساوات میں سے دوسری کو تفریق کرنے سے $x$ مکمل طور پر ختم ہو جاتا ہے، اور ہمارے پاس صرف $y$ والی مساوات بچتی ہے۔ دونوں اطراف کو $50$ پر تقسیم کرنے سے ہمیں $y = -\\frac{57}{25}$ کی درست حقیقی قیمت مل جاتی ہے۔"
+  },
+  {
+   "en": "Now that we know $y$, we substitute $y = -\\frac{57}{25}$ back into our first equation so that $x$ is the only unknown left. Solving this simple arithmetic gives us the required real value $x = \\frac{1}{25}$.",
+   "ur": "اب جبکہ ہمیں $y$ معلوم ہے، ہم $y = -\\frac{57}{25}$ کو واپس اپنی پہلی مساوات میں درج کرتے ہیں تاکہ صرف $x$ نامعلوم رہ جائے۔ اس سادہ حساب کو حل کرنے سے ہمیں مطلوبہ حقیقی قیمت $x = \\frac{1}{25}$ مل جاتی ہے۔"
+  },
+  {
+   "en": "Substituting our found values of $x$ and $y$ back into the original complex equation is good practice to verify our work. Since both sides become equal, we can be completely confident that our solution is correct.",
+   "ur": "$x$ اور $y$ کی معلوم کردہ قیمتوں کو واپس اصل کمپلیکس مساوات میں درج کرنا اپنے کام کی تصدیق کرنے کا ایک اچھا طریقہ ہے۔ چونکہ دونوں اطراف برابر آتے ہیں، اس لیے ہم مکمل یقین کر سکتے ہیں کہ ہمارا حل درست ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The values $x = \\frac{1}{25}$ and $y = -\\frac{57}{25}$ are the unique real numbers that make the left side of the given complex equation simplify to $1 + 11i$, matching the right side. You can always verify this by plugging these values into equations $(1)$ and $(2)$ to see that $-7\\left(\\frac{1}{25}\\right) - \\left(-\\frac{57}{25}\\right) = 2$ and $\\frac{1}{25} - 7\\left(-\\frac{57}{25}\\right) = 16$.",
+  "ur": "قیمتیں $x = \\frac{1}{25}$ اور $y = -\\frac{57}{25}$ وہ واحد حقیقی اعداد (real numbers) ہیں جو دی گئی کمپلیکس مساوات کی بائیں سائیڈ کو مختصر کر کے دائیں سائیڈ کے برابر یعنی $1 + 11i$ بنا دیتے ہیں۔ آپ ہمیشہ ان قیمتوں کو مساوات $(1)$ اور $(2)$ میں درج کر کے تصدیق کر سکتے ہیں کہ $-7\\left(\\frac{1}{25}\\right) - \\left(-\\frac{57}{25}\\right) = 2$ اور $\\frac{1}{25} - 7\\left(-\\frac{57}{25}\\right) = 16$ بنتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

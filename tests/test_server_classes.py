@@ -26,8 +26,16 @@ def ask(q, klass=None):
 
 # each class lists its own book
 n9, n10 = len(c.get("/api/items").get_json()), len(c.get("/api/items?class=10").get_json())
-assert n9 > 0 and n10 > 0 and n9 != n10, (n9, n10)
-assert c.get("/api/status").get_json()["classes"] == {"9": n9, "10": n10}
+n11 = len(c.get("/api/items?class=11").get_json())
+assert n9 > 0 and n10 > 0 and n9 != n10 and n11 == 60, (n9, n10, n11)
+assert c.get("/api/status").get_json()["classes"] == {"9": n9, "10": n10, "11": n11}
+
+# Class 11: a book question, and a new question of a Class 11 kind (solved by the Class 11 engine)
+d = ask("Find the square root of the following complex numbers: (i) $-7-24i$ (ii) $8-6i$ (iii) $-15-36i$ (iv) $119+120i$", 11)
+assert d["mode"] == "book" and d["item"]["id"] == "c11-ex1.2-q7", d
+d = ask("Find the square roots of 5 - 12i", 11)
+assert d["mode"] == "solved" and d["item"]["parts"][0]["answer"] == r"$\pm\left(3 - 2i\right)$", d
+assert ask("Find the square roots of 5 - 12i", 10)["mode"] != "book"
 
 # Class 10: a book question, and the same type with new numbers (solved by the Class 10 engine)
 d = ask("Simplify and write in the form a+bi: (3-5i) ÷ (2-4i)", 10)

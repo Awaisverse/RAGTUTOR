@@ -1,0 +1,35 @@
+{
+ "item": "c11-ex1.5-q6",
+ "label": "ii",
+ "answer_ref": "proved: $\\frac{z_1}{z_2} = \\frac{r_1}{r_2}\\operatorname{cis}(\\theta_1 - \\theta_2)$",
+ "math": [
+  "\\frac{z_1}{z_2} = \\frac{r_1(\\cos\\theta_1 + i\\sin\\theta_1)}{r_2(\\cos\\theta_2 + i\\sin\\theta_2)} \\times \\frac{\\cos\\theta_2 - i\\sin\\theta_2}{\\cos\\theta_2 - i\\sin\\theta_2}",
+  "= \\frac{r_1}{r_2}\\cdot\\frac{(\\cos\\theta_1\\cos\\theta_2 + \\sin\\theta_1\\sin\\theta_2) + i(\\sin\\theta_1\\cos\\theta_2 - \\cos\\theta_1\\sin\\theta_2)}{\\cos^2\\theta_2 + \\sin^2\\theta_2}",
+  "= \\frac{r_1}{r_2}\\left[\\cos(\\theta_1 - \\theta_2) + i\\sin(\\theta_1 - \\theta_2)\\right]",
+  "\\therefore\\ \\operatorname{Arg}\\left(\\frac{z_1}{z_2}\\right) = \\theta_1 - \\theta_2 = \\operatorname{Arg} z_1 - \\operatorname{Arg} z_2"
+ ],
+ "why": [
+  {
+   "en": "To divide two complex numbers in polar form, we first need to remove the imaginary unit $i$ from the denominator. We do this by using the standard method of multiplying both the numerator and denominator by the complex conjugate of the denominator, $\\cos\\theta_2 - i\\sin\\theta_2$.",
+   "ur": "پولر فارم میں دو کمپلیکس نمبرز کو تقسیم کرنے کے لیے ہمیں پہلے ڈینومینیٹر (نسب نما) سے ایوٹا $i$ کو ختم کرنا ہوتا ہے۔ اس کے لیے ہم عام طریقے کے مطابق نیومریٹر اور ڈینومینیٹر دونوں کو ڈینومینیٹر کے کمپلیکس کونجوگیٹ $\\cos\\theta_2 - i\\sin\\theta_2$ سے ضرب دیتے ہیں۔"
+  },
+  {
+   "en": "We expand the brackets and group the real and imaginary parts together in the numerator, remembering that $i^2 = -1$. In the denominator, multiplying conjugates gives $\\cos^2\\theta_2 + \\sin^2\\theta_2$, which simplifies our fraction neatly because this fundamental trigonometric identity equals $1$.",
+   "ur": "ہم بریکٹس کو کھولتے ہیں اور $i^2 = -1$ کو ذہن میں رکھتے ہوئے نیومریٹر میں حقیقی اور خیالی حصوں کو الگ الگ اکٹھا کر لیتے ہیں۔ ڈینومینیٹر میں کونجوگیٹس کو ضرب دینے سے $\\cos^2\\theta_2 + \\sin^2\\theta_2$ بنتا ہے، جو ہماری کسر کو بہت آسان بنا دیتا ہے کیونکہ بنیادی ٹرگنومیٹرک فارمولے کے مطابق یہ $1$ کے برابر ہوتا ہے۔"
+  },
+  {
+   "en": "Here, we recognize the standard trigonometric subtraction formulas for cosine and sine inside the real and imaginary parts. Applying these identities condenses the expression back into the standard polar form, clearly showing the new angle as $\\theta_1 - \\theta_2$.",
+   "ur": "یہاں ہم حقیقی اور خیالی حصوں میں کوسائن اور سائن کے تفریق والے ٹرگنومیٹرک فارمولوں کو پہچانتے ہیں۔ ان فارمولوں کو لگانے سے پوری عبارت سمٹ کر واپس معیاری پولر فارم میں آ جاتی ہے، جس میں نیا زاویہ واضح طور پر $\\theta_1 - \\theta_2$ نظر آ رہا ہے۔"
+  },
+  {
+   "en": "By definition, the argument of a complex number in polar form is the angle inside the cosine and sine terms. Reading this angle directly from our simplified polar form gives $\\theta_1 - \\theta_2$, which completes the proof.",
+   "ur": "تعریف کے مطابق، پولر فارم میں کسی کمپلیکس نمبر کا آرگومنٹ وہ زاویہ ہوتا ہے جو کوسائن اور سائن کے ساتھ لکھا ہو۔ ہماری سادہ کی گئی پولر فارم سے اس زاویے کو براہِ راست پڑھنے سے ہمیں $\\theta_1 - \\theta_2$ ملتا ہے، جس سے ہمارا ثبوت مکمل ہو جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This proves an important geometric rule of complex numbers: when you divide one complex number by another, you divide their lengths (moduli) $\\frac{r_1}{r_2}$ and subtract their angles (arguments) $\\theta_1 - \\theta_2$. This makes dividing complex numbers very similar to the laws of exponents!",
+  "ur": "یہ کمپلیکس نمبرز کے ایک اہم جیومیٹریکل اصول کو ثابت کرتا ہے: جب آپ ایک کمپلیکس نمبر کو دوسرے پر تقسیم کرتے ہیں، تو ان کی لمبائیوں (ماڈیولس) کو تقسیم کیا جاتا ہے یعنی $\\frac{r_1}{r_2}$ اور ان کے زاویوں (آرگومنٹس) کو آپس میں سے تفریق کیا جاتا ہے یعنی $\\theta_1 - \\theta_2$۔ یہ اصول کمپلیکس نمبرز کی تقسیم کو قوت نما کے قوانین (laws of exponents) جیسا آسان بنا دیتا ہے!"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

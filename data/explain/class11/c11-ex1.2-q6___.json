@@ -1,0 +1,40 @@
+{
+ "item": "c11-ex1.2-q6",
+ "label": "",
+ "answer_ref": "proved: both sides equal $(ac - bd) - (ad + bc)i$",
+ "math": [
+  "z_1 = a + bi,\\quad z_2 = c + di",
+  "z_1 z_2 = (ac - bd) + (ad + bc)i",
+  "\\overline{z_1 z_2} = (ac - bd) - (ad + bc)i",
+  "\\bar{z}_1 \\bar{z}_2 = (a - bi)(c - di) = (ac - bd) - (ad + bc)i",
+  "\\therefore\\ \\overline{z_1 z_2} = \\bar{z}_1 \\bar{z}_2"
+ ],
+ "why": [
+  {
+   "en": "To prove a property for all complex numbers, we first write $z_1$ and $z_2$ in their standard rectangular form using real numbers $a, b, c,$ and $d$. This gives us concrete algebraic expressions so we can apply operations like multiplication and conjugation.",
+   "ur": "تمام مخلوط اعداد کے لیے کسی خصوصیت کو ثابت کرنے کے لیے، ہم پہلے حقیقی اعداد $a, b, c$ اور $d$ کا استعمال کرتے ہوئے $z_1$ اور $z_2$ کو ان کی معیاری شکل میں لکھتے ہیں۔ اس سے ہمیں واضح الجبری جملے مل جاتے ہیں جن پر ہم ضرب اور زوج (conjugate) جیسے عوامل لاگو کر سکتے ہیں۔"
+  },
+  {
+   "en": "We begin simplifying the left-hand side by applying the rule for complex multiplication to find the product $z_1 z_2$, remembering that $i^2 = -1$. Grouping the real terms and the imaginary terms gives us a single complex number ready for the next operation.",
+   "ur": "ہم بائیں طرف کو حل کرنے کی شروعات $z_1 z_2$ کا حاصلِ ضرب معلوم کرنے سے کرتے ہیں، جس میں مخلوط اعداد کی ضرب کا اصول اور $i^2 = -1$ استعمال ہوتا ہے۔ حقیقی اور خیالی حصوں کو الگ الگ یکجا کرنے سے ہمیں ایک نیا مخلوط عدد ملتا ہے جس پر ہم اگلا عمل کر سکتے ہیں۔"
+  },
+  {
+   "en": "By the definition of a complex conjugate, we reverse the sign of the imaginary part $(ad + bc)$ to find $\\overline{z_1 z_2}$. This completes the evaluation of the left-hand side of our equation.",
+   "ur": "مخلوط عدد کے زوج (conjugate) کی تعریف کے مطابق، ہم $\\overline{z_1 z_2}$ معلوم کرنے کے لیے خیالی حصے $(ad + bc)$ کی علامت تبدیل کرتے ہیں۔ اس سے ہماری مساوات کی بائیں سائیڈ (LHS) مکمل طور پر حل ہو جاتی ہے۔"
+  },
+  {
+   "en": "Now we work on the right-hand side by first taking the individual conjugates $\\bar{z}_1 = a - bi$ and $\\bar{z}_2 = c - di$, and then multiplying them together. Using algebraic expansion and $i^2 = -1$ again, we get the simplified form of the right-hand side.",
+   "ur": "اب ہم دائیں سائیڈ (RHS) کو حل کرنے کے لیے پہلے الگ الگ زوج $\\bar{z}_1 = a - bi$ اور $\\bar{z}_2 = c - di$ لیتے ہیں اور پھر انہیں آپس میں ضرب دیتے ہیں۔ الجبری ضرب اور $i^2 = -1$ کا دوبارہ استعمال کرتے ہوئے، ہمیں دائیں سائیڈ کی مختصر شکل حاصل ہوتی ہے۔"
+  },
+  {
+   "en": "Comparing our results from the third and fourth steps, we see that both the left-hand side and the right-hand side simplify to the exact same expression, $(ac - bd) - (ad + bc)i$. Since both sides are equal, the property is officially proved.",
+   "ur": "تیسرے اور چوتھے مرحلے کے نتائج کا موازنہ کرنے سے ہم دیکھتے ہیں کہ بائیں اور دائیں دونوں اطراف بالکل ایک ہی جملے $(ac - bd) - (ad + bc)i$ کے برابر ہیں۔ چونکہ دونوں اطراف برابر ہیں، اس لیے یہ خصوصیت ثابت ہو گئی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This proof shows an important rule of complex numbers: the conjugate of a product is always equal to the product of the individual conjugates. In simple words, whether you multiply two complex numbers first and then take the conjugate, or take their conjugates first and then multiply, you will always get the exact same result, $(ac - bd) - (ad + bc)i$.",
+  "ur": "یہ ثبوت مخلوط اعداد کے ایک اہم اصول کو ظاہر کرتا ہے: دو اعداد کے حاصلِ ضرب کا زوج ہمیشہ ان کے انفرادی زوجوں کے حاصلِ ضرب کے برابر ہوتا ہے۔ سادہ الفاظ میں، چاہے آپ پہلے دو مخلوط اعداد کو ضرب دیں اور پھر زوج لیں، یا پہلے ان کے زوج لیں اور پھر ضرب دیں، آپ کو ہمیشہ ایک ہی نتیجہ $(ac - bd) - (ad + bc)i$ ملے گا۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

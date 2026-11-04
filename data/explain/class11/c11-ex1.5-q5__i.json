@@ -1,0 +1,50 @@
+{
+ "item": "c11-ex1.5-q5",
+ "label": "i",
+ "answer_ref": "$-\\left(\\sqrt{6} + \\sqrt{2}\\right) + \\left(\\sqrt{6} - \\sqrt{2}\\right)i \\approx -3.86 + 1.04i$",
+ "math": [
+  "z_1 = 7\\left(\\cos\\frac{23\\pi}{12} + i\\sin\\frac{23\\pi}{12}\\right),\\quad z_2 = 11\\left(\\cos\\frac{11\\pi}{12} + i\\sin\\frac{11\\pi}{12}\\right)",
+  "\\cos\\frac{23\\pi}{12} = \\cos\\left(2\\pi - \\frac{\\pi}{12}\\right) = \\cos\\frac{\\pi}{12} = \\frac{\\sqrt{6} + \\sqrt{2}}{4},\\quad \\sin\\frac{23\\pi}{12} = \\sin\\left(2\\pi - \\frac{\\pi}{12}\\right) = -\\sin\\frac{\\pi}{12} = -\\frac{\\sqrt{6} - \\sqrt{2}}{4}",
+  "z_1 = 7\\left(\\frac{\\sqrt{6} + \\sqrt{2}}{4} - i\\frac{\\sqrt{6} - \\sqrt{2}}{4}\\right) = \\frac{7}{4}\\left(\\sqrt{6} + \\sqrt{2}\\right) - \\frac{7}{4}\\left(\\sqrt{6} - \\sqrt{2}\\right)i",
+  "\\cos\\frac{11\\pi}{12} = \\cos\\left(\\pi - \\frac{\\pi}{12}\\right) = -\\cos\\frac{\\pi}{12} = -\\frac{\\sqrt{6} + \\sqrt{2}}{4},\\quad \\sin\\frac{11\\pi}{12} = \\sin\\left(\\pi - \\frac{\\pi}{12}\\right) = \\sin\\frac{\\pi}{12} = \\frac{\\sqrt{6} - \\sqrt{2}}{4}",
+  "z_2 = 11\\left(-\\frac{\\sqrt{6} + \\sqrt{2}}{4} + i\\frac{\\sqrt{6} - \\sqrt{2}}{4}\\right) = -\\frac{11}{4}\\left(\\sqrt{6} + \\sqrt{2}\\right) + \\frac{11}{4}\\left(\\sqrt{6} - \\sqrt{2}\\right)i",
+  "z_1 + z_2 = \\left[\\frac{7}{4}\\left(\\sqrt{6} + \\sqrt{2}\\right) - \\frac{11}{4}\\left(\\sqrt{6} + \\sqrt{2}\\right)\\right] + \\left[-\\frac{7}{4}\\left(\\sqrt{6} - \\sqrt{2}\\right) + \\frac{11}{4}\\left(\\sqrt{6} - \\sqrt{2}\\right)\\right]i",
+  "z_1 + z_2 = -\\frac{4}{4}\\left(\\sqrt{6} + \\sqrt{2}\\right) + \\frac{4}{4}\\left(\\sqrt{6} - \\sqrt{2}\\right)i = -\\left(\\sqrt{6} + \\sqrt{2}\\right) + \\left(\\sqrt{6} - \\sqrt{2}\\right)i \\approx -3.86 + 1.04i"
+ ],
+ "why": [
+  {
+   "en": "Unlike multiplication, we cannot directly add two complex numbers in polar form when their angles are different. By writing them down clearly first, we see that we must convert both $z_1$ and $z_2$ into standard Cartesian form ($x + iy$) before adding.",
+   "ur": "ضرب کے برعکس، جب دو کمپلیکس نمبرز کے زاویے مختلف ہوں تو ہم انہیں پولر فارم میں براہِ راست جمع نہیں کر سکتے۔ انہیں پہلے واضح طور پر لکھنے سے ہمیں معلوم ہوتا ہے کہ جمع کرنے سے پہلے ہمیں $z_1$ اور $z_2$ دونوں کو معیاری کارٹیزین شکل ($x + iy$) میں تبدیل کرنا ہو گا۔"
+  },
+  {
+   "en": "We use the allied angles rule to rewrite $\\frac{23\\pi}{12}$ in terms of the basic angle $\\frac{\\pi}{12}$ ($15^\\circ$). Since $2\\pi - \\frac{\\pi}{12}$ lies in the fourth quadrant, cosine stays positive and sine becomes negative, giving us the exact radical values needed for $z_1$.",
+   "ur": "ہم الائیڈ اینگلز (allied angles) کا اصول استعمال کرتے ہوئے $\\frac{23\\pi}{12}$ کو بنیادی زاویے $\\frac{\\pi}{12}$ ($15^\\circ$) کی شکل میں لکھتے ہیں۔ چونکہ $2\\pi - \\frac{\\pi}{12}$ چوتھے کواڈرنٹ میں واقع ہے، اس لیے کوسائن مثبت رہتا ہے اور سائن منفی ہو جاتا ہے، جس سے ہمیں $z_1$ کے لیے درست قیمتیں مل جاتی ہیں۔"
+  },
+  {
+   "en": "Now we multiply the modulus $7$ inside the bracket to separate the real part and the imaginary part. This completes the conversion of $z_1$ into $x + iy$ form so it is ready for addition.",
+   "ur": "اب ہم ماڈیولس $7$ کو بریکٹ کے اندر ضرب دیتے ہیں تاکہ حقیقی حصے (real part) اور خیالی حصے (imaginary part) کو الگ کیا جا سکے۔ اس سے $z_1$ کی $x + iy$ شکل میں تبدیلی مکمل ہو جاتی ہے اور اب یہ جمع کے عمل کے لیے تیار ہے۔"
+  },
+  {
+   "en": "Just like before, we apply the allied angles rule to $\\frac{11\\pi}{12}$ by writing it as $\\pi - \\frac{\\pi}{12}$, which falls in the second quadrant. In the second quadrant, cosine is negative and sine is positive, which gives us the exact trigonometric values for $z_2$.",
+   "ur": "پہلے کی طرح، ہم $\\frac{11\\pi}{12}$ کو $\\pi - \\frac{\\pi}{12}$ لکھ کر الائیڈ اینگلز کا اصول لگاتے ہیں، جو کہ دوسرے کواڈرنٹ میں آتا ہے۔ دوسرے کواڈرنٹ میں کوسائن منفی اور سائن مثبت ہوتا ہے، جس سے ہمیں $z_2$ کی درست تکونیاتی قیمتیں مل جاتی ہیں۔"
+  },
+  {
+   "en": "Distributing the modulus $11$ across both terms gives us the standard $x + iy$ form of $z_2$. Notice how both $z_1$ and $z_2$ now share the exact same radical brackets, $\\left(\\sqrt{6} + \\sqrt{2}\\right)$ and $\\left(\\sqrt{6} - \\sqrt{2}\\right)$, which will make adding them very easy.",
+   "ur": "ماڈیولس $11$ کو دونوں رقموں سے ضرب دینے پر ہمیں $z_2$ کی معیاری $x + iy$ شکل مل جاتی ہے۔ غور کریں کہ اب $z_1$ اور $z_2$ دونوں میں ایک جیسی جذری بریکٹس $\\left(\\sqrt{6} + \\sqrt{2}\\right)$ اور $\\left(\\sqrt{6} - \\sqrt{2}\\right)$ موجود ہیں، جس سے انہیں جمع کرنا بہت آسان ہو جائے گا۔"
+  },
+  {
+   "en": "By definition of complex addition, we add the real parts together and the imaginary parts together. Because the radical expressions match, we can treat them as common factors and simply combine their fractional coefficients.",
+   "ur": "کمپلیکس نمبرز کی جمع کے اصول کے مطابق، ہم حقیقی حصوں کو آپس میں اور خیالی حصوں کو آپس میں جمع کرتے ہیں۔ چونکہ جذری رقمیں ایک جیسی ہیں، اس لیے ہم انہیں مشترک (common) لے کر صرف ان کے کسری عددی سروں کو حل کر سکتے ہیں۔"
+  },
+  {
+   "en": "Combining $\\frac{7}{4} - \\frac{11}{4}$ gives $-\\frac{4}{4} = -1$, and $-\\frac{7}{4} + \\frac{11}{4}$ gives $\\frac{4}{4} = 1$, which neatly cancels out the denominators. This leaves us with the simplest exact form $x + iy$, along with its decimal approximation.",
+   "ur": "یہاں $\\frac{7}{4} - \\frac{11}{4}$ کو حل کرنے سے $-\\frac{4}{4} = -1$ ملتا ہے، اور $-\\frac{7}{4} + \\frac{11}{4}$ سے $\\frac{4}{4} = 1$ آتا ہے، جس سے بٹے کی رقمیں صاف کٹ جاتی ہیں۔ یوں ہمیں سادہ ترین درست شکل $x + iy$ اور اس کی اعشاریہ میں قریبی قیمت حاصل ہو جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer tells us that the sum $z_1 + z_2$ in standard $x + iy$ form has a real part of $-\\left(\\sqrt{6} + \\sqrt{2}\\right) \\approx -3.86$ and an imaginary part of $\\left(\\sqrt{6} - \\sqrt{2}\\right) \\approx 1.04$. You can check that this makes sense geometrically: $z_1$ (length $7$) and $z_2$ (length $11$) have angles $\\frac{23\\pi}{12}$ and $\\frac{11\\pi}{12}$ that differ by exactly $\\pi$ ($180^\\circ$), meaning they point in opposite directions along the same line, so the longer vector $z_2$ dominates and keeps the sum in the second quadrant ($x < 0, y > 0$).",
+  "ur": "حتمی جواب ہمیں بتاتا ہے کہ معیاری شکل $x + iy$ میں مجموعہ $z_1 + z_2$ کا حقیقی حصہ $-\\left(\\sqrt{6} + \\sqrt{2}\\right) \\approx -3.86$ ہے اور خیالی حصہ $\\left(\\sqrt{6} - \\sqrt{2}\\right) \\approx 1.04$ ہے۔ آپ جیومیٹری کی مدد سے بھی اس کی تصدیق کر سکتے ہیں: $z_1$ (لمبائی $7$) اور $z_2$ (لمبائی $11$) کے زاویوں $\\frac{23\\pi}{12}$ اور $\\frac{11\\pi}{12}$ میں ٹھیک $\\pi$ ($180^\\circ$) کا فرق ہے، جس کا مطلب ہے کہ وہ ایک ہی لکیر پر مخالف سمتوں میں ہیں، اس لیے بڑا ویکٹر $z_2$ غالب آتا ہے اور حاصل جمع کو دوسرے کواڈرنٹ ($x < 0, y > 0$) ہی میں رکھتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

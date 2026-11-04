@@ -1,0 +1,70 @@
+{
+ "item": "c11-ex1.5-q4",
+ "label": "i",
+ "answer_ref": "$\\frac{1}{2}\\left(5 - 9\\sqrt{2}\\right) + \\frac{1}{2}\\left(5\\sqrt{3} - 9\\sqrt{2}\\right)i \\approx -3.86 - 2.03i$",
+ "steps": [
+  {
+   "math": "z_1 = 9\\left(\\cos\\frac{5\\pi}{4} + i\\sin\\frac{5\\pi}{4}\\right), \\quad z_2 = 5\\left(\\cos\\frac{\\pi}{3} + i\\sin\\frac{\\pi}{3}\\right)",
+   "en": "Write down the given complex numbers $z_1$ and $z_2$ in polar form. To find their sum $z_1 + z_2$, we first convert them into the standard rectangular form $x + iy$.",
+   "ur": "دیے گئے مخلوط اعداد $z_1$ اور $z_2$ کو قطبی صورت میں لکھیں۔ ان کا مجموعہ $z_1 + z_2$ معلوم کرنے کے لیے، ہم پہلے انہیں معیاری صورت $x + iy$ میں تبدیل کریں گے۔"
+  },
+  {
+   "math": "\\cos\\frac{5\\pi}{4} = -\\frac{\\sqrt{2}}{2}, \\quad \\sin\\frac{5\\pi}{4} = -\\frac{\\sqrt{2}}{2}",
+   "en": "Evaluate the trigonometric functions for the angle $\\frac{5\\pi}{4}$ in $z_1$.",
+   "ur": "$z_1$ میں زاویہ $\\frac{5\\pi}{4}$ کے لیے مثلثیاتی تفاعل کی قیمتیں معلوم کریں۔",
+   "check": [
+    "cos(5*pi/4) == -sqrt(2)/2",
+    "sin(5*pi/4) == -sqrt(2)/2"
+   ]
+  },
+  {
+   "math": "z_1 = 9\\left(-\\frac{\\sqrt{2}}{2} - i\\frac{\\sqrt{2}}{2}\\right) = -\\frac{9\\sqrt{2}}{2} - \\frac{9\\sqrt{2}}{2}i",
+   "en": "Substitute these values into $z_1$ and multiply by $9$ to get its rectangular form.",
+   "ur": "ان قیمتوں کو $z_1$ میں درج کریں اور معیاری صورت حاصل کرنے کے لیے $9$ سے ضرب دیں۔",
+   "check": [
+    "9*(-sqrt(2)/2 - I*sqrt(2)/2) == -9*sqrt(2)/2 - 9*sqrt(2)*I/2",
+    "9*(cos(5*pi/4) + I*sin(5*pi/4)) == -9*sqrt(2)/2 - 9*sqrt(2)*I/2"
+   ]
+  },
+  {
+   "math": "\\cos\\frac{\\pi}{3} = \\frac{1}{2}, \\quad \\sin\\frac{\\pi}{3} = \\frac{\\sqrt{3}}{2}",
+   "en": "Similarly, evaluate the trigonometric functions for the angle $\\frac{\\pi}{3}$ in $z_2$.",
+   "ur": "اسی طرح، $z_2$ میں زاویہ $\\frac{\\pi}{3}$ کے لیے مثلثیاتی تفاعل کی قیمتیں معلوم کریں۔",
+   "check": [
+    "cos(pi/3) == R(1,2)",
+    "sin(pi/3) == sqrt(3)/2"
+   ]
+  },
+  {
+   "math": "z_2 = 5\\left(\\frac{1}{2} + i\\frac{\\sqrt{3}}{2}\\right) = \\frac{5}{2} + \\frac{5\\sqrt{3}}{2}i",
+   "en": "Substitute these values into $z_2$ and multiply by $5$ to get its rectangular form.",
+   "ur": "ان قیمتوں کو $z_2$ میں درج کریں اور معیاری صورت حاصل کرنے کے لیے $5$ سے ضرب دیں۔",
+   "check": [
+    "5*(R(1,2) + I*sqrt(3)/2) == R(5,2) + 5*sqrt(3)*I/2",
+    "5*(cos(pi/3) + I*sin(pi/3)) == R(5,2) + 5*sqrt(3)*I/2"
+   ]
+  },
+  {
+   "math": "z_1 + z_2 = \\left(-\\frac{9\\sqrt{2}}{2} - \\frac{9\\sqrt{2}}{2}i\\right) + \\left(\\frac{5}{2} + \\frac{5\\sqrt{3}}{2}i\\right) = \\left(\\frac{5}{2} - \\frac{9\\sqrt{2}}{2}\\right) + \\left(\\frac{5\\sqrt{3}}{2} - \\frac{9\\sqrt{2}}{2}\\right)i",
+   "en": "Now add $z_1$ and $z_2$ by grouping the real parts together and the imaginary parts together.",
+   "ur": "اب حقیقی حصوں اور خیالی حصوں کو الگ الگ اکٹھا کر کے $z_1$ اور $z_2$ کو جمع کریں۔",
+   "check": [
+    "(-9*sqrt(2)/2 - 9*sqrt(2)*I/2) + (R(5,2) + 5*sqrt(3)*I/2) == (R(5,2) - 9*sqrt(2)/2) + (5*sqrt(3)/2 - 9*sqrt(2)/2)*I"
+   ]
+  },
+  {
+   "math": "z_1 + z_2 = \\frac{1}{2}\\left(5 - 9\\sqrt{2}\\right) + \\frac{1}{2}\\left(5\\sqrt{3} - 9\\sqrt{2}\\right)i \\approx -3.86 - 2.03i",
+   "en": "Factor out $\\frac{1}{2}$ from both the real and imaginary parts, and write the approximate decimal value.",
+   "ur": "حقیقی اور خیالی دونوں حصوں سے $\\frac{1}{2}$ مشترک لیں، اور اعشاریہ میں تقریبی قیمت لکھیں۔",
+   "check": [
+    "(R(5,2) - 9*sqrt(2)/2) + (5*sqrt(3)/2 - 9*sqrt(2)/2)*I == R(1,2)*(5 - 9*sqrt(2)) + R(1,2)*(5*sqrt(3) - 9*sqrt(2))*I",
+    "(-9*sqrt(2)/2 - 9*sqrt(2)*I/2) == 9*(cos(5*pi/4) + I*sin(5*pi/4))",
+    "(5/2 + 5*sqrt(3)*I/2) == 5*(cos(pi/3) + I*sin(pi/3))",
+    "(-9*sqrt(2)/2 - 9*sqrt(2)*I/2) + (5/2 + 5*sqrt(3)*I/2) == (-9*sqrt(2)/2 + 5/2 - 9*sqrt(2)*I/2 + 5*sqrt(3)*I/2)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-04"
+}

@@ -112,12 +112,12 @@ def attempt(question, examples_text, attempts=3, max_new_tokens=2500, generate=N
     return best
 
 
-def solve_question(question, examples_for, attempts=3, max_new_tokens=2500, generate=None):
+def solve_question(question, examples_for, attempts=3, max_new_tokens=2500, generate=None, rules=None):
     """Answer the whole question. `examples_for(text)` returns the retrieved examples to put in the prompt.
     -> a solution dict with `verified`, `unverified_checks`, `tries` (per part), or None if the model gave nothing usable."""
     pieces = part_markers(question)
     if len(pieces) < 3:                                  # no part markers, or a lone "(i)"
-        r = attempt(question, examples_for(question), attempts, max_new_tokens, generate)
+        r = attempt(question, examples_for(question), attempts, max_new_tokens, generate, rules=rules)
         sol = r["solution"]
         if sol is None:
             return None
@@ -127,7 +127,7 @@ def solve_question(question, examples_for, attempts=3, max_new_tokens=2500, gene
     parts, bad, tries, verified = [], [], [], True
     for label, text in zip(labels(len(texts)), texts):
         q = f"{stem} {text}".strip()
-        r = attempt(q, examples_for(q), attempts, max_new_tokens, generate)
+        r = attempt(q, examples_for(q), attempts, max_new_tokens, generate, rules=rules)
         sol = r["solution"]
         if sol is None:
             return None

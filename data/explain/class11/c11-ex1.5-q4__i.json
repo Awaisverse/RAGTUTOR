@@ -1,0 +1,50 @@
+{
+ "item": "c11-ex1.5-q4",
+ "label": "i",
+ "answer_ref": "$\\frac{1}{2}\\left(5 - 9\\sqrt{2}\\right) + \\frac{1}{2}\\left(5\\sqrt{3} - 9\\sqrt{2}\\right)i \\approx -3.86 - 2.03i$",
+ "math": [
+  "z_1 = 9\\left(\\cos\\frac{5\\pi}{4} + i\\sin\\frac{5\\pi}{4}\\right), \\quad z_2 = 5\\left(\\cos\\frac{\\pi}{3} + i\\sin\\frac{\\pi}{3}\\right)",
+  "\\cos\\frac{5\\pi}{4} = -\\frac{\\sqrt{2}}{2}, \\quad \\sin\\frac{5\\pi}{4} = -\\frac{\\sqrt{2}}{2}",
+  "z_1 = 9\\left(-\\frac{\\sqrt{2}}{2} - i\\frac{\\sqrt{2}}{2}\\right) = -\\frac{9\\sqrt{2}}{2} - \\frac{9\\sqrt{2}}{2}i",
+  "\\cos\\frac{\\pi}{3} = \\frac{1}{2}, \\quad \\sin\\frac{\\pi}{3} = \\frac{\\sqrt{3}}{2}",
+  "z_2 = 5\\left(\\frac{1}{2} + i\\frac{\\sqrt{3}}{2}\\right) = \\frac{5}{2} + \\frac{5\\sqrt{3}}{2}i",
+  "z_1 + z_2 = \\left(-\\frac{9\\sqrt{2}}{2} - \\frac{9\\sqrt{2}}{2}i\\right) + \\left(\\frac{5}{2} + \\frac{5\\sqrt{3}}{2}i\\right) = \\left(\\frac{5}{2} - \\frac{9\\sqrt{2}}{2}\\right) + \\left(\\frac{5\\sqrt{3}}{2} - \\frac{9\\sqrt{2}}{2}\\right)i",
+  "z_1 + z_2 = \\frac{1}{2}\\left(5 - 9\\sqrt{2}\\right) + \\frac{1}{2}\\left(5\\sqrt{3} - 9\\sqrt{2}\\right)i \\approx -3.86 - 2.03i"
+ ],
+ "why": [
+  {
+   "en": "Unlike multiplication, there is no direct shortcut for adding complex numbers in polar form. Therefore, our strategy is to first convert both $z_1$ and $z_2$ into the standard rectangular form $x + iy$ so we can easily combine their real and imaginary parts.",
+   "ur": "ضرب کے برعکس، پولر فارم (polar form) میں کمپلیکس نمبرز کو براہِ راست جمع کرنے کا کوئی آسان فارمولا نہیں ہے۔ اس لیے ہماری حکمتِ عملی یہ ہے کہ پہلے $z_1$ اور $z_2$ دونوں کو معیاری ریکٹینگولر فارم $x + iy$ میں تبدیل کیا جائے تاکہ ہم ان کے حقیقی (real) اور خیالی (imaginary) حصوں کو باآسانی جمع کر سکیں۔"
+  },
+  {
+   "en": "Since the angle $\\frac{5\\pi}{4}$ lies in the third quadrant, both cosine and sine are negative here. Finding these exact trigonometric values removes the angle notation and gives us pure numbers to work with.",
+   "ur": "چونکہ زاویہ $\\frac{5\\pi}{4}$ تیسرے ربع (third quadrant) میں واقع ہے، اس لیے یہاں کوسائن اور سائن دونوں منفی ہوتے ہیں۔ ان مثلثیاتی تفاعل کی درست قیمتیں معلوم کرنے سے زاویے کی علامت ختم ہو جاتی ہے اور ہمیں حل کرنے کے لیے خالص اعداد مل جاتے ہیں۔"
+  },
+  {
+   "en": "Using the distributive property to multiply the modulus $9$ inside the brackets gives us the exact real part $-\\frac{9\\sqrt{2}}{2}$ and imaginary part $-\\frac{9\\sqrt{2}}{2}$ of our first complex number $z_1$.",
+   "ur": "تلازمہ کی خاصیت (distributive property) استعمال کرتے ہوئے موڈولس $9$ کو بریکٹ کے اندر ضرب دینے سے ہمیں پہلے کمپلیکس نمبر $z_1$ کا درست حقیقی حصہ $-\\frac{9\\sqrt{2}}{2}$ اور خیالی حصہ $-\\frac{9\\sqrt{2}}{2}$ حاصل ہو جاتا ہے۔"
+  },
+  {
+   "en": "The angle $\\frac{\\pi}{3}$ is in the first quadrant, so its cosine and sine values are positive standard ratios. Evaluating them prepares the second complex number $z_2$ for conversion into rectangular form.",
+   "ur": "زاویہ $\\frac{\\pi}{3}$ پہلے ربع (first quadrant) میں ہے، اس لیے اس کے کوسائن اور سائن کی قیمتیں مثبت معیاری نسبتیں ہیں۔ ان کی قیمتیں معلوم کرنے سے دوسرا کمپلیکس نمبر $z_2$ ریکٹینگولر فارم میں تبدیل ہونے کے لیے تیار ہو جاتا ہے۔"
+  },
+  {
+   "en": "Multiplying the modulus $5$ inside the brackets completes the conversion of $z_2$, clearly separating its real part $\\frac{5}{2}$ and its imaginary part $\\frac{5\\sqrt{3}}{2}$.",
+   "ur": "موڈولس $5$ کو بریکٹ کے اندر ضرب دینے سے $z_2$ کی تبدیلی مکمل ہو جاتی ہے، جس سے اس کا حقیقی حصہ $\\frac{5}{2}$ اور خیالی حصہ $\\frac{5\\sqrt{3}}{2}$ واضح طور پر الگ ہو جاتے ہیں۔"
+  },
+  {
+   "en": "By the definition of complex addition, we can only add real parts to real parts and imaginary parts to imaginary parts. Grouping them this way sets up the final combined expression for $z_1 + z_2$.",
+   "ur": "کمپلیکس نمبرز کی جمع کی تعریف کے مطابق، ہم صرف حقیقی حصوں کو حقیقی حصوں میں اور خیالی حصوں کو خیالی حصوں میں جمع کر سکتے ہیں۔ انہیں اس طرح اکٹھا کرنے سے $z_1 + z_2$ کا حتمی مجموعہ ترتیب پا جاتا ہے۔"
+  },
+  {
+   "en": "Since $\\sqrt{2}$ and $\\sqrt{3}$ are unlike surds, we cannot merge them further, so we simply factor out the common $\\frac{1}{2}$ to make the exact answer look neat. Calculating the decimal value $-3.86 - 2.03i$ helps us see the approximate position of this sum.",
+   "ur": "چونکہ $\\sqrt{2}$ اور $\\sqrt{3}$ مختلف اصم (unlike surds) ہیں، ہم انہیں مزید یکجا نہیں کر سکتے، اس لیے ہم جواب کو صاف ستھرا لکھنے کے لیے مشترک $\\frac{1}{2}$ کو باہر نکال لیتے ہیں۔ اعشاریہ میں قیمت $-3.86 - 2.03i$ معلوم کرنے سے ہمیں اس مجموعے کے تقریبی مقام کا اندازہ ہو جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer gives the sum $z_1 + z_2$ in standard $a + bi$ form, where the real part is $\\frac{1}{2}\\left(5 - 9\\sqrt{2}\\right) \\approx -3.86$ and the imaginary part is $\\frac{1}{2}\\left(5\\sqrt{3} - 9\\sqrt{2}\\right) \\approx -2.03$. Because both parts are negative, this tells us that the combined complex number lies in the third quadrant of the complex plane, which makes sense since $z_1$ (with modulus $9$ in the third quadrant) has a stronger pull than $z_2$ (with modulus $5$ in the first quadrant).",
+  "ur": "حتمی جواب معیاری شکل $a + bi$ میں مجموعہ $z_1 + z_2$ فراہم کرتا ہے، جہاں حقیقی حصہ $\\frac{1}{2}\\left(5 - 9\\sqrt{2}\\right) \\approx -3.86$ اور خیالی حصہ $\\frac{1}{2}\\left(5\\sqrt{3} - 9\\sqrt{2}\\right) \\approx -2.03$ ہے۔ چونکہ دونوں حصے منفی ہیں، یہ ہمیں بتاتا ہے کہ حاصل ہونے والا کمپلیکس نمبر کمپلیکس مستوی (complex plane) کے تیسرے ربع میں واقع ہے، جو کہ بالکل درست معلوم ہوتا ہے کیونکہ $z_1$ (تیسرے ربع میں موڈولس $9$ کے ساتھ) کا اثر $z_2$ (پہلے ربع میں موڈولس $5$ کے ساتھ) سے زیادہ ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

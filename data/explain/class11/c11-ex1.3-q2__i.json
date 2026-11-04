@@ -1,0 +1,30 @@
+{
+ "item": "c11-ex1.3-q2",
+ "label": "i",
+ "answer_ref": "$\\left(z + 2\\right)\\left(z - 1 - i\\sqrt{3}\\right)\\left(z - 1 + i\\sqrt{3}\\right)$",
+ "math": [
+  "z^3 + 8 = z^3 + 2^3 = (z + 2)(z^2 - 2z + 4)",
+  "z^2 - 2z + 4 = (z - 1)^2 + 3 = (z - 1)^2 - (\\sqrt{3}i)^2",
+  "z^3 + 8 = \\left(z + 2\\right)\\left(z - 1 - i\\sqrt{3}\\right)\\left(z - 1 + i\\sqrt{3}\\right)"
+ ],
+ "why": [
+  {
+   "en": "Since $8$ is actually $2^3$, we begin by applying the algebraic formula for the sum of two cubes. This immediately gives us our first linear factor, $(z + 2)$, and leaves a quadratic expression $(z^2 - 2z + 4)$ that we need to break down further.",
+   "ur": "چونکہ $8$ درحقیقت $2^3$ ہے، اس لیے ہم دو مکعبوں کے مجموعے کا الجبری فارمولا لگا کر شروعات کرتے ہیں۔ اس سے ہمیں پہلا لینیئر فیکٹر $(z + 2)$ فوراً مل جاتا ہے، اور پیچھے ایک دو درجی جملہ $(z^2 - 2z + 4)$ بچ جاتا ہے جسے ہم نے مزید توڑنا ہے۔"
+  },
+  {
+   "en": "The quadratic part $(z^2 - 2z + 4)$ cannot be factored using real numbers, so we complete the square and use the complex number property $i^2 = -1$ to rewrite $+3$ as $-(\\sqrt{3}i)^2$. This clever trick turns the expression into a difference of two squares, preparing it for the final split.",
+   "ur": "دو درجی حصے $(z^2 - 2z + 4)$ کے حقیقی اعداد میں اجزائے ضربی نہیں بن سکتے، اس لیے ہم مربع مکمل کرتے ہیں اور کمپلیکس نمبرز کی خاصیت $i^2 = -1$ استعمال کرتے ہوئے $+3$ کو $-(\\sqrt{3}i)^2$ لکھتے ہیں۔ یہ طریقہ اس جملے کو دو مربوں کے فرق میں بدل دیتا ہے، جس سے اسے مزید توڑنا آسان ہو جاتا ہے۔"
+  },
+  {
+   "en": "Now we apply the difference of squares rule, $a^2 - b^2 = (a - b)(a + b)$, to our rewritten quadratic expression. Combining these two new complex factors with our very first factor $(z + 2)$ gives us the complete set of linear factors.",
+   "ur": "اب ہم اپنے نئے لکھے گئے دو درجی جملے پر دو مربوں کے فرق کا کلیہ $a^2 - b^2 = (a - b)(a + b)$ لگاتے ہیں۔ ان دو نئے کمپلیکس فیکٹرز کو ہمارے پہلے فیکٹر $(z + 2)$ کے ساتھ ملانے سے لینیئر فیکٹرز کی مکمل شکل حاصل ہو جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This final result shows that the cubic polynomial $z^3 + 8$ is completely broken down into three degree-one (linear) factors: one real factor and two complex conjugate factors. You can easily check this answer by multiplying the three brackets back together, which will simplify right back to $z^3 + 8$.",
+  "ur": "یہ حتمی جواب ظاہر کرتا ہے کہ تین درجے والے کثیر رقمی جملے $z^3 + 8$ کو مکمل طور پر ایک درجے والے تین لینیئر فیکٹرز میں توڑ دیا گیا ہے، جن میں ایک حقیقی اور دو کمپلیکس فیکٹرز ہیں۔ آپ ان تینوں بریکٹوں کو واپس آپس میں ضرب دے کر اپنے جواب کی تصدیق کر سکتے ہیں، جس سے دوبارہ $z^3 + 8$ حاصل ہو جائے گا۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

@@ -1,0 +1,49 @@
+{
+ "item": "c11-ex1.1-q4",
+ "label": "ii",
+ "answer_ref": "proved: $\\frac{z-\\bar z}{2i} = b = \\operatorname{Im}(z)$",
+ "steps": [
+  {
+   "math": "z = a + bi, \\quad a, b \\in \\mathbb{R}",
+   "en": "Let $z$ be a complex number with real part $\\operatorname{Re}(z) = a$ and imaginary part $\\operatorname{Im}(z) = b$.",
+   "ur": "فرض کریں کہ $z$ ایک مخلوط عدد ہے جس کا حقیقی حصہ $\\operatorname{Re}(z) = a$ اور خیالی حصہ $\\operatorname{Im}(z) = b$ ہے۔"
+  },
+  {
+   "math": "\\bar{z} = a - bi",
+   "en": "By definition, the complex conjugate $\\bar{z}$ is obtained by changing the sign of the imaginary part.",
+   "ur": "تعریف کے مطابق، مخلوط زوج $\\bar{z}$ خیالی حصے کی علامت تبدیل کرنے سے حاصل ہوتا ہے۔"
+  },
+  {
+   "math": "\\text{L.H.S.} = \\frac{z - \\bar{z}}{2i} = \\frac{(a + bi) - (a - bi)}{2i}",
+   "en": "Consider the Left Hand Side (L.H.S.) of the given equation and substitute the values of $z$ and $\\bar{z}$.",
+   "ur": "دی گئی مساوات کی بائیں طرف (L.H.S.) لیں اور اس میں $z$ اور $\\bar{z}$ کی قیمتیں درج کریں۔"
+  },
+  {
+   "math": "= \\frac{a + bi - a + bi}{2i} = \\frac{2bi}{2i}",
+   "en": "Remove the brackets in the numerator. The real parts $a$ and $-a$ cancel out, and the imaginary parts add up to $2bi$.",
+   "ur": "شمار کنندہ میں قوسین کو ختم کریں۔ حقیقی حصے $a$ اور $-a$ آپس میں کٹ جاتے ہیں، اور خیالی حصے جمع ہو کر $2bi$ بن جاتے ہیں۔",
+   "check": [
+    "((a + b*I) - (a - b*I))/(2*I) == (2*b*I)/(2*I)"
+   ]
+  },
+  {
+   "math": "= b",
+   "en": "Cancel $2i$ from the numerator and the denominator.",
+   "ur": "شمار کنندہ اور مخرج سے $2i$ کو کاٹ دیں۔",
+   "check": [
+    "(2*b*I)/(2*I) == b"
+   ]
+  },
+  {
+   "math": "\\frac{z - \\bar{z}}{2i} = b = \\operatorname{Im}(z) = \\text{R.H.S.}",
+   "en": "Since $b$ is the imaginary part of $z$, the Left Hand Side equals the Right Hand Side. Hence proved.",
+   "ur": "چونکہ $b$ عدد $z$ کا خیالی حصہ ہے، اس لیے بائیں طرف دائیں طرف کے برابر ہے۔ پس ثابت ہوا۔",
+   "check": [
+    "((a + b*I) - (a - b*I))/(2*I) == b"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-04"
+}

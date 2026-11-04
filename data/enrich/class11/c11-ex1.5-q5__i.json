@@ -1,0 +1,68 @@
+{
+ "item": "c11-ex1.5-q5",
+ "label": "i",
+ "answer_ref": "$-\\left(\\sqrt{6} + \\sqrt{2}\\right) + \\left(\\sqrt{6} - \\sqrt{2}\\right)i \\approx -3.86 + 1.04i$",
+ "steps": [
+  {
+   "math": "z_1 = 7\\left(\\cos\\frac{23\\pi}{12} + i\\sin\\frac{23\\pi}{12}\\right),\\quad z_2 = 11\\left(\\cos\\frac{11\\pi}{12} + i\\sin\\frac{11\\pi}{12}\\right)",
+   "en": "Write down the given complex numbers $z_1$ and $z_2$ in polar form. We need to find $z_1 + z_2$ in Cartesian form $x + iy$.",
+   "ur": "دیے گئے مختلط اعداد $z_1$ اور $z_2$ کو قطبی صورت میں لکھیں۔ ہمیں $z_1 + z_2$ کو کارتیسی صورت $x + iy$ میں معلوم کرنا ہے۔"
+  },
+  {
+   "math": "\\cos\\frac{23\\pi}{12} = \\cos\\left(2\\pi - \\frac{\\pi}{12}\\right) = \\cos\\frac{\\pi}{12} = \\frac{\\sqrt{6} + \\sqrt{2}}{4},\\quad \\sin\\frac{23\\pi}{12} = \\sin\\left(2\\pi - \\frac{\\pi}{12}\\right) = -\\sin\\frac{\\pi}{12} = -\\frac{\\sqrt{6} - \\sqrt{2}}{4}",
+   "en": "Find the trigonometric values for $\\theta_1 = \\frac{23\\pi}{12}$ using the reference angle $\\frac{\\pi}{12} = 15^\\circ$ in the fourth quadrant.",
+   "ur": "چوتھے ربع میں حوالہ جاتی زاویہ $\\frac{\\pi}{12} = 15^\\circ$ استعمال کرتے ہوئے $\\theta_1 = \\frac{23\\pi}{12}$ کی مثلثیاتی قدریں معلوم کریں۔",
+   "check": [
+    "cos(23*pi/12) == (sqrt(6) + sqrt(2))/4",
+    "sin(23*pi/12) == -(sqrt(6) - sqrt(2))/4"
+   ]
+  },
+  {
+   "math": "z_1 = 7\\left(\\frac{\\sqrt{6} + \\sqrt{2}}{4} - i\\frac{\\sqrt{6} - \\sqrt{2}}{4}\\right) = \\frac{7}{4}\\left(\\sqrt{6} + \\sqrt{2}\\right) - \\frac{7}{4}\\left(\\sqrt{6} - \\sqrt{2}\\right)i",
+   "en": "Substitute these values into $z_1$ to convert it into $x + iy$ form.",
+   "ur": "ان قدروں کو $z_1$ میں درج کر کے اسے $x + iy$ کی صورت میں تبدیل کریں۔",
+   "check": [
+    "7*(cos(23*pi/12) + I*sin(23*pi/12)) == R(7,4)*(sqrt(6) + sqrt(2)) - R(7,4)*(sqrt(6) - sqrt(2))*I"
+   ]
+  },
+  {
+   "math": "\\cos\\frac{11\\pi}{12} = \\cos\\left(\\pi - \\frac{\\pi}{12}\\right) = -\\cos\\frac{\\pi}{12} = -\\frac{\\sqrt{6} + \\sqrt{2}}{4},\\quad \\sin\\frac{11\\pi}{12} = \\sin\\left(\\pi - \\frac{\\pi}{12}\\right) = \\sin\\frac{\\pi}{12} = \\frac{\\sqrt{6} - \\sqrt{2}}{4}",
+   "en": "Similarly, find the trigonometric values for $\\theta_2 = \\frac{11\\pi}{12}$ using the reference angle $\\frac{\\pi}{12}$ in the second quadrant.",
+   "ur": "اسی طرح، دوسرے ربع میں حوالہ جاتی زاویہ $\\frac{\\pi}{12}$ استعمال کرتے ہوئے $\\theta_2 = \\frac{11\\pi}{12}$ کی مثلثیاتی قدریں معلوم کریں۔",
+   "check": [
+    "cos(11*pi/12) == -(sqrt(6) + sqrt(2))/4",
+    "sin(11*pi/12) == (sqrt(6) - sqrt(2))/4"
+   ]
+  },
+  {
+   "math": "z_2 = 11\\left(-\\frac{\\sqrt{6} + \\sqrt{2}}{4} + i\\frac{\\sqrt{6} - \\sqrt{2}}{4}\\right) = -\\frac{11}{4}\\left(\\sqrt{6} + \\sqrt{2}\\right) + \\frac{11}{4}\\left(\\sqrt{6} - \\sqrt{2}\\right)i",
+   "en": "Substitute these values into $z_2$ to convert it into $x + iy$ form.",
+   "ur": "ان قدروں کو $z_2$ میں درج کر کے اسے $x + iy$ کی صورت میں تبدیل کریں۔",
+   "check": [
+    "11*(cos(11*pi/12) + I*sin(11*pi/12)) == -R(11,4)*(sqrt(6) + sqrt(2)) + R(11,4)*(sqrt(6) - sqrt(2))*I"
+   ]
+  },
+  {
+   "math": "z_1 + z_2 = \\left[\\frac{7}{4}\\left(\\sqrt{6} + \\sqrt{2}\\right) - \\frac{11}{4}\\left(\\sqrt{6} + \\sqrt{2}\\right)\\right] + \\left[-\\frac{7}{4}\\left(\\sqrt{6} - \\sqrt{2}\\right) + \\frac{11}{4}\\left(\\sqrt{6} - \\sqrt{2}\\right)\\right]i",
+   "en": "Now, add $z_1$ and $z_2$ by grouping the real parts together and the imaginary parts together.",
+   "ur": "اب، حقیقی حصوں اور خیالی حصوں کو الگ الگ یکجا کر کے $z_1$ اور $z_2$ کو جمع کریں۔",
+   "check": [
+    "(R(7,4)*(sqrt(6) + sqrt(2)) - R(7,4)*(sqrt(6) - sqrt(2))*I) + (-R(11,4)*(sqrt(6) + sqrt(2)) + R(11,4)*(sqrt(6) - sqrt(2))*I) == (R(7,4) - R(11,4))*(sqrt(6) + sqrt(2)) + (-R(7,4) + R(11,4))*(sqrt(6) - sqrt(2))*I"
+   ]
+  },
+  {
+   "math": "z_1 + z_2 = -\\frac{4}{4}\\left(\\sqrt{6} + \\sqrt{2}\\right) + \\frac{4}{4}\\left(\\sqrt{6} - \\sqrt{2}\\right)i = -\\left(\\sqrt{6} + \\sqrt{2}\\right) + \\left(\\sqrt{6} - \\sqrt{2}\\right)i \\approx -3.86 + 1.04i",
+   "en": "Simplify the fractions to obtain the exact form and the decimal approximation in $x + iy$ form.",
+   "ur": "کسور کو مختصر کر کے $x + iy$ صورت میں اصل جواب اور اعشاریہ میں اس کی تقریبی قیمت حاصل کریں۔",
+   "check": [
+    "-R(4,4)*(sqrt(6) + sqrt(2)) + R(4,4)*(sqrt(6) - sqrt(2))*I == -(sqrt(6) + sqrt(2)) + (sqrt(6) - sqrt(2))*I",
+    "(7*sqrt(2)/4 + 7*sqrt(6)/4 - 7*sqrt(6)*I/4 + 7*sqrt(2)*I/4) == 7*(cos(23*pi/12) + I*sin(23*pi/12))",
+    "(-11*sqrt(6)/4 - 11*sqrt(2)/4 - 11*sqrt(2)*I/4 + 11*sqrt(6)*I/4) == 11*(cos(11*pi/12) + I*sin(11*pi/12))",
+    "(7*sqrt(2)/4 + 7*sqrt(6)/4 - 7*sqrt(6)*I/4 + 7*sqrt(2)*I/4) + (-11*sqrt(6)/4 - 11*sqrt(2)/4 - 11*sqrt(2)*I/4 + 11*sqrt(6)*I/4) == (-sqrt(6) - sqrt(2) - sqrt(2)*I + sqrt(6)*I)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-04"
+}

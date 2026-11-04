@@ -1,0 +1,50 @@
+{
+ "item": "c11-ex1.2-q3",
+ "label": "ii",
+ "answer_ref": "$x = 6 \\sqrt{2},\\ y = 2 \\sqrt{2}$ or $x = - 6 \\sqrt{2},\\ y = - 2 \\sqrt{2}$",
+ "math": [
+  "(x + iy)^2 = 64 + 48i \\Rightarrow x + iy = \\pm\\sqrt{64 + 48i}",
+  "z = 64 + 48i:\\quad a = 64,\\ b = 48",
+  "|z| = \\sqrt{a^2 + b^2} = \\sqrt{(64)^2 + (48)^2} = \\sqrt{6400} = 80",
+  "\\sqrt{z} = \\pm\\left(\\sqrt{\\frac{|z| + a}{2}} + i\\,\\frac{b}{|b|}\\sqrt{\\frac{|z| - a}{2}}\\right)",
+  "\\sqrt{64 + 48i} = \\pm\\left(\\sqrt{\\frac{80 + (64)}{2}} + i\\sqrt{\\frac{80 - (64)}{2}}\\right)",
+  "= \\pm\\left(\\sqrt{72} + i\\sqrt{8}\\right) = \\pm\\left(6 \\sqrt{2} + 2 \\sqrt{2}i\\right)",
+  "x + iy = \\pm\\left(6 \\sqrt{2} + 2 \\sqrt{2}i\\right) \\Rightarrow x = \\pm 6 \\sqrt{2},\\ y = \\pm 2 \\sqrt{2}"
+ ],
+ "why": [
+  {
+   "en": "To isolate the unknown expression $x + iy$, we reverse the squaring operation on the left side. Remember to include the $\\pm$ sign because every non-zero complex number has two square roots.",
+   "ur": "معلوم کرنے والے جملے $x + iy$ کو اکیلا کرنے کے لیے ہم بائیں طرف سے مربع (square) ختم کرتے ہیں۔ یاد رکھیں کہ $\\pm$ کی علامت لگانا ضروری ہے کیونکہ ہر غیر صفری کمپلیکس نمبر کے دو جزر المربع ہوتے ہیں۔"
+  },
+  {
+   "en": "We compare the number inside the root, $z = 64 + 48i$, with the standard form $a + ib$. Identifying the real part $a = 64$ and the imaginary part $b = 48$ prepares us to use the direct square root formula.",
+   "ur": "ہم جزر کے اندر موجود عدد $z = 64 + 48i$ کا موازنہ معیاری شکل $a + ib$ سے کرتے ہیں۔ حقیقی حصے $a = 64$ اور خیالی حصے $b = 48$ کی شناخت ہمیں براہِ راست جزر المربع کا فارمولا استعمال کرنے کے لیے تیار کرتی ہے۔"
+  },
+  {
+   "en": "The square root formula for a complex number requires its modulus $|z|$, which represents its distance from the origin. Calculating this gives a clean whole number, $|z| = 80$, making the upcoming steps much easier.",
+   "ur": "کمپلیکس نمبر کے جزر المربع کے فارمولے کے لیے اس کے ماڈیولس $|z|$ کی ضرورت ہوتی ہے۔ اس کا حساب لگانے سے ہمیں ایک پورا عدد $|z| = 80$ ملتا ہے، جو آگے کے مراحل کو بہت آسان بنا دیتا ہے۔"
+  },
+  {
+   "en": "Instead of expanding $(x+iy)^2$ and solving simultaneous equations, we state the direct formula for the square root of a complex number. The term $\\frac{b}{|b|}$ simply ensures that the sign between the real and imaginary parts matches the sign of $b$.",
+   "ur": "مکمل مربع کھولنے اور مساواتیں حل کرنے کے بجائے، ہم کمپلیکس نمبر کے جزر المربع کا براہِ راست فارمولا لکھتے ہیں۔ اس میں $\\frac{b}{|b|}$ اس بات کو یقینی بناتا ہے کہ درمیانی علامت وہی ہو جو $b$ کی علامت ہے۔"
+  },
+  {
+   "en": "We plug our known values $|z| = 80$ and $a = 64$ into the formula. Since the imaginary part $b = 48$ is positive, we place a $+$ sign before $i$.",
+   "ur": "ہم اپنی معلوم کردہ قیمتیں $|z| = 80$ اور $a = 64$ فارمولے میں درج کرتے ہیں۔ چونکہ خیالی حصہ $b = 48$ مثبت ہے، اس لیے ہم $i$ سے پہلے $+$ کی علامت لگاتے ہیں۔"
+  },
+  {
+   "en": "We simplify the fractions inside the radicals to get $\\sqrt{72}$ and $\\sqrt{8}$, and then factor out the largest perfect squares. This gives us the square root in its simplest standard form, $\\pm(6\\sqrt{2} + 2\\sqrt{2}i)$.",
+   "ur": "ہم جزر کے اندر موجود کسروں کو مختصر کر کے $\\sqrt{72}$ اور $\\sqrt{8}$ حاصل کرتے ہیں، اور پھر ان کو مزید سادہ شکل میں لکھتے ہیں۔ اس سے ہمیں جزر المربع اپنی سادہ ترین معیاری شکل $\\pm(6\\sqrt{2} + 2\\sqrt{2}i)$ میں مل جاتا ہے۔"
+  },
+  {
+   "en": "Two complex numbers are equal only if their real parts are equal and their imaginary parts are equal. Equating the corresponding parts on both sides finally gives us the required values for $x$ and $y$.",
+   "ur": "دو کمپلیکس نمبرز تبھی برابر ہوتے ہیں جب ان کے حقیقی حصے آپس میں اور خیالی حصے آپس میں برابر ہوں۔ دونوں اطراف کے متعلقہ حصوں کا موازنہ کرنے سے ہمیں آخرکار $x$ اور $y$ کی مطلوبہ قیمتیں مل جاتی ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "This final answer gives the two pairs of real numbers $(x, y)$ that satisfy the original equation. Because $b = 48$ is positive, $x$ and $y$ must have the same sign—either both positive ($x = 6\\sqrt{2}, y = 2\\sqrt{2}$) or both negative ($x = -6\\sqrt{2}, y = -2\\sqrt{2}$). You can check this by squaring $(6\\sqrt{2} + 2\\sqrt{2}i)$, which expands to $72 - 8 + 48i = 64 + 48i$.",
+  "ur": "یہ حتمی جواب ہمیں حقیقی اعداد کے وہ دو جوڑے $(x, y)$ دیتا ہے جو دی گئی مساوات کو درست ثابت کرتے ہیں۔ چونکہ $b = 48$ مثبت ہے، اس لیے $x$ اور $y$ دونوں کی علامت ایک جیسی ہونی چاہیے—یا تو دونوں مثبت ($x = 6\\sqrt{2}, y = 2\\sqrt{2}$) یا دونوں منفی ($x = -6\\sqrt{2}, y = -2\\sqrt{2}$)۔ آپ $(6\\sqrt{2} + 2\\sqrt{2}i)$ کا مربع لے کر اس کی پڑتال کر سکتے ہیں، جسے کھولنے پر $72 - 8 + 48i = 64 + 48i$ واپس ملتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

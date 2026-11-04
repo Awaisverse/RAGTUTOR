@@ -9,6 +9,7 @@ import pathlib
 import re
 
 import modelsolve
+import prompts
 import rag
 from prompts import READ_PROMPT
 from solvers.common import labels, part_markers
@@ -52,7 +53,8 @@ def live_solve(question, focus_part=None, attempts=3, generate=None, klass="9"):
         pieces = part_markers(question)
         if len(pieces) >= 3 and focus_part in labels(len(pieces) - 1):
             question = f"{pieces[0]} {pieces[labels(len(pieces) - 1).index(focus_part) + 1]}".strip()
-    sol = modelsolve.solve_question(question, lambda q: modelsolve.examples_text(index, by_id, q), attempts=attempts, max_new_tokens=2500, generate=generate)
+    sol = modelsolve.solve_question(question, lambda q: modelsolve.examples_text(index, by_id, q), attempts=attempts, max_new_tokens=2500, generate=generate,
+                                     rules=prompts.solve_rules(klass))      # the check syntax of this class (I for i in Classes 10-11)
     if sol is None:
         raise ValueError("the model did not return a usable solution")
     sol["unit"] = 0

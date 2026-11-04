@@ -1,0 +1,30 @@
+{
+ "item": "c11-ex1.3-q2",
+ "label": "iii",
+ "answer_ref": "$\\left(z - 2\\right)\\left(z - 4i\\right)\\left(z + 4i\\right)$",
+ "math": [
+  "= z^2(z - 2) + 16(z - 2) = (z - 2)(z^2 + 16)",
+  "z^2 + 16 = z^2 - (4i)^2 = (z - 4i)(z + 4i)",
+  "z^3 - 2z^2 + 16z - 32 = \\left(z - 2\\right)\\left(z - 4i\\right)\\left(z + 4i\\right)"
+ ],
+ "why": [
+  {
+   "en": "When a polynomial has four terms, we use the method of factoring by grouping to simplify it. This immediately gives us our first linear factor, $z - 2$, and leaves a simpler quadratic expression, $z^2 + 16$, to factorize next.",
+   "ur": "جب کسی کثیر رقمی (polynomial) میں چار رقمیں ہوں، تو ہم اسے آسان بنانے کے لیے گروپ بنا کر تجزی (factoring by grouping) کا طریقہ استعمال کرتے ہیں۔ اس سے ہمیں فوراً پہلا یک درجی جزو ضربی $(z - 2)$ مل جاتا ہے اور آگے حل کرنے کے لیے ایک سادہ دو درجی جملہ $(z^2 + 16)$ بچ جاتا ہے۔"
+  },
+  {
+   "en": "In real numbers we cannot factor a sum of squares like $z^2 + 16$, so we use the complex number property $i^2 = -1$ to rewrite $+16$ as $-(4i)^2$. This turns the expression into a difference of two squares, allowing us to split it into two linear factors, $(z - 4i)$ and $(z + 4i)$.",
+   "ur": "حقیقی اعداد میں ہم $z^2 + 16$ جیسے مربّعوں کے مجموعے کی تجزی نہیں کر سکتے، اس لیے ہم مختلط اعداد (complex numbers) کی خاصیت $i^2 = -1$ استعمال کرتے ہوئے $+16$ کو $-(4i)^2$ لکھتے ہیں۔ اس سے یہ جملہ دو مربّعوں کے فرق میں بدل جاتا ہے، جس سے ہم اسے دو یک درجی اجزائے ضربی $(z - 4i)$ اور $(z + 4i)$ میں توڑ سکتے ہیں۔"
+  },
+  {
+   "en": "Now we combine all the pieces we found to write the original cubic polynomial as a product of its three linear factors. Since each factor has a power of $1$ on $z$, our factorization is completely finished.",
+   "ur": "اب ہم حاصل کیے گئے تمام حصوں کو یکجا کر کے اصل سہ درجی کثیر رقمی کو اس کے تین یک درجی اجزائے ضربی کے حاصل ضرب کے طور پر لکھتے ہیں۔ چونکہ ہر جزو میں $z$ کی طاقت (درجہ) $1$ ہے، اس لیے ہماری تجزی کا عمل مکمل ہو گیا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer shows that the degree-3 polynomial $z^3 - 2z^2 + 16z - 32$ is completely broken down into three degree-1 (linear) factors over the complex numbers: $(z - 2)(z - 4i)(z + 4i)$. You can easily verify this result by multiplying the three brackets back together and using $(4i)^2 = -16$ to get the original expression.",
+  "ur": "آخری جواب یہ بتاتا ہے کہ درجہ 3 کی کثیر رقمی $z^3 - 2z^2 + 16z - 32$ مختلط اعداد کی مدد سے مکمل طور پر درجہ 1 کے تین یک درجی اجزائے ضربی $(z - 2)(z - 4i)(z + 4i)$ میں تقسیم ہو چکی ہے۔ آپ ان تینوں قوسین (brackets) کو واپس آپس میں ضرب دے کر اور $(4i)^2 = -16$ استعمال کر کے اپنے جواب کی درستگی کی باآسانی تصدیق کر سکتے ہیں، جس سے اصل سوال دوبارہ حاصل ہو جائے گا۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

@@ -1,0 +1,55 @@
+{
+ "item": "c11-ex1.3-q1",
+ "label": "iv",
+ "answer_ref": "$9(4x + 5iy)(4x - 5iy)$",
+ "steps": [
+  {
+   "math": "144x^2 + 225y^2",
+   "en": "We are given the algebraic expression $144x^2 + 225y^2$ and asked to factorize it using complex numbers.",
+   "ur": "ہمیں الجبری جملہ $144x^2 + 225y^2$ دیا گیا ہے اور ہمیں اسے مختلط اعداد (complex numbers) کی مدد سے حل (تجزی) کرنا ہے۔"
+  },
+  {
+   "math": "= 9(16x^2 + 25y^2)",
+   "en": "First, take out the greatest common factor, which is $9$, from both terms.",
+   "ur": "سب سے پہلے، دونوں رقموں میں سے سب سے بڑا مشترک جزو ضربی، جو کہ $9$ ہے، باہر نکالیں۔",
+   "check": [
+    "expand(9*(16*x**2 + 25*y**2)) == 144*x**2 + 225*y**2"
+   ]
+  },
+  {
+   "math": "= 9(16x^2 - (-1)25y^2)",
+   "en": "To apply the difference of squares formula, rewrite the plus sign $+$ as $-(-1)$.",
+   "ur": "مربعوں کے فرق کا کلیہ لگانے کے لیے، جمع کی علامت $+$ کو $-(-1)$ کے طور پر لکھیں۔",
+   "check": [
+    "expand(9*(16*x**2 - (-1)*25*y**2)) == 144*x**2 + 225*y**2"
+   ]
+  },
+  {
+   "math": "= 9(16x^2 - 25i^2y^2)",
+   "en": "From the definition of the imaginary unit, we know that $i^2 = -1$. Substitute $i^2$ in place of $-1$.",
+   "ur": "خیالی اکائی (imaginary unit) کی تعریف کے مطابق ہم جانتے ہیں کہ $i^2 = -1$ ہوتا ہے۔ لہٰذا $-1$ کی جگہ $i^2$ درج کریں۔",
+   "check": [
+    "expand(9*(16*x**2 - 25*I**2*y**2)) == 144*x**2 + 225*y**2"
+   ]
+  },
+  {
+   "math": "= 9\\left[(4x)^2 - (5iy)^2\\right]",
+   "en": "Express the terms inside the bracket as complete squares: $16x^2 = (4x)^2$ and $25i^2y^2 = (5iy)^2$.",
+   "ur": "بریکٹ کے اندر موجود رقموں کو مکمل مربع کی شکل میں لکھیں: $16x^2 = (4x)^2$ اور $25i^2y^2 = (5iy)^2$۔",
+   "check": [
+    "expand(9*((4*x)**2 - (5*I*y)**2)) == 144*x**2 + 225*y**2"
+   ]
+  },
+  {
+   "math": "= 9(4x + 5iy)(4x - 5iy)",
+   "en": "Apply the difference of two squares formula $A^2 - B^2 = (A + B)(A - B)$, where $A = 4x$ and $B = 5iy$, to get the final factorized form.",
+   "ur": "دو مربعوں کے فرق کا کلیہ $A^2 - B^2 = (A + B)(A - B)$ استعمال کریں، جہاں $A = 4x$ اور $B = 5iy$ ہے، جس سے مطلوبہ اجزائے ضربی حاصل ہو جائیں گے۔",
+   "check": [
+    "expand(9*(4*x + 5*I*y)*(4*x - 5*I*y)) == 144*x**2 + 225*y**2"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-04"
+}

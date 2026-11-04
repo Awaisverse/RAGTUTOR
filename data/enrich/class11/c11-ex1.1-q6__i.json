@@ -1,0 +1,62 @@
+{
+ "item": "c11-ex1.1-q6",
+ "label": "i",
+ "answer_ref": "$2 \\sqrt{145}$",
+ "steps": [
+  {
+   "math": "z_1 = 2+7i, \\quad z_2 = -5+3i",
+   "en": "Write down the given complex numbers $z_1$ and $z_2$. We need to evaluate the modulus $|2z_1 - 4z_2|$.",
+   "ur": "دیے گئے مختلط اعداد $z_1$ اور $z_2$ لکھیں۔ ہمیں مقیاس $|2z_1 - 4z_2|$ کی قیمت معلوم کرنی ہے۔"
+  },
+  {
+   "math": "2z_1 - 4z_2 = 2(2+7i) - 4(-5+3i)",
+   "en": "First, substitute the values of $z_1$ and $z_2$ into the expression $2z_1 - 4z_2$.",
+   "ur": "سب سے پہلے، عبارت $2z_1 - 4z_2$ میں $z_1$ اور $z_2$ کی قیمتیں درج کریں۔"
+  },
+  {
+   "math": "2z_1 - 4z_2 = 4 + 14i + 20 - 12i",
+   "en": "Multiply the numbers outside the brackets with the terms inside.",
+   "ur": "قوسین کے باہر موجود اعداد کو اندر والی رقوم سے ضرب دیں۔",
+   "check": [
+    "2*(2 + 7*I) - 4*(-5 + 3*I) == 4 + 14*I + 20 - 12*I"
+   ]
+  },
+  {
+   "math": "2z_1 - 4z_2 = (4 + 20) + (14 - 12)i = 24 + 2i",
+   "en": "Combine the real parts together and the imaginary parts together to get the standard form $a+bi$.",
+   "ur": "معیاری شکل $a+bi$ حاصل کرنے کے لیے حقیقی حصوں کو ایک ساتھ اور خیالی حصوں کو ایک ساتھ ملائیں۔",
+   "check": [
+    "(4 + 20) + (14 - 12)*I == 24 + 2*I"
+   ]
+  },
+  {
+   "math": "|2z_1 - 4z_2| = |24 + 2i| = \\sqrt{(24)^2 + (2)^2}",
+   "en": "Now, apply the modulus formula $|a+bi| = \\sqrt{a^2 + b^2}$, where $a = 24$ and $b = 2$.",
+   "ur": "اب، مقیاس کا فارمولا $|a+bi| = \\sqrt{a^2 + b^2}$ لگائیں، جہاں $a = 24$ اور $b = 2$ ہے۔",
+   "check": [
+    "Abs(24 + 2*I) == sqrt(24**2 + 2**2)"
+   ]
+  },
+  {
+   "math": "|2z_1 - 4z_2| = \\sqrt{576 + 4} = \\sqrt{580}",
+   "en": "Calculate the squares of $24$ and $2$, and then add them together.",
+   "ur": "$24$ اور $2$ کے مربع معلوم کریں، اور پھر انہیں آپس میں جمع کریں۔",
+   "check": [
+    "sqrt(24**2 + 2**2) == sqrt(576 + 4)",
+    "sqrt(576 + 4) == sqrt(580)"
+   ]
+  },
+  {
+   "math": "|2z_1 - 4z_2| = \\sqrt{4 \\times 145} = 2 \\sqrt{145}",
+   "en": "Factorize $580$ as $4 \\times 145$ and simplify the square root to get the final answer.",
+   "ur": "$580$ کی $4 \\times 145$ کے طور پر تجزی کریں اور حتمی جواب حاصل کرنے کے لیے جذر کو مختصر کریں۔",
+   "check": [
+    "sqrt(580) == 2*sqrt(145)",
+    "Abs((24 + 2*I)) == 2*sqrt(145)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-04"
+}

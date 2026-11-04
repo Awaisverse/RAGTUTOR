@@ -1,0 +1,35 @@
+{
+ "item": "c11-ex1.3-q7",
+ "label": "",
+ "answer_ref": "$P(z) = 10 z^{4} + 30 z^{2} - 40$",
+ "math": [
+  "P(z) = k\\,(z - 2i)(z + 2i)(z - 1)(z + 1) = k(z^2 + 4)(z^2 - 1)",
+  "P(z) = k\\left(z^{4} + 3 z^{2} - 4\\right)",
+  "P(2) = k\\left(24\\right) = 240 \\Rightarrow k = 10",
+  "P(z) = 10\\left(z^{4} + 3 z^{2} - 4\\right) = 10 z^{4} + 30 z^{2} - 40"
+ ],
+ "why": [
+  {
+   "en": "By the Factor Theorem, every zero $r$ gives a factor $(z - r)$, and we include a leading constant $k$ because many polynomials can share the exact same zeros. Multiplying the conjugate pairs $(z - 2i)(z + 2i)$ and $(z - 1)(z + 1)$ using the difference of squares rule neatly eliminates the imaginary $i$, giving us cleaner quadratic factors $(z^2 + 4)$ and $(z^2 - 1)$.",
+   "ur": "مسئلہ تجزی (Factor Theorem) کے مطابق ہر صفر $r$ سے ایک جزو ضربی $(z - r)$ بنتا ہے، اور ہم ایک مستقل $k$ شامل کرتے ہیں کیونکہ کئی کثیر رقمیوں کے صفر ایک جیسے ہو سکتے ہیں۔ زوجی جوڑوں $(z - 2i)(z + 2i)$ اور $(z - 1)(z + 1)$ کو فرقِ مربع کے اصول سے ضرب دینے سے خیالی عدد $i$ ختم ہو جاتا ہے اور ہمیں سادہ دو درجی اجزاء $(z^2 + 4)$ اور $(z^2 - 1)$ مل جاتے ہیں۔"
+  },
+  {
+   "en": "We expand the two quadratic factors to write the polynomial in standard form inside the bracket. This shows us the clear degree 4 expression $z^4 + 3z^2 - 4$, leaving only the single unknown constant $k$ to be determined.",
+   "ur": "ہم کثیر رقمی کو بریکٹ کے اندر معیاری شکل میں لکھنے کے لیے دونوں دو درجی اجزائے ضربی کو آپس میں ضرب دیتے ہیں۔ اس سے ہمیں درجہ 4 کا واضح جملہ $z^4 + 3z^2 - 4$ مل جاتا ہے، اور اب صرف ایک نامعلوم مستقل $k$ کی قیمت معلوم کرنا باقی رہ جاتی ہے۔"
+  },
+  {
+   "en": "To find the exact value of the unknown constant $k$, we substitute $z = 2$ into our polynomial and use the given condition $P(2) = 240$. Since $(2)^4 + 3(2)^2 - 4$ simplifies to $24$, we get a simple linear equation that tells us $k$ must be $10$.",
+   "ur": "نامعلوم مستقل $k$ کی اصل قیمت معلوم کرنے کے لیے ہم اپنی مساوات میں $z = 2$ درج کرتے ہیں اور دی گئی شرط $P(2) = 240$ استعمال کرتے ہیں۔ چونکہ $(2)^4 + 3(2)^2 - 4$ کو حل کرنے سے $24$ آتا ہے، اس لیے ہمیں ایک سادہ مساوات ملتی ہے جس سے پتہ چلتا ہے کہ $k$ کی قیمت $10$ ہے۔"
+  },
+  {
+   "en": "Now that we know $k = 10$, we substitute it back into our general expression from Step 2 and distribute it across all the terms. This completes the construction and gives us the final, fully expanded polynomial.",
+   "ur": "اب جب کہ ہمیں معلوم ہو گیا ہے کہ $k = 10$ ہے، ہم اسے دوسرے مرحلے والی مساوات میں واپس درج کرتے ہیں اور تمام رقموں سے ضرب دیتے ہیں۔ اس سے ہمارا کام مکمل ہو جاتا ہے اور ہمیں مطلوبہ کثیر رقمی مل جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The polynomial $P(z) = 10z^4 + 30z^2 - 40$ is the unique degree 4 polynomial that becomes zero at $2i, -2i, 1, -1$ and equals $240$ when $z = 2$. You can easily check this by plugging in $z = 1$ to see that $10(1)^4 + 30(1)^2 - 40 = 0$, or $z = 2$ to verify that it gives $240$.",
+  "ur": "یہ کثیر رقمی $P(z) = 10z^4 + 30z^2 - 40$ درجہ 4 کی وہ واحد کثیر رقمی ہے جو $2i, -2i, 1, -1$ پر صفر ہو جاتی ہے اور جب $z = 2$ ہو تو $240$ کے برابر ہوتی ہے۔ آپ اس کی پڑتال آسانی سے $z = 1$ درج کر کے کر سکتے ہیں جس سے $10(1)^4 + 30(1)^2 - 40 = 0$ آتا ہے، یا $z = 2$ درج کر کے تصدیق کر سکتے ہیں کہ جواب $240$ آتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

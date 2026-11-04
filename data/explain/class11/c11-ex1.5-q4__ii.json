@@ -1,0 +1,45 @@
+{
+ "item": "c11-ex1.5-q4",
+ "label": "ii",
+ "answer_ref": "$-\\frac{1}{2}\\left(5 + 9\\sqrt{2}\\right) - \\frac{1}{2}\\left(5\\sqrt{3} + 9\\sqrt{2}\\right)i \\approx -8.86 - 10.69i$",
+ "math": [
+  "z_1 = 9\\left(\\cos\\frac{5\\pi}{4} + i\\sin\\frac{5\\pi}{4}\\right), \\quad z_2 = 5\\left(\\cos\\frac{\\pi}{3} + i\\sin\\frac{\\pi}{3}\\right)",
+  "z_1 = 9\\left(-\\frac{\\sqrt{2}}{2} + i\\left(-\\frac{\\sqrt{2}}{2}\\right)\\right) = -\\frac{9\\sqrt{2}}{2} - \\frac{9\\sqrt{2}}{2}i",
+  "z_2 = 5\\left(\\frac{1}{2} + i\\frac{\\sqrt{3}}{2}\\right) = \\frac{5}{2} + \\frac{5\\sqrt{3}}{2}i",
+  "z_1 - z_2 = \\left(-\\frac{9\\sqrt{2}}{2} - \\frac{9\\sqrt{2}}{2}i\\right) - \\left(\\frac{5}{2} + \\frac{5\\sqrt{3}}{2}i\\right)",
+  "z_1 - z_2 = \\left(-\\frac{9\\sqrt{2}}{2} - \\frac{5}{2}\\right) + \\left(-\\frac{9\\sqrt{2}}{2} - \\frac{5\\sqrt{3}}{2}\\right)i",
+  "z_1 - z_2 = -\\frac{1}{2}\\left(5 + 9\\sqrt{2}\\right) - \\frac{1}{2}\\left(5\\sqrt{3} + 9\\sqrt{2}\\right)i \\approx -8.86 - 10.69i"
+ ],
+ "why": [
+  {
+   "en": "Beta, we cannot directly subtract complex numbers when they are in polar form because their angles $\\frac{5\\pi}{4}$ and $\\frac{\\pi}{3}$ are different. That is why we must first convert both $z_1$ and $z_2$ into standard Cartesian form $x + iy$ so we can easily subtract their real and imaginary parts separately.",
+   "ur": "بیٹا، ہم قطبی شکل (polar form) میں دیے گئے مختلط اعداد کو براہِ راست تفریق نہیں کر سکتے کیونکہ ان کے زاویے $\\frac{5\\pi}{4}$ اور $\\frac{\\pi}{3}$ مختلف ہیں۔ اسی لیے ہمیں پہلے $z_1$ اور $z_2$ دونوں کو معیاری کارتیسی شکل $x + iy$ میں تبدیل کرنا ہوگا تاکہ ہم ان کے حقیقی اور خیالی حصوں کو آسانی سے الگ الگ تفریق کر سکیں۔"
+  },
+  {
+   "en": "Here we use our knowledge of trigonometry for the angle $\\frac{5\\pi}{4}$, which lies in the third quadrant where both sine and cosine are negative. Substituting these exact values and multiplying by $9$ gives us the clear real and imaginary parts of $z_1$.",
+   "ur": "یہاں ہم زاویہ $\\frac{5\\pi}{4}$ کے لیے تکونیاتی قدریں استعمال کرتے ہیں، جو تیسرے ربع (quadrant) میں ہے جہاں سائن اور کوسائن دونوں منفی ہوتے ہیں۔ ان قدروں کو درج کرنے اور $9$ سے ضرب دینے سے ہمیں $z_1$ کا حقیقی اور خیالی حصہ واضح طور پر مل جاتا ہے۔"
+  },
+  {
+   "en": "Similarly, we find the standard values for the angle $\\frac{\\pi}{3}$ in the first quadrant and distribute the modulus $5$. Now $z_2$ is also in the simple $x + iy$ form, making it ready for subtraction.",
+   "ur": "اسی طرح، ہم پہلے ربع کے زاویے $\\frac{\\pi}{3}$ کی معیاری قدریں معلوم کرتے ہیں اور $5$ کو اندر ضرب دیتے ہیں۔ اب $z_2$ بھی سادہ $x + iy$ شکل میں آ گیا ہے، اور تفریق کے عمل کے لیے بالکل تیار ہے۔"
+  },
+  {
+   "en": "Now that both numbers are in Cartesian form, we set up the subtraction $z_1 - z_2$ by placing the values in brackets. Using brackets is very important so we do not make a sign mistake when subtracting the entire second complex number.",
+   "ur": "اب جب کہ دونوں اعداد کارتیسی شکل میں ہیں، ہم بریکٹوں میں قدریں رکھ کر تفریق $z_1 - z_2$ ترتیب دیتے ہیں۔ بریکٹ کا استعمال بہت ضروری ہے تاکہ دوسرے مختلط عدد کو تفریق کرتے وقت علامتوں کی غلطی نہ ہو۔"
+  },
+  {
+   "en": "By the rule of subtraction for complex numbers, we subtract the real part of $z_2$ from the real part of $z_1$, and the imaginary part from the imaginary part. Notice how the minus sign outside the second bracket makes both $\\frac{5}{2}$ and $\\frac{5\\sqrt{3}}{2}$ negative.",
+   "ur": "مختلط اعداد کی تفریق کے اصول کے مطابق، ہم $z_1$ کے حقیقی حصے میں سے $z_2$ کا حقیقی حصہ، اور خیالی حصے میں سے خیالی حصہ تفریق کرتے ہیں۔ غور کریں کہ دوسری بریکٹ کے باہر منفی علامت کی وجہ سے $\\frac{5}{2}$ اور $\\frac{5\\sqrt{3}}{2}$ دونوں منفی ہو گئے ہیں۔"
+  },
+  {
+   "en": "Since $\\sqrt{2}$ and $\\sqrt{3}$ are unlike surds that cannot be added directly, we neaten the exact expression by factoring out $-\\frac{1}{2}$ from each part. Writing the approximate decimal form $\\approx -8.86 - 10.69i$ at the end also helps us see the numerical value clearly.",
+   "ur": "چونکہ $\\sqrt{2}$ اور $\\sqrt{3}$ مختلف مقادیرِ اصم (unlike surds) ہیں جنہیں براہِ راست جمع نہیں کیا جا سکتا، اس لیے ہم جواب کو صاف ستھرا لکھنے کے لیے دونوں حصوں سے $-\\frac{1}{2}$ مشترک لے لیتے ہیں۔ آخر میں اعشاریہ کی تقریبی شکل $\\approx -8.86 - 10.69i$ لکھنے سے ہمیں عددی قدر کا بھی واضح اندازہ ہو جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $-\\frac{1}{2}\\left(5 + 9\\sqrt{2}\\right) - \\frac{1}{2}\\left(5\\sqrt{3} + 9\\sqrt{2}\\right)i \\approx -8.86 - 10.69i$ gives the exact and approximate Cartesian form of the difference $z_1 - z_2$. You can quickly check the signs by noticing that $z_1$ already had negative real and imaginary parts, and subtracting the positive parts of $z_2$ naturally makes the result even more negative in the third quadrant.",
+  "ur": "آخری جواب $-\\frac{1}{2}\\left(5 + 9\\sqrt{2}\\right) - \\frac{1}{2}\\left(5\\sqrt{3} + 9\\sqrt{2}\\right)i \\approx -8.86 - 10.69i$ ہمیں تفریق $z_1 - z_2$ کی درست اور تقریبی کارتیسی شکل دیتا ہے۔ آپ علامتوں کی پڑتال ایسے کر سکتے ہیں کہ $z_1$ کے حقیقی اور خیالی حصے پہلے ہی منفی تھے، اور ان میں سے $z_2$ کے مثبت حصے تفریق کرنے سے جواب قدرتی طور پر تیسرے ربع میں مزید منفی ہو جاتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

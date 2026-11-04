@@ -1,0 +1,50 @@
+{
+ "item": "c11-ex1.5-q2",
+ "label": "vii",
+ "answer_ref": "$(\\cos\\theta + i\\sin\\theta),\\ \\theta = \\tan^{-1}\\frac{7}{24} \\approx 16.26^\\circ$",
+ "math": [
+  "z = \\frac{3 + 4i}{4 + 3i}",
+  "\\frac{3 + 4i}{4 + 3i} \\times \\frac{4 - 3i}{4 - 3i}",
+  "= \\frac{24 + 7i}{4^2 + 3^2} = \\frac{24 + 7i}{25}",
+  "= \\frac{24}{25} + \\frac{7}{25}i",
+  "x = \\frac{24}{25},\\ y = \\frac{7}{25}:\\quad r = \\sqrt{x^2 + y^2} = \\sqrt{1} = 1",
+  "\\theta = \\tan^{-1}\\left(\\frac{\\frac{7}{25}}{\\frac{24}{25}}\\right) = \\tan^{-1}\\left(\\frac{7}{24}\\right) \\approx 16.26^\\circ",
+  "\\frac{24}{25} + \\frac{7}{25}i = \\left(\\cos\\theta + i\\sin\\theta\\right),\\quad \\theta = \\tan^{-1}\\frac{7}{24} \\approx 16.26^\\circ"
+ ],
+ "why": [
+  {
+   "en": "Before we can find the modulus and angle for the polar form, we must first convert this complex fraction into the standard rectangular form $x + yi$. Naming the expression $z$ gives us a clear starting point to simplify the division.",
+   "ur": "پولر فارم کے لیے ماڈیولس اور زاویہ معلوم کرنے سے پہلے، ہمیں اس کمپلیکس کسر کو معیاری شکل $x + yi$ میں تبدیل کرنا ہوگا۔ اس عبارت کو $z$ کا نام دینے سے ہمیں تقسیم کو آسان بنانے کے لیے ایک واضح نقطہ آغاز ملتا ہے۔"
+  },
+  {
+   "en": "To remove the imaginary number $i$ from the denominator, we use the rule of complex conjugates. Multiplying both the top and bottom by $4 - 3i$ does not change the value of the fraction, but it will turn the denominator into a purely real number.",
+   "ur": "مخرج (denominator) سے خیالی نمبر $i$ کو ختم کرنے کے لیے، ہم کمپلیکس کونجوگیٹ کا اصول استعمال کرتے ہیں۔ شمار کنندہ اور مخرج دونوں کو $4 - 3i$ سے ضرب دینے سے کسر کی قیمت تبدیل نہیں ہوتی، لیکن یہ مخرج کو ایک حقیقی نمبر میں بدل دے گا۔"
+  },
+  {
+   "en": "Using the algebraic identity $(a+bi)(a-bi) = a^2 + b^2$ makes the denominator a simple real number $25$, while expanding the top and applying $i^2 = -1$ combines the complex terms into $24 + 7i$. This brings us one step closer to separating the real and imaginary parts.",
+   "ur": "الجبری کلیہ $(a+bi)(a-bi) = a^2 + b^2$ استعمال کرنے سے مخرج ایک سادہ حقیقی نمبر $25$ بن جاتا ہے، جبکہ اوپر والی رقم کو ضرب دے کر $i^2 = -1$ لگانے سے کمپلیکس رقوم جڑ کر $24 + 7i$ بن جاتی ہیں۔ یہ ہمیں حقیقی اور خیالی حصوں کو الگ کرنے کے ایک قدم اور قریب لے آتا ہے۔"
+  },
+  {
+   "en": "By dividing both terms in the numerator by $25$, we finally achieve the standard form $x + yi$. Now we can clearly see that the real part is $x = \\frac{24}{25}$ and the imaginary part is $y = \\frac{7}{25}$, which are the exact coordinates we need for the polar formulas.",
+   "ur": "شمار کنندہ کی دونوں رقوم کو $25$ پر تقسیم کرنے سے، ہم آخر کار معیاری شکل $x + yi$ حاصل کر لیتے ہیں۔ اب ہم واضح طور پر دیکھ سکتے ہیں کہ حقیقی حصہ $x = \\frac{24}{25}$ ہے اور خیالی حصہ $y = \\frac{7}{25}$ ہے، جو کہ پولر فارمولوں کے لیے ہمارے مطلوبہ نقاط ہیں۔"
+  },
+  {
+   "en": "The modulus $r$ represents the distance of our complex number from the origin on the complex plane, found using the Pythagorean formula $r = \\sqrt{x^2 + y^2}$. Substituting our $x$ and $y$ values neatly simplifies to $r = 1$, giving us the first piece of the polar form.",
+   "ur": "ماڈیولس $r$ کمپلیکس پلین پر مبدا (origin) سے ہمارے کمپلیکس نمبر کے فاصلے کو ظاہر کرتا ہے، جسے فیثاگورث کے فارمولے $r = \\sqrt{x^2 + y^2}$ سے معلوم کیا جاتا ہے۔ ہمارے $x$ اور $y$ کی قیمتیں درج کرنے سے جواب سادہ ہو کر $r = 1$ آتا ہے، جو ہمیں پولر فارم کا پہلا حصہ دیتا ہے۔"
+  },
+  {
+   "en": "Next, we need the argument $\\theta$, which is the angle the number makes with the positive real axis. Since both $x = \\frac{24}{25}$ and $y = \\frac{7}{25}$ are positive, the point lies in the first quadrant, so the direct formula $\\theta = \\tan^{-1}\\left(\\frac{y}{x}\\right)$ gives the exact angle of approximately $16.26^\\circ$.",
+   "ur": "اس کے بعد، ہمیں آرگومنٹ $\\theta$ کی ضرورت ہے، جو کہ وہ زاویہ ہے جو یہ نمبر مثبت حقیقی محور کے ساتھ بناتا ہے۔ چونکہ $x = \\frac{24}{25}$ اور $y = \\frac{7}{25}$ دونوں مثبت ہیں، اس لیے نقطہ پہلے ربع (quadrant I) میں واقع ہے، لہذا براہِ راست فارمولا $\\theta = \\tan^{-1}\\left(\\frac{y}{x}\\right)$ ہمیں تقریباً $16.26^\\circ$ کا درست زاویہ دیتا ہے۔"
+  },
+  {
+   "en": "Finally, we substitute $r = 1$ and our angle $\\theta$ into the standard polar definition $r(\\cos\\theta + i\\sin\\theta)$. Since multiplying by $1$ does not need to be written, we get our complete polar representation.",
+   "ur": "آخر میں، ہم $r = 1$ اور اپنے زاویے $\\theta$ کو معیاری پولر فارم کی تعریف $r(\\cos\\theta + i\\sin\\theta)$ میں درج کرتے ہیں۔ چونکہ $1$ سے ضرب دینے کو لکھنے کی ضرورت نہیں ہوتی، اس لیے ہمیں اپنی مکمل پولر شکل مل جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $(\\cos\\theta + i\\sin\\theta)$ with $\\theta = \\tan^{-1}\\frac{7}{24} \\approx 16.26^\\circ$ tells us that the given complex fraction lies on the unit circle at a distance of $1$ unit from the origin, rotated $16.26^\\circ$ counter-clockwise from the positive real axis. You can check this with a calculator: $\\cos(16.26^\\circ) \\approx \\frac{24}{25}$ and $\\sin(16.26^\\circ) \\approx \\frac{7}{25}$, which brings us right back to the simplified rectangular form.",
+  "ur": "حتمی جواب $(\\cos\\theta + i\\sin\\theta)$ جہاں $\\theta = \\tan^{-1}\\frac{7}{24} \\approx 16.26^\\circ$ ہے، ہمیں بتاتا ہے کہ دی گئی کمپلیکس کسر مبدا (origin) سے $1$ یونٹ کے فاصلے پر ہے اور مثبت حقیقی محور سے گھڑی کی مخالف سمت میں $16.26^\\circ$ کے زاویے پر واقع ہے۔ آپ کیلکولیٹر سے اس کی تصدیق کر سکتے ہیں: $\\cos(16.26^\\circ) \\approx \\frac{24}{25}$ اور $\\sin(16.26^\\circ) \\approx \\frac{7}{25}$ بنتا ہے، جو ہمیں واپس اسی سادہ معیاری شکل پر لے آتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

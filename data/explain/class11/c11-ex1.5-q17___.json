@@ -1,0 +1,35 @@
+{
+ "item": "c11-ex1.5-q17",
+ "label": "",
+ "answer_ref": "$1$",
+ "math": [
+  "|z_2| = 1 \\Rightarrow z_2 \\bar{z}_2 = |z_2|^2 = 1",
+  "1 - \\bar{z}_1 z_2 = z_2\\bar{z}_2 - \\bar{z}_1 z_2 = z_2\\left(\\bar{z}_2 - \\bar{z}_1\\right)",
+  "|1 - \\bar{z}_1 z_2| = |z_2|\\,\\left|\\overline{z_2 - z_1}\\right| = 1 \\cdot |z_2 - z_1|",
+  "\\left|\\frac{z_2 - z_1}{1 - \\bar{z}_1 z_2}\\right| = \\frac{|z_2 - z_1|}{|z_2 - z_1|} = 1"
+ ],
+ "why": [
+  {
+   "en": "We use the fundamental property of complex numbers where the product of a number and its conjugate equals the square of its modulus, $z_2 \\bar{z}_2 = |z_2|^2$. Since we are given that $|z_2| = 1$, this allows us to rewrite the number $1$ in terms of $z_2$ and $\\bar{z}_2$, which is the key trick to simplifying the denominator.",
+   "ur": "ہم کمپلیکس نمبرز کی یہ بنیادی خاصیت استعمال کرتے ہیں کہ کسی نمبر اور اس کے کاجوگیٹ کا حاصلِ ضرب اس کے ماڈولس کے مربع کے برابر ہوتا ہے، یعنی $z_2 \\bar{z}_2 = |z_2|^2$۔ چونکہ ہمیں دیا گیا ہے کہ $|z_2| = 1$ ہے، اس لیے ہم نمبر $1$ کو $z_2$ اور $\\bar{z}_2$ کی شکل میں لکھ سکتے ہیں، جو کہ مخرج (denominator) کو مختصر کرنے کے لیے سب سے اہم قدم ہے۔"
+  },
+  {
+   "en": "By substituting $z_2 \\bar{z}_2$ in place of $1$ in the denominator $1 - \\bar{z}_1 z_2$, both terms now share a common factor of $z_2$. Factoring out $z_2$ gives us $\\bar{z}_2 - \\bar{z}_1$, which looks very similar to the numerator $z_2 - z_1$ and brings us closer to cancellation.",
+   "ur": "مخرج $1 - \\bar{z}_1 z_2$ میں $1$ کی جگہ $z_2 \\bar{z}_2$ درج کرنے سے اب دونوں رقموں میں $z_2$ مشترک آ جاتا ہے۔ $z_2$ کو مشترک لینے سے ہمیں $\\bar{z}_2 - \\bar{z}_1$ ملتا ہے، جو شمار کنندہ (numerator) $z_2 - z_1$ سے بہت ملتا جلتا ہے اور ہمیں کینسل کرنے کے قریب لے آتا ہے۔"
+  },
+  {
+   "en": "Now we take the modulus of the denominator, using the rules that the modulus of a product is the product of the moduli, and that the conjugate of a difference is the difference of the conjugates ($\\bar{z}_2 - \\bar{z}_1 = \\overline{z_2 - z_1}$). Since $|z_2| = 1$ and the modulus of a conjugate is the same as the modulus of the original expression, the denominator's modulus simplifies directly to $|z_2 - z_1|$.",
+   "ur": "اب ہم مخرج کا ماڈولس لیتے ہیں اور یہ اصول استعمال کرتے ہیں کہ حاصلِ ضرب کا ماڈولس الگ الگ ماڈولس کے حاصلِ ضرب کے برابر ہوتا ہے، اور فرق کا کاجوگیٹ الگ الگ کاجوگیٹ کے فرق کے برابر ہوتا ہے ($\\bar{z}_2 - \\bar{z}_1 = \\overline{z_2 - z_1}$)۔ چونکہ $|z_2| = 1$ ہے اور کسی کمپلیکس نمبر اور اس کے کاجوگیٹ کا ماڈولس ہمیشہ برابر ہوتا ہے، اس لیے مخرج کا ماڈولس مختصر ہو کر سیدھا $|z_2 - z_1|$ بن جاتا ہے۔"
+  },
+  {
+   "en": "Finally, we apply the property that the modulus of a fraction is the fraction of the moduli, splitting the main expression into the numerator's modulus divided by the denominator's modulus. Because $z_1 \\ne z_2$, the value $|z_2 - z_1|$ is not zero, so the identical top and bottom cancel out completely to give $1$.",
+   "ur": "آخر میں، ہم یہ اصول لگاتے ہیں کہ کسی کسر (fraction) کا ماڈولس شمار کنندہ اور مخرج کے الگ الگ ماڈولس کی تقسیم کے برابر ہوتا ہے۔ چونکہ $z_1 \\ne z_2$ ہے، اس لیے $|z_2 - z_1|$ کی قیمت صفر نہیں ہو سکتی، لہٰذا اوپر اور نیچے والی ایک جیسی رقمیں آپس میں مکمل طور پر کٹ جاتی ہیں اور جواب $1$ آتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $1$ means that as long as $z_2$ has a modulus of $1$ and is not equal to $z_1$, the modulus of the entire given fraction is always constant and equal to $1$, no matter what exact complex numbers $z_1$ and $z_2$ are. You can easily verify this by testing with simple values from the steps, such as $z_2 = i$ (so $|z_2| = 1$) and $z_1 = 2$.",
+  "ur": "آخری جواب $1$ کا مطلب یہ ہے کہ جب تک $z_2$ کا ماڈولس $1$ ہے اور وہ $z_1$ کے برابر نہیں ہے، دی گئی پوری کسر کا ماڈولس ہمیشہ مستقل طور پر $1$ ہی رہے گا، چاہے $z_1$ اور $z_2$ کوئی بھی کمپلیکس نمبرز ہوں۔ آپ اس کی تصدیق سٹیپس میں دی گئی سادہ قیمتیں، جیسے $z_2 = i$ (تاکہ $|z_2| = 1$ ہو) اور $z_1 = 2$، درج کر کے بآسانی کر سکتے ہیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

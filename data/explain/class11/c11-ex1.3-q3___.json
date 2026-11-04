@@ -1,0 +1,30 @@
+{
+ "item": "c11-ex1.3-q3",
+ "label": "",
+ "answer_ref": "roots $3, -3, 4i, -4i$; $(z - 3)(z + 3)(z - 4i)(z + 4i)$",
+ "math": [
+  "z^4 + 16z^2 - 9z^2 - 144 = 0 \\Rightarrow (z^2 + 16)(z^2 - 9) = 0",
+  "z^2 = -16 \\Rightarrow z = \\pm 4i;\\qquad z^2 = 9 \\Rightarrow z = \\pm 3",
+  "z^4 + 7z^2 - 144 = (z - 3)(z + 3)(z - 4i)(z + 4i)"
+ ],
+ "why": [
+  {
+   "en": "Even though this is a degree $4$ equation, we can treat it like a quadratic in $z^2$ and use middle-term breaking to factorize it. This breaks our complicated fourth-power equation into two much simpler quadratic factors, $(z^2 + 16)$ and $(z^2 - 9)$, whose product is $0$.",
+   "ur": "اگرچہ یہ درجہ $4$ کی مساوات ہے، ہم اسے $z^2$ میں ایک دو درجی مساوات (quadratic equation) سمجھ کر درمیانی رقم کو توڑنے کا طریقہ استعمال کر سکتے ہیں۔ اس سے ہماری پیچیدہ مساوات دو آسان دو درجی اجزائے ضربی $(z^2 + 16)$ اور $(z^2 - 9)$ میں تقسیم ہو جاتی ہے جن کا حاصل ضرب $0$ ہے۔"
+  },
+  {
+   "en": "By the zero-product property, we set each factor to $0$ and take the square root to solve for $z$, remembering that the square root of a negative number introduces $i$. This gives us all four roots of the equation: two real roots ($\\pm 3$) and two imaginary roots ($\\pm 4i$).",
+   "ur": "ضربی خاصیت (zero-product property) کے تحت ہم ہر جزو کو $0$ کے برابر رکھتے ہیں اور $z$ کی قیمت نکالنے کے لیے جذر (square root) لیتے ہیں، یہ یاد رکھتے ہوئے کہ منفی عدد کے جذر سے $i$ آتا ہے۔ اس سے ہمیں مساوات کے چاروں روٹس (roots) مل جاتے ہیں: دو حقیقی روٹس ($\\pm 3$) اور دو خیالی روٹس ($\\pm 4i$)۔"
+  },
+  {
+   "en": "According to the Factor Theorem, if $r$ is a root of a polynomial, then $(z - r)$ is one of its linear factors. Using the four roots we just found, we can now write the original degree $4$ polynomial completely as a product of four linear factors.",
+   "ur": "مسئلہ تجزی (Factor Theorem) کے مطابق اگر $r$ کسی کثیر رقمی کا روٹ ہو تو $(z - r)$ اس کا ایک یک درجی جزو ضربی (linear factor) ہوتا ہے۔ اپنے حاصل کردہ چاروں روٹس کو استعمال کرتے ہوئے، اب ہم اصل درجہ $4$ کی مساوات کو مکمل طور پر چار یک درجی اجزائے ضربی کے حاصل ضرب کے طور پر لکھ سکتے ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The given degree $4$ equation has exactly four roots in the complex number system: $3, -3, 4i,$ and $-4i$, which allow us to break the expression down into four simple linear factors $(z - 3)(z + 3)(z - 4i)(z + 4i)$. You can easily check this result by multiplying the pairs $(z - 3)(z + 3)$ to get $(z^2 - 9)$ and $(z - 4i)(z + 4i)$ to get $(z^2 + 16)$, which expand back to the original polynomial $z^4 + 7z^2 - 144$.",
+  "ur": "دی گئی درجہ $4$ کی مساوات کے مخلوط اعداد (complex numbers) کے نظام میں ٹھیک چار روٹس ہیں: $3, -3, 4i,$ اور $-4i$، جن کی مدد سے ہم اس جملے کو چار سادہ یک درجی اجزائے ضربی $(z - 3)(z + 3)(z - 4i)(z + 4i)$ میں توڑ سکتے ہیں۔ آپ اس جواب کی پڑتال آسانی سے کر سکتے ہیں: $(z - 3)(z + 3)$ کو ضرب دینے سے $(z^2 - 9)$ اور $(z - 4i)(z + 4i)$ کو ضرب دینے سے $(z^2 + 16)$ بنتا ہے، جنہیں مزید ضرب دینے سے واپس اصل کثیر رقمی $z^4 + 7z^2 - 144$ حاصل ہو جاتی ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

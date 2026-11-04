@@ -1,0 +1,47 @@
+{
+ "item": "c11-ex1.3-q1",
+ "label": "i",
+ "answer_ref": "$(a + 2bi)(a - 2bi)$",
+ "steps": [
+  {
+   "math": "a^2 + 4b^2",
+   "en": "Consider the given algebraic expression to be factorized into linear factors over the complex numbers.",
+   "ur": "مختلط اعداد (complex numbers) میں تجزی کرنے کے لیے دیے گئے الجبری جملے پر غور کریں۔"
+  },
+  {
+   "math": "= a^2 - (-4b^2)",
+   "en": "To apply the difference of two squares formula, rewrite the plus sign as $-(-1)$.",
+   "ur": "دو مربعوں کے فرق کا کلیہ لگانے کے لیے، جمع کی علامت کو $-(-1)$ کے طور پر لکھیں۔",
+   "check": [
+    "a**2 + 4*b**2 == a**2 - (-4*b**2)"
+   ]
+  },
+  {
+   "math": "= a^2 - 4b^2 i^2",
+   "en": "Substitute $i^2 = -1$, where $i$ is the imaginary unit.",
+   "ur": "$i^2 = -1$ درج کریں، جہاں $i$ خیالی اکائی (imaginary unit) ہے۔",
+   "check": [
+    "a**2 - (-4*b**2) == a**2 - 4*b**2*I**2"
+   ]
+  },
+  {
+   "math": "= (a)^2 - (2bi)^2",
+   "en": "Express both terms as perfect squares.",
+   "ur": "دونوں رقموں کو کامل مربع کی شکل میں لکھیں۔",
+   "check": [
+    "a**2 - 4*b**2*I**2 == (a)**2 - (2*b*I)**2"
+   ]
+  },
+  {
+   "math": "= (a + 2bi)(a - 2bi)",
+   "en": "Apply the algebraic identity $A^2 - B^2 = (A + B)(A - B)$ with $A = a$ and $B = 2bi$ to get the final factorized form.",
+   "ur": "الجبری کلیہ $A^2 - B^2 = (A + B)(A - B)$ کا استعمال کریں جہاں $A = a$ اور $B = 2bi$ ہیں، تاکہ مطلوبہ اجزائے ضربی حاصل ہوں۔",
+   "check": [
+    "expand((a + 2*b*I)*(a - 2*b*I)) == a**2 + 4*b**2"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-04"
+}

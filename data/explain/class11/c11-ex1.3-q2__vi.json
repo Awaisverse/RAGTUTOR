@@ -1,0 +1,30 @@
+{
+ "item": "c11-ex1.3-q2",
+ "label": "vi",
+ "answer_ref": "$\\left(z - 1\\right)\\left(z + 1\\right)\\left(z - 2i\\right)\\left(z + 2i\\right)$",
+ "math": [
+  "= z^4 + 4z^2 - z^2 - 4 = (z^2 + 4)(z^2 - 1)",
+  "z^2 - 1 = (z - 1)(z + 1),\\quad z^2 + 4 = (z - 2i)(z + 2i)",
+  "z^4 + 3z^2 - 4 = \\left(z - 1\\right)\\left(z + 1\\right)\\left(z - 2i\\right)\\left(z + 2i\\right)"
+ ],
+ "why": [
+  {
+   "en": "Even though this is a degree $4$ polynomial, it behaves like a quadratic in terms of $z^2$, so we use the standard middle-term breaking method. This simplifies the problem by breaking the degree $4$ polynomial into two simpler quadratic factors, $(z^2 + 4)$ and $(z^2 - 1)$.",
+   "ur": "اگرچہ یہ درجہ $4$ کی کثیر رقمی ہے، لیکن یہ $z^2$ کے لحاظ سے ایک دو درجی مساوات کی طرح ہے، اس لیے ہم درمیانی رقم کو توڑنے کا طریقہ استعمال کرتے ہیں۔ اس سے ہمارا سوال آسان ہو جاتا ہے اور یہ دو سادہ دو درجی اجزائے ضربی $(z^2 + 4)$ اور $(z^2 - 1)$ میں تقسیم ہو جاتا ہے۔"
+  },
+  {
+   "en": "Our goal is to get linear factors (where the power of $z$ is $1$), so we apply the difference of two squares formula to both quadratic brackets. For $z^2 + 4$, we use the complex number property $i^2 = -1$ to turn the plus sign into a minus, giving us all four linear factors.",
+   "ur": "ہمارا مقصد یک درجی اجزائے ضربی حاصل کرنا ہے، اس لیے ہم دونوں بریکٹوں پر دو مربّعوں کے فرق کا فارمولا لگاتے ہیں۔ $z^2 + 4$ کے لیے ہم مختلط عدد کی خاصیت $i^2 = -1$ استعمال کر کے جمع کو منفی میں بدلتے ہیں، جس سے ہمیں چاروں یک درجی اجزائے ضربی مل جاتے ہیں۔"
+  },
+  {
+   "en": "Finally, we combine all the factored pieces together as a single product to complete the factorization. This gives us the final required form where every factor is linear.",
+   "ur": "آخر میں، ہم تمام حاصل شدہ اجزاء کو ایک حاصلِ ضرب کی شکل میں اکٹھا لکھتے ہیں تاکہ تجزی مکمل ہو جائے۔ اس سے ہمیں مطلوبہ حتمی شکل مل جاتی ہے جہاں ہر جزو یک درجی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer shows the degree $4$ polynomial $z^4 + 3z^2 - 4$ completely broken down into four linear factors over the complex numbers: $(z - 1)(z + 1)(z - 2i)(z + 2i)$. You can easily check this result by multiplying the pairs $(z - 1)(z + 1)$ to get $z^2 - 1$ and $(z - 2i)(z + 2i)$ to get $z^2 + 4$, which expand back to the original polynomial.",
+  "ur": "حتمی جواب یہ ظاہر کرتا ہے کہ درجہ $4$ کی کثیر رقمی $z^4 + 3z^2 - 4$ کو مختلط اعداد کی مدد سے مکمل طور پر چار یک درجی اجزائے ضربی $(z - 1)(z + 1)(z - 2i)(z + 2i)$ میں تحلیل کر دیا گیا ہے۔ آپ اس جواب کی پڑتال ایسے کر سکتے ہیں کہ $(z - 1)(z + 1)$ کو ضرب دے کر $z^2 - 1$ اور $(z - 2i)(z + 2i)$ کو ضرب دے کر $z^2 + 4$ حاصل کریں، جن کو آپس میں ضرب دینے سے واپس اصل کثیر رقمی بن جاتی ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

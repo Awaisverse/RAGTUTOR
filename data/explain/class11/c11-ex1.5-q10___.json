@@ -1,0 +1,35 @@
+{
+ "item": "c11-ex1.5-q10",
+ "label": "",
+ "answer_ref": "$y = \\sqrt{3}x + 1 - 2\\sqrt{3}$ (with $x < 2$)",
+ "math": [
+  "\\bar{z} - 2 + i = (x - iy) - 2 + i = (x - 2) + i(1 - y)",
+  "\\tan\\frac{2\\pi}{3} = \\frac{1 - y}{x - 2} \\Rightarrow -\\sqrt{3} = \\frac{1 - y}{x - 2}",
+  "1 - y = -\\sqrt{3}(x - 2) \\Rightarrow y = \\sqrt{3}x + 1 - 2\\sqrt{3}",
+  "\\text{with } x - 2 < 0,\\ 1 - y > 0 \\ (\\text{the angle } \\tfrac{2\\pi}{3} \\text{ is in quadrant II})"
+ ],
+ "why": [
+  {
+   "en": "To use the formula for the argument of a complex number, we first need to write the expression inside the brackets in standard form, $X + iY$. By substituting the conjugate $\\bar{z} = x - iy$ and grouping like terms, we clearly identify the new real part as $(x - 2)$ and the imaginary part as $(1 - y)$.",
+   "ur": "کسی کمپلیکس نمبر کے آرگومنٹ (argument) کا فارمولا استعمال کرنے کے لیے ہمیں سب سے پہلے بریکٹ کے اندر والی رقم کو معیاری شکل $X + iY$ میں لکھنا ہوتا ہے۔ کاجوگیٹ $\\bar{z} = x - iy$ درج کر کے اور حقیقی و خیالی حصوں کو الگ کر کے، ہمیں نیا حقیقی حصہ $(x - 2)$ اور خیالی حصہ $(1 - y)$ واضح طور پر مل جاتا ہے۔"
+  },
+  {
+   "en": "By the definition of the argument, the tangent of the angle equals the imaginary part divided by the real part. Using the known trigonometric value $\\tan\\frac{2\\pi}{3} = -\\sqrt{3}$, this step removes the complex number notation and gives us a purely algebraic equation in $x$ and $y$.",
+   "ur": "آرگومنٹ کی تعریف کے مطابق، زاویے کا ٹینجنٹ ($\\tan$) خیالی حصے کو حقیقی حصے پر تقسیم کرنے سے حاصل ہوتا ہے۔ مثلثیاتی قیمت $\\tan\\frac{2\\pi}{3} = -\\sqrt{3}$ استعمال کرنے سے کمپلیکس نمبر کی علامت ختم ہو جاتی ہے اور ہمیں $x$ اور $y$ میں ایک سادہ الجبری مساوات مل جاتی ہے۔"
+  },
+  {
+   "en": "To write the Cartesian equation in the standard straight-line form, we rearrange the terms to isolate $y$ on one side. This shows us the exact linear relationship between the coordinates $x$ and $y$.",
+   "ur": "کارٹیزین مساوات کو خطِ مستقیم کی معیاری شکل میں لکھنے کے لیے ہم رقموں کو ترتیب دے کر $y$ کو ایک طرف الگ کر لیتے ہیں۔ اس سے ہمیں کوآرڈینیٹس $x$ اور $y$ کے درمیان سیدھا خطی تعلق معلوم ہو جاتا ہے۔"
+  },
+  {
+   "en": "Since the angle $\\frac{2\\pi}{3}$ lies in the second quadrant, the real part of the complex number must be negative and the imaginary part must be positive. Checking this condition is essential because an argument defines a single ray starting from a point, not the entire straight line.",
+   "ur": "چونکہ زاویہ $\\frac{2\\pi}{3}$ دوسرے ربعی (quadrant II) میں واقع ہے، اس لیے کمپلیکس نمبر کا حقیقی حصہ منفی اور خیالی حصہ مثبت ہونا چاہیے۔ یہ شرط لگانا بہت ضروری ہے کیونکہ آرگومنٹ پوری لکیر کے بجائے ایک نقطے سے نکلنے والی صرف ایک شعاع (ray) کو ظاہر کرتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer shows that the complex numbers $z = x + iy$ satisfying the given condition do not form a full line, but rather an open ray (half-line) represented by $y = \\sqrt{3}x + 1 - 2\\sqrt{3}$, restricted to the region where $x < 2$. You can check this by noticing that at the boundary $x = 2$, we get $y = 1$, which would make the complex number $\\bar{z} - 2 + i$ equal to zero, where the argument is undefined.",
+  "ur": "حتمی جواب یہ بتاتا ہے کہ دی گئی شرط کو پورا کرنے والے کمپلیکس نمبرز $z = x + iy$ پوری لکیر نہیں بناتے، بلکہ مساوات $y = \\sqrt{3}x + 1 - 2\\sqrt{3}$ کی ایک شعاع (نصف خط) بناتے ہیں جو صرف $x < 2$ کے علاقے تک محدود ہے۔ آپ اس کی پڑتال ایسے کر سکتے ہیں کہ اگر ہم سرحدی قیمت $x = 2$ رکھیں تو $y = 1$ آتا ہے، جس سے کمپلیکس نمبر $\\bar{z} - 2 + i$ صفر ہو جاتا ہے اور صفر کا آرگومنٹ معلوم نہیں کیا جا سکتا۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

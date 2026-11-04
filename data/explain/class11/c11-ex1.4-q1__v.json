@@ -1,0 +1,40 @@
+{
+ "item": "c11-ex1.4-q1",
+ "label": "v",
+ "answer_ref": "$-5,\\ \\frac{5}{2} - \\frac{5 \\sqrt{3}}{2}i,\\ \\frac{5}{2} + \\frac{5 \\sqrt{3}}{2}i$",
+ "math": [
+  "x^3 = -125 \\Rightarrow x^3 + 125 = 0 \\Rightarrow x^3 + 5^3 = 0",
+  "(x + 5)\\left(x^2 - 5x + 25\\right) = 0",
+  "x = -5 \\quad\\text{or}\\quad x = \\frac{5 \\pm \\sqrt{25 - 100}}{2} = \\frac{5 \\pm \\sqrt{-75}}{2}",
+  "x = \\frac{5}{2} - \\frac{5 \\sqrt{3}}{2}i,\\quad \\frac{5}{2} + \\frac{5 \\sqrt{3}}{2}i",
+  "\\text{Cube roots: } -5,\\ \\frac{5}{2} - \\frac{5 \\sqrt{3}}{2}i,\\ \\frac{5}{2} + \\frac{5 \\sqrt{3}}{2}i"
+ ],
+ "why": [
+  {
+   "en": "By the definition of a cube root, if $x$ is a cube root of $-125$, then raising $x$ to the power $3$ gives $-125$. Writing $125$ as $5^3$ sets up our equation as a sum of two cubes equal to $0$, which makes it ready for factorization.",
+   "ur": "مکعب جزر (cube root) کی تعریف کے مطابق، اگر $x$ عدد $-125$ کا مکعب جزر ہے تو اس کی طاقت $3$ لینے سے $-125$ ملے گا۔ $125$ کو $5^3$ لکھنے سے مساوات دو مکعبوں کے مجموعے کی شکل میں آ جاتی ہے، جس سے اس کی تجزی کرنا آسان ہو جاتا ہے۔"
+  },
+  {
+   "en": "We apply the sum of cubes algebraic identity $a^3 + b^3 = (a + b)(a^2 - ab + b^2)$ here. This breaks our degree-$3$ equation into a simple linear factor and a quadratic factor whose roots we can find separately.",
+   "ur": "یہاں ہم دو مکعبوں کے مجموعے کا الجبرائی کلیہ استعمال کرتے ہیں۔ اس سے ہماری درجہ $3$ کی مساوات ایک سادہ یک درجی (linear) اور ایک دو درجی (quadratic) جزو ضربی میں تقسیم ہو جاتی ہے، جن کے روٹس ہم الگ الگ معلوم کر سکتے ہیں۔"
+  },
+  {
+   "en": "By the zero-product property, either the first factor or the second factor must be $0$. The linear factor immediately gives the real root $x = -5$, while the quadratic formula helps us find the remaining two roots from $x^2 - 5x + 25 = 0$.",
+   "ur": "ضربی خاصیت کے مطابق، دونوں میں سے کم از کم ایک جزو ضربی صفر کے برابر ہونا چاہیے۔ پہلے حصے سے ہمیں فوراً حقیقی جزر $x = -5$ مل جاتا ہے، جبکہ دو درجی کلیہ (quadratic formula) ہمیں دوسرے حصے $x^2 - 5x + 25 = 0$ سے باقی دو روٹس نکالنے میں مدد دیتا ہے۔"
+  },
+  {
+   "en": "Using the definition of the imaginary unit $i = \\sqrt{-1}$, we rewrite $\\sqrt{-75}$ as $5\\sqrt{3}i$ because $75 = 25 \\times 3$. Separating the real and imaginary parts gives us the two complex cube roots in standard $a + bi$ form.",
+   "ur": "خیالی اکائی (imaginary unit) کی تعریف استعمال کرتے ہوئے ہم $\\sqrt{-75}$ کو $5\\sqrt{3}i$ لکھتے ہیں۔ حقیقی اور خیالی حصوں کو الگ کرنے سے ہمیں باقی دو مختلط (complex) مکعب جزر اپنی معیاری شکل میں مل جاتے ہیں۔"
+  },
+  {
+   "en": "We now gather all three solutions together to state the complete answer. Notice how the three roots follow the pattern $-5$, $-5\\omega$, and $-5\\omega^2$, which is a special property of cube roots.",
+   "ur": "اب ہم مکمل جواب لکھنے کے لیے تینوں حل یکجا کر لیتے ہیں۔ غور کریں کہ یہ تینوں روٹس $-5$، $-5\\omega$ اور $-5\\omega^2$ کی ترتیب میں ہیں، جو کہ مکعب جزر کی ایک خاص صفت ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "These three numbers are the only values in the complex number system that, when multiplied by themselves three times (cubed), equal $-125$. One root ($-5$) is real, and the other two are complex conjugates; you can check the answer by cubing any of them to see that it gives $-125$.",
+  "ur": "یہ تینوں اعداد مختلط اعداد کے نظام میں وہ واحد قیمتیں ہیں جن کا مکعب (طاقت $3$) لینے سے جواب $-125$ آتا ہے۔ ان میں سے ایک جزر ($-5$) حقیقی ہے اور باقی دو مختلط زوج (complex conjugates) ہیں؛ آپ ان میں سے کسی کا بھی مکعب لے کر پڑتال کر سکتے ہیں کہ جواب $-125$ ہی آئے گا۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

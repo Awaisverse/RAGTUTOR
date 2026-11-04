@@ -1,0 +1,35 @@
+{
+ "item": "c11-ex1.1-q9",
+ "label": "",
+ "answer_ref": "proved: $i^n = (i^4)^q i^r = i^r$",
+ "math": [
+  "n = 4q + r,\\quad q \\in \\mathbb{N},\\ 0 \\le r < 4",
+  "i^n = i^{4q + r} = (i^4)^q\\, i^r",
+  "i^4 = (i^2)^2 = (-1)^2 = 1",
+  "i^n = 1^q\\, i^r = i^r"
+ ],
+ "why": [
+  {
+   "en": "By the division algorithm, any natural number $n$ greater than $4$ can be written in terms of its quotient $q$ and remainder $r$ when divided by $4$. This splits the large exponent $n$ into a multiple of $4$ and a small remainder $r$ (where $0 \\le r < 4$), which is the key to simplifying powers of $i$.",
+   "ur": "تقسیم کے اصول (division algorithm) کے تحت، $4$ سے بڑے کسی بھی قدرتی عدد $n$ کو $4$ سے تقسیم کرنے پر حاصلِ قسمت $q$ اور باقی (remainder) $r$ کی صورت میں لکھا جا سکتا ہے۔ اس سے بڑی طاقت $n$ دو حصوں میں بٹ جاتی ہے: ایک $4$ کا ضعف اور دوسرا چھوٹا سا باقی $r$ (جہاں $0 \\le r < 4$)، جو $i$ کی طاقتوں کو مختصر کرنے کی بنیاد ہے۔"
+  },
+  {
+   "en": "We substitute $n = 4q + r$ into $i^n$ and apply the product और power laws of indices to separate the terms. This isolates $(i^4)^q$ from $i^r$, allowing us to handle the multiple of $4$ separately.",
+   "ur": "ہم $i^n$ میں $n = 4q + r$ درج کرتے ہیں اور قوت نما کے قوانین (laws of indices) استعمال کرتے ہوئے رقموں کو الگ الگ کرتے ہیں۔ اس سے $(i^4)^q$ اور $i^r$ الگ ہو جاتے ہیں، جس کی مدد سے ہم $4$ کے ضعف والے حصے کو باآسانی حل کر سکتے ہیں۔"
+  },
+  {
+   "en": "Using the definition of the imaginary unit where $i^2 = -1$, we evaluate $i^4$ by writing it as $(i^2)^2$. Since $(-1)^2 = 1$, this shows that every fourth power of $i$ simply equals $1$, which will make the $q$ part vanish in the next step.",
+   "ur": "ایمیجنری یونٹ کی تعریف $i^2 = -1$ کو استعمال کرتے ہوئے، ہم $i^4$ کو $(i^2)^2$ لکھ کر حل کرتے ہیں۔ چونکہ $(-1)^2 = 1$ ہوتا ہے، اس سے ثابت ہوتا ہے کہ $i$ کی چوتھی طاقت ہمیشہ $1$ کے برابر ہوتی ہے، جو اگلے مرحلے میں $q$ والے حصے کو ختم کر دے گی۔"
+  },
+  {
+   "en": "We replace $i^4$ with $1$, and since $1$ raised to any natural number $q$ is always $1$, the expression simplifies directly to $i^r$. This completes our proof, showing that the entire cycle of $4$s drops out and only the remainder $r$ matters.",
+   "ur": "ہم $i^4$ کی جگہ $1$ درج کرتے ہیں، اور چونکہ $1$ کی طاقت کوئی بھی قدرتی عدد $q$ ہو تو جواب ہمیشہ $1$ ہی آتا ہے، اس لیے یہ عبارت مختصر ہو کر سیدھی $i^r$ رہ جاتی ہے۔ یہاں ہمارا ثبوت مکمل ہوتا ہے جو دکھاتا ہے کہ $4$ کے تمام چکر ختم ہو جاتے ہیں اور قیمت کا انحصار صرف باقی ماندہ عدد $r$ پر ہوتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This result means that the powers of $i$ repeat in a cycle of $4$, so to find any large power $i^n$, we can ignore the multiples of $4$ and just use the remainder $r$ when $n$ is divided by $4$. As shown in the step's example, for $i^{23}$, dividing $23$ by $4$ gives $23 = 4(5) + 3$, so it immediately simplifies to $i^3 = -i$.",
+  "ur": "اس نتیجے کا مطلب یہ ہے کہ $i$ کی طاقتیں ہر $4$ کے چکر کے بعد خود کو دہراتی ہیں، اس لیے $i$ کی کسی بھی بڑی طاقت $i^n$ کی قیمت معلوم کرنے کے لیے ہم $4$ کے اضعاف کو چھوڑ کر صرف اس باقی (remainder) $r$ کو استعمال کر سکتے ہیں جو $n$ کو $4$ پر تقسیم کرنے سے حاصل ہوتا ہے۔ جیسا کہ مثال میں دکھایا گیا ہے، $i^{23}$ کے لیے $23$ کو $4$ پر تقسیم کرنے سے $23 = 4(5) + 3$ ملتا ہے، لہٰذا یہ فوراً مختصر ہو کر $i^3 = -i$ بن جاتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

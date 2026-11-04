@@ -1,0 +1,62 @@
+{
+ "item": "c11-ex1.1-q6",
+ "label": "iii",
+ "answer_ref": "$\\sqrt{1354}$",
+ "steps": [
+  {
+   "math": "z_2 = -5 + 3i",
+   "en": "First, write down the given complex number $z_2$. We need to evaluate $|-7z_2 + 2\\bar{z}_2|$.",
+   "ur": "سب سے پہلے، دیا گیا مختلط عدد $z_2$ لکھیں۔ ہمیں $|-7z_2 + 2\\bar{z}_2|$ کی قیمت معلوم کرنی ہے۔"
+  },
+  {
+   "math": "\\bar{z}_2 = -5 - 3i",
+   "en": "Find the complex conjugate $\\bar{z}_2$ by changing the sign of the imaginary part of $z_2$.",
+   "ur": "$z_2$ کے خیالی حصے کی علامت تبدیل کر کے اس کا مزدوج (conjugate) $\\bar{z}_2$ معلوم کریں۔"
+  },
+  {
+   "math": "-7z_2 + 2\\bar{z}_2 = -7(-5 + 3i) + 2(-5 - 3i)",
+   "en": "Substitute the values of $z_2$ and $\\bar{z}_2$ into the expression $-7z_2 + 2\\bar{z}_2$.",
+   "ur": "عبارت $-7z_2 + 2\\bar{z}_2$ میں $z_2$ اور $\\bar{z}_2$ کی قیمتیں درج کریں۔"
+  },
+  {
+   "math": "-7z_2 + 2\\bar{z}_2 = (35 - 21i) + (-10 - 6i)",
+   "en": "Multiply $-7$ inside the first bracket and $2$ inside the second bracket.",
+   "ur": "پہلی بریکٹ کے اندر $-7$ سے اور دوسری بریکٹ کے اندر $2$ سے ضرب دیں۔",
+   "check": [
+    "-7*(-5 + 3*I) == 35 - 21*I",
+    "2*(-5 - 3*I) == -10 - 6*I"
+   ]
+  },
+  {
+   "math": "-7z_2 + 2\\bar{z}_2 = (35 - 10) + (-21 - 6)i = 25 - 27i",
+   "en": "Combine the real parts together and the imaginary parts together.",
+   "ur": "حقیقی حصوں کو آپس میں اور خیالی حصوں کو آپس میں اکٹھا کر کے حل کریں۔",
+   "check": [
+    "(35 - 21*I) + (-10 - 6*I) == 25 - 27*I"
+   ]
+  },
+  {
+   "math": "|-7z_2 + 2\\bar{z}_2| = |25 - 27i| = \\sqrt{(25)^2 + (-27)^2}",
+   "en": "Apply the modulus formula $|a + bi| = \\sqrt{a^2 + b^2}$, where $a = 25$ and $b = -27$.",
+   "ur": "مقیاس (modulus) کا فارمولا $|a + bi| = \\sqrt{a^2 + b^2}$ استعمال کریں، جہاں $a = 25$ اور $b = -27$ ہے۔",
+   "check": [
+    "Abs(25 - 27*I) == sqrt(25**2 + (-27)**2)"
+   ]
+  },
+  {
+   "math": "|-7z_2 + 2\\bar{z}_2| = \\sqrt{625 + 729} = \\sqrt{1354}",
+   "en": "Calculate the squares and add them to get the final answer.",
+   "ur": "مربع معلوم کریں اور انہیں جمع کر کے حتمی جواب حاصل کریں۔",
+   "check": [
+    "25**2 == 625",
+    "(-27)**2 == 729",
+    "625 + 729 == 1354",
+    "Abs(25 - 27*I) == sqrt(1354)",
+    "Abs((25 - 27*I)) == sqrt(1354)"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-04"
+}

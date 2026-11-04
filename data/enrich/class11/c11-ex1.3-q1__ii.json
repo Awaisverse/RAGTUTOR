@@ -1,0 +1,52 @@
+{
+ "item": "c11-ex1.3-q1",
+ "label": "ii",
+ "answer_ref": "$(3a + 4bi)(3a - 4bi)$",
+ "steps": [
+  {
+   "math": "9a^2 + 16b^2",
+   "en": "We are given the algebraic expression $9a^2 + 16b^2$ and asked to factorize it over the complex numbers.",
+   "ur": "ہمیں الجبری جملہ $9a^2 + 16b^2$ دیا گیا ہے اور ہمیں اسے مخلوط اعداد کی مدد سے اجزائے ضربی میں تحلیل کرنا ہے۔"
+  },
+  {
+   "math": "= 9a^2 - (-1)(16b^2)",
+   "en": "To apply the difference of squares formula, we first rewrite the plus sign $+$ as $-(-1)$.",
+   "ur": "مربعوں کے فرق کا کلیہ لگانے کے لیے، ہم پہلے جمع کی علامت $+$ کو $-(-1)$ کی صورت میں لکھتے ہیں۔",
+   "check": [
+    "9*a**2 - (-1)*(16*b**2) == 9*a**2 + 16*b**2"
+   ]
+  },
+  {
+   "math": "= 9a^2 - 16b^2 i^2",
+   "en": "Since in complex numbers $i^2 = -1$, we substitute $i^2$ in place of $-1$.",
+   "ur": "چونکہ مخلوط اعداد میں $i^2 = -1$ ہوتا ہے، اس لیے ہم $-1$ کی جگہ $i^2$ درج کرتے ہیں۔",
+   "check": [
+    "9*a**2 - 16*b**2*I**2 == 9*a**2 + 16*b**2"
+   ]
+  },
+  {
+   "math": "= (3a)^2 - (4bi)^2",
+   "en": "Now, write both terms as perfect squares: $9a^2 = (3a)^2$ and $16b^2 i^2 = (4bi)^2$.",
+   "ur": "اب، دونوں رقموں کو مکمل مربع کی شکل میں لکھیں: $9a^2 = (3a)^2$ اور $16b^2 i^2 = (4bi)^2$۔",
+   "check": [
+    "(3*a)**2 - (4*b*I)**2 == 9*a**2 - 16*b**2*I**2"
+   ]
+  },
+  {
+   "math": "A^2 - B^2 = (A + B)(A - B)",
+   "en": "Recall the standard algebraic identity for the difference of two squares. Here, $A = 3a$ and $B = 4bi$.",
+   "ur": "دو مربعوں کے فرق کا معیاری الجبری کلیہ یاد کریں۔ یہاں $A = 3a$ اور $B = 4bi$ ہے۔"
+  },
+  {
+   "math": "= (3a + 4bi)(3a - 4bi)",
+   "en": "Substitute $A = 3a$ and $B = 4bi$ into the formula to get the final factorized form.",
+   "ur": "حتمی اجزائے ضربی حاصل کرنے کے لیے کلیے میں $A = 3a$ اور $B = 4bi$ درج کریں۔",
+   "check": [
+    "expand((3*a + 4*b*I)*(3*a - 4*b*I)) == 9*a**2 + 16*b**2"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-04"
+}

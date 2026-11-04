@@ -1,0 +1,45 @@
+{
+ "item": "c11-ex1.1-q3",
+ "label": "",
+ "answer_ref": "$\\bar{z} = z \\iff z$ is real",
+ "math": [
+  "\\text{Let } z = a + bi,\\quad \\bar{z} = a - bi",
+  "\\text{Suppose } \\bar{z} = z:\\quad a - bi = a + bi",
+  "0 = (a + bi) - (a - bi) = 2bi \\Rightarrow b = 0",
+  "z = a + 0i = a \\in \\mathbb{R}",
+  "\\text{Conversely, } z = a \\in \\mathbb{R} \\Rightarrow \\bar{z} = a - 0i = a = z",
+  "\\therefore\\ \\bar{z} = z \\iff z \\text{ is real}"
+ ],
+ "why": [
+  {
+   "en": "To prove a property about a general complex number, we start by using its standard algebraic definition $z = a + bi$ and the definition of a complex conjugate. This breaks $z$ into its real part $a$ and imaginary part $b$ so we can work with ordinary real numbers.",
+   "ur": "کسی بھی کمپلیکس نمبر کی خصوصیت ثابت کرنے کے لیے ہم اس کی معیاری تعریف $z = a + bi$ اور کونجوگیٹ کی تعریف سے شروعات کرتے ہیں۔ اس سے $z$ اپنے حقیقی حصے $a$ اور خیالی حصے $b$ میں تقسیم ہو جاتا ہے، جس سے ہم عام حقیقی نمبروں کے ذریعے حل نکال سکتے ہیں۔"
+  },
+  {
+   "en": "Because the question says 'iff' (if and only if), we must prove the statement in two directions; here we start the first direction by assuming $\\bar{z} = z$ is true. Substituting our expressions from Step 1 gives us an equation we can solve to find out what $z$ looks like.",
+   "ur": "چونکہ سوال میں 'iff' (اگر اور صرف اگر) کا لفظ ہے، اس لیے ہمیں اسے دو طرفہ ثابت کرنا ہو گا؛ یہاں ہم پہلی سمت کا آغاز یہ فرض کر کے کرتے ہیں کہ $\\bar{z} = z$ درست ہے۔ پہلے مرحلے کی قیمتیں درج کرنے سے ہمیں ایک مساوات ملتی ہے جسے حل کر کے ہم $z$ کی نوعیت جان سکتے ہیں۔"
+  },
+  {
+   "en": "We rearrange the equation by bringing all terms to one side so we can simplify it using basic algebra. The real parts $a$ cancel out, leaving $2bi = 0$, which tells us that the imaginary part $b$ must be $0$.",
+   "ur": "ہم مساوات کی تمام رقموں کو ایک طرف لے آتے ہیں تاکہ عام الجبرا کی مدد سے اسے مختصر کر سکیں۔ حقیقی حصے $a$ آپس میں کٹ جاتے ہیں اور $2bi = 0$ بچتا ہے، جو ہمیں بتاتا ہے کہ خیالی حصہ $b$ لازمی طور پر $0$ ہے۔"
+  },
+  {
+   "en": "Now we substitute $b = 0$ back into our original definition of $z$ from Step 1. Since the imaginary term disappears completely, we see that $z$ is purely a real number $a$, which completes the first half of our proof.",
+   "ur": "اب ہم $b = 0$ کی قیمت واپس پہلے مرحلے والی $z$ کی اصل تعریف میں درج کرتے ہیں۔ چونکہ خیالی حصہ مکمل طور پر ختم ہو جاتا ہے، اس سے ثابت ہوتا ہے کہ $z$ خالصتاً ایک حقیقی نمبر $a$ ہے، اور یوں ہمارے ثبوت کا پہلا حصہ مکمل ہوتا ہے۔"
+  },
+  {
+   "en": "For the second direction (the converse), we assume $z$ is a real number, meaning its imaginary part is $0$, and apply the conjugate definition. Changing the sign of $0i$ makes no difference, which shows that $\\bar{z}$ comes out equal to $z$.",
+   "ur": "دوسری سمت (برعکس ثبوت) کے لیے، ہم فرض کرتے ہیں کہ $z$ ایک حقیقی نمبر ہے، یعنی اس کا خیالی حصہ $0$ ہے، اور اس پر کونجوگیٹ کی تعریف لاگو کرتے ہیں۔ $0i$ کی علامت بدلنے سے کوئی فرق نہیں پڑتا، جس سے ظاہر ہوتا ہے کہ $\\bar{z}$ بالکل $z$ کے برابر آتا ہے۔"
+  },
+  {
+   "en": "Since we have successfully proved both the forward and reverse directions, we can combine them using the $\\iff$ (if and only if) symbol. This formally completes our required theorem.",
+   "ur": "چونکہ ہم نے سیدھی اور الٹ دونوں سمتوں کو کامیابی سے ثابت کر دیا ہے، اس لیے ہم انہیں $\\iff$ (اگر اور صرف اگر) کی علامت کے ساتھ ملا کر لکھ سکتے ہیں۔ اس سے ہمارا مطلوبہ مسئلہ باضابطہ طور پر مکمل ہو جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This result means that taking the conjugate only changes the sign of the imaginary part, so a complex number remains unchanged ($\\bar{z} = z$) if and only if it has no imaginary part (meaning it is a purely real number). You can easily check this: if $z = a + 0i$, its conjugate is $\\bar{z} = a - 0i$, which is still $a$.",
+  "ur": "اس نتیجے کا مطلب یہ ہے کہ کونجوگیٹ لینے سے صرف خیالی حصے کی علامت بدلتی ہے، اس لیے ایک کمپلیکس نمبر صرف اسی صورت میں تبدیل نہیں ہوتا ($\\bar{z} = z$) جب اس میں کوئی خیالی حصہ موجود نہ ہو (یعنی وہ خالصتاً ایک حقیقی نمبر ہو)۔ آپ اسے باآسانی چیک کر سکتے ہیں: اگر $z = a + 0i$ ہو تو اس کا کونجوگیٹ $\\bar{z} = a - 0i$ ہو گا، جو کہ واپس $a$ ہی بنتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

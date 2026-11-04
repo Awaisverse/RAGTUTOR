@@ -1,0 +1,35 @@
+{
+ "item": "c11-ex1.3-q6",
+ "label": "",
+ "answer_ref": "$P(z) = - 2 z^{3} + 6 z^{2} - 8 z + 24$",
+ "math": [
+  "P(z) = k\\,(z - 3)(z + 2i)(z - 2i) = k(z - 3)(z^2 + 4)",
+  "P(z) = k\\left(z^{3} - 3 z^{2} + 4 z - 12\\right)",
+  "P(1) = k\\left(-10\\right) = 20 \\Rightarrow k = -2",
+  "P(z) = -2\\left(z^{3} - 3 z^{2} + 4 z - 12\\right) = - 2 z^{3} + 6 z^{2} - 8 z + 24"
+ ],
+ "why": [
+  {
+   "en": "By the Factor Theorem, every zero $r$ gives a factor $(z - r)$, and we include a leading constant $k$ because many polynomials can share the exact same zeros. Notice how multiplying the conjugate factors $(z + 2i)(z - 2i)$ neatly eliminates the imaginary $i$ using $i^2 = -1$, leaving us with real numbers in $(z^2 + 4)$.",
+   "ur": "مسئلہ تجزی (Factor Theorem) کے مطابق ہر صفر $r$ سے ایک جزو ضربی $(z - r)$ بنتا ہے، اور ہم ایک مستقل $k$ شامل کرتے ہیں کیونکہ ایک جیسے اصفار رکھنے والے کئی کثیر رقمی ہو سکتے ہیں۔ غور کریں کہ زوج عوامل $(z + 2i)(z - 2i)$ کو ضرب دینے سے $i^2 = -1$ کی وجہ سے خیالی حصہ $i$ ختم ہو جاتا ہے اور ہمیں حقیقی اعداد والا $(z^2 + 4)$ ملتا ہے۔"
+  },
+  {
+   "en": "We expand the remaining brackets to write the polynomial in standard powers of $z$, while keeping $k$ outside. This gives us the general form of our degree 3 polynomial, so only the single unknown $k$ remains to be found.",
+   "ur": "ہم بریکٹوں کو کھولتے ہیں تاکہ کثیر رقمی کو $z$ کی معیاری طاقتوں میں لکھ سکیں، جبکہ $k$ کو باہر ہی رکھتے ہیں۔ اس سے ہمیں درجہ 3 کے کثیر رقمی کی عمومی شکل مل جاتی ہے، اور اب صرف ایک نامعلوم قیمت $k$ معلوم کرنا باقی ہے۔"
+  },
+  {
+   "en": "To find the exact polynomial out of the whole family, we substitute $z = 1$ and set the expression equal to $20$, using the condition given in the question. This turns our polynomial into a simple linear equation that directly gives the value $k = -2$.",
+   "ur": "مطلوبہ کثیر رقمی معلوم کرنے کے لیے ہم سوال میں دی گئی شرط کے مطابق $z = 1$ درج کرتے ہیں اور جملے کو $20$ کے برابر رکھتے ہیں۔ اس سے ہمارا کثیر رقمی ایک سادہ یک درجی مساوات بن جاتا ہے جس سے براہِ راست $k = -2$ کی قیمت نکل آتی ہے۔"
+  },
+  {
+   "en": "Now that we know $k = -2$, we substitute it back into our expanded form and multiply each term by $-2$. This completes the construction and gives the final polynomial in standard form.",
+   "ur": "اب جبکہ ہمیں معلوم ہے کہ $k = -2$ ہے، ہم اسے واپس اپنی پھیلائی ہوئی شکل میں درج کرتے ہیں اور ہر رقم کو $-2$ سے ضرب دیتے ہیں۔ اس سے ہمارا عمل مکمل ہو جاتا ہے اور معیاری شکل میں حتمی کثیر رقمی حاصل ہو جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The polynomial $P(z) = - 2 z^{3} + 6 z^{2} - 8 z + 24$ is the unique cubic polynomial that vanishes at $z = 3, -2i, 2i$ and takes the value $20$ when $z = 1$. You can easily check this by putting $z = 1$ into the final answer: $-2(1)^3 + 6(1)^2 - 8(1) + 24 = 20$, which confirms our work is correct.",
+  "ur": "کثیر رقمی $P(z) = - 2 z^{3} + 6 z^{2} - 8 z + 24$ وہ واحد درجہ 3 کا کثیر رقمی ہے جس کی قیمت $z = 3, -2i, 2i$ پر صفر ہو جاتی ہے اور $z = 1$ پر $20$ بنتی ہے۔ آپ حتمی جواب میں $z = 1$ درج کر کے باآسانی اس کی پڑتال کر سکتے ہیں: $-2(1)^3 + 6(1)^2 - 8(1) + 24 = 20$، جو تصدیق کرتا ہے کہ ہمارا حل بالکل درست ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

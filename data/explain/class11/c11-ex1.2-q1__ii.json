@@ -1,0 +1,60 @@
+{
+ "item": "c11-ex1.2-q1",
+ "label": "ii",
+ "answer_ref": "$x = 9,\\ y = 6$",
+ "math": [
+  "(x + iy)(1 - i) = (2 - 3i)(-5 + 5i)\\left(-\\frac{3}{5}i\\right)",
+  "(x + iy)(1 - i) = x - xi + yi - yi^2 = (x + y) + (y - x)i",
+  "(2 - 3i)(-5 + 5i) = -10 + 10i + 15i - 15i^2 = 5 + 25i",
+  "(5 + 25i)\\left(-\\frac{3}{5}i\\right) = -3i - 15i^2 = 15 - 3i",
+  "x + y = 15 \\quad (1),\\qquad - x + y = -3 \\quad (2)",
+  "x + y = 15 \\quad (1) \\times 1,\\qquad x - y = 3 \\quad (2) \\times (-1)",
+  "2y = 12 \\Rightarrow y = 6",
+  "1x + (1)\\left(6\\right) = 15 \\Rightarrow x = 9",
+  "\\text{Check: } x = 9,\\ y = 6 \\Rightarrow \\text{both sides are equal}"
+ ],
+ "why": [
+  {
+   "en": "We begin by writing down the given equation clearly. Our main goal is to simplify both sides into the standard complex form $a + bi$ so that we can compare them.",
+   "ur": "ہم سب سے پہلے دی گئی مساوات کو واضح طور پر لکھتے ہیں۔ ہمارا اصل مقصد دونوں اطراف کو معیاری کمپلیکس شکل $a + bi$ میں لانا ہے تاکہ ہم ان کا موازنہ کر سکیں۔"
+  },
+  {
+   "en": "We expand the brackets on the left-hand side using ordinary algebra and apply the fundamental rule $i^2 = -1$. Grouping the terms without $i$ and the terms with $i$ separates the left side into its real part $(x + y)$ and imaginary part $(y - x)$.",
+   "ur": "ہم بائیں طرف کی بریکٹس کو عام الجبرا کے تحت کھولتے ہیں اور بنیادی اصول $i^2 = -1$ لگاتے ہیں۔ بغیر $i$ والی اور $i$ والی رقموں کو الگ الگ اکٹھا کرنے سے ہمیں بائیں طرف کا حقیقی حصہ $(x + y)$ اور خیالی حصہ $(y - x)$ مل جاتا ہے۔"
+  },
+  {
+   "en": "Since the right-hand side has three factors, we start by multiplying the first two complex numbers together and again replace $i^2$ with $-1$. This simplifies the product of the first two brackets into a single complex number, $5 + 25i$.",
+   "ur": "چونکہ دائیں طرف تین اجزاء ضرب ہو رہے ہیں، اس لیے ہم پہلے دو کمپلیکس نمبروں کو آپس میں ضرب دیتے ہیں اور دوبارہ $i^2$ کی جگہ $-1$ لگاتے ہیں۔ اس سے پہلی دو بریکٹس کا حاصلِ ضرب سادہ ہو کر ایک کمپلیکس نمبر $5 + 25i$ بن جاتا ہے۔"
+  },
+  {
+   "en": "Now we multiply that result, $5 + 25i$, by the remaining factor $-\\frac{3}{5}i$ and use $i^2 = -1$ once more. This reduces the entire right-hand side into the clean standard form $15 - 3i$.",
+   "ur": "اب ہم اس نتیجے $5 + 25i$ کو باقی ماندہ حصے $-\\frac{3}{5}i$ سے ضرب دیتے ہیں اور ایک بار پھر $i^2 = -1$ کا استعمال کرتے ہیں۔ اس سے پوری دائیں سائیڈ سادہ ہو کر معیاری شکل $15 - 3i$ میں آ جاتی ہے۔"
+  },
+  {
+   "en": "By the definition of equality of complex numbers, two complex numbers are equal only if their real parts are equal and their imaginary parts are equal. Comparing both sides gives us two simple linear equations in $x$ and $y$ to solve.",
+   "ur": "کمپلیکس نمبروں کی برابری کی تعریف کے مطابق، دو کمپلیکس نمبر تبھی برابر ہوتے ہیں جب ان کے حقیقی حصے آپس میں اور خیالی حصے آپس میں برابر ہوں۔ دونوں اطراف کا موازنہ کرنے سے ہمیں $x$ اور $y$ میں دو سادہ یک درجی مساواتیں مل جاتی ہیں۔"
+  },
+  {
+   "en": "To solve these simultaneous equations by elimination, we make the coefficients of $x$ identical by multiplying equation $(2)$ by $-1$. Now both equations start with $x$, making it easy to eliminate this variable in the next step.",
+   "ur": "ان ہم زاد مساواتوں کو اخراج کے طریقے سے حل کرنے کے لیے، ہم مساوات $(2)$ کو $-1$ سے ضرب دے کر $x$ کے عددی سر ایک جیسے بناتے ہیں۔ اب دونوں مساواتیں $x$ سے شروع ہو رہی ہیں، جس سے اگلے مرحلے میں اس متغیر کو ختم کرنا آسان ہو جائے گا۔"
+  },
+  {
+   "en": "Subtracting the second equation from the first eliminates $x$ completely and leaves $2y = 12$. Dividing by $2$ gives us the exact value of our first unknown, $y = 6$.",
+   "ur": "پہلی مساوات میں سے دوسری کو تفریق کرنے سے $x$ مکمل طور پر ختم ہو جاتا ہے اور ہمارے پاس $2y = 12$ بچتا ہے۔ $2$ پر تقسیم کرنے سے ہمیں پہلے نامعلوم متغیر کی قیمت $y = 6$ مل جاتی ہے۔"
+  },
+  {
+   "en": "We substitute the value $y = 6$ back into our first equation, $x + y = 15$. This allows us to easily find the remaining unknown, giving $x = 9$.",
+   "ur": "ہم $y = 6$ کی قیمت کو واپس اپنی پہلی مساوات $x + y = 15$ میں درج کرتے ہیں۔ اس سے ہم باآسانی دوسرے نامعلوم متغیر کی قیمت نکال لیتے ہیں، جو کہ $x = 9$ آتی ہے۔"
+  },
+  {
+   "en": "Finally, substituting $x = 9$ and $y = 6$ back into the original equation confirms that the left-hand side equals the right-hand side. This verifies that our solution is completely accurate.",
+   "ur": "آخر میں، اصل مساوات میں $x = 9$ اور $y = 6$ درج کرنے سے تصدیق ہو جاتی ہے کہ بائیں سائیڈ اور دائیں سائیڈ آپس میں برابر ہیں۔ اس سے ثابت ہوتا ہے کہ ہمارا حل بالکل درست ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $x = 9, y = 6$ gives the exact real numbers needed to make the two complex expressions in the question equal. You can easily verify this by putting $x = 9$ and $y = 6$ into our simplified left-hand side $(x + y) + (y - x)i$, which directly gives $15 - 3i$, matching the simplified right-hand side.",
+  "ur": "آخری جواب $x = 9, y = 6$ وہ حقیقی اعداد ہیں جو سوال میں دیے گئے دونوں کمپلیکس جملوں کو آپس میں برابر بناتے ہیں۔ آپ اس کی تصدیق باآسانی ایسے کر سکتے ہیں کہ $x = 9$ اور $y = 6$ کو ہماری سادہ کی گئی بائیں سائیڈ $(x + y) + (y - x)i$ میں درج کریں، جس سے سیدھا $15 - 3i$ حاصل ہوتا ہے جو کہ دائیں سائیڈ کے بالکل برابر ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

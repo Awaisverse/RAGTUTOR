@@ -1,0 +1,35 @@
+{
+ "item": "c11-ex1.1-q1",
+ "label": "ii",
+ "answer_ref": "$\\left(\\frac{\\sqrt{2}}{7},\\ \\frac{\\sqrt{5}}{7}\\right)$",
+ "math": [
+  "(a, b)^{-1} = \\left(\\frac{a}{a^2 + b^2},\\ \\frac{-b}{a^2 + b^2}\\right)",
+  "a = \\sqrt{2},\\ b = - \\sqrt{5}:\\quad a^2 + b^2 = (\\sqrt{2})^2 + (- \\sqrt{5})^2 = 7",
+  "\\left(\\sqrt{2}, - \\sqrt{5}\\right)^{-1} = \\left(\\frac{\\sqrt{2}}{7},\\ \\frac{\\sqrt{5}}{7}\\right) = \\left(\\frac{\\sqrt{2}}{7},\\ \\frac{\\sqrt{5}}{7}\\right)",
+  "\\text{Check: } (\\sqrt{2} - i\\sqrt{5})(\\frac{\\sqrt{2}}{7} + \\frac{\\sqrt{5}}{7}i) = 1"
+ ],
+ "why": [
+  {
+   "en": "We begin by stating the standard formula for the multiplicative inverse of a complex number written as an ordered pair $(a, b)$. This rule gives us a direct template so we don't have to divide and rationalize from scratch.",
+   "ur": "ہم سب سے پہلے Ordered pair $(a, b)$ کی شکل میں لکھے گئے Complex number کے ضربی معکوس (multiplicative inverse) کا معیاری فارمولا لکھتے ہیں۔ یہ اصول ہمیں ایک سیدھا راستہ فراہم کرتا ہے تاکہ ہمیں شروع سے تقسیم اور rationalize نہ کرنا پڑے۔"
+  },
+  {
+   "en": "By comparing our given pair $(\\sqrt{2}, -\\sqrt{5})$ with $(a, b)$, we identify the real part $a = \\sqrt{2}$ and the imaginary part $b = -\\sqrt{5}$. Calculating the common denominator $a^2 + b^2 = 7$ first makes the final substitution much cleaner and prevents sign errors with the square roots.",
+   "ur": "دیے گئے جوڑے $(\\sqrt{2}, -\\sqrt{5})$ کا $(a, b)$ سے موازنہ کر کے ہم حقیقی حصہ $a = \\sqrt{2}$ اور خیالی حصہ $b = -\\sqrt{5}$ معلوم کرتے ہیں۔ فارمولے کا بٹا $a^2 + b^2 = 7$ پہلے حل کرنے سے اگلا مرحلہ بہت آسان ہو جاتا ہے اور جزر (square roots) کی علامتوں میں غلطی کا امکان نہیں رہتا۔"
+  },
+  {
+   "en": "Now we plug $a = \\sqrt{2}$, $b = -\\sqrt{5}$, and $a^2 + b^2 = 7$ directly into our inverse formula from Step 1. Notice how the negative sign in $-b$ cancels the negative of $-\\sqrt{5}$, giving us the exact coordinates of our required inverse.",
+   "ur": "اب ہم $a = \\sqrt{2}$، $b = -\\sqrt{5}$، اور $a^2 + b^2 = 7$ کی قیمتیں پہلے مرحلے کے فارمولے میں درج کرتے ہیں۔ غور کریں کہ فارمولے کا منفی نشان، $-\\sqrt{5}$ کے منفی کو جمع (positive) بنا دیتا ہے، جس سے ہمیں مطلوبہ معکوس حاصل ہو جاتا ہے۔"
+  },
+  {
+   "en": "By definition, the product of any non-zero complex number and its multiplicative inverse must equal the multiplicative identity, $1$. Multiplying them in standard $a + bi$ form confirms that our result is completely accurate.",
+   "ur": "تعریف کے مطابق، کسی بھی غیر صفر Complex number اور اس کے ضربی معکوس کا حاصل ضرب ہمیشہ ضربی ذاتی عنصر (multiplicative identity) یعنی $1$ کے برابر ہوتا ہے۔ انہیں معیاری شکل $a + bi$ میں ضرب دے کر تصدیق ہو جاتی ہے کہ ہمارا جواب بالکل درست ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $\\left(\\frac{\\sqrt{2}}{7},\\ \\frac{\\sqrt{5}}{7}\\right)$ is the unique complex number which, when multiplied by the given number $(\\sqrt{2}, -\\sqrt{5})$, gives the multiplicative identity $(1, 0)$ or $1$. You can always verify this in exams by multiplying the original number and your answer to see if the imaginary parts cancel out and the real part becomes $1$.",
+  "ur": "آخری جواب $\\left(\\frac{\\sqrt{2}}{7},\\ \\frac{\\sqrt{5}}{7}\\right)$ وہ واحد Complex number ہے جسے دیے گئے نمبر $(\\sqrt{2}, -\\sqrt{5})$ سے ضرب دینے پر جواب ضربی ذاتی عنصر $(1, 0)$ یعنی $1$ آتا ہے۔ امتحان میں آپ ہمیشہ اصل نمبر اور اپنے جواب کو ضرب دے کر تسلی کر سکتے ہیں کہ آیا خیالی حصے ختم ہو کر حقیقی حصہ $1$ بنتا ہے یا نہیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

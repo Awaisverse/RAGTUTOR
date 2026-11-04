@@ -1,0 +1,50 @@
+{
+ "item": "c11-ex1.1-q8",
+ "label": "",
+ "answer_ref": "$n = 2$",
+ "math": [
+  "",
+  "\\frac{1 + i}{1 - i} \\times \\frac{1 + i}{1 + i}",
+  "= \\frac{2i}{1^2 + 1^2} = \\frac{2i}{2}",
+  "= i",
+  "\\left(\\frac{1+i}{1-i}\\right)^{2n} = i^{2n} = (i^2)^n = (-1)^n",
+  "(-1)^n = 1 \\iff n \\text{ is even}",
+  "\\text{least positive } n = 2"
+ ],
+ "why": [
+  {
+   "en": "Before dealing with the unknown power $2n$, it is always best to simplify the complex fraction inside the brackets into the standard form $a + bi$. This will make applying the exponent much easier.",
+   "ur": "نامعلوم طاقت $2n$ کو حل کرنے سے پہلے، بریکٹ کے اندر موجود پیچیدہ کسر کو معیاری شکل $a + bi$ میں مختصر کرنا ہمیشہ بہتر ہوتا ہے۔ اس سے طاقت (exponent) کو حل کرنا بہت آسان ہو جائے گا۔"
+  },
+  {
+   "en": "To remove the imaginary number $i$ from the denominator, we use the rule of rationalization by multiplying both the top and bottom by the conjugate of the denominator, which is $1 + i$. This does not change the value of the fraction, only its form.",
+   "ur": "نصاب (denominator) سے خیالی عدد $i$ کو ختم کرنے کے لیے، ہم ناطق بنانے (rationalization) کا اصول استعمال کرتے ہوئے اوپر اور نیچے نصاب کے زوج (conjugate) یعنی $1 + i$ سے ضرب دیتے ہیں۔ اس سے کسر کی قیمت تبدیل نہیں ہوتی، صرف اس کی شکل بدلتی ہے۔"
+  },
+  {
+   "en": "Here we apply algebraic identities and the fundamental definition $i^2 = -1$ to expand both parts. In the numerator, $1^2 + 2i + i^2$ simplifies to $2i$, while the denominator becomes a simple real number, $2$.",
+   "ur": "یہاں ہم دونوں حصوں کو کھولنے کے لیے الجبری کلیے اور بنیادی تعریف $i^2 = -1$ کا استعمال کرتے ہیں۔ شمار کنندہ (numerator) میں، $1^2 + 2i + i^2$ مختصر ہو کر $2i$ بن جاتا ہے، جبکہ نصاب ایک سادہ حقیقی عدد $2$ بن جاتا ہے۔"
+  },
+  {
+   "en": "Cancelling out the common factor of $2$ from the numerator and denominator leaves us with just $i$. This tells us that the entire complicated fraction inside the bracket is actually just the imaginary unit $i$.",
+   "ur": "شمار کنندہ اور نصاب سے مشترک جزو $2$ کو کاٹنے سے ہمارے پاس صرف $i$ بچتا ہے۔ یہ ہمیں بتاتا ہے کہ بریکٹ کے اندر موجود پوری پیچیدہ کسر دراصل صرف خیالی اکائی $i$ کے برابر ہے۔"
+  },
+  {
+   "en": "Now we substitute our simplified value $i$ back into the original expression and use the power of a power rule to write $i^{2n}$ as $(i^2)^n$. Since $i^2 = -1$, the entire left-hand side of our equation reduces nicely to $(-1)^n$.",
+   "ur": "اب ہم اپنی مختصر کردہ قیمت $i$ کو واپس اصل عبارت میں درج کرتے ہیں اور قوت نما کے اصول کا استعمال کرتے ہوئے $i^{2n}$ کو $(i^2)^n$ لکھتے ہیں۔ چونکہ $i^2 = -1$ ہوتا ہے، اس لیے ہماری مساوات کی پوری بائیں جانب خوبصورتی سے مختصر ہو کر $(-1)^n$ رہ جاتی ہے۔"
+  },
+  {
+   "en": "Our original equation now simply asks when $(-1)^n = 1$. By the rules of exponents for negative numbers, a negative one raised to a power gives a positive $1$ if and only if the power $n$ is an even integer.",
+   "ur": "ہماری اصل مساوات اب سادہ الفاظ میں یہ پوچھ رہی ہے کہ $(-1)^n = 1$ کب ہوتا ہے۔ منفی اعداد کے قوت نما کے اصولوں کے مطابق، $-1$ کی طاقت صرف اور صرف اس وقت مثبت $1$ جواب دیتی ہے جب طاقت $n$ ایک جفت عدد (even integer) ہو۔"
+  },
+  {
+   "en": "The question specifically asks for the 'least positive' value of $n$. Looking at the positive even numbers, the very smallest one is $2$, which gives us our final required answer.",
+   "ur": "سوال میں خاص طور پر $n$ کی 'سب سے چھوٹی مثبت' قیمت پوچھی گئی ہے۔ مثبت جفت اعداد کو دیکھیں تو سب سے چھوٹا عدد $2$ ہے، جو ہمیں ہمارا مطلوبہ حتمی جواب دیتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $n = 2$ means that $2$ is the smallest positive integer that satisfies the given complex equation. We can easily check this by putting $n = 2$ into the simplified form $i^{2n}$, which gives $i^{2(2)} = i^4 = (i^2)^2 = (-1)^2 = 1$, confirming our answer is correct.",
+  "ur": "حتمی جواب $n = 2$ کا مطلب ہے کہ $2$ وہ سب سے چھوٹا مثبت صحیح عدد ہے جو دی گئی مختلط مساوات کو درست ثابت کرتا ہے۔ ہم مختصر کردہ شکل $i^{2n}$ میں $n = 2$ درج کر کے باآسانی اس کی پڑتال کر سکتے ہیں، جس سے $i^{2(2)} = i^4 = (i^2)^2 = (-1)^2 = 1$ حاصل ہوتا ہے، جو تصدیق کرتا ہے کہ ہمارا جواب بالکل درست ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

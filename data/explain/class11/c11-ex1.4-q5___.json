@@ -1,0 +1,45 @@
+{
+ "item": "c11-ex1.4-q5",
+ "label": "",
+ "answer_ref": "proved: the product is $4^n = 2^{2n}$",
+ "math": [
+  "\\omega = \\frac{-1 + \\sqrt{3}i}{2},\\quad \\omega^3 = 1,\\quad 1 + \\omega + \\omega^2 = 0",
+  "1 - \\omega + \\omega^2 = (1 + \\omega^2) - \\omega = -\\omega - \\omega = -2\\omega",
+  "1 - \\omega^2 + \\omega^4 = 1 - \\omega^2 + \\omega = -2\\omega^2",
+  "1 - \\omega^4 + \\omega^8 = 1 - \\omega + \\omega^2 = -2\\omega",
+  "(-2\\omega)(-2\\omega^2) = 4\\omega^3 = 4",
+  "2n \\text{ factors} = n \\text{ pairs} \\Rightarrow 4^n = (2^2)^n = 2^{2n}"
+ ],
+ "why": [
+  {
+   "en": "Whenever we see $\\omega$ in a question, we first write down the fundamental properties of the cube roots of unity: $\\omega^3 = 1$ and $1 + \\omega + \\omega^2 = 0$. These rules are the tools that will help us reduce large powers of $\\omega$ and simplify the brackets.",
+   "ur": "جب بھی سوال میں $\\omega$ آئے، ہم سب سے پہلے اکائی کے جزر المکعب (cube roots of unity) کی بنیادی خصوصیات $\\omega^3 = 1$ اور $1 + \\omega + \\omega^2 = 0$ لکھتے ہیں۔ یہی اصول بڑی طاقتوں کو چھوٹا کرنے اور بریکٹوں کو مختصر کرنے میں ہماری مدد کریں گے۔"
+  },
+  {
+   "en": "We group the positive terms in the first factor to use the sum property $1 + \\omega + \\omega^2 = 0$, which gives $1 + \\omega^2 = -\\omega$. This simplifies the entire three-term bracket into a single neat term, $-2\\omega$.",
+   "ur": "ہم پہلی بریکٹ کی مثبت رقموں کو اکٹھا کرتے ہیں تاکہ $1 + \\omega + \\omega^2 = 0$ کے اصول سے $1 + \\omega^2 = -\\omega$ درج کر سکیں۔ اس سے تین رقموں والی پوری بریکٹ سمٹ کر ایک سادہ رقم $-2\\omega$ بن جاتی ہے۔"
+  },
+  {
+   "en": "In the second factor, we first reduce the higher power $\\omega^4$ to $\\omega$ using $\\omega^3 = 1$, and then apply the sum property $1 + \\omega = -\\omega^2$. This simplifies the second bracket into a single term, $-2\\omega^2$.",
+   "ur": "دوسری بریکٹ میں ہم پہلے $\\omega^3 = 1$ کی مدد سے بڑی طاقت $\\omega^4$ کو کم کر کے $\\omega$ بناتے ہیں، اور پھر $1 + \\omega = -\\omega^2$ کا اصول لگاتے ہیں۔ اس طرح دوسری بریکٹ بھی مختصر ہو کر صرف $-2\\omega^2$ رہ جاتی ہے۔"
+  },
+  {
+   "en": "We reduce $\\omega^4$ and $\\omega^8$ using powers of $\\omega^3 = 1$ to see what happens to the third factor. Finding that it becomes $-2\\omega$ again reveals a clear pattern: the factors simply alternate between $-2\\omega$ and $-2\\omega^2$.",
+   "ur": "تیسری بریکٹ کا حال دیکھنے کے لیے ہم $\\omega^3 = 1$ کی مدد سے $\\omega^4$ اور $\\omega^8$ کی طاقتیں کم کرتے ہیں۔ جواب دوبارہ $-2\\omega$ آنے سے ہمیں ایک واضح ترتیب مل جاتی ہے کہ بریکٹیں باری باری $-2\\omega$ اور $-2\\omega^2$ بن رہی ہیں۔"
+  },
+  {
+   "en": "Since the two values alternate, we multiply one pair of consecutive factors together and use $\\omega^3 = 1$. This is a very helpful step because the $\\omega$ terms cancel out completely, leaving a simple number $4$ for every pair.",
+   "ur": "چونکہ یہ دو قیمتیں باری باری آ رہی ہیں، اس لیے ہم دو لگاتار بریکٹوں کا ایک جوڑا بنا کر انہیں ضرب دیتے ہیں اور $\\omega^3 = 1$ استعمال کرتے ہیں۔ یہ قدم بہت مفید ہے کیونکہ اس سے $\\omega$ بالکل ختم ہو جاتا ہے اور ہر جوڑے کا جواب ایک سادہ عدد $4$ آتا ہے۔"
+  },
+  {
+   "en": "The question has $2n$ factors in total, which means we have exactly $n$ pairs of $4$ multiplying together, giving $4^n$. Writing $4$ as $2^2$ and using the power of a power rule brings us directly to the required right-hand side, $2^{2n}$.",
+   "ur": "سوال میں کل $2n$ بریکٹیں ہیں، جس کا مطلب ہے کہ ہمارے پاس $4$ کے ٹھیک $n$ جوڑے آپس میں ضرب کھا رہے ہیں، جس سے $4^n$ بنتا ہے۔ $4$ کو $2^2$ لکھنے اور طاقت کے قانون کو استعمال کرنے سے ہمیں سیدھا مطلوبہ دائیں سائیڈ $2^{2n}$ مل جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This proves that no matter how many pairs of factors ($n$) we take in this complex expression, the imaginary parts completely disappear and the product is always a real number equal to $2^{2n}$. You can easily check this for $n = 1$ (which means $2(1) = 2$ factors): the product of the first two factors is $4$, which matches $2^{2(1)} = 2^2 = 4$.",
+  "ur": "اس سے ثابت ہوتا ہے کہ اس پیچیدہ جملے میں ہم بریکٹوں کے جتنے بھی جوڑے ($n$) لے لیں، خیالی حصے ($\\omega$) مکمل طور پر ختم ہو جاتے ہیں اور حاصل ضرب ہمیشہ ایک حقیقی عدد $2^{2n}$ آتا ہے۔ آپ $n = 1$ (یعنی $2(1) = 2$ بریکٹوں) کے لیے اس کی آسانی سے پڑتال کر سکتے ہیں: پہلی دو بریکٹوں کا حاصل ضرب $4$ ہے، جو کہ فارمولے $2^{2(1)} = 2^2 = 4$ کے بالکل برابر ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

@@ -1,0 +1,57 @@
+{
+ "item": "c11-ex1.3-q1",
+ "label": "v",
+ "answer_ref": "$(z - i)(z - i)$",
+ "steps": [
+  {
+   "math": "z^2 - 2iz - 1",
+   "en": "We are given the quadratic expression $z^2 - 2iz - 1$ and we need to factorize it into linear factors over the complex numbers.",
+   "ur": "ہمیں دو درجی جملہ $z^2 - 2iz - 1$ دیا گیا ہے اور ہمیں مختلط اعداد میں اس کی یک درجی اجزائے ضربی میں تجزی کرنی ہے۔"
+  },
+  {
+   "math": "i^2 = -1",
+   "en": "Notice the middle term $-2iz$ contains the imaginary unit $i$. To form a complete square, we use the fundamental property of complex numbers that $-1 = i^2$.",
+   "ur": "غور کریں کہ درمیانی رقم $-2iz$ میں خیالی اکائی $i$ موجود ہے۔ مکمل مربع بنانے کے لیے، ہم مختلط اعداد کی بنیادی خاصیت $-1 = i^2$ استعمال کرتے ہیں۔",
+   "check": [
+    "I**2 == -1"
+   ]
+  },
+  {
+   "math": "z^2 - 2iz - 1 = z^2 - 2(z)(i) + i^2",
+   "en": "Replace the constant term $-1$ with $+i^2$ in the given expression.",
+   "ur": "دیے گئے جملے میں مستقل رقم $-1$ کی جگہ $+i^2$ درج کریں۔",
+   "check": [
+    "z**2 - 2*I*z - 1 == z**2 - 2*z*I + I**2"
+   ]
+  },
+  {
+   "math": "a^2 - 2ab + b^2 = (a - b)^2",
+   "en": "Now, compare the expression with the standard algebraic identity for the square of a difference, where $a = z$ and $b = i$.",
+   "ur": "اب، اس جملے کا موازنہ فرق کے مربع کی معیاری الجبری اکائی سے کریں، جہاں $a = z$ اور $b = i$ ہے۔",
+   "check": [
+    "expand((a - b)**2) == a**2 - 2*a*b + b**2"
+   ]
+  },
+  {
+   "math": "z^2 - 2(z)(i) + i^2 = (z - i)^2",
+   "en": "Applying the identity, we can write the three terms as a single squared binomial $(z - i)^2$.",
+   "ur": "فارمولا لاگو کرتے ہوئے، ہم ان تینوں رقموں کو ایک مکمل مربع $(z - i)^2$ کے طور پر لکھ سکتے ہیں۔",
+   "check": [
+    "expand((z - I)**2) == z**2 - 2*z*I + I**2"
+   ]
+  },
+  {
+   "math": "(z - i)^2 = (z - i)(z - i)",
+   "en": "Finally, write the squared factor as a product of two identical linear factors to get the final answer.",
+   "ur": "آخر میں، حتمی جواب حاصل کرنے کے لیے مربع کو دو یکساں یک درجی اجزائے ضربی کے حاصل ضرب کے طور پر لکھیں۔",
+   "check": [
+    "expand((z - I)*(z - I)) == z**2 - 2*I*z - 1",
+    "I**2 == -1",
+    "expand((z - I)**2) == z**2 - 2*I*z - 1"
+   ]
+  }
+ ],
+ "keeps_drawing": false,
+ "source": "gemini-4-argon via Vertex AI, verified by sympy",
+ "made": "2026-11-04"
+}

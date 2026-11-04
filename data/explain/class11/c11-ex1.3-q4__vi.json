@@ -1,0 +1,45 @@
+{
+ "item": "c11-ex1.3-q4",
+ "label": "vi",
+ "answer_ref": "$z = \\frac{5}{6} \\pm \\frac{\\sqrt{59}}{6}i$",
+ "math": [
+  "3 z^{2} - 5 z + 7 = 0 \\Rightarrow z^2 - \\frac{5}{3}z + \\frac{7}{3} = 0",
+  "z^2 - \\frac{5}{3}z = - \\frac{7}{3}",
+  "z^2 - 2\\left(\\frac{5}{6}\\right)z + \\left(\\frac{5}{6}\\right)^2 = - \\frac{7}{3} + \\left(\\frac{5}{6}\\right)^2",
+  "\\left(z - \\frac{5}{6}\\right)^2 = - \\frac{59}{36}",
+  "z - \\frac{5}{6} = \\pm\\sqrt{- \\frac{59}{36}} = \\pm \\frac{\\sqrt{59}}{6}i",
+  "z = \\frac{5}{6} \\pm \\frac{\\sqrt{59}}{6}i"
+ ],
+ "why": [
+  {
+   "en": "In the completing the square method, our first rule is to make the coefficient of $z^2$ equal to $1$. Dividing every term by $3$ prepares the equation so we can easily apply the standard square formula.",
+   "ur": "تکمیلِ مربع (completing the square) کے طریقے میں ہمارا پہلا اصول یہ ہے کہ $z^2$ کا عددی سر $1$ بنایا جائے۔ ہر رقم کو $3$ پر تقسیم کرنے سے مساوات اس قابل ہو جاتی ہے کہ ہم اس پر آسانی سے مربع کا فارمولا لگا سکیں۔"
+  },
+  {
+   "en": "We isolate the variable terms containing $z^2$ and $z$ on the left side by shifting the constant $\\frac{7}{3}$ to the right. This clears the way on the left side to build a complete square.",
+   "ur": "ہم مستقل رقم $\\frac{7}{3}$ کو دائیں طرف منتقل کر کے $z^2$ اور $z$ والی رقوم کو بائیں طرف الگ کر لیتے ہیں۔ اس سے بائیں جانب ایک مکمل مربع بنانے کے لیے جگہ صاف ہو جاتی ہے۔"
+  },
+  {
+   "en": "To complete the square using the algebraic identity $(a - b)^2 = a^2 - 2ab + b^2$, we find half of the coefficient of $z$, which gives $\\frac{5}{6}$, and add its square to both sides. Adding $\\left(\\frac{5}{6}\\right)^2$ to both sides keeps the equation balanced while turning the left side into a perfect square.",
+   "ur": "الجبری کلیہ $(a - b)^2 = a^2 - 2ab + b^2$ کے تحت مربع مکمل کرنے کے لیے ہم $z$ کے عددی سر کا نصف لیتے ہیں جو کہ $\\frac{5}{6}$ بنتا ہے، اور اس کا مربع دونوں طرف جمع کرتے ہیں۔ دونوں اطراف میں $\\left(\\frac{5}{6}\\right)^2$ جمع کرنے سے مساوات کا توازن برقرار رہتا ہے اور بائیں سائیڈ ایک مکمل مربع بن جاتی ہے۔"
+  },
+  {
+   "en": "We now fold the left side into the compact binomial square $\\left(z - \\frac{5}{6}\\right)^2$ and simplify the fractions on the right side to get $-\\frac{59}{36}$. Having $z$ inside a single squared term allows us to solve for it directly by taking the square root.",
+   "ur": "اب ہم بائیں طرف کو سمیٹ کر مکمل مربع $\\left(z - \\frac{5}{6}\\right)^2$ کی شکل میں لکھتے ہیں اور دائیں طرف کی کسروں کو حل کر کے $-\\frac{59}{36}$ حاصل کرتے ہیں۔ $z$ کے ایک ہی مربع والی رقم میں آ جانے سے اب ہم براہِ راست جذر لے کر اس کی قیمت نکال سکتے ہیں۔"
+  },
+  {
+   "en": "We take the square root on both sides to undo the square, remembering to write $\\pm$ for both possible roots. Because the number inside the root is negative, we use the definition of the imaginary unit $i = \\sqrt{-1}$ to rewrite $\\sqrt{-\\frac{59}{36}}$ as $\\frac{\\sqrt{59}}{6}i$.",
+   "ur": "مربع کو ختم کرنے کے لیے ہم دونوں طرف جذر لیتے ہیں اور دونوں ممکنہ جذروں کے لیے $\\pm$ کی علامت لگاتے ہیں۔ چونکہ جذر کے اندر منفی عدد ہے، اس لیے ہم خیالی اکائی کی تعریف $i = \\sqrt{-1}$ استعمال کرتے ہوئے $\\sqrt{-\\frac{59}{36}}$ کو $\\frac{\\sqrt{59}}{6}i$ لکھتے ہیں۔"
+  },
+  {
+   "en": "Finally, we isolate $z$ completely by moving $-\\frac{5}{6}$ to the right side, where it becomes $+\\frac{5}{6}$. This gives us the final roots in the standard complex form $a + bi$.",
+   "ur": "آخر میں، ہم $-\\frac{5}{6}$ کو دائیں طرف لے جا کر $+\\frac{5}{6}$ بنا دیتے ہیں جس سے $z$ بالکل الگ ہو جاتا ہے۔ یوں ہمیں معیاری مخلوط شکل $a + bi$ میں مساوات کے حتمی جذر مل جاتے ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $z = \\frac{5}{6} \\pm \\frac{\\sqrt{59}}{6}i$ gives the two complex conjugate roots that satisfy the quadratic equation $3z^2 - 5z + 7 = 0$. Since the square was equal to a negative number $-\\frac{59}{36}$, the equation has no real roots, only these two complex ones; you can check them by substituting either value back into $3z^2 - 5z + 7$ to see that it simplifies to $0$.",
+  "ur": "حتمی جواب $z = \\frac{5}{6} \\pm \\frac{\\sqrt{59}}{6}i$ ہمیں وہ دو زوجی مخلوط جذر (complex conjugate roots) دیتا ہے جو دو درجی مساوات $3z^2 - 5z + 7 = 0$ کو درست ثابت کرتے ہیں۔ چونکہ مربع ایک منفی عدد $-\\frac{59}{36}$ کے برابر آیا تھا، اس لیے اس مساوات کا کوئی حقیقی حل نہیں ہے بلکہ صرف یہی دو مخلوط حل ہیں؛ آپ ان میں سے کوئی بھی قیمت واپس $3z^2 - 5z + 7$ میں درج کر کے پڑتال کر سکتے ہیں کہ جواب $0$ آتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

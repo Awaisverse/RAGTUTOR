@@ -1,0 +1,30 @@
+{
+ "item": "c11-ex1.4-q9",
+ "label": "",
+ "answer_ref": "proved: the fraction equals $\\omega$",
+ "math": [
+  "\\omega^{12} = 1,\\ \\omega^{17} = \\omega^2,\\ \\omega^{19} = \\omega;\\quad \\omega^{14} = \\omega^2,\\ \\omega^{22} = \\omega,\\ \\omega^{30} = 1",
+  "\\frac{a + b\\omega^2 + c\\omega}{a\\omega^2 + b\\omega + c}",
+  "= \\frac{\\omega\\left(a\\omega^2 + b\\omega + c\\right)}{a\\omega^2 + b\\omega + c} = \\omega"
+ ],
+ "why": [
+  {
+   "en": "Since $\\omega$ is a cube root of unity, we use its fundamental property $\\omega^3 = 1$ to break down all the large exponents. This replaces the high powers with simply $1$, $\\omega$, or $\\omega^2$, making the terms much easier to compare.",
+   "ur": "چونکہ $\\omega$ اکائی کا جزر المکعب ہے، ہم اس کی بنیادی خصوصیت $\\omega^3 = 1$ کو استعمال کرتے ہوئے تمام بڑی طاقتوں کو مختصر کرتے ہیں۔ اس سے بڑی طاقتیں صرف $1$، $\\omega$ یا $\\omega^2$ میں بدل جاتی ہیں، جس سے رقموں کا موازنہ کرنا بہت آسان ہو جاتا ہے۔"
+  },
+  {
+   "en": "We now substitute these simplified powers back into the original fraction. This clears away the complicated exponents so we can clearly see the relationship between the numerator and the denominator.",
+   "ur": "اب ہم ان مختصر کی گئی طاقتوں کو اصل کسر میں درج کرتے ہیں۔ اس سے پیچیدہ طاقتیں ختم ہو جاتی ہیں اور ہم شمار کنندہ اور مخرج کے درمیان تعلق کو واضح طور پر دیکھ سکتے ہیں۔"
+  },
+  {
+   "en": "To make the numerator and denominator match for cancellation, we use $\\omega^3 = 1$ to rewrite $a$ as $a\\omega^3$ and factor out $\\omega$ from the numerator. This reveals an identical expression in both the top and bottom, which cancels out completely to leave just $\\omega$.",
+   "ur": "شمار کنندہ اور مخرج کو ایک جیسا بنا کر کاٹنے کے لیے، ہم $\\omega^3 = 1$ کی مدد سے $a$ کو $a\\omega^3$ لکھتے ہیں اور شمار کنندہ میں سے $\\omega$ کو مشترک (کامن) لے لیتے ہیں۔ اس سے اوپر اور نیچے ایک جیسا جملہ بن جاتا ہے جو آپس میں کٹ کر صرف $\\omega$ باقی چھوڑ دیتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This proves that no matter what values $a$, $b$, and $c$ have, the entire complex fraction always simplifies to the single cube root of unity, $\\omega$. You can easily check this by setting $b = 0$ and $c = 0$, which reduces the original fraction to $\\frac{a\\omega^{12}}{a\\omega^{14}} = \\frac{1}{\\omega^2} = \\omega$.",
+  "ur": "اس سے ثابت ہوتا ہے کہ $a$، $b$ اور $c$ کی قیمتیں کچھ بھی ہوں، یہ پوری پیچیدہ کسر ہمیشہ مختصر ہو کر اکائی کے جزر المکعب $\\omega$ کے برابر آتی ہے۔ آپ اس کی باآسانی پڑتال کرنے کے لیے $b = 0$ اور $c = 0$ رکھ سکتے ہیں، جس سے اصل کسر مختصر ہو کر $\\frac{a\\omega^{12}}{a\\omega^{14}} = \\frac{1}{\\omega^2} = \\omega$ بن جاتی ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

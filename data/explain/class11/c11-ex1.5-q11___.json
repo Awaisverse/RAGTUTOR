@@ -1,0 +1,40 @@
+{
+ "item": "c11-ex1.5-q11",
+ "label": "",
+ "answer_ref": "proved: $x^2 + y^2 - 4x + 2y - 5 = 0$",
+ "math": [
+  "\\bar{z} - 1 + 2i = (x - 1) + i(2 - y),\\quad \\bar{z} + 1 - 2i = (x + 1) - i(y + 2)",
+  "\\frac{(x - 1) + i(2 - y)}{(x + 1) - i(y + 2)} \\times \\frac{(x + 1) + i(y + 2)}{(x + 1) + i(y + 2)}",
+  "= \\frac{(x^2 + y^2 - 5) + i(4x - 2y)}{(x + 1)^2 + (y + 2)^2}",
+  "\\frac{9\\pi}{4} = 2\\pi + \\frac{\\pi}{4} \\Rightarrow \\tan\\frac{\\pi}{4} = 1 = \\frac{4x - 2y}{x^2 + y^2 - 5}",
+  "x^2 + y^2 - 5 = 4x - 2y \\Rightarrow x^2 + y^2 - 4x + 2y - 5 = 0"
+ ],
+ "why": [
+  {
+   "en": "By the definition of a complex conjugate, if $z = x + iy$, then $\\bar{z} = x - iy$. Substituting this allows us to group the real parts and the imaginary parts separately in both the numerator and the denominator.",
+   "ur": "مختلط مرافق (complex conjugate) کی تعریف کے مطابق، اگر $z = x + iy$ ہو تو $\\bar{z} = x - iy$ ہوتا ہے۔ یہ قیمت درج کرنے سے ہم شمار کنندہ اور مخرج دونوں میں حقیقی اور خیالی حصوں کو الگ الگ یکجا کر سکتے ہیں۔"
+  },
+  {
+   "en": "To find the argument of a complex fraction, we must first write it in the standard form $a + ib$ by rationalizing the denominator. Multiplying the top and bottom by the conjugate of the denominator removes $i$ from the bottom.",
+   "ur": "کسی مختلط کسر کا آرگومنٹ معلوم کرنے کے لیے، ہمیں پہلے مخرج کو ناطق (rationalize) بنا کر اسے معیاری شکل $a + ib$ میں لکھنا ہوتا ہے۔ اوپر اور نیچے مخرج کے مرافق سے ضرب دینے سے نچلے حصے سے $i$ ختم ہو جاتا ہے۔"
+  },
+  {
+   "en": "Using the distributive law and the fact that $i^2 = -1$, we expand the brackets and simplify. This clearly separates our fraction into a purely real part, $\\frac{x^2 + y^2 - 5}{(x + 1)^2 + (y + 2)^2}$, and an imaginary part, $\\frac{4x - 2y}{(x + 1)^2 + (y + 2)^2}$.",
+   "ur": "تقسیمی قانون اور $i^2 = -1$ کے اصول کو استعمال کرتے ہوئے، ہم بریکٹوں کو کھولتے اور مختصر کرتے ہیں۔ یہ عمل ہماری کسر کو واضح طور پر ایک خالص حقیقی حصے اور ایک خیالی حصے میں الگ کر دیتا ہے۔"
+  },
+  {
+   "en": "Since a full rotation of $2\\pi$ brings us back to the same angle, $\\frac{9\\pi}{4}$ represents the same direction as $\\frac{\\pi}{4}$. Now we apply the definition of the argument, $\\tan\\theta = \\frac{\\text{Imaginary part}}{\\text{Real part}}$, where the common denominator cancels out nicely.",
+   "ur": "چونکہ $2\\pi$ کا ایک مکمل چکر ہمیں واپس اسی زاویے پر لے آتا ہے، اس لیے $\\frac{9\\pi}{4}$ وہی سمت ظاہر کرتا ہے جو $\\frac{\\pi}{4}$ کی ہے۔ اب ہم آرگومنٹ کی تعریف $\\tan\\theta = \\frac{\\text{Imaginary part}}{\\text{Real part}}$ استعمال کرتے ہیں، جہاں یکساں مخرج آپس میں کٹ جاتا ہے۔"
+  },
+  {
+   "en": "Cross-multiplying and moving all terms to one side puts the equation into the required standard form. This completes our proof and gives the final algebraic relationship between $x$ and $y$.",
+   "ur": "چلیپائی ضرب (cross-multiply) دے کر اور تمام رقموں کو ایک طرف منتقل کرنے سے مساوات مطلوبہ معیاری شکل میں آ جاتی ہے۔ اس سے ہمارا ثبوت مکمل ہوتا ہے اور $x$ اور $y$ کے درمیان حتمی الجبرائی تعلق حاصل ہو جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This final equation shows that any complex number $z = x + iy$ satisfying the given angle condition must lie on the circle represented by $x^2 + y^2 - 4x + 2y - 5 = 0$. This connects the geometry of complex angles directly to the algebraic equation of a circle.",
+  "ur": "یہ حتمی مساوات ظاہر کرتی ہے کہ کوئی بھی مختلط عدد $z = x + iy$ جو دی گئی زاویے کی شرط کو پورا کرتا ہے، وہ لازمی طور پر مساوات $x^2 + y^2 - 4x + 2y - 5 = 0$ سے ظاہر ہونے والے دائرے پر واقع ہوگا۔ یہ مختلط زاویوں کی جیومیٹری کو براہِ راست دائرے کی الجبرائی مساوات سے جوڑتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

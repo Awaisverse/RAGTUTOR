@@ -1,0 +1,45 @@
+{
+ "item": "c11-ex1.5-q19",
+ "label": "",
+ "answer_ref": "$I = 2 + 14i$ A $= 10\\sqrt{2}(\\cos\\theta + i\\sin\\theta)$, $\\theta = \\tan^{-1}7 \\approx 81.87^\\circ$",
+ "math": [
+  "I = \\frac{V}{Z} = \\frac{90 + 30i}{3 - 6i}",
+  "\\frac{90 + 30i}{3 - 6i} \\times \\frac{3 + 6i}{3 + 6i}",
+  "= \\frac{90 + 630i}{3^2 + 6^2} = \\frac{90 + 630i}{45}",
+  "= 2 + 14i",
+  "|I| = \\sqrt{2^2 + 14^2} = \\sqrt{200} = 10\\sqrt{2},\\quad \\theta = \\tan^{-1}\\frac{14}{2} = \\tan^{-1}7 \\approx 81.87^\\circ",
+  "I = 2 + 14i = 10\\sqrt{2}\\left(\\cos\\theta + i\\sin\\theta\\right),\\ \\theta = \\tan^{-1}7 \\approx 81.87^\\circ \\ \\text{A}"
+ ],
+ "why": [
+  {
+   "en": "To find the current in an AC circuit, we apply Ohm's law for complex numbers, which states that current is voltage divided by impedance ($I = \\frac{V}{Z}$). Substituting the given values sets up the division of two complex numbers that we need to simplify.",
+   "ur": "اے سی سرکٹ میں کرنٹ معلوم کرنے کے لیے ہم کمپلیکس نمبرز کے لیے اوہم کا قانون استعمال کرتے ہیں، جس کے مطابق کرنٹ وولٹیج اور امپیڈینس کی تقسیم کے برابر ہوتا ہے ($I = \\frac{V}{Z}$)۔ دی گئی قیمتیں درج کرنے سے ہمیں دو کمپلیکس نمبرز کی تقسیم حاصل ہوتی ہے جسے ہم نے مختصر کرنا ہے۔"
+  },
+  {
+   "en": "We cannot leave $i$ in the denominator when writing a complex number in standard rectangular form. Multiplying both the top and bottom by the complex conjugate of the denominator, $3 + 6i$, will turn the denominator into a purely real number without changing the value of the fraction.",
+   "ur": "معیاری ریکٹینگولر فارم میں لکھتے وقت ہم مخرج (denominator) میں $i$ نہیں چھوڑ سکتے۔ شمار کنندہ اور مخرج دونوں کو مخرج کے کاجوگیٹ $3 + 6i$ سے ضرب دینے سے مخرج ایک حقیقی عدد بن جائے گا اور کسر کی قیمت بھی تبدیل نہیں ہوگی۔"
+  },
+  {
+   "en": "Using the algebraic identity $(a-bi)(a+bi) = a^2 + b^2$, the denominator becomes a simple real number, $45$. At the same time, expanding the numerator and replacing $i^2$ with $-1$ combines all the top terms into a single complex number, $90 + 630i$.",
+   "ur": "الجبرے کے کلیے $(a-bi)(a+bi) = a^2 + b^2$ کو استعمال کرتے ہوئے مخرج ایک سادہ حقیقی عدد $45$ بن جاتا ہے۔ اسی طرح، شمار کنندہ کو ضرب دے کر اور $i^2$ کی جگہ $-1$ لگا کر اوپر والی تمام رقمیں ایک کمپلیکس نمبر $90 + 630i$ میں جمع ہو جاتی ہیں۔"
+  },
+  {
+   "en": "Dividing both the real part ($90$) and the imaginary part ($630$) separately by the real denominator ($45$) splits the fraction into the standard $a + bi$ form. This gives us the exact current in rectangular form, $2 + 14i$, which completes the first half of the question.",
+   "ur": "حقیقی حصے ($90$) اور خیالی حصے ($630$) کو الگ الگ حقیقی مخرج ($45$) پر تقسیم کرنے سے کسر معیاری شکل $a + bi$ میں تبدیل ہو جاتی ہے۔ اس سے ہمیں ریکٹینگولر فارم میں کرنٹ $2 + 14i$ حاصل ہوتا ہے، جس سے سوال کا پہلا حصہ مکمل ہو جاتا ہے۔"
+  },
+  {
+   "en": "To convert the rectangular form $2 + 14i$ into polar form, we must find its distance from the origin (modulus $|I| = 10\\sqrt{2}$) and its angle with the positive real axis (argument $\\theta$). Since both $2$ and $14$ are positive, the complex number lies in the first quadrant, so the angle is simply $\\tan^{-1}(7) \\approx 81.87^\\circ$.",
+   "ur": "ریکٹینگولر فارم $2 + 14i$ کو پولر فارم میں تبدیل کرنے کے لیے ہمیں مبدا (origin) سے اس کا فاصلہ (ماڈولس $|I| = 10\\sqrt{2}$) اور مثبت حقیقی محور کے ساتھ اس کا زاویہ (آرگومنٹ $\\theta$) معلوم کرنا ہوگا۔ چونکہ $2$ اور $14$ دونوں مثبت ہیں، اس لیے یہ کمپلیکس نمبر پہلے ربغ (quadrant I) میں واقع ہے، لہٰذا زاویہ سیدھا $\\tan^{-1}(7) \\approx 81.87^\\circ$ بنتا ہے۔"
+  },
+  {
+   "en": "Finally, we substitute the modulus $10\\sqrt{2}$ and the angle $\\theta$ into the standard polar formula $r(\\cos\\theta + i\\sin\\theta)$. Writing both results together with the unit Amperes (A) presents the complete answer clearly as requested.",
+   "ur": "آخر میں، ہم ماڈولس $10\\sqrt{2}$ اور زاویہ $\\theta$ کو معیاری پولر فارمولے $r(\\cos\\theta + i\\sin\\theta)$ میں درج کرتے ہیں۔ دونوں نتائج کو ایمپیئر (A) کی اکائی کے ساتھ ملا کر لکھنے سے سوال کے مطابق مکمل جواب واضح طور پر سامنے آ جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer shows that the current flowing through the AC circuit is $2 + 14i$ Amperes in rectangular form, and $10\\sqrt{2}(\\cos\\theta + i\\sin\\theta)$ Amperes in polar form (where $\\theta \\approx 81.87^\\circ$). Physically, the polar form tells us that the peak magnitude of the current is $10\\sqrt{2}$ A and its phase angle is about $81.87^\\circ$. You can easily check this result by multiplying the rectangular current $2 + 14i$ by the impedance $3 - 6i$ to see that it gives back the original voltage $90 + 30i$.",
+  "ur": "حتمی جواب یہ ظاہر کرتا ہے کہ اے سی سرکٹ میں بہنے والا کرنٹ ریکٹینگولر فارم میں $2 + 14i$ ایمپیئر ہے، اور پولر فارم میں $10\\sqrt{2}(\\cos\\theta + i\\sin\\theta)$ ایمپیئر ہے (جہاں $\\theta \\approx 81.87^\\circ$ ہے)۔ طبعی طور پر، پولر فارم ہمیں بتاتی ہے کہ کرنٹ کی کل مقدار (magnitude) $10\\sqrt{2}$ ایمپیئر ہے اور اس کا فیز اینگل تقریباً $81.87^\\circ$ ہے۔ آپ اس جواب کی تصدیق آسانی سے کر سکتے ہیں: اگر آپ ریکٹینگولر کرنٹ $2 + 14i$ کو امپیڈینس $3 - 6i$ سے ضرب دیں تو واپس اصل وولٹیج $90 + 30i$ حاصل ہو جائے گا۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

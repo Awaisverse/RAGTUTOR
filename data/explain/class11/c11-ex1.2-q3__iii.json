@@ -1,0 +1,70 @@
+{
+ "item": "c11-ex1.2-q3",
+ "label": "iii",
+ "answer_ref": "$x = \\sqrt{\\frac{\\sqrt{130} - 7}{20}} \\approx 0.469,\\ y = \\sqrt{\\frac{\\sqrt{130} + 7}{20}} \\approx 0.959$ or $x \\approx -0.469,\\ y \\approx -0.959$",
+ "math": [
+  "\\frac{2i - 3}{3 + i} = \\frac{-3 + 2i}{3 + i}",
+  "\\frac{-3 + 2i}{3 + i} \\times \\frac{3 - i}{3 - i}",
+  "= \\frac{-7 + 9i}{3^2 + 1^2} = \\frac{-7 + 9i}{10}",
+  "= - \\frac{7}{10} + \\frac{9}{10}i",
+  "(x + iy)^2 = - \\frac{7}{10} + \\frac{9}{10}i \\Rightarrow x + iy = \\pm\\sqrt{- \\frac{7}{10} + \\frac{9}{10}i}",
+  "z = - \\frac{7}{10} + \\frac{9}{10}i:\\quad a = - \\frac{7}{10},\\ b = \\frac{9}{10}",
+  "|z| = \\sqrt{a^2 + b^2} = \\sqrt{(- \\frac{7}{10})^2 + (\\frac{9}{10})^2} = \\sqrt{\\frac{13}{10}} = \\frac{\\sqrt{130}}{10}",
+  "\\sqrt{z} = \\pm\\left(\\sqrt{\\frac{|z| + a}{2}} + i\\,\\frac{b}{|b|}\\sqrt{\\frac{|z| - a}{2}}\\right)",
+  "\\sqrt{- \\frac{7}{10} + \\frac{9}{10}i} = \\pm\\left(\\sqrt{\\frac{\\frac{\\sqrt{130}}{10} + (- \\frac{7}{10})}{2}} + i\\sqrt{\\frac{\\frac{\\sqrt{130}}{10} - (- \\frac{7}{10})}{2}}\\right)",
+  "= \\pm\\left(\\sqrt{- \\frac{7}{20} + \\frac{\\sqrt{130}}{20}} + i\\sqrt{\\frac{7}{20} + \\frac{\\sqrt{130}}{20}}\\right) = \\pm\\left(\\frac{\\sqrt{5} \\sqrt{-7 + \\sqrt{130}}}{10} + \\frac{\\sqrt{5} \\sqrt{7 + \\sqrt{130}}}{10}i\\right)",
+  "x = \\pm\\sqrt{\\frac{\\sqrt{130} - 7}{20}} \\approx \\pm 0.469,\\quad y = \\pm\\sqrt{\\frac{\\sqrt{130} + 7}{20}} \\approx \\pm 0.959"
+ ],
+ "why": [
+  {
+   "en": "Before simplifying the fraction on the right-hand side, we rearrange the numerator into the standard complex form $a + bi$ by writing the real part $-3$ before the imaginary part $2i$. This keeps our terms neat and prevents sign mistakes during multiplication.",
+   "ur": "دائیں طرف والی کسر کو حل کرنے سے پہلے، ہم شمار کنندہ کو معیاری شکل $a + bi$ میں ترتیب دیتے ہیں یعنی حقیقی حصے $-3$ کو خیالی حصے $2i$ سے پہلے لکھتے ہیں۔ اس سے ہمارے ارکان منظم رہتے ہیں اور ضرب کے دوران علامتوں کی غلطی نہیں ہوتی۔"
+  },
+  {
+   "en": "To remove the complex number from the denominator, we use the rationalization rule and multiply both top and bottom by the conjugate of the denominator, $3 - i$. Since multiplying by $\\frac{3-i}{3-i}$ is just multiplying by $1$, the value of the fraction does not change, but it will turn the denominator into a purely real number.",
+   "ur": "نسب نما سے مختلط عدد ختم کرنے کے لیے ہم ریشنلائزیشن کا اصول استعمال کرتے ہیں اور اوپر اور نیچے نسب نما کے زوج (conjugate) یعنی $3 - i$ سے ضرب دیتے ہیں۔ چونکہ $\\frac{3-i}{3-i}$ سے ضرب دینا دراصل $1$ سے ضرب دینا ہے، اس لیے کسر کی قیمت نہیں بدلتی لیکن نسب نما ایک خالص حقیقی عدد بن جائے گا۔"
+  },
+  {
+   "en": "Using the property $(a+bi)(a-bi) = a^2 + b^2$, the denominator simplifies cleanly to $3^2 + 1^2 = 10$ without any $i$ term. Expanding the numerator and substituting $i^2 = -1$ combines our terms into a single complex numerator $-7 + 9i$.",
+   "ur": "کلیہ $(a+bi)(a-bi) = a^2 + b^2$ استعمال کرتے ہوئے نسب نما بغیر کسی $i$ کے آسانی سے $3^2 + 1^2 = 10$ بن جاتا ہے۔ شمار کنندہ کو ضرب دے کر اور $i^2 = -1$ درج کر کے ہمیں ایک سادہ مختلط شمار کنندہ $-7 + 9i$ ملتا ہے۔"
+  },
+  {
+   "en": "Splitting the fraction over the common denominator $10$ gives us the standard $a + bi$ form: $-\\frac{7}{10} + \\frac{9}{10}i$. Now the right-hand side of our original equation is a single, clear complex number whose square root we can find.",
+   "ur": "مشترکہ نسب نما $10$ پر الگ الگ تقسیم کرنے سے ہمیں معیاری شکل $a + bi$ یعنی $-\\frac{7}{10} + \\frac{9}{10}i$ مل جاتی ہے۔ اب ہماری اصل مساوات کی دائیں سائیڈ ایک واضح مختلط عدد بن چکی ہے جس کا ہم جذر المربع معلوم کر سکتے ہیں۔"
+  },
+  {
+   "en": "To isolate $x + iy$ from $(x + iy)^2$, we take the square root on both sides of the equation. The $\\pm$ sign appears because every non-zero complex number has two square roots that are negatives of each other.",
+   "ur": "مقدار $(x + iy)^2$ سے $x + iy$ کو الگ کرنے کے لیے ہم مساوات کے دونوں طرف جذر المربع لیتے ہیں۔ یہاں $\\pm$ کی علامت اس لیے آتی ہے کیونکہ ہر غیر صفری مختلط عدد کے دو جذر ہوتے ہیں جو ایک دوسرے کے منفی ہوتے ہیں۔"
+  },
+  {
+   "en": "To apply the square root formula for a complex number $z = a + ib$, we first clearly identify its real part $a = -\\frac{7}{10}$ and imaginary part $b = \\frac{9}{10}$. Having these values written down makes substituting into the formula straightforward.",
+   "ur": "مختلط عدد $z = a + ib$ کے جذر کا فارمولا لگانے کے لیے ہم پہلے اس کا حقیقی حصہ $a = -\\frac{7}{10}$ اور خیالی حصہ $b = \\frac{9}{10}$ الگ الگ لکھ لیتے ہیں۔ ان قیمتوں کو واضح لکھنے سے فارمولے میں درج کرنا آسان ہو جاتا ہے۔"
+  },
+  {
+   "en": "The square root formula requires the modulus $|z|$, which measures the magnitude of the complex number using $|z| = \\sqrt{a^2 + b^2}$. Calculating this first gives $\\frac{\\sqrt{130}}{10}$, saving us from doing heavy arithmetic inside the main formula later.",
+   "ur": "جذر کے فارمولے کے لیے ہمیں ماڈیولس $|z|$ کی ضرورت ہوتی ہے، جو $|z| = \\sqrt{a^2 + b^2}$ کے ذریعے مختلط عدد کی مقدار بتاتا ہے۔ اسے پہلے حل کرنے سے ہمیں $\\frac{\\sqrt{130}}{10}$ ملتا ہے، جس سے بعد میں بڑے فارمولے کے اندر لمبا حساب کرنے سے بچت ہو جاتی ہے۔"
+  },
+  {
+   "en": "We state the standard formula for the square root of a complex number $z$. The factor $\\frac{b}{|b|}$ simply tells us whether to put a plus or minus sign before $i$, depending on the sign of the imaginary part $b$.",
+   "ur": "یہاں ہم مختلط عدد $z$ کے جذر کا معیاری فارمولا لکھتے ہیں۔ اس میں $\\frac{b}{|b|}$ کا حصہ صرف یہ بتاتا ہے کہ خیالی حصے $b$ کی علامت کے مطابق $i$ سے پہلے جمع کی علامت آئے گی یا منفی کی۔"
+  },
+  {
+   "en": "We substitute $|z| = \\frac{\\sqrt{130}}{10}$ and $a = -\\frac{7}{10}$ into the formula, and since $b = \\frac{9}{10} > 0$, the sign between the real and imaginary parts remains $+$. This directly sets up the exact real and imaginary parts of $x + iy$.",
+   "ur": "ہم فارمولے میں $|z| = \\frac{\\sqrt{130}}{10}$ اور $a = -\\frac{7}{10}$ درج کرتے ہیں، اور چونکہ $b = \\frac{9}{10} > 0$ ہے، اس لیے حقیقی اور خیالی حصوں کے درمیان علامت $+$ ہی رہتی ہے۔ اس سے $x + iy$ کے حقیقی اور خیالی حصے براہِ راست ہمارے سامنے آ جاتے ہیں۔"
+  },
+  {
+   "en": "Simplifying the complex fractions inside the radicals by dividing by $2$ makes the denominator $20$. This puts both the real and imaginary expressions into a clean, simplified radical form ready for comparison.",
+   "ur": "جذر کے اندر موجود کسروں کو $2$ پر تقسیم کر کے سادہ کرنے سے نسب نما $20$ بن جاتا ہے۔ اس طرح حقیقی اور خیالی دونوں حصے ایک صاف اور مختصر جذری شکل میں آ جاتے ہیں جن کا اب موازنہ کیا جا سکتا ہے۔"
+  },
+  {
+   "en": "By the definition of equality of complex numbers, we equate the real part to $x$ and the imaginary part to $y$. Because the sign between the parts is $+$, both $x$ and $y$ must have the same sign (both positive or both negative).",
+   "ur": "دو مختلط اعداد کی برابری کی تعریف کے مطابق، ہم حقیقی حصے کو $x$ کے اور خیالی حصے کو $y$ کے برابر رکھتے ہیں۔ چونکہ دونوں حصوں کے درمیان $+$ کی علامت ہے، اس لیے $x$ اور $y$ دونوں کی علامت ایک جیسی ہوگی (دونوں مثبت یا دونوں منفی)۔"
+  }
+ ],
+ "meaning": {
+  "en": "This final answer gives the two pairs of real numbers $(x, y)$—namely $\\left(\\sqrt{\\frac{\\sqrt{130} - 7}{20}}, \\sqrt{\\frac{\\sqrt{130} + 7}{20}}\\right) \\approx (0.469, 0.959)$ and its negative $(-0.469, -0.959)$—such that when we form $x + iy$ and square it, we get the original fraction $\\frac{2i-3}{3+i}$. You can verify this by checking that $x^2 - y^2 = \\frac{\\sqrt{130}-7}{20} - \\frac{\\sqrt{130}+7}{20} = -\\frac{7}{10}$, which matches the simplified real part of the right-hand side.",
+  "ur": "یہ آخری جواب ہمیں حقیقی اعداد $(x, y)$ کے دو جوڑے دیتا ہے—یعنی $\\left(\\sqrt{\\frac{\\sqrt{130} - 7}{20}}, \\sqrt{\\frac{\\sqrt{130} + 7}{20}}\\right) \\approx (0.469, 0.959)$ اور اس کا منفی جوڑا $(-0.469, -0.959)$—کہ جب ہم ان سے $x + iy$ بنا کر اس کا مربع لیں تو اصل کسر $\\frac{2i-3}{3+i}$ حاصل ہوتی ہے۔ آپ اس کی پڑتال یوں کر سکتے ہیں کہ $x^2 - y^2 = \\frac{\\sqrt{130}-7}{20} - \\frac{\\sqrt{130}+7}{20} = -\\frac{7}{10}$ بنتا ہے، جو دائیں طرف کے مختصر کیے گئے حقیقی حصے کے بالکل برابر ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

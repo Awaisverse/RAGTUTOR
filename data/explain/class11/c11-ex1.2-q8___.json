@@ -1,0 +1,45 @@
+{
+ "item": "c11-ex1.2-q8",
+ "label": "",
+ "answer_ref": "$\\pm\\left(5 - 2 \\sqrt{3}i\\right)$",
+ "math": [
+  "z = 13 - 20 \\sqrt{3}i:\\quad x = 13,\\ y = - 20 \\sqrt{3}",
+  "|z| = \\sqrt{x^2 + y^2} = \\sqrt{(13)^2 + (- 20 \\sqrt{3})^2} = \\sqrt{1369} = 37",
+  "\\sqrt{z} = \\pm\\left(\\sqrt{\\frac{|z| + x}{2}} + i\\,\\frac{y}{|y|}\\sqrt{\\frac{|z| - x}{2}}\\right)",
+  "\\sqrt{13 - 20 \\sqrt{3}i} = \\pm\\left(\\sqrt{\\frac{37 + (13)}{2}} - i\\sqrt{\\frac{37 - (13)}{2}}\\right)",
+  "= \\pm\\left(\\sqrt{25} - i\\sqrt{12}\\right) = \\pm\\left(5 - 2 \\sqrt{3}i\\right)",
+  "\\text{The square roots are } 5 - 2 \\sqrt{3}i \\text{ and } -5 + 2 \\sqrt{3}i"
+ ],
+ "why": [
+  {
+   "en": "By comparing our complex number with the standard form $z = x + iy$, we separate the real part $x = 13$ and the imaginary part $y = -20\\sqrt{3}$. Identifying these values is our first step because the direct square-root formula relies on them.",
+   "ur": "اپنے مختلط عدد کا معیاری شکل $z = x + iy$ سے موازنہ کرتے ہوئے، ہم حقیقی حصے $x = 13$ اور خیالی حصے $y = -20\\sqrt{3}$ کو الگ کرتے ہیں۔ ان قیمتوں کی شناخت ہمارا پہلا قدم ہے کیونکہ الجبری جذر کا براہِ راست فارمولا انہی پر انحصار کرتا ہے۔"
+  },
+  {
+   "en": "We calculate the modulus $|z|$ using the definition $\\sqrt{x^2 + y^2}$, which represents the distance of the number from the origin. Getting the exact whole number $37$ makes substituting into the square-root formula much easier in the next steps.",
+   "ur": "ہم تعریف $\\sqrt{x^2 + y^2}$ کا استعمال کرتے ہوئے ماڈیولس $|z|$ معلوم کرتے ہیں، جو مبدا (origin) سے اس عدد کے فاصلے کو ظاہر کرتا ہے۔ $37$ کا پورا عدد حاصل ہونے سے اگلے مراحل میں جذر کے فارمولے میں قیمتیں درج کرنا بہت آسان ہو جاتا ہے۔"
+  },
+  {
+   "en": "We write down the standard formula for the square root of a complex number, which gives both the real and imaginary parts of the answer directly. The term $\\frac{y}{|y|}$ simply ensures we put the correct sign between the two parts based on whether $y$ is positive or negative.",
+   "ur": "ہم مختلط عدد کے جذر المربع کے لیے معیاری فارمولا لکھتے ہیں، جو ہمیں جواب کے حقیقی اور خیالی دونوں حصے براہِ راست دیتا ہے۔ رقم $\\frac{y}{|y|}$ صرف اس بات کو یقینی بناتی ہے کہ ہم $y$ کے مثبت یا منفی ہونے کی بنیاد پر دونوں حصوں کے درمیان درست علامت لگائیں۔"
+  },
+  {
+   "en": "Now we plug in $|z| = 37$ and $x = 13$ into the formula, and since our imaginary part $y = -20\\sqrt{3}$ is negative, the middle sign becomes minus ($-$). This sets up two simple real-number fractions under the square roots.",
+   "ur": "اب ہم فارمولے میں $|z| = 37$ اور $x = 13$ درج کرتے ہیں، اور چونکہ ہمارا خیالی حصہ $y = -20\\sqrt{3}$ منفی ہے، اس لیے درمیانی علامت منفی ($-$) ہو جاتی ہے۔ اس سے جذر کے نیچے حقیقی اعداد کی دو سادہ کسریں بن جاتی ہیں۔"
+  },
+  {
+   "en": "We simplify the arithmetic inside the radicals to get $\\sqrt{25}$ and $\\sqrt{12}$, and then take their square roots to reach the neat form $\\pm(5 - 2\\sqrt{3}i)$. The $\\pm$ sign reminds us that every non-zero complex number has two square roots.",
+   "ur": "ہم جذر کے اندر موجود حساب کو مختصر کر کے $\\sqrt{25}$ اور $\\sqrt{12}$ حاصل کرتے ہیں، اور پھر ان کا جذر لے کر صاف شکل $\\pm(5 - 2\\sqrt{3}i)$ تک پہنچتے ہیں۔ $\\pm$ کی علامت ہمیں یاد دلاتی ہے کہ ہر غیر صفری مختلط عدد کے دو جذر المربع ہوتے ہیں۔"
+  },
+  {
+   "en": "Finally, we write the two roots separately by applying the $+$ and $-$ signs, and convert them into decimal coordinates $(5, -3.46)$ and $(-5, 3.46)$. This tells us exactly where to plot the two points on the Argand diagram, symmetric across the origin.",
+   "ur": "آخر میں، ہم $+$ اور $-$ کی علامتیں لگا کر دونوں جذروں کو الگ الگ لکھتے ہیں، اور انہیں اعشاریہ کے نقاط $(5, -3.46)$ اور $(-5, 3.46)$ میں تبدیل کرتے ہیں۔ یہ ہمیں بتاتا ہے کہ آرگنڈ ڈایاگرام پر ان دونوں نقاط کو مبدا کے آر پار بالکل متشاکل (symmetric) طور پر کہاں ظاہر کرنا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $\\pm(5 - 2\\sqrt{3}i)$ means that if you square either $5 - 2\\sqrt{3}i$ or $-5 + 2\\sqrt{3}i$, you will get back the original complex number $13 - 20\\sqrt{3}i$. You can easily check this by expanding $(5 - 2\\sqrt{3}i)^2 = 25 - 20\\sqrt{3}i + 12i^2 = 13 - 20\\sqrt{3}i$, and on the Argand plane, these two roots lie at equal distances from the origin in exactly opposite directions.",
+  "ur": "حتمی جواب $\\pm(5 - 2\\sqrt{3}i)$ کا مطلب ہے کہ اگر آپ $5 - 2\\sqrt{3}i$ یا $-5 + 2\\sqrt{3}i$ میں سے کسی ایک کا بھی مربع لیں، تو آپ کو اصل مختلط عدد $13 - 20\\sqrt{3}i$ واپس مل جائے گا۔ آپ اس کی پڑتال $(5 - 2\\sqrt{3}i)^2 = 25 - 20\\sqrt{3}i + 12i^2 = 13 - 20\\sqrt{3}i$ کو کھول کر باآسانی کر سکتے ہیں، اور آرگنڈ مستوی پر یہ دونوں جذر مبدا سے مساوی فاصلے پر بالکل مخالف سمتوں میں واقع ہوتے ہیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

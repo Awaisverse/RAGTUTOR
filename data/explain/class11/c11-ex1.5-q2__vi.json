@@ -1,0 +1,50 @@
+{
+ "item": "c11-ex1.5-q2",
+ "label": "vi",
+ "answer_ref": "$\\left(\\cos\\left(- \\frac{\\pi}{6}\\right) + i\\sin\\left(- \\frac{\\pi}{6}\\right)\\right)$",
+ "math": [
+  "z = \\frac{\\sqrt{3} + i}{1 + \\sqrt{3}i}",
+  "\\frac{\\sqrt{3} + i}{1 + i\\sqrt{3}} \\times \\frac{1 - i\\sqrt{3}}{1 - i\\sqrt{3}}",
+  "= \\frac{2 \\sqrt{3} - 2i}{1^2 + \\sqrt{3}^2} = \\frac{2 \\sqrt{3} - 2i}{4}",
+  "= \\frac{\\sqrt{3}}{2} - \\frac{1}{2}i",
+  "x = \\frac{\\sqrt{3}}{2},\\ y = - \\frac{1}{2}:\\quad r = \\sqrt{x^2 + y^2} = \\sqrt{1} = 1",
+  "\\text{Quadrant IV},\\ \\tan^{-1}\\left|\\frac{y}{x}\\right| = \\frac{\\pi}{6} \\Rightarrow \\theta = - \\frac{\\pi}{6}",
+  "\\frac{\\sqrt{3}}{2} - \\frac{1}{2}i = \\left(\\cos\\left(- \\frac{\\pi}{6}\\right) + i\\sin\\left(- \\frac{\\pi}{6}\\right)\\right) \\quad \\left(\\text{or } \\left(\\cos \\frac{11 \\pi}{6} + i\\sin \\frac{11 \\pi}{6}\\right)\\right)"
+ ],
+ "why": [
+  {
+   "en": "Before we can find the polar form, we must first change this complex fraction into the standard $x + yi$ form. Naming the expression $z$ gives us a clear starting point to separate the real and imaginary parts.",
+   "ur": "پولر فارم معلوم کرنے سے پہلے، ہمیں اس کمپلیکس کسر کو معیاری شکل $x + yi$ میں تبدیل کرنا ہوگا۔ اس عبارت کو $z$ کا نام دینے سے ہمیں حقیقی اور خیالی حصوں کو الگ کرنے کے لیے ایک واضح نقطۂ آغاز ملتا ہے۔"
+  },
+  {
+   "en": "To remove the imaginary number $i$ from the denominator, we use the rule of rationalization by multiplying both top and bottom by the conjugate of the denominator, $1 - i\\sqrt{3}$. Since we multiply by the same value on top and bottom, the overall value of the fraction does not change.",
+   "ur": "مخرج (denominator) سے خیالی عدد $i$ کو ختم کرنے کے لیے، ہم شمار کنندہ اور مخرج دونوں کو مخرج کے کاجوگیٹ $1 - i\\sqrt{3}$ سے ضرب دیتے ہیں۔ چونکہ ہم اوپر اور نیچے ایک ہی قیمت سے ضرب دے رہے ہیں، اس لیے کسر کی اصل قیمت تبدیل نہیں ہوتی۔"
+  },
+  {
+   "en": "Using the algebraic identity $(a+bi)(a-bi) = a^2 + b^2$ turns the denominator into a simple real number $4$, while the property $i^2 = -1$ helps us simplify the numerator. This removes $i$ from the bottom completely.",
+   "ur": "الجبرے کے کلیے $(a+bi)(a-bi) = a^2 + b^2$ کے استعمال سے مخرج ایک سادہ حقیقی عدد $4$ بن جاتا ہے، جبکہ $i^2 = -1$ کی خاصیت شمار کنندہ کو مختصر کرنے میں ہماری مدد کرتی ہے۔ اس سے نچلے حصے سے $i$ مکمل طور پر ختم ہو جاتا ہے۔"
+  },
+  {
+   "en": "Splitting the fraction by dividing both terms by $4$ gives us the clean standard form $x + yi$. Now we can clearly see that the real part is $x = \\frac{\\sqrt{3}}{2}$ and the imaginary part is $y = -\\frac{1}{2}$.",
+   "ur": "دونوں رقموں کو $4$ پر تقسیم کر کے کسر کو الگ کرنے سے ہمیں واضح معیاری شکل $x + yi$ مل جاتی ہے۔ اب ہم صاف دیکھ سکتے ہیں کہ حقیقی حصہ $x = \\frac{\\sqrt{3}}{2}$ ہے اور خیالی حصہ $y = -\\frac{1}{2}$ ہے۔"
+  },
+  {
+   "en": "The polar form requires the modulus $r$, which is the distance of the point from the origin found using the formula $r = \\sqrt{x^2 + y^2}$. Substituting our $x$ and $y$ values tells us that this complex number lies at a distance of $1$ unit from the origin.",
+   "ur": "پولر فارم کے لیے ماڈیولس $r$ کی ضرورت ہوتی ہے، جو مبدا (origin) سے نقطے کا فاصلہ ہے اور فارمولے $r = \\sqrt{x^2 + y^2}$ سے نکالا جاتا ہے۔ $x$ اور $y$ کی قیمتیں درج کرنے سے ہمیں معلوم ہوتا ہے کہ یہ کمپلیکس نمبر مبدا سے $1$ یونٹ کے فاصلے پر ہے۔"
+  },
+  {
+   "en": "To find the exact direction (argument $\\theta$), we first find the basic reference angle $\\frac{\\pi}{6}$ using $\\tan^{-1}\\left|\\frac{y}{x}\\right|$. Because $x$ is positive and $y$ is negative, the point lies in Quadrant IV, which means the angle $\\theta$ is $-\\frac{\\pi}{6}$.",
+   "ur": "درست سمت (آرگومنٹ $\\theta$) معلوم کرنے کے لیے، ہم پہلے $\\tan^{-1}\\left|\\frac{y}{x}\\right|$ کو استعمال کرتے ہوئے بنیادی زاویہ $\\frac{\\pi}{6}$ نکالتے ہیں۔ چونکہ $x$ مثبت اور $y$ منفی ہے، اس لیے یہ نقطہ چوتھے ربع (Quadrant IV) میں واقع ہے، جس کا مطلب ہے کہ زاویہ $\\theta = -\\frac{\\pi}{6}$ ہے۔"
+  },
+  {
+   "en": "Finally, we substitute our modulus $r = 1$ and argument $\\theta = -\\frac{\\pi}{6}$ into the definition of polar form, $r(\\cos\\theta + i\\sin\\theta)$. This completes our conversion from a complex fraction into polar form.",
+   "ur": "آخر میں، ہم اپنا ماڈیولس $r = 1$ اور آرگومنٹ $\\theta = -\\frac{\\pi}{6}$ پولر فارم کی تعریف $r(\\cos\\theta + i\\sin\\theta)$ میں درج کرتے ہیں۔ اس سے کمپلیکس کسر کو پولر فارم میں تبدیل کرنے کا عمل مکمل ہو جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $\\left(\\cos\\left(- \\frac{\\pi}{6}\\right) + i\\sin\\left(- \\frac{\\pi}{6}\\right)\\right)$ represents the given complex fraction in polar form, telling us it is located at a distance of $1$ unit from the origin at an angle of $-\\frac{\\pi}{6}$ radians (or $\\frac{11\\pi}{6}$ radians). You can easily check this by putting back the trigonometric values $\\cos\\left(-\\frac{\\pi}{6}\\right) = \\frac{\\sqrt{3}}{2}$ and $\\sin\\left(-\\frac{\\pi}{6}\\right) = -\\frac{1}{2}$, which gives back the simplified form $\\frac{\\sqrt{3}}{2} - \\frac{1}{2}i$.",
+  "ur": "حتمی جواب $\\left(\\cos\\left(- \\frac{\\pi}{6}\\right) + i\\sin\\left(- \\frac{\\pi}{6}\\right)\\right)$ دی گئی کمپلیکس کسر کی پولر فارم کو ظاہر کرتا ہے، جو ہمیں بتاتا ہے کہ یہ مبدا سے $1$ یونٹ کے فاصلے پر اور $-\\frac{\\pi}{6}$ ریڈین (یا $\\frac{11\\pi}{6}$ ریڈین) کے زاویے پر واقع ہے۔ آپ مثلثیاتی قیمتیں $\\cos\\left(-\\frac{\\pi}{6}\\right) = \\frac{\\sqrt{3}}{2}$ اور $\\sin\\left(-\\frac{\\pi}{6}\\right) = -\\frac{1}{2}$ واپس درج کر کے اس کی باآسانی پڑتال کر سکتے ہیں، جس سے دوبارہ مختصر شکل $\\frac{\\sqrt{3}}{2} - \\frac{1}{2}i$ حاصل ہو جاتی ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}

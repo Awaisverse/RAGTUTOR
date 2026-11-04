@@ -1,0 +1,35 @@
+{
+ "item": "c11-ex1.5-q3",
+ "label": "iii",
+ "answer_ref": "$\\frac{7}{4}\\left(\\sqrt{6} + \\sqrt{2}\\right) - \\frac{7}{4}\\left(\\sqrt{6} - \\sqrt{2}\\right)i$",
+ "math": [
+  "z = 7\\left(\\cos \\frac{23 \\pi}{12} + i\\sin \\frac{23 \\pi}{12}\\right) = 7\\cos \\frac{23 \\pi}{12} + i\\,7\\sin \\frac{23 \\pi}{12}",
+  "\\frac{23\\pi}{12} = 2\\pi - \\frac{\\pi}{12},\\quad \\cos\\frac{\\pi}{12} = \\frac{\\sqrt{6} + \\sqrt{2}}{4},\\ \\sin\\frac{\\pi}{12} = \\frac{\\sqrt{6} - \\sqrt{2}}{4}",
+  "\\cos \\frac{23 \\pi}{12} = \\frac{\\sqrt{2}}{4} + \\frac{\\sqrt{6}}{4},\\quad \\sin \\frac{23 \\pi}{12} = - \\frac{\\sqrt{6}}{4} + \\frac{\\sqrt{2}}{4}",
+  "z = 7\\left(\\frac{\\sqrt{2}}{4} + \\frac{\\sqrt{6}}{4}\\right) + i\\,7\\left(- \\frac{\\sqrt{6}}{4} + \\frac{\\sqrt{2}}{4}\\right) = \\frac{7}{4}\\left(\\sqrt{6} + \\sqrt{2}\\right) - \\frac{7}{4}\\left(\\sqrt{6} - \\sqrt{2}\\right)i"
+ ],
+ "why": [
+  {
+   "en": "By the definition of polar form, any complex number with modulus $|z|$ and argument $\\arg z$ is written as $|z|(\\cos(\\arg z) + i\\sin(\\arg z))$. Substituting the given values $|z| = 7$ and $\\arg z = \\frac{23\\pi}{12}$ separates our expression into the real part $7\\cos\\frac{23\\pi}{12}$ and the imaginary part $7\\sin\\frac{23\\pi}{12}$.",
+   "ur": "پولر فارم کی تعریف کے مطابق، کسی بھی کمپلیکس نمبر کو اس کے ماڈیولس $|z|$ اور آرگومنٹ $\\arg z$ کی مدد سے $|z|(\\cos(\\arg z) + i\\sin(\\arg z))$ لکھا جاتا ہے۔ دی گئی قیمتیں $|z| = 7$ اور $\\arg z = \\frac{23\\pi}{12}$ درج کرنے سے ہمیں حقیقی حصہ $7\\cos\\frac{23\\pi}{12}$ اور خیالی حصہ $7\\sin\\frac{23\\pi}{12}$ الگ الگ مل جاتے ہیں۔"
+  },
+  {
+   "en": "To find the exact trigonometric values for a large angle like $\\frac{23\\pi}{12}$, we use the allied angles rule to rewrite it as $2\\pi - \\frac{\\pi}{12}$. This shows the angle lies in the fourth quadrant with a reference angle of $\\frac{\\pi}{12}$ (or $15^\\circ$), whose exact sine and cosine values we know from the difference formula $45^\\circ - 30^\\circ$.",
+   "ur": "بڑے زاویے $\\frac{23\\pi}{12}$ کی درست مثلثی قیمتیں معلوم کرنے کے لیے ہم الائیڈ اینگلز (allied angles) کا اصول استعمال کرتے ہوئے اسے $2\\pi - \\frac{\\pi}{12}$ لکھتے ہیں۔ اس سے پتہ چلتا ہے کہ یہ زاویہ چوتھے ربع (Quadrant IV) میں ہے اور اس کا ریفرنس زاویہ $\\frac{\\pi}{12}$ (یعنی $15^\\circ$) ہے، جس کی سائن اور کوسائن قیمتیں ہم $45^\\circ - 30^\\circ$ کے فارمولے سے جانتے ہیں۔"
+  },
+  {
+   "en": "In the fourth quadrant, the cosine function is positive while the sine function is negative. Applying this quadrant sign rule to our reference angle values gives us the exact values for $\\cos\\frac{23\\pi}{12}$ and $\\sin\\frac{23\\pi}{12}$.",
+   "ur": "چوتھے ربع میں کوسائن (cosine) مثبت اور سائن (sine) منفی ہوتا ہے۔ ریفرنس زاویے کی قیمتوں پر علامتوں کا یہ اصول لاگو کرنے سے ہمیں $\\cos\\frac{23\\pi}{12}$ اور $\\sin\\frac{23\\pi}{12}$ کی بالکل درست قیمتیں مل جاتی ہیں۔"
+  },
+  {
+   "en": "Finally, we substitute these exact trigonometric values back into our expression from Step 1 and factor out $\\frac{7}{4}$. This gives us the standard rectangular form $x + iy$ with clearly separated real and imaginary parts.",
+   "ur": "آخر میں، ہم ان مثلثی قیمتوں کو پہلے مرحلے والی مساوات میں واپس درج کرتے ہیں اور $\\frac{7}{4}$ کو مشترک (common) لیتے ہیں۔ اس سے ہمیں معیاری ریکٹینگولر فارم $x + iy$ حاصل ہو جاتی ہے جس میں حقیقی اور خیالی حصے واضح طور پر الگ ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "This final expression is the rectangular form $x + iy$ of the given complex number, showing that its exact real part is $\\frac{7}{4}(\\sqrt{6} + \\sqrt{2})$ and its imaginary part is $-\\frac{7}{4}(\\sqrt{6} - \\sqrt{2})$. You can check this is reasonable because the real part is positive and the imaginary part is negative, which correctly places the point in the fourth quadrant where the angle $\\frac{23\\pi}{12}$ lies.",
+  "ur": "یہ حتمی جواب دیے گئے کمپلیکس نمبر کی ریکٹینگولر فارم $x + iy$ ہے، جو بتاتی ہے کہ اس کا حقیقی حصہ $\\frac{7}{4}(\\sqrt{6} + \\sqrt{2})$ اور خیالی حصہ $-\\frac{7}{4}(\\sqrt{6} - \\sqrt{2})$ ہے۔ آپ اس کی درستگی کا اندازہ اس بات سے لگا سکتے ہیں کہ حقیقی حصہ مثبت اور خیالی حصہ منفی ہے، جو اس نقطے کو بالکل درست طور پر چوتھے ربع میں رکھتا ہے جہاں زاویہ $\\frac{23\\pi}{12}$ واقع ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-04"
+}
