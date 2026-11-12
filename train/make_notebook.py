@@ -86,7 +86,11 @@ if CLASS == "10":
 if CLASS == "11":
     # Class 11: 21 question types in train/synth11.py (Units 1-3); every 4th book question is held out as the test
     SYNTH_PER_TYPE = 2 if QUICK_TEST else 15
-    LIMIT_REAL = 3 if QUICK_TEST else 0         # 0 = every held-out part
+    # every held-out part (71) x 3 attempts at 3000 new tokens would pass Kaggle's 12-hour limit,
+    # so the tuned model is tested on a fixed sample: 24 real parts and 21 synthetic (one per type), 2 attempts
+    LIMIT_REAL = 3 if QUICK_TEST else 24
+    if not QUICK_TEST:
+        LIMIT_SYNTH, ATTEMPTS = 21, 2
 CLS = f" --class {CLASS}"
 MAX_LEN = 4096 if CLASS in ("10", "11") else 3072
 MAX_NEW = 3000 if CLASS in ("10", "11") else 2500
