@@ -156,7 +156,7 @@ def main():
     real_train, real_eval = explode_all(real_train_whole), explode_all(real_eval_whole)
 
     if str(args.klass) == "11":
-        # Class 11: new numbers for every Unit 1 question type, solved and checked by the Class 11 engine (train/synth11.py)
+        # Class 11: new numbers for every question type of Units 1-3, solved and checked by the Class 11 engine (train/synth11.py)
         from synth11 import generate as generate11
         syn_train = leak_free(generate11(args.synth_per_type, seed0=0), real)
         syn_eval = leak_free(generate11(args.synth_eval_per_type, seed0=100000, avoid={s["question"] for s in syn_train}), real)

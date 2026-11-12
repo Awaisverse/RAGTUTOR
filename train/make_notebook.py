@@ -68,7 +68,7 @@ print("GPU:", torch.cuda.get_device_name(0), "| memory:", round(torch.cuda.get_d
 code(r'''
 # 0.2 SETTINGS. Change only this cell.
 QUICK_TEST = True     # True: tiny run to test the pipeline (~15 min). False: the real run (~2 h).
-CLASS = "9"           # "9" or "10": which book to train and test on
+CLASS = "9"           # "9", "10" or "11": which book to train and test on
 BRANCH = "main"       # the GitHub branch to train from
 USE_DRIVE = False     # True: copy results to Google Drive after each phase (survives a Colab restart)
 HF_REPO = ""          # optional, e.g. "yourname/math-tutor": uploads the models to your private Hugging Face repo
@@ -83,9 +83,13 @@ if CLASS == "10":
     # Class 10: 26 question types in train/synth10.py; long matrix and Urdu solutions need a longer context
     SYNTH_PER_TYPE = 2 if QUICK_TEST else 12
     LIMIT_REAL = 3 if QUICK_TEST else 80        # the held-out real book questions (every 4th question of all 12 units)
+if CLASS == "11":
+    # Class 11: 21 question types in train/synth11.py (Units 1-3); every 4th book question is held out as the test
+    SYNTH_PER_TYPE = 2 if QUICK_TEST else 15
+    LIMIT_REAL = 3 if QUICK_TEST else 0         # 0 = every held-out part
 CLS = f" --class {CLASS}"
-MAX_LEN = 4096 if CLASS == "10" else 3072
-MAX_NEW = 3000 if CLASS == "10" else 2500
+MAX_LEN = 4096 if CLASS in ("10", "11") else 3072
+MAX_NEW = 3000 if CLASS in ("10", "11") else 2500
 print("CLASS =", CLASS, "| QUICK_TEST =", QUICK_TEST, "| synthetic per type:", SYNTH_PER_TYPE, "| generator epochs:", EPOCHS_GEN)
 ''')
 
@@ -149,12 +153,14 @@ md(r'''
 
 code(r'''
 # 1.1 The hand-solved book: every math step must verify
-run(f"python tools/build_dataset.py --report{CLS if CLASS == '10' else ''}")
+run(f"python tools/build_dataset.py --report{CLS if CLASS != '9' else ''}")
 ''')
 
 code(r'''
 # 1.2 The synthetic generators: every math step must verify
-if CLASS == "10":
+if CLASS == "11":
+    run("python train/synth11.py 10")        # every generated Class 11 item is kept only when all its checks pass
+elif CLASS == "10":
     run("python train/synth10.py 20")        # every generated Class 10 item is kept only when all its checks pass
 else:
     run("python train/check_synth.py --per-type 60")
@@ -162,8 +168,8 @@ else:
 
 code(r'''
 # 1.3 Build training and test files
-if CLASS == "10":
-    run(f"python train/make_dataset.py --class 10 --eval-every 4 --synth-per-type {SYNTH_PER_TYPE} --synth-eval-per-type 2")
+if CLASS in ("10", "11"):
+    run(f"python train/make_dataset.py --class {CLASS} --eval-every 4 --synth-per-type {SYNTH_PER_TYPE} --synth-eval-per-type 2")
 else:
     run(f"python train/make_dataset.py --eval-prefix ex1.2- --synth-per-type {SYNTH_PER_TYPE} --engine-per-type {ENGINE_PER_TYPE} --synth-eval-per-type 2")
 

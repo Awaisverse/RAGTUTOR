@@ -42,7 +42,7 @@ def main():
     ap.add_argument("--wait", action="store_true")
     ap.add_argument("--fetch", action="store_true")
     ap.add_argument("--timeout-min", type=int, default=240)
-    ap.add_argument("--class", dest="klass", default="9", help="with --push: train on Class 9 (default) or 10")
+    ap.add_argument("--class", dest="klass", default="9", help="with --push: train on Class 9 (default), 10 or 11")
     ap.add_argument("--branch", default="main", help="with --push: the GitHub branch the notebook trains from")
     args = ap.parse_args()
 
