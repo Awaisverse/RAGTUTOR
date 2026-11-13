@@ -44,6 +44,33 @@ def explode_all(items):
     return [e for it in items for e in explode(it)]
 
 
+STEP_KEYS = ("math", "en", "ur", "check", "draw")   # the output format in prompts.SOLVE_RULES
+CURVE_POINTS_MAX = 40                                # a drawing with more numbers than this is a plotted curve
+
+
+def _is_curve(d):
+    return isinstance(d.get("p"), list) and len(d["p"]) > CURVE_POINTS_MAX
+
+
+def compact_step(step, drawings=True):
+    """A step as the model writes it. The teaching overlays ("why", part "meaning") are added by the site
+    from data/explain and were ~5x the solution's own text. Function graphs (axes, ticks and hundreds of
+    sampled curve points) are not part of the model's output format either. Both pushed Class 11 prompts
+    past the model's window, so neither goes in; small figures (number lines, triangles, arcs) stay."""
+    out = {k: step[k] for k in STEP_KEYS if k in step and k != "draw"}
+    if drawings and step.get("draw"):
+        out["draw"] = step["draw"]
+    return out
+
+
+def compact_part(part):
+    """A part that plots a function graph keeps no drawings at all (its axes, ticks and marked points
+    mean nothing without the curve)."""
+    graph = any(_is_curve(d) for s in part["steps"] for d in s.get("draw") or [])
+    return {"label": part.get("label", ""), "prompt": part.get("prompt", ""), "figure": part.get("figure"),
+            "steps": [compact_step(s, drawings=not graph) for s in part["steps"]], "answer": part["answer"]}
+
+
 def examples_text(index, by_id, question, k=2, budget=3500, exclude_id=None):
     """The k nearest solved examples as prompt text, stopping before the prompt grows past `budget` characters
     (the first example is always kept). Training, evaluation and the tutor all build their prompts with this."""
@@ -53,7 +80,7 @@ def examples_text(index, by_id, question, k=2, budget=3500, exclude_id=None):
             continue
         seen.add(h["id"])
         e = by_id[h["id"]]
-        text = f"EXAMPLE {len(texts) + 1} ({e['id']}):\n" + json.dumps({"question": e["question"], "parts": e["parts"]}, ensure_ascii=False)
+        text = f"EXAMPLE {len(texts) + 1} ({e['id']}):\n" + json.dumps({"question": e["question"], "parts": [compact_part(p) for p in e["parts"]]}, ensure_ascii=False)
         if texts and sum(len(t) for t in texts) + len(text) > budget:
             break
         texts.append(text)

@@ -45,7 +45,7 @@ from prompts import SOLVE_RULES, solve_rules  # noqa: E402
 import mathtext  # noqa: E402
 import rag  # noqa: E402
 from engine_data import engine_items  # noqa: E402
-from modelsolve import examples_text, explode_all  # noqa: E402
+from modelsolve import compact_part, examples_text, explode_all  # noqa: E402
 from synth import generate  # noqa: E402
 
 random.seed(0)
@@ -83,9 +83,7 @@ def solution_json(item):
         "number": item.get("number", ""),
         "page": item.get("page", 0),
         "question": item["question"],
-        "parts": [{"label": p.get("label", ""), "prompt": p.get("prompt", ""),
-                   "figure": p.get("figure"), "steps": p["steps"], "answer": p["answer"]}
-                  for p in item["parts"]],
+        "parts": [compact_part(p) for p in item["parts"]],   # no teaching overlays, no plotted curves
     }, ensure_ascii=False)
 
 
