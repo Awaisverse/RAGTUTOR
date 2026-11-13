@@ -1,0 +1,40 @@
+{
+ "item": "c11-ex4.2-q4",
+ "label": "i",
+ "answer_ref": "$A_{13} = -10, \\quad A_{23} = -2, \\quad A_{33} = -5, \\quad |A| = -5$",
+ "math": [
+  "A = \\begin{bmatrix} 1 & 2 & -3 \\\\ 0 & -5 & 0 \\\\ -2 & -2 & 7 \\end{bmatrix}",
+  "A_{13} = (-1)^{1+3}\\begin{vmatrix} 0 & -5 \\\\ -2 & -2 \\end{vmatrix} = \\left[(0)(-2) - (-5)(-2)\\right] = -10",
+  "A_{23} = (-1)^{2+3}\\begin{vmatrix} 1 & 2 \\\\ -2 & -2 \\end{vmatrix} = -\\left[(1)(-2) - (2)(-2)\\right] = -2",
+  "A_{33} = (-1)^{3+3}\\begin{vmatrix} 1 & 2 \\\\ 0 & -5 \\end{vmatrix} = \\left[(1)(-5) - (2)(0)\\right] = -5",
+  "|A| = a_{13}A_{13} + a_{23}A_{23} + a_{33}A_{33} = (-3)(-10) + (0)(-2) + (7)(-5) = -5"
+ ],
+ "why": [
+  {
+   "en": "We start by recalling the definition of a cofactor, which attaches a proper sign $(-1)^{i+j}$ to the $2\\times2$ minor determinant formed by hiding row $i$ and column $j$. Knowing this rule prepares us to systematically calculate the three required cofactors of the third column.",
+   "ur": "ہم سب سے پہلے کوفیکٹر (cofactor) کی تعریف کو ذہن میں لاتے ہیں، جو قطار $i$ اور کالم $j$ کو چھپانے سے بننے والے $2\\times2$ مائنر (minor) ڈیٹرمیننٹ کے ساتھ $(-1)^{i+j}$ کی علامت لگاتی ہے۔ اس اصول کو سمجھنے سے ہم تیسرے کالم کے تینوں مطلوبہ کوفیکٹرز بآسانی معلوم کر سکتے ہیں۔"
+  },
+  {
+   "en": "To find $A_{13}$, we apply the cofactor formula for the position in row $1$, column $3$. Because $1+3$ is even, the sign stays positive, and evaluating the remaining $2\\times2$ determinant gives us our first required value, $-10$.",
+   "ur": "$A_{13}$ معلوم کرنے کے لیے ہم پہلی قطار اور تیسرے کالم کی جگہ پر کوفیکٹر کا فارمولا لگاتے ہیں۔ چونکہ $1+3$ ایک جفت (even) عدد ہے، اس لیے علامت مثبت رہتی ہے، اور باقی ماندہ $2\\times2$ ڈیٹرمیننٹ کو حل کرنے سے ہمیں پہلی مطلوبہ قیمت $-10$ مل جاتی ہے۔"
+  },
+  {
+   "en": "Next, we find the cofactor $A_{23}$ for the entry in row $2$, column $3$. Here the sum of indices $2+3$ is odd, which introduces a negative sign in front of the $2\\times2$ minor, leading to the second required value, $-2$.",
+   "ur": "اس کے بعد، ہم دوسری قطار اور تیسرے کالم کے رکن کے لیے کوفیکٹر $A_{23}$ معلوم کرتے ہیں۔ یہاں نمبروں کا مجموعہ $2+3$ طاق (odd) ہے، جس کی وجہ سے $2\\times2$ مائنر کے باہر منفی علامت آتی ہے، اور یوں ہمیں دوسری مطلوبہ قیمت $-2$ حاصل ہوتی ہے۔"
+  },
+  {
+   "en": "We now calculate $A_{33}$ by removing row $3$ and column $3$ and applying the sign rule for $3+3$. Since the power is even, the sign is positive, and cross-multiplying the $2\\times2$ minor completes our list of cofactors with the value $-5$.",
+   "ur": "اب ہم تیسری قطار اور تیسرے کالم کو ہٹا کر اور $3+3$ کے لیے علامت کا اصول لگا کر $A_{33}$ معلوم کرتے ہیں۔ چونکہ پاور جفت ہے، اس لیے علامت مثبت رہتی ہے، اور $2\\times2$ مائنر کو حل کرنے سے ہمیں تیسرا کوفیکٹر $-5$ مل جاتا ہے۔"
+  },
+  {
+   "en": "By the property of determinants, the determinant $|A|$ equals the sum of the products of the entries of any column and their corresponding cofactors. Since we already found all cofactors for column $3$, expanding along this column gives us $|A| = -5$ directly without extra work.",
+   "ur": "ڈیٹرمیننٹ کی خصوصیت کے مطابق، کسی بھی کالم کے ارکان کو ان کے متعلقہ کوفیکٹرز سے ضرب دے کر جمع کرنے سے پورا ڈیٹرمیننٹ $|A|$ حاصل ہو جاتا ہے۔ چونکہ ہم تیسرے کالم کے تمام کوفیکٹرز پہلے ہی نکال چکے ہیں، اس لیے اسی کالم کے لحاظ سے حل کرنے پر ہمیں بغیر کسی اضافی محنت کے براہِ راست $|A| = -5$ مل جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "We have successfully found the three cofactors of the third column ($A_{13} = -10$, $A_{23} = -2$, $A_{33} = -5$) and used them to find the determinant of the matrix, $|A| = -5$. Because $|A|$ is not $0$, the matrix $A$ is non-singular; you can easily verify $|A| = -5$ by expanding along the second row, which has two $0$ entries and only requires multiplying $-5$ by its cofactor.",
+  "ur": "ہم نے تیسرے کالم کے تینوں کوفیکٹرز ($A_{13} = -10, A_{23} = -2, A_{33} = -5$) کامیابی سے معلوم کر لیے ہیں اور ان کی مدد سے میٹرکس کا ڈیٹرمیننٹ $|A| = -5$ بھی نکال لیا ہے۔ چونکہ $|A|$ کی قیمت $0$ نہیں ہے، اس لیے میٹرکس $A$ نادر (singular) نہیں ہے؛ آپ دوسری قطار کے لحاظ سے ایکسپینڈ (expand) کر کے باآسانی $|A| = -5$ کی تصدیق کر سکتے ہیں کیونکہ اس میں دو ارکان $0$ ہیں اور صرف $-5$ کو اس کے کوفیکٹر سے ضرب دینے کی ضرورت پڑتی ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

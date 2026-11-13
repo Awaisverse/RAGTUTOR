@@ -1,0 +1,65 @@
+{
+ "item": "c11-ex4.2-q3",
+ "label": "v",
+ "answer_ref": "$D = (a - b)(b - c)(c - a)$",
+ "math": [
+  "D = \\begin{vmatrix} 1 & 1 & 1 \\\\ a + 1 & b + 1 & c + 1 \\\\ \\left(a + 1\\right)^{2} & \\left(b + 1\\right)^{2} & \\left(c + 1\\right)^{2} \\end{vmatrix}",
+  "= \\begin{vmatrix} 1 & 1 & 1 \\\\ a & b & c \\\\ \\left(a + 1\\right)^{2} & \\left(b + 1\\right)^{2} & \\left(c + 1\\right)^{2} \\end{vmatrix}\\quad (R_2 \\to R_2 - R_1)",
+  "= \\begin{vmatrix} 1 & 1 & 1 \\\\ a & b & c \\\\ a^{2} & b^{2} & c^{2} \\end{vmatrix}\\quad (R_3 \\to R_3 - 2R_2 - R_1)",
+  "= \\begin{vmatrix} 1 & 0 & 1 \\\\ a & b - a & c \\\\ a^{2} & b^{2} - a^{2} & c^{2} \\end{vmatrix}\\quad (C_2 \\to C_2 - C_1)",
+  "= \\begin{vmatrix} 1 & 0 & 0 \\\\ a & b - a & c - a \\\\ a^{2} & b^{2} - a^{2} & c^{2} - a^{2} \\end{vmatrix}\\quad (C_3 \\to C_3 - C_1)",
+  "= (b - a)\\begin{vmatrix} 1 & 0 & 0 \\\\ a & 1 & c - a \\\\ a^{2} & a + b & c^{2} - a^{2} \\end{vmatrix}\\quad (\\text{taking } b - a \\text{ common from } C_2)",
+  "= (b - a)(c - a)\\begin{vmatrix} 1 & 0 & 0 \\\\ a & 1 & 1 \\\\ a^{2} & a + b & a + c \\end{vmatrix}\\quad (\\text{taking } c - a \\text{ common from } C_3)",
+  "D = (b - a)(c - a)\\begin{vmatrix} 1 & 0 & 0 \\\\ a & 1 & 1 \\\\ a^{2} & a + b & a + c \\end{vmatrix} = (b - a)(c - a)\\left[(1)\\begin{vmatrix} 1 & 1 \\\\ a + b & a + c \\end{vmatrix}\\right]",
+  "= (b - a)(c - a)\\left[(1)\\left[(1)(a + c) - (1)(a + b)\\right]\\right]",
+  "= (b - a)(c - a)\\left[(1)(c - b)\\right] = - \\left(a - b\\right) \\left(a - c\\right) \\left(b - c\\right) = (a - b)(b - c)(c - a)"
+ ],
+ "why": [
+  {
+   "en": "We start by naming the given determinant $D$ so we can apply row and column operations to simplify it step by step.",
+   "ur": "ہم دیے گئے مقطع کو $D$ کا نام دیتے ہیں تاکہ ہم اسے مرحلہ وار آسان بنانے کے لیے قطار اور کالم کے عوامل استعمال کر سکیں۔"
+  },
+  {
+   "en": "By the row operation property of determinants, subtracting the first row from the second row leaves the value unchanged. This neatly removes the $+1$ from the middle row entries, leaving just $a, b,$ and $c$.",
+   "ur": "مقطع کی قطاروں کی خاصیت کے مطابق، دوسری قطار میں سے پہلی قطار کو تفریق کرنے سے اس کی قیمت تبدیل نہیں ہوتی۔ اس سے درمیانی قطار کے ارکان میں سے $+1$ ختم ہو جاتا ہے اور صرف $a, b$ اور $c$ باقی رہ جاتے ہیں۔"
+  },
+  {
+   "en": "Since $(a+1)^2 = a^2 + 2a + 1$, subtracting twice the new second row and once the first row from the third row clears out the linear and constant terms. This reduces our determinant to a standard, much simpler form.",
+   "ur": "چونکہ $(a+1)^2 = a^2 + 2a + 1$ ہوتا ہے، اس لیے تیسری قطار میں سے نئی دوسری قطار کا دوگنا اور پہلی قطار کو تفریق کرنے سے اضافی رقمیں ختم ہو جاتی ہیں۔ اس طرح ہمارا مقطع ایک معیاری اور بہت سادہ شکل میں آ جاتا ہے۔"
+  },
+  {
+   "en": "Subtracting the first column from the second column does not change the determinant's value, and it creates our first zero in the top row while forming expressions that are easy to factor.",
+   "ur": "دوسرے کالم میں سے پہلے کالم کو تفریق کرنے سے مقطع کی قیمت تبدیل نہیں ہوتی، اور اس سے اوپر والی قطار میں پہلا صفر بن جاتا ہے جبکہ باقی ارکان کی تجزی کرنا آسان ہو جاتا ہے۔"
+  },
+  {
+   "en": "Similarly, subtracting the first column from the third column creates a second zero in the first row. Having two zeros in a row will make expanding the determinant very easy.",
+   "ur": "اسی طرح تیسرے کالم میں سے پہلے کالم کو تفریق کرنے سے پہلی قطار میں دوسرا صفر بن جاتا ہے۔ ایک قطار میں دو صفر ہونے سے مقطع کو کھولنا بہت آسان ہو جائے گا۔"
+  },
+  {
+   "en": "Using the difference of squares $b^2 - a^2 = (b - a)(b + a)$, we see that every entry in the second column has $(b - a)$ as a factor. By the factoring property of determinants, we pull $(b - a)$ out to the front.",
+   "ur": "مربعوں کے فرق کے کلیے $b^2 - a^2 = (b - a)(b + a)$ کو استعمال کرتے ہوئے ہم دیکھتے ہیں کہ دوسرے کالم کے ہر رکن میں $(b - a)$ مشترک ہے۔ مقطع کی خاصیت کے مطابق ہم $(b - a)$ کو باہر نکال لیتے ہیں۔"
+  },
+  {
+   "en": "In the same way, since $c^2 - a^2 = (c - a)(c + a)$, we factor $(c - a)$ out of the third column. This gives us the second required factor and leaves simple linear terms inside.",
+   "ur": "بالکل اسی طرح، چونکہ $c^2 - a^2 = (c - a)(c + a)$ ہے، ہم تیسرے کالم میں سے $(c - a)$ کو مشترک لے کر باہر نکال لیتے ہیں۔ اس سے ہمیں دوسرا مطلوبہ جزو ضربی مل جاتا ہے اور اندر سادہ ارکان رہ جاتے ہیں۔"
+  },
+  {
+   "en": "Now we expand the determinant along the first row. Because two of the entries are $0$, their terms vanish and we only need to calculate the $2 \\times 2$ minor for the first entry $1$.",
+   "ur": "اب ہم پہلی قطار کے لحاظ سے مقطع کو کھولتے ہیں۔ چونکہ دو ارکان $0$ ہیں، اس لیے ان کی رقمیں ختم ہو جاتی ہیں اور ہمیں صرف پہلے رکن $1$ کے لیے $2 \\times 2$ مقطع حل کرنا پڑتا ہے۔"
+  },
+  {
+   "en": "We evaluate the $2 \\times 2$ determinant by multiplying the main diagonal entries and subtracting the product of the other diagonal entries.",
+   "ur": "ہم $2 \\times 2$ مقطع کی قیمت معلوم کرنے کے لیے وتر کے ارکان کو ضرب دیتے ہیں اور اس میں سے دوسرے وتر کے ارکان کے حاصل ضرب کو تفریق کرتے ہیں۔"
+  },
+  {
+   "en": "Simplifying inside the brackets cancels $a$ and gives $(c - b)$. Finally, adjusting the negative signs across the factors rearranges the product into the exact cyclic order $(a - b)(b - c)(c - a)$ required by the right-hand side.",
+   "ur": "بریکٹ کے اندر مختصر کرنے سے $a$ کٹ جاتا ہے اور $(c - b)$ ملتا ہے۔ آخر میں، منفی علامتوں کو ترتیب دینے سے حاصل ضرب بالکل اسی چکری ترتیب $(a - b)(b - c)(c - a)$ میں آ جاتا ہے جو دائیں طرف کے لیے مطلوب تھی۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer shows that the given determinant simplifies to the cyclic product $(a - b)(b - c)(c - a)$, proving the identity. Notice that adding $1$ to $a, b,$ and $c$ in the original determinant did not affect the differences between them; you can easily check this result by setting $a = b$, which makes two columns identical so both the determinant and the product become $0$.",
+  "ur": "آخری جواب یہ ظاہر کرتا ہے کہ دیا گیا مقطع مختصر ہو کر چکری حاصل ضرب $(a - b)(b - c)(c - a)$ کے برابر آتا ہے، جس سے یہ مساوات ثابت ہو جاتی ہے۔ غور کریں کہ اصل مقطع میں $a, b$ اور $c$ میں $1$ جمع کرنے سے ان کے درمیانی فرق پر کوئی اثر نہیں پڑا؛ آپ اس نتیجے کی پڑتال $a = b$ رکھ کر باآسانی کر سکتے ہیں، جس سے دو کالم ایک جیسے ہو جاتے ہیں اور مقطع اور حاصل ضرب دونوں $0$ بن جاتے ہیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

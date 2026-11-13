@@ -1,0 +1,45 @@
+{
+ "item": "c11-ex4.2-q3",
+ "label": "vi",
+ "answer_ref": "$D = 4a^2b^2c^2$",
+ "math": [
+  "D = \\begin{vmatrix} a^{2} + b^{2} & c^{2} & c^{2} \\\\ a^{2} & b^{2} + c^{2} & a^{2} \\\\ b^{2} & b^{2} & a^{2} + c^{2} \\end{vmatrix}",
+  "= \\begin{vmatrix} 0 & - 2 b^{2} & - 2 a^{2} \\\\ a^{2} & b^{2} + c^{2} & a^{2} \\\\ b^{2} & b^{2} & a^{2} + c^{2} \\end{vmatrix}\\quad (R_1 \\to R_1 - R_2 - R_3)",
+  "= -2\\begin{vmatrix} 0 & b^{2} & a^{2} \\\\ a^{2} & b^{2} + c^{2} & a^{2} \\\\ b^{2} & b^{2} & a^{2} + c^{2} \\end{vmatrix}\\quad (\\text{taking } -2 \\text{ common from } R_1)",
+  "D = -2\\begin{vmatrix} 0 & b^{2} & a^{2} \\\\ a^{2} & b^{2} + c^{2} & a^{2} \\\\ b^{2} & b^{2} & a^{2} + c^{2} \\end{vmatrix} = -2\\left[-(b^{2})\\begin{vmatrix} a^{2} & a^{2} \\\\ b^{2} & a^{2} + c^{2} \\end{vmatrix} + (a^{2})\\begin{vmatrix} a^{2} & b^{2} + c^{2} \\\\ b^{2} & b^{2} \\end{vmatrix}\\right]",
+  "= -2\\left[-(b^{2})\\left[(a^{2})(a^{2} + c^{2}) - (a^{2})(b^{2})\\right] + (a^{2})\\left[(a^{2})(b^{2}) - (b^{2} + c^{2})(b^{2})\\right]\\right]",
+  "= -2\\left[-(b^{2})(a^{4} + a^{2} c^{2} - a^{2} b^{2}) + (a^{2})(a^{2} b^{2} - b^{4} - b^{2} c^{2})\\right] = 4 a^{2} b^{2} c^{2} = 4a^2b^2c^2"
+ ],
+ "why": [
+  {
+   "en": "We begin by naming the given determinant $D$ on the left-hand side so that we can systematically apply row operations to reach the target expression.",
+   "ur": "ہم دیے گئے مقطع کے بائیں حصے کو $D$ کا نام دے کر شروعات کرتے ہیں تاکہ ہم مطلوبہ جواب تک پہنچنے کے لیے قطار کے عوامل کو ترتیب سے استعمال کر سکیں۔"
+  },
+  {
+   "en": "Look closely at the columns: the first entry in each column is the sum of the terms that also appear in the second and third rows. By applying the row property $R_1 \\to R_1 - R_2 - R_3$, we cancel out $a^2 + b^2$ to create a helpful $0$ in the first position and leave simple monomials in the rest of the first row.",
+   "ur": "کالموں کو غور سے دیکھیں: ہر کالم کا پہلا رکن ان مقداروں کے مجموعے جیسا ہے جو دوسری اور تیسری قطار میں بھی موجود ہیں۔ قطار کی خاصیت $R_1 \\to R_1 - R_2 - R_3$ استعمال کرنے سے $a^2 + b^2$ کٹ جاتا ہے، جس سے پہلی جگہ پر ایک مفید $0$ بن جاتا ہے اور پہلی قطار کے باقی ارکان سادہ ہو جاتے ہیں۔"
+  },
+  {
+   "en": "By the scalar factor property of determinants, if every entry of a row shares a common factor, we can pull it outside. Taking $-2$ common from the first row makes the entries inside smaller and cleaner for expansion.",
+   "ur": "مقطع کی عددی سر والی خاصیت کے مطابق، اگر کسی قطار کے ہر رکن میں کوئی مشترک جزو ضربی ہو تو ہم اسے باہر نکال سکتے ہیں۔ پہلی قطار سے $-2$ مشترک لینے سے اندر کے ارکان چھوٹے اور کھولنے کے لیے آسان ہو جاتے ہیں۔"
+  },
+  {
+   "en": "Now that the first row has a zero and simple entries, we expand the determinant along row 1 using cofactors. Because the first entry is $0$, its whole cofactor term vanishes, leaving only two $2 \\times 2$ determinants to calculate.",
+   "ur": "اب جبکہ پہلی قطار میں ایک صفر اور سادہ ارکان آ گئے ہیں، ہم ہم عاملوں کو استعمال کرتے ہوئے پہلی قطار کے لحاظ سے مقطع کو کھولتے ہیں۔ چونکہ پہلا رکن $0$ ہے، اس لیے اس کی پوری رقم ختم ہو جاتی ہے اور حل کرنے کے لیے صرف دو $2 \\times 2$ کے مقطع رہ جاتے ہیں۔"
+  },
+  {
+   "en": "We apply the definition of a $2 \\times 2$ determinant—multiplying the main diagonal entries and subtracting the product of the off-diagonal entries—to convert the remaining determinants into standard algebraic brackets.",
+   "ur": "ہم $2 \\times 2$ مقطع کی تعریف استعمال کرتے ہیں—یعنی وتر کے ارکان کو ضرب دے کر دوسرے وتر کے ارکان کے حاصل ضرب کو تفریق کرتے ہیں—تاکہ باقی ماندہ مقطع عام الجبری قوسین میں تبدیل ہو جائیں۔"
+  },
+  {
+   "en": "Finally, we multiply the terms out and combine like terms inside the brackets; terms like $-a^4b^2 + a^4b^2$ and $a^2b^4 - a^2b^4$ cancel out completely, leaving $-2(-2a^2b^2c^2) = 4a^2b^2c^2$, which matches the right-hand side.",
+   "ur": "آخر میں، ہم رقوم کو ضرب دیتے ہیں اور قوسین کے اندر ایک جیسی رقوم کو یکجا کرتے ہیں؛ $-a^4b^2 + a^4b^2$ اور $a^2b^4 - a^2b^4$ جیسی رقوم مکمل طور پر کٹ جاتی ہیں، اور ہمارے پاس $-2(-2a^2b^2c^2) = 4a^2b^2c^2$ بچتا ہے جو کہ دائیں طرف کے برابر ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This proves the identity that the given $3 \\times 3$ determinant always simplifies to the single product $4a^2b^2c^2$. You can easily check this result by setting $a=1, b=1, c=1$: the original determinant has $2$s on the main diagonal and $1$s elsewhere, which evaluates to $4$, matching $4(1)^2(1)^2(1)^2 = 4$.",
+  "ur": "یہ ثابت کرتا ہے کہ دیا گیا $3 \\times 3$ کا مقطع حل ہو کر ہمیشہ ایک سادہ حاصل ضرب $4a^2b^2c^2$ بنتا ہے۔ آپ $a=1, b=1, c=1$ رکھ کر اس نتیجے کی باآسانی تصدیق کر سکتے ہیں: اصل مقطع کے وتر پر $2$ اور باقی جگہوں پر $1$ آ جائے گا جس کی قیمت $4$ بنتی ہے، جو کہ $4(1)^2(1)^2(1)^2 = 4$ کے بالکل برابر ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

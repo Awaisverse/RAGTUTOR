@@ -1,0 +1,60 @@
+{
+ "item": "c11-ex4.3-q5",
+ "label": "i",
+ "answer_ref": "$(x_1, x_2, x_3) = \\left(\\frac{19}{23}, - \\frac{9}{23}, \\frac{12}{23}\\right)$",
+ "math": [
+  "\\left[A \\mid B\\right] = \\left[\\begin{array}{ccc|c} 1 & 2 & -2 & -1 \\\\ 2 & 3 & 1 & 1 \\\\ 5 & 4 & -3 & 1 \\end{array}\\right]",
+  "R_2 \\to R_2 - 2R_1,\\ R_3 \\to R_3 - 5R_1:\\ \\left[\\begin{array}{ccc|c} 1 & 2 & -2 & -1 \\\\ 0 & -1 & 5 & 3 \\\\ 0 & -6 & 7 & 6 \\end{array}\\right]",
+  "R_2 \\to -R_2:\\ \\left[\\begin{array}{ccc|c} 1 & 2 & -2 & -1 \\\\ 0 & 1 & -5 & -3 \\\\ 0 & -6 & 7 & 6 \\end{array}\\right]",
+  "R_3 \\to R_3 + 6R_2:\\ \\left[\\begin{array}{ccc|c} 1 & 2 & -2 & -1 \\\\ 0 & 1 & -5 & -3 \\\\ 0 & 0 & -23 & -12 \\end{array}\\right]",
+  "R_3 \\to - \\frac{1}{23}R_3:\\ \\left[\\begin{array}{ccc|c} 1 & 2 & -2 & -1 \\\\ 0 & 1 & -5 & -3 \\\\ 0 & 0 & 1 & \\frac{12}{23} \\end{array}\\right]",
+  "\\text{Echelon form: } \\left[\\begin{array}{ccc|c} 1 & 2 & -2 & -1 \\\\ 0 & 1 & -5 & -3 \\\\ 0 & 0 & 1 & \\frac{12}{23} \\end{array}\\right]",
+  "R_1 \\to R_1 + 2R_3,\\ R_2 \\to R_2 + 5R_3:\\ \\left[\\begin{array}{ccc|c} 1 & 2 & 0 & \\frac{1}{23} \\\\ 0 & 1 & 0 & - \\frac{9}{23} \\\\ 0 & 0 & 1 & \\frac{12}{23} \\end{array}\\right]",
+  "R_1 \\to R_1 - 2R_2:\\ \\left[\\begin{array}{ccc|c} 1 & 0 & 0 & \\frac{19}{23} \\\\ 0 & 1 & 0 & - \\frac{9}{23} \\\\ 0 & 0 & 1 & \\frac{12}{23} \\end{array}\\right]",
+  "\\text{Reduced echelon form: } \\left[\\begin{array}{ccc|c} 1 & 0 & 0 & \\frac{19}{23} \\\\ 0 & 1 & 0 & - \\frac{9}{23} \\\\ 0 & 0 & 1 & \\frac{12}{23} \\end{array}\\right] \\Rightarrow x_1 = \\frac{19}{23},\\quad x_2 = - \\frac{9}{23},\\quad x_3 = \\frac{12}{23}"
+ ],
+ "why": [
+  {
+   "en": "To solve the system using row operations, we first collect all the coefficients of $x_1, x_2, x_3$ and the constant terms into a single augmented matrix $[A \\mid B]$. This keeps our calculations neat without having to write the variables repeatedly.",
+   "ur": "قطار کے عوامل کے ذریعے نظام کو حل کرنے کے لیے، ہم سب سے پہلے $x_1, x_2, x_3$ کے عددی سروں اور مستقل مقداروں کو ایک بڑھے ہوئے قالب $[A \\mid B]$ میں لکھتے ہیں۔ اس سے متغیرات کو بار بار لکھے بغیر ہمارا حساب صاف ستھرا رہتا ہے۔"
+  },
+  {
+   "en": "By the definition of echelon form, all entries below the first leading $1$ (in row 1, column 1) must be zero. Doing these row operations eliminates $x_1$ from the second and third equations.",
+   "ur": "ایچیلون فارم کی تعریف کے مطابق، پہلی قطار اور پہلے کالم کے رکن $1$ کے نیچے تمام ارکان صفر ہونے چاہئیں۔ ان قطاری عوامل سے دوسری اور تیسری مساوات سے $x_1$ ختم ہو جاتا ہے۔"
+  },
+  {
+   "en": "Now we move to the second row to create our next leading $1$ in the second column. Multiplying row 2 by $-1$ turns $-1$ into $+1$, giving us the clean pivot we need to clear the column below it.",
+   "ur": "اب ہم دوسرے کالم میں اگلا اہم رکن $1$ بنانے کے لیے دوسری قطار کی طرف بڑھتے ہیں۔ دوسری قطار کو $-1$ سے ضرب دینے سے رکن $-1$ بدل کر $+1$ بن جاتا ہے، جس سے ہمیں اس کے نیچے موجود کالم کو صفر کرنے میں آسانی ہوگی۔"
+  },
+  {
+   "en": "Using our new leading $1$ in row 2, we eliminate the $-6$ below it in row 3. This removes $x_2$ from the third equation, leaving only $x_3$ in the last row.",
+   "ur": "دوسری قطار میں اپنے نئے رکن $1$ کو استعمال کرتے ہوئے، ہم تیسری قطار میں اس کے نیچے موجود $-6$ کو صفر بناتے ہیں۔ اس سے تیسری مساوات سے $x_2$ بھی ختم ہو جاتا ہے اور آخری قطار میں صرف $x_3$ رہ جاتا ہے۔"
+  },
+  {
+   "en": "To finish the staircase pattern of the echelon form, the first non-zero entry in row 3 must also be $1$. Dividing row 3 by $-23$ achieves this and directly reveals the value of $x_3 = \\frac{12}{23}$.",
+   "ur": "ایچیلون فارم کی سیڑھی جیسی ترتیب مکمل کرنے کے لیے، تیسری قطار کا پہلا غیر صفر رکن بھی $1$ ہونا چاہیے۔ تیسری قطار کو $-23$ پر تقسیم کرنے سے یہ مقصد پورا ہو جاتا ہے اور ہمیں براہِ راست $x_3 = \\frac{12}{23}$ کی قیمت مل جاتی ہے۔"
+  },
+  {
+   "en": "Every leading entry is now $1$ and all entries below them are $0$, which fulfills the exact condition for Echelon Form. At this halfway milestone, we could find the answers by back-substitution, or continue further to Reduced Echelon Form.",
+   "ur": "اب ہر قطار کا پہلا غیر صفر رکن $1$ ہے اور ان کے نیچے تمام ارکان $0$ ہیں، جو ایچیلون فارم کی مکمل شرط پوری کرتا ہے۔ اس مرحلے پر ہم قیمتیں واپس درج کر کے بھی جواب نکال سکتے ہیں، یا پھر ریڈیوسڈ ایچیلون فارم کے لیے آگے بڑھ سکتے ہیں۔"
+  },
+  {
+   "en": "For Reduced Echelon Form, entries above each leading $1$ must also be zero. Using the leading $1$ in row 3, we clear the entries above it in column 3, which removes $x_3$ from the first two equations.",
+   "ur": "ریڈیوسڈ ایچیلون فارم کے لیے، ہر اہم رکن $1$ کے اوپر والے ارکان بھی صفر ہونے چاہئیں۔ تیسری قطار کے رکن $1$ کو استعمال کرتے ہوئے ہم تیسرے کالم میں اس کے اوپر موجود ارکان کو صفر بناتے ہیں، جس سے پہلی دو مساواتوں سے $x_3$ ختم ہو جاتا ہے۔"
+  },
+  {
+   "en": "Finally, we use the leading $1$ in row 2 to make the entry above it in row 1, column 2 zero. This eliminates $x_2$ from the first equation and turns the left side into a $3 \\times 3$ identity matrix.",
+   "ur": "آخر میں، ہم دوسری قطار کے رکن $1$ کی مدد سے پہلی قطار اور دوسرے کالم میں اس کے اوپر موجود رکن کو صفر بناتے ہیں۔ اس سے پہلی مساوات سے $x_2$ ختم ہو جاتا ہے اور بائیں طرف $3 \\times 3$ کا ایک اکائی قالب بن جاتا ہے۔"
+  },
+  {
+   "en": "Because the coefficient part is now an identity matrix, our matrix is in Reduced Echelon Form. Each row now has only one unknown with coefficient $1$, so we can read the exact values of $x_1, x_2,$ and $x_3$ directly from the last column.",
+   "ur": "چونکہ عددی سروں والا حصہ اب ایک اکائی قالب بن چکا ہے، اس لیے ہمارا قالب اب ریڈیوسڈ ایچیلون فارم میں ہے۔ اب ہر قطار میں صرف ایک نامعلوم متغیر ہے جس کا عددی سر $1$ ہے، لہٰذا ہم آخری کالم سے براہِ راست $x_1, x_2$ اور $x_3$ کی قیمتیں پڑھ سکتے ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The values $x_1 = \\frac{19}{23}$, $x_2 = -\\frac{9}{23}$, and $x_3 = \\frac{12}{23}$ form the unique solution that satisfies all three given linear equations at the same time. You can easily check this result by substituting these three values back into the first equation $x_1 + 2x_2 - 2x_3 = -1$ and verifying that the left-hand side simplifies to $-1$.",
+  "ur": "قیمتیں $x_1 = \\frac{19}{23}$، $x_2 = -\\frac{9}{23}$، اور $x_3 = \\frac{12}{23}$ وہ واحد حل ہیں جو دی گئی تینوں خطی مساواتوں کو بیک وقت درست ثابت کرتی ہیں۔ آپ ان تینوں قیمتوں کو پہلی مساوات $x_1 + 2x_2 - 2x_3 = -1$ میں درج کر کے باآسانی پڑتال کر سکتے ہیں کہ بائیں طرف کو حل کرنے سے واقعی $-1$ حاصل ہوتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

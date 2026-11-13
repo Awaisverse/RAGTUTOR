@@ -1,0 +1,45 @@
+{
+ "item": "c11-ex4.2-q5",
+ "label": "ii",
+ "answer_ref": "$x = 2 \\quad \\text{or} \\quad x = -1$",
+ "math": [
+  "D = \\begin{vmatrix} 1 & x - 1 & 3 \\\\ -1 & x + 1 & 2 \\\\ 2 & -3 & x \\end{vmatrix} = (1)\\begin{vmatrix} x + 1 & 2 \\\\ -3 & x \\end{vmatrix} - (x - 1)\\begin{vmatrix} -1 & 2 \\\\ 2 & x \\end{vmatrix} + (3)\\begin{vmatrix} -1 & x + 1 \\\\ 2 & -3 \\end{vmatrix}",
+  "= (1)\\left[(x + 1)(x) - (2)(-3)\\right] - (x - 1)\\left[(-1)(x) - (2)(2)\\right] + (3)\\left[(-1)(-3) - (x + 1)(2)\\right]",
+  "= (1)(x^{2} + x + 6) - (x - 1)(- x - 4) + (3)(1 - 2 x) = 2 x^{2} - 2 x + 5",
+  "2 x^{2} - 2 x + 5 = 9 \\Rightarrow 2 x^{2} - 2 x - 4 = 0",
+  "2 \\left(x - 2\\right) \\left(x + 1\\right) = 0",
+  "x = 2 \\quad \\text{or} \\quad x = -1"
+ ],
+ "why": [
+  {
+   "en": "To solve for $x$, we first need to turn this $3 \\times 3$ determinant into an ordinary algebraic expression. Using the cofactor expansion rule along the first row breaks the large determinant down into three simpler $2 \\times 2$ determinants.",
+   "ur": "$x$ کی قیمت معلوم کرنے کے لیے ہمیں پہلے اس $3 \\times 3$ مقطع (determinant) کو ایک عام الجبری جملے میں بدلنا ہوگا۔ پہلی قطار کے لحاظ سے پھیلانے کا اصول استعمال کرنے سے یہ بڑا مقطع تین آسان $2 \\times 2$ مقطعوں میں تقسیم ہو جاتا ہے۔"
+  },
+  {
+   "en": "We apply the definition of a $2 \\times 2$ determinant, which is the product of the main diagonal minus the product of the secondary diagonal ($ad - bc$). This removes the determinant bars completely and leaves us with brackets that we can multiply.",
+   "ur": "ہم $2 \\times 2$ مقطع کی تعریف استعمال کرتے ہیں، یعنی وتر کے ارکان کا حاصلِ ضرب منفی دوسرے وتر کے ارکان کا حاصلِ ضرب ($ad - bc$)۔ اس سے مقطع کی علامتیں بالکل ختم ہو جاتی ہیں اور ہمارے پاس صرف قوسین (brackets) رہ جاتی ہیں جنہیں ہم ضرب دے سکتے ہیں۔"
+  },
+  {
+   "en": "Now we use basic algebra to multiply the brackets and combine like terms ($x^2$, $x$, and constants). This simplifies the entire determinant into a neat quadratic expression, $2x^2 - 2x + 5$.",
+   "ur": "اب ہم بنیادی الجبرا کی مدد سے قوسین کو ضرب دیتے ہیں اور ایک جیسی رقوم ($x^2$، $x$ اور مستقل اعداد) کو یکجا کرتے ہیں۔ اس سے پورا مقطع مختصر ہو کر ایک صاف ستھرے دو درجی جملے $2x^2 - 2x + 5$ میں بدل جاتا ہے۔"
+  },
+  {
+   "en": "Since the question states that the determinant equals $9$, we set our simplified expression equal to $9$. Moving $9$ to the left side gives us a standard quadratic equation ($ax^2 + bx + c = 0$) equal to $0$, which is necessary before we can factorize.",
+   "ur": "چونکہ سوال میں دیا گیا ہے کہ مقطع $9$ کے برابر ہے، اس لیے ہم اپنے مختصر کیے گئے جملے کو $9$ کے برابر رکھتے ہیں۔ $9$ کو بائیں طرف لانے سے ہمیں معیاری دو درجی مساوات ($ax^2 + bx + c = 0$) مل جاتی ہے جو $0$ کے برابر ہے، اور تجزی (factorization) کرنے سے پہلے یہ شکل بنانا ضروری ہے۔"
+  },
+  {
+   "en": "We factor out $2$ and apply middle-term breaking to split the quadratic expression into linear factors. Writing the equation as a product of factors equal to $0$ allows us to easily find the roots.",
+   "ur": "ہم $2$ کو مشترک (common) لیتے ہیں اور درمیانی رقم کو توڑ کر دو درجی جملے کے یک درجی اجزائے ضربی بنا لیتے ہیں۔ مساوات کو اجزائے ضربی کے حاصلِ ضرب کے طور پر $0$ کے برابر لکھنے سے ہم آسانی سےاس کے اصل (roots) معلوم کر سکتے ہیں۔"
+  },
+  {
+   "en": "By the zero-product property, if the product of factors is $0$, then at least one factor must be $0$. Setting $x - 2 = 0$ and $x + 1 = 0$ directly gives us the two required values of $x$.",
+   "ur": "ضربی خاصیتِ صفر (zero-product property) کے تحت، اگر اجزائے ضربی کا حاصلِ ضرب $0$ ہو تو ان میں سے کم از کم ایک جزو لازمی $0$ کے برابر ہوتا ہے۔ $x - 2 = 0$ اور $x + 1 = 0$ رکھنے سے ہمیں براہِ راست $x$ کی دو مطلوبہ قیمتیں مل جاتی ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer means that $x = 2$ and $x = -1$ are the only two numbers that make the given $3 \\times 3$ determinant equal to $9$. You can check this by putting $x = 2$ or $x = -1$ into the expression $2x^2 - 2x + 5$ (or the original determinant) and verifying that the result is indeed $9$.",
+  "ur": "آخری جواب کا مطلب یہ ہے کہ $x = 2$ اور $x = -1$ ہی وہ دو اعداد ہیں جنہیں درج کرنے سے دیے گئے $3 \\times 3$ مقطع کی قیمت $9$ بنتی ہے۔ آپ اس کی پڑتال کے لیے $x = 2$ یا $x = -1$ کو جملے $2x^2 - 2x + 5$ (یا اصل مقطع) میں درج کر کے تصدیق کر سکتے ہیں کہ جواب واقعی $9$ آتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

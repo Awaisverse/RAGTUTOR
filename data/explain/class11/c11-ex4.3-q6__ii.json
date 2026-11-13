@@ -1,0 +1,55 @@
+{
+ "item": "c11-ex4.3-q6",
+ "label": "ii",
+ "answer_ref": "$(x_1, x_2, x_3) = t(2, -1, 1), \\quad t \\in \\mathbb{R}$",
+ "math": [
+  "AX = O:\\quad \\begin{bmatrix} 1 & 4 & 2 \\\\ 2 & 1 & -3 \\\\ 3 & 2 & -4 \\end{bmatrix}\\begin{bmatrix} x_1 \\\\ x_2 \\\\ x_3 \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 0 \\\\ 0 \\end{bmatrix}",
+  "|A| = \\begin{vmatrix} 1 & 4 & 2 \\\\ 2 & 1 & -3 \\\\ 3 & 2 & -4 \\end{vmatrix} = (1)\\left[(1)(-4) - (-3)(2)\\right] - (4)\\left[(2)(-4) - (-3)(3)\\right] + (2)\\left[(2)(2) - (1)(3)\\right] = 0",
+  "R_2 \\to R_2 - 2R_1,\\ R_3 \\to R_3 - 3R_1:\\ \\begin{bmatrix} 1 & 4 & 2 \\\\ 0 & -7 & -7 \\\\ 0 & -10 & -10 \\end{bmatrix}",
+  "R_2 \\to - \\frac{1}{7}R_2:\\ \\begin{bmatrix} 1 & 4 & 2 \\\\ 0 & 1 & 1 \\\\ 0 & -10 & -10 \\end{bmatrix}",
+  "R_3 \\to R_3 + 10R_2:\\ \\begin{bmatrix} 1 & 4 & 2 \\\\ 0 & 1 & 1 \\\\ 0 & 0 & 0 \\end{bmatrix}",
+  "\\text{Echelon form: } \\begin{bmatrix} 1 & 4 & 2 \\\\ 0 & 1 & 1 \\\\ 0 & 0 & 0 \\end{bmatrix}",
+  "x_3 = t:\\quad x_2 + x_3 = 0 \\Rightarrow x_2 = - t,\\quad x_1 + 4x_2 + 2x_3 = 0 \\Rightarrow x_1 = 2 t",
+  "(x_1, x_2, x_3) = t(2, -1, 1),\\quad t \\in \\mathbb{R}"
+ ],
+ "why": [
+  {
+   "en": "To solve the system using Gaussian elimination, we first organize the coefficients and variables into the standard matrix equation $AX = O$. This cleanly separates the numbers from the unknowns so we can apply row operations directly to the coefficient matrix $A$.",
+   "ur": "Gaussian elimination کے ذریعے حل کرنے کے لیے، ہم سب سے پہلے عددی سروں اور متغیرات کو معیاری مساوات $AX = O$ کی شکل میں لکھتے ہیں۔ اس سے اعداد اور نامعلوم متغیرات الگ ہو جاتے ہیں تاکہ ہم براہِ راست عددی سروں کے قالب $A$ پر قطار کے عوامل لگا سکیں۔"
+  },
+  {
+   "en": "We expand the determinant $|A|$ along the first row to check the nature of the solutions before doing row reduction. Because $|A| = 0$, the matrix is singular, which guarantees that our homogeneous system has infinitely many non-trivial solutions alongside the trivial one.",
+   "ur": "قطار کے عوامل شروع کرنے سے پہلے حل کی نوعیت جانچنے کے لیے ہم پہلی قطار کے لحاظ سے مقطع $|A|$ معلوم کرتے ہیں۔ چونکہ $|A| = 0$ ہے، اس لیے یہ ایک نادر قالب (singular matrix) ہے، جو اس بات کی ضمانت دیتا ہے کہ اس ہم جنس نظام کے بے شمار غیر معمولی (non-trivial) حل موجود ہیں۔"
+  },
+  {
+   "en": "Gaussian elimination requires a staircase pattern of zeros, starting beneath the first leading $1$ in column $1$. By subtracting multiples of the first row from the second and third rows, we eliminate $x_1$ from the last two equations.",
+   "ur": "Gaussian elimination کے اصول کے مطابق ہمیں پہلے کالم کے پہلے غیر صفر رکن $1$ کے نیچے صفر بنانے ہیں۔ پہلی قطار کو مناسب اعداد سے ضرب دے کر دوسری اور تیسری قطار سے تفریق کرنے پر، آخری دو مساواتوں سے $x_1$ ختم ہو جاتا ہے۔"
+  },
+  {
+   "en": "To make the next elimination step easier and follow standard echelon form, we need the first non-zero entry in the second row to be $1$. Dividing the entire second row by $-7$ gives us this clean leading $1$ in the second column.",
+   "ur": "اگلے مرحلے کو آسان بنانے اور معیاری echelon form حاصل کرنے کے لیے، ہمیں دوسری قطار کے پہلے غیر صفر رکن کو $1$ بنانا ہے۔ دوسری قطار کے ہر رکن کو $-7$ پر تقسیم کرنے سے دوسرے کالم میں ہمیں یہ نمایاں $1$ حاصل ہو جاتا ہے۔"
+  },
+  {
+   "en": "Now we use our new leading $1$ in the second row to clear out the $-10$ directly below it in the third row. This operation makes the entire third row zero, completing the row reduction process.",
+   "ur": "اب ہم دوسری قطار کے اس نئے رکن $1$ کو استعمال کرتے ہوئے تیسری قطار میں اس کے بالکل نیچے موجود $-10$ کو صفر بناتے ہیں۔ اس عمل سے پوری تیسری قطار صفر ہو جاتی ہے اور قطاروں کو مختصر کرنے کا عمل مکمل ہو جاتا ہے۔"
+  },
+  {
+   "en": "The matrix is now in echelon form, and the bottom row of all zeros confirms that one equation was redundant, reducing the rank to $2$. With three variables and only two non-zero rows, $x_3$ has no leading $1$ in its column, making it a free variable that can take any real value.",
+   "ur": "قالب اب echelon form میں ہے، اور نیچے والی مکمل صفر قطار تصدیق کرتی ہے کہ ایک مساوات اضافی تھی، جس سے اس کا رینک (rank) $2$ رہ جاتا ہے۔ تین متغیرات اور صرف دو غیر صفر قطاروں کی وجہ سے، $x_3$ کے کالم میں کوئی نمایاں $1$ نہیں ہے، جس کا مطلب ہے کہ یہ ایک آزاد متغیر (free variable) ہے۔"
+  },
+  {
+   "en": "We convert the remaining non-zero rows back into algebraic equations and assign a real parameter $t$ to the free variable $x_3$. Substituting $x_3 = t$ into the second row's equation gives $x_2$, and plugging both into the first row's equation gives $x_1$ in terms of $t$.",
+   "ur": "ہم باقی ماندہ غیر صفر قطاروں کو واپس الجبری مساواتوں میں بدلتے ہیں اور آزاد متغیر $x_3$ کو ایک حقیقی قیمت $t$ فرض کر لیتے ہیں۔ دوسری قطار کی مساوات میں $x_3 = t$ درج کرنے سے $x_2$ ملتا ہے، اور ان دونوں کی قیمتیں پہلی قطار کی مساوات میں رکھنے سے $x_1$ بھی $t$ کی شکل میں نکل آتا ہے۔"
+  },
+  {
+   "en": "Finally, we collect all three components into a single ordered triple and factor out the parameter $t$. This compact form clearly displays the infinite family of solutions generated as $t$ varies over all real numbers.",
+   "ur": "آخر میں، ہم تینوں متغیرات کی قیمتوں کو ایک ترتیب وار جوڑے کی شکل میں اکٹھا لکھتے ہیں اور $t$ کو مشترک (common) لے لیتے ہیں۔ یہ مختصر شکل واضح طور پر ان بے شمار حلوں کو ظاہر کرتی ہے جو $t$ کی مختلف حقیقی قیمتیں رکھنے سے حاصل ہوتے ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $(x_1, x_2, x_3) = t(2, -1, 1)$ means that the system has infinitely many solutions, all lying on a straight line through the origin in three-dimensional space. Every real number $t$ gives a valid solution: for example, $t = 0$ gives the trivial solution $(0, 0, 0)$, and $t = 1$ gives $(2, -1, 1)$. You can easily check this by substituting $x_1 = 2, x_2 = -1, x_3 = 1$ into the first original equation: $1(2) + 4(-1) + 2(1) = 2 - 4 + 2 = 0$, which holds true.",
+  "ur": "آخری جواب $(x_1, x_2, x_3) = t(2, -1, 1)$ کا مطلب ہے کہ اس نظام کے بے شمار حل ہیں، اور ہر حقیقی عدد $t$ کے بدلے ایک درست حل ملتا ہے۔ مثال کے طور پر، $t = 0$ رکھنے سے معمولی (trivial) حل $(0, 0, 0)$ ملتا ہے، اور $t = 1$ رکھنے سے $(2, -1, 1)$ حاصل ہوتا ہے۔ آپ اس کی پڑتال پہلی اصل مساوات میں $x_1 = 2, x_2 = -1, x_3 = 1$ درج کر کے باآسانی کر سکتے ہیں: $1(2) + 4(-1) + 2(1) = 2 - 4 + 2 = 0$، جو کہ بالکل درست ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

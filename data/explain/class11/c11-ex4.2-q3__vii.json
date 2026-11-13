@@ -1,0 +1,55 @@
+{
+ "item": "c11-ex4.2-q3",
+ "label": "vii",
+ "answer_ref": "$D = a^3 + b^3 + c^3 - 3abc$",
+ "math": [
+  "D = \\begin{vmatrix} a & b & c \\\\ b + c & a + c & a + b \\\\ a + b & b + c & a + c \\end{vmatrix}",
+  "= \\begin{vmatrix} a & b & c \\\\ a + b + c & a + b + c & a + b + c \\\\ a + b & b + c & a + c \\end{vmatrix}\\quad (R_2 \\to R_2 + R_1)",
+  "= (a + b + c)\\begin{vmatrix} a & b & c \\\\ 1 & 1 & 1 \\\\ a + b & b + c & a + c \\end{vmatrix}\\quad (\\text{taking } a + b + c \\text{ common from } R_2)",
+  "= (a + b + c)\\begin{vmatrix} a & b - a & c \\\\ 1 & 0 & 1 \\\\ a + b & c - a & a + c \\end{vmatrix}\\quad (C_2 \\to C_2 - C_1)",
+  "= (a + b + c)\\begin{vmatrix} a & b - a & c - a \\\\ 1 & 0 & 0 \\\\ a + b & c - a & c - b \\end{vmatrix}\\quad (C_3 \\to C_3 - C_1)",
+  "D = (a + b + c)\\begin{vmatrix} a & b - a & c - a \\\\ 1 & 0 & 0 \\\\ a + b & c - a & c - b \\end{vmatrix} = (a + b + c)\\left[-(1)\\begin{vmatrix} b - a & c - a \\\\ c - a & c - b \\end{vmatrix}\\right]",
+  "= (a + b + c)\\left[-(1)\\left[(b - a)(c - b) - (c - a)(c - a)\\right]\\right]",
+  "= (a + b + c)\\left[-(1)(a b + a c + b c - a^{2} - b^{2} - c^{2})\\right] = \\left(a + b + c\\right) \\left(a^{2} - a b - a c + b^{2} - b c + c^{2}\\right) = a^3 + b^3 + c^3 - 3abc"
+ ],
+ "why": [
+  {
+   "en": "We start by naming the given determinant $D$ on the left-hand side so we can apply determinant properties step by step to reach the required expression.",
+   "ur": "ہم سب سے پہلے دیے گئے مقطع کو $D$ کا نام دیتے ہیں تاکہ ہم مقطع کی خصوصیات کو مرحلہ وار استعمال کرتے ہوئے مطلوبہ جواب تک پہنچ سکیں۔"
+  },
+  {
+   "en": "Notice that each entry in row 2 is missing just one variable that happens to sit right above it in row 1. By using the property of adding one row to another ($R_2 \\to R_2 + R_1$), we make every entry in the second row equal to $a + b + c$ without changing the determinant's value.",
+   "ur": "غور کریں کہ دوسری قطار کے ہر رکن میں ایک متغیر کم ہے جو بالکل اس کے اوپر پہلی قطار میں موجود ہے۔ ایک قطار کو دوسری قطار میں جمع کرنے کی خصوصیت ($R_2 \\to R_2 + R_1$) استعمال کرتے ہوئے، ہم مقطع کی قیمت بدلے بغیر دوسری قطار کے ہر رکن کو $a + b + c$ بنا لیتے ہیں۔"
+  },
+  {
+   "en": "By the scalar factor property of determinants, a common factor in any single row can be factored out of the entire determinant. Taking $a + b + c$ out of row 2 leaves us with simple $1$s in that row, which is ideal for creating zeros next.",
+   "ur": "مقطع کی مشترک جزو والی خصوصیت کے مطابق، کسی بھی ایک قطار کے مشترک جزو کو پورے مقطع سے باہر نکالا جا سکتا ہے۔ دوسری قطار سے $a + b + c$ باہر نکالنے سے وہاں سادہ $1$ رہ جاتے ہیں، جو اگلے مراحل میں صفر بنانے کے لیے بہترین ہیں۔"
+  },
+  {
+   "en": "Our goal now is to create two zeros in the row of $1$s so that expanding the determinant becomes effortless. Subtracting column 1 from column 2 ($C_2 \\to C_2 - C_1$) preserves the value of the determinant and turns the middle entry of row 2 into $0$.",
+   "ur": "اب ہمارا مقصد $1$ والی قطار میں دو صفر بنانا ہے تاکہ مقطع کو پھیلانا بہت آسان ہو جائے۔ پہلے کالم کو دوسرے کالم سے تفریق کرنے ($C_2 \\to C_2 - C_1$) سے مقطع کی قیمت برقرار رہتی ہے اور دوسری قطار کا درمیانی رکن $0$ بن جاتا ہے۔"
+  },
+  {
+   "en": "Similarly, subtracting column 1 from column 3 ($C_3 \\to C_3 - C_1$) creates a second zero in row 2 and simplifies the other entries by cancelling out $a$. Now row 2 has two zeros and only one non-zero entry.",
+   "ur": "اسی طرح، پہلے کالم کو تیسرے کالم سے تفریق کرنے ($C_3 \\to C_3 - C_1$) سے دوسری قطار میں دوسرا صفر بن جاتا ہے اور $a$ کٹ جانے سے باقی ارکان بھی سادہ ہو جاتے ہیں۔ اب دوسری قطار میں دو صفر اور صرف ایک غیر صفر رکن باقی ہے۔"
+  },
+  {
+   "en": "We now use cofactor expansion along row 2 because the two zeros eliminate two whole terms. Remember that the first position in the second row (row 2, column 1) carries a negative cofactor sign, which is why we multiply by $-(1)$ and drop row 2 and column 1 to get a $2 \\times 2$ determinant.",
+   "ur": "اب ہم دوسری قطار کے لحاظ سے ہم عامل (cofactor) کے ذریعے مقطع کو پھیلاتے ہیں کیونکہ دو صفر ہونے کی وجہ سے دو پوری رقمیں ختم ہو جاتی ہیں۔ یاد رکھیں کہ دوسری قطار اور پہلے کالم کے مقام پر ہم عامل کی علامت منفی ہوتی ہے، اس لیے ہم $-(1)$ سے ضرب دیتے ہیں اور دوسری قطار اور پہلے کالم کو چھوڑ کر ایک $2 \\times 2$ مقطع حاصل کرتے ہیں۔"
+  },
+  {
+   "en": "By definition of a $2 \\times 2$ determinant, we cross-multiply the main diagonal entries and subtract the product of the off-diagonal entries. This completely removes the determinant bars and turns the problem into pure algebra.",
+   "ur": "$2 \\times 2$ مقطع کی تعریف کے مطابق، ہم وتر کے ارکان کو آپس میں ضرب دیتے ہیں اور اس میں سے دوسرے ارکان کا حاصل ضرب تفریق کرتے ہیں۔ اس سے مقطع کی علامت ختم ہو جاتی ہے اور سوال خالص الجبرا میں بدل جاتا ہے۔"
+  },
+  {
+   "en": "Expanding the brackets and distributing the negative sign gives $(a + b + c)(a^2 + b^2 + c^2 - ab - bc - ca)$. Recognizing this famous algebraic identity immediately gives us $a^3 + b^3 + c^3 - 3abc$, completing the proof.",
+   "ur": "بریکٹوں کو کھولنے اور منفی علامت کو اندر ضرب دینے سے ہمیں $(a + b + c)(a^2 + b^2 + c^2 - ab - bc - ca)$ ملتا ہے۔ اس مشہور الجبری کلیے کو پہچانتے ہوئے ہم فوراً $a^3 + b^3 + c^3 - 3abc$ لکھ سکتے ہیں، جس سے ہمارا ثبوت مکمل ہو جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This proves that the given $3 \\times 3$ determinant simplifies to the classic symmetric algebraic expression $a^3 + b^3 + c^3 - 3abc$. You can quickly verify this result by setting $a = 1, b = 1, c = 1$: the original determinant will have two identical rows ($2, 2, 2$) making it $0$, and the final formula also gives $1^3 + 1^3 + 1^3 - 3(1)(1)(1) = 0$.",
+  "ur": "اس سے ثابت ہوتا ہے کہ دیا گیا $3 \\times 3$ مقطع حل ہو کر مشہور الجبری جملہ $a^3 + b^3 + c^3 - 3abc$ بنتا ہے۔ آپ $a = 1, b = 1, c = 1$ رکھ کر اس نتیجے کی فوری پڑتال کر سکتے ہیں: اصل مقطع میں دو قطاریں یکساں ($2, 2, 2$) ہو جائیں گی جس سے اس کی قیمت $0$ ہو جائے گی، اور آخری کلیہ بھی $1^3 + 1^3 + 1^3 - 3(1)(1)(1) = 0$ ہی دیتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

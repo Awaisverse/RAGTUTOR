@@ -1,0 +1,55 @@
+{
+ "item": "c11-ex4.2-q3",
+ "label": "iii",
+ "answer_ref": "The two determinants are equal.",
+ "math": [
+  "\\text{L.H.S.} = \\begin{vmatrix} 1 & x & y z \\\\ 1 & y & x z \\\\ 1 & z & x y \\end{vmatrix}",
+  "= \\frac{1}{x}\\begin{vmatrix} x & x^{2} & x y z \\\\ 1 & y & x z \\\\ 1 & z & x y \\end{vmatrix}\\quad (R_1 \\to xR_1)",
+  "= \\frac{1}{x y}\\begin{vmatrix} x & x^{2} & x y z \\\\ y & y^{2} & x y z \\\\ 1 & z & x y \\end{vmatrix}\\quad (R_2 \\to yR_2)",
+  "= \\frac{1}{x y z}\\begin{vmatrix} x & x^{2} & x y z \\\\ y & y^{2} & x y z \\\\ z & z^{2} & x y z \\end{vmatrix}\\quad (R_3 \\to zR_3)",
+  "= \\begin{vmatrix} x & x^{2} & 1 \\\\ y & y^{2} & 1 \\\\ z & z^{2} & 1 \\end{vmatrix}\\quad (\\text{taking } xyz \\text{ common from } C_3)",
+  "= -\\begin{vmatrix} 1 & x^{2} & x \\\\ 1 & y^{2} & y \\\\ 1 & z^{2} & z \\end{vmatrix}\\quad (C_{1} \\leftrightarrow C_{3})",
+  "= \\begin{vmatrix} 1 & x & x^{2} \\\\ 1 & y & y^{2} \\\\ 1 & z & z^{2} \\end{vmatrix}\\quad (C_{2} \\leftrightarrow C_{3})",
+  "\\text{L.H.S.} = \\begin{vmatrix} 1 & x & x^{2} \\\\ 1 & y & y^{2} \\\\ 1 & z & z^{2} \\end{vmatrix} = \\text{R.H.S.}"
+ ],
+ "why": [
+  {
+   "en": "We begin by writing down the Left-Hand Side (L.H.S.) determinant so we can apply row and column properties to transform it into the Right-Hand Side.",
+   "ur": "ہم بائیں طرف (L.H.S.) کا مقطع لکھ کر شروعات کرتے ہیں تاکہ ہم اس پر قطار اور کالم کی خصوصیات لگا کر اسے دائیں طرف کی شکل میں تبدیل کر سکیں۔"
+  },
+  {
+   "en": "Looking at the target determinant, we need $x^2$ in the first row and a common factor in the third column. By the scalar multiplication property, multiplying $R_1$ by $x$ (and dividing outside by $x$ to keep the value unchanged) gives us both $x^2$ and $xyz$ in the first row.",
+   "ur": "مطلوبہ مقطع کو دیکھتے ہوئے ہمیں پہلی قطار میں $x^2$ اور تیسرے کالم میں ایک مشترک جزو درکار ہے۔ عددی ضرب کی خصوصیت کے تحت، پہلی قطار $R_1$ کو $x$ سے ضرب دینے (اور قیمت برقرار رکھنے کے لیے باہر $x$ سے تقسیم کرنے) سے ہمیں پہلی قطار میں $x^2$ اور $xyz$ دونوں مل جاتے ہیں۔"
+  },
+  {
+   "en": "Similarly, we multiply the second row by $y$ and balance it by dividing outside by $y$. This creates the required $y^2$ term and makes the second entry of the third column $xyz$ as well.",
+   "ur": "اسی طرح، ہم دوسری قطار کو $y$ سے ضرب دیتے ہیں اور توازن برقرار رکھنے کے لیے باہر $y$ سے تقسیم کرتے ہیں۔ اس سے مطلوبہ رکن $y^2$ بن جاتا ہے اور تیسرے کالم کا دوسرا رکن بھی $xyz$ ہو جاتا ہے۔"
+  },
+  {
+   "en": "Next, we multiply the third row by $z$ and divide outside by $z$. Now we have all the squared terms ($x^2, y^2, z^2$) in the second column, and the entire third column consists of the identical entry $xyz$.",
+   "ur": "اس کے بعد، ہم تیسری قطار کو $z$ سے ضرب دیتے ہیں اور باہر $z$ سے تقسیم کرتے ہیں۔ اب ہمارے پاس دوسرے کالم میں تمام مربع ارکان ($x^2, y^2, z^2$) موجود ہیں، اور پورا تیسرا کالم ایک جیسے رکن $xyz$ پر مشتمل ہے۔"
+  },
+  {
+   "en": "Using the factoring property of determinants, we take the common factor $xyz$ out from the third column $C_3$. This cancels with the $\\frac{1}{xyz}$ outside and leaves a column of $1$s, just like we need in the final answer.",
+   "ur": "مقطع کی مشترک نکالنے والی خصوصیت کا استعمال کرتے ہوئے، ہم تیسرے کالم $C_3$ سے مشترک جزو $xyz$ باہر نکال لیتے ہیں۔ یہ باہر موجود $\\frac{1}{xyz}$ سے کٹ جاتا ہے اور پیچھے $1$ کا کالم بچتا ہے، بالکل ویسے ہی جیسے ہمیں حتمی جواب میں چاہیے۔"
+  },
+  {
+   "en": "In our target R.H.S., the column of $1$s is in the first position, so we swap the first and third columns ($C_1 \\leftrightarrow C_3$). By the row/column interchange property, swapping any two columns introduces a negative sign outside the determinant.",
+   "ur": "ہماری مطلوبہ دائیں طرف (R.H.S.) میں، $1$ والا کالم پہلی جگہ پر ہے، اس لیے ہم پہلے اور تیسرے کالم کی جگہ بدل دیتے ہیں ($C_1 \\leftrightarrow C_3$)۔ قطار یا کالم کے تبادلے کی خصوصیت کے مطابق، کسی بھی دو کالموں کی جگہ بدلنے سے مقطع کے باہر منفی کی علامت آ جاتی ہے۔"
+  },
+  {
+   "en": "Finally, to match the exact column order of the R.H.S., we swap the second and third columns ($C_2 \\leftrightarrow C_3$). This second swap introduces another negative sign, which cancels the previous minus sign and makes the determinant positive again.",
+   "ur": "آخر میں، دائیں طرف (R.H.S.) کے کالموں کی ترتیب کے عین مطابق بنانے کے لیے، ہم دوسرے اور تیسرے کالم کی جگہ بدلتے ہیں ($C_2 \\leftrightarrow C_3$)۔ اس دوسرے تبادلے سے ایک اور منفی علامت آتی ہے، جو پچھلی منفی علامت کو ختم کر کے مقطع کو دوبارہ مثبت بنا دیتی ہے۔"
+  },
+  {
+   "en": "Since the transformed determinant now matches the Right-Hand Side entry for entry, we have successfully proved the identity without ever expanding the determinant.",
+   "ur": "چونکہ تبدیل شدہ مقطع اب رکن بہ رکن دائیں طرف کے بالکل برابر ہے، اس لیے ہم نے مقطع کو کھولے بغیر کامیابی سے یہ مساوات ثابت کر دی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This result shows that the two determinants are completely equal in value, even though their entries look different at first glance. By using row and column properties instead of direct expansion, we avoided lengthy algebra; you can easily verify this by substituting simple values like $x=1, y=2, z=3$ into both sides to see that both give the exact same number.",
+  "ur": "یہ نتیجہ ظاہر کرتا ہے کہ دونوں مقطع قیمت میں بالکل برابر ہیں، باوجود اس کے کہ ان کے ارکان پہلی نظر میں مختلف نظر آتے ہیں۔ براہِ راست کھولنے کے بجائے قطار اور کالم کی خصوصیات استعمال کر کے ہم طویل الجبرا سے بچ گئے؛ آپ اس کی تصدیق دونوں طرف $x=1, y=2, z=3$ جیسی سادہ قیمتیں درج کر کے باآسانی کر سکتے ہیں جس سے دونوں طرف بالکل ایک جیسا عدد حاصل ہوگا۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

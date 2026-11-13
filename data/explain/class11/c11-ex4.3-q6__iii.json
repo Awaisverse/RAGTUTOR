@@ -1,0 +1,55 @@
+{
+ "item": "c11-ex4.3-q6",
+ "label": "iii",
+ "answer_ref": "$(x_1, x_2, x_3) = t(-3, 2, 1), \\quad t \\in \\mathbb{R}$",
+ "math": [
+  "AX = O:\\quad \\begin{bmatrix} 1 & 2 & -1 \\\\ 1 & -1 & 5 \\\\ 2 & 1 & 4 \\end{bmatrix}\\begin{bmatrix} x_1 \\\\ x_2 \\\\ x_3 \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 0 \\\\ 0 \\end{bmatrix}",
+  "|A| = \\begin{vmatrix} 1 & 2 & -1 \\\\ 1 & -1 & 5 \\\\ 2 & 1 & 4 \\end{vmatrix} = (1)\\left[(-1)(4) - (5)(1)\\right] - (2)\\left[(1)(4) - (5)(2)\\right] + (-1)\\left[(1)(1) - (-1)(2)\\right] = 0",
+  "R_2 \\to R_2 - R_1,\\ R_3 \\to R_3 - 2R_1:\\ \\begin{bmatrix} 1 & 2 & -1 \\\\ 0 & -3 & 6 \\\\ 0 & -3 & 6 \\end{bmatrix}",
+  "R_2 \\to - \\frac{1}{3}R_2:\\ \\begin{bmatrix} 1 & 2 & -1 \\\\ 0 & 1 & -2 \\\\ 0 & -3 & 6 \\end{bmatrix}",
+  "R_3 \\to R_3 + 3R_2:\\ \\begin{bmatrix} 1 & 2 & -1 \\\\ 0 & 1 & -2 \\\\ 0 & 0 & 0 \\end{bmatrix}",
+  "\\text{Echelon form: } \\begin{bmatrix} 1 & 2 & -1 \\\\ 0 & 1 & -2 \\\\ 0 & 0 & 0 \\end{bmatrix}",
+  "x_3 = t:\\quad x_2 - 2x_3 = 0 \\Rightarrow x_2 = 2 t,\\quad x_1 + 2x_2 - x_3 = 0 \\Rightarrow x_1 = - 3 t",
+  "(x_1, x_2, x_3) = t(-3, 2, 1),\\quad t \\in \\mathbb{R}"
+ ],
+ "why": [
+  {
+   "en": "First, we translate the given linear equations into the standard matrix form $AX = O$ so that we can systematically apply row operations to the coefficient matrix $A$.",
+   "ur": "سب سے پہلے، ہم دی گئی مساواتوں کو معیاری قالب کی شکل $AX = O$ میں لکھتے ہیں تاکہ ہم عددی سروں کے قالب $A$ پر باقاعدہ طریقے سے قطار کے عوامل لگا سکیں۔"
+  },
+  {
+   "en": "We expand the determinant $|A|$ along the first row to test the nature of the solutions. Getting $|A| = 0$ tells us that the matrix is singular, which guarantees that this homogeneous system has infinitely many non-trivial solutions.",
+   "ur": "ہم حل کی نوعیت جانچنے کے لیے پہلی قطار کے لحاظ سے مقطع $|A|$ معلوم کرتے ہیں۔ $|A| = 0$ آنا ہمیں بتاتا ہے کہ یہ ایک نادر قالب (singular matrix) ہے، جس سے ثابت ہوتا ہے کہ اس ہم جنس نظام کے لامحدود غیر معمولی حل (non-trivial solutions) موجود ہیں۔"
+  },
+  {
+   "en": "To begin Gaussian elimination, we use the leading $1$ in the first row to eliminate the entries below it in the first column. This removes $x_1$ from the second and third equations, simplifying our system.",
+   "ur": "Gaussian elimination شروع کرنے کے لیے، ہم پہلی قطار کے پہلے رکن $1$ کو استعمال کرتے ہوئے پہلے کالم میں اس کے نیچے موجود ارکان کو صفر بناتے ہیں۔ اس سے دوسری اور تیسری مساوات سے $x_1$ ختم ہو جاتا ہے اور نظام آسان ہو جاتا ہے۔"
+  },
+  {
+   "en": "For echelon form, the first non-zero entry in the second row needs to be $1$. Multiplying the second row by $-\\frac{1}{3}$ achieves this and gives us a clean pivot to eliminate the entry below it.",
+   "ur": "Echelon form حاصل کرنے کے لیے، دوسری قطار کا پہلا غیر صفر رکن $1$ ہونا چاہیے۔ دوسری قطار کو $-\\frac{1}{3}$ سے ضرب دینے سے یہ مقصد پورا ہو جاتا ہے اور ہمیں اس کے نیچے والے رکن کو صفر بنانے کے لیے ایک آسان بنیاد مل جاتی ہے۔"
+  },
+  {
+   "en": "Now we use the new pivot $1$ in the second row to eliminate the $-3$ below it in the second column. Because the second and third rows were multiples of each other, the entire third row becomes zero.",
+   "ur": "اب ہم دوسری قطار کے نئے حاصل کردہ $1$ کو استعمال کرتے ہوئے دوسرے کالم میں اس کے نیچے موجود $-3$ کو صفر بناتے ہیں۔ چونکہ دوسری اور تیسری قطار ایک دوسرے کا اضعاف تھیں، اس لیے پوری تیسری قطار صفر ہو جاتی ہے۔"
+  },
+  {
+   "en": "The matrix is now in row echelon form, and its rank is $2$, which is less than the $3$ unknowns. The row of zeros confirms there are only two independent equations, leaving $x_3$ as a free variable that can take any real value.",
+   "ur": "قالب اب echelon form میں آ چکا ہے اور اس کا رینک (rank) $2$ ہے، جو کہ $3$ نامعلوم متغیرات سے کم ہے۔ صفروں والی قطار تصدیق کرتی ہے کہ ہمارے پاس صرف دو آزاد مساواتیں ہیں، جس کی وجہ سے $x_3$ ایک آزاد متغیر بن جاتا ہے جو کوئی بھی حقیقی قیمت لے سکتا ہے۔"
+  },
+  {
+   "en": "Using back-substitution, we assign any real number $t$ to the free variable $x_3$ and rewrite the remaining two rows as equations. Working upwards from the second row to the first allows us to express both $x_2$ and $x_1$ in terms of $t$.",
+   "ur": "واپسی درج کرنے کے طریقے (back-substitution) کو استعمال کرتے ہوئے، ہم آزاد متغیر $x_3$ کو ایک حقیقی عدد $t$ کے برابر رکھتے ہیں اور باقی دو قطاروں کو مساواتوں کی شکل میں لکھتے ہیں۔ دوسری قطار سے پہلی قطار کی طرف حل کرنے سے ہم $x_2$ اور $x_1$ دونوں کی قیمتیں $t$ کی شکل میں نکال لیتے ہیں۔"
+  },
+  {
+   "en": "Finally, we collect our results for $x_1, x_2,$ and $x_3$ and factor out the parameter $t$ to write the complete general solution in a neat vector form.",
+   "ur": "آخر میں، ہم $x_1, x_2$ اور $x_3$ کی قیمتوں کو یکجا کرتے ہیں اور $t$ کو مشترک نکال کر مکمل عمومی حل کو ایک واضح شکل میں لکھ دیتے ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $(x_1, x_2, x_3) = t(-3, 2, 1)$ means that instead of just one answer, any real multiple of $(-3, 2, 1)$ will satisfy all three given equations. For example, choosing $t = 1$ gives $x_1 = -3, x_2 = 2, x_3 = 1$, which you can easily check in the first equation: $(-3) + 2(2) - (1) = -3 + 4 - 1 = 0$.",
+  "ur": "آخری جواب $(x_1, x_2, x_3) = t(-3, 2, 1)$ کا مطلب ہے کہ اس سوال کا صرف ایک حل نہیں ہے، بلکہ $(-3, 2, 1)$ کا کوئی بھی حقیقی اضعاف تینوں دی گئی مساواتوں کو درست ثابت کرے گا۔ مثال کے طور پر، اگر ہم $t = 1$ رکھیں تو $x_1 = -3, x_2 = 2, x_3 = 1$ ملتا ہے، جس کی تصدیق آپ پہلی مساوات میں قیمتیں درج کر کے باآسانی کر سکتے ہیں: $(-3) + 2(2) - (1) = -3 + 4 - 1 = 0$۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

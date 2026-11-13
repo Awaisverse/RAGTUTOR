@@ -1,0 +1,35 @@
+{
+ "item": "c11-ex4.3-q9",
+ "label": "",
+ "answer_ref": "The image curve is $3X - Y = 2(Y - 2X)^2$ or equivalently $8X^2 - 8XY + 2Y^2 - 3X + Y = 0$.",
+ "math": [
+  "\\begin{bmatrix} X \\\\ Y \\end{bmatrix} = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}\\begin{bmatrix} x \\\\ y \\end{bmatrix} \\Rightarrow X = x + 2y,\\ Y = 3x + 4y",
+  "\\begin{bmatrix} x \\\\ y \\end{bmatrix} = P^{-1}\\begin{bmatrix} X \\\\ Y \\end{bmatrix} = \\begin{bmatrix} -2 & 1 \\\\ \\frac{3}{2} & - \\frac{1}{2} \\end{bmatrix}\\begin{bmatrix} X \\\\ Y \\end{bmatrix} \\Rightarrow x = -2X + Y,\\ y = \\frac{3X - Y}{2}",
+  "\\frac{3X - Y}{2} = (Y - 2X)^2 \\Rightarrow 3X - Y = 2(Y - 2X)^2",
+  "8X^2 - 8XY + 2Y^2 - 3X + Y = 0"
+ ],
+ "why": [
+  {
+   "en": "By the definition of a matrix transformation, we multiply the given matrix $P$ with the original point $(x, y)$ to see how it maps to the new image point $(X, Y)$. This gives us the forward equations connecting the old coordinates to the new ones.",
+   "ur": "میٹرکس ٹرانسفارمیشن کی تعریف کے مطابق، ہم دیے گئے میٹرکس $P$ کو اصل نقطے $(x, y)$ سے ضرب دیتے ہیں تاکہ معلوم ہو سکے کہ یہ نئے امیج پوائنٹ $(X, Y)$ پر کیسے منتقل ہوتا ہے۔ اس سے ہمیں پرانے اور نئے نقاط کو ملانے والی ابتدائی مساواتیں مل جاتی ہیں۔"
+  },
+  {
+   "en": "Since our original curve is written in terms of $x$ and $y$, we need to reverse the relation using the inverse matrix $P^{-1}$. Finding $x$ and $y$ in terms of $X$ and $Y$ allows us to replace the old coordinates in the given curve equation.",
+   "ur": "چونکہ ہماری اصل مساوات $x$ اور $y$ کی شکل میں ہے، اس لیے ہمیں معکوس میٹرکس $P^{-1}$ استعمال کرتے ہوئے اس تعلق کو الٹنا ہوگا۔ $x$ اور $y$ کی قیمتیں $X$ اور $Y$ کی شکل میں نکالنے سے ہم دی گئی مساوات میں پرانے متغیرات کی جگہ نئے متغیرات درج کر سکیں گے۔"
+  },
+  {
+   "en": "Every point $(x, y)$ on the original curve satisfies the relation $y = x^2$. By substituting our expressions for $x$ and $y$ into this equation, we directly form the algebraic condition that the new image points $(X, Y)$ must obey.",
+   "ur": "اصل منحنی خط (curve) پر موجود ہر نقطہ $(x, y)$ مساوات $y = x^2$ کو درست ثابت کرتا ہے۔ اس مساوات میں $x$ اور $y$ کی قیمتیں درج کرنے سے ہمیں براہِ راست وہ الجبری شرط مل جاتی ہے جس پر نئے امیج پوائنٹس $(X, Y)$ پورا اترتے ہیں۔"
+  },
+  {
+   "en": "We expand the square using the algebraic identity and move all terms to one side to write the equation in a neat, standard polynomial form. This gives us the simplified final equation of the transformed curve.",
+   "ur": "ہم الجبری فارمولے کی مدد سے مربع کھولتے ہیں اور تمام رقوم کو ایک طرف لے آتے ہیں تاکہ مساوات ایک صاف اور معیاری شکل میں لکھی جا سکے۔ اس سے ہمیں تبدیل شدہ منحنی خط (transformed curve) کی مختصر حتمی مساوات حاصل ہو جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This final equation represents the new path formed when every point on the original curve $y = x^2$ is shifted by the matrix $P$. You can easily check this: the point $(1, 1)$ lies on $y = x^2$, and under $P$ it moves to $(X, Y) = (3, 7)$, which satisfies our final equation $3(3) - 7 = 2(7 - 6)^2$.",
+  "ur": "یہ حتمی مساوات اس نئے راستے (امیج کرو) کو ظاہر کرتی ہے جو اصل منحنی خط $y = x^2$ کے ہر نقطے پر میٹرکس $P$ کا عمل ہونے سے بنتا ہے۔ آپ اسے باآسانی چیک بھی کر سکتے ہیں: نقطہ $(1, 1)$ اصل مساوات $y = x^2$ پر موجود ہے، جو میٹرکس $P$ کے تحت $(X, Y) = (3, 7)$ پر چلا جاتا ہے، اور یہ نیا نقطہ ہماری حتمی مساوات $3(3) - 7 = 2(7 - 6)^2$ کو بالکل درست ثابت کرتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

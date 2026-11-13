@@ -1,0 +1,30 @@
+{
+ "item": "c11-ex4.3-q7",
+ "label": "",
+ "answer_ref": "$A'(-4,1), \\quad B'(2,5), \\quad C'(0,-3)$",
+ "math": [
+  "P = \\begin{bmatrix} -1 & 0 \\\\ 0 & 1 \\end{bmatrix}",
+  "P\\begin{bmatrix} 4 & -2 & 0 \\\\ 1 & 5 & -3 \\end{bmatrix} = \\begin{bmatrix} -1 & 0 \\\\ 0 & 1 \\end{bmatrix}\\begin{bmatrix} 4 & -2 & 0 \\\\ 1 & 5 & -3 \\end{bmatrix} = \\begin{bmatrix} -4 & 2 & 0 \\\\ 1 & 5 & -3 \\end{bmatrix}",
+  "A'(-4, 1),\\quad B'(2, 5),\\quad C'(0, -3)"
+ ],
+ "why": [
+  {
+   "en": "When reflecting a point across the $y$-axis, the $x$-coordinate changes its sign while the $y$-coordinate stays the same. We represent this geometric rule as a standard $2 \\times 2$ transformation matrix $P$ so we can apply it using matrix multiplication.",
+   "ur": "جب ہم کسی نقطے کو $y$-محور کے گرد منعکس (reflect) کرتے ہیں، تو اس کے $x$-محدد کی علامت بدل جاتی ہے جبکہ $y$-محدد ویسا ہی رہتا ہے۔ ہم اس اصول کو ایک معیاری تبدیلی کے قالب $P$ کی شکل میں لکھتے ہیں تاکہ ہم قالبوں کی ضرب کا طریقہ استعمال کر سکیں۔"
+  },
+  {
+   "en": "Instead of transforming each vertex separately, we arrange the coordinates of $A$, $B$, and $C$ as the columns of a single matrix. Multiplying the transformation matrix $P$ from the left applies the reflection to all three points at once, giving a new matrix containing the transformed coordinates.",
+   "ur": "ہر کونے کو الگ الگ حل کرنے کے بجائے، ہم نقاط $A$، $B$ اور $C$ کو ایک ہی قالب کے کالم کی صورت میں ترتیب دیتے ہیں۔ تبدیلی کے قالب $P$ کو بائیں طرف سے ضرب دینے پر تینوں نقاط ایک ساتھ منعکس ہو جاتے ہیں، جس سے ہمیں نئے نقاط کے قالب کا نتیجہ ملتا ہے۔"
+  },
+  {
+   "en": "Now we translate our matrix result back into geometric points by reading each column from top to bottom as an $(x, y)$ pair. This gives us the exact coordinates of the new vertices $A'$, $B'$, and $C'$.",
+   "ur": "اب ہم حاصل شدہ قالب کے ہر کالم کو اوپر سے نیچے $(x, y)$ جوڑے کے طور پر پڑھتے ہیں تاکہ انہیں واپس ہندسی نقاط میں بدل سکیں۔ اس سے ہمیں نئے کونوں $A'$، $B'$ اور $C'$ کے درست نقاط مل جاتے ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The points $A'(-4, 1)$, $B'(2, 5)$, and $C'(0, -3)$ are the vertices of the new, reflected triangle across the $y$-axis. You can easily check this answer by comparing them with the original vertices $A(4, 1)$, $B(-2, 5)$, and $C(0, -3)$: notice that only the signs of the $x$-coordinates have flipped ($4$ became $-4$, $-2$ became $2$, and $0$ stayed $0$), while all $y$-coordinates remained unchanged.",
+  "ur": "نقاط $A'(-4, 1)$، $B'(2, 5)$ اور $C'(0, -3)$ دراصل $y$-محور کے گرد عکس بننے والی نئی مثلث کے کونے ہیں۔ آپ اصل کونوں $A(4, 1)$، $B(-2, 5)$ اور $C(0, -3)$ سے موازنہ کر کے باآسانی اپنے جواب کی پڑتال کر سکتے ہیں: غور کریں کہ صرف $x$ کی قیمتوں کی علامتیں بدلی ہیں ($4$ بدل کر $-4$ ہو گیا، $-2$ بدل کر $2$ ہو گیا، اور $0$ ویسا ہی رہا)، جبکہ $y$ کی تمام قیمتیں تبدیل نہیں ہوئیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

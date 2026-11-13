@@ -1,0 +1,35 @@
+{
+ "item": "c11-ex4.2-q2",
+ "label": "iii",
+ "answer_ref": "$D = 0$",
+ "math": [
+  "D = \\begin{vmatrix} - a & 0 & b \\\\ 0 & a & - c \\\\ c & - b & 0 \\end{vmatrix}",
+  "= \\frac{1}{b}\\begin{vmatrix} - a b & 0 & b \\\\ 0 & a & - c \\\\ b c & - b & 0 \\end{vmatrix}\\quad (C_1 \\to bC_1)",
+  "= \\frac{1}{b}\\begin{vmatrix} 0 & 0 & b \\\\ 0 & a & - c \\\\ 0 & - b & 0 \\end{vmatrix}\\quad (C_1 \\to C_1 + cC_2 + aC_3)",
+  "D = 0"
+ ],
+ "why": [
+  {
+   "en": "We begin by naming the given determinant $D$ so that we can easily refer to it as we apply column properties.",
+   "ur": "ہم دیے گئے مقطعے (determinant) کو $D$ کا نام دے کر شروعات کرتے ہیں تاکہ کالموں کی خصوصیات استعمال کرتے وقت اس کا حوالہ دینا آسان رہے۔"
+  },
+  {
+   "en": "By the scalar multiplication property of determinants, if we multiply a single column by $b$, the whole determinant is multiplied by $b$, so we divide by $b$ outside to keep the value unchanged. Doing this introduces $b$ into the first column, which prepares its entries to cancel out with the other columns in the next step.",
+   "ur": "مقطعے کی سکیلر ضرب کی خصوصیت کے مطابق، اگر ہم کسی ایک کالم کو $b$ سے ضرب دیں تو پورا مقطعہ $b$ سے ضرب ہو جاتا ہے، اس لیے قیمت برقرار رکھنے کے لیے ہم باہر $b$ سے تقسیم کرتے ہیں۔ ایسا کرنے سے پہلے کالم میں $b$ آ جاتا ہے، جس سے اگلے مرحلے میں دوسرے کالموں کے ساتھ اس کے ارکان کو کینسل کرنا آسان ہو جائے گا۔"
+  },
+  {
+   "en": "A fundamental property of determinants states that adding scalar multiples of other columns to a column does not change the determinant's value. By adding $c$ times column 2 and $a$ times column 3 to column 1, every entry in the first column cancels out to become $0$.",
+   "ur": "مقطعوں کی ایک بنیادی خصوصیت یہ ہے کہ کسی کالم میں دوسرے کالموں کے سکیلر حاصلِ ضرب جمع کرنے سے مقطعے کی قیمت تبدیل نہیں ہوتی۔ پہلے کالم میں کالم 2 کو $c$ سے اور کالم 3 کو $a$ سے ضرب دے کر جمع کرنے سے، پہلے کالم کا ہر رکن کٹ کر $0$ بن جاتا ہے۔"
+  },
+  {
+   "en": "According to the zero-column property of determinants, if all entries of any row or column are zero, the value of the entire determinant is immediately zero. Since our first column now consists entirely of zeros, $D$ becomes $0$ without needing any expansion.",
+   "ur": "مقطعوں کی زیرو کالم خصوصیت کے مطابق، اگر کسی بھی قطار یا کالم کے تمام ارکان صفر ہوں، تو پورے مقطعے کی قیمت فوراً صفر ہو جاتی ہے۔ چونکہ ہمارا پہلا کالم اب مکمل طور پر صفروں پر مشتمل ہے، اس لیے بغیر کسی پھیلاؤ (expansion) کے $D$ کی قیمت $0$ ہو جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $D = 0$ proves that the given determinant evaluates to zero using only determinant properties, just as the question required. This shows that the columns of the matrix are linearly dependent, and you could easily verify this result by expanding the original determinant along the first row.",
+  "ur": "حتمی جواب $D = 0$ ثابت کرتا ہے کہ دیا گیا مقطعہ صرف مقطعے کی خصوصیات کے استعمال سے صفر کے برابر ہے، بالکل ویسے ہی جیسے سوال میں پوچھا گیا تھا۔ یہ ظاہر کرتا ہے کہ قالب کے کالم آپس میں لکیری طور پر منحصر (linearly dependent) ہیں، اور آپ اصل مقطعے کو پہلی قطار کے لحاظ سے پھیلا کر اس نتیجے کی باآسانی تصدیق کر سکتے ہیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

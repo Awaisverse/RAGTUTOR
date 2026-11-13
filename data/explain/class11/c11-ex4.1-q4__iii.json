@@ -1,0 +1,30 @@
+{
+ "item": "c11-ex4.1-q4",
+ "label": "iii",
+ "answer_ref": "$(A+B)(A-B) \\neq A^2-B^2$",
+ "math": [
+  "(A + B)(A - B) = A^2 - AB + BA - B^2",
+  "-AB + BA = 0 \\iff AB = BA",
+  "A = \\begin{bmatrix} 1 & 1 \\\\ 0 & 1 \\end{bmatrix},\\ B = \\begin{bmatrix} 1 & 0 \\\\ 1 & 1 \\end{bmatrix}:\\quad (A + B)(A - B) = \\begin{bmatrix} -1 & 2 \\\\ -2 & 1 \\end{bmatrix},\\quad A^2 - B^2 = \\begin{bmatrix} 0 & 2 \\\\ -2 & 0 \\end{bmatrix}"
+ ],
+ "why": [
+  {
+   "en": "We apply the distributive law of matrix multiplication, being very careful not to change the order of the matrices in each product. Unlike ordinary numbers, $A$ times $B$ is written as $AB$, while $B$ times $A$ must be kept as $BA$.",
+   "ur": "ہم یہاں قالبوں کی ضرب کا تقسیمی قانون استعمال کرتے ہیں اور اس بات کا خاص خیال رکھتے ہیں کہ ہر حاصل ضرب میں قالبوں کی ترتیب تبدیل نہ ہو۔ عام اعداد کے برعکس، $A$ ضرب $B$ کو $AB$ لکھا جاتا ہے جبکہ $B$ ضرب $A$ کو لازمی طور پر $BA$ ہی رکھنا پڑتا ہے۔"
+  },
+  {
+   "en": "For the middle terms $-AB$ and $+BA$ to cancel out and leave $A^2 - B^2$, the matrices would have to obey the commutative law ($AB = BA$). Since matrix multiplication is not commutative in general, these two terms do not cancel out.",
+   "ur": "درمیانی رقوم $-AB$ اور $+BA$ کے آپس میں کٹ جانے اور صرف $A^2 - B^2$ بچنے کے لیے ضروری ہے کہ قالبوں میں قانون مبادلہ ($AB = BA$) پایا جائے۔ چونکہ عام طور پر قالبوں کی ضرب میں قانون مبادلہ درست نہیں ہوتا، اس لیے یہ دونوں رقوم آپس میں ختم نہیں ہوتیں۔"
+  },
+  {
+   "en": "To prove a rule is not true in general, showing just one counterexample is enough. By substituting these specific $2 \\times 2$ matrices, we clearly see that the left-hand side and right-hand side give completely different resulting matrices.",
+   "ur": "یہ ثابت کرنے کے لیے کہ کوئی اصول عام طور پر درست نہیں ہے، صرف ایک جوابی مثال دینا کافی ہوتا ہے۔ ان مخصوص $2 \\times 2$ قالبوں کو درج کرنے سے ہم واضح طور پر دیکھ سکتے ہیں کہ بائیں طرف اور دائیں طرف حل کرنے سے بالکل مختلف قالب حاصل ہوتے ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "This means the familiar algebraic identity $(a+b)(a-b) = a^2 - b^2$ does not hold for matrices in general because matrix multiplication depends on order ($AB \\ne BA$). You can always check this for any pair of matrices by first testing if $AB = BA$; if not, the two sides will never be equal.",
+  "ur": "اس کا مطلب یہ ہے کہ الجبرا کا مشہور کلیہ $(a+b)(a-b) = a^2 - b^2$ عام طور پر قالبوں کے لیے درست نہیں ہوتا کیونکہ قالبوں کی ضرب میں ترتیب اہم ہوتی ہے ($AB \\ne BA$)۔ آپ کسی بھی دو قالبوں کے لیے اس کی پڑتال پہلے $AB = BA$ کو چیک کر کے کر سکتے ہیں؛ اگر یہ برابر نہ ہوں تو مساوات کی دونوں اطراف کبھی برابر نہیں ہوں گی۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

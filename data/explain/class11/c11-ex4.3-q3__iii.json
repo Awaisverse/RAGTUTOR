@@ -1,0 +1,45 @@
+{
+ "item": "c11-ex4.3-q3",
+ "label": "iii",
+ "answer_ref": "$(x_1, x_2, x_3) = \\left(\\frac{8}{3}, 2, - \\frac{7}{3}\\right)$",
+ "math": [
+  "AX = B:\\quad \\begin{bmatrix} 2 & -1 & 1 \\\\ 1 & 2 & 2 \\\\ 1 & -2 & -1 \\end{bmatrix}\\begin{bmatrix} x_1 \\\\ x_2 \\\\ x_3 \\end{bmatrix} = \\begin{bmatrix} 1 \\\\ 2 \\\\ 1 \\end{bmatrix}",
+  "\\Delta = \\begin{vmatrix} 2 & -1 & 1 \\\\ 1 & 2 & 2 \\\\ 1 & -2 & -1 \\end{vmatrix} = (2)\\left[(2)(-1) - (2)(-2)\\right] - (-1)\\left[(1)(-1) - (2)(1)\\right] + (1)\\left[(1)(-2) - (2)(1)\\right] = -3",
+  "\\Delta_{1} = \\begin{vmatrix} 1 & -1 & 1 \\\\ 2 & 2 & 2 \\\\ 1 & -2 & -1 \\end{vmatrix} = (1)\\left[(2)(-1) - (2)(-2)\\right] - (-1)\\left[(2)(-1) - (2)(1)\\right] + (1)\\left[(2)(-2) - (2)(1)\\right] = -8",
+  "\\Delta_{2} = \\begin{vmatrix} 2 & 1 & 1 \\\\ 1 & 2 & 2 \\\\ 1 & 1 & -1 \\end{vmatrix} = (2)\\left[(2)(-1) - (2)(1)\\right] - (1)\\left[(1)(-1) - (2)(1)\\right] + (1)\\left[(1)(1) - (2)(1)\\right] = -6",
+  "\\Delta_{3} = \\begin{vmatrix} 2 & -1 & 1 \\\\ 1 & 2 & 2 \\\\ 1 & -2 & 1 \\end{vmatrix} = (2)\\left[(2)(1) - (2)(-2)\\right] - (-1)\\left[(1)(1) - (2)(1)\\right] + (1)\\left[(1)(-2) - (2)(1)\\right] = 7",
+  "x_1 = \\frac{\\Delta_{1}}{\\Delta} = \\frac{8}{3},\\quad x_2 = \\frac{\\Delta_{2}}{\\Delta} = 2,\\quad x_3 = \\frac{\\Delta_{3}}{\\Delta} = - \\frac{7}{3}"
+ ],
+ "why": [
+  {
+   "en": "To apply Cramer's rule cleanly, we first organize the system into the standard matrix equation $AX = B$. This separates the variable coefficients into matrix $A$ and the right-hand side constants into matrix $B$, so we can clearly see which column belongs to which unknown.",
+   "ur": "Cramer's rule کو آسانی سے لاگو کرنے کے لیے ہم سب سے پہلے مساواتوں کے نظام کو معیاری قالب مساوات $AX = B$ کی شکل میں لکھتے ہیں۔ اس سے متغیرات کے عددی سر قالب $A$ میں اور مستقل مقداریں قالب $B$ میں الگ ہو جاتی ہیں، جس سے واضح ہو جاتا ہے کہ کون سا کالم کس نامعلوم متغیر سے تعلق رکھتا ہے۔"
+  },
+  {
+   "en": "Cramer's rule requires dividing by the main determinant $\\Delta$ of the coefficient matrix $A$, so we must check it first. Expanding along the first row gives $\\Delta = -3$, and since this is not zero, it guarantees that our system has a unique solution.",
+   "ur": "Cramer's rule کے تحت ہمیں عددی سروں کے قالب $A$ کے بنیادی مقطع $\\Delta$ سے تقسیم کرنا ہوتا ہے، اس لیے پہلے اسے معلوم کرنا ضروری ہے۔ پہلی قطار کے لحاظ سے حل کرنے پر $\\Delta = -3$ آتا ہے، اور چونکہ یہ صفر نہیں ہے، اس سے تصدیق ہوتی ہے کہ اس نظام کا ایک منفرد حل موجود ہے۔"
+  },
+  {
+   "en": "To prepare for finding $x_1$, Cramer's rule tells us to form a new determinant $\\Delta_1$ by swapping the $x_1$-coefficients in the first column with the constants from $B$. Evaluating this gives $\\Delta_1 = -8$, which will serve as the numerator for $x_1$.",
+   "ur": "متغیر $x_1$ کی قیمت نکالنے کی تیاری کے لیے، Cramer's rule کے مطابق ہم پہلے کالم کے ارکان کو قالب $B$ کی مستقل مقداروں سے بدل کر نیا مقطع $\\Delta_1$ بناتے ہیں۔ اسے حل کرنے سے $\\Delta_1 = -8$ ملتا ہے، جو آگے چل کر $x_1$ کے شمار کنندہ (numerator) کے طور پر استعمال ہو گا۔"
+  },
+  {
+   "en": "Similarly, to isolate the effect of the second unknown $x_2$, we replace the second column of $A$ with the constant column $B$ to create $\\Delta_2$. Expanding this determinant gives $\\Delta_2 = -6$, giving us the numerator needed to calculate $x_2$.",
+   "ur": "اسی طرح دوسرے نامعلوم متغیر $x_2$ کے لیے ہم قالب $A$ کے دوسرے کالم کو مستقل مقداروں کے کالم $B$ سے بدل کر مقطع $\\Delta_2$ بناتے ہیں۔ اس مقطع کو حل کرنے سے $\\Delta_2 = -6$ حاصل ہوتا ہے، جو $x_2$ کی قیمت معلوم کرنے کے لیے شمار کنندہ کا کام دے گا۔"
+  },
+  {
+   "en": "For the third unknown $x_3$, we replace the third column of $A$ with the constants from $B$ and compute the determinant $\\Delta_3$. The result $\\Delta_3 = 7$ completes the set of determinants required by Cramer's formula.",
+   "ur": "تیسرے نامعلوم متغیر $x_3$ کے لیے ہم قالب $A$ کے تیسرے کالم کو قالب $B$ کی مستقل مقداروں سے تبدیل کر کے مقطع $\\Delta_3$ معلوم کرتے ہیں۔ اس کا نتیجہ $\\Delta_3 = 7$ آتا ہے، جس سے Cramer's فارمولے کے لیے درکار تمام مقاطع مکمل ہو جاتے ہیں۔"
+  },
+  {
+   "en": "Finally, we apply the core formula of Cramer's rule by dividing each replaced determinant by the main determinant $\\Delta = -3$. This directly yields the exact values of all three unknowns: $x_1 = \\frac{8}{3}$, $x_2 = 2$, and $x_3 = -\\frac{7}{3}$.",
+   "ur": "آخر میں ہم Cramer's rule کا بنیادی فارمولا استعمال کرتے ہوئے ہر تبدیل شدہ مقطع کو بنیادی مقطع $\\Delta = -3$ پر تقسیم کرتے ہیں۔ اس سے ہمیں براہِ راست تینوں نامعلوم متغیرات کی درست قیمتیں $x_1 = \\frac{8}{3}$، $x_2 = 2$ اور $x_3 = -\\frac{7}{3}$ حاصل ہو جاتی ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The ordered triple $(x_1, x_2, x_3) = \\left(\\frac{8}{3}, 2, -\\frac{7}{3}\\right)$ is the unique set of values that satisfies all three equations of the system simultaneously. You can easily verify this by substituting these values into the third equation $x_1 - 2x_2 - x_3 = 1$, which gives $\\frac{8}{3} - 2(2) - \\left(-\\frac{7}{3}\\right) = 1$, confirming our answer is completely correct.",
+  "ur": "مرتب ثلاثی $(x_1, x_2, x_3) = \\left(\\frac{8}{3}, 2, -\\frac{7}{3}\\right)$ ان قیمتوں کا وہ منفرد سیٹ ہے جو دیے گئے نظام کی تینوں مساواتوں کو بیک وقت درست ثابت کرتا ہے۔ آپ اس کی پڑتال ان قیمتوں کو تیسری مساوات $x_1 - 2x_2 - x_3 = 1$ میں درج کر کے باآسانی کر سکتے ہیں، جس سے $\\frac{8}{3} - 2(2) - \\left(-\\frac{7}{3}\\right) = 1$ حاصل ہوتا ہے اور تصدیق ہو جاتی ہے کہ ہمارا جواب بالکل درست ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

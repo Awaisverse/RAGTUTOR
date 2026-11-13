@@ -1,0 +1,30 @@
+{
+ "item": "c11-ex4.1-q4",
+ "label": "i",
+ "answer_ref": "$(A+B)^2 \\neq A^2+2AB+B^2$",
+ "math": [
+  "(A + B)^2 = (A + B)(A + B) = A(A + B) + B(A + B) = A^2 + AB + BA + B^2",
+  "AB + BA = 2AB \\text{ only if } AB = BA",
+  "A = \\begin{bmatrix} 1 & 1 \\\\ 0 & 1 \\end{bmatrix},\\ B = \\begin{bmatrix} 1 & 0 \\\\ 1 & 1 \\end{bmatrix}:\\quad (A + B)^2 = \\begin{bmatrix} 5 & 4 \\\\ 4 & 5 \\end{bmatrix},\\quad A^2 + 2AB + B^2 = \\begin{bmatrix} 6 & 4 \\\\ 4 & 4 \\end{bmatrix}"
+ ],
+ "why": [
+  {
+   "en": "We use the distributive law of matrix multiplication to expand $(A + B)^2$ carefully, keeping each matrix in its exact left-to-right position. Because the order of multiplication matters for matrices, this gives us four separate terms with $AB$ and $BA$ in the middle.",
+   "ur": "ہم قالبوں کی ضرب کے تقسیمی قانون کو استعمال کرتے ہوئے $(A + B)^2$ کو احتیاط سے کھولتے ہیں اور ہر قالب کی بائیں سے دائیں ترتیب برقرار رکھتے ہیں۔ چونکہ قالبوں کی ضرب میں ترتیب اہم ہوتی ہے، اس لیے ہمیں درمیان میں $AB$ اور $BA$ سمیت چار الگ الگ رقمیں ملتی ہیں۔"
+  },
+  {
+   "en": "In ordinary algebra, numbers commute so we can easily add the middle terms, but for matrices the commutative law of multiplication does not hold in general ($AB \\ne BA$). This tells us that $AB$ and $BA$ are usually two different matrices, so we cannot combine them into $2AB$.",
+   "ur": "عام الجبرا میں اعداد کی ترتیب بدلنے سے فرق نہیں پڑتا اس لیے ہم درمیانی رقموں کو جمع کر لیتے ہیں، لیکن قالبوں کی ضرب میں قانونِ مبادلہ عام طور پر لاگو نہیں ہوتا ($AB \\ne BA$)۔ اس سے ہمیں پتہ چلتا ہے کہ $AB$ اور $BA$ عموماً دو مختلف قالب ہوتے ہیں، اس لیے ہم انہیں ملا کر $2AB$ نہیں لکھ سکتے۔"
+  },
+  {
+   "en": "To prove that a rule fails in general, showing just one counterexample is enough. By calculating both sides with these specific $2 \\times 2$ matrices, we see that their corresponding entries do not match (for example, $5 \\ne 6$), confirming the two expressions are not equal.",
+   "ur": "یہ ثابت کرنے کے لیے کہ کوئی اصول عام طور پر درست نہیں ہے، صرف ایک جوابی مثال دینا کافی ہوتا ہے۔ ان مخصوص $2 \\times 2$ قالبوں کے ساتھ دونوں اطراف کو حل کرنے سے ہم دیکھتے ہیں کہ ان کے متناظر ارکان برابر نہیں ہیں (مثال کے طور پر $5 \\ne 6$)، جو تصدیق کرتا ہے کہ دونوں اطراف برابر نہیں ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "This final result means we cannot blindly apply the familiar algebraic identity $(a+b)^2 = a^2 + 2ab + b^2$ to matrices because matrix multiplication is not commutative. You can always check if two specific matrices are an exception to this by multiplying them both ways to see if $AB = BA$.",
+  "ur": "اس حتمی نتیجے کا مطلب ہے کہ ہم عام الجبرا کے مشہور کلیے $(a+b)^2 = a^2 + 2ab + b^2$ کو آنکھیں بند کر کے قالبوں پر لاگو نہیں کر سکتے کیونکہ قالبوں کی ضرب میں قانونِ مبادلہ لاگو نہیں ہوتا۔ آپ ہمیشہ دو مخصوص قالبوں کو دونوں ترتیب سے ضرب دے کر چیک کر سکتے ہیں کہ آیا ان کے لیے $AB = BA$ ہے یا نہیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

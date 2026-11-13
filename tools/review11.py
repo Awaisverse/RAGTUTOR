@@ -23,7 +23,7 @@ REPORT = ROOT / "data" / "class11" / "review.json"
 _lock = threading.Lock()
 
 
-SOURCES = {"1": ("questions_kanwal.json", "kanwal"), "2": ("questions_k02.json", "k02"), "3": ("questions_u03.json", "u03")}   # per unit: question index, page folder
+SOURCES = {"1": ("questions_kanwal.json", "kanwal"), "2": ("questions_k02.json", "k02"), "3": ("questions_u03.json", "u03"), "4": ("questions_u04.json", "u04")}   # per unit: question index, page folder
 
 
 def pages_for(it):

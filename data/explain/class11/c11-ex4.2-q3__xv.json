@@ -1,0 +1,50 @@
+{
+ "item": "c11-ex4.2-q3",
+ "label": "xv",
+ "answer_ref": "The required identity is proved.",
+ "math": [
+  "D = \\begin{vmatrix} a & b & c \\\\ c & a & b \\\\ b & c & a \\end{vmatrix}",
+  "C_1 \\to C_1 + C_2 + C_3:\\ D = \\begin{vmatrix} a + b + c & b & c \\\\ a + b + c & a & b \\\\ a + b + c & c & a \\end{vmatrix} = (a + b + c)\\begin{vmatrix} 1 & b & c \\\\ 1 & a & b \\\\ 1 & c & a \\end{vmatrix}",
+  "R_2 \\to R_2 - R_1,\\ R_3 \\to R_3 - R_1:\\ D = (a + b + c)\\begin{vmatrix} 1 & b & c \\\\ 0 & a - b & b - c \\\\ 0 & c - b & a - c \\end{vmatrix}",
+  "D = (a + b + c)\\left[(a - b)(a - c) - (b - c)(c - b)\\right] = (a + b + c)(a^2 + b^2 + c^2 - ab - bc - ca)",
+  "(a + b\\omega + c\\omega^2)(a + b\\omega^2 + c\\omega) = a^2 + b^2\\omega^3 + c^2\\omega^3 + ab(\\omega + \\omega^2) + bc(\\omega^2 + \\omega^4) + ca(\\omega + \\omega^2)",
+  "= a^2 + b^2 + c^2 - ab - bc - ca",
+  "D = (a + b + c)(a + b\\omega + c\\omega^2)(a + b\\omega^2 + c\\omega)"
+ ],
+ "why": [
+  {
+   "en": "We begin by naming the given determinant $D$ so we can work on the left-hand side cleanly. Keep the fundamental properties of the cube roots of unity, $\\omega^3 = 1$ and $1 + \\omega + \\omega^2 = 0$, in mind because we will need them later to match the right-hand side.",
+   "ur": "ہم دیے گئے مقطع کو $D$ کا نام دے کر شروعات کرتے ہیں تاکہ بائیں طرف کو آسانی سے حل کیا جا سکے۔ اکائی کے جذر المکعب کی بنیادی خصوصیات $\\omega^3 = 1$ اور $1 + \\omega + \\omega^2 = 0$ کو ذہن نشین رکھیں کیونکہ بعد میں دائیں طرف کے برابر لانے کے لیے ہمیں ان کی ضرورت پڑے گی۔"
+  },
+  {
+   "en": "Looking at the target answer, we need $(a + b + c)$ as a factor, and we notice each row contains $a$, $b$, and $c$. By using the determinant property of adding columns ($C_1 \\to C_1 + C_2 + C_3$), we create a common term in the first column and factor out $(a + b + c)$, leaving simple $1$s behind.",
+   "ur": "مطلوبہ جواب کو دیکھتے ہوئے ہمیں $(a + b + c)$ بطور جزو ضربی چاہیے، اور ہم دیکھتے ہیں کہ ہر قطار میں $a$، $b$ اور $c$ موجود ہیں۔ کالموں کو جمع کرنے کی مقطع کی خصوصیت ($C_1 \\to C_1 + C_2 + C_3$) استعمال کرتے ہوئے، ہم پہلے کالم میں ایک مشترک رقم بناتے ہیں اور $(a + b + c)$ کو باہر نکال لیتے ہیں، جس سے پیچھے سادہ $1$ رہ جاتے ہیں۔"
+  },
+  {
+   "en": "Whenever we get a column of $1$s in a determinant, the best strategy is to use row operations to turn most of them into zeros. This creates two zeros in the first column without changing the value of $D$, which makes expanding the determinant much easier in the next step.",
+   "ur": "جب بھی ہمیں کسی مقطع کے ایک کالم میں $1$ مل جاتے ہیں، توبہترین حکمت عملی یہ ہوتی ہے کہ قطار کے عوامل استعمال کر کے ان میں سے اکثر کو صفر بنا دیا جائے۔ اس سے $D$ کی قیمت بدلے بغیر پہلے کالم میں دو صفر بن جاتے ہیں، جس سے اگلے مرحلے میں مقطع کو پھیلانا بہت آسان ہو جاتا ہے۔"
+  },
+  {
+   "en": "Using cofactor expansion along the first column, the two zeros vanish and we only have to evaluate a simple $2 \\times 2$ determinant. Simplifying this algebraically gives us the complete expanded value of the left-hand side.",
+   "ur": "پہلے کالم کے لحاظ سے ہم عامل کے ذریعے پھیلانے سے، دونوں صفر ختم ہو جاتے ہیں اور ہمیں صرف ایک سادہ $2 \\times 2$ مقطع کو حل کرنا پڑتا ہے۔ اسے الجبرائی طور پر مختصر کرنے سے ہمیں بائیں طرف کی مکمل قیمت مل جاتی ہے۔"
+  },
+  {
+   "en": "Since it is tricky to factorize $a^2 + b^2 + c^2 - ab - bc - ca$ into $\\omega$ terms directly, a smart teacher's trick is to expand the complex factors from the right-hand side instead. Grouping the similar terms together prepares the expression so we can apply the properties of $\\omega$.",
+   "ur": "چونکہ $a^2 + b^2 + c^2 - ab - bc - ca$ کی براہِ راست $\\omega$ والی رقموں میں تجزی کرنا مشکل ہے، اس لیے ایک عمدہ طریقہ یہ ہے کہ دائیں طرف سے ان اجزائے ضربی کو آپس میں ضرب دے دی جائے۔ ایک جیسی رقموں کو اکٹھا کرنے سے عبارت تیار ہو جاتی ہے تاکہ ہم اس پر $\\omega$ کی خصوصیات لگا سکیں۔"
+  },
+  {
+   "en": "Here we apply the cube root of unity identities: $\\omega^3 = 1$, $\\omega^4 = \\omega^3 \\cdot \\omega = \\omega$, and from $1 + \\omega + \\omega^2 = 0$ we know $\\omega + \\omega^2 = -1$. Substituting these values cleans up all the $\\omega$ terms and leaves a pure algebraic expression that matches step 4.",
+   "ur": "یہاں ہم اکائی کے جذر المکعب کی مساواتیں استعمال کرتے ہیں: $\\omega^3 = 1$، $\\omega^4 = \\omega^3 \\cdot \\omega = \\omega$، اور $1 + \\omega + \\omega^2 = 0$ سے ہم جانتے ہیں کہ $\\omega + \\omega^2 = -1$ ہوتا ہے۔ یہ قیمتیں درج کرنے سے $\\omega$ والی تمام رقوم ختم ہو جاتی ہیں اور ایک خالص الجبرائی عبارت بچتی ہے جو مرحلہ 4 سے بالکل ملتی ہے۔"
+  },
+  {
+   "en": "By replacing $a^2 + b^2 + c^2 - ab - bc - ca$ in step 4 with its equivalent $\\omega$-factor form from steps 5 and 6, both sides meet. This completes the proof and shows the left-hand side is identical to the right-hand side.",
+   "ur": "مرحلہ 4 میں موجود $a^2 + b^2 + c^2 - ab - bc - ca$ کی جگہ مرحلہ 5 اور 6 سے حاصل شدہ اس کی مساوی $\\omega$ والی شکل رکھنے سے دونوں اطراف برابر ہو جاتی ہیں۔ اس سے ہمارا ثبوت مکمل ہوتا ہے اور ظاہر ہوتا ہے کہ بائیں طرف دائیں طرف کے بالکل برابر ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This result proves an important algebraic identity: the cyclic determinant of $a, b, c$ equals $a^3 + b^3 + c^3 - 3abc$, which can be completely broken down into three linear factors using the complex cube roots of unity, $\\omega$ and $\\omega^2$. You can easily check this by setting $a = 1, b = 0, c = 0$, which quickly gives $1 = (1)(1)(1) = 1$ on both sides.",
+  "ur": "یہ نتیجہ ایک اہم الجبرائی مساوات کو ثابت کرتا ہے: $a, b, c$ کا دوری (cyclic) مقطع $a^3 + b^3 + c^3 - 3abc$ کے برابر ہوتا ہے، جسے اکائی کے غیر حقیقی جذر المکعب $\\omega$ اور $\\omega^2$ کی مدد سے تین یک درجی اجزائے ضربی میں مکمل طور پر توڑا جا سکتا ہے۔ آپ اس کیپڑتال آسانی سے $a = 1, b = 0, c = 0$ رکھ کر کر سکتے ہیں، جس سے دونوں طرف فوراً $1 = (1)(1)(1) = 1$ حاصل ہوتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

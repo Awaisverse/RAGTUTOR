@@ -1,0 +1,45 @@
+{
+ "item": "c11-ex4.3-q3",
+ "label": "i",
+ "answer_ref": "$(x, y, z) = (1, 0, 1)$",
+ "math": [
+  "AX = B:\\quad \\begin{bmatrix} 2 & 1 & -1 \\\\ 1 & -1 & 2 \\\\ 3 & 2 & 1 \\end{bmatrix}\\begin{bmatrix} x \\\\ y \\\\ z \\end{bmatrix} = \\begin{bmatrix} 1 \\\\ 3 \\\\ 4 \\end{bmatrix}",
+  "\\Delta = \\begin{vmatrix} 2 & 1 & -1 \\\\ 1 & -1 & 2 \\\\ 3 & 2 & 1 \\end{vmatrix} = (2)\\left[(-1)(1) - (2)(2)\\right] - (1)\\left[(1)(1) - (2)(3)\\right] + (-1)\\left[(1)(2) - (-1)(3)\\right] = -10",
+  "\\Delta_{1} = \\begin{vmatrix} 1 & 1 & -1 \\\\ 3 & -1 & 2 \\\\ 4 & 2 & 1 \\end{vmatrix} = (1)\\left[(-1)(1) - (2)(2)\\right] - (1)\\left[(3)(1) - (2)(4)\\right] + (-1)\\left[(3)(2) - (-1)(4)\\right] = -10",
+  "\\Delta_{2} = \\begin{vmatrix} 2 & 1 & -1 \\\\ 1 & 3 & 2 \\\\ 3 & 4 & 1 \\end{vmatrix} = (2)\\left[(3)(1) - (2)(4)\\right] - (1)\\left[(1)(1) - (2)(3)\\right] + (-1)\\left[(1)(4) - (3)(3)\\right] = 0",
+  "\\Delta_{3} = \\begin{vmatrix} 2 & 1 & 1 \\\\ 1 & -1 & 3 \\\\ 3 & 2 & 4 \\end{vmatrix} = (2)\\left[(-1)(4) - (3)(2)\\right] - (1)\\left[(1)(4) - (3)(3)\\right] + (1)\\left[(1)(2) - (-1)(3)\\right] = -10",
+  "x = \\frac{\\Delta_{1}}{\\Delta} = 1,\\quad y = \\frac{\\Delta_{2}}{\\Delta} = 0,\\quad z = \\frac{\\Delta_{3}}{\\Delta} = 1"
+ ],
+ "why": [
+  {
+   "en": "To apply Cramer's rule cleanly, we first organize the system of linear equations into the standard matrix form $AX = B$. Separating the coefficients of $x, y, z$ from the right-hand side constants $1, 3, 4$ prepares the columns we will swap in the upcoming steps.",
+   "ur": "کیمر کے اصول (Cramer's rule) کو آسانی سے استعمال کرنے کے لیے، ہم پہلے مساواتوں کے نظام کو معیاری قالب کی شکل $AX = B$ میں لکھتے ہیں۔ متغیرات $x, y, z$ کے عددی سروں کو دائیں طرف کے مستقل اعداد $1, 3, 4$ سے الگ کرنے سے ہمیں وہ کالم مل جاتے ہیں جنہیں ہم اگلے مراحل میں تبدیل کریں گے۔"
+  },
+  {
+   "en": "We expand the main coefficient matrix $A$ along the first row to find its determinant $\\Delta$, because Cramer's rule only works when the matrix is non-singular. Getting $\\Delta = -10$, which is not $0$, guarantees that a unique solution exists and gives us the denominator for our final formulas.",
+   "ur": "ہم عددی سروں کے قالب $A$ کا مقطع $\\Delta$ معلوم کرنے کے لیے اسے پہلی قطار سے کھولتے ہیں، کیونکہ کیمر کا اصول تبھی کام کرتا ہے جب قالب غیر نادر ہو۔ جواب $\\Delta = -10$ آنا، جو کہ $0$ نہیں ہے، اس بات کی ضمانت دیتا ہے کہ ایک منفرد حل موجود ہے اور یہ ہمیں آخری فارمولوں کے لیے مخرج (denominator) فراہم کرتا ہے۔"
+  },
+  {
+   "en": "According to Cramer's rule, to isolate the effect of the first variable $x$, we substitute the constant matrix $B$ in place of the first column of $A$. Evaluating this new determinant gives $\\Delta_1 = -10$, which will serve as the numerator for finding $x$.",
+   "ur": "کیمر کے اصول کے مطابق، پہلے متغیر $x$ کی قیمت معلوم کرنے کے لیے ہم قالب $A$ کے پہلے کالم کی جگہ مستقل اعداد کا کالم $B$ رکھتے ہیں۔ اس نئے مقطع کو حل کرنے سے ہمیں $\\Delta_1 = -10$ ملتا ہے، جو $x$ معلوم کرنے کے لیے شمار کنندہ (numerator) کا کام کرے گا۔"
+  },
+  {
+   "en": "Next, to prepare for finding the second variable $y$, we put the constants $1, 3, 4$ into the second column while keeping the first and third columns as they were in $A$. Expanding this determinant results in $\\Delta_2 = 0$, which tells us right away that the value of $y$ will turn out to be $0$.",
+   "ur": "اس کے بعد، دوسرے متغیر $y$ کو معلوم کرنے کی تیاری کے لیے، ہم پہلے اور تیسرے کالم کو قالب $A$ کی طرح برقرار رکھتے ہوئے دوسرے کالم میں مستقل اعداد $1, 3, 4$ رکھتے ہیں۔ اس مقطع کو کھولنے سے نتیجہ $\\Delta_2 = 0$ آتا ہے، جو ہمیں فوراً بتا دیتا ہے کہ $y$ کی قیمت $0$ نکلے گی۔"
+  },
+  {
+   "en": "Similarly, to target the third variable $z$, we replace the third column of $A$ with the constants from $B$ and expand along the first row. The result $\\Delta_3 = -10$ gives us the last numerator needed to complete the solution.",
+   "ur": "اسی طرح، تیسرے متغیر $z$ کو معلوم کرنے کے لیے، ہم قالب $A$ کے تیسرے کالم کو $B$ کے مستقل اعداد سے بدل دیتے ہیں اور پہلی قطار کے لحاظ سے کھولتے ہیں۔ اس کا نتیجہ $\\Delta_3 = -10$ ہمیں حل مکمل کرنے کے لیے درکار آخری شمار کنندہ فراہم کرتا ہے۔"
+  },
+  {
+   "en": "Finally, we apply the core formulas of Cramer's rule by dividing each column-replaced determinant ($\\Delta_1, \\Delta_2, \\Delta_3$) by the main determinant $\\Delta = -10$. This simple division directly yields the exact values $x = 1$, $y = 0$, and $z = 1$.",
+   "ur": "آخر میں، ہم کیمر کے اصول کے بنیادی فارمولوں کا اطلاق کرتے ہوئے ہر تبدیل شدہ کالم والے مقطع ($\\Delta_1, \\Delta_2, \\Delta_3$) کو اصل مقطع $\\Delta = -10$ پر تقسیم کرتے ہیں۔ یہ سادہ سی تقسیم ہمیں براہِ راست $x = 1$، $y = 0$، اور $z = 1$ کی درست قیمتیں دے دیتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $(x, y, z) = (1, 0, 1)$ represents the unique set of values that satisfies all three given linear equations simultaneously. You can easily verify this in the exam by substituting $x = 1, y = 0, z = 1$ into the first equation $2x + y - z = 1$, which gives $2(1) + 0 - 1 = 1$, confirming our solution is completely correct.",
+  "ur": "آخری جواب $(x, y, z) = (1, 0, 1)$ ان قیمتوں کا وہ واحد سیٹ ہے جو دی گئی تینوں یک درجی مساواتوں کو بیک وقت درست ثابت کرتا ہے۔ آپ امتحان میں اس کی باآسانی تصدیق کر سکتے ہیں: پہلی مساوات $2x + y - z = 1$ میں $x = 1, y = 0, z = 1$ درج کرنے سے $2(1) + 0 - 1 = 1$ بنتا ہے، جو ثابت کرتا ہے کہ ہمارا حل بالکل درست ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

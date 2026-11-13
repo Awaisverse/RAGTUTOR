@@ -1,0 +1,65 @@
+{
+ "item": "c11-ex4.2-q3",
+ "label": "xi",
+ "answer_ref": "$D = (a - b)(b - c)(c - a)(ab + bc + ca - 1)$",
+ "math": [
+  "D = \\begin{vmatrix} 1 & 1 & 1 \\\\ a^{2} + 1 & b^{2} + 1 & c^{2} + 1 \\\\ a^{3} + a & b^{3} + b & c^{3} + c \\end{vmatrix}",
+  "= \\begin{vmatrix} 1 & 0 & 1 \\\\ a^{2} + 1 & b^{2} - a^{2} & c^{2} + 1 \\\\ a^{3} + a & b^{3} + b - a^{3} - a & c^{3} + c \\end{vmatrix}\\quad (C_2 \\to C_2 - C_1)",
+  "= \\begin{vmatrix} 1 & 0 & 0 \\\\ a^{2} + 1 & b^{2} - a^{2} & c^{2} - a^{2} \\\\ a^{3} + a & b^{3} + b - a^{3} - a & c^{3} + c - a^{3} - a \\end{vmatrix}\\quad (C_3 \\to C_3 - C_1)",
+  "= (b - a)\\begin{vmatrix} 1 & 0 & 0 \\\\ a^{2} + 1 & a + b & c^{2} - a^{2} \\\\ a^{3} + a & a^{2} + a b + b^{2} + 1 & c^{3} + c - a^{3} - a \\end{vmatrix}\\quad (\\text{taking } b - a \\text{ common from } C_2)",
+  "= (b - a)(c - a)\\begin{vmatrix} 1 & 0 & 0 \\\\ a^{2} + 1 & a + b & a + c \\\\ a^{3} + a & a^{2} + a b + b^{2} + 1 & a^{2} + a c + c^{2} + 1 \\end{vmatrix}\\quad (\\text{taking } c - a \\text{ common from } C_3)",
+  "D = (b - a)(c - a)\\begin{vmatrix} 1 & 0 & 0 \\\\ a^{2} + 1 & a + b & a + c \\\\ a^{3} + a & a^{2} + a b + b^{2} + 1 & a^{2} + a c + c^{2} + 1 \\end{vmatrix} = (b - a)(c - a)\\left[(1)\\begin{vmatrix} a + b & a + c \\\\ a^{2} + a b + b^{2} + 1 & a^{2} + a c + c^{2} + 1 \\end{vmatrix}\\right]",
+  "= (b - a)(c - a)\\left[(1)\\left[(a + b)(a^{2} + a c + c^{2} + 1) - (a + c)(a^{2} + a b + b^{2} + 1)\\right]\\right]",
+  "= (b - a)(c - a)\\left[(1)(a c^{2} + b c^{2} + b - a b^{2} - b^{2} c - c)\\right]",
+  "= (b - a)(c - a)\\left[a(c^2 - b^2) + bc(c - b) - (c - b)\\right]",
+  "= (b - a)(c - a)(c - b)\\left[a(c + b) + bc - 1\\right] = (a - b)(b - c)(c - a)(ab + bc + ca - 1)"
+ ],
+ "why": [
+  {
+   "en": "We start by naming the given determinant $D$ on the left-hand side so we can apply column operations to transform it into the required factored form.",
+   "ur": "ہم دیے گئے مقطع کو بائیں طرف $D$ کا نام دے کر شروعات کرتے ہیں تاکہ ہم اس پر کالم کے عوامل لاگو کر کے اسے مطلوبہ اجزائے ضربی کی شکل میں لا سکیں۔"
+  },
+  {
+   "en": "Whenever a row or column consists entirely of $1$s, subtracting one column from another is a great strategy to create zeros. By the property of determinants, subtracting column $1$ from column $2$ leaves the value of $D$ unchanged while giving us our first zero in row $1$ and factorable terms below it.",
+   "ur": "جب بھی کسی قطار یا کالم کے تمام ارکان $1$ ہوں، تو صفر بنانے کے لیے ایک کالم کو دوسرے سے تفریق کرنا ایک بہترین طریقہ ہے۔ مقطع کی خاصیت کے مطابق، کالم $2$ میں سے کالم $1$ کو تفریق کرنے سے $D$ کی قیمت تبدیل نہیں ہوتی جبکہ ہمیں پہلی قطار میں پہلا صفر اور اس کے نیچے قابلِ تجزیہ رقوم مل جاتی ہیں۔"
+  },
+  {
+   "en": "Using the same property, we subtract column $1$ from column $3$ to create a second zero in the first row. Having two zeros in row $1$ means that when we eventually expand the determinant, two out of three parts will simply vanish.",
+   "ur": "اسی خاصیت کا استعمال کرتے ہوئے، ہم پہلی قطار میں دوسرا صفر بنانے کے لیے کالم $3$ میں سے کالم $1$ کو تفریق کرتے ہیں۔ پہلی قطار میں دو صفر ہونے کا مطلب یہ ہے کہ جب ہم آخر کار مقطع کو کھولیں گے تو تین میں سے دو حصے خود بخود ختم ہو جائیں گے۔"
+  },
+  {
+   "en": "Using algebraic identities, $b^2 - a^2 = (b - a)(b + a)$ and $b^3 - a^3 + b - a = (b - a)(a^2 + ab + b^2 + 1)$, we see that $(b - a)$ is present in every entry of column $2$. By the scalar factor property of determinants, we pull $(b - a)$ outside, which simplifies column $2$ and gives us the first linear factor needed for our final answer.",
+   "ur": "الجبری کلیوں $b^2 - a^2 = (b - a)(b + a)$ اور $b^3 - a^3 + b - a = (b - a)(a^2 + ab + b^2 + 1)$ کو استعمال کرتے ہوئے ہم دیکھتے ہیں کہ کالم $2$ کے ہر رکن میں $(b - a)$ موجود ہے۔ مقطع کی مشترک جزو والی خاصیت کے تحت، ہم $(b - a)$ کو باہر نکال لیتے ہیں، جس سے کالم $2$ سادہ ہو جاتا ہے اور ہمیں اپنے حتمی جواب کے لیے پہلا یک درجی جزو مل جاتا ہے۔"
+  },
+  {
+   "en": "In the exact same way, every entry in column $3$ shares the factor $(c - a)$. Factoring it out of column $3$ brings us closer to the right-hand side and leaves much simpler expressions inside the determinant.",
+   "ur": "بالکل اسی طرح، کالم $3$ کے ہر رکن میں $(c - a)$ کا جزو مشترک ہے۔ اسے کالم $3$ سے باہر نکالنے سے ہم دائیں طرف والے مطلوبہ جواب کے مزید قریب پہنچ جاتے ہیں اور مقطع کے اندر بہت سادہ عبارتیں رہ جاتی ہیں۔"
+  },
+  {
+   "en": "Now that row $1$ is reduced to $1, 0, 0$, we expand the determinant along this row. Because the second and third entries are $0$, their cofactors drop out completely, reducing our $3 \\times 3$ determinant to a single $2 \\times 2$ determinant.",
+   "ur": "اب جب کہ پہلی قطار مختصر ہو کر $1, 0, 0$ رہ گئی ہے، ہم اس قطار کے لحاظ سے مقطع کو کھولتے ہیں۔ چونکہ دوسرا اور تیسرا رکن $0$ ہیں، اس لیے ان کے ہم عامل مکمل طور پر ختم ہو جاتے ہیں، جس سے ہمارا $3 \\times 3$ کا مقطع سمٹ کر ایک $2 \\times 2$ کے مقطع میں تبدیل ہو جاتا ہے۔"
+  },
+  {
+   "en": "We apply the definition of a $2 \\times 2$ determinant by multiplying the main diagonal entries and subtracting the product of the off-diagonal entries. This completely removes the determinant bars and turns the problem into pure algebra.",
+   "ur": "ہم $2 \\times 2$ مقطع کی تعریف لاگو کرتے ہوئے وتر کے ارکان کو ضرب دیتے ہیں اور اس میں سے دوسرے وتر کے ارکان کے حاصلِ ضرب کو تفریق کرتے ہیں۔ اس سے مقطع کی علامت مکمل طور پر ختم ہو جاتی ہے اور سوال خالص الجبرا میں بدل جاتا ہے۔"
+  },
+  {
+   "en": "We expand the brackets carefully and cancel out identical terms with opposite signs, such as $a^3$ and $-a^3$. This cleans up the expression so we can look for the remaining factors.",
+   "ur": "ہم قوسین کو احتیاط سے کھولتے ہیں اور مخالف علامتوں والی یکساں رقوم، جیسے $a^3$ اور $-a^3$، کو آپس میں کاٹ دیتے ہیں۔ اس سے عبارت صاف ہو جاتی ہے تاکہ ہم باقی ماندہ اجزائے ضربی تلاش کر سکیں۔"
+  },
+  {
+   "en": "To extract the missing factor $(b - c)$ or $(c - b)$, we rearrange and group the remaining six terms in pairs that share common variables. This strategic grouping makes the hidden common factor $(c - b)$ clearly visible in each pair.",
+   "ur": "باقی ماندہ جزو $(b - c)$ یا $(c - b)$ حاصل کرنے کے لیے، ہم بچی ہوئی چھ رقوم کو ایسے جوڑوں کی شکل میں ترتیب دیتے ہیں جن میں مشترک متغیرات موجود ہوں۔ اس حکمتِ عملی سے بنائے گئے جوڑوں میں چھپا ہوا مشترک جزو $(c - b)$ واضح طور پر نظر آنے لگتا ہے۔"
+  },
+  {
+   "en": "Applying $c^2 - b^2 = (c - b)(c + b)$, we factor out $(c - b)$ from the bracket. Finally, since $(b - a) = -(a - b)$ and $(c - b) = -(b - c)$, the two negative signs multiply to become positive, giving us the exact cyclic order of the right-hand side.",
+   "ur": "کلیہ $c^2 - b^2 = (c - b)(c + b)$ لاگو کرتے ہوئے، ہم قوس میں سے $(c - b)$ کو مشترک نکال لیتے ہیں۔ آخر میں، چونکہ $(b - a) = -(a - b)$ اور $(c - b) = -(b - c)$ ہوتا ہے، اس لیے دونوں منفی علامتیں ضرب کھا کر مثبت ہو جاتی ہیں، جس سے ہمیں دائیں طرف والی عبارت کی بالکل درست ترتیب حاصل ہو جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This proves the given identity, showing that the $3 \\times 3$ determinant factors neatly into $(a - b)(b - c)(c - a)(ab + bc + ca - 1)$ using column operations rather than long direct expansion. You can easily check this result: if you set $a = b$, two columns of the original determinant become identical, making the determinant $0$, which matches our answer since the factor $(a - b)$ also becomes $0$.",
+  "ur": "اس سے دی گئی مساوات ثابت ہو جاتی ہے، جو یہ ظاہر کرتی ہے کہ طویل براہِ راست کشادگی کے بجائے کالم کے عوامل استعمال کرنے سے یہ $3 \\times 3$ کا مقطع خوبصورتی سے $(a - b)(b - c)(c - a)(ab + bc + ca - 1)$ کے اجزائے ضربی میں تحلیل ہو جاتا ہے۔ آپ اس نتیجے کی باآسانی پڑتال کر سکتے ہیں: اگر آپ $a = b$ رکھیں، تو اصل مقطع کے دو کالم ایک جیسے ہو جاتے ہیں جس سے مقطع کی قیمت $0$ ہو جاتی ہے، اور یہ ہمارے جواب سے بالکل مطابقت رکھتا ہے کیونکہ اس صورت میں جزو $(a - b)$ بھی $0$ ہو جاتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

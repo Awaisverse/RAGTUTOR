@@ -1,0 +1,45 @@
+{
+ "item": "c11-ex4.3-q3",
+ "label": "ii",
+ "answer_ref": "$(x_1, x_2, x_3) = \\left(\\frac{68}{55}, \\frac{59}{55}, \\frac{62}{55}\\right)$",
+ "math": [
+  "AX = B:\\quad \\begin{bmatrix} 1 & 2 & -3 \\\\ 4 & -1 & 1 \\\\ -2 & 3 & 2 \\end{bmatrix}\\begin{bmatrix} x_1 \\\\ x_2 \\\\ x_3 \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 5 \\\\ 3 \\end{bmatrix}",
+  "\\Delta = \\begin{vmatrix} 1 & 2 & -3 \\\\ 4 & -1 & 1 \\\\ -2 & 3 & 2 \\end{vmatrix} = (1)\\left[(-1)(2) - (1)(3)\\right] - (2)\\left[(4)(2) - (1)(-2)\\right] + (-3)\\left[(4)(3) - (-1)(-2)\\right] = -55",
+  "\\Delta_{1} = \\begin{vmatrix} 0 & 2 & -3 \\\\ 5 & -1 & 1 \\\\ 3 & 3 & 2 \\end{vmatrix} = -(2)\\left[(5)(2) - (1)(3)\\right] + (-3)\\left[(5)(3) - (-1)(3)\\right] = -68",
+  "\\Delta_{2} = \\begin{vmatrix} 1 & 0 & -3 \\\\ 4 & 5 & 1 \\\\ -2 & 3 & 2 \\end{vmatrix} = (1)\\left[(5)(2) - (1)(3)\\right] + (-3)\\left[(4)(3) - (5)(-2)\\right] = -59",
+  "\\Delta_{3} = \\begin{vmatrix} 1 & 2 & 0 \\\\ 4 & -1 & 5 \\\\ -2 & 3 & 3 \\end{vmatrix} = (1)\\left[(-1)(3) - (5)(3)\\right] - (2)\\left[(4)(3) - (5)(-2)\\right] = -62",
+  "x_1 = \\frac{\\Delta_{1}}{\\Delta} = \\frac{68}{55},\\quad x_2 = \\frac{\\Delta_{2}}{\\Delta} = \\frac{59}{55},\\quad x_3 = \\frac{\\Delta_{3}}{\\Delta} = \\frac{62}{55}"
+ ],
+ "why": [
+  {
+   "en": "To apply Cramer's rule cleanly, we first organize the given linear equations into the standard matrix form $AX = B$. This separates the variable coefficients into matrix $A$ and the right-hand side constants into matrix $B$ so we can easily swap columns in the next steps.",
+   "ur": "کریمر کا اصول (Cramer's rule) آسانی سے لگانے کے لیے ہم سب سے پہلے دی گئی مساواتوں کو معیاری میٹرکس کی شکل $AX = B$ میں لکھتے ہیں۔ اس سے متغیرات کے عددی سر (coefficients) میٹرکس $A$ میں اور مستقل مقداریں (constants) میٹرکس $B$ میں الگ ہو جاتی ہیں، جس سے اگلے مراحل میں کالم تبدیل کرنا آسان ہو جائے گا۔"
+  },
+  {
+   "en": "Cramer's rule requires dividing by the main determinant $\\Delta = |A|$, so we must evaluate it first by expanding along the first row. Since $\\Delta = -55$ is not zero, this confirms that a unique solution exists and gives us the common denominator for all three variables.",
+   "ur": "کریمر کے اصول میں ہمیں بنیادی مقطع (determinant) یعنی $\\Delta = |A|$ سے تقسیم کرنا ہوتا ہے، اس لیے ہم پہلی قطار کے لحاظ سے اسے حل کر کے اس کی قیمت نکالتے ہیں۔ چونکہ $\\Delta = -55$ صفر نہیں ہے، اس سے تصدیق ہوتی ہے کہ اس نظام کا ایک منفرد حل موجود ہے اور یہ ہمیں تینوں متغیرات کے لیے مشترک مخرج (denominator) دے دیتا ہے۔"
+  },
+  {
+   "en": "By the definition of Cramer's rule, to find the numerator for the first variable $x_1$, we form a new determinant $\\Delta_1$ by replacing the first column of $\\Delta$ with the constant column $B$. Expanding this determinant gives $-68$, which is the exact value we will divide by $\\Delta$ to get $x_1$.",
+   "ur": "کریمر کے اصول کی تعریف کے مطابق، پہلے متغیر $x_1$ کا شمار کنندہ (numerator) معلوم کرنے کے لیے ہم $\\Delta$ کے پہلے کالم کو مستقل مقداروں کے کالم $B$ سے بدل کر نیا مقطع $\\Delta_1$ بناتے ہیں۔ اسے حل کرنے سے $-68$ آتا ہے، جسے ہم بعد میں $x_1$ کی قیمت نکالنے کے لیے $\\Delta$ پر تقسیم کریں گے۔"
+  },
+  {
+   "en": "Next, to prepare for finding $x_2$, we replace the second column of the original coefficient matrix with the constants from $B$ to create $\\Delta_2$. Calculating this determinant gives $-59$, which serves as the numerator in the formula for $x_2$.",
+   "ur": "اس کے بعد، $x_2$ معلوم کرنے کی تیاری کے لیے ہم اصل میٹرکس کے دوسرے کالم کو $B$ کی مستقل مقداروں سے بدل کر $\\Delta_2$ بناتے ہیں۔ اس مقطع کو حل کرنے سے $-59$ حاصل ہوتا ہے، جو $x_2$ کے فارمولے میں شمار کنندہ کا کام دے گا۔"
+  },
+  {
+   "en": "Similarly, for the third variable $x_3$, we replace the third column of $\\Delta$ with the constant column $B$ to form the determinant $\\Delta_3$. Evaluating this gives $-62$, completing all the determinant calculations needed for our final step.",
+   "ur": "اسی طرح تیسرے متغیر $x_3$ کے لیے، ہم $\\Delta$ کے تیسرے کالم کو مستقل مقداروں کے کالم $B$ سے بدل کر مقطع $\\Delta_3$ بناتے ہیں۔ اس کی قیمت $-62$ نکلتی ہے، جس سے ہمارے آخری مرحلے کے لیے ضروری تمام مقاطع کی قیمتیں مکمل ہو جاتی ہیں۔"
+  },
+  {
+   "en": "Finally, we apply Cramer's rule formulas by dividing each replaced determinant ($\\Delta_1, \\Delta_2, \\Delta_3$) by the main determinant $\\Delta = -55$. The negative signs cancel out in each fraction, giving us the exact values of $x_1$, $x_2$, and $x_3$.",
+   "ur": "آخر میں، ہم کریمر کے اصول کے فارمولے استعمال کرتے ہوئے ہر تبدیل شدہ مقطع ($\\Delta_1, \\Delta_2, \\Delta_3$) کو بنیادی مقطع $\\Delta = -55$ پر تقسیم کرتے ہیں۔ ہر کسر میں منفی کی علامتیں آپس میں کٹ جاتی ہیں اور ہمیں $x_1$، $x_2$ اور $x_3$ کی درست قیمتیں مل جاتی ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $(x_1, x_2, x_3) = \\left(\\frac{68}{55}, \\frac{59}{55}, \\frac{62}{55}\\right)$ is the unique set of values that satisfies all three given equations at the same time. You can check this result by substituting these three fractions back into the first equation $x_1 + 2x_2 - 3x_3 = 0$ to verify that the left side simplifies to $0$.",
+  "ur": "آخری جواب $(x_1, x_2, x_3) = \\left(\\frac{68}{55}, \\frac{59}{55}, \\frac{62}{55}\\right)$ قیمتوں کا وہ واحد سیٹ ہے جو دی گئی تینوں مساواتوں کو بیک وقت درست ثابت کرتا ہے۔ آپ اپنے جواب کی پڑتال کے لیے ان تینوں کسروں کو پہلی مساوات $x_1 + 2x_2 - 3x_3 = 0$ میں درج کر کے دیکھ سکتے ہیں کہ بائیں طرف کو حل کرنے سے واقعی $0$ آتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

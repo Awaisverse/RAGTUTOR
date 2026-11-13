@@ -1,0 +1,65 @@
+{
+ "item": "c11-ex4.2-q3",
+ "label": "x",
+ "answer_ref": "$D = (x + y + z)(x - y)(y - z)(z - x)$",
+ "math": [
+  "D = \\begin{vmatrix} y + z & x + z & x + y \\\\ x & y & z \\\\ x^{2} & y^{2} & z^{2} \\end{vmatrix}",
+  "= \\begin{vmatrix} x + y + z & x + y + z & x + y + z \\\\ x & y & z \\\\ x^{2} & y^{2} & z^{2} \\end{vmatrix}\\quad (R_1 \\to R_1 + R_2)",
+  "= (x + y + z)\\begin{vmatrix} 1 & 1 & 1 \\\\ x & y & z \\\\ x^{2} & y^{2} & z^{2} \\end{vmatrix}\\quad (\\text{taking } x + y + z \\text{ common from } R_1)",
+  "= (x + y + z)\\begin{vmatrix} 1 & 0 & 1 \\\\ x & y - x & z \\\\ x^{2} & y^{2} - x^{2} & z^{2} \\end{vmatrix}\\quad (C_2 \\to C_2 - C_1)",
+  "= (x + y + z)\\begin{vmatrix} 1 & 0 & 0 \\\\ x & y - x & z - x \\\\ x^{2} & y^{2} - x^{2} & z^{2} - x^{2} \\end{vmatrix}\\quad (C_3 \\to C_3 - C_1)",
+  "= (y - x)(x + y + z)\\begin{vmatrix} 1 & 0 & 0 \\\\ x & 1 & z - x \\\\ x^{2} & x + y & z^{2} - x^{2} \\end{vmatrix}\\quad (\\text{taking } y - x \\text{ common from } C_2)",
+  "= (y - x)(z - x)(x + y + z)\\begin{vmatrix} 1 & 0 & 0 \\\\ x & 1 & 1 \\\\ x^{2} & x + y & x + z \\end{vmatrix}\\quad (\\text{taking } z - x \\text{ common from } C_3)",
+  "D = (y - x)(z - x)(x + y + z)\\begin{vmatrix} 1 & 0 & 0 \\\\ x & 1 & 1 \\\\ x^{2} & x + y & x + z \\end{vmatrix} = (y - x)(z - x)(x + y + z)\\left[(1)\\begin{vmatrix} 1 & 1 \\\\ x + y & x + z \\end{vmatrix}\\right]",
+  "= (y - x)(z - x)(x + y + z)\\left[(1)\\left[(1)(x + z) - (1)(x + y)\\right]\\right]",
+  "= (y - x)(z - x)(x + y + z)\\left[(1)(z - y)\\right] = - \\left(x - y\\right) \\left(x - z\\right) \\left(y - z\\right) \\left(x + y + z\\right) = (x + y + z)(x - y)(y - z)(z - x)"
+ ],
+ "why": [
+  {
+   "en": "We start by naming the given determinant on the left-hand side as $D$. This gives us a clear starting expression to apply determinant properties to until it matches the right-hand side.",
+   "ur": "ہم بائیں طرف دیے گئے مقطع کو $D$ کا نام دے کر آغاز کرتے ہیں۔ اس سے ہمیں ایک واضح عبارت مل جاتی ہے جس پر ہم مقطع کی خصوصیات لگا کر دائیں طرف والا جواب حاصل کریں گے۔"
+  },
+  {
+   "en": "Look at the required answer: we need a factor of $(x + y + z)$. By using the row operation property to add row 2 to row 1, every entry in the first row becomes identical and equal to $x + y + z$.",
+   "ur": "مطلوبہ جواب پر غور کریں: ہمیں $(x + y + z)$ کا جزو ضربی چاہیے۔ قطار کے عمل کی خصوصیت استعمال کرتے ہوئے دوسری قطار کو پہلی قطار میں جمع کرنے سے، پہلی قطار کا ہر رکن یکساں ہو کر $x + y + z$ بن جاتا ہے۔"
+  },
+  {
+   "en": "Using the scalar factor property of determinants, we factor out $(x + y + z)$ from the first row. This gives us the first piece of our final answer and leaves simple $1$s in row 1, which makes creating zeros very easy.",
+   "ur": "مقطع کی مشترک نکالنے والی خصوصیت کو استعمال کرتے ہوئے، ہم پہلی قطار سے $(x + y + z)$ کو باہر نکال لیتے ہیں۔ اس سے ہمیں اپنے حتمی جواب کا پہلا حصہ مل جاتا ہے اور پہلی قطار میں سادہ $1$ رہ جاتے ہیں، جس سے صفر بنانا بہت آسان ہو جاتا ہے۔"
+  },
+  {
+   "en": "To evaluate a determinant easily, we aim to create zeros in the row of $1$s. Subtracting column 1 from column 2 puts a zero in the first row and sets up factorable algebraic terms like $y - x$ and $y^2 - x^2$ in column 2.",
+   "ur": "مقطع کو آسانی سے حل کرنے کے لیے، ہمارا مقصد $1$ والی قطار میں صفر بنانا ہے۔ دوسرے کالم میں سے پہلا کالم تفریق کرنے سے پہلی قطار میں ایک صفر آ جاتا ہے اور دوسرے کالم میں $y - x$ اور $y^2 - x^2$ جیسی قابلِ تجزی الجبری رقوم بن جاتی ہیں۔"
+  },
+  {
+   "en": "Similarly, subtracting column 1 from column 3 creates a second zero in the first row. Now row 1 has two zeros, and column 3 also contains terms that share a common factor.",
+   "ur": "اسی طرح، تیسرے کالم میں سے پہلا کالم تفریق کرنے سے پہلی قطار میں دوسرا صفر بن جاتا ہے۔ اب پہلی قطار میں دو صفر ہیں، اور تیسرے کالم میں بھی ایسی رقوم آ گئی ہیں جن میں ایک مشترک جزو موجود ہے۔"
+  },
+  {
+   "en": "Since $y^2 - x^2 = (y - x)(y + x)$ by the difference of squares formula, every entry in column 2 is a multiple of $(y - x)$. Factoring $(y - x)$ out of column 2 simplifies the determinant and brings us closer to the required $(x - y)$ factor.",
+   "ur": "چونکہ مربّعوں کے فرق کے کلیے کے مطابق $y^2 - x^2 = (y - x)(y + x)$ ہوتا ہے، اس لیے دوسرے کالم کا ہر رکن $(y - x)$ کا مضاعف ہے۔ دوسرے کالم سے $(y - x)$ کو مشترک نکالنے سے مقطع سادہ ہو جاتا ہے اور یہ ہمیں مطلوبہ $(x - y)$ جزو کے قریب لے آتا ہے۔"
+  },
+  {
+   "en": "In the same way, since $z^2 - x^2 = (z - x)(z + x)$, we factor $(z - x)$ out of column 3. This provides another required factor of our final answer and reduces the remaining entries inside the determinant to simple linear terms.",
+   "ur": "بالکل اسی طرح، چونکہ $z^2 - x^2 = (z - x)(z + x)$ ہے، ہم تیسرے کالم سے $(z - x)$ کو مشترک نکال لیتے ہیں۔ اس سے ہمیں حتمی جواب کا ایک اور مطلوبہ جزو مل جاتا ہے اور مقطع کے اندر باقی ماندہ ارکان سادہ یک درجی رقوم میں بدل جاتے ہیں۔"
+  },
+  {
+   "en": "Because row 1 now has two zeros, expanding the determinant along row 1 is very quick as the second and third terms vanish. This reduces our $3 \\times 3$ determinant to a single $2 \\times 2$ determinant.",
+   "ur": "چونکہ اب پہلی قطار میں دو صفر ہیں، اس لیے پہلی قطار کے لحاظ سے مقطع کو پھیلانا بہت تیز اور آسان ہے کیونکہ دوسری اور تیسری رقوم صفر ہو جاتی ہیں۔ اس سے ہمارا $3 \\times 3$ کا مقطع سمٹ کر ایک سادہ $2 \\times 2$ کے مقطع میں تبدیل ہو جاتا ہے۔"
+  },
+  {
+   "en": "We apply the definition of a $2 \\times 2$ determinant by multiplying the main diagonal entries and subtracting the product of the off-diagonal entries. This completely removes the determinant bars and leaves simple algebra.",
+   "ur": "ہم $2 \\times 2$ مقطع کی تعریف استعمال کرتے ہوئے وتر کے ارکان کو ضرب دیتے ہیں اور دوسرے وتر کے ارکان کے حاصلِ ضرب کو اس میں سے تفریق کرتے ہیں۔ اس سے مقطع کی علامت مکمل طور پر ختم ہو جاتی ہے اور سادہ الجبرا رہ جاتا ہے۔"
+  },
+  {
+   "en": "Simplifying inside the bracket cancels $x$ and gives $(z - y)$. Since both $(y - x) = -(x - y)$ and $(z - y) = -(y - z)$, factoring a $-1$ from each of these two brackets gives $(-1)(-1) = +1$, matching the exact cyclic order of the right-hand side.",
+   "ur": "بریکٹ کے اندر مختصر کرنے سے $x$ کٹ جاتا ہے اور $(z - y)$ بچتا ہے۔ چونکہ $(y - x) = -(x - y)$ اور $(z - y) = -(y - z)$ ہوتا ہے، ان دونوں بریکٹوں سے $-1$ مشترک نکالنے سے $(-1)(-1) = +1$ بن جاتا ہے، جو دائیں طرف کی مطلوبہ ترتیب کے عین مطابق ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This proves the identity that the given $3 \\times 3$ determinant always equals the factored expression $(x + y + z)(x - y)(y - z)(z - x)$ without needing a long direct expansion. You can easily check this result: if you set $x = y$, two columns of the original determinant become identical so its value must be $0$, and indeed the factor $(x - y)$ in our answer also becomes $0$.",
+  "ur": "یہ ثابت کرتا ہے کہ دیا گیا $3 \\times 3$ مقطع ہمیشہ تجزی شدہ عبارت $(x + y + z)(x - y)(y - z)(z - x)$ کے برابر ہوتا ہے، اور ہمیں لمبے براہِ راست پھیلاؤ کی ضرورت نہیں پڑتی۔ آپ اس نتیجے کی آسانی سے پڑتال کر سکتے ہیں: اگر آپ $x = y$ رکھیں تو اصل مقطع کے دو کالم ایک جیسے ہو جاتے ہیں جس سے اس کی قیمت $0$ ہونی چاہیے، اور واقعی ہمارے جواب میں موجود جزو $(x - y)$ بھی $0$ ہو جاتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

@@ -1,0 +1,70 @@
+{
+ "item": "c11-ex4.1-q3",
+ "label": "i",
+ "answer_ref": "$(AB)C = A(BC) = \\begin{bmatrix} 3 - 6 i & -6 \\\\ 1 + 3 i & 3 \\end{bmatrix}$",
+ "math": [
+  "",
+  "AB = \\begin{bmatrix} i & 2 i \\\\ 1 & - i \\end{bmatrix}\\begin{bmatrix} - i & 1 \\\\ 2 i & 1 \\end{bmatrix} = \\begin{bmatrix} (i)(- i) + (2 i)(2 i) & (i)(1) + (2 i)(1) \\\\ (1)(- i) + (- i)(2 i) & (1)(1) + (- i)(1) \\end{bmatrix}",
+  "AB = \\begin{bmatrix} -3 & 3 i \\\\ 2 - i & 1 - i \\end{bmatrix}",
+  "(AB)C = \\begin{bmatrix} -3 & 3 i \\\\ 2 - i & 1 - i \\end{bmatrix}\\begin{bmatrix} 2 i & 1 \\\\ - i & i \\end{bmatrix} = \\begin{bmatrix} (-3)(2 i) + (3 i)(- i) & (-3)(1) + (3 i)(i) \\\\ (2 - i)(2 i) + (1 - i)(- i) & (2 - i)(1) + (1 - i)(i) \\end{bmatrix}",
+  "(AB)C = \\begin{bmatrix} 3 - 6 i & -6 \\\\ 1 + 3 i & 3 \\end{bmatrix}",
+  "",
+  "BC = \\begin{bmatrix} - i & 1 \\\\ 2 i & 1 \\end{bmatrix}\\begin{bmatrix} 2 i & 1 \\\\ - i & i \\end{bmatrix} = \\begin{bmatrix} (- i)(2 i) + (1)(- i) & (- i)(1) + (1)(i) \\\\ (2 i)(2 i) + (1)(- i) & (2 i)(1) + (1)(i) \\end{bmatrix}",
+  "BC = \\begin{bmatrix} 2 - i & 0 \\\\ -4 - i & 3 i \\end{bmatrix}",
+  "A(BC) = \\begin{bmatrix} i & 2 i \\\\ 1 & - i \\end{bmatrix}\\begin{bmatrix} 2 - i & 0 \\\\ -4 - i & 3 i \\end{bmatrix} = \\begin{bmatrix} (i)(2 - i) + (2 i)(-4 - i) & (i)(0) + (2 i)(3 i) \\\\ (1)(2 - i) + (- i)(-4 - i) & (1)(0) + (- i)(3 i) \\end{bmatrix}",
+  "A(BC) = \\begin{bmatrix} 3 - 6 i & -6 \\\\ 1 + 3 i & 3 \\end{bmatrix}",
+  "(AB)C = A(BC) = \\begin{bmatrix} 3 - 6 i & -6 \\\\ 1 + 3 i & 3 \\end{bmatrix}"
+ ],
+ "why": [
+  {
+   "en": "To prove the associative law of matrix multiplication, we start with the left-hand side $(AB)C$. By the rule of brackets, we must first multiply $A$ and $B$, keeping in mind the complex number property $i^2 = -1$.",
+   "ur": "قالبوں کی ضرب کا تلازمی قانون ثابت کرنے کے لیے ہم بائیں طرف $(AB)C$ سے آغاز کرتے ہیں۔ بریکٹ کے اصول کے مطابق ہمیں پہلے $A$ اور $B$ کو ضرب دینا ہوگا اور مختلط اعداد کی خصوصیت $i^2 = -1$ کو ذہن میں رکھنا ہوگا۔"
+  },
+  {
+   "en": "We apply the row-by-column multiplication rule because the number of columns in $A$ equals the number of rows in $B$. This sets up the products of corresponding entries so we can find the intermediate matrix $AB$.",
+   "ur": "ہم قطار کو کالم سے ضرب دینے کا اصول لاگو کرتے ہیں کیونکہ قالب $A$ میں کالموں کی تعداد قالب $B$ میں قطاروں کی تعداد کے برابر ہے۔ اس سے متناظر ارکان کی ضرب ترتیب پاتی ہے تاکہ ہم درمیانی قالب $AB$ معلوم کر سکیں۔"
+  },
+  {
+   "en": "We simplify each entry using $i^2 = -1$ and combine real and imaginary parts. This gives us the single $2 \\times 2$ matrix $AB$, which we now need to multiply with $C$.",
+   "ur": "ہم $i^2 = -1$ کا استعمال کرتے ہوئے ہر رکن کو مختصر کرتے ہیں اور حقیقی و خیالی حصوں کو یکجا کرتے ہیں۔ اس سے ہمیں ایک نیا $2 \\times 2$ قالب $AB$ ملتا ہے جسے اب ہم نے قالب $C$ سے ضرب دینا ہے۔"
+  },
+  {
+   "en": "Now we multiply the resulting matrix $AB$ on the left with matrix $C$ on the right, again using the row-by-column rule. Notice that order matters in matrix multiplication, so $AB$ stays first and $C$ stays second.",
+   "ur": "اب ہم حاصل شدہ قالب $AB$ کو بائیں طرف اور قالب $C$ کو دائیں طرف رکھ کر دوبارہ قطار اور کالم کے اصول سے ضرب دیتے ہیں۔ یاد رکھیں کہ قالبوں کی ضرب میں ترتیب بہت اہم ہے، اس لیے $AB$ پہلے اور $C$ بعد میں رہے گا۔"
+  },
+  {
+   "en": "Expanding the brackets and substituting $i^2 = -1$ simplifies the entries into standard complex numbers. This completes the left-hand side $(AB)C$, giving us our first target matrix.",
+   "ur": "بریکٹ کھولنے اور $i^2 = -1$ درج کرنے سے تمام ارکان معیاری مختلط اعداد کی شکل میں مختصر ہو جاتے ہیں۔ اس طرح بائیں طرف یعنی $(AB)C$ کا حل مکمل ہوتا ہے اور ہمیں پہلا مطلوبہ قالب مل جاتا ہے۔"
+  },
+  {
+   "en": "Next, we evaluate the right-hand side $A(BC)$ independently to see if it matches the left-hand side. Here, the brackets tell us to find the product $BC$ first before multiplying with $A$.",
+   "ur": "اب ہم دائیں طرف یعنی $A(BC)$ کو الگ سے حل کرتے ہیں تاکہ دیکھ سکیں کہ کیا یہ بائیں طرف کے برابر آتا ہے۔ یہاں بریکٹ ہمیں بتاتی ہے کہ قالب $A$ سے ضرب دینے سے پہلے ہمیں حاصل ضرب $BC$ معلوم کرنا ہے۔"
+  },
+  {
+   "en": "Since $B$ has $2$ columns and $C$ has $2$ rows, we apply the matrix multiplication definition to pair each row of $B$ with each column of $C$. This prepares the expressions for the intermediate matrix $BC$.",
+   "ur": "چونکہ قالب $B$ میں $2$ کالم اور قالب $C$ میں $2$ قطاریں ہیں، اس لیے ہم قالبوں کی ضرب کی تعریف کے مطابق $B$ کی ہر قطار کو $C$ کے ہر کالم کے ساتھ جوڑتے ہیں۔ اس سے درمیانی قالب $BC$ کے ارکان حاصل کرنے کے لیے عبارتیں تیار ہو جاتی ہیں۔"
+  },
+  {
+   "en": "Simplifying the products and using $i^2 = -1$ gives us the clean entries of matrix $BC$. Having this single matrix allows us to perform the final multiplication with $A$.",
+   "ur": "ضرب کو مختصر کرنے اور $i^2 = -1$ استعمال کرنے سے ہمیں قالب $BC$ کے صاف ارکان مل جاتے ہیں۔ یہ واحد قالب ملنے کے بعد اب ہم قالب $A$ کے ساتھ آخری ضرب کا عمل کر سکتے ہیں۔"
+  },
+  {
+   "en": "We now pre-multiply matrix $BC$ by matrix $A$, keeping $A$ on the left as required by the expression $A(BC)$. Each row of $A$ is multiplied entry-by-entry with each column of $BC$.",
+   "ur": "اب ہم عبارت $A(BC)$ کے تقاضے کے مطابق قالب $A$ کو بائیں طرف رکھتے ہوئے قالب $BC$ کے ساتھ ضرب دیتے ہیں۔ قالب $A$ کی ہر قطار کو $BC$ کے ہر کالم کے ساتھ رکن بہ رکن ضرب دی جاتی ہے۔"
+  },
+  {
+   "en": "Carrying out the complex arithmetic and replacing $i^2$ with $-1$ yields the final simplified entries for the right-hand side. We now have the complete matrix for $A(BC)$ to compare with our earlier result.",
+   "ur": "مختلط اعداد کا حساب لگانے اور $i^2$ کی جگہ $-1$ رکھنے سے ہمیں دائیں طرف کے آخری مختصر ارکان مل جاتے ہیں۔ اب ہمارے پاس پہلے نتیجے کے ساتھ موازنہ کرنے کے لیے $A(BC)$ کا مکمل قالب موجود ہے۔"
+  },
+  {
+   "en": "Comparing the result from Step 5 and Step 10, we see that every corresponding entry is identical. This confirms that the left-hand side equals the right-hand side.",
+   "ur": "مرحلہ 5 اور مرحلہ 10 کے نتائج کا موازنہ کرنے سے ہم دیکھتے ہیں کہ تمام متناظر ارکان بالکل ایک جیسے ہیں۔ اس سے تصدیق ہوتی ہے کہ بائیں طرف اور دائیں طرف آپس میں برابر ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final result $(AB)C = A(BC) = \\begin{bmatrix} 3 - 6 i & -6 \\\\ 1 + 3 i & 3 \\end{bmatrix}$ proves that the associative law of multiplication holds for these three complex matrices: regrouping the brackets does not change the final product. In exams, getting the exact same four entries on both sides is your built-in check that all your $i^2 = -1$ simplifications were correct.",
+  "ur": "آخری نتیجہ $(AB)C = A(BC) = \\begin{bmatrix} 3 - 6 i & -6 \\\\ 1 + 3 i & 3 \\end{bmatrix}$ ثابت کرتا ہے کہ ان تین مختلط قالبوں کے لیے ضرب کا تلازمی قانون درست ہے، یعنی بریکٹ کی جگہ بدلنے سے آخری حاصل ضرب تبدیل نہیں ہوتا۔ امتحان میں دونوں طرف بالکل ایک جیسے چار ارکان کا آنا اس بات کی خودکار تصدیق ہے کہ آپ کی $i^2 = -1$ والی تمام مختصر کاریاں درست تھیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

@@ -1,0 +1,50 @@
+{
+ "item": "c11-ex4.3-q2",
+ "label": "iii",
+ "answer_ref": "$\\text{rank}(A) = 4$",
+ "math": [
+  "A = \\begin{bmatrix} 3 & -1 & 3 & 0 & 1 \\\\ 1 & 2 & -1 & -3 & -2 \\\\ 2 & 3 & 4 & 2 & 1 \\\\ 2 & 5 & -2 & -3 & 3 \\end{bmatrix}",
+  "R_1 \\leftrightarrow R_2:\\ \\begin{bmatrix} 1 & 2 & -1 & -3 & -2 \\\\ 3 & -1 & 3 & 0 & 1 \\\\ 2 & 3 & 4 & 2 & 1 \\\\ 2 & 5 & -2 & -3 & 3 \\end{bmatrix}",
+  "R_2 \\to R_2 - 3R_1,\\ R_3 \\to R_3 - 2R_1,\\ R_4 \\to R_4 - 2R_1:\\ \\begin{bmatrix} 1 & 2 & -1 & -3 & -2 \\\\ 0 & -7 & 6 & 9 & 7 \\\\ 0 & -1 & 6 & 8 & 5 \\\\ 0 & 1 & 0 & 3 & 7 \\end{bmatrix}",
+  "R_2 \\leftrightarrow R_3:\\ \\begin{bmatrix} 1 & 2 & -1 & -3 & -2 \\\\ 0 & -1 & 6 & 8 & 5 \\\\ 0 & -7 & 6 & 9 & 7 \\\\ 0 & 1 & 0 & 3 & 7 \\end{bmatrix}",
+  "R_3 \\to R_3 - 7R_2,\\ R_4 \\to R_4 + R_2:\\ \\begin{bmatrix} 1 & 2 & -1 & -3 & -2 \\\\ 0 & -1 & 6 & 8 & 5 \\\\ 0 & 0 & -36 & -47 & -28 \\\\ 0 & 0 & 6 & 11 & 12 \\end{bmatrix}",
+  "R_4 \\to 6R_4 + R_3:\\ \\begin{bmatrix} 1 & 2 & -1 & -3 & -2 \\\\ 0 & -1 & 6 & 8 & 5 \\\\ 0 & 0 & -36 & -47 & -28 \\\\ 0 & 0 & 0 & 19 & 44 \\end{bmatrix}",
+  "\\text{rank}(A) = 4"
+ ],
+ "why": [
+  {
+   "en": "To find the rank of a matrix, our main strategy is to convert it into echelon form using elementary row operations. We start by naming the given $4 \\times 5$ matrix as $A$ so we can systematically count how many non-zero rows remain at the end.",
+   "ur": "کسی بھی قالب (matrix) کا رینک معلوم کرنے کے لیے ہمارا بنیادی طریقہ یہ ہے کہ ہم اسے قطاری عوامل (row operations) کے ذریعے ایشیلون فارم (echelon form) میں تبدیل کریں۔ ہم دیے گئے قالب کو $A$ کا نام دیتے ہیں تاکہ آخر میں غیر صفری قطاروں کو آسانی سے گن سکیں۔"
+  },
+  {
+   "en": "In echelon form, we prefer the top-left entry (the first pivot) to be $1$ so we can avoid messy fractions later. Swapping $R_1$ and $R_2$ puts $1$ in the first position, making the upcoming subtractions much easier.",
+   "ur": "ایشیلون فارم بناتے وقت ہماری کوشش ہوتی ہے کہ پہلا رکن (pivot) $1$ ہو تاکہ ہمیں بعد میں بٹے (fractions) کے مشکل حساب سے بچت ہو سکے۔ پہلی اور دوسری قطار کا تبادلہ کرنے سے، یعنی $R_1 \\leftrightarrow R_2$ سے، ہمیں سب سے اوپر بائیں کونے میں $1$ مل جاتا ہے۔"
+  },
+  {
+   "en": "By the definition of echelon form, all entries directly below a leading pivot must be zero. Using our new $R_1$ to eliminate the first entries of $R_2$, $R_3$, and $R_4$ clears the entire first column below $1$, completing the first step of our staircase pattern.",
+   "ur": "ایشیلون فارم کے اصول کے مطابق، پہلے غیر صفری رکن کے نیچے تمام ارکان کو صفر ہونا چاہیے۔ پہلی قطار $R_1$ کی مدد سے دوسری، تیسری اور چوتھی قطار کے پہلے ارکان کو صفر بنا کر ہم نے پہلا کالم مکمل طور پر صاف کر لیا ہے۔"
+  },
+  {
+   "en": "Now we focus on the second column, where $-7$ is currently in the pivot position of $R_2$. By swapping $R_2$ and $R_3$, we bring $-1$ into that spot, which is a much simpler number to use for clearing the rest of the second column.",
+   "ur": "اب ہم دوسرے کالم کو دیکھتے ہیں جہاں دوسری قطار میں $-7$ موجود ہے۔ دوسری اور تیسری قطار کا تبادلہ ($R_2 \\leftrightarrow R_3$) کرنے سے ہمیں اس جگہ پر $-1$ مل جاتا ہے، جس کی مدد سے اس کے نیچے والے ارکان کو صفر بنانا بہت آسان ہو جائے گا۔"
+  },
+  {
+   "en": "Continuing the echelon form process, we must make every entry below the second pivot ($-1$) equal to zero. Applying these row operations clears the second column entries in $R_3$ and $R_4$, pushing us one column closer to the final form.",
+   "ur": "ایشیلون فارم کے عمل کو آگے بڑھاتے ہوئے، اب ہمیں دوسرے کالم کے رکن $-1$ کے نیچے موجود تمام ارکان کو صفر بنانا ہے۔ ان قطاری عوامل کی مدد سے تیسری اور چوتھی قطار کے دوسرے ارکان صفر ہو جاتے ہیں اور ہمارا دوسرا کالم بھی مکمل ہو جاتا ہے۔"
+  },
+  {
+   "en": "To finish the staircase pattern, the entry in $R_4$ below the third pivot ($-36$) must also become zero. Multiplying $R_4$ by $6$ and adding $R_3$ eliminates the $6$ without introducing fractions, successfully placing the entire matrix into echelon form.",
+   "ur": "سیڑھی کی شکل (echelon form) مکمل کرنے کے لیے تیسری قطار کے رکن $-36$ کے نیچے موجود چوتھی قطار کے رکن $6$ کو بھی صفر ہونا چاہیے۔ چوتھی قطار کو $6$ سے ضرب دے کر اس میں تیسری قطار جمع کرنے سے بٹے کے بغیر یہ رکن صفر ہو جاتا ہے، اور یوں ہمارا قالب مکمل طور پر ایشیلون فارم میں آ جاتا ہے۔"
+  },
+  {
+   "en": "The definition of the rank of a matrix is simply the number of non-zero rows in its echelon form. Since none of our four rows became completely zero—the last row still has $19$ and $44$—we count all $4$ rows to get the final rank.",
+   "ur": "تعریف کے مطابق، کسی قالب کے ایشیلون فارم میں موجود غیر صفری قطاروں (non-zero rows) کی تعداد کو اس کا رینک کہتے ہیں۔ چونکہ ہماری چاروں قطاروں میں سے کوئی بھی مکمل طور پر صفر نہیں ہوئی (آخری قطار میں اب بھی $19$ اور $44$ موجود ہیں)، اس لیے اس قالب کا رینک $4$ ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $\\text{rank}(A) = 4$ means that all $4$ rows of the given matrix are linearly independent, so none of them is a redundant combination of the others. You can quickly check that this makes sense because the rank of a matrix with $4$ rows and $5$ columns can never be greater than $4$, and our echelon form clearly shows $4$ distinct leading entries ($1, -1, -36, 19$).",
+  "ur": "آخری جواب $\\text{rank}(A) = 4$ کا مطلب یہ ہے کہ دیے گئے قالب کی چاروں قطاریں ایک دوسرے سے آزاد (linearly independent) ہیں اور کوئی بھی قطار فالتو نہیں ہے۔ آپ اس جواب کی درستگی کا اندازہ اس بات سے بھی لگا سکتے ہیں کہ $4$ قطاروں اور $5$ کالموں والے قالب کا رینک کبھی بھی $4$ سے زیادہ نہیں ہو سکتا، اور ہماری ایشیلون فارم میں واضح طور پر $4$ غیر صفری قطاریں (جن کے پہلے ارکان $1, -1, -36, 19$ ہیں) نظر آ رہی ہیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

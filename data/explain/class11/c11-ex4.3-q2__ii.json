@@ -1,0 +1,40 @@
+{
+ "item": "c11-ex4.3-q2",
+ "label": "ii",
+ "answer_ref": "$\\text{rank}(A) = 3$",
+ "math": [
+  "A = \\begin{bmatrix} 1 & -2 & 3 \\\\ 2 & -4 & 6 \\\\ -1 & 0 & 2 \\\\ 0 & 1 & -1 \\end{bmatrix}",
+  "R_2 \\to R_2 - 2R_1,\\ R_3 \\to R_3 + R_1:\\ \\begin{bmatrix} 1 & -2 & 3 \\\\ 0 & 0 & 0 \\\\ 0 & -2 & 5 \\\\ 0 & 1 & -1 \\end{bmatrix}",
+  "R_2 \\leftrightarrow R_4:\\ \\begin{bmatrix} 1 & -2 & 3 \\\\ 0 & 1 & -1 \\\\ 0 & -2 & 5 \\\\ 0 & 0 & 0 \\end{bmatrix}",
+  "R_3 \\to R_3 + 2R_2:\\ \\begin{bmatrix} 1 & -2 & 3 \\\\ 0 & 1 & -1 \\\\ 0 & 0 & 3 \\\\ 0 & 0 & 0 \\end{bmatrix}",
+  "\\text{rank}(A) = 3"
+ ],
+ "why": [
+  {
+   "en": "To find the rank of matrix $A$, our goal is to simplify it into echelon form using elementary row operations. Once in echelon form, we simply count the non-zero rows to know the rank.",
+   "ur": "قالب $A$ کا رینک (rank) معلوم کرنے کے لیے ہمارا مقصد بنیادی قطار کے عوامل استعمال کرتے ہوئے اسے echelon form میں تبدیل کرنا ہے۔ جب یہ echelon form میں آ جائے، تو ہم رینک (rank) جاننے کے لیے صرف غیر صفر قطاروں کو گن لیتے ہیں۔"
+  },
+  {
+   "en": "In echelon form, all entries below the first leading $1$ (in row $1$, column $1$) must be zero. Performing these row operations clears the first column and also happens to turn the entire second row into zeros because it was an exact multiple of the first row.",
+   "ur": "Echelon form میں، پہلے اہم رکن $1$ (پہلی قطار، پہلے کالم میں) کے نیچے تمام ارکان کا صفر ہونا ضروری ہے۔ ان قطار کے عوامل کو کرنے سے پہلا کالم صاف ہو جاتا ہے اور پوری دوسری قطار بھی صفر بن جاتی ہے کیونکہ یہ پہلی قطار کا ہی ایک حاصل ضرب تھی۔"
+  },
+  {
+   "en": "According to the definition of echelon form, any row consisting entirely of zeros must be placed at the very bottom of the matrix. Swapping row $2$ and row $4$ moves the zero row to the bottom and gives us a convenient leading $1$ in the second row.",
+   "ur": "Echelon form کی تعریف کے مطابق، مکمل طور پر صفر پر مشتمل کسی بھی قطار کو قالب کے بالکل نیچے ہونا چاہیے۔ دوسری قطار اور چوتھی قطار کا تبادلہ کرنے سے صفر والی قطار نیچے چلی جاتی ہے اور ہمیں دوسری قطار میں ایک آسان اہم رکن $1$ مل جاتا ہے۔"
+  },
+  {
+   "en": "Next, we need to make the entry below the leading $1$ of the second row (which is $-2$ in row $3$) equal to zero. This operation completes the staircase pattern of zeros, meaning our matrix is now officially in echelon form.",
+   "ur": "اس کے بعد، ہمیں دوسری قطار کے اہم رکن $1$ کے نیچے موجود رکن (جو تیسری قطار میں $-2$ ہے) کو صفر بنانا ہے۔ یہ عمل صفروں کی سیڑھی جیسی ترتیب کو مکمل کرتا ہے، جس کا مطلب ہے کہ ہمارا قالب اب باضابطہ طور پر echelon form میں آ چکا ہے۔"
+  },
+  {
+   "en": "By definition, the rank of a matrix is the number of non-zero rows in its echelon form. Since the first $3$ rows contain non-zero entries and only the $4$th row is completely zero, the rank is $3$.",
+   "ur": "تعریف کے مطابق، کسی قالب کا رینک (rank) اس کی echelon form میں موجود غیر صفر قطاروں کی تعداد ہوتی ہے۔ چونکہ پہلی $3$ قطاروں میں غیر صفر ارکان موجود ہیں اور صرف چوتھی قطار مکمل طور پر صفر ہے، اس لیے رینک (rank) $3$ ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $\\text{rank}(A) = 3$ tells us that out of the $4$ rows in the original matrix, only $3$ are truly independent, while one row was redundant (since row $2$ was just $2$ times row $1$). As a quick check, the rank of a $4 \\times 3$ matrix can never exceed its smallest dimension ($3$), so $3$ is a completely valid maximum rank.",
+  "ur": "آخری جواب $\\text{rank}(A) = 3$ ہمیں بتاتا ہے کہ اصل قالب کی $4$ قطاروں میں سے صرف $3$ قطاریں حقیقی طور پر آزاد ہیں، جبکہ ایک قطار اضافی تھی (کیونکہ دوسری قطار پہلی قطار کا محض $2$ گنا تھی)۔ پڑتال کے طور پر، ایک $4 \\times 3$ قالب کا رینک (rank) کبھی بھی اس کی سب سے چھوٹی جہت ($3$) سے زیادہ نہیں ہو سکتا، لہٰذا $3$ ایک بالکل درست زیادہ سے زیادہ رینک (rank) ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

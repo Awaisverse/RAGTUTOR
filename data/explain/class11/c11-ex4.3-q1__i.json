@@ -1,0 +1,55 @@
+{
+ "item": "c11-ex4.3-q1",
+ "label": "i",
+ "answer_ref": "$A^{-1} = \\begin{bmatrix} 1 & \\frac{17}{4} & \\frac{1}{2} \\\\ 0 & - \\frac{1}{2} & 0 \\\\ \\frac{1}{3} & \\frac{11}{6} & \\frac{1}{3} \\end{bmatrix}$",
+ "math": [
+  "\\left[A \\mid I_3\\right] = \\left[\\begin{array}{ccc|ccc} 2 & 6 & -3 & 1 & 0 & 0 \\\\ 0 & -2 & 0 & 0 & 1 & 0 \\\\ -2 & 5 & 6 & 0 & 0 & 1 \\end{array}\\right]",
+  "R_1 \\to \\frac{1}{2}R_1:\\ \\left[\\begin{array}{ccc|ccc} 1 & 3 & - \\frac{3}{2} & \\frac{1}{2} & 0 & 0 \\\\ 0 & -2 & 0 & 0 & 1 & 0 \\\\ -2 & 5 & 6 & 0 & 0 & 1 \\end{array}\\right]",
+  "R_3 \\to R_3 + 2R_1:\\ \\left[\\begin{array}{ccc|ccc} 1 & 3 & - \\frac{3}{2} & \\frac{1}{2} & 0 & 0 \\\\ 0 & -2 & 0 & 0 & 1 & 0 \\\\ 0 & 11 & 3 & 1 & 0 & 1 \\end{array}\\right]",
+  "R_2 \\to - \\frac{1}{2}R_2:\\ \\left[\\begin{array}{ccc|ccc} 1 & 3 & - \\frac{3}{2} & \\frac{1}{2} & 0 & 0 \\\\ 0 & 1 & 0 & 0 & - \\frac{1}{2} & 0 \\\\ 0 & 11 & 3 & 1 & 0 & 1 \\end{array}\\right]",
+  "R_1 \\to R_1 - 3R_2,\\ R_3 \\to R_3 - 11R_2:\\ \\left[\\begin{array}{ccc|ccc} 1 & 0 & - \\frac{3}{2} & \\frac{1}{2} & \\frac{3}{2} & 0 \\\\ 0 & 1 & 0 & 0 & - \\frac{1}{2} & 0 \\\\ 0 & 0 & 3 & 1 & \\frac{11}{2} & 1 \\end{array}\\right]",
+  "R_3 \\to \\frac{1}{3}R_3:\\ \\left[\\begin{array}{ccc|ccc} 1 & 0 & - \\frac{3}{2} & \\frac{1}{2} & \\frac{3}{2} & 0 \\\\ 0 & 1 & 0 & 0 & - \\frac{1}{2} & 0 \\\\ 0 & 0 & 1 & \\frac{1}{3} & \\frac{11}{6} & \\frac{1}{3} \\end{array}\\right]",
+  "R_1 \\to R_1 + \\frac{3}{2}R_3:\\ \\left[\\begin{array}{ccc|ccc} 1 & 0 & 0 & 1 & \\frac{17}{4} & \\frac{1}{2} \\\\ 0 & 1 & 0 & 0 & - \\frac{1}{2} & 0 \\\\ 0 & 0 & 1 & \\frac{1}{3} & \\frac{11}{6} & \\frac{1}{3} \\end{array}\\right]",
+  "\\left[I_3 \\mid A^{-1}\\right] \\Rightarrow A^{-1} = \\begin{bmatrix} 1 & \\frac{17}{4} & \\frac{1}{2} \\\\ 0 & - \\frac{1}{2} & 0 \\\\ \\frac{1}{3} & \\frac{11}{6} & \\frac{1}{3} \\end{bmatrix}"
+ ],
+ "why": [
+  {
+   "en": "To find the inverse using elementary row operations, we set up an augmented matrix $\\left[A \\mid I_3\\right]$. Our goal is to apply row operations that turn the left side $A$ into the identity matrix $I_3$, which automatically transforms the right side into $A^{-1}$.",
+   "ur": "ابتدائی قطار کے عوامل کے ذریعے معکوس معلوم کرنے کے لیے ہم دیے گئے قالب $A$ اور اکائی قالب $I_3$ کو ملا کر $\\left[A \\mid I_3\\right]$ کی صورت میں لکھتے ہیں۔ ہمارا مقصد قطار کے عوامل لگا کر بائیں حصے کو اکائی قالب $I_3$ میں بدلنا ہے، جس سے دایاں حصہ خود بخود مطلوبہ معکوس $A^{-1}$ بن جائے گا۔"
+  },
+  {
+   "en": "In the Gauss-Jordan method, the first diagonal entry must be $1$ to match the identity matrix $I_3$. Scaling the entire first row by $\\frac{1}{2}$ turns the $2$ into a leading $1$ (pivot), which we will now use to clear out the rest of the first column.",
+   "ur": "گاس-جورڈن طریقے کے مطابق، اکائی قالب $I_3$ جیسا بنانے کے لیے پہلے وتر کا رکن $1$ ہونا چاہیے۔ پہلی قطار کو $\\frac{1}{2}$ سے ضرب دینے سے $2$ کی جگہ $1$ آ جاتا ہے، جس کی مدد سے اب ہم پہلے کالم کے باقی ارکان کو صفر بنائیں گے۔"
+  },
+  {
+   "en": "To make the first column look like the first column of $I_3$, all entries below our leading $1$ must become $0$. Since the second row already has a $0$ in the first column, we only need to eliminate the $-2$ in the third row by adding $2R_1$ to $R_3$.",
+   "ur": "پہلے کالم کو اکائی قالب $I_3$ کے پہلے کالم جیسا بنانے کے لیے، ہمارے پہلے رکن $1$ کے نیچے تمام ارکان کو $0$ ہونا چاہیے۔ چونکہ دوسری قطار میں پہلے ہی $0$ موجود ہے، اس لیے ہم صرف تیسری قطار کے رکن $-2$ کو ختم کرنے کے لیے $R_3$ میں $2R_1$ جمع کرتے ہیں۔"
+  },
+  {
+   "en": "With the first column complete, we move to the second diagonal position, which currently holds $-2$. Dividing the second row by $-2$ gives us the required leading $1$ in the middle, without disturbing the $0$ we already have in the first column.",
+   "ur": "پہلا کالم مکمل ہونے کے بعد، ہم دوسرے وتر کے مقام پر آتے ہیں جہاں اس وقت $-2$ موجود ہے۔ دوسری قطار کو $-2$ پر تقسیم کرنے سے ہمیں درمیان میں مطلوبہ $1$ مل جاتا ہے، اور اس سے پہلے کالم کا $0$ بھی متاثر نہیں ہوتا۔"
+  },
+  {
+   "en": "Using the new leading $1$ in the second row, we clear out the other entries ($3$ and $11$) above and below it in the second column. This completes the second column of our target identity matrix $I_3$ on the left.",
+   "ur": "دوسری قطار میں حاصل ہونے والے نئے $1$ کی مدد سے، ہم دوسرے کالم میں اس کے اوپر اور نیچے موجود ارکان ($3$ اور $11$) کو صفر بناتے ہیں۔ اس عمل سے بائیں جانب ہمارے مطلوبہ اکائی قالب $I_3$ کا دوسرا کالم بھی مکمل ہو جاتا ہے۔"
+  },
+  {
+   "en": "Next, we focus on the third diagonal entry, which is $3$. Multiplying the third row by $\\frac{1}{3}$ turns this entry into the final leading $1$ needed for the bottom-right corner of $I_3$.",
+   "ur": "اب ہم تیسرے وتر کے رکن پر توجہ دیتے ہیں جو کہ $3$ ہے۔ تیسری قطار کو $\\frac{1}{3}$ سے ضرب دینے سے یہ رکن $1$ بن جاتا ہے، جو کہ اکائی قالب $I_3$ کے آخری کونے کے لیے ضروری ہے۔"
+  },
+  {
+   "en": "To finish the third column of $I_3$, we must make the entries above the third pivot equal to $0$. Since the second row already has a $0$ in this column, we only need to eliminate $-\\frac{3}{2}$ in the first row by adding $\\frac{3}{2}R_3$ to $R_1$.",
+   "ur": "اکائی قالب $I_3$ کے تیسرے کالم کو مکمل کرنے کے لیے ہمیں تیسرے وتر کے رکن $1$ کے اوپر موجود تمام ارکان کو $0$ بنانا ہے۔ چونکہ دوسری قطار کے اس کالم میں پہلے ہی $0$ ہے، اس لیے ہم صرف پہلی قطار کے $-\\frac{3}{2}$ کو ختم کرنے کے لیے $R_1$ میں $\\frac{3}{2}R_3$ جمع کرتے ہیں۔"
+  },
+  {
+   "en": "By fundamental matrix theory, the exact same sequence of row operations that reduces $A$ to $I_3$ simultaneously transforms $I_3$ into $A^{-1}$. Since the left side is now completely $I_3$, we can read the inverse matrix directly from the right side.",
+   "ur": "قالبوں کے بنیادی اصول کے مطابق، قطار کے وہی عوامل جو $A$ کو اکائی قالب $I_3$ میں بدلتے ہیں، وہی ایک ساتھ $I_3$ کو معکوس قالب $A^{-1}$ میں تبدیل کر دیتے ہیں۔ چونکہ بایاں حصہ اب مکمل طور پر $I_3$ بن چکا ہے، اس لیے دایاں حصہ ہی ہمارا مطلوبہ معکوس قالب ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The resulting matrix $A^{-1} = \\begin{bmatrix} 1 & \\frac{17}{4} & \\frac{1}{2} \\\\ 0 & - \\frac{1}{2} & 0 \\\\ \\frac{1}{3} & \\frac{11}{6} & \\frac{1}{3} \\end{bmatrix}$ is the unique multiplicative inverse of the given matrix $A$. This means that if you multiply the original matrix $A$ by this $A^{-1}$, the result will be the $3 \\times 3$ identity matrix $I_3$, which is a great way to verify your answer in an exam.",
+  "ur": "حاصل ہونے والا قالب $A^{-1} = \\begin{bmatrix} 1 & \\frac{17}{4} & \\frac{1}{2} \\\\ 0 & - \\frac{1}{2} & 0 \\\\ \\frac{1}{3} & \\frac{11}{6} & \\frac{1}{3} \\end{bmatrix}$ دیے گئے قالب $A$ کا منفرد ضربی معکوس ہے۔ اس کا مطلب یہ ہے کہ اگر آپ اصل قالب $A$ کو اس معکوس $A^{-1}$ سے ضرب دیں تو جواب اکائی قالب $I_3$ آئے گا، اور امتحان میں اپنے جواب کی پڑتال کرنے کا یہ ایک بہترین طریقہ ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

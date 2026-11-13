@@ -1,0 +1,25 @@
+{
+ "item": "c11-ex4.3-q8",
+ "label": "",
+ "answer_ref": "$A = (6, -4, 1)$",
+ "math": [
+  "PX = X':\\quad \\begin{bmatrix} 5 & 0 & 0 \\\\ 0 & -5 & 0 \\\\ 0 & 0 & -5 \\end{bmatrix}\\begin{bmatrix} x \\\\ y \\\\ z \\end{bmatrix} = \\begin{bmatrix} 30 \\\\ 20 \\\\ -5 \\end{bmatrix}",
+  "X = P^{-1}X' = \\begin{bmatrix} \\frac{1}{5} & 0 & 0 \\\\ 0 & - \\frac{1}{5} & 0 \\\\ 0 & 0 & - \\frac{1}{5} \\end{bmatrix}\\begin{bmatrix} 30 \\\\ 20 \\\\ -5 \\end{bmatrix} = \\begin{bmatrix} 6 \\\\ -4 \\\\ 1 \\end{bmatrix}"
+ ],
+ "why": [
+  {
+   "en": "In geometry, when a matrix transforms a point, we multiply the transformation matrix $P$ by the original point's column matrix $X$ to get the new image $X'$. Setting up the equation $PX = X'$ connects our unknown coordinates $(x, y, z)$ with the given mapped point $(30, 20, -5)$.",
+   "ur": "جیومیٹری میں جب ایک قالب کسی نقطے کو تبدیل کرتا ہے، تو ہم تبدیلی کے قالب $P$ کو اصل نقطے کے کالم قالب $X$ سے ضرب دیتے ہیں تاکہ نیا نقطہ $X'$ حاصل ہو۔ مساوات $PX = X'$ بنانے سے ہمارے نامعلوم نقاط $(x, y, z)$ کا تعلق دیے گئے تبدیل شدہ نقطے $(30, 20, -5)$ کے ساتھ جڑ جاتا ہے۔"
+  },
+  {
+   "en": "To isolate the original point $X$, we multiply both sides by the inverse matrix $P^{-1}$ to undo the scaling transformation. Because $P$ is a diagonal matrix, its inverse is easily found by taking the reciprocal of each diagonal entry, and multiplying it with $X'$ directly gives us the values of $x, y,$ and $z$.",
+   "ur": "اصل نقطے $X$ کی قیمت نکالنے کے لیے ہم دونوں طرف معکوس قالب $P^{-1}$ سے ضرب دیتے ہیں تاکہ اس تبدیلی کو الٹ کیا جا سکے۔ چونکہ $P$ ایک وتر قالب ہے، اس لیے اس کا معکوس وتر کے ہر رکن کو الٹ کر باآسانی مل جاتا ہے، اور اسے $X'$ سے ضرب دینے سے ہمیں براہِ راست $x, y$ اور $z$ کی قیمتیں حاصل ہو جاتی ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "This tells us that the original point before the scaling transformation was $A = (6, -4, 1)$. You can easily check this by multiplying $6$ by $5$, $-4$ by $-5$, and $1$ by $-5$ from the diagonal of $P$, which correctly gives back the image $(30, 20, -5)$.",
+  "ur": "یہ جواب ہمیں بتاتا ہے کہ تبدیلی سے پہلے اصل نقطہ $A = (6, -4, 1)$ تھا۔ آپ اس کی تصدیق باآسانی کر سکتے ہیں: قالب $P$ کے وتر میں موجود ارکان کی مدد سے $6$ کو $5$ سے، $-4$ کو $-5$ سے، اور $1$ کو $-5$ سے ضرب دیں، جس سے بالکل درست نیا نقطہ $(30, 20, -5)$ واپس مل جاتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

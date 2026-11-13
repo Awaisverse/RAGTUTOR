@@ -1,0 +1,30 @@
+{
+ "item": "c11-ex4.2-q2",
+ "label": "ii",
+ "answer_ref": "$D = 0$",
+ "math": [
+  "D = \\begin{vmatrix} 5 & 6 & -1 \\\\ 2 & 2 & 0 \\\\ 2 & -8 & 10 \\end{vmatrix}",
+  "= \\begin{vmatrix} 0 & 6 & -1 \\\\ 0 & 2 & 0 \\\\ 0 & -8 & 10 \\end{vmatrix}\\quad (C_1 \\to C_1 - C_2 - C_3)",
+  "D = 0"
+ ],
+ "why": [
+  {
+   "en": "We begin by naming the given determinant $D$ so we can apply column properties to it neatly. Since the question asks us to solve without expansion, we look at the numbers across the rows to spot a relationship between the columns.",
+   "ur": "ہم دیے گئے مقطع (determinant) کو $D$ کا نام دیتے ہیں تاکہ اس پر کالم کی خصوصیات آسانی سے لگا سکیں۔ چونکہ سوال میں بغیر پھیلاؤ (expansion) کے حل کرنے کو کہا گیا ہے، اس لیے ہم کالموں کے درمیان تعلق تلاش کرنے کے لیے نمبروں کا جائزہ لیتے ہیں۔"
+  },
+  {
+   "en": "By the properties of determinants, subtracting other columns from a column ($C_1 \\to C_1 - C_2 - C_3$) does not change the determinant's value. We choose this specific operation because in each row, the first number equals the sum of the other two (for example, $5 - 6 - (-1) = 0$), which turns the entire first column into zeros.",
+   "ur": "مقطع کی خصوصیات کے مطابق، کسی ایک کالم میں سے دوسرے کالموں کو تفریق کرنے سے ($C_1 \\to C_1 - C_2 - C_3$) مقطع کی قیمت تبدیل نہیں ہوتی۔ ہم نے یہ عمل اس لیے چنا کیونکہ ہر قطار میں پہلا نمبر باقی دو نمبروں کے مجموعے کے برابر ہے، جس کی وجہ سے پہلا کالم مکمل طور پر صفر ہو جاتا ہے۔"
+  },
+  {
+   "en": "A fundamental property of determinants states that if all elements of any row or column are zero, the value of the determinant is immediately zero. Seeing that our first column consists entirely of $0$s, we directly conclude that $D = 0$ without needing to expand.",
+   "ur": "مقطع کی ایک بنیادی خصوصیت یہ ہے کہ اگر کسی بھی قطار یا کالم کے تمام ارکان صفر ہوں، تو پورے مقطع کی قیمت صفر ہوتی ہے۔ چونکہ ہمارے پہلے کالم کے تمام ارکان $0$ ہو چکے ہیں، اس لیے ہم بغیر پھیلاؤ کے براہِ راست نتیجہ نکالتے ہیں کہ $D = 0$ ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This proves that the value of the given determinant is indeed $0$, achieved purely through determinant properties as required. In your rough work, you can always verify this result by expanding the original determinant along the second row (since it already contains a $0$).",
+  "ur": "اس سے ثابت ہوتا ہے کہ دیے گئے مقطع کی قیمت واقعی $0$ ہے، اور یہ نتیجہ سوال کی شرط کے مطابق صرف مقطع کی خصوصیات استعمال کر کے حاصل کیا گیا ہے۔ آپ رف عمل میں دوسری قطار کے ذریعے عام پھیلاؤ (expansion) کر کے بھی اس جواب کی تصدیق کر سکتے ہیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

@@ -1,0 +1,65 @@
+{
+ "item": "c11-ex4.1-q3",
+ "label": "ii",
+ "answer_ref": "$A(B + C) = AB + AC$",
+ "math": [
+  "",
+  "B + C = \\begin{bmatrix} - i & 1 \\\\ 2 i & 1 \\end{bmatrix} + \\begin{bmatrix} 2 i & 1 \\\\ - i & i \\end{bmatrix} = \\begin{bmatrix} (- i) + (2 i) & 1 + (1) \\\\ (2 i) + (- i) & 1 + (i) \\end{bmatrix} = \\begin{bmatrix} i & 2 \\\\ i & 1 + i \\end{bmatrix}",
+  "A(B + C) = \\begin{bmatrix} i & 2 i \\\\ 1 & - i \\end{bmatrix}\\begin{bmatrix} i & 2 \\\\ i & 1 + i \\end{bmatrix} = \\begin{bmatrix} (i)(i) + (2 i)(i) & (i)(2) + (2 i)(1 + i) \\\\ (1)(i) + (- i)(i) & (1)(2) + (- i)(1 + i) \\end{bmatrix}",
+  "A(B + C) = \\begin{bmatrix} -3 & 4 i - 2 \\\\ 1 + i & 3 - i \\end{bmatrix}",
+  "",
+  "AB = \\begin{bmatrix} -3 & 3 i \\\\ 2 - i & 1 - i \\end{bmatrix}",
+  "AC = \\begin{bmatrix} i & 2 i \\\\ 1 & - i \\end{bmatrix}\\begin{bmatrix} 2 i & 1 \\\\ - i & i \\end{bmatrix} = \\begin{bmatrix} (i)(2 i) + (2 i)(- i) & (i)(1) + (2 i)(i) \\\\ (1)(2 i) + (- i)(- i) & (1)(1) + (- i)(i) \\end{bmatrix}",
+  "AC = \\begin{bmatrix} 0 & i - 2 \\\\ 2 i - 1 & 2 \\end{bmatrix}",
+  "AB + AC = \\begin{bmatrix} -3 & 3 i \\\\ 2 - i & 1 - i \\end{bmatrix} + \\begin{bmatrix} 0 & i - 2 \\\\ 2 i - 1 & 2 \\end{bmatrix} = \\begin{bmatrix} (-3) + (0) & (3 i) + (i - 2) \\\\ (2 - i) + (2 i - 1) & (1 - i) + (2) \\end{bmatrix} = \\begin{bmatrix} -3 & 4 i - 2 \\\\ 1 + i & 3 - i \\end{bmatrix}",
+  "A(B + C) = \\begin{bmatrix} -3 & 4 i - 2 \\\\ 1 + i & 3 - i \\end{bmatrix} = AB + AC"
+ ],
+ "why": [
+  {
+   "en": "To prove the equation, we first evaluate the left-hand side, $A(B + C)$. Following the standard order of operations, we must calculate the sum inside the brackets, $B + C$, before multiplying by $A$.",
+   "ur": "مساوات کو ثابت کرنے کے لیے ہم سب سے پہلے بائیں جانب یعنی $A(B + C)$ کو حل کرتے ہیں۔ حسابی اصولوں کے مطابق، قالب $A$ سے ضرب دینے سے پہلے ہمیں بریکٹ کے اندر موجود مجموعہ $B + C$ معلوم کرنا ہو گا۔"
+  },
+  {
+   "en": "Matrix addition is only possible when matrices have the same order, which is $2 \\times 2$ here. By adding the corresponding entries of $B$ and $C$, we get a single combined matrix ready to be multiplied by $A$.",
+   "ur": "قالبوں کی جمع صرف اس وقت ممکن ہوتی ہے جب ان کا مرتبہ ایک جیسا ہو، جو کہ یہاں $2 \\times 2$ ہے۔ قالب $B$ اور $C$ کے متناظر ارکان کو جمع کرنے سے ہمیں ایک نیا قالب مل جاتا ہے جسے اب $A$ سے ضرب دی جا سکتی ہے۔"
+  },
+  {
+   "en": "Since the number of columns in $A$ equals the number of rows in $(B + C)$, matrix multiplication is conformable. We apply the row-by-column multiplication rule to set up the entries of the product.",
+   "ur": "چونکہ قالب $A$ کے کالموں کی تعداد قالب $(B + C)$ کی قطاروں کی تعداد کے برابر ہے، اس لیے ان کی ضرب ممکن ہے۔ ہم قطار کو کالم سے ضرب دینے کا اصول استعمال کرتے ہوئے حاصلِ ضرب قالب کے ارکان ترتیب دیتے ہیں۔"
+  },
+  {
+   "en": "We simplify each entry using complex number arithmetic, remembering the key rule that $i^2 = -1$. This gives us the final simplified matrix for the entire left-hand side.",
+   "ur": "ہم مختلط اعداد کے اصولوں اور خاص طور پر $i^2 = -1$ کو استعمال کرتے ہوئے ہر رکن کو مختصر کرتے ہیں۔ اس سے ہمیں بائیں جانب یعنی $A(B + C)$ کا حتمی قالب حاصل ہو جاتا ہے۔"
+  },
+  {
+   "en": "Now we turn to the right-hand side, $AB + AC$, to see if it yields the exact same matrix. Here, the multiplication of matrices must be done before their addition.",
+   "ur": "اب ہم دائیں جانب یعنی $AB + AC$ کو حل کرتے ہیں تاکہ دیکھ سکیں کہ کیا اس سے بھی وہی قالب حاصل ہوتا ہے۔ یہاں قالبوں کی جمع سے پہلے ان کی ضرب کا عمل مکمل کرنا ضروری ہے۔"
+  },
+  {
+   "en": "Instead of calculating $AB$ all over again, we save time by directly using the result we already found in part (i). This gives us the first part of the right-hand side.",
+   "ur": "قالب $AB$ کو دوبارہ حل کرنے کے بجائے، وقت بچانے کے لیے ہم حصہ (i) میں پہلے سے معلوم کردہ نتیجہ براہِ راست استعمال کرتے ہیں۔ اس سے ہمیں دائیں جانب کا پہلا حصہ مل جاتا ہے۔"
+  },
+  {
+   "en": "Next, we find the product $AC$ using the same row-by-column multiplication rule, as $A$ has $2$ columns and $C$ has $2$ rows. This sets up the second matrix needed for the right-hand side.",
+   "ur": "اس کے بعد، ہم قطار کو کالم سے ضرب دینے کے اسی اصول سے حاصلِ ضرب $AC$ معلوم کرتے ہیں، کیونکہ $A$ میں $2$ کالم اور $C$ میں $2$ قطاریں ہیں۔ اس سے دائیں جانب کے لیے درکار دوسرا قالب تیار ہو جاتا ہے۔"
+  },
+  {
+   "en": "Again, using $i^2 = -1$ and combining like terms, we simplify the entries of $AC$. Now both products $AB$ and $AC$ are in their simplest forms and ready to be added.",
+   "ur": "ایک بار پھر $i^2 = -1$ کا استعمال کرتے ہوئے اور ایک جیسی رقموں کو ملا کر ہم $AC$ کے ارکان کو مختصر کرتے ہیں۔ اب دونوں حاصلِ ضرب $AB$ اور $AC$ اپنی سادہ ترین شکل میں ہیں اور جمع ہونے کے لیے تیار ہیں۔"
+  },
+  {
+   "en": "Since $AB$ and $AC$ are both $2 \\times 2$ matrices, we add their corresponding entries, carefully combining real parts with real parts and imaginary parts with imaginary parts. This produces the final matrix for the right-hand side.",
+   "ur": "چونکہ $AB$ اور $AC$ دونوں $2 \\times 2$ مرتبے کے قالب ہیں، اس لیے ہم ان کے متناظر ارکان کو جمع کرتے ہیں اور حقیقی حصوں کو حقیقی میں اور خیالی حصوں کو خیالی میں ملاتے ہیں۔ اس سے ہمیں دائیں جانب کا حتمی قالب مل جاتا ہے۔"
+  },
+  {
+   "en": "Comparing our results from step 4 and step 9, we see that every corresponding entry of both matrices is identical. This confirms that the left-hand side equals the right-hand side.",
+   "ur": "مرحلہ 4 اور مرحلہ 9 کے نتائج کا موازنہ کرنے سے ہم دیکھتے ہیں کہ دونوں قالبوں کا ہر متناظر رکن بالکل ایک جیسا ہے۔ اس سے ثابت ہوتا ہے کہ بائیں جانب دائیں جانب کے برابر ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This result proves the left distributive law of matrix multiplication over addition, $A(B + C) = AB + AC$, for the given matrices with complex entries. It shows that adding $B$ and $C$ first and then multiplying by $A$ gives the exact same result as multiplying $A$ with each matrix separately and then adding the products.",
+  "ur": "یہ نتیجہ دیے گئے مختلط ارکان والے قالبوں کے لیے جمع پر ضرب کے بائیں تقسیمی قانون یعنی $A(B + C) = AB + AC$ کو ثابت کرتا ہے۔ اس سے معلوم ہوتا ہے کہ پہلے $B$ اور $C$ کو جمع کر کے $A$ سے ضرب دی جائے، یا $A$ کو الگ الگ دونوں قالبوں سے ضرب دے کر بعد میں جمع کیا جائے، دونوں صورتوں میں جواب بالکل ایک جیسا آتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

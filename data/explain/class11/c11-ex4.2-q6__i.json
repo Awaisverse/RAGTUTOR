@@ -1,0 +1,60 @@
+{
+ "item": "c11-ex4.2-q6",
+ "label": "i",
+ "answer_ref": "$|AA^t| = 147, \\quad |A^tA| = 0$",
+ "math": [
+  "A^t = \\begin{bmatrix} -3 & 2 \\\\ 2 & 1 \\\\ -1 & 3 \\end{bmatrix}",
+  "AA^t = \\begin{bmatrix} -3 & 2 & -1 \\\\ 2 & 1 & 3 \\end{bmatrix}\\begin{bmatrix} -3 & 2 \\\\ 2 & 1 \\\\ -1 & 3 \\end{bmatrix} = \\begin{bmatrix} (-3)(-3) + (2)(2) + (-1)(-1) & (-3)(2) + (2)(1) + (-1)(3) \\\\ (2)(-3) + (1)(2) + (3)(-1) & (2)(2) + (1)(1) + (3)(3) \\end{bmatrix}",
+  "AA^t = \\begin{bmatrix} 14 & -7 \\\\ -7 & 14 \\end{bmatrix}",
+  "|AA^t| = \\begin{vmatrix} 14 & -7 \\\\ -7 & 14 \\end{vmatrix} = \\left[(14)(14) - (-7)(-7)\\right] = 147",
+  "A^tA = \\begin{bmatrix} -3 & 2 \\\\ 2 & 1 \\\\ -1 & 3 \\end{bmatrix}\\begin{bmatrix} -3 & 2 & -1 \\\\ 2 & 1 & 3 \\end{bmatrix} = \\begin{bmatrix} (-3)(-3) + (2)(2) & (-3)(2) + (2)(1) & (-3)(-1) + (2)(3) \\\\ (2)(-3) + (1)(2) & (2)(2) + (1)(1) & (2)(-1) + (1)(3) \\\\ (-1)(-3) + (3)(2) & (-1)(2) + (3)(1) & (-1)(-1) + (3)(3) \\end{bmatrix}",
+  "A^tA = \\begin{bmatrix} 13 & -4 & 9 \\\\ -4 & 5 & 1 \\\\ 9 & 1 & 10 \\end{bmatrix}",
+  "|A^tA| = \\begin{vmatrix} 13 & -4 & 9 \\\\ -4 & 5 & 1 \\\\ 9 & 1 & 10 \\end{vmatrix} = (13)\\begin{vmatrix} 5 & 1 \\\\ 1 & 10 \\end{vmatrix} - (-4)\\begin{vmatrix} -4 & 1 \\\\ 9 & 10 \\end{vmatrix} + (9)\\begin{vmatrix} -4 & 5 \\\\ 9 & 1 \\end{vmatrix}",
+  "= (13)\\left[(5)(10) - (1)(1)\\right] - (-4)\\left[(-4)(10) - (1)(9)\\right] + (9)\\left[(-4)(1) - (5)(9)\\right]",
+  "= (13)(49) - (-4)(-49) + (9)(-49) = 0"
+ ],
+ "why": [
+  {
+   "en": "Before we can multiply $A$ with its transpose $A^t$, we first need to find $A^t$ by applying the definition of transpose. This gives us a $3 \\times 2$ matrix that is ready to be multiplied with the original $2 \\times 3$ matrix $A$.",
+   "ur": "$A$ کو اس کے پلٹ (transpose) یعنی $A^t$ سے ضرب دینے سے پہلے، ہمیں پلٹ (transpose) کی تعریف کے مطابق $A^t$ معلوم کرنا ہوگا۔ اس سے ہمیں ایک $3 \\times 2$ کا قالب ملتا ہے جو اصل $2 \\times 3$ کے قالب $A$ سے ضرب کھانے کے لیے تیار ہے۔"
+  },
+  {
+   "en": "To find $|AA^t|$, we first compute the matrix product $AA^t$ using the row-by-column multiplication rule. Since we are multiplying a $2 \\times 3$ matrix by a $3 \\times 2$ matrix, this step sets up the entries of a square $2 \\times 2$ matrix, whose determinant can actually be found.",
+   "ur": "$|AA^t|$ معلوم کرنے کے لیے، ہم پہلے قطار کو کالم سے ضرب دینے کے اصول کے تحت قالبوں کا حاصل ضرب $AA^t$ نکالتے ہیں۔ چونکہ ہم ایک $2 \\times 3$ قالب کو $3 \\times 2$ قالب سے ضرب دے رہے ہیں، اس لیے یہ مرحلہ ہمیں ایک مربی $2 \\times 2$ قالب کے ارکان دیتا ہے، جس کا مقطع معلوم کیا جا سکتا ہے۔"
+  },
+  {
+   "en": "Simplifying the arithmetic gives us the exact $2 \\times 2$ symmetric matrix for $AA^t$. Having these final numerical entries allows us to directly apply the determinant formula in the next step.",
+   "ur": "حساب کتاب کو مختصر کرنے سے ہمیں $AA^t$ کے لیے ایک واضح $2 \\times 2$ قالب مل جاتا ہے۔ ان حتمی عددی ارکان کی مدد سے ہم اگلے مرحلے میں براہ راست مقطع کا فارمولا لگا سکتے ہیں۔"
+  },
+  {
+   "en": "Now that we have the $2 \\times 2$ matrix $AA^t$, we apply the $2 \\times 2$ determinant rule ($ad - bc$) to find its scalar value. This completes the first half of the question, showing that $|AA^t| = 147$.",
+   "ur": "اب جبکہ ہمارے پاس $2 \\times 2$ قالب $AA^t$ موجود ہے، ہم اس کی عددی قیمت معلوم کرنے کے لیے $2 \\times 2$ مقطع کا اصول ($ad - bc$) لگاتے ہیں۔ اس سے سوال کا پہلا حصہ مکمل ہوتا ہے اور پتہ چلتا ہے کہ $|AA^t| = 147$ ہے۔"
+  },
+  {
+   "en": "For the second part of the question, we reverse the order of multiplication to find $A^tA$. Because $A^t$ is $3 \\times 2$ and $A$ is $2 \\times 3$, the rule of matrix multiplication tells us that the result will now be a larger $3 \\times 3$ square matrix.",
+   "ur": "سوال کے دوسرے حصے کے لیے، ہم ضرب کی ترتیب الٹ کر $A^tA$ معلوم کرتے ہیں۔ چونکہ $A^t$ کا سائز $3 \\times 2$ ہے اور $A$ کا $2 \\times 3$ ہے، اس لیے قالبوں کی ضرب کا اصول بتاتا ہے کہ اب نتیجہ ایک بڑا $3 \\times 3$ مربی قالب ہوگا۔"
+  },
+  {
+   "en": "Doing the additions gives us the clean $3 \\times 3$ matrix for $A^tA$. We need these simplified entries so we can expand the $3 \\times 3$ determinant in the next step.",
+   "ur": "جمع کا عمل مکمل کرنے سے ہمیں $A^tA$ کے لیے ایک صاف $3 \\times 3$ قالب مل جاتا ہے۔ ہمیں ان مختصر شدہ ارکان کی ضرورت ہے تاکہ ہم اگلے مرحلے میں $3 \\times 3$ مقطع کو کھول سکیں۔"
+  },
+  {
+   "en": "To find the determinant of this $3 \\times 3$ matrix, we use cofactor expansion along the first row. This breaks down the harder $3 \\times 3$ determinant into three simpler $2 \\times 2$ determinants (minors).",
+   "ur": "اس $3 \\times 3$ قالب کا مقطع معلوم کرنے کے لیے ہم پہلی قطار کے لحاظ سے ہم عامل (cofactor) کے ذریعے پھیلاؤ کا طریقہ استعمال کرتے ہیں۔ یہ مشکل $3 \\times 3$ مقطع کو تین آسان $2 \\times 2$ مقطعوں میں تقسیم کر دیتا ہے۔"
+  },
+  {
+   "en": "We apply the $ad - bc$ rule to each of the three $2 \\times 2$ determinants. This removes the determinant bars and leaves us with simple arithmetic to finish the calculation.",
+   "ur": "ہم تینوں $2 \\times 2$ مقطعوں میں سے ہر ایک پر $ad - bc$ کا اصول لگاتے ہیں۔ اس سے مقطع کی علامتیں ختم ہو جاتی ہیں اور حساب مکمل کرنے کے لیے ہمارے پاس سادہ اعداد رہ جاتے ہیں۔"
+  },
+  {
+   "en": "Evaluating the brackets and adding the terms gives the final value of the determinant $|A^tA|$. This completes the second requirement of the problem, showing that $|A^tA| = 0$.",
+   "ur": "بریکٹوں کو حل کرنے اور رقموں کو جمع کرنے سے ہمیں مقطع $|A^tA|$ کی حتمی قیمت مل جاتی ہے۔ اس سے سوال کی دوسری شرط مکمل ہوتی ہے اور ظاہر ہوتا ہے کہ $|A^tA| = 0$ ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final results are $|AA^t| = 147$ and $|A^tA| = 0$. This clearly shows that changing the order of multiplication of a rectangular matrix and its transpose changes both the size of the resulting square matrix ($2 \\times 2$ versus $3 \\times 3$) and the value of its determinant. Since $A$ has only $2$ rows, the $3 \\times 3$ matrix $A^tA$ cannot have full rank, which is a quick way to check why its determinant must be $0$.",
+  "ur": "حتمی نتائج $|AA^t| = 147$ اور $|A^tA| = 0$ ہیں۔ اس سے واضح طور پر پتہ چلتا ہے کہ ایک مستطیلی قالب اور اس کے پلٹ (transpose) کی ضرب کی ترتیب بدلنے سے نہ صرف حاصل ہونے والے مربی قالب کا سائز ($2 \\times 2$ بمقابلہ $3 \\times 3$) بدل جاتا ہے بلکہ اس کے مقطع کی قیمت بھی بدل جاتی ہے۔ چونکہ $A$ میں صرف $2$ قطاریں ہیں، اس لیے $3 \\times 3$ قالب $A^tA$ کا رینک (rank) پورا نہیں ہو سکتا، جو اس بات کی پڑتال کرنے کا ایک تیز طریقہ ہے کہ اس کا مقطع لازمی طور پر $0$ کیوں ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

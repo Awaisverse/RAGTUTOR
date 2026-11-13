@@ -1,0 +1,30 @@
+{
+ "item": "c11-ex4.1-q1",
+ "label": "i",
+ "answer_ref": "$I_4 A = A$",
+ "math": [
+  "A = \\begin{bmatrix} a_{11} & a_{12} & a_{13} \\\\ a_{21} & a_{22} & a_{23} \\\\ a_{31} & a_{32} & a_{33} \\\\ a_{41} & a_{42} & a_{43} \\end{bmatrix},\\quad I_4 = \\begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 & 1 \\end{bmatrix}",
+  "\\text{Row 1 of } I_4A = \\left(1a_{11} + 0a_{21} + 0a_{31} + 0a_{41},\\ \\ldots\\right) = \\left(a_{11},\\ a_{12},\\ a_{13}\\right)",
+  "I_4A = \\begin{bmatrix} a_{11} & a_{12} & a_{13} \\\\ a_{21} & a_{22} & a_{23} \\\\ a_{31} & a_{32} & a_{33} \\\\ a_{41} & a_{42} & a_{43} \\end{bmatrix} = A"
+ ],
+ "why": [
+  {
+   "en": "To prove a general matrix property, we first write out the matrices in their expanded form using the definition of a $4\\times 3$ matrix and the $4\\times 4$ identity matrix. This lets us clearly see the rows of $I_4$ and the columns of $A$ so we can apply the rule of matrix multiplication.",
+   "ur": "ایک عام قالب کی خاصیت کو ثابت کرنے کے لیے، ہم سب سے پہلے $4\\times 3$ قالب اور $4\\times 4$ اکائی قالب کی تعریف کو استعمال کرتے ہوئے ان قالبوں کو پھیلی ہوئی شکل میں لکھتے ہیں۔ اس سے ہمیں $I_4$ کی قطاریں اور $A$ کے کالم واضح طور پر نظر آتے ہیں تاکہ ہم قالبوں کی ضرب کا اصول لاگو کر سکیں۔"
+  },
+  {
+   "en": "By the row-by-column rule of matrix multiplication, we multiply the entries of each row of $I_4$ with the corresponding entries of each column of $A$. Because $I_4$ has $1$ on the main diagonal and $0$ everywhere else, all other terms become zero and only the exact entries of each row of $A$ survive.",
+   "ur": "قالبوں کی ضرب کے قطار ضرب کالم کے اصول کے تحت، ہم $I_4$ کی ہر قطار کے ارکان کو $A$ کے ہر کالم کے متناظر ارکان سے ضرب دیتے ہیں۔ چونکہ $I_4$ کے وتر پر $1$ اور باقی ہر جگہ $0$ ہوتا ہے، اس لیے باقی تمام رقمیں صفر ہو جاتی ہیں اور صرف $A$ کی ہر قطار کے اصل ارکان ہی باقی بچتے ہیں۔"
+  },
+  {
+   "en": "Putting all four resulting rows together gives us a matrix whose every entry matches the original matrix $A$. By the definition of equality of matrices, this completes our proof that $I_4A$ is equal to $A$.",
+   "ur": "حاصل ہونے والی چاروں قطاروں کو اکٹھا کرنے سے ہمیں ایک ایسا قالب ملتا ہے جس کا ہر رکن اصل قالب $A$ کے بالکل برابر ہے۔ قالبوں کی مساوات کی تعریف کے مطابق، اس سے ہمارا یہ ثبوت مکمل ہو جاتا ہے کہ $I_4A$ واقعہ ہی $A$ کے برابر ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This result shows that the identity matrix $I_4$ acts just like the number $1$ in ordinary multiplication: when you multiply a $4\\times 3$ matrix $A$ on the left by $I_4$, the matrix $A$ remains completely unchanged. You can easily check this idea by noting that the order of the product of a $4\\times 4$ matrix and a $4\\times 3$ matrix must be $4\\times 3$, which matches the order of $A$.",
+  "ur": "یہ نتیجہ ظاہر کرتا ہے کہ اکائی قالب $I_4$ عام ضرب میں بالکل عدد $1$ کی طرح کام کرتا ہے: جب آپ کسی $4\\times 3$ قالب $A$ کو بائیں طرف سے $I_4$ سے ضرب دیتے ہیں، تو قالب $A$ میں کوئی تبدیلی نہیں آتی۔ آپ اس بات کی تصدیق ایسے بھی کر سکتے ہیں کہ ایک $4\\times 4$ قالب اور ایک $4\\times 3$ قالب کے حاصل ضرب کا درجہ $4\\times 3$ ہی ہونا چاہیے، جو کہ قالب $A$ کے درجے کے عین مطابق ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

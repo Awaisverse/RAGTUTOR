@@ -1,0 +1,70 @@
+{
+ "item": "c11-ex4.2-q9",
+ "label": "",
+ "answer_ref": "$A^{-1} = \\begin{bmatrix} -4 & 1 & 2 \\\\ 5 & - \\frac{5}{4} & - \\frac{9}{4} \\\\ -5 & \\frac{3}{2} & \\frac{5}{2} \\end{bmatrix}$",
+ "math": [
+  "|A| = \\begin{vmatrix} 1 & 2 & 1 \\\\ -5 & 0 & 4 \\\\ 5 & 4 & 0 \\end{vmatrix} = (1)\\begin{vmatrix} 0 & 4 \\\\ 4 & 0 \\end{vmatrix} - (2)\\begin{vmatrix} -5 & 4 \\\\ 5 & 0 \\end{vmatrix} + (1)\\begin{vmatrix} -5 & 0 \\\\ 5 & 4 \\end{vmatrix}",
+  "= (1)\\left[(0)(0) - (4)(4)\\right] - (2)\\left[(-5)(0) - (4)(5)\\right] + (1)\\left[(-5)(4) - (0)(5)\\right]",
+  "= (1)(-16) - (2)(-20) + (1)(-20) = 4",
+  "|A| = 4 \\ne 0",
+  "A_{11} = \\begin{vmatrix} 0 & 4 \\\\ 4 & 0 \\end{vmatrix} = -16,\\quad A_{12} = -\\begin{vmatrix} -5 & 4 \\\\ 5 & 0 \\end{vmatrix} = 20,\\quad A_{13} = \\begin{vmatrix} -5 & 0 \\\\ 5 & 4 \\end{vmatrix} = -20",
+  "A_{21} = -\\begin{vmatrix} 2 & 1 \\\\ 4 & 0 \\end{vmatrix} = 4,\\quad A_{22} = \\begin{vmatrix} 1 & 1 \\\\ 5 & 0 \\end{vmatrix} = -5,\\quad A_{23} = -\\begin{vmatrix} 1 & 2 \\\\ 5 & 4 \\end{vmatrix} = 6",
+  "A_{31} = \\begin{vmatrix} 2 & 1 \\\\ 0 & 4 \\end{vmatrix} = 8,\\quad A_{32} = -\\begin{vmatrix} 1 & 1 \\\\ -5 & 4 \\end{vmatrix} = -9,\\quad A_{33} = \\begin{vmatrix} 1 & 2 \\\\ -5 & 0 \\end{vmatrix} = 10",
+  "\\operatorname{adj}A = \\left[A_{ij}\\right]^t = \\begin{bmatrix} -16 & 4 & 8 \\\\ 20 & -5 & -9 \\\\ -20 & 6 & 10 \\end{bmatrix}",
+  "A^{-1} = \\frac{1}{|A|}\\operatorname{adj}A = \\frac{1}{4}\\begin{bmatrix} -16 & 4 & 8 \\\\ 20 & -5 & -9 \\\\ -20 & 6 & 10 \\end{bmatrix} = \\begin{bmatrix} -4 & 1 & 2 \\\\ 5 & - \\frac{5}{4} & - \\frac{9}{4} \\\\ -5 & \\frac{3}{2} & \\frac{5}{2} \\end{bmatrix}",
+  "A^{-1}A = \\begin{bmatrix} -4 & 1 & 2 \\\\ 5 & - \\frac{5}{4} & - \\frac{9}{4} \\\\ -5 & \\frac{3}{2} & \\frac{5}{2} \\end{bmatrix}\\begin{bmatrix} 1 & 2 & 1 \\\\ -5 & 0 & 4 \\\\ 5 & 4 & 0 \\end{bmatrix} = \\begin{bmatrix} (-4)(1) + (1)(-5) + (2)(5) & (-4)(2) + (1)(0) + (2)(4) & (-4)(1) + (1)(4) + (2)(0) \\\\ (5)(1) + (- \\frac{5}{4})(-5) + (- \\frac{9}{4})(5) & (5)(2) + (- \\frac{5}{4})(0) + (- \\frac{9}{4})(4) & (5)(1) + (- \\frac{5}{4})(4) + (- \\frac{9}{4})(0) \\\\ (-5)(1) + (\\frac{3}{2})(-5) + (\\frac{5}{2})(5) & (-5)(2) + (\\frac{3}{2})(0) + (\\frac{5}{2})(4) & (-5)(1) + (\\frac{3}{2})(4) + (\\frac{5}{2})(0) \\end{bmatrix}",
+  "A^{-1}A = \\begin{bmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{bmatrix} = I_3"
+ ],
+ "why": [
+  {
+   "en": "Before trying to find the inverse, we must calculate the determinant $|A|$ to check if the inverse even exists. Expanding along the first row breaks the 3-by-3 determinant into three smaller 2-by-2 determinants that are much easier to evaluate.",
+   "ur": "معکوس معلوم کرنے کی کوشش سے پہلے، ہمیں مقطع $|A|$ نکالنا ہوگا تاکہ یہ چیک کیا جا سکے کہ آیا معکوس موجود بھی ہے یا نہیں۔ پہلی قطار کے لحاظ سے پھیلانے سے 3-by-3 کا مقطع تین چھوٹے 2-by-2 کے مقطعوں میں تقسیم ہو جاتا ہے جنہیں حل کرنا بہت آسان ہے۔"
+  },
+  {
+   "en": "We apply the definition of a 2-by-2 determinant—multiplying the main diagonal entries and subtracting the product of the other diagonal entries—to turn each small determinant into simple arithmetic.",
+   "ur": "ہم 2-by-2 مقطع کی تعریف لاگو کرتے ہیں—یعنی وتر کے ارکان کو ضرب دے کر دوسرے وتر کے ارکان کے حاصلِ ضرب کو تفریق کرتے ہیں—تاکہ ہر چھوٹے مقطع کو سادہ حساب میں بدلا جا سکے۔"
+  },
+  {
+   "en": "Simplifying the products and adding the terms gives us the single numerical value of the determinant, which is $4$.",
+   "ur": "ضرب کے عمل کو سادہ کرنے اور رقموں کو جمع کرنے سے ہمیں مقطع کی واحد عددی قیمت ملتی ہے، جو کہ $4$ ہے۔"
+  },
+  {
+   "en": "Because the determinant $|A| = 4$ is not zero, the matrix $A$ is non-singular. This confirms that $A^{-1}$ exists and we can safely proceed to find the adjoint.",
+   "ur": "چونکہ مقطع $|A| = 4$ صفر نہیں ہے، اس لیے قالب $A$ غیر نادر (non-singular) ہے۔ اس سے تصدیق ہوتی ہے کہ $A^{-1}$ موجود ہے اور ہم اطمینان سے ایڈجوائنٹ (adjoint) معلوم کرنے کے لیے آگے بڑھ سکتے ہیں۔"
+  },
+  {
+   "en": "To build the adjoint matrix, we first need the cofactor of every entry. Starting with the first row, we find each signed minor, which actually reuses the 2-by-2 determinant values we already found in Step 2.",
+   "ur": "ایڈجوائنٹ قالب بنانے کے لیے، ہمیں پہلے ہر رکن کا ہم عامل درکار ہوتا ہے۔ پہلی قطار سے شروع کرتے ہوئے، ہم علامت کے ساتھ ہر مائنر (minor) معلوم کرتے ہیں، جس میں دراصل وہی 2-by-2 مقطعوں کی قیمتیں دوبارہ استعمال ہو جاتی ہیں جو ہم نے مرحلہ 2 میں نکالی تھیں۔"
+  },
+  {
+   "en": "We continue the same process for the second row to get the middle three cofactors, being very careful to apply the alternating $- + -$ signs required by their positions.",
+   "ur": "ہم درمیانی تین ہم عامل حاصل کرنے کے لیے دوسری قطار کے لیے بھی یہی عمل جاری رکھتے ہیں، اور ان کی جگہ کے مطابق متبادل علامات $- + -$ لگانے میں بہت احتیاط برتتے ہیں۔"
+  },
+  {
+   "en": "Finding the cofactors of the third row completes all nine cofactors of the matrix $A$, giving us every building block needed to form the adjoint.",
+   "ur": "تیسری قطار کے ہم عامل معلوم کرنے سے قالب $A$ کے تمام نو ہم عامل مکمل ہو جاتے ہیں، جس سے ہمیں ایڈجوائنٹ بنانے کے لیے درکار تمام اجزاء مل جاتے ہیں۔"
+  },
+  {
+   "en": "By definition, the adjoint $\\operatorname{adj}A$ is the transpose of the cofactor matrix. Writing the cofactors of each row as a column puts them in the exact arrangement required by the inverse formula.",
+   "ur": "تعریف کے مطابق، ایڈجوائنٹ $\\operatorname{adj}A$ ہم عاملوں کے قالب کا پلٹ (transpose) ہوتا ہے۔ ہر قطار کے ہم عاملوں کو کالم کی شکل میں لکھنے سے وہ اس درست ترتیب میں آ جاتے ہیں جو معکوس کے فارمولے کے لیے ضروری ہے۔"
+  },
+  {
+   "en": "Now we apply the fundamental formula $A^{-1} = \\frac{1}{|A|}\\operatorname{adj}A$. Dividing each entry of the adjoint by the determinant $4$ gives us the complete inverse matrix $A^{-1}$.",
+   "ur": "اب ہم بنیادی فارمولا $A^{-1} = \\frac{1}{|A|}\\operatorname{adj}A$ لاگو کرتے ہیں۔ ایڈجوائنٹ کے ہر رکن کو مقطع $4$ سے تقسیم کرنے پر ہمیں مکمل معکوس قالب $A^{-1}$ حاصل ہو جاتا ہے۔"
+  },
+  {
+   "en": "To prove the second part of the question ($A^{-1}A = I_3$), we multiply our newly found inverse $A^{-1}$ by the original matrix $A$ using the standard row-by-column multiplication rule.",
+   "ur": "سوال کے دوسرے حصے ($A^{-1}A = I_3$) کو ثابت کرنے کے لیے، ہم قطار کو کالم سے ضرب دینے کے معیاری اصول کا استعمال کرتے ہوئے اپنے نئے معلوم کردہ معکوس $A^{-1}$ کو اصل قالب $A$ سے ضرب دیتے ہیں۔"
+  },
+  {
+   "en": "Simplifying each entry shows that all off-diagonal terms cancel out to $0$ and the diagonal terms become $1$. Obtaining the identity matrix $I_3$ proves both the required relation and that our calculated inverse is completely correct.",
+   "ur": "ہر رکن کو مختصر کرنے سے پتہ چلتا ہے کہ وتر کے علاوہ تمام رقمیں کٹ کر $0$ ہو جاتی ہیں اور وتر کے ارکان $1$ بن جاتے ہیں۔ اکائی قالب $I_3$ کا حاصل ہونا مطلوبہ تعلق کو بھی ثابت کرتا ہے اور یہ بھی کہ ہمارا نکالا گیا معکوس بالکل درست ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final matrix $A^{-1} = \\begin{bmatrix} -4 & 1 & 2 \\\\ 5 & - \\frac{5}{4} & - \\frac{9}{4} \\\\ -5 & \\frac{3}{2} & \\frac{5}{2} \\end{bmatrix}$ is the unique multiplicative inverse of $A$, meaning it reverses the effect of multiplying by $A$. The verification $A^{-1}A = I_3$ in the final steps serves as a built-in check, guaranteeing with complete certainty that no arithmetic or sign errors were made in finding the determinant or cofactors.",
+  "ur": "حتمی قالب $A^{-1} = \\begin{bmatrix} -4 & 1 & 2 \\\\ 5 & - \\frac{5}{4} & - \\frac{9}{4} \\\\ -5 & \\frac{3}{2} & \\frac{5}{2} \\end{bmatrix}$ قالب $A$ کا منفرد ضربی معکوس ہے، جس کا مطلب ہے کہ یہ $A$ سے ضرب دینے کے اثر کو الٹ دیتا ہے۔ آخری مراحل میں $A^{-1}A = I_3$ کی تصدیق ایک خودکار پڑتال کا کام کرتی ہے، جو مکمل یقین کے ساتھ اس بات کی ضمانت دیتی ہے کہ مقطع یا ہم عامل معلوم کرنے میں کوئی حسابی یا علامتی غلطی نہیں ہوئی۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

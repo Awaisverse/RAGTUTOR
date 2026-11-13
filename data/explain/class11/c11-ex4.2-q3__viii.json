@@ -1,0 +1,55 @@
+{
+ "item": "c11-ex4.2-q3",
+ "label": "viii",
+ "answer_ref": "$D = t^2(a + b + c + t)$",
+ "math": [
+  "D = \\begin{vmatrix} a + t & a & a \\\\ b & b + t & b \\\\ c & c & c + t \\end{vmatrix}",
+  "= \\begin{vmatrix} a + b + c + t & a + b + c + t & a + b + c + t \\\\ b & b + t & b \\\\ c & c & c + t \\end{vmatrix}\\quad (R_1 \\to R_1 + R_2 + R_3)",
+  "= (a + b + c + t)\\begin{vmatrix} 1 & 1 & 1 \\\\ b & b + t & b \\\\ c & c & c + t \\end{vmatrix}\\quad (\\text{taking } a + b + c + t \\text{ common from } R_1)",
+  "= (a + b + c + t)\\begin{vmatrix} 1 & 0 & 1 \\\\ b & t & b \\\\ c & 0 & c + t \\end{vmatrix}\\quad (C_2 \\to C_2 - C_1)",
+  "= (a + b + c + t)\\begin{vmatrix} 1 & 0 & 0 \\\\ b & t & 0 \\\\ c & 0 & t \\end{vmatrix}\\quad (C_3 \\to C_3 - C_1)",
+  "D = (a + b + c + t)\\begin{vmatrix} 1 & 0 & 0 \\\\ b & t & 0 \\\\ c & 0 & t \\end{vmatrix} = (a + b + c + t)\\left[(1)\\begin{vmatrix} t & 0 \\\\ 0 & t \\end{vmatrix}\\right]",
+  "= (a + b + c + t)\\left[(1)\\left[(t)(t) - (0)(0)\\right]\\right]",
+  "= (a + b + c + t)\\left[(1)(t^{2})\\right] = t^{2} \\left(a + b + c + t\\right) = t^2(a + b + c + t)"
+ ],
+ "why": [
+  {
+   "en": "We begin by setting the Left Hand Side determinant equal to $D$ so we can apply row and column properties step-by-step to prove it equals the Right Hand Side.",
+   "ur": "ہم بائیں طرف (Left Hand Side) کے مقطع (determinant) کو $D$ کے برابر فرض کر کے شروعات کرتے ہیں تاکہ ہم مرحلہ وار قطار اور کالم کی خصوصیات استعمال کر کے اسے دائیں طرف کے برابر ثابت کر سکیں۔"
+  },
+  {
+   "en": "Look at the Right Hand Side: we need the factor $(a + b + c + t)$. Notice that each column has one $a$, one $b$, one $c$, and one $t$, so adding Row 2 and Row 3 into Row 1 creates this exact expression across the entire first row without changing the determinant's value.",
+   "ur": "دائیں طرف دیکھیں، ہمیں $(a + b + c + t)$ کا جزو ضربی (factor) چاہیے۔ غور کریں کہ ہر کالم میں ایک $a$، ایک $b$، ایک $c$ اور ایک $t$ موجود ہے، اس لیے دوسری اور تیسری قطار کو پہلی قطار میں جمع کرنے سے پوری پہلی قطار میں بالکل یہی جملہ بن جاتا ہے اور مقطع کی قیمت بھی نہیں بدلتی۔"
+  },
+  {
+   "en": "By the scalar multiple property of determinants, since $(a + b + c + t)$ is common to every entry in the first row, we factor it out. This gives us one part of our target answer and leaves neat $1$s in the first row, which are ideal for making zeros.",
+   "ur": "مقطع کی خصوصیت کے مطابق، چونکہ پہلی قطار کے ہر رکن میں $(a + b + c + t)$ مشترک ہے، اس لیے ہم اسے باہر نکال لیتے ہیں۔ اس سے ہمیں اپنے مطلوبہ جواب کا ایک حصہ مل جاتا ہے اور پہلی قطار میں $1$ آ جاتے ہیں جو صفر بنانے کے لیے بہترین ہیں۔"
+  },
+  {
+   "en": "To evaluate a $3 \\times 3$ determinant easily, our goal is to create two zeros in the row of $1$s. Subtracting Column 1 from Column 2 turns the second entry of the first row into $0$ and also simplifies the other entries in that column.",
+   "ur": "$3 \\times 3$ مقطع کو آسانی سے حل کرنے کے لیے ہمارا مقصد $1$ والی قطار میں دو صفر بنانا ہے۔ دوسرے کالم میں سے پہلا کالم تفریق کرنے سے پہلی قطار کا دوسرا رکن $0$ بن جاتا ہے اور اس کالم کے باقی ارکان بھی سادہ ہو جاتے ہیں۔"
+  },
+  {
+   "en": "Similarly, subtracting Column 1 from Column 3 creates a second $0$ at the end of the first row. Now our determinant is in a much simpler triangular-like form where expansion will only require a single term.",
+   "ur": "اسی طرح، تیسرے کالم میں سے پہلا کالم تفریق کرنے سے پہلی قطار کے آخر میں دوسرا $0$ بن جاتا ہے۔ اب ہمارا مقطع ایک بہت ہی سادہ شکل میں آ گیا ہے جہاں اسے کھولنے (expand کرنے) کے لیے صرف ایک رقم حل کرنی پڑے گی۔"
+  },
+  {
+   "en": "We now expand the determinant along Row 1 because two of its entries are $0$, meaning their cofactors vanish completely. We only need to multiply the first entry, $1$, by its $2 \\times 2$ minor obtained by deleting the first row and first column.",
+   "ur": "اب ہم پہلی قطار کے لحاظ سے مقطع کو کھولتے ہیں کیونکہ اس کے دو ارکان $0$ ہیں، جس کا مطلب ہے کہ ان کے حصے بالکل ختم ہو جائیں گے۔ ہمیں صرف پہلے رکن $1$ کو اس کے $2 \\times 2$ مائنر (جو پہلی قطار اور پہلا کالم چھوڑنے سے ملتا ہے) سے ضرب دینی ہے۔"
+  },
+  {
+   "en": "Using the definition of a $2 \\times 2$ determinant, we cross-multiply the main diagonal entries $(t)(t)$ and subtract the product of the off-diagonal entries $(0)(0)$.",
+   "ur": "$2 \\times 2$ مقطع کی تعریف کے مطابق، ہم وتر (diagonal) کے ارکان $(t)(t)$ کو ضرب دیتے ہیں اور اس میں سے دوسرے ارکان کے حاصل ضرب $(0)(0)$ کو تفریق کرتے ہیں۔"
+  },
+  {
+   "en": "Simplifying the bracket gives $t^2$, and multiplying it with our factored-out expression $(a + b + c + t)$ yields the exact Right Hand Side required by the question.",
+   "ur": "بریکٹ کو مختصر کرنے سے $t^2$ ملتا ہے، اور اسے باہر نکالے گئے جملے $(a + b + c + t)$ سے ضرب دینے پر ہمیں بالکل وہی دائیں طرف والی شکل مل جاتی ہے جو سوال میں مطلوب تھی۔"
+  }
+ ],
+ "meaning": {
+  "en": "This proves the identity that the given $3 \\times 3$ determinant simplifies neatly to $t^2(a + b + c + t)$ using row and column operations instead of tedious direct expansion. You can quickly verify this result by setting $t = 0$: the formula immediately gives $0$, which makes sense because at $t = 0$ all three columns of the original determinant become identical, and a determinant with identical columns is always $0$.",
+  "ur": "اس سے یہ ثابت ہوتا ہے کہ دیے گئے $3 \\times 3$ مقطع کو لمبے طریقے سے براہِ راست کھولنے کے بجائے قطار اور کالم کے عوامل (operations) استعمال کر کے باآسانی $t^2(a + b + c + t)$ کے برابر لایا جا سکتا ہے۔ آپ $t = 0$ رکھ کر اس نتیجے کی فوری تصدیق کر سکتے ہیں: فارمولا فوراً $0$ دیتا ہے، جو بالکل درست ہے کیونکہ $t = 0$ رکھنے سے اصل مقطع کے تینوں کالم ایک جیسے ہو جاتے ہیں، اور یکساں کالموں والے مقطع کی قیمت ہمیشہ $0$ ہوتی ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

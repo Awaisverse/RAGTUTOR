@@ -1,0 +1,30 @@
+{
+ "item": "c11-ex4.2-q7",
+ "label": "",
+ "answer_ref": "$|kA| = k^3|A|$",
+ "math": [
+  "A = \\begin{bmatrix} a_{11} & a_{12} & a_{13} \\\\ a_{21} & a_{22} & a_{23} \\\\ a_{31} & a_{32} & a_{33} \\end{bmatrix},\\quad kA = \\begin{bmatrix} a_{11} k & a_{12} k & a_{13} k \\\\ a_{21} k & a_{22} k & a_{23} k \\\\ a_{31} k & a_{32} k & a_{33} k \\end{bmatrix}",
+  "|kA| = k\\begin{vmatrix} a_{11} & a_{12} & a_{13} \\\\ a_{21} k & a_{22} k & a_{23} k \\\\ a_{31} k & a_{32} k & a_{33} k \\end{vmatrix} = k^2\\begin{vmatrix} a_{11} & a_{12} & a_{13} \\\\ a_{21} & a_{22} & a_{23} \\\\ a_{31} k & a_{32} k & a_{33} k \\end{vmatrix} = k^3\\begin{vmatrix} a_{11} & a_{12} & a_{13} \\\\ a_{21} & a_{22} & a_{23} \\\\ a_{31} & a_{32} & a_{33} \\end{vmatrix}",
+  "|kA| = k^3|A|"
+ ],
+ "why": [
+  {
+   "en": "By the definition of scalar multiplication of a matrix, when we multiply the matrix $A$ of order $3$ by the scalar $k$, every single element inside the matrix gets multiplied by $k$. Writing out both $A$ and $kA$ clearly sets up the expressions we need before taking their determinants.",
+   "ur": "میٹرکس کی اسکیلر ضرب (scalar multiplication) کی تعریف کے مطابق، جب ہم درجہ $3$ کے میٹرکس $A$ کو کسی نمبر $k$ سے ضرب دیتے ہیں تو اس کا ہر رکن $k$ سے ضرب کھاتا ہے۔ یہاں $A$ اور $kA$ کو کھل کر لکھنے سے اگلے مرحلے میں مقطع (determinant) لینا آسان ہو جاتا ہے۔"
+  },
+  {
+   "en": "Unlike a matrix, the multilinearity property of determinants tells us that a common factor is taken out from only one row at a time. Since all $3$ rows have the common factor $k$, factoring $k$ out from the first, second, and third row one by one gives $k \\cdot k \\cdot k = k^3$ outside the original determinant.",
+   "ur": "میٹرکس کے برعکس، مقطع (determinant) کی خاصیت یہ ہے کہ کسی مشترک عدد کو ایک وقت میں صرف ایک قطار (row) سے باہر نکالا جا سکتا ہے۔ چونکہ یہاں تینوں قطاروں میں $k$ مشترک ہے، اس لیے باری باری تینوں قطاروں سے $k$ باہر نکالنے سے اصل مقطع کے باہر $k^3$ بن جاتا ہے۔"
+  },
+  {
+   "en": "We now recognize that the remaining determinant is simply $|A|$, the determinant of our original matrix $A$. Substituting $|A|$ in its place directly completes our required proof.",
+   "ur": "اب ہم دیکھ سکتے ہیں کہ باقی بچ جانے والا مقطع دراصل ہمارے اصل میٹرکس $A$ کا مقطع یعنی $|A|$ ہی ہے۔ اس کی جگہ $|A|$ درج کرنے سے ہمارا مطلوبہ نتیجہ ثابت ہو جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This result proves an important rule: scaling a square matrix of order $3$ by a number $k$ multiplies its determinant by $k^3$, where the power $3$ matches the number of rows in the matrix.",
+  "ur": "یہ نتیجہ ایک اہم اصول ثابت کرتا ہے کہ اگر درجہ $3$ کے کسی مربی میٹرکس کو $k$ سے ضرب دی جائے تو اس کا مقطع $k^3$ گنا ہو جاتا ہے، جہاں طاقت $3$ میٹرکس کی قطاروں کی تعداد کو ظاہر کرتی ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

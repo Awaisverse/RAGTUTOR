@@ -1,0 +1,45 @@
+{
+ "item": "c11-ex4.3-q1",
+ "label": "iii",
+ "answer_ref": "$A^{-1} = \\begin{bmatrix} - \\frac{13}{3} & \\frac{8}{3} & \\frac{26}{3} \\\\ \\frac{2}{3} & - \\frac{1}{3} & - \\frac{4}{3} \\\\ \\frac{2}{3} & - \\frac{1}{3} & - \\frac{1}{3} \\end{bmatrix}$",
+ "math": [
+  "\\left[A \\mid I_3\\right] = \\left[\\begin{array}{ccc|ccc} 1 & 6 & 2 & 1 & 0 & 0 \\\\ 2 & 13 & 0 & 0 & 1 & 0 \\\\ 0 & -1 & 1 & 0 & 0 & 1 \\end{array}\\right]",
+  "R_2 \\to R_2 - 2R_1:\\ \\left[\\begin{array}{ccc|ccc} 1 & 6 & 2 & 1 & 0 & 0 \\\\ 0 & 1 & -4 & -2 & 1 & 0 \\\\ 0 & -1 & 1 & 0 & 0 & 1 \\end{array}\\right]",
+  "R_1 \\to R_1 - 6R_2,\\ R_3 \\to R_3 + R_2:\\ \\left[\\begin{array}{ccc|ccc} 1 & 0 & 26 & 13 & -6 & 0 \\\\ 0 & 1 & -4 & -2 & 1 & 0 \\\\ 0 & 0 & -3 & -2 & 1 & 1 \\end{array}\\right]",
+  "R_3 \\to - \\frac{1}{3}R_3:\\ \\left[\\begin{array}{ccc|ccc} 1 & 0 & 26 & 13 & -6 & 0 \\\\ 0 & 1 & -4 & -2 & 1 & 0 \\\\ 0 & 0 & 1 & \\frac{2}{3} & - \\frac{1}{3} & - \\frac{1}{3} \\end{array}\\right]",
+  "R_1 \\to R_1 - 26R_3,\\ R_2 \\to R_2 + 4R_3:\\ \\left[\\begin{array}{ccc|ccc} 1 & 0 & 0 & - \\frac{13}{3} & \\frac{8}{3} & \\frac{26}{3} \\\\ 0 & 1 & 0 & \\frac{2}{3} & - \\frac{1}{3} & - \\frac{4}{3} \\\\ 0 & 0 & 1 & \\frac{2}{3} & - \\frac{1}{3} & - \\frac{1}{3} \\end{array}\\right]",
+  "\\left[I_3 \\mid A^{-1}\\right] \\Rightarrow A^{-1} = \\begin{bmatrix} - \\frac{13}{3} & \\frac{8}{3} & \\frac{26}{3} \\\\ \\frac{2}{3} & - \\frac{1}{3} & - \\frac{4}{3} \\\\ \\frac{2}{3} & - \\frac{1}{3} & - \\frac{1}{3} \\end{bmatrix}"
+ ],
+ "why": [
+  {
+   "en": "To find the inverse using elementary row operations, we set up an augmented matrix $\\left[A \\mid I_3\\right]$ with our given matrix on the left and the $3 \\times 3$ identity matrix on the right. Our goal is to apply row operations until the left side transforms into the identity matrix $I_3$, which will automatically turn the right side into $A^{-1}$.",
+   "ur": "ابتدائی قطاری عوامل کی مدد سے معکوس معلوم کرنے کے لیے ہم ایک افزائشی قالب $\\left[A \\mid I_3\\right]$ بناتے ہیں جس کے بائیں طرف دیا گیا قالب اور دائیں طرف $3 \\times 3$ کا اکائی قالب ہوتا ہے۔ ہمارا مقصد قطاری عوامل کے ذریعے بائیں حصے کو اکائی قالب $I_3$ میں تبدیل کرنا ہے، جس سے دایاں حصہ خود بخود $A^{-1}$ بن جائے گا۔"
+  },
+  {
+   "en": "Since the first pivot (top-left entry) is already $1$, we use it to eliminate the non-zero entry $2$ below it in the first column. By applying $R_2 \\to R_2 - 2R_1$, the first column now matches the first column of the identity matrix, and conveniently gives us a $1$ in the second row's pivot position.",
+   "ur": "چونکہ پہلا محوری رکن (اوپر بائیں طرف والا رکن) پہلے سے ہی $1$ ہے، ہم اس کو پہلے کالم میں اس کے نیچے موجود غیر صفر رکن $2$ کو ختم کرنے کے لیے استعمال کرتے ہیں۔ $R_2 \\to R_2 - 2R_1$ کا عمل کرنے سے پہلا کالم اکائی قالب کے پہلے کالم جیسا بن جاتا ہے، اور اتفاق سے دوسری قطار کی محوری جگہ پر بھی ہمیں $1$ مل جاتا ہے۔"
+  },
+  {
+   "en": "Now that the second pivot (middle entry of row 2) is $1$, we use it to clear out the other entries ($6$ and $-1$) in the second column. This completes the second column of our target identity matrix on the left side.",
+   "ur": "اب جبکہ دوسرا محوری رکن (دوسری قطار کا درمیانی رکن) $1$ ہے، ہم اس کی مدد سے دوسرے کالم کے باقی ارکان ($6$ اور $-1$) کو صفر بناتے ہیں۔ اس سے بائیں طرف ہمارے مطلوبہ اکائی قالب کا دوسرا کالم مکمل ہو جاتا ہے۔"
+  },
+  {
+   "en": "For the third column, we need the bottom-right pivot entry to be $1$ instead of $-3$. Multiplying the entire third row by $-\\frac{1}{3}$ achieves this, setting us up for the final elimination step.",
+   "ur": "تیسرے کالم کے لیے ہمیں نیچے دائیں کونے والے محوری رکن کو $-3$ کے بجائے $1$ بنانا ہے۔ پوری تیسری قطار کو $-\\frac{1}{3}$ سے ضرب دینے سے یہ مقصد حاصل ہو جاتا ہے، جو ہمیں آخری اخراجی مرحلے کے لیے تیار کرتا ہے۔"
+  },
+  {
+   "en": "With the third pivot now equal to $1$, we use row 3 to eliminate the entries $26$ and $-4$ above it in the third column. This turns the entire left side into the identity matrix $I_3$ (reduced row-echelon form).",
+   "ur": "تیسرا محوری رکن $1$ بن جانے کے بعد، ہم تیسری قطار کو استعمال کرتے ہوئے تیسرے کالم میں اس کے اوپر موجود ارکان $26$ اور $-4$ کو صفر بناتے ہیں۔ اس سے پورا بایاں حصہ اکائی قالب $I_3$ میں تبدیل ہو جاتا ہے۔"
+  },
+  {
+   "en": "Because the left side has completely transformed into the identity matrix $I_3$, the matrix that has been formed on the right side by the exact same row operations is our required inverse matrix $A^{-1}$.",
+   "ur": "چونکہ بایاں حصہ مکمل طور پر اکائی قالب $I_3$ میں تبدیل ہو چکا ہے، اس لیے بالکل انہی قطاری عوامل کے نتیجے میں دائیں طرف بننے والا قالب ہی ہمارا مطلوبہ معکوس قالب $A^{-1}$ ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This final matrix is the unique inverse $A^{-1}$ of the given matrix $A$. It means that if you multiply the original matrix $A$ by this matrix $A^{-1}$, the result will be the $3 \\times 3$ identity matrix $I_3$, which is a great way to check your work in an exam.",
+  "ur": "یہ آخری قالب دیے گئے قالب $A$ کا منفرد معکوس $A^{-1}$ ہے۔ اس کا مطلب یہ ہے کہ اگر آپ اصل قالب $A$ کو اس قالب $A^{-1}$ سے ضرب دیں تو جواب $3 \\times 3$ کا اکائی قالب $I_3$ آئے گا، جو امتحان میں اپنے جواب کی پڑتال کرنے کا ایک بہترین طریقہ ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

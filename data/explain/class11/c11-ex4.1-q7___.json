@@ -1,0 +1,40 @@
+{
+ "item": "c11-ex4.1-q7",
+ "label": "",
+ "answer_ref": "$A^2 + B^2 = A + B$",
+ "math": [
+  "AB = B,\\quad BA = A",
+  "A^2 = A(A) = A(BA) = (AB)A = BA = A",
+  "B^2 = B(B) = B(AB) = (BA)B = AB = B",
+  "A^2 + B^2 = A + B",
+  "\\text{e.g. } A = \\begin{bmatrix} 1 & 0 \\\\ 0 & 0 \\end{bmatrix},\\ B = \\begin{bmatrix} 1 & 1 \\\\ 0 & 0 \\end{bmatrix}:\\ AB = B,\\ BA = A,\\ A^2 + B^2 = A + B"
+ ],
+ "why": [
+  {
+   "en": "We begin by writing down the two given matrix equations, $AB = B$ and $BA = A$. These relations are our main tools to simplify the higher powers $A^2$ and $B^2$ later on.",
+   "ur": "ہم سب سے پہلے دی گئی دو قالبوں کی مساواتیں $AB = B$ اور $BA = A$ لکھتے ہیں۔ یہ تعلقات ہمارے بنیادی اوزار ہیں جن کی مدد سے ہم آگے چل کر $A^2$ اور $B^2$ کو مختصر کریں گے۔"
+  },
+  {
+   "en": "To simplify $A^2$, we write it as $A(A)$ and substitute $BA$ for the second $A$. Using the associative law of matrix multiplication to regroup the terms as $(AB)A$, we can apply the given equations again to prove that $A^2$ is simply equal to $A$.",
+   "ur": "$A^2$ کو مختصر کرنے کے لیے، ہم اسے $A(A)$ لکھتے ہیں اور دوسرے $A$ کی جگہ دی گئی قیمت $BA$ درج کرتے ہیں۔ قالبوں کی ضرب کے تلازمی قانون (associative law) کے تحت بریکٹ بدل کر $(AB)A$ بنانے سے اور دی گئی مساواتیں دوبارہ استعمال کرنے سے ثابت ہو جاتا ہے کہ $A^2$ دراصل $A$ کے برابر ہے۔"
+  },
+  {
+   "en": "We apply the exact same logic to find $B^2$ by writing it as $B(B)$ and replacing the second $B$ with $AB$. Regrouping by the associative law gives $(BA)B$, which simplifies neatly to show that $B^2 = B$.",
+   "ur": "بالکل اسی طریقے سے $B^2$ معلوم کرنے کے لیے ہم اسے $B(B)$ لکھتے ہیں اور دوسرے $B$ کی جگہ $AB$ رکھتے ہیں۔ تلازمی قانون کے ذریعے بریکٹ بدل کر $(BA)B$ لکھنے سے یہ آسانی سے مختصر ہو کر ثابت کر دیتا ہے کہ $B^2 = B$ ہے۔"
+  },
+  {
+   "en": "Now that we know the simplified values of both $A^2$ and $B^2$, we add them together to form the left-hand side of our target equation. Substituting $A$ for $A^2$ and $B$ for $B^2$ directly completes our proof.",
+   "ur": "اب جب کہ ہمیں $A^2$ اور $B^2$ دونوں کی مختصر قیمتیں معلوم ہو چکی ہیں، ہم مطلوبہ مساوات کی بائیں طرف بنانے کے لیے انہیں جمع کرتے ہیں۔ $A^2$ کی جگہ $A$ اور $B^2$ کی جگہ $B$ درج کرنے سے ہمارا ثبوت مکمل ہو جاتا ہے۔"
+  },
+  {
+   "en": "We use a concrete example of two $2 \\times 2$ matrices that follow the given rules to see this property in action. This confirms that our algebraic proof holds true for actual matrices.",
+   "ur": "اس خصوصیت کو عملی طور پر دیکھنے کے لیے ہم دو $2 \\times 2$ قالبوں کی ایک مثال لیتے ہیں جو دی گئی شرائط کو پورا کرتے ہیں۔ اس سے تصدیق ہو جاتی ہے کہ ہمارا الجبری ثبوت حقیقی قالبوں کے لیے بالکل درست ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This result shows that under the given conditions, both $A$ and $B$ are special matrices (called idempotent matrices) where squaring them does not change them at all ($A^2 = A$ and $B^2 = B$). Therefore, the sum of their squares is simply equal to the sum of the matrices themselves, $A^2 + B^2 = A + B$. You can always verify this by testing with simple matrices like $A = \\begin{bmatrix} 1 & 0 \\\\ 0 & 0 \\end{bmatrix}$ and $B = \\begin{bmatrix} 1 & 1 \\\\ 0 & 0 \\end{bmatrix}$.",
+  "ur": "یہ نتیجہ ظاہر کرتا ہے کہ دی گئی شرائط کے تحت، $A$ اور $B$ دونوں ایسے خاص قالب (idempotent matrices) ہیں جن کا مربع لینے سے ان میں کوئی تبدیلی نہیں آتی ($A^2 = A$ اور $B^2 = B$)۔ اس لیے ان کے مربوں کا مجموعہ سیدھا ان قالبوں کے اپنے مجموعے کے برابر ہوتا ہے، یعنی $A^2 + B^2 = A + B$۔ آپ سادہ قالبوں مثلاً $A = \\begin{bmatrix} 1 & 0 \\\\ 0 & 0 \\end{bmatrix}$ اور $B = \\begin{bmatrix} 1 & 1 \\\\ 0 & 0 \\end{bmatrix}$ کی مدد سے ہمیشہ اس کی پڑتال کر سکتے ہیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

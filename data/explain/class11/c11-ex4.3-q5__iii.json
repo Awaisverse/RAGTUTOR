@@ -1,0 +1,60 @@
+{
+ "item": "c11-ex4.3-q5",
+ "label": "iii",
+ "answer_ref": "$(x_1, x_2, x_3) = \\left(\\frac{61}{16}, - \\frac{1}{4}, - \\frac{13}{16}\\right)$",
+ "math": [
+  "\\left[A \\mid B\\right] = \\left[\\begin{array}{ccc|c} 1 & 4 & 1 & 2 \\\\ 2 & 1 & -2 & 9 \\\\ 3 & 1 & -1 & 12 \\end{array}\\right]",
+  "R_2 \\to R_2 - 2R_1,\\ R_3 \\to R_3 - 3R_1:\\ \\left[\\begin{array}{ccc|c} 1 & 4 & 1 & 2 \\\\ 0 & -7 & -4 & 5 \\\\ 0 & -11 & -4 & 6 \\end{array}\\right]",
+  "R_2 \\to - \\frac{1}{7}R_2:\\ \\left[\\begin{array}{ccc|c} 1 & 4 & 1 & 2 \\\\ 0 & 1 & \\frac{4}{7} & - \\frac{5}{7} \\\\ 0 & -11 & -4 & 6 \\end{array}\\right]",
+  "R_3 \\to R_3 + 11R_2:\\ \\left[\\begin{array}{ccc|c} 1 & 4 & 1 & 2 \\\\ 0 & 1 & \\frac{4}{7} & - \\frac{5}{7} \\\\ 0 & 0 & \\frac{16}{7} & - \\frac{13}{7} \\end{array}\\right]",
+  "R_3 \\to \\frac{7}{16}R_3:\\ \\left[\\begin{array}{ccc|c} 1 & 4 & 1 & 2 \\\\ 0 & 1 & \\frac{4}{7} & - \\frac{5}{7} \\\\ 0 & 0 & 1 & - \\frac{13}{16} \\end{array}\\right]",
+  "\\text{Echelon form: } \\left[\\begin{array}{ccc|c} 1 & 4 & 1 & 2 \\\\ 0 & 1 & \\frac{4}{7} & - \\frac{5}{7} \\\\ 0 & 0 & 1 & - \\frac{13}{16} \\end{array}\\right]",
+  "R_1 \\to R_1 - R_3,\\ R_2 \\to R_2 - \\frac{4}{7}R_3:\\ \\left[\\begin{array}{ccc|c} 1 & 4 & 0 & \\frac{45}{16} \\\\ 0 & 1 & 0 & - \\frac{1}{4} \\\\ 0 & 0 & 1 & - \\frac{13}{16} \\end{array}\\right]",
+  "R_1 \\to R_1 - 4R_2:\\ \\left[\\begin{array}{ccc|c} 1 & 0 & 0 & \\frac{61}{16} \\\\ 0 & 1 & 0 & - \\frac{1}{4} \\\\ 0 & 0 & 1 & - \\frac{13}{16} \\end{array}\\right]",
+  "\\text{Reduced echelon form: } \\left[\\begin{array}{ccc|c} 1 & 0 & 0 & \\frac{61}{16} \\\\ 0 & 1 & 0 & - \\frac{1}{4} \\\\ 0 & 0 & 1 & - \\frac{13}{16} \\end{array}\\right] \\Rightarrow x_1 = \\frac{61}{16},\\quad x_2 = - \\frac{1}{4},\\quad x_3 = - \\frac{13}{16}"
+ ],
+ "why": [
+  {
+   "en": "To use Gaussian elimination, we first translate our system of equations into an augmented matrix $[A \\mid B]$. This organizes the coefficients of $x_1, x_2, x_3$ into columns and the constants on the right side, allowing us to solve the system using clean row operations.",
+   "ur": "مساواتوں کے نظام کو حل کرنے کے لیے ہم سب سے پہلے اسے ایک افزائشی قالب (augmented matrix) $[A \\mid B]$ کی شکل میں لکھتے ہیں۔ اس سے متغیرات کے عددی سر الگ الگ کالم میں اور مستقل مقداریں دائیں جانب منظم ہو جاتی ہیں، جس سے قطار کے عوامل (row operations) لگانا آسان ہو جاتا ہے۔"
+  },
+  {
+   "en": "In echelon form, all entries below the leading $1$ (pivot) in the first column must be $0$. Using row operations with $R_1$, we eliminate $x_1$ from the second and third equations so we can focus on the remaining variables.",
+   "ur": "اشلون شکل (echelon form) حاصل کرنے کے لیے پہلے کالم کے پیوٹ (pivot) یعنی $1$ کے نیچے تمام ارکان کو $0$ بنانا ضروری ہے۔ پہلی قطار $R_1$ کی مدد سے ہم دوسری اور تیسری مساوات سے $x_1$ کو ختم کر دیتے ہیں تاکہ باقی متغیرات کو حل کیا جا سکے۔"
+  },
+  {
+   "en": "The rule for echelon form requires the first non-zero entry in each row to be $1$. By multiplying $R_2$ by $-\\frac{1}{7}$, we turn $-7$ into our second pivot $1$, which will easily clear the column below it.",
+   "ur": "اشلون شکل کے اصول کے مطابق ہر قطار کا پہلا غیر صفر رکن $1$ ہونا چاہیے۔ دوسری قطار $R_2$ کو $-\\frac{1}{7}$ سے ضرب دے کر ہم $-7$ کو دوسرے پیوٹ $1$ میں بدل دیتے ہیں، جس کی مدد سے اس کے نیچے موجود کالم کو صفر کرنا آسان ہو جائے گا۔"
+  },
+  {
+   "en": "Now we use the new pivot $1$ in the second row to make the entry $-11$ below it equal to $0$. This eliminates $x_2$ from the third row, leaving only the variable $x_3$ in the last equation.",
+   "ur": "اب ہم دوسری قطار کے نئے پیوٹ $1$ کو استعمال کرتے ہوئے اس کے نیچے موجود رکن $-11$ کو $0$ بناتے ہیں۔ اس عمل سے تیسری قطار سے $x_2$ ختم ہو جاتا ہے اور آخری مساوات میں صرف متغیر $x_3$ باقی رہ جاتا ہے۔"
+  },
+  {
+   "en": "To complete the staircase pattern of pivots, the leading non-zero entry in the third row must also be $1$. Multiplying $R_3$ by $\\frac{7}{16}$ changes $\\frac{16}{7}$ to $1$, which immediately reveals the value of $x_3$ as $-\\frac{13}{16}$.",
+   "ur": "پیوٹ ارکان کی سیڑھی جیسی ترتیب مکمل کرنے کے لیے تیسری قطار کا پہلا غیر صفر رکن بھی $1$ ہونا چاہیے۔ تیسری قطار $R_3$ کو $\\frac{7}{16}$ سے ضرب دینے سے $\\frac{16}{7}$ بدل کر $1$ ہو جاتا ہے، جس سے ہمیں فوراً $x_3$ کی قیمت $-\\frac{13}{16}$ معلوم ہو جاتی ہے۔"
+  },
+  {
+   "en": "At this stage, every leading entry is $1$ and all entries below them are $0$, which fulfills the definition of echelon form. This completes the first requirement of the question and sets up the matrix for the next phase.",
+   "ur": "اس مرحلے پر ہر قطار کا پہلا غیر صفر رکن $1$ ہے اور ان کے نیچے تمام ارکان $0$ ہیں، جو اشلون شکل کی تعریف کو پورا کرتا ہے۔ یہاں سوال کا پہلا حصہ مکمل ہو جاتا ہے اور قالب اگلے مرحلے کے لیے تیار ہے۔"
+  },
+  {
+   "en": "To reach reduced echelon form (Gauss-Jordan elimination), we must also make all entries *above* each pivot equal to $0$. Using the pivot in $R_3$, we clear column 3 in the first and second rows, removing $x_3$ from those equations.",
+   "ur": "تخفیف شدہ اشلون شکل (reduced echelon form) حاصل کرنے کے لیے ہمیں ہر پیوٹ کے *اوپر* موجود ارکان کو بھی $0$ بنانا ہوتا ہے۔ تیسری قطار $R_3$ کے پیوٹ کو استعمال کرتے ہوئے ہم پہلی اور دوسری قطار میں تیسرے کالم کے ارکان کو صفر کر دیتے ہیں، جس سے ان مساواتوں سے $x_3$ ختم ہو جاتا ہے۔"
+  },
+  {
+   "en": "Finally, we use the pivot in the second row to turn the entry $4$ above it in column 2 into $0$. This transforms the left side of our augmented matrix into the $3 \\times 3$ identity matrix.",
+   "ur": "آخر میں، ہم دوسری قطار کے پیوٹ کی مدد سے دوسرے کالم میں اس کے اوپر موجود رکن $4$ کو $0$ بناتے ہیں۔ اس سے ہمارے افزائشی قالب کا بایاں حصہ ایک اکائی قالب (identity matrix) میں تبدیل ہو جاتا ہے۔"
+  },
+  {
+   "en": "Because the coefficient part is now the identity matrix, the matrix is in reduced echelon form. Each row now represents a single isolated variable, allowing us to read the exact values of $x_1, x_2,$ and $x_3$ directly from the last column.",
+   "ur": "چونکہ عددی سروں والا حصہ اب ایک اکائی قالب بن چکا ہے، اس لیے یہ قالب اب تخفیف شدہ اشلون شکل میں ہے۔ اب ہر قطار صرف ایک متغیر کو ظاہر کرتی ہے، جس سے ہم آخری کالم سے براہِ راست $x_1, x_2$ اور $x_3$ کی قیمتیں پڑھ سکتے ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $(x_1, x_2, x_3) = \\left(\\frac{61}{16}, -\\frac{1}{4}, -\\frac{13}{16}\\right)$ is the unique solution that satisfies all three given linear equations simultaneously. You can easily check this by substituting these three values back into the first equation $x_1 + 4x_2 + x_3 = 2$ to verify that the left side simplifies to $2$.",
+  "ur": "آخری جواب $(x_1, x_2, x_3) = \\left(\\frac{61}{16}, -\\frac{1}{4}, -\\frac{13}{16}\\right)$ وہ واحد حل ہے جو دی گئی تینوں خطی مساواتوں کو بیک وقت درست ثابت کرتا ہے۔ آپ اس کی پڑتال کرنے کے لیے ان تینوں قیمتوں کو پہلی مساوات $x_1 + 4x_2 + x_3 = 2$ میں درج کر کے دیکھ سکتے ہیں کہ بائیں جانب کا حل بالکل $2$ کے برابر آتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

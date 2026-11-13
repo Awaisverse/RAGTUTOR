@@ -1,0 +1,40 @@
+{
+ "item": "c11-ex4.2-q2",
+ "label": "iv",
+ "answer_ref": "$D = 0$",
+ "math": [
+  "D = \\begin{vmatrix} l & m + n & l \\\\ m & l + n & l \\\\ n & l + m & l \\end{vmatrix}",
+  "= \\begin{vmatrix} l & l + m + n & l \\\\ m & l + m + n & l \\\\ n & l + m + n & l \\end{vmatrix}\\quad (C_2 \\to C_2 + C_1)",
+  "= (l + m + n)\\begin{vmatrix} l & 1 & l \\\\ m & 1 & l \\\\ n & 1 & l \\end{vmatrix}\\quad (\\text{taking } l + m + n \\text{ common from } C_2)",
+  "= l(l + m + n)\\begin{vmatrix} l & 1 & 1 \\\\ m & 1 & 1 \\\\ n & 1 & 1 \\end{vmatrix}\\quad (\\text{taking } l \\text{ common from } C_3)",
+  "D = 0"
+ ],
+ "why": [
+  {
+   "en": "We start by naming the given determinant $D$ so we can easily refer to it as we apply determinant properties. Remember, the question asks us to prove this 'without expansion', so our goal is to make two columns identical.",
+   "ur": "ہم دیے گئے مقطع کو $D$ کا نام دیتے ہیں تاکہ مقطع کی خصوصیات لاگو کرتے وقت اس کا حوالہ دینا آسان رہے۔ یاد رکھیں کہ سوال میں اسے 'بغیر پھیلاؤ کے' ثابت کرنے کو کہا گیا ہے، اس لیے ہمارا مقصد دو کالم یکساں بنانا ہے۔"
+  },
+  {
+   "en": "Looking at the first and second columns, we notice that adding them together will create the exact same sum, $l + m + n$, in every row. By the property of determinants, adding one column to another ($C_2 \\to C_2 + C_1$) does not change the determinant's value, and it gives us a uniform second column.",
+   "ur": "پہلے اور دوسرے کالم کو دیکھ کر ہمیں اندازہ ہوتا ہے کہ انہیں جمع کرنے سے ہر قطار میں بالکل ایک جیسا مجموعہ $l + m + n$ بن جائے گا۔ مقطع کی خصوصیت کے مطابق ایک کالم کو دوسرے میں جمع کرنے ($C_2 \\to C_2 + C_1$) سے مقطع کی قیمت تبدیل نہیں ہوتی، اور اس سے ہمیں ایک یکساں دوسرا کالم مل جاتا ہے۔"
+  },
+  {
+   "en": "According to the factoring property of determinants, if all entries in a single column share a common factor, we can factor it out of the determinant. Taking $l + m + n$ out of the second column leaves clean $1$s behind, bringing us closer to matching columns.",
+   "ur": "مقطع سے مشترک لینے کی خصوصیت کے مطابق، اگر کسی ایک کالم کے تمام ارکان میں کوئی رکن مشترک ہو تو ہم اسے مقطع سے باہر نکال سکتے ہیں۔ دوسرے کالم سے $l + m + n$ باہر نکالنے سے وہاں صرف $1$ رہ جاتا ہے، جو ہمیں دو کالم ایک جیسے بنانے کے قریب لے آتا ہے۔"
+  },
+  {
+   "en": "Similarly, every entry in the third column is $l$, so we can factor $l$ out of the determinant from $C_3$. This simplifies the third column to all $1$s as well, making it look just like the second column.",
+   "ur": "اسی طرح، تیسرے کالم کا ہر رکن $l$ ہے، اس لیے ہم $C_3$ سے $l$ کو مقطع کے باہر مشترک نکال سکتے ہیں۔ اس سے تیسرا کالم بھی سادہ ہو کر مکمل طور پر $1$ بن جاتا ہے اور بالکل دوسرے کالم جیسا نظر آنے لگتا ہے۔"
+  },
+  {
+   "en": "A fundamental property of determinants states that if any two columns (here, $C_2$ and $C_3$) are completely identical, the value of the determinant is zero. Multiplying our outside factors $l(l + m + n)$ by $0$ gives the final result $D = 0$.",
+   "ur": "مقطع کی ایک بنیادی خصوصیت یہ ہے کہ اگر کوئی سے دو کالم (یہاں $C_2$ اور $C_3$) بالکل یکساں ہوں تو مقطع کی قیمت صفر ہوتی ہے۔ باہر موجود اجزائے ضربی $l(l + m + n)$ کو $0$ سے ضرب دینے سے ہمیں حتمی نتیجہ $D = 0$ ملتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $D = 0$ proves that the given determinant vanishes for any values of $l, m,$ and $n$, strictly using column properties without expanding it. You can easily verify this by substituting simple numbers like $l = 1, m = 1, n = 1$ into the original determinant and seeing that two columns become proportional right away.",
+  "ur": "حتمی جواب $D = 0$ ثابت کرتا ہے کہ دیا گیا مقطع $l, m,$ اور $n$ کی کسی بھی قیمت کے لیے صفر ہے، اور ہم نے یہ بغیر پھیلاؤ کے صرف کالم کی خصوصیات استعمال کرتے ہوئے دکھایا ہے۔ آپ اصل مقطع میں $l = 1, m = 1, n = 1$ جیسی سادہ قیمتیں درج کر کے باآسانی اس کی تصدیق کر سکتے ہیں، جس سے دو کالم فوراً متناسب ہو جائیں گے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

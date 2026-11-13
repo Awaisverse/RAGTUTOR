@@ -40,7 +40,10 @@ Steps (JSON, numbered): {steps}
 Final answer: {answer}
 
 Rules: use only numbers that appear in the question or the steps; inline maths in $...$ (LaTeX); Urdu in clear simple
-Urdu script with maths in $...$.
+Urdu script with maths in $...$. English words in English letters only (never Hindi, Bengali or other scripts).
+Urdu terms (use exactly these): matrix = قالب, matrices = قالبوں, column = کالم, row = قطار, determinant = مقطع,
+entry/element = رکن, corresponding entries = متناظر ارکان, identity matrix = اکائی قالب, inverse = معکوس, transpose = پلٹ (transpose),
+cofactor = ہم عامل, rank = رینک (rank). Never call a matrix کالم (that means column).
 Return ONLY JSON:
 {{"why": [{{"en": "...", "ur": "..."}}, ... exactly {n} entries, one per step in order],
   "meaning": {{"en": "...", "ur": "..."}}}}"""
@@ -86,6 +89,11 @@ def validate(out, it, p):
         return None, "the meaning of the answer is missing"
     if _numbers(m_en) - allowed:
         return None, f"meaning brings in numbers not in the working: {sorted(_numbers(m_en) - allowed)[:5]}"
+    text = json.dumps([clean, m_en, m_ur], ensure_ascii=False)
+    if re.search("[ऀ-෿]", text):                    # Hindi, Bengali, ... letters slipped in
+        return None, "letters of another script (Hindi, Bengali, ...)"
+    if re.search("کالب|متنازع", text):                        # misspelt قالب; 'disputed' for corresponding
+        return None, "wrong Urdu term (کالب / متنازعہ)"
     return {"why": clean, "meaning": {"en": m_en, "ur": m_ur}}, None
 
 

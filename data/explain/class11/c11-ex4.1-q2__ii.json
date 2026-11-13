@@ -1,0 +1,20 @@
+{
+ "item": "c11-ex4.1-q2",
+ "label": "ii",
+ "answer_ref": "$B - C = \\begin{bmatrix} 1 & 1 & 1 \\\\ 2 & -3 & 4 \\\\ -4 & -2 & 2 \\end{bmatrix}$",
+ "math": [
+  "B - C = \\begin{bmatrix} 2 & 1 & -1 \\\\ 1 & 2 & 4 \\\\ -1 & 2 & 1 \\end{bmatrix} - \\begin{bmatrix} 1 & 0 & -2 \\\\ -1 & 5 & 0 \\\\ 3 & 4 & -1 \\end{bmatrix} = \\begin{bmatrix} 2 - (1) & 1 - (0) & (-1) - (-2) \\\\ 1 - (-1) & 2 - (5) & 4 - (0) \\\\ (-1) - (3) & 2 - (4) & 1 - (-1) \\end{bmatrix} = \\begin{bmatrix} 1 & 1 & 1 \\\\ 2 & -3 & 4 \\\\ -4 & -2 & 2 \\end{bmatrix}"
+ ],
+ "why": [
+  {
+   "en": "By the definition of matrix subtraction, since matrices $B$ and $C$ both have the same order ($3 \\times 3$), we subtract each entry of $C$ from the corresponding entry in $B$. Watching out carefully for double negatives (like $(-1) - (-2) = 1$) gives us the exact entries of the difference matrix $B - C$.",
+   "ur": "قالبوں کی تفریق کے اصول کے مطابق، چونکہ $B$ اور $C$ دونوں قالبوں کا درجہ ایک جیسا ($3 \\times 3$) ہے، اس لیے ہم قالب $B$ کے ہر رکن میں سے قالب $C$ کے متناظر ارکان کو تفریق کرتے ہیں۔ منفی علامتوں کا خاص خیال رکھتے ہوئے (جیسے $(-1) - (-2) = 1$) ہمیں براہِ راست مطلوبہ قالب $B - C$ کے ارکان مل جاتے ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "This resulting $3 \\times 3$ matrix is the exact difference $B - C$. You can easily check your work by adding this result to matrix $C$ entry by entry, which will give you back the original matrix $B$.",
+  "ur": "یہ حاصل ہونے والا $3 \\times 3$ قالب دراصل $B - C$ کا مطلوبہ فرق ہے۔ آپ اس جواب کو قالب $C$ کے متناظر ارکان میں جمع کر کے اپنے حل کی درستگی کی پڑتال کر سکتے ہیں، جس سے واپس اصل قالب $B$ حاصل ہو جائے گا۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

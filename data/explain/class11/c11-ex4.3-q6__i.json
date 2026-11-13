@@ -1,0 +1,55 @@
+{
+ "item": "c11-ex4.3-q6",
+ "label": "i",
+ "answer_ref": "$(x,y,z) = (0,0,0)$",
+ "math": [
+  "AX = O:\\quad \\begin{bmatrix} 1 & 4 & -2 \\\\ 2 & 1 & 5 \\\\ 5 & 2 & 8 \\end{bmatrix}\\begin{bmatrix} x \\\\ y \\\\ z \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 0 \\\\ 0 \\end{bmatrix}",
+  "|A| = \\begin{vmatrix} 1 & 4 & -2 \\\\ 2 & 1 & 5 \\\\ 5 & 2 & 8 \\end{vmatrix} = (1)\\left[(1)(8) - (5)(2)\\right] - (4)\\left[(2)(8) - (5)(5)\\right] + (-2)\\left[(2)(2) - (1)(5)\\right] = 36",
+  "R_2 \\to R_2 - 2R_1,\\ R_3 \\to R_3 - 5R_1:\\ \\begin{bmatrix} 1 & 4 & -2 \\\\ 0 & -7 & 9 \\\\ 0 & -18 & 18 \\end{bmatrix}",
+  "R_2 \\to - \\frac{1}{7}R_2:\\ \\begin{bmatrix} 1 & 4 & -2 \\\\ 0 & 1 & - \\frac{9}{7} \\\\ 0 & -18 & 18 \\end{bmatrix}",
+  "R_3 \\to R_3 + 18R_2:\\ \\begin{bmatrix} 1 & 4 & -2 \\\\ 0 & 1 & - \\frac{9}{7} \\\\ 0 & 0 & - \\frac{36}{7} \\end{bmatrix}",
+  "R_3 \\to - \\frac{7}{36}R_3:\\ \\begin{bmatrix} 1 & 4 & -2 \\\\ 0 & 1 & - \\frac{9}{7} \\\\ 0 & 0 & 1 \\end{bmatrix}",
+  "\\text{Echelon form: } \\begin{bmatrix} 1 & 4 & -2 \\\\ 0 & 1 & - \\frac{9}{7} \\\\ 0 & 0 & 1 \\end{bmatrix}",
+  "z = 0 \\Rightarrow y = 0 \\Rightarrow x = 0\\ \\text{(trivial solution only)}"
+ ],
+ "why": [
+  {
+   "en": "We first organize the coefficients of $x$, $y$, and $z$ into a coefficient matrix $A$ so we can apply row operations easily. Since the right side is the zero matrix $O$, we only need to reduce $A$ because any row operation on zeros keeps them zero.",
+   "ur": "ہم سب سے پہلے $x$، $y$ اور $z$ کے عددی سروں کو ایک قالب $A$ میں ترتیب دیتے ہیں تاکہ قطار کے عوامل آسانی سے لاگو کر سکیں۔ چونکہ دائیں طرف صفری قالب $O$ ہے، اس لیے ہمیں صرف $A$ کو حل کرنے کی ضرورت ہے کیونکہ صفر پر کوئی بھی قطار کا عمل اسے صفر ہی رکھتا ہے۔"
+  },
+  {
+   "en": "By calculating the determinant $|A|$ first, we can immediately know what kind of answer to expect. Since $|A| = 36 \\neq 0$, the matrix is non-singular, which confirms right away that the system has only the trivial solution $(0, 0, 0)$.",
+   "ur": "پہلے مقطع $|A|$ معلوم کرنے سے ہمیں فوراً اندازہ ہو جاتا ہے کہ کس قسم کا جواب آئے گا۔ چونکہ $|A| = 36 \\neq 0$ ہے، اس لیے یہ قالب غیر نادر ہے، جو اس بات کی تصدیق کرتا ہے کہ اس نظام کا صرف ایک ہی بدیہی حل $(0, 0, 0)$ ہے۔"
+  },
+  {
+   "en": "To start Gaussian elimination, we use the leading $1$ in the first row to eliminate the variable $x$ from the second and third equations. This gives us zeros below the first pivot and simplifies the remaining rows.",
+   "ur": "Gaussian elimination شروع کرنے کے لیے، ہم پہلی قطار کے پہلے رکن $1$ کو استعمال کرتے ہوئے دوسری اور تیسری مساوات سے متغیر $x$ کو ختم کرتے ہیں۔ اس سے پہلے کالم میں $1$ کے نیچے صفر آ جاتے ہیں اور باقی قطاریں سادہ ہو جاتی ہیں۔"
+  },
+  {
+   "en": "In row echelon form, the first non-zero entry (pivot) in each row should be $1$. Multiplying the second row by $-\\frac{1}{7}$ turns $-7$ into a clean pivot of $1$, making it ready to clear the entry below it.",
+   "ur": "Echelon form میں، ہر قطار کا پہلا غیر صفری رکن $1$ ہونا چاہیے۔ دوسری قطار کو $-\\frac{1}{7}$ سے ضرب دینے سے $-7$ ایک واضح رکن $1$ میں بدل جاتا ہے، جس سے اس کے نیچے والے رکن کو صفر بنانا آسان ہو جائے گا۔"
+  },
+  {
+   "en": "Now we use the new pivot $1$ in the second row to eliminate $y$ from the third row by turning $-18$ into $0$. This leaves the third row with only one unknown variable, $z$.",
+   "ur": "اب ہم دوسری قطار کے نئے رکن $1$ کو استعمال کرتے ہوئے تیسری قطار میں سے $y$ کو ختم کرتے ہیں اور $-18$ کو $0$ بنا دیتے ہیں۔ اس سے تیسری قطار میں صرف ایک نامعلوم متغیر $z$ رہ جاتا ہے۔"
+  },
+  {
+   "en": "To complete the echelon form, we need the final pivot in the third row to also be $1$. Multiplying row 3 by $-\\frac{7}{36}$ achieves this and isolates the coefficient of $z$ as $1$.",
+   "ur": "Echelon form کو مکمل کرنے کے لیے، ہمیں تیسری قطار کے آخری غیر صفری رکن کو بھی $1$ بنانا ہے۔ تیسری قطار کو $-\\frac{7}{36}$ سے ضرب دینے سے یہ مقصد پورا ہو جاتا ہے اور $z$ کا عددی سر $1$ بن جاتا ہے۔"
+  },
+  {
+   "en": "The matrix is now in proper row echelon form because it has a staircase of leading $1$s with all zeros beneath them. From this simplified form, we can easily read off the equations and solve for the variables from bottom to top.",
+   "ur": "اب یہ قالب مکمل طور پر echelon form میں آ چکا ہے کیونکہ اس میں ترچھی ترتیب میں $1$ موجود ہیں اور ان کے نیچے تمام ارکان صفر ہیں۔ اس سادہ شکل سے ہم آسانی سے مساوات پڑھ سکتے ہیں اور نیچے سے اوپر کی طرف متغیرات کی قیمتیں نکال سکتے ہیں۔"
+  },
+  {
+   "en": "Rewriting the rows as equations, the third row directly says $1z = 0$. Substituting $z = 0$ into the second row gives $y = 0$, and putting both into the first row gives $x = 0$, completing our Gaussian elimination.",
+   "ur": "قطاروں کو دوبارہ مساوات کی شکل میں لکھنے سے، تیسری قطار سے براہِ راست $1z = 0$ ملتا ہے۔ $z = 0$ کو دوسری قطار میں درج کرنے سے $y = 0$ آتا ہے، اور ان دونوں کو پہلی قطار میں رکھنے سے $x = 0$ ملتا ہے، یوں ہمارا Gaussian elimination کا عمل مکمل ہوتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The final answer $(x, y, z) = (0, 0, 0)$ means that the three planes represented by these equations intersect at only one single point: the origin. For a homogeneous system, this is called the trivial solution, and you can easily verify it by plugging $x = 0, y = 0, z = 0$ into the original equations to see that $0 = 0$ holds true for all three.",
+  "ur": "آخری جواب $(x, y, z) = (0, 0, 0)$ کا مطلب ہے کہ یہ تینوں مساواتیں صرف ایک ہی نقطے یعنی مبداء (origin) پر ایک دوسرے کو قطع کرتی ہیں۔ ایک ہم جنس نظام (homogeneous system) کے لیے اسے بدیہی حل (trivial solution) کہتے ہیں، اور آپ اصل مساواتوں میں $x = 0, y = 0, z = 0$ درج کر کے آسانی سے تصدیق کر سکتے ہیں کہ تینوں کے لیے $0 = 0$ درست ثابت ہوتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

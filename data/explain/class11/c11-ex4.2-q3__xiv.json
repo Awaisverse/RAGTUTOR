@@ -1,0 +1,35 @@
+{
+ "item": "c11-ex4.2-q3",
+ "label": "xiv",
+ "answer_ref": "$D = 0$",
+ "math": [
+  "D = \\begin{vmatrix} 2 x + 3 & x + 2 & a + x \\\\ 2 x + 5 & x + 3 & b + x \\\\ 2 x + 7 & x + 4 & c + x \\end{vmatrix}",
+  "= \\begin{vmatrix} 0 & 0 & a + c - 2 b \\\\ 2 x + 5 & x + 3 & b + x \\\\ 2 x + 7 & x + 4 & c + x \\end{vmatrix}\\quad (R_1 \\to R_1 - 2R_2 + R_3)",
+  "2b = a + c \\Rightarrow a + c - 2b = 0",
+  "D = 0"
+ ],
+ "why": [
+  {
+   "en": "We begin by naming the given determinant $D$ so that we can easily refer to it while applying row operations to prove it equals $0$.",
+   "ur": "ہم دیے گئے مقطع کو $D$ کا نام دے کر شروعات کرتے ہیں تاکہ قطار کے عوامل استعمال کرتے ہوئے اسے $0$ کے برابر ثابت کرنا آسان ہو۔"
+  },
+  {
+   "en": "By the property of determinants, adding or subtracting multiples of other rows to a row leaves the determinant's value unchanged. We apply $R_1 \\to R_1 - 2R_2 + R_3$ because the entries in the first two columns are in an even pattern, which nicely turns the first two entries of row 1 into $0$ and simplifies the third entry to $a + c - 2b$.",
+   "ur": "مقطع کی خاصیت کے مطابق، کسی قطار میں دوسری قطاروں کے اضعاف کو جمع یا تفریق کرنے سے مقطع کی قیمت تبدیل نہیں ہوتی۔ ہم $R_1 \\to R_1 - 2R_2 + R_3$ اس لیے استعمال کرتے ہیں کیونکہ پہلے دو کالموں کے ارکان ایک خاص ترتیب میں ہیں، جس سے پہلی قطار کے پہلے دو ارکان $0$ بن جاتے ہیں اور تیسرا رکن سادہ ہو کر $a + c - 2b$ رہ جاتا ہے۔"
+  },
+  {
+   "en": "Now we bring in the condition given in the question, $2b = a + c$, to evaluate the remaining non-zero looking entry in the first row. Rearranging this equation shows that $a + c - 2b = 0$, which means the entire first row of our determinant actually consists of zeros.",
+   "ur": "اب ہم سوال میں دی گئی شرط $2b = a + c$ کو استعمال کرتے ہیں تاکہ پہلی قطار کے تیسرے رکن کی قیمت معلوم کر سکیں۔ اس مساوات کو ترتیب دینے سے معلوم ہوتا ہے کہ $a + c - 2b = 0$ ہے، جس کا مطلب ہے کہ ہمارے مقطع کی پوری پہلی قطار صفر ہو جاتی ہے۔"
+  },
+  {
+   "en": "We use the fundamental property of determinants which states that if every entry in any row (or column) of a determinant is $0$, then the value of the entire determinant is $0$. Since row 1 is now completely zero, we directly conclude that $D = 0$ without needing any long expansion.",
+   "ur": "ہم مقطع کی یہ بنیادی خاصیت استعمال کرتے ہیں کہ اگر کسی مقطع کی کسی بھی ایک قطار (یا کالم) کا ہر رکن $0$ ہو، تو پورے مقطع کی قیمت $0$ ہوتی ہے۔ چونکہ پہلی قطار مکمل طور پر صفر ہو چکی ہے، اس لیے ہم بغیر کسی لمبی توسیع کے براہِ راست نتیجہ اخذ کرتے ہیں کہ $D = 0$ ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This result proves that whenever $a$, $b$, and $c$ satisfy the relation $2b = a + c$, the rows of this determinant become linearly dependent, making its value exactly $0$ for any value of $x$. You can easily check this by putting simple numbers like $x = 0$, $a = 1$, $b = 2$, and $c = 3$ (since $2(2) = 1 + 3$) into the original determinant and seeing that it evaluates to $0$.",
+  "ur": "یہ نتیجہ ثابت کرتا ہے کہ جب بھی $a$، $b$ اور $c$ دیے گئے تعلق $2b = a + c$ کو پورا کرتے ہیں، تو اس مقطع کی قیمت $x$ کی ہر قیمت کے لیے بالکل $0$ ہو جاتی ہے۔ آپ اس کی تصدیق کے لیے اصل مقطع میں $x = 0$، $a = 1$، $b = 2$ اور $c = 3$ (کیونکہ $2(2) = 1 + 3$) جیسی سادہ قیمتیں درج کر کے دیکھ سکتے ہیں کہ اس کا جواب واقعی $0$ آتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

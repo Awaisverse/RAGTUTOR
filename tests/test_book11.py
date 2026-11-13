@@ -40,14 +40,14 @@ print("build:", last[-1] if last else "?")
 
 # 2. structure -----------------------------------------------------------------------------------------------------------
 items = [it for f in sorted((ROOT / "data" / "book11").glob("unit*.json")) for it in json.loads(f.read_text(encoding="utf-8"))["items"]]
-N = 86                                                # Unit 1 (60) + Unit 2 (15) + Unit 3 (11)
+N = 114                                               # Unit 1 (60) + Unit 2 (15) + Unit 3 (11) + Unit 4 (28)
 check(len(items) == N, f"{N} questions expected, found {len(items)}")
 ids = [it["id"] for it in items]
 check(len(ids) == len(set(ids)), "duplicate ids")
 per_ex = {}
 for it in items:
     per_ex[it["exercise"]] = per_ex.get(it["exercise"], 0) + 1
-    check(re.match(r"c11-ex[123]\.", it["id"]), f"id {it['id']}")
+    check(re.match(r"c11-ex[1234]\.", it["id"]), f"id {it['id']}")
     for p in it["parts"]:
         check(p["answer"], f"{it['id']} ({p['label']}): no answer")
         check(p["steps"], f"{it['id']} ({p['label']}): no steps")
@@ -58,8 +58,8 @@ for it in items:
             for d in s.get("draw", []) or []:
                 check(d.get("t") in ("line", "poly", "circle", "arc", "dot", "text", "right", "numberline", "subdiv"), f"{it['id']}: drawing {d.get('t')}")
 for it in items:                                     # Urdu in Urdu script and English in English: no Hindi (Devanagari) letters anywhere
-    check(not re.search("[ऀ-ॿ]", json.dumps(it, ensure_ascii=False)), f"{it['id']}: Devanagari letters in the text")
-check(per_ex == {"1.1": 9, "1.2": 12, "1.3": 8, "1.4": 9, "1.5": 22, "2.1": 10, "2.2": 5, "3.1": 4, "3.2": 7}, f"questions per exercise {per_ex}")
+    check(not re.search("[ऀ-෿]", json.dumps(it, ensure_ascii=False)), f"{it['id']}: Hindi, Bengali or other Indic letters in the text")
+check(per_ex == {"1.1": 9, "1.2": 12, "1.3": 8, "1.4": 9, "1.5": 22, "2.1": 10, "2.2": 5, "3.1": 4, "3.2": 7, "4.1": 7, "4.2": 10, "4.3": 11}, f"questions per exercise {per_ex}")
 print("structure:", len(items), "items,", sum(len(it["parts"]) for it in items), "parts,", per_ex)
 
 # 3. server --------------------------------------------------------------------------------------------------------------
@@ -200,6 +200,91 @@ for _ in range(8):                                    # Unit 2: where a line mee
     cases.append(("axes", f"Find the points where y = {q_(m * X_ + c)} meets the coordinate axes", (m, c)))
 
 
+def rmat(rows, cols, lo=-5, hi=5):
+    return sp.Matrix(rows, cols, lambda i, j: rnd.randint(lo, hi))
+
+
+def mtxt(mx):
+    return "[" + ", ".join("[" + ", ".join(str(v) for v in mx.row(i)) + "]" for i in range(mx.rows)) + "]"
+
+
+def unimodular():
+    """A random 3-by-3 integer matrix with determinant +-1 or +-2 (small inverse entries)."""
+    while True:
+        mx = rmat(3, 3, -3, 4)
+        if mx.det() in (1, -1, 2, -2):
+            return mx
+
+
+for _ in range(10):                                   # Unit 4: evaluate a 3-by-3 determinant
+    mx = rmat(3, 3)
+    cases.append(("det", f"Evaluate the determinant of A = {mtxt(mx)}", mx))
+for _ in range(8):                                    # Unit 4: find x from |A| = k
+    while True:
+        mx = rmat(3, 3)
+        i, j = rnd.randint(0, 2), rnd.randint(0, 2)
+        mx[i, j] = X_
+        if sp.degree(sp.expand(mx.det()), X_) == 1:
+            break
+    x0 = rnd.randint(-4, 4)
+    k = mx.det().subs(X_, x0)
+    tex = r"\begin{vmatrix} " + r" \\ ".join(" & ".join(sp.latex(v) for v in mx.row(r)) for r in range(3)) + r" \end{vmatrix}"
+    cases.append(("findx", f"Find x if ${tex} = {k}$", (mx, k)))
+for _ in range(8):                                    # Unit 4: inverse by the adjoint and by row operations
+    mx = unimodular()
+    cases.append(("minv", f"Find the inverse of A = {mtxt(mx)}" + (" by elementary row operations" if _ % 2 else ""), mx))
+for _ in range(8):                                    # Unit 4: rank of a 3-by-4 matrix of a chosen rank
+    r_ = rnd.choice([1, 2, 3])
+    mx = rmat(3, r_, -3, 3) * rmat(r_, 4, -3, 3)
+    cases.append(("rank", f"Find the rank of A = {mtxt(mx)}", mx))
+for _ in range(15):                                   # Unit 4: three equations by Cramer's rule, inversion, echelon form
+    while True:
+        A_ = rmat(3, 3, -4, 4)
+        if A_.det() != 0:
+            break
+    sol = sp.Matrix([rnd.randint(-5, 5) for _ in range(3)])
+    B_ = A_ * sol
+    sub = _ % 2 == 1
+    names = ["x_1", "x_2", "x_3"] if sub else ["x", "y", "z"]
+    eqs = []
+    for r in range(3):
+        t = ""
+        for a_, n_ in zip(A_.row(r), names):
+            if a_:
+                t += (f" {'-' if a_ < 0 else '+'} " if t else ("-" if a_ < 0 else "")) + f"{'' if abs(a_) == 1 else abs(a_)}{n_}"
+        eqs.append(f"{t} = {B_[r]}")
+    how = ["by Cramer's rule", "by the matrix inversion method", "by reducing to echelon form"][_ % 3]
+    cases.append(("sys3", f"Solve {how}: " + ", ".join(f"${q}$" for q in eqs), (sol, names)))
+for _ in range(6):                                    # Unit 4: homogeneous systems with a one-parameter family
+    while True:
+        A_ = rmat(2, 3, -4, 4)
+        A_ = A_.col_join(rnd.randint(-2, 2) * A_[0, :] + rnd.choice([-1, 1, 2]) * A_[1, :])
+        if A_.rank() == 2 and all(A_.row(r) != sp.zeros(1, 3) for r in range(3)):
+            break
+    eqs = []
+    for r in range(3):
+        t = ""
+        for a_, n_ in zip(A_.row(r), ["x", "y", "z"]):
+            if a_:
+                t += (f" {'-' if a_ < 0 else '+'} " if t else ("-" if a_ < 0 else "")) + f"{'' if abs(a_) == 1 else abs(a_)}{n_}"
+        eqs.append(f"{t} = 0")
+    cases.append(("homog", "Solve the homogeneous system " + ", ".join(eqs), A_))
+for _ in range(6):                                    # Unit 4: a polynomial in a matrix
+    mx = rmat(2 + _ % 2, 2 + _ % 2, -3, 3)
+    p_, q_c = rnd.randint(1, 6), rnd.randint(1, 6)
+    cases.append(("mpoly", f"Find A^2 - {p_}A + {q_c}I if A = {mtxt(mx)}", (mx, p_, q_c)))
+for _ in range(4):                                    # Unit 4: encode then decode a message
+    mx = unimodular()
+    word = rnd.choice(["MATHS", "SEND HELP", "GOOD LUCK", "PUNJAB", "STUDY HARD"])
+    cases.append(("enc", f"Use the matrix A = {mtxt(mx)} to encode the message {word}", (mx, word)))
+
+
+def mat_tex(s):
+    """A bmatrix in an answer -> sympy Matrix."""
+    body = re.search(r"\\begin\{bmatrix\}(.*?)\\end\{bmatrix\}", s, re.S).group(1)
+    return sp.Matrix([[tex_py(c) for c in r.split("&")] for r in body.split("\\\\")])
+
+
 def tex_py(s):
     """A LaTeX answer in a, h, x (powers, fractions, roots) -> sympy."""
     from sympy.parsing.sympy_parser import convert_xor, implicit_multiplication_application, parse_expr, standard_transformations
@@ -303,6 +388,38 @@ for kind, q, data in cases:
             m, c = data
             pts = [(cplx(a), cplx(b)) for a, b in re.findall(r"\\left\(([^,]+), ([^)]+?)\\right\)", ans)]
             ok = pts == [(sp.Rational(-c, m), 0), (0, c)]
+        elif kind == "det":
+            ok = ans == f"$D = {data.det()}$"
+        elif kind == "findx":
+            mx, k = data
+            vals = [tex_py(v) for v in re.findall(r"x = ([^$]+?)(?:\s*\\quad|\$)", ans)]
+            want = sp.solve(mx.det() - k, X_)
+            ok = bool(vals) and sorted(vals) == sorted(want) and all(mx.subs(X_, v).det() == k for v in vals)
+        elif kind == "minv":
+            ok = mat_tex(ans) * data == sp.eye(3)
+        elif kind == "rank":
+            ok = ans == rf"$\text{{rank}}(A) = {data.rank()}$"
+        elif kind == "sys3":
+            sol, names = data
+            if "\\left(" in ans:
+                got = [tex_py(v) for v in re.search(r"\\left\((.*)\\right\)", ans).group(1).split(",")]
+            else:
+                got = [tex_py(v) for v in re.findall(r"= ([^,$]+?)(?:,\\ |\$)", ans)]
+            ok = [sp.nsimplify(v) for v in got] == list(sol)
+        elif kind == "homog":
+            vec = sp.Matrix([tex_py(v) for v in re.search(r"= t\((.*?)\)", ans).group(1).split(",")])
+            ok = vec != sp.zeros(3, 1) and data * vec == sp.zeros(3, 1)
+        elif kind == "mpoly":
+            mx, p_, q_c = data
+            ok = mat_tex(ans) == mx ** 2 - p_ * mx + q_c * sp.eye(mx.rows)
+        elif kind == "enc":
+            mx, word = data
+            vecs = [sp.Matrix([tex_py(c) for c in re.split(r"\\\\", b_)]) for b_ in re.findall(r"\\begin\{bmatrix\}(.*?)\\end\{bmatrix\}", ans)]
+            back = "".join(chr(64 + int(v)) for vv in vecs for v in mx.inv() * vv if v != 0)
+            ok = back == word.replace(" ", "")
+            dq = "Decode " + ", ".join("$\\begin{bmatrix} " + r" \\ ".join(str(v) for v in vv) + r" \end{bmatrix}$" for vv in vecs) + f" using A = {mtxt(mx)}"
+            r2 = engine11.solve(dq)
+            ok = ok and r2 is not None and r2["parts"][0]["answer"].replace(" ", "") == word.replace(" ", "")
         elif kind == "inv":
             a, b = data
             nums = re.findall(r"-?\s*\\frac\{(\d+)\}\{(\d+)\}|(-?\d+)", ans)

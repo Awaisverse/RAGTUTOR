@@ -1,0 +1,85 @@
+{
+ "item": "c11-ex4.3-q11",
+ "label": "",
+ "answer_ref": "HOLD FIRE",
+ "math": [
+  "v = Au \\Rightarrow u = A^{-1}v",
+  "|A| = \\begin{vmatrix} 1 & 1 & -1 \\\\ 1 & 0 & 1 \\\\ 2 & 1 & 1 \\end{vmatrix} = (1)\\begin{vmatrix} 0 & 1 \\\\ 1 & 1 \\end{vmatrix} - (1)\\begin{vmatrix} 1 & 1 \\\\ 2 & 1 \\end{vmatrix} + (-1)\\begin{vmatrix} 1 & 0 \\\\ 2 & 1 \\end{vmatrix}",
+  "= (1)\\left[(0)(1) - (1)(1)\\right] - (1)\\left[(1)(1) - (1)(2)\\right] + (-1)\\left[(1)(1) - (0)(2)\\right]",
+  "= (1)(-1) - (1)(-1) + (-1)(1) = -1",
+  "|A| = -1 \\ne 0",
+  "A_{11} = \\begin{vmatrix} 0 & 1 \\\\ 1 & 1 \\end{vmatrix} = -1,\\quad A_{12} = -\\begin{vmatrix} 1 & 1 \\\\ 2 & 1 \\end{vmatrix} = 1,\\quad A_{13} = \\begin{vmatrix} 1 & 0 \\\\ 2 & 1 \\end{vmatrix} = 1",
+  "A_{21} = -\\begin{vmatrix} 1 & -1 \\\\ 1 & 1 \\end{vmatrix} = -2,\\quad A_{22} = \\begin{vmatrix} 1 & -1 \\\\ 2 & 1 \\end{vmatrix} = 3,\\quad A_{23} = -\\begin{vmatrix} 1 & 1 \\\\ 2 & 1 \\end{vmatrix} = 1",
+  "A_{31} = \\begin{vmatrix} 1 & -1 \\\\ 0 & 1 \\end{vmatrix} = 1,\\quad A_{32} = -\\begin{vmatrix} 1 & -1 \\\\ 1 & 1 \\end{vmatrix} = -2,\\quad A_{33} = \\begin{vmatrix} 1 & 1 \\\\ 1 & 0 \\end{vmatrix} = -1",
+  "\\operatorname{adj}A = \\left[A_{ij}\\right]^t = \\begin{bmatrix} -1 & -2 & 1 \\\\ 1 & 3 & -2 \\\\ 1 & 1 & -1 \\end{bmatrix}",
+  "A^{-1} = \\frac{1}{|A|}\\operatorname{adj}A = \\frac{1}{-1}\\begin{bmatrix} -1 & -2 & 1 \\\\ 1 & 3 & -2 \\\\ 1 & 1 & -1 \\end{bmatrix} = \\begin{bmatrix} 1 & 2 & -1 \\\\ -1 & -3 & 2 \\\\ -1 & -1 & 1 \\end{bmatrix}",
+  "A^{-1}\\begin{bmatrix} 11 \\\\ 20 \\\\ 43 \\end{bmatrix} = \\begin{bmatrix} 8 \\\\ 15 \\\\ 12 \\end{bmatrix} \\to \\text{HOL}",
+  "A^{-1}\\begin{bmatrix} 25 \\\\ 10 \\\\ 41 \\end{bmatrix} = \\begin{bmatrix} 4 \\\\ 27 \\\\ 6 \\end{bmatrix} \\to \\text{D(space)F}",
+  "A^{-1}\\begin{bmatrix} 22 \\\\ 14 \\\\ 41 \\end{bmatrix} = \\begin{bmatrix} 9 \\\\ 18 \\\\ 5 \\end{bmatrix} \\to \\text{IRE}",
+  "\\text{HOLD FIRE}"
+ ],
+ "why": [
+  {
+   "en": "Since encoding was done by multiplying the original message $u$ by the matrix $A$, we must undo this operation by multiplying the encoded vector $v$ from the left by the inverse matrix $A^{-1}$. This tells us that our first main goal is to find $A^{-1}$ so we can recover the original message blocks.",
+   "ur": "چونکہ پیغام کو کوڈ کرنے کے لیے اصل پیغام $u$ کو قالب $A$ سے ضرب دی گئی تھی، اس عمل کو الٹنے کے لیے ہمیں کوڈ شدہ ویکٹر $v$ کو بائیں طرف سے معکوس قالب $A^{-1}$ سے ضرب دینی ہوگی۔ اس سے ہمیں معلوم ہوتا ہے کہ اصل پیغام حاصل کرنے کے لیے ہمارا پہلا مقصد $A^{-1}$ معلوم کرنا ہے۔"
+  },
+  {
+   "en": "To find the inverse $A^{-1}$, we first need the determinant $|A|$ to check if the inverse exists and to use it in the inverse formula. By expanding along the first row, we break the $3 \\times 3$ determinant into three simpler $2 \\times 2$ determinants.",
+   "ur": "معکوس $A^{-1}$ معلوم کرنے کے لیے ہمیں سب سے پہلے مقطع $|A|$ کی ضرورت ہے تاکہ پتہ چل سکے کہ معکوس موجود ہے یا نہیں، اور اسے فارمولے میں استعمال کیا جا سکے۔ پہلی قطار کے لحاظ سے پھیلانے سے ہمارا $3 \\times 3$ کا مقطع تین آسان $2 \\times 2$ کے مقطعوں میں تبدیل ہو جاتا ہے۔"
+  },
+  {
+   "en": "We now apply the standard $2 \\times 2$ determinant rule (main diagonal product minus off-diagonal product) to each minor. This turns all the determinant bars into simple arithmetic expressions.",
+   "ur": "اب ہم ہر چھوٹے مقطع پر $2 \\times 2$ مقطع کا اصول (مرکزی وتر کے ارکان کا حاصل ضرب منفی دوسرے وتر کے ارکان کا حاصل ضرب) لاگو کرتے ہیں۔ اس سے تمام مقطعے سادہ حسابی جملوں میں بدل جاتے ہیں۔"
+  },
+  {
+   "en": "We simplify the products and add them up to get the single numerical value of $|A|$. Knowing that $|A| = -1$ gives us the exact divisor we will need at the end of our inverse calculation.",
+   "ur": "ہم ان کو ضرب دے کر اور حل کر کے $|A|$ کی ایک عددی قیمت حاصل کر لیتے ہیں۔ $|A| = -1$ کی یہ قیمت ہمیں وہ عدد دیتی ہے جس سے ہم معکوس نکالتے وقت آخر میں تقسیم کریں گے۔"
+  },
+  {
+   "en": "A matrix has an inverse if and only if its determinant is not zero (meaning it is non-singular). Since $|A| = -1 \\ne 0$, we are guaranteed that $A^{-1}$ exists and the message can be uniquely decoded.",
+   "ur": "کسی قالب کا معکوس تبھی ممکن ہوتا ہے جب اس کا مقطع صفر نہ ہو (یعنی وہ غیر نادر قالب ہو)۔ چونکہ $|A| = -1 \\ne 0$ ہے، اس لیے یہ یقینی ہے کہ $A^{-1}$ موجود ہے اور پیغام کو کامیابی سے ڈی کوڈ کیا جا سکتا ہے۔"
+  },
+  {
+   "en": "To build the adjoint matrix needed for $A^{-1}$, we must find the cofactor of every entry in $A$. Here we calculate the cofactors for the first row, which gives us the first three entries of the cofactor matrix.",
+   "ur": "$A^{-1}$ کے لیے ضروری ایڈجوائنٹ قالب بنانے کے لیے ہمیں $A$ کے ہر رکن کا ہم عامل معلوم کرنا ہوگا۔ یہاں ہم پہلی قطار کے ہم عامل معلوم کر رہے ہیں، جس سے ہمیں ہم عاملوں کے قالب کی پہلی قطار کے تین ارکان مل جاتے ہیں۔"
+  },
+  {
+   "en": "Continuing the same definition of cofactors, we now compute the signed minors for the second row of $A$. This provides the middle row of our cofactor matrix.",
+   "ur": "ہم عامل کی اسی تعریف کو جاری رکھتے ہوئے، اب ہم $A$ کی دوسری قطار کے ارکان کے ہم عامل معلوم کرتے ہیں۔ اس سے ہمیں ہم عاملوں کے قالب کی درمیانی قطار حاصل ہو جاتی ہے۔"
+  },
+  {
+   "en": "We finish the cofactor calculations by finding the signed minors for the third row of $A$. Now we have all nine cofactors needed to form the adjoint matrix.",
+   "ur": "ہم تیسری قطار کے ہم عامل معلوم کر کے یہ مرحلہ مکمل کرتے ہیں۔ اب ہمارے پاس ایڈجوائنٹ قالب بنانے کے لیے تمام نو ہم عامل موجود ہیں۔"
+  },
+  {
+   "en": "By definition, the adjoint of a matrix is the transpose of its cofactor matrix, meaning we interchange its rows and columns. Notice how the cofactors of row $1$, row $2$, and row $3$ now sit as column $1$, column $2$, and column $3$ of $\\operatorname{adj}A$.",
+   "ur": "تعریف کے مطابق، کسی قالب کا ایڈجوائنٹ اس کے ہم عاملوں کے قالب کا پلٹ (transpose) ہوتا ہے، یعنی ہم قطاروں کو کالموں میں بدل دیتے ہیں۔ غور کریں کہ قطار $1$، قطار $2$ اور قطار $3$ کے ہم عامل اب $\\operatorname{adj}A$ میں کالم $1$، کالم $2$ اور کالم $3$ بن چکے ہیں۔"
+  },
+  {
+   "en": "Using the formula $A^{-1} = \\frac{1}{|A|}\\operatorname{adj}A$, we divide every entry of the adjoint matrix by $|A| = -1$, which simply flips the sign of each entry. We now have our decoding key $A^{-1}$ ready to unlock the message.",
+   "ur": "فارمولا $A^{-1} = \\frac{1}{|A|}\\operatorname{adj}A$ استعمال کرتے ہوئے ہم ایڈجوائنٹ قالب کے ہر رکن کو $|A| = -1$ سے تقسیم کرتے ہیں، جس سے ہر رکن کی علامت بدل جاتی ہے۔ اب پیغام کو کھولنے کے لیے ہمارے پاس ڈی کوڈنگ چابی $A^{-1}$ تیار ہے۔"
+  },
+  {
+   "en": "We multiply our decoding matrix $A^{-1}$ by the first encoded column vector to recover the first three original numbers: $8, 15, 12$. Matching these numbers with their alphabet positions ($8=\\text{H}, 15=\\text{O}, 12=\\text{L}$) reveals the first piece of the message, $\\text{HOL}$.",
+   "ur": "پہلے تین اصل اعداد $8, 15, 12$ حاصل کرنے کے لیے ہم معکوس قالب $A^{-1}$ کو پہلے کوڈ شدہ کالم سے ضرب دیتے ہیں۔ ان اعداد کو انگریزی حروف تہجی کی ترتیب ($8=\\text{H}, 15=\\text{O}, 12=\\text{L}$) سے ملانے پر پیغام کا پہلا حصہ $\\text{HOL}$ ظاہر ہوتا ہے۔"
+  },
+  {
+   "en": "Next, we multiply $A^{-1}$ by the second encoded column vector to uncover the numbers $4, 27, 6$. Using the given rule that $4=\\text{D}$, $27$ is a space, and $6=\\text{F}$, we get the middle part of the message, showing where the first word ends and the next begins.",
+   "ur": "اس کے بعد ہم $A^{-1}$ کو دوسرے کوڈ شدہ کالم سے ضرب دیتے ہیں جس سے اعداد $4, 27, 6$ ملتے ہیں۔ دیے گئے اصول کے مطابق $4=\\text{D}$، $27$ خالی جگہ (space)، اور $6=\\text{F}$ ہے، جس سے ہمیں پیغام کا درمیانی حصہ ملتا ہے اور پتہ چلتا ہے کہ پہلا لفظ کہاں ختم ہو رہا ہے۔"
+  },
+  {
+   "en": "Similarly, multiplying $A^{-1}$ by the third encoded column vector gives the final three numbers: $9, 18, 5$. Translating these via the alphabet code ($9=\\text{I}, 18=\\text{R}, 5=\\text{E}$) gives us the ending letters, $\\text{IRE}$.",
+   "ur": "اسی طرح $A^{-1}$ کو تیسرے کوڈ شدہ کالم سے ضرب دینے پر آخری تین اعداد $9, 18, 5$ حاصل ہوتے ہیں۔ انہیں حروف تہجی کے کوڈ ($9=\\text{I}, 18=\\text{R}, 5=\\text{E}$) میں بدلنے سے ہمیں آخری حروف $\\text{IRE}$ مل جاتے ہیں۔"
+  },
+  {
+   "en": "Finally, we join the three decoded 3-letter blocks in sequence to read the complete English phrase. This completes the decoding process and reveals the hidden command.",
+   "ur": "آخر میں، ہم ڈی کوڈ کیے گئے تینوں حصوں کو ترتیب سے ملا کر مکمل انگریزی جملہ پڑھ لیتے ہیں۔ اس طرح ڈی کوڈنگ کا عمل مکمل ہوتا ہے اور چھپا ہوا پیغام سامنے آ جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The hidden message behind the three encoded number blocks is the two-word command \"HOLD FIRE\". If you want to verify your work, you can multiply the original matrix $A$ with each decoded column $\\begin{bmatrix} 8 \\\\ 15 \\\\ 12 \\end{bmatrix}$, $\\begin{bmatrix} 4 \\\\ 27 \\\\ 6 \\end{bmatrix}$, and $\\begin{bmatrix} 9 \\\\ 18 \\\\ 5 \\end{bmatrix}$, and you will get back the exact encoded vectors given in the question.",
+  "ur": "تین کوڈ شدہ عددی بلاکس کے پیچھے چھپا ہوا پیغام دو الفاظ کا حکم \"HOLD FIRE\" ہے۔ اگر آپ اپنے جواب کی پڑتال کرنا چاہیں تو اصل قالب $A$ کو ڈی کوڈ کیے گئے ہر کالم $\\begin{bmatrix} 8 \\\\ 15 \\\\ 12 \\end{bmatrix}$، $\\begin{bmatrix} 4 \\\\ 27 \\\\ 6 \\end{bmatrix}$ اور $\\begin{bmatrix} 9 \\\\ 18 \\\\ 5 \\end{bmatrix}$ سے ضرب دیں، تو آپ کو سوال میں دیے گئے کوڈ شدہ کالم دوبارہ حاصل ہو جائیں گے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

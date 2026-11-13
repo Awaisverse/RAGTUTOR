@@ -1,0 +1,65 @@
+{
+ "item": "c11-ex4.2-q8",
+ "label": "",
+ "answer_ref": "$\\lambda = \\frac{1}{2}$ for $A$, $\\lambda = -4$ for $B$",
+ "math": [
+  "A = \\begin{bmatrix} 4 & 2 & 3 \\\\ 7 & \\lambda & 6 \\\\ 2 & 3 & 1 \\end{bmatrix}",
+  "|A| = \\begin{vmatrix} 4 & 2 & 3 \\\\ 7 & \\lambda & 6 \\\\ 2 & 3 & 1 \\end{vmatrix} = (4)\\begin{vmatrix} \\lambda & 6 \\\\ 3 & 1 \\end{vmatrix} - (2)\\begin{vmatrix} 7 & 6 \\\\ 2 & 1 \\end{vmatrix} + (3)\\begin{vmatrix} 7 & \\lambda \\\\ 2 & 3 \\end{vmatrix}",
+  "= (4)\\left[(\\lambda)(1) - (6)(3)\\right] - (2)\\left[(7)(1) - (6)(2)\\right] + (3)\\left[(7)(3) - (\\lambda)(2)\\right]",
+  "= (4)(\\lambda - 18) - (2)(-5) + (3)(21 - 2 \\lambda) = 1 - 2 \\lambda",
+  "1 - 2 \\lambda = 0 \\Rightarrow \\lambda = \\frac{1}{2}",
+  "B = \\begin{bmatrix} -2 & 4 & 5 \\\\ 1 & -2 & 1 \\\\ 2 & \\lambda & 0 \\end{bmatrix}",
+  "|B| = \\begin{vmatrix} -2 & 4 & 5 \\\\ 1 & -2 & 1 \\\\ 2 & \\lambda & 0 \\end{vmatrix} = (-2)\\begin{vmatrix} -2 & 1 \\\\ \\lambda & 0 \\end{vmatrix} - (4)\\begin{vmatrix} 1 & 1 \\\\ 2 & 0 \\end{vmatrix} + (5)\\begin{vmatrix} 1 & -2 \\\\ 2 & \\lambda \\end{vmatrix}",
+  "= (-2)\\left[(-2)(0) - (1)(\\lambda)\\right] - (4)\\left[(1)(0) - (1)(2)\\right] + (5)\\left[(1)(\\lambda) - (-2)(2)\\right]",
+  "= (-2)(- \\lambda) - (4)(-2) + (5)(\\lambda + 4) = 7 \\lambda + 28",
+  "7 \\lambda + 28 = 0 \\Rightarrow \\lambda = -4"
+ ],
+ "why": [
+  {
+   "en": "By definition, a singular matrix is one whose determinant is zero. Therefore, to find the unknown $\\lambda$, we must first calculate the determinant $|A|$ and then set it equal to $0$.",
+   "ur": "تعریف کے مطابق، نادر قالب (singular matrix) وہ ہوتا ہے جس کا مقطع صفر ہو۔ اس لیے نامعلوم $\\lambda$ کی قیمت معلوم کرنے کے لیے ہمیں پہلے مقطع $|A|$ نکالنا ہوگا اور پھر اسے $0$ کے برابر رکھنا ہوگا۔"
+  },
+  {
+   "en": "To evaluate a $3 \\times 3$ determinant, we use the cofactor expansion rule along the first row. This breaks our large determinant down into three smaller $2 \\times 2$ determinants that are much easier to calculate.",
+   "ur": "ایک $3 \\times 3$ مقطع کی قیمت معلوم کرنے کے لیے ہم پہلی قطار کے لحاظ سے ہم عامل (cofactor) کے پھیلاؤ کا اصول استعمال کرتے ہیں۔ اس سے ہمارا بڑا مقطع تین چھوٹے $2 \\times 2$ مقاطع میں تقسیم ہو جاتا ہے جنہیں حل کرنا بہت آسان ہے۔"
+  },
+  {
+   "en": "Here we apply the basic determinant formula for a $2 \\times 2$ matrix, multiplying the main diagonal entries and subtracting the product of the other diagonal entries. This removes the determinant bars and turns the expression into simple algebra.",
+   "ur": "یہاں ہم $2 \\times 2$ قالب کے مقطع کا بنیادی فارمولا لگاتے ہیں، یعنی وتر کے ارکان کو ضرب دے کر دوسرے وتر کے ارکان کے حاصل ضرب کو تفریق کرتے ہیں۔ اس سے مقطع کی علامتیں ختم ہو جاتی ہیں اور عبارت سادہ الجبرا میں بدل جاتی ہے۔"
+  },
+  {
+   "en": "We simplify the algebraic brackets and combine the like terms containing $\\lambda$ and the constant numbers. This gives us a neat linear expression, $1 - 2\\lambda$, which represents the exact value of the determinant $|A|$.",
+   "ur": "ہم الجبری بریکٹوں کو کھول کر مختصر کرتے ہیں اور $\\lambda$ والی رقوم اور مستقل اعداد کو یکجا کرتے ہیں۔ اس سے ہمیں ایک سادہ یک درجی عبارت $1 - 2\\lambda$ ملتی ہے، جو مقطع $|A|$ کی اصل قیمت کو ظاہر کرتی ہے۔"
+  },
+  {
+   "en": "Now we apply the condition of singularity by setting our simplified determinant equal to $0$. Solving this simple linear equation gives us the exact value of $\\lambda$ required for matrix $A$.",
+   "ur": "اب ہم نادر ہونے کی شرط لاگو کرتے ہوئے اپنے مختصر کردہ مقطع کو $0$ کے برابر رکھتے ہیں۔ اس سادہ یک درجی مساوات کو حل کرنے سے ہمیں قالب $A$ کے لیے $\\lambda$ کی مطلوبہ قیمت مل جاتی ہے۔"
+  },
+  {
+   "en": "Just like the first part, since matrix $B$ is also given as singular, its determinant $|B|$ must be zero. This sets up our plan for the second matrix: find $|B|$ in terms of $\\lambda$ and equate it to $0$.",
+   "ur": "پہلے حصے کی طرح، چونکہ قالب $B$ بھی نادر دیا گیا ہے، اس لیے اس کا مقطع $|B|$ بھی صفر ہونا چاہیے۔ اس سے دوسرے قالب کے لیے ہمارا طریقہ کار طے ہو جاتا ہے: $\\lambda$ کی شکل میں $|B|$ معلوم کریں اور اسے $0$ کے برابر رکھیں۔"
+  },
+  {
+   "en": "We expand the determinant $|B|$ along the first row using alternating signs $+$, $-$, $+$. This reduces the $3 \\times 3$ determinant into a combination of three manageable $2 \\times 2$ minors.",
+   "ur": "ہم متبادل علامتوں $+$، $-$، $+$ کا استعمال کرتے ہوئے پہلی قطار کے لحاظ سے مقطع $|B|$ کو پھیلاتے ہیں۔ اس سے $3 \\times 3$ کا مقطع تین آسان $2 \\times 2$ صغائر (minors) کے مجموعے میں تبدیل ہو جاتا ہے۔"
+  },
+  {
+   "en": "Using the rule of cross-multiplication ($ad - bc$) for each $2 \\times 2$ determinant, we convert the matrix notation into standard algebraic terms involving $\\lambda$.",
+   "ur": "ہر $2 \\times 2$ مقطع کے لیے چلیپائی ضرب ($ad - bc$) کا اصول استعمال کرتے ہوئے، ہم قالب کی علامت کو $\\lambda$ والی عام الجبری رقوم میں بدل دیتے ہیں۔"
+  },
+  {
+   "en": "By multiplying the numbers outside the brackets and adding the like terms together, we simplify the whole expression. We now know that the determinant of $B$ is simply $7\\lambda + 28$.",
+   "ur": "بریکٹوں کے باہر موجود اعداد کو ضرب دے کر اور یکساں رقوم کو جمع کر کے ہم پوری عبارت کو مختصر کرتے ہیں۔ اب ہمیں معلوم ہو گیا ہے کہ $B$ کا مقطع صرف $7\\lambda + 28$ ہے۔"
+  },
+  {
+   "en": "Finally, we enforce the condition $|B| = 0$ by setting $7\\lambda + 28$ equal to zero. Solving this equation gives us the specific value of $\\lambda$ that makes matrix $B$ singular.",
+   "ur": "آخر میں، ہم $7\\lambda + 28$ کو صفر کے برابر رکھ کر $|B| = 0$ کی شرط پوری کرتے ہیں۔ اس مساوات کو حل کرنے سے ہمیں $\\lambda$ کی وہ خاص قیمت ملتی ہے جو قالب $B$ کو نادر بناتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "These results tell us that matrix $A$ becomes singular (meaning its determinant is $0$ and its inverse does not exist) only when $\\lambda = \\frac{1}{2}$, and matrix $B$ becomes singular only when $\\lambda = -4$. You can easily check this by substituting $\\lambda = \\frac{1}{2}$ into $1 - 2\\lambda$ and $\\lambda = -4$ into $7\\lambda + 28$ to see that both determinants indeed become $0$.",
+  "ur": "یہ نتائج ہمیں بتاتے ہیں کہ قالب $A$ صرف اس وقت نادر بنتا ہے (یعنی اس کا مقطع $0$ ہوتا ہے اور اس کا معکوس ممکن نہیں ہوتا) جب $\\lambda = \\frac{1}{2}$ ہو، اور قالب $B$ صرف تب نادر بنتا ہے جب $\\lambda = -4$ ہو۔ آپ اس کی باآسانی پڑتال کر سکتے ہیں: $1 - 2\\lambda$ میں $\\lambda = \\frac{1}{2}$ اور $7\\lambda + 28$ میں $\\lambda = -4$ درج کرنے سے دونوں مقاطع واقعی $0$ ہو جاتے ہیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

@@ -1,0 +1,45 @@
+{
+ "item": "c11-ex4.2-q3",
+ "label": "xii",
+ "answer_ref": "$D = abc + ab + bc + ca$",
+ "math": [
+  "D = \\begin{vmatrix} a + 1 & 1 & 1 \\\\ 1 & b + 1 & 1 \\\\ 1 & 1 & c + 1 \\end{vmatrix}",
+  "= \\begin{vmatrix} a & 0 & - c \\\\ 1 & b + 1 & 1 \\\\ 1 & 1 & c + 1 \\end{vmatrix}\\quad (R_1 \\to R_1 - R_3)",
+  "= \\begin{vmatrix} a & 0 & - c \\\\ 0 & b & - c \\\\ 1 & 1 & c + 1 \\end{vmatrix}\\quad (R_2 \\to R_2 - R_3)",
+  "D = \\begin{vmatrix} a & 0 & - c \\\\ 0 & b & - c \\\\ 1 & 1 & c + 1 \\end{vmatrix} = (a)\\begin{vmatrix} b & - c \\\\ 1 & c + 1 \\end{vmatrix} + (- c)\\begin{vmatrix} 0 & b \\\\ 1 & 1 \\end{vmatrix}",
+  "= (a)\\left[(b)(c + 1) - (- c)(1)\\right] + (- c)\\left[(0)(1) - (b)(1)\\right]",
+  "= (a)(b c + b + c) + (- c)(- b) = a b c + a b + a c + b c = abc + ab + bc + ca"
+ ],
+ "why": [
+  {
+   "en": "We start by naming the given determinant $D$ on the left-hand side so we can apply row operations to simplify it and prove it equals the right-hand side.",
+   "ur": "ہم بائیں طرف دیے گئے مقطع (determinant) کو $D$ کا نام دے کر شروعات کرتے ہیں تاکہ ہم اس پر قطار کے عوامل (row operations) لگا کر اسے مختصر کر سکیں اور دائیں طرف کے برابر ثابت کر سکیں۔"
+  },
+  {
+   "en": "Notice that both Row 1 and Row 3 have $1$s in them; by subtracting Row 3 from Row 1 using the determinant property $R_1 \\to R_1 - R_3$, we eliminate the $+1$s and create a helpful $0$ in the first row without changing the determinant's value.",
+   "ur": "غور کریں کہ پہلی اور تیسری دونوں قطاروں میں $1$ موجود ہیں؛ مقطع کی خصوصیت $R_1 \\to R_1 - R_3$ کو استعمال کرتے ہوئے پہلی قطار میں سے تیسری قطار تفریق کرنے سے $+1$ ختم ہو جاتے ہیں اور پہلی قطار میں ایک مددگار $0$ بن جاتا ہے، جس سے مقطع کی قیمت تبدیل نہیں ہوتی۔"
+  },
+  {
+   "en": "Similarly, we subtract Row 3 from Row 2 ($R_2 \\to R_2 - R_3$) to cancel out more $1$s and introduce another $0$, making the matrix much simpler before we expand it.",
+   "ur": "اسی طرح، ہم دوسری قطار میں سے تیسری قطار تفریق کرتے ہیں ($R_2 \\to R_2 - R_3$) تاکہ مزید $1$ ختم ہو جائیں اور ایک اور $0$ حاصل ہو جائے، جس سے پھیلانے (expand کرنے) سے پہلے یہ قالب کافی سادہ ہو جاتا ہے۔"
+  },
+  {
+   "en": "Now that Row 1 has a zero in the middle, we expand the $3 \\times 3$ determinant along the first row using cofactor expansion; the middle term vanishes because of the $0$, leaving just two smaller $2 \\times 2$ determinants to evaluate.",
+   "ur": "اب جب کہ پہلی قطار کے درمیان میں صفر آ گیا ہے، ہم پہلی قطار کے لحاظ سے $3 \\times 3$ مقطع کو پھیلاتے ہیں؛ درمیان والی رقم $0$ کی وجہ سے ختم ہو جاتی ہے، اور حل کرنے کے لیے صرف دو چھوٹے $2 \\times 2$ کے مقطعے رہ جاتے ہیں۔"
+  },
+  {
+   "en": "We apply the basic definition of a $2 \\times 2$ determinant—multiplying the main diagonal entries and subtracting the product of the off-diagonal entries—to turn the determinants into a standard algebraic expression.",
+   "ur": "ہم $2 \\times 2$ مقطع کی بنیادی تعریف لاگو کرتے ہیں—یعنی وتر کے ارکان کو ضرب دے کر اس میں سے دوسرے وتر کے ارکان کا حاصلِ ضرب تفریق کرتے ہیں—تاکہ مقطعے ایک عام الجبری جملے میں بدل جائیں۔"
+  },
+  {
+   "en": "Finally, we multiply the terms inside the brackets and combine them, which directly yields the required algebraic sum on the right-hand side.",
+   "ur": "آخر میں، ہم بریکٹ کے اندر موجود رقموں کو ضرب دیتے ہیں اور انہیں یکجا کرتے ہیں، جس سے براہِ راست دائیں طرف والا مطلوبہ الجبری مجموعہ حاصل ہو جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This proves the identity that the given $3 \\times 3$ determinant always simplifies to the symmetric polynomial $abc + ab + bc + ca$. You can easily check this result by putting $a = 0, b = 0, c = 0$: the original determinant has all $1$s (which gives $0$ since rows are identical), and the formula $abc + ab + bc + ca$ also neatly gives $0$.",
+  "ur": "اس سے یہ کلیہ ثابت ہوتا ہے کہ دیا گیا $3 \\times 3$ مقطع ہمیشہ مختصر ہو کر متشاکل کثیر رقمی (symmetric polynomial) $abc + ab + bc + ca$ کے برابر آتا ہے۔ آپ $a = 0, b = 0, c = 0$ رکھ کر اس نتیجے کی باآسانی پڑتال کر سکتے ہیں: اصل مقطع کے تمام ارکان $1$ ہو جاتے ہیں (جو قطاریں یکساں ہونے کی وجہ سے $0$ جواب دیتا ہے)، اور فارمولا $abc + ab + bc + ca$ بھی بالکل ٹھیک $0$ ہی دیتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

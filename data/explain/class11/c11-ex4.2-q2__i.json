@@ -1,0 +1,35 @@
+{
+ "item": "c11-ex4.2-q2",
+ "label": "i",
+ "answer_ref": "$D = 0$",
+ "math": [
+  "D = \\begin{vmatrix} 7 & 8 & 9 \\\\ 5 & 6 & 7 \\\\ 2 & 3 & 4 \\end{vmatrix}",
+  "= \\begin{vmatrix} 7 & 8 & 1 \\\\ 5 & 6 & 1 \\\\ 2 & 3 & 1 \\end{vmatrix}\\quad (C_3 \\to C_3 - C_2)",
+  "= \\begin{vmatrix} -1 & 8 & 1 \\\\ -1 & 6 & 1 \\\\ -1 & 3 & 1 \\end{vmatrix}\\quad (C_1 \\to C_1 - C_2)",
+  "D = 0"
+ ],
+ "why": [
+  {
+   "en": "We begin by naming the given determinant $D$ so that we can easily refer to it as we apply column properties.",
+   "ur": "ہم دیے گئے مقطع (determinant) کو $D$ کا نام دیتے ہیں تاکہ کالم کی خصوصیات استعمال کرتے وقت اس کا حوالہ دینا آسان ہو۔"
+  },
+  {
+   "en": "Notice that each number in the third column is $1$ more than the number next to it in the second column ($9 - 8 = 1$, $7 - 6 = 1$, $4 - 3 = 1$). By using the property that subtracting one column from another does not change the determinant's value, we turn the entire third column into $1$s.",
+   "ur": "غور کریں کہ تیسرے کالم کا ہر عدد دوسرے کالم کے ساتھ والے عدد سے $1$ زیادہ ہے ($9 - 8 = 1$، $7 - 6 = 1$، $4 - 3 = 1$)۔ مقطع کی یہ خصوصیت استعمال کرتے ہوئے کہ ایک کالم میں سے دوسرا کالم تفریق کرنے سے اس کی قیمت تبدیل نہیں ہوتی، ہم پورے تیسرے کالم کو $1$ بنا لیتے ہیں۔"
+  },
+  {
+   "en": "Similarly, the numbers in the first column are $1$ less than those in the second column ($7 - 8 = -1$, $5 - 6 = -1$, $2 - 3 = -1$). Subtracting the second column from the first gives us all $-1$s in the first column, making it look very similar to the third column.",
+   "ur": "اسی طرح، پہلے کالم کے اعداد دوسرے کالم کے اعداد سے $1$ کم ہیں ($7 - 8 = -1$، $5 - 6 = -1$، $2 - 3 = -1$)۔ پہلے کالم میں سے دوسرا کالم تفریق کرنے سے پہلے کالم میں تمام ارکان $-1$ بن جاتے ہیں، جس سے یہ تیسرے کالم سے بہت مشابہ ہو جاتا ہے۔"
+  },
+  {
+   "en": "A fundamental property of determinants states that if two columns are proportional (one is a constant multiple of the other), the determinant is zero. Since Column 1 is just $-1$ times Column 3, the value of $D$ becomes $0$ immediately without any expansion.",
+   "ur": "مقطع کی ایک بنیادی خصوصیت یہ ہے کہ اگر دو کالم متناسب ہوں (یعنی ایک کالم دوسرے کا کوئی عددی سر ہو)، تو مقطع کی قیمت صفر ہوتی ہے۔ چونکہ پہلا کالم تیسرے کالم کا $-1$ گنا ہے، اس لیے بغیر پھیلائے (without expansion) فوری طور پر $D$ کی قیمت $0$ ہو جاتی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This proves that the given determinant equals $0$ purely by using column operations and the property of proportional columns, completely avoiding the long method of cofactor expansion as required by the question.",
+  "ur": "اس سے ثابت ہوتا ہے کہ دیے گئے مقطع کی قیمت $0$ ہے، اور ہم نے سوال کی شرط کے مطابق اس کو پھیلانے (expansion) کے لمبے طریقے کے بجائے صرف کالم کے عوامل اور متناسب کالموں کی خصوصیت استعمال کر کے حل کیا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

@@ -1,0 +1,60 @@
+{
+ "item": "c11-ex4.2-q1",
+ "label": "iii",
+ "answer_ref": "$D = 4xyz$",
+ "math": [
+  "D = \\begin{vmatrix} 2 x & x & x \\\\ y & 2 y & y \\\\ z & z & 2 z \\end{vmatrix}",
+  "= x\\begin{vmatrix} 2 & 1 & 1 \\\\ y & 2 y & y \\\\ z & z & 2 z \\end{vmatrix}\\quad (\\text{taking } x \\text{ common from } R_1)",
+  "= xy\\begin{vmatrix} 2 & 1 & 1 \\\\ 1 & 2 & 1 \\\\ z & z & 2 z \\end{vmatrix}\\quad (\\text{taking } y \\text{ common from } R_2)",
+  "= xyz\\begin{vmatrix} 2 & 1 & 1 \\\\ 1 & 2 & 1 \\\\ 1 & 1 & 2 \\end{vmatrix}\\quad (\\text{taking } z \\text{ common from } R_3)",
+  "= xyz\\begin{vmatrix} 1 & 1 & 1 \\\\ -1 & 2 & 1 \\\\ 0 & 1 & 2 \\end{vmatrix}\\quad (C_1 \\to C_1 - C_2)",
+  "= xyz\\begin{vmatrix} 1 & 0 & 1 \\\\ -1 & 1 & 1 \\\\ 0 & -1 & 2 \\end{vmatrix}\\quad (C_2 \\to C_2 - C_3)",
+  "D = xyz\\begin{vmatrix} 1 & 0 & 1 \\\\ -1 & 1 & 1 \\\\ 0 & -1 & 2 \\end{vmatrix} = xyz\\left[(1)\\begin{vmatrix} 1 & 1 \\\\ -1 & 2 \\end{vmatrix} + (1)\\begin{vmatrix} -1 & 1 \\\\ 0 & -1 \\end{vmatrix}\\right]",
+  "= xyz\\left[(1)\\left[(1)(2) - (1)(-1)\\right] + (1)\\left[(-1)(-1) - (1)(0)\\right]\\right]",
+  "= xyz\\left[(1)(3) + (1)(1)\\right] = 4 x y z"
+ ],
+ "why": [
+  {
+   "en": "We start by naming the given determinant $D$ so we can refer to it easily as we apply properties to simplify it.",
+   "ur": "ہم دیے گئے مقطع کو $D$ کا نام دیتے ہیں تاکہ خصوصیات لگا کر اسے مختصر کرتے وقت اس کا حوالہ دینا آسان رہے۔"
+  },
+  {
+   "en": "By the scalar multiplication property of determinants, a common factor from any single row can be factored out of the entire determinant. Taking $x$ out of the first row ($R_1$) leaves simple numbers $2, 1, 1$ in that row.",
+   "ur": "مقطع کی خصوصیت کے مطابق کسی ایک قطار کے تمام ارکان میں موجود مشترک جزو کو مقطع سے باہر نکالا جا سکتا ہے۔ پہلی قطار ($R_1$) میں سے $x$ باہر نکالنے سے وہاں سادہ اعداد $2, 1, 1$ رہ جاتے ہیں۔"
+  },
+  {
+   "en": "Using the same common factor property on the second row ($R_2$), we pull out $y$. This simplifies the second row to $1, 2, 1$ and multiplies $y$ with the $x$ already outside.",
+   "ur": "دوسری قطار ($R_2$) پر بھی یہی مشترک جزو والی خصوصیت لگاتے ہوئے ہم $y$ کو باہر نکالتے ہیں۔ اس سے دوسری قطار سادہ ہو کر $1, 2, 1$ بن جاتی ہے اور باہر $xy$ حاصل ہوتا ہے۔"
+  },
+  {
+   "en": "Now we factor $z$ out of the third row ($R_3$) in the same way. All the variables are now neatly collected outside as $xyz$, leaving a purely numerical determinant that is much easier to evaluate.",
+   "ur": "اب اسی طرح تیسری قطار ($R_3$) میں سے $z$ کو باہر نکالتے ہیں۔ اب تمام متغیرات باہر $xyz$ کی صورت میں جمع ہو گئے ہیں، اور اندر صرف اعداد کا مقطع رہ گیا ہے جسے حل کرنا بہت آسان ہے۔"
+  },
+  {
+   "en": "Subtracting one column from another ($C_1 \\to C_1 - C_2$) is a column operation that keeps the value of the determinant unchanged. We do this to make the entries in the first column smaller and create a zero at the bottom.",
+   "ur": "ایک کالم میں سے دوسرے کالم کو تفریق کرنے ($C_1 \\to C_1 - C_2$) سے مقطع کی قیمت تبدیل نہیں ہوتی۔ ہم یہ عمل پہلے کالم کے ارکان کو چھوٹا کرنے اور نیچے صفر بنانے کے لیے کرتے ہیں۔"
+  },
+  {
+   "en": "We apply another column operation ($C_2 \\to C_2 - C_3$) without changing the determinant's value. This creates a zero in the first row, which will save us work when we expand the determinant.",
+   "ur": "ہم مقطع کی قیمت بدلے بغیر ایک اور کالم کا عمل ($C_2 \\to C_2 - C_3$) کرتے ہیں۔ اس سے پہلی قطار میں ایک صفر بن جاتا ہے، جس سے مقطع کو کھولتے وقت ہمارا کام آسان ہو جائے گا۔"
+  },
+  {
+   "en": "We now expand the $3 \\times 3$ determinant along the first row ($R_1$) using cofactors. Because the middle entry of $R_1$ is $0$, its term vanishes, leaving only two $2 \\times 2$ determinants to calculate.",
+   "ur": "اب ہم ہم عاملوں کی مدد سے پہلی قطار ($R_1$) کے لحاظ سے $3 \\times 3$ مقطع کو کھولتے ہیں۔ چونکہ $R_1$ کا درمیانی رکن $0$ ہے، اس لیے اس کی رقم ختم ہو جاتی ہے اور حل کرنے کے لیے صرف دو $2 \\times 2$ کے مقطعے بچتے ہیں۔"
+  },
+  {
+   "en": "We apply the definition of a $2 \\times 2$ determinant, multiplying the main diagonal entries and subtracting the product of the other diagonal entries. This turns the remaining determinants into simple arithmetic.",
+   "ur": "ہم $2 \\times 2$ مقطع کی تعریف استعمال کرتے ہوئے وتر کے ارکان کے حاصلِ ضرب میں سے دوسرے ارکان کا حاصلِ ضرب تفریق کرتے ہیں۔ اس سے باقی ماندہ مقطعے سادہ حسابی اعداد میں بدل جاتے ہیں۔"
+  },
+  {
+   "en": "Finally, we complete the basic addition and multiplication inside the brackets to get $4$, and multiply it by the $xyz$ outside to reach the final simplified value.",
+   "ur": "آخر میں، ہم بریکٹ کے اندر سادہ جمع اور ضرب کا عمل مکمل کر کے $4$ حاصل کرتے ہیں، اور اسے باہر موجود $xyz$ سے ضرب دے کر حتمی جواب تک پہنچتے ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The value of the given determinant simplifies cleanly to $4xyz$, showing that it is directly proportional to the product of the three variables $x$, $y$, and $z$. You can easily check this result by substituting $x = 1, y = 1, z = 1$ into the original determinant, which gives the purely numerical determinant from Step 4 whose value is $4(1)(1)(1) = 4$.",
+  "ur": "دیے گئے مقطع کی قیمت مختصر ہو کر $4xyz$ بنتی ہے، جو ظاہر کرتی ہے کہ یہ تینوں متغیرات $x$، $y$ اور $z$ کے حاصلِ ضرب کے راست متناسب ہے۔ آپ اصل مقطع میں $x = 1, y = 1, z = 1$ درج کر کے اس جواب کی باآسانی پڑتال کر سکتے ہیں، جس سے مرحلہ 4 والا عددی مقطع حاصل ہوتا ہے جس کی قیمت $4(1)(1)(1) = 4$ ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

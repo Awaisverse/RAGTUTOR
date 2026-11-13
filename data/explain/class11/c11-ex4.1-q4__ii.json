@@ -1,0 +1,30 @@
+{
+ "item": "c11-ex4.1-q4",
+ "label": "ii",
+ "answer_ref": "$(A-B)^2 \\neq A^2-2AB+B^2$",
+ "math": [
+  "(A - B)^2 = (A - B)(A - B) = A^2 - AB - BA + B^2",
+  "-AB - BA = -2AB \\text{ only if } AB = BA",
+  "A = \\begin{bmatrix} 1 & 1 \\\\ 0 & 1 \\end{bmatrix},\\ B = \\begin{bmatrix} 1 & 0 \\\\ 1 & 1 \\end{bmatrix}:\\quad (A - B)^2 = \\begin{bmatrix} -1 & 0 \\\\ 0 & -1 \\end{bmatrix},\\quad A^2 - 2AB + B^2 = \\begin{bmatrix} -2 & 0 \\\\ 0 & 0 \\end{bmatrix}"
+ ],
+ "why": [
+  {
+   "en": "We use the distributive law of matrix multiplication to expand $(A - B)^2$ term by term, while strictly keeping the left-to-right order of the matrices. This shows us that the middle terms are actually $-AB$ and $-BA$, rather than two identical terms.",
+   "ur": "ہم قالبوں کی ضرب کے تقسیمی قانون کو استعمال کرتے ہوئے $(A - B)^2$ کو کھولتے ہیں اور قالبوں کی بائیں سے دائیں ترتیب کا خاص خیال رکھتے ہیں۔ اس سے ہمیں پتہ چلتا ہے کہ درمیانی رقمیں دراصل $-AB$ اور $-BA$ ہیں، نہ کہ دو ایک جیسی رقمیں۔"
+  },
+  {
+   "en": "Matrix multiplication is not commutative in general, meaning $AB$ is usually not equal to $BA$. Because of this fundamental rule, we cannot simplify $-AB - BA$ into $-2AB$ unless the two matrices happen to commute.",
+   "ur": "قالبوں کی ضرب میں عام طور پر قانونِ مبادلہ لاگو نہیں ہوتا، یعنی عام حالات میں $AB$ اور $BA$ برابر نہیں ہوتے۔ اس بنیادی اصول کی وجہ سے ہم $-AB - BA$ کو ملا کر $-2AB$ نہیں لکھ سکتے جب تک کہ خاص طور پر $AB = BA$ نہ ہو۔"
+  },
+  {
+   "en": "To prove that a rule fails in general, we provide a concrete counterexample using two simple square matrices where $AB \\ne BA$. Calculating both expressions gives different resulting matrices, which clearly confirms they are not equal.",
+   "ur": "یہ ثابت کرنے کے لیے کہ کوئی کلیہ عام طور پر درست نہیں ہے، ہم دو سادہ مربی قالب لے کر ایک عملی مثال دیتے ہیں جہاں $AB \\ne BA$ ہے۔ دونوں اطراف کو حل کرنے سے مختلف قالب حاصل ہوتے ہیں، جس سے صاف ظاہر ہوتا ہے کہ یہ آپس میں برابر نہیں ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "This means the familiar algebraic identity for $(a - b)^2$ does not hold for matrices in general because the order of multiplication matters. You can always verify this by testing any two square matrices that do not commute, as shown in step 3.",
+  "ur": "اس کا مطلب یہ ہے کہ عام الجبرا کا مشہور کلیہ $(a - b)^2$ عام طور پر قالبوں کے لیے درست نہیں ہوتا کیونکہ یہاں ضرب کی ترتیب اہمیت رکھتی ہے۔ آپ اس کی تصدیق کسی بھی ایسے دو ہم مرتبہ مربی قالبوں کو لے کر کر سکتے ہیں جن کے لیے $AB \\ne BA$ ہو، جیسا کہ تیسرے مرحلے میں دکھایا گیا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

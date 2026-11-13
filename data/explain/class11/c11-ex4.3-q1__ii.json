@@ -1,0 +1,50 @@
+{
+ "item": "c11-ex4.3-q1",
+ "label": "ii",
+ "answer_ref": "$A^{-1} = \\begin{bmatrix} - \\frac{2}{5} & - \\frac{2}{5} & \\frac{7}{5} \\\\ \\frac{4}{5} & \\frac{3}{10} & - \\frac{4}{5} \\\\ \\frac{1}{5} & \\frac{1}{5} & - \\frac{1}{5} \\end{bmatrix}$",
+ "math": [
+  "\\left[A \\mid I_3\\right] = \\left[\\begin{array}{ccc|ccc} 1 & 2 & -1 & 1 & 0 & 0 \\\\ 0 & -2 & 8 & 0 & 1 & 0 \\\\ 1 & 0 & 2 & 0 & 0 & 1 \\end{array}\\right]",
+  "R_3 \\to R_3 - R_1:\\ \\left[\\begin{array}{ccc|ccc} 1 & 2 & -1 & 1 & 0 & 0 \\\\ 0 & -2 & 8 & 0 & 1 & 0 \\\\ 0 & -2 & 3 & -1 & 0 & 1 \\end{array}\\right]",
+  "R_2 \\to - \\frac{1}{2}R_2:\\ \\left[\\begin{array}{ccc|ccc} 1 & 2 & -1 & 1 & 0 & 0 \\\\ 0 & 1 & -4 & 0 & - \\frac{1}{2} & 0 \\\\ 0 & -2 & 3 & -1 & 0 & 1 \\end{array}\\right]",
+  "R_1 \\to R_1 - 2R_2,\\ R_3 \\to R_3 + 2R_2:\\ \\left[\\begin{array}{ccc|ccc} 1 & 0 & 7 & 1 & 1 & 0 \\\\ 0 & 1 & -4 & 0 & - \\frac{1}{2} & 0 \\\\ 0 & 0 & -5 & -1 & -1 & 1 \\end{array}\\right]",
+  "R_3 \\to - \\frac{1}{5}R_3:\\ \\left[\\begin{array}{ccc|ccc} 1 & 0 & 7 & 1 & 1 & 0 \\\\ 0 & 1 & -4 & 0 & - \\frac{1}{2} & 0 \\\\ 0 & 0 & 1 & \\frac{1}{5} & \\frac{1}{5} & - \\frac{1}{5} \\end{array}\\right]",
+  "R_1 \\to R_1 - 7R_3,\\ R_2 \\to R_2 + 4R_3:\\ \\left[\\begin{array}{ccc|ccc} 1 & 0 & 0 & - \\frac{2}{5} & - \\frac{2}{5} & \\frac{7}{5} \\\\ 0 & 1 & 0 & \\frac{4}{5} & \\frac{3}{10} & - \\frac{4}{5} \\\\ 0 & 0 & 1 & \\frac{1}{5} & \\frac{1}{5} & - \\frac{1}{5} \\end{array}\\right]",
+  "\\left[I_3 \\mid A^{-1}\\right] \\Rightarrow A^{-1} = \\begin{bmatrix} - \\frac{2}{5} & - \\frac{2}{5} & \\frac{7}{5} \\\\ \\frac{4}{5} & \\frac{3}{10} & - \\frac{4}{5} \\\\ \\frac{1}{5} & \\frac{1}{5} & - \\frac{1}{5} \\end{bmatrix}"
+ ],
+ "why": [
+  {
+   "en": "To find the inverse using the Gauss-Jordan elimination method, we set up an augmented matrix by placing the identity matrix $I_3$ right next to $A$. Our goal is to apply elementary row operations to turn the left side into $I_3$, which will automatically transform the right side into $A^{-1}$.",
+   "ur": "رو آپریشنز کے ذریعے معکوس (inverse) معلوم کرنے کے لیے ہم دیے گئے میٹرکس $A$ کے ساتھ اکائی میٹرکس $I_3$ لکھتے ہیں۔ ہمارا مقصد بائیں حصے کو $I_3$ میں تبدیل کرنا ہے، جس سے دایاں حصہ خود بخود مطلوبہ معکوس میٹرکس $A^{-1}$ بن جائے گا۔"
+  },
+  {
+   "en": "Since the top-left entry is already $1$ and the entry below it is already $0$, we only need to eliminate the $1$ at the bottom of the first column. Subtracting $R_1$ from $R_3$ completes the first column of our target identity matrix on the left.",
+   "ur": "چونکہ پہلے کالم کا پہلا رکن پہلے ہی $1$ ہے اور اس کے نیچے $0$ ہے، اس لیے ہمیں صرف تیسری قطار کے پہلے رکن کو صفر بنانا ہے۔ $R_3$ میں سے $R_1$ کو تفریق کرنے سے بائیں طرف پہلے کالم کی شکل مکمل طور پر $I_3$ کے پہلے کالم جیسی ہو جاتی ہے۔"
+  },
+  {
+   "en": "Now we move to the second column and need the diagonal entry (the pivot) to be $1$ instead of $-2$. Multiplying $R_2$ by $-\\frac{1}{2}$ gives us this leading $1$, which we will use in the next step to clear the rest of the second column.",
+   "ur": "اب ہم دوسرے کالم کی طرف آتے ہیں جہاں وتر (diagonal) کے رکن کو $-2$ کے بجائے $1$ ہونا چاہیے۔ دوسری قطار $R_2$ کو $-\\frac{1}{2}$ سے ضرب دینے سے ہمیں یہاں $1$ حاصل ہو جاتا ہے، جس کی مدد سے اگلے مرحلے میں اس کالم کے باقی ارکان کو صفر بنایا جائے گا۔"
+  },
+  {
+   "en": "With the pivot $1$ ready in the second row, we use it to eliminate the $2$ above it and the $-2$ below it in the second column. After these row operations, the first two columns on the left side match the identity matrix $I_3$.",
+   "ur": "دوسری قطار میں $1$ حاصل کرنے کے بعد، ہم اس کی مدد سے دوسرے کالم میں اس کے اوپر موجود $2$ اور نیچے موجود $-2$ کو صفر بناتے ہیں۔ ان عوامل کے بعد بائیں حصے کے پہلے دونوں کالم اکائی میٹرکس $I_3$ جیسے بن جاتے ہیں۔"
+  },
+  {
+   "en": "Next, we focus on the third column where the bottom diagonal entry must be $1$ instead of $-5$. Multiplying $R_3$ by $-\\frac{1}{5}$ creates the final pivot $1$ needed to finish the reduction.",
+   "ur": "اب ہماری توجہ تیسرے کالم پر ہے جہاں تیسری قطار کے وتر کے رکن کو $-5$ کے بجائے $1$ ہونا چاہیے۔ $R_3$ کو $-\\frac{1}{5}$ سے ضرب دینے سے ہمیں آخری مطلوبہ $1$ مل جاتا ہے۔"
+  },
+  {
+   "en": "Using the new pivot $1$ in the third row, we eliminate the $7$ and $-4$ above it in the third column. This completes the Reduced Row Echelon Form, turning the entire left half into the identity matrix $I_3$.",
+   "ur": "تیسری قطار کے اس نئے $1$ کو استعمال کرتے ہوئے ہم تیسرے کالم میں اس کے اوپر موجود $7$ اور $-4$ کو صفر بنا دیتے ہیں۔ اس طرح بایاں حصہ مکمل طور پر اکائی میٹرکس $I_3$ میں تبدیل ہو جاتا ہے۔"
+  },
+  {
+   "en": "By the fundamental principle of the row reduction method, once the left side becomes $I_3$, the matrix formed on the right side is the exact inverse $A^{-1}$. We simply extract this right-hand block as our final answer.",
+   "ur": "رو آپریشنز کے اصول کے مطابق جب بایاں حصہ اکائی میٹرکس $I_3$ بن جائے تو دائیں حصے میں حاصل ہونے والا میٹرکس ہی دراصل $A^{-1}$ ہوتا ہے۔ ہم دائیں طرف والے اس میٹرکس کو اپنے حتمی جواب کے طور پر الگ لکھ لیتے ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "This final matrix is the multiplicative inverse $A^{-1}$ of the given matrix $A$, meaning it reverses the effect of $A$. You can verify that your answer is completely correct by multiplying $A$ and $A^{-1}$ together and checking that the result is the identity matrix $I_3$.",
+  "ur": "یہ حتمی میٹرکس دیے گئے میٹرکس $A$ کا ضربی معکوس (multiplicative inverse) $A^{-1}$ ہے۔ آپ اپنے جواب کی درستگی کی پڑتال اس طرح کر سکتے ہیں کہ $A$ اور $A^{-1}$ کو آپس میں ضرب دیں، جس کا نتیجہ اکائی میٹرکس $I_3$ آنا چاہیے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

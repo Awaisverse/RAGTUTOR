@@ -1,0 +1,75 @@
+{
+ "item": "c11-ex4.3-q4",
+ "label": "i",
+ "answer_ref": "$x = 1, y = 1, z = 0$",
+ "math": [
+  "AX = B:\\quad \\begin{bmatrix} 1 & -2 & 1 \\\\ 3 & 1 & -2 \\\\ 0 & 1 & -1 \\end{bmatrix}\\begin{bmatrix} x \\\\ y \\\\ z \\end{bmatrix} = \\begin{bmatrix} -1 \\\\ 4 \\\\ 1 \\end{bmatrix}",
+  "|A| = \\begin{vmatrix} 1 & -2 & 1 \\\\ 3 & 1 & -2 \\\\ 0 & 1 & -1 \\end{vmatrix} = (1)\\begin{vmatrix} 1 & -2 \\\\ 1 & -1 \\end{vmatrix} - (-2)\\begin{vmatrix} 3 & -2 \\\\ 0 & -1 \\end{vmatrix} + (1)\\begin{vmatrix} 3 & 1 \\\\ 0 & 1 \\end{vmatrix}",
+  "= (1)\\left[(1)(-1) - (-2)(1)\\right] - (-2)\\left[(3)(-1) - (-2)(0)\\right] + (1)\\left[(3)(1) - (1)(0)\\right]",
+  "= (1)(1) - (-2)(-3) + (1)(3) = -2",
+  "|A| = -2 \\ne 0",
+  "A_{11} = \\begin{vmatrix} 1 & -2 \\\\ 1 & -1 \\end{vmatrix} = 1,\\quad A_{12} = -\\begin{vmatrix} 3 & -2 \\\\ 0 & -1 \\end{vmatrix} = 3,\\quad A_{13} = \\begin{vmatrix} 3 & 1 \\\\ 0 & 1 \\end{vmatrix} = 3",
+  "A_{21} = -\\begin{vmatrix} -2 & 1 \\\\ 1 & -1 \\end{vmatrix} = -1,\\quad A_{22} = \\begin{vmatrix} 1 & 1 \\\\ 0 & -1 \\end{vmatrix} = -1,\\quad A_{23} = -\\begin{vmatrix} 1 & -2 \\\\ 0 & 1 \\end{vmatrix} = -1",
+  "A_{31} = \\begin{vmatrix} -2 & 1 \\\\ 1 & -2 \\end{vmatrix} = 3,\\quad A_{32} = -\\begin{vmatrix} 1 & 1 \\\\ 3 & -2 \\end{vmatrix} = 5,\\quad A_{33} = \\begin{vmatrix} 1 & -2 \\\\ 3 & 1 \\end{vmatrix} = 7",
+  "\\operatorname{adj}A = \\left[A_{ij}\\right]^t = \\begin{bmatrix} 1 & -1 & 3 \\\\ 3 & -1 & 5 \\\\ 3 & -1 & 7 \\end{bmatrix}",
+  "A^{-1} = \\frac{1}{|A|}\\operatorname{adj}A = \\frac{1}{-2}\\begin{bmatrix} 1 & -1 & 3 \\\\ 3 & -1 & 5 \\\\ 3 & -1 & 7 \\end{bmatrix} = \\begin{bmatrix} - \\frac{1}{2} & \\frac{1}{2} & - \\frac{3}{2} \\\\ - \\frac{3}{2} & \\frac{1}{2} & - \\frac{5}{2} \\\\ - \\frac{3}{2} & \\frac{1}{2} & - \\frac{7}{2} \\end{bmatrix}",
+  "X = A^{-1}B = \\frac{1}{-2}\\begin{bmatrix} 1 & -1 & 3 \\\\ 3 & -1 & 5 \\\\ 3 & -1 & 7 \\end{bmatrix}\\begin{bmatrix} -1 \\\\ 4 \\\\ 1 \\end{bmatrix} = \\frac{1}{-2}\\begin{bmatrix} -2 \\\\ -2 \\\\ 0 \\end{bmatrix} = \\begin{bmatrix} 1 \\\\ 1 \\\\ 0 \\end{bmatrix}",
+  "x = 1,\\quad y = 1,\\quad z = 0"
+ ],
+ "why": [
+  {
+   "en": "To use the matrix inversion method, we first translate our three equations into the standard matrix equation $AX = B$. Notice that in the third equation there is no $x$ term, so we carefully place a $0$ in the first column of the third row of matrix $A$.",
+   "ur": "میٹرکس انورژن میتھڈ استعمال کرنے کے لیے ہم سب سے پہلے اپنی تینوں مساواتوں کو معیاری میٹرکس مساوات $AX = B$ کی شکل میں لکھتے ہیں۔ غور کریں کہ تیسری مساوات میں $x$ نہیں ہے، اس لیے ہم نے میٹرکس $A$ کی تیسری قطار کے پہلے کالم میں احتیاط سے $0$ لگایا ہے۔"
+  },
+  {
+   "en": "Before trying to find the inverse $A^{-1}$, we must calculate the determinant $|A|$ to see if an inverse actually exists. Expanding along the first row breaks the $3 \\times 3$ determinant down into three simpler $2 \\times 2$ determinants.",
+   "ur": "معکوس میٹرکس $A^{-1}$ معلوم کرنے سے پہلے ہمیں مقطع $|A|$ نکالنا ضروری ہے تاکہ پتہ چل سکے کہ معکوس ممکن بھی ہے یا نہیں۔ پہلی قطار کے لحاظ سے پھیلانے سے $3 \\times 3$ کا بڑا مقطع تین آسان $2 \\times 2$ کے مقطعوں میں تقسیم ہو جاتا ہے۔"
+  },
+  {
+   "en": "We apply the basic $2 \\times 2$ determinant rule (main diagonal product minus off-diagonal product) to each minor. This turns all the small determinants into simple arithmetic expressions.",
+   "ur": "ہم ہر چھوٹے مقطع پر $2 \\times 2$ مقطع کا بنیادی اصول (مرکزی وتر کا حاصل ضرب منفی دوسرے وتر کا حاصل ضرب) لاگو کرتے ہیں۔ اس سے تمام چھوٹے مقطع سادہ حسابی جملوں میں بدل جاتے ہیں۔"
+  },
+  {
+   "en": "Simplifying the numbers gives us the exact single value of the determinant, which is $-2$. We will need this number later to divide the adjoint matrix.",
+   "ur": "نمبروں کو حل کرنے سے ہمیں مقطع کی اصل قیمت $-2$ مل جاتی ہے۔ ہمیں اس نمبر کی ضرورت آگے چل کر ایڈجائنٹ میٹرکس کو تقسیم کرنے کے لیے پڑے گی۔"
+  },
+  {
+   "en": "Since $|A| = -2$, which is not zero, matrix $A$ is non-singular. This confirms that a unique solution exists and gives us the green light to proceed with finding $A^{-1}$.",
+   "ur": "چونکہ $|A| = -2$ ہے جو کہ صفر نہیں ہے، اس لیے میٹرکس $A$ نادر (singular) نہیں ہے۔ اس سے تصدیق ہوتی ہے کہ مساوات کا ایک منفرد حل موجود ہے اور ہم $A^{-1}$ معلوم کرنے کے لیے آگے بڑھ سکتے ہیں۔"
+  },
+  {
+   "en": "To build the adjoint matrix, we first need the cofactors of all nine entries, starting here with the first row. These values ($1, 3, 3$) will eventually form the first column of our adjoint matrix.",
+   "ur": "ایڈجائنٹ میٹرکس بنانے کے لیے ہمیں تمام نو ارکان کے کوفیکٹرز (cofactors) چاہئیں، جس کی شروعات ہم پہلی قطار سے کر رہے ہیں۔ یہ قیمتیں ($1, 3, 3$) آگے چل کر ہمارے ایڈجائنٹ میٹرکس کا پہلا کالم بنیں گی۔"
+  },
+  {
+   "en": "Next, we calculate the cofactors for the second row, being very careful to alternate the signs ($-, +, -$) according to the position rule. This gives us the middle set of values needed for the adjoint.",
+   "ur": "اس کے بعد ہم دوسری قطار کے کوفیکٹرز نکالتے ہیں، اور پوزیشن کے اصول کے مطابق علامتوں ($-, +, -$) کو بدلنے کا خاص خیال رکھتے ہیں۔ اس سے ہمیں ایڈجائنٹ کے لیے درمیانی قیمتیں مل جاتی ہیں۔"
+  },
+  {
+   "en": "We complete the cofactor calculations by finding the values for the third row. Now we have all nine building blocks required to construct the adjoint of matrix $A$.",
+   "ur": "تیسری قطار کی قیمتیں نکال کر ہم کوفیکٹرز کا حساب مکمل کرتے ہیں۔ اب ہمارے پاس میٹرکس $A$ کا ایڈجائنٹ بنانے کے لیے تمام نو حصے موجود ہیں۔"
+  },
+  {
+   "en": "By definition, the adjoint of $A$ is the transpose of the cofactor matrix, so we write the row cofactors as columns. Putting them in this transposed order is essential for the inverse formula to work.",
+   "ur": "تعریف کے مطابق، $A$ کا ایڈجائنٹ کوفیکٹر میٹرکس کا ٹرانسپوز ہوتا ہے، اس لیے ہم قطاروں کے کوفیکٹرز کو کالموں کی شکل میں لکھتے ہیں۔ فارمولے کے صحیح کام کرنے کے لیے انہیں ٹرانسپوز کی ترتیب میں رکھنا بے حد ضروری ہے۔"
+  },
+  {
+   "en": "Using the formula $A^{-1} = \\frac{1}{|A|}\\operatorname{adj}A$, we divide the adjoint matrix by our determinant $-2$. Now we have the complete inverse matrix $A^{-1}$ ready to solve the system.",
+   "ur": "فارمولا $A^{-1} = \\frac{1}{|A|}\\operatorname{adj}A$ استعمال کرتے ہوئے ہم ایڈجائنٹ میٹرکس کو اپنے مقطع $-2$ پر تقسیم کرتے ہیں۔ اب سسٹم کو حل کرنے کے لیے ہمارے پاس مکمل معکوس میٹرکس $A^{-1}$ تیار ہے۔"
+  },
+  {
+   "en": "Since $AX = B$ leads to $X = A^{-1}B$, we multiply $A^{-1}$ by the constant matrix $B$. Notice how keeping $\\frac{1}{-2}$ outside until after multiplying the matrices avoids messy fractions and cleanly gives the result.",
+   "ur": "چونکہ $AX = B$ سے $X = A^{-1}B$ بنتا ہے، اس لیے ہم $A^{-1}$ کو مستقل میٹرکس $B$ سے ضرب دیتے ہیں۔ غور کریں کہ میٹرکس کو ضرب دینے تک $\\frac{1}{-2}$ کو باہر رکھنے سے ہم مشکل کسروں (fractions) سے بچ جاتے ہیں اور جواب باآسانی نکل آتا ہے۔"
+  },
+  {
+   "en": "By the definition of equality of matrices, corresponding entries of $X$ and the resulting column matrix must be equal. This directly reveals the final values for our unknowns $x, y$, and $z$.",
+   "ur": "مساوی میٹرکس کی تعریف کے مطابق، میٹرکس $X$ اور حاصل شدہ کالم میٹرکس کے آمنے سامنے والے ارکان برابر ہونے چاہئیں۔ اس سے ہمیں اپنے نامعلوم متغیرات $x, y$ اور $z$ کی حتمی قیمتیں براہِ راست مل جاتی ہیں۔"
+  }
+ ],
+ "meaning": {
+  "en": "The values $x = 1, y = 1, z = 0$ form the unique solution that satisfies all three given equations at the same time. You can easily check this by plugging them back into the original equations; for example, in the first equation, $1 - 2(1) + 0 = -1$, which is true.",
+  "ur": "قیمتیں $x = 1, y = 1, z = 0$ وہ واحد حل ہیں جو دی گئی تینوں مساواتوں کو بیک وقت درست ثابت کرتی ہیں۔ آپ انہیں اصل مساواتوں میں درج کر کے باآسانی پڑتال کر سکتے ہیں؛ مثال کے طور پر پہلی مساوات میں $1 - 2(1) + 0 = -1$ بنتا ہے، جو کہ بالکل درست ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

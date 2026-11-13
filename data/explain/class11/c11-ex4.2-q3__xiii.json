@@ -1,0 +1,45 @@
+{
+ "item": "c11-ex4.2-q3",
+ "label": "xiii",
+ "answer_ref": "$D = 0$",
+ "math": [
+  "D = \\begin{vmatrix} 1 & a & a^{2} - b c \\\\ 1 & b & b^{2} - a c \\\\ 1 & c & c^{2} - a b \\end{vmatrix}",
+  "= \\begin{vmatrix} 1 & a & a^{2} - b c \\\\ 0 & b - a & b^{2} + b c - a^{2} - a c \\\\ 1 & c & c^{2} - a b \\end{vmatrix}\\quad (R_2 \\to R_2 - R_1)",
+  "= \\begin{vmatrix} 1 & a & a^{2} - b c \\\\ 0 & b - a & b^{2} + b c - a^{2} - a c \\\\ 0 & c - a & b c + c^{2} - a^{2} - a b \\end{vmatrix}\\quad (R_3 \\to R_3 - R_1)",
+  "= (b - a)\\begin{vmatrix} 1 & a & a^{2} - b c \\\\ 0 & 1 & a + b + c \\\\ 0 & c - a & b c + c^{2} - a^{2} - a b \\end{vmatrix}\\quad (\\text{taking } b - a \\text{ common from } R_2)",
+  "= (b - a)(c - a)\\begin{vmatrix} 1 & a & a^{2} - b c \\\\ 0 & 1 & a + b + c \\\\ 0 & 1 & a + b + c \\end{vmatrix}\\quad (\\text{taking } c - a \\text{ common from } R_3)",
+  "D = 0"
+ ],
+ "why": [
+  {
+   "en": "We begin by naming the given determinant $D$ on the left-hand side. Since the first column consists entirely of $1$s, our clear strategy is to use row operations to create zeros and reveal common algebraic factors.",
+   "ur": "ہم دیے گئے مقطع کی بائیں جانب کو $D$ کا نام دے کر شروعات کرتے ہیں۔ چونکہ پہلے کالم میں تمام ارکان $1$ ہیں، اس لیے ہماری حکمت عملی یہ ہے کہ قطار کے عوامل استعمال کر کے صفر بنائے جائیں اور مشترک الجبری اجزائے ضربی ظاہر کیے جائیں۔"
+  },
+  {
+   "en": "By the property of determinants, subtracting the corresponding entries of one row from another ($R_2 \\to R_2 - R_1$) leaves the determinant's value unchanged. We do this to create a zero in the first column and to form expressions in the second row that can be factored.",
+   "ur": "مقطع کی خاصیت کے مطابق، ایک قطار کے متناظر ارکان کو دوسری قطار سے تفریق کرنے ($R_2 \\to R_2 - R_1$) سے مقطع کی قیمت تبدیل نہیں ہوتی۔ ہم ایسا پہلے کالم میں صفر بنانے اور دوسری قطار میں ایسے جملے حاصل کرنے کے لیے کرتے ہیں جن کی تجزی کی جا سکے۔"
+  },
+  {
+   "en": "Applying the same row operation property to the third row ($R_3 \\to R_3 - R_1$) creates a second zero in the first column. Notice how the third entry of row 2 can be factored as $(b - a)(b + a + c)$, and in row 3 as $(c - a)(c + a + b)$.",
+   "ur": "تیسری قطار پر بھی قطار کے عمل کی یہی خاصیت لاگو کرنے ($R_3 \\to R_3 - R_1$) سے پہلے کالم میں دوسرا صفر بن جاتا ہے۔ غور کریں کہ دوسری قطار کے تیسرے رکن کی تجزی $(b - a)(b + a + c)$ اور تیسری قطار میں $(c - a)(c + a + b)$ کے طور پر کی جا سکتی ہے۔"
+  },
+  {
+   "en": "A fundamental property of determinants allows us to factor out a common multiplier from any single row. Since $b^{2} + bc - a^{2} - ac = (b - a)(a + b + c)$, every entry in the second row has $(b - a)$ as a factor, so we pull it outside to simplify the row.",
+   "ur": "مقطع کی ایک بنیادی خاصیت ہمیں کسی بھی ایک قطار سے مشترک مضروب کو باہر نکالنے کی اجازت دیتی ہے۔ چونکہ $b^{2} + bc - a^{2} - ac = (b - a)(a + b + c)$ ہوتا ہے، اس لیے دوسری قطار کے ہر رکن میں $(b - a)$ بطور جزو ضربی موجود ہے، چنانچہ ہم قطار کو سادہ بنانے کے لیے اسے باہر نکال لیتے ہیں۔"
+  },
+  {
+   "en": "Similarly, since $bc + c^{2} - a^{2} - ab = (c - a)(a + b + c)$, we factor out $(c - a)$ from the third row. This makes the corresponding entries of the second and third rows look exactly the same.",
+   "ur": "اسی طرح، چونکہ $bc + c^{2} - a^{2} - ab = (c - a)(a + b + c)$ ہے، ہم تیسری قطار سے $(c - a)$ کو مشترک لے کر باہر نکال لیتے ہیں۔ اس سے دوسری اور تیسری قطار کے متناظر ارکان بالکل ایک جیسے ہو جاتے ہیں۔"
+  },
+  {
+   "en": "According to the properties of determinants, if any two rows (or columns) of a determinant are identical, the value of the entire determinant is zero. Because $R_2$ and $R_3$ are now identical, the determinant becomes $0$, which makes the whole product $0$.",
+   "ur": "مقطع کی خصوصیات کے مطابق، اگر کسی مقطع کی کوئی سی دو قطاریں (یا کالم) بالکل یکساں ہوں، تو پورے مقطع کی قیمت صفر ہوتی ہے۔ چونکہ $R_2$ اور $R_3$ اب بالکل ایک جیسی ہیں، اس لیے مقطع $0$ ہو جاتا ہے، جس سے پورا حاصل ضرب $0$ بن جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This proves the required identity that the given determinant always equals $0$ for any values of $a, b,$ and $c$, without needing tedious direct expansion. You can easily verify this by substituting simple numbers like $a = 1, b = 2, c = 3$ into the original determinant and seeing that the rows become linearly dependent.",
+  "ur": "یہ مطلوبہ مساوات کو ثابت کرتا ہے کہ دیے گئے مقطع کی قیمت $a, b$ اور $c$ کی کسی بھی قیمت کے لیے ہمیشہ $0$ کے برابر ہوتی ہے، اور اس کے لیے طویل براہِ راست پھیلاؤ (expansion) کی ضرورت نہیں پڑتی۔ آپ اصل مقطع میں $a = 1, b = 2, c = 3$ جیسی سادہ قیمتیں درج کر کے باآسانی اس کی تصدیق کر سکتے ہیں۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

@@ -1,0 +1,65 @@
+{
+ "item": "c11-ex4.2-q10",
+ "label": "ii",
+ "answer_ref": "$(AB)^t = B^t A^t$",
+ "math": [
+  "",
+  "AB = \\begin{bmatrix} 1 & 2 \\\\ 1 & 4 \\\\ 2 & 1 \\end{bmatrix}\\begin{bmatrix} 1 & -3 \\\\ -2 & 1 \\end{bmatrix} = \\begin{bmatrix} (1)(1) + (2)(-2) & (1)(-3) + (2)(1) \\\\ (1)(1) + (4)(-2) & (1)(-3) + (4)(1) \\\\ (2)(1) + (1)(-2) & (2)(-3) + (1)(1) \\end{bmatrix}",
+  "AB = \\begin{bmatrix} -3 & -1 \\\\ -7 & 1 \\\\ 0 & -5 \\end{bmatrix}",
+  "(AB)^t = \\begin{bmatrix} -3 & -7 & 0 \\\\ -1 & 1 & -5 \\end{bmatrix}",
+  "",
+  "B^t = \\begin{bmatrix} 1 & -2 \\\\ -3 & 1 \\end{bmatrix}",
+  "A^t = \\begin{bmatrix} 1 & 1 & 2 \\\\ 2 & 4 & 1 \\end{bmatrix}",
+  "B^tA^t = \\begin{bmatrix} 1 & -2 \\\\ -3 & 1 \\end{bmatrix}\\begin{bmatrix} 1 & 1 & 2 \\\\ 2 & 4 & 1 \\end{bmatrix} = \\begin{bmatrix} (1)(1) + (-2)(2) & (1)(1) + (-2)(4) & (1)(2) + (-2)(1) \\\\ (-3)(1) + (1)(2) & (-3)(1) + (1)(4) & (-3)(2) + (1)(1) \\end{bmatrix}",
+  "B^tA^t = \\begin{bmatrix} -3 & -7 & 0 \\\\ -1 & 1 & -5 \\end{bmatrix}",
+  "(AB)^t = \\begin{bmatrix} -3 & -7 & 0 \\\\ -1 & 1 & -5 \\end{bmatrix} = B^tA^t"
+ ],
+ "why": [
+  {
+   "en": "To verify an equation, we always solve the left-hand side and the right-hand side separately. Here on the left side, the brackets tell us to first find the product $AB$ before taking the transpose.",
+   "ur": "کسی مساوات کی تصدیق کے لیے ہم ہمیشہ بائیں اور دائیں جانب کو الگ الگ حل کرتے ہیں۔ یہاں بائیں جانب بریکٹ ہمیں بتاتی ہے کہ پلٹ (transpose) لینے سے پہلے ہمیں حاصل ضرب $AB$ معلوم کرنا ہے۔"
+  },
+  {
+   "en": "By the rule of matrix multiplication, the number of columns in $A$ (2) equals the number of rows in $B$ (2), so we can multiply them. Setting up the row-by-column products prepares the entries of the new $3 \\times 2$ matrix $AB$.",
+   "ur": "قالبوں کی ضرب کے اصول کے مطابق، قالب $A$ کے کالموں کی تعداد (2) قالب $B$ کی قطاروں کی تعداد (2) کے برابر ہے، اس لیے ان کی ضرب ممکن ہے۔ قطار کو کالم سے ضرب دینے کا یہ عمل نئے $3 \\times 2$ قالب $AB$ کے ارکان تیار کرتا ہے۔"
+  },
+  {
+   "en": "Simplifying the arithmetic inside each position gives us the clean matrix $AB$. Having this single $3 \\times 2$ matrix makes it easy to apply the transpose operation in the next step.",
+   "ur": "ہر جگہ پر موجود حساب کو مختصر کرنے سے ہمیں واضح قالب $AB$ مل جاتا ہے۔ اس ایک $3 \\times 2$ قالب کے ملنے سے اگلے مرحلے میں پلٹ (transpose) کا عمل لاگو کرنا آسان ہو جاتا ہے۔"
+  },
+  {
+   "en": "By the definition of transpose, we interchange the rows and columns of $AB$. This changes our $3 \\times 2$ matrix into a $2 \\times 3$ matrix and completes the calculation for the left-hand side.",
+   "ur": "پلٹ (transpose) کی تعریف کے مطابق، ہم $AB$ کی قطاروں اور کالموں کو آپس میں بدل دیتے ہیں۔ اس سے ہمارا $3 \\times 2$ قالب ایک $2 \\times 3$ قالب میں تبدیل ہو جاتا ہے اور بائیں جانب کا حل مکمل ہو جاتا ہے۔"
+  },
+  {
+   "en": "Now we move to the right-hand side of the identity, which is $B^tA^t$. Notice that the order is reversed, meaning we must first find the individual transposes of $B$ and $A$ before multiplying them.",
+   "ur": "اب ہم مساوات کی دائیں جانب چلتے ہیں جو کہ $B^tA^t$ ہے۔ غور کریں کہ یہاں ترتیب الٹ ہے، یعنی ضرب دینے سے پہلے ہمیں $B$ اور $A$ کا الگ الگ پلٹ (transpose) معلوم کرنا ہوگا۔"
+  },
+  {
+   "en": "We apply the definition of transpose to matrix $B$ by writing its rows as columns. This gives us the matrix $B^t$, which will act as the first matrix in our right-hand side multiplication.",
+   "ur": "ہم قالب $B$ کی قطاروں کو کالموں کی صورت میں لکھ کر اس کا پلٹ (transpose) لیتے ہیں۔ اس سے ہمیں قالب $B^t$ ملتا ہے، جو دائیں جانب کی ضرب میں پہلے قالب کے طور پر کام کرے گا۔"
+  },
+  {
+   "en": "Similarly, we take the transpose of matrix $A$, changing its size from $3 \\times 2$ to $2 \\times 3$. Now both $B^t$ and $A^t$ are ready, and their sizes match properly for multiplication.",
+   "ur": "اسی طرح، ہم قالب $A$ کا پلٹ (transpose) لیتے ہیں، جس سے اس کا سائز $3 \\times 2$ سے بدل کر $2 \\times 3$ ہو جاتا ہے۔ اب $B^t$ اور $A^t$ دونوں تیار ہیں اور ضرب کے اصول کے مطابق ان کے سائز بالکل موزوں ہیں۔"
+  },
+  {
+   "en": "Since $B^t$ has 2 columns and $A^t$ has 2 rows, the matrix product $B^tA^t$ is defined. We apply the row-by-column multiplication rule to set up all the entries of the resulting $2 \\times 3$ matrix.",
+   "ur": "چونکہ $B^t$ میں 2 کالم ہیں اور $A^t$ میں 2 قطاریں ہیں، اس لیے قالبوں کا حاصل ضرب $B^tA^t$ ممکن ہے۔ ہم قطار کو کالم سے ضرب دینے کا اصول لاگو کرتے ہوئے مطلوبہ $2 \\times 3$ قالب کے تمام ارکان ترتیب دیتے ہیں۔"
+  },
+  {
+   "en": "We complete the basic multiplication and addition for each entry to get the final matrix for $B^tA^t$. This finishes the calculation for the right-hand side so we can compare it with the left-hand side.",
+   "ur": "ہم ہر رکن کی ضرب اور جمع مکمل کر کے $B^tA^t$ کا حتمی قالب حاصل کر لیتے ہیں۔ اس سے دائیں جانب کا حل مکمل ہو جاتا ہے تاکہ ہم اس کا بائیں جانب کے جواب سے موازنہ کر سکیں۔"
+  },
+  {
+   "en": "By the definition of equality of matrices, since both $(AB)^t$ and $B^tA^t$ are $2 \\times 3$ matrices with the exact same corresponding entries, the two sides are equal and the property is verified.",
+   "ur": "قالبوں کی مساوات کی تعریف کے مطابق، چونکہ $(AB)^t$ اور $B^tA^t$ دونوں $2 \\times 3$ قالب ہیں اور ان کے تمام متناظر ارکان بالکل یکساں ہیں، اس لیے دونوں اطراف برابر ہیں اور قانون کی تصدیق ہو گئی ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This result proves the reversal law of transposes for the given matrices: taking the transpose of a product $(AB)^t$ gives the exact same matrix as multiplying the individual transposes in reverse order, $B^tA^t$. Notice that if you tried to multiply them without reversing the order ($A^tB^t$), a $2 \\times 3$ matrix times a $2 \\times 2$ matrix would not even be possible!",
+  "ur": "یہ نتیجہ دیے گئے قالبوں کے لیے پلٹ (transpose) کے معکوس ترتیب کے قانون کو ثابت کرتا ہے: حاصل ضرب کا پلٹ $(AB)^t$ لینے سے بالکل وہی قالب ملتا ہے جو الگ الگ پلٹ لے کر الٹ ترتیب میں ضرب دینے یعنی $B^tA^t$ سے حاصل ہوتا ہے۔ غور کریں کہ اگر آپ ترتیب الٹے بغیر انہیں ضرب دینے کی کوشش کریں ($A^tB^t$)، تو ایک $2 \\times 3$ قالب کو $2 \\times 2$ قالب سے ضرب دینا ممکن ہی نہیں ہوگا!"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

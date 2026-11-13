@@ -1,0 +1,45 @@
+{
+ "item": "c11-ex4.2-q1",
+ "label": "ii",
+ "answer_ref": "$D = 9ab^2$",
+ "math": [
+  "D = \\begin{vmatrix} a + b & a - b & a \\\\ a & a + b & a - b \\\\ a - b & a & a + b \\end{vmatrix}",
+  "= \\begin{vmatrix} b & a - b & a \\\\ b & a + b & a - b \\\\ - 2 b & a & a + b \\end{vmatrix}\\quad (C_1 \\to C_1 - C_3)",
+  "= \\begin{vmatrix} b & - b & a \\\\ b & 2 b & a - b \\\\ - 2 b & - b & a + b \\end{vmatrix}\\quad (C_2 \\to C_2 - C_3)",
+  "D = \\begin{vmatrix} b & - b & a \\\\ b & 2 b & a - b \\\\ - 2 b & - b & a + b \\end{vmatrix} = (b)\\begin{vmatrix} 2 b & a - b \\\\ - b & a + b \\end{vmatrix} - (- b)\\begin{vmatrix} b & a - b \\\\ - 2 b & a + b \\end{vmatrix} + (a)\\begin{vmatrix} b & 2 b \\\\ - 2 b & - b \\end{vmatrix}",
+  "= (b)\\left[(2 b)(a + b) - (a - b)(- b)\\right] - (- b)\\left[(b)(a + b) - (a - b)(- 2 b)\\right] + (a)\\left[(b)(- b) - (2 b)(- 2 b)\\right]",
+  "= (b)(3 a b + b^{2}) - (- b)(3 a b - b^{2}) + (a)(3 b^{2}) = 9 a b^{2}"
+ ],
+ "why": [
+  {
+   "en": "We start by naming the determinant $D$ so we can refer to it easily. Looking at the entries, every column has an $a$ in it, which gives us a hint to use determinant properties to cancel out some of the $a$'s before expanding.",
+   "ur": "ہم سب سے پہلے اس مقطع کو $D$ کا نام دیتے ہیں تاکہ آگے چل کر اسے لکھنا آسان ہو۔ ارکان کو غور سے دیکھیں تو ہر کالم میں $a$ موجود ہے، جس سے ہمیں اشارہ ملتا ہے کہ مقطع کی خصوصیات استعمال کر کے کچھ $a$ ختم کیے جا سکتے ہیں تاکہ حل آسان ہو جائے۔"
+  },
+  {
+   "en": "By a basic property of determinants, subtracting one column from another does not change the determinant's value. Doing $C_1 \\to C_1 - C_3$ cancels out $a$ completely from the first column, leaving only simple terms with $b$.",
+   "ur": "مقطع کے ایک بنیادی اصول کے مطابق، ایک کالم میں سے دوسرے کالم کو تفریق کرنے سے مقطع کی قیمت تبدیل نہیں ہوتی۔ یہاں $C_1 \\to C_1 - C_3$ کرنے سے پہلے کالم میں سے $a$ بالکل ختم ہو جاتا ہے اور صرف $b$ والے سادہ ارکان رہ جاتے ہیں۔"
+  },
+  {
+   "en": "We apply the same column property again by subtracting the third column from the second ($C_2 \\to C_2 - C_3$). Now the second column is also free of $a$, which makes the upcoming expansion much easier and less prone to algebraic mistakes.",
+   "ur": "ہم کالم کی اسی خصوصیت کو دوبارہ استعمال کرتے ہوئے دوسرے کالم میں سے تیسرے کالم کو تفریق کرتے ہیں ($C_2 \\to C_2 - C_3$)۔ اب دوسرا کالم بھی $a$ سے پاک ہو گیا ہے، جس کی وجہ سے آگے چل کر مقطع کو کھولنا بہت آسان ہو جائے گا اور الجبری غلطیوں کا امکان کم رہے گا۔"
+  },
+  {
+   "en": "Now that the first two columns are very simple, we use the definition of a $3 \\times 3$ determinant and expand it along the first row. This breaks our large determinant down into three smaller $2 \\times 2$ determinants with alternating $+, -, +$ signs.",
+   "ur": "اب جب کہ پہلے دو کالم بہت سادہ ہو چکے ہیں، ہم $3 \\times 3$ مقطع کی تعریف استعمال کرتے ہوئے اسے پہلی قطار کے لحاظ سے کھولتے ہیں۔ اس سے ہمارا بڑا مقطع تین چھوٹے $2 \\times 2$ کے مقطعوں میں تقسیم ہو جاتا ہے جن کے ساتھ باری باری $+, -, +$ کی علامتیں آتی ہیں۔"
+  },
+  {
+   "en": "We apply the rule for evaluating $2 \\times 2$ determinants (multiplying the main diagonal entries minus the other diagonal entries). This removes the determinant bars completely and leaves us with normal algebraic brackets to simplify.",
+   "ur": "ہم $2 \\times 2$ مقطع کو حل کرنے کا اصول (وتر کے ارکان کا حاصل ضرب منفی دوسرے وتر کے ارکان کا حاصل ضرب) لاگو کرتے ہیں۔ اس عمل سے مقطع کی لکیریں مکمل طور پر ختم ہو جاتی ہیں اور ہمارے پاس حل کرنے کے لیے سادہ الجبری بریکٹیں رہ جاتی ہیں۔"
+  },
+  {
+   "en": "Finally, we multiply the terms inside the brackets and combine like terms. Notice how the $b^3$ terms cancel out ($b^3 - b^3 = 0$), leaving us with the neat, single-term final expression.",
+   "ur": "آخر میں، ہم بریکٹوں کے اندر موجود رقوم کو ضرب دیتے ہیں اور ایک جیسی رقوم کو یکجا کرتے ہیں۔ غور کریں کہ کس طرح $b^3$ والی رقوم آپس میں کٹ جاتی ہیں ($b^3 - b^3 = 0$)، اور ہمارے پاس ایک مختصر اور صاف ستھرا جواب بچ جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "The value of the given $3 \\times 3$ determinant simplifies completely to $D = 9ab^2$. You can easily check this result by putting $b = 0$ in the original determinant: all three columns become identical (every entry is $a$), which makes the determinant $0$, matching $9a(0)^2 = 0$.",
+  "ur": "دیے گئے $3 \\times 3$ مقطع کی قیمت مختصر ہو کر مکمل طور پر $D = 9ab^2$ بنتی ہے۔ آپ اس جواب کی تصدیق اصل مقطع میں $b = 0$ رکھ کر بآسانی کر سکتے ہیں: ایسا کرنے سے تینوں کالم ایک جیسے ہو جاتے ہیں (ہر رکن $a$ بن جاتا ہے)، جس سے مقطع کی قیمت $0$ ہو جاتی ہے، جو کہ ہمارے جواب $9a(0)^2 = 0$ کے عین مطابق ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

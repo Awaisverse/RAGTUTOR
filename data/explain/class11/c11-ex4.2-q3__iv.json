@@ -1,0 +1,60 @@
+{
+ "item": "c11-ex4.2-q3",
+ "label": "iv",
+ "answer_ref": "$D = (x - y)(y - z)(z - x)$",
+ "math": [
+  "D = \\begin{vmatrix} 1 & x & x^{2} \\\\ 1 & y & y^{2} \\\\ 1 & z & z^{2} \\end{vmatrix}",
+  "= \\begin{vmatrix} 1 & x & x^{2} \\\\ 0 & y - x & y^{2} - x^{2} \\\\ 1 & z & z^{2} \\end{vmatrix}\\quad (R_2 \\to R_2 - R_1)",
+  "= \\begin{vmatrix} 1 & x & x^{2} \\\\ 0 & y - x & y^{2} - x^{2} \\\\ 0 & z - x & z^{2} - x^{2} \\end{vmatrix}\\quad (R_3 \\to R_3 - R_1)",
+  "= (y - x)\\begin{vmatrix} 1 & x & x^{2} \\\\ 0 & 1 & x + y \\\\ 0 & z - x & z^{2} - x^{2} \\end{vmatrix}\\quad (\\text{taking } y - x \\text{ common from } R_2)",
+  "= (y - x)(z - x)\\begin{vmatrix} 1 & x & x^{2} \\\\ 0 & 1 & x + y \\\\ 0 & 1 & x + z \\end{vmatrix}\\quad (\\text{taking } z - x \\text{ common from } R_3)",
+  "= (y - x)(z - x)\\begin{vmatrix} 1 & x & x^{2} \\\\ 0 & 1 & x + y \\\\ 0 & 0 & z - y \\end{vmatrix}\\quad (R_3 \\to R_3 - R_2)",
+  "D = (y - x)(z - x)\\begin{vmatrix} 1 & x & x^{2} \\\\ 0 & 1 & x + y \\\\ 0 & 0 & z - y \\end{vmatrix} = (y - x)(z - x)\\left[(z - y)\\begin{vmatrix} 1 & x \\\\ 0 & 1 \\end{vmatrix}\\right]",
+  "= (y - x)(z - x)\\left[(z - y)\\left[(1)(1) - (x)(0)\\right]\\right]",
+  "= (y - x)(z - x)\\left[(z - y)(1)\\right] = - \\left(x - y\\right) \\left(x - z\\right) \\left(y - z\\right) = (x - y)(y - z)(z - x)"
+ ],
+ "why": [
+  {
+   "en": "We begin by setting the left-hand side determinant equal to $D$ so we can apply row operations step by step to reach the factored expression on the right-hand side.",
+   "ur": "ہم بائیں طرف دیے گئے مقطع کو $D$ کے برابر فرض کر لیتے ہیں تاکہ ہم مرحلہ وار قطاروں کے عوامل لگا کر دائیں طرف والے مطلوبہ جواب تک پہنچ سکیں۔"
+  },
+  {
+   "en": "When a column consists of all $1$s, our best strategy is to create zeros using row subtraction. By subtracting row 1 from row 2, we get a $0$ in the first column and also create terms that can be factored using the difference of squares.",
+   "ur": "جب کسی کالم کے تمام ارکان $1$ ہوں، تو بہترین طریقہ یہ ہے کہ قطاروں کو تفریق کر کے صفر بنائے جائیں۔ پہلی قطار کو دوسری قطار سے تفریق کرنے پر پہلے کالم میں $0$ بن جاتا ہے اور ایسے ارکان ملتے ہیں جن کی مربعوں کے فرق کے کلیے سے تجزی کی جا سکتی ہے۔"
+  },
+  {
+   "en": "In the same way, we subtract row 1 from row 3 to get a second zero in the first column. Having two zeros in a column makes expanding the determinant much easier later on, and it gives us another difference of squares, $z^2 - x^2$.",
+   "ur": "اسی طرح، پہلے کالم میں دوسرا صفر بنانے کے لیے ہم پہلی قطار کو تیسری قطار سے تفریق کرتے ہیں۔ ایک کالم میں دو صفر آ جانے سے بعد میں مقطع کو حل کرنا بہت آسان ہو جاتا ہے، اور اس سے ہمیں مربعوں کا ایک اور فرق $z^2 - x^2$ بھی مل جاتا ہے۔"
+  },
+  {
+   "en": "Using the algebra identity $y^2 - x^2 = (y - x)(y + x)$, we see that $(y - x)$ is present in every entry of row 2 (since $0 = 0(y - x)$). By the property of determinants, we can factor $(y - x)$ out of row 2, which brings us closer to our target answer.",
+   "ur": "الجبرے کے کلیے $y^2 - x^2 = (y - x)(y + x)$ کو استعمال کرتے ہوئے ہم دیکھتے ہیں کہ دوسری قطار کے ہر رکن میں $(y - x)$ موجود ہے۔ مقطع کی خاصیت کے مطابق ہم دوسری قطار سے $(y - x)$ کو مشترک (common) لے کر باہر نکال لیتے ہیں، جو ہمیں مطلوبہ جواب کے قریب لے آتا ہے۔"
+  },
+  {
+   "en": "Similarly, since $z^2 - x^2 = (z - x)(z + x)$, the factor $(z - x)$ is common to all entries of row 3. Factoring it out simplifies row 3 and gives us the second bracket needed for the final proof.",
+   "ur": "بالکل اسی طرح، کیونکہ $z^2 - x^2 = (z - x)(z + x)$ ہوتا ہے، اس لیے تیسری قطار کے تمام ارکان میں $(z - x)$ مشترک ہے۔ اسے باہر نکالنے سے تیسری قطار سادہ ہو جاتی ہے اور ہمیں اپنے ثبوت کے لیے دوسری بریکٹ بھی مل جاتی ہے۔"
+  },
+  {
+   "en": "Notice that row 2 and row 3 now both have $1$ in the second column. Subtracting row 2 from row 3 turns that entry into another $0$ and neatly leaves $z - y$ in the last position, turning the matrix into an upper triangular form.",
+   "ur": "غور کریں کہ اب دوسری اور تیسری دونوں قطاروں کے دوسرے کالم میں $1$ موجود ہے۔ دوسری قطار کو تیسری قطار سے تفریق کرنے پر وہاں ایک اور $0$ بن جاتا ہے اور آخری جگہ پر $z - y$ بچتا ہے، جس سے یہ بالائی مثلثی (upper triangular) شکل بن جاتی ہے۔"
+  },
+  {
+   "en": "Now that row 3 has two zeros, we expand the determinant along row 3 because the zero terms vanish immediately. We only need to multiply the single non-zero entry $(z - y)$ by its $2 \\times 2$ minor.",
+   "ur": "اب جب کہ تیسری قطار میں دو صفر آ چکے ہیں، ہم تیسری قطار کے لحاظ سے مقطع کو کھولتے ہیں کیونکہ صفر والے ارکان ختم ہو جاتے ہیں۔ ہمیں صرف ایک غیر صفر رکن $(z - y)$ کو اس کے $2 \\times 2$ مائنر (minor) سے ضرب دینے کی ضرورت ہے۔"
+  },
+  {
+   "en": "We evaluate the $2 \\times 2$ determinant by multiplying the main diagonal entries and subtracting the product of the other diagonal entries, which is $(1)(1) - (x)(0)$.",
+   "ur": "ہم $2 \\times 2$ مقطع کی قیمت معلوم کرنے کے لیے وتر کے ارکان کو ضرب دیتے ہیں اور دوسرے وتر کے ارکان کا حاصلِ ضرب اس میں سے تفریق کرتے ہیں، جو کہ $(1)(1) - (x)(0)$ بنتا ہے۔"
+  },
+  {
+   "en": "The $2 \\times 2$ minor simplifies to $1$. Finally, to match the cyclic order in the textbook's answer, we factor a $-1$ out of $(y - x)$ to make it $-(x - y)$ and another $-1$ out of $(z - y)$ to make it $-(y - z)$; the two minus signs multiply to become positive, completing the proof.",
+   "ur": "یہ $2 \\times 2$ مائنر حل ہو کر $1$ بن جاتا ہے۔ آخر میں، کتاب کے جواب کی ترتیب کے مطابق لانے کے لیے ہم $(y - x)$ میں سے $-1$ مشترک لے کر اسے $-(x - y)$ اور $(z - y)$ کو $-(y - z)$ بنا لیتے ہیں؛ دونوں منفی کی علامتیں ضرب کھا کر مثبت ہو جاتی ہیں اور یوں ہمارا ثبوت مکمل ہو جاتا ہے۔"
+  }
+ ],
+ "meaning": {
+  "en": "This proves the required identity, showing that this special determinant (where each row has powers $1, x, x^2$) always simplifies into the cyclic product of the differences of the variables, $(x - y)(y - z)(z - x)$. A quick way to check this result is to notice that if you set $x = y$, two rows of the original determinant become identical, making the determinant $0$—and indeed, the factor $(x - y)$ in our answer also becomes $0$.",
+  "ur": "اس سے مطلوبہ مساوات ثابت ہو جاتی ہے، جو یہ ظاہر کرتی ہے کہ یہ خاص مقطع (جس کی ہر قطار میں طاقتیں $1, x, x^2$ کی شکل میں ہیں) ہمیشہ متغیرات کے فرق کے حاصلِ ضرب $(x - y)(y - z)(z - x)$ کے برابر ہوتا ہے۔ اس جواب کی پڑتال کرنے کا ایک آسان طریقہ یہ ہے کہ اگر آپ $x = y$ رکھیں تو اصل مقطع کی دو قطاریں ایک جیسی ہو جاتی ہیں جس سے مقطع کی قیمت $0$ ہو جاتی ہے—اور واقعی، ہمارے جواب میں موجود جزو ضربی $(x - y)$ بھی $0$ ہو جاتا ہے۔"
+ },
+ "source": "gemini-4-argon via Vertex AI",
+ "made": "2026-11-13"
+}

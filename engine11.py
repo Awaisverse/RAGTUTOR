@@ -1,4 +1,6 @@
-"""The Class 11 engine: Unit 1 (Complex Numbers) of the Punjab Class 11 book.
+"""The Class 11 engine: Units 1-4 of the Punjab Class 11 book (Complex Numbers; Functions and Graphs; Quadratic Functions;
+Matrices and Determinants: 3-by-3 determinants, x or lambda from |A| = k, cofactors, inverses by the adjoint or row operations,
+rank, three equations by Cramer's rule / inversion / echelon form, homogeneous systems, polynomials in a matrix, coding).
 
     solve(text) -> a solved item whose every step is checked, or None
 
@@ -23,7 +25,7 @@ for _p in (ROOT / "tools", ROOT / "data" / "src", ROOT / "data" / "src10", ROOT 
         sys.path.insert(0, str(_p))
 from build_dataset import verify  # noqa: E402
 from solvers.common import labels, part_markers  # noqa: E402
-from _helpers import P  # noqa: E402
+from _helpers import P, S  # noqa: E402
 
 I = sp.I
 Z = sp.Symbol("z")
@@ -444,10 +446,293 @@ def _axes(label, text):
     return _unit2().axes_meet(label, m, c, f"$y = {sp.latex(e)}$")
 
 
-TOPICS = ((_inverse_pair, 1), (_square_eq, 1), (_sqrt, 1), (_polar, 1), (_nth_roots, 1), (_with_zeros, 1), (_factor_or_solve, 1),
+# ------------------------------------------------------------------------------------------ Unit 4: matrices and determinants
+
+def _m11():
+    if "mat" not in _U:
+        import _mat11
+        _U["mat"] = _mat11
+    return _U["mat"]
+
+
+def _mats(text):
+    """Named matrices (A = [...]) and the unnamed ones, in order. Entries may be numbers or letters (x, λ -> k)."""
+    import solvers10x as sx
+    t = text.replace("$", " ").replace("λ", "k").replace("\\lambda", "k")
+    named, loose = {}, []
+    for mt_ in re.finditer(sx.MATRIX, t, re.S):
+        before = t[:mt_.start()]
+        nm = re.search(r"\b([A-Z])\s*=\s*$", before)
+        mx = sx._matrix_from(mt_.group(1))
+        if mx is None or any(not (v.is_number or v.free_symbols) for v in mx):
+            return None, None
+        mx = mx.applyfunc(lambda v: sp.nsimplify(v) if v.is_number else v)
+        if nm and nm.group(1) not in named:
+            named[nm.group(1)] = mx
+        else:
+            loose.append((mx, "vmatrix" in mt_.group(1) or bool(re.search(r"\|\s*$", before))))
+    return named, loose
+
+
+def _one_matrix(text, square=True):
+    named, loose = _mats(text)
+    if named is None:
+        return None, None
+    items = list(named.items()) + [("A", mx) for mx, _ in loose]
+    if len(items) != 1:
+        return None, None
+    nm, mx = items[0]
+    if square and mx.rows != mx.cols:
+        return None, None
+    return nm, mx
+
+
+def _numeric(mx):
+    return all(v.is_number for v in mx)
+
+
+def _det_q(label, text):
+    """Evaluate a determinant (3-by-3; 2-by-2 is the Class 10 rule), find x / λ from |..| = k or 'singular',
+    or show |..| = expression by expansion."""
+    low = text.lower()
+    if not re.search(r"determinant|evaluate|vmatrix|singular|\|\s*[A-Z]\s*\||\bfind\b.*\bif\b", low + text) or re.search(
+            r"without expan|propert|cofactor|minor|inverse|rank", low):
+        return None
+    nm, mx = _one_matrix(text)
+    if mx is None or mx.rows not in (2, 3):
+        return None
+    m11 = _m11()
+    syms = sorted(mx.free_symbols, key=str)
+    t = text.replace("$", " ")
+    rhs = re.search(r"\\end\{vmatrix\}\s*=\s*([^$,;]+?)\s*(?:$|,|;|\.\s|\.$|\bif\b|\band\b)", t)
+    if re.search(r"singular", low) and len(syms) == 1:
+        steps, sols = m11.det_equation(mx, 0, syms[0], r"\lambda" if syms[0].name == "k" else sp.latex(syms[0]))
+        if not steps:
+            return None
+        s0 = r"\lambda" if syms[0].name == "k" else sp.latex(syms[0])
+        return P(label, steps, "$" + r" \quad \text{or} \quad ".join(f"{s0} = {sp.latex(v)}" for v in sols) + "$")
+    if rhs and len(syms) == 1 and re.search(r"\bfind\b|value", low):
+        import solvers10x as sx
+        k = sx.expr(rhs.group(1))
+        if k.free_symbols:
+            return None
+        steps, sols = m11.det_equation(mx, k, syms[0], r"\lambda" if syms[0].name == "k" else sp.latex(syms[0]))
+        if not steps:
+            return None
+        s0 = r"\lambda" if syms[0].name == "k" else sp.latex(syms[0])
+        return P(label, steps, "$" + r" \quad \text{or} \quad ".join(f"{s0} = {sp.latex(v)}" for v in sols) + "$")
+    if mx.rows == 2 and _numeric(mx):
+        return None                                          # the Class 10 2-by-2 rule
+    steps, v = m11.det_expand(mx, "D" if nm == "A" and not re.search(r"\|\s*A\s*\|", t) else f"|{nm}|")
+    if rhs and re.search(r"show|prove|verify", low):
+        import solvers10x as sx
+        r_ = sx.expr(rhs.group(1))
+        if sp.expand(mx.det() - r_) != 0:
+            return None
+        shown = rhs.group(1).strip()
+        steps[-1]["math"] += rf" = {shown}"
+        steps[-1]["check"].append(f"expand({m11.mpy(mx)}.det() - ({sp.sstr(r_)})) == 0")
+        return P(label, steps, f"$D = {shown}$")
+    return P(label, steps, f"$D = {sp.latex(v)}$")
+
+
+def _cofactor_q(label, text):
+    if not re.search(r"cofactor|minor", text, re.I):
+        return None
+    nm, mx = _one_matrix(text)
+    if mx is None or mx.rows != 3 or not _numeric(mx):
+        return None
+    m11 = _m11()
+    want = [(int(i) - 1, int(j) - 1) for i, j in re.findall(rf"\b{nm}_\{{?([123])([123])\}}?", text.replace("$", " "))]
+    want = list(dict.fromkeys(want)) or [(i, j) for i in range(3) for j in range(3)]
+    steps, vals = [], []
+    for i, j in want:
+        s_, c_ = m11.cofactor_step(mx, i, j, nm)
+        steps.append(s_)
+        vals.append(rf"{nm}_{{{i + 1}{j + 1}}} = {sp.latex(c_)}")
+    if re.search(rf"\|\s*{nm}\s*\||determinant", text):
+        s_, d = m11.det_expand(mx, f"|{nm}|")
+        steps += s_
+        vals.append(rf"|{nm}| = {sp.latex(d)}")
+    return P(label, steps, "$" + r", \quad ".join(vals) + "$")
+
+
+def _inverse_q(label, text):
+    if not re.search(r"inverse|A\s*\^\s*\{?\s*-\s*1", text, re.I) or re.search(r"\bsolve\b|system|equations|encode|decode|curve", text, re.I):
+        return None
+    nm, mx = _one_matrix(text)
+    if mx is None or not _numeric(mx) or mx.rows < 2:
+        return None
+    m11 = _m11()
+    if re.search(r"row\s*operation|elementary|gauss|row-operation|\[\s*A\s*\|", text, re.I):
+        steps, iv = m11.inverse_rowops(mx, nm)
+    elif mx.rows == 3:
+        steps, iv = m11.adjoint_inverse(mx, nm)
+    else:
+        return None                                          # 2-by-2 by the adjoint: the Class 10 rule
+    if iv is None:
+        return P(label, steps, f"$|{nm}| = 0$: ${nm}$ is singular and has no inverse")
+    return P(label, steps, f"${nm}^{{-1}} = {m11.mtex(iv)}$")
+
+
+def _rank_q(label, text):
+    if not re.search(r"\brank\b", text, re.I):
+        return None
+    nm, mx = _one_matrix(text, square=False)
+    if mx is None or not _numeric(mx):
+        return None
+    steps, r = _m11().rank_steps(mx, nm)
+    return P(label, steps, rf"$\text{{rank}}({nm}) = {r}$")
+
+
+_VAR = r"(?:[xyz]|[xyz]_\{?\d\}?|[xyz]\d)"
+
+
+def _system3(text):
+    """Three linear equations in three unknowns -> (A, B, names) or None."""
+    import solvers10x as sx
+    t = text.replace("$", " ")
+    t = re.sub(r"\\begin\{cases\}|\\end\{cases\}|\\\\|&", " ; ", t)
+    # x_1, x1, x_{1} -> u, v, w (a digit after a letter would be read as a power)
+    t = re.sub(r"(?<![A-Za-z])x_?\{?([123])\}?(?!\d)", lambda m_: "uvw"[int(m_.group(1)) - 1], t).replace("−", "-")
+    subscripted = bool(re.search(r"(?<![a-z])[uvw](?![a-z])", t))
+    eqs = []
+    for chunk in re.split(r";|,(?![^()]*\))|\n|\band\b", t):
+        if chunk.count("=") != 1:
+            continue
+        lhs, rhs = chunk.split("=")
+        ml = re.search(r"[-+\d\s.()xyzuvw*/]*$", lhs)
+        mr = re.match(r"[-+\d\s.()xyzuvw*/]*", rhs)
+        L_, R_ = ml.group(0).strip(), mr.group(0).strip()
+        if not L_ or not R_ or not re.search(r"[xyzuvw]", L_ + R_):
+            continue
+        try:
+            e_ = sp.expand(sx.expr(L_) - sx.expr(R_))
+        except Exception:
+            return None
+        eqs.append(e_)
+    if len(eqs) != 3:
+        return None
+    syms = sorted(set().union(*[q.free_symbols for q in eqs]), key=str)
+    if len(syms) != 3 or any(not q.is_polynomial(*syms) or sp.Poly(q, *syms).total_degree() != 1 for q in eqs):
+        return None
+    A = sp.Matrix([[q.coeff(s) for s in syms] for q in eqs])
+    Bv = sp.Matrix([-q.subs({s: 0 for s in syms}) for q in eqs])
+    names = [{"u": "x_1", "v": "x_2", "w": "x_3"}.get(s.name, s.name) for s in syms]
+    if subscripted and names != ["x_1", "x_2", "x_3"]:
+        return None
+    return A, Bv, names
+
+
+def _system_q(label, text):
+    got = _system3(text)
+    if not got:
+        return None
+    A, Bv, names = got
+    m11 = _m11()
+    low = text.lower()
+    if Bv == sp.zeros(3, 1):
+        steps, base, free = m11.homogeneous(A, names)
+        if free is None:
+            return P(label, steps, f"$({', '.join(names)}) = (0, 0, 0)$")
+        if len(free) != 1:
+            return None
+        return P(label, steps, f"$({', '.join(names)}) = t({', '.join(sp.latex(v) for v in base)}),\\quad t \\in \\mathbb{{R}}$")
+    if A.det() == 0:
+        return None
+    if re.search(r"echelon|reduced|gauss|augmented|row\s*operation|rref", low):
+        steps, vals = m11.gauss_jordan(A, Bv, names)
+    elif re.search(r"invers|matrix method|matrices", low) and not re.search(r"cramer", low):
+        steps, vals = m11.inversion(A, Bv, names)
+    else:
+        steps, vals = m11.cramer(A, Bv, names)
+    if vals is None:
+        return None
+    return P(label, steps, m11.sys_answer(vals, names))
+
+
+def _mpoly_q(label, text):
+    """A polynomial in one square matrix, e.g. A^2 - 5A + 4I, or X from A^2 - 5A + 4I - X = O."""
+    t = text.replace("$", " ").replace("−", "-")
+    named, loose = _mats(text)
+    if not named or len(named) != 1 or loose:
+        return None
+    nm, A = next(iter(named.items()))
+    if A.rows != A.cols or not _numeric(A):
+        return None
+    ex_ = re.search(rf"((?:[-+]?\s*\d*\s*(?:{nm}\s*\^\s*\{{?\d\}}?|{nm}(?![A-Za-z_])|I(?![A-Za-z_]))\s*){{2,}})(\s*-\s*X\s*=\s*[0O])?", t)
+    if not ex_ or not re.search(rf"{nm}\s*\^|I(?![A-Za-z_])", ex_.group(1)):
+        return None
+    terms = []
+    for sg, co, base, pw in re.findall(rf"([-+]?)\s*(\d*)\s*({nm}\s*\^\s*\{{?(\d)\}}?|{nm}(?![A-Za-z_])|I(?![A-Za-z_]))", ex_.group(1)):
+        k = int(pw) if pw else (0 if base.strip() == "I" else 1)
+        cval = int(co) if co else 1
+        terms.append((-cval if sg == "-" else cval, k))
+    if len(terms) < 2 or len({k for _, k in terms}) != len(terms) or max(k for _, k in terms) > 3:
+        return None
+    steps, val, etex = _m11().matrix_poly(terms, A, nm)
+    if ex_.group(2):
+        steps.insert(0, S(rf"{etex} - X = O \Rightarrow X = {etex}", "Move $X$ to the other side.", "$X$ کو دوسری طرف لے جائیں۔"))
+        return P(label, steps, f"$X = {_m11().mtex(val)}$")
+    return P(label, steps, f"${etex} = {_m11().mtex(val)}$")
+
+
+def _coding_q(label, text):
+    low = text.lower()
+    if not re.search(r"\bencode|\bdecode", low):
+        return None
+    named, loose = _mats(text)
+    if named is None:
+        return None
+    A = named.get("A") or next((mx for mx, _ in loose if mx.rows == mx.cols and mx.rows > 1), None)
+    if A is None or not _numeric(A) or A.det() == 0:
+        return None
+    n = A.rows
+    m11 = _m11()
+    space27 = bool(re.search(r"27\s*(?:represents?|for|is|=)\s*(?:a\s*)?(?:space|blank)", low))
+    if "decode" in low:
+        vecs = [mx for mx, _ in loose if mx.shape == (n, 1)]
+        if not vecs:
+            return None
+        s_, iv = m11.adjoint_inverse(A) if n == 3 else (None, A.inv())
+        if s_ is None:
+            return None
+        steps = [S(r"v = Au \Rightarrow u = A^{-1}v", "To decode, multiply each code block by $A^{-1}$.", "رمز کھولنے کے لیے ہر رمزی گروہ کو $A^{-1}$ سے ضرب دیں۔")] + s_
+        msg = ""
+        for k, v in enumerate(vecs):
+            u = iv * v
+            if any(not x.is_integer or x < 0 or x > (27 if space27 else 26) for x in u):
+                return None
+            word = "".join(" " if x == 27 else ("" if x == 0 else chr(64 + int(x))) for x in u)
+            msg += word
+            steps.append(S(rf"A^{{-1}}{m11.mtex(v)} = {m11.mtex(u)} \to \text{{{word.replace(' ', '(space)')}}}",
+                           "Multiply, then turn the numbers into letters" + (" ($27$ is a space)." if space27 else "."),
+                           "ضرب دیں، پھر اعداد کو حروف میں بدلیں" + (" ($27$ خالی جگہ ہے)۔" if space27 else "۔"), m11.meq(iv * v, u)))
+        steps.append(S(rf"\text{{{msg.strip()}}}", "Read the blocks in order.", "گروہوں کو ترتیب سے پڑھیں۔"))
+        return P(label, steps, msg.strip())
+    word = re.search(r"(?:message|word)\s*[\"“']?([A-Z][A-Z ]*[A-Z])\b", text) or re.search(r"[\"“']([A-Z][A-Z ]+)[\"”']", text)
+    if not word:
+        return None
+    msg = word.group(1)
+    nums = [27 if ch == " " else ord(ch) - 64 for ch in (msg if space27 else msg.replace(" ", ""))]
+    while len(nums) % n:
+        nums.append(0)
+    blocks = [sp.Matrix(nums[i:i + n]) for i in range(0, len(nums), n)]
+    enc = [A * u for u in blocks]
+    steps = [S(r"\text{" + msg + r"} \to " + r",\ ".join(str(v) for v in nums),
+               "Write each letter as its number ($A = 1, \\ldots, Z = 26$" + ("; a space is $27$)" if space27 else "); the spaces are left out") +
+               (" and complete the last block with 0." if len(nums) > len(msg.replace(" ", "")) and not space27 else "."),
+               "ہر حرف کو اس کے عدد میں لکھیں" + ("؛ خالی جگہ $27$ ہے۔" if space27 else "؛ خالی جگہیں چھوڑ دی جاتی ہیں۔"))]
+    steps += [S(rf"Au_{k + 1} = {m11.mtex(A)}{m11.mtex(blocks[k])} = {m11.mtex(enc[k])}", f"Group the numbers in blocks of {n} and multiply each block by $A$.",
+                f"اعداد کو {n}، {n} کے گروہوں میں لکھ کر ہر گروہ کو $A$ سے ضرب دیں۔", m11.meq(A * blocks[k], enc[k])) for k in range(len(blocks))]
+    return P(label, steps, "The encoded message is represented by $" + r", \quad ".join(m11.mtex(v) for v in enc) + "$")
+
+
+TOPICS = ((_coding_q, 4), (_system_q, 4), (_rank_q, 4), (_cofactor_q, 4), (_inverse_q, 4), (_mpoly_q, 4), (_det_q, 4),
+          (_inverse_pair, 1), (_square_eq, 1), (_sqrt, 1), (_polar, 1), (_nth_roots, 1), (_with_zeros, 1), (_factor_or_solve, 1),
           (_maxmin, 3), (_sketch, 3), (_inverse_quad, 3), (_abs_quad, 3),
           (_diffq, 2), (_meet, 2), (_axes, 2), (_domrange, 2), (_fvalue, 2))
-UNIT_TITLES = {1: "Complex Numbers", 2: "Functions and Graphs", 3: "Theory of Quadratic Functions"}
+UNIT_TITLES = {1: "Complex Numbers", 2: "Functions and Graphs", 3: "Theory of Quadratic Functions", 4: "Matrices and Determinants"}
 
 
 def _one(label, text):
